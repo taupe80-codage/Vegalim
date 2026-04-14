@@ -1,0 +1,108 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Environnements virtuels ───────────────────────────────────────────────────
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# ── Base de données ───────────────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+# Garder le fichier de dev en gitignore — ne jamais commiter de données utilisateurs
+alim_dev.db
+test_alim.db
+
+# Bases de données locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Backups nutrition auto-générés
+backend/data/nutrition/reference/*.bak.json
+
+# Historique utilisateurs (données personnelles)
+backend/users/history/
+
+# Outputs générés par les scripts
+outputs/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+backend/data/logs/*.json
+
+# ── Pytest ────────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── Frontend React ────────────────────────────────────────────────────────────
+# node_modules ne doit JAMAIS être versionné (~96 Mo, régénérable via npm install)
+frontend/node_modules/
+# Le build Vite est régénérable (npm run build) — ne pas versionner sauf déploiement
+# Décommenter si on veut commiter le build pour un déploiement sans étape de build :
+# !frontend/dist/
+frontend/dist/
+
+# ── IDEs ──────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Mypy / Ruff / isort ───────────────────────────────────────────────────────
+.mypy_cache/
+.ruff_cache/
+
+# ── Données sensibles ─────────────────────────────────────────────────────────
+# Ne jamais versionner les données utilisateurs ou clés API réelles
+backend/data/product/users.json
+backend/data/product/api_keys.json
+backend/data/product/quotas.json
+backend/data/user_profiles/users.json
+
+# Bases de données locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Backups nutrition auto-générés
+backend/data/nutrition/reference/*.bak.json
+
+# Historique utilisateurs
+backend/users/history/
+
+# Outputs générés
+outputs/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Variables d'environnement
+.env
+.env.local
