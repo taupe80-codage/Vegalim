@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "id": "tomato",
+      "type": "ingredient"
+    },
+    {
+      "id": "basil",
+      "type": "ingredient"
+    },
+    {
+      "id": "garlic",
+      "type": "ingredient"
+    },
+    {
+      "id": "mediterranean",
+      "type": "cuisine"
+    },
+    {
+      "id": "roast",
+      "type": "technique"
+    }
+  ],
+  "edges": [
+    {
+      "from": "tomato",
+      "to": "basil",
+      "relation": "flavor_pair",
+      "source": "flavor_graph"
+    },
+    {
+      "from": "tomato",
+      "to": "mediterranean",
+      "relation": "typical_in",
+      "source": "cuisine_graph"
+    },
+    {
+      "from": "tomato",
+      "to": "roast",
+      "relation": "transformation",
+      "source": "transformation_graph"
+    },
+    {
+      "from": "basil",
+      "to": "mediterranean",
+      "relation": "typical_in",
+      "source": "cuisine_graph"
+    }
+  ]
+}

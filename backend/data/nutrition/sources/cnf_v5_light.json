@@ -1,0 +1,4961 @@
+{
+  "_meta": {
+    "version": "CNF V5",
+    "total": 3444,
+    "nutrient_fields": [
+      "calories_kcal",
+      "protein_g",
+      "fat_g",
+      "carbs_g",
+      "fiber_g",
+      "sugar_g",
+      "vitamin_c_mg",
+      "vitamin_a_ug",
+      "calcium_mg",
+      "iron_mg",
+      "potassium_mg",
+      "magnesium_mg",
+      "sodium_mg",
+      "zinc_mg",
+      "vitamin_d_ug"
+    ],
+    "excluded_groups": [
+      "Babyfoods",
+      "Poultry Products",
+      "Sausages and Luncheon meats",
+      "Pork Products",
+      "Beef Products",
+      "Finfish and Shellfish Products",
+      "Lamb, Veal and Game",
+      "Fast Foods"
+    ]
+  },
+  "foods": [
+    {
+      "id": "cheese_souffle",
+      "clean_name": "cheese souffle",
+      "core_name": "cheese souffle",
+      "name": "Cheese souffle",
+      "name_fr": "Soufflé au fromage",
+      "group": "Mixed Dishes",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 9.54,
+        "fat_g": 15.7,
+        "carbs_g": 5.91,
+        "calories_kcal": 204.0,
+        "sugar_g": 2.66,
+        "fiber_g": 0.1,
+        "calcium_mg": 184.0,
+        "iron_mg": 0.74,
+        "magnesium_mg": 13.0,
+        "potassium_mg": 119.0,
+        "sodium_mg": 318.0,
+        "zinc_mg": 1.1,
+        "vitamin_d_ug": 2.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 194.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "souffle"
+        ],
+        "aliases": [
+          "cheese souffle"
+        ]
+      },
+      "meta": {
+        "fid": 2,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5",
+        "usage": "coherence_check_only"
+      }
+    },
+    {
+      "id": "corn_fritter",
+      "clean_name": "corn fritter",
+      "core_name": "corn fritter",
+      "name": "Corn fritter",
+      "name_fr": "Maïs, beignet",
+      "group": "Baked Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 8.55,
+        "fat_g": 21.24,
+        "carbs_g": 38.62,
+        "calories_kcal": 374.0,
+        "sugar_g": 2.85,
+        "fiber_g": 2.0,
+        "calcium_mg": 74.0,
+        "iron_mg": 2.5,
+        "magnesium_mg": 22.0,
+        "potassium_mg": 154.0,
+        "sodium_mg": 441.0,
+        "zinc_mg": 0.84,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.3,
+        "vitamin_a_ug": 50.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "corn",
+          "fritter"
+        ],
+        "aliases": [
+          "corn fritter"
+        ]
+      },
+      "meta": {
+        "fid": 6,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "vinegar_cider",
+      "clean_name": "vinegar cider",
+      "core_name": "vinegar cider",
+      "name": "Vinegar, cider",
+      "name_fr": "Vinaigre, cidre",
+      "group": "Spices and Herbs",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 0.0,
+        "fat_g": 0.0,
+        "carbs_g": 0.93,
+        "calories_kcal": 22.0,
+        "sugar_g": 0.4,
+        "fiber_g": 0.0,
+        "calcium_mg": 7.0,
+        "iron_mg": 0.2,
+        "magnesium_mg": 5.0,
+        "potassium_mg": 73.0,
+        "sodium_mg": 5.0,
+        "zinc_mg": 0.04,
+        "vitamin_d_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 0.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "vinegar",
+          "cider"
+        ],
+        "aliases": [
+          "vinegar cider"
+        ]
+      },
+      "meta": {
+        "fid": 13,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "vinegar_distilled",
+      "clean_name": "vinegar distilled",
+      "core_name": "vinegar distilled",
+      "name": "Vinegar, distilled (white)",
+      "name_fr": "Vinaigre, distillé (blanc)",
+      "group": "Spices and Herbs",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 0.0,
+        "fat_g": 0.0,
+        "carbs_g": 0.04,
+        "calories_kcal": 18.0,
+        "sugar_g": 0.04,
+        "fiber_g": 0.0,
+        "calcium_mg": 6.0,
+        "iron_mg": 0.03,
+        "magnesium_mg": 1.0,
+        "potassium_mg": 2.0,
+        "sodium_mg": 2.0,
+        "zinc_mg": 0.01,
+        "vitamin_d_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 0.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "vinegar",
+          "distilled"
+        ],
+        "aliases": [
+          "vinegar distilled"
+        ]
+      },
+      "meta": {
+        "fid": 14,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "butter_whipped",
+      "clean_name": "butter whipped",
+      "core_name": "butter whipped",
+      "name": "Butter, whipped",
+      "name_fr": "Beurre fouetté",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 0.85,
+        "fat_g": 81.11,
+        "carbs_g": 0.06,
+        "calories_kcal": 717.0,
+        "sugar_g": 0.06,
+        "fiber_g": 0.0,
+        "calcium_mg": 24.0,
+        "iron_mg": 0.16,
+        "magnesium_mg": 2.0,
+        "potassium_mg": 26.0,
+        "sodium_mg": 659.0,
+        "zinc_mg": 0.05,
+        "vitamin_d_ug": 1.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 684.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "butter",
+          "whipped"
+        ],
+        "aliases": [
+          "butter whipped"
+        ]
+      },
+      "meta": {
+        "fid": 16,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "butter_oil_anhydrous",
+      "clean_name": "butter oil anhydrous",
+      "core_name": "butter oil anhydrous",
+      "name": "Butter oil, anhydrous",
+      "name_fr": "Huile de beurre, anhydre",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 0.28,
+        "fat_g": 99.48,
+        "carbs_g": 0.0,
+        "calories_kcal": 876.0,
+        "sugar_g": 0.0,
+        "fiber_g": 0.0,
+        "calcium_mg": 4.0,
+        "iron_mg": 0.0,
+        "magnesium_mg": 0.0,
+        "potassium_mg": 5.0,
+        "sodium_mg": 2.0,
+        "zinc_mg": 0.01,
+        "vitamin_d_ug": 1.8,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 840.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "butter",
+          "oil",
+          "anhydrous"
+        ],
+        "aliases": [
+          "butter oil anhydrous"
+        ]
+      },
+      "meta": {
+        "fid": 17,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_blue",
+      "clean_name": "cheese blue",
+      "core_name": "cheese blue",
+      "name": "Cheese, blue",
+      "name_fr": "Fromage bleu",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 21.4,
+        "fat_g": 28.74,
+        "carbs_g": 2.34,
+        "calories_kcal": 353.0,
+        "sugar_g": 0.5,
+        "fiber_g": 0.0,
+        "calcium_mg": 528.0,
+        "iron_mg": 0.31,
+        "magnesium_mg": 23.0,
+        "potassium_mg": 256.0,
+        "sodium_mg": 1146.0,
+        "zinc_mg": 2.66,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 198.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "blue"
+        ],
+        "aliases": [
+          "cheese blue"
+        ]
+      },
+      "meta": {
+        "fid": 18,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_brick",
+      "clean_name": "cheese brick",
+      "core_name": "cheese brick",
+      "name": "Cheese, brick",
+      "name_fr": "Fromage brick",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 23.24,
+        "fat_g": 29.68,
+        "carbs_g": 2.79,
+        "calories_kcal": 371.0,
+        "sugar_g": 0.51,
+        "fiber_g": 0.0,
+        "calcium_mg": 674.0,
+        "iron_mg": 0.43,
+        "magnesium_mg": 24.0,
+        "potassium_mg": 136.0,
+        "sodium_mg": 560.0,
+        "zinc_mg": 2.6,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 292.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "brick"
+        ],
+        "aliases": [
+          "cheese brick"
+        ]
+      },
+      "meta": {
+        "fid": 19,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_brie",
+      "clean_name": "cheese brie",
+      "core_name": "cheese brie",
+      "name": "Cheese, brie",
+      "name_fr": "Fromage brie",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 20.75,
+        "fat_g": 27.68,
+        "carbs_g": 0.45,
+        "calories_kcal": 334.0,
+        "sugar_g": 0.45,
+        "fiber_g": 0.0,
+        "calcium_mg": 184.0,
+        "iron_mg": 0.5,
+        "magnesium_mg": 20.0,
+        "potassium_mg": 152.0,
+        "sodium_mg": 629.0,
+        "zinc_mg": 2.38,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 174.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "brie"
+        ],
+        "aliases": [
+          "cheese brie"
+        ]
+      },
+      "meta": {
+        "fid": 20,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_camembert",
+      "clean_name": "cheese camembert",
+      "core_name": "cheese camembert",
+      "name": "Cheese, camembert",
+      "name_fr": "Fromage camembert",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 19.8,
+        "fat_g": 24.26,
+        "carbs_g": 0.46,
+        "calories_kcal": 300.0,
+        "sugar_g": 0.46,
+        "fiber_g": 0.0,
+        "calcium_mg": 388.0,
+        "iron_mg": 0.33,
+        "magnesium_mg": 20.0,
+        "potassium_mg": 187.0,
+        "sodium_mg": 842.0,
+        "zinc_mg": 2.38,
+        "vitamin_d_ug": 0.4,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 241.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "camembert"
+        ],
+        "aliases": [
+          "cheese camembert"
+        ]
+      },
+      "meta": {
+        "fid": 21,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_caraway",
+      "clean_name": "cheese caraway",
+      "core_name": "cheese caraway",
+      "name": "Cheese, caraway",
+      "name_fr": "Fromage carvi",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 25.18,
+        "fat_g": 29.2,
+        "carbs_g": 3.06,
+        "calories_kcal": 376.0,
+        "fiber_g": 0.0,
+        "calcium_mg": 673.0,
+        "iron_mg": 0.64,
+        "magnesium_mg": 22.0,
+        "potassium_mg": 93.0,
+        "sodium_mg": 690.0,
+        "zinc_mg": 2.94,
+        "vitamin_d_ug": 0.3,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 271.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "caraway"
+        ],
+        "aliases": [
+          "cheese caraway"
+        ]
+      },
+      "meta": {
+        "fid": 22,
+        "confidence": 0.933,
+        "nutrient_count": 14,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_cheshire",
+      "clean_name": "cheese cheshire",
+      "core_name": "cheese cheshire",
+      "name": "Cheese, cheshire",
+      "name_fr": "Fromage cheshire",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 23.37,
+        "fat_g": 30.6,
+        "carbs_g": 4.78,
+        "calories_kcal": 387.0,
+        "fiber_g": 0.0,
+        "calcium_mg": 643.0,
+        "iron_mg": 0.21,
+        "magnesium_mg": 21.0,
+        "potassium_mg": 95.0,
+        "sodium_mg": 700.0,
+        "zinc_mg": 2.79,
+        "vitamin_d_ug": 0.3,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 233.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "cheshire"
+        ],
+        "aliases": [
+          "cheese cheshire"
+        ]
+      },
+      "meta": {
+        "fid": 23,
+        "confidence": 0.933,
+        "nutrient_count": 14,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_colby",
+      "clean_name": "cheese colby",
+      "core_name": "cheese colby",
+      "name": "Cheese, colby",
+      "name_fr": "Fromage colby",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 23.76,
+        "fat_g": 32.11,
+        "carbs_g": 2.57,
+        "calories_kcal": 394.0,
+        "sugar_g": 0.52,
+        "fiber_g": 0.0,
+        "calcium_mg": 685.0,
+        "iron_mg": 0.76,
+        "magnesium_mg": 26.0,
+        "potassium_mg": 127.0,
+        "sodium_mg": 604.0,
+        "zinc_mg": 3.07,
+        "vitamin_d_ug": 0.6,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 264.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "colby"
+        ],
+        "aliases": [
+          "cheese colby"
+        ]
+      },
+      "meta": {
+        "fid": 24,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_cottage_creamed",
+      "clean_name": "cheese cottage creamed",
+      "core_name": "cheese cottage creamed",
+      "name": "Cheese, cottage, creamed (4.5% M.F.)",
+      "name_fr": "Fromage cottage en crème (4,5% M.G.)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 11.12,
+        "fat_g": 4.3,
+        "carbs_g": 3.38,
+        "calories_kcal": 99.0,
+        "sugar_g": 2.67,
+        "fiber_g": 0.0,
+        "calcium_mg": 83.0,
+        "iron_mg": 0.07,
+        "magnesium_mg": 8.0,
+        "potassium_mg": 104.0,
+        "sodium_mg": 364.0,
+        "zinc_mg": 0.4,
+        "vitamin_d_ug": 0.1,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 37.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "cottage",
+          "creamed"
+        ],
+        "aliases": [
+          "cheese cottage creamed"
+        ]
+      },
+      "meta": {
+        "fid": 25,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_cottage_creamed_with_fruit",
+      "clean_name": "cheese cottage creamed with fruit",
+      "core_name": "cheese cottage creamed",
+      "name": "Cheese, cottage, creamed with fruit",
+      "name_fr": "Fromage cottage en crème avec fruits",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 10.69,
+        "fat_g": 3.85,
+        "carbs_g": 4.61,
+        "calories_kcal": 97.0,
+        "sugar_g": 2.38,
+        "fiber_g": 0.2,
+        "calcium_mg": 53.0,
+        "iron_mg": 0.16,
+        "magnesium_mg": 7.0,
+        "potassium_mg": 90.0,
+        "sodium_mg": 344.0,
+        "zinc_mg": 0.33,
+        "vitamin_d_ug": 0.0,
+        "vitamin_c_mg": 1.4,
+        "vitamin_a_ug": 38.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "cottage",
+          "creamed",
+          "with",
+          "fruit"
+        ],
+        "aliases": [
+          "cheese cottage creamed",
+          "cheese cottage creamed with fruit"
+        ]
+      },
+      "meta": {
+        "fid": 26,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_cottage_uncreamed_dry_curd",
+      "clean_name": "cheese cottage uncreamed dry curd",
+      "core_name": "cheese cottage uncreamed dry curd",
+      "name": "Cheese, cottage, uncreamed, dry curd (0.4% M.F.)",
+      "name_fr": "Fromage cottage sec pressé (0,4% M.G.)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 10.34,
+        "fat_g": 0.29,
+        "carbs_g": 6.66,
+        "calories_kcal": 72.0,
+        "sugar_g": 1.85,
+        "fiber_g": 0.0,
+        "calcium_mg": 86.0,
+        "iron_mg": 0.15,
+        "magnesium_mg": 11.0,
+        "potassium_mg": 137.0,
+        "sodium_mg": 372.0,
+        "zinc_mg": 0.47,
+        "vitamin_d_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 2.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "cottage",
+          "uncreamed",
+          "dry",
+          "curd"
+        ],
+        "aliases": [
+          "cheese cottage uncreamed dry curd"
+        ]
+      },
+      "meta": {
+        "fid": 27,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_cream",
+      "clean_name": "cheese cream",
+      "core_name": "cheese cream",
+      "name": "Cheese, cream",
+      "name_fr": "Fromage à la crème",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 5.93,
+        "fat_g": 34.24,
+        "carbs_g": 4.07,
+        "calories_kcal": 342.0,
+        "sugar_g": 3.21,
+        "fiber_g": 0.0,
+        "calcium_mg": 98.0,
+        "iron_mg": 0.38,
+        "magnesium_mg": 9.0,
+        "potassium_mg": 138.0,
+        "sodium_mg": 365.0,
+        "zinc_mg": 0.51,
+        "vitamin_d_ug": 0.6,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 366.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "cream"
+        ],
+        "aliases": [
+          "cheese cream"
+        ]
+      },
+      "meta": {
+        "fid": 28,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_edam",
+      "clean_name": "cheese edam",
+      "core_name": "cheese edam",
+      "name": "Cheese, edam",
+      "name_fr": "Fromage edam",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 24.99,
+        "fat_g": 27.8,
+        "carbs_g": 1.43,
+        "calories_kcal": 357.0,
+        "sugar_g": 1.43,
+        "fiber_g": 0.0,
+        "calcium_mg": 731.0,
+        "iron_mg": 0.44,
+        "magnesium_mg": 30.0,
+        "potassium_mg": 188.0,
+        "sodium_mg": 812.0,
+        "zinc_mg": 3.75,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 243.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "edam"
+        ],
+        "aliases": [
+          "cheese edam"
+        ]
+      },
+      "meta": {
+        "fid": 29,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_fontina",
+      "clean_name": "cheese fontina",
+      "core_name": "cheese fontina",
+      "name": "Cheese, fontina",
+      "name_fr": "Fromage fontina",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 25.6,
+        "fat_g": 31.14,
+        "carbs_g": 1.55,
+        "calories_kcal": 389.0,
+        "sugar_g": 1.55,
+        "fiber_g": 0.0,
+        "calcium_mg": 550.0,
+        "iron_mg": 0.23,
+        "magnesium_mg": 14.0,
+        "potassium_mg": 64.0,
+        "sodium_mg": 800.0,
+        "zinc_mg": 3.5,
+        "vitamin_d_ug": 0.6,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 261.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "fontina"
+        ],
+        "aliases": [
+          "cheese fontina"
+        ]
+      },
+      "meta": {
+        "fid": 30,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_gjetost",
+      "clean_name": "cheese gjetost",
+      "core_name": "cheese gjetost",
+      "name": "Cheese, gjetost",
+      "name_fr": "Fromage gjetost",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 9.65,
+        "fat_g": 29.51,
+        "carbs_g": 42.65,
+        "calories_kcal": 466.0,
+        "fiber_g": 0.0,
+        "calcium_mg": 400.0,
+        "iron_mg": 0.52,
+        "magnesium_mg": 70.0,
+        "potassium_mg": 1409.0,
+        "sodium_mg": 600.0,
+        "zinc_mg": 1.14,
+        "vitamin_d_ug": 0.3,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 334.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "gjetost"
+        ],
+        "aliases": [
+          "cheese gjetost"
+        ]
+      },
+      "meta": {
+        "fid": 31,
+        "confidence": 0.933,
+        "nutrient_count": 14,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_gruyere",
+      "clean_name": "cheese gruyere",
+      "core_name": "cheese gruyere",
+      "name": "Cheese, gruyere",
+      "name_fr": "Fromage gruyère",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 29.81,
+        "fat_g": 32.34,
+        "carbs_g": 0.36,
+        "calories_kcal": 413.0,
+        "sugar_g": 0.36,
+        "fiber_g": 0.0,
+        "calcium_mg": 1011.0,
+        "iron_mg": 0.17,
+        "magnesium_mg": 36.0,
+        "potassium_mg": 81.0,
+        "sodium_mg": 714.0,
+        "zinc_mg": 3.9,
+        "vitamin_d_ug": 0.6,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 271.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "gruyere"
+        ],
+        "aliases": [
+          "cheese gruyere"
+        ]
+      },
+      "meta": {
+        "fid": 32,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_limburger",
+      "clean_name": "cheese limburger",
+      "core_name": "cheese limburger",
+      "name": "Cheese, limburger",
+      "name_fr": "Fromage limburger (limbourg)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 20.05,
+        "fat_g": 27.25,
+        "carbs_g": 0.49,
+        "calories_kcal": 327.0,
+        "sugar_g": 0.49,
+        "fiber_g": 0.0,
+        "calcium_mg": 497.0,
+        "iron_mg": 0.13,
+        "magnesium_mg": 21.0,
+        "potassium_mg": 128.0,
+        "sodium_mg": 800.0,
+        "zinc_mg": 2.1,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 340.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "limburger"
+        ],
+        "aliases": [
+          "cheese limburger"
+        ]
+      },
+      "meta": {
+        "fid": 33,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_monterey",
+      "clean_name": "cheese monterey",
+      "core_name": "cheese monterey",
+      "name": "Cheese, monterey",
+      "name_fr": "Fromage monterey",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 24.48,
+        "fat_g": 30.28,
+        "carbs_g": 0.68,
+        "calories_kcal": 374.0,
+        "sugar_g": 0.5,
+        "fiber_g": 0.0,
+        "calcium_mg": 746.0,
+        "iron_mg": 0.72,
+        "magnesium_mg": 27.0,
+        "potassium_mg": 81.0,
+        "sodium_mg": 600.0,
+        "zinc_mg": 3.0,
+        "vitamin_d_ug": 0.6,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 198.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "monterey"
+        ],
+        "aliases": [
+          "cheese monterey"
+        ]
+      },
+      "meta": {
+        "fid": 34,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_mozzarella",
+      "clean_name": "cheese mozzarella",
+      "core_name": "cheese mozzarella",
+      "name": "Cheese, mozzarella, (48% water, 25% M.F.)",
+      "name_fr": "Fromage mozzarella (48%d'humidité, 25% M.G.)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 21.6,
+        "fat_g": 24.64,
+        "carbs_g": 2.47,
+        "calories_kcal": 319.0,
+        "sugar_g": 1.01,
+        "fiber_g": 0.0,
+        "calcium_mg": 575.0,
+        "iron_mg": 0.2,
+        "magnesium_mg": 21.0,
+        "potassium_mg": 75.0,
+        "sodium_mg": 710.0,
+        "zinc_mg": 2.46,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 197.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "mozzarella"
+        ],
+        "aliases": [
+          "cheese mozzarella"
+        ]
+      },
+      "meta": {
+        "fid": 35,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_muenster",
+      "clean_name": "cheese muenster",
+      "core_name": "cheese muenster",
+      "name": "Cheese, muenster",
+      "name_fr": "Fromage muenster",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 23.41,
+        "fat_g": 30.04,
+        "carbs_g": 1.12,
+        "calories_kcal": 368.0,
+        "sugar_g": 1.12,
+        "fiber_g": 0.0,
+        "calcium_mg": 717.0,
+        "iron_mg": 0.41,
+        "magnesium_mg": 27.0,
+        "potassium_mg": 134.0,
+        "sodium_mg": 628.0,
+        "zinc_mg": 2.81,
+        "vitamin_d_ug": 0.6,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 298.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "muenster"
+        ],
+        "aliases": [
+          "cheese muenster"
+        ]
+      },
+      "meta": {
+        "fid": 37,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_neufchatel",
+      "clean_name": "cheese neufchatel",
+      "core_name": "cheese neufchatel",
+      "name": "Cheese, neufchatel",
+      "name_fr": "Fromage neufchatel",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 9.15,
+        "fat_g": 22.78,
+        "carbs_g": 3.59,
+        "calories_kcal": 253.0,
+        "sugar_g": 3.19,
+        "fiber_g": 0.0,
+        "calcium_mg": 117.0,
+        "iron_mg": 0.13,
+        "magnesium_mg": 10.0,
+        "potassium_mg": 152.0,
+        "sodium_mg": 334.0,
+        "zinc_mg": 0.82,
+        "vitamin_d_ug": 0.3,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 241.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "neufchatel"
+        ],
+        "aliases": [
+          "cheese neufchatel"
+        ]
+      },
+      "meta": {
+        "fid": 38,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_parmesan_dry_grated",
+      "clean_name": "cheese parmesan dry grated",
+      "core_name": "cheese parmesan dry grated",
+      "name": "Cheese, parmesan, dry grated",
+      "name_fr": "Fromage parmesan, râpé",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 28.42,
+        "fat_g": 27.84,
+        "carbs_g": 13.91,
+        "calories_kcal": 420.0,
+        "sugar_g": 0.07,
+        "fiber_g": 0.0,
+        "calcium_mg": 853.0,
+        "iron_mg": 0.49,
+        "magnesium_mg": 34.0,
+        "potassium_mg": 180.0,
+        "sodium_mg": 1804.0,
+        "zinc_mg": 4.2,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 262.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "parmesan",
+          "dry",
+          "grated"
+        ],
+        "aliases": [
+          "cheese parmesan dry grated"
+        ]
+      },
+      "meta": {
+        "fid": 39,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_parmesan_hard",
+      "clean_name": "cheese parmesan hard",
+      "core_name": "cheese parmesan hard",
+      "name": "Cheese, parmesan, hard",
+      "name_fr": "Fromage parmesan, pâte dure",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 35.75,
+        "fat_g": 25.83,
+        "carbs_g": 3.22,
+        "calories_kcal": 392.0,
+        "sugar_g": 0.8,
+        "fiber_g": 0.0,
+        "calcium_mg": 1184.0,
+        "iron_mg": 0.82,
+        "magnesium_mg": 44.0,
+        "potassium_mg": 92.0,
+        "sodium_mg": 1376.0,
+        "zinc_mg": 2.75,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 207.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "parmesan",
+          "hard"
+        ],
+        "aliases": [
+          "cheese parmesan hard"
+        ]
+      },
+      "meta": {
+        "fid": 40,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_portsalut",
+      "clean_name": "cheese portsalut",
+      "core_name": "cheese portsalut",
+      "name": "Cheese, port-salut",
+      "name_fr": "Fromage port-salut",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 23.78,
+        "fat_g": 28.2,
+        "carbs_g": 0.57,
+        "calories_kcal": 352.0,
+        "sugar_g": 0.57,
+        "fiber_g": 0.0,
+        "calcium_mg": 650.0,
+        "iron_mg": 0.43,
+        "magnesium_mg": 24.0,
+        "potassium_mg": 136.0,
+        "sodium_mg": 534.0,
+        "zinc_mg": 2.6,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 315.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "portsalut"
+        ],
+        "aliases": [
+          "cheese portsalut"
+        ]
+      },
+      "meta": {
+        "fid": 41,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_provolone",
+      "clean_name": "cheese provolone",
+      "core_name": "cheese provolone",
+      "name": "Cheese, provolone",
+      "name_fr": "Fromage provolone",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 25.58,
+        "fat_g": 26.62,
+        "carbs_g": 2.14,
+        "calories_kcal": 352.0,
+        "sugar_g": 0.56,
+        "fiber_g": 0.0,
+        "calcium_mg": 756.0,
+        "iron_mg": 0.52,
+        "magnesium_mg": 28.0,
+        "potassium_mg": 138.0,
+        "sodium_mg": 876.0,
+        "zinc_mg": 3.23,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 236.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "provolone"
+        ],
+        "aliases": [
+          "cheese provolone"
+        ]
+      },
+      "meta": {
+        "fid": 42,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_ricotta_with_whole_milk",
+      "clean_name": "cheese ricotta with whole milk",
+      "core_name": "cheese ricotta",
+      "name": "Cheese, ricotta, with whole milk",
+      "name_fr": "Fromage ricotta, avec lait entier",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 11.26,
+        "fat_g": 12.98,
+        "carbs_g": 3.04,
+        "calories_kcal": 174.0,
+        "sugar_g": 0.27,
+        "fiber_g": 0.0,
+        "calcium_mg": 207.0,
+        "iron_mg": 0.38,
+        "magnesium_mg": 11.0,
+        "potassium_mg": 105.0,
+        "sodium_mg": 84.0,
+        "zinc_mg": 1.16,
+        "vitamin_d_ug": 0.2,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 120.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "ricotta",
+          "with",
+          "whole",
+          "milk"
+        ],
+        "aliases": [
+          "cheese ricotta",
+          "cheese ricotta with whole milk"
+        ]
+      },
+      "meta": {
+        "fid": 43,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_ricotta_with_partly_skimmed_milk",
+      "clean_name": "cheese ricotta with partly skimmed milk",
+      "core_name": "cheese ricotta",
+      "name": "Cheese, ricotta, with partly skimmed milk",
+      "name_fr": "Fromage ricotta, avec lait partiellement écrémé",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 11.39,
+        "fat_g": 7.91,
+        "carbs_g": 5.14,
+        "calories_kcal": 138.0,
+        "sugar_g": 0.31,
+        "fiber_g": 0.0,
+        "calcium_mg": 272.0,
+        "iron_mg": 0.44,
+        "magnesium_mg": 15.0,
+        "potassium_mg": 125.0,
+        "sodium_mg": 99.0,
+        "zinc_mg": 1.34,
+        "vitamin_d_ug": 0.2,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 107.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "ricotta",
+          "with",
+          "partly",
+          "skimmed",
+          "milk"
+        ],
+        "aliases": [
+          "cheese ricotta with partly skimmed milk",
+          "cheese ricotta"
+        ]
+      },
+      "meta": {
+        "fid": 44,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_romano",
+      "clean_name": "cheese romano",
+      "core_name": "cheese romano",
+      "name": "Cheese, romano",
+      "name_fr": "Fromage romano",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 31.8,
+        "fat_g": 26.94,
+        "carbs_g": 3.63,
+        "calories_kcal": 387.0,
+        "sugar_g": 0.73,
+        "fiber_g": 0.0,
+        "calcium_mg": 1064.0,
+        "iron_mg": 0.77,
+        "magnesium_mg": 41.0,
+        "potassium_mg": 86.0,
+        "sodium_mg": 1433.0,
+        "zinc_mg": 2.58,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 96.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "romano"
+        ],
+        "aliases": [
+          "cheese romano"
+        ]
+      },
+      "meta": {
+        "fid": 45,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_roquefort",
+      "clean_name": "cheese roquefort",
+      "core_name": "cheese roquefort",
+      "name": "Cheese, roquefort (blue)",
+      "name_fr": "Fromage roquefort (bleu)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 21.54,
+        "fat_g": 30.64,
+        "carbs_g": 2.0,
+        "calories_kcal": 369.0,
+        "fiber_g": 0.0,
+        "calcium_mg": 662.0,
+        "iron_mg": 0.56,
+        "magnesium_mg": 30.0,
+        "potassium_mg": 91.0,
+        "sodium_mg": 1809.0,
+        "zinc_mg": 2.08,
+        "vitamin_d_ug": 0.3,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 294.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "roquefort"
+        ],
+        "aliases": [
+          "cheese roquefort"
+        ]
+      },
+      "meta": {
+        "fid": 46,
+        "confidence": 0.933,
+        "nutrient_count": 14,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_swiss",
+      "clean_name": "cheese swiss",
+      "core_name": "cheese swiss",
+      "name": "Cheese, swiss (emmental)",
+      "name_fr": "Fromage suisse (emmental)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 26.93,
+        "fat_g": 27.8,
+        "carbs_g": 5.38,
+        "calories_kcal": 380.0,
+        "sugar_g": 1.32,
+        "fiber_g": 0.0,
+        "calcium_mg": 791.0,
+        "iron_mg": 0.2,
+        "magnesium_mg": 38.0,
+        "potassium_mg": 77.0,
+        "sodium_mg": 70.0,
+        "zinc_mg": 4.36,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 220.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "swiss"
+        ],
+        "aliases": [
+          "cheese swiss"
+        ]
+      },
+      "meta": {
+        "fid": 47,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_tilsit_with_whole_milk",
+      "clean_name": "cheese tilsit with whole milk",
+      "core_name": "cheese tilsit",
+      "name": "Cheese, tilsit, with whole milk",
+      "name_fr": "Fromage tilsit, avec lait entier",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 24.41,
+        "fat_g": 25.98,
+        "carbs_g": 1.88,
+        "calories_kcal": 340.0,
+        "fiber_g": 0.0,
+        "calcium_mg": 700.0,
+        "iron_mg": 0.23,
+        "magnesium_mg": 13.0,
+        "potassium_mg": 65.0,
+        "sodium_mg": 753.0,
+        "zinc_mg": 3.5,
+        "vitamin_d_ug": 0.3,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 249.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "tilsit",
+          "with",
+          "whole",
+          "milk"
+        ],
+        "aliases": [
+          "cheese tilsit with whole milk",
+          "cheese tilsit"
+        ]
+      },
+      "meta": {
+        "fid": 48,
+        "confidence": 0.933,
+        "nutrient_count": 14,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_processed_cheddar_cold_pack",
+      "clean_name": "cheese processed cheddar cold pack",
+      "core_name": "cheese processed cheddar cold pack",
+      "name": "Cheese, processed, cheddar, cold pack",
+      "name_fr": "Fromage fondu, préparation, cheddar, conditionné à froid",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 19.66,
+        "fat_g": 24.46,
+        "carbs_g": 8.32,
+        "calories_kcal": 331.0,
+        "sugar_g": 0.51,
+        "fiber_g": 0.0,
+        "calcium_mg": 497.0,
+        "iron_mg": 0.84,
+        "magnesium_mg": 30.0,
+        "potassium_mg": 363.0,
+        "sodium_mg": 966.0,
+        "zinc_mg": 3.01,
+        "vitamin_d_ug": 0.2,
+        "vitamin_c_mg": 0.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "processed",
+          "cheddar",
+          "cold",
+          "pack"
+        ],
+        "aliases": [
+          "cheese processed cheddar cold pack"
+        ]
+      },
+      "meta": {
+        "fid": 51,
+        "confidence": 0.933,
+        "nutrient_count": 14,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_processed_food_swiss_loaf",
+      "clean_name": "cheese processed food swiss loaf",
+      "core_name": "cheese processed food swiss loaf",
+      "name": "Cheese, processed food, swiss, loaf",
+      "name_fr": "Fromage fondu, préparation, Suisse, pain",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 21.92,
+        "fat_g": 24.14,
+        "carbs_g": 4.5,
+        "calories_kcal": 323.0,
+        "sugar_g": 1.23,
+        "fiber_g": 0.0,
+        "calcium_mg": 723.0,
+        "iron_mg": 0.6,
+        "magnesium_mg": 28.0,
+        "potassium_mg": 284.0,
+        "sodium_mg": 1552.0,
+        "zinc_mg": 3.55,
+        "vitamin_d_ug": 0.1,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 237.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "processed",
+          "food",
+          "swiss",
+          "loaf"
+        ],
+        "aliases": [
+          "cheese processed food swiss loaf"
+        ]
+      },
+      "meta": {
+        "fid": 52,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cream_whipped_cream_topping_pressurized",
+      "clean_name": "cream whipped cream topping pressurized",
+      "core_name": "cream whipped cream topping pressurized",
+      "name": "Cream, whipped, cream topping, pressurized",
+      "name_fr": "Crème, garniture fouettée, sous pression (bombe)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 3.2,
+        "fat_g": 22.22,
+        "carbs_g": 12.49,
+        "calories_kcal": 258.0,
+        "sugar_g": 8.0,
+        "fiber_g": 0.0,
+        "calcium_mg": 101.0,
+        "iron_mg": 0.05,
+        "magnesium_mg": 11.0,
+        "potassium_mg": 147.0,
+        "sodium_mg": 8.0,
+        "zinc_mg": 0.37,
+        "vitamin_d_ug": 0.4,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 188.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cream",
+          "whipped",
+          "cream",
+          "topping",
+          "pressurized"
+        ],
+        "aliases": [
+          "cream whipped cream topping pressurized"
+        ]
+      },
+      "meta": {
+        "fid": 54,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "eggnog_7_mf_canadian_product_4_to_8_mf",
+      "clean_name": "eggnog 7 mf canadian product 4 to 8 mf",
+      "core_name": "eggnog 7 mf canadian product 4 to 8 mf",
+      "name": "Eggnog, 7% M.F., Canadian product, 4% to 8% M.F.",
+      "name_fr": "Lait de poule, 7% M.G., produit canadien, 4% à 8% M.G.",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 4.55,
+        "fat_g": 4.19,
+        "carbs_g": 8.05,
+        "calories_kcal": 88.0,
+        "sugar_g": 8.05,
+        "fiber_g": 0.0,
+        "calcium_mg": 130.0,
+        "iron_mg": 0.2,
+        "magnesium_mg": 19.0,
+        "potassium_mg": 165.0,
+        "sodium_mg": 54.0,
+        "zinc_mg": 0.46,
+        "vitamin_d_ug": 1.2,
+        "vitamin_c_mg": 1.5,
+        "vitamin_a_ug": 59.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "eggnog",
+          "mf",
+          "canadian",
+          "product",
+          "to",
+          "mf"
+        ],
+        "aliases": [
+          "eggnog 7 mf canadian product 4 to 8 mf"
+        ]
+      },
+      "meta": {
+        "fid": 55,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "coffee_whitener__liquid",
+      "clean_name": "coffee whitener  liquid",
+      "core_name": "coffee whitener  liquid",
+      "name": "Coffee whitener (non dairy), liquid",
+      "name_fr": "Colorant à café (non laitier), liquide",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 1.0,
+        "fat_g": 9.97,
+        "carbs_g": 11.38,
+        "calories_kcal": 136.0,
+        "sugar_g": 11.38,
+        "fiber_g": 0.0,
+        "calcium_mg": 9.0,
+        "iron_mg": 0.03,
+        "magnesium_mg": 0.0,
+        "potassium_mg": 191.0,
+        "sodium_mg": 67.0,
+        "zinc_mg": 0.02,
+        "vitamin_d_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 1.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "coffee",
+          "whitener",
+          "liquid"
+        ],
+        "aliases": [
+          "coffee whitener  liquid"
+        ]
+      },
+      "meta": {
+        "fid": 56,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "dessert_topping__powdered",
+      "clean_name": "dessert topping  powdered",
+      "core_name": "dessert topping  powdered",
+      "name": "Dessert topping (non dairy), powdered",
+      "name_fr": "Garniture à dessert (non laitière), poudre",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 4.9,
+        "fat_g": 39.92,
+        "carbs_g": 52.54,
+        "calories_kcal": 577.0,
+        "sugar_g": 52.54,
+        "fiber_g": 0.0,
+        "calcium_mg": 17.0,
+        "iron_mg": 0.03,
+        "magnesium_mg": 7.0,
+        "potassium_mg": 166.0,
+        "sodium_mg": 122.0,
+        "zinc_mg": 0.08,
+        "vitamin_d_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 0.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {
+          "985": 22.0,
+          "1391": 1.0
+        },
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "dessert",
+          "topping",
+          "powdered"
+        ],
+        "aliases": [
+          "dessert topping  powdered"
+        ]
+      },
+      "meta": {
+        "fid": 57,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "dessert_topping__powdered_prepared_with_whole_milk",
+      "clean_name": "dessert topping  powdered prepared with whole milk",
+      "core_name": "dessert topping  powdered prepared",
+      "name": "Dessert topping (non dairy), powdered, prepared with whole milk",
+      "name_fr": "Garniture à dessert (non laitière), poudre, préparée avec lait entier",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 3.61,
+        "fat_g": 12.72,
+        "carbs_g": 17.13,
+        "calories_kcal": 194.0,
+        "sugar_g": 17.13,
+        "fiber_g": 0.0,
+        "calcium_mg": 90.0,
+        "iron_mg": 0.04,
+        "magnesium_mg": 10.0,
+        "potassium_mg": 151.0,
+        "sodium_mg": 66.0,
+        "zinc_mg": 0.27,
+        "vitamin_d_ug": 0.9,
+        "vitamin_c_mg": 0.7,
+        "vitamin_a_ug": 34.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "dessert",
+          "topping",
+          "powdered",
+          "prepared",
+          "with",
+          "whole",
+          "milk"
+        ],
+        "aliases": [
+          "dessert topping  powdered prepared",
+          "dessert topping  powdered prepared with whole milk"
+        ]
+      },
+      "meta": {
+        "fid": 58,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "dessert_topping__pressurized",
+      "clean_name": "dessert topping  pressurized",
+      "core_name": "dessert topping  pressurized",
+      "name": "Dessert topping (non dairy), pressurized",
+      "name_fr": "Garniture à dessert (non laitière), sous pression (bombe)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 0.98,
+        "fat_g": 22.3,
+        "carbs_g": 16.07,
+        "calories_kcal": 264.0,
+        "sugar_g": 16.07,
+        "fiber_g": 0.0,
+        "calcium_mg": 5.0,
+        "iron_mg": 0.02,
+        "magnesium_mg": 1.0,
+        "potassium_mg": 19.0,
+        "sodium_mg": 62.0,
+        "zinc_mg": 0.01,
+        "vitamin_d_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 4.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "dessert",
+          "topping",
+          "pressurized"
+        ],
+        "aliases": [
+          "dessert topping  pressurized"
+        ]
+      },
+      "meta": {
+        "fid": 59,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "dessert_topping__frozen_semisolid",
+      "clean_name": "dessert topping  frozen semisolid",
+      "core_name": "dessert topping  frozen semisolid",
+      "name": "Dessert topping (non dairy), frozen, semisolid",
+      "name_fr": "Garniture à dessert (non laitière), congelée, semi-solide",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 1.25,
+        "fat_g": 25.31,
+        "carbs_g": 23.05,
+        "calories_kcal": 319.0,
+        "sugar_g": 23.05,
+        "fiber_g": 0.0,
+        "calcium_mg": 6.0,
+        "iron_mg": 0.12,
+        "magnesium_mg": 2.0,
+        "potassium_mg": 18.0,
+        "sodium_mg": 25.0,
+        "zinc_mg": 0.03,
+        "vitamin_d_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 7.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "dessert",
+          "topping",
+          "frozen",
+          "semisolid"
+        ],
+        "aliases": [
+          "dessert topping  frozen semisolid"
+        ]
+      },
+      "meta": {
+        "fid": 60,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_fluid_partly_skimmed_2_mf",
+      "clean_name": "milk fluid partly skimmed 2 mf",
+      "core_name": "milk fluid partly skimmed 2 mf",
+      "name": "Milk, fluid, partly skimmed, 2% M.F.",
+      "name_fr": "Lait, partiellement écrémé, liquide, 2% M.G.",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 3.3,
+        "fat_g": 1.98,
+        "carbs_g": 4.8,
+        "calories_kcal": 50.0,
+        "sugar_g": 5.06,
+        "fiber_g": 0.0,
+        "calcium_mg": 120.0,
+        "iron_mg": 0.02,
+        "magnesium_mg": 11.0,
+        "potassium_mg": 140.0,
+        "sodium_mg": 47.0,
+        "zinc_mg": 0.48,
+        "vitamin_d_ug": 1.0,
+        "vitamin_c_mg": 0.2,
+        "vitamin_a_ug": 63.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "fluid",
+          "partly",
+          "skimmed",
+          "mf"
+        ],
+        "aliases": [
+          "milk fluid partly skimmed 2 mf"
+        ]
+      },
+      "meta": {
+        "fid": 61,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_fluid_partly_skimmed_1_mf",
+      "clean_name": "milk fluid partly skimmed 1 mf",
+      "core_name": "milk fluid partly skimmed 1 mf",
+      "name": "Milk, fluid, partly skimmed, 1% M.F.",
+      "name_fr": "Lait, liquide, partiellement écrémé, 1% M.G.",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 3.37,
+        "fat_g": 0.97,
+        "carbs_g": 4.99,
+        "calories_kcal": 42.0,
+        "sugar_g": 5.2,
+        "fiber_g": 0.0,
+        "calcium_mg": 125.0,
+        "iron_mg": 0.03,
+        "magnesium_mg": 11.0,
+        "potassium_mg": 150.0,
+        "sodium_mg": 44.0,
+        "zinc_mg": 0.42,
+        "vitamin_d_ug": 1.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 63.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "fluid",
+          "partly",
+          "skimmed",
+          "mf"
+        ],
+        "aliases": [
+          "milk fluid partly skimmed 1 mf"
+        ]
+      },
+      "meta": {
+        "fid": 63,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_dry_whole",
+      "clean_name": "milk dry whole",
+      "core_name": "milk dry whole",
+      "name": "Milk, dry whole",
+      "name_fr": "Lait, poudre, entier",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 26.32,
+        "fat_g": 26.71,
+        "carbs_g": 38.42,
+        "calories_kcal": 496.0,
+        "sugar_g": 38.42,
+        "fiber_g": 0.0,
+        "calcium_mg": 912.0,
+        "iron_mg": 0.47,
+        "magnesium_mg": 85.0,
+        "potassium_mg": 1330.0,
+        "sodium_mg": 371.0,
+        "zinc_mg": 3.34,
+        "vitamin_d_ug": 10.5,
+        "vitamin_c_mg": 8.6,
+        "vitamin_a_ug": 258.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {
+          "985": 33.0
+        },
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "dry",
+          "whole"
+        ],
+        "aliases": [
+          "milk dry whole"
+        ]
+      },
+      "meta": {
+        "fid": 66,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_dry_buttermilk_sweet_cream",
+      "clean_name": "milk dry buttermilk sweet cream",
+      "core_name": "milk dry buttermilk sweet cream",
+      "name": "Milk, dry, buttermilk, sweet cream",
+      "name_fr": "Babeurre, poudre, crème douce",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 34.3,
+        "fat_g": 5.78,
+        "carbs_g": 49.0,
+        "calories_kcal": 387.0,
+        "sugar_g": 49.0,
+        "fiber_g": 0.0,
+        "calcium_mg": 1184.0,
+        "iron_mg": 0.3,
+        "magnesium_mg": 110.0,
+        "potassium_mg": 1592.0,
+        "sodium_mg": 517.0,
+        "zinc_mg": 4.02,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 5.7,
+        "vitamin_a_ug": 49.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {
+          "985": 25.0
+        },
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "dry",
+          "buttermilk",
+          "sweet",
+          "cream"
+        ],
+        "aliases": [
+          "milk dry buttermilk sweet cream"
+        ]
+      },
+      "meta": {
+        "fid": 67,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_condensed_sweetened_canned",
+      "clean_name": "milk condensed sweetened canned",
+      "core_name": "milk condensed sweetened canned",
+      "name": "Milk, condensed, sweetened, canned",
+      "name_fr": "Lait, concentré, sucré, conserve",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 7.91,
+        "fat_g": 8.7,
+        "carbs_g": 54.4,
+        "calories_kcal": 321.0,
+        "sugar_g": 54.4,
+        "fiber_g": 0.0,
+        "calcium_mg": 284.0,
+        "iron_mg": 0.19,
+        "magnesium_mg": 26.0,
+        "potassium_mg": 371.0,
+        "sodium_mg": 127.0,
+        "zinc_mg": 0.94,
+        "vitamin_d_ug": 0.0,
+        "vitamin_c_mg": 2.6,
+        "vitamin_a_ug": 74.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "condensed",
+          "sweetened",
+          "canned"
+        ],
+        "aliases": [
+          "milk condensed sweetened canned"
+        ]
+      },
+      "meta": {
+        "fid": 68,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_fluid_chocolate_whole",
+      "clean_name": "milk fluid chocolate whole",
+      "core_name": "milk fluid chocolate whole",
+      "name": "Milk, fluid, chocolate, whole",
+      "name_fr": "Lait, liquide, chocolat, entier",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 3.17,
+        "fat_g": 3.39,
+        "carbs_g": 10.34,
+        "calories_kcal": 83.0,
+        "sugar_g": 9.54,
+        "fiber_g": 0.8,
+        "calcium_mg": 112.0,
+        "iron_mg": 0.24,
+        "magnesium_mg": 13.0,
+        "potassium_mg": 167.0,
+        "sodium_mg": 60.0,
+        "zinc_mg": 0.41,
+        "vitamin_d_ug": 1.0,
+        "vitamin_c_mg": 0.9,
+        "vitamin_a_ug": 27.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "fluid",
+          "chocolate",
+          "whole"
+        ],
+        "aliases": [
+          "milk fluid chocolate whole"
+        ]
+      },
+      "meta": {
+        "fid": 69,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_fluid_chocolate_partly_skimmed_2_mf",
+      "clean_name": "milk fluid chocolate partly skimmed 2 mf",
+      "core_name": "milk fluid chocolate partly skimmed 2 mf",
+      "name": "Milk, fluid, chocolate, partly skimmed, 2% M.F.",
+      "name_fr": "Lait, liquide, chocolat, partiellement écrémé, 2% M.G.",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 2.99,
+        "fat_g": 1.9,
+        "carbs_g": 12.13,
+        "calories_kcal": 77.0,
+        "sugar_g": 9.55,
+        "fiber_g": 0.7,
+        "calcium_mg": 109.0,
+        "iron_mg": 0.24,
+        "magnesium_mg": 14.0,
+        "potassium_mg": 169.0,
+        "sodium_mg": 66.0,
+        "zinc_mg": 0.39,
+        "vitamin_d_ug": 1.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 63.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "fluid",
+          "chocolate",
+          "partly",
+          "skimmed",
+          "mf"
+        ],
+        "aliases": [
+          "milk fluid chocolate partly skimmed 2 mf"
+        ]
+      },
+      "meta": {
+        "fid": 70,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "hot_chocolate_cocoa_homemade_prepared_with_2_milk",
+      "clean_name": "hot chocolate cocoa homemade prepared with 2 milk",
+      "core_name": "hot chocolate cocoa homemade prepared",
+      "name": "Hot chocolate, cocoa, homemade, prepared with 2% milk",
+      "name_fr": "Chocolat chaud, cacao, fait maison, préparé avec lait 2% m.g.",
+      "group": "Beverages",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 3.52,
+        "fat_g": 2.34,
+        "carbs_g": 10.74,
+        "calories_kcal": 77.0,
+        "sugar_g": 9.66,
+        "fiber_g": 1.0,
+        "calcium_mg": 114.0,
+        "iron_mg": 0.42,
+        "magnesium_mg": 23.0,
+        "potassium_mg": 197.0,
+        "sodium_mg": 44.0,
+        "zinc_mg": 0.63,
+        "vitamin_d_ug": 0.9,
+        "vitamin_c_mg": 0.2,
+        "vitamin_a_ug": 51.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "hot",
+          "chocolate",
+          "cocoa",
+          "homemade",
+          "prepared",
+          "with",
+          "milk"
+        ],
+        "aliases": [
+          "hot chocolate cocoa homemade prepared with 2 milk",
+          "hot chocolate cocoa homemade prepared"
+        ]
+      },
+      "meta": {
+        "fid": 71,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_fluid_goat_enriched_whole",
+      "clean_name": "milk fluid goat enriched whole",
+      "core_name": "milk fluid goat enriched whole",
+      "name": "Milk, fluid, goat, enriched, whole",
+      "name_fr": "Lait, liquide, chèvre, enrichi, entier",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 3.56,
+        "fat_g": 4.14,
+        "carbs_g": 4.45,
+        "calories_kcal": 69.0,
+        "sugar_g": 4.45,
+        "fiber_g": 0.0,
+        "calcium_mg": 134.0,
+        "iron_mg": 0.05,
+        "magnesium_mg": 14.0,
+        "potassium_mg": 204.0,
+        "sodium_mg": 50.0,
+        "zinc_mg": 0.3,
+        "vitamin_d_ug": 1.0,
+        "vitamin_c_mg": 1.3,
+        "vitamin_a_ug": 57.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "fluid",
+          "goat",
+          "enriched",
+          "whole"
+        ],
+        "aliases": [
+          "milk fluid goat enriched whole"
+        ]
+      },
+      "meta": {
+        "fid": 72,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_fluid_human__mature",
+      "clean_name": "milk fluid human  mature",
+      "core_name": "milk fluid human  mature",
+      "name": "Milk, fluid, human (breast milk), mature",
+      "name_fr": "Lait, liquide, humain (lait maternel), mature, entier",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 1.03,
+        "fat_g": 4.38,
+        "carbs_g": 6.89,
+        "calories_kcal": 70.0,
+        "sugar_g": 6.89,
+        "fiber_g": 0.0,
+        "calcium_mg": 32.0,
+        "iron_mg": 0.03,
+        "magnesium_mg": 3.0,
+        "potassium_mg": 51.0,
+        "sodium_mg": 17.0,
+        "zinc_mg": 0.17,
+        "vitamin_d_ug": 0.1,
+        "vitamin_c_mg": 5.0,
+        "vitamin_a_ug": 61.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "fluid",
+          "human",
+          "mature"
+        ],
+        "aliases": [
+          "milk fluid human  mature"
+        ]
+      },
+      "meta": {
+        "fid": 73,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_fluid_sheep_whole",
+      "clean_name": "milk fluid sheep whole",
+      "core_name": "milk fluid sheep whole",
+      "name": "Milk, fluid, sheep, whole",
+      "name_fr": "Lait, liquide, brebis, entier",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 5.98,
+        "fat_g": 7.0,
+        "carbs_g": 5.36,
+        "calories_kcal": 108.0,
+        "fiber_g": 0.0,
+        "calcium_mg": 193.0,
+        "iron_mg": 0.1,
+        "magnesium_mg": 18.0,
+        "potassium_mg": 137.0,
+        "sodium_mg": 44.0,
+        "zinc_mg": 0.54,
+        "vitamin_c_mg": 4.2,
+        "vitamin_a_ug": 44.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "fluid",
+          "sheep",
+          "whole"
+        ],
+        "aliases": [
+          "milk fluid sheep whole"
+        ]
+      },
+      "meta": {
+        "fid": 74,
+        "confidence": 0.867,
+        "nutrient_count": 13,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_shake_chocolate_thick",
+      "clean_name": "milk shake chocolate thick",
+      "core_name": "milk shake chocolate thick",
+      "name": "Milk shake, chocolate, thick",
+      "name_fr": "Lait frappé, chocolat, épais",
+      "group": "Beverages",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 3.05,
+        "fat_g": 2.7,
+        "carbs_g": 21.15,
+        "calories_kcal": 119.0,
+        "sugar_g": 20.85,
+        "fiber_g": 0.3,
+        "calcium_mg": 132.0,
+        "iron_mg": 0.31,
+        "magnesium_mg": 16.0,
+        "potassium_mg": 224.0,
+        "sodium_mg": 111.0,
+        "zinc_mg": 0.48,
+        "vitamin_d_ug": 0.6,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 18.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "shake",
+          "chocolate",
+          "thick"
+        ],
+        "aliases": [
+          "milk shake chocolate thick"
+        ]
+      },
+      "meta": {
+        "fid": 75,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_shake_vanilla_thick",
+      "clean_name": "milk shake vanilla thick",
+      "core_name": "milk shake vanilla thick",
+      "name": "Milk shake, vanilla, thick",
+      "name_fr": "Lait frappé, vanille, épais",
+      "group": "Beverages",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 3.86,
+        "fat_g": 3.03,
+        "carbs_g": 17.75,
+        "calories_kcal": 112.0,
+        "sugar_g": 17.75,
+        "fiber_g": 0.0,
+        "calcium_mg": 146.0,
+        "iron_mg": 0.1,
+        "magnesium_mg": 12.0,
+        "potassium_mg": 183.0,
+        "sodium_mg": 95.0,
+        "zinc_mg": 0.39,
+        "vitamin_d_ug": 0.6,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 25.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "shake",
+          "vanilla",
+          "thick"
+        ],
+        "aliases": [
+          "milk shake vanilla thick"
+        ]
+      },
+      "meta": {
+        "fid": 76,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "whey_acid_fluid",
+      "clean_name": "whey acid fluid",
+      "core_name": "whey acid fluid",
+      "name": "Whey, acid, fluid",
+      "name_fr": "Lactoserum, acide, liquide",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 0.76,
+        "fat_g": 0.09,
+        "carbs_g": 5.12,
+        "calories_kcal": 24.0,
+        "sugar_g": 5.12,
+        "fiber_g": 0.0,
+        "calcium_mg": 103.0,
+        "iron_mg": 0.08,
+        "magnesium_mg": 10.0,
+        "potassium_mg": 143.0,
+        "sodium_mg": 48.0,
+        "zinc_mg": 0.43,
+        "vitamin_c_mg": 0.1,
+        "vitamin_a_ug": 2.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "whey",
+          "acid",
+          "fluid"
+        ],
+        "aliases": [
+          "whey acid fluid"
+        ]
+      },
+      "meta": {
+        "fid": 77,
+        "confidence": 0.933,
+        "nutrient_count": 14,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "whey_acid_dry",
+      "clean_name": "whey acid dry",
+      "core_name": "whey acid dry",
+      "name": "Whey, acid, dry",
+      "name_fr": "Lactoserum, acide, poudre",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 11.73,
+        "fat_g": 0.54,
+        "carbs_g": 73.45,
+        "calories_kcal": 339.0,
+        "sugar_g": 73.45,
+        "fiber_g": 0.0,
+        "calcium_mg": 2054.0,
+        "iron_mg": 1.24,
+        "magnesium_mg": 199.0,
+        "potassium_mg": 2289.0,
+        "sodium_mg": 968.0,
+        "zinc_mg": 6.31,
+        "vitamin_d_ug": 0.0,
+        "vitamin_c_mg": 0.9,
+        "vitamin_a_ug": 17.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "whey",
+          "acid",
+          "dry"
+        ],
+        "aliases": [
+          "whey acid dry"
+        ]
+      },
+      "meta": {
+        "fid": 78,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "whey_sweet_fluid",
+      "clean_name": "whey sweet fluid",
+      "core_name": "whey sweet fluid",
+      "name": "Whey, sweet, fluid",
+      "name_fr": "Lactoserum, sucré, liquide",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 0.85,
+        "fat_g": 0.36,
+        "carbs_g": 5.14,
+        "calories_kcal": 27.0,
+        "sugar_g": 5.14,
+        "fiber_g": 0.0,
+        "calcium_mg": 47.0,
+        "iron_mg": 0.06,
+        "magnesium_mg": 8.0,
+        "potassium_mg": 161.0,
+        "sodium_mg": 54.0,
+        "zinc_mg": 0.13,
+        "vitamin_c_mg": 0.1,
+        "vitamin_a_ug": 3.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "whey",
+          "sweet",
+          "fluid"
+        ],
+        "aliases": [
+          "whey sweet fluid"
+        ]
+      },
+      "meta": {
+        "fid": 79,
+        "confidence": 0.933,
+        "nutrient_count": 14,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "whey_sweet_dry",
+      "clean_name": "whey sweet dry",
+      "core_name": "whey sweet dry",
+      "name": "Whey, sweet, dry",
+      "name_fr": "Lactoserum, sucré, poudre",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 12.93,
+        "fat_g": 1.07,
+        "carbs_g": 74.46,
+        "calories_kcal": 353.0,
+        "sugar_g": 74.46,
+        "fiber_g": 0.0,
+        "calcium_mg": 796.0,
+        "iron_mg": 0.88,
+        "magnesium_mg": 176.0,
+        "potassium_mg": 2080.0,
+        "sodium_mg": 1079.0,
+        "zinc_mg": 1.97,
+        "vitamin_d_ug": 0.0,
+        "vitamin_c_mg": 1.5,
+        "vitamin_a_ug": 8.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "whey",
+          "sweet",
+          "dry"
+        ],
+        "aliases": [
+          "whey sweet dry"
+        ]
+      },
+      "meta": {
+        "fid": 80,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "egg_goose_whole_fresh_raw",
+      "clean_name": "egg goose whole fresh raw",
+      "core_name": "egg goose whole fresh raw",
+      "name": "Egg, goose, whole, fresh, raw",
+      "name_fr": "Oeuf, oie, entier, frais, cru",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 13.87,
+        "fat_g": 13.27,
+        "carbs_g": 1.35,
+        "calories_kcal": 185.0,
+        "sugar_g": 0.94,
+        "fiber_g": 0.0,
+        "calcium_mg": 60.0,
+        "iron_mg": 3.64,
+        "magnesium_mg": 16.0,
+        "potassium_mg": 210.0,
+        "sodium_mg": 138.0,
+        "zinc_mg": 1.33,
+        "vitamin_d_ug": 1.7,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 187.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 13.0
+      },
+      "matching": {
+        "tokens": [
+          "egg",
+          "goose",
+          "whole",
+          "fresh",
+          "raw"
+        ],
+        "aliases": [
+          "egg goose whole fresh raw"
+        ]
+      },
+      "meta": {
+        "fid": 89,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "egg_quail_whole_fresh_raw",
+      "clean_name": "egg quail whole fresh raw",
+      "core_name": "egg quail whole fresh raw",
+      "name": "Egg, quail, whole, fresh, raw",
+      "name_fr": "Oeuf, caille, entier, frais, cru",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 13.05,
+        "fat_g": 11.09,
+        "carbs_g": 0.41,
+        "calories_kcal": 159.0,
+        "sugar_g": 0.4,
+        "fiber_g": 0.0,
+        "calcium_mg": 64.0,
+        "iron_mg": 3.65,
+        "magnesium_mg": 13.0,
+        "potassium_mg": 132.0,
+        "sodium_mg": 141.0,
+        "zinc_mg": 1.47,
+        "vitamin_d_ug": 1.4,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 156.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 8.0
+      },
+      "matching": {
+        "tokens": [
+          "egg",
+          "quail",
+          "whole",
+          "fresh",
+          "raw"
+        ],
+        "aliases": [
+          "egg quail whole fresh raw"
+        ]
+      },
+      "meta": {
+        "fid": 90,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "butter_unsalted",
+      "clean_name": "butter unsalted",
+      "core_name": "butter unsalted",
+      "name": "Butter, unsalted",
+      "name_fr": "Beurre, sans sel",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 0.85,
+        "fat_g": 81.11,
+        "carbs_g": 0.06,
+        "calories_kcal": 717.0,
+        "sugar_g": 0.06,
+        "fiber_g": 0.0,
+        "calcium_mg": 24.0,
+        "iron_mg": 0.02,
+        "magnesium_mg": 2.0,
+        "potassium_mg": 24.0,
+        "sodium_mg": 11.0,
+        "zinc_mg": 0.09,
+        "vitamin_d_ug": 1.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 684.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "butter",
+          "unsalted"
+        ],
+        "aliases": [
+          "butter unsalted"
+        ]
+      },
+      "meta": {
+        "fid": 92,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_parmesan_shredded",
+      "clean_name": "cheese parmesan shredded",
+      "core_name": "cheese parmesan shredded",
+      "name": "Cheese, parmesan, shredded",
+      "name_fr": "Fromage parmesan, râpé en filaments",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 37.86,
+        "fat_g": 27.34,
+        "carbs_g": 3.41,
+        "calories_kcal": 415.0,
+        "sugar_g": 0.9,
+        "fiber_g": 0.0,
+        "calcium_mg": 1253.0,
+        "iron_mg": 0.87,
+        "magnesium_mg": 51.0,
+        "potassium_mg": 97.0,
+        "sodium_mg": 1696.0,
+        "zinc_mg": 3.19,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 229.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "parmesan",
+          "shredded"
+        ],
+        "aliases": [
+          "cheese parmesan shredded"
+        ]
+      },
+      "meta": {
+        "fid": 93,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_goat_hard",
+      "clean_name": "cheese goat hard",
+      "core_name": "cheese goat hard",
+      "name": "Cheese, goat, hard, (less than 35% water, 36% M.F.)",
+      "name_fr": "Fromage chèvre, dur, (moins de 35% eau, 36% M.G.)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 30.52,
+        "fat_g": 35.59,
+        "carbs_g": 2.17,
+        "calories_kcal": 452.0,
+        "sugar_g": 2.17,
+        "fiber_g": 0.0,
+        "calcium_mg": 895.0,
+        "iron_mg": 1.88,
+        "magnesium_mg": 54.0,
+        "potassium_mg": 48.0,
+        "sodium_mg": 423.0,
+        "zinc_mg": 1.59,
+        "vitamin_d_ug": 0.7,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 486.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "goat",
+          "hard"
+        ],
+        "aliases": [
+          "cheese goat hard"
+        ]
+      },
+      "meta": {
+        "fid": 96,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_goat_semisoft",
+      "clean_name": "cheese goat semisoft",
+      "core_name": "cheese goat semisoft",
+      "name": "Cheese, goat, semi-soft, (35% to 55% water, 30% M.F.)",
+      "name_fr": "Fromage de chèvre, semi-mou, (35% à 55% eau, 30% M.G.)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 21.58,
+        "fat_g": 29.84,
+        "carbs_g": 0.12,
+        "calories_kcal": 364.0,
+        "sugar_g": 0.12,
+        "fiber_g": 0.0,
+        "calcium_mg": 298.0,
+        "iron_mg": 1.62,
+        "magnesium_mg": 29.0,
+        "potassium_mg": 158.0,
+        "sodium_mg": 415.0,
+        "zinc_mg": 0.66,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 407.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "goat",
+          "semisoft"
+        ],
+        "aliases": [
+          "cheese goat semisoft"
+        ]
+      },
+      "meta": {
+        "fid": 97,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_goat_soft",
+      "clean_name": "cheese goat soft",
+      "core_name": "cheese goat soft",
+      "name": "Cheese, goat, soft, (more than 55% water, 21% M.F.)",
+      "name_fr": "Fromage de chèvre, mou, (plus de 55% eau, 21% M.G.)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 18.52,
+        "fat_g": 21.08,
+        "carbs_g": 0.0,
+        "calories_kcal": 264.0,
+        "sugar_g": 0.0,
+        "fiber_g": 0.0,
+        "calcium_mg": 140.0,
+        "iron_mg": 1.9,
+        "magnesium_mg": 16.0,
+        "potassium_mg": 26.0,
+        "sodium_mg": 459.0,
+        "zinc_mg": 0.92,
+        "vitamin_d_ug": 0.4,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 288.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "goat",
+          "soft"
+        ],
+        "aliases": [
+          "cheese goat soft"
+        ]
+      },
+      "meta": {
+        "fid": 98,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_fondue",
+      "clean_name": "cheese fondue",
+      "core_name": "cheese fondue",
+      "name": "Cheese fondue",
+      "name_fr": "Fondue au fromage",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 14.23,
+        "fat_g": 13.47,
+        "carbs_g": 3.77,
+        "calories_kcal": 229.0,
+        "fiber_g": 0.0,
+        "calcium_mg": 476.0,
+        "iron_mg": 0.39,
+        "magnesium_mg": 23.0,
+        "potassium_mg": 105.0,
+        "sodium_mg": 132.0,
+        "zinc_mg": 1.96,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 109.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "fondue"
+        ],
+        "aliases": [
+          "cheese fondue"
+        ]
+      },
+      "meta": {
+        "fid": 100,
+        "confidence": 0.933,
+        "nutrient_count": 14,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_sauce_homemade",
+      "clean_name": "cheese sauce homemade",
+      "core_name": "cheese sauce homemade",
+      "name": "Cheese sauce, homemade",
+      "name_fr": "Fromage, sauce, faite maison",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.5,
+        "reason": [
+          "ambiguous"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 10.33,
+        "fat_g": 14.92,
+        "carbs_g": 5.48,
+        "calories_kcal": 197.0,
+        "sugar_g": 0.19,
+        "fiber_g": 0.1,
+        "calcium_mg": 311.0,
+        "iron_mg": 0.35,
+        "magnesium_mg": 19.0,
+        "potassium_mg": 142.0,
+        "sodium_mg": 493.0,
+        "zinc_mg": 1.26,
+        "vitamin_d_ug": 1.0,
+        "vitamin_c_mg": 0.6,
+        "vitamin_a_ug": 82.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "sauce",
+          "homemade"
+        ],
+        "aliases": [
+          "cheese sauce homemade"
+        ]
+      },
+      "meta": {
+        "fid": 101,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_mexican_queso_anejo",
+      "clean_name": "cheese mexican queso anejo",
+      "core_name": "cheese mexican queso anejo",
+      "name": "Cheese, Mexican, queso anejo",
+      "name_fr": "Fromage mexicain, queso anejo",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 21.44,
+        "fat_g": 29.98,
+        "carbs_g": 4.63,
+        "calories_kcal": 373.0,
+        "sugar_g": 4.63,
+        "fiber_g": 0.0,
+        "calcium_mg": 680.0,
+        "iron_mg": 0.47,
+        "magnesium_mg": 28.0,
+        "potassium_mg": 87.0,
+        "sodium_mg": 1131.0,
+        "zinc_mg": 2.94,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 64.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "mexican",
+          "queso",
+          "anejo"
+        ],
+        "aliases": [
+          "cheese mexican queso anejo"
+        ]
+      },
+      "meta": {
+        "fid": 102,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_mexican_queso_asadero",
+      "clean_name": "cheese mexican queso asadero",
+      "core_name": "cheese mexican queso asadero",
+      "name": "Cheese, Mexican, queso asadero",
+      "name_fr": "Fromage mexicain, queso asadero",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 22.6,
+        "fat_g": 28.26,
+        "carbs_g": 2.87,
+        "calories_kcal": 356.0,
+        "sugar_g": 2.87,
+        "fiber_g": 0.0,
+        "calcium_mg": 661.0,
+        "iron_mg": 0.51,
+        "magnesium_mg": 26.0,
+        "potassium_mg": 86.0,
+        "sodium_mg": 705.0,
+        "zinc_mg": 3.02,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 55.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "mexican",
+          "queso",
+          "asadero"
+        ],
+        "aliases": [
+          "cheese mexican queso asadero"
+        ]
+      },
+      "meta": {
+        "fid": 103,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_mexican_queso_chihuahua",
+      "clean_name": "cheese mexican queso chihuahua",
+      "core_name": "cheese mexican queso chihuahua",
+      "name": "Cheese, Mexican, queso chihuahua",
+      "name_fr": "Fromage Mexicain, queso chihuahua",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 21.56,
+        "fat_g": 29.68,
+        "carbs_g": 5.56,
+        "calories_kcal": 375.0,
+        "sugar_g": 5.56,
+        "fiber_g": 0.0,
+        "calcium_mg": 651.0,
+        "iron_mg": 0.47,
+        "magnesium_mg": 23.0,
+        "potassium_mg": 52.0,
+        "sodium_mg": 617.0,
+        "zinc_mg": 3.5,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 56.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "mexican",
+          "queso",
+          "chihuahua"
+        ],
+        "aliases": [
+          "cheese mexican queso chihuahua"
+        ]
+      },
+      "meta": {
+        "fid": 104,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_cheddar_or_colby_type_low_fat",
+      "clean_name": "cheese cheddar or colby type low fat",
+      "core_name": "cheese cheddar or colby type low fat",
+      "name": "Cheese, cheddar or colby type, low fat (7% M.F.)",
+      "name_fr": "Fromage, type cheddar ou colby, faible en gras (7% M.G.)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 24.35,
+        "fat_g": 7.0,
+        "carbs_g": 1.91,
+        "calories_kcal": 173.0,
+        "sugar_g": 0.52,
+        "fiber_g": 0.0,
+        "calcium_mg": 415.0,
+        "iron_mg": 0.42,
+        "magnesium_mg": 16.0,
+        "potassium_mg": 66.0,
+        "sodium_mg": 873.0,
+        "zinc_mg": 1.82,
+        "vitamin_d_ug": 0.1,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 60.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "cheddar",
+          "or",
+          "colby",
+          "type",
+          "low",
+          "fat"
+        ],
+        "aliases": [
+          "cheese cheddar or colby type low fat"
+        ]
+      },
+      "meta": {
+        "fid": 105,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_cheddar_or_colby_type_low_sodium",
+      "clean_name": "cheese cheddar or colby type low sodium",
+      "core_name": "cheese cheddar or colby type low sodium",
+      "name": "Cheese, cheddar or colby type, low sodium",
+      "name_fr": "Fromage, type cheddar ou colby, faible en sodium",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 24.35,
+        "fat_g": 32.62,
+        "carbs_g": 1.91,
+        "calories_kcal": 398.0,
+        "sugar_g": 0.49,
+        "fiber_g": 0.0,
+        "calcium_mg": 703.0,
+        "iron_mg": 0.72,
+        "magnesium_mg": 27.0,
+        "potassium_mg": 112.0,
+        "sodium_mg": 21.0,
+        "zinc_mg": 3.09,
+        "vitamin_d_ug": 0.6,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 264.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "cheddar",
+          "or",
+          "colby",
+          "type",
+          "low",
+          "sodium"
+        ],
+        "aliases": [
+          "cheese cheddar or colby type low sodium"
+        ]
+      },
+      "meta": {
+        "fid": 106,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_cottage",
+      "clean_name": "cheese cottage",
+      "core_name": "cheese cottage",
+      "name": "Cheese, cottage, (1% M.F.)",
+      "name_fr": "Fromage cottage, (1% M.G.)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 12.39,
+        "fat_g": 1.02,
+        "carbs_g": 2.72,
+        "calories_kcal": 72.0,
+        "sugar_g": 2.72,
+        "fiber_g": 0.0,
+        "calcium_mg": 61.0,
+        "iron_mg": 0.14,
+        "magnesium_mg": 5.0,
+        "potassium_mg": 86.0,
+        "sodium_mg": 406.0,
+        "zinc_mg": 0.38,
+        "vitamin_d_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 11.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "cottage"
+        ],
+        "aliases": [
+          "cheese cottage"
+        ]
+      },
+      "meta": {
+        "fid": 107,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_feta",
+      "clean_name": "cheese feta",
+      "core_name": "cheese feta",
+      "name": "Cheese, feta",
+      "name_fr": "Fromage féta",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 14.21,
+        "fat_g": 21.28,
+        "carbs_g": 4.09,
+        "calories_kcal": 264.0,
+        "sugar_g": 4.09,
+        "fiber_g": 0.0,
+        "calcium_mg": 493.0,
+        "iron_mg": 0.65,
+        "magnesium_mg": 19.0,
+        "potassium_mg": 62.0,
+        "sodium_mg": 917.0,
+        "zinc_mg": 2.88,
+        "vitamin_d_ug": 0.4,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 125.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "feta"
+        ],
+        "aliases": [
+          "cheese feta"
+        ]
+      },
+      "meta": {
+        "fid": 108,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_gouda",
+      "clean_name": "cheese gouda",
+      "core_name": "cheese gouda",
+      "name": "Cheese, gouda",
+      "name_fr": "Fromage gouda",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 24.94,
+        "fat_g": 28.0,
+        "carbs_g": 2.22,
+        "calories_kcal": 357.0,
+        "sugar_g": 2.22,
+        "fiber_g": 0.0,
+        "calcium_mg": 700.0,
+        "iron_mg": 0.24,
+        "magnesium_mg": 29.0,
+        "potassium_mg": 121.0,
+        "sodium_mg": 819.0,
+        "zinc_mg": 3.9,
+        "vitamin_d_ug": 0.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 165.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "gouda"
+        ],
+        "aliases": [
+          "cheese gouda"
+        ]
+      },
+      "meta": {
+        "fid": 109,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_mozzarella_110",
+      "clean_name": "cheese mozzarella",
+      "core_name": "cheese mozzarella",
+      "name": "Cheese, mozzarella, (52% water, 22.5% M.F.)",
+      "name_fr": "Fromage mozzarella, (52% eau, 22.5% M.G.)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 22.17,
+        "fat_g": 22.35,
+        "carbs_g": 2.19,
+        "calories_kcal": 300.0,
+        "sugar_g": 1.03,
+        "fiber_g": 0.0,
+        "calcium_mg": 505.0,
+        "iron_mg": 0.44,
+        "magnesium_mg": 20.0,
+        "potassium_mg": 76.0,
+        "sodium_mg": 627.0,
+        "zinc_mg": 2.92,
+        "vitamin_d_ug": 0.4,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 179.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "mozzarella"
+        ],
+        "aliases": [
+          "cheese mozzarella"
+        ]
+      },
+      "meta": {
+        "fid": 110,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "cheese_mozzarella_partially_skim",
+      "clean_name": "cheese mozzarella partially skim",
+      "core_name": "cheese mozzarella partially skim",
+      "name": "Cheese, mozzarella, partially skim, (52% water, 16.5% M.F.)",
+      "name_fr": "Fromage mozzarella, partiellement écrémé, (52% eau, 16.5% M.G.)",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 24.26,
+        "fat_g": 15.92,
+        "carbs_g": 2.77,
+        "calories_kcal": 254.0,
+        "sugar_g": 1.13,
+        "fiber_g": 0.0,
+        "calcium_mg": 782.0,
+        "iron_mg": 0.22,
+        "magnesium_mg": 23.0,
+        "potassium_mg": 84.0,
+        "sodium_mg": 619.0,
+        "zinc_mg": 2.76,
+        "vitamin_d_ug": 0.3,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 127.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "cheese",
+          "mozzarella",
+          "partially",
+          "skim"
+        ],
+        "aliases": [
+          "cheese mozzarella partially skim"
+        ]
+      },
+      "meta": {
+        "fid": 111,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_evaporated_skim_canned_undiluted_02_mf",
+      "clean_name": "milk evaporated skim canned undiluted 02 mf",
+      "core_name": "milk evaporated skim canned undiluted 02 mf",
+      "name": "Milk, evaporated, skim, canned, undiluted, 0.2% M.F.",
+      "name_fr": "Lait, concentré, écrémé, conserve, non dilué, 0.2% M.G.",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 7.55,
+        "fat_g": 0.2,
+        "carbs_g": 11.35,
+        "calories_kcal": 78.0,
+        "sugar_g": 11.35,
+        "fiber_g": 0.0,
+        "calcium_mg": 290.0,
+        "iron_mg": 0.29,
+        "magnesium_mg": 27.0,
+        "potassium_mg": 332.0,
+        "sodium_mg": 115.0,
+        "zinc_mg": 0.9,
+        "vitamin_d_ug": 2.0,
+        "vitamin_c_mg": 30.7,
+        "vitamin_a_ug": 126.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {
+          "985": 133.0
+        },
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "evaporated",
+          "skim",
+          "canned",
+          "undiluted",
+          "02",
+          "mf"
+        ],
+        "aliases": [
+          "milk evaporated skim canned undiluted 02 mf"
+        ]
+      },
+      "meta": {
+        "fid": 112,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_fluid_whole_pasteurized_homogenized_325_mf",
+      "clean_name": "milk fluid whole pasteurized homogenized 325 mf",
+      "core_name": "milk fluid whole pasteurized homogenized 325 mf",
+      "name": "Milk, fluid, whole, pasteurized, homogenized, 3.25% M.F.",
+      "name_fr": "Lait, liquide, entier, homogénéisé, pasteurisé, 3.25% M.G.",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 3.15,
+        "fat_g": 3.25,
+        "carbs_g": 4.8,
+        "calories_kcal": 61.0,
+        "sugar_g": 5.05,
+        "fiber_g": 0.0,
+        "calcium_mg": 113.0,
+        "iron_mg": 0.03,
+        "magnesium_mg": 10.0,
+        "potassium_mg": 132.0,
+        "sodium_mg": 43.0,
+        "zinc_mg": 0.37,
+        "vitamin_d_ug": 1.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 46.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "fluid",
+          "whole",
+          "pasteurized",
+          "homogenized",
+          "325",
+          "mf"
+        ],
+        "aliases": [
+          "milk fluid whole pasteurized homogenized 325 mf"
+        ]
+      },
+      "meta": {
+        "fid": 113,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_fluid_skim",
+      "clean_name": "milk fluid skim",
+      "core_name": "milk fluid skim",
+      "name": "Milk, fluid, skim",
+      "name_fr": "Lait, liquide, écrémé",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 3.37,
+        "fat_g": 0.08,
+        "carbs_g": 4.96,
+        "calories_kcal": 34.0,
+        "sugar_g": 5.09,
+        "fiber_g": 0.0,
+        "calcium_mg": 122.0,
+        "iron_mg": 0.03,
+        "magnesium_mg": 11.0,
+        "potassium_mg": 156.0,
+        "sodium_mg": 42.0,
+        "zinc_mg": 0.42,
+        "vitamin_d_ug": 1.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 63.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "fluid",
+          "skim"
+        ],
+        "aliases": [
+          "milk fluid skim"
+        ]
+      },
+      "meta": {
+        "fid": 114,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "milk_dry_skim_powder_instant",
+      "clean_name": "milk dry skim powder instant",
+      "core_name": "milk dry skim powder instant",
+      "name": "Milk, dry, skim, powder, instant",
+      "name_fr": "Lait, poudre, écrémé, instant",
+      "group": "Dairy and Egg Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 35.1,
+        "fat_g": 0.72,
+        "carbs_g": 52.19,
+        "calories_kcal": 358.0,
+        "sugar_g": 52.19,
+        "fiber_g": 0.0,
+        "calcium_mg": 1231.0,
+        "iron_mg": 0.31,
+        "magnesium_mg": 117.0,
+        "potassium_mg": 1705.0,
+        "sodium_mg": 549.0,
+        "zinc_mg": 4.41,
+        "vitamin_d_ug": 10.6,
+        "vitamin_c_mg": 5.6,
+        "vitamin_a_ug": 669.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {
+          "993": 24.0
+        },
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "milk",
+          "dry",
+          "skim",
+          "powder",
+          "instant"
+        ],
+        "aliases": [
+          "milk dry skim powder instant"
+        ]
+      },
+      "meta": {
+        "fid": 115,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "hot_chocolate_cocoa_homemade_prepared_with_whole_milk",
+      "clean_name": "hot chocolate cocoa homemade prepared with whole milk",
+      "core_name": "hot chocolate cocoa homemade prepared",
+      "name": "Hot chocolate, cocoa, homemade, prepared with whole milk",
+      "name_fr": "Chocolat chaud, cacao, fait maison, préparé avec lait entier",
+      "group": "Beverages",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 3.64,
+        "fat_g": 3.62,
+        "carbs_g": 11.79,
+        "calories_kcal": 94.0,
+        "sugar_g": 9.67,
+        "fiber_g": 1.2,
+        "calcium_mg": 119.0,
+        "iron_mg": 0.31,
+        "magnesium_mg": 22.0,
+        "potassium_mg": 192.0,
+        "sodium_mg": 49.0,
+        "zinc_mg": 0.49,
+        "vitamin_d_ug": 1.0,
+        "vitamin_c_mg": 1.0,
+        "vitamin_a_ug": 54.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "hot",
+          "chocolate",
+          "cocoa",
+          "homemade",
+          "prepared",
+          "with",
+          "whole",
+          "milk"
+        ],
+        "aliases": [
+          "hot chocolate cocoa homemade prepared",
+          "hot chocolate cocoa homemade prepared with whole milk"
+        ]
+      },
+      "meta": {
+        "fid": 116,
+        "confidence": 1.0,
+        "nutrient_count": 15,
+        "source": "CNF V5"
+      }
+    },
+    {
+      "id": "granola_bar_chewy_high_fibre_oats_and_chocolate",
+      "clean_name": "granola bar chewy high fibre oats and chocolate",
+      "core_name": "granola bar chewy high fibre oats",
+      "name": "Granola bar, chewy, high fibre, oats and chocolate",
+      "name_fr": "Barre granola, tendre, élevée en fibres, avoine et chocolat",
+      "group": "Baked Products",
+      "diet": {
+        "vegetarian": true,
+        "confidence": 0.7,
+        "reason": [
+          "default"
+        ]
+      },
+      "nutrition": {
+        "protein_g": 5.0,
+        "fat_g": 10.0,
+        "carbs_g": 69.78,
+        "calories_kcal": 350.0,
+        "sugar_g": 25.0,
+        "fiber_g": 14.3,
+        "calcium_mg": 0.0,
+        "iron_mg": 0.9,
+        "vitamin_c_mg": 0.0,
+        "vitamin_a_ug": 0.0
+      },
+      "quality": {
+        "issues": [],
+        "valid": true
+      },
+      "processing": {
+        "yield": {},
+        "refuse_percent": 0.0
+      },
+      "matching": {
+        "tokens": [
+          "granola",
+          "bar",
+          "chewy",
+          "high",
+          "fibre",
+          "oats",
+          "and",
+          "chocolate"
+        ],
+        "aliases": [
+          "granola bar chewy high fibre oats",
+          "granola bar chewy high fibre oats and chocolate"
+        ]
+      },
+      "meta": {
+        "fid": 503380,
+        "confidence": 0.667,
+        "nutrient_count": 10,
+        "source": "CNF V5"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "engine": "recipe_engine",
+  "description": "Core recipe indexing and retrieval engine.",
+  "inputs": [
+    "recipes_titles_clean_final.json",
+    "instructions_refined_block5.json"
+  ],
+  "functions": [
+    "recipe_lookup",
+    "ingredient_match",
+    "metadata_filter"
+  ]
+}

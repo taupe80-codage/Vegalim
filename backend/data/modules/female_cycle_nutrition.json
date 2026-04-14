@@ -1,0 +1,170 @@
+{
+  "module": "female_cycle_nutrition",
+  "description": "Nutrition et recommandations alimentaires selon les phases du cycle menstruel.",
+  "cycle_phases": {
+    "menstrual_phase": {
+      "days": "1-5",
+      "focus": [
+        "iron",
+        "magnesium",
+        "omega_3",
+        "vitamin_c"
+      ],
+      "recommended_foods": [
+        "lentilles",
+        "épinards",
+        "betterave",
+        "tofu",
+        "graines_de_lin",
+        "noix",
+        "pois_chiches"
+      ],
+      "avoid_or_reduce": [
+        "alcool",
+        "sucre_raffine",
+        "cafeine_excessive"
+      ],
+      "notes": "Phase de menstruation. Le corps perd du fer et peut être fatigué.",
+      "ingredient_ids": [
+        "turmeric",
+        "dark_chocolate",
+        "red_bean_cooked",
+        "pomegranate",
+        "chickpea",
+        "red_lentil",
+        "sesame",
+        "spinach",
+        "ginger",
+        "beet"
+      ],
+      "avoid_ingredient_ids": [
+        "salt"
+      ],
+      "coverage_in_recipes": 9
+    },
+    "follicular_phase": {
+      "days": "6-13",
+      "focus": [
+        "protein",
+        "vitamin_b",
+        "fiber"
+      ],
+      "recommended_foods": [
+        "quinoa",
+        "pois_chiches",
+        "brocoli",
+        "avocat",
+        "amandes",
+        "tofu",
+        "graines_de_courge"
+      ],
+      "avoid_or_reduce": [],
+      "notes": "Phase de regain d'énergie. Le corps prépare l'ovulation.",
+      "ingredient_ids": [
+        "broccoli",
+        "pumpkin_seeds",
+        "green_bean",
+        "carrot",
+        "avocado",
+        "quinoa_grain",
+        "green_lentil",
+        "cauliflower",
+        "chia_seeds",
+        "oats"
+      ],
+      "avoid_ingredient_ids": [],
+      "coverage_in_recipes": 8
+    },
+    "ovulatory_phase": {
+      "days": "14-16",
+      "focus": [
+        "antioxidants",
+        "vitamin_c",
+        "zinc"
+      ],
+      "recommended_foods": [
+        "tomate",
+        "poivron",
+        "grenade",
+        "baies",
+        "graines_de_courge",
+        "noix",
+        "legumes_crus"
+      ],
+      "avoid_or_reduce": [],
+      "notes": "Pic hormonal. Les aliments riches en antioxydants soutiennent l'organisme.",
+      "ingredient_ids": [
+        "cherry_tomato",
+        "onion",
+        "bell_pepper",
+        "quinoa_grain",
+        "corn",
+        "tomato",
+        "spinach",
+        "garlic",
+        "flaxseed_oil"
+      ],
+      "avoid_ingredient_ids": [],
+      "coverage_in_recipes": 8
+    },
+    "luteal_phase": {
+      "days": "17-28",
+      "focus": [
+        "magnesium",
+        "vitamin_b6",
+        "complex_carbs"
+      ],
+      "recommended_foods": [
+        "patate_douce",
+        "banane",
+        "avoine",
+        "amandes",
+        "chocolat_noir",
+        "lentilles",
+        "riz_complet"
+      ],
+      "avoid_or_reduce": [
+        "sucre_raffine",
+        "aliments_ultra_transformes"
+      ],
+      "notes": "Phase précédant les règles. Besoin accru de magnésium et de glucides complexes.",
+      "ingredient_ids": [
+        "fennel",
+        "sweet_potato",
+        "dark_chocolate",
+        "pumpkin_seeds",
+        "green_lentil",
+        "banana",
+        "walnut",
+        "yogurt",
+        "oats",
+        "lait_coco"
+      ],
+      "avoid_ingredient_ids": [],
+      "coverage_in_recipes": 7
+    }
+  },
+  "symptom_support": {
+    "fatigue": [
+      "lentilles",
+      "épinards",
+      "quinoa",
+      "tofu"
+    ],
+    "cramps": [
+      "graines_de_lin",
+      "noix",
+      "gingembre"
+    ],
+    "bloating": [
+      "gingembre",
+      "fenouil",
+      "menthe"
+    ],
+    "mood_swings": [
+      "banane",
+      "chocolat_noir",
+      "avoine"
+    ]
+  }
+}

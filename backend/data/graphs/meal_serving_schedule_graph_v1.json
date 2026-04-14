@@ -1,0 +1,32 @@
+{
+  "weekly_serving_example": {
+    "monday": {
+      "lunch": {
+        "servings": 4
+      },
+      "dinner": {
+        "servings": 4
+      }
+    },
+    "tuesday": {
+      "lunch": {
+        "servings": 2
+      },
+      "dinner": {
+        "servings": 6
+      }
+    },
+    "friday": {
+      "lunch": {
+        "servings": 6
+      },
+      "dinner": {
+        "servings": 10
+      }
+    }
+  },
+  "logic": {
+    "description": "Overrides default recipe servings per meal",
+    "scaling_formula": "new_servings / recipe_base_servings"
+  }
+}

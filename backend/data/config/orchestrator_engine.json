@@ -1,0 +1,50 @@
+{
+  "engine": "orchestrator_engine",
+  "description": "Central coordinator that activates and combines all specialized engines.",
+  "supported_modes": [
+    "global",
+    "fridge",
+    "nutrition",
+    "season",
+    "cycle",
+    "digestibility",
+    "astrology"
+  ],
+  "modules": {
+    "recipe_engine": "engine_core/recipe_engine.json",
+    "fridge_engine": "engine_core/fridge_engine.json",
+    "nutrition_engine": "engine_core/nutrition_engine.json",
+    "season_engine": "health/seasonality.json",
+    "cycle_engine": "health/female_cycle_nutrition.json",
+    "digestibility_engine": "health/digestibility.json",
+    "astrology_engine": "health/astrology.json"
+  },
+  "workflow": [
+    "receive_query",
+    "detect_mode",
+    "activate_modules",
+    "compute_scores",
+    "normalize_scores",
+    "combine_scores",
+    "rank_recipes",
+    "return_results"
+  ],
+  "default_weights_global": {
+    "fridge": 0.35,
+    "nutrition": 0.2,
+    "season": 0.15,
+    "cycle": 0.1,
+    "digestibility": 0.1,
+    "astrology": 0.1
+  },
+  "example_query": {
+    "mode": "global",
+    "ingredients": [
+      "pois_chiches",
+      "tomate"
+    ],
+    "cycle_phase": "luteal_phase",
+    "season": "winter",
+    "astrological_sign": "cancer"
+  }
+}

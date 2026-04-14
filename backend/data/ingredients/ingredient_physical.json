@@ -1,0 +1,10183 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Données physiques des ingrédients pour conversion unités → grammes → nutrition",
+    "source": "CIQUAL 2020 + références culinaires standards",
+    "coverage": "Patched – 580 ingrédients (ajout 226 entrées manquantes)",
+    "fields": {
+      "default_unit": "Unité la plus utilisée dans le dataset",
+      "units": "Table de conversion vers grammes équivalents",
+      "density_g_per_ml": "Densité pour liquides (null si non applicable)",
+      "water_content_pct": "% eau (pour calculs réhydratation / concentration)",
+      "edible_pct": "% masse comestible après épluchage/parage (appliqué avant calcul nutrition)",
+      "ciqual_id": "Identifiant table CIQUAL (optionnel, pour liaison future)",
+      "note": "Précisions sur la référence"
+    },
+    "migration": {
+      "id_lang": "en",
+      "keys_migrated": 89
+    }
+  },
+  "garlic": {
+    "default_unit": "gousse",
+    "units": {
+      "gousse": {
+        "g": 5,
+        "note": "gousse moyenne pelée"
+      },
+      "tete": {
+        "g": 45,
+        "note": "tête entière non pelée"
+      },
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 64,
+    "edible_pct": 85,
+    "ciqual_id": "10108",
+    "note": "Ail cru"
+  },
+  "onion": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 150,
+        "note": "oignon moyen"
+      },
+      "petit": {
+        "g": 80
+      },
+      "gros": {
+        "g": 220
+      },
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 89,
+    "edible_pct": 90,
+    "ciqual_id": "10075",
+    "note": "Oignon cru, épluché"
+  },
+  "red_onion": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 150
+      },
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 89,
+    "edible_pct": 90,
+    "note": "Oignon rouge cru"
+  },
+  "green_onion": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 15,
+        "note": "tige entière"
+      },
+      "botte": {
+        "g": 100
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 91,
+    "edible_pct": 85,
+    "note": "Ciboulette / oignon nouveau"
+  },
+  "shallot": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 30,
+        "note": "échalote moyenne"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 85
+  },
+  "tomato": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 120,
+        "note": "tomate ronde moyenne"
+      },
+      "cerise": {
+        "g": 15
+      },
+      "grappe": {
+        "g": 100
+      },
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 94,
+    "edible_pct": 95,
+    "ciqual_id": "10037",
+    "note": "Tomate crue"
+  },
+  "carrot": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 100,
+        "note": "carotte moyenne"
+      },
+      "petite": {
+        "g": 60
+      },
+      "grosse": {
+        "g": 150
+      },
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 89,
+    "edible_pct": 85,
+    "ciqual_id": "10011",
+    "note": "Carotte crue, épluchée"
+  },
+  "egg": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 55,
+        "note": "œuf moyen calibre M, sans coquille"
+      },
+      "gros": {
+        "g": 65,
+        "note": "calibre L"
+      },
+      "petit": {
+        "g": 45,
+        "note": "calibre S"
+      },
+      "blanc": {
+        "g": 35,
+        "note": "blanc seul"
+      },
+      "jaune": {
+        "g": 18,
+        "note": "jaune seul"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 76,
+    "edible_pct": 88,
+    "ciqual_id": "24001",
+    "note": "Œuf entier sans coquille (coquille = ~12% masse)"
+  },
+  "egg_yolk": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 18
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 49,
+    "edible_pct": 100
+  },
+  "bell_pepper": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 160,
+        "note": "poivron moyen"
+      },
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 92,
+    "edible_pct": 82,
+    "note": "Masse nette après épépinage"
+  },
+  "red_bell_pepper": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 160
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 92,
+    "edible_pct": 82
+  },
+  "eggplant": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 300,
+        "note": "aubergine moyenne"
+      },
+      "petite": {
+        "g": 200
+      },
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 93,
+    "edible_pct": 92,
+    "ciqual_id": "10007"
+  },
+  "zucchini": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 250,
+        "note": "courgette moyenne"
+      },
+      "petite": {
+        "g": 150
+      },
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 95,
+    "edible_pct": 90,
+    "ciqual_id": "10023"
+  },
+  "cucumber": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 350,
+        "note": "concombre entier"
+      },
+      "demi": {
+        "g": 175
+      },
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 96,
+    "edible_pct": 95
+  },
+  "potato": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 150,
+        "note": "pomme de terre moyenne"
+      },
+      "petite": {
+        "g": 80
+      },
+      "grosse": {
+        "g": 250
+      },
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 79,
+    "edible_pct": 85,
+    "ciqual_id": "10141",
+    "note": "Poids épluché"
+  },
+  "celery": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 40,
+        "note": "branche de céleri"
+      },
+      "tete": {
+        "g": 600,
+        "note": "céleri-rave entier"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 95,
+    "edible_pct": 80
+  },
+  "leek": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 200,
+        "note": "poireau moyen paré"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 92,
+    "edible_pct": 70,
+    "note": "Partie blanche uniquement"
+  },
+  "lemon": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 100,
+        "note": "citron moyen, jus ≈ 30ml"
+      },
+      "jus": {
+        "g": 30,
+        "note": "jus d'un citron moyen"
+      },
+      "zeste": {
+        "g": 5
+      },
+      "ml": {
+        "g": 1.03
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.03,
+    "water_content_pct": 88,
+    "edible_pct": 40,
+    "note": "edible_pct = partie jus uniquement"
+  },
+  "lime": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 70,
+        "note": "lime moyenne, jus ≈ 20ml"
+      },
+      "jus": {
+        "g": 20
+      },
+      "ml": {
+        "g": 1.03
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.03,
+    "water_content_pct": 88,
+    "edible_pct": 40
+  },
+  "lemon_juice": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "cuillere_cafe": {
+        "g": 5
+      },
+      "ml": {
+        "g": 1.03
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.03,
+    "water_content_pct": 92,
+    "edible_pct": 100
+  },
+  "avocado": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 200,
+        "note": "avocat moyen entier"
+      },
+      "demi": {
+        "g": 100
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 73,
+    "edible_pct": 75,
+    "note": "Masse chair nette (sans peau ni noyau)"
+  },
+  "chili": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 15,
+        "note": "piment moyen"
+      },
+      "petit": {
+        "g": 5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 88,
+    "edible_pct": 85
+  },
+  "corn": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 150,
+        "note": "épi de maïs égrené"
+      },
+      "epi": {
+        "g": 250,
+        "note": "épi avec enveloppe"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 76,
+    "edible_pct": 60,
+    "note": "edible_pct = grains uniquement"
+  },
+  "lettuce": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 300,
+        "note": "tête de laitue entière"
+      },
+      "feuille": {
+        "g": 20
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 96,
+    "edible_pct": 75
+  },
+  "tortilla": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 30,
+        "note": "tortilla de blé 20cm"
+      },
+      "grande": {
+        "g": 45,
+        "note": "tortilla 25cm"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 33,
+    "edible_pct": 100
+  },
+  "bay_leaf": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 1,
+        "note": "feuille séchée"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 8,
+    "edible_pct": 0,
+    "note": "Non consommée, retirée à la fin"
+  },
+  "nori": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 3,
+        "note": "feuille nori standard"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 14,
+    "edible_pct": 100
+  },
+  "vanilla": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 5,
+        "note": "gousse de vanille"
+      },
+      "cuillere_cafe": {
+        "g": 3,
+        "note": "extrait ou poudre"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 30,
+    "edible_pct": 60,
+    "note": "Grains intérieurs uniquement"
+  },
+  "cardamom": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 0.5,
+        "note": "gousse entière"
+      },
+      "cuillere_cafe": {
+        "g": 2,
+        "note": "graines moulues"
+      },
+      "pincee": {
+        "g": 0.3
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 8,
+    "edible_pct": 60
+  },
+  "cinnamon": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "cuillere_cafe": {
+        "g": 2.3
+      },
+      "cuillere_soupe": {
+        "g": 7
+      },
+      "baton": {
+        "g": 5
+      },
+      "piece": {
+        "g": 5,
+        "note": "bâton"
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "cumin": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "cuillere_cafe": {
+        "g": 2.5
+      },
+      "cuillere_soupe": {
+        "g": 7.5
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 9,
+    "edible_pct": 100
+  },
+  "turmeric": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "cuillere_cafe": {
+        "g": 2.8
+      },
+      "cuillere_soupe": {
+        "g": 8
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "paprika": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "cuillere_cafe": {
+        "g": 2.3
+      },
+      "cuillere_soupe": {
+        "g": 7
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100
+  },
+  "garam_masala": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "cuillere_cafe": {
+        "g": 2.5
+      },
+      "cuillere_soupe": {
+        "g": 7.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "ground_coriander": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "cuillere_cafe": {
+        "g": 2
+      },
+      "cuillere_soupe": {
+        "g": 6
+      },
+      "pincee": {
+        "g": 0.4
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 8,
+    "edible_pct": 100
+  },
+  "fenugreek": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "cuillere_cafe": {
+        "g": 3.5
+      },
+      "cuillere_soupe": {
+        "g": 10
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 9,
+    "edible_pct": 100
+  },
+  "thyme": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "cuillere_cafe": {
+        "g": 1.5,
+        "note": "thym séché"
+      },
+      "cuillere_soupe": {
+        "g": 4
+      },
+      "branche": {
+        "g": 2,
+        "note": "branche fraîche"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 8,
+    "edible_pct": 70,
+    "note": "Feuilles uniquement, sans tiges"
+  },
+  "rosemary": {
+    "default_unit": "branche",
+    "units": {
+      "branche": {
+        "g": 3
+      },
+      "cuillere_cafe": {
+        "g": 1.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 60
+  },
+  "parsley": {
+    "default_unit": "botte",
+    "units": {
+      "botte": {
+        "g": 30,
+        "note": "demi-botte standard"
+      },
+      "cuillere_soupe": {
+        "g": 4,
+        "note": "haché"
+      },
+      "cuillere_cafe": {
+        "g": 1.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 88,
+    "edible_pct": 75
+  },
+  "basil": {
+    "default_unit": "botte",
+    "units": {
+      "botte": {
+        "g": 20
+      },
+      "feuille": {
+        "g": 1
+      },
+      "cuillere_soupe": {
+        "g": 3,
+        "note": "haché"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 92,
+    "edible_pct": 85
+  },
+  "thai_basil": {
+    "default_unit": "botte",
+    "units": {
+      "botte": {
+        "g": 20
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "coriander": {
+    "default_unit": "botte",
+    "units": {
+      "botte": {
+        "g": 25
+      },
+      "cuillere_soupe": {
+        "g": 3
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 91,
+    "edible_pct": 75
+  },
+  "fresh_coriander": {
+    "default_unit": "botte",
+    "units": {
+      "botte": {
+        "g": 25
+      },
+      "cuillere_soupe": {
+        "g": 3
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 91,
+    "edible_pct": 75
+  },
+  "mint": {
+    "default_unit": "botte",
+    "units": {
+      "botte": {
+        "g": 20
+      },
+      "feuille": {
+        "g": 0.5
+      },
+      "cuillere_soupe": {
+        "g": 3
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 86,
+    "edible_pct": 80
+  },
+  "dill": {
+    "default_unit": "botte",
+    "units": {
+      "botte": {
+        "g": 20
+      },
+      "cuillere_soupe": {
+        "g": 3
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 88,
+    "edible_pct": 80
+  },
+  "ginger": {
+    "default_unit": "g",
+    "units": {
+      "piece": {
+        "g": 100,
+        "note": "morceau 5cm"
+      },
+      "cuillere_cafe": {
+        "g": 5,
+        "note": "râpé frais"
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "tranche": {
+        "g": 5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 82,
+    "edible_pct": 90,
+    "ciqual_id": "10059"
+  },
+  "salt": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "pepper": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_cafe": {
+        "g": 2.5
+      },
+      "cuillere_soupe": {
+        "g": 7
+      },
+      "pincee": {
+        "g": 0.3
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100
+  },
+  "black_pepper": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_cafe": {
+        "g": 2.5
+      },
+      "pincee": {
+        "g": 0.3
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100
+  },
+  "nutmeg": {
+    "default_unit": "pincee",
+    "units": {
+      "pincee": {
+        "g": 0.3
+      },
+      "cuillere_cafe": {
+        "g": 2
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 9,
+    "edible_pct": 100
+  },
+  "saffron": {
+    "default_unit": "g",
+    "units": {
+      "pincee": {
+        "g": 0.1,
+        "note": "dosage standard"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100,
+    "note": "Dose typique 0.1-0.2g par recette"
+  },
+  "olive_oil": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 0.91
+      },
+      "cuillere_soupe": {
+        "g": 14
+      },
+      "cuillere_cafe": {
+        "g": 4.6
+      },
+      "l": {
+        "g": 910
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.91,
+    "water_content_pct": 0,
+    "edible_pct": 100,
+    "ciqual_id": "16002"
+  },
+  "vegetable_oil": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "ml": {
+        "g": 0.9
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "cuillere_cafe": {
+        "g": 4.6
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "sesame_oil": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "ml": {
+        "g": 0.9
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "cuillere_cafe": {
+        "g": 4.6
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "sunflower_oil": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "ml": {
+        "g": 0.9
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "cuillere_cafe": {
+        "g": 4.6
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "coconut_oil": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "ml": {
+        "g": 0.9
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "cuillere_cafe": {
+        "g": 4.6
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "butter": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "cuillere_cafe": {
+        "g": 5
+      },
+      "noisette": {
+        "g": 5,
+        "note": "noisette de beurre"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.91,
+    "water_content_pct": 16,
+    "edible_pct": 100,
+    "ciqual_id": "19011"
+  },
+  "vegan_butter": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 16,
+    "edible_pct": 100
+  },
+  "milk": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.03
+      },
+      "l": {
+        "g": 1030
+      },
+      "verre": {
+        "g": 206,
+        "note": "verre 200ml"
+      },
+      "tasse": {
+        "g": 245
+      },
+      "cuillere_soupe": {
+        "g": 15.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.03,
+    "water_content_pct": 88,
+    "edible_pct": 100,
+    "ciqual_id": "19051"
+  },
+  "coconut_milk": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.0
+      },
+      "boite": {
+        "g": 400,
+        "note": "boîte standard 400ml"
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 67,
+    "edible_pct": 100,
+    "ciqual_id": "19054"
+  },
+  "oat_milk": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.03
+      },
+      "l": {
+        "g": 1030
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.03,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "cream": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.0
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 64,
+    "edible_pct": 100
+  },
+  "heavy_cream": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.0
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "cl": {
+        "g": 10
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 60,
+    "edible_pct": 100
+  },
+  "creme_fraiche": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.0
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 58,
+    "edible_pct": 100
+  },
+  "yogurt": {
+    "default_unit": "g",
+    "units": {
+      "pot": {
+        "g": 125,
+        "note": "pot standard"
+      },
+      "cuillere_soupe": {
+        "g": 20
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.05,
+    "water_content_pct": 84,
+    "edible_pct": 100
+  },
+  "cheese": {
+    "default_unit": "g",
+    "units": {
+      "tranche": {
+        "g": 30
+      },
+      "cuillere_soupe": {
+        "g": 15,
+        "note": "râpé"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 40,
+    "edible_pct": 100,
+    "note": "Fromage générique — utiliser entrée spécifique si disponible"
+  },
+  "fromage_blanc": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_soupe": {
+        "g": 20
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.05,
+    "water_content_pct": 79,
+    "edible_pct": 100
+  },
+  "feta": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_soupe": {
+        "g": 20,
+        "note": "émiettée"
+      },
+      "tranche": {
+        "g": 25
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 55,
+    "edible_pct": 100
+  },
+  "parmesan": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_soupe": {
+        "g": 10,
+        "note": "râpé"
+      },
+      "cuillere_cafe": {
+        "g": 3.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 29,
+    "edible_pct": 100
+  },
+  "mozzarella": {
+    "default_unit": "g",
+    "units": {
+      "boule": {
+        "g": 125,
+        "note": "boule standard"
+      },
+      "tranche": {
+        "g": 20
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 58,
+    "edible_pct": 100
+  },
+  "gruyere": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_soupe": {
+        "g": 10,
+        "note": "râpé"
+      },
+      "tranche": {
+        "g": 30
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 36,
+    "edible_pct": 100
+  },
+  "nutritional_yeast": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_soupe": {
+        "g": 8
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100
+  },
+  "soy_sauce": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.07
+      },
+      "cuillere_soupe": {
+        "g": 16
+      },
+      "cuillere_cafe": {
+        "g": 5.3
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.07,
+    "water_content_pct": 70,
+    "edible_pct": 100
+  },
+  "vegetable_broth": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.01
+      },
+      "l": {
+        "g": 1010
+      },
+      "cube": {
+        "g": 10
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.01,
+    "water_content_pct": 97,
+    "edible_pct": 100
+  },
+  "water": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.0
+      },
+      "l": {
+        "g": 1000
+      },
+      "verre": {
+        "g": 200
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 100,
+    "edible_pct": 100
+  },
+  "vinegar": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.01
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "cuillere_cafe": {
+        "g": 5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.01,
+    "water_content_pct": 95,
+    "edible_pct": 100
+  },
+  "rice_vinegar": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.01
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.01,
+    "water_content_pct": 95,
+    "edible_pct": 100
+  },
+  "tahini": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 0.97
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "cuillere_cafe": {
+        "g": 5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.97,
+    "water_content_pct": 3,
+    "edible_pct": 100
+  },
+  "honey": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "cuillere_soupe": {
+        "g": 21
+      },
+      "cuillere_cafe": {
+        "g": 7
+      },
+      "ml": {
+        "g": 1.4
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.4,
+    "water_content_pct": 17,
+    "edible_pct": 100
+  },
+  "sugar": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.85,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "flour": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_soupe": {
+        "g": 8
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "tasse": {
+        "g": 125
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.56,
+    "water_content_pct": 13,
+    "edible_pct": 100
+  },
+  "cornstarch": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_soupe": {
+        "g": 10
+      },
+      "cuillere_cafe": {
+        "g": 3.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.65,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "baking_powder": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_cafe": {
+        "g": 4
+      },
+      "sachet": {
+        "g": 11
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "rice": {
+    "default_unit": "g",
+    "units": {
+      "tasse": {
+        "g": 200,
+        "note": "riz cru"
+      },
+      "cuillere_soupe": {
+        "g": 12
+      },
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 0.77,
+    "water_content_pct": 12,
+    "edible_pct": 100,
+    "note": "Riz cru — poids après cuisson ×2.5"
+  },
+  "pasta": {
+    "default_unit": "g",
+    "units": {
+      "portion": {
+        "g": 80,
+        "note": "portion sèche standard"
+      },
+      "tasse": {
+        "g": 100
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "note": "Poids cru — poids après cuisson ×2.2"
+  },
+  "noodles": {
+    "default_unit": "g",
+    "units": {
+      "portion": {
+        "g": 80
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100
+  },
+  "rice_noodles": {
+    "default_unit": "g",
+    "units": {
+      "portion": {
+        "g": 80
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "bulgur": {
+    "default_unit": "g",
+    "units": {
+      "tasse": {
+        "g": 180
+      },
+      "cuillere_soupe": {
+        "g": 11
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.75,
+    "water_content_pct": 11,
+    "edible_pct": 100
+  },
+  "tofu": {
+    "default_unit": "g",
+    "units": {
+      "bloc": {
+        "g": 400,
+        "note": "bloc standard"
+      },
+      "tranche": {
+        "g": 80
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 84,
+    "edible_pct": 100,
+    "ciqual_id": "20900"
+  },
+  "silken_tofu": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 88,
+    "edible_pct": 100
+  },
+  "chickpea": {
+    "default_unit": "g",
+    "units": {
+      "boite": {
+        "g": 240,
+        "note": "poids net égoutté"
+      },
+      "tasse": {
+        "g": 164
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 60,
+    "edible_pct": 100,
+    "note": "Pois chiches cuits / en conserve"
+  },
+  "green_lentils": {
+    "default_unit": "g",
+    "units": {
+      "tasse": {
+        "g": 200,
+        "note": "cru"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "note": "Poids cru — après cuisson ×2.5"
+  },
+  "red_lentils": {
+    "default_unit": "g",
+    "units": {
+      "tasse": {
+        "g": 190
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100
+  },
+  "lentils": {
+    "default_unit": "g",
+    "units": {
+      "tasse": {
+        "g": 200
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100
+  },
+  "green_beans": {
+    "default_unit": "g",
+    "units": {
+      "poignee": {
+        "g": 100
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 88
+  },
+  "black_bean": {
+    "default_unit": "g",
+    "units": {
+      "boite": {
+        "g": 240
+      },
+      "tasse": {
+        "g": 172
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 66,
+    "edible_pct": 100
+  },
+  "white_bean": {
+    "default_unit": "g",
+    "units": {
+      "boite": {
+        "g": 240
+      },
+      "tasse": {
+        "g": 180
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 69,
+    "edible_pct": 100
+  },
+  "kidney_bean": {
+    "default_unit": "g",
+    "units": {
+      "boite": {
+        "g": 240
+      },
+      "tasse": {
+        "g": 177
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 67,
+    "edible_pct": 100
+  },
+  "spinach": {
+    "default_unit": "g",
+    "units": {
+      "poignee": {
+        "g": 30,
+        "note": "poignée fraîche"
+      },
+      "sac": {
+        "g": 300
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 92,
+    "edible_pct": 90,
+    "ciqual_id": "10115"
+  },
+  "mushroom": {
+    "default_unit": "g",
+    "units": {
+      "piece": {
+        "g": 20,
+        "note": "champignon moyen"
+      },
+      "boite": {
+        "g": 200
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 92,
+    "edible_pct": 95
+  },
+  "cabbage": {
+    "default_unit": "g",
+    "units": {
+      "tete": {
+        "g": 800,
+        "note": "chou entier"
+      },
+      "portion": {
+        "g": 150
+      },
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 92,
+    "edible_pct": 75
+  },
+  "snow_peas": {
+    "default_unit": "g",
+    "units": {
+      "poignee": {
+        "g": 80
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 88,
+    "edible_pct": 90
+  },
+  "lemongrass": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 20,
+        "note": "tige, partie tendre uniquement"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 82,
+    "edible_pct": 40,
+    "note": "Partie blanche uniquement"
+  },
+  "walnut": {
+    "default_unit": "g",
+    "units": {
+      "piece": {
+        "g": 15,
+        "note": "cerneaux"
+      },
+      "poignee": {
+        "g": 30
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 4,
+    "edible_pct": 50,
+    "note": "edible_pct = cerneaux / noix entière"
+  },
+  "peanut": {
+    "default_unit": "g",
+    "units": {
+      "poignee": {
+        "g": 30
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 4,
+    "edible_pct": 100
+  },
+  "sesame_seeds": {
+    "default_unit": "g",
+    "units": {
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.6,
+    "water_content_pct": 5,
+    "edible_pct": 100
+  },
+  "olive": {
+    "default_unit": "g",
+    "units": {
+      "piece": {
+        "g": 6,
+        "note": "olive dénoyautée"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 75,
+    "edible_pct": 80,
+    "note": "edible_pct sans noyau"
+  },
+  "tomato_sauce": {
+    "default_unit": "g",
+    "units": {
+      "boite": {
+        "g": 400
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "ml": {
+        "g": 1.05
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.05,
+    "water_content_pct": 88,
+    "edible_pct": 100
+  },
+  "dijon_mustard": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "cuillere_cafe": {
+        "g": 5
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.1,
+    "water_content_pct": 72,
+    "edible_pct": 100
+  },
+  "gochujang": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "cuillere_soupe": {
+        "g": 18
+      },
+      "cuillere_cafe": {
+        "g": 6
+      },
+      "ml": {
+        "g": 1.2
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.2,
+    "water_content_pct": 50,
+    "edible_pct": 100
+  },
+  "lemon_zest": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 5,
+        "note": "zeste d'un citron"
+      },
+      "cuillere_cafe": {
+        "g": 2
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 100
+  },
+  "bread": {
+    "default_unit": "tranche",
+    "units": {
+      "tranche": {
+        "g": 30,
+        "note": "tranche standard"
+      },
+      "baguette": {
+        "g": 250
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 38,
+    "edible_pct": 100
+  },
+  "stale_bread": {
+    "default_unit": "g",
+    "units": {
+      "tranche": {
+        "g": 30
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 25,
+    "edible_pct": 100
+  },
+  "wheat_tortilla": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 30
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 33,
+    "edible_pct": 100
+  },
+  "masa_harina": {
+    "default_unit": "g",
+    "units": {
+      "tasse": {
+        "g": 120
+      },
+      "cuillere_soupe": {
+        "g": 8
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.55,
+    "water_content_pct": 11,
+    "edible_pct": 100
+  },
+  "filo_pastry": {
+    "default_unit": "piece",
+    "units": {
+      "piece": {
+        "g": 20,
+        "note": "feuille filo"
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 30,
+    "edible_pct": 100
+  },
+  "cauliflower": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "pommes_de_terre": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "oil": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "ml": {
+        "g": 0.9
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "lait_coco": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "curry": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "oeuf": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "sesame": {
+    "default_unit": "poignee",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "poignee": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100
+  },
+  "sesame_seed": {
+    "default_unit": "poignee",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "poignee": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100
+  },
+  "soybean": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "sauce_soja": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "beet": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "raisins_sec": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 150
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 80
+  },
+  "turnip": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "ras_el_hanout": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "semoule_de_couscous_moyenne": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "concentre_de_tomate": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "curry_paste": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "split_pea": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "snow_pea": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "red_lentil": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "creme": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "coriander_ground": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "huile_friture": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "ml": {
+        "g": 0.9
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "falafel": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "pain_pita": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "yeast": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "gnocchi": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "sauce_tomate": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "pesto": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "origan": {
+    "default_unit": "branche",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "branche": {
+        "g": 5
+      },
+      "botte": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 100
+  },
+  "gyoza_wrapper": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "bouillon": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "broccoli": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "rice_noodle": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "cacahuete": {
+    "default_unit": "poignee",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "poignee": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100
+  },
+  "paneer": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "etoile_de_badiane": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "ml": {
+        "g": 0.9
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "pizza_dough": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "nouilles_ramen": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "miso_paste": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "arborio_rice": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "couscous": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "quinoa_grain": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "green_bean": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "basmati_rice": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "piment_coreen": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "peanut_butter": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "ml": {
+        "g": 0.9
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "kimchi": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "white_bean_cooked": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "green_lentil": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "polenta": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "shortcrust_pastry": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "bean": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "udon": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "phyllo_sheet": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "aneth": {
+    "default_unit": "branche",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "branche": {
+        "g": 5
+      },
+      "botte": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 100
+  },
+  "tempeh": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "attieke": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "fermented_leaf_gundruk": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "piment": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "plantain": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 150
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 80
+  },
+  "black_eyed_bean_cooked": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "sumac": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "poireau": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "baguette": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "dried_pea": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "fecule": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "bouillon_dashi_vegetarien": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "piment_amarillo": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "lait": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "precooked_corn_flour": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "moutarde": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "ziti": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "rice_flour": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "myrtill": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 150
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 80
+  },
+  "flocons_d_avoine": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "pak_choi": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "marjolaine": {
+    "default_unit": "branche",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "branche": {
+        "g": 5
+      },
+      "botte": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 100
+  },
+  "rice_vermicelli": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "kale": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "red_bean_cooked": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "rice_wrapper": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "vine_leaf": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "farine_de_manioc": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "black_bean_cooked": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "feuille_laurier": {
+    "default_unit": "branche",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "branche": {
+        "g": 5
+      },
+      "botte": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 100
+  },
+  "farine_de_seigle": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "haricots_geant": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "jus_de_citron_vert": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 150
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 80
+  },
+  "noix_de_muscade": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "tofu_soyeux": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "farine_de_teff": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "nouilles_de_patate_douce": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "mirin": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "feuilles_nori": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "spatzle": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "feuilles_de_taro": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "graines_de_moutarde": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "cheddar": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "pate_d_arachide": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "sirop_d_erable": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "cuillere_cafe": {
+        "g": 5
+      },
+      "ml": {
+        "g": 1.3
+      }
+    },
+    "density_g_per_ml": 1.3,
+    "water_content_pct": 20,
+    "edible_pct": 100
+  },
+  "pate_piment": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "berbere": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "huile_de_palme": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "ml": {
+        "g": 0.9
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "bechamel": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "harissa": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "sauce_okonomiyaki": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "mayonnaise": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "riz_japonai": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "prune_umeboshi": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 150
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 80
+  },
+  "riz_rond": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "farine_de_pois_chiche": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "legume": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "capre": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "feuilles_filo": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "riz_sushi": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "fromage_en_grain": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "sauce_brune_vegetarienne": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "mais_hominy": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "fecule_de_tapioca": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "oeufs_dur": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "menthe": {
+    "default_unit": "branche",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "branche": {
+        "g": 5
+      },
+      "botte": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 100
+  },
+  "gateaux_de_riz": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "allspice": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "amchur": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "ancho_chili": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "curry_leaf": {
+    "default_unit": "branche",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "branche": {
+        "g": 5
+      },
+      "botte": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 100
+  },
+  "dried_chili": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "fleur_de_sel": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "kaffir_lime_leaf": {
+    "default_unit": "branche",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "branche": {
+        "g": 5
+      },
+      "botte": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 100
+  },
+  "sambar_powder": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "sichuan_pepper": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "sri_lankan_curry_powder": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "zaatar": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "chives": {
+    "default_unit": "branche",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      },
+      "branche": {
+        "g": 5
+      },
+      "botte": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 100
+  },
+  "asparagus": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "bamboo_shoot": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "bok_choy": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "cherry_tomato": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "chicory": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "chinese_cabbage": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "corn_husk": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "daikon": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "dandelion": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "galangal": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "green_bell_pepper": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "green_papaya": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 150
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 80
+  },
+  "hominy_corn": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "jackfruit": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 150
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 80
+  },
+  "kabocha_squash": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "lacinato_kale": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "okra": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "pomegranate": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 150
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 80
+  },
+  "pumpkin": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "radish": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "red_chili": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "shiitake_mushroom": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "small_eggplant": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "squash": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "sweet_potato": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "swiss_chard": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "taro_leaf": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "wild_chicory": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "wood_ear_mushroom": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "bean_sprout": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "cannellini_bean": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "fava_bean": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "dried_fava_bean": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "urad_lentil": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "yellow_lentil": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "breadcrumbs": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "empanada_dough": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "glass_noodles": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "oats": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "panko_breadcrumbs": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "reshteh_noodles": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "soba_noodles": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "starch": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "tempura_flour": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "tuscan_bread": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "wonton_wrapper": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "almond": {
+    "default_unit": "poignee",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "poignee": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100
+  },
+  "banana": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 150
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 80
+  },
+  "orange": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 150
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 80
+  },
+  "pine_nut": {
+    "default_unit": "poignee",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "poignee": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100
+  },
+  "preserved_lemon": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 150
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 80
+  },
+  "palm_oil": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "ml": {
+        "g": 0.9
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "fresh_cheese": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 50,
+    "edible_pct": 100
+  },
+  "ghee": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "ml": {
+        "g": 0.9
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "gruyere_cheese": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 50,
+    "edible_pct": 100
+  },
+  "kashk": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "ricotta": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "salted_ricotta": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "fried_onion": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "doubanjiang_paste": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "dried_seaweed": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "green_curry_paste": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "hoisin_sauce": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "japanese_curry_roux": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "laksa_paste": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "loroco": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "mala_broth": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "mole_sauce": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "palm_sugar": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "cuillere_cafe": {
+        "g": 5
+      }
+    },
+    "density_g_per_ml": 0.8,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "pistou": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "red_curry_paste": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "tamarind": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "teriyaki_sauce": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "vegetarian_fish_sauce": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "vegetarian_oyster_sauce": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "wakame_seaweed": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "sparkling_water": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 100,
+    "edible_pct": 100
+  },
+  "gochugaru": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "green_chili": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "sauerkraut": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "star_anise": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "chana_dal": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100
+  },
+  "spirulina": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "dark_chocolate": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "matcha_tea": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "chia_seeds": {
+    "default_unit": "poignee",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "poignee": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100
+  },
+  "pumpkin_seeds": {
+    "default_unit": "poignee",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "poignee": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100
+  },
+  "kombucha": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "pineapple": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 150
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 80
+  },
+  "ground_flaxseeds": {
+    "default_unit": "poignee",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "poignee": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100
+  },
+  "fennel": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "artichoke": {
+    "default_unit": "piece",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "piece": {
+        "g": 100
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 85
+  },
+  "flaxseed_oil": {
+    "default_unit": "cuillere_soupe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_soupe": {
+        "g": 15
+      },
+      "ml": {
+        "g": 0.9
+      }
+    },
+    "density_g_per_ml": 0.9,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "green_tea": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "nouilles_reshteh": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "levure_maltee": {
+    "default_unit": "cuillere_cafe",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "cuillere_cafe": {
+        "g": 3
+      },
+      "cuillere_soupe": {
+        "g": 9
+      },
+      "pincee": {
+        "g": 0.5
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "gnocchi_vegan": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100
+  },
+  "mozzarella_vegane": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "tofu_feta": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "tofu_ferme": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "cheddar_vegane": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100
+  },
+  "yaourt_coco": {
+    "default_unit": "ml",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "ml": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 90,
+    "edible_pct": 100
+  },
+  "noix_de_cajou": {
+    "default_unit": "poignee",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "poignee": {
+        "g": 30
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100
+  },
+  "broth": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.0
+      },
+      "cuillere_soupe": {
+        "g": 15.0
+      },
+      "cuillere_cafe": {
+        "g": 5.0
+      },
+      "l": {
+        "g": 1000.0
+      },
+      "cl": {
+        "g": 10.0
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 98,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Bouillon végétarien, densité ≈ eau"
+  },
+  "peanut_oil": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 0.91
+      },
+      "cuillere_soupe": {
+        "g": 13.7
+      },
+      "cuillere_cafe": {
+        "g": 4.5
+      },
+      "l": {
+        "g": 910.0
+      },
+      "cl": {
+        "g": 9.1
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.91,
+    "water_content_pct": 0,
+    "edible_pct": 100,
+    "ciqual_id": "16008",
+    "note": "Huile d'arachide"
+  },
+  "vegetarian_dashi": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.0
+      },
+      "cuillere_soupe": {
+        "g": 15.0
+      },
+      "cuillere_cafe": {
+        "g": 5.0
+      },
+      "l": {
+        "g": 1000.0
+      },
+      "cl": {
+        "g": 10.0
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 99,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Dashi végétarien (kombu), densité ≈ eau"
+  },
+  "maple_syrup": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.32
+      },
+      "cuillere_soupe": {
+        "g": 19.8
+      },
+      "cuillere_cafe": {
+        "g": 6.6
+      },
+      "l": {
+        "g": 1320.0
+      },
+      "cl": {
+        "g": 13.2
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.32,
+    "water_content_pct": 32,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sirop d'érable"
+  },
+  "white_wine": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 0.99
+      },
+      "cuillere_soupe": {
+        "g": 14.8
+      },
+      "cuillere_cafe": {
+        "g": 5.0
+      },
+      "l": {
+        "g": 990.0
+      },
+      "cl": {
+        "g": 9.9
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.99,
+    "water_content_pct": 86,
+    "edible_pct": 100,
+    "ciqual_id": "62001",
+    "note": "Vin blanc de cuisine"
+  },
+  "lime_juice": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.03
+      },
+      "cuillere_soupe": {
+        "g": 15.5
+      },
+      "cuillere_cafe": {
+        "g": 5.2
+      },
+      "l": {
+        "g": 1030.0
+      },
+      "cl": {
+        "g": 10.3
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.03,
+    "water_content_pct": 92,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Jus de citron vert pressé"
+  },
+  "orange_blossom_water": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.0
+      },
+      "cuillere_soupe": {
+        "g": 15.0
+      },
+      "cuillere_cafe": {
+        "g": 5.0
+      },
+      "l": {
+        "g": 1000.0
+      },
+      "cl": {
+        "g": 10.0
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 99,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Eau de fleur d'oranger"
+  },
+  "apple_cider_vinegar": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.01
+      },
+      "cuillere_soupe": {
+        "g": 15.2
+      },
+      "cuillere_cafe": {
+        "g": 5.0
+      },
+      "l": {
+        "g": 1010.0
+      },
+      "cl": {
+        "g": 10.1
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.01,
+    "water_content_pct": 93,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Vinaigre de cidre"
+  },
+  "rum": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 0.94
+      },
+      "cuillere_soupe": {
+        "g": 14.1
+      },
+      "cuillere_cafe": {
+        "g": 4.7
+      },
+      "l": {
+        "g": 940.0
+      },
+      "cl": {
+        "g": 9.4
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.94,
+    "water_content_pct": 60,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Rhum 40° (alcool)"
+  },
+  "red_wine_vinegar": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.01
+      },
+      "cuillere_soupe": {
+        "g": 15.2
+      },
+      "cuillere_cafe": {
+        "g": 5.0
+      },
+      "l": {
+        "g": 1010.0
+      },
+      "cl": {
+        "g": 10.1
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.01,
+    "water_content_pct": 93,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Vinaigre de vin rouge"
+  },
+  "oat_cream": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.02
+      },
+      "cuillere_soupe": {
+        "g": 15.3
+      },
+      "cuillere_cafe": {
+        "g": 5.1
+      },
+      "l": {
+        "g": 1020.0
+      },
+      "cl": {
+        "g": 10.2
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.02,
+    "water_content_pct": 87,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Crème d'avoine végétale"
+  },
+  "light_soy_sauce": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.18
+      },
+      "cuillere_soupe": {
+        "g": 17.7
+      },
+      "cuillere_cafe": {
+        "g": 5.9
+      },
+      "l": {
+        "g": 1180.0
+      },
+      "cl": {
+        "g": 11.8
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.18,
+    "water_content_pct": 70,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sauce soja claire (japonaise)"
+  },
+  "dark_soy_sauce": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.22
+      },
+      "cuillere_soupe": {
+        "g": 18.3
+      },
+      "cuillere_cafe": {
+        "g": 6.1
+      },
+      "l": {
+        "g": 1220.0
+      },
+      "cl": {
+        "g": 12.2
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.22,
+    "water_content_pct": 55,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sauce soja foncée (chinoise)"
+  },
+  "canola_oil": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 0.91
+      },
+      "cuillere_soupe": {
+        "g": 13.7
+      },
+      "cuillere_cafe": {
+        "g": 4.5
+      },
+      "l": {
+        "g": 910.0
+      },
+      "cl": {
+        "g": 9.1
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.91,
+    "water_content_pct": 0,
+    "edible_pct": 100,
+    "ciqual_id": "16400",
+    "note": "Huile de colza"
+  },
+  "okonomiyaki_sauce": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.2
+      },
+      "cuillere_soupe": {
+        "g": 18.0
+      },
+      "cuillere_cafe": {
+        "g": 6.0
+      },
+      "l": {
+        "g": 1200.0
+      },
+      "cl": {
+        "g": 12.0
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.2,
+    "water_content_pct": 50,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sauce okonomiyaki (épaisse, sucrée-salée)"
+  },
+  "red_wine": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 0.99
+      },
+      "cuillere_soupe": {
+        "g": 14.8
+      },
+      "cuillere_cafe": {
+        "g": 5.0
+      },
+      "l": {
+        "g": 990.0
+      },
+      "cl": {
+        "g": 9.9
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.99,
+    "water_content_pct": 86,
+    "edible_pct": 100,
+    "ciqual_id": "62002",
+    "note": "Vin rouge de cuisine"
+  },
+  "white_wine_vinegar": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.01
+      },
+      "cuillere_soupe": {
+        "g": 15.2
+      },
+      "cuillere_cafe": {
+        "g": 5.0
+      },
+      "l": {
+        "g": 1010.0
+      },
+      "cl": {
+        "g": 10.1
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.01,
+    "water_content_pct": 93,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Vinaigre de vin blanc"
+  },
+  "almond_milk": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.01
+      },
+      "cuillere_soupe": {
+        "g": 15.2
+      },
+      "cuillere_cafe": {
+        "g": 5.0
+      },
+      "l": {
+        "g": 1010.0
+      },
+      "cl": {
+        "g": 10.1
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.01,
+    "water_content_pct": 96,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Lait d'amande non sucré"
+  },
+  "soy_cream": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.02
+      },
+      "cuillere_soupe": {
+        "g": 15.3
+      },
+      "cuillere_cafe": {
+        "g": 5.1
+      },
+      "l": {
+        "g": 1020.0
+      },
+      "cl": {
+        "g": 10.2
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.02,
+    "water_content_pct": 87,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Crème de soja végétale"
+  },
+  "sherry_vinegar": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.04
+      },
+      "cuillere_soupe": {
+        "g": 15.6
+      },
+      "cuillere_cafe": {
+        "g": 5.2
+      },
+      "l": {
+        "g": 1040.0
+      },
+      "cl": {
+        "g": 10.4
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.04,
+    "water_content_pct": 80,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Vinaigre de Xérès"
+  },
+  "coconut_cream": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.06
+      },
+      "cuillere_soupe": {
+        "g": 15.9
+      },
+      "cuillere_cafe": {
+        "g": 5.3
+      },
+      "l": {
+        "g": 1060.0
+      },
+      "cl": {
+        "g": 10.6
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.06,
+    "water_content_pct": 67,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Crème de coco (boîte, 20-25% MG)"
+  },
+  "frying_oil": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 0.91
+      },
+      "cuillere_soupe": {
+        "g": 13.7
+      },
+      "cuillere_cafe": {
+        "g": 4.5
+      },
+      "l": {
+        "g": 910.0
+      },
+      "cl": {
+        "g": 9.1
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.91,
+    "water_content_pct": 0,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Huile de friture neutre"
+  },
+  "aquafaba": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.01
+      },
+      "cuillere_soupe": {
+        "g": 15.2
+      },
+      "cuillere_cafe": {
+        "g": 5.0
+      },
+      "l": {
+        "g": 1010.0
+      },
+      "cl": {
+        "g": 10.1
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.01,
+    "water_content_pct": 95,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Eau de cuisson des pois chiches"
+  },
+  "espresso": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.0
+      },
+      "cuillere_soupe": {
+        "g": 15.0
+      },
+      "cuillere_cafe": {
+        "g": 5.0
+      },
+      "l": {
+        "g": 1000.0
+      },
+      "cl": {
+        "g": 10.0
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 98,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Expresso (café extrait)"
+  },
+  "marsala": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.06
+      },
+      "cuillere_soupe": {
+        "g": 15.9
+      },
+      "cuillere_cafe": {
+        "g": 5.3
+      },
+      "l": {
+        "g": 1060.0
+      },
+      "cl": {
+        "g": 10.6
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.06,
+    "water_content_pct": 72,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Marsala (vin fortifié)"
+  },
+  "rose_water": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.0
+      },
+      "cuillere_soupe": {
+        "g": 15.0
+      },
+      "cuillere_cafe": {
+        "g": 5.0
+      },
+      "l": {
+        "g": 1000.0
+      },
+      "cl": {
+        "g": 10.0
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.0,
+    "water_content_pct": 99,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Eau de rose"
+  },
+  "apple_juice": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.05
+      },
+      "cuillere_soupe": {
+        "g": 15.8
+      },
+      "cuillere_cafe": {
+        "g": 5.2
+      },
+      "l": {
+        "g": 1050.0
+      },
+      "cl": {
+        "g": 10.5
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.05,
+    "water_content_pct": 88,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Jus de pomme"
+  },
+  "cognac": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 0.94
+      },
+      "cuillere_soupe": {
+        "g": 14.1
+      },
+      "cuillere_cafe": {
+        "g": 4.7
+      },
+      "l": {
+        "g": 940.0
+      },
+      "cl": {
+        "g": 9.4
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.94,
+    "water_content_pct": 60,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Cognac 40°"
+  },
+  "truffle_oil": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 0.91
+      },
+      "cuillere_soupe": {
+        "g": 13.7
+      },
+      "cuillere_cafe": {
+        "g": 4.5
+      },
+      "l": {
+        "g": 910.0
+      },
+      "cl": {
+        "g": 9.1
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 0.91,
+    "water_content_pct": 0,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Huile de truffe (huile infusée)"
+  },
+  "orange_juice": {
+    "default_unit": "ml",
+    "units": {
+      "ml": {
+        "g": 1.04
+      },
+      "cuillere_soupe": {
+        "g": 15.6
+      },
+      "cuillere_cafe": {
+        "g": 5.2
+      },
+      "l": {
+        "g": 1040.0
+      },
+      "cl": {
+        "g": 10.4
+      },
+      "g": {
+        "g": 1
+      }
+    },
+    "density_g_per_ml": 1.04,
+    "water_content_pct": 88,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Jus d'orange pressé"
+  },
+  "chili_pepper": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 88,
+    "edible_pct": 85,
+    "ciqual_id": null,
+    "note": "Piment frais, pédonculé retiré"
+  },
+  "green_cabbage": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 92,
+    "edible_pct": 80,
+    "ciqual_id": "10023",
+    "note": "Chou blanc/vert cru, trognon retiré"
+  },
+  "nutmeg_whole": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 7,
+    "edible_pct": 100,
+    "ciqual_id": "11220",
+    "note": "Noix de muscade entière, épice sèche"
+  },
+  "laitue": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 95,
+    "edible_pct": 75,
+    "ciqual_id": "10040",
+    "note": "Laitue, feuilles externes retirées"
+  },
+  "tortillas": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 28,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Tortillas de blé ou maïs"
+  },
+  "coconut_sugar": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 2,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sucre de coco"
+  },
+  "cilantro": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 92,
+    "edible_pct": 80,
+    "ciqual_id": null,
+    "note": "Coriandre fraîche (feuilles)"
+  },
+  "button_mushroom": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 92,
+    "edible_pct": 95,
+    "ciqual_id": "10091",
+    "note": "Champignon de Paris cru"
+  },
+  "spices": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Mélange d'épices génériques"
+  },
+  "apple": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 86,
+    "edible_pct": 85,
+    "ciqual_id": "10001",
+    "note": "Pomme crue, non épluchée"
+  },
+  "mustard_seeds": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 6,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Graines de moutarde"
+  },
+  "strawberry": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 91,
+    "edible_pct": 93,
+    "ciqual_id": "10060",
+    "note": "Fraise fraîche"
+  },
+  "quinoa": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 13,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Quinoa sec"
+  },
+  "oregano": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 9,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Origan séché"
+  },
+  "cassava_flour": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Farine de manioc"
+  },
+  "caper": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 82,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Câpres (en saumure, égouttées)"
+  },
+  "rolled_oats": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 9,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Flocons d'avoine"
+  },
+  "mango": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 83,
+    "edible_pct": 73,
+    "ciqual_id": "10044",
+    "note": "Mangue crue, noyau retiré"
+  },
+  "cane_sugar": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 1,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sucre de canne roux"
+  },
+  "bean_sprouts": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pousses de soja/haricot mungo"
+  },
+  "miso_soup_base": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 43,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Base miso (pâte concentrée)"
+  },
+  "bamboo_shoots": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 91,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pousses de bambou (en boîte, égouttées)"
+  },
+  "desiccated_coconut": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 3,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Noix de coco râpée déshydratée"
+  },
+  "short_pasta": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pâtes courtes sèches"
+  },
+  "cashew": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Noix de cajou crue"
+  },
+  "comte": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 36,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Comté (fromage à pâte pressée cuite)"
+  },
+  "semolina": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Semoule de blé dur"
+  },
+  "sushi_rice": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Riz à sushi (riz rond japonais sec)"
+  },
+  "cream_cheese": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 54,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Fromage frais type Philadelphia"
+  },
+  "butternut_squash": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 86,
+    "edible_pct": 75,
+    "ciqual_id": null,
+    "note": "Courge butternut crue, peau et graines retirées"
+  },
+  "puff_pastry": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 28,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pâte feuilletée (prête à l'emploi)"
+  },
+  "buckwheat_flour": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Farine de sarrasin"
+  },
+  "balsamic_vinegar": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 1.15,
+    "water_content_pct": 72,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Vinaigre balsamique (densité élevée, sucres)"
+  },
+  "agave": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 1.35,
+    "water_content_pct": 24,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sirop d'agave (exprimé en g dans les recettes)"
+  },
+  "split_peas": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pois cassés secs"
+  },
+  "rice_paper": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Feuilles de riz pour rouleaux"
+  },
+  "black_bean_sauce": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 55,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sauce aux haricots noirs fermentés"
+  },
+  "berbere_sauce": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 65,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sauce berbéré éthiopienne"
+  },
+  "porcini": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 7,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Cèpes séchés (porcini)"
+  },
+  "celery_root": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 88,
+    "edible_pct": 75,
+    "ciqual_id": null,
+    "note": "Céleri-rave cru, pelé"
+  },
+  "hazelnut": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Noisette crue, décortiquée"
+  },
+  "herbes_de_provence": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 8,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Herbes de Provence (mélange séché)"
+  },
+  "dried_yeast": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Levure sèche active"
+  },
+  "cacao_powder": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 3,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Poudre de cacao non sucré"
+  },
+  "applesauce": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Compote de pommes sans sucre ajouté"
+  },
+  "baking_soda": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Bicarbonate de soude alimentaire"
+  },
+  "ground_ginger": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 9,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Gingembre moulu"
+  },
+  "pistachio": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 4,
+    "edible_pct": 98,
+    "ciqual_id": null,
+    "note": "Pistache crue, décortiquée"
+  },
+  "blueberry": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 84,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Myrtille fraîche"
+  },
+  "arugula": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 92,
+    "edible_pct": 95,
+    "ciqual_id": null,
+    "note": "Roquette fraîche"
+  },
+  "smoked_paprika": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 7,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Paprika fumé"
+  },
+  "wine_vinegar": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 1.01,
+    "water_content_pct": 93,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Vinaigre de vin générique (g dans recettes)"
+  },
+  "wide_rice_noodles": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Nouilles de riz larges sèches"
+  },
+  "chinese_broccoli": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 91,
+    "edible_pct": 80,
+    "ciqual_id": null,
+    "note": "Brocoli chinois (gai lan) cru"
+  },
+  "tamarind_paste": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 31,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pâte de tamarin"
+  },
+  "white_pepper": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 9,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Poivre blanc moulu"
+  },
+  "black_olive": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 75,
+    "edible_pct": 88,
+    "ciqual_id": null,
+    "note": "Olive noire (dénoyautée)"
+  },
+  "sauce": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 70,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sauce générique (champ à préciser)"
+  },
+  "white_miso": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 44,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Miso blanc (shiro miso)"
+  },
+  "greek_yogurt": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 81,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Yaourt grec entier"
+  },
+  "napa_cabbage": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 94,
+    "edible_pct": 85,
+    "ciqual_id": null,
+    "note": "Chou chinois (pe-tsaï) cru"
+  },
+  "pita_bread": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 33,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pain pita"
+  },
+  "mustard": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 79,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Moutarde préparée (en pot)"
+  },
+  "marjoram": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 8,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Marjolaine séchée"
+  },
+  "rye_flour": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Farine de seigle"
+  },
+  "za_atar": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 9,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Za'atar (mélange épices levant)"
+  },
+  "spaetzle": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 60,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Spätzle (pâtes fraiches cuites)"
+  },
+  "amarillo_chili": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 88,
+    "edible_pct": 85,
+    "ciqual_id": null,
+    "note": "Piment amarillo frais ou pâte"
+  },
+  "ricotta_salata": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 55,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Ricotta salata (fromage sec, salé)"
+  },
+  "green_peas": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 79,
+    "edible_pct": 100,
+    "ciqual_id": "10028",
+    "note": "Petits pois frais ou surgelés"
+  },
+  "roquefort": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 39,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Roquefort (fromage à pâte persillée)"
+  },
+  "pear": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 84,
+    "edible_pct": 88,
+    "ciqual_id": "10051",
+    "note": "Poire crue, trognon retiré"
+  },
+  "sun_dried_tomato": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 14,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Tomates séchées (à l'huile ou sèches)"
+  },
+  "fresh_tome_cheese": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 55,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Tomme fraîche (fromage de brebis/vache)"
+  },
+  "gherkin": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 93,
+    "edible_pct": 90,
+    "ciqual_id": null,
+    "note": "Cornichon (au vinaigre, égoutté)"
+  },
+  "sliced_almond": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 4,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Amandes effilées"
+  },
+  "agar_agar": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Agar-agar en poudre"
+  },
+  "cherry": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 82,
+    "edible_pct": 90,
+    "ciqual_id": null,
+    "note": "Cerise fraîche, dénoyautée"
+  },
+  "almond_flour": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 4,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Farine d'amandes"
+  },
+  "ladyfinger": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 20,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Biscuit cuillère (boudoir)"
+  },
+  "mascarpone": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 45,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Mascarpone"
+  },
+  "vanilla_sugar": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 1,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sucre vanillé"
+  },
+  "pie_dough": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 24,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pâte brisée (prête à l'emploi)"
+  },
+  "round_grain_rice": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Riz rond (arborio, camargue) sec"
+  },
+  "egg_white": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 88,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Blanc d'œuf (seul)"
+  },
+  "powdered_sugar": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 1,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sucre glace"
+  },
+  "cashew_cream": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 60,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Crème de cajou (cashew cream)"
+  },
+  "passion_fruit": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 73,
+    "edible_pct": 50,
+    "ciqual_id": null,
+    "note": "Fruit de la passion, pulpe seule"
+  },
+  "sunflower_seeds": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Graines de tournesol décortiquées"
+  },
+  "dried_cranberry": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 16,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Cranberries séchées sucrées"
+  },
+  "frozen_banana": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 74,
+    "edible_pct": 65,
+    "ciqual_id": null,
+    "note": "Banane congelée, sans peau"
+  },
+  "granola": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 4,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Granola (muesli croustillant)"
+  },
+  "plant_yogurt": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 87,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Yaourt végétal (soja/coco/avoine)"
+  },
+  "almond_butter": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 2,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Purée d'amandes (beurre d'amandes)"
+  },
+  "raspberry": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 86,
+    "edible_pct": 98,
+    "ciqual_id": null,
+    "note": "Framboise fraîche"
+  },
+  "grape": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 81,
+    "edible_pct": 97,
+    "ciqual_id": "10031",
+    "note": "Raisin frais, égrappé"
+  },
+  "goat_cheese": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 45,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Fromage de chèvre frais"
+  },
+  "tomato_paste": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 74,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Concentré de tomates"
+  },
+  "dried_raisins": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 15,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Raisins secs"
+  },
+  "dried_chickpeas": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pois chiches secs (avant trempage)"
+  },
+  "cooking_water": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 100,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Eau de cuisson (neutre)"
+  },
+  "brown_lentils": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Lentilles brunes sèches"
+  },
+  "white_vinegar": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 1.01,
+    "water_content_pct": 93,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Vinaigre blanc (g dans recettes)"
+  },
+  "lasagna_sheet": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Feuilles de lasagne sèches"
+  },
+  "long_grain_rice": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Riz long grain sec (basmati, thaï)"
+  },
+  "thai_chili": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 88,
+    "edible_pct": 85,
+    "ciqual_id": null,
+    "note": "Piment thaï frais"
+  },
+  "neutral_oil": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 0.91,
+    "water_content_pct": 0,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Huile neutre (tournesol/pépins de raisin)"
+  },
+  "coconut_vinegar": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 1.01,
+    "water_content_pct": 93,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Vinaigre de coco"
+  },
+  "floury_potato": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 80,
+    "ciqual_id": null,
+    "note": "Pomme de terre farineuse (type bintje)"
+  },
+  "whole_milk": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 1.03,
+    "water_content_pct": 88,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Lait entier (g dans recettes)"
+  },
+  "pecorino_romano": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 29,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pecorino romano (fromage affiné, salé)"
+  },
+  "oyster_mushroom": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 89,
+    "edible_pct": 95,
+    "ciqual_id": null,
+    "note": "Pleurote cru"
+  },
+  "kalamata_olive": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 65,
+    "edible_pct": 88,
+    "ciqual_id": null,
+    "note": "Olive kalamata (dénoyautée)"
+  },
+  "seaweed": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Algues fraîches ou réhydratées"
+  },
+  "wakame_dried": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 18,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Wakamé séché"
+  },
+  "galette": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 28,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Galette (sarrasin ou blé, prête)"
+  },
+  "gundruk": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Gundruk (légume fermenté népalais, séché)"
+  },
+  "black_eyed_pea": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Dolique à œil noir (niébé) sec"
+  },
+  "dried_peas": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pois secs"
+  },
+  "vermicelli": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Vermicelles (riz ou blé) secs"
+  },
+  "teff_flour": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Farine de teff"
+  },
+  "yellow_lentils": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Lentilles jaunes (ou corail) sèches"
+  },
+  "rice_cake": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 8,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Galette de riz soufflée"
+  },
+  "hazelnut_oil": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 0.91,
+    "water_content_pct": 0,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Huile de noisette (g dans recettes)"
+  },
+  "chestnut": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 52,
+    "edible_pct": 85,
+    "ciqual_id": null,
+    "note": "Châtaigne crue, pelée"
+  },
+  "jerusalem_artichoke": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 79,
+    "edible_pct": 80,
+    "ciqual_id": null,
+    "note": "Topinambour cru, épluché"
+  },
+  "watercress": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 93,
+    "edible_pct": 85,
+    "ciqual_id": null,
+    "note": "Cresson de fontaine frais"
+  },
+  "basil_pesto": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 40,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pesto au basilic"
+  },
+  "espelette_pepper": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Piment d'Espelette moulu (AOC)"
+  },
+  "chanterelle": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 88,
+    "edible_pct": 95,
+    "ciqual_id": null,
+    "note": "Girolle/chanterelle fraîche"
+  },
+  "endive": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 94,
+    "edible_pct": 85,
+    "ciqual_id": null,
+    "note": "Endive crue, feuilles extérieures retirées"
+  },
+  "cooked_rice": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 68,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Riz cuit (eau absorbée)"
+  },
+  "juniper_berry": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Baies de genièvre séchées"
+  },
+  "caraway": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Carvi (graines de cumin des prés)"
+  },
+  "light_cream": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 1.01,
+    "water_content_pct": 72,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Crème légère (12-15% MG)"
+  },
+  "coriander_seeds": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 9,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Graines de coriandre"
+  },
+  "lamb_lettuce": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 93,
+    "edible_pct": 90,
+    "ciqual_id": null,
+    "note": "Mâche fraîche"
+  },
+  "walnut_oil": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 0.92,
+    "water_content_pct": 0,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Huile de noix (g dans recettes)"
+  },
+  "curly_endive": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 94,
+    "edible_pct": 80,
+    "ciqual_id": null,
+    "note": "Chicorée frisée (scarole)"
+  },
+  "bread_flour": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Farine à pain (T65)"
+  },
+  "sourdough_starter": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 50,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Levain naturel (hydratation 100%)"
+  },
+  "kirsch": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 0.95,
+    "water_content_pct": 55,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Kirsch (eau-de-vie cerises, 40-45°)"
+  },
+  "cherry_jam": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 30,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Confiture de cerises"
+  },
+  "calvados": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 0.94,
+    "water_content_pct": 55,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Calvados (eau-de-vie pomme, 40°)"
+  },
+  "strawberry_coulis": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Coulis de fraises"
+  },
+  "salted_butter": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 16,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Beurre demi-sel"
+  },
+  "salted_butter_caramel": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 20,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Caramel au beurre salé (sauce)"
+  },
+  "candied_fruit": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 18,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Fruits confits"
+  },
+  "pearl_sugar": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 1,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sucre perlé (grains durs)"
+  },
+  "plum": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 87,
+    "edible_pct": 92,
+    "ciqual_id": null,
+    "note": "Prune fraîche, dénoyautée"
+  },
+  "strawberry_jam": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 30,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Confiture de fraises"
+  },
+  "chocolate_chips": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 2,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pépites de chocolat"
+  },
+  "anise_seeds": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 9,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Graines d'anis"
+  },
+  "digestive_biscuit": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Biscuits digestive (type McVitie's)"
+  },
+  "mixed_berries": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 98,
+    "ciqual_id": null,
+    "note": "Fruits rouges mélangés (frais ou surgelés)"
+  },
+  "glutinous_rice_flour": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Farine de riz gluant"
+  },
+  "matcha": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Matcha en poudre"
+  },
+  "red_bean_paste": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 45,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pâte de haricots rouges (anko)"
+  },
+  "potato_starch": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Fécule de pomme de terre"
+  },
+  "dark_chocolate_chips": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 2,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pépites de chocolat noir (>60%)"
+  },
+  "acai_puree": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 75,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Purée d'açaï (surgelée)"
+  },
+  "sourdough_bread": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 38,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pain au levain"
+  },
+  "sprouts": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 88,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pousses diverses (radis, luzerne…)"
+  },
+  "kiwi": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 83,
+    "edible_pct": 88,
+    "ciqual_id": null,
+    "note": "Kiwi frais, pelé"
+  },
+  "black_salt": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 0,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sel noir (kala namak, soufré)"
+  },
+  "whole_grain_bread": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 37,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pain complet"
+  },
+  "hemp_seeds": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Graines de chanvre décortiquées"
+  },
+  "coconut_yogurt": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 83,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Yaourt coco"
+  },
+  "chervil": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 89,
+    "edible_pct": 80,
+    "ciqual_id": null,
+    "note": "Cerfeuil frais"
+  },
+  "multigrain_bread": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 37,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pain multicéréales"
+  },
+  "fig": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 79,
+    "edible_pct": 90,
+    "ciqual_id": null,
+    "note": "Figue fraîche, queue retirée"
+  },
+  "ground_flaxseed": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 7,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Graines de lin moulues (graines de lin broyées)"
+  },
+  "bagel": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 33,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Bagel"
+  },
+  "rhubarb": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 94,
+    "edible_pct": 88,
+    "ciqual_id": null,
+    "note": "Rhubarbe fraîche, feuilles retirées"
+  },
+  "grapefruit": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 57,
+    "ciqual_id": null,
+    "note": "Pamplemousse, zeste et pépins retirés"
+  },
+  "chili_paste": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 65,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pâte de piment (sambal, harissa…)"
+  },
+  "pomegranate_molasses": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": 1.3,
+    "water_content_pct": 30,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Mélasse de grenade"
+  },
+  "roasted_chickpea": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Pois chiches rôtis (croustillants)"
+  },
+  "melon": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90,
+    "edible_pct": 65,
+    "ciqual_id": null,
+    "note": "Melon frais, graines et peau retirées"
+  },
+  "instant_yeast": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 5,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Levure instantanée (levure boulangère sèche)"
+  },
+  "mixed_salad": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 93,
+    "edible_pct": 85,
+    "ciqual_id": null,
+    "note": "Mesclun / salade mélangée"
+  },
+  "parsnip": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 78,
+    "ciqual_id": null,
+    "note": "Panais cru, épluché"
+  },
+  "zucchini_blossom": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 94,
+    "edible_pct": 90,
+    "ciqual_id": null,
+    "note": "Fleur de courgette"
+  },
+  "wasabi": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 69,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Wasabi (pâte ou poudre reconstituée)"
+  },
+  "black_sesame_seeds": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 6,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Graines de sésame noir"
+  },
+  "beluga_lentil": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Lentilles beluga (noires)"
+  },
+  "crouton": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 8,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Croûtons (pain grillé/frit)"
+  },
+  "puy_lentil": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Lentilles vertes du Puy (AOP)"
+  },
+  "peas": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 79,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Petits pois (frais ou surgelés)"
+  },
+  "pearl_onion": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 89,
+    "edible_pct": 85,
+    "ciqual_id": null,
+    "note": "Oignon grelot, pelé"
+  },
+  "barley": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 10,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Orge perlé sec"
+  },
+  "flageolet_bean": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 11,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Flageolet sec"
+  },
+  "bouquet_garni": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 80,
+    "edible_pct": 80,
+    "ciqual_id": null,
+    "note": "Bouquet garni (thym, laurier, persil)"
+  },
+  "buckwheat": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 12,
+    "edible_pct": 100,
+    "ciqual_id": null,
+    "note": "Sarrasin décortiqué (graines)"
+  },
+  "red_kuri_squash": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85,
+    "edible_pct": 75,
+    "ciqual_id": null,
+    "note": "Potimarron cru, graines retirées"
+  },
+  "tarragon": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 78,
+    "edible_pct": 85,
+    "ciqual_id": null,
+    "note": "Estragon frais"
+  }
+}

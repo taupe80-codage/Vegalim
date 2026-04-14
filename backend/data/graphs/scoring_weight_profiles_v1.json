@@ -1,0 +1,45 @@
+{
+  "balanced_default": {
+    "nutrition_weight": 0.35,
+    "flavor_weight": 0.2,
+    "cost_weight": 0.15,
+    "season_weight": 0.1,
+    "diet_match_weight": 0.1,
+    "variety_weight": 0.1
+  },
+  "high_protein_goal": {
+    "nutrition_weight": 0.45,
+    "flavor_weight": 0.15,
+    "cost_weight": 0.1,
+    "season_weight": 0.1,
+    "diet_match_weight": 0.1,
+    "variety_weight": 0.1,
+    "protein_priority": true
+  },
+  "budget_low": {
+    "nutrition_weight": 0.25,
+    "flavor_weight": 0.15,
+    "cost_weight": 0.35,
+    "season_weight": 0.1,
+    "diet_match_weight": 0.1,
+    "variety_weight": 0.05
+  },
+  "weight_loss": {
+    "nutrition_weight": 0.4,
+    "flavor_weight": 0.1,
+    "cost_weight": 0.1,
+    "season_weight": 0.1,
+    "diet_match_weight": 0.2,
+    "variety_weight": 0.1,
+    "calorie_penalty_priority": true
+  },
+  "cycle_luteal_support": {
+    "nutrition_weight": 0.4,
+    "flavor_weight": 0.15,
+    "cost_weight": 0.1,
+    "season_weight": 0.1,
+    "diet_match_weight": 0.15,
+    "variety_weight": 0.1,
+    "magnesium_priority": true
+  }
+}

@@ -1,0 +1,16 @@
+# Dépendances — régénérables via : npm install
+node_modules/
+
+# Build Vite — régénérable via : npm run build
+# Décommenter pour inclure le build dans le repo (déploiement sans étape de build) :
+# !dist/
+dist/
+
+# Logs npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db

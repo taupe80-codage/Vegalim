@@ -1,0 +1,517 @@
+{
+  "nodes": [
+    {
+      "id": "Lentil Dal",
+      "type": "unknown"
+    },
+    {
+      "id": "1 cup red lentils",
+      "type": "unknown"
+    },
+    {
+      "id": "1 tsp cumin seeds",
+      "type": "unknown"
+    },
+    {
+      "id": "1 tsp turmeric",
+      "type": "unknown"
+    },
+    {
+      "id": "Chana Masala",
+      "type": "unknown"
+    },
+    {
+      "id": "2 cups chickpeas",
+      "type": "unknown"
+    },
+    {
+      "id": "1 onion",
+      "type": "unknown"
+    },
+    {
+      "id": "2 tomatoes",
+      "type": "unknown"
+    },
+    {
+      "id": "3 garlic cloves",
+      "type": "unknown"
+    },
+    {
+      "id": "1 tsp cumin",
+      "type": "unknown"
+    },
+    {
+      "id": "1 tsp garam masala",
+      "type": "unknown"
+    },
+    {
+      "id": "2 tbsp oil",
+      "type": "unknown"
+    },
+    {
+      "id": "salt",
+      "type": "unknown"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Lentil Dal",
+      "to": "1 cup red lentils",
+      "relation": "uses_ingredient",
+      "weight": 0.8,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "Lentil Dal",
+      "to": "1 tsp cumin seeds",
+      "relation": "uses_ingredient",
+      "weight": 0.8,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "Lentil Dal",
+      "to": "1 tsp turmeric",
+      "relation": "uses_ingredient",
+      "weight": 0.8,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 cup red lentils",
+      "to": "1 tsp cumin seeds",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 cup red lentils",
+      "to": "1 tsp turmeric",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp cumin seeds",
+      "to": "1 tsp turmeric",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "Chana Masala",
+      "to": "2 cups chickpeas",
+      "relation": "uses_ingredient",
+      "weight": 0.8,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "Chana Masala",
+      "to": "1 onion",
+      "relation": "uses_ingredient",
+      "weight": 0.8,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "Chana Masala",
+      "to": "2 tomatoes",
+      "relation": "uses_ingredient",
+      "weight": 0.8,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "Chana Masala",
+      "to": "3 garlic cloves",
+      "relation": "uses_ingredient",
+      "weight": 0.8,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "Chana Masala",
+      "to": "1 tsp cumin",
+      "relation": "uses_ingredient",
+      "weight": 0.8,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "Chana Masala",
+      "to": "1 tsp garam masala",
+      "relation": "uses_ingredient",
+      "weight": 0.8,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "Chana Masala",
+      "to": "1 tsp turmeric",
+      "relation": "uses_ingredient",
+      "weight": 0.8,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "Chana Masala",
+      "to": "2 tbsp oil",
+      "relation": "uses_ingredient",
+      "weight": 0.8,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "Chana Masala",
+      "to": "salt",
+      "relation": "uses_ingredient",
+      "weight": 0.8,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 onion",
+      "to": "2 cups chickpeas",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "2 cups chickpeas",
+      "to": "2 tomatoes",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "2 cups chickpeas",
+      "to": "3 garlic cloves",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp cumin",
+      "to": "2 cups chickpeas",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp garam masala",
+      "to": "2 cups chickpeas",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp turmeric",
+      "to": "2 cups chickpeas",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "2 cups chickpeas",
+      "to": "2 tbsp oil",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "2 cups chickpeas",
+      "to": "salt",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 onion",
+      "to": "2 tomatoes",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 onion",
+      "to": "3 garlic cloves",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 onion",
+      "to": "1 tsp cumin",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 onion",
+      "to": "1 tsp garam masala",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 onion",
+      "to": "1 tsp turmeric",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 onion",
+      "to": "2 tbsp oil",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 onion",
+      "to": "salt",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "2 tomatoes",
+      "to": "3 garlic cloves",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp cumin",
+      "to": "2 tomatoes",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp garam masala",
+      "to": "2 tomatoes",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp turmeric",
+      "to": "2 tomatoes",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "2 tbsp oil",
+      "to": "2 tomatoes",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "2 tomatoes",
+      "to": "salt",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp cumin",
+      "to": "3 garlic cloves",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp garam masala",
+      "to": "3 garlic cloves",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp turmeric",
+      "to": "3 garlic cloves",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "2 tbsp oil",
+      "to": "3 garlic cloves",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "3 garlic cloves",
+      "to": "salt",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp cumin",
+      "to": "1 tsp garam masala",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp cumin",
+      "to": "1 tsp turmeric",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp cumin",
+      "to": "2 tbsp oil",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp cumin",
+      "to": "salt",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp garam masala",
+      "to": "1 tsp turmeric",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp garam masala",
+      "to": "2 tbsp oil",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp garam masala",
+      "to": "salt",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp turmeric",
+      "to": "2 tbsp oil",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "1 tsp turmeric",
+      "to": "salt",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    },
+    {
+      "from": "2 tbsp oil",
+      "to": "salt",
+      "relation": "co_occurs",
+      "weight": 0.55,
+      "confidence": 0.6,
+      "observations": 1,
+      "locked": false
+    }
+  ]
+}

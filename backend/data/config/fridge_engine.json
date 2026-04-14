@@ -1,0 +1,13 @@
+{
+  "engine": "fridge_engine",
+  "description": "Score recipes based on available ingredients.",
+  "scoring": {
+    "formula": "matched_ingredients / total_recipe_ingredients",
+    "example": {
+      "recipe": "Ratatouille",
+      "matched": 4,
+      "total": 6,
+      "score": 0.66
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "nodes": [
+    {
+      "id": "tomato",
+      "type": "ingredient"
+    },
+    {
+      "id": "basil",
+      "type": "ingredient"
+    },
+    {
+      "id": "garlic",
+      "type": "ingredient"
+    },
+    {
+      "id": "chocolate",
+      "type": "ingredient"
+    },
+    {
+      "id": "strawberry",
+      "type": "ingredient"
+    },
+    {
+      "id": "molecule_hexanal",
+      "type": "aroma_molecule"
+    },
+    {
+      "id": "molecule_linalool",
+      "type": "aroma_molecule"
+    }
+  ],
+  "edges": [
+    {
+      "from": "tomato",
+      "to": "molecule_hexanal",
+      "relation": "contains"
+    },
+    {
+      "from": "basil",
+      "to": "molecule_linalool",
+      "relation": "contains"
+    },
+    {
+      "from": "strawberry",
+      "to": "molecule_linalool",
+      "relation": "contains"
+    },
+    {
+      "from": "tomato",
+      "to": "basil",
+      "relation": "flavor_pair",
+      "strength": 0.9
+    },
+    {
+      "from": "strawberry",
+      "to": "chocolate",
+      "relation": "flavor_pair",
+      "strength": 0.85
+    }
+  ]
+}
