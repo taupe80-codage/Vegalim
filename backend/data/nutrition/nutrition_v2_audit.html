@@ -1,0 +1,251 @@
+
+<style>
+  .section { margin: 0 0 2rem; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 1rem 0; }
+  .metric { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; }
+  .metric .label { font-size: 12px; color: var(--color-text-secondary); margin: 0 0 4px; }
+  .metric .value { font-size: 22px; font-weight: 500; margin: 0; }
+  .metric .sub { font-size: 12px; color: var(--color-text-tertiary); margin: 4px 0 0; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; margin: 0 4px 4px 0; font-weight: 500; }
+  .tag-red { background: var(--color-background-danger); color: var(--color-text-danger); }
+  .tag-warn { background: var(--color-background-warning); color: var(--color-text-warning); }
+  .tag-info { background: var(--color-background-info); color: var(--color-text-info); }
+  .tag-ok { background: var(--color-background-success); color: var(--color-text-success); }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin: 0 0 1rem; }
+  .card h3 { font-size: 14px; font-weight: 500; margin: 0 0 10px; display: flex; align-items: center; gap: 8px; }
+  .badge { width: 20px; height: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; }
+  .badge-red { background: var(--color-background-danger); color: var(--color-text-danger); }
+  .badge-warn { background: var(--color-background-warning); color: var(--color-text-warning); }
+  .badge-info { background: var(--color-background-info); color: var(--color-text-info); }
+  table { width: 100%; font-size: 12px; border-collapse: collapse; }
+  td, th { padding: 5px 8px; border-bottom: 0.5px solid var(--color-border-tertiary); text-align: left; }
+  th { font-weight: 500; color: var(--color-text-secondary); font-size: 11px; }
+  td:first-child { font-family: var(--font-mono); font-size: 11px; color: var(--color-text-secondary); }
+  td:last-child { color: var(--color-text-danger); font-weight: 500; }
+  .progress-bar { height: 6px; background: var(--color-border-tertiary); border-radius: 3px; margin: 4px 0 0; overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 3px; }
+  .tabs { display: flex; gap: 4px; margin: 0 0 1rem; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .tab { font-size: 13px; padding: 6px 14px; cursor: pointer; border-bottom: 2px solid transparent; color: var(--color-text-secondary); transition: all .15s; }
+  .tab.active { color: var(--color-text-primary); border-bottom-color: var(--color-text-primary); font-weight: 500; }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  .row-highlight { background: var(--color-background-danger); }
+  .severity-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+  .sev-crit { background: #E24B4A; }
+  .sev-warn { background: #EF9F27; }
+  .sev-info { background: #378ADD; }
+</style>
+
+<h2 style="font-size: 16px; font-weight: 500; margin: 0 0 1.5rem; color: var(--color-text-primary);">Audit nutrition_v2.json — rapport complet</h2>
+
+<div class="grid2">
+  <div class="metric">
+    <p class="label">Ingrédients (bases)</p>
+    <p class="value">292</p>
+    <p class="sub">déclaré: 291 <span style="color:var(--color-text-danger)">▲1</span></p>
+  </div>
+  <div class="metric">
+    <p class="label">Variants totaux</p>
+    <p class="value">422</p>
+    <p class="sub">déclaré: 425 <span style="color:var(--color-text-danger)">▼3</span></p>
+  </div>
+  <div class="metric">
+    <p class="label">Incohérences macros</p>
+    <p class="value" style="color:var(--color-text-danger)">131</p>
+    <p class="sub">36 + 5 + 45 + 45 cas</p>
+  </div>
+  <div class="metric">
+    <p class="label">Écarts caloriques</p>
+    <p class="value" style="color:var(--color-text-warning)">46</p>
+    <p class="sub">≥15% ou ≥30 kcal d'écart</p>
+  </div>
+  <div class="metric">
+    <p class="label">FA sum > fat</p>
+    <p class="value" style="color:var(--color-text-danger)">6</p>
+    <p class="sub">lipides fract. > total</p>
+  </div>
+  <div class="metric">
+    <p class="label">Null sur champs requis</p>
+    <p class="value" style="color:var(--color-text-warning)">19</p>
+    <p class="sub">9 variants concernés</p>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('macros')">Macros (131)</div>
+  <div class="tab" onclick="showTab('calories')">Calories (46)</div>
+  <div class="tab" onclick="showTab('lipids')">Lipides (6)</div>
+  <div class="tab" onclick="showTab('schema')">Schéma/Meta</div>
+  <div class="tab" onclick="showTab('nulls')">Null (19)</div>
+</div>
+
+<div id="tab-macros" class="tab-content active">
+  <div class="card">
+    <h3><span class="badge badge-red">36</span> fiber > carbs — fibres supérieures aux glucides totaux</h3>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 10px">Cause principale : valeurs d'épices/herbes calculées sur matière sèche (CIQUAL) mais carbs exprimés en frais. Reconnu comme bug préexistant dans <code>_validation</code>.</p>
+    <table>
+      <tr><th>Variant</th><th>fiber</th><th>carbs</th><th>delta</th></tr>
+      <tr><td>curry[default]</td><td>53.2</td><td>2.63</td><td>+50.6</td></tr>
+      <tr><td>cinnamon[default]</td><td>53.1</td><td>27.5</td><td>+25.6</td></tr>
+      <tr><td>seaweed[wakame]</td><td>42.9</td><td>13.3</td><td>+29.6</td></tr>
+      <tr><td>bran[default]</td><td>42.8</td><td>22.7</td><td>+20.1</td></tr>
+      <tr><td>marjoram[default]</td><td>40.3</td><td>20.3</td><td>+20.0</td></tr>
+      <tr><td>seeds[chia]</td><td>34.4</td><td>7.72</td><td>+26.7</td></tr>
+      <tr><td>seaweed[nori]</td><td>36.8</td><td>11.7</td><td>+25.1</td></tr>
+      <tr><td>caraway[default]</td><td>38.0</td><td>11.9</td><td>+26.1</td></tr>
+      <tr><td>basil[default]</td><td>37.7</td><td>10.1</td><td>+27.6</td></tr>
+      <tr><td>butter[almond]</td><td>6.0</td><td>0.06</td><td>+5.94</td></tr>
+      <tr><td>coconut[default]</td><td>9.0</td><td>4.69</td><td>+4.31</td></tr>
+      <tr><td>coconut_aminos</td><td>10.6</td><td>4.69</td><td>+5.91</td></tr>
+      <tr><td colspan="4" style="color:var(--color-text-tertiary);font-style:italic">…et 24 autres variants</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h3><span class="badge badge-red">5</span> sugar > carbs — sucres supérieurs aux glucides totaux</h3>
+    <table>
+      <tr><th>Variant</th><th>sugar</th><th>carbs</th><th>delta</th></tr>
+      <tr><td>water[default]</td><td>7.29</td><td>0</td><td>+7.29</td></tr>
+      <tr><td>bitter_gourd[default]</td><td>10.6</td><td>7.56</td><td>+3.04</td></tr>
+      <tr><td>cherry[default]</td><td>10.9</td><td>8.94</td><td>+1.96</td></tr>
+      <tr><td>sauce[okonomiyaki]</td><td>6.8</td><td>5.565</td><td>+1.23</td></tr>
+      <tr><td>apple[default]</td><td>13.99</td><td>12.9</td><td>+1.09</td></tr>
+    </table>
+    <p style="font-size:12px;color:var(--color-text-danger);margin:8px 0 0"><strong>Cas critique :</strong> water[default] — sugar=7.29 sur carbs=0 et calories=0 : donnée manifestement erronée, héritage d'une autre source.</p>
+  </div>
+  <div class="card">
+    <h3><span class="badge badge-red">45</span> starch+sugar > carbs — somme glucides simples > total</h3>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 10px">Beaucoup sont liés à une contamination de la valeur starch depuis une forme séchée vers une forme fraîche.</p>
+    <table>
+      <tr><th>Variant</th><th>starch+sugar</th><th>carbs</th><th>delta</th></tr>
+      <tr><td>flour[almond]</td><td>58.77</td><td>21.43</td><td>+37.3</td></tr>
+      <tr><td>arrowroot[default]</td><td>84.75</td><td>13.39</td><td>+71.4</td></tr>
+      <tr><td>pepper[default]</td><td>40.93</td><td>4.72</td><td>+36.2</td></tr>
+      <tr><td>icing_sugar[default]</td><td>125.4</td><td>99.5</td><td>+25.9</td></tr>
+      <tr><td>maca[default]</td><td>83.4</td><td>70.7</td><td>+12.7</td></tr>
+      <tr><td>milk_plant[cashew]</td><td>16.25</td><td>3.0</td><td>+13.3</td></tr>
+      <tr><td>smoked_paprika</td><td>55.9</td><td>53.9</td><td>+2.0</td></tr>
+      <tr><td>blueberry[default]</td><td>36.76</td><td>22.06</td><td>+14.7</td></tr>
+      <tr><td>tahini[default]</td><td>21.2</td><td>14.2</td><td>+7.0</td></tr>
+      <tr><td colspan="4" style="color:var(--color-text-tertiary);font-style:italic">…et 36 autres variants</td></tr>
+    </table>
+  </div>
+</div>
+
+<div id="tab-calories" class="tab-content">
+  <div class="card">
+    <h3><span class="badge badge-warn">46</span> Écart calories déclarées vs estimées (formule Atwater)</h3>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 10px">Formule : 4×protéines + 4×glucides + 9×lipides + 7×alcool. Seuil d'alerte : delta &gt;30 kcal ET &gt;15%.</p>
+    <table>
+      <tr><th>Variant</th><th>Déclaré</th><th>Estimé</th><th>Delta</th><th>Cause probable</th></tr>
+      <tr><td>chocolate[powder]</td><td>228</td><td>433</td><td class="">-205</td><td style="color:var(--color-text-secondary)">Confusion cacao dégraissé vs sucré</td></tr>
+      <tr><td>chlorella[default]</td><td>290</td><td>458</td><td>-168</td><td style="color:var(--color-text-secondary)">Fibres non digestibles mal intégrées</td></tr>
+      <tr><td>xylitol[default]</td><td>240</td><td>400</td><td>-160</td><td style="color:var(--color-text-secondary)">Métabolisme partiel (~2.4 kcal/g)</td></tr>
+      <tr><td>carob[default]</td><td>222</td><td>380</td><td>-158</td><td style="color:var(--color-text-secondary)">Fibres solubles/inulines</td></tr>
+      <tr><td>quinoa[default]</td><td>168</td><td>303</td><td>-135</td><td style="color:var(--color-text-secondary)">Calories cuit, macros cru</td></tr>
+      <tr><td>ground_coriander</td><td>298</td><td>429</td><td>-131</td><td style="color:var(--color-text-secondary)">Épice séchée, macros incohérentes</td></tr>
+      <tr><td>curry[default]</td><td>325</td><td>194</td><td>+131</td><td style="color:var(--color-text-secondary)">Fiber>carbs, glucides sous-estimés</td></tr>
+      <tr><td>butter[almond]</td><td>614</td><td>740</td><td>-126</td><td style="color:var(--color-text-secondary)">carbs=0.06 faux (devrait être ~21g)</td></tr>
+      <tr><td>seeds[chia]</td><td>486</td><td>374</td><td>+112</td><td style="color:var(--color-text-secondary)">Fibres insolubles à 2 kcal/g</td></tr>
+      <tr><td>seitan[default]</td><td>134</td><td>230</td><td>-96</td><td style="color:var(--color-text-secondary)">Sources mélangées (cru/cuit)</td></tr>
+      <tr><td>almond[default/slivered/toasted]</td><td>579</td><td>681</td><td>-102</td><td style="color:var(--color-text-secondary)">Fibres ajustables Atwater</td></tr>
+      <tr><td>butter[dairy]</td><td>626.478…</td><td>734</td><td>-107</td><td style="color:var(--color-text-secondary)">+ valeur non arrondie (artefact)</td></tr>
+      <tr><td colspan="5" style="color:var(--color-text-tertiary);font-style:italic">…et 34 autres variants</td></tr>
+    </table>
+  </div>
+</div>
+
+<div id="tab-lipids" class="tab-content">
+  <div class="card">
+    <h3><span class="badge badge-red">6</span> FA sum (sat+mono+poly) &gt; fat_g total</h3>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 10px">Les acides gras fractionnels ne peuvent pas dépasser la teneur totale en lipides.</p>
+    <table>
+      <tr><th>Variant</th><th>fat_g</th><th>sat+mono+poly</th><th>Delta</th></tr>
+      <tr><td>macadamia[default]</td><td>64.7</td><td>75.77</td><td>+11.07</td></tr>
+      <tr><td>tofu[silken]</td><td>9.18</td><td>11.58</td><td>+2.40</td></tr>
+      <tr><td>tofu[firm]</td><td>9.18</td><td>11.58</td><td>+2.40</td></tr>
+      <tr><td>oats[default]</td><td>5.76</td><td>6.90</td><td>+1.14</td></tr>
+      <tr><td>fennel[default]</td><td>0.20</td><td>1.73</td><td>+1.53</td></tr>
+      <tr><td>milk_plant[cashew]</td><td>1.30</td><td>9.57</td><td>+8.27</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h3>Copier-coller de profils lipidiques (oil)</h3>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 10px">Plusieurs huiles partagent des profils FA identiques, ce qui n'est pas biologiquement cohérent.</p>
+    <table>
+      <tr><th>Variant</th><th>sat</th><th>mono</th><th>poly</th></tr>
+      <tr><td>oil[coconut]</td><td>11.68</td><td>56.03</td><td>13.70</td></tr>
+      <tr><td>oil[flaxseed]</td><td>11.68</td><td>56.03</td><td>13.70</td></tr>
+      <tr><td>oil[sesame]</td><td>11.68</td><td>56.03</td><td>13.70</td></tr>
+      <tr><td>oil[sunflower]</td><td>11.68</td><td>56.03</td><td>13.70</td></tr>
+    </table>
+    <p style="font-size:12px;color:var(--color-text-danger);margin:8px 0 0">L'huile de coco est ~86% saturée. L'huile de lin est ~73% polyinsaturée. Ces 4 variantes ont le même profil → bug majeur.</p>
+  </div>
+</div>
+
+<div id="tab-schema" class="tab-content">
+  <div class="card">
+    <h3>Conflits de version de schéma</h3>
+    <table>
+      <tr><th>Champ</th><th>Valeur</th><th>Problème</th></tr>
+      <tr><td>_meta.schema_version</td><td>5.4</td><td style="color:var(--color-text-danger)">≠ schema_version racine</td></tr>
+      <tr><td>schema_version (racine)</td><td>3.9</td><td style="color:var(--color-text-danger)">Incohérent avec _meta</td></tr>
+      <tr><td>migrated_from</td><td>nutrition_v2 (v3.1)</td><td style="color:var(--color-text-warning)">Mais fichier aussi nommé v2</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h3>Ordre du changelog incorrect</h3>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 8px">Ordre actuel dans le JSON : v3.0, v3.1, <strong>v3.5</strong>, <strong>v3.2</strong>, v3.6, v3.7, v4.0, v5.1, 3.9</p>
+    <p style="font-size:12px;color:var(--color-text-danger);margin:0">v3.2 apparaît après v3.5 — inversion chronologique. De plus, la clé "3.9" manque le préfixe "v" (toutes les autres ont "v3.x").</p>
+  </div>
+  <div class="card">
+    <h3>Compteurs déclarés incorrects</h3>
+    <table>
+      <tr><th>Champ</th><th>Déclaré</th><th>Réel</th><th>Écart</th></tr>
+      <tr><td>total_bases</td><td>291</td><td>292</td><td style="color:var(--color-text-danger)">+1 base non comptée</td></tr>
+      <tr><td>total_variants</td><td>425</td><td>422</td><td style="color:var(--color-text-danger)">-3 variants fantômes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h3>Anomalies sémantiques critiques</h3>
+    <table>
+      <tr><th>Variant</th><th>Problème</th></tr>
+      <tr><td>water[default]</td><td style="color:var(--color-text-danger)">sugar=7.29 sur carbs=0, calories=0 — eau avec du sucre</td></tr>
+      <tr><td>butter[dairy]</td><td style="color:var(--color-text-warning)">calories=626.478… (artefact flottant non arrondi)</td></tr>
+      <tr><td>flax_egg[default]</td><td style="color:var(--color-text-warning)">calories=164.67 (flottant non arrondi)</td></tr>
+      <tr><td>butter[almond]</td><td style="color:var(--color-text-danger)">carbs=0.06 mais fiber=6.0 + starch=7.94 (réversion v5.1 partielle)</td></tr>
+      <tr><td>quinoa[default]</td><td style="color:var(--color-text-danger)">calories=168 (cuit) + carbs=69.5 + fat=1.1 (cru) : état mixte</td></tr>
+      <tr><td>coconut_aminos</td><td style="color:var(--color-text-warning)">sauce liquide avec fiber=10.6 (héritage coconut)</td></tr>
+      <tr><td>seitan[default]</td><td style="color:var(--color-text-warning)">cal=134 pour prot=20.6 + carbs=20.8 + fat=7.1 (sources mélangées)</td></tr>
+      <tr><td>pepper[default]</td><td style="color:var(--color-text-danger)">starch=38g sur carbs=4.72 (starch de poivre sec dans poivre frais)</td></tr>
+    </table>
+  </div>
+</div>
+
+<div id="tab-nulls" class="tab-content">
+  <div class="card">
+    <h3><span class="badge badge-warn">19</span> Valeurs null sur champs obligatoires</h3>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 10px">Selon le schema v3.0 : "null when unknown, never omitted" — les null sont tolérés mais doivent être documentés.</p>
+    <table>
+      <tr><th>Variant</th><th>Champ null</th></tr>
+      <tr><td>bean[fava]</td><td>cholesterol_mg</td></tr>
+      <tr><td>oil[flaxseed]</td><td>sugar_g, cholesterol_mg, phosphorus_mg</td></tr>
+      <tr><td>corn_husk[default]</td><td>cholesterol_mg</td></tr>
+      <tr><td>hard_boiled_egg[default]</td><td>omega3_g, omega6_g</td></tr>
+      <tr><td>mushroom[shiitake]</td><td>mono_fat, poly_fat, omega3, omega6, cholesterol, phosphorus</td></tr>
+      <tr><td>green_bean[default]</td><td>cholesterol_mg</td></tr>
+      <tr><td>reshteh_noodles[default]</td><td>omega3_g, omega6_g, cholesterol_mg</td></tr>
+      <tr><td>gigante_bean[default]</td><td>cholesterol_mg</td></tr>
+      <tr><td>buckwheat_crepe[default]</td><td>cholesterol_mg</td></tr>
+    </table>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:8px 0 0">Note : cholesterol_mg null sur des végétaux est biologiquement correct (cholestérol = 0) — ces null devraient être 0, pas null.</p>
+  </div>
+</div>
+
+<script>
+function showTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelector(`[onclick="showTab('${name}')"]`).classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active');
+}
+</script>

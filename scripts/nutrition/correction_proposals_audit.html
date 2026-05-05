@@ -1,0 +1,108 @@
+
+<style>
+  .tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .tbl th { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); padding: 6px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); text-align: left; }
+  .tbl td { padding: 5px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); font-size: 12px; vertical-align: top; }
+  .tbl tr:hover td { background: var(--color-background-secondary); }
+  .badge { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 500; }
+  .ok   { background: #EAF3DE; color: #3B6D11; }
+  .warn { background: #FAEEDA; color: #854F0B; }
+  .bad  { background: #FCEBEB; color: #A32D2D; }
+  .info { background: #E6F1FB; color: #185FA5; }
+  .section { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); padding: 10px 10px 4px; letter-spacing: .04em; text-transform: uppercase; }
+  .arrow { color: var(--color-text-tertiary); }
+</style>
+
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;">
+  <div style="background:var(--color-background-secondary);border-radius:8px;padding:12px 14px;">
+    <div style="font-size:11px;color:var(--color-text-secondary);margin-bottom:4px;">Ingrédients</div>
+    <div style="font-size:22px;font-weight:500;">72</div>
+  </div>
+  <div style="background:var(--color-background-secondary);border-radius:8px;padding:12px 14px;">
+    <div style="font-size:11px;color:var(--color-text-secondary);margin-bottom:4px;">Propositions totales</div>
+    <div style="font-size:22px;font-weight:500;">256</div>
+  </div>
+  <div style="background:#FCEBEB;border-radius:8px;padding:12px 14px;">
+    <div style="font-size:11px;color:#A32D2D;margin-bottom:4px;">À refuser</div>
+    <div style="font-size:22px;font-weight:500;color:#A32D2D;">129</div>
+  </div>
+  <div style="background:#FAEEDA;border-radius:8px;padding:12px 14px;">
+    <div style="font-size:11px;color:#854F0B;margin-bottom:4px;">À vérifier</div>
+    <div style="font-size:22px;font-weight:500;color:#854F0B;">126</div>
+  </div>
+</div>
+
+<div class="section">Refus automatiques — score &lt; 0.85 (94 propositions)</div>
+<table class="tbl">
+  <thead><tr><th>Ingrédient</th><th>Champs concernés</th><th>Score</th><th>Source</th><th>Problème</th></tr></thead>
+  <tbody>
+    <tr><td>milk_animal, milk_plant</td><td>Ca, Na, K, Mg, Zn, Se, I</td><td><span class="badge bad">0.771</span></td><td>CIQUAL</td><td>Match → lait végétal non enrichi (~8mg Ca) vs lait enrichi (~120mg)</td></tr>
+    <tr><td>salt</td><td>Na, I, Ca, K, Mg, Zn…</td><td><span class="badge bad">0.771</span></td><td>CIQUAL</td><td>Match → sel non iodé — Na 38 758→875 <span class="arrow">↓</span> et I 5040→10 <span class="arrow">↓</span> absurdes</td></tr>
+    <tr><td>rice</td><td>Na, Mg, Fe, Ca, vit A, vit B12, Zn</td><td><span class="badge bad">0.771</span></td><td>CIQUAL</td><td>Match → riz transformé — Na 18→760 <span class="arrow">↑</span>, Mg 117→12 <span class="arrow">↓</span></td></tr>
+    <tr><td>sorghum</td><td>K, Fe, Zn</td><td><span class="badge bad">0.771</span></td><td>CIQUAL</td><td>K 350→2, Fe 4.4→0.12 : entrée CIQUAL sans rapport</td></tr>
+    <tr><td>bean</td><td>Ca, Fe, Na, K, Zn, Se, I</td><td><span class="badge bad">0.771</span></td><td>CIQUAL</td><td>Ca 87→845 et Fe 2.1→0.24 : deux erreurs de sens opposés</td></tr>
+    <tr><td>okra, bran, parsley, celery_root</td><td>multiples</td><td><span class="badge bad">0.750–0.771</span></td><td>USDA/CIQUAL</td><td>Score trop faible — match aléatoire</td></tr>
+    <tr><td>garam_masala</td><td>Ca, Fe, K, Na</td><td><span class="badge bad">0.831</span></td><td>CIQUAL</td><td>Match → condiment générique — Ca 465→4, Fe 18→0.4</td></tr>
+    <tr><td>seeds, chickpea, mustard</td><td>multiples</td><td><span class="badge bad">0.771–0.807</span></td><td>CIQUAL</td><td>Score insuffisant, valeurs contradictoires</td></tr>
+    <tr><td>raspberry (folate, Mg)</td><td>folate, Mg</td><td><span class="badge bad">0.778</span></td><td>CIQUAL</td><td>folate 11→1, Mg 12→6 : entrée différente</td></tr>
+  </tbody>
+</table>
+
+<div class="section" style="margin-top:16px;">Refus confirmés — score 0.9 mais valeurs aberrantes (35 propositions)</div>
+<table class="tbl">
+  <thead><tr><th>Ingrédient</th><th>Champ</th><th>Actuel</th><th>Proposé</th><th>Raison du refus</th></tr></thead>
+  <tbody>
+    <tr><td>almond</td><td>K, Mg, Zn</td><td>713 / 279 / 2.75</td><td>17 / 6.9 / 0.07</td><td>Amandes matchées USDA sur aliment sans rapport — valeurs actuelles correctes</td></tr>
+    <tr><td>salt</td><td>Na, I</td><td>38 758 / 5 040</td><td>875 / 10</td><td>Sel iodé vs sel ordinaire CIQUAL</td></tr>
+    <tr><td>egg</td><td>Na, K, Mg</td><td>124 / 134 / 12</td><td>1 230 / 953 / 88</td><td>Facteur ×7–8 : match sur produit transformé à base d'œuf</td></tr>
+    <tr><td>fennel</td><td>Ca, Mg, Zn</td><td>621 / 197 / 1.9</td><td>40 / 15 / 0.15</td><td>Fenouil (graine séchée) vs fenouil frais</td></tr>
+    <tr><td>jalapeno</td><td>Ca, Mg, Zn, K</td><td>300 / 100 / 4.6 / 1 000</td><td>10 / 9 / 0.1 / 168</td><td>Match sur piment doux — valeurs actuelles vraisemblables pour jalapeño sec</td></tr>
+    <tr><td>pear, kiwi</td><td>Se</td><td>20 / 20</td><td>0.2 / 0.3</td><td>Se actuel trop élevé MAIS le proposed USDA (0.2–0.3 µg) semble correct</td></tr>
+    <tr><td>maca</td><td>Ca, Fe, K</td><td>450 / 14.7 / 2050</td><td>53 / 1.8 / 362</td><td>Maca poudre ≠ entrée USDA générique matchée</td></tr>
+    <tr><td>edamame</td><td>Ca, Na, vit A, vit D, vit B12, Fe</td><td>40 / 10 / 17…</td><td>812 / 800 / 243…</td><td>Edamame matchée CIQUAL sur fromage au soja (protéines/calcium absurdes)</td></tr>
+    <tr><td>sugar</td><td>Na, Ca, Fe, Zn</td><td>400 / 30 / 1 / 2.2</td><td>1 / 1 / 0.05 / 0.01</td><td>Sucre raffiné USDA vs sucre complet — valeurs actuelles probablement pour sucre roux</td></tr>
+    <tr><td>asparagus, bread, butter, tomato, cabbage, water, coconut, mushroom, broccoli, onion (vit A)</td><td>Na, divers</td><td>varies</td><td>varies</td><td>Formes/variantes différentes (frais vs en conserve, salé vs non salé)</td></tr>
+  </tbody>
+</table>
+
+<div class="section" style="margin-top:16px;">Accepter sans réserve (1 proposition)</div>
+<table class="tbl">
+  <thead><tr><th>Ingrédient</th><th>Champ</th><th>Actuel</th><th>Proposé</th><th>Justification</th></tr></thead>
+  <tbody>
+    <tr><td>miso</td><td>sodium</td><td>400</td><td>3 730</td><td>Score 1.0 (exact). Le miso est très salé (~3 700 mg Na/100g). La valeur actuelle est manifestement erronée.</td></tr>
+  </tbody>
+</table>
+
+<div class="section" style="margin-top:16px;">À accepter très probablement — score 1.0, plausibles (23 propositions)</div>
+<table class="tbl">
+  <thead><tr><th>Ingrédient</th><th>Champs</th><th>Note</th></tr></thead>
+  <tbody>
+    <tr><td>miso</td><td>sat_fat, Ca, Fe, K, Mg, Zn</td><td>Tous cohérents avec les valeurs USDA connues pour le miso blanc/rouge</td></tr>
+    <tr><td>garlic</td><td>carbs (28→19), fiber (2.6→5.8)</td><td>Glucides disponibles CIQUAL vs totaux — correction légitime</td></tr>
+    <tr><td>parmesan</td><td>carbs (12→1.14), vit A, vit B12, sat_fat, folate</td><td>Parmesan très peu glucidique (1g correct). Vérifier sodium (1640→628) et potassium (186→110) séparément.</td></tr>
+    <tr><td>cheddar</td><td>vit A, vit B12</td><td>Corrections modérées, plausibles</td></tr>
+    <tr><td>comte</td><td>Ca (1060→907)</td><td>Plausible — comté variable selon affinage</td></tr>
+    <tr><td>ricotta</td><td>vit B12, Ca (314→208)</td><td>208mg Ca correct pour ricotta fraîche USDA. Vérifier potassium (241→105) et vitamin_d (1→0.2).</td></tr>
+  </tbody>
+</table>
+
+<div class="section" style="margin-top:16px;">À vérifier manuellement — score 0.9, delta modéré (103 propositions)</div>
+<table class="tbl">
+  <thead><tr><th>Ingrédient</th><th>Champs</th><th>Orientation probable</th></tr></thead>
+  <tbody>
+    <tr><td><span class="badge ok">accepter</span> quinoa</td><td>Ca, Fe, K (220→536), Mg (60→168), Zn, Se</td><td>Valeurs actuelles sous-estimées — USDA quinoa sec: K≈563, Mg≈197</td></tr>
+    <tr><td><span class="badge ok">accepter</span> barley, farro, spelt, semolina</td><td>Fe, Mg, Zn, K, Se</td><td>Céréales — corrections modérées 15–50%, plausibles</td></tr>
+    <tr><td><span class="badge ok">accepter</span> cashew, hazelnut, pecan, buckwheat</td><td>Fe, K, Mg, Zn</td><td>Noix/graines — ajustements modérés cohérents USDA</td></tr>
+    <tr><td><span class="badge ok">accepter</span> mango</td><td>K (24→164), Mg (3→11)</td><td>K actuel 24mg très bas — mangue USDA: ~168mg K, valeur proposée correcte</td></tr>
+    <tr><td><span class="badge ok">accepter</span> onion vit C</td><td>vitamin_c (3.9→7.9)</td><td>USDA oignon : 7.4mg — proposé correct</td></tr>
+    <tr><td><span class="badge warn">vérifier</span> fig</td><td>Ca, Fe, K (100→683), Mg</td><td>Si figue séchée → K 680mg correct. Si fraîche → 232mg. Dépend de la variante.</td></tr>
+    <tr><td><span class="badge warn">vérifier</span> chestnut</td><td>K (592→1020), Ca, Mg, Zn, vit C (27→3.6)</td><td>K 1020 correspond à châtaigne crue USDA. Vit C très variable selon préparation.</td></tr>
+    <tr><td><span class="badge warn">vérifier</span> potato</td><td>K (300→1520), Mg, Fe, Zn, Na</td><td>K 1520 correspond à la peau de pomme de terre — si valeur pour chair seule, trop élevée</td></tr>
+    <tr><td><span class="badge warn">vérifier</span> parmesan</td><td>Na (1640→628), K (186→110), Se (38→20)</td><td>Na: variable selon fabricant (400–1600mg). À confronter à la source d'origine de la DB.</td></tr>
+    <tr><td><span class="badge warn">vérifier</span> pear, kiwi Se</td><td>selenium (20→0.2 / 0.3)</td><td>Réduction ×100 — le proposé (0.2µg) est biologiquement correct pour les fruits. Le 20µg actuel est probablement une erreur.</td></tr>
+    <tr><td><span class="badge warn">vérifier</span> barley selenium</td><td>selenium (37.7→12.2)</td><td>Orge USDA: 37.7µg (valeur actuelle) semble juste. À confirmer.</td></tr>
+    <tr><td><span class="badge bad">refuser</span> macadamia Se</td><td>selenium (3.6→30.6)</td><td>Macadamia USDA: ~3µg Se — le proposé 30.6 est absurde, match sur autre noix</td></tr>
+    <tr><td><span class="badge bad">refuser</span> grain Se</td><td>selenium (70.7→7.23)</td><td>Valeur agrégée — refuser, trop incertain</td></tr>
+    <tr><td><span class="badge bad">refuser</span> grape, plantain, sauce</td><td>Ca, Fe, K, Zn</td><td>Réductions massives (×3–6), variantes incompatibles</td></tr>
+  </tbody>
+</table>

@@ -1,0 +1,258 @@
+
+<style>
+:root { --gap: 12px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-size: 14px; }
+
+.section-title {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--color-text-tertiary);
+  margin: 1.5rem 0 0.75rem;
+}
+.kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
+.kpi { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 14px 16px; }
+.kpi-val { font-size: 26px; font-weight: 500; color: var(--color-text-primary); line-height: 1; margin-bottom: 4px; }
+.kpi-val.danger { color: var(--color-text-danger); }
+.kpi-val.warn { color: var(--color-text-warning); }
+.kpi-val.ok { color: var(--color-text-success); }
+.kpi-lbl { font-size: 12px; color: var(--color-text-secondary); }
+
+.score-ring { display: flex; align-items: center; gap: 20px; background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 20px 24px; margin: 1rem 0; }
+.ring-wrap { position: relative; width: 96px; height: 96px; flex-shrink: 0; }
+.ring-wrap canvas { position: absolute; top: 0; left: 0; }
+.ring-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; }
+.ring-score { font-size: 24px; font-weight: 500; }
+.ring-sub { font-size: 11px; color: var(--color-text-secondary); }
+.ring-meta h3 { font-size: 16px; font-weight: 500; margin-bottom: 6px; }
+.ring-meta p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+
+.issue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
+.issue-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 14px 16px; border-left: 3px solid transparent; }
+.issue-card.c { border-color: var(--color-text-danger); }
+.issue-card.m { border-color: var(--color-text-warning); }
+.issue-card.i { border-color: var(--color-text-success); }
+.issue-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+.issue-name { font-size: 13px; font-weight: 500; }
+.issue-count { font-size: 18px; font-weight: 500; }
+.issue-count.c { color: var(--color-text-danger); }
+.issue-count.m { color: var(--color-text-warning); }
+.issue-count.i { color: var(--color-text-success); }
+.issue-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.45; }
+
+.bar-wrap { margin: 0.5rem 0; }
+.bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 12px; }
+.bar-label { width: 200px; flex-shrink: 0; color: var(--color-text-secondary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bar-track { flex: 1; height: 8px; background: var(--color-background-secondary); border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; transition: width 0.8s ease; }
+.bar-fill.c { background: var(--color-background-danger); }
+.bar-fill.m { background: var(--color-background-warning); }
+.bar-fill.i { background: var(--color-background-success); }
+.bar-num { width: 28px; text-align: right; color: var(--color-text-tertiary); font-size: 11px; }
+
+.badge { display: inline-block; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 20px; vertical-align: middle; margin-left: 4px; }
+.badge.c { background: var(--color-background-danger); color: var(--color-text-danger); }
+.badge.m { background: var(--color-background-warning); color: var(--color-text-warning); }
+.badge.i { background: var(--color-background-success); color: var(--color-text-success); }
+
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th { text-align: left; font-weight: 500; font-size: 11px; color: var(--color-text-tertiary); padding: 6px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+td { padding: 6px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+td:first-child { color: var(--color-text-primary); font-weight: 500; }
+.score-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+.dot-c { background: var(--color-background-danger); }
+.dot-m { background: var(--color-background-warning); }
+
+.action-list { list-style: none; }
+.action-list li { padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; line-height: 1.5; display: flex; gap: 10px; align-items: baseline; }
+.action-list li:last-child { border-bottom: none; }
+.action-num { font-size: 11px; font-weight: 500; color: var(--color-text-tertiary); flex-shrink: 0; }
+</style>
+
+<div style="padding: 1.5rem 0;">
+
+<div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1rem;">
+  <div>
+    <div style="font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-tertiary);">ALIM — Audit qualité recettes</div>
+    <div style="font-size:20px;font-weight:500;margin-top:2px;">Rapport d'audit approfondi</div>
+  </div>
+  <div style="font-size:12px;color:var(--color-text-tertiary);">820 recettes · v6_schema</div>
+</div>
+
+<div class="score-ring">
+  <div class="ring-wrap">
+    <canvas id="ringCanvas" width="96" height="96"></canvas>
+    <div class="ring-label">
+      <div class="ring-score" id="ringScore">—</div>
+      <div class="ring-sub">/ 100</div>
+    </div>
+  </div>
+  <div class="ring-meta">
+    <h3>Score de qualité global : <span id="qualLabel">—</span></h3>
+    <p>Le corpus est techniquement solide (schéma, allergens, taxonomie) mais accuse des lacunes éditoriales significatives : descriptions auto-générées, étapes vagues, ingrédients absents des instructions. L'objectif livre de cuisine est à portée avec 3 chantiers ciblés.</p>
+  </div>
+</div>
+
+<div class="section-title">Indicateurs clés</div>
+<div class="kpi-grid">
+  <div class="kpi"><div class="kpi-val danger">391</div><div class="kpi-lbl">Descriptions auto-générées <br>(47,7 % du corpus)</div></div>
+  <div class="kpi"><div class="kpi-val warn">315</div><div class="kpi-lbl">Étapes trop courtes<br>sans info technique</div></div>
+  <div class="kpi"><div class="kpi-val warn">334</div><div class="kpi-lbl">Ingrédients critiques<br>absents des instructions</div></div>
+  <div class="kpi"><div class="kpi-val ok">429</div><div class="kpi-lbl">Recettes sans anomalie<br>majeure détectée</div></div>
+</div>
+
+<div class="section-title">Problèmes par catégorie</div>
+<div class="issue-grid">
+
+  <div class="issue-card c">
+    <div class="issue-head">
+      <div class="issue-name">Descriptions auto-générées <span class="badge c">CRITIQUE</span></div>
+      <div class="issue-count c">391</div>
+    </div>
+    <div class="issue-desc">Formule "à base de [ingrédient EN]" ou description &lt;100 chars. Texte non éditorial, souvent avec des termes en anglais (white bean, water...). Éliminatoire pour un niveau livre de cuisine.</div>
+  </div>
+
+  <div class="issue-card c">
+    <div class="issue-head">
+      <div class="issue-name">Ingrédients absents des instructions <span class="badge c">CRITIQUE</span></div>
+      <div class="issue-count c">334</div>
+    </div>
+    <div class="issue-desc">Ingrédients présents en composition mais non mentionnés dans le texte des instructions. Ail (54 recettes), œuf (46), beurre (39), oignon vert (36)… Rupture de cohérence instructions ↔ composition.</div>
+  </div>
+
+  <div class="issue-card m">
+    <div class="issue-head">
+      <div class="issue-name">Étapes trop courtes <span class="badge m">MAJEUR</span></div>
+      <div class="issue-count m">315</div>
+    </div>
+    <div class="issue-desc">Étapes &lt;60 chars sans donnée chiffrée. Transitions vagues du type "Assaisonner au goût", "Servir immédiatement", "Vérifier la présentation, rectifier si nécessaire".</div>
+  </div>
+
+  <div class="issue-card m">
+    <div class="issue-head">
+      <div class="issue-name">Formules répétitives génériques <span class="badge m">MAJEUR</span></div>
+      <div class="issue-count m">251</div>
+    </div>
+    <div class="issue-desc">"Servir immédiatement" (170×), "Vérifier la texture/saveur" (81×). Formules copy-paste sans valeur ajoutée. Un livre de cuisine nomme les critères sensoriels attendus précisément.</div>
+  </div>
+
+  <div class="issue-card m">
+    <div class="issue-head">
+      <div class="issue-name">"Ajouter" sans quantité <span class="badge m">MAJEUR</span></div>
+      <div class="issue-count m">168</div>
+    </div>
+    <div class="issue-desc">Instructions type "Ajouter le jus d'un demi-citron et la coriandre…" sans référence à la quantité de composition. Le lecteur doit faire le lien lui-même entre l'étape et la liste d'ingrédients.</div>
+  </div>
+
+  <div class="issue-card m">
+    <div class="issue-head">
+      <div class="issue-name">Cuisson four sans température <span class="badge m">MAJEUR</span></div>
+      <div class="issue-count m">66</div>
+    </div>
+    <div class="issue-desc">66 recettes comportant des mots-clés four/gril/rôtir dans les instructions mais sans valeur °C précisée. Insuffisant pour reproduire le résultat escompté.</div>
+  </div>
+
+  <div class="issue-card i">
+    <div class="issue-head">
+      <div class="issue-name">Fautes d'orthographe répétées <span class="badge i">MINEUR</span></div>
+      <div class="issue-count i">7</div>
+    </div>
+    <div class="issue-desc">"auberginess" / "auberginesss" dans 7 descriptions (Baba ganoush, Curry d'aubergine fumée, Moussaka, Ragoût d'aubergine…). Faute de script systématique à corriger en masse.</div>
+  </div>
+
+  <div class="issue-card i">
+    <div class="issue-head">
+      <div class="issue-name">Timing incohérent <span class="badge i">MINEUR</span></div>
+      <div class="issue-count i">12</div>
+    </div>
+    <div class="issue-desc">cook_min=0 alors que les instructions mentionnent une cuisson (Houmous, Tabbouleh, Gochujang…). Probablement des préparations sans cuisson actrice mais avec trempage ou infusion.</div>
+  </div>
+
+</div>
+
+<div class="section-title">Top ingrédients absents des instructions</div>
+<div class="bar-wrap" id="barContainer"></div>
+
+<div class="section-title">Top 12 recettes les plus problématiques</div>
+<div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);overflow:hidden;">
+<table>
+  <thead><tr><th>Recette</th><th>Problèmes identifiés</th><th>Score</th></tr></thead>
+  <tbody>
+    <tr><td>Banane Caramélisée Philippine</td><td>Desc auto + 6 étapes vagues</td><td><span class="score-dot dot-c"></span>8 pts</td></tr>
+    <tr><td>Granola Bowl Yaourt Fruits Rouges</td><td>Desc auto + 4 étapes vagues + 2 formules génériques</td><td><span class="score-dot dot-c"></span>8 pts</td></tr>
+    <tr><td>Turkish Imam Bayildi</td><td>Desc auto + 5 étapes vagues</td><td><span class="score-dot dot-c"></span>7 pts</td></tr>
+    <tr><td>Turkish Mercimek Soup</td><td>Desc auto + 4 étapes vagues</td><td><span class="score-dot dot-m"></span>6 pts</td></tr>
+    <tr><td>Tamales (Vegan)</td><td>Desc auto + 4 étapes vagues</td><td><span class="score-dot dot-m"></span>6 pts</td></tr>
+    <tr><td>Galettes de Pois Chiches</td><td>5 étapes vagues (sans desc auto)</td><td><span class="score-dot dot-m"></span>5 pts</td></tr>
+    <tr><td>Aubergines Imam Bayildi</td><td>5 étapes vagues</td><td><span class="score-dot dot-m"></span>5 pts</td></tr>
+    <tr><td>Ragoût de Pois Chiches Moulus</td><td>5 étapes vagues</td><td><span class="score-dot dot-m"></span>5 pts</td></tr>
+    <tr><td>Moroccan Zaalouk</td><td>Desc auto + 3 étapes vagues</td><td><span class="score-dot dot-m"></span>5 pts</td></tr>
+    <tr><td>Rösti</td><td>Desc auto + 3 étapes vagues</td><td><span class="score-dot dot-m"></span>5 pts</td></tr>
+    <tr><td>Lentil Shepherd's Pie</td><td>Desc auto + 3 étapes vagues</td><td><span class="score-dot dot-m"></span>5 pts</td></tr>
+    <tr><td>Courge Mijotée Japonaise</td><td>Desc auto + 3 étapes vagues</td><td><span class="score-dot dot-m"></span>5 pts</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="section-title">Fiabilité nutritionnelle</div>
+<div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:14px 16px;font-size:13px;line-height:1.6;color:var(--color-text-secondary);">
+  <div style="color:var(--color-text-primary);font-weight:500;margin-bottom:8px;">Points forts <span class="badge i">SOLIDE</span></div>
+  Le schéma de données nutritionnelles est robuste : 4 vagues de correctifs automatiques appliquées, conversions pièce→gramme corrigées (24 fixes), huiles eau→ml harmonisées (157 fixes), allergens EU-14 revalidés (248 recettes). Les 3 alertes "sel excessif" sont des faux positifs contextuels : Pâtes nature (40g pour eau de cuisson), Pâte de Miso et Ricotta Salée (recettes de base).
+  <div style="color:var(--color-text-primary);font-weight:500;margin-top:12px;margin-bottom:8px;">Points de vigilance <span class="badge m">À SURVEILLER</span></div>
+  Les 500ml d'huile dans les recettes de friture (Falafel, Tofu frit, Beignets, Rouleaux de printemps…) sont corrects techniquement mais la valeur nutritionnelle devrait refléter uniquement l'huile réellement absorbée (~20% pour la friture), pas la totalité de l'huile de bain. Le champ <code>diet_flags_v3.unknown_ingredients</code> signale encore des ingrédients non résolus dans l'ontologie (ex : Baba ganoush : 7 inconnus).
+</div>
+
+<div class="section-title">Plan d'action prioritaire</div>
+<ul class="action-list">
+  <li><span class="action-num">P0 ·</span><strong>Fautes "auberginess"</strong> — Correctif regex trivial en masse. 7 recettes. Impact image immédiat.</li>
+  <li><span class="action-num">P1 ·</span><strong>Descriptions auto-générées</strong> — 391 descriptions à réécrire (47% du corpus). Priorité aux recettes iconiques. Chaque description doit nommer la technique, la texture attendue et l'origine culinaire en 2–3 phrases.</li>
+  <li><span class="action-num">P1 ·</span><strong>Ingrédients absents des instructions</strong> — 334 cas. Audit par ingrédient : ail (54 recettes) et œuf (46) à traiter en premier par batch. Ajouter la mention dans l'étape concernée ou créer une étape de préparation préalable.</li>
+  <li><span class="action-num">P2 ·</span><strong>Températures manquantes</strong> — 66 recettes avec cuisson four/gril sans °C. Enrichissement systématique. Objectif : chaque recette avec cuisson sèche mentionne une plage de température.</li>
+  <li><span class="action-num">P2 ·</span><strong>Formules génériques</strong> — Remplacer "Servir immédiatement" par la description sensorielle précise (texture, température, association), et "Vérifier la texture" par le critère concret (ex : "la lame doit ressortir sèche", "les grains se détachent à la fourchette").</li>
+  <li><span class="action-num">P3 ·</span><strong>Étapes vagues</strong> — 43 recettes avec ≥3 étapes courtes. Retravailler en priorité les 15 recettes top-problématiques identifiées dans ce rapport.</li>
+  <li><span class="action-num">P3 ·</span><strong>Huile friture</strong> — Ajouter un champ <code>absorbed_oil_g</code> calculé (≈ 15–20% de l'huile de bain) pour un calcul calorique fidèle.</li>
+</ul>
+
+</div>
+
+<script>
+const ringCanvas = document.getElementById('ringCanvas');
+const ctx = ringCanvas.getContext('2d');
+const score = 58;
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+
+function drawRing(val) {
+  ctx.clearRect(0, 0, 96, 96);
+  const cx = 48, cy = 48, r = 38, lw = 8;
+  const startAngle = -Math.PI / 2;
+  const endAngle = startAngle + (2 * Math.PI * val / 100);
+  const trackColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
+  const fillColor = val < 50 ? '#E24B4A' : val < 70 ? '#BA7517' : '#639922';
+  ctx.beginPath(); ctx.arc(cx, cy, r, 0, 2*Math.PI); ctx.strokeStyle = trackColor; ctx.lineWidth = lw; ctx.stroke();
+  ctx.beginPath(); ctx.arc(cx, cy, r, startAngle, endAngle); ctx.strokeStyle = fillColor; ctx.lineWidth = lw; ctx.lineCap = 'round'; ctx.stroke();
+}
+
+drawRing(score);
+document.getElementById('ringScore').textContent = score;
+document.getElementById('qualLabel').textContent = score < 50 ? 'Insuffisant' : score < 70 ? 'Moyen — à améliorer' : 'Bon';
+
+const bars = [
+  { label: 'garlic', n: 54, cls: 'c' },
+  { label: 'egg', n: 46, cls: 'c' },
+  { label: 'butter', n: 39, cls: 'c' },
+  { label: 'vegetable_oil', n: 37, cls: 'c' },
+  { label: 'green_onion', n: 36, cls: 'm' },
+  { label: 'parsley', n: 22, cls: 'm' },
+  { label: 'sesame_oil', n: 17, cls: 'm' },
+  { label: 'broth', n: 13, cls: 'm' },
+  { label: 'chili_pepper', n: 12, cls: 'm' },
+  { label: 'fresh_coriander', n: 12, cls: 'm' },
+];
+
+const maxN = bars[0].n;
+const container = document.getElementById('barContainer');
+bars.forEach(b => {
+  const pct = Math.round((b.n / maxN) * 100);
+  container.innerHTML += `<div class="bar-row"><div class="bar-label">${b.label.replace(/_/g,' ')}</div><div class="bar-track"><div class="bar-fill ${b.cls}" style="width:${pct}%"></div></div><div class="bar-num">${b.n}</div></div>`;
+});
+</script>
