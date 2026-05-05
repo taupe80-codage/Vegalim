@@ -1,0 +1,31 @@
+# .gitattributes — Normalisation des fins de ligne
+# Empêche les CRLF Windows de glisser dans les fichiers source Linux/macOS.
+# quality.py et test_stability.py avaient des CRLF — corrigés au passage.
+
+# Texte générique : LF partout
+* text=auto eol=lf
+
+# Python
+*.py    text eol=lf
+
+# JSON / YAML / Markdown
+*.json  text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.html  text eol=lf
+
+# Scripts Windows : CRLF obligatoire
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+*.ps1   text eol=crlf
+
+# Binaires — pas de conversion
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.zip   binary
+*.pdf   binary
