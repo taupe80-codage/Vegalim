@@ -9,7 +9,7 @@ from backend.services.profile_service import set_profile, get_profile, delete_pr
 
 router = APIRouter(prefix="/profil", tags=["Profil"])
 # Import depuis validators (source unique — évite la duplication avec ALLOWED_DIETS)
-from backend.core.validators import ALLOWED_DIETS as DIETS_VALIDES
+from backend.core.validators import ALLOWED_DIETS as DIETS_VALIDES, normalize_diet
 
 class ProfileUpdate(BaseModel):
     diet: str | None = None
@@ -29,7 +29,9 @@ def update_profile(update: ProfileUpdate, user: dict = Depends(get_user)):
             detail=f"Régime invalide. Valeurs : {sorted(DIETS_VALIDES)}")
     data = update.model_dump(exclude_none=True)
     if update.diet:
-        data["diet"] = update.diet.lower()
+        # Normaliser vers la clé canonique (ex: "sans_gluten" → "gluten_free")
+        # pour que le profil stocke toujours la forme canonique.
+        data["diet"] = normalize_diet(update.diet)
     # Sanitiser les champs texte libres
     from backend.core.validators import sanitize_text
     for field in ("cycle_phase", "health_goal"):

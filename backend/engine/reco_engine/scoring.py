@@ -39,7 +39,13 @@ def _enrich_nutrition(recipe: dict) -> dict:
                 try:
                     nutr = get_data.recipes.get_nutrition(int(rid)) or {}
                 except (ValueError, TypeError):
-                    pass
+                    # ID non convertible en int : attendu pour les IDs CDC v4 string
+                    # (ex: "base_oat_milk_3519f4"). Log debug pour distinguer des
+                    # IDs corrompus qui produiraient un score nutrition silencieusement nul.
+                    logger.debug(
+                        "scoring: id=%r non convertible en int -- ID CDC v4 string ou corrompu",
+                        rid,
+                    )
         if nutr:
             recipe = dict(recipe)
             recipe["nutrition"] = nutr

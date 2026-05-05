@@ -14,6 +14,8 @@ MIGRATION — imports archivés remplacés :
   culinary_rule_engine.validate / score → rule_engine.validation.validate_recipe
 
 BUG CORRIGÉ : sg_d n'était pas défini avant utilisation (ligne ~130)
+
+Point 7 — imports moteurs montés en tête de module (détection des erreurs au démarrage).
 """
 import json
 import logging
@@ -26,6 +28,16 @@ from backend.core.data_io import (
     load_json, load_recipes, load_nutrition_graph,
     load_nutrition_db, load_ingredients_dict,
 )
+
+# ── Imports moteurs — montés en tête de module pour détection au démarrage ────
+from backend.engine.search_engine.resolver   import normalize_list
+from backend.engine.planning_engine.servings import normalize_servings
+from backend.engine.rule_engine.diet         import apply_flags
+from backend.engine.score_engine.reliability import attach as _attach
+from backend.engine.score_engine.quality     import score_recipe
+from backend.engine.rule_engine.validation   import validate_recipe
+from backend.engine.nutrition_engine         import compute_nutrition
+from backend.engine.search_token_generator   import generate_tokens as _gen_tokens
 
 
 def _integrity_check(recipe: dict) -> list:
@@ -55,7 +67,11 @@ def _enrich(recipe: dict) -> dict:
         prep = r.get("prep_time_min") or 0
         cook = r.get("cook_time_min") or 0
         if prep or cook:
-            r["total_time_min"] = prep + cook
+            # Ecriture dans timing.total_min (chemin lu par tous les engines).
+            # N'ECRIT PAS r["total_time_min"] a la racine -- aucun consommateur ne lit ce champ.
+            if not isinstance(r.get("timing"), dict):
+                r["timing"] = {}
+            r["timing"]["total_min"] = prep + cook
     return r
 
 
@@ -72,18 +88,6 @@ def run(profile: str = "default", limit: int = None,
     Returns:
         {"recipes": list, "total": int, "errors": list, "skipped": int}
     """
-    # ── Imports migrés ────────────────────────────────────────────────────────
-    from backend.engine.search_engine.resolver   import normalize_list       # ✅ migré
-    from backend.engine.planning_engine.servings import normalize_servings   # ✅ migré
-    from backend.engine.rule_engine.diet         import apply_flags          # ✅ migré
-    from backend.engine.score_engine.reliability import attach as _attach    # ✅ migré
-    from backend.engine.score_engine.quality     import score_recipe         # ✅ migré
-    from backend.engine.rule_engine.validation   import validate_recipe      # ✅ migré
-
-    # ── Engines actifs conservés ──────────────────────────────────────────────
-    from backend.engine.nutrition_engine       import compute_nutrition
-    from backend.engine.search_token_generator import generate_tokens as _gen_tokens
-
     # ── Chargement données ────────────────────────────────────────────────────
     try:
         recipes = load_recipes()

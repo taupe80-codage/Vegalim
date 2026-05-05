@@ -8,17 +8,22 @@ import logging
 logger = logging.getLogger(__name__)
 
 # ── Connexion DB — singleton partagé avec user_service ────────────────────────
+# P1.2 FIX : ne pas capturer DB_AVAILABLE (booléen) à l'import —
+# sa valeur est toujours False au moment où ce module est chargé en Docker
+# (le lifespan FastAPI n'a pas encore appelé refresh_db_availability()).
+# Utiliser is_db_available() à chaque appel pour lire la valeur courante.
+_DB_IMPORTS_OK = False
 try:
-    from backend.db.session      import db_session, DB_AVAILABLE
+    from backend.db.session      import db_session, is_db_available
     from backend.db.repositories import UserProfileRepository
-    _USE_DB = DB_AVAILABLE
-    if _USE_DB:
-        logger.info("profile_service : mode base de données")
-    else:
-        logger.warning("profile_service : BDD indisponible — fallback JSON")
+    _DB_IMPORTS_OK = True
+    logger.info("profile_service : imports DB OK — disponibilité vérifiée à chaque appel")
 except Exception as e:
-    logger.warning("profile_service : import BDD impossible (%s) — fallback JSON", e)
-    _USE_DB = False
+    logger.warning("profile_service : import BDD impossible (%s) — fallback JSON permanent", e)
+
+def _use_db() -> bool:
+    """Retourne True si la DB est disponible à l'instant de l'appel."""
+    return _DB_IMPORTS_OK and is_db_available()
 
 # Whitelist — identique dans les deux backends
 ALLOWED_FIELDS = frozenset({
@@ -27,10 +32,10 @@ ALLOWED_FIELDS = frozenset({
     "liked_ingredients", "disliked_ingredients",
 })
 
-if not _USE_DB:
-    import json, os, tempfile
-    from pathlib import Path
-    _FILE = Path(__file__).resolve().parent.parent / "data" / "user_profiles" / "user_profiles.json"
+# Fallback JSON — toujours importé, utilisé si _use_db() retourne False
+import json, os, tempfile
+from pathlib import Path
+_FILE = Path(__file__).resolve().parent.parent / "data" / "user_profiles" / "user_profiles.json"
 
     def _load() -> dict:
         if not _FILE.exists():
@@ -60,13 +65,21 @@ def set_profile(email: str, updates: dict) -> dict:
     Seuls les champs ALLOWED_FIELDS sont acceptés.
     Retourne le profil complet après mise à jour.
     """
-    if _USE_DB:
+    if _use_db():
         with db_session() as db:
             result = UserProfileRepository(db).upsert(email, updates)
             logger.debug("Profil DB mis à jour : %s", email)
             return result
     else:
         safe     = {k: v for k, v in updates.items() if k in ALLOWED_FIELDS}
+        # Normaliser le diet vers la clé canonique avant stockage
+        # (ex: "sans_gluten" → "gluten_free") pour cohérence avec le mode DB.
+        if "diet" in safe and safe["diet"]:
+            try:
+                from backend.core.validators import normalize_diet
+                safe["diet"] = normalize_diet(safe["diet"])
+            except Exception as exc:
+                logger.warning("profile_service: normalize_diet échoué (%s) — stockage brut", exc)
         profiles = _load()
         existing = profiles.get(email, {})
         existing.update(safe)
@@ -78,7 +91,7 @@ def set_profile(email: str, updates: dict) -> dict:
 
 def get_profile(email: str) -> dict:
     """Retourne le profil ou {} s'il n'existe pas."""
-    if _USE_DB:
+    if _use_db():
         with db_session() as db:
             return UserProfileRepository(db).get_as_dict(email)
     else:
@@ -87,7 +100,7 @@ def get_profile(email: str) -> dict:
 
 def delete_profile(email: str) -> bool:
     """Supprime le profil. Retourne True si supprimé."""
-    if _USE_DB:
+    if _use_db():
         with db_session() as db:
             return UserProfileRepository(db).delete(email)
     else:

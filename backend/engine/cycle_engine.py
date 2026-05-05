@@ -15,15 +15,23 @@ Sources : données female_cycle_nutrition.json du projet
 """
 
 import json as _j
+import logging
 from datetime import datetime
-from functools import lru_cache
-from backend.core.data_io import load_nutrition_graph as _load_nutrition_graph
+from backend.core.data_io import load_json, load_nutrition_graph as _load_nutrition_graph
+from backend.core.data_io import _MtimeCache
 from backend.engine.config import DATA_ROOT
 
-@lru_cache(maxsize=1)
+logger = logging.getLogger(__name__)
+
+_cycle_cache = _MtimeCache("cycle_engine")
+
 def _load_cycle_data() -> dict:
-    from backend.core.data_io import load_json
-    return load_json(DATA_ROOT / "modules" / "female_cycle_nutrition.json", default={})
+    """
+    Chargement via _MtimeCache — rechargé automatiquement si female_cycle_nutrition.json
+    est modifié, contrairement à @lru_cache qui nécessitait un redémarrage du serveur.
+    """
+    path = DATA_ROOT / "modules" / "female_cycle_nutrition.json"
+    return _cycle_cache.get(path, lambda: load_json(path, default={}))
 
 
 PHASE_FROM_DAY = {
@@ -91,15 +99,15 @@ def cycle_score(recipe: dict, phase: str | None = None,
     focus       = info.get("focus", [])
     nutr_ng     = {}
     try:
-        import json as _j
-        ng  = _j.load(open(DATA_ROOT / "graphs" / "recipe_nutrition_graph_v1.json",
-                           encoding="utf-8"))
+        # Utilise le loader déjà mis en cache (load_nutrition_graph est @lru_cache
+        # dans data_io) au lieu de relire le fichier 336 KB à chaque cycle_score().
+        ng      = _load_nutrition_graph()
         nutr_ng = ng.get(str(recipe.get("id", "")), {}) or {}
-    except Exception:
-        pass
+    except Exception as _e:
+        logger.debug("cycle_engine: graphe nutrition indisponible -- %s", _e)
 
     nutr_bonuses = {
-        "iron":       nutr_ng.get("iron",      0) or 0 > 3,
+        "iron":       (nutr_ng.get("iron",     0) or 0) > 3,
         "protein":    (nutr_ng.get("protein",  0) or 0) >= 12,
         "fiber":      (nutr_ng.get("fiber",    0) or 0) >= 8,
         "calcium":    (nutr_ng.get("calcium",  0) or 0) > 100,
@@ -140,14 +148,27 @@ def adjust_ranking(recipes: list[dict],
     result = []
     for r in recipes:
         cs = cycle_score(r, phase, cycle_day)
-        r["_cycle_score"] = cs
+
+        # Priorité de lecture du score de base :
+        #   1. final_score   — injecté par scoring.batch_score (pipeline reco)
+        #   2. global_score  — injecté par pipeline.run() (pipeline batch)
+        #   3. adaptive_score — ancien champ pré-v6
+        #   4. 5.0           — fallback neutre
+        base = float(
+            r.get("final_score")
+            or r.get("global_score")
+            or r.get("adaptive_score")
+            or 5.0
+        )
+
         # Score composite = score_base × (1-weight) + cycle_score × weight
-        base  = float(r.get("global_score", r.get("_adaptive_score", {})
-                             .get("score", 5.0) if isinstance(
-                    r.get("_adaptive_score"), dict) else 5.0))
-        final = base * (1 - weight) + cs["score"] * weight
-        r["_adjusted_score"] = round(final, 2)
-        result.append(r)
+        adjusted = round(base * (1 - weight) + cs["score"] * weight, 2)
+
+        # Copie pour ne pas muter le dict original
+        enriched = dict(r)
+        enriched["_cycle_score"]    = cs
+        enriched["_adjusted_score"] = adjusted
+        result.append(enriched)
 
     result.sort(key=lambda x: -x["_adjusted_score"])
     return result

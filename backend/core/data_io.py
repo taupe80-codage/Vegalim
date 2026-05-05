@@ -14,11 +14,26 @@ Correction P2.1 :
   Les loaders statiques (graphes de nutrition, saisons, etc.) conservent
   @lru_cache — ils ne sont jamais mis à jour pendant l'exécution du serveur.
 
+Correction P2.2 — nutrition_db :
+  load_nutrition_db() migré de @lru_cache vers _MtimeCache.
+  nutrition_v2.json est mis à jour à chaque run pipeline (promote_nutrition).
+  Avec @lru_cache, le serveur servait des données périmées jusqu'au redémarrage.
+
+Ajout v6.17 — feature dual nutrition source :
+  compute_recipe_nutrition() : calcule la nutrition depuis la composition d'une
+      base_recipe (pour les laits/crèmes végétaux maison et futurs dual items).
+  resolve_ingredient_nutrition() : résout la nutrition d'un ingrédient en tenant
+      compte de nutrition_source_mode='dual' dans ingredients_dictionary.
+
 Usage :
     from backend.core.data_io import load_json, load_recipes
     recipes = load_recipes()           # dataset principal
     graph   = load_json(path)          # n'importe quel JSON
     graph   = load_json(path, default={"items": []})
+
+    # Feature dual (laits/crèmes végétaux)
+    from backend.core.data_io import resolve_ingredient_nutrition
+    nutr = resolve_ingredient_nutrition("milk_plant_oat", source_pref="recipe")
 """
 import json
 import logging
@@ -144,9 +159,10 @@ def save_json(path: str | Path, data, indent: int = 2) -> bool:
 
 # ── Caches mtime-aware (fichiers modifiés pendant l'exécution du serveur) ──────
 
-_recipes_cache     = _MtimeCache("load_recipes")
-_ingredients_cache = _MtimeCache("load_ingredients_dict")
-_score_graph_cache = _MtimeCache("load_score_graph")
+_recipes_cache      = _MtimeCache("load_recipes")
+_ingredients_cache  = _MtimeCache("load_ingredients_dict")
+_score_graph_cache  = _MtimeCache("load_score_graph")
+_nutrition_db_cache = _MtimeCache("load_nutrition_db")   # ← P2.2 : pipeline modifie ce fichier
 
 
 def load_recipes() -> list[dict]:
@@ -194,12 +210,31 @@ def load_nutrition_graph() -> dict:
     return load_json(DATA_ROOT / "graphs" / "recipe_nutrition_graph_v1.json", default={})
 
 
-@lru_cache(maxsize=1)
 def load_nutrition_db() -> dict:
-    """Base nutritionnelle nettoyée CIQUAL/USDA — source unique."""
+    """
+    Base nutritionnelle CIQUAL/USDA — nutrition_v2.json (282 ingrédients, v6.17+).
+
+    Migré de @lru_cache vers _MtimeCache (P2.2) :
+    nutrition_v2.json est promu à chaque run pipeline (promote_nutrition.py).
+    Avec @lru_cache, le serveur servait les données de démarrage jusqu'au restart.
+    Avec _MtimeCache, le rechargement est automatique dès que le fichier change.
+
+    Returns:
+        dict {ingredient_id: {variants: {default: {calories_kcal, …}}, …}}
+    """
     from backend.engine.config import NUTRITION_PATH
-    raw = load_json(NUTRITION_PATH, default={"ingredients": {}})
-    return raw.get("ingredients", raw) if isinstance(raw, dict) else {}
+    _path = Path(NUTRITION_PATH)
+
+    def _loader():
+        raw  = load_json(_path, default={"ingredients": {}})
+        data = raw.get("ingredients", raw) if isinstance(raw, dict) else {}
+        logger.info("nutrition_v2 chargé : %d ingrédients (v%s)",
+                    len(data), raw.get("schema_version", "?") if isinstance(raw, dict) else "?")
+        return data
+
+    return _nutrition_db_cache.get(_path, _loader)
+
+load_nutrition_db.cache_clear = _nutrition_db_cache.cache_clear  # type: ignore[attr-defined]
 
 
 @lru_cache(maxsize=1)
@@ -273,3 +308,209 @@ def load_ingredient_physical() -> dict:
     raw = load_json(DATA_ROOT / "ingredients" / "ingredient_physical.json",
                     default={})
     return {k: v for k, v in raw.items() if not k.startswith("_")}
+
+
+@lru_cache(maxsize=1)
+def load_astro_nutrition() -> dict:
+    raw = load_json(DATA_ROOT / "modules" / "astro_nutrition.json", default={})
+    return raw.get("ingredients_astro_map", {})
+
+
+# ── Feature dual nutrition source (v6.17) ─────────────────────────────────────
+#
+# Mécanisme : certains ingrédients (laits/crèmes végétaux) ont deux sources de
+# données nutritionnelles disponibles :
+#   - "industrial" : valeurs CIQUAL/USDA depuis nutrition_v2.json
+#   - "recipe"     : calculé depuis la composition de la base_recipe maison
+#
+# Le champ `nutrition_source_mode: "dual"` dans ingredients_dictionary.json
+# marque ces ingrédients. Le champ `base_recipe_key` pointe vers la recette.
+#
+# resolve_ingredient_nutrition() est le point d'entrée unique pour les engines
+# et routes qui ont besoin de la nutrition d'un ingrédient.
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Conversion unités → grammes (pour le calcul de composition)
+_UNIT_TO_G: dict[str, float] = {
+    "g":     1.0,
+    "kg":    1000.0,
+    "mg":    0.001,
+    "ml":    1.0,       # approximation densité eau (suffisant pour lait/crème)
+    "l":     1000.0,
+    "cl":    10.0,
+    "dl":    100.0,
+    "tsp":   5.0,
+    "tbsp":  15.0,
+    "cup":   240.0,
+    "oz":    28.35,
+    "lb":    453.6,
+    "pinch": 0.5,
+    "unit":  100.0,     # estimation générique (à affiner par ingrédient si besoin)
+}
+
+# Champs nutritionnels inclus dans le calcul de composition
+_NUTRIENT_FIELDS: tuple[str, ...] = (
+    "calories_kcal", "protein_g", "carbs_g", "fat_g", "fiber_g", "sugar_g",
+    "starch_g", "alcohol_g",
+    "saturated_fat_g", "monounsaturated_fat_g", "polyunsaturated_fat_g",
+    "trans_fat_g", "cholesterol_mg",
+    "omega3_g", "omega3_ala_g", "omega3_epa_g", "omega3_dha_g", "omega6_g",
+    "sodium_mg", "calcium_mg", "iron_mg", "magnesium_mg", "phosphorus_mg",
+    "potassium_mg", "zinc_mg", "copper_mg", "manganese_mg", "selenium_ug",
+    "iodine_ug",
+    "vitamin_a_ug", "beta_carotene_ug", "vitamin_c_mg", "vitamin_d_ug",
+    "vitamin_e_mg", "vitamin_k1_ug", "vitamin_k2_ug",
+    "vitamin_b1_mg", "vitamin_b2_mg", "vitamin_b3_mg", "vitamin_b5_mg",
+    "vitamin_b6_mg", "vitamin_b12_ug", "folate_ug", "choline_mg",
+    "polyols_g", "organic_acids_g",
+)
+
+
+def compute_recipe_nutrition(recipe_id: str, per_100g: bool = True) -> dict:
+    """
+    Calcule la nutrition d'une base_recipe depuis sa composition.
+
+    Itère sur chaque ingrédient de la composition, récupère ses valeurs
+    nutritionnelles dans nutrition_v2.json, pondère par la quantité convertie
+    en grammes, somme le tout, puis normalise à 100g de produit fini.
+
+    Args:
+        recipe_id : ID de la recette (ex: 'base_oat_milk_3519f4')
+        per_100g  : si True (défaut), ramène le résultat à 100g de produit fini
+                    via le champ yield_g de la recette
+
+    Returns:
+        dict des champs nutritionnels. Clés privées '_recipe_id' et '_yield_g'
+        incluses pour traçabilité. Retourne {} si recette introuvable.
+    """
+    recipes = load_recipes()
+    recipe  = next((r for r in recipes if r.get("id") == recipe_id), None)
+
+    if not recipe:
+        logger.warning("compute_recipe_nutrition : recette '%s' introuvable", recipe_id)
+        return {}
+
+    nutr_db     = load_nutrition_db()
+    composition = recipe.get("composition", [])
+    yield_g     = float(recipe.get("yield_g") or 100.0)
+    totals: dict[str, float] = {}
+    missing_ings: list[str] = []
+
+    for item in composition:
+        ing_id   = item.get("ingredient", "")
+        quantity = float(item.get("quantity") or 0)
+        unit     = (item.get("unit") or "g").lower().strip()
+        qty_g    = quantity * _UNIT_TO_G.get(unit, 1.0)
+
+        if qty_g <= 0 or not ing_id:
+            continue
+
+        ing_entry = nutr_db.get(ing_id, {})
+        if not ing_entry:
+            missing_ings.append(ing_id)
+            continue
+
+        # Prendre la variante default (la seule nécessaire pour les laits/crèmes)
+        variant = ing_entry.get("variants", {}).get("default", {})
+        ratio   = qty_g / 100.0
+
+        for field in _NUTRIENT_FIELDS:
+            val = variant.get(field)
+            if isinstance(val, (int, float)):
+                totals[field] = totals.get(field, 0.0) + val * ratio
+
+    if missing_ings:
+        logger.debug(
+            "compute_recipe_nutrition '%s' : %d ingrédients sans données : %s",
+            recipe_id, len(missing_ings), missing_ings
+        )
+
+    result: dict = {}
+    if per_100g and yield_g > 0:
+        factor = 100.0 / yield_g
+        result = {k: round(v * factor, 3) for k, v in totals.items()}
+    else:
+        result = {k: round(v, 3) for k, v in totals.items()}
+
+    # Métadonnées de traçabilité (préfixées _ → ignorées par les engines de score)
+    result["_recipe_id"] = recipe_id
+    result["_yield_g"]   = yield_g
+    return result
+
+
+def resolve_ingredient_nutrition(
+    ingredient_id: str,
+    variant:      str = "default",
+    source_pref:  str = "industrial",
+) -> dict:
+    """
+    Résout la nutrition d'un ingrédient avec gestion du mode dual.
+
+    Pour les ingrédients standard (nutrition_source_mode absent ou 'industrial') :
+      → retourne toujours nutrition_v2.json[ingredient_id][variant]
+
+    Pour les ingrédients dual (laits/crèmes végétaux, etc.) :
+      - source_pref='industrial' (défaut) → nutrition_v2.json (données CIQUAL/USDA)
+      - source_pref='recipe'              → calcul depuis composition de base_recipe_key
+
+    Si le calcul recette échoue (recette introuvable, composition vide), bascule
+    automatiquement sur la source industrielle avec un warning.
+
+    Args:
+        ingredient_id : clé ingrédient (ex: 'milk_plant_oat', 'cream_plant_soy')
+        variant       : variante nutritionnelle dans nutrition_v2 (ex: 'oat', 'default')
+        source_pref   : 'industrial' | 'recipe'
+
+    Returns:
+        dict des champs nutritionnels pour 100g.
+        Champs privés inclus : '_source' ('industrial'|'recipe'), '_recipe_id' (si recipe).
+
+    Exemples :
+        # Source industrielle (CIQUAL/USDA)
+        nutr = resolve_ingredient_nutrition("milk_plant_oat")
+
+        # Source recette maison (calcul depuis composition)
+        nutr = resolve_ingredient_nutrition("milk_plant_oat", source_pref="recipe")
+
+        # Ingrédient standard (non-dual) — source_pref ignoré
+        nutr = resolve_ingredient_nutrition("spinach")
+    """
+    ings_dict       = load_ingredients_dict()
+    ing             = ings_dict.get(ingredient_id, {})
+    mode            = ing.get("nutrition_source_mode", "industrial")
+    base_recipe_key = ing.get("base_recipe_key")
+
+    # ── Mode recipe (dual uniquement) ──────────────────────────────────────────
+    if mode == "dual" and source_pref == "recipe" and base_recipe_key:
+        nutr = compute_recipe_nutrition(base_recipe_key, per_100g=True)
+        if nutr and any(
+            k for k in nutr if not k.startswith("_")
+        ):
+            nutr["_source"]    = "recipe"
+            # _recipe_id déjà inclus par compute_recipe_nutrition
+            return nutr
+
+        logger.warning(
+            "resolve_ingredient_nutrition : calcul recette vide pour '%s' "
+            "(recipe_id=%s) → fallback industriel",
+            ingredient_id, base_recipe_key
+        )
+
+    # ── Mode industriel (défaut + fallback) ────────────────────────────────────
+    nutr_db   = load_nutrition_db()
+    ing_entry = nutr_db.get(ingredient_id, {})
+    variants  = ing_entry.get("variants", {})
+
+    # Chercher la variante demandée, sinon default
+    result = variants.get(variant) or variants.get("default")
+
+    if not result:
+        logger.debug(
+            "resolve_ingredient_nutrition : '%s' variant='%s' introuvable dans nutrition_v2",
+            ingredient_id, variant
+        )
+        return {"_source": "industrial", "_missing": True}
+
+    result          = dict(result)   # copie pour ne pas muter le cache
+    result["_source"] = "industrial"
+    return result

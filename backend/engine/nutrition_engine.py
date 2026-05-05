@@ -15,9 +15,7 @@ Retourne macros + micros par portion (÷ servings).
 """
 
 from backend.db.data_access import get_data
-
-SERVINGS_DEFAULT = 4
-FRYING_CAP_G     = 20   # huile_friture absorbée max
+from backend.engine.config import SERVINGS_DEFAULT, FRYING_CAP_G
 
 
 # Facteurs de conversion unité → grammes (fallback si absent de ingredient_physical)
@@ -36,6 +34,47 @@ MACROS   = ["calories", "protein", "carbs", "fat", "fiber", "sugar", "sodium"]
 MICROS   = ["calcium", "iron", "magnesium", "potassium",
             "vitamin_c", "vitamin_b12", "zinc", "phosphorus"]
 ALL_KEYS = MACROS + MICROS
+
+# Valeurs par défaut de portions par type de plat (mirroir de recipes.json)
+DEFAULT_SERVINGS_BY_TYPE: dict[str, int] = {
+    "main":      4,
+    "soup":      4,
+    "side":      4,
+    "starter":   4,
+    "dessert":   6,
+    "snack":     2,
+    "breakfast": 2,
+    "sauce":     8,
+}
+
+
+def resolve_servings(recipe: dict, user_override: int | None = None) -> int:
+    """
+    Résout le nombre de portions effectif pour une recette.
+
+    Priorité décroissante :
+      1. user_override (paramètre API ?servings=N)
+      2. recipe.servings_user_override (override stocké dans la recette)
+      3. recipe.servings_default (valeur calibrée par dish_type)
+      4. recipe.servings (valeur brute du JSON)
+      5. DEFAULT_SERVINGS_BY_TYPE[dish_type]
+      6. SERVINGS_DEFAULT (4 — fallback universel)
+    """
+    if user_override and isinstance(user_override, int) and user_override > 0:
+        return user_override
+    stored_override = recipe.get("servings_user_override")
+    if stored_override and isinstance(stored_override, int) and stored_override > 0:
+        return stored_override
+    default = recipe.get("servings_default")
+    if default and isinstance(default, int) and default > 0:
+        return default
+    raw = recipe.get("servings")
+    if raw and isinstance(raw, (int, float)) and raw > 0:
+        return int(raw)
+    dish_type = recipe.get("dish_type", "")
+    if isinstance(dish_type, str) and dish_type in DEFAULT_SERVINGS_BY_TYPE:
+        return DEFAULT_SERVINGS_BY_TYPE[dish_type]
+    return SERVINGS_DEFAULT
 
 
 def _physical_unit_g(ingredient_id: str, unit: str) -> float | None:
@@ -58,7 +97,8 @@ def _physical_edible_pct(ingredient_id: str) -> float:
     from backend.core.data_io import load_ingredient_physical
     physical = load_ingredient_physical()
     entry = physical.get(ingredient_id, {})
-    return float(entry.get("edible_pct", 100.0)) / 100.0
+    pct = entry.get("edible_pct", 100.0)
+    return float(pct) / 100.0 if pct is not None else 1.0
 
 
 def _qty_to_g(token: str, comp_entry: dict) -> float:
@@ -100,14 +140,16 @@ def compute_nutrition(recipe: dict,
     Calcule la nutrition d'une recette par portion.
 
     Args:
-        recipe   : dict recette avec 'ingredients' et optionnellement 'composition'
-        servings : nb de portions (défaut : recipe.servings ou 4)
+        recipe   : dict recette avec 'composition' (et optionnellement 'ingredients')
+        servings : override utilisateur du nombre de portions.
+                   Si None, utilise resolve_servings() qui lit dans l'ordre :
+                   servings_user_override → servings_default → servings → dish_type → 4
 
     Returns:
         dict {calories, protein, carbs, fat, fiber, sugar, sodium,
-              calcium, iron, …, glycemic_index, source}
+              calcium, iron, …, glycemic_index, servings_used, source}
     """
-    srv              = servings or recipe.get("servings") or SERVINGS_DEFAULT
+    srv              = resolve_servings(recipe, user_override=servings)
     totals           = {k: 0.0 for k in ALL_KEYS}
     gi_sum, gi_n     = 0.0, 0
 
@@ -168,6 +210,7 @@ def compute_nutrition(recipe: dict,
     result["sodium"]         = round(totals["sodium"]   / srv)
     if gi_n:
         result["glycemic_index"] = round(gi_sum / gi_n)
+    result["servings_used"] = srv   # renvoie le nb de portions utilisé pour le calcul
     result["source"] = "ciqual_computed"
     return result
 
@@ -190,37 +233,31 @@ def score_nutrition_values(nutr: dict, profile: dict | None = None) -> float:
     Score nutritionnel depuis un dict de valeurs {protein, calories, fiber...}.
     Utilisé par reco_service quand la nutrition vient du graph séparé.
 
-    Retourne un score brut (0-15) selon le profil :
-      - protéines : priorité haute (végétarien)
-      - fibres    : bonus
-      - sucre     : malus si low_sugar ou diabète
+    Délègue le calcul de base à ajr_score() (source de vérité AJR ANSES/OMS),
+    puis applique les ajustements profil (malus sucre, bonus hyperprotéiné).
+
+    Retourne un score 0-10 cohérent avec les autres engines de scoring.
     """
     if not nutr or not isinstance(nutr, dict):
         return 0.0
 
-    p = profile or {}
+    from backend.engine.score_engine.ajr import ajr_score
+    base = ajr_score(nutr)["score"]  # 0-10, source de vérité AJR
+
+    p    = profile or {}
     diet = p.get("diet", "")
 
-    protein = float(nutr.get("protein", 0) or 0)
-    fiber   = float(nutr.get("fiber",   0) or 0)
     sugar   = float(nutr.get("sugar",   0) or 0)
-    iron    = float(nutr.get("iron",    0) or 0)
-    calcium = float(nutr.get("calcium", 0) or 0)
+    protein = float(nutr.get("protein", 0) or 0)
 
-    score = 0.0
-    score += min(protein * 0.4, 6.0)    # max 6 pts
-    score += min(fiber   * 0.3, 3.0)    # max 3 pts
-    score += min(iron    * 0.3, 2.0)    # max 2 pts
-    score += min(calcium * 0.002, 1.0)  # max 1 pt
-
-    # Malus sucre
-    if diet in ("diabete",) or p.get("low_sugar"):
-        score -= min(sugar * 0.2, 3.0)
+    # Ajustements profil (delta sur le score AJR de base)
+    delta = 0.0
+    if diet == "diabete" or p.get("low_sugar"):
+        delta -= min(sugar * 0.1, 2.0)   # malus sucre renforcé
     else:
-        score -= min(sugar * 0.05, 1.0)
+        delta -= min(sugar * 0.02, 0.5)  # malus sucre standard
 
-    # Bonus hyperprotéiné
     if diet == "hyperproteine":
-        score += min(protein * 0.2, 3.0)
+        delta += min(protein * 0.1, 2.0)  # bonus protéine
 
-    return round(max(0.0, score), 2)
+    return round(max(0.0, min(10.0, base + delta)), 2)

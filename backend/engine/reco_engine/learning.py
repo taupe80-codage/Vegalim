@@ -1,5 +1,5 @@
 """
-learning_engine.py — Personnalisation du scoring par apprentissage des préférences.
+reco_engine/learning.py — Personnalisation du scoring par apprentissage des préférences.
 
 Principe : à partir de l'historique d'interactions (likes, skips, vues),
 construire un profil de préférences implicites et appliquer un bonus/malus
@@ -26,6 +26,8 @@ Limitations volontaires :
   - Bonus max : ±2.0 points sur le score final (CDC_03c = 10 pts)
   - Pas de filtrage : on booste, on ne supprime pas
 """
+from __future__ import annotations
+
 import json
 import logging
 from pathlib import Path
@@ -35,7 +37,6 @@ from backend.engine.config import DATA_ROOT
 
 logger = logging.getLogger(__name__)
 
-# ── Constantes ────────────────────────────────────────────────────────────────
 # ── Constantes (importées depuis config pour cohérence projet) ────────────────
 
 from backend.engine.config import MIN_LIKES_TO_ACTIVATE, MAX_LEARNING_BONUS as MAX_BONUS
@@ -56,21 +57,24 @@ def _load_history_from_db(email: str) -> dict:
     Charge l'historique depuis RecipeHistoryRepository.
     Retourne un dict normalisé ou {} si DB indisponible.
     """
+    # Utilisation de db_session() (context manager) plutot que next(get_db()).
+    # next(get_db()) ne declenche jamais le finally:db.close() du generateur
+    # FastAPI hors injection de dependance -> fuite de connexion sous charge.
     try:
-        from backend.db.session import get_db
+        from backend.db.session import db_session
         from backend.db.repositories import RecipeHistoryRepository
-        db = next(get_db())
-        repo = RecipeHistoryRepository(db)
-        recent = repo.get_recent(email, limit=200)
-        liked    = set(repo.get_liked_recipe_ids(email))
-        disliked = set(repo.get_disliked_recipe_ids(email))
-        viewed   = {e.recipe_id for e in recent}
-        return {
-            "liked":    liked,
-            "disliked": disliked,
-            "viewed":   viewed,
-            "raw":      [(e.recipe_id, e.action) for e in recent],
-        }
+        with db_session() as db:
+            repo = RecipeHistoryRepository(db)
+            recent = repo.get_recent(email, limit=200)
+            liked    = set(repo.get_liked_recipe_ids(email))
+            disliked = set(repo.get_disliked_recipe_ids(email))
+            viewed   = {e.recipe_id for e in recent}
+            return {
+                "liked":    liked,
+                "disliked": disliked,
+                "viewed":   viewed,
+                "raw":      [(e.recipe_id, e.action) for e in recent],
+            }
     except Exception as e:
         logger.debug("DB indisponible pour learning_engine (%s) — fallback JSON", e)
         return {}
@@ -127,22 +131,23 @@ def save_interaction(email: str, recipe_id: int, action: str,
 
     Essaie d'abord la DB, puis le fichier JSON en fallback.
     """
-    # Tentative DB
+    # Tentative DB : db_session() garantit db.close() via finally,
+    # meme en cas d'exception apres le commit.
+    # db_session() appelle aussi db.commit() automatiquement en sortie normale.
     try:
-        from backend.db.session import get_db
+        from backend.db.session import db_session
         from backend.db.repositories import RecipeHistoryRepository
-        db = next(get_db())
-        RecipeHistoryRepository(db).record(
-            user_email   = email,
-            recipe_id    = recipe_id,
-            action       = action,
-            score_shown  = int(score_shown * 10) if score_shown else None,
-            profile_used = profile_used,
-        )
-        db.commit()
+        with db_session() as db:
+            RecipeHistoryRepository(db).record(
+                user_email   = email,
+                recipe_id    = recipe_id,
+                action       = action,
+                score_shown  = int(score_shown * 10) if score_shown else None,
+                profile_used = profile_used,
+            )
         return True
     except Exception:
-        pass
+        pass  # Fallback JSON ci-dessous
 
     # Fallback JSON
     try:

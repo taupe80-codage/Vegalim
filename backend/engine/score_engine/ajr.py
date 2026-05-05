@@ -115,7 +115,54 @@ def detect_deficiencies(
     return sorted(result, key=lambda d: d["ratio"])
 
 
-def summarize_deficiencies(deficiencies: list[dict]) -> dict:
+def ajr_score_multi(nutrition: dict, profiles: list[str]) -> dict:
+    """
+    Score AJR adapté à un ou plusieurs profils combinés.
+
+    Combine adapt_ajr_multi (besoins ajustés) et ajr_score (calcul du score).
+    À utiliser dans les routes à la place de l'import inline de adapt_ajr_multi.
+
+    Args:
+        nutrition : valeurs nutritionnelles
+        profiles  : liste de profils (ex: ["athlete", "diabetic"])
+
+    Returns:
+        {score, coverage, details, profiles, ajr_adapted}
+        — même structure que ajr_score() + métadonnées profils
+    """
+    from backend.engine.multi_profile_nutrition_engine import get_adapted_ajr
+    ajr_adapted = get_adapted_ajr(profiles)
+    result = ajr_score(nutrition)
+
+    # Recalculer avec l'AJR adapté
+    ratios, details, present = [], {}, 0
+    for nutrient, ref in ajr_adapted.items():
+        if ref <= 0:
+            continue
+        val = nutrition.get(nutrient)
+        if val is None:
+            continue
+        present += 1
+        val   = float(val or 0)
+        ratio = (max(0.0, 1.0 - val / ref) if nutrient in _LIMIT
+                 else min(1.0, val / ref))
+        ratios.append(ratio)
+        details[nutrient] = {
+            "value": round(val, 2),
+            "ref":   ref,
+            "ratio": round(ratio, 3),
+            "ok":    ratio >= 0.5,
+        }
+
+    score = round(sum(ratios) / len(ratios) * 10, 2) if ratios else 0.0
+    return {
+        "score":       score,
+        "coverage":    round(present / len(ajr_adapted), 3) if ajr_adapted else 0.0,
+        "details":     details,
+        "profiles":    profiles,
+        "ajr_adapted": ajr_adapted,
+    }
+
     """
     Résume une liste de carences par niveau de sévérité.
 

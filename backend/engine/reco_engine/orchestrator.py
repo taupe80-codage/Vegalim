@@ -17,6 +17,7 @@ Pipeline CDC_03c :
     4. Filtrage régime         (filter_service.apply_diet_filter)
     5. Scoring + enrichissement(scoring.batch_score)
     6. Personnalisation        (personalization.apply_learning)
+    7. Cycle féminin           (cycle_engine.adjust_ranking — si has_cycle)
 
 API publique (identique à l'ancien recommendation_engine.py) :
     recommend(query, email, diet_override, limit) → RecommendationResult
@@ -88,6 +89,14 @@ def recommend(
     )
     context = resolve_user_context(email, diet_override)
 
+    # Normaliser context.diet vers la clé canonique immédiatement après résolution.
+    # resolve_user_context peut retourner un alias brut ("sans_gluten", "vegetarienne"…)
+    # issu du profil stocké avant l'étape 1. Le DTO RecommendationResult, les logs
+    # et le monitoring doivent toujours voir la forme canonique.
+    if context.diet:
+        from backend.core.validators import normalize_diet
+        context.diet = normalize_diet(context.diet)
+
     # ── Étape 2 : Recherche ──────────────────────────────────────────────────
     candidates = _search(query, limit * 3)
 
@@ -109,6 +118,16 @@ def recommend(
 
     # ── Étape 6 : Personnalisation par apprentissage ─────────────────────────
     scored = apply_learning(scored, context)
+
+    # ── Étape 7 : Ajustement cycle féminin ───────────────────────────────────
+    if context.has_cycle:
+        try:
+            from backend.engine.cycle_engine import adjust_ranking
+            cycle_phase = context.profile.get("cycle_phase")
+            scored = adjust_ranking(scored, phase=cycle_phase)
+            logger.debug("orchestrator: cycle ranking appliqué (phase=%s)", cycle_phase)
+        except Exception as e:
+            logger.debug("orchestrator: cycle_engine indisponible — %s", e)
 
     results = scored[:limit]
     elapsed = int((time.monotonic() - t0) * 1000)

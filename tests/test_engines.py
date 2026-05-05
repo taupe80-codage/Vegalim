@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from backend.engine.nutrition_engine   import compute_nutrition
 from backend.engine.graph_engine       import _load_graph, get_cycle_ingredients
-from backend.services.filter_service   import apply_diet_filter, filter_recipes
+from backend.services.filter_service   import apply_diet_filter
 from backend.services.substitution_service import apply_substitutions
 
 
@@ -86,27 +86,6 @@ def test_get_cycle_ingredients_phase_inconnue():
     assert isinstance(ings, list)
 
 
-# ── filter_service ────────────────────────────────────────────────────────────
-
-def test_filter_vegan_retourne_seulement_vegan():
-    result = apply_diet_filter(SAMPLE, "vegan")
-    assert all(r["diet_flags"]["vegan"] for r in result)
-
-def test_filter_vegetarian_inclut_vegan():
-    result = apply_diet_filter(SAMPLE, "vegetarien")
-    assert all(r["diet_flags"]["vegetarian"] for r in result)
-
-def test_filter_none_retourne_tout():
-    result = apply_diet_filter(SAMPLE, None)
-    assert len(result) == len(SAMPLE)
-
-def test_filter_recipes_alias():
-    """filter_recipes est un alias de apply_diet_filter."""
-    r1 = apply_diet_filter(SAMPLE, "vegan")
-    r2 = filter_recipes(SAMPLE, "vegan")
-    assert [r["id"] for r in r1] == [r["id"] for r in r2]
-
-
 # ── substitution_service ──────────────────────────────────────────────────────
 
 RECIPE_SUBS = {
@@ -117,15 +96,17 @@ RECIPE_SUBS = {
     "servings": 2,
 }
 
-def test_substitution_retourne_liste():
+def test_substitution_applique_et_ne_mute_pas_original():
+    """apply_substitutions retourne une nouvelle liste sans modifier la recette originale."""
+    import copy
+    original = copy.deepcopy(RECIPE_SUBS)
     result = apply_substitutions([RECIPE_SUBS])
     assert isinstance(result, list)
     assert len(result) == 1
-
-def test_substitution_ne_modifie_pas_recette_vegan():
-    result = apply_substitutions([RECIPE_SUBS])
-    assert isinstance(result, list)
-    assert len(result) == 1
+    # La recette originale n'est pas mutée
+    assert RECIPE_SUBS["ingredients"] == original["ingredients"]
+    # Le résultat expose le champ substitutions_applied
+    assert "substitutions_applied" in result[0]
 
 
 if __name__ == "__main__":

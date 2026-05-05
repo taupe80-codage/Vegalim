@@ -1,262 +1,179 @@
 """
-core.py — Recherche principale + fusion multi-sources.
+core.py — Scoring et analyse depuis le graphe d'ingrédients.
 
-Corrections :
-  - search_index exploité comme index inversé (token → [ids]) avec correspondance
-    string/int pour compatibilité avec les deux formats d'IDs (migration CDC v4)
-  - ings_text inclut désormais TOUS les champs textuels utiles : ingredient (EN),
-    name (FR si présent), ingredient_id, et les search_tokens déjà bilinguaux
-  - _MIN_STRUCTURED abaissé à 1 : fallback sémantique activé dès qu'il y a peu
-    de résultats stricts (ex: "fondue" → 0 résultats exacts → TF-IDF)
-  - score final non nul même sans hit titre : base_score depuis l'index inversé
-  - Meilleur logging pour diagnostiquer les misses
+Migré depuis engine/graph_engine.py → engine/graph_engine/core.py.
+Les imports existants continuent de fonctionner via engine/graph_engine/__init__.py.
+
+Structure du graphe (format extensible) :
+  benefits  : list[str]  — "high_protein", "diabete_safe"
+  risks     : list[str]  — "diabetes"
+  tags      : list[str]  — "vegan"
+  substitutes: list[str] — première entrée = substitut recommandé
+  cycle     : list[str]  — phases du cycle féminin supportées
+  cycle_reason: str      — explication de la pertinence cycle
 
 API :
-    search(query, limit, profile) → list[dict]
+    compute_graph_score(ingredients, profile) → float
+    analyze_recipe(recipe, profile)           → dict
+    get_substitutes(ingredient)               → list[str]
+    get_cycle_ingredients(phase)              → list[str]
 """
-from __future__ import annotations
 import logging
-import re
-import math
-from collections import Counter
-from functools import lru_cache
+from pathlib import Path
+
+from backend.core.data_io import load_json
+from backend.core.data_io import _MtimeCache
 
 logger = logging.getLogger(__name__)
 
-_MIN_STRUCTURED = 1    # fallback sémantique si moins de 1 résultat strict
-_W_STRUCTURED   = 0.70
-_W_SEMANTIC     = 0.30
+_GRAPH_PATH = Path(__file__).resolve().parent.parent / "data" / "graphs" / "ingredient_relation_graph.json"
+
+# Pondérations par bénéfice selon le profil
+_BENEFIT_SCORE = {
+    "high_protein": {"default": 2.0, "hyperproteine": 4.0},
+    "diabete_safe": {"default": 1.0, "diabete": 2.0},
+}
+_RISK_PENALTY = {
+    "diabetes": {"default": -3.0, "diabete": -6.0},
+}
 
 
-# ── Tokenisation ──────────────────────────────────────────────────────────────
-
-_STOPWORDS = {"de", "du", "la", "le", "les", "au", "aux", "et", "en", "à", "avec", "sans",
-              "un", "une", "des", "sur", "par", "pour", "dans", "the", "and", "of", "with"}
-
-def _tokenize(text: str) -> list[str]:
-    tokens = re.findall(r"[a-záàâéèêëîïôùûüçœæ]+", text.lower())
-    return [t for t in tokens if t not in _STOPWORDS and len(t) > 2]
+_graph_cache = _MtimeCache("graph_engine")
 
 
-@lru_cache(maxsize=1)
-def _recipes() -> list[dict]:
-    from backend.db.data_access import get_data
-    return get_data.recipes.list_all()
+def _load_graph() -> dict:
+    """Chargement via _MtimeCache — rechargé automatiquement si le graphe est modifié."""
+    return _graph_cache.get(
+        _GRAPH_PATH,
+        lambda: {k: dict(v) for k, v in load_json(_GRAPH_PATH, default={}).items()},
+    )
+
+# Compatibilité admin / tests
+_load_graph.cache_clear = _graph_cache.cache_clear  # type: ignore[attr-defined]
 
 
-@lru_cache(maxsize=1)
-def _search_index() -> dict:
-    from backend.core.data_io import load_search_index
-    return load_search_index() or {}
-
-
-# ── Texte de recherche d'une recette ─────────────────────────────────────────
-
-def _recipe_text(recipe: dict) -> tuple[str, str]:
+def compute_graph_score(ingredients: list[str], profile: dict | None = None) -> float:
     """
-    Retourne (title_text, full_text) pour une recette.
+    Calcule le score d'une recette depuis le graphe d'ingrédients.
 
-    full_text inclut :
-      - titre FR + titre original
-      - search_tokens (bilingues par construction)
-      - ingrédients : ingredient (EN) + name (FR si présent) + ingredient_id
+    Args:
+        ingredients : liste d'ingrédients (tokens)
+        profile     : dict avec 'diet' optionnel
+
+    Returns:
+        score brut (avant normalisation)
     """
-    title_fr   = recipe.get("titles", {}).get("fr", "").lower()
-    title_orig = recipe.get("titles", {}).get("original", "").lower()
+    graph = _load_graph()
+    diet  = (profile or {}).get("diet", "")
+    score = 0.0
 
-    tokens_text = " ".join(recipe.get("search_tokens", [])).lower()
+    for ing in ingredients:
+        data = graph.get(ing.lower(), {})
 
-    # Fix : ingrédients — on prend TOUS les champs textuels disponibles
-    ing_parts = []
-    for item in (recipe.get("composition") or []):
-        if not isinstance(item, dict):
-            ing_parts.append(str(item))
-            continue
-        # ingredient = nom EN (ex: "tomato")
-        if item.get("ingredient"):
-            ing_parts.append(str(item["ingredient"]))
-        # name = nom FR si présent (ex: "tomate")
-        if item.get("name"):
-            ing_parts.append(str(item["name"]))
-        # ingredient_id = clé snake_case (ex: "cherry_tomato")
-        if item.get("ingredient_id"):
-            ing_parts.append(str(item["ingredient_id"]).replace("_", " "))
+        for benefit in data.get("benefits", []):
+            weights = _BENEFIT_SCORE.get(benefit, {"default": 1.0})
+            score  += weights.get(diet, weights["default"])
 
-    ings_text  = " ".join(ing_parts).lower()
-    full_text  = f"{title_fr} {title_orig} {tokens_text} {ings_text}"
-    return title_fr, full_text
+        for risk in data.get("risks", []):
+            penalties = _RISK_PENALTY.get(risk, {"default": -2.0})
+            score    += penalties.get(diet, penalties["default"])
+
+    return round(score, 2)
 
 
-# ── Usage correct du search_index (index inversé) ────────────────────────────
-
-def _index_score(rid_str: str, terms: list[str]) -> float:
+def analyze_recipe(recipe: dict, profile: dict | None = None) -> dict:
     """
-    Calcule un score depuis l'index inversé {token → [ids]}.
+    Analyse complète d'une recette depuis le graphe.
+    Retourne score, risques, substitutions, et pertinence cycle.
 
-    Compatibilité ID : l'index contient des IDs entiers (ancien schéma)
-    et les recettes ont maintenant des IDs strings (CDC v4). On compare
-    les deux représentations pour couvrir les deux cas.
+    Returns :
+        {
+          score        : float
+          risks        : list[str]   — risques alimentaires détectés
+          substitutes  : list[dict]  — [{from, to}]
+          cycle_match  : list[str]   — phases du cycle supportées
+          cycle_bonus  : float       — bonus score si cycle match
+          tags         : list[str]   — tags alimentaires (vegan, etc.)
+        }
     """
-    index    = _search_index()
-    tokens   = index.get("tokens", {})
-    if not tokens or not terms:
-        return 0.0
+    graph = _load_graph()
+    diet  = (profile or {}).get("diet", "")
+    cycle_phase = (profile or {}).get("cycle_phase", "")
 
-    hits = 0
-    for term in terms:
-        recipe_ids = tokens.get(term, [])
-        if not recipe_ids:
-            continue
-        # Convertir rid_str en int si possible pour comparer avec les IDs entiers
-        try:
-            rid_int = int(rid_str)
-        except (ValueError, TypeError):
-            rid_int = None
+    score       = 0.0
+    cycle_bonus = 0.0
+    risks       = []
+    substitutes = []
+    cycle_match = []
+    tags_found  = []
 
-        for rid in recipe_ids:
-            if str(rid) == rid_str or (rid_int is not None and rid == rid_int):
-                hits += 1
-                break
+    for ing in recipe.get("ingredients", []):
+        data = graph.get(ing.lower(), {})
 
-    return hits / max(1, len(terms)) * 8.0   # max 8 points depuis l'index
+        # Bénéfices → score
+        for benefit in data.get("benefits", []):
+            weights = _BENEFIT_SCORE.get(benefit, {"default": 1.0})
+            score  += weights.get(diet, weights["default"])
 
+        # Risques → pénalité + liste exposée
+        for risk in data.get("risks", []):
+            penalties = _RISK_PENALTY.get(risk, {"default": -2.0})
+            score    += penalties.get(diet, penalties["default"])
+            if risk not in risks:
+                risks.append(risk)
 
-# ── Recherche structurée ──────────────────────────────────────────────────────
+        # Substitutions
+        subs = data.get("substitutes", [])
+        if subs:
+            substitutes.append({"from": ing, "to": subs[0]})
 
-def _structured_search(query: str, limit: int) -> list[dict]:
-    """Recherche sur titre, ingrédients, tokens et index inversé."""
-    if not query:
-        return _recipes()[:limit]
+        # Cycle féminin
+        ing_cycle = data.get("cycle", [])
+        if cycle_phase and cycle_phase in ing_cycle:
+            cycle_match.append(ing)
+            cycle_bonus += 3.0
+            logger.debug("Cycle match : %s → %s (%s)", ing, cycle_phase,
+                         data.get("cycle_reason", ""))
+        elif ing_cycle:
+            cycle_match.extend(ing_cycle)
 
-    terms   = _tokenize(query)
-    if not terms:
-        return _recipes()[:limit]
+        # Tags
+        tags_found.extend(data.get("tags", []))
 
-    recipes = _recipes()
-    results = []
-
-    for recipe in recipes:
-        rid = str(recipe.get("id", ""))
-
-        title_fr, full_text = _recipe_text(recipe)
-
-        # Score depuis l'index inversé (compatibilité int/string)
-        idx_score   = _index_score(rid, terms)
-
-        # Score depuis le texte direct
-        hits        = sum(1 for t in terms if t in full_text)
-        title_hits  = sum(2 for t in terms if t in title_fr)   # titre = double poids
-        text_score  = (hits + title_hits) / max(1, len(terms)) * 10.0
-
-        final = round(max(idx_score, text_score), 2)
-
-        if final > 0:
-            r = dict(recipe)
-            r["_match_score"] = final
-            r["_search_v3"]   = {"final_score": final, "engine": "structured"}
-            results.append(r)
-
-    results.sort(key=lambda x: x.get("_match_score", 0), reverse=True)
-
-    if not results and query:
-        logger.debug("structured_search: aucun résultat pour '%s' — fallback sémantique", query)
-
-    return results[:limit]
+    return {
+        "score":       round(score + cycle_bonus, 2),
+        "graph_score": round(score, 2),
+        "cycle_bonus": round(cycle_bonus, 2),
+        "risks":       list(set(risks)),
+        "substitutes": substitutes,
+        "cycle_match": list(set(cycle_match)),
+        "tags":        list(set(tags_found)),
+    }
 
 
-# ── Recherche sémantique TF-IDF (fallback) ────────────────────────────────────
-
-@lru_cache(maxsize=128)
-def _tfidf_corpus() -> tuple[list[dict], dict]:
-    """Construit le corpus TF-IDF une seule fois en mémoire."""
-    recipes = _recipes()
-    docs    = []
-    df      = Counter()
-
-    for recipe in recipes:
-        title_fr, full_text = _recipe_text(recipe)
-        tokens = _tokenize(full_text)
-        tf = Counter(tokens)
-        docs.append({"recipe": recipe, "tf": tf, "tokens": set(tokens)})
-        df.update(set(tokens))
-
-    n   = max(1, len(docs))
-    idf = {term: math.log(n / (freq + 1)) for term, freq in df.items()}
-    return docs, idf
+def get_substitutes(ingredient: str) -> list[str]:
+    """Retourne les substituts d'un ingrédient depuis le graphe."""
+    return _load_graph().get(ingredient.lower(), {}).get("substitutes", [])
 
 
-def _semantic_search(query: str, limit: int) -> list[dict]:
-    """TF-IDF cosine similarity sur le corpus de recettes."""
-    if not query:
+def get_cycle_ingredients(phase: str) -> list[str]:
+    """Retourne les ingrédients recommandés pour une phase du cycle.
+
+    Accepte les noms courts (follicular, menstrual, ovulatory, luteal)
+    ou longs (follicular_phase, ...).
+    Source : female_cycle_nutrition.json
+    """
+    import json as _json
+    from backend.engine.config import DATA_ROOT
+    _cycle_path = DATA_ROOT / "modules" / "female_cycle_nutrition.json"
+    try:
+        with open(_cycle_path, encoding="utf-8") as _f:
+            cycle_data = _json.load(_f)
+    except Exception:
         return []
-    docs, idf = _tfidf_corpus()
-    q_tokens  = _tokenize(query)
-    if not q_tokens:
-        return []
-
-    q_vec  = {t: idf.get(t, 0) for t in q_tokens}
-    q_norm = math.sqrt(sum(v**2 for v in q_vec.values())) or 1.0
-
-    scored = []
-    for doc in docs:
-        tf   = doc["tf"]
-        norm = math.sqrt(sum((tf[t] * idf.get(t, 0))**2 for t in tf)) or 1.0
-        sim  = sum(q_vec.get(t, 0) * tf[t] * idf.get(t, 0)
-                   for t in q_tokens) / (q_norm * norm)
-        if sim > 0:
-            r = dict(doc["recipe"])
-            r["_match_score"] = round(sim * 10, 2)
-            r["_search_v3"]   = {"final_score": round(sim * 10, 2), "engine": "tfidf"}
-            scored.append(r)
-
-    scored.sort(key=lambda x: x["_match_score"], reverse=True)
-    return scored[:limit]
-
-
-# ── Fusion et dédoublonnage ───────────────────────────────────────────────────
-
-def _merge(structured: list[dict], semantic: list[dict]) -> list[dict]:
-    """Fusionne en dédoublonnant par id. Les résultats structurés ont priorité."""
-    merged = {r["id"]: r for r in structured if "id" in r}
-    for r in semantic:
-        rid = r.get("id")
-        if rid and rid not in merged:
-            r["_match_score"] = round(r.get("_match_score", 0) * _W_SEMANTIC, 2)
-            merged[rid] = r
-    return list(merged.values())
-
-
-# ── API publique ──────────────────────────────────────────────────────────────
-
-def search(
-    query:   str | None  = None,
-    limit:   int         = 20,
-    profile: dict | None = None,
-) -> list[dict]:
-    """
-    Point d'entrée unique de recherche.
-
-    Étapes :
-        1. Recherche structurée (index inversé + texte FR/EN)
-        2. Fallback sémantique TF-IDF si résultats insuffisants (< _MIN_STRUCTURED)
-        3. Fusion + dédoublonnage + tri
-    """
-    q = (query or "").strip()
-
-    structured = _structured_search(q, limit * 2)
-
-    if len(structured) < _MIN_STRUCTURED and q:
-        logger.debug("search: %d résultats structurés pour '%s' → fallback TF-IDF",
-                     len(structured), q)
-        semantic = _semantic_search(q, limit)
-        combined = _merge(structured, semantic)
-    else:
-        combined = structured
-
-    combined.sort(key=lambda x: x.get("_match_score", 0), reverse=True)
-
-    if not combined and q:
-        logger.info("search: aucun résultat pour '%s' (structured=%d, corpus size=%d)",
-                    q, len(structured), len(_recipes()))
-
-    return combined[:limit]
+    phases = cycle_data.get("cycle_phases", {})
+    key = phase if phase in phases else f"{phase}_phase"
+    p = phases.get(key, {})
+    ids   = p.get("ingredient_ids", [])
+    foods = p.get("recommended_foods", [])
+    return list(dict.fromkeys(ids + foods))

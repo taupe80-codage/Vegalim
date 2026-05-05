@@ -58,7 +58,13 @@ def mealplan(
     """
     Génère un plan de repas hebdomadaire personnalisé. [Plan premium]
     """
+    from backend.core.validators import is_valid_diet
     from backend.engine.planning_engine.planner import generate_plan        # ✅ migré
+    if not is_valid_diet(diet):
+        from fastapi import HTTPException
+        from backend.core.validators import ALLOWED_DIETS
+        raise HTTPException(status_code=422,
+            detail=f"Régime invalide : '{diet}'. Valeurs acceptées : {sorted(ALLOWED_DIETS)}")
     return generate_plan(
         diet=diet,
         month=month,
@@ -184,6 +190,12 @@ def replace_meal(payload: MealPlanReplaceRequest, user: dict = Depends(get_user)
             for slot_data in day_data.values():
                 if isinstance(slot_data, dict) and slot_data.get("id"):
                     existing_ids.add(slot_data["id"])
+
+    if payload.diet:
+        from backend.core.validators import is_valid_diet, ALLOWED_DIETS
+        if not is_valid_diet(payload.diet):
+            raise HTTPException(status_code=422,
+                detail=f"Régime invalide : '{payload.diet}'. Valeurs acceptées : {sorted(ALLOWED_DIETS)}")
 
     load_recipes.cache_clear()
     recipes    = list(load_recipes())

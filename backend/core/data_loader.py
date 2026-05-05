@@ -63,9 +63,9 @@ class DataLoader:
         Charge la base nutritionnelle unifiée.
 
         Source UNIQUE et obligatoire :
-            nutrition/processed/nutrition_clean.json
+            nutrition/processed/nutrition_v2.json
         """
-        path = self.data_root / "nutrition" / "processed" / "nutrition_clean.json"
+        path = self.data_root / "nutrition" / "processed" / "nutrition_v2.json"
         return self._load_json(path)
 
     # =========================

@@ -10,8 +10,17 @@ API :
 """
 from __future__ import annotations
 import logging
+from functools import lru_cache
 from typing import Any
+
 logger = logging.getLogger(__name__)
+
+from backend.core.data_io import (
+    load_score_graph, load_prices, load_availability_graph,
+    load_carbon_footprint, load_flavor_graph,
+    load_global_cuisine_graph, load_ingredients_dict,
+    load_nutrition_graph,
+)
 
 # ── Profils ──────────────────────────────────────────────────────────────────
 
@@ -33,12 +42,18 @@ for _n, _c in PROFILES.items():
 
 # ── Dimensions ────────────────────────────────────────────────────────────────
 
+@lru_cache(maxsize=1)
 def _load_data() -> dict:
-    from backend.core.data_io import (
-        load_score_graph, load_prices, load_availability_graph,
-        load_carbon_footprint, load_flavor_graph,
-        load_global_cuisine_graph, load_ingredients_dict,
-    )
+    """
+    Charge les 8 sources de données nécessaires au scoring.
+
+    @lru_cache(maxsize=1) : les loaders sous-jacents sont eux-mêmes mis en
+    cache (lru_cache ou _MtimeCache dans data_io). Ce cache évite de
+    reconstruire le dict à chaque appel score_recipe() — soit 300+ fois
+    lors d'un pipeline batch.
+
+    Invalider avec _load_data.cache_clear() si nécessaire (admin, tests).
+    """
     return {
         "score_g": load_score_graph(),
         "prices":  load_prices(),
@@ -47,6 +62,7 @@ def _load_data() -> dict:
         "flavor":  load_flavor_graph(),
         "cuisine": load_global_cuisine_graph(),
         "ings":    load_ingredients_dict(),
+        "nutr_g":  load_nutrition_graph(),   # consolidé ici — évite un 2e appel dans score_recipe
     }
 
 def _d_nutrition(r, d):
@@ -145,7 +161,17 @@ def _dynamic_weights(base, ctx):
 # ── API publique ──────────────────────────────────────────────────────────────
 
 def score_recipe(recipe: dict, profile: str = "default", context: dict | None = None) -> dict:
-    """Score complet d'une recette sur 7 dimensions CDC_03c."""
+    """
+    Score complet d'une recette sur 7 dimensions CDC_03c.
+
+    Retourne deux scores distincts :
+      global_score   -- score de reference neutre, toujours calcule avec les poids
+                        "default" (independant du profil actif). Permet la comparaison
+                        inter-profils et le classement absolu. Expose comme quality_score
+                        dans les routes API.
+      adaptive_score -- score ajuste au profil + contexte (strict_budget, high_protein...).
+                        C'est ce score qui est affiche et utilise pour le ranking.
+    """
     ctx = context or {}
     d   = _load_data()
     pcfg    = PROFILES.get(profile, PROFILES["default"])
@@ -160,11 +186,13 @@ def score_recipe(recipe: dict, profile: str = "default", context: dict | None = 
         "carbon":        _d_carbon(recipe, d),
         "flavor":        _d_flavor(recipe, d),
     }
+    # global_s = score de reference neutre (poids "default", sans ajustement contextuel).
+    # Intentionnellement fixe : permet de comparer des recettes entre profils differents.
+    # NE PAS remplacer par `weights` -- ce serait un score adaptatif duplique, pas une reference.
     global_s = round(sum(dims[k] * PROFILES["default"]["weights"][k] for k in dims), 2)
     base     = sum(dims[k] * weights[k] for k in dims)
 
-    from backend.core.data_io import load_nutrition_graph
-    nutr = load_nutrition_graph().get(str(recipe.get("id", "")), {}) or {}
+    nutr = d["nutr_g"].get(str(recipe.get("id", "")), {}) or {}
     bonus_total, bonuses = _apply_bonuses(pcfg.get("bonus_rules", []), nutr)
     adaptive = round(max(0.0, min(10.0, base + bonus_total)), 2)
 

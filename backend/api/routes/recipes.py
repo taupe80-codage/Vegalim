@@ -28,7 +28,7 @@ MIGRATION étape 3 — imports obsolètes remplacés :
   learning_engine.*                       → learning_engine.* (conservé — pas encore migré)
   similarity_engine.find_similar_by_id   → search_engine.similar.find_similar_by_id
   graph_engine.*                          → graph_engine.* (conservé — pas encore migré)
-  culinary_rule_engine.validate/score     → rule_engine.validation.validate_recipe
+  culinary_rule_engine.validate/score     → rule_engine.validation.validate_recipef
 """
 import logging
 logger = logging.getLogger(__name__)
@@ -40,25 +40,37 @@ from typing import Optional
 from backend.core.auth_deps        import get_user, get_optional_user
 from backend.core.rate_limiter     import check_rate_limit
 from backend.services.reco_service import recommend
+from backend.services.filter_service import apply_diet_filter
 from backend.core.data_io          import (
     load_recipes, load_nutrition_graph, load_score_graph,
     load_ingredients_dict, load_availability_graph,
+    load_astro_nutrition,
 )
+
+# Score engines — migrés de imports inline vers imports module
+from backend.engine.planning_engine.servings  import validate_servings
+from backend.engine.score_engine.reliability  import reliability
+from backend.engine.score_engine.explainer    import explain
+from backend.engine.rule_engine.seasonality   import seasonal_ingredients
+from backend.engine.rule_engine.validation    import validate_recipe
+from backend.engine.rule_engine.carbon        import carbon_score
+from backend.engine.rule_engine.variants      import vegan_variant
+from backend.engine.planning_engine.budget    import estimate_price
+from backend.engine.search_engine.similar     import find_similar_by_id
+from backend.services.scoring_service         import score_recipe as _score_recipe
 
 router = APIRouter(prefix="/recettes", tags=["Recettes"])
 
 
 # ── AJR (Apports Journaliers Recommandés) pour adulte ─────────────────────────
-_AJR = {
-    "protein":    50,    # g
-    "fiber":      25,    # g
-    "iron":       14,    # mg
-    "calcium":    800,   # mg
-    "magnesium":  375,   # mg
-    "potassium":  2000,  # mg
-    "vitamin_c":  80,    # mg
-    "zinc":       10,    # mg
-}
+# Source unique de verite pour les AJR (ANSES/OMS).
+# Ne PAS redefinir localement -- utiliser score_engine.ajr.AJR.
+from backend.engine.score_engine.ajr import AJR as _AJR_FULL
+
+# Sous-ensemble affiche dans _enrich_why (8 nutriments pertinents pour l'UI).
+# Les valeurs viennent de _AJR_FULL -- pas de constantes locales.
+_AJR_DISPLAY_KEYS = ("protein", "fiber", "iron", "calcium", "magnesium", "potassium", "vitamin_c", "zinc")
+_AJR = {k: _AJR_FULL[k] for k in _AJR_DISPLAY_KEYS if k in _AJR_FULL}
 
 _AJR_LABELS = {
     "protein": "Protéines", "fiber": "Fibres", "iron": "Fer",
@@ -189,7 +201,6 @@ def _compute_enrichment(recipe: dict) -> dict:
     out: dict = {}
 
     # ── Nutrition par portion ─────────────────────────────────────────────────
-    from backend.engine.planning_engine.servings import validate_servings   # ✅ migré
     servings = validate_servings(recipe.get("servings", 4))
     ng_total = ng.get(rid, {})
     out["nutrition"] = {
@@ -200,13 +211,11 @@ def _compute_enrichment(recipe: dict) -> dict:
     out["score_data"] = sg.get(rid, {})
 
     # ── Fiabilité nutritionnelle ──────────────────────────────────────────────
-    from backend.engine.score_engine.reliability import reliability          # ✅ migré
     _rel = reliability(recipe)
     out["score_reliability"] = _rel.get("status")
     out["score_coverage"]    = _rel.get("coverage")
 
     # ── Saisonnalité dynamique ────────────────────────────────────────────────
-    from backend.engine.rule_engine.seasonality import seasonal_ingredients  # ✅ migré
     import datetime
     current_month = datetime.date.today().month
     recipe_ings   = {
@@ -226,9 +235,7 @@ def _compute_enrichment(recipe: dict) -> dict:
         out["seasonal_ratio"] = 1.0
 
     # ── Scoring CDC_03c ───────────────────────────────────────────────────────
-    from backend.engine.score_engine.explainer import explain                # ✅ migré
-    from backend.services.scoring_service import score_recipe as _sr
-    _scored = _sr(recipe)
+    _scored = _score_recipe(recipe)
     out["final_score"]     = round(_scored.get("final_score",    _scored.get("adaptive_score", 0)), 2)
     out["quality_score"]   = round(_scored.get("global_score",   0), 2)
     out["relevance_score"] = round(_scored.get("adaptive_score", 0), 2)
@@ -256,7 +263,6 @@ def _compute_enrichment(recipe: dict) -> dict:
     out["ingredients_meta"] = ings_meta
 
     # ── Validation culinaire ──────────────────────────────────────────────────
-    from backend.engine.rule_engine.validation import validate_recipe        # ✅ migré
     _result            = validate_recipe(recipe)
     out["culinary_score"]      = _result.get("score", 10)
     out["culinary_violations"] = [
@@ -265,8 +271,6 @@ def _compute_enrichment(recipe: dict) -> dict:
     ]
 
     # ── Durabilité (CO₂) et prix ──────────────────────────────────────────────
-    from backend.engine.rule_engine.carbon import carbon_score               # ✅ migré
-    from backend.engine.planning_engine.budget import estimate_price         # ✅ migré
     out["carbon_data"] = carbon_score(recipe)
     out["price_data"]  = estimate_price(recipe)
 
@@ -294,14 +298,13 @@ def _apply_filters(recipes: list, diet: str | None, cuisine: str | None,
 
     # ── Régime alimentaire ────────────────────────────────────────────────────
     if diet:
-        from backend.services.filter_service import apply_diet_filter
         result = apply_diet_filter(result, diet)
     if gluten_free:
-        result = [r for r in result if r.get("diet_flags", {}).get("gluten_free")]
+        result = apply_diet_filter(result, "gluten_free")
     if lactose_free:
-        result = [r for r in result if r.get("diet_flags", {}).get("lactose_free")]
+        result = apply_diet_filter(result, "lactose_free")
     if nut_free:
-        result = [r for r in result if r.get("diet_flags", {}).get("nut_free")]
+        result = apply_diet_filter(result, "nut_free")
 
     # ── Health scores ─────────────────────────────────────────────────────────
     if fodmap:
@@ -321,13 +324,7 @@ def _apply_filters(recipes: list, diet: str | None, cuisine: str | None,
 
     # ── Filtres Holistiques (Astrologie & Lune) ───────────────────────────────
     if astro_element or moon_phase:
-        import json
-        from backend.engine.config import DATA_ROOT
-        try:
-            with open(DATA_ROOT / "modules" / "astro_nutrition.json", encoding="utf-8") as f:
-                astro_data = json.load(f).get("ingredients_astro_map", {})
-        except Exception:
-            astro_data = {}
+        astro_data = load_astro_nutrition()
             
         def recipe_matches_astro(r):
             ings = r.get("composition", [])
@@ -457,7 +454,6 @@ def top_recettes(
     check_rate_limit(request, limit=60, window_seconds=60)
     results = recommend("", email=None, limit=limit * 2)
     if diet:
-        from backend.services.filter_service import apply_diet_filter
         results = apply_diet_filter(results, diet)
     return {"total": len(results), "skip": skip, "limit": limit,
             "results": results[skip: skip + limit]}
@@ -472,8 +468,6 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
     """
     check_rate_limit(request, limit=30, window_seconds=60)
     import datetime, hashlib
-
-    from backend.engine.rule_engine.seasonality import seasonal_ingredients   # ✅ migré (fix P0)
 
     recipes   = load_recipes()
     sg        = load_score_graph()
@@ -654,7 +648,6 @@ def vegan_variant_route(recipe_id: str, user: dict = Depends(get_user)):
         raise HTTPException(status_code=404, detail=f"Recette {recipe_id} introuvable")
     if recipe.get("diet_flags", {}).get("vegan"):
         return {"status": "already_vegan", "recipe": recipe, "subs": []}
-    from backend.engine.rule_engine.variants import vegan_variant           # ✅ migré
     try:
         result = vegan_variant(recipe)
     except Exception as e:
@@ -669,9 +662,8 @@ def vegan_variant_route(recipe_id: str, user: dict = Depends(get_user)):
 @router.post("/score/unified")
 def score_unified(payload: UnifiedScoreRequest, user: dict = Depends(get_user)):
     """Score une recette externe selon les 7 dimensions CDC_03c."""
-    from backend.services.scoring_service import score_recipe
-    return score_recipe(payload.recipe, profile=payload.profile,
-                        profile_data=payload.profile_data)
+    return _score_recipe(payload.recipe, profile=payload.profile,
+                         profile_data=payload.profile_data)
 
 
 class FeedbackRequest(BaseModel):
@@ -702,7 +694,6 @@ def similar_recipes(recipe_id: str, request: Request,
                     limit: int = Query(default=5, ge=1, le=20)):
     """Recettes similaires. **Public.**"""
     check_rate_limit(request, limit=60, window_seconds=60)
-    from backend.engine.search_engine.similar import find_similar_by_id     # ✅ migré
     similar = find_similar_by_id(recipe_id, limit=limit)
     if not similar and not any(r["id"] == recipe_id for r in load_recipes()):
         raise HTTPException(status_code=404, detail=f"Recette {recipe_id} introuvable")

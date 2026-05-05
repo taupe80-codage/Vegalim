@@ -236,7 +236,7 @@ def test_ingredient_get_enriched():
     d = load_ingredients_dict()
     av = load_availability_graph()
     ing = d.get("tofu", {})
-    assert ing.get("category") == "plant_protein"
+    assert ing.get("category") == "protein_plant"   # v6 : plant_protein → protein_plant
     assert "tofu" in av or len(av) >= 0
     # Recettes associées
     assoc = [r for r in RECIPES if any(

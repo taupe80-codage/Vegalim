@@ -23,10 +23,13 @@ _HEALTH_GOAL_TO_PROFILE = {
     "quick":    "quick",
 }
 
-def _resolve_profile(profile: str, profile_data: dict) -> str:
+def resolve_profile(profile: str, profile_data: dict) -> str:
     """
     Détermine le profil adaptatif à utiliser.
     Priorité : profil explicite > health_goal > budget > default.
+
+    API publique — utilisée par personalization.py et scoring_service internement.
+    Ne pas préfixer avec _ : cette fonction fait partie du contrat du module.
     """
     if profile and profile != "default" and profile in PROFILES:
         return profile
@@ -36,6 +39,13 @@ def _resolve_profile(profile: str, profile_data: dict) -> str:
     if profile_data.get("budget") == "low":
         return "budget"
     return "default"
+
+
+
+
+# Alias de compatibilité — à supprimer dans une prochaine version majeure.
+# Tout nouveau code doit utiliser resolve_profile().
+_resolve_profile = resolve_profile
 
 
 def _build_context(profile_data: dict) -> dict:
@@ -65,7 +75,7 @@ def score_recipe(recipe: dict, profile: str = "default", profile_data: dict = No
         }
     """
     profile_data = profile_data or {}
-    effective_profile = _resolve_profile(profile, profile_data)
+    effective_profile = resolve_profile(profile, profile_data)
     context           = _build_context(profile_data)
 
     result = core_score_recipe(recipe, profile=effective_profile, context=context)

@@ -15,7 +15,7 @@ DATA_ROOT = Path(__file__).resolve().parents[2] / "backend/data"
 # Chemins fréquemment utilisés
 RECIPES_PATH       = DATA_ROOT / "recipes"     / "recipes.json"
 DICT_PATH          = DATA_ROOT / "ingredients" / "ingredients_dictionary.json"
-NUTRITION_PATH     = DATA_ROOT / "nutrition"   / "processed" / "nutrition_clean.json"   # source CIQUAL/USDA nettoyée
+NUTRITION_PATH     = DATA_ROOT / "nutrition"   / "processed" / "nutrition_v2.json"   # source CIQUAL/USDA nettoyée
 NUTRITION_RAW_PATH = DATA_ROOT / "nutrition"   / "raw"       # sources brutes — ne pas charger au runtime
 FR_TO_EN_PATH      = DATA_ROOT / "ingredients" / "fr_to_en_mapping.json"
 PHYSICAL_PATH      = DATA_ROOT / "ingredients" / "ingredient_physical.json"
@@ -49,3 +49,19 @@ RELIABILITY_MEDIUM = 0.50  # 50-79% → 🟡   <50% → 🔴
 SERVINGS_DEFAULT = 4
 SERVINGS_MIN     = 1
 SERVINGS_MAX     = 20
+# Seuils explainer CDC_03c (score_engine/explainer.py)
+# hi : seuil au-dessus duquel le label positif est affiché
+# lo : seuil en-dessous duquel le label négatif est affiché
+# Si les poids ou l'échelle du scoring changent, ajuster ici uniquement.
+EXPLAINER_HI_NUTRITION     = 7.5
+EXPLAINER_LO_NUTRITION     = 4.0
+EXPLAINER_HI_AUTHENTICITY  = 7.0
+EXPLAINER_HI_ACCESSIBILITY = 7.5
+EXPLAINER_LO_ACCESSIBILITY = 4.0
+EXPLAINER_HI_COST          = 7.5
+EXPLAINER_LO_COST          = 4.0
+EXPLAINER_HI_EASE          = 7.5
+EXPLAINER_LO_EASE          = 4.0
+EXPLAINER_HI_CARBON        = 7.5
+EXPLAINER_LO_CARBON        = 4.0
+EXPLAINER_HI_FLAVOR        = 7.0

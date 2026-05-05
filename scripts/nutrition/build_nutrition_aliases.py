@@ -1,8 +1,8 @@
 """
 build_nutrition_aliases.py
 ──────────────────────────
-Génère nutrition_aliases_v5.json :
-  mapping  { clé_nutrition_v2 → clé_base_ontologie }
+Génère nutrition_aliases_v6.json :
+  mapping  { clé_nutrition_v2 → clé_base_ontologie_v6 }
 
 Stratégies de résolution (dans l'ordre) :
   1. Direct match  : clé existe telle quelle dans l'ontologie
@@ -14,7 +14,7 @@ Usage :
   python scripts/nutrition/build_nutrition_aliases.py
 
 Sortie :
-  backend/data/nutrition/reference/nutrition_aliases_v5.json
+  backend/data/nutrition/reference/nutrition_aliases_v6.json
 """
 
 import json
@@ -46,10 +46,17 @@ def find_file(root: Path, filename: str) -> Path:
         print(f"  ⚠ Plusieurs '{filename}' trouvés, utilisation de : {matches[0]}")
     return matches[0]
 
-ONTO_PATH   = find_file(ROOT, "ontology_v5.json")
+ONTO_PATH   = find_file(ROOT, "ontology_v6.json")
 NUT_PATH    = find_file(ROOT, "nutrition_v2.json")
 MAP_PATH    = find_file(ROOT, "fr_to_en_mapping.json")
-OUT_PATH    = ONTO_PATH.parent / "nutrition_aliases_v5.json"
+OUT_PATH    = ONTO_PATH.parent / "nutrition_aliases_v6.json"
+
+# ── Ingrédients avec données propres dans nutrition_v2 — pas besoin d'alias ──
+# Ils sortiraient sinon dans la liste "unresolved" sans que ce soit une erreur.
+NO_ALIAS_NEEDED: frozenset = frozenset({
+    "acai",   # confidence=1.0, sources CIQUAL+USDA+Phenol-Explorer — données complètes
+    "seitan", # ajouté dans nutrition_v2 (patch v5.5, USDA FDC 174804) — données propres complètes
+})
 
 # ── Surcharges manuelles (cas ambigus / non-résolvables automatiquement) ─────
 # Clés ontologie candidates pour chaque ingrédient no-match.
@@ -57,123 +64,114 @@ OUT_PATH    = ONTO_PATH.parent / "nutrition_aliases_v5.json"
 MANUAL_OVERRIDES_CANDIDATES: dict[str, list[str]] = {
     # Laitiers génériques
     "cream_animal":      ["cream", "creme", "heavy_cream"],
-    "cream_plant":       ["cream", "creme"],
+    "cream_plant":       ["cream_plant"],
     "milk_animal":       ["milk", "lait", "whole_milk"],
-    "milk_plant":        ["milk", "lait"],
+    "milk_plant":        ["milk_plant"],
     "yogurt_animal":     ["yogurt", "yaourt"],
-    "yogurt_plant":      ["yogurt", "yaourt"],
-    "greek_yogurt":      ["greek_yogurt", "yaourt_grec", "yogurt"],
-    "hemp_milk":         ["milk", "lait"],
+    "yogurt_plant":      ["yogurt_plant"],
+    "greek_yogurt":      ["greek_yogurt"],              # auto-ref nutrition_v2 (données propres)
+    "almond_milk":       ["almond_milk"],
 
     # Céréales / légumineuses
-    "lentil":            ["lentils", "lentilles"],
+    "lentil":            ["green_lentil"],
     "fine_bulgur":       ["bulgur", "bulgur_ble", "boulgour"],
     "barley":            ["barley_complete", "barley_perlee", "barley", "orge"],
     "couscous":          ["graine_couscous", "couscous", "semoule_couscous"],
-    "tortillas":         ["tortilla_ble", "tortilla_corn", "tortilla"],
-    "fried_rice":        ["rice_blanc", "riz_blanc", "rice"],
-    "rice_paper":        ["rice_blanc", "riz_blanc", "rice"],
-    "glass_noodles":     ["rice", "rice_blanc"],  # proxy
-    "soybean":           ["soybean", "soja", "beans"],
-    "green_bean":        ["haricots_verts", "haricot_vert", "green_beans", "beans"],
-    "gigante_bean":      ["haricot_blanc", "white_bean", "beans"],
-    "buckwheat_crepe":   ["buckwheat", "farine_sarrasin", "buckwheat_flour"],
-    "edamame":           ["beans"],  # pas de clé edamame dans onto
-    "bean_sprouts":      ["beans", "isolat_soy_beans"],
-    "gnocchi":           ["gnocchi", "potato"],
-    "starch":            ["cornstarch_apple_terre", "corn_flour"],
+    "tortillas":         ["tortilla_corn", "tortilla"],
+    "glass_noodles":     ["glass_noodles"],  
+    "soybean":           ["soybean", "soja"],
+    "green_bean":        ["haricots_verts", "haricot_vert", "green_beans"],
+    "gigante_bean":      ["gigante_bean"],
+    "edamame":           ["edamame"],  
+    "bean_sprouts":      ["bean_sprouts"],
+    "gnocchi":           ["gnocchi", "gnocchi_a_la_pomme_de_terre"],
+    "black_beans":       ["black_beans", "black_bean"],          # auto-ref n2 passe 2
 
     # Noix / graines
     "nut":               ["nuts", "noix"],
     "peanut":            ["peanuts", "arachide"],
     "pecan":             ["walnut_pecan", "noix_pecan"],
     "macadamia":         ["walnut_macadamia", "noix_macadamia"],
-    "nutritional_yeast": ["yeast_beer", "levure_maltee", "levure_biere"],
-    "flax_egg":          ["flaxseed", "graine_lin"],
-    "pea_protein":       ["peas_protein", "proteine_pois", "green_peas"],
+    "nutritional_yeast": ["nutritional_yeast", "yeast_biere_paillettes", "levure_de_biere_en_paillettes"],  # clé exacte onto confirmée
+    "pea_protein":       ["peas_protein", "proteine_pois"],
+    "pumpkin_seeds":     ["pumpkin_seeds"],
 
     # Légumes / tubercules
-    "swiss_chard":       ["chard", "chard_carde", "bette"],
-    "snow_pea":          ["peas_snow_peas", "pois_gourmand", "mange_tout"],
-    "snow_peas":         ["peas_snow_peas", "pois_gourmand"],
-    "sugar_snap_pea":    ["peas_snow_peas", "pois_gourmand"],
-    "green_cabbage":     ["cabbage", "chou_vert", "cabbage_milan_(savoie)"],
-    "red_apple":         ["apple", "pomme"],
-    "green_apple":       ["apple", "pomme"],
-    "green_mango":       ["mango", "mangue"],
-    "green_papaya":      ["papaya", "papaye"],
-    "watercress":        ["lettuce", "laitue"],  # proxy
-    "salsify":           ["salsifis", "salsifis_noir"],
-    "celery_root":       ["celeriac", "celery_rave", "celery_branche"],
-    "bell_pepper_yellow":["yellow_bell_pepper", "poivron_jaune", "peppers"],
-    "bitter_gourd":      ["cucumber", "zucchini"],  # proxy légume vert
-    "kohlrabi":          ["cabbage", "chou_vert", "turnip"],  # proxy
-    "pak_choi":          ["bok_choy", "pak_choi", "chou_pak_choi"],
-    "corn_husk":         ["corn", "mais"],
-    "bamboo_shoots":     ["bambou_pousse", "bambou", "bamboo_shoots"],
-    "hard_boiled_egg":   ["egg", "oeuf_dur", "oeuf"],
+    "swiss_chard":       ["chard", "chard_carde", "bette", "bettes"],
+    "snow_pea":          ["snow_pea"],                               # clé exacte dans l'onto
+    "snow_peas":         ["snow_pea"],                               # clé exacte dans l'onto
+    "green_cabbage":     ["cabbage", "chou_vert"],
+    "red_apple":         ["red_apple", "pomme_gala"],
+    "green_apple":       ["green_apple", "pomme_granny_smith"],
+    "watercress":        ["watercress"],  
+    "salsify":           ["salsify"],               
+    "celery_root":       ["celeriac", "celery_rave"],
+    "bell_pepper_yellow":["bell_pepper_yellow", "bell_pepper_jaune"],  # clés exactes onto confirmées
+    "bitter_gourd":      ["bitter_gourd"],  
+    "kohlrabi":          ["kohlrabi"],  
+    "pak_choi":          ["Pakchoï", "pak_choi", "chou_pak_choi"],
+    "corn_husk":         ["corn_husk"],
+    "bamboo_shoots":     ["bambou_pousse", "bamboo_shoots"],
+    "hard_boiled_egg":   ["oeuf_dur", "hard_boiled_egg"],
 
     # Fruits / sucrants
-    "dried_raisins":     ["raisins", "raisins_secs", "raisin_sec"],
-    "icing_sugar":       ["sugar_blanc", "sucre_glace", "sugars"],
+    "dried_raisins":     ["dried_raisins"],                               # exact key only
+    "icing_sugar":       ["sucre_glace", "icing_sugar"],
     "sugar":             ["sugars", "sucre", "sugar_blanc"],
-    "agave":             ["agave_syrup", "sirop_agave", "agave"],
-    "citrus":            ["lemon", "citron", "orange"],
-    "dragon_fruit":      ["kiwi", "fruits"],  # proxy fruit exotique
+    "agave":             ["agave"],
+    "dragon_fruit":      ["dragon_fruit"],  
     "chestnut":          ["chestnut", "chataigne", "marron"],
-    "lemon_verbena":     ["lemon_verbena", "verveine_citron", "lemon"],
-    "matcha_tea":        ["tea", "the_vert", "green_tea"],  # proxy
+    "lemon_verbena":     ["lemon_verbena", "verveine_citron"],
+    "matcha_tea":        ["matcha", "matcha_tea"],
     "dill":              ["aneth", "dill"],
-    "galangal":          ["galanga", "galangal", "ginger"],
+    "galangal":          ["galanga", "galangal"],
     "caraway":           ["caraway", "carvi"],
-    "aquafaba":          ["aquafaba", "chickpea"],
+    "aquafaba":          ["aquafaba"],
+    "dried_fig":         ["dried_fig"],
 
     # Épices / aromates
-    "marjoram":          ["marjolaine", "marjoram", "oregano"],
-    "lemongrass":        ["citronelle_(lemon_grass)", "citronnelle", "lemongrass"],
-    "lemongrass_stalk":  ["citronelle_(lemon_grass)", "citronnelle"],
-    "ground_coriander":  ["coriander", "coriandre"],
+    "marjoram":          ["marjolaine", "marjoram"],
+    "lemongrass":        ["citronelle_(lemon_grass)", "citronnelle", "lemongrass", "lemon_grass", "lemon_grass_(citronella)"],
+    "lemongrass_stalk":  ["lemongrass", "lemon_grass_(citronella)"], # clés exactes dans l'onto
+    "ground_coriander":  ["coriander"],                        # coriandre = clé FR → pas onto
     "ground_cumin":      ["cumin"],
     "turmeric_fresh":    ["turmeric", "curcuma"],
-    "smoked_paprika":    ["smoked_paprika", "paprika"],
+    "smoked_paprika":    ["smoked_paprika"],
     "goji_berry":        ["baie_goji", "goji_berry"],
-    "star_anise":        ["spices", "anise"],  # proxy épice
-    "kaffir_lime_leaf":  ["lemon", "lime"],  # proxy aromatique
+    "star_anise":        ["star_anise", "anis_etoile"], 
+    "kaffir_lime_leaf":  ["kaffir_lime_leaf", "combava"], 
     "curry":             ["curry_powder", "curry_en_poudre", "curry"],
-    "curry_leaves":      ["curry", "curry_powder", "spices"],  # proxy
-    "curry_paste":       ["curry", "curry_powder"],  # proxy
-    "garam_masala":      ["spices", "curry_powder"],  # proxy mélange épices
+    "curry_leaves":      ["curry_leaves"],  
+    "curry_paste":       ["curry_paste"],  
+    "garam_masala":      ["garam_masala"],  
     "nutmeg_whole":      ["nutmeg", "noix_muscade", "muscade"],
-    "sumac":             ["lemon", "vinegar"],  # proxy acidulé
-    "chili":             ["chili", "piment", "chili_powder"],
-    "chili_paste":       ["chili", "piment", "peppers"],  # proxy
-    "liquid_smoke":      ["vinegar", "tamari"],  # proxy aromatique
-    "ras_el_hanout":     ["spices", "garam_masala", "curry_powder"],  # proxy
+    "chili":             ["chili", "chili_powder"],            # piment = clé FR (→ chili), pas clé onto
+    "liquid_smoke":      ["liquid_smoke"],  
+    "ras_el_hanout":     ["ras_el_hanout"],  
+    "sumac":             ["sumac"],
+
 
     # Produits transformés / condiments
-    "tahini":            ["tahin", "tahini"],
     "mozzarella":        ["cheese_mozzarella", "mozzarella_milk_vache", "mozzarella"],
     "yeast":             ["yeast_boulanger", "levure_boulangere", "yeast"],
     "capers":            ["caper", "capre"],
     "lupine":            ["lupin", "lupins"],
     "corn_starch":       ["cornstarch_apple_terre", "corn_flour"],
-    "tapioca_starch":    ["tapioca", "starch_corn", "starch_rice"],
-    "vine_leaves":       ["lettuce", "spinach"],  # proxy feuille
-    "umeboshi_plum":     ["plum", "prune"],
-    "thai_basil":        ["basil", "thai_basil"],
-    "fresh_coriander":   ["coriander", "coriandre"],
-    "mayonnaise":        ["mayonnaise", "mayonnaise_70%_mg", "mayonnaise_allegee"],
-    "halloumi":          ["cheese", "fromage", "feta"],  # proxy
-    "pastry":            ["filo_pastry", "pate_brisee", "pate_feuilletee"],
+    "tapioca_starch":    ["tapioca", "tapioca_starch" ],
+    "vine_leaves":       ["vine_leaves"],  
+    "umeboshi_plum":     ["umeboshi_plum"],
+    "thai_basil":        ["thai_basil", "basilic_thai"],
+    "fresh_coriander":   ["fresh_coriander", "coriander"],     # coriandre = clé FR, fresh_coriander = onto direct
+    "halloumi":          ["halloumi"],  
+    "pastry":            ["pastry"],
     "tamarind_paste":    ["tamarind", "tamarind_paste", "pate_tamarin"],
-    "coconut_flesh":     ["coconut", "noix_coco", "pulpe_coco"],
-    "maca":              ["oats", "wheat_germ"],  # proxy poudre nutritive
-    "stevia":            ["sugars", "sugar_blanc"],  # proxy sucrant
+    "coconut_flesh":     ["coconut_flesh"],                          # clé identique dans l'onto (auto-résolvable)
+    "maca":              ["maca"],  
+    "stevia":            ["stevia"],  
     "kefir_water":       ["kefir_water", "kefir"],
-    "wheat_germ":        ["wheat_germ", "germe_ble", "son_ble"],
-    "wheat_grass":       ["wheat_grass", "ble"],
-    "paneer":            ["cheese", "fromage", "ricotta"],  # proxy
-    "pesto":             ["basil", "basilic"],  # proxy
+    "wheat_germ":        ["wheat_germ", "germe_ble"],
+    "wheat_grass":       ["wheat_grass"],                   
+    "paneer":            ["paneer"],
 
     # ── Proxies pour les 26 non-résolus persistants ──────────────────────────
     # Ces ingrédients sont absents de CIQUAL/USDA/CNF ; on leur assigne
@@ -186,77 +184,210 @@ MANUAL_OVERRIDES_CANDIDATES: dict[str, list[str]] = {
     # Clés confirmées présentes dans l'ontologie (déduites des overrides originaux valides) :
     #   yogurt, cream, milk, egg, lemon, vinegar, tamari, basil, oregano, spices,
     #   cabbage, chou_vert, spinach, soybean, soja, beans, oats, buckwheat,
-    #   sugars, sugar_blanc, corn, mais, kiwi, chili, piment, chili_powder,
+    #   sugars, sugar_blanc, corn, mais, kiwi, chili, chili_powder,
     #   tapioca, cornstarch_apple_terre, corn_flour, pate_brisee, filo_pastry,
     #   peanuts, lupin, aquafaba, chickpea, ginger, cumin, turmeric, paprika,
-    #   coriander, flaxseed, green_peas, peas_snow_peas, rice, rice_blanc,
+    #   coriander, sesame, clove, egg, soy_sauce, flaxseed, green_peas,
+    #   peas_snow_peas, rice, rice_blanc,
     #   apple, mango, lentils, couscous, graine_couscous, raisins
 
     # Laitiers / fermentés
-    "kashk":               ["yogurt", "cream", "milk"],                    # lactosérum fermenté persan (yogurt en tête, clé onto confirmée)
-    "baobab":              ["kiwi", "lemon", "apple"],                     # poudre de fruit exotique
+    "kashk":               ["kashk"],                   
+    "baobab":              ["baobab"],                    
 
     # Bouillon / liquides
     # broth = liquide très dilué ; proxy le moins calorique disponible dans onto
-    "broth":               ["lemon", "vinegar", "spinach"],                # bouillon (proxy: ingrédient très bas en cal)
-    "bechamel":            ["milk", "cream", "oats"],                      # sauce beurre/lait/farine (milk en tête, confirmé)
+    "broth":               ["broth"],               
 
     # Boulangerie / pâtes
-    "crackers":            ["oats", "buckwheat", "cornstarch_apple_terre"],# biscuit sec (céréale de base confirmée)
-    "empanada_dough":      ["pate_brisee", "filo_pastry", "oats"],        # pâte à tarte
-    "gyoza_wrapper":       ["oats", "buckwheat", "egg"],                   # feuille de pâte fine (oats/egg confirmés)
-    "reshteh_noodles":     ["oats", "buckwheat", "lentils"],               # nouilles perses (céréale + légumineuse)
-    "spaetzle":            ["egg", "oats", "buckwheat"],                   # pâtes alsaciennes (egg confirmé en tête)
+    "crackers":            ["crackers"],
+    "gyoza_wrapper":       ["gyoza_wrapper"],                  
+    "reshteh_noodles":     ["reshteh_noodles"],              
+    "spaetzle":            ["spaetzle"],                 
 
     # Condiments / sauces fermentées
-    "fermented_bean_paste":["soybean", "soja", "beans"],                   # doenjang / tianmianjiang
-    "gochujang":           ["chili", "piment", "chili_powder"],            # pâte piment fermentée
-    "mirin":               ["sugar_blanc", "sugars", "rice"],              # alcool de riz sucré
-    "ponzu":               ["lemon", "tamari", "vinegar"],                 # sauce citrus-soja (soy_sauce → tamari confirmé)
-    "sriracha":            ["chili", "piment", "chili_powder"],            # sauce piment
-    "worcestershire_vegan":["vinegar", "tamari", "lemon"],                 # sauce umami (soy_sauce → tamari confirmé)
-    "za_atar":             ["oregano", "spices", "coriander"],             # mélange thym/sésame/sumac (thyme incertain → oregano confirmé)
+    "fermented_bean_paste":["fermented_bean_paste"],                
+    "mirin":               ["mirin"],             
+    "ponzu":               ["ponzu"],                 
+    "sriracha":            ["sriracha"],            
+    "worcestershire_vegan":["worcestershire_vegan"],                
+    "za_atar":             ["za_atar"],           
 
     # Fermentés / vivants
-    "gundruk":             ["spinach", "cabbage", "chou_vert"],            # légume fermenté népalais
-    "kimchi":              ["cabbage", "chou_vert"],                       # chou fermenté coréen
-    "natto":               ["soybean", "soja", "beans"],                   # soja fermenté japonais
-    "sauerkraut":          ["cabbage", "chou_vert"],                       # choucroute
+    "gundruk":             ["gundruk"],           
+    "kimchi":              ["kimchi"],                       
+    "sauerkraut":          ["sauerkraut"],                      
 
     # Protéines végétales transformées
-    "soy_pave":            ["soybean", "soja", "beans"],                   # pavé de soja (tofu incertain → soybean confirmé)
-    "tvp":                 ["isolat_soy_beans", "soybean", "soja"],        # protéine de soja texturée
+    "soy_pave":            ["soy_pave"],                   
+    "tvp":                 ["tvp"],        
 
     # Herbes / agrumes exotiques
-    "shiso":               ["basil", "coriander", "oregano"],              # basilic japonais (herbs incertain → oregano confirmé)
-    "yuzu":                ["lemon", "citron", "apple"],                   # agrume japonais (lime incertain → apple confirmé)
+    "shiso":               ["shiso"],              
+    "yuzu":                ["yuzu"],                   
 
     # Gélifiants / édulcorants
     # vegan_gelatin = agar-agar (algue) — aucun proxy direct dans onto CIQUAL/USDA
     # Proxy nutritionnel : tapioca (fécule neutre, calories proches ~350 kcal/100g sec)
-    "vegan_gelatin":       ["tapioca", "cornstarch_apple_terre", "corn_flour"], # agar proxy (agar/seaweed absents de onto)
-    "xylitol":             ["sugars", "sugar_blanc"],                      # polyol sucrant
+    "vegan_gelatin":       ["vegan_gelatin"], 
+    "xylitol":             ["xylitol"],                   
 
     # Maïs transformé
-    "hominy":              ["corn", "mais"],                               # maïs nixtamalisé
+    "hominy":              ["hominy"],                             
+
+    # ── V13 — Résolution des 6 no-match persistants ───────────────────────────
+    # bran/chlorella/coconut/comte/dill/dried_raisins/jalapeno/nutritional_yeast/
+    # pastry/sorghum/sugar_snap_pea → couverts par CIQUAL_ID_OVERRIDES (validator_v13)
+    "cheese_curds":        ["cheese_curds"],  
+    "chrysanthemum_greens":["chrysanthemum_greens"],                      
+    "coconut_aminos":      ["coconut_aminos"],                    
+    "tropical_fruit":      ["tropical_fruit"],                       
+    "water":               ["water", "eau"],                                     # clé propre — eau pure
 
     # Divers
-    "molasses":            ["sugars", "sugar_blanc", "raisins"],           # mélasse (honey incertain → raisins confirmé)
+    "molasses":            ["molasses"],
+
+    # ── V14 — Résolution des 3 no-match persistants ───────────────────────
+    # Ingrédients absents de l'onto CIQUAL/USDA/CNF → auto-référence nutrition_v2
+    "green_papaya":        ["green_papaya"],    # papaye fraîche (USDA #169926)
+    "hemp_milk":           ["hemp_milk"],       # lait de chanvre (brand avg)
+    "sugar_snap_pea":      ["sugar_snap_pea"],  # pois gourmand (USDA #169957)
+
+    # ══════════════════════════════════════════════════════════════════════
+    # ALIASES RECETTES — audit 2026-04-27
+    # Ingrédients recettes sans match → clés nutrition_v2 existantes
+    # ══════════════════════════════════════════════════════════════════════
+
+    # ── Huiles ───────────────────────────────────────────────────────────
+
+    # ── Laits végétaux / crèmes ───────────────────────────────────────────
+    "almond_milk":         ["almond_milk"],
+
+    # ── Produits laitiers ─────────────────────────────────────────────────
+    "milk":                ["milk", "lait"],                          # milk_animal absent → clés onto directes
+    "mascarpone":          ["mascarpone"],
+
+    # ── Beurre / matière grasse ───────────────────────────────────────────
+
+    # ── Sucres ────────────────────────────────────────────────────────────
+
+    # ── Légumineuses ──────────────────────────────────────────────────────
+    "red_lentils":         ["red_lentil"],
+    "dried_chickpeas":     ["chickpea"],
+    "flageolet_bean":      ["bean_flageolet"],                       # match exact
+    "peas":                ["peas"],       
+
+    # ── Légumes ───────────────────────────────────────────────────────────
+    "shallot":             ["shallot"],
+    "butternut_squash":    ["butternut"],
+    "small_eggplant":      ["eggplant"],
+    "lamb_lettuce":        ["lamb_lettuce"],
+    "chicory":           ["chicorée", "chicory"],
+
+    # ── Graines ───────────────────────────────────────────────────────────
+    "pumpkin_seeds":       ["pumpkin_seeds"],
+    "sunflower_seeds":     ["sunflower_seeds"],
+    "hemp_seeds":          ["hemp_seeds"],
+
+    # ── Tofu ──────────────────────────────────────────────────────────────
+
+    # ── Farines ───────────────────────────────────────────────────────────
+
+    # ── Vinaigres ─────────────────────────────────────────────────────────
+    "balsamic_vinegar":    ["balsamic_vinegar"],
+
+    # ── Chocolat ──────────────────────────────────────────────────────────
+    "dark_chocolate":      ["dark_chocolate"],
+
+    # ── Agrumes / jus ─────────────────────────────────────────────────────
+    "lime_juice":          ["lime_juice", "lime"],          
+    "orange_juice":        ["orange_juice", "orange"],     
+
+    # ── Fruits / dérivés ──────────────────────────────────────────────────
+    "plum":                ["prune"],
+    "rhubarb":             ["rhubarb"],
+    "candied_fruit":       ["candied_fruit"],
+
+    # ── Pains / boulangerie ───────────────────────────────────────────────
+    "bagel":               ["bagel"],
+
+    # ── Riz / pâtes ───────────────────────────────────────────────────────
+
+    # ── Condiments / sauces ───────────────────────────────────────────────
+
+    # ── Algues ────────────────────────────────────────────────────────────
+
+    # ── Produits fermentés / spéciaux ─────────────────────────────────────
+
+    # ── Boissons / alcools (utilisés en cuisson) ──────────────────────────
+    "marsala":             ["marsala"],
+    "cognac":              ["cognac"],
+
+    # ── Divers recettes sucrées ───────────────────────────────────────────
+
+    # ── Ingrédients dont les clés canoniques ont été corrigées en v3.3 ────────
+    # fr_to_en v3.3 : cloves→clove, coriander_ground→coriander,
+    #                 oeufs_dur→egg, sesame_seeds→sesame, +soy_sauce
+    # Garantir la résolution directe même si la stratégie 2 ne les atteint pas.
+    "soy_sauce":         ["soy_sauce", "tamari"],              # canonique onto ; tamari = fallback sans gluten
+    "egg":               ["egg", "oeuf"],                      # canonique onto ; oeufs_dur était stale
+    "clove":             ["clove"],                            # cloves (pluriel) était stale
+    "sesame":            ["sesame", "sesame_seed"],            # sesame_seeds/sesame_seed étaient stale
+
+
+    # Clés réelles dans l'onto, jamais atteintes par les stratégies auto :
+    "chlorella":           ["chlorella_(chlorella)"],                    # algue unicellulaire, clé verbatim
+    "citrus":            ["citrus"],                          # clé propre nutrition_v2
+    "coconut":             ["coconut_flesh"],                            # noix de coco chair
+    "bran":                ["sorghum_bran"],                             # son (coupé par tri alpha dans fuzzy)
+    "pastry":              ["phyllo_pastry"],                            # pâte feuilletée fine
+    "nutritional_yeast":   ["nutritional_yeast"],                       # clé exacte onto confirmée
+    "jalapeno":            ["jalapeno"],                              # piment frais → proxy piment séché
+    "comte":               ["comte", "Comté"],                                  # pâte pressée cuite, même famille
+
+    # Proxies approchés (ingrédient absent de l'onto CIQUAL/USDA/CNF) :
+    "attieke":             ["attieke"],               # semoule de manioc fermentée
+    "dill":                ["dill"],                      # herbe aromatique verte (aneth absent)
+    "water":               ["water"],                   # eau pure absente → eau minérale
 }
 
 
-def build_manual_overrides(candidates: dict[str, list[str]], onto_keys: set[str]) -> dict[str, str]:
-    """Résout chaque candidat en prenant la première clé qui existe dans l'ontologie."""
+def build_manual_overrides(
+    candidates: dict[str, list[str]],
+    onto_keys: set[str],
+    nut_keys: set | None = None,
+) -> dict[str, str]:
+    """Résout chaque candidat en trois passes :
+      1. Première candidate présente dans l'ontologie (clé onto directe).
+      2. Fallback : si l'ingrédient lui-même existe dans nutrition_v2
+         → auto-référence (clé → elle-même). Cas typique : base_recipes,
+         ingrédients recettes absents de l'onto CIQUAL/USDA/CNF mais présents
+         dans nutrition_v2 avec leurs propres données.
+      3. Si aucune des deux → invalide (loggé mais non bloquant).
+    """
+    nut_keys = nut_keys or set()
     resolved = {}
     invalid  = []
+    autoref  = []
     for ing, options in candidates.items():
-        match = next((o for o in options if o in onto_keys), None)
+        # Passe 1 : onto
+        match = next((o for o in options if o.lower() in onto_keys), None)
+        if match:
+            match = match.lower()  # retourner la clé normalisée
         if match:
             resolved[ing] = match
-        else:
-            invalid.append((ing, options))
+            continue
+        # Passe 2 : auto-référence via nutrition_v2
+        if ing in nut_keys:
+            resolved[ing] = ing
+            autoref.append(ing)
+            continue
+        # Passe 3 : invalide
+        invalid.append((ing, options))
+    if autoref:
+        print(f"  ✓ {len(autoref)} auto-références nutrition_v2 (absent onto) :", ', '.join(autoref[:5]) + ('…' if len(autoref) > 5 else ''))
     if invalid:
-        print(f"  ⚠ {len(invalid)} MANUAL_OVERRIDES sans cible valide dans l'ontologie :")
+        print(f"  ⚠ {len(invalid)} MANUAL_OVERRIDES sans cible valide dans l'ontologie ni nutrition_v2 :")
         for ing, opts in invalid:
             print(f"    {ing:30} candidates={opts}")
     return resolved
@@ -278,19 +409,37 @@ def build_en_to_fr(fr_to_en: dict) -> dict[str, list[str]]:
 
 
 def get_ontology_keys(onto: dict) -> set[str]:
-    keys = set()
-    for entry in onto.get("bases", {}).values():
-        # format attendu : {"base_key": ..., "variants": {...}}
-        # ou liste d'objets avec "base_key"
-        pass
-    # Fallback : si onto est un dict plat keyed par base_key
-    if isinstance(onto, dict):
-        # Essai structure {"bases": {"lentils": {...}, ...}}
-        if "bases" in onto:
-            keys.update(onto["bases"].keys())
-        else:
-            keys.update(onto.keys())
-    return keys
+    """
+    Extrait les clés bases de l'ontologie.
+
+    Supporte plusieurs structures :
+      - {"ingredients": {"apple": {...}, ...}}   ← ontology_v6.json (standard)
+      - {"bases": {"apple": {...}, ...}}          ← format alternatif
+      - {"reference": {"apple": {...}, ...}}      ← format legacy
+      - {"apple": {...}, ...}                     ← dict plat (fallback)
+    """
+    if not isinstance(onto, dict):
+        return set()
+
+    # Clés candidates dans l'ordre de priorité
+    # "ingredients" est la clé standard de ontology_v6.json
+    for section_key in ("ingredients", "bases", "reference", "ontology"):
+        section = onto.get(section_key)
+        if isinstance(section, dict) and len(section) > 20:
+            # Heuristique : une section avec >20 clés est le vrai index ingrédients
+            return {k.lower() for k in section.keys()}
+
+    # Fallback dict plat : onto est directement indexé par base_key
+    # Filtrer les clés de métadonnées connues
+    _META_KEYS = {
+        "generated_at", "schema_version", "version", "total_bases",
+        "total_variants", "aliases", "aliases_count", "taxonomy_coverage",
+        "field_coverage", "new_fields_v6", "base_recipe_computed_keys",
+        "base_recipe_dual_keys", "sources", "source_weights",
+        "reference", "ontology", "ingredients", "bases", "_meta",
+    }
+    flat_keys = {k.lower() for k in onto.keys() if k not in _META_KEYS}
+    return flat_keys
 
 
 def normalize(key: str) -> str:
@@ -552,22 +701,17 @@ def resolve_via_wikidata(
 
 
 def main():
-    print("─── build_nutrition_aliases ───")
+    print("─── build_nutrition_aliases ─── (version corrigée)")
 
     onto    = load_json(ONTO_PATH)
     nut     = load_json(NUT_PATH)
     mapping = load_json(MAP_PATH)
 
-    fr_mapping = mapping.get("mapping", mapping)  # support format avec/sans wrapper
+    fr_mapping = mapping.get("mapping", mapping)
     en_to_fr   = build_en_to_fr(fr_mapping)
     onto_keys  = get_ontology_keys(onto)
 
-    global MANUAL_OVERRIDES
-    MANUAL_OVERRIDES = build_manual_overrides(MANUAL_OVERRIDES_CANDIDATES, onto_keys)
-    print(f"  Overrides manuels valides : {len(MANUAL_OVERRIDES)}")
-
     print(f"  Ontologie  : {len(onto_keys)} clés bases")
-    # print provisoire, mis à jour après extraction
     print(f"  FR→EN map  : {len(fr_mapping)} entrées")
 
     aliases: dict[str, str] = {}
@@ -585,6 +729,19 @@ def main():
         "changelog",        # dict {"v3.0": [...], "v3.1": [...]} — ses clés ne sont PAS des ingrédients
         "promoted_date", "promoted_from", "previous_version",
         "aliases", "unresolved", "total", "_meta",
+        # ── Artefacts de log/patch qui fuient dans les clés ingrédients ───
+        # Ces champs apparaissent dans nutrition_v2 comme artefacts du pipeline
+        # (scripts de patch qui écrivent des clés metadata au niveau ingrédients).
+        "introduced_by_patch", "net_corrections_applied",
+        "notes", "preexisting_inconsistencies",
+        "patch", "corrections", "log", "stats",
+        # ── V13 : clés du bloc _validation (fuient dans les ingredients) ───
+        # _validation = {"date": ..., "patch": ..., "net_corrections_applied": ...,
+        #               "preexisting_inconsistencies": ..., "introduced_by_patch": ...}
+        # Ces chaînes apparaissent dans nut_keys quand collect_keys itère _validation.
+        "date", "net", "preexisting", "introduced",
+        # ── Recettes composées sans données nutritionnelles propres ──────
+        "falafel",          # recette calculée depuis composition
     }
     nut_keys: list[str] = []
 
@@ -634,7 +791,28 @@ def main():
         if k not in seen: seen.add(k); nut_keys_dedup.append(k)
     nut_keys = nut_keys_dedup
 
+    # ── V13 : purger les artefacts _validation qui passent à travers METADATA_KEYS ──
+    # Ces chaînes sont les VALEURS du dict _validation (date, patch, stats…)
+    # qui se retrouvent dans nut_keys quand la structure est itérée.
+    _VALIDATION_ARTIFACTS = {
+        "introduced_by_patch", "net_corrections_applied",
+        "preexisting_inconsistencies", "notes", "patch", "date",
+        "stats", "corrections", "log",
+    }
+    nut_keys = [k for k in nut_keys if k not in _VALIDATION_ARTIFACTS]
+
+    # Exclure les ingrédients avec données propres dans nutrition_v2 (pas besoin d'alias)
+    nut_keys = [k for k in nut_keys if k not in NO_ALIAS_NEEDED]
+
     print(f"  Nutrition  : {len(nut_keys)} ingrédients")
+
+    # Résolution des MANUAL_OVERRIDES maintenant que nut_keys est disponible
+    # (passe 2 : auto-référence pour les ingrédients absents de l'onto mais présents dans nutrition_v2)
+    global MANUAL_OVERRIDES
+    MANUAL_OVERRIDES = build_manual_overrides(
+        MANUAL_OVERRIDES_CANDIDATES, onto_keys, nut_keys=set(nut_keys)
+    )
+    print(f"  Overrides manuels valides : {len(MANUAL_OVERRIDES)}")
 
     for key in nut_keys:
         key_n = normalize(key)
@@ -646,41 +824,21 @@ def main():
 
         # Priorité 2 : résolution automatique
         resolved = resolve_key(key_n, onto_keys, en_to_fr)
-        if resolved and resolved != key_n:   # inutile d'aliaser vers soi-même
-            aliases[key_n] = resolved
+        if resolved:
+            aliases[key_n] = resolved   # inclut les direct-matches onto (key==resolved)
         elif resolved is None:
             unresolved.append(key_n)
 
-    # ── Stratégie 5 : Open Food Facts (fallback réseau) ─────────────────────
-    if not _REQUESTS_OK:
-        print("\n  ⚠ 'requests' non installé — stratégies OFF + Wikidata ignorées")
-        print("    → pip install requests")
-    else:
-        still_unresolved: list[str] = []
-        off_resolved = 0
-        print(f"\n  Stratégie 5 — Open Food Facts ({len(unresolved)} no-match) …")
-        for key_n in unresolved:
-            resolved = resolve_via_off(key_n, onto_keys, en_to_fr)
-            if resolved and resolved != key_n:
-                aliases[key_n] = resolved
-                off_resolved += 1
-            else:
-                still_unresolved.append(key_n)
-        print(f"    Résolus via OFF      : {off_resolved}")
-
-        # ── Stratégie 6 : Wikidata (dernier recours) ─────────────────────────
-        wd_resolved = 0
-        print(f"  Stratégie 6 — Wikidata ({len(still_unresolved)} no-match) …")
-        truly_unresolved: list[str] = []
-        for key_n in still_unresolved:
-            resolved = resolve_via_wikidata(key_n, onto_keys, en_to_fr)
-            if resolved and resolved != key_n:
-                aliases[key_n] = resolved
-                wd_resolved += 1
-            else:
-                truly_unresolved.append(key_n)
-        print(f"    Résolus via Wikidata : {wd_resolved}")
-        unresolved = truly_unresolved
+    # ── Stratégies 5-6 : OFF + Wikidata — DÉSACTIVÉES ───────────────────────
+    # Ces APIs externes (Open Food Facts, Wikidata) génèrent des timeouts
+    # (503/429) et bloquent le pipeline. La résolution locale (stratégies 1-4)
+    # couvre tous les cas actionables. Les no-match résiduels sont des ingrédients
+    # P3 (sans données dans les raws) qui nécessitent une création manuelle.
+    if unresolved:
+        print(f"\n  Stratégies 5-6 (OFF/Wikidata) : désactivées — {len(unresolved)} no-match résiduels")
+        print(f"  Ces ingrédients sont en P3 (aucune donnée dans les raws CIQUAL/USDA/CNF).")
+        print(f"  Ajouter leurs données manuellement dans nutrition_v2.json si nécessaire.")
+        print(f"  Pour forcer la résolution réseau : python build_nutrition_aliases.py --online")
 
     # Résumé
     print(f"\n  Aliases générés : {len(aliases)}")
@@ -690,19 +848,38 @@ def main():
         for u in sorted(unresolved):
             print(f"    {u}")
 
+    # ── PRESERVE SECTIONS — ne pas écraser les sections gérées manuellement ─────
+    # recipe_aliases, base_recipe_aliases, base_recipe_excluded
+    # sont gérés par des scripts dédiés et ne doivent pas être écrasés ici.
+    existing_protected = {}
+    if OUT_PATH.exists():
+        try:
+            _existing = json.loads(OUT_PATH.read_text(encoding="utf-8"))
+            for _section in ("recipe_aliases", "recipe_aliases_meta",
+                             "base_recipe_aliases", "base_recipe_aliases_meta",
+                             "base_recipe_excluded"):
+                if _section in _existing:
+                    existing_protected[_section] = _existing[_section]
+        except Exception:
+            pass
+
     # Écriture
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     out = {
-        "version": "v5",
-        "description": "Alias nutrition_v2 keys → ontology_v5 base keys",
+        "version": "v6",
+        "description": "Alias nutrition_v2 keys → ontology_v6 base keys",
         "total": len(aliases),
         "unresolved": sorted(unresolved),
-        "aliases": dict(sorted(aliases.items()))
+        "aliases": dict(sorted(aliases.items())),
+        **existing_protected,
     }
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
+    preserved = list(existing_protected.keys())
     print(f"\n  ✔ {OUT_PATH}")
+    if preserved:
+        print(f"  ✔ Sections préservées : {preserved}")
 
 
 if __name__ == "__main__":

@@ -16,14 +16,18 @@ Migration depuis l'ancien format booléen :
   vegan         → tags: ["vegan"]
 """
 import logging
-from functools import lru_cache
 from pathlib import Path
 
 from backend.core.data_io import load_json
+from backend.core.data_io import _MtimeCache
+from backend.engine.config import DATA_ROOT
 
 logger = logging.getLogger(__name__)
 
-_GRAPH_PATH = Path(__file__).resolve().parent.parent / "data" / "graphs" / "ingredient_relation_graph.json"
+# Utilise DATA_ROOT (défini dans config.py) plutôt qu'un chemin relatif à __file__.
+# L'ancien calcul (parent.parent / "data") pointait vers backend/engine/data/graphs/
+# après la migration flat → sous-package, au lieu de backend/data/graphs/.
+_GRAPH_PATH = DATA_ROOT / "graphs" / "ingredient_relation_graph.json"
 
 # Pondérations par bénéfice selon le profil
 _BENEFIT_SCORE = {
@@ -35,12 +39,18 @@ _RISK_PENALTY = {
 }
 
 
-@lru_cache(maxsize=1)
+_graph_cache = _MtimeCache("graph_engine")
+
+
 def _load_graph() -> dict:
-    """Chargement immutable via data_io — sécurisé et mis en cache."""
-    data = load_json(_GRAPH_PATH, default={})
-    # Copie profonde pour protéger le cache
-    return {k: dict(v) for k, v in data.items()}
+    """Chargement via _MtimeCache — rechargé automatiquement si le graphe est modifié."""
+    return _graph_cache.get(
+        _GRAPH_PATH,
+        lambda: {k: dict(v) for k, v in load_json(_GRAPH_PATH, default={}).items()},
+    )
+
+# Compatibilité admin / tests
+_load_graph.cache_clear = _graph_cache.cache_clear  # type: ignore[attr-defined]
 
 
 def compute_graph_score(ingredients: list[str], profile: dict | None = None) -> float:

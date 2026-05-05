@@ -63,6 +63,18 @@ DEFAULT_DICT = Path("backend/data/ingredients/ingredients_dictionary.json")
 PROXY_FIELDS = {"health_score", "nova_group", "data_field_type"}
 
 # ─────────────────────────────────────────────────────────────────
+# Ingrédients forcés à rester "unresolved" — aucune résolution
+# automatique ni override ne peut écraser ces entrées.
+# Utiliser quand le proxy le plus proche est nutritionnellement
+# incorrect et qu'aucune variante adéquate n'existe dans nutrition_v2.
+# Pour chaque entrée, documenter la raison et la cible future.
+# ─────────────────────────────────────────────────────────────────
+NK_FORCE_UNRESOLVED: set[str] = {
+    "kashk",          # lactosérum fermenté iranien — miso/white est un proxy incorrect
+                      # → créer kashk/default dans nutrition_v2 (~50kcal, riche Ca+protéines)
+}
+
+# ─────────────────────────────────────────────────────────────────
 # Overrides manuels : dict_id → "base/variant"
 # Cas ambigus ou ombrelles non inférables automatiquement.
 # À compléter au fur et à mesure des nouveaux ingrédients.
@@ -87,6 +99,62 @@ MANUAL_NK_OVERRIDES: dict[str, str] = {
     "sunflower_oil":        "oil/sunflower",
     "fromage_blanc":        "fromage_blanc/default",
     "doubanjiang_paste":    "fermented_bean_paste/default",
+
+    # ── Non résolus identifiés run 2026-05-01 (sync log) ─────────────────
+    "huile_friture":        "oil/default",       # huile de friture générique
+    "nouilles_ramen":       "pasta/default",     # ramen = blé + eau, proxy pasta
+    "feuilles_de_taro":     "taro/default",      # feuilles consommées comme légume
+    "taro_leaf":            "taro/default",      # idem en anglais
+    "wild_chicory":         "chicory/default",   # chicorée sauvage
+    "yellow_lentil":        "lentil/default",    # lentille jaune ≈ lentille générique
+    "tuscan_bread":         "bread/default",     # pain toscan, proxy pain blanc
+    "preserved_lemon":      "citrus/lemon",      # citron confit, proxy citron
+    "dried_seaweed":        "seaweed/wakame",    # algue séchée générique, proxy wakame
+    "palm_sugar":           "sugar/default",     # sucre de palme ~ sucre générique (clé n2)
+    # "legume" : catégorie ombrelle sans NK possible — laissé non résolu
+
+    # ── V13 — Non résolus identifiés run 2026-05-02 ───────────────────────────
+    # Agrumes dérivés → variante citrus existante
+    "lemon_zest":           "citrus/lemon",
+    "lime_juice":           "citrus/lime",
+    "orange_juice":         "citrus/orange",
+    "orange_blossom_water": "citrus/orange",
+    "rose_water":           "water/default",
+    # Fruits dérivés / superfoods
+    "acai_puree":           "acai/default",
+    "candied_fruit":        "citrus/lemon",
+    # Thés / infusions
+    "matcha":               "matcha_tea/default",
+    "matcha_tea":           "matcha_tea/default",
+    "green_tea":            "green_tea/default",
+    # Pâtes / boulangerie
+    "pie_dough":            "pastry/default",
+    "gnocchi_vegan":        "pasta/noodles",
+    "soba_noodles":         "pasta/rice_noodles",
+    "wide_rice_noodles":    "pasta/rice_noodles",
+    # Piments / épices
+    "korean_chili_pepper":  "chili/default",
+    "gochugaru":            "chili/default",
+    # Légumineuses (sous-types → base générique)
+    "red_bean":             "bean/default",
+    "black_eyed_pea":       "bean/default",
+    "dried_peas":           "bean/default",
+    "dried_fava_bean":      "bean/fava",
+    "flageolet_bean":       "bean/default",
+    "peas":                 "bean/default",
+    "puy_lentil":           "lentil/default",
+    "brown_lentils":        "lentil/default",
+    "yellow_lentils":       "lentil/default",
+    "red_lentils":          "lentil/default",
+    "lentil":               "lentil/default",
+    # Laitiers / fermentés dérivés
+    "coconut_yogurt":       "yogurt_plant/default",
+    "red_bean_paste":       "bean/default",
+    "coconut_cream":        "milk_plant/coconut",
+    "soy_cream":            "milk_plant/soy",
+    "milk":                 "milk_animal/whole",
+    # Pousses
+    "sprouts":              "bean_sprouts/default",
 }
 
 # ─────────────────────────────────────────────────────────────────
@@ -124,6 +192,10 @@ def resolve_nutrition_key(
       9. Base seule si multi-variant irréductible
     """
     nutr_bases = set(nutr_ingr.keys())
+
+    # 0. Force-unresolved — bloque toute résolution automatique ou override
+    if dict_id in NK_FORCE_UNRESOLVED:
+        return None
 
     # 1. Override manuel
     if dict_id in MANUAL_NK_OVERRIDES:
@@ -236,6 +308,18 @@ def run(nutr_path: Path, dict_path: Path, dry_run: bool = False):
 
     nutr_ingr   = nutr["ingredients"]
     ingrs       = dic["ingredients"]
+
+    # ── Suppression des entrées non-ingrédients ───────────────────────────────
+    # Ces IDs sont des catégories ombrelles ou entrées erronées sans valeur
+    # nutritionnelle propre. Ils ne doivent pas exister dans le dictionnaire.
+    INVALID_DICT_IDS: frozenset[str] = frozenset({
+        "legume",       # catégorie générique (légumineuses) — pas un ingrédient
+    })
+    removed_invalid = [e["id"] for e in ingrs if e.get("id") in INVALID_DICT_IDS]
+    if removed_invalid:
+        ingrs[:] = [e for e in ingrs if e.get("id") not in INVALID_DICT_IDS]
+        for rid in removed_invalid:
+            print(f"  🗑  Supprimé (non-ingrédient) : {rid}")
 
     stats = {
         "nk_upgraded":             0,  # base → base/variant

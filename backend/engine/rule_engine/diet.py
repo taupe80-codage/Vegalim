@@ -143,6 +143,11 @@ VEGAN_EXCEPTIONS: frozenset[str] = frozenset({
     "yaourt_vegan", "yaourt_coco", "coconut_yogurt", "soy_yogurt",
     "creme_vegan", "mayonnaise_vegan", "vegan_butter",
     "tofu_feta", "cashew_cheese",
+    # Farines et dérivés végans à base de noix — exclus de NUT_IDS pour éviter
+    # les faux positifs sur le filtre nut_free dans les recettes veganes.
+    "almond_flour", "farine_amande",
+    "almond_butter",                # beurre d'amande : substitut vegan courant
+    "cashew_milk", "lait_cajou",    # laits végans à base de noix
 })
 
 GLUTEN_IDS: frozenset[str] = frozenset({
@@ -164,20 +169,34 @@ GLUTEN_IDS: frozenset[str] = frozenset({
 
 LACTOSE_IDS: frozenset[str] = frozenset({
     "milk", "lait", "cream", "creme", "creme_fraiche",
-    "butter", "beurre", "ghee",
+    "butter", "beurre",
     "yogurt", "greek_yogurt", "plain_yogurt", "yaourt",
     "cheese", "fromage", "fromage_blanc", "fromage_en_grain", "fresh_cheese",
     "feta", "mozzarella", "parmesan", "cheddar", "ricotta",
     "halloumi", "paneer", "cheese_curds", "feta_fromage_blanc",
     "salted_ricotta", "gruyere_cheese", "manchego", "queijo",
-    "kashk",
+    # "ghee" et "kashk" déplacés dans LACTOSE_TRACE_IDS :
+    # - ghee : beurre clarifié, lactose < 0.1g/100g, toléré par la majorité
+    # - kashk : laitage fermenté, teneur résiduelle variable
+    # Ces ingrédients n'invalident pas lactose_free=True mais déclenchent
+    # un avertissement via diet_flags["lactose_trace_note"].
+})
+
+# Ingrédients lactés avec teneur résiduelle en lactose — tolérés par la plupart
+# des intolérants mais signalés à l'utilisateur via diet_notes.
+LACTOSE_TRACE_IDS: frozenset[str] = frozenset({
+    "ghee",     # beurre clarifié — < 0.1g lactose/100g, toléré par la majorité
+    "kashk",    # laitage fermenté — teneur variable selon le processus
 })
 
 NUT_IDS: frozenset[str] = frozenset({
     "almond", "walnut", "cashew", "hazelnut", "pecan", "pine_nut",
     "macadamia", "pistachio", "brazil_nut", "chestnut",
     "peanut", "peanut_butter", "peanut_sauce",
-    "almond_flour", "almond_milk",
+    # "almond_flour" et "almond_milk" retirés — substituts végans courants.
+    # Une recette vegan utilisant du lait d'amande était incorrectement taguée
+    # nut_free=False, excluant une grande partie du catalogue vegan du filtre.
+    # Ces clés sont dans VEGAN_EXCEPTIONS pour être exclues de _extract_ids().
     "noix_de_cajou", "pate_d_arachide",
 })
 
@@ -244,6 +263,10 @@ def compute_diet_flags(recipe: dict) -> dict:
     is_lactose_free = not any(i in LACTOSE_IDS for i in ids)
     is_nut_free     = not any(i in NUT_IDS for i in ids)
 
+    # Ingrédients à traces résiduelles : la recette reste lactose_free=True
+    # mais on signale à l'utilisateur que des traces sont présentes.
+    lactose_trace_ingredients = [i for i in ids if i in LACTOSE_TRACE_IDS]
+
     techniques = [str(t).lower() for t in (recipe.get("technique") or [])]
     is_raw = any(t in ("raw", "cru", "marinade", "ceviche") for t in techniques)
 
@@ -254,7 +277,7 @@ def compute_diet_flags(recipe: dict) -> dict:
         int(recipe.get("prep_time_min") or 999) <= 30
     )
 
-    return {
+    flags: dict = {
         "vegan":         is_vegan,
         "vegetarian":    is_vegetarian,
         "gluten_free":   is_gluten_free,
@@ -263,6 +286,16 @@ def compute_diet_flags(recipe: dict) -> dict:
         "raw":           is_raw,
         "kid_friendly":  is_kid,
     }
+    # Si des ingrédients à traces résiduelles sont présents, on les signale
+    # sans invalider le flag lactose_free. L'UI peut afficher un avertissement
+    # du type "Contient du ghee (traces de lactose possibles)".
+    if lactose_trace_ingredients:
+        flags["lactose_trace_note"] = (
+            f"Contient {', '.join(lactose_trace_ingredients)} — "
+            "toléré par la plupart des intolérants au lactose, "
+            "traces résiduelles possibles."
+        )
+    return flags
 
 
 # ── Calcul health_scores ──────────────────────────────────────────────────────

@@ -51,7 +51,7 @@ def resolve_user_context(
     Étapes :
         1. Charge le profil depuis profile_service (DB → fallback JSON)
         2. Fusionne le diet_override avec le profil
-        3. Détermine le profil adaptatif (scoring_service._resolve_profile)
+        3. Détermine le profil adaptatif (scoring_service.resolve_profile)
         4. Détecte les capacités (learning actif, cycle renseigné)
 
     Returns:
@@ -74,8 +74,8 @@ def resolve_user_context(
 
     # 3. Profil adaptatif
     try:
-        from backend.services.scoring_service import _resolve_profile
-        profile_used = _resolve_profile("default", effective_profile)
+        from backend.services.scoring_service import resolve_profile
+        profile_used = resolve_profile("default", effective_profile)
     except Exception:
         profile_used = "default"
 
@@ -101,11 +101,11 @@ def _check_learning_eligibility(email: str) -> bool:
     """
     try:
         from backend.engine.config import MIN_LIKES_TO_ACTIVATE
-        from backend.db.session import get_db
+        from backend.db.session import db_session
         from backend.db.repositories import RecipeHistoryRepository
-        db   = next(get_db())
-        repo = RecipeHistoryRepository(db)
-        return len(repo.get_liked_recipe_ids(email)) >= MIN_LIKES_TO_ACTIVATE
+        with db_session() as db:
+            repo = RecipeHistoryRepository(db)
+            return len(repo.get_liked_recipe_ids(email)) >= MIN_LIKES_TO_ACTIVATE
     except Exception:
         return False
 
@@ -149,11 +149,11 @@ def get_excluded_ids(context: UserContext) -> list[int]:
     if not context.email:
         return []
     try:
-        from backend.db.session import get_db
+        from backend.db.session import db_session
         from backend.db.repositories import RecipeHistoryRepository
-        db   = next(get_db())
-        repo = RecipeHistoryRepository(db)
-        return repo.get_disliked_recipe_ids(context.email)
+        with db_session() as db:
+            repo = RecipeHistoryRepository(db)
+            return repo.get_disliked_recipe_ids(context.email)
     except Exception as e:
         logger.debug("personalization: impossible de charger les exclusions — %s", e)
         return []
