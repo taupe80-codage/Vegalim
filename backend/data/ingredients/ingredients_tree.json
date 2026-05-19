@@ -30333,18 +30333,6 @@
                     "etat_cuisson": "cuit",
                     "partie": "sans peau"
                   }
-                },
-                {
-                  "id": "var_05864",
-                  "source": "CIQUAL",
-                  "source_id": "4028",
-                  "name_fr": "Pomme de terre de conservation, sans peau, bouillie/cuite a l'eau",
-                  "name_en": "potato, without skin, boiled",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes": {
-                    "partie": "sans peau"
-                  }
                 }
               ],
               "axes": {
@@ -30761,11 +30749,12 @@
                   "id": "var_01669",
                   "source": "CIQUAL",
                   "source_id": "4028",
-                  "name_fr": "pomme de terre de conservation",
+                  "name_fr": "Pomme de terre de conservation, sans peau, bouillie/cuite a l'eau",
                   "name_en": "maincrop potato, boiled",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes": {
+                    "etat_cuisson": "cuit",
                     "partie": "sans peau"
                   }
                 }
@@ -39529,7 +39518,11 @@
                   "indus_conditionne": true,
                   "conditioning_types": [
                     "EN CONSERVE / APPERTISÉ"
-                  ]
+                  ],
+                  "axes": {
+                    "conditionnement": "conserve",
+                    "egouttage": "égoutté"
+                  }
                 }
               ],
               "axes": {
