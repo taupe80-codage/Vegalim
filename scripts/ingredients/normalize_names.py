@@ -438,37 +438,39 @@ def apply_audit_fixes(ig: dict, dry_run: bool) -> list[str]:
     """Corrections ciblées sur des IGs spécifiques. Retourne la liste des modifications."""
     changes = []
     ig_id = ig["id"]
-    axes = ig.get("axes", {})
+    axes_en = ig.get("axes_en") or ig.get("axes") or {}
+    axes_fr = ig.get("axes_fr") or {}
 
     # ing_00501 : axe diète (sans gluten) mal placé dans axes traitement
     if ig_id == "ing_00501":
-        bad_keys = [k for k in list(axes.keys()) if "gluten" in k.lower() or k.lower() == "traitement"]
-        for k in bad_keys:
-            changes.append(f"remove axis '{k}: {axes[k]}'")
-            if not dry_run:
-                del axes[k]
+        for ax in (axes_en, axes_fr):
+            bad_keys = [k for k in list(ax.keys()) if "gluten" in k.lower() or k.lower() == "traitement"]
+            for k in bad_keys:
+                changes.append(f"remove axis '{k}: {ax[k]}'")
+                if not dry_run:
+                    del ax[k]
 
     # ing_00844 : thermal_state rehydrated → dried (abricot séché moelleux)
     if ig_id == "ing_00844":
-        if axes.get("thermal_state") == "rehydrated":
+        if axes_en.get("thermal_state") == "rehydrated":
             changes.append("thermal_state: rehydrated -> dried")
             if not dry_run:
-                axes["thermal_state"] = "dried"
-        if axes.get("etat_thermique") == "réhydraté":
+                axes_en["thermal_state"] = "dried"
+        if axes_fr.get("etat_thermique") == "réhydraté":
             changes.append("etat_thermique: réhydraté -> séché")
             if not dry_run:
-                axes["etat_thermique"] = "séché"
+                axes_fr["etat_thermique"] = "séché"
 
     # ing_04589 : form paste → butter (peanut butter = beurre d'arachide)
     if ig_id == "ing_04589":
-        if axes.get("form") == "paste":
+        if axes_en.get("form") == "paste":
             changes.append("form: paste -> butter")
             if not dry_run:
-                axes["form"] = "butter"
-        if axes.get("forme") == "pâte":
+                axes_en["form"] = "butter"
+        if axes_fr.get("forme") == "pâte":
             changes.append("forme: pâte -> beurre")
             if not dry_run:
-                axes["forme"] = "beurre"
+                axes_fr["forme"] = "beurre"
 
     return changes
 
@@ -497,7 +499,8 @@ def process_tree(tree: dict, dry_run: bool, verbose: bool) -> dict:
 
     for ig in walk_groups(tree):
         ig_id   = ig["id"]
-        axes    = ig.get("axes", {})
+        axes_en = ig.setdefault("axes_en", ig.pop("axes", {}))
+        axes_fr = ig.setdefault("axes_fr", {})
         en_orig = ig.get("canonical_name_en", "")
         fr_orig = ig.get("canonical_name_fr", "")
 
@@ -507,7 +510,7 @@ def process_tree(tree: dict, dry_run: bool, verbose: bool) -> dict:
         # ── 1. Form stripping ────────────────────────────────────────────────
         en_cur = en_orig
         fr_cur = fr_orig
-        current_form = axes.get("form") or axes.get("forme") or None
+        current_form = axes_en.get("form") or axes_fr.get("forme") or None
 
         form_en_result = strip_form_en(en_cur, ig_id, current_form)
         if form_en_result:
@@ -526,9 +529,8 @@ def process_tree(tree: dict, dry_run: bool, verbose: bool) -> dict:
                     rec["form_axis_before"] = current_form
                     rec["form_axis_after"]  = form_val
                     stats["form_axis"] += 1
-                    axes["form"] = form_val
-                    if "forme" in axes:
-                        axes["forme"] = form_val
+                    axes_en["form"] = form_val
+                    axes_fr["forme"] = form_val
                     current_form = form_val
 
         form_fr_result = strip_form_fr(fr_cur, ig_id, current_form)
@@ -546,12 +548,11 @@ def process_tree(tree: dict, dry_run: bool, verbose: bool) -> dict:
                 # Met à jour l'axe form seulement si EN strip n'a pas déjà défini un type
                 if current_form != form_val_fr and current_form not in FORM_TEXTURE_VALUES:
                     if "en_after_form" not in rec:  # EN n'a pas déjà défini le form
-                        axes["form"] = form_val_fr
-                        if "forme" in axes:
-                            axes["forme"] = form_val_fr
+                        axes_en["form"] = form_val_fr
+                        axes_fr["forme"] = form_val_fr
 
         # ── 2. EN inversions ────────────────────────────────────────────────
-        new_en_inv = invert_en_name(en_cur, axes=axes)
+        new_en_inv = invert_en_name(en_cur, axes=axes_en)
         if new_en_inv != en_cur:
             rec["en_before_inv"] = en_cur
             rec["en_after_inv"]  = new_en_inv

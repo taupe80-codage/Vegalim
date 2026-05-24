@@ -163,13 +163,13 @@ def build_token_index(ingrs: dict, igs: list, n2_version: str) -> dict:
     src_to_ig: dict[str, dict] = {}
     for ig in igs:
         ig_id   = ig.get("id", "")
-        ig_axes = ig.get("axes", {})
+        ig_axes = ig.get("axes_en") or ig.get("axes") or {}
         for var in ig.get("variants", []):
             src    = var.get("source")
             src_id = var.get("source_id")
             if src and src_id:
                 k = source_key(src, src_id)
-                src_to_ig[k] = {"ig_id": ig_id, "ig_axes": ig_axes, "var_axes": var.get("axes", {})}
+                src_to_ig[k] = {"ig_id": ig_id, "ig_axes": ig_axes, "var_axes": var.get("axes_en") or var.get("axes") or {}}
 
     index: dict = {}
     for base, data in ingrs.items():
@@ -285,13 +285,19 @@ def run(targets: list, dry_run: bool):
     print(f"  nutrition_v2 v{n2_version} — {len(ingrs)} bases")
     print(f"  ingredients_tree — {len(igs)} IGs")
 
+    def _write_atomic(path, data):
+        """Écriture atomique via fichier temporaire + rename."""
+        tmp = path.with_suffix('.tmp')
+        tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        tmp.replace(path)
+
     if "nutrition_index" in targets:
         print("\nReconstruction nutrition_index (clé: SOURCE:id)...")
         ni = build_nutrition_index(ingrs, n2_version)
         m  = ni["_meta"]
         print(f"  {m['total_entries']} entrées  {m['by_source']}")
         if not dry_run:
-            OUT_NUTR_IDX.write_text(json.dumps(ni, ensure_ascii=False, indent=2), encoding="utf-8")
+            _write_atomic(OUT_NUTR_IDX, ni)
             print(f"  Ecrit → {OUT_NUTR_IDX}")
 
     if "token_index" in targets:
@@ -301,7 +307,7 @@ def run(targets: list, dry_run: bool):
         print(f"  {m['total_entries']} entrées  {m['by_source']}")
         print(f"  avec contexte IG : {m['with_ig_context']}/{m['total_entries']}")
         if not dry_run:
-            OUT_TOKEN_IDX.write_text(json.dumps(ti, ensure_ascii=False, indent=2), encoding="utf-8")
+            _write_atomic(OUT_TOKEN_IDX, ti)
             print(f"  Ecrit → {OUT_TOKEN_IDX}")
 
     if "availability" in targets:
@@ -309,7 +315,7 @@ def run(targets: list, dry_run: bool):
         avail, added = build_availability(ingrs)
         print(f"  {len(avail)} entrées totales (+{added} nouvelles)")
         if not dry_run:
-            OUT_AVAIL.write_text(json.dumps(avail, ensure_ascii=False, indent=2), encoding="utf-8")
+            _write_atomic(OUT_AVAIL, avail)
             print(f"  Ecrit → {OUT_AVAIL}")
 
     if "relation" in targets:
@@ -317,7 +323,7 @@ def run(targets: list, dry_run: bool):
         rel, added = build_relation(ingrs, igs)
         print(f"  {len(rel)} entrées totales (+{added} nouvelles)")
         if not dry_run:
-            OUT_RELATION.write_text(json.dumps(rel, ensure_ascii=False, indent=2), encoding="utf-8")
+            _write_atomic(OUT_RELATION, rel)
             print(f"  Ecrit → {OUT_RELATION}")
 
     if dry_run:

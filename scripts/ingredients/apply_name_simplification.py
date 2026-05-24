@@ -282,7 +282,7 @@ def apply_simplification(tree: dict, dry_run: bool, verbose: bool) -> dict:
     changes = []
 
     for ig in walk_groups(tree):
-        axes = ig.get("axes", {})
+        axes = ig.get("axes_en") or ig.get("axes") or {}
         orig_en = ig.get("canonical_name_en", "")
         orig_fr = ig.get("canonical_name_fr", "")
 
