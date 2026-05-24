@@ -3324,7 +3324,7 @@
                 ]
               }
             },
-            "buckwheat_groats_boiled": {
+            "buckwheat_groats_roasted": {
               "v32_ing_id": "ing_00251",
               "v32_var_id": "var_00252",
               "source": "CNF",
@@ -3333,7 +3333,7 @@
               "canonical_name_fr": "gruau de sarrasin",
               "canonical_name_en": "buckwheat groats",
               "axes": {
-                "cooking_state": "boiled"
+                "cooking_state": "roasted"
               },
               "aliases": [],
               "diet_profile": {
@@ -3360,7 +3360,7 @@
                 ]
               }
             },
-            "buckwheat_groats_roasted": {
+            "buckwheat_groats_roasted_0253": {
               "v32_ing_id": "ing_00253",
               "v32_var_id": "var_00254",
               "source": "CNF",
@@ -8447,7 +8447,7 @@
                 ]
               }
             },
-            "pre_cooked_white_rice_cooked_unsalted": {
+            "pre_cooked_white_rice_precooked_unsalted": {
               "v32_ing_id": "ing_00770",
               "v32_var_id": "var_00771",
               "source": "CIQUAL",
@@ -8456,7 +8456,7 @@
               "canonical_name_fr": "riz blanc pré",
               "canonical_name_en": "pre-cooked white rice",
               "axes": {
-                "cooking_state": "cooked",
+                "cooking_state": "precooked",
                 "seasoning": "unsalted"
               },
               "aliases": [],
@@ -10980,7 +10980,7 @@
               "bioavailability_protein": 0.55,
               "nova_group": 1
             },
-            "pineapple_juice_from_concentrate_concentrated": {
+            "pineapple_juice_from_concentrate_juice_base_de_concentr": {
               "v32_ing_id": "ing_00901",
               "v32_var_id": "var_00902",
               "source": "CIQUAL",
@@ -10989,7 +10989,8 @@
               "canonical_name_fr": "ananas à base de concentré",
               "canonical_name_en": "pineapple juice, from concentrate",
               "axes": {
-                "form": "concentrated"
+                "form": "juice",
+                "treatment": "base_de_concentr"
               },
               "aliases": [],
               "diet_profile": {
@@ -17746,7 +17747,7 @@
               "bioavailability_protein": 0.55,
               "nova_group": 1
             },
-            "orange_juice_from_concentrate_concentrated": {
+            "orange_juice_from_concentrate_juice_base_de_concentr": {
               "v32_ing_id": "ing_01402",
               "v32_var_id": "var_01403",
               "source": "CIQUAL",
@@ -17755,7 +17756,8 @@
               "canonical_name_fr": "orange à base de concentré",
               "canonical_name_en": "orange juice, from concentrate",
               "axes": {
-                "form": "concentrated"
+                "form": "juice",
+                "treatment": "base_de_concentr"
               },
               "aliases": [],
               "diet_profile": {
@@ -17781,7 +17783,7 @@
                 ]
               }
             },
-            "orange_concentrated_flesh_r_frig_r": {
+            "orange_juice_flesh_base_de_concentr_r_frig_r": {
               "v32_ing_id": "ing_01408",
               "v32_var_id": "var_01409",
               "source": "USDA",
@@ -17790,9 +17792,10 @@
               "canonical_name_fr": "orange",
               "canonical_name_en": "orange",
               "axes": {
-                "form": "concentrated",
+                "form": "juice",
                 "part": "flesh",
-                "thermal_state": "r_frig_r"
+                "thermal_state": "r_frig_r",
+                "treatment": "base_de_concentr"
               },
               "aliases": [],
               "culinary": {
@@ -17831,7 +17834,7 @@
               "bioavailability_protein": 0.55,
               "nova_group": 1
             },
-            "orange_concentrated_flesh_sans_pulpe_r_frig_r": {
+            "orange_juice_flesh_sans_pulpe_r_frig_r": {
               "v32_ing_id": "ing_01408",
               "v32_var_id": "var_01411",
               "source": "USDA",
@@ -17840,7 +17843,7 @@
               "canonical_name_fr": "orange",
               "canonical_name_en": "orange",
               "axes": {
-                "form": "concentrated",
+                "form": "juice",
                 "part": "flesh",
                 "treatment": "sans_pulpe",
                 "thermal_state": "r_frig_r"
@@ -18222,7 +18225,7 @@
               "bioavailability_protein": 0.55,
               "nova_group": 1
             },
-            "grapefruit_juice_concentrate_concentrated": {
+            "grapefruit_juice_concentrate_juice_base_de_concentr": {
               "v32_ing_id": "ing_01423",
               "v32_var_id": "var_01424",
               "source": "CIQUAL",
@@ -18231,7 +18234,8 @@
               "canonical_name_fr": "pamplemousse (pomélo) à base de concentré",
               "canonical_name_en": "grapefruit juice concentrate",
               "axes": {
-                "form": "concentrated"
+                "form": "juice",
+                "treatment": "base_de_concentr"
               },
               "aliases": [],
               "diet_profile": {
@@ -20256,7 +20260,7 @@
               "bioavailability_protein": 0.55,
               "nova_group": 1
             },
-            "apple_juice_concentrate_concentrated": {
+            "apple_juice_concentrate_juice_base_de_concentr": {
               "v32_ing_id": "ing_01635",
               "v32_var_id": "var_01636",
               "source": "CIQUAL",
@@ -20265,7 +20269,8 @@
               "canonical_name_fr": "pomme à base de concentré",
               "canonical_name_en": "apple juice concentrate",
               "axes": {
-                "form": "concentrated"
+                "form": "juice",
+                "treatment": "base_de_concentr"
               },
               "aliases": [],
               "diet_profile": {
@@ -20291,7 +20296,7 @@
                 ]
               }
             },
-            "apple_raw_skinless_1657": {
+            "apple_boiled_skinless": {
               "v32_ing_id": "ing_01657",
               "v32_var_id": "var_01658",
               "source": "CNF",
@@ -20300,7 +20305,7 @@
               "canonical_name_fr": "pomme",
               "canonical_name_en": "apple",
               "axes": {
-                "cooking_state": "raw",
+                "cooking_state": "boiled",
                 "part": "skinless"
               },
               "aliases": [],
@@ -22178,7 +22183,7 @@
               "bioavailability_protein": 0.55,
               "nova_group": 1
             },
-            "grape_juice_concentrated": {
+            "grape_juice_juice_base_de_concentr": {
               "v32_ing_id": "ing_01922",
               "v32_var_id": "var_01923",
               "source": "CIQUAL",
@@ -22187,7 +22192,8 @@
               "canonical_name_fr": "jus de raisin",
               "canonical_name_en": "grape juice",
               "axes": {
-                "form": "concentrated"
+                "form": "juice",
+                "treatment": "base_de_concentr"
               },
               "aliases": [],
               "diet_profile": {
@@ -26157,7 +26163,7 @@
               "bioavailability_protein": 0.6,
               "nova_group": 1
             },
-            "garlic_cooked": {
+            "garlic_roasted": {
               "v32_ing_id": "ing_02139",
               "v32_var_id": "var_02140",
               "source": "CIQUAL",
@@ -26166,7 +26172,7 @@
               "canonical_name_fr": "ail",
               "canonical_name_en": "garlic",
               "axes": {
-                "cooking_state": "cooked"
+                "cooking_state": "roasted"
               },
               "aliases": [],
               "culinary": {
@@ -26209,7 +26215,7 @@
               "bioavailability_protein": 0.6,
               "nova_group": 1
             },
-            "garlic_roasted": {
+            "garlic_roasted_2147": {
               "v32_ing_id": "ing_02147",
               "v32_var_id": "var_02148",
               "source": "CIQUAL",
@@ -26351,7 +26357,7 @@
                 ]
               }
             },
-            "artichoke_globe_french_cooked_sous_pression": {
+            "artichoke_globe_french_steamed_sous_pression": {
               "v32_ing_id": "ing_02164",
               "v32_var_id": "var_02165",
               "source": "CIQUAL",
@@ -26360,7 +26366,7 @@
               "canonical_name_fr": "artichaut",
               "canonical_name_en": "artichoke (Globe, French)",
               "axes": {
-                "cooking_state": "cooked",
+                "cooking_state": "steamed",
                 "thermal_state": "sous_pression"
               },
               "aliases": [],
@@ -28655,7 +28661,7 @@
               "bioavailability_protein": 0.6,
               "nova_group": 1
             },
-            "broccoli_cooked": {
+            "broccoli_steamed": {
               "v32_ing_id": "ing_02325",
               "v32_var_id": "var_02326",
               "source": "CIQUAL",
@@ -28664,7 +28670,7 @@
               "canonical_name_fr": "brocoli",
               "canonical_name_en": "broccoli",
               "axes": {
-                "cooking_state": "cooked"
+                "cooking_state": "steamed"
               },
               "aliases": [],
               "culinary": {
@@ -33791,7 +33797,7 @@
               "bioavailability_protein": 0.6,
               "nova_group": 1
             },
-            "cauliflower_cooked_flower": {
+            "cauliflower_steamed_flower": {
               "v32_ing_id": "ing_02652",
               "v32_var_id": "var_02653",
               "source": "CIQUAL",
@@ -33800,7 +33806,7 @@
               "canonical_name_fr": "chou-fleur",
               "canonical_name_en": "cauliflower",
               "axes": {
-                "cooking_state": "cooked",
+                "cooking_state": "steamed",
                 "part": "flower"
               },
               "aliases": [],
@@ -35542,7 +35548,7 @@
               "bioavailability_protein": 0.55,
               "nova_group": 1
             },
-            "pumpkin_cooked": {
+            "pumpkin_roasted": {
               "v32_ing_id": "ing_02780",
               "v32_var_id": "var_02781",
               "source": "CIQUAL",
@@ -35551,7 +35557,7 @@
               "canonical_name_fr": "potiron",
               "canonical_name_en": "pumpkin",
               "axes": {
-                "cooking_state": "cooked"
+                "cooking_state": "roasted"
               },
               "aliases": [],
               "culinary": {
@@ -35973,7 +35979,7 @@
                 ]
               }
             },
-            "spaghetti_squash_boiled_canned_drained": {
+            "spaghetti_squash_baked_canned_drained": {
               "v32_ing_id": "ing_02808",
               "v32_var_id": "var_02809",
               "source": "CNF",
@@ -35982,7 +35988,7 @@
               "canonical_name_fr": "courge spaghetti",
               "canonical_name_en": "spaghetti squash",
               "axes": {
-                "cooking_state": "boiled",
+                "cooking_state": "baked",
                 "draining": "drained",
                 "packaging": "canned"
               },
@@ -41657,7 +41663,7 @@
                 ]
               }
             },
-            "black_olive_canned_drained": {
+            "black_olive_canned_in_oil": {
               "v32_ing_id": "ing_03236",
               "v32_var_id": "var_03237",
               "source": "CIQUAL",
@@ -41667,7 +41673,7 @@
               "canonical_name_en": "black olive",
               "axes": {
                 "packaging": "canned",
-                "draining": "drained"
+                "draining": "in_oil"
               },
               "aliases": [],
               "culinary": {
@@ -48190,7 +48196,7 @@
               "bioavailability_protein": 0.55,
               "nova_group": 1
             },
-            "tomato_canned_drained": {
+            "tomato_canned_in_oil": {
               "v32_ing_id": "ing_03576",
               "v32_var_id": "var_03577",
               "source": "CIQUAL",
@@ -48200,7 +48206,7 @@
               "canonical_name_en": "tomato",
               "axes": {
                 "packaging": "canned",
-                "draining": "drained"
+                "draining": "in_oil"
               },
               "aliases": [],
               "culinary": {
@@ -61917,7 +61923,7 @@
               "bioavailability_protein": 0.75,
               "nova_group": 1
             },
-            "sesame_butter_from_whole_seed_paste_paste_seed": {
+            "sesame_butter_from_whole_seed_paste_butter_seed": {
               "v32_ing_id": "ing_04553",
               "v32_var_id": "var_04554",
               "source": "CNF",
@@ -61926,7 +61932,7 @@
               "canonical_name_fr": "beurre de sésame de pâte",
               "canonical_name_en": "sesame butter, from whole seed, paste",
               "axes": {
-                "form": "paste",
+                "form": "butter",
                 "part": "seed"
               },
               "aliases": [],
@@ -72123,7 +72129,7 @@
                 ]
               }
             },
-            "light_single_cream_12_20_fat_fresh": {
+            "light_single_cream_12_20_fat_r_frig_r": {
               "v32_ing_id": "ing_04921",
               "v32_var_id": "var_04922",
               "source": "CIQUAL",
@@ -72132,7 +72138,7 @@
               "canonical_name_fr": "crème 12 à 20% MG fluide",
               "canonical_name_en": "light single cream, 12-20% fat",
               "axes": {
-                "thermal_state": "fresh"
+                "thermal_state": "r_frig_r"
               },
               "aliases": [],
               "diet_profile": {
@@ -72197,7 +72203,7 @@
                 ]
               }
             },
-            "light_thick_cream_12_25_fat_fresh": {
+            "light_thick_cream_12_25_fat_r_frig_r": {
               "v32_ing_id": "ing_04925",
               "v32_var_id": "var_04926",
               "source": "CIQUAL",
@@ -72206,7 +72212,7 @@
               "canonical_name_fr": "crème 12 à 25% MG épaisse",
               "canonical_name_en": "light thick cream, 12-25% fat",
               "axes": {
-                "thermal_state": "fresh"
+                "thermal_state": "r_frig_r"
               },
               "aliases": [],
               "diet_profile": {
@@ -72308,7 +72314,7 @@
                 ]
               }
             },
-            "thick_cream_30_fat_fresh": {
+            "thick_cream_30_fat_r_frig_r": {
               "v32_ing_id": "ing_04931",
               "v32_var_id": "var_04932",
               "source": "CIQUAL",
@@ -72317,7 +72323,7 @@
               "canonical_name_fr": "crème 30% MG épaisse",
               "canonical_name_en": "thick cream, 30% fat",
               "axes": {
-                "thermal_state": "fresh"
+                "thermal_state": "r_frig_r"
               },
               "aliases": [],
               "diet_profile": {

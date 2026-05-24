@@ -2,7 +2,7 @@
   "schema_version": "7.1",
   "schema_family": "nutrition_v2",
   "built_from": "raw_sources_direct",
-  "built_at": "2026-05-24T17:13:42.162410+00:00",
+  "built_at": "2026-05-24T20:18:18.560762+00:00",
   "pipeline": "build_n2_direct.py",
   "raw_sources": {
     "CIQUAL": {
@@ -7022,13 +7022,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_00251",
       "variants": {
-        "boiled": {
+        "roasted": {
           "_source": "CNF",
           "_source_id": 4413,
           "_v32_ing_id": "ing_00251",
           "_v32_var_id": "var_00252",
           "axes": {
-            "cooking_state": "boiled"
+            "cooking_state": "roasted"
           },
           "calories_kcal": 92.0,
           "protein_g": 3.38,
@@ -17558,13 +17558,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_00770",
       "variants": {
-        "cooked_unsalted": {
+        "precooked_unsalted": {
           "_source": "CIQUAL",
           "_source_id": 9107,
           "_v32_ing_id": "ing_00770",
           "_v32_var_id": "var_00771",
           "axes": {
-            "cooking_state": "cooked",
+            "cooking_state": "precooked",
             "seasoning": "unsalted"
           },
           "carbs_g": 28.1,
@@ -22571,7 +22571,8 @@
       },
       "ingredient_type": "node",
       "variant_dimensions": [
-        "form"
+        "form",
+        "treatment"
       ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
@@ -22579,13 +22580,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_00901",
       "variants": {
-        "concentrated": {
+        "juice_base_de_concentr": {
           "_source": "CIQUAL",
           "_source_id": 2000,
           "_v32_ing_id": "ing_00901",
           "_v32_var_id": "var_00902",
           "axes": {
-            "form": "concentrated"
+            "form": "juice",
+            "treatment": "base_de_concentr"
           },
           "calories_kcal": 52.3,
           "protein_g": 0.41,
@@ -35641,7 +35643,8 @@
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
-        "form"
+        "form",
+        "treatment"
       ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
@@ -35649,13 +35652,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_01402",
       "variants": {
-        "concentrated": {
+        "juice_base_de_concentr": {
           "_source": "CIQUAL",
           "_source_id": 2012,
           "_v32_ing_id": "ing_01402",
           "_v32_var_id": "var_01403",
           "axes": {
-            "form": "concentrated"
+            "form": "juice",
+            "treatment": "base_de_concentr"
           },
           "calories_kcal": 45.6,
           "protein_g": 0.63,
@@ -35736,15 +35740,16 @@
       "aliases_fr": [],
       "_v32_id": "ing_01408",
       "variants": {
-        "concentrated_flesh_r_frig_r": {
+        "juice_flesh_base_de_concentr_r_frig_r": {
           "_source": "USDA",
           "_source_id": 2003591,
           "_v32_ing_id": "ing_01408",
           "_v32_var_id": "var_01409",
           "axes": {
             "thermal_state": "r_frig_r",
-            "form": "concentrated",
-            "part": "flesh"
+            "form": "juice",
+            "part": "flesh",
+            "treatment": "base_de_concentr"
           },
           "protein_g": 0.734,
           "carbs_g": 10.3,
@@ -35773,14 +35778,14 @@
           "indus_conditionne": false,
           "conditioning_types": []
         },
-        "concentrated_flesh_sans_pulpe_r_frig_r": {
+        "juice_flesh_sans_pulpe_r_frig_r": {
           "_source": "USDA",
           "_source_id": 2003597,
           "_v32_ing_id": "ing_01408",
           "_v32_var_id": "var_01411",
           "axes": {
             "thermal_state": "r_frig_r",
-            "form": "concentrated",
+            "form": "juice",
             "part": "flesh",
             "treatment": "sans_pulpe"
           },
@@ -36434,7 +36439,8 @@
       },
       "ingredient_type": "node",
       "variant_dimensions": [
-        "form"
+        "form",
+        "treatment"
       ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
@@ -36442,13 +36448,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_01423",
       "variants": {
-        "concentrated": {
+        "juice_base_de_concentr": {
           "_source": "CIQUAL",
           "_source_id": 2015,
           "_v32_ing_id": "ing_01423",
           "_v32_var_id": "var_01424",
           "axes": {
-            "form": "concentrated"
+            "form": "juice",
+            "treatment": "base_de_concentr"
           },
           "calories_kcal": 40.9,
           "protein_g": 0.52,
@@ -40349,7 +40356,8 @@
       },
       "ingredient_type": "node",
       "variant_dimensions": [
-        "form"
+        "form",
+        "treatment"
       ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
@@ -40357,13 +40365,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_01635",
       "variants": {
-        "concentrated": {
+        "juice_base_de_concentr": {
           "_source": "CIQUAL",
           "_source_id": 2014,
           "_v32_ing_id": "ing_01635",
           "_v32_var_id": "var_01636",
           "axes": {
-            "form": "concentrated"
+            "form": "juice",
+            "treatment": "base_de_concentr"
           },
           "calories_kcal": 48.5,
           "protein_g": 0.24,
@@ -40443,13 +40452,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_01657",
       "variants": {
-        "raw_sliced_skinless": {
+        "boiled_sliced_skinless": {
           "_source": "CNF",
           "_source_id": 1698,
           "_v32_ing_id": "ing_01657",
           "_v32_var_id": "var_01658",
           "axes": {
-            "cooking_state": "raw",
+            "cooking_state": "boiled",
             "form": "sliced",
             "part": "skinless"
           },
@@ -44277,7 +44286,8 @@
       },
       "ingredient_type": "node",
       "variant_dimensions": [
-        "form"
+        "form",
+        "treatment"
       ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
@@ -44285,13 +44295,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_01922",
       "variants": {
-        "concentrated": {
+        "juice_base_de_concentr": {
           "_source": "CIQUAL",
           "_source_id": 2019,
           "_v32_ing_id": "ing_01922",
           "_v32_var_id": "var_01923",
           "axes": {
-            "form": "concentrated"
+            "form": "juice",
+            "treatment": "base_de_concentr"
           },
           "calories_kcal": 67.1,
           "protein_g": 0.31,
@@ -51227,13 +51238,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_02139",
       "variants": {
-        "cooked": {
+        "roasted": {
           "_source": "CIQUAL",
           "_source_id": 11306,
           "_v32_ing_id": "ing_02139",
           "_v32_var_id": "var_02140",
           "axes": {
-            "cooking_state": "cooked"
+            "cooking_state": "roasted"
           },
           "calories_kcal": 125.0,
           "protein_g": 5.56,
@@ -51561,13 +51572,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_02164",
       "variants": {
-        "cooked_sous_pression": {
+        "steamed_sous_pression": {
           "_source": "CIQUAL",
           "_source_id": 20074,
           "_v32_ing_id": "ing_02164",
           "_v32_var_id": "var_02165",
           "axes": {
-            "cooking_state": "cooked",
+            "cooking_state": "steamed",
             "thermal_state": "sous_pression"
           },
           "calories_kcal": 46.4,
@@ -55937,13 +55948,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_02325",
       "variants": {
-        "cooked": {
+        "steamed": {
           "_source": "CIQUAL",
           "_source_id": 20304,
           "_v32_ing_id": "ing_02325",
           "_v32_var_id": "var_02326",
           "axes": {
-            "cooking_state": "cooked"
+            "cooking_state": "steamed"
           },
           "calories_kcal": 38.0,
           "protein_g": 4.13,
@@ -65340,13 +65351,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_02652",
       "variants": {
-        "cooked_flower": {
+        "steamed_flower": {
           "_source": "CIQUAL",
           "_source_id": 20312,
           "_v32_ing_id": "ing_02652",
           "_v32_var_id": "var_02653",
           "axes": {
-            "cooking_state": "cooked",
+            "cooking_state": "steamed",
             "part": "flower"
           },
           "calories_kcal": 30.5,
@@ -68578,13 +68589,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_02780",
       "variants": {
-        "cooked": {
+        "roasted": {
           "_source": "CIQUAL",
           "_source_id": 20332,
           "_v32_ing_id": "ing_02780",
           "_v32_var_id": "var_02781",
           "axes": {
-            "cooking_state": "cooked"
+            "cooking_state": "roasted"
           },
           "calories_kcal": 28.2,
           "protein_g": 0.25,
@@ -69394,7 +69405,7 @@
         }
       }
     },
-    "spaghetti_squash_boiled_canned": {
+    "spaghetti_squash_baked_canned": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -69419,13 +69430,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_02808",
       "variants": {
-        "boiled_canned_drained": {
+        "baked_canned_drained": {
           "_source": "CNF",
           "_source_id": 2459,
           "_v32_ing_id": "ing_02808",
           "_v32_var_id": "var_02809",
           "axes": {
-            "cooking_state": "boiled",
+            "cooking_state": "baked",
             "packaging": "canned",
             "draining": "drained"
           },
@@ -80417,7 +80428,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_03236",
       "variants": {
-        "canned_drained_in_oil": {
+        "canned_in_oil_in_oil": {
           "_source": "CIQUAL",
           "_source_id": 13131,
           "_v32_ing_id": "ing_03236",
@@ -80425,7 +80436,7 @@
           "axes": {
             "storage_medium": "in_oil",
             "packaging": "canned",
-            "draining": "drained"
+            "draining": "in_oil"
           },
           "calories_kcal": 349.0,
           "protein_g": 2.19,
@@ -92809,7 +92820,7 @@
         }
       }
     },
-    "tomato_dried_canned_drained_in_oil": {
+    "tomato_dried_canned_in_oil": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -92833,7 +92844,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_03576",
       "variants": {
-        "dried_canned_drained_in_oil": {
+        "dried_canned_in_oil_in_oil": {
           "_source": "CIQUAL",
           "_source_id": 20256,
           "_v32_ing_id": "ing_03576",
@@ -92842,7 +92853,7 @@
             "thermal_state": "dried",
             "storage_medium": "in_oil",
             "packaging": "canned",
-            "draining": "drained"
+            "draining": "in_oil"
           },
           "protein_g": 5.06,
           "carbs_g": 7.98,
@@ -120243,13 +120254,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04553",
       "variants": {
-        "paste_seed_plant": {
+        "butter_seed_plant": {
           "_source": "CNF",
           "_source_id": 2596,
           "_v32_ing_id": "ing_04553",
           "_v32_var_id": "var_04554",
           "axes": {
-            "form": "paste",
+            "form": "butter",
             "part": "seed",
             "origin": "plant"
           },
@@ -141032,13 +141043,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04921",
       "variants": {
-        "fresh_whole": {
+        "r_frig_r_whole": {
           "_source": "CIQUAL",
           "_source_id": 19436,
           "_v32_ing_id": "ing_04921",
           "_v32_var_id": "var_04922",
           "axes": {
-            "thermal_state": "fresh",
+            "thermal_state": "r_frig_r",
             "fat_content": "12-20"
           },
           "calories_kcal": 173.0,
@@ -141174,13 +141185,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04925",
       "variants": {
-        "fresh_whole": {
+        "r_frig_r_whole": {
           "_source": "CIQUAL",
           "_source_id": 19431,
           "_v32_ing_id": "ing_04925",
           "_v32_var_id": "var_04926",
           "axes": {
-            "thermal_state": "fresh",
+            "thermal_state": "r_frig_r",
             "fat_content": "12-25"
           },
           "calories_kcal": 162.0,
@@ -141430,13 +141441,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04931",
       "variants": {
-        "fresh_whole": {
+        "r_frig_r_whole": {
           "_source": "CIQUAL",
           "_source_id": 19410,
           "_v32_ing_id": "ing_04931",
           "_v32_var_id": "var_04932",
           "axes": {
-            "thermal_state": "fresh",
+            "thermal_state": "r_frig_r",
             "fat_content": "30"
           },
           "calories_kcal": 285.0,

@@ -3,7 +3,7 @@
     "description": "Token index — SOURCE:id → base/variant/IG context",
     "version": "6.0",
     "nutrition_version": "7.1",
-    "generated_at": "2026-05-24T17:13:42.697655+00:00",
+    "generated_at": "2026-05-24T20:18:40.541976+00:00",
     "key_format": "SOURCE:source_id  ex: CIQUAL:4028, CNF:501697, USDA:2644288",
     "total_entries": 2109,
     "by_source": {
@@ -894,13 +894,13 @@
     },
     "CNF:4413": {
       "base": "buckwheat_groats",
-      "variant": "boiled",
+      "variant": "roasted",
       "ig_id": "ing_00251",
       "ig_axes": {
-        "cooking_state": "boiled"
+        "cooking_state": "roasted"
       },
       "var_axes": {
-        "cooking_state": "boiled"
+        "cooking_state": "roasted"
       }
     },
     "CNF:4412": {
@@ -2393,14 +2393,14 @@
     },
     "CIQUAL:9107": {
       "base": "pre_cooked_white_rice",
-      "variant": "cooked_unsalted",
+      "variant": "precooked_unsalted",
       "ig_id": "ing_00770",
       "ig_axes": {
         "cooking_state": "precooked",
         "seasoning": "unsalted"
       },
       "var_axes": {
-        "cooking_state": "cooked",
+        "cooking_state": "precooked",
         "seasoning": "unsalted"
       }
     },
@@ -3116,13 +3116,15 @@
     },
     "CIQUAL:2000": {
       "base": "pineapple_juice_from_concentrate",
-      "variant": "concentrated",
+      "variant": "juice_base_de_concentr",
       "ig_id": "ing_00901",
       "ig_axes": {
-        "form": "juice"
+        "form": "juice",
+        "treatment": "from_concentrate"
       },
       "var_axes": {
-        "form": "concentrate"
+        "form": "juice",
+        "treatment": "from_concentrate"
       }
     },
     "CIQUAL:13002": {
@@ -4989,39 +4991,41 @@
     },
     "CIQUAL:2012": {
       "base": "orange_juice_from_concentrate",
-      "variant": "concentrated",
+      "variant": "juice_base_de_concentr",
       "ig_id": "ing_01402",
       "ig_axes": {
         "form": "juice"
       },
       "var_axes": {
-        "form": "concentrate"
+        "form": "juice",
+        "treatment": "from_concentrate"
       }
     },
     "USDA:2003591": {
       "base": "orange_juice_r_frig_r",
-      "variant": "concentrated_flesh_r_frig_r",
+      "variant": "juice_flesh_base_de_concentr_r_frig_r",
       "ig_id": "ing_01408",
       "ig_axes": {
         "thermal_state": "refrigerated",
         "form": "juice"
       },
       "var_axes": {
-        "form": "concentrate",
+        "form": "juice",
         "part": "flesh",
-        "thermal_state": "refrigerated"
+        "thermal_state": "refrigerated",
+        "treatment": "from_concentrate"
       }
     },
     "USDA:2003597": {
       "base": "orange_juice_r_frig_r",
-      "variant": "concentrated_flesh_sans_pulpe_r_frig_r",
+      "variant": "juice_flesh_sans_pulpe_r_frig_r",
       "ig_id": "ing_01408",
       "ig_axes": {
         "thermal_state": "refrigerated",
         "form": "juice"
       },
       "var_axes": {
-        "form": "concentrate",
+        "form": "juice",
         "part": "flesh",
         "treatment": "no_pulp",
         "thermal_state": "refrigerated"
@@ -5116,13 +5120,15 @@
     },
     "CIQUAL:2015": {
       "base": "grapefruit_juice_concentrate",
-      "variant": "concentrated",
+      "variant": "juice_base_de_concentr",
       "ig_id": "ing_01423",
       "ig_axes": {
-        "form": "concentrate"
+        "form": "juice",
+        "treatment": "from_concentrate"
       },
       "var_axes": {
-        "form": "concentrate"
+        "form": "juice",
+        "treatment": "from_concentrate"
       }
     },
     "CIQUAL:13614": {
@@ -5725,18 +5731,20 @@
     },
     "CIQUAL:2014": {
       "base": "apple_juice_concentrate",
-      "variant": "concentrated",
+      "variant": "juice_base_de_concentr",
       "ig_id": "ing_01635",
       "ig_axes": {
-        "form": "concentrate"
+        "form": "juice",
+        "treatment": "from_concentrate"
       },
       "var_axes": {
-        "form": "concentrate"
+        "form": "juice",
+        "treatment": "from_concentrate"
       }
     },
     "CNF:1698": {
       "base": "apple_boiled_sliced_peel",
-      "variant": "raw_sliced_skinless",
+      "variant": "boiled_sliced_skinless",
       "ig_id": "ing_01657",
       "ig_axes": {
         "cooking_state": "boiled",
@@ -5744,7 +5752,7 @@
         "part": "peel"
       },
       "var_axes": {
-        "cooking_state": "raw",
+        "cooking_state": "boiled",
         "part": "peeled"
       }
     },
@@ -6315,13 +6323,15 @@
     },
     "CIQUAL:2019": {
       "base": "grape_juice",
-      "variant": "concentrated",
+      "variant": "juice_base_de_concentr",
       "ig_id": "ing_01922",
       "ig_axes": {
-        "form": "concentrate"
+        "form": "juice",
+        "treatment": "from_concentrate"
       },
       "var_axes": {
-        "form": "concentrate"
+        "form": "juice",
+        "treatment": "from_concentrate"
       }
     },
     "CNF:4856": {
@@ -7306,13 +7316,13 @@
     },
     "CIQUAL:11306": {
       "base": "garlic_roasted",
-      "variant": "cooked",
+      "variant": "roasted",
       "ig_id": "ing_02139",
       "ig_axes": {
         "cooking_state": "roasted"
       },
       "var_axes": {
-        "cooking_state": "cooked"
+        "cooking_state": "roasted"
       }
     },
     "CIQUAL:11307": {
@@ -7350,14 +7360,14 @@
     },
     "CIQUAL:20074": {
       "base": "artichoke_globe_french_steamed_sous_pression",
-      "variant": "cooked_sous_pression",
+      "variant": "steamed_sous_pression",
       "ig_id": "ing_02164",
       "ig_axes": {
         "cooking_state": "steamed",
         "thermal_state": "pressurized"
       },
       "var_axes": {
-        "cooking_state": "cooked",
+        "cooking_state": "steamed",
         "thermal_state": "pressurized"
       }
     },
@@ -8008,13 +8018,13 @@
     },
     "CIQUAL:20304": {
       "base": "broccoli_steamed",
-      "variant": "cooked",
+      "variant": "steamed",
       "ig_id": "ing_02325",
       "ig_axes": {
         "cooking_state": "steamed"
       },
       "var_axes": {
-        "cooking_state": "cooked"
+        "cooking_state": "steamed"
       }
     },
     "CNF:2375": {
@@ -9372,14 +9382,14 @@
     },
     "CIQUAL:20312": {
       "base": "cauliflower_steamed_flower",
-      "variant": "cooked_flower",
+      "variant": "steamed_flower",
       "ig_id": "ing_02652",
       "ig_axes": {
         "cooking_state": "steamed",
         "part": "flower"
       },
       "var_axes": {
-        "cooking_state": "cooked",
+        "cooking_state": "steamed",
         "part": "flower"
       }
     },
@@ -9882,13 +9892,13 @@
     },
     "CIQUAL:20332": {
       "base": "pumpkin_roasted",
-      "variant": "cooked",
+      "variant": "roasted",
       "ig_id": "ing_02780",
       "ig_axes": {
         "cooking_state": "roasted"
       },
       "var_axes": {
-        "cooking_state": "cooked"
+        "cooking_state": "roasted"
       }
     },
     "CNF:2192": {
@@ -10019,15 +10029,15 @@
       }
     },
     "CNF:2459": {
-      "base": "spaghetti_squash_boiled_canned",
-      "variant": "boiled_canned_drained",
+      "base": "spaghetti_squash_baked_canned",
+      "variant": "baked_canned_drained",
       "ig_id": "ing_02808",
       "ig_axes": {
-        "cooking_state": "boiled",
+        "cooking_state": "baked",
         "packaging": "canned"
       },
       "var_axes": {
-        "cooking_state": "boiled",
+        "cooking_state": "baked",
         "draining": "drained",
         "packaging": "canned"
       }
@@ -11623,18 +11633,14 @@
     },
     "CIQUAL:13131": {
       "base": "black_olive",
-      "variant": "canned_drained_in_oil",
+      "variant": "canned_in_oil_in_oil",
       "ig_id": "ing_03236",
       "ig_axes": {
-        "draining": [
-          "in_oil",
-          "drained"
-        ],
         "packaging": "canned"
       },
       "var_axes": {
         "packaging": "canned",
-        "draining": "drained"
+        "draining": "in_oil"
       }
     },
     "CIQUAL:13033": {
@@ -12674,10 +12680,10 @@
       "ig_id": "ing_01649",
       "ig_axes": {
         "thermal_state": "dried",
-        "form": "rolled"
+        "form": "flakes"
       },
       "var_axes": {
-        "form": "rolled"
+        "form": "flakes"
       }
     },
     "CIQUAL:4028": {
@@ -13521,20 +13527,16 @@
       "var_axes": {}
     },
     "CIQUAL:20256": {
-      "base": "tomato_dried_canned_drained_in_oil",
-      "variant": "dried_canned_drained_in_oil",
+      "base": "tomato_dried_canned_in_oil",
+      "variant": "dried_canned_in_oil_in_oil",
       "ig_id": "ing_03576",
       "ig_axes": {
         "thermal_state": "dried",
-        "draining": [
-          "in_oil",
-          "drained"
-        ],
         "packaging": "canned"
       },
       "var_axes": {
         "packaging": "canned",
-        "draining": "drained"
+        "draining": "in_oil"
       }
     },
     "CNF:2260": {
@@ -17575,15 +17577,15 @@
     },
     "CNF:2596": {
       "base": "sesame_butter_from_whole_seed_paste",
-      "variant": "paste_seed_plant",
+      "variant": "butter_seed_plant",
       "ig_id": "ing_04553",
       "ig_axes": {
-        "form": "paste",
+        "form": "butter",
         "part": "seed",
         "origin": "plant"
       },
       "var_axes": {
-        "form": "paste",
+        "form": "butter",
         "part": "seed"
       }
     },
@@ -20836,7 +20838,7 @@
     },
     "CIQUAL:19436": {
       "base": "light_single_cream_12_20_fat",
-      "variant": "fresh_whole",
+      "variant": "r_frig_r_whole",
       "ig_id": "ing_04921",
       "ig_axes": {
         "fat_content_pct": "12-20",
@@ -20850,10 +20852,7 @@
         ]
       },
       "var_axes": {
-        "thermal_state": [
-          "fresh",
-          "refrigerated"
-        ]
+        "thermal_state": "refrigerated"
       }
     },
     "CIQUAL:19430": {
@@ -20874,7 +20873,7 @@
     },
     "CIQUAL:19431": {
       "base": "light_thick_cream_12_25_fat",
-      "variant": "fresh_whole",
+      "variant": "r_frig_r_whole",
       "ig_id": "ing_04925",
       "ig_axes": {
         "fat_content_pct": "12-25",
@@ -20888,10 +20887,7 @@
         ]
       },
       "var_axes": {
-        "thermal_state": [
-          "fresh",
-          "refrigerated"
-        ]
+        "thermal_state": "refrigerated"
       }
     },
     "CIQUAL:19417": {
@@ -20922,7 +20918,7 @@
     },
     "CIQUAL:19410": {
       "base": "thick_cream_30_fat",
-      "variant": "fresh_whole",
+      "variant": "r_frig_r_whole",
       "ig_id": "ing_04931",
       "ig_axes": {
         "fat_content_pct": "30",
@@ -20933,10 +20929,7 @@
         "fat_content": "full_fat"
       },
       "var_axes": {
-        "thermal_state": [
-          "fresh",
-          "refrigerated"
-        ]
+        "thermal_state": "refrigerated"
       }
     },
     "CIQUAL:19420": {

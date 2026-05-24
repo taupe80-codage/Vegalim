@@ -3,7 +3,7 @@
     "description": "Nutrition index — SOURCE:id → valeurs nutritionnelles",
     "version": "3.0",
     "nutrition_version": "7.1",
-    "generated_at": "2026-05-24T17:13:42.661479+00:00",
+    "generated_at": "2026-05-24T20:18:40.506034+00:00",
     "key_format": "SOURCE:source_id  ex: CIQUAL:4028, CNF:501697, USDA:2644288",
     "total_entries": 2109,
     "by_source": {
@@ -4082,12 +4082,12 @@
     },
     "CNF:4413": {
       "base": "buckwheat_groats",
-      "variant": "boiled",
+      "variant": "roasted",
       "category": "cereals and grains",
       "name_fr": "gruau de sarrasin",
       "name_en": "buckwheat groats",
       "axes": {
-        "cooking_state": "boiled"
+        "cooking_state": "roasted"
       },
       "calories_kcal": 92.0,
       "protein_g": 3.38,
@@ -10384,12 +10384,12 @@
     },
     "CIQUAL:9107": {
       "base": "pre_cooked_white_rice",
-      "variant": "cooked_unsalted",
+      "variant": "precooked_unsalted",
       "category": "cereals and grains",
       "name_fr": "riz blanc, pré",
       "name_en": "pre-cooked white rice",
       "axes": {
-        "cooking_state": "cooked",
+        "cooking_state": "precooked",
         "seasoning": "unsalted"
       },
       "calories_kcal": 124.1,
@@ -13317,12 +13317,13 @@
     },
     "CIQUAL:2000": {
       "base": "pineapple_juice_from_concentrate",
-      "variant": "concentrated",
+      "variant": "juice_base_de_concentr",
       "category": "fruit",
       "name_fr": "ananas, à base de concentré",
       "name_en": "pineapple juice, from concentrate",
       "axes": {
-        "form": "concentrated"
+        "form": "juice",
+        "treatment": "base_de_concentr"
       },
       "calories_kcal": 52.3,
       "protein_g": 0.41,
@@ -20803,12 +20804,13 @@
     },
     "CIQUAL:2012": {
       "base": "orange_juice_from_concentrate",
-      "variant": "concentrated",
+      "variant": "juice_base_de_concentr",
       "category": "fruit",
       "name_fr": "orange, à base de concentré",
       "name_en": "orange juice, from concentrate",
       "axes": {
-        "form": "concentrated"
+        "form": "juice",
+        "treatment": "base_de_concentr"
       },
       "calories_kcal": 45.6,
       "protein_g": 0.63,
@@ -20853,14 +20855,15 @@
     },
     "USDA:2003591": {
       "base": "orange_juice_r_frig_r",
-      "variant": "concentrated_flesh_r_frig_r",
+      "variant": "juice_flesh_base_de_concentr_r_frig_r",
       "category": "fruit",
       "name_fr": "orange",
       "name_en": "orange juice",
       "axes": {
         "thermal_state": "r_frig_r",
-        "form": "concentrated",
-        "part": "flesh"
+        "form": "juice",
+        "part": "flesh",
+        "treatment": "base_de_concentr"
       },
       "calories_kcal": 47.1,
       "protein_g": 0.734,
@@ -20885,13 +20888,13 @@
     },
     "USDA:2003597": {
       "base": "orange_juice_r_frig_r",
-      "variant": "concentrated_flesh_sans_pulpe_r_frig_r",
+      "variant": "juice_flesh_sans_pulpe_r_frig_r",
       "category": "fruit",
       "name_fr": "jus d'orange, sans pulpe, réfrigéré",
       "name_en": "orange juice, no pulp, refrigerated",
       "axes": {
         "thermal_state": "r_frig_r",
-        "form": "concentrated",
+        "form": "juice",
         "part": "flesh",
         "treatment": "sans_pulpe"
       },
@@ -21264,12 +21267,13 @@
     },
     "CIQUAL:2015": {
       "base": "grapefruit_juice_concentrate",
-      "variant": "concentrated",
+      "variant": "juice_base_de_concentr",
       "category": "fruit",
       "name_fr": "pamplemousse (pomélo), à base de concentré",
       "name_en": "grapefruit juice concentrate",
       "axes": {
-        "form": "concentrated"
+        "form": "juice",
+        "treatment": "base_de_concentr"
       },
       "calories_kcal": 40.9,
       "protein_g": 0.52,
@@ -23603,12 +23607,13 @@
     },
     "CIQUAL:2014": {
       "base": "apple_juice_concentrate",
-      "variant": "concentrated",
+      "variant": "juice_base_de_concentr",
       "category": "fruit",
       "name_fr": "pomme, à base de concentré",
       "name_en": "apple juice concentrate",
       "axes": {
-        "form": "concentrated"
+        "form": "juice",
+        "treatment": "base_de_concentr"
       },
       "calories_kcal": 48.5,
       "protein_g": 0.24,
@@ -23653,12 +23658,12 @@
     },
     "CNF:1698": {
       "base": "apple_boiled_sliced_peel",
-      "variant": "raw_sliced_skinless",
+      "variant": "boiled_sliced_skinless",
       "category": "fruit",
       "name_fr": "pomme",
       "name_en": "apple",
       "axes": {
-        "cooking_state": "raw",
+        "cooking_state": "boiled",
         "form": "sliced",
         "part": "skinless"
       },
@@ -25896,12 +25901,13 @@
     },
     "CIQUAL:2019": {
       "base": "grape_juice",
-      "variant": "concentrated",
+      "variant": "juice_base_de_concentr",
       "category": "fruit",
       "name_fr": "raisin, à base de concentré",
       "name_en": "grape juice concentrate",
       "axes": {
-        "form": "concentrated"
+        "form": "juice",
+        "treatment": "base_de_concentr"
       },
       "calories_kcal": 67.1,
       "protein_g": 0.31,
@@ -30039,12 +30045,12 @@
     },
     "CIQUAL:11306": {
       "base": "garlic_roasted",
-      "variant": "cooked",
+      "variant": "roasted",
       "category": "vegetable",
       "name_fr": "ail",
       "name_en": "garlic",
       "axes": {
-        "cooking_state": "cooked"
+        "cooking_state": "roasted"
       },
       "calories_kcal": 125.0,
       "protein_g": 5.56,
@@ -30230,12 +30236,12 @@
     },
     "CIQUAL:20074": {
       "base": "artichoke_globe_french_steamed_sous_pression",
-      "variant": "cooked_sous_pression",
+      "variant": "steamed_sous_pression",
       "category": "vegetable",
       "name_fr": "artichaut",
       "name_en": "artichoke (Globe, French)",
       "axes": {
-        "cooking_state": "cooked",
+        "cooking_state": "steamed",
         "thermal_state": "sous_pression"
       },
       "calories_kcal": 46.4,
@@ -32800,12 +32806,12 @@
     },
     "CIQUAL:20304": {
       "base": "broccoli_steamed",
-      "variant": "cooked",
+      "variant": "steamed",
       "category": "vegetable",
       "name_fr": "brocoli",
       "name_en": "broccoli",
       "axes": {
-        "cooking_state": "cooked"
+        "cooking_state": "steamed"
       },
       "calories_kcal": 38.0,
       "protein_g": 4.13,
@@ -38301,12 +38307,12 @@
     },
     "CIQUAL:20312": {
       "base": "cauliflower_steamed_flower",
-      "variant": "cooked_flower",
+      "variant": "steamed_flower",
       "category": "vegetable",
       "name_fr": "chou-fleur",
       "name_en": "cauliflower",
       "axes": {
-        "cooking_state": "cooked",
+        "cooking_state": "steamed",
         "part": "flower"
       },
       "calories_kcal": 30.5,
@@ -40245,12 +40251,12 @@
     },
     "CIQUAL:20332": {
       "base": "pumpkin_roasted",
-      "variant": "cooked",
+      "variant": "roasted",
       "category": "vegetable",
       "name_fr": "potiron",
       "name_en": "pumpkin, roasted",
       "axes": {
-        "cooking_state": "cooked"
+        "cooking_state": "roasted"
       },
       "calories_kcal": 28.2,
       "protein_g": 0.25,
@@ -40758,13 +40764,13 @@
       "water_g": 95.22
     },
     "CNF:2459": {
-      "base": "spaghetti_squash_boiled_canned",
-      "variant": "boiled_canned_drained",
+      "base": "spaghetti_squash_baked_canned",
+      "variant": "baked_canned_drained",
       "category": "vegetable",
       "name_fr": "courge spaghetti, au four",
       "name_en": "squash, spaghetti",
       "axes": {
-        "cooking_state": "boiled",
+        "cooking_state": "baked",
         "packaging": "canned",
         "draining": "drained"
       },
@@ -47203,14 +47209,14 @@
     },
     "CIQUAL:13131": {
       "base": "black_olive",
-      "variant": "canned_drained_in_oil",
+      "variant": "canned_in_oil_in_oil",
       "category": "vegetable",
       "name_fr": "olive noire (à la grecque)",
       "name_en": "black olive, in oil (Greek style)",
       "axes": {
         "storage_medium": "in_oil",
         "packaging": "canned",
-        "draining": "drained"
+        "draining": "in_oil"
       },
       "calories_kcal": 349.0,
       "protein_g": 2.19,
@@ -54574,8 +54580,8 @@
       "water_g": 14.6
     },
     "CIQUAL:20256": {
-      "base": "tomato_dried_canned_drained_in_oil",
-      "variant": "dried_canned_drained_in_oil",
+      "base": "tomato_dried_canned_in_oil",
+      "variant": "dried_canned_in_oil_in_oil",
       "category": "vegetable",
       "name_fr": "tomate",
       "name_en": "tomato",
@@ -54583,7 +54589,7 @@
         "thermal_state": "dried",
         "storage_medium": "in_oil",
         "packaging": "canned",
-        "draining": "drained"
+        "draining": "in_oil"
       },
       "calories_kcal": 171.0,
       "protein_g": 5.06,
@@ -70904,12 +70910,12 @@
     },
     "CNF:2596": {
       "base": "sesame_butter_from_whole_seed_paste",
-      "variant": "paste_seed_plant",
+      "variant": "butter_seed_plant",
       "category": "nut",
       "name_fr": "beurre de sésame, de, pâte",
       "name_en": "sesame butter, from whole seed, paste",
       "axes": {
-        "form": "paste",
+        "form": "butter",
         "part": "seed",
         "origin": "plant"
       },
@@ -83209,12 +83215,12 @@
     },
     "CIQUAL:19436": {
       "base": "light_single_cream_12_20_fat",
-      "variant": "fresh_whole",
+      "variant": "r_frig_r_whole",
       "category": "dairy products",
       "name_fr": "crème 12 à 20% MG, fluide",
       "name_en": "light single cream, 12-20% fat",
       "axes": {
-        "thermal_state": "fresh",
+        "thermal_state": "r_frig_r",
         "fat_content": "12-20"
       },
       "calories_kcal": 173.0,
@@ -83285,12 +83291,12 @@
     },
     "CIQUAL:19431": {
       "base": "light_thick_cream_12_25_fat",
-      "variant": "fresh_whole",
+      "variant": "r_frig_r_whole",
       "category": "dairy products",
       "name_fr": "crème 12 à 25% MG, épaisse",
       "name_en": "light thick cream, 12-25% fat",
       "axes": {
-        "thermal_state": "fresh",
+        "thermal_state": "r_frig_r",
         "fat_content": "12-25"
       },
       "calories_kcal": 162.0,
@@ -83435,12 +83441,12 @@
     },
     "CIQUAL:19410": {
       "base": "thick_cream_30_fat",
-      "variant": "fresh_whole",
+      "variant": "r_frig_r_whole",
       "category": "dairy products",
       "name_fr": "crème 30% MG, épaisse",
       "name_en": "thick cream, 30% fat",
       "axes": {
-        "thermal_state": "fresh",
+        "thermal_state": "r_frig_r",
         "fat_content": "30"
       },
       "calories_kcal": 285.0,
