@@ -3,7 +3,7 @@
     "description": "Nutrition index — SOURCE:id → valeurs nutritionnelles",
     "version": "3.0",
     "nutrition_version": "7.1",
-    "generated_at": "2026-05-24T03:48:34.800873+00:00",
+    "generated_at": "2026-05-24T13:10:27.135115+00:00",
     "key_format": "SOURCE:source_id  ex: CIQUAL:4028, CNF:501697, USDA:2644288",
     "total_entries": 2109,
     "by_source": {
@@ -4474,7 +4474,7 @@
       "water_g": 9.9
     },
     "USDA:2257046": {
-      "base": "oat_milk",
+      "base": "oat_milk_plain_unsweetened_fresh_aisle_plant",
       "variant": "milk_plain_unsweetened_fresh_aisle_plant",
       "category": "cereals and grains",
       "name_fr": "avoine",
@@ -5802,7 +5802,7 @@
       "water_g": 12.42
     },
     "CNF:4500": {
-      "base": "whole_wheat_flour",
+      "base": "whole_wheat",
       "variant": "flour_whole_seed",
       "category": "cereals and grains",
       "name_fr": "blé entier",
@@ -7315,13 +7315,11 @@
     },
     "CNF:3725": {
       "base": "bread_rice_bran_gluten_free",
-      "variant": "gluten_free",
+      "variant": "default",
       "category": "cereals and grains",
       "name_fr": "pain au son de riz",
       "name_en": "bread, rice bran, gluten free",
-      "axes": {
-        "treatment": "gluten_free"
-      },
+      "axes": {},
       "calories_kcal": 243.0,
       "protein_g": 8.9,
       "carbs_g": 43.5,
@@ -8775,7 +8773,7 @@
       "water_g": 7.8
     },
     "USDA:1104812": {
-      "base": "rice_brown",
+      "base": "brown_rice",
       "variant": "flour",
       "category": "cereals and grains",
       "name_fr": "riz brun",
@@ -8804,7 +8802,7 @@
       "water_g": 12.1
     },
     "USDA:1104867": {
-      "base": "rice_glutinous",
+      "base": "glutinous_rice",
       "variant": "flour",
       "category": "cereals and grains",
       "name_fr": "riz gluant",
@@ -8833,7 +8831,7 @@
       "water_g": 11.8
     },
     "USDA:790214": {
-      "base": "rice_white",
+      "base": "white_rice",
       "variant": "flour_unenriched",
       "category": "cereals and grains",
       "name_fr": "riz blanc",
@@ -8916,7 +8914,7 @@
       "water_g": 6.13
     },
     "CNF:4497": {
-      "base": "rice_brown_boiled_long_grain_seed",
+      "base": "brown_rice_boiled_long_grain_seed",
       "variant": "cooked_long_grain_seed",
       "category": "cereals and grains",
       "name_fr": "riz brun",
@@ -8969,7 +8967,7 @@
       "water_g": 73.09
     },
     "CNF:4496": {
-      "base": "rice_brown_long_grain_seed_dried",
+      "base": "brown_rice_long_grain_seed_dried",
       "variant": "long_grain_seed_dried",
       "category": "cereals and grains",
       "name_fr": "riz brun",
@@ -9022,7 +9020,7 @@
       "water_g": 10.37
     },
     "CNF:4423": {
-      "base": "rice_brown_boiled_medium_grain_seed",
+      "base": "brown_rice_boiled_medium_grain_seed",
       "variant": "cooked_medium_grain_seed",
       "category": "cereals and grains",
       "name_fr": "riz brun",
@@ -9072,7 +9070,7 @@
       "water_g": 72.96
     },
     "CNF:4422": {
-      "base": "rice_brown_medium_grain_seed_dried",
+      "base": "brown_rice_medium_grain_seed_dried",
       "variant": "medium_grain_seed_dried",
       "category": "cereals and grains",
       "name_fr": "riz brun",
@@ -9122,7 +9120,7 @@
       "water_g": 12.37
     },
     "CNF:4425": {
-      "base": "rice_white_glutinous",
+      "base": "white_glutinous_rice",
       "variant": "cooked",
       "category": "cereals and grains",
       "name_fr": "riz blanc, glutineux",
@@ -9173,7 +9171,7 @@
       "water_g": 76.63
     },
     "CNF:4424": {
-      "base": "rice_white_glutinous_dried",
+      "base": "white_glutinous_rice_dried",
       "variant": "dried",
       "category": "cereals and grains",
       "name_fr": "riz blanc, glutineux",
@@ -9221,7 +9219,7 @@
       "water_g": 10.46
     },
     "CNF:4473": {
-      "base": "rice_white_boiled_long_grain_seed_parboiled",
+      "base": "white_rice_boiled_long_grain_seed_parboiled",
       "variant": "cooked_long_grain_seed_parboiled",
       "category": "cereals and grains",
       "name_fr": "riz blanc",
@@ -9273,7 +9271,7 @@
       "water_g": 70.36
     },
     "CNF:4472": {
-      "base": "rice_white_long_grain_seed_parboiled_dried",
+      "base": "white_rice_long_grain_seed_parboiled_dried",
       "variant": "long_grain_seed_parboiled_dried",
       "category": "cereals and grains",
       "name_fr": "riz blanc",
@@ -9325,7 +9323,7 @@
       "water_g": 9.86
     },
     "CNF:4523": {
-      "base": "rice_white_boiled_long_grain_seed",
+      "base": "white_rice_boiled_long_grain_seed",
       "variant": "cooked_long_grain_seed",
       "category": "cereals and grains",
       "name_fr": "riz blanc, ordinaire",
@@ -9378,7 +9376,7 @@
       "water_g": 68.44
     },
     "CNF:4471": {
-      "base": "rice_white_long_grain_seed_dried",
+      "base": "white_rice_long_grain_seed_dried",
       "variant": "long_grain_seed_dried",
       "category": "cereals and grains",
       "name_fr": "riz blanc, ordinaire",
@@ -9431,7 +9429,7 @@
       "water_g": 11.62
     },
     "CNF:4475": {
-      "base": "rice_white_boiled_medium_grain_seed",
+      "base": "white_rice_boiled_medium_grain_seed",
       "variant": "cooked_medium_grain_seed",
       "category": "cereals and grains",
       "name_fr": "riz blanc",
@@ -9481,7 +9479,7 @@
       "water_g": 68.61
     },
     "CNF:4474": {
-      "base": "rice_white_medium_grain_seed_dried",
+      "base": "white_rice_medium_grain_seed_dried",
       "variant": "medium_grain_seed_dried",
       "category": "cereals and grains",
       "name_fr": "riz blanc",
@@ -9532,7 +9530,7 @@
       "water_g": 12.89
     },
     "CNF:4477": {
-      "base": "rice_white_boiled_short_grain_seed",
+      "base": "white_rice_boiled_short_grain_seed",
       "variant": "cooked_short_grain_seed",
       "category": "cereals and grains",
       "name_fr": "riz blanc, grain court",
@@ -9582,7 +9580,7 @@
       "water_g": 68.53
     },
     "CNF:4476": {
-      "base": "rice_white_short_grain_seed_dried",
+      "base": "white_rice_short_grain_seed_dried",
       "variant": "short_grain_seed_dried",
       "category": "cereals and grains",
       "name_fr": "riz blanc, grain court",
@@ -9633,7 +9631,7 @@
       "water_g": 13.29
     },
     "CNF:4450": {
-      "base": "rice_wild",
+      "base": "wild_rice",
       "variant": "cooked",
       "category": "cereals and grains",
       "name_fr": "riz sauvage",
@@ -9684,7 +9682,7 @@
       "water_g": 73.93
     },
     "CNF:4449": {
-      "base": "rice_wild_dried",
+      "base": "wild_rice_dried",
       "variant": "dried",
       "category": "cereals and grains",
       "name_fr": "riz sauvage",
@@ -9735,7 +9733,7 @@
       "water_g": 7.76
     },
     "USDA:2710825": {
-      "base": "rice_black",
+      "base": "black_rice",
       "variant": "raw_unenriched",
       "category": "cereals and grains",
       "name_fr": "riz noir",
@@ -9764,7 +9762,7 @@
       "water_g": 10.5
     },
     "USDA:2512380": {
-      "base": "rice_brown_long_grain",
+      "base": "brown_long_grain_rice",
       "variant": "raw_unenriched",
       "category": "cereals and grains",
       "name_fr": "riz brun",
@@ -9795,7 +9793,7 @@
       "water_g": 11.5
     },
     "USDA:2710838": {
-      "base": "rice_red",
+      "base": "red_rice",
       "variant": "raw_unenriched_dried",
       "category": "cereals and grains",
       "name_fr": "riz rouge",
@@ -9825,7 +9823,7 @@
       "water_g": 10.5
     },
     "USDA:2512381": {
-      "base": "rice_white_long_grain",
+      "base": "white_long_grain_rice",
       "variant": "raw_unenriched",
       "category": "cereals and grains",
       "name_fr": "riz blanc",
@@ -9856,7 +9854,7 @@
       "water_g": 11.2
     },
     "CIQUAL:9101": {
-      "base": "rice_white_raw_parboiled",
+      "base": "white_rice_raw_parboiled",
       "variant": "raw_parboiled",
       "category": "cereals and grains",
       "name_fr": "riz blanc",
@@ -9905,7 +9903,7 @@
       "water_g": 9.86
     },
     "CIQUAL:9100": {
-      "base": "rice_white_raw",
+      "base": "white_rice_raw",
       "variant": "raw",
       "category": "cereals and grains",
       "name_fr": "riz blanc",
@@ -9954,7 +9952,7 @@
       "water_g": 12.6
     },
     "CIQUAL:9102": {
-      "base": "brown_rice",
+      "base": "brown_rice_raw",
       "variant": "raw",
       "category": "cereals and grains",
       "name_fr": "riz complet",
@@ -10003,7 +10001,7 @@
       "water_g": 12.6
     },
     "CIQUAL:9109": {
-      "base": "rice_red_raw",
+      "base": "red_rice_raw",
       "variant": "raw",
       "category": "cereals and grains",
       "name_fr": "riz rouge",
@@ -10043,7 +10041,7 @@
       "water_g": 12.4
     },
     "CIQUAL:9108": {
-      "base": "wild_rice",
+      "base": "wild_rice_raw",
       "variant": "raw",
       "category": "cereals and grains",
       "name_fr": "riz sauvage",
@@ -10289,7 +10287,7 @@
       "water_g": 63.3
     },
     "CIQUAL:9105": {
-      "base": "rice_white_boiled_parboiled_unsalted",
+      "base": "white_rice_boiled_parboiled_unsalted",
       "variant": "cooked_parboiled_unsalted",
       "category": "cereals and grains",
       "name_fr": "riz blanc",
@@ -10338,7 +10336,7 @@
       "water_g": 63.5
     },
     "CIQUAL:9104": {
-      "base": "rice_white_boiled_unsalted",
+      "base": "white_rice_boiled_unsalted",
       "variant": "cooked_unsalted",
       "category": "cereals and grains",
       "name_fr": "riz blanc",
@@ -10480,7 +10478,7 @@
       "water_g": 54.0
     },
     "CIQUAL:9110": {
-      "base": "rice_red_boiled_unsalted",
+      "base": "red_rice_boiled_unsalted",
       "variant": "cooked_unsalted",
       "category": "cereals and grains",
       "name_fr": "riz rouge",
@@ -10715,7 +10713,7 @@
       "water_g": 77.8
     },
     "CNF:4525": {
-      "base": "rice_white_boiled_long_grain_seed_salted",
+      "base": "white_rice_boiled_long_grain_seed_salted",
       "variant": "cooked_long_grain_seed_salted",
       "category": "cereals and grains",
       "name_fr": "riz blanc, ordinaire",
@@ -10769,7 +10767,7 @@
       "water_g": 68.44
     },
     "CIQUAL:9520": {
-      "base": "rice_flour",
+      "base": "rice",
       "variant": "flour",
       "category": "cereals and grains",
       "name_fr": "riz",
@@ -10818,7 +10816,7 @@
       "water_g": 11.4
     },
     "CNF:4451": {
-      "base": "rice_brown_flour",
+      "base": "brown_rice_flour",
       "variant": "flour",
       "category": "cereals and grains",
       "name_fr": "riz brun",
@@ -10865,7 +10863,7 @@
       "water_g": 11.97
     },
     "CNF:4429": {
-      "base": "rice_white_flour",
+      "base": "white_rice_flour",
       "variant": "flour",
       "category": "cereals and grains",
       "name_fr": "riz blanc",
@@ -10916,7 +10914,7 @@
       "water_g": 11.89
     },
     "CNF:6192": {
-      "base": "rice_white_glutinous_flour",
+      "base": "white_glutinous_rice_flour",
       "variant": "flour",
       "category": "cereals and grains",
       "name_fr": "riz blanc, glutineux",
@@ -16737,7 +16735,7 @@
       "water_g": 72.93
     },
     "CIQUAL:2024": {
-      "base": "passion_fruit_juice",
+      "base": "passion_fruit",
       "variant": "juice_fresh",
       "category": "fruit",
       "name_fr": "fruit de la passion",
@@ -16783,7 +16781,7 @@
       "water_g": 84.2
     },
     "CIQUAL:13016": {
-      "base": "passion_fruit",
+      "base": "passion_fruit_raw_flesh_no_skin",
       "variant": "raw_skinless",
       "category": "fruit",
       "name_fr": "fruit de la passion",
@@ -18987,14 +18985,15 @@
       "water_g": 89.51
     },
     "CNF:1625": {
-      "base": "tangerine_mandarin_juice",
+      "base": "tangerine_mandarin_sweetened_canned",
       "variant": "sweetened_canned",
       "category": "fruit",
       "name_fr": "tangerine (mandarine)",
       "name_en": "tangerine (mandarin) juice",
       "axes": {
         "packaging": "canned",
-        "seasoning": "sweetened"
+        "seasoning": "sweetened",
+        "form": "juice"
       },
       "calories_kcal": 50.0,
       "protein_g": 0.5,
@@ -19090,7 +19089,7 @@
       "water_g": 83.46
     },
     "USDA:2710834": {
-      "base": "mango_ataulfo",
+      "base": "ataulfo_mango",
       "variant": "raw_skinless",
       "category": "fruit",
       "name_fr": "mangue",
@@ -19119,7 +19118,7 @@
       "water_g": 80.8
     },
     "USDA:2710833": {
-      "base": "mango_tommy_atkins",
+      "base": "tommy_atkins_mango",
       "variant": "raw_skinless",
       "category": "fruit",
       "name_fr": "mangue",
@@ -19148,7 +19147,7 @@
       "water_g": 83.2
     },
     "CIQUAL:2023": {
-      "base": "mango_tommy_atkins_juice_fresh",
+      "base": "tommy_atkins_mango_juice_fresh",
       "variant": "juice_fresh",
       "category": "fruit",
       "name_fr": "mangue",
@@ -19184,7 +19183,7 @@
       "water_g": 86.0
     },
     "CIQUAL:13025": {
-      "base": "mango_tommy_atkins_raw_flesh_no_skin",
+      "base": "tommy_atkins_mango_raw_flesh_no_skin",
       "variant": "raw_skinless",
       "category": "fruit",
       "name_fr": "mangue",
@@ -20869,7 +20868,7 @@
       "water_g": 89.7
     },
     "USDA:2003591": {
-      "base": "orange_juice",
+      "base": "orange_fresh_aisle",
       "variant": "concentrated_flesh_fresh_aisle",
       "category": "fruit",
       "name_fr": "orange",
@@ -20877,7 +20876,7 @@
       "axes": {
         "packaging": "fresh_aisle",
         "thermal_state": "refrigerated",
-        "form": "concentrate",
+        "form": "concentrated",
         "part": "flesh"
       },
       "calories_kcal": 47.1,
@@ -20902,7 +20901,7 @@
       "water_g": 88.2
     },
     "USDA:2003597": {
-      "base": "orange_juice",
+      "base": "orange_fresh_aisle",
       "variant": "concentrated_flesh_sans_pulpe_fresh_aisle",
       "category": "fruit",
       "name_fr": "jus d'orange, sans pulpe, réfrigéré",
@@ -20910,7 +20909,7 @@
       "axes": {
         "packaging": "fresh_aisle",
         "thermal_state": "refrigerated",
-        "form": "concentrate",
+        "form": "concentrated",
         "part": "flesh",
         "treatment": "no_pulp"
       },
@@ -21088,7 +21087,7 @@
       "water_g": 87.72
     },
     "CIQUAL:2377": {
-      "base": "blood_orange_juice",
+      "base": "blood_orange",
       "variant": "juice_plain",
       "category": "fruit",
       "name_fr": "orange sanguine",
@@ -21192,7 +21191,7 @@
       "alcohol_g": 0.0
     },
     "CIQUAL:2027": {
-      "base": "grapefruit_juice",
+      "base": "grapefruit",
       "variant": "juice_plain",
       "category": "fruit",
       "name_fr": "pamplemousse (pomelo)",
@@ -21236,7 +21235,7 @@
       "water_g": 89.9
     },
     "CIQUAL:2025": {
-      "base": "grapefruit_juice_juice_fresh",
+      "base": "grapefruit_juice_fresh",
       "variant": "juice_fresh",
       "category": "fruit",
       "name_fr": "pamplemousse (pomélo)",
@@ -21468,7 +21467,7 @@
       "water_g": 88.1
     },
     "CIQUAL:13040": {
-      "base": "grapefruit",
+      "base": "grapefruit_raw_flesh_no_skin",
       "variant": "raw_skinless",
       "category": "fruit",
       "name_fr": "pomelo (dit Pamplemousse)",
@@ -21810,14 +21809,15 @@
       "water_g": 90.0
     },
     "CNF:1716": {
-      "base": "grapefruit_juice_unsweetened_canned",
+      "base": "grapefruit_unsweetened_canned",
       "variant": "unsweetened_canned",
       "category": "fruit",
       "name_fr": "pamplemousse",
       "name_en": "grapefruit juice",
       "axes": {
         "packaging": "canned",
-        "seasoning": "unsweetened"
+        "seasoning": "unsweetened",
+        "form": "juice"
       },
       "calories_kcal": 38.0,
       "protein_g": 0.52,
@@ -22392,7 +22392,7 @@
       "water_g": 63.6
     },
     "USDA:2710836": {
-      "base": "pear_anjou_green",
+      "base": "anjou_green_pear",
       "variant": "raw_with_skin",
       "category": "fruit",
       "name_fr": "poire",
@@ -22420,7 +22420,7 @@
       "water_g": 84.3
     },
     "CNF:1693": {
-      "base": "pear_asian",
+      "base": "asian_pear",
       "variant": "raw",
       "category": "fruit",
       "name_fr": "poire, asiatique",
@@ -22471,7 +22471,7 @@
       "water_g": 88.25
     },
     "CNF:502341": {
-      "base": "pear_bartlett",
+      "base": "bartlett_pear",
       "variant": "raw",
       "category": "fruit",
       "name_fr": "Poire, Bartlett, crue",
@@ -22509,7 +22509,7 @@
       "water_g": 84.14
     },
     "CNF:502431": {
-      "base": "pear_bosc",
+      "base": "bosc_pear",
       "variant": "raw",
       "category": "fruit",
       "name_fr": "Poire, bosc, crue",
@@ -22547,7 +22547,7 @@
       "water_g": 83.18
     },
     "CNF:502432": {
-      "base": "pear_green_anjou",
+      "base": "green_anjou_pear",
       "variant": "raw",
       "category": "fruit",
       "name_fr": "Poire, anjou verte, crue",
@@ -22637,7 +22637,7 @@
       "water_g": 83.96
     },
     "CNF:502430": {
-      "base": "pear_red_anjou",
+      "base": "red_anjou_pear",
       "variant": "raw",
       "category": "fruit",
       "name_fr": "Poire, anjou rouge, crue",
@@ -22675,7 +22675,7 @@
       "water_g": 84.24
     },
     "USDA:746773": {
-      "base": "pears_bartlett",
+      "base": "bartlett_pear_raw",
       "variant": "raw",
       "category": "fruit",
       "name_fr": "poire",
@@ -22953,7 +22953,7 @@
       "water_g": 82.3
     },
     "CNF:502436": {
-      "base": "apple_fuji",
+      "base": "fuji_apple",
       "variant": "raw_peel",
       "category": "fruit",
       "name_fr": "Pomme, Fuji, crue avec pelure",
@@ -22991,7 +22991,7 @@
       "water_g": 84.16
     },
     "CNF:502435": {
-      "base": "apple_gala",
+      "base": "gala_apple",
       "variant": "raw_peel",
       "category": "fruit",
       "name_fr": "Pomme, Gala, crue avec pelure",
@@ -23029,7 +23029,7 @@
       "water_g": 85.76
     },
     "CNF:502342": {
-      "base": "apple_golden_delicious",
+      "base": "golden_delicious_apple",
       "variant": "raw_peel",
       "category": "fruit",
       "name_fr": "Pomme, Golden Delicious, crue, avec pelure",
@@ -23067,7 +23067,7 @@
       "water_g": 85.81
     },
     "CNF:502434": {
-      "base": "apple_granny_smith",
+      "base": "granny_smith_apple",
       "variant": "raw_peel",
       "category": "fruit",
       "name_fr": "Pomme, Granny Smith, crue, avec pelure",
@@ -23209,7 +23209,7 @@
       "water_g": 86.67
     },
     "CNF:502433": {
-      "base": "apple_red_delicious",
+      "base": "red_delicious_apple",
       "variant": "raw",
       "category": "fruit",
       "name_fr": "Pomme, Red Delicious, crue, avec peau",
@@ -23246,7 +23246,7 @@
       "water_g": 85.33
     },
     "USDA:1750340": {
-      "base": "apples_fuji",
+      "base": "fuji_apple_raw",
       "variant": "raw_with_skin",
       "category": "fruit",
       "name_fr": "pomme",
@@ -23278,7 +23278,7 @@
       "water_g": 83.6
     },
     "USDA:1750342": {
-      "base": "apples_granny_smith",
+      "base": "granny_smith_apple_raw",
       "variant": "raw_with_skin",
       "category": "fruit",
       "name_fr": "pomme",
@@ -23403,7 +23403,7 @@
       "water_g": 85.1
     },
     "CIQUAL:13122": {
-      "base": "granny_smith_apple",
+      "base": "granny_smith_apple_raw_flesh_with_skin",
       "variant": "raw_flesh_with_skin",
       "category": "fruit",
       "name_fr": "pomme Granny Smith",
@@ -23818,7 +23818,7 @@
       "water_g": 86.4
     },
     "CIQUAL:13191": {
-      "base": "gala_apple",
+      "base": "gala_apple_raw_flesh_no_skin",
       "variant": "raw_skinless",
       "category": "fruit",
       "name_fr": "pomme Gala",
@@ -23866,7 +23866,7 @@
       "water_g": 85.5
     },
     "CIQUAL:13086": {
-      "base": "golden_delicious_apple",
+      "base": "golden_delicious_apple_raw_flesh_no_skin",
       "variant": "raw_skinless",
       "category": "fruit",
       "name_fr": "pomme Golden",
@@ -26384,7 +26384,7 @@
       "alcohol_g": 0.0
     },
     "CNF:216": {
-      "base": "vanilla_extract",
+      "base": "vanilla",
       "variant": "extract",
       "category": "spice",
       "name_fr": "vanille, extrait",
@@ -28083,7 +28083,7 @@
       "water_g": 3.95
     },
     "CNF:198": {
-      "base": "pepper_black",
+      "base": "black_pepper",
       "variant": "spice",
       "category": "spice",
       "name_fr": "poivre, noir",
@@ -28134,7 +28134,7 @@
       "water_g": 12.46
     },
     "CNF:200": {
-      "base": "pepper_white",
+      "base": "white_pepper",
       "variant": "spice",
       "category": "spice",
       "name_fr": "poivre, blanc",
@@ -28179,7 +28179,7 @@
       "water_g": 11.42
     },
     "CIQUAL:11019": {
-      "base": "white_pepper",
+      "base": "white_pepper_spice",
       "variant": "spice",
       "category": "spice",
       "name_fr": "poivre blanc",
@@ -28223,7 +28223,7 @@
       "water_g": 11.4
     },
     "CIQUAL:11015": {
-      "base": "black_pepper",
+      "base": "black_pepper_spice",
       "variant": "spice",
       "category": "spice",
       "name_fr": "poivre noir",
@@ -33820,7 +33820,7 @@
       "water_g": 90.3
     },
     "CIQUAL:20105": {
-      "base": "mushroom_morel",
+      "base": "morel_mushroom",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "champignon, morille",
@@ -34149,7 +34149,7 @@
       "water_g": 92.59
     },
     "USDA:2003603": {
-      "base": "mushroom_beech",
+      "base": "beech_mushroom",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "champignon",
@@ -34178,7 +34178,7 @@
       "water_g": 89.8
     },
     "CNF:4974": {
-      "base": "mushroom_brown_italian_crimini",
+      "base": "brown_italian_crimini_mushroom",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "champignon, bruns, italien (crimini)",
@@ -34228,7 +34228,7 @@
       "water_g": 92.12
     },
     "CNF:502136": {
-      "base": "mushroom_chanterelle",
+      "base": "chanterelle_mushroom",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "Champignon, Chanterelle, cru",
@@ -34264,7 +34264,7 @@
       "water_g": 89.85
     },
     "USDA:2003601": {
-      "base": "mushroom_crimini",
+      "base": "crimini_mushroom",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "champignon cremini",
@@ -34293,7 +34293,7 @@
       "water_g": 91.8
     },
     "USDA:2003600": {
-      "base": "mushroom_enoki",
+      "base": "enoki_mushroom",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "champignon enoki",
@@ -34322,7 +34322,7 @@
       "water_g": 88.3
     },
     "CNF:2343": {
-      "base": "mushroom_enoki_raw",
+      "base": "enoki_mushroom_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "champignon, enoki",
@@ -34370,7 +34370,7 @@
       "water_g": 88.54
     },
     "CNF:4884": {
-      "base": "mushroom_fungi_cloud_ears",
+      "base": "cloud_ears_mushroom",
       "variant": "dried",
       "category": "vegetable",
       "name_fr": "champignon, Cloud ears",
@@ -34412,7 +34412,7 @@
       "water_g": 14.8
     },
     "USDA:2003599": {
-      "base": "mushroom_king_oyster",
+      "base": "king_oyster_mushroom",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "champignon king oyster",
@@ -34441,7 +34441,7 @@
       "water_g": 88.1
     },
     "USDA:1999626": {
-      "base": "mushroom_lions_mane",
+      "base": "lions_mane_mushroom",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "champignon crinière de lion",
@@ -34471,7 +34471,7 @@
       "water_g": 88.6
     },
     "USDA:2003602": {
-      "base": "mushroom_maitake",
+      "base": "maitake_mushroom",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "champignon, Maitake",
@@ -34502,7 +34502,7 @@
       "water_g": 90.4
     },
     "USDA:1999627": {
-      "base": "mushroom_oyster",
+      "base": "champignon_pleurote",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "champignon pleurote",
@@ -34532,7 +34532,7 @@
       "water_g": 89.2
     },
     "USDA:2003604": {
-      "base": "mushroom_pioppini",
+      "base": "pioppini_mushroom",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "champignon pioppini",
@@ -34561,7 +34561,7 @@
       "water_g": 89.6
     },
     "USDA:2003598": {
-      "base": "mushroom_portabella",
+      "base": "portabella_mushroom",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "champignon portobello",
@@ -34590,7 +34590,7 @@
       "water_g": 91.5
     },
     "CNF:5957": {
-      "base": "mushroom_portabella_portobello",
+      "base": "portabella_portobello_mushroom",
       "variant": "grilled",
       "category": "vegetable",
       "name_fr": "champignon, portobella (portobello)",
@@ -34641,7 +34641,7 @@
       "water_g": 90.66
     },
     "CNF:4973": {
-      "base": "mushroom_portabella_portobello_raw",
+      "base": "portabella_portobello_mushroom_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "champignon, portobella (portobello)",
@@ -34689,7 +34689,7 @@
       "water_g": 92.82
     },
     "CNF:2125": {
-      "base": "mushroom_shiitake",
+      "base": "shiitake_mushroom",
       "variant": "cooked",
       "category": "vegetable",
       "name_fr": "champignon shiitake",
@@ -34740,7 +34740,7 @@
       "water_g": 83.48
     },
     "CNF:2124": {
-      "base": "mushroom_shiitake_dried",
+      "base": "shiitake_mushroom_dried",
       "variant": "dried",
       "category": "vegetable",
       "name_fr": "champignon shiitake",
@@ -34791,7 +34791,7 @@
       "water_g": 9.5
     },
     "CNF:502112": {
-      "base": "mushroom_shiitake_raw",
+      "base": "shiitake_mushroom_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "Champignon, shiitake, cru",
@@ -34826,7 +34826,7 @@
       "water_g": 89.74
     },
     "CNF:2399": {
-      "base": "mushroom_white",
+      "base": "white_mushroom",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "champignon, blanc",
@@ -34877,7 +34877,7 @@
       "water_g": 92.43
     },
     "USDA:1999628": {
-      "base": "mushrooms_shiitake",
+      "base": "champignon_shiitake",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "champignon shiitake",
@@ -34907,7 +34907,7 @@
       "water_g": 88.6
     },
     "USDA:1999629": {
-      "base": "mushrooms_white_button",
+      "base": "white_button_mushroom",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "champignon de Paris",
@@ -35213,7 +35213,7 @@
       "water_g": 91.08
     },
     "CNF:4867": {
-      "base": "mushroom_straw",
+      "base": "straw_mushroom",
       "variant": "canned_drained",
       "category": "vegetable",
       "name_fr": "champignon, paille de riz",
@@ -35847,7 +35847,7 @@
       "water_g": 92.8
     },
     "USDA:2346407": {
-      "base": "cabbage_green",
+      "base": "green_cabbage",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "chou blanc",
@@ -35874,7 +35874,7 @@
       "water_g": 91.9
     },
     "CNF:4882": {
-      "base": "cabbage_napa",
+      "base": "napa_cabbage",
       "variant": "cooked",
       "category": "vegetable",
       "name_fr": "chou, napa",
@@ -35915,7 +35915,7 @@
       "water_g": 96.33
     },
     "USDA:2727583": {
-      "base": "cabbage_napa_leaf_destemmed",
+      "base": "napa_leaf_destemmed_cabbage",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "chou napa",
@@ -35940,7 +35940,7 @@
       "water_g": 94.2
     },
     "CNF:501098": {
-      "base": "cabbage_napa_raw",
+      "base": "napa_cabbage_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "Chou, napa, cru",
@@ -36041,7 +36041,7 @@
       "water_g": 92.18
     },
     "USDA:2346408": {
-      "base": "cabbage_red",
+      "base": "red_cabbage",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "chou rouge",
@@ -36068,7 +36068,7 @@
       "water_g": 91.1
     },
     "CNF:2036": {
-      "base": "cabbage_savoy",
+      "base": "savoy_cabbage",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "chou de Milan (Savoie)",
@@ -36119,7 +36119,7 @@
       "water_g": 91.0
     },
     "CIQUAL:20116": {
-      "base": "cabbage_green_raw",
+      "base": "green_cabbage_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "chou blanc",
@@ -36263,7 +36263,7 @@
       "water_g": 89.6
     },
     "CIQUAL:20014": {
-      "base": "cabbage_red_raw",
+      "base": "red_cabbage_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "chou rouge",
@@ -36312,7 +36312,7 @@
       "water_g": 90.7
     },
     "CIQUAL:20069": {
-      "base": "green_cabbage",
+      "base": "green_cabbage_02564",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "chou vert",
@@ -36410,7 +36410,7 @@
       "water_g": 91.0
     },
     "CIQUAL:20308": {
-      "base": "cabbage_green_boiled",
+      "base": "green_cabbage_boiled",
       "variant": "cooked",
       "category": "vegetable",
       "name_fr": "chou blanc",
@@ -36501,7 +36501,7 @@
       "water_g": 91.2
     },
     "CIQUAL:20095": {
-      "base": "cabbage_red_boiled",
+      "base": "red_cabbage_boiled",
       "variant": "cooked",
       "category": "vegetable",
       "name_fr": "chou rouge",
@@ -36548,7 +36548,7 @@
       "water_g": 90.8
     },
     "CIQUAL:20310": {
-      "base": "cabbage_red_braised",
+      "base": "red_cabbage_braised",
       "variant": "cooked",
       "category": "vegetable",
       "name_fr": "chou rouge",
@@ -36594,7 +36594,7 @@
       "water_g": 89.1
     },
     "CIQUAL:20311": {
-      "base": "green_cabbage_boiled",
+      "base": "green_cabbage_02577",
       "variant": "cooked",
       "category": "vegetable",
       "name_fr": "chou vert",
@@ -36788,7 +36788,7 @@
       "water_g": 92.57
     },
     "CNF:2035": {
-      "base": "cabbage_red_boiled_canned",
+      "base": "red_cabbage_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "vegetable",
       "name_fr": "chou rouge",
@@ -36841,7 +36841,7 @@
       "water_g": 90.84
     },
     "CNF:2037": {
-      "base": "cabbage_savoy_boiled_canned",
+      "base": "savoy_cabbage_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "vegetable",
       "name_fr": "chou de Milan (Savoie)",
@@ -36997,7 +36997,7 @@
       "water_g": 90.3
     },
     "CNF:5549": {
-      "base": "cabbage_mustard",
+      "base": "mustard_cabbage",
       "variant": "salted",
       "category": "vegetable",
       "name_fr": "chou, moutarde",
@@ -37048,7 +37048,7 @@
       "water_g": 92.1
     },
     "CNF:501609": {
-      "base": "cabbage_red_boiled_salted",
+      "base": "red_cabbage_boiled_salted",
       "variant": "boiled_salted",
       "category": "vegetable",
       "name_fr": "Chou rouge, bouilli, égoutté, sel ajouté",
@@ -37099,7 +37099,7 @@
       "water_g": 90.84
     },
     "CNF:501610": {
-      "base": "cabbage_savoy_boiled_salted",
+      "base": "savoy_cabbage_boiled_salted",
       "variant": "boiled_salted",
       "category": "vegetable",
       "name_fr": "Chou de Milan (Savoie), bouilli, égoutté, sel ajouté",
@@ -37463,7 +37463,7 @@
       "water_g": 95.32
     },
     "USDA:2685572": {
-      "base": "cabbage_bok_choy",
+      "base": "bok_choy_cabbage",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "pak-choï",
@@ -37490,7 +37490,7 @@
       "water_g": 94.5
     },
     "CNF:2040": {
-      "base": "cabbage_chinese_pe_tsai",
+      "base": "chinese_pe_tsai_cabbage",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "chou de Chine (pe-tsai)",
@@ -37782,7 +37782,7 @@
       "water_g": 94.2
     },
     "CNF:2041": {
-      "base": "cabbage_chinese_pe_tsai_boiled_canned",
+      "base": "chinese_pe_tsai_cabbage_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "vegetable",
       "name_fr": "chou de Chine (pe-tsai)",
@@ -38793,7 +38793,7 @@
       "water_g": 96.3
     },
     "CIQUAL:20139": {
-      "base": "squash_pie_pumpkin",
+      "base": "pie_pumpkin_squash",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "courge",
@@ -39123,7 +39123,7 @@
       "water_g": 91.6
     },
     "USDA:2727579": {
-      "base": "squash_spaghetti",
+      "base": "spaghetti_squash",
       "variant": "raw_skinless",
       "category": "vegetable",
       "name_fr": "courge spaghetti",
@@ -39151,7 +39151,7 @@
       "water_g": 92.8
     },
     "CNF:2218": {
-      "base": "squash_crookneck",
+      "base": "crookneck_squash",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "courge musquée",
@@ -39202,7 +39202,7 @@
       "water_g": 94.28
     },
     "CNF:2223": {
-      "base": "squash_scallop",
+      "base": "scallop_squash",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "courge pâtisson",
@@ -39253,7 +39253,7 @@
       "water_g": 94.18
     },
     "USDA:2685569": {
-      "base": "squash_yellow",
+      "base": "yellow_squash",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "courge jaune",
@@ -39280,7 +39280,7 @@
       "water_g": 94.0
     },
     "CNF:2346": {
-      "base": "squash_zucchini_baby",
+      "base": "zucchini_baby_squash",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "courges d'été, courgettes (zucchini), naines",
@@ -39328,7 +39328,7 @@
       "water_g": 92.73
     },
     "CNF:2225": {
-      "base": "squash_zucchini",
+      "base": "zucchini_squash",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "courge courgette (zucchini)",
@@ -39379,7 +39379,7 @@
       "water_g": 94.79
     },
     "CNF:2449": {
-      "base": "squash_acorn",
+      "base": "acorn_squash",
       "variant": "baked",
       "category": "vegetable",
       "name_fr": "courge courge poivrée (courgeon)",
@@ -39427,7 +39427,7 @@
       "water_g": 82.9
     },
     "CNF:2450": {
-      "base": "squash_acorn_boiled_puree",
+      "base": "acorn_squash_boiled_puree",
       "variant": "cooked_puree",
       "category": "vegetable",
       "name_fr": "courge courge poivrée (courgeon)",
@@ -39476,7 +39476,7 @@
       "water_g": 89.7
     },
     "USDA:2685571": {
-      "base": "squash_acorn_raw",
+      "base": "acorn_squash_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "courge",
@@ -39503,7 +39503,7 @@
       "water_g": 87.2
     },
     "USDA:2685570": {
-      "base": "squash_butternut",
+      "base": "butternut_squash",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "courge butternut",
@@ -39530,7 +39530,7 @@
       "water_g": 87.3
     },
     "CNF:2456": {
-      "base": "squash_hubbard",
+      "base": "hubbard_squash",
       "variant": "baked",
       "category": "vegetable",
       "name_fr": "courge hubbard",
@@ -39581,7 +39581,7 @@
       "water_g": 85.1
     },
     "CNF:2457": {
-      "base": "squash_hubbard_boiled_puree",
+      "base": "hubbard_squash_boiled_puree",
       "variant": "cooked_puree",
       "category": "vegetable",
       "name_fr": "courge hubbard",
@@ -39633,7 +39633,7 @@
       "water_g": 91.1
     },
     "CNF:2455": {
-      "base": "squash_hubbard_raw",
+      "base": "hubbard_squash_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "courge hubbard",
@@ -39684,7 +39684,7 @@
       "water_g": 88.0
     },
     "CNF:2458": {
-      "base": "squash_spaghetti_raw",
+      "base": "spaghetti_squash_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "courge spaghetti",
@@ -39781,7 +39781,7 @@
       "water_g": 91.6
     },
     "CIQUAL:20141": {
-      "base": "butternut_squash",
+      "base": "butternut_squash_boiled_flesh_no_skin",
       "variant": "boiled_skinless",
       "category": "vegetable",
       "name_fr": "courge butternut (doubeurre)",
@@ -39878,7 +39878,7 @@
       "water_g": 86.4
     },
     "CIQUAL:20292": {
-      "base": "butternut_squash_boiled_flesh_no_skin",
+      "base": "butternut_squash_02758",
       "variant": "boiled_skinless",
       "category": "vegetable",
       "name_fr": "courge butternut (doubeurre)",
@@ -39956,7 +39956,7 @@
       "water_g": 86.1
     },
     "CIQUAL:20128": {
-      "base": "squash_crookneck_raw_flesh_no_skin",
+      "base": "crookneck_squash_raw_flesh_no_skin",
       "variant": "raw_skinless",
       "category": "vegetable",
       "name_fr": "courge musquée",
@@ -39986,7 +39986,7 @@
       "water_g": 93.3
     },
     "CIQUAL:20145": {
-      "base": "squash_spaghetti_raw_flesh_no_skin",
+      "base": "spaghetti_squash_raw_flesh_no_skin",
       "variant": "raw_skinless",
       "category": "vegetable",
       "name_fr": "courge spaghetti",
@@ -40033,7 +40033,7 @@
       "water_g": 91.6
     },
     "CIQUAL:20143": {
-      "base": "squash_spaghetti_boiled_flesh_no_skin",
+      "base": "spaghetti_squash_boiled_flesh_no_skin",
       "variant": "boiled_skinless",
       "category": "vegetable",
       "name_fr": "courge spaghetti",
@@ -40627,7 +40627,7 @@
       "water_g": 93.69
     },
     "CNF:2219": {
-      "base": "squash_crookneck_boiled_canned",
+      "base": "crookneck_squash_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "vegetable",
       "name_fr": "courge musquée",
@@ -40680,7 +40680,7 @@
       "water_g": 94.25
     },
     "CNF:2224": {
-      "base": "squash_scallop_boiled_canned",
+      "base": "scallop_squash_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "vegetable",
       "name_fr": "courge pâtisson",
@@ -40733,7 +40733,7 @@
       "water_g": 95.0
     },
     "CNF:2226": {
-      "base": "squash_zucchini_boiled_canned",
+      "base": "zucchini_squash_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "vegetable",
       "name_fr": "courge courgette (zucchini)",
@@ -40786,7 +40786,7 @@
       "water_g": 95.22
     },
     "CNF:2459": {
-      "base": "squash_spaghetti_boiled_canned",
+      "base": "spaghetti_squash_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "vegetable",
       "name_fr": "courge spaghetti, au four",
@@ -40839,7 +40839,7 @@
       "water_g": 92.3
     },
     "CNF:2220": {
-      "base": "squash_crookneck_canned_drained",
+      "base": "crookneck_squash_canned_drained",
       "variant": "canned_drained",
       "category": "vegetable",
       "name_fr": "courge musquée",
@@ -41137,7 +41137,7 @@
       "water_g": 93.69
     },
     "CNF:501771": {
-      "base": "squash_scallop_boiled_salted",
+      "base": "scallop_squash_boiled_salted",
       "variant": "boiled_salted",
       "category": "vegetable",
       "name_fr": "Courge d'été, pâtisson, bouilli, égoutté, sel ajouté",
@@ -41187,7 +41187,7 @@
       "water_g": 95.0
     },
     "CNF:501772": {
-      "base": "squash_zucchini_boiled_salted",
+      "base": "zucchini_squash_boiled_salted",
       "variant": "boiled_salted",
       "category": "vegetable",
       "name_fr": "Courge d'été, courgette (zucchini), bouillie, égouttée, sel ajouté",
@@ -41238,7 +41238,7 @@
       "water_g": 95.22
     },
     "CNF:501775": {
-      "base": "squash_acorn_boiled_puree_salted",
+      "base": "acorn_squash_boiled_puree_salted",
       "variant": "boiled_puree_salted",
       "category": "vegetable",
       "name_fr": "Courge d'hiver, courge poivrée (courgeon), bouillie, en purée, sel ajouté",
@@ -41285,7 +41285,7 @@
       "water_g": 89.7
     },
     "CNF:501779": {
-      "base": "squash_hubbard_roasted_salted",
+      "base": "hubbard_squash_roasted_salted",
       "variant": "roasted_salted",
       "category": "vegetable",
       "name_fr": "Courge d'hiver, hubbard, cuite au four, sel ajouté",
@@ -41337,7 +41337,7 @@
       "water_g": 85.1
     },
     "CNF:501780": {
-      "base": "squash_hubbard_boiled_puree_salted",
+      "base": "hubbard_squash_boiled_puree_salted",
       "variant": "boiled_puree_salted",
       "category": "vegetable",
       "name_fr": "Courge d'hiver, hubbard, bouillie, en purée, sel ajouté",
@@ -41389,7 +41389,7 @@
       "water_g": 91.1
     },
     "CNF:501782": {
-      "base": "squash_spaghetti_boiled_salted",
+      "base": "spaghetti_squash_boiled_salted",
       "variant": "boiled_salted",
       "category": "vegetable",
       "name_fr": "Courge d'hiver, spaghetti, au four ou bouillie, égouttée, sel ajouté",
@@ -41469,7 +41469,7 @@
       "water_g": 91.2
     },
     "CIQUAL:20020": {
-      "base": "squash_green_zucchini",
+      "base": "green_zucchini_squash",
       "variant": "raw_flesh_with_skin",
       "category": "vegetable",
       "name_fr": "courgette",
@@ -41519,7 +41519,7 @@
       "water_g": 94.8
     },
     "CIQUAL:20264": {
-      "base": "squash_green_zucchini_puree",
+      "base": "green_zucchini_squash_puree",
       "variant": "puree",
       "category": "vegetable",
       "name_fr": "courgette",
@@ -41543,7 +41543,7 @@
       "alcohol_g": 0.0
     },
     "USDA:2685568": {
-      "base": "squash_green_zucchini_raw",
+      "base": "green_zucchini_squash_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "courgette",
@@ -41570,7 +41570,7 @@
       "water_g": 95.0
     },
     "CIQUAL:20021": {
-      "base": "squash_green_zucchini_boiled_flesh_with_skin",
+      "base": "green_zucchini_squash_boiled_flesh_with_skin",
       "variant": "boiled_flesh_with_skin",
       "category": "vegetable",
       "name_fr": "courgette",
@@ -41620,7 +41620,7 @@
       "water_g": 93.8
     },
     "CIQUAL:20313": {
-      "base": "squash_green_zucchini_roasted_flesh_with_skin",
+      "base": "green_zucchini_squash_roasted_flesh_with_skin",
       "variant": "roasted_flesh_with_skin",
       "category": "vegetable",
       "name_fr": "courgette",
@@ -43515,7 +43515,7 @@
       "water_g": 95.6
     },
     "CIQUAL:20200": {
-      "base": "lettuce_iceberg",
+      "base": "iceberg_lettuce",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "laitue iceberg",
@@ -43564,7 +43564,7 @@
       "water_g": 95.6
     },
     "CIQUAL:20171": {
-      "base": "lettuce_romaine_green",
+      "base": "romaine_green_lettuce",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "laitue romaine",
@@ -43662,7 +43662,7 @@
       "water_g": 95.4
     },
     "CNF:2115": {
-      "base": "lettuce_butterhead_boston_bibb",
+      "base": "butterhead_boston_bibb_lettuce",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "laitue butterhead (Boston)",
@@ -43711,7 +43711,7 @@
       "water_g": 95.63
     },
     "CNF:2116": {
-      "base": "lettuce_cos_or_romaine",
+      "base": "cos_or_romaine_lettuce",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "laitue romaine",
@@ -43760,7 +43760,7 @@
       "water_g": 94.61
     },
     "USDA:746769": {
-      "base": "lettuce_cos_or_romaine_raw",
+      "base": "cos_or_romaine_lettuce_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "laitue romaine",
@@ -43845,7 +43845,7 @@
       "water_g": 95.64
     },
     "USDA:2346388": {
-      "base": "lettuce_iceberg_raw",
+      "base": "iceberg_lettuce_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "laitue iceberg",
@@ -43873,7 +43873,7 @@
       "water_g": 95.5
     },
     "USDA:2346391": {
-      "base": "lettuce_leaf_green",
+      "base": "green_leaf_lettuce",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "laitue feuille verte",
@@ -43902,7 +43902,7 @@
       "water_g": 94.0
     },
     "USDA:2346390": {
-      "base": "lettuce_leaf_red",
+      "base": "red_leaf_lettuce",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "laitue feuille rouge",
@@ -43931,7 +43931,7 @@
       "water_g": 95.0
     },
     "CNF:2117": {
-      "base": "lettuce_looseleaf",
+      "base": "looseleaf_lettuce",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "laitue frisée",
@@ -43980,7 +43980,7 @@
       "water_g": 94.98
     },
     "CNF:5412": {
-      "base": "lettuce_red_leaf",
+      "base": "red_leaf_lettuce_leaf",
       "variant": "leaf",
       "category": "vegetable",
       "name_fr": "laitue rouges",
@@ -44031,7 +44031,7 @@
       "water_g": 95.64
     },
     "USDA:2346389": {
-      "base": "lettuce_romaine_green_raw",
+      "base": "romaine_green_lettuce_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "laitue romaine",
@@ -46272,7 +46272,7 @@
       "water_g": 93.0
     },
     "CIQUAL:20239": {
-      "base": "onions_yellow",
+      "base": "yellow_onion",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "oignon jaune",
@@ -46319,7 +46319,7 @@
       "water_g": 89.0
     },
     "CIQUAL:20238": {
-      "base": "onions_red",
+      "base": "red_onion",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "oignon rouge",
@@ -46415,7 +46415,7 @@
       "water_g": 89.6
     },
     "CNF:2144": {
-      "base": "onion_spring_green_or_scallion_includes_tops_and_bulb",
+      "base": "spring_onion_green_scallion",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "oignon, vert (inclus le bout et le bulbe)",
@@ -46466,7 +46466,7 @@
       "water_g": 89.83
     },
     "CNF:5414": {
-      "base": "onion_sweet",
+      "base": "sweet_onion",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "oignon, doux",
@@ -46509,7 +46509,7 @@
       "water_g": 91.24
     },
     "CNF:5413": {
-      "base": "onion_young_green_tops_only",
+      "base": "young_green_onion_tops",
       "variant": "default",
       "category": "vegetable",
       "name_fr": "oignon, jeune, verts, bout seulement",
@@ -46558,7 +46558,7 @@
       "water_g": 92.32
     },
     "USDA:790577": {
-      "base": "onions_red_raw",
+      "base": "red_onion_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "oignon rouge",
@@ -46586,7 +46586,7 @@
       "water_g": 88.6
     },
     "USDA:1104962": {
-      "base": "onions_white",
+      "base": "white_onion",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "oignon blanc",
@@ -46613,7 +46613,7 @@
       "water_g": 91.3
     },
     "USDA:790646": {
-      "base": "onions_yellow_raw",
+      "base": "yellow_onion_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "oignon jaune",
@@ -46667,7 +46667,7 @@
       "water_g": 83.5
     },
     "CIQUAL:20324": {
-      "base": "onions_red_sauteed",
+      "base": "red_onion_sauteed",
       "variant": "sauteed",
       "category": "vegetable",
       "name_fr": "oignon rouge",
@@ -46953,7 +46953,7 @@
       "water_g": 87.86
     },
     "CNF:5960": {
-      "base": "onion_yellow_sauteed",
+      "base": "yellow_onion_sauteed",
       "variant": "sauteed",
       "category": "vegetable",
       "name_fr": "oignon, jaune",
@@ -47046,7 +47046,7 @@
       "water_g": 91.2
     },
     "CIQUAL:20322": {
-      "base": "onions_white_sauteed",
+      "base": "white_onion_sauteed",
       "variant": "sauteed",
       "category": "vegetable",
       "name_fr": "oignon blanc",
@@ -47092,7 +47092,7 @@
       "water_g": 88.1
     },
     "CNF:2145": {
-      "base": "onion_welsh",
+      "base": "welsh_onion",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "oignon vert (ciboule)",
@@ -48241,7 +48241,7 @@
       "water_g": 73.88
     },
     "CNF:2322": {
-      "base": "pepper_hot_chili",
+      "base": "hot_chili_pepper",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "piment, fort du Chili",
@@ -48292,7 +48292,7 @@
       "water_g": 87.74
     },
     "CNF:4860": {
-      "base": "pepper_jalapeno",
+      "base": "jalapeno_pepper",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "piment, jalapeno",
@@ -48343,7 +48343,7 @@
       "water_g": 91.69
     },
     "CNF:4858": {
-      "base": "pepper_serrano",
+      "base": "serrano_pepper",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "piment, serrano",
@@ -48394,7 +48394,7 @@
       "water_g": 90.25
     },
     "USDA:2747661": {
-      "base": "peppers_jalapeno",
+      "base": "jalapeno_pepper_raw",
       "variant": "raw_seedless",
       "category": "vegetable",
       "name_fr": "piment jalapeño",
@@ -48424,7 +48424,7 @@
       "water_g": 93.8
     },
     "USDA:2747663": {
-      "base": "peppers_serrano",
+      "base": "serrano_pepper_raw",
       "variant": "raw_seedless",
       "category": "vegetable",
       "name_fr": "piment serrano",
@@ -48502,7 +48502,7 @@
       "water_g": 88.0
     },
     "USDA:2747662": {
-      "base": "peppers_poblano",
+      "base": "poblano_pepper",
       "variant": "raw_seedless",
       "category": "vegetable",
       "name_fr": "piment poblano",
@@ -48533,7 +48533,7 @@
       "water_g": 92.8
     },
     "CNF:4857": {
-      "base": "pepper_banana",
+      "base": "banana_pepper",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "piment, banane",
@@ -48584,7 +48584,7 @@
       "water_g": 91.81
     },
     "USDA:2747660": {
-      "base": "peppers_banana",
+      "base": "banana_pepper_raw",
       "variant": "raw_seedless",
       "category": "vegetable",
       "name_fr": "piment banane",
@@ -48614,7 +48614,7 @@
       "water_g": 93.8
     },
     "CNF:4859": {
-      "base": "pepper_ancho",
+      "base": "ancho_pepper",
       "variant": "spice_dried",
       "category": "vegetable",
       "name_fr": "piment, ancho",
@@ -48663,7 +48663,7 @@
       "water_g": 22.63
     },
     "CNF:2355": {
-      "base": "pepper_hot_chili_red_sun",
+      "base": "hot_chili_red_sun_pepper",
       "variant": "spice_dried",
       "category": "vegetable",
       "name_fr": "piment, fort du Chili, rouge au soleil",
@@ -48715,7 +48715,7 @@
       "water_g": 7.15
     },
     "CNF:4862": {
-      "base": "pepper_hungarian",
+      "base": "hungarian_pepper",
       "variant": "raw_spice",
       "category": "vegetable",
       "name_fr": "piment, hongrois",
@@ -48767,7 +48767,7 @@
       "water_g": 91.51
     },
     "CNF:4863": {
-      "base": "pepper_pasilla",
+      "base": "pasilla_pepper",
       "variant": "spice_dried",
       "category": "vegetable",
       "name_fr": "piment, pasilla",
@@ -48857,7 +48857,7 @@
       "water_g": 8.46
     },
     "CNF:199": {
-      "base": "pepper_red_or_cayenne",
+      "base": "red_or_cayenne_pepper",
       "variant": "spice",
       "category": "vegetable",
       "name_fr": "piment rouge ou de cayenne",
@@ -48907,7 +48907,7 @@
       "water_g": 8.05
     },
     "CNF:4861": {
-      "base": "pepper_chili_green",
+      "base": "chili_green_pepper",
       "variant": "spice_canned",
       "category": "vegetable",
       "name_fr": "piment, chili, vert",
@@ -49507,7 +49507,7 @@
       "water_g": 91.6
     },
     "USDA:2258591": {
-      "base": "peppers_bell_orange",
+      "base": "bell_orange_pepper",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "poivron orange",
@@ -49538,7 +49538,7 @@
       "water_g": 91.9
     },
     "CIQUAL:20085": {
-      "base": "pepper_sweet_green",
+      "base": "green_bell_pepper",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "poivron vert",
@@ -49587,7 +49587,7 @@
       "water_g": 93.0
     },
     "CIQUAL:20330": {
-      "base": "pepper_sweet_green_sauteed",
+      "base": "green_bell_pepper_sauteed",
       "variant": "sauteed",
       "category": "vegetable",
       "name_fr": "poivron vert",
@@ -49633,7 +49633,7 @@
       "water_g": 92.4
     },
     "CIQUAL:20087": {
-      "base": "pepper_sweet_red",
+      "base": "red_bell_pepper",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "poivron rouge",
@@ -49682,7 +49682,7 @@
       "water_g": 90.2
     },
     "CIQUAL:20329": {
-      "base": "pepper_sweet_red_sauteed",
+      "base": "red_bell_pepper_sauteed",
       "variant": "sauteed",
       "category": "vegetable",
       "name_fr": "poivron rouge",
@@ -49728,7 +49728,7 @@
       "water_g": 89.8
     },
     "CIQUAL:20168": {
-      "base": "pepper_sweet_yellow",
+      "base": "yellow_bell_pepper",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "poivron jaune",
@@ -49777,7 +49777,7 @@
       "water_g": 91.9
     },
     "USDA:2258588": {
-      "base": "peppers_bell_green",
+      "base": "bell_green_pepper",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "poivron vert",
@@ -49809,7 +49809,7 @@
       "water_g": 94.1
     },
     "USDA:2258590": {
-      "base": "peppers_bell_red",
+      "base": "bell_red_pepper",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "poivron rouge",
@@ -49841,7 +49841,7 @@
       "water_g": 91.9
     },
     "USDA:2258589": {
-      "base": "peppers_bell_yellow",
+      "base": "bell_yellow_pepper",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "poivron jaune",
@@ -49920,7 +49920,7 @@
       "water_g": 92.1
     },
     "CIQUAL:20088": {
-      "base": "pepper_sweet_red_boiled",
+      "base": "red_bell_pepper_boiled",
       "variant": "cooked",
       "category": "vegetable",
       "name_fr": "poivron rouge",
@@ -49958,7 +49958,7 @@
       "water_g": 90.2
     },
     "CIQUAL:20086": {
-      "base": "pepper_sweet_green_boiled",
+      "base": "green_bell_pepper_boiled",
       "variant": "cooked",
       "category": "vegetable",
       "name_fr": "poivron vert",
@@ -50005,7 +50005,7 @@
       "water_g": 91.9
     },
     "CNF:2414": {
-      "base": "pepper_sweet_green_boiled_canned",
+      "base": "green_bell_pepper_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "vegetable",
       "name_fr": "poivron vert",
@@ -50058,7 +50058,7 @@
       "water_g": 91.87
     },
     "CNF:2486": {
-      "base": "pepper_sweet_red_boiled_canned",
+      "base": "red_bell_pepper_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "vegetable",
       "name_fr": "poivron rouge",
@@ -50111,7 +50111,7 @@
       "water_g": 91.87
     },
     "CIQUAL:20275": {
-      "base": "pepper_sweet_red_canned_drained",
+      "base": "red_bell_pepper_canned_drained",
       "variant": "canned_drained",
       "category": "vegetable",
       "name_fr": "poivron rouge",
@@ -50160,7 +50160,7 @@
       "water_g": 91.9
     },
     "CNF:2485": {
-      "base": "pepper_sweet_green_boiled_salted",
+      "base": "green_bell_pepper_boiled_salted",
       "variant": "cooked_salted_drained",
       "category": "vegetable",
       "name_fr": "poivron vert",
@@ -50210,7 +50210,7 @@
       "water_g": 91.87
     },
     "CNF:2487": {
-      "base": "pepper_sweet_red_boiled_salted",
+      "base": "red_bell_pepper_boiled_salted",
       "variant": "cooked_salted_drained",
       "category": "vegetable",
       "name_fr": "poivron rouge",
@@ -50261,7 +50261,7 @@
       "water_g": 91.87
     },
     "CIQUAL:20328": {
-      "base": "peppers_bell_yellow_sauteed",
+      "base": "bell_yellow_pepper_sauteed",
       "variant": "sauteed",
       "category": "vegetable",
       "name_fr": "poivron jaune",
@@ -50356,7 +50356,7 @@
       "water_g": 33.55
     },
     "USDA:2346403": {
-      "base": "potatoes_gold",
+      "base": "gold_potato",
       "variant": "raw_skinless",
       "category": "vegetable",
       "name_fr": "pomme de terre",
@@ -50388,7 +50388,7 @@
       "water_g": 81.1
     },
     "USDA:2346401": {
-      "base": "potatoes_russet",
+      "base": "russet_potato",
       "variant": "raw_skinless",
       "category": "vegetable",
       "name_fr": "pomme de terre",
@@ -50873,7 +50873,7 @@
       "water_g": 79.34
     },
     "CNF:5708": {
-      "base": "potato_red",
+      "base": "red_potato",
       "variant": "baked_flesh_with_skin",
       "category": "vegetable",
       "name_fr": "pomme de terre, rouge",
@@ -50923,7 +50923,7 @@
       "water_g": 76.67
     },
     "CNF:5286": {
-      "base": "potato_red_raw_flesh_with_skin",
+      "base": "red_potato_raw_flesh_with_skin",
       "variant": "raw_flesh_with_skin",
       "category": "vegetable",
       "name_fr": "pomme de terre, rouge",
@@ -50975,7 +50975,7 @@
       "water_g": 80.96
     },
     "USDA:2346402": {
-      "base": "potato_red_raw_flesh_with_skin",
+      "base": "red_potato_raw_flesh_with_skin",
       "variant": "raw_skinless",
       "category": "vegetable",
       "name_fr": "pomme de terre rouge, sans peau",
@@ -51007,7 +51007,7 @@
       "water_g": 80.5
     },
     "CNF:5706": {
-      "base": "potato_russet",
+      "base": "russet_potato_roasted_flesh_with_skin",
       "variant": "baked_flesh_with_skin",
       "category": "vegetable",
       "name_fr": "pomme de terre, Russet",
@@ -51059,7 +51059,7 @@
       "water_g": 74.45
     },
     "CNF:5284": {
-      "base": "potato_russet_raw_flesh_with_skin",
+      "base": "russet_potato_raw_flesh_with_skin",
       "variant": "raw_flesh_with_skin",
       "category": "vegetable",
       "name_fr": "pomme de terre, Russet",
@@ -51211,7 +51211,7 @@
       "water_g": 83.29
     },
     "CNF:5707": {
-      "base": "potato_white",
+      "base": "white_potato",
       "variant": "baked_flesh_with_skin",
       "category": "vegetable",
       "name_fr": "pomme de terre, blanche",
@@ -51263,7 +51263,7 @@
       "water_g": 75.43
     },
     "CNF:5285": {
-      "base": "potato_white_raw_flesh_with_skin",
+      "base": "white_potato_raw_flesh_with_skin",
       "variant": "raw_flesh_with_skin",
       "category": "vegetable",
       "name_fr": "pomme de terre, blanche",
@@ -52529,7 +52529,7 @@
       "water_g": 81.42
     },
     "CIQUAL:15030": {
-      "base": "radishes_red",
+      "base": "red_radish",
       "variant": "raw_seed_sprouted_fresh",
       "category": "vegetable",
       "name_fr": "radis",
@@ -52621,7 +52621,7 @@
       "water_g": 91.4
     },
     "CIQUAL:20045": {
-      "base": "red_radish",
+      "base": "red_radish_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "radis rouge",
@@ -52670,7 +52670,7 @@
       "water_g": 95.5
     },
     "CNF:2198": {
-      "base": "radish_oriental_daikon",
+      "base": "oriental_daikon_radish",
       "variant": "dried",
       "category": "vegetable",
       "name_fr": "radis, orientaux (daikon)",
@@ -52721,7 +52721,7 @@
       "water_g": 19.68
     },
     "CNF:2196": {
-      "base": "radish_oriental_daikon_raw",
+      "base": "oriental_daikon_radish_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "radis, orientaux (daikon)",
@@ -52823,7 +52823,7 @@
       "water_g": 95.27
     },
     "CNF:2301": {
-      "base": "radish_white_icicle",
+      "base": "white_icicle_radish",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "radis, white icicle",
@@ -52870,7 +52870,7 @@
       "water_g": 95.37
     },
     "USDA:2747665": {
-      "base": "radishes_red_raw",
+      "base": "red_radish_03451",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "radis",
@@ -52898,7 +52898,7 @@
       "water_g": 94.7
     },
     "CNF:2197": {
-      "base": "radish_oriental_daikon_boiled_canned",
+      "base": "oriental_daikon_radish_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "vegetable",
       "name_fr": "radis, oriental (daikon)",
@@ -52951,7 +52951,7 @@
       "water_g": 95.04
     },
     "CNF:501750": {
-      "base": "radish_oriental_daikon_boiled_salted",
+      "base": "oriental_daikon_radish_boiled_salted",
       "variant": "boiled_salted",
       "category": "vegetable",
       "name_fr": "Radis, oriental (daikon), bouilli, égoutté, sel ajouté",
@@ -54170,7 +54170,7 @@
       "water_g": 94.6
     },
     "CIQUAL:20119": {
-      "base": "tomato_green",
+      "base": "green_tomato",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "tomate verte",
@@ -54294,7 +54294,7 @@
       "water_g": 92.6
     },
     "CNF:2461": {
-      "base": "tomato_red",
+      "base": "red_tomato",
       "variant": "cooked",
       "category": "vegetable",
       "name_fr": "tomate, rouge",
@@ -54345,7 +54345,7 @@
       "water_g": 94.34
     },
     "CNF:2460": {
-      "base": "tomato_red_raw",
+      "base": "red_tomato_raw",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "tomate, rouge",
@@ -54427,7 +54427,7 @@
       "water_g": 94.7
     },
     "CNF:4849": {
-      "base": "tomato_yellow",
+      "base": "yellow_tomato",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "tomate, jaune",
@@ -54503,7 +54503,7 @@
       "water_g": 94.3
     },
     "CIQUAL:2032": {
-      "base": "tomato_juice",
+      "base": "tomato_juice_plain_salted",
       "variant": "juice_plain_salted",
       "category": "vegetable",
       "name_fr": "tomate, à 6 g/L",
@@ -55053,7 +55053,7 @@
       "water_g": 74.3
     },
     "CIQUAL:20048": {
-      "base": "tomato_red_whole",
+      "base": "red_whole_tomato",
       "variant": "whole_canned",
       "category": "vegetable",
       "name_fr": "Tomate, pelée, appertisée, égouttée",
@@ -55228,7 +55228,7 @@
       "water_g": 94.6
     },
     "CNF:2463": {
-      "base": "tomato_red_canned",
+      "base": "red_tomato_canned",
       "variant": "canned",
       "category": "vegetable",
       "name_fr": "tomate, rouge",
@@ -55336,7 +55336,7 @@
       "water_g": 90.2
     },
     "CNF:2490": {
-      "base": "tomato_red_boiled_salted",
+      "base": "red_tomato_boiled_salted",
       "variant": "cooked_salted",
       "category": "vegetable",
       "name_fr": "tomate, rouge",
@@ -55436,7 +55436,7 @@
       "water_g": 90.1
     },
     "CNF:4880": {
-      "base": "tomato_orange",
+      "base": "orange_tomato",
       "variant": "raw",
       "category": "vegetable",
       "name_fr": "tomate, orange",
@@ -57762,7 +57762,7 @@
       "water_g": 87.47
     },
     "CNF:3275": {
-      "base": "yellow",
+      "base": "yellow_bean",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots, jaunes (fève)",
@@ -57809,7 +57809,7 @@
       "water_g": 62.98
     },
     "CNF:3274": {
-      "base": "yellow_raw",
+      "base": "yellow_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, jaunes (fève)",
@@ -58251,7 +58251,7 @@
       "water_g": 83.7
     },
     "CNF:3351": {
-      "base": "yellow_boiled_salted",
+      "base": "yellow_bean_boiled_salted",
       "variant": "cooked_salted",
       "category": "legumes",
       "name_fr": "haricots, jaunes (fève)",
@@ -58397,7 +58397,7 @@
       "water_g": 83.7
     },
     "CNF:3244": {
-      "base": "adzuki",
+      "base": "adzuki_bean",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots, adzuki",
@@ -58443,7 +58443,7 @@
       "water_g": 66.29
     },
     "CNF:3243": {
-      "base": "adzuki_raw",
+      "base": "adzuki_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, adzuki",
@@ -58489,7 +58489,7 @@
       "water_g": 13.44
     },
     "CNF:3253": {
-      "base": "black_turtle",
+      "base": "black_turtle_bean",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots, black turtle",
@@ -58540,7 +58540,7 @@
       "water_g": 65.74
     },
     "CNF:3252": {
-      "base": "black_turtle_raw",
+      "base": "black_turtle_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, black turtle",
@@ -58591,7 +58591,7 @@
       "water_g": 11.0
     },
     "CNF:3377": {
-      "base": "black",
+      "base": "black_bean",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots, noirs",
@@ -58639,7 +58639,7 @@
       "water_g": 65.74
     },
     "CNF:3376": {
-      "base": "black_raw",
+      "base": "black_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, noirs",
@@ -58690,7 +58690,7 @@
       "water_g": 11.02
     },
     "USDA:2644281": {
-      "base": "cannellini",
+      "base": "cannellini_bean",
       "variant": "dried",
       "category": "legumes",
       "name_fr": "haricot cannellini",
@@ -58714,7 +58714,7 @@
       "water_g": 12.3
     },
     "USDA:2644287": {
-      "base": "cannellini",
+      "base": "cannellini_bean",
       "variant": "dried_canned_drained",
       "category": "legumes",
       "name_fr": "haricot cannellini, conserve, égoutté",
@@ -58740,7 +58740,7 @@
       "water_g": 71.5
     },
     "CNF:3258": {
-      "base": "french",
+      "base": "french_bean",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots verts",
@@ -58787,7 +58787,7 @@
       "water_g": 66.57
     },
     "CNF:3257": {
-      "base": "french_raw",
+      "base": "french_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots verts",
@@ -58834,7 +58834,7 @@
       "water_g": 10.77
     },
     "CNF:3260": {
-      "base": "great_northern",
+      "base": "great_northern_bean",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots, great northern",
@@ -58882,7 +58882,7 @@
       "water_g": 69.0
     },
     "CNF:3259": {
-      "base": "great_northern_raw",
+      "base": "great_northern_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, great northern",
@@ -58933,7 +58933,7 @@
       "water_g": 10.7
     },
     "CNF:501584": {
-      "base": "kidney_all_types",
+      "base": "kidney_bean",
       "variant": "boiled",
       "category": "legumes",
       "name_fr": "Haricots, rouges, tous les types, bouillis",
@@ -58984,7 +58984,7 @@
       "water_g": 66.94
     },
     "CNF:501585": {
-      "base": "kidney_all_types_raw",
+      "base": "kidney_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "Haricots, rouges, tous les types, crus",
@@ -59035,7 +59035,7 @@
       "water_g": 11.75
     },
     "CNF:3382": {
-      "base": "kidney_dark_red",
+      "base": "dark_red_kidney_bean",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots, rouge foncé",
@@ -59086,7 +59086,7 @@
       "water_g": 66.94
     },
     "CNF:3381": {
-      "base": "kidney_dark_red_raw",
+      "base": "dark_red_kidney_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, rouge foncé",
@@ -59137,7 +59137,7 @@
       "water_g": 11.75
     },
     "CNF:3264": {
-      "base": "kidney_light_red",
+      "base": "light_red_kidney_bean",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots, rouge pâle",
@@ -59185,7 +59185,7 @@
       "water_g": 66.93
     },
     "CNF:3380": {
-      "base": "kidney_light_red_raw",
+      "base": "light_red_kidney_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, rouge pâle",
@@ -59335,7 +59335,7 @@
       "water_g": 9.05
     },
     "CNF:3292": {
-      "base": "lima_baby",
+      "base": "baby_lima_bean",
       "variant": "cooked_dried",
       "category": "legumes",
       "name_fr": "haricots, lima, petits grains (de sieva)",
@@ -59384,7 +59384,7 @@
       "water_g": 67.15
     },
     "CNF:3291": {
-      "base": "lima_baby_raw_dried",
+      "base": "baby_lima_bean_raw_dried",
       "variant": "raw_dried",
       "category": "legumes",
       "name_fr": "haricots, lima, petits grains (de sieva)",
@@ -59436,7 +59436,7 @@
       "water_g": 12.07
     },
     "CNF:3289": {
-      "base": "lima_large",
+      "base": "large_lima_bean",
       "variant": "cooked_dried",
       "category": "legumes",
       "name_fr": "haricots, lima, gros",
@@ -59488,7 +59488,7 @@
       "water_g": 69.79
     },
     "CNF:3288": {
-      "base": "lima_large_raw_dried",
+      "base": "large_lima_bean_raw_dried",
       "variant": "raw_dried",
       "category": "legumes",
       "name_fr": "haricots, lima, gros",
@@ -59540,7 +59540,7 @@
       "water_g": 10.17
     },
     "CNF:2003": {
-      "base": "lima",
+      "base": "lima_bean",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, lima",
@@ -59591,7 +59591,7 @@
       "water_g": 70.24
     },
     "CNF:2008": {
-      "base": "mung",
+      "base": "mung_bean",
       "variant": "raw_sprouted_dried",
       "category": "legumes",
       "name_fr": "haricots, mungo",
@@ -59644,7 +59644,7 @@
       "water_g": 90.4
     },
     "CNF:3301": {
-      "base": "mungo",
+      "base": "mung_bean_boiled",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots, mungo",
@@ -59694,7 +59694,7 @@
       "water_g": 72.51
     },
     "CNF:3300": {
-      "base": "mungo_raw",
+      "base": "mung_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, mungo",
@@ -59742,7 +59742,7 @@
       "water_g": 10.8
     },
     "CNF:3384": {
-      "base": "navy",
+      "base": "navy_bean",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots, petits blancs",
@@ -59793,7 +59793,7 @@
       "water_g": 63.81
     },
     "CNF:2011": {
-      "base": "navy_raw_sprouted_dried",
+      "base": "navy_bean_raw_sprouted_dried",
       "variant": "raw_sprouted_dried",
       "category": "legumes",
       "name_fr": "haricots, petits blancs",
@@ -59842,7 +59842,7 @@
       "water_g": 79.15
     },
     "CNF:3383": {
-      "base": "navy_raw",
+      "base": "navy_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, petits blancs",
@@ -59893,7 +59893,7 @@
       "water_g": 12.1
     },
     "CNF:3268": {
-      "base": "pink",
+      "base": "pink_bean",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots, roses",
@@ -59944,7 +59944,7 @@
       "water_g": 61.2
     },
     "CNF:3267": {
-      "base": "pink_raw",
+      "base": "pink_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, roses",
@@ -59995,7 +59995,7 @@
       "water_g": 10.06
     },
     "CNF:3270": {
-      "base": "pinto",
+      "base": "pinto_bean",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots, pinto",
@@ -60046,7 +60046,7 @@
       "water_g": 62.95
     },
     "CNF:2310": {
-      "base": "pinto_raw_sprouted_dried",
+      "base": "pinto_bean_raw_sprouted_dried",
       "variant": "raw_sprouted_dried",
       "category": "legumes",
       "name_fr": "haricots, pinto",
@@ -60095,7 +60095,7 @@
       "water_g": 81.3
     },
     "CNF:3269": {
-      "base": "pinto_raw",
+      "base": "pinto_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, pinto",
@@ -60321,7 +60321,7 @@
       "water_g": 89.7
     },
     "CNF:3386": {
-      "base": "white",
+      "base": "white_bean",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricots, blancs",
@@ -60372,7 +60372,7 @@
       "water_g": 63.08
     },
     "CNF:3385": {
-      "base": "white_raw",
+      "base": "white_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricots, blancs",
@@ -60517,7 +60517,7 @@
       "water_g": 90.3
     },
     "CIQUAL:20501": {
-      "base": "great_northern_dried",
+      "base": "great_northern_bean_dried",
       "variant": "dried",
       "category": "legumes",
       "name_fr": "haricot blanc",
@@ -60563,7 +60563,7 @@
       "water_g": 11.3
     },
     "USDA:2644294": {
-      "base": "great_northern_dried",
+      "base": "great_northern_bean_dried",
       "variant": "dried_canned_drained",
       "category": "legumes",
       "name_fr": "haricot blanc, conserve, égoutté",
@@ -60589,7 +60589,7 @@
       "water_g": 71.2
     },
     "CIQUAL:20529": {
-      "base": "lima_bean",
+      "base": "lima_bean_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricot de Lima",
@@ -60680,7 +60680,7 @@
       "water_g": 8.5
     },
     "CIQUAL:20530": {
-      "base": "mung_bean",
+      "base": "mung_bean_dried",
       "variant": "dried",
       "category": "legumes",
       "name_fr": "haricot mungo",
@@ -60851,7 +60851,7 @@
       "water_g": 90.3
     },
     "CIQUAL:20257": {
-      "base": "french_puree",
+      "base": "french_bean_puree",
       "variant": "puree",
       "category": "legumes",
       "name_fr": "haricots verts",
@@ -61012,7 +61012,7 @@
       "water_g": 89.6
     },
     "CIQUAL:20502": {
-      "base": "great_northern_boiled",
+      "base": "great_northern_bean_boiled",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "haricot blanc",
@@ -61398,7 +61398,7 @@
       "water_g": 89.3
     },
     "USDA:747444": {
-      "base": "black_dried",
+      "base": "black_bean_dried",
       "variant": "dried",
       "category": "legumes",
       "name_fr": "haricot noir",
@@ -61518,7 +61518,7 @@
       "water_g": 0.0
     },
     "USDA:747446": {
-      "base": "great_northern_03913",
+      "base": "great_northern_bean_03913",
       "variant": "dried",
       "category": "legumes",
       "name_fr": "haricot blanc",
@@ -61614,7 +61614,7 @@
       "water_g": 0.0
     },
     "USDA:747441": {
-      "base": "navy_bean",
+      "base": "navy_bean_dried",
       "variant": "dried",
       "category": "legumes",
       "name_fr": "haricot navy",
@@ -61638,7 +61638,7 @@
       "water_g": 0.0
     },
     "USDA:2644286": {
-      "base": "navy_bean",
+      "base": "navy_bean_dried",
       "variant": "dried_canned_drained",
       "category": "legumes",
       "name_fr": "haricot navy, conserve, égoutté",
@@ -61664,7 +61664,7 @@
       "water_g": 71.0
     },
     "USDA:747439": {
-      "base": "pink_bean",
+      "base": "pink_bean_dried",
       "variant": "dried",
       "category": "legumes",
       "name_fr": "haricot rose",
@@ -61688,7 +61688,7 @@
       "water_g": 0.0
     },
     "USDA:747445": {
-      "base": "pinto_bean",
+      "base": "pinto_bean_dried",
       "variant": "dried",
       "category": "legumes",
       "name_fr": "haricot pinto",
@@ -61712,7 +61712,7 @@
       "water_g": 0.0
     },
     "USDA:2644292": {
-      "base": "pinto_bean",
+      "base": "pinto_bean_dried",
       "variant": "dried_canned_drained",
       "category": "legumes",
       "name_fr": "haricot pinto, conserve, égoutté",
@@ -61762,7 +61762,7 @@
       "water_g": 0.0
     },
     "USDA:747443": {
-      "base": "small_red",
+      "base": "small_red_bean",
       "variant": "dried",
       "category": "legumes",
       "name_fr": "haricot rouge petit",
@@ -61834,7 +61834,7 @@
       "water_g": 0.0
     },
     "CNF:2004": {
-      "base": "lima_boiled_canned",
+      "base": "lima_bean_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "legumes",
       "name_fr": "haricots, lima",
@@ -61887,7 +61887,7 @@
       "water_g": 67.17
     },
     "CNF:2012": {
-      "base": "navy_boiled_sprouted_dried_canned",
+      "base": "navy_bean_boiled_sprouted_dried_canned",
       "variant": "cooked_sprouted_dried_canned_drained",
       "category": "legumes",
       "name_fr": "haricots, petits blancs",
@@ -61938,7 +61938,7 @@
       "water_g": 76.02
     },
     "CNF:2311": {
-      "base": "pinto_boiled_sprouted_dried_canned",
+      "base": "pinto_bean_boiled_sprouted_dried_canned",
       "variant": "cooked_sprouted_dried_canned_drained",
       "category": "legumes",
       "name_fr": "haricots, pinto",
@@ -62042,7 +62042,7 @@
       "water_g": 89.22
     },
     "USDA:2644285": {
-      "base": "black_salted_canned_drained",
+      "base": "black_bean_salted_canned_drained",
       "variant": "salted_canned_drained",
       "category": "legumes",
       "name_fr": "haricot noir",
@@ -62115,7 +62115,7 @@
       "water_g": 68.11
     },
     "CNF:2299": {
-      "base": "mung_sprouted_dried_canned_drained",
+      "base": "mung_bean_sprouted_dried_canned_drained",
       "variant": "sprouted_dried_canned_drained",
       "category": "legumes",
       "name_fr": "haricots, mungo",
@@ -62169,7 +62169,7 @@
       "water_g": 96.1
     },
     "CNF:502280": {
-      "base": "pinto_canned_drained",
+      "base": "pinto_bean_canned_drained",
       "variant": "canned_drained",
       "category": "legumes",
       "name_fr": "Haricots, pinto, conserve, égouttés",
@@ -62393,7 +62393,7 @@
       "water_g": 93.3
     },
     "CIQUAL:20511": {
-      "base": "great_northern_canned_drained",
+      "base": "great_northern_bean_canned_drained",
       "variant": "canned_drained",
       "category": "legumes",
       "name_fr": "haricot blanc",
@@ -62583,7 +62583,7 @@
       "water_g": 93.4
     },
     "CNF:3340": {
-      "base": "adzuki_boiled_salted",
+      "base": "adzuki_bean_boiled_salted",
       "variant": "cooked_salted",
       "category": "legumes",
       "name_fr": "haricots, adzuki",
@@ -62630,7 +62630,7 @@
       "water_g": 66.29
     },
     "CNF:3342": {
-      "base": "black_turtle_boiled_salted",
+      "base": "black_turtle_bean_boiled_salted",
       "variant": "cooked_salted",
       "category": "legumes",
       "name_fr": "haricots, black turtle",
@@ -62680,7 +62680,7 @@
       "water_g": 65.74
     },
     "CNF:3341": {
-      "base": "black_boiled_salted",
+      "base": "black_bean_boiled_salted",
       "variant": "cooked_salted",
       "category": "legumes",
       "name_fr": "haricots, noirs",
@@ -62729,7 +62729,7 @@
       "water_g": 65.74
     },
     "CNF:3344": {
-      "base": "french_boiled_salted",
+      "base": "french_bean_boiled_salted",
       "variant": "cooked_salted",
       "category": "legumes",
       "name_fr": "haricots verts",
@@ -62777,7 +62777,7 @@
       "water_g": 66.57
     },
     "CNF:3345": {
-      "base": "great_northern_boiled_salted",
+      "base": "great_northern_bean_boiled_salted",
       "variant": "cooked_salted",
       "category": "legumes",
       "name_fr": "haricots, great northern",
@@ -62877,7 +62877,7 @@
       "water_g": 72.66
     },
     "CNF:501671": {
-      "base": "lima_boiled_salted",
+      "base": "lima_bean_boiled_salted",
       "variant": "boiled_salted",
       "category": "legumes",
       "name_fr": "Haricots, lima, bouillis, égouttés, sel ajouté",
@@ -62927,7 +62927,7 @@
       "water_g": 67.17
     },
     "CNF:3357": {
-      "base": "lima_baby_boiled_dried_salted",
+      "base": "baby_lima_bean_boiled_dried_salted",
       "variant": "cooked_dried_salted",
       "category": "legumes",
       "name_fr": "haricots, lima, petits grains (de sieva)",
@@ -62977,7 +62977,7 @@
       "water_g": 67.15
     },
     "CNF:3356": {
-      "base": "lima_large_boiled_dried_salted",
+      "base": "large_lima_bean_boiled_dried_salted",
       "variant": "cooked_dried_salted",
       "category": "legumes",
       "name_fr": "haricots, lima, gros",
@@ -63029,7 +63029,7 @@
       "water_g": 69.79
     },
     "CNF:501676": {
-      "base": "mung_boiled_sprouted_dried_salted",
+      "base": "mung_bean_boiled_sprouted_dried_salted",
       "variant": "boiled_sprouted_dried_salted",
       "category": "legumes",
       "name_fr": "Haricots, mungo, secs, germés, germes de haricot, bouillis, égouttés, sel ajouté",
@@ -63083,7 +63083,7 @@
       "water_g": 93.39
     },
     "CNF:3361": {
-      "base": "mungo_boiled_salted",
+      "base": "mung_bean_boiled_salted",
       "variant": "cooked_salted",
       "category": "legumes",
       "name_fr": "haricots, mungo",
@@ -63134,7 +63134,7 @@
       "water_g": 72.51
     },
     "CNF:3349": {
-      "base": "pinto_boiled_salted",
+      "base": "pinto_bean_boiled_salted",
       "variant": "cooked_salted",
       "category": "legumes",
       "name_fr": "haricots, pinto",
@@ -63185,7 +63185,7 @@
       "water_g": 62.95
     },
     "CNF:501589": {
-      "base": "pinto_boiled_sprouted_dried_salted",
+      "base": "pinto_bean_boiled_sprouted_dried_salted",
       "variant": "boiled_sprouted_dried_salted",
       "category": "legumes",
       "name_fr": "Haricots, pinto, secs, germés, bouillis, égouttés, sel ajouté",
@@ -63280,7 +63280,7 @@
       "water_g": 63.24
     },
     "CNF:3409": {
-      "base": "white_boiled_salted",
+      "base": "white_bean_boiled_salted",
       "variant": "cooked_salted",
       "category": "legumes",
       "name_fr": "haricots, blancs",
@@ -63376,7 +63376,7 @@
       "water_g": 69.23
     },
     "CNF:3245": {
-      "base": "adzuki_sweetened_canned",
+      "base": "adzuki_bean_sweetened_canned",
       "variant": "sweetened_canned",
       "category": "legumes",
       "name_fr": "haricots, adzuki",
@@ -63564,7 +63564,7 @@
       "water_g": 64.65
     },
     "CNF:6181": {
-      "base": "black_flour",
+      "base": "black_bean_flour",
       "variant": "flour",
       "category": "legumes",
       "name_fr": "haricots, noirs",
@@ -63615,7 +63615,7 @@
       "water_g": 5.29
     },
     "CNF:6182": {
-      "base": "white_flour",
+      "base": "white_bean_flour",
       "variant": "flour",
       "category": "legumes",
       "name_fr": "haricots, blancs",
@@ -64883,7 +64883,7 @@
       "water_g": 10.44
     },
     "CIQUAL:20173": {
-      "base": "peas_edible_podded_snow_peas",
+      "base": "snow_peas",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "pois mange-tout",
@@ -64929,7 +64929,7 @@
       "water_g": 88.9
     },
     "CNF:2409": {
-      "base": "peas_green",
+      "base": "green_peas",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "pois, petits (verts)",
@@ -65029,7 +65029,7 @@
       "water_g": 62.27
     },
     "CNF:3313": {
-      "base": "peas_pigeon_red_gram",
+      "base": "pigeon_red_gram_peas",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "pois, cajan",
@@ -65076,7 +65076,7 @@
       "water_g": 68.55
     },
     "CNF:3312": {
-      "base": "peas_pigeon_red_gram_raw",
+      "base": "pigeon_red_gram_peas_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "pois, cajan",
@@ -65123,7 +65123,7 @@
       "water_g": 10.59
     },
     "CNF:3395": {
-      "base": "peas_split",
+      "base": "split_peas",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "pois cassés",
@@ -65174,7 +65174,7 @@
       "water_g": 69.49
     },
     "CNF:3394": {
-      "base": "peas_split_raw",
+      "base": "split_peas_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "pois, cassés",
@@ -65225,7 +65225,7 @@
       "water_g": 8.62
     },
     "CIQUAL:20072": {
-      "base": "green_peas",
+      "base": "green_peas_raw",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "petits pois",
@@ -65485,7 +65485,7 @@
       "water_g": 86.6
     },
     "CIQUAL:20216": {
-      "base": "peas_edible_podded_snow_peas_boiled",
+      "base": "snow_peas_boiled",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "pois mange-tout",
@@ -65534,7 +65534,7 @@
       "water_g": 90.9
     },
     "CIQUAL:20506": {
-      "base": "split_peas",
+      "base": "split_peas_boiled",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "pois cassé",
@@ -65781,7 +65781,7 @@
       "water_g": 89.5
     },
     "CNF:2146": {
-      "base": "peas_edible_podded_snow_peas_boiled_canned",
+      "base": "snow_peas_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "legumes",
       "name_fr": "pois mange-tout",
@@ -65834,7 +65834,7 @@
       "water_g": 88.91
     },
     "CNF:2410": {
-      "base": "peas_green_boiled_canned",
+      "base": "green_peas_boiled_canned",
       "variant": "cooked_canned_drained",
       "category": "legumes",
       "name_fr": "pois, petits (verts)",
@@ -65938,7 +65938,7 @@
       "water_g": 74.37
     },
     "CNF:2163": {
-      "base": "peas_pigeon",
+      "base": "pigeon_peas",
       "variant": "cooked_canned_drained",
       "category": "legumes",
       "name_fr": "pois, cajan",
@@ -66017,7 +66017,7 @@
       "water_g": 71.6
     },
     "CNF:2411": {
-      "base": "peas_green_canned_drained",
+      "base": "green_peas_canned_drained",
       "variant": "canned_drained",
       "category": "legumes",
       "name_fr": "pois, petits (verts)",
@@ -66069,7 +66069,7 @@
       "water_g": 82.29
     },
     "CNF:501697": {
-      "base": "peas_green_unsalted_canned_drained",
+      "base": "green_peas_unsalted_canned_drained",
       "variant": "unsalted_canned_drained",
       "category": "legumes",
       "name_fr": "Pois, petits (verts), conserve, solides égouttés, sans sel ajouté",
@@ -66120,7 +66120,7 @@
       "water_g": 81.7
     },
     "CIQUAL:20036": {
-      "base": "green_peas_canned_drained",
+      "base": "green_peas_04212",
       "variant": "canned_drained",
       "category": "legumes",
       "name_fr": "petits pois, appertisés",
@@ -66460,7 +66460,7 @@
       "water_g": 71.08
     },
     "CNF:501695": {
-      "base": "peas_edible_podded_snow_peas_boiled_salted",
+      "base": "snow_peas_boiled_salted",
       "variant": "boiled_salted",
       "category": "legumes",
       "name_fr": "Pois mange-tout, bouillis, égouttés, sel ajouté",
@@ -66510,7 +66510,7 @@
       "water_g": 88.91
     },
     "CNF:501700": {
-      "base": "peas_green_boiled_salted",
+      "base": "green_peas_boiled_salted",
       "variant": "boiled_salted",
       "category": "legumes",
       "name_fr": "Pois, petits (verts), congelés, bouillis, égouttés, sel ajouté",
@@ -66561,7 +66561,7 @@
       "water_g": 79.52
     },
     "CNF:3367": {
-      "base": "peas_pigeon_red_gram_boiled_salted",
+      "base": "pigeon_red_gram_peas_boiled_salted",
       "variant": "cooked_salted",
       "category": "legumes",
       "name_fr": "pois, cajan",
@@ -66609,7 +66609,7 @@
       "water_g": 68.55
     },
     "CNF:501708": {
-      "base": "peas_pigeon_boiled_salted",
+      "base": "pigeon_peas_boiled_salted",
       "variant": "boiled_salted",
       "category": "legumes",
       "name_fr": "Pois, cajan, bouillis, égouttés, sel ajouté",
@@ -66659,7 +66659,7 @@
       "water_g": 71.8
     },
     "CNF:3412": {
-      "base": "peas_split_boiled_salted",
+      "base": "split_peas_boiled_salted",
       "variant": "cooked_salted",
       "category": "legumes",
       "name_fr": "pois, cassés",
@@ -68500,7 +68500,7 @@
       "water_g": 7.85
     },
     "CIQUAL:20915": {
-      "base": "whole_soy_flour",
+      "base": "whole_soy",
       "variant": "flour",
       "category": "legumes",
       "name_fr": "soja complète",
@@ -68808,7 +68808,7 @@
       "water_g": 84.26
     },
     "USDA:1999630": {
-      "base": "soy_milk",
+      "base": "soy_milk_plain_unsweetened_pre_packaged_plant",
       "variant": "milk_plain_unsweetened_pre_packaged_plant",
       "category": "legumes",
       "name_fr": "soja",
@@ -68904,7 +68904,7 @@
       "water_g": 0.056
     },
     "CIQUAL:16110": {
-      "base": "shea_butter",
+      "base": "shea",
       "variant": "butter",
       "category": "fats and oils",
       "name_fr": "beurre de karité",
@@ -69054,7 +69054,7 @@
       "water_g": 0.08
     },
     "CIQUAL:17900": {
-      "base": "argan_oil",
+      "base": "argan",
       "variant": "oil",
       "category": "fats and oils",
       "name_fr": "argan",
@@ -69081,7 +69081,7 @@
       "water_g": 0.0
     },
     "CIQUAL:17800": {
-      "base": "camelina_oil",
+      "base": "camelina",
       "variant": "oil",
       "category": "fats and oils",
       "name_fr": "cameline",
@@ -69103,7 +69103,7 @@
       "water_g": 0.0
     },
     "CIQUAL:17850": {
-      "base": "hemp_oil",
+      "base": "hemp",
       "variant": "oil",
       "category": "fats and oils",
       "name_fr": "chanvre",
@@ -69181,7 +69181,7 @@
       "water_g": 0.0
     },
     "CIQUAL:17170": {
-      "base": "cottonseed_oil",
+      "base": "cottonseed",
       "variant": "oil",
       "category": "fats and oils",
       "name_fr": "coton",
@@ -69230,7 +69230,7 @@
       "water_g": 0.0
     },
     "CIQUAL:17180": {
-      "base": "linseed_oil",
+      "base": "linseed",
       "variant": "oil",
       "category": "fats and oils",
       "name_fr": "lin",
@@ -70295,7 +70295,7 @@
       "water_g": 0.0
     },
     "CIQUAL:17270": {
-      "base": "extra_virgin_olive_oil",
+      "base": "extra_virgin_olive",
       "variant": "oil_virgin",
       "category": "fats and oils",
       "name_fr": "olive vierge extra",
@@ -70586,7 +70586,7 @@
       "water_g": 0.0
     },
     "CIQUAL:17020": {
-      "base": "apricot_kernel_oil",
+      "base": "apricot_kernel",
       "variant": "oil",
       "category": "fats and oils",
       "name_fr": "noyaux d'abricot",
@@ -70628,7 +70628,7 @@
       "water_g": 0.0
     },
     "CNF:441": {
-      "base": "apricot_kernel",
+      "base": "apricot_kernel_oil",
       "variant": "oil",
       "category": "fats and oils",
       "name_fr": "noyaux d'abricots",
@@ -70676,7 +70676,7 @@
       "water_g": 0.0
     },
     "CNF:2605": {
-      "base": "almond_butter",
+      "base": "almond_butter_plain_plant",
       "variant": "butter_plain_plant",
       "category": "nut",
       "name_fr": "beurre d'amandes",
@@ -70730,7 +70730,7 @@
       "water_g": 1.64
     },
     "CNF:2548": {
-      "base": "cashew_butter",
+      "base": "cashew",
       "variant": "butter_plain_plant",
       "category": "nut",
       "name_fr": "beurre d'acajou (cajous, anacardes)",
@@ -70889,7 +70889,7 @@
       "water_g": 1.55
     },
     "CNF:5509": {
-      "base": "peanut_butter",
+      "base": "peanut_butter_sodium_reduced_plant",
       "variant": "butter_sodium_reduced_plant",
       "category": "nut",
       "name_fr": "beurre d'arachides",
@@ -71093,7 +71093,7 @@
       "water_g": 3.0
     },
     "CNF:2529": {
-      "base": "sunflower_seed_butter",
+      "base": "sunflower_seed",
       "variant": "butter_seed_plant",
       "category": "nut",
       "name_fr": "beurre de tournesol",
@@ -71191,7 +71191,7 @@
       "water_g": 3.03
     },
     "CNF:2639": {
-      "base": "almond_butter_butter_plain_salted_plant",
+      "base": "almond_butter_plain_salted_plant",
       "variant": "butter_plain_salted_plant",
       "category": "nut",
       "name_fr": "beurre d'amandes",
@@ -71245,7 +71245,7 @@
       "water_g": 1.64
     },
     "CNF:2629": {
-      "base": "cashew_butter_butter_plain_salted_plant",
+      "base": "cashew_butter_plain_salted_plant",
       "variant": "butter_plain_salted_plant",
       "category": "nut",
       "name_fr": "beurre de noix d'acajou (cajous, anacardes)",
@@ -71405,7 +71405,7 @@
       "water_g": 1.23
     },
     "CNF:2623": {
-      "base": "sunflower_seed_butter_butter_seed_salted_plant",
+      "base": "sunflower_seed_butter_seed_salted_plant",
       "variant": "butter_seed_salted_plant",
       "category": "nut",
       "name_fr": "beurre de tournesol",
@@ -71621,7 +71621,7 @@
       "water_g": 3.05
     },
     "CIQUAL:16030": {
-      "base": "cocoa_butter",
+      "base": "cocoa",
       "variant": "butter_plant",
       "category": "nut",
       "name_fr": "beurre de cacao",
@@ -72141,7 +72141,7 @@
       "water_g": 2.41
     },
     "USDA:2257045": {
-      "base": "almond_milk",
+      "base": "almond_milk_plain_unsweetened_fresh_aisle_plant",
       "variant": "milk_plain_unsweetened_fresh_aisle_plant",
       "category": "nut",
       "name_fr": "amande",
@@ -72181,7 +72181,7 @@
       "water_g": 96.5
     },
     "USDA:1999631": {
-      "base": "almond_milk_milk_plain_unsweetened_pre_packaged_plant",
+      "base": "almond_milk_plain_unsweetened_pre_packaged_plant",
       "variant": "milk_plain_unsweetened_pre_packaged_plant",
       "category": "nut",
       "name_fr": "amande",
@@ -72458,13 +72458,13 @@
       "water_g": 2.1
     },
     "CIQUAL:15202": {
-      "base": "peanut_butter_paste",
-      "variant": "paste",
+      "base": "peanut_butter",
+      "variant": "butter",
       "category": "nut",
       "name_fr": "pâte d'arachide",
       "name_en": "peanut butter",
       "axes": {
-        "form": "paste"
+        "form": "butter"
       },
       "calories_kcal": 643.0,
       "protein_g": 22.2,
@@ -72507,7 +72507,7 @@
       "water_g": 1.23
     },
     "CNF:3413": {
-      "base": "peanuts_all_types",
+      "base": "peanuts",
       "variant": "roasted_in_oil",
       "category": "nut",
       "name_fr": "arachides, tous les types",
@@ -72560,7 +72560,7 @@
       "water_g": 1.45
     },
     "CNF:3363": {
-      "base": "peanuts_spanish",
+      "base": "spanish_peanuts",
       "variant": "roasted_in_oil",
       "category": "nut",
       "name_fr": "arachides, Espagnole",
@@ -72610,7 +72610,7 @@
       "water_g": 1.78
     },
     "CNF:3364": {
-      "base": "peanuts_valencia",
+      "base": "valencia_peanuts",
       "variant": "roasted_in_oil",
       "category": "nut",
       "name_fr": "arachides, Balencia",
@@ -72660,7 +72660,7 @@
       "water_g": 2.12
     },
     "CNF:3365": {
-      "base": "peanuts_virginia",
+      "base": "virginia_peanuts",
       "variant": "roasted_in_oil",
       "category": "nut",
       "name_fr": "arachides, Virginia",
@@ -72710,7 +72710,7 @@
       "water_g": 2.17
     },
     "CNF:3304": {
-      "base": "peanuts_spanish_grilled_salted_in_oil",
+      "base": "spanish_peanuts_grilled_salted_in_oil",
       "variant": "roasted_salted_in_oil",
       "category": "nut",
       "name_fr": "arachides, Espagnoles",
@@ -72761,7 +72761,7 @@
       "water_g": 1.78
     },
     "CNF:3306": {
-      "base": "peanuts_valencia_grilled_salted_in_oil",
+      "base": "valencia_peanuts_grilled_salted_in_oil",
       "variant": "roasted_salted_in_oil",
       "category": "nut",
       "name_fr": "arachides, Valencia",
@@ -72812,7 +72812,7 @@
       "water_g": 2.12
     },
     "CNF:3308": {
-      "base": "peanuts_virginia_grilled_salted_in_oil",
+      "base": "virginia_peanuts_grilled_salted_in_oil",
       "variant": "roasted_salted_in_oil",
       "category": "nut",
       "name_fr": "arachides, Virginia",
@@ -72863,7 +72863,7 @@
       "water_g": 2.17
     },
     "CNF:3362": {
-      "base": "peanuts_all_types_dried",
+      "base": "peanuts_dried",
       "variant": "roasted_dried",
       "category": "nut",
       "name_fr": "arachides, tous les types",
@@ -72915,7 +72915,7 @@
       "water_g": 1.81
     },
     "CNF:3396": {
-      "base": "peanuts_all_types_raw",
+      "base": "peanuts_raw",
       "variant": "raw",
       "category": "nut",
       "name_fr": "arachides, tous les types",
@@ -72966,7 +72966,7 @@
       "water_g": 6.5
     },
     "USDA:2515376": {
-      "base": "peanuts",
+      "base": "peanuts_04775",
       "variant": "raw",
       "category": "nut",
       "name_fr": "arachide",
@@ -72992,7 +72992,7 @@
       "water_g": 4.82
     },
     "CNF:3303": {
-      "base": "peanuts_spanish_raw",
+      "base": "spanish_peanuts_raw",
       "variant": "raw",
       "category": "nut",
       "name_fr": "arachides, Espagnoles",
@@ -73042,7 +73042,7 @@
       "water_g": 6.39
     },
     "CNF:3305": {
-      "base": "peanuts_valencia_raw",
+      "base": "valencia_peanuts_raw",
       "variant": "raw",
       "category": "nut",
       "name_fr": "arachides, Valencia",
@@ -73090,7 +73090,7 @@
       "water_g": 4.26
     },
     "CNF:3307": {
-      "base": "peanuts_virginia_raw",
+      "base": "virginia_peanuts_raw",
       "variant": "raw",
       "category": "nut",
       "name_fr": "arachides, Virginia",
@@ -73820,7 +73820,7 @@
       "water_g": 6.96
     },
     "CNF:503362": {
-      "base": "hemp",
+      "base": "hemp_seed_hulled",
       "variant": "seed_hulled",
       "category": "nut",
       "name_fr": "Graines de chanvre, décortiquées",
@@ -74286,7 +74286,7 @@
       "water_g": 3.48
     },
     "CIQUAL:15011": {
-      "base": "sunflower_seed",
+      "base": "sunflower_seed_seed",
       "variant": "seed",
       "category": "nut",
       "name_fr": "tournesol, graine",
@@ -74977,7 +74977,7 @@
       "water_g": 6.62
     },
     "USDA:2727578": {
-      "base": "squash_pie_pumpkin_raw_peeled",
+      "base": "pie_pumpkin_squash_raw_peeled",
       "variant": "raw_skinless",
       "category": "nut",
       "name_fr": "courge",
@@ -75835,7 +75835,7 @@
       "water_g": 94.6
     },
     "CIQUAL:18041": {
-      "base": "coconut_milk",
+      "base": "coconut_milk_plant",
       "variant": "milk_plant",
       "category": "nut",
       "name_fr": "lait de coco",

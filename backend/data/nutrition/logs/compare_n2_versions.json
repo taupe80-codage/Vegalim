@@ -2,15 +2,1395 @@
   "summary": {
     "old_bases": 2093,
     "new_bases": 2093,
-    "regressions": 0,
-    "nouveautes": 0,
-    "nutr_diffs": 0,
+    "regressions": 336,
+    "nouveautes": 336,
+    "nutr_diffs": 26,
     "recipe_keys_missing_new": 0,
     "recipe_keys_missing_old": 0
   },
-  "regressions": [],
-  "nouveautes": [],
-  "nutr_diffs": [],
+  "regressions": [
+    "adzuki",
+    "adzuki_boiled_salted",
+    "adzuki_raw",
+    "adzuki_sweetened_canned",
+    "almond_butter",
+    "almond_butter_butter_plain_salted_plant",
+    "almond_milk",
+    "almond_milk_milk_plain_unsweetened_pre_packaged_plant",
+    "apple_fuji",
+    "apple_gala",
+    "apple_golden_delicious",
+    "apple_granny_smith",
+    "apple_red_delicious",
+    "apples_fuji",
+    "apples_granny_smith",
+    "argan_oil",
+    "black",
+    "black_boiled_salted",
+    "black_dried",
+    "black_flour",
+    "black_raw",
+    "black_salted_canned_drained",
+    "black_turtle",
+    "black_turtle_boiled_salted",
+    "black_turtle_raw",
+    "blood_orange_juice",
+    "cabbage_bok_choy",
+    "cabbage_chinese_pe_tsai",
+    "cabbage_chinese_pe_tsai_boiled_canned",
+    "cabbage_green",
+    "cabbage_green_boiled",
+    "cabbage_green_raw",
+    "cabbage_mustard",
+    "cabbage_napa",
+    "cabbage_napa_leaf_destemmed",
+    "cabbage_napa_raw",
+    "cabbage_red",
+    "cabbage_red_boiled",
+    "cabbage_red_boiled_canned",
+    "cabbage_red_boiled_salted",
+    "cabbage_red_braised",
+    "cabbage_red_raw",
+    "cabbage_savoy",
+    "cabbage_savoy_boiled_canned",
+    "cabbage_savoy_boiled_salted",
+    "camelina_oil",
+    "cannellini",
+    "cashew_butter",
+    "cashew_butter_butter_plain_salted_plant",
+    "cocoa_butter",
+    "coconut_milk",
+    "cottonseed_oil",
+    "extra_virgin_olive_oil",
+    "french",
+    "french_boiled_salted",
+    "french_puree",
+    "french_raw",
+    "grapefruit_juice",
+    "grapefruit_juice_juice_fresh",
+    "grapefruit_juice_unsweetened_canned",
+    "great_northern",
+    "great_northern_03913",
+    "great_northern_boiled",
+    "great_northern_boiled_salted",
+    "great_northern_canned_drained",
+    "great_northern_dried",
+    "great_northern_raw",
+    "hemp_oil",
+    "kidney_all_types",
+    "kidney_all_types_raw",
+    "kidney_dark_red",
+    "kidney_dark_red_raw",
+    "kidney_light_red",
+    "kidney_light_red_raw",
+    "lettuce_butterhead_boston_bibb",
+    "lettuce_cos_or_romaine",
+    "lettuce_cos_or_romaine_raw",
+    "lettuce_iceberg",
+    "lettuce_iceberg_raw",
+    "lettuce_leaf_green",
+    "lettuce_leaf_red",
+    "lettuce_looseleaf",
+    "lettuce_red_leaf",
+    "lettuce_romaine_green",
+    "lettuce_romaine_green_raw",
+    "lima",
+    "lima_baby",
+    "lima_baby_boiled_dried_salted",
+    "lima_baby_raw_dried",
+    "lima_boiled_canned",
+    "lima_boiled_salted",
+    "lima_large",
+    "lima_large_boiled_dried_salted",
+    "lima_large_raw_dried",
+    "linseed_oil",
+    "mango_ataulfo",
+    "mango_tommy_atkins",
+    "mango_tommy_atkins_juice_fresh",
+    "mango_tommy_atkins_raw_flesh_no_skin",
+    "mung",
+    "mung_boiled_sprouted_dried_salted",
+    "mung_sprouted_dried_canned_drained",
+    "mungo",
+    "mungo_boiled_salted",
+    "mungo_raw",
+    "mushroom_beech",
+    "mushroom_brown_italian_crimini",
+    "mushroom_chanterelle",
+    "mushroom_crimini",
+    "mushroom_enoki",
+    "mushroom_enoki_raw",
+    "mushroom_fungi_cloud_ears",
+    "mushroom_king_oyster",
+    "mushroom_lions_mane",
+    "mushroom_maitake",
+    "mushroom_morel",
+    "mushroom_oyster",
+    "mushroom_pioppini",
+    "mushroom_portabella",
+    "mushroom_portabella_portobello",
+    "mushroom_portabella_portobello_raw",
+    "mushroom_shiitake",
+    "mushroom_shiitake_dried",
+    "mushroom_shiitake_raw",
+    "mushroom_straw",
+    "mushroom_white",
+    "mushrooms_shiitake",
+    "mushrooms_white_button",
+    "navy",
+    "navy_boiled_sprouted_dried_canned",
+    "navy_raw",
+    "navy_raw_sprouted_dried",
+    "oat_milk",
+    "onion_spring_green_or_scallion_includes_tops_and_bulb",
+    "onion_sweet",
+    "onion_welsh",
+    "onion_yellow_sauteed",
+    "onion_young_green_tops_only",
+    "onions_red",
+    "onions_red_raw",
+    "onions_red_sauteed",
+    "onions_white",
+    "onions_white_sauteed",
+    "onions_yellow",
+    "onions_yellow_raw",
+    "onions_yellow_sauteed",
+    "orange_juice",
+    "passion_fruit_juice",
+    "peanut_butter_paste",
+    "peanuts_all_types",
+    "peanuts_all_types_dried",
+    "peanuts_all_types_raw",
+    "peanuts_spanish",
+    "peanuts_spanish_grilled_salted_in_oil",
+    "peanuts_spanish_raw",
+    "peanuts_valencia",
+    "peanuts_valencia_grilled_salted_in_oil",
+    "peanuts_valencia_raw",
+    "peanuts_virginia",
+    "peanuts_virginia_grilled_salted_in_oil",
+    "peanuts_virginia_raw",
+    "pear_anjou_green",
+    "pear_asian",
+    "pear_bartlett",
+    "pear_bosc",
+    "pear_green_anjou",
+    "pear_red_anjou",
+    "pears_bartlett",
+    "peas_edible_podded_snow_peas",
+    "peas_edible_podded_snow_peas_boiled",
+    "peas_edible_podded_snow_peas_boiled_canned",
+    "peas_edible_podded_snow_peas_boiled_salted",
+    "peas_green",
+    "peas_green_boiled_canned",
+    "peas_green_boiled_salted",
+    "peas_green_canned_drained",
+    "peas_green_unsalted_canned_drained",
+    "peas_pigeon",
+    "peas_pigeon_boiled_salted",
+    "peas_pigeon_red_gram",
+    "peas_pigeon_red_gram_boiled_salted",
+    "peas_pigeon_red_gram_raw",
+    "peas_split",
+    "peas_split_boiled_salted",
+    "peas_split_raw",
+    "pepper_ancho",
+    "pepper_banana",
+    "pepper_black",
+    "pepper_chili_green",
+    "pepper_hot_chili",
+    "pepper_hot_chili_red_sun",
+    "pepper_hungarian",
+    "pepper_jalapeno",
+    "pepper_pasilla",
+    "pepper_red_or_cayenne",
+    "pepper_serrano",
+    "pepper_sweet_green",
+    "pepper_sweet_green_boiled",
+    "pepper_sweet_green_boiled_canned",
+    "pepper_sweet_green_boiled_salted",
+    "pepper_sweet_green_sauteed",
+    "pepper_sweet_red",
+    "pepper_sweet_red_boiled",
+    "pepper_sweet_red_boiled_canned",
+    "pepper_sweet_red_boiled_salted",
+    "pepper_sweet_red_canned_drained",
+    "pepper_sweet_red_sauteed",
+    "pepper_sweet_yellow",
+    "pepper_white",
+    "peppers_banana",
+    "peppers_bell_green",
+    "peppers_bell_orange",
+    "peppers_bell_red",
+    "peppers_bell_yellow",
+    "peppers_bell_yellow_sauteed",
+    "peppers_jalapeno",
+    "peppers_poblano",
+    "peppers_serrano",
+    "pink",
+    "pink_raw",
+    "pinto",
+    "pinto_boiled_salted",
+    "pinto_boiled_sprouted_dried_canned",
+    "pinto_boiled_sprouted_dried_salted",
+    "pinto_canned_drained",
+    "pinto_raw",
+    "pinto_raw_sprouted_dried",
+    "potato_red",
+    "potato_red_raw_flesh_with_skin",
+    "potato_russet",
+    "potato_russet_raw_flesh_with_skin",
+    "potato_white",
+    "potato_white_raw_flesh_with_skin",
+    "potatoes_gold",
+    "potatoes_russet",
+    "radish_oriental_daikon",
+    "radish_oriental_daikon_boiled_canned",
+    "radish_oriental_daikon_boiled_salted",
+    "radish_oriental_daikon_raw",
+    "radish_white_icicle",
+    "radishes_red",
+    "radishes_red_raw",
+    "rice_black",
+    "rice_brown",
+    "rice_brown_boiled_long_grain_seed",
+    "rice_brown_boiled_medium_grain_seed",
+    "rice_brown_flour",
+    "rice_brown_long_grain",
+    "rice_brown_long_grain_seed_dried",
+    "rice_brown_medium_grain_seed_dried",
+    "rice_flour",
+    "rice_glutinous",
+    "rice_red",
+    "rice_red_boiled_unsalted",
+    "rice_red_raw",
+    "rice_white",
+    "rice_white_boiled_long_grain_seed",
+    "rice_white_boiled_long_grain_seed_parboiled",
+    "rice_white_boiled_long_grain_seed_salted",
+    "rice_white_boiled_medium_grain_seed",
+    "rice_white_boiled_parboiled_unsalted",
+    "rice_white_boiled_short_grain_seed",
+    "rice_white_boiled_unsalted",
+    "rice_white_flour",
+    "rice_white_glutinous",
+    "rice_white_glutinous_dried",
+    "rice_white_glutinous_flour",
+    "rice_white_long_grain",
+    "rice_white_long_grain_seed_dried",
+    "rice_white_long_grain_seed_parboiled_dried",
+    "rice_white_medium_grain_seed_dried",
+    "rice_white_raw",
+    "rice_white_raw_parboiled",
+    "rice_white_short_grain_seed_dried",
+    "rice_wild",
+    "rice_wild_dried",
+    "shea_butter",
+    "small_red",
+    "soy_milk",
+    "squash_acorn",
+    "squash_acorn_boiled_puree",
+    "squash_acorn_boiled_puree_salted",
+    "squash_acorn_raw",
+    "squash_butternut",
+    "squash_crookneck",
+    "squash_crookneck_boiled_canned",
+    "squash_crookneck_canned_drained",
+    "squash_crookneck_raw_flesh_no_skin",
+    "squash_green_zucchini",
+    "squash_green_zucchini_boiled_flesh_with_skin",
+    "squash_green_zucchini_puree",
+    "squash_green_zucchini_raw",
+    "squash_green_zucchini_roasted_flesh_with_skin",
+    "squash_hubbard",
+    "squash_hubbard_boiled_puree",
+    "squash_hubbard_boiled_puree_salted",
+    "squash_hubbard_raw",
+    "squash_hubbard_roasted_salted",
+    "squash_pie_pumpkin",
+    "squash_pie_pumpkin_raw_peeled",
+    "squash_scallop",
+    "squash_scallop_boiled_canned",
+    "squash_scallop_boiled_salted",
+    "squash_spaghetti",
+    "squash_spaghetti_boiled_canned",
+    "squash_spaghetti_boiled_flesh_no_skin",
+    "squash_spaghetti_boiled_salted",
+    "squash_spaghetti_raw",
+    "squash_spaghetti_raw_flesh_no_skin",
+    "squash_yellow",
+    "squash_zucchini",
+    "squash_zucchini_baby",
+    "squash_zucchini_boiled_canned",
+    "squash_zucchini_boiled_salted",
+    "sunflower_seed_butter",
+    "sunflower_seed_butter_butter_seed_salted_plant",
+    "tangerine_mandarin_juice",
+    "tomato_green",
+    "tomato_juice",
+    "tomato_orange",
+    "tomato_red",
+    "tomato_red_boiled_salted",
+    "tomato_red_canned",
+    "tomato_red_raw",
+    "tomato_red_whole",
+    "tomato_yellow",
+    "vanilla_extract",
+    "white",
+    "white_boiled_salted",
+    "white_flour",
+    "white_raw",
+    "whole_soy_flour",
+    "whole_wheat_flour",
+    "yellow",
+    "yellow_boiled_salted",
+    "yellow_raw"
+  ],
+  "nouveautes": [
+    "acorn_squash",
+    "acorn_squash_boiled_puree",
+    "acorn_squash_boiled_puree_salted",
+    "acorn_squash_raw",
+    "adzuki_bean",
+    "adzuki_bean_boiled_salted",
+    "adzuki_bean_raw",
+    "adzuki_bean_sweetened_canned",
+    "almond_butter_plain_plant",
+    "almond_butter_plain_salted_plant",
+    "almond_milk_plain_unsweetened_fresh_aisle_plant",
+    "almond_milk_plain_unsweetened_pre_packaged_plant",
+    "ancho_pepper",
+    "anjou_green_pear",
+    "argan",
+    "asian_pear",
+    "ataulfo_mango",
+    "baby_lima_bean",
+    "baby_lima_bean_boiled_dried_salted",
+    "baby_lima_bean_raw_dried",
+    "banana_pepper",
+    "banana_pepper_raw",
+    "bartlett_pear",
+    "bartlett_pear_raw",
+    "beech_mushroom",
+    "bell_green_pepper",
+    "bell_orange_pepper",
+    "bell_red_pepper",
+    "bell_yellow_pepper",
+    "bell_yellow_pepper_sauteed",
+    "black_bean",
+    "black_bean_boiled_salted",
+    "black_bean_dried",
+    "black_bean_flour",
+    "black_bean_raw",
+    "black_bean_salted_canned_drained",
+    "black_pepper_spice",
+    "black_rice",
+    "black_turtle_bean",
+    "black_turtle_bean_boiled_salted",
+    "black_turtle_bean_raw",
+    "blood_orange",
+    "bok_choy_cabbage",
+    "bosc_pear",
+    "brown_italian_crimini_mushroom",
+    "brown_long_grain_rice",
+    "brown_rice_boiled_long_grain_seed",
+    "brown_rice_boiled_medium_grain_seed",
+    "brown_rice_flour",
+    "brown_rice_long_grain_seed_dried",
+    "brown_rice_medium_grain_seed_dried",
+    "brown_rice_raw",
+    "butterhead_boston_bibb_lettuce",
+    "butternut_squash_02758",
+    "camelina",
+    "cannellini_bean",
+    "cashew",
+    "cashew_butter_plain_salted_plant",
+    "champignon_pleurote",
+    "champignon_shiitake",
+    "chanterelle_mushroom",
+    "chili_green_pepper",
+    "chinese_pe_tsai_cabbage",
+    "chinese_pe_tsai_cabbage_boiled_canned",
+    "cloud_ears_mushroom",
+    "cocoa",
+    "coconut_milk_plant",
+    "cos_or_romaine_lettuce",
+    "cos_or_romaine_lettuce_raw",
+    "cottonseed",
+    "crimini_mushroom",
+    "crookneck_squash",
+    "crookneck_squash_boiled_canned",
+    "crookneck_squash_canned_drained",
+    "crookneck_squash_raw_flesh_no_skin",
+    "dark_red_kidney_bean",
+    "dark_red_kidney_bean_raw",
+    "enoki_mushroom",
+    "enoki_mushroom_raw",
+    "extra_virgin_olive",
+    "french_bean",
+    "french_bean_boiled_salted",
+    "french_bean_puree",
+    "french_bean_raw",
+    "fuji_apple",
+    "fuji_apple_raw",
+    "gala_apple_raw_flesh_no_skin",
+    "glutinous_rice",
+    "gold_potato",
+    "golden_delicious_apple_raw_flesh_no_skin",
+    "granny_smith_apple_raw",
+    "granny_smith_apple_raw_flesh_with_skin",
+    "grapefruit_juice_fresh",
+    "grapefruit_raw_flesh_no_skin",
+    "grapefruit_unsweetened_canned",
+    "great_northern_bean",
+    "great_northern_bean_03913",
+    "great_northern_bean_boiled",
+    "great_northern_bean_boiled_salted",
+    "great_northern_bean_canned_drained",
+    "great_northern_bean_dried",
+    "great_northern_bean_raw",
+    "green_anjou_pear",
+    "green_bell_pepper",
+    "green_bell_pepper_boiled",
+    "green_bell_pepper_boiled_canned",
+    "green_bell_pepper_boiled_salted",
+    "green_bell_pepper_sauteed",
+    "green_cabbage_02564",
+    "green_cabbage_02577",
+    "green_cabbage_raw",
+    "green_leaf_lettuce",
+    "green_peas_04212",
+    "green_peas_boiled_canned",
+    "green_peas_boiled_salted",
+    "green_peas_raw",
+    "green_peas_unsalted_canned_drained",
+    "green_tomato",
+    "green_zucchini_squash",
+    "green_zucchini_squash_boiled_flesh_with_skin",
+    "green_zucchini_squash_puree",
+    "green_zucchini_squash_raw",
+    "green_zucchini_squash_roasted_flesh_with_skin",
+    "hemp_seed_hulled",
+    "hot_chili_pepper",
+    "hot_chili_red_sun_pepper",
+    "hubbard_squash",
+    "hubbard_squash_boiled_puree",
+    "hubbard_squash_boiled_puree_salted",
+    "hubbard_squash_raw",
+    "hubbard_squash_roasted_salted",
+    "hungarian_pepper",
+    "iceberg_lettuce",
+    "iceberg_lettuce_raw",
+    "jalapeno_pepper",
+    "jalapeno_pepper_raw",
+    "kidney_bean",
+    "kidney_bean_raw",
+    "king_oyster_mushroom",
+    "large_lima_bean",
+    "large_lima_bean_boiled_dried_salted",
+    "large_lima_bean_raw_dried",
+    "light_red_kidney_bean",
+    "light_red_kidney_bean_raw",
+    "lima_bean_boiled_canned",
+    "lima_bean_boiled_salted",
+    "lima_bean_raw",
+    "linseed",
+    "lions_mane_mushroom",
+    "looseleaf_lettuce",
+    "maitake_mushroom",
+    "morel_mushroom",
+    "mung_bean_boiled",
+    "mung_bean_boiled_salted",
+    "mung_bean_boiled_sprouted_dried_salted",
+    "mung_bean_dried",
+    "mung_bean_raw",
+    "mung_bean_sprouted_dried_canned_drained",
+    "mustard_cabbage",
+    "napa_cabbage",
+    "napa_cabbage_raw",
+    "napa_leaf_destemmed_cabbage",
+    "navy_bean_boiled_sprouted_dried_canned",
+    "navy_bean_dried",
+    "navy_bean_raw",
+    "navy_bean_raw_sprouted_dried",
+    "oat_milk_plain_unsweetened_fresh_aisle_plant",
+    "orange_fresh_aisle",
+    "orange_tomato",
+    "oriental_daikon_radish",
+    "oriental_daikon_radish_boiled_canned",
+    "oriental_daikon_radish_boiled_salted",
+    "oriental_daikon_radish_raw",
+    "pasilla_pepper",
+    "passion_fruit_raw_flesh_no_skin",
+    "peanut_butter_sodium_reduced_plant",
+    "peanuts_04775",
+    "peanuts_dried",
+    "peanuts_raw",
+    "pie_pumpkin_squash",
+    "pie_pumpkin_squash_raw_peeled",
+    "pigeon_peas",
+    "pigeon_peas_boiled_salted",
+    "pigeon_red_gram_peas",
+    "pigeon_red_gram_peas_boiled_salted",
+    "pigeon_red_gram_peas_raw",
+    "pink_bean_dried",
+    "pink_bean_raw",
+    "pinto_bean_boiled_salted",
+    "pinto_bean_boiled_sprouted_dried_canned",
+    "pinto_bean_boiled_sprouted_dried_salted",
+    "pinto_bean_canned_drained",
+    "pinto_bean_dried",
+    "pinto_bean_raw",
+    "pinto_bean_raw_sprouted_dried",
+    "pioppini_mushroom",
+    "poblano_pepper",
+    "portabella_mushroom",
+    "portabella_portobello_mushroom",
+    "portabella_portobello_mushroom_raw",
+    "red_anjou_pear",
+    "red_bell_pepper",
+    "red_bell_pepper_boiled",
+    "red_bell_pepper_boiled_canned",
+    "red_bell_pepper_boiled_salted",
+    "red_bell_pepper_canned_drained",
+    "red_bell_pepper_sauteed",
+    "red_cabbage",
+    "red_cabbage_boiled",
+    "red_cabbage_boiled_canned",
+    "red_cabbage_boiled_salted",
+    "red_cabbage_braised",
+    "red_cabbage_raw",
+    "red_delicious_apple",
+    "red_leaf_lettuce",
+    "red_leaf_lettuce_leaf",
+    "red_onion",
+    "red_onion_raw",
+    "red_onion_sauteed",
+    "red_or_cayenne_pepper",
+    "red_potato",
+    "red_potato_raw_flesh_with_skin",
+    "red_radish_03451",
+    "red_radish_raw",
+    "red_rice",
+    "red_rice_boiled_unsalted",
+    "red_rice_raw",
+    "red_tomato",
+    "red_tomato_boiled_salted",
+    "red_tomato_canned",
+    "red_tomato_raw",
+    "red_whole_tomato",
+    "rice",
+    "romaine_green_lettuce",
+    "romaine_green_lettuce_raw",
+    "russet_potato",
+    "russet_potato_raw_flesh_with_skin",
+    "russet_potato_roasted_flesh_with_skin",
+    "savoy_cabbage",
+    "savoy_cabbage_boiled_canned",
+    "savoy_cabbage_boiled_salted",
+    "scallop_squash",
+    "scallop_squash_boiled_canned",
+    "scallop_squash_boiled_salted",
+    "serrano_pepper",
+    "serrano_pepper_raw",
+    "shea",
+    "shiitake_mushroom",
+    "shiitake_mushroom_dried",
+    "shiitake_mushroom_raw",
+    "small_red_bean",
+    "snow_peas",
+    "snow_peas_boiled",
+    "snow_peas_boiled_canned",
+    "snow_peas_boiled_salted",
+    "soy_milk_plain_unsweetened_pre_packaged_plant",
+    "spaghetti_squash",
+    "spaghetti_squash_boiled_canned",
+    "spaghetti_squash_boiled_flesh_no_skin",
+    "spaghetti_squash_boiled_salted",
+    "spaghetti_squash_raw",
+    "spaghetti_squash_raw_flesh_no_skin",
+    "spanish_peanuts",
+    "spanish_peanuts_grilled_salted_in_oil",
+    "spanish_peanuts_raw",
+    "split_peas_boiled",
+    "split_peas_boiled_salted",
+    "split_peas_raw",
+    "spring_onion_green_scallion",
+    "straw_mushroom",
+    "sunflower_seed_butter_seed_salted_plant",
+    "sunflower_seed_seed",
+    "sweet_onion",
+    "tangerine_mandarin_sweetened_canned",
+    "tomato_juice_plain_salted",
+    "tommy_atkins_mango",
+    "tommy_atkins_mango_juice_fresh",
+    "tommy_atkins_mango_raw_flesh_no_skin",
+    "valencia_peanuts",
+    "valencia_peanuts_grilled_salted_in_oil",
+    "valencia_peanuts_raw",
+    "vanilla",
+    "virginia_peanuts",
+    "virginia_peanuts_grilled_salted_in_oil",
+    "virginia_peanuts_raw",
+    "welsh_onion",
+    "white_bean",
+    "white_bean_boiled_salted",
+    "white_bean_flour",
+    "white_bean_raw",
+    "white_button_mushroom",
+    "white_glutinous_rice",
+    "white_glutinous_rice_dried",
+    "white_glutinous_rice_flour",
+    "white_icicle_radish",
+    "white_long_grain_rice",
+    "white_mushroom",
+    "white_onion",
+    "white_onion_sauteed",
+    "white_pepper_spice",
+    "white_potato",
+    "white_potato_raw_flesh_with_skin",
+    "white_rice",
+    "white_rice_boiled_long_grain_seed",
+    "white_rice_boiled_long_grain_seed_parboiled",
+    "white_rice_boiled_long_grain_seed_salted",
+    "white_rice_boiled_medium_grain_seed",
+    "white_rice_boiled_parboiled_unsalted",
+    "white_rice_boiled_short_grain_seed",
+    "white_rice_boiled_unsalted",
+    "white_rice_flour",
+    "white_rice_long_grain_seed_dried",
+    "white_rice_long_grain_seed_parboiled_dried",
+    "white_rice_medium_grain_seed_dried",
+    "white_rice_raw",
+    "white_rice_raw_parboiled",
+    "white_rice_short_grain_seed_dried",
+    "whole_soy",
+    "whole_wheat",
+    "wild_rice_dried",
+    "wild_rice_raw",
+    "yellow_bean",
+    "yellow_bean_boiled_salted",
+    "yellow_bean_raw",
+    "yellow_bell_pepper",
+    "yellow_onion",
+    "yellow_onion_02470",
+    "yellow_onion_raw",
+    "yellow_onion_sauteed",
+    "yellow_squash",
+    "yellow_tomato",
+    "young_green_onion_tops",
+    "zucchini_baby_squash",
+    "zucchini_squash",
+    "zucchini_squash_boiled_canned",
+    "zucchini_squash_boiled_salted"
+  ],
+  "nutr_diffs": [
+    {
+      "key": "black_pepper",
+      "diffs": {
+        "calories_kcal": {
+          "old": 331.0,
+          "new": 251.0,
+          "delta_pct": 24.2
+        },
+        "protein_g": {
+          "old": 13.3,
+          "new": 10.39,
+          "delta_pct": 21.9
+        },
+        "carbs_g": {
+          "old": 39.9,
+          "new": 63.95,
+          "delta_pct": 60.3
+        },
+        "fat_g": {
+          "old": 7.5,
+          "new": 3.26,
+          "delta_pct": 56.5
+        },
+        "fa_saturated_g": {
+          "old": 2.9,
+          "new": 1.392,
+          "delta_pct": 52.0
+        },
+        "sodium_mg": {
+          "old": 14.2,
+          "new": 20.0,
+          "delta_pct": 40.8
+        }
+      }
+    },
+    {
+      "key": "brown_rice",
+      "diffs": {
+        "fat_g": {
+          "old": 2.8,
+          "new": 3.85,
+          "delta_pct": 37.5
+        },
+        "sodium_mg": {
+          "old": 4.1,
+          "new": 1.0,
+          "delta_pct": 75.6
+        }
+      }
+    },
+    {
+      "key": "butternut_squash",
+      "diffs": {
+        "calories_kcal": {
+          "old": 28.2,
+          "new": 48.1,
+          "delta_pct": 70.6
+        },
+        "protein_g": {
+          "old": 0.69,
+          "new": 1.15,
+          "delta_pct": 66.7
+        },
+        "carbs_g": {
+          "old": 4.56,
+          "new": 10.5,
+          "delta_pct": 130.3
+        },
+        "sodium_mg": {
+          "old": 4.0,
+          "new": 0.0,
+          "delta_pct": 100.0
+        }
+      }
+    },
+    {
+      "key": "butternut_squash_boiled_flesh_no_skin",
+      "diffs": {
+        "protein_g": {
+          "old": 1.06,
+          "new": 0.69,
+          "delta_pct": 34.9
+        },
+        "fat_g": {
+          "old": 0.5,
+          "new": 0.2,
+          "delta_pct": 60.0
+        },
+        "fiber_g": {
+          "old": 1.8,
+          "new": 2.4,
+          "delta_pct": 33.3
+        },
+        "fa_saturated_g": {
+          "old": 0.01,
+          "new": 0.052,
+          "delta_pct": 420.0
+        },
+        "sodium_mg": {
+          "old": 5.0,
+          "new": 4.0,
+          "delta_pct": 20.0
+        }
+      }
+    },
+    {
+      "key": "gala_apple",
+      "diffs": {
+        "fat_g": {
+          "old": 0.5,
+          "new": 0.12,
+          "delta_pct": 76.0
+        },
+        "fiber_g": {
+          "old": 1.9,
+          "new": 2.3,
+          "delta_pct": 21.1
+        },
+        "sodium_mg": {
+          "old": 5.0,
+          "new": 1.0,
+          "delta_pct": 80.0
+        }
+      }
+    },
+    {
+      "key": "golden_delicious_apple",
+      "diffs": {
+        "fat_g": {
+          "old": 0.5,
+          "new": 0.15,
+          "delta_pct": 70.0
+        },
+        "sodium_mg": {
+          "old": 5.0,
+          "new": 2.0,
+          "delta_pct": 60.0
+        }
+      }
+    },
+    {
+      "key": "granny_smith_apple",
+      "diffs": {
+        "protein_g": {
+          "old": 0.25,
+          "new": 0.44,
+          "delta_pct": 76.0
+        },
+        "carbs_g": {
+          "old": 10.7,
+          "new": 13.61,
+          "delta_pct": 27.2
+        },
+        "fat_g": {
+          "old": 0.5,
+          "new": 0.19,
+          "delta_pct": 62.0
+        },
+        "sodium_mg": {
+          "old": 5.0,
+          "new": 1.0,
+          "delta_pct": 80.0
+        }
+      }
+    },
+    {
+      "key": "grapefruit",
+      "diffs": {
+        "calories_kcal": {
+          "old": 33.5,
+          "new": 42.5,
+          "delta_pct": 26.9
+        },
+        "protein_g": {
+          "old": 0.84,
+          "new": 0.49,
+          "delta_pct": 41.7
+        },
+        "carbs_g": {
+          "old": 5.92,
+          "new": 8.89,
+          "delta_pct": 50.2
+        },
+        "fat_g": {
+          "old": 0.5,
+          "new": 0.083,
+          "delta_pct": 83.4
+        },
+        "fiber_g": {
+          "old": 1.1,
+          "new": 0.15,
+          "delta_pct": 86.4
+        },
+        "sugar_g": {
+          "old": 5.87,
+          "new": 8.89,
+          "delta_pct": 51.4
+        },
+        "fa_saturated_g": {
+          "old": 0.15,
+          "new": 0.044,
+          "delta_pct": 70.7
+        },
+        "sodium_mg": {
+          "old": 2.0,
+          "new": 3.05,
+          "delta_pct": 52.5
+        }
+      }
+    },
+    {
+      "key": "green_cabbage",
+      "diffs": {
+        "calories_kcal": {
+          "old": 24.4,
+          "new": 31.4,
+          "delta_pct": 28.7
+        },
+        "protein_g": {
+          "old": 1.43,
+          "new": 0.961,
+          "delta_pct": 32.8
+        },
+        "carbs_g": {
+          "old": 2.74,
+          "new": 6.38,
+          "delta_pct": 132.8
+        },
+        "fat_g": {
+          "old": 0.14,
+          "new": 0.228,
+          "delta_pct": 62.9
+        },
+        "sodium_mg": {
+          "old": 20.5,
+          "new": 16.1,
+          "delta_pct": 21.5
+        }
+      }
+    },
+    {
+      "key": "green_cabbage_boiled",
+      "diffs": {
+        "protein_g": {
+          "old": 1.63,
+          "new": 1.0,
+          "delta_pct": 38.7
+        },
+        "carbs_g": {
+          "old": 1.83,
+          "new": 3.23,
+          "delta_pct": 76.5
+        },
+        "sugar_g": {
+          "old": 1.4,
+          "new": 2.8,
+          "delta_pct": 100.0
+        },
+        "sodium_mg": {
+          "old": 5.0,
+          "new": 7.0,
+          "delta_pct": 40.0
+        }
+      }
+    },
+    {
+      "key": "green_peas",
+      "diffs": {
+        "carbs_g": {
+          "old": 11.4,
+          "new": 14.45,
+          "delta_pct": 26.8
+        }
+      }
+    },
+    {
+      "key": "green_peas_canned_drained",
+      "diffs": {
+        "calories_kcal": {
+          "old": 92.5,
+          "new": 68.0,
+          "delta_pct": 26.5
+        },
+        "fiber_g": {
+          "old": 5.75,
+          "new": 4.5,
+          "delta_pct": 21.7
+        }
+      }
+    },
+    {
+      "key": "hemp",
+      "diffs": {
+        "calories_kcal": {
+          "old": 584.0,
+          "new": 900.0,
+          "delta_pct": 54.1
+        },
+        "protein_g": {
+          "old": 32.73,
+          "new": 0.0,
+          "delta_pct": 100.0
+        },
+        "carbs_g": {
+          "old": 8.13,
+          "new": 0.5,
+          "delta_pct": 93.8
+        },
+        "fat_g": {
+          "old": 46.97,
+          "new": 100.0,
+          "delta_pct": 112.9
+        },
+        "fiber_g": {
+          "old": 5.1,
+          "new": 0.5,
+          "delta_pct": 90.2
+        },
+        "sugar_g": {
+          "old": 1.87,
+          "new": 0.1,
+          "delta_pct": 94.7
+        },
+        "fa_saturated_g": {
+          "old": 4.065,
+          "new": 10.5,
+          "delta_pct": 158.3
+        },
+        "sodium_mg": {
+          "old": 4.0,
+          "new": 0.5,
+          "delta_pct": 87.5
+        }
+      }
+    },
+    {
+      "key": "lima_bean",
+      "diffs": {
+        "carbs_g": {
+          "old": 15.3,
+          "new": 20.17,
+          "delta_pct": 31.8
+        }
+      }
+    },
+    {
+      "key": "mung_bean",
+      "diffs": {
+        "calories_kcal": {
+          "old": 343.0,
+          "new": 30.0,
+          "delta_pct": 91.3
+        },
+        "protein_g": {
+          "old": 25.2,
+          "new": 3.04,
+          "delta_pct": 87.9
+        },
+        "carbs_g": {
+          "old": 47.6,
+          "new": 5.94,
+          "delta_pct": 87.5
+        },
+        "fat_g": {
+          "old": 1.64,
+          "new": 0.18,
+          "delta_pct": 89.0
+        },
+        "fiber_g": {
+          "old": 18.3,
+          "new": 1.8,
+          "delta_pct": 90.2
+        },
+        "fa_saturated_g": {
+          "old": 0.11,
+          "new": 0.046,
+          "delta_pct": 58.2
+        },
+        "sodium_mg": {
+          "old": 38.0,
+          "new": 6.0,
+          "delta_pct": 84.2
+        }
+      }
+    },
+    {
+      "key": "navy_bean",
+      "diffs": {
+        "calories_kcal": {
+          "old": 110.0,
+          "new": 140.0,
+          "delta_pct": 27.3
+        },
+        "protein_g": {
+          "old": 24.1,
+          "new": 8.23,
+          "delta_pct": 65.9
+        },
+        "carbs_g": {
+          "old": 42.4,
+          "new": 26.05,
+          "delta_pct": 38.6
+        },
+        "fat_g": {
+          "old": 1.51,
+          "new": 0.62,
+          "delta_pct": 58.9
+        },
+        "fiber_g": {
+          "old": 4.3,
+          "new": 6.8,
+          "delta_pct": 58.1
+        }
+      }
+    },
+    {
+      "key": "passion_fruit",
+      "diffs": {
+        "calories_kcal": {
+          "old": 102.0,
+          "new": 61.7,
+          "delta_pct": 39.5
+        },
+        "protein_g": {
+          "old": 2.13,
+          "new": 0.67,
+          "delta_pct": 68.5
+        },
+        "carbs_g": {
+          "old": 10.9,
+          "new": 14.3,
+          "delta_pct": 31.2
+        },
+        "fat_g": {
+          "old": 3.0,
+          "new": 0.18,
+          "delta_pct": 94.0
+        },
+        "fiber_g": {
+          "old": 6.8,
+          "new": 0.2,
+          "delta_pct": 97.1
+        },
+        "sugar_g": {
+          "old": 8.5,
+          "new": 14.3,
+          "delta_pct": 68.2
+        },
+        "fa_saturated_g": {
+          "old": 0.54,
+          "new": 0.015,
+          "delta_pct": 97.2
+        },
+        "sodium_mg": {
+          "old": 5.0,
+          "new": 6.0,
+          "delta_pct": 20.0
+        }
+      }
+    },
+    {
+      "key": "peanut_butter",
+      "diffs": {
+        "carbs_g": {
+          "old": 21.83,
+          "new": 17.3,
+          "delta_pct": 20.8
+        },
+        "fiber_g": {
+          "old": 6.6,
+          "new": 5.0,
+          "delta_pct": 24.2
+        },
+        "fa_saturated_g": {
+          "old": 7.716,
+          "new": 10.1,
+          "delta_pct": 30.9
+        },
+        "sodium_mg": {
+          "old": 203.0,
+          "new": 426.0,
+          "delta_pct": 109.9
+        }
+      }
+    },
+    {
+      "key": "peanuts",
+      "diffs": {
+        "protein_g": {
+          "old": 23.2,
+          "new": 28.03,
+          "delta_pct": 20.8
+        },
+        "carbs_g": {
+          "old": 26.5,
+          "new": 15.26,
+          "delta_pct": 42.4
+        },
+        "fat_g": {
+          "old": 43.3,
+          "new": 52.5,
+          "delta_pct": 21.2
+        },
+        "sodium_mg": {
+          "old": 1.49,
+          "new": 6.0,
+          "delta_pct": 302.7
+        }
+      }
+    },
+    {
+      "key": "pink_bean",
+      "diffs": {
+        "calories_kcal": {
+          "old": 104.4,
+          "new": 149.0,
+          "delta_pct": 42.7
+        },
+        "protein_g": {
+          "old": 23.4,
+          "new": 9.06,
+          "delta_pct": 61.3
+        },
+        "carbs_g": {
+          "old": 42.2,
+          "new": 27.91,
+          "delta_pct": 33.9
+        },
+        "fat_g": {
+          "old": 1.2,
+          "new": 0.49,
+          "delta_pct": 59.2
+        },
+        "fiber_g": {
+          "old": 4.1,
+          "new": 5.3,
+          "delta_pct": 29.3
+        }
+      }
+    },
+    {
+      "key": "pinto_bean",
+      "diffs": {
+        "calories_kcal": {
+          "old": 106.0,
+          "new": 143.0,
+          "delta_pct": 34.9
+        },
+        "protein_g": {
+          "old": 23.7,
+          "new": 9.01,
+          "delta_pct": 62.0
+        },
+        "carbs_g": {
+          "old": 42.6,
+          "new": 26.22,
+          "delta_pct": 38.5
+        },
+        "fat_g": {
+          "old": 1.24,
+          "new": 0.65,
+          "delta_pct": 47.6
+        },
+        "fiber_g": {
+          "old": 4.1,
+          "new": 9.0,
+          "delta_pct": 119.5
+        }
+      }
+    },
+    {
+      "key": "red_radish",
+      "diffs": {
+        "calories_kcal": {
+          "old": 11.0,
+          "new": 35.7,
+          "delta_pct": 224.5
+        },
+        "protein_g": {
+          "old": 0.94,
+          "new": 3.23,
+          "delta_pct": 243.6
+        },
+        "fat_g": {
+          "old": 0.5,
+          "new": 2.53,
+          "delta_pct": 406.0
+        },
+        "fa_saturated_g": {
+          "old": 0.01,
+          "new": 0.77,
+          "delta_pct": 7600.0
+        },
+        "sodium_mg": {
+          "old": 16.0,
+          "new": 6.0,
+          "delta_pct": 62.5
+        }
+      }
+    },
+    {
+      "key": "split_peas",
+      "diffs": {
+        "carbs_g": {
+          "old": 16.3,
+          "new": 21.1,
+          "delta_pct": 29.4
+        },
+        "fat_g": {
+          "old": 1.49,
+          "new": 0.39,
+          "delta_pct": 73.8
+        },
+        "fiber_g": {
+          "old": 7.95,
+          "new": 2.9,
+          "delta_pct": 63.5
+        },
+        "sugar_g": {
+          "old": 3.85,
+          "new": 2.9,
+          "delta_pct": 24.7
+        },
+        "fa_saturated_g": {
+          "old": 0.16,
+          "new": 0.054,
+          "delta_pct": 66.3
+        },
+        "sodium_mg": {
+          "old": 4.5,
+          "new": 2.0,
+          "delta_pct": 55.6
+        }
+      }
+    },
+    {
+      "key": "sunflower_seed",
+      "diffs": {
+        "carbs_g": {
+          "old": 10.1,
+          "new": 23.32,
+          "delta_pct": 130.9
+        },
+        "sugar_g": {
+          "old": 2.62,
+          "new": 10.54,
+          "delta_pct": 302.3
+        },
+        "fa_saturated_g": {
+          "old": 6.23,
+          "new": 4.678,
+          "delta_pct": 24.9
+        },
+        "sodium_mg": {
+          "old": 9.0,
+          "new": 3.0,
+          "delta_pct": 66.7
+        }
+      }
+    },
+    {
+      "key": "white_pepper",
+      "diffs": {
+        "carbs_g": {
+          "old": 48.3,
+          "new": 68.61,
+          "delta_pct": 42.0
+        }
+      }
+    },
+    {
+      "key": "wild_rice",
+      "diffs": {
+        "calories_kcal": {
+          "old": 344.0,
+          "new": 101.0,
+          "delta_pct": 70.6
+        },
+        "protein_g": {
+          "old": 11.1,
+          "new": 3.99,
+          "delta_pct": 64.1
+        },
+        "carbs_g": {
+          "old": 69.2,
+          "new": 21.34,
+          "delta_pct": 69.2
+        },
+        "fat_g": {
+          "old": 0.94,
+          "new": 0.34,
+          "delta_pct": 63.8
+        },
+        "fiber_g": {
+          "old": 5.9,
+          "new": 1.8,
+          "delta_pct": 69.5
+        },
+        "fa_saturated_g": {
+          "old": 0.15,
+          "new": 0.049,
+          "delta_pct": 67.3
+        }
+      }
+    }
+  ],
   "recipe_keys_missing_new": [],
   "recipe_keys_missing_old": []
 }
