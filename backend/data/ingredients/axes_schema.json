@@ -1,0 +1,370 @@
+{
+  "_comment": "Référence bilingue canonique des axes du ingredient_tree. Clé EN = identifiant canonique. tree_key_fr = clé actuelle dans le tree. Mettre à jour EN et FR en parallèle.",
+  "version": "1.0",
+  "generated": "2026-05-24",
+
+  "axes": {
+
+    "cooking_state": {
+      "name_en": "cooking state",
+      "name_fr": "état de cuisson",
+      "tree_key_fr": "etat_cuisson",
+      "values": {
+        "raw":        { "en": "raw",        "fr": "cru/crue" },
+        "cooked":     { "en": "cooked",     "fr": "cuit/cuite" },
+        "boiled":     { "en": "boiled",     "fr": "bouilli/bouillie" },
+        "steamed":    { "en": "steamed",    "fr": "vapeur" },
+        "fried":      { "en": "fried",      "fr": "frit/frite" },
+        "fried_flat": { "en": "fried flat", "fr": "plat (sur le plat)" },
+        "grilled":    { "en": "grilled",    "fr": "grillé/grillée" },
+        "roasted":    { "en": "roasted",    "fr": "rôti/rôtie" },
+        "baked":      { "en": "baked",      "fr": "au four" },
+        "sauteed":    { "en": "sautéed",    "fr": "sauté/sautée" },
+        "poached":    { "en": "poached",    "fr": "poché/pochée" },
+        "braised":    { "en": "braised",    "fr": "étouffée / braisé" },
+        "scrambled":  { "en": "scrambled",  "fr": "brouillé" },
+        "hard_boiled":{ "en": "hard boiled","fr": "dur (oeuf dur)" },
+        "soft_boiled":{ "en": "soft boiled","fr": "à la coque" },
+        "precooked":  { "en": "precooked",  "fr": "précuit/précuite" },
+        "to_cook":    { "en": "to cook",    "fr": "à cuire" },
+        "omelette":   { "en": "omelette",   "fr": "omelette" }
+      }
+    },
+
+    "thermal_state": {
+      "name_en": "thermal / conservation state",
+      "name_fr": "état thermique / conservation",
+      "tree_key_fr": "etat_thermique",
+      "_note": "Les valeurs UHT, pasteurisé, rayon frais, sous pression migrent depuis conditionnement",
+      "values": {
+        "fresh":        { "en": "fresh",          "fr": "frais/fraîche" },
+        "refrigerated": { "en": "refrigerated",   "fr": "rayon frais / réfrigéré" },
+        "frozen":       { "en": "frozen",          "fr": "surgelé/congelé" },
+        "dried":        { "en": "dried",           "fr": "séché/séchée" },
+        "dehydrated":   { "en": "dehydrated",      "fr": "déshydraté/déshydratée" },
+        "rehydrated":   { "en": "rehydrated",      "fr": "réhydraté/réhydratée" },
+        "freeze_dried": { "en": "freeze-dried",    "fr": "lyophilisé/lyophilisée" },
+        "pasteurized":  { "en": "pasteurized",     "fr": "pasteurisé/pasteurisée" },
+        "uht":          { "en": "UHT",             "fr": "UHT / longue conservation" },
+        "pressurized":  { "en": "pressurized",     "fr": "sous pression" },
+        "mature":       { "en": "mature",          "fr": "mature / mûri" }
+      }
+    },
+
+    "form": {
+      "name_en": "physical form",
+      "name_fr": "forme physique",
+      "tree_key_fr": "forme",
+      "values": {
+        "whole":        { "en": "whole",          "fr": "entier/entière" },
+        "powder":       { "en": "powder",         "fr": "poudre" },
+        "flour":        { "en": "flour",          "fr": "farine" },
+        "oil":          { "en": "oil",            "fr": "huile" },
+        "juice":        { "en": "juice",          "fr": "jus" },
+        "butter":       { "en": "butter",         "fr": "beurre" },
+        "cream":        { "en": "cream",          "fr": "crème" },
+        "milk":         { "en": "milk",           "fr": "lait" },
+        "yogurt":       { "en": "yogurt",         "fr": "yaourt" },
+        "paste":        { "en": "paste",          "fr": "pâte" },
+        "pureed":       { "en": "pureed",         "fr": "purée" },
+        "concentrate":  { "en": "concentrated",   "fr": "concentré/concentrée" },
+        "extract":      { "en": "extract",        "fr": "extrait/extraite" },
+        "ground":       { "en": "ground",         "fr": "moulu/moulue" },
+        "crushed":      { "en": "crushed",        "fr": "broyé/broyée / concassé" },
+        "diced":        { "en": "diced",          "fr": "en dés / concassé" },
+        "sliced":       { "en": "sliced",         "fr": "tranché/tranchée" },
+        "grated":       { "en": "grated",         "fr": "râpé/râpée" },
+        "crumbled":     { "en": "crumbled",       "fr": "émietté/émiettée" },
+        "rolled":       { "en": "rolled (flakes)","fr": "flocons" },
+        "flakes":       { "en": "flakes",         "fr": "paillettes" },
+        "granulated":   { "en": "granulated",     "fr": "granulé/granulée" },
+        "pieces":       { "en": "pieces",         "fr": "petits morceaux" },
+        "liquid":       { "en": "liquid",         "fr": "liquide" },
+        "block":        { "en": "block",          "fr": "bloc" },
+        "tablet":       { "en": "tablet",         "fr": "comprimé / pastilles" },
+        "jam":          { "en": "jam",            "fr": "confiture" },
+        "compote":      { "en": "compote",        "fr": "compote" },
+        "jelly":        { "en": "jelly",          "fr": "gelée" },
+        "candied":      { "en": "candied",        "fr": "confit/confite" },
+        "crunchy":      { "en": "crunchy",        "fr": "croquant/croquante" },
+        "creamy":       { "en": "creamy",         "fr": "crémeux/crémeuse" },
+        "whipped":      { "en": "whipped",        "fr": "fouetté/fouettée" },
+        "spice":        { "en": "spice (dried)",  "fr": "épice (séchée)" },
+        "fresh_herb":   { "en": "fresh herb",     "fr": "herbe fraîche" },
+        "dried_herb":   { "en": "dried herb",     "fr": "herbe séchée" },
+        "fruit_cream":  { "en": "fruit cream",    "fr": "crème de fruit" },
+        "plant_water":  { "en": "plant water",    "fr": "eau végétale" },
+        "short_grain":  { "en": "short grain",    "fr": "grain court" },
+        "medium_grain": { "en": "medium grain",   "fr": "grain moyen" },
+        "long_grain":   { "en": "long grain",     "fr": "grain long" },
+        "steel_cut":    { "en": "steel cut",      "fr": "steel cut (avoine)" },
+        "instant":      { "en": "instant",        "fr": "instantané" }
+      }
+    },
+
+    "part": {
+      "name_en": "part of ingredient",
+      "name_fr": "partie de l'ingrédient",
+      "tree_key_fr": "partie",
+      "values": {
+        "whole":       { "en": "whole",          "fr": "entier/entière" },
+        "leaf":        { "en": "leaf",           "fr": "feuille" },
+        "stem":        { "en": "stem",           "fr": "tige" },
+        "root":        { "en": "root",           "fr": "racine" },
+        "tuber":       { "en": "tuber",          "fr": "tubercule" },
+        "bulb":        { "en": "bulb",           "fr": "bulbe" },
+        "pod":         { "en": "pod",            "fr": "gousse" },
+        "flower":      { "en": "flower",         "fr": "fleur" },
+        "flesh":       { "en": "flesh",          "fr": "chair" },
+        "flesh_peeled":{ "en": "flesh (peeled)", "fr": "chair sans peau" },
+        "flesh_skin":  { "en": "flesh + skin",   "fr": "chair+peau" },
+        "seed":        { "en": "seed",           "fr": "graine" },
+        "whole_seed":  { "en": "whole seed",     "fr": "graine entière" },
+        "with_seeds":  { "en": "with seeds",     "fr": "avec graines" },
+        "seedless":    { "en": "seedless",       "fr": "sans graines" },
+        "pitted":      { "en": "pitted",         "fr": "dénoyauté/dénoyautée" },
+        "with_skin":   { "en": "with skin",      "fr": "avec peau" },
+        "peeled":      { "en": "peeled",         "fr": "pelé/pelée / sans peau" },
+        "peel":        { "en": "peel",           "fr": "pelure / zeste" },
+        "sprout":      { "en": "sprout",         "fr": "pousse / germe" },
+        "kernel":      { "en": "kernel",         "fr": "amande / grain (noyau)" },
+        "yolk":        { "en": "yolk",           "fr": "jaune (d'oeuf)" },
+        "white":       { "en": "white",          "fr": "blanc (d'oeuf)" }
+      }
+    },
+
+    "treatment": {
+      "name_en": "treatment / processing",
+      "name_fr": "traitement / procédé",
+      "tree_key_fr": "traitement",
+      "_note": "Fusionne traitement + procede_cuisson. Les valeurs écrémé/allégé migrent vers fat_content.",
+      "values": {
+        "smoked":           { "en": "smoked",          "fr": "fumé/fumée" },
+        "fermented":        { "en": "fermented",       "fr": "fermenté/fermentée" },
+        "aged":             { "en": "aged",            "fr": "affiné/affinée" },
+        "blanched":         { "en": "blanched",        "fr": "blanchi/blanchie" },
+        "enriched":         { "en": "enriched",        "fr": "enrichi/enrichie" },
+        "unenriched":       { "en": "unenriched",      "fr": "non enrichi" },
+        "iodized":          { "en": "iodized",         "fr": "iodé/iodée" },
+        "iodized_fluoride": { "en": "iodized + fluoride", "fr": "iodé et fluoré" },
+        "refined":          { "en": "refined",         "fr": "raffiné/raffinée" },
+        "unrefined":        { "en": "unrefined",       "fr": "brut/brute (non raffiné)" },
+        "distilled":        { "en": "distilled",       "fr": "distillé/distillée" },
+        "sprouted":         { "en": "sprouted",        "fr": "germé/germée" },
+        "hulled":           { "en": "hulled",          "fr": "décortiqué/décortiquée" },
+        "virgin":           { "en": "virgin",          "fr": "vierge" },
+        "extra_virgin":     { "en": "extra virgin",    "fr": "extra vierge" },
+        "cold_pressed":     { "en": "cold pressed",    "fr": "pression à froid" },
+        "textured":         { "en": "textured",        "fr": "texturé/texturée" },
+        "instant":          { "en": "instant",         "fr": "instantané/instantanée" },
+        "decaffeinated":    { "en": "decaffeinated",   "fr": "décaféiné/décaféinée" },
+        "parboiled":        { "en": "parboiled",       "fr": "étuvé/étuvée" },
+        "candied_process":  { "en": "candied (process)","fr": "confit/confite (procédé)" },
+        "no_pulp":          { "en": "no pulp",         "fr": "sans pulpe" },
+        "fat_added":        { "en": "fat added",       "fr": "gras ajouté" },
+        "oil_roasted":      { "en": "oil roasted",     "fr": "grillé à l'huile" },
+        "dry_roasted":      { "en": "dry roasted",     "fr": "grillé à sec" },
+        "marinated":        { "en": "marinated",       "fr": "mariné/marinée" },
+        "pickled":          { "en": "pickled",         "fr": "lacto-fermenté / cornichon" },
+        "bleached":         { "en": "bleached",        "fr": "blanchi chimiquement" },
+        "toasted":          { "en": "toasted",         "fr": "grillé/toasté (pain)" },
+        "roasted":          { "en": "roasted (nuts/grains)", "fr": "torréfié / rôti (grains/noix)" }
+      }
+    },
+
+    "fat_content": {
+      "name_en": "fat content",
+      "name_fr": "teneur en matières grasses",
+      "tree_key_fr": "teneur_MG",
+      "_note": "teneur_MG stockait des valeurs numériques (%) — migrer vers catégories. Valeurs écrémé/demi-écrémé/entier déjà présentes.",
+      "values": {
+        "fat_free":      { "en": "fat free (0%)",       "fr": "sans matières grasses (0%)" },
+        "skimmed":       { "en": "skimmed (<1%)",       "fr": "écrémé (<1%)" },
+        "semi_skimmed":  { "en": "semi-skimmed (1-2%)", "fr": "demi-écrémé (1-2%)" },
+        "low_fat":       { "en": "low fat (<3%)",       "fr": "allégé en gras (<3%)" },
+        "light":         { "en": "light (reduced fat)", "fr": "allégé (MG réduite)" },
+        "whole":         { "en": "whole / full fat",    "fr": "entier / entière teneur" },
+        "high_fat":      { "en": "high fat",            "fr": "élevé en gras" },
+        "numeric":       { "en": "% (numeric)",         "fr": "% (valeur numérique)" }
+      }
+    },
+
+    "seasoning": {
+      "name_en": "seasoning / added ingredients",
+      "name_fr": "assaisonnement",
+      "tree_key_fr": "assaisonnement",
+      "values": {
+        "plain":        { "en": "plain (no added)",  "fr": "nature / sans ajout" },
+        "salted":       { "en": "salted",            "fr": "salé/salée" },
+        "unsalted":     { "en": "unsalted",          "fr": "sans sel" },
+        "sweetened":    { "en": "sweetened",         "fr": "sucré/sucrée" },
+        "unsweetened":  { "en": "unsweetened",       "fr": "sans sucre" },
+        "flavored":     { "en": "flavored",          "fr": "aromatisé/aromatisée" },
+        "spiced":       { "en": "spiced",            "fr": "épicé/épicée" }
+      }
+    },
+
+    "packaging": {
+      "name_en": "packaging / preservation method",
+      "name_fr": "conditionnement",
+      "tree_key_fr": "conditionnement",
+      "_note": "UHT, pasteurisé, rayon frais, sous pression migrent vers thermal_state",
+      "values": {
+        "canned":       { "en": "canned",          "fr": "en conserve / appertisé" },
+        "jarred":       { "en": "jarred",           "fr": "en bocal" },
+        "vacuum":       { "en": "vacuum packed",    "fr": "sous vide" },
+        "prepackaged":  { "en": "prepackaged",      "fr": "préemballé/préemballée" },
+        "commercial":   { "en": "commercial",       "fr": "commercial / industriel" },
+        "tablet":       { "en": "tablet form",      "fr": "tablette / comprimé" }
+      }
+    },
+
+    "draining": {
+      "name_en": "draining / conservation liquid",
+      "name_fr": "égouttage / milieu de conservation",
+      "tree_key_fr": ["egouttage", "milieu_conservation"],
+      "_note": "Fusionne egouttage (égoutté) + milieu_conservation (à l'huile, dans l'eau, dans sirop, au vinaigre)",
+      "values": {
+        "drained":      { "en": "drained",           "fr": "égoutté/égouttée" },
+        "in_oil":       { "en": "in oil",            "fr": "à l'huile" },
+        "in_water":     { "en": "in water",          "fr": "dans l'eau" },
+        "in_brine":     { "en": "in brine",          "fr": "en saumure" },
+        "in_syrup":     { "en": "in syrup",          "fr": "dans sirop" },
+        "in_vinegar":   { "en": "in vinegar",        "fr": "au vinaigre" }
+      }
+    },
+
+    "origin": {
+      "name_en": "origin / animal source",
+      "name_fr": "origine",
+      "tree_key_fr": "origine",
+      "values": {
+        "plant":        { "en": "plant-based",  "fr": "végétal/végétale" },
+        "chicken":      { "en": "chicken",      "fr": "poulet / poule" },
+        "cow":          { "en": "cow",          "fr": "vache" },
+        "goat":         { "en": "goat",         "fr": "chèvre" },
+        "sheep":        { "en": "sheep",        "fr": "brebis / mouton" },
+        "pig":          { "en": "pig",          "fr": "porc" },
+        "fish":         { "en": "fish",         "fr": "poisson" },
+        "wild":         { "en": "wild",         "fr": "sauvage" }
+      }
+    },
+
+    "ripeness": {
+      "name_en": "ripeness",
+      "name_fr": "maturité",
+      "tree_key_fr": "maturite",
+      "values": {
+        "unripe":    { "en": "unripe",    "fr": "pas mûr / vert" },
+        "ripe":      { "en": "ripe",      "fr": "mûr/mûre" },
+        "overripe":  { "en": "overripe",  "fr": "trop mûr/trop mûre" }
+      }
+    },
+
+    "ripening": {
+      "name_en": "ripening / maturation stage",
+      "name_fr": "affinage / stade de maturation",
+      "tree_key_fr": null,
+      "_note": "Nouvel axe — pour fromages et charcuteries. Distinct de maturite (fruits).",
+      "values": {
+        "young":   { "en": "young",   "fr": "jeune" },
+        "semi":    { "en": "semi-aged","fr": "mi-affiné" },
+        "mature":  { "en": "mature",  "fr": "mature / affiné" },
+        "hard":    { "en": "hard",    "fr": "à pâte dure" }
+      }
+    },
+
+    "color": {
+      "name_en": "color",
+      "name_fr": "couleur",
+      "tree_key_fr": null,
+      "_note": "Nouvel axe — absent du tree actuel.",
+      "values": {
+        "white":   { "en": "white",   "fr": "blanc/blanche" },
+        "yellow":  { "en": "yellow",  "fr": "jaune" },
+        "orange":  { "en": "orange",  "fr": "orange" },
+        "red":     { "en": "red",     "fr": "rouge" },
+        "green":   { "en": "green",   "fr": "vert/verte" },
+        "purple":  { "en": "purple",  "fr": "violet/violette" },
+        "black":   { "en": "black",   "fr": "noir/noire" },
+        "brown":   { "en": "brown",   "fr": "brun/brune / marron" },
+        "pink":    { "en": "pink",    "fr": "rose" },
+        "dark":    { "en": "dark",    "fr": "foncé/foncée" },
+        "light":   { "en": "light",   "fr": "clair/claire" }
+      }
+    },
+
+    "size": {
+      "name_en": "size",
+      "name_fr": "taille",
+      "tree_key_fr": null,
+      "_note": "Nouvel axe — absent du tree actuel.",
+      "values": {
+        "baby":    { "en": "baby",    "fr": "mini / pommes de terre nouvelles" },
+        "small":   { "en": "small",   "fr": "petit/petite" },
+        "medium":  { "en": "medium",  "fr": "moyen/moyenne" },
+        "large":   { "en": "large",   "fr": "grand/grande" },
+        "cherry":  { "en": "cherry (tomato)", "fr": "cerise (tomate cerise)" }
+      }
+    },
+
+    "variety": {
+      "name_en": "variety / cultivar",
+      "name_fr": "variété / cultivar",
+      "tree_key_fr": null,
+      "_note": "Nouvel axe — absent du tree actuel. Utilisé pour pommes, haricots, légumineuses, etc.",
+      "values": {
+        "fuji":              { "en": "Fuji",               "fr": "Fuji" },
+        "gala":              { "en": "Gala",               "fr": "Gala" },
+        "golden_delicious":  { "en": "Golden Delicious",   "fr": "Golden Delicious" },
+        "granny_smith":      { "en": "Granny Smith",       "fr": "Granny Smith" },
+        "kidney":            { "en": "kidney (bean)",      "fr": "haricot rouge (kidney)" },
+        "cannellini":        { "en": "cannellini",         "fr": "haricot cannellini" },
+        "pinto":             { "en": "pinto",              "fr": "haricot pinto" },
+        "navy":              { "en": "navy (bean)",        "fr": "haricot navy / blanc" },
+        "black":             { "en": "black (bean)",       "fr": "haricot noir" },
+        "green":             { "en": "green (lentil/pea)", "fr": "vert/verte (lentille/pois)" },
+        "red":               { "en": "red (lentil)",      "fr": "rouge (lentille corail)" }
+      }
+    },
+
+    "sodium": {
+      "name_en": "sodium content",
+      "name_fr": "teneur en sodium",
+      "tree_key_fr": null,
+      "_note": "Partiellement couvert par assaisonnement (sans sel). Axe dédié pour les produits avec mention sodium explicite.",
+      "values": {
+        "no_added":  { "en": "no added sodium",    "fr": "sans sel ajouté" },
+        "low":       { "en": "low sodium",         "fr": "faible en sodium" },
+        "reduced":   { "en": "reduced sodium",     "fr": "réduit en sodium" },
+        "added":     { "en": "sodium added",       "fr": "sodium ajouté" }
+      }
+    }
+  },
+
+  "migration_notes": {
+    "merges_required": [
+      "traitement + procede_cuisson → treatment (procede_cuisson supprimé)",
+      "egouttage + milieu_conservation → draining (les deux supprimés, un seul axe draining)"
+    ],
+    "splits_required": [
+      "conditionnement → packaging (commercial, conserve, préemballé, sous vide, tablette) + thermal_state (UHT, pasteurisé, rayon frais, sous pression)"
+    ],
+    "value_migrations": [
+      "teneur_MG : valeurs numériques à convertir en catégories fat_content (entier, demi-écrémé, écrémé déjà présents)",
+      "traitement : valeurs array-sérialisées ['blanchi', 'non blanchi'] → séparer en valeurs multiples",
+      "traitement : écrémé, demi-écrémé, allégé en gras → fat_content",
+      "traitement : faible en sodium, réduit en sodium → sodium",
+      "traitement : nature → seasoning:plain",
+      "traitement : instantané → form:instant (ou treatment:instant selon contexte)"
+    ],
+    "new_axes_to_add": ["color", "size", "variety", "ripening", "sodium"],
+    "truly_new": {
+      "color": "aucun équivalent FR dans le tree",
+      "size": "aucun équivalent FR dans le tree",
+      "variety": "aucun équivalent FR dans le tree",
+      "ripening": "etat_thermique avait 'mature' isolément — nouvel axe dédié affinage",
+      "sodium": "assaisonnement couvrait 'sans sel' — axe sodium distinct pour mentions explicites"
+    }
+  }
+}
