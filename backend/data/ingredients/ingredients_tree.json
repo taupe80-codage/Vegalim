@@ -903,7 +903,7 @@
                 "form": "flakes"
               },
               "axes_fr": {
-                "forme": "paillettes"
+                "forme": "flocons"
               }
             }
           ],
@@ -2975,9 +2975,7 @@
                 "treatment": "iodized"
               },
               "axes_fr": {
-                "traitement": [
-                  "iodé"
-                ]
+                "traitement": "iodé"
               }
             },
             {
@@ -5918,8 +5916,12 @@
                   "axes_fr": {}
                 }
               ],
-              "axes_en": {},
-              "axes_fr": {}
+              "axes_en": {
+                "form": "flour"
+              },
+              "axes_fr": {
+                "forme": "farine"
+              }
             },
             {
               "id": "ing_02119",
@@ -11376,10 +11378,12 @@
                 }
               ],
               "axes_en": {
-                "packaging": "canned"
+                "packaging": "canned",
+                "form": "juice"
               },
               "axes_fr": {
-                "conditionnement": "conserve"
+                "conditionnement": "conserve",
+                "forme": "jus"
               }
             },
             {
@@ -12357,10 +12361,10 @@
                 }
               ],
               "axes_en": {
-                "cooking_state": "raw"
+                "form": "juice"
               },
               "axes_fr": {
-                "etat_cuisson": "cru"
+                "forme": "jus"
               }
             },
             {
@@ -12388,10 +12392,10 @@
                 }
               ],
               "axes_en": {
-                "cooking_state": "raw"
+                "form": "juice"
               },
               "axes_fr": {
-                "etat_cuisson": "cru"
+                "forme": "jus"
               }
             },
             {
@@ -13823,10 +13827,12 @@
                 }
               ],
               "axes_en": {
-                "packaging": "canned"
+                "packaging": "canned",
+                "form": "juice"
               },
               "axes_fr": {
-                "conditionnement": "conserve"
+                "conditionnement": "conserve",
+                "forme": "jus"
               }
             }
           ],
@@ -16205,10 +16211,10 @@
                 }
               ],
               "axes_en": {
-                "cooking_state": "raw"
+                "form": "juice"
               },
               "axes_fr": {
-                "etat_cuisson": "cru"
+                "forme": "jus"
               }
             },
             {
@@ -16236,10 +16242,10 @@
                 }
               ],
               "axes_en": {
-                "cooking_state": "raw"
+                "form": "juice"
               },
               "axes_fr": {
-                "etat_cuisson": "cru"
+                "forme": "jus"
               }
             },
             {
@@ -35454,8 +35460,12 @@
                   "axes_fr": {}
                 }
               ],
-              "axes_en": {},
-              "axes_fr": {}
+              "axes_en": {
+                "draining": "drained"
+              },
+              "axes_fr": {
+                "egouttage": "égoutté"
+              }
             },
             {
               "id": "ing_03236",
@@ -35511,8 +35521,12 @@
                   "axes_fr": {}
                 }
               ],
-              "axes_en": {},
-              "axes_fr": {}
+              "axes_en": {
+                "draining": "drained"
+              },
+              "axes_fr": {
+                "egouttage": "égoutté"
+              }
             }
           ],
           "label_fr": "OLIVES"
@@ -38727,10 +38741,12 @@
                 }
               ],
               "axes_en": {
-                "packaging": "vacuum"
+                "packaging": "vacuum",
+                "cooking_state": "steamed"
               },
               "axes_fr": {
-                "conditionnement": "sous vide"
+                "conditionnement": "sous vide",
+                "etat_cuisson": "vapeur"
               }
             },
             {
@@ -53127,7 +53143,7 @@
             {
               "id": "ing_04553",
               "canonical_name_fr": "beurre de sésame de pâte",
-              "canonical_name_en": "sesame butter, from whole seed, paste",
+              "canonical_name_en": "sesame butter, from whole seed",
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
@@ -54389,7 +54405,7 @@
                 "form": "butter"
               },
               "axes_fr": {
-                "forme": "butter"
+                "forme": "beurre"
               }
             },
             {

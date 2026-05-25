@@ -3,7 +3,7 @@
     "description": "Token index — SOURCE:id → base/variant/IG context",
     "version": "6.0",
     "nutrition_version": "7.1",
-    "generated_at": "2026-05-24T20:18:40.541976+00:00",
+    "generated_at": "2026-05-25T07:21:11.099336+00:00",
     "key_format": "SOURCE:source_id  ex: CIQUAL:4028, CNF:501697, USDA:2644288",
     "total_entries": 2109,
     "by_source": {
@@ -790,7 +790,7 @@
     },
     "CIQUAL:11058": {
       "base": "table_salt_iodised",
-      "variant": "iod",
+      "variant": "iodized",
       "ig_id": "ing_01228",
       "ig_axes": {
         "treatment": "iodized"
@@ -1773,9 +1773,11 @@
     },
     "CIQUAL:9436": {
       "base": "wheat_flour_t55_for_bread",
-      "variant": "default",
+      "variant": "flour",
       "ig_id": "ing_00621",
-      "ig_axes": {},
+      "ig_axes": {
+        "form": "flour"
+      },
       "var_axes": {}
     },
     "CNF:502284": {
@@ -3613,10 +3615,11 @@
     },
     "CNF:1590": {
       "base": "lemon_juice_or_bottled",
-      "variant": "canned",
+      "variant": "juice_canned",
       "ig_id": "ing_01039",
       "ig_axes": {
-        "packaging": "canned"
+        "packaging": "canned",
+        "form": "juice"
       },
       "var_axes": {
         "packaging": "canned"
@@ -3923,10 +3926,10 @@
     },
     "CNF:1631": {
       "base": "passion_fruit_juice_purple",
-      "variant": "raw",
+      "variant": "raw_juice",
       "ig_id": "ing_01115",
       "ig_axes": {
-        "cooking_state": "raw"
+        "form": "juice"
       },
       "var_axes": {
         "cooking_state": "raw"
@@ -3934,10 +3937,10 @@
     },
     "CNF:1632": {
       "base": "passion_fruit_juice_yellow",
-      "variant": "raw",
+      "variant": "raw_juice",
       "ig_id": "ing_01117",
       "ig_axes": {
-        "cooking_state": "raw"
+        "form": "juice"
       },
       "var_axes": {
         "cooking_state": "raw"
@@ -4414,10 +4417,11 @@
     },
     "CNF:1595": {
       "base": "lime_juice_in_bottled",
-      "variant": "canned",
+      "variant": "juice_canned",
       "ig_id": "ing_01240",
       "ig_axes": {
-        "packaging": "canned"
+        "packaging": "canned",
+        "form": "juice"
       },
       "var_axes": {
         "packaging": "canned"
@@ -5229,19 +5233,19 @@
     },
     "CNF:1714": {
       "base": "grapefruit_juice_pink",
-      "variant": "raw",
+      "variant": "juice",
       "ig_id": "ing_01914",
       "ig_axes": {
-        "cooking_state": "raw"
+        "form": "juice"
       },
       "var_axes": {}
     },
     "CNF:1572": {
       "base": "grapefruit_juice_white",
-      "variant": "raw",
+      "variant": "raw_juice",
       "ig_id": "ing_01916",
       "ig_axes": {
-        "cooking_state": "raw"
+        "form": "juice"
       },
       "var_axes": {
         "cooking_state": "raw"
@@ -11626,9 +11630,11 @@
     },
     "CIQUAL:13032": {
       "base": "black_olive_drained",
-      "variant": "default",
+      "variant": "drained",
       "ig_id": "ing_03234",
-      "ig_axes": {},
+      "ig_axes": {
+        "draining": "drained"
+      },
       "var_axes": {}
     },
     "CIQUAL:13131": {
@@ -11645,9 +11651,11 @@
     },
     "CIQUAL:13033": {
       "base": "green_olive_drained",
-      "variant": "default",
+      "variant": "drained",
       "ig_id": "ing_03238",
-      "ig_axes": {},
+      "ig_axes": {
+        "draining": "drained"
+      },
       "var_axes": {}
     },
     "CIQUAL:20181": {
@@ -12752,7 +12760,8 @@
       "variant": "steamed_vacuum",
       "ig_id": "ing_01698",
       "ig_axes": {
-        "packaging": "vacuum"
+        "packaging": "vacuum",
+        "cooking_state": "steamed"
       },
       "var_axes": {
         "cooking_state": "steamed",
@@ -17576,7 +17585,7 @@
       "var_axes": {}
     },
     "CNF:2596": {
-      "base": "sesame_butter_from_whole_seed_paste",
+      "base": "sesame_butter_from_whole_seed",
       "variant": "butter_seed_plant",
       "ig_id": "ing_04553",
       "ig_axes": {

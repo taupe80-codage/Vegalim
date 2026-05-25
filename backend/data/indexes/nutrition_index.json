@@ -3,7 +3,7 @@
     "description": "Nutrition index — SOURCE:id → valeurs nutritionnelles",
     "version": "3.0",
     "nutrition_version": "7.1",
-    "generated_at": "2026-05-24T20:18:40.506034+00:00",
+    "generated_at": "2026-05-25T07:21:11.060166+00:00",
     "key_format": "SOURCE:source_id  ex: CIQUAL:4028, CNF:501697, USDA:2644288",
     "total_entries": 2109,
     "by_source": {
@@ -3651,12 +3651,12 @@
     },
     "CIQUAL:11058": {
       "base": "table_salt_iodised",
-      "variant": "iod",
+      "variant": "iodized",
       "category": "condiment",
       "name_fr": "sel blanc alimentaire",
       "name_en": "table salt, iodised",
       "axes": {
-        "treatment": "iod"
+        "treatment": "iodized"
       },
       "calories_kcal": 0.0,
       "protein_g": 0.0,
@@ -8004,11 +8004,13 @@
     },
     "CIQUAL:9436": {
       "base": "wheat_flour_t55_for_bread",
-      "variant": "default",
+      "variant": "flour",
       "category": "cereals and grains",
       "name_fr": "froment T55 (pour pains)",
       "name_en": "wheat flour T55 for bread",
-      "axes": {},
+      "axes": {
+        "form": "flour"
+      },
       "calories_kcal": 350.0,
       "protein_g": 9.03,
       "carbs_g": 73.7,
@@ -15294,12 +15296,13 @@
     },
     "CNF:1590": {
       "base": "lemon_juice_or_bottled",
-      "variant": "canned",
+      "variant": "juice_canned",
       "category": "fruit",
       "name_fr": "citron en bouteille",
       "name_en": "lemon juice or bottled",
       "axes": {
-        "packaging": "canned"
+        "packaging": "canned",
+        "form": "juice"
       },
       "calories_kcal": 21.0,
       "protein_g": 0.4,
@@ -16579,11 +16582,12 @@
     },
     "CNF:1631": {
       "base": "passion_fruit_juice_purple",
-      "variant": "raw",
+      "variant": "raw_juice",
       "category": "fruit",
       "name_fr": "grenadille (fruit de la passion).",
       "name_en": "passion fruit juice, purple",
       "axes": {
+        "form": "juice",
         "cooking_state": "raw"
       },
       "calories_kcal": 51.0,
@@ -16628,11 +16632,12 @@
     },
     "CNF:1632": {
       "base": "passion_fruit_juice_yellow",
-      "variant": "raw",
+      "variant": "raw_juice",
       "category": "fruit",
       "name_fr": "grenadille (passiflora laurifolia), jaune",
       "name_en": "passion fruit juice, yellow",
       "axes": {
+        "form": "juice",
         "cooking_state": "raw"
       },
       "calories_kcal": 60.0,
@@ -18540,12 +18545,13 @@
     },
     "CNF:1595": {
       "base": "lime_juice_in_bottled",
-      "variant": "canned",
+      "variant": "juice_canned",
       "category": "fruit",
       "name_fr": "lime en bouteille",
       "name_en": "lime juice in bottled",
       "axes": {
-        "packaging": "canned"
+        "packaging": "canned",
+        "form": "juice"
       },
       "calories_kcal": 21.0,
       "protein_g": 0.25,
@@ -21692,12 +21698,12 @@
     },
     "CNF:1714": {
       "base": "grapefruit_juice_pink",
-      "variant": "raw",
+      "variant": "juice",
       "category": "fruit",
       "name_fr": "Pamplemousse, rose, rouge ou blanc, toutes régions, cru",
       "name_en": "Grapefruit, pink, red or white, all areas, raw",
       "axes": {
-        "cooking_state": "raw"
+        "form": "juice"
       },
       "calories_kcal": 32.0,
       "protein_g": 0.63,
@@ -21743,11 +21749,12 @@
     },
     "CNF:1572": {
       "base": "grapefruit_juice_white",
-      "variant": "raw",
+      "variant": "raw_juice",
       "category": "fruit",
       "name_fr": "pamplemousse blanc",
       "name_en": "grapefruit juice, white",
       "axes": {
+        "form": "juice",
         "cooking_state": "raw"
       },
       "calories_kcal": 39.0,
@@ -47161,11 +47168,13 @@
     },
     "CIQUAL:13032": {
       "base": "black_olive_drained",
-      "variant": "default",
+      "variant": "drained",
       "category": "vegetable",
       "name_fr": "olive noire",
       "name_en": "black olive, drained",
-      "axes": {},
+      "axes": {
+        "draining": "drained"
+      },
       "calories_kcal": 173.0,
       "protein_g": 1.38,
       "carbs_g": 0.1,
@@ -47260,11 +47269,13 @@
     },
     "CIQUAL:13033": {
       "base": "green_olive_drained",
-      "variant": "default",
+      "variant": "drained",
       "category": "vegetable",
       "name_fr": "olive verte",
       "name_en": "green olive, drained",
-      "axes": {},
+      "axes": {
+        "draining": "drained"
+      },
       "calories_kcal": 164.0,
       "protein_g": 1.13,
       "carbs_g": 0.61,
@@ -70909,7 +70920,7 @@
       "water_g": 1.1
     },
     "CNF:2596": {
-      "base": "sesame_butter_from_whole_seed_paste",
+      "base": "sesame_butter_from_whole_seed",
       "variant": "butter_seed_plant",
       "category": "nut",
       "name_fr": "beurre de sésame, de, pâte",

@@ -2,7 +2,7 @@
   "schema_version": "7.1",
   "schema_family": "nutrition_v2",
   "built_from": "raw_sources_direct",
-  "built_at": "2026-05-24T20:18:18.560762+00:00",
+  "built_at": "2026-05-25T07:11:25.648852+00:00",
   "pipeline": "build_n2_direct.py",
   "raw_sources": {
     "CIQUAL": {
@@ -6227,13 +6227,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_01228",
       "variants": {
-        "iod": {
+        "iodized": {
           "_source": "CIQUAL",
           "_source_id": 11058,
           "_v32_ing_id": "ing_01228",
           "_v32_var_id": "var_01229",
           "axes": {
-            "treatment": "iod"
+            "treatment": "iodized"
           },
           "calories_kcal": 0.0,
           "protein_g": 0.0,
@@ -13477,19 +13477,23 @@
         "name_en": "wheat flour T55 for bread"
       },
       "ingredient_type": "ombrelle",
-      "variant_dimensions": [],
+      "variant_dimensions": [
+        "form"
+      ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
       "conditioning_types": [],
       "aliases_fr": [],
       "_v32_id": "ing_00621",
       "variants": {
-        "default": {
+        "flour": {
           "_source": "CIQUAL",
           "_source_id": 9436,
           "_v32_ing_id": "ing_00621",
           "_v32_var_id": "var_00622",
-          "axes": {},
+          "axes": {
+            "form": "flour"
+          },
           "calories_kcal": 350.0,
           "protein_g": 9.03,
           "carbs_g": 73.7,
@@ -26062,6 +26066,7 @@
       },
       "ingredient_type": "node",
       "variant_dimensions": [
+        "form",
         "packaging"
       ],
       "indus_conditionne": true,
@@ -26072,13 +26077,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_01039",
       "variants": {
-        "canned": {
+        "juice_canned": {
           "_source": "CNF",
           "_source_id": 1590,
           "_v32_ing_id": "ing_01039",
           "_v32_var_id": "var_01040",
           "axes": {
-            "packaging": "canned"
+            "packaging": "canned",
+            "form": "juice"
           },
           "calories_kcal": 21.0,
           "protein_g": 0.4,
@@ -28407,7 +28413,8 @@
       },
       "ingredient_type": "node",
       "variant_dimensions": [
-        "cooking_state"
+        "cooking_state",
+        "form"
       ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
@@ -28415,12 +28422,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_01115",
       "variants": {
-        "raw": {
+        "raw_juice": {
           "_source": "CNF",
           "_source_id": 1631,
           "_v32_ing_id": "ing_01115",
           "_v32_var_id": "var_01116",
           "axes": {
+            "form": "juice",
             "cooking_state": "raw"
           },
           "calories_kcal": 51.0,
@@ -28482,7 +28490,8 @@
       },
       "ingredient_type": "node",
       "variant_dimensions": [
-        "cooking_state"
+        "cooking_state",
+        "form"
       ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
@@ -28490,12 +28499,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_01117",
       "variants": {
-        "raw": {
+        "raw_juice": {
           "_source": "CNF",
           "_source_id": 1632,
           "_v32_ing_id": "ing_01117",
           "_v32_var_id": "var_01118",
           "axes": {
+            "form": "juice",
             "cooking_state": "raw"
           },
           "calories_kcal": 60.0,
@@ -31735,6 +31745,7 @@
       },
       "ingredient_type": "node",
       "variant_dimensions": [
+        "form",
         "packaging"
       ],
       "indus_conditionne": true,
@@ -31745,13 +31756,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_01240",
       "variants": {
-        "canned": {
+        "juice_canned": {
           "_source": "CNF",
           "_source_id": 1595,
           "_v32_ing_id": "ing_01240",
           "_v32_var_id": "var_01241",
           "axes": {
-            "packaging": "canned"
+            "packaging": "canned",
+            "form": "juice"
           },
           "calories_kcal": 21.0,
           "protein_g": 0.25,
@@ -37140,7 +37152,7 @@
       },
       "ingredient_type": "node",
       "variant_dimensions": [
-        "cooking_state"
+        "form"
       ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
@@ -37148,13 +37160,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_01914",
       "variants": {
-        "raw": {
+        "juice": {
           "_source": "CNF",
           "_source_id": 1714,
           "_v32_ing_id": "ing_01914",
           "_v32_var_id": "var_05753",
           "axes": {
-            "cooking_state": "raw"
+            "form": "juice"
           },
           "calories_kcal": 32.0,
           "protein_g": 0.63,
@@ -37217,7 +37229,8 @@
       },
       "ingredient_type": "node",
       "variant_dimensions": [
-        "cooking_state"
+        "cooking_state",
+        "form"
       ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
@@ -37225,12 +37238,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_01916",
       "variants": {
-        "raw": {
+        "raw_juice": {
           "_source": "CNF",
           "_source_id": 1572,
           "_v32_ing_id": "ing_01916",
           "_v32_var_id": "var_01917",
           "axes": {
+            "form": "juice",
             "cooking_state": "raw"
           },
           "calories_kcal": 39.0,
@@ -80265,12 +80279,12 @@
         "cat1_fr": "LÉGUMES",
         "cat2": "olives",
         "cat2_fr": "OLIVES",
-        "cat2_type": "ombrelle",
+        "cat2_type": "leaf",
         "v32_id": "ing_03230",
         "name_fr": "olive",
         "name_en": "olives, green, Manzanilla, stuffed with pimiento"
       },
-      "ingredient_type": "ombrelle",
+      "ingredient_type": "leaf",
       "variant_dimensions": [],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
@@ -80333,25 +80347,29 @@
         "cat1_fr": "LÉGUMES",
         "cat2": "olives",
         "cat2_fr": "OLIVES",
-        "cat2_type": "ombrelle",
+        "cat2_type": "leaf",
         "v32_id": "ing_03234",
         "name_fr": "olive noire",
         "name_en": "black olive, drained"
       },
-      "ingredient_type": "ombrelle",
-      "variant_dimensions": [],
+      "ingredient_type": "leaf",
+      "variant_dimensions": [
+        "draining"
+      ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
       "conditioning_types": [],
       "aliases_fr": [],
       "_v32_id": "ing_03234",
       "variants": {
-        "default": {
+        "drained": {
           "_source": "CIQUAL",
           "_source_id": 13032,
           "_v32_ing_id": "ing_03234",
           "_v32_var_id": "var_03235",
-          "axes": {},
+          "axes": {
+            "draining": "drained"
+          },
           "calories_kcal": 173.0,
           "protein_g": 1.38,
           "carbs_g": 0.1,
@@ -80411,12 +80429,12 @@
         "cat1_fr": "LÉGUMES",
         "cat2": "olives",
         "cat2_fr": "OLIVES",
-        "cat2_type": "ombrelle",
+        "cat2_type": "leaf",
         "v32_id": "ing_03236",
         "name_fr": "olive noire (à la grecque)",
         "name_en": "black olive"
       },
-      "ingredient_type": "ombrelle",
+      "ingredient_type": "leaf",
       "variant_dimensions": [
         "packaging",
         "draining",
@@ -80497,25 +80515,29 @@
         "cat1_fr": "LÉGUMES",
         "cat2": "olives",
         "cat2_fr": "OLIVES",
-        "cat2_type": "ombrelle",
+        "cat2_type": "leaf",
         "v32_id": "ing_03238",
         "name_fr": "olive verte",
         "name_en": "green olive, drained"
       },
-      "ingredient_type": "ombrelle",
-      "variant_dimensions": [],
+      "ingredient_type": "leaf",
+      "variant_dimensions": [
+        "draining"
+      ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
       "conditioning_types": [],
       "aliases_fr": [],
       "_v32_id": "ing_03238",
       "variants": {
-        "default": {
+        "drained": {
           "_source": "CIQUAL",
           "_source_id": 13033,
           "_v32_ing_id": "ing_03238",
           "_v32_var_id": "var_03239",
-          "axes": {},
+          "axes": {
+            "draining": "drained"
+          },
           "calories_kcal": 164.0,
           "protein_g": 1.13,
           "carbs_g": 0.61,
@@ -120231,7 +120253,7 @@
         }
       }
     },
-    "sesame_butter_from_whole_seed_paste": {
+    "sesame_butter_from_whole_seed": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -120240,7 +120262,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04553",
         "name_fr": "beurre de sésame de pâte",
-        "name_en": "sesame butter, from whole seed, paste"
+        "name_en": "sesame butter, from whole seed"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
