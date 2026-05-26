@@ -34,13 +34,26 @@ def _reuse_score(recipe: dict, planned_ings: Counter) -> float:
 
 
 def generate_plan(
-    diet:          str | None  = None,
-    max_calories:  float | None = None,
-    min_protein:   float | None = None,
-    month:         int | None  = None,
-    exclude_ids:   list[int]   = None,
-    batch_cooking: bool        = False,
-    limit_per_slot: int        = 3,
+    diet:            str | None   = None,
+    max_calories:    float | None = None,
+    min_protein:     float | None = None,
+    month:           int | None   = None,
+    exclude_ids:     list[int]    = None,
+    batch_cooking:   bool         = False,
+    limit_per_slot:  int          = 3,
+    # Filtres étendus
+    max_time:        int | None   = None,
+    allergen_exclude: list[str]   = None,   # tags.allergens names ("eggs", "gluten"…)
+    # Flags boolean allergens — même logique que filter_service.apply_filters
+    gluten_free:     bool         = False,
+    lactose_free:    bool         = False,
+    nut_free:        bool         = False,
+    egg_free:        bool         = False,
+    dairy_free:      bool         = False,
+    soy_free:        bool         = False,
+    cuisine:         str | None   = None,
+    dish_type:       str | None   = None,
+    difficulty:      str | None   = None,
 ) -> dict:
     """
     Génère un plan de repas hebdomadaire (7 jours × 2 repas).
@@ -63,11 +76,64 @@ def generate_plan(
 
     recipes = get_data.recipes.list_all()
 
-    # Filtres
+    # ── Filtres ───────────────────────────────────────────────────────────────
     if diet:
         recipes = get_data.recipes.filter_by_diet(recipes, diet)
     if exclude_ids:
         recipes = get_data.recipes.exclude_ids(recipes, exclude_ids)
+
+    # Temps max par recette
+    if max_time:
+        recipes = [r for r in recipes
+                   if ((r.get("timing") or {}).get("total_min") or 999) <= max_time]
+
+    # Allergènes à exclure via tags.allergens (présence de l'allergène dans la recette)
+    if allergen_exclude:
+        excl = {a.lower() for a in allergen_exclude}
+        def _has_allergen(r):
+            tags = r.get("tags") or {}
+            allergens_in_recipe = set(a.lower() for a in (tags.get("allergens") or []))
+            return bool(allergens_in_recipe & excl)
+        recipes = [r for r in recipes if not _has_allergen(r)]
+
+    # Flags boolean allergens — utilise apply_filters (même logique que HomePage/recherche)
+    # gluten_free / lactose_free / nut_free → diet_flags (fiables, présents sur toutes les recettes)
+    # egg_free / dairy_free / soy_free       → vérification par ingrédient (allergen_flags)
+    _any_bool_allergen = gluten_free or lactose_free or nut_free or egg_free or dairy_free or soy_free
+    if _any_bool_allergen:
+        try:
+            from backend.services.filter_service import apply_filters
+            recipes, _ = apply_filters(
+                recipes,
+                skip=0, limit=len(recipes),
+                gluten_free=gluten_free,
+                lactose_free=lactose_free,
+                nut_free=nut_free,
+                egg_free=egg_free,
+                dairy_free=dairy_free,
+                soy_free=soy_free,
+            )
+        except Exception as _e:
+            logger.warning("apply_filters allergen error: %s", _e)
+
+    # Cuisine
+    if cuisine:
+        cuis_low = cuisine.lower()
+        recipes = [r for r in recipes
+                   if cuis_low in ((r.get("origin") or {}).get("cuisine", "")).lower()]
+
+    # Type de plat
+    if dish_type:
+        recipes = [r for r in recipes
+                   if r.get("dish_type", "").lower() == dish_type.lower()]
+
+    # Difficulté
+    if difficulty:
+        diff_map = {"easy": {"easy", "facile"}, "medium": {"medium", "intermédiaire", "moyen"},
+                    "hard": {"hard", "difficile"}}
+        allowed_diffs = diff_map.get(difficulty.lower(), {difficulty.lower()})
+        recipes = [r for r in recipes
+                   if (r.get("difficulty_level") or r.get("difficulty") or "").lower() in allowed_diffs]
 
     # Filtres nutritionnels
     if max_calories or min_protein:
@@ -123,9 +189,12 @@ def generate_plan(
             }
             used_ids.add(chosen.get("id"))
 
-            # Mettre à jour le compteur d'ingrédients
-            for ing in chosen.get("ingredients", []):
-                planned_ings[str(ing).lower()] += 1
+            # Mettre à jour le compteur d'ingrédients (composition CDC v4 ou legacy)
+            for ing in (chosen.get("composition") or chosen.get("ingredients", [])):
+                key = (ing.get("ingredient") or ing.get("ingredient_id") or str(ing)
+                       if isinstance(ing, dict) else str(ing)).lower()
+                if key:
+                    planned_ings[key] += 1
 
     plan["meta"] = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
