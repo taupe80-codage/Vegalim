@@ -18,10 +18,19 @@ import sys
 # ── Configuration globale ─────────────────────────────────────────────────────
 _LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
 
+# Force UTF-8 sur Windows (console cp1252 incompatible avec les caractères Unicode)
+_stdout = sys.stdout
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        _stdout = sys.stdout
+    except Exception:
+        pass
+
 logging.basicConfig(
     level   = getattr(logging, _LEVEL, logging.INFO),
     format  = "[%(levelname)s] [%(name)s] %(message)s",
-    stream  = sys.stdout,
+    stream  = _stdout,
     force   = True,
 )
 

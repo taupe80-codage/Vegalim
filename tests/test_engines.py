@@ -4,10 +4,6 @@ tests/test_engines.py — Tests fonctionnels des engines.
 Couvre : nutrition_engine, graph_engine, filter_service, substitution_service.
 Aucune dépendance réseau ni base de données.
 """
-import sys
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
 from backend.engine.nutrition_engine   import compute_nutrition
 from backend.engine.graph_engine       import _load_graph, get_cycle_ingredients
 from backend.services.filter_service   import apply_diet_filter

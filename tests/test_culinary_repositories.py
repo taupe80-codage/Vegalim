@@ -302,3 +302,139 @@ class TestDataAccessFacade:
             nutr = get_data.ingredients.resolve_nutrition("tomate")
             assert nutr is not None
             assert nutr["calories"] == 18
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Tests complémentaires — lacunes identifiées lors de l'audit
+# ═══════════════════════════════════════════════════════════════════════════════
+
+class TestRecipeRepositoryComplement:
+    """
+    Complète TestRecipeRepository sur les cas non couverts :
+    filter_by_diet multi-régimes, search_by_text multi-termes,
+    filter_by_ingredient, get_many_by_ids.
+    """
+
+    @pytest.fixture(autouse=True)
+    def patch_data(self):
+        with patch("backend.db.culinary_repositories._recipes_raw",
+                   return_value=FAKE_RECIPES), \
+             patch("backend.db.culinary_repositories._recipes_index",
+                   return_value={r["id"]: r for r in FAKE_RECIPES}):
+            yield
+
+    def setup_method(self):
+        from backend.db.culinary_repositories import RecipeRepository
+        self.repo = RecipeRepository()
+
+    # ── filter_by_diet ────────────────────────────────────────────────────────
+
+    def test_filter_by_diet_vegetarien(self):
+        """Régime végétarien : recettes 1 et 3 seulement."""
+        with patch("backend.services.filter_service.match_diet",
+                   side_effect=lambda r, d: r["diet_flags"].get("vegetarien", False)):
+            result = self.repo.filter_by_diet(FAKE_RECIPES, "vegetarien")
+        ids = [r["id"] for r in result]
+        assert 1 in ids and 3 in ids
+        assert 2 not in ids
+
+    def test_filter_by_diet_gluten_free(self):
+        """Régime gluten_free : seule la recette 3 le respecte."""
+        with patch("backend.services.filter_service.match_diet",
+                   side_effect=lambda r, d: r["diet_flags"].get("gluten_free", False)):
+            result = self.repo.filter_by_diet(FAKE_RECIPES, "gluten_free")
+        assert len(result) == 1
+        assert result[0]["id"] == 3
+
+    def test_filter_by_diet_inconnu_retourne_vide(self):
+        """Régime inconnu : match_diet retourne False → liste vide."""
+        with patch("backend.services.filter_service.match_diet",
+                   return_value=False):
+            result = self.repo.filter_by_diet(FAKE_RECIPES, "fruitarien")
+        assert result == []
+
+    def test_filter_by_diet_preserve_ordre(self):
+        """L'ordre original des recettes doit être préservé."""
+        with patch("backend.services.filter_service.match_diet",
+                   return_value=True):
+            result = self.repo.filter_by_diet(FAKE_RECIPES, "vegan")
+        assert [r["id"] for r in result] == [r["id"] for r in FAKE_RECIPES]
+
+    # ── search_by_text ────────────────────────────────────────────────────────
+
+    def test_search_by_text_multi_termes(self):
+        """Tous les termes doivent être présents (AND implicite).
+        search_by_text lit titles.fr via le champ 'titles' — on passe un pool
+        enrichi avec ce champ pour tester la logique multi-termes.
+        """
+        pool_with_titles = [
+            dict(r, titles={"fr": r.get("title_fr", ""), "original": r.get("title_original", "")})
+            for r in FAKE_RECIPES
+        ]
+        result = self.repo.search_by_text("soupe lentilles", recipes=pool_with_titles)
+        assert len(result) == 1
+        assert result[0]["id"] == 3
+
+    def test_search_by_text_aucun_resultat(self):
+        result = self.repo.search_by_text("quinoa")
+        assert result == []
+
+    def test_search_by_text_insensible_casse(self):
+        result_lower = self.repo.search_by_text("ratatouille")
+        result_upper = self.repo.search_by_text("RATATOUILLE")
+        assert [r["id"] for r in result_lower] == [r["id"] for r in result_upper]
+
+    def test_search_by_text_pool_personnalise(self):
+        """Pool restreint passé en paramètre — seules les recettes du pool cherchées."""
+        pool   = [r for r in FAKE_RECIPES if r["id"] in (1, 2)]
+        result = self.repo.search_by_text("lentilles", recipes=pool)
+        assert result == []   # recette 3 absente du pool
+
+    def test_search_by_text_recherche_dans_composition(self):
+        """La recherche doit matcher les noms dans la composition."""
+        result = self.repo.search_by_text("aubergine")
+        assert any(r["id"] == 1 for r in result)
+
+    # ── filter_by_ingredient ─────────────────────────────────────────────────
+
+    def test_filter_by_ingredient_present(self):
+        FAKE_COMP = [
+            dict(r, composition=[{"name": n} for n in names])
+            for r, names in zip(FAKE_RECIPES, [
+                ["tomate", "courgette"],
+                ["poulet", "ail"],
+                ["lentilles", "tomate"],
+            ])
+        ]
+        result = self.repo.filter_by_ingredient(FAKE_COMP, "tomate")
+        ids = [r["id"] for r in result]
+        assert 1 in ids and 3 in ids
+        assert 2 not in ids
+
+    def test_filter_by_ingredient_absent_retourne_vide(self):
+        result = self.repo.filter_by_ingredient(FAKE_RECIPES, "truffe_noire_xy99")
+        assert result == []
+
+    def test_filter_by_ingredient_insensible_casse(self):
+        FAKE_COMP = [dict(FAKE_RECIPES[0], composition=[{"name": "Tomate"}])]
+        r_lower = self.repo.filter_by_ingredient(FAKE_COMP, "tomate")
+        r_upper = self.repo.filter_by_ingredient(FAKE_COMP, "TOMATE")
+        assert len(r_lower) == len(r_upper)
+
+    # ── get_many_by_ids ───────────────────────────────────────────────────────
+
+    def test_get_many_by_ids_connus(self):
+        result = self.repo.get_many_by_ids([1, 3])
+        ids = [r["id"] for r in result]
+        assert 1 in ids and 3 in ids
+        assert 2 not in ids
+
+    def test_get_many_by_ids_inconnu_ignore(self):
+        result = self.repo.get_many_by_ids([1, 999])
+        ids = [r["id"] for r in result]
+        assert 1 in ids
+        assert 999 not in ids
+
+    def test_get_many_by_ids_liste_vide(self):
+        result = self.repo.get_many_by_ids([])
+        assert result == []

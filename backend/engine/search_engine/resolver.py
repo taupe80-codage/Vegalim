@@ -33,10 +33,19 @@ def _fr_to_en_map() -> dict[str, str]:
 @lru_cache(maxsize=1)
 def _synonym_map() -> dict[str, str]:
     """Construit le mapping {synonyme_normalisé → id_canonique}."""
-    from backend.db.data_access import get_data
     mapping: dict[str, str] = {}
+    try:
+        # FIX #13 : utilise l'API publique data_io au lieu de la méthode privée
+        # get_data.ingredients._ingredients_raw(). Évite les cassures lors des
+        # refactors de data_access et garantit un fallback propre si absent.
+        from backend.core.data_io import load_ingredients_dict
+        ingredients_raw = load_ingredients_dict()
+    except Exception:
+        return mapping
 
-    for item in get_data.ingredients._ingredients_raw() if hasattr(get_data.ingredients, '_ingredients_raw') else []:
+    for item in (ingredients_raw if isinstance(ingredients_raw, list) else
+                 ingredients_raw.get("ingredients", list(ingredients_raw.values()))
+                 if isinstance(ingredients_raw, dict) else []):
         canonical = item.get("id", "")
         if not canonical:
             continue

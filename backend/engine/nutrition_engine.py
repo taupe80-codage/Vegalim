@@ -30,10 +30,69 @@ UNIT_TO_G = {
     "oz":             28.0,  "lb":        454.0,
 }
 
-MACROS   = ["calories", "protein", "carbs", "fat", "fiber", "sugar", "sodium"]
+MACROS   = ["calories", "protein", "carbs", "fat", "fiber", "sugar", "sodium",
+            "saturated_fat"]
 MICROS   = ["calcium", "iron", "magnesium", "potassium",
-            "vitamin_c", "vitamin_b12", "zinc", "phosphorus"]
+            "vitamin_c", "vitamin_b12", "zinc", "phosphorus",
+            "vitamin_a", "vitamin_d", "vitamin_e", "vitamin_k", "folate", "omega3"]
+# "salt" est dérivé de sodium après calcul (pas dans la DB) → ajouté en post-traitement
 ALL_KEYS = MACROS + MICROS
+
+# Correspondance champs nutrition_v2 (suffixe _kcal/_g/_mg/_ug) → clés internes
+# Permet de gérer les deux formats de la DB sans modifier la logique de calcul.
+_V2_FIELD_MAP: dict[str, str] = {
+    "calories_kcal":    "calories",
+    "protein_g":        "protein",
+    "carbs_g":          "carbs",
+    "fat_g":            "fat",
+    "fiber_g":          "fiber",
+    "sugar_g":          "sugar",
+    "sodium_mg":        "sodium",
+    "saturated_fat_g":  "saturated_fat",
+    "calcium_mg":       "calcium",
+    "iron_mg":          "iron",
+    "magnesium_mg":     "magnesium",
+    "potassium_mg":     "potassium",
+    "vitamin_c_mg":     "vitamin_c",
+    "vitamin_b12_ug":   "vitamin_b12",
+    "zinc_mg":          "zinc",
+    "phosphorus_mg":    "phosphorus",
+    # Nouvelles vitamines / acides gras
+    "vitamin_a_ug":     "vitamin_a",
+    "vitamin_d_ug":     "vitamin_d",
+    "vitamin_e_mg":     "vitamin_e",
+    "vitamin_k1_ug":    "vitamin_k",
+    "vitamin_k2_ug":    "vitamin_k",   # s'additionne (K1 + K2)
+    "folate_ug":        "folate",
+    "omega3_g":         "omega3",
+    "omega3_ala_g":     "omega3",      # s'additionne (ALA + EPA + DHA)
+    "omega3_epa_g":     "omega3",
+    "omega3_dha_g":     "omega3",
+}
+
+
+def _normalize_n_data(n_data: dict) -> dict:
+    """
+    Normalise un dict nutritionnel v2 (champs suffixés _kcal/_g/_mg/_ug)
+    vers les clés internes attendues par compute_nutrition().
+
+    Les clés déjà au bon format (ex: 'calories') sont conservées.
+    La valeur d'une clé suffixée est convertie en mg/100g si nécessaire
+    (les valeurs de nutrition_v2 sont déjà en unités cohérentes pour 100g).
+    """
+    if not n_data:
+        return n_data
+    normalized: dict = {}
+    for k, v in n_data.items():
+        canonical = _V2_FIELD_MAP.get(k)
+        if canonical:
+            # Ne pas écraser si la clé canonique existe déjà avec une valeur
+            if canonical not in normalized and v is not None:
+                normalized[canonical] = v
+        else:
+            if k not in normalized:
+                normalized[k] = v
+    return normalized
 
 # Valeurs par défaut de portions par type de plat (mirroir de recipes.json)
 DEFAULT_SERVINGS_BY_TYPE: dict[str, int] = {
@@ -89,7 +148,7 @@ def _physical_unit_g(ingredient_id: str, unit: str) -> float | None:
         return None
     units = entry.get("units", {})
     unit_entry = units.get(unit)
-    if unit_entry and "g" in unit_entry:
+    if unit_entry and unit_entry.get("g") is not None:
         return float(unit_entry["g"])
     return None
 
@@ -170,6 +229,9 @@ def compute_nutrition(recipe: dict,
         if not n_data:
             continue
 
+        # Normaliser les champs v2 (calories_kcal → calories, protein_g → protein...)
+        n_data = _normalize_n_data(n_data)
+
         # Quantité en grammes
         comp_e = comp.get(token, {})
         cat = ing.get("category", "") if ing else ""
@@ -208,6 +270,9 @@ def compute_nutrition(recipe: dict,
     result = {k: round(v / srv, 1) for k, v in totals.items()}
     result["calories"]       = round(totals["calories"] / srv)
     result["sodium"]         = round(totals["sodium"]   / srv)
+    # Sel dérivé du sodium (1 mg sodium = 0.00254 g sel, norme UE Règl. 1169/2011)
+    if totals.get("sodium", 0) > 0:
+        result["salt"] = round(totals["sodium"] / srv * 0.00254, 2)
     if gi_n:
         result["glycemic_index"] = round(gi_sum / gi_n)
     result["servings_used"] = srv   # renvoie le nb de portions utilisé pour le calcul
@@ -228,36 +293,5 @@ def compute_nutrition_from_tokens(tokens: list[str],
 compute_nutrition_score = compute_nutrition
 
 
-def score_nutrition_values(nutr: dict, profile: dict | None = None) -> float:
-    """
-    Score nutritionnel depuis un dict de valeurs {protein, calories, fiber...}.
-    Utilisé par reco_service quand la nutrition vient du graph séparé.
-
-    Délègue le calcul de base à ajr_score() (source de vérité AJR ANSES/OMS),
-    puis applique les ajustements profil (malus sucre, bonus hyperprotéiné).
-
-    Retourne un score 0-10 cohérent avec les autres engines de scoring.
-    """
-    if not nutr or not isinstance(nutr, dict):
-        return 0.0
-
-    from backend.engine.score_engine.ajr import ajr_score
-    base = ajr_score(nutr)["score"]  # 0-10, source de vérité AJR
-
-    p    = profile or {}
-    diet = p.get("diet", "")
-
-    sugar   = float(nutr.get("sugar",   0) or 0)
-    protein = float(nutr.get("protein", 0) or 0)
-
-    # Ajustements profil (delta sur le score AJR de base)
-    delta = 0.0
-    if diet == "diabete" or p.get("low_sugar"):
-        delta -= min(sugar * 0.1, 2.0)   # malus sucre renforcé
-    else:
-        delta -= min(sugar * 0.02, 0.5)  # malus sucre standard
-
-    if diet == "hyperproteine":
-        delta += min(protein * 0.1, 2.0)  # bonus protéine
-
-    return round(max(0.0, min(10.0, base + delta)), 2)
+# Alias de compat — logique déplacée dans score_engine/ajr.py (responsabilité scoring)
+from backend.engine.score_engine.ajr import ajr_score_with_profile as score_nutrition_values  # noqa: F401

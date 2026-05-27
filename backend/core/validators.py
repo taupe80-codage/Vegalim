@@ -81,6 +81,8 @@ DIET_ALIASES: dict[str, frozenset[str]] = {
     "raw": frozenset({
         "raw",              # EN canonique (clé diet_flags)
         "cru",              # FR courant
+        "raw_vegan",        # alias front-end (filtre Crudivore)
+        "crudivore",        # FR alternatif
     }),
 
     # ── Adapté aux enfants ─────────────────────────────────────────────────────
@@ -115,7 +117,10 @@ ALLOWED_DIETS: frozenset[str] = frozenset(DIET_CANONICAL.keys())
 
 # ── Champs requis par type de données ─────────────────────────────────────────
 
-RECIPE_REQUIRED_FIELDS = {"ingredients", "nutrition"}
+# CDC v4 utilise "composition", legacy utilise "ingredients"
+# is_valid_recipe() gère les deux via _RECIPE_INGREDIENTS_FIELDS
+RECIPE_REQUIRED_FIELDS   = {"nutrition"}           # champ commun aux deux formats
+_RECIPE_INGREDIENTS_FIELDS = {"ingredients", "composition"}  # au moins l'un requis
 RECIPE_OPTIONAL_FIELDS = {"id", "title_fr", "title_original", "tags", "diet_flags",
                            "servings", "technique", "iconic_score", "composition",
                            "prep_time_min", "cook_time_min", "difficulty",
@@ -143,10 +148,16 @@ def is_valid_recipe(recipe: Any, strict: bool = False) -> bool:
         logger.warning("Recette invalide : pas un dict (%s)", type(recipe).__name__)
         return False
 
+    # Vérifie les champs communs obligatoires
     missing = RECIPE_REQUIRED_FIELDS - set(recipe.keys())
     if missing:
         title = recipe.get("titles", {}).get("fr") or recipe.get("title_original", "?")
         logger.warning("Recette '%s' — champs manquants : %s", title, missing)
+        return False
+    # Vérifie qu'au moins un champ ingrédients est présent (CDC v4 ou legacy)
+    if not (_RECIPE_INGREDIENTS_FIELDS & set(recipe.keys())):
+        title = recipe.get("titles", {}).get("fr") or recipe.get("title_original", "?")
+        logger.warning("Recette '%s' — ni 'ingredients' ni 'composition' présent", title)
         return False
 
     if strict:

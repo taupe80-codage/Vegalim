@@ -30,6 +30,7 @@ ALLOWED_FIELDS = frozenset({
     "diet", "allergies", "budget", "servings", "goal",
     "cycle_phase", "health_goal",
     "liked_ingredients", "disliked_ingredients",
+    "health_consent",   # fix: était absent → PATCH /profil/consent ne persistait jamais
 })
 
 # Fallback JSON — toujours importé, utilisé si _use_db() retourne False
@@ -37,26 +38,27 @@ import json, os, tempfile
 from pathlib import Path
 _FILE = Path(__file__).resolve().parent.parent / "data" / "user_profiles" / "user_profiles.json"
 
-    def _load() -> dict:
-        if not _FILE.exists():
-            return {}
-        try:
-            with open(_FILE, encoding="utf-8") as _fh:
-                return json.load(_fh)
-        except Exception as e:
-            logger.error("Lecture user_profiles.json : %s", e)
-            return {}
+def _load() -> dict:
+    if not _FILE.exists():
+        return {}
+    try:
+        with open(_FILE, encoding="utf-8") as _fh:
+            return json.load(_fh)
+    except Exception as e:
+        logger.error("Lecture user_profiles.json : %s", e)
+        return {}
 
-    def _save(data: dict) -> None:
-        tmp_fd, tmp_path = tempfile.mkstemp(dir=_FILE.parent, suffix=".tmp")
-        try:
-            with os.fdopen(tmp_fd, "w", encoding="utf-8") as f:
-                json.dump(data, f, ensure_ascii=False, indent=2)
-            os.replace(tmp_path, _FILE)
-        except Exception:
-            if os.path.exists(tmp_path):
-                os.unlink(tmp_path)
-            raise
+
+def _save(data: dict) -> None:
+    tmp_fd, tmp_path = tempfile.mkstemp(dir=_FILE.parent, suffix=".tmp")
+    try:
+        with os.fdopen(tmp_fd, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        os.replace(tmp_path, _FILE)
+    except Exception:
+        if os.path.exists(tmp_path):
+            os.unlink(tmp_path)
+        raise
 
 
 def set_profile(email: str, updates: dict) -> dict:
@@ -64,7 +66,17 @@ def set_profile(email: str, updates: dict) -> dict:
     Met à jour le profil par merge partiel.
     Seuls les champs ALLOWED_FIELDS sont acceptés.
     Retourne le profil complet après mise à jour.
+
+    Normalisation : 'goal' est accepté comme alias de 'health_goal'
+    (ProfileUpdate utilise 'goal', le modèle DB a la colonne 'health_goal').
+    Le remap est fait ici pour être transparent aux deux backends.
     """
+    # Remap 'goal' → 'health_goal' (alias accepté depuis ProfileUpdate)
+    if "goal" in updates and "health_goal" not in updates:
+        updates = dict(updates)        # ne pas muter le dict reçu
+        updates["health_goal"] = updates.pop("goal")
+        logger.debug("set_profile: 'goal' remappé vers 'health_goal' pour %s", email)
+
     if _use_db():
         with db_session() as db:
             result = UserProfileRepository(db).upsert(email, updates)
@@ -90,12 +102,21 @@ def set_profile(email: str, updates: dict) -> dict:
 
 
 def get_profile(email: str) -> dict:
-    """Retourne le profil ou {} s'il n'existe pas."""
+    """Retourne le profil ou {} s'il n'existe pas.
+
+    Rétro-compat JSON : les anciens profils stockaient 'goal' au lieu de 'health_goal'.
+    On normalise à la lecture pour que les deux backends retournent toujours 'health_goal'.
+    """
     if _use_db():
         with db_session() as db:
             return UserProfileRepository(db).get_as_dict(email)
     else:
-        return _load().get(email, {})
+        profile = _load().get(email, {})
+        # Normalisation rétro-compat : 'goal' → 'health_goal'
+        if "goal" in profile and "health_goal" not in profile:
+            profile = dict(profile)
+            profile["health_goal"] = profile.pop("goal")
+        return profile
 
 
 def delete_profile(email: str) -> bool:

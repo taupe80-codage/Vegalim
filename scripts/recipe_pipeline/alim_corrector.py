@@ -184,7 +184,7 @@ def compute_quality_score(r: dict) -> float:
         if animal_comp:
             score -= 20  # penalite tres forte : composition incompatible
 
-    if diet_flags.get("vegetarian"):
+    if diet_flags.get("vegetarien") or diet_flags.get("vegetarian"):
         if MEAT_IN_INSTRS.search(" ".join(instrs)):
             score -= 25  # bloquant
         meat_comp = comp_names & MEAT_IN_COMP
@@ -262,7 +262,7 @@ def fix_meat_in_vegetarian(r: dict, dry_run: bool) -> list:
     """Detecte viande dans recette vegetarienne -> flag bloquant."""
     corrections = []
     diet_flags = r.get("diet_flags") or {}
-    if not diet_flags.get("vegetarian"):
+    if not (diet_flags.get("vegetarien") or diet_flags.get("vegetarian")):
         return corrections
 
     instrs = r.get("instructions") or []

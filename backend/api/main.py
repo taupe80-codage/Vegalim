@@ -1,11 +1,11 @@
 """
-ALIM v5 — Point d'entrée FastAPI.
+ALIM v6 — Point d'entrée FastAPI.
 
 Architecture propre :
   core/     → sécurité, JWT, rate limiting, logging, validation
   db/       → PostgreSQL via SQLAlchemy (fallback SQLite dev)
   services/ → logique métier orchestrée
-  engine/   → 26 moteurs actifs (sur 103 disponibles dans l'archive)
+  engine/   → moteurs actifs (nutrition, scoring, recherche, planning…)
   api/      → routes modulaires par domaine
 
 Lancement :
@@ -32,8 +32,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pathlib import Path as _Path
 
-from backend.core.logger import get_logger
-from backend.api.router  import router
+from backend.core.logger           import get_logger
+from backend.api.router            import router
+from backend.core.config           import settings
+from backend.core.security_headers import SecurityHeadersMiddleware
 
 logger = get_logger("startup")
 
@@ -41,43 +43,58 @@ logger = get_logger("startup")
 # 🔥 LIFESPAN CORRIGÉ
 
 def _startup_checks(log) -> None:
-    """Vérifie la configuration au démarrage — centralise tous les warnings."""
-    cors = os.getenv("CORS_ORIGINS", "*")
-    if cors == "*":
-        log.warning(
-            "⚠️  CORS ouvert (*) — définissez CORS_ORIGINS=https://votre-domaine.com en production"
-        )
-    else:
-        log.info("CORS restreint à : %s", cors)
+    """Délègue la vérification de config à settings.log_startup_status()."""
+    settings.log_startup_status(log)
 
-    if not os.getenv("HEALTH_DATA_KEY"):
-        log.warning(
-            "⚠️  HEALTH_DATA_KEY absent — données santé non chiffrées (non conforme RGPD Art. 9)"
-        )
-
-    if not os.getenv("SECRET_KEY") or os.getenv("SECRET_KEY", "").startswith("CHANGEZ"):
-        log.warning("⚠️  SECRET_KEY non sécurisée — générez une clé aléatoire pour la production")
-
-    redis_url = os.getenv("REDIS_URL")
-    if not redis_url:
-        log.info("ℹ️  REDIS_URL absent — rate limiter en mémoire (inefficace multi-process)")
-
-    log.info("✅ Configuration vérifiée")
-
-    if os.getenv("LOG_FORMAT", "").lower() == "json":
+    if settings.log_format == "json":
         from backend.core.logger import _configure_json_logging
         _configure_json_logging()
+
+def _check_production_secrets() -> None:
+    """
+    Bloque le démarrage en production si des secrets critiques sont absents.
+    En développement, logue des avertissements sans bloquer.
+    """
+    if not settings.is_production:
+        return
+
+    missing = []
+
+    if not settings._secret_key_from_env:
+        missing.append(
+            "SECRET_KEY manquante — tokens JWT invalidés à chaque redémarrage.\n"
+            "  Générer : python -c \"import secrets; print(secrets.token_urlsafe(64))\""
+        )
+
+    if not settings.health_data_key:
+        missing.append(
+            "HEALTH_DATA_KEY manquante — données santé (cycle, objectifs) stockées en CLAIR.\n"
+            "  Violation RGPD Art. 9. Générer :\n"
+            "  python -c \"from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())\""
+        )
+
+    if missing:
+        border = "═" * 70
+        msg = f"\n{border}\n  ALIM — DÉMARRAGE BLOQUÉ (APP_ENV=production)\n{border}\n"
+        for i, m in enumerate(missing, 1):
+            msg += f"\n  [{i}] {m}\n"
+        msg += f"\n  Corriger .env puis relancer.\n{border}\n"
+        raise RuntimeError(msg)
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info("═══ ALIM démarrage ═══")
+
+    # ── Guard secrets production ──
+    _check_production_secrets()
 
     # ── Warm-up des caches ──
     try:
         from backend.core.data_io import (
             load_recipes, load_nutrition_graph, load_score_graph,
             load_availability_graph, load_ingredients_dict, load_prices,
-            load_seasonality, load_scoring_profiles,
+            load_seasonality, load_scoring_profiles, load_search_index,
         )
         recipes = load_recipes()
         logger.info("Dataset chargé : %d recettes", len(recipes))
@@ -88,25 +105,37 @@ async def lifespan(app: FastAPI):
         load_prices()
         load_seasonality()
         load_scoring_profiles()
-        logger.info("Caches warm-up : 8 loaders prêts")
+        load_search_index()
+        logger.info("Caches warm-up : 9 loaders prêts")
     except Exception as e:
-        logger.warning("Warm-up partiel : %s", e)
+        logger.error("Warm-up partiel : %s — certaines fonctionnalités seront indisponibles", e)
 
-    # 🔥 FIX CRITIQUE — TOUJOURS INITIALISER LA DB
+    # ── Migrations Alembic ────────────────────────────────────────────────────
+    # alembic upgrade head : applique toutes les migrations manquantes.
+    # Remplace create_all() qui ne gère pas les changements de schéma existants.
     try:
-        from backend.db.session import init_db
-        init_db()
-        logger.info("DB initialisée — tables garanties")
+        from alembic.config import Config as AlembicConfig
+        from alembic import command as alembic_command
+        from pathlib import Path as _P
+        _alembic_cfg = AlembicConfig(str(_P(__file__).resolve().parents[2] / "alembic.ini"))
+        alembic_command.upgrade(_alembic_cfg, "head")
+        logger.info("DB migrée — alembic upgrade head OK")
     except Exception as e:
-        logger.error("Erreur init DB : %s", e)
+        logger.error("Erreur migration DB : %s — fallback create_all", e)
+        try:
+            from backend.db.session import init_db
+            init_db()
+        except Exception as e2:
+            logger.error("Erreur fallback init DB : %s", e2)
 
     # (optionnel) vérifier la connexion
     try:
-        from backend.db.session import check_connection
+        from backend.db.session import check_connection, refresh_db_availability
         if check_connection():
-            logger.info("Connexion DB OK")
+            refresh_db_availability()   # FIX #2 : met DB_AVAILABLE=True si OK
+            logger.info("Connexion DB OK — DB_AVAILABLE=True")
         else:
-            logger.warning("DB non accessible")
+            logger.warning("DB non accessible — fallback JSON actif")
     except Exception as e:
         logger.warning("Check DB : %s", e)
 
@@ -118,15 +147,24 @@ async def lifespan(app: FastAPI):
 
 
 # ── Application FastAPI ──
+# /docs et /openapi.json désactivés en production — Swagger UI expose
+# l'ensemble des routes, modèles et permet de tester l'API sans auth.
+_docs_url    = None if settings.is_production else "/docs"
+_redoc_url   = None if settings.is_production else "/redoc"
+_openapi_url = None if settings.is_production else "/openapi.json"
+
 app = FastAPI(
     title       = "ALIM — Plateforme Culinaire Végétarienne",
     description = (
-        "API de recommandation végétarienne. 529 recettes, 40+ cuisines. "
+        "API de recommandation végétarienne. 40+ cuisines. "
         "Score CDC_03c 7 dimensions. Auth JWT (B2C) + API key (B2B). "
         "PostgreSQL avec fallback SQLite."
     ),
-    version     = "5.0.0",
+    version     = "6.0.0",
     lifespan    = lifespan,
+    docs_url    = _docs_url,
+    redoc_url   = _redoc_url,
+    openapi_url = _openapi_url,
 )
 
 
@@ -149,17 +187,26 @@ class RequestIDMiddleware(BaseHTTPMiddleware):
         response.headers["X-Request-ID"] = request_id
         return response
 
-# ── CORS ──
-# En production, remplacer "*" par les domaines autorisés
-_CORS_ORIGINS = os.getenv("CORS_ORIGINS", "*").split(",")
-app.add_middleware(RequestIDMiddleware)
+# ── Middlewares ───────────────────────────────────────────────────────────────
+# Ordre d'exécution LIFO : le dernier add_middleware() s'exécute EN PREMIER.
+# SecurityHeaders → RequestID → CORS → handler
+
+# CORS — Settings : CORS_ORIGINS (virgule-séparé) | défaut "*" (dev uniquement)
+# Exemple prod : CORS_ORIGINS=https://alim.app,https://www.alim.app
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=_CORS_ORIGINS,
-    allow_credentials=True if _CORS_ORIGINS != ["*"] else False,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins     = settings.cors_origins,
+    allow_credentials = not settings.cors_open,   # False si "*" (incompatible avec credentials)
+    allow_methods     = ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allow_headers     = ["Authorization", "Content-Type", "X-API-Key", "X-Request-ID"],
 )
+
+# Request ID — corrélation des logs bout en bout
+app.add_middleware(RequestIDMiddleware)
+
+# Security headers — X-Frame-Options, CSP, Referrer-Policy…
+# Posé en dernier → s'exécute en premier, couvre toutes les réponses
+app.add_middleware(SecurityHeadersMiddleware)
 
 
 # ── Routes API ──
@@ -200,7 +247,7 @@ def _resolve_frontend() -> tuple[str, _Path]:
     return "vanilla", _VANILLA / "index.html"
 
 _frontend_mode, _frontend_index = _resolve_frontend()
-logger.info("Frontend : %s → %s", _frontend_mode, _frontend_index)
+logger.info("Frontend : %s -> %s", _frontend_mode, _frontend_index)
 
 # ── Montage des assets statiques ───────────────────────────────────────────────
 if _frontend_mode == "react" and (_DIST / "assets").exists():
@@ -249,8 +296,61 @@ async def add_quota_headers(request, call_next):
     # Déjà géré par auth_middleware._require_plan pour le 429
     # Ici on s'assure que X-Plan est présent si l'header X-Api-Key est fourni
     if "x-api-key" in request.headers and "x-plan" not in response.headers:
-        response.headers["X-API-Version"] = "5.0.0"
+        response.headers["X-API-Version"] = "6.0.0"
     return response
+
+
+# ── Middleware métriques ───────────────────────────────────────────────────────
+
+@app.middleware("http")
+async def metrics_middleware(request, call_next):
+    """
+    Mesure la durée de chaque requête et alimente le store de métriques.
+    Exclut les routes de health check pour éviter le bruit.
+    """
+    import time as _time
+    from backend.core.metrics import record_request
+
+    _EXCLUDED = {"/health", "/healthz", "/metrics", "/favicon.svg"}
+    path = request.url.path
+
+    if path in _EXCLUDED:
+        return await call_next(request)
+
+    t0 = _time.monotonic()
+    response = await call_next(request)
+    duration_ms = (_time.monotonic() - t0) * 1000
+
+    record_request(
+        route      = path,
+        status_code= response.status_code,
+        duration_ms= duration_ms,
+    )
+    return response
+
+
+@app.get("/metrics", tags=["Monitoring"])
+def get_metrics_endpoint(request):
+    """
+    Métriques runtime : requêtes, latences, erreurs, top routes.
+
+    **Protégé en production** — fournir le header :
+        `X-Metrics-Token: <METRICS_TOKEN>`
+    En développement, accessible sans token.
+
+    Compatible dashboards JSON simples (Grafana JSON datasource, etc.)
+    """
+    from fastapi import HTTPException
+    from fastapi.responses import JSONResponse
+    from backend.core.metrics import get_metrics
+
+    if settings.is_production:
+        expected = os.getenv("METRICS_TOKEN", "")
+        provided = request.headers.get("X-Metrics-Token", "")
+        if not expected or provided != expected:
+            raise HTTPException(status_code=403, detail="Token métriques invalide ou absent.")
+
+    return JSONResponse(content=get_metrics())
 
 
 @app.get("/stats", tags=["Plateforme"])
@@ -293,7 +393,7 @@ def platform_stats():
         "cuisines":     len(cuisines),
         "top_cuisines": dict(cuisines.most_common(10)),
         "diet_flags":   flags,
-        "version":      "5.0.0",
+        "version":      "6.0.0",
         "api_plans":    plans_info,
         "endpoints":    {
             "docs":    "/docs",
@@ -352,9 +452,8 @@ def healthz():
     except Exception as e:
         checks["database"] = {"status": "error", "detail": str(e)}
 
-    # Statut global
-    all_ok = all(v.get("status") == "ok"
-                 for k, v in checks.items() if k != "database")
+    # Statut global — DB dégradé = degraded (pas critique, fallback JSON actif)
+    all_ok = all(v.get("status") == "ok" for v in checks.values())
     status_code = 200 if all_ok else 503
 
     from fastapi.responses import JSONResponse
@@ -362,7 +461,7 @@ def healthz():
         status_code=status_code,
         content={
             "status":  "healthy" if all_ok else "degraded",
-            "version": "5.0.0",
+            "version": "6.0.0",
             "checks":  checks,
         }
     )
@@ -382,24 +481,10 @@ def health_check():
         n, db_ok = 0, False
     return {
         "status":       "ok",
-        "version":      "5.0.0",
+        "version":      "6.0.0",
         "dataset_size": n,
         "db":           "connected" if db_ok else "unavailable",
     }
-
-@app.get("/test", tags=["Sante"])
-def test_recherche():
-    """Test pipeline reco"""
-    try:
-        from backend.services.reco_service import recommend
-        res = recommend("curry")
-        return {
-            "status": "ok",
-            "message": f"{len(res)} recettes trouvées",
-            "exemple": res[0].get("title_fr") if res else None,
-        }
-    except Exception as e:
-        return {"status": "erreur", "detail": str(e)}
 
 
 # ── Health check ──
@@ -407,7 +492,7 @@ def test_recherche():
 def health():
     return {
         "status":  "ok",
-        "version": "5.0.0",
+        "version": "6.0.0",
         "project": "ALIM",
         "docs":    "/docs",
     }

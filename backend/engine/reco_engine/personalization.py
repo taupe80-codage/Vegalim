@@ -130,7 +130,7 @@ def apply_learning(recipes: list[dict], context: UserContext) -> list[dict]:
         return recipes
 
     try:
-        from backend.engine.learning_engine import rank_with_learning
+        from backend.engine.reco_engine.learning import rank_with_learning
         return rank_with_learning(recipes, context.email, score_field="final_score")
     except Exception as e:
         logger.debug("personalization: learning_engine indisponible — %s", e)

@@ -19,6 +19,7 @@ Point 7 — imports moteurs montés en tête de module (détection des erreurs a
 """
 import json
 import logging
+import time
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -86,8 +87,10 @@ def run(profile: str = "default", limit: int = None,
         skip_errors : si True, les recettes en erreur sont exclues avec log
 
     Returns:
-        {"recipes": list, "total": int, "errors": list, "skipped": int}
+        {"recipes": list, "total": int, "errors": list, "skipped": int, "timing_ms": int}
     """
+    t0 = time.monotonic()
+
     # ── Chargement données ────────────────────────────────────────────────────
     try:
         recipes = load_recipes()
@@ -177,10 +180,11 @@ def run(profile: str = "default", limit: int = None,
                 raise
 
     return {
-        "recipes": processed,
-        "total":   len(processed),
-        "errors":  error_log,
-        "skipped": len(error_log),
+        "recipes":   processed,
+        "total":     len(processed),
+        "errors":    error_log,
+        "skipped":   len(error_log),
+        "timing_ms": int((time.monotonic() - t0) * 1000),
     }
 
 

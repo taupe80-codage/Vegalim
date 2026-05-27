@@ -147,14 +147,14 @@ def get_quota(_user: dict = Depends(require_api_key)):
 
     used = 0
     try:
-        from backend.db.session import get_db
+        from backend.db.session import db_session
         from backend.db.repositories import QuotaRepository
         import hashlib
         raw_key = _user.get("raw_key", "")
         if raw_key:
             key_hash = hashlib.sha256(raw_key.encode()).hexdigest()
-            db   = next(get_db())
-            used = QuotaRepository(db).get_today_count(key_hash)
+            with db_session() as db:          # fix: was next(get_db()) → session never closed
+                used = QuotaRepository(db).get_today_count(key_hash)
     except Exception:
         pass
 

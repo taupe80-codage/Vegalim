@@ -63,18 +63,23 @@ class GraphRepository:
     """
 
     # Alias courts → nom de fichier (sans extension)
+    # IMPORTANT : vérifier que le fichier existe dans backend/data/graphs/ avant d'ajouter un alias.
     GRAPH_ALIASES: dict[str, str] = {
-        "culinary":       "culinary_knowledge_graph_v2",
-        "relations":      "ingredient_relation_graph",
-        "unified":        "knowledge_graph_unified_v1",
-        "flavor":         "flavor_graph",
-        "substitutions":  "ingredient_substitution_rules_graph_v1",
-        "scoring":        "recipe_scoring_graph_v1",
-        "nutrition":      "recipe_nutrition_graph_v1",
-        "cost":           "ingredient_cost_graph_v1",
-        "availability":   "ingredient_availability_graph_v1",
-        "flavor_pairing": "flavor_pairing_graph_v1",
-        "meta":           "unified_meta_graph",
+        # fix: "culinary_knowledge_graph_v2" n'existe pas dans graphs/ → corrigé vers culinary_meta_graph_v1
+        "culinary":           "culinary_meta_graph_v1",
+        "culinary_knowledge": "knowledge_graph_unified_v1",   # graphe unifié complet (2.1MB, usage ponctuel)
+        "relations":          "ingredient_relation_graph",
+        "unified":            "knowledge_graph_unified_v1",
+        "flavor":             "flavor_graph",
+        "substitutions":      "ingredient_substitution_rules_graph_v1",
+        "scoring":            "recipe_scoring_graph_v1",
+        "nutrition":          "recipe_nutrition_graph_v1",
+        "cost":               "ingredient_cost_graph_v1",
+        "availability":       "ingredient_availability_graph_v1",
+        # fix: flavor_pairing_graph_v1.json est un stub 215B (3 ingrédients) — le vrai graphe est flavor_graph
+        "flavor_pairing":     "flavor_graph",
+        "flavor_pairing_stub":"flavor_pairing_graph_v1",      # stub conservé si besoin
+        "meta":               "unified_meta_graph",
     }
 
     def __init__(self):

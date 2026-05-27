@@ -1,0 +1,4226 @@
+{
+  "version": "2.0",
+  "model": "llama-3.3-70b-versatile",
+  "total": 315,
+  "results": [
+    {
+      "id": "ing_04935",
+      "axes_set": {
+        "form": "powder"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Leavening agent, cream of tartar' → form:'powder' (implied by common form of cream of tartar)"
+    },
+    {
+      "id": "ing_00055",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Édulcorant à base d'extrait de stévia' → form already set to 'extract'"
+    },
+    {
+      "id": "ing_00057",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Édulcorant à l'aspartame, en pastilles' → form already set to 'tablet'"
+    },
+    {
+      "id": "ing_00063",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Édulcorant à l'aspartame, en poudre' → form already set to 'powder'"
+    },
+    {
+      "id": "ing_05607",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Edulcorant à base de sucre et aspartame (petits morceaux)' → form already set to 'pieces'"
+    },
+    {
+      "id": "ing_00003",
+      "axes_set": {
+        "cooking_state": "raw",
+        "thermal_state": "fresh"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Eucheuma sp.",
+      "confidence": "high",
+      "reason": "CIQUAL 'Agar (algue), frais, cru' → thermal_state:'fresh', cooking_state:'raw'"
+    },
+    {
+      "id": "ing_00005",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Gélatine, sèche' → thermal_state:'dried'"
+    },
+    {
+      "id": "ing_00007",
+      "axes_set": {
+        "form": "liquid"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Pectin, liquid' → form:'liquid'"
+    },
+    {
+      "id": "ing_00009",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Gelidium amansii",
+      "confidence": "high",
+      "reason": "CIQUAL 'Agar (algue), séché' → thermal_state:'dried'"
+    },
+    {
+      "id": "ing_00012",
+      "axes_set": {
+        "form": "paste"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Extrait de levure, à tartiner' → form:'paste'"
+    },
+    {
+      "id": "ing_00025",
+      "axes_set": {
+        "form": "powder"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Leavening agent, yeast, baker's, active, dry' → form:'powder'"
+    },
+    {
+      "id": "ing_00027",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "compressed",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Leavening agent, yeast, baker's, compressed' → form:'compressed' | SCHEMA_VIOLATIONS: form='compressed' (not in schema)"
+    },
+    {
+      "id": "ing_00029",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Levure de boulanger déshydratée' → no new axes"
+    },
+    {
+      "id": "ing_00031",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Levure de boulanger fraîche' → no new axes"
+    },
+    {
+      "id": "ing_02129",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Levure de bière en paillettes' → no new axes"
+    },
+    {
+      "id": "ing_00014",
+      "axes_set": {
+        "form": "powder"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Levure chimique ou poudre à lever' → form:'powder'"
+    },
+    {
+      "id": "ing_00023",
+      "axes_set": {
+        "form": "powder"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Leavening agent, baking soda' does not explicitly mention form, but 'baking soda' is commonly a powder."
+    },
+    {
+      "id": "ing_04310",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "No explicit characteristics mentioned in source."
+    },
+    {
+      "id": "ing_04328",
+      "axes_set": {
+        "form": "oil"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Vegetable oil, soybean lecithin' → form:'oil'"
+    },
+    {
+      "id": "ing_00067",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Seaweed, dulse (laver, nori), dried' → thermal_state:'dried'"
+    },
+    {
+      "id": "ing_00069",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Porphyra laciniata",
+      "confidence": "high",
+      "reason": "CNF 'Seaweed, dulse (laver, nori), raw' → sci_name:Porphyra laciniata"
+    },
+    {
+      "id": "ing_00071",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Chondrus crispus",
+      "confidence": "high",
+      "reason": "CNF 'Seaweed, irishmoss, raw' → sci_name:Chondrus crispus"
+    },
+    {
+      "id": "ing_00073",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Laminaria spp.",
+      "confidence": "high",
+      "reason": "CNF 'Seaweed, kelp (kombu, tangle), raw' → sci_name:Laminaria spp."
+    },
+    {
+      "id": "ing_00075",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Seaweed, spirulina, dried' → no sci_name mentioned"
+    },
+    {
+      "id": "ing_00077",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Spirulina spp.",
+      "confidence": "high",
+      "reason": "CNF 'Seaweed, spirulina, raw' → sci_name:Spirulina spp."
+    },
+    {
+      "id": "ing_00079",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Undaria spp.",
+      "confidence": "high",
+      "reason": "CNF 'Seaweed, wakame, raw' → cooking_state:'raw'"
+    },
+    {
+      "id": "ing_00081",
+      "axes_set": {
+        "cooking_state": "raw",
+        "thermal_state": "fresh"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Spirulina sp.",
+      "confidence": "high",
+      "reason": "CIQUAL 'Spiruline (algue), fraîche, crue' → cooking_state:'raw', thermal_state:'fresh'"
+    },
+    {
+      "id": "ing_00083",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Ulva sp.",
+      "confidence": "high",
+      "reason": "CIQUAL 'Ao-nori (Ulva sp., ex Enteromorpha sp.), séchée ou déshydratée' → thermal_state:'dried'"
+    },
+    {
+      "id": "ing_00085",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Ascophyllum nodosum",
+      "confidence": "high",
+      "reason": "CIQUAL 'Ascophylle noueux ou goémon noir (Ascophyllum nodosum), séché ou déshydraté' → thermal_state:'dried'"
+    },
+    {
+      "id": "ing_00088",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Chlorella",
+      "confidence": "high",
+      "reason": "CIQUAL 'Chlorelle (chlorella), séchée ou déshydratée' → thermal_state:'dried'"
+    },
+    {
+      "id": "ing_00090",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Palmaria palmata",
+      "confidence": "high",
+      "reason": "CIQUAL 'Dulse (Palmaria palmata), séchée ou déshydratée' → thermal_state:'dried', sci_name:'Palmaria palmata'"
+    },
+    {
+      "id": "ing_00092",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Fucus vesiculosus",
+      "confidence": "high",
+      "reason": "CIQUAL 'Fucus vésiculeux (Fucus serratus ou Fucus vesiculosus), séché ou déshydraté' → sci_name:'Fucus vesiculosus'"
+    },
+    {
+      "id": "ing_00094",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Chondrus crispus",
+      "confidence": "high",
+      "reason": "CIQUAL 'Lichen de mer ou pioca ou goémon rouge (Chondrus crispus), séché ou déshydraté' → thermal_state:'dried', sci_name:'Chondrus crispus'"
+    },
+    {
+      "id": "ing_00098",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Gracilaria verrucosa",
+      "confidence": "high",
+      "reason": "CIQUAL 'Gracilaire ou ogonori (Gracilaria verrucosa), séchée ou déshydratée' → thermal_state:'dried', sci_name:'Gracilaria verrucosa'"
+    },
+    {
+      "id": "ing_00101",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Laminaria digitata",
+      "confidence": "high",
+      "reason": "CIQUAL 'Kombu breton (Laminaria digitata), séché ou déshydraté' → thermal_state:'dried', sci_name:'Laminaria digitata'"
+    },
+    {
+      "id": "ing_00103",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Saccharina japonica",
+      "confidence": "high",
+      "reason": "CIQUAL 'Kombu ou kombu japonais (Saccharina japonica), séché ou déshydraté' → sci_name: Saccharina japonica"
+    },
+    {
+      "id": "ing_00106",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Saccharina latissima",
+      "confidence": "high",
+      "reason": "CIQUAL 'Kombu royal (Saccharina latissima), séché ou déshydraté' → sci_name: Saccharina latissima"
+    },
+    {
+      "id": "ing_00108",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Lithothamnion",
+      "confidence": "high",
+      "reason": "CIQUAL 'Maërl ou lithothamne (Lithothamnion), séché ou déshydraté' → sci_name: Lithothamnion"
+    },
+    {
+      "id": "ing_00111",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": false,
+      "suggested_location": "herbs_and_spices/herbs",
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Meloukhia, feuilles de corète séchées, en poudre' → position is incorrect, should be in herbs category"
+    },
+    {
+      "id": "ing_00113",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Porphyra sp.",
+      "confidence": "high",
+      "reason": "CIQUAL 'Nori (Porphyra sp., Pyropia), séchée ou déshydratée' → sci_name: Porphyra sp."
+    },
+    {
+      "id": "ing_00115",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Spirulina sp.",
+      "confidence": "high",
+      "reason": "CIQUAL 'Spiruline (Spirulina sp.), séchée ou déshydratée' → thermal_state:'dried', sci_name:'Spirulina sp.'"
+    },
+    {
+      "id": "ing_00117",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Alaria esculenta",
+      "confidence": "high",
+      "reason": "CIQUAL 'Wakamé atlantique (Alaria esculenta), séché ou déshydraté' → thermal_state:'dried', sci_name:'Alaria esculenta'"
+    },
+    {
+      "id": "ing_03533",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Ulva sp.",
+      "confidence": "high",
+      "reason": "CIQUAL 'Laitue de mer (Ulva sp.), séchée ou déshydratée' → thermal_state:'dried', sci_name:'Ulva sp.'"
+    },
+    {
+      "id": "ing_03935",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Himanthalia elongata",
+      "confidence": "high",
+      "reason": "CIQUAL 'Haricot de mer (Himanthalia elongata), séchée ou déshydratée' → thermal_state:'dried', sci_name:'Himanthalia elongata'"
+    },
+    {
+      "id": "ing_00121",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "low",
+      "reason": "No explicit characteristics mentioned in source 'Marsala'."
+    },
+    {
+      "id": "ing_00125",
+      "axes_set": {
+        "origin": "plant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Rhum' → origin:'plant' as rum is derived from sugarcane"
+    },
+    {
+      "id": "ing_00127",
+      "axes_set": {
+        "origin": "plant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Saké ou alcool de riz' → origin:'plant' as sake is derived from rice"
+    },
+    {
+      "id": "ing_00134",
+      "axes_set": {
+        "seasoning": "sweetened",
+        "treatment": "fermented"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Cidre bouché demi-sec' → seasoning:'sweetened' and treatment:'fermented' as it is a type of cider"
+    },
+    {
+      "id": "ing_00136",
+      "axes_set": {
+        "seasoning": "unsweetened",
+        "treatment": "fermented"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Cidre brut' → seasoning:'unsweetened' and treatment:'fermented' as it is a type of cider"
+    },
+    {
+      "id": "ing_00138",
+      "axes_set": {
+        "seasoning": "sweetened",
+        "treatment": "fermented"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Cidre doux' → seasoning:'sweetened' and treatment:'fermented' as it is a type of cider"
+    },
+    {
+      "id": "ing_00140",
+      "axes_set": {
+        "treatment": "distilled"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Eau de vie de fruits' → treatment:'distilled'"
+    },
+    {
+      "id": "ing_00142",
+      "axes_set": {
+        "treatment": "distilled"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Eau de vie de vin type armagnac ou cognac' → treatment:'distilled'"
+    },
+    {
+      "id": "ing_00145",
+      "axes_set": {
+        "treatment": "distilled"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Eau de vie type calvados' → treatment:'distilled'"
+    },
+    {
+      "id": "ing_00123",
+      "axes_set": {},
+      "axes_remove": [
+        "cooking_state"
+      ],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Alcool fort (type rhum), cuisiné (alcool évaporé)' does not imply cooking_state:'cooked'"
+    },
+    {
+      "id": "ing_00130",
+      "axes_set": {},
+      "axes_remove": [
+        "cooking_state"
+      ],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Vin cuisiné (alcool évaporé)' does not imply cooking_state:'cooked'"
+    },
+    {
+      "id": "ing_05622",
+      "axes_set": {
+        "form": "powder",
+        "seasoning": "unsweetened"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Cacao, sans sucres ajoutés, poudre soluble' → form:powder, seasoning:unsweetened"
+    },
+    {
+      "id": "ing_00158",
+      "axes_set": {
+        "form": "powder",
+        "treatment": "decaffeinated"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Café, décaféiné, poudre soluble' → form:powder, treatment:decaffeinated"
+    },
+    {
+      "id": "ing_00160",
+      "axes_set": {
+        "form": "powder"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Café, moulu' does not explicitly state 'powder', however 'Café, poudre soluble' does, so form:powder"
+    },
+    {
+      "id": "ing_00162",
+      "axes_set": {
+        "form": "powder"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Café, poudre soluble' → form:powder"
+    },
+    {
+      "id": "ing_00168",
+      "axes_set": {
+        "form": "powder",
+        "treatment": "instant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Coffee, instant, powder, half the caffeine' → form:powder, treatment:instant"
+    },
+    {
+      "id": "ing_00170",
+      "axes_set": {
+        "form": "powder",
+        "treatment": "instant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Coffee, instant, regular, powder' → form:powder, treatment:instant"
+    },
+    {
+      "id": "ing_00184",
+      "axes_set": {
+        "part": "leaf"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Thé, feuille' → part:leaf"
+    },
+    {
+      "id": "ing_00132",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": ""
+    },
+    {
+      "id": "ing_00147",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": ""
+    },
+    {
+      "id": "ing_00149",
+      "axes_set": {},
+      "axes_remove": [
+        "thermal_state"
+      ],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Vin blanc sec' does not mention thermal_state:dried"
+    },
+    {
+      "id": "ing_00151",
+      "axes_set": {
+        "origin": "plant",
+        "treatment": "fermented"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Vin rosé' → treatment:'fermented' as wine is a fermented beverage"
+    },
+    {
+      "id": "ing_00153",
+      "axes_set": {
+        "origin": "plant",
+        "treatment": "fermented"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Vin rouge' → treatment:'fermented' as wine is a fermented beverage"
+    },
+    {
+      "id": "ing_00188",
+      "axes_set": {
+        "seasoning": "salted",
+        "packaging": "canned"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "pickled",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Capparis spinosa",
+      "confidence": "high",
+      "reason": "CNF 'Capers, canned' → form:'pickled', packaging:'canned', seasoning:'salted' | SCHEMA_VIOLATIONS: form='pickled' (not in schema)"
+    },
+    {
+      "id": "ing_00211",
+      "axes_set": {
+        "seasoning": "salted",
+        "packaging": "canned"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "pickled",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Capparis spinosa",
+      "confidence": "high",
+      "reason": "CIQUAL 'Câpres, au vinaigre' → draining:'in_vinegar', form:'pickled', seasoning:'salted', packaging:'canned' | SCHEMA_VIOLATIONS: form='pickled' (not in schema); draining=['i', 'n', '_', 'v', 'i', 'n', 'e', 'g', 'a', 'r'] (not in schema)"
+    },
+    {
+      "id": "ing_00195",
+      "axes_set": {
+        "origin": "plant",
+        "form": "paste"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Moutarde' → origin:'plant', form:'paste' as mustard is a plant-based paste"
+    },
+    {
+      "id": "ing_00197",
+      "axes_set": {
+        "treatment": "unrefined",
+        "seasoning": "flavored"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "condiment",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Moutarde à l'ancienne' → form:condiment, treatment:unrefined, seasoning:flavored | SCHEMA_VIOLATIONS: form='condiment' (not in schema)"
+    },
+    {
+      "id": "ing_00209",
+      "axes_set": {
+        "form": "liquid",
+        "treatment": "unrefined",
+        "seasoning": "plain"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Vinaigre' → form:liquid, treatment:unrefined, seasoning:plain"
+    },
+    {
+      "id": "ing_00213",
+      "axes_set": {
+        "form": "liquid",
+        "treatment": "aged",
+        "seasoning": "flavored"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Vinaigre balsamique' → form:liquid, treatment:aged, seasoning:flavored"
+    },
+    {
+      "id": "ing_00216",
+      "axes_set": {
+        "form": "liquid",
+        "treatment": "unrefined",
+        "seasoning": "plain"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Vinaigre de cidre' → form:liquid, treatment:unrefined, seasoning:plain"
+    },
+    {
+      "id": "ing_00218",
+      "axes_set": {
+        "form": "liquid",
+        "treatment": "unrefined",
+        "seasoning": "plain"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Vinegar, cider' → form:liquid, treatment:unrefined, seasoning:plain"
+    },
+    {
+      "id": "ing_00220",
+      "axes_set": {
+        "treatment": "distilled",
+        "origin": "plant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Vinegar, distilled (white)' → treatment:'distilled'"
+    },
+    {
+      "id": "ing_00222",
+      "axes_set": {
+        "treatment": "fermented",
+        "origin": "plant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Vinegar, red wine' → treatment:'fermented'"
+    },
+    {
+      "id": "ing_00224",
+      "axes_set": {
+        "treatment": "fermented",
+        "origin": "plant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Vinaigre de vin rouge' → treatment:'fermented'"
+    },
+    {
+      "id": "ing_00037",
+      "axes_set": {
+        "treatment": "unrefined"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "origin",
+          "value": "mineral",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Fleur de sel, non iodée, non fluorée' → treatment:'unrefined' | SCHEMA_VIOLATIONS: origin='mineral' (not in schema)"
+    },
+    {
+      "id": "ing_00039",
+      "axes_set": {
+        "treatment": "refined"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "origin",
+          "value": "mineral",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Salt, table' → treatment:'refined' | SCHEMA_VIOLATIONS: origin='mineral' (not in schema)"
+    },
+    {
+      "id": "ing_00041",
+      "axes_set": {
+        "treatment": "iodized"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Salt, table, iodized' → treatment:iodized"
+    },
+    {
+      "id": "ing_00043",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "low",
+      "reason": "No explicit characteristics mentioned in source 'Sel au céleri'"
+    },
+    {
+      "id": "ing_00045",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "treatment",
+          "value": "non_fluoride",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Sel marin gris, non iodé, non fluoré' → treatment:non_iodized, treatment:non_fluoride | SCHEMA_VIOLATIONS: treatment='non_fluoride' (not in schema)"
+    },
+    {
+      "id": "ing_01226",
+      "axes_set": {
+        "treatment": "iodized"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Sel blanc alimentaire, iodé, fluoré à 25 mg /100 g (marin, ignigène ou gemme)' → treatment:iodized, treatment:fluoride_added | SCHEMA_VIOLATIONS: treatment=['fluoride_added'] (not in schema)"
+    },
+    {
+      "id": "ing_01228",
+      "axes_set": {
+        "treatment": "iodized"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Sel blanc alimentaire, iodé, non fluoré (marin, ignigène ou gemme)' → treatment:iodized"
+    },
+    {
+      "id": "ing_01230",
+      "axes_set": {
+        "seasoning": "plain"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "treatment",
+          "value": "non-iodised",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Sel blanc alimentaire, non iodé, non fluoré' → treatment:'non-iodised', seasoning:'plain' | SCHEMA_VIOLATIONS: treatment='non-iodised' (not in schema)"
+    },
+    {
+      "id": "ing_00228",
+      "axes_set": {
+        "cooking_state": "raw",
+        "origin": "plant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Amaranthus spp.",
+      "confidence": "high",
+      "reason": "CIQUAL 'Amarante, crue' → cooking_state:'raw', CNF 'Grains, amaranth, raw' → origin:'plant', sci_name:'Amaranthus spp.'"
+    },
+    {
+      "id": "ing_00230",
+      "axes_set": {
+        "thermal_state": "fresh",
+        "part": "leaf"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": false,
+      "suggested_location": "vegetables_and_vegetable_products/amaranth",
+      "sci_name": "Amaranthus spp.",
+      "confidence": "high",
+      "reason": "CNF 'Amaranth leaves, fresh' → thermal_state:'fresh', part:'leaf', suggested_location:'vegetables_and_vegetable_products/amaranth'"
+    },
+    {
+      "id": "ing_00232",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, amaranth' → form:'flour'"
+    },
+    {
+      "id": "ing_00240",
+      "axes_set": {
+        "cooking_state": "boiled",
+        "part": "leaf",
+        "draining": "drained",
+        "packaging": "canned"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": false,
+      "suggested_location": "vegetables_and_vegetable_products/amaranth",
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Amaranth leaves, boiled, drained' → cooking_state:'boiled', part:'leaf', draining:'drained', suggested_location:'vegetables_and_vegetable_products/amaranth', packaging:'canned'"
+    },
+    {
+      "id": "ing_00238",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, amaranth, flour' → form:flour"
+    },
+    {
+      "id": "ing_00243",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Avoine, crue' → cooking_state:raw"
+    },
+    {
+      "id": "ing_00245",
+      "axes_set": {
+        "cooking_state": "boiled",
+        "form": "rolled"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Flocons d'avoine bouillis/cuits à l'eau' → cooking_state:boiled, form:rolled"
+    },
+    {
+      "id": "ing_00247",
+      "axes_set": {
+        "treatment": "unrefined",
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, oat, whole grain' → treatment:unrefined, form:flour"
+    },
+    {
+      "id": "ing_00251",
+      "axes_set": {
+        "cooking_state": "roasted"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": false,
+      "suggested_location": "cereals_and_grains/buckwheat",
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, buckwheat groats, roasted, cooked' → cooking_state:roasted, suggested_location:cereals_and_grains/buckwheat"
+    },
+    {
+      "id": "ing_00253",
+      "axes_set": {
+        "cooking_state": "roasted",
+        "thermal_state": "dried",
+        "form": "whole"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": "cereals_and_grains/buckwheat",
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, buckwheat groats, roasted, dry' → cooking_state:roasted, thermal_state:dried, form:whole"
+    },
+    {
+      "id": "ing_00255",
+      "axes_set": {
+        "cooking_state": "cooked"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, oat bran, cooked' → cooking_state:cooked"
+    },
+    {
+      "id": "ing_00257",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": "cereals_and_grains/brans_and_germs",
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, oat bran, dry' → thermal_state:dried"
+    },
+    {
+      "id": "ing_00261",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Avena sativa L.",
+      "confidence": "high",
+      "reason": "CNF 'Grains, oats' and sci:Avena sativa L."
+    },
+    {
+      "id": "ing_00263",
+      "axes_set": {
+        "form": "rolled",
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Oats, whole grain, rolled, old fashioned' → form:rolled, cooking_state:raw"
+    },
+    {
+      "id": "ing_00267",
+      "axes_set": {
+        "part": "whole"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Son d'avoine' → part:whole"
+    },
+    {
+      "id": "ing_00259",
+      "axes_set": {
+        "form": "flour",
+        "part": "whole_seed",
+        "treatment": "unrefined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, oat flour, whole-grain' → form:flour, part:whole_seed, treatment:unrefined"
+    },
+    {
+      "id": "ing_00271",
+      "axes_set": {
+        "seasoning": [
+          "unsweetened",
+          "plain"
+        ],
+        "thermal_state": "refrigerated",
+        "form": "milk",
+        "origin": "plant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Oat milk, unsweetened, plain, refrigerated' → seasoning:[unsweetened, plain], thermal_state:refrigerated, form:milk, origin:plant"
+    },
+    {
+      "id": "ing_00276",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Blé de Khorasan, cru' → cooking_state:raw"
+    },
+    {
+      "id": "ing_00278",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Blé dur complet, cru' → cooking_state:raw"
+    },
+    {
+      "id": "ing_00286",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kqdsdbqeefzts8ea9rbdc977` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98059, Requested 3900. Please try again in 28m12.576s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00292",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kqdsdbqeefzts8ea9rbdc977` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98059, Requested 3900. Please try again in 28m12.576s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00294",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kqdsdbqeefzts8ea9rbdc977` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98059, Requested 3900. Please try again in 28m12.576s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00296",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kqdsdbqeefzts8ea9rbdc977` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98059, Requested 3900. Please try again in 28m12.576s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00298",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kqdsdbqeefzts8ea9rbdc977` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98059, Requested 3900. Please try again in 28m12.576s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00300",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kqdsdbqeefzts8ea9rbdc977` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 97793, Requested 11577. Please try again in 2h14m55.68s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00302",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kqdsdbqeefzts8ea9rbdc977` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 97793, Requested 11577. Please try again in 2h14m55.68s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00304",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kqdsdbqeefzts8ea9rbdc977` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 97793, Requested 11577. Please try again in 2h14m55.68s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00306",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kqdsdbqeefzts8ea9rbdc977` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 97793, Requested 11577. Please try again in 2h14m55.68s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00308",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kqdsdbqeefzts8ea9rbdc977` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 97793, Requested 11577. Please try again in 2h14m55.68s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00314",
+      "axes_set": {
+        "form": "powder"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "part",
+          "value": "gluten",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Wheat, vital wheat gluten' → form:'powder', part:'gluten' | SCHEMA_VIOLATIONS: part='gluten' (not in schema)"
+    },
+    {
+      "id": "ing_00332",
+      "axes_set": {},
+      "axes_remove": [
+        "cooking_state",
+        "form",
+        "seasoning"
+      ],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Frik (blé dur immature concassé), cuit, sans sel ajouté' does not explicitly describe freekeh"
+    },
+    {
+      "id": "ing_00336",
+      "axes_set": {
+        "treatment": "refined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine de blé tendre ou froment T110' → treatment:'refined'"
+    },
+    {
+      "id": "ing_00338",
+      "axes_set": {
+        "treatment": "refined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine de blé tendre ou froment T150' → treatment:'refined'"
+    },
+    {
+      "id": "ing_00340",
+      "axes_set": {
+        "treatment": "refined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine de blé tendre ou froment T45 (pour pâtisserie)' → treatment:'refined'"
+    },
+    {
+      "id": "ing_00342",
+      "axes_set": {
+        "form": "flour",
+        "treatment": "refined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine de blé tendre ou froment T65' → form:'flour', treatment:'refined'"
+    },
+    {
+      "id": "ing_00344",
+      "axes_set": {
+        "form": "flour",
+        "treatment": "refined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine de blé tendre ou froment T80' → form:'flour', treatment:'refined'"
+    },
+    {
+      "id": "ing_00417",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, wheat, sprouted' → treatment:'sprouted' is already set"
+    },
+    {
+      "id": "ing_00383",
+      "axes_set": {
+        "treatment": [
+          "enriched",
+          "blanched"
+        ]
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, wheat, all-purpose, enriched, bleached' → treatment:'enriched', 'blanched'"
+    },
+    {
+      "id": "ing_00385",
+      "axes_set": {
+        "treatment": "enriched"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, wheat, all-purpose, enriched, unbleached' → treatment:'enriched', 'unblanched' | SCHEMA_VIOLATIONS: treatment=['unblanched'] (not in schema)"
+    },
+    {
+      "id": "ing_00387",
+      "axes_set": {
+        "treatment": "unenriched"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, wheat, all-purpose, unenriched, unbleached' → treatment:unenriched"
+    },
+    {
+      "id": "ing_00389",
+      "axes_set": {
+        "treatment": "unenriched"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, whole wheat, unenriched' → treatment:unenriched"
+    },
+    {
+      "id": "ing_00395",
+      "axes_set": {
+        "form": "flour",
+        "part": "seed"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, triticale flour, whole-grain' → form:flour, part:seed"
+    },
+    {
+      "id": "ing_00399",
+      "axes_set": {
+        "treatment": "blanched"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, wheat flour, white, all purpose, bleached' → treatment:blanched"
+    },
+    {
+      "id": "ing_00401",
+      "axes_set": {
+        "treatment": "enriched"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, wheat flour, white, all purpose, unbleached' → treatment:[enriched, unblanched] | SCHEMA_VIOLATIONS: treatment=['unblanched'] (not in schema)"
+    },
+    {
+      "id": "ing_00403",
+      "axes_set": {
+        "form": "flour",
+        "treatment": "refined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, wheat flour, white, cake flour' → form:'flour', treatment:'refined'"
+    },
+    {
+      "id": "ing_00411",
+      "axes_set": {
+        "form": "flour",
+        "part": "whole_seed",
+        "treatment": "unrefined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, wheat flour, whole-grain, soft wheat' → form:'flour', part:'whole_seed', treatment:'unrefined'"
+    },
+    {
+      "id": "ing_00413",
+      "axes_set": {
+        "form": "flour",
+        "part": "whole_seed",
+        "treatment": "unrefined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, wheat flour, whole-wheat' → form:'flour', part:'whole_seed', treatment:'unrefined'"
+    },
+    {
+      "id": "ing_00430",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, 00' → form:'flour'"
+    },
+    {
+      "id": "ing_00438",
+      "axes_set": {
+        "form": "flour",
+        "treatment": "unenriched"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, pastry, unenriched, unbleached' → form:'flour', treatment:['unenriched', 'unbleached'] | SCHEMA_VIOLATIONS: treatment=['unbleached'] (not in schema)"
+    },
+    {
+      "id": "ing_00446",
+      "axes_set": {
+        "form": "flour",
+        "treatment": "unrefined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Pain complet ou intégral (à la farine T150)' → form:'flour', treatment:'unrefined'"
+    },
+    {
+      "id": "ing_00350",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Boulgour de blé, cru' → cooking_state:'raw'"
+    },
+    {
+      "id": "ing_00352",
+      "axes_set": {
+        "cooking_state": "raw",
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Bulgur, dry, raw' → cooking_state:'raw', thermal_state:'dried'"
+    },
+    {
+      "id": "ing_00354",
+      "axes_set": {
+        "cooking_state": "cooked"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, bulgur, cooked' → cooking_state:'cooked'"
+    },
+    {
+      "id": "ing_00356",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, bulgur, dry' → thermal_state:'dried'"
+    },
+    {
+      "id": "ing_00358",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knygj8f8ftxrn3be30bfbj9p` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 97766, Requested 3881. Please try again in 23m43.007999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00361",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knygj8f8ftxrn3be30bfbj9p` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 97766, Requested 3881. Please try again in 23m43.007999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00363",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knygj8f8ftxrn3be30bfbj9p` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 97766, Requested 3881. Please try again in 23m43.007999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00365",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knygj8f8ftxrn3be30bfbj9p` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 97766, Requested 3881. Please try again in 23m43.007999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00367",
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knygj8f8ftxrn3be30bfbj9p` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 97766, Requested 3881. Please try again in 23m43.007999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    {
+      "id": "ing_00369",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "part": "seed",
+        "seasoning": "unsalted"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Semoule ou graine de couscous, cuite, sans sel ajouté' → cooking_state:cooked, seasoning:unsalted"
+    },
+    {
+      "id": "ing_00452",
+      "axes_set": {
+        "cooking_state": "raw",
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Fonio, grain, dry, raw' → thermal_state:dried, cooking_state:raw"
+    },
+    {
+      "id": "ing_00457",
+      "axes_set": {
+        "cooking_state": "cooked"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, millet, cooked' → cooking_state:cooked"
+    },
+    {
+      "id": "ing_00459",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Panicum miliaceum",
+      "confidence": "high",
+      "reason": "CNF 'Grains, millet, dry' → thermal_state:dried, sci_name:Panicum miliaceum"
+    },
+    {
+      "id": "ing_00461",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Mil complet, cru' → cooking_state:raw"
+    },
+    {
+      "id": "ing_00463",
+      "axes_set": {
+        "treatment": "unrefined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Millet, whole grain' → treatment:unrefined"
+    },
+    {
+      "id": "ing_00052",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "seasoning": "unsalted"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Mil, cuit, sans sel ajouté' → cooking_state:cooked, seasoning:unsalted"
+    },
+    {
+      "id": "ing_00455",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine de millet' → form:flour"
+    },
+    {
+      "id": "ing_00470",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, barley' → form:flour"
+    },
+    {
+      "id": "ing_00474",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Hordeum vulgare L.",
+      "confidence": "high",
+      "reason": "CNF 'Grains, barley, dry' → thermal_state:dried, sci_name:Hordeum vulgare L."
+    },
+    {
+      "id": "ing_00476",
+      "axes_set": {
+        "form": "whole",
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Orge complète, crue' → form:'whole', cooking_state:'raw'"
+    },
+    {
+      "id": "ing_00478",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "pearled",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Orge perlée, crue' → form:'pearled', cooking_state:'raw' | SCHEMA_VIOLATIONS: form='pearled' (not in schema)"
+    },
+    {
+      "id": "ing_00480",
+      "axes_set": {
+        "cooking_state": "boiled",
+        "seasoning": "unsalted"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "pearled",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Orge perlée, bouilli/cuite à l'eau, sans sel ajouté' → form:'pearled', cooking_state:'boiled', seasoning:'unsalted' | SCHEMA_VIOLATIONS: form='pearled' (not in schema)"
+    },
+    {
+      "id": "ing_01453",
+      "axes_set": {
+        "cooking_state": "boiled",
+        "part": "seed"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, barley, pearled, cooked' → cooking_state:'boiled', part:'seed'"
+    },
+    {
+      "id": "ing_01455",
+      "axes_set": {
+        "thermal_state": "dried",
+        "part": "seed"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, barley, pearled, dry' → thermal_state:'dried', part:'seed'"
+    },
+    {
+      "id": "ing_00468",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine d'orge' → form:'flour'"
+    },
+    {
+      "id": "ing_00487",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "No explicit characteristics mentioned in source."
+    },
+    {
+      "id": "ing_00495",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "No explicit characteristics mentioned in source."
+    },
+    {
+      "id": "ing_00497",
+      "axes_set": {
+        "form": "whole",
+        "part": "whole_seed"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Bread, pita, whole-wheat' → form:'whole', part:'whole_seed'"
+    },
+    {
+      "id": "ing_00499",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "No explicit characteristics mentioned in source."
+    },
+    {
+      "id": "ing_00501",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "origin",
+          "value": "rice",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        },
+        {
+          "key": "treatment",
+          "value": "gluten free",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Bread, rice bran, gluten free' → origin:rice, treatment:gluten free | SCHEMA_VIOLATIONS: origin='rice' (not in schema); treatment='gluten free' (not in schema)"
+    },
+    {
+      "id": "ing_00503",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "origin",
+          "value": "rye",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Bread, rye' → origin:rye | SCHEMA_VIOLATIONS: origin='rye' (not in schema)"
+    },
+    {
+      "id": "ing_00509",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": false,
+      "suggested_location": "cereals_and_grains/wheat",
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, bread, white, enriched, unbleached' suggests a more specific location"
+    },
+    {
+      "id": "ing_00526",
+      "axes_set": {
+        "form": "whole"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "origin",
+          "value": "wheat",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Indian, bread, paratha, whole-wheat' → origin:wheat, form:whole | SCHEMA_VIOLATIONS: origin='wheat' (not in schema)"
+    },
+    {
+      "id": "ing_00532",
+      "axes_set": {
+        "treatment": "fermented"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Pain au levain' implies a fermented treatment"
+    },
+    {
+      "id": "ing_00534",
+      "error": "Request timed out."
+    },
+    {
+      "id": "ing_00544",
+      "error": "Request timed out."
+    },
+    {
+      "id": "ing_00546",
+      "error": "Request timed out."
+    },
+    {
+      "id": "ing_00548",
+      "error": "Request timed out."
+    },
+    {
+      "id": "ing_00554",
+      "error": "Request timed out."
+    },
+    {
+      "id": "ing_00556",
+      "axes_set": {
+        "seasoning": "unsalted"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Pain blanc, sans sel ajouté' → seasoning:unsalted"
+    },
+    {
+      "id": "ing_00560",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": ""
+    },
+    {
+      "id": "ing_00580",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": ""
+    },
+    {
+      "id": "ing_00582",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": ""
+    },
+    {
+      "id": "ing_00592",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": ""
+    },
+    {
+      "id": "ing_00594",
+      "axes_set": {
+        "form": "whole"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Pain pita' → form:'whole'"
+    },
+    {
+      "id": "ing_00621",
+      "axes_set": {
+        "treatment": "refined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine de blé tendre ou froment T55 (pour pains)' → treatment:'refined'"
+    },
+    {
+      "id": "ing_02119",
+      "axes_set": {
+        "seasoning": "flavored"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Bread, garlic' → seasoning:'flavored'"
+    },
+    {
+      "id": "ing_00513",
+      "axes_set": {
+        "form": "flour",
+        "treatment": "refined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, wheat flour, white, bread flour' → form:'flour', treatment:'refined'"
+    },
+    {
+      "id": "ing_00635",
+      "axes_set": {
+        "cooking_state": "raw",
+        "thermal_state": "fresh"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Pâtes fraîches, aux oeufs, crues' → cooking_state:'raw', thermal_state:'fresh'"
+    },
+    {
+      "id": "ing_00637",
+      "axes_set": {
+        "treatment": "unrefined"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "dried",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Pâtes sèches, au blé complet, crues' → form:'dried', treatment:'unrefined' | SCHEMA_VIOLATIONS: form='dried' (not in schema)"
+    },
+    {
+      "id": "ing_00639",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "dried",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Pâtes sèches, aux oeufs, crues' → form:'dried' | SCHEMA_VIOLATIONS: form='dried' (not in schema)"
+    },
+    {
+      "id": "ing_00641",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "dried",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Pâtes sèches, sans gluten, crues' → form:'dried' | SCHEMA_VIOLATIONS: form='dried' (not in schema)"
+    },
+    {
+      "id": "ing_00643",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "dried",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Pâtes sèches, standard, crues' → form:'dried' | SCHEMA_VIOLATIONS: form='dried' (not in schema)"
+    },
+    {
+      "id": "ing_00647",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "thermal_state": "fresh",
+        "seasoning": "unsalted"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Pâtes fraîches, aux oeufs, cuites, sans sel ajouté' → cooking_state:'cooked', thermal_state:'fresh', seasoning:'unsalted'"
+    },
+    {
+      "id": "ing_00649",
+      "axes_set": {
+        "treatment": "unrefined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Pâtes sèches, au blé complet, cuites, sans sel ajouté' → treatment:'unrefined'"
+    },
+    {
+      "id": "ing_00655",
+      "axes_set": {
+        "treatment": "refined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Pâtes sèches, semi-complètes, cuites, sans sel ajouté' → treatment:'refined'"
+    },
+    {
+      "id": "ing_00660",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, quinoa' → form:'flour'"
+    },
+    {
+      "id": "ing_00662",
+      "axes_set": {
+        "cooking_state": "cooked"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, quinoa, cooked' → cooking_state:'cooked'"
+    },
+    {
+      "id": "ing_00664",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Chenopodium quinoa Willd.",
+      "confidence": "high",
+      "reason": "CNF 'Grains, quinoa, dry' → thermal_state:'dried'"
+    },
+    {
+      "id": "ing_00666",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Quinoa, cru' → cooking_state:'raw'"
+    },
+    {
+      "id": "ing_00670",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "seasoning": "unsalted"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Quinoa, bouilli/cuit à l'eau, sans sel ajouté' → cooking_state:'cooked', seasoning:'unsalted'"
+    },
+    {
+      "id": "ing_00668",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, quinoa, flour' → form:'flour'"
+    },
+    {
+      "id": "ing_00679",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, rice, brown' → form:'flour'"
+    },
+    {
+      "id": "ing_00681",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, rice, glutinous' → form:'flour'"
+    },
+    {
+      "id": "ing_00683",
+      "axes_set": {
+        "form": "flour",
+        "treatment": "unenriched"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, rice, white, unenriched' → form:flour, treatment:unenriched"
+    },
+    {
+      "id": "ing_00685",
+      "axes_set": {},
+      "axes_remove": [
+        "treatment"
+      ],
+      "axes_propose": [
+        {
+          "key": "part",
+          "value": "bran",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": "cereals_and_grains/brans_and_germs",
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice bran, crude' → part:bran | SCHEMA_VIOLATIONS: part='bran' (not in schema)"
+    },
+    {
+      "id": "ing_00691",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "part": "seed",
+        "form": "long_grain"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, brown, long-grain, cooked' → cooking_state:cooked, part:seed, form:long_grain"
+    },
+    {
+      "id": "ing_00693",
+      "axes_set": {
+        "part": "seed",
+        "form": "long_grain"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "thermal_state",
+          "value": "dry",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Oryza sativa L.",
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, brown, long-grain, dry' → thermal_state:dry, part:seed, form:long_grain | SCHEMA_VIOLATIONS: thermal_state='dry' (not in schema)"
+    },
+    {
+      "id": "ing_00695",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "part": "seed",
+        "form": "medium_grain"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, brown, medium-grain, cooked' → cooking_state:cooked, part:seed, form:medium_grain"
+    },
+    {
+      "id": "ing_00697",
+      "axes_set": {
+        "form": "medium_grain",
+        "part": "seed",
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, brown, medium-grain, dry' → form:medium_grain, part:seed, thermal_state:dried"
+    },
+    {
+      "id": "ing_00699",
+      "axes_set": {
+        "cooking_state": "cooked"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, white, glutinous, cooked' → cooking_state:cooked"
+    },
+    {
+      "id": "ing_00701",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, white, glutinous, dry' → thermal_state:dried"
+    },
+    {
+      "id": "ing_00703",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "form": "long_grain",
+        "part": "seed",
+        "treatment": "parboiled"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, white, long-grain, parboiled, cooked' → cooking_state:cooked, form:long_grain, part:seed, treatment:parboiled"
+    },
+    {
+      "id": "ing_00705",
+      "axes_set": {
+        "form": "long_grain",
+        "part": "seed",
+        "treatment": "parboiled",
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, white, long-grain, parboiled, dry' → form:long_grain, part:seed, treatment:parboiled, thermal_state:dried"
+    },
+    {
+      "id": "ing_00707",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "form": "long_grain"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, white, long-grain, regular, cooked' → cooking_state:cooked, form:long_grain"
+    },
+    {
+      "id": "ing_00709",
+      "axes_set": {
+        "form": "long_grain"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "thermal_state",
+          "value": "dry",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, white, long-grain, regular, dry' → thermal_state:dry, form:long_grain | SCHEMA_VIOLATIONS: thermal_state='dry' (not in schema)"
+    },
+    {
+      "id": "ing_00711",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "form": "medium_grain"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, white, medium-grain, cooked' → cooking_state:cooked, form:medium_grain"
+    },
+    {
+      "id": "ing_00713",
+      "axes_set": {
+        "form": "medium_grain"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "thermal_state",
+          "value": "dry",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, white, medium-grain, dry' → thermal_state:dry, form:medium_grain | SCHEMA_VIOLATIONS: thermal_state='dry' (not in schema)"
+    },
+    {
+      "id": "ing_00715",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "form": "short_grain"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, white, short-grain, cooked' → cooking_state:cooked, form:short_grain"
+    },
+    {
+      "id": "ing_00717",
+      "axes_set": {
+        "form": "short_grain",
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, white, short-grain, dry' → form:short_grain, thermal_state:dried"
+    },
+    {
+      "id": "ing_00719",
+      "axes_set": {
+        "cooking_state": "cooked"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, wild, cooked' → cooking_state:cooked"
+    },
+    {
+      "id": "ing_00721",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Zizania spp.",
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, wild, dry' → thermal_state:dried"
+    },
+    {
+      "id": "ing_00725",
+      "axes_set": {
+        "cooking_state": "raw",
+        "treatment": "unenriched"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Rice, black, unenriched, raw' → cooking_state:raw, treatment:unenriched"
+    },
+    {
+      "id": "ing_00727",
+      "axes_set": {
+        "cooking_state": "raw",
+        "treatment": "unenriched",
+        "form": "long_grain"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Rice, brown, long grain, unenriched, raw' → cooking_state:raw, treatment:unenriched, form:long_grain"
+    },
+    {
+      "id": "ing_00729",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Rice, red, unenriched, dry, raw' → thermal_state:dried"
+    },
+    {
+      "id": "ing_00731",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Rice, white, long grain, unenriched, raw' → thermal_state:dried (inferred from 'raw' and common rice characteristics)"
+    },
+    {
+      "id": "ing_00733",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz blanc étuvé, cru' → thermal_state:dried (inferred from 'cru' and common rice characteristics)"
+    },
+    {
+      "id": "ing_00735",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz blanc, cru' → thermal_state:dried (inferred from 'cru' and common rice characteristics)"
+    },
+    {
+      "id": "ing_00737",
+      "axes_set": {
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz complet, cru' → thermal_state:dried (inferred from 'cru' and common rice characteristics)"
+    },
+    {
+      "id": "ing_00739",
+      "axes_set": {
+        "color": "red"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz rouge, cru' → color:red"
+    },
+    {
+      "id": "ing_00741",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz sauvage, cru' → no new axes"
+    },
+    {
+      "id": "ing_00743",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "variety",
+          "value": "jasmine",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz thaï ou basmati, cru' → variety:jasmine | SCHEMA_VIOLATIONS: variety='jasmine' (not in schema)"
+    },
+    {
+      "id": "ing_05730",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "variety",
+          "value": "basmati",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz thaï ou basmati, cru' → variety:basmati | SCHEMA_VIOLATIONS: variety='basmati' (not in schema)"
+    },
+    {
+      "id": "ing_00746",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz, mélange de variétés (blanc, complet, rouge, sauvage, etc.), cru' → color:[white, brown, red, wild] | SCHEMA_VIOLATIONS: color=['w', 'h', 'i', 't', 'e'] (not in schema)"
+    },
+    {
+      "id": "ing_00750",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "part",
+          "value": "bran",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": "cereals_and_grains/brans_and_germs",
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Son de riz' → part:bran | SCHEMA_VIOLATIONS: part='bran' (not in schema)"
+    },
+    {
+      "id": "ing_00752",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Wild rice, dry, raw' → no change needed"
+    },
+    {
+      "id": "ing_00754",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "part",
+          "value": "starch",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Amidon de riz' → part:starch | SCHEMA_VIOLATIONS: part='starch' (not in schema)"
+    },
+    {
+      "id": "ing_00764",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "variety",
+          "value": "basmati",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz basmati, cuit, sans sel ajouté' → variety:basmati | SCHEMA_VIOLATIONS: variety='basmati' (not in schema)"
+    },
+    {
+      "id": "ing_00766",
+      "axes_set": {
+        "color": "white"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz blanc étuvé, cuit, sans sel ajouté' → color:white"
+    },
+    {
+      "id": "ing_00768",
+      "axes_set": {
+        "form": "whole",
+        "treatment": "refined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz blanc, cuit, sans sel ajouté' → form:'whole', treatment:'refined'"
+    },
+    {
+      "id": "ing_00770",
+      "axes_set": {
+        "cooking_state": "precooked",
+        "form": "whole",
+        "treatment": "refined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz blanc, précuit, cuit, sans sel ajouté' → cooking_state:'precooked', form:'whole', treatment:'refined'"
+    },
+    {
+      "id": "ing_00772",
+      "axes_set": {
+        "form": "whole",
+        "treatment": "unrefined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz complet, cuit, sans sel ajouté' → form:'whole', treatment:'unrefined'"
+    },
+    {
+      "id": "ing_00774",
+      "axes_set": {
+        "form": "whole",
+        "color": "red"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz rouge, cuit, sans sel ajouté' → form:'whole', color:'red'"
+    },
+    {
+      "id": "ing_00776",
+      "axes_set": {
+        "form": "whole"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz sauvage, cuit, sans sel ajouté' → form:'whole'"
+    },
+    {
+      "id": "ing_00778",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "seasoning": "unsalted",
+        "treatment": "unrefined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz semi-complet, cuit, sans sel ajouté' → cooking_state:cooked, seasoning:unsalted, treatment:unrefined"
+    },
+    {
+      "id": "ing_00780",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "seasoning": "unsalted"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Riz thaï, cuit, sans sel ajouté' → cooking_state:cooked, seasoning:unsalted"
+    },
+    {
+      "id": "ing_00782",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "seasoning": "unsalted"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "vermicelli",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Vermicelle de riz, cuite, sans sel ajouté' → cooking_state:cooked, seasoning:unsalted, form:vermicelli | SCHEMA_VIOLATIONS: form='vermicelli' (not in schema)"
+    },
+    {
+      "id": "ing_00784",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "part": "seed",
+        "seasoning": "salted",
+        "form": "long_grain"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, white, long-grain, regular, cooked, salted' → cooking_state:cooked, part:seed, seasoning:salted, form:long_grain"
+    },
+    {
+      "id": "ing_00677",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine de riz' → form:flour"
+    },
+    {
+      "id": "ing_00687",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice flour, brown' → form:'flour'"
+    },
+    {
+      "id": "ing_00689",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice flour, white' → form:'flour'"
+    },
+    {
+      "id": "ing_00758",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rice, white, glutinous, flour' → form:'flour'"
+    },
+    {
+      "id": "ing_00645",
+      "axes_set": {
+        "cooking_state": "raw",
+        "thermal_state": "dried"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Vermicelles de riz sèches, crues' → cooking_state:'raw', thermal_state:'dried'"
+    },
+    {
+      "id": "ing_00756",
+      "axes_set": {
+        "packaging": "prepackaged",
+        "seasoning": "plain",
+        "form": "milk",
+        "origin": "plant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": false,
+      "suggested_location": "cereals_and_grains/other",
+      "sci_name": null,
+      "confidence": "medium",
+      "reason": "CIQUAL 'Boisson au riz, nature, préemballée' → packaging:'prepackaged', seasoning:'plain', form:'milk', origin:'plant'; however, the current location 'cereals_and_grains/rice' may not be accurate for a rice drink"
+    },
+    {
+      "id": "ing_00787",
+      "axes_set": {
+        "treatment": "unrefined",
+        "form": "whole",
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Fagopyrum esculentum Moench",
+      "confidence": "high",
+      "reason": "USDA 'Buckwheat, whole grain' → treatment:unrefined, form:whole, cooking_state:raw"
+    },
+    {
+      "id": "ing_00791",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, buckwheat' → form:flour"
+    },
+    {
+      "id": "ing_00793",
+      "axes_set": {
+        "origin": "plant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Fagopyrum esculentum Moench",
+      "confidence": "high",
+      "reason": "CNF 'Grains, buckwheat' → origin:plant, sci_name:Fagopyrum esculentum Moench"
+    },
+    {
+      "id": "ing_00795",
+      "axes_set": {
+        "cooking_state": "raw",
+        "form": "whole"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Sarrasin complet, cru' → cooking_state:raw, form:whole"
+    },
+    {
+      "id": "ing_00249",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine de sarrasin' → form:flour"
+    },
+    {
+      "id": "ing_00804",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, rye' → form:flour"
+    },
+    {
+      "id": "ing_00806",
+      "axes_set": {
+        "origin": "plant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Secale cereale L.",
+      "confidence": "high",
+      "reason": "CNF 'Grains, rye' and 'Secale cereale L.' → origin:plant and sci_name:Secale cereale L."
+    },
+    {
+      "id": "ing_00814",
+      "axes_set": {
+        "cooking_state": "raw",
+        "form": "whole"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Seigle complet, cru' → cooking_state:raw and form:whole"
+    },
+    {
+      "id": "ing_00798",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine de seigle T130' → form:flour"
+    },
+    {
+      "id": "ing_00800",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine de seigle T170' → form:flour"
+    },
+    {
+      "id": "ing_00802",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine de seigle T85' → form:'flour'"
+    },
+    {
+      "id": "ing_00808",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rye flour, dark' → form:'flour'"
+    },
+    {
+      "id": "ing_00810",
+      "axes_set": {
+        "form": "flour",
+        "fat_content": "low_fat"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, rye flour, light' → form:'flour', fat_content:'low_fat'"
+    },
+    {
+      "id": "ing_00393",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "semolina",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, semolina' → form:'semolina' | SCHEMA_VIOLATIONS: form='semolina' (not in schema)"
+    },
+    {
+      "id": "ing_00419",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "semolina",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Semoule de blé dur, crue' → cooking_state:'raw', form:'semolina' | SCHEMA_VIOLATIONS: form='semolina' (not in schema)"
+    },
+    {
+      "id": "ing_00049",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "seasoning": "unsalted"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": "cereals_and_grains/couscous",
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Semoule ou graine de couscous semi-complète, cuite, sans sel ajouté' → cooking_state:cooked, seasoning:unsalted"
+    },
+    {
+      "id": "ing_00442",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": false,
+      "suggested_location": "cereals_and_grains/wheat",
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, semolina, fine' → form:flour, but location should be cereals_and_grains/wheat"
+    },
+    {
+      "id": "ing_00391",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "part",
+          "value": "germ",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Germe de blé' → part:germ | SCHEMA_VIOLATIONS: part='germ' (not in schema)"
+    },
+    {
+      "id": "ing_00397",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, wheat bran, crude' → no new axes to set"
+    },
+    {
+      "id": "ing_00415",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, wheat germ, crude' → no new axes to set"
+    },
+    {
+      "id": "ing_00421",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "part",
+          "value": "bran",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Son de blé' → part:bran | SCHEMA_VIOLATIONS: part='bran' (not in schema)"
+    },
+    {
+      "id": "ing_00515",
+      "axes_set": {},
+      "axes_remove": [
+        "seasoning"
+      ],
+      "axes_propose": [
+        {
+          "key": "cooking_state",
+          "value": "toasted",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        },
+        {
+          "key": "part",
+          "value": "germ",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, wheat germ, toasted, plain' → cooking_state:toasted, part:germ | SCHEMA_VIOLATIONS: cooking_state='toasted' (not in schema); part='germ' (not in schema)"
+    },
+    {
+      "id": "ing_00817",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, sorghum' → no change"
+    },
+    {
+      "id": "ing_00819",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Sorghum spp.",
+      "confidence": "high",
+      "reason": "CNF 'Grains, sorghum' → sci_name:Sorghum spp."
+    },
+    {
+      "id": "ing_00821",
+      "axes_set": {
+        "part": "whole"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Sorgho complet, cru' → part:whole"
+    },
+    {
+      "id": "ing_00823",
+      "axes_set": {
+        "color": "white"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "part",
+          "value": "bran",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Sorghum bran, white, unenriched, dry, raw' → part:bran, color:white | SCHEMA_VIOLATIONS: part='bran' (not in schema)"
+    },
+    {
+      "id": "ing_00825",
+      "axes_set": {
+        "color": "white"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "part",
+          "value": "whole grain",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Sorghum, whole grain, white, dry, raw' → part:whole grain, color:white | SCHEMA_VIOLATIONS: part='whole grain' (not in schema)"
+    },
+    {
+      "id": "ing_00827",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, sorghum, flour' → form:flour"
+    },
+    {
+      "id": "ing_01479",
+      "axes_set": {
+        "form": "flour",
+        "color": "white"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "part",
+          "value": "whole grain",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Sorghum flour, white, pearled, unenriched, dry, raw' → part:whole grain, form:flour, color:white | SCHEMA_VIOLATIONS: part='whole grain' (not in schema)"
+    },
+    {
+      "id": "ing_01481",
+      "axes_set": {
+        "color": "white"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "part",
+          "value": "grain",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Sorghum grain, white, pearled, unenriched, dry, raw' → part:grain, color:white | SCHEMA_VIOLATIONS: part='grain' (not in schema)"
+    },
+    {
+      "id": "ing_00830",
+      "axes_set": {
+        "cooking_state": "raw",
+        "origin": "plant"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Tapioca ou perles du Japon, cru' → cooking_state:raw, origin:plant"
+    },
+    {
+      "id": "ing_01487",
+      "axes_set": {
+        "cooking_state": "cooked",
+        "part": "seed"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "pearl",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, tapioca, pearl, cooked' → cooking_state:cooked, part:seed, form:pearl | SCHEMA_VIOLATIONS: form='pearl' (not in schema)"
+    },
+    {
+      "id": "ing_01489",
+      "axes_set": {
+        "thermal_state": "dried",
+        "part": "seed"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "pearl",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, tapioca, pearl, dry' → thermal_state:dried, part:seed, form:pearl | SCHEMA_VIOLATIONS: form='pearl' (not in schema)"
+    },
+    {
+      "id": "ing_00836",
+      "axes_set": {
+        "treatment": "unenriched"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "cooking_state",
+          "value": "uncooked",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, teff, uncooked' → cooking_state:uncooked, treatment:unenriched | SCHEMA_VIOLATIONS: cooking_state='uncooked' (not in schema)"
+    },
+    {
+      "id": "ing_00284",
+      "axes_set": {
+        "cooking_state": "raw",
+        "thermal_state": "dried",
+        "treatment": "unenriched"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Einkorn, grain, dry, raw' → cooking_state:raw, thermal_state:dried, treatment:unenriched"
+    },
+    {
+      "id": "ing_00290",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Grains, spelt, uncooked' → cooking_state:'raw'"
+    },
+    {
+      "id": "ing_00310",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Khorasan, grain, dry, raw' → no change needed"
+    },
+    {
+      "id": "ing_00316",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Épeautre, cru' → cooking_state:'raw'"
+    },
+    {
+      "id": "ing_00379",
+      "axes_set": {
+        "form": "flour"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Farine d’épeautre (grand épeautre)' → form:'flour'"
+    },
+    {
+      "id": "ing_00381",
+      "axes_set": {
+        "form": "flour",
+        "treatment": "unrefined"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Flour, spelt, whole grain' → form:'flour', treatment:'unrefined'"
+    },
+    {
+      "id": "ing_01449",
+      "axes_set": {
+        "form": "whole"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Farro, pearled, dry, raw' → form:whole is not directly stated, however 'pearled' implies a specific form."
+    },
+    {
+      "id": "ing_00840",
+      "axes_set": {
+        "thermal_state": "fresh"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Prunus armeniaca L.",
+      "confidence": "high",
+      "reason": "CIQUAL 'Abricot, dénoyauté, cru' → thermal_state:fresh and sci_name:Prunus armeniaca L."
+    },
+    {
+      "id": "ing_00842",
+      "axes_set": {},
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Abricot, dénoyauté, sec' → no new axes to set."
+    },
+    {
+      "id": "ing_00844",
+      "axes_set": {
+        "ripening": "mature"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "medium",
+      "reason": "CIQUAL 'Abricot, dénoyauté, sec, moelleux (réhydraté à 35-45%)' → ripening:mature is not directly stated, but 'moelleux' implies a level of ripeness."
+    },
+    {
+      "id": "ing_00846",
+      "axes_set": {
+        "part": "whole"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Prunus armeniaca",
+      "confidence": "high",
+      "reason": "CNF 'Apricot, raw' → part:whole and sci_name:Prunus armeniaca."
+    },
+    {
+      "id": "ing_00848",
+      "axes_set": {
+        "part": "whole",
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Apricot, with skin, raw' → cooking_state:'raw', part:'whole'"
+    },
+    {
+      "id": "ing_00870",
+      "axes_set": {
+        "packaging": "canned",
+        "draining": "drained"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Apricot, canned, heavy syrup, drained' → packaging:'canned', draining:'drained'"
+    },
+    {
+      "id": "ing_00872",
+      "axes_set": {
+        "packaging": "canned",
+        "draining": "drained"
+      },
+      "axes_remove": [
+        "fat_content"
+      ],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Abricot au sirop léger, appertisé, égoutté' → packaging:'canned', draining:'drained'"
+    },
+    {
+      "id": "ing_00876",
+      "axes_set": {
+        "packaging": "canned",
+        "draining": "drained"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Abricot au sirop, appertisé, égoutté' → packaging:'canned', draining:'drained'"
+    },
+    {
+      "id": "ing_00850",
+      "axes_set": {
+        "form": "compote"
+      },
+      "axes_remove": [
+        "packaging"
+      ],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Compote d'abricot, préemballée' → form:'compote'"
+    },
+    {
+      "id": "ing_00852",
+      "axes_set": {
+        "form": "jam"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Confiture d'abricot (extra ou classique)' → form:'jam'"
+    },
+    {
+      "id": "ing_00854",
+      "axes_set": {
+        "seasoning": "unsweetened",
+        "form": "jam"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Confiture d'abricot, allégée en sucres' → seasoning:'unsweetened', form:'jam'"
+    },
+    {
+      "id": "ing_00899",
+      "axes_set": {
+        "seasoning": "plain",
+        "form": "juice"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Jus d'ananas, pur jus' → form:'juice', seasoning:'plain'"
+    },
+    {
+      "id": "ing_00901",
+      "axes_set": {
+        "form": "juice"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "treatment",
+          "value": "from_concentrate",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Jus d'ananas, à base de concentré' → form:'juice', treatment:'from_concentrate' | SCHEMA_VIOLATIONS: treatment='from_concentrate' (not in schema)"
+    },
+    {
+      "id": "ing_00903",
+      "axes_set": {
+        "cooking_state": "raw",
+        "part": "flesh_peeled"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Ananas comosus (L.) Merril",
+      "confidence": "high",
+      "reason": "CIQUAL 'Ananas, chair sans peau, cru' → cooking_state:'raw', part:'flesh_peeled', sci_name:'Ananas comosus (L.) Merril'"
+    },
+    {
+      "id": "ing_00907",
+      "axes_set": {
+        "form": "juice"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "draining",
+          "value": "in_juice",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Ananas au jus d'ananas, appertisé, égoutté' → form:'juice', draining:'in_juice' | SCHEMA_VIOLATIONS: draining='in_juice' (not in schema)"
+    },
+    {
+      "id": "ing_00911",
+      "axes_set": {
+        "draining": "in_syrup"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "form",
+          "value": "syrup",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CIQUAL 'Ananas au sirop léger, appertisé, égoutté' → form:'syrup', draining:'in_syrup' | SCHEMA_VIOLATIONS: form='syrup' (not in schema)"
+    },
+    {
+      "id": "ing_01567",
+      "axes_set": {
+        "ripeness": "ripe"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "variety",
+          "value": "extra sweet",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Ananus comosus",
+      "confidence": "high",
+      "reason": "CNF 'Pineapple, raw, extra sweet variety' → ripeness:'ripe', variety:'extra sweet', sci_name:'Ananus comosus' | SCHEMA_VIOLATIONS: variety='extra sweet' (not in schema)"
+    },
+    {
+      "id": "ing_01569",
+      "axes_set": {
+        "ripeness": "ripe"
+      },
+      "axes_remove": [],
+      "axes_propose": [
+        {
+          "key": "variety",
+          "value": "traditional",
+          "source_quote": "(moved from axes_set: value not in schema)"
+        }
+      ],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Ananus comosus",
+      "confidence": "high",
+      "reason": "CNF 'Pineapple, raw, traditional varieties' → ripeness:'ripe', variety:'traditional', sci_name:'Ananus comosus' | SCHEMA_VIOLATIONS: variety='traditional' (not in schema)"
+    },
+    {
+      "id": "ing_01731",
+      "axes_set": {
+        "form": "juice",
+        "draining": "drained"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Pineapple, canned, juice pack, drained' → form:'juice', draining:'drained'"
+    },
+    {
+      "id": "ing_01565",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Pineapple, raw' → cooking_state:raw"
+    },
+    {
+      "id": "ing_00914",
+      "axes_set": {
+        "thermal_state": "dried",
+        "form": "powder"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "CNF 'Banana, dehydrated or banana powder' → thermal_state:dried, form:powder"
+    },
+    {
+      "id": "ing_00916",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": "Musa X paradisiaca",
+      "confidence": "high",
+      "reason": "CNF 'Banana, raw' → cooking_state:raw, sci_name:Musa X paradisiaca"
+    },
+    {
+      "id": "ing_00918",
+      "axes_set": {
+        "cooking_state": "raw",
+        "ripeness": "overripe"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Bananas, overripe, raw' → cooking_state:raw, ripeness:overripe"
+    },
+    {
+      "id": "ing_00920",
+      "axes_set": {
+        "cooking_state": "raw"
+      },
+      "axes_remove": [],
+      "axes_propose": [],
+      "position_ok": true,
+      "suggested_location": null,
+      "sci_name": null,
+      "confidence": "high",
+      "reason": "USDA 'Bananas, ripe and slightly ripe, raw' → cooking_state:raw"
+    }
+  ]
+}

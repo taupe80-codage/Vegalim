@@ -11,6 +11,15 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Variables d'environnement (ne jamais commiter les valeurs réelles)
+.env.local
+.env.*.local
+# .env.production et .env.development sont commités (valeurs publiques/génériques)
+# S'ils contiennent des clés API, les ajouter ici
+
+# Fichiers de sauvegarde
+*.bak
+
 # OS
 .DS_Store
 Thumbs.db

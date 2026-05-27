@@ -1,0 +1,81 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── Environnements virtuels ───────────────────────────────────────────────────
+venv/
+.venv/
+env/
+
+# ── Variables d'environnement ─────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+# .env.example est utile dans l'image → non exclu
+
+# ── Frontend : node_modules et build ─────────────────────────────────────────
+# node_modules est reconstruit dans le stage frontend-build
+frontend/node_modules/
+# dist/ sera généré dans le stage frontend-build
+frontend/dist/
+
+# ── Sources brutes nutrition (très grands fichiers — ~500 Mo) ─────────────────
+# Montés via volume au runtime, jamais baked dans l'image
+backend/data/nutrition/raw/
+
+# ── Données runtime et logs ───────────────────────────────────────────────────
+# Montés via bind mount — ne pas dupliquer dans l'image
+backend/data/product/
+backend/data/logs/
+backend/data/user_profiles/
+backend/users/history/
+
+# ── Base de données SQLite dev ────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Backups et archives ───────────────────────────────────────────────────────
+backend/data/nutrition/processed/archive/
+backend/data/nutrition/reference/*.bak.json
+*.zip
+*.bak
+
+# ── Documentation et fichiers de dev ─────────────────────────────────────────
+docs/
+*.md
+*.html
+*.docx
+*.pdf
+*.svg
+# *.txt exclu SAUF requirements*.txt (indispensables au build Python)
+*.txt
+!requirements.txt
+!requirements-dev.txt
+
+# ── Git ───────────────────────────────────────────────────────────────────────
+.git/
+.gitignore
+.gitattributes
+.claude/
+
+# ── IDEs ──────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ── Tests ─────────────────────────────────────────────────────────────────────
+tests/
+
+# ── Scripts one-shot (inutiles dans l'image) ─────────────────────────────────
+scripts/recipes/

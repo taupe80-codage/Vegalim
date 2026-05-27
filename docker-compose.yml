@@ -1,17 +1,212 @@
-version: '3.8'
+# ══════════════════════════════════════════════════════════════════════════════
+# ALIM v6 — docker-compose
+#
+# Services permanents (docker compose up) :
+#   api     → FastAPI + React (port 8000)
+#   db      → PostgreSQL 16
+#   redis   → Rate limiting multi-process
+#
+# Service batch (docker compose run --rm pipeline <commande>) :
+#   pipeline → Scripts nutrition — lancé manuellement, jamais en continu
+#
+# Prérequis :
+#   cp .env.example .env
+#   # Remplir SECRET_KEY, POSTGRES_PASSWORD, HEALTH_DATA_KEY dans .env
+#
+# Premier lancement :
+#   docker compose up --build
+# ══════════════════════════════════════════════════════════════════════════════
+
 services:
-  db:
-    image: postgres:15-alpine
-    container_name: alim_postgres
-    environment:
-      POSTGRES_USER: alim
-      POSTGRES_PASSWORD: alim_pass
-      POSTGRES_DB: alim_db
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+
+  # ── Reverse proxy HTTPS (Caddy) ─────────────────────────────────────────────
+  # Gère automatiquement : certificat Let's Encrypt, HTTP→HTTPS, HTTP/2, HSTS.
+  # Variable requise dans .env : ALIM_DOMAIN=mondomaine.com
+  caddy:
+    image: caddy:2-alpine
+    container_name: alim_caddy
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "3"
     restart: unless-stopped
+    ports:
+      - "80:80"       # HTTP (redirection automatique → HTTPS)
+      - "443:443"     # HTTPS
+      - "443:443/udp" # HTTP/3 (QUIC)
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data      # certificats Let's Encrypt (persistants)
+      - caddy_config:/config  # config Caddy auto-générée
+    environment:
+      ALIM_DOMAIN: ${ALIM_DOMAIN:-localhost}
+    depends_on:
+      api:
+        condition: service_healthy
+
+
+  # ── API FastAPI + frontend React ────────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # URL de l'API injectée dans le build Vite — doit correspondre au domaine public
+        VITE_API_URL: ${VITE_API_URL:-https://api.mondomaine.com}
+    image: alim-api:6.0
+    container_name: alim_api
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"   # 50 Mo max par fichier log
+        max-file: "5"     # 5 fichiers → 250 Mo max total
+    env_file: .env
+    environment:
+      APP_ENV: production
+      ALIM_FRONTEND: react
+      # Surcharge DATABASE_URL pour pointer vers le service db interne
+      DATABASE_URL: postgresql://${POSTGRES_USER:-alim}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-alim_db}
+      REDIS_URL: redis://redis:6379/0
+    # En production avec Caddy : l'API n'est PAS exposée directement.
+    # Caddy proxyfie vers api:8000 en interne. Commenter ces lignes en prod.
+    # En développement (sans Caddy) : garder pour accès direct sur port 8000.
+    ports:
+      - "${API_PORT:-8000}:8000"
+    volumes:
+      # Données générées par le pipeline et lues par l'API
+      # (bind mount : le pipeline écrit sur l'hôte, l'API lit le même dossier)
+      - ./backend/data/nutrition/processed:/app/backend/data/nutrition/processed
+      - ./backend/data/indexes:/app/backend/data/indexes
+      - ./backend/data/recipes:/app/backend/data/recipes
+      # Graphes mis à jour par le pipeline
+      - ./backend/data/graphs:/app/backend/data/graphs
+      # Données runtime (utilisateurs, quotas, logs)
+      - ./backend/data/product:/app/backend/data/product
+      - ./backend/data/user_profiles:/app/backend/data/user_profiles
+      - ./backend/data/logs:/app/backend/data/logs
+      - ./backend/users:/app/backend/users
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\""]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 25s
+
+
+  # ── PostgreSQL 16 ────────────────────────────────────────────────────────────
+  db:
+    image: postgres:16-alpine
+    container_name: alim_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER:     ${POSTGRES_USER:-alim}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB:       ${POSTGRES_DB:-alim_db}
+      PGDATA:            /var/lib/postgresql/data/pgdata
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    # Port exposé en dev uniquement — commenter en production
+    # ports:
+    #   - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-alim} -d ${POSTGRES_DB:-alim_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+
+  # ── Redis (rate limiting multi-process) ─────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: alim_redis
+    restart: unless-stopped
+    # Pas de persistance — le rate limiter repart à zéro au redémarrage (voulu)
+    command: redis-server --save "" --appendonly no
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+
+  # ── Backup PostgreSQL (batch, à la demande ou via cron) ─────────────────────
+  #
+  # Crée un dump compressé dans ./backups/alim_YYYYMMDD_HHMMSS.sql.gz
+  #
+  # Usage manuel :
+  #   docker compose run --rm backup
+  #
+  # Via cron système (Linux/Mac) — ajouter dans crontab -e :
+  #   0 3 * * * cd /chemin/projet && docker compose run --rm backup
+  backup:
+    image: postgres:16-alpine
+    container_name: alim_backup
+    profiles: ["backup"]
+    environment:
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./backups:/backups
+    command: >
+      sh -c "
+        FILE=/backups/alim_$$(date +%Y%m%d_%H%M%S).sql.gz &&
+        pg_dump -h db -U $${POSTGRES_USER:-alim} $${POSTGRES_DB:-alim_db} | gzip > $$FILE &&
+        echo \"Backup OK : $$FILE\" &&
+        ls -lh /backups | tail -10
+      "
+    depends_on:
+      db:
+        condition: service_healthy
+
+
+  # ── Pipeline nutrition (batch, à la demande) ─────────────────────────────────
+  #
+  # Utilise la même image que l'API (Python + dépendances).
+  # Ne démarre JAMAIS automatiquement (profiles: pipeline).
+  #
+  # Usage :
+  #   docker compose run --rm pipeline python scripts/nutrition/build_n2_direct.py --dry-run
+  #   docker compose run --rm pipeline python scripts/nutrition/build_n2_direct.py --promote
+  #   docker compose run --rm pipeline python scripts/nutrition/build_dict_v2.py
+  #   docker compose run --rm pipeline python scripts/nutrition/build_indexes.py
+  pipeline:
+    image: alim-api:6.0
+    container_name: alim_pipeline
+    profiles: ["pipeline"]
+    env_file: .env
+    environment:
+      PYTHONIOENCODING: utf-8
+      APP_ENV: production
+    volumes:
+      # Sources brutes en lecture seule
+      - ./backend/data/nutrition/raw:/app/backend/data/nutrition/raw:ro
+      # Sorties pipeline (mêmes bind mounts que l'API)
+      - ./backend/data/nutrition/processed:/app/backend/data/nutrition/processed
+      - ./backend/data/indexes:/app/backend/data/indexes
+      - ./backend/data/recipes:/app/backend/data/recipes
+      - ./backend/data/graphs:/app/backend/data/graphs
+      - ./backend/data/ingredients:/app/backend/data/ingredients
+      - ./backend/data/logs:/app/backend/data/logs
+    working_dir: /app
+    # Commande par défaut : dry-run sécurisé
+    command: ["python", "scripts/nutrition/build_n2_direct.py", "--dry-run"]
+
 
 volumes:
-  postgres_data:
+  pg_data:
+    name: alim_pg_data
+  redis_data:
+    name: alim_redis_data
+  caddy_data:
+    name: alim_caddy_data     # certificats Let's Encrypt — NE PAS SUPPRIMER
+  caddy_config:
+    name: alim_caddy_config

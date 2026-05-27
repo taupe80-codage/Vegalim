@@ -145,6 +145,12 @@ def score_and_enrich(recipe: dict, context) -> dict | None:
     Returns:
         Recette enrichie (dict), ou None si erreur critique.
     """
+    if not isinstance(recipe, dict):
+        logger.warning(
+            "score_and_enrich: élément ignoré (type=%s, valeur=%r)",
+            type(recipe).__name__, recipe,
+        )
+        return None
     try:
         recipe           = _enrich_nutrition(recipe)
         relevance        = _extract_relevance(recipe)
@@ -175,6 +181,13 @@ def batch_score(recipes: list[dict], context) -> list[dict]:
     scored  = []
     dropped = 0
     for recipe in recipes:
+        if not isinstance(recipe, dict):
+            logger.warning(
+                "batch_score: élément non-dict ignoré (type=%s, valeur=%r)",
+                type(recipe).__name__, recipe,
+            )
+            dropped += 1
+            continue
         result = score_and_enrich(recipe, context)
         if result is not None:
             scored.append(result)

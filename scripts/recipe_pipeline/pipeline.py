@@ -40,6 +40,10 @@ import argparse
 from pathlib import Path
 from collections import Counter
 
+# ── Encodage stdout (évite UnicodeEncodeError sur terminal cp1252) ───────────
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 # ── Logging ─────────────────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,

@@ -11,10 +11,6 @@ Vérifie les scénarios utilisateur complets :
   - Filtres gluten_free, kid_friendly fonctionnels
   - RecommendationResult expose meta complet
 """
-import sys
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
 from backend.services.reco_service import recommend_full as recommend
 from backend.engine.config import W_QUALITY, W_RELEVANCE
 

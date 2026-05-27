@@ -9,7 +9,10 @@
 
 import { useState } from 'react';
 import { RouterProvider, useRouter } from './Router';
-import { AuthProvider }  from './AuthContext';
+import { AuthProvider }     from './AuthContext';
+import { ThemeProvider }    from './ThemeContext';
+import { ToastProvider }    from './ToastContext';
+import { FavoritesProvider } from './FavoritesContext';
 import Navbar            from './components/Navbar';
 import AuthModal         from './components/AuthModal';
 import HomePage          from './pages/HomePage';
@@ -18,7 +21,9 @@ import FrigoPage         from './pages/FrigoPage';
 import PlanningPage      from './pages/PlanningPage';
 import NutritionPage     from './pages/NutritionPage';
 import ProfilePage       from './pages/ProfilePage';
-import CycleAstroPage    from './pages/CycleAstroPage';
+import CyclePage         from './pages/CyclePage';
+import AstroPage         from './pages/AstroPage';
+import FavoritesPage     from './pages/FavoritesPage';
 import './index.css';
 
 // ── Dispatcher ────────────────────────────────────────────────────────────────
@@ -33,7 +38,10 @@ function PageDispatcher({ onAuthClick }) {
     case 'planning':  return <PlanningPage />;
     case 'nutrition': return <NutritionPage />;
     case 'profil':    return <ProfilePage onAuthClick={onAuthClick} />;
-    case 'cycle-astro': return <CycleAstroPage />;
+    case 'favoris':    return <FavoritesPage />;
+    case 'cycle':      return <CyclePage />;
+    case 'astro':      return <AstroPage />;
+    case 'cycle-astro': return <CyclePage />;
     default:          return <HomePage />;
   }
 }
@@ -58,10 +66,16 @@ function AppInner() {
 
 export default function App() {
   return (
-    <RouterProvider>
-      <AuthProvider>
-        <AppInner />
-      </AuthProvider>
-    </RouterProvider>
+    <ThemeProvider>
+      <RouterProvider>
+        <AuthProvider>
+          <ToastProvider>
+            <FavoritesProvider>
+              <AppInner />
+            </FavoritesProvider>
+          </ToastProvider>
+        </AuthProvider>
+      </RouterProvider>
+    </ThemeProvider>
   );
 }

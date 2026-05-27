@@ -28,7 +28,7 @@ Usage dans main.py :
 import json
 import uuid
 import hashlib
-from datetime import datetime, date
+from datetime import datetime, date, timezone
 from pathlib import Path
 from functools import wraps
 
@@ -175,36 +175,19 @@ class APIUser:
 
 
 # ── Gestion des quotas ─────────────────────────────────────────────────────────
-def _get_quota(api_key: str) -> int:
-    """Retourne le nombre de requêtes faites aujourd'hui par cette clé (indexé par hash)."""
-    today    = date.today().isoformat()
-    quotas   = _load(QUOTAS_PATH, {})
-    key_hash = _hash_key(api_key)
-    day_key  = f"{key_hash[:16]}:{today}"   # préfixe 16 chars du hash suffit
-    return quotas.get(day_key, 0)
-
-def _increment_quota(api_key: str) -> int:
-    """Incrémente le compteur de requêtes. Retourne le nouveau total."""
-    today    = date.today().isoformat()
-    quotas   = _load(QUOTAS_PATH, {})
-    key_hash = _hash_key(api_key)
-    day_key  = f"{key_hash[:16]}:{today}"
-    quotas[day_key] = quotas.get(day_key, 0) + 1
-
-    # Purge des quotas de plus de 2 jours
-    yesterday = date.fromordinal(date.today().toordinal() - 1).isoformat()
-    quotas = {k: v for k, v in quotas.items()
-              if k.split(":")[-1] >= yesterday}
-
-    _save(QUOTAS_PATH, quotas)
-    return quotas[day_key]
+# ARCHIVÉ — _get_quota() et _increment_quota() supprimées (orphelines depuis v6).
+# Le comptage des quotas est désormais entièrement géré par :
+#   api_key_service.validate_key()  →  QuotaRepository (DB-first) ou JSON fallback
+# Ces fonctions écrivaient dans quotas.json (QUOTAS_PATH) sans jamais être appelées,
+# créant une confusion sur quel store était authoritative.
+# Référence : audit incohérences v6, bug HIGH #1.
 
 
 # ── Dépendances FastAPI ────────────────────────────────────────────────────────
-def require_api_key(api_key: str = Security(api_key_header)) -> APIUser:
+def require_api_key(api_key: str = Security(api_key_header)) -> "APIUser":
     """
     Dépendance FastAPI : valide la clé API et vérifie le quota journalier.
-    Injecter avec : user: APIUser = Depends(require_api_key)
+    Délègue à api_key_service (DB-first, fallback JSON).
     """
     if not api_key:
         raise HTTPException(
@@ -213,55 +196,20 @@ def require_api_key(api_key: str = Security(api_key_header)) -> APIUser:
             headers={"WWW-Authenticate": "ApiKey"},
         )
 
-    # Vérifier que la clé existe (comparaison sur le hash — jamais la clé en clair)
-    keys      = _load(API_KEYS_PATH, {})
-    key_hash, key_data = _lookup_key(api_key, keys)
+    from backend.services.api_key_service import validate_key
+    user_d = validate_key(api_key)  # lève HTTP 429 si quota dépassé
 
-    if key_hash is None:
+    if not user_d:
         raise HTTPException(status_code=401, detail="Clé API invalide.")
-
-    if not key_data.get("active", True):
+    if not user_d.get("is_active", True):
         raise HTTPException(status_code=403, detail="Clé API désactivée.")
 
-    # Vérifier l'expiration
-    expires_at = key_data.get("expires_at")
-    if expires_at:
-        from datetime import datetime
-        if datetime.utcnow().isoformat() > expires_at:
-            raise HTTPException(
-                status_code=403,
-                detail="Clé API expirée. Générez une nouvelle clé via POST /generate_api_key.",
-            )
-
-    # Récupérer l'utilisateur
-    users   = _load(USERS_PATH, {})
-    user_id = key_data["user_id"]
-    user_d  = users.get(user_id)
-    if not user_d:
-        raise HTTPException(status_code=401, detail="Utilisateur introuvable.")
-
-    user = APIUser(
-        user_id = user_id,
-        email   = user_d.get("email", ""),
-        plan    = user_d.get("plan", "free"),
+    return APIUser(
+        user_id = user_d["user_id"],
+        email   = user_d["email"],
+        plan    = user_d["plan"],
         api_key = api_key,
     )
-
-    # Vérifier le quota journalier
-    used  = _get_quota(api_key)
-    limit = user.daily_limit()
-    if used >= limit:
-        raise HTTPException(
-            status_code=429,
-            detail=f"Quota journalier atteint ({used}/{limit}). Passez au plan supérieur.",
-            headers={"X-RateLimit-Limit": str(limit), "X-RateLimit-Used": str(used)},
-        )
-
-    # Incrémenter le compteur et logger
-    new_count = _increment_quota(api_key)
-    _log_event(user_id, "api_call", {"endpoint": "protected", "count": new_count})
-
-    return user
 
 
 def require_plan(feature: str):
@@ -291,7 +239,7 @@ def _log_event(user_id: str, event: str, meta: dict | None = None):
             "user_id": user_id,
             "event":   event,
             "meta":    meta or {},
-            "time":    datetime.utcnow().isoformat(),
+            "time":    datetime.now(timezone.utc).isoformat(),
         })
         # Garder seulement les 10 000 derniers événements
         if len(analytics) > 10_000:
@@ -304,22 +252,5 @@ def _log_event(user_id: str, event: str, meta: dict | None = None):
 # ── Admin : stats ──────────────────────────────────────────────────────────────
 def get_api_stats() -> dict:
     """Retourne les stats globales de l'API (pour tableau de bord admin)."""
-    users    = _load(USERS_PATH, {})
-    keys     = _load(API_KEYS_PATH, {})
-    quotas   = _load(QUOTAS_PATH, {})
-    today    = date.today().isoformat()
-
-    plan_dist = {}
-    for u in users.values():
-        p = u.get("plan", "free")
-        plan_dist[p] = plan_dist.get(p, 0) + 1
-
-    today_calls = sum(v for k, v in quotas.items() if k.endswith(f":{today}"))
-
-    return {
-        "total_users":    len(users),
-        "total_keys":     len(keys),
-        "active_keys":    sum(1 for k in keys.values() if k.get("active", True)),
-        "plan_distribution": plan_dist,
-        "calls_today":    today_calls,
-    }
+    from backend.services.api_key_service import get_stats
+    return get_stats()

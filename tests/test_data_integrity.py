@@ -7,10 +7,6 @@ Vérifie les invariants métier critiques :
   - Complétude des graphes nutrition
   - Champs obligatoires présents sur toutes les recettes
 """
-import sys
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
 import pytest
 from backend.core.data_io import (
     load_recipes, load_nutrition_graph, load_ingredients_dict,
@@ -49,7 +45,6 @@ def test_tous_les_diet_flags_presents():
 
 # ── Cohérence vegan ────────────────────────────────────────────────────────────
 
-@pytest.mark.xfail(reason="13 recettes ont vegan=True avec ingrédients non-vegan dans recipes.json — correctif data prévu")
 def test_aucune_recette_vegan_avec_ingredient_non_vegan():
     from backend.engine.rule_engine.diet import _normalize as normalize
     violations = []
@@ -110,8 +105,15 @@ def test_nutrition_graph_a_calories():
 # ── Graphe disponibilité ──────────────────────────────────────────────────────
 
 def test_availability_couvre_tous_les_ingredients():
-    assert len(AVAIL) == len(INGS), (
-        f"Graphe disponibilité : {len(AVAIL)} entrées, dict ingrédients : {len(INGS)}"
+    avail_keys = set(AVAIL.keys())
+    ings_keys  = set(INGS.keys())
+    orphans    = avail_keys - ings_keys   # dans AVAIL mais pas dans le dict
+    missing    = ings_keys  - avail_keys  # dans le dict mais pas dans AVAIL
+    assert not orphans, (
+        f"Clés orphelines dans le graphe disponibilité (à supprimer) : {sorted(orphans)}"
+    )
+    assert not missing, (
+        f"Ingrédients sans données de disponibilité (à ajouter) : {sorted(missing)[:10]}"
     )
 
 def test_availability_valeurs_valides():
@@ -166,7 +168,7 @@ def test_ajr_routes_recipes_utilise_source_centrale():
     hardcodées au lieu d'importer la source de vérité.
     """
     from backend.engine.score_engine.ajr import AJR
-    from backend.api.routes.recipes import _AJR as _AJR_ROUTES
+    from backend.services.enrichment_service import _AJR as _AJR_ROUTES
 
     nutriments_affiches = ("protein", "fiber", "iron", "calcium",
                            "magnesium", "potassium", "vitamin_c", "zinc")

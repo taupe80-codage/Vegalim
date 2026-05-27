@@ -316,6 +316,20 @@ def load_astro_nutrition() -> dict:
     return raw.get("ingredients_astro_map", {})
 
 
+_cycle_data_cache = _MtimeCache("load_cycle_data")
+
+def load_cycle_data() -> dict:
+    """
+    Données du cycle féminin (female_cycle_nutrition.json).
+
+    Chargé via _MtimeCache — rechargé automatiquement si le fichier est modifié.
+    Source unique partagée par cycle_engine et graph_engine (évite deux caches
+    indépendants sur le même fichier 336 KB).
+    """
+    path = DATA_ROOT / "modules" / "female_cycle_nutrition.json"
+    return _cycle_data_cache.get(path, lambda: load_json(path, default={}))
+
+
 # ── Feature dual nutrition source (v6.17) ─────────────────────────────────────
 #
 # Mécanisme : certains ingrédients (laits/crèmes végétaux) ont deux sources de

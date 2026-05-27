@@ -2,11 +2,8 @@
 test_stability.py — Tests de stabilisation (Pass 5).
 Vérifie : gestion d'erreur, validation, logging, robustesse.
 """
-import sys, logging
+import logging
 from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "backend"))
 
 from backend.core.validators import (
     is_valid_recipe, validate_recipes, is_valid_diet, safe_float

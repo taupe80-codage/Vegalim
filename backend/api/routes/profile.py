@@ -34,7 +34,8 @@ def update_profile(update: ProfileUpdate, user: dict = Depends(get_user)):
         data["diet"] = normalize_diet(update.diet)
     # Sanitiser les champs texte libres
     from backend.core.validators import sanitize_text
-    for field in ("cycle_phase", "health_goal"):
+    # Note : 'goal' est l'alias de 'health_goal' dans ProfileUpdate — les deux sont sanitisés
+    for field in ("cycle_phase", "health_goal", "goal"):
         if field in data and data[field]:
             try:
                 data[field] = sanitize_text(data[field], max_length=120)
@@ -42,7 +43,8 @@ def update_profile(update: ProfileUpdate, user: dict = Depends(get_user)):
                 raise HTTPException(status_code=422, detail=str(e))
     # RGPD Art. 9 — données de santé nécessitent un consentement explicite
     profile_current = get_profile(user["email"])
-    health_fields   = {"cycle_phase", "health_goal"}
+    # 'goal' est l'alias de 'health_goal' envoyé par ProfileUpdate — inclus dans le guard
+    health_fields   = {"cycle_phase", "health_goal", "goal"}
     if data.keys() & health_fields and not profile_current.get("health_consent"):
         raise HTTPException(
             status_code=403,
@@ -71,7 +73,7 @@ def record_interaction(payload: InteractionPayload,
                        user: dict = Depends(get_user)):
     """
     Enregistre une interaction utilisateur avec une recette.
-    Alimente le learning_engine pour personnaliser les recommandations futures.
+    Alimente le moteur de personnalisation pour les recommandations futures.
 
     Actions valides : view | like | dislike | plan | cook | skip
     """
@@ -80,7 +82,11 @@ def record_interaction(payload: InteractionPayload,
         raise HTTPException(status_code=400,
             detail=f"Action invalide. Valeurs : {sorted(VALID_ACTIONS)}")
 
-    from backend.engine.learning_engine import save_interaction
+    try:
+        from backend.services.interaction_service import save_interaction
+    except ImportError:
+        logger.warning("record_interaction: interaction_service indisponible — interaction non enregistrée")
+        return
     save_interaction(
         email        = user["email"],
         recipe_id    = payload.recipe_id,
@@ -98,7 +104,10 @@ def get_learning_stats(user: dict = Depends(get_user)):
     Inclut le nombre de likes/dislikes, les préférences déduites
     et si la personnalisation est active.
     """
-    from backend.engine.learning_engine import get_user_stats
+    try:
+        from backend.services.interaction_service import get_user_stats
+    except ImportError:
+        raise HTTPException(status_code=503, detail="Service de personnalisation indisponible")
     return get_user_stats(user["email"])
 
 class ConsentUpdate(BaseModel):
@@ -152,7 +161,7 @@ def export_profile(user: dict = Depends(get_user)):
     # Historique des interactions
     history_data = {}
     try:
-        from backend.engine.learning_engine import load_history, get_user_stats
+        from backend.services.interaction_service import load_history, get_user_stats
         history = load_history(email)
         stats   = get_user_stats(email)
         history_data = {
@@ -166,7 +175,7 @@ def export_profile(user: dict = Depends(get_user)):
 
     import datetime
     return {
-        "export_date":  datetime.datetime.utcnow().isoformat() + "Z",
+        "export_date":  datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "email":        email,
         "profile":      profile,
         "interactions": history_data,
@@ -192,7 +201,7 @@ def export_profile_csv(user: dict = Depends(get_user)):
 
     history_data = {}
     try:
-        from backend.engine.learning_engine import load_history
+        from backend.services.interaction_service import load_history
         history      = load_history(email)
         history_data = {
             "liked_count":    len(history.get("liked", set())),
@@ -207,7 +216,7 @@ def export_profile_csv(user: dict = Depends(get_user)):
     writer  = csv.writer(output)
 
     writer.writerow(["# Export ALIM — Données personnelles"])
-    writer.writerow(["# Date", datetime.datetime.utcnow().isoformat() + "Z"])
+    writer.writerow(["# Date", datetime.datetime.now(datetime.timezone.utc).isoformat()])
     writer.writerow(["# Email", email])
     writer.writerow([])
 

@@ -1,26 +1,36 @@
 /**
  * Navbar.jsx — Navigation principale ALIM v6
+ *
+ * Axe 5 — Accessibilité :
+ *  - aria-current="page" sur le lien actif
+ *  - aria-label sur les boutons icon-only (logout, avatar)
+ *  - aria-expanded + aria-controls sur le hamburger mobile
  */
 
 import { useState } from 'react';
 import { Link, useRouter } from '../Router';
 import { useAuth } from '../AuthContext';
+import { useTheme } from '../ThemeContext';
 
+// Icônes Unicode (pas émoji) — cohérent avec la typo Geist + le toggle ☼/☾
+// Les Favoris sont accessibles via le menu Profil (◎)
 const NAV_LINKS = [
-  { to: '/',         label: 'Recettes',  icon: '✦' },
-  { to: '/frigo',    label: 'Mon frigo', icon: '◈' },
-  { to: '/planning', label: 'Planning',  icon: '▦'  },
-  { to: '/nutrition',label: 'Nutrition', icon: '◉'  },
-  { to: '/cycle-astro',label: 'Bien-être', icon: '🌙'  },
+  { to: '/',          label: 'Recettes',  icon: '✦' },
+  { to: '/frigo',     label: 'Mon frigo', icon: '🧊' },
+  { to: '/planning',  label: 'Planning',  icon: '▦' },
+  { to: '/nutrition', label: 'Nutrition', icon: '◉' },
+  { to: '/cycle',     label: 'Cycle',     icon: '🌑' },
+  { to: '/astro',     label: 'Astro',     icon: '✨' },
 ];
 
 export default function Navbar({ onAuthClick }) {
-  const { page }            = useRouter();
-  const { user, logout }    = useAuth();
+  const { page }               = useRouter();
+  const { user, logout }       = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const isActive = (to) => {
-    if (to === '/' ) return page === 'home' || page === 'recipe';
+    if (to === '/') return page === 'home' || page === 'recipe';
     return page === to.replace('/', '');
   };
 
@@ -33,28 +43,49 @@ export default function Navbar({ onAuthClick }) {
         </Link>
 
         {/* Links desktop */}
-        <nav className="nav-links">
+        <nav className="nav-links" aria-label="Navigation principale">
           {NAV_LINKS.map(({ to, label, icon }) => (
             <Link
               key={to}
               to={to}
               className={`nav-link ${isActive(to) ? 'nav-link--active' : ''}`}
+              aria-current={isActive(to) ? 'page' : undefined}
             >
-              <span className="nav-link-icon">{icon}</span>
+              <span className="nav-link-icon" aria-hidden="true">{icon}</span>
               {label}
             </Link>
           ))}
         </nav>
 
-        {/* Auth */}
+        {/* Auth + Theme toggle */}
         <div className="nav-auth">
+          <button
+            className="nav-theme-toggle"
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}
+            title={theme === 'dark' ? 'Mode clair' : 'Mode sombre'}
+          >
+            <span aria-hidden="true">{theme === 'dark' ? '☼' : '☾'}</span>
+          </button>
+
           {user ? (
             <div className="nav-user">
-              <Link to="/profil" className="nav-avatar" title={user.email}>
-                {(user.name || user.email || '?')[0].toUpperCase()}
+              <Link
+                to="/profil"
+                className="nav-avatar"
+                aria-label={`Profil de ${user.name || user.email}`}
+              >
+                <span aria-hidden="true">
+                  {(user.name || user.email || '?')[0].toUpperCase()}
+                </span>
               </Link>
-              <button className="nav-logout" onClick={logout} title="Déconnexion">
-                ⤫
+              <button
+                className="nav-logout"
+                onClick={logout}
+                aria-label="Se déconnecter"
+                title="Déconnexion"
+              >
+                <span aria-hidden="true">⤫</span>
               </button>
             </div>
           ) : (
@@ -68,27 +99,33 @@ export default function Navbar({ onAuthClick }) {
         <button
           className={`nav-hamburger ${menuOpen ? 'open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
+          aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          aria-expanded={menuOpen}
+          aria-controls="nav-mobile-menu"
         >
-          <span /><span /><span />
+          <span aria-hidden="true" /><span aria-hidden="true" /><span aria-hidden="true" />
         </button>
       </div>
 
       {/* Menu mobile */}
       {menuOpen && (
-        <nav className="nav-mobile">
+        <nav id="nav-mobile-menu" className="nav-mobile" aria-label="Navigation mobile">
           {NAV_LINKS.map(({ to, label, icon }) => (
             <Link
               key={to}
               to={to}
               className={`nav-mobile-link ${isActive(to) ? 'nav-link--active' : ''}`}
+              aria-current={isActive(to) ? 'page' : undefined}
               onClick={() => setMenuOpen(false)}
             >
-              <span>{icon}</span> {label}
+              <span aria-hidden="true">{icon}</span> {label}
             </Link>
           ))}
           {!user && (
-            <button className="nav-login-btn" onClick={() => { setMenuOpen(false); onAuthClick(); }}>
+            <button
+              className="nav-login-btn"
+              onClick={() => { setMenuOpen(false); onAuthClick(); }}
+            >
               Connexion
             </button>
           )}

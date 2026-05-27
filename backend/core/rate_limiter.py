@@ -111,6 +111,6 @@ def check_rate_limit(request: Request, limit: int, window_seconds: int,
     identifier = email if email else ip
     r = _get_redis()
     if r is not None:
-        _check_redis(ip, limit, window_seconds)
+        _check_redis(identifier, limit, window_seconds)
     else:
-        _check_memory(ip, limit, window_seconds)
+        _check_memory(identifier, limit, window_seconds)

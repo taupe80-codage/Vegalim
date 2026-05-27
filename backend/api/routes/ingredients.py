@@ -106,46 +106,47 @@ def list_ingredients(
     }
 
 
+@router.get("/frigo-groups")
+def get_frigo_groups(request: Request):
+    """
+    Retourne les groupes d'ingrédients pour les chips expandables du frigo.
+    Chaque groupe = catégorie (Féculents, Légumes…) avec items triés par popularité.
+    Chaque item = base ingredient avec ses variantes hiérarchiques.
+    **Public — aucune authentification requise.**
+    """
+    check_rate_limit(request, limit=120, window_seconds=60)
+    from backend.services.ingredient_catalog import get_frigo_groups
+    return {"groups": get_frigo_groups()}
+
+
 @router.get("/search")
 def search_ingredients(
     request: Request,
-    q:       str           = Query(..., min_length=2, description="Token ou nom partiel"),
+    q:       str           = Query(..., min_length=1, description="Début de nom (FR ou ID)"),
     limit:   int           = Query(default=20, ge=1, le=50),
     user:    dict | None   = Depends(get_optional_user),
 ):
-    """Recherche d'ingrédients par token. **Public** — CDC_11 plan gratuit."""
+    """
+    Recherche d'ingrédients par préfixe ou token.
+    Catalogue étendu : 510 IDs recettes + dict (avec name_fr auto-générés).
+    Résultats triés par pertinence puis popularité (recipe_count).
+    **Public** — CDC_11 plan gratuit.
+    """
     check_rate_limit(request, limit=60, window_seconds=60)
-    d = load_ingredients_dict()
-    q_lower = q.lower().strip()
-
-    results = []
-    for iid, ing in d.items():
-        score = 0
-        if q_lower == iid.lower():
-            score = 10
-        elif q_lower in iid.lower():
-            score = 7
-        elif q_lower in ing.get("name_fr", "").lower():
-            score = 6
-        elif q_lower in ing.get("name_en", "").lower():
-            score = 5
-        elif any(q_lower in t.lower() for t in ing.get("search_tokens", [])):
-            score = 3
-        if score > 0:
-            results.append((score, iid, ing))
-
-    results.sort(key=lambda x: -x[0])
-    av = load_availability_graph()
+    from backend.services.ingredient_catalog import search as catalog_search
+    results = catalog_search(q, limit=limit)
     return {
         "query":   q,
         "total":   len(results),
         "results": [
-            {"id": iid, "name_fr": ing.get("name_fr", iid),
-             "name_en": ing.get("name_en", iid),
-             "category": ing.get("category", ""),
-             "available_in_france": av.get(iid, {}).get("available_in_france", True),
-             "score": s}
-            for s, iid, ing in results[:limit]
+            {
+                "id":           r["id"],
+                "name_fr":      r["name_fr"],
+                "name_en":      r["name_en"],
+                "category":     r["category"],
+                "recipe_count": r["recipe_count"],
+            }
+            for r in results
         ],
     }
 

@@ -43,6 +43,8 @@ Contrats vérifiés
 from __future__ import annotations
 
 import importlib
+import importlib.util
+from pathlib import Path
 import sys
 import types
 from dataclasses import dataclass, field
@@ -128,7 +130,9 @@ def pipe(request):
         excluded  = MagicMock(return_value=excluded),
         learning  = MagicMock(side_effect=lambda recipes, context: recipes),
         search    = MagicMock(return_value=list(pool)),
-        batch     = MagicMock(return_value=list(scored)),
+        # batch_score respecte son entrée : si candidates=[], retourne [].
+        # Permet de tester la dégradation gracieuse quand search échoue.
+        batch     = MagicMock(side_effect=lambda r, ctx: [] if not r else list(scored)),
         filter_d  = MagicMock(side_effect=lambda recipes, diet: recipes),
         normalize = MagicMock(side_effect=lambda d: d),
         adjust    = MagicMock(side_effect=lambda recipes, phase=None: recipes),
@@ -136,13 +140,14 @@ def pipe(request):
 
     # ── Modules factices injectés dans sys.modules ────────────────────────────
     backend_mods: dict[str, types.ModuleType] = {
-        # Hiérarchie de packages (nécessaire pour résoudre les imports dotés)
-        "backend":                              _mod("backend"),
-        "backend.core":                         _mod("backend.core"),
-        "backend.engine":                       _mod("backend.engine"),
-        "backend.engine.reco_engine":           _mod("backend.engine.reco_engine"),
-        "backend.engine.search_engine":         _mod("backend.engine.search_engine"),
-        "backend.services":                     _mod("backend.services"),
+        # Hiérarchie de packages — __path__ requis pour que Python
+        # résolve les sous-modules (ex: reco_engine.orchestrator)
+        "backend":                    _mod("backend",                   __path__=[""]),
+        "backend.core":               _mod("backend.core",              __path__=[""]),
+        "backend.engine":             _mod("backend.engine",            __path__=[""]),
+        "backend.engine.reco_engine": _mod("backend.engine.reco_engine",__path__=[""]),
+        "backend.engine.search_engine":_mod("backend.engine.search_engine",__path__=[""]),
+        "backend.services":           _mod("backend.services",          __path__=[""]),
         # Modules feuilles
         "backend.engine.reco_engine.personalization": _mod(
             "backend.engine.reco_engine.personalization",
@@ -181,7 +186,14 @@ def pipe(request):
     _saved = sys.modules.pop(_ORCHESTRATOR_KEY, None)
 
     with patch.dict(sys.modules, backend_mods):
-        orch = importlib.import_module(_ORCHESTRATOR_KEY)
+        # import_module suit __path__ du package mocké → fichier introuvable.
+        # spec_from_file_location charge le fichier directement depuis le disque.
+        _orch_path = (Path(__file__).parent.parent.parent
+                      / "backend" / "engine" / "reco_engine" / "orchestrator.py")
+        _spec = importlib.util.spec_from_file_location(_ORCHESTRATOR_KEY, _orch_path)
+        orch  = importlib.util.module_from_spec(_spec)
+        sys.modules[_ORCHESTRATOR_KEY] = orch
+        _spec.loader.exec_module(orch)
         yield types.SimpleNamespace(recommend=orch.recommend, m=m, ctx=ctx)
 
     # Restauration sys.modules
@@ -414,14 +426,14 @@ class TestGracefulDegradation:
 
     def test_batch_score_empty_result_does_not_crash(self, pipe):
         """Si batch_score retourne [], le pipeline se termine normalement."""
-        pipe.m.batch.return_value = []
+        pipe.m.batch.side_effect = lambda r, ctx: []
         r = pipe.recommend()
         assert r.recipes == []
         assert r.total   == 0
 
     def test_result_always_serializable(self, pipe):
         """to_dict() doit toujours fonctionner, même sur un résultat vide."""
-        pipe.m.batch.return_value = []
+        pipe.m.batch.side_effect = lambda r, ctx: []
         r = pipe.recommend()
         d = r.to_dict()
         assert isinstance(d, dict)

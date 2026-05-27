@@ -17,21 +17,11 @@ Sources : données female_cycle_nutrition.json du projet
 import json as _j
 import logging
 from datetime import datetime
-from backend.core.data_io import load_json, load_nutrition_graph as _load_nutrition_graph
-from backend.core.data_io import _MtimeCache
+from backend.core.data_io import load_cycle_data as _load_cycle_data
+from backend.core.data_io import load_nutrition_graph as _load_nutrition_graph
 from backend.engine.config import DATA_ROOT
 
 logger = logging.getLogger(__name__)
-
-_cycle_cache = _MtimeCache("cycle_engine")
-
-def _load_cycle_data() -> dict:
-    """
-    Chargement via _MtimeCache — rechargé automatiquement si female_cycle_nutrition.json
-    est modifié, contrairement à @lru_cache qui nécessitait un redémarrage du serveur.
-    """
-    path = DATA_ROOT / "modules" / "female_cycle_nutrition.json"
-    return _cycle_cache.get(path, lambda: load_json(path, default={}))
 
 
 PHASE_FROM_DAY = {

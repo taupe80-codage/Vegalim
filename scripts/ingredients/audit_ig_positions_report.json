@@ -1,0 +1,673 @@
+{
+  "generated_at": "2026-05-25T13:17:42.053113",
+  "igs_analysed": 2093,
+  "total_issues": 92,
+  "counts": {
+    "BORDERLINE_FORM_VALUE": 43,
+    "CROSS_MATCH_SUBCAT": 4,
+    "EXPLICIT_MISPLACEMENT": 26,
+    "INVALID_FORM_VALUE": 19
+  },
+  "issues": {
+    "BORDERLINE_FORM_VALUE": [
+      {
+        "id": "ing_05607",
+        "name": "sugar and aspartame sweetener",
+        "location": "leavening_agents_and_additives / sweeteners",
+        "form": "pieces",
+        "detail": "conditionnement, pas une forme"
+      },
+      {
+        "id": "ing_00245",
+        "name": "oat",
+        "location": "cereals_and_grains / oats",
+        "form": "rolled",
+        "detail": "procédé (rolled oats) — défendable"
+      },
+      {
+        "id": "ing_00286",
+        "name": "freekeh (immature wheat)",
+        "location": "cereals_and_grains / wheat",
+        "form": "diced",
+        "detail": "découpe, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_00332",
+        "name": "freekeh",
+        "location": "cereals_and_grains / wheat",
+        "form": "diced",
+        "detail": "découpe, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_00497",
+        "name": "bread, pita",
+        "location": "cereals_and_grains / breads",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_00526",
+        "name": "indian, bread, paratha",
+        "location": "cereals_and_grains / breads",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_01657",
+        "name": "apple",
+        "location": "fruits / apples",
+        "form": "sliced",
+        "detail": "découpe/conditionnement, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_02854",
+        "name": "celery flakes",
+        "location": "vegetables / celery",
+        "form": "rolled",
+        "detail": "procédé (rolled oats) — défendable"
+      },
+      {
+        "id": "ing_03026",
+        "name": "cornmeal (yellow)",
+        "location": "vegetables / corn",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_03628",
+        "name": "tomato",
+        "location": "vegetables / tomatoes",
+        "form": "crushed",
+        "detail": "découpe, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_03636",
+        "name": "red whole tomato",
+        "location": "vegetables / tomatoes",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_04280",
+        "name": "soybean, whole grain",
+        "location": "legumes / soy",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_04622",
+        "name": "flaxseed (linseed), whole and ground",
+        "location": "nuts_and_seeds / seeds",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_04634",
+        "name": "sisymbrium sp. whole",
+        "location": "nuts_and_seeds / seeds",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_02708",
+        "name": "pumpkin and squash whole",
+        "location": "nuts_and_seeds / seeds",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_02824",
+        "name": "pumpkin and squash whole",
+        "location": "nuts_and_seeds / seeds",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_00181",
+        "name": "coconut water",
+        "location": "nuts_and_seeds / coconut",
+        "form": "plant_water",
+        "detail": "valeur non-standard (ex: coconut water)"
+      },
+      {
+        "id": "ing_00524",
+        "name": "indian, bread, naan",
+        "location": "prepared_dishes_and_mixes / breads_and_pastries",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_00584",
+        "name": "whole wheat toast bread",
+        "location": "prepared_dishes_and_mixes / breads_and_pastries",
+        "form": "sliced",
+        "detail": "découpe/conditionnement, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_00586",
+        "name": "wheat toast bread",
+        "location": "prepared_dishes_and_mixes / breads_and_pastries",
+        "form": "sliced",
+        "detail": "découpe/conditionnement, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_00588",
+        "name": "multigrain toast bread",
+        "location": "prepared_dishes_and_mixes / breads_and_pastries",
+        "form": "sliced",
+        "detail": "découpe/conditionnement, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_00590",
+        "name": "brioche toast bread",
+        "location": "prepared_dishes_and_mixes / breads_and_pastries",
+        "form": "sliced",
+        "detail": "découpe/conditionnement, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_00612",
+        "name": "raisin brioche toast",
+        "location": "prepared_dishes_and_mixes / breads_and_pastries",
+        "form": "sliced",
+        "detail": "découpe/conditionnement, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_04875",
+        "name": "butter, whipped",
+        "location": "dairy_products / butter",
+        "form": "whipped",
+        "detail": "texture (acceptable pour cream/butter whipped)"
+      },
+      {
+        "id": "ing_05027",
+        "name": "feta",
+        "location": "dairy_products / cheeses",
+        "form": "grated",
+        "detail": "râpage, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_05065",
+        "name": "parmesan",
+        "location": "dairy_products / cheeses",
+        "form": "grated",
+        "detail": "râpage, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_05067",
+        "name": "parmesan",
+        "location": "dairy_products / cheeses",
+        "form": "grated",
+        "detail": "râpage, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_05069",
+        "name": "parmesan",
+        "location": "dairy_products / cheeses",
+        "form": "grated",
+        "detail": "râpage, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_05073",
+        "name": "parmesan, shredded",
+        "location": "dairy_products / cheeses",
+        "form": "grated",
+        "detail": "râpage, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_05079",
+        "name": "provolone",
+        "location": "dairy_products / cheeses",
+        "form": "sliced",
+        "detail": "découpe/conditionnement, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_05113",
+        "name": "swiss",
+        "location": "dairy_products / cheeses",
+        "form": "grated",
+        "detail": "râpage, pas une forme alimentaire"
+      },
+      {
+        "id": "ing_05353",
+        "name": "ricotta, with whole milk",
+        "location": "dairy_products / cheeses",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_05410",
+        "name": "ewe's whole milk",
+        "location": "dairy_products / milk",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_05412",
+        "name": "buffalo whole milk",
+        "location": "dairy_products / milk",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_05416",
+        "name": "goat's whole milk",
+        "location": "dairy_products / milk",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_05418",
+        "name": "goat's whole milk, UHT",
+        "location": "dairy_products / milk",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_05422",
+        "name": "mare's whole milk",
+        "location": "dairy_products / milk",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_05432",
+        "name": "whole milk",
+        "location": "dairy_products / milk",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_05434",
+        "name": "whole milk, pasteurised",
+        "location": "dairy_products / milk",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_05436",
+        "name": "whole milk, UHT",
+        "location": "dairy_products / milk",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_05503",
+        "name": "whole milk",
+        "location": "dairy_products / condensed_milk",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_05505",
+        "name": "whole milk",
+        "location": "dairy_products / condensed_milk",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      },
+      {
+        "id": "ing_02123",
+        "name": "egg, quail, whole",
+        "location": "eggs / eggs_general",
+        "form": "whole",
+        "detail": "état du grain — chevauchement possible avec le nom"
+      }
+    ],
+    "CROSS_MATCH_SUBCAT": [
+      {
+        "id": "ing_00251",
+        "name": "buckwheat groats",
+        "location": "cereals_and_grains / oats",
+        "candidates": [
+          "cereals_and_grains/buckwheat"
+        ],
+        "detail": "Token(s) du nom correspondent à d'autres sous-cats : ['cereals_and_grains/buckwheat']"
+      },
+      {
+        "id": "ing_00253",
+        "name": "buckwheat groats",
+        "location": "cereals_and_grains / oats",
+        "candidates": [
+          "cereals_and_grains/buckwheat"
+        ],
+        "detail": "Token(s) du nom correspondent à d'autres sous-cats : ['cereals_and_grains/buckwheat']"
+      },
+      {
+        "id": "ing_01298",
+        "name": "watermelon",
+        "location": "fruits / melons",
+        "candidates": [
+          "fruits/watermelons"
+        ],
+        "detail": "Token(s) du nom correspondent à d'autres sous-cats : ['fruits/watermelons']"
+      },
+      {
+        "id": "ing_01300",
+        "name": "watermelon",
+        "location": "fruits / melons",
+        "candidates": [
+          "fruits/watermelons"
+        ],
+        "detail": "Token(s) du nom correspondent à d'autres sous-cats : ['fruits/watermelons']"
+      }
+    ],
+    "EXPLICIT_MISPLACEMENT": [
+      {
+        "id": "ing_00251",
+        "name": "buckwheat groats",
+        "location": "cereals_and_grains / oats",
+        "expected_sub": "buckwheat",
+        "detail": "buckwheat groats ≠ oat — sous-catégorie 'buckwheat' existe"
+      },
+      {
+        "id": "ing_00253",
+        "name": "buckwheat groats",
+        "location": "cereals_and_grains / oats",
+        "expected_sub": "buckwheat",
+        "detail": "buckwheat groats ≠ oat — sous-catégorie 'buckwheat' existe"
+      },
+      {
+        "id": "ing_00922",
+        "name": "plantains",
+        "location": "fruits / bananas",
+        "expected_sub": "plantains",
+        "detail": "plantain ≠ banana — sous-catégorie 'plantains' dédiée existe"
+      },
+      {
+        "id": "ing_00934",
+        "name": "plantain",
+        "location": "fruits / bananas",
+        "expected_sub": "plantains",
+        "detail": "plantain ≠ banana — sous-catégorie 'plantains' dédiée existe"
+      },
+      {
+        "id": "ing_00942",
+        "name": "plantains",
+        "location": "fruits / bananas",
+        "expected_sub": "plantains",
+        "detail": "plantain ≠ banana — sous-catégorie 'plantains' dédiée existe"
+      },
+      {
+        "id": "ing_01022",
+        "name": "lime",
+        "location": "fruits / lemons",
+        "expected_sub": "limes",
+        "detail": "lime ≠ lemon — sous-catégorie 'limes' existe"
+      },
+      {
+        "id": "ing_01024",
+        "name": "lime",
+        "location": "fruits / lemons",
+        "expected_sub": "limes",
+        "detail": "lime ≠ lemon — sous-catégorie 'limes' existe"
+      },
+      {
+        "id": "ing_01032",
+        "name": "lime",
+        "location": "fruits / lemons",
+        "expected_sub": "limes",
+        "detail": "lime ≠ lemon — sous-catégorie 'limes' existe"
+      },
+      {
+        "id": "ing_01068",
+        "name": "prickly pear",
+        "location": "fruits / figs",
+        "expected_sub": "exotic_fruits",
+        "detail": "prickly pear = figue de barbarie ≠ figue — déplacer vers exotic_fruits"
+      },
+      {
+        "id": "ing_01072",
+        "name": "prickly pear",
+        "location": "fruits / figs",
+        "expected_sub": "exotic_fruits",
+        "detail": "prickly pear = figue de barbarie ≠ figue — déplacer vers exotic_fruits"
+      },
+      {
+        "id": "ing_01185",
+        "name": "gooseberry",
+        "location": "fruits / currants",
+        "expected_sub": "exotic_fruits ou nouvelle sous-cat gooseberries",
+        "detail": "gooseberry (groseille à maquereau) ≠ currant (groseille) — genre botanique différent"
+      },
+      {
+        "id": "ing_01298",
+        "name": "watermelon",
+        "location": "fruits / melons",
+        "expected_sub": "watermelons",
+        "detail": "watermelon ≠ melon — sous-catégorie 'watermelons' dédiée existe"
+      },
+      {
+        "id": "ing_01300",
+        "name": "watermelon",
+        "location": "fruits / melons",
+        "expected_sub": "watermelons",
+        "detail": "watermelon ≠ melon — sous-catégorie 'watermelons' dédiée existe"
+      },
+      {
+        "id": "ing_01342",
+        "name": "mulberry",
+        "location": "fruits / blackberries",
+        "expected_sub": "exotic_fruits",
+        "detail": "mulberry (Morus) ≠ blackberry (Rubus) — déplacer vers exotic_fruits"
+      },
+      {
+        "id": "ing_01346",
+        "name": "mulberry",
+        "location": "fruits / blackberries",
+        "expected_sub": "exotic_fruits",
+        "detail": "mulberry (Morus) ≠ blackberry (Rubus) — déplacer vers exotic_fruits"
+      },
+      {
+        "id": "ing_02400",
+        "name": "fiddlehead greens (ferns)",
+        "location": "vegetables / mushrooms",
+        "expected_sub": "salad_greens",
+        "detail": "fiddlehead = jeune pousse de fougère ≠ champignon — déplacer vers salad_greens"
+      },
+      {
+        "id": "ing_00615",
+        "name": "carob (St. John's bread)",
+        "location": "vegetables / root_vegetables",
+        "expected_sub": "legumes/[nouvelle sous-cat carob] ou herbs_and_spices",
+        "detail": "carob (caroube) = légumineuse arborée ≠ légume-racine"
+      },
+      {
+        "id": "ing_03279",
+        "name": "allspice",
+        "location": "vegetables / chili_peppers",
+        "expected_sub": "herbs_and_spices/[nouvelle sous-cat allspice]",
+        "detail": "allspice (piment de la Jamaïque) = épice aromatique ≠ piment — créer sous-cat allspice"
+      },
+      {
+        "id": "ing_04112",
+        "name": "hyacinth",
+        "location": "legumes / cowpeas",
+        "expected_sub": "beans",
+        "detail": "hyacinth bean (Lablab purpureus) ≠ cowpea (Vigna unguiculata) — déplacer vers beans"
+      },
+      {
+        "id": "ing_04114",
+        "name": "hyacinth",
+        "location": "legumes / cowpeas",
+        "expected_sub": "beans",
+        "detail": "hyacinth bean (Lablab purpureus) ≠ cowpea (Vigna unguiculata) — déplacer vers beans"
+      },
+      {
+        "id": "ing_04180",
+        "name": "hyacinth",
+        "location": "legumes / cowpeas",
+        "expected_sub": "beans",
+        "detail": "hyacinth bean (Lablab purpureus) ≠ cowpea (Vigna unguiculata) — déplacer vers beans"
+      },
+      {
+        "id": "ing_04214",
+        "name": "hyacinth",
+        "location": "legumes / cowpeas",
+        "expected_sub": "beans",
+        "detail": "hyacinth bean (Lablab purpureus) ≠ cowpea (Vigna unguiculata) — déplacer vers beans"
+      },
+      {
+        "id": "ing_04216",
+        "name": "hyacinth",
+        "location": "legumes / cowpeas",
+        "expected_sub": "beans",
+        "detail": "hyacinth bean (Lablab purpureus) ≠ cowpea (Vigna unguiculata) — déplacer vers beans"
+      },
+      {
+        "id": "ing_02714",
+        "name": "pie pumpkin squash",
+        "location": "nuts_and_seeds / seeds",
+        "expected_sub": "squash",
+        "detail": "pie pumpkin squash (USDA:2727578, part=peeled) = chair de légume ≠ graine — déplacer vers vegetables/squash"
+      },
+      {
+        "id": "ing_03032",
+        "name": "acorns",
+        "location": "nuts_and_seeds / walnuts",
+        "expected_sub": "nuts_and_seeds/seeds ou nouvelle sous-cat acorns",
+        "detail": "acorn (gland de chêne) ≠ noix (Juglans) — famille botanique différente"
+      },
+      {
+        "id": "ing_03034",
+        "name": "acorns",
+        "location": "nuts_and_seeds / walnuts",
+        "expected_sub": "nuts_and_seeds/seeds ou nouvelle sous-cat acorns",
+        "detail": "acorn (gland de chêne) ≠ noix (Juglans) — famille botanique différente"
+      }
+    ],
+    "INVALID_FORM_VALUE": [
+      {
+        "id": "ing_00691",
+        "name": "brown rice",
+        "location": "cereals_and_grains / rice",
+        "form": "long_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_00693",
+        "name": "brown rice",
+        "location": "cereals_and_grains / rice",
+        "form": "long_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_00695",
+        "name": "brown rice",
+        "location": "cereals_and_grains / rice",
+        "form": "medium_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_00697",
+        "name": "brown rice",
+        "location": "cereals_and_grains / rice",
+        "form": "medium_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_00703",
+        "name": "white rice",
+        "location": "cereals_and_grains / rice",
+        "form": "long_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_00705",
+        "name": "white rice",
+        "location": "cereals_and_grains / rice",
+        "form": "long_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_00707",
+        "name": "white rice",
+        "location": "cereals_and_grains / rice",
+        "form": "long_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_00709",
+        "name": "white rice",
+        "location": "cereals_and_grains / rice",
+        "form": "long_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_00711",
+        "name": "white rice",
+        "location": "cereals_and_grains / rice",
+        "form": "medium_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_00713",
+        "name": "white rice",
+        "location": "cereals_and_grains / rice",
+        "form": "medium_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_00715",
+        "name": "white rice",
+        "location": "cereals_and_grains / rice",
+        "form": "short_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_00717",
+        "name": "white rice",
+        "location": "cereals_and_grains / rice",
+        "form": "short_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_00784",
+        "name": "white rice",
+        "location": "cereals_and_grains / rice",
+        "form": "long_grain",
+        "detail": "taille de grain → appartient au nom canonique, pas à form"
+      },
+      {
+        "id": "ing_02321",
+        "name": "broccoli",
+        "location": "vegetables / broccoli",
+        "form": "crunchy",
+        "detail": "texture → supprimer (ex: broccoli bouilli 'al dente' n'est pas une forme)"
+      },
+      {
+        "id": "ing_04568",
+        "name": "peanut butter, fat, sugar and salt added",
+        "location": "nuts_and_seeds / nut_butters",
+        "form": "crunchy",
+        "detail": "texture → supprimer (ex: broccoli bouilli 'al dente' n'est pas une forme)"
+      },
+      {
+        "id": "ing_04570",
+        "name": "peanut butter, smooth type, fat, sugar and salt added",
+        "location": "nuts_and_seeds / nut_butters",
+        "form": "creamy",
+        "detail": "texture → supprimer ou garder uniquement pour les nut butters"
+      },
+      {
+        "id": "ing_04919",
+        "name": "almond butter, creamy",
+        "location": "nuts_and_seeds / nut_butters",
+        "form": "creamy",
+        "detail": "texture → supprimer ou garder uniquement pour les nut butters"
+      },
+      {
+        "id": "ing_04937",
+        "name": "peanut butter, creamy",
+        "location": "nuts_and_seeds / nut_butters",
+        "form": "creamy",
+        "detail": "texture → supprimer ou garder uniquement pour les nut butters"
+      },
+      {
+        "id": "ing_04939",
+        "name": "sesame butter, creamy",
+        "location": "nuts_and_seeds / nut_butters",
+        "form": "creamy",
+        "detail": "texture → supprimer ou garder uniquement pour les nut butters"
+      }
+    ]
+  }
+}

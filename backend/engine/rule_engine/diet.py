@@ -257,8 +257,10 @@ def compute_diet_flags(recipe: dict) -> dict:
 
     ids = _extract_ids(recipe)
 
-    is_vegan        = not any(i in NON_VEGAN for i in ids)
-    is_vegetarian   = is_vegan or not any(i in NON_VEGETARIAN for i in ids)
+    has_non_vegan        = any(i in NON_VEGAN for i in ids)
+    has_non_vegetarian   = any(i in NON_VEGETARIAN for i in ids)
+    is_vegan        = not has_non_vegan and not has_non_vegetarian
+    is_vegetarian   = not has_non_vegetarian
     is_gluten_free  = not any(i in GLUTEN_IDS for i in ids)
     is_lactose_free = not any(i in LACTOSE_IDS for i in ids)
     is_nut_free     = not any(i in NUT_IDS for i in ids)
@@ -409,6 +411,12 @@ def apply_all_scores(recipe: dict, force: bool = False) -> dict:
     if not force and recipe.get("diet_flags_source") == "manual":
         return recipe
 
+    # Avec force=True : masquer temporairement diet_flags_source pour que
+    # compute_diet_flags recalcule au lieu de retourner l'existant.
+    _saved_source = recipe.get("diet_flags", {}).get("diet_flags_source") if force else None
+    if force and isinstance(recipe.get("diet_flags"), dict):
+        recipe["diet_flags"].pop("diet_flags_source", None)
+
     recipe["diet_flags"]    = compute_diet_flags(recipe)
     recipe["health_scores"] = compute_health_scores(recipe)
     recipe["context_tags"]  = compute_context_tags(recipe)
@@ -422,6 +430,11 @@ def apply_flags(recipe: dict, force: bool = False) -> dict:
     """
     if not force and recipe.get("diet_flags_source") == "manual":
         return recipe
+
+    # Avec force=True : masquer temporairement diet_flags_source
+    if force and isinstance(recipe.get("diet_flags"), dict):
+        recipe["diet_flags"].pop("diet_flags_source", None)
+
     recipe["diet_flags"] = compute_diet_flags(recipe)
     return recipe
 

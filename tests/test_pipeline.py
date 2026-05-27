@@ -1,19 +1,20 @@
 """
 tests/test_pipeline.py — Régression dataset + engines principaux (v6).
 """
-import sys, json
+import json
 import pytest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
-sys.path.insert(0, str(ROOT / "backend"))
-
 DATA     = ROOT / "backend" / "data"
-_raw     = json.load(open(DATA / "recipes" / "recipes.json", encoding="utf-8"))
-RECIPES  = _raw.get("recipes", _raw) if isinstance(_raw, dict) else _raw
-NUTR_G   = json.load(open(DATA / "graphs" / "recipe_nutrition_graph_v1.json", encoding="utf-8"))
-SCORE_G  = json.load(open(DATA / "graphs" / "recipe_scoring_graph_v1.json", encoding="utf-8"))
+def _load(path: Path):
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+_raw    = _load(DATA / "recipes" / "recipes.json")
+RECIPES = _raw.get("recipes", _raw) if isinstance(_raw, dict) else _raw
+NUTR_G  = _load(DATA / "graphs" / "recipe_nutrition_graph_v1.json")
+SCORE_G = _load(DATA / "graphs" / "recipe_scoring_graph_v1.json")
 
 # ── Dataset ───────────────────────────────────────────────────────────────────
 
@@ -45,7 +46,6 @@ def test_no_iconic_score_default():
 
 # ── Graphes ───────────────────────────────────────────────────────────────────
 
-@pytest.mark.xfail(reason="10 recettes récentes absentes du graphe nutrition — pipeline à relancer")
 def test_nutrition_graph_complete():
     all_ids  = {str(r["id"]) for r in RECIPES}
     missing  = all_ids - set(NUTR_G.keys())
@@ -60,7 +60,6 @@ def test_nutrition_has_micronutrients():
     with_fe = sum(1 for n in NUTR_G.values() if n.get("iron", 0) > 0)
     assert with_fe / total >= 0.9, f"Seulement {with_fe}/{total} avec fer"
 
-@pytest.mark.xfail(reason="10 recettes récentes absentes du graphe score — pipeline à relancer")
 def test_score_graph_complete():
     all_ids = {str(r["id"]) for r in RECIPES}
     missing = all_ids - set(SCORE_G.keys())
@@ -71,22 +70,34 @@ def test_vegan_variants_have_nutrition():
     missing = [r["id"] for r in auto if str(r["id"]) not in NUTR_G]
     assert not missing, f"Variantes sans nutrition : {missing[:5]}"
 
-@pytest.mark.xfail(reason="rice_biryani_2e55a5 référencé dans vegan_variants_index mais absent de recipes.json — index à nettoyer")
 def test_vegan_index_coherent():
     idx_path = DATA / "config" / "vegan_variants_index.json"
     if not idx_path.exists():
         return
-    idx = json.load(open(idx_path, encoding="utf-8"))
+    idx = _load(idx_path)
     recipe_ids = {str(r["id"]) for r in RECIPES}
     for orig_id, info in idx.get("original_to_vegan", {}).items():
         assert str(orig_id) in recipe_ids, f"original_id {orig_id} absent"
 
-# ── Engines Integration (v6) ──────────────────────────────────────────────────
+# ── Pipeline batch (engine/pipeline.py) ──────────────────────────────────────
+# NB : les tests de bout-en-bout du service de recommandation (reco_service)
+# sont dans test_recommendation_flow.py — ce fichier couvre le pipeline batch.
 
-def test_reco_service_flow():
-    from backend.services.reco_service import recommend
-    # Vérifier que le moteur principal gère les nouvelles structures v6
-    results = recommend(limit=3)
-    assert len(results) > 0
-    assert "composition" in results[0]
-    assert "final_score" in results[0]
+def test_pipeline_run_retourne_structure_complete():
+    """pipeline.run() doit retourner toutes les clés attendues dont timing_ms."""
+    from backend.engine.pipeline import run
+    result = run(limit=5)
+    required = {"recipes", "total", "errors", "skipped", "timing_ms"}
+    missing  = required - result.keys()
+    assert not missing, f"Clés manquantes dans pipeline.run() : {missing}"
+
+def test_pipeline_timing_ms_est_entier_positif():
+    from backend.engine.pipeline import run
+    result = run(limit=3)
+    assert isinstance(result["timing_ms"], int)
+    assert result["timing_ms"] >= 0
+
+def test_pipeline_total_coherent_avec_recipes():
+    from backend.engine.pipeline import run
+    result = run(limit=5)
+    assert result["total"] == len(result["recipes"])

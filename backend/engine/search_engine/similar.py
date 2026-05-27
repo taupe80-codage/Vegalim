@@ -8,21 +8,34 @@ API :
 """
 from __future__ import annotations
 import logging
-from functools import lru_cache
 
 logger = logging.getLogger(__name__)
 
-@lru_cache(maxsize=1)
+
 def _all_recipes() -> list[dict]:
-    from backend.db.data_access import get_data
-    return get_data.recipes.list_all()
+    # FIX #9 : suppression du @lru_cache local — data_io.load_recipes() possède
+    # déjà son propre cache mtime-aware qui se rafraîchit si recipes.json change.
+    # Le double cache empêchait la prise en compte des nouvelles recettes du pipeline.
+    try:
+        from backend.core.data_io import load_recipes
+        return load_recipes()
+    except Exception:
+        from backend.db.data_access import get_data
+        return get_data.recipes.list_all()
 
 
 def _ingredient_similarity(a: dict, b: dict) -> float:
-    """Jaccard sur les ingrédients."""
+    """Jaccard sur les ingrédients (composition v6 ou ingredients legacy)."""
     def _ids(r):
-        return {(i.get("ingredient_id", str(i)) if isinstance(i, dict) else str(i)).lower()
-                for i in r.get("ingredients", [])}
+        # v6 : composition [{ingredient: "id", ...}]
+        comp = r.get("composition") or r.get("ingredients", [])
+        return {
+            (
+                i.get("ingredient", i.get("ingredient_id", str(i)))
+                if isinstance(i, dict) else str(i)
+            ).lower()
+            for i in comp
+        }
     sa, sb = _ids(a), _ids(b)
     if not sa or not sb: return 0.0
     return len(sa & sb) / len(sa | sb)
@@ -65,8 +78,8 @@ def find_similar(recipe: dict, limit: int = 5) -> list[dict]:
     return results[:limit]
 
 
-def find_similar_by_id(recipe_id: int, limit: int = 5) -> list[dict]:
-    """Raccourci : find_similar depuis un id."""
+def find_similar_by_id(recipe_id: "str | int", limit: int = 5) -> list[dict]:
+    """Raccourci : find_similar depuis un id. Accepte str ou int (IDs v6 = strings)."""
     from backend.db.data_access import get_data
     recipe = get_data.recipes.get_by_id(recipe_id)
     if not recipe:

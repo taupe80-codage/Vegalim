@@ -27,6 +27,7 @@ from __future__ import annotations
 import logging
 import time
 from dataclasses import dataclass, field
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -152,7 +153,27 @@ def _search(query: str, limit: int) -> list[dict]:
     """
     try:
         from backend.engine.search_engine.core import search
-        return search(query=query or "", limit=limit)
+
+        # Résolution des chemins : DATA_ROOT en priorité, fallback Path(__file__)
+        # Le fallback est essentiel quand backend.engine.config est mocké (tests d'intégration).
+        try:
+            from backend.engine.config import DATA_ROOT
+            index_path   = str(DATA_ROOT / "indexes"     / "search_index.json")
+            mapping_path = str(DATA_ROOT / "ingredients" / "fr_to_en_mapping.json")
+        except (ImportError, AttributeError):
+            # config mocké ou DATA_ROOT absent — résolution relative à ce fichier
+            _project_root = Path(__file__).resolve().parents[3]
+            index_path   = str(_project_root / "backend" / "data" / "indexes"     / "search_index.json")
+            mapping_path = str(_project_root / "backend" / "data" / "ingredients" / "fr_to_en_mapping.json")
+
+        results = search(
+            query_text   = query or "",
+            index_path   = index_path,
+            mapping_path = mapping_path,
+            limit        = limit,
+            include_context = False,
+        )
+        return [r for r in results if isinstance(r, dict)]
     except Exception as e:
         logger.error("orchestrator: search_engine indisponible — %s", e)
         return []

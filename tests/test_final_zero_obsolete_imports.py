@@ -29,6 +29,7 @@ ARCHIVED = [
     "ingredient_price_engine",
     "ingredient_reuse_optimizer",
     "ingredient_synonym_resolver",
+    "learning_engine",              # FIX #15 — migré vers reco_engine.learning
     "meal_planner",
     "meal_structure_engine",
     "missing_ingredients_tracker",
@@ -123,6 +124,7 @@ def test_no_seasonality_engine(violations):          _check(violations, "seasona
 def test_no_servings_engine(violations):             _check(violations, "servings_engine")
 def test_no_shopping_engine(violations):             _check(violations, "shopping_engine")
 def test_no_similarity_engine(violations):           _check(violations, "similarity_engine")
+def test_no_learning_engine(violations):             _check(violations, "learning_engine")  # FIX #15
 def test_no_sustainability_engine(violations):       _check(violations, "sustainability_engine")
 def test_no_vegan_variant_engine(violations):        _check(violations, "vegan_variant_engine")
 
@@ -176,12 +178,20 @@ def test_normalize_servings():
     assert normalize_servings({"servings": 4})["servings"] == 4
 
 
-def test_base_engine_no_score_explainer():
-    import inspect
-    import backend.engine.base_engine as mod
-    src = inspect.getsource(mod)
-    assert "score_explainer" not in src
-    assert "score_engine.explainer" in src
+def test_base_engine_removed():
+    """base_engine.py a été supprimé lors de la migration v6.
+    Ce test vérifie qu'il n'est plus importé nulle part dans le projet.
+    """
+    import os
+    from pathlib import Path
+    root = Path(__file__).parent.parent / "backend"
+    for py_file in root.rglob("*.py"):
+        if "base_engine" in py_file.name:
+            continue  # le fichier lui-même s'il existait encore
+        src = py_file.read_text(encoding="utf-8", errors="ignore")
+        assert "base_engine" not in src, (
+            f"Import obsolète de base_engine trouvé dans {py_file.relative_to(root.parent)}"
+        )
 
 
 def test_pipeline_no_archived_engines():

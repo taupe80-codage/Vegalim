@@ -162,14 +162,12 @@ def get_cycle_ingredients(phase: str) -> list[str]:
 
     Accepte les noms courts (follicular, menstrual, ovulatory, luteal)
     ou longs (follicular_phase, ...).
-    Source : female_cycle_nutrition.json
+    Source : data_io.load_cycle_data() — cache _MtimeCache partagé
+    avec cycle_engine (pas de double lecture du fichier).
     """
-    import json as _json
-    from backend.engine.config import DATA_ROOT
-    _cycle_path = DATA_ROOT / "modules" / "female_cycle_nutrition.json"
     try:
-        with open(_cycle_path, encoding="utf-8") as _f:
-            cycle_data = _json.load(_f)
+        from backend.core.data_io import load_cycle_data
+        cycle_data = load_cycle_data()
     except Exception:
         return []
     phases = cycle_data.get("cycle_phases", {})

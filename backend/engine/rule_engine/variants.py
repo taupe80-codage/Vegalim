@@ -27,10 +27,18 @@ VEGAN_SUBS: dict[str, str | None] = {
 
 @lru_cache(maxsize=1)
 def _variant_index() -> dict:
+    """
+    Charge l'index des variantes vegan pré-calculées.
+    Source : backend/data/config/vegan_variants_index.json
+
+    Fix : l'ancienne implémentation appelait get_data.graphs.get_raw("vegan_variants")
+    mais l'alias "vegan_variants" n'existait pas dans GraphRepository.GRAPH_ALIASES,
+    et le fichier est dans data/config/ (pas data/graphs/). L'index retournait toujours {}.
+    """
     try:
-        from backend.db.data_access import get_data
-        raw = get_data.graphs.get_raw("vegan_variants") or {}
-        return raw.get("original_to_vegan", {})
+        from backend.core.data_io import load_vegan_variants_index
+        raw = load_vegan_variants_index()
+        return raw.get("original_to_vegan", raw) if isinstance(raw, dict) else {}
     except Exception:
         return {}
 

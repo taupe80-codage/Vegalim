@@ -89,11 +89,9 @@ export const recipes = {
     recipeStore.setAll(list);
     return data;
   },
-  // byId : cherche d'abord dans le store, puis tente l'API avec l'id string
+  // byId : toujours appeler l'API — enrich_one ajoute diet_flags_enriched,
+  // nutrition_highlights et d'autres champs absents du store (issu de la liste).
   byId: async (id) => {
-    const cached = recipeStore.get(id);
-    if (cached) return cached;
-    // L'API backend attend un int — on tente quand même (marche si l'id est numérique)
     try {
       const data = await get(`/recettes/${encodeURIComponent(id)}`);
       recipeStore.set(data);

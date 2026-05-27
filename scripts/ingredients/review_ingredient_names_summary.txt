@@ -1,0 +1,315 @@
+ANALYSE NOMS INGRÉDIENTS — tree vs CIQUAL/USDA/CNF
+=================================================================
+  Groupes dans le tree          : 2093
+  Groupes analysés              : 2093
+  Groupes avec source trouvée   : 2093
+  Noms à simplifier             : 1186
+  Groupes avec équivalent EN à ajouter : 425 (axes FR existants, EN manquant)
+  Groupes avec axes vraiment nouveaux  : 0 (absents du schema)
+  Groupes avec tokens inconnus  : 71
+
+── NOMS PROPOSÉS CHANGÉS (50 premiers) ───────────────────────────
+  [ing_00063] leavening_agents_and_additives/sweeteners
+    EN  : 'aspartame sweetener, powder'             →  'Aspartame sweetener'
+    FR  : "édulcorant à l'aspartame"                →  "Édulcorant à l'aspartame"
+
+  [ing_00007] leavening_agents_and_additives/gelling_agents
+    EN  : 'pectin'                                  →  'Pectin liquid'
+    FR  : 'pectine'                                 →  'Pectine'
+
+  [ing_00027] leavening_agents_and_additives/yeasts
+    EN  : "leavening agent, yeast, baker's"         →  'Leavening agent yeast bakers compressed'
+    FR  : 'levure de boulangerie'                   →  'Levure de boulangerie'
+
+  [ing_00023] leavening_agents_and_additives/baking_powders
+    EN  : 'baking soda'                             →  'Leavening agent baking soda'
+    FR  : 'bicarbonate de soude'                    →  'Bicarbonate de soude'
+
+  [ing_00067] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'dulse (laver, nori)'                     →  'Seaweed dulse'
+    FR  : 'dulse (rhodymemie palme, porphyre, nori)'  →  'Dulse'
+
+  [ing_00069] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'dulse (laver, nori)'                     →  'Seaweed dulse'
+    FR  : 'rhodyménie palmé (main de mere, nori)'   →  'Rhodyménie palmé'
+
+  [ing_00071] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'irishmoss'                               →  'Seaweed irishmoss'
+    FR  : "mousse d'Irlande"                        →  "Mousse d'Irlande"
+
+  [ing_00073] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'kelp (kombu, tangle)'                    →  'Seaweed kelp'
+    FR  : 'varech (kelp, kombu, tangle)'            →  'Varech'
+
+  [ing_00075] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'spirulina'                               →  'Seaweed spirulina'
+    FR  : 'spiruline'                               →  'Spiruline'
+
+  [ing_00077] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'spirulina'                               →  'Seaweed spirulina'
+    FR  : 'spiruline'                               →  'Spiruline'
+
+  [ing_00079] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'wakame'                                  →  'Seaweed wakame'
+    FR  : 'wakame'                                  →  'Wakame'
+
+  [ing_00083] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'ao-nori (Ulva sp.)'                      →  'Aonori'
+    FR  : 'ao-nori (Ulva sp., ex Enteromorpha sp.)'  →  'Ao-nori'
+
+  [ing_00085] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'knotted wrack (Ascophyllum nodosum)'     →  'Knotted wrack'
+    FR  : 'ascophylle noueux'                       →  'Ascophylle noueux'
+
+  [ing_00088] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'chlorella'                               →  'Chlorella'
+    FR  : 'chlorelle (chlorella)'                   →  'Chlorelle'
+
+  [ing_00090] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'dulse (Palmaria palmata)'                →  'Dulse'
+    FR  : 'dulse (Palmaria palmata)'                →  'Dulse'
+
+  [ing_00092] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'bladder wrack (Fucus vesiculosus)'       →  'Bladder wrack'
+    FR  : 'fucus vésiculeux (Fucus serratus ou Fucus vesiculosus)'  →  'Fucus vésiculeux'
+
+  [ing_00094] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'irish moss (Chondrus crispus)'           →  'Irish moss'
+    FR  : 'goémon rouge (Chondrus crispus)'         →  'Goémon rouge'
+
+  [ing_00101] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'breton kombu (Laminaria digitata)'       →  'Breton kombu'
+    FR  : 'kombu breton (Laminaria digitata)'       →  'Kombu breton'
+
+  [ing_00103] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'japanese kombu (Saccharina japonica)'    →  'Japanese kombu'
+    FR  : 'kombu japonais (Saccharina japonica)'    →  'Kombu japonais'
+
+  [ing_00106] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'royal kombu (Saccharina latissima)'      →  'Royal kombu'
+    FR  : 'kombu royal (Saccharina latissima)'      →  'Kombu royal'
+
+  [ing_00108] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'lithothamnion'                           →  'Lithothamnion'
+    FR  : 'lithothamne (Lithothamnion)'             →  'Lithothamne'
+
+  [ing_00113] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'nori (Porphyra sp.)'                     →  'Nori'
+    FR  : 'nori (Porphyra sp., Pyropia)'            →  'Nori'
+
+  [ing_00115] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'spirulina (Spirulina sp.)'               →  'Spirulina'
+    FR  : 'spiruline (Spirulina sp.)'               →  'Spiruline'
+
+  [ing_00117] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'atlantic wakame (Alaria esculenta)'      →  'Atlantic wakame'
+    FR  : 'wakamé atlantique (Alaria esculenta)'    →  'Wakamé atlantique'
+
+  [ing_03533] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'sea lettuce (Ulva sp.)'                  →  'Sea lettuce'
+    FR  : 'laitue de mer (Ulva sp.)'                →  'Laitue de mer'
+
+  [ing_03935] seaweeds_and_sea_vegetables/seaweeds
+    EN  : 'sea bean (Himanthalia elongata)'         →  'Sea bean'
+    FR  : 'haricot de mer (Himanthalia elongata)'   →  'Haricot de mer'
+
+  [ing_00123] beverages/alcohols
+    EN  : 'rum-type spirit (alcohol evaporated)'    →  'Rumtype spirit'
+    FR  : 'alcool type rhum (évaporé à la cuisson)'  →  'Évaporé à la cuisson'
+
+  [ing_00130] beverages/alcohols
+    EN  : 'wine (alcohol evaporated)'               →  'Wine'
+    FR  : 'vin (alcool évaporé)'                    →  'Alcool évaporé'
+
+  [ing_05622] beverages/cacao
+    EN  : 'cocoa powder, unsweetened'               →  'Cocoa powder'
+    FR  : 'cacao'                                   →  'Cacao'
+
+  [ing_00168] beverages/coffee
+    EN  : 'coffee, half the caffeine'               →  'Coffee half the caffeine'
+    FR  : 'café (50% de caféine)'                   →  '50% de caféine'
+
+  [ing_00170] beverages/coffee
+    EN  : 'coffee'                                  →  'Coffee regular'
+    FR  : 'café (régulier)'                         →  'Régulier'
+
+  [ing_00220] condiments_and_sauces/vinegars
+    EN  : 'vinegar, distilled (white)'              →  'Vinegar distilled'
+    FR  : 'vinaigre (blanc)'                        →  'Vinaigre'
+
+  [ing_00230] cereals_and_grains/amaranth
+    EN  : 'amaranth'                                →  'Amaranth leaves'
+    FR  : 'amarante'                                →  'Amarante'
+
+  [ing_00240] cereals_and_grains/amaranth
+    EN  : 'amaranth'                                →  'Amaranth leaves'
+    FR  : 'amarante'                                →  'Amarante'
+
+  [ing_00247] cereals_and_grains/oats
+    EN  : 'oat'                                     →  'Oat whole grain'
+    FR  : 'avoine'                                  →  'Avoine'
+
+  [ing_00263] cereals_and_grains/oats
+    EN  : 'oat'                                     →  'Oats whole grain'
+    FR  : 'avoine'                                  →  'Avoine'
+    INCONNUS EN   : ['old fashioned', 'steel cut']
+
+  [ing_00259] cereals_and_grains/oats
+    EN  : 'oat'                                     →  'Oat flour wholegrain'
+    FR  : 'avoine'                                  →  'Avoine'
+
+  [ing_00286] cereals_and_grains/wheat
+    EN  : 'freekeh (immature wheat)'                →  'Freekeh'
+    FR  : 'frik (blé immature)'                     →  'Blé immature'
+
+  [ing_00294] cereals_and_grains/wheat
+    EN  : 'durum'                                   →  'Wheat durum'
+    FR  : 'blé durum'                               →  'Blé durum'
+
+  [ing_00296] cereals_and_grains/wheat
+    EN  : 'hard red spring'                         →  'Wheat hard red spring'
+    FR  : 'blé de force roux de printemps (blé vitreux roux de printemps)'  →  'Blé vitreux roux de printemps'
+
+  [ing_00298] cereals_and_grains/wheat
+    EN  : 'hard red winter'                         →  'Wheat hard red winter'
+    FR  : "blé de force roux d'hiver (blé vitreux roux d'hiver)"  →  "Blé vitreux roux d'hiver"
+
+  [ing_00300] cereals_and_grains/wheat
+    EN  : 'hard white'                              →  'Wheat hard white'
+    FR  : 'blé blanc dur'                           →  'Blé blanc dur'
+
+  [ing_00302] cereals_and_grains/wheat
+    EN  : 'Kamut (Khorasan wheat)'                  →  'Wheat kamut khorasan'
+    FR  : 'kamut khorasan'                          →  'Kamut khorasan'
+
+  [ing_00304] cereals_and_grains/wheat
+    EN  : 'Kamut (Khorasan wheat)'                  →  'Wheat kamut khorasan'
+    FR  : 'kamut khorasan'                          →  'Kamut khorasan'
+
+  [ing_00306] cereals_and_grains/wheat
+    EN  : 'soft red winter'                         →  'Wheat soft red winter'
+    FR  : "blé tendre rouge d'hiver"                →  "Blé tendre rouge d'hiver"
+
+  [ing_00308] cereals_and_grains/wheat
+    EN  : 'soft white'                              →  'Wheat soft white'
+    FR  : 'blé blanc tendre'                        →  'Blé blanc tendre'
+
+  [ing_00314] cereals_and_grains/wheat
+    EN  : 'vital wheat gluten'                      →  'Wheat vital wheat gluten'
+    FR  : 'gluten de blé vital'                     →  'Gluten de blé vital'
+
+  [ing_00332] cereals_and_grains/wheat
+    EN  : 'freekeh, cooked'                         →  'Freekeh'
+    FR  : 'frik (blé immature)'                     →  'Blé immature'
+
+  [ing_00340] cereals_and_grains/wheat
+    EN  : 'cake flour T45'                          →  'Cake flour t45'
+    FR  : 'froment T45 (pour pâtisserie)'           →  'Pour pâtisserie'
+
+  [ing_00383] cereals_and_grains/wheat
+    EN  : 'wheat'                                   →  'Wheat allpurpose'
+    FR  : 'blé'                                     →  'Blé'
+
+
+── AXES EN À AJOUTER (équivalents FR existent déjà) ──────────────
+  color                (FR: None) : ['black', 'brown', 'dark', 'green', 'light', 'orange']
+  cooking_state        (FR: etat_cuisson) : ['raw']
+  draining             (FR: ['egouttage', 'milieu_conservation']) : ['drained']
+  fat_content          (FR: teneur_MG) : ['whole']
+  form                 (FR: forme) : ['butter', 'cream', 'diced', 'juice', 'zest']
+  origin               (FR: origine) : ['wild']
+  part                 (FR: partie) : ['bulb', 'kernel', 'leaf', 'seed', 'yolk']
+  ripeness             (FR: maturite) : ['ripe']
+  ripening             (FR: None) : ['hard', 'mature', 'young']
+  seasoning            (FR: assaisonnement) : ['plain']
+  size                 (FR: None) : ['baby', 'cherry', 'large', 'small']
+  sodium               (FR: None) : ['added', 'low', 'no_added', 'reduced']
+  thermal_state        (FR: etat_thermique) : ['fresh', 'frozen', 'pasteurized', 'refrigerated', 'uht']
+  treatment            (FR: traitement) : ['cold_pressed', 'dry_roasted', 'extra_virgin', 'marinated', 'oil_roasted', 'roasted']
+  variety              (FR: None) : ['black', 'cannellini', 'fuji', 'gala', 'golden_delicious', 'granny_smith']
+
+── AXES VRAIMENT NOUVEAUX (absents du schema) ────────────────────
+
+── TOKENS EN INCONNUS (fréquence) ───────────────────────────────
+  cranberry                      : 2 occurrence(s)
+  without skin                   : 2 occurrence(s)
+  tomato                         : 2 occurrence(s)
+  fat                            : 2 occurrence(s)
+  sugar and salt added           : 2 occurrence(s)
+  fat and sugar added            : 2 occurrence(s)
+  coffee                         : 1 occurrence(s)
+  decaffeinated                  : 1 occurrence(s)
+  vinegar                        : 1 occurrence(s)
+  balsamic                       : 1 occurrence(s)
+  amaranth                       : 1 occurrence(s)
+  old fashioned                  : 1 occurrence(s)
+  steel cut                      : 1 occurrence(s)
+  millet                         : 1 occurrence(s)
+  barley flour                   : 1 occurrence(s)
+  lemon peel                     : 1 occurrence(s)
+  quince                         : 1 occurrence(s)
+  strawberry                     : 1 occurrence(s)
+  raspberry                      : 1 occurrence(s)
+  from concentrate               : 1 occurrence(s)
+  not from concentrate           : 1 occurrence(s)
+  with skin                      : 1 occurrence(s)
+  grape                          : 1 occurrence(s)
+  red or green                   : 1 occurrence(s)
+  adherent skin                  : 1 occurrence(s)
+  grapes                         : 1 occurrence(s)
+  seedless                       : 1 occurrence(s)
+  cloves                         : 1 occurrence(s)
+  bay leaf                       : 1 occurrence(s)
+  saffron                        : 1 occurrence(s)
+  dill weed                      : 1 occurrence(s)
+  paprika                        : 1 occurrence(s)
+  rosemary                       : 1 occurrence(s)
+  artichoke                      : 1 occurrence(s)
+  eggplant                       : 1 occurrence(s)
+  carrot                         : 1 occurrence(s)
+  kohlrabi                       : 1 occurrence(s)
+  watercress                     : 1 occurrence(s)
+  yam                            : 1 occurrence(s)
+  onion                          : 1 occurrence(s)
+
+── TOKENS FR INCONNUS (fréquence) ───────────────────────────────
+  crues                          : 3 occurrence(s)
+  canneberge ou cranberry        : 2 occurrence(s)
+  canneberge                     : 2 occurrence(s)
+  sautepoele                     : 2 occurrence(s)
+  sans peau                      : 2 occurrence(s)
+  gras                           : 2 occurrence(s)
+  sucre et sel ajoutes           : 2 occurrence(s)
+  gras et sucre ajoutes          : 2 occurrence(s)
+  lait demiecreme                : 2 occurrence(s)
+  lait ecreme                    : 2 occurrence(s)
+  cafe                           : 1 occurrence(s)
+  poudre soluble                 : 1 occurrence(s)
+  cafe instantane                : 1 occurrence(s)
+  vinaigre balsamique            : 1 occurrence(s)
+  vinaigre                       : 1 occurrence(s)
+  balsamique                     : 1 occurrence(s)
+  farine de millet               : 1 occurrence(s)
+  millet                         : 1 occurrence(s)
+  farine dorge                   : 1 occurrence(s)
+  farine ou semoule dorge        : 1 occurrence(s)
+  gruau entier                   : 1 occurrence(s)
+  avec pelure                    : 1 occurrence(s)
+  sans pelure                    : 1 occurrence(s)
+  feuilles                       : 1 occurrence(s)
+  fleurettes                     : 1 occurrence(s)
+  croquante                      : 1 occurrence(s)
+  fondante                       : 1 occurrence(s)
+  pousses                        : 1 occurrence(s)
+  pousse                         : 1 occurrence(s)
+  tomate verte                   : 1 occurrence(s)
+  tomate                         : 1 occurrence(s)
+  verte                          : 1 occurrence(s)
+  pelee                          : 1 occurrence(s)
+  appertisee                     : 1 occurrence(s)
+  egouttee                       : 1 occurrence(s)
+  pois mangetout                 : 1 occurrence(s)
+  crus                           : 1 occurrence(s)
+  pois mangetout ou pois gourmand : 1 occurrence(s)
+  soya                           : 1 occurrence(s)
+  produits fermentes             : 1 occurrence(s)

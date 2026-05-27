@@ -9,10 +9,7 @@ Stratégie sans serveur (FastAPI non installé dans le container) :
 
 Ces tests constituent un filet de sécurité avant chaque déploiement.
 """
-import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
 
 # ── Contrats des routes ───────────────────────────────────────────────────────
 

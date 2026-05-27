@@ -1,0 +1,132 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# ALIM v6 — CI/CD GitHub Actions
+#
+# Déclenché sur :
+#   - push vers main ou develop
+#   - pull request vers main
+#
+# Jobs :
+#   test      → pytest (550 tests unitaires, hors tests pipeline)
+#   docker    → build image Docker (validation Dockerfile, sans push)
+#   docker-push → push vers GHCR sur push main (optionnel, activer si besoin)
+# ══════════════════════════════════════════════════════════════════════════════
+
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+env:
+  PYTHON_VERSION: "3.13"
+  NODE_VERSION: "24"
+  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/alim-api
+
+jobs:
+
+  # ── Tests unitaires ──────────────────────────────────────────────────────────
+  test:
+    name: Tests (pytest)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Installer les dépendances
+        run: pip install -r requirements-dev.txt
+
+      - name: Lancer les tests (hors tests pipeline)
+        env:
+          # Environnement minimal pour les tests — pas de vraie DB ni secrets
+          APP_ENV: development
+          SECRET_KEY: ci-test-secret-key-not-production
+          PYTHONIOENCODING: utf-8
+        run: |
+          pytest tests/ \
+            -m "not pipeline" \
+            --tb=short \
+            -q \
+            --junit-xml=test-results.xml
+
+      - name: Publier résultats de tests
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: test-results.xml
+
+
+  # ── Build Docker ─────────────────────────────────────────────────────────────
+  docker:
+    name: Build Docker
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build image (validation sans push)
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: false
+          tags: alim-api:ci
+          build-args: |
+            VITE_API_URL=https://api.mondomaine.com
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+
+  # ── Push vers GHCR (main seulement) ─────────────────────────────────────────
+  # Décommenter pour activer le push automatique vers GitHub Container Registry.
+  # Nécessite : Settings > Actions > "Read and write permissions"
+  #
+  # docker-push:
+  #   name: Push image (main)
+  #   runs-on: ubuntu-latest
+  #   needs: [test, docker]
+  #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+  #
+  #   permissions:
+  #     contents: read
+  #     packages: write
+  #
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #
+  #     - name: Login GHCR
+  #       uses: docker/login-action@v3
+  #       with:
+  #         registry: ghcr.io
+  #         username: ${{ github.actor }}
+  #         password: ${{ secrets.GITHUB_TOKEN }}
+  #
+  #     - name: Setup Docker Buildx
+  #       uses: docker/setup-buildx-action@v3
+  #
+  #     - name: Build et push
+  #       uses: docker/build-push-action@v5
+  #       with:
+  #         context: .
+  #         push: true
+  #         tags: |
+  #           ${{ env.IMAGE_NAME }}:latest
+  #           ${{ env.IMAGE_NAME }}:${{ github.sha }}
+  #         build-args: |
+  #           VITE_API_URL=${{ secrets.VITE_API_URL }}
+  #         cache-from: type=gha
+  #         cache-to: type=gha,mode=max

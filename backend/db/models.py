@@ -69,8 +69,11 @@ class UserProfile(Base):
     budget        = Column(String(20),  nullable=True)   # économique/standard/confort
     servings      = Column(Integer,     nullable=True)
     # Santé — chiffrées (RGPD Art. 9 — données de catégorie spéciale)
-    cycle_phase   = Column(EncryptedString(120), nullable=True)
-    health_goal   = Column(EncryptedString(120), nullable=True)
+    cycle_phase    = Column(EncryptedString(120), nullable=True)
+    health_goal    = Column(EncryptedString(120), nullable=True)
+    # Consentement explicite RGPD Art. 9 (requis avant toute collecte de données de santé)
+    health_consent = Column(Boolean, nullable=False, default=False,
+                           server_default=text("false"))
     # Timestamps
     created_at    = Column(DateTime(timezone=True), nullable=False,
                           default=lambda: datetime.now(timezone.utc))
@@ -89,6 +92,8 @@ class UserProfile(Base):
             val = getattr(self, field)
             if val is not None:
                 d[field] = val
+        # health_consent : toujours inclus (False par défaut — ne pas omettre)
+        d["health_consent"] = bool(self.health_consent)
         return d
 
     def __repr__(self):

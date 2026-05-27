@@ -29,14 +29,16 @@ if not _raw:
         stacklevel=1,
     )
 
-SECRET       = _raw
-ALGO         = "HS256"
-EXPIRE_HOURS = 24
+SECRET = _raw
+ALGO   = "HS256"
 
 
 def create_token(data: dict) -> str:
+    # Durée lue depuis config (JWT_EXPIRE_MINUTES, défaut 1440 = 24h)
+    # Import local pour éviter les imports circulaires au chargement du module
+    from backend.core.config import settings
     payload = data.copy()
-    payload["exp"] = datetime.now(timezone.utc) + timedelta(hours=EXPIRE_HOURS)
+    payload["exp"] = datetime.now(timezone.utc) + timedelta(minutes=settings.jwt_expire_minutes)
     return jwt.encode(payload, SECRET, algorithm=ALGO)
 
 

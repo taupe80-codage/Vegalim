@@ -1,15 +1,16 @@
 # ── Configuration
 python-dotenv>=1.0.0
-aiofiles>=23.0.0        # requis pour StaticFiles FastAPI      # chargement automatique du .env
+aiofiles>=23.0.0        # requis pour StaticFiles FastAPI
 
 # ── API ────────────────────────────────────────────────────────────
 fastapi>=0.111.0
 uvicorn[standard]>=0.29.0
 
-# ── Auth ───────────────────────────────────────────────────────────
+# ── Auth & Chiffrement ─────────────────────────────────────────────
 passlib[bcrypt]>=1.7.4
 bcrypt>=4.0.0,<5.0.0      # fix compatibilité passlib truncate_error
 python-jose[cryptography]>=3.3.0
+cryptography>=42.0.0      # Fernet AES-128 — chiffrement données santé (RGPD Art. 9)
 
 # ── Validation ─────────────────────────────────────────────────────
 pydantic[email]>=2.0.0
@@ -18,12 +19,10 @@ pydantic[email]>=2.0.0
 sqlalchemy>=2.0.0
 psycopg2-binary>=2.9.0   # driver PostgreSQL
 aiosqlite>=0.19.0         # driver SQLite async (dev/tests)
+alembic>=1.13.0           # migrations de schéma
 
-# ── Interface prototype (optionnel) ────────────────────────────────
-streamlit>=1.30.0
-pandas>=2.0.0
+# ── Rate limiting ──────────────────────────────────────────────────
+redis>=5.0.0              # rate limiting multi-process (optionnel, recommandé prod)
 
-# ── Tests ──────────────────────────────────────────────────────────
-pytest>=8.0.0
-httpx>=0.27.0
-redis>=5.0.0          # rate limiting multi-process (optionnel)
+# ── Pipeline nutrition (tourne dans le même conteneur que l'API) ────────────
+openpyxl>=3.1.0           # lecture CIQUAL xlsx (build_n2_direct.py)

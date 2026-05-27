@@ -14,10 +14,8 @@ Les tests de niveau 1 couvrent les handlers directement :
 Les tests HTTP complets s'exécutent en CI/CD avec :
   pip install fastapi[all] sqlalchemy
 """
-import sys, os
+import os
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
 from backend.core.data_io import load_recipes
 from backend.core.data_io import load_recipes as _lr
 RECIPES = _lr()
@@ -141,9 +139,9 @@ def test_all_routes_have_rate_limiter():
 # ── Tests logique handlers — sans HTTP ───────────────────────────────────────
 
 def test_enrich_recipe_structure():
-    """_compute_enrichment expose nutrition par portion + disponibilité."""
-    src = open("backend/api/routes/recipes.py", encoding="utf-8").read()
-    assert "_compute_enrichment" in src   # renommé (refactoring)
+    """enrich_one (ex _compute_enrichment) expose nutrition par portion + disponibilité."""
+    src = open("backend/services/enrichment_service.py", encoding="utf-8").read()
+    assert "enrich_one" in src         # fonction principale
     assert "_per_serving" in src
     assert "/ servings" in src
     assert "ingredients_availability" in src

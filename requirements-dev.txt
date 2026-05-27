@@ -1,0 +1,12 @@
+# ── Dépendances de développement uniquement ────────────────────────────────────
+# Ne pas installer en production (pip install -r requirements.txt suffit)
+-r requirements.txt
+
+# ── Tests ──────────────────────────────────────────────────────────
+pytest>=8.0.0
+httpx>=0.27.0
+
+# ── Prototype / exploration ─────────────────────────────────────────
+streamlit>=1.30.0
+pandas>=2.0.0
+openpyxl>=3.1.0           # lecture CIQUAL xlsx (pipeline nutrition)

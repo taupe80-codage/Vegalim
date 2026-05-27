@@ -14,9 +14,8 @@ Les tests de niveau 1 vérifient :
 Les tests SQLite s'exécutent en CI/CD avec :
   pip install sqlalchemy
 """
-import sys, os
+import os
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 os.environ.setdefault("DATABASE_URL", "sqlite:///./test_alim.db")
 
 

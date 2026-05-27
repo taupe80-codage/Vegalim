@@ -1,0 +1,44 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# ALIM v6 — Caddyfile
+#
+# Caddy gère automatiquement :
+#   - Certificat Let's Encrypt (HTTPS)
+#   - Redirection HTTP → HTTPS
+#   - HTTP/2 et HTTP/3 (QUIC)
+#   - Strict-Transport-Security (HSTS)
+#   - Compression gzip/zstd
+#
+# Variable d'environnement requise dans .env :
+#   ALIM_DOMAIN=mondomaine.com
+#
+# Lancement :
+#   docker compose up            → avec Caddy devant l'API
+#   docker compose up api db redis  → sans Caddy (dev, accès direct port 8000)
+# ══════════════════════════════════════════════════════════════════════════════
+
+{$ALIM_DOMAIN:localhost} {
+
+    # ── Compression ──────────────────────────────────────────────────────────
+    encode zstd gzip
+
+    # ── Proxy vers l'API FastAPI ─────────────────────────────────────────────
+    # "api" est le nom du service Docker — résolu automatiquement en interne
+    reverse_proxy api:8000 {
+        # Health check Caddy → API (évite de router vers un conteneur qui démarre)
+        health_uri      /health
+        health_interval 30s
+        health_timeout  10s
+
+        # Transmet l'IP réelle du client à FastAPI
+        header_up X-Real-IP        {remote_host}
+        header_up X-Forwarded-For  {remote_host}
+        header_up X-Forwarded-Proto {scheme}
+    }
+
+    # ── Logs structurés ──────────────────────────────────────────────────────
+    log {
+        output stdout
+        format json
+        level  INFO
+    }
+}

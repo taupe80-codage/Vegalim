@@ -207,8 +207,14 @@ def _ingredients_index() -> dict[str, dict]:
 
 
 @lru_cache(maxsize=1)
-def _recipes_index() -> dict[int, dict]:
-    """Index id → recette pour accès O(1)."""
+def _recipes_index() -> dict:
+    """
+    Index id → recette pour accès O(1).
+
+    Les IDs en v6 sont des strings (ex: 'dip_baba_ghanoush_dbd030').
+    L'index est construit avec les IDs bruts du JSON (str).
+    get_by_id() gère la résilience de type (str / int).
+    """
     return {r["id"]: r for r in _recipes_raw() if "id" in r}
 
 
@@ -468,9 +474,25 @@ class RecipeRepository:
 
     # ── Lecture ───────────────────────────────────────────────────────────────
 
-    def get_by_id(self, recipe_id: int) -> dict | None:
-        """Retourne une recette par son id, ou None si introuvable."""
-        return _recipes_index().get(recipe_id)
+    def get_by_id(self, recipe_id: "int | str") -> dict | None:
+        """
+        Retourne une recette par son id, ou None si introuvable.
+
+        Résilient au type : accepte str ou int.
+        En v6 les IDs du dataset sont des strings (ex: 'dip_baba_ghanoush_dbd030').
+        Fix : la signature était `int` alors que la route `/{recipe_id}/similaires`
+        passe un str (path param FastAPI). L'index était jamais touché.
+        """
+        index = _recipes_index()
+        # Tentative directe (type natif)
+        if recipe_id in index:
+            return index[recipe_id]
+        # Fallback : essai avec l'autre type (str ↔ int)
+        try:
+            alt = int(recipe_id) if isinstance(recipe_id, str) else str(recipe_id)
+            return index.get(alt)
+        except (ValueError, TypeError):
+            return index.get(str(recipe_id))
 
     def get_many_by_ids(self, ids: list[int]) -> list[dict]:
         """Retourne les recettes correspondant à la liste d'ids (ordre préservé)."""
@@ -708,7 +730,16 @@ class NutritionRepository:
         if not is_excluded and key in db:
             return db[key]
 
-        # 3. Lookup normalisé nutrition_v2 (si non exclu)
+        # 2b. Lookup direct base/variant (token deja au format feuille)
+        #     Ex : 'seeds/hemp', 'butter/dairy', 'flour/wheat'
+        #     Le token n'est pas une cle racine mais pointe directement vers un variant.
+        if "/" in key and not is_excluded:
+            resolved = _resolve_variant_key(db, key)
+            if resolved is not None:
+                logger.debug("direct leaf resolved | %r", key)
+                return resolved
+
+        # 3. Lookup normalise nutrition_v2 (si non exclu)
         if not is_excluded:
             normalized = self._normalize(key)
             for db_key, entry in db.items():
@@ -886,14 +917,72 @@ class IngredientRepository:
     parent, nutrition_key, substitutions, ingredient_form, ingredient_product.
     """
 
+    # Alias statiques pour les IDs de recettes non standard → ID du dictionnaire
+    _STATIC_ALIASES: dict[str, str] = {
+        "all_purpose_flour":  "flour",
+        "white_flour":        "flour",
+        "whole_wheat_flour":  "flour",
+        "bread_flour":        "flour",
+        "cake_flour":         "flour",
+        "milk_animal/whole":  "milk_animal_whole",
+        "cream_animal/heavy": "cream_animal_heavy",
+        "butter/dairy":       "butter",
+        "oil/olive":          "olive_oil",
+        "oil/sunflower":      "sunflower_oil",
+        "oil/coconut":        "coconut_oil",
+        "onion/yellow":       "onion",
+        "onion/white":        "onion",
+        "onion/red":          "red_onion",
+        "pasta/wheat":        "pasta",
+        "pasta/whole_wheat":  "whole_wheat_pasta",
+        "chicken/breast":     "chicken_breast",
+        "chicken/thigh":      "chicken_thigh",
+        "beef/ground":        "ground_beef",
+        "pork/ground":        "ground_pork",
+        "tomato/canned":      "canned_tomato",
+        "milk_plant/oat":     "milk_plant_oat",
+        "milk_plant/soy":     "milk_plant_soy",
+        "milk_plant/almond":  "milk_plant_almond",
+    }
+
     def get_by_name(self, name: str) -> dict | None:
         """
         Retrouve un ingrédient par son nom (fr ou en), insensible à la casse.
 
+        Essaie dans l'ordre :
+          1. Match direct (id, name_fr, name_en)
+          2. Alias statiques (_STATIC_ALIASES)
+          3. Slash → underscore  (milk_animal/whole → milk_animal_whole)
+          4. Préfixe avant le slash (chicken/breast → chicken)
+
         Returns:
             dict de l'ingrédient, ou None si introuvable.
         """
-        return _ingredients_index().get(name.strip().lower())
+        idx = _ingredients_index()
+        key = name.strip().lower()
+
+        result = idx.get(key)
+        if result:
+            return result
+
+        alias = self._STATIC_ALIASES.get(key)
+        if alias:
+            result = idx.get(alias.lower())
+            if result:
+                return result
+
+        normalized = key.replace("/", "_")
+        result = idx.get(normalized)
+        if result:
+            return result
+
+        if "/" in key:
+            prefix = key.split("/")[0]
+            result = idx.get(prefix)
+            if result:
+                return result
+
+        return None
 
     def get_by_id(self, ingredient_id: str) -> dict | None:
         """Retrouve un ingrédient par son id unique."""
@@ -951,9 +1040,15 @@ class IngredientRepository:
                     )
                     return resolved
             else:
+                # Tenter d'abord base/default (entrées avec variants non suffixés)
+                db = _nutrition_raw()
+                resolved = _resolve_variant_key(db, nutr_key + "/default")
+                if resolved is not None:
+                    return resolved
+                # Fallback : lookup plat (entrées sans variants)
                 data = nutr_repo.get(nutr_key, context=context,
                                      recipe_id=recipe_id, recipe_title=recipe_title)
-                if data is not None:
+                if data is not None and data.get("calories_kcal") is not None:
                     return data
 
         # 2b. Recipe aliases : résolution directe sans passer par le dictionnaire

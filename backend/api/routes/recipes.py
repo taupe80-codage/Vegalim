@@ -1,34 +1,20 @@
 """
-routes/recipes.py — Recettes : recherche, fiche, top, variante vegan, graphes.
+routes/recipes.py — Recettes : recherche, fiche, top, variante vegan.
 
 Routes publiques (sans auth) :
   GET  /recettes              — liste paginée avec filtres
   GET  /recettes/top          — classement global
-  GET  /recettes/{id}         — fiche recette complète
+  GET  /recettes/top/{id}     — fiche recette complète  
   POST /recettes/recherche    — recherche textuelle + filtres
 
 Routes authentifiées (plan free+) :
   POST /recettes/{id}/variante  — variante vegan à la demande
   POST /recommend               — pipeline recommandation personnalisé
+  POST /recettes/{id}/feedback  — enregistre une interaction
 
-Routes graphe (authentifiées) :
-  GET  /recettes/graph/ingredient/{name}
-  GET  /recettes/graph/cycle/{phase}
-  POST /recettes/graph/analyze
+Routes graphe → routes/graph.py (séparées pour SRP)
 
-MIGRATION étape 3 — imports obsolètes remplacés :
-  servings_engine.validate_servings       → planning_engine.servings.validate_servings
-  score_reliability_engine.compute        → score_engine.reliability.reliability
-  seasonality_engine.ingredients_in_season→ rule_engine.seasonality.seasonal_ingredients
-  score_explainer.explain                 → score_engine.explainer.explain
-  sustainability_engine.recipe_carbon_score → rule_engine.carbon.carbon_score
-  ingredient_price_engine.recipe_price    → planning_engine.budget.estimate_price
-  recommendation_engine.recommend         → reco_service.recommend (déjà importé)
-  vegan_variant_engine.get_vegan_variant  → rule_engine.variants.vegan_variant
-  learning_engine.*                       → learning_engine.* (conservé — pas encore migré)
-  similarity_engine.find_similar_by_id   → search_engine.similar.find_similar_by_id
-  graph_engine.*                          → graph_engine.* (conservé — pas encore migré)
-  culinary_rule_engine.validate/score     → rule_engine.validation.validate_recipef
+Enrichissement nutritionnel → services/enrichment_service.py
 """
 import logging
 logger = logging.getLogger(__name__)
@@ -40,117 +26,24 @@ from typing import Optional
 from backend.core.auth_deps        import get_user, get_optional_user
 from backend.core.rate_limiter     import check_rate_limit
 from backend.services.reco_service import recommend
-from backend.services.filter_service import apply_diet_filter
+from backend.services.filter_service import apply_diet_filter, apply_filters
+from backend.services.enrichment_service import enrich_one, enrich_why
 from backend.core.data_io          import (
     load_recipes, load_nutrition_graph, load_score_graph,
     load_ingredients_dict, load_availability_graph,
-    load_astro_nutrition,
 )
 
-# Score engines — migrés de imports inline vers imports module
-from backend.engine.planning_engine.servings  import validate_servings
-from backend.engine.score_engine.reliability  import reliability
-from backend.engine.score_engine.explainer    import explain
-from backend.engine.rule_engine.seasonality   import seasonal_ingredients
-from backend.engine.rule_engine.validation    import validate_recipe
-from backend.engine.rule_engine.carbon        import carbon_score
+# Engines utilisés directement dans ce fichier (variante vegan + similaires)
 from backend.engine.rule_engine.variants      import vegan_variant
-from backend.engine.planning_engine.budget    import estimate_price
 from backend.engine.search_engine.similar     import find_similar_by_id
 from backend.services.scoring_service         import score_recipe as _score_recipe
 
 router = APIRouter(prefix="/recettes", tags=["Recettes"])
 
 
-# ── AJR (Apports Journaliers Recommandés) pour adulte ─────────────────────────
-# Source unique de verite pour les AJR (ANSES/OMS).
-# Ne PAS redefinir localement -- utiliser score_engine.ajr.AJR.
-from backend.engine.score_engine.ajr import AJR as _AJR_FULL
-
-# Sous-ensemble affiche dans _enrich_why (8 nutriments pertinents pour l'UI).
-# Les valeurs viennent de _AJR_FULL -- pas de constantes locales.
-_AJR_DISPLAY_KEYS = ("protein", "fiber", "iron", "calcium", "magnesium", "potassium", "vitamin_c", "zinc")
-_AJR = {k: _AJR_FULL[k] for k in _AJR_DISPLAY_KEYS if k in _AJR_FULL}
-
-_AJR_LABELS = {
-    "protein": "Protéines", "fiber": "Fibres", "iron": "Fer",
-    "calcium": "Calcium", "magnesium": "Magnésium", "potassium": "Potassium",
-    "vitamin_c": "Vitamine C", "zinc": "Zinc",
-}
-
-# Nutriments prioritaires par phase du cycle féminin
-_CYCLE_PRIORITY = {
-    "menstrual":  ["iron", "magnesium", "vitamin_c"],
-    "follicular": ["protein", "fiber", "magnesium"],
-    "ovulatory":  ["vitamin_c", "zinc", "fiber"],
-    "luteal":     ["magnesium", "fiber", "potassium"],
-}
-
-
-def _enrich_why(recipes: list, filters: dict = None) -> list:
-    """
-    Enrichit chaque recette avec :
-      - `_why`        : explication contextuelle aux filtres actifs
-      - `_nutrition`  : dict de valeurs brutes + %AJR
-    """
-    filters = filters or {}
-    ng = load_nutrition_graph()
-    cycle_phase = filters.get("cycle_phase")
-    priority_keys = _CYCLE_PRIORITY.get(cycle_phase, [])
-
-    for r in recipes:
-        rid = str(r.get("id", ""))
-        nutr = ng.get(rid, {})
-        if not nutr:
-            r["_why"] = None
-            r["_nutrition"] = {}
-            continue
-
-        nutri_summary = {}
-        all_highlights = {}
-        for key, ajr in _AJR.items():
-            val = nutr.get(key, 0) or 0
-            pct = round((val / ajr) * 100) if val > 0 and ajr > 0 else 0
-            nutri_summary[key] = {"value": round(val, 1), "pct_ajr": pct}
-            if pct >= 10:
-                all_highlights[key] = (pct, _AJR_LABELS[key])
-
-        kcal = nutr.get("calories")
-        nutri_summary["calories"] = {"value": kcal or 0, "pct_ajr": 0}
-        r["_nutrition"] = nutri_summary
-
-        why_parts = []
-        if filters.get("high_protein") and "protein" in all_highlights:
-            why_parts.append(f"💪 {nutri_summary['protein']['value']}g")
-        if filters.get("low_calorie") and kcal:
-            why_parts.append(f"📉 {kcal} kcal")
-        if filters.get("high_fiber") and "fiber" in all_highlights:
-            why_parts.append(f"🌾✨ {nutri_summary['fiber']['value']}g")
-        if filters.get("diet") == "vegan":
-            why_parts.append("🌿 Végétal")
-        if filters.get("low_ig") and (r.get("health_scores", {}).get("diabetes_friendly") or r.get("health_scores", {}).get("low_ig")):
-            why_parts.append("🩸 IG Bas")
-        
-        if not why_parts:
-            ordered = []
-            for pk in priority_keys:
-                if pk in all_highlights:
-                    ordered.append(all_highlights.pop(pk))
-            remaining = sorted(all_highlights.values(), reverse=True)
-            ordered.extend(remaining)
-            top = ordered[:2]
-
-            if top:
-                why_parts = [f"{label} {pct}% AJR" for pct, label in top]
-                if kcal:
-                    why_parts.append(f"{kcal} kcal")
-            else:
-                if kcal:
-                    why_parts.append(f"{kcal} kcal")
-
-        r["_why"] = " · ".join(why_parts) if why_parts else None
-
-    return recipes
+# Alias locaux pour les call sites existants dans ce fichier
+_enrich_why         = enrich_why
+_compute_enrichment = enrich_one
 
 # ── Modèles Pydantic ──────────────────────────────────────────────────────────
 
@@ -158,17 +51,55 @@ class SearchRequest(BaseModel):
     query:       str           = Field(default="", max_length=200)
     filtre:      Optional[str] = Field(default=None, description="vegan | vegetarien | …")
     cuisine:     Optional[str] = Field(default=None)
+    cuisines:    list[str]     = Field(default_factory=list, description="Filtre multi-cuisines (OR)")
     technique:   Optional[str] = Field(default=None)
     max_time:    Optional[int] = Field(default=None, ge=1, le=480)
-    gluten_free: bool          = Field(default=False)
-    # Fix : limit accepté dans le body (le frontend envoie {limit: 40} dans POST)
+    difficulty:  Optional[str] = Field(default=None, description="easy | medium | hard")
+    season:      Optional[str] = Field(default=None, description="spring | summer | autumn | winter")
+    # ── Allergènes & régime ───────────────────────────────────────────────────
+    gluten_free:    bool          = Field(default=False)
+    lactose_free:   bool          = Field(default=False)
+    nut_free:       bool          = Field(default=False)
+    egg_free:       bool          = Field(default=False)
+    dairy_free:     bool          = Field(default=False)
+    soy_free:       bool          = Field(default=False)
+    fermented_free: bool          = Field(default=False)
+    # ── Type de plat (multi — filtre OR) ─────────────────────────────────────
+    dish_type:       Optional[str] = Field(default=None)
+    dish_types:      list[str]     = Field(default_factory=list)
+    # ── Limit ─────────────────────────────────────────────────────────────────
     limit:       int           = Field(default=20, ge=1, le=100)
-    # ── Filtres de santé et holistiques ───────────────────────────────────────
-    high_protein: bool         = Field(default=False)
-    low_calorie: bool          = Field(default=False)
-    high_fiber: bool           = Field(default=False)
-    low_ig: bool               = Field(default=False)
-    max_kcal:    Optional[int] = Field(default=None)
+    # ── Macros & énergie ──────────────────────────────────────────────────────
+    high_protein:         bool         = Field(default=False)
+    good_source_protein:  bool         = Field(default=False)
+    low_calorie:          bool         = Field(default=False)
+    high_fiber:           bool         = Field(default=False)
+    good_source_fiber:    bool         = Field(default=False)
+    low_ig:               bool         = Field(default=False)
+    fodmap:               Optional[str] = Field(default=None, description="low | medium | high")
+    max_kcal:             Optional[int] = Field(default=None)
+    low_sugar:            bool         = Field(default=False)
+    low_sodium:           bool         = Field(default=False)
+    # ── Micronutriments (filtrés via diet_flags_enriched post-enrich) ─────────
+    high_vitamin_c:       bool         = Field(default=False)
+    source_vitamin_c:     bool         = Field(default=False)
+    high_vitamin_d:       bool         = Field(default=False)
+    source_vitamin_d:     bool         = Field(default=False)
+    high_folate:          bool         = Field(default=False)
+    source_folate:        bool         = Field(default=False)
+    high_calcium:         bool         = Field(default=False)
+    high_iron:            bool         = Field(default=False)
+    good_source_iron:     bool         = Field(default=False)
+    high_magnesium:       bool         = Field(default=False)
+    source_magnesium:     bool         = Field(default=False)
+    high_potassium:       bool         = Field(default=False)
+    good_source_potassium: bool        = Field(default=False)
+    high_zinc:            bool         = Field(default=False)
+    source_zinc:          bool         = Field(default=False)
+    high_omega3:          bool         = Field(default=False)
+    source_omega3:        bool         = Field(default=False)
+    antioxidant_rich:     bool         = Field(default=False)
+    # ── Holistiques ───────────────────────────────────────────────────────────
     astro_element: Optional[str] = Field(default=None)
     moon_phase:  Optional[str] = Field(default=None)
     cycle_phase: Optional[str] = Field(default=None)
@@ -180,201 +111,8 @@ class UnifiedScoreRequest(BaseModel):
     profile_data: dict         = Field(default_factory=dict)
 
 
-class GraphAnalyzeRequest(BaseModel):
-    recipe:  dict              = Field(..., description="Recette à analyser")
-    profile: dict              = Field(default_factory=dict)
-
-
-# ── Helpers ───────────────────────────────────────────────────────────────────
-
-def _compute_enrichment(recipe: dict) -> dict:
-    """
-    Calcule les données dérivées d'une recette (nutrition, scores, disponibilité…).
-    Ne modifie JAMAIS la recette originale.
-    Retourne uniquement les champs calculés, prêts à être fusionnés par-dessus la recette.
-    """
-    rid       = str(recipe.get("id", ""))
-    ng        = load_nutrition_graph()
-    sg        = load_score_graph()
-    av        = load_availability_graph()
-    ings_dict = load_ingredients_dict()
-    out: dict = {}
-
-    # ── Nutrition par portion ─────────────────────────────────────────────────
-    servings = validate_servings(recipe.get("servings", 4))
-    ng_total = ng.get(rid, {})
-    out["nutrition"] = {
-        k: round(v / servings, 2) if isinstance(v, (int, float)) else v
-        for k, v in ng_total.items()
-    }
-    out["nutrition"]["_per_serving"] = servings
-    out["score_data"] = sg.get(rid, {})
-
-    # ── Fiabilité nutritionnelle ──────────────────────────────────────────────
-    _rel = reliability(recipe)
-    out["score_reliability"] = _rel.get("status")
-    out["score_coverage"]    = _rel.get("coverage")
-
-    # ── Saisonnalité dynamique ────────────────────────────────────────────────
-    import datetime
-    current_month = datetime.date.today().month
-    recipe_ings   = {
-        (i.get("ingredient_id", "") if isinstance(i, dict) else str(i)).lower()
-        for i in recipe.get("ingredients", [])
-    }
-    in_season     = set(seasonal_ingredients(current_month))
-    strict        = recipe_ings - {"salt", "pepper", "oil", "olive_oil", "water", "bouillon"}
-    if strict:
-        ratio = len(strict & in_season) / len(strict)
-        out["seasonal_tag"]   = ("de_saison" if ratio >= 0.7
-                                 else "presque_saison" if ratio >= 0.4
-                                 else "hors_saison")
-        out["seasonal_ratio"] = round(ratio, 2)
-    else:
-        out["seasonal_tag"]   = "année_entière"
-        out["seasonal_ratio"] = 1.0
-
-    # ── Scoring CDC_03c ───────────────────────────────────────────────────────
-    _scored = _score_recipe(recipe)
-    out["final_score"]     = round(_scored.get("final_score",    _scored.get("adaptive_score", 0)), 2)
-    out["quality_score"]   = round(_scored.get("global_score",   0), 2)
-    out["relevance_score"] = round(_scored.get("adaptive_score", 0), 2)
-    out["nutrition_score"] = round(sg.get(rid, {}).get("nutrition_score", 0), 2)
-    out["score_reasons"]   = explain(_scored)
-
-    # ── Disponibilité des ingrédients ─────────────────────────────────────────
-    ing_avail = {}
-    for ing in recipe.get("ingredients", []):
-        iid = ing.get("ingredient_id", "") if isinstance(ing, dict) else str(ing)
-        ing_avail[iid] = av.get(iid, {}).get("available_in_france", True)
-    out["ingredients_availability"] = ing_avail
-
-    # ── Enrichissement noms/substitutions ────────────────────────────────────
-    ings_meta = {}
-    for ing in recipe.get("ingredients", []):
-        iid = ing.get("ingredient_id", "") if isinstance(ing, dict) else str(ing)
-        if iid and iid not in ings_meta:
-            d = ings_dict.get(iid, {})
-            ings_meta[iid] = {
-                "name_fr":        d.get("name_fr", iid),
-                "substitutions":  d.get("substitutions", []),
-                "flavor_profile": d.get("flavor_profile", []),
-            }
-    out["ingredients_meta"] = ings_meta
-
-    # ── Validation culinaire ──────────────────────────────────────────────────
-    _result            = validate_recipe(recipe)
-    out["culinary_score"]      = _result.get("score", 10)
-    out["culinary_violations"] = [
-        v for v in _result.get("violations", [])
-        if v.get("severity") in ("critical", "warning")
-    ]
-
-    # ── Durabilité (CO₂) et prix ──────────────────────────────────────────────
-    out["carbon_data"] = carbon_score(recipe)
-    out["price_data"]  = estimate_price(recipe)
-
-    return out
-
-
-def _apply_filters(recipes: list, diet: str | None, cuisine: str | None,
-                   technique: str | None, max_time: int | None,
-                   gluten_free: bool, skip: int, limit: int,
-                   # ── Nouveaux filtres ──────────────────────────────────────
-                   lactose_free: bool = False,
-                   nut_free: bool = False,
-                   fodmap: str | None = None,          # "low" | "medium" | "high"
-                   high_protein: bool = False,
-                   low_calorie: bool = False,
-                   high_fiber: bool = False,
-                   low_ig: bool = False,
-                   max_kcal: int | None = None,
-                   astro_element: str | None = None,
-                   moon_phase: str | None = None,
-                   cycle_phase: str | None = None,
-                   ) -> tuple[list, int]:
-    """Filtre et pagine une liste de recettes."""
-    result = recipes
-
-    # ── Régime alimentaire ────────────────────────────────────────────────────
-    if diet:
-        result = apply_diet_filter(result, diet)
-    if gluten_free:
-        result = apply_diet_filter(result, "gluten_free")
-    if lactose_free:
-        result = apply_diet_filter(result, "lactose_free")
-    if nut_free:
-        result = apply_diet_filter(result, "nut_free")
-
-    # ── Health scores ─────────────────────────────────────────────────────────
-    if fodmap:
-        result = [r for r in result
-                  if r.get("health_scores", {}).get("fodmap_level") == fodmap]
-    if high_protein:
-        result = [r for r in result if r.get("health_scores", {}).get("high_protein")]
-    if low_calorie:
-        result = [r for r in result if r.get("health_scores", {}).get("low_calorie")]
-    if high_fiber:
-        result = [r for r in result if r.get("health_scores", {}).get("high_fiber")]
-    if low_ig:
-        result = [r for r in result if r.get("health_scores", {}).get("diabetes_friendly") or r.get("health_scores", {}).get("low_ig")]
-    if max_kcal is not None:
-        result = [r for r in result
-                  if (r.get("health_scores", {}).get("kcal") or 9999) <= max_kcal]
-
-    # ── Filtres Holistiques (Astrologie & Lune) ───────────────────────────────
-    if astro_element or moon_phase:
-        astro_data = load_astro_nutrition()
-            
-        def recipe_matches_astro(r):
-            ings = r.get("composition", [])
-            if not ings: return False
-            matching_ings = 0
-            for ing in ings:
-                ing_id = (ing.get("ingredient", "") if isinstance(ing, dict) else str(ing)).lower()
-                meta = astro_data.get(ing_id, {})
-                if astro_element and meta.get("element", "").lower() == astro_element.lower():
-                    matching_ings += 1
-                elif moon_phase and moon_phase.lower() in [p.lower() for p in meta.get("moon_phases", [])]:
-                    matching_ings += 1
-            
-            # Relaxed constraint for culinary astrology: min 1 ingredient
-            return matching_ings >= 1
-
-        result = [r for r in result if recipe_matches_astro(r)]
-
-    # ── Filtre Cycle Féminin ──────────────────────────────────────────────────
-    if cycle_phase:
-        from backend.engine.graph_engine import get_cycle_ingredients
-        good_ings = get_cycle_ingredients(cycle_phase)
-        good_ings_lower = {i.lower() for i in good_ings}
-
-        def recipe_matches_cycle(r):
-            ings = r.get("composition", [])
-            if not ings: return False
-            matching = 0
-            for ing in ings:
-                ing_id = (ing.get("ingredient", "") if isinstance(ing, dict) else str(ing)).lower()
-                if ing_id in good_ings_lower:
-                    matching += 1
-            # Require at least 1 beneficial ingredient 
-            return matching >= 1
-
-        result = [r for r in result if recipe_matches_cycle(r)]
-
-    # ── Autres filtres ────────────────────────────────────────────────────────
-    if cuisine:
-        cuisine_l = cuisine.lower()
-        result = [r for r in result
-                  if cuisine_l in (r.get("iconic_status", {}).get("cuisine_origin", "") or "").lower()]
-    if technique:
-        result = [r for r in result
-                  if technique.lower() in [t.lower() for t in (r.get("technique") or [])]]
-    if max_time is not None:
-        result = [r for r in result if (r.get("timing", {}).get("total_min") or 999) <= max_time]
-
-    total = len(result)
-    return result[skip: skip + limit], total
+# _apply_filters -> filter_service.apply_filters (alias pour call sites existants)
+_apply_filters = apply_filters
 
 
 # ── Routes publiques ──────────────────────────────────────────────────────────
@@ -468,6 +206,7 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
     """
     check_rate_limit(request, limit=30, window_seconds=60)
     import datetime, hashlib
+    from backend.engine.rule_engine.seasonality import seasonal_ingredients  # fix: était absent → NameError
 
     recipes   = load_recipes()
     sg        = load_score_graph()
@@ -493,7 +232,7 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
     seen_cuisines = set()
     if email:
         try:
-            from backend.engine.learning_engine import load_history          # conservé
+            from backend.engine.reco_engine.learning import load_history
             history    = load_history(email)
             viewed_ids = history.get("viewed", set())
             for r in recipes:
@@ -607,36 +346,109 @@ def recherche(
     # Priorité : body > query string > défaut
     limit  = req.limit if limit_qs == 0 else limit_qs
     email  = user["email"] if user else None
-    results = recommend(req.query, email=email, diet_override=req.filtre, limit=limit * 3)
-    _, total   = _apply_filters(
-        results, None, req.cuisine, req.technique, req.max_time, req.gluten_free, 0, len(results),
-        high_protein=req.high_protein, low_calorie=req.low_calorie, high_fiber=req.high_fiber, low_ig=req.low_ig, max_kcal=req.max_kcal,
-        astro_element=req.astro_element, moon_phase=req.moon_phase, cycle_phase=req.cycle_phase
+
+    # FIX dish_type / structural filters :
+    # Quand la requête texte est vide, recommend() écrête le pool à limit*3
+    # recettes scorées AVANT apply_filters(). Le scoring favorisant les plats
+    # principaux, les desserts/snacks/entrées n'entrent jamais dans le pool →
+    # dish_types=['dessert'] retourne toujours 0 résultats.
+    #
+    # Solution : requête vide → charger les 845 recettes directement (même
+    # comportement que GET /recettes) et trier par score iconique.
+    # Requête non-vide → recommend() reste pertinent pour la recherche textuelle,
+    # mais on multiplie le pool par 10 pour couvrir toutes les catégories.
+    has_text_query = bool(req.query and req.query.strip())
+    if not has_text_query:
+        # Pas de texte : filtres structurels seuls → tout le catalogue trié par score
+        results = list(load_recipes())
+        results.sort(
+            key=lambda r: r.get("scoring", {}).get("iconic", {}).get("score", 0),
+            reverse=True,
+        )
+        # Appliquer le filtre régime du profil (diet_override) si présent
+        if req.filtre:
+            from backend.services.filter_service import apply_diet_filter
+            results = apply_diet_filter(results, req.filtre)
+    else:
+        # Requête texte : recommend() pour pertinence, pool agrandi pour ne pas
+        # écrêter les catégories de niche (desserts, snacks, breakfasts…).
+        # 1000 > taille max du catalogue (845) — garantit que toutes les recettes
+        # correspondant à la requête sont incluses avant le filtre dish_type.
+        results = recommend(req.query, email=email, diet_override=req.filtre, limit=1000)
+
+    # FIX #8 : une seule passe _apply_filters (total + pagination) — élimine le
+    # double calcul identique qui doublait le temps de filtrage sous charge.
+    all_filtered, total = _apply_filters(
+        results, None, req.cuisine, req.technique, req.max_time,
+        req.gluten_free, 0, len(results),
+        lactose_free=req.lactose_free,   nut_free=req.nut_free,
+        egg_free=req.egg_free,           dairy_free=req.dairy_free,
+        soy_free=req.soy_free,           fermented_free=req.fermented_free,
+        dish_type=req.dish_type,         dish_types=req.dish_types,
+        cuisines=req.cuisines,
+        difficulty=req.difficulty,       season=req.season,
+        low_sugar=req.low_sugar,         low_sodium=req.low_sodium,
+        high_protein=req.high_protein,   good_source_protein=req.good_source_protein,
+        low_calorie=req.low_calorie,
+        high_fiber=req.high_fiber,       good_source_fiber=req.good_source_fiber,
+        low_ig=req.low_ig,               fodmap=req.fodmap,
+        max_kcal=req.max_kcal,
+        high_vitamin_c=req.high_vitamin_c,   source_vitamin_c=req.source_vitamin_c,
+        high_vitamin_d=req.high_vitamin_d,   source_vitamin_d=req.source_vitamin_d,
+        high_folate=req.high_folate,         source_folate=req.source_folate,
+        high_calcium=req.high_calcium,
+        high_iron=req.high_iron,             good_source_iron=req.good_source_iron,
+        high_magnesium=req.high_magnesium,   source_magnesium=req.source_magnesium,
+        high_potassium=req.high_potassium,   good_source_potassium=req.good_source_potassium,
+        high_zinc=req.high_zinc,             source_zinc=req.source_zinc,
+        high_omega3=req.high_omega3,         source_omega3=req.source_omega3,
+        antioxidant_rich=req.antioxidant_rich,
+        astro_element=req.astro_element, moon_phase=req.moon_phase,
+        cycle_phase=req.cycle_phase,
     )
-    filtered, _ = _apply_filters(
-        results, None, req.cuisine, req.technique, req.max_time, req.gluten_free, skip, limit,
-        high_protein=req.high_protein, low_calorie=req.low_calorie, high_fiber=req.high_fiber, low_ig=req.low_ig, max_kcal=req.max_kcal,
-        astro_element=req.astro_element, moon_phase=req.moon_phase, cycle_phase=req.cycle_phase
-    )
+    filtered = all_filtered[skip: skip + limit]
     
     filtered_enriched = _enrich_why(filtered, filters={"diet": req.filtre, "high_protein": req.high_protein, "low_calorie": req.low_calorie, "high_fiber": req.high_fiber, "low_ig": req.low_ig, "cycle_phase": req.cycle_phase})
     return {"query": req.query, "total": total, "skip": skip, "limit": limit,
             "results": filtered_enriched}
 
 
+class RecommendRequest(BaseModel):
+    query: str           = Field(default="")
+    diet:  Optional[str] = Field(default=None)
+    limit: int           = Field(default=20, ge=1, le=50)
+
+
 @router.post("/recommend")
 def recommend_pipeline(
+    payload: RecommendRequest,
     request: Request,
     user:    dict         = Depends(get_user),
-    query:   str          = Query(default=""),
-    diet:    Optional[str] = Query(default=None),
-    limit:   int          = Query(default=20, ge=1, le=50),
+    # Query params conservés pour rétro-compat (anciens clients CLI / B2B)
+    q_query: str           = Query(default="",   alias="query"),
+    q_diet:  Optional[str] = Query(default=None, alias="diet"),
+    q_limit: int           = Query(default=0,    alias="limit", ge=0, le=50),
 ):
-    """Pipeline de recommandation complet personnalisé."""
+    """Pipeline de recommandation complet personnalisé.
+
+    Accepte les paramètres depuis le **body JSON** (usage normal frontend)
+    ou depuis la **query string** (rétro-compat B2B / curl).
+    Priorité : query string > body > défaut.
+    """
     check_rate_limit(request, limit=30, window_seconds=60)
+    # Résolution : query string prime sur body si explicitement fournis
+    effective_query = q_query or payload.query
+    effective_diet  = q_diet  or payload.diet
+    effective_limit = q_limit if q_limit > 0 else payload.limit
+
     email   = user["email"] if user else None
-    results = recommend(query, email=email, diet_override=diet, limit=limit)
-    return {"query": query, "user": user["email"], "total": len(results), "results": results}
+    results = recommend(effective_query, email=email, diet_override=effective_diet, limit=effective_limit)
+    return {
+        "query":  effective_query,
+        "user":   user["email"],
+        "total":  len(results),
+        "results": results,
+    }
 
 
 @router.post("/{recipe_id}/variante")
@@ -681,7 +493,7 @@ def recipe_feedback(recipe_id: str, payload: FeedbackRequest,
     if payload.action not in VALID:
         raise HTTPException(status_code=422,
             detail=f"Action invalide. Valeurs : {sorted(VALID)}")
-    from backend.engine.learning_engine import save_interaction              # conservé
+    from backend.services.interaction_service import save_interaction
     save_interaction(
         email=user["email"], recipe_id=recipe_id,
         action=payload.action, score_shown=payload.score_shown,
@@ -699,37 +511,3 @@ def similar_recipes(recipe_id: str, request: Request,
         raise HTTPException(status_code=404, detail=f"Recette {recipe_id} introuvable")
     return {"recipe_id": recipe_id, "count": len(similar), "similar": similar}
 
-
-# ── Routes graphe ─────────────────────────────────────────────────────────────
-
-@router.get("/graph/ingredient/{name}", tags=["Graphe"])
-def graph_ingredient(name: str, user: dict = Depends(get_user)):
-    """Propriétés d'un ingrédient depuis le graphe."""
-    from backend.engine.graph_engine import _load_graph                     # conservé
-    data = _load_graph().get(name.lower())
-    if not data:
-        raise HTTPException(status_code=404,
-            detail=f"Ingrédient '{name}' absent du graphe")
-    return {"ingredient": name, **data}
-
-
-@router.get("/graph/cycle/{phase}", tags=["Graphe"])
-def graph_cycle(phase: str, user: dict | None = Depends(get_optional_user)):
-    """Ingrédients recommandés pour une phase du cycle féminin."""
-    from backend.engine.graph_engine import get_cycle_ingredients            # conservé
-    VALID = {"menstrual", "follicular", "ovulatory", "luteal",
-             "menstrual_phase", "follicular_phase", "ovulatory_phase", "luteal_phase"}
-    if phase not in VALID:
-        raise HTTPException(status_code=400,
-            detail=f"Phase invalide. Valeurs : {sorted({'menstrual','follicular','ovulatory','luteal'})}")
-    ings = get_cycle_ingredients(phase)
-    return {"phase": phase, "ingredients": ings, "count": len(ings)}
-
-
-@router.post("/graph/analyze", tags=["Graphe"])
-def graph_analyze(payload: GraphAnalyzeRequest, user: dict = Depends(get_user)):
-    """Analyse complète d'une recette via le graphe."""
-    from backend.engine.graph_engine import analyze_recipe                   # conservé
-    if not payload.recipe.get("ingredients"):
-        raise HTTPException(status_code=400, detail="'recipe.ingredients' requis")
-    return analyze_recipe(payload.recipe, payload.profile)

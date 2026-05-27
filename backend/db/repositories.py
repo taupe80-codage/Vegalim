@@ -88,6 +88,7 @@ class UserRepository:
 ALLOWED_PROFILE_FIELDS = frozenset({
     "diet", "allergies", "liked_ingredients", "disliked_ingredients",
     "budget", "servings", "cycle_phase", "health_goal",
+    "health_consent",   # fix: était absent → PATCH /profil/consent ne persistait jamais
 })
 
 

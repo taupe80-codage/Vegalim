@@ -31,7 +31,9 @@ PASSWORD_MIN_LEN = 8
 _RESET_TTL_MINUTES = int(os.getenv("RESET_TOKEN_TTL_MINUTES", "30"))
 
 # ── Environnement ──────────────────────────────────────────────────────────────
-_IS_DEV = os.getenv("ALIM_ENV", "production").lower() == "development"
+# APP_ENV est la variable canonique (docker-compose, Dockerfile).
+# ALIM_ENV conservé en fallback pour rétro-compatibilité.
+_IS_DEV = os.getenv("APP_ENV", os.getenv("ALIM_ENV", "production")).lower() != "production"
 
 # ── Tentative import DB pour les reset tokens ─────────────────────────────────
 _RESET_DB_OK = False
@@ -96,6 +98,7 @@ def _consume_reset_token(token: str) -> str | None:
 class UserCredentials(BaseModel):
     email: EmailStr
     password: str
+    name: str | None = None     # Nom d'affichage optionnel — porté par le JWT, pas stocké en DB
 
     @field_validator("password")
     @classmethod
@@ -103,6 +106,22 @@ class UserCredentials(BaseModel):
         if len(v) < PASSWORD_MIN_LEN:
             raise ValueError(f"Mot de passe trop court — minimum {PASSWORD_MIN_LEN} caractères")
         return v
+
+    @field_validator("name")
+    @classmethod
+    def name_clean(cls, v: str | None) -> str | None:
+        """Sanitise le nom d'affichage (max 80 chars, pas de HTML)."""
+        if v is None:
+            return None
+        v = v.strip()
+        if not v:
+            return None
+        if len(v) > 80:
+            raise ValueError("Nom d'affichage trop long — maximum 80 caractères")
+        # Retirer les balises HTML basiques
+        import re as _re
+        v = _re.sub(r"<[^>]+>", "", v).strip()
+        return v or None
 
 
 class ForgotPasswordRequest(BaseModel):
@@ -130,7 +149,11 @@ def register(credentials: UserCredentials):
         create_user(str(credentials.email), credentials.password)
     except ValueError as e:
         raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail=str(e))
-    token = create_token({"email": str(credentials.email)})
+    # Inclure 'name' dans le JWT si fourni — retournable via GET /auth/me sans colonne DB
+    token_payload: dict = {"email": str(credentials.email)}
+    if credentials.name:
+        token_payload["name"] = credentials.name
+    token = create_token(token_payload)
     return {"access_token": token, "token_type": "Bearer", "message": "Compte créé avec succès"}
 
 
@@ -190,7 +213,7 @@ def forgot_password(payload: ForgotPasswordRequest, request: Request):
     }
     if _IS_DEV:
         response["_dev_reset_token"] = reset_token
-        logger.warning("ALIM_ENV=development — token de reset dans la réponse.")
+        logger.warning("APP_ENV!=production — token de reset inclus dans la réponse (dev uniquement).")
 
     return response
 

@@ -4,6 +4,14 @@ Culinary Product Engine
 Gestion des utilisateurs, clés API et analytics.
 Stockage fichier JSON (production-ready pour migration SQLite/Postgres).
 
+NOTE ARCHITECTURE (v6) :
+  Cet engine est un système B2B JSON-only autonome, indépendant du flux
+  principal d'authentification (api_key_service → QuotaRepository DB).
+  Il maintient ses propres stores JSON (users.json, api_keys.json, quotas.json)
+  et n'est pas appelé par les routes /admin/* ni par auth_middleware.require_api_key.
+  Son QUOTAS_PATH (quotas.json) est disjoint de la table daily_quotas (SQLAlchemy).
+  À migrer vers api_key_service dans une prochaine version majeure.
+
 Routes principales :
   POST /create_user       → crée un compte + génère la première clé API
   GET  /get_user          → infos utilisateur + quota courant
@@ -16,7 +24,7 @@ import json
 import uuid
 import re
 import hashlib
-from datetime import datetime, date, timedelta
+from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
 
 from backend.engine.config import PRODUCT_PATH
@@ -77,7 +85,7 @@ def create_user(email: str, plan: str = "free") -> dict:
     users[user_id] = {
         "email":   email,
         "plan":    plan,
-        "created": datetime.utcnow().isoformat(),
+        "created": datetime.now(timezone.utc).isoformat(),
         "active":  True,
     }
     _save(USERS_PATH, users)
@@ -146,7 +154,7 @@ def upgrade_plan(user_id: str, new_plan: str) -> dict:
 
     old_plan = users[user_id]["plan"]
     users[user_id]["plan"]    = new_plan
-    users[user_id]["upgraded"]= datetime.utcnow().isoformat()
+    users[user_id]["upgraded"]= datetime.now(timezone.utc).isoformat()
     _save(USERS_PATH, users)
 
     return {
@@ -168,10 +176,10 @@ def generate_api_key(user_id: str) -> dict:
     keys    = _load(API_KEYS_PATH, {})
     api_key = f"ck_{uuid.uuid4().hex}"   # préfixe "ck_" pour identifier nos clés
     key_hash= hashlib.sha256(api_key.encode("utf-8")).hexdigest()
-    created = datetime.utcnow().isoformat()
+    created = datetime.now(timezone.utc).isoformat()
 
     # Stocker le HASH, jamais la clé en clair
-    expires_at = (datetime.utcnow() + timedelta(days=365)).isoformat()
+    expires_at = (datetime.now(timezone.utc) + timedelta(days=365)).isoformat()
     keys[key_hash] = {
         "user_id":    user_id,
         "created":    created,
@@ -221,7 +229,7 @@ def revoke_api_key(api_key: str, user_id: str) -> dict:
         return {"error": "Cette clé n'appartient pas à cet utilisateur."}
 
     keys[key_hash]["active"]  = False
-    keys[key_hash]["revoked"] = datetime.utcnow().isoformat()
+    keys[key_hash]["revoked"] = datetime.now(timezone.utc).isoformat()
     _save(API_KEYS_PATH, keys)
     return {"status": "revoked", "key_prefix": api_key[:8] + "…"}
 
@@ -235,7 +243,7 @@ def register_event(user_id: str, event: str, meta: dict | None = None) -> dict:
         "user_id": user_id,
         "event":   event,
         "meta":    meta or {},
-        "time":    datetime.utcnow().isoformat(),
+        "time":    datetime.now(timezone.utc).isoformat(),
     })
     if len(analytics) > 10_000:
         analytics = analytics[-10_000:]

@@ -12,6 +12,7 @@ Niveaux d'accès :
 """
 import logging
 import os
+from typing import Optional
 
 from fastapi import Depends, Header, HTTPException, status
 from backend.core.jwt_handler import verify_token
@@ -39,7 +40,7 @@ def get_user(authorization: str = Header(...)) -> dict:
 
 # ── JWT Bearer — optionnel (CDC_06 plan freemium) ─────────────────────────────
 
-def get_optional_user(authorization: str = Header(default=None)) -> dict | None:
+def get_optional_user(authorization: Optional[str] = Header(default=None)) -> dict | None:
     """
     Auth optionnelle — retourne l'utilisateur si connecté, None sinon.
 
@@ -67,11 +68,12 @@ def get_optional_user(authorization: str = Header(default=None)) -> dict | None:
 
 def require_api_key(x_api_key: str = Header(...)) -> dict:
     """
-    Valide une clé API B2B (SHA-256 stockée en base).
-    Lève 401 si absente ou invalide, 403 si désactivée.
+    Valide une clé API B2B.
+    Délègue à api_key_service (DB-first, fallback JSON).
+    Lève 401 si absente/invalide, 403 si désactivée, 429 si quota dépassé.
     """
-    from backend.engine.auth_middleware import _lookup_key
-    user = _lookup_key(x_api_key)
+    from backend.services.api_key_service import validate_key
+    user = validate_key(x_api_key)
     if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -93,10 +95,23 @@ def require_feature(feature: str):
 
     Usage :
         @router.get("/mealplan")
-        def mealplan(_user = require_feature("mealplan")):
+        def mealplan(_user = Depends(require_feature("mealplan"))):
     """
-    from backend.engine.auth_middleware import require_plan
-    return Depends(require_plan(feature))
+    from backend.engine.auth_middleware import PLANS
+
+    def _check(user: dict = Depends(require_api_key)) -> dict:
+        plan = user.get("plan", "free")
+        plan_cfg = PLANS.get(plan, PLANS["free"])
+        if not plan_cfg["features"].get(feature, False):
+            needed = [p for p, cfg in PLANS.items() if cfg["features"].get(feature)]
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail=f"Feature '{feature}' non disponible avec le plan '{plan}'. "
+                       f"Plans requis : {', '.join(needed)}.",
+            )
+        return user
+
+    return Depends(_check)
 
 
 # ── Classe APIUser (compat) ───────────────────────────────────────────────────
