@@ -1,14 +1,14 @@
-﻿"""
-routes/frigo.py â€” Mon frigo : suggestions basÃ©es sur les ingrÃ©dients disponibles.
+"""
+routes/frigo.py â€" Mon frigo : suggestions basÃ©es sur les ingrÃ©dients disponibles.
 
 Routes authentifiÃ©es :
-  POST /frigo/suggestions  â€” recettes rÃ©alisables avec les ingrÃ©dients fournis
-  POST /frigo/manquants    â€” ingrÃ©dients manquants pour une recette cible
+  POST /frigo/suggestions  â€" recettes rÃ©alisables avec les ingrÃ©dients fournis
+  POST /frigo/manquants    â€" ingrÃ©dients manquants pour une recette cible
 """
 import logging
 logger = logging.getLogger(__name__)
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field
 from typing import Optional
 
@@ -26,12 +26,57 @@ class FridgeRequest(BaseModel):
                                          description="Filtre type de plat (main, dessert, soupâ€¦). Vide = tous.")
     max_missing:  int            = Field(default=2, ge=0, le=5,
                                          description="Nombre max d'ingrÃ©dients manquants tolÃ©rÃ©s")
-    limit:        int            = Field(default=10, ge=1, le=50)
+    limit:        int            = Field(default=50, ge=1, le=200)
 
 
 class MissingRequest(BaseModel):
     fridge:    list[str] = Field(..., description="IngrÃ©dients disponibles")
     recipe_id: str       = Field(..., description="ID de la recette cible (ex: dip_baba_ghanoush_dbd030)")
+
+
+# ── Tables de correspondance sémantique ─────────────────────────────────────
+#
+# _SYNONYMS   : fridge_id → set d'IDs recette qui doivent AUSSI matcher
+#               (écarts pluriel/singulier, vrais synonymes culinaires)
+#
+# _EXCLUSIONS : paires (fridge_id, recipe_id) qui NE doivent PAS matcher
+#               malgré les règles préfixe/suffixe — faux-positifs confirmés
+#               par audit (ex: avoir du riz ≠ avoir du vinaigre de riz)
+# ─────────────────────────────────────────────────────────────────────────────
+
+_SYNONYMS: dict[str, frozenset] = {
+    # Pluriel → singulier (écart UI vs dataset)
+    "black_beans":   frozenset({"black_bean"}),
+    "kidney_beans":  frozenset({"kidney_bean"}),
+    "split_peas":    frozenset({"split_pea"}),
+    "pumpkin_seeds": frozenset({"pumpkin_seed"}),
+    "flax_seeds":    frozenset({"ground_flaxseed", "flaxseed"}),
+    # Synonymes sémantiques
+    "edamame":       frozenset({"soybean", "edamame_bean"}),
+    "egg":           frozenset({"whole_egg"}),
+    "chickpea":      frozenset({"garbanzo", "chickpeas"}),
+}
+
+_EXCLUSIONS: frozenset = frozenset({
+    # Vinaigres / condiments ≠ ingrédient de base
+    ("rice",    "vinegar/rice"),
+    ("rice",    "rice_vinegar"),
+    ("apple",   "vinegar/apple_cider"),
+    ("apple",   "apple_cider_vinegar"),
+    # Dérivés très transformés (présence ≠ interchangeabilité)
+    ("rice",    "rice_paper"),
+    ("rice",    "rice_noodles"),
+    ("rice",    "rice_vermicelli"),
+    ("sesame",  "sesame_oil"),
+    ("bread",   "bread_flour"),
+    ("cream",   "cream_cheese"),
+    ("cream",   "ice_cream"),
+    ("almond",  "milk_plant/almond"),
+    ("almond",  "almond_milk"),
+    ("lemon",   "preserved_lemon"),
+    ("coconut", "coconut_oil"),
+    ("coconut", "milk_plant/coconut"),
+})
 
 
 def _get_recipe_ingredients(recipe: dict) -> set[str]:
@@ -55,34 +100,49 @@ def _get_recipe_ingredients(recipe: dict) -> set[str]:
 
 def _ingredient_matches(fridge_id: str, recipe_id: str) -> bool:
     """
-    Matching hiÃ©rarchique entre un ingrÃ©dient du frigo et un ingrÃ©dient de recette.
+    Matching sémantique entre un ingrédient du frigo et un ingrédient de recette.
 
-    Les donnÃ©es utilisent un systÃ¨me famille/variÃ©tÃ© (ex: 'tomato/fresh',
+    Les données utilisent un système famille/variété (ex: 'tomato/fresh',
     'butter/dairy', 'citrus/lemon', 'milk_animal/whole') mais l'UI envoie
-    des IDs simplifiÃ©s ('tomato', 'butter', 'lemon', 'milk').
+    des IDs simplifiés ('tomato', 'butter', 'lemon', 'milk').
 
-    RÃ¨gles (dans l'ordre) :
-      1. Ã‰galitÃ© exacte                      : 'garlic'    == 'garlic'
-      2. Prefix + '/'                        : 'tomato'    â†’ 'tomato/fresh'
-      3. Prefix + '_'                        : 'tomato'    â†’ 'tomato_paste'
-      4. Suffix  '_' + fridge_id             : 'lentils'   â†’ 'green_lentils'
-      5. DerniÃ¨re partie aprÃ¨s '/' (famille) : 'lemon'     â†’ 'citrus/lemon'
-         ou prefix de cette partie           : 'lemon'     â†’ 'citrus/lemon_juice'
+    Ordre d'évaluation :
+      0. Exclusions connues (faux-positifs) → False immédiat
+      1. Synonymes explicites              → True immédiat
+      2. Égalité exacte
+      3. Prefix + '/'  : 'tomato'  → 'tomato/fresh'
+      4. Prefix + '_'  : 'tomato'  → 'tomato_paste'
+      5. Suffix '_' + fridge_id    : 'lentils' → 'green_lentils'
+      6. Dernière partie après '/' : 'lemon'   → 'citrus/lemon'
+         ou préfixe de cette partie: 'lemon'   → 'citrus/lemon_juice'
     """
+    # 0. Exclusions prioritaires — faux-positifs confirmés
+    if (fridge_id, recipe_id) in _EXCLUSIONS:
+        return False
+
+    # 1. Synonymes explicites (pluriel/singulier, vrais synonymes)
+    if recipe_id in _SYNONYMS.get(fridge_id, frozenset()):
+        return True
+
+    # 2. Égalité exacte
     if fridge_id == recipe_id:
         return True
-    # RÃ¨gles 2-3 : frigo est un prÃ©fixe de la recette
+
+    # 3-4. Frigo est un préfixe de la recette
     if recipe_id.startswith(fridge_id + "/") or recipe_id.startswith(fridge_id + "_"):
         return True
-    # RÃ¨gle 4 : frigo est un suffixe (mot complet aprÃ¨s _)
+
+    # 5. Frigo est un suffixe (mot complet après _)
     if recipe_id.endswith("_" + fridge_id):
         return True
-    # RÃ¨gle 5 : famille/variÃ©tÃ© â†’ regarder la derniÃ¨re partie aprÃ¨s '/'
+
+    # 6. Famille/variété → regarder la dernière partie après '/'
     parts = recipe_id.split("/")
     if len(parts) > 1:
         last = parts[-1]
         if last == fridge_id or last.startswith(fridge_id + "_"):
             return True
+
     return False
 
 
@@ -104,13 +164,61 @@ def _fridge_coverage(fridge: set[str], needed: set[str]) -> tuple[set[str], set[
     return have, missing
 
 
-# â”€â”€ Routes â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── Cache des ingrédients du dataset ─────────────────────────────────────────
+# Calculé une fois au premier appel de /coverage, réutilisé ensuite.
+# Contient tous les ingredient IDs présents dans au moins une recette.
+
+_recipe_ing_cache: set[str] | None = None
+
+def _get_all_recipe_ingredient_ids() -> set[str]:
+    global _recipe_ing_cache
+    if _recipe_ing_cache is None:
+        _recipe_ing_cache = set()
+        for recipe in load_recipes():
+            _recipe_ing_cache.update(_get_recipe_ingredients(recipe))
+    return _recipe_ing_cache
+
+
+# ── Routes ───────────────────────────────────────────────────────────────────────
+
+@router.get("/coverage")
+def ingredient_coverage(
+    keys: str = Query(..., description="Clés frigo séparées par virgule"),
+    user: dict | None = Depends(get_optional_user),
+):
+    """
+    Retourne quelles clés UI ont au moins une recette correspondante dans le dataset.
+
+    Utilisé par le frontend pour masquer dynamiquement les chips sans couverture
+    (ingrédients sélectionnables mais absents de toutes les recettes actuelles).
+
+    - `covered`   : clés actives — au moins 1 recette utilise cet ingrédient
+    - `uncovered` : clés inactives — aucune recette ne correspond (à masquer)
+
+    **Public** — pas d'authentification requise.
+    """
+    fridge_keys = [k.strip() for k in keys.split(",") if k.strip()]
+    if not fridge_keys:
+        return {"covered": [], "uncovered": []}
+
+    all_ings = _get_all_recipe_ingredient_ids()
+
+    covered   = []
+    uncovered = []
+    for key in fridge_keys:
+        if any(_ingredient_matches(key, rid) for rid in all_ings):
+            covered.append(key)
+        else:
+            uncovered.append(key)
+
+    return {"covered": covered, "uncovered": uncovered}
+
 
 @router.post("/suggestions")
 def fridge_suggestions(payload: FridgeRequest, user: dict | None = Depends(get_optional_user)):
     """
     Retourne les recettes rÃ©alisables avec les ingrÃ©dients du frigo.
-    **Public** â€” fonctionnel sans compte (CDC_11 plan gratuit).
+    **Public** â€" fonctionnel sans compte (CDC_11 plan gratuit).
 
     Tri par complÃ©tude dÃ©croissante (moins d'ingrÃ©dients manquants = prioritaire),
     puis par iconic_score.
@@ -131,7 +239,7 @@ def fridge_suggestions(payload: FridgeRequest, user: dict | None = Depends(get_o
         """
         Retourne le nom FR d'un ingredient_id.
         Fallback : reconstruit un libellÃ© lisible depuis l'ID hiÃ©rarchique.
-        Ex: 'butter/dairy' â†’ 'beurre' (via base 'butter'), 'sugar/white' â†’ 'sucre blanc'
+        Ex: 'butter/dairy' â†' 'beurre' (via base 'butter'), 'sugar/white' â†' 'sucre blanc'
         """
         # 1. Correspondance exacte dans le dictionnaire
         d = ings_dict.get(iid, {})
@@ -161,17 +269,17 @@ def fridge_suggestions(payload: FridgeRequest, user: dict | None = Depends(get_o
 
         # Exclure les recettes oÃ¹ aucun ingrÃ©dient du frigo ne correspond :
         # avoir 0 ingrÃ©dient sur 2 avec max_missing=2 ne constitue pas une
-        # suggestion utile â€” l'utilisateur n'a RIEN de ce qu'il faut.
+        # suggestion utile â€" l'utilisateur n'a RIEN de ce qu'il faut.
         if completeness == 0.0:
             continue
         iconic_score = recipe.get("scoring", {}).get("iconic", {}).get("score", 0)
         scored.append({
-            # â”€â”€ Identification â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+            # â"€â"€ Identification â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
             "id":             recipe["id"],
             "title_fr":       recipe.get("titles", {}).get("fr", ""),
             "titles":         recipe.get("titles", {}),
 
-            # â”€â”€ Champs pour RecipeCard â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+            # â"€â"€ Champs pour RecipeCard â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
             "origin":         recipe.get("origin", {}),
             "difficulty":     recipe.get("difficulty_level"),   # clÃ© rÃ©elle dans les donnÃ©es
             "servings":       recipe.get("servings", 4),
@@ -182,7 +290,7 @@ def fridge_suggestions(payload: FridgeRequest, user: dict | None = Depends(get_o
             "diet_flags_enriched": recipe.get("diet_flags_enriched", {}),
             "nutrition_highlights": recipe.get("nutrition_highlights", {}),
 
-            # â”€â”€ Filtres / tri â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+            # â"€â"€ Filtres / tri â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
             "dish_type":      recipe.get("dish_type", ""),
             "iconic_score":   iconic_score,
             "final_score":    iconic_score,   # alias attendu par RecipeCard
@@ -190,7 +298,7 @@ def fridge_suggestions(payload: FridgeRequest, user: dict | None = Depends(get_o
             "technique":      recipe.get("technique", []),
             "total_time_min": recipe.get("timing", {}).get("total_min"),
 
-            # â”€â”€ Frigo spÃ©cifique â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+            # â"€â"€ Frigo spÃ©cifique â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
             "completeness":   completeness,
             "have":           sorted(have),
             "missing": [

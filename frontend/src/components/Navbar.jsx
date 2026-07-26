@@ -15,12 +15,15 @@ import { useTheme } from '../ThemeContext';
 // Icônes Unicode (pas émoji) — cohérent avec la typo Geist + le toggle ☼/☾
 // Les Favoris sont accessibles via le menu Profil (◎)
 const NAV_LINKS = [
-  { to: '/',          label: 'Recettes',  icon: '✦' },
-  { to: '/frigo',     label: 'Mon frigo', icon: '🧊' },
-  { to: '/planning',  label: 'Planning',  icon: '▦' },
-  { to: '/nutrition', label: 'Nutrition', icon: '◉' },
+  { to: '/',          label: 'Recettes',  icon: '✦'  },
+  { to: '/frigo',     label: 'Mon frigo', icon: '🧊'  },
+  { to: '/planning',  label: 'Planning',  icon: '▦'  },
+  { to: '/courses',   label: 'Courses',   icon: '🛒'  },
+  { to: '/nutrition', label: 'Nutrition', icon: '◉'  },
   { to: '/cycle',     label: 'Cycle',     icon: '🌑' },
   { to: '/astro',     label: 'Astro',     icon: '✨' },
+  { to: '/fodmap',    label: 'FODMAP',    icon: '🌿' },
+  { to: '/faq',       label: 'FAQ',       icon: '❓' },
 ];
 
 export default function Navbar({ onAuthClick }) {

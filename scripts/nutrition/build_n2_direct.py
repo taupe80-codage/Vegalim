@@ -27,9 +27,10 @@ DATA     = ROOT / 'backend/data'
 V32_FILE = DATA / 'ingredients/ingredients_tree.json'
 RAW_DIR  = DATA / 'nutrition/raw'
 PROC_DIR = DATA / 'nutrition/processed'
-OUTPUT_REBUILT = PROC_DIR / 'nutrition_v2_rebuilt.json'
-OUTPUT_N2      = PROC_DIR / 'nutrition_v2.json'
-MANIFEST_FILE  = DATA / 'nutrition/logs/raw_sources_manifest.json'
+OUTPUT_REBUILT  = PROC_DIR / 'nutrition_v2_rebuilt.json'
+OUTPUT_N2       = PROC_DIR / 'nutrition_v2.json'
+MANIFEST_FILE   = DATA / 'nutrition/logs/raw_sources_manifest.json'
+SUPPLEMENTS_FILE = DATA / 'nutrition/reference/nutrition_manual_supplements.json'
 
 SOURCE_PRIORITY = {'CIQUAL': 0, 'USDA': 1, 'CNF': 2}
 
@@ -508,12 +509,20 @@ def compare_with_previous(new_ingredients: dict) -> dict:
     recipe_keys_missing_new = []
     recipe_keys_missing_old = []
     if RECIPES_FILE.exists():
-        recipes = json.loads(RECIPES_FILE.read_text(encoding='utf-8'))
-        recipe_keys = {
-            ing.get('nutrition_key') or ing.get('ingredient_key', '')
-            for r in (recipes if isinstance(recipes, list) else recipes.get('recipes', []))
-            for ing in r.get('ingredients', [])
-        } - {''}
+        try:
+            recipes = json.loads(RECIPES_FILE.read_text(encoding='utf-8'))
+        except Exception as _rje:
+            print(f'  ⚠ recipes.json illisible (ignoré) : {_rje}')
+            recipes = []
+        recipe_keys = set()
+        for r in (recipes if isinstance(recipes, list) else recipes.get('recipes', [])):
+            for comp in r.get('composition', r.get('ingredients', [])):
+                if isinstance(comp, dict):
+                    # format composition: {"ingredient": "almond/default", ...}
+                    ref = comp.get('ingredient') or comp.get('nutrition_key') or comp.get('ingredient_key', '')
+                    base = ref.split('/')[0].strip() if ref else ''
+                    if base:
+                        recipe_keys.add(base)
         recipe_keys_missing_new = sorted(recipe_keys - new_keys)
         recipe_keys_missing_old = sorted(recipe_keys - old_keys)
 
@@ -1015,6 +1024,67 @@ def run(dry_run: bool = False, promote: bool = False) -> None:
 
     print('Construction...')
     n2_ingredients, stats, collision_log = build_n2(v32, raw_idx)
+
+    # ── Injection suppléments MANUAL (ingrédients sans source officielle) ─────
+    # Lus depuis nutrition_manual_supplements.json (source de vérité déclarative).
+    # Correspondance par ig_id (reverse map) car canonical_name_en du tree peut
+    # diverger du ing_key du fichier supplements.
+    if SUPPLEMENTS_FILE.exists():
+        try:
+            supp_doc = json.loads(SUPPLEMENTS_FILE.read_text(encoding='utf-8'))
+            supplements = supp_doc.get('supplements', {})
+            # Reverse map : ig_id → n2_key (clé générée par slug(canonical_name_en))
+            igid_to_n2key = {
+                b.get('_v32_id'): k
+                for k, b in n2_ingredients.items()
+                if b.get('_v32_id')
+            }
+            injected = 0
+            skipped = 0
+            for ing_key, supp in supplements.items():
+                nutrients = supp.get('nutrients', {})
+                if not nutrients:
+                    continue
+                ig_id = supp.get('ig_id')
+                # Cherche la clé n2 réelle via ig_id, sinon fallback sur ing_key
+                n2_key = igid_to_n2key.get(ig_id, ing_key)
+                variant_data = {
+                    '_source':    'MANUAL',
+                    '_source_id': None,
+                    '_v32_ing_id': ig_id,
+                    '_v32_var_id': supp.get('var_id'),
+                    'axes':       {},
+                    'name_fr':    supp.get('name_fr', ing_key),
+                    'name_en':    supp.get('name_en', ing_key),
+                    'indus_conditionne': False,
+                    'conditioning_types': [],
+                    **nutrients,
+                }
+                if n2_key not in n2_ingredients:
+                    n2_ingredients[n2_key] = {
+                        'taxonomy':               {},
+                        'ingredient_type':         'ingredient',
+                        'variant_dimensions':      [],
+                        'indus_conditionne':        False,
+                        'indus_conditionne_only':   False,
+                        'conditioning_types':       [],
+                        'aliases_fr':              [],
+                        '_v32_id':                 ig_id,
+                        'variants':                {'default': variant_data},
+                    }
+                    injected += 1
+                else:
+                    if 'default' not in n2_ingredients[n2_key].get('variants', {}):
+                        n2_ingredients[n2_key].setdefault('variants', {})['default'] = variant_data
+                        injected += 1
+                    else:
+                        skipped += 1
+            print(f'  💉 Suppléments MANUAL injectés : {injected} / {len(supplements)} (déjà couverts: {skipped})')
+        except Exception as exc:
+            print(f'  ⚠ Impossible de charger supplements MANUAL : {exc}')
+    else:
+        print(f'  ℹ️  Pas de fichier supplements ({SUPPLEMENTS_FILE.name})')
+
     total_variants = sum(len(b.get('variants', {})) for b in n2_ingredients.values())
 
     n2_out = {

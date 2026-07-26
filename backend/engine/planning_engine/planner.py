@@ -7,6 +7,8 @@ API :
 """
 from __future__ import annotations
 import logging
+import math
+import random
 from collections import Counter
 from datetime import datetime, timezone
 
@@ -54,6 +56,10 @@ def generate_plan(
     cuisine:         str | None   = None,
     dish_type:       str | None   = None,
     difficulty:      str | None   = None,
+    # Diversité : 0.0 = toujours le meilleur score (déterministe),
+    #             1.0 = tirage quasi-aléatoire parmi le top pool
+    diversity:       float        = 0.5,
+    pool_size:       int          = 12,   # nb de candidats dans lequel piocher
 ) -> dict:
     """
     Génère un plan de repas hebdomadaire (7 jours × 2 repas).
@@ -166,21 +172,40 @@ def generate_plan(
                     plan[day][meal] = lunch_recipe
                     continue
 
-            # Candidats non encore utilisés, triés par score composite
+            # Candidats non encore utilisés
             candidates = [r for r in recipes if r.get("id") not in used_ids]
 
-            # Scorer les candidats
+            # Scorer tous les candidats
             def _score(r):
-                s = float(r.get("scoring", {}).get("iconic", {}).get("score") or 50) / 100.0 * 5.0  # base
+                s = float(r.get("scoring", {}).get("iconic", {}).get("score") or 50) / 100.0 * 5.0
                 s += _season_bonus(r, month)
                 s += _reuse_score(r, planned_ings)
-                # Diversifier les types de repas
                 if meal == "lunch" and meal_type(r) in ("soup", "salad"):
                     s += 1.0
                 return s
 
-            candidates.sort(key=_score, reverse=True)
-            chosen = candidates[0] if candidates else (recipes[day_i % len(recipes)])
+            # ── Sélection pondérée par score (softmax sur le top-pool) ────────
+            # diversity 0 → déterministe (toujours le #1), 1 → très aléatoire
+            # temperature = diversity * 5 + 0.05  (plage ~0.05 à 5.05)
+            temperature = max(0.05, float(diversity) * 5.0)
+
+            scored = sorted(
+                ((r, _score(r)) for r in candidates),
+                key=lambda x: -x[1],
+            )
+            pool = scored[:max(pool_size, 1)]
+
+            if not pool:
+                chosen = recipes[day_i % len(recipes)]
+            elif len(pool) == 1 or diversity <= 0.0:
+                chosen = pool[0][0]
+            else:
+                best_s = pool[0][1]
+                weights = [
+                    math.exp((s - best_s) / temperature)
+                    for _, s in pool
+                ]
+                chosen = random.choices([r for r, _ in pool], weights=weights, k=1)[0]
 
             plan[day][meal] = {
                 "id":       chosen.get("id"),

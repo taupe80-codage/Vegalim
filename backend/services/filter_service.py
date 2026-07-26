@@ -69,6 +69,49 @@ except ImportError:
     ALLOWED_DIETS:  frozenset[str] = frozenset()
 
 
+# ── Ingrédients marqueurs de saison ─────────────────────────────────────────
+# Source : calendrier de saisonnalité France métropolitaine (ADEME / Agrilocal).
+# Logique : une recette appartient à une saison si elle contient AU MOINS UN
+# ingrédient marqueur. Les ingrédients neutres (légumineuses, céréales, épices)
+# ne déclenchent aucune saison — ils apparaissent dans tous les résultats.
+_SEASON_MARKERS: dict[str, frozenset[str]] = {
+    "spring": frozenset({
+        "asparagus", "spinach", "pea", "radish", "artichoke", "rhubarb",
+        "strawberry", "fraise", "asperge", "epinard", "petit_pois",
+        "radis", "artichaut", "rhubarbe", "watercress", "cresson",
+        "sorrel", "oseille", "lettuce", "laitue", "fennel_bulb",
+        "broad_bean", "feve",
+    }),
+    "summer": frozenset({
+        "tomato", "zucchini", "eggplant", "bell_pepper", "corn", "cucumber",
+        "basil", "watermelon", "peach", "apricot", "cherry", "fig",
+        "raspberry", "blueberry", "blackcurrant", "green_bean", "snap_pea",
+        "tomate", "courgette", "aubergine", "poivron", "mais", "concombre",
+        "basilic", "pasteque", "peche", "abricot", "cerise", "figue",
+        "framboise", "myrtille", "cassis", "haricot_vert",
+        "nectarine", "plum", "prune", "melon",
+    }),
+    "autumn": frozenset({
+        "pumpkin", "squash", "butternut", "apple", "pear", "mushroom",
+        "grape", "chestnut", "quince", "pear", "leek", "parsnip",
+        "citrouille", "courge", "butternut_squash", "pomme", "poire",
+        "champignon", "shiitake", "raisin", "chataigne", "marron",
+        "coing", "poireau", "panais", "broccoli", "cauliflower",
+        "brocoli", "chou_fleur", "sweet_potato", "patate_douce",
+        "fig", "figue", "plum", "prune", "celery_root", "celeriac",
+    }),
+    "winter": frozenset({
+        "orange", "clementine", "grapefruit", "lemon", "kiwi",
+        "carrot", "turnip", "rutabaga", "celery", "parsnip",
+        "brussel_sprout", "cabbage", "red_cabbage", "sauerkraut",
+        "orange", "clementine", "pamplemousse", "citron", "kiwi",
+        "carotte", "navet", "rutabaga", "celeri", "panais",
+        "chou_bruxelles", "chou", "chou_rouge", "choucroute",
+        "pomelo", "mandarine", "persimmon", "kaki",
+        "leek", "poireau", "endive", "witloof",
+    }),
+}
+
 # ── Cache health_scores (calculé depuis nutrition graph) ─────────────────────
 #
 # recipes.json ne stocke jamais health_scores. Ce cache est construit une fois
@@ -95,7 +138,11 @@ def _build_hs_cache() -> dict[str, dict]:
     Appelé une seule fois — thread-safe via _hs_lock.
     """
     from backend.core.data_io import load_nutrition_graph, load_recipes
-    from backend.engine.rule_engine.diet import _extract_ids, HIGH_FODMAP_IDS
+    from backend.engine.rule_engine.diet import (
+        _extract_ids, HIGH_FODMAP_IDS, MEDIUM_FODMAP_IDS,
+        FODMAP_THRESHOLDS, _extract_quantities, FODMAP_CATEGORY_MAP,
+        _GOS_HIGH,
+    )
 
     ng      = load_nutrition_graph()
     recipes = load_recipes()
@@ -123,9 +170,55 @@ def _build_hs_cache() -> dict[str, dict]:
         k   = float(nutr.get("potassium",  0) or 0)
         zn  = float(nutr.get("zinc",       0) or 0)
 
-        # ── FODMAP (comptage ingrédients triggers) ────────────────────────────
+        # ── FODMAP — scoring quantitatif (Monash) + fallback liste ──────────
         ids = _extract_ids(recipe)
-        fodmap_count = sum(1 for i in ids if i in HIGH_FODMAP_IDS)
+        techniques_set = {str(t).lower() for t in (recipe.get("technique") or [])}
+        is_sourdough     = any(k in techniques_set for k in ("sourdough", "levain", "long_fermentation"))
+        is_rinsed_legume = any(k in techniques_set for k in ("canned", "rince", "rinced", "rinsed"))
+
+        qty_map = _extract_quantities(recipe)
+        fodmap_score  = 0
+        fodmap_cats: set[str] = set()
+        scored_by_qty: set[str] = set()
+        wheat_ids = {"wheat", "flour", "bread", "pasta", "ble", "farine", "pain"}
+        has_wheat = False
+
+        for base, grams in qty_map.items():
+            thresh = FODMAP_THRESHOLDS.get(base)
+            if thresh is None:
+                continue
+            scored_by_qty.add(base)
+            for cat in thresh["cats"]:
+                fodmap_cats.add(cat)
+            if grams > thresh["medium"]:
+                fodmap_score += 2
+            elif grams > thresh["safe"]:
+                fodmap_score += 1
+            if base in wheat_ids:
+                has_wheat = True
+
+        for ing in ids:
+            if ing in scored_by_qty:
+                continue
+            if ing in HIGH_FODMAP_IDS:
+                fodmap_score += 2
+                for cat in FODMAP_CATEGORY_MAP.get(ing, []):
+                    fodmap_cats.add(cat)
+            elif ing in MEDIUM_FODMAP_IDS:
+                fodmap_score += 1
+                for cat in FODMAP_CATEGORY_MAP.get(ing, []):
+                    fodmap_cats.add(cat)
+            if ing in wheat_ids:
+                has_wheat = True
+
+        if is_sourdough and has_wheat:
+            fodmap_score = max(0, fodmap_score - 2)
+        if is_rinsed_legume and (_GOS_HIGH & ids):
+            fodmap_score = max(0, fodmap_score - 1)
+
+        cat_labels = {"F": "fructanes", "G": "GOS", "D": "lactose", "M": "fructose", "P": "polyols"}
+        fodmap_categories = sorted(cat_labels[c] for c in fodmap_cats if c in cat_labels)
+        fodmap_level = "low" if fodmap_score == 0 else "medium" if fodmap_score <= 2 else "high"
 
         # ── Health scores ─────────────────────────────────────────────────────
         # Seuil GI corrigé : échelle standard 0-100 (OMS)
@@ -152,11 +245,9 @@ def _build_hs_cache() -> dict[str, dict]:
                 "high"
             ),
             # FODMAP
-            "fodmap_level": (
-                "low"    if fodmap_count == 0 else
-                "medium" if fodmap_count <= 2  else
-                "high"
-            ),
+            "fodmap_level":      fodmap_level,
+            "fodmap_score":      fodmap_score,
+            "fodmap_categories": fodmap_categories,
             # Anti-inflammatoire (proxy omega-3 si disponible)
             "anti_inflammatory_score": (
                 "high"   if omega3 >= 1.0 else
@@ -193,16 +284,8 @@ def _build_hs_cache() -> dict[str, dict]:
             "magnesium_mg":   round(mg, 1),
             "potassium_mg":   round(k,  1),
             "zinc_mg":        round(zn, 2),
-            # Antioxydants — proxy vitamine C élevée ou combo calcium/fer
-            "antioxidant_rich": vc >= 20.0 or (ca >= 120.0 and fe >= 2.0),
-            # Champs non disponibles dans la nutrition graph (pas de données)
-            # → retournent False = 0 résultats = comportement honnête
-            "high_vitamin_d":    False,
-            "source_vitamin_d":  False,
-            "high_folate":       False,
-            "source_folate":     False,
-            "high_omega3":       False,
-            "source_omega3":     False,
+            # Antioxydants — vitamine C réelle ≥ 40mg (30% AJR, seuil discriminant ~30% recettes)
+            "antioxidant_rich": vc >= 40.0,
         }
         cache[rid] = hs
 
@@ -399,6 +482,7 @@ def apply_filters(
     high_fiber:           bool         = False,
     good_source_fiber:    bool         = False,
     low_ig:               bool         = False,
+    moderate_ig:          bool         = False,
     max_kcal:             int | None   = None,
     # ── Micronutriments (via nutrition_highlights agrégés par enrich_why) ──────────
     high_vitamin_c:        bool        = False,
@@ -472,7 +556,7 @@ def apply_filters(
                 af = d.get("allergen_flags", {})
                 if dp.get("egg_free") is False or dp.get("sans_oeuf") is False or af.get("eggs"):
                     flags["egg_free"] = False
-                if dp.get("dairy_free") is False or af.get("milk"):
+                if dp.get("dairy_free") is False or dp.get("sans_lactose") is False or af.get("milk"):
                     flags["dairy_free"] = False
                 if dp.get("soy_free") is False or dp.get("sans_soja") is False or af.get("soy"):
                     flags["soy_free"] = False
@@ -500,7 +584,9 @@ def apply_filters(
         result = [r for r in result if r.get("dish_type", "").lower() in active_dish_types]
 
     # ── Health scores — macros (depuis cache _hs, construit sur nutrition graph) ─
-    if fodmap:
+    if fodmap == "not_high":
+        result = [r for r in result if _hs(r).get("fodmap_level") != "high"]
+    elif fodmap:
         result = [r for r in result if _hs(r).get("fodmap_level") == fodmap]
     if high_protein:
         result = [r for r in result if _hs(r).get("high_protein")]
@@ -514,6 +600,8 @@ def apply_filters(
         result = [r for r in result if _hs(r).get("good_source_fiber") or _hs(r).get("high_fiber")]
     if low_ig:
         result = [r for r in result if _hs(r).get("glycemic_category") == "low"]
+    if moderate_ig:
+        result = [r for r in result if _hs(r).get("glycemic_category") in ("low", "medium")]
     if max_kcal is not None:
         result = [r for r in result if (_hs(r).get("kcal") or 9999) <= max_kcal]
     if low_sugar:
@@ -642,18 +730,29 @@ def apply_filters(
         result = [r for r in result
                   if r.get("difficulty_level", "").lower() == diff_norm]
 
-    # ── Saison ────────────────────────────────────────────────────────────────
+    # ── Saison — détection par ingrédients marqueurs ─────────────────────────
     if season:
-        SEASON_MONTHS = {
-            "spring": [3, 4, 5], "summer": [6, 7, 8],
-            "autumn": [9, 10, 11], "fall": [9, 10, 11], "winter": [12, 1, 2],
-            "printemps": [3, 4, 5], "ete": [6, 7, 8], "automne": [9, 10, 11],
-            "hiver": [12, 1, 2],
+        _SEASON_ALIASES = {
+            "printemps": "spring", "été": "summer", "ete": "summer",
+            "automne": "autumn", "fall": "autumn", "hiver": "winter",
         }
-        months = SEASON_MONTHS.get(season.lower(), [])
-        if months:
-            result = [r for r in result
-                      if any(m in months for m in (r.get("seasonal_months") or []))]
+        season_key = _SEASON_ALIASES.get(season.lower(), season.lower())
+        markers = _SEASON_MARKERS.get(season_key, set())
+        all_markers = frozenset().union(*_SEASON_MARKERS.values())
+        if markers:
+            def _ing_bases(recipe: dict) -> list[str]:
+                return [
+                    str(i.get("ingredient", "") if isinstance(i, dict) else i).split("/")[0].lower()
+                    for i in (recipe.get("composition") or [])
+                ]
+            def _recipe_season_ok(recipe: dict) -> bool:
+                bases = _ing_bases(recipe)
+                # Recette neutre (aucun marqueur saisonnier) → toutes saisons
+                if not any(b in all_markers for b in bases):
+                    return True
+                # Sinon : doit contenir au moins un marqueur de la saison demandée
+                return any(b in markers for b in bases)
+            result = [r for r in result if _recipe_season_ok(r)]
 
     total = len(result)
     page  = result[skip: skip + limit]

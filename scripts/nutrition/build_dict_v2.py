@@ -19,7 +19,7 @@ Sources :
 """
 
 import json, re, sys
-from datetime import datetime, UTC
+from datetime import datetime, timezone; UTC = timezone.utc
 from pathlib import Path
 from collections import defaultdict, OrderedDict
 
@@ -48,24 +48,29 @@ DICT_AXES_VALUE_MAP: dict[str, dict[str, str]] = {
         'grillé': 'grilled', 'grillé à sec': 'dry_roasted', 'vapeur': 'steamed',
         'rôti': 'roasted', 'sauté': 'sauteed', 'précuit': 'precooked',
         'au four': 'baked', 'à cuire': 'to_cook', 'étouffée': 'braised',
+        'au plat': 'fried_flat', 'brouillé': 'scrambled', 'coque': 'soft_boiled',
+        'dur': 'hard_boiled', 'poché': 'poached', 'étuvée': 'steamed',
     },
     'forme': {
         'entière': 'whole', 'entier': 'whole', 'moulue': 'ground', 'moulu': 'ground',
         'poudre': 'powder', 'beurre': 'butter', 'compote': 'puree', 'purée': 'puree',
         'concentré': 'concentrated', 'flocon': 'flaked', 'flocons': 'flakes',
-        'concassé': 'cracked', 'tranche': 'sliced', 'tranché': 'sliced',
-        'bloc': 'block', 'crème': 'cream', 'extrait': 'extract', 'jus': 'juice',
-        'zeste': 'zest', 'confiture': 'jam', 'broyé': 'crushed', 'farine': 'flour',
-        'huile': 'oil', 'lait': 'milk', 'pâte': 'paste', 'râpé': 'grated',
-        'liquide': 'liquid', 'gelée': 'jelly', 'granulé': 'granulated',
-        'comprimé': 'tablet', 'pastilles': 'lozenges', 'confit': 'candied',
-        'croquant': 'crunchy', 'crème de fruit': 'fruit_cream', 'crémeux': 'creamy',
-        'eau végétale': 'plant_water', 'fouetté': 'whipped',
+        'concassé': 'cracked', 'concassée': 'cracked', 'tranche': 'sliced',
+        'tranché': 'sliced', 'bloc': 'block', 'crème': 'cream', 'extrait': 'extract',
+        'jus': 'juice', 'zeste': 'zest', 'confiture': 'jam', 'broyé': 'crushed',
+        'farine': 'flour', 'huile': 'oil', 'lait': 'milk', 'pâte': 'paste',
+        'râpé': 'grated', 'liquide': 'liquid', 'gelée': 'jelly',
+        'granulé': 'granulated', 'comprimé': 'tablet', 'pastilles': 'lozenges',
+        'confit': 'candied', 'croquant': 'crunchy', 'crème de fruit': 'fruit_cream',
+        'crémeux': 'creamy', 'eau végétale': 'plant_water', 'fouetté': 'whipped',
         'grain court': 'short_grain', 'grain long': 'long_grain',
         'grain moyen': 'medium_grain', 'herbe fraîche': 'fresh_herb',
         'herbe séchée': 'dried_herb', 'paillettes': 'flakes',
         'petits morceaux': 'small_pieces', 'yaourt': 'yogurt',
         'émietté': 'crumbled', 'épice': 'spice',
+        'semoule': 'semolina', 'sauce': 'sauce', 'steel cut': 'steel_cut',
+        'en dés': 'diced', 'double concentré': 'double_concentrated',
+        'fondant': 'fondant', 'pâte dure': 'hard_paste',
     },
     'partie': {
         'graine': 'seed', 'graine entière': 'whole_seed', 'feuille': 'leaf',
@@ -88,34 +93,58 @@ DICT_AXES_VALUE_MAP: dict[str, dict[str, str]] = {
         'réduit en lactose': 'lactose_reduced', 'réduit en sodium': 'sodium_reduced',
         'sans gluten': 'gluten_free', 'texturé': 'textured', 'vierge': 'virgin',
         'écrémé': 'skimmed', 'élevé en gras': 'high_fat', 'étuvé': 'parboiled',
+        'iodé, fluoré': 'iodized_fluoridated', 'torréfié': 'roasted',
+        'grillé': 'roasted', 'rôti': 'roasted', 'extra vierge': 'extra_virgin',
+        'sans pulpe': 'pulp_free', 'alcoolique': 'alcoholic',
+        'pression à froid': 'cold_pressed', 'à base de concentré': 'from_concentrate',
+        'lait_cru': 'raw_milk', 'non blanchi': 'unbleached',
+        'non blanchi (peau conservée)': 'unbleached_skin_on',
+        'décaféiné_instantané': 'decaf_instant',
+        'enrichi_blanchi': 'enriched_bleached',
+        'enrichi_non_blanchi': 'enriched_unbleached',
+        'non_enrichi_non_blanchi': 'unenriched_unbleached',
+        'avec additifs': 'with_additives', 'frais': 'fresh',
+        'grillé à sec': 'dry_roasted', "grillé à l'huile": 'roasted_in_oil',
     },
     'etat_thermique': {
         'séché': 'dried', 'frais': 'fresh', 'déshydraté': 'dehydrated',
         'réhydraté': 'rehydrated', 'UHT': 'uht', 'pasteurisé': 'pasteurized',
+        'réfrigéré': 'refrigerated', 'sous pression': 'pressurized',
+        'surgelé': 'frozen',
     },
     'assaisonnement': {
         'salé': 'salted', 'sucré': 'sweetened', 'sans sel': 'unsalted',
         'sans sucre': 'unsweetened', 'épicé': 'spiced', 'aromatisé': 'flavored',
+        'nature': 'plain', 'naturel': 'natural', 'demi-sel': 'lightly_salted',
     },
     'conditionnement': {
         'conserve': 'canned', 'appertisé': 'canned', 'sous vide': 'vacuum',
         'lyophilisé': 'freeze_dried', 'surgelé': 'frozen', 'UHT': 'uht',
         'commercial': 'commercial', 'pasteurisé': 'pasteurized',
         'préemballé': 'pre_packaged', 'rayon frais': 'fresh_aisle',
-        'sous pression': 'pressurized', 'tablette': 'tablet',
+        'sous pression': 'pressurized', 'tablette': 'tablet', 'frais': 'fresh',
     },
     'egouttage': {
         "à l'huile": 'in_oil', 'au vinaigre': 'in_vinegar',
         'dans sirop': 'in_syrup', "dans l'eau": 'in_water', 'égoutté': 'drained',
     },
-    'maturite':           {'mûr': 'ripe', 'vert': 'unripe', 'trop mûr': 'overripe'},
-    'teneur_MG':          {'écrémé': 'skimmed', 'allégé': 'light', 'entier': 'whole'},
-    'origine':            {'végétal': 'plant', 'animal': 'animal'},
+    'maturite': {
+        'mûr': 'ripe', 'mûre': 'ripe', 'vert': 'unripe', 'trop mûr': 'overripe',
+        'mature': 'mature', 'bébé': 'baby', 'pas mûr': 'unripe',
+    },
+    'teneur_MG':          {'écrémé': 'skimmed', 'allégé': 'light', 'entier': 'whole',
+                           'demi-écrémé': 'semi_skimmed', 'élevé en gras': 'high_fat'},
+    'origine':            {
+        'végétal': 'plant', 'animal': 'animal',
+        'vache': 'cow', 'brebis': 'sheep', 'chèvre': 'goat', 'bufflonne': 'buffalo',
+    },
     'milieu_conservation': {
         "à l'huile": 'in_oil', 'au vinaigre': 'in_vinegar',
         'dans sirop': 'in_syrup', "dans l'eau": 'in_water',
+        'dans du jus': 'in_juice', 'en saumure': 'in_brine',
+        'sirop léger': 'in_light_syrup', 'sirop épais': 'in_heavy_syrup',
     },
-    'procede_cuisson':    {"à l'huile": 'in_oil', 'à sec': 'dry'},
+    'procede_cuisson':    {"à l'huile": 'in_oil', 'à sec': 'dry', 'au four': 'baked'},
 }
 
 
@@ -129,7 +158,7 @@ def translate_axes(axes_fr: dict) -> dict:
                            '_'.join(str(x) for x in v_raw).lower()).strip('_')
             out[k_en] = v_str
         elif k_fr == 'teneur_MG':
-            _TEXT_MG = {'écrémé': 'skimmed', 'allégé': 'light', 'entier': 'whole'}
+            _TEXT_MG = {'écrémé': 'skimmed', 'allégé': 'light', 'entier': 'whole', 'demi-écrémé': 'semi_skimmed', 'élevé en gras': 'high_fat'}
             v_str = str(v_raw).strip()
             out[k_en] = _TEXT_MG.get(v_str, v_str)
         else:
@@ -147,8 +176,10 @@ ROOT = Path(__file__).parents[2]
 DATA = ROOT / 'backend/data'
 V32  = DATA / 'ingredients/ingredients_tree.json'
 N2   = DATA / 'nutrition/processed/nutrition_v2.json'
+# DOLD : ancien dict lu en mémoire AVANT l'écriture — l'écrasement est safe.
+# Si le fichier n'existe pas encore (première run), la migration méta est ignorée gracieusement.
 DOLD = DATA / 'ingredients/ingredients_dictionary.json'
-OUT  = DATA / 'ingredients/ingredients_dictionary_v2.json'
+OUT  = DATA / 'ingredients/ingredients_dictionary.json'
 
 # ══════════════════════════════════════════════════════════════════
 # CHARGEMENT
@@ -156,8 +187,26 @@ OUT  = DATA / 'ingredients/ingredients_dictionary_v2.json'
 print('Chargement sources...')
 v32  = json.loads(V32.read_text(encoding='utf-8'))
 n2   = json.loads(N2.read_text(encoding='utf-8'))
-dold = json.loads(DOLD.read_text(encoding='utf-8'))
-old_ing = {e['id']: e for e in dold.get('ingredients', [])}
+# Chargement de l'ancien dict pour migration méta (culinary, diet_profile…)
+# Le fichier est chargé en mémoire maintenant ; OUT sera écrasé seulement à la fin.
+if DOLD.exists():
+    dold = json.loads(DOLD.read_text(encoding='utf-8'))
+    # Support des deux structures : liste 'ingredients' (ancienne) ou dict 'categories' (nouvelle)
+    if 'ingredients' in dold and isinstance(dold['ingredients'], list):
+        old_ing = {e['id']: e for e in dold['ingredients']}
+    elif 'categories' in dold:
+        # Nouvelle structure : aplatir ingredient_groups
+        old_ing = {}
+        for _cat in dold['categories'].values():
+            for _sub in _cat.get('subcategories', {}).values():
+                for _k, _e in _sub.get('ingredient_groups', {}).items():
+                    old_ing[_k] = _e
+    else:
+        old_ing = {}
+else:
+    dold = {}
+    old_ing = {}
+    print('  [INFO] ingredients_dictionary.json absent — migration méta désactivée (première run)')
 
 # Index n2 par v32_var_id → variant complet
 n2_by_var_id: dict[str, dict] = {}
@@ -165,8 +214,14 @@ n2_by_var_id: dict[str, dict] = {}
 n2_by_ing_id: dict[str, list] = defaultdict(list)
 # Index par (source, source_id) → variant
 n2_by_source: dict[tuple, dict] = {}
+# Index n2 : ing_id → base_key nutrition_v2 (clé source de vérité pour le nommage)
+n2_base_by_ing_id: dict[str, str] = {}
 
 for base_key, base in n2.get('ingredients', {}).items():
+    # Récupérer le v32_id depuis la taxonomy ou le champ _v32_id
+    ing_id_n2 = base.get('_v32_id') or base.get('taxonomy', {}).get('v32_id')
+    if ing_id_n2:
+        n2_base_by_ing_id[ing_id_n2] = base_key
     for vk, vr in base.get('variants', {}).items():
         if not isinstance(vr, dict): continue
         var_id = vr.get('_v32_var_id')
@@ -176,16 +231,18 @@ for base_key, base in n2.get('ingredients', {}).items():
             n2_by_var_id[var_id] = vr
         if ing_id:
             n2_by_ing_id[ing_id].append(vr)
+            n2_base_by_ing_id.setdefault(ing_id, base_key)  # premier match gagne
         if src_key[1]:
             n2_by_source[src_key] = vr
 
 print(f'  n2 : {len(n2_by_var_id)} variants indexés par var_id')
 print(f'  n2 : {len(n2_by_ing_id)} ing_ids référencés')
+print(f'  n2 : {len(n2_base_by_ing_id)} ing_ids avec base_key n2')
 
 # ══════════════════════════════════════════════════════════════════
 # HELPERS COMMUNS
 # ══════════════════════════════════════════════════════════════════
-SOURCE_PRIORITY = {'CIQUAL': 0, 'USDA': 1, 'CNF': 2}
+SOURCE_PRIORITY = {'CIQUAL': 0, 'USDA': 1, 'CNF': 2, 'MANUAL': 3}
 
 def src_rank(src: str) -> int:
     return SOURCE_PRIORITY.get((src or '').upper(), 99)
@@ -344,6 +401,23 @@ NOT_VEGAN_CATS = {'dairy_products','eggs','fish_and_seafood','meat_and_poultry',
 NOT_VEGAN_SUBS = {'butter','cream','creme_fraiche','cheeses','kefir','whey','milk',
                   'condensed_milk','powdered_milk','yogurts','eggs_general','prepared_eggs'}
 NOT_VEG_CATS   = {'fish_and_seafood','meat_and_poultry','fish','seafood'}
+
+# Sous-catégories toujours considérées comme produits laitiers (dairy_free=False)
+DAIRY_SUBS = {'milk','condensed_milk','powdered_milk','butter','cream',
+               'creme_fraiche','cheeses','kefir','whey','yogurts'}
+
+# Mots-clés dans la clé d'entrée qui indiquent un produit contenant du lait,
+# même si la taxonomie cat1/cat2 ne pointe pas vers dairy_products.
+# NB : on n'attrape pas les plats composés (lasagne, quiche...) — hors périmètre.
+DAIRY_KEY_TRIGGERS = {
+    'milk_chocolate',       # chocolat au lait
+    'white_chocolate',      # chocolat blanc (beurre de cacao + lait)
+    'au_lait',              # ex: café_au_lait, riz_au_lait
+    'dulce_de_leche',       # confiture de lait
+    'bechamel',             # sauce béchamel (base lait)
+    'custard',              # crème anglaise / crème pâtissière
+    'caramel_au_beurre',    # contient du beurre
+}
 BIO_TABLE = [
     ('dairy','',0.92),('eggs','',0.97),('fish','',0.90),('meat','',0.91),
     ('legumes','soy',0.91),('legumes','',0.72),
@@ -424,6 +498,15 @@ def enrich(ig: dict, cat_label: str, sub_label: str, n2_vr: dict, entry_key: str
                   {'milk','condensed_milk','powdered_milk','butter','cream',
                    'creme_fraiche','cheeses','kefir','whey','yogurts'})
 
+    # ── dairy_free ────────────────────────────────────────────────
+    # Condition taxonomique : même périmètre que lactose_free (toute la cat dairy
+    # + sous-catégories laitières dans d'autres cat, ex: butter dans fats_and_oils).
+    dairy  = not (cat_l.startswith('dairy') or sub_l in DAIRY_SUBS)
+    # Rattrapage par clé d'entrée : ingrédients composés contenant du lait
+    # mais classés hors dairy_products (chocolat au lait, béchamel, etc.).
+    if dairy and any(kw in key_l for kw in DAIRY_KEY_TRIGGERS):
+        dairy = False
+
     # ── nut_free ───────────────────────────────────────────────────
     nuts   = not (cat_l.startswith('nuts') and sub_l not in {'seeds','nut_butters','coconut'})
 
@@ -442,10 +525,11 @@ def enrich(ig: dict, cat_label: str, sub_label: str, n2_vr: dict, entry_key: str
     # Ces 7 champs ne doivent JAMAIS être écrasés par l'ancien dict (migration partielle)
     # car les erreurs de l'ancien dict (ex: dairy vegan=True) survivraient au calcul correct.
     EXCLUSION_FLAGS = {'vegan', 'vegetarian', 'gluten_free', 'lactose_free',
-                       'nut_free', 'soy_free', 'egg_free'}
+                       'nut_free', 'soy_free', 'egg_free', 'dairy_free'}
 
     base_dp = {'vegan':vegan,'vegetarian':vegeta,'gluten_free':gluten,
-               'lactose_free':lactose,'nut_free':nuts,'soy_free':soy,'egg_free':egg}
+               'lactose_free':lactose,'dairy_free':dairy,
+               'nut_free':nuts,'soy_free':soy,'egg_free':egg}
     if prot  is not None: base_dp['high_protein']      = float(prot)  >= 15.0
     if fiber is not None: base_dp['high_fiber']         = float(fiber) >= 3.0
     if fat   is not None: base_dp['high_fat']           = float(fat)   >= 20.0
@@ -505,7 +589,8 @@ for cat in v32.get('categories', []):
             ig_id   = ig.get('id', '')
             name_en = ig.get('canonical_name_en', '') or ig_id
             name_fr = ig.get('canonical_name_fr', '')
-            base_key = clean_key(name_en, ig_id)
+            # Priorité : clé nutrition_v2 (source de vérité) > canonical_name_en du tree
+            base_key = n2_base_by_ing_id.get(ig_id) or clean_key(name_en, ig_id)
 
             # Migration méta depuis ancien dict (commune à tous les variants de cet ig)
             meta = get_meta(ig_id, name_en, base_key)
@@ -515,6 +600,9 @@ for cat in v32.get('categories', []):
                 stats['ig_no_variant'] += 1
                 continue
 
+            # Axes définis au niveau du groupe (partagés par tous les variants)
+            ig_axes_fr: dict = ig.get('axes_fr') or ig.get('axes') or {}
+
             # Regrouper les variants v32 par axes pour détecter les doublons (sources multiples)
             vr_by_axes: dict = defaultdict(list)
             for vr in v32_variants:
@@ -522,13 +610,15 @@ for cat in v32.get('categories', []):
                 var_id = vr.get('id', '')
                 source = vr.get('source', '')
                 sid    = vr.get('source_id')
-                if not sid: continue
-                ax     = axes_label(vr.get('axes_fr') or vr.get('axes') or {})
+                if not sid and source != 'MANUAL': continue
+                # Merger axes groupe + axes variant (variant a priorité)
+                merged_axes = {**ig_axes_fr, **(vr.get('axes_fr') or vr.get('axes') or {})}
+                ax     = axes_label(merged_axes)
                 vr_by_axes[ax].append({
                     'var_id': var_id,
                     'source': source,
                     'source_id': sid,
-                    'axes': vr.get('axes_fr') or vr.get('axes') or {},
+                    'axes': merged_axes,
                 })
                 stats['total_v32_variants'] += 1
 
@@ -769,15 +859,23 @@ print('\nÉcriture...')
 total = stats['written']
 output = {
     '_schema': {
-        'version':          '2.0',
-        'family':           'ingredients_dictionary',
-        'built_from':       ['ingredients_tree.json', 'nutrition_v2.json'],
-        'built_at':         datetime.now(UTC).strftime('%Y-%m-%d'),
-        'note':             '1 entrée = 1 variant n2 (1 état produit)',
-        'total_entries':    total,
-        'total_aliases':    len(alias_index),
-        'orphans_count':    len(orphans),
-        'n2_unplaced':      len(n2_unplaced),
+        'version':           '2.0',
+        'family':            'ingredients_dictionary',
+        'built_from':        ['ingredients_tree.json', 'nutrition_v2.json'],
+        'built_at':          datetime.now(UTC).strftime('%Y-%m-%d'),
+        'note':              '1 entrée = 1 variant n2 (1 état produit)',
+        'total_entries':     total,
+        'total_aliases':     len(alias_index),
+        'orphans_count':     len(orphans),
+        'n2_unplaced':       len(n2_unplaced),
+        'key_convention':    'nutrition_v2',
+        'enrichment_fields': ['culinary'],
+        'enrichment_note':   (
+            'Les champs listés dans enrichment_fields sont saisis manuellement '
+            'et préservés entre deux rebuilds. Tous les autres champs '
+            '(diet_profile, allergens_eu, nova_group, bioavailability_protein) '
+            'sont calculés algorithmiquement par build_dict_v2.py.'
+        ),
     },
     'categories': cats_out,
     'alias_index': alias_index,

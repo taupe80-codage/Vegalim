@@ -307,6 +307,21 @@ def _resolve_ref_key(ref_key: str) -> dict | None:
     return first if isinstance(first, dict) else None
 
 
+@lru_cache(maxsize=1)
+def _v32_ing_id_index() -> dict[str, str]:
+    """
+    Index inverse : _v32_id (tree ing_group ID) → clé racine dans nutrition_v2.
+    Permet de résoudre les ingrédients via v32_ing_id quand nutrition_key est absent.
+    Mapping 1:1 — chaque ing_id de l'arbre correspond à exactement une entrée N2.
+    """
+    db = _nutrition_raw()
+    return {
+        entry["_v32_id"]: n2_key
+        for n2_key, entry in db.items()
+        if isinstance(entry, dict) and entry.get("_v32_id")
+    }
+
+
 def _compute_nutrition_from_recipe(
     recipe: dict,
     depth: int = 0,
@@ -326,13 +341,19 @@ def _compute_nutrition_from_recipe(
     UNIT_TO_G = {"g": 1.0, "ml": 1.0, "kg": 1000.0, "l": 1000.0,
                  "mg": 0.001, "cl": 10.0, "dl": 100.0}
     NUTRITION_FIELDS = (
-        "calories_kcal", "calories", "protein_g", "protein",
-        "carbs_g", "carbs", "fat_g", "fat", "fiber_g", "fiber",
-        "sugar_g", "sugar", "sodium_g", "sodium",
-        "saturated_fat_g", "sat_fat_g",
-        "monounsaturated_fat_g", "mono_fat_g",
-        "polyunsaturated_fat_g", "poly_fat_g",
-        "calcium_mg", "iron_mg", "vitamin_c_mg",
+        # Macros — clés exactes nutrition_v2.json
+        "calories_kcal", "protein_g", "carbs_g", "fat_g", "fiber_g", "sugar_g",
+        # Sodium (mg dans N2, pas g)
+        "sodium_mg",
+        # Acides gras — notation N2/CIQUAL (fa_*)
+        "fa_saturated_g", "fa_mufa_g", "fa_pufa_g",
+        "fa_18_3_ala_g", "fa_20_5_epa_g", "fa_22_6_dha_g", "omega3_g",
+        # Minéraux
+        "calcium_mg", "iron_mg", "magnesium_mg", "potassium_mg",
+        "zinc_mg", "phosphorus_mg",
+        # Vitamines
+        "vitamin_c_mg", "vitamin_d_ug", "vitamin_b12_ug",
+        "vitamin_a_rae_ug", "folate_dfe_ug",
     )
     SKIP_UNITS = {"pinch", "pincee", "clove", "piece", "gousse",
                   "bunch", "sprig", "feuille", "leaf"}
@@ -443,6 +464,58 @@ def _resolve_variant_key(db: dict, target_key: str) -> dict | None:
         # Format v2 : retourner variant 'default'
         variants = base_entry.get("variants", {})
         return variants.get("default") or (next(iter(variants.values())) if variants else None)
+
+
+# États de cuisson reconnus par le système d'axes N2
+_COOKED_STATES: frozenset[str] = frozenset({
+    "boiled", "cooked", "steamed", "sauteed", "roasted",
+    "fried", "baked", "grilled", "canned",
+})
+_RAW_STATES: frozenset[str] = frozenset({"raw"})
+_DRY_STATES: frozenset[str] = frozenset({"dried"})
+
+
+def _select_cooking_variant(entry: dict, use_cooked: bool) -> dict | None:
+    """
+    Sélectionne le variant approprié d'une entrée N2 selon l'état de cuisson souhaité.
+
+    Si use_cooked=True  → cherche un variant avec axes.cooking_state ∈ _COOKED_STATES.
+    Si use_cooked=False → retourne le variant 'default' (= cru/sec), ou le premier
+                          variant dont les axes indiquent un état cru ou séché.
+
+    Retourne None si aucun variant adéquat n'est trouvé (le caller peut alors
+    utiliser un autre mécanisme de fallback, ex: cooked_nutrition_key).
+    """
+    variants = entry.get("variants", {})
+    if not variants:
+        return None
+
+    if use_cooked:
+        # Priorité : variant dont cooking_state est un état de cuisson reconnu
+        for vk, vdata in variants.items():
+            if not isinstance(vdata, dict):
+                continue
+            cs = vdata.get("axes", {}).get("cooking_state", "")
+            if cs in _COOKED_STATES:
+                return vdata
+        # Aucun variant cuit dans cette entrée → signal au caller (None)
+        return None
+    else:
+        # use_cooked=False : default d'abord (= état cru/sec canonical)
+        default = variants.get("default")
+        if default and isinstance(default, dict):
+            return default
+        # Sinon chercher explicitement raw ou dried
+        for vk, vdata in variants.items():
+            if not isinstance(vdata, dict):
+                continue
+            axes = vdata.get("axes", {})
+            cs   = axes.get("cooking_state", "")
+            ts   = axes.get("thermal_state", "")
+            if cs in _RAW_STATES or ts in _DRY_STATES:
+                return vdata
+        # Dernier recours : premier variant disponible
+        return next((v for v in variants.values() if isinstance(v, dict)), None)
 
 
 def invalidate_caches() -> None:
@@ -1011,27 +1084,81 @@ class IngredientRepository:
         item = self.get_by_name(ingredient_name)
         return item.get("nutrition_key") if item else None
 
+    def get_cooked_nutrition_key(self, ingredient_name: str) -> str | None:
+        """
+        Retourne la clé N2 de la variante cuite de l'ingrédient (cooked_nutrition_key).
+        Retourne None si l'ingrédient n'a pas de variante cuite connue.
+        """
+        item = self.get_by_name(ingredient_name)
+        return (item.get("cooked_nutrition_key") if item else None) or None
+
+    def get_v32_ing_id(self, ingredient_name: str) -> str | None:
+        """Retourne le v32_ing_id (lien vers l'arbre d'ingrédients) pour cet ingrédient."""
+        item = self.get_by_name(ingredient_name)
+        return item.get("v32_ing_id") if item else None
+
     def resolve_nutrition(
         self,
         ingredient_name: str,
         context: str = "unknown",
         recipe_id: Any = None,
         recipe_title: str | None = None,
+        use_cooked: bool = False,
+        cooking_state: str | None = None,
     ) -> dict | None:
         """
-        Résout directement les données nutritionnelles d'un ingrédient
-        via son nutrition_key. Raccourci fréquemment utilisé par les engines.
+        Résout directement les données nutritionnelles d'un ingrédient.
 
-        Retourne None sans crasher si introuvable. Log le manque une seule fois
-        (NutritionRepository.get() logue si le fallback échoue aussi).
+        Ordre de résolution (priorité décroissante) :
+          0. ingredient_map_v2 (resolve_cooking_gid) — pont recette→dict v2
+             Couvre les IDs sémantiques courts ('garlic', 'carrot', 'onion/yellow')
+             avec gestion de l'état de cuisson (cooking_variants).
+          1. nutrition_key du dictionnaire ingrédients (entrée directe N2)
+          2. v32_ing_id → index N2 (_v32_id)
+          3. Fallback nom libre (NutritionRepository.get)
+
+        Args:
+            use_cooked    : True si le plat est chaud (cook_min > 0).
+            cooking_state : État de cuisson explicite depuis meta.state de la
+                            composition ('boiled', 'roasted', 'sauteed', 'raw'…).
+                            Prioritaire sur use_cooked si fourni.
+
+        Retourne None sans crasher si introuvable.
         """
         nutr_repo = NutritionRepository()
+        db        = _nutrition_raw()
+
+        # ── Étape 0 : ingredient_map_v2 (résolution recette → dict v2) ──────────
+        # Court-circuit direct : si l'ID recette est dans le map, on résout
+        # le bon group_id (avec cuisson si nécessaire) et on charge l'entrée N2.
+        try:
+            from backend.core.data_io import resolve_cooking_gid
+            mapped_gid = resolve_cooking_gid(
+                ingredient_name,
+                use_cooked=use_cooked,
+                cooking_state=cooking_state,
+            )
+            if mapped_gid:
+                n2_entry = db.get(mapped_gid)
+                if n2_entry and isinstance(n2_entry, dict):
+                    variants = n2_entry.get("variants", {})
+                    if variants:
+                        # Toujours un seul variant dans nutrition_v2 — prendre le premier
+                        vdata = next(iter(variants.values()))
+                        if isinstance(vdata, dict) and vdata.get("calories_kcal") is not None:
+                            logger.debug(
+                                "ingredient_map_v2 | %r → %r (use_cooked=%s, state=%s)",
+                                ingredient_name, mapped_gid, use_cooked, cooking_state,
+                            )
+                            return vdata
+        except Exception as exc:
+            logger.debug("ingredient_map_v2 lookup failed for %r: %s", ingredient_name, exc)
+
         nutr_key = self.get_nutrition_key(ingredient_name)
+
         if nutr_key:
-            # Si la clé contient '/', c'est une clé base/variant — résoudre directement
-            # pour éviter que NutritionRepository.get() fasse un lookup exact qui échoue.
             if "/" in nutr_key:
-                db = _nutrition_raw()
+                # Clé base/variant explicite — résolution directe (pas de navigation axe)
                 resolved = _resolve_variant_key(db, nutr_key)
                 if resolved is not None:
                     logger.debug(
@@ -1040,16 +1167,75 @@ class IngredientRepository:
                     )
                     return resolved
             else:
-                # Tenter d'abord base/default (entrées avec variants non suffixés)
-                db = _nutrition_raw()
+                # Navigation par axe cooking_state dans l'entrée N2 consolidée.
+                # C'est la logique principale : une seule entrée racine, variants raw+cooked.
+                entry = db.get(nutr_key)
+                if entry and isinstance(entry, dict) and entry.get("variants"):
+                    variant = _select_cooking_variant(entry, use_cooked)
+                    if variant is not None:
+                        logger.debug(
+                            "axis_variant | %r → %r (use_cooked=%s)",
+                            ingredient_name, nutr_key, use_cooked,
+                        )
+                        return variant
+                    elif not use_cooked:
+                        # use_cooked=False sans variant raw trouvé → default ou premier
+                        fallback = (
+                            entry.get("variants", {}).get("default")
+                            or next(iter(entry.get("variants", {}).values()), None)
+                        )
+                        if fallback and isinstance(fallback, dict):
+                            return fallback
+                # Fallback : cooked_nutrition_key (entrées non encore consolidées)
+                if use_cooked:
+                    cooked_key = self.get_cooked_nutrition_key(ingredient_name)
+                    if cooked_key:
+                        resolved = _resolve_variant_key(db, cooked_key + "/default")
+                        if resolved is None:
+                            resolved = _resolve_variant_key(db, cooked_key)
+                        if resolved is not None:
+                            logger.debug(
+                                "cooked_nutrition_key fallback | %r → %r",
+                                ingredient_name, cooked_key,
+                            )
+                            return resolved
+
+                # Fallback plat (entrées sans variants — ancien format)
                 resolved = _resolve_variant_key(db, nutr_key + "/default")
                 if resolved is not None:
                     return resolved
-                # Fallback : lookup plat (entrées sans variants)
                 data = nutr_repo.get(nutr_key, context=context,
                                      recipe_id=recipe_id, recipe_title=recipe_title)
                 if data is not None and data.get("calories_kcal") is not None:
                     return data
+
+        # 1b. Fallback via v32_ing_id → index N2 (_v32_id)
+        #     Couvre les entrées du dictionnaire avec un lien arbre mais sans nutrition_key,
+        #     ou dont la résolution nutrition_key a échoué.
+        item = self.get_by_name(ingredient_name)
+        v32_id = item.get("v32_ing_id") if item else None
+        if v32_id:
+            n2_key = _v32_ing_id_index().get(v32_id)
+            if n2_key:
+                entry = db.get(n2_key)
+                if entry and isinstance(entry, dict) and entry.get("variants"):
+                    variant = _select_cooking_variant(entry, use_cooked)
+                    if variant is not None:
+                        logger.debug(
+                            "v32_ing_id fallback | %r → v32=%r → n2=%r (use_cooked=%s)",
+                            ingredient_name, v32_id, n2_key, use_cooked,
+                        )
+                        return variant
+                    fallback = (
+                        entry.get("variants", {}).get("default")
+                        or next(iter(entry.get("variants", {}).values()), None)
+                    )
+                    if fallback and isinstance(fallback, dict):
+                        logger.debug(
+                            "v32_ing_id fallback (default) | %r → v32=%r → n2=%r",
+                            ingredient_name, v32_id, n2_key,
+                        )
+                        return fallback
 
         # 2b. Recipe aliases : résolution directe sans passer par le dictionnaire
         #     Couvre les ingrédients recettes non présents dans ingredients_dictionary.json

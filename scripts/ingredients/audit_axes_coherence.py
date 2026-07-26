@@ -50,6 +50,7 @@ EN_KEY_TO_FR_KEY = {
     "thermal_state": "etat_thermique",
     "form":          "forme",
     "treatment":     "traitement",
+    "cooking_method":"procede_cuisson",
     "fat_content":   "teneur_MG",
     "seasoning":     "assaisonnement",
     "packaging":     "conditionnement",
@@ -59,61 +60,77 @@ EN_KEY_TO_FR_KEY = {
     "ripeness":      "maturite",
 }
 
-# axes_en.value → axes_fr.value attendue
-EN_VAL_TO_FR_VAL: dict[str, str] = {
-    # cooking_state
-    "raw": "cru", "cooked": "cuit", "boiled": "bouilli", "steamed": "vapeur",
-    "fried": "frit", "grilled": "grillé", "roasted": "rôti", "baked": "au four",
-    "sauteed": "sauté", "braised": "braisé", "precooked": "précuit",
-    "hard_boiled": "dur", "soft_boiled": "à la coque", "scrambled": "brouillé",
-    # thermal_state
-    "fresh": "frais", "frozen": "surgelé", "dried": "séché",
-    "dehydrated": "déshydraté", "rehydrated": "réhydraté",
-    "freeze_dried": "lyophilisé", "pasteurized": "pasteurisé",
-    "refrigerated": "réfrigéré", "uht": "UHT",
-    # form
-    "juice": "jus", "oil": "huile", "butter": "beurre", "milk": "lait",
-    "flour": "farine", "powder": "poudre", "paste": "pâte", "cream": "crème",
-    "yogurt": "yaourt", "whole": "entier", "ground": "moulu", "extract": "extrait",
-    "concentrate": "concentré", "sliced": "tranché", "grated": "râpé",
-    "sauce": "sauce", "jam": "confiture", "jelly": "gelée", "compote": "compote",
-    "pureed": "purée", "crushed": "broyé", "diced": "concassé", "crumbled": "émietté",
-    "rolled": "flocons", "flakes": "flocons", "granulated": "granulé",
-    "block": "bloc", "liquid": "liquide", "pieces": "petits morceaux",
-    "crunchy": "croquant", "creamy": "crémeux", "whipped": "fouetté",
-    # part
-    "leaf": "feuille", "seed": "graine", "flesh": "chair", "root": "racine",
-    "stem": "tige", "peel": "pelure", "flower": "fleur", "sprout": "pousse",
-    "peeled": "pelé", "pitted": "dénoyauté", "seedless": "sans graines",
-    "with_seeds": "avec graines", "with_skin": "avec peau",
-    "flesh_peeled": "chair sans peau", "flesh_skin": "chair+peau",
-    "tuber": "tubercule", "pod": "gousse",
-    # seasoning
-    "plain": "nature", "salted": "salé", "unsalted": "sans sel",
-    "sweetened": "sucré", "unsweetened": "sans sucre", "flavored": "aromatisé",
-    # treatment
-    "smoked": "fumé", "fermented": "fermenté", "aged": "affiné",
-    "refined": "raffiné", "unrefined": "brut", "sprouted": "germé",
-    "dry_roasted": "grillé à sec", "oil_roasted": "grillé à l'huile",
-    "blanched": "blanchi", "enriched": "enrichi", "iodized": "iodé",
-    "hulled": "décortiqué", "parboiled": "étuvé", "virgin": "vierge",
-    "extra_virgin": "extra vierge", "cold_pressed": "pression à froid",
-    "textured": "texturé", "decaffeinated": "décaféiné", "marinated": "mariné",
-    "pickled": "lacto-fermenté", "toasted": "grillé", "candied": "confit",
-    "from_concentrate": "à base de concentré",
-    # packaging
-    "canned": "conserve", "vacuum": "sous vide", "prepackaged": "préemballé",
-    "commercial": "commercial",
-    # draining
-    "drained": "égoutté", "in_oil": "à l'huile", "in_water": "dans l'eau",
-    "in_brine": "en saumure", "in_syrup": "dans sirop", "in_vinegar": "au vinaigre",
-    # fat_content
-    "skimmed": "écrémé", "semi_skimmed": "demi-écrémé", "low_fat": "allégé en gras",
-    "light": "allégé", "fat_free": "sans matières grasses",
-    # origin
-    "plant": "végétal", "cow": "vache", "goat": "chèvre", "sheep": "brebis",
-    # ripeness
-    "ripe": "mûr", "unripe": "pas mûr",
+# axes_en.value → axes_fr.value attendue — mapping PAR AXE (évite les clés dupliquées)
+# Règle clé : cooking_state.roasted="rôti" (légumes/viandes)
+#             treatment.roasted="torréfié" (noix/graines/café)
+#             treatment.toasted="grillé"   (torréfaction légère, amandes/graines)
+EN_VAL_TO_FR_VAL_BY_AXIS: dict[str, dict[str, str]] = {
+    "cooking_state": {
+        "raw": "cru", "cooked": "cuit", "boiled": "bouilli", "steamed": "vapeur",
+        "fried": "frit", "grilled": "grillé", "roasted": "rôti", "baked": "au four",
+        "sauteed": "sauté", "braised": "étouffée", "precooked": "précuit",
+        "hard_boiled": "dur", "soft_boiled": "à la coque", "scrambled": "brouillé",
+    },
+    "thermal_state": {
+        "fresh": "frais", "frozen": "surgelé", "dried": "séché",
+        "dehydrated": "déshydraté", "rehydrated": "réhydraté",
+        "freeze_dried": "lyophilisé", "pasteurized": "pasteurisé",
+        "refrigerated": "réfrigéré", "uht": "UHT",
+    },
+    "form": {
+        "juice": "jus", "oil": "huile", "butter": "beurre", "milk": "lait",
+        "flour": "farine", "powder": "poudre", "paste": "pâte", "cream": "crème",
+        "yogurt": "yaourt", "whole": "entier", "ground": "moulu", "extract": "extrait",
+        "concentrate": "concentré", "sliced": "tranché", "grated": "râpé",
+        "sauce": "sauce", "jam": "confiture", "jelly": "gelée", "compote": "compote",
+        "pureed": "purée", "crushed": "concassé", "diced": "en dés", "crumbled": "émietté",
+        "rolled": "flocons", "flakes": "paillettes", "granulated": "granulé",
+        "block": "bloc", "liquid": "liquide", "pieces": "petits morceaux",
+        "crunchy": "croquant", "creamy": "crémeux", "whipped": "fouetté",
+    },
+    "part": {
+        "leaf": "feuille", "seed": "graine", "flesh": "chair", "root": "racine",
+        "stem": "tige", "peel": "pelure", "flower": "fleur", "sprout": "pousse",
+        "peeled": "sans peau", "pitted": "dénoyauté", "seedless": "sans graines",
+        "with_seeds": "avec graines", "with_skin": "avec peau",
+        "tuber": "tubercule", "pod": "gousse",
+    },
+    "seasoning": {
+        "plain": "nature", "salted": "salé", "unsalted": "sans sel",
+        "sweetened": "sucré", "unsweetened": "sans sucre", "flavored": "aromatisé",
+    },
+    "treatment": {
+        "smoked": "fumé", "fermented": "fermenté", "aged": "affiné",
+        "refined": "raffiné", "unrefined": "brut", "sprouted": "germé",
+        # "roasted" est géré par la logique context-aware dans check_en_fr_coherence :
+        #   avec cooking_method → rôti  |  sans cooking_method → torréfié
+        "blanched": "blanchi", "enriched": "enrichi", "iodized": "iodé",
+        "hulled": "décortiqué", "parboiled": "étuvé", "virgin": "vierge",
+        "extra_virgin": "extra vierge", "cold_pressed": "pression à froid",
+        "textured": "texturé", "decaffeinated": "décaféiné", "marinated": "mariné",
+        "pickled": "lacto-fermenté", "toasted": "grillé", "candied": "confit",
+        "unblanched": "non blanchi", "unbleached": "non blanchi chimiquement",
+        "from_concentrate": "à base de concentré",
+    },
+    "packaging": {
+        "canned": "conserve", "vacuum": "sous vide", "prepackaged": "préemballé",
+        "commercial": "commercial",
+    },
+    "fat_content": {
+        "skimmed": "écrémé", "semi_skimmed": "demi-écrémé", "low_fat": "allégé",
+        "light": "allégé", "fat_free": "sans MG", "high_fat": "élevé en gras",
+        "medium_fat": "teneur moyenne en MG", "full_fat": "entier",
+    },
+    "origin": {
+        "plant": "végétal", "cow": "vache", "goat": "chèvre", "sheep": "brebis",
+    },
+    "ripeness": {
+        "ripe": "mûr", "unripe": "pas mûr",
+    },
+    "cooking_method": {
+        "dry":    "à sec",
+        "in_oil": "à l'huile",
+    },
 }
 
 # Tokens dans le nom EN → axe attendu (pour B)
@@ -193,7 +210,16 @@ def check_en_fr_coherence(ig_id: str, en_name: str, axes_en: dict, axes_fr: dict
             # Les deux présents : vérifier que fr_val correspond à la traduction attendue
             if isinstance(en_val, list):
                 continue  # skip lists (edge case)
-            expected_fr = EN_VAL_TO_FR_VAL.get(str(en_val))
+
+            # Cas spécial : treatment=roasted est context-dépendant
+            #   avec cooking_method (dry/in_oil) → traitement=rôti
+            #   sans cooking_method              → traitement=torréfié
+            if en_key == "treatment" and str(en_val) == "roasted":
+                cm = axes_en.get("cooking_method")
+                expected_fr = "rôti" if cm else "torréfié"
+            else:
+                expected_fr = EN_VAL_TO_FR_VAL_BY_AXIS.get(en_key, {}).get(str(en_val))
+
             if expected_fr and norm(str(fr_val)) != norm(expected_fr):
                 issues.append({
                     "type": "EN_FR_MISMATCH",

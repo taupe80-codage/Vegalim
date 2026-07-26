@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ingredient Map Editor</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg:        #0d0f14;
+    --bg2:       #13161e;
+    --bg3:       #1a1d28;
+    --bg4:       #21253a;
+    --border:    #2a2d3e;
+    --border2:   #353852;
+    --text:      #e2e4f0;
+    --text2:     #8b8fa8;
+    --text3:     #555970;
+    --accent:    #6c8aff;
+    --accent2:   #4d6aff;
+    --green:     #3ecf8e;
+    --green2:    #2ea875;
+    --yellow:    #f5c542;
+    --red:       #ff5e6d;
+    --purple:    #b57bff;
+    --teal:      #38c9c9;
+    --radius:    10px;
+    --shadow:    0 4px 24px rgba(0,0,0,.45);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    padding: 0 20px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+    z-index: 10;
+  }
+  header h1 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: .3px;
+  }
+  header h1 span { color: var(--accent); }
+
+  .stats-bar {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+    align-items: center;
+  }
+  .stat-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+  }
+  .stat-chip .dot { width: 7px; height: 7px; border-radius: 50%; }
+  .chip-high  .dot { background: var(--green); }
+  .chip-med   .dot { background: var(--yellow); }
+  .chip-low   .dot { background: var(--red); }
+  .chip-miss  .dot { background: var(--text3); }
+
+  /* ── Layout ── */
+  .layout {
+    display: grid;
+    grid-template-columns: 300px 1fr 400px;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* ── Panel base ── */
+  .panel {
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .panel:last-child { border-right: none; }
+
+  .panel-header {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    background: var(--bg2);
+  }
+  .panel-header h2 {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .panel-header .count {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--text3);
+    background: var(--bg3);
+    padding: 2px 7px;
+    border-radius: 10px;
+  }
+
+  /* ── Filter tabs ── */
+  .filter-tabs {
+    display: flex;
+    gap: 2px;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+  .ftab {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    color: var(--text2);
+    transition: all .15s;
+    background: transparent;
+  }
+  .ftab:hover { background: var(--bg3); color: var(--text); }
+  .ftab.active {
+    background: var(--bg4);
+    border-color: var(--border2);
+    color: var(--text);
+  }
+  .ftab.low.active   { border-color: var(--red);    color: var(--red); }
+  .ftab.med.active   { border-color: var(--yellow);  color: var(--yellow); }
+  .ftab.high.active  { border-color: var(--green);   color: var(--green); }
+  .ftab.miss.active  { border-color: var(--text3);   color: var(--text2); }
+  .ftab.rej.active   { border-color: var(--text3);   color: var(--text3); }
+
+  /* ── Left list ── */
+  .search-wrap {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .search-wrap input {
+    width: 100%;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 6px 10px;
+    font-size: 12px;
+    color: var(--text);
+    outline: none;
+    font-family: inherit;
+  }
+  .search-wrap input:focus { border-color: var(--accent); }
+  .search-wrap input::placeholder { color: var(--text3); }
+
+  .entry-list {
+    overflow-y: auto;
+    flex: 1;
+  }
+  .entry-item {
+    padding: 8px 14px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    transition: background .1s;
+    border-left: 3px solid transparent;
+  }
+  .entry-item:hover  { background: var(--bg3); }
+  .entry-item.active { background: var(--bg4); border-left-color: var(--accent); }
+  .entry-item.status-AUTO_HIGH   { border-left-color: transparent; }
+  .entry-item.status-AUTO_HIGH:hover,
+  .entry-item.status-AUTO_HIGH.active { border-left-color: var(--green); }
+  .entry-item.status-AUTO_MED:hover,
+  .entry-item.status-AUTO_MED.active  { border-left-color: var(--yellow); }
+  .entry-item.status-AUTO_LOW,
+  .entry-item.status-MANUAL_NEEDED    { border-left-color: rgba(255,94,109,.4); }
+  .entry-item.status-AUTO_LOW:hover,
+  .entry-item.status-AUTO_LOW.active,
+  .entry-item.status-MANUAL_NEEDED:hover,
+  .entry-item.status-MANUAL_NEEDED.active { border-left-color: var(--red); }
+  .entry-item.missing { border-left-color: rgba(139,143,168,.2); }
+  .entry-item.missing:hover, .entry-item.missing.active { border-left-color: var(--text3); }
+  .entry-item.status-REJECTED { border-left-color: rgba(139,143,168,.3); opacity: .6; }
+  .entry-item.status-REJECTED:hover, .entry-item.status-REJECTED.active { border-left-color: var(--text3); opacity: 1; }
+
+  .entry-name {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
+    flex: 1;
+    word-break: break-all;
+    line-height: 1.4;
+  }
+  .entry-freq {
+    font-size: 10px;
+    color: var(--text3);
+    min-width: 28px;
+    text-align: right;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .status-dot {
+    width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+  }
+
+  /* ── Center panel ── */
+  .center-panel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--bg);
+  }
+
+  .current-entry {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    background: var(--bg2);
+  }
+  .entry-title {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .entry-meta {
+    font-size: 12px;
+    color: var(--text3);
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .entry-meta .freq-badge {
+    background: var(--bg3);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: var(--text2);
+  }
+
+  /* Slots raw / cooked */
+  .slots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .slot {
+    background: var(--bg3);
+    border: 1.5px dashed var(--border2);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    min-height: 90px;
+    transition: border-color .2s, background .2s;
+    cursor: pointer;
+    position: relative;
+  }
+  .slot.filled {
+    border-style: solid;
+    background: var(--bg4);
+  }
+  .slot.slot-raw.filled  { border-color: var(--green); }
+  .slot.slot-cook.filled { border-color: var(--teal); }
+  .slot:hover { border-color: var(--border2); background: var(--bg4); }
+  .slot-label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text3);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .slot-label .icon { font-size: 13px; }
+  .slot-gid {
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    color: var(--text);
+    word-break: break-all;
+    line-height: 1.5;
+  }
+  .slot-cal {
+    font-size: 11px;
+    color: var(--text3);
+    margin-top: 4px;
+  }
+  .slot-hint {
+    font-size: 11px;
+    color: var(--text3);
+    font-style: italic;
+  }
+  .slot-clear {
+    position: absolute;
+    top: 8px; right: 8px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid var(--border2);
+    color: var(--text3);
+    font-size: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .15s;
+  }
+  .slot:hover .slot-clear { opacity: 1; }
+
+  /* Assign button */
+  .assign-row {
+    padding: 16px 24px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .btn {
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    transition: all .15s;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: white;
+    box-shadow: 0 2px 12px rgba(108,138,255,.35);
+  }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(108,138,255,.45); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-primary:disabled { opacity: .4; cursor: not-allowed; transform: none; box-shadow: none; }
+  .btn-ghost {
+    background: var(--bg3);
+    color: var(--text2);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover { background: var(--bg4); color: var(--text); }
+  .btn-reject {
+    background: rgba(255,94,109,.1);
+    color: var(--red);
+    border: 1px solid rgba(255,94,109,.3);
+  }
+  .btn-reject:hover { background: rgba(255,94,109,.22); }
+  .assign-status {
+    font-size: 12px;
+    color: var(--green);
+    flex: 1;
+    text-align: right;
+  }
+  .assign-status.err { color: var(--red); }
+
+  /* ── Progress badge (déjà modifié vs à faire) ── */
+  .edited-badge {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    letter-spacing: .3px;
+  }
+  .edited-badge.done {
+    background: rgba(181,123,255,.16);
+    color: var(--purple);
+  }
+  .edited-badge.rejected {
+    background: rgba(139,143,168,.15);
+    color: var(--text3);
+    text-decoration: line-through;
+  }
+
+  /* Cooking variants display */
+  .variants-section {
+    padding: 16px 24px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  .variants-section h3 {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text3);
+    margin-bottom: 12px;
+  }
+  .current-variants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .variant-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 11px;
+  }
+  .variant-chip .vstate {
+    color: var(--text3);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: .5px;
+  }
+  .variant-chip .vgid {
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .no-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    color: var(--text3);
+    gap: 12px;
+  }
+  .no-selection .icon { font-size: 40px; }
+  .no-selection p { font-size: 13px; }
+
+  /* ── Right panel: search ── */
+  .right-panel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--bg);
+  }
+
+  .search-input-wrap {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+    background: var(--bg2);
+  }
+  .n2-search {
+    flex: 1;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--text);
+    outline: none;
+    font-family: inherit;
+  }
+  .n2-search:focus { border-color: var(--accent); }
+  .n2-search::placeholder { color: var(--text3); }
+
+  /* Cat browser */
+  .cat-row {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    max-height: 90px;
+    overflow-y: auto;
+  }
+  .cat-btn {
+    padding: 3px 9px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--text2);
+    transition: all .12s;
+    white-space: nowrap;
+  }
+  .cat-btn:hover { background: var(--bg4); color: var(--text); }
+  .cat-btn.active { background: var(--bg4); border-color: var(--accent); color: var(--accent); }
+
+  /* Results */
+  .results-list {
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  .result-group-header {
+    padding: 6px 12px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text3);
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .result-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    transition: background .1s;
+  }
+  .result-item:hover { background: var(--bg3); }
+  .result-item:hover .assign-btns { opacity: 1; }
+
+  .result-cs {
+    width: 22px; height: 22px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    flex-shrink: 0;
+    text-transform: uppercase;
+  }
+  .cs-raw      { background: rgba(62,207,142,.15); color: var(--green); }
+  .cs-boiled   { background: rgba(56,201,201,.15); color: var(--teal); }
+  .cs-cooked   { background: rgba(56,201,201,.15); color: var(--teal); }
+  .cs-roasted  { background: rgba(245,197,66,.15); color: var(--yellow); }
+  .cs-grilled  { background: rgba(245,197,66,.15); color: var(--yellow); }
+  .cs-baked    { background: rgba(245,197,66,.15); color: var(--yellow); }
+  .cs-steamed  { background: rgba(108,138,255,.15); color: var(--accent); }
+  .cs-sauteed  { background: rgba(181,123,255,.15); color: var(--purple); }
+  .cs-default  { background: rgba(139,143,168,.1); color: var(--text3); }
+
+  .result-info { flex: 1; min-width: 0; }
+  .result-gid {
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    color: var(--text);
+    word-break: break-all;
+    line-height: 1.4;
+  }
+  .result-sub {
+    font-size: 11px;
+    color: var(--text2);
+    margin-top: 3px;
+    line-height: 1.3;
+  }
+  .result-cal {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text2);
+    min-width: 54px;
+    text-align: right;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
+  .assign-btns {
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity .15s;
+    flex-shrink: 0;
+  }
+  .abtn {
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-family: inherit;
+    transition: all .12s;
+  }
+  .abtn-raw {
+    background: rgba(62,207,142,.15);
+    color: var(--green);
+    border-color: rgba(62,207,142,.3);
+  }
+  .abtn-raw:hover { background: rgba(62,207,142,.3); }
+  .abtn-cook {
+    background: rgba(56,201,201,.15);
+    color: var(--teal);
+    border-color: rgba(56,201,201,.3);
+  }
+  .abtn-cook:hover { background: rgba(56,201,201,.3); }
+
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--bg4);
+    border: 1px solid var(--border2);
+    color: var(--text);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transition: all .25s;
+    z-index: 100;
+    pointer-events: none;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  .toast.ok  { border-color: var(--green); color: var(--green); }
+  .toast.err { border-color: var(--red);   color: var(--red); }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+
+  .empty { padding: 24px; text-align: center; color: var(--text3); font-size: 13px; }
+  .loading { padding: 24px; text-align: center; color: var(--text3); font-size: 12px; animation: pulse 1s infinite; }
+  @keyframes pulse { 0%,100%{opacity:.4} 50%{opacity:1} }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ingredient Map <span>Editor</span></h1>
+  <div class="stats-bar" id="statsBar">
+    <div class="stat-chip chip-high"><span class="dot"></span><span id="stat-high">…</span> HIGH</div>
+    <div class="stat-chip chip-med"><span class="dot"></span><span id="stat-med">…</span> MED</div>
+    <div class="stat-chip chip-low"><span class="dot"></span><span id="stat-low">…</span> LOW</div>
+    <div class="stat-chip chip-miss"><span class="dot"></span><span id="stat-miss">…</span> manquants</div>
+    <div class="stat-chip" style="border-color:var(--text3)"><span class="dot" style="background:var(--text3)"></span><span id="stat-rej">…</span> rejetés</div>
+    <div class="stat-chip" style="border-color:var(--purple)"><span class="dot" style="background:var(--purple)"></span><span id="stat-manual">…</span> traités par moi</div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ══ LEFT: Entry list ══════════════════════════════════════════════════ -->
+  <div class="panel">
+    <div class="panel-header">
+      <h2>Entrées</h2>
+      <span class="count" id="listCount">—</span>
+    </div>
+    <div class="filter-tabs" id="filterTabs">
+      <button class="ftab low  active" data-f="low"     onclick="setFilter('low')">⚠ LOW</button>
+      <button class="ftab"           data-f="manual"   onclick="setFilter('manual')">✎ MANUAL</button>
+      <button class="ftab miss"      data-f="missing"  onclick="setFilter('missing')">? Absents</button>
+      <button class="ftab med"       data-f="med"      onclick="setFilter('med')">~ MED</button>
+      <button class="ftab high"      data-f="high"     onclick="setFilter('high')">✓ HIGH</button>
+      <button class="ftab rej"       data-f="rejected" onclick="setFilter('rejected')">✗ Rejetés</button>
+      <button class="ftab"           data-f="all"      onclick="setFilter('all')">Tout</button>
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="listFilter" placeholder="Filtrer les entrées…" oninput="renderList()">
+    </div>
+    <div class="entry-list" id="entryList"></div>
+  </div>
+
+  <!-- ══ CENTER: Editor ════════════════════════════════════════════════════ -->
+  <div class="center-panel panel">
+
+    <div id="noSelection" class="no-selection" style="display:flex">
+      <div class="icon">⬡</div>
+      <p>Sélectionne une entrée dans la liste</p>
+    </div>
+
+    <div id="editorContent" style="display:none; display:none; flex:1; flex-direction:column; overflow:hidden;">
+
+      <div class="current-entry">
+        <div class="entry-title" id="curTitle">—</div>
+        <div class="entry-meta">
+          <span id="curStatus">—</span>
+          <span id="curFreq" class="freq-badge">0 recettes</span>
+          <span id="curMethod" style="color:var(--text3)">—</span>
+        </div>
+      </div>
+
+      <div class="slots">
+        <div class="slot slot-raw" id="slotRaw" onclick="focusSlot('raw')">
+          <div class="slot-label"><span class="icon">🥬</span> RAW / défaut</div>
+          <div id="slotRawGid" class="slot-gid slot-hint">Clique un résultat → RAW</div>
+          <div id="slotRawCal" class="slot-cal"></div>
+          <span class="slot-clear" onclick="clearSlot('raw', event)">✕</span>
+        </div>
+        <div class="slot slot-cook" id="slotCook" onclick="focusSlot('cook')">
+          <div class="slot-label"><span class="icon">🔥</span> CUIT / default_cooked</div>
+          <div id="slotCookGid" class="slot-gid slot-hint">Clique un résultat → CUIT (optionnel)</div>
+          <div id="slotCookCal" class="slot-cal"></div>
+          <span class="slot-clear" onclick="clearSlot('cook', event)">✕</span>
+        </div>
+      </div>
+
+      <div class="assign-row">
+        <button class="btn btn-primary" id="btnAssign" onclick="doAssign()" disabled>
+          ✓ Assigner &amp; suivant
+        </button>
+        <button class="btn btn-ghost" onclick="doSkip()">→ Passer</button>
+        <button class="btn btn-reject" id="btnReject" onclick="doReject()" title="Marquer comme non-matchable pour l'instant">✗ Rejeter</button>
+        <span class="assign-status" id="assignStatus"></span>
+      </div>
+
+      <div class="variants-section" id="variantsSection">
+        <h3>Variants de cuisson actuels</h3>
+        <div class="current-variants" id="currentVariants"></div>
+        <h3 style="margin-top:12px">Entrée complète</h3>
+        <pre id="rawJson" style="font-size:10px;color:var(--text3);white-space:pre-wrap;word-break:break-all;margin-top:6px;padding:8px;background:var(--bg3);border-radius:6px;border:1px solid var(--border)"></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ RIGHT: N2 Search ══════════════════════════════════════════════════ -->
+  <div class="panel right-panel">
+    <div class="panel-header">
+      <h2>Nutrition V2</h2>
+      <span class="count" id="resultsCount">—</span>
+    </div>
+    <div class="search-input-wrap">
+      <input class="n2-search" id="n2Search" placeholder="Rechercher un ingrédient…"
+             oninput="debounceSearch()" onkeydown="if(event.key==='Escape')this.value=''">
+    </div>
+    <div class="cat-row" id="catRow"></div>
+    <div class="results-list" id="resultsList"></div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── State ─────────────────────────────────────────────────────────────────────
+const API = 'http://localhost:7432';
+let mapData   = {};   // {rid: entry}
+let missList  = [];   // [{id, count}]
+let categories= {};   // {cat1: [cat2, ...]}
+let activeFilter = 'low';
+let selectedId   = null;
+let slotRaw  = null;  // {gid, cal}
+let slotCook = null;
+let activeSlot = 'raw';  // which slot a click assigns to
+let searchTimer  = null;
+let activeCat    = null;
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+async function init() {
+  const [map, miss, cats, stats] = await Promise.all([
+    fetch(`${API}/api/map`).then(r => r.json()),
+    fetch(`${API}/api/missing`).then(r => r.json()),
+    fetch(`${API}/api/categories`).then(r => r.json()),
+    fetch(`${API}/api/stats`).then(r => r.json()),
+  ]);
+  mapData    = map;
+  missList   = miss;
+  categories = cats;
+  updateStats(stats);
+  renderCategories();
+  renderList();
+}
+
+function updateStats(stats) {
+  document.getElementById('stat-high').textContent = stats.AUTO_HIGH || 0;
+  document.getElementById('stat-med').textContent  = stats.AUTO_MED  || 0;
+  document.getElementById('stat-low').textContent  = (stats.AUTO_LOW || 0) + (stats.MANUAL_NEEDED || 0);
+  document.getElementById('stat-miss').textContent = stats.missing   || 0;
+  document.getElementById('stat-rej').textContent  = stats.REJECTED  || 0;
+  document.getElementById('stat-manual').textContent = stats.manual_edited || 0;
+}
+
+// Un item est "déjà traité par moi" si son method commence par manual_
+// (assigné ou rejeté via cet éditeur) — permet de distinguer visuellement
+// ce qui reste à faire de ce qui a déjà été revu, même après un redémarrage.
+function isManuallyEdited(entry) {
+  return !!(entry && typeof entry.method === 'string' && entry.method.startsWith('manual'));
+}
+
+// ── Category bar ─────────────────────────────────────────────────────────────
+function renderCategories() {
+  const el = document.getElementById('catRow');
+  el.innerHTML = '<button class="cat-btn active" data-cat="" onclick="selectCat(\'\', this)">Tout</button>'
+    + Object.keys(categories).sort().map(cat =>
+      `<button class="cat-btn" data-cat="${cat}" onclick="selectCat('${cat}', this)">${cat.replace(/_/g,' ')}</button>`
+    ).join('');
+}
+
+async function selectCat(cat, btn) {
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeCat = cat || null;
+  document.getElementById('n2Search').value = '';
+  if (!cat) {
+    document.getElementById('resultsList').innerHTML = '<div class="empty">Tape un terme ou sélectionne une catégorie</div>';
+    document.getElementById('resultsCount').textContent = '—';
+    return;
+  }
+  document.getElementById('resultsList').innerHTML = '<div class="loading">Chargement…</div>';
+  const data = await fetch(`${API}/api/category?name=${encodeURIComponent(cat)}`).then(r => r.json());
+  renderResults(data);
+}
+
+// ── Filter / List ─────────────────────────────────────────────────────────────
+function setFilter(f) {
+  activeFilter = f;
+  document.querySelectorAll('.ftab').forEach(b => {
+    b.classList.toggle('active', b.dataset.f === f);
+  });
+  renderList();
+}
+
+function renderList() {
+  const q     = document.getElementById('listFilter').value.toLowerCase();
+  const list  = document.getElementById('entryList');
+  let items = [];
+
+  if (activeFilter === 'missing') {
+    items = missList
+      .filter(e => !q || e.id.includes(q))
+      .map(e => ({id: e.id, count: e.count, missing: true}));
+  } else {
+    const statusMap = {
+      'low':      e => ['AUTO_LOW','MANUAL_NEEDED'].includes(e.status),
+      'manual':   e => e.status === 'MANUAL_NEEDED',
+      'med':      e => e.status === 'AUTO_MED',
+      'high':     e => e.status === 'AUTO_HIGH',
+      'rejected': e => e.status === 'REJECTED',
+      'all':      e => true,
+    };
+    const fn = statusMap[activeFilter] || (() => true);
+    items = Object.entries(mapData)
+      .filter(([id, e]) => fn(e) && (!q || id.includes(q)))
+      .map(([id, e]) => ({id, count: e._freq || 0, status: e.status, entry: e}));
+    // Trier : fréquence desc, puis alpha
+    items.sort((a,b) => (b.count - a.count) || a.id.localeCompare(b.id));
+  }
+
+  document.getElementById('listCount').textContent = items.length;
+
+  const statusColors = {
+    AUTO_HIGH: 'var(--green)',  AUTO_MED: 'var(--yellow)',
+    AUTO_LOW: 'var(--red)',     MANUAL_NEEDED: 'var(--red)',
+    REJECTED: 'var(--text3)',
+  };
+
+  list.innerHTML = items.map(item => {
+    const dotColor = item.missing ? 'var(--text3)' : (statusColors[item.status] || 'var(--text3)');
+    const cls = item.missing ? 'missing' : `status-${item.status}`;
+    let badge = '';
+    if (!item.missing && item.status === 'REJECTED') {
+      badge = '<span class="edited-badge rejected" title="Rejeté manuellement">rejeté</span>';
+    } else if (!item.missing && isManuallyEdited(item.entry)) {
+      badge = '<span class="edited-badge done" title="Déjà traité manuellement">✓ fait</span>';
+    }
+    return `<div class="entry-item ${cls}${selectedId===item.id?' active':''}"
+                 onclick="selectEntry('${item.id}')">
+      <span class="status-dot" style="background:${dotColor}"></span>
+      <span class="entry-name">${item.id}</span>
+      ${badge}
+      <span class="entry-freq">${item.count || ''}</span>
+    </div>`;
+  }).join('') || '<div class="empty">Aucune entrée</div>';
+}
+
+// ── Select entry ──────────────────────────────────────────────────────────────
+function selectEntry(id) {
+  selectedId = id;
+  slotRaw  = null;
+  slotCook = null;
+  activeSlot = 'raw';
+
+  // Highlight in list
+  document.querySelectorAll('.entry-item').forEach(el => {
+    el.classList.toggle('active', el.textContent.trim().startsWith(id.slice(0,20)));
+  });
+  renderList();
+
+  const entry   = mapData[id] || null;
+  const missing = !entry;
+
+  document.getElementById('noSelection').style.display  = 'none';
+  const ec = document.getElementById('editorContent');
+  ec.style.display = 'flex';
+
+  document.getElementById('curTitle').textContent = id;
+
+  if (entry) {
+    const statusLabel = {AUTO_HIGH:'✓ HIGH', AUTO_MED:'~ MED', AUTO_LOW:'⚠ LOW', MANUAL_NEEDED:'✎ MANUAL', REJECTED:'✗ REJETÉ'}[entry.status] || entry.status;
+    document.getElementById('curStatus').textContent = statusLabel;
+    document.getElementById('curFreq').textContent   = `${entry._freq||0} recettes`;
+    document.getElementById('curMethod').textContent = isManuallyEdited(entry) ? `✓ ${entry.method} (déjà traité par moi)` : (entry.method || '');
+
+    // Pré-remplir les slots depuis l'entrée actuelle
+    const cv  = entry.cooking_variants || {};
+    const gid = entry.group_id_v2;
+    if (gid) {
+      slotRaw = {gid, cal: null};
+      renderSlots();
+    }
+    if (cv.default_cooked && cv.default_cooked !== gid) {
+      slotCook = {gid: cv.default_cooked, cal: null};
+      renderSlots();
+    }
+
+    // Variants
+    const varDiv = document.getElementById('currentVariants');
+    varDiv.innerHTML = Object.entries(cv).map(([state, g]) =>
+      `<div class="variant-chip"><span class="vstate">${state}</span><span class="vgid">${g}</span></div>`
+    ).join('') || '<span style="color:var(--text3);font-size:12px">Aucun variant</span>';
+
+    document.getElementById('rawJson').textContent = JSON.stringify(
+      Object.fromEntries(Object.entries(entry).filter(([k]) => k !== '_freq')), null, 2
+    );
+  } else {
+    document.getElementById('curStatus').textContent  = '? Absent du map';
+    document.getElementById('curFreq').textContent    = `${(missList.find(e=>e.id===id)||{}).count||0} recettes`;
+    document.getElementById('curMethod').textContent  = '';
+    document.getElementById('currentVariants').innerHTML = '';
+    document.getElementById('rawJson').textContent    = '';
+  }
+
+  // Auto-search
+  const searchTerm = id.replace(/\//g,' ').replace(/_/g,' ');
+  document.getElementById('n2Search').value = searchTerm;
+  doSearch(searchTerm);
+}
+
+// ── Slots ─────────────────────────────────────────────────────────────────────
+function focusSlot(which) {
+  activeSlot = which;
+  document.getElementById('slotRaw').style.outline  = which==='raw'  ? '2px solid var(--accent)' : '';
+  document.getElementById('slotCook').style.outline = which==='cook' ? '2px solid var(--teal)'   : '';
+}
+
+function clearSlot(which, ev) {
+  ev.stopPropagation();
+  if (which === 'raw')  slotRaw  = null;
+  if (which === 'cook') slotCook = null;
+  renderSlots();
+}
+
+function renderSlots() {
+  const rawEl  = document.getElementById('slotRaw');
+  const cookEl = document.getElementById('slotCook');
+
+  if (slotRaw) {
+    rawEl.classList.add('filled');
+    document.getElementById('slotRawGid').textContent = slotRaw.gid;
+    document.getElementById('slotRawGid').classList.remove('slot-hint');
+    document.getElementById('slotRawCal').textContent = slotRaw.cal != null ? `${slotRaw.cal} kcal/100g` : '';
+  } else {
+    rawEl.classList.remove('filled');
+    document.getElementById('slotRawGid').textContent = 'Clique un résultat → RAW';
+    document.getElementById('slotRawGid').classList.add('slot-hint');
+    document.getElementById('slotRawCal').textContent = '';
+  }
+
+  if (slotCook) {
+    cookEl.classList.add('filled');
+    document.getElementById('slotCookGid').textContent = slotCook.gid;
+    document.getElementById('slotCookGid').classList.remove('slot-hint');
+    document.getElementById('slotCookCal').textContent = slotCook.cal != null ? `${slotCook.cal} kcal/100g` : '';
+  } else {
+    cookEl.classList.remove('filled');
+    document.getElementById('slotCookGid').textContent = 'Clique un résultat → CUIT (optionnel)';
+    document.getElementById('slotCookGid').classList.add('slot-hint');
+    document.getElementById('slotCookCal').textContent = '';
+  }
+
+  document.getElementById('btnAssign').disabled = !selectedId || !slotRaw;
+}
+
+function assignToSlot(gid, cal, which) {
+  const data = {gid, cal};
+  if (which === 'raw') {
+    slotRaw = data;
+    activeSlot = 'cook';
+  } else {
+    slotCook = data;
+    activeSlot = 'raw';
+  }
+  renderSlots();
+  focusSlot(activeSlot);
+}
+
+// ── Assign ────────────────────────────────────────────────────────────────────
+async function doAssign() {
+  if (!selectedId || !slotRaw) return;
+  const btn = document.getElementById('btnAssign');
+  btn.disabled = true;
+  btn.textContent = '…';
+
+  const body = {
+    recipe_id:       selectedId,
+    group_id_raw:    slotRaw.gid,
+    group_id_cooked: slotCook ? slotCook.gid : '',
+  };
+
+  const res = await fetch(`${API}/api/assign`, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(body),
+  }).then(r => r.json());
+
+  if (res.ok) {
+    mapData[selectedId] = {...res.entry};
+    updateStats(res.stats);
+    toast(`✓ ${selectedId} → ${slotRaw.gid}`, 'ok');
+    renderList();
+    doSkip();  // passer au suivant automatiquement
+  } else {
+    toast(`✗ ${res.error}`, 'err');
+    btn.disabled = false;
+    btn.textContent = '✓ Assigner & suivant';
+  }
+}
+
+async function doReject() {
+  if (!selectedId) return;
+  const btn = document.getElementById('btnReject');
+  btn.disabled = true;
+
+  const res = await fetch(`${API}/api/reject`, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({recipe_id: selectedId}),
+  }).then(r => r.json());
+
+  btn.disabled = false;
+
+  if (res.ok) {
+    mapData[selectedId] = {...res.entry};
+    updateStats(res.stats);
+    toast(`✗ ${selectedId} rejeté (aucun matching)`, 'ok');
+    renderList();
+    doSkip();
+  } else {
+    toast(`✗ ${res.error}`, 'err');
+  }
+}
+
+function doSkip() {
+  // Sélectionner l'entrée suivante dans la liste
+  const items = document.querySelectorAll('.entry-item');
+  let found = false;
+  for (const el of items) {
+    if (found) {
+      el.click();
+      el.scrollIntoView({block:'nearest'});
+      return;
+    }
+    if (el.classList.contains('active')) found = true;
+  }
+  // Sinon sélectionner le premier
+  if (items[0]) items[0].click();
+}
+
+// ── N2 Search ─────────────────────────────────────────────────────────────────
+function debounceSearch() {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => doSearch(document.getElementById('n2Search').value), 220);
+}
+
+async function doSearch(term) {
+  activeCat = null;
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-cat=""]')?.classList.add('active');
+
+  if (!term || term.length < 2) {
+    document.getElementById('resultsList').innerHTML = '<div class="empty">Tape un terme pour rechercher</div>';
+    document.getElementById('resultsCount').textContent = '—';
+    return;
+  }
+  document.getElementById('resultsList').innerHTML = '<div class="loading">Recherche…</div>';
+  const data = await fetch(`${API}/api/search?q=${encodeURIComponent(term)}`).then(r => r.json());
+  renderResults(data);
+}
+
+function renderResults(data) {
+  document.getElementById('resultsCount').textContent = data.length;
+
+  // Grouper par cat2
+  const groups = {};
+  for (const e of data) {
+    const grp = e.cat2 || e.cat1 || 'autres';
+    if (!groups[grp]) groups[grp] = [];
+    groups[grp].push(e);
+  }
+
+  const csIcon = cs => {
+    const map = {raw:'R', boiled:'B', cooked:'C', roasted:'Ro', grilled:'Gr',
+                 baked:'Bk', steamed:'St', sauteed:'Sa', fried:'Fr'};
+    return map[cs] || '·';
+  };
+  const csClass = cs => `cs-${cs||'default'}`;
+
+  let html = '';
+  for (const [grp, items] of Object.entries(groups)) {
+    html += `<div class="result-group-header">${grp.replace(/_/g,' ')}</div>`;
+    html += items.map(e => `
+      <div class="result-item" title="${e.name_fr||e.name_en}">
+        <div class="result-cs ${csClass(e.cooking_state)}">${csIcon(e.cooking_state)}</div>
+        <div class="result-info">
+          <div class="result-gid">${e.gid}</div>
+          <div class="result-sub">${e.name_fr||e.name_en||''}</div>
+        </div>
+        <div class="result-cal">${e.cal!=null ? e.cal+' kcal' : '—'}</div>
+        <div class="assign-btns">
+          <button class="abtn abtn-raw"  onclick="assignToSlot('${e.gid}',${e.cal},'raw');event.stopPropagation()">RAW</button>
+          <button class="abtn abtn-cook" onclick="assignToSlot('${e.gid}',${e.cal},'cook');event.stopPropagation()">CUIT</button>
+        </div>
+      </div>`
+    ).join('');
+  }
+  document.getElementById('resultsList').innerHTML = html || '<div class="empty">Aucun résultat</div>';
+}
+
+// ── Toast ─────────────────────────────────────────────────────────────────────
+function toast(msg, type='ok') {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className   = `toast show ${type}`;
+  setTimeout(() => el.classList.remove('show'), 2400);
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>

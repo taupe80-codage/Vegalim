@@ -132,11 +132,126 @@ export default function AstroPage() {
   const filteredAstro = localFilterRecipes(astroRecipes, fs.filterState);
   const sortedAstro   = sortRecipes(filteredAstro, astroSort);
 
+  // Données descriptives pour les 4 éléments
+  const ELEMENTS_DESC = [
+    {
+      id: 'Feu', icon: '🔥', color: ELEMENT_COLOR.Feu,
+      tagline: 'Intensité & Vitalité',
+      desc: "L'élément Feu incarne l'énergie brute et la chaleur. En cuisine, il se traduit par des saveurs franches et percutantes : épices vives, agrumes zestés, cuissons rapides à feu vif. Les signes Feu (Bélier, Lion, Sagittaire) sont attirés par des plats qui réveillent et nourrissent leur ardeur naturelle.",
+      keywords: ['Épices', 'Agrumes', 'Grillé', 'Piment', 'Curcuma', 'Gingembre'],
+      signs: ['♈', '♌', '♐'],
+    },
+    {
+      id: 'Terre', icon: '🌿', color: ELEMENT_COLOR.Terre,
+      tagline: 'Ancrage & Profondeur',
+      desc: "L'élément Terre évoque la patience, la durée et la richesse du sol. Les plats mijotés, les légumes-racines, les céréales complètes et les saveurs umami profondes en sont l'expression culinaire naturelle. Les signes Terre (Taureau, Vierge, Capricorne) trouvent leur équilibre dans des repas nourrissants et réconfortants.",
+      keywords: ['Racines', 'Mijoté', 'Céréales', 'Champignons', 'Légumineuses', 'Miso'],
+      signs: ['♉', '♍', '♑'],
+    },
+    {
+      id: 'Air', icon: '🌬️', color: ELEMENT_COLOR.Air,
+      tagline: 'Légèreté & Diversité',
+      desc: "L'élément Air symbolise la mobilité, la curiosité et l'échange. En cuisine, il se manifeste par des textures légères, des salades croquantes, des associations inattendues et des bouchées variées à partager. Les signes Air (Gémeaux, Balance, Verseau) aiment la diversité, la fusion et les repas conviviaux.",
+      keywords: ['Crudités', 'Fusion', 'Croquant', 'Herbes fraîches', 'Salades', 'Snacks'],
+      signs: ['♊', '♎', '♒'],
+    },
+    {
+      id: 'Eau', icon: '💧', color: ELEMENT_COLOR.Eau,
+      tagline: 'Douceur & Intuition',
+      desc: "L'élément Eau représente la fluidité, la sensibilité et la profondeur émotionnelle. Les bouillons apaisants, les soupes veloutées, les poissons délicats et les saveurs douces et enveloppantes en sont le reflet. Les signes Eau (Cancer, Scorpion, Poissons) cherchent des plats qui réconfortent l'âme autant que le corps.",
+      keywords: ['Bouillons', 'Soupes', 'Vapeur', 'Algues', 'Douceur', 'Fermentés'],
+      signs: ['♋', '♏', '♓'],
+    },
+  ];
+
   return (
     <div className="page-home" style={{ padding: '0 24px', maxWidth: 1100, margin: '0 auto' }}>
-      <div className="page-header" style={{ marginBottom: 24 }}>
-        <h1 className="page-title"><span className="page-icon">✨</span> Astrologie Culinaire</h1>
-        <p className="page-sub">Chaque signe a son élément — Feu, Terre, Air, Eau — qui résonne avec des saveurs et ingrédients précis.</p>
+
+      {/* ── En-tête développé ── */}
+      <div style={{ marginBottom: 36 }}>
+        <h1 className="page-title" style={{ marginBottom: 12 }}>
+          <span className="page-icon">✨</span> Astrologie Culinaire
+        </h1>
+
+        {/* Intro principale */}
+        <p style={{ fontSize: 16, color: 'var(--txt2)', lineHeight: 1.75, maxWidth: 780, margin: '0 0 10px' }}>
+          Depuis l'Antiquité, les traditions culinaires du monde entier ont associé les aliments à des qualités élémentaires —
+          chaleur, ancrage, légèreté, fluidité. L'astrologie culinaire s'en inspire pour proposer
+          une lecture intuitive de votre rapport à la nourriture, selon les grandes énergies portées par votre signe.
+        </p>
+        <p style={{ fontSize: 15, color: 'var(--mut)', lineHeight: 1.65, maxWidth: 740, margin: '0 0 28px' }}>
+          Chaque signe appartient à l'un des quatre éléments — <strong style={{ color: ELEMENT_COLOR.Feu }}>Feu</strong>,{' '}
+          <strong style={{ color: ELEMENT_COLOR.Terre }}>Terre</strong>,{' '}
+          <strong style={{ color: ELEMENT_COLOR.Air }}>Air</strong>,{' '}
+          <strong style={{ color: ELEMENT_COLOR.Eau }}>Eau</strong> — qui résonne avec
+          des saveurs, des textures et des modes de cuisson précis. Explorez les recettes qui vibrent avec votre énergie naturelle.
+        </p>
+
+        {/* 4 cartes éléments */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 14, marginBottom: 8 }}>
+          {ELEMENTS_DESC.map(el => (
+            <div key={el.id} style={{
+              borderRadius: 14, padding: 18,
+              border: `1px solid ${el.color}30`,
+              background: `color-mix(in srgb, ${el.color} 6%, var(--sur))`,
+              display: 'flex', flexDirection: 'column', gap: 10,
+              position: 'relative', overflow: 'hidden',
+            }}>
+              {/* Fond watermark */}
+              <span style={{
+                position: 'absolute', right: -8, bottom: -12, fontSize: 72,
+                opacity: 0.06, lineHeight: 1, pointerEvents: 'none', userSelect: 'none',
+              }}>{el.icon}</span>
+
+              {/* Header élément */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                <span style={{
+                  width: 36, height: 36, borderRadius: 10, fontSize: 18,
+                  background: `color-mix(in srgb, ${el.color} 16%, transparent)`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                }}>{el.icon}</span>
+                <div>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: el.color, lineHeight: 1.1 }}>
+                    {el.id}
+                  </div>
+                  <div style={{ fontSize: 11, color: 'var(--mut)', fontWeight: 500, letterSpacing: '0.04em', textTransform: 'uppercase' }}>
+                    {el.tagline}
+                  </div>
+                </div>
+              </div>
+
+              {/* Description */}
+              <p style={{ fontSize: 12.5, color: 'var(--txt2)', lineHeight: 1.6, margin: 0 }}>
+                {el.desc}
+              </p>
+
+              {/* Mots-clés */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
+                {el.keywords.map(kw => (
+                  <span key={kw} style={{
+                    fontSize: 11, padding: '3px 9px', borderRadius: 20,
+                    background: `color-mix(in srgb, ${el.color} 12%, transparent)`,
+                    color: el.color, fontWeight: 500, border: `1px solid ${el.color}28`,
+                  }}>{kw}</span>
+                ))}
+              </div>
+
+              {/* Signes associés */}
+              <div style={{ display: 'flex', gap: 6, alignItems: 'center', borderTop: `1px solid ${el.color}20`, paddingTop: 10 }}>
+                <span style={{ fontSize: 10, color: 'var(--mut)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Signes</span>
+                {el.signs.map(g => (
+                  <span key={g} style={{ fontSize: 16, color: el.color }}>{g}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Note de bas d'intro */}
+        <p style={{ fontSize: 12.5, color: 'var(--mut)', margin: '12px 0 0', fontStyle: 'italic', lineHeight: 1.5 }}>
+          ✦ L'astrologie culinaire est une approche ludique et culturelle — elle invite à l'exploration, non à la prescription.
+          Faites confiance à votre curiosité gustative autant qu'à votre thème astral.
+        </p>
       </div>
 
       {/* Grille 6 × 2 signes */}

@@ -11,10 +11,56 @@ import { useState, useEffect, useMemo } from 'react';
 import { useRouter, navigate } from '../Router';
 import { recipes as recipesApi } from '../api';
 import translations from '../translations.json';
+import physData from '../ingredientPhysical.json';
+import { formatIngredientQty } from '../formatIngredientQty';
 import RecipeCard, { RecipeVisual, getRecipeBadges, getCuisineColor, getRecipeImageUrl, computeNRFScore, computeAlimScore } from '../components/RecipeCard';
 import { addToRecentlyViewed } from '../useRecentlyViewed';
 import AddToPlanModal from '../components/AddToPlanModal';
 import { useToast } from '../ToastContext';
+
+// ── États des ingrédients → français ─────────────────────────────────────────
+// États implicites ou relevant des instructions : ne pas afficher dans la liste
+const INGREDIENT_STATE_IMPLICIT = new Set([
+  'raw', 'cooked', 'sauteed', 'grilled', 'blanched', 'beaten',
+  'active', 'added_at_end',
+]);
+
+const INGREDIENT_STATE_FR = {
+  active:            'actif',
+  added_at_end:      'ajouté en fin',
+  beaten:            'battu',
+  blanched:          'blanchi',
+  cleaned:           'nettoyé',
+  cold:              'froid',
+  cooked:            'cuit',
+  drained:           'égoutté',
+  dry:               'sec',
+  firm:              'ferme',
+  fresh:             'frais',
+  fresh_or_frozen:   'frais ou surgelé',
+  frozen:            'surgelé',
+  frozen_or_fresh:   'surgelé ou frais',
+  germ_removed:      'germe retiré',
+  grilled:           'grillé',
+  hydrated:          'hydraté',
+  lukewarm:          'tiède',
+  pounded:           'pilé',
+  raw:               'cru',
+  rinsed:            'rincé',
+  ripe:              'mûr',
+  rubbed:            'frotté',
+  sauteed:           'sauté',
+  soaked:            'trempé',
+  softened:          'ramolli',
+  stale:             'rassis',
+  surface_dried:     'séché en surface',
+  toasted:           'torréfié',
+  warm:              'chaud',
+  washed:            'lavé',
+  washed_and_dried:  'lavé et séché',
+  washed_and_spun:   'lavé et essoré',
+  washed_dried_spun: 'lavé, séché et essoré',
+};
 
 // ── Métadonnées nutriments + AJR (UE Règl. 1169/2011 / ANSES) ────────────────
 const NUTR_META = {
@@ -24,10 +70,10 @@ const NUTR_META = {
   carbs:         { label: 'Glucides',           unit: 'g',    icon: '🌾', group: 'macro', ajr: 260,  color: '#f0c27f' },
   fat:           { label: 'Lipides',            unit: 'g',    icon: '🫒', group: 'macro', ajr: 70,   color: '#a371f7' },
   fiber:         { label: 'Fibres',             unit: 'g',    icon: '🥦', group: 'macro', ajr: 25,   color: '#3fb950' },
-  sugar:         { label: 'Sucres',             unit: 'g',    icon: '🍬', group: 'macro', ajr: 90,   color: '#f0883e' },
-  saturated_fat: { label: 'Graisses saturées',  unit: 'g',    icon: '🧈', group: 'macro', ajr: 20,   color: '#a371f7' },
-  salt:          { label: 'Sel',                unit: 'g',    icon: '🧂', group: 'macro', ajr: 6,    color: '#8b949e' },
-  sodium:        { label: 'Sodium',             unit: 'mg',   icon: '🧂', group: 'macro', ajr: 2300, color: '#8b949e' },
+  sugar:         { label: 'Sucres',             unit: 'g',    icon: '🍬', group: 'macro', ajr: 90,   color: '#f0883e', negative: true },
+  saturated_fat: { label: 'Graisses saturées',  unit: 'g',    icon: '🧈', group: 'macro', ajr: 20,   color: '#a371f7', negative: true },
+  salt:          { label: 'Sel',                unit: 'g',    icon: '🧂', group: 'macro', ajr: 6,    color: '#8b949e', negative: true },
+  sodium:        { label: 'Sodium',             unit: 'mg',   icon: '🧂', group: 'macro', ajr: 2300, color: '#8b949e', negative: true },
   // — Micronutriments —
   iron:          { label: 'Fer',                unit: 'mg',   icon: '🩸', group: 'micro', ajr: 14,   color: '#f85149' },
   calcium:       { label: 'Calcium',            unit: 'mg',   icon: '🦴', group: 'micro', ajr: 800,  color: '#58a6ff' },
@@ -66,13 +112,31 @@ function RecipeNutritionPanel({ nutrition: rawNutrition }) {
     .filter(k => nutrition[k] == null)
     .map(k => NUTR_META[k].label);
 
+  // Couleur adaptée à un repas (~30% AJR max attendu)
+  // Éléments positifs (protéines, fibres, vitamines…) : rouge<5% → orange<15% → vert<30% → jaune fluo ≥30%
+  // Éléments négatifs (sel, sucres, graisses sat…)    : vert<5% → orange<15% → rouge<30% → rouge fluo ≥30%
+  const getMealColor = (pct, negative) => {
+    if (negative) {
+      if (pct >= 30) return '#ff4444';  // excès — rouge fluo
+      if (pct >= 15) return '#f85149';  // élevé  — rouge
+      if (pct >= 5)  return '#e3b341';  // moyen  — orange
+      return '#3fb950';                 // faible  — vert
+    } else {
+      if (pct >= 30) return '#d4f542';  // excellent — jaune fluo
+      if (pct >= 15) return '#3fb950';  // bon       — vert
+      if (pct >= 5)  return '#e3b341';  // moyen     — orange
+      return '#f85149';                 // faible    — rouge
+    }
+  };
+
   const renderBar = ([key, meta]) => {
     const val = nutrition[key];
     if (val == null) return null;
-    const pct      = Math.min(100, (val / meta.ajr) * 100);
-    const color    = pct >= 100 ? '#3fb950' : pct >= 50 ? meta.color : '#f85149';
+    const rawPct   = (val / meta.ajr) * 100;
+    const pct      = Math.min(100, rawPct);
+    const color    = getMealColor(rawPct, meta.negative);
     const dispVal  = val < 10 ? Number(val.toFixed(1)) : Math.round(val);
-    const ajrPct   = Math.round(pct);
+    const ajrPct   = Math.round(rawPct);
 
     return (
       <div key={key} className="rn-bar-row">
@@ -82,19 +146,15 @@ function RecipeNutritionPanel({ nutrition: rawNutrition }) {
           <span className="rn-bar-val" style={{ color }}>
             {dispVal}<span className="rn-bar-unit"> {meta.unit}</span>
           </span>
-          <span className="rn-bar-pct" style={{ color: pct >= 50 ? 'var(--mut)' : '#f85149' }}>
+          <span className="rn-bar-pct" style={{ color }}>
             {ajrPct}%
           </span>
         </div>
         <div className="rn-bar-track">
           <div className="rn-bar-fill" style={{
             width: `${pct}%`,
-            background: pct >= 100
-              ? 'linear-gradient(90deg,#3fb950,#2ea043)'
-              : pct >= 50
-              ? `linear-gradient(90deg,${meta.color},${meta.color}aa)`
-              : 'linear-gradient(90deg,#f85149,#f85149aa)',
-            boxShadow: `0 0 6px ${color}40`,
+            background: `linear-gradient(90deg,${color},${color}bb)`,
+            boxShadow: `0 0 6px ${color}50`,
           }} />
           <div className="rn-bar-marker" />
         </div>
@@ -299,7 +359,30 @@ export default function RecipeDetailPage() {
   // ── Calculs ────────────────────────────────────────────────────────────────
   const ratio    = servings / (recipe.servings || 4);
   const isVegan  = recipe.diet_flags?.vegan;
-  const timeInfo     = recipe.timing || {};
+  const rawTime      = recipe.timing || {};
+
+  // Scaling temporel non-linéaire selon le nombre de convives :
+  // - prep  ∝ √ratio  (on optimise les gestes, on travaille en parallèle)
+  // - cuisson ∝ 1 + 0.1×(ratio−1)  (le four/feu ne change presque pas)
+  const scaleTime = (base, mode) => {
+    if (!base || ratio === 1) return base;
+    const scaled = mode === 'prep'
+      ? base * Math.sqrt(ratio)
+      : base * (1 + 0.1 * (ratio - 1));
+    return Math.round(scaled);
+  };
+  const timeInfo = {
+    ...rawTime,
+    prep_active_min : scaleTime(rawTime.prep_active_min, 'prep'),
+    cook_min        : scaleTime(rawTime.cook_min,        'cook'),
+    total_expected  : scaleTime(rawTime.total_expected,  'prep'),
+    get total_min() {
+      const p = this.prep_active_min || 0;
+      const c = this.cook_min        || 0;
+      return (p || c) ? p + c : rawTime.total_min;
+    },
+  };
+
   const ingredients  = recipe.composition || recipe.ingredients || [];
   const badges       = getRecipeBadges(recipe);
 
@@ -478,6 +561,7 @@ export default function RecipeDetailPage() {
               📅 Ajouter au planning
             </button>
             <button className="variant-btn" onClick={() => {
+              window.__alim_pending_recipe = recipe;
               window.dispatchEvent(new CustomEvent('alim:recipe-selected', { detail: recipe }));
               navigate('/nutrition');
             }}>
@@ -564,10 +648,12 @@ export default function RecipeDetailPage() {
               const name = rawResolved
                 || (metaName ? metaName.charAt(0).toUpperCase() + metaName.slice(1) : null)
                 || nameStr;
-              let qtyStr    = '';
+              let qtyStr   = '';
+              let equivStr = '';
               if (ing.quantity) {
-                const q = ing.quantity * ratio;
-                qtyStr  = `${q < 10 && q % 1 !== 0 ? q.toFixed(1) : Math.round(q)} ${ing.unit || ''}`.trim();
+                const q  = ing.quantity * ratio;
+                qtyStr   = `${q < 10 && q % 1 !== 0 ? q.toFixed(1) : Math.round(q)} ${ing.unit || ''}`.trim();
+                equivStr = formatIngredientQty(iid, q, ing.unit || '', physData);
               }
 
               // Statut frigo pour cet ingrédient
@@ -586,10 +672,15 @@ export default function RecipeDetailPage() {
                       {inFrigo ? '✓' : '✗'}
                     </span>
                   )}
-                  <span className="ing-qty">{qtyStr}</span>
+                  <span className="ing-qty">
+                    <span className="ing-qty-val">{qtyStr}</span>
+                    {equivStr && <span className="ing-equiv">{equivStr}</span>}
+                  </span>
                   <span className="ing-name">
                     {name.replace(/_/g, ' ')}
-                    {ing.meta?.state && <span className="ing-meta"> ({ing.meta.state})</span>}
+                    {ing.meta?.state && !INGREDIENT_STATE_IMPLICIT.has(ing.meta.state) && (
+                      <span className="ing-meta"> ({INGREDIENT_STATE_FR[ing.meta.state] ?? ing.meta.state})</span>
+                    )}
                   </span>
                 </li>
               );

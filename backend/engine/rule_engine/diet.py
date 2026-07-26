@@ -200,15 +200,433 @@ NUT_IDS: frozenset[str] = frozenset({
     "noix_de_cajou", "pate_d_arachide",
 })
 
-# Ingrédients FODMAP triggers — liste scientifique (Monash University)
-HIGH_FODMAP_IDS: frozenset[str] = frozenset({
-    "onion", "red_onion", "white_onion", "spring_onion", "shallot", "leek",
-    "garlic", "mushroom", "cauliflower", "apple", "pear", "watermelon",
-    "honey", "lentil", "chickpea", "bean", "black_bean",
-    "red_kidney_bean", "white_bean", "soybean", "green_peas",
-    "wheat", "rye", "barley", "flour", "bread", "pasta",
-    "miso", "soy_sauce",
+# ── FODMAP — données basées sur Monash University FODMAP Diet App ────────────
+#
+# Architecture en deux couches :
+#
+#  1. FODMAP_THRESHOLDS  (dict)
+#     Table de seuils quantitatifs par ingrédient (g par portion).
+#     Structure par entrée :
+#       "ingredient_base": {
+#           "safe":   X,    # <= X g/portion → contribue 0 (low)
+#           "medium": Y,    # <= Y g/portion → contribue 1 pt (medium)
+#                           # >  Y g/portion → contribue 2 pts (high)
+#           "cats":  [...], # catégories FODMAP : F/G/M/P
+#           "note":  "...", # optionnel — contexte Monash
+#       }
+#     safe=0 signifie "aucune dose sûre" (ex : ail → high dès 1g).
+#     medium=999 signifie "jamais high même en grande quantité" (ex : avoccat ≤60g).
+#
+#  2. Fallback par liste (HIGH/MEDIUM_FODMAP_IDS)
+#     Pour les ingrédients sans seuil quantitatif — scoring binaire conservateur.
+#
+# Note : le lactose (D) est géré séparément par LACTOSE_IDS pour le flag
+# lactose_free — il n'est pas répété ici pour éviter la double comptabilisation.
+# Les ingrédients de VEGAN_EXCEPTIONS sont exclus de _extract_ids() et donc
+# ne déclenchent jamais les FODMAP (laits végétaux, fromages végans, etc.).
+#
+# Sources : Monash University FODMAP Diet App v3, King's College London
+#           (Barrett & Gibson 2012, 2019 updates)
+
+# ── Fructanes (F) ─────────────────────────────────────────────────────────────
+_FRUCTAN_HIGH: frozenset[str] = frozenset({
+    # Alliacées
+    "onion", "red_onion", "white_onion", "yellow_onion", "brown_onion",
+    "shallot", "echalote", "leek", "poireau",
+    "garlic", "ail", "garlic_powder", "garlic_granules", "onion_powder",
+    # Céréales à gluten (fructanes + gluten)
+    "wheat", "ble", "rye", "barley", "orge",
+    "flour", "whole_wheat_flour", "spelt_flour", "rye_flour", "farine",
+    "bread", "baguette", "pain", "breadcrumbs", "crackers", "chapelure",
+    "pasta", "spaghetti", "penne", "fusilli", "tagliatelle", "linguine",
+    "orzo", "ziti", "couscous", "bulgur", "fine_bulgur", "semolina", "semoule",
+    "tortillas", "pita_bread", "naan", "wonton_wrapper", "gyoza_wrappers",
+    "phyllo_dough", "puff_pastry", "pizza_dough", "shortcrust_pastry",
+    "seitan",  # pur gluten de blé
+    # Légumes à fructanes élevés
+    "artichoke", "artichaut", "jerusalem_artichoke", "topinambour",
+    "fennel", "fenouil",
+    "beetroot", "betterave",  # modéré mais listé ici car souvent en grande qt
+    # Fruits à fructanes
+    "persimmon", "kaki", "grapefruit",  # pamplemousse — fructanes + fructose
+    "pomelo",
+    # Légumineuses à fructanes (en plus des GOS)
+    "green_peas", "petits_pois", "split_peas", "pois_casses",
+    # Tisanes / arômes
+    "chamomile", "camomille",  # fructanes en infusion concentrée
+    "dandelion_root",
 })
+
+# ── GOS — Galacto-oligosaccharides (G) ────────────────────────────────────────
+_GOS_HIGH: frozenset[str] = frozenset({
+    "lentil", "lentille", "lentilles", "red_lentil", "lentille_corail",
+    "chickpea", "pois_chiche", "hummus",
+    "bean", "haricot", "black_bean", "haricot_noir",
+    "red_kidney_bean", "white_bean", "haricot_blanc", "haricot_rouge",
+    "cannellini_bean", "borlotti_bean", "pinto_bean",
+    "fava_bean", "broad_bean", "feve",
+    "soybean", "edamame",
+    "lupin", "lupin_flour",
+    # Noix à GOS élevés
+    "cashew", "noix_de_cajou",  # aussi dans NUT_IDS
+    "pistachio", "pistache",    # aussi dans NUT_IDS
+})
+
+# ── Fructose en excès (M) ─────────────────────────────────────────────────────
+_FRUCTOSE_HIGH: frozenset[str] = frozenset({
+    "apple", "pomme",
+    "pear", "poire",
+    "mango", "mangue",
+    "cherry", "cerise",
+    "watermelon", "pasteque",
+    "fig", "figue",
+    "lychee", "litchi",
+    "quince", "coing",
+    "boysenberry", "tamarillo",
+    # Édulcorants / sucrants
+    "honey", "miel",
+    "agave", "agave_syrup", "sirop_agave",
+    "high_fructose_corn_syrup", "corn_syrup",
+    "apple_juice", "jus_de_pomme", "pear_juice", "jus_de_poire",
+    "concentrated_fruit_juice",
+    # Sauces industrielles (souvent enrichies en HFCS)
+    "ketchup",  # industriel — vérifier étiquette
+    "teriyaki_sauce",
+    "sweet_chili_sauce",
+    "hoisin_sauce",
+    "plum_sauce",
+})
+
+# ── Polyols (P) ───────────────────────────────────────────────────────────────
+_POLYOL_HIGH: frozenset[str] = frozenset({
+    # Fruits à polyols (sorbitol/mannitol)
+    "apricot", "abricot",
+    "peach", "peche",
+    "plum", "prune", "prune_juice",
+    "nectarine",
+    "blackberry", "mure",
+    "cherry", "cerise",      # aussi en fructose
+    "avocado", "avocat",     # sorbitol (toléré en petite qt → medium)
+    # Légumes à mannitol
+    "mushroom", "champignon", "shiitake", "oyster_mushroom",
+    "cauliflower", "chou_fleur",
+    "celery", "celeri",
+    "sweet_potato",  # mannitol en grande quantité
+    # Édulcorants artificiels (polyols ajoutés)
+    "sorbitol", "e420",
+    "mannitol", "e421",
+    "xylitol", "e967",
+    "maltitol", "e965",
+    "lactitol", "e966",
+    "erythritol",  # mieux toléré mais listé pour précaution
+    "isomalt",
+})
+
+# ── Liste synthétique HIGH FODMAP (union) ─────────────────────────────────────
+HIGH_FODMAP_IDS: frozenset[str] = (
+    _FRUCTAN_HIGH | _GOS_HIGH | _FRUCTOSE_HIGH | _POLYOL_HIGH
+)
+
+# ── Déclencheurs modérés — tolérés en petite portion ─────────────────────────
+# Source : Monash FODMAP App — portions "green" vs "orange/red"
+MEDIUM_FODMAP_IDS: frozenset[str] = frozenset({
+    # Fructanes modérés
+    "spring_onion",     # partie verte OK, bulbe = high
+    "oignon_vert",
+    "cabbage", "chou",  # fructanes modérés
+    "broccoli", "brocoli",   # GOS + fructanes à haute dose (80g+ = high)
+    "brussel_sprout", "chou_de_bruxelles",
+    "asparagus", "asperge",  # fructanes + fructose
+    # GOS modérés (portion < 3 cs)
+    "tofu_soft", "tofu_soyeux",  # GOS résiduel (tofu ferme = low)
+    # Fructose modéré
+    "grape", "raisin",       # fructose proche équilibre
+    "blueberry", "myrtille", # fructose + sorbitol (portion 20g = OK)
+    "pomegranate", "grenade",
+    "raspberry", "framboise",
+    "passion_fruit", "fruit_de_la_passion",
+    "coconut_water", "eau_de_coco",  # oligosaccharides en grande qt
+    # Polyols modérés
+    "avocado", "avocat",  # 30g OK selon Monash
+    "pumpkin", "courge",  # mannitol modéré
+    "turnip", "navet",
+    # Lactose — fromages frais (low si affiné, medium si frais)
+    "ricotta",
+    "mascarpone",
+    "creme_fraiche", "cream",
+    # Divers
+    "soy_sauce", "sauce_soja",  # fructanes — 2 cs max
+    "miso", "white_miso", "red_miso",  # fructanes (1 cs = OK)
+    "tahini",   # GOS modéré
+    "cashew_butter",
+})
+
+# ── Mapping ingredient → catégorie(s) FODMAP ─────────────────────────────────
+# Utilisé pour enrichir health_scores avec fodmap_categories
+FODMAP_CATEGORY_MAP: dict[str, list[str]] = {
+    # Fructanes
+    "onion": ["F"], "garlic": ["F"], "shallot": ["F"], "leek": ["F"],
+    "wheat": ["F"], "bread": ["F"], "pasta": ["F"], "flour": ["F"],
+    "artichoke": ["F"], "fennel": ["F"], "green_peas": ["F"],
+    # GOS
+    "lentil": ["G"], "chickpea": ["G"], "bean": ["G"], "soybean": ["G"],
+    "edamame": ["G"], "cashew": ["G", "P"], "pistachio": ["G"],
+    # Fructose
+    "apple": ["M"], "pear": ["M"], "mango": ["M"], "honey": ["M"],
+    "agave": ["M"], "watermelon": ["M"], "cherry": ["M", "P"],
+    # Polyols
+    "mushroom": ["P"], "cauliflower": ["P"], "apricot": ["P"],
+    "peach": ["P"], "plum": ["P"], "avocado": ["P"],
+    "xylitol": ["P"], "sorbitol": ["P"], "mannitol": ["P"],
+}
+
+# ── Seuils quantitatifs Monash (g/portion) ───────────────────────────────────
+# "safe"  : <= g → low (0 pt).  safe=0 → aucune dose sûre.
+# "medium": <= g → medium (1 pt).  medium=999 → jamais high.
+# Valeurs issues de Monash FODMAP App v3 (2019-2023 updates).
+FODMAP_THRESHOLDS: dict[str, dict] = {
+    # ── Alliacées (fructanes) — aucune dose sûre
+    "garlic":          {"safe": 0,   "medium": 0,   "cats": ["F"]},
+    "ail":             {"safe": 0,   "medium": 0,   "cats": ["F"]},
+    "garlic_powder":   {"safe": 0,   "medium": 0,   "cats": ["F"]},
+    "onion":           {"safe": 0,   "medium": 15,  "cats": ["F"]},
+    "red_onion":       {"safe": 0,   "medium": 15,  "cats": ["F"]},
+    "white_onion":     {"safe": 0,   "medium": 15,  "cats": ["F"]},
+    "yellow_onion":    {"safe": 0,   "medium": 15,  "cats": ["F"]},
+    "shallot":         {"safe": 0,   "medium": 15,  "cats": ["F"]},
+    "echalote":        {"safe": 0,   "medium": 15,  "cats": ["F"]},
+    "leek":            {"safe": 0,   "medium": 25,  "cats": ["F"]},
+    "poireau":         {"safe": 0,   "medium": 25,  "cats": ["F"]},
+    "spring_onion":    {"safe": 16,  "medium": 40,  "cats": ["F"],
+                        "note": "partie verte only — bulbe = high dès 1g"},
+    "oignon_vert":     {"safe": 16,  "medium": 40,  "cats": ["F"]},
+    # ── Céréales à gluten (fructanes)
+    "wheat":           {"safe": 0,   "medium": 26,  "cats": ["F"]},
+    "flour":           {"safe": 0,   "medium": 30,  "cats": ["F"]},
+    "farine":          {"safe": 0,   "medium": 30,  "cats": ["F"]},
+    "bread":           {"safe": 0,   "medium": 30,  "cats": ["F"]},
+    "pain":            {"safe": 0,   "medium": 30,  "cats": ["F"]},
+    "pasta":           {"safe": 0,   "medium": 74,  "cats": ["F"],
+                        "note": "74g cuit = 1 portion Monash orange"},
+    "couscous":        {"safe": 0,   "medium": 45,  "cats": ["F"]},
+    "bulgur":          {"safe": 0,   "medium": 45,  "cats": ["F"]},
+    # ── Légumes (fructanes / polyols)
+    "artichoke":       {"safe": 0,   "medium": 0,   "cats": ["F"]},
+    "artichaut":       {"safe": 0,   "medium": 0,   "cats": ["F"]},
+    "fennel":          {"safe": 47,  "medium": 80,  "cats": ["F"]},
+    "fenouil":         {"safe": 47,  "medium": 80,  "cats": ["F"]},
+    "beetroot":        {"safe": 20,  "medium": 45,  "cats": ["F"]},
+    "betterave":       {"safe": 20,  "medium": 45,  "cats": ["F"]},
+    "asparagus":       {"safe": 0,   "medium": 30,  "cats": ["F"]},
+    "asperge":         {"safe": 0,   "medium": 30,  "cats": ["F"]},
+    "broccoli":        {"safe": 75,  "medium": 130, "cats": ["F", "G"]},
+    "brocoli":         {"safe": 75,  "medium": 130, "cats": ["F", "G"]},
+    "cauliflower":     {"safe": 0,   "medium": 35,  "cats": ["P"]},
+    "chou_fleur":      {"safe": 0,   "medium": 35,  "cats": ["P"]},
+    "celery":          {"safe": 10,  "medium": 30,  "cats": ["P"]},
+    "celeri":          {"safe": 10,  "medium": 30,  "cats": ["P"]},
+    "cabbage":         {"safe": 75,  "medium": 135, "cats": ["F"]},
+    "chou":            {"safe": 75,  "medium": 135, "cats": ["F"]},
+    "brussel_sprout":  {"safe": 0,   "medium": 38,  "cats": ["F"]},
+    "sweet_potato":    {"safe": 70,  "medium": 150, "cats": ["P"]},
+    "pumpkin":         {"safe": 30,  "medium": 75,  "cats": ["P"]},
+    "courge":          {"safe": 30,  "medium": 75,  "cats": ["P"]},
+    "turnip":          {"safe": 45,  "medium": 90,  "cats": ["P"]},
+    "navet":           {"safe": 45,  "medium": 90,  "cats": ["P"]},
+    "green_peas":      {"safe": 0,   "medium": 30,  "cats": ["F", "G"]},
+    "petits_pois":     {"safe": 0,   "medium": 30,  "cats": ["F", "G"]},
+    # ── Champignons (polyols — mannitol)
+    "mushroom":        {"safe": 0,   "medium": 35,  "cats": ["P"]},
+    "champignon":      {"safe": 0,   "medium": 35,  "cats": ["P"]},
+    "shiitake":        {"safe": 0,   "medium": 35,  "cats": ["P"]},
+    "oyster_mushroom": {"safe": 0,   "medium": 35,  "cats": ["P"]},
+    # ── Légumineuses (GOS)
+    "lentil":          {"safe": 46,  "medium": 100, "cats": ["G"],
+                        "note": "46g cuit = 1/4 cup Monash vert"},
+    "lentille":        {"safe": 46,  "medium": 100, "cats": ["G"]},
+    "red_lentil":      {"safe": 46,  "medium": 100, "cats": ["G"]},
+    "lentille_corail": {"safe": 46,  "medium": 100, "cats": ["G"]},
+    "chickpea":        {"safe": 42,  "medium": 80,  "cats": ["G"],
+                        "note": "rincées en conserve : seuil ×1.5"},
+    "pois_chiche":     {"safe": 42,  "medium": 80,  "cats": ["G"]},
+    "hummus":          {"safe": 0,   "medium": 45,  "cats": ["G"]},
+    "black_bean":      {"safe": 42,  "medium": 80,  "cats": ["G"]},
+    "haricot_noir":    {"safe": 42,  "medium": 80,  "cats": ["G"]},
+    "white_bean":      {"safe": 42,  "medium": 80,  "cats": ["G"]},
+    "haricot_blanc":   {"safe": 42,  "medium": 80,  "cats": ["G"]},
+    "cannellini_bean": {"safe": 42,  "medium": 80,  "cats": ["G"]},
+    "fava_bean":       {"safe": 0,   "medium": 30,  "cats": ["G"]},
+    "feve":            {"safe": 0,   "medium": 30,  "cats": ["G"]},
+    "edamame":         {"safe": 90,  "medium": 160, "cats": ["G"]},
+    "cashew":          {"safe": 0,   "medium": 10,  "cats": ["G"],
+                        "note": "10g ≈ 10 cajous — très concentré"},
+    "noix_de_cajou":   {"safe": 0,   "medium": 10,  "cats": ["G"]},
+    "pistachio":       {"safe": 0,   "medium": 10,  "cats": ["G"]},
+    "pistache":        {"safe": 0,   "medium": 10,  "cats": ["G"]},
+    # ── Fruits (fructose / polyols)
+    "apple":           {"safe": 0,   "medium": 30,  "cats": ["M"]},
+    "pomme":           {"safe": 0,   "medium": 30,  "cats": ["M"]},
+    "pear":            {"safe": 0,   "medium": 0,   "cats": ["M"]},
+    "poire":           {"safe": 0,   "medium": 0,   "cats": ["M"]},
+    "mango":           {"safe": 0,   "medium": 40,  "cats": ["M"]},
+    "mangue":          {"safe": 0,   "medium": 40,  "cats": ["M"]},
+    "cherry":          {"safe": 0,   "medium": 0,   "cats": ["M", "P"]},
+    "cerise":          {"safe": 0,   "medium": 0,   "cats": ["M", "P"]},
+    "watermelon":      {"safe": 0,   "medium": 0,   "cats": ["M", "P"]},
+    "pasteque":        {"safe": 0,   "medium": 0,   "cats": ["M", "P"]},
+    "apricot":         {"safe": 0,   "medium": 20,  "cats": ["P"]},
+    "abricot":         {"safe": 0,   "medium": 20,  "cats": ["P"]},
+    "peach":           {"safe": 0,   "medium": 30,  "cats": ["P"]},
+    "peche":           {"safe": 0,   "medium": 30,  "cats": ["P"]},
+    "plum":            {"safe": 0,   "medium": 0,   "cats": ["P"]},
+    "nectarine":       {"safe": 0,   "medium": 35,  "cats": ["P"]},
+    "blackberry":      {"safe": 0,   "medium": 30,  "cats": ["P"]},
+    "mure":            {"safe": 0,   "medium": 30,  "cats": ["P"]},
+    "avocado":         {"safe": 30,  "medium": 60,  "cats": ["P"]},
+    "avocat":          {"safe": 30,  "medium": 60,  "cats": ["P"]},
+    "grape":           {"safe": 90,  "medium": 999, "cats": ["M"]},
+    "raisin":          {"safe": 90,  "medium": 999, "cats": ["M"]},
+    "blueberry":       {"safe": 20,  "medium": 40,  "cats": ["M", "P"]},
+    "myrtille":        {"safe": 20,  "medium": 40,  "cats": ["M", "P"]},
+    "raspberry":       {"safe": 60,  "medium": 999, "cats": ["M"]},
+    "framboise":       {"safe": 60,  "medium": 999, "cats": ["M"]},
+    "fig":             {"safe": 0,   "medium": 0,   "cats": ["M"]},
+    "figue":           {"safe": 0,   "medium": 0,   "cats": ["M"]},
+    # ── Banane (fructose + sorbitol — banane mûre)
+    "banana":          {"safe": 0,   "medium": 35,  "cats": ["M", "P"]},
+    # ── Farines de blé (fructanes — toutes variantes)
+    "all_purpose_flour": {"safe": 0, "medium": 26,  "cats": ["F"]},
+    "wheat_flour":     {"safe": 0,   "medium": 26,  "cats": ["F"]},
+    "white_flour":     {"safe": 0,   "medium": 26,  "cats": ["F"]},
+    "bread_flour":     {"safe": 0,   "medium": 26,  "cats": ["F"]},
+    "whole_wheat_flour":{"safe": 0,  "medium": 26,  "cats": ["F"]},
+    "t45":             {"safe": 0,   "medium": 26,  "cats": ["F"]},
+    "t55":             {"safe": 0,   "medium": 26,  "cats": ["F"]},
+    "t65":             {"safe": 0,   "medium": 26,  "cats": ["F"]},
+    "t80":             {"safe": 0,   "medium": 26,  "cats": ["F"]},
+    # ── Légumineuses vertes (GOS — variantes de lentilles)
+    "green_lentils":   {"safe": 46,  "medium": 100, "cats": ["G"]},
+    "red_lentils":     {"safe": 46,  "medium": 100, "cats": ["G"]},
+    "black_lentils":   {"safe": 46,  "medium": 100, "cats": ["G"]},
+    "puy_lentils":     {"safe": 46,  "medium": 100, "cats": ["G"]},
+    "black_beans":     {"safe": 42,  "medium": 80,  "cats": ["G"]},
+    "kidney_beans":    {"safe": 42,  "medium": 80,  "cats": ["G"]},
+    "navy_beans":      {"safe": 42,  "medium": 80,  "cats": ["G"]},
+    "white_beans":     {"safe": 42,  "medium": 80,  "cats": ["G"]},
+    "cannellini_beans":{"safe": 42,  "medium": 80,  "cats": ["G"]},
+    # ── Flocons d'avoine
+    "rolled_oats":     {"safe": 52,  "medium": 999, "cats": ["F"]},
+    "oats":            {"safe": 52,  "medium": 999, "cats": ["F"]},
+    "oat_flour":       {"safe": 52,  "medium": 999, "cats": ["F"]},
+    # ── Sucre de coco (fructose modéré)
+    "coconut_sugar":   {"safe": 7,   "medium": 20,  "cats": ["M"]},
+    # ── Édulcorants / sucrants
+    "honey":           {"safe": 0,   "medium": 7,   "cats": ["M"]},
+    "miel":            {"safe": 0,   "medium": 7,   "cats": ["M"]},
+    "agave":           {"safe": 0,   "medium": 0,   "cats": ["M"]},
+    "agave_syrup":     {"safe": 0,   "medium": 0,   "cats": ["M"]},
+    # ── Sauces / condiments
+    "soy_sauce":       {"safe": 14,  "medium": 42,  "cats": ["F"]},
+    "sauce_soja":      {"safe": 14,  "medium": 42,  "cats": ["F"]},
+    "miso":            {"safe": 12,  "medium": 35,  "cats": ["F"]},
+    "tahini":          {"safe": 20,  "medium": 45,  "cats": ["G"]},
+    "ketchup":         {"safe": 0,   "medium": 13,  "cats": ["M"]},
+}
+
+# ── Conversions poids pièce → grammes ─────────────────────────────────────────
+# Pour les ingrédients dont l'unité est "piece" ou "pcs" dans composition
+_PIECE_WEIGHT_G: dict[str, float] = {
+    "garlic": 3.0,        # 1 gousse ≈ 3g
+    "ail": 3.0,
+    "onion": 110.0,       # 1 oignon moyen
+    "red_onion": 100.0,
+    "white_onion": 110.0,
+    "yellow_onion": 110.0,
+    "shallot": 30.0,      # 1 échalote
+    "echalote": 30.0,
+    "leek": 100.0,        # 1 blanc de poireau
+    "poireau": 100.0,
+    "mushroom": 15.0,     # 1 champignon de Paris
+    "champignon": 15.0,
+    "shiitake": 15.0,
+    "apple": 150.0,       # 1 pomme moyenne
+    "pomme": 150.0,
+    "pear": 160.0,
+    "poire": 160.0,
+    "avocado": 150.0,     # 1 avocat entier (sans noyau ≈ 120g)
+    "avocat": 150.0,
+    "apricot": 40.0,
+    "abricot": 40.0,
+    "peach": 130.0,
+    "peche": 130.0,
+    "plum": 65.0,
+    "nectarine": 130.0,
+    "mango": 200.0,
+    "mangue": 200.0,
+    "fig": 50.0,
+    "figue": 50.0,
+    "cherry": 8.0,        # 1 cerise
+    "cerise": 8.0,
+    "lemon": 60.0,        # 1 citron (jus)
+    "citron": 60.0,
+    "egg": 55.0,
+    "oeuf": 55.0,
+    "artichoke": 120.0,
+    "artichaut": 120.0,
+    "beetroot": 80.0,     # 1 betterave
+    "betterave": 80.0,
+    "brussel_sprout": 18.0,
+}
+
+
+def _extract_quantities(recipe: dict) -> dict[str, float]:
+    """Retourne {base_ingredient: grams_per_serving} depuis recipe['composition'].
+
+    Normalise l'unité (g, ml, piece, tbsp, tsp, pinch) en grammes.
+    Divise par recipe['servings'] pour obtenir la quantité par portion.
+    Extrait la base depuis "base/variant" (ex: "onion/yellow" → "onion").
+    """
+    servings = max(1, int(recipe.get("servings") or 1))
+    result: dict[str, float] = {}
+
+    for item in recipe.get("composition") or []:
+        if not isinstance(item, dict):
+            continue
+        raw_id = str(item.get("ingredient", "") or item.get("ingredient_id", ""))
+        if not raw_id:
+            continue
+        base = _normalize(raw_id.split("/")[0].strip())
+
+        qty = float(item.get("quantity") or 0)
+        unit = str(item.get("unit") or "g").lower().strip()
+
+        if unit in ("g", "ml", ""):
+            grams = qty
+        elif unit in ("piece", "pcs", "pièce", "pc", "unit"):
+            weight = _PIECE_WEIGHT_G.get(base, 50.0)
+            grams = qty * weight
+        elif unit in ("tbsp", "cs", "cuillère à soupe", "tablespoon"):
+            grams = qty * 15.0
+        elif unit in ("tsp", "cc", "cuillère à café", "teaspoon"):
+            grams = qty * 5.0
+        elif unit in ("pinch", "pincée"):
+            grams = qty * 0.5
+        elif unit in ("cup", "tasse"):
+            grams = qty * 240.0
+        elif unit == "kg":
+            grams = qty * 1000.0
+        elif unit == "l":
+            grams = qty * 1000.0
+        else:
+            grams = qty  # fallback brut
+
+        grams_per_serving = grams / servings
+        if base in result:
+            result[base] += grams_per_serving
+        else:
+            result[base] = grams_per_serving
+
+    return result
 
 
 # ── Extraction des ids ingrédients ────────────────────────────────────────────
@@ -334,7 +752,86 @@ def compute_health_scores(recipe: dict) -> dict:
     gi        = float(nutr.get("glycemic_index", 0) or 0)
 
     ids = _extract_ids(recipe)
-    fodmap_count = sum(1 for i in ids if i in HIGH_FODMAP_IDS)
+
+    # ── Calcul FODMAP amélioré ──────────────────────────────────────────────
+    # Score pondéré : HIGH = 2 pts, MEDIUM = 1 pt
+    # Ajustements techniques :
+    #   - sourdough/levain long : réduit les fructanes du blé (-1 pt)
+    #   - légumineuses en conserve rincées : réduit les GOS (-1 pt si "canned"
+    #     ou "rinse" dans les techniques)
+    techniques_raw = recipe.get("technique") or []
+    techniques = {str(t).lower() for t in techniques_raw}
+    is_sourdough = any(k in techniques for k in ("sourdough", "levain", "long_fermentation"))
+    is_rinsed_legume = any(k in techniques for k in ("canned", "rince", "rinced", "rinsed"))
+
+    # ── Couche 1 : scoring quantitatif (si composition disponible) ─────────────
+    qty_map = _extract_quantities(recipe)  # {base: g/portion}
+    fodmap_score = 0
+    fodmap_cats: set[str] = set()
+    scored_by_qty: set[str] = set()
+    high_triggers: list[str] = []
+    med_triggers: list[str] = []
+
+    wheat_ids = {"wheat", "flour", "bread", "pasta", "ble", "farine", "pain"}
+    has_wheat = False
+
+    for base, grams in qty_map.items():
+        thresh = FODMAP_THRESHOLDS.get(base)
+        if thresh is None:
+            continue
+        scored_by_qty.add(base)
+        for cat in thresh["cats"]:
+            fodmap_cats.add(cat)
+        safe_g   = thresh["safe"]
+        medium_g = thresh["medium"]
+        if grams > medium_g:
+            fodmap_score += 2
+            high_triggers.append(base)
+        elif grams > safe_g:
+            fodmap_score += 1
+            med_triggers.append(base)
+        if base in wheat_ids:
+            has_wheat = True
+
+    # ── Couche 2 : fallback liste pour ingrédients sans seuil quantitatif ──────
+    for ing in ids:
+        if ing in scored_by_qty:
+            continue  # déjà scoré quantitativement
+        if ing in HIGH_FODMAP_IDS:
+            fodmap_score += 2
+            high_triggers.append(ing)
+            for cat in FODMAP_CATEGORY_MAP.get(ing, []):
+                fodmap_cats.add(cat)
+        elif ing in MEDIUM_FODMAP_IDS:
+            fodmap_score += 1
+            med_triggers.append(ing)
+            for cat in FODMAP_CATEGORY_MAP.get(ing, []):
+                fodmap_cats.add(cat)
+        if ing in wheat_ids:
+            has_wheat = True
+
+    # Ajustement sourdough
+    if is_sourdough and has_wheat:
+        fodmap_score = max(0, fodmap_score - 2)
+
+    # Ajustement légumineuses rincées
+    legume_ids = _GOS_HIGH & ids
+    if is_rinsed_legume and legume_ids:
+        fodmap_score = max(0, fodmap_score - 1)
+
+    # Niveau global
+    if fodmap_score == 0:
+        fodmap_level = "low"
+    elif fodmap_score <= 2:
+        fodmap_level = "medium"
+    else:
+        fodmap_level = "high"
+
+    cat_labels = {
+        "F": "fructanes", "G": "GOS", "D": "lactose",
+        "M": "fructose", "P": "polyols",
+    }
+    fodmap_categories = sorted(cat_labels[c] for c in fodmap_cats if c in cat_labels)
 
     return {
         "glycemic_category":      ("low" if gi < 8 else "medium" if gi < 12 else "high"),
@@ -352,11 +849,9 @@ def compute_health_scores(recipe: dict) -> dict:
             "medium" if omega3 >= 0.3 else
             "low"
         ),
-        "fodmap_level": (
-            "low"    if fodmap_count == 0 else
-            "medium" if fodmap_count <= 2  else
-            "high"
-        ),
+        "fodmap_level":      fodmap_level,
+        "fodmap_score":      fodmap_score,        # score brut pour debug/tri
+        "fodmap_categories": fodmap_categories,   # ["fructanes","GOS",...] ou []
     }
 
 

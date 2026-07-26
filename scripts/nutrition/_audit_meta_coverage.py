@@ -7,10 +7,18 @@ sys.stdout.reconfigure(encoding='utf-8')
 ROOT  = Path(__file__).parents[2]
 DATA  = ROOT / 'backend/data'
 
-dold = json.loads((DATA / 'ingredients/ingredients_dictionary.json').read_text(encoding='utf-8'))
-dv2  = json.loads((DATA / 'ingredients/ingredients_dictionary_v2.json').read_text(encoding='utf-8'))
+# Depuis la fusion, ingredients_dictionary.json EST le dict_v2.
+# dold et dv2 pointent vers le même fichier (structure categories/subcategories/ingredient_groups).
+dv2  = json.loads((DATA / 'ingredients/ingredients_dictionary.json').read_text(encoding='utf-8'))
+dold = dv2  # alias pour compatibilité des analyses ci-dessous
 
-old_ing = {e['id']: e for e in dold.get('ingredients', [])}
+# L'ancien dict utilisait une liste 'ingredients' avec des 'id'. On construit un index
+# depuis la structure hiérarchique actuelle pour émuler l'ancien comportement.
+old_ing = {}
+for _cat in dv2.get('categories', {}).values():
+    for _sub in _cat.get('subcategories', {}).values():
+        for _k, _e in _sub.get('ingredient_groups', {}).items():
+            old_ing[_k] = {**_e, 'id': _k}
 
 # Index des groupes v2 → quels champs méta sont présents
 fields = ('diet_profile', 'allergens_eu', 'nova_group', 'culinary', 'bioavailability_protein')

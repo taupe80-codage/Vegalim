@@ -112,9 +112,10 @@ export default function HomePage() {
   const [sortOrder,      setSortOrder]      = useState('score');
   const [maxTime,        setMaxTime]        = useState(_saved?.maxTime || '');
   const [timeInputValue, setTimeInputValue] = useState(_saved?.maxTime || '');
-  const [recipes,   setRecipes]   = useState([]);
-  const [loading,   setLoading]   = useState(false);
-  const [error,     setError]     = useState(null);
+  const [recipes,      setRecipes]      = useState([]);
+  const [loading,      setLoading]      = useState(false);
+  const [error,        setError]        = useState(null);
+  const [visibleCount, setVisibleCount] = useState(18);
 
   useEffect(() => {
     try {
@@ -222,7 +223,7 @@ export default function HomePage() {
     setLoading(true);
     setError(null);
     try {
-      const payload = { query: q, limit: 40 };
+      const payload = { query: q, limit: 200 };
       const hasFilter = q || d || de.size > 0 || se || dif || al.size > 0 || hf.size > 0 || sf.size > 0 || df.size > 0 || or.size > 0 || mt;
 
       if (mt) payload.max_time = parseInt(mt);
@@ -244,25 +245,26 @@ export default function HomePage() {
       if (al.has('dairy_free'))   payload.dairy_free   = true;
       if (al.has('soy_free'))     payload.soy_free     = true;
 
-      if (hf.has('low_fodmap'))  payload.fodmap           = 'low';
-      if (hf.has('low_ig'))      payload.low_ig           = true;
+      // FODMAP — vérifier les sous-filtres en priorité (hf reçoit toujours la valeur groupe 'low_fodmap')
+      if (sf.has('moderate_fodmap'))      payload.fodmap = 'not_high';
+      else if (sf.has('low_fodmap'))      payload.fodmap = 'low';
+      else if (hf.has('low_fodmap'))      payload.fodmap = 'low';
+      // Glycémie — n'appliquer le fallback groupe que si aucun sous-filtre actif
+      if (hf.has('low_ig') && !sf.has('low_ig') && !sf.has('moderate_ig'))
+        payload.low_ig = true;
       if (hf.has('antioxidant')) payload.antioxidant_rich = true;
 
       const SF_MAP = {
-        protein_high: 'high_protein', protein_source: 'good_source_protein',
-        fiber_high: 'high_fiber', fiber_source: 'good_source_fiber',
-        low_calorie: 'low_calorie', low_sugar: 'low_sugar', low_sodium: 'low_sodium',
-        low_ig: 'low_ig', moderate_ig: 'low_ig',
-        omega3_ala: 'source_omega3', omega3_epa_dha: 'high_omega3',
-        vitamin_c: 'high_vitamin_c', source_vitamin_c: 'source_vitamin_c',
-        vitamin_d: 'high_vitamin_d', source_vitamin_d: 'source_vitamin_d',
-        folate: 'high_folate', source_folate: 'source_folate',
-        calcium: 'high_calcium', iron: 'high_iron', good_source_iron: 'good_source_iron',
-        magnesium: 'high_magnesium', source_magnesium: 'source_magnesium',
-        potassium: 'high_potassium', source_potassium: 'good_source_potassium',
-        zinc: 'high_zinc', source_zinc: 'source_zinc',
-        antioxidant_rich: 'antioxidant_rich', high_polyphenol: 'antioxidant_rich',
-        high_beta_carotene: 'antioxidant_rich',
+        protein_high:    'high_protein',       protein_source:  'good_source_protein',
+        fiber_high:      'high_fiber',          fiber_source:    'good_source_fiber',
+        low_calorie:     'low_calorie',         low_sugar:       'low_sugar',
+        low_sodium:      'low_sodium',
+        low_ig:          'low_ig',              moderate_ig:     'moderate_ig',
+        vitamin_c:       'high_vitamin_c',      source_vitamin_c:'source_vitamin_c',
+        calcium:         'high_calcium',        iron:            'high_iron',
+        magnesium:       'high_magnesium',      potassium:       'high_potassium',
+        zinc:            'high_zinc',
+        antioxidant_rich:'antioxidant_rich',
       };
       for (const val of sf) {
         const apiKey = SF_MAP[val];
@@ -273,12 +275,9 @@ export default function HomePage() {
         payload.high_protein = true;
       if (hf.has('high_fiber') && !sf.has('fiber_high') && !sf.has('fiber_source'))
         payload.high_fiber = true;
-      if (hf.has('energie') && !sf.has('low_calorie'))
+      if (hf.has('legerte') && !sf.has('low_calorie') && !sf.has('low_sugar') && !sf.has('low_sodium'))
         payload.low_calorie = true;
-      if (hf.has('omega3') && !sf.has('omega3_ala') && !sf.has('omega3_epa_dha'))
-        payload.source_omega3 = true;
-      if (hf.has('vitamins') && !sf.has('vitamin_c') && !sf.has('source_vitamin_c')
-          && !sf.has('vitamin_d') && !sf.has('folate'))
+      if (hf.has('vitamin_c') && !sf.has('vitamin_c') && !sf.has('source_vitamin_c'))
         payload.high_vitamin_c = true;
       if (hf.has('minerals') && !['calcium', 'iron', 'magnesium', 'potassium', 'zinc'].some(s => sf.has(s)))
         payload.high_calcium = true;
@@ -299,10 +298,11 @@ export default function HomePage() {
 
       const data = hasFilter
         ? await recipesApi.search(payload)
-        : await recipesApi.list({ limit: 40 });
+        : await recipesApi.list({ limit: 200 });
 
       const results = Array.isArray(data) ? data : (data.results || data.recipes || []);
       setRecipes(results);
+      setVisibleCount(18); // reset pagination à chaque nouvelle requête
     } catch (err) {
       setError(err.message || 'Erreur de connexion au backend.');
     } finally {
@@ -680,7 +680,7 @@ export default function HomePage() {
             </div>
 
             <div className="recipe-grid">
-              {displayed.map((r, i) => (
+              {displayed.slice(0, visibleCount).map((r, i) => (
                 <RecipeCard
                   key={r.id || i}
                   recipe={r}
@@ -689,6 +689,18 @@ export default function HomePage() {
                 />
               ))}
             </div>
+
+            {visibleCount < displayed.length && (
+              <div className="load-more-wrap">
+                <button
+                  className="load-more-btn"
+                  onClick={() => setVisibleCount(v => v + 18)}
+                >
+                  Voir {Math.min(18, displayed.length - visibleCount)} recette{Math.min(18, displayed.length - visibleCount) > 1 ? 's' : ''} de plus
+                  <span className="load-more-total"> ({displayed.length - visibleCount} restante{displayed.length - visibleCount > 1 ? 's' : ''})</span>
+                </button>
+              </div>
+            )}
           </>
         )}
       </div>

@@ -86,8 +86,18 @@ const ASTRO_SIGNS = [
 const ELEMENT_COLOR = { Feu: '#C0392B', Terre: '#1d6b40', Air: '#2563a8', Eau: '#2980B9' };
 const ELEMENT_ICON  = { Feu: '🔥', Terre: '🌿', Air: '🌬️', Eau: '💧' };
 
-const LOCAL_CYCLE_KEY = 'alim_cycle_phase';
-const LOCAL_ASTRO_KEY = 'alim_astro_sign';
+const LOCAL_CYCLE_KEY     = 'alim_cycle_phase';
+const LOCAL_ASTRO_KEY     = 'alim_astro_sign';
+const LOCAL_MENOPAUSE_KEY = 'alim_menopause';
+const LOCAL_GENDER_KEY    = 'alim_gender';
+const MENO_COLOR          = '#c97eb8';
+const MENO_COLOR_DIM      = 'rgba(201,126,184,0.12)';
+
+const GENDER_OPTIONS = [
+  { value: 'female', label: 'Femme',       icon: '♀' },
+  { value: 'male',   label: 'Homme',       icon: '♂' },
+  { value: '',       label: 'Non précisé', icon: '◎' },
+];
 
 // Groupe les favoris par dish_type
 function groupFavoritesByDish(favorites) {
@@ -115,6 +125,12 @@ export default function ProfilePage({ onAuthClick }) {
   const toast = useToast();
 
   const [prefs, setPrefs]         = useState({ diet: '', goal: '' });
+  const [gender, setGender] = useState(
+    () => localStorage.getItem(LOCAL_GENDER_KEY) || ''
+  );
+  const [isMenopause, setIsMenopause] = useState(
+    () => localStorage.getItem(LOCAL_MENOPAUSE_KEY) === 'true'
+  );
   const [cyclePhase, setCyclePhase] = useState(
     () => localStorage.getItem(LOCAL_CYCLE_KEY) || ''
   );
@@ -124,6 +140,24 @@ export default function ProfilePage({ onAuthClick }) {
   const [favExpanded, setFavExpanded] = useState(false);
   const [confirmClear, setConfirmClear] = useState(false);
 
+  const saveGender = (val) => {
+    setGender(val);
+    localStorage.setItem(LOCAL_GENDER_KEY, val);
+    if (val === 'male') {
+      setIsMenopause(false);
+      localStorage.setItem(LOCAL_MENOPAUSE_KEY, 'false');
+    }
+  };
+
+  const toggleMenopause = () => {
+    const next = !isMenopause;
+    setIsMenopause(next);
+    localStorage.setItem(LOCAL_MENOPAUSE_KEY, String(next));
+    if (next) {
+      setCyclePhase('');
+      localStorage.removeItem(LOCAL_CYCLE_KEY);
+    }
+  };
   const saveCyclePhase = (id) => {
     setCyclePhase(id);
     localStorage.setItem(LOCAL_CYCLE_KEY, id);
@@ -227,6 +261,31 @@ export default function ProfilePage({ onAuthClick }) {
         <div className="frigo-panel">
           <h3 className="frigo-panel-title">🥗 Préférences alimentaires</h3>
 
+          {/* Genre */}
+          <div className="form-field" style={{ marginBottom: 18 }}>
+            <label style={{ fontSize: 13, fontWeight: 600, color: 'var(--txt2)', display: 'block', marginBottom: 8 }}>Je suis</label>
+            <div style={{ display: 'flex', gap: 8 }}>
+              {GENDER_OPTIONS.map(opt => {
+                const isActive = gender === opt.value;
+                return (
+                  <button key={opt.value} onClick={() => saveGender(opt.value)}
+                    style={{
+                      flex: 1, padding: '9px 8px', borderRadius: 10, cursor: 'pointer',
+                      fontFamily: 'inherit', fontSize: 13, fontWeight: isActive ? 600 : 400,
+                      display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4,
+                      transition: 'all 0.15s',
+                      background: isActive ? 'var(--grn-dim)' : 'var(--sur2)',
+                      border: `1px solid ${isActive ? 'var(--grn)' : 'var(--brd)'}`,
+                      color: isActive ? 'var(--grn)' : 'var(--txt2)',
+                    }}>
+                    <span style={{ fontSize: 18 }}>{opt.icon}</span>
+                    <span>{opt.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           <div className="form-field" style={{ marginBottom: 14 }}>
             <label style={{ fontSize: 13, fontWeight: 600, color: 'var(--txt2)', display: 'block', marginBottom: 6 }}>Régime principal</label>
             <select
@@ -267,59 +326,120 @@ export default function ProfilePage({ onAuthClick }) {
 
         {/* Mon cycle */}
         <div className="frigo-panel">
-          <h3 className="frigo-panel-title">🌑 Mon cycle</h3>
-          <p style={{ fontSize: 13, color: 'var(--mut)', marginBottom: 14, lineHeight: 1.5 }}>
-            Sélectionnez votre phase actuelle pour obtenir des recommandations nutritionnelles adaptées.
-          </p>
-
-          {/* Sélecteur 4 phases */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 16 }}>
-            {CYCLE_PHASES.map(phase => {
-              const isActive = cyclePhase === phase.id;
-              return (
-                <button
-                  key={phase.id}
-                  onClick={() => saveCyclePhase(phase.id)}
-                  style={{
-                    padding: '10px 12px', borderRadius: 10, cursor: 'pointer',
-                    border: `1px solid ${isActive ? phase.color : 'var(--brd)'}`,
-                    background: isActive ? phase.colorDim : 'var(--sur2)',
-                    display: 'flex', alignItems: 'center', gap: 8,
-                    fontFamily: 'inherit', transition: 'all 0.15s',
-                    textAlign: 'left',
-                  }}
-                >
-                  <span style={{ fontSize: 18 }}>{phase.moon}</span>
-                  <div>
-                    <div style={{ fontSize: 13, fontWeight: 600, color: isActive ? phase.color : 'var(--txt)' }}>
-                      {phase.label}
-                    </div>
-                    <div style={{ fontSize: 10, color: 'var(--mut)' }}>{phase.range}</div>
-                  </div>
-                </button>
-              );
-            })}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14 }}>
+            <h3 className="frigo-panel-title" style={{ margin: 0 }}>
+              {gender === 'male' ? '🌑 Cycle féminin' : '🌑 Mon cycle'}
+            </h3>
+            {/* Toggle ménopause — uniquement pour profil féminin ou non précisé */}
+            {gender !== 'male' && <button
+              onClick={toggleMenopause}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 8, padding: '6px 12px',
+                borderRadius: 20, fontSize: 12, fontWeight: 500, cursor: 'pointer',
+                fontFamily: 'inherit', transition: 'all 0.15s',
+                background: isMenopause ? MENO_COLOR_DIM : 'var(--sur2)',
+                border: `1px solid ${isMenopause ? MENO_COLOR : 'var(--brd)'}`,
+                color: isMenopause ? MENO_COLOR : 'var(--mut)',
+              }}
+            >
+              <span style={{ fontSize: 15 }}>♀</span>
+              {isMenopause ? 'Ménopausée ✓' : 'Ménopausée ?'}
+            </button>}
           </div>
 
-          {/* Besoins de la phase active */}
-          {currentPhase && (
+          {gender === 'male' ? (
+            /* Vue masculine : invitation douce */
             <div style={{
-              padding: '12px 14px', borderRadius: 10,
-              background: currentPhase.colorDim,
-              border: `1px solid ${currentPhase.color}40`,
+              padding: '18px 16px', borderRadius: 12, textAlign: 'center',
+              background: 'linear-gradient(135deg, rgba(201,126,184,0.08), rgba(88,166,255,0.06))',
+              border: '1px solid rgba(201,126,184,0.25)',
             }}>
-              <p style={{ fontSize: 12, fontWeight: 600, color: currentPhase.color, marginBottom: 8 }}>
-                {currentPhase.tip}
+              <div style={{ fontSize: 36, marginBottom: 10 }}>🍳</div>
+              <p style={{ margin: '0 0 6px', fontSize: 14, fontWeight: 600, color: 'var(--txt)' }}>
+                Cuisinez pour elle
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 4 }}>
-                {currentPhase.needs.map(n => (
-                  <div key={n.label} style={{ fontSize: 12, color: 'var(--txt2)', display: 'flex', gap: 5, alignItems: 'flex-start' }}>
-                    <span>{n.icon}</span>
-                    <span><strong>{n.label}</strong> — {n.detail}</span>
-                  </div>
+              <p style={{ margin: '0 0 14px', fontSize: 12, color: 'var(--mut)', lineHeight: 1.6 }}>
+                Activez la page Cycle pour découvrir les besoins nutritionnels selon les phases du cycle féminin — idéal pour cuisiner pour votre partenaire, fille ou amie.
+              </p>
+              <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
+                {['🩸 Fer', '🧲 Magnésium', '🫐 Antioxydants', '🧠 B6'].map(t => (
+                  <span key={t} style={{ fontSize: 11, padding: '3px 10px', borderRadius: 20,
+                    background: 'rgba(201,126,184,0.12)', color: MENO_COLOR,
+                    border: `1px solid ${MENO_COLOR}30` }}>{t}</span>
                 ))}
               </div>
+              <p style={{ margin: '12px 0 0', fontSize: 11, color: 'var(--mut)', fontStyle: 'italic' }}>
+                Accessible depuis la page Cycle → "Et si vous cuisiniez pour elle ?"
+              </p>
             </div>
+          ) : isMenopause ? (
+            /* Mode ménopause activé */
+            <div style={{ padding: '14px 16px', borderRadius: 10, background: MENO_COLOR_DIM, border: `1px solid ${MENO_COLOR}40` }}>
+              <p style={{ margin: '0 0 8px', fontSize: 13, fontWeight: 600, color: MENO_COLOR }}>
+                ♀ Mode ménopause activé
+              </p>
+              <p style={{ margin: 0, fontSize: 12, color: 'var(--txt2)', lineHeight: 1.6 }}>
+                La page Cycle affiche les préconisations alimentaires et conseils adaptés à la ménopause — sans le suivi de cycle.
+              </p>
+              <button onClick={toggleMenopause}
+                style={{ marginTop: 10, background: 'transparent', border: `1px solid ${MENO_COLOR}60`,
+                  color: MENO_COLOR, fontSize: 11, padding: '4px 10px', borderRadius: 6,
+                  cursor: 'pointer', fontFamily: 'inherit' }}>
+                Désactiver
+              </button>
+            </div>
+          ) : (
+            <>
+              <p style={{ fontSize: 13, color: 'var(--mut)', marginBottom: 14, lineHeight: 1.5 }}>
+                Sélectionnez votre phase actuelle pour des recommandations nutritionnelles adaptées.
+              </p>
+
+              {/* Sélecteur 4 phases */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 16 }}>
+                {CYCLE_PHASES.map(phase => {
+                  const isActive = cyclePhase === phase.id;
+                  return (
+                    <button key={phase.id} onClick={() => saveCyclePhase(phase.id)}
+                      style={{
+                        padding: '10px 12px', borderRadius: 10, cursor: 'pointer',
+                        border: `1px solid ${isActive ? phase.color : 'var(--brd)'}`,
+                        background: isActive ? phase.colorDim : 'var(--sur2)',
+                        display: 'flex', alignItems: 'center', gap: 8,
+                        fontFamily: 'inherit', transition: 'all 0.15s', textAlign: 'left',
+                      }}>
+                      <span style={{ fontSize: 18 }}>{phase.moon}</span>
+                      <div>
+                        <div style={{ fontSize: 13, fontWeight: 600, color: isActive ? phase.color : 'var(--txt)' }}>
+                          {phase.label}
+                        </div>
+                        <div style={{ fontSize: 10, color: 'var(--mut)' }}>{phase.range}</div>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Besoins de la phase active */}
+              {currentPhase && (
+                <div style={{
+                  padding: '12px 14px', borderRadius: 10,
+                  background: currentPhase.colorDim,
+                  border: `1px solid ${currentPhase.color}40`,
+                }}>
+                  <p style={{ fontSize: 12, fontWeight: 600, color: currentPhase.color, marginBottom: 8 }}>
+                    {currentPhase.tip}
+                  </p>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 4 }}>
+                    {currentPhase.needs.map(n => (
+                      <div key={n.label} style={{ fontSize: 12, color: 'var(--txt2)', display: 'flex', gap: 5, alignItems: 'flex-start' }}>
+                        <span>{n.icon}</span>
+                        <span><strong>{n.label}</strong> — {n.detail}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>

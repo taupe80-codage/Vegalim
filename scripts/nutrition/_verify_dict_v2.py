@@ -2,7 +2,7 @@
 import json, sys
 from pathlib import Path
 sys.stdout.reconfigure(encoding='utf-8')
-d = json.loads(Path('backend/data/ingredients/ingredients_dictionary_v2.json').read_text(encoding='utf-8'))
+d = json.loads(Path('backend/data/ingredients/ingredients_dictionary.json').read_text(encoding='utf-8'))
 print('Schema:')
 print(json.dumps(d['_schema'], ensure_ascii=False, indent=2))
 print()

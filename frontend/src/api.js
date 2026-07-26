@@ -44,6 +44,7 @@ async function request(method, path, body = null) {
 
 const get  = (path)        => request('GET',  path);
 const post = (path, body)  => request('POST', path, body);
+const put  = (path, body)  => request('PUT',  path, body);
 
 // ── Auth ──────────────────────────────────────────────────────────────────────
 
@@ -118,6 +119,8 @@ export const recipes = {
 export const frigo = {
   suggestions: (payload) => post('/frigo/suggestions', payload),
   manquants:   (payload) => post('/frigo/manquants',   payload),
+  /** Retourne {covered, uncovered} pour une liste de clés UI */
+  coverage:    (keys)    => get(`/frigo/coverage?keys=${keys.join(',')}`),
 };
 
 // ── Nutrition ─────────────────────────────────────────────────────────────────
@@ -143,7 +146,10 @@ export const planning = {
     ).toString();
     return get(`/planning/mealplan${qs ? '?' + qs : ''}`);
   },
-  shoppingList: (payload)     => post('/planning/shopping_list', payload),
+  shoppingList:            (payload) => post('/planning/shopping_list', payload),
+  shoppingListFromRecipes: (payload) => post('/planning/shopping_list_from_recipes', payload),
+  updatePrice: (ingredient_key, package_label, new_price) =>
+    put(`/planning/prices/${encodeURIComponent(ingredient_key)}`, { package_label, new_price }),
   seasonal:     (month)       => get(`/planning/seasonal?month=${month}`),
   exportIcs:    (payload)     => post('/planning/mealplan/export_ics', payload),
 };

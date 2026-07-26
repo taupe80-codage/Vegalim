@@ -68,7 +68,7 @@ class SearchRequest(BaseModel):
     dish_type:       Optional[str] = Field(default=None)
     dish_types:      list[str]     = Field(default_factory=list)
     # ── Limit ─────────────────────────────────────────────────────────────────
-    limit:       int           = Field(default=20, ge=1, le=100)
+    limit:       int           = Field(default=20, ge=1, le=500)
     # ── Macros & énergie ──────────────────────────────────────────────────────
     high_protein:         bool         = Field(default=False)
     good_source_protein:  bool         = Field(default=False)
@@ -76,6 +76,7 @@ class SearchRequest(BaseModel):
     high_fiber:           bool         = Field(default=False)
     good_source_fiber:    bool         = Field(default=False)
     low_ig:               bool         = Field(default=False)
+    moderate_ig:          bool         = Field(default=False)
     fodmap:               Optional[str] = Field(default=None, description="low | medium | high")
     max_kcal:             Optional[int] = Field(default=None)
     low_sugar:            bool         = Field(default=False)
@@ -391,7 +392,8 @@ def recherche(
         high_protein=req.high_protein,   good_source_protein=req.good_source_protein,
         low_calorie=req.low_calorie,
         high_fiber=req.high_fiber,       good_source_fiber=req.good_source_fiber,
-        low_ig=req.low_ig,               fodmap=req.fodmap,
+        low_ig=req.low_ig,               moderate_ig=req.moderate_ig,
+        fodmap=req.fodmap,
         max_kcal=req.max_kcal,
         high_vitamin_c=req.high_vitamin_c,   source_vitamin_c=req.source_vitamin_c,
         high_vitamin_d=req.high_vitamin_d,   source_vitamin_d=req.source_vitamin_d,

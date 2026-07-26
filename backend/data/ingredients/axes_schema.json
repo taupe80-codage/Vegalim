@@ -1,7 +1,7 @@
 {
   "_comment": "Référence bilingue canonique des axes du ingredient_tree. Clé EN = identifiant canonique. tree_key_fr = clé actuelle dans le tree. Mettre à jour EN et FR en parallèle.",
-  "version": "1.1",
-  "generated": "2026-06-04",
+  "version": "1.4",
+  "generated": "2026-06-09",
   "axes": {
     "cooking_state": {
       "name_en": "cooking state",
@@ -30,7 +30,7 @@
         },
         "fried_flat": {
           "en": "fried flat",
-          "fr": "plat (sur le plat)"
+          "fr": "plat (sur le plat) / au plat"
         },
         "grilled": {
           "en": "grilled",
@@ -62,11 +62,11 @@
         },
         "hard_boiled": {
           "en": "hard boiled",
-          "fr": "dur (oeuf dur)"
+          "fr": "dur (oeuf dur) / dur"
         },
         "soft_boiled": {
           "en": "soft boiled",
-          "fr": "à la coque"
+          "fr": "à la coque / coque"
         },
         "precooked": {
           "en": "precooked",
@@ -273,7 +273,7 @@
         },
         "spice": {
           "en": "spice (dried)",
-          "fr": "épice (séchée)"
+          "fr": "épice (séchée) / épice"
         },
         "fresh_herb": {
           "en": "fresh herb",
@@ -305,7 +305,7 @@
         },
         "steel_cut": {
           "en": "steel cut",
-          "fr": "steel cut (avoine)"
+          "fr": "steel cut (avoine) / steel cut"
         },
         "instant": {
           "en": "instant",
@@ -314,6 +314,26 @@
         "ground_coarse": {
           "en": "ground",
           "fr": "broyé"
+        },
+        "tender": {
+          "en": "tender",
+          "fr": "fondant"
+        },
+        "double_concentrate": {
+          "en": "double concentrate",
+          "fr": "double concentré"
+        },
+        "hard_block": {
+          "en": "hard block",
+          "fr": "pâte dure"
+        },
+        "shredded": {
+          "en": "shredded",
+          "fr": "râpé en filaments"
+        },
+        "sauce": {
+          "en": "sauce",
+          "fr": "sauce"
         }
       }
     },
@@ -413,6 +433,10 @@
         "white": {
           "en": "white",
           "fr": "blanc (d'oeuf)"
+        },
+        "without_skin": {
+          "en": "without skin",
+          "fr": "sans peau"
         }
       }
     },
@@ -536,7 +560,7 @@
         },
         "unbleached": {
           "en": "unbleached",
-          "fr": "non blanchi chimiquement"
+          "fr": "non blanchi chimiquement / non blanchi"
         },
         "unblanched": {
           "en": "unblanched",
@@ -548,7 +572,7 @@
         },
         "roasted": {
           "en": "roasted (nuts/grains)",
-          "fr": "torréfié / rôti (grains/noix)"
+          "fr": "torréfié / rôti (grains/noix) / rôti"
         },
         "from_concentrate": {
           "en": "from concentrate",
@@ -557,6 +581,42 @@
         "lactose_reduced": {
           "en": "lactose reduced",
           "fr": "réduit en lactose"
+        },
+        "homemade": {
+          "en": "homemade",
+          "fr": "fait maison"
+        },
+        "alcoholic": {
+          "en": "alcoholic",
+          "fr": "alcoolique"
+        },
+        "gluten_free": {
+          "en": "gluten free",
+          "fr": "sans gluten"
+        },
+        "candied": {
+          "en": "candied",
+          "fr": "confit/confite"
+        },
+        "fresh": {
+          "en": "fresh (product)",
+          "fr": "frais/fraîche (produit)"
+        },
+        "raw_milk": {
+          "en": "raw milk",
+          "fr": "lait cru (non pasteurisé)"
+        },
+        "enriched_bleached": {
+          "en": "enriched, chemically bleached",
+          "fr": "enrichi, blanchi chimiquement"
+        },
+        "enriched_unbleached": {
+          "en": "enriched, unbleached",
+          "fr": "enrichi, non blanchi chimiquement"
+        },
+        "unenriched_unbleached": {
+          "en": "unenriched, unbleached",
+          "fr": "non enrichi, non blanchi chimiquement"
         }
       }
     },
@@ -568,27 +628,27 @@
       "values": {
         "fat_free": {
           "en": "fat free (0%)",
-          "fr": "sans matières grasses (0%)"
+          "fr": "sans matières grasses (0%) / sans MG"
         },
         "skimmed": {
           "en": "skimmed (<1%)",
-          "fr": "écrémé (<1%)"
+          "fr": "écrémé (<1%) / écrémé"
         },
         "semi_skimmed": {
           "en": "semi-skimmed (1-2%)",
-          "fr": "demi-écrémé (1-2%)"
+          "fr": "demi-écrémé (1-2%) / demi-écrémé"
         },
         "low_fat": {
           "en": "low fat (<3%)",
-          "fr": "allégé en gras (<3%)"
+          "fr": "allégé en gras (<3%) / allégé / allégé en gras"
         },
         "light": {
           "en": "light (reduced fat)",
-          "fr": "allégé (MG réduite)"
+          "fr": "allégé (MG réduite) / light"
         },
         "whole": {
           "en": "whole / full fat",
-          "fr": "entier / entière teneur"
+          "fr": "entier / entière teneur / entière"
         },
         "high_fat": {
           "en": "high fat",
@@ -597,6 +657,10 @@
         "numeric": {
           "en": "% (numeric)",
           "fr": "% (valeur numérique)"
+        },
+        "medium_fat": {
+          "en": "medium fat",
+          "fr": "demi-gras / teneur moyenne en MG"
         }
       }
     },
@@ -632,6 +696,10 @@
         "spiced": {
           "en": "spiced",
           "fr": "épicé/épicée"
+        },
+        "semi_salted": {
+          "en": "semi-salted",
+          "fr": "demi-sel"
         }
       }
     },
@@ -643,7 +711,7 @@
       "values": {
         "canned": {
           "en": "canned",
-          "fr": "en conserve / appertisé"
+          "fr": "en conserve / appertisé / conserve"
         },
         "jarred": {
           "en": "jarred",
@@ -664,34 +732,6 @@
         "tablet": {
           "en": "tablet form",
           "fr": "tablette / comprimé"
-        }
-      }
-    },
-    "draining": {
-      "name_en": "conservation medium",
-      "name_fr": "milieu de conservation",
-      "tree_key_fr": "milieu_conservation",
-      "_note": "Fusionne egouttage (égoutté) + milieu_conservation (à l'huile, dans l'eau, dans sirop, au vinaigre)",
-      "values": {
-        "in_oil": {
-          "en": "in oil",
-          "fr": "à l'huile"
-        },
-        "in_water": {
-          "en": "in water",
-          "fr": "dans l'eau"
-        },
-        "in_brine": {
-          "en": "in brine",
-          "fr": "en saumure"
-        },
-        "in_syrup": {
-          "en": "in syrup",
-          "fr": "dans sirop"
-        },
-        "in_vinegar": {
-          "en": "in vinegar",
-          "fr": "au vinaigre"
         }
       }
     },
@@ -734,7 +774,7 @@
         },
         "buffalo": {
           "en": "buffalo",
-          "fr": "bufflonne"
+          "fr": "bufflonne / buffalo"
         }
       }
     },
@@ -758,14 +798,18 @@
         "baby": {
           "en": "baby",
           "fr": "bébé"
+        },
+        "mature": {
+          "en": "mature",
+          "fr": "mature"
         }
       }
     },
     "ripening": {
       "name_en": "ripening / maturation stage",
       "name_fr": "affinage / stade de maturation",
-      "tree_key_fr": null,
-      "_note": "Nouvel axe — pour fromages et charcuteries. Distinct de maturite (fruits).",
+      "tree_key_fr": "affinage",
+      "_note": "pour fromages et charcuteries. Distinct de maturite (fruits).",
       "values": {
         "young": {
           "en": "young",
@@ -773,7 +817,7 @@
         },
         "semi": {
           "en": "semi-aged",
-          "fr": "mi-affiné"
+          "fr": "mi-affiné / semi"
         },
         "mature": {
           "en": "mature",
@@ -788,8 +832,8 @@
     "color": {
       "name_en": "color",
       "name_fr": "couleur",
-      "tree_key_fr": null,
-      "_note": "Nouvel axe — absent du tree actuel.",
+      "tree_key_fr": "couleur",
+      "_note": "",
       "values": {
         "white": {
           "en": "white",
@@ -840,12 +884,12 @@
     "size": {
       "name_en": "size",
       "name_fr": "taille",
-      "tree_key_fr": null,
-      "_note": "Nouvel axe — absent du tree actuel.",
+      "tree_key_fr": "taille",
+      "_note": "",
       "values": {
         "baby": {
           "en": "baby",
-          "fr": "mini / pommes de terre nouvelles"
+          "fr": "mini / pommes de terre nouvelles / baby"
         },
         "small": {
           "en": "small",
@@ -868,8 +912,8 @@
     "variety": {
       "name_en": "variety / cultivar",
       "name_fr": "variété / cultivar",
-      "tree_key_fr": null,
-      "_note": "Nouvel axe — absent du tree actuel. Utilisé pour pommes, haricots, légumineuses, etc.",
+      "tree_key_fr": "variete",
+      "_note": "Utilisé pour pommes, haricots, légumineuses, etc.",
       "values": {
         "fuji": {
           "en": "Fuji",
@@ -914,13 +958,29 @@
         "red": {
           "en": "red (lentil)",
           "fr": "rouge (lentille corail)"
+        },
+        "escarole": {
+          "en": "escarole",
+          "fr": "scarole / escarole"
+        },
+        "jaune": {
+          "en": "yellow (variety)",
+          "fr": "jaune"
+        },
+        "californie": {
+          "en": "California (variety)",
+          "fr": "californie"
+        },
+        "floride": {
+          "en": "Florida (variety)",
+          "fr": "floride"
         }
       }
     },
     "sodium": {
       "name_en": "sodium content",
       "name_fr": "teneur en sodium",
-      "tree_key_fr": "sodium",
+      "tree_key_fr": "teneur_sel",
       "_note": "Partiellement couvert par assaisonnement (sans sel). Axe dédié pour les produits avec mention sodium explicite.",
       "values": {
         "no_added": {
@@ -929,7 +989,7 @@
         },
         "low": {
           "en": "low sodium",
-          "fr": "faible en sodium"
+          "fr": "faible en sodium / faible"
         },
         "reduced": {
           "en": "reduced sodium",
@@ -938,6 +998,10 @@
         "added": {
           "en": "sodium added",
           "fr": "sodium ajouté"
+        },
+        "regular": {
+          "en": "regular sodium",
+          "fr": "teneur normale en sodium / régulier / normal"
         }
       }
     },
@@ -953,6 +1017,72 @@
         "in_oil": {
           "en": "in oil",
           "fr": "à l'huile"
+        }
+      }
+    },
+    "fat_content_pct": {
+      "name_en": "fat content percentage",
+      "name_fr": "teneur en MG (%)",
+      "tree_key_fr": "teneur_MG_pct",
+      "_note": "Valeur numerique en %, complementaire de fat_content (categorie).",
+      "values": {}
+    },
+    "conservation_medium": {
+      "name_en": "conservation medium",
+      "name_fr": "milieu de conservation",
+      "tree_key_fr": "milieu_conservation",
+      "values": {
+        "in_syrup": {
+          "en": "in syrup",
+          "fr": "dans sirop"
+        },
+        "in_vinegar": {
+          "en": "in vinegar",
+          "fr": "au vinaigre"
+        },
+        "in_water": {
+          "en": "in water",
+          "fr": "dans l'eau"
+        },
+        "in_oil": {
+          "en": "in oil",
+          "fr": "à l'huile"
+        },
+        "in_brine": {
+          "en": "in brine",
+          "fr": "en saumure"
+        },
+        "in_juice": {
+          "en": "in juice",
+          "fr": "dans du jus"
+        }
+      }
+    },
+    "species": {
+      "name_en": "species / botanical name",
+      "name_fr": "espèce / nom botanique",
+      "tree_key_fr": "espece",
+      "_note": "Axe pour noms botaniques ou espèces spécifiques.",
+      "values": {
+        "pinus_edulis": {
+          "en": "pinus edulis (pine nut)",
+          "fr": "pignon de pin (pinus edulis)"
+        }
+      }
+    },
+    "style": {
+      "name_en": "style / regional type",
+      "name_fr": "style / type régional",
+      "tree_key_fr": "style",
+      "_note": "Axe pour distinguer des styles régionaux ou de préparation (ex: bacon américain vs canadien).",
+      "values": {
+        "american": {
+          "en": "american",
+          "fr": "américain"
+        },
+        "canadian": {
+          "en": "canadian",
+          "fr": "canadien"
         }
       }
     }
@@ -986,6 +1116,36 @@
       "variety": "aucun équivalent FR dans le tree",
       "ripening": "etat_thermique avait 'mature' isolément — nouvel axe dédié affinage",
       "sodium": "assaisonnement couvrait 'sans sel' — axe sodium distinct pour mentions explicites"
+    },
+    "v1.2_changes": [
+      "sodium.tree_key_fr corrigé: 'sodium' → 'teneur_sel'",
+      "tree_key_fr ajoutés: ripening→affinage, color→couleur, size→taille, variety→variete",
+      "ripeness: +mature",
+      "form: +hard_block, +shredded, +sauce",
+      "part: +without_skin",
+      "conservation_medium: +in_juice",
+      "treatment: +gluten_free, +candied, +fresh",
+      "sodium: +regular",
+      "fat_content: +medium_fat (demi-gras)",
+      "Nouveaux axes: species/espece, style/style",
+      "+variety.escarole (scarole)"
+    ]
+  },
+  "changelog": [
+    {
+      "version": "1.3",
+      "description": "Added short FR aliases for abbreviated tree values"
+    },
+    {
+      "date": "2026-07-03",
+      "action": "add_values",
+      "axis": "variety",
+      "values": [
+        "jaune",
+        "californie",
+        "floride"
+      ],
+      "reason": "Split pomelo jaune (CIQUAL 13179) et pamplemousse californie/floride (CNF 1565/1566)"
     }
-  }
+  ]
 }

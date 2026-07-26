@@ -27,6 +27,7 @@ from backend.core.rate_limiter import check_rate_limit
 # Imports migrés en tête — remplacent les 6 imports inline répétés   ✅
 from backend.engine.score_engine.ajr import (
     AJR,
+    ajr_score,
     compute_ajr_score,
     detect_deficiencies,
     summarize_deficiencies,
@@ -86,9 +87,12 @@ def ajr_score_route(
             if payload.recipe_id is not None
             else payload.nutrition or {})
 
+    scored = ajr_score(nutr)
     defics = detect_deficiencies(nutr)
     return {
-        "ajr_score":    round(compute_ajr_score(nutr), 2),
+        "ajr_score":    round(scored["score"], 2),
+        "coverage":     scored["coverage"],
+        "details":      scored["details"],
         "deficiencies": defics,
         "summary":      summarize_deficiencies(defics),
     }

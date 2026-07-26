@@ -14,6 +14,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { planning as planningApi, recipes as recipesApi } from '../api';
 import { navigate } from '../Router';
+import PriceEditInline from '../components/PriceEditInline';
 import {
   FilterSection,
   HealthAccordion,
@@ -29,10 +30,12 @@ import {
 
 // ── Constantes ────────────────────────────────────────────────────────────────
 
-const PLAN_KEY         = 'alim_plan_weekly';
-const CHECKED_KEY      = 'alim_shopping_checked';
-const PLAN_FILTERS_KEY = 'alim_plan_filters';
-const PLAN_MEALS_KEY   = 'alim_plan_meals';
+const PLAN_KEY              = 'alim_plan_weekly';
+const CHECKED_KEY           = 'alim_shopping_checked';
+const FRIGO_QTYS_KEY        = 'alim_shopping_frigo_qtys';
+const FRIGO_SUFFICIENT_KEY  = 'alim_shopping_frigo_sufficient';
+const PLAN_FILTERS_KEY      = 'alim_plan_filters';
+const PLAN_MEALS_KEY        = 'alim_plan_meals';
 
 const DAYS_FR  = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
 const DAYS_KEY = ['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'];
@@ -602,46 +605,215 @@ function PlanningDayCol({dayKey, dayIndex, dayData, enabledMeals, replacing, loa
   );
 }
 
+// ── Helpers liste de courses ──────────────────────────────────────────────────
+
+function _fmtNet(value, unit) {
+  if (value == null) return null;
+  const v = value === Math.round(value) ? Math.round(value) : Math.round(value * 10) / 10;
+  const label = { g:'g', ml:'ml', kg:'kg', piece:'pièce', pieces:'pièces',
+    pinch:'pincée', leaf:'feuille', tbsp:'c. à s.', tsp:'c. à c.' };
+  return `${v} ${label[unit]||unit}`;
+}
+
 // ── ShoppingView ──────────────────────────────────────────────────────────────
 
-function ShoppingView({shopping, checked, fridgeIds, onToggle, onClearAll}) {
+function ShoppingView({shopping, checked, fridgeIds, fridgeQtys, fridgeSufficient, onFridgeQtyChange, onFridgeSufficient, onToggle, onClearAll, onItemPriceUpdate}) {
   const {by_category, estimated_cost, n_recipes} = shopping;
-  const items    = shopping.items||[];
-  const total    = items.length;
-  const nChecked = items.filter(i=>checked.has(i.ingredient)).length;
-  const nFridge  = items.filter(i=>[...fridgeIds].some(f=>fridgeMatchesIng(f,i.ingredient))).length;
-  const done     = nChecked+nFridge;
+  const allItems   = shopping.items||[];
+  const nUnknown   = shopping.n_unknown_price || 0;
+  const total      = allItems.length;
+  const nChecked   = allItems.filter(i=>checked.has(i.ingredient)).length;
+  const nFridge    = allItems.filter(i=>[...fridgeIds].some(f=>fridgeMatchesIng(f,i.ingredient))).length;
+  const done       = nChecked+nFridge;
+  const [copyDone, setCopyDone]       = useState(false);
+  const [pantryOpen, setPantryOpen]   = useState(true);
+
+  // Éléments nets (quantité à acheter après déduction frigo, hors cochés)
+  const netItems = allItems.map(item => {
+    const id         = item.ingredient;
+    const inFrigo    = [...fridgeIds].some(f => fridgeMatchesIng(f, id));
+    const sufficient = inFrigo && fridgeSufficient.has(id);
+    const fQty       = inFrigo && !sufficient ? (fridgeQtys[id] || 0) : 0;
+    const netValue   = sufficient ? 0 : (item.qty_value != null ? Math.max(0, item.qty_value - fQty) : item.qty_value);
+    return { ...item, netValue, netQtyStr: netValue != null ? _fmtNet(netValue, item.qty_unit) : item.qty_str };
+  }).filter(i => !checked.has(i.ingredient) && i.netValue !== 0);
+
+  // Regrouper par catégorie (print + partage)
+  const netByCat = {};
+  for (const item of netItems) {
+    const cat = Object.entries(by_category).find(([,its]) => its.some(x=>x.ingredient===item.ingredient))?.[0] || 'Autre';
+    if (!netByCat[cat]) netByCat[cat] = [];
+    netByCat[cat].push(item);
+  }
+
+  // Texte formaté pour le partage
+  function buildShareText() {
+    const lines = [`🛒 Liste de courses — ${n_recipes} recette${n_recipes>1?'s':''}\n`];
+    // Items placard non couverts
+    const pantryToBuy = pantryItems.filter(i => !checked.has(i.ingredient) && !fridgeSufficient.has(i.ingredient) && !(i.qty_value != null && (fridgeQtys[i.ingredient]||0) >= i.qty_value));
+    if (pantryToBuy.length > 0) {
+      lines.push('\n🗄️ Placard (à vérifier)');
+      for (const item of pantryToBuy) {
+        const qty = item.qty_str || '';
+        const price = !item.price_unknown && item.package_label ? ` [${item.package_label} · ${item.price_eur?.toFixed(2)} €]` : '';
+        lines.push(`  ☐ ${item.name_fr||item.ingredient.replace(/_/g,' ')}${qty?' — '+qty:''}${price}`);
+      }
+    }
+    for (const [cat, catItems] of Object.entries(netByCat)) {
+      lines.push(`\n${CAT_ICONS[cat.toLowerCase()]||'📦'} ${cat}`);
+      for (const item of catItems) {
+        const qty   = item.netQtyStr || (item.occurrences>1?`×${item.occurrences}`:'');
+        const price = !item.price_unknown && item.package_label ? ` [${item.package_label} · ${item.price_eur?.toFixed(2)} €]` : '';
+        lines.push(`  ☐ ${item.name_fr||item.ingredient.replace(/_/g,' ')}${qty?' — '+qty:''}${price}`);
+      }
+    }
+    const total_cost = netItems.reduce((s,i) => s + (i.price_eur||0), 0) + pantryToBuy.reduce((s,i) => s + (i.price_eur||0), 0);
+    if (total_cost > 0) lines.push(`\n💶 Total estimé : ~${total_cost.toFixed(2)} €`);
+    if (nFridge>0) lines.push('◈ Quantités du frigo déjà déduites.');
+    return lines.join('\n');
+  }
+
+  const handleShare = async () => {
+    const text = buildShareText();
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: '🛒 Liste de courses', text });
+      } catch {} // annulation utilisateur
+    } else {
+      // Fallback : copie dans le presse-papier
+      try {
+        await navigator.clipboard.writeText(text);
+        setCopyDone(true);
+        setTimeout(() => setCopyDone(false), 2500);
+      } catch {}
+    }
+  };
+
+  // Séparer items frigo / placard / normal pour l'affichage
+  const pantryItems = allItems.filter(i => i.pantry && ![...fridgeIds].some(f=>fridgeMatchesIng(f,i.ingredient)));
 
   return (
     <div className="shopping-view">
-      <div className="shopping-header">
+      <div className="shopping-header no-print">
         <div className="shopping-stats">
           <div className="shopping-stat"><span className="shopping-stat-val">{n_recipes}</span><span className="shopping-stat-lbl">recette{n_recipes>1?'s':''}</span></div>
           <div className="shopping-stat"><span className="shopping-stat-val">{total}</span><span className="shopping-stat-lbl">articles</span></div>
           <div className="shopping-stat shopping-stat--done"><span className="shopping-stat-val">{done}/{total}</span><span className="shopping-stat-lbl">obtenus</span></div>
-          {nFridge>0&&<div className="shopping-stat shopping-stat--frigo"><span className="shopping-stat-val">{nFridge}</span><span className="shopping-stat-lbl">dans votre frigo</span></div>}
+          {nFridge>0&&<div className="shopping-stat shopping-stat--frigo"><span className="shopping-stat-val">{nFridge}</span><span className="shopping-stat-lbl">◈ frigo</span></div>}
           {estimated_cost>0&&<div className="shopping-stat shopping-stat--cost"><span className="shopping-stat-val">~{estimated_cost.toFixed(2)} €</span><span className="shopping-stat-lbl">estimé</span></div>}
+          {nUnknown>0&&<div className="shopping-stat shopping-stat--warn" title={`${nUnknown} ingrédient(s) sans prix dans le catalogue`}><span className="shopping-stat-val">⚠ {nUnknown}</span><span className="shopping-stat-lbl">prix inconnus</span></div>}
         </div>
         <div className="shopping-progress-wrap">
           <div className="shopping-progress-bar" style={{width:total>0?`${Math.round((done/total)*100)}%`:'0%'}}/>
         </div>
-        {nChecked>0&&<button className="shopping-clear-btn" onClick={onClearAll}>Tout décocher</button>}
+        <div className="shopping-header-actions">
+          {nChecked>0&&<button className="shopping-clear-btn" onClick={onClearAll}>Tout décocher</button>}
+          <button className="shopping-share-btn" onClick={handleShare} title={navigator.share?'Partager':'Copier dans le presse-papier'}>
+            {copyDone ? '✓ Copié !' : navigator.share ? '↗ Partager' : '⎘ Copier'}
+          </button>
+          <button className="shopping-print-btn" onClick={()=>window.print()}>🖨️ Imprimer</button>
+        </div>
       </div>
-      <div className="shopping-categories">
+
+      {/* Section Placard */}
+      {pantryItems.length > 0 && (
+        <div className="shopping-pantry-section no-print">
+          <button className="shopping-pantry-toggle" onClick={()=>setPantryOpen(o=>!o)}>
+            <span>🗄️ Placard <span className="shopping-pantry-count">{pantryItems.length} article{pantryItems.length>1?'s':''}</span></span>
+            <span className="shopping-pantry-chevron">{pantryOpen?'▾':'▸'}</span>
+          </button>
+          {pantryOpen && (
+            <div className="shopping-pantry-list">
+              {pantryItems.map(item => {
+                const id        = item.ingredient;
+                const sufficient = fridgeSufficient.has(id);
+                const fQty      = !sufficient ? (fridgeQtys[id] || 0) : 0;
+                const netValue  = sufficient ? 0 : (item.qty_value != null ? Math.max(0, item.qty_value - fQty) : null);
+                const fullyCovered = sufficient || (item.qty_value != null && fQty >= item.qty_value);
+                const isDone    = checked.has(id) || fullyCovered;
+                return (
+                  <div key={id} className={`shopping-pantry-item${isDone?' shopping-pantry-item--done':''}`}>
+                    <div className="shopping-item-label">
+                      <input type="checkbox" className="shopping-item-check" checked={isDone}
+                        onChange={()=>!fullyCovered&&onToggle(id)} disabled={fullyCovered}/>
+                      <span className="shopping-item-name">{item.name_fr||id.replace(/_/g,' ')}</span>
+                      <span className="shopping-item-qty-wrap">
+                        {sufficient
+                          ? <span className="shopping-item-qty shopping-item-qty--net">✓ suffisant</span>
+                          : item.qty_str && <span className="shopping-item-qty">{item.qty_str}</span>
+                        }
+                        {item.price_unknown
+                          ? <span className="shopping-price-unknown">⚠ prix inconnu</span>
+                          : !isDone && <PriceEditInline item={item} onSaved={updated => onItemPriceUpdate?.(updated)} />
+                        }
+                      </span>
+                    </div>
+                    <div className="shopping-frigo-row">
+                      <label className="shopping-frigo-sufficient">
+                        <input type="checkbox" checked={sufficient} onChange={()=>onFridgeSufficient(id)}/>
+                        En stock ✓
+                      </label>
+                      {!sufficient && <>
+                        <span className="shopping-frigo-sep">ou</span>
+                        <span className="shopping-frigo-label">quantité :</span>
+                        <input type="number" min="0" step="any" className="shopping-frigo-input" placeholder="0"
+                          value={fridgeQtys[id]!=null?fridgeQtys[id]:''}
+                          onChange={e=>onFridgeQtyChange(id,e.target.value===''?0:parseFloat(e.target.value)||0)}/>
+                        {item.qty_unit&&<span className="shopping-frigo-unit">{item.qty_unit}</span>}
+                      </>}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Liste interactive principale (écran) */}
+      <div className="shopping-categories no-print">
         {Object.entries(by_category).map(([cat,catItems])=>(
-          <ShoppingCategory key={cat} cat={cat} items={catItems} checked={checked} fridgeIds={fridgeIds} onToggle={onToggle}/>
+          <ShoppingCategory key={cat} cat={cat} items={catItems} checked={checked}
+            fridgeIds={fridgeIds} fridgeQtys={fridgeQtys} fridgeSufficient={fridgeSufficient}
+            onFridgeQtyChange={onFridgeQtyChange} onFridgeSufficient={onFridgeSufficient}
+            onToggle={onToggle} onItemPriceUpdate={onItemPriceUpdate}/>
         ))}
+      </div>
+
+      {/* Vue impression — masquée à l'écran, visible à l'impression */}
+      <div className="shopping-print-view print-only">
+        <h2 className="shopping-print-title">🛒 Liste de courses</h2>
+        <p className="shopping-print-sub">{n_recipes} recette{n_recipes>1?'s':''} · {netItems.length} article{netItems.length>1?'s':''} à acheter</p>
+        {Object.entries(netByCat).map(([cat, catItems]) => (
+          <div key={cat} className="shopping-print-cat">
+            <div className="shopping-print-cat-label">{CAT_ICONS[cat.toLowerCase()]||'📦'} {cat}</div>
+            <ul className="shopping-print-items">
+              {catItems.map(item => (
+                <li key={item.ingredient} className="shopping-print-item">
+                  <span className="shopping-print-item-check">☐</span>
+                  <span className="shopping-print-item-name">{item.name_fr||item.ingredient.replace(/_/g,' ')}</span>
+                  <span className="shopping-print-item-qty">{item.netQtyStr || (item.occurrences>1?`×${item.occurrences}`:'')}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+        {nFridge>0&&<p className="shopping-print-frigo-note">◈ Quantités déjà disponibles dans votre frigo déduites.</p>}
       </div>
     </div>
   );
 }
 
-function ShoppingCategory({cat, items, checked, fridgeIds, onToggle}) {
+function ShoppingCategory({cat, items, checked, fridgeIds, fridgeQtys, fridgeSufficient, onFridgeQtyChange, onFridgeSufficient, onToggle, onItemPriceUpdate}) {
   const icon      = CAT_ICONS[cat.toLowerCase()]||'📦';
   const doneCount = items.filter(i=>{
-    const inFrigo=[...fridgeIds].some(f=>fridgeMatchesIng(f,i.ingredient));
-    return checked.has(i.ingredient)||inFrigo;
+    const inFrigo = [...fridgeIds].some(f=>fridgeMatchesIng(f,i.ingredient));
+    if (!inFrigo) return checked.has(i.ingredient);
+    if (fridgeSufficient.has(i.ingredient)) return true;
+    const fQty = fridgeQtys[i.ingredient] || 0;
+    return i.qty_value != null ? fQty >= i.qty_value : false;
   }).length;
+
   return (
     <div className={`shopping-category${doneCount===items.length?' shopping-category--done':''}`}>
       <div className="shopping-cat-header">
@@ -651,18 +823,62 @@ function ShoppingCategory({cat, items, checked, fridgeIds, onToggle}) {
       </div>
       <ul className="shopping-items">
         {items.map(item=>{
-          const id=item.ingredient;
-          const inFrigo=[...fridgeIds].some(f=>fridgeMatchesIng(f,id));
-          const isDone=checked.has(id)||inFrigo;
+          const id        = item.ingredient;
+          const inFrigo   = [...fridgeIds].some(f=>fridgeMatchesIng(f,id));
+          const sufficient = inFrigo && fridgeSufficient.has(id);
+          const fQty      = inFrigo && !sufficient ? (fridgeQtys[id] || 0) : 0;
+
+          const netValue     = sufficient ? 0 : (item.qty_value != null ? Math.max(0, item.qty_value - fQty) : item.qty_value);
+          const fullyCovered = sufficient || (inFrigo && item.qty_value != null && fQty >= item.qty_value);
+          const isDone       = checked.has(id) || fullyCovered;
+
+          const netStr = !sufficient && netValue != null && inFrigo && fQty > 0
+            ? _fmtNet(netValue, item.qty_unit)
+            : null;
+
           return (
             <li key={id} className={`shopping-item${isDone?' shopping-item--checked':''}${inFrigo?' shopping-item--frigo':''}`}>
-              <label className="shopping-item-label">
+              <div className="shopping-item-label">
                 <input type="checkbox" className="shopping-item-check" checked={isDone}
-                  onChange={()=>!inFrigo&&onToggle(id)} disabled={inFrigo}/>
+                  onChange={()=>!fullyCovered&&onToggle(id)} disabled={fullyCovered}/>
                 <span className="shopping-item-name">{item.name_fr||id.replace(/_/g,' ')}</span>
-                {item.occurrences>1&&<span className="shopping-item-qty">×{item.occurrences}</span>}
-                {inFrigo&&<span className="shopping-item-frigo">◈ frigo</span>}
-              </label>
+                <span className="shopping-item-qty-wrap">
+                  {sufficient
+                    ? <span className="shopping-item-qty shopping-item-qty--net">✓ suffisant</span>
+                    : netStr
+                      ? <><span className="shopping-item-qty shopping-item-qty--net">à acheter : {netStr}</span><span className="shopping-item-qty shopping-item-qty--orig">{item.qty_str}</span></>
+                      : item.qty_str
+                        ? <span className="shopping-item-qty">{item.qty_str}</span>
+                        : item.occurrences>1&&<span className="shopping-item-qty">×{item.occurrences}</span>
+                  }
+                  {!isDone && (item.price_unknown
+                    ? <span className="shopping-price-unknown">⚠ prix inconnu</span>
+                    : <PriceEditInline item={item} onSaved={updated => onItemPriceUpdate?.(updated)} />
+                  )}
+                </span>
+              </div>
+              {inFrigo && (
+                <div className="shopping-frigo-row">
+                  <label className="shopping-frigo-sufficient">
+                    <input type="checkbox" checked={sufficient}
+                      onChange={()=>onFridgeSufficient(id)}/>
+                    En stock ✓
+                  </label>
+                  {!sufficient && <>
+                    <span className="shopping-frigo-sep">ou</span>
+                    <span className="shopping-frigo-label">quantité :</span>
+                    <input
+                      type="number" min="0" step="any"
+                      className="shopping-frigo-input"
+                      placeholder="0"
+                      value={fridgeQtys[id] != null ? fridgeQtys[id] : ''}
+                      onChange={e => onFridgeQtyChange(id, e.target.value === '' ? 0 : parseFloat(e.target.value) || 0)}
+                    />
+                    {item.qty_unit && <span className="shopping-frigo-unit">{item.qty_unit}</span>}
+                    {fullyCovered && !sufficient && <span className="shopping-frigo-ok">✓ couvert</span>}
+                  </>}
+                </div>
+              )}
             </li>
           );
         })}
@@ -698,6 +914,9 @@ export default function PlanningPage() {
   });
 
   const [month,     setMonth]     = useState(() => new Date().getMonth() + 1);
+  const [diversity, setDiversity] = useState(() => {
+    try { const v = localStorage.getItem('alim_plan_diversity'); return v !== null ? parseFloat(v) : 0.5; } catch { return 0.5; }
+  });
   const [openSects, setOpenSects] = useState(new Set(['saison','regime']));
 
   // ── Repas actifs (persistants) ────────────────────────────────────────────
@@ -717,8 +936,17 @@ export default function PlanningPage() {
     try{const r=localStorage.getItem(CHECKED_KEY);return r?new Set(JSON.parse(r)):new Set();}
     catch{return new Set();}
   });
+  // Fix: alim_frigo_selected est un tableau de strings (Set sérialisé depuis FrigoPage)
   const [fridgeIds] = useState(()=>{
-    try{const r=localStorage.getItem('alim_frigo_selected');return r?new Set(JSON.parse(r).map(([id])=>id)):new Set();}
+    try{const r=localStorage.getItem('alim_frigo_selected');return r?new Set(JSON.parse(r)):new Set();}
+    catch{return new Set();}
+  });
+  const [fridgeQtys, setFridgeQtys] = useState(()=>{
+    try{const r=localStorage.getItem(FRIGO_QTYS_KEY);return r?JSON.parse(r):{};}
+    catch{return {};}
+  });
+  const [fridgeSufficient, setFridgeSufficient] = useState(()=>{
+    try{const r=localStorage.getItem(FRIGO_SUFFICIENT_KEY);return r?new Set(JSON.parse(r)):new Set();}
     catch{return new Set();}
   });
 
@@ -730,6 +958,14 @@ export default function PlanningPage() {
   useEffect(()=>{
     try{localStorage.setItem(CHECKED_KEY,JSON.stringify([...checked]));}catch{}
   },[checked]);
+
+  useEffect(()=>{
+    try{localStorage.setItem(FRIGO_QTYS_KEY,JSON.stringify(fridgeQtys));}catch{}
+  },[fridgeQtys]);
+
+  useEffect(()=>{
+    try{localStorage.setItem(FRIGO_SUFFICIENT_KEY,JSON.stringify([...fridgeSufficient]));}catch{}
+  },[fridgeSufficient]);
 
   useEffect(()=>{
     try{
@@ -750,9 +986,21 @@ export default function PlanningPage() {
     try{localStorage.setItem(PLAN_MEALS_KEY, JSON.stringify(enabledMeals));}catch{}
   },[enabledMeals]);
 
+  useEffect(()=>{
+    try{localStorage.setItem('alim_plan_diversity', String(diversity));}catch{}
+  },[diversity]);
+
   // ── Helpers UI ────────────────────────────────────────────────────────────
   const toggleSect    = id => setOpenSects(p=>{const n=new Set(p);n.has(id)?n.delete(id):n.add(id);return n;});
-  const toggleChecked = useCallback(id=>setChecked(p=>{const n=new Set(p);n.has(id)?n.delete(id):n.add(id);return n;}),[]);
+  const toggleChecked      = useCallback(id=>setChecked(p=>{const n=new Set(p);n.has(id)?n.delete(id):n.add(id);return n;}),[]);
+  const setFridgeQty       = useCallback((ing, val)=>setFridgeQtys(p=>({...p,[ing]:val})),[]);
+  const toggleFridgeSuf    = useCallback(id=>setFridgeSufficient(p=>{const n=new Set(p);n.has(id)?n.delete(id):n.add(id);return n;}),[]);
+  const handleItemPriceUpdate = useCallback(updated => setShopping(prev => {
+    if (!prev) return prev;
+    const patch    = items => items.map(i => i.ingredient === updated.ingredient ? {...i, ...updated} : i);
+    const patchCat = by_cat => Object.fromEntries(Object.entries(by_cat).map(([cat, its]) => [cat, patch(its)]));
+    return { ...prev, items: patch(prev.items||[]), by_category: patchCat(prev.by_category||{}) };
+  }), []);
 
   const resetFilters = () => fs.clearAll();
 
@@ -794,6 +1042,7 @@ export default function PlanningPage() {
         difficulty:   fs.difficulty || undefined,
         health:       fs.healthFilters.size > 0 ? [...fs.healthFilters] : undefined,
         cuisine:      fs.origins.size === 1 ? [...fs.origins][0] : undefined,
+        diversity,
       };
 
       const neededDTs = new Set();
@@ -1069,9 +1318,33 @@ export default function PlanningPage() {
             </div>
           </div>
 
+          {/* ── Diversité / Variété ── */}
+          <div className="plan-diversity-wrap">
+            <div className="plan-diversity-header">
+              <span className="plan-diversity-label">Variété</span>
+              <span className="plan-diversity-val">
+                {diversity <= 0.15 ? '🎯 Optimal' : diversity <= 0.45 ? '⚖️ Équilibré' : diversity <= 0.75 ? '🎲 Varié' : '🌀 Aléatoire'}
+              </span>
+            </div>
+            <input type="range" min={0} max={1} step={0.05}
+              value={diversity}
+              onChange={e => setDiversity(parseFloat(e.target.value))}
+              className="frigo-slider plan-diversity-slider"
+            />
+            <p className="plan-diversity-hint">
+              {diversity <= 0.15
+                ? 'Toujours les recettes les mieux notées.'
+                : diversity <= 0.45
+                ? 'Favorise les meilleures recettes avec un peu de surprise.'
+                : diversity <= 0.75
+                ? 'Bonne surprise à chaque génération.'
+                : 'Sélection très aléatoire parmi les candidats.'}
+            </p>
+          </div>
+
           {/* ── Bouton générer ── */}
           <button className="frigo-search-btn" onClick={generatePlan} disabled={loading}
-            style={{width:'100%',marginTop:12}}>
+            style={{width:'100%',marginTop:8}}>
             {loading?'⏳ Génération…':planHasRecipes?'↻ Régénérer':'✦ Générer mon planning'}
           </button>
 
@@ -1144,7 +1417,10 @@ export default function PlanningPage() {
               {shopLoad&&<div className="state-msg">Génération de la liste…</div>}
               {shopping&&(
                 <ShoppingView shopping={shopping} checked={checked} fridgeIds={fridgeIds}
-                  onToggle={toggleChecked} onClearAll={()=>setChecked(new Set())}/>
+                  fridgeQtys={fridgeQtys} fridgeSufficient={fridgeSufficient}
+                  onFridgeQtyChange={setFridgeQty} onFridgeSufficient={toggleFridgeSuf}
+                  onToggle={toggleChecked} onClearAll={()=>setChecked(new Set())}
+                  onItemPriceUpdate={handleItemPriceUpdate}/>
               )}
             </>
           )}

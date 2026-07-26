@@ -78,7 +78,9 @@ def audit_tree(tree: dict) -> list[dict]:
                 axes_fr = ig.get("axes_fr") or {}
                 axes    = {**axes_fr, **axes_en}  # merged view for legacy checks
                 variants = ig.get("variants", [])
-                form_axis = axes_en.get("form")
+                form_axis_raw = axes_en.get("form")
+                # form peut être une liste (ex: spices ['spice','powder'])
+                form_axis = form_axis_raw[0] if isinstance(form_axis_raw, list) else form_axis_raw
 
                 def add(cat_name: str, msg: str):
                     issues.append({
@@ -191,14 +193,18 @@ def audit_tree(tree: dict) -> list[dict]:
 
                 # ── 13. Axes EN sans contrepartie FR (info seulement) ─────
                 AXIS_FR_MAP = {
-                    "cooking_state": "etat_cuisson",
-                    "thermal_state": "etat_thermique",
-                    "form":          "forme",
-                    "seasoning":     "assaisonnement",
-                    "treatment":     "traitement",
-                    "packaging":     "conditionnement",
-                    "draining":      "egouttage",
-                    "part":          "partie",
+                    "cooking_state":      "etat_cuisson",
+                    "thermal_state":      "etat_thermique",
+                    "form":               "forme",
+                    "seasoning":          "assaisonnement",
+                    "treatment":          "traitement",
+                    "packaging":          "conditionnement",
+                    "conservation_medium":"milieu_conservation",
+                    "part":               "partie",
+                    "fat_content":        "teneur_MG",
+                    "fat_content_pct":    "teneur_MG_pct",
+                    "origin":             "origine",
+                    "ripeness":           "maturite",
                 }
                 for en_key, fr_key in AXIS_FR_MAP.items():
                     en_val = axes_en.get(en_key)

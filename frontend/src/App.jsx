@@ -24,6 +24,9 @@ import ProfilePage       from './pages/ProfilePage';
 import CyclePage         from './pages/CyclePage';
 import AstroPage         from './pages/AstroPage';
 import FavoritesPage     from './pages/FavoritesPage';
+import ShoppingListPage  from './pages/ShoppingListPage';
+import FodmapPage        from './pages/FodmapPage';
+import FAQPage           from './pages/FAQPage';
 import './index.css';
 
 // ── Dispatcher ────────────────────────────────────────────────────────────────
@@ -42,6 +45,9 @@ function PageDispatcher({ onAuthClick }) {
     case 'cycle':      return <CyclePage />;
     case 'astro':      return <AstroPage />;
     case 'cycle-astro': return <CyclePage />;
+    case 'courses':     return <ShoppingListPage />;
+    case 'fodmap':      return <FodmapPage />;
+    case 'faq':         return <FAQPage />;
     default:          return <HomePage />;
   }
 }

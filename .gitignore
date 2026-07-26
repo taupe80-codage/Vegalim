@@ -115,3 +115,14 @@ scripts/nutrition/scripts.zip
 scripts/recipes/logs/
 
 backend/data/logs/
+
+# ── Config locale Claude Code / dossiers hors-projet ──────────────────────────
+.claude/
+/env
+premiere_mouture/
+
+# ── Archives et sauvegardes locales ───────────────────────────────────────────
+*.bak
+*.bak[0-9]
+*.zip
+tmp_*.txt

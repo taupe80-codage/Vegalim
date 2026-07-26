@@ -159,10 +159,11 @@ def save_json(path: str | Path, data, indent: int = 2) -> bool:
 
 # ── Caches mtime-aware (fichiers modifiés pendant l'exécution du serveur) ──────
 
-_recipes_cache      = _MtimeCache("load_recipes")
-_ingredients_cache  = _MtimeCache("load_ingredients_dict")
-_score_graph_cache  = _MtimeCache("load_score_graph")
-_nutrition_db_cache = _MtimeCache("load_nutrition_db")   # ← P2.2 : pipeline modifie ce fichier
+_recipes_cache        = _MtimeCache("load_recipes")
+_ingredients_cache    = _MtimeCache("load_ingredients_dict")
+_score_graph_cache    = _MtimeCache("load_score_graph")
+_nutrition_db_cache   = _MtimeCache("load_nutrition_db")   # ← P2.2 : pipeline modifie ce fichier
+_ingredient_map_cache = _MtimeCache("load_ingredient_map")
 
 
 def load_recipes() -> list[dict]:
@@ -203,7 +204,218 @@ def load_ingredients_dict() -> dict:
 load_ingredients_dict.cache_clear = _ingredients_cache.cache_clear  # type: ignore[attr-defined]
 
 
+# ── Table de résolution état de cuisson demandé → fallback ────────────────────
+# Pour chaque état demandé, ordre de préférence parmi les variants disponibles.
+_COOKING_RESOLUTION: dict[str, list[str]] = {
+    "boiled":  ["boiled", "steamed", "cooked", "raw"],
+    "steamed": ["steamed", "boiled", "cooked", "raw"],
+    "sauteed": ["sauteed", "cooked", "boiled", "raw"],
+    "roasted": ["roasted", "baked", "cooked", "raw"],
+    "baked":   ["baked", "roasted", "cooked", "raw"],
+    "grilled": ["grilled", "roasted", "cooked", "raw"],
+    "fried":   ["cooked", "boiled", "raw"],
+    "cooked":  ["cooked", "boiled", "steamed", "raw"],
+    "raw":     ["raw", "default"],
+}
+
+
+def load_ingredient_map() -> dict[str, dict]:
+    """
+    Charge ingredient_map_v2.json — pont entre les IDs recettes sémantiques
+    (ex: 'garlic', 'carrot', 'onion/yellow') et les group_ids du dict v2
+    (ex: 'garlic_raw', 'carrot', 'yellow_onion_raw').
+
+    Structure d'une entrée :
+        {
+          "group_id_v2":     "carrot",              # état cru/default
+          "cooking_variants": {
+              "raw":            "carrot",
+              "boiled":         "carrot_boiled_crunchy",
+              "steamed":        "carrot_steamed",
+              "default_cooked": "carrot_boiled_crunchy",
+          },
+          "confidence":      0.92,
+          "status":          "AUTO_HIGH",
+          "canonical_name_en": "carrot",
+        }
+
+    Rechargé automatiquement si ingredient_map_v2.json est modifié sur disque.
+    Retourne un dict vide (sans crash) si le fichier est absent.
+    """
+    _path = DATA_ROOT / "recipes" / "ingredient_map_v2.json"
+
+    def _loader() -> dict:
+        data = load_json(_path, default={})
+        logger.info("ingredient_map_v2 charge : %d entrees", len(data))
+        return data
+
+    return _ingredient_map_cache.get(_path, _loader)
+
+load_ingredient_map.cache_clear = _ingredient_map_cache.cache_clear  # type: ignore[attr-defined]
+
+
+def resolve_cooking_gid(
+    recipe_ingredient_id: str,
+    use_cooked: bool = False,
+    cooking_state: str | None = None,
+) -> str | None:
+    """
+    Résout le group_id du dict v2 pour un ingrédient recette,
+    en tenant compte de l'état de cuisson souhaité.
+
+    Priorité de résolution :
+      1. cooking_state explicite (meta.state de la composition)
+         → cherche dans cooking_variants avec la table de fallback _COOKING_RESOLUTION
+      2. use_cooked=True sans cooking_state
+         → retourne cooking_variants["default_cooked"] si disponible
+      3. Fallback universel
+         → retourne group_id_v2 (état cru/default)
+
+    Args:
+        recipe_ingredient_id : ID tel qu'il apparaît dans recipes.json
+                               (ex: 'garlic', 'carrot', 'onion/yellow')
+        use_cooked           : True si le plat est chaud (cook_min > 0)
+        cooking_state        : état explicite depuis meta.state
+                               ('boiled', 'roasted', 'sauteed', 'raw', …)
+
+    Returns:
+        group_id_v2 à utiliser pour le lookup nutrition_v2,
+        ou None si l'ingrédient est inconnu dans le map.
+    """
+    ing_map = load_ingredient_map()
+    entry = ing_map.get(recipe_ingredient_id)
+
+    if entry is None:
+        # Essai avec la base (avant le /)
+        base = recipe_ingredient_id.split("/")[0]
+        if base != recipe_ingredient_id:
+            entry = ing_map.get(base)
+
+    if entry is None:
+        return None
+
+    gid_raw = entry.get("group_id_v2")
+    variants = entry.get("cooking_variants") or {}
+
+    # Cas 1 : état de cuisson explicite déclaré
+    if cooking_state:
+        cs_lower = cooking_state.lower().strip()
+        fallbacks = _COOKING_RESOLUTION.get(cs_lower, [cs_lower, "raw", "default"])
+        for state in fallbacks:
+            if state in variants:
+                return variants[state]
+
+    # Cas 2 : plat chaud, utiliser default_cooked
+    if use_cooked and "default_cooked" in variants:
+        return variants["default_cooked"]
+
+    # Cas 3 : fallback sur l'état cru/default
+    return gid_raw
+
+
 # ── Loaders statiques (@lru_cache) — jamais modifiés en cours d'exécution ──────
+
+
+@lru_cache(maxsize=1)
+def load_ingredients_tree() -> dict:
+    """
+    Arbre ingrédients v8 — référence taxonomique canonique (1782 groupes, 2077 variants).
+
+    Structure : {categories: [{subcategories: [{ingredient_groups: [
+        {id, canonical_name_en, canonical_name_fr, axes_en, axes_fr, variants: [
+            {id, source, source_id, axes_en, axes_fr, is_primary, source_rank, …}
+        ]}
+    ]}]}]}
+
+    Utiliser get_ingredients_tree_index() pour les lookups par nom.
+    """
+    return load_json(
+        DATA_ROOT / "ingredients" / "ingredients_tree.json",
+        default={"categories": []}
+    )
+
+
+@lru_cache(maxsize=1)
+def get_ingredients_tree_index() -> dict:
+    """
+    Index plat du tree pour résolution rapide : canonical_name_en normalisé → liste de groupes.
+
+    Chaque groupe contient ses variants avec axes_en (cooking_state, thermal_state, etc.)
+    et source_id pour lien vers la base nutritionnelle.
+
+    Usage :
+        idx = get_ingredients_tree_index()
+        groups = idx.get('carrot', [])
+        raw_group   = next((g for g in groups if g['axes_en'].get('cooking_state') == 'raw'), None)
+        boiled_group = next((g for g in groups if g['axes_en'].get('cooking_state') == 'boiled'), None)
+    """
+    tree = load_ingredients_tree()
+    index: dict[str, list] = {}
+
+    def _normalize(name: str) -> str:
+        return name.lower().replace(' ', '_').replace('-', '_').replace(',', '').strip()
+
+    for cat in tree.get('categories', []):
+        for subcat in cat.get('subcategories', []):
+            for grp in subcat.get('ingredient_groups', []):
+                en = grp.get('canonical_name_en', '')
+                if not en:
+                    continue
+                key = _normalize(en)
+                # index par nom complet
+                index.setdefault(key, []).append(grp)
+                # index par premier mot (pour carrot → carrot_baby, etc.)
+                first = key.split('_')[0]
+                if first != key:
+                    index.setdefault(first, []).append(grp)
+
+    logger.info("Tree index construit : %d clés pour %d groupes",
+                len(index), sum(len(v) for v in index.values()))
+    return index
+
+
+def resolve_ingredient_cooking_variant(
+    ingredient_id: str,
+    cooking_state: str | None = None,
+) -> dict | None:
+    """
+    Résout le groupe tree le plus précis pour un ingrédient de recette.
+
+    Args:
+        ingredient_id : ID recette simple (ex: 'carrot', 'lentils/green')
+        cooking_state : état de cuisson souhaité ('raw', 'boiled', 'steamed', …)
+                        Si None, retourne le groupe raw ou le premier disponible.
+
+    Returns:
+        Le groupe ingredient_tree le plus adapté, ou None si non trouvé.
+    """
+    idx = get_ingredients_tree_index()
+    base = ingredient_id.split('/')[0].replace('-', '_').lower()
+
+    candidates = idx.get(base, [])
+    if not candidates:
+        return None
+
+    target = cooking_state or 'raw'
+
+    # 1. Correspondance exacte sur cooking_state du groupe
+    exact = [g for g in candidates if g.get('axes_en', {}).get('cooking_state') == target]
+    if exact:
+        return exact[0]
+
+    # 2. Correspondance dans les variants
+    for g in candidates:
+        for v in g.get('variants', []):
+            if v.get('axes_en', {}).get('cooking_state') == target:
+                return g
+
+    # 3. Fallback : premier candidat sans cooking_state (neutre)
+    neutral = [g for g in candidates if not g.get('axes_en', {}).get('cooking_state')]
+    if neutral:
+        return neutral[0]
+
+    return candidates[0]
+
 
 @lru_cache(maxsize=1)
 def load_nutrition_graph() -> dict:
@@ -264,6 +476,10 @@ def load_seasonality() -> dict:
 def load_prices() -> dict:
     return load_json(DATA_ROOT / "config" / "prices.json", default={})
 
+@lru_cache(maxsize=1)
+def load_prices_catalog() -> dict:
+    return load_json(DATA_ROOT / "config" / "prices_catalog.json", default={})
+
 
 @lru_cache(maxsize=1)
 def load_flavor_graph() -> dict:
@@ -302,12 +518,26 @@ def load_fr_to_en() -> dict:
     return raw.get("mapping", raw) if isinstance(raw, dict) else {}
 
 
-@lru_cache(maxsize=1)
+_ingredient_physical_cache = _MtimeCache("load_ingredient_physical")
+
 def load_ingredient_physical() -> dict:
-    """Données physiques par ingrédient : unités, densité, edible_pct, ciqual_id (116 entrées)."""
-    raw = load_json(DATA_ROOT / "ingredients" / "ingredient_physical.json",
-                    default={})
-    return {k: v for k, v in raw.items() if not k.startswith("_")}
+    """
+    Données physiques par ingrédient : unités, densité, edible_pct, ciqual_id, fallback/blend.
+
+    Migré de @lru_cache vers _MtimeCache : ingredient_physical.json est désormais
+    modifié par les scripts de pipeline (overrides CIQUAL/USDA, fallback_slug, blend_components).
+    Rechargement automatique dès que le fichier change sur disque.
+    """
+    _path = DATA_ROOT / "ingredients" / "ingredient_physical.json"
+
+    def _loader():
+        raw = load_json(_path, default={})
+        # Exclure les entrées système (_meta, _orphans, etc.)
+        return {k: v for k, v in raw.items() if not k.startswith("_")}
+
+    return _ingredient_physical_cache.get(_path, _loader)
+
+load_ingredient_physical.cache_clear = _ingredient_physical_cache.cache_clear  # type: ignore[attr-defined]
 
 
 @lru_cache(maxsize=1)
@@ -363,20 +593,24 @@ _UNIT_TO_G: dict[str, float] = {
 }
 
 # Champs nutritionnels inclus dans le calcul de composition
+# Clés alignées sur nutrition_v2.json (notation CIQUAL/N2)
 _NUTRIENT_FIELDS: tuple[str, ...] = (
+    # Macros
     "calories_kcal", "protein_g", "carbs_g", "fat_g", "fiber_g", "sugar_g",
-    "starch_g", "alcohol_g",
-    "saturated_fat_g", "monounsaturated_fat_g", "polyunsaturated_fat_g",
-    "trans_fat_g", "cholesterol_mg",
-    "omega3_g", "omega3_ala_g", "omega3_epa_g", "omega3_dha_g", "omega6_g",
+    "starch_g", "alcohol_g", "polyols_g", "organic_acids_g",
+    # Acides gras (notation fa_* de N2/CIQUAL)
+    "fa_saturated_g", "fa_mufa_g", "fa_pufa_g", "cholesterol_mg",
+    # Oméga-3 détaillés
+    "omega3_g", "fa_18_3_ala_g", "fa_20_5_epa_g", "fa_22_6_dha_g",
+    # Sodium + minéraux
     "sodium_mg", "calcium_mg", "iron_mg", "magnesium_mg", "phosphorus_mg",
     "potassium_mg", "zinc_mg", "copper_mg", "manganese_mg", "selenium_ug",
     "iodine_ug",
-    "vitamin_a_ug", "beta_carotene_ug", "vitamin_c_mg", "vitamin_d_ug",
-    "vitamin_e_mg", "vitamin_k1_ug", "vitamin_k2_ug",
+    # Vitamines
+    "vitamin_a_rae_ug", "beta_carotene_ug", "vitamin_c_mg", "vitamin_d_ug",
+    "alpha_tocopherol_mg", "vitamin_k1_ug", "vitamin_k2_ug",
     "vitamin_b1_mg", "vitamin_b2_mg", "vitamin_b3_mg", "vitamin_b5_mg",
-    "vitamin_b6_mg", "vitamin_b12_ug", "folate_ug", "choline_mg",
-    "polyols_g", "organic_acids_g",
+    "vitamin_b6_mg", "vitamin_b12_ug", "folate_dfe_ug",
 )
 
 
@@ -518,13 +752,208 @@ def resolve_ingredient_nutrition(
     # Chercher la variante demandée, sinon default
     result = variants.get(variant) or variants.get("default")
 
-    if not result:
-        logger.debug(
-            "resolve_ingredient_nutrition : '%s' variant='%s' introuvable dans nutrition_v2",
-            ingredient_id, variant
-        )
-        return {"_source": "industrial", "_missing": True}
+    if result:
+        result            = dict(result)   # copie pour ne pas muter le cache
+        result["_source"] = "industrial"
+        return result
 
-    result          = dict(result)   # copie pour ne pas muter le cache
-    result["_source"] = "industrial"
-    return result
+    # ── Résolution physique (fallback_slug / blend_components) ─────────────────
+    # L'ingrédient n'est pas dans nutrition_v2 : on tente la résolution via
+    # ingredient_physical.json (_fallback_slug ou _blend_components).
+    logger.debug(
+        "resolve_ingredient_nutrition : '%s' variant='%s' absent de nutrition_v2 "
+        "→ résolution physique",
+        ingredient_id, variant,
+    )
+    return _resolve_via_physical(ingredient_id)
+
+
+# ── Résolution via ingredient_physical.json ────────────────────────────────────
+#
+# Deux mécanismes complémentaires, appliqués dans l'ordre :
+#
+#   1. _fallback_slug   : l'ingrédient délègue à un autre slug (ex: sriracha → hot_sauce).
+#                         On rappelle resolve_ingredient_nutrition() sur le slug cible,
+#                         avec une garde anti-boucle (_seen).
+#
+#   2. _blend_components: mélange d'épices défini par composition fixe en % de masse.
+#                         On somme les nutriments pondérés de chaque composant,
+#                         puis on normalise à 100 g.
+#
+# _resolve_via_physical() est intentionnellement privée (préfixe _) : seul
+# resolve_ingredient_nutrition() doit l'appeler.
+# ──────────────────────────────────────────────────────────────────────────────
+
+_MAX_FALLBACK_DEPTH = 4   # garde anti-boucle / chaînes profondes
+
+
+def _resolve_via_physical(
+    ingredient_id: str,
+    _seen: frozenset[str] | None = None,
+    _depth: int = 0,
+) -> dict:
+    """
+    Tente de résoudre la nutrition d'un slug via ingredient_physical.json.
+
+    Ordre de résolution :
+      1. _fallback_slug  → délégation récursive au slug cible
+      2. _blend_components → moyenne pondérée par masse des composants
+      3. Échec documenté  → {"_source": "physical", "_missing": True, …}
+
+    Args:
+        ingredient_id : slug à résoudre
+        _seen         : ensemble des slugs déjà visités (anti-boucle)
+        _depth        : profondeur de récursion courante
+
+    Returns:
+        dict des champs nutritionnels pour 100 g, avec clés privées de traçabilité.
+    """
+    seen = (_seen or frozenset()) | {ingredient_id}
+
+    if _depth >= _MAX_FALLBACK_DEPTH:
+        logger.warning(
+            "_resolve_via_physical : profondeur max atteinte (%d) pour '%s'",
+            _MAX_FALLBACK_DEPTH, ingredient_id,
+        )
+        return {"_source": "physical", "_missing": True, "_reason": "max_depth"}
+
+    physical   = load_ingredient_physical()
+    entry      = physical.get(ingredient_id, {})
+
+    if not entry:
+        logger.debug(
+            "_resolve_via_physical : '%s' absent de ingredient_physical", ingredient_id,
+        )
+        return {"_source": "physical", "_missing": True, "_reason": "absent_physical"}
+
+    # ── 1. Fallback slug ───────────────────────────────────────────────────────
+    fallback_slug = entry.get("_fallback_slug")
+
+    if fallback_slug is not None:
+        # None explicite = non_nutritive (corn_husk, liquid_smoke)
+        if fallback_slug == "" or entry.get("_fallback_reason") == "non_nutritive":
+            logger.debug(
+                "_resolve_via_physical : '%s' marqué non_nutritive → zéros", ingredient_id,
+            )
+            return {
+                "_source":   "physical",
+                "_slug":     ingredient_id,
+                "_reason":   "non_nutritive",
+                **{f: 0.0 for f in _NUTRIENT_FIELDS},
+            }
+
+        if fallback_slug in seen:
+            logger.warning(
+                "_resolve_via_physical : boucle détectée '%s' → '%s' (seen=%s)",
+                ingredient_id, fallback_slug, seen,
+            )
+            return {"_source": "physical", "_missing": True, "_reason": "cycle_detected"}
+
+        logger.debug(
+            "_resolve_via_physical : '%s' → fallback '%s' (depth=%d)",
+            ingredient_id, fallback_slug, _depth,
+        )
+        result = _resolve_via_physical(fallback_slug, _seen=seen, _depth=_depth + 1)
+
+        # Si physical n'a rien, tenter nutrition_v2 directement (slug cible connu dans la DB)
+        if result.get("_missing"):
+            nutr_db   = load_nutrition_db()
+            ing_entry = nutr_db.get(fallback_slug, {})
+            direct    = ing_entry.get("variants", {}).get("default")
+            if direct:
+                result            = dict(direct)
+                result["_source"] = "industrial"
+
+        if not result.get("_missing"):
+            result["_fallback_from"] = ingredient_id
+            result["_fallback_to"]   = fallback_slug
+        return result
+
+    # ── 2. Blend components ────────────────────────────────────────────────────
+    components = entry.get("_blend_components")
+
+    if components:
+        totals:    dict[str, float] = {}
+        total_pct: float            = 0.0
+        missing_comps:  list[str]   = []
+
+        for comp in components:
+            slug = comp.get("slug", "")
+            pct  = float(comp.get("pct", 0))
+
+            if not slug or pct <= 0:
+                continue
+
+            if slug in seen:
+                logger.warning(
+                    "_resolve_via_physical : boucle blend '%s' → '%s'",
+                    ingredient_id, slug,
+                )
+                continue
+
+            comp_nutr = _resolve_via_physical(slug, _seen=seen, _depth=_depth + 1)
+
+            # Tenter nutrition_v2 si physical échoue (composant connu dans la DB)
+            if comp_nutr.get("_missing"):
+                nutr_db   = load_nutrition_db()
+                ing_entry = nutr_db.get(slug, {})
+                direct    = ing_entry.get("variants", {}).get("default")
+                if direct:
+                    comp_nutr = dict(direct)
+
+            if comp_nutr.get("_missing"):
+                missing_comps.append(slug)
+                logger.debug(
+                    "_resolve_via_physical blend '%s' : composant '%s' introuvable",
+                    ingredient_id, slug,
+                )
+                continue
+
+            weight = pct / 100.0
+            for field in _NUTRIENT_FIELDS:
+                val = comp_nutr.get(field)
+                if isinstance(val, (int, float)):
+                    totals[field] = totals.get(field, 0.0) + val * weight
+            total_pct += pct
+
+        if total_pct <= 0:
+            return {
+                "_source":  "physical",
+                "_missing": True,
+                "_reason":  "blend_all_components_missing",
+                "_slug":    ingredient_id,
+            }
+
+        # Renormaliser si la somme des pct résolus < 100 (composants manquants)
+        if missing_comps and total_pct < 100.0:
+            factor = 100.0 / total_pct
+            totals = {k: round(v * factor, 4) for k, v in totals.items()}
+        else:
+            totals = {k: round(v, 4) for k, v in totals.items()}
+
+        result = {
+            "_source":           "physical",
+            "_blend_from":       ingredient_id,
+            "_blend_total_pct":  total_pct,
+            **totals,
+        }
+        if missing_comps:
+            result["_blend_missing_components"] = missing_comps
+
+        logger.debug(
+            "_resolve_via_physical blend '%s' : %d/%d composants résolus (pct=%.1f%%)",
+            ingredient_id, len(components) - len(missing_comps), len(components), total_pct,
+        )
+        return result
+
+    # ── 3. Aucune résolution possible ─────────────────────────────────────────
+    reason = entry.get("_usda_status", "no_fallback_no_blend")
+    logger.debug(
+        "_resolve_via_physical : '%s' sans fallback ni blend (%s)", ingredient_id, reason,
+    )
+    return {
+        "_source":  "physical",
+        "_missing": True,
+        "_reason":  reason,
+        "_slug":    ingredient_id,
+    }

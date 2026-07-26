@@ -52,7 +52,7 @@ const CYCLE_PHASES = [
       { icon: '🧘', label: 'Sociabilité', detail: 'Envie d\'extérieur et d\'interactions' },
     ],
     avoid: ['Excès de gras saturés', 'Repas lourds et longs à digérer', 'Excès de sucre raffiné'],
-    favor: ['Fermentés (kéfir, kombucha, miso)', 'Crudités, salades fraîches', 'Smoothies verts', 'Graines germées'],
+    favor: ['Fermentés (kombucha, miso, kimchi, tempeh)', 'Crudités, salades fraîches', 'Smoothies verts', 'Graines germées'],
     activity: 'HIIT, course, vélo, danse — toutes les activités intenses sont bienvenues. Phase idéale pour les records perso.',
     needs: [
       { icon: '💪', label: 'Protéines', detail: 'Quinoa, tofu, pois chiches' },

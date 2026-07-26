@@ -63,6 +63,9 @@ const ROUTES = [
   { pattern: '/cycle',       page: 'cycle'      },
   { pattern: '/astro',       page: 'astro'      },
   { pattern: '/cycle-astro', page: 'cycle-astro'},
+  { pattern: '/courses',    page: 'courses'    },
+  { pattern: '/fodmap',     page: 'fodmap'     },
+  { pattern: '/faq',        page: 'faq'        },
 ];
 
 function resolve(path) {

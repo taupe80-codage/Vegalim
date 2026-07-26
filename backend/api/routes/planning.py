@@ -1,4 +1,4 @@
-﻿"""
+"""
 Routes plan repas, liste de courses, saisonnalitÃƒÂ©.
 
 MIGRATION ÃƒÂ©tape 3 Ã¢â‚¬â€ imports obsolÃƒÂ¨tes remplacÃƒÂ©s :
@@ -29,6 +29,11 @@ class MealPlanExportRequest(BaseModel):
 
 class ShoppingListRequest(BaseModel):
     plan: dict = Field(..., description="Plan hebdo {lundi:{lunch:{id,title}}}")
+
+
+class ShoppingFromRecipesRequest(BaseModel):
+    recipe_ids: List[str] = Field(..., description="Liste d'IDs de recettes")
+    eco:        bool      = Field(default=False, description="Marquer les reutilisations")
 
 
 class DiversityScoreRequest(BaseModel):
@@ -68,6 +73,7 @@ def mealplan(
     dish_type:        Optional[str] = None,
     difficulty:       Optional[str] = None,
     exclude_ids:      Optional[str] = None,
+    diversity:        float         = Query(default=0.5, ge=0.0, le=1.0),
     user: dict | None = Depends(get_optional_user),
 ):
     """Genere un plan de repas hebdomadaire personnalise."""
@@ -109,6 +115,7 @@ def mealplan(
         dish_type=dish_type or None,
         difficulty=difficulty or None,
         exclude_ids=exclude_list or None,
+        diversity=diversity,
     )
 
 
@@ -150,14 +157,82 @@ def export_ics(payload: MealPlanExportRequest, user: dict = Depends(get_user)):
 @router.post("/shopping_list")
 def shopping_list_route(payload: ShoppingListRequest, user: dict | None = Depends(get_optional_user)):
     """GÃƒÂ©nÃƒÂ¨re la liste de courses depuis un plan hebdomadaire."""
-    from backend.engine.planning_engine.shopping import shopping_list       # Ã¢Å“â€¦ migrÃƒÂ©
+    from backend.engine.planning_engine.shopping import shopping_list       # Ã¢Å"â€¦ migrÃƒÂ©
     return shopping_list(payload.plan)
+
+
+@router.post("/shopping_list_from_recipes")
+def shopping_from_recipes_route(payload: ShoppingFromRecipesRequest, user: dict | None = Depends(get_optional_user)):
+    """Genere la liste de courses depuis une selection libre de recettes."""
+    from backend.engine.planning_engine.shopping import shopping_list_from_recipes
+    return shopping_list_from_recipes(payload.recipe_ids, eco=payload.eco)
+
+
+# ── Correction de prix catalogue ──────────────────────────────────────────────
+
+class PriceUpdateRequest(BaseModel):
+    package_label: str  = Field(..., description="Label du paquet affiché (ex: 'sachet 500g')")
+    new_price:     float = Field(..., gt=0, description="Nouveau prix en euros")
+
+@router.put("/prices/{ingredient_key}")
+def update_ingredient_price(
+    ingredient_key: str,
+    body: PriceUpdateRequest,
+    user: dict | None = Depends(get_optional_user),
+):
+    """Corrige le prix d'un paquet dans prices_catalog.json."""
+    import json
+    from datetime import date
+    from pathlib import Path
+    from backend.core.data_io import load_prices_catalog
+
+    catalog_path = Path(__file__).parent.parent.parent / "data/config/prices_catalog.json"
+    try:
+        raw = json.loads(catalog_path.read_text(encoding="utf-8"))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Lecture catalogue impossible : {e}")
+
+    entry = raw.get(ingredient_key)
+    if not entry:
+        raise HTTPException(status_code=404, detail=f"Ingrédient inconnu : {ingredient_key}")
+
+    packages = entry.get("packages", [])
+    if not packages:
+        raise HTTPException(status_code=422, detail="Aucun conditionnement pour cet ingrédient")
+
+    # Cherche le paquet par label (tolérant aux préfixes "N× ")
+    clean_label = body.package_label.split("× ", 1)[-1] if "× " in body.package_label else body.package_label
+    target = next((p for p in packages if p["label"] == clean_label), None)
+    if target is None:
+        # fallback : premier paquet
+        target = packages[0]
+
+    old_price = target["price"]
+    if old_price > 0:
+        ratio = body.new_price / old_price
+        for pkg in packages:
+            pkg["price"] = round(pkg["price"] * ratio, 2)
+    target["price"] = round(body.new_price, 2)  # exact sur le paquet cible
+
+    entry["last_updated"]    = str(date.today())
+    entry["user_corrected"]  = True
+
+    try:
+        catalog_path.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Écriture catalogue impossible : {e}")
+
+    # Invalide le cache LRU pour que le prochain appel lise les nouveaux prix
+    load_prices_catalog.cache_clear()
+
+    return {"ok": True, "ingredient": ingredient_key, "package_label": clean_label,
+            "old_price": old_price, "new_price": round(body.new_price, 2)}
 
 
 @router.get("/seasonal")
 def seasonal(month: int):
     """IngrÃƒÂ©dients de saison pour un mois donnÃƒÂ© (1-12). **Public.**"""
-    from backend.engine.rule_engine.seasonality import seasonal_ingredients # Ã¢Å“â€¦ migrÃƒÂ©
+    from backend.engine.rule_engine.seasonality import seasonal_ingredients # Ã¢Å"â€¦ migrÃƒÂ©
     from backend.core.data_io import load_ingredients_dict
     try:
         d        = load_ingredients_dict()

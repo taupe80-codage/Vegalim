@@ -31,7 +31,7 @@ UNIT_TO_G = {
 }
 
 MACROS   = ["calories", "protein", "carbs", "fat", "fiber", "sugar", "sodium",
-            "saturated_fat"]
+            "saturated_fat", "monounsaturated_fat", "polyunsaturated_fat"]
 MICROS   = ["calcium", "iron", "magnesium", "potassium",
             "vitamin_c", "vitamin_b12", "zinc", "phosphorus",
             "vitamin_a", "vitamin_d", "vitamin_e", "vitamin_k", "folate", "omega3"]
@@ -41,33 +41,40 @@ ALL_KEYS = MACROS + MICROS
 # Correspondance champs nutrition_v2 (suffixe _kcal/_g/_mg/_ug) → clés internes
 # Permet de gérer les deux formats de la DB sans modifier la logique de calcul.
 _V2_FIELD_MAP: dict[str, str] = {
+    # Macros
     "calories_kcal":    "calories",
     "protein_g":        "protein",
     "carbs_g":          "carbs",
     "fat_g":            "fat",
     "fiber_g":          "fiber",
     "sugar_g":          "sugar",
+    # Sodium
     "sodium_mg":        "sodium",
-    "saturated_fat_g":  "saturated_fat",
+    # Acides gras — notation N2/CIQUAL (fa_*), corrigé depuis saturated_fat_g
+    "fa_saturated_g":   "saturated_fat",
+    "fa_mufa_g":        "monounsaturated_fat",
+    "fa_pufa_g":        "polyunsaturated_fat",
+    # Minéraux
     "calcium_mg":       "calcium",
     "iron_mg":          "iron",
     "magnesium_mg":     "magnesium",
     "potassium_mg":     "potassium",
-    "vitamin_c_mg":     "vitamin_c",
-    "vitamin_b12_ug":   "vitamin_b12",
     "zinc_mg":          "zinc",
     "phosphorus_mg":    "phosphorus",
-    # Nouvelles vitamines / acides gras
-    "vitamin_a_ug":     "vitamin_a",
+    # Vitamines
+    "vitamin_c_mg":     "vitamin_c",
+    "vitamin_b12_ug":   "vitamin_b12",
+    "vitamin_a_rae_ug": "vitamin_a",   # corrigé depuis vitamin_a_ug (RAE = unité CIQUAL)
     "vitamin_d_ug":     "vitamin_d",
     "vitamin_e_mg":     "vitamin_e",
     "vitamin_k1_ug":    "vitamin_k",
     "vitamin_k2_ug":    "vitamin_k",   # s'additionne (K1 + K2)
-    "folate_ug":        "folate",
+    "folate_dfe_ug":    "folate",      # corrigé depuis folate_ug (DFE = unité CIQUAL)
+    # Oméga-3 — s'additionnent (ALA + EPA + DHA)
     "omega3_g":         "omega3",
-    "omega3_ala_g":     "omega3",      # s'additionne (ALA + EPA + DHA)
-    "omega3_epa_g":     "omega3",
-    "omega3_dha_g":     "omega3",
+    "fa_18_3_ala_g":    "omega3",
+    "fa_20_5_epa_g":    "omega3",
+    "fa_22_6_dha_g":    "omega3",
 }
 
 
@@ -212,9 +219,13 @@ def compute_nutrition(recipe: dict,
     totals           = {k: 0.0 for k in ALL_KEYS}
     gi_sum, gi_n     = 0.0, 0
 
+    # Plat chaud → utiliser les valeurs nutritionnelles cuites quand disponibles.
+    # Un plat est considéré "chaud" si timing.cook_min > 0.
+    is_hot_dish: bool = (recipe.get("timing", {}).get("cook_min") or 0) > 0
+
     ingredients = recipe.get("ingredients", [])
     comp        = {c["ingredient"]: c for c in recipe.get("composition", [])}
-    
+
     if not ingredients and comp:
         ingredients = list(comp.keys())
 
@@ -224,7 +235,43 @@ def compute_nutrition(recipe: dict,
         if not token:
             continue
         ing = get_data.ingredients.get_by_name(token)
-        n_data = get_data.ingredients.resolve_nutrition(token)
+
+        # Décision cuisson par ingrédient :
+        #   - plat chaud par défaut → use_cooked=True
+        #   - sauf si meta.final_state == "raw" (garnish, herbe fraîche…)
+        #   - sauf si meta.state == "cooked" (ingrédient déjà pré-cuit en entrée)
+        #   - sauf si catégorie "poids sec" (grain/legume/pasta/flour) :
+        #     les recettes spécifient la quantité en poids sec, mais les clés N2
+        #     "cuit" sont par 100g réhydraté → substitution invalide.
+        _DRY_WEIGHT_CATS = {"grain", "cereal", "legume", "pulse", "pasta", "noodle", "flour"}
+        comp_e = comp.get(token, {})
+        meta   = comp_e.get("meta", {}) if comp_e else {}
+        final_state = meta.get("final_state")        # override explicite
+        input_state = meta.get("state", "")          # état entrant
+        ing_cat     = (ing.get("category") or "") if ing else ""
+        cooked_subst_ok = bool(ing.get("cooked_subst_ok")) if ing else False
+        stays_raw = (
+            final_state == "raw"                     # override manuel
+            or input_state in ("cooked", "sauteed", "grilled", "baked", "roasted")
+            or (ing_cat in _DRY_WEIGHT_CATS and not cooked_subst_ok)
+            # poids sec → pas de substitution, sauf exception explicite (légume frais)
+        )
+        use_cooked = is_hot_dish and not stays_raw
+
+        # État de cuisson explicite déclaré dans la composition (override précis)
+        # Exemples : meta.state = "roasted", "sauteed", "grilled"
+        # Si présent et pas "raw", il remplace la logique use_cooked générique.
+        explicit_cooking_state: str | None = None
+        if input_state and input_state not in ("raw", ""):
+            explicit_cooking_state = input_state
+        elif final_state and final_state not in ("raw", ""):
+            explicit_cooking_state = final_state
+
+        n_data = get_data.ingredients.resolve_nutrition(
+            token,
+            use_cooked=use_cooked,
+            cooking_state=explicit_cooking_state,
+        )
 
         if not n_data:
             continue
@@ -232,8 +279,7 @@ def compute_nutrition(recipe: dict,
         # Normaliser les champs v2 (calories_kcal → calories, protein_g → protein...)
         n_data = _normalize_n_data(n_data)
 
-        # Quantité en grammes
-        comp_e = comp.get(token, {})
+        # Quantité en grammes (comp_e déjà résolu plus haut)
         cat = ing.get("category", "") if ing else ""
         if not comp_e:
             # Estimation par catégorie si pas de composition

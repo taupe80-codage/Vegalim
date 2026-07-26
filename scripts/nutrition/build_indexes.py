@@ -141,6 +141,9 @@ def build_nutrition_index(ingrs: dict, n2_version: str) -> dict:
             "version":           "3.0",
             "nutrition_version": n2_version,
             "generated_at":      now,
+            "generated_by":      "build_indexes.py",
+            "_generated":        True,
+            "_do_not_edit":      "Fichier auto-généré — toute modification manuelle sera écrasée au prochain run du pipeline.",
             "key_format":        "SOURCE:source_id  ex: CIQUAL:4028, CNF:501697, USDA:2644288",
             "total_entries":     len(lookup),
             "by_source": {
@@ -197,6 +200,9 @@ def build_token_index(ingrs: dict, igs: list, n2_version: str) -> dict:
             "version":           "6.0",
             "nutrition_version": n2_version,
             "generated_at":      now,
+            "generated_by":      "build_indexes.py",
+            "_generated":        True,
+            "_do_not_edit":      "Fichier auto-généré — toute modification manuelle sera écrasée au prochain run du pipeline.",
             "key_format":        "SOURCE:source_id  ex: CIQUAL:4028, CNF:501697, USDA:2644288",
             "total_entries":     len(index),
             "by_source": {

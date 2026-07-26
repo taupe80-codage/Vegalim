@@ -1,21 +1,21 @@
 {
   "summary": {
-    "ANIMAL_INGREDIENT": 9,
-    "DUPLICATE_EN": 861,
-    "FR_FORM_NOT_STRIPPED": 15,
-    "EN_FORM_NOT_STRIPPED": 28,
-    "FORM_AXIS_MISSING": 8,
-    "FORM_AXIS_IN_NAME": 4
+    "DUPLICATE_EN": 870,
+    "FR_FORM_NOT_STRIPPED": 8,
+    "EN_FORM_NOT_STRIPPED": 24,
+    "FORM_AXIS_IN_NAME": 9,
+    "FORM_AXIS_MISSING": 3,
+    "ANIMAL_INGREDIENT": 7
   },
-  "total_issues": 925,
-  "ig_count": 2093,
+  "total_issues": 921,
+  "ig_count": 1794,
   "issues": [
     {
-      "category": "ANIMAL_INGREDIENT",
-      "id": "ing_00005",
-      "en": "gelatin",
-      "fr": "gélatine",
-      "msg": "\"gelatin\""
+      "category": "DUPLICATE_EN",
+      "id": "ing_00063",
+      "en": "aspartame",
+      "fr": "aspartame",
+      "msg": "même nom EN que ing_00057: \"aspartame\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -32,6 +32,20 @@
       "msg": "\"extrait de levure à tartiner\" (form:paste)"
     },
     {
+      "category": "DUPLICATE_EN",
+      "id": "ing_00027",
+      "en": "baker's yeast",
+      "fr": "levure de boulanger",
+      "msg": "même nom EN que ing_00025: \"baker's yeast\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_00031",
+      "en": "baker's yeast",
+      "fr": "levure de boulanger",
+      "msg": "même nom EN que ing_00025: \"baker's yeast\""
+    },
+    {
       "category": "EN_FORM_NOT_STRIPPED",
       "id": "ing_00014",
       "en": "baking powder",
@@ -41,9 +55,9 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00069",
-      "en": "dulse (laver, nori)",
-      "fr": "rhodyménie palmé (main de mere, nori)",
-      "msg": "même nom EN que ing_00067: \"dulse (laver, nori)\""
+      "en": "dulse",
+      "fr": "dulse",
+      "msg": "même nom EN que ing_00067: \"dulse\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -54,24 +68,17 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00081",
-      "en": "spirulina",
-      "fr": "spiruline",
-      "msg": "même nom EN que ing_00075: \"spirulina\""
+      "id": "ing_00094",
+      "en": "irish moss",
+      "fr": "goémon rouge",
+      "msg": "même nom EN que ing_00071: \"irish moss\""
     },
     {
-      "category": "EN_FORM_NOT_STRIPPED",
-      "id": "ing_00111",
-      "en": "molokhia powder",
-      "fr": "meloukhia de corète",
-      "msg": "\"molokhia powder\" (form:powder)"
-    },
-    {
-      "category": "EN_FORM_NOT_STRIPPED",
-      "id": "ing_05622",
-      "en": "cocoa powder",
-      "fr": "cacao",
-      "msg": "\"cocoa powder\" (form:powder)"
+      "category": "DUPLICATE_EN",
+      "id": "ing_00117",
+      "en": "wakame",
+      "fr": "wakamé",
+      "msg": "même nom EN que ing_00079: \"wakame\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -89,24 +96,17 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00170",
-      "en": "coffee",
-      "fr": "café (régulier)",
-      "msg": "même nom EN que ing_00158: \"coffee\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00211",
-      "en": "capers",
-      "fr": "câpres",
-      "msg": "même nom EN que ing_00188: \"capers\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_00041",
-      "en": "salt, table",
-      "fr": "sel",
-      "msg": "même nom EN que ing_00039: \"salt, table\""
+      "en": "table salt",
+      "fr": "sel de table",
+      "msg": "même nom EN que ing_00039: \"table salt\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01226",
+      "en": "table salt",
+      "fr": "sel de table",
+      "msg": "même nom EN que ing_00039: \"table salt\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -131,13 +131,6 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00238",
-      "en": "amaranth",
-      "fr": "amarante",
-      "msg": "même nom EN que ing_00228: \"amaranth\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_00245",
       "en": "oat",
       "fr": "avoine",
@@ -149,13 +142,6 @@
       "en": "oat",
       "fr": "avoine",
       "msg": "même nom EN que ing_00243: \"oat\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00253",
-      "en": "buckwheat groats",
-      "fr": "gruau de sarrasin",
-      "msg": "même nom EN que ing_00251: \"buckwheat groats\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -173,20 +159,6 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00267",
-      "en": "oat bran",
-      "fr": "son d'avoine",
-      "msg": "même nom EN que ing_00255: \"oat bran\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00259",
-      "en": "oat",
-      "fr": "avoine",
-      "msg": "même nom EN que ing_00243: \"oat\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_00271",
       "en": "oat",
       "fr": "avoine",
@@ -194,21 +166,14 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00304",
-      "en": "Kamut (Khorasan wheat)",
-      "fr": "kamut khorasan",
-      "msg": "même nom EN que ing_00302: \"Kamut (Khorasan wheat)\""
+      "id": "ing_00302",
+      "en": "Kamut Khorasan wheat",
+      "fr": "blé kamut khorasan",
+      "msg": "même nom EN que ing_00276: \"Kamut Khorasan wheat\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00383",
-      "en": "wheat",
-      "fr": "blé",
-      "msg": "même nom EN que ing_00417: \"wheat\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00385",
       "en": "wheat",
       "fr": "blé",
       "msg": "même nom EN que ing_00417: \"wheat\""
@@ -237,9 +202,9 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00401",
-      "en": "white, all purpose",
+      "en": "all purpose white",
       "fr": "blanche tout usage",
-      "msg": "même nom EN que ing_00399: \"white, all purpose\""
+      "msg": "même nom EN que ing_00399: \"all purpose white\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -249,46 +214,60 @@
       "msg": "même nom EN que ing_00417: \"wheat\""
     },
     {
+      "category": "EN_FORM_NOT_STRIPPED",
+      "id": "ing_00513",
+      "en": "bread flour",
+      "fr": "farine à pain",
+      "msg": "\"bread flour\" (form:flour)"
+    },
+    {
+      "category": "FORM_AXIS_IN_NAME",
+      "id": "ing_00513",
+      "en": "bread flour",
+      "fr": "farine à pain",
+      "msg": "\"bread flour\" contient \"flour\" mais axe form=flour"
+    },
+    {
       "category": "DUPLICATE_EN",
-      "id": "ing_00438",
-      "en": "wheat",
-      "fr": "blé",
-      "msg": "même nom EN que ing_00417: \"wheat\""
+      "id": "ing_00515",
+      "en": "wheat germ",
+      "fr": "germe de blé",
+      "msg": "même nom EN que ing_00391: \"wheat germ\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00354",
       "en": "bulgur",
-      "fr": "bulgur",
-      "msg": "même nom EN que ing_00352: \"bulgur\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00356",
-      "en": "bulgur",
-      "fr": "bulgur",
-      "msg": "même nom EN que ing_00352: \"bulgur\""
+      "fr": "boulgour",
+      "msg": "même nom EN que ing_00350: \"bulgur\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00358",
-      "en": "bulgur wheat",
-      "fr": "boulgour de blé",
-      "msg": "même nom EN que ing_00350: \"bulgur wheat\""
+      "en": "bulgur",
+      "fr": "boulgour",
+      "msg": "même nom EN que ing_00350: \"bulgur\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_00363",
+      "en": "couscous",
+      "fr": "couscous",
+      "msg": "même nom EN que ing_00361: \"couscous\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00365",
       "en": "couscous",
       "fr": "couscous",
-      "msg": "même nom EN que ing_00363: \"couscous\""
+      "msg": "même nom EN que ing_00361: \"couscous\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00369",
       "en": "couscous",
       "fr": "couscous",
-      "msg": "même nom EN que ing_00363: \"couscous\""
+      "msg": "même nom EN que ing_00361: \"couscous\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -299,7 +278,7 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00463",
+      "id": "ing_00461",
       "en": "millet",
       "fr": "millet",
       "msg": "même nom EN que ing_00457: \"millet\""
@@ -308,7 +287,7 @@
       "category": "DUPLICATE_EN",
       "id": "ing_00052",
       "en": "millet",
-      "fr": "mil",
+      "fr": "millet",
       "msg": "même nom EN que ing_00457: \"millet\""
     },
     {
@@ -320,45 +299,73 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00474",
+      "id": "ing_00476",
       "en": "barley",
       "fr": "orge",
-      "msg": "même nom EN que ing_00470: \"barley\""
+      "msg": "même nom EN que ing_00474: \"barley\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00480",
       "en": "pearl barley",
-      "fr": "orge perlée",
+      "fr": "orge perlé",
       "msg": "même nom EN que ing_00478: \"pearl barley\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01453",
-      "en": "barley",
+      "en": "pearl barley",
       "fr": "orge perlé",
-      "msg": "même nom EN que ing_00470: \"barley\""
+      "msg": "même nom EN que ing_00478: \"pearl barley\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01455",
-      "en": "barley",
+      "en": "pearl barley",
       "fr": "orge perlé",
-      "msg": "même nom EN que ing_00470: \"barley\""
+      "msg": "même nom EN que ing_00478: \"pearl barley\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00468",
       "en": "barley",
       "fr": "orge",
-      "msg": "même nom EN que ing_00470: \"barley\""
+      "msg": "même nom EN que ing_00474: \"barley\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00509",
-      "en": "wheat",
-      "fr": "blé",
-      "msg": "même nom EN que ing_00417: \"wheat\""
+      "id": "ing_00556",
+      "en": "white bread",
+      "fr": "pain blanc",
+      "msg": "même nom EN que ing_00554: \"white bread\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_00594",
+      "en": "pita bread",
+      "fr": "pain pita",
+      "msg": "même nom EN que ing_00497: \"pita bread\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_00524",
+      "en": "indian, bread, naan",
+      "fr": "indien pain naan blé entier",
+      "msg": "même nom EN que ing_00522: \"indian, bread, naan\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_00572",
+      "en": "white sandwich bread",
+      "fr": "pain de mie blanc",
+      "msg": "même nom EN que ing_00568: \"white sandwich bread\""
+    },
+    {
+      "category": "FORM_AXIS_MISSING",
+      "id": "ing_00489",
+      "en": "bread, made with milk",
+      "fr": "pain avec du lait",
+      "msg": "\"bread, made with milk\" n'a pas d'axe form"
     },
     {
       "category": "DUPLICATE_EN",
@@ -366,6 +373,13 @@
       "en": "egg pasta",
       "fr": "pâtes aux oeufs",
       "msg": "même nom EN que ing_00635: \"egg pasta\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_00643",
+      "en": "pasta",
+      "fr": "pâtes",
+      "msg": "même nom EN que ing_00641: \"pasta\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -405,13 +419,6 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00670",
-      "en": "quinoa",
-      "fr": "quinoa",
-      "msg": "même nom EN que ing_00660: \"quinoa\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00668",
       "en": "quinoa",
       "fr": "quinoa",
       "msg": "même nom EN que ing_00660: \"quinoa\""
@@ -469,14 +476,14 @@
       "category": "DUPLICATE_EN",
       "id": "ing_00707",
       "en": "white rice",
-      "fr": "riz blanc ordinaire",
+      "fr": "riz blanc",
       "msg": "même nom EN que ing_00683: \"white rice\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00709",
       "en": "white rice",
-      "fr": "riz blanc ordinaire",
+      "fr": "riz blanc",
       "msg": "même nom EN que ing_00683: \"white rice\""
     },
     {
@@ -497,14 +504,14 @@
       "category": "DUPLICATE_EN",
       "id": "ing_00715",
       "en": "white rice",
-      "fr": "riz blanc grain court",
+      "fr": "riz blanc",
       "msg": "même nom EN que ing_00683: \"white rice\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00717",
       "en": "white rice",
-      "fr": "riz blanc grain court",
+      "fr": "riz blanc",
       "msg": "même nom EN que ing_00683: \"white rice\""
     },
     {
@@ -516,14 +523,14 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00733",
-      "en": "white rice",
-      "fr": "riz blanc",
-      "msg": "même nom EN que ing_00683: \"white rice\""
+      "id": "ing_00727",
+      "en": "brown rice",
+      "fr": "riz brun",
+      "msg": "même nom EN que ing_00679: \"brown rice\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00735",
+      "id": "ing_00731",
       "en": "white rice",
       "fr": "riz blanc",
       "msg": "même nom EN que ing_00683: \"white rice\""
@@ -579,13 +586,6 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00768",
-      "en": "white rice",
-      "fr": "riz blanc",
-      "msg": "même nom EN que ing_00683: \"white rice\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_00772",
       "en": "brown rice",
       "fr": "riz complet",
@@ -616,15 +616,8 @@
       "category": "DUPLICATE_EN",
       "id": "ing_00784",
       "en": "white rice",
-      "fr": "riz blanc ordinaire",
+      "fr": "riz blanc",
       "msg": "même nom EN que ing_00683: \"white rice\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00687",
-      "en": "brown rice",
-      "fr": "riz brun",
-      "msg": "même nom EN que ing_00679: \"brown rice\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -646,13 +639,6 @@
       "en": "rice vermicelli",
       "fr": "vermicelles de riz",
       "msg": "même nom EN que ing_00782: \"rice vermicelli\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00791",
-      "en": "buckwheat",
-      "fr": "sarrasin",
-      "msg": "même nom EN que ing_00787: \"buckwheat\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -684,34 +670,6 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00442",
-      "en": "wheat",
-      "fr": "blé",
-      "msg": "même nom EN que ing_00417: \"wheat\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00415",
-      "en": "wheat germ",
-      "fr": "germe de brut",
-      "msg": "même nom EN que ing_00391: \"wheat germ\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00421",
-      "en": "wheat bran",
-      "fr": "son de blé",
-      "msg": "même nom EN que ing_00397: \"wheat bran\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00515",
-      "en": "wheat germ",
-      "fr": "germe de blé",
-      "msg": "même nom EN que ing_00391: \"wheat germ\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_00819",
       "en": "sorghum",
       "fr": "sorgho",
@@ -719,7 +677,7 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00827",
+      "id": "ing_00821",
       "en": "sorghum",
       "fr": "sorgho",
       "msg": "même nom EN que ing_00817: \"sorghum\""
@@ -727,22 +685,36 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01479",
-      "en": "sorghum, white",
-      "fr": "sorgho",
-      "msg": "même nom EN que ing_00825: \"sorghum, white\""
+      "en": "white sorghum",
+      "fr": "sorgho blanc",
+      "msg": "même nom EN que ing_00825: \"white sorghum\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01481",
+      "en": "white sorghum",
+      "fr": "sorgho blanc",
+      "msg": "même nom EN que ing_00825: \"white sorghum\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01487",
+      "en": "tapioca",
+      "fr": "tapioca",
+      "msg": "même nom EN que ing_00830: \"tapioca\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01489",
-      "en": "tapioca, pearl",
-      "fr": "tapioca perlé",
-      "msg": "même nom EN que ing_01487: \"tapioca, pearl\""
+      "en": "tapioca",
+      "fr": "tapioca",
+      "msg": "même nom EN que ing_00830: \"tapioca\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00379",
       "en": "spelt",
-      "fr": "épeautre (grand épeautre)",
+      "fr": "épeautre",
       "msg": "même nom EN que ing_00290: \"spelt\""
     },
     {
@@ -761,7 +733,7 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00846",
+      "id": "ing_00844",
       "en": "apricot",
       "fr": "abricot",
       "msg": "même nom EN que ing_00840: \"apricot\""
@@ -782,42 +754,35 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00872",
+      "id": "ing_00850",
       "en": "apricot",
       "fr": "abricot",
       "msg": "même nom EN que ing_00840: \"apricot\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00876",
+      "id": "ing_00852",
       "en": "apricot",
       "fr": "abricot",
       "msg": "même nom EN que ing_00840: \"apricot\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00903",
+      "id": "ing_00854",
+      "en": "apricot",
+      "fr": "abricot",
+      "msg": "même nom EN que ing_00840: \"apricot\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_00901",
       "en": "pineapple",
       "fr": "ananas",
       "msg": "même nom EN que ing_00899: \"pineapple\""
     },
     {
-      "category": "FORM_AXIS_MISSING",
+      "category": "DUPLICATE_EN",
       "id": "ing_00907",
-      "en": "pineapple in juice",
-      "fr": "ananas au jus d'ananas",
-      "msg": "\"pineapple in juice\" n'a pas d'axe form"
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00911",
-      "en": "pineapple",
-      "fr": "ananas",
-      "msg": "même nom EN que ing_00899: \"pineapple\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01731",
       "en": "pineapple",
       "fr": "ananas",
       "msg": "même nom EN que ing_00899: \"pineapple\""
@@ -838,42 +803,7 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00920",
-      "en": "bananas",
-      "fr": "banane",
-      "msg": "même nom EN que ing_00918: \"bananas\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00942",
-      "en": "plantains",
-      "fr": "banane plantain",
-      "msg": "même nom EN que ing_00922: \"plantains\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00944",
-      "en": "bananas",
-      "fr": "banane",
-      "msg": "même nom EN que ing_00918: \"bananas\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00946",
-      "en": "bananas",
-      "fr": "banane",
-      "msg": "même nom EN que ing_00918: \"bananas\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_00959",
-      "en": "cranberry",
-      "fr": "canneberge",
-      "msg": "même nom EN que ing_00953: \"cranberry\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00962",
       "en": "cranberry",
       "fr": "canneberge",
       "msg": "même nom EN que ing_00953: \"cranberry\""
@@ -887,10 +817,24 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01024",
-      "en": "lime",
-      "fr": "citron vert",
-      "msg": "même nom EN que ing_01022: \"lime\""
+      "id": "ing_01006",
+      "en": "sour cherry",
+      "fr": "griotte",
+      "msg": "même nom EN que ing_00979: \"sour cherry\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01014",
+      "en": "cherry",
+      "fr": "cerise",
+      "msg": "même nom EN que ing_00975: \"cherry\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_00987",
+      "en": "cherry",
+      "fr": "cerise",
+      "msg": "même nom EN que ing_00975: \"cherry\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -901,13 +845,6 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01032",
-      "en": "lime",
-      "fr": "citron vert",
-      "msg": "même nom EN que ing_01022: \"lime\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_01035",
       "en": "lemon",
       "fr": "citron",
@@ -915,7 +852,7 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01037",
+      "id": "ing_01039",
       "en": "lemon",
       "fr": "citron",
       "msg": "même nom EN que ing_01028: \"lemon\""
@@ -926,13 +863,6 @@
       "en": "lemon",
       "fr": "citron",
       "msg": "même nom EN que ing_01028: \"lemon\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01263",
-      "en": "clementine",
-      "fr": "clémentine",
-      "msg": "même nom EN que ing_01252: \"clementine\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -958,16 +888,58 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01070",
-      "en": "figs",
+      "en": "fig",
       "fr": "figue",
-      "msg": "même nom EN que ing_01066: \"figs\""
+      "msg": "même nom EN que ing_01059: \"fig\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01072",
-      "en": "prickly pear",
-      "fr": "figue de Barbarie",
-      "msg": "même nom EN que ing_01068: \"prickly pear\""
+      "id": "ing_01074",
+      "en": "fig",
+      "fr": "figue",
+      "msg": "même nom EN que ing_01059: \"fig\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01090",
+      "en": "strawberry",
+      "fr": "fraise",
+      "msg": "même nom EN que ing_01085: \"strawberry\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01092",
+      "en": "strawberry",
+      "fr": "fraise",
+      "msg": "même nom EN que ing_01085: \"strawberry\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01104",
+      "en": "raspberry",
+      "fr": "framboise",
+      "msg": "même nom EN que ing_01097: \"raspberry\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01106",
+      "en": "raspberry",
+      "fr": "framboise",
+      "msg": "même nom EN que ing_01097: \"raspberry\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01108",
+      "en": "raspberry",
+      "fr": "framboise",
+      "msg": "même nom EN que ing_01097: \"raspberry\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01119",
+      "en": "purple passion fruit",
+      "fr": "fruit de la passion violet",
+      "msg": "même nom EN que ing_01115: \"purple passion fruit\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -975,13 +947,6 @@
       "en": "passion fruit",
       "fr": "fruit de la passion",
       "msg": "même nom EN que ing_01121: \"passion fruit\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01130",
-      "en": "carambola (star fruit)",
-      "fr": "carambole",
-      "msg": "même nom EN que ing_01128: \"carambola (star fruit)\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -999,31 +964,31 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01170",
-      "en": "pomegranate",
-      "fr": "grenade",
-      "msg": "même nom EN que ing_01164: \"pomegranate\""
+      "id": "ing_01181",
+      "en": "currant",
+      "fr": "groseille",
+      "msg": "même nom EN que ing_01179: \"currant\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01190",
+      "en": "currant",
+      "fr": "groseille",
+      "msg": "même nom EN que ing_01179: \"currant\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01199",
-      "en": "persimmon, japanese",
+      "en": "persimmon",
       "fr": "kaki",
-      "msg": "même nom EN que ing_01197: \"persimmon, japanese\""
+      "msg": "même nom EN que ing_01197: \"persimmon\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01201",
-      "en": "persimmon, japanese",
-      "fr": "kaki (diospyros kaki)",
-      "msg": "même nom EN que ing_01197: \"persimmon, japanese\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01214",
-      "en": "kiwifruit (kiwi), green",
+      "id": "ing_01212",
+      "en": "kiwi",
       "fr": "kiwi",
-      "msg": "même nom EN que ing_01212: \"kiwifruit (kiwi), green\""
+      "msg": "même nom EN que ing_01208: \"kiwi\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1034,38 +999,59 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01222",
-      "en": "lime",
-      "fr": "citron vert",
-      "msg": "même nom EN que ing_01022: \"lime\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_01224",
       "en": "lime",
       "fr": "citron vert",
-      "msg": "même nom EN que ing_01022: \"lime\""
+      "msg": "même nom EN que ing_01222: \"lime\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01247",
+      "id": "ing_01240",
+      "en": "lime",
+      "fr": "citron vert",
+      "msg": "même nom EN que ing_01222: \"lime\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01022",
+      "en": "lime",
+      "fr": "citron vert",
+      "msg": "même nom EN que ing_01222: \"lime\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01024",
+      "en": "lime",
+      "fr": "citron vert",
+      "msg": "même nom EN que ing_01222: \"lime\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01032",
+      "en": "lime",
+      "fr": "citron vert",
+      "msg": "même nom EN que ing_01222: \"lime\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01245",
       "en": "lychee",
       "fr": "litchi",
-      "msg": "même nom EN que ing_01245: \"lychee\""
+      "msg": "même nom EN que ing_01243: \"lychee\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01249",
       "en": "lychee",
       "fr": "litchi",
-      "msg": "même nom EN que ing_01245: \"lychee\""
+      "msg": "même nom EN que ing_01243: \"lychee\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01259",
-      "en": "tangerine (mandarin)",
-      "fr": "tangerine (mandarine)",
-      "msg": "même nom EN que ing_01257: \"tangerine (mandarin)\""
+      "en": "tangerine",
+      "fr": "tangerine",
+      "msg": "même nom EN que ing_01257: \"tangerine\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1076,108 +1062,143 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_01270",
+      "en": "tangerine",
+      "fr": "tangerine",
+      "msg": "même nom EN que ing_01257: \"tangerine\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_01272",
-      "en": "tangerine (mandarin)",
-      "fr": "tangerine (mandarine)",
-      "msg": "même nom EN que ing_01257: \"tangerine (mandarin)\""
+      "en": "tangerine",
+      "fr": "tangerine",
+      "msg": "même nom EN que ing_01257: \"tangerine\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01281",
-      "en": "Tommy Atkins mango",
+      "en": "mango",
       "fr": "mangue",
-      "msg": "même nom EN que ing_01279: \"Tommy Atkins mango\""
+      "msg": "même nom EN que ing_01275: \"mango\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01283",
-      "en": "Tommy Atkins mango",
-      "fr": "mangue",
-      "msg": "même nom EN que ing_01279: \"Tommy Atkins mango\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01300",
-      "en": "watermelon",
-      "fr": "pastèque",
-      "msg": "même nom EN que ing_01298: \"watermelon\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01322",
-      "en": "blueberries",
+      "id": "ing_01314",
+      "en": "blueberry",
       "fr": "myrtille",
-      "msg": "même nom EN que ing_01314: \"blueberries\""
+      "msg": "même nom EN que ing_01316: \"blueberry\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01344",
-      "en": "blackberry",
-      "fr": "mûre (de ronce)",
-      "msg": "même nom EN que ing_01338: \"blackberry\""
+      "id": "ing_01324",
+      "en": "blueberry",
+      "fr": "myrtille",
+      "msg": "même nom EN que ing_01316: \"blueberry\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01346",
-      "en": "mulberry",
+      "en": "blackberry",
       "fr": "mûre noire (du mûrier)",
-      "msg": "même nom EN que ing_01342: \"mulberry\""
+      "msg": "même nom EN que ing_01336: \"blackberry\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01398",
-      "en": "orange",
-      "fr": "orange",
-      "msg": "même nom EN que ing_01381: \"orange\""
+      "id": "ing_05638",
+      "en": "blackberry",
+      "fr": "mûre",
+      "msg": "même nom EN que ing_01336: \"blackberry\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05630",
+      "en": "blackberry",
+      "fr": "mûre",
+      "msg": "même nom EN que ing_01336: \"blackberry\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01371",
+      "en": "orange peel",
+      "fr": "orange zeste",
+      "msg": "même nom EN que ing_01366: \"orange peel\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01400",
       "en": "orange",
       "fr": "orange",
-      "msg": "même nom EN que ing_01381: \"orange\""
+      "msg": "même nom EN que ing_01398: \"orange\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01402",
+      "en": "orange",
+      "fr": "orange",
+      "msg": "même nom EN que ing_01398: \"orange\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01408",
       "en": "orange",
       "fr": "orange",
-      "msg": "même nom EN que ing_01381: \"orange\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01412",
-      "en": "orange",
-      "fr": "orange",
-      "msg": "même nom EN que ing_01381: \"orange\""
+      "msg": "même nom EN que ing_01398: \"orange\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01414",
       "en": "orange",
       "fr": "orange",
-      "msg": "même nom EN que ing_01381: \"orange\""
+      "msg": "même nom EN que ing_01398: \"orange\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01416",
       "en": "orange",
       "fr": "orange",
-      "msg": "même nom EN que ing_01381: \"orange\""
+      "msg": "même nom EN que ing_01398: \"orange\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01391",
+      "en": "orange",
+      "fr": "orange",
+      "msg": "même nom EN que ing_01398: \"orange\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01394",
+      "en": "orange",
+      "fr": "orange",
+      "msg": "même nom EN que ing_01398: \"orange\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01421",
       "en": "grapefruit",
-      "fr": "pamplemousse (pomélo)",
+      "fr": "pamplemousse",
       "msg": "même nom EN que ing_01419: \"grapefruit\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01431",
+      "id": "ing_01423",
       "en": "grapefruit",
-      "fr": "pomelo (dit Pamplemousse)",
+      "fr": "pamplemousse",
       "msg": "même nom EN que ing_01419: \"grapefruit\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01427",
+      "en": "grapefruit",
+      "fr": "Pamplemousse",
+      "msg": "même nom EN que ing_01419: \"grapefruit\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01916",
+      "en": "white grapefruit",
+      "fr": "pamplemousse blanc",
+      "msg": "même nom EN que ing_01888: \"white grapefruit\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1196,58 +1217,30 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01440",
-      "en": "papaya pack",
+      "en": "papaya",
       "fr": "papaye",
-      "msg": "même nom EN que ing_01436: \"papaya pack\""
+      "msg": "même nom EN que ing_01434: \"papaya\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01443",
+      "id": "ing_01298",
       "en": "watermelon",
-      "fr": "pastèque",
-      "msg": "même nom EN que ing_01298: \"watermelon\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00930",
-      "en": "plantain",
-      "fr": "banane plantain",
-      "msg": "même nom EN que ing_00934: \"plantain\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00936",
-      "en": "plantains",
-      "fr": "banane plantain",
-      "msg": "même nom EN que ing_00922: \"plantains\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00938",
-      "en": "plantains",
-      "fr": "banane plantain",
-      "msg": "même nom EN que ing_00922: \"plantains\""
+      "fr": "pasteque",
+      "msg": "même nom EN que ing_01443: \"watermelon\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00940",
       "en": "plantains",
       "fr": "banane plantain",
-      "msg": "même nom EN que ing_00922: \"plantains\""
+      "msg": "même nom EN que ing_00938: \"plantains\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01473",
-      "en": "bartlett pear",
-      "fr": "poire",
-      "msg": "même nom EN que ing_01463: \"bartlett pear\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01475",
-      "en": "pear",
-      "fr": "poire",
-      "msg": "même nom EN que ing_01469: \"pear\""
+      "id": "ing_01467",
+      "en": "green anjou pear",
+      "fr": "poire anjou verte",
+      "msg": "même nom EN que ing_01459: \"green anjou pear\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1255,34 +1248,6 @@
       "en": "pear",
       "fr": "poire",
       "msg": "même nom EN que ing_01469: \"pear\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01521",
-      "en": "pear",
-      "fr": "poire",
-      "msg": "même nom EN que ing_01469: \"pear\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01544",
-      "en": "fuji apple",
-      "fr": "pomme",
-      "msg": "même nom EN que ing_01532: \"fuji apple\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01548",
-      "en": "granny smith apple",
-      "fr": "pomme",
-      "msg": "même nom EN que ing_01538: \"granny smith apple\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01579",
-      "en": "granny Smith apple",
-      "fr": "pomme Granny Smith",
-      "msg": "même nom EN que ing_01538: \"granny Smith apple\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1307,6 +1272,13 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_01635",
+      "en": "apple",
+      "fr": "pomme",
+      "msg": "même nom EN que ing_01540: \"apple\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_01657",
       "en": "apple",
       "fr": "pomme",
@@ -1322,20 +1294,34 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01682",
-      "en": "golden Delicious apple",
+      "en": "golden apple",
       "fr": "pomme Golden",
-      "msg": "même nom EN que ing_01536: \"golden Delicious apple\""
+      "msg": "même nom EN que ing_01577: \"golden apple\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01688",
+      "id": "ing_01684",
+      "en": "granny Smith apple",
+      "fr": "pomme Granny Smith",
+      "msg": "même nom EN que ing_01538: \"granny Smith apple\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01690",
       "en": "apple",
       "fr": "pomme",
       "msg": "même nom EN que ing_01540: \"apple\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01690",
+      "id": "ing_01555",
+      "en": "apple",
+      "fr": "pomme",
+      "msg": "même nom EN que ing_01540: \"apple\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05737",
       "en": "apple",
       "fr": "pomme",
       "msg": "même nom EN que ing_01540: \"apple\""
@@ -1349,21 +1335,7 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01796",
-      "en": "prune",
-      "fr": "pruneau",
-      "msg": "même nom EN que ing_01788: \"prune\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_01794",
-      "en": "prune",
-      "fr": "pruneau",
-      "msg": "même nom EN que ing_01788: \"prune\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01798",
       "en": "prune",
       "fr": "pruneau",
       "msg": "même nom EN que ing_01788: \"prune\""
@@ -1372,7 +1344,7 @@
       "category": "DUPLICATE_EN",
       "id": "ing_01800",
       "en": "prune",
-      "fr": "pruneau dénoyauté",
+      "fr": "pruneau",
       "msg": "même nom EN que ing_01788: \"prune\""
     },
     {
@@ -1384,10 +1356,10 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01786",
-      "en": "plum",
-      "fr": "prune",
-      "msg": "même nom EN que ing_01776: \"plum\""
+      "id": "ing_01816",
+      "en": "prune",
+      "fr": "pruneau",
+      "msg": "même nom EN que ing_01788: \"prune\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1398,10 +1370,10 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01816",
-      "en": "prune",
-      "fr": "pruneau",
-      "msg": "même nom EN que ing_01788: \"prune\""
+      "id": "ing_01790",
+      "en": "mirabelle",
+      "fr": "mirabelle",
+      "msg": "même nom EN que ing_01778: \"mirabelle\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1419,6 +1391,13 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_01833",
+      "en": "white peach",
+      "fr": "pêche blanche",
+      "msg": "même nom EN que ing_01825: \"white peach\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_01845",
       "en": "peach",
       "fr": "pêche",
@@ -1426,52 +1405,38 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01855",
+      "id": "ing_01819",
       "en": "peach",
       "fr": "pêche",
       "msg": "même nom EN que ing_01821: \"peach\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01904",
-      "en": "grapes, green",
+      "id": "ing_01831",
+      "en": "peach",
+      "fr": "pêche",
+      "msg": "même nom EN que ing_01821: \"peach\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01920",
+      "en": "grape",
       "fr": "raisin",
-      "msg": "même nom EN que ing_01892: \"grapes, green\""
+      "msg": "même nom EN que ing_01904: \"grape\""
     },
     {
-      "category": "EN_FORM_NOT_STRIPPED",
+      "category": "DUPLICATE_EN",
       "id": "ing_01922",
-      "en": "grape juice",
-      "fr": "jus de raisin",
-      "msg": "\"grape juice\" (form:juice)"
-    },
-    {
-      "category": "FR_FORM_NOT_STRIPPED",
-      "id": "ing_01922",
-      "en": "grape juice",
-      "fr": "jus de raisin",
-      "msg": "\"jus de raisin\" (form:juice)"
-    },
-    {
-      "category": "FORM_AXIS_IN_NAME",
-      "id": "ing_01922",
-      "en": "grape juice",
-      "fr": "jus de raisin",
-      "msg": "\"grape juice\" contient \"juice\" mais axe form=juice"
+      "en": "grape",
+      "fr": "raisin",
+      "msg": "même nom EN que ing_01904: \"grape\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01928",
-      "en": "vine leaf",
+      "en": "Grape leave",
       "fr": "feuille de vigne",
-      "msg": "même nom EN que ing_01872: \"vine leaf\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01953",
-      "en": "rhubarb",
-      "fr": "rhubarbe",
-      "msg": "même nom EN que ing_01951: \"rhubarb\""
+      "msg": "même nom EN que ing_01872: \"Grape leave\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1482,17 +1447,52 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01966",
-      "en": "tamarind",
-      "fr": "tamarin",
-      "msg": "même nom EN que ing_01964: \"tamarind\""
+      "id": "ing_01949",
+      "en": "rhubarb",
+      "fr": "rhubarbe",
+      "msg": "même nom EN que ing_01951: \"rhubarb\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02080",
-      "en": "basil",
-      "fr": "basilic",
-      "msg": "même nom EN que ing_02020: \"basil\""
+      "id": "ing_01955",
+      "en": "rhubarb",
+      "fr": "rhubarbe",
+      "msg": "même nom EN que ing_01951: \"rhubarb\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01994",
+      "en": "vanilla",
+      "fr": "vanille",
+      "msg": "même nom EN que ing_01990: \"vanilla\""
+    },
+    {
+      "category": "EN_FORM_NOT_STRIPPED",
+      "id": "ing_01996",
+      "en": "vanilla alcoholic extract",
+      "fr": "vanille extrait alcoolique",
+      "msg": "\"vanilla alcoholic extract\" (form:extract)"
+    },
+    {
+      "category": "FORM_AXIS_IN_NAME",
+      "id": "ing_01996",
+      "en": "vanilla alcoholic extract",
+      "fr": "vanille extrait alcoolique",
+      "msg": "\"vanilla alcoholic extract\" contient \"extract\" mais axe form=extract"
+    },
+    {
+      "category": "EN_FORM_NOT_STRIPPED",
+      "id": "ing_01998",
+      "en": "vanilla aqueous extract",
+      "fr": "vanille extrait aqueux",
+      "msg": "\"vanilla aqueous extract\" (form:extract)"
+    },
+    {
+      "category": "FORM_AXIS_IN_NAME",
+      "id": "ing_01998",
+      "en": "vanilla aqueous extract",
+      "fr": "vanille extrait aqueux",
+      "msg": "\"vanilla aqueous extract\" contient \"extract\" mais axe form=extract"
     },
     {
       "category": "DUPLICATE_EN",
@@ -1503,24 +1503,24 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01970",
-      "en": "chervil",
-      "fr": "cerfeuil",
-      "msg": "même nom EN que ing_02026: \"chervil\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_01981",
       "en": "chervil",
       "fr": "cerfeuil",
-      "msg": "même nom EN que ing_02026: \"chervil\""
+      "msg": "même nom EN que ing_01970: \"chervil\""
     },
     {
-      "category": "EN_FORM_NOT_STRIPPED",
-      "id": "ing_02088",
-      "en": "curry powder",
-      "fr": "curry",
-      "msg": "\"curry powder\" (form:spice)"
+      "category": "DUPLICATE_EN",
+      "id": "ing_02008",
+      "en": "coriander",
+      "fr": "coriandre",
+      "msg": "même nom EN que ing_02034: \"coriander\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04646",
+      "en": "coriander",
+      "fr": "coriandre",
+      "msg": "même nom EN que ing_02034: \"coriander\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1531,73 +1531,17 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04650",
-      "en": "dill seed",
-      "fr": "aneth",
-      "msg": "même nom EN que ing_02078: \"dill seed\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02094",
-      "en": "marjoram",
-      "fr": "marjolaine",
-      "msg": "même nom EN que ing_02044: \"marjoram\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04693",
-      "en": "nutmeg",
-      "fr": "noix de muscade",
-      "msg": "même nom EN que ing_02046: \"nutmeg\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02096",
-      "en": "oregano",
-      "fr": "origan",
-      "msg": "même nom EN que ing_02048: \"oregano\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01974",
-      "en": "parsley",
-      "fr": "persil",
-      "msg": "même nom EN que ing_02052: \"parsley\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_01985",
       "en": "parsley",
       "fr": "persil",
-      "msg": "même nom EN que ing_02052: \"parsley\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02100",
-      "en": "white pepper",
-      "fr": "poivre blanc",
-      "msg": "même nom EN que ing_02056: \"white pepper\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02105",
-      "en": "black pepper",
-      "fr": "poivre noir",
-      "msg": "même nom EN que ing_02054: \"black pepper\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01979",
-      "en": "rosemary",
-      "fr": "romarin",
-      "msg": "même nom EN que ing_02058: \"rosemary\""
+      "msg": "même nom EN que ing_01974: \"parsley\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01987",
       "en": "rosemary",
       "fr": "romarin",
-      "msg": "même nom EN que ing_02058: \"rosemary\""
+      "msg": "même nom EN que ing_01979: \"rosemary\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1622,24 +1566,10 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02090",
-      "en": "tarragon",
-      "fr": "estragon",
-      "msg": "même nom EN que ing_02068: \"tarragon\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_02012",
       "en": "tarragon",
       "fr": "estragon",
       "msg": "même nom EN que ing_02068: \"tarragon\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02113",
-      "en": "thyme",
-      "fr": "thym",
-      "msg": "même nom EN que ing_02070: \"thyme\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1664,21 +1594,7 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02145",
-      "en": "garlic",
-      "fr": "ail",
-      "msg": "même nom EN que ing_02133: \"garlic\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_02117",
-      "en": "garlic",
-      "fr": "ail",
-      "msg": "même nom EN que ing_02133: \"garlic\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02125",
       "en": "garlic",
       "fr": "ail",
       "msg": "même nom EN que ing_02133: \"garlic\""
@@ -1700,51 +1616,58 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02162",
-      "en": "artichoke (Globe, French)",
+      "en": "artichoke",
       "fr": "artichaut",
-      "msg": "même nom EN que ing_02156: \"artichoke (Globe, French)\""
+      "msg": "même nom EN que ing_02156: \"artichoke\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02164",
-      "en": "artichoke (Globe, French)",
+      "en": "artichoke",
       "fr": "artichaut",
-      "msg": "même nom EN que ing_02156: \"artichoke (Globe, French)\""
+      "msg": "même nom EN que ing_02156: \"artichoke\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_02166",
+      "en": "artichoke",
+      "fr": "artichaut",
+      "msg": "même nom EN que ing_02156: \"artichoke\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02170",
-      "en": "artichoke (Globe, French)",
+      "en": "artichoke",
       "fr": "artichaut",
-      "msg": "même nom EN que ing_02156: \"artichoke (Globe, French)\""
+      "msg": "même nom EN que ing_02156: \"artichoke\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02172",
-      "en": "artichoke (Globe, French)",
-      "fr": "artichaut",
-      "msg": "même nom EN que ing_02156: \"artichoke (Globe, French)\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02178",
       "en": "artichoke",
       "fr": "artichaut",
-      "msg": "même nom EN que ing_02166: \"artichoke\""
+      "msg": "même nom EN que ing_02156: \"artichoke\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02180",
-      "en": "artichoke (Globe, French)",
+      "en": "artichoke",
       "fr": "artichaut",
-      "msg": "même nom EN que ing_02156: \"artichoke (Globe, French)\""
+      "msg": "même nom EN que ing_02156: \"artichoke\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_02197",
+      "en": "white asparagus",
+      "fr": "asperge blanche",
+      "msg": "même nom EN que ing_02187: \"white asparagus\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02199",
       "en": "green asparagus",
       "fr": "asperge verte",
-      "msg": "même nom EN que ing_02189: \"green asparagus\""
+      "msg": "même nom EN que ing_02183: \"green asparagus\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1762,13 +1685,6 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02211",
-      "en": "asparagus",
-      "fr": "asperge",
-      "msg": "même nom EN que ing_02185: \"asparagus\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_02213",
       "en": "asparagus",
       "fr": "asperge",
@@ -1777,51 +1693,51 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02225",
-      "en": "eggplant (aubergine, brinjal)",
+      "en": "eggplant",
       "fr": "aubergine",
-      "msg": "même nom EN que ing_02220: \"eggplant (aubergine, brinjal)\""
+      "msg": "même nom EN que ing_02220: \"eggplant\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02227",
-      "en": "eggplant (aubergine, brinjal)",
+      "en": "eggplant",
       "fr": "aubergine",
-      "msg": "même nom EN que ing_02220: \"eggplant (aubergine, brinjal)\""
+      "msg": "même nom EN que ing_02220: \"eggplant\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02231",
-      "en": "eggplant (aubergine, brinjal)",
+      "en": "eggplant",
       "fr": "aubergine",
-      "msg": "même nom EN que ing_02220: \"eggplant (aubergine, brinjal)\""
+      "msg": "même nom EN que ing_02220: \"eggplant\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02233",
-      "en": "eggplant (aubergine, brinjal)",
+      "en": "eggplant",
       "fr": "aubergine",
-      "msg": "même nom EN que ing_02220: \"eggplant (aubergine, brinjal)\""
+      "msg": "même nom EN que ing_02220: \"eggplant\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02253",
-      "en": "burdock root",
-      "fr": "bardane (glouteron)",
-      "msg": "même nom EN que ing_02251: \"burdock root\""
+      "en": "burdock",
+      "fr": "bardane",
+      "msg": "même nom EN que ing_02251: \"burdock\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02255",
-      "en": "burdock root",
-      "fr": "bardane (glouteron)",
-      "msg": "même nom EN que ing_02251: \"burdock root\""
+      "en": "burdock",
+      "fr": "bardane",
+      "msg": "même nom EN que ing_02251: \"burdock\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02264",
-      "en": "red beetroot",
-      "fr": "betterave rouge",
-      "msg": "même nom EN que ing_02262: \"red beetroot\""
+      "en": "beetroot",
+      "fr": "betterave",
+      "msg": "même nom EN que ing_02260: \"beetroot\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1833,16 +1749,16 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02270",
-      "en": "beets",
-      "fr": "betteraves",
-      "msg": "même nom EN que ing_02260: \"beets\""
+      "en": "beetroot",
+      "fr": "betterave",
+      "msg": "même nom EN que ing_02260: \"beetroot\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02272",
-      "en": "beets",
-      "fr": "betteraves",
-      "msg": "même nom EN que ing_02260: \"beets\""
+      "en": "beetroot",
+      "fr": "betterave",
+      "msg": "même nom EN que ing_02260: \"beetroot\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1854,30 +1770,23 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02280",
-      "en": "beets",
-      "fr": "betteraves",
-      "msg": "même nom EN que ing_02260: \"beets\""
+      "en": "beetroot",
+      "fr": "betterave",
+      "msg": "même nom EN que ing_02260: \"beetroot\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02290",
-      "en": "swiss chard, leaf",
-      "fr": "bette côte",
-      "msg": "même nom EN que ing_02283: \"swiss chard, leaf\""
+      "en": "swiss chard",
+      "fr": "côte de bette",
+      "msg": "même nom EN que ing_02283: \"swiss chard\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02293",
-      "en": "swiss chard, leaf",
-      "fr": "bette côte",
-      "msg": "même nom EN que ing_02283: \"swiss chard, leaf\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02300",
-      "en": "chard, swiss",
-      "fr": "bette à carde",
-      "msg": "même nom EN que ing_02286: \"chard, swiss\""
+      "en": "swiss chard",
+      "fr": "côte de bette",
+      "msg": "même nom EN que ing_02283: \"swiss chard\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -1895,7 +1804,7 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02313",
+      "id": "ing_02315",
       "en": "broccoli",
       "fr": "brocoli",
       "msg": "même nom EN que ing_02309: \"broccoli\""
@@ -1946,7 +1855,7 @@
       "category": "DUPLICATE_EN",
       "id": "ing_01659",
       "en": "romanesco broccoli",
-      "fr": "brocoli à pomme",
+      "fr": "chou romanesco",
       "msg": "même nom EN que ing_01552: \"romanesco broccoli\""
     },
     {
@@ -2000,13 +1909,6 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02370",
-      "en": "carrot",
-      "fr": "carotte",
-      "msg": "même nom EN que ing_02334: \"carrot\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_02372",
       "en": "carrot",
       "fr": "carotte",
@@ -2029,44 +1931,23 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02404",
-      "en": "jew's ear (cloud or wood ear, pepeao)",
-      "fr": "oreilles de Judas",
-      "msg": "même nom EN que ing_02402: \"jew's ear (cloud or wood ear, pepeao)\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02416",
-      "en": "enoki mushroom",
-      "fr": "champignon enoki",
-      "msg": "même nom EN que ing_02414: \"enoki mushroom\""
+      "en": "jew's ear mushroom",
+      "fr": "champignon oreilles de Judas",
+      "msg": "même nom EN que ing_02402: \"jew's ear mushroom\""
     },
     {
       "category": "ANIMAL_INGREDIENT",
       "id": "ing_02420",
       "en": "king oyster mushroom",
-      "fr": "champignon king oyster",
+      "fr": "pleurotes du Panicaut",
       "msg": "\"king oyster mushroom\""
     },
     {
-      "category": "ANIMAL_INGREDIENT",
-      "id": "ing_02430",
-      "en": "oyster mushroom",
-      "fr": "champignon pleurote",
-      "msg": "\"oyster mushroom\""
-    },
-    {
       "category": "DUPLICATE_EN",
-      "id": "ing_02430",
-      "en": "oyster mushroom",
-      "fr": "champignon pleurote",
-      "msg": "même nom EN que ing_02392: \"oyster mushroom\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02438",
-      "en": "portabella (portobello) mushroom",
-      "fr": "champignon portobella (portobello)",
-      "msg": "même nom EN que ing_02436: \"portabella (portobello) mushroom\""
+      "id": "ing_02436",
+      "en": "portabella mushroom",
+      "fr": "champignon portobello",
+      "msg": "même nom EN que ing_02434: \"portabella mushroom\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2084,38 +1965,24 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02448",
-      "en": "shiitake mushroom",
-      "fr": "champignon shiitake",
-      "msg": "même nom EN que ing_02440: \"shiitake mushroom\""
+      "id": "ing_02454",
+      "en": "button mushroom",
+      "fr": "champignon de Paris",
+      "msg": "même nom EN que ing_02383: \"button mushroom\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02454",
+      "id": "ing_02457",
       "en": "button mushroom",
-      "fr": "champignon de couche",
+      "fr": "champignon de Paris",
       "msg": "même nom EN que ing_02383: \"button mushroom\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02480",
       "en": "button mushroom",
-      "fr": "champignon de couche",
+      "fr": "champignon de Paris",
       "msg": "même nom EN que ing_02383: \"button mushroom\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02485",
-      "en": "mushroom",
-      "fr": "champignon",
-      "msg": "même nom EN que ing_02478: \"mushroom\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02494",
-      "en": "chayote",
-      "fr": "chayotte",
-      "msg": "même nom EN que ing_02490: \"chayote\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2126,17 +1993,10 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02503",
-      "en": "chayote",
-      "fr": "chayotte",
-      "msg": "même nom EN que ing_02490: \"chayote\""
-    },
-    {
-      "category": "EN_FORM_NOT_STRIPPED",
-      "id": "ing_02526",
-      "en": "chicory powder",
-      "fr": "chicorée",
-      "msg": "\"chicory powder\" (form:powder)"
+      "id": "ing_02546",
+      "en": "napa cabbage",
+      "fr": "chou napa",
+      "msg": "même nom EN que ing_02544: \"napa cabbage\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2144,20 +2004,6 @@
       "en": "napa cabbage",
       "fr": "chou napa",
       "msg": "même nom EN que ing_02544: \"napa cabbage\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02556",
-      "en": "green cabbage",
-      "fr": "chou blanc",
-      "msg": "même nom EN que ing_02542: \"green cabbage\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02562",
-      "en": "red cabbage",
-      "fr": "chou rouge",
-      "msg": "même nom EN que ing_02552: \"red cabbage\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2224,31 +2070,17 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02585",
-      "en": "red cabbage",
-      "fr": "chou rouge",
-      "msg": "même nom EN que ing_02552: \"red cabbage\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_02587",
       "en": "savoy cabbage",
-      "fr": "chou de Milan (Savoie)",
+      "fr": "chou de Milan",
       "msg": "même nom EN que ing_02554: \"savoy cabbage\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02589",
       "en": "kale",
-      "fr": "chou vert frisé",
+      "fr": "chou kale",
       "msg": "même nom EN que ing_02560: \"kale\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02591",
-      "en": "kohlrabi",
-      "fr": "chou-rave",
-      "msg": "même nom EN que ing_02566: \"kohlrabi\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2261,14 +2093,14 @@
       "category": "DUPLICATE_EN",
       "id": "ing_02597",
       "en": "savoy cabbage",
-      "fr": "chou de Milan (Savoie)",
+      "fr": "chou de Milan",
       "msg": "même nom EN que ing_02554: \"savoy cabbage\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02599",
       "en": "kale",
-      "fr": "chou vert frisé",
+      "fr": "chou kale",
       "msg": "même nom EN que ing_02560: \"kale\""
     },
     {
@@ -2280,52 +2112,45 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02535",
-      "en": "cabbage",
-      "fr": "chou",
-      "msg": "même nom EN que ing_02550: \"cabbage\""
+      "id": "ing_02537",
+      "en": "collard",
+      "fr": "chou cavalier",
+      "msg": "même nom EN que ing_02535: \"collard\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02539",
-      "en": "collards",
-      "fr": "chou cavalier (collards)",
-      "msg": "même nom EN que ing_02537: \"collards\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02960",
-      "en": "kale",
-      "fr": "chou kale",
-      "msg": "même nom EN que ing_02560: \"kale\""
+      "en": "collard",
+      "fr": "chou cavalier",
+      "msg": "même nom EN que ing_02535: \"collard\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02615",
-      "en": "bok choy, pak-choi",
+      "en": "bok choy",
       "fr": "pak-choï",
-      "msg": "même nom EN que ing_02604: \"bok choy, pak-choi\""
+      "msg": "même nom EN que ing_02604: \"bok choy\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02617",
-      "en": "pak choi",
-      "fr": "chou chinois pak choï",
-      "msg": "même nom EN que ing_02610: \"pak choi\""
+      "en": "bok choy",
+      "fr": "pak-choï",
+      "msg": "même nom EN que ing_02604: \"bok choy\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_02620",
+      "en": "pe-tsai",
+      "fr": "pé-tsaï",
+      "msg": "même nom EN que ing_02608: \"pe-tsai\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02622",
-      "en": "Chinese (pe-tsai) cabbage",
-      "fr": "chou de Chine (pe-tsai)",
-      "msg": "même nom EN que ing_02608: \"Chinese (pe-tsai) cabbage\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02627",
-      "en": "brussels sprouts",
-      "fr": "chou de Bruxelles",
-      "msg": "même nom EN que ing_02625: \"brussels sprouts\""
+      "en": "pe-tsai",
+      "fr": "pé-tsaï",
+      "msg": "même nom EN que ing_02608: \"pe-tsai\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2358,16 +2183,9 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02642",
-      "en": "cauliflower, green",
+      "en": "green cauliflower",
       "fr": "chou-fleur vert",
-      "msg": "même nom EN que ing_02640: \"cauliflower, green\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02646",
-      "en": "cauliflower",
-      "fr": "chou-fleur",
-      "msg": "même nom EN que ing_02644: \"cauliflower\""
+      "msg": "même nom EN que ing_02640: \"green cauliflower\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2385,13 +2203,6 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02656",
-      "en": "cauliflower",
-      "fr": "chou-fleur",
-      "msg": "même nom EN que ing_02644: \"cauliflower\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_02658",
       "en": "cauliflower",
       "fr": "chou-fleur",
@@ -2400,9 +2211,9 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02660",
-      "en": "cauliflower, green",
+      "en": "green cauliflower",
       "fr": "chou-fleur vert",
-      "msg": "même nom EN que ing_02640: \"cauliflower, green\""
+      "msg": "même nom EN que ing_02640: \"green cauliflower\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2420,17 +2231,10 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02669",
-      "en": "cucumber",
-      "fr": "concombre",
-      "msg": "même nom EN que ing_02663: \"cucumber\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02683",
-      "en": "cucumber",
-      "fr": "concombre",
-      "msg": "même nom EN que ing_02663: \"cucumber\""
+      "id": "ing_02698",
+      "en": "pumpkin",
+      "fr": "citrouille",
+      "msg": "même nom EN que ing_02696: \"pumpkin\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2457,14 +2261,14 @@
       "category": "DUPLICATE_EN",
       "id": "ing_02734",
       "en": "acorn squash",
-      "fr": "courge courge poivrée (courgeon)",
+      "fr": "courge poivrée (courgeon)",
       "msg": "même nom EN que ing_02732: \"acorn squash\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02736",
       "en": "acorn squash",
-      "fr": "courge",
+      "fr": "courge poivrée (courgeon)",
       "msg": "même nom EN que ing_02732: \"acorn squash\""
     },
     {
@@ -2499,21 +2303,21 @@
       "category": "DUPLICATE_EN",
       "id": "ing_02754",
       "en": "butternut squash",
-      "fr": "courge butternut (doubeurre)",
+      "fr": "courge butternut",
       "msg": "même nom EN que ing_02742: \"butternut squash\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02756",
       "en": "butternut squash",
-      "fr": "courge butternut (doubeurre)",
+      "fr": "courge butternut",
       "msg": "même nom EN que ing_02742: \"butternut squash\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02758",
       "en": "butternut squash",
-      "fr": "courge butternut (doubeurre)",
+      "fr": "courge butternut",
       "msg": "même nom EN que ing_02742: \"butternut squash\""
     },
     {
@@ -2525,13 +2329,6 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02764",
-      "en": "spaghetti squash",
-      "fr": "courge spaghetti",
-      "msg": "même nom EN que ing_02716: \"spaghetti squash\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_02766",
       "en": "spaghetti squash",
       "fr": "courge spaghetti",
@@ -2540,16 +2337,16 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02774",
-      "en": "potimarron (red kuri squash)",
+      "en": "red kuri squash",
       "fr": "potimarron",
-      "msg": "même nom EN que ing_02772: \"potimarron (red kuri squash)\""
+      "msg": "même nom EN que ing_02772: \"red kuri squash\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02776",
-      "en": "potimarron (red kuri squash)",
+      "en": "red kuri squash",
       "fr": "potimarron",
-      "msg": "même nom EN que ing_02772: \"potimarron (red kuri squash)\""
+      "msg": "même nom EN que ing_02772: \"red kuri squash\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2575,23 +2372,23 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02790",
-      "en": "gourd, dishcloth (towelgourd)",
-      "fr": "courge torchon (towelgourd)",
-      "msg": "même nom EN que ing_02692: \"gourd, dishcloth (towelgourd)\""
+      "en": "towelgourd",
+      "fr": "courge torchon",
+      "msg": "même nom EN que ing_02692: \"towelgourd\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02792",
-      "en": "gourd, white flowered (calabash gourd)",
+      "en": "calabash gourd",
       "fr": "calebasse",
-      "msg": "même nom EN que ing_02694: \"gourd, white flowered (calabash gourd)\""
+      "msg": "même nom EN que ing_02694: \"calabash gourd\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02794",
-      "en": "pumpkin flowers",
+      "en": "pumpkin",
       "fr": "citrouille",
-      "msg": "même nom EN que ing_02698: \"pumpkin flowers\""
+      "msg": "même nom EN que ing_02696: \"pumpkin\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2631,9 +2428,9 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02806",
-      "en": "zucchini squash",
-      "fr": "courge courgette (zucchini)",
-      "msg": "même nom EN que ing_02730: \"zucchini squash\""
+      "en": "green zucchini squash",
+      "fr": "courgette",
+      "msg": "même nom EN que ing_02728: \"green zucchini squash\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2652,16 +2449,23 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02812",
-      "en": "gourd, dishcloth (towelgourd)",
-      "fr": "courge torchon (towelgourd)",
-      "msg": "même nom EN que ing_02692: \"gourd, dishcloth (towelgourd)\""
+      "en": "towelgourd",
+      "fr": "courge torchon",
+      "msg": "même nom EN que ing_02692: \"towelgourd\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_02814",
+      "en": "calabash gourd",
+      "fr": "calebasse",
+      "msg": "même nom EN que ing_02694: \"calabash gourd\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02816",
-      "en": "pumpkin flowers",
+      "en": "pumpkin",
       "fr": "citrouille",
-      "msg": "même nom EN que ing_02698: \"pumpkin flowers\""
+      "msg": "même nom EN que ing_02696: \"pumpkin\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2694,15 +2498,15 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02830",
-      "en": "zucchini squash",
-      "fr": "courge courgette (zucchini)",
-      "msg": "même nom EN que ing_02730: \"zucchini squash\""
+      "en": "green zucchini squash",
+      "fr": "courgette",
+      "msg": "même nom EN que ing_02728: \"green zucchini squash\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02832",
       "en": "acorn squash",
-      "fr": "courge courge poivrée (courgeon)",
+      "fr": "courge poivrée (courgeon)",
       "msg": "même nom EN que ing_02732: \"acorn squash\""
     },
     {
@@ -2728,45 +2532,59 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02690",
-      "en": "green zucchini squash",
-      "fr": "courgette",
-      "msg": "même nom EN que ing_02688: \"green zucchini squash\""
+      "id": "ing_02714",
+      "en": "pumpkin",
+      "fr": "citrouille",
+      "msg": "même nom EN que ing_02696: \"pumpkin\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02722",
+      "id": "ing_02688",
       "en": "green zucchini squash",
       "fr": "courgette",
-      "msg": "même nom EN que ing_02688: \"green zucchini squash\""
+      "msg": "même nom EN que ing_02728: \"green zucchini squash\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_02690",
+      "en": "green zucchini squash",
+      "fr": "courgette",
+      "msg": "même nom EN que ing_02728: \"green zucchini squash\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02768",
       "en": "green zucchini squash",
       "fr": "courgette",
-      "msg": "même nom EN que ing_02688: \"green zucchini squash\""
+      "msg": "même nom EN que ing_02728: \"green zucchini squash\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02770",
       "en": "green zucchini squash",
       "fr": "courgette",
-      "msg": "même nom EN que ing_02688: \"green zucchini squash\""
+      "msg": "même nom EN que ing_02728: \"green zucchini squash\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02849",
-      "en": "cress, garden",
+      "en": "garden cress",
       "fr": "cresson alénois",
-      "msg": "même nom EN que ing_02843: \"cress, garden\""
+      "msg": "même nom EN que ing_02843: \"garden cress\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02851",
-      "en": "cress, garden",
+      "en": "garden cress",
       "fr": "cresson alénois",
-      "msg": "même nom EN que ing_02843: \"cress, garden\""
+      "msg": "même nom EN que ing_02843: \"garden cress\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_02856",
+      "en": "celery",
+      "fr": "céleri",
+      "msg": "même nom EN que ing_02860: \"celery\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2780,7 +2598,7 @@
       "id": "ing_02866",
       "en": "celery",
       "fr": "céleri",
-      "msg": "même nom EN que ing_02856: \"celery\""
+      "msg": "même nom EN que ing_02860: \"celery\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2794,20 +2612,13 @@
       "id": "ing_02870",
       "en": "celery",
       "fr": "céleri",
-      "msg": "même nom EN que ing_02856: \"celery\""
+      "msg": "même nom EN que ing_02860: \"celery\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02876",
       "en": "celeriac",
       "fr": "céleri-rave",
-      "msg": "même nom EN que ing_02873: \"celeriac\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02878",
-      "en": "celeriac",
-      "fr": "céleri rave",
       "msg": "même nom EN que ing_02873: \"celeriac\""
     },
     {
@@ -2833,94 +2644,87 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02516",
-      "en": "endive (cichorium endivia)",
-      "fr": "endive",
-      "msg": "même nom EN que ing_02518: \"endive (cichorium endivia)\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_02532",
-      "en": "endive (cichorium endivia)",
+      "en": "endive",
       "fr": "endive",
-      "msg": "même nom EN que ing_02518: \"endive (cichorium endivia)\""
+      "msg": "même nom EN que ing_02516: \"endive\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02889",
-      "en": "fennel, bulb",
-      "fr": "fenouil",
-      "msg": "même nom EN que ing_02887: \"fennel, bulb\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02891",
-      "en": "fennel seed",
-      "fr": "fenouil graine",
-      "msg": "même nom EN que ing_02893: \"fennel seed\""
+      "id": "ing_02518",
+      "en": "endive",
+      "fr": "endive",
+      "msg": "même nom EN que ing_02516: \"endive\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02895",
-      "en": "fennel, bulb",
+      "en": "fennel",
       "fr": "fenouil",
-      "msg": "même nom EN que ing_02887: \"fennel, bulb\""
+      "msg": "même nom EN que ing_02887: \"fennel\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02897",
-      "en": "fennel, bulb",
+      "en": "fennel",
       "fr": "fenouil",
-      "msg": "même nom EN que ing_02887: \"fennel, bulb\""
+      "msg": "même nom EN que ing_02887: \"fennel\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_02913",
+      "en": "mustard",
+      "fr": "moutarde",
+      "msg": "même nom EN que ing_00195: \"mustard\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02917",
-      "en": "mustard greens",
+      "en": "mustard",
       "fr": "moutarde",
-      "msg": "même nom EN que ing_02913: \"mustard greens\""
+      "msg": "même nom EN que ing_00195: \"mustard\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02919",
-      "en": "mustard spinach (tendergreen)",
+      "en": "mustard spinach",
       "fr": "moutarde joncée",
-      "msg": "même nom EN que ing_02915: \"mustard spinach (tendergreen)\""
+      "msg": "même nom EN que ing_02915: \"mustard spinach\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02921",
-      "en": "mustard greens",
+      "en": "mustard",
       "fr": "moutarde",
-      "msg": "même nom EN que ing_02913: \"mustard greens\""
+      "msg": "même nom EN que ing_00195: \"mustard\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02923",
-      "en": "mustard spinach (tendergreen)",
+      "en": "mustard spinach",
       "fr": "moutarde joncée",
-      "msg": "même nom EN que ing_02915: \"mustard spinach (tendergreen)\""
+      "msg": "même nom EN que ing_02915: \"mustard spinach\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02939",
       "en": "okra",
-      "fr": "gombo fruit",
+      "fr": "gombo",
       "msg": "même nom EN que ing_02935: \"okra\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02941",
-      "en": "okra (gumbo)",
-      "fr": "okra (gombo)",
-      "msg": "même nom EN que ing_02937: \"okra (gumbo)\""
+      "en": "okra",
+      "fr": "gombo",
+      "msg": "même nom EN que ing_02935: \"okra\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02943",
-      "en": "okra (gumbo)",
-      "fr": "okra (gombo)",
-      "msg": "même nom EN que ing_02937: \"okra (gumbo)\""
+      "en": "okra",
+      "fr": "gombo",
+      "msg": "même nom EN que ing_02935: \"okra\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2931,45 +2735,17 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02951",
+      "id": "ing_02953",
       "en": "yam",
       "fr": "igname",
       "msg": "même nom EN que ing_02946: \"yam\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03509",
-      "en": "cos or romaine lettuce",
-      "fr": "laitue romaine",
-      "msg": "même nom EN que ing_03507: \"cos or romaine lettuce\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03511",
-      "en": "iceberg lettuce",
-      "fr": "laitue iceberg (pommée)",
-      "msg": "même nom EN que ing_03499: \"iceberg lettuce\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03513",
-      "en": "iceberg lettuce",
-      "fr": "laitue iceberg",
-      "msg": "même nom EN que ing_03499: \"iceberg lettuce\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03521",
-      "en": "red leaf lettuce",
-      "fr": "laitue rouges",
-      "msg": "même nom EN que ing_03517: \"red leaf lettuce\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03523",
-      "en": "romaine green lettuce",
-      "fr": "laitue romaine",
-      "msg": "même nom EN que ing_03501: \"romaine green lettuce\""
+      "id": "ing_02951",
+      "en": "yam",
+      "fr": "igname",
+      "msg": "même nom EN que ing_02946: \"yam\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -2994,17 +2770,17 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02998",
-      "en": "cereal, hot, corn grits (yellow)",
-      "fr": "céréale chaude maïs (jaune)",
-      "msg": "même nom EN que ing_02996: \"cereal, hot, corn grits (yellow)\""
+      "id": "ing_03002",
+      "en": "corn",
+      "fr": "maïs",
+      "msg": "même nom EN que ing_03000: \"corn\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03008",
-      "en": "corn, yellow",
-      "fr": "maïs jaune",
-      "msg": "même nom EN que ing_03002: \"corn, yellow\""
+      "id": "ing_03012",
+      "en": "corn",
+      "fr": "maïs",
+      "msg": "même nom EN que ing_03000: \"corn\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3015,17 +2791,31 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_03093",
+      "en": "sweet corn",
+      "fr": "maïs doux",
+      "msg": "même nom EN que ing_03006: \"sweet corn\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_03020",
-      "en": "corn, yellow",
-      "fr": "maïs jaune",
-      "msg": "même nom EN que ing_03002: \"corn, yellow\""
+      "en": "corn",
+      "fr": "maïs",
+      "msg": "même nom EN que ing_03000: \"corn\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_03040",
+      "en": "corn pasta",
+      "fr": "pâtes de maïs",
+      "msg": "même nom EN que ing_03038: \"corn pasta\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03135",
-      "en": "turnip, Prairie, native",
-      "fr": "navet des Prairies autochtone",
-      "msg": "même nom EN que ing_03133: \"turnip, Prairie, native\""
+      "en": "Prairie turnip",
+      "fr": "navet des Prairies",
+      "msg": "même nom EN que ing_03133: \"Prairie turnip\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3038,7 +2828,7 @@
       "category": "DUPLICATE_EN",
       "id": "ing_03141",
       "en": "turnip",
-      "fr": "nav",
+      "fr": "navet",
       "msg": "même nom EN que ing_03129: \"turnip\""
     },
     {
@@ -3061,13 +2851,6 @@
       "en": "turnip greens",
       "fr": "navet",
       "msg": "même nom EN que ing_03131: \"turnip greens\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03151",
-      "en": "turnip",
-      "fr": "navet",
-      "msg": "même nom EN que ing_03129: \"turnip\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3096,20 +2879,6 @@
       "en": "onion",
       "fr": "oignon",
       "msg": "même nom EN que ing_03197: \"onion\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03186",
-      "en": "red onion",
-      "fr": "oignon rouge",
-      "msg": "même nom EN que ing_03173: \"red onion\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03190",
-      "en": "yellow onion",
-      "fr": "oignon jaune",
-      "msg": "même nom EN que ing_03171: \"yellow onion\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3162,17 +2931,17 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02470",
-      "en": "yellow onion",
-      "fr": "oignon jaune",
-      "msg": "même nom EN que ing_03171: \"yellow onion\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_05728",
       "en": "white onion",
       "fr": "oignon blanc",
       "msg": "même nom EN que ing_03188: \"white onion\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_03236",
+      "en": "black olive",
+      "fr": "olive noire",
+      "msg": "même nom EN que ing_03234: \"black olive\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3267,6 +3036,13 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_01387",
+      "en": "sweet potato",
+      "fr": "patate douce",
+      "msg": "même nom EN que ing_03381: \"sweet potato\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_03379",
       "en": "sweet potato",
       "fr": "patate douce",
@@ -3283,7 +3059,7 @@
       "category": "DUPLICATE_EN",
       "id": "ing_03273",
       "en": "jalapeno pepper",
-      "fr": "piment jalapeño",
+      "fr": "piment jalapeno",
       "msg": "même nom EN que ing_03267: \"jalapeno pepper\""
     },
     {
@@ -3295,17 +3071,17 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00928",
-      "en": "banana pepper",
-      "fr": "piment banane",
-      "msg": "même nom EN que ing_00926: \"banana pepper\""
+      "id": "ing_03263",
+      "en": "red hot chili pepper",
+      "fr": "piment fort du Chili rouge",
+      "msg": "même nom EN que ing_03261: \"red hot chili pepper\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03296",
-      "en": "dandelion greens",
-      "fr": "pissenlit",
-      "msg": "même nom EN que ing_03294: \"dandelion greens\""
+      "id": "ing_03281",
+      "en": "cayenne pepper",
+      "fr": "piment cayenne",
+      "msg": "même nom EN que ing_02102: \"cayenne pepper\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3323,38 +3099,31 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01477",
-      "en": "leeks, bulb and greens",
-      "fr": "poireau",
-      "msg": "même nom EN que ing_03303: \"leeks, bulb and greens\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_01497",
-      "en": "leeks, bulb and greens",
+      "en": "leeks",
       "fr": "poireau",
-      "msg": "même nom EN que ing_03303: \"leeks, bulb and greens\""
+      "msg": "même nom EN que ing_01477: \"leeks\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01513",
-      "en": "leeks (bulb and lower-leaf portion)",
-      "fr": "poireaux (bulbe et portion inférieure)",
-      "msg": "même nom EN que ing_01457: \"leeks (bulb and lower-leaf portion)\""
+      "en": "leeks",
+      "fr": "poireaux",
+      "msg": "même nom EN que ing_01477: \"leeks\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01523",
-      "en": "leeks (bulb and lower-leaf portion)",
-      "fr": "poireaux (bulbe et portion inférieure)",
-      "msg": "même nom EN que ing_01457: \"leeks (bulb and lower-leaf portion)\""
+      "en": "leeks",
+      "fr": "poireaux",
+      "msg": "même nom EN que ing_01477: \"leeks\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01495",
-      "en": "leeks, bulb and greens",
+      "en": "leeks",
       "fr": "poireau",
-      "msg": "même nom EN que ing_03303: \"leeks, bulb and greens\""
+      "msg": "même nom EN que ing_01477: \"leeks\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3422,9 +3191,9 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02462",
-      "en": "bell yellow pepper",
+      "en": "yellow bell pepper",
       "fr": "poivron jaune",
-      "msg": "même nom EN que ing_03323: \"bell yellow pepper\""
+      "msg": "même nom EN que ing_03316: \"yellow bell pepper\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3438,13 +3207,6 @@
       "id": "ing_01591",
       "en": "potato",
       "fr": "pomme de terre",
-      "msg": "même nom EN que ing_01575: \"potato\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01593",
-      "en": "potato",
-      "fr": "pomme de terre bouille",
       "msg": "même nom EN que ing_01575: \"potato\""
     },
     {
@@ -3470,13 +3232,6 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01601",
-      "en": "potato",
-      "fr": "pomme de terre",
-      "msg": "même nom EN que ing_01575: \"potato\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_01605",
       "en": "red potato",
       "fr": "pomme de terre rouge",
@@ -3485,23 +3240,16 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01607",
-      "en": "Russet potato",
+      "en": "russet potato",
       "fr": "pomme de terre Russet",
-      "msg": "même nom EN que ing_03369: \"Russet potato\""
+      "msg": "même nom EN que ing_03369: \"russet potato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_01609",
-      "en": "Russet potato",
+      "en": "russet potato",
       "fr": "pomme de terre Russet",
-      "msg": "même nom EN que ing_03369: \"Russet potato\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01613",
-      "en": "potato skin",
-      "fr": "pomme de terre",
-      "msg": "même nom EN que ing_01611: \"potato skin\""
+      "msg": "même nom EN que ing_03369: \"russet potato\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3547,28 +3295,7 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_01739",
-      "en": "potato",
-      "fr": "pomme de terre",
-      "msg": "même nom EN que ing_01575: \"potato\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_01749",
-      "en": "potato",
-      "fr": "pomme de terre",
-      "msg": "même nom EN que ing_01575: \"potato\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01751",
-      "en": "potato",
-      "fr": "pomme de terre",
-      "msg": "même nom EN que ing_01575: \"potato\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03358",
       "en": "potato",
       "fr": "pomme de terre",
       "msg": "même nom EN que ing_01575: \"potato\""
@@ -3582,10 +3309,24 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03408",
-      "en": "purslane",
-      "fr": "pourpier",
-      "msg": "même nom EN que ing_03406: \"purslane\""
+      "id": "ing_05738",
+      "en": "red potato",
+      "fr": "pomme de terre rouge",
+      "msg": "même nom EN que ing_01603: \"red potato\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05739",
+      "en": "new potato",
+      "fr": "pomme de terre nouvelle",
+      "msg": "même nom EN que ing_01571: \"new potato\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05753",
+      "en": "potato",
+      "fr": "pomme de terre",
+      "msg": "même nom EN que ing_01575: \"potato\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3617,45 +3358,24 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03423",
-      "en": "bamboo",
-      "fr": "bambou",
-      "msg": "même nom EN que ing_03415: \"bamboo\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_03430",
-      "en": "lotus root",
+      "en": "lotus",
       "fr": "lotus",
-      "msg": "même nom EN que ing_03428: \"lotus root\""
+      "msg": "même nom EN que ing_03428: \"lotus\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03432",
-      "en": "lotus root",
+      "en": "lotus",
       "fr": "lotus",
-      "msg": "même nom EN que ing_03428: \"lotus root\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03439",
-      "en": "red radish",
-      "fr": "radis rouge",
-      "msg": "même nom EN que ing_03435: \"red radish\""
+      "msg": "même nom EN que ing_03428: \"lotus\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03445",
       "en": "oriental (daikon) radish",
-      "fr": "radis orientaux (daikon)",
+      "fr": "radis oriental (daikon)",
       "msg": "même nom EN que ing_03443: \"oriental (daikon) radish\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03451",
-      "en": "red radish",
-      "fr": "radis",
-      "msg": "même nom EN que ing_03435: \"red radish\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3673,6 +3393,13 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_03460",
+      "en": "drumstick (horseradish-tree)",
+      "fr": "cassier (ben oléifère)",
+      "msg": "même nom EN que ing_03458: \"drumstick (horseradish-tree)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_03468",
       "en": "drumstick (horseradish-tree)",
       "fr": "cassier (ben oléifère)",
@@ -3681,9 +3408,9 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03470",
-      "en": "drumstick (horseradish-tree), pods",
+      "en": "drumstick (horseradish-tree)",
       "fr": "cassier (ben oléifère)",
-      "msg": "même nom EN que ing_03460: \"drumstick (horseradish-tree), pods\""
+      "msg": "même nom EN que ing_03458: \"drumstick (horseradish-tree)\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3695,212 +3422,170 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03474",
-      "en": "drumstick (horseradish-tree), pods",
+      "en": "drumstick (horseradish-tree)",
       "fr": "cassier (ben oléifère)",
-      "msg": "même nom EN que ing_03460: \"drumstick (horseradish-tree), pods\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03481",
-      "en": "arugula, baby",
-      "fr": "roquette",
-      "msg": "même nom EN que ing_03477: \"arugula, baby\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03488",
-      "en": "rutabaga",
-      "fr": "rutabaga",
-      "msg": "même nom EN que ing_03486: \"rutabaga\""
+      "msg": "même nom EN que ing_03458: \"drumstick (horseradish-tree)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03490",
       "en": "rutabaga",
       "fr": "rutabaga",
-      "msg": "même nom EN que ing_03486: \"rutabaga\""
+      "msg": "même nom EN que ing_03484: \"rutabaga\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03492",
-      "en": "rutabaga (swede)",
-      "fr": "rutabaga (chou-navet)",
-      "msg": "même nom EN que ing_03484: \"rutabaga (swede)\""
+      "en": "rutabaga",
+      "fr": "rutabaga",
+      "msg": "même nom EN que ing_03484: \"rutabaga\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03494",
-      "en": "rutabaga (swede)",
-      "fr": "rutabaga (chou-navet)",
-      "msg": "même nom EN que ing_03484: \"rutabaga (swede)\""
+      "en": "rutabaga",
+      "fr": "rutabaga",
+      "msg": "même nom EN que ing_03484: \"rutabaga\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03562",
-      "en": "red tomato",
-      "fr": "tomate rouge",
-      "msg": "même nom EN que ing_03560: \"red tomato\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03570",
       "en": "tomato",
-      "fr": "tomate à 6 g/L",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "fr": "tomate",
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03574",
       "en": "tomato",
       "fr": "tomate",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03576",
       "en": "tomato",
       "fr": "tomate",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03582",
       "en": "tomato",
       "fr": "tomate",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03586",
       "en": "tomato",
       "fr": "tomate",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03588",
       "en": "tomato",
       "fr": "tomate",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "msg": "même nom EN que ing_03560: \"tomato\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_03596",
+      "en": "tomato",
+      "fr": "tomate",
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03598",
       "en": "tomato",
-      "fr": "tomates",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "fr": "tomate",
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03600",
       "en": "tomato",
-      "fr": "tomates",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "fr": "tomate",
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03602",
       "en": "tomato",
       "fr": "tomate",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03604",
       "en": "tomato",
       "fr": "tomate",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03612",
+      "id": "ing_03608",
       "en": "tomato",
       "fr": "tomate",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03614",
       "en": "tomato",
       "fr": "tomate",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03628",
       "en": "tomato",
       "fr": "tomate",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03632",
+      "id": "ing_03638",
       "en": "tomato",
       "fr": "tomate",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03634",
-      "en": "red tomato",
-      "fr": "tomate rouge",
-      "msg": "même nom EN que ing_03560: \"red tomato\""
-    },
-    {
-      "category": "EN_FORM_NOT_STRIPPED",
-      "id": "ing_03638",
-      "en": "tomato paste",
-      "fr": "tomate",
-      "msg": "\"tomato paste\" (form:paste)"
-    },
-    {
-      "category": "FORM_AXIS_IN_NAME",
-      "id": "ing_03638",
-      "en": "tomato paste",
-      "fr": "tomate",
-      "msg": "\"tomato paste\" contient \"paste\" mais axe form=paste"
-    },
-    {
-      "category": "EN_FORM_NOT_STRIPPED",
       "id": "ing_03644",
-      "en": "tomato sauce",
+      "en": "tomato",
       "fr": "tomate",
-      "msg": "\"tomato sauce\" (form:sauce)"
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03646",
-      "en": "red tomato",
-      "fr": "tomate rouge",
-      "msg": "même nom EN que ing_03560: \"red tomato\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_01912",
       "en": "tomato",
       "fr": "tomate",
-      "msg": "même nom EN que ing_03564: \"tomato\""
+      "msg": "même nom EN que ing_03560: \"tomato\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02159",
-      "en": "jerusalem artichoke (sunchoke)",
+      "en": "jerusalem artichoke",
       "fr": "topinambour",
-      "msg": "même nom EN que ing_03651: \"jerusalem artichoke (sunchoke)\""
+      "msg": "même nom EN que ing_03651: \"jerusalem artichoke\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03664",
-      "en": "cassava (manioc)",
+      "id": "ing_03658",
+      "en": "cassava",
       "fr": "manioc",
-      "msg": "même nom EN que ing_03656: \"cassava (manioc)\""
+      "msg": "même nom EN que ing_03656: \"cassava\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03666",
-      "en": "cassava (manioc)",
+      "en": "cassava",
       "fr": "manioc",
-      "msg": "même nom EN que ing_03656: \"cassava (manioc)\""
+      "msg": "même nom EN que ing_03656: \"cassava\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -3911,13 +3596,6 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03670",
-      "en": "cassava (manioc)",
-      "fr": "manioc",
-      "msg": "même nom EN que ing_03656: \"cassava (manioc)\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_03662",
       "en": "arrowroot",
       "fr": "arrowroot",
@@ -3925,52 +3603,52 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_03687",
+      "en": "spinach",
+      "fr": "épinard",
+      "msg": "même nom EN que ing_03683: \"spinach\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_03692",
       "en": "spinach",
       "fr": "épinard",
-      "msg": "même nom EN que ing_03687: \"spinach\""
+      "msg": "même nom EN que ing_03683: \"spinach\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03694",
       "en": "spinach",
       "fr": "épinard",
-      "msg": "même nom EN que ing_03687: \"spinach\""
+      "msg": "même nom EN que ing_03683: \"spinach\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03698",
       "en": "new Zealand spinach",
-      "fr": "épinards de la Nouvelle-Zélande",
+      "fr": "épinards de Nouvelle-Zélande",
       "msg": "même nom EN que ing_03677: \"new Zealand spinach\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03700",
-      "en": "spinach",
-      "fr": "épinard",
-      "msg": "même nom EN que ing_03687: \"spinach\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03702",
       "en": "spinach",
       "fr": "épinard",
-      "msg": "même nom EN que ing_03687: \"spinach\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03708",
-      "en": "spinach",
-      "fr": "épinard",
-      "msg": "même nom EN que ing_03687: \"spinach\""
+      "msg": "même nom EN que ing_03683: \"spinach\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03712",
       "en": "spinach",
       "fr": "épinard",
-      "msg": "même nom EN que ing_03687: \"spinach\""
+      "msg": "même nom EN que ing_03683: \"spinach\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_03069",
+      "en": "new Zealand spinach",
+      "fr": "épinards de Nouvelle-Zélande",
+      "msg": "même nom EN que ing_03677: \"new Zealand spinach\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -4002,21 +3680,28 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_02904",
+      "en": "moringa",
+      "fr": "moringa",
+      "msg": "même nom EN que ing_02902: \"moringa\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_02989",
-      "en": "hearts of palm",
-      "fr": "palmiers coeurs",
-      "msg": "même nom EN que ing_02971: \"hearts of palm\""
+      "en": "palm heart",
+      "fr": "coeurs de palmier",
+      "msg": "même nom EN que ing_02971: \"palm heart\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_02991",
+      "en": "palm heart",
+      "fr": "coeur de palmier",
+      "msg": "même nom EN que ing_02971: \"palm heart\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04114",
-      "en": "hyacinth",
-      "fr": "doliques d'Égypte",
-      "msg": "même nom EN que ing_04112: \"hyacinth\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04180",
       "en": "hyacinth",
       "fr": "doliques d'Égypte",
       "msg": "même nom EN que ing_04112: \"hyacinth\""
@@ -4030,31 +3715,17 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04216",
-      "en": "hyacinth",
-      "fr": "doliques d'Égypte",
-      "msg": "même nom EN que ing_04112: \"hyacinth\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02195",
+      "id": "ing_02193",
       "en": "yardlong",
       "fr": "doliques asperge",
-      "msg": "même nom EN que ing_02193: \"yardlong\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_02203",
-      "en": "yardlong, (asparagus bean or cowpea)",
-      "fr": "haricots asperge (dolique)",
-      "msg": "même nom EN que ing_02191: \"yardlong, (asparagus bean or cowpea)\""
+      "msg": "même nom EN que ing_02191: \"yardlong\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02215",
       "en": "yardlong",
       "fr": "doliques asperge",
-      "msg": "même nom EN que ing_02193: \"yardlong\""
+      "msg": "même nom EN que ing_02191: \"yardlong\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -4073,13 +3744,6 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03724",
-      "en": "broadbeans (fava beans)",
-      "fr": "gourganes (fèves des marais, fava)",
-      "msg": "même nom EN que ing_03720: \"broadbeans (fava beans)\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03726",
       "en": "broadbeans (fava beans)",
       "fr": "gourganes (fèves des marais, fava)",
       "msg": "même nom EN que ing_03720: \"broadbeans (fava beans)\""
@@ -4123,155 +3787,148 @@
       "category": "DUPLICATE_EN",
       "id": "ing_03767",
       "en": "adzuki bean",
-      "fr": "haricots adzuki",
+      "fr": "haricot adzuki",
       "msg": "même nom EN que ing_03765: \"adzuki bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03771",
       "en": "black turtle bean",
-      "fr": "haricots black turtle",
+      "fr": "haricot black turtle",
       "msg": "même nom EN que ing_03769: \"black turtle bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03775",
       "en": "black bean",
-      "fr": "haricots noirs",
+      "fr": "haricot noir",
       "msg": "même nom EN que ing_03773: \"black bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03783",
       "en": "french bean",
-      "fr": "haricots verts",
+      "fr": "haricot vert",
       "msg": "même nom EN que ing_03781: \"french bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03787",
       "en": "great northern bean",
-      "fr": "haricots great northern",
+      "fr": "haricot great northern",
       "msg": "même nom EN que ing_03785: \"great northern bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03791",
       "en": "kidney bean",
-      "fr": "haricots rouges tous les types",
+      "fr": "haricot rouge",
       "msg": "même nom EN que ing_03789: \"kidney bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03795",
       "en": "dark red kidney bean",
-      "fr": "haricots rouge foncé",
+      "fr": "haricot rouge foncé",
       "msg": "même nom EN que ing_03793: \"dark red kidney bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03799",
       "en": "light red kidney bean",
-      "fr": "haricots rouge pâle",
+      "fr": "haricot rouge pâle",
       "msg": "même nom EN que ing_03797: \"light red kidney bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03805",
       "en": "mung (green gram)",
-      "fr": "ambériques",
+      "fr": "ambérique",
       "msg": "même nom EN que ing_03803: \"mung (green gram)\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03809",
-      "en": "baby lima bean",
-      "fr": "haricots lima petits grains (de sieva)",
-      "msg": "même nom EN que ing_03807: \"baby lima bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03813",
       "en": "large lima bean",
-      "fr": "haricots lima gros",
+      "fr": "haricot lima gros",
       "msg": "même nom EN que ing_03811: \"large lima bean\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_03815",
+      "en": "lima bean",
+      "fr": "haricot lima",
+      "msg": "même nom EN que ing_03807: \"lima bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03821",
       "en": "mung bean",
-      "fr": "haricots mungo",
+      "fr": "haricot mungo",
       "msg": "même nom EN que ing_03819: \"mung bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03823",
       "en": "mung bean",
-      "fr": "haricots mungo",
+      "fr": "haricot mungo",
       "msg": "même nom EN que ing_03819: \"mung bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03827",
       "en": "navy bean",
-      "fr": "haricots petits blancs",
+      "fr": "haricot petit blanc",
       "msg": "même nom EN que ing_03825: \"navy bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03829",
       "en": "navy bean",
-      "fr": "haricots petits blancs",
+      "fr": "haricot petit blanc",
       "msg": "même nom EN que ing_03825: \"navy bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03833",
       "en": "pink bean",
-      "fr": "haricots roses",
+      "fr": "haricot rose",
       "msg": "même nom EN que ing_03831: \"pink bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03837",
       "en": "pinto bean",
-      "fr": "haricots pinto",
+      "fr": "haricot pinto",
       "msg": "même nom EN que ing_03835: \"pinto bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03839",
       "en": "pinto bean",
-      "fr": "haricots pinto",
+      "fr": "haricot pinto",
       "msg": "même nom EN que ing_03835: \"pinto bean\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03843",
-      "en": "small white",
-      "fr": "haricots blancs petits",
-      "msg": "même nom EN que ing_03841: \"small white\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03851",
       "en": "white bean",
-      "fr": "haricots blancs",
+      "fr": "haricot blanc",
       "msg": "même nom EN que ing_03849: \"white bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03858",
-      "en": "great northern bean",
+      "en": "white bean",
       "fr": "haricot blanc",
-      "msg": "même nom EN que ing_03785: \"great northern bean\""
+      "msg": "même nom EN que ing_03849: \"white bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03860",
       "en": "lima bean",
       "fr": "haricot de Lima",
-      "msg": "même nom EN que ing_03815: \"lima bean\""
+      "msg": "même nom EN que ing_03807: \"lima bean\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -4282,31 +3939,31 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_03871",
+      "en": "kidney bean",
+      "fr": "haricot rouge",
+      "msg": "même nom EN que ing_03789: \"kidney bean\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_03875",
       "en": "french bean",
-      "fr": "haricots verts",
+      "fr": "haricot vert",
       "msg": "même nom EN que ing_03781: \"french bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03879",
       "en": "moth beans",
-      "fr": "haricots mat (papillon)",
+      "fr": "haricot mat (papillon)",
       "msg": "même nom EN que ing_03877: \"moth beans\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03887",
-      "en": "great northern bean",
-      "fr": "haricot blanc",
-      "msg": "même nom EN que ing_03785: \"great northern bean\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_03893",
-      "en": "flageolet bean, green",
+      "en": "green flageolet bean",
       "fr": "haricot flageolet vert",
-      "msg": "même nom EN que ing_03865: \"flageolet bean, green\""
+      "msg": "même nom EN que ing_03865: \"green flageolet bean\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -4317,24 +3974,10 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03897",
-      "en": "red bean",
-      "fr": "haricot rouge",
-      "msg": "même nom EN que ing_03871: \"red bean\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03899",
-      "en": "snap, green pack",
-      "fr": "haricot vert",
-      "msg": "même nom EN que ing_03873: \"snap, green pack\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_03901",
-      "en": "snap, green pack",
+      "en": "french bean",
       "fr": "haricot vert",
-      "msg": "même nom EN que ing_03873: \"snap, green pack\""
+      "msg": "même nom EN que ing_03781: \"french bean\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -4347,7 +3990,7 @@
       "category": "DUPLICATE_EN",
       "id": "ing_03913",
       "en": "great northern bean",
-      "fr": "haricot blanc",
+      "fr": "haricot great northern",
       "msg": "même nom EN que ing_03785: \"great northern bean\""
     },
     {
@@ -4373,45 +4016,24 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_03927",
-      "en": "red bean",
-      "fr": "haricot rouge",
-      "msg": "même nom EN que ing_03871: \"red bean\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03931",
-      "en": "small White",
-      "fr": "haricot blanc petit",
-      "msg": "même nom EN que ing_03841: \"small White\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_03951",
       "en": "lima bean",
-      "fr": "haricots lima",
-      "msg": "même nom EN que ing_03815: \"lima bean\""
+      "fr": "haricot lima",
+      "msg": "même nom EN que ing_03807: \"lima bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03955",
       "en": "navy bean",
-      "fr": "haricots petits blancs",
+      "fr": "haricot petit blanc",
       "msg": "même nom EN que ing_03825: \"navy bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03957",
       "en": "pinto bean",
-      "fr": "haricots pinto",
+      "fr": "haricot pinto",
       "msg": "même nom EN que ing_03835: \"pinto bean\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03959",
-      "en": "snap (Italian, green or yellow)",
-      "fr": "haricots italiens jaunes ou verts",
-      "msg": "même nom EN que ing_03845: \"snap (Italian, green or yellow)\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -4424,36 +4046,36 @@
       "category": "DUPLICATE_EN",
       "id": "ing_03989",
       "en": "mung bean",
-      "fr": "haricots mungo",
+      "fr": "haricot mungo",
       "msg": "même nom EN que ing_03819: \"mung bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03995",
       "en": "pinto bean",
-      "fr": "haricots pinto",
+      "fr": "haricot pinto",
       "msg": "même nom EN que ing_03835: \"pinto bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04007",
-      "en": "snap (Italian, green or yellow)",
-      "fr": "haricots italiens jaunes ou verts",
-      "msg": "même nom EN que ing_03845: \"snap (Italian, green or yellow)\""
+      "en": "Italian bean (green or yellow)",
+      "fr": "haricot italien jaune ou vert",
+      "msg": "même nom EN que ing_03959: \"Italian bean (green or yellow)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04017",
-      "en": "snap, green pack",
+      "en": "french bean",
       "fr": "haricot vert",
-      "msg": "même nom EN que ing_03873: \"snap, green pack\""
+      "msg": "même nom EN que ing_03781: \"french bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04021",
-      "en": "mung bean sprouts",
+      "en": "mung bean",
       "fr": "haricot mungo",
-      "msg": "même nom EN que ing_03853: \"mung bean sprouts\""
+      "msg": "même nom EN que ing_03819: \"mung bean\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -4464,13 +4086,6 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04026",
-      "en": "great northern bean",
-      "fr": "haricot blanc",
-      "msg": "même nom EN que ing_03785: \"great northern bean\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_04028",
       "en": "flageolet bean",
       "fr": "haricot flageolet",
@@ -4478,44 +4093,30 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04030",
-      "en": "red bean",
-      "fr": "haricot rouge",
-      "msg": "même nom EN que ing_03871: \"red bean\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04032",
-      "en": "snap, green pack",
-      "fr": "haricot vert",
-      "msg": "même nom EN que ing_03873: \"snap, green pack\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_04034",
       "en": "adzuki bean",
-      "fr": "haricots adzuki",
+      "fr": "haricot adzuki",
       "msg": "même nom EN que ing_03765: \"adzuki bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04036",
       "en": "black turtle bean",
-      "fr": "haricots black turtle",
+      "fr": "haricot black turtle",
       "msg": "même nom EN que ing_03769: \"black turtle bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04038",
       "en": "black bean",
-      "fr": "haricots noirs",
+      "fr": "haricot noir",
       "msg": "même nom EN que ing_03773: \"black bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04040",
       "en": "french bean",
-      "fr": "haricots verts",
+      "fr": "haricot vert",
       "msg": "même nom EN que ing_03781: \"french bean\""
     },
     {
@@ -4529,148 +4130,169 @@
       "category": "DUPLICATE_EN",
       "id": "ing_04052",
       "en": "mung (green gram)",
-      "fr": "ambériques",
+      "fr": "ambérique",
       "msg": "même nom EN que ing_03803: \"mung (green gram)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04054",
       "en": "lima bean",
-      "fr": "haricots lima",
-      "msg": "même nom EN que ing_03815: \"lima bean\""
+      "fr": "haricot lima",
+      "msg": "même nom EN que ing_03807: \"lima bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04056",
       "en": "baby lima bean",
-      "fr": "haricots lima petits grains (de sieva)",
-      "msg": "même nom EN que ing_03807: \"baby lima bean\""
+      "fr": "haricot lima petit grain (de sieva)",
+      "msg": "même nom EN que ing_03809: \"baby lima bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04058",
       "en": "large lima bean",
-      "fr": "haricots lima gros",
+      "fr": "haricot lima gros",
       "msg": "même nom EN que ing_03811: \"large lima bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04060",
       "en": "mung bean",
-      "fr": "haricots mungo",
+      "fr": "haricot mungo",
       "msg": "même nom EN que ing_03819: \"mung bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04062",
       "en": "mung bean",
-      "fr": "haricots mungo",
+      "fr": "haricot mungo",
       "msg": "même nom EN que ing_03819: \"mung bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04070",
       "en": "pinto bean",
-      "fr": "haricots pinto",
+      "fr": "haricot pinto",
       "msg": "même nom EN que ing_03835: \"pinto bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04072",
       "en": "pinto bean",
-      "fr": "haricots pinto",
+      "fr": "haricot pinto",
       "msg": "même nom EN que ing_03835: \"pinto bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04074",
-      "en": "small white",
-      "fr": "haricots blancs fins",
-      "msg": "même nom EN que ing_03841: \"small white\""
+      "en": "small white bean",
+      "fr": "haricot blanc fin",
+      "msg": "même nom EN que ing_03931: \"small white bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04076",
       "en": "white bean",
-      "fr": "haricots blancs",
+      "fr": "haricot blanc",
       "msg": "même nom EN que ing_03849: \"white bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04078",
       "en": "moth beans",
-      "fr": "haricots mat",
+      "fr": "haricot mat (papillon)",
       "msg": "même nom EN que ing_03877: \"moth beans\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04080",
       "en": "adzuki bean",
-      "fr": "haricots adzuki",
+      "fr": "haricot adzuki",
       "msg": "même nom EN que ing_03765: \"adzuki bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00951",
-      "en": "cranberry (roman)",
-      "fr": "haricots canneberge (romain)",
-      "msg": "même nom EN que ing_00949: \"cranberry (roman)\""
+      "en": "cranberry (roman) bean",
+      "fr": "haricot canneberge (romain)",
+      "msg": "même nom EN que ing_00949: \"cranberry (roman) bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00970",
-      "en": "cranberry (roman)",
-      "fr": "haricots canneberge (romain)",
-      "msg": "même nom EN que ing_00949: \"cranberry (roman)\""
+      "en": "cranberry (roman) bean",
+      "fr": "haricot canneberge (romain)",
+      "msg": "même nom EN que ing_00949: \"cranberry (roman) bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03881",
       "en": "black bean",
-      "fr": "haricots noirs",
+      "fr": "haricot noir",
       "msg": "même nom EN que ing_03773: \"black bean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03883",
       "en": "white bean",
-      "fr": "haricots blancs",
+      "fr": "haricot blanc",
       "msg": "même nom EN que ing_03849: \"white bean\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04089",
-      "en": "lentils",
-      "fr": "lentilles",
-      "msg": "même nom EN que ing_04083: \"lentils\""
+      "id": "ing_05741",
+      "en": "cannellini bean",
+      "fr": "haricot cannellini",
+      "msg": "même nom EN que ing_03777: \"cannellini bean\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04091",
-      "en": "lentils",
-      "fr": "lentille",
-      "msg": "même nom EN que ing_04083: \"lentils\""
+      "id": "ing_05742",
+      "en": "great northern bean",
+      "fr": "haricot great northern",
+      "msg": "même nom EN que ing_03785: \"great northern bean\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05743",
+      "en": "navy bean",
+      "fr": "haricot navy",
+      "msg": "même nom EN que ing_03825: \"navy bean\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04087",
+      "en": "green lentil",
+      "fr": "lentille verte",
+      "msg": "même nom EN que ing_04083: \"green lentil\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04089",
+      "en": "green lentil",
+      "fr": "lentille verte",
+      "msg": "même nom EN que ing_04083: \"green lentil\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04097",
-      "en": "lentils, pink",
-      "fr": "lentilles roses",
-      "msg": "même nom EN que ing_04095: \"lentils, pink\""
+      "en": "pink lentil",
+      "fr": "lentille rose",
+      "msg": "même nom EN que ing_04095: \"pink lentil\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04099",
-      "en": "lentils",
-      "fr": "lentilles",
-      "msg": "même nom EN que ing_04083: \"lentils\""
+      "en": "green lentil",
+      "fr": "lentille verte",
+      "msg": "même nom EN que ing_04083: \"green lentil\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04101",
-      "en": "lentils",
-      "fr": "lentilles",
-      "msg": "même nom EN que ing_04083: \"lentils\""
+      "en": "green lentil",
+      "fr": "lentille verte",
+      "msg": "même nom EN que ing_04083: \"green lentil\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -4681,17 +4303,10 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04105",
+      "id": "ing_04109",
       "en": "green lentil",
       "fr": "lentille verte",
-      "msg": "même nom EN que ing_04087: \"green lentil\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04109",
-      "en": "lentils",
-      "fr": "lentilles",
-      "msg": "même nom EN que ing_04083: \"lentils\""
+      "msg": "même nom EN que ing_04083: \"green lentil\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -4703,72 +4318,100 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04093",
-      "en": "lentils",
-      "fr": "lentilles",
-      "msg": "même nom EN que ing_04083: \"lentils\""
+      "en": "green lentil",
+      "fr": "lentille verte",
+      "msg": "même nom EN que ing_04083: \"green lentil\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04118",
       "en": "black-eyed peas (cowpeas), catjang",
-      "fr": "haricots à oeil noir (dolique) kunde",
+      "fr": "dolique à œil noir kunde",
       "msg": "même nom EN que ing_04116: \"black-eyed peas (cowpeas), catjang\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04136",
-      "en": "lupins",
+      "id": "ing_04122",
+      "en": "black-eyed peas (cowpeas)",
+      "fr": "dolique à œil noir",
+      "msg": "même nom EN que ing_04120: \"black-eyed peas (cowpeas)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04124",
+      "en": "black-eyed peas (cowpeas)",
+      "fr": "dolique à œil noir",
+      "msg": "même nom EN que ing_04120: \"black-eyed peas (cowpeas)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04128",
+      "en": "black-eyed peas (cowpeas)",
+      "fr": "dolique à oeil noir",
+      "msg": "même nom EN que ing_04120: \"black-eyed peas (cowpeas)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04130",
+      "en": "black-eyed peas (cowpeas)",
+      "fr": "dolique à oeil noir",
+      "msg": "même nom EN que ing_04120: \"black-eyed peas (cowpeas)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04134",
+      "en": "lupin",
       "fr": "lupin",
-      "msg": "même nom EN que ing_04134: \"lupins\""
+      "msg": "même nom EN que ing_04132: \"lupin\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04136",
+      "en": "lupin",
+      "fr": "lupin",
+      "msg": "même nom EN que ing_04132: \"lupin\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04146",
-      "en": "pigeon (red gram) peas",
+      "en": "pigeon peas (red gram)",
       "fr": "pois cajan",
-      "msg": "même nom EN que ing_04144: \"pigeon (red gram) peas\""
+      "msg": "même nom EN que ing_04144: \"pigeon peas (red gram)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04151",
       "en": "split peas",
-      "fr": "pois cassés",
+      "fr": "pois cassé",
       "msg": "même nom EN que ing_04149: \"split peas\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04153",
+      "id": "ing_04155",
       "en": "green peas",
-      "fr": "petits pois",
+      "fr": "petit pois vert",
       "msg": "même nom EN que ing_04140: \"green peas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04162",
       "en": "green peas",
-      "fr": "petits pois",
+      "fr": "petit pois vert",
       "msg": "même nom EN que ing_04140: \"green peas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04164",
       "en": "green peas",
-      "fr": "petits pois",
+      "fr": "petit pois vert",
       "msg": "même nom EN que ing_04140: \"green peas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04169",
       "en": "snow peas",
-      "fr": "pois mange-tout",
+      "fr": "pois mange-tout (gourmand)",
       "msg": "même nom EN que ing_04138: \"snow peas\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04172",
-      "en": "split peas",
-      "fr": "pois cassé",
-      "msg": "même nom EN que ing_04149: \"split peas\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -4780,247 +4423,226 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04182",
-      "en": "cowpeas (black-eyed peas), immature",
-      "fr": "doliques à oeil noir grains immatures",
-      "msg": "même nom EN que ing_04126: \"cowpeas (black-eyed peas), immature\""
+      "en": "black-eyed peas (cowpeas), immature",
+      "fr": "dolique à oeil noir grain immature",
+      "msg": "même nom EN que ing_04126: \"black-eyed peas (cowpeas), immature\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04184",
-      "en": "cowpeas, leafy tips",
-      "fr": "doliques à oeil noir",
-      "msg": "même nom EN que ing_04128: \"cowpeas, leafy tips\""
+      "en": "black-eyed peas (cowpeas)",
+      "fr": "dolique à oeil noir",
+      "msg": "même nom EN que ing_04120: \"black-eyed peas (cowpeas)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04186",
-      "en": "cowpeas, young pods",
-      "fr": "doliques à oeil noir jeunes cosses",
-      "msg": "même nom EN que ing_04130: \"cowpeas, young pods\""
+      "en": "black-eyed peas (cowpeas)",
+      "fr": "dolique à oeil noir",
+      "msg": "même nom EN que ing_04120: \"black-eyed peas (cowpeas)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04188",
       "en": "snow peas",
-      "fr": "pois mange-tout",
+      "fr": "pois mange-tout (gourmand)",
       "msg": "même nom EN que ing_04138: \"snow peas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04190",
       "en": "green peas",
-      "fr": "pois petits (verts)",
+      "fr": "petit pois vert",
       "msg": "même nom EN que ing_04140: \"green peas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04192",
       "en": "peas",
-      "fr": "pois secs",
+      "fr": "pois",
       "msg": "même nom EN que ing_04142: \"peas\""
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_04194",
+      "en": "pigeon peas (red gram)",
+      "fr": "pois cajan",
+      "msg": "même nom EN que ing_04144: \"pigeon peas (red gram)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_04198",
-      "en": "blackeye pea",
+      "en": "black-eyed peas (cowpeas)",
       "fr": "dolique à œil noir",
-      "msg": "même nom EN que ing_04124: \"blackeye pea\""
+      "msg": "même nom EN que ing_04120: \"black-eyed peas (cowpeas)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04200",
       "en": "green peas",
-      "fr": "pois petits (verts)",
+      "fr": "petit pois vert",
       "msg": "même nom EN que ing_04140: \"green peas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04202",
       "en": "green peas",
-      "fr": "pois petits (verts)",
-      "msg": "même nom EN que ing_04140: \"green peas\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04212",
-      "en": "green peas",
-      "fr": "petits pois appertisés",
+      "fr": "petit pois vert",
       "msg": "même nom EN que ing_04140: \"green peas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04218",
       "en": "black-eyed peas (cowpeas), catjang",
-      "fr": "haricots à oeil noir (dolique) kinde",
+      "fr": "dolique à œil noir kunde",
       "msg": "même nom EN que ing_04116: \"black-eyed peas (cowpeas), catjang\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04220",
-      "en": "black-eyed peas (cowpeas, crowder, southern), common",
-      "fr": "haricots à oeil noir (dolique) communs",
-      "msg": "même nom EN que ing_04122: \"black-eyed peas (cowpeas, crowder, southern), common\""
+      "en": "black-eyed peas (cowpeas)",
+      "fr": "dolique à œil noir",
+      "msg": "même nom EN que ing_04120: \"black-eyed peas (cowpeas)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04224",
-      "en": "cowpeas, leafy tips",
-      "fr": "doliques à oeil noir",
-      "msg": "même nom EN que ing_04128: \"cowpeas, leafy tips\""
+      "en": "black-eyed peas (cowpeas)",
+      "fr": "dolique à œil noir",
+      "msg": "même nom EN que ing_04120: \"black-eyed peas (cowpeas)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04226",
-      "en": "cowpeas, young pods",
-      "fr": "doliques à oeil noir jeunes cosses",
-      "msg": "même nom EN que ing_04130: \"cowpeas, young pods\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04228",
-      "en": "lupins",
-      "fr": "lupin",
-      "msg": "même nom EN que ing_04134: \"lupins\""
+      "en": "black-eyed peas (cowpeas)",
+      "fr": "dolique à œil noir",
+      "msg": "même nom EN que ing_04120: \"black-eyed peas (cowpeas)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04230",
       "en": "snow peas",
-      "fr": "pois mange-tout",
+      "fr": "pois mange-tout (gourmand)",
       "msg": "même nom EN que ing_04138: \"snow peas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04232",
       "en": "green peas",
-      "fr": "pois petits (verts)",
+      "fr": "petit pois vert",
       "msg": "même nom EN que ing_04140: \"green peas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04234",
-      "en": "pigeon (red gram) peas",
+      "en": "pigeon peas (red gram)",
       "fr": "pois cajan",
-      "msg": "même nom EN que ing_04144: \"pigeon (red gram) peas\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04236",
-      "en": "pigeon peas",
-      "fr": "pois cajan",
-      "msg": "même nom EN que ing_04194: \"pigeon peas\""
+      "msg": "même nom EN que ing_04144: \"pigeon peas (red gram)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04238",
       "en": "split peas",
-      "fr": "pois cassés",
+      "fr": "pois cassé",
       "msg": "même nom EN que ing_04149: \"split peas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04245",
-      "en": "chickpeas (garbanzo beans, bengal gram)",
-      "fr": "pois chiches (garbanzo)",
-      "msg": "même nom EN que ing_04243: \"chickpeas (garbanzo beans, bengal gram)\""
+      "en": "chickpeas",
+      "fr": "pois chiches",
+      "msg": "même nom EN que ing_04243: \"chickpeas\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04251",
-      "en": "chickpeas (garbanzo beans, bengal gram)",
-      "fr": "pois chiche",
-      "msg": "même nom EN que ing_04243: \"chickpeas (garbanzo beans, bengal gram)\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04253",
-      "en": "chickpeas (garbanzo beans, bengal gram)",
-      "fr": "pois chiche",
-      "msg": "même nom EN que ing_04243: \"chickpeas (garbanzo beans, bengal gram)\""
+      "id": "ing_04247",
+      "en": "chickpeas",
+      "fr": "pois chiches",
+      "msg": "même nom EN que ing_04243: \"chickpeas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04255",
-      "en": "chickpeas (garbanzo beans, bengal gram)",
-      "fr": "pois chiches (garbanzo)",
-      "msg": "même nom EN que ing_04243: \"chickpeas (garbanzo beans, bengal gram)\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04257",
-      "en": "chickpeas (garbanzo beans, bengal gram)",
-      "fr": "pois chiches (garbanzo) et rinsés",
-      "msg": "même nom EN que ing_04243: \"chickpeas (garbanzo beans, bengal gram)\""
+      "en": "chickpeas",
+      "fr": "pois chiches",
+      "msg": "même nom EN que ing_04243: \"chickpeas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04259",
-      "en": "chickpeas (garbanzo beans, bengal gram)",
-      "fr": "pois chiche",
-      "msg": "même nom EN que ing_04243: \"chickpeas (garbanzo beans, bengal gram)\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04265",
-      "en": "chickpeas (garbanzo beans, bengal gram)",
-      "fr": "pois chiche",
-      "msg": "même nom EN que ing_04243: \"chickpeas (garbanzo beans, bengal gram)\""
+      "en": "chickpeas",
+      "fr": "pois chiches",
+      "msg": "même nom EN que ing_04243: \"chickpeas\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04267",
-      "en": "chickpeas (garbanzo beans, bengal gram)",
-      "fr": "pois chiches (garbanzo)",
-      "msg": "même nom EN que ing_04243: \"chickpeas (garbanzo beans, bengal gram)\""
+      "en": "chickpeas",
+      "fr": "pois chiches",
+      "msg": "même nom EN que ing_04243: \"chickpeas\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04249",
-      "en": "chickpeas (garbanzo beans, bengal gram)",
-      "fr": "pois chiche",
-      "msg": "même nom EN que ing_04243: \"chickpeas (garbanzo beans, bengal gram)\""
+      "id": "ing_04282",
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04284",
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04286",
-      "en": "soybeans",
-      "fr": "haricots soya",
-      "msg": "même nom EN que ing_04284: \"soybeans\""
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04288",
-      "en": "soybeans",
-      "fr": "haricots soya",
-      "msg": "même nom EN que ing_04284: \"soybeans\""
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04292",
+      "en": "glass noodles (soy vermicelli)",
+      "fr": "vermicelles de soja",
+      "msg": "même nom EN que ing_04290: \"glass noodles (soy vermicelli)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04294",
-      "en": "vermicelli, made from soy",
-      "fr": "vermicelles de soya",
-      "msg": "même nom EN que ing_04292: \"vermicelli, made from soy\""
+      "en": "glass noodles (soy vermicelli)",
+      "fr": "vermicelles de soja",
+      "msg": "même nom EN que ing_04290: \"glass noodles (soy vermicelli)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04332",
       "en": "glass noodles (soy vermicelli)",
-      "fr": "vermicelle de soja",
+      "fr": "vermicelles de soja",
       "msg": "même nom EN que ing_04290: \"glass noodles (soy vermicelli)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04334",
-      "en": "soybean kernels",
-      "fr": "haricots soya",
-      "msg": "même nom EN que ing_04282: \"soybean kernels\""
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04336",
-      "en": "soybeans",
-      "fr": "haricots soya",
-      "msg": "même nom EN que ing_04284: \"soybeans\""
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5032,16 +4654,16 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03732",
-      "en": "soybeans",
-      "fr": "fèves soya",
-      "msg": "même nom EN que ing_04284: \"soybeans\""
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_03734",
-      "en": "soybeans",
-      "fr": "fèves soya",
-      "msg": "même nom EN que ing_04284: \"soybeans\""
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5052,59 +4674,73 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_04276",
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_04351",
-      "en": "soy",
-      "fr": "soya",
-      "msg": "même nom EN que ing_04276: \"soy\""
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04353",
-      "en": "soy",
-      "fr": "soya",
-      "msg": "même nom EN que ing_04276: \"soy\""
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04355",
-      "en": "soy",
-      "fr": "soya",
-      "msg": "même nom EN que ing_04276: \"soy\""
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
     },
     {
-      "category": "EN_FORM_NOT_STRIPPED",
+      "category": "DUPLICATE_EN",
       "id": "ing_04312",
-      "en": "soy cream",
-      "fr": "crème de soja",
-      "msg": "\"soy cream\" (form:cream)"
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04330",
+      "en": "soybean",
+      "fr": "soja",
+      "msg": "même nom EN que ing_04280: \"soybean\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04314",
-      "en": "soy",
+      "en": "soybean",
       "fr": "soja",
-      "msg": "même nom EN que ing_04276: \"soy\""
+      "msg": "même nom EN que ing_04280: \"soybean\""
     },
     {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04449",
-      "en": "canola",
-      "fr": "colza",
-      "msg": "même nom EN que ing_04418: \"canola\""
+      "category": "EN_FORM_NOT_STRIPPED",
+      "id": "ing_04397",
+      "en": "vegetable oil",
+      "fr": "huile végétale",
+      "msg": "\"vegetable oil\" (form:oil)"
+    },
+    {
+      "category": "FORM_AXIS_IN_NAME",
+      "id": "ing_04397",
+      "en": "vegetable oil",
+      "fr": "huile végétale",
+      "msg": "\"vegetable oil\" contient \"oil\" mais axe form=oil"
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04461",
-      "en": "poppy seed",
+      "en": "poppy",
       "fr": "pavot",
-      "msg": "même nom EN que ing_04656: \"poppy seed\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04471",
-      "en": "canola",
-      "fr": "canola (colza)",
-      "msg": "même nom EN que ing_04418: \"canola\""
+      "msg": "même nom EN que ing_04656: \"poppy\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5118,6 +4754,13 @@
       "id": "ing_04483",
       "en": "palm",
       "fr": "palme",
+      "msg": "même nom EN que ing_04459: \"palm\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04485",
+      "en": "palm",
+      "fr": "palmiste",
       "msg": "même nom EN que ing_04459: \"palm\""
     },
     {
@@ -5139,14 +4782,21 @@
       "id": "ing_03057",
       "en": "corn",
       "fr": "maïs",
-      "msg": "même nom EN que ing_03010: \"corn\""
+      "msg": "même nom EN que ing_03000: \"corn\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_03228",
+      "en": "olive",
+      "fr": "olive",
+      "msg": "même nom EN que ing_03242: \"olive\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04308",
-      "en": "soy",
+      "en": "soybean",
       "fr": "soja",
-      "msg": "même nom EN que ing_04276: \"soy\""
+      "msg": "même nom EN que ing_04280: \"soybean\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5164,122 +4814,150 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00858",
-      "en": "apricot kernel",
-      "fr": "noyaux d'abricots",
-      "msg": "même nom EN que ing_00856: \"apricot kernel\""
+      "id": "ing_04541",
+      "en": "almond",
+      "fr": "amande",
+      "msg": "même nom EN que ing_04438: \"almond\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04541",
-      "en": "almond",
-      "fr": "amandes",
-      "msg": "même nom EN que ing_04438: \"almond\""
+      "id": "ing_04545",
+      "en": "peanut",
+      "fr": "cacahuète (arachide)",
+      "msg": "même nom EN que ing_04440: \"peanut\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04547",
+      "en": "peanut",
+      "fr": "cacahuète (arachide)",
+      "msg": "même nom EN que ing_04440: \"peanut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04549",
       "en": "peanut",
-      "fr": "arachides",
+      "fr": "cacahuète (arachide)",
       "msg": "même nom EN que ing_04440: \"peanut\""
     },
     {
-      "category": "EN_FORM_NOT_STRIPPED",
-      "id": "ing_04553",
-      "en": "sesame butter, from whole seed, paste",
-      "fr": "beurre de sésame de pâte",
-      "msg": "\"sesame butter, from whole seed, paste\" (form:butter)"
-    },
-    {
-      "category": "FR_FORM_NOT_STRIPPED",
-      "id": "ing_04553",
-      "en": "sesame butter, from whole seed, paste",
-      "fr": "beurre de sésame de pâte",
-      "msg": "\"beurre de sésame de pâte\" (form:butter)"
-    },
-    {
-      "category": "FR_FORM_NOT_STRIPPED",
+      "category": "DUPLICATE_EN",
       "id": "ing_04555",
-      "en": "sesame butter, tahini, from and stone kernels",
-      "fr": "beurre de sésame tahini et moulues à la pierre",
-      "msg": "\"beurre de sésame tahini et moulues à la pierre\" (form:paste)"
+      "en": "sesame (tahini)",
+      "fr": "sésame (tahini)",
+      "msg": "même nom EN que ing_04553: \"sesame (tahini)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04557",
+      "en": "sesame (tahini)",
+      "fr": "sésame (tahini)",
+      "msg": "même nom EN que ing_04553: \"sesame (tahini)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04559",
+      "en": "sunflower",
+      "fr": "tournesol",
+      "msg": "même nom EN que ing_04465: \"sunflower\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04564",
       "en": "almond",
-      "fr": "amandes",
+      "fr": "amande",
       "msg": "même nom EN que ing_04438: \"almond\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04566",
       "en": "cashew",
-      "fr": "noix d'acajou (cajous, anacardes)",
+      "fr": "noix de cajous",
       "msg": "même nom EN que ing_04543: \"cashew\""
     },
     {
-      "category": "FR_FORM_NOT_STRIPPED",
+      "category": "DUPLICATE_EN",
       "id": "ing_04568",
-      "en": "peanut butter, fat, sugar and salt added",
-      "fr": "beurre d'arachides croquant",
-      "msg": "\"beurre d'arachides croquant\" (form:crunchy)"
+      "en": "peanut",
+      "fr": "cacahuète (arachide)",
+      "msg": "même nom EN que ing_04440: \"peanut\""
     },
     {
-      "category": "FR_FORM_NOT_STRIPPED",
+      "category": "DUPLICATE_EN",
       "id": "ing_04570",
-      "en": "peanut butter, smooth type, fat, sugar and salt added",
-      "fr": "beurre d'arachides crémeux",
-      "msg": "\"beurre d'arachides crémeux\" (form:creamy)"
+      "en": "peanut",
+      "fr": "cacahuète (arachide)",
+      "msg": "même nom EN que ing_04440: \"peanut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04572",
-      "en": "sunflower seed",
+      "en": "sunflower",
       "fr": "tournesol",
-      "msg": "même nom EN que ing_04559: \"sunflower seed\""
+      "msg": "même nom EN que ing_04465: \"sunflower\""
     },
     {
-      "category": "FR_FORM_NOT_STRIPPED",
+      "category": "DUPLICATE_EN",
       "id": "ing_04919",
-      "en": "almond butter, creamy",
-      "fr": "beurre d'amandes crémeux",
-      "msg": "\"beurre d'amandes crémeux\" (form:creamy)"
+      "en": "almond",
+      "fr": "amande",
+      "msg": "même nom EN que ing_04438: \"almond\""
     },
     {
-      "category": "FR_FORM_NOT_STRIPPED",
+      "category": "DUPLICATE_EN",
       "id": "ing_04937",
-      "en": "peanut butter, creamy",
-      "fr": "beurre d'arachides crémeux",
-      "msg": "\"beurre d'arachides crémeux\" (form:creamy)"
+      "en": "peanut",
+      "fr": "cacahuète (arachide)",
+      "msg": "même nom EN que ing_04440: \"peanut\""
     },
     {
-      "category": "FR_FORM_NOT_STRIPPED",
+      "category": "DUPLICATE_EN",
       "id": "ing_04939",
-      "en": "sesame butter, creamy",
-      "fr": "beurre de sésame crémeux",
-      "msg": "\"beurre de sésame crémeux\" (form:creamy)"
+      "en": "sesame (tahini)",
+      "fr": "sésame (tahini)",
+      "msg": "même nom EN que ing_04553: \"sesame (tahini)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_00617",
+      "en": "sesame (tahini)",
+      "fr": "sésame (tahini)",
+      "msg": "même nom EN que ing_04553: \"sesame (tahini)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04892",
+      "en": "cocoa",
+      "fr": "cacao",
+      "msg": "même nom EN que ing_05622: \"cocoa\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04699",
+      "en": "almond",
+      "fr": "amande",
+      "msg": "même nom EN que ing_04438: \"almond\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04701",
-      "en": "almonds",
-      "fr": "amandes",
-      "msg": "même nom EN que ing_04699: \"almonds\""
+      "en": "almond",
+      "fr": "amande",
+      "msg": "même nom EN que ing_04438: \"almond\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04400",
-      "en": "almonds",
-      "fr": "amandes",
-      "msg": "même nom EN que ing_04699: \"almonds\""
+      "en": "almond",
+      "fr": "amande",
+      "msg": "même nom EN que ing_04438: \"almond\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00530",
-      "en": "almonds",
-      "fr": "amandes",
-      "msg": "même nom EN que ing_04699: \"almonds\""
+      "en": "almond",
+      "fr": "amande",
+      "msg": "même nom EN que ing_04438: \"almond\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5291,6 +4969,20 @@
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04673",
+      "en": "almond",
+      "fr": "amande",
+      "msg": "même nom EN que ing_04438: \"almond\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04675",
+      "en": "almond",
+      "fr": "amande",
+      "msg": "même nom EN que ing_04438: \"almond\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04703",
       "en": "almond",
       "fr": "amande",
       "msg": "même nom EN que ing_04438: \"almond\""
@@ -5320,155 +5012,148 @@
       "category": "DUPLICATE_EN",
       "id": "ing_04581",
       "en": "peanut",
-      "fr": "cacahuète",
+      "fr": "cacahuète (arachide)",
       "msg": "même nom EN que ing_04440: \"peanut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04583",
       "en": "peanut",
-      "fr": "cacahuète",
+      "fr": "cacahuète (arachide)",
       "msg": "même nom EN que ing_04440: \"peanut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04585",
       "en": "peanut",
-      "fr": "cacahuète",
+      "fr": "cacahuète (arachide)",
       "msg": "même nom EN que ing_04440: \"peanut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04587",
       "en": "peanut",
-      "fr": "cacahuète",
+      "fr": "cacahuète (arachide)",
       "msg": "même nom EN que ing_04440: \"peanut\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04589",
+      "id": "ing_04428",
       "en": "peanut",
-      "fr": "arachide",
+      "fr": "cacahuète (arachide)",
       "msg": "même nom EN que ing_04440: \"peanut\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04529",
-      "en": "Spanish peanuts",
-      "fr": "arachides Espagnoles",
-      "msg": "même nom EN que ing_04430: \"Spanish peanuts\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04531",
-      "en": "Valencia peanuts",
-      "fr": "arachides Valencia",
-      "msg": "même nom EN que ing_04432: \"Valencia peanuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04533",
-      "en": "Virginia peanuts",
-      "fr": "arachides Virginia",
-      "msg": "même nom EN que ing_04434: \"Virginia peanuts\""
+      "en": "Virginia peanut",
+      "fr": "cacahuète (arachide) Virginia",
+      "msg": "même nom EN que ing_04434: \"Virginia peanut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04771",
-      "en": "peanuts",
-      "fr": "arachides tous les types",
-      "msg": "même nom EN que ing_04428: \"peanuts\""
+      "en": "peanut",
+      "fr": "cacahuète (arachide)",
+      "msg": "même nom EN que ing_04440: \"peanut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04773",
-      "en": "peanuts",
-      "fr": "arachides tous les types",
-      "msg": "même nom EN que ing_04428: \"peanuts\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04775",
-      "en": "peanuts",
-      "fr": "arachide",
-      "msg": "même nom EN que ing_04428: \"peanuts\""
+      "en": "peanut",
+      "fr": "cacahuète (arachide)",
+      "msg": "même nom EN que ing_04440: \"peanut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04777",
-      "en": "Spanish peanuts",
-      "fr": "arachides Espagnoles",
-      "msg": "même nom EN que ing_04430: \"Spanish peanuts\""
+      "en": "Spanish peanut",
+      "fr": "cacahuète (arachide) Espagnole",
+      "msg": "même nom EN que ing_04529: \"Spanish peanut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04779",
-      "en": "Valencia peanuts",
-      "fr": "arachides Valencia",
-      "msg": "même nom EN que ing_04432: \"Valencia peanuts\""
+      "en": "Valencia peanut",
+      "fr": "cacahuète (arachide) Valencia",
+      "msg": "même nom EN que ing_04531: \"Valencia peanut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04781",
-      "en": "Virginia peanuts",
-      "fr": "arachides Virginia",
-      "msg": "même nom EN que ing_04434: \"Virginia peanuts\""
+      "en": "Virginia peanut",
+      "fr": "cacahuète (arachide) Virginia",
+      "msg": "même nom EN que ing_04434: \"Virginia peanut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_00449",
       "en": "peanut",
-      "fr": "arachides",
+      "fr": "cacahuète (arachide)",
       "msg": "même nom EN que ing_04440: \"peanut\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04595",
-      "en": "caraway seed",
-      "fr": "carvi graine",
-      "msg": "même nom EN que ing_04644: \"caraway seed\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04604",
-      "en": "cumin seed",
-      "fr": "cumin graine",
-      "msg": "même nom EN que ing_04648: \"cumin seed\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04606",
-      "en": "fenugreek seed",
-      "fr": "fenugrec graine",
-      "msg": "même nom EN que ing_04652: \"fenugreek seed\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04618",
-      "en": "poppy seed",
-      "fr": "pavot graine",
-      "msg": "même nom EN que ing_04656: \"poppy seed\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04620",
-      "en": "chia",
-      "fr": "graine de chia",
-      "msg": "même nom EN que ing_04600: \"chia\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_04624",
+      "id": "ing_04597",
       "en": "hemp",
-      "fr": "graine de chanvre décortiquée",
+      "fr": "chanvre",
       "msg": "même nom EN que ing_04447: \"hemp\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04602",
+      "en": "coriander",
+      "fr": "coriandre",
+      "msg": "même nom EN que ing_02034: \"coriander\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04608",
+      "en": "flaxseed (linseed)",
+      "fr": "lin",
+      "msg": "même nom EN que ing_04475: \"flaxseed (linseed)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04614",
+      "en": "flaxseed (linseed)",
+      "fr": "lin",
+      "msg": "même nom EN que ing_04475: \"flaxseed (linseed)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04616",
+      "en": "alfalfa",
+      "fr": "luzerne (alfalfa)",
+      "msg": "même nom EN que ing_04593: \"alfalfa\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04622",
+      "en": "flaxseed (linseed)",
+      "fr": "lin",
+      "msg": "même nom EN que ing_04475: \"flaxseed (linseed)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04626",
+      "en": "lotus",
+      "fr": "lotus",
+      "msg": "même nom EN que ing_03428: \"lotus\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04628",
       "en": "lotus",
       "fr": "lotus",
-      "msg": "même nom EN que ing_04626: \"lotus\""
+      "msg": "même nom EN que ing_03428: \"lotus\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04630",
+      "en": "safflower",
+      "fr": "carthame",
+      "msg": "même nom EN que ing_04491: \"safflower\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5493,24 +5178,31 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04662",
-      "en": "sunflower seed",
-      "fr": "tournesol graine",
-      "msg": "même nom EN que ing_04559: \"sunflower seed\""
+      "id": "ing_04640",
+      "en": "sunflower",
+      "fr": "tournesol",
+      "msg": "même nom EN que ing_04465: \"sunflower\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04658",
+      "en": "sesame",
+      "fr": "sésame",
+      "msg": "même nom EN que ing_04463: \"sesame\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04664",
-      "en": "sesame seed",
-      "fr": "sésame graine",
-      "msg": "même nom EN que ing_04658: \"sesame seed\""
+      "en": "sesame",
+      "fr": "sésame",
+      "msg": "même nom EN que ing_04463: \"sesame\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04666",
-      "en": "sunflower seed",
-      "fr": "tournesol graine",
-      "msg": "même nom EN que ing_04559: \"sunflower seed\""
+      "en": "sunflower",
+      "fr": "tournesol",
+      "msg": "même nom EN que ing_04465: \"sunflower\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5552,35 +5244,35 @@
       "id": "ing_01296",
       "en": "watermelon",
       "fr": "melon d'eau (pastèque)",
-      "msg": "même nom EN que ing_01298: \"watermelon\""
+      "msg": "même nom EN que ing_01443: \"watermelon\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02706",
-      "en": "pumpkin and squash",
-      "fr": "citrouille et courge",
-      "msg": "même nom EN que ing_02704: \"pumpkin and squash\""
+      "en": "pumpkin - squash",
+      "fr": "citrouille - courge",
+      "msg": "même nom EN que ing_02704: \"pumpkin - squash\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_02714",
-      "en": "pie pumpkin squash",
-      "fr": "courge",
-      "msg": "même nom EN que ing_02686: \"pie pumpkin squash\""
+      "id": "ing_02710",
+      "en": "pumpkin - squash",
+      "fr": "citrouille - courge",
+      "msg": "même nom EN que ing_02704: \"pumpkin - squash\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02822",
-      "en": "pumpkin and squash",
-      "fr": "citrouille et courge",
-      "msg": "même nom EN que ing_02704: \"pumpkin and squash\""
+      "en": "pumpkin - squash",
+      "fr": "citrouille - courge",
+      "msg": "même nom EN que ing_02704: \"pumpkin - squash\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_02824",
-      "en": "pumpkin and squash whole",
-      "fr": "citrouille et courge",
-      "msg": "même nom EN que ing_02708: \"pumpkin and squash whole\""
+      "en": "pumpkin - squash",
+      "fr": "citrouille - courge",
+      "msg": "même nom EN que ing_02704: \"pumpkin - squash\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5591,10 +5283,38 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_02893",
+      "en": "fennel",
+      "fr": "fenouil",
+      "msg": "même nom EN que ing_02887: \"fennel\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04765",
+      "en": "walnut",
+      "fr": "noix de Grenoble",
+      "msg": "même nom EN que ing_04457: \"walnut\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04767",
+      "en": "walnut",
+      "fr": "noix de Grenoble",
+      "msg": "même nom EN que ing_04457: \"walnut\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04769",
+      "en": "walnut",
+      "fr": "noix de Grenoble",
+      "msg": "même nom EN que ing_04457: \"walnut\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_03034",
-      "en": "acorns",
-      "fr": "balanes (glands)",
-      "msg": "même nom EN que ing_03032: \"acorns\""
+      "en": "acorn",
+      "fr": "balane (gland)",
+      "msg": "même nom EN que ing_03032: \"acorn\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5619,66 +5339,94 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_05476",
+      "id": "ing_00181",
       "en": "coconut",
-      "fr": "coco",
+      "fr": "noix de coco",
       "msg": "même nom EN que ing_04473: \"coconut\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04681",
-      "en": "hazelnuts or filberts",
+      "id": "ing_04793",
+      "en": "coconut",
+      "fr": "noix de coco",
+      "msg": "même nom EN que ing_04473: \"coconut\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05476",
+      "en": "coconut",
+      "fr": "noix de coco",
+      "msg": "même nom EN que ing_04473: \"coconut\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04679",
+      "en": "hazelnut",
       "fr": "noisette",
-      "msg": "même nom EN que ing_04679: \"hazelnuts or filberts\""
+      "msg": "même nom EN que ing_04455: \"hazelnut\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04681",
+      "en": "hazelnut",
+      "fr": "noisette",
+      "msg": "même nom EN que ing_04455: \"hazelnut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04683",
-      "en": "hazelnuts or filberts",
+      "en": "hazelnut",
       "fr": "noisette",
-      "msg": "même nom EN que ing_04679: \"hazelnuts or filberts\""
+      "msg": "même nom EN que ing_04455: \"hazelnut\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04733",
-      "en": "hazelnuts or filberts",
+      "id": "ing_04729",
+      "en": "hazelnut",
       "fr": "noisette",
-      "msg": "même nom EN que ing_04679: \"hazelnuts or filberts\""
+      "msg": "même nom EN que ing_04455: \"hazelnut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04731",
-      "en": "filberts or hazelnuts",
-      "fr": "noisettes avelines ou coudres",
-      "msg": "même nom EN que ing_04729: \"filberts or hazelnuts\""
+      "en": "hazelnut",
+      "fr": "noisette",
+      "msg": "même nom EN que ing_04455: \"hazelnut\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04745",
+      "en": "macadamia nuts",
+      "fr": "noix de macadamia",
+      "msg": "même nom EN que ing_04691: \"macadamia nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04818",
-      "en": "macadamia nut",
+      "en": "macadamia nuts",
       "fr": "noix de macadamia",
-      "msg": "même nom EN que ing_04691: \"macadamia nut\""
+      "msg": "même nom EN que ing_04691: \"macadamia nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04839",
-      "en": "macadamia",
-      "fr": "macadamia",
-      "msg": "même nom EN que ing_04745: \"macadamia\""
+      "en": "macadamia nuts",
+      "fr": "noix de macadamia",
+      "msg": "même nom EN que ing_04691: \"macadamia nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04410",
-      "en": "macadamia (bushnuts, queensland)",
-      "fr": "macadamia (queensland)",
-      "msg": "même nom EN que ing_04741: \"macadamia (bushnuts, queensland)\""
+      "en": "macadamia nuts (bushnuts, queensland)",
+      "fr": "noix de macadamia (queensland)",
+      "msg": "même nom EN que ing_04741: \"macadamia nuts (bushnuts, queensland)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04517",
-      "en": "macadamia (bushnuts, queensland)",
-      "fr": "macadamia (queensland)",
-      "msg": "même nom EN que ing_04741: \"macadamia (bushnuts, queensland)\""
+      "en": "macadamia nuts (bushnuts, queensland)",
+      "fr": "noix de macadamia (queensland)",
+      "msg": "même nom EN que ing_04741: \"macadamia nuts (bushnuts, queensland)\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5696,17 +5444,17 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04723",
+      "id": "ing_04719",
       "en": "european chestnuts (sweet)",
       "fr": "châtaignes d'Europe (marrons)",
-      "msg": "même nom EN que ing_04719: \"european chestnuts (sweet)\""
+      "msg": "même nom EN que ing_04791: \"european chestnuts (sweet)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04727",
       "en": "european chestnuts (sweet)",
       "fr": "châtaignes d'Europe (marrons)",
-      "msg": "même nom EN que ing_04719: \"european chestnuts (sweet)\""
+      "msg": "même nom EN que ing_04791: \"european chestnuts (sweet)\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5724,38 +5472,38 @@
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_00434",
-      "en": "chestnut",
-      "fr": "châtaigne",
-      "msg": "même nom EN que ing_00428: \"chestnut\""
+      "id": "ing_00428",
+      "en": "european chestnuts (sweet)",
+      "fr": "châtaignes d'Europe (marrons)",
+      "msg": "même nom EN que ing_04791: \"european chestnuts (sweet)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04677",
-      "en": "chestnut",
-      "fr": "châtaigne",
-      "msg": "même nom EN que ing_00428: \"chestnut\""
+      "en": "european chestnuts (sweet)",
+      "fr": "châtaignes d'Europe (marrons)",
+      "msg": "même nom EN que ing_04791: \"european chestnuts (sweet)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04808",
-      "en": "chestnut",
-      "fr": "châtaigne",
-      "msg": "même nom EN que ing_00428: \"chestnut\""
+      "en": "european chestnuts (sweet)",
+      "fr": "châtaignes d'Europe (marrons)",
+      "msg": "même nom EN que ing_04791: \"european chestnuts (sweet)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04810",
-      "en": "chestnut",
-      "fr": "châtaigne",
-      "msg": "même nom EN que ing_00428: \"chestnut\""
+      "en": "european chestnuts (sweet)",
+      "fr": "châtaignes d'Europe (marrons)",
+      "msg": "même nom EN que ing_04791: \"european chestnuts (sweet)\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04826",
-      "en": "chestnut",
-      "fr": "châtaigne",
-      "msg": "même nom EN que ing_00428: \"chestnut\""
+      "en": "european chestnuts (sweet)",
+      "fr": "châtaignes d'Europe (marrons)",
+      "msg": "même nom EN que ing_04791: \"european chestnuts (sweet)\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5769,7 +5517,7 @@
       "id": "ing_04406",
       "en": "european chestnuts (sweet)",
       "fr": "châtaignes d'Europe (marrons)",
-      "msg": "même nom EN que ing_04719: \"european chestnuts (sweet)\""
+      "msg": "même nom EN que ing_04791: \"european chestnuts (sweet)\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5780,52 +5528,73 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_04829",
+      "en": "european chestnuts (sweet)",
+      "fr": "châtaignes d'Europe (marrons)",
+      "msg": "même nom EN que ing_04791: \"european chestnuts (sweet)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04795",
+      "en": "european chestnuts (sweet)",
+      "fr": "châtaignes d'Europe (marrons)",
+      "msg": "même nom EN que ing_04791: \"european chestnuts (sweet)\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_04697",
-      "en": "pecans, halves",
+      "en": "pecans nuts",
       "fr": "noix de pécan",
-      "msg": "même nom EN que ing_04695: \"pecans, halves\""
+      "msg": "même nom EN que ing_04695: \"pecans nuts\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04747",
+      "en": "pecans nuts",
+      "fr": "noix de pécan",
+      "msg": "même nom EN que ing_04695: \"pecans nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04749",
-      "en": "pecans",
-      "fr": "pacanes",
-      "msg": "même nom EN que ing_04747: \"pecans\""
+      "en": "pecans nuts",
+      "fr": "noix de pécan",
+      "msg": "même nom EN que ing_04695: \"pecans nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04751",
-      "en": "pecans, halves",
+      "en": "pecans nuts",
       "fr": "noix de pécan",
-      "msg": "même nom EN que ing_04695: \"pecans, halves\""
+      "msg": "même nom EN que ing_04695: \"pecans nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04843",
-      "en": "pecans",
-      "fr": "pacanes",
-      "msg": "même nom EN que ing_04747: \"pecans\""
+      "en": "pecans nuts",
+      "fr": "noix de pécan",
+      "msg": "même nom EN que ing_04695: \"pecans nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04416",
-      "en": "pecans",
-      "fr": "pacanes",
-      "msg": "même nom EN que ing_04747: \"pecans\""
+      "en": "pecans nuts",
+      "fr": "noix de pécan",
+      "msg": "même nom EN que ing_04695: \"pecans nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04523",
-      "en": "pecans",
-      "fr": "pacanes",
-      "msg": "même nom EN que ing_04747: \"pecans\""
+      "en": "pecans nuts",
+      "fr": "noix de pécan",
+      "msg": "même nom EN que ing_04695: \"pecans nuts\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04783",
+      "id": "ing_04757",
       "en": "pine nuts",
-      "fr": "pignon de pin",
-      "msg": "même nom EN que ing_04757: \"pine nuts\""
+      "fr": "pignons de pins",
+      "msg": "même nom EN que ing_04753: \"pine nuts\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5852,85 +5621,64 @@
       "category": "DUPLICATE_EN",
       "id": "ing_04845",
       "en": "pistachio nuts",
-      "fr": "pistaches",
+      "fr": "pistache",
       "msg": "même nom EN que ing_04759: \"pistachio nuts\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04707",
-      "en": "brazilnuts",
+      "id": "ing_00034",
+      "en": "brazilnut",
       "fr": "noix du Brésil",
-      "msg": "même nom EN que ing_04705: \"brazilnuts\""
+      "msg": "même nom EN que ing_04705: \"brazilnut\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04515",
       "en": "cashew nuts",
-      "fr": "noix d'acajou (cajous, anacardes)",
+      "fr": "noix de cajous",
       "msg": "même nom EN que ing_04402: \"cashew nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04709",
       "en": "cashew nuts",
-      "fr": "noix d'acajou (cajous, anacardes)",
+      "fr": "noix de cajous",
       "msg": "même nom EN que ing_04402: \"cashew nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04711",
       "en": "cashew nuts",
-      "fr": "noix de cajou",
+      "fr": "noix de cajous",
       "msg": "même nom EN que ing_04402: \"cashew nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04837",
       "en": "cashew nuts",
-      "fr": "noix d'acajou (cajous, anacardes)",
+      "fr": "noix de cajous",
       "msg": "même nom EN que ing_04402: \"cashew nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04812",
       "en": "cashew nuts",
-      "fr": "noix de cajou",
+      "fr": "noix de cajous",
       "msg": "même nom EN que ing_04402: \"cashew nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04814",
       "en": "cashew nuts",
-      "fr": "noix de cajou",
+      "fr": "noix de cajous",
       "msg": "même nom EN que ing_04402: \"cashew nuts\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04816",
       "en": "cashew nuts",
-      "fr": "noix de cajou",
+      "fr": "noix de cajous",
       "msg": "même nom EN que ing_04402: \"cashew nuts\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00524",
-      "en": "indian, bread, naan",
-      "fr": "indien pain naan blé entier",
-      "msg": "même nom EN que ing_00522: \"indian, bread, naan\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_00572",
-      "en": "white sandwich bread",
-      "fr": "pain de mie blanc",
-      "msg": "même nom EN que ing_00568: \"white sandwich bread\""
-    },
-    {
-      "category": "FORM_AXIS_MISSING",
-      "id": "ing_00489",
-      "en": "bread, made with milk",
-      "fr": "pain avec du lait",
-      "msg": "\"bread, made with milk\" n'a pas d'axe form"
     },
     {
       "category": "DUPLICATE_EN",
@@ -5938,6 +5686,13 @@
       "en": "brick pastry sheet",
       "fr": "feuille de brick",
       "msg": "même nom EN que ing_05585: \"brick pastry sheet\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_01563",
+      "en": "potato gnocchi",
+      "fr": "gnocchi à la pomme de terre",
+      "msg": "même nom EN que ing_01662: \"potato gnocchi\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -5982,20 +5737,6 @@
       "msg": "même nom EN que ing_05595: \"pizza base\""
     },
     {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03040",
-      "en": "pasta, corn",
-      "fr": "pâtes maïs",
-      "msg": "même nom EN que ing_03038: \"pasta, corn\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_03053",
-      "en": "pickles, cucumber",
-      "fr": "cornichon",
-      "msg": "même nom EN que ing_02673: \"pickles, cucumber\""
-    },
-    {
       "category": "EN_FORM_NOT_STRIPPED",
       "id": "ing_03572",
       "en": "pizza tomato sauce",
@@ -6013,7 +5754,7 @@
       "category": "DUPLICATE_EN",
       "id": "ing_04371",
       "en": "tofu",
-      "fr": "tofu nature",
+      "fr": "tofu",
       "msg": "même nom EN que ing_04369: \"tofu\""
     },
     {
@@ -6024,270 +5765,403 @@
       "msg": "\"caramel sauce\" (form:sauce)"
     },
     {
+      "category": "FR_FORM_NOT_STRIPPED",
+      "id": "ing_04800",
+      "en": "marzipan",
+      "fr": "pâte d'amande",
+      "msg": "\"pâte d'amande\" (form:paste)"
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04855",
+      "en": "butter, semi-salted",
+      "fr": "beurre demi-sel",
+      "msg": "même nom EN que ing_04851: \"butter, semi-salted\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04857",
+      "en": "butter",
+      "fr": "beurre",
+      "msg": "même nom EN que ing_04853: \"butter\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04859",
+      "en": "butter",
+      "fr": "beurre",
+      "msg": "même nom EN que ing_04853: \"butter\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04863",
+      "en": "butter, semi-salted",
+      "fr": "beurre demi-sel",
+      "msg": "même nom EN que ing_04851: \"butter, semi-salted\""
+    },
+    {
       "category": "DUPLICATE_EN",
       "id": "ing_04865",
-      "en": "butter, 80% fat",
-      "fr": "beurre à 80% MG",
-      "msg": "même nom EN que ing_04863: \"butter, 80% fat\""
+      "en": "butter",
+      "fr": "beurre",
+      "msg": "même nom EN que ing_04853: \"butter\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04869",
       "en": "butter",
       "fr": "beurre",
-      "msg": "même nom EN que ing_04867: \"butter\""
+      "msg": "même nom EN que ing_04853: \"butter\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04873",
+      "id": "ing_04875",
       "en": "butter",
       "fr": "beurre",
-      "msg": "même nom EN que ing_04867: \"butter\""
+      "msg": "même nom EN que ing_04853: \"butter\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04877",
-      "en": "butter, stick",
+      "en": "butter",
       "fr": "beurre",
-      "msg": "même nom EN que ing_04871: \"butter, stick\""
+      "msg": "même nom EN que ing_04853: \"butter\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04898",
       "en": "butter",
-      "fr": "beurre léger",
-      "msg": "même nom EN que ing_04867: \"butter\""
+      "fr": "beurre",
+      "msg": "même nom EN que ing_04853: \"butter\""
+    },
+    {
+      "category": "EN_FORM_NOT_STRIPPED",
+      "id": "ing_04917",
+      "en": "isigny cream",
+      "fr": "crème d'Isigny",
+      "msg": "\"isigny cream\" (form:cream)"
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_04900",
-      "en": "butter, stick",
-      "fr": "beurre",
-      "msg": "même nom EN que ing_04871: \"butter, stick\""
+      "id": "ing_04921",
+      "en": "cream",
+      "fr": "crème",
+      "msg": "même nom EN que ing_04903: \"cream\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04923",
+      "en": "cream",
+      "fr": "crème",
+      "msg": "même nom EN que ing_04903: \"cream\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04925",
+      "en": "cream, heavy",
+      "fr": "crème épaisse",
+      "msg": "même nom EN que ing_04905: \"cream, heavy\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04927",
+      "en": "cream",
+      "fr": "crème",
+      "msg": "même nom EN que ing_04903: \"cream\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04929",
+      "en": "cream",
+      "fr": "crème",
+      "msg": "même nom EN que ing_04903: \"cream\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04931",
+      "en": "cream, heavy",
+      "fr": "crème épaisse",
+      "msg": "même nom EN que ing_04905: \"cream, heavy\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04956",
+      "en": "cream, sour",
+      "fr": "crème sure",
+      "msg": "même nom EN que ing_04954: \"cream, sour\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_04958",
+      "en": "cream, sour",
+      "fr": "crème sure",
+      "msg": "même nom EN que ing_04954: \"cream, sour\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_04960",
       "en": "cream, sour",
       "fr": "crème sure",
-      "msg": "même nom EN que ing_04958: \"cream, sour\""
+      "msg": "même nom EN que ing_04954: \"cream, sour\""
     },
     {
       "category": "FORM_AXIS_MISSING",
       "id": "ing_04985",
       "en": "Camembert, raw milk",
-      "fr": "camembert au lait",
+      "fr": "camembert au lait cru",
       "msg": "\"Camembert, raw milk\" n'a pas d'axe form"
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_05013",
-      "en": "cheddar",
-      "fr": "cheddar",
-      "msg": "même nom EN que ing_05001: \"cheddar\""
+      "id": "ing_05009",
+      "en": "Camembert",
+      "fr": "camembert",
+      "msg": "même nom EN que ing_04987: \"Camembert\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_05027",
+      "id": "ing_05011",
+      "en": "caraway",
+      "fr": "carvi",
+      "msg": "même nom EN que ing_04644: \"caraway\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05051",
+      "en": "buffalo mozzarella",
+      "fr": "mozzarella di bufala (buflesse)",
+      "msg": "même nom EN que ing_04980: \"buffalo mozzarella\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05053",
+      "en": "buffalo mozzarella",
+      "fr": "mozzarella di bufala (buflesse)",
+      "msg": "même nom EN que ing_04980: \"buffalo mozzarella\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05055",
+      "en": "buffalo mozzarella",
+      "fr": "mozzarella di bufala (buflesse)",
+      "msg": "même nom EN que ing_04980: \"buffalo mozzarella\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05057",
+      "en": "buffalo mozzarella",
+      "fr": "mozzarella di bufala (buflesse)",
+      "msg": "même nom EN que ing_04980: \"buffalo mozzarella\""
+    },
+    {
+      "category": "EN_FORM_NOT_STRIPPED",
+      "id": "ing_05103",
+      "en": "Camembert cream",
+      "fr": "crème de camembert",
+      "msg": "\"Camembert cream\" (form:cream)"
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05120",
+      "en": "faisselle",
+      "fr": "faisselle",
+      "msg": "même nom EN que ing_05118: \"faisselle\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05146",
+      "en": "goat cheese",
+      "fr": "fromage de chèvre",
+      "msg": "même nom EN que ing_05144: \"goat cheese\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05148",
+      "en": "goat cheese",
+      "fr": "fromage de chèvre lactique",
+      "msg": "même nom EN que ing_05144: \"goat cheese\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05172",
+      "en": "petit-suisse",
+      "fr": "petit-suisse",
+      "msg": "même nom EN que ing_05170: \"petit-suisse\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05174",
+      "en": "petit-suisse",
+      "fr": "petit-suisse",
+      "msg": "même nom EN que ing_05170: \"petit-suisse\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05178",
       "en": "feta",
       "fr": "feta",
       "msg": "même nom EN que ing_05025: \"feta\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_05067",
-      "en": "parmesan",
-      "fr": "parmesan",
-      "msg": "même nom EN que ing_05065: \"parmesan\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_05069",
-      "en": "parmesan",
-      "fr": "parmesan",
-      "msg": "même nom EN que ing_05065: \"parmesan\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_05079",
-      "en": "provolone",
-      "fr": "provolone",
-      "msg": "même nom EN que ing_05077: \"provolone\""
-    },
-    {
-      "category": "FORM_AXIS_MISSING",
-      "id": "ing_05103",
-      "en": "Camembert cream",
-      "fr": "crème de camembert",
-      "msg": "\"Camembert cream\" n'a pas d'axe form"
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_05107",
-      "en": "swiss",
-      "fr": "emmental",
-      "msg": "même nom EN que ing_05087: \"swiss\""
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_05113",
-      "en": "swiss",
-      "fr": "emmental",
-      "msg": "même nom EN que ing_05087: \"swiss\""
-    },
-    {
-      "category": "FORM_AXIS_MISSING",
-      "id": "ing_05122",
-      "en": "feta, 70%+ ewe's milk",
-      "fr": "feta au lait de brebis 70% minimum et lait de chèvre 30% maximum",
-      "msg": "\"feta, 70%+ ewe's milk\" n'a pas d'axe form"
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_05146",
-      "en": "goat cheese",
-      "fr": "fromage de chèvre frais (palet, crottin, bûchette)",
-      "msg": "même nom EN que ing_05144: \"goat cheese\""
-    },
-    {
-      "category": "FORM_AXIS_MISSING",
-      "id": "ing_05178",
-      "en": "feta-style, 100% ewe's milk",
-      "fr": "fromage type feta au lait de brebis 100%",
-      "msg": "\"feta-style, 100% ewe's milk\" n'a pas d'axe form"
-    },
-    {
-      "category": "FORM_AXIS_MISSING",
       "id": "ing_05182",
-      "en": "feta-style, 100% cow's milk",
-      "fr": "fromage type feta au lait de vache 100%",
-      "msg": "\"feta-style, 100% cow's milk\" n'a pas d'axe form"
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_05238",
-      "en": "parmesan",
-      "fr": "parmesan",
-      "msg": "même nom EN que ing_05065: \"parmesan\""
+      "en": "feta",
+      "fr": "feta",
+      "msg": "même nom EN que ing_05025: \"feta\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_05254",
       "en": "raclette",
-      "fr": "raclette (fromage)",
+      "fr": "fromage à raclette",
       "msg": "même nom EN que ing_05252: \"raclette\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_05351",
-      "en": "ricotta",
-      "fr": "ricotta avec lait",
-      "msg": "même nom EN que ing_05349: \"ricotta\""
-    },
-    {
-      "category": "EN_FORM_NOT_STRIPPED",
-      "id": "ing_05353",
-      "en": "ricotta, with whole milk",
-      "fr": "ricotta avec lait entier",
-      "msg": "\"ricotta, with whole milk\" (form:whole)"
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_05357",
-      "en": "fromage blanc, 0% fat",
-      "fr": "fromage blanc 0% MG",
-      "msg": "même nom EN que ing_05118: \"fromage blanc, 0% fat\""
-    },
-    {
-      "category": "DUPLICATE_EN",
       "id": "ing_05365",
-      "en": "fromage blanc, 2-3% fat",
-      "fr": "fromage blanc 2-3% MG",
-      "msg": "même nom EN que ing_05361: \"fromage blanc, 2-3% fat\""
+      "en": "fromage blanc",
+      "fr": "fromage blanc",
+      "msg": "même nom EN que ing_05361: \"fromage blanc\""
     },
     {
       "category": "DUPLICATE_EN",
-      "id": "ing_05375",
-      "en": "ricotta",
-      "fr": "ricotta",
-      "msg": "même nom EN que ing_05349: \"ricotta\""
+      "id": "ing_05367",
+      "en": "fromage blanc",
+      "fr": "fromage blanc",
+      "msg": "même nom EN que ing_05361: \"fromage blanc\""
     },
     {
       "category": "FORM_AXIS_MISSING",
       "id": "ing_05408",
       "en": "goat crottin, raw milk",
-      "fr": "crottin de chèvre au lait",
+      "fr": "crottin de chèvre au lait cru",
       "msg": "\"goat crottin, raw milk\" n'a pas d'axe form"
     },
     {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05474",
+      "en": "kefir",
+      "fr": "kéfir de lait",
+      "msg": "même nom EN que ing_05521: \"kefir\""
+    },
+    {
       "category": "EN_FORM_NOT_STRIPPED",
       "id": "ing_05410",
-      "en": "ewe's whole milk",
-      "fr": "lait de brebis entier",
-      "msg": "\"ewe's whole milk\" (form:whole)"
+      "en": "sheep's milk",
+      "fr": "lait de brebis",
+      "msg": "\"sheep's milk\" (form:whole)"
     },
     {
       "category": "FR_FORM_NOT_STRIPPED",
       "id": "ing_05410",
-      "en": "ewe's whole milk",
-      "fr": "lait de brebis entier",
-      "msg": "\"lait de brebis entier\" (form:whole)"
+      "en": "sheep's milk",
+      "fr": "lait de brebis",
+      "msg": "\"lait de brebis\" (form:whole)"
     },
     {
       "category": "EN_FORM_NOT_STRIPPED",
       "id": "ing_05412",
-      "en": "buffalo whole milk",
-      "fr": "lait de bufflesse entier",
-      "msg": "\"buffalo whole milk\" (form:whole)"
+      "en": "buffalo milk",
+      "fr": "lait de bufflesse",
+      "msg": "\"buffalo milk\" (form:whole)"
     },
     {
       "category": "FR_FORM_NOT_STRIPPED",
       "id": "ing_05412",
-      "en": "buffalo whole milk",
-      "fr": "lait de bufflesse entier",
-      "msg": "\"lait de bufflesse entier\" (form:whole)"
+      "en": "buffalo milk",
+      "fr": "lait de bufflesse",
+      "msg": "\"lait de bufflesse\" (form:whole)"
+    },
+    {
+      "category": "EN_FORM_NOT_STRIPPED",
+      "id": "ing_05414",
+      "en": "goat's milk",
+      "fr": "lait de chèvre",
+      "msg": "\"goat's milk\" (form:milk)"
     },
     {
       "category": "FR_FORM_NOT_STRIPPED",
       "id": "ing_05414",
-      "en": "goat's milk, UHT",
+      "en": "goat's milk",
       "fr": "lait de chèvre",
       "msg": "\"lait de chèvre\" (form:milk)"
     },
     {
+      "category": "FORM_AXIS_IN_NAME",
+      "id": "ing_05414",
+      "en": "goat's milk",
+      "fr": "lait de chèvre",
+      "msg": "\"goat's milk\" contient \"milk\" mais axe form=milk"
+    },
+    {
       "category": "EN_FORM_NOT_STRIPPED",
       "id": "ing_05416",
-      "en": "goat's whole milk",
-      "fr": "lait de chèvre entier",
-      "msg": "\"goat's whole milk\" (form:whole)"
+      "en": "goat's milk",
+      "fr": "lait de chèvre",
+      "msg": "\"goat's milk\" (form:whole)"
     },
     {
       "category": "FR_FORM_NOT_STRIPPED",
       "id": "ing_05416",
-      "en": "goat's whole milk",
-      "fr": "lait de chèvre entier",
-      "msg": "\"lait de chèvre entier\" (form:whole)"
+      "en": "goat's milk",
+      "fr": "lait de chèvre",
+      "msg": "\"lait de chèvre\" (form:whole)"
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05416",
+      "en": "goat's milk",
+      "fr": "lait de chèvre",
+      "msg": "même nom EN que ing_05414: \"goat's milk\""
+    },
+    {
+      "category": "EN_FORM_NOT_STRIPPED",
+      "id": "ing_05418",
+      "en": "goat's milk",
+      "fr": "lait de chèvre",
+      "msg": "\"goat's milk\" (form:whole)"
     },
     {
       "category": "FR_FORM_NOT_STRIPPED",
       "id": "ing_05418",
-      "en": "goat's whole milk, UHT",
-      "fr": "lait de chèvre entier",
-      "msg": "\"lait de chèvre entier\" (form:whole)"
+      "en": "goat's milk",
+      "fr": "lait de chèvre",
+      "msg": "\"lait de chèvre\" (form:whole)"
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05418",
+      "en": "goat's milk",
+      "fr": "lait de chèvre",
+      "msg": "même nom EN que ing_05414: \"goat's milk\""
     },
     {
       "category": "EN_FORM_NOT_STRIPPED",
       "id": "ing_05422",
-      "en": "mare's whole milk",
-      "fr": "lait de jument entier",
-      "msg": "\"mare's whole milk\" (form:whole)"
+      "en": "mare's milk",
+      "fr": "lait de jument",
+      "msg": "\"mare's milk\" (form:whole)"
     },
     {
       "category": "FR_FORM_NOT_STRIPPED",
       "id": "ing_05422",
-      "en": "mare's whole milk",
-      "fr": "lait de jument entier",
-      "msg": "\"lait de jument entier\" (form:whole)"
+      "en": "mare's milk",
+      "fr": "lait de jument",
+      "msg": "\"lait de jument\" (form:whole)"
+    },
+    {
+      "category": "EN_FORM_NOT_STRIPPED",
+      "id": "ing_05751",
+      "en": "skimmed pasteurized milk",
+      "fr": "lait écrémé pasteurisé",
+      "msg": "\"skimmed pasteurized milk\" (form:milk)"
+    },
+    {
+      "category": "FORM_AXIS_IN_NAME",
+      "id": "ing_05751",
+      "en": "skimmed pasteurized milk",
+      "fr": "lait écrémé pasteurisé",
+      "msg": "\"skimmed pasteurized milk\" contient \"milk\" mais axe form=milk"
     },
     {
       "category": "DUPLICATE_EN",
@@ -6297,11 +6171,53 @@
       "msg": "même nom EN que ing_05426: \"milk\""
     },
     {
-      "category": "EN_FORM_NOT_STRIPPED",
+      "category": "DUPLICATE_EN",
       "id": "ing_05432",
-      "en": "whole milk",
-      "fr": "lait entier",
-      "msg": "\"whole milk\" (form:whole)"
+      "en": "milk",
+      "fr": "lait",
+      "msg": "même nom EN que ing_05426: \"milk\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05434",
+      "en": "milk",
+      "fr": "lait",
+      "msg": "même nom EN que ing_05426: \"milk\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05436",
+      "en": "milk",
+      "fr": "lait",
+      "msg": "même nom EN que ing_05426: \"milk\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05456",
+      "en": "milk, buttermilk",
+      "fr": "babeurre culture",
+      "msg": "même nom EN que ing_05454: \"milk, buttermilk\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05458",
+      "en": "milk, buttermilk",
+      "fr": "babeurre culture",
+      "msg": "même nom EN que ing_05454: \"milk, buttermilk\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05466",
+      "en": "milk",
+      "fr": "lait",
+      "msg": "même nom EN que ing_05426: \"milk\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05468",
+      "en": "milk",
+      "fr": "lait",
+      "msg": "même nom EN que ing_05426: \"milk\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -6311,39 +6227,46 @@
       "msg": "même nom EN que ing_05426: \"milk\""
     },
     {
-      "category": "EN_FORM_NOT_STRIPPED",
-      "id": "ing_05503",
-      "en": "whole milk",
-      "fr": "lait entier",
-      "msg": "\"whole milk\" (form:whole)"
+      "category": "DUPLICATE_EN",
+      "id": "ing_05749",
+      "en": "milk",
+      "fr": "lait",
+      "msg": "même nom EN que ing_05426: \"milk\""
     },
     {
-      "category": "DUPLICATE_EN",
+      "category": "EN_FORM_NOT_STRIPPED",
       "id": "ing_05503",
-      "en": "whole milk",
-      "fr": "lait entier",
-      "msg": "même nom EN que ing_05432: \"whole milk\""
+      "en": "condensed milk",
+      "fr": "lait concentré",
+      "msg": "\"condensed milk\" (form:whole)"
     },
     {
       "category": "EN_FORM_NOT_STRIPPED",
       "id": "ing_05505",
-      "en": "whole milk",
-      "fr": "lait entier",
-      "msg": "\"whole milk\" (form:whole)"
+      "en": "condensed milk",
+      "fr": "lait concentré",
+      "msg": "\"condensed milk\" (form:whole)"
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_05505",
-      "en": "whole milk",
-      "fr": "lait entier",
-      "msg": "même nom EN que ing_05432: \"whole milk\""
+      "en": "condensed milk",
+      "fr": "lait concentré",
+      "msg": "même nom EN que ing_05503: \"condensed milk\""
+    },
+    {
+      "category": "EN_FORM_NOT_STRIPPED",
+      "id": "ing_05513",
+      "en": "condensed milk",
+      "fr": "lait concentré",
+      "msg": "\"condensed milk\" (form:concentrate)"
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_05513",
-      "en": "milk",
-      "fr": "lait",
-      "msg": "même nom EN que ing_05426: \"milk\""
+      "en": "condensed milk",
+      "fr": "lait concentré",
+      "msg": "même nom EN que ing_05503: \"condensed milk\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -6353,25 +6276,25 @@
       "msg": "même nom EN que ing_05426: \"milk\""
     },
     {
-      "category": "EN_FORM_NOT_STRIPPED",
+      "category": "DUPLICATE_EN",
       "id": "ing_05509",
-      "en": "whole milk powder",
-      "fr": "lait entier",
-      "msg": "\"whole milk powder\" (form:powder)"
+      "en": "milk",
+      "fr": "lait",
+      "msg": "même nom EN que ing_05426: \"milk\""
     },
     {
-      "category": "EN_FORM_NOT_STRIPPED",
-      "id": "ing_05529",
-      "en": "plain Greek yogurt",
-      "fr": "yaourt à la grecque nature",
-      "msg": "\"plain Greek yogurt\" (form:yogurt)"
+      "category": "DUPLICATE_EN",
+      "id": "ing_05750",
+      "en": "milk",
+      "fr": "lait",
+      "msg": "même nom EN que ing_05426: \"milk\""
     },
     {
-      "category": "FORM_AXIS_IN_NAME",
-      "id": "ing_05529",
-      "en": "plain Greek yogurt",
-      "fr": "yaourt à la grecque nature",
-      "msg": "\"plain Greek yogurt\" contient \"yogurt\" mais axe form=yogurt"
+      "category": "DUPLICATE_EN",
+      "id": "ing_05533",
+      "en": "yogurt",
+      "fr": "yaourt",
+      "msg": "même nom EN que ing_05531: \"yogurt\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -6382,10 +6305,59 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_05547",
+      "en": "yogourt, Greek style",
+      "fr": "yaourt Grec",
+      "msg": "même nom EN que ing_05529: \"yogourt, Greek style\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05565",
+      "en": "yogourt, Greek style",
+      "fr": "yaourt Grec",
+      "msg": "même nom EN que ing_05529: \"yogourt, Greek style\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_05567",
       "en": "yogurt",
       "fr": "yaourt",
       "msg": "même nom EN que ing_05531: \"yogurt\""
+    },
+    {
+      "category": "EN_FORM_NOT_STRIPPED",
+      "id": "ing_05482",
+      "en": "ewe's milk yogurt",
+      "fr": "yaourt au lait de brebis",
+      "msg": "\"ewe's milk yogurt\" (form:yogurt)"
+    },
+    {
+      "category": "FORM_AXIS_IN_NAME",
+      "id": "ing_05482",
+      "en": "ewe's milk yogurt",
+      "fr": "yaourt au lait de brebis",
+      "msg": "\"ewe's milk yogurt\" contient \"yogurt\" mais axe form=yogurt"
+    },
+    {
+      "category": "EN_FORM_NOT_STRIPPED",
+      "id": "ing_05484",
+      "en": "ewe's milk yogurt",
+      "fr": "yaourt au lait de brebis",
+      "msg": "\"ewe's milk yogurt\" (form:yogurt)"
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05484",
+      "en": "ewe's milk yogurt",
+      "fr": "yaourt au lait de brebis",
+      "msg": "même nom EN que ing_05482: \"ewe's milk yogurt\""
+    },
+    {
+      "category": "FORM_AXIS_IN_NAME",
+      "id": "ing_05484",
+      "en": "ewe's milk yogurt",
+      "fr": "yaourt au lait de brebis",
+      "msg": "\"ewe's milk yogurt\" contient \"yogurt\" mais axe form=yogurt"
     },
     {
       "category": "EN_FORM_NOT_STRIPPED",
@@ -6405,15 +6377,8 @@
       "category": "EN_FORM_NOT_STRIPPED",
       "id": "ing_05494",
       "en": "greek yogurt, ewe's milk",
-      "fr": "yaourt à la grecque nature au lait de brebis",
+      "fr": "yaourt à la grecque au lait de brebis",
       "msg": "\"greek yogurt, ewe's milk\" (form:yogurt)"
-    },
-    {
-      "category": "DUPLICATE_EN",
-      "id": "ing_05496",
-      "en": "yogurt, Greek",
-      "fr": "yaourt grec",
-      "msg": "même nom EN que ing_05565: \"yogurt, Greek\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -6428,6 +6393,13 @@
       "en": "pollen",
       "fr": "pollen",
       "msg": "même nom EN que ing_05646: \"pollen\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05684",
+      "en": "egg",
+      "fr": "œuf",
+      "msg": "même nom EN que ing_05688: \"egg\""
     },
     {
       "category": "DUPLICATE_EN",
@@ -6452,38 +6424,38 @@
     },
     {
       "category": "DUPLICATE_EN",
+      "id": "ing_05706",
+      "en": "egg, white",
+      "fr": "blanc d'œuf",
+      "msg": "même nom EN que ing_05682: \"egg, white\""
+    },
+    {
+      "category": "DUPLICATE_EN",
+      "id": "ing_05708",
+      "en": "egg, yolk",
+      "fr": "jaune d'œuf",
+      "msg": "même nom EN que ing_05686: \"egg, yolk\""
+    },
+    {
+      "category": "DUPLICATE_EN",
       "id": "ing_05714",
-      "en": "egg white",
-      "fr": "oeuf blanc (blanc d'oeuf)",
-      "msg": "même nom EN que ing_05706: \"egg white\""
+      "en": "egg, white",
+      "fr": "blanc d'œuf",
+      "msg": "même nom EN que ing_05682: \"egg, white\""
     },
     {
       "category": "DUPLICATE_EN",
       "id": "ing_05716",
-      "en": "egg yolk",
-      "fr": "oeuf jaune (jaune d'oeuf)",
-      "msg": "même nom EN que ing_05708: \"egg yolk\""
+      "en": "egg, yolk",
+      "fr": "jaune d'œuf",
+      "msg": "même nom EN que ing_05686: \"egg, yolk\""
     },
     {
-      "category": "EN_FORM_NOT_STRIPPED",
-      "id": "ing_05718",
-      "en": "egg white powder",
-      "fr": "oeuf blanc (blanc d'oeuf)",
-      "msg": "\"egg white powder\" (form:powder)"
-    },
-    {
-      "category": "EN_FORM_NOT_STRIPPED",
+      "category": "DUPLICATE_EN",
       "id": "ing_05720",
-      "en": "egg powder",
+      "en": "egg",
       "fr": "oeuf",
-      "msg": "\"egg powder\" (form:powder)"
-    },
-    {
-      "category": "EN_FORM_NOT_STRIPPED",
-      "id": "ing_05722",
-      "en": "egg yolk powder",
-      "fr": "oeuf jaune (jaune d'oeuf)",
-      "msg": "\"egg yolk powder\" (form:powder)"
+      "msg": "même nom EN que ing_05688: \"egg\""
     }
   ]
 }
