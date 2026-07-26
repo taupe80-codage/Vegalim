@@ -8,8 +8,8 @@
     ],
     "built_at": "2026-07-26",
     "note": "1 entrée = 1 variant n2 (1 état produit)",
-    "total_entries": 1885,
-    "total_aliases": 22,
+    "total_entries": 1890,
+    "total_aliases": 4,
     "orphans_count": 0,
     "n2_unplaced": 0,
     "key_convention": "nutrition_v2",
@@ -175,6 +175,33 @@
               "allergens_eu": [],
               "nova_group": 2,
               "bioavailability_protein": 0.65
+            },
+            "xylitol_birch_sugar": {
+              "v32_ing_id": "ing_05809",
+              "v32_var_id": "var_05891",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "xylitol (sucre de bouleau)",
+              "canonical_name_fr": "xylitol (sucre de bouleau)",
+              "canonical_name_en": "xylitol (birch sugar)",
+              "axes": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.65
             }
           }
         },
@@ -320,13 +347,6 @@
                 "thermal_state": "dehydrated"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4008",
-                  "v32_var_id": "var_00026"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -748,13 +768,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2320",
-                  "v32_var_id": "var_00076"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -792,13 +805,6 @@
                 "thermal_state": "fresh"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2319",
-                  "v32_var_id": "var_00078"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -1882,13 +1888,6 @@
                 "treatment": "instant"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2874",
-                  "v32_var_id": "var_00171"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -2331,13 +2330,36 @@
                 "storage_medium": "in_vinegar"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4890",
-                  "v32_var_id": "var_00189"
-                }
-              ],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "bioavailability_protein": 0.7
+            },
+            "capers_canned_in_brine": {
+              "v32_ing_id": "ing_00188",
+              "v32_var_id": "var_00189",
+              "source": "CNF",
+              "source_id": "4890",
+              "source_label": "câpres",
+              "canonical_name_fr": "câpres",
+              "canonical_name_en": "capers",
+              "axes": {
+                "packaging": "canned",
+                "storage_medium": "in_brine"
+              },
+              "aliases": [],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -2569,13 +2591,6 @@
                 "form": "liquid"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "13",
-                  "v32_var_id": "var_00219"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -2635,13 +2650,6 @@
                 "form": "liquid"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "6195",
-                  "v32_var_id": "var_00223"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -2705,13 +2713,6 @@
                 "treatment": "unenriched"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "214",
-                  "v32_var_id": "var_00040"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -2741,13 +2742,6 @@
                 "treatment": "iodized"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "746775",
-                  "v32_var_id": "var_00042"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -2873,13 +2867,6 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4409",
-                  "v32_var_id": "var_00237"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -2949,13 +2936,6 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "6180",
-                  "v32_var_id": "var_00239"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -3029,13 +3009,6 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4421",
-                  "v32_var_id": "var_00262"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -3115,52 +3088,6 @@
                 "part": "whole_seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "6275",
-                  "v32_var_id": "var_00260"
-                }
-              ],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": true,
-                "high_fat": false
-              },
-              "allergens_eu": [
-                "cereals_gluten"
-              ],
-              "nova_group": 1,
-              "bioavailability_protein": 0.67,
-              "culinary": {
-                "properties": [
-                  "starch",
-                  "fiber"
-                ]
-              }
-            },
-            "buckwheat_groats_roasted_dried_dry": {
-              "v32_ing_id": "ing_00251",
-              "v32_var_id": "var_00254",
-              "source": "CNF",
-              "source_id": "4412",
-              "source_label": "gruau de sarrasin",
-              "canonical_name_fr": "gruau de sarrasin",
-              "canonical_name_en": "buckwheat groats",
-              "axes": {
-                "thermal_state": "dried",
-                "treatment": "roasted",
-                "cooking_process": "dry"
-              },
-              "aliases": [],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -3235,13 +3162,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4493",
-                  "v32_var_id": "var_00258"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -3378,45 +3298,6 @@
                   "starch"
                 ]
               }
-            },
-            "buckwheat_groats_roasted_cooked_dry": {
-              "v32_ing_id": "ing_05768",
-              "v32_var_id": "var_00252",
-              "source": "CNF",
-              "source_id": "4413",
-              "source_label": "gruau de sarrasin",
-              "canonical_name_fr": "gruau de sarrasin, rôti",
-              "canonical_name_en": "buckwheat groats, roasted",
-              "axes": {
-                "cooking_state": "cooked",
-                "treatment": "roasted",
-                "cooking_process": "dry"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": false,
-                "high_fat": false,
-                "diabetic_friendly": true
-              },
-              "allergens_eu": [
-                "cereals_gluten"
-              ],
-              "nova_group": 1,
-              "bioavailability_protein": 0.67,
-              "culinary": {
-                "properties": [
-                  "starch"
-                ]
-              }
             }
           }
         },
@@ -3437,13 +3318,6 @@
                 "treatment": "unenriched"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "6185",
-                  "v32_var_id": "var_00305"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -4514,13 +4388,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4443",
-                  "v32_var_id": "var_00416"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -4557,13 +4424,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4442",
-                  "v32_var_id": "var_00398"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -4888,18 +4748,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2710820",
-                  "v32_var_id": "var_00353"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "4414",
-                  "v32_var_id": "var_00357"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -5301,13 +5149,6 @@
                 "part": "whole_seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2512379",
-                  "v32_var_id": "var_00464"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -5640,13 +5481,6 @@
                 "form": "flour"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2512376",
-                  "v32_var_id": "var_00471"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -7955,13 +7789,6 @@
                 "form": "flour"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "6187",
-                  "v32_var_id": "var_00669"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -8033,13 +7860,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4495",
-                  "v32_var_id": "var_00665"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -8116,13 +7936,6 @@
                 "form": "flour"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4451",
-                  "v32_var_id": "var_00688"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -8883,13 +8696,6 @@
                 "treatment": "unenriched"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2512381",
-                  "v32_var_id": "var_00732"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -8927,13 +8733,6 @@
                 "treatment": "parboiled"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4472",
-                  "v32_var_id": "var_00706"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -9440,13 +9239,6 @@
                 "seasoning": "unsalted"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4450",
-                  "v32_var_id": "var_00720"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -9917,13 +9709,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2512378",
-                  "v32_var_id": "var_00788"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -9992,13 +9777,6 @@
                 "form": "flour"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2512374",
-                  "v32_var_id": "var_00792"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -10016,6 +9794,84 @@
               "allergens_eu": [],
               "nova_group": 1,
               "bioavailability_protein": 0.7,
+              "culinary": {
+                "properties": [
+                  "starch"
+                ]
+              }
+            },
+            "buckwheat_groats_roasted_dried_dry": {
+              "v32_ing_id": "ing_00251",
+              "v32_var_id": "var_00254",
+              "source": "CNF",
+              "source_id": "4412",
+              "source_label": "gruau de sarrasin",
+              "canonical_name_fr": "gruau de sarrasin",
+              "canonical_name_en": "buckwheat groats",
+              "axes": {
+                "thermal_state": "dried",
+                "treatment": "roasted",
+                "cooking_process": "dry"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false
+              },
+              "allergens_eu": [
+                "cereals_gluten"
+              ],
+              "nova_group": 1,
+              "bioavailability_protein": 0.67,
+              "culinary": {
+                "properties": [
+                  "starch",
+                  "fiber"
+                ]
+              }
+            },
+            "buckwheat_groats_roasted_cooked_dry": {
+              "v32_ing_id": "ing_05768",
+              "v32_var_id": "var_00252",
+              "source": "CNF",
+              "source_id": "4413",
+              "source_label": "gruau de sarrasin",
+              "canonical_name_fr": "gruau de sarrasin, rôti",
+              "canonical_name_en": "buckwheat groats, roasted",
+              "axes": {
+                "cooking_state": "cooked",
+                "treatment": "roasted",
+                "cooking_process": "dry"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [
+                "cereals_gluten"
+              ],
+              "nova_group": 1,
+              "bioavailability_protein": 0.67,
               "culinary": {
                 "properties": [
                   "starch"
@@ -10375,13 +10231,6 @@
                 "form": "semolina"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2003589",
-                  "v32_var_id": "var_00443"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -10458,13 +10307,6 @@
                 "form": "flour"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "6190",
-                  "v32_var_id": "var_00828"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -10500,13 +10342,6 @@
                 "part": "whole_seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4432",
-                  "v32_var_id": "var_00820"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -10691,13 +10526,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4433",
-                  "v32_var_id": "var_01490"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -10851,13 +10679,6 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "6191",
-                  "v32_var_id": "var_00291"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -11114,13 +10935,6 @@
                 "part": "pitted"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1498",
-                  "v32_var_id": "var_00847"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -11573,13 +11387,6 @@
                 "storage_medium": "in_juice"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "5394",
-                  "v32_var_id": "var_01732"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -11616,18 +11423,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2346398",
-                  "v32_var_id": "var_01566"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "5403",
-                  "v32_var_id": "var_01570"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -11652,14 +11447,14 @@
                 ]
               }
             },
-            "pineapple_extra_sweet_variety_raw_sucree": {
+            "pineapple_05854_raw_extra_sucree": {
               "v32_ing_id": "ing_05854",
               "v32_var_id": "var_01568",
               "source": "CNF",
               "source_id": "5404",
               "source_label": "ananas (variété extra sucrée)",
-              "canonical_name_fr": "ananas (variété extra sucrée)",
-              "canonical_name_en": "pineapple (extra sweet variety)",
+              "canonical_name_fr": "ananas",
+              "canonical_name_en": "pineapple",
               "axes": {
                 "cooking_state": "raw",
                 "variete": "extra_sucree"
@@ -11744,13 +11539,6 @@
                 "form": "powder"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1514",
-                  "v32_var_id": "var_00915"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -11788,18 +11576,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "1105314",
-                  "v32_var_id": "var_00921"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "1704",
-                  "v32_var_id": "var_00917"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -11878,13 +11654,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1705",
-                  "v32_var_id": "var_01317"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -11962,13 +11731,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1538",
-                  "v32_var_id": "var_00955"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -12079,13 +11841,6 @@
                 "seasoning": "sweetened"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "5390",
-                  "v32_var_id": "var_00967"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -12128,13 +11883,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1541",
-                  "v32_var_id": "var_01178"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -12250,13 +11998,6 @@
                 "part": "with_skin"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2346399",
-                  "v32_var_id": "var_00978"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -12293,13 +12034,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1526",
-                  "v32_var_id": "var_00980"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -12600,13 +12334,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1587",
-                  "v32_var_id": "var_01038"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -12754,13 +12481,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "5956",
-                  "v32_var_id": "var_01253"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -13140,13 +12860,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1711",
-                  "v32_var_id": "var_01064"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -13184,13 +12897,6 @@
                 "part": "with_skin"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1668",
-                  "v32_var_id": "var_01073"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -13228,18 +12934,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "746768",
-                  "v32_var_id": "var_01067"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "1549",
-                  "v32_var_id": "var_01062"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -13318,18 +13012,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2346409",
-                  "v32_var_id": "var_01089"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "1749",
-                  "v32_var_id": "var_01087"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -13444,18 +13126,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2346410",
-                  "v32_var_id": "var_01101"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "1747",
-                  "v32_var_id": "var_01099"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -13720,13 +13390,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1632",
-                  "v32_var_id": "var_01118"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -13806,13 +13469,6 @@
                 "part": "with_skin"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1523",
-                  "v32_var_id": "var_01129"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -14276,13 +13932,6 @@
                 "part": "skinless"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1578",
-                  "v32_var_id": "var_01156"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -14397,13 +14046,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1667",
-                  "v32_var_id": "var_01165"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -14517,13 +14159,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1709",
-                  "v32_var_id": "var_01180"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -14597,13 +14232,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1560",
-                  "v32_var_id": "var_01186"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -14900,13 +14528,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1585",
-                  "v32_var_id": "var_01209"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -14944,13 +14565,6 @@
                 "part": "skinless"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2710831",
-                  "v32_var_id": "var_01213"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -15221,13 +14835,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1593",
-                  "v32_var_id": "var_01223"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -15269,13 +14876,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1596",
-                  "v32_var_id": "var_01244"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -15613,13 +15213,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1603",
-                  "v32_var_id": "var_01276"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -15842,13 +15435,6 @@
                 "variete": "cantaloupe"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1721",
-                  "v32_var_id": "var_01289"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -15955,18 +15541,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2710816",
-                  "v32_var_id": "var_01308"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "1605",
-                  "v32_var_id": "var_01306"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -16119,13 +15693,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1515",
-                  "v32_var_id": "var_01339"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -16162,13 +15729,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "501597",
-                  "v32_var_id": "var_05752"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -16430,13 +15990,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1611",
-                  "v32_var_id": "var_01362"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -16550,13 +16103,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1616",
-                  "v32_var_id": "var_01376"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -16666,13 +16212,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1619",
-                  "v32_var_id": "var_01413"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -16747,13 +16286,6 @@
                 "treatment": "from_concentrate"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2003591",
-                  "v32_var_id": "var_01409"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -17194,23 +16726,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1563",
-                  "v32_var_id": "var_01881"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "1564",
-                  "v32_var_id": "var_01883"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "1714",
-                  "v32_var_id": "var_05753"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -17472,13 +16987,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1628",
-                  "v32_var_id": "var_01435"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -17593,18 +17101,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2747675",
-                  "v32_var_id": "var_01301"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "1691",
-                  "v32_var_id": "var_01299"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -17688,13 +17184,6 @@
                 "cooking_state": "cooked"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1662",
-                  "v32_var_id": "var_00931"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -17841,13 +17330,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1661",
-                  "v32_var_id": "var_00935"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -17998,13 +17480,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "502341",
-                  "v32_var_id": "var_05756"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -18114,13 +17589,6 @@
                 "part": "with_skin"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1731",
-                  "v32_var_id": "var_01470"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -18349,13 +17817,6 @@
                 "part": "with_skin"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "502436",
-                  "v32_var_id": "var_05760"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -18467,18 +17928,6 @@
                 "part": "with_skin"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "1750342",
-                  "v32_var_id": "var_01549"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "502434",
-                  "v32_var_id": "var_05763"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -18810,13 +18259,6 @@
                 "form": "sliced"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1698",
-                  "v32_var_id": "var_01658"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -19193,13 +18635,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1742",
-                  "v32_var_id": "var_01799"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -19276,13 +18711,6 @@
                 "part": "pitted"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1743",
-                  "v32_var_id": "var_01795"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -19470,13 +18898,6 @@
                 "part": "pitted"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1740",
-                  "v32_var_id": "var_01777"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -20398,13 +19819,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1746",
-                  "v32_var_id": "var_01909"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -20631,13 +20045,6 @@
                 "part": "stem"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1748",
-                  "v32_var_id": "var_01952"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -20789,13 +20196,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1544",
-                  "v32_var_id": "var_01961"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -20838,13 +20238,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1689",
-                  "v32_var_id": "var_01967"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -21196,13 +20589,6 @@
                 "form": "spice"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "171",
-                  "v32_var_id": "var_02021"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -21281,13 +20667,6 @@
                 "form": "powder"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "174",
-                  "v32_var_id": "var_02025"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -21365,13 +20744,6 @@
                 "form": "spice"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "176",
-                  "v32_var_id": "var_02027"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -21495,13 +20867,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2067",
-                  "v32_var_id": "var_02009"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -21578,13 +20943,6 @@
                 "form": "powder"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "183",
-                  "v32_var_id": "var_02037"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -21699,13 +21057,6 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "184",
-                  "v32_var_id": "var_04651"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -21825,13 +21176,6 @@
                 "form": "spice"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "191",
-                  "v32_var_id": "var_02045"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -21873,13 +21217,6 @@
                 "form": "spice"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "193",
-                  "v32_var_id": "var_02047"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -21922,13 +21259,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "195",
-                  "v32_var_id": "var_02049"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -22048,13 +21378,6 @@
                 "form": "dried_herb"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "197",
-                  "v32_var_id": "var_02053"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -22097,13 +21420,6 @@
                 "form": "spice"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "198",
-                  "v32_var_id": "var_02055"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -22140,13 +21456,6 @@
                 "form": "spice"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "200",
-                  "v32_var_id": "var_02057"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -22333,13 +21642,6 @@
                 "form": "dried_herb"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "204",
-                  "v32_var_id": "var_02059"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -22573,13 +21875,6 @@
                 "form": "dried_herb"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "209",
-                  "v32_var_id": "var_02069"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -22658,13 +21953,6 @@
                 "form": "dried_herb"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "210",
-                  "v32_var_id": "var_02071"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -23044,13 +22332,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2091",
-                  "v32_var_id": "var_02929"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -23236,13 +22517,6 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "173",
-                  "v32_var_id": "var_04645"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -23286,13 +22560,6 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "182",
-                  "v32_var_id": "var_04649"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -23336,13 +22603,6 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "187",
-                  "v32_var_id": "var_04653"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -23431,13 +22691,6 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "201",
-                  "v32_var_id": "var_04657"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -23480,13 +22733,6 @@
                 "form": "powder"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "188",
-                  "v32_var_id": "var_02134"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -24010,43 +23256,6 @@
               }
             }
           }
-        },
-        "sweeteners": {
-          "id": "cat2_10181",
-          "ingredient_groups": {
-            "xylitol_birch_sugar": {
-              "v32_ing_id": "ing_05809",
-              "v32_var_id": "var_05891",
-              "source": "MANUAL",
-              "source_id": null,
-              "source_label": "xylitol (sucre de bouleau)",
-              "canonical_name_fr": "xylitol (sucre de bouleau)",
-              "canonical_name_en": "xylitol (birch sugar)",
-              "axes": {},
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": false,
-                "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.65,
-              "culinary": {
-                "properties": [
-                  "aromatic"
-                ]
-              }
-            }
-          }
         }
       }
     },
@@ -24068,13 +23277,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "1104647",
-                  "v32_var_id": "var_02126"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -24371,13 +23573,6 @@
                 "packaging": "canned"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "501841",
-                  "v32_var_id": "var_05765"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -24528,13 +23723,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2710823",
-                  "v32_var_id": "var_02184"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -24753,13 +23941,6 @@
                 "packaging": "canned"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2366",
-                  "v32_var_id": "var_02206"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -24839,18 +24020,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2685577",
-                  "v32_var_id": "var_02224"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2088",
-                  "v32_var_id": "var_02222"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -25341,13 +24510,6 @@
                 "part": "root"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2685576",
-                  "v32_var_id": "var_02261"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -25615,13 +24777,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2052",
-                  "v32_var_id": "var_02287"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -25727,7 +24882,7 @@
               "source": "CNF",
               "source_id": "2053",
               "source_label": "côte de bette bouillie, conserve",
-              "canonical_name_fr": "côte de bette bouillie",
+              "canonical_name_fr": "côte de bette",
               "canonical_name_en": "Swiss chard",
               "axes": {
                 "cooking_state": "boiled",
@@ -25884,13 +25039,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "747447",
-                  "v32_var_id": "var_02314"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -26294,13 +25442,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2380",
-                  "v32_var_id": "var_02336"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -26325,26 +25466,19 @@
                 ]
               }
             },
-            "baby_carrot_raw_petite": {
+            "carrot_raw_petite": {
               "v32_ing_id": "ing_05862",
               "v32_var_id": "var_02347",
               "source": "USDA",
               "source_id": "2258587",
               "source_label": "carotte (petite/baby)",
               "canonical_name_fr": "carotte",
-              "canonical_name_en": "baby carrot",
+              "canonical_name_en": "carrot",
               "axes": {
                 "cooking_state": "raw",
                 "taille": "petite"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2353",
-                  "v32_var_id": "var_02342"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -26380,13 +25514,6 @@
                 "thermal_state": "dehydrated"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "5416",
-                  "v32_var_id": "var_02344"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -26607,13 +25734,6 @@
                 "packaging": "canned"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2382",
-                  "v32_var_id": "var_02371"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -26730,13 +25850,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "1999629",
-                  "v32_var_id": "var_02451"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -26881,13 +25994,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "1999627",
-                  "v32_var_id": "var_02431"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -27064,13 +26170,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4974",
-                  "v32_var_id": "var_02409"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -27142,13 +26241,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2343",
-                  "v32_var_id": "var_02417"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -27184,13 +26276,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4884",
-                  "v32_var_id": "var_02419"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -27365,13 +26450,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4973",
-                  "v32_var_id": "var_02439"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -27515,13 +26593,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "502112",
-                  "v32_var_id": "var_05774"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -27706,13 +26777,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2054",
-                  "v32_var_id": "var_02495"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -28085,13 +27149,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2346407",
-                  "v32_var_id": "var_02543"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -28270,13 +27327,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2346408",
-                  "v32_var_id": "var_02553"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -28385,13 +27435,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "323505",
-                  "v32_var_id": "var_02961"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -29197,18 +28240,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2685572",
-                  "v32_var_id": "var_02607"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2038",
-                  "v32_var_id": "var_02605"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -29245,13 +28276,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2040",
-                  "v32_var_id": "var_02609"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -29436,13 +28460,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2685575",
-                  "v32_var_id": "var_02626"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -29479,13 +28496,6 @@
                 "cooking_state": "boiled"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2379",
-                  "v32_var_id": "var_02634"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -29674,13 +28684,6 @@
                 "part": "flower"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2685573",
-                  "v32_var_id": "var_02645"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -29911,13 +28914,6 @@
                 "part": "with_skin"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2346406",
-                  "v32_var_id": "var_02670"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -29955,13 +28951,6 @@
                 "part": "skinless"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4848",
-                  "v32_var_id": "var_02666"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -30285,18 +29274,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2727579",
-                  "v32_var_id": "var_02717"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2458",
-                  "v32_var_id": "var_02751"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -30418,42 +29395,6 @@
                 "high_protein": false,
                 "high_fiber": false,
                 "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.55,
-              "culinary": {
-                "properties": [
-                  "fresh",
-                  "fiber"
-                ]
-              }
-            },
-            "green_zucchini_squash_raw": {
-              "v32_ing_id": "ing_02728",
-              "v32_var_id": "var_02731",
-              "source": "CNF",
-              "source_id": "2225",
-              "source_label": "courgette",
-              "canonical_name_fr": "courgette",
-              "canonical_name_en": "green zucchini squash",
-              "axes": {
-                "cooking_state": "raw"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": false,
-                "high_fat": false,
-                "diabetic_friendly": false
               },
               "allergens_eu": [],
               "nova_group": 1,
@@ -31448,43 +30389,6 @@
                 ]
               }
             },
-            "green_zucchini_squash_boiled_canned": {
-              "v32_ing_id": "ing_02806",
-              "v32_var_id": "var_02807",
-              "source": "CNF",
-              "source_id": "2226",
-              "source_label": "courgette",
-              "canonical_name_fr": "courgette",
-              "canonical_name_en": "green zucchini squash",
-              "axes": {
-                "cooking_state": "boiled",
-                "packaging": "canned"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": false,
-                "high_fat": false,
-                "diabetic_friendly": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.55,
-              "culinary": {
-                "properties": [
-                  "fresh",
-                  "fiber"
-                ]
-              }
-            },
             "spaghetti_squash_baked_canned": {
               "v32_ing_id": "ing_02808",
               "v32_var_id": "var_02809",
@@ -31752,43 +30656,6 @@
               "source_label": "courge pâtisson",
               "canonical_name_fr": "courge pâtisson",
               "canonical_name_en": "scallop squash",
-              "axes": {
-                "cooking_state": "boiled",
-                "seasoning": "salted"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": false,
-                "high_fat": false,
-                "diabetic_friendly": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.55,
-              "culinary": {
-                "properties": [
-                  "fresh",
-                  "fiber"
-                ]
-              }
-            },
-            "green_zucchini_squash_boiled_salted": {
-              "v32_ing_id": "ing_02830",
-              "v32_var_id": "var_05788",
-              "source": "CNF",
-              "source_id": "501772",
-              "source_label": "courgette",
-              "canonical_name_fr": "courgette",
-              "canonical_name_en": "green zucchini squash",
               "axes": {
                 "cooking_state": "boiled",
                 "seasoning": "salted"
@@ -32124,13 +30991,6 @@
                 "part": "with_skin"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2685568",
-                  "v32_var_id": "var_02723"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -32239,6 +31099,116 @@
               "axes": {
                 "cooking_state": "roasted",
                 "part": "with_skin"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.55,
+              "culinary": {
+                "properties": [
+                  "fresh",
+                  "fiber"
+                ]
+              }
+            },
+            "green_zucchini_squash_raw": {
+              "v32_ing_id": "ing_02728",
+              "v32_var_id": "var_02731",
+              "source": "CNF",
+              "source_id": "2225",
+              "source_label": "courgette",
+              "canonical_name_fr": "courgette",
+              "canonical_name_en": "green zucchini squash",
+              "axes": {
+                "cooking_state": "raw"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.55,
+              "culinary": {
+                "properties": [
+                  "fresh",
+                  "fiber"
+                ]
+              }
+            },
+            "green_zucchini_squash_boiled_canned": {
+              "v32_ing_id": "ing_02806",
+              "v32_var_id": "var_02807",
+              "source": "CNF",
+              "source_id": "2226",
+              "source_label": "courgette",
+              "canonical_name_fr": "courgette",
+              "canonical_name_en": "green zucchini squash",
+              "axes": {
+                "cooking_state": "boiled",
+                "packaging": "canned"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.55,
+              "culinary": {
+                "properties": [
+                  "fresh",
+                  "fiber"
+                ]
+              }
+            },
+            "green_zucchini_squash_boiled_salted": {
+              "v32_ing_id": "ing_02830",
+              "v32_var_id": "var_05788",
+              "source": "CNF",
+              "source_id": "501772",
+              "source_label": "courgette",
+              "canonical_name_fr": "courgette",
+              "canonical_name_en": "green zucchini squash",
+              "axes": {
+                "cooking_state": "boiled",
+                "seasoning": "salted"
               },
               "aliases": [],
               "diet_profile": {
@@ -32801,13 +31771,6 @@
                 "cooking_state": "boiled"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2050",
-                  "v32_var_id": "var_02883"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -33033,13 +31996,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2747655",
-                  "v32_var_id": "var_02888"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -33382,13 +32338,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2134",
-                  "v32_var_id": "var_02938"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -33539,13 +32488,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2283",
-                  "v32_var_id": "var_02948"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -33732,18 +32674,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2346388",
-                  "v32_var_id": "var_03514"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2398",
-                  "v32_var_id": "var_03512"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -33780,18 +32710,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "746769",
-                  "v32_var_id": "var_03510"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2116",
-                  "v32_var_id": "var_03508"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -33828,13 +32746,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2346391",
-                  "v32_var_id": "var_03516"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -33908,13 +32819,6 @@
                 "part": "leaf"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "5412",
-                  "v32_var_id": "var_03522"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -34499,13 +33403,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2710835",
-                  "v32_var_id": "var_03001"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -34616,13 +33513,6 @@
                 "thermal_state": "fresh"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2388",
-                  "v32_var_id": "var_03009"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -34841,13 +33731,6 @@
                 "form": "flour"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4419",
-                  "v32_var_id": "var_03056"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -35353,18 +34236,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2747674",
-                  "v32_var_id": "var_03140"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2470",
-                  "v32_var_id": "var_03138"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -35401,13 +34272,6 @@
                 "cooking_state": "boiled"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2262",
-                  "v32_var_id": "var_03152"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -35636,13 +34500,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2059",
-                  "v32_var_id": "var_03163"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -35679,18 +34536,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2144",
-                  "v32_var_id": "var_03179"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2145",
-                  "v32_var_id": "var_03183"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -35763,13 +34608,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "790646",
-                  "v32_var_id": "var_03191"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -35806,13 +34644,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "790577",
-                  "v32_var_id": "var_03187"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -36286,13 +35117,6 @@
                 "cooking_process": "in_oil"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "5960",
-                  "v32_var_id": "var_02453"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -36446,13 +35270,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2747659",
-                  "v32_var_id": "var_03251"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -36639,13 +35456,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2240",
-                  "v32_var_id": "var_03362"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -37748,13 +36558,6 @@
                 "part": "leaf"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2086",
-                  "v32_var_id": "var_03295"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -37872,13 +36675,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2727584",
-                  "v32_var_id": "var_03304"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -38098,18 +36894,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CIQUAL",
-                  "source_id": "20041",
-                  "v32_var_id": "var_03328"
-                },
-                {
-                  "source": "USDA",
-                  "source_id": "2258588",
-                  "v32_var_id": "var_03320"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -38182,13 +36966,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2258590",
-                  "v32_var_id": "var_03322"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -38261,13 +37038,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2258589",
-                  "v32_var_id": "var_03324"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -38706,18 +37476,6 @@
                 "part": "flesh"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2346403",
-                  "v32_var_id": "var_03366"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2417",
-                  "v32_var_id": "var_01602"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -38866,13 +37624,6 @@
                 "part": "skinless"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2419",
-                  "v32_var_id": "var_01600"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -39385,13 +38136,6 @@
                 "packaging": "canned"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2425",
-                  "v32_var_id": "var_01740"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -39503,13 +38247,6 @@
                 "form": "flour"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2440",
-                  "v32_var_id": "var_01586"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -39727,13 +38464,6 @@
                 "part": "with_skin"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2421",
-                  "v32_var_id": "var_01588"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -39776,13 +38506,6 @@
                 "part": "leaf"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2194",
-                  "v32_var_id": "var_03409"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -39892,13 +38615,6 @@
                 "part": "sprout"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1999",
-                  "v32_var_id": "var_03416"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -39973,13 +38689,6 @@
                 "part": "sprout"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2367",
-                  "v32_var_id": "var_03422"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -40210,18 +38919,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2747665",
-                  "v32_var_id": "var_03452"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2443",
-                  "v32_var_id": "var_03448"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -40740,18 +39437,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2710822",
-                  "v32_var_id": "var_03478"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2352",
-                  "v32_var_id": "var_03480"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -40794,18 +39479,6 @@
                 "part": "skinless"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2727580",
-                  "v32_var_id": "var_03489"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2444",
-                  "v32_var_id": "var_03485"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -41162,13 +39835,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2255",
-                  "v32_var_id": "var_03553"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -41205,13 +39871,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2347",
-                  "v32_var_id": "var_03555"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -41378,14 +40037,14 @@
                 ]
               }
             },
-            "low_salt_tomato_3_g_l_juice_salted": {
+            "tomato_3_g_l_juice_salted": {
               "v32_ing_id": "ing_03568",
               "v32_var_id": "var_03569",
               "source": "CIQUAL",
               "source_id": "2026",
               "source_label": "tomate salé à 3 g/L",
               "canonical_name_fr": "tomate à 3 g/L",
-              "canonical_name_en": "low salt tomato 3 g/L",
+              "canonical_name_en": "tomato 3 g/L",
               "axes": {
                 "seasoning": "salted",
                 "form": "juice"
@@ -42095,13 +40754,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "321360",
-                  "v32_var_id": "var_01913"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -42365,13 +41017,6 @@
                 "part": "root"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2045",
-                  "v32_var_id": "var_03657"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -42408,13 +41053,6 @@
                 "form": "flour"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "6184",
-                  "v32_var_id": "var_03671"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -42778,13 +41416,6 @@
                 "ripeness": "mature"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "1999633",
-                  "v32_var_id": "var_03686"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -42822,13 +41453,6 @@
                 "ripeness": "baby"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "1999632",
-                  "v32_var_id": "var_03684"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -43012,13 +41636,6 @@
                 "packaging": "canned"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2447",
-                  "v32_var_id": "var_03703"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -43133,18 +41750,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2727586",
-                  "v32_var_id": "var_03196"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2326",
-                  "v32_var_id": "var_03193"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -43259,13 +41864,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2290",
-                  "v32_var_id": "var_02901"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -43491,13 +42089,6 @@
                 "packaging": "canned"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2354",
-                  "v32_var_id": "var_02990"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -43946,6 +42537,582 @@
                 "egg_free": true,
                 "high_protein": false,
                 "high_fiber": true,
+                "high_fat": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_catjang_boiled": {
+              "v32_ing_id": "ing_04116",
+              "v32_var_id": "var_04117",
+              "source": "CNF",
+              "source_id": "3281",
+              "source_label": "dolique à œil noir kunde",
+              "canonical_name_fr": "dolique à œil noir kunde",
+              "canonical_name_en": "black-eyed peas (cowpeas), catjang",
+              "axes": {
+                "cooking_state": "boiled"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_catjang_raw": {
+              "v32_ing_id": "ing_04118",
+              "v32_var_id": "var_04119",
+              "source": "CNF",
+              "source_id": "3280",
+              "source_label": "dolique à œil noir kunde",
+              "canonical_name_fr": "dolique à œil noir kunde",
+              "canonical_name_en": "black-eyed peas (cowpeas), catjang",
+              "axes": {
+                "cooking_state": "raw"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": true,
+                "high_fiber": true,
+                "high_fat": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_boiled": {
+              "v32_ing_id": "ing_04120",
+              "v32_var_id": "var_04121",
+              "source": "CNF",
+              "source_id": "3283",
+              "source_label": "dolique à œil noir",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "axes": {
+                "cooking_state": "boiled"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_raw": {
+              "v32_ing_id": "ing_04122",
+              "v32_var_id": "var_04123",
+              "source": "CNF",
+              "source_id": "3282",
+              "source_label": "dolique à œil noir",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "axes": {
+                "cooking_state": "raw"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": true,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_dried": {
+              "v32_ing_id": "ing_04124",
+              "v32_var_id": "var_04125",
+              "source": "USDA",
+              "source_id": "2644284",
+              "source_label": "dolique à œil noir",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "axes": {
+                "thermal_state": "dried"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": true,
+                "high_fat": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_immature_raw": {
+              "v32_ing_id": "ing_04126",
+              "v32_var_id": "var_04127",
+              "source": "CNF",
+              "source_id": "2074",
+              "source_label": "dolique à oeil noir grain immature",
+              "canonical_name_fr": "dolique à oeil noir grain immature",
+              "canonical_name_en": "black-eyed peas (cowpeas), immature",
+              "axes": {
+                "cooking_state": "raw"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_raw_leaf": {
+              "v32_ing_id": "ing_04128",
+              "v32_var_id": "var_04129",
+              "source": "CNF",
+              "source_id": "2082",
+              "source_label": "dolique à oeil noir",
+              "canonical_name_fr": "dolique à oeil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "axes": {
+                "cooking_state": "raw",
+                "part": "leaf"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fat": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_raw_with_seeds_bebe_baby": {
+              "v32_ing_id": "ing_04130",
+              "v32_var_id": "var_04131",
+              "source": "CNF",
+              "source_id": "2078",
+              "source_label": "dolique à oeil noir",
+              "canonical_name_fr": "dolique à oeil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "axes": {
+                "cooking_state": "raw",
+                "ripeness": "baby",
+                "part": "with_seeds"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_immature_boiled_canned": {
+              "v32_ing_id": "ing_04182",
+              "v32_var_id": "var_04183",
+              "source": "CNF",
+              "source_id": "2075",
+              "source_label": "dolique à oeil noir grain immature",
+              "canonical_name_fr": "dolique à oeil noir grain immature",
+              "canonical_name_en": "black-eyed peas (cowpeas), immature",
+              "axes": {
+                "cooking_state": "boiled",
+                "packaging": "canned"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_boiled_leaf_canned": {
+              "v32_ing_id": "ing_04184",
+              "v32_var_id": "var_04185",
+              "source": "CNF",
+              "source_id": "2083",
+              "source_label": "dolique à oeil noir",
+              "canonical_name_fr": "dolique à oeil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "axes": {
+                "cooking_state": "boiled",
+                "part": "leaf",
+                "packaging": "canned"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fat": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_boiled_seed_canned_bebe_baby": {
+              "v32_ing_id": "ing_04186",
+              "v32_var_id": "var_04187",
+              "source": "CNF",
+              "source_id": "2079",
+              "source_label": "dolique à oeil noir",
+              "canonical_name_fr": "dolique à oeil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "axes": {
+                "cooking_state": "boiled",
+                "part": "seed",
+                "packaging": "canned",
+                "ripeness": "baby"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fat": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_salted_canned": {
+              "v32_ing_id": "ing_04198",
+              "v32_var_id": "var_04199",
+              "source": "USDA",
+              "source_id": "2644293",
+              "source_label": "dolique à œil noir",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "axes": {
+                "packaging": "canned",
+                "seasoning": "salted"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fat": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_catjang_boiled_salted": {
+              "v32_ing_id": "ing_04218",
+              "v32_var_id": "var_04219",
+              "source": "CNF",
+              "source_id": "3353",
+              "source_label": "dolique à œil noir kunde",
+              "canonical_name_fr": "dolique à œil noir kunde",
+              "canonical_name_en": "black-eyed peas (cowpeas), catjang",
+              "axes": {
+                "cooking_state": "boiled",
+                "seasoning": "salted"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_boiled_salted": {
+              "v32_ing_id": "ing_04220",
+              "v32_var_id": "var_04221",
+              "source": "CNF",
+              "source_id": "3354",
+              "source_label": "dolique à œil noir",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "axes": {
+                "cooking_state": "boiled",
+                "seasoning": "salted"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_boiled_leaf_salted": {
+              "v32_ing_id": "ing_04224",
+              "v32_var_id": "var_05834",
+              "source": "CNF",
+              "source_id": "501632",
+              "source_label": "dolique à œil noir",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "axes": {
+                "cooking_state": "boiled",
+                "part": "leaf",
+                "seasoning": "salted"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fat": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "black_eyed_peas_cowpeas_boiled_seed_salted_bebe_baby": {
+              "v32_ing_id": "ing_04226",
+              "v32_var_id": "var_05835",
+              "source": "CNF",
+              "source_id": "501633",
+              "source_label": "dolique à œil noir",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "axes": {
+                "cooking_state": "boiled",
+                "seasoning": "salted",
+                "ripeness": "baby",
+                "part": "seed"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
                 "high_fat": false
               },
               "allergens_eu": [],
@@ -44698,13 +43865,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2346400",
-                  "v32_var_id": "var_03848"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -44812,13 +43972,6 @@
                 "cooking_state": "boiled"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "3382",
-                  "v32_var_id": "var_03794"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -45216,13 +44369,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2003",
-                  "v32_var_id": "var_03816"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -45693,13 +44839,6 @@
                 "cooking_state": "boiled"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "3386",
-                  "v32_var_id": "var_03850"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -45987,13 +45126,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "747431",
-                  "v32_var_id": "var_03928"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -47063,13 +46195,6 @@
                 "packaging": "canned"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "502279",
-                  "v32_var_id": "var_05827"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -47144,13 +46269,6 @@
                 "packaging": "canned"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "502280",
-                  "v32_var_id": "var_05828"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -47221,13 +46339,6 @@
                 "packaging": "canned"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "321611",
-                  "v32_var_id": "var_04018"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -48530,13 +47641,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2644283",
-                  "v32_var_id": "var_04092"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -48573,13 +47677,6 @@
                 "cooking_state": "boiled"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "3393",
-                  "v32_var_id": "var_04090"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -48965,291 +48062,6 @@
         "peas": {
           "id": "cat2_00045",
           "ingredient_groups": {
-            "black_eyed_peas_cowpeas_catjang_boiled": {
-              "v32_ing_id": "ing_04116",
-              "v32_var_id": "var_04117",
-              "source": "CNF",
-              "source_id": "3281",
-              "source_label": "dolique à œil noir kunde",
-              "canonical_name_fr": "dolique à œil noir kunde",
-              "canonical_name_en": "black-eyed peas (cowpeas), catjang",
-              "axes": {
-                "cooking_state": "boiled"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": true,
-                "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_catjang_raw": {
-              "v32_ing_id": "ing_04118",
-              "v32_var_id": "var_04119",
-              "source": "CNF",
-              "source_id": "3280",
-              "source_label": "dolique à œil noir kunde",
-              "canonical_name_fr": "dolique à œil noir kunde",
-              "canonical_name_en": "black-eyed peas (cowpeas), catjang",
-              "axes": {
-                "cooking_state": "raw"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": true,
-                "high_fiber": true,
-                "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_boiled": {
-              "v32_ing_id": "ing_04120",
-              "v32_var_id": "var_04121",
-              "source": "CNF",
-              "source_id": "3283",
-              "source_label": "dolique à œil noir",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "axes": {
-                "cooking_state": "boiled"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": true,
-                "high_fat": false,
-                "diabetic_friendly": true
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_raw": {
-              "v32_ing_id": "ing_04122",
-              "v32_var_id": "var_04123",
-              "source": "CNF",
-              "source_id": "3282",
-              "source_label": "dolique à œil noir",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "axes": {
-                "cooking_state": "raw"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": true,
-                "high_fiber": true,
-                "high_fat": false,
-                "diabetic_friendly": true
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_dried": {
-              "v32_ing_id": "ing_04124",
-              "v32_var_id": "var_04125",
-              "source": "USDA",
-              "source_id": "2644284",
-              "source_label": "dolique à œil noir",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "axes": {
-                "thermal_state": "dried"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": true,
-                "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_immature_raw": {
-              "v32_ing_id": "ing_04126",
-              "v32_var_id": "var_04127",
-              "source": "CNF",
-              "source_id": "2074",
-              "source_label": "dolique à oeil noir grain immature",
-              "canonical_name_fr": "dolique à oeil noir grain immature",
-              "canonical_name_en": "black-eyed peas (cowpeas), immature",
-              "axes": {
-                "cooking_state": "raw"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": true,
-                "high_fat": false,
-                "diabetic_friendly": true
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_raw_leaf": {
-              "v32_ing_id": "ing_04128",
-              "v32_var_id": "var_04129",
-              "source": "CNF",
-              "source_id": "2082",
-              "source_label": "dolique à oeil noir",
-              "canonical_name_fr": "dolique à oeil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "axes": {
-                "cooking_state": "raw",
-                "part": "leaf"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_raw_with_seeds_bebe_baby": {
-              "v32_ing_id": "ing_04130",
-              "v32_var_id": "var_04131",
-              "source": "CNF",
-              "source_id": "2078",
-              "source_label": "dolique à oeil noir",
-              "canonical_name_fr": "dolique à oeil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "axes": {
-                "cooking_state": "raw",
-                "ripeness": "baby",
-                "part": "with_seeds"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": true,
-                "high_fat": false,
-                "diabetic_friendly": true
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
             "lupin_seed_dried": {
               "v32_ing_id": "ing_04132",
               "v32_var_id": "var_04133",
@@ -49404,13 +48216,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2409",
-                  "v32_var_id": "var_04141"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -49554,13 +48359,6 @@
                 "cooking_state": "boiled"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "3395",
-                  "v32_var_id": "var_04150"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -49874,116 +48672,6 @@
                 ]
               }
             },
-            "black_eyed_peas_cowpeas_immature_boiled_canned": {
-              "v32_ing_id": "ing_04182",
-              "v32_var_id": "var_04183",
-              "source": "CNF",
-              "source_id": "2075",
-              "source_label": "dolique à oeil noir grain immature",
-              "canonical_name_fr": "dolique à oeil noir grain immature",
-              "canonical_name_en": "black-eyed peas (cowpeas), immature",
-              "axes": {
-                "cooking_state": "boiled",
-                "packaging": "canned"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": true,
-                "high_fat": false,
-                "diabetic_friendly": true
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_boiled_leaf_canned": {
-              "v32_ing_id": "ing_04184",
-              "v32_var_id": "var_04185",
-              "source": "CNF",
-              "source_id": "2083",
-              "source_label": "dolique à oeil noir",
-              "canonical_name_fr": "dolique à oeil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "axes": {
-                "cooking_state": "boiled",
-                "part": "leaf",
-                "packaging": "canned"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_boiled_seed_canned_bebe_baby": {
-              "v32_ing_id": "ing_04186",
-              "v32_var_id": "var_04187",
-              "source": "CNF",
-              "source_id": "2079",
-              "source_label": "dolique à oeil noir",
-              "canonical_name_fr": "dolique à oeil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "axes": {
-                "cooking_state": "boiled",
-                "part": "seed",
-                "packaging": "canned",
-                "ripeness": "baby"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
             "snow_peas_boiled_canned": {
               "v32_ing_id": "ing_04188",
               "v32_var_id": "var_04189",
@@ -50133,41 +48821,6 @@
                 ]
               }
             },
-            "black_eyed_peas_cowpeas_salted_canned": {
-              "v32_ing_id": "ing_04198",
-              "v32_var_id": "var_04199",
-              "source": "USDA",
-              "source_id": "2644293",
-              "source_label": "dolique à œil noir",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "axes": {
-                "packaging": "canned",
-                "seasoning": "salted"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
             "green_peas_canned": {
               "v32_ing_id": "ing_04200",
               "v32_var_id": "var_04213",
@@ -50180,13 +48833,6 @@
                 "packaging": "canned"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2411",
-                  "v32_var_id": "var_04201"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -50241,152 +48887,6 @@
               "allergens_eu": [],
               "nova_group": 1,
               "bioavailability_protein": 0.6,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_catjang_boiled_salted": {
-              "v32_ing_id": "ing_04218",
-              "v32_var_id": "var_04219",
-              "source": "CNF",
-              "source_id": "3353",
-              "source_label": "dolique à œil noir kunde",
-              "canonical_name_fr": "dolique à œil noir kunde",
-              "canonical_name_en": "black-eyed peas (cowpeas), catjang",
-              "axes": {
-                "cooking_state": "boiled",
-                "seasoning": "salted"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": true,
-                "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_boiled_salted": {
-              "v32_ing_id": "ing_04220",
-              "v32_var_id": "var_04221",
-              "source": "CNF",
-              "source_id": "3354",
-              "source_label": "dolique à œil noir",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "axes": {
-                "cooking_state": "boiled",
-                "seasoning": "salted"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": true,
-                "high_fat": false,
-                "diabetic_friendly": true
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_boiled_leaf_salted": {
-              "v32_ing_id": "ing_04224",
-              "v32_var_id": "var_05834",
-              "source": "CNF",
-              "source_id": "501632",
-              "source_label": "dolique à œil noir",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "axes": {
-                "cooking_state": "boiled",
-                "part": "leaf",
-                "seasoning": "salted"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fiber"
-                ]
-              }
-            },
-            "black_eyed_peas_cowpeas_boiled_seed_salted_bebe_baby": {
-              "v32_ing_id": "ing_04226",
-              "v32_var_id": "var_05835",
-              "source": "CNF",
-              "source_id": "501633",
-              "source_label": "dolique à œil noir",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "axes": {
-                "cooking_state": "boiled",
-                "seasoning": "salted",
-                "ripeness": "baby",
-                "part": "seed"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.72,
               "culinary": {
                 "properties": [
                   "protein",
@@ -50628,13 +49128,6 @@
                 "cooking_state": "boiled"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "3390",
-                  "v32_var_id": "var_04244"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -50672,18 +49165,6 @@
                 "thermal_state": "dried"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2644282",
-                  "v32_var_id": "var_04248"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "3389",
-                  "v32_var_id": "var_04246"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -50720,18 +49201,43 @@
                 "packaging": "canned"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "502261",
-                  "v32_var_id": "var_05839"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "502262",
-                  "v32_var_id": "var_05840"
-                }
-              ],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.72,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "chickpea_canned_rince": {
+              "v32_ing_id": "ing_04255",
+              "v32_var_id": "var_05840",
+              "source": "CNF",
+              "source_id": "502262",
+              "source_label": "pois chiches",
+              "canonical_name_fr": "pois chiches",
+              "canonical_name_en": "chickpea",
+              "axes": {
+                "packaging": "canned",
+                "treatment": "rince"
+              },
+              "aliases": [],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -50840,13 +49346,6 @@
                 "form": "flour"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4886",
-                  "v32_var_id": "var_04242"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -51661,13 +50160,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "3321",
-                  "v32_var_id": "var_04364"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -52271,18 +50763,6 @@
                 "origin": "plant"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "748278",
-                  "v32_var_id": "var_04419"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "451",
-                  "v32_var_id": "var_04472"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -52643,13 +51123,6 @@
                 "treatment": "refined"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "423",
-                  "v32_var_id": "var_04484"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -52686,13 +51159,6 @@
                 "origin": "plant"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "435",
-                  "v32_var_id": "var_04490"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -52765,13 +51231,6 @@
                 "origin": "plant"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "453",
-                  "v32_var_id": "var_04500"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -53169,13 +51628,6 @@
                 "origin": "plant"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "748608",
-                  "v32_var_id": "var_03229"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -53212,13 +51664,6 @@
                 "origin": "plant"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "748366",
-                  "v32_var_id": "var_04279"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -53327,13 +51772,6 @@
                 "origin": "plant"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "441",
-                  "v32_var_id": "var_00859"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -53681,18 +52119,47 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2608",
-                  "v32_var_id": "var_04556"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2598",
-                  "v32_var_id": "var_04558"
-                }
-              ],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": true,
+                "high_fiber": true,
+                "high_fat": true,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.75,
+              "culinary": {
+                "properties": [
+                  "fat",
+                  "protein",
+                  "fiber"
+                ]
+              }
+            },
+            "sesame_tahini_raw_butter_seed_plant_unsalted": {
+              "v32_ing_id": "ing_04555",
+              "v32_var_id": "var_04558",
+              "source": "CNF",
+              "source_id": "2598",
+              "source_label": "sésame (tahini)",
+              "canonical_name_fr": "sésame (tahini)",
+              "canonical_name_en": "sesame (tahini)",
+              "axes": {
+                "origin": "plant",
+                "cooking_state": "raw",
+                "form": "butter",
+                "part": "seed",
+                "seasoning": "unsalted"
+              },
+              "aliases": [],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -53834,14 +52301,14 @@
                 ]
               }
             },
-            "peanut_crunchy_butter_salted_plant_croquant": {
+            "peanut_04568_butter_salted_plant_croquant": {
               "v32_ing_id": "ing_04568",
               "v32_var_id": "var_04569",
               "source": "CNF",
               "source_id": "3309",
               "source_label": "cacahuète (arachide)",
-              "canonical_name_fr": "cacahuète (arachide), croquante",
-              "canonical_name_en": "peanut, crunchy",
+              "canonical_name_fr": "cacahuète (arachide)",
+              "canonical_name_en": "peanut",
               "axes": {
                 "seasoning": "salted",
                 "origin": "plant",
@@ -54067,14 +52534,14 @@
                 ]
               }
             },
-            "peanut_creamy_butter_salted_plant_cremeux": {
+            "peanut_05764_butter_salted_plant_cremeux": {
               "v32_ing_id": "ing_05764",
               "v32_var_id": "var_04571",
               "source": "CNF",
               "source_id": "3399",
               "source_label": "cacahuète (arachide)",
-              "canonical_name_fr": "cacahuète (arachide), crémeuse",
-              "canonical_name_en": "peanut, creamy",
+              "canonical_name_fr": "cacahuète (arachide)",
+              "canonical_name_en": "peanut",
               "axes": {
                 "seasoning": "salted",
                 "origin": "plant",
@@ -55176,13 +53643,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "3396",
-                  "v32_var_id": "var_04774"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -55417,13 +53877,6 @@
                 "treatment": "sprouted"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "1982",
-                  "v32_var_id": "var_04594"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -55461,13 +53914,6 @@
                 "treatment": "hulled"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "503362",
-                  "v32_var_id": "var_05845"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -55506,18 +53952,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2710819",
-                  "v32_var_id": "var_04601"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "2511",
-                  "v32_var_id": "var_04621"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -55663,13 +54097,6 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "4528",
-                  "v32_var_id": "var_04623"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -56002,13 +54429,6 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2515381",
-                  "v32_var_id": "var_04641"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -56400,13 +54820,6 @@
                 "part": "seed"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2516",
-                  "v32_var_id": "var_02705"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -56676,13 +55089,6 @@
                 "form": "spice"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "186",
-                  "v32_var_id": "var_02894"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -57245,13 +55651,6 @@
                 "form": "plant_water"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2566",
-                  "v32_var_id": "var_04799"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -57448,13 +55847,6 @@
                 "seasoning": "unsalted"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2515375",
-                  "v32_var_id": "var_04734"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -57576,13 +55968,6 @@
                 "seasoning": "unsalted"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2515378",
-                  "v32_var_id": "var_04744"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -58175,13 +56560,6 @@
                 "form": "flour"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2515377",
-                  "v32_var_id": "var_00435"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -58219,13 +56597,6 @@
                 "part": "peeled"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "2554",
-                  "v32_var_id": "var_04724"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -58894,13 +57265,6 @@
                 "cooking_state": "raw"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2346392",
-                  "v32_var_id": "var_04758"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -59220,13 +57584,6 @@
                 "seasoning": "unsalted"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "2515373",
-                  "v32_var_id": "var_04708"
-                }
-              ],
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
@@ -61549,18 +59906,43 @@
                 "fat_content": "sup80pct"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CIQUAL",
-                  "source_id": "16404",
-                  "v32_var_id": "var_04862"
-                },
-                {
-                  "source": "CNF",
-                  "source_id": "92",
-                  "v32_var_id": "var_04874"
-                }
-              ],
+              "diet_profile": {
+                "vegan": false,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": false,
+                "dairy_free": false,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": true,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "nova_group": 2,
+              "bioavailability_protein": 0.7,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fat"
+                ]
+              }
+            },
+            "butter_sup80pct_tendre": {
+              "v32_ing_id": "ing_04859",
+              "v32_var_id": "var_04862",
+              "source": "CIQUAL",
+              "source_id": "16404",
+              "source_label": "beurre",
+              "canonical_name_fr": "beurre",
+              "canonical_name_en": "butter",
+              "axes": {
+                "fat_content": "sup80pct",
+                "form": "tendre"
+              },
+              "aliases": [],
               "diet_profile": {
                 "vegan": false,
                 "vegetarian": true,
@@ -61671,13 +60053,6 @@
                 "seasoning": "salted"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "118",
-                  "v32_var_id": "var_04870"
-                }
-              ],
               "diet_profile": {
                 "vegan": false,
                 "vegetarian": true,
@@ -63044,13 +61419,6 @@
                 "origin": "cow"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "328637",
-                  "v32_var_id": "var_05014"
-                }
-              ],
               "diet_profile": {
                 "vegan": false,
                 "vegetarian": true,
@@ -63424,13 +61792,6 @@
                 "origin": "sheep"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "108",
-                  "v32_var_id": "var_05026"
-                }
-              ],
               "diet_profile": {
                 "vegan": false,
                 "vegetarian": true,
@@ -64080,13 +62441,6 @@
                 "form": "hard_paste"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "40",
-                  "v32_var_id": "var_05072"
-                }
-              ],
               "diet_profile": {
                 "vegan": false,
                 "vegetarian": true,
@@ -64353,18 +62707,45 @@
                 "origin": "cow"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CIQUAL",
-                  "source_id": "12118",
-                  "v32_var_id": "var_05114"
-                },
-                {
-                  "source": "USDA",
-                  "source_id": "746767",
-                  "v32_var_id": "var_05088"
-                }
+              "diet_profile": {
+                "vegan": false,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": false,
+                "dairy_free": false,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": true,
+                "high_fiber": false,
+                "high_fat": true,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [
+                "milk"
               ],
+              "nova_group": 3,
+              "bioavailability_protein": 0.92,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fat"
+                ]
+              }
+            },
+            "swiss_grated_cow": {
+              "v32_ing_id": "ing_05087",
+              "v32_var_id": "var_05114",
+              "source": "CIQUAL",
+              "source_id": "12118",
+              "source_label": "emmental",
+              "canonical_name_fr": "emmental",
+              "canonical_name_en": "swiss",
+              "axes": {
+                "origin": "cow",
+                "form": "grated"
+              },
+              "aliases": [],
               "diet_profile": {
                 "vegan": false,
                 "vegetarian": true,
@@ -65925,14 +64306,14 @@
                 ]
               }
             },
-            "mimolette_semi_aged_cow_mi_affine": {
+            "mimolette_cow_mi_affine": {
               "v32_ing_id": "ing_05216",
               "v32_var_id": "var_05217",
               "source": "CIQUAL",
               "source_id": "12737",
               "source_label": "Mimolette demi-vieille",
               "canonical_name_fr": "Mimolette demi-vieille",
-              "canonical_name_en": "Mimolette, semi-aged",
+              "canonical_name_en": "Mimolette",
               "axes": {
                 "origin": "cow",
                 "affinage": "mi_affine"
@@ -66003,14 +64384,14 @@
                 ]
               }
             },
-            "mimolette_young_cow_jeune": {
+            "mimolette_cow_jeune": {
               "v32_ing_id": "ing_05220",
               "v32_var_id": "var_05221",
               "source": "CIQUAL",
               "source_id": "12735",
               "source_label": "Mimolette jeune",
-              "canonical_name_fr": "Mimolette jeune",
-              "canonical_name_en": "Mimolette, young",
+              "canonical_name_fr": "Mimolette",
+              "canonical_name_en": "Mimolette",
               "axes": {
                 "origin": "cow",
                 "affinage": "jeune"
@@ -67620,13 +66001,6 @@
                 "fat_content": "whole"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "USDA",
-                  "source_id": "746766",
-                  "v32_var_id": "var_05350"
-                }
-              ],
               "diet_profile": {
                 "vegan": false,
                 "vegetarian": true,
@@ -68106,14 +66480,14 @@
                 ]
               }
             },
-            "neufchatel_american_style_cow_americain": {
+            "neufchatel_cow_americain": {
               "v32_ing_id": "ing_05887",
               "v32_var_id": "var_05062",
               "source": "CNF",
               "source_id": "38",
               "source_label": "Neufchâtel",
               "canonical_name_fr": "neufchâtel",
-              "canonical_name_en": "neufchatel (American style)",
+              "canonical_name_en": "neufchatel",
               "axes": {
                 "origin": "cow",
                 "style": "americain"
@@ -68184,14 +66558,14 @@
                 ]
               }
             },
-            "swiss_cheese_canadian_style_cow_canadien": {
+            "swiss_cheese_cow_canadien": {
               "v32_ing_id": "ing_05889",
               "v32_var_id": "var_05090",
               "source": "CNF",
               "source_id": "47",
               "source_label": "emmental",
               "canonical_name_fr": "fromage suisse",
-              "canonical_name_en": "swiss cheese (Canadian style)",
+              "canonical_name_en": "swiss cheese",
               "axes": {
                 "origin": "cow",
                 "style": "canadien"
@@ -68237,13 +66611,6 @@
                 "form": "grated"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "93",
-                  "v32_var_id": "var_05074"
-                }
-              ],
               "diet_profile": {
                 "vegan": false,
                 "vegetarian": true,
@@ -68828,13 +67195,6 @@
                 "form": "milk"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "114",
-                  "v32_var_id": "var_05471"
-                }
-              ],
               "diet_profile": {
                 "vegan": false,
                 "vegetarian": true,
@@ -69349,13 +67709,6 @@
                 "packaging": "canned"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "68",
-                  "v32_var_id": "var_05514"
-                }
-              ],
               "diet_profile": {
                 "vegan": false,
                 "vegetarian": true,
@@ -71131,13 +69484,6 @@
                 "thermal_state": "fresh"
               },
               "aliases": [],
-              "alt_sources": [
-                {
-                  "source": "CNF",
-                  "source_id": "90",
-                  "v32_var_id": "var_02124"
-                }
-              ],
               "diet_profile": {
                 "vegan": false,
                 "vegetarian": true,
@@ -71170,28 +69516,10 @@
     }
   },
   "alias_index": {
-    "baby_spinach_raw": "spinach_raw_bebe_baby",
-    "black_olive_in_oil_canned": "black_olive_canned_in_oil",
-    "cauliflower_boiled_canned_flower": "cauliflower_boiled_flower_canned",
-    "cauliflower_boiled_flower_fresh": "cauliflower_boiled_flower_frais_fresh",
-    "chayote_boiled_fresh": "chayote_boiled_frais_fresh",
-    "crushed_tomatoes_canned_cracked_ripe": "crushed_tomatoes_cracked_canned_ripe",
-    "fried_egg_flat": "egg_au_plat_fried_flat",
-    "kohlrabi_boiled_fresh": "kohlrabi_boiled_frais_fresh",
-    "mature_spinach_raw": "spinach_raw_mature",
-    "peach_in_heavy_syrup_canned": "peach_canned_sirop_epais_in_heavy_syrup",
-    "peach_in_light_syrup_canned": "peach_canned_sirop_leger_in_light_syrup",
-    "plain_croutons_dried_pre_packaged": "croutons_dried_plain_pre_packaged",
-    "plain_omelette_homemade": "omelette_homemade_plain",
-    "poached_egg": "egg_poche_poached",
-    "red_cabbage_boiled_fresh": "red_cabbage_boiled_frais_fresh",
-    "salted_tomato_6_g_l_juice": "tomato_6_g_l_juice_salted",
-    "scrambled_egg": "egg_brouille_scrambled",
-    "spinach_boiled_fresh": "spinach_boiled_frais_fresh",
-    "steamed_potato_vacuum": "potato_steamed_vacuum",
-    "stewed_tomatoes_canned_steamed_ripe": "stewed_tomatoes_steamed_canned_ripe",
-    "swiss_chard_boiled_canned_leaf": "swiss_chard_boiled_leaf_canned",
-    "swiss_chard_boiled_leaf_fresh": "swiss_chard_boiled_leaf_frais_fresh"
+    "butter_sup80pct_tendre": "butter_sup80pct",
+    "capers_canned_in_brine": "capers_canned_in_vinegar",
+    "chickpea_canned_rince": "chickpea_canned",
+    "swiss_grated_cow": "swiss_cow"
   },
   "orphans": []
 }
