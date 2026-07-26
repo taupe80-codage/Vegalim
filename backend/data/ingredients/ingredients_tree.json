@@ -15917,7 +15917,7 @@
               "variants": [
                 {
                   "source": "USDA",
-                  "source_id": 169925,
+                  "source_id": "169925",
                   "source_name_fr": null,
                   "source_name_en": "Tangerine juice, raw",
                   "axes_fr": {},
@@ -36655,7 +36655,7 @@
               "variants": [
                 {
                   "source": "CIQUAL",
-                  "source_id": 20322,
+                  "source_id": "20322",
                   "source_name_fr": "Oignon blanc ou jaune, sauté/poêlé sans matière grasse",
                   "source_name_en": null,
                   "axes_fr": {},
@@ -36759,11 +36759,11 @@
                 "cooking_state": "sauteed",
                 "cooking_process": "in_oil"
               },
-              "preferred_source": "CNF",
+              "preferred_source": "USDA",
               "variants": [
                 {
                   "source": "USDA",
-                  "source_id": 170004,
+                  "source_id": "170004",
                   "source_name_fr": null,
                   "source_name_en": "Onions, yellow, sauteed",
                   "axes_fr": {},
@@ -36774,7 +36774,7 @@
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "source_rank": 2,
-                  "is_primary": false
+                  "is_primary": true
                 },
                 {
                   "id": "var_02453",
@@ -36789,7 +36789,7 @@
                   "source_name_en": "Onion, yellow, sauteed",
                   "source_name_fr": "Oignon, jaune, sauté",
                   "source_rank": 3,
-                  "is_primary": true
+                  "is_primary": false
                 }
               ]
             }
