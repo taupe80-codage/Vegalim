@@ -313,10 +313,10 @@
         "description": "Indique l'origine végétale d'un ingrédient lorsque celui-ci est une substitution à un équivalent d'origine animale (lait, yaourt, beurre, crème). Non renseigné pour les ingrédients dont l'origine végétale est évidente par nature (huiles, fruits, légumes, céréales, légumineuses, noix/graines).",
         "_note": "Axe délibérément restreint aux substituts. Absent sur les huiles végétales (cat2_04394) : l'information est portée par la catégorie et le nom canonique.",
         "valeurs": {
-          "vache": "Produit laitier de vache — précisé quand coexiste avec chèvre/brebis (118 ing_)",
+          "vache": "Produit laitier de vache — précisé quand coexiste avec chèvre/brebis (122 ing_)",
           "végétal": "Substitut végétal à un produit animal — 29 ing_ : laits végétaux (soja, avoine, riz, amande, coco, châtaigne), yaourts de soja, crèmes végétales, beurres de noix et graines (amande, cajou, arachide, sésame, tournesol, cacao). (64 ing_)",
-          "chèvre": "Produit laitier de chèvre (12 ing_)",
-          "brebis": "Produit laitier de brebis (3 ing_)",
+          "chèvre": "Produit laitier de chèvre (22 ing_)",
+          "brebis": "Produit laitier de brebis (9 ing_)",
           "bufflonne": "Produit laitier de bufflonne — mozzarella di bufala (1 ing_)"
         }
       },
@@ -63774,8 +63774,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "origine": "brebis"
+              },
+              "axes_en": {
+                "origin": "sheep"
+              },
               "preferred_source": "CIQUAL",
               "variants": [
                 {
@@ -63818,9 +63822,11 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "vache",
                 "forme": "émietté"
               },
               "axes_en": {
+                "origin": "cow",
                 "form": "crumbled"
               },
               "preferred_source": "USDA",
@@ -65102,9 +65108,11 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "vache",
                 "teneur_MG": "allégé"
               },
               "axes_en": {
+                "origin": "cow",
                 "fat_content": "light"
               },
               "preferred_source": "CIQUAL",
@@ -65198,10 +65206,12 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "brebis",
                 "forme": "pâte"
               },
               "axes_en": {
-                "form": "paste"
+                "form": "paste",
+                "origin": "sheep"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -65230,10 +65240,12 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "brebis",
                 "forme": "pâte"
               },
               "axes_en": {
-                "form": "paste"
+                "form": "paste",
+                "origin": "sheep"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -65262,9 +65274,11 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "brebis",
                 "forme": "pâte"
               },
               "axes_en": {
+                "origin": "sheep",
                 "form": "paste"
               },
               "preferred_source": "CIQUAL",
@@ -65293,8 +65307,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "origine": "chèvre"
+              },
+              "axes_en": {
+                "origin": "goat"
+              },
               "preferred_source": "CIQUAL",
               "variants": [
                 {
@@ -65322,9 +65340,11 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "chèvre",
                 "affinage": "mi-affiné"
               },
               "axes_en": {
+                "origin": "goat",
                 "affinage": "mi_affin"
               },
               "preferred_source": "CIQUAL",
@@ -65364,10 +65384,12 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
-                "etat_thermique": "frais"
+                "etat_thermique": "frais",
+                "origine": "chèvre"
               },
               "axes_en": {
-                "thermal_state": "fresh"
+                "thermal_state": "fresh",
+                "origin": "goat"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -65396,10 +65418,12 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
-                "traitement": "affiné"
+                "traitement": "affiné",
+                "origine": "chèvre"
               },
               "axes_en": {
-                "treatment": "aged"
+                "treatment": "aged",
+                "origin": "goat"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -65428,10 +65452,12 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "chèvre",
                 "forme": "pâte"
               },
               "axes_en": {
-                "form": "paste"
+                "form": "paste",
+                "origin": "goat"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -65460,10 +65486,12 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "chèvre",
                 "forme": "pâte",
                 "assaisonnement": "nature"
               },
               "axes_en": {
+                "origin": "goat",
                 "form": "paste",
                 "seasoning": "plain"
               },
@@ -65494,9 +65522,11 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "chèvre",
                 "forme": "pâte"
               },
               "axes_en": {
+                "origin": "goat",
                 "form": "paste"
               },
               "preferred_source": "CIQUAL",
@@ -65526,12 +65556,14 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "chèvre",
                 "assaisonnement": "nature",
                 "forme": "pâte"
               },
               "axes_en": {
                 "seasoning": "plain",
-                "form": "paste"
+                "form": "paste",
+                "origin": "goat"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -66233,8 +66265,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "origine": "vache"
+              },
+              "axes_en": {
+                "origin": "cow"
+              },
               "preferred_source": "CIQUAL",
               "variants": [
                 {
@@ -66713,8 +66749,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "origine": "brebis"
+              },
+              "axes_en": {
+                "origin": "sheep"
+              },
               "preferred_source": "CIQUAL",
               "variants": [
                 {
@@ -67063,8 +67103,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "origine": "vache"
+              },
+              "axes_en": {
+                "origin": "cow"
+              },
               "preferred_source": "CIQUAL",
               "variants": [
                 {
@@ -67688,9 +67732,11 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "brebis",
                 "assaisonnement": "nature"
               },
               "axes_en": {
+                "origin": "sheep",
                 "seasoning": "plain"
               },
               "preferred_source": "CIQUAL",
@@ -67720,9 +67766,11 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "chèvre",
                 "assaisonnement": "nature"
               },
               "axes_en": {
+                "origin": "goat",
                 "seasoning": "plain"
               },
               "preferred_source": "CIQUAL",
@@ -67816,9 +67864,11 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
+                "origine": "chèvre",
                 "traitement": "lait_cru"
               },
               "axes_en": {
+                "origin": "goat",
                 "treatment": "raw_milk"
               },
               "preferred_source": "CIQUAL",
