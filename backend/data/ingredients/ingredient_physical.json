@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "2.0",
-    "generated_at": "2026-07-03T13:15:40.171252+00:00",
+    "generated_at": "2026-07-26T15:50:35.931897+00:00",
     "generated_by": "build_physical_v2.py",
     "built_from": [
       "ingredients_dictionary.json",
@@ -10,12 +10,12 @@
       "USDA Foundation Foods 2025",
       "CNF 2015"
     ],
-    "total_entries": 1884,
-    "entries_ok": 1754,
+    "total_entries": 1885,
+    "entries_ok": 1755,
     "entries_stub": 130,
     "match_stats": {
       "via_ciqual": 974,
-      "via_usda": 162,
+      "via_usda": 163,
       "via_cnf": 684,
       "manual_stub": 62,
       "unmatched_stub": 2
@@ -2736,7 +2736,7 @@
       "form": "flakes"
     }
   },
-  "oats_steel_cut_whole_seed": {
+  "oat_steel_cut_whole_seed_steel_cut_whole_seed": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -2755,11 +2755,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_05752",
     "_tree_var_id": "var_00266",
-    "_dict_v2_key": "oats_steel_cut_whole_seed",
+    "_dict_v2_key": "oat_steel_cut_whole_seed_steel_cut_whole_seed",
     "_source": "USDA",
     "_source_id": "2346397",
     "_name_fr": "avoine",
-    "_name_en": "oats",
+    "_name_en": "oat",
     "_axes": {
       "form": "steel_cut",
       "part": "whole_seed"
@@ -2857,7 +2857,7 @@
     "_dict_v2_key": "kamut_khorasan_wheat_raw_seed_unenriched",
     "_source": "CIQUAL",
     "_source_id": "9003",
-    "_name_fr": "blé kamut khorasan",
+    "_name_fr": "blé Kamut Khorasan",
     "_name_en": "Kamut Khorasan wheat",
     "_axes": {
       "part": "seed",
@@ -3131,7 +3131,7 @@
     "_dict_v2_key": "kamut_khorasan_wheat_cooked_seed_cooked_seed",
     "_source": "CNF",
     "_source_id": "501533",
-    "_name_fr": "blé kamut khorasan",
+    "_name_fr": "blé Kamut Khorasan",
     "_name_en": "Kamut Khorasan wheat",
     "_axes": {
       "cooking_state": "cooked",
@@ -6018,7 +6018,7 @@
     "_source": "CNF",
     "_source_id": "502270",
     "_name_fr": "pain Focaccia pain plat italien",
-    "_name_en": "bread, focaccia, Italian flatbread",
+    "_name_en": "bread, Focaccia, Italian flatbread",
     "_axes": {
       "seasoning": "plain"
     }
@@ -7985,7 +7985,7 @@
     "_dict_v2_key": "rice_vermicelli_raw_dried_raw_dried",
     "_source": "CIQUAL",
     "_source_id": "9900",
-    "_name_fr": "vermicelles de riz",
+    "_name_fr": "vermicelle de riz",
     "_name_en": "rice vermicelli",
     "_axes": {
       "cooking_state": "raw",
@@ -9533,7 +9533,7 @@
       "cooking_state": "raw"
     }
   },
-  "bananas_raw_overripe": {
+  "banana_raw_overripe_raw_overripe": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -9555,11 +9555,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_00918",
     "_tree_var_id": "var_00919",
-    "_dict_v2_key": "bananas_raw_overripe",
+    "_dict_v2_key": "banana_raw_overripe_raw_overripe",
     "_source": "USDA",
     "_source_id": "1105073",
     "_name_fr": "banane",
-    "_name_en": "bananas",
+    "_name_en": "banana",
     "_axes": {
       "cooking_state": "raw",
       "ripeness": "overripe"
@@ -9574,31 +9574,19 @@
       "kg": {
         "g": 1000
       },
-      "100ml": {
-        "g": 61.29
-      },
-      "125ml": {
-        "g": 76.61
-      },
-      "250ml": {
-        "g": 153.21
-      },
-      "50 berries": {
-        "g": 68.0
-      },
-      "140g": {
+      "racc": {
         "g": 140.0
       }
     },
     "density_g_per_ml": null,
-    "water_content_pct": 84.21,
-    "edible_pct": 98.0,
+    "water_content_pct": 84.2,
+    "edible_pct": null,
     "_status": "ok",
     "_tree_ing_id": "ing_01316",
-    "_tree_var_id": "var_01317",
+    "_tree_var_id": "var_01315",
     "_dict_v2_key": "blueberry_raw",
-    "_source": "CNF",
-    "_source_id": "1705",
+    "_source": "USDA",
+    "_source_id": "2346411",
     "_name_fr": "bleuet",
     "_name_en": "blueberry",
     "_axes": {
@@ -10398,7 +10386,7 @@
     "_source": "CNF",
     "_source_id": "5401",
     "_name_fr": "datte Medjool",
-    "_name_en": "medjool date",
+    "_name_en": "Medjool date",
     "_axes": {
       "thermal_state": "dried"
     }
@@ -12239,7 +12227,7 @@
     "_tree_var_id": "var_05928",
     "_dict_v2_key": "mandarin_juice_plain",
     "_source": "USDA",
-    "_source_id": 169925,
+    "_source_id": "169925",
     "_name_fr": "mandarine",
     "_name_en": "mandarin",
     "_axes": {
@@ -12787,7 +12775,7 @@
       "cooking_state": "raw"
     }
   },
-  "blueberry_jam_jam": {
+  "bilberry_jam_jam": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -12803,13 +12791,41 @@
     "_status": "ok",
     "_tree_ing_id": "ing_01324",
     "_tree_var_id": "var_01325",
-    "_dict_v2_key": "blueberry_jam_jam",
+    "_dict_v2_key": "bilberry_jam_jam",
     "_source": "CIQUAL",
     "_source_id": "31068",
     "_name_fr": "myrtille",
-    "_name_en": "blueberry",
+    "_name_en": "bilberry",
     "_axes": {
       "form": "jam"
+    }
+  },
+  "huckleberry_raw": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "140g": {
+        "g": 140.0
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 90.7,
+    "edible_pct": 100.0,
+    "_status": "ok",
+    "_tree_ing_id": "ing_05892",
+    "_tree_var_id": "var_05751",
+    "_dict_v2_key": "huckleberry_raw",
+    "_source": "CNF",
+    "_source_id": "501662",
+    "_name_fr": "airelle",
+    "_name_en": "huckleberry",
+    "_axes": {
+      "cooking_state": "raw"
     }
   },
   "blackberry_raw": {
@@ -14154,13 +14170,13 @@
     "_source": "USDA",
     "_source_id": "2710843",
     "_name_fr": "banane plantain",
-    "_name_en": "plantain  banana",
+    "_name_en": "plantain banana",
     "_axes": {
       "cooking_state": "raw",
       "ripeness": "overripe"
     }
   },
-  "plantains_raw_ripe": {
+  "plantain_banana_raw_ripe_raw_ripe": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -14179,17 +14195,17 @@
     "_status": "ok",
     "_tree_ing_id": "ing_00938",
     "_tree_var_id": "var_00939",
-    "_dict_v2_key": "plantains_raw_ripe",
+    "_dict_v2_key": "plantain_banana_raw_ripe_raw_ripe",
     "_source": "USDA",
     "_source_id": "2710817",
     "_name_fr": "banane plantain",
-    "_name_en": "plantains",
+    "_name_en": "plantain banana",
     "_axes": {
       "cooking_state": "raw",
       "ripeness": "ripe"
     }
   },
-  "plantain_raw": {
+  "plantain_banana_raw_raw": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -14205,11 +14221,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_00922",
     "_tree_var_id": "var_00923",
-    "_dict_v2_key": "plantain_raw",
+    "_dict_v2_key": "plantain_banana_raw_raw",
     "_source": "CIQUAL",
     "_source_id": "53100",
     "_name_fr": "banane plantain",
-    "_name_en": "plantain",
+    "_name_en": "plantain banana",
     "_axes": {
       "cooking_state": "raw"
     }
@@ -14541,7 +14557,7 @@
     "_source": "CIQUAL",
     "_source_id": "13189",
     "_name_fr": "poire Williams",
-    "_name_en": "williams pear",
+    "_name_en": "Williams pear",
     "_axes": {
       "cooking_state": "raw",
       "part": "skinless"
@@ -14927,7 +14943,7 @@
     "_source": "CIQUAL",
     "_source_id": "13620",
     "_name_fr": "pomme Golden",
-    "_name_en": "golden apple",
+    "_name_en": "Golden apple",
     "_axes": {
       "cooking_state": "raw",
       "part": "with_skin"
@@ -15095,7 +15111,7 @@
     "_source": "CIQUAL",
     "_source_id": "13085",
     "_name_fr": "pomme Canada",
-    "_name_en": "canada apple",
+    "_name_en": "Canada apple",
     "_axes": {
       "cooking_state": "raw",
       "part": "skinless"
@@ -15121,7 +15137,7 @@
     "_source": "CIQUAL",
     "_source_id": "13190",
     "_name_fr": "pomme Chantecler",
-    "_name_en": "chantecler apple",
+    "_name_en": "Chantecler apple",
     "_axes": {
       "cooking_state": "raw",
       "part": "skinless"
@@ -15147,7 +15163,7 @@
     "_source": "CIQUAL",
     "_source_id": "13191",
     "_name_fr": "pomme Gala",
-    "_name_en": "gala apple",
+    "_name_en": "Gala apple",
     "_axes": {
       "cooking_state": "raw",
       "part": "skinless"
@@ -15173,7 +15189,7 @@
     "_source": "CIQUAL",
     "_source_id": "13086",
     "_name_fr": "pomme Golden",
-    "_name_en": "golden apple",
+    "_name_en": "Golden apple",
     "_axes": {
       "cooking_state": "raw",
       "part": "skinless"
@@ -15199,7 +15215,7 @@
     "_source": "CIQUAL",
     "_source_id": "13121",
     "_name_fr": "pomme Granny Smith",
-    "_name_en": "granny Smith apple",
+    "_name_en": "Granny Smith apple",
     "_axes": {
       "cooking_state": "raw",
       "part": "skinless"
@@ -15224,8 +15240,8 @@
     "_dict_v2_key": "pink_lady_apple_raw_skinless",
     "_source": "CIQUAL",
     "_source_id": "13192",
-    "_name_fr": "pomme Pink lady",
-    "_name_en": "pink Lady apple",
+    "_name_fr": "pomme Pink Lady",
+    "_name_en": "Pink Lady apple",
     "_axes": {
       "cooking_state": "raw",
       "part": "skinless"
@@ -15770,7 +15786,7 @@
       "cooking_state": "raw"
     }
   },
-  "yellow_peaches_raw": {
+  "yellow_peach_raw": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -15798,11 +15814,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_01823",
     "_tree_var_id": "var_01824",
-    "_dict_v2_key": "yellow_peaches_raw",
+    "_dict_v2_key": "yellow_peach_raw",
     "_source": "USDA",
     "_source_id": "325430",
     "_name_fr": "pêche jaune",
-    "_name_en": "yellow peaches",
+    "_name_en": "yellow peach",
     "_axes": {
       "cooking_state": "raw"
     }
@@ -15911,7 +15927,7 @@
       "part": "skinless"
     }
   },
-  "yellow_peach_raw_skinless": {
+  "yellow_peach_raw_skinless_raw_skinless": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -15927,7 +15943,7 @@
     "_status": "ok",
     "_tree_ing_id": "ing_01835",
     "_tree_var_id": "var_01836",
-    "_dict_v2_key": "yellow_peach_raw_skinless",
+    "_dict_v2_key": "yellow_peach_raw_skinless_raw_skinless",
     "_source": "CIQUAL",
     "_source_id": "13195",
     "_name_fr": "pêche jaune",
@@ -16246,7 +16262,7 @@
     "_source": "CIQUAL",
     "_source_id": "13101",
     "_name_fr": "raisin Chasselas",
-    "_name_en": "chasselas grape",
+    "_name_en": "Chasselas grape",
     "_axes": {
       "cooking_state": "raw"
     }
@@ -16271,7 +16287,7 @@
     "_source": "CIQUAL",
     "_source_id": "13621",
     "_name_fr": "raisin noir Muscat",
-    "_name_en": "muscat black grape",
+    "_name_en": "Muscat black grape",
     "_axes": {
       "cooking_state": "raw"
     }
@@ -16527,7 +16543,7 @@
     "_source": "CNF",
     "_source_id": "4856",
     "_name_fr": "feuille de vigne",
-    "_name_en": "Grape leave",
+    "_name_en": "grape leave",
     "_axes": {
       "packaging": "canned",
       "part": "leaf"
@@ -17547,7 +17563,7 @@
     "_source": "CIQUAL",
     "_source_id": "11088",
     "_name_fr": "poivre de Cayenne",
-    "_name_en": "cayenne pepper",
+    "_name_en": "Cayenne pepper",
     "_axes": {
       "form": "powder"
     }
@@ -17572,7 +17588,7 @@
     "_source": "MANUAL",
     "_source_id": null,
     "_name_fr": "poivre du Sichuan (baies séchées)",
-    "_name_en": "sichuan pepper",
+    "_name_en": "Sichuan pepper",
     "_axes": {}
   },
   "four_spice_blend_powder": {
@@ -21561,7 +21577,7 @@
     "_source": "USDA",
     "_source_id": "2003602",
     "_name_fr": "champignon Maitake",
-    "_name_en": "maitake mushroom",
+    "_name_en": "Maitake mushroom",
     "_axes": {
       "cooking_state": "raw"
     }
@@ -23438,7 +23454,7 @@
     "_dict_v2_key": "brussels_sprouts_boiled_salted_boiled_salted",
     "_source": "CNF",
     "_source_id": "501605",
-    "_name_fr": "choux de Bruxelles",
+    "_name_fr": "chou de Bruxelles",
     "_name_en": "brussels sprouts",
     "_axes": {
       "cooking_state": "boiled",
@@ -25079,7 +25095,7 @@
     "_dict_v2_key": "crookneck_squash_boiled_canned_boiled_canned",
     "_source": "CNF",
     "_source_id": "2219",
-    "_name_fr": "courge musquée",
+    "_name_fr": "courge crookneck",
     "_name_en": "crookneck squash",
     "_axes": {
       "cooking_state": "boiled",
@@ -25267,7 +25283,7 @@
     "_dict_v2_key": "crookneck_squash_canned_canned",
     "_source": "CNF",
     "_source_id": "2220",
-    "_name_fr": "courge musquée",
+    "_name_fr": "courge crookneck",
     "_name_en": "crookneck squash",
     "_axes": {
       "packaging": "canned"
@@ -29081,7 +29097,7 @@
     "_tree_var_id": "var_05929",
     "_dict_v2_key": "yellow_onion_sauteed_dry_sauteed_dry",
     "_source": "CIQUAL",
-    "_source_id": 20322,
+    "_source_id": "20322",
     "_name_fr": "oignon jaune",
     "_name_en": "yellow onion",
     "_axes": {
@@ -29160,7 +29176,7 @@
     "_tree_var_id": "var_05930",
     "_dict_v2_key": "yellow_onion_sauteed_in_oil_sauteed_in_oil",
     "_source": "USDA",
-    "_source_id": 170004,
+    "_source_id": "170004",
     "_name_fr": "oignon jaune, sauté à l'huile",
     "_name_en": "yellow onion, sauteed, in oil",
     "_axes": {
@@ -29946,7 +29962,7 @@
     "_source": "CNF",
     "_source_id": "2322",
     "_name_fr": "piment fort du Chili rouge",
-    "_name_en": "red hot chili pepper",
+    "_name_en": "red hot Chili pepper",
     "_axes": {
       "cooking_state": "raw"
     }
@@ -30253,7 +30269,7 @@
     "_source": "CNF",
     "_source_id": "2355",
     "_name_fr": "piment fort du Chili rouge",
-    "_name_en": "red hot chili pepper",
+    "_name_en": "red hot Chili pepper",
     "_axes": {
       "thermal_state": "dried",
       "form": "spice"
@@ -30683,7 +30699,7 @@
     "_dict_v2_key": "leeks_boiled_canned_boiled_canned",
     "_source": "CNF",
     "_source_id": "2397",
-    "_name_fr": "poireaux",
+    "_name_fr": "poireau",
     "_name_en": "leeks",
     "_axes": {
       "cooking_state": "boiled",
@@ -30724,7 +30740,7 @@
     "_dict_v2_key": "leeks_boiled_salted_boiled_salted",
     "_source": "CNF",
     "_source_id": "501669",
-    "_name_fr": "poireaux",
+    "_name_fr": "poireau",
     "_name_en": "leeks",
     "_axes": {
       "cooking_state": "boiled",
@@ -31592,8 +31608,8 @@
     "_dict_v2_key": "russet_potato_baked_with_skin_baked_with_skin",
     "_source": "CNF",
     "_source_id": "5706",
-    "_name_fr": "pomme de terre Russet",
-    "_name_en": "russet potato",
+    "_name_fr": "pomme de terre rousse",
+    "_name_en": "Russet potato",
     "_axes": {
       "cooking_state": "baked",
       "part": "with_skin"
@@ -31639,8 +31655,8 @@
     "_dict_v2_key": "russet_potato_raw_with_skin_raw_with_skin",
     "_source": "CNF",
     "_source_id": "5284",
-    "_name_fr": "pomme de terre Russet",
-    "_name_en": "russet potato",
+    "_name_fr": "pomme de terre rousse",
+    "_name_en": "Russet potato",
     "_axes": {
       "cooking_state": "raw",
       "part": "with_skin"
@@ -31952,7 +31968,7 @@
       "packaging": "canned"
     }
   },
-  "potatoes_unsalted_canned": {
+  "potato_unsalted_canned_unsalted_canned": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -31977,11 +31993,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_01743",
     "_tree_var_id": "var_01744",
-    "_dict_v2_key": "potatoes_unsalted_canned",
+    "_dict_v2_key": "potato_unsalted_canned_unsalted_canned",
     "_source": "CNF",
     "_source_id": "5573",
     "_name_fr": "pomme de terre",
-    "_name_en": "potatoes",
+    "_name_en": "potato",
     "_axes": {
       "packaging": "canned",
       "seasoning": "unsalted"
@@ -35433,7 +35449,7 @@
     "_dict_v2_key": "hyacinth_boiled",
     "_source": "CNF",
     "_source_id": "2099",
-    "_name_fr": "doliques d'Égypte",
+    "_name_fr": "dolique d'Égypte",
     "_name_en": "hyacinth",
     "_axes": {
       "cooking_state": "boiled"
@@ -35467,7 +35483,7 @@
     "_dict_v2_key": "hyacinth_raw_raw",
     "_source": "CNF",
     "_source_id": "3286",
-    "_name_fr": "doliques d'Égypte",
+    "_name_fr": "dolique d'Égypte",
     "_name_en": "hyacinth",
     "_axes": {
       "cooking_state": "raw"
@@ -35504,7 +35520,7 @@
     "_dict_v2_key": "hyacinth_boiled_salted_boiled_salted",
     "_source": "CNF",
     "_source_id": "501663",
-    "_name_fr": "doliques d'Égypte",
+    "_name_fr": "dolique d'Égypte",
     "_name_en": "hyacinth",
     "_axes": {
       "cooking_state": "boiled",
@@ -35545,7 +35561,7 @@
     "_dict_v2_key": "yardlong_raw",
     "_source": "CNF",
     "_source_id": "2080",
-    "_name_fr": "doliques asperge",
+    "_name_fr": "dolique asperge",
     "_name_en": "yardlong",
     "_axes": {
       "cooking_state": "raw"
@@ -35585,7 +35601,7 @@
     "_dict_v2_key": "yardlong_boiled_boiled",
     "_source": "CNF",
     "_source_id": "2081",
-    "_name_fr": "doliques asperge",
+    "_name_fr": "dolique asperge",
     "_name_en": "yardlong",
     "_axes": {
       "cooking_state": "boiled"
@@ -35625,7 +35641,7 @@
     "_dict_v2_key": "yardlong_boiled_salted_boiled_salted",
     "_source": "CNF",
     "_source_id": "501781",
-    "_name_fr": "doliques asperge",
+    "_name_fr": "dolique asperge",
     "_name_en": "yardlong",
     "_axes": {
       "cooking_state": "boiled",
@@ -37405,7 +37421,7 @@
       "cooking_state": "raw"
     }
   },
-  "italian_beans_green_or_yellow_raw": {
+  "italian_bean_green_or_yellow_raw": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -37436,11 +37452,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_03845",
     "_tree_var_id": "var_03846",
-    "_dict_v2_key": "italian_beans_green_or_yellow_raw",
+    "_dict_v2_key": "italian_bean_green_or_yellow_raw",
     "_source": "CNF",
     "_source_id": "2370",
     "_name_fr": "haricot italien jaune ou vert",
-    "_name_en": "Italian beans (green or yellow)",
+    "_name_en": "Italian bean (green or yellow)",
     "_axes": {
       "cooking_state": "raw"
     }
@@ -38024,7 +38040,7 @@
     "_source": "USDA",
     "_source_id": "747440",
     "_name_fr": "haricot rouge foncé",
-    "_name_en": "dark Red Kidney",
+    "_name_en": "dark red kidney",
     "_axes": {
       "thermal_state": "dried"
     }
@@ -38049,7 +38065,7 @@
     "_source": "USDA",
     "_source_id": "747432",
     "_name_fr": "haricot Flor de Mayo",
-    "_name_en": "flor de Mayo bean",
+    "_name_en": "Flor de Mayo bean",
     "_axes": {
       "thermal_state": "dried"
     }
@@ -38099,7 +38115,7 @@
     "_source": "USDA",
     "_source_id": "747438",
     "_name_fr": "haricot rouge clair",
-    "_name_en": "light Red Kidney",
+    "_name_en": "light red kidney",
     "_axes": {
       "thermal_state": "dried"
     }
@@ -38149,7 +38165,7 @@
     "_source": "USDA",
     "_source_id": "747430",
     "_name_fr": "haricot rouge moyen",
-    "_name_en": "medium Red bean",
+    "_name_en": "medium red bean",
     "_axes": {
       "thermal_state": "dried"
     }
@@ -38276,7 +38292,7 @@
     "_source": "USDA",
     "_source_id": "747442",
     "_name_fr": "haricot blanc petit",
-    "_name_en": "small White bean",
+    "_name_en": "small white bean",
     "_axes": {
       "thermal_state": "dried"
     }
@@ -38424,7 +38440,7 @@
       "packaging": "canned"
     }
   },
-  "italian_bean_green_or_yellow_boiled_canned": {
+  "italian_bean_green_or_yellow_boiled_canned_boiled_canned": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -38452,7 +38468,7 @@
     "_status": "ok",
     "_tree_ing_id": "ing_03959",
     "_tree_var_id": "var_03960",
-    "_dict_v2_key": "italian_bean_green_or_yellow_boiled_canned",
+    "_dict_v2_key": "italian_bean_green_or_yellow_boiled_canned_boiled_canned",
     "_source": "CNF",
     "_source_id": "2371",
     "_name_fr": "haricot italien jaune ou vert",
@@ -38491,7 +38507,7 @@
       "seasoning": "salted"
     }
   },
-  "red_kidney_canned": {
+  "kidney_bean_canned_canned": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -38507,11 +38523,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_03979",
     "_tree_var_id": "var_04031",
-    "_dict_v2_key": "red_kidney_canned",
+    "_dict_v2_key": "kidney_bean_canned_canned",
     "_source": "CIQUAL",
     "_source_id": "20524",
     "_name_fr": "haricot rouge",
-    "_name_en": "red kidney",
+    "_name_en": "kidney bean",
     "_axes": {
       "packaging": "canned"
     }
@@ -38694,7 +38710,7 @@
       "packaging": "canned"
     }
   },
-  "withe_bean_canned": {
+  "white_bean_canned_canned": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -38710,11 +38726,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04026",
     "_tree_var_id": "var_04027",
-    "_dict_v2_key": "withe_bean_canned",
+    "_dict_v2_key": "white_bean_canned_canned",
     "_source": "CIQUAL",
     "_source_id": "20511",
     "_name_fr": "haricot blanc",
-    "_name_en": "withe bean",
+    "_name_en": "white bean",
     "_axes": {
       "packaging": "canned"
     }
@@ -38927,7 +38943,7 @@
     "_dict_v2_key": "great_northern_bean_boiled_salted_boiled_salted",
     "_source": "CNF",
     "_source_id": "3345",
-    "_name_fr": "haricots great northern",
+    "_name_fr": "haricot great northern",
     "_name_en": "great northern bean",
     "_axes": {
       "cooking_state": "boiled",
@@ -39427,7 +39443,7 @@
     "_dict_v2_key": "cranberry_roman_bean_boiled",
     "_source": "CNF",
     "_source_id": "3256",
-    "_name_fr": "haricots canneberge (romain)",
+    "_name_fr": "haricot canneberge (romain)",
     "_name_en": "cranberry (roman) bean",
     "_axes": {
       "cooking_state": "boiled"
@@ -40892,7 +40908,7 @@
       "cooking_state": "cooked"
     }
   },
-  "mangetout_peas_cooked": {
+  "snow_peas_cooked_cooked": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -40908,11 +40924,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04166",
     "_tree_var_id": "var_04167",
-    "_dict_v2_key": "mangetout_peas_cooked",
+    "_dict_v2_key": "snow_peas_cooked_cooked",
     "_source": "CIQUAL",
     "_source_id": "20243",
     "_name_fr": "pois mange-tout (gourmand)",
-    "_name_en": "mangetout peas",
+    "_name_en": "snow peas",
     "_axes": {
       "cooking_state": "cooked"
     }
@@ -41482,7 +41498,7 @@
       "part": "seed"
     }
   },
-  "lupins_boiled_salted": {
+  "lupin_boiled_salted_boiled_salted": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -41510,11 +41526,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04228",
     "_tree_var_id": "var_04229",
-    "_dict_v2_key": "lupins_boiled_salted",
+    "_dict_v2_key": "lupin_boiled_salted_boiled_salted",
     "_source": "CNF",
     "_source_id": "3358",
     "_name_fr": "lupin",
-    "_name_en": "lupins",
+    "_name_en": "lupin",
     "_axes": {
       "cooking_state": "boiled",
       "seasoning": "salted"
@@ -41696,7 +41712,7 @@
     "_name_en": "pea protein isolate",
     "_axes": {}
   },
-  "chickpeas_boiled": {
+  "chickpea_boiled": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -41712,16 +41728,16 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04243",
     "_tree_var_id": "var_04254",
-    "_dict_v2_key": "chickpeas_boiled",
+    "_dict_v2_key": "chickpea_boiled",
     "_source": "CIQUAL",
     "_source_id": "20507",
     "_name_fr": "pois chiches",
-    "_name_en": "chickpeas",
+    "_name_en": "chickpea",
     "_axes": {
       "cooking_state": "boiled"
     }
   },
-  "chickpeas_raw_dried_raw_dried": {
+  "chickpea_raw_dried_raw_dried": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -41737,17 +41753,17 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04245",
     "_tree_var_id": "var_04252",
-    "_dict_v2_key": "chickpeas_raw_dried_raw_dried",
+    "_dict_v2_key": "chickpea_raw_dried_raw_dried",
     "_source": "CIQUAL",
     "_source_id": "20516",
     "_name_fr": "pois chiches",
-    "_name_en": "chickpeas",
+    "_name_en": "chickpea",
     "_axes": {
       "cooking_state": "raw",
       "thermal_state": "dried"
     }
   },
-  "chickpeas_canned_canned": {
+  "chickpea_canned_canned": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -41763,16 +41779,16 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04255",
     "_tree_var_id": "var_04266",
-    "_dict_v2_key": "chickpeas_canned_canned",
+    "_dict_v2_key": "chickpea_canned_canned",
     "_source": "CIQUAL",
     "_source_id": "20532",
     "_name_fr": "pois chiches",
-    "_name_en": "chickpeas",
+    "_name_en": "chickpea",
     "_axes": {
       "packaging": "canned"
     }
   },
-  "chickpeas_salted_canned_salted_canned": {
+  "chickpea_salted_canned_salted_canned": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -41791,17 +41807,17 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04259",
     "_tree_var_id": "var_04260",
-    "_dict_v2_key": "chickpeas_salted_canned_salted_canned",
+    "_dict_v2_key": "chickpea_salted_canned_salted_canned",
     "_source": "USDA",
     "_source_id": "2644288",
     "_name_fr": "pois chiches",
-    "_name_en": "chickpeas",
+    "_name_en": "chickpea",
     "_axes": {
       "packaging": "canned",
       "seasoning": "salted"
     }
   },
-  "chickpeas_boiled_salted_boiled_salted": {
+  "chickpea_boiled_salted_boiled_salted": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -41829,17 +41845,17 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04267",
     "_tree_var_id": "var_04268",
-    "_dict_v2_key": "chickpeas_boiled_salted_boiled_salted",
+    "_dict_v2_key": "chickpea_boiled_salted_boiled_salted",
     "_source": "CNF",
     "_source_id": "3410",
     "_name_fr": "pois chiches",
-    "_name_en": "chickpeas",
+    "_name_en": "chickpea",
     "_axes": {
       "cooking_state": "boiled",
       "seasoning": "salted"
     }
   },
-  "chickpea_flour": {
+  "chickpea_flour_flour": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -41855,7 +41871,7 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04241",
     "_tree_var_id": "var_04250",
-    "_dict_v2_key": "chickpea_flour",
+    "_dict_v2_key": "chickpea_flour_flour",
     "_source": "CIQUAL",
     "_source_id": "9580",
     "_name_fr": "pois chiches",
@@ -43169,7 +43185,7 @@
     "_dict_v2_key": "peanut_oil_plant",
     "_source": "CIQUAL",
     "_source_id": "17040",
-    "_name_fr": "arachide",
+    "_name_fr": "cacahuète (arachide)",
     "_name_en": "peanut",
     "_axes": {
       "form": "oil",
@@ -44242,7 +44258,7 @@
     "_dict_v2_key": "cashew_butter_plain_plant",
     "_source": "CNF",
     "_source_id": "2548",
-    "_name_fr": "noix de cajous",
+    "_name_fr": "noix de cajou",
     "_name_en": "cashew",
     "_axes": {
       "form": "butter",
@@ -44534,7 +44550,7 @@
     "_dict_v2_key": "cashew_butter_salted_plant_butter_salted_plant",
     "_source": "CNF",
     "_source_id": "2629",
-    "_name_fr": "noix de cajous",
+    "_name_fr": "noix de cajou",
     "_name_en": "cashew",
     "_axes": {
       "form": "butter",
@@ -45452,7 +45468,7 @@
       "cooking_state": "roasted"
     }
   },
-  "spanish_peanuts_roasted_in_oil": {
+  "spanish_peanut_roasted_in_oil": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -45480,17 +45496,17 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04430",
     "_tree_var_id": "var_04431",
-    "_dict_v2_key": "spanish_peanuts_roasted_in_oil",
+    "_dict_v2_key": "spanish_peanut_roasted_in_oil",
     "_source": "CNF",
     "_source_id": "3363",
     "_name_fr": "cacahuète (arachide) Espagnole",
-    "_name_en": "spanish peanuts",
+    "_name_en": "spanish peanut",
     "_axes": {
       "cooking_process": "in_oil",
       "cooking_state": "roasted"
     }
   },
-  "valencia_peanuts_roasted_in_oil": {
+  "valencia_peanut_roasted_in_oil": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -45518,11 +45534,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04432",
     "_tree_var_id": "var_04433",
-    "_dict_v2_key": "valencia_peanuts_roasted_in_oil",
+    "_dict_v2_key": "valencia_peanut_roasted_in_oil",
     "_source": "CNF",
     "_source_id": "3364",
     "_name_fr": "cacahuète (arachide) Valencia",
-    "_name_en": "valencia peanuts",
+    "_name_en": "Valencia peanut",
     "_axes": {
       "cooking_process": "in_oil",
       "cooking_state": "roasted"
@@ -45566,7 +45582,7 @@
       "cooking_state": "roasted"
     }
   },
-  "spanish_peanut_roasted_salted_in_oil": {
+  "spanish_peanut_roasted_salted_in_oil_roasted_salted_in_oil": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -45594,7 +45610,7 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04529",
     "_tree_var_id": "var_04530",
-    "_dict_v2_key": "spanish_peanut_roasted_salted_in_oil",
+    "_dict_v2_key": "spanish_peanut_roasted_salted_in_oil_roasted_salted_in_oil",
     "_source": "CNF",
     "_source_id": "3304",
     "_name_fr": "cacahuète (arachide) Espagnole",
@@ -45605,7 +45621,7 @@
       "cooking_state": "roasted"
     }
   },
-  "valencia_peanut_roasted_salted_in_oil": {
+  "valencia_peanut_roasted_salted_in_oil_roasted_salted_in_oil": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -45633,7 +45649,7 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04531",
     "_tree_var_id": "var_04532",
-    "_dict_v2_key": "valencia_peanut_roasted_salted_in_oil",
+    "_dict_v2_key": "valencia_peanut_roasted_salted_in_oil_roasted_salted_in_oil",
     "_source": "CNF",
     "_source_id": "3306",
     "_name_fr": "cacahuète (arachide) Valencia",
@@ -47161,7 +47177,7 @@
       "thermal_state": "dried"
     }
   },
-  "walnut_dried_dried": {
+  "grenoble_walnut_igp_dried": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -47216,16 +47232,16 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04765",
     "_tree_var_id": "var_04766",
-    "_dict_v2_key": "walnut_dried_dried",
+    "_dict_v2_key": "grenoble_walnut_igp_dried",
     "_source": "CNF",
     "_source_id": "2590",
     "_name_fr": "noix de Grenoble",
-    "_name_en": "walnut",
+    "_name_en": "Grenoble walnut IGP",
     "_axes": {
       "thermal_state": "dried"
     }
   },
-  "walnut_raw_raw": {
+  "grenoble_walnut_igp_raw_raw": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -47244,16 +47260,16 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04767",
     "_tree_var_id": "var_04768",
-    "_dict_v2_key": "walnut_raw_raw",
+    "_dict_v2_key": "grenoble_walnut_igp_raw_raw",
     "_source": "USDA",
     "_source_id": "2346394",
     "_name_fr": "noix de Grenoble",
-    "_name_en": "walnut",
+    "_name_en": "Grenoble walnut IGP",
     "_axes": {
       "cooking_state": "raw"
     }
   },
-  "walnut_candied_candied": {
+  "grenoble_walnut_igp_candied_candied": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -47269,11 +47285,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_04769",
     "_tree_var_id": "var_05847",
-    "_dict_v2_key": "walnut_candied_candied",
+    "_dict_v2_key": "grenoble_walnut_igp_candied_candied",
     "_source": "CNF",
     "_source_id": "502439",
     "_name_fr": "noix de Grenoble",
-    "_name_en": "walnut",
+    "_name_en": "Grenoble walnut IGP",
     "_axes": {
       "treatment": "candied"
     }
@@ -49223,7 +49239,7 @@
     "_dict_v2_key": "cashew_nuts_roasted_in_oil",
     "_source": "CNF",
     "_source_id": "2547",
-    "_name_fr": "noix de cajous",
+    "_name_fr": "noix de cajou",
     "_name_en": "cashew nuts",
     "_axes": {
       "cooking_process": "in_oil",
@@ -49249,7 +49265,7 @@
     "_dict_v2_key": "cashew_nuts_grilled_salted_dry_grilled_salted_dry",
     "_source": "CIQUAL",
     "_source_id": "15019",
-    "_name_fr": "noix de cajous",
+    "_name_fr": "noix de cajou",
     "_name_en": "cashew nuts",
     "_axes": {
       "seasoning": "salted",
@@ -49288,7 +49304,7 @@
     "_dict_v2_key": "cashew_nuts_grill_sec_dried_dry_dry_roasted_dried_dry",
     "_source": "CNF",
     "_source_id": "2546",
-    "_name_fr": "noix de cajous",
+    "_name_fr": "noix de cajou",
     "_name_en": "cashew nuts",
     "_axes": {
       "cooking_process": "dry",
@@ -49318,7 +49334,7 @@
     "_dict_v2_key": "cashew_nuts_raw_raw",
     "_source": "USDA",
     "_source_id": "2515374",
-    "_name_fr": "noix de cajous",
+    "_name_fr": "noix de cajou",
     "_name_en": "cashew nuts",
     "_axes": {
       "cooking_state": "raw"
@@ -49355,7 +49371,7 @@
     "_dict_v2_key": "cashew_nuts_roasted_dried_salted_dry_roasted_dried_salted_dry",
     "_source": "CNF",
     "_source_id": "2627",
-    "_name_fr": "noix de cajous",
+    "_name_fr": "noix de cajou",
     "_name_en": "cashew nuts",
     "_axes": {
       "seasoning": "salted",
@@ -49383,7 +49399,7 @@
     "_dict_v2_key": "cashew_nuts_grilled_unsalted_dry_grilled_unsalted_dry",
     "_source": "CIQUAL",
     "_source_id": "15055",
-    "_name_fr": "noix de cajous",
+    "_name_fr": "noix de cajou",
     "_name_en": "cashew nuts",
     "_axes": {
       "cooking_state": "grilled",
@@ -49410,7 +49426,7 @@
     "_dict_v2_key": "cashew_nuts_grilled_unsalted_grilled_unsalted",
     "_source": "CIQUAL",
     "_source_id": "15054",
-    "_name_fr": "noix de cajous",
+    "_name_fr": "noix de cajou",
     "_name_en": "cashew nuts",
     "_axes": {
       "seasoning": "unsalted",
@@ -49476,7 +49492,7 @@
     "_dict_v2_key": "zabaglione_marsala_egg_custard",
     "_source": "CIQUAL",
     "_source_id": "1016",
-    "_name_fr": "marsala aux oeufs",
+    "_name_fr": "Marsala aux oeufs",
     "_name_en": "zabaglione (Marsala egg custard)",
     "_axes": {}
   },
@@ -49499,7 +49515,7 @@
     "_dict_v2_key": "egg_hard_boiled",
     "_source": "CIQUAL",
     "_source_id": "22010",
-    "_name_fr": "oeuf",
+    "_name_fr": "œuf",
     "_name_en": "egg",
     "_axes": {
       "cooking_state": "hard_boiled"
@@ -51969,7 +51985,7 @@
     "_dict_v2_key": "camembert_raw_milk_raw_milk_cow",
     "_source": "CIQUAL",
     "_source_id": "12006",
-    "_name_fr": "camembert au lait cru",
+    "_name_fr": "Camembert au lait cru",
     "_name_en": "Camembert, raw milk",
     "_axes": {
       "origin": "cow",
@@ -51995,7 +52011,7 @@
     "_dict_v2_key": "camembert_pasteurized_cow",
     "_source": "CIQUAL",
     "_source_id": "12007",
-    "_name_fr": "camembert",
+    "_name_fr": "Camembert",
     "_name_en": "Camembert",
     "_axes": {
       "thermal_state": "pasteurized",
@@ -52121,7 +52137,7 @@
     "_dict_v2_key": "chabichou_goat_cheese_goat",
     "_source": "CIQUAL",
     "_source_id": "12830",
-    "_name_fr": "chabichou",
+    "_name_fr": "Chabichou",
     "_name_en": "Chabichou (goat cheese)",
     "_axes": {
       "origin": "goat"
@@ -52331,7 +52347,7 @@
     "_dict_v2_key": "camembert_vache_cow",
     "_source": "CNF",
     "_source_id": "21",
-    "_name_fr": "camembert",
+    "_name_fr": "Camembert",
     "_name_en": "Camembert",
     "_axes": {
       "origin": "cow"
@@ -53351,7 +53367,7 @@
     "_dict_v2_key": "roquefort_blue_cheese_sheep",
     "_source": "CNF",
     "_source_id": "46",
-    "_name_fr": "roquefort (bleu)",
+    "_name_fr": "Roquefort (bleu)",
     "_name_en": "Roquefort (blue cheese)",
     "_axes": {
       "origin": "sheep"
@@ -53582,7 +53598,7 @@
     "_dict_v2_key": "camembert_cream_cream_cow",
     "_source": "CIQUAL",
     "_source_id": "12311",
-    "_name_fr": "crème de camembert",
+    "_name_fr": "crème de Camembert",
     "_name_en": "Camembert cream",
     "_axes": {
       "origin": "cow",
@@ -53895,7 +53911,7 @@
       "origin": "goat"
     }
   },
-  "goat_cheese_goat": {
+  "goat_cheese_semi_dry_goat_mi_affin": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -53911,16 +53927,17 @@
     "_status": "ok",
     "_tree_ing_id": "ing_05144",
     "_tree_var_id": "var_05145",
-    "_dict_v2_key": "goat_cheese_goat",
+    "_dict_v2_key": "goat_cheese_semi_dry_goat_mi_affin",
     "_source": "CIQUAL",
     "_source_id": "12810",
     "_name_fr": "fromage de chèvre demi-sec",
-    "_name_en": "goat cheese",
+    "_name_en": "goat cheese, semi-dry",
     "_axes": {
-      "origin": "goat"
+      "origin": "goat",
+      "affinage": "mi_affin"
     }
   },
-  "goat_cheese_fresh_ch_vre_fresh_goat": {
+  "goat_cheese_fresh_fresh_goat": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -53936,17 +53953,17 @@
     "_status": "ok",
     "_tree_ing_id": "ing_05146",
     "_tree_var_id": "var_05147",
-    "_dict_v2_key": "goat_cheese_fresh_ch_vre_fresh_goat",
+    "_dict_v2_key": "goat_cheese_fresh_fresh_goat",
     "_source": "CIQUAL",
     "_source_id": "12805",
     "_name_fr": "fromage de chèvre",
-    "_name_en": "goat cheese",
+    "_name_en": "goat cheese, fresh",
     "_axes": {
       "thermal_state": "fresh",
       "origin": "goat"
     }
   },
-  "goat_cheese_aged_ch_vre_aged_goat": {
+  "goat_cheese_lactic_aged_goat": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -53962,11 +53979,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_05148",
     "_tree_var_id": "var_05149",
-    "_dict_v2_key": "goat_cheese_aged_ch_vre_aged_goat",
+    "_dict_v2_key": "goat_cheese_lactic_aged_goat",
     "_source": "CIQUAL",
     "_source_id": "12803",
     "_name_fr": "fromage de chèvre lactique",
-    "_name_en": "goat cheese",
+    "_name_en": "goat cheese, lactic",
     "_axes": {
       "treatment": "aged",
       "origin": "goat"
@@ -54333,7 +54350,7 @@
     "_dict_v2_key": "gruy_re_igp_cow",
     "_source": "CIQUAL",
     "_source_id": "12113",
-    "_name_fr": "gruyère IGP France",
+    "_name_fr": "Gruyère IGP France",
     "_name_en": "Gruyère IGP",
     "_axes": {
       "origin": "cow"
@@ -54712,7 +54729,7 @@
     "_dict_v2_key": "pecorino_sheep",
     "_source": "CIQUAL",
     "_source_id": "12122",
-    "_name_fr": "pecorino",
+    "_name_fr": "Pecorino",
     "_name_en": "Pecorino",
     "_axes": {
       "origin": "sheep"
@@ -54914,7 +54931,7 @@
     "_dict_v2_key": "raclette_de_savoie_cow",
     "_source": "CIQUAL",
     "_source_id": "12776",
-    "_name_fr": "raclette de Savoie (fromage)",
+    "_name_fr": "Raclette de Savoie (fromage)",
     "_name_en": "Raclette de Savoie",
     "_axes": {
       "origin": "cow"
@@ -54989,7 +55006,7 @@
     "_dict_v2_key": "roquefort_sheep",
     "_source": "CIQUAL",
     "_source_id": "12500",
-    "_name_fr": "roquefort (fromage de brebis)",
+    "_name_fr": "Roquefort (fromage de brebis)",
     "_name_en": "Roquefort",
     "_axes": {
       "origin": "sheep"
@@ -55216,7 +55233,7 @@
     "_source": "CIQUAL",
     "_source_id": "12845",
     "_name_fr": "Selles-sur-Cher",
-    "_name_en": "selles-sur-Cher (goat cheese)",
+    "_name_en": "Selles-sur-Cher (goat cheese)",
     "_axes": {
       "origin": "goat"
     }
@@ -55290,7 +55307,7 @@
     "_dict_v2_key": "tome_des_bauges_cow",
     "_source": "CIQUAL",
     "_source_id": "12763",
-    "_name_fr": "tome des Bauges",
+    "_name_fr": "Tome des Bauges",
     "_name_en": "Tome des Bauges",
     "_axes": {
       "origin": "cow"
@@ -55340,7 +55357,7 @@
     "_dict_v2_key": "t_te_de_moine_cow",
     "_source": "CIQUAL",
     "_source_id": "12764",
-    "_name_fr": "tête de moine",
+    "_name_fr": "Tête de Moine",
     "_name_en": "Tête de Moine",
     "_axes": {
       "origin": "cow"
@@ -57048,7 +57065,7 @@
       "fat_content": "semi_skimmed"
     }
   },
-  "yogourt_greek_style_yogurt_plain_8pct": {
+  "yogurt_greek_style_yogurt_plain_8pct": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -57064,11 +57081,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_05529",
     "_tree_var_id": "var_05530",
-    "_dict_v2_key": "yogourt_greek_style_yogurt_plain_8pct",
+    "_dict_v2_key": "yogurt_greek_style_yogurt_plain_8pct",
     "_source": "CIQUAL",
     "_source_id": "19860",
     "_name_fr": "yaourt Grec",
-    "_name_en": "yogourt, Greek style",
+    "_name_en": "yogurt, Greek style",
     "_axes": {
       "form": "yogurt",
       "seasoning": "plain",
@@ -57156,7 +57173,7 @@
       "treatment": "fermented"
     }
   },
-  "yogourt_greek_style_yogurt_plain_10pct_yogurt_plain_10pct": {
+  "yogurt_greek_style_yogurt_plain_10pct_yogurt_plain_10pct": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -57187,18 +57204,18 @@
     "_status": "ok",
     "_tree_ing_id": "ing_05547",
     "_tree_var_id": "var_05857",
-    "_dict_v2_key": "yogourt_greek_style_yogurt_plain_10pct_yogurt_plain_10pct",
+    "_dict_v2_key": "yogurt_greek_style_yogurt_plain_10pct_yogurt_plain_10pct",
     "_source": "CNF",
     "_source_id": "502191",
     "_name_fr": "yaourt Grec",
-    "_name_en": "yogourt, Greek style",
+    "_name_en": "yogurt, Greek style",
     "_axes": {
       "form": "yogurt",
       "seasoning": "plain",
       "fat_content": "10pct"
     }
   },
-  "yogourt_yogurt_plain_3pct": {
+  "yogurt_yogurt_plain_3pct_yogurt_plain_3pct": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -57229,18 +57246,18 @@
     "_status": "ok",
     "_tree_ing_id": "ing_05549",
     "_tree_var_id": "var_05858",
-    "_dict_v2_key": "yogourt_yogurt_plain_3pct",
+    "_dict_v2_key": "yogurt_yogurt_plain_3pct_yogurt_plain_3pct",
     "_source": "CNF",
     "_source_id": "502170",
     "_name_fr": "yaourt",
-    "_name_en": "yogourt",
+    "_name_en": "yogurt",
     "_axes": {
       "form": "yogurt",
       "seasoning": "plain",
       "fat_content": "3pct"
     }
   },
-  "yogourt_greek_style_yogurt_plain_0pct_yogurt_plain_0pct": {
+  "yogurt_greek_style_yogurt_plain_0pct_yogurt_plain_0pct": {
     "default_unit": "g",
     "units": {
       "g": {
@@ -57262,11 +57279,11 @@
     "_status": "ok",
     "_tree_ing_id": "ing_05565",
     "_tree_var_id": "var_05566",
-    "_dict_v2_key": "yogourt_greek_style_yogurt_plain_0pct_yogurt_plain_0pct",
+    "_dict_v2_key": "yogurt_greek_style_yogurt_plain_0pct_yogurt_plain_0pct",
     "_source": "USDA",
     "_source_id": "330137",
     "_name_fr": "yaourt Grec",
-    "_name_en": "yogourt, Greek style",
+    "_name_en": "yogurt, Greek style",
     "_axes": {
       "form": "yogurt",
       "seasoning": "plain",
@@ -57974,7 +57991,7 @@
     "_dict_v2_key": "egg_raw_raw",
     "_source": "CIQUAL",
     "_source_id": "22000",
-    "_name_fr": "oeuf",
+    "_name_fr": "œuf",
     "_name_en": "egg",
     "_axes": {
       "cooking_state": "raw"
@@ -58199,7 +58216,7 @@
     "_dict_v2_key": "egg_powder_powder",
     "_source": "CIQUAL",
     "_source_id": "22013",
-    "_name_fr": "oeuf",
+    "_name_fr": "œuf",
     "_name_en": "egg",
     "_axes": {
       "form": "powder"

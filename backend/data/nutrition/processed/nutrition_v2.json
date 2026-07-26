@@ -2,7 +2,7 @@
   "schema_version": "7.1",
   "schema_family": "nutrition_v2",
   "built_from": "raw_sources_direct",
-  "built_at": "2026-07-03T13:15:37.482142+00:00",
+  "built_at": "2026-07-26T15:50:32.777652+00:00",
   "pipeline": "build_n2_direct.py",
   "raw_sources": {
     "CIQUAL": {
@@ -26,8 +26,8 @@
       "size_bytes": 16671564
     }
   },
-  "total_bases": 1884,
-  "total_variants": 1883,
+  "total_bases": 1885,
+  "total_variants": 1884,
   "ingredients": {
     "cream_of_tartar": {
       "taxonomy": {
@@ -7564,7 +7564,7 @@
         }
       }
     },
-    "oats": {
+    "oat_steel_cut_whole_seed": {
       "taxonomy": {
         "cat1": "cereals_and_grains",
         "cat1_fr": "CÉRÉALES & GRAINS",
@@ -7573,7 +7573,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05752",
         "name_fr": "avoine",
-        "name_en": "oats"
+        "name_en": "oat"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -7784,7 +7784,7 @@
         "cat2_fr": "BLÉ",
         "cat2_type": "ombrelle",
         "v32_id": "ing_00276",
-        "name_fr": "blé kamut khorasan",
+        "name_fr": "blé Kamut Khorasan",
         "name_en": "Kamut Khorasan wheat"
       },
       "ingredient_type": "ombrelle",
@@ -8457,7 +8457,7 @@
         "cat2_fr": "BLÉ",
         "cat2_type": "ombrelle",
         "v32_id": "ing_00302",
-        "name_fr": "blé kamut khorasan",
+        "name_fr": "blé Kamut Khorasan",
         "name_en": "Kamut Khorasan wheat"
       },
       "ingredient_type": "ombrelle",
@@ -16137,7 +16137,7 @@
         "cat2_type": "ombrelle",
         "v32_id": "ing_00485",
         "name_fr": "pain Focaccia pain plat italien",
-        "name_en": "bread, focaccia, Italian flatbread"
+        "name_en": "bread, Focaccia, Italian flatbread"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -21379,7 +21379,7 @@
         "cat2_fr": "RIZ",
         "cat2_type": "ombrelle",
         "v32_id": "ing_00645",
-        "name_fr": "vermicelles de riz",
+        "name_fr": "vermicelle de riz",
         "name_en": "rice vermicelli"
       },
       "ingredient_type": "ombrelle",
@@ -25980,7 +25980,7 @@
         }
       }
     },
-    "bananas": {
+    "banana_raw_overripe": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -25989,7 +25989,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_00918",
         "name_fr": "banane",
-        "name_en": "bananas"
+        "name_en": "banana"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -26058,58 +26058,89 @@
       "_v32_id": "ing_01316",
       "variants": {
         "raw": {
-          "_source": "CNF",
-          "_source_id": 1705,
+          "_source": "USDA",
+          "_source_id": 2346411,
           "_v32_ing_id": "ing_01316",
-          "_v32_var_id": "var_01317",
+          "_v32_var_id": "var_01315",
           "axes": {
             "cooking_state": "raw"
           },
-          "calories_kcal": 57.0,
-          "protein_g": 0.74,
-          "carbs_g": 14.49,
-          "fat_g": 0.33,
-          "fiber_g": 2.6,
-          "sugar_g": 9.96,
-          "alcohol_g": 0.0,
-          "water_g": 84.21,
-          "fa_saturated_g": 0.028,
-          "fa_mufa_g": 0.047,
-          "fa_pufa_g": 0.146,
-          "fa_18_3_ala_g": 0.058,
-          "fa_20_5_epa_g": 0.0,
-          "fa_22_6_dha_g": 0.0,
-          "fa_18_2_linoleic_g": 0.088,
-          "cholesterol_mg": 0.0,
-          "salt_g": 0.0025,
-          "calcium_mg": 6.0,
-          "iron_mg": 0.28,
-          "magnesium_mg": 6.0,
-          "phosphorus_mg": 12.0,
-          "potassium_mg": 77.0,
-          "sodium_mg": 1.0,
-          "zinc_mg": 0.16,
-          "copper_mg": 0.057,
-          "manganese_mg": 0.336,
-          "selenium_ug": 0.1,
-          "retinol_ug": 0.0,
-          "beta_carotene_ug": 32.0,
-          "vitamin_d_ug": 0.0,
-          "alpha_tocopherol_mg": 0.57,
-          "vitamin_k1_ug": 19.3,
-          "vitamin_c_mg": 9.7,
-          "vitamin_b1_mg": 0.037,
-          "vitamin_b2_mg": 0.041,
-          "vitamin_b3_mg": 0.418,
-          "vitamin_b5_mg": 0.124,
-          "vitamin_b6_mg": 0.052,
-          "folate_ug": 6.0,
-          "vitamin_b12_ug": 0.0,
-          "omega3_g": 0.058,
+          "protein_g": 0.703,
+          "carbs_g": 14.6,
+          "fat_g": 0.306,
+          "water_g": 84.2,
+          "calcium_mg": 11.7,
+          "iron_mg": 0.34,
+          "magnesium_mg": 6.18,
+          "phosphorus_mg": 13.0,
+          "potassium_mg": 85.6,
+          "sodium_mg": 0.0,
+          "zinc_mg": 0.085,
+          "copper_mg": 0.046,
+          "manganese_mg": 0.423,
+          "vitamin_c_mg": 8.06,
+          "calories_kcal": 64.0,
+          "_calories_derived": "atwater",
+          "sugar_g": 9.36,
+          "_sugar_derived": true,
           "name_fr": "bleuet",
           "name_en": "blueberry",
           "indus_conditionne": false,
-          "conditioning_types": []
+          "conditioning_types": [],
+          "_alt_sources": [
+            {
+              "_source": "CNF",
+              "_source_id": 1705,
+              "_v32_ing_id": "ing_01316",
+              "_v32_var_id": "var_01317",
+              "axes": {
+                "cooking_state": "raw"
+              },
+              "name_fr": "bleuet",
+              "name_en": "blueberry",
+              "calories_kcal": 57.0,
+              "protein_g": 0.74,
+              "carbs_g": 14.49,
+              "fat_g": 0.33,
+              "fiber_g": 2.6,
+              "sugar_g": 9.96,
+              "alcohol_g": 0.0,
+              "water_g": 84.21,
+              "fa_saturated_g": 0.028,
+              "fa_mufa_g": 0.047,
+              "fa_pufa_g": 0.146,
+              "fa_18_3_ala_g": 0.058,
+              "fa_20_5_epa_g": 0.0,
+              "fa_22_6_dha_g": 0.0,
+              "fa_18_2_linoleic_g": 0.088,
+              "cholesterol_mg": 0.0,
+              "salt_g": 0.0025,
+              "calcium_mg": 6.0,
+              "iron_mg": 0.28,
+              "magnesium_mg": 6.0,
+              "phosphorus_mg": 12.0,
+              "potassium_mg": 77.0,
+              "sodium_mg": 1.0,
+              "zinc_mg": 0.16,
+              "copper_mg": 0.057,
+              "manganese_mg": 0.336,
+              "selenium_ug": 0.1,
+              "retinol_ug": 0.0,
+              "beta_carotene_ug": 32.0,
+              "vitamin_d_ug": 0.0,
+              "alpha_tocopherol_mg": 0.57,
+              "vitamin_k1_ug": 19.3,
+              "vitamin_c_mg": 9.7,
+              "vitamin_b1_mg": 0.037,
+              "vitamin_b2_mg": 0.041,
+              "vitamin_b3_mg": 0.418,
+              "vitamin_b5_mg": 0.124,
+              "vitamin_b6_mg": 0.052,
+              "folate_ug": 6.0,
+              "vitamin_b12_ug": 0.0,
+              "omega3_g": 0.058
+            }
+          ]
         }
       }
     },
@@ -28410,7 +28441,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01048",
         "name_fr": "datte Medjool",
-        "name_en": "medjool date"
+        "name_en": "Medjool date"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -35381,74 +35412,13 @@
           "vitamin_b12_ug": 0.0,
           "omega3_g": 0.0,
           "name_fr": "myrtille",
-          "name_en": "blueberry",
+          "name_en": "bilberry",
           "indus_conditionne": false,
-          "conditioning_types": [],
-          "_alt_sources": [
-            {
-              "_source": "USDA",
-              "_source_id": 2346411,
-              "_v32_ing_id": "ing_01314",
-              "_v32_var_id": "var_01315",
-              "axes": {
-                "cooking_state": "raw"
-              },
-              "name_fr": "myrtille",
-              "name_en": "blueberry",
-              "protein_g": 0.703,
-              "carbs_g": 14.6,
-              "fat_g": 0.306,
-              "water_g": 84.2,
-              "calcium_mg": 11.7,
-              "iron_mg": 0.34,
-              "magnesium_mg": 6.18,
-              "phosphorus_mg": 13.0,
-              "potassium_mg": 85.6,
-              "sodium_mg": 0.0,
-              "zinc_mg": 0.085,
-              "copper_mg": 0.046,
-              "manganese_mg": 0.423,
-              "vitamin_c_mg": 8.06,
-              "calories_kcal": 64.0,
-              "_calories_derived": "atwater",
-              "sugar_g": 9.36,
-              "_sugar_derived": true
-            },
-            {
-              "_source": "CNF",
-              "_source_id": 501662,
-              "_v32_ing_id": "ing_01314",
-              "_v32_var_id": "var_05751",
-              "axes": {
-                "cooking_state": "raw"
-              },
-              "name_fr": "myrtille",
-              "name_en": "blueberry",
-              "calories_kcal": 37.0,
-              "protein_g": 0.4,
-              "carbs_g": 8.7,
-              "fat_g": 0.1,
-              "alcohol_g": 0.0,
-              "water_g": 90.7,
-              "fa_22_6_dha_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "salt_g": 0.0254,
-              "calcium_mg": 15.0,
-              "iron_mg": 0.3,
-              "sodium_mg": 10.0,
-              "vitamin_d_ug": 0.0,
-              "vitamin_c_mg": 2.8,
-              "vitamin_b1_mg": 0.01,
-              "vitamin_b2_mg": 0.03,
-              "vitamin_b3_mg": 0.3,
-              "vitamin_b12_ug": 0.0,
-              "omega3_g": 0.0
-            }
-          ]
+          "conditioning_types": []
         }
       }
     },
-    "blueberry_jam": {
+    "bilberry_jam": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -35457,7 +35427,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01324",
         "name_fr": "myrtille",
-        "name_en": "blueberry"
+        "name_en": "bilberry"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -35520,7 +35490,62 @@
           "folate_intrinsic_ug": 5.0,
           "omega3_g": 0.0,
           "name_fr": "myrtille",
-          "name_en": "blueberry",
+          "name_en": "bilberry",
+          "indus_conditionne": false,
+          "conditioning_types": []
+        }
+      }
+    },
+    "huckleberry": {
+      "taxonomy": {
+        "cat1": "fruits",
+        "cat1_fr": "FRUITS",
+        "cat2": "bilberries",
+        "cat2_fr": "MYRTILLES",
+        "cat2_type": "axe_nodes",
+        "v32_id": "ing_05892",
+        "name_fr": "airelle",
+        "name_en": "huckleberry"
+      },
+      "ingredient_type": "node",
+      "variant_dimensions": [
+        "cooking_state"
+      ],
+      "indus_conditionne": false,
+      "indus_conditionne_only": false,
+      "conditioning_types": [],
+      "aliases_fr": [],
+      "_v32_id": "ing_05892",
+      "variants": {
+        "raw": {
+          "_source": "CNF",
+          "_source_id": 501662,
+          "_v32_ing_id": "ing_05892",
+          "_v32_var_id": "var_05751",
+          "axes": {
+            "cooking_state": "raw"
+          },
+          "calories_kcal": 37.0,
+          "protein_g": 0.4,
+          "carbs_g": 8.7,
+          "fat_g": 0.1,
+          "alcohol_g": 0.0,
+          "water_g": 90.7,
+          "fa_22_6_dha_g": 0.0,
+          "cholesterol_mg": 0.0,
+          "salt_g": 0.0254,
+          "calcium_mg": 15.0,
+          "iron_mg": 0.3,
+          "sodium_mg": 10.0,
+          "vitamin_d_ug": 0.0,
+          "vitamin_c_mg": 2.8,
+          "vitamin_b1_mg": 0.01,
+          "vitamin_b2_mg": 0.03,
+          "vitamin_b3_mg": 0.3,
+          "vitamin_b12_ug": 0.0,
+          "omega3_g": 0.0,
+          "name_fr": "airelle",
+          "name_en": "huckleberry",
           "indus_conditionne": false,
           "conditioning_types": []
         }
@@ -39419,7 +39444,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_00936",
         "name_fr": "banane plantain",
-        "name_en": "plantain  banana"
+        "name_en": "plantain banana"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -39470,7 +39495,7 @@
         }
       }
     },
-    "plantains": {
+    "plantain_banana_raw_ripe": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -39479,7 +39504,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_00938",
         "name_fr": "banane plantain",
-        "name_en": "plantains"
+        "name_en": "plantain banana"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -39530,7 +39555,7 @@
         }
       }
     },
-    "plantain": {
+    "plantain_banana_raw": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -39539,7 +39564,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_00922",
         "name_fr": "banane plantain",
-        "name_en": "plantain"
+        "name_en": "plantain banana"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -40389,7 +40414,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01493",
         "name_fr": "poire Williams",
-        "name_en": "williams pear"
+        "name_en": "Williams pear"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -41243,7 +41268,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01577",
         "name_fr": "pomme Golden",
-        "name_en": "golden apple"
+        "name_en": "Golden apple"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -41804,7 +41829,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01664",
         "name_fr": "pomme Canada",
-        "name_en": "canada apple"
+        "name_en": "Canada apple"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -41882,7 +41907,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01666",
         "name_fr": "pomme Chantecler",
-        "name_en": "chantecler apple"
+        "name_en": "Chantecler apple"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -41966,7 +41991,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01680",
         "name_fr": "pomme Gala",
-        "name_en": "gala apple"
+        "name_en": "Gala apple"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -42050,7 +42075,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01682",
         "name_fr": "pomme Golden",
-        "name_en": "golden apple"
+        "name_en": "Golden apple"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -42134,7 +42159,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01684",
         "name_fr": "pomme Granny Smith",
-        "name_en": "granny Smith apple"
+        "name_en": "Granny Smith apple"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -42217,8 +42242,8 @@
         "cat2_fr": "POMMES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01686",
-        "name_fr": "pomme Pink lady",
-        "name_en": "pink Lady apple"
+        "name_fr": "pomme Pink Lady",
+        "name_en": "Pink Lady apple"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -43745,7 +43770,7 @@
         }
       }
     },
-    "yellow_peaches": {
+    "yellow_peach": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -43754,7 +43779,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01823",
         "name_fr": "pêche jaune",
-        "name_en": "yellow peaches"
+        "name_en": "yellow peach"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -44145,7 +44170,7 @@
         }
       }
     },
-    "yellow_peach": {
+    "yellow_peach_raw_skinless": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -44862,7 +44887,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01898",
         "name_fr": "raisin Chasselas",
-        "name_en": "chasselas grape"
+        "name_en": "Chasselas grape"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -44944,7 +44969,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01900",
         "name_fr": "raisin noir Muscat",
-        "name_en": "muscat black grape"
+        "name_en": "Muscat black grape"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -45561,7 +45586,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01928",
         "name_fr": "feuille de vigne",
-        "name_en": "Grape leave"
+        "name_en": "grape leave"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -49236,7 +49261,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_02102",
         "name_fr": "poivre de Cayenne",
-        "name_en": "cayenne pepper"
+        "name_en": "Cayenne pepper"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -49315,7 +49340,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_05800",
         "name_fr": "poivre du Sichuan (baies séchées)",
-        "name_en": "sichuan pepper"
+        "name_en": "Sichuan pepper"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [],
@@ -60181,7 +60206,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_02426",
         "name_fr": "champignon Maitake",
-        "name_en": "maitake mushroom"
+        "name_en": "Maitake mushroom"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -65282,7 +65307,7 @@
         "cat2_fr": "CHOUX DE BRUXELLES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_02637",
-        "name_fr": "choux de Bruxelles",
+        "name_fr": "chou de Bruxelles",
         "name_en": "brussels sprouts"
       },
       "ingredient_type": "node",
@@ -69258,7 +69283,7 @@
         "cat2_fr": "COURGES",
         "cat2_type": "ombrelle",
         "v32_id": "ing_02802",
-        "name_fr": "courge musquée",
+        "name_fr": "courge crookneck",
         "name_en": "crookneck squash"
       },
       "ingredient_type": "ombrelle",
@@ -69590,7 +69615,7 @@
         "cat2_fr": "COURGES",
         "cat2_type": "ombrelle",
         "v32_id": "ing_02810",
-        "name_fr": "courge musquée",
+        "name_fr": "courge crookneck",
         "name_en": "crookneck squash"
       },
       "ingredient_type": "ombrelle",
@@ -81983,7 +82008,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_03261",
         "name_fr": "piment fort du Chili rouge",
-        "name_en": "red hot chili pepper"
+        "name_en": "red hot Chili pepper"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -82626,7 +82651,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_03263",
         "name_fr": "piment fort du Chili rouge",
-        "name_en": "red hot chili pepper"
+        "name_en": "red hot Chili pepper"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -83689,7 +83714,7 @@
         "cat2_fr": "POIREAUX",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01513",
-        "name_fr": "poireaux",
+        "name_fr": "poireau",
         "name_en": "leeks"
       },
       "ingredient_type": "node",
@@ -83771,7 +83796,7 @@
         "cat2_fr": "POIREAUX",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01523",
-        "name_fr": "poireaux",
+        "name_fr": "poireau",
         "name_en": "leeks"
       },
       "ingredient_type": "node",
@@ -86136,8 +86161,8 @@
         "cat2_fr": "POMMES DE TERRE",
         "cat2_type": "leaf",
         "v32_id": "ing_01607",
-        "name_fr": "pomme de terre Russet",
-        "name_en": "russet potato"
+        "name_fr": "pomme de terre rousse",
+        "name_en": "Russet potato"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -86215,8 +86240,8 @@
         "cat2_fr": "POMMES DE TERRE",
         "cat2_type": "leaf",
         "v32_id": "ing_01609",
-        "name_fr": "pomme de terre Russet",
-        "name_en": "russet potato"
+        "name_fr": "pomme de terre rousse",
+        "name_en": "Russet potato"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -87111,7 +87136,7 @@
         }
       }
     },
-    "potatoes": {
+    "potato_unsalted_canned": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -87120,7 +87145,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_01743",
         "name_fr": "pomme de terre",
-        "name_en": "potatoes"
+        "name_en": "potato"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -96425,7 +96450,7 @@
         "cat2_fr": "DOLIQUES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04112",
-        "name_fr": "doliques d'Égypte",
+        "name_fr": "dolique d'Égypte",
         "name_en": "hyacinth"
       },
       "ingredient_type": "node",
@@ -96499,7 +96524,7 @@
         "cat2_fr": "DOLIQUES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04114",
-        "name_fr": "doliques d'Égypte",
+        "name_fr": "dolique d'Égypte",
         "name_en": "hyacinth"
       },
       "ingredient_type": "node",
@@ -96571,7 +96596,7 @@
         "cat2_fr": "DOLIQUES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04214",
-        "name_fr": "doliques d'Égypte",
+        "name_fr": "dolique d'Égypte",
         "name_en": "hyacinth"
       },
       "ingredient_type": "node",
@@ -96647,7 +96672,7 @@
         "cat2_fr": "DOLIQUES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_02191",
-        "name_fr": "doliques asperge",
+        "name_fr": "dolique asperge",
         "name_en": "yardlong"
       },
       "ingredient_type": "node",
@@ -96719,7 +96744,7 @@
         "cat2_fr": "DOLIQUES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_02193",
-        "name_fr": "doliques asperge",
+        "name_fr": "dolique asperge",
         "name_en": "yardlong"
       },
       "ingredient_type": "node",
@@ -96793,7 +96818,7 @@
         "cat2_fr": "DOLIQUES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_02215",
-        "name_fr": "doliques asperge",
+        "name_fr": "dolique asperge",
         "name_en": "yardlong"
       },
       "ingredient_type": "node",
@@ -100928,7 +100953,7 @@
         }
       }
     },
-    "italian_beans_green_or_yellow": {
+    "italian_bean_green_or_yellow": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -100937,7 +100962,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_03845",
         "name_fr": "haricot italien jaune ou vert",
-        "name_en": "Italian beans (green or yellow)"
+        "name_en": "Italian bean (green or yellow)"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -102659,7 +102684,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_03909",
         "name_fr": "haricot rouge foncé",
-        "name_en": "dark Red Kidney"
+        "name_en": "dark red kidney"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -102712,7 +102737,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_03911",
         "name_fr": "haricot Flor de Mayo",
-        "name_en": "flor de Mayo bean"
+        "name_en": "Flor de Mayo bean"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -102818,7 +102843,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_03915",
         "name_fr": "haricot rouge clair",
-        "name_en": "light Red Kidney"
+        "name_en": "light red kidney"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -102924,7 +102949,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_03919",
         "name_fr": "haricot rouge moyen",
-        "name_en": "medium Red bean"
+        "name_en": "medium red bean"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -103201,7 +103226,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_03931",
         "name_fr": "haricot blanc petit",
-        "name_en": "small White bean"
+        "name_en": "small white bean"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -103547,7 +103572,7 @@
         }
       }
     },
-    "italian_bean_green_or_yellow": {
+    "italian_bean_green_or_yellow_boiled_canned": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -103689,7 +103714,7 @@
         }
       }
     },
-    "red_kidney": {
+    "kidney_bean_canned": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -103698,7 +103723,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_03979",
         "name_fr": "haricot rouge",
-        "name_en": "red kidney"
+        "name_en": "kidney bean"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -104389,7 +104414,7 @@
         }
       }
     },
-    "withe_bean": {
+    "white_bean_canned": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -104398,7 +104423,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_04026",
         "name_fr": "haricot blanc",
-        "name_en": "withe bean"
+        "name_en": "white bean"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -104884,7 +104909,7 @@
         "cat2_fr": "HARICOTS",
         "cat2_type": "leaf",
         "v32_id": "ing_04042",
-        "name_fr": "haricots great northern",
+        "name_fr": "haricot great northern",
         "name_en": "great northern bean"
       },
       "ingredient_type": "leaf",
@@ -105939,7 +105964,7 @@
         "cat2_fr": "HARICOTS",
         "cat2_type": "leaf",
         "v32_id": "ing_00949",
-        "name_fr": "haricots canneberge (romain)",
+        "name_fr": "haricot canneberge (romain)",
         "name_en": "cranberry (roman) bean"
       },
       "ingredient_type": "leaf",
@@ -109633,7 +109658,7 @@
         }
       }
     },
-    "mangetout_peas": {
+    "snow_peas_cooked": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -109642,7 +109667,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_04166",
         "name_fr": "pois mange-tout (gourmand)",
-        "name_en": "mangetout peas"
+        "name_en": "snow peas"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -111062,7 +111087,7 @@
         }
       }
     },
-    "lupins": {
+    "lupin_boiled_salted": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -111071,7 +111096,7 @@
         "cat2_type": "leaf",
         "v32_id": "ing_04228",
         "name_fr": "lupin",
-        "name_en": "lupins"
+        "name_en": "lupin"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -111504,7 +111529,7 @@
         }
       }
     },
-    "chickpeas": {
+    "chickpea": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -111513,7 +111538,7 @@
         "cat2_type": "ombrelle",
         "v32_id": "ing_04243",
         "name_fr": "pois chiches",
-        "name_en": "chickpeas"
+        "name_en": "chickpea"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -111642,7 +111667,7 @@
         }
       }
     },
-    "chickpeas_raw_dried": {
+    "chickpea_raw_dried": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -111651,7 +111676,7 @@
         "cat2_type": "ombrelle",
         "v32_id": "ing_04245",
         "name_fr": "pois chiches",
-        "name_en": "chickpeas"
+        "name_en": "chickpea"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -111811,7 +111836,7 @@
         }
       }
     },
-    "chickpeas_canned": {
+    "chickpea_canned": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -111820,7 +111845,7 @@
         "cat2_type": "ombrelle",
         "v32_id": "ing_04255",
         "name_fr": "pois chiches",
-        "name_en": "chickpeas"
+        "name_en": "chickpea"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -112001,7 +112026,7 @@
         }
       }
     },
-    "chickpeas_salted_canned": {
+    "chickpea_salted_canned": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -112010,7 +112035,7 @@
         "cat2_type": "ombrelle",
         "v32_id": "ing_04259",
         "name_fr": "pois chiches",
-        "name_en": "chickpeas"
+        "name_en": "chickpea"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -112060,7 +112085,7 @@
         }
       }
     },
-    "chickpeas_boiled_salted": {
+    "chickpea_boiled_salted": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -112069,7 +112094,7 @@
         "cat2_type": "ombrelle",
         "v32_id": "ing_04267",
         "name_fr": "pois chiches",
-        "name_en": "chickpeas"
+        "name_en": "chickpea"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -112142,7 +112167,7 @@
         }
       }
     },
-    "chickpea": {
+    "chickpea_flour": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -115346,7 +115371,7 @@
         "cat2_fr": "HUILES",
         "cat2_type": "leaf",
         "v32_id": "ing_04440",
-        "name_fr": "arachide",
+        "name_fr": "cacahuète (arachide)",
         "name_en": "peanut"
       },
       "ingredient_type": "leaf",
@@ -117942,7 +117967,7 @@
         "cat2_fr": "BEURRES DE NOIX",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04543",
-        "name_fr": "noix de cajous",
+        "name_fr": "noix de cajou",
         "name_en": "cashew"
       },
       "ingredient_type": "node",
@@ -118707,7 +118732,7 @@
         "cat2_fr": "BEURRES DE NOIX",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04566",
-        "name_fr": "noix de cajous",
+        "name_fr": "noix de cajou",
         "name_en": "cashew"
       },
       "ingredient_type": "node",
@@ -120931,7 +120956,7 @@
         }
       }
     },
-    "spanish_peanuts": {
+    "spanish_peanut": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -120940,7 +120965,7 @@
         "cat2_type": "ombrelle",
         "v32_id": "ing_04430",
         "name_fr": "cacahuète (arachide) Espagnole",
-        "name_en": "spanish peanuts"
+        "name_en": "spanish peanut"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -121007,7 +121032,7 @@
         }
       }
     },
-    "valencia_peanuts": {
+    "valencia_peanut": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -121016,7 +121041,7 @@
         "cat2_type": "ombrelle",
         "v32_id": "ing_04432",
         "name_fr": "cacahuète (arachide) Valencia",
-        "name_en": "valencia peanuts"
+        "name_en": "Valencia peanut"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -121159,7 +121184,7 @@
         }
       }
     },
-    "spanish_peanut": {
+    "spanish_peanut_roasted_salted_in_oil": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -121241,7 +121266,7 @@
         }
       }
     },
-    "valencia_peanut": {
+    "valencia_peanut_roasted_salted_in_oil": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -125183,7 +125208,7 @@
         }
       }
     },
-    "walnut_dried": {
+    "grenoble_walnut_igp": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -125192,7 +125217,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04765",
         "name_fr": "noix de Grenoble",
-        "name_en": "walnut"
+        "name_en": "Grenoble walnut IGP"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -125260,7 +125285,7 @@
         }
       }
     },
-    "walnut_raw": {
+    "grenoble_walnut_igp_raw": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -125269,7 +125294,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04767",
         "name_fr": "noix de Grenoble",
-        "name_en": "walnut"
+        "name_en": "Grenoble walnut IGP"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -125319,7 +125344,7 @@
         }
       }
     },
-    "walnut_candied": {
+    "grenoble_walnut_igp_candied": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -125328,7 +125353,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04769",
         "name_fr": "noix de Grenoble",
-        "name_en": "walnut"
+        "name_en": "Grenoble walnut IGP"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -130233,7 +130258,7 @@
         "cat2_fr": "NOIX DE CAJOU",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04402",
-        "name_fr": "noix de cajous",
+        "name_fr": "noix de cajou",
         "name_en": "cashew nuts"
       },
       "ingredient_type": "node",
@@ -130312,7 +130337,7 @@
         "cat2_fr": "NOIX DE CAJOU",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04515",
-        "name_fr": "noix de cajous",
+        "name_fr": "noix de cajou",
         "name_en": "cashew nuts"
       },
       "ingredient_type": "node",
@@ -130404,7 +130429,7 @@
         "cat2_fr": "NOIX DE CAJOU",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04709",
-        "name_fr": "noix de cajous",
+        "name_fr": "noix de cajou",
         "name_en": "cashew nuts"
       },
       "ingredient_type": "node",
@@ -130485,7 +130510,7 @@
         "cat2_fr": "NOIX DE CAJOU",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04711",
-        "name_fr": "noix de cajous",
+        "name_fr": "noix de cajou",
         "name_en": "cashew nuts"
       },
       "ingredient_type": "node",
@@ -130538,7 +130563,7 @@
         "cat2_fr": "NOIX DE CAJOU",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04837",
-        "name_fr": "noix de cajous",
+        "name_fr": "noix de cajou",
         "name_en": "cashew nuts"
       },
       "ingredient_type": "node",
@@ -130625,7 +130650,7 @@
         "cat2_fr": "NOIX DE CAJOU",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04812",
-        "name_fr": "noix de cajous",
+        "name_fr": "noix de cajou",
         "name_en": "cashew nuts"
       },
       "ingredient_type": "node",
@@ -130712,7 +130737,7 @@
         "cat2_fr": "NOIX DE CAJOU",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04816",
-        "name_fr": "noix de cajous",
+        "name_fr": "noix de cajou",
         "name_en": "cashew nuts"
       },
       "ingredient_type": "node",
@@ -130878,7 +130903,7 @@
         "cat2_fr": "ŒUFS PRÉPARÉS",
         "cat2_type": "ombrelle",
         "v32_id": "ing_05712",
-        "name_fr": "marsala aux oeufs",
+        "name_fr": "Marsala aux oeufs",
         "name_en": "zabaglione (Marsala egg custard)"
       },
       "ingredient_type": "ombrelle",
@@ -130944,7 +130969,7 @@
         "cat2_fr": "ŒUFS PRÉPARÉS",
         "cat2_type": "ombrelle",
         "v32_id": "ing_05688",
-        "name_fr": "oeuf",
+        "name_fr": "œuf",
         "name_en": "egg"
       },
       "ingredient_type": "ombrelle",
@@ -137583,7 +137608,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04985",
-        "name_fr": "camembert au lait cru",
+        "name_fr": "Camembert au lait cru",
         "name_en": "Camembert, raw milk"
       },
       "ingredient_type": "node",
@@ -137668,7 +137693,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04987",
-        "name_fr": "camembert",
+        "name_fr": "Camembert",
         "name_en": "Camembert"
       },
       "ingredient_type": "node",
@@ -138015,7 +138040,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_04997",
-        "name_fr": "chabichou",
+        "name_fr": "Chabichou",
         "name_en": "Chabichou (goat cheese)"
       },
       "ingredient_type": "node",
@@ -138537,7 +138562,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05009",
-        "name_fr": "camembert",
+        "name_fr": "Camembert",
         "name_en": "Camembert"
       },
       "ingredient_type": "node",
@@ -140834,7 +140859,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05085",
-        "name_fr": "roquefort (bleu)",
+        "name_fr": "Roquefort (bleu)",
         "name_en": "Roquefort (blue cheese)"
       },
       "ingredient_type": "node",
@@ -141535,7 +141560,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05103",
-        "name_fr": "crème de camembert",
+        "name_fr": "crème de Camembert",
         "name_en": "Camembert cream"
       },
       "ingredient_type": "node",
@@ -142375,7 +142400,7 @@
         }
       }
     },
-    "goat_cheese": {
+    "goat_cheese_semi_dry": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -142384,11 +142409,12 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05144",
         "name_fr": "fromage de chèvre demi-sec",
-        "name_en": "goat cheese"
+        "name_en": "goat cheese, semi-dry"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
-        "origin"
+        "origin",
+        "affinage"
       ],
       "indus_conditionne": false,
       "indus_conditionne_only": false,
@@ -142402,7 +142428,8 @@
           "_v32_ing_id": "ing_05144",
           "_v32_var_id": "var_05145",
           "axes": {
-            "origin": "ch_vre"
+            "origin": "ch_vre",
+            "affinage": "mi_affin"
           },
           "calories_kcal": 353.0,
           "protein_g": 21.6,
@@ -142456,7 +142483,7 @@
         }
       }
     },
-    "goat_cheese_fresh_ch_vre": {
+    "goat_cheese_fresh": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -142465,7 +142492,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05146",
         "name_fr": "fromage de chèvre",
-        "name_en": "goat cheese"
+        "name_en": "goat cheese, fresh"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -142535,7 +142562,7 @@
         }
       }
     },
-    "goat_cheese_aged_ch_vre": {
+    "goat_cheese_lactic": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -142544,7 +142571,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05148",
         "name_fr": "fromage de chèvre lactique",
-        "name_en": "goat cheese"
+        "name_en": "goat cheese, lactic"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -143528,7 +143555,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05206",
-        "name_fr": "gruyère IGP France",
+        "name_fr": "Gruyère IGP France",
         "name_en": "Gruyère IGP"
       },
       "ingredient_type": "node",
@@ -144588,7 +144615,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05240",
-        "name_fr": "pecorino",
+        "name_fr": "Pecorino",
         "name_en": "Pecorino"
       },
       "ingredient_type": "node",
@@ -145127,7 +145154,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05258",
-        "name_fr": "raclette de Savoie (fromage)",
+        "name_fr": "Raclette de Savoie (fromage)",
         "name_en": "Raclette de Savoie"
       },
       "ingredient_type": "node",
@@ -145329,7 +145356,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05264",
-        "name_fr": "roquefort (fromage de brebis)",
+        "name_fr": "Roquefort (fromage de brebis)",
         "name_en": "Roquefort"
       },
       "ingredient_type": "node",
@@ -145973,7 +146000,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05282",
         "name_fr": "Selles-sur-Cher",
-        "name_en": "selles-sur-Cher (goat cheese)"
+        "name_en": "Selles-sur-Cher (goat cheese)"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -146177,7 +146204,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05288",
-        "name_fr": "tome des Bauges",
+        "name_fr": "Tome des Bauges",
         "name_en": "Tome des Bauges"
       },
       "ingredient_type": "node",
@@ -146284,7 +146311,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05293",
-        "name_fr": "tête de moine",
+        "name_fr": "Tête de Moine",
         "name_en": "Tête de Moine"
       },
       "ingredient_type": "node",
@@ -150836,7 +150863,7 @@
         }
       }
     },
-    "yogourt_greek_style": {
+    "yogurt_greek_style": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -150845,7 +150872,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05529",
         "name_fr": "yaourt Grec",
-        "name_en": "yogourt, Greek style"
+        "name_en": "yogurt, Greek style"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -151193,7 +151220,7 @@
         }
       }
     },
-    "yogourt_greek_style_yogurt_plain_10pct": {
+    "yogurt_greek_style_yogurt_plain_10pct": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -151202,7 +151229,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05547",
         "name_fr": "yaourt Grec",
-        "name_en": "yogourt, Greek style"
+        "name_en": "yogurt, Greek style"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -151269,7 +151296,7 @@
         }
       }
     },
-    "yogourt": {
+    "yogurt_yogurt_plain_3pct": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -151278,7 +151305,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05549",
         "name_fr": "yaourt",
-        "name_en": "yogourt"
+        "name_en": "yogurt"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -151350,7 +151377,7 @@
         }
       }
     },
-    "yogourt_greek_style_yogurt_plain_0pct": {
+    "yogurt_greek_style_yogurt_plain_0pct": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -151359,7 +151386,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05565",
         "name_fr": "yaourt Grec",
-        "name_en": "yogourt, Greek style"
+        "name_en": "yogurt, Greek style"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -153106,7 +153133,7 @@
         "cat2_fr": "ŒUFS (général)",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05692",
-        "name_fr": "oeuf",
+        "name_fr": "œuf",
         "name_en": "egg"
       },
       "ingredient_type": "node",
@@ -153819,7 +153846,7 @@
         "cat2_fr": "ŒUFS (général)",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05720",
-        "name_fr": "oeuf",
+        "name_fr": "œuf",
         "name_en": "egg"
       },
       "ingredient_type": "node",

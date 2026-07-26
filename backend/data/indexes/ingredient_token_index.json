@@ -3,18 +3,18 @@
     "description": "Token index — SOURCE:id → base/variant/IG context",
     "version": "6.0",
     "nutrition_version": "7.1",
-    "generated_at": "2026-07-03T13:15:40.558191+00:00",
+    "generated_at": "2026-07-26T15:50:36.318436+00:00",
     "generated_by": "build_indexes.py",
     "_generated": true,
     "_do_not_edit": "Fichier auto-généré — toute modification manuelle sera écrasée au prochain run du pipeline.",
     "key_format": "SOURCE:source_id  ex: CIQUAL:4028, CNF:501697, USDA:2644288",
-    "total_entries": 1819,
+    "total_entries": 1820,
     "by_source": {
       "CIQUAL": 972,
       "CNF": 685,
-      "USDA": 162
+      "USDA": 163
     },
-    "with_ig_context": 1819
+    "with_ig_context": 1820
   },
   "index": {
     "CNF:4006": {
@@ -806,7 +806,7 @@
       "var_axes": {}
     },
     "USDA:2346397": {
-      "base": "oats",
+      "base": "oat_steel_cut_whole_seed",
       "variant": "steel_cut_whole_seed",
       "ig_id": "ing_05752",
       "ig_axes": {
@@ -2952,7 +2952,7 @@
       "var_axes": {}
     },
     "USDA:1105073": {
-      "base": "bananas",
+      "base": "banana_raw_overripe",
       "variant": "raw_overripe",
       "ig_id": "ing_00918",
       "ig_axes": {
@@ -2961,7 +2961,7 @@
       },
       "var_axes": {}
     },
-    "CNF:1705": {
+    "USDA:2346411": {
       "base": "blueberry",
       "variant": "raw",
       "ig_id": "ing_01316",
@@ -3916,11 +3916,20 @@
       "var_axes": {}
     },
     "CIQUAL:31068": {
-      "base": "blueberry_jam",
+      "base": "bilberry_jam",
       "variant": "jam",
       "ig_id": "ing_01324",
       "ig_axes": {
         "form": "jam"
+      },
+      "var_axes": {}
+    },
+    "CNF:501662": {
+      "base": "huckleberry",
+      "variant": "raw",
+      "ig_id": "ing_05892",
+      "ig_axes": {
+        "cooking_state": "raw"
       },
       "var_axes": {}
     },
@@ -4331,7 +4340,7 @@
       "var_axes": {}
     },
     "USDA:2710817": {
-      "base": "plantains",
+      "base": "plantain_banana_raw_ripe",
       "variant": "raw_ripe",
       "ig_id": "ing_00938",
       "ig_axes": {
@@ -4341,7 +4350,7 @@
       "var_axes": {}
     },
     "CIQUAL:53100": {
-      "base": "plantain",
+      "base": "plantain_banana_raw",
       "variant": "raw",
       "ig_id": "ing_00922",
       "ig_axes": {
@@ -4826,7 +4835,7 @@
       "var_axes": {}
     },
     "USDA:325430": {
-      "base": "yellow_peaches",
+      "base": "yellow_peach",
       "variant": "raw",
       "ig_id": "ing_01823",
       "ig_axes": {
@@ -4875,7 +4884,7 @@
       "var_axes": {}
     },
     "CIQUAL:13195": {
-      "base": "yellow_peach",
+      "base": "yellow_peach_raw_skinless",
       "variant": "raw_skinless",
       "ig_id": "ing_01835",
       "ig_axes": {
@@ -9517,7 +9526,7 @@
       "var_axes": {}
     },
     "CNF:5573": {
-      "base": "potatoes",
+      "base": "potato_unsalted_canned",
       "variant": "unsalted_canned",
       "ig_id": "ing_01743",
       "ig_axes": {
@@ -11099,7 +11108,7 @@
       "var_axes": {}
     },
     "CNF:2370": {
-      "base": "italian_beans_green_or_yellow",
+      "base": "italian_bean_green_or_yellow",
       "variant": "raw",
       "ig_id": "ing_03845",
       "ig_axes": {
@@ -11445,7 +11454,7 @@
       "var_axes": {}
     },
     "CNF:2371": {
-      "base": "italian_bean_green_or_yellow",
+      "base": "italian_bean_green_or_yellow_boiled_canned",
       "variant": "boiled_canned",
       "ig_id": "ing_03959",
       "ig_axes": {
@@ -11465,7 +11474,7 @@
       "var_axes": {}
     },
     "CIQUAL:20524": {
-      "base": "red_kidney",
+      "base": "kidney_bean_canned",
       "variant": "canned",
       "ig_id": "ing_03979",
       "ig_axes": {
@@ -11532,7 +11541,7 @@
       "var_axes": {}
     },
     "CIQUAL:20511": {
-      "base": "withe_bean",
+      "base": "white_bean_canned",
       "variant": "canned",
       "ig_id": "ing_04026",
       "ig_axes": {
@@ -12155,7 +12164,7 @@
       "var_axes": {}
     },
     "CIQUAL:20243": {
-      "base": "mangetout_peas",
+      "base": "snow_peas_cooked",
       "variant": "cooked",
       "ig_id": "ing_04166",
       "ig_axes": {
@@ -12329,7 +12338,7 @@
       "var_axes": {}
     },
     "CNF:3358": {
-      "base": "lupins",
+      "base": "lupin_boiled_salted",
       "variant": "boiled_salted",
       "ig_id": "ing_04228",
       "ig_axes": {
@@ -12380,7 +12389,7 @@
       "var_axes": {}
     },
     "CIQUAL:20507": {
-      "base": "chickpeas",
+      "base": "chickpea",
       "variant": "boiled",
       "ig_id": "ing_04243",
       "ig_axes": {
@@ -12389,7 +12398,7 @@
       "var_axes": {}
     },
     "CIQUAL:20516": {
-      "base": "chickpeas_raw_dried",
+      "base": "chickpea_raw_dried",
       "variant": "raw_dried",
       "ig_id": "ing_04245",
       "ig_axes": {
@@ -12399,7 +12408,7 @@
       "var_axes": {}
     },
     "CIQUAL:20532": {
-      "base": "chickpeas_canned",
+      "base": "chickpea_canned",
       "variant": "canned",
       "ig_id": "ing_04255",
       "ig_axes": {
@@ -12408,7 +12417,7 @@
       "var_axes": {}
     },
     "USDA:2644288": {
-      "base": "chickpeas_salted_canned",
+      "base": "chickpea_salted_canned",
       "variant": "salted_canned",
       "ig_id": "ing_04259",
       "ig_axes": {
@@ -12418,7 +12427,7 @@
       "var_axes": {}
     },
     "CNF:3410": {
-      "base": "chickpeas_boiled_salted",
+      "base": "chickpea_boiled_salted",
       "variant": "boiled_salted",
       "ig_id": "ing_04267",
       "ig_axes": {
@@ -12428,7 +12437,7 @@
       "var_axes": {}
     },
     "CIQUAL:9580": {
-      "base": "chickpea",
+      "base": "chickpea_flour",
       "variant": "flour",
       "ig_id": "ing_04241",
       "ig_axes": {
@@ -13489,7 +13498,7 @@
       "var_axes": {}
     },
     "CNF:3363": {
-      "base": "spanish_peanuts",
+      "base": "spanish_peanut",
       "variant": "roasted_in_oil",
       "ig_id": "ing_04430",
       "ig_axes": {
@@ -13499,7 +13508,7 @@
       "var_axes": {}
     },
     "CNF:3364": {
-      "base": "valencia_peanuts",
+      "base": "valencia_peanut",
       "variant": "roasted_in_oil",
       "ig_id": "ing_04432",
       "ig_axes": {
@@ -13519,7 +13528,7 @@
       "var_axes": {}
     },
     "CNF:3304": {
-      "base": "spanish_peanut",
+      "base": "spanish_peanut_roasted_salted_in_oil",
       "variant": "roasted_salted_in_oil",
       "ig_id": "ing_04529",
       "ig_axes": {
@@ -13530,7 +13539,7 @@
       "var_axes": {}
     },
     "CNF:3306": {
-      "base": "valencia_peanut",
+      "base": "valencia_peanut_roasted_salted_in_oil",
       "variant": "roasted_salted_in_oil",
       "ig_id": "ing_04531",
       "ig_axes": {
@@ -13991,7 +14000,7 @@
       "var_axes": {}
     },
     "CNF:2590": {
-      "base": "walnut_dried",
+      "base": "grenoble_walnut_igp",
       "variant": "dried",
       "ig_id": "ing_04765",
       "ig_axes": {
@@ -14000,7 +14009,7 @@
       "var_axes": {}
     },
     "USDA:2346394": {
-      "base": "walnut_raw",
+      "base": "grenoble_walnut_igp_raw",
       "variant": "raw",
       "ig_id": "ing_04767",
       "ig_axes": {
@@ -14009,7 +14018,7 @@
       "var_axes": {}
     },
     "CNF:502439": {
-      "base": "walnut_candied",
+      "base": "grenoble_walnut_igp_candied",
       "variant": "candied",
       "ig_id": "ing_04769",
       "ig_axes": {
@@ -16126,16 +16135,17 @@
       "var_axes": {}
     },
     "CIQUAL:12810": {
-      "base": "goat_cheese",
+      "base": "goat_cheese_semi_dry",
       "variant": "ch_vre",
       "ig_id": "ing_05144",
       "ig_axes": {
-        "origin": "goat"
+        "origin": "goat",
+        "affinage": "mi_affin"
       },
       "var_axes": {}
     },
     "CIQUAL:12805": {
-      "base": "goat_cheese_fresh_ch_vre",
+      "base": "goat_cheese_fresh",
       "variant": "fresh_ch_vre",
       "ig_id": "ing_05146",
       "ig_axes": {
@@ -16145,7 +16155,7 @@
       "var_axes": {}
     },
     "CIQUAL:12803": {
-      "base": "goat_cheese_aged_ch_vre",
+      "base": "goat_cheese_lactic",
       "variant": "aged_ch_vre",
       "ig_id": "ing_05148",
       "ig_axes": {
@@ -17225,7 +17235,7 @@
       "var_axes": {}
     },
     "CIQUAL:19860": {
-      "base": "yogourt_greek_style",
+      "base": "yogurt_greek_style",
       "variant": "yogurt_plain_8pct",
       "ig_id": "ing_05529",
       "ig_axes": {
@@ -17269,7 +17279,7 @@
       "var_axes": {}
     },
     "CNF:502191": {
-      "base": "yogourt_greek_style_yogurt_plain_10pct",
+      "base": "yogurt_greek_style_yogurt_plain_10pct",
       "variant": "yogurt_plain_10pct",
       "ig_id": "ing_05547",
       "ig_axes": {
@@ -17280,7 +17290,7 @@
       "var_axes": {}
     },
     "CNF:502170": {
-      "base": "yogourt",
+      "base": "yogurt_yogurt_plain_3pct",
       "variant": "yogurt_plain_3pct",
       "ig_id": "ing_05549",
       "ig_axes": {
@@ -17291,7 +17301,7 @@
       "var_axes": {}
     },
     "USDA:330137": {
-      "base": "yogourt_greek_style_yogurt_plain_0pct",
+      "base": "yogurt_greek_style_yogurt_plain_0pct",
       "variant": "yogurt_plain_0pct",
       "ig_id": "ing_05565",
       "ig_axes": {

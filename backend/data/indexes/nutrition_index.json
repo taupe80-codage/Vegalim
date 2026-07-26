@@ -3,16 +3,16 @@
     "description": "Nutrition index — SOURCE:id → valeurs nutritionnelles",
     "version": "3.0",
     "nutrition_version": "7.1",
-    "generated_at": "2026-07-03T13:15:40.530610+00:00",
+    "generated_at": "2026-07-26T15:50:36.288728+00:00",
     "generated_by": "build_indexes.py",
     "_generated": true,
     "_do_not_edit": "Fichier auto-généré — toute modification manuelle sera écrasée au prochain run du pipeline.",
     "key_format": "SOURCE:source_id  ex: CIQUAL:4028, CNF:501697, USDA:2644288",
-    "total_entries": 1819,
+    "total_entries": 1820,
     "by_source": {
       "CIQUAL": 972,
       "CNF": 685,
-      "USDA": 162
+      "USDA": 163
     }
   },
   "lookup": {
@@ -3777,7 +3777,7 @@
       "water_g": 10.2
     },
     "USDA:2346397": {
-      "base": "oats",
+      "base": "oat_steel_cut_whole_seed",
       "variant": "steel_cut_whole_seed",
       "category": "cereals and grains",
       "name_fr": "avoine",
@@ -13707,7 +13707,7 @@
       "water_g": 75.8
     },
     "USDA:1105073": {
-      "base": "bananas",
+      "base": "banana_raw_overripe",
       "variant": "raw_overripe",
       "category": "fruit",
       "name_fr": "banane",
@@ -13732,7 +13732,7 @@
       "folate_ug": 25.0,
       "water_g": 78.3
     },
-    "CNF:1705": {
+    "USDA:2346411": {
       "base": "blueberry",
       "variant": "raw",
       "category": "fruit",
@@ -13741,47 +13741,22 @@
       "axes": {
         "cooking_state": "raw"
       },
-      "calories_kcal": 57.0,
-      "protein_g": 0.74,
-      "carbs_g": 14.49,
-      "fat_g": 0.33,
-      "fiber_g": 2.6,
-      "sugar_g": 9.96,
-      "fa_saturated_g": 0.028,
-      "fa_mufa_g": 0.047,
-      "fa_pufa_g": 0.146,
-      "fa_18_3_ala_g": 0.058,
-      "fa_20_5_epa_g": 0.0,
-      "fa_22_6_dha_g": 0.0,
-      "fa_18_2_linoleic_g": 0.088,
-      "omega3_g": 0.058,
-      "cholesterol_mg": 0.0,
-      "salt_g": 0.0025,
-      "sodium_mg": 1.0,
-      "calcium_mg": 6.0,
-      "iron_mg": 0.28,
-      "magnesium_mg": 6.0,
-      "phosphorus_mg": 12.0,
-      "potassium_mg": 77.0,
-      "zinc_mg": 0.16,
-      "copper_mg": 0.057,
-      "manganese_mg": 0.336,
-      "selenium_ug": 0.1,
-      "retinol_ug": 0.0,
-      "beta_carotene_ug": 32.0,
-      "vitamin_d_ug": 0.0,
-      "alpha_tocopherol_mg": 0.57,
-      "vitamin_k1_ug": 19.3,
-      "vitamin_c_mg": 9.7,
-      "vitamin_b1_mg": 0.037,
-      "vitamin_b2_mg": 0.041,
-      "vitamin_b3_mg": 0.418,
-      "vitamin_b5_mg": 0.124,
-      "vitamin_b6_mg": 0.052,
-      "folate_ug": 6.0,
-      "vitamin_b12_ug": 0.0,
-      "alcohol_g": 0.0,
-      "water_g": 84.21
+      "calories_kcal": 64.0,
+      "protein_g": 0.703,
+      "carbs_g": 14.6,
+      "fat_g": 0.306,
+      "sugar_g": 9.36,
+      "sodium_mg": 0.0,
+      "calcium_mg": 11.7,
+      "iron_mg": 0.34,
+      "magnesium_mg": 6.18,
+      "phosphorus_mg": 13.0,
+      "potassium_mg": 85.6,
+      "zinc_mg": 0.085,
+      "copper_mg": 0.046,
+      "manganese_mg": 0.423,
+      "vitamin_c_mg": 8.06,
+      "water_g": 84.2
     },
     "CNF:501599": {
       "base": "wild_blueberry",
@@ -18231,7 +18206,7 @@
       "variant": "raw",
       "category": "fruit",
       "name_fr": "myrtille",
-      "name_en": "blueberry",
+      "name_en": "bilberry",
       "axes": {
         "cooking_state": "raw"
       },
@@ -18274,11 +18249,11 @@
       "water_g": 84.2
     },
     "CIQUAL:31068": {
-      "base": "blueberry_jam",
+      "base": "bilberry_jam",
       "variant": "jam",
       "category": "fruit",
       "name_fr": "myrtille",
-      "name_en": "blueberry",
+      "name_en": "bilberry",
       "axes": {
         "form": "jam"
       },
@@ -18316,6 +18291,35 @@
       "vitamin_b6_mg": 0.01,
       "alcohol_g": 0.0,
       "water_g": 37.8
+    },
+    "CNF:501662": {
+      "base": "huckleberry",
+      "variant": "raw",
+      "category": "fruit",
+      "name_fr": "airelle",
+      "name_en": "huckleberry",
+      "axes": {
+        "cooking_state": "raw"
+      },
+      "calories_kcal": 37.0,
+      "protein_g": 0.4,
+      "carbs_g": 8.7,
+      "fat_g": 0.1,
+      "fa_22_6_dha_g": 0.0,
+      "omega3_g": 0.0,
+      "cholesterol_mg": 0.0,
+      "salt_g": 0.0254,
+      "sodium_mg": 10.0,
+      "calcium_mg": 15.0,
+      "iron_mg": 0.3,
+      "vitamin_d_ug": 0.0,
+      "vitamin_c_mg": 2.8,
+      "vitamin_b1_mg": 0.01,
+      "vitamin_b2_mg": 0.03,
+      "vitamin_b3_mg": 0.3,
+      "vitamin_b12_ug": 0.0,
+      "alcohol_g": 0.0,
+      "water_g": 90.7
     },
     "USDA:2727581": {
       "base": "blackberry",
@@ -20243,7 +20247,7 @@
       "water_g": 67.7
     },
     "USDA:2710817": {
-      "base": "plantains",
+      "base": "plantain_banana_raw_ripe",
       "variant": "raw_ripe",
       "category": "fruit",
       "name_fr": "banane plantain",
@@ -20273,7 +20277,7 @@
       "water_g": 66.1
     },
     "CIQUAL:53100": {
-      "base": "plantain",
+      "base": "plantain_banana_raw",
       "variant": "raw",
       "category": "fruit",
       "name_fr": "banane plantain",
@@ -22426,7 +22430,7 @@
       "water_g": 88.87
     },
     "USDA:325430": {
-      "base": "yellow_peaches",
+      "base": "yellow_peach",
       "variant": "raw",
       "category": "fruit",
       "name_fr": "pêche jaune",
@@ -22655,7 +22659,7 @@
       "water_g": 87.6
     },
     "CIQUAL:13195": {
-      "base": "yellow_peach",
+      "base": "yellow_peach_raw_skinless",
       "variant": "raw_skinless",
       "category": "fruit",
       "name_fr": "pêche jaune",
@@ -44993,7 +44997,7 @@
       "water_g": 84.3
     },
     "CNF:5573": {
-      "base": "potatoes",
+      "base": "potato_unsalted_canned",
       "variant": "unsalted_canned",
       "category": "vegetable",
       "name_fr": "pomme de terre",
@@ -52528,7 +52532,7 @@
       "water_g": 11.33
     },
     "CNF:2370": {
-      "base": "italian_beans_green_or_yellow",
+      "base": "italian_bean_green_or_yellow",
       "variant": "raw",
       "category": "legumes",
       "name_fr": "haricot italien jaune ou vert",
@@ -53904,7 +53908,7 @@
       "water_g": 93.39
     },
     "CNF:2371": {
-      "base": "italian_bean_green_or_yellow",
+      "base": "italian_bean_green_or_yellow_boiled_canned",
       "variant": "boiled_canned",
       "category": "legumes",
       "name_fr": "haricot italien jaune ou vert",
@@ -53981,7 +53985,7 @@
       "water_g": 70.8
     },
     "CIQUAL:20524": {
-      "base": "red_kidney",
+      "base": "kidney_bean_canned",
       "variant": "canned",
       "category": "legumes",
       "name_fr": "haricot rouge",
@@ -54301,7 +54305,7 @@
       "water_g": 93.3
     },
     "CIQUAL:20511": {
-      "base": "withe_bean",
+      "base": "white_bean_canned",
       "variant": "canned",
       "category": "legumes",
       "name_fr": "haricot blanc",
@@ -57312,7 +57316,7 @@
       "water_g": 82.9
     },
     "CIQUAL:20243": {
-      "base": "mangetout_peas",
+      "base": "snow_peas_cooked",
       "variant": "cooked",
       "category": "legumes",
       "name_fr": "pois mange-tout (gourmand)",
@@ -58127,7 +58131,7 @@
       "water_g": 89.5
     },
     "CNF:3358": {
-      "base": "lupins",
+      "base": "lupin_boiled_salted",
       "variant": "boiled_salted",
       "category": "legumes",
       "name_fr": "lupin",
@@ -58376,7 +58380,7 @@
       "water_g": 69.49
     },
     "CIQUAL:20507": {
-      "base": "chickpeas",
+      "base": "chickpea",
       "variant": "boiled",
       "category": "legumes",
       "name_fr": "pois chiches",
@@ -58424,7 +58428,7 @@
       "water_g": 62.0
     },
     "CIQUAL:20516": {
-      "base": "chickpeas_raw_dried",
+      "base": "chickpea_raw_dried",
       "variant": "raw_dried",
       "category": "legumes",
       "name_fr": "pois chiches",
@@ -58474,7 +58478,7 @@
       "water_g": 7.68
     },
     "CIQUAL:20532": {
-      "base": "chickpeas_canned",
+      "base": "chickpea_canned",
       "variant": "canned",
       "category": "legumes",
       "name_fr": "pois chiches",
@@ -58523,7 +58527,7 @@
       "water_g": 72.1
     },
     "USDA:2644288": {
-      "base": "chickpeas_salted_canned",
+      "base": "chickpea_salted_canned",
       "variant": "salted_canned",
       "category": "legumes",
       "name_fr": "pois chiches",
@@ -58548,7 +58552,7 @@
       "water_g": 68.6
     },
     "CNF:3410": {
-      "base": "chickpeas_boiled_salted",
+      "base": "chickpea_boiled_salted",
       "variant": "boiled_salted",
       "category": "legumes",
       "name_fr": "pois chiches",
@@ -58599,7 +58603,7 @@
       "water_g": 60.21
     },
     "CIQUAL:9580": {
-      "base": "chickpea",
+      "base": "chickpea_flour",
       "variant": "flour",
       "category": "legumes",
       "name_fr": "pois chiches",
@@ -63459,7 +63463,7 @@
       "water_g": 1.45
     },
     "CNF:3363": {
-      "base": "spanish_peanuts",
+      "base": "spanish_peanut",
       "variant": "roasted_in_oil",
       "category": "nut",
       "name_fr": "cacahuète (arachide) Espagnole",
@@ -63508,7 +63512,7 @@
       "water_g": 1.78
     },
     "CNF:3364": {
-      "base": "valencia_peanuts",
+      "base": "valencia_peanut",
       "variant": "roasted_in_oil",
       "category": "nut",
       "name_fr": "cacahuète (arachide) Valencia",
@@ -63606,7 +63610,7 @@
       "water_g": 2.17
     },
     "CNF:3304": {
-      "base": "spanish_peanut",
+      "base": "spanish_peanut_roasted_salted_in_oil",
       "variant": "roasted_salted_in_oil",
       "category": "nut",
       "name_fr": "cacahuète (arachide) Espagnole",
@@ -63656,7 +63660,7 @@
       "water_g": 1.78
     },
     "CNF:3306": {
-      "base": "valencia_peanut",
+      "base": "valencia_peanut_roasted_salted_in_oil",
       "variant": "roasted_salted_in_oil",
       "category": "nut",
       "name_fr": "cacahuète (arachide) Valencia",
@@ -65741,7 +65745,7 @@
       "water_g": 4.56
     },
     "CNF:2590": {
-      "base": "walnut_dried",
+      "base": "grenoble_walnut_igp",
       "variant": "dried",
       "category": "nut",
       "name_fr": "noix de Grenoble",
@@ -65792,7 +65796,7 @@
       "water_g": 4.07
     },
     "USDA:2346394": {
-      "base": "walnut_raw",
+      "base": "grenoble_walnut_igp_raw",
       "variant": "raw",
       "category": "nut",
       "name_fr": "noix de Grenoble",
@@ -65824,7 +65828,7 @@
       "water_g": 3.14
     },
     "CNF:502439": {
-      "base": "walnut_candied",
+      "base": "grenoble_walnut_igp_candied",
       "variant": "candied",
       "category": "nut",
       "name_fr": "noix de Grenoble",
@@ -75338,13 +75342,14 @@
       "water_g": 54.8
     },
     "CIQUAL:12810": {
-      "base": "goat_cheese",
+      "base": "goat_cheese_semi_dry",
       "variant": "ch_vre",
       "category": "dairy products",
       "name_fr": "Fromage de chèvre demi-sec",
       "name_en": "goat cheese",
       "axes": {
-        "origin": "ch_vre"
+        "origin": "ch_vre",
+        "affinage": "mi_affin"
       },
       "calories_kcal": 353.0,
       "protein_g": 21.6,
@@ -75388,7 +75393,7 @@
       "water_g": 45.5
     },
     "CIQUAL:12805": {
-      "base": "goat_cheese_fresh_ch_vre",
+      "base": "goat_cheese_fresh",
       "variant": "fresh_ch_vre",
       "category": "dairy products",
       "name_fr": "fromage de chèvre",
@@ -75435,7 +75440,7 @@
       "water_g": 64.8
     },
     "CIQUAL:12803": {
-      "base": "goat_cheese_aged_ch_vre",
+      "base": "goat_cheese_lactic",
       "variant": "aged_ch_vre",
       "category": "dairy products",
       "name_fr": "fromage de chèvre lactique",
@@ -80055,7 +80060,7 @@
       "water_g": 2.47
     },
     "CIQUAL:19860": {
-      "base": "yogourt_greek_style",
+      "base": "yogurt_greek_style",
       "variant": "yogurt_plain_8pct",
       "category": "dairy products",
       "name_fr": "yaourt Grec",
@@ -80255,7 +80260,7 @@
       "water_g": 82.2
     },
     "CNF:502191": {
-      "base": "yogourt_greek_style_yogurt_plain_10pct",
+      "base": "yogurt_greek_style_yogurt_plain_10pct",
       "variant": "yogurt_plain_10pct",
       "category": "dairy products",
       "name_fr": "yaourt Grec",
@@ -80303,7 +80308,7 @@
       "water_g": 69.85
     },
     "CNF:502170": {
-      "base": "yogourt",
+      "base": "yogurt_yogurt_plain_3pct",
       "variant": "yogurt_plain_3pct",
       "category": "dairy products",
       "name_fr": "yaourt",
@@ -80356,7 +80361,7 @@
       "water_g": 89.18
     },
     "USDA:330137": {
-      "base": "yogourt_greek_style_yogurt_plain_0pct",
+      "base": "yogurt_greek_style_yogurt_plain_0pct",
       "variant": "yogurt_plain_0pct",
       "category": "dairy products",
       "name_fr": "yaourt Grec",
