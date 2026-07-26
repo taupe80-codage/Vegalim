@@ -18,7 +18,7 @@ Sources :
   ingredients_dictionary.json   → migration méta (culinary, diet_profile...)
 """
 
-import json, re, sys
+import json, re, sys, unicodedata
 from datetime import datetime, timezone; UTC = timezone.utc
 from pathlib import Path
 from collections import defaultdict, OrderedDict
@@ -163,9 +163,10 @@ def translate_axes(axes_fr: dict) -> dict:
             out[k_en] = _TEXT_MG.get(v_str, v_str)
         else:
             v_str = str(v_raw).strip()
+            fallback = re.sub(r"['\u2019\u2018]", '', v_str.lower())
+            fallback = unicodedata.normalize('NFKD', fallback).encode('ascii', 'ignore').decode('ascii')
             out[k_en] = DICT_AXES_VALUE_MAP.get(k_fr, {}).get(v_str) or re.sub(
-                r'[^a-z0-9]+', '_',
-                re.sub(r"['\u2019\u2018]", '', v_str.lower())).strip('_')
+                r'[^a-z0-9]+', '_', fallback).strip('_')
     return out
 
 
@@ -248,6 +249,10 @@ def src_rank(src: str) -> int:
     return SOURCE_PRIORITY.get((src or '').upper(), 99)
 
 def clean_key(s: str, fallback: str = '') -> str:
+    # translitteration AVANT le regex alnum : sinon un mot accentue non
+    # traduit (ex. "réfrigéré") est mutile lettre par lettre ("r_frig_r_")
+    # au lieu de produire un slug lisible ("refrigere").
+    s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode('ascii')
     k = re.sub(r'[^a-z0-9_]', '_',
                s.lower().replace(' ', '_').replace('-', '_').replace('/', '_'))
     return re.sub(r'_+', '_', k).strip('_') or fallback
@@ -258,24 +263,47 @@ AXES_LABEL_PRIORITY = [
     'maturite', 'origine', 'milieu_conservation', 'procede_cuisson',
 ]
 
-def axes_label(axes_fr: dict) -> str:
-    """Produit un suffixe lisible EN depuis les axes FR d'un variant."""
+def axes_label(axes_fr: dict, exclude_words: set[str] | None = None) -> str:
+    """Produit un suffixe lisible EN depuis les axes FR d'un variant.
+
+    exclude_words : mots déjà présents dans base_key (repris de
+    nutrition_v2, qui a pu déjà se voir suffixer par ces mêmes axes lors
+    d'une collision — voir build_n2_direct.build_variant_key). Un mot déjà
+    couvert n'est pas répété, pour éviter par ex. base_key='fennel_boiled'
+    + ax='boiled' → entry_key='fennel_boiled_boiled'.
+    """
     if not axes_fr:
         return ''
     translated = translate_axes(axes_fr)
-    parts = []
+    used_words = set(exclude_words or set())
+    parts: list[str] = []
+
+    def _add(v):
+        # Meme normalisation que clean_key/slug (non-alphanum -> '_') AVANT
+        # de comparer les mots : sinon une valeur numerique brute type
+        # "7.5pct" (point non converti) ne matche jamais son equivalent
+        # "7_5pct" deja present dans base_key, et le doublon passe au travers.
+        norm = unicodedata.normalize('NFKD', str(v).lower()).encode('ascii', 'ignore').decode('ascii')
+        seg = re.sub(r'[^a-z0-9]+', '_', norm).strip('_')
+        seg_words = seg.split('_')
+        kept = [w for w in seg_words if w not in used_words]
+        if not kept:
+            return
+        parts.append('_'.join(kept))
+        used_words.update(seg_words)
+
     # D'abord les axes dans l'ordre de priorité (valeurs déjà EN)
     seen = set()
     for k_fr in AXES_LABEL_PRIORITY:
         k_en = AXES_EN.get(k_fr, k_fr)
         v = translated.get(k_en)
         if v:
-            parts.append(str(v).lower().replace(' ', '_'))
+            _add(v)
             seen.add(k_en)
     # Puis les axes restants (hors priorité)
     for k_en, v in translated.items():
         if k_en not in seen and v:
-            parts.append(str(v).lower().replace(' ', '_'))
+            _add(v)
     return '_'.join(parts)
 
 # ══════════════════════════════════════════════════════════════════
@@ -613,7 +641,7 @@ for cat in v32.get('categories', []):
                 if not sid and source != 'MANUAL': continue
                 # Merger axes groupe + axes variant (variant a priorité)
                 merged_axes = {**ig_axes_fr, **(vr.get('axes_fr') or vr.get('axes') or {})}
-                ax     = axes_label(merged_axes)
+                ax     = axes_label(merged_axes, exclude_words=set(base_key.split('_')))
                 vr_by_axes[ax].append({
                     'var_id': var_id,
                     'source': source,

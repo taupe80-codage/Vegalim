@@ -72,15 +72,15 @@
   "almond/default": {
     "nutri_id_v1": "almond_unsalted",
     "original_status": "manual",
-    "group_id_v2": "almond_with_skin_non_blanchi_peau_conserv_e_dried",
+    "group_id_v2": "almond_with_skin_non_blanchi_peau_conservee_dried",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "canonical_name_en": "almond",
     "status": "AUTO_HIGH",
     "cat_id": "nuts_and_seeds",
     "cooking_variants": {
-      "raw": "almond_with_skin_non_blanchi_peau_conserv_e_dried",
-      "default": "almond_with_skin_non_blanchi_peau_conserv_e_dried"
+      "raw": "almond_with_skin_non_blanchi_peau_conservee_dried",
+      "default": "almond_with_skin_non_blanchi_peau_conservee_dried"
     }
   },
   "almond/slivered": {
@@ -1826,15 +1826,15 @@
   "comte": {
     "nutri_id_v1": "comt",
     "original_status": "manual",
-    "group_id_v2": "comt",
+    "group_id_v2": "comte",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "canonical_name_en": "Comté",
     "status": "AUTO_HIGH",
     "cat_id": "dairy_products",
     "cooking_variants": {
-      "raw": "comt",
-      "default": "comt"
+      "raw": "comte",
+      "default": "comte"
     }
   },
   "cooked_rice": {
@@ -4061,15 +4061,15 @@
   "milk_plant/oat": {
     "nutri_id_v1": "oat_milk",
     "original_status": "manual",
-    "group_id_v2": "oat_milk_r_frig_r_plain_plant",
+    "group_id_v2": "oat_milk_refrigere_plain_plant",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "canonical_name_en": "oat",
     "status": "AUTO_HIGH",
     "cat_id": "cereals_and_grains",
     "cooking_variants": {
-      "raw": "oat_milk_r_frig_r_plain_plant",
-      "default": "oat_milk_r_frig_r_plain_plant"
+      "raw": "oat_milk_refrigere_plain_plant",
+      "default": "oat_milk_refrigere_plain_plant"
     }
   },
   "mint": {
@@ -4940,9 +4940,9 @@
     "cooking_variants": {
       "raw": "peanut_unsalted",
       "default": "peanut_unsalted",
-      "boiled": "peanut_grill_sec_dried_dry",
-      "cooked": "peanut_grill_sec_dried_dry",
-      "default_cooked": "peanut_grill_sec_dried_dry"
+      "boiled": "peanut_grille_a_sec_dried_dry",
+      "cooked": "peanut_grille_a_sec_dried_dry",
+      "default_cooked": "peanut_grille_a_sec_dried_dry"
     }
   },
   "peanut/huile": {
@@ -4971,9 +4971,9 @@
     "cooking_variants": {
       "raw": "peanut_raw",
       "default": "peanut_raw",
-      "boiled": "peanut_roasted_torr_fi_unsalted_dry",
-      "cooked": "peanut_roasted_torr_fi_unsalted_dry",
-      "default_cooked": "peanut_roasted_torr_fi_unsalted_dry"
+      "boiled": "peanut_roasted_torrefie_unsalted_dry",
+      "cooked": "peanut_roasted_torrefie_unsalted_dry",
+      "default_cooked": "peanut_roasted_torrefie_unsalted_dry"
     }
   },
   "peanut_butter": {
@@ -6151,9 +6151,9 @@
     "cooking_variants": {
       "raw": "sesame_seed_hulled_dried",
       "default": "sesame_seed_hulled_dried",
-      "boiled": "sesame_roasted_seed_grill_sec_dry",
-      "cooked": "sesame_roasted_seed_grill_sec_dry",
-      "default_cooked": "sesame_roasted_seed_grill_sec_dry"
+      "boiled": "sesame_roasted_seed_grille_a_sec_dry",
+      "cooked": "sesame_roasted_seed_grille_a_sec_dry",
+      "default_cooked": "sesame_roasted_seed_grille_a_sec_dry"
     }
   },
   "sesame/default": {
@@ -6168,9 +6168,9 @@
     "cooking_variants": {
       "raw": "sesame_raw_seed",
       "default": "sesame_raw_seed",
-      "boiled": "sesame_roasted_seed_grill_sec_dry",
-      "cooked": "sesame_roasted_seed_grill_sec_dry",
-      "default_cooked": "sesame_roasted_seed_grill_sec_dry"
+      "boiled": "sesame_roasted_seed_grille_a_sec_dry",
+      "cooked": "sesame_roasted_seed_grille_a_sec_dry",
+      "default_cooked": "sesame_roasted_seed_grille_a_sec_dry"
     }
   },
   "sesame/tahini_raw": {
@@ -6213,9 +6213,9 @@
     "cooking_variants": {
       "raw": "sesame_seed_hulled_dried",
       "default": "sesame_seed_hulled_dried",
-      "boiled": "sesame_roasted_seed_grill_sec_dry",
-      "cooked": "sesame_roasted_seed_grill_sec_dry",
-      "default_cooked": "sesame_roasted_seed_grill_sec_dry"
+      "boiled": "sesame_roasted_seed_grille_a_sec_dry",
+      "cooked": "sesame_roasted_seed_grille_a_sec_dry",
+      "default_cooked": "sesame_roasted_seed_grille_a_sec_dry"
     },
     "cat_id": "nuts_and_seeds"
   },
@@ -6746,9 +6746,9 @@
     "cooking_variants": {
       "raw": "sunflower_raw_seed",
       "default": "sunflower_raw_seed",
-      "boiled": "sunflower_seed_grill_sec_dried_dry",
-      "cooked": "sunflower_seed_grill_sec_dried_dry",
-      "default_cooked": "sunflower_seed_grill_sec_dried_dry"
+      "boiled": "sunflower_seed_grille_a_sec_dried_dry",
+      "cooked": "sunflower_seed_grille_a_sec_dried_dry",
+      "default_cooked": "sunflower_seed_grille_a_sec_dried_dry"
     }
   },
   "sushi_rice": {
@@ -8383,9 +8383,9 @@
     "cooking_variants": {
       "raw": "sunflower_raw_seed",
       "default": "sunflower_raw_seed",
-      "boiled": "sunflower_seed_grill_sec_dried_dry",
-      "cooked": "sunflower_seed_grill_sec_dried_dry",
-      "default_cooked": "sunflower_seed_grill_sec_dried_dry"
+      "boiled": "sunflower_seed_grille_a_sec_dried_dry",
+      "cooked": "sunflower_seed_grille_a_sec_dried_dry",
+      "default_cooked": "sunflower_seed_grille_a_sec_dried_dry"
     },
     "cat_id": "nuts_and_seeds"
   },
@@ -9113,27 +9113,27 @@
     }
   },
   "oat_milk/milk_plain_unsweetened_fresh_aisle_plant": {
-    "group_id_v2": "oat_milk_r_frig_r_plain_plant",
+    "group_id_v2": "oat_milk_refrigere_plain_plant",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "status": "AUTO_HIGH",
     "canonical_name_en": "oat",
     "cat_id": "cereals_and_grains",
     "cooking_variants": {
-      "raw": "oat_milk_r_frig_r_plain_plant",
-      "default": "oat_milk_r_frig_r_plain_plant"
+      "raw": "oat_milk_refrigere_plain_plant",
+      "default": "oat_milk_refrigere_plain_plant"
     }
   },
   "oat_milk": {
-    "group_id_v2": "oat_milk_r_frig_r_plain_plant",
+    "group_id_v2": "oat_milk_refrigere_plain_plant",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "status": "AUTO_HIGH",
     "canonical_name_en": "oat",
     "cat_id": "cereals_and_grains",
     "cooking_variants": {
-      "raw": "oat_milk_r_frig_r_plain_plant",
-      "default": "oat_milk_r_frig_r_plain_plant"
+      "raw": "oat_milk_refrigere_plain_plant",
+      "default": "oat_milk_refrigere_plain_plant"
     }
   },
   "cream": {
@@ -9509,15 +9509,15 @@
     }
   },
   "almond": {
-    "group_id_v2": "almond_with_skin_non_blanchi_peau_conserv_e_dried",
+    "group_id_v2": "almond_with_skin_non_blanchi_peau_conservee_dried",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "status": "AUTO_HIGH",
     "canonical_name_en": "almond",
     "cat_id": "nuts_and_seeds",
     "cooking_variants": {
-      "raw": "almond_with_skin_non_blanchi_peau_conserv_e_dried",
-      "default": "almond_with_skin_non_blanchi_peau_conserv_e_dried"
+      "raw": "almond_with_skin_non_blanchi_peau_conservee_dried",
+      "default": "almond_with_skin_non_blanchi_peau_conservee_dried"
     }
   },
   "seeds": {

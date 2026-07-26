@@ -14,7 +14,7 @@ Usage :
   python build_n2_direct.py --promote     # écrase nutrition_v2.json
   python build_n2_direct.py --dry-run     # rapport sans écriture
 """
-import argparse, csv, hashlib, json, re, sys
+import argparse, csv, hashlib, json, re, sys, unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -276,6 +276,10 @@ AXES_VALUE_MAP: dict[str, dict[str, str]] = {
 def slug(s: str) -> str:
     s = (s or '').lower().strip()
     s = re.sub(r"['\u2019\u2018]", '', s)
+    # translitteration (\u00e9->e, \u00e7->c...) AVANT le regex alnum : sinon un mot
+    # accentue non traduit (ex. "refrigere") est mutile lettre par lettre
+    # ("r_frig_r_") au lieu d'etre lisible.
+    s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode('ascii')
     s = re.sub(r'[^a-z0-9]+', '_', s)
     return s.strip('_')
 

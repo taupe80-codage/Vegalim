@@ -2,7 +2,7 @@
   "schema_version": "7.1",
   "schema_family": "nutrition_v2",
   "built_from": "raw_sources_direct",
-  "built_at": "2026-07-26T17:00:41.945406+00:00",
+  "built_at": "2026-07-26T20:32:55.067154+00:00",
   "pipeline": "build_n2_direct.py",
   "raw_sources": {
     "CIQUAL": {
@@ -4068,14 +4068,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_00158",
       "variants": {
-        "powder_d_caf_in_instantan": {
+        "powder_decafeine_instantane": {
           "_source": "CIQUAL",
           "_source_id": 18069,
           "_v32_ing_id": "ing_00158",
           "_v32_var_id": "var_00159",
           "axes": {
             "form": "powder",
-            "treatment": "d_caf_in_instantan"
+            "treatment": "decafeine_instantane"
           },
           "calories_kcal": 352.0,
           "protein_g": 11.6,
@@ -4774,7 +4774,7 @@
         }
       }
     },
-    "ros_wine": {
+    "rose_wine": {
       "taxonomy": {
         "cat1": "beverages",
         "cat1_fr": "BOISSONS",
@@ -6420,7 +6420,7 @@
         }
       }
     },
-    "table_salt_iod_fluor": {
+    "table_salt_iode_fluore": {
       "taxonomy": {
         "cat1": "condiments_and_sauces",
         "cat1_fr": "CONDIMENTS & SAUCES",
@@ -6441,13 +6441,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_01226",
       "variants": {
-        "iod_fluor": {
+        "iode_fluore": {
           "_source": "CIQUAL",
           "_source_id": 11096,
           "_v32_ing_id": "ing_01226",
           "_v32_var_id": "var_01227",
           "axes": {
-            "treatment": "iod_fluor"
+            "treatment": "iode_fluore"
           },
           "calories_kcal": 0.0,
           "protein_g": 0.0,
@@ -7241,14 +7241,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_00251",
       "variants": {
-        "r_ti_dried_dry": {
+        "roti_dried_dry": {
           "_source": "CNF",
           "_source_id": 4412,
           "_v32_ing_id": "ing_00251",
           "_v32_var_id": "var_00254",
           "axes": {
             "thermal_state": "dried",
-            "treatment": "r_ti",
+            "treatment": "roti",
             "cooking_process": "dry"
           },
           "calories_kcal": 346.0,
@@ -7623,7 +7623,7 @@
         }
       }
     },
-    "oat_milk_r_frig_r_plain_plant": {
+    "oat_milk_refrigere_plain_plant": {
       "taxonomy": {
         "cat1": "cereals_and_grains",
         "cat1_fr": "CÉRÉALES & GRAINS",
@@ -7647,7 +7647,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_00271",
       "variants": {
-        "milk_r_frig_r_plain_plant": {
+        "milk_refrigere_plain_plant": {
           "_source": "USDA",
           "_source_id": 2257046,
           "_v32_ing_id": "ing_00271",
@@ -7656,7 +7656,7 @@
             "form": "milk",
             "origin": "plant",
             "seasoning": "plain",
-            "thermal_state": "r_frig_r"
+            "thermal_state": "refrigere"
           },
           "protein_g": 0.797,
           "carbs_g": 5.1,
@@ -7718,14 +7718,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05768",
       "variants": {
-        "cooked_r_ti_dry": {
+        "cooked_roti_dry": {
           "_source": "CNF",
           "_source_id": 4413,
           "_v32_ing_id": "ing_05768",
           "_v32_var_id": "var_00252",
           "axes": {
             "cooking_state": "cooked",
-            "treatment": "r_ti",
+            "treatment": "roti",
             "cooking_process": "dry"
           },
           "calories_kcal": 92.0,
@@ -12781,7 +12781,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_00497",
       "variants": {
-        "whole_whole_seed": {
+        "whole_seed": {
           "_source": "CNF",
           "_source_id": 3709,
           "_v32_ing_id": "ing_00497",
@@ -13083,7 +13083,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_00526",
       "variants": {
-        "whole_whole_seed": {
+        "whole_seed": {
           "_source": "CNF",
           "_source_id": 502473,
           "_v32_ing_id": "ing_00526",
@@ -14634,7 +14634,7 @@
         }
       }
     },
-    "indian_bread_naan_whole_whole_seed": {
+    "indian_bread_naan_whole_seed": {
       "taxonomy": {
         "cat1": "cereals_and_grains",
         "cat1_fr": "CÉRÉALES & GRAINS",
@@ -14656,7 +14656,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_00524",
       "variants": {
-        "whole_whole_seed": {
+        "whole_seed": {
           "_source": "CNF",
           "_source_id": 502477,
           "_v32_ing_id": "ing_00524",
@@ -24616,7 +24616,7 @@
           "axes": {
             "packaging": "canned",
             "storage_medium": "in_syrup",
-            "concentration_sirop": "l_ger"
+            "concentration_sirop": "leger"
           },
           "calories_kcal": 61.1,
           "protein_g": 0.94,
@@ -25002,7 +25002,7 @@
           "axes": {
             "packaging": "canned",
             "storage_medium": "in_syrup",
-            "concentration_sirop": "pais"
+            "concentration_sirop": "epais"
           },
           "calories_kcal": 83.0,
           "protein_g": 0.64,
@@ -25130,7 +25130,7 @@
         }
       }
     },
-    "pineapple_juice_base_de_concentr": {
+    "pineapple_juice_a_base_de_concentre": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -25152,14 +25152,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_00901",
       "variants": {
-        "juice_base_de_concentr": {
+        "juice_a_base_de_concentre": {
           "_source": "CIQUAL",
           "_source_id": 2000,
           "_v32_ing_id": "ing_00901",
           "_v32_var_id": "var_00902",
           "axes": {
             "form": "juice",
-            "treatment": "base_de_concentr"
+            "treatment": "a_base_de_concentre"
           },
           "calories_kcal": 52.3,
           "protein_g": 0.41,
@@ -25543,7 +25543,7 @@
           "_v32_var_id": "var_01568",
           "axes": {
             "cooking_state": "raw",
-            "variete": "extra_sucr_e"
+            "variete": "extra_sucree"
           },
           "calories_kcal": 51.0,
           "protein_g": 0.53,
@@ -36038,7 +36038,7 @@
           "_v32_var_id": "var_01347",
           "axes": {
             "cooking_state": "raw",
-            "variete": "m_rier"
+            "variete": "murier"
           },
           "protein_g": 1.44,
           "carbs_g": 8.1,
@@ -37026,7 +37026,7 @@
         }
       }
     },
-    "orange_juice_base_de_concentr": {
+    "orange_juice_a_base_de_concentre": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -37048,14 +37048,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_01402",
       "variants": {
-        "juice_base_de_concentr": {
+        "juice_a_base_de_concentre": {
           "_source": "CIQUAL",
           "_source_id": 2012,
           "_v32_ing_id": "ing_01402",
           "_v32_var_id": "var_01403",
           "axes": {
             "form": "juice",
-            "treatment": "base_de_concentr"
+            "treatment": "a_base_de_concentre"
           },
           "calories_kcal": 45.6,
           "protein_g": 0.63,
@@ -37117,7 +37117,7 @@
               "_v32_var_id": "var_01409",
               "axes": {
                 "form": "juice",
-                "treatment": "base_de_concentr"
+                "treatment": "a_base_de_concentre"
               },
               "name_fr": "orange",
               "name_en": "orange",
@@ -37148,7 +37148,7 @@
         }
       }
     },
-    "orange_juice_sans_pulpe_r_frig_r": {
+    "orange_juice_sans_pulpe_refrigere": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -37171,7 +37171,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_01408",
       "variants": {
-        "juice_sans_pulpe_r_frig_r": {
+        "juice_sans_pulpe_refrigere": {
           "_source": "USDA",
           "_source_id": 2003597,
           "_v32_ing_id": "ing_01408",
@@ -37179,7 +37179,7 @@
           "axes": {
             "form": "juice",
             "treatment": "sans_pulpe",
-            "thermal_state": "r_frig_r"
+            "thermal_state": "refrigere"
           },
           "protein_g": 0.812,
           "carbs_g": 10.0,
@@ -37741,7 +37741,7 @@
         }
       }
     },
-    "grapefruit_juice_base_de_concentr": {
+    "grapefruit_juice_a_base_de_concentre": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -37763,14 +37763,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_01423",
       "variants": {
-        "juice_base_de_concentr": {
+        "juice_a_base_de_concentre": {
           "_source": "CIQUAL",
           "_source_id": 2015,
           "_v32_ing_id": "ing_01423",
           "_v32_var_id": "var_01424",
           "axes": {
             "form": "juice",
-            "treatment": "base_de_concentr"
+            "treatment": "a_base_de_concentre"
           },
           "calories_kcal": 40.9,
           "protein_g": 0.52,
@@ -39710,14 +39710,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05766",
       "variants": {
-        "raw_pas_m_r": {
+        "raw_pas_mur": {
           "_source": "USDA",
           "_source_id": 2710818,
           "_v32_ing_id": "ing_05766",
           "_v32_var_id": "var_00941",
           "axes": {
             "cooking_state": "raw",
-            "ripeness": "pas_m_r"
+            "ripeness": "pas_mur"
           },
           "protein_g": 1.23,
           "carbs_g": 33.6,
@@ -40522,7 +40522,7 @@
           "axes": {
             "packaging": "canned",
             "storage_medium": "in_syrup",
-            "concentration_sirop": "l_ger"
+            "concentration_sirop": "leger"
           },
           "calories_kcal": 63.9,
           "protein_g": 0.25,
@@ -40607,7 +40607,7 @@
           "axes": {
             "packaging": "canned",
             "storage_medium": "in_syrup",
-            "concentration_sirop": "pais"
+            "concentration_sirop": "epais"
           },
           "calories_kcal": 74.0,
           "protein_g": 0.24,
@@ -41597,7 +41597,7 @@
         }
       }
     },
-    "apple_juice_base_de_concentr": {
+    "apple_juice_a_base_de_concentre": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -41619,14 +41619,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_01635",
       "variants": {
-        "juice_base_de_concentr": {
+        "juice_a_base_de_concentre": {
           "_source": "CIQUAL",
           "_source_id": 2014,
           "_v32_ing_id": "ing_01635",
           "_v32_var_id": "var_01636",
           "axes": {
             "form": "juice",
-            "treatment": "base_de_concentr"
+            "treatment": "a_base_de_concentre"
           },
           "calories_kcal": 48.5,
           "protein_g": 0.24,
@@ -44278,14 +44278,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_01845",
       "variants": {
-        "canned_sirop_l_ger": {
+        "canned_sirop_leger": {
           "_source": "CIQUAL",
           "_source_id": 13730,
           "_v32_ing_id": "ing_01845",
           "_v32_var_id": "var_01856",
           "axes": {
             "packaging": "canned",
-            "storage_medium": "sirop_l_ger"
+            "storage_medium": "sirop_leger"
           },
           "calories_kcal": 59.0,
           "protein_g": 0.5,
@@ -44360,14 +44360,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05849",
       "variants": {
-        "canned_sirop_pais": {
+        "canned_sirop_epais": {
           "_source": "CNF",
           "_source_id": 5397,
           "_v32_ing_id": "ing_05849",
           "_v32_var_id": "var_01846",
           "axes": {
             "packaging": "canned",
-            "storage_medium": "sirop_pais"
+            "storage_medium": "sirop_epais"
           },
           "calories_kcal": 72.0,
           "protein_g": 0.52,
@@ -45501,7 +45501,7 @@
         }
       }
     },
-    "grape_juice_base_de_concentr": {
+    "grape_juice_a_base_de_concentre": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -45523,14 +45523,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_01922",
       "variants": {
-        "juice_base_de_concentr": {
+        "juice_a_base_de_concentre": {
           "_source": "CIQUAL",
           "_source_id": 2019,
           "_v32_ing_id": "ing_01922",
           "_v32_var_id": "var_01923",
           "axes": {
             "form": "juice",
-            "treatment": "base_de_concentr"
+            "treatment": "a_base_de_concentre"
           },
           "calories_kcal": 67.1,
           "protein_g": 0.31,
@@ -46961,7 +46961,7 @@
         }
       }
     },
-    "basil_fresh_herb_fresh": {
+    "basil_fresh_herb": {
       "taxonomy": {
         "cat1": "herbs_and_spices",
         "cat1_fr": "HERBES & ÉPICES",
@@ -46983,7 +46983,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02003",
       "variants": {
-        "fresh_herb_fresh": {
+        "fresh_herb": {
           "_source": "CIQUAL",
           "_source_id": 11033,
           "_v32_ing_id": "ing_02003",
@@ -47185,7 +47185,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_01970",
       "variants": {
-        "fresh_herb_fresh": {
+        "fresh_herb": {
           "_source": "CIQUAL",
           "_source_id": 11002,
           "_v32_ing_id": "ing_01970",
@@ -47539,7 +47539,7 @@
         }
       }
     },
-    "coriander_raw_fresh_herb_fresh": {
+    "coriander_raw_fresh_herb": {
       "taxonomy": {
         "cat1": "herbs_and_spices",
         "cat1_fr": "HERBES & ÉPICES",
@@ -47562,7 +47562,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02008",
       "variants": {
-        "raw_fresh_herb_fresh": {
+        "raw_fresh_herb": {
           "_source": "CIQUAL",
           "_source_id": 11094,
           "_v32_ing_id": "ing_02008",
@@ -48120,7 +48120,7 @@
         }
       }
     },
-    "dill_weed_fresh_herb_leaf_fresh": {
+    "dill_weed_fresh_herb_leaf": {
       "taxonomy": {
         "cat1": "herbs_and_spices",
         "cat1_fr": "HERBES & ÉPICES",
@@ -48143,7 +48143,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02001",
       "variants": {
-        "fresh_herb_leaf_fresh": {
+        "fresh_herb_leaf": {
           "_source": "CIQUAL",
           "_source_id": 11093,
           "_v32_ing_id": "ing_02001",
@@ -48785,7 +48785,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_01974",
       "variants": {
-        "fresh_herb_fresh": {
+        "fresh_herb": {
           "_source": "CIQUAL",
           "_source_id": 11014,
           "_v32_ing_id": "ing_01974",
@@ -48850,7 +48850,7 @@
         }
       }
     },
-    "parsley_dried_herb_dried": {
+    "parsley_dried_herb": {
       "taxonomy": {
         "cat1": "herbs_and_spices",
         "cat1_fr": "HERBES & ÉPICES",
@@ -48872,7 +48872,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_01985",
       "variants": {
-        "dried_herb_dried": {
+        "dried_herb": {
           "_source": "CIQUAL",
           "_source_id": 11024,
           "_v32_ing_id": "ing_01985",
@@ -49465,7 +49465,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_01979",
       "variants": {
-        "fresh_herb_fresh": {
+        "fresh_herb": {
           "_source": "CIQUAL",
           "_source_id": 11068,
           "_v32_ing_id": "ing_01979",
@@ -49521,7 +49521,7 @@
         }
       }
     },
-    "rosemary_dried_herb_dried": {
+    "rosemary_dried_herb": {
       "taxonomy": {
         "cat1": "herbs_and_spices",
         "cat1_fr": "HERBES & ÉPICES",
@@ -49543,7 +49543,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_01987",
       "variants": {
-        "dried_herb_dried": {
+        "dried_herb": {
           "_source": "CIQUAL",
           "_source_id": 11036,
           "_v32_ing_id": "ing_01987",
@@ -49727,7 +49727,7 @@
         }
       }
     },
-    "sage_dried_herb_dried": {
+    "sage_dried_herb": {
       "taxonomy": {
         "cat1": "herbs_and_spices",
         "cat1_fr": "HERBES & ÉPICES",
@@ -49749,7 +49749,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02111",
       "variants": {
-        "dried_herb_dried": {
+        "dried_herb": {
           "_source": "CIQUAL",
           "_source_id": 11037,
           "_v32_ing_id": "ing_02111",
@@ -49808,7 +49808,7 @@
         }
       }
     },
-    "sage_fresh_herb_fresh": {
+    "sage_fresh_herb": {
       "taxonomy": {
         "cat1": "herbs_and_spices",
         "cat1_fr": "HERBES & ÉPICES",
@@ -49830,7 +49830,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02018",
       "variants": {
-        "fresh_herb_fresh": {
+        "fresh_herb": {
           "_source": "CIQUAL",
           "_source_id": 11069,
           "_v32_ing_id": "ing_02018",
@@ -49961,7 +49961,7 @@
         }
       }
     },
-    "savory_dried_herb_dried": {
+    "savory_dried_herb": {
       "taxonomy": {
         "cat1": "herbs_and_spices",
         "cat1_fr": "HERBES & ÉPICES",
@@ -49983,7 +49983,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02109",
       "variants": {
-        "dried_herb_dried": {
+        "dried_herb": {
           "_source": "CIQUAL",
           "_source_id": 11062,
           "_v32_ing_id": "ing_02109",
@@ -50052,7 +50052,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02068",
       "variants": {
-        "dried_herb_dried": {
+        "dried_herb": {
           "_source": "CIQUAL",
           "_source_id": 11050,
           "_v32_ing_id": "ing_02068",
@@ -50158,7 +50158,7 @@
         }
       }
     },
-    "tarragon_fresh_herb_fresh": {
+    "tarragon_fresh_herb": {
       "taxonomy": {
         "cat1": "herbs_and_spices",
         "cat1_fr": "HERBES & ÉPICES",
@@ -50180,7 +50180,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02012",
       "variants": {
-        "fresh_herb_fresh": {
+        "fresh_herb": {
           "_source": "CIQUAL",
           "_source_id": 11092,
           "_v32_ing_id": "ing_02012",
@@ -50236,7 +50236,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02070",
       "variants": {
-        "dried_herb_dried": {
+        "dried_herb": {
           "_source": "CIQUAL",
           "_source_id": 11038,
           "_v32_ing_id": "ing_02070",
@@ -50350,7 +50350,7 @@
         }
       }
     },
-    "thyme_fresh_herb_fresh": {
+    "thyme_fresh_herb": {
       "taxonomy": {
         "cat1": "herbs_and_spices",
         "cat1_fr": "HERBES & ÉPICES",
@@ -50372,7 +50372,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02072",
       "variants": {
-        "fresh_herb_fresh": {
+        "fresh_herb": {
           "_source": "CIQUAL",
           "_source_id": 11070,
           "_v32_ing_id": "ing_02072",
@@ -50568,7 +50568,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_01972",
       "variants": {
-        "fresh_herb_fresh": {
+        "fresh_herb": {
           "_source": "CIQUAL",
           "_source_id": 11027,
           "_v32_ing_id": "ing_01972",
@@ -50651,7 +50651,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_01977",
       "variants": {
-        "fresh_herb_fresh": {
+        "fresh_herb": {
           "_source": "CNF",
           "_source_id": 4724,
           "_v32_ing_id": "ing_01977",
@@ -50726,7 +50726,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_01485",
       "variants": {
-        "fresh_herb_fresh": {
+        "fresh_herb": {
           "_source": "CNF",
           "_source_id": 4725,
           "_v32_ing_id": "ing_01485",
@@ -50801,7 +50801,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_01983",
       "variants": {
-        "dried_herb_dried": {
+        "dried_herb": {
           "_source": "CIQUAL",
           "_source_id": 11029,
           "_v32_ing_id": "ing_01983",
@@ -50854,7 +50854,7 @@
         }
       }
     },
-    "spearmint_dried_herb_dried": {
+    "spearmint_dried_herb": {
       "taxonomy": {
         "cat1": "herbs_and_spices",
         "cat1_fr": "HERBES & ÉPICES",
@@ -50876,7 +50876,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_01483",
       "variants": {
-        "dried_herb_dried": {
+        "dried_herb": {
           "_source": "CNF",
           "_source_id": 4726,
           "_v32_ing_id": "ing_01483",
@@ -50951,7 +50951,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_01020",
       "variants": {
-        "fresh_herb_fresh": {
+        "fresh_herb": {
           "_source": "CNF",
           "_source_id": 4853,
           "_v32_ing_id": "ing_01020",
@@ -54503,7 +54503,7 @@
         }
       }
     },
-    "asparagus_boiled_surgel_salted": {
+    "asparagus_boiled_surgele_salted": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -54528,7 +54528,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02213",
       "variants": {
-        "boiled_surgel_salted": {
+        "boiled_surgele_salted": {
           "_source": "CNF",
           "_source_id": 501579,
           "_v32_ing_id": "ing_02213",
@@ -54536,7 +54536,7 @@
           "axes": {
             "cooking_state": "boiled",
             "seasoning": "salted",
-            "thermal_state": "surgel"
+            "thermal_state": "surgele"
           },
           "calories_kcal": 18.0,
           "protein_g": 2.95,
@@ -58863,7 +58863,7 @@
         }
       }
     },
-    "carrot_boiled_surgel_salted": {
+    "carrot_boiled_surgele_salted": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -58888,7 +58888,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02380",
       "variants": {
-        "boiled_surgel_salted": {
+        "boiled_surgele_salted": {
           "_source": "CNF",
           "_source_id": 501615,
           "_v32_ing_id": "ing_02380",
@@ -58896,7 +58896,7 @@
           "axes": {
             "cooking_state": "boiled",
             "seasoning": "salted",
-            "thermal_state": "surgel"
+            "thermal_state": "surgele"
           },
           "calories_kcal": 37.0,
           "protein_g": 0.58,
@@ -87542,7 +87542,7 @@
         }
       }
     },
-    "potato_roasted_surgel": {
+    "potato_roasted_surgele": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -87564,14 +87564,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05753",
       "variants": {
-        "roasted_surgel": {
+        "roasted_surgele": {
           "_source": "CNF",
           "_source_id": 502438,
           "_v32_ing_id": "ing_05753",
           "_v32_var_id": "var_05813",
           "axes": {
             "cooking_state": "roasted",
-            "thermal_state": "surgel"
+            "thermal_state": "surgele"
           },
           "calories_kcal": 130.0,
           "protein_g": 2.22,
@@ -92084,15 +92084,15 @@
       "aliases_fr": [],
       "_v32_id": "ing_03596",
       "variants": {
-        "concass_e_canned_m_re": {
+        "concassee_canned_mure": {
           "_source": "USDA",
           "_source_id": 2685581,
           "_v32_ing_id": "ing_03596",
           "_v32_var_id": "var_03597",
           "axes": {
             "packaging": "canned",
-            "form": "concass_e",
-            "ripeness": "m_re"
+            "form": "concassee",
+            "ripeness": "mure"
           },
           "protein_g": 1.44,
           "carbs_g": 7.14,
@@ -92147,15 +92147,15 @@
       "aliases_fr": [],
       "_v32_id": "ing_05851",
       "variants": {
-        "en_d_s_canned_m_re": {
+        "en_des_canned_mure": {
           "_source": "USDA",
           "_source_id": 333281,
           "_v32_ing_id": "ing_05851",
           "_v32_var_id": "var_03633",
           "axes": {
             "packaging": "canned",
-            "form": "en_d_s",
-            "ripeness": "m_re"
+            "form": "en_des",
+            "ripeness": "mure"
           },
           "calories_kcal": 18.0,
           "protein_g": 0.84,
@@ -92207,15 +92207,15 @@
       "aliases_fr": [],
       "_v32_id": "ing_05852",
       "variants": {
-        "tuv_e_canned_m_re": {
+        "etuvee_canned_mure": {
           "_source": "CNF",
           "_source_id": 2463,
           "_v32_ing_id": "ing_05852",
           "_v32_var_id": "var_03635",
           "axes": {
             "packaging": "canned",
-            "cooking_state": "tuv_e",
-            "ripeness": "m_re"
+            "cooking_state": "etuvee",
+            "ripeness": "mure"
           },
           "calories_kcal": 26.0,
           "protein_g": 0.91,
@@ -92610,7 +92610,7 @@
         }
       }
     },
-    "tomato_double_concentr_canned": {
+    "tomato_double_concentre_canned": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -92634,14 +92634,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_03608",
       "variants": {
-        "double_concentr_canned": {
+        "double_concentre_canned": {
           "_source": "CIQUAL",
           "_source_id": 20268,
           "_v32_ing_id": "ing_03608",
           "_v32_var_id": "var_03609",
           "axes": {
             "packaging": "canned",
-            "form": "double_concentr"
+            "form": "double_concentre"
           },
           "calories_kcal": 99.5,
           "protein_g": 3.75,
@@ -94688,14 +94688,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05846",
       "variants": {
-        "raw_b_b": {
+        "raw_bebe": {
           "_source": "CIQUAL",
           "_source_id": 20270,
           "_v32_ing_id": "ing_05846",
           "_v32_var_id": "var_03691",
           "axes": {
             "cooking_state": "raw",
-            "ripeness": "b_b"
+            "ripeness": "bebe"
           },
           "calories_kcal": 17.0,
           "protein_g": 2.06,
@@ -94758,7 +94758,7 @@
               "_v32_var_id": "var_03684",
               "axes": {
                 "cooking_state": "raw",
-                "ripeness": "b_b"
+                "ripeness": "bebe"
               },
               "name_fr": "épinard jeunes pousses",
               "name_en": "baby spinach",
@@ -108407,7 +108407,7 @@
         }
       }
     },
-    "black_eyed_peas_cowpeas_raw_with_seeds_b_b": {
+    "black_eyed_peas_cowpeas_raw_with_seeds_bebe": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -108430,14 +108430,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_04130",
       "variants": {
-        "raw_with_seeds_b_b": {
+        "raw_with_seeds_bebe": {
           "_source": "CNF",
           "_source_id": 2078,
           "_v32_ing_id": "ing_04130",
           "_v32_var_id": "var_04131",
           "axes": {
             "cooking_state": "raw",
-            "ripeness": "b_b",
+            "ripeness": "bebe",
             "part": "with_seeds"
           },
           "calories_kcal": 44.0,
@@ -110071,7 +110071,7 @@
         }
       }
     },
-    "black_eyed_peas_cowpeas_boiled_seed_canned_b_b": {
+    "black_eyed_peas_cowpeas_boiled_seed_canned_bebe": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -110097,7 +110097,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04186",
       "variants": {
-        "boiled_seed_canned_b_b": {
+        "boiled_seed_canned_bebe": {
           "_source": "CNF",
           "_source_id": 2079,
           "_v32_ing_id": "ing_04186",
@@ -110106,7 +110106,7 @@
             "cooking_state": "boiled",
             "part": "seed",
             "packaging": "canned",
-            "ripeness": "b_b"
+            "ripeness": "bebe"
           },
           "calories_kcal": 34.0,
           "protein_g": 2.6,
@@ -111007,7 +111007,7 @@
         }
       }
     },
-    "black_eyed_peas_cowpeas_boiled_seed_salted_b_b": {
+    "black_eyed_peas_cowpeas_boiled_seed_salted_bebe": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -111033,7 +111033,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04226",
       "variants": {
-        "boiled_seed_salted_b_b": {
+        "boiled_seed_salted_bebe": {
           "_source": "CNF",
           "_source_id": 501633,
           "_v32_ing_id": "ing_04226",
@@ -111041,7 +111041,7 @@
           "axes": {
             "cooking_state": "boiled",
             "seasoning": "salted",
-            "ripeness": "b_b",
+            "ripeness": "bebe",
             "part": "seed"
           },
           "calories_kcal": 34.0,
@@ -111247,7 +111247,7 @@
         }
       }
     },
-    "green_peas_boiled_surgel_salted": {
+    "green_peas_boiled_surgele_salted": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -111272,7 +111272,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04232",
       "variants": {
-        "boiled_surgel_salted": {
+        "boiled_surgele_salted": {
           "_source": "CNF",
           "_source_id": 501700,
           "_v32_ing_id": "ing_04232",
@@ -111280,7 +111280,7 @@
           "axes": {
             "cooking_state": "boiled",
             "seasoning": "salted",
-            "thermal_state": "surgel"
+            "thermal_state": "surgele"
           },
           "calories_kcal": 78.0,
           "protein_g": 5.15,
@@ -112497,7 +112497,7 @@
         }
       }
     },
-    "soybean_roasted_seed_torr_fi_unsalted": {
+    "soybean_roasted_seed_torrefie_unsalted": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -112521,7 +112521,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04282",
       "variants": {
-        "roasted_seed_torr_fi_unsalted": {
+        "roasted_seed_torrefie_unsalted": {
           "_source": "CNF",
           "_source_id": 2580,
           "_v32_ing_id": "ing_04282",
@@ -112529,7 +112529,7 @@
           "axes": {
             "part": "seed",
             "seasoning": "unsalted",
-            "treatment": "torr_fi",
+            "treatment": "torrefie",
             "cooking_state": "roasted"
           },
           "calories_kcal": 472.0,
@@ -113144,7 +113144,7 @@
           "_v32_ing_id": "ing_04320",
           "_v32_var_id": "var_04321",
           "axes": {
-            "teneur_sel": "r_duit_en_sodium"
+            "teneur_sel": "reduit_en_sodium"
           },
           "calories_kcal": 57.0,
           "protein_g": 9.05,
@@ -113268,7 +113268,7 @@
         }
       }
     },
-    "soybean_roasted_torr_fi_salted": {
+    "soybean_roasted_torrefie_salted": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -113293,14 +113293,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_04334",
       "variants": {
-        "roasted_torr_fi_salted": {
+        "roasted_torrefie_salted": {
           "_source": "CNF",
           "_source_id": 3317,
           "_v32_ing_id": "ing_04334",
           "_v32_var_id": "var_04335",
           "axes": {
             "seasoning": "salted",
-            "treatment": "torr_fi",
+            "treatment": "torrefie",
             "cooking_state": "roasted"
           },
           "calories_kcal": 472.0,
@@ -114554,7 +114554,7 @@
         }
       }
     },
-    "soybean_raw_flour_raw_whole": {
+    "soybean_raw_flour_whole": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -114578,7 +114578,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04353",
       "variants": {
-        "raw_flour_raw_whole": {
+        "raw_flour_whole": {
           "_source": "CNF",
           "_source_id": 3322,
           "_v32_ing_id": "ing_04353",
@@ -116628,14 +116628,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_04475",
       "variants": {
-        "oil_seed_pression_froid_plant": {
+        "oil_seed_pression_a_froid_plant": {
           "_source": "CNF",
           "_source_id": 5497,
           "_v32_ing_id": "ing_04475",
           "_v32_var_id": "var_04476",
           "axes": {
             "form": "oil",
-            "treatment": "pression_froid",
+            "treatment": "pression_a_froid",
             "origin": "plant",
             "part": "seed"
           },
@@ -118242,7 +118242,7 @@
           "axes": {
             "form": "butter",
             "origin": "plant",
-            "teneur_sel": "r_duit_en_sodium"
+            "teneur_sel": "reduit_en_sodium"
           },
           "calories_kcal": 590.0,
           "protein_g": 24.0,
@@ -119075,7 +119075,7 @@
           "axes": {
             "form": "butter",
             "origin": "plant",
-            "style": "cr_meux"
+            "style": "cremeux"
           },
           "protein_g": 19.7,
           "carbs_g": 14.2,
@@ -119110,7 +119110,7 @@
         }
       }
     },
-    "sesame_tahini_butter_seed_r_ti_plant_dry": {
+    "sesame_tahini_butter_seed_roti_plant_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -119135,7 +119135,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_00617",
       "variants": {
-        "butter_seed_r_ti_plant_dry": {
+        "butter_seed_roti_plant_dry": {
           "_source": "CNF",
           "_source_id": 2593,
           "_v32_ing_id": "ing_00617",
@@ -119144,7 +119144,7 @@
             "form": "butter",
             "origin": "plant",
             "part": "seed",
-            "treatment": "r_ti",
+            "treatment": "roti",
             "cooking_process": "dry"
           },
           "calories_kcal": 595.0,
@@ -119317,7 +119317,7 @@
             "seasoning": "salted",
             "origin": "plant",
             "form": "butter",
-            "style": "cr_meux"
+            "style": "cremeux"
           },
           "calories_kcal": 598.0,
           "protein_g": 22.21,
@@ -119398,7 +119398,7 @@
           "_v32_ing_id": "ing_05782",
           "_v32_var_id": "var_05864",
           "axes": {
-            "teneur_sel": "r_gulier",
+            "teneur_sel": "regulier",
             "form": "butter",
             "origin": "plant"
           },
@@ -119516,7 +119516,7 @@
         }
       }
     },
-    "almond_with_skin_non_blanchi_peau_conserv_e_dried": {
+    "almond_with_skin_non_blanchi_peau_conservee_dried": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -119539,7 +119539,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04699",
       "variants": {
-        "with_skin_non_blanchi_peau_conserv_e_dried": {
+        "with_skin_non_blanchi_peau_conservee_dried": {
           "_source": "CNF",
           "_source_id": 2534,
           "_v32_ing_id": "ing_04699",
@@ -119547,7 +119547,7 @@
           "axes": {
             "thermal_state": "dried",
             "part": "with_skin",
-            "treatment": "non_blanchi_peau_conserv_e"
+            "treatment": "non_blanchi_peau_conservee"
           },
           "calories_kcal": 579.0,
           "protein_g": 21.15,
@@ -119597,7 +119597,7 @@
         }
       }
     },
-    "almond_with_skin_grill_sec_dried_dry": {
+    "almond_with_skin_grille_a_sec_dried_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -119621,7 +119621,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04701",
       "variants": {
-        "with_skin_grill_sec_dried_dry": {
+        "with_skin_grille_a_sec_dried_dry": {
           "_source": "CNF",
           "_source_id": 2536,
           "_v32_ing_id": "ing_04701",
@@ -119630,7 +119630,7 @@
             "cooking_process": "dry",
             "part": "with_skin",
             "thermal_state": "dried",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 598.0,
           "protein_g": 20.96,
@@ -119680,7 +119680,7 @@
         }
       }
     },
-    "almond_with_skin_grill_lhuile_salted_in_oil": {
+    "almond_with_skin_grille_a_lhuile_salted_in_oil": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -119706,7 +119706,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04400",
       "variants": {
-        "with_skin_grill_lhuile_salted_in_oil": {
+        "with_skin_grille_a_lhuile_salted_in_oil": {
           "_source": "CNF",
           "_source_id": 2537,
           "_v32_ing_id": "ing_04400",
@@ -119715,7 +119715,7 @@
             "cooking_process": "in_oil",
             "part": "with_skin",
             "seasoning": "salted",
-            "treatment": "grill_lhuile"
+            "treatment": "grille_a_lhuile"
           },
           "calories_kcal": 608.0,
           "protein_g": 21.23,
@@ -119767,7 +119767,7 @@
         }
       }
     },
-    "almond_with_skin_grill_salted_dry": {
+    "almond_with_skin_grille_salted_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -119793,13 +119793,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_00530",
       "variants": {
-        "with_skin_grill_salted_dry": {
+        "with_skin_grille_salted_dry": {
           "_source": "CNF",
           "_source_id": 2539,
           "_v32_ing_id": "ing_00530",
           "_v32_var_id": "var_00531",
           "axes": {
-            "treatment": "grill",
+            "treatment": "grille",
             "part": "with_skin",
             "seasoning": "salted",
             "cooking_process": "dry"
@@ -120312,7 +120312,7 @@
         }
       }
     },
-    "almond_milk_r_frig_r_unsweetened_plant": {
+    "almond_milk_refrigere_unsweetened_plant": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -120336,7 +120336,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_05516",
       "variants": {
-        "milk_r_frig_r_unsweetened_plant": {
+        "milk_refrigere_unsweetened_plant": {
           "_source": "USDA",
           "_source_id": 2257045,
           "_v32_ing_id": "ing_05516",
@@ -120344,7 +120344,7 @@
           "axes": {
             "form": "milk",
             "origin": "plant",
-            "thermal_state": "r_frig_r",
+            "thermal_state": "refrigere",
             "seasoning": "unsweetened"
           },
           "protein_g": 0.656,
@@ -120691,7 +120691,7 @@
         }
       }
     },
-    "peanut_roasted_torr_fi_salted_dry": {
+    "peanut_roasted_torrefie_salted_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -120717,14 +120717,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_04585",
       "variants": {
-        "roasted_torr_fi_salted_dry": {
+        "roasted_torrefie_salted_dry": {
           "_source": "CIQUAL",
           "_source_id": 15002,
           "_v32_ing_id": "ing_04585",
           "_v32_var_id": "var_04586",
           "axes": {
             "seasoning": "salted",
-            "treatment": "torr_fi",
+            "treatment": "torrefie",
             "cooking_state": "roasted",
             "cooking_process": "dry"
           },
@@ -120786,7 +120786,7 @@
         }
       }
     },
-    "peanut_roasted_torr_fi_unsalted_dry": {
+    "peanut_roasted_torrefie_unsalted_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -120810,14 +120810,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_04587",
       "variants": {
-        "roasted_torr_fi_unsalted_dry": {
+        "roasted_torrefie_unsalted_dry": {
           "_source": "CIQUAL",
           "_source_id": 15053,
           "_v32_ing_id": "ing_04587",
           "_v32_var_id": "var_04588",
           "axes": {
             "seasoning": "unsalted",
-            "treatment": "torr_fi",
+            "treatment": "torrefie",
             "cooking_state": "roasted",
             "cooking_process": "dry"
           },
@@ -121430,7 +121430,7 @@
         }
       }
     },
-    "peanut_grill_sec_dried_dry": {
+    "peanut_grille_a_sec_dried_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -121453,7 +121453,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04771",
       "variants": {
-        "grill_sec_dried_dry": {
+        "grille_a_sec_dried_dry": {
           "_source": "CNF",
           "_source_id": 3362,
           "_v32_ing_id": "ing_04771",
@@ -121461,7 +121461,7 @@
           "axes": {
             "cooking_process": "dry",
             "thermal_state": "dried",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 587.0,
           "protein_g": 24.35,
@@ -123281,7 +123281,7 @@
         }
       }
     },
-    "sunflower_seed_grill_sec_dried_dry": {
+    "sunflower_seed_grille_a_sec_dried_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -123305,7 +123305,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04638",
       "variants": {
-        "seed_grill_sec_dried_dry": {
+        "seed_grille_a_sec_dried_dry": {
           "_source": "CNF",
           "_source_id": 2527,
           "_v32_ing_id": "ing_04638",
@@ -123314,7 +123314,7 @@
             "part": "seed",
             "cooking_process": "dry",
             "thermal_state": "dried",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 582.0,
           "protein_g": 19.33,
@@ -123568,7 +123568,7 @@
         }
       }
     },
-    "sesame_roasted_seed_grill_sec_dry": {
+    "sesame_roasted_seed_grille_a_sec_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -123592,7 +123592,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04664",
       "variants": {
-        "roasted_seed_grill_sec_dry": {
+        "roasted_seed_grille_a_sec_dry": {
           "_source": "CIQUAL",
           "_source_id": 15038,
           "_v32_ing_id": "ing_04664",
@@ -123601,7 +123601,7 @@
             "part": "seed",
             "cooking_state": "roasted",
             "cooking_process": "dry",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 582.0,
           "protein_g": 17.0,
@@ -123742,7 +123742,7 @@
         }
       }
     },
-    "sunflower_seed_grill_sec_dried_salted_dry": {
+    "sunflower_seed_grille_a_sec_dried_salted_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -123769,7 +123769,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04670",
       "variants": {
-        "seed_grill_sec_dried_salted_dry": {
+        "seed_grille_a_sec_dried_salted_dry": {
           "_source": "CNF",
           "_source_id": 2620,
           "_v32_ing_id": "ing_04670",
@@ -123779,7 +123779,7 @@
             "seasoning": "salted",
             "cooking_process": "dry",
             "thermal_state": "dried",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 582.0,
           "protein_g": 19.33,
@@ -123831,7 +123831,7 @@
         }
       }
     },
-    "sunflower_seed_grill_lhuile_in_oil": {
+    "sunflower_seed_grille_a_lhuile_in_oil": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -123854,7 +123854,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04436",
       "variants": {
-        "seed_grill_lhuile_in_oil": {
+        "seed_grille_a_lhuile_in_oil": {
           "_source": "CNF",
           "_source_id": 2642,
           "_v32_ing_id": "ing_04436",
@@ -123862,7 +123862,7 @@
           "axes": {
             "part": "seed",
             "cooking_process": "in_oil",
-            "treatment": "grill_lhuile"
+            "treatment": "grille_a_lhuile"
           },
           "calories_kcal": 592.0,
           "protein_g": 20.06,
@@ -123999,7 +123999,7 @@
         }
       }
     },
-    "sesame_grilled_seed_grill_sec_salted_dry": {
+    "sesame_grilled_seed_grille_a_sec_salted_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -124026,7 +124026,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_00623",
       "variants": {
-        "grilled_seed_grill_sec_salted_dry": {
+        "grilled_seed_grille_a_sec_salted_dry": {
           "_source": "CNF",
           "_source_id": 501760,
           "_v32_ing_id": "ing_00623",
@@ -124036,7 +124036,7 @@
             "seasoning": "salted",
             "cooking_state": "grilled",
             "cooking_process": "dry",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 567.0,
           "protein_g": 16.96,
@@ -124088,7 +124088,7 @@
         }
       }
     },
-    "sunflower_seed_grill_salted_dry": {
+    "sunflower_seed_grille_salted_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -124114,7 +124114,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_00625",
       "variants": {
-        "seed_grill_salted_dry": {
+        "seed_grille_salted_dry": {
           "_source": "CNF",
           "_source_id": 2622,
           "_v32_ing_id": "ing_00625",
@@ -124122,7 +124122,7 @@
           "axes": {
             "part": "seed",
             "seasoning": "salted",
-            "treatment": "grill",
+            "treatment": "grille",
             "cooking_process": "dry"
           },
           "calories_kcal": 619.0,
@@ -124522,7 +124522,7 @@
         }
       }
     },
-    "pumpkin_squash_roasted_seed_grill_sec_salted_dry": {
+    "pumpkin_squash_roasted_seed_grille_a_sec_salted_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -124549,7 +124549,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02822",
       "variants": {
-        "roasted_seed_grill_sec_salted_dry": {
+        "roasted_seed_grille_a_sec_salted_dry": {
           "_source": "CNF",
           "_source_id": 2619,
           "_v32_ing_id": "ing_02822",
@@ -124559,7 +124559,7 @@
             "seasoning": "salted",
             "cooking_process": "dry",
             "cooking_state": "roasted",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 574.0,
           "protein_g": 29.84,
@@ -124611,7 +124611,7 @@
         }
       }
     },
-    "pumpkin_squash_roasted_whole_seed_grill_sec_salted_dry": {
+    "pumpkin_squash_roasted_whole_seed_grille_a_sec_salted_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -124639,7 +124639,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02824",
       "variants": {
-        "roasted_whole_seed_grill_sec_salted_dry": {
+        "roasted_whole_seed_grille_a_sec_salted_dry": {
           "_source": "CNF",
           "_source_id": 2638,
           "_v32_ing_id": "ing_02824",
@@ -124650,7 +124650,7 @@
             "seasoning": "salted",
             "cooking_process": "dry",
             "cooking_state": "roasted",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 446.0,
           "protein_g": 18.55,
@@ -124698,7 +124698,7 @@
         }
       }
     },
-    "sesame_flour_seed_lev_en_gras": {
+    "sesame_flour_seed_eleve_en_gras": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -124721,7 +124721,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_00444",
       "variants": {
-        "flour_seed_lev_en_gras": {
+        "flour_seed_eleve_en_gras": {
           "_source": "CNF",
           "_source_id": 2597,
           "_v32_ing_id": "ing_00444",
@@ -126577,7 +126577,7 @@
         }
       }
     },
-    "hazelnut_grilled_grill_sec_dried_unsalted_dry": {
+    "hazelnut_grilled_grille_a_sec_dried_unsalted_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -126602,7 +126602,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04731",
       "variants": {
-        "grilled_grill_sec_dried_unsalted_dry": {
+        "grilled_grille_a_sec_dried_unsalted_dry": {
           "_source": "CNF",
           "_source_id": 2569,
           "_v32_ing_id": "ing_04731",
@@ -126612,7 +126612,7 @@
             "thermal_state": "dried",
             "seasoning": "unsalted",
             "cooking_state": "grilled",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 646.0,
           "protein_g": 15.03,
@@ -127180,7 +127180,7 @@
         }
       }
     },
-    "macadamia_nuts_bushnuts_queensland_roasted_grill_lhuile_salted_in_oil": {
+    "macadamia_nuts_bushnuts_queensland_roasted_grille_a_lhuile_salted_in_oil": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -127206,7 +127206,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04517",
       "variants": {
-        "roasted_grill_lhuile_salted_in_oil": {
+        "roasted_grille_a_lhuile_salted_in_oil": {
           "_source": "CNF",
           "_source_id": 2632,
           "_v32_ing_id": "ing_04517",
@@ -127215,7 +127215,7 @@
             "seasoning": "salted",
             "cooking_process": "in_oil",
             "cooking_state": "roasted",
-            "treatment": "grill_lhuile"
+            "treatment": "grille_a_lhuile"
           },
           "calories_kcal": 718.0,
           "protein_g": 7.26,
@@ -128994,7 +128994,7 @@
         }
       }
     },
-    "pecans_nuts_grill_sec_dried_dry": {
+    "pecans_nuts_grille_a_sec_dried_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -129017,7 +129017,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04749",
       "variants": {
-        "grill_sec_dried_dry": {
+        "grille_a_sec_dried_dry": {
           "_source": "CNF",
           "_source_id": 2583,
           "_v32_ing_id": "ing_04749",
@@ -129025,7 +129025,7 @@
           "axes": {
             "cooking_process": "dry",
             "thermal_state": "dried",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 710.0,
           "protein_g": 9.5,
@@ -129133,7 +129133,7 @@
         }
       }
     },
-    "pecans_nuts_grill_sec_dried_salted_dry": {
+    "pecans_nuts_grille_a_sec_dried_salted_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -129159,7 +129159,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04843",
       "variants": {
-        "grill_sec_dried_salted_dry": {
+        "grille_a_sec_dried_salted_dry": {
           "_source": "CNF",
           "_source_id": 2635,
           "_v32_ing_id": "ing_04843",
@@ -129168,7 +129168,7 @@
             "seasoning": "salted",
             "cooking_process": "dry",
             "thermal_state": "dried",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 710.0,
           "protein_g": 9.5,
@@ -129673,7 +129673,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04759",
       "variants": {
-        "grill_sec_dried_dry": {
+        "grille_a_sec_dried_dry": {
           "_source": "CNF",
           "_source_id": 2588,
           "_v32_ing_id": "ing_04759",
@@ -129681,7 +129681,7 @@
           "axes": {
             "cooking_process": "dry",
             "thermal_state": "dried",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 567.0,
           "protein_g": 20.95,
@@ -129963,7 +129963,7 @@
         }
       }
     },
-    "pistachio_nuts_grill_sec_dried_salted_dry": {
+    "pistachio_nuts_grille_a_sec_dried_salted_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -129989,7 +129989,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04845",
       "variants": {
-        "grill_sec_dried_salted_dry": {
+        "grille_a_sec_dried_salted_dry": {
           "_source": "CNF",
           "_source_id": 2637,
           "_v32_ing_id": "ing_04845",
@@ -129998,7 +129998,7 @@
             "seasoning": "salted",
             "cooking_process": "dry",
             "thermal_state": "dried",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 564.0,
           "protein_g": 20.95,
@@ -130421,7 +130421,7 @@
         }
       }
     },
-    "cashew_nuts_grill_sec_dried_dry": {
+    "cashew_nuts_grille_a_sec_dried_dry": {
       "taxonomy": {
         "cat1": "nuts_and_seeds",
         "cat1_fr": "NOIX & GRAINES",
@@ -130444,7 +130444,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_04709",
       "variants": {
-        "grill_sec_dried_dry": {
+        "grille_a_sec_dried_dry": {
           "_source": "CNF",
           "_source_id": 2546,
           "_v32_ing_id": "ing_04709",
@@ -130452,7 +130452,7 @@
           "axes": {
             "cooking_process": "dry",
             "thermal_state": "dried",
-            "treatment": "grill_sec"
+            "treatment": "grille_a_sec"
           },
           "calories_kcal": 574.0,
           "protein_g": 15.31,
@@ -131598,13 +131598,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05747",
       "variants": {
-        "poch": {
+        "poche": {
           "_source": "CIQUAL",
           "_source_id": 22011,
           "_v32_ing_id": "ing_05747",
           "_v32_var_id": "var_05703",
           "axes": {
-            "cooking_state": "poch"
+            "cooking_state": "poche"
           },
           "calories_kcal": 139.0,
           "protein_g": 12.5,
@@ -131677,13 +131677,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05748",
       "variants": {
-        "brouill": {
+        "brouille": {
           "_source": "CIQUAL",
           "_source_id": 22502,
           "_v32_ing_id": "ing_05748",
           "_v32_var_id": "var_05860",
           "axes": {
-            "cooking_state": "brouill"
+            "cooking_state": "brouille"
           },
           "calories_kcal": 167.0,
           "protein_g": 11.9,
@@ -132590,7 +132590,7 @@
         }
       }
     },
-    "sweet_shortcrust_sabl_e_pastry": {
+    "sweet_shortcrust_sablee_pastry": {
       "taxonomy": {
         "cat1": "prepared_dishes_and_mixes",
         "cat1_fr": "PLATS CUISINÉS & PRÉPARATIONS",
@@ -132649,7 +132649,7 @@
         }
       }
     },
-    "sweet_shortcrust_sabl_e_pastry_cooked_paste_pre_packaged": {
+    "sweet_shortcrust_sablee_pastry_cooked_paste_pre_packaged": {
       "taxonomy": {
         "cat1": "prepared_dishes_and_mixes",
         "cat1_fr": "PLATS CUISINÉS & PRÉPARATIONS",
@@ -136284,7 +136284,7 @@
         }
       }
     },
-    "cream_heavy_r_frig_r_18pct": {
+    "cream_heavy_refrigere_18pct": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -136306,14 +136306,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_04925",
       "variants": {
-        "r_frig_r_18pct": {
+        "refrigere_18pct": {
           "_source": "CIQUAL",
           "_source_id": 19431,
           "_v32_ing_id": "ing_04925",
           "_v32_var_id": "var_04926",
           "axes": {
             "fat_content": "18pct",
-            "thermal_state": "r_frig_r"
+            "thermal_state": "refrigere"
           },
           "calories_kcal": 162.0,
           "protein_g": 2.65,
@@ -136540,7 +136540,7 @@
         }
       }
     },
-    "cream_heavy_r_frig_r_30pct": {
+    "cream_heavy_refrigere_30pct": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -136562,14 +136562,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_04931",
       "variants": {
-        "r_frig_r_30pct": {
+        "refrigere_30pct": {
           "_source": "CIQUAL",
           "_source_id": 19410,
           "_v32_ing_id": "ing_04931",
           "_v32_var_id": "var_04932",
           "axes": {
             "fat_content": "30pct",
-            "thermal_state": "r_frig_r"
+            "thermal_state": "refrigere"
           },
           "calories_kcal": 285.0,
           "protein_g": 2.32,
@@ -137975,7 +137975,7 @@
         }
       }
     },
-    "carr_de_lest": {
+    "carre_de_lest": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -140116,7 +140116,7 @@
         }
       }
     },
-    "buffalo_mozzarella_demi_cr_m_cow": {
+    "buffalo_mozzarella_demi_ecreme_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -140138,7 +140138,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_05055",
       "variants": {
-        "demi_cr_m_cow": {
+        "demi_ecreme_cow": {
           "_source": "USDA",
           "_source_id": 329370,
           "_v32_ing_id": "ing_05055",
@@ -140354,7 +140354,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_05065",
       "variants": {
-        "p_te_dure_dried_cow": {
+        "pate_dure_dried_cow": {
           "_source": "CIQUAL",
           "_source_id": 12120,
           "_v32_ing_id": "ing_05065",
@@ -140362,7 +140362,7 @@
           "axes": {
             "thermal_state": "dried",
             "origin": "cow",
-            "form": "p_te_dure"
+            "form": "pate_dure"
           },
           "calories_kcal": 411.0,
           "protein_g": 31.1,
@@ -140424,7 +140424,7 @@
               "axes": {
                 "thermal_state": "dried",
                 "origin": "cow",
-                "form": "p_te_dure"
+                "form": "pate_dure"
               },
               "name_fr": "parmesan",
               "name_en": "parmesan",
@@ -141275,7 +141275,7 @@
         }
       }
     },
-    "comt": {
+    "comte": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -142429,7 +142429,7 @@
           "_v32_var_id": "var_05145",
           "axes": {
             "origin": "goat",
-            "affinage": "mi_affin"
+            "affinage": "mi_affine"
           },
           "calories_kcal": 353.0,
           "protein_g": 21.6,
@@ -143547,7 +143547,7 @@
         }
       }
     },
-    "gruy_re_igp": {
+    "gruyere_igp": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -143934,7 +143934,7 @@
           "_v32_var_id": "var_05217",
           "axes": {
             "origin": "cow",
-            "affinage": "mi_affin"
+            "affinage": "mi_affine"
           },
           "calories_kcal": 371.0,
           "protein_g": 30.6,
@@ -144456,7 +144456,7 @@
         }
       }
     },
-    "neufch_tel": {
+    "neufchatel": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -144748,7 +144748,7 @@
         }
       }
     },
-    "pont_l_v_que": {
+    "pont_leveque": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -144904,7 +144904,7 @@
         }
       }
     },
-    "p_lardon_goat_cheese": {
+    "pelardon_goat_cheese": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -145426,7 +145426,7 @@
         }
       }
     },
-    "saint_f_licien": {
+    "saint_felicien": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -146251,7 +146251,7 @@
         }
       }
     },
-    "tomme_des_pyr_n_es": {
+    "tomme_des_pyrenees": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -146303,7 +146303,7 @@
         }
       }
     },
-    "t_te_de_moine": {
+    "tete_de_moine": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -146350,7 +146350,7 @@
         }
       }
     },
-    "valen_ay_goat_cheese": {
+    "valencay_goat_cheese": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -146425,7 +146425,7 @@
         }
       }
     },
-    "poisses": {
+    "epoisses": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -147918,14 +147918,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05761",
       "variants": {
-        "grated_r_frig_r_cow": {
+        "grated_refrigere_cow": {
           "_source": "USDA",
           "_source_id": 2259795,
           "_v32_ing_id": "ing_05761",
           "_v32_var_id": "var_05070",
           "axes": {
             "form": "grated",
-            "thermal_state": "r_frig_r",
+            "thermal_state": "refrigere",
             "origin": "cow"
           },
           "protein_g": 30.1,
@@ -147994,7 +147994,7 @@
           "_v32_var_id": "var_05062",
           "axes": {
             "origin": "cow",
-            "style": "am_ricain"
+            "style": "americain"
           },
           "calories_kcal": 253.0,
           "protein_g": 9.15,
@@ -150794,7 +150794,7 @@
         }
       }
     },
-    "milk_powder_demi_cr_m": {
+    "milk_powder_demi_ecreme": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -150816,7 +150816,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_05750",
       "variants": {
-        "powder_demi_cr_m": {
+        "powder_demi_ecreme": {
           "_source": "CIQUAL",
           "_source_id": 19044,
           "_v32_ing_id": "ing_05750",
@@ -152867,7 +152867,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_02288",
       "variants": {
-        "tablet_tablet": {
+        "tablet": {
           "_source": "CIQUAL",
           "_source_id": 31085,
           "_v32_ing_id": "ing_02288",
