@@ -793,6 +793,32 @@
                   "is_primary": true
                 }
               ]
+            },
+            {
+              "id": "ing_05809",
+              "canonical_name_fr": "xylitol (sucre de bouleau)",
+              "canonical_name_en": "xylitol (birch sugar)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_05891",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "xylitol (sucre de bouleau)",
+                  "name_en": "xylitol (birch sugar)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "is_primary": true,
+                  "source_rank": 4
+                }
+              ]
             }
           ],
           "label_fr": "ÉDULCORANTS"
@@ -3949,42 +3975,6 @@
               ]
             },
             {
-              "id": "ing_00251",
-              "canonical_name_fr": "gruau de sarrasin",
-              "canonical_name_en": "buckwheat groats",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_thermique": "séché",
-                "traitement": "rôti",
-                "procede_cuisson": "à sec"
-              },
-              "axes_en": {
-                "thermal_state": "dried",
-                "treatment": "roasted",
-                "cooking_process": "dry"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_00254",
-                  "source": "CNF",
-                  "source_id": "4412",
-                  "name_fr": "gruau de sarrasin",
-                  "name_en": "buckwheat groats",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Grains, buckwheat groats, roasted, dry",
-                  "source_name_fr": "Grains céréaliers, gruau de sarrasin, rôti, sec",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
               "id": "ing_00255",
               "canonical_name_fr": "son d'avoine",
               "canonical_name_en": "oat bran",
@@ -4165,42 +4155,6 @@
                   "source_name_en": "Oat milk, unsweetened, plain, refrigerated",
                   "source_name_fr": null,
                   "source_rank": 2,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_05768",
-              "canonical_name_fr": "gruau de sarrasin, rôti",
-              "canonical_name_en": "buckwheat groats, roasted",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_cuisson": "cuit",
-                "traitement": "rôti",
-                "procede_cuisson": "à sec"
-              },
-              "axes_en": {
-                "cooking_state": "cooked",
-                "treatment": "roasted",
-                "cooking_process": "dry"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_00252",
-                  "source": "CNF",
-                  "source_id": "4413",
-                  "name_fr": "gruau de sarrasin",
-                  "name_en": "buckwheat groats",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Grains, buckwheat groats, roasted, cooked",
-                  "source_name_fr": "Grains céréaliers, gruau de sarrasin, rôti, cuit",
-                  "source_rank": 3,
                   "is_primary": true
                 }
               ]
@@ -10513,6 +10467,78 @@
                   "source_name_fr": null,
                   "source_rank": 2,
                   "is_primary": false
+                }
+              ]
+            },
+            {
+              "id": "ing_00251",
+              "canonical_name_fr": "gruau de sarrasin",
+              "canonical_name_en": "buckwheat groats",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "etat_thermique": "séché",
+                "traitement": "rôti",
+                "procede_cuisson": "à sec"
+              },
+              "axes_en": {
+                "thermal_state": "dried",
+                "treatment": "roasted",
+                "cooking_process": "dry"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_00254",
+                  "source": "CNF",
+                  "source_id": "4412",
+                  "name_fr": "gruau de sarrasin",
+                  "name_en": "buckwheat groats",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Grains, buckwheat groats, roasted, dry",
+                  "source_name_fr": "Grains céréaliers, gruau de sarrasin, rôti, sec",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_05768",
+              "canonical_name_fr": "gruau de sarrasin, rôti",
+              "canonical_name_en": "buckwheat groats, roasted",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "etat_cuisson": "cuit",
+                "traitement": "rôti",
+                "procede_cuisson": "à sec"
+              },
+              "axes_en": {
+                "cooking_state": "cooked",
+                "treatment": "roasted",
+                "cooking_process": "dry"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_00252",
+                  "source": "CNF",
+                  "source_id": "4413",
+                  "name_fr": "gruau de sarrasin",
+                  "name_en": "buckwheat groats",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Grains, buckwheat groats, roasted, cooked",
+                  "source_name_fr": "Grains céréaliers, gruau de sarrasin, rôti, cuit",
+                  "source_rank": 3,
+                  "is_primary": true
                 }
               ]
             }
@@ -24537,39 +24563,6 @@
               ]
             }
           ]
-        },
-        {
-          "id": "cat2_10181",
-          "label": "sweeteners",
-          "label_fr": "ÉDULCORANTS NATURELS",
-          "ingredient_groups": [
-            {
-              "id": "ing_05809",
-              "canonical_name_fr": "xylitol (sucre de bouleau)",
-              "canonical_name_en": "xylitol (birch sugar)",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
-              "preferred_source": "MANUAL",
-              "variants": [
-                {
-                  "id": "var_05891",
-                  "source": "MANUAL",
-                  "source_id": null,
-                  "name_fr": "xylitol (sucre de bouleau)",
-                  "name_en": "xylitol (birch sugar)",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "is_primary": true,
-                  "source_rank": 4
-                }
-              ]
-            }
-          ]
         }
       ],
       "label_fr": "HERBES & ÉPICES"
@@ -30993,38 +30986,6 @@
               ]
             },
             {
-              "id": "ing_02728",
-              "canonical_name_fr": "courgette",
-              "canonical_name_en": "green zucchini squash",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_cuisson": "cru"
-              },
-              "axes_en": {
-                "cooking_state": "raw"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_02731",
-                  "source": "CNF",
-                  "source_id": "2225",
-                  "name_fr": "courgette",
-                  "name_en": "green zucchini squash",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Squash, summer, zucchini, raw",
-                  "source_name_fr": "Courge d'été, courgette (zucchini), crue",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
               "id": "ing_02732",
               "canonical_name_fr": "courge poivrée (courgeon)",
               "canonical_name_en": "acorn squash",
@@ -31957,44 +31918,6 @@
               ]
             },
             {
-              "id": "ing_02806",
-              "canonical_name_fr": "courgette",
-              "canonical_name_en": "green zucchini squash",
-              "indus_conditionne": true,
-              "indus_conditionne_only": true,
-              "conditioning_types": [
-                "EN CONSERVE / APPERTISÉ"
-              ],
-              "axes_fr": {
-                "etat_cuisson": "bouilli",
-                "conditionnement": "conserve"
-              },
-              "axes_en": {
-                "cooking_state": "boiled",
-                "packaging": "canned"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_02807",
-                  "source": "CNF",
-                  "source_id": "2226",
-                  "name_fr": "courgette",
-                  "name_en": "green zucchini squash",
-                  "indus_conditionne": true,
-                  "conditioning_types": [
-                    "EN CONSERVE / APPERTISÉ"
-                  ],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Squash, summer, zucchini, boiled, drained",
-                  "source_name_fr": "Courge d'été, courgette (zucchini), bouillie, égouttée",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
               "id": "ing_02808",
               "canonical_name_fr": "courge spaghetti",
               "canonical_name_en": "spaghetti squash",
@@ -32295,44 +32218,6 @@
                   "axes_fr": {},
                   "source_name_en": "Squash, summer, scallop, boiled, drained, with salt",
                   "source_name_fr": "Courge d'été, pâtisson, bouilli, égoutté, sel ajouté",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_02830",
-              "canonical_name_fr": "courgette",
-              "canonical_name_en": "green zucchini squash",
-              "indus_conditionne": true,
-              "indus_conditionne_only": true,
-              "conditioning_types": [
-                "SEL AJOUTÉ"
-              ],
-              "axes_fr": {
-                "etat_cuisson": "bouilli",
-                "assaisonnement": "salé"
-              },
-              "axes_en": {
-                "cooking_state": "boiled",
-                "seasoning": "salted"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_05788",
-                  "source": "CNF",
-                  "source_id": "501772",
-                  "name_fr": "courgette",
-                  "name_en": "green zucchini squash",
-                  "indus_conditionne": true,
-                  "conditioning_types": [
-                    "SEL AJOUTÉ"
-                  ],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Squash, summer, zucchini, boiled, drained, with salt",
-                  "source_name_fr": "Courge d'été, courgette (zucchini), bouillie, égouttée, sel ajouté",
                   "source_rank": 3,
                   "is_primary": true
                 }
@@ -32768,6 +32653,114 @@
                   "source_name_fr": "Courgette, chair et peau, rôtie/cuite au four",
                   "source_name_en": null,
                   "source_rank": 1,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_02728",
+              "canonical_name_fr": "courgette",
+              "canonical_name_en": "green zucchini squash",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "etat_cuisson": "cru"
+              },
+              "axes_en": {
+                "cooking_state": "raw"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_02731",
+                  "source": "CNF",
+                  "source_id": "2225",
+                  "name_fr": "courgette",
+                  "name_en": "green zucchini squash",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Squash, summer, zucchini, raw",
+                  "source_name_fr": "Courge d'été, courgette (zucchini), crue",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_02806",
+              "canonical_name_fr": "courgette",
+              "canonical_name_en": "green zucchini squash",
+              "indus_conditionne": true,
+              "indus_conditionne_only": true,
+              "conditioning_types": [
+                "EN CONSERVE / APPERTISÉ"
+              ],
+              "axes_fr": {
+                "etat_cuisson": "bouilli",
+                "conditionnement": "conserve"
+              },
+              "axes_en": {
+                "cooking_state": "boiled",
+                "packaging": "canned"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_02807",
+                  "source": "CNF",
+                  "source_id": "2226",
+                  "name_fr": "courgette",
+                  "name_en": "green zucchini squash",
+                  "indus_conditionne": true,
+                  "conditioning_types": [
+                    "EN CONSERVE / APPERTISÉ"
+                  ],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Squash, summer, zucchini, boiled, drained",
+                  "source_name_fr": "Courge d'été, courgette (zucchini), bouillie, égouttée",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_02830",
+              "canonical_name_fr": "courgette",
+              "canonical_name_en": "green zucchini squash",
+              "indus_conditionne": true,
+              "indus_conditionne_only": true,
+              "conditioning_types": [
+                "SEL AJOUTÉ"
+              ],
+              "axes_fr": {
+                "etat_cuisson": "bouilli",
+                "assaisonnement": "salé"
+              },
+              "axes_en": {
+                "cooking_state": "boiled",
+                "seasoning": "salted"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_05788",
+                  "source": "CNF",
+                  "source_id": "501772",
+                  "name_fr": "courgette",
+                  "name_en": "green zucchini squash",
+                  "indus_conditionne": true,
+                  "conditioning_types": [
+                    "SEL AJOUTÉ"
+                  ],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Squash, summer, zucchini, boiled, drained, with salt",
+                  "source_name_fr": "Courge d'été, courgette (zucchini), bouillie, égouttée, sel ajouté",
+                  "source_rank": 3,
                   "is_primary": true
                 }
               ]
@@ -44533,6 +44526,585 @@
                   "is_primary": true
                 }
               ]
+            },
+            {
+              "id": "ing_04116",
+              "canonical_name_fr": "dolique à œil noir kunde",
+              "canonical_name_en": "black-eyed peas (cowpeas), catjang",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "etat_cuisson": "bouilli"
+              },
+              "axes_en": {
+                "cooking_state": "boiled"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_04117",
+                  "source": "CNF",
+                  "source_id": "3281",
+                  "name_fr": "dolique à œil noir kunde",
+                  "name_en": "black-eyed peas (cowpeas), catjang",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Black-eyed peas (cowpeas), catjang, boiled",
+                  "source_name_fr": "Haricots à oeil noir (dolique), kunde, bouillis",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04118",
+              "canonical_name_fr": "dolique à œil noir kunde",
+              "canonical_name_en": "black-eyed peas (cowpeas), catjang",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "etat_cuisson": "cru"
+              },
+              "axes_en": {
+                "cooking_state": "raw"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_04119",
+                  "source": "CNF",
+                  "source_id": "3280",
+                  "name_fr": "dolique à œil noir kunde",
+                  "name_en": "black-eyed peas (cowpeas), catjang",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Black-eyed peas (cowpeas), catjang, raw",
+                  "source_name_fr": "Haricots à oeil noir (dolique), kunde, crus",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04120",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "etat_cuisson": "bouilli"
+              },
+              "axes_en": {
+                "cooking_state": "boiled"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_04121",
+                  "source": "CNF",
+                  "source_id": "3283",
+                  "name_fr": "dolique à œil noir",
+                  "name_en": "black-eyed peas (cowpeas)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Black-eyed peas (cowpeas, crowder, southern)), common, mature seeds, boiled",
+                  "source_name_fr": "Haricots à oeil noir (dolique), communs, grains mûrs, bouillis",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04122",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "etat_cuisson": "cru"
+              },
+              "axes_en": {
+                "cooking_state": "raw"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_04123",
+                  "source": "CNF",
+                  "source_id": "3282",
+                  "name_fr": "dolique à œil noir",
+                  "name_en": "black-eyed peas (cowpeas)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Black-eyed peas (cowpeas, crowder, southern), common, mature seeds, raw",
+                  "source_name_fr": "Haricots à oeil noir (dolique), communs, grains mûrs, crus",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04124",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "etat_thermique": "séché"
+              },
+              "axes_en": {
+                "thermal_state": "dried"
+              },
+              "preferred_source": "USDA",
+              "variants": [
+                {
+                  "id": "var_04125",
+                  "source": "USDA",
+                  "source_id": "2644284",
+                  "name_fr": "dolique à œil noir",
+                  "name_en": "black-eyed peas (cowpeas)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Blackeye pea, dry",
+                  "source_name_fr": null,
+                  "source_rank": 2,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04126",
+              "canonical_name_fr": "dolique à oeil noir grain immature",
+              "canonical_name_en": "black-eyed peas (cowpeas), immature",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "etat_cuisson": "cru"
+              },
+              "axes_en": {
+                "cooking_state": "raw"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_04127",
+                  "source": "CNF",
+                  "source_id": "2074",
+                  "name_fr": "dolique à oeil noir grain immature",
+                  "name_en": "black-eyed peas (cowpeas), immature",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Cowpeas (black-eyed peas), immature seeds, raw",
+                  "source_name_fr": "Doliques à oeil noir, grains immatures, crus",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04128",
+              "canonical_name_fr": "dolique à oeil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "etat_cuisson": "cru",
+                "partie": "feuille"
+              },
+              "axes_en": {
+                "cooking_state": "raw",
+                "part": "leaf"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_04129",
+                  "source": "CNF",
+                  "source_id": "2082",
+                  "name_fr": "dolique à oeil noir",
+                  "name_en": "black-eyed peas (cowpeas)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Cowpeas, leafy tips, raw",
+                  "source_name_fr": "Doliques à oeil noir, feuilles, crues",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04130",
+              "canonical_name_fr": "dolique à oeil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "etat_cuisson": "cru",
+                "maturite": "bébé",
+                "partie": "avec graines"
+              },
+              "axes_en": {
+                "cooking_state": "raw",
+                "ripeness": "baby",
+                "part": "with_seeds"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_04131",
+                  "source": "CNF",
+                  "source_id": "2078",
+                  "name_fr": "dolique à oeil noir",
+                  "name_en": "black-eyed peas (cowpeas)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Cowpeas, young pods with seeds, raw",
+                  "source_name_fr": "Doliques à oeil noir, jeunes cosses et graines, crues",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04182",
+              "canonical_name_fr": "dolique à oeil noir grain immature",
+              "canonical_name_en": "black-eyed peas (cowpeas), immature",
+              "indus_conditionne": true,
+              "indus_conditionne_only": true,
+              "conditioning_types": [
+                "EN CONSERVE / APPERTISÉ"
+              ],
+              "axes_fr": {
+                "etat_cuisson": "bouilli",
+                "conditionnement": "conserve"
+              },
+              "axes_en": {
+                "cooking_state": "boiled",
+                "packaging": "canned"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_04183",
+                  "source": "CNF",
+                  "source_id": "2075",
+                  "name_fr": "dolique à oeil noir grain immature",
+                  "name_en": "black-eyed peas (cowpeas), immature",
+                  "indus_conditionne": true,
+                  "conditioning_types": [
+                    "EN CONSERVE / APPERTISÉ"
+                  ],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Cowpeas (black-eyed peas), immature seeds, boiled, drained",
+                  "source_name_fr": "Doliques à oeil noir, grains immatures, bouillis, égouttés",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04184",
+              "canonical_name_fr": "dolique à oeil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "indus_conditionne": true,
+              "indus_conditionne_only": true,
+              "conditioning_types": [
+                "EN CONSERVE / APPERTISÉ"
+              ],
+              "axes_fr": {
+                "etat_cuisson": "bouilli",
+                "partie": "feuille",
+                "conditionnement": "conserve"
+              },
+              "axes_en": {
+                "cooking_state": "boiled",
+                "part": "leaf",
+                "packaging": "canned"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_04185",
+                  "source": "CNF",
+                  "source_id": "2083",
+                  "name_fr": "dolique à oeil noir",
+                  "name_en": "black-eyed peas (cowpeas)",
+                  "indus_conditionne": true,
+                  "conditioning_types": [
+                    "EN CONSERVE / APPERTISÉ"
+                  ],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Cowpeas, leafy tips, boiled, drained",
+                  "source_name_fr": "Doliques à oeil noir, feuilles, bouillies, égouttées",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04186",
+              "canonical_name_fr": "dolique à oeil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "indus_conditionne": true,
+              "indus_conditionne_only": true,
+              "conditioning_types": [
+                "EN CONSERVE / APPERTISÉ"
+              ],
+              "axes_fr": {
+                "etat_cuisson": "bouilli",
+                "partie": "graine",
+                "conditionnement": "conserve",
+                "maturite": "bébé"
+              },
+              "axes_en": {
+                "cooking_state": "boiled",
+                "part": "seed",
+                "packaging": "canned",
+                "ripeness": "baby"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_04187",
+                  "source": "CNF",
+                  "source_id": "2079",
+                  "name_fr": "dolique à oeil noir",
+                  "name_en": "black-eyed peas (cowpeas)",
+                  "indus_conditionne": true,
+                  "conditioning_types": [
+                    "EN CONSERVE / APPERTISÉ"
+                  ],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Cowpeas, young pods with seeds, boiled, drained",
+                  "source_name_fr": "Doliques à oeil noir, jeunes cosses et graines, bouillies, égouttées",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04198",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "indus_conditionne": true,
+              "indus_conditionne_only": true,
+              "conditioning_types": [
+                "EN CONSERVE / APPERTISÉ",
+                "SEL AJOUTÉ"
+              ],
+              "axes_fr": {
+                "conditionnement": "conserve",
+                "assaisonnement": "salé"
+              },
+              "axes_en": {
+                "packaging": "canned",
+                "seasoning": "salted"
+              },
+              "preferred_source": "USDA",
+              "variants": [
+                {
+                  "id": "var_04199",
+                  "source": "USDA",
+                  "source_id": "2644293",
+                  "name_fr": "dolique à œil noir",
+                  "name_en": "black-eyed peas (cowpeas)",
+                  "indus_conditionne": true,
+                  "conditioning_types": [
+                    "EN CONSERVE / APPERTISÉ"
+                  ],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Blackeye pea, canned, sodium added, drained and rinsed",
+                  "source_name_fr": null,
+                  "source_rank": 2,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04218",
+              "canonical_name_fr": "dolique à œil noir kunde",
+              "canonical_name_en": "black-eyed peas (cowpeas), catjang",
+              "indus_conditionne": true,
+              "indus_conditionne_only": true,
+              "conditioning_types": [
+                "SEL AJOUTÉ"
+              ],
+              "axes_fr": {
+                "etat_cuisson": "bouilli",
+                "assaisonnement": "salé"
+              },
+              "axes_en": {
+                "cooking_state": "boiled",
+                "seasoning": "salted"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_04219",
+                  "source": "CNF",
+                  "source_id": "3353",
+                  "name_fr": "dolique à œil noir kunde",
+                  "name_en": "black-eyed peas (cowpeas), catjang",
+                  "indus_conditionne": true,
+                  "conditioning_types": [
+                    "SEL AJOUTÉ"
+                  ],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Black-eyed peas (cowpeas), catjang, boiled, salted",
+                  "source_name_fr": "Haricots à oeil noir (dolique), kinde, bouillis, salés",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04220",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "indus_conditionne": true,
+              "indus_conditionne_only": true,
+              "conditioning_types": [
+                "SEL AJOUTÉ"
+              ],
+              "axes_fr": {
+                "etat_cuisson": "bouilli",
+                "assaisonnement": "salé"
+              },
+              "axes_en": {
+                "cooking_state": "boiled",
+                "seasoning": "salted"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_04221",
+                  "source": "CNF",
+                  "source_id": "3354",
+                  "name_fr": "dolique à œil noir",
+                  "name_en": "black-eyed peas (cowpeas)",
+                  "indus_conditionne": true,
+                  "conditioning_types": [
+                    "SEL AJOUTÉ"
+                  ],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Black-eyed peas (cowpeas, crowder, southern), common, boiled, salted",
+                  "source_name_fr": "Haricots à oeil noir (dolique), communs, bouillis, salés",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04224",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "indus_conditionne": true,
+              "indus_conditionne_only": true,
+              "conditioning_types": [
+                "SEL AJOUTÉ"
+              ],
+              "axes_fr": {
+                "etat_cuisson": "bouilli",
+                "partie": "feuille",
+                "assaisonnement": "salé"
+              },
+              "axes_en": {
+                "cooking_state": "boiled",
+                "part": "leaf",
+                "seasoning": "salted"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_05834",
+                  "source": "CNF",
+                  "source_id": "501632",
+                  "name_fr": "dolique à œil noir",
+                  "name_en": "black-eyed peas (cowpeas)",
+                  "indus_conditionne": true,
+                  "conditioning_types": [
+                    "SEL AJOUTÉ"
+                  ],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Cowpeas, leafy tips, boiled, drained, with salt",
+                  "source_name_fr": "Doliques à oeil noir, feuilles, bouillies, égouttées, sel ajouté",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_04226",
+              "canonical_name_fr": "dolique à œil noir",
+              "canonical_name_en": "black-eyed peas (cowpeas)",
+              "indus_conditionne": true,
+              "indus_conditionne_only": true,
+              "conditioning_types": [
+                "SEL AJOUTÉ"
+              ],
+              "axes_fr": {
+                "etat_cuisson": "bouilli",
+                "assaisonnement": "salé",
+                "maturite": "bébé",
+                "partie": "graine"
+              },
+              "axes_en": {
+                "cooking_state": "boiled",
+                "part": "seed",
+                "seasoning": "salted",
+                "ripeness": "baby"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_05835",
+                  "source": "CNF",
+                  "source_id": "501633",
+                  "name_fr": "dolique à œil noir",
+                  "name_en": "black-eyed peas (cowpeas)",
+                  "indus_conditionne": true,
+                  "conditioning_types": [
+                    "SEL AJOUTÉ"
+                  ],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Cowpeas, young pods with seeds, boiled, drained, with salt",
+                  "source_name_fr": "Doliques à oeil noir, jeunes cosses et graines, bouillies, égouttées, sel ajouté",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
             }
           ],
           "label_fr": "DOLIQUES"
@@ -49403,268 +49975,6 @@
           "label": "peas",
           "ingredient_groups": [
             {
-              "id": "ing_04116",
-              "canonical_name_fr": "dolique à œil noir kunde",
-              "canonical_name_en": "black-eyed peas (cowpeas), catjang",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_cuisson": "bouilli"
-              },
-              "axes_en": {
-                "cooking_state": "boiled"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_04117",
-                  "source": "CNF",
-                  "source_id": "3281",
-                  "name_fr": "dolique à œil noir kunde",
-                  "name_en": "black-eyed peas (cowpeas), catjang",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Black-eyed peas (cowpeas), catjang, boiled",
-                  "source_name_fr": "Haricots à oeil noir (dolique), kunde, bouillis",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04118",
-              "canonical_name_fr": "dolique à œil noir kunde",
-              "canonical_name_en": "black-eyed peas (cowpeas), catjang",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_cuisson": "cru"
-              },
-              "axes_en": {
-                "cooking_state": "raw"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_04119",
-                  "source": "CNF",
-                  "source_id": "3280",
-                  "name_fr": "dolique à œil noir kunde",
-                  "name_en": "black-eyed peas (cowpeas), catjang",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Black-eyed peas (cowpeas), catjang, raw",
-                  "source_name_fr": "Haricots à oeil noir (dolique), kunde, crus",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04120",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_cuisson": "bouilli"
-              },
-              "axes_en": {
-                "cooking_state": "boiled"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_04121",
-                  "source": "CNF",
-                  "source_id": "3283",
-                  "name_fr": "dolique à œil noir",
-                  "name_en": "black-eyed peas (cowpeas)",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Black-eyed peas (cowpeas, crowder, southern)), common, mature seeds, boiled",
-                  "source_name_fr": "Haricots à oeil noir (dolique), communs, grains mûrs, bouillis",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04122",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_cuisson": "cru"
-              },
-              "axes_en": {
-                "cooking_state": "raw"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_04123",
-                  "source": "CNF",
-                  "source_id": "3282",
-                  "name_fr": "dolique à œil noir",
-                  "name_en": "black-eyed peas (cowpeas)",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Black-eyed peas (cowpeas, crowder, southern), common, mature seeds, raw",
-                  "source_name_fr": "Haricots à oeil noir (dolique), communs, grains mûrs, crus",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04124",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_thermique": "séché"
-              },
-              "axes_en": {
-                "thermal_state": "dried"
-              },
-              "preferred_source": "USDA",
-              "variants": [
-                {
-                  "id": "var_04125",
-                  "source": "USDA",
-                  "source_id": "2644284",
-                  "name_fr": "dolique à œil noir",
-                  "name_en": "black-eyed peas (cowpeas)",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Blackeye pea, dry",
-                  "source_name_fr": null,
-                  "source_rank": 2,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04126",
-              "canonical_name_fr": "dolique à oeil noir grain immature",
-              "canonical_name_en": "black-eyed peas (cowpeas), immature",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_cuisson": "cru"
-              },
-              "axes_en": {
-                "cooking_state": "raw"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_04127",
-                  "source": "CNF",
-                  "source_id": "2074",
-                  "name_fr": "dolique à oeil noir grain immature",
-                  "name_en": "black-eyed peas (cowpeas), immature",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Cowpeas (black-eyed peas), immature seeds, raw",
-                  "source_name_fr": "Doliques à oeil noir, grains immatures, crus",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04128",
-              "canonical_name_fr": "dolique à oeil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_cuisson": "cru",
-                "partie": "feuille"
-              },
-              "axes_en": {
-                "cooking_state": "raw",
-                "part": "leaf"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_04129",
-                  "source": "CNF",
-                  "source_id": "2082",
-                  "name_fr": "dolique à oeil noir",
-                  "name_en": "black-eyed peas (cowpeas)",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Cowpeas, leafy tips, raw",
-                  "source_name_fr": "Doliques à oeil noir, feuilles, crues",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04130",
-              "canonical_name_fr": "dolique à oeil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_cuisson": "cru",
-                "maturite": "bébé",
-                "partie": "avec graines"
-              },
-              "axes_en": {
-                "cooking_state": "raw",
-                "ripeness": "baby",
-                "part": "with_seeds"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_04131",
-                  "source": "CNF",
-                  "source_id": "2078",
-                  "name_fr": "dolique à oeil noir",
-                  "name_en": "black-eyed peas (cowpeas)",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Cowpeas, young pods with seeds, raw",
-                  "source_name_fr": "Doliques à oeil noir, jeunes cosses et graines, crues",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
               "id": "ing_04132",
               "canonical_name_fr": "lupin",
               "canonical_name_en": "lupin",
@@ -50273,126 +50583,6 @@
               ]
             },
             {
-              "id": "ing_04182",
-              "canonical_name_fr": "dolique à oeil noir grain immature",
-              "canonical_name_en": "black-eyed peas (cowpeas), immature",
-              "indus_conditionne": true,
-              "indus_conditionne_only": true,
-              "conditioning_types": [
-                "EN CONSERVE / APPERTISÉ"
-              ],
-              "axes_fr": {
-                "etat_cuisson": "bouilli",
-                "conditionnement": "conserve"
-              },
-              "axes_en": {
-                "cooking_state": "boiled",
-                "packaging": "canned"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_04183",
-                  "source": "CNF",
-                  "source_id": "2075",
-                  "name_fr": "dolique à oeil noir grain immature",
-                  "name_en": "black-eyed peas (cowpeas), immature",
-                  "indus_conditionne": true,
-                  "conditioning_types": [
-                    "EN CONSERVE / APPERTISÉ"
-                  ],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Cowpeas (black-eyed peas), immature seeds, boiled, drained",
-                  "source_name_fr": "Doliques à oeil noir, grains immatures, bouillis, égouttés",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04184",
-              "canonical_name_fr": "dolique à oeil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "indus_conditionne": true,
-              "indus_conditionne_only": true,
-              "conditioning_types": [
-                "EN CONSERVE / APPERTISÉ"
-              ],
-              "axes_fr": {
-                "etat_cuisson": "bouilli",
-                "partie": "feuille",
-                "conditionnement": "conserve"
-              },
-              "axes_en": {
-                "cooking_state": "boiled",
-                "part": "leaf",
-                "packaging": "canned"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_04185",
-                  "source": "CNF",
-                  "source_id": "2083",
-                  "name_fr": "dolique à oeil noir",
-                  "name_en": "black-eyed peas (cowpeas)",
-                  "indus_conditionne": true,
-                  "conditioning_types": [
-                    "EN CONSERVE / APPERTISÉ"
-                  ],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Cowpeas, leafy tips, boiled, drained",
-                  "source_name_fr": "Doliques à oeil noir, feuilles, bouillies, égouttées",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04186",
-              "canonical_name_fr": "dolique à oeil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "indus_conditionne": true,
-              "indus_conditionne_only": true,
-              "conditioning_types": [
-                "EN CONSERVE / APPERTISÉ"
-              ],
-              "axes_fr": {
-                "etat_cuisson": "bouilli",
-                "partie": "graine",
-                "conditionnement": "conserve",
-                "maturite": "bébé"
-              },
-              "axes_en": {
-                "cooking_state": "boiled",
-                "part": "seed",
-                "packaging": "canned",
-                "ripeness": "baby"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_04187",
-                  "source": "CNF",
-                  "source_id": "2079",
-                  "name_fr": "dolique à oeil noir",
-                  "name_en": "black-eyed peas (cowpeas)",
-                  "indus_conditionne": true,
-                  "conditioning_types": [
-                    "EN CONSERVE / APPERTISÉ"
-                  ],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Cowpeas, young pods with seeds, boiled, drained",
-                  "source_name_fr": "Doliques à oeil noir, jeunes cosses et graines, bouillies, égouttées",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
               "id": "ing_04188",
               "canonical_name_fr": "pois mange-tout (gourmand)",
               "canonical_name_en": "snow peas",
@@ -50549,45 +50739,6 @@
               ]
             },
             {
-              "id": "ing_04198",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "indus_conditionne": true,
-              "indus_conditionne_only": true,
-              "conditioning_types": [
-                "EN CONSERVE / APPERTISÉ",
-                "SEL AJOUTÉ"
-              ],
-              "axes_fr": {
-                "conditionnement": "conserve",
-                "assaisonnement": "salé"
-              },
-              "axes_en": {
-                "packaging": "canned",
-                "seasoning": "salted"
-              },
-              "preferred_source": "USDA",
-              "variants": [
-                {
-                  "id": "var_04199",
-                  "source": "USDA",
-                  "source_id": "2644293",
-                  "name_fr": "dolique à œil noir",
-                  "name_en": "black-eyed peas (cowpeas)",
-                  "indus_conditionne": true,
-                  "conditioning_types": [
-                    "EN CONSERVE / APPERTISÉ"
-                  ],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Blackeye pea, canned, sodium added, drained and rinsed",
-                  "source_name_fr": null,
-                  "source_rank": 2,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
               "id": "ing_04200",
               "canonical_name_fr": "petit pois vert",
               "canonical_name_en": "green peas",
@@ -50673,164 +50824,6 @@
                   "axes_fr": {},
                   "source_name_en": "Peas, green, canned, drained solids, no salt added",
                   "source_name_fr": "Pois, petits (verts), conserve, solides égouttés, sans sel ajouté",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04218",
-              "canonical_name_fr": "dolique à œil noir kunde",
-              "canonical_name_en": "black-eyed peas (cowpeas), catjang",
-              "indus_conditionne": true,
-              "indus_conditionne_only": true,
-              "conditioning_types": [
-                "SEL AJOUTÉ"
-              ],
-              "axes_fr": {
-                "etat_cuisson": "bouilli",
-                "assaisonnement": "salé"
-              },
-              "axes_en": {
-                "cooking_state": "boiled",
-                "seasoning": "salted"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_04219",
-                  "source": "CNF",
-                  "source_id": "3353",
-                  "name_fr": "dolique à œil noir kunde",
-                  "name_en": "black-eyed peas (cowpeas), catjang",
-                  "indus_conditionne": true,
-                  "conditioning_types": [
-                    "SEL AJOUTÉ"
-                  ],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Black-eyed peas (cowpeas), catjang, boiled, salted",
-                  "source_name_fr": "Haricots à oeil noir (dolique), kinde, bouillis, salés",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04220",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "indus_conditionne": true,
-              "indus_conditionne_only": true,
-              "conditioning_types": [
-                "SEL AJOUTÉ"
-              ],
-              "axes_fr": {
-                "etat_cuisson": "bouilli",
-                "assaisonnement": "salé"
-              },
-              "axes_en": {
-                "cooking_state": "boiled",
-                "seasoning": "salted"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_04221",
-                  "source": "CNF",
-                  "source_id": "3354",
-                  "name_fr": "dolique à œil noir",
-                  "name_en": "black-eyed peas (cowpeas)",
-                  "indus_conditionne": true,
-                  "conditioning_types": [
-                    "SEL AJOUTÉ"
-                  ],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Black-eyed peas (cowpeas, crowder, southern), common, boiled, salted",
-                  "source_name_fr": "Haricots à oeil noir (dolique), communs, bouillis, salés",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04224",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "indus_conditionne": true,
-              "indus_conditionne_only": true,
-              "conditioning_types": [
-                "SEL AJOUTÉ"
-              ],
-              "axes_fr": {
-                "etat_cuisson": "bouilli",
-                "partie": "feuille",
-                "assaisonnement": "salé"
-              },
-              "axes_en": {
-                "cooking_state": "boiled",
-                "part": "leaf",
-                "seasoning": "salted"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_05834",
-                  "source": "CNF",
-                  "source_id": "501632",
-                  "name_fr": "dolique à œil noir",
-                  "name_en": "black-eyed peas (cowpeas)",
-                  "indus_conditionne": true,
-                  "conditioning_types": [
-                    "SEL AJOUTÉ"
-                  ],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Cowpeas, leafy tips, boiled, drained, with salt",
-                  "source_name_fr": "Doliques à oeil noir, feuilles, bouillies, égouttées, sel ajouté",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_04226",
-              "canonical_name_fr": "dolique à œil noir",
-              "canonical_name_en": "black-eyed peas (cowpeas)",
-              "indus_conditionne": true,
-              "indus_conditionne_only": true,
-              "conditioning_types": [
-                "SEL AJOUTÉ"
-              ],
-              "axes_fr": {
-                "etat_cuisson": "bouilli",
-                "assaisonnement": "salé",
-                "maturite": "bébé",
-                "partie": "graine"
-              },
-              "axes_en": {
-                "cooking_state": "boiled",
-                "part": "seed",
-                "seasoning": "salted",
-                "ripeness": "baby"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_05835",
-                  "source": "CNF",
-                  "source_id": "501633",
-                  "name_fr": "dolique à œil noir",
-                  "name_en": "black-eyed peas (cowpeas)",
-                  "indus_conditionne": true,
-                  "conditioning_types": [
-                    "SEL AJOUTÉ"
-                  ],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Cowpeas, young pods with seeds, boiled, drained, with salt",
-                  "source_name_fr": "Doliques à oeil noir, jeunes cosses et graines, bouillies, égouttées, sel ajouté",
                   "source_rank": 3,
                   "is_primary": true
                 }
