@@ -314,15 +314,26 @@ def build_variant_key(
 
     exclude_words : mots déjà présents dans le nom de base (ex.
     canonical_name_en slugifié). Un segment d'axe qui ne ferait que répéter
-    un mot déjà là est ignoré, pour éviter les suffixes redondants
-    (ex. base_key 'goat_cheese' + axe origine=chèvre → ne doit pas devenir
-    'goat_cheese_goat' ; 'baby_carrot' + axe taille=petite → pas
-    'baby_carrot_baby').
+    des mots déjà présents — dans le nom de base OU dans un axe de priorité
+    supérieure déjà traité — est allégé ou ignoré, pour éviter les suffixes
+    redondants : base_key 'goat_cheese' + axe origine=chèvre ne doit pas
+    devenir 'goat_cheese_goat' ; deux axes qui traduisent tous les deux
+    "frais" (forme=herbe fraîche → fresh_herb, etat_thermique=frais →
+    fresh) ne doivent produire "fresh" qu'une fois ('basil_fresh_herb', pas
+    'basil_fresh_herb_fresh').
+    Le filtrage se fait mot par mot en gardant l'ordre du segment, pas en
+    l'ignorant en bloc, pour ne perdre que le mot redondant (ex.
+    forme=entier → 'whole' puis partie=graine entière → 'whole_seed'
+    devient 'whole' + 'seed', pas 'whole_whole_seed').
+    Un doublon *interne* à un seul axe (ex. traitement=['non enrichi',
+    'non blanchi'] → 'non_enrichi_non_blanchi') n'est PAS touché : "non"
+    y est une particule grammaticale portant une négation différente à
+    chaque fois, pas une répétition d'information.
     """
     all_axes = {**(group_axes or {}), **(variant_axes or {})}
     if not all_axes:
         return 'default'
-    exclude_words = exclude_words or set()
+    used_words = set(exclude_words or set())
     parts = []
     for axe in AXES_PRIORITY:
         val = all_axes.get(axe)
@@ -350,10 +361,12 @@ def build_variant_key(
                 seg = AXES_VALUE_MAP.get(axe, {}).get(val_str) or slug(val_str)
         if not seg:
             continue
-        seg_words = set(seg.split('_'))
-        if seg_words and seg_words <= exclude_words:
-            continue  # deja implique par le nom de base : segment redondant ignore
-        parts.append(seg)
+        seg_words = seg.split('_')
+        kept = [w for w in seg_words if w not in used_words]
+        if not kept:
+            continue  # segment entierement redondant avec un axe deja traite : ignore
+        parts.append('_'.join(kept))
+        used_words.update(seg_words)
     return '_'.join(parts) if parts else 'default'
 
 
