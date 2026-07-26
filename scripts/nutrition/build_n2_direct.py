@@ -261,7 +261,10 @@ AXES_VALUE_MAP: dict[str, dict[str, str]] = {
     },
     'maturite':           {'mûr': 'ripe', 'vert': 'unripe', 'trop mûr': 'overripe'},
     'teneur_MG':          {},
-    'origine':            {'végétal': 'plant', 'animal': 'animal'},
+    'origine':            {
+        'végétal': 'plant', 'animal': 'animal',
+        'vache': 'cow', 'chèvre': 'goat', 'brebis': 'sheep', 'bufflonne': 'buffalo',
+    },
     'milieu_conservation': {
         "à l'huile": 'in_oil', 'au vinaigre': 'in_vinegar',
         'dans sirop': 'in_syrup', "dans l'eau": 'in_water',
@@ -302,38 +305,55 @@ def translate_axes(axes_fr: dict) -> dict:
     return out
 
 
-def build_variant_key(group_axes: dict, variant_axes: dict | None = None) -> str:
-    """Construit la clé de variant en anglais depuis les axes FR du tree."""
+def build_variant_key(
+    group_axes: dict,
+    variant_axes: dict | None = None,
+    exclude_words: set[str] | None = None,
+) -> str:
+    """Construit la clé de variant en anglais depuis les axes FR du tree.
+
+    exclude_words : mots déjà présents dans le nom de base (ex.
+    canonical_name_en slugifié). Un segment d'axe qui ne ferait que répéter
+    un mot déjà là est ignoré, pour éviter les suffixes redondants
+    (ex. base_key 'goat_cheese' + axe origine=chèvre → ne doit pas devenir
+    'goat_cheese_goat' ; 'baby_carrot' + axe taille=petite → pas
+    'baby_carrot_baby').
+    """
     all_axes = {**(group_axes or {}), **(variant_axes or {})}
     if not all_axes:
         return 'default'
+    exclude_words = exclude_words or set()
     parts = []
     for axe in AXES_PRIORITY:
         val = all_axes.get(axe)
         if val is None:
             continue
         if isinstance(val, list):
-            parts.append(slug('_'.join(str(x) for x in val)))
-            continue
-        val_str = str(val).strip()
-        if axe == 'teneur_MG':
-            _TEXT_MG = {'écrémé': 'skimmed', 'allégé': 'light', 'entier': 'whole'}
-            if val_str in _TEXT_MG:
-                parts.append(_TEXT_MG[val_str])
-            else:
-                try:
-                    mg = float(val_str.replace(',', '.').split('-')[-1].rstrip('%'))
-                    parts.append(
-                        'skimmed' if mg == 0 else
-                        'semi_skimmed' if mg <= 1.5 else
-                        'low_fat' if mg <= 5 else 'whole'
-                    )
-                except ValueError:
-                    parts.append(slug(val_str))
+            seg = slug('_'.join(str(x) for x in val))
         else:
-            en_val = AXES_VALUE_MAP.get(axe, {}).get(val_str) or slug(val_str)
-            if en_val:
-                parts.append(en_val)
+            val_str = str(val).strip()
+            if axe == 'teneur_MG':
+                _TEXT_MG = {'écrémé': 'skimmed', 'allégé': 'light', 'entier': 'whole'}
+                if val_str in _TEXT_MG:
+                    seg = _TEXT_MG[val_str]
+                else:
+                    try:
+                        mg = float(val_str.replace(',', '.').split('-')[-1].rstrip('%'))
+                        seg = (
+                            'skimmed' if mg == 0 else
+                            'semi_skimmed' if mg <= 1.5 else
+                            'low_fat' if mg <= 5 else 'whole'
+                        )
+                    except ValueError:
+                        seg = slug(val_str)
+            else:
+                seg = AXES_VALUE_MAP.get(axe, {}).get(val_str) or slug(val_str)
+        if not seg:
+            continue
+        seg_words = set(seg.split('_'))
+        if seg_words and seg_words <= exclude_words:
+            continue  # deja implique par le nom de base : segment redondant ignore
+        parts.append(seg)
     return '_'.join(parts) if parts else 'default'
 
 
@@ -867,7 +887,12 @@ def build_n2(v32: dict, raw_idx: dict) -> tuple:
 
                 # Collision base_key → suffixe axes EN
                 if base_key in n2 and n2[base_key].get('_v32_id') != ig_id:
-                    axes_suffix = build_variant_key(ig_axes)
+                    # Un axe qui ne fait que repeter un mot deja dans base_key
+                    # (ex. origine=chevre quand le nom dit deja "goat cheese")
+                    # est ignore pour ne pas produire un suffixe redondant.
+                    axes_suffix = build_variant_key(
+                        ig_axes, exclude_words=set(base_key.split('_'))
+                    )
                     if axes_suffix and axes_suffix != 'default':
                         alt = f'{base_key}_{axes_suffix}'
                     elif fr_name and slug(fr_name) != base_key:
