@@ -9,7 +9,7 @@
     "built_at": "2026-07-26",
     "note": "1 entrée = 1 variant n2 (1 état produit)",
     "total_entries": 1885,
-    "total_aliases": 74,
+    "total_aliases": 22,
     "orphans_count": 0,
     "n2_unplaced": 0,
     "key_convention": "nutrition_v2",
@@ -3385,8 +3385,8 @@
               "source": "CNF",
               "source_id": "4413",
               "source_label": "gruau de sarrasin",
-              "canonical_name_fr": "gruau de sarrasin, rôti, cuit",
-              "canonical_name_en": "buckwheat groats, roasted, cooked",
+              "canonical_name_fr": "gruau de sarrasin, rôti",
+              "canonical_name_en": "buckwheat groats, roasted",
               "axes": {
                 "cooking_state": "cooked",
                 "treatment": "roasted",
@@ -6458,14 +6458,14 @@
                 ]
               }
             },
-            "plain_croutons_dried_pre_packaged": {
+            "croutons_dried_plain_pre_packaged": {
               "v32_ing_id": "ing_00376",
               "v32_var_id": "var_00377",
               "source": "CIQUAL",
               "source_id": "7432",
               "source_label": "croûton nature",
-              "canonical_name_fr": "croûton nature",
-              "canonical_name_en": "plain croutons",
+              "canonical_name_fr": "croûton",
+              "canonical_name_en": "croutons",
               "axes": {
                 "packaging": "pre_packaged",
                 "seasoning": "plain",
@@ -8919,8 +8919,8 @@
               "source": "CIQUAL",
               "source_id": "9101",
               "source_label": "riz blanc étuvé (parboiled), cru",
-              "canonical_name_fr": "riz blanc étuvé (parboiled), cru",
-              "canonical_name_en": "parboiled white rice, raw",
+              "canonical_name_fr": "riz blanc étuvé (parboiled)",
+              "canonical_name_en": "parboiled white rice",
               "axes": {
                 "part": "seed",
                 "cooking_state": "raw",
@@ -19948,14 +19948,14 @@
                 ]
               }
             },
-            "peach_in_light_syrup_canned": {
+            "peach_canned_sirop_leger_in_light_syrup": {
               "v32_ing_id": "ing_01845",
               "v32_var_id": "var_01856",
               "source": "CIQUAL",
               "source_id": "13730",
               "source_label": "pêche au sirop léger, conserve",
-              "canonical_name_fr": "pêche au sirop léger, conserve",
-              "canonical_name_en": "peach in light syrup, canned",
+              "canonical_name_fr": "pêche, conserve",
+              "canonical_name_en": "peach",
               "axes": {
                 "packaging": "canned",
                 "storage_medium": "in_light_syrup"
@@ -19985,14 +19985,14 @@
                 ]
               }
             },
-            "peach_in_heavy_syrup_canned": {
+            "peach_canned_sirop_epais_in_heavy_syrup": {
               "v32_ing_id": "ing_05849",
               "v32_var_id": "var_01846",
               "source": "CNF",
               "source_id": "5397",
               "source_label": "pêche au sirop épais, conserve",
-              "canonical_name_fr": "pêche au sirop épais, conserve",
-              "canonical_name_en": "peach in heavy syrup, canned",
+              "canonical_name_fr": "pêche, conserve",
+              "canonical_name_en": "peach",
               "axes": {
                 "packaging": "canned",
                 "storage_medium": "in_heavy_syrup"
@@ -25683,14 +25683,14 @@
                 ]
               }
             },
-            "swiss_chard_boiled_leaf_fresh": {
+            "swiss_chard_boiled_leaf_frais_fresh": {
               "v32_ing_id": "ing_02293",
               "v32_var_id": "var_02294",
               "source": "CIQUAL",
               "source_id": "20301",
               "source_label": "côte de bette",
-              "canonical_name_fr": "côte de bette bouillie",
-              "canonical_name_en": "Swiss chard, boiled",
+              "canonical_name_fr": "côte de bette",
+              "canonical_name_en": "Swiss chard",
               "axes": {
                 "cooking_state": "boiled",
                 "part": "leaf",
@@ -25721,14 +25721,14 @@
                 ]
               }
             },
-            "swiss_chard_boiled_canned_leaf": {
+            "swiss_chard_boiled_leaf_canned": {
               "v32_ing_id": "ing_05856",
               "v32_var_id": "var_02301",
               "source": "CNF",
               "source_id": "2053",
               "source_label": "côte de bette bouillie, conserve",
-              "canonical_name_fr": "côte de bette bouillie, conserve",
-              "canonical_name_en": "Swiss chard, boiled, canned",
+              "canonical_name_fr": "côte de bette bouillie",
+              "canonical_name_en": "Swiss chard",
               "axes": {
                 "cooking_state": "boiled",
                 "part": "leaf",
@@ -26331,7 +26331,7 @@
               "source": "USDA",
               "source_id": "2258587",
               "source_label": "carotte (petite/baby)",
-              "canonical_name_fr": "carotte (petite/baby)",
+              "canonical_name_fr": "carotte",
               "canonical_name_en": "baby carrot",
               "axes": {
                 "cooking_state": "raw",
@@ -27737,14 +27737,14 @@
                 ]
               }
             },
-            "chayote_boiled_fresh": {
+            "chayote_boiled_frais_fresh": {
               "v32_ing_id": "ing_02496",
               "v32_var_id": "var_02497",
               "source": "CIQUAL",
               "source_id": "13177",
               "source_label": "chayote",
-              "canonical_name_fr": "chayote bouillie",
-              "canonical_name_en": "chayote, boiled",
+              "canonical_name_fr": "chayote",
+              "canonical_name_en": "chayote",
               "axes": {
                 "cooking_state": "boiled",
                 "packaging": "fresh"
@@ -27779,8 +27779,8 @@
               "source": "CNF",
               "source_id": "2055",
               "source_label": "chayote bouillie, conserve",
-              "canonical_name_fr": "chayote bouillie, conserve",
-              "canonical_name_en": "chayote, boiled, canned",
+              "canonical_name_fr": "chayote",
+              "canonical_name_en": "chayote",
               "axes": {
                 "cooking_state": "boiled",
                 "packaging": "canned"
@@ -28524,14 +28524,14 @@
                 ]
               }
             },
-            "red_cabbage_boiled_fresh": {
+            "red_cabbage_boiled_frais_fresh": {
               "v32_ing_id": "ing_02573",
               "v32_var_id": "var_02574",
               "source": "CIQUAL",
               "source_id": "20095",
               "source_label": "chou rouge",
-              "canonical_name_fr": "chou rouge bouilli",
-              "canonical_name_en": "red cabbage, boiled",
+              "canonical_name_fr": "chou rouge",
+              "canonical_name_en": "red cabbage",
               "axes": {
                 "cooking_state": "boiled",
                 "packaging": "fresh"
@@ -28567,8 +28567,8 @@
               "source": "CNF",
               "source_id": "2035",
               "source_label": "chou rouge bouilli, conserve",
-              "canonical_name_fr": "chou rouge bouilli, conserve",
-              "canonical_name_en": "red cabbage, boiled, canned",
+              "canonical_name_fr": "chou rouge",
+              "canonical_name_en": "red cabbage",
               "axes": {
                 "cooking_state": "boiled",
                 "packaging": "canned"
@@ -28670,14 +28670,14 @@
                 ]
               }
             },
-            "kohlrabi_boiled_fresh": {
+            "kohlrabi_boiled_frais_fresh": {
               "v32_ing_id": "ing_02581",
               "v32_var_id": "var_02582",
               "source": "CIQUAL",
               "source_id": "20094",
               "source_label": "chou-rave",
-              "canonical_name_fr": "chou-rave bouilli",
-              "canonical_name_en": "kohlrabi, boiled",
+              "canonical_name_fr": "chou-rave",
+              "canonical_name_en": "kohlrabi",
               "axes": {
                 "cooking_state": "boiled",
                 "packaging": "fresh"
@@ -28713,8 +28713,8 @@
               "source": "CNF",
               "source_id": "2110",
               "source_label": "chou-rave bouilli, conserve",
-              "canonical_name_fr": "chou-rave bouilli, conserve",
-              "canonical_name_en": "kohlrabi, boiled, canned",
+              "canonical_name_fr": "chou-rave",
+              "canonical_name_en": "kohlrabi",
               "axes": {
                 "cooking_state": "boiled",
                 "packaging": "canned"
@@ -29705,14 +29705,14 @@
                 ]
               }
             },
-            "cauliflower_boiled_flower_fresh": {
+            "cauliflower_boiled_flower_frais_fresh": {
               "v32_ing_id": "ing_02650",
               "v32_var_id": "var_02651",
               "source": "CIQUAL",
               "source_id": "20017",
               "source_label": "chou-fleur",
-              "canonical_name_fr": "chou-fleur bouilli",
-              "canonical_name_en": "cauliflower, boiled",
+              "canonical_name_fr": "chou-fleur",
+              "canonical_name_en": "cauliflower",
               "axes": {
                 "cooking_state": "boiled",
                 "part": "flower",
@@ -29743,14 +29743,14 @@
                 ]
               }
             },
-            "cauliflower_boiled_canned_flower": {
+            "cauliflower_boiled_flower_canned": {
               "v32_ing_id": "ing_05860",
               "v32_var_id": "var_02657",
               "source": "CNF",
               "source_id": "2046",
               "source_label": "chou-fleur bouilli, conserve",
-              "canonical_name_fr": "chou-fleur bouilli, conserve",
-              "canonical_name_en": "cauliflower, boiled, canned",
+              "canonical_name_fr": "chou-fleur",
+              "canonical_name_en": "cauliflower",
               "axes": {
                 "cooking_state": "boiled",
                 "part": "flower",
@@ -36279,8 +36279,8 @@
               "source": "USDA",
               "source_id": "170004",
               "source_label": "",
-              "canonical_name_fr": "oignon jaune, sauté à l'huile",
-              "canonical_name_en": "yellow onion, sauteed, in oil",
+              "canonical_name_fr": "oignon jaune",
+              "canonical_name_en": "yellow onion",
               "axes": {
                 "cooking_state": "sauteed",
                 "cooking_process": "in_oil"
@@ -36392,14 +36392,14 @@
                 ]
               }
             },
-            "black_olive_in_oil_canned": {
+            "black_olive_canned_in_oil": {
               "v32_ing_id": "ing_05769",
               "v32_var_id": "var_03237",
               "source": "CIQUAL",
               "source_id": "13131",
               "source_label": "olive noire",
-              "canonical_name_fr": "olive noire, à l'huile",
-              "canonical_name_en": "black olive, in oil",
+              "canonical_name_fr": "olive noire",
+              "canonical_name_en": "black olive",
               "axes": {
                 "packaging": "canned",
                 "storage_medium": "in_oil"
@@ -39336,14 +39336,14 @@
                 ]
               }
             },
-            "steamed_potato_vacuum": {
+            "potato_steamed_vacuum": {
               "v32_ing_id": "ing_01698",
               "v32_var_id": "var_01699",
               "source": "CIQUAL",
               "source_id": "4014",
               "source_label": "pomme de terre vapeur",
-              "canonical_name_fr": "pomme de terre vapeur",
-              "canonical_name_en": "steamed potato",
+              "canonical_name_fr": "pomme de terre",
+              "canonical_name_en": "potato",
               "axes": {
                 "packaging": "vacuum",
                 "cooking_state": "steamed"
@@ -39684,8 +39684,8 @@
               "source": "CNF",
               "source_id": "2418",
               "source_label": "pomme de terre",
-              "canonical_name_fr": "pomme de terre, pelure, crue",
-              "canonical_name_en": "potato, skin, raw",
+              "canonical_name_fr": "pomme de terre, pelure",
+              "canonical_name_en": "potato, skin",
               "axes": {
                 "cooking_state": "raw",
                 "part": "peel"
@@ -41384,7 +41384,7 @@
               "source": "CIQUAL",
               "source_id": "2026",
               "source_label": "tomate salé à 3 g/L",
-              "canonical_name_fr": "tomate salé à 3 g/L",
+              "canonical_name_fr": "tomate à 3 g/L",
               "canonical_name_en": "low salt tomato 3 g/L",
               "axes": {
                 "seasoning": "salted",
@@ -41415,14 +41415,14 @@
                 ]
               }
             },
-            "salted_tomato_6_g_l_juice": {
+            "tomato_6_g_l_juice_salted": {
               "v32_ing_id": "ing_03570",
               "v32_var_id": "var_03571",
               "source": "CIQUAL",
               "source_id": "2032",
               "source_label": "tomate salé à 6 g/L",
-              "canonical_name_fr": "tomate salé à 6 g/L",
-              "canonical_name_en": "salted tomato 6 g/L",
+              "canonical_name_fr": "tomate à 6 g/L",
+              "canonical_name_en": "tomato 6 g/L",
               "axes": {
                 "seasoning": "salted",
                 "form": "juice"
@@ -41598,14 +41598,14 @@
                 ]
               }
             },
-            "crushed_tomatoes_canned_cracked_ripe": {
+            "crushed_tomatoes_cracked_canned_ripe": {
               "v32_ing_id": "ing_03596",
               "v32_var_id": "var_03597",
               "source": "USDA",
               "source_id": "2685581",
               "source_label": "tomate concassée, conserve",
               "canonical_name_fr": "tomate concassée, conserve",
-              "canonical_name_en": "crushed tomatoes, canned",
+              "canonical_name_en": "crushed tomatoes",
               "axes": {
                 "packaging": "canned",
                 "form": "cracked",
@@ -41643,7 +41643,7 @@
               "source_id": "333281",
               "source_label": "tomate en dés, conserve",
               "canonical_name_fr": "tomate en dés, conserve",
-              "canonical_name_en": "diced tomatoes, canned",
+              "canonical_name_en": "diced tomatoes",
               "axes": {
                 "packaging": "canned",
                 "form": "diced",
@@ -41672,14 +41672,14 @@
                 ]
               }
             },
-            "stewed_tomatoes_canned_steamed_ripe": {
+            "stewed_tomatoes_steamed_canned_ripe": {
               "v32_ing_id": "ing_05852",
               "v32_var_id": "var_03635",
               "source": "CNF",
               "source_id": "2463",
               "source_label": "tomate étuvée, conserve",
-              "canonical_name_fr": "tomate étuvée, conserve",
-              "canonical_name_en": "stewed tomatoes, canned",
+              "canonical_name_fr": "tomate, conserve",
+              "canonical_name_en": "stewed tomatoes",
               "axes": {
                 "packaging": "canned",
                 "cooking_state": "steamed",
@@ -42765,14 +42765,14 @@
                 ]
               }
             },
-            "mature_spinach_raw": {
+            "spinach_raw_mature": {
               "v32_ing_id": "ing_03683",
               "v32_var_id": "var_03689",
               "source": "CIQUAL",
               "source_id": "20059",
               "source_label": "épinard mature",
-              "canonical_name_fr": "épinard mature",
-              "canonical_name_en": "mature spinach",
+              "canonical_name_fr": "épinard",
+              "canonical_name_en": "spinach",
               "axes": {
                 "cooking_state": "raw",
                 "ripeness": "mature"
@@ -42809,14 +42809,14 @@
                 ]
               }
             },
-            "baby_spinach_raw": {
+            "spinach_raw_bebe_baby": {
               "v32_ing_id": "ing_05846",
               "v32_var_id": "var_03691",
               "source": "CIQUAL",
               "source_id": "20270",
               "source_label": "épinard jeunes pousses",
               "canonical_name_fr": "épinard jeunes pousses",
-              "canonical_name_en": "baby spinach",
+              "canonical_name_en": "spinach",
               "axes": {
                 "cooking_state": "raw",
                 "ripeness": "baby"
@@ -42853,14 +42853,14 @@
                 ]
               }
             },
-            "spinach_boiled_fresh": {
+            "spinach_boiled_frais_fresh": {
               "v32_ing_id": "ing_03692",
               "v32_var_id": "var_03693",
               "source": "CIQUAL",
               "source_id": "20336",
               "source_label": "épinard",
-              "canonical_name_fr": "épinard bouilli",
-              "canonical_name_en": "spinach, boiled",
+              "canonical_name_fr": "épinard",
+              "canonical_name_en": "spinach",
               "axes": {
                 "cooking_state": "boiled",
                 "packaging": "fresh"
@@ -42896,8 +42896,8 @@
               "source": "CNF",
               "source_id": "2214",
               "source_label": "épinard bouilli, conserve",
-              "canonical_name_fr": "épinard bouilli, conserve",
-              "canonical_name_en": "spinach, boiled, canned",
+              "canonical_name_fr": "épinard",
+              "canonical_name_en": "spinach",
               "axes": {
                 "cooking_state": "boiled",
                 "packaging": "canned"
@@ -43784,8 +43784,8 @@
               "source": "CNF",
               "source_id": "3334",
               "source_label": "doliques asperge",
-              "canonical_name_fr": "dolique asperge, grains mûrs, cru",
-              "canonical_name_en": "yardlong, mature seeds, raw",
+              "canonical_name_fr": "dolique asperge, grains mûrs",
+              "canonical_name_en": "yardlong, mature seeds",
               "axes": {
                 "cooking_state": "raw",
                 "thermal_state": "dried"
@@ -48376,8 +48376,8 @@
               "source": "CNF",
               "source_id": "3257",
               "source_label": "haricot vert",
-              "canonical_name_fr": "haricot, grains mûrs, cru",
-              "canonical_name_en": "french bean, mature seeds, raw",
+              "canonical_name_fr": "haricot, grains mûrs",
+              "canonical_name_en": "french bean, mature seeds",
               "axes": {
                 "cooking_state": "raw",
                 "thermal_state": "dried"
@@ -59700,14 +59700,14 @@
               "nova_group": 4,
               "bioavailability_protein": 0.65
             },
-            "plain_omelette_homemade": {
+            "omelette_homemade_plain": {
               "v32_ing_id": "ing_05726",
               "v32_var_id": "var_05727",
               "source": "CIQUAL",
               "source_id": "22500",
               "source_label": "omelette nature faite maison",
-              "canonical_name_fr": "omelette nature faite maison",
-              "canonical_name_en": "plain omelette, homemade",
+              "canonical_name_fr": "omelette faite maison",
+              "canonical_name_en": "omelette, homemade",
               "axes": {
                 "seasoning": "plain"
               },
@@ -59788,14 +59788,14 @@
               "nova_group": 4,
               "bioavailability_protein": 0.65
             },
-            "fried_egg_flat": {
+            "egg_au_plat_fried_flat": {
               "v32_ing_id": "ing_05745",
               "v32_var_id": "var_05689",
               "source": "CIQUAL",
               "source_id": "22505",
               "source_label": "œuf au plat",
-              "canonical_name_fr": "œuf au plat",
-              "canonical_name_en": "fried egg",
+              "canonical_name_fr": "œuf",
+              "canonical_name_en": "egg",
               "axes": {
                 "cooking_state": "fried_flat"
               },
@@ -59848,14 +59848,14 @@
               "nova_group": 4,
               "bioavailability_protein": 0.97
             },
-            "poached_egg": {
+            "egg_poche_poached": {
               "v32_ing_id": "ing_05747",
               "v32_var_id": "var_05703",
               "source": "CIQUAL",
               "source_id": "22011",
               "source_label": "œuf poché",
-              "canonical_name_fr": "œuf poché",
-              "canonical_name_en": "poached egg",
+              "canonical_name_fr": "œuf",
+              "canonical_name_en": "egg",
               "axes": {
                 "cooking_state": "poached"
               },
@@ -59878,14 +59878,14 @@
               "nova_group": 4,
               "bioavailability_protein": 0.65
             },
-            "scrambled_egg": {
+            "egg_brouille_scrambled": {
               "v32_ing_id": "ing_05748",
               "v32_var_id": "var_05860",
               "source": "CIQUAL",
               "source_id": "22502",
               "source_label": "œuf brouillé",
-              "canonical_name_fr": "œuf brouillé",
-              "canonical_name_en": "scrambled egg",
+              "canonical_name_fr": "œuf",
+              "canonical_name_en": "egg",
               "axes": {
                 "cooking_state": "scrambled"
               },
@@ -68112,7 +68112,7 @@
               "source": "CNF",
               "source_id": "38",
               "source_label": "Neufchâtel",
-              "canonical_name_fr": "neufchâtel (style américain)",
+              "canonical_name_fr": "neufchâtel",
               "canonical_name_en": "neufchatel (American style)",
               "axes": {
                 "origin": "cow",
@@ -68190,7 +68190,7 @@
               "source": "CNF",
               "source_id": "47",
               "source_label": "emmental",
-              "canonical_name_fr": "fromage suisse (style canadien)",
+              "canonical_name_fr": "fromage suisse",
               "canonical_name_en": "swiss cheese (Canadian style)",
               "axes": {
                 "origin": "cow",
@@ -71170,80 +71170,28 @@
     }
   },
   "alias_index": {
-    "almond_milk_r_frig_r_unsweetened_plant_refrigerated": "almond_milk_refrigere_unsweetened_plant_refrigerated",
-    "almond_with_skin_grill_lhuile_salted_in_oil_roasted": "almond_with_skin_grille_a_lhuile_salted_in_oil_roasted",
-    "almond_with_skin_grill_salted_dry_roasted": "almond_with_skin_grille_salted_dry_roasted",
-    "almond_with_skin_grill_sec_dried_dry_roasted": "almond_with_skin_grille_a_sec_dried_dry_roasted",
-    "almond_with_skin_non_blanchi_peau_conserv_e_dried_unbleached_on": "almond_with_skin_non_blanchi_peau_conservee_dried_unbleached_on",
-    "apple_juice_base_de_concentr_from_concentrate": "apple_juice_a_base_de_concentre_from_concentrate",
-    "apricot_05866_canned_in_syrup_pais": "apricot_05866_canned_in_syrup_epais",
-    "apricot_canned_in_syrup_l_ger": "apricot_canned_in_syrup_leger",
-    "asparagus_boiled_surgel_salted_frozen": "asparagus_boiled_surgele_salted_frozen",
-    "black_eyed_peas_cowpeas_boiled_seed_canned_b_b_baby": "black_eyed_peas_cowpeas_boiled_seed_canned_bebe_baby",
-    "black_eyed_peas_cowpeas_boiled_seed_salted_b_b_baby": "black_eyed_peas_cowpeas_boiled_seed_salted_bebe_baby",
-    "black_eyed_peas_cowpeas_raw_with_seeds_b_b_baby": "black_eyed_peas_cowpeas_raw_with_seeds_bebe_baby",
-    "blackberry_raw_m_rier": "blackberry_raw_murier",
-    "buffalo_mozzarella_demi_cr_m_cow_semi_skimmed": "buffalo_mozzarella_demi_ecreme_cow_semi_skimmed",
-    "carr_de_lest_cow": "carre_de_lest_cow",
-    "carrot_boiled_surgel_salted_frozen": "carrot_boiled_surgele_salted_frozen",
-    "cashew_nuts_grill_sec_dried_dry_roasted": "cashew_nuts_grille_a_sec_dried_dry_roasted",
-    "comt_cow": "comte_cow",
-    "cream_heavy_r_frig_r_18pct_refrigerated": "cream_heavy_refrigere_18pct_refrigerated",
-    "cream_heavy_r_frig_r_30pct_refrigerated": "cream_heavy_refrigere_30pct_refrigerated",
-    "goat_cheese_semi_dry_mi_affin": "goat_cheese_semi_dry_mi_affine",
-    "grape_juice_base_de_concentr_from_concentrate": "grape_juice_a_base_de_concentre_from_concentrate",
-    "grapefruit_juice_base_de_concentr_from_concentrate": "grapefruit_juice_a_base_de_concentre_from_concentrate",
-    "green_peas_boiled_surgel_salted_frozen": "green_peas_boiled_surgele_salted_frozen",
-    "gruy_re_igp_cow": "gruyere_igp_cow",
-    "hazelnut_grilled_grill_sec_dried_unsalted_dry_roasted": "hazelnut_grilled_grille_a_sec_dried_unsalted_dry_roasted",
-    "macadamia_nuts_bushnuts_queensland_roasted_grill_lhuile_salted_in_oil": "macadamia_nuts_bushnuts_queensland_roasted_grille_a_lhuile_salted_in_oil",
-    "milk_powder_demi_cr_m_semi_skimmed": "milk_powder_demi_ecreme_semi_skimmed",
-    "mimolette_semi_aged_cow_mi_affin": "mimolette_semi_aged_cow_mi_affine",
-    "neufch_tel_cow": "neufchatel_cow",
-    "neufchatel_american_style_cow_am_ricain": "neufchatel_american_style_cow_americain",
-    "oat_milk_r_frig_r_plain_plant_refrigerated": "oat_milk_refrigere_plain_plant_refrigerated",
-    "orange_juice_base_de_concentr_from_concentrate": "orange_juice_a_base_de_concentre_from_concentrate",
-    "orange_juice_sans_pulpe_r_frig_r_pulp_free_refrigerated": "orange_juice_sans_pulpe_refrigere_pulp_free_refrigerated",
-    "p_lardon_goat_cheese": "pelardon_goat_cheese",
-    "peanut_butter_plant_r_duit_en_sodium": "peanut_butter_plant_reduit_en_sodium",
-    "peanut_butter_plant_r_gulier": "peanut_butter_plant_regulier",
-    "peanut_creamy_butter_salted_plant_cr_meux": "peanut_creamy_butter_salted_plant_cremeux",
-    "peanut_grill_sec_dried_dry_roasted": "peanut_grille_a_sec_dried_dry_roasted",
-    "peanut_roasted_torr_fi_salted_dry": "peanut_roasted_torrefie_salted_dry",
-    "peanut_roasted_torr_fi_unsalted_dry": "peanut_roasted_torrefie_unsalted_dry",
-    "pear_05867_canned_in_syrup_pais": "pear_05867_canned_in_syrup_epais",
-    "pear_canned_in_syrup_l_ger": "pear_canned_in_syrup_leger",
-    "pecans_nuts_grill_sec_dried_dry_roasted": "pecans_nuts_grille_a_sec_dried_dry_roasted",
-    "pecans_nuts_grill_sec_dried_salted_dry_roasted": "pecans_nuts_grille_a_sec_dried_salted_dry_roasted",
-    "pineapple_extra_sweet_variety_raw_sucr_e": "pineapple_extra_sweet_variety_raw_sucree",
-    "pineapple_juice_base_de_concentr_from_concentrate": "pineapple_juice_a_base_de_concentre_from_concentrate",
-    "pistachio_nuts_grill_sec_dried_salted_dry_roasted": "pistachio_nuts_grille_a_sec_dried_salted_dry_roasted",
-    "poisses_cow": "epoisses_cow",
-    "pont_l_v_que_cow": "pont_leveque_cow",
-    "potato_roasted_surgel_frozen": "potato_roasted_surgele_frozen",
-    "pumpkin_squash_roasted_seed_grill_sec_salted_dry": "pumpkin_squash_roasted_seed_grille_a_sec_salted_dry",
-    "pumpkin_squash_roasted_whole_seed_grill_sec_salted_dry": "pumpkin_squash_roasted_whole_seed_grille_a_sec_salted_dry",
-    "ros_wine_liquid": "rose_wine_liquid",
-    "saint_f_licien_cow": "saint_felicien_cow",
-    "sesame_flour_seed_lev_en_gras_high_fat": "sesame_flour_seed_eleve_en_gras_high_fat",
-    "sesame_grilled_seed_grill_sec_salted_dry_roasted": "sesame_grilled_seed_grille_a_sec_salted_dry_roasted",
-    "sesame_roasted_seed_grill_sec_dry": "sesame_roasted_seed_grille_a_sec_dry",
-    "sesame_tahini_butter_plant_cr_meux": "sesame_tahini_butter_plant_cremeux",
-    "sesame_tahini_butter_seed_r_ti_plant_dry_roasted": "sesame_tahini_butter_seed_roti_plant_dry_roasted",
-    "soy_sauce_shoyu_r_duit_en_sodium": "soy_sauce_shoyu_reduit_en_sodium",
-    "soybean_roasted_seed_torr_fi_unsalted": "soybean_roasted_seed_torrefie_unsalted",
-    "soybean_roasted_torr_fi_salted": "soybean_roasted_torrefie_salted",
-    "sunflower_seed_grill_lhuile_in_oil_roasted": "sunflower_seed_grille_a_lhuile_in_oil_roasted",
-    "sunflower_seed_grill_salted_dry_roasted": "sunflower_seed_grille_salted_dry_roasted",
-    "sunflower_seed_grill_sec_dried_dry_roasted": "sunflower_seed_grille_a_sec_dried_dry_roasted",
-    "sunflower_seed_grill_sec_dried_salted_dry_roasted": "sunflower_seed_grille_a_sec_dried_salted_dry_roasted",
-    "sweet_shortcrust_sabl_e_pastry_cooked_paste_pre_packaged": "sweet_shortcrust_sablee_pastry_cooked_paste_pre_packaged",
-    "sweet_shortcrust_sabl_e_pastry_raw_paste_pre_packaged": "sweet_shortcrust_sablee_pastry_raw_paste_pre_packaged",
-    "t_te_de_moine_cow": "tete_de_moine_cow",
-    "table_salt_iod_fluor_iodized_fluoridated": "table_salt_iode_fluore_iodized_fluoridated",
-    "tomato_double_concentr_canned_concentrated": "tomato_double_concentre_canned_concentrated",
-    "tomme_des_pyr_n_es_cow": "tomme_des_pyrenees_cow",
-    "valen_ay_goat_cheese": "valencay_goat_cheese"
+    "baby_spinach_raw": "spinach_raw_bebe_baby",
+    "black_olive_in_oil_canned": "black_olive_canned_in_oil",
+    "cauliflower_boiled_canned_flower": "cauliflower_boiled_flower_canned",
+    "cauliflower_boiled_flower_fresh": "cauliflower_boiled_flower_frais_fresh",
+    "chayote_boiled_fresh": "chayote_boiled_frais_fresh",
+    "crushed_tomatoes_canned_cracked_ripe": "crushed_tomatoes_cracked_canned_ripe",
+    "fried_egg_flat": "egg_au_plat_fried_flat",
+    "kohlrabi_boiled_fresh": "kohlrabi_boiled_frais_fresh",
+    "mature_spinach_raw": "spinach_raw_mature",
+    "peach_in_heavy_syrup_canned": "peach_canned_sirop_epais_in_heavy_syrup",
+    "peach_in_light_syrup_canned": "peach_canned_sirop_leger_in_light_syrup",
+    "plain_croutons_dried_pre_packaged": "croutons_dried_plain_pre_packaged",
+    "plain_omelette_homemade": "omelette_homemade_plain",
+    "poached_egg": "egg_poche_poached",
+    "red_cabbage_boiled_fresh": "red_cabbage_boiled_frais_fresh",
+    "salted_tomato_6_g_l_juice": "tomato_6_g_l_juice_salted",
+    "scrambled_egg": "egg_brouille_scrambled",
+    "spinach_boiled_fresh": "spinach_boiled_frais_fresh",
+    "steamed_potato_vacuum": "potato_steamed_vacuum",
+    "stewed_tomatoes_canned_steamed_ripe": "stewed_tomatoes_steamed_canned_ripe",
+    "swiss_chard_boiled_canned_leaf": "swiss_chard_boiled_leaf_canned",
+    "swiss_chard_boiled_leaf_fresh": "swiss_chard_boiled_leaf_frais_fresh"
   },
   "orphans": []
 }

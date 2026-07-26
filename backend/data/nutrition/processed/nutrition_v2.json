@@ -2,7 +2,7 @@
   "schema_version": "7.1",
   "schema_family": "nutrition_v2",
   "built_from": "raw_sources_direct",
-  "built_at": "2026-07-26T20:32:55.067154+00:00",
+  "built_at": "2026-07-26T21:00:06.408467+00:00",
   "pipeline": "build_n2_direct.py",
   "raw_sources": {
     "CIQUAL": {
@@ -7695,7 +7695,7 @@
         }
       }
     },
-    "buckwheat_groats_roasted_cooked": {
+    "buckwheat_groats_roasted": {
       "taxonomy": {
         "cat1": "cereals_and_grains",
         "cat1_fr": "CÉRÉALES & GRAINS",
@@ -7703,8 +7703,8 @@
         "cat2_fr": "AVOINE",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05768",
-        "name_fr": "gruau de sarrasin, rôti, cuit",
-        "name_en": "buckwheat groats, roasted, cooked"
+        "name_fr": "gruau de sarrasin, rôti",
+        "name_en": "buckwheat groats, roasted"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -14342,7 +14342,7 @@
         }
       }
     },
-    "plain_croutons": {
+    "croutons": {
       "taxonomy": {
         "cat1": "cereals_and_grains",
         "cat1_fr": "CÉRÉALES & GRAINS",
@@ -14350,8 +14350,8 @@
         "cat2_fr": "PAINS",
         "cat2_type": "ombrelle",
         "v32_id": "ing_00376",
-        "name_fr": "croûton nature",
-        "name_en": "plain croutons"
+        "name_fr": "croûton",
+        "name_en": "croutons"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -19525,7 +19525,7 @@
         }
       }
     },
-    "parboiled_white_rice_raw": {
+    "parboiled_white_rice": {
       "taxonomy": {
         "cat1": "cereals_and_grains",
         "cat1_fr": "CÉRÉALES & GRAINS",
@@ -19533,8 +19533,8 @@
         "cat2_fr": "RIZ",
         "cat2_type": "ombrelle",
         "v32_id": "ing_05855",
-        "name_fr": "riz blanc étuvé (parboiled), cru",
-        "name_en": "parboiled white rice, raw"
+        "name_fr": "riz blanc étuvé (parboiled)",
+        "name_en": "parboiled white rice"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -44254,7 +44254,7 @@
         }
       }
     },
-    "peach_in_light_syrup_canned": {
+    "peach_canned_sirop_leger": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -44262,8 +44262,8 @@
         "cat2_fr": "PÊCHES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_01845",
-        "name_fr": "pêche au sirop léger, conserve",
-        "name_en": "peach in light syrup, canned"
+        "name_fr": "pêche, conserve",
+        "name_en": "peach"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -44336,7 +44336,7 @@
         }
       }
     },
-    "peach_in_heavy_syrup_canned": {
+    "peach_canned_sirop_epais": {
       "taxonomy": {
         "cat1": "fruits",
         "cat1_fr": "FRUITS",
@@ -44344,8 +44344,8 @@
         "cat2_fr": "PÊCHES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05849",
-        "name_fr": "pêche au sirop épais, conserve",
-        "name_en": "peach in heavy syrup, canned"
+        "name_fr": "pêche, conserve",
+        "name_en": "peach"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -56529,7 +56529,7 @@
         }
       }
     },
-    "swiss_chard_boiled": {
+    "swiss_chard_boiled_leaf_frais": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -56537,8 +56537,8 @@
         "cat2_fr": "BETTES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_02293",
-        "name_fr": "côte de bette bouillie",
-        "name_en": "Swiss chard, boiled"
+        "name_fr": "côte de bette",
+        "name_en": "Swiss chard"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -56616,7 +56616,7 @@
         }
       }
     },
-    "swiss_chard_boiled_canned": {
+    "swiss_chard_boiled_leaf_canned": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -56624,8 +56624,8 @@
         "cat2_fr": "BETTES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05856",
-        "name_fr": "côte de bette bouillie, conserve",
-        "name_en": "Swiss chard, boiled, canned"
+        "name_fr": "côte de bette bouillie",
+        "name_en": "Swiss chard"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -57987,7 +57987,7 @@
         "cat2_fr": "CAROTTES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05862",
-        "name_fr": "carotte (petite/baby)",
+        "name_fr": "carotte",
         "name_en": "baby carrot"
       },
       "ingredient_type": "node",
@@ -61225,7 +61225,7 @@
         }
       }
     },
-    "chayote_boiled": {
+    "chayote_boiled_frais": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -61233,8 +61233,8 @@
         "cat2_fr": "CHAYOTTES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_02496",
-        "name_fr": "chayote bouillie",
-        "name_en": "chayote, boiled"
+        "name_fr": "chayote",
+        "name_en": "chayote"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -61310,8 +61310,8 @@
         "cat2_fr": "CHAYOTTES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05857",
-        "name_fr": "chayote bouillie, conserve",
-        "name_en": "chayote, boiled, canned"
+        "name_fr": "chayote",
+        "name_en": "chayote"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -62921,7 +62921,7 @@
         }
       }
     },
-    "red_cabbage_boiled": {
+    "red_cabbage_boiled_frais": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -62929,8 +62929,8 @@
         "cat2_fr": "CHOUX",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_02573",
-        "name_fr": "chou rouge bouilli",
-        "name_en": "red cabbage, boiled"
+        "name_fr": "chou rouge",
+        "name_en": "red cabbage"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -63012,8 +63012,8 @@
         "cat2_fr": "CHOUX",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05858",
-        "name_fr": "chou rouge bouilli, conserve",
-        "name_en": "red cabbage, boiled, canned"
+        "name_fr": "chou rouge",
+        "name_en": "red cabbage"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -63251,7 +63251,7 @@
         }
       }
     },
-    "kohlrabi_boiled": {
+    "kohlrabi_boiled_frais": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -63259,8 +63259,8 @@
         "cat2_fr": "CHOUX",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_02581",
-        "name_fr": "chou-rave bouilli",
-        "name_en": "kohlrabi, boiled"
+        "name_fr": "chou-rave",
+        "name_en": "kohlrabi"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -63339,8 +63339,8 @@
         "cat2_fr": "CHOUX",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05859",
-        "name_fr": "chou-rave bouilli, conserve",
-        "name_en": "kohlrabi, boiled, canned"
+        "name_fr": "chou-rave",
+        "name_en": "kohlrabi"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -65656,7 +65656,7 @@
         }
       }
     },
-    "cauliflower_boiled": {
+    "cauliflower_boiled_flower_frais": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -65664,8 +65664,8 @@
         "cat2_fr": "CHOUX-FLEURS",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_02650",
-        "name_fr": "chou-fleur bouilli",
-        "name_en": "cauliflower, boiled"
+        "name_fr": "chou-fleur",
+        "name_en": "cauliflower"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -65744,7 +65744,7 @@
         }
       }
     },
-    "cauliflower_boiled_canned": {
+    "cauliflower_boiled_flower_canned": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -65752,8 +65752,8 @@
         "cat2_fr": "CHOUX-FLEURS",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05860",
-        "name_fr": "chou-fleur bouilli, conserve",
-        "name_en": "cauliflower, boiled, canned"
+        "name_fr": "chou-fleur",
+        "name_en": "cauliflower"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -80144,8 +80144,8 @@
         "cat2_fr": "OIGNONS",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05774",
-        "name_fr": "oignon jaune, sauté à l'huile",
-        "name_en": "yellow onion, sauteed, in oil"
+        "name_fr": "oignon jaune",
+        "name_en": "yellow onion"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -80389,7 +80389,7 @@
         }
       }
     },
-    "black_olive_in_oil": {
+    "black_olive_canned_in_oil": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -80397,8 +80397,8 @@
         "cat2_fr": "OLIVES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05769",
-        "name_fr": "olive noire, à l'huile",
-        "name_en": "black olive, in oil"
+        "name_fr": "olive noire",
+        "name_en": "black olive"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -86948,7 +86948,7 @@
         }
       }
     },
-    "steamed_potato": {
+    "potato_steamed_vacuum": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -86956,8 +86956,8 @@
         "cat2_fr": "POMMES DE TERRE",
         "cat2_type": "leaf",
         "v32_id": "ing_01698",
-        "name_fr": "pomme de terre vapeur",
-        "name_en": "steamed potato"
+        "name_fr": "pomme de terre",
+        "name_en": "potato"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -87676,7 +87676,7 @@
         }
       }
     },
-    "potato_skin_raw": {
+    "potato_skin": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -87684,8 +87684,8 @@
         "cat2_fr": "POMMES DE TERRE",
         "cat2_type": "leaf",
         "v32_id": "ing_05760",
-        "name_fr": "pomme de terre, pelure, crue",
-        "name_en": "potato, skin, raw"
+        "name_fr": "pomme de terre, pelure",
+        "name_en": "potato, skin"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -91586,7 +91586,7 @@
         "cat2_fr": "TOMATES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_03568",
-        "name_fr": "tomate salé à 3 g/L",
+        "name_fr": "tomate à 3 g/L",
         "name_en": "low salt tomato 3 g/L"
       },
       "ingredient_type": "node",
@@ -91643,7 +91643,7 @@
         }
       }
     },
-    "salted_tomato_6_g_l": {
+    "tomato_6_g_l": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -91651,8 +91651,8 @@
         "cat2_fr": "TOMATES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_03570",
-        "name_fr": "tomate salé à 6 g/L",
-        "name_en": "salted tomato 6 g/L"
+        "name_fr": "tomate à 6 g/L",
+        "name_en": "tomato 6 g/L"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -92059,7 +92059,7 @@
         }
       }
     },
-    "crushed_tomatoes_canned": {
+    "crushed_tomatoes": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -92068,7 +92068,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_03596",
         "name_fr": "tomate concassée, conserve",
-        "name_en": "crushed tomatoes, canned"
+        "name_en": "crushed tomatoes"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -92122,7 +92122,7 @@
         }
       }
     },
-    "diced_tomatoes_canned": {
+    "diced_tomatoes": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -92131,7 +92131,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05851",
         "name_fr": "tomate en dés, conserve",
-        "name_en": "diced tomatoes, canned"
+        "name_en": "diced tomatoes"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -92182,7 +92182,7 @@
         }
       }
     },
-    "stewed_tomatoes_canned": {
+    "stewed_tomatoes": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -92190,8 +92190,8 @@
         "cat2_fr": "TOMATES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05852",
-        "name_fr": "tomate étuvée, conserve",
-        "name_en": "stewed tomatoes, canned"
+        "name_fr": "tomate, conserve",
+        "name_en": "stewed tomatoes"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -94540,7 +94540,7 @@
         }
       }
     },
-    "mature_spinach": {
+    "spinach": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -94548,8 +94548,8 @@
         "cat2_fr": "ÉPINARDS",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_03683",
-        "name_fr": "épinard mature",
-        "name_en": "mature spinach"
+        "name_fr": "épinard",
+        "name_en": "spinach"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -94666,7 +94666,7 @@
         }
       }
     },
-    "baby_spinach": {
+    "spinach_raw_bebe": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -94675,7 +94675,7 @@
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05846",
         "name_fr": "épinard jeunes pousses",
-        "name_en": "baby spinach"
+        "name_en": "spinach"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -94793,7 +94793,7 @@
         }
       }
     },
-    "spinach_boiled": {
+    "spinach_boiled_frais": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -94801,8 +94801,8 @@
         "cat2_fr": "ÉPINARDS",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_03692",
-        "name_fr": "épinard bouilli",
-        "name_en": "spinach, boiled"
+        "name_fr": "épinard",
+        "name_en": "spinach"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -94885,8 +94885,8 @@
         "cat2_fr": "ÉPINARDS",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05861",
-        "name_fr": "épinard bouilli, conserve",
-        "name_en": "spinach, boiled, canned"
+        "name_fr": "épinard",
+        "name_en": "spinach"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -94960,7 +94960,7 @@
         }
       }
     },
-    "spinach": {
+    "spinach_cooked": {
       "taxonomy": {
         "cat1": "vegetables",
         "cat1_fr": "LÉGUMES",
@@ -96886,7 +96886,7 @@
         }
       }
     },
-    "yardlong_mature_seeds_raw": {
+    "yardlong_mature_seeds": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -96894,8 +96894,8 @@
         "cat2_fr": "DOLIQUES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05770",
-        "name_fr": "dolique asperge, grains mûrs, cru",
-        "name_en": "yardlong, mature seeds, raw"
+        "name_fr": "dolique asperge, grains mûrs",
+        "name_en": "yardlong, mature seeds"
       },
       "ingredient_type": "node",
       "variant_dimensions": [
@@ -106631,7 +106631,7 @@
         }
       }
     },
-    "french_bean_mature_seeds_raw": {
+    "french_bean_mature_seeds": {
       "taxonomy": {
         "cat1": "legumes",
         "cat1_fr": "LÉGUMINEUSES",
@@ -106639,8 +106639,8 @@
         "cat2_fr": "HARICOTS",
         "cat2_type": "leaf",
         "v32_id": "ing_05772",
-        "name_fr": "haricot, grains mûrs, cru",
-        "name_en": "french bean, mature seeds, raw"
+        "name_fr": "haricot, grains mûrs",
+        "name_en": "french bean, mature seeds"
       },
       "ingredient_type": "leaf",
       "variant_dimensions": [
@@ -131183,7 +131183,7 @@
         }
       }
     },
-    "plain_omelette_homemade": {
+    "omelette_homemade": {
       "taxonomy": {
         "cat1": "prepared_dishes_and_mixes",
         "cat1_fr": "PLATS CUISINÉS & PRÉPARATIONS",
@@ -131191,8 +131191,8 @@
         "cat2_fr": "ŒUFS PRÉPARÉS",
         "cat2_type": "ombrelle",
         "v32_id": "ing_05726",
-        "name_fr": "omelette nature faite maison",
-        "name_en": "plain omelette, homemade"
+        "name_fr": "omelette faite maison",
+        "name_en": "omelette, homemade"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -131414,7 +131414,7 @@
         }
       }
     },
-    "fried_egg": {
+    "egg_au_plat": {
       "taxonomy": {
         "cat1": "prepared_dishes_and_mixes",
         "cat1_fr": "PLATS CUISINÉS & PRÉPARATIONS",
@@ -131422,8 +131422,8 @@
         "cat2_fr": "ŒUFS PRÉPARÉS",
         "cat2_type": "ombrelle",
         "v32_id": "ing_05745",
-        "name_fr": "œuf au plat",
-        "name_en": "fried egg"
+        "name_fr": "œuf",
+        "name_en": "egg"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -131577,7 +131577,7 @@
         }
       }
     },
-    "poached_egg": {
+    "egg_poche": {
       "taxonomy": {
         "cat1": "prepared_dishes_and_mixes",
         "cat1_fr": "PLATS CUISINÉS & PRÉPARATIONS",
@@ -131585,8 +131585,8 @@
         "cat2_fr": "ŒUFS PRÉPARÉS",
         "cat2_type": "ombrelle",
         "v32_id": "ing_05747",
-        "name_fr": "œuf poché",
-        "name_en": "poached egg"
+        "name_fr": "œuf",
+        "name_en": "egg"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -131656,7 +131656,7 @@
         }
       }
     },
-    "scrambled_egg": {
+    "egg_brouille": {
       "taxonomy": {
         "cat1": "prepared_dishes_and_mixes",
         "cat1_fr": "PLATS CUISINÉS & PRÉPARATIONS",
@@ -131664,8 +131664,8 @@
         "cat2_fr": "ŒUFS PRÉPARÉS",
         "cat2_type": "ombrelle",
         "v32_id": "ing_05748",
-        "name_fr": "œuf brouillé",
-        "name_en": "scrambled egg"
+        "name_fr": "œuf",
+        "name_en": "egg"
       },
       "ingredient_type": "ombrelle",
       "variant_dimensions": [
@@ -147973,7 +147973,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05887",
-        "name_fr": "neufchâtel (style américain)",
+        "name_fr": "neufchâtel",
         "name_en": "neufchatel (American style)"
       },
       "ingredient_type": "node",
@@ -148131,7 +148131,7 @@
         "cat2_fr": "FROMAGES",
         "cat2_type": "axe_nodes",
         "v32_id": "ing_05889",
-        "name_fr": "fromage suisse (style canadien)",
+        "name_fr": "fromage suisse",
         "name_en": "swiss cheese (Canadian style)"
       },
       "ingredient_type": "node",

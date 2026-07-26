@@ -1288,9 +1288,9 @@
     "cooking_variants": {
       "raw": "cauliflower",
       "default": "cauliflower",
-      "boiled": "cauliflower_boiled",
-      "cooked": "cauliflower_boiled",
-      "default_cooked": "cauliflower_boiled"
+      "boiled": "cauliflower_boiled_flower_frais",
+      "cooked": "cauliflower_boiled_flower_frais",
+      "default_cooked": "cauliflower_boiled_flower_frais"
     }
   },
   "celery": {
@@ -1519,33 +1519,33 @@
   "chickpea": {
     "nutri_id_v1": "chickpeas_garbanzo_beans_bengal_gram_dried",
     "original_status": "manual",
-    "group_id_v2": "chickpeas",
+    "group_id_v2": "chickpea",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "canonical_name_en": "chickpeas",
     "status": "AUTO_HIGH",
     "note": "Override 'chickpea_dried' introuvable dans dict v2",
     "cooking_variants": {
-      "raw": "chickpeas",
-      "default": "chickpeas",
-      "boiled": "chickpeas_boiled_salted",
-      "cooked": "chickpeas_boiled_salted",
-      "default_cooked": "chickpeas_boiled_salted"
+      "raw": "chickpea",
+      "default": "chickpea",
+      "boiled": "chickpea_boiled_salted",
+      "cooked": "chickpea_boiled_salted",
+      "default_cooked": "chickpea_boiled_salted"
     },
     "cat_id": "legumes"
   },
   "chickpea/cooked": {
     "nutri_id_v1": "chickpeas_garbanzo_beans_bengal_gram_boiled",
     "original_status": "manual",
-    "group_id_v2": "chickpeas",
+    "group_id_v2": "chickpea",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "canonical_name_en": "chickpeas",
     "status": "AUTO_HIGH",
     "cat_id": "legumes",
     "cooking_variants": {
-      "raw": "chickpeas",
-      "default": "chickpeas"
+      "raw": "chickpea",
+      "default": "chickpea"
     }
   },
   "chickpea_flour": {
@@ -2050,15 +2050,15 @@
   "crouton": {
     "nutri_id_v1": "plain_croutons",
     "original_status": "manual",
-    "group_id_v2": "plain_croutons",
+    "group_id_v2": "croutons",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "canonical_name_en": "plain croutons",
     "status": "AUTO_HIGH",
     "cat_id": "cereals_and_grains",
     "cooking_variants": {
-      "raw": "plain_croutons",
-      "default": "plain_croutons"
+      "raw": "croutons",
+      "default": "croutons"
     }
   },
   "cucumber": {
@@ -2321,18 +2321,18 @@
   "dried_chickpeas": {
     "nutri_id_v1": "chickpeas_garbanzo_beans_bengal_gram_dried",
     "original_status": "manual",
-    "group_id_v2": "chickpeas_raw_dried",
+    "group_id_v2": "chickpea_raw_dried",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "canonical_name_en": "chickpeas",
     "status": "AUTO_HIGH",
     "cat_id": "legumes",
     "cooking_variants": {
-      "raw": "chickpeas_raw_dried",
-      "default": "chickpeas_raw_dried",
-      "boiled": "chickpeas",
-      "cooked": "chickpeas",
-      "default_cooked": "chickpeas"
+      "raw": "chickpea_raw_dried",
+      "default": "chickpea_raw_dried",
+      "boiled": "chickpea",
+      "cooked": "chickpea",
+      "default_cooked": "chickpea"
     }
   },
   "dried_chili": {
@@ -2435,9 +2435,9 @@
     "cooking_variants": {
       "raw": "egg_raw",
       "default": "egg_raw",
-      "boiled": "scrambled_egg",
-      "cooked": "scrambled_egg",
-      "default_cooked": "scrambled_egg"
+      "boiled": "egg_brouille",
+      "cooked": "egg_brouille",
+      "default_cooked": "egg_brouille"
     },
     "cat_id": "eggs"
   },
@@ -6490,41 +6490,41 @@
     "cooking_variants": {
       "raw": "spinach",
       "default": "spinach",
-      "boiled": "spinach_boiled",
-      "cooked": "spinach_boiled",
-      "default_cooked": "spinach_boiled"
+      "boiled": "spinach_boiled_frais",
+      "cooked": "spinach_boiled_frais",
+      "default_cooked": "spinach_boiled_frais"
     },
     "cat_id": "vegetables"
   },
   "spinach/cooked": {
     "nutri_id_v1": "spinach",
     "original_status": "prefix",
-    "group_id_v2": "spinach_boiled",
+    "group_id_v2": "spinach_boiled_frais",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "canonical_name_en": "spinach, boiled",
     "status": "AUTO_HIGH",
     "cat_id": "vegetables",
     "cooking_variants": {
-      "raw": "spinach_boiled",
-      "default": "spinach_boiled"
+      "raw": "spinach_boiled_frais",
+      "default": "spinach_boiled_frais"
     }
   },
   "spinach/raw": {
     "nutri_id_v1": "spinach",
     "original_status": "prefix",
-    "group_id_v2": "mature_spinach",
+    "group_id_v2": "spinach",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "canonical_name_en": "mature spinach",
     "status": "AUTO_HIGH",
     "cat_id": "vegetables",
     "cooking_variants": {
-      "raw": "mature_spinach",
-      "default": "mature_spinach",
-      "boiled": "spinach_boiled",
-      "cooked": "spinach_boiled",
-      "default_cooked": "spinach_boiled"
+      "raw": "spinach",
+      "default": "spinach",
+      "boiled": "spinach_boiled_frais",
+      "cooked": "spinach_boiled_frais",
+      "default_cooked": "spinach_boiled_frais"
     }
   },
   "spirulina": {
@@ -8297,14 +8297,14 @@
     "cat_id": "vegetables"
   },
   "cheese/parmesan": {
-    "group_id_v2": "parmesan_grated_dried_vache",
+    "group_id_v2": "parmesan_grated_dried_cow",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "status": "AUTO_HIGH",
     "canonical_name_en": "parmesan",
     "cooking_variants": {
-      "raw": "parmesan_grated_dried_vache",
-      "default": "parmesan_grated_dried_vache"
+      "raw": "parmesan_grated_dried_cow",
+      "default": "parmesan_grated_dried_cow"
     },
     "cat_id": "dairy_products"
   },
@@ -9881,15 +9881,15 @@
     }
   },
   "walnuts/candied": {
-    "group_id_v2": "walnut_candied",
+    "group_id_v2": "grenoble_walnut_igp_candied",
     "confidence": 1.0,
     "method": "manual_editor_html",
     "status": "AUTO_HIGH",
     "canonical_name_en": "walnut",
     "cat_id": "nuts_and_seeds",
     "cooking_variants": {
-      "raw": "walnut_candied",
-      "default": "walnut_candied"
+      "raw": "grenoble_walnut_igp_candied",
+      "default": "grenoble_walnut_igp_candied"
     }
   },
   "walnuts": {
