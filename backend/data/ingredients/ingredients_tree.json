@@ -46,7 +46,7 @@
           "conditioning_types": "Liste de flags sémantiques pour le scoring. Valeurs possibles : 'EN CONSERVE / APPERTISÉ', 'SEL AJOUTÉ', 'SUCRE AJOUTÉ'. Renseigné automatiquement si axes.conditionnement ∈ {conserve, appertisé, sous pression} ou axes.assaisonnement ∈ {salé, sucré}.",
           "variants": "Liste des variants sources (voir structure variant ci-dessous)",
           "axes_fr": "Dictionnaire de propriétés décrivant l'état précis de l'ingrédient en français. Porté au niveau du GROUPE (ing_) et non du variant, car un ing_ regroupe par construction l'ensemble des variants (sources) qui partagent exactement les mêmes axes — c'est ce qui définit l'appartenance au groupe, pas l'inverse. Deux ing_ avec le même canonical_name_fr mais des axes différents sont des entrées distinctes (ex. 'avoine' cru vs 'avoine' en farine). Clés possibles : etat_cuisson, etat_thermique, forme, partie, conditionnement, assaisonnement, traitement, maturite, teneur_MG, origine, milieu_conservation, procede_cuisson, teneur_sel, affinage, concentration_sirop, couleur, espece, style, taille, variete. Voir axes_vocabulary pour le détail.",
-          "axes_en": "Miroir anglais de axes_fr, porté au même niveau (le groupe ing_) et pour la même raison : le groupe regroupe les variants qui partagent ces axes. Clés associées (miroir des clés axes_fr) : cooking_state (etat_cuisson), thermal_state (etat_thermique), form (forme), part (partie), packaging (conditionnement), seasoning (assaisonnement), treatment (traitement), ripeness (maturite), fat_content (teneur_MG), origin (origine), storage_medium (milieu_conservation), cooking_process (procede_cuisson). Les axes ajoutés plus récemment (teneur_sel, affinage, concentration_sirop, couleur, espece, style, taille, variete) ne sont pas traduits et conservent le même nom de clé en français et en anglais.",
+          "axes_en": "Miroir anglais de axes_fr, porté au même niveau (le groupe ing_) et pour la même raison : le groupe regroupe les variants qui partagent ces axes. Clés associées (miroir des clés axes_fr) : cooking_state (etat_cuisson), thermal_state (etat_thermique), form (forme), part (partie), packaging (conditionnement), seasoning (assaisonnement), treatment (traitement), ripeness (maturite), fat_content (teneur_MG), origin (origine), storage_medium (milieu_conservation), cooking_process (procede_cuisson). Les axes ajoutés plus récemment (teneur_sel, affinage, concentration_sirop, couleur, espece, style, taille, variete) conservent le même nom de clé en français et en anglais (non traduit), mais leurs VALEURS sont bien traduites en anglais comme les autres axes (ex. petite→baby, mi-affiné→semi-aged, crémeux→creamy) — une lacune de traduction sur ces valeurs a existé un temps (corrigée), sauf pour espece (nom scientifique latin, universel) et quelques noms propres/variétés gardés tels quels par lisibilité (ex. Charentais, tamari, pie pumpkin).",
           "preferred_source": "String. Source de données prioritaire pré-calculée ('CIQUAL', 'USDA' ou 'CNF') définie pour guider les scripts de jointures rapides et le fallback initial.",
           "aliases_fr": "Liste de strings (optionnel). Noms alternatifs ou synonymes commerciaux en français associés à ce groupe d'ingrédients permettant d'améliorer la résolution lexicale (ex: 'brugnon' pour 'nectarine')."
         }
@@ -11756,7 +11756,7 @@
               "axes_en": {
                 "packaging": "canned",
                 "storage_medium": "in_syrup",
-                "concentration_sirop": "l_ger"
+                "concentration_sirop": "light"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -11936,7 +11936,7 @@
               "axes_en": {
                 "packaging": "canned",
                 "storage_medium": "in_syrup",
-                "concentration_sirop": "pais"
+                "concentration_sirop": "heavy"
               },
               "preferred_source": "CNF",
               "variants": [
@@ -12153,8 +12153,8 @@
             },
             {
               "id": "ing_05854",
-              "canonical_name_fr": "ananas (variété extra sucrée)",
-              "canonical_name_en": "pineapple (extra sweet variety)",
+              "canonical_name_fr": "ananas",
+              "canonical_name_en": "pineapple",
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
@@ -12164,7 +12164,7 @@
               },
               "axes_en": {
                 "cooking_state": "raw",
-                "variete": "extra_sucr_e"
+                "variete": "extra sweet"
               },
               "preferred_source": "CNF",
               "variants": [
@@ -16319,7 +16319,7 @@
               },
               "axes_en": {
                 "cooking_state": "raw",
-                "variete": "charentais"
+                "variete": "Charentais"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -16831,7 +16831,7 @@
               },
               "axes_en": {
                 "cooking_state": "raw",
-                "variete": "m_rier"
+                "variete": "mulberry"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -18783,7 +18783,7 @@
               "axes_en": {
                 "packaging": "canned",
                 "storage_medium": "in_syrup",
-                "concentration_sirop": "l_ger"
+                "concentration_sirop": "light"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -18823,7 +18823,7 @@
               "axes_en": {
                 "packaging": "canned",
                 "storage_medium": "in_syrup",
-                "concentration_sirop": "pais"
+                "concentration_sirop": "heavy"
               },
               "preferred_source": "CNF",
               "variants": [
@@ -20414,7 +20414,7 @@
             {
               "id": "ing_01845",
               "canonical_name_fr": "pêche, conserve",
-              "canonical_name_en": "peach, canned",
+              "canonical_name_en": "peach",
               "indus_conditionne": true,
               "indus_conditionne_only": true,
               "conditioning_types": [
@@ -20452,7 +20452,7 @@
             {
               "id": "ing_05849",
               "canonical_name_fr": "pêche, conserve",
-              "canonical_name_en": "peach, canned",
+              "canonical_name_en": "peach",
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [
@@ -20954,7 +20954,7 @@
               "axes_en": {
                 "seasoning": "plain",
                 "form": "juice",
-                "couleur": "vert"
+                "couleur": "green"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -26880,8 +26880,8 @@
             },
             {
               "id": "ing_05862",
-              "canonical_name_fr": "carotte (petite)",
-              "canonical_name_en": "baby carrot",
+              "canonical_name_fr": "carotte",
+              "canonical_name_en": "carrot",
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
@@ -26891,7 +26891,7 @@
               },
               "axes_en": {
                 "cooking_state": "raw",
-                "taille": "petite"
+                "taille": "baby"
               },
               "preferred_source": "CNF",
               "variants": [
@@ -33502,7 +33502,7 @@
               },
               "axes_en": {
                 "cooking_state": "raw",
-                "variete": "scarole"
+                "variete": "escarole"
               },
               "preferred_source": "CNF",
               "variants": [
@@ -42118,7 +42118,7 @@
             {
               "id": "ing_03596",
               "canonical_name_fr": "tomate concassée, conserve",
-              "canonical_name_en": "crushed tomatoes, canned",
+              "canonical_name_en": "crushed tomatoes",
               "indus_conditionne": true,
               "indus_conditionne_only": true,
               "conditioning_types": [
@@ -42158,7 +42158,7 @@
             {
               "id": "ing_05851",
               "canonical_name_fr": "tomate en dés, conserve",
-              "canonical_name_en": "diced tomatoes, canned",
+              "canonical_name_en": "diced tomatoes",
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [
@@ -42197,8 +42197,8 @@
             },
             {
               "id": "ing_05852",
-              "canonical_name_fr": "tomate étuvée, conserve",
-              "canonical_name_en": "stewed tomatoes, canned",
+              "canonical_name_fr": "tomate, conserve",
+              "canonical_name_en": "stewed tomatoes",
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [
@@ -43348,7 +43348,7 @@
             {
               "id": "ing_05846",
               "canonical_name_fr": "épinard jeunes pousses",
-              "canonical_name_en": "baby spinach",
+              "canonical_name_en": "spinach",
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
@@ -51768,7 +51768,7 @@
                 "teneur_sel": "réduit en sodium"
               },
               "axes_en": {
-                "teneur_sel": "r_duit_en_sodium"
+                "teneur_sel": "reduced sodium"
               },
               "preferred_source": "CNF",
               "variants": [
@@ -54144,7 +54144,7 @@
               "axes_en": {
                 "form": "butter",
                 "origin": "plant",
-                "teneur_sel": "r_duit_en_sodium"
+                "teneur_sel": "reduced sodium"
               },
               "preferred_source": "CNF",
               "variants": [
@@ -54405,7 +54405,7 @@
                 "seasoning": "salted",
                 "origin": "plant",
                 "form": "butter",
-                "style": "croquant"
+                "style": "crunchy"
               },
               "preferred_source": "CNF",
               "variants": [
@@ -54529,7 +54529,7 @@
               "axes_en": {
                 "form": "butter",
                 "origin": "plant",
-                "style": "cr_meux"
+                "style": "creamy"
               },
               "preferred_source": "USDA",
               "variants": [
@@ -54636,8 +54636,8 @@
             },
             {
               "id": "ing_05764",
-              "canonical_name_fr": "cacahuète (arachide), crémeuse",
-              "canonical_name_en": "peanut, creamy",
+              "canonical_name_fr": "cacahuète (arachide)",
+              "canonical_name_en": "peanut",
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [
@@ -54653,7 +54653,7 @@
                 "seasoning": "salted",
                 "origin": "plant",
                 "form": "butter",
-                "style": "cr_meux"
+                "style": "creamy"
               },
               "preferred_source": "CNF",
               "variants": [
@@ -54696,7 +54696,7 @@
                 "origine": "végétal"
               },
               "axes_en": {
-                "teneur_sel": "r_gulier",
+                "teneur_sel": "regular",
                 "form": "butter",
                 "origin": "plant"
               },
@@ -61193,7 +61193,7 @@
               },
               "axes_en": {
                 "packaging": "canned",
-                "teneur_sel": "faible_en_sodium"
+                "teneur_sel": "low sodium"
               },
               "preferred_source": "CNF",
               "variants": [
@@ -61597,7 +61597,7 @@
               },
               "axes_en": {
                 "packaging": "pre_packaged",
-                "teneur_sel": "faible"
+                "teneur_sel": "low"
               },
               "preferred_source": "CNF",
               "variants": [
@@ -65345,7 +65345,7 @@
               },
               "axes_en": {
                 "origin": "goat",
-                "affinage": "mi_affin"
+                "affinage": "semi-aged"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -66057,7 +66057,7 @@
             {
               "id": "ing_05216",
               "canonical_name_fr": "Mimolette demi-vieille",
-              "canonical_name_en": "Mimolette, semi-aged",
+              "canonical_name_en": "Mimolette",
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
@@ -66067,7 +66067,7 @@
               },
               "axes_en": {
                 "origin": "cow",
-                "affinage": "mi_affin"
+                "affinage": "semi-aged"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -66124,8 +66124,8 @@
             },
             {
               "id": "ing_05220",
-              "canonical_name_fr": "Mimolette jeune",
-              "canonical_name_en": "Mimolette, young",
+              "canonical_name_fr": "Mimolette",
+              "canonical_name_en": "Mimolette",
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
@@ -66135,7 +66135,7 @@
               },
               "axes_en": {
                 "origin": "cow",
-                "affinage": "jeune"
+                "affinage": "young"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -67960,15 +67960,15 @@
             },
             {
               "id": "ing_05887",
-              "canonical_name_fr": "neufchâtel (style américain)",
-              "canonical_name_en": "neufchatel (American style)",
+              "canonical_name_fr": "neufchâtel",
+              "canonical_name_en": "neufchatel",
               "axes_fr": {
                 "origine": "vache",
                 "style": "américain"
               },
               "axes_en": {
                 "origin": "cow",
-                "style": "am_ricain"
+                "style": "American"
               },
               "preferred_source": "CNF",
               "variants": [
@@ -68028,15 +68028,15 @@
             },
             {
               "id": "ing_05889",
-              "canonical_name_fr": "fromage suisse (style canadien)",
-              "canonical_name_en": "swiss cheese (Canadian style)",
+              "canonical_name_fr": "fromage suisse",
+              "canonical_name_en": "swiss cheese",
               "axes_fr": {
                 "origine": "vache",
                 "style": "canadien"
               },
               "axes_en": {
                 "origin": "cow",
-                "style": "canadien"
+                "style": "Canadian"
               },
               "preferred_source": "CNF",
               "variants": [
