@@ -7,7 +7,7 @@
     "stats": {
       "total_cat1": 15,
       "total_cat2": 225,
-      "total_ingredient_groups": 1884,
+      "total_ingredient_groups": 1885,
       "total_variants": 2155,
       "sources": [
         "CIQUAL",
@@ -12395,8 +12395,23 @@
               "axes_en": {
                 "cooking_state": "raw"
               },
-              "preferred_source": "CNF",
+              "preferred_source": "USDA",
               "variants": [
+                {
+                  "id": "var_01315",
+                  "source": "USDA",
+                  "source_id": "2346411",
+                  "name_fr": "bleuet",
+                  "name_en": "blueberry",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Blueberries, raw",
+                  "source_name_fr": null,
+                  "source_rank": 2,
+                  "is_primary": true
+                },
                 {
                   "id": "var_01317",
                   "source": "CNF",
@@ -12410,7 +12425,7 @@
                   "source_name_en": "Blueberry, raw",
                   "source_name_fr": "Bleuet, cru",
                   "source_rank": 3,
-                  "is_primary": true
+                  "is_primary": false
                 }
               ]
             },
@@ -16530,7 +16545,7 @@
                   "source": "CIQUAL",
                   "source_id": "13028",
                   "name_fr": "myrtille",
-                  "name_en": "blueberry",
+                  "name_en": "bilberry",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes_en": {},
@@ -16539,43 +16554,13 @@
                   "source_name_en": null,
                   "source_rank": 1,
                   "is_primary": true
-                },
-                {
-                  "id": "var_01315",
-                  "source": "USDA",
-                  "source_id": "2346411",
-                  "name_fr": "myrtille",
-                  "name_en": "blueberry",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Blueberries, raw",
-                  "source_name_fr": null,
-                  "source_rank": 2,
-                  "is_primary": false
-                },
-                {
-                  "id": "var_05751",
-                  "source": "CNF",
-                  "source_id": "501662",
-                  "name_fr": "myrtille",
-                  "name_en": "blueberry",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Huckleberries, raw",
-                  "source_name_fr": "Airelle myrtille, crue",
-                  "source_rank": 3,
-                  "is_primary": false
                 }
               ]
             },
             {
               "id": "ing_01324",
               "canonical_name_fr": "myrtille",
-              "canonical_name_en": "blueberry",
+              "canonical_name_en": "bilberry",
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
@@ -16592,7 +16577,7 @@
                   "source": "CIQUAL",
                   "source_id": "31068",
                   "name_fr": "myrtille",
-                  "name_en": "blueberry",
+                  "name_en": "bilberry",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes_en": {},
@@ -16600,6 +16585,38 @@
                   "source_name_fr": "Confiture de myrtille (extra ou classique)",
                   "source_name_en": null,
                   "source_rank": 1,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_05892",
+              "canonical_name_fr": "airelle",
+              "canonical_name_en": "huckleberry",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "etat_cuisson": "cru"
+              },
+              "axes_en": {
+                "cooking_state": "raw"
+              },
+              "preferred_source": "CNF",
+              "variants": [
+                {
+                  "id": "var_05751",
+                  "source": "CNF",
+                  "source_id": "501662",
+                  "name_fr": "airelle",
+                  "name_en": "huckleberry",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Huckleberries, raw",
+                  "source_name_fr": "Airelle myrtille, crue",
+                  "source_rank": 3,
                   "is_primary": true
                 }
               ]
