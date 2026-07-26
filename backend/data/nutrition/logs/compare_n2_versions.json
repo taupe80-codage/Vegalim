@@ -1,198 +1,66 @@
 {
   "summary": {
-    "old_bases": 1884,
+    "old_bases": 1885,
     "new_bases": 1885,
-    "regressions": 29,
-    "nouveautes": 30,
-    "nutr_diffs": 6,
+    "regressions": 24,
+    "nouveautes": 24,
+    "nutr_diffs": 0,
     "recipe_keys_missing_new": 372,
-    "recipe_keys_missing_old": 369
+    "recipe_keys_missing_old": 372
   },
   "regressions": [
-    "bananas",
-    "blueberry_jam",
-    "chickpeas",
-    "chickpeas_boiled_salted",
-    "chickpeas_canned",
-    "chickpeas_raw_dried",
-    "chickpeas_salted_canned",
-    "goat_cheese",
-    "goat_cheese_aged_ch_vre",
-    "goat_cheese_fresh_ch_vre",
-    "italian_beans_green_or_yellow",
-    "lupins",
-    "mangetout_peas",
-    "oats",
-    "plantain",
-    "plantains",
-    "potatoes",
-    "red_kidney",
-    "spanish_peanuts",
-    "valencia_peanuts",
-    "walnut_candied",
-    "walnut_dried",
-    "walnut_raw",
-    "withe_bean",
-    "yellow_peaches",
-    "yogourt",
-    "yogourt_greek_style",
-    "yogourt_greek_style_yogurt_plain_0pct",
-    "yogourt_greek_style_yogurt_plain_10pct"
-  ],
-  "nouveautes": [
-    "banana_raw_overripe",
-    "bilberry_jam",
-    "chickpea_boiled_salted",
-    "chickpea_canned",
-    "chickpea_flour",
-    "chickpea_raw_dried",
-    "chickpea_salted_canned",
-    "goat_cheese_fresh",
-    "goat_cheese_lactic",
-    "goat_cheese_semi_dry",
-    "grenoble_walnut_igp",
-    "grenoble_walnut_igp_candied",
-    "grenoble_walnut_igp_raw",
-    "huckleberry",
-    "italian_bean_green_or_yellow_boiled_canned",
-    "kidney_bean_canned",
-    "lupin_boiled_salted",
-    "oat_steel_cut_whole_seed",
-    "plantain_banana_raw",
-    "plantain_banana_raw_ripe",
-    "potato_unsalted_canned",
-    "snow_peas_cooked",
-    "spanish_peanut_roasted_salted_in_oil",
-    "valencia_peanut_roasted_salted_in_oil",
-    "white_bean_canned",
-    "yellow_peach_raw_skinless",
-    "yogurt_greek_style",
+    "buffalo_mozzarella_demi_cr_m_vache",
+    "buffalo_mozzarella_frais_22_5pct_vache",
+    "buffalo_mozzarella_frais_25pct_vache",
+    "camembert_vache",
+    "caraway_vache",
+    "cottage_1_m_f_lactose_reduced_vache",
+    "ewes_milk_yogurt_yogurt_plain_6pct",
+    "faisselle_6pct_vache",
+    "fromage_blanc_plain_7_5pct_vache",
+    "fromage_blanc_sweetened_vache",
+    "parmesan_grated_dried_vache",
+    "petit_suisse_fresh_plain_10pct_vache",
+    "petit_suisse_fresh_plain_4pct_vache",
+    "provolone_sliced_vache",
+    "raclette_smoked_vache",
+    "wheat_all_purpose_flour_flour_enrichi_non_blanchi",
+    "wheat_all_purpose_flour_flour_non_enrichi_non_blanchi",
     "yogurt_greek_style_yogurt_plain_0pct",
     "yogurt_greek_style_yogurt_plain_10pct",
+    "yogurt_yogurt_fermented_0pct",
+    "yogurt_yogurt_fermented_4_5pct",
+    "yogurt_yogurt_fermented_sweetened",
+    "yogurt_yogurt_plain_0pct",
     "yogurt_yogurt_plain_3pct"
   ],
-  "nutr_diffs": [
-    {
-      "key": "blueberry",
-      "diffs": {
-        "sodium_mg": {
-          "old": 1.0,
-          "new": 0.0,
-          "delta_pct": 100.0
-        }
-      }
-    },
-    {
-      "key": "chickpea",
-      "diffs": {
-        "calories_kcal": {
-          "old": 359.0,
-          "new": 148.0,
-          "delta_pct": 58.8
-        },
-        "protein_g": {
-          "old": 22.4,
-          "new": 8.31,
-          "delta_pct": 62.9
-        },
-        "carbs_g": {
-          "old": 47.0,
-          "new": 17.7,
-          "delta_pct": 62.3
-        },
-        "fat_g": {
-          "old": 6.69,
-          "new": 3.0,
-          "delta_pct": 55.2
-        },
-        "fiber_g": {
-          "old": 10.8,
-          "new": 8.2,
-          "delta_pct": 24.1
-        },
-        "sugar_g": {
-          "old": 10.9,
-          "new": 0.3,
-          "delta_pct": 97.2
-        },
-        "fa_saturated_g": {
-          "old": 0.69,
-          "new": 0.46,
-          "delta_pct": 33.3
-        },
-        "sodium_mg": {
-          "old": 64.0,
-          "new": 10.9,
-          "delta_pct": 83.0
-        }
-      }
-    },
-    {
-      "key": "italian_bean_green_or_yellow",
-      "diffs": {
-        "fat_g": {
-          "old": 0.28,
-          "new": 0.22,
-          "delta_pct": 21.4
-        },
-        "sugar_g": {
-          "old": 1.55,
-          "new": 3.26,
-          "delta_pct": 110.3
-        },
-        "sodium_mg": {
-          "old": 1.0,
-          "new": 6.0,
-          "delta_pct": 500.0
-        }
-      }
-    },
-    {
-      "key": "spanish_peanut",
-      "diffs": {
-        "sodium_mg": {
-          "old": 433.0,
-          "new": 6.0,
-          "delta_pct": 98.6
-        }
-      }
-    },
-    {
-      "key": "valencia_peanut",
-      "diffs": {
-        "sodium_mg": {
-          "old": 772.0,
-          "new": 6.0,
-          "delta_pct": 99.2
-        }
-      }
-    },
-    {
-      "key": "yellow_peach",
-      "diffs": {
-        "protein_g": {
-          "old": 0.69,
-          "new": 0.91,
-          "delta_pct": 31.9
-        },
-        "fat_g": {
-          "old": 0.5,
-          "new": 0.27,
-          "delta_pct": 46.0
-        },
-        "fiber_g": {
-          "old": 1.0,
-          "new": 1.5,
-          "delta_pct": 50.0
-        },
-        "sodium_mg": {
-          "old": 5.0,
-          "new": 13.0,
-          "delta_pct": 160.0
-        }
-      }
-    }
+  "nouveautes": [
+    "buffalo_mozzarella_demi_cr_m_cow",
+    "buffalo_mozzarella_frais_22_5pct_cow",
+    "buffalo_mozzarella_frais_25pct_cow",
+    "camembert_cow",
+    "caraway_cow",
+    "cottage_1_m_f_lactose_reduced_cow",
+    "ewes_milk_yogurt_plain_6pct",
+    "faisselle_6pct_cow",
+    "fromage_blanc_plain_7_5pct_cow",
+    "fromage_blanc_sweetened_cow",
+    "parmesan_grated_dried_cow",
+    "petit_suisse_fresh_plain_10pct_cow",
+    "petit_suisse_fresh_plain_4pct_cow",
+    "provolone_sliced_cow",
+    "raclette_smoked_cow",
+    "wheat_all_purpose_flour_enrichi_non_blanchi",
+    "wheat_all_purpose_flour_non_enrichi_non_blanchi",
+    "yogurt_fermented_0pct",
+    "yogurt_fermented_4_5pct",
+    "yogurt_fermented_sweetened",
+    "yogurt_greek_style_plain_0pct",
+    "yogurt_greek_style_plain_10pct",
+    "yogurt_plain_0pct",
+    "yogurt_plain_3pct"
   ],
+  "nutr_diffs": [],
   "recipe_keys_missing_new": [
     "acai_puree",
     "active_dry_yeast",
@@ -622,7 +490,6 @@
     "cheese_curds",
     "chestnut_raw",
     "chia_seeds",
-    "chickpea_flour",
     "chili_paste",
     "chili_pepper",
     "chilli_pepper_raw",
@@ -702,6 +569,8 @@
     "glass_noodles",
     "gnocchi",
     "gnocchi_vegan",
+    "goat_cheese",
+    "goat_cheese_fresh_ch_vre",
     "gochujang",
     "granola",
     "great_northern_dried",
@@ -774,6 +643,7 @@
     "noodles",
     "nutmeg_whole",
     "oat_milk",
+    "oats",
     "oil",
     "okonomiyaki_sauce",
     "olive_oil",
@@ -806,6 +676,7 @@
     "pistou",
     "pizza_dough",
     "plain_yogurt",
+    "plantain",
     "pomegranate_molasses",
     "porcini",
     "powdered_sugar",

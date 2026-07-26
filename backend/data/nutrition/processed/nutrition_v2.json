@@ -2,7 +2,7 @@
   "schema_version": "7.1",
   "schema_family": "nutrition_v2",
   "built_from": "raw_sources_direct",
-  "built_at": "2026-07-26T15:50:32.777652+00:00",
+  "built_at": "2026-07-26T17:00:41.945406+00:00",
   "pipeline": "build_n2_direct.py",
   "raw_sources": {
     "CIQUAL": {
@@ -10456,7 +10456,7 @@
         }
       }
     },
-    "wheat_all_purpose_flour_flour_enrichi_non_blanchi": {
+    "wheat_all_purpose_flour_enrichi_non_blanchi": {
       "taxonomy": {
         "cat1": "cereals_and_grains",
         "cat1_fr": "CÉRÉALES & GRAINS",
@@ -10572,7 +10572,7 @@
         }
       }
     },
-    "wheat_all_purpose_flour_flour_non_enrichi_non_blanchi": {
+    "wheat_all_purpose_flour_non_enrichi_non_blanchi": {
       "taxonomy": {
         "cat1": "cereals_and_grains",
         "cat1_fr": "CÉRÉALES & GRAINS",
@@ -137020,13 +137020,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04966",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12761,
           "_v32_ing_id": "ing_04966",
           "_v32_var_id": "var_04967",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 356.0,
           "protein_g": 32.1,
@@ -137086,13 +137086,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04968",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12105,
           "_v32_ing_id": "ing_04968",
           "_v32_var_id": "var_04969",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 404.0,
           "protein_g": 26.7,
@@ -137153,13 +137153,13 @@
       ],
       "_v32_id": "ing_04970",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12526,
           "_v32_ing_id": "ing_04970",
           "_v32_var_id": "var_04971",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 364.0,
           "protein_g": 22.5,
@@ -137206,13 +137206,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04974",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12064,
           "_v32_ing_id": "ing_04974",
           "_v32_var_id": "var_04975",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 355.0,
           "protein_g": 20.9,
@@ -137287,13 +137287,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04976",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12021,
           "_v32_ing_id": "ing_04976",
           "_v32_var_id": "var_04977",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 276.0,
           "protein_g": 21.4,
@@ -137369,13 +137369,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04978",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12022,
           "_v32_ing_id": "ing_04978",
           "_v32_var_id": "var_04979",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 288.0,
           "protein_g": 22.0,
@@ -137454,13 +137454,13 @@
       ],
       "_v32_id": "ing_04980",
       "variants": {
-        "bufflonne": {
+        "buffalo": {
           "_source": "CIQUAL",
           "_source_id": 19591,
           "_v32_ing_id": "ing_04980",
           "_v32_var_id": "var_04981",
           "axes": {
-            "origin": "bufflonne"
+            "origin": "buffalo"
           },
           "calories_kcal": 260.0,
           "protein_g": 14.5,
@@ -137537,13 +137537,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04983",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12072,
           "_v32_ing_id": "ing_04983",
           "_v32_var_id": "var_04984",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 259.0,
           "protein_g": 10.8,
@@ -137622,13 +137622,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04985",
       "variants": {
-        "lait_cru_vache": {
+        "lait_cru_cow": {
           "_source": "CIQUAL",
           "_source_id": 12006,
           "_v32_ing_id": "ing_04985",
           "_v32_var_id": "var_04986",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "treatment": "lait_cru"
           },
           "calories_kcal": 267.0,
@@ -137707,14 +137707,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_04987",
       "variants": {
-        "pasteurized_vache": {
+        "pasteurized_cow": {
           "_source": "CIQUAL",
           "_source_id": 12007,
           "_v32_ing_id": "ing_04987",
           "_v32_var_id": "var_04988",
           "axes": {
             "thermal_state": "pasteurized",
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 275.0,
           "protein_g": 19.2,
@@ -137793,13 +137793,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04989",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12724,
           "_v32_ing_id": "ing_04989",
           "_v32_var_id": "var_04990",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 378.0,
           "protein_g": 25.3,
@@ -137850,13 +137850,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04991",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12722,
           "_v32_ing_id": "ing_04991",
           "_v32_var_id": "var_04992",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 383.0,
           "protein_g": 26.6,
@@ -137910,13 +137910,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04993",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12109,
           "_v32_ing_id": "ing_04993",
           "_v32_var_id": "var_04994",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 363.0,
           "protein_g": 24.7,
@@ -137996,13 +137996,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04995",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12025,
           "_v32_ing_id": "ing_04995",
           "_v32_var_id": "var_04996",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 318.0,
           "protein_g": 18.4,
@@ -138053,13 +138053,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04997",
       "variants": {
-        "ch_vre": {
+        "goat": {
           "_source": "CIQUAL",
           "_source_id": 12830,
           "_v32_ing_id": "ing_04997",
           "_v32_var_id": "var_04998",
           "axes": {
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 305.0,
           "protein_g": 19.4,
@@ -138128,13 +138128,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04999",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12028,
           "_v32_ing_id": "ing_04999",
           "_v32_var_id": "var_05000",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 278.0,
           "protein_g": 17.3,
@@ -138210,13 +138210,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05001",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12726,
           "_v32_ing_id": "ing_05001",
           "_v32_var_id": "var_05002",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 399.0,
           "protein_g": 24.7,
@@ -138279,7 +138279,7 @@
               "_v32_ing_id": "ing_05001",
               "_v32_var_id": "var_05014",
               "axes": {
-                "origin": "vache"
+                "origin": "cow"
               },
               "name_fr": "cheddar",
               "name_en": "cheddar",
@@ -138344,13 +138344,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05003",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CNF",
           "_source_id": 18,
           "_v32_ing_id": "ing_05003",
           "_v32_var_id": "var_05004",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 353.0,
           "protein_g": 21.4,
@@ -138421,13 +138421,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05005",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CNF",
           "_source_id": 19,
           "_v32_ing_id": "ing_05005",
           "_v32_var_id": "var_05006",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 371.0,
           "protein_g": 23.24,
@@ -138498,13 +138498,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05007",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CNF",
           "_source_id": 20,
           "_v32_ing_id": "ing_05007",
           "_v32_var_id": "var_05008",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 334.0,
           "protein_g": 20.75,
@@ -138554,7 +138554,7 @@
         }
       }
     },
-    "camembert_vache": {
+    "camembert_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -138575,13 +138575,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05009",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CNF",
           "_source_id": 21,
           "_v32_ing_id": "ing_05009",
           "_v32_var_id": "var_05010",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 300.0,
           "protein_g": 19.8,
@@ -138631,7 +138631,7 @@
         }
       }
     },
-    "caraway_vache": {
+    "caraway_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -138652,13 +138652,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05011",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CNF",
           "_source_id": 22,
           "_v32_ing_id": "ing_05011",
           "_v32_var_id": "var_05012",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 376.0,
           "protein_g": 25.18,
@@ -138725,13 +138725,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05015",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CNF",
           "_source_id": 23,
           "_v32_ing_id": "ing_05015",
           "_v32_var_id": "var_05016",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 387.0,
           "protein_g": 23.37,
@@ -138799,13 +138799,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05017",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CNF",
           "_source_id": 24,
           "_v32_ing_id": "ing_05017",
           "_v32_var_id": "var_05018",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 394.0,
           "protein_g": 23.76,
@@ -138877,14 +138877,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05019",
       "variants": {
-        "block_vache": {
+        "block_cow": {
           "_source": "USDA",
           "_source_id": 2647443,
           "_v32_ing_id": "ing_05019",
           "_v32_var_id": "var_05020",
           "axes": {
             "form": "block",
-            "origin": "vache"
+            "origin": "cow"
           },
           "protein_g": 23.8,
           "carbs_g": 2.72,
@@ -138938,13 +138938,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05023",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12729,
           "_v32_ing_id": "ing_05023",
           "_v32_var_id": "var_05106",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 320.0,
           "protein_g": 25.7,
@@ -139020,13 +139020,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05025",
       "variants": {
-        "brebis": {
+        "sheep": {
           "_source": "CIQUAL",
           "_source_id": 12061,
           "_v32_ing_id": "ing_05025",
           "_v32_var_id": "var_05179",
           "axes": {
-            "origin": "brebis"
+            "origin": "sheep"
           },
           "protein_g": 16.3,
           "carbs_g": 0.83,
@@ -139072,7 +139072,7 @@
               "_v32_ing_id": "ing_05025",
               "_v32_var_id": "var_05026",
               "axes": {
-                "origin": "brebis"
+                "origin": "sheep"
               },
               "name_fr": "feta (brebis)",
               "name_en": "feta (sheep milk)",
@@ -139144,13 +139144,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05850",
       "variants": {
-        "crumbled_vache": {
+        "crumbled_cow": {
           "_source": "USDA",
           "_source_id": 2259796,
           "_v32_ing_id": "ing_05850",
           "_v32_var_id": "var_05028",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "crumbled"
           },
           "protein_g": 19.7,
@@ -139211,13 +139211,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05029",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12121,
           "_v32_ing_id": "ing_05029",
           "_v32_var_id": "var_05125",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 384.0,
           "protein_g": 25.6,
@@ -139288,13 +139288,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05031",
       "variants": {
-        "whole_ch_vre": {
+        "whole_goat": {
           "_source": "CNF",
           "_source_id": 31,
           "_v32_ing_id": "ing_05031",
           "_v32_var_id": "var_05032",
           "axes": {
-            "origin": "ch_vre",
+            "origin": "goat",
             "form": "whole"
           },
           "calories_kcal": 466.0,
@@ -139362,13 +139362,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05033",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12736,
           "_v32_ing_id": "ing_05033",
           "_v32_var_id": "var_05201",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 369.0,
           "protein_g": 24.7,
@@ -139444,13 +139444,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05035",
       "variants": {
-        "whole_vache": {
+        "whole_cow": {
           "_source": "CNF",
           "_source_id": 32,
           "_v32_ing_id": "ing_05035",
           "_v32_var_id": "var_05036",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "whole"
           },
           "calories_kcal": 413.0,
@@ -139523,13 +139523,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05037",
       "variants": {
-        "whole_vache": {
+        "whole_cow": {
           "_source": "CNF",
           "_source_id": 33,
           "_v32_ing_id": "ing_05037",
           "_v32_var_id": "var_05038",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "whole"
           },
           "calories_kcal": 327.0,
@@ -139601,13 +139601,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05039",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CNF",
           "_source_id": 502243,
           "_v32_ing_id": "ing_05039",
           "_v32_var_id": "var_05855",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 358.0,
           "protein_g": 23.54,
@@ -139679,13 +139679,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05041",
       "variants": {
-        "whole_vache": {
+        "whole_cow": {
           "_source": "CNF",
           "_source_id": 102,
           "_v32_ing_id": "ing_05041",
           "_v32_var_id": "var_05042",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "whole"
           },
           "calories_kcal": 373.0,
@@ -139758,13 +139758,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05043",
       "variants": {
-        "whole_vache": {
+        "whole_cow": {
           "_source": "CNF",
           "_source_id": 103,
           "_v32_ing_id": "ing_05043",
           "_v32_var_id": "var_05044",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "whole"
           },
           "calories_kcal": 356.0,
@@ -139837,13 +139837,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05045",
       "variants": {
-        "whole_vache": {
+        "whole_cow": {
           "_source": "CNF",
           "_source_id": 104,
           "_v32_ing_id": "ing_05045",
           "_v32_var_id": "var_05046",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "whole"
           },
           "calories_kcal": 375.0,
@@ -139916,13 +139916,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05047",
       "variants": {
-        "whole_vache": {
+        "whole_cow": {
           "_source": "CNF",
           "_source_id": 34,
           "_v32_ing_id": "ing_05047",
           "_v32_var_id": "var_05048",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "whole"
           },
           "calories_kcal": 374.0,
@@ -139995,13 +139995,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05049",
       "variants": {
-        "block_vache": {
+        "block_cow": {
           "_source": "USDA",
           "_source_id": 2647438,
           "_v32_ing_id": "ing_05049",
           "_v32_var_id": "var_05050",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "block"
           },
           "protein_g": 22.6,
@@ -140035,7 +140035,7 @@
         }
       }
     },
-    "buffalo_mozzarella_frais_25pct_vache": {
+    "buffalo_mozzarella_frais_25pct_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -140058,13 +140058,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05051",
       "variants": {
-        "frais_25pct_vache": {
+        "frais_25pct_cow": {
           "_source": "CNF",
           "_source_id": 35,
           "_v32_ing_id": "ing_05051",
           "_v32_var_id": "var_05052",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "treatment": "frais",
             "fat_content": "25pct"
           },
@@ -140116,7 +140116,7 @@
         }
       }
     },
-    "buffalo_mozzarella_demi_cr_m_vache": {
+    "buffalo_mozzarella_demi_cr_m_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -140138,14 +140138,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05055",
       "variants": {
-        "demi_cr_m_vache": {
+        "demi_cr_m_cow": {
           "_source": "USDA",
           "_source_id": 329370,
           "_v32_ing_id": "ing_05055",
           "_v32_var_id": "var_05056",
           "axes": {
             "fat_content": "demi-écrémé",
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 298.0,
           "protein_g": 23.7,
@@ -140212,13 +140212,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05059",
       "variants": {
-        "whole_vache": {
+        "whole_cow": {
           "_source": "CNF",
           "_source_id": 37,
           "_v32_ing_id": "ing_05059",
           "_v32_var_id": "var_05060",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "whole"
           },
           "calories_kcal": 368.0,
@@ -140291,13 +140291,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05063",
       "variants": {
-        "block_vache": {
+        "block_cow": {
           "_source": "USDA",
           "_source_id": 2647441,
           "_v32_ing_id": "ing_05063",
           "_v32_var_id": "var_05064",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "block"
           },
           "protein_g": 22.1,
@@ -140354,14 +140354,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05065",
       "variants": {
-        "p_te_dure_dried_vache": {
+        "p_te_dure_dried_cow": {
           "_source": "CIQUAL",
           "_source_id": 12120,
           "_v32_ing_id": "ing_05065",
           "_v32_var_id": "var_05239",
           "axes": {
             "thermal_state": "dried",
-            "origin": "vache",
+            "origin": "cow",
             "form": "p_te_dure"
           },
           "calories_kcal": 411.0,
@@ -140423,7 +140423,7 @@
               "_v32_var_id": "var_05072",
               "axes": {
                 "thermal_state": "dried",
-                "origin": "vache",
+                "origin": "cow",
                 "form": "p_te_dure"
               },
               "name_fr": "parmesan",
@@ -140498,14 +140498,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05853",
       "variants": {
-        "grated_avec_additifs_dried_vache": {
+        "grated_avec_additifs_dried_cow": {
           "_source": "CNF",
           "_source_id": 39,
           "_v32_ing_id": "ing_05853",
           "_v32_var_id": "var_05066",
           "axes": {
             "thermal_state": "dried",
-            "origin": "vache",
+            "origin": "cow",
             "form": "grated",
             "treatment": "avec_additifs"
           },
@@ -140578,13 +140578,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05075",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CNF",
           "_source_id": 41,
           "_v32_ing_id": "ing_05075",
           "_v32_var_id": "var_05076",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 352.0,
           "protein_g": 23.78,
@@ -140656,13 +140656,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05077",
       "variants": {
-        "paste_vache": {
+        "paste_cow": {
           "_source": "CIQUAL",
           "_source_id": 12716,
           "_v32_ing_id": "ing_05077",
           "_v32_var_id": "var_05249",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "paste"
           },
           "calories_kcal": 340.0,
@@ -140734,13 +140734,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05081",
       "variants": {
-        "block_vache": {
+        "block_cow": {
           "_source": "USDA",
           "_source_id": 2647442,
           "_v32_ing_id": "ing_05081",
           "_v32_var_id": "var_05082",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "block"
           },
           "protein_g": 18.9,
@@ -140795,13 +140795,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05083",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CNF",
           "_source_id": 45,
           "_v32_ing_id": "ing_05083",
           "_v32_var_id": "var_05084",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 387.0,
           "protein_g": 31.8,
@@ -140872,13 +140872,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05085",
       "variants": {
-        "brebis": {
+        "sheep": {
           "_source": "CNF",
           "_source_id": 46,
           "_v32_ing_id": "ing_05085",
           "_v32_var_id": "var_05086",
           "axes": {
-            "origin": "brebis"
+            "origin": "sheep"
           },
           "calories_kcal": 369.0,
           "protein_g": 21.54,
@@ -140946,13 +140946,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05087",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12115,
           "_v32_ing_id": "ing_05087",
           "_v32_var_id": "var_05108",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 373.0,
           "protein_g": 27.9,
@@ -141012,7 +141012,7 @@
               "_v32_ing_id": "ing_05087",
               "_v32_var_id": "var_05114",
               "axes": {
-                "origin": "vache"
+                "origin": "cow"
               },
               "name_fr": "emmental",
               "name_en": "swiss",
@@ -141073,7 +141073,7 @@
               "_v32_ing_id": "ing_05087",
               "_v32_var_id": "var_05088",
               "axes": {
-                "origin": "vache"
+                "origin": "cow"
               },
               "name_fr": "emmental",
               "name_en": "swiss",
@@ -141145,13 +141145,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05091",
       "variants": {
-        "raw_whole_vache": {
+        "raw_whole_cow": {
           "_source": "CNF",
           "_source_id": 48,
           "_v32_ing_id": "ing_05091",
           "_v32_var_id": "var_05092",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "treatment": "raw",
             "fat_content": "whole"
           },
@@ -141223,13 +141223,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05093",
       "variants": {
-        "raw_ch_vre": {
+        "raw_goat": {
           "_source": "CIQUAL",
           "_source_id": 12846,
           "_v32_ing_id": "ing_05093",
           "_v32_var_id": "var_05094",
           "axes": {
-            "origin": "ch_vre",
+            "origin": "goat",
             "treatment": "raw"
           },
           "calories_kcal": 263.0,
@@ -141296,13 +141296,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05095",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12110,
           "_v32_ing_id": "ing_05095",
           "_v32_var_id": "var_05096",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 413.0,
           "protein_g": 27.8,
@@ -141368,14 +141368,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05097",
       "variants": {
-        "4pct_vache": {
+        "4pct_cow": {
           "_source": "USDA",
           "_source_id": 2346384,
           "_v32_ing_id": "ing_05097",
           "_v32_var_id": "var_05098",
           "axes": {
             "fat_content": "4pct",
-            "origin": "vache"
+            "origin": "cow"
           },
           "protein_g": 11.6,
           "carbs_g": 4.6,
@@ -141430,13 +141430,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05099",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12010,
           "_v32_ing_id": "ing_05099",
           "_v32_var_id": "var_05100",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 280.0,
           "protein_g": 18.8,
@@ -141498,13 +141498,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05101",
       "variants": {
-        "ch_vre": {
+        "goat": {
           "_source": "CIQUAL",
           "_source_id": 12834,
           "_v32_ing_id": "ing_05101",
           "_v32_var_id": "var_05102",
           "axes": {
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 318.0,
           "protein_g": 20.7,
@@ -141574,13 +141574,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05103",
       "variants": {
-        "cream_vache": {
+        "cream_cow": {
           "_source": "CIQUAL",
           "_source_id": 12311,
           "_v32_ing_id": "ing_05103",
           "_v32_var_id": "var_05104",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "cream"
           },
           "protein_g": 11.2,
@@ -141629,13 +141629,13 @@
       ],
       "_v32_id": "ing_05110",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12099,
           "_v32_ing_id": "ing_05110",
           "_v32_var_id": "var_05111",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 396.0,
           "protein_g": 29.7,
@@ -141688,13 +141688,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05118",
       "variants": {
-        "0pct_vache": {
+        "0pct_cow": {
           "_source": "CIQUAL",
           "_source_id": 19639,
           "_v32_ing_id": "ing_05118",
           "_v32_var_id": "var_05119",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "fat_content": "0pct"
           },
           "calories_kcal": 36.8,
@@ -141722,7 +141722,7 @@
         }
       }
     },
-    "faisselle_6pct_vache": {
+    "faisselle_6pct_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -141744,13 +141744,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05120",
       "variants": {
-        "6pct_vache": {
+        "6pct_cow": {
           "_source": "CIQUAL",
           "_source_id": 19641,
           "_v32_ing_id": "ing_05120",
           "_v32_var_id": "var_05121",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "fat_content": "6pct"
           },
           "calories_kcal": 83.6,
@@ -141827,13 +141827,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05126",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12522,
           "_v32_ing_id": "ing_05126",
           "_v32_var_id": "var_05127",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 339.0,
           "protein_g": 20.6,
@@ -141913,13 +141913,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05128",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12519,
           "_v32_ing_id": "ing_05128",
           "_v32_var_id": "var_05129",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 365.0,
           "protein_g": 22.5,
@@ -141969,13 +141969,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05130",
       "variants": {
-        "light_vache": {
+        "light_cow": {
           "_source": "CIQUAL",
           "_source_id": 12528,
           "_v32_ing_id": "ing_05130",
           "_v32_var_id": "var_05131",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "fat_content": "light"
           },
           "calories_kcal": 223.0,
@@ -142021,13 +142021,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05132",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12521,
           "_v32_ing_id": "ing_05132",
           "_v32_var_id": "var_05133",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 342.0,
           "protein_g": 20.6,
@@ -142092,13 +142092,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05134",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12523,
           "_v32_ing_id": "ing_05134",
           "_v32_var_id": "var_05135",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 350.0,
           "protein_g": 20.4,
@@ -142153,13 +142153,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05136",
       "variants": {
-        "paste_brebis": {
+        "paste_sheep": {
           "_source": "CIQUAL",
           "_source_id": 12762,
           "_v32_ing_id": "ing_05136",
           "_v32_var_id": "var_05137",
           "axes": {
-            "origin": "brebis",
+            "origin": "sheep",
             "form": "paste"
           },
           "calories_kcal": 426.0,
@@ -142217,13 +142217,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05138",
       "variants": {
-        "paste_brebis": {
+        "paste_sheep": {
           "_source": "CIQUAL",
           "_source_id": 12824,
           "_v32_ing_id": "ing_05138",
           "_v32_var_id": "var_05139",
           "axes": {
-            "origin": "brebis",
+            "origin": "sheep",
             "form": "paste"
           },
           "calories_kcal": 297.0,
@@ -142277,13 +142277,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05140",
       "variants": {
-        "paste_brebis": {
+        "paste_sheep": {
           "_source": "CIQUAL",
           "_source_id": 12747,
           "_v32_ing_id": "ing_05140",
           "_v32_var_id": "var_05141",
           "axes": {
-            "origin": "brebis",
+            "origin": "sheep",
             "form": "paste"
           },
           "calories_kcal": 393.0,
@@ -142343,13 +142343,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05142",
       "variants": {
-        "ch_vre": {
+        "goat": {
           "_source": "CIQUAL",
           "_source_id": 12812,
           "_v32_ing_id": "ing_05142",
           "_v32_var_id": "var_05143",
           "axes": {
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 285.0,
           "protein_g": 18.8,
@@ -142422,13 +142422,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05144",
       "variants": {
-        "ch_vre": {
+        "goat": {
           "_source": "CIQUAL",
           "_source_id": 12810,
           "_v32_ing_id": "ing_05144",
           "_v32_var_id": "var_05145",
           "axes": {
-            "origin": "ch_vre",
+            "origin": "goat",
             "affinage": "mi_affin"
           },
           "calories_kcal": 353.0,
@@ -142505,14 +142505,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05146",
       "variants": {
-        "fresh_ch_vre": {
+        "fresh_goat": {
           "_source": "CIQUAL",
           "_source_id": 12805,
           "_v32_ing_id": "ing_05146",
           "_v32_var_id": "var_05147",
           "axes": {
             "thermal_state": "fresh",
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 194.0,
           "protein_g": 12.0,
@@ -142584,14 +142584,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05148",
       "variants": {
-        "aged_ch_vre": {
+        "aged_goat": {
           "_source": "CIQUAL",
           "_source_id": 12803,
           "_v32_ing_id": "ing_05148",
           "_v32_var_id": "var_05149",
           "axes": {
             "treatment": "aged",
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 308.0,
           "protein_g": 20.7,
@@ -142661,13 +142661,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05152",
       "variants": {
-        "paste_ch_vre": {
+        "paste_goat": {
           "_source": "CIQUAL",
           "_source_id": 12820,
           "_v32_ing_id": "ing_05152",
           "_v32_var_id": "var_05153",
           "axes": {
-            "origin": "ch_vre",
+            "origin": "goat",
             "form": "paste"
           },
           "calories_kcal": 288.0,
@@ -142743,13 +142743,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05154",
       "variants": {
-        "paste_plain_ch_vre": {
+        "paste_plain_goat": {
           "_source": "CIQUAL",
           "_source_id": 12814,
           "_v32_ing_id": "ing_05154",
           "_v32_var_id": "var_05155",
           "axes": {
-            "origin": "ch_vre",
+            "origin": "goat",
             "form": "paste",
             "seasoning": "plain"
           },
@@ -142798,13 +142798,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05156",
       "variants": {
-        "paste_ch_vre": {
+        "paste_goat": {
           "_source": "CIQUAL",
           "_source_id": 12850,
           "_v32_ing_id": "ing_05156",
           "_v32_var_id": "var_05157",
           "axes": {
-            "origin": "ch_vre",
+            "origin": "goat",
             "form": "paste"
           },
           "calories_kcal": 344.0,
@@ -142849,13 +142849,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05158",
       "variants": {
-        "paste_plain_ch_vre": {
+        "paste_plain_goat": {
           "_source": "CIQUAL",
           "_source_id": 12819,
           "_v32_ing_id": "ing_05158",
           "_v32_var_id": "var_05159",
           "axes": {
-            "origin": "ch_vre",
+            "origin": "goat",
             "seasoning": "plain",
             "form": "paste"
           },
@@ -142929,7 +142929,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_05170",
       "variants": {
-        "fresh_plain_vache": {
+        "fresh_plain_cow": {
           "_source": "CIQUAL",
           "_source_id": 19663,
           "_v32_ing_id": "ing_05170",
@@ -142937,7 +142937,7 @@
           "axes": {
             "thermal_state": "fresh",
             "seasoning": "plain",
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 56.5,
           "protein_g": 9.9,
@@ -142979,7 +142979,7 @@
         }
       }
     },
-    "petit_suisse_fresh_plain_10pct_vache": {
+    "petit_suisse_fresh_plain_10pct_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -143003,7 +143003,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_05172",
       "variants": {
-        "fresh_plain_10pct_vache": {
+        "fresh_plain_10pct_cow": {
           "_source": "CIQUAL",
           "_source_id": 19666,
           "_v32_ing_id": "ing_05172",
@@ -143011,7 +143011,7 @@
           "axes": {
             "thermal_state": "fresh",
             "seasoning": "plain",
-            "origin": "vache",
+            "origin": "cow",
             "fat_content": "10pct"
           },
           "calories_kcal": 137.0,
@@ -143068,7 +143068,7 @@
         }
       }
     },
-    "petit_suisse_fresh_plain_4pct_vache": {
+    "petit_suisse_fresh_plain_4pct_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -143092,7 +143092,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_05174",
       "variants": {
-        "fresh_plain_4pct_vache": {
+        "fresh_plain_4pct_cow": {
           "_source": "CIQUAL",
           "_source_id": 19664,
           "_v32_ing_id": "ing_05174",
@@ -143100,7 +143100,7 @@
           "axes": {
             "thermal_state": "fresh",
             "seasoning": "plain",
-            "origin": "vache",
+            "origin": "cow",
             "fat_content": "4pct"
           },
           "calories_kcal": 88.0,
@@ -143166,13 +143166,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05176",
       "variants": {
-        "paste_vache": {
+        "paste_cow": {
           "_source": "CIQUAL",
           "_source_id": 12053,
           "_v32_ing_id": "ing_05176",
           "_v32_var_id": "var_05177",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "paste"
           },
           "calories_kcal": 320.0,
@@ -143217,13 +143217,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05182",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12060,
           "_v32_ing_id": "ing_05182",
           "_v32_var_id": "var_05183",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 273.0,
           "protein_g": 15.4,
@@ -143303,13 +143303,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05196",
       "variants": {
-        "paste_vache": {
+        "paste_cow": {
           "_source": "CIQUAL",
           "_source_id": 12816,
           "_v32_ing_id": "ing_05196",
           "_v32_var_id": "var_05197",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "paste"
           },
           "calories_kcal": 359.0,
@@ -143353,13 +143353,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05198",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12524,
           "_v32_ing_id": "ing_05198",
           "_v32_var_id": "var_05199",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 318.0,
           "protein_g": 19.5,
@@ -143435,13 +143435,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05202",
       "variants": {
-        "flavored_vache": {
+        "flavored_cow": {
           "_source": "CIQUAL",
           "_source_id": 12767,
           "_v32_ing_id": "ing_05202",
           "_v32_var_id": "var_05203",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "seasoning": "flavored"
           },
           "calories_kcal": 378.0,
@@ -143483,13 +143483,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05204",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12123,
           "_v32_ing_id": "ing_05204",
           "_v32_var_id": "var_05205",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 399.0,
           "protein_g": 33.9,
@@ -143568,13 +143568,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05206",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12113,
           "_v32_ing_id": "ing_05206",
           "_v32_var_id": "var_05207",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 415.0,
           "protein_g": 28.2,
@@ -143653,13 +143653,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05208",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12040,
           "_v32_ing_id": "ing_05208",
           "_v32_var_id": "var_05209",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 286.0,
           "protein_g": 16.7,
@@ -143735,13 +143735,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05210",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12037,
           "_v32_ing_id": "ing_05210",
           "_v32_var_id": "var_05211",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 301.0,
           "protein_g": 24.6,
@@ -143819,13 +143819,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05212",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12030,
           "_v32_ing_id": "ing_05212",
           "_v32_var_id": "var_05213",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 349.0,
           "protein_g": 21.2,
@@ -143874,13 +143874,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05214",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12029,
           "_v32_ing_id": "ing_05214",
           "_v32_var_id": "var_05215",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 338.0,
           "protein_g": 22.3,
@@ -143927,13 +143927,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05216",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12737,
           "_v32_ing_id": "ing_05216",
           "_v32_var_id": "var_05217",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "affinage": "mi_affin"
           },
           "calories_kcal": 371.0,
@@ -143979,13 +143979,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05218",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12742,
           "_v32_ing_id": "ing_05218",
           "_v32_var_id": "var_05219",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "affinage": "mature"
           },
           "calories_kcal": 402.0,
@@ -144031,13 +144031,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05220",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12735,
           "_v32_ing_id": "ing_05220",
           "_v32_var_id": "var_05221",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "affinage": "jeune"
           },
           "calories_kcal": 331.0,
@@ -144085,13 +144085,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05222",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12738,
           "_v32_ing_id": "ing_05222",
           "_v32_var_id": "var_05223",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "affinage": "mature"
           },
           "calories_kcal": 397.0,
@@ -144172,13 +144172,13 @@
       ],
       "_v32_id": "ing_05224",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12051,
           "_v32_ing_id": "ing_05224",
           "_v32_var_id": "var_05225",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 293.0,
           "protein_g": 17.9,
@@ -144233,13 +144233,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05228",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12743,
           "_v32_ing_id": "ing_05228",
           "_v32_var_id": "var_05229",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 355.0,
           "protein_g": 22.8,
@@ -144315,13 +144315,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05230",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 19590,
           "_v32_ing_id": "ing_05230",
           "_v32_var_id": "var_05231",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 227.0,
           "protein_g": 16.5,
@@ -144397,13 +144397,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05232",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12039,
           "_v32_ing_id": "ing_05232",
           "_v32_var_id": "var_05233",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 324.0,
           "protein_g": 20.4,
@@ -144477,13 +144477,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05234",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12031,
           "_v32_ing_id": "ing_05234",
           "_v32_var_id": "var_05235",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 300.0,
           "protein_g": 18.1,
@@ -144559,13 +144559,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05236",
       "variants": {
-        "brebis": {
+        "sheep": {
           "_source": "CIQUAL",
           "_source_id": 12119,
           "_v32_ing_id": "ing_05236",
           "_v32_var_id": "var_05237",
           "axes": {
-            "origin": "brebis"
+            "origin": "sheep"
           },
           "calories_kcal": 423.0,
           "protein_g": 24.2,
@@ -144628,13 +144628,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05240",
       "variants": {
-        "brebis": {
+        "sheep": {
           "_source": "CIQUAL",
           "_source_id": 12122,
           "_v32_ing_id": "ing_05240",
           "_v32_var_id": "var_05241",
           "axes": {
-            "origin": "brebis"
+            "origin": "sheep"
           },
           "calories_kcal": 383.0,
           "protein_g": 25.5,
@@ -144695,13 +144695,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05242",
       "variants": {
-        "ch_vre": {
+        "goat": {
           "_source": "CIQUAL",
           "_source_id": 12836,
           "_v32_ing_id": "ing_05242",
           "_v32_var_id": "var_05243",
           "axes": {
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 313.0,
           "protein_g": 19.9,
@@ -144769,13 +144769,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05244",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12042,
           "_v32_ing_id": "ing_05244",
           "_v32_var_id": "var_05245",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 326.0,
           "protein_g": 22.7,
@@ -144853,13 +144853,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05246",
       "variants": {
-        "ch_vre": {
+        "goat": {
           "_source": "CIQUAL",
           "_source_id": 12839,
           "_v32_ing_id": "ing_05246",
           "_v32_var_id": "var_05247",
           "axes": {
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 286.0,
           "protein_g": 17.6,
@@ -144925,13 +144925,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05250",
       "variants": {
-        "ch_vre": {
+        "goat": {
           "_source": "CIQUAL",
           "_source_id": 12831,
           "_v32_ing_id": "ing_05250",
           "_v32_var_id": "var_05251",
           "axes": {
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 343.0,
           "protein_g": 23.8,
@@ -144997,13 +144997,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05252",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12749,
           "_v32_ing_id": "ing_05252",
           "_v32_var_id": "var_05253",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 342.0,
           "protein_g": 23.4,
@@ -145046,7 +145046,7 @@
         }
       }
     },
-    "raclette_smoked_vache": {
+    "raclette_smoked_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -145068,14 +145068,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05254",
       "variants": {
-        "smoked_vache": {
+        "smoked_cow": {
           "_source": "CIQUAL",
           "_source_id": 12765,
           "_v32_ing_id": "ing_05254",
           "_v32_var_id": "var_05255",
           "axes": {
             "treatment": "smoked",
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 345.0,
           "protein_g": 24.1,
@@ -145118,14 +145118,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05256",
       "variants": {
-        "spiced_vache": {
+        "spiced_cow": {
           "_source": "CIQUAL",
           "_source_id": 12766,
           "_v32_ing_id": "ing_05256",
           "_v32_var_id": "var_05257",
           "axes": {
             "seasoning": "spiced",
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 350.0,
           "protein_g": 24.5,
@@ -145167,13 +145167,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05258",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12776,
           "_v32_ing_id": "ing_05258",
           "_v32_var_id": "var_05259",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 357.0,
           "protein_g": 24.1,
@@ -145225,13 +145225,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05260",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12045,
           "_v32_ing_id": "ing_05260",
           "_v32_var_id": "var_05261",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 322.0,
           "protein_g": 20.3,
@@ -145293,13 +145293,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05262",
       "variants": {
-        "ch_vre": {
+        "goat": {
           "_source": "CIQUAL",
           "_source_id": 12847,
           "_v32_ing_id": "ing_05262",
           "_v32_var_id": "var_05263",
           "axes": {
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 274.0,
           "protein_g": 18.1,
@@ -145369,13 +145369,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05264",
       "variants": {
-        "brebis": {
+        "sheep": {
           "_source": "CIQUAL",
           "_source_id": 12500,
           "_v32_ing_id": "ing_05264",
           "_v32_var_id": "var_05265",
           "axes": {
-            "origin": "brebis"
+            "origin": "sheep"
           },
           "calories_kcal": 384.0,
           "protein_g": 19.5,
@@ -145447,13 +145447,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05266",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12052,
           "_v32_ing_id": "ing_05266",
           "_v32_var_id": "var_05267",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 281.0,
           "protein_g": 13.4,
@@ -145531,13 +145531,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05268",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12049,
           "_v32_ing_id": "ing_05268",
           "_v32_var_id": "var_05269",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 280.0,
           "protein_g": 15.1,
@@ -145615,13 +145615,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05270",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12751,
           "_v32_ing_id": "ing_05270",
           "_v32_var_id": "var_05271",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 360.0,
           "protein_g": 22.3,
@@ -145662,13 +145662,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05272",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12748,
           "_v32_ing_id": "ing_05272",
           "_v32_var_id": "var_05273",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 333.0,
           "protein_g": 21.7,
@@ -145710,13 +145710,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05274",
       "variants": {
-        "paste_vache": {
+        "paste_cow": {
           "_source": "CIQUAL",
           "_source_id": 12755,
           "_v32_ing_id": "ing_05274",
           "_v32_var_id": "var_05275",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "paste"
           },
           "calories_kcal": 327.0,
@@ -145792,13 +145792,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05276",
       "variants": {
-        "ch_vre": {
+        "goat": {
           "_source": "CIQUAL",
           "_source_id": 12842,
           "_v32_ing_id": "ing_05276",
           "_v32_var_id": "var_05277",
           "axes": {
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 298.0,
           "protein_g": 20.0,
@@ -145855,13 +145855,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05278",
       "variants": {
-        "ch_vre": {
+        "goat": {
           "_source": "CIQUAL",
           "_source_id": 12807,
           "_v32_ing_id": "ing_05278",
           "_v32_var_id": "var_05279",
           "axes": {
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 286.0,
           "protein_g": 18.5,
@@ -145930,13 +145930,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05280",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12725,
           "_v32_ing_id": "ing_05280",
           "_v32_var_id": "var_05281",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 388.0,
           "protein_g": 25.9,
@@ -146012,13 +146012,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05282",
       "variants": {
-        "ch_vre": {
+        "goat": {
           "_source": "CIQUAL",
           "_source_id": 12845,
           "_v32_ing_id": "ing_05282",
           "_v32_var_id": "var_05283",
           "axes": {
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 289.0,
           "protein_g": 18.8,
@@ -146070,13 +146070,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05284",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12771,
           "_v32_ing_id": "ing_05284",
           "_v32_var_id": "var_05285",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 361.0,
           "protein_g": 23.5,
@@ -146153,13 +146153,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05286",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12758,
           "_v32_ing_id": "ing_05286",
           "_v32_var_id": "var_05287",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 364.0,
           "protein_g": 21.6,
@@ -146217,13 +146217,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05288",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12763,
           "_v32_ing_id": "ing_05288",
           "_v32_var_id": "var_05289",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 381.0,
           "protein_g": 26.6,
@@ -146274,13 +146274,13 @@
       ],
       "_v32_id": "ing_05290",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12773,
           "_v32_ing_id": "ing_05290",
           "_v32_var_id": "var_05291",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 340.0,
           "protein_g": 22.1,
@@ -146324,13 +146324,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05293",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12764,
           "_v32_ing_id": "ing_05293",
           "_v32_var_id": "var_05294",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 415.0,
           "protein_g": 26.0,
@@ -146371,13 +146371,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05295",
       "variants": {
-        "ch_vre": {
+        "goat": {
           "_source": "CIQUAL",
           "_source_id": 12848,
           "_v32_ing_id": "ing_05295",
           "_v32_var_id": "var_05296",
           "axes": {
-            "origin": "ch_vre"
+            "origin": "goat"
           },
           "calories_kcal": 295.0,
           "protein_g": 18.9,
@@ -146446,13 +146446,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05297",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12038,
           "_v32_ing_id": "ing_05297",
           "_v32_var_id": "var_05298",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 286.0,
           "protein_g": 17.6,
@@ -146527,13 +146527,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05301",
       "variants": {
-        "1pct_vache": {
+        "1pct_cow": {
           "_source": "CNF",
           "_source_id": 107,
           "_v32_ing_id": "ing_05301",
           "_v32_var_id": "var_05302",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "fat_content": "1pct"
           },
           "calories_kcal": 72.0,
@@ -146606,13 +146606,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05303",
       "variants": {
-        "2pct_vache": {
+        "2pct_cow": {
           "_source": "CNF",
           "_source_id": 120,
           "_v32_ing_id": "ing_05303",
           "_v32_var_id": "var_05304",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "fat_content": "2pct"
           },
           "calories_kcal": 81.0,
@@ -146663,7 +146663,7 @@
         }
       }
     },
-    "cottage_1_m_f_lactose_reduced_vache": {
+    "cottage_1_m_f_lactose_reduced_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -146685,14 +146685,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05305",
       "variants": {
-        "lactose_reduced_vache": {
+        "lactose_reduced_cow": {
           "_source": "CNF",
           "_source_id": 5498,
           "_v32_ing_id": "ing_05305",
           "_v32_var_id": "var_05306",
           "axes": {
             "treatment": "lactose_reduced",
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 74.0,
           "protein_g": 12.4,
@@ -146762,13 +146762,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05309",
       "variants": {
-        "4_5pct_vache": {
+        "4_5pct_cow": {
           "_source": "CNF",
           "_source_id": 25,
           "_v32_ing_id": "ing_05309",
           "_v32_var_id": "var_05310",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "fat_content": "4.5pct"
           },
           "calories_kcal": 99.0,
@@ -146841,14 +146841,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05313",
       "variants": {
-        "2pct_vache": {
+        "2pct_cow": {
           "_source": "USDA",
           "_source_id": 328841,
           "_v32_ing_id": "ing_05313",
           "_v32_var_id": "var_05314",
           "axes": {
             "fat_content": "2pct",
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 84.0,
           "protein_g": 11.0,
@@ -146914,14 +146914,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05315",
       "variants": {
-        "dried_0_4pct_vache": {
+        "dried_0_4pct_cow": {
           "_source": "CNF",
           "_source_id": 27,
           "_v32_ing_id": "ing_05315",
           "_v32_var_id": "var_05316",
           "axes": {
             "thermal_state": "dried",
-            "origin": "vache",
+            "origin": "cow",
             "fat_content": "0.4pct"
           },
           "calories_kcal": 72.0,
@@ -146994,13 +146994,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05349",
       "variants": {
-        "whole_vache": {
+        "whole_cow": {
           "_source": "CIQUAL",
           "_source_id": 19585,
           "_v32_ing_id": "ing_05349",
           "_v32_var_id": "var_05376",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "fat_content": "whole"
           },
           "protein_g": 8.13,
@@ -147058,7 +147058,7 @@
               "_v32_ing_id": "ing_05349",
               "_v32_var_id": "var_05350",
               "axes": {
-                "origin": "vache",
+                "origin": "cow",
                 "fat_content": "whole"
               },
               "name_fr": "ricotta",
@@ -147124,13 +147124,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05355",
       "variants": {
-        "block_whole_vache": {
+        "block_whole_cow": {
           "_source": "USDA",
           "_source_id": 2346385,
           "_v32_ing_id": "ing_05355",
           "_v32_var_id": "var_05356",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "block",
             "fat_content": "whole"
           },
@@ -147188,13 +147188,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05357",
       "variants": {
-        "0pct_vache": {
+        "0pct_cow": {
           "_source": "CIQUAL",
           "_source_id": 19644,
           "_v32_ing_id": "ing_05357",
           "_v32_var_id": "var_05358",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "fat_content": "0pct"
           },
           "calories_kcal": 48.4,
@@ -147274,13 +147274,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05361",
       "variants": {
-        "plain_2_5pct_vache": {
+        "plain_2_5pct_cow": {
           "_source": "CIQUAL",
           "_source_id": 19646,
           "_v32_ing_id": "ing_05361",
           "_v32_var_id": "var_05362",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "seasoning": "plain",
             "fat_content": "2.5pct"
           },
@@ -147340,7 +147340,7 @@
         }
       }
     },
-    "fromage_blanc_sweetened_vache": {
+    "fromage_blanc_sweetened_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -147364,14 +147364,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05365",
       "variants": {
-        "sweetened_vache": {
+        "sweetened_cow": {
           "_source": "CIQUAL",
           "_source_id": 19716,
           "_v32_ing_id": "ing_05365",
           "_v32_var_id": "var_05366",
           "axes": {
             "seasoning": "sweetened",
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 101.0,
           "protein_g": 7.66,
@@ -147392,7 +147392,7 @@
         }
       }
     },
-    "fromage_blanc_plain_7_5pct_vache": {
+    "fromage_blanc_plain_7_5pct_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -147415,13 +147415,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05367",
       "variants": {
-        "plain_7_5pct_vache": {
+        "plain_7_5pct_cow": {
           "_source": "CIQUAL",
           "_source_id": 19711,
           "_v32_ing_id": "ing_05367",
           "_v32_var_id": "var_05368",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "seasoning": "plain",
             "fat_content": "7.5pct"
           },
@@ -147500,13 +147500,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05369",
       "variants": {
-        "plain_brebis": {
+        "plain_sheep": {
           "_source": "CIQUAL",
           "_source_id": 19712,
           "_v32_ing_id": "ing_05369",
           "_v32_var_id": "var_05370",
           "axes": {
-            "origin": "brebis",
+            "origin": "sheep",
             "seasoning": "plain"
           },
           "calories_kcal": 92.5,
@@ -147550,13 +147550,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05371",
       "variants": {
-        "plain_ch_vre": {
+        "plain_goat": {
           "_source": "CIQUAL",
           "_source_id": 19713,
           "_v32_ing_id": "ing_05371",
           "_v32_var_id": "var_05372",
           "axes": {
-            "origin": "ch_vre",
+            "origin": "goat",
             "seasoning": "plain"
           },
           "calories_kcal": 98.3,
@@ -147597,13 +147597,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05373",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 19584,
           "_v32_ing_id": "ing_05373",
           "_v32_var_id": "var_05374",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 369.0,
           "protein_g": 6.0,
@@ -147679,13 +147679,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05387",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12112,
           "_v32_ing_id": "ing_05387",
           "_v32_var_id": "var_05388",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 393.0,
           "protein_g": 27.1,
@@ -147764,13 +147764,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05408",
       "variants": {
-        "lait_cru_ch_vre": {
+        "lait_cru_goat": {
           "_source": "CIQUAL",
           "_source_id": 12832,
           "_v32_ing_id": "ing_05408",
           "_v32_var_id": "var_05409",
           "axes": {
-            "origin": "ch_vre",
+            "origin": "goat",
             "treatment": "lait_cru"
           },
           "calories_kcal": 384.0,
@@ -147838,13 +147838,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_04395",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CIQUAL",
           "_source_id": 12325,
           "_v32_ing_id": "ing_04395",
           "_v32_var_id": "var_04396",
           "axes": {
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 151.0,
           "protein_g": 13.8,
@@ -147918,7 +147918,7 @@
       "aliases_fr": [],
       "_v32_id": "ing_05761",
       "variants": {
-        "grated_r_frig_r_vache": {
+        "grated_r_frig_r_cow": {
           "_source": "USDA",
           "_source_id": 2259795,
           "_v32_ing_id": "ing_05761",
@@ -147926,7 +147926,7 @@
           "axes": {
             "form": "grated",
             "thermal_state": "r_frig_r",
-            "origin": "vache"
+            "origin": "cow"
           },
           "protein_g": 30.1,
           "carbs_g": 4.33,
@@ -147987,13 +147987,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05887",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CNF",
           "_source_id": 38,
           "_v32_ing_id": "ing_05887",
           "_v32_var_id": "var_05062",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "style": "am_ricain"
           },
           "calories_kcal": 253.0,
@@ -148066,14 +148066,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05888",
       "variants": {
-        "16pct_vache": {
+        "16pct_cow": {
           "_source": "CNF",
           "_source_id": 111,
           "_v32_ing_id": "ing_05888",
           "_v32_var_id": "var_05058",
           "axes": {
             "fat_content": "16pct",
-            "origin": "vache"
+            "origin": "cow"
           },
           "calories_kcal": 254.0,
           "protein_g": 24.26,
@@ -148145,13 +148145,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05889",
       "variants": {
-        "vache": {
+        "cow": {
           "_source": "CNF",
           "_source_id": 47,
           "_v32_ing_id": "ing_05889",
           "_v32_var_id": "var_05090",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "style": "canadien"
           },
           "calories_kcal": 380.0,
@@ -148202,7 +148202,7 @@
         }
       }
     },
-    "parmesan_grated_dried_vache": {
+    "parmesan_grated_dried_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -148225,14 +148225,14 @@
       "aliases_fr": [],
       "_v32_id": "ing_05863",
       "variants": {
-        "grated_dried_vache": {
+        "grated_dried_cow": {
           "_source": "USDA",
           "_source_id": 325036,
           "_v32_ing_id": "ing_05863",
           "_v32_var_id": "var_05068",
           "axes": {
             "thermal_state": "dried",
-            "origin": "vache",
+            "origin": "cow",
             "form": "grated"
           },
           "calories_kcal": 421.0,
@@ -148283,7 +148283,7 @@
               "_v32_var_id": "var_05074",
               "axes": {
                 "thermal_state": "dried",
-                "origin": "vache",
+                "origin": "cow",
                 "form": "grated"
               },
               "name_fr": "parmesan",
@@ -148334,7 +148334,7 @@
         }
       }
     },
-    "buffalo_mozzarella_frais_22_5pct_vache": {
+    "buffalo_mozzarella_frais_22_5pct_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -148357,13 +148357,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05872",
       "variants": {
-        "frais_22_5pct_vache": {
+        "frais_22_5pct_cow": {
           "_source": "CNF",
           "_source_id": 110,
           "_v32_ing_id": "ing_05872",
           "_v32_var_id": "var_05054",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "treatment": "frais",
             "fat_content": "22.5pct"
           },
@@ -148415,7 +148415,7 @@
         }
       }
     },
-    "provolone_sliced_vache": {
+    "provolone_sliced_cow": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -148437,13 +148437,13 @@
       "aliases_fr": [],
       "_v32_id": "ing_05873",
       "variants": {
-        "sliced_vache": {
+        "sliced_cow": {
           "_source": "USDA",
           "_source_id": 2647440,
           "_v32_ing_id": "ing_05873",
           "_v32_var_id": "var_05080",
           "axes": {
-            "origin": "vache",
+            "origin": "cow",
             "form": "sliced"
           },
           "protein_g": 23.5,
@@ -151038,7 +151038,7 @@
         }
       }
     },
-    "yogurt_yogurt_fermented_0pct": {
+    "yogurt_fermented_0pct": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -151128,7 +151128,7 @@
         }
       }
     },
-    "yogurt_yogurt_fermented_sweetened": {
+    "yogurt_fermented_sweetened": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -151220,7 +151220,7 @@
         }
       }
     },
-    "yogurt_greek_style_yogurt_plain_10pct": {
+    "yogurt_greek_style_plain_10pct": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -151296,7 +151296,7 @@
         }
       }
     },
-    "yogurt_yogurt_plain_3pct": {
+    "yogurt_plain_3pct": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -151377,7 +151377,7 @@
         }
       }
     },
-    "yogurt_greek_style_yogurt_plain_0pct": {
+    "yogurt_greek_style_plain_0pct": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -151455,7 +151455,7 @@
         }
       }
     },
-    "yogurt_yogurt_plain_0pct": {
+    "yogurt_plain_0pct": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -151602,7 +151602,7 @@
         }
       }
     },
-    "ewes_milk_yogurt_yogurt_plain_6pct": {
+    "ewes_milk_yogurt_plain_6pct": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",
@@ -151874,7 +151874,7 @@
         }
       }
     },
-    "yogurt_yogurt_fermented_4_5pct": {
+    "yogurt_fermented_4_5pct": {
       "taxonomy": {
         "cat1": "dairy_products",
         "cat1_fr": "PRODUITS LAITIERS",

@@ -3,7 +3,7 @@
     "description": "Nutrition index — SOURCE:id → valeurs nutritionnelles",
     "version": "3.0",
     "nutrition_version": "7.1",
-    "generated_at": "2026-07-26T15:50:36.288728+00:00",
+    "generated_at": "2026-07-26T17:00:45.573972+00:00",
     "generated_by": "build_indexes.py",
     "_generated": true,
     "_do_not_edit": "Fichier auto-généré — toute modification manuelle sera écrasée au prochain run du pipeline.",
@@ -5439,7 +5439,7 @@
       "water_g": 9.83
     },
     "USDA:789951": {
-      "base": "wheat_all_purpose_flour_flour_enrichi_non_blanchi",
+      "base": "wheat_all_purpose_flour_enrichi_non_blanchi",
       "variant": "flour_enrichi_non_blanchi",
       "category": "cereals and grains",
       "name_fr": "blé",
@@ -5501,7 +5501,7 @@
       "water_g": 10.7
     },
     "USDA:790018": {
-      "base": "wheat_all_purpose_flour_flour_non_enrichi_non_blanchi",
+      "base": "wheat_all_purpose_flour_non_enrichi_non_blanchi",
       "variant": "flour_non_enrichi_non_blanchi",
       "category": "cereals and grains",
       "name_fr": "blé",
@@ -72319,12 +72319,12 @@
     },
     "CIQUAL:12761": {
       "base": "asiago",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Asiago",
       "name_en": "Asiago",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 356.0,
       "protein_g": 32.1,
@@ -72356,12 +72356,12 @@
     },
     "CIQUAL:12105": {
       "base": "beaufort",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Beaufort",
       "name_en": "Beaufort",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 404.0,
       "protein_g": 26.7,
@@ -72391,12 +72391,12 @@
     },
     "CIQUAL:12526": {
       "base": "bleu_de_gex",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Bleu de Gex",
       "name_en": "Bleu de Gex",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 364.0,
       "protein_g": 22.5,
@@ -72415,12 +72415,12 @@
     },
     "CIQUAL:12064": {
       "base": "boulette_davesne",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Boulette d'Avesne",
       "name_en": "Boulette d'Avesne",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 355.0,
       "protein_g": 20.9,
@@ -72463,12 +72463,12 @@
     },
     "CIQUAL:12021": {
       "base": "brie_de_meaux",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Brie de Meaux",
       "name_en": "Brie de Meaux",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 276.0,
       "protein_g": 21.4,
@@ -72512,12 +72512,12 @@
     },
     "CIQUAL:12022": {
       "base": "brie_de_melun",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Brie de Melun",
       "name_en": "Brie de Melun",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 288.0,
       "protein_g": 22.0,
@@ -72561,12 +72561,12 @@
     },
     "CIQUAL:19591": {
       "base": "buffalo_mozzarella",
-      "variant": "bufflonne",
+      "variant": "buffalo",
       "category": "dairy products",
       "name_fr": "mozzarella di bufala (buflesse)",
       "name_en": "buffalo mozzarella",
       "axes": {
-        "origin": "bufflonne"
+        "origin": "buffalo"
       },
       "calories_kcal": 260.0,
       "protein_g": 14.5,
@@ -72611,12 +72611,12 @@
     },
     "CIQUAL:12072": {
       "base": "burrata",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Burrata",
       "name_en": "Burrata",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 259.0,
       "protein_g": 10.8,
@@ -72659,12 +72659,12 @@
     },
     "CIQUAL:12006": {
       "base": "camembert_raw_milk",
-      "variant": "lait_cru_vache",
+      "variant": "lait_cru_cow",
       "category": "dairy products",
       "name_fr": "camembert au lait cru",
       "name_en": "Camembert, raw milk",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "treatment": "lait_cru"
       },
       "calories_kcal": 267.0,
@@ -72709,13 +72709,13 @@
     },
     "CIQUAL:12007": {
       "base": "camembert",
-      "variant": "pasteurized_vache",
+      "variant": "pasteurized_cow",
       "category": "dairy products",
       "name_fr": "camembert",
       "name_en": "Camembert",
       "axes": {
         "thermal_state": "pasteurized",
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 275.0,
       "protein_g": 19.2,
@@ -72758,12 +72758,12 @@
     },
     "CIQUAL:12724": {
       "base": "cantal",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Cantal",
       "name_en": "Cantal",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 378.0,
       "protein_g": 25.3,
@@ -72786,12 +72786,12 @@
     },
     "CIQUAL:12722": {
       "base": "cantal_entre_deux",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Cantal entre-deux",
       "name_en": "Cantal entre-deux",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 383.0,
       "protein_g": 26.6,
@@ -72816,12 +72816,12 @@
     },
     "CIQUAL:12109": {
       "base": "cantal_jeune",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Cantal jeune",
       "name_en": "Cantal jeune",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 363.0,
       "protein_g": 24.7,
@@ -72864,12 +72864,12 @@
     },
     "CIQUAL:12025": {
       "base": "carr_de_lest",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Carré de l'Est",
       "name_en": "Carré de l'Est",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 318.0,
       "protein_g": 18.4,
@@ -72892,12 +72892,12 @@
     },
     "CIQUAL:12830": {
       "base": "chabichou_goat_cheese",
-      "variant": "ch_vre",
+      "variant": "goat",
       "category": "dairy products",
       "name_fr": "chabichou",
       "name_en": "Chabichou (goat cheese)",
       "axes": {
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 305.0,
       "protein_g": 19.4,
@@ -72935,12 +72935,12 @@
     },
     "CIQUAL:12028": {
       "base": "chaource",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Chaource",
       "name_en": "Chaource",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 278.0,
       "protein_g": 17.3,
@@ -72984,12 +72984,12 @@
     },
     "CIQUAL:12726": {
       "base": "cheddar",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "cheddar",
       "name_en": "cheddar",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 399.0,
       "protein_g": 24.7,
@@ -73033,12 +73033,12 @@
     },
     "CNF:18": {
       "base": "blue",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "bleu",
       "name_en": "blue",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 353.0,
       "protein_g": 21.4,
@@ -73084,12 +73084,12 @@
     },
     "CNF:19": {
       "base": "brick",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "brick",
       "name_en": "brick",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 371.0,
       "protein_g": 23.24,
@@ -73135,12 +73135,12 @@
     },
     "CNF:20": {
       "base": "brie",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "brie",
       "name_en": "brie",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 334.0,
       "protein_g": 20.75,
@@ -73185,13 +73185,13 @@
       "water_g": 48.42
     },
     "CNF:21": {
-      "base": "camembert_vache",
-      "variant": "vache",
+      "base": "camembert_cow",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "camembert",
       "name_en": "Camembert",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 300.0,
       "protein_g": 19.8,
@@ -73236,13 +73236,13 @@
       "water_g": 51.8
     },
     "CNF:22": {
-      "base": "caraway_vache",
-      "variant": "vache",
+      "base": "caraway_cow",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "carvi",
       "name_en": "caraway",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 376.0,
       "protein_g": 25.18,
@@ -73284,12 +73284,12 @@
     },
     "CNF:23": {
       "base": "cheshire",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "cheshire",
       "name_en": "cheshire",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 387.0,
       "protein_g": 23.37,
@@ -73332,12 +73332,12 @@
     },
     "CNF:24": {
       "base": "colby",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "colby",
       "name_en": "colby",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 394.0,
       "protein_g": 23.76,
@@ -73383,13 +73383,13 @@
     },
     "USDA:2647443": {
       "base": "cotija",
-      "variant": "block_vache",
+      "variant": "block_cow",
       "category": "dairy products",
       "name_fr": "cotija",
       "name_en": "cotija",
       "axes": {
         "form": "block",
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 350.9,
       "protein_g": 23.8,
@@ -73414,12 +73414,12 @@
     },
     "CIQUAL:12729": {
       "base": "edam",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "edam",
       "name_en": "edam",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 320.0,
       "protein_g": 25.7,
@@ -73464,12 +73464,12 @@
     },
     "CIQUAL:12061": {
       "base": "feta_sheep_milk",
-      "variant": "brebis",
+      "variant": "sheep",
       "category": "dairy products",
       "name_fr": "feta (brebis)",
       "name_en": "feta (sheep milk)",
       "axes": {
-        "origin": "brebis"
+        "origin": "sheep"
       },
       "calories_kcal": 264.7,
       "protein_g": 16.3,
@@ -73504,12 +73504,12 @@
     },
     "USDA:2259796": {
       "base": "feta_whole_cow_milk",
-      "variant": "crumbled_vache",
+      "variant": "crumbled_cow",
       "category": "dairy products",
       "name_fr": "feta (lait entier vache)",
       "name_en": "feta (whole cow milk)",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "crumbled"
       },
       "calories_kcal": 273.0,
@@ -73540,12 +73540,12 @@
     },
     "CIQUAL:12121": {
       "base": "fontina",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "fontina",
       "name_en": "fontina",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 384.0,
       "protein_g": 25.6,
@@ -73587,12 +73587,12 @@
     },
     "CNF:31": {
       "base": "gjetost",
-      "variant": "whole_ch_vre",
+      "variant": "whole_goat",
       "category": "dairy products",
       "name_fr": "gjetost",
       "name_en": "gjetost",
       "axes": {
-        "origin": "ch_vre",
+        "origin": "goat",
         "form": "whole"
       },
       "calories_kcal": 466.0,
@@ -73635,12 +73635,12 @@
     },
     "CIQUAL:12736": {
       "base": "gouda",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "gouda",
       "name_en": "gouda",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 369.0,
       "protein_g": 24.7,
@@ -73685,12 +73685,12 @@
     },
     "CNF:32": {
       "base": "gruyere",
-      "variant": "whole_vache",
+      "variant": "whole_cow",
       "category": "dairy products",
       "name_fr": "gruyère",
       "name_en": "gruyere",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "whole"
       },
       "calories_kcal": 413.0,
@@ -73737,12 +73737,12 @@
     },
     "CNF:33": {
       "base": "limburger",
-      "variant": "whole_vache",
+      "variant": "whole_cow",
       "category": "dairy products",
       "name_fr": "limburger (limbourg)",
       "name_en": "limburger",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "whole"
       },
       "calories_kcal": 327.0,
@@ -73789,12 +73789,12 @@
     },
     "CNF:502243": {
       "base": "mexican_blend",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "fromage mélange mexicain",
       "name_en": "Mexican blend",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 358.0,
       "protein_g": 23.54,
@@ -73840,12 +73840,12 @@
     },
     "CNF:102": {
       "base": "mexican_queso_anejo",
-      "variant": "whole_vache",
+      "variant": "whole_cow",
       "category": "dairy products",
       "name_fr": "queso anejo",
       "name_en": "mexican, queso anejo",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "whole"
       },
       "calories_kcal": 373.0,
@@ -73892,12 +73892,12 @@
     },
     "CNF:103": {
       "base": "queso_asadero",
-      "variant": "whole_vache",
+      "variant": "whole_cow",
       "category": "dairy products",
       "name_fr": "queso asadero",
       "name_en": "queso asadero",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "whole"
       },
       "calories_kcal": 356.0,
@@ -73944,12 +73944,12 @@
     },
     "CNF:104": {
       "base": "queso_chihuahua",
-      "variant": "whole_vache",
+      "variant": "whole_cow",
       "category": "dairy products",
       "name_fr": "queso chihuahua",
       "name_en": "queso chihuahua",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "whole"
       },
       "calories_kcal": 375.0,
@@ -73996,12 +73996,12 @@
     },
     "CNF:34": {
       "base": "monterey",
-      "variant": "whole_vache",
+      "variant": "whole_cow",
       "category": "dairy products",
       "name_fr": "monterey",
       "name_en": "monterey",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "whole"
       },
       "calories_kcal": 374.0,
@@ -74048,12 +74048,12 @@
     },
     "USDA:2647438": {
       "base": "monterey_jack",
-      "variant": "block_vache",
+      "variant": "block_cow",
       "category": "dairy products",
       "name_fr": "monterey jack",
       "name_en": "monterey jack",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "block"
       },
       "calories_kcal": 391.4,
@@ -74078,13 +74078,13 @@
       "water_g": 39.2
     },
     "CNF:35": {
-      "base": "buffalo_mozzarella_frais_25pct_vache",
-      "variant": "frais_25pct_vache",
+      "base": "buffalo_mozzarella_frais_25pct_cow",
+      "variant": "frais_25pct_cow",
       "category": "dairy products",
       "name_fr": "mozzarella di bufala (buflesse)",
       "name_en": "buffalo mozzarella",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "treatment": "frais",
         "fat_content": "25pct"
       },
@@ -74131,14 +74131,14 @@
       "water_g": 48.38
     },
     "USDA:329370": {
-      "base": "buffalo_mozzarella_demi_cr_m_vache",
-      "variant": "demi_cr_m_vache",
+      "base": "buffalo_mozzarella_demi_cr_m_cow",
+      "variant": "demi_cr_m_cow",
       "category": "dairy products",
       "name_fr": "mozzarella di bufala (buflesse)",
       "name_en": "buffalo mozzarella",
       "axes": {
         "fat_content": "demi-écrémé",
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 298.0,
       "protein_g": 23.7,
@@ -74176,12 +74176,12 @@
     },
     "CNF:37": {
       "base": "muenster",
-      "variant": "whole_vache",
+      "variant": "whole_cow",
       "category": "dairy products",
       "name_fr": "muenster",
       "name_en": "muenster",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "whole"
       },
       "calories_kcal": 368.0,
@@ -74228,12 +74228,12 @@
     },
     "USDA:2647441": {
       "base": "oaxaca",
-      "variant": "block_vache",
+      "variant": "block_cow",
       "category": "dairy products",
       "name_fr": "oaxaca",
       "name_en": "oaxaca",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "block"
       },
       "calories_kcal": 296.9,
@@ -74259,13 +74259,13 @@
     },
     "CIQUAL:12120": {
       "base": "parmesan",
-      "variant": "p_te_dure_dried_vache",
+      "variant": "p_te_dure_dried_cow",
       "category": "dairy products",
       "name_fr": "parmesan",
       "name_en": "parmesan",
       "axes": {
         "thermal_state": "dried",
-        "origin": "vache",
+        "origin": "cow",
         "form": "p_te_dure"
       },
       "calories_kcal": 411.0,
@@ -74311,13 +74311,13 @@
     },
     "CNF:39": {
       "base": "parmesan_dry_grated_with_anti_caking_agents",
-      "variant": "grated_avec_additifs_dried_vache",
+      "variant": "grated_avec_additifs_dried_cow",
       "category": "dairy products",
       "name_fr": "parmesan râpé sec (avec anti-agglomérants)",
       "name_en": "parmesan, dry grated (with anti-caking agents)",
       "axes": {
         "thermal_state": "dried",
-        "origin": "vache",
+        "origin": "cow",
         "form": "grated",
         "treatment": "avec_additifs"
       },
@@ -74365,12 +74365,12 @@
     },
     "CNF:41": {
       "base": "port_salut",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "port-salut",
       "name_en": "port-salut",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 352.0,
       "protein_g": 23.78,
@@ -74416,12 +74416,12 @@
     },
     "CIQUAL:12716": {
       "base": "provolone",
-      "variant": "paste_vache",
+      "variant": "paste_cow",
       "category": "dairy products",
       "name_fr": "provolone",
       "name_en": "provolone",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "paste"
       },
       "calories_kcal": 340.0,
@@ -74464,12 +74464,12 @@
     },
     "USDA:2647442": {
       "base": "queso_fresco",
-      "variant": "block_vache",
+      "variant": "block_cow",
       "category": "dairy products",
       "name_fr": "queso fresco",
       "name_en": "queso fresco",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "block"
       },
       "calories_kcal": 298.0,
@@ -74495,12 +74495,12 @@
     },
     "CNF:45": {
       "base": "romano",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "romano",
       "name_en": "romano",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 387.0,
       "protein_g": 31.8,
@@ -74546,12 +74546,12 @@
     },
     "CNF:46": {
       "base": "roquefort_blue_cheese",
-      "variant": "brebis",
+      "variant": "sheep",
       "category": "dairy products",
       "name_fr": "roquefort (bleu)",
       "name_en": "Roquefort (blue cheese)",
       "axes": {
-        "origin": "brebis"
+        "origin": "sheep"
       },
       "calories_kcal": 369.0,
       "protein_g": 21.54,
@@ -74594,12 +74594,12 @@
     },
     "CIQUAL:12115": {
       "base": "swiss",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "emmental",
       "name_en": "swiss",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 373.0,
       "protein_g": 27.9,
@@ -74644,12 +74644,12 @@
     },
     "CNF:48": {
       "base": "tilsit",
-      "variant": "raw_whole_vache",
+      "variant": "raw_whole_cow",
       "category": "dairy products",
       "name_fr": "tilsit",
       "name_en": "tilsit",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "treatment": "raw",
         "fat_content": "whole"
       },
@@ -74695,12 +74695,12 @@
     },
     "CIQUAL:12846": {
       "base": "chevrot_goat_cheese",
-      "variant": "raw_ch_vre",
+      "variant": "raw_goat",
       "category": "dairy products",
       "name_fr": "Chevrot",
       "name_en": "Chevrot (goat cheese)",
       "axes": {
-        "origin": "ch_vre",
+        "origin": "goat",
         "treatment": "raw"
       },
       "calories_kcal": 263.0,
@@ -74737,12 +74737,12 @@
     },
     "CIQUAL:12110": {
       "base": "comt",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Comté",
       "name_en": "Comté",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 413.0,
       "protein_g": 27.8,
@@ -74778,13 +74778,13 @@
     },
     "USDA:2346384": {
       "base": "cottage_cheese",
-      "variant": "4pct_vache",
+      "variant": "4pct_cow",
       "category": "dairy products",
       "name_fr": "fromage blanc",
       "name_en": "cottage cheese",
       "axes": {
         "fat_content": "4pct",
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 102.8,
       "protein_g": 11.6,
@@ -74812,12 +74812,12 @@
     },
     "CIQUAL:12010": {
       "base": "coulommiers",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Coulommiers",
       "name_en": "Coulommiers",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 280.0,
       "protein_g": 18.8,
@@ -74850,12 +74850,12 @@
     },
     "CIQUAL:12834": {
       "base": "crottin_de_chavignol_goat_cheese",
-      "variant": "ch_vre",
+      "variant": "goat",
       "category": "dairy products",
       "name_fr": "crottin de Chavignol",
       "name_en": "crottin de Chavignol (goat cheese)",
       "axes": {
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 318.0,
       "protein_g": 20.7,
@@ -74894,12 +74894,12 @@
     },
     "CIQUAL:12311": {
       "base": "camembert_cream",
-      "variant": "cream_vache",
+      "variant": "cream_cow",
       "category": "dairy products",
       "name_fr": "crème de camembert",
       "name_en": "Camembert cream",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "cream"
       },
       "calories_kcal": 267.8,
@@ -74919,12 +74919,12 @@
     },
     "CIQUAL:12099": {
       "base": "emmental_de_savoie",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Emmental de Savoie",
       "name_en": "Emmental de Savoie",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 396.0,
       "protein_g": 29.7,
@@ -74947,12 +74947,12 @@
     },
     "CIQUAL:19639": {
       "base": "faisselle",
-      "variant": "0pct_vache",
+      "variant": "0pct_cow",
       "category": "dairy products",
       "name_fr": "faisselle",
       "name_en": "faisselle",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "fat_content": "0pct"
       },
       "calories_kcal": 36.8,
@@ -74974,13 +74974,13 @@
       "water_g": 89.9
     },
     "CIQUAL:19641": {
-      "base": "faisselle_6pct_vache",
-      "variant": "6pct_vache",
+      "base": "faisselle_6pct_cow",
+      "variant": "6pct_cow",
       "category": "dairy products",
       "name_fr": "faisselle",
       "name_en": "faisselle",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "fat_content": "6pct"
       },
       "calories_kcal": 83.6,
@@ -75026,12 +75026,12 @@
     },
     "CIQUAL:12522": {
       "base": "fourme_dambert",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Fourme d'Ambert",
       "name_en": "Fourme d'Ambert",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 339.0,
       "protein_g": 20.6,
@@ -75074,12 +75074,12 @@
     },
     "CIQUAL:12519": {
       "base": "fourme_de_montbrison",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Fourme de Montbrison",
       "name_en": "Fourme de Montbrison",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 365.0,
       "protein_g": 22.5,
@@ -75101,12 +75101,12 @@
     },
     "CIQUAL:12528": {
       "base": "blue_cheese",
-      "variant": "light_vache",
+      "variant": "light_cow",
       "category": "dairy products",
       "name_fr": "bleu au lait de vache",
       "name_en": "blue cheese",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "fat_content": "light"
       },
       "calories_kcal": 223.0,
@@ -75125,12 +75125,12 @@
     },
     "CIQUAL:12521": {
       "base": "bleu_dauvergne",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Bleu d'Auvergne",
       "name_en": "Bleu d'Auvergne",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 342.0,
       "protein_g": 20.6,
@@ -75166,12 +75166,12 @@
     },
     "CIQUAL:12523": {
       "base": "bleu_des_causses",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Bleu des Causses",
       "name_en": "Bleu des Causses",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 350.0,
       "protein_g": 20.4,
@@ -75196,12 +75196,12 @@
     },
     "CIQUAL:12762": {
       "base": "corsican_ewes_milk_soft_cheese",
-      "variant": "paste_brebis",
+      "variant": "paste_sheep",
       "category": "dairy products",
       "name_fr": "fromage de brebis corse à pâte molle",
       "name_en": "corsican ewe's milk soft cheese",
       "axes": {
-        "origin": "brebis",
+        "origin": "sheep",
         "form": "paste"
       },
       "calories_kcal": 426.0,
@@ -75231,12 +75231,12 @@
     },
     "CIQUAL:12824": {
       "base": "ewes_milk_soft_ripened_cheese",
-      "variant": "paste_brebis",
+      "variant": "paste_sheep",
       "category": "dairy products",
       "name_fr": "fromage de brebis à pâte molle et croûte fleurie",
       "name_en": "ewe's milk soft-ripened cheese",
       "axes": {
-        "origin": "brebis",
+        "origin": "sheep",
         "form": "paste"
       },
       "calories_kcal": 297.0,
@@ -75261,12 +75261,12 @@
     },
     "CIQUAL:12747": {
       "base": "ewes_milk_pressed_cheese_pyrenees_type",
-      "variant": "paste_brebis",
+      "variant": "paste_sheep",
       "category": "dairy products",
       "name_fr": "fromage de brebis à pâte pressée type tomme (Pyrénées)",
       "name_en": "ewe's milk pressed cheese (Pyrenees type)",
       "axes": {
-        "origin": "brebis",
+        "origin": "sheep",
         "form": "paste"
       },
       "calories_kcal": 393.0,
@@ -75298,12 +75298,12 @@
     },
     "CIQUAL:12812": {
       "base": "goat_cheese_log",
-      "variant": "ch_vre",
+      "variant": "goat",
       "category": "dairy products",
       "name_fr": "fromage de chèvre bûche",
       "name_en": "goat cheese log",
       "axes": {
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 285.0,
       "protein_g": 18.8,
@@ -75343,12 +75343,12 @@
     },
     "CIQUAL:12810": {
       "base": "goat_cheese_semi_dry",
-      "variant": "ch_vre",
+      "variant": "goat",
       "category": "dairy products",
       "name_fr": "Fromage de chèvre demi-sec",
       "name_en": "goat cheese",
       "axes": {
-        "origin": "ch_vre",
+        "origin": "goat",
         "affinage": "mi_affin"
       },
       "calories_kcal": 353.0,
@@ -75394,13 +75394,13 @@
     },
     "CIQUAL:12805": {
       "base": "goat_cheese_fresh",
-      "variant": "fresh_ch_vre",
+      "variant": "fresh_goat",
       "category": "dairy products",
       "name_fr": "fromage de chèvre",
       "name_en": "goat cheese",
       "axes": {
         "thermal_state": "fresh",
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 194.0,
       "protein_g": 12.0,
@@ -75441,13 +75441,13 @@
     },
     "CIQUAL:12803": {
       "base": "goat_cheese_lactic",
-      "variant": "aged_ch_vre",
+      "variant": "aged_goat",
       "category": "dairy products",
       "name_fr": "fromage de chèvre lactique",
       "name_en": "goat cheese",
       "axes": {
         "treatment": "aged",
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 308.0,
       "protein_g": 20.7,
@@ -75486,12 +75486,12 @@
     },
     "CIQUAL:12820": {
       "base": "soft_ripened_goat_cheese_camembert_type",
-      "variant": "paste_ch_vre",
+      "variant": "paste_goat",
       "category": "dairy products",
       "name_fr": "fromage de chèvre à pâte molle et croûte fleurie",
       "name_en": "soft-ripened goat cheese (camembert type)",
       "axes": {
-        "origin": "ch_vre",
+        "origin": "goat",
         "form": "paste"
       },
       "calories_kcal": 288.0,
@@ -75534,12 +75534,12 @@
     },
     "CIQUAL:12814": {
       "base": "natural_rind_soft_goat_cheese",
-      "variant": "paste_plain_ch_vre",
+      "variant": "paste_plain_goat",
       "category": "dairy products",
       "name_fr": "fromage de chèvre à pâte molle non pressée et croûte naturelle",
       "name_en": "natural-rind soft goat cheese",
       "axes": {
-        "origin": "ch_vre",
+        "origin": "goat",
         "form": "paste",
         "seasoning": "plain"
       },
@@ -75560,12 +75560,12 @@
     },
     "CIQUAL:12850": {
       "base": "pressed_goat_cheese_tomme_type",
-      "variant": "paste_ch_vre",
+      "variant": "paste_goat",
       "category": "dairy products",
       "name_fr": "fromage de chèvre à pâte pressée non affinée (tomme, gouda de chèvre)",
       "name_en": "pressed goat cheese (tomme type)",
       "axes": {
-        "origin": "ch_vre",
+        "origin": "goat",
         "form": "paste"
       },
       "calories_kcal": 344.0,
@@ -75581,12 +75581,12 @@
     },
     "CIQUAL:12819": {
       "base": "goat_cheese_spread",
-      "variant": "paste_plain_ch_vre",
+      "variant": "paste_plain_goat",
       "category": "dairy products",
       "name_fr": "fromage de chèvre à tartiner",
       "name_en": "goat cheese spread",
       "axes": {
-        "origin": "ch_vre",
+        "origin": "goat",
         "seasoning": "plain",
         "form": "paste"
       },
@@ -75629,14 +75629,14 @@
     },
     "CIQUAL:19663": {
       "base": "petit_suisse",
-      "variant": "fresh_plain_vache",
+      "variant": "fresh_plain_cow",
       "category": "dairy products",
       "name_fr": "petit-suisse",
       "name_en": "petit-suisse",
       "axes": {
         "thermal_state": "fresh",
         "seasoning": "plain",
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 56.5,
       "protein_g": 9.9,
@@ -75667,15 +75667,15 @@
       "water_g": 84.3
     },
     "CIQUAL:19666": {
-      "base": "petit_suisse_fresh_plain_10pct_vache",
-      "variant": "fresh_plain_10pct_vache",
+      "base": "petit_suisse_fresh_plain_10pct_cow",
+      "variant": "fresh_plain_10pct_cow",
       "category": "dairy products",
       "name_fr": "petit-suisse",
       "name_en": "petit-suisse",
       "axes": {
         "thermal_state": "fresh",
         "seasoning": "plain",
-        "origin": "vache",
+        "origin": "cow",
         "fat_content": "10pct"
       },
       "calories_kcal": 137.0,
@@ -75718,15 +75718,15 @@
       "water_g": 76.2
     },
     "CIQUAL:19664": {
-      "base": "petit_suisse_fresh_plain_4pct_vache",
-      "variant": "fresh_plain_4pct_vache",
+      "base": "petit_suisse_fresh_plain_4pct_cow",
+      "variant": "fresh_plain_4pct_cow",
       "category": "dairy products",
       "name_fr": "petit-suisse",
       "name_en": "petit-suisse",
       "axes": {
         "thermal_state": "fresh",
         "seasoning": "plain",
-        "origin": "vache",
+        "origin": "cow",
         "fat_content": "4pct"
       },
       "calories_kcal": 88.0,
@@ -75762,12 +75762,12 @@
     },
     "CIQUAL:12053": {
       "base": "tartiflette_cheese",
-      "variant": "paste_vache",
+      "variant": "paste_cow",
       "category": "dairy products",
       "name_fr": "fromage pour tartiflette",
       "name_en": "tartiflette cheese",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "paste"
       },
       "calories_kcal": 320.0,
@@ -75784,12 +75784,12 @@
     },
     "CIQUAL:12060": {
       "base": "feta",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "feta",
       "name_en": "feta",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 273.0,
       "protein_g": 15.4,
@@ -75833,12 +75833,12 @@
     },
     "CIQUAL:12816": {
       "base": "cooked_pressed_cheese",
-      "variant": "paste_vache",
+      "variant": "paste_cow",
       "category": "dairy products",
       "name_fr": "Fromage à pâte pressée demi-cuite",
       "name_en": "cooked pressed cheese",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "paste"
       },
       "calories_kcal": 359.0,
@@ -75854,12 +75854,12 @@
     },
     "CIQUAL:12524": {
       "base": "gorgonzola",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Gorgonzola",
       "name_en": "Gorgonzola",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 318.0,
       "protein_g": 19.5,
@@ -75904,12 +75904,12 @@
     },
     "CIQUAL:12767": {
       "base": "gouda_with_cumin",
-      "variant": "flavored_vache",
+      "variant": "flavored_cow",
       "category": "dairy products",
       "name_fr": "gouda au cumin",
       "name_en": "gouda with cumin",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "seasoning": "flavored"
       },
       "calories_kcal": 378.0,
@@ -75924,12 +75924,12 @@
     },
     "CIQUAL:12123": {
       "base": "grana_padano",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Grana Padano",
       "name_en": "Grana Padano",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 399.0,
       "protein_g": 33.9,
@@ -75972,12 +75972,12 @@
     },
     "CIQUAL:12113": {
       "base": "gruy_re_igp",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "gruyère IGP France",
       "name_en": "Gruyère IGP",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 415.0,
       "protein_g": 28.2,
@@ -76020,12 +76020,12 @@
     },
     "CIQUAL:12040": {
       "base": "langres",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Langres",
       "name_en": "Langres",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 286.0,
       "protein_g": 16.7,
@@ -76069,12 +76069,12 @@
     },
     "CIQUAL:12037": {
       "base": "livarot",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Livarot",
       "name_en": "Livarot",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 301.0,
       "protein_g": 24.6,
@@ -76119,12 +76119,12 @@
     },
     "CIQUAL:12030": {
       "base": "maroilles_farmhouse",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Maroilles fermier",
       "name_en": "Maroilles, farmhouse",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 349.0,
       "protein_g": 21.2,
@@ -76146,12 +76146,12 @@
     },
     "CIQUAL:12029": {
       "base": "maroilles_dairy",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Maroilles laitier",
       "name_en": "Maroilles, dairy",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 338.0,
       "protein_g": 22.3,
@@ -76169,12 +76169,12 @@
     },
     "CIQUAL:12737": {
       "base": "mimolette_semi_aged",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Mimolette demi-vieille",
       "name_en": "Mimolette, semi-aged",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "affinage": "mi_affin"
       },
       "calories_kcal": 371.0,
@@ -76192,12 +76192,12 @@
     },
     "CIQUAL:12742": {
       "base": "mimolette_extra_aged",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Mimolette extra-vieille",
       "name_en": "Mimolette, extra-aged",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "affinage": "mature"
       },
       "calories_kcal": 402.0,
@@ -76215,12 +76215,12 @@
     },
     "CIQUAL:12735": {
       "base": "mimolette_young",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Mimolette jeune",
       "name_en": "Mimolette, young",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "affinage": "jeune"
       },
       "calories_kcal": 331.0,
@@ -76239,12 +76239,12 @@
     },
     "CIQUAL:12738": {
       "base": "mimolette_aged",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Mimolette vieille",
       "name_en": "Mimolette, aged",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "affinage": "mature"
       },
       "calories_kcal": 397.0,
@@ -76290,12 +76290,12 @@
     },
     "CIQUAL:12051": {
       "base": "mont_dor_vacherin",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "mont d'or (Vacherin)",
       "name_en": "mont d'or (Vacherin)",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 293.0,
       "protein_g": 17.9,
@@ -76322,12 +76322,12 @@
     },
     "CIQUAL:12743": {
       "base": "morbier",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Morbier",
       "name_en": "Morbier",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 355.0,
       "protein_g": 22.8,
@@ -76371,12 +76371,12 @@
     },
     "CIQUAL:19590": {
       "base": "cows_milk_mozzarella",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "mozzarella au lait de vache",
       "name_en": "cow's milk mozzarella",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 227.0,
       "protein_g": 16.5,
@@ -76421,12 +76421,12 @@
     },
     "CIQUAL:12039": {
       "base": "munster",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Munster",
       "name_en": "Munster",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 324.0,
       "protein_g": 20.4,
@@ -76471,12 +76471,12 @@
     },
     "CIQUAL:12031": {
       "base": "neufch_tel",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Neufchâtel",
       "name_en": "Neufchâtel",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 300.0,
       "protein_g": 18.1,
@@ -76520,12 +76520,12 @@
     },
     "CIQUAL:12119": {
       "base": "ossau_iraty",
-      "variant": "brebis",
+      "variant": "sheep",
       "category": "dairy products",
       "name_fr": "Ossau-Iraty",
       "name_en": "Ossau-Iraty",
       "axes": {
-        "origin": "brebis"
+        "origin": "sheep"
       },
       "calories_kcal": 423.0,
       "protein_g": 24.2,
@@ -76561,12 +76561,12 @@
     },
     "CIQUAL:12122": {
       "base": "pecorino",
-      "variant": "brebis",
+      "variant": "sheep",
       "category": "dairy products",
       "name_fr": "pecorino",
       "name_en": "Pecorino",
       "axes": {
-        "origin": "brebis"
+        "origin": "sheep"
       },
       "calories_kcal": 383.0,
       "protein_g": 25.5,
@@ -76599,12 +76599,12 @@
     },
     "CIQUAL:12836": {
       "base": "picodon_goat_cheese",
-      "variant": "ch_vre",
+      "variant": "goat",
       "category": "dairy products",
       "name_fr": "Picodon",
       "name_en": "Picodon (goat cheese)",
       "axes": {
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 313.0,
       "protein_g": 19.9,
@@ -76642,12 +76642,12 @@
     },
     "CIQUAL:12042": {
       "base": "pont_l_v_que",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Pont l'Évêque",
       "name_en": "Pont l'Évêque",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 326.0,
       "protein_g": 22.7,
@@ -76692,12 +76692,12 @@
     },
     "CIQUAL:12839": {
       "base": "pouligny_saint_pierre_goat_cheese",
-      "variant": "ch_vre",
+      "variant": "goat",
       "category": "dairy products",
       "name_fr": "Pouligny Saint-Pierre",
       "name_en": "Pouligny Saint-Pierre (goat cheese)",
       "axes": {
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 286.0,
       "protein_g": 17.6,
@@ -76733,12 +76733,12 @@
     },
     "CIQUAL:12831": {
       "base": "p_lardon_goat_cheese",
-      "variant": "ch_vre",
+      "variant": "goat",
       "category": "dairy products",
       "name_fr": "Pélardon",
       "name_en": "Pélardon (goat cheese)",
       "axes": {
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 343.0,
       "protein_g": 23.8,
@@ -76774,12 +76774,12 @@
     },
     "CIQUAL:12749": {
       "base": "raclette",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "fromage à raclette",
       "name_en": "raclette",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 342.0,
       "protein_g": 23.4,
@@ -76812,14 +76812,14 @@
       "water_g": 44.7
     },
     "CIQUAL:12765": {
-      "base": "raclette_smoked_vache",
-      "variant": "smoked_vache",
+      "base": "raclette_smoked_cow",
+      "variant": "smoked_cow",
       "category": "dairy products",
       "name_fr": "fromage à raclette",
       "name_en": "raclette",
       "axes": {
         "treatment": "smoked",
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 345.0,
       "protein_g": 24.1,
@@ -76834,13 +76834,13 @@
     },
     "CIQUAL:12766": {
       "base": "raclette_peppered",
-      "variant": "spiced_vache",
+      "variant": "spiced_cow",
       "category": "dairy products",
       "name_fr": "fromage à raclette au poivre",
       "name_en": "raclette, peppered",
       "axes": {
         "seasoning": "spiced",
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 350.0,
       "protein_g": 24.5,
@@ -76855,12 +76855,12 @@
     },
     "CIQUAL:12776": {
       "base": "raclette_de_savoie",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "raclette de Savoie (fromage)",
       "name_en": "Raclette de Savoie",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 357.0,
       "protein_g": 24.1,
@@ -76884,12 +76884,12 @@
     },
     "CIQUAL:12045": {
       "base": "reblochon",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Reblochon",
       "name_en": "Reblochon",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 322.0,
       "protein_g": 20.3,
@@ -76922,12 +76922,12 @@
     },
     "CIQUAL:12847": {
       "base": "rocamadour_goat_cheese",
-      "variant": "ch_vre",
+      "variant": "goat",
       "category": "dairy products",
       "name_fr": "Rocamadour",
       "name_en": "Rocamadour (goat cheese)",
       "axes": {
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 274.0,
       "protein_g": 18.1,
@@ -76966,12 +76966,12 @@
     },
     "CIQUAL:12500": {
       "base": "roquefort",
-      "variant": "brebis",
+      "variant": "sheep",
       "category": "dairy products",
       "name_fr": "roquefort (fromage de brebis)",
       "name_en": "Roquefort",
       "axes": {
-        "origin": "brebis"
+        "origin": "sheep"
       },
       "calories_kcal": 384.0,
       "protein_g": 19.5,
@@ -77013,12 +77013,12 @@
     },
     "CIQUAL:12052": {
       "base": "saint_f_licien",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Saint-Félicien",
       "name_en": "Saint-Félicien",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 281.0,
       "protein_g": 13.4,
@@ -77063,12 +77063,12 @@
     },
     "CIQUAL:12049": {
       "base": "saint_marcellin",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Saint-Marcellin",
       "name_en": "Saint-Marcellin",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 280.0,
       "protein_g": 15.1,
@@ -77113,12 +77113,12 @@
     },
     "CIQUAL:12751": {
       "base": "saint_nectaire_farmhouse",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Saint-Nectaire fermier",
       "name_en": "Saint-Nectaire, farmhouse",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 360.0,
       "protein_g": 22.3,
@@ -77132,12 +77132,12 @@
     },
     "CIQUAL:12748": {
       "base": "saint_nectaire_dairy",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Saint-Nectaire laitier",
       "name_en": "Saint-Nectaire, dairy",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 333.0,
       "protein_g": 21.7,
@@ -77151,12 +77151,12 @@
     },
     "CIQUAL:12755": {
       "base": "saint_paulin",
-      "variant": "paste_vache",
+      "variant": "paste_cow",
       "category": "dairy products",
       "name_fr": "Saint-Paulin",
       "name_en": "Saint-Paulin",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "paste"
       },
       "calories_kcal": 327.0,
@@ -77200,12 +77200,12 @@
     },
     "CIQUAL:12842": {
       "base": "sainte_maure_goat_cheese",
-      "variant": "ch_vre",
+      "variant": "goat",
       "category": "dairy products",
       "name_fr": "Sainte-Maure",
       "name_en": "Sainte-Maure (goat cheese)",
       "axes": {
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 298.0,
       "protein_g": 20.0,
@@ -77234,12 +77234,12 @@
     },
     "CIQUAL:12807": {
       "base": "sainte_maure_de_touraine_goat_cheese",
-      "variant": "ch_vre",
+      "variant": "goat",
       "category": "dairy products",
       "name_fr": "Sainte-Maure de Touraine",
       "name_en": "Sainte-Maure de Touraine (goat cheese)",
       "axes": {
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 286.0,
       "protein_g": 18.5,
@@ -77278,12 +77278,12 @@
     },
     "CIQUAL:12725": {
       "base": "salers",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Salers",
       "name_en": "Salers",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 388.0,
       "protein_g": 25.9,
@@ -77328,12 +77328,12 @@
     },
     "CIQUAL:12845": {
       "base": "selles_sur_cher_goat_cheese",
-      "variant": "ch_vre",
+      "variant": "goat",
       "category": "dairy products",
       "name_fr": "Selles-sur-Cher",
       "name_en": "selles-sur-Cher (goat cheese)",
       "axes": {
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 289.0,
       "protein_g": 18.8,
@@ -77357,12 +77357,12 @@
     },
     "CIQUAL:12771": {
       "base": "tomme_de_savoie",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "tome de Savoie",
       "name_en": "Tomme de Savoie",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 361.0,
       "protein_g": 23.5,
@@ -77407,12 +77407,12 @@
     },
     "CIQUAL:12758": {
       "base": "cows_milk_tomme",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "tome de vache",
       "name_en": "cow's milk tomme",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 364.0,
       "protein_g": 21.6,
@@ -77441,12 +77441,12 @@
     },
     "CIQUAL:12763": {
       "base": "tome_des_bauges",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "tome des Bauges",
       "name_en": "Tome des Bauges",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 381.0,
       "protein_g": 26.6,
@@ -77468,12 +77468,12 @@
     },
     "CIQUAL:12773": {
       "base": "tomme_des_pyr_n_es",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "tome des Pyrénées",
       "name_en": "Tomme des Pyrénées",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 340.0,
       "protein_g": 22.1,
@@ -77490,12 +77490,12 @@
     },
     "CIQUAL:12764": {
       "base": "t_te_de_moine",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "tête de moine",
       "name_en": "Tête de Moine",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 415.0,
       "protein_g": 26.0,
@@ -77509,12 +77509,12 @@
     },
     "CIQUAL:12848": {
       "base": "valen_ay_goat_cheese",
-      "variant": "ch_vre",
+      "variant": "goat",
       "category": "dairy products",
       "name_fr": "Valençay",
       "name_en": "Valençay (goat cheese)",
       "axes": {
-        "origin": "ch_vre"
+        "origin": "goat"
       },
       "calories_kcal": 295.0,
       "protein_g": 18.9,
@@ -77553,12 +77553,12 @@
     },
     "CIQUAL:12038": {
       "base": "poisses",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Époisses",
       "name_en": "Époisses",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 286.0,
       "protein_g": 17.6,
@@ -77600,12 +77600,12 @@
     },
     "CNF:107": {
       "base": "cottage_1_m_f",
-      "variant": "1pct_vache",
+      "variant": "1pct_cow",
       "category": "dairy products",
       "name_fr": "cottage (1% M.G.)",
       "name_en": "cottage, (1% M.F.)",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "fat_content": "1pct"
       },
       "calories_kcal": 72.0,
@@ -77652,12 +77652,12 @@
     },
     "CNF:120": {
       "base": "cottage_2_m_f",
-      "variant": "2pct_vache",
+      "variant": "2pct_cow",
       "category": "dairy products",
       "name_fr": "cottage (2% M.G.)",
       "name_en": "cottage, (2% M.F.)",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "fat_content": "2pct"
       },
       "calories_kcal": 81.0,
@@ -77703,14 +77703,14 @@
       "water_g": 81.24
     },
     "CNF:5498": {
-      "base": "cottage_1_m_f_lactose_reduced_vache",
-      "variant": "lactose_reduced_vache",
+      "base": "cottage_1_m_f_lactose_reduced_cow",
+      "variant": "lactose_reduced_cow",
       "category": "dairy products",
       "name_fr": "cottage 1% M.G.",
       "name_en": "cottage, 1% M.F.",
       "axes": {
         "treatment": "lactose_reduced",
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 74.0,
       "protein_g": 12.4,
@@ -77754,12 +77754,12 @@
     },
     "CNF:25": {
       "base": "cottage_creamed_4_5_m_f",
-      "variant": "4_5pct_vache",
+      "variant": "4_5pct_cow",
       "category": "dairy products",
       "name_fr": "cottage en crème (4,5% M.G.)",
       "name_en": "cottage, creamed (4.5% M.F.)",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "fat_content": "4.5pct"
       },
       "calories_kcal": 99.0,
@@ -77806,13 +77806,13 @@
     },
     "USDA:328841": {
       "base": "cottage_2_milkfat",
-      "variant": "2pct_vache",
+      "variant": "2pct_cow",
       "category": "dairy products",
       "name_fr": "fromage blanc 2%",
       "name_en": "cottage, 2% milkfat",
       "axes": {
         "fat_content": "2pct",
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 84.0,
       "protein_g": 11.0,
@@ -77849,13 +77849,13 @@
     },
     "CNF:27": {
       "base": "cottage_uncreamed_curd_0_4_m_f",
-      "variant": "dried_0_4pct_vache",
+      "variant": "dried_0_4pct_cow",
       "category": "dairy products",
       "name_fr": "cottage pressé (0,4% M.G.)",
       "name_en": "cottage, uncreamed curd (0.4% M.F.)",
       "axes": {
         "thermal_state": "dried",
-        "origin": "vache",
+        "origin": "cow",
         "fat_content": "0.4pct"
       },
       "calories_kcal": 72.0,
@@ -77902,12 +77902,12 @@
     },
     "CIQUAL:19585": {
       "base": "ricotta",
-      "variant": "whole_vache",
+      "variant": "whole_cow",
       "category": "dairy products",
       "name_fr": "ricotta",
       "name_en": "ricotta",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "fat_content": "whole"
       },
       "calories_kcal": 145.2,
@@ -77952,12 +77952,12 @@
     },
     "USDA:2346385": {
       "base": "cream_cheese",
-      "variant": "block_whole_vache",
+      "variant": "block_whole_cow",
       "category": "dairy products",
       "name_fr": "fromage frais",
       "name_en": "cream cheese",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "block",
         "fat_content": "whole"
       },
@@ -77987,12 +77987,12 @@
     },
     "CIQUAL:19644": {
       "base": "cottage",
-      "variant": "0pct_vache",
+      "variant": "0pct_cow",
       "category": "dairy products",
       "name_fr": "fromage blanc",
       "name_en": "cottage",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "fat_content": "0pct"
       },
       "calories_kcal": 48.4,
@@ -78036,12 +78036,12 @@
     },
     "CIQUAL:19646": {
       "base": "fromage_blanc",
-      "variant": "plain_2_5pct_vache",
+      "variant": "plain_2_5pct_cow",
       "category": "dairy products",
       "name_fr": "fromage blanc",
       "name_en": "fromage blanc",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "seasoning": "plain",
         "fat_content": "2.5pct"
       },
@@ -78086,14 +78086,14 @@
       "water_g": 84.0
     },
     "CIQUAL:19716": {
-      "base": "fromage_blanc_sweetened_vache",
-      "variant": "sweetened_vache",
+      "base": "fromage_blanc_sweetened_cow",
+      "variant": "sweetened_cow",
       "category": "dairy products",
       "name_fr": "fromage blanc",
       "name_en": "fromage blanc",
       "axes": {
         "seasoning": "sweetened",
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 101.0,
       "protein_g": 7.66,
@@ -78106,13 +78106,13 @@
       "alcohol_g": 0.0
     },
     "CIQUAL:19711": {
-      "base": "fromage_blanc_plain_7_5pct_vache",
-      "variant": "plain_7_5pct_vache",
+      "base": "fromage_blanc_plain_7_5pct_cow",
+      "variant": "plain_7_5pct_cow",
       "category": "dairy products",
       "name_fr": "fromage blanc",
       "name_en": "fromage blanc",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "seasoning": "plain",
         "fat_content": "7.5pct"
       },
@@ -78158,12 +78158,12 @@
     },
     "CIQUAL:19712": {
       "base": "ewes_milk_fromage_blanc",
-      "variant": "plain_brebis",
+      "variant": "plain_sheep",
       "category": "dairy products",
       "name_fr": "fromage blanc au lait de brebis",
       "name_en": "ewe's milk fromage blanc",
       "axes": {
-        "origin": "brebis",
+        "origin": "sheep",
         "seasoning": "plain"
       },
       "calories_kcal": 92.5,
@@ -78180,12 +78180,12 @@
     },
     "CIQUAL:19713": {
       "base": "goats_milk_fromage_blanc",
-      "variant": "plain_ch_vre",
+      "variant": "plain_goat",
       "category": "dairy products",
       "name_fr": "fromage blanc au lait de chèvre",
       "name_en": "goat's milk fromage blanc",
       "axes": {
-        "origin": "ch_vre",
+        "origin": "goat",
         "seasoning": "plain"
       },
       "calories_kcal": 98.3,
@@ -78200,12 +78200,12 @@
     },
     "CIQUAL:19584": {
       "base": "mascarpone",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Mascarpone",
       "name_en": "Mascarpone",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 369.0,
       "protein_g": 6.0,
@@ -78250,12 +78250,12 @@
     },
     "CIQUAL:12112": {
       "base": "abondance",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Abondance",
       "name_en": "Abondance",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 393.0,
       "protein_g": 27.1,
@@ -78300,12 +78300,12 @@
     },
     "CIQUAL:12832": {
       "base": "goat_crottin_raw_milk",
-      "variant": "lait_cru_ch_vre",
+      "variant": "lait_cru_goat",
       "category": "dairy products",
       "name_fr": "crottin de chèvre au lait cru",
       "name_en": "goat crottin, raw milk",
       "axes": {
-        "origin": "ch_vre",
+        "origin": "goat",
         "treatment": "lait_cru"
       },
       "calories_kcal": 384.0,
@@ -78342,12 +78342,12 @@
     },
     "CIQUAL:12325": {
       "base": "cancoillotte_melted_cheese_speciality",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "cancoillotte (spécialité fromagère)",
       "name_en": "cancoillotte (melted cheese speciality)",
       "axes": {
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 151.0,
       "protein_g": 13.8,
@@ -78390,14 +78390,14 @@
     },
     "USDA:2259795": {
       "base": "parmesan_grated_refrigerated",
-      "variant": "grated_r_frig_r_vache",
+      "variant": "grated_r_frig_r_cow",
       "category": "dairy products",
       "name_fr": "parmesan",
       "name_en": "parmesan",
       "axes": {
         "form": "grated",
         "thermal_state": "r_frig_r",
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 403.2,
       "protein_g": 30.1,
@@ -78427,12 +78427,12 @@
     },
     "CNF:38": {
       "base": "neufchatel_american_style",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "Neufchâtel",
       "name_en": "Neufchâtel",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "style": "am_ricain"
       },
       "calories_kcal": 253.0,
@@ -78479,13 +78479,13 @@
     },
     "CNF:111": {
       "base": "part_skim_mozzarella",
-      "variant": "16pct_vache",
+      "variant": "16pct_cow",
       "category": "dairy products",
       "name_fr": "mozzarella di bufala (buflesse)",
       "name_en": "buffalo mozzarella",
       "axes": {
         "fat_content": "16pct",
-        "origin": "vache"
+        "origin": "cow"
       },
       "calories_kcal": 254.0,
       "protein_g": 24.26,
@@ -78531,12 +78531,12 @@
     },
     "CNF:47": {
       "base": "swiss_cheese_canadian_style",
-      "variant": "vache",
+      "variant": "cow",
       "category": "dairy products",
       "name_fr": "emmental",
       "name_en": "swiss",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "style": "canadien"
       },
       "calories_kcal": 380.0,
@@ -78582,14 +78582,14 @@
       "water_g": 37.12
     },
     "USDA:325036": {
-      "base": "parmesan_grated_dried_vache",
-      "variant": "grated_dried_vache",
+      "base": "parmesan_grated_dried_cow",
+      "variant": "grated_dried_cow",
       "category": "dairy products",
       "name_fr": "parmesan",
       "name_en": "parmesan",
       "axes": {
         "thermal_state": "dried",
-        "origin": "vache",
+        "origin": "cow",
         "form": "grated"
       },
       "calories_kcal": 421.0,
@@ -78627,13 +78627,13 @@
       "water_g": 22.8
     },
     "CNF:110": {
-      "base": "buffalo_mozzarella_frais_22_5pct_vache",
-      "variant": "frais_22_5pct_vache",
+      "base": "buffalo_mozzarella_frais_22_5pct_cow",
+      "variant": "frais_22_5pct_cow",
       "category": "dairy products",
       "name_fr": "mozzarella di bufala (buflesse)",
       "name_en": "buffalo mozzarella",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "treatment": "frais",
         "fat_content": "22.5pct"
       },
@@ -78680,13 +78680,13 @@
       "water_g": 52.0
     },
     "USDA:2647440": {
-      "base": "provolone_sliced_vache",
-      "variant": "sliced_vache",
+      "base": "provolone_sliced_cow",
+      "variant": "sliced_cow",
       "category": "dairy products",
       "name_fr": "provolone",
       "name_en": "provolone",
       "axes": {
-        "origin": "vache",
+        "origin": "cow",
         "form": "sliced"
       },
       "calories_kcal": 356.7,
@@ -80159,7 +80159,7 @@
       "water_g": 88.4
     },
     "CIQUAL:19594": {
-      "base": "yogurt_yogurt_fermented_0pct",
+      "base": "yogurt_fermented_0pct",
       "variant": "yogurt_fermented_0pct",
       "category": "dairy products",
       "name_fr": "yaourt",
@@ -80210,7 +80210,7 @@
       "water_g": 88.9
     },
     "CIQUAL:19599": {
-      "base": "yogurt_yogurt_fermented_sweetened",
+      "base": "yogurt_fermented_sweetened",
       "variant": "yogurt_fermented_sweetened",
       "category": "dairy products",
       "name_fr": "yaourt",
@@ -80260,7 +80260,7 @@
       "water_g": 82.2
     },
     "CNF:502191": {
-      "base": "yogurt_greek_style_yogurt_plain_10pct",
+      "base": "yogurt_greek_style_plain_10pct",
       "variant": "yogurt_plain_10pct",
       "category": "dairy products",
       "name_fr": "yaourt Grec",
@@ -80308,7 +80308,7 @@
       "water_g": 69.85
     },
     "CNF:502170": {
-      "base": "yogurt_yogurt_plain_3pct",
+      "base": "yogurt_plain_3pct",
       "variant": "yogurt_plain_3pct",
       "category": "dairy products",
       "name_fr": "yaourt",
@@ -80361,7 +80361,7 @@
       "water_g": 89.18
     },
     "USDA:330137": {
-      "base": "yogurt_greek_style_yogurt_plain_0pct",
+      "base": "yogurt_greek_style_plain_0pct",
       "variant": "yogurt_plain_0pct",
       "category": "dairy products",
       "name_fr": "yaourt Grec",
@@ -80406,7 +80406,7 @@
       "water_g": 85.0
     },
     "USDA:2647437": {
-      "base": "yogurt_yogurt_plain_0pct",
+      "base": "yogurt_plain_0pct",
       "variant": "yogurt_plain_0pct",
       "category": "dairy products",
       "name_fr": "yaourt",
@@ -80487,7 +80487,7 @@
       "water_g": 85.7
     },
     "CIQUAL:19882": {
-      "base": "ewes_milk_yogurt_yogurt_plain_6pct",
+      "base": "ewes_milk_yogurt_plain_6pct",
       "variant": "yogurt_plain_6pct",
       "category": "dairy products",
       "name_fr": "yaourt au lait de brebis",
@@ -80638,7 +80638,7 @@
       "water_g": 81.3
     },
     "USDA:2259793": {
-      "base": "yogurt_yogurt_fermented_4_5pct",
+      "base": "yogurt_fermented_4_5pct",
       "variant": "yogurt_fermented_4_5pct",
       "category": "dairy products",
       "name_fr": "yaourt",
