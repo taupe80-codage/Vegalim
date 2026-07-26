@@ -3,11 +3,11 @@
   "meta": {
     "schema_version": "v36",
     "generated_from": "v39 + Injection des vrais FoodID officiels de Sante Canada pour les 11 doublons CNF",
-    "description": "Dictionnaire d'ingrédients végétariens/vegan du projet ALIM. Chaque entrée (ing_) représente un ingrédient canonique multi-sources avec ses variantes de préparation. Les données nutritionnelles sont stockées dans nutrition_v2.json et liées via nutrition_key.",
+    "description": "Dictionnaire d'ingrédients végétariens/vegan du projet ALIM. Chaque entrée (ing_) représente UNE déclinaison précise d'un ingrédient : un nom canonique SIMPLE et générique (canonical_name_fr/en, ex. 'avoine') plus des axes qui précisent son état (cuisson, forme, partie, conditionnement…). Un même ingrédient a donc plusieurs ing_ distincts, un par combinaison d'axes (cru, en flocons, en farine, en lait...), tous avec le même canonical_name. À l'intérieur d'un ing_, les variants sont les sources (CIQUAL/CNF/USDA/MANUAL) qui décrivent CETTE MÊME combinaison nom+axes — ce ne sont PAS des variantes de préparation, d'où le fait que axes_fr/axes_en soient portés par le groupe (ing_) et quasiment toujours vides au niveau du variant : un groupe regroupe par construction les variants qui partagent les mêmes axes. Les données nutritionnelles sont stockées dans nutrition_v2.json et liées via nutrition_key.",
     "stats": {
       "total_cat1": 15,
-      "total_cat2": 224,
-      "total_ingredient_groups": 1882,
+      "total_cat2": 225,
+      "total_ingredient_groups": 1884,
       "total_variants": 2155,
       "sources": [
         "CIQUAL",
@@ -36,23 +36,23 @@
         }
       },
       "ingredient_groups": {
-        "description": "Unité fondamentale du dictionnaire. Un ing_ représente un ingrédient canonique potentiellement multi-sources (CIQUAL + CNF par ex.) et multi-préparations. L'identité de l'ingrédient est définie par : canonical_name_fr + axes. La résolution de la clé nutritionnelle se fait via sync_nutrition_to_dict.py en priorité sur canonical_name_en.",
+        "description": "Unité fondamentale du dictionnaire. Un ing_ représente UNE déclinaison précise d'un ingrédient (un canonical_name + une combinaison FIGÉe d'axes), potentiellement multi-sources (CIQUAL + CNF par ex.) — mais jamais multi-préparations au sein d'un même ing_. Les différents états de préparation d'un même ingrédient (cru, cuit, en farine, en lait...) sont des ing_ SÉPARÉS qui partagent le même canonical_name_fr/en mais des axes différents (voir axes_fr/axes_en ci-dessous et meta.description). L'identité complète de l'ingrédient est donc toujours : canonical_name_fr + axes — jamais canonical_name_fr seul, qui n'identifie que la famille générique. La résolution de la clé nutritionnelle se fait via sync_nutrition_to_dict.py en priorité sur canonical_name_en.",
         "fields": {
           "id": "Identifiant unique ing_XXXXX",
-          "canonical_name_fr": "Nom canonique français, tout en minuscule sauf AOP/IGP. Clé principale de résolution FR.",
-          "canonical_name_en": "Nom canonique anglais, tout en minuscule sauf AOP/IGP. Priorité 1 de résolution dans sync_nutrition_to_dict.",
+          "canonical_name_fr": "Nom canonique français SIMPLE et générique de l'ingrédient (ex. 'avoine'), tout en minuscule sauf AOP/IGP. Ne varie PAS selon l'état de préparation : plusieurs ing_ distincts partagent souvent le même canonical_name_fr (cru, bouilli, en farine, en lait...) et ne sont différenciés que par axes_fr/axes_en (voir ces champs). Clé principale de résolution FR, à toujours combiner avec axes_fr pour identifier une déclinaison précise.",
+          "canonical_name_en": "Nom canonique anglais SIMPLE et générique de l'ingrédient (ex. 'oat'), tout en minuscule sauf AOP/IGP. Même principe que canonical_name_fr : ne varie pas selon la préparation, la différenciation se fait via axes_fr/axes_en. Priorité 1 de résolution dans sync_nutrition_to_dict.",
           "indus_conditionne": "Boolean. True si l'ingrédient est sous forme industrielle ou conditionnée (préemballé, UHT, appertisé, conserve…). Impacte le scoring ALIM (pénalité produit transformé).",
           "indus_conditionne_only": "Boolean. True si l'ingrédient n'existe QUE sous forme industrielle (ex. levure sèche active, tofu UHT). Empêche la pénalité de s'appliquer quand il n'y a pas d'alternative fraîche.",
           "conditioning_types": "Liste de flags sémantiques pour le scoring. Valeurs possibles : 'EN CONSERVE / APPERTISÉ', 'SEL AJOUTÉ', 'SUCRE AJOUTÉ'. Renseigné automatiquement si axes.conditionnement ∈ {conserve, appertisé, sous pression} ou axes.assaisonnement ∈ {salé, sucré}.",
           "variants": "Liste des variants sources (voir structure variant ci-dessous)",
-          "axes_fr": "Dictionnaire de propriétés décrivant l'état précis de l'ingrédient en français. Deux ing_ avec le même canonical_name_fr mais des axes différents sont des entrées distinctes. Clés possibles : etat_cuisson, etat_thermique, forme, partie, conditionnement, assaisonnement, traitement, maturite, teneur_MG, origine, milieu_conservation, procede_cuisson, teneur_sel, affinage, concentration_sirop, couleur, espece, style, taille, variete. Voir axes_vocabulary pour le détail.",
-          "axes_en": "Dictionnaire miroir de propriétés décrivant l'état précis de l'ingrédient traduit en anglais pour les besoins d'interopérabilité des pipelines internationaux. Clés associées (miroir des clés axes_fr) : cooking_state (etat_cuisson), thermal_state (etat_thermique), form (forme), part (partie), packaging (conditionnement), seasoning (assaisonnement), treatment (traitement), ripeness (maturite), fat_content (teneur_MG), origin (origine), storage_medium (milieu_conservation), cooking_process (procede_cuisson). Les axes ajoutés plus récemment (teneur_sel, affinage, concentration_sirop, couleur, espece, style, taille, variete) ne sont pas traduits et conservent le même nom de clé en français et en anglais.",
+          "axes_fr": "Dictionnaire de propriétés décrivant l'état précis de l'ingrédient en français. Porté au niveau du GROUPE (ing_) et non du variant, car un ing_ regroupe par construction l'ensemble des variants (sources) qui partagent exactement les mêmes axes — c'est ce qui définit l'appartenance au groupe, pas l'inverse. Deux ing_ avec le même canonical_name_fr mais des axes différents sont des entrées distinctes (ex. 'avoine' cru vs 'avoine' en farine). Clés possibles : etat_cuisson, etat_thermique, forme, partie, conditionnement, assaisonnement, traitement, maturite, teneur_MG, origine, milieu_conservation, procede_cuisson, teneur_sel, affinage, concentration_sirop, couleur, espece, style, taille, variete. Voir axes_vocabulary pour le détail.",
+          "axes_en": "Miroir anglais de axes_fr, porté au même niveau (le groupe ing_) et pour la même raison : le groupe regroupe les variants qui partagent ces axes. Clés associées (miroir des clés axes_fr) : cooking_state (etat_cuisson), thermal_state (etat_thermique), form (forme), part (partie), packaging (conditionnement), seasoning (assaisonnement), treatment (traitement), ripeness (maturite), fat_content (teneur_MG), origin (origine), storage_medium (milieu_conservation), cooking_process (procede_cuisson). Les axes ajoutés plus récemment (teneur_sel, affinage, concentration_sirop, couleur, espece, style, taille, variete) ne sont pas traduits et conservent le même nom de clé en français et en anglais.",
           "preferred_source": "String. Source de données prioritaire pré-calculée ('CIQUAL', 'USDA' ou 'CNF') définie pour guider les scripts de jointures rapides et le fallback initial.",
           "aliases_fr": "Liste de strings (optionnel). Noms alternatifs ou synonymes commerciaux en français associés à ce groupe d'ingrédients permettant d'améliorer la résolution lexicale (ex: 'brugnon' pour 'nectarine')."
         }
       },
       "variants": {
-        "description": "Entrée source dans une base nutritionnelle (CIQUAL, USDA ou CNF). Un ing_ peut avoir plusieurs variants si la même réalité alimentaire est couverte par plusieurs sources (fusion cross-source). Le weighted_merge de build_ontology utilise ces variants pour calculer les valeurs nutritionnelles consolidées. L'ordre des variants est significatif : CIQUAL en premier (priorité), puis USDA, puis CNF.",
+        "description": "Entrée source dans une base nutritionnelle (CIQUAL, USDA ou CNF). Un variant N'EST PAS une variante de préparation (ça, c'est le rôle des axes du groupe, voir meta.description) : c'est une source de données supplémentaire pour la MÊME déclinaison canonical_name+axes. Un ing_ a plusieurs variants quand la même réalité alimentaire (mêmes axes) est couverte par plusieurs sources (fusion cross-source). Le weighted_merge de build_ontology utilise ces variants pour calculer les valeurs nutritionnelles consolidées. L'ordre des variants est significatif : CIQUAL en premier (priorité), puis USDA, puis CNF.",
         "fields": {
           "id": "Identifiant unique var_XXXXX",
           "source": "Source de données : 'CIQUAL', 'USDA' ou 'CNF'",
@@ -61,8 +61,8 @@
           "name_en": "Nom anglais tel qu'il apparaît dans la source. Clé de résolution prioritaire dans sync_nutrition_to_dict. Propagé depuis canonical_name_en si la source ne fournit pas de nom EN.",
           "indus_conditionne": "Boolean hérité ou spécifique au variant (ex. variant UHT d'un lait)",
           "conditioning_types": "Flags spécifiques au variant (hérite du groupe si absent)",
-          "axes_fr": "Dictionnaire de propriétés au niveau du variant (même vocabulaire que axes_fr du groupe, voir axes_vocabulary). Souvent vide {} quand le variant ne précise rien de plus que le groupe ; peut contenir des axes spécifiques à la source (ex. variante de préparation propre à une entrée CNF/USDA). Présent (clé existante, vide ou non) sur les 2155 variants.",
-          "axes_en": "Miroir anglais de axes_fr au niveau variant, même règle de correspondance de clés que axes_en du groupe. Présent sur les 2155 variants.",
+          "axes_fr": "Dictionnaire de propriétés au niveau du variant (même vocabulaire que axes_fr du groupe, voir axes_vocabulary). Quasiment toujours vide {} en pratique : les axes qui différencient les déclinaisons de préparation sont portés par le groupe (ing_.axes_fr), pas par le variant — un ing_ regroupe justement les variants qui partagent ces mêmes axes. Ce champ ne sert qu'à noter une précision propre à UNE source particulière, non partagée par les autres variants du même groupe. Présent (clé existante, vide ou non) sur les 2155 variants.",
+          "axes_en": "Miroir anglais de axes_fr au niveau variant (voir la note sur axes_fr du variant ci-dessus : quasiment toujours vide, les axes vivent au niveau du groupe). Présent sur les 2155 variants.",
           "source_name_fr": "Nom français exact tel qu'il apparaît littéralement dans la base source (libellé brut CIQUAL/CNF/USDA traduit), à distinguer de name_fr qui peut être un alias simplifié. Présent sur 2093/2155 variants (manquant surtout sur des variants USDA sans traduction FR fournie par la source).",
           "source_name_en": "Nom anglais exact tel qu'il apparaît littéralement dans la base source. Présent sur 2093/2155 variants.",
           "source_rank": "Entier fixe de priorité par source, indépendant de la position dans la liste variants[] : 1=CIQUAL, 2=USDA, 3=CNF. Sert à déterminer/vérifier l'ordre attendu (CIQUAL→USDA→CNF) et à choisir le variant primaire par défaut. Présent sur les 2155 variants.",
@@ -437,7 +437,8 @@
       "v33 → v35 : P1: grillé à sec → grillé (ing_04701, ing_04731) ; P2: ing_02008 etat_cuisson=cru → etat_thermique=frais ; P3: ing_02928 etat_cuisson=cru → etat_thermique=frais ; P4: levure ing_00025 séché → déshydraté ; P5: appertisé → conserve (36 occurrences) ; P6: cuit → bouilli (119 occurrences, exceptions ing_00123/00130) ; P7: déshydraté → séché (46 occurrences, exceptions levure) ; P8: ing_04561 tahin added origine=végétal ; P9: ing_00743 split → ing_05730 riz basmati cru ; P10: ing_01254 split → ing_05732 clémentine ; P11: ing_04397 split → ing_05734 beurre de karité",
       "v35 -> v36 : audit_patches_2026-06-04 applique — 1606 ingredients mis a jour — axes_fr/axes_en remplacement complet (v2 corrige)",
       "v37 -> v38 : execution de fix_variants_order.py — re-ordonnancement de 139 groupes selon la priorite CIQUAL -> USDA -> CNF",
-      "v38 → v38_aligned : alignement documentaire de meta.structure (séparation axes_fr/axes_en + ajout preferred_source / aliases_fr)"
+      "v38 → v38_aligned : alignement documentaire de meta.structure (séparation axes_fr/axes_en + ajout preferred_source / aliases_fr)",
+      "v38_aligned → v39_doc_variants_axes_fix : clarification de meta.description et de structure.ingredient_groups/variants — canonical_name_fr/en est un nom SIMPLE et invariant, les axes (portés par le groupe ing_) différencient les états de préparation, et les variants sont des sources multiples qui partagent les mêmes axes (et non des variantes de préparation comme le laissait entendre la formulation précédente). Aucune donnée modifiée, documentation seulement."
     ],
     "notes": {
       "casse": "Tous les canonical_name_fr et canonical_name_en sont en minuscule sauf les noms AOP/IGP (Roquefort, Champagne, Armagnac…). Les variant.name_fr et name_en suivent la même règle.",
@@ -619,7 +620,7 @@
       "ISSUE-11_traitement_vegetal": "Résolu : traitement='végétal' retiré de 64 ing_ (descripteur catégorie, pas process). Remplacé par axes.origine='végétal' sur 29 produits de substitution (laits, yaourts, beurres végétaux). Absent sur les huiles dont l'origine végétale est portée par la cat2."
     },
     "version": "v7",
-    "date": "2026-06-06"
+    "date": "2026-07-26"
   },
   "categories": [
     {
@@ -17654,7 +17655,7 @@
                   "source_name_fr": "Pomelo (dit Pamplemousse), chair sans peau, sans pépins, cru",
                   "source_name_en": null,
                   "source_rank": 1,
-                  "is_primary": false
+                  "is_primary": true
                 }
               ]
             },
@@ -17946,7 +17947,7 @@
                   "source_name_en": "Grapefruit, white, florida, raw",
                   "source_name_fr": "Pamplemousse, blanc, floride, cru",
                   "source_rank": 3,
-                  "is_primary": false
+                  "is_primary": true
                 }
               ]
             }
