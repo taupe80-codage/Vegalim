@@ -1,4 +1,13 @@
 # Sources brutes USDA (6.8 MB) et CIQUAL (335 KB) — ne pas versionner
 raw/
-# Répertoire de référence vide
-reference/
+# reference/ contient des configs JSON réelles utilisées par le pipeline
+# (nutrition_manual_supplements.json, dual_nutrition_sources.json...) à côté
+# de matériel de travail (rapports, backups, docx/html d'audit) — on ignore
+# seulement ce dernier, pas le dossier entier.
+reference/*.bak.json
+reference/*.docx
+reference/*.html
+reference/*.svg
+reference/*.txt
+reference/*.py
+reference/archive/

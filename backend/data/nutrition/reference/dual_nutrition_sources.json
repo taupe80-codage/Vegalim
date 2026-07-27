@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "description": "Ingrédients ayant à la fois une source nutritionnelle industrielle (CIQUAL/CNF/USDA, dans nutrition_v2.json) et une recette maison équivalente (base_XXX dans recipes.json). Consommé par build_dict_v2.py pour poser nutrition_source_mode='dual' + base_recipe_key sur l'entrée correspondante d'ingredients_dictionary.json. Ancrage par v32_ing_id (stable across renames), pas par entry_key.",
+    "updated_at": "2026-07-27"
+  },
+  "sources": {
+    "ing_00271": {
+      "base_recipe_key": "base_oat_milk_3519f4",
+      "note": "oat milk, refrigerated (plain, unsweetened) -> Lait d'Avoine Maison"
+    },
+    "ing_00756": {
+      "base_recipe_key": "base_rice_milk_128001",
+      "note": "rice drink (plain) -> Lait de Riz Maison"
+    },
+    "ing_04312": {
+      "base_recipe_key": "base_soy_cream_4dc027",
+      "note": "soybean cream -> Crème de Soja Maison"
+    },
+    "ing_04314": {
+      "base_recipe_key": "base_soy_milk_827b25",
+      "note": "soybean milk (unsweetened) -> Lait de Soja Maison"
+    },
+    "ing_05516": {
+      "base_recipe_key": "base_almond_milk_226291",
+      "note": "almond milk, refrigerated (unsweetened) -> Lait d'Amande Maison"
+    },
+    "ing_05518": {
+      "base_recipe_key": "base_almond_milk_226291",
+      "note": "almond milk, pre-packaged (unsweetened) -> Lait d'Amande Maison"
+    },
+    "ing_05476": {
+      "base_recipe_key": "base_coconut_milk_1ebad9",
+      "note": "coconut milk -> Lait de Coco Maison"
+    }
+  }
+}

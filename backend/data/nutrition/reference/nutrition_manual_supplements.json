@@ -1,0 +1,815 @@
+{
+  "_meta": {
+    "description": "Données nutritionnelles pour ingrédients sans source officielle (CIQUAL/CNF/USDA)",
+    "built_at": "2026-06-11T08:54:57.798384+00:00",
+    "count": 62
+  },
+  "supplements": {
+    "acai": {
+      "ig_id": "ing_05784",
+      "var_id": "var_05866",
+      "name_fr": "açaï",
+      "name_en": "acai",
+      "nutrients": {
+        "calories_kcal": 70.0,
+        "protein_g": 0.9,
+        "carbs_g": 3.5,
+        "fat_g": 5.0,
+        "fiber_g": 1.5
+      }
+    },
+    "dragon_fruit": {
+      "ig_id": "ing_05785",
+      "var_id": "var_05867",
+      "name_fr": "pitaya (fruit du dragon)",
+      "name_en": "dragon fruit",
+      "nutrients": {
+        "calories_kcal": 60.0,
+        "protein_g": 1.4,
+        "carbs_g": 13.0,
+        "fat_g": 0.4,
+        "fiber_g": 3.0
+      }
+    },
+    "baobab": {
+      "ig_id": "ing_05786",
+      "var_id": "var_05868",
+      "name_fr": "poudre de baobab",
+      "name_en": "baobab powder",
+      "nutrients": {
+        "calories_kcal": 227.0,
+        "protein_g": 3.1,
+        "carbs_g": 58.5,
+        "fat_g": 0.3,
+        "fiber_g": 44.5
+      }
+    },
+    "yuzu": {
+      "ig_id": "ing_05787",
+      "var_id": "var_05869",
+      "name_fr": "yuzu (agrume japonais)",
+      "name_en": "yuzu citrus",
+      "nutrients": {
+        "calories_kcal": 43.0,
+        "protein_g": 0.5,
+        "carbs_g": 11.5,
+        "fat_g": 0.5,
+        "fiber_g": 4.0
+      }
+    },
+    "umeboshi_plum": {
+      "ig_id": "ing_05788",
+      "var_id": "var_05870",
+      "name_fr": "prune umeboshi (prune japonaise salée)",
+      "name_en": "umeboshi plum",
+      "nutrients": {
+        "calories_kcal": 33.0,
+        "protein_g": 0.9,
+        "carbs_g": 10.5,
+        "fat_g": 0.2,
+        "fiber_g": 2.3
+      }
+    },
+    "kabocha_squash": {
+      "ig_id": "ing_05789",
+      "var_id": "var_05871",
+      "name_fr": "courge kabocha (potimarron japonais)",
+      "name_en": "kabocha squash",
+      "nutrients": {
+        "calories_kcal": 40.0,
+        "protein_g": 1.9,
+        "carbs_g": 9.3,
+        "fat_g": 0.1,
+        "fiber_g": 2.7
+      }
+    },
+    "bitter_gourd": {
+      "ig_id": "ing_05790",
+      "var_id": "var_05872",
+      "name_fr": "melon amer (karela)",
+      "name_en": "bitter gourd",
+      "nutrients": {
+        "calories_kcal": 17.0,
+        "protein_g": 1.0,
+        "carbs_g": 3.7,
+        "fat_g": 0.2,
+        "fiber_g": 2.8
+      }
+    },
+    "corn_husk": {
+      "ig_id": "ing_05791",
+      "var_id": "var_05873",
+      "name_fr": "feuille de maïs séchée (pour tamales)",
+      "name_en": "dried corn husk",
+      "nutrients": {
+        "calories_kcal": 0.0,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      }
+    },
+    "taro_leaf": {
+      "ig_id": "ing_05792",
+      "var_id": "var_05874",
+      "name_fr": "feuille de taro (Colocasia esculenta)",
+      "name_en": "taro leaf",
+      "nutrients": {
+        "calories_kcal": 42.0,
+        "protein_g": 5.3,
+        "carbs_g": 6.7,
+        "fat_g": 0.9,
+        "fiber_g": 4.7
+      }
+    },
+    "chrysanthemum_greens": {
+      "ig_id": "ing_05793",
+      "var_id": "var_05875",
+      "name_fr": "chrysanthème comestible (tong hao)",
+      "name_en": "chrysanthemum greens",
+      "nutrients": {
+        "calories_kcal": 22.0,
+        "protein_g": 3.3,
+        "carbs_g": 2.2,
+        "fat_g": 0.8,
+        "fiber_g": 2.9
+      }
+    },
+    "amchoor_powder": {
+      "ig_id": "ing_05794",
+      "var_id": "var_05876",
+      "name_fr": "amchur (poudre de mangue verte)",
+      "name_en": "amchoor powder",
+      "nutrients": {
+        "calories_kcal": 140.0,
+        "protein_g": 1.1,
+        "carbs_g": 34.3,
+        "fat_g": 0.3,
+        "fiber_g": 3.5
+      }
+    },
+    "berbere": {
+      "ig_id": "ing_05795",
+      "var_id": "var_05877",
+      "name_fr": "berbéré (mélange épices éthiopien)",
+      "name_en": "berbere",
+      "nutrients": {
+        "calories_kcal": 251.0,
+        "protein_g": 11.2,
+        "carbs_g": 42.8,
+        "fat_g": 8.5,
+        "fiber_g": 22.0
+      }
+    },
+    "garam_masala": {
+      "ig_id": "ing_05796",
+      "var_id": "var_05878",
+      "name_fr": "garam masala (mélange épices indien)",
+      "name_en": "garam masala",
+      "nutrients": {
+        "calories_kcal": 379.0,
+        "protein_g": 11.0,
+        "carbs_g": 60.0,
+        "fat_g": 15.1,
+        "fiber_g": 26.6
+      }
+    },
+    "sambar_powder": {
+      "ig_id": "ing_05797",
+      "var_id": "var_05879",
+      "name_fr": "poudre de sambar (épices indiennes)",
+      "name_en": "sambar powder",
+      "nutrients": {
+        "calories_kcal": 249.0,
+        "protein_g": 12.5,
+        "carbs_g": 41.7,
+        "fat_g": 6.5,
+        "fiber_g": 21.5
+      }
+    },
+    "sumac": {
+      "ig_id": "ing_05798",
+      "var_id": "var_05880",
+      "name_fr": "sumac (baies séchées moulues)",
+      "name_en": "sumac",
+      "nutrients": {
+        "calories_kcal": 239.0,
+        "protein_g": 3.5,
+        "carbs_g": 65.0,
+        "fat_g": 0.4,
+        "fiber_g": 24.3
+      }
+    },
+    "gochugaru": {
+      "ig_id": "ing_05799",
+      "var_id": "var_05881",
+      "name_fr": "flocons de piment coréen",
+      "name_en": "gochugaru (Korean red pepper flakes)",
+      "nutrients": {
+        "calories_kcal": 282.0,
+        "protein_g": 14.0,
+        "carbs_g": 44.0,
+        "fat_g": 10.0,
+        "fiber_g": 27.0
+      }
+    },
+    "sichuan_pepper": {
+      "ig_id": "ing_05800",
+      "var_id": "var_05882",
+      "name_fr": "poivre du Sichuan (baies séchées)",
+      "name_en": "sichuan pepper",
+      "nutrients": {
+        "calories_kcal": 247.0,
+        "protein_g": 7.0,
+        "carbs_g": 48.0,
+        "fat_g": 6.8,
+        "fiber_g": 21.0
+      }
+    },
+    "star_anise": {
+      "ig_id": "ing_05801",
+      "var_id": "var_05883",
+      "name_fr": "anis étoilé (badiane)",
+      "name_en": "star anise",
+      "nutrients": {
+        "calories_kcal": 337.0,
+        "protein_g": 17.6,
+        "carbs_g": 50.0,
+        "fat_g": 15.9,
+        "fiber_g": 14.6
+      }
+    },
+    "curry_leaf": {
+      "ig_id": "ing_05802",
+      "var_id": "var_05884",
+      "name_fr": "feuille de curry (Murraya koenigii)",
+      "name_en": "curry leaf",
+      "nutrients": {
+        "calories_kcal": 108.0,
+        "protein_g": 6.1,
+        "carbs_g": 18.7,
+        "fat_g": 1.0,
+        "fiber_g": 6.4
+      }
+    },
+    "kaffir_lime_leaf": {
+      "ig_id": "ing_05803",
+      "var_id": "var_05885",
+      "name_fr": "feuille de combava (kaffir lime)",
+      "name_en": "kaffir lime leaf",
+      "nutrients": {
+        "calories_kcal": 20.0,
+        "protein_g": 1.5,
+        "carbs_g": 4.0,
+        "fat_g": 0.5,
+        "fiber_g": 3.0
+      }
+    },
+    "lemon_verbena": {
+      "ig_id": "ing_05804",
+      "var_id": "var_05886",
+      "name_fr": "verveine citronnée (herbe)",
+      "name_en": "lemon verbena",
+      "nutrients": {
+        "calories_kcal": 5.0,
+        "protein_g": 0.5,
+        "carbs_g": 1.0,
+        "fat_g": 0.1,
+        "fiber_g": 1.5
+      }
+    },
+    "shiso": {
+      "ig_id": "ing_05805",
+      "var_id": "var_05887",
+      "name_fr": "shiso/perilla (feuilles fraîches)",
+      "name_en": "shiso perilla leaf",
+      "nutrients": {
+        "calories_kcal": 37.0,
+        "protein_g": 3.9,
+        "carbs_g": 7.0,
+        "fat_g": 0.1,
+        "fiber_g": 7.2
+      }
+    },
+    "loroco": {
+      "ig_id": "ing_05806",
+      "var_id": "var_05888",
+      "name_fr": "loroco (fleur aromatique Amérique centrale)",
+      "name_en": "loroco",
+      "nutrients": {
+        "calories_kcal": 35.0,
+        "protein_g": 3.1,
+        "carbs_g": 5.1,
+        "fat_g": 0.4,
+        "fiber_g": 2.5
+      }
+    },
+    "galangal": {
+      "ig_id": "ing_05807",
+      "var_id": "var_05889",
+      "name_fr": "galanga (racine fraîche)",
+      "name_en": "galangal",
+      "nutrients": {
+        "calories_kcal": 70.0,
+        "protein_g": 1.7,
+        "carbs_g": 15.7,
+        "fat_g": 0.8,
+        "fiber_g": 2.0
+      }
+    },
+    "turmeric_fresh": {
+      "ig_id": "ing_05808",
+      "var_id": "var_05890",
+      "name_fr": "curcuma frais (racine)",
+      "name_en": "fresh turmeric root",
+      "nutrients": {
+        "calories_kcal": 80.0,
+        "protein_g": 2.0,
+        "carbs_g": 17.1,
+        "fat_g": 0.7,
+        "fiber_g": 3.0
+      }
+    },
+    "xylitol": {
+      "ig_id": "ing_05809",
+      "var_id": "var_05891",
+      "name_fr": "xylitol (sucre de bouleau)",
+      "name_en": "xylitol (birch sugar)",
+      "nutrients": {
+        "calories_kcal": 240.0,
+        "protein_g": 0.0,
+        "carbs_g": 99.8,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      }
+    },
+    "aquafaba": {
+      "ig_id": "ing_05810",
+      "var_id": "var_05892",
+      "name_fr": "jus de pois chiches (aquafaba)",
+      "name_en": "aquafaba",
+      "nutrients": {
+        "calories_kcal": 11.0,
+        "protein_g": 1.5,
+        "carbs_g": 1.7,
+        "fat_g": 0.2,
+        "fiber_g": 0.0
+      }
+    },
+    "chana_dal": {
+      "ig_id": "ing_05811",
+      "var_id": "var_05893",
+      "name_fr": "chana dal (pois chiche cassé)",
+      "name_en": "chana dal",
+      "nutrients": {
+        "calories_kcal": 360.0,
+        "protein_g": 22.3,
+        "carbs_g": 57.8,
+        "fat_g": 6.1,
+        "fiber_g": 17.4
+      }
+    },
+    "gigante_bean": {
+      "ig_id": "ing_05812",
+      "var_id": "var_05894",
+      "name_fr": "haricots géants blancs (gigantes)",
+      "name_en": "giant white beans",
+      "nutrients": {
+        "calories_kcal": 263.0,
+        "protein_g": 17.6,
+        "carbs_g": 45.4,
+        "fat_g": 0.6,
+        "fiber_g": 15.0
+      }
+    },
+    "urad_lentil": {
+      "ig_id": "ing_05813",
+      "var_id": "var_05895",
+      "name_fr": "lentille urad (urad dal, haricot mungo noir)",
+      "name_en": "urad lentil (black gram)",
+      "nutrients": {
+        "calories_kcal": 341.0,
+        "protein_g": 25.2,
+        "carbs_g": 59.0,
+        "fat_g": 1.4,
+        "fiber_g": 18.3
+      }
+    },
+    "roasted_chickpea": {
+      "ig_id": "ing_05814",
+      "var_id": "var_05896",
+      "name_fr": "pois chiches rôtis",
+      "name_en": "roasted chickpea",
+      "nutrients": {
+        "calories_kcal": 364.0,
+        "protein_g": 18.5,
+        "carbs_g": 60.6,
+        "fat_g": 6.0,
+        "fiber_g": 17.4
+      }
+    },
+    "pea_protein": {
+      "ig_id": "ing_05815",
+      "var_id": "var_05897",
+      "name_fr": "protéine de pois (isolat)",
+      "name_en": "pea protein isolate",
+      "nutrients": {
+        "calories_kcal": 380.0,
+        "protein_g": 80.0,
+        "carbs_g": 10.0,
+        "fat_g": 6.0,
+        "fiber_g": 2.5
+      }
+    },
+    "masa_harina": {
+      "ig_id": "ing_05816",
+      "var_id": "var_05898",
+      "name_fr": "masa harina (farine de maïs nixtamalisé)",
+      "name_en": "masa harina",
+      "nutrients": {
+        "calories_kcal": 362.0,
+        "protein_g": 7.3,
+        "carbs_g": 75.2,
+        "fat_g": 4.5,
+        "fiber_g": 7.3
+      }
+    },
+    "udon": {
+      "ig_id": "ing_05817",
+      "var_id": "var_05899",
+      "name_fr": "udon (nouilles japonaises épaisses, cuites)",
+      "name_en": "udon noodles (cooked)",
+      "nutrients": {
+        "calories_kcal": 118.0,
+        "protein_g": 3.9,
+        "carbs_g": 24.5,
+        "fat_g": 0.5,
+        "fiber_g": 0.6
+      }
+    },
+    "gateaux_de_riz": {
+      "ig_id": "ing_05818",
+      "var_id": "var_05900",
+      "name_fr": "gâteaux de riz soufflés",
+      "name_en": "puffed rice cakes",
+      "nutrients": {
+        "calories_kcal": 385.0,
+        "protein_g": 7.9,
+        "carbs_g": 80.0,
+        "fat_g": 2.9,
+        "fiber_g": 0.3
+      }
+    },
+    "rice_paper": {
+      "ig_id": "ing_05819",
+      "var_id": "var_05901",
+      "name_fr": "galettes de riz séchées (banh trang)",
+      "name_en": "rice paper sheets",
+      "nutrients": {
+        "calories_kcal": 344.0,
+        "protein_g": 0.7,
+        "carbs_g": 85.0,
+        "fat_g": 0.3,
+        "fiber_g": 0.5
+      }
+    },
+    "wheat_grass": {
+      "ig_id": "ing_05820",
+      "var_id": "var_05902",
+      "name_fr": "herbe de blé (poudre séchée)",
+      "name_en": "wheatgrass powder",
+      "nutrients": {
+        "calories_kcal": 86.0,
+        "protein_g": 25.4,
+        "carbs_g": 39.3,
+        "fat_g": 2.9,
+        "fiber_g": 36.6
+      }
+    },
+    "grain": {
+      "ig_id": "ing_05821",
+      "var_id": "var_05903",
+      "name_fr": "céréale (générique)",
+      "name_en": "grain (generic cereal)",
+      "nutrients": {
+        "calories_kcal": 350.0,
+        "protein_g": 10.0,
+        "carbs_g": 72.0,
+        "fat_g": 2.5,
+        "fiber_g": 8.0
+      }
+    },
+    "attieke": {
+      "ig_id": "ing_05822",
+      "var_id": "var_05904",
+      "name_fr": "attiéké (semoule de manioc fermenté)",
+      "name_en": "attieke",
+      "nutrients": {
+        "calories_kcal": 159.0,
+        "protein_g": 1.3,
+        "carbs_g": 37.3,
+        "fat_g": 0.7,
+        "fiber_g": 2.0
+      }
+    },
+    "tempura_flour": {
+      "ig_id": "ing_05823",
+      "var_id": "var_05905",
+      "name_fr": "farine à tempura",
+      "name_en": "tempura flour",
+      "nutrients": {
+        "calories_kcal": 350.0,
+        "protein_g": 8.0,
+        "carbs_g": 74.0,
+        "fat_g": 1.5,
+        "fiber_g": 2.0
+      }
+    },
+    "black_sesame": {
+      "ig_id": "ing_05824",
+      "var_id": "var_05906",
+      "name_fr": "sésame noir (graines)",
+      "name_en": "black sesame",
+      "nutrients": {
+        "calories_kcal": 573.0,
+        "protein_g": 17.7,
+        "carbs_g": 9.9,
+        "fat_g": 51.6,
+        "fiber_g": 11.8
+      }
+    },
+    "maca": {
+      "ig_id": "ing_05825",
+      "var_id": "var_05907",
+      "name_fr": "poudre de maca (racine séchée)",
+      "name_en": "maca powder",
+      "nutrients": {
+        "calories_kcal": 325.0,
+        "protein_g": 10.2,
+        "carbs_g": 68.3,
+        "fat_g": 1.1,
+        "fiber_g": 8.5
+      }
+    },
+    "chocolate_nibs": {
+      "ig_id": "ing_05826",
+      "var_id": "var_05908",
+      "name_fr": "éclats de cacao (nibs)",
+      "name_en": "cacao nibs",
+      "nutrients": {
+        "calories_kcal": 480.0,
+        "protein_g": 12.8,
+        "carbs_g": 34.0,
+        "fat_g": 35.0,
+        "fiber_g": 10.9
+      }
+    },
+    "vegan_butter": {
+      "ig_id": "ing_05827",
+      "var_id": "var_05909",
+      "name_fr": "beurre végétal (vegan)",
+      "name_en": "vegan butter (plant-based)",
+      "nutrients": {
+        "calories_kcal": 718.0,
+        "protein_g": 0.1,
+        "carbs_g": 0.5,
+        "fat_g": 80.0,
+        "fiber_g": 0.0
+      }
+    },
+    "coconut_aminos": {
+      "ig_id": "ing_05828",
+      "var_id": "var_05910",
+      "name_fr": "amino de coco (substitut sauce soja)",
+      "name_en": "coconut aminos",
+      "nutrients": {
+        "calories_kcal": 53.0,
+        "protein_g": 0.3,
+        "carbs_g": 12.8,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      }
+    },
+    "liquid_smoke": {
+      "ig_id": "ing_05829",
+      "var_id": "var_05911",
+      "name_fr": "fumée liquide",
+      "name_en": "liquid smoke",
+      "nutrients": {
+        "calories_kcal": 10.0,
+        "protein_g": 0.0,
+        "carbs_g": 2.5,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      }
+    },
+    "preserved_lemon": {
+      "ig_id": "ing_05830",
+      "var_id": "var_05912",
+      "name_fr": "citron confit (sel)",
+      "name_en": "preserved lemon",
+      "nutrients": {
+        "calories_kcal": 105.0,
+        "protein_g": 1.4,
+        "carbs_g": 22.0,
+        "fat_g": 1.0,
+        "fiber_g": 4.8
+      }
+    },
+    "kombucha": {
+      "ig_id": "ing_05831",
+      "var_id": "var_05913",
+      "name_fr": "kombucha (thé fermenté)",
+      "name_en": "kombucha",
+      "nutrients": {
+        "calories_kcal": 30.0,
+        "protein_g": 0.3,
+        "carbs_g": 7.0,
+        "fat_g": 0.1,
+        "fiber_g": 0.0
+      }
+    },
+    "kefir_water": {
+      "ig_id": "ing_05832",
+      "var_id": "var_05914",
+      "name_fr": "kéfir d'eau (boisson fermentée)",
+      "name_en": "water kefir",
+      "nutrients": {
+        "calories_kcal": 25.0,
+        "protein_g": 0.1,
+        "carbs_g": 5.5,
+        "fat_g": 0.1,
+        "fiber_g": 0.0
+      }
+    },
+    "sparkling_water": {
+      "ig_id": "ing_05833",
+      "var_id": "var_05915",
+      "name_fr": "eau gazeuse (eau pétillante)",
+      "name_en": "sparkling water",
+      "nutrients": {
+        "calories_kcal": 0.0,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      }
+    },
+    "water": {
+      "ig_id": "ing_05834",
+      "var_id": "var_05916",
+      "name_fr": "eau (eau potable)",
+      "name_en": "water",
+      "nutrients": {
+        "calories_kcal": 0.0,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      }
+    },
+    "matcha_tea": {
+      "ig_id": "ing_05835",
+      "var_id": "var_05917",
+      "name_fr": "thé matcha (poudre)",
+      "name_en": "matcha green tea powder",
+      "nutrients": {
+        "calories_kcal": 324.0,
+        "protein_g": 29.6,
+        "carbs_g": 29.6,
+        "fat_g": 5.4,
+        "fiber_g": 39.7
+      }
+    },
+    "mirin": {
+      "ig_id": "ing_05836",
+      "var_id": "var_05918",
+      "name_fr": "mirin (sake culinaire sucré)",
+      "name_en": "mirin",
+      "nutrients": {
+        "calories_kcal": 241.0,
+        "protein_g": 0.2,
+        "carbs_g": 43.2,
+        "fat_g": 0.1,
+        "fiber_g": 0.0
+      }
+    },
+    "orange_blossom_water": {
+      "ig_id": "ing_05837",
+      "var_id": "var_05919",
+      "name_fr": "eau de fleur d'oranger",
+      "name_en": "orange blossom water",
+      "nutrients": {
+        "calories_kcal": 0.0,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0
+      }
+    },
+    "coconut_sugar": {
+      "ig_id": "ing_05838",
+      "var_id": "var_05920",
+      "name_fr": "sucre de coco (fleur de cocotier)",
+      "name_en": "coconut sugar",
+      "nutrients": {
+        "calories_kcal": 375.0,
+        "protein_g": 1.5,
+        "carbs_g": 92.0,
+        "fat_g": 0.3,
+        "fiber_g": 0.0
+      }
+    },
+    "date_syrup": {
+      "ig_id": "ing_05839",
+      "var_id": "var_05921",
+      "name_fr": "sirop de dattes",
+      "name_en": "date syrup",
+      "nutrients": {
+        "calories_kcal": 280.0,
+        "protein_g": 1.3,
+        "carbs_g": 68.9,
+        "fat_g": 0.1,
+        "fiber_g": 2.7
+      }
+    },
+    "crackers": {
+      "ig_id": "ing_05840",
+      "var_id": "var_05922",
+      "name_fr": "crackers salés",
+      "name_en": "salted crackers",
+      "nutrients": {
+        "calories_kcal": 442.0,
+        "protein_g": 8.0,
+        "carbs_g": 66.0,
+        "fat_g": 17.0,
+        "fiber_g": 2.5
+      }
+    },
+    "falafel": {
+      "ig_id": "ing_05841",
+      "var_id": "var_05923",
+      "name_fr": "falafel (croquette de pois chiches)",
+      "name_en": "falafel",
+      "nutrients": {
+        "calories_kcal": 333.0,
+        "protein_g": 13.3,
+        "carbs_g": 31.8,
+        "fat_g": 17.8,
+        "fiber_g": 6.8
+      }
+    },
+    "soy_pave": {
+      "ig_id": "ing_05842",
+      "var_id": "var_05924",
+      "name_fr": "galette / pavé de soja",
+      "name_en": "pressed soy pave",
+      "nutrients": {
+        "calories_kcal": 172.0,
+        "protein_g": 16.0,
+        "carbs_g": 10.0,
+        "fat_g": 7.0,
+        "fiber_g": 4.0
+      }
+    },
+    "tvp": {
+      "ig_id": "ing_05843",
+      "var_id": "var_05925",
+      "name_fr": "PST (protéines de soja texturées)",
+      "name_en": "TVP (textured vegetable protein)",
+      "nutrients": {
+        "calories_kcal": 311.0,
+        "protein_g": 52.0,
+        "carbs_g": 30.0,
+        "fat_g": 3.0,
+        "fiber_g": 18.0
+      }
+    },
+    "tuscan_bread": {
+      "ig_id": "ing_05844",
+      "var_id": "var_05926",
+      "name_fr": "pain toscan (sans sel, pane toscano)",
+      "name_en": "Tuscan bread (salt-free)",
+      "nutrients": {
+        "calories_kcal": 250.0,
+        "protein_g": 8.0,
+        "carbs_g": 50.0,
+        "fat_g": 1.0,
+        "fiber_g": 2.0
+      }
+    },
+    "spices": {
+      "ig_id": "ing_05845",
+      "var_id": "var_05927",
+      "name_fr": "épices (mélange générique)",
+      "name_en": "mixed spices (generic)",
+      "nutrients": {
+        "calories_kcal": 250.0,
+        "protein_g": 10.0,
+        "carbs_g": 45.0,
+        "fat_g": 7.0,
+        "fiber_g": 20.0
+      }
+    }
+  }
+}

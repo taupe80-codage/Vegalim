@@ -2,8 +2,8 @@
   "_meta": {
     "description": "Token index — SOURCE:id → base/variant/IG context",
     "version": "6.0",
-    "nutrition_version": "7.1",
-    "generated_at": "2026-07-26T23:24:44.434220+00:00",
+    "nutrition_version": "7.2",
+    "generated_at": "2026-07-27T01:12:28.118947+00:00",
     "generated_by": "build_indexes.py",
     "_generated": true,
     "_do_not_edit": "Fichier auto-généré — toute modification manuelle sera écrasée au prochain run du pipeline.",
@@ -160,9 +160,11 @@
     },
     "CNF:442": {
       "base": "soy_lecithin_oil",
-      "variant": "default",
+      "variant": "oil",
       "ig_id": "ing_05877",
-      "ig_axes": {},
+      "ig_axes": {
+        "form": "oil"
+      },
       "var_axes": {}
     },
     "CIQUAL:20988": {
@@ -482,7 +484,7 @@
     },
     "CIQUAL:18069": {
       "base": "coffee",
-      "variant": "powder_decafeine_instantane",
+      "variant": "powder_decaf_instant",
       "ig_id": "ing_00158",
       "ig_axes": {
         "form": "powder",
@@ -586,16 +588,14 @@
       }
     },
     "CNF:4890": {
-      "base": "capers",
-      "variant": "canned_en_saumure",
-      "ig_id": "ing_00188",
+      "base": "capers_canned_in_brine",
+      "variant": "canned_in_brine",
+      "ig_id": "ing_05893",
       "ig_axes": {
         "packaging": "canned",
-        "storage_medium": "in_vinegar"
+        "storage_medium": "in_brine"
       },
-      "var_axes": {
-        "draining": "brined"
-      }
+      "var_axes": {}
     },
     "CIQUAL:11013": {
       "base": "mustard",
@@ -701,8 +701,8 @@
       "var_axes": {}
     },
     "CIQUAL:11096": {
-      "base": "table_salt_iode_fluore",
-      "variant": "iode_fluore",
+      "base": "table_salt_iodized_fluoridated",
+      "variant": "iodized_fluoridated",
       "ig_id": "ing_01226",
       "ig_axes": {
         "treatment": "iodized_fluoridated"
@@ -819,8 +819,8 @@
       "var_axes": {}
     },
     "USDA:2257046": {
-      "base": "oat_milk_refrigere_plain_plant",
-      "variant": "milk_refrigere_plain_plant",
+      "base": "oat_milk_refrigerated_plain_plant",
+      "variant": "milk_refrigerated_plain_plant",
       "ig_id": "ing_00271",
       "ig_axes": {
         "form": "milk",
@@ -1042,8 +1042,8 @@
       "var_axes": {}
     },
     "CNF:501865": {
-      "base": "all_purpose_white_flour_non_blanchi",
-      "variant": "flour_non_blanchi",
+      "base": "all_purpose_white_flour_unbleached",
+      "variant": "flour_unbleached",
       "ig_id": "ing_00401",
       "ig_axes": {
         "form": "flour",
@@ -1110,10 +1110,9 @@
     },
     "CIQUAL:9660": {
       "base": "wheat_germ",
-      "variant": "raw_seed_sprouted",
+      "variant": "raw_seed",
       "ig_id": "ing_00391",
       "ig_axes": {
-        "treatment": "sprouted",
         "part": "seed",
         "cooking_state": "raw"
       },
@@ -1129,12 +1128,11 @@
       "var_axes": {}
     },
     "CNF:1223": {
-      "base": "wheat_germ_grilled_seed_sprouted_dry",
-      "variant": "grilled_seed_sprouted_dry",
+      "base": "wheat_germ_grilled_seed_dry",
+      "variant": "grilled_seed_dry",
       "ig_id": "ing_00515",
       "ig_axes": {
         "cooking_state": "grilled",
-        "treatment": "sprouted",
         "part": "seed",
         "cooking_process": "dry"
       },
@@ -1142,7 +1140,7 @@
     },
     "USDA:789890": {
       "base": "wheat_all_purpose_flour",
-      "variant": "flour_enrichi_blanchi",
+      "variant": "flour_enriched_bleached",
       "ig_id": "ing_05754",
       "ig_axes": {
         "form": "flour",
@@ -1151,8 +1149,8 @@
       "var_axes": {}
     },
     "USDA:789951": {
-      "base": "wheat_all_purpose_flour_enrichi_non_blanchi",
-      "variant": "flour_enrichi_non_blanchi",
+      "base": "wheat_all_purpose_flour_enriched_unbleached",
+      "variant": "flour_enriched_unbleached",
       "ig_id": "ing_05755",
       "ig_axes": {
         "form": "flour",
@@ -1162,7 +1160,7 @@
     },
     "USDA:790146": {
       "base": "wheat_bread_flour",
-      "variant": "flour_enrichi_non_blanchi",
+      "variant": "flour_enriched_unbleached",
       "ig_id": "ing_05756",
       "ig_axes": {
         "form": "flour",
@@ -1171,8 +1169,8 @@
       "var_axes": {}
     },
     "USDA:790018": {
-      "base": "wheat_all_purpose_flour_non_enrichi_non_blanchi",
-      "variant": "flour_non_enrichi_non_blanchi",
+      "base": "wheat_all_purpose_flour_unenriched_unbleached",
+      "variant": "flour_unenriched_unbleached",
       "ig_id": "ing_05757",
       "ig_axes": {
         "form": "flour",
@@ -2509,7 +2507,7 @@
     },
     "CNF:4412": {
       "base": "buckwheat_groats",
-      "variant": "roti_dried_dry",
+      "variant": "roasted_dried_dry",
       "ig_id": "ing_00251",
       "ig_axes": {
         "thermal_state": "dried",
@@ -2520,7 +2518,7 @@
     },
     "CNF:4413": {
       "base": "buckwheat_groats_roasted",
-      "variant": "cooked_roti_dry",
+      "variant": "cooked_roasted_dry",
       "ig_id": "ing_05768",
       "ig_axes": {
         "cooking_state": "cooked",
@@ -2611,7 +2609,7 @@
     },
     "CIQUAL:9610": {
       "base": "wheat_semolina",
-      "variant": "raw_semoule",
+      "variant": "raw_semolina",
       "ig_id": "ing_00419",
       "ig_axes": {
         "cooking_state": "raw",
@@ -2898,8 +2896,8 @@
       "var_axes": {}
     },
     "CIQUAL:2000": {
-      "base": "pineapple_juice_a_base_de_concentre",
-      "variant": "juice_a_base_de_concentre",
+      "base": "pineapple_juice_from_concentrate",
+      "variant": "juice_from_concentrate",
       "ig_id": "ing_00901",
       "ig_axes": {
         "form": "juice",
@@ -2908,8 +2906,8 @@
       "var_axes": {}
     },
     "CIQUAL:13716": {
-      "base": "pineapple_canned_dans_du_jus",
-      "variant": "canned_dans_du_jus",
+      "base": "pineapple_canned_in_juice",
+      "variant": "canned_in_juice",
       "ig_id": "ing_00907",
       "ig_axes": {
         "packaging": "canned",
@@ -4098,8 +4096,8 @@
       "var_axes": {}
     },
     "CIQUAL:2012": {
-      "base": "orange_juice_a_base_de_concentre",
-      "variant": "juice_a_base_de_concentre",
+      "base": "orange_juice_from_concentrate",
+      "variant": "juice_from_concentrate",
       "ig_id": "ing_01402",
       "ig_axes": {
         "form": "juice",
@@ -4108,8 +4106,8 @@
       "var_axes": {}
     },
     "USDA:2003597": {
-      "base": "orange_juice_sans_pulpe_refrigere",
-      "variant": "juice_sans_pulpe_refrigere",
+      "base": "orange_juice_pulp_free_refrigerated",
+      "variant": "juice_pulp_free_refrigerated",
       "ig_id": "ing_01408",
       "ig_axes": {
         "form": "juice",
@@ -4187,8 +4185,8 @@
       "var_axes": {}
     },
     "CIQUAL:2015": {
-      "base": "grapefruit_juice_a_base_de_concentre",
-      "variant": "juice_a_base_de_concentre",
+      "base": "grapefruit_juice_from_concentrate",
+      "variant": "juice_from_concentrate",
       "ig_id": "ing_01423",
       "ig_axes": {
         "form": "juice",
@@ -4206,8 +4204,8 @@
       "var_axes": {}
     },
     "CIQUAL:13040": {
-      "base": "pamplemousse",
-      "variant": "default",
+      "base": "grapefruit_raw",
+      "variant": "raw",
       "ig_id": "ing_01427",
       "ig_axes": {
         "cooking_state": "raw"
@@ -4225,7 +4223,7 @@
     },
     "CNF:1565": {
       "base": "white_grapefruit",
-      "variant": "default",
+      "variant": "raw",
       "ig_id": "ing_01888",
       "ig_axes": {
         "cooking_state": "raw"
@@ -4273,10 +4271,12 @@
       "var_axes": {}
     },
     "CNF:1566": {
-      "base": "pamplemousse_blanc",
-      "variant": "default",
+      "base": "white_grapefruit_raw",
+      "variant": "raw",
       "ig_id": "ing_05891",
-      "ig_axes": {},
+      "ig_axes": {
+        "cooking_state": "raw"
+      },
       "var_axes": {}
     },
     "CIQUAL:13035": {
@@ -4374,7 +4374,7 @@
     },
     "USDA:2710818": {
       "base": "plantains_underripe",
-      "variant": "raw_pas_mur",
+      "variant": "raw_unripe",
       "ig_id": "ing_05766",
       "ig_axes": {
         "cooking_state": "raw",
@@ -4597,8 +4597,8 @@
       "var_axes": {}
     },
     "CIQUAL:2014": {
-      "base": "apple_juice_a_base_de_concentre",
-      "variant": "juice_a_base_de_concentre",
+      "base": "apple_juice_from_concentrate",
+      "variant": "juice_from_concentrate",
       "ig_id": "ing_01635",
       "ig_axes": {
         "form": "juice",
@@ -4908,8 +4908,8 @@
       "var_axes": {}
     },
     "CIQUAL:13730": {
-      "base": "peach_canned_sirop_leger",
-      "variant": "canned_sirop_leger",
+      "base": "peach_canned_in_light_syrup",
+      "variant": "canned_in_light_syrup",
       "ig_id": "ing_01845",
       "ig_axes": {
         "packaging": "canned",
@@ -4918,8 +4918,8 @@
       "var_axes": {}
     },
     "CNF:5397": {
-      "base": "peach_canned_sirop_epais",
-      "variant": "canned_sirop_epais",
+      "base": "peach_canned_in_heavy_syrup",
+      "variant": "canned_in_heavy_syrup",
       "ig_id": "ing_05849",
       "ig_axes": {
         "packaging": "canned",
@@ -5058,8 +5058,8 @@
       "var_axes": {}
     },
     "CIQUAL:2019": {
-      "base": "grape_juice_a_base_de_concentre",
-      "variant": "juice_a_base_de_concentre",
+      "base": "grape_juice_from_concentrate",
+      "variant": "juice_from_concentrate",
       "ig_id": "ing_01922",
       "ig_axes": {
         "form": "juice",
@@ -5154,7 +5154,7 @@
     },
     "CIQUAL:11065": {
       "base": "vanilla_alcoholic_extract",
-      "variant": "extract_alcoolique",
+      "variant": "extract_alcoholic",
       "ig_id": "ing_01996",
       "ig_axes": {
         "form": "extract",
@@ -5779,8 +5779,8 @@
       "var_axes": {}
     },
     "CIQUAL:20074": {
-      "base": "artichoke_steamed_sous_pression",
-      "variant": "steamed_sous_pression",
+      "base": "artichoke_steamed_pressurized",
+      "variant": "steamed_pressurized",
       "ig_id": "ing_02164",
       "ig_axes": {
         "cooking_state": "steamed",
@@ -5911,8 +5911,8 @@
       "var_axes": {}
     },
     "CNF:501579": {
-      "base": "asparagus_boiled_surgele_salted",
-      "variant": "boiled_surgele_salted",
+      "base": "asparagus_boiled_frozen_salted",
+      "variant": "boiled_frozen_salted",
       "ig_id": "ing_02213",
       "ig_axes": {
         "cooking_state": "boiled",
@@ -6140,8 +6140,8 @@
       "var_axes": {}
     },
     "CIQUAL:20301": {
-      "base": "swiss_chard_boiled_leaf_frais",
-      "variant": "boiled_leaf_frais",
+      "base": "swiss_chard_boiled_leaf_fresh",
+      "variant": "boiled_leaf_fresh",
       "ig_id": "ing_02293",
       "ig_axes": {
         "cooking_state": "boiled",
@@ -6390,8 +6390,8 @@
       "var_axes": {}
     },
     "CNF:501615": {
-      "base": "carrot_boiled_surgele_salted",
-      "variant": "boiled_surgele_salted",
+      "base": "carrot_boiled_frozen_salted",
+      "variant": "boiled_frozen_salted",
       "ig_id": "ing_02380",
       "ig_axes": {
         "cooking_state": "boiled",
@@ -6645,8 +6645,8 @@
       "var_axes": {}
     },
     "CIQUAL:13177": {
-      "base": "chayote_boiled_frais",
-      "variant": "boiled_frais",
+      "base": "chayote_boiled_fresh",
+      "variant": "boiled_fresh",
       "ig_id": "ing_02496",
       "ig_axes": {
         "cooking_state": "boiled",
@@ -6839,8 +6839,8 @@
       "var_axes": {}
     },
     "CIQUAL:20095": {
-      "base": "red_cabbage_boiled_frais",
-      "variant": "boiled_frais",
+      "base": "red_cabbage_boiled_fresh",
+      "variant": "boiled_fresh",
       "ig_id": "ing_02573",
       "ig_axes": {
         "cooking_state": "boiled",
@@ -6877,8 +6877,8 @@
       "var_axes": {}
     },
     "CIQUAL:20094": {
-      "base": "kohlrabi_boiled_frais",
-      "variant": "boiled_frais",
+      "base": "kohlrabi_boiled_fresh",
+      "variant": "boiled_fresh",
       "ig_id": "ing_02581",
       "ig_axes": {
         "cooking_state": "boiled",
@@ -7134,8 +7134,8 @@
       "var_axes": {}
     },
     "CIQUAL:20017": {
-      "base": "cauliflower_boiled_flower_frais",
-      "variant": "boiled_flower_frais",
+      "base": "cauliflower_boiled_flower_fresh",
+      "variant": "boiled_flower_fresh",
       "ig_id": "ing_02650",
       "ig_axes": {
         "cooking_state": "boiled",
@@ -7684,8 +7684,8 @@
       "var_axes": {}
     },
     "CNF:501782": {
-      "base": "spaghetti_squash_cooked_salted_au_four",
-      "variant": "cooked_salted_au_four",
+      "base": "spaghetti_squash_cooked_salted_baked",
+      "variant": "cooked_salted_baked",
       "ig_id": "ing_02840",
       "ig_axes": {
         "seasoning": "salted",
@@ -7706,17 +7706,20 @@
     },
     "CNF:2441": {
       "base": "squash_pumpkin",
-      "variant": "default",
+      "variant": "raw",
       "ig_id": "ing_05779",
-      "ig_axes": {},
+      "ig_axes": {
+        "cooking_state": "raw"
+      },
       "var_axes": {}
     },
     "USDA:2727578": {
       "base": "pie_pumpkin",
-      "variant": "default",
+      "variant": "raw",
       "ig_id": "ing_05780",
       "ig_axes": {
-        "variete": "pie pumpkin"
+        "variete": "pie pumpkin",
+        "cooking_state": "raw"
       },
       "var_axes": {}
     },
@@ -8743,7 +8746,7 @@
     },
     "CIQUAL:13032": {
       "base": "black_olive",
-      "variant": "canned_en_saumure",
+      "variant": "canned_in_brine",
       "ig_id": "ing_03234",
       "ig_axes": {
         "packaging": "canned",
@@ -8753,7 +8756,7 @@
     },
     "CIQUAL:13033": {
       "base": "green_olive",
-      "variant": "canned_en_saumure",
+      "variant": "canned_in_brine",
       "ig_id": "ing_03238",
       "ig_axes": {
         "packaging": "canned",
@@ -8939,8 +8942,8 @@
       "var_axes": {}
     },
     "CNF:2243": {
-      "base": "sweet_potato_vacuum",
-      "variant": "vacuum",
+      "base": "sweet_potato_vacuum_packed",
+      "variant": "vacuum_packed",
       "ig_id": "ing_05875",
       "ig_axes": {
         "packaging": "vacuum_packed"
@@ -9102,10 +9105,11 @@
     },
     "USDA:2747660": {
       "base": "banana_pepper_seeded",
-      "variant": "seedless",
+      "variant": "raw_seedless",
       "ig_id": "ing_05781",
       "ig_axes": {
-        "part": "seedless"
+        "part": "seedless",
+        "cooking_state": "raw"
       },
       "var_axes": {}
     },
@@ -9580,8 +9584,8 @@
       "var_axes": {}
     },
     "CNF:502438": {
-      "base": "potato_roasted_surgele",
-      "variant": "roasted_surgele",
+      "base": "potato_roasted_frozen",
+      "variant": "roasted_frozen",
       "ig_id": "ing_05753",
       "ig_axes": {
         "cooking_state": "roasted",
@@ -10084,18 +10088,18 @@
     },
     "USDA:2685581": {
       "base": "crushed_tomatoes",
-      "variant": "concassee_canned_mure",
+      "variant": "crushed_canned_ripe",
       "ig_id": "ing_03596",
       "ig_axes": {
         "packaging": "canned",
-        "form": "cracked",
+        "form": "crushed",
         "ripeness": "ripe"
       },
       "var_axes": {}
     },
     "USDA:333281": {
       "base": "diced_tomatoes",
-      "variant": "en_des_canned_mure",
+      "variant": "diced_canned_ripe",
       "ig_id": "ing_05851",
       "ig_axes": {
         "packaging": "canned",
@@ -10106,11 +10110,11 @@
     },
     "CNF:2463": {
       "base": "stewed_tomatoes",
-      "variant": "etuvee_canned_mure",
+      "variant": "stewed_canned_ripe",
       "ig_id": "ing_05852",
       "ig_axes": {
         "packaging": "canned",
-        "cooking_state": "steamed",
+        "cooking_state": "stewed",
         "ripeness": "ripe"
       },
       "var_axes": {}
@@ -10157,8 +10161,8 @@
       "var_axes": {}
     },
     "CIQUAL:20268": {
-      "base": "tomato_double_concentre_canned",
-      "variant": "double_concentre_canned",
+      "base": "tomato_double_concentrated_canned",
+      "variant": "double_concentrated_canned",
       "ig_id": "ing_03608",
       "ig_axes": {
         "packaging": "canned",
@@ -10389,8 +10393,8 @@
       "var_axes": {}
     },
     "CIQUAL:20270": {
-      "base": "spinach_raw_bebe",
-      "variant": "raw_bebe",
+      "base": "spinach_raw_baby",
+      "variant": "raw_baby",
       "ig_id": "ing_05846",
       "ig_axes": {
         "cooking_state": "raw",
@@ -10399,8 +10403,8 @@
       "var_axes": {}
     },
     "CIQUAL:20336": {
-      "base": "spinach_boiled_frais",
-      "variant": "boiled_frais",
+      "base": "spinach_boiled_fresh",
+      "variant": "boiled_fresh",
       "ig_id": "ing_03692",
       "ig_axes": {
         "cooking_state": "boiled",
@@ -10742,8 +10746,8 @@
       "var_axes": {}
     },
     "CNF:2078": {
-      "base": "black_eyed_peas_cowpeas_raw_with_seeds_bebe",
-      "variant": "raw_with_seeds_bebe",
+      "base": "black_eyed_peas_cowpeas_raw_with_seeds_baby",
+      "variant": "raw_with_seeds_baby",
       "ig_id": "ing_04130",
       "ig_axes": {
         "cooking_state": "raw",
@@ -10774,8 +10778,8 @@
       "var_axes": {}
     },
     "CNF:2079": {
-      "base": "black_eyed_peas_cowpeas_boiled_seed_canned_bebe",
-      "variant": "boiled_seed_canned_bebe",
+      "base": "black_eyed_peas_cowpeas_boiled_seed_canned_baby",
+      "variant": "boiled_seed_canned_baby",
       "ig_id": "ing_04186",
       "ig_axes": {
         "cooking_state": "boiled",
@@ -10827,8 +10831,8 @@
       "var_axes": {}
     },
     "CNF:501633": {
-      "base": "black_eyed_peas_cowpeas_boiled_seed_salted_bebe",
-      "variant": "boiled_seed_salted_bebe",
+      "base": "black_eyed_peas_cowpeas_boiled_seed_salted_baby",
+      "variant": "boiled_seed_salted_baby",
       "ig_id": "ing_04226",
       "ig_axes": {
         "cooking_state": "boiled",
@@ -12362,8 +12366,8 @@
       "var_axes": {}
     },
     "CNF:501700": {
-      "base": "green_peas_boiled_surgele_salted",
-      "variant": "boiled_surgele_salted",
+      "base": "green_peas_boiled_frozen_salted",
+      "variant": "boiled_frozen_salted",
       "ig_id": "ing_04232",
       "ig_axes": {
         "cooking_state": "boiled",
@@ -12421,15 +12425,14 @@
       "var_axes": {}
     },
     "CNF:502262": {
-      "base": "chickpea_canned",
-      "variant": "rince_canned",
-      "ig_id": "ing_04255",
+      "base": "chickpea_rinsed_canned",
+      "variant": "rinsed_canned",
+      "ig_id": "ing_05894",
       "ig_axes": {
-        "packaging": "canned"
-      },
-      "var_axes": {
+        "packaging": "canned",
         "treatment": "rinsed"
-      }
+      },
+      "var_axes": {}
     },
     "USDA:2644288": {
       "base": "chickpea_salted_canned",
@@ -12471,8 +12474,8 @@
       "var_axes": {}
     },
     "CNF:2580": {
-      "base": "soybean_roasted_seed_torrefie_unsalted",
-      "variant": "roasted_seed_torrefie_unsalted",
+      "base": "soybean_roasted_seed_unsalted",
+      "variant": "roasted_seed_unsalted",
       "ig_id": "ing_04282",
       "ig_axes": {
         "part": "seed",
@@ -12570,8 +12573,8 @@
       "var_axes": {}
     },
     "CNF:3317": {
-      "base": "soybean_roasted_torrefie_salted",
-      "variant": "roasted_torrefie_salted",
+      "base": "soybean_roasted_salted",
+      "variant": "roasted_salted",
       "ig_id": "ing_04334",
       "ig_axes": {
         "seasoning": "salted",
@@ -12962,7 +12965,7 @@
     },
     "CNF:5497": {
       "base": "flaxseed_linseed",
-      "variant": "oil_seed_pression_a_froid_plant",
+      "variant": "oil_seed_cold_pressed_plant",
       "ig_id": "ing_04475",
       "ig_axes": {
         "part": "seed",
@@ -13043,8 +13046,8 @@
       "var_axes": {}
     },
     "CIQUAL:17270": {
-      "base": "olive_oil_extra_vierge_plant",
-      "variant": "oil_extra_vierge_plant",
+      "base": "olive_oil_extra_virgin_plant",
+      "variant": "oil_extra_virgin_plant",
       "ig_id": "ing_03228",
       "ig_axes": {
         "form": "oil",
@@ -13182,18 +13185,17 @@
       "var_axes": {}
     },
     "CNF:2598": {
-      "base": "sesame_tahini_raw_butter_seed_plant",
+      "base": "sesame_tahini_raw_butter_seed_unsalted_plant",
       "variant": "raw_butter_seed_unsalted_plant",
-      "ig_id": "ing_04555",
+      "ig_id": "ing_05895",
       "ig_axes": {
         "part": "seed",
         "form": "butter",
         "origin": "plant",
-        "cooking_state": "raw"
-      },
-      "var_axes": {
+        "cooking_state": "raw",
         "seasoning": "unsalted"
-      }
+      },
+      "var_axes": {}
     },
     "CNF:2529": {
       "base": "sunflower_butter_seed_plant",
@@ -13274,8 +13276,8 @@
       "var_axes": {}
     },
     "CNF:2593": {
-      "base": "sesame_tahini_butter_seed_roti_plant_dry",
-      "variant": "butter_seed_roti_plant_dry",
+      "base": "sesame_tahini_butter_seed_roasted_plant_dry",
+      "variant": "butter_seed_roasted_plant_dry",
       "ig_id": "ing_00617",
       "ig_axes": {
         "form": "butter",
@@ -13320,8 +13322,8 @@
       "var_axes": {}
     },
     "CNF:6289": {
-      "base": "peanut_butter_naturel_plant",
-      "variant": "butter_naturel_plant",
+      "base": "peanut_butter_natural_plant",
+      "variant": "butter_natural_plant",
       "ig_id": "ing_05870",
       "ig_axes": {
         "form": "butter",
@@ -13331,8 +13333,8 @@
       "var_axes": {}
     },
     "CNF:2534": {
-      "base": "almond_with_skin_non_blanchi_peau_conservee_dried",
-      "variant": "with_skin_non_blanchi_peau_conservee_dried",
+      "base": "almond_with_skin_unbleached_on_dried",
+      "variant": "with_skin_unbleached_on_dried",
       "ig_id": "ing_04699",
       "ig_axes": {
         "thermal_state": "dried",
@@ -13342,8 +13344,8 @@
       "var_axes": {}
     },
     "CNF:2536": {
-      "base": "almond_with_skin_grille_a_sec_dried_dry",
-      "variant": "with_skin_grille_a_sec_dried_dry",
+      "base": "almond_with_skin_dry_roasted_dried",
+      "variant": "with_skin_dry_roasted_dried",
       "ig_id": "ing_04701",
       "ig_axes": {
         "cooking_process": "dry",
@@ -13354,8 +13356,8 @@
       "var_axes": {}
     },
     "CNF:2537": {
-      "base": "almond_with_skin_grille_a_lhuile_salted_in_oil",
-      "variant": "with_skin_grille_a_lhuile_salted_in_oil",
+      "base": "almond_with_skin_roasted_in_oil_salted",
+      "variant": "with_skin_roasted_in_oil_salted",
       "ig_id": "ing_04400",
       "ig_axes": {
         "cooking_process": "in_oil",
@@ -13366,8 +13368,8 @@
       "var_axes": {}
     },
     "CNF:2539": {
-      "base": "almond_with_skin_grille_salted_dry",
-      "variant": "with_skin_grille_salted_dry",
+      "base": "almond_with_skin_roasted_salted_dry",
+      "variant": "with_skin_roasted_salted_dry",
       "ig_id": "ing_00530",
       "ig_axes": {
         "treatment": "roasted",
@@ -13441,8 +13443,8 @@
       "var_axes": {}
     },
     "USDA:2257045": {
-      "base": "almond_milk_refrigere_unsweetened_plant",
-      "variant": "milk_refrigere_unsweetened_plant",
+      "base": "almond_milk_refrigerated_unsweetened_plant",
+      "variant": "milk_refrigerated_unsweetened_plant",
       "ig_id": "ing_05516",
       "ig_axes": {
         "form": "milk",
@@ -13493,8 +13495,8 @@
       "var_axes": {}
     },
     "CIQUAL:15002": {
-      "base": "peanut_roasted_torrefie_salted_dry",
-      "variant": "roasted_torrefie_salted_dry",
+      "base": "peanut_roasted_salted_dry",
+      "variant": "roasted_salted_dry",
       "ig_id": "ing_04585",
       "ig_axes": {
         "seasoning": "salted",
@@ -13505,8 +13507,8 @@
       "var_axes": {}
     },
     "CIQUAL:15053": {
-      "base": "peanut_roasted_torrefie_unsalted_dry",
-      "variant": "roasted_torrefie_unsalted_dry",
+      "base": "peanut_roasted_unsalted_dry",
+      "variant": "roasted_unsalted_dry",
       "ig_id": "ing_04587",
       "ig_axes": {
         "seasoning": "unsalted",
@@ -13590,8 +13592,8 @@
       "var_axes": {}
     },
     "CNF:3362": {
-      "base": "peanut_grille_a_sec_dried_dry",
-      "variant": "grille_a_sec_dried_dry",
+      "base": "peanut_dry_roasted_dried",
+      "variant": "dry_roasted_dried",
       "ig_id": "ing_04771",
       "ig_axes": {
         "cooking_process": "dry",
@@ -13794,8 +13796,8 @@
       "var_axes": {}
     },
     "CNF:2527": {
-      "base": "sunflower_seed_grille_a_sec_dried_dry",
-      "variant": "seed_grille_a_sec_dried_dry",
+      "base": "sunflower_seed_dry_roasted_dried",
+      "variant": "seed_dry_roasted_dried",
       "ig_id": "ing_04638",
       "ig_axes": {
         "part": "seed",
@@ -13826,8 +13828,8 @@
       "var_axes": {}
     },
     "CIQUAL:15038": {
-      "base": "sesame_roasted_seed_grille_a_sec_dry",
-      "variant": "roasted_seed_grille_a_sec_dry",
+      "base": "sesame_roasted_seed_dry",
+      "variant": "roasted_seed_dry",
       "ig_id": "ing_04664",
       "ig_axes": {
         "part": "seed",
@@ -13850,8 +13852,8 @@
       "var_axes": {}
     },
     "CNF:2620": {
-      "base": "sunflower_seed_grille_a_sec_dried_salted_dry",
-      "variant": "seed_grille_a_sec_dried_salted_dry",
+      "base": "sunflower_seed_dry_roasted_dried_salted",
+      "variant": "seed_dry_roasted_dried_salted",
       "ig_id": "ing_04670",
       "ig_axes": {
         "part": "seed",
@@ -13863,8 +13865,8 @@
       "var_axes": {}
     },
     "CNF:2642": {
-      "base": "sunflower_seed_grille_a_lhuile_in_oil",
-      "variant": "seed_grille_a_lhuile_in_oil",
+      "base": "sunflower_seed_roasted_in_oil",
+      "variant": "seed_roasted_in_oil",
       "ig_id": "ing_04436",
       "ig_axes": {
         "part": "seed",
@@ -13886,8 +13888,8 @@
       "var_axes": {}
     },
     "CNF:501760": {
-      "base": "sesame_grilled_seed_grille_a_sec_salted_dry",
-      "variant": "grilled_seed_grille_a_sec_salted_dry",
+      "base": "sesame_grilled_seed_dry_roasted_salted",
+      "variant": "grilled_seed_dry_roasted_salted",
       "ig_id": "ing_00623",
       "ig_axes": {
         "part": "seed",
@@ -13899,8 +13901,8 @@
       "var_axes": {}
     },
     "CNF:2622": {
-      "base": "sunflower_seed_grille_salted_dry",
-      "variant": "seed_grille_salted_dry",
+      "base": "sunflower_seed_roasted_salted_dry",
+      "variant": "seed_roasted_salted_dry",
       "ig_id": "ing_00625",
       "ig_axes": {
         "part": "seed",
@@ -13952,8 +13954,8 @@
       "var_axes": {}
     },
     "CNF:2619": {
-      "base": "pumpkin_squash_roasted_seed_grille_a_sec_salted_dry",
-      "variant": "roasted_seed_grille_a_sec_salted_dry",
+      "base": "pumpkin_squash_roasted_seed_dry_salted",
+      "variant": "roasted_seed_dry_salted",
       "ig_id": "ing_02822",
       "ig_axes": {
         "part": "seed",
@@ -13965,8 +13967,8 @@
       "var_axes": {}
     },
     "CNF:2638": {
-      "base": "pumpkin_squash_roasted_whole_seed_grille_a_sec_salted_dry",
-      "variant": "roasted_whole_seed_grille_a_sec_salted_dry",
+      "base": "pumpkin_squash_roasted_whole_seed_dry_salted",
+      "variant": "roasted_whole_seed_dry_salted",
       "ig_id": "ing_02824",
       "ig_axes": {
         "form": "whole",
@@ -13979,8 +13981,8 @@
       "var_axes": {}
     },
     "CNF:2597": {
-      "base": "sesame_flour_seed_eleve_en_gras",
-      "variant": "flour_seed_eleve_en_gras",
+      "base": "sesame_flour_seed_high_fat",
+      "variant": "flour_seed_high_fat",
       "ig_id": "ing_00444",
       "ig_axes": {
         "form": "flour",
@@ -14194,14 +14196,13 @@
       "var_axes": {}
     },
     "CNF:2569": {
-      "base": "hazelnut_grilled_grille_a_sec_dried_unsalted_dry",
-      "variant": "grilled_grille_a_sec_dried_unsalted_dry",
+      "base": "hazelnut_dry_roasted_dried_unsalted",
+      "variant": "dry_roasted_dried_unsalted",
       "ig_id": "ing_04731",
       "ig_axes": {
         "cooking_process": "dry",
         "thermal_state": "dried",
         "seasoning": "unsalted",
-        "cooking_state": "grilled",
         "treatment": "dry_roasted"
       },
       "var_axes": {}
@@ -14271,8 +14272,8 @@
       "var_axes": {}
     },
     "CNF:2632": {
-      "base": "macadamia_nuts_bushnuts_queensland_roasted_grille_a_lhuile_salted_in_oil",
-      "variant": "roasted_grille_a_lhuile_salted_in_oil",
+      "base": "macadamia_nuts_bushnuts_queensland_roasted_in_oil_salted",
+      "variant": "roasted_in_oil_salted",
       "ig_id": "ing_04517",
       "ig_axes": {
         "seasoning": "salted",
@@ -14492,8 +14493,8 @@
       "var_axes": {}
     },
     "CNF:2583": {
-      "base": "pecans_nuts_grille_a_sec_dried_dry",
-      "variant": "grille_a_sec_dried_dry",
+      "base": "pecans_nuts_dry_roasted_dried",
+      "variant": "dry_roasted_dried",
       "ig_id": "ing_04749",
       "ig_axes": {
         "cooking_process": "dry",
@@ -14512,8 +14513,8 @@
       "var_axes": {}
     },
     "CNF:2635": {
-      "base": "pecans_nuts_grille_a_sec_dried_salted_dry",
-      "variant": "grille_a_sec_dried_salted_dry",
+      "base": "pecans_nuts_dry_roasted_dried_salted",
+      "variant": "dry_roasted_dried_salted",
       "ig_id": "ing_04843",
       "ig_axes": {
         "seasoning": "salted",
@@ -14574,7 +14575,7 @@
     },
     "CNF:2588": {
       "base": "pistachio_nuts",
-      "variant": "grille_a_sec_dried_dry",
+      "variant": "dry_roasted_dried",
       "ig_id": "ing_04759",
       "ig_axes": {
         "cooking_process": "dry",
@@ -14615,8 +14616,8 @@
       "var_axes": {}
     },
     "CNF:2637": {
-      "base": "pistachio_nuts_grille_a_sec_dried_salted_dry",
-      "variant": "grille_a_sec_dried_salted_dry",
+      "base": "pistachio_nuts_dry_roasted_dried_salted",
+      "variant": "dry_roasted_dried_salted",
       "ig_id": "ing_04845",
       "ig_axes": {
         "seasoning": "salted",
@@ -14628,7 +14629,7 @@
     },
     "CNF:2544": {
       "base": "brazilnut",
-      "variant": "non_blanchi_dried_plain",
+      "variant": "unbleached_dried_plain",
       "ig_id": "ing_04705",
       "ig_axes": {
         "thermal_state": "dried",
@@ -14669,8 +14670,8 @@
       "var_axes": {}
     },
     "CNF:2546": {
-      "base": "cashew_nuts_grille_a_sec_dried_dry",
-      "variant": "grille_a_sec_dried_dry",
+      "base": "cashew_nuts_dry_roasted_dried",
+      "variant": "dry_roasted_dried",
       "ig_id": "ing_04709",
       "ig_axes": {
         "cooking_process": "dry",
@@ -14739,7 +14740,7 @@
     },
     "CIQUAL:22010": {
       "base": "egg",
-      "variant": "dur",
+      "variant": "hard_boiled",
       "ig_id": "ing_05688",
       "ig_axes": {
         "cooking_state": "hard_boiled"
@@ -14786,8 +14787,8 @@
       "var_axes": {}
     },
     "CIQUAL:22505": {
-      "base": "egg_au_plat",
-      "variant": "au_plat",
+      "base": "egg_fried_flat",
+      "variant": "fried_flat",
       "ig_id": "ing_05745",
       "ig_axes": {
         "cooking_state": "fried_flat"
@@ -14795,8 +14796,8 @@
       "var_axes": {}
     },
     "CIQUAL:22014": {
-      "base": "egg_coque",
-      "variant": "coque",
+      "base": "egg_soft_boiled",
+      "variant": "soft_boiled",
       "ig_id": "ing_05746",
       "ig_axes": {
         "cooking_state": "soft_boiled"
@@ -14804,8 +14805,8 @@
       "var_axes": {}
     },
     "CIQUAL:22011": {
-      "base": "egg_poche",
-      "variant": "poche",
+      "base": "egg_poached",
+      "variant": "poached",
       "ig_id": "ing_05747",
       "ig_axes": {
         "cooking_state": "poached"
@@ -14813,8 +14814,8 @@
       "var_axes": {}
     },
     "CIQUAL:22502": {
-      "base": "egg_brouille",
-      "variant": "brouille",
+      "base": "egg_scrambled",
+      "variant": "scrambled",
       "ig_id": "ing_05748",
       "ig_axes": {
         "cooking_state": "scrambled"
@@ -15291,19 +15292,18 @@
       "var_axes": {}
     },
     "CIQUAL:16404": {
-      "base": "butter_sup80pct",
-      "variant": "tendre_sup80pct",
-      "ig_id": "ing_04859",
+      "base": "butter_spreadable_sup80pct",
+      "variant": "spreadable_sup80pct",
+      "ig_id": "ing_05896",
       "ig_axes": {
-        "fat_content": "sup80pct"
-      },
-      "var_axes": {
+        "fat_content": "sup80pct",
         "form": "spreadable"
-      }
+      },
+      "var_axes": {}
     },
     "CIQUAL:16402": {
-      "base": "butter_demi_sel_80pct",
-      "variant": "demi_sel_80pct",
+      "base": "butter_lightly_salted_80pct",
+      "variant": "lightly_salted_80pct",
       "ig_id": "ing_04863",
       "ig_axes": {
         "fat_content": "80pct",
@@ -15423,8 +15423,8 @@
       "var_axes": {}
     },
     "CIQUAL:19431": {
-      "base": "cream_heavy_refrigere_18pct",
-      "variant": "refrigere_18pct",
+      "base": "cream_heavy_refrigerated_18pct",
+      "variant": "refrigerated_18pct",
       "ig_id": "ing_04925",
       "ig_axes": {
         "fat_content": "18pct",
@@ -15453,8 +15453,8 @@
       "var_axes": {}
     },
     "CIQUAL:19410": {
-      "base": "cream_heavy_refrigere_30pct",
-      "variant": "refrigere_30pct",
+      "base": "cream_heavy_refrigerated_30pct",
+      "variant": "refrigerated_30pct",
       "ig_id": "ing_04931",
       "ig_axes": {
         "fat_content": "30pct",
@@ -15583,7 +15583,7 @@
     },
     "CIQUAL:12006": {
       "base": "camembert_raw_milk",
-      "variant": "lait_cru_cow",
+      "variant": "raw_milk_cow",
       "ig_id": "ing_04985",
       "ig_axes": {
         "origin": "cow",
@@ -15873,8 +15873,8 @@
       "var_axes": {}
     },
     "CNF:35": {
-      "base": "buffalo_mozzarella_frais_25pct_cow",
-      "variant": "frais_25pct_cow",
+      "base": "buffalo_mozzarella_fresh_25pct_cow",
+      "variant": "fresh_25pct_cow",
       "ig_id": "ing_05051",
       "ig_axes": {
         "origin": "cow",
@@ -15884,8 +15884,8 @@
       "var_axes": {}
     },
     "USDA:329370": {
-      "base": "buffalo_mozzarella_demi_ecreme_cow",
-      "variant": "demi_ecreme_cow",
+      "base": "buffalo_mozzarella_semi_skimmed_cow",
+      "variant": "semi_skimmed_cow",
       "ig_id": "ing_05055",
       "ig_axes": {
         "fat_content": "semi_skimmed",
@@ -15915,7 +15915,7 @@
     },
     "CIQUAL:12120": {
       "base": "parmesan",
-      "variant": "pate_dure_dried_cow",
+      "variant": "hard_paste_dried_cow",
       "ig_id": "ing_05065",
       "ig_axes": {
         "thermal_state": "dried",
@@ -15926,7 +15926,7 @@
     },
     "CNF:39": {
       "base": "parmesan_dry_grated_with_anti_caking_agents",
-      "variant": "grated_avec_additifs_dried_cow",
+      "variant": "grated_with_additives_dried_cow",
       "ig_id": "ing_05853",
       "ig_axes": {
         "thermal_state": "dried",
@@ -15993,15 +15993,14 @@
       "var_axes": {}
     },
     "CIQUAL:12118": {
-      "base": "swiss",
+      "base": "swiss_grated_cow",
       "variant": "grated_cow",
-      "ig_id": "ing_05087",
+      "ig_id": "ing_05897",
       "ig_axes": {
-        "origin": "cow"
-      },
-      "var_axes": {
+        "origin": "cow",
         "form": "grated"
-      }
+      },
+      "var_axes": {}
     },
     "CNF:48": {
       "base": "tilsit",
@@ -16907,7 +16906,7 @@
     },
     "CIQUAL:12832": {
       "base": "goat_crottin_raw_milk",
-      "variant": "lait_cru_goat",
+      "variant": "raw_milk_goat",
       "ig_id": "ing_05408",
       "ig_axes": {
         "origin": "goat",
@@ -16926,7 +16925,7 @@
     },
     "USDA:2259795": {
       "base": "parmesan_grated_refrigerated",
-      "variant": "grated_refrigere_cow",
+      "variant": "grated_refrigerated_cow",
       "ig_id": "ing_05761",
       "ig_axes": {
         "form": "grated",
@@ -16977,8 +16976,8 @@
       "var_axes": {}
     },
     "CNF:110": {
-      "base": "buffalo_mozzarella_frais_22_5pct_cow",
-      "variant": "frais_22_5pct_cow",
+      "base": "buffalo_mozzarella_fresh_22_5pct_cow",
+      "variant": "fresh_22_5pct_cow",
       "ig_id": "ing_05872",
       "ig_axes": {
         "origin": "cow",
@@ -17018,7 +17017,7 @@
     },
     "CIQUAL:12059": {
       "base": "brocciu_whey_cheese",
-      "variant": "frais",
+      "variant": "fresh",
       "ig_id": "ing_05394",
       "ig_axes": {
         "treatment": "fresh"
@@ -17045,119 +17044,130 @@
     },
     "CIQUAL:19250": {
       "base": "sheeps_milk",
-      "variant": "7pct",
+      "variant": "liquid_7pct",
       "ig_id": "ing_05410",
       "ig_axes": {
-        "fat_content": "7pct"
+        "fat_content": "7pct",
+        "form": "liquid"
       },
       "var_axes": {}
     },
     "CIQUAL:19270": {
       "base": "buffalo_milk",
-      "variant": "7pct",
+      "variant": "liquid_7pct",
       "ig_id": "ing_05412",
       "ig_axes": {
-        "fat_content": "7pct"
+        "fat_content": "7pct",
+        "form": "liquid"
       },
       "var_axes": {}
     },
     "CIQUAL:19201": {
       "base": "goats_milk",
-      "variant": "uht_1_5pct",
+      "variant": "liquid_uht_1_5pct",
       "ig_id": "ing_05414",
       "ig_axes": {
         "thermal_state": "uht",
-        "fat_content": "1.5pct"
+        "fat_content": "1.5pct",
+        "form": "liquid"
       },
       "var_axes": {}
     },
     "CIQUAL:19202": {
-      "base": "goats_milk_lait_cru_3pct",
-      "variant": "lait_cru_3pct",
+      "base": "goats_milk_liquid_raw_3pct",
+      "variant": "liquid_raw_milk_3pct",
       "ig_id": "ing_05416",
       "ig_axes": {
         "fat_content": "3pct",
-        "treatment": "raw_milk"
+        "treatment": "raw_milk",
+        "form": "liquid"
       },
       "var_axes": {}
     },
     "CIQUAL:19200": {
-      "base": "goats_milk_uht_4pct",
-      "variant": "uht_4pct",
+      "base": "goats_milk_liquid_uht_4pct",
+      "variant": "liquid_uht_4pct",
       "ig_id": "ing_05418",
       "ig_axes": {
         "thermal_state": "uht",
-        "fat_content": "4pct"
+        "fat_content": "4pct",
+        "form": "liquid"
       },
       "var_axes": {}
     },
     "CIQUAL:19225": {
       "base": "mares_milk",
-      "variant": "2pct",
+      "variant": "liquid_2pct",
       "ig_id": "ing_05422",
       "ig_axes": {
-        "fat_content": "2pct"
+        "fat_content": "2pct",
+        "form": "liquid"
       },
       "var_axes": {}
     },
     "CIQUAL:19042": {
       "base": "milk",
-      "variant": "pasteurized_1_5pct",
+      "variant": "liquid_pasteurized_1_5pct",
       "ig_id": "ing_05426",
       "ig_axes": {
         "fat_content": "1.5pct",
-        "thermal_state": "pasteurized"
+        "thermal_state": "pasteurized",
+        "form": "liquid"
       },
       "var_axes": {}
     },
     "CIQUAL:19051": {
       "base": "skimmed_pasteurized_milk",
-      "variant": "milk_pasteurized_0pct",
+      "variant": "liquid_pasteurized_0pct",
       "ig_id": "ing_05751",
       "ig_axes": {
         "fat_content": "0pct",
         "thermal_state": "pasteurized",
-        "form": "milk"
+        "form": "liquid"
       },
       "var_axes": {}
     },
     "CIQUAL:19050": {
-      "base": "milk_uht_0pct",
-      "variant": "uht_0pct",
+      "base": "milk_liquid_uht_0pct",
+      "variant": "liquid_uht_0pct",
       "ig_id": "ing_05428",
       "ig_axes": {
         "fat_content": "0pct",
-        "thermal_state": "uht"
+        "thermal_state": "uht",
+        "form": "liquid"
       },
       "var_axes": {}
     },
     "CIQUAL:19010": {
-      "base": "milk_lait_cru_3_5pct",
-      "variant": "lait_cru_3_5pct",
+      "base": "milk_liquid_raw_3_5pct",
+      "variant": "liquid_raw_milk_3_5pct",
       "ig_id": "ing_05432",
       "ig_axes": {
         "fat_content": "3.5pct",
-        "treatment": "raw_milk"
+        "treatment": "raw_milk",
+        "form": "liquid"
       },
       "var_axes": {}
     },
     "CIQUAL:19024": {
-      "base": "milk_pasteurized_3_5pct",
-      "variant": "pasteurized_3_5pct",
+      "base": "milk_liquid_pasteurized_3_5pct",
+      "variant": "liquid_pasteurized_3_5pct",
       "ig_id": "ing_05434",
       "ig_axes": {
         "thermal_state": "pasteurized",
-        "fat_content": "3.5pct"
+        "fat_content": "3.5pct",
+        "form": "liquid"
       },
       "var_axes": {}
     },
     "CIQUAL:19023": {
-      "base": "milk_uht_3_5pct",
-      "variant": "uht_3_5pct",
+      "base": "milk_liquid_uht_3_5pct",
+      "variant": "liquid_uht_3_5pct",
       "ig_id": "ing_05436",
       "ig_axes": {
         "thermal_state": "uht",
-        "fat_content": "3.5pct"
+        "fat_content": "3.5pct",
+        "form": "liquid"
       },
       "var_axes": {}
     },
@@ -17213,12 +17223,13 @@
       "var_axes": {}
     },
     "CIQUAL:19041": {
-      "base": "milk_uht_1_5pct",
-      "variant": "uht_1_5pct",
+      "base": "milk_liquid_uht_1_5pct",
+      "variant": "liquid_uht_1_5pct",
       "ig_id": "ing_05749",
       "ig_axes": {
         "fat_content": "1.5pct",
-        "thermal_state": "uht"
+        "thermal_state": "uht",
+        "form": "liquid"
       },
       "var_axes": {}
     },
@@ -17276,8 +17287,8 @@
       "var_axes": {}
     },
     "CIQUAL:19044": {
-      "base": "milk_powder_demi_ecreme",
-      "variant": "powder_demi_ecreme",
+      "base": "milk_powder_semi_skimmed",
+      "variant": "powder_semi_skimmed",
       "ig_id": "ing_05750",
       "ig_axes": {
         "form": "powder",

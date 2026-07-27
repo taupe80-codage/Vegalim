@@ -198,12 +198,14 @@ AXES_VALUE_MAP: dict[str, dict[str, str]] = {
         'grillé': 'grilled', 'grillé à sec': 'dry_roasted', 'vapeur': 'steamed',
         'rôti': 'roasted', 'sauté': 'sauteed', 'précuit': 'precooked',
         'au four': 'baked', 'à cuire': 'to_cook', 'étouffée': 'braised',
+        'étuvée': 'stewed', 'à la coque': 'soft_boiled',
     },
     'forme': {
         'entière': 'whole', 'entier': 'whole', 'moulue': 'ground', 'moulu': 'ground',
         'poudre': 'powder', 'beurre': 'butter', 'compote': 'puree', 'purée': 'puree',
         'concentré': 'concentrated', 'flocon': 'flaked', 'flocons': 'flakes',
-        'concassé': 'cracked', 'tranche': 'sliced', 'tranché': 'sliced',
+        'concassé': 'cracked', 'concassée': 'crushed',
+        'tranche': 'sliced', 'tranché': 'sliced',
         'bloc': 'block', 'crème': 'cream', 'extrait': 'extract', 'jus': 'juice',
         'zeste': 'zest', 'confiture': 'jam', 'broyé': 'crushed', 'farine': 'flour',
         'huile': 'oil', 'lait': 'milk', 'pâte': 'paste', 'râpé': 'grated',
@@ -259,7 +261,7 @@ AXES_VALUE_MAP: dict[str, dict[str, str]] = {
         "à l'huile": 'in_oil', 'au vinaigre': 'in_vinegar',
         'dans sirop': 'in_syrup', "dans l'eau": 'in_water', 'égoutté': 'drained',
     },
-    'maturite':           {'mûr': 'ripe', 'vert': 'unripe', 'trop mûr': 'overripe'},
+    'maturite':           {'mûr': 'ripe', 'mûre': 'ripe', 'vert': 'unripe', 'trop mûr': 'overripe'},
     'teneur_MG':          {},
     'origine':            {
         'végétal': 'plant', 'animal': 'animal',
@@ -313,8 +315,18 @@ def build_variant_key(
     group_axes: dict,
     variant_axes: dict | None = None,
     exclude_words: set[str] | None = None,
+    group_axes_en: dict | None = None,
+    variant_axes_en: dict | None = None,
 ) -> str:
     """Construit la clé de variant en anglais depuis les axes FR du tree.
+
+    group_axes_en / variant_axes_en : axes_en curés du tree (IG + variant).
+    Quand une clé EN correspondante y est présente, sa valeur prime sur la
+    traduction FR->EN à la volée (AXES_VALUE_MAP) — celle-ci a des trous
+    (ex. etat_thermique='réfrigéré' absent de la table) qui produisaient un
+    slug du français brut ('refrigere') au lieu de l'anglais ('refrigerated')
+    directement dans les clés, alors même que le tree avait déjà la bonne
+    traduction dans axes_en.
 
     exclude_words : mots déjà présents dans le nom de base (ex.
     canonical_name_en slugifié). Un segment d'axe qui ne ferait que répéter
@@ -337,13 +349,18 @@ def build_variant_key(
     all_axes = {**(group_axes or {}), **(variant_axes or {})}
     if not all_axes:
         return 'default'
+    all_axes_en = {**(group_axes_en or {}), **(variant_axes_en or {})}
     used_words = set(exclude_words or set())
     parts = []
     for axe in AXES_PRIORITY:
         val = all_axes.get(axe)
         if val is None:
             continue
-        if isinstance(val, list):
+        en_key = AXES_EN.get(axe, axe)
+        curated_en = all_axes_en.get(en_key)
+        if curated_en is not None and not isinstance(curated_en, list):
+            seg = slug(str(curated_en))
+        elif isinstance(val, list):
             seg = slug('_'.join(str(x) for x in val))
         else:
             val_str = str(val).strip()
@@ -908,7 +925,8 @@ def build_n2(v32: dict, raw_idx: dict) -> tuple:
                     # (ex. origine=chevre quand le nom dit deja "goat cheese")
                     # est ignore pour ne pas produire un suffixe redondant.
                     axes_suffix = build_variant_key(
-                        ig_axes, exclude_words=set(base_key.split('_'))
+                        ig_axes, exclude_words=set(base_key.split('_')),
+                        group_axes_en=ig.get('axes_en'),
                     )
                     if axes_suffix and axes_suffix != 'default':
                         alt = f'{base_key}_{axes_suffix}'
@@ -945,15 +963,22 @@ def build_n2(v32: dict, raw_idx: dict) -> tuple:
 
                     # Axes fusionnés FR (pour construire la clé)
                     merged_axes_fr = {**ig_axes, **(vr.get('axes_fr') or vr.get('axes') or {})}
-                    vr_key = build_variant_key(ig_axes, vr.get('axes_fr') or vr.get('axes') or {})
-                    # Axes traduits EN (stockés dans le variant)
+                    vr_key = build_variant_key(
+                        ig_axes, vr.get('axes_fr') or vr.get('axes') or {},
+                        group_axes_en=ig.get('axes_en'), variant_axes_en=vr.get('axes_en'),
+                    )
+                    # Axes EN (stockés dans le variant) : priorité à axes_en du tree
+                    # (source de vérité curée) ; translate_axes() comble seulement les
+                    # clés FR sans équivalent axes_en explicite sur l'IG/variant.
                     axes_en = translate_axes(merged_axes_fr)
+                    axes_en.update({**(ig.get('axes_en') or {}), **(vr.get('axes_en') or {})})
 
                     alt_entry = {
                         '_source': src, '_source_id': int(sid),
                         '_v32_ing_id': ig_id,
                         '_v32_var_id': vr.get('id',''),
                         'axes': axes_en,
+                        'axes_fr': merged_axes_fr,
                         'name_fr': vr.get('name_fr') or fr_name,
                         'name_en': vr.get('name_en') or en_name,
                         **extract_nutrients(raw),
@@ -971,6 +996,7 @@ def build_n2(v32: dict, raw_idx: dict) -> tuple:
                                 '_source': src, '_source_id': int(sid),
                                 '_v32_ing_id': ig_id, '_v32_var_id': vr.get('id',''),
                                 'axes': axes_en,
+                                'axes_fr': merged_axes_fr,
                                 **extract_nutrients(raw),
                                 'name_fr': vr.get('name_fr') or fr_name,
                                 'name_en': vr.get('name_en') or en_name,
@@ -989,6 +1015,7 @@ def build_n2(v32: dict, raw_idx: dict) -> tuple:
                         '_source': src, '_source_id': int(sid),
                         '_v32_ing_id': ig_id, '_v32_var_id': vr.get('id',''),
                         'axes': axes_en,
+                        'axes_fr': merged_axes_fr,
                         **extract_nutrients(raw),
                         'name_fr': vr.get('name_fr') or fr_name,
                         'name_en': vr.get('name_en') or en_name,
@@ -1003,15 +1030,18 @@ def build_n2(v32: dict, raw_idx: dict) -> tuple:
                     'ombrelle' if c2type == 'ombrelle' and len(groups) > 1
                     else 'node' if c2type == 'axe_nodes' else 'leaf'
                 )
-                # variant_dimensions : clés EN, ordonnées selon AXES_PRIORITY
+                # variant_dimensions : clés EN + FR, ordonnées selon AXES_PRIORITY
                 all_vr_axes_fr: set = set(ig_axes.keys())
                 for vr in ig.get('variants', []):
                     all_vr_axes_fr.update((vr.get('axes_fr') or vr.get('axes') or {}).keys())
                 vd_en = [AXES_EN.get(k, k) for k in AXES_PRIORITY if k in all_vr_axes_fr]
+                vd_fr = [k for k in AXES_PRIORITY if k in all_vr_axes_fr]
                 for k in all_vr_axes_fr:  # axes hors AXES_PRIORITY en fin
                     en_k = AXES_EN.get(k, k)
                     if en_k not in vd_en:
                         vd_en.append(en_k)
+                    if k not in vd_fr:
+                        vd_fr.append(k)
 
                 n2[base_key] = {
                     'taxonomy': {
@@ -1022,6 +1052,7 @@ def build_n2(v32: dict, raw_idx: dict) -> tuple:
                     },
                     'ingredient_type':    ing_type,
                     'variant_dimensions': vd_en,
+                    'variant_dimensions_fr': vd_fr,
                     'indus_conditionne':       ig.get('indus_conditionne', False),
                     'indus_conditionne_only':  ig.get('indus_conditionne_only', False),
                     'conditioning_types':      ig.get('conditioning_types') or [],
@@ -1096,6 +1127,7 @@ def run(dry_run: bool = False, promote: bool = False) -> None:
                     '_v32_ing_id': ig_id,
                     '_v32_var_id': supp.get('var_id'),
                     'axes':       {},
+                    'axes_fr':    {},
                     'name_fr':    supp.get('name_fr', ing_key),
                     'name_en':    supp.get('name_en', ing_key),
                     'indus_conditionne': False,
@@ -1107,6 +1139,7 @@ def run(dry_run: bool = False, promote: bool = False) -> None:
                         'taxonomy':               {},
                         'ingredient_type':         'ingredient',
                         'variant_dimensions':      [],
+                        'variant_dimensions_fr':   [],
                         'indus_conditionne':        False,
                         'indus_conditionne_only':   False,
                         'conditioning_types':       [],
@@ -1130,7 +1163,7 @@ def run(dry_run: bool = False, promote: bool = False) -> None:
     total_variants = sum(len(b.get('variants', {})) for b in n2_ingredients.values())
 
     n2_out = {
-        'schema_version': '7.1',
+        'schema_version': '7.2',
         'schema_family':  'nutrition_v2',
         'built_from':     'raw_sources_direct',
         'built_at':       datetime.now(timezone.utc).isoformat(),

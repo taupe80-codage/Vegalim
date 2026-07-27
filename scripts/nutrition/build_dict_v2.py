@@ -181,6 +181,7 @@ N2   = DATA / 'nutrition/processed/nutrition_v2.json'
 # Si le fichier n'existe pas encore (première run), la migration méta est ignorée gracieusement.
 DOLD = DATA / 'ingredients/ingredients_dictionary.json'
 OUT  = DATA / 'ingredients/ingredients_dictionary.json'
+DUAL_SOURCES_FILE = DATA / 'nutrition/reference/dual_nutrition_sources.json'
 
 # ══════════════════════════════════════════════════════════════════
 # CHARGEMENT
@@ -188,6 +189,15 @@ OUT  = DATA / 'ingredients/ingredients_dictionary.json'
 print('Chargement sources...')
 v32  = json.loads(V32.read_text(encoding='utf-8'))
 n2   = json.loads(N2.read_text(encoding='utf-8'))
+# Feature dual nutrition source (laits/crèmes végétaux maison) : ig_id -> base_recipe_key.
+if DUAL_SOURCES_FILE.exists():
+    DUAL_SOURCES: dict[str, str] = {
+        ig_id: spec['base_recipe_key']
+        for ig_id, spec in json.loads(DUAL_SOURCES_FILE.read_text(encoding='utf-8'))
+                              .get('sources', {}).items()
+    }
+else:
+    DUAL_SOURCES = {}
 # Chargement de l'ancien dict pour migration méta (culinary, diet_profile…)
 # Le fichier est chargé en mémoire maintenant ; OUT sera écrasé seulement à la fin.
 if DOLD.exists():
@@ -263,8 +273,18 @@ AXES_LABEL_PRIORITY = [
     'maturite', 'origine', 'milieu_conservation', 'procede_cuisson',
 ]
 
-def axes_label(axes_fr: dict, exclude_words: set[str] | None = None) -> str:
+def axes_label(axes_fr: dict, exclude_words: set[str] | None = None,
+                axes_en: dict | None = None) -> str:
     """Produit un suffixe lisible EN depuis les axes FR d'un variant.
+
+    axes_en : axes_en curés du tree (IG + variant, déjà fusionnés). Une clé
+    EN qui y est présente prime sur translate_axes(axes_fr) — celui-ci a ses
+    propres trous (table de traduction distincte de celle de
+    build_n2_direct.py, aux mêmes lacunes du style etat_thermique=
+    'réfrigéré' non mappé) qui produisaient un slug du français brut
+    ('refrigere') concaténé à la valeur déjà correcte de nutrition_v2
+    ('refrigerated'), les deux ne se dédupliquant pas car ce sont deux
+    chaînes différentes.
 
     exclude_words : mots déjà présents dans base_key (repris de
     nutrition_v2, qui a pu déjà se voir suffixer par ces mêmes axes lors
@@ -275,6 +295,8 @@ def axes_label(axes_fr: dict, exclude_words: set[str] | None = None) -> str:
     if not axes_fr:
         return ''
     translated = translate_axes(axes_fr)
+    if axes_en:
+        translated.update({k: v for k, v in axes_en.items() if not isinstance(v, list)})
     used_words = set(exclude_words or set())
     parts: list[str] = []
 
@@ -305,6 +327,75 @@ def axes_label(axes_fr: dict, exclude_words: set[str] | None = None) -> str:
         if k_en not in seen and v:
             _add(v)
     return '_'.join(parts)
+
+
+def _norm_compare(s: str) -> str:
+    """Normalisation SANS accents, uniquement pour la comparaison de
+    redondance — ne jamais utiliser la sortie de cette fonction comme texte
+    affiché (elle mangerait les accents FR : 'réfrigéré' -> 'refrigere')."""
+    s = unicodedata.normalize('NFKD', str(s).lower()).encode('ascii', 'ignore').decode('ascii')
+    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
+
+
+# Valeurs (axe_fr, valeur) toujours inférables du canonical_name_fr dans ce
+# dataset — donc redondantes à l'affichage même sans correspondance textuelle
+# littérale avec le nom (contrairement à la redondance générique détectée
+# plus bas). Vérifié sur les 65 IGs origine=végétal : 100% ont déjà un nom de
+# plante explicite (avoine, soja, amande...) — le tag ne fait que confirmer
+# ce que le nom dit déjà. "liquide" reste distingué d'un "lait" par les
+# autres axes déjà affichés (teneur_MG, etat_thermique), donc ne perd aucune
+# information en étant masqué au niveau lecture (il reste dans axes_fr).
+LABEL_HIDDEN_VALUES: set[tuple[str, str]] = {
+    ('origine', 'végétal'),
+    ('forme', 'liquide'),
+}
+
+
+def name_fr_full(name_fr: str, axes_fr: dict) -> str:
+    """Nom complet FR lisible : canonical_name_fr + valeurs d'axes FR non
+    redondantes (accents et casse d'origine conservés), dans l'ordre
+    AXES_LABEL_PRIORITY — contrairement à axes_label qui produit un slug EN
+    ascii pour les clés, celui-ci est un texte affiché, jamais un identifiant.
+
+    Remplace source_label, qui n'apportait rien dans 93% des cas (identique
+    à canonical_name_fr) faute de reprendre les axes — ex. pour distinguer
+    "avoine" (racine) de "avoine, lait, nature, réfrigéré" (ce variant précis).
+
+    Les valeurs axes_fr elles-mêmes ne sont jamais modifiées ni retirées —
+    seul ce label d'affichage masque LABEL_HIDDEN_VALUES.
+    """
+    if not axes_fr:
+        return name_fr
+    name_norm = _norm_compare(name_fr)
+    seen_norm = {name_norm}
+    parts: list[str] = []
+
+    def _add(k_fr, v):
+        if isinstance(v, list):
+            v = ' '.join(str(x) for x in v)
+        v = str(v).strip()
+        if not v or (k_fr, v) in LABEL_HIDDEN_VALUES:
+            return
+        v_norm = _norm_compare(v)
+        # Redondant si valeur déjà ajoutée, ou déjà présente telle quelle
+        # dans le nom (ex. canonical_name_fr="tomate, conserve" + axe
+        # conditionnement="conserve" -> évite "tomate, conserve, conserve").
+        if not v_norm or v_norm in seen_norm or v_norm in name_norm:
+            return
+        parts.append(v)
+        seen_norm.add(v_norm)
+
+    seen = set()
+    for k_fr in AXES_LABEL_PRIORITY:
+        v = axes_fr.get(k_fr)
+        if v:
+            _add(k_fr, v)
+            seen.add(k_fr)
+    for k_fr, v in axes_fr.items():
+        if k_fr not in seen and v:
+            _add(k_fr, v)
+
+    return ', '.join([name_fr, *parts]) if parts else name_fr
 
 # ══════════════════════════════════════════════════════════════════
 # INDEX ANCIEN DICT → migration méta
@@ -630,6 +721,7 @@ for cat in v32.get('categories', []):
 
             # Axes définis au niveau du groupe (partagés par tous les variants)
             ig_axes_fr: dict = ig.get('axes_fr') or ig.get('axes') or {}
+            ig_axes_en: dict = ig.get('axes_en') or {}
 
             # Regrouper les variants v32 par axes pour détecter les doublons (sources multiples)
             vr_by_axes: dict = defaultdict(list)
@@ -641,12 +733,15 @@ for cat in v32.get('categories', []):
                 if not sid and source != 'MANUAL': continue
                 # Merger axes groupe + axes variant (variant a priorité)
                 merged_axes = {**ig_axes_fr, **(vr.get('axes_fr') or vr.get('axes') or {})}
-                ax     = axes_label(merged_axes, exclude_words=set(base_key.split('_')))
+                merged_axes_en = {**ig_axes_en, **(vr.get('axes_en') or {})}
+                ax     = axes_label(merged_axes, exclude_words=set(base_key.split('_')),
+                                     axes_en=merged_axes_en)
                 vr_by_axes[ax].append({
                     'var_id': var_id,
                     'source': source,
                     'source_id': sid,
                     'axes': merged_axes,
+                    'axes_en': merged_axes_en,
                 })
                 stats['total_v32_variants'] += 1
 
@@ -689,14 +784,32 @@ for cat in v32.get('categories', []):
                     # ── Source officielle (niveau racine) ─────────────────
                     'source':        source,
                     'source_id':     source_id,
-                    'source_label':  n2_vr.get('name_fr') or n2_vr.get('name_en') or '',
+                    # Nom complet FR (nom + axes) — remplace l'ancien source_label
+                    # (n2_vr.name_fr), identique à canonical_name_fr dans 93% des
+                    # cas car il ne reprenait pas les axes du variant.
+                    'source_label':  name_fr_full(name_fr, primary['axes']),
                     # ── Noms ──────────────────────────────────────────────
                     'canonical_name_fr': name_fr,
                     'canonical_name_en': name_en,
-                    # ── État du produit (traduit FR → EN) ─────────────────
-                    'axes': translate_axes(primary['axes']),  # primary['axes'] already FR-keyed
+                    # ── État du produit ────────────────────────────────────
+                    # axes (EN) : le axes_en curé du tree prime sur la traduction
+                    # à la volée (translate_axes) quand une clé y est présente —
+                    # même principe que axes_label ci-dessus, appliqué ici au
+                    # champ de sortie plutôt qu'à la clé.
+                    'axes': {**translate_axes(primary['axes']), **{
+                        k: v for k, v in primary['axes_en'].items()
+                        if not isinstance(v, list)
+                    }},
+                    'axes_fr': primary['axes'],  # primary['axes'] already FR-keyed
                     'aliases': [],
                 }
+
+                # Feature dual nutrition source (laits/crèmes végétaux maison) :
+                # ig_id -> base_recipe_key déclaré dans dual_nutrition_sources.json.
+                if ig_id in DUAL_SOURCES:
+                    ig_entry['nutrition_source_mode'] = 'dual'
+                    ig_entry['base_recipe_key'] = DUAL_SOURCES[ig_id]
+                    stats['dual_sources'] += 1
 
                 # Alt sources (autres IDs officiels pour ce même état)
                 if alt_list:
@@ -723,6 +836,7 @@ for cat in v32.get('categories', []):
 print(f'  Entrées écrites         : {stats["written"]}')
 print(f'  Variants v32 traités    : {stats["total_v32_variants"]}')
 print(f'  Alt sources             : {stats["alts"]}')
+print(f'  Dual nutrition sources  : {stats["dual_sources"]} / {len(DUAL_SOURCES)} déclarés')
 print(f'  Méta migrées            : {sum(1 for cat in cats_out.values() for sub in cat["subcategories"].values() for ig in sub["ingredient_groups"].values() if ig.get("culinary") or ig.get("nova_group"))}')
 
 # ── Audit croisé tree ↔ n2 ────────────────────────────────────────────────────

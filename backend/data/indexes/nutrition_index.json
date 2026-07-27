@@ -2,8 +2,8 @@
   "_meta": {
     "description": "Nutrition index — SOURCE:id → valeurs nutritionnelles",
     "version": "3.0",
-    "nutrition_version": "7.1",
-    "generated_at": "2026-07-26T23:24:44.403113+00:00",
+    "nutrition_version": "7.2",
+    "generated_at": "2026-07-27T01:12:28.089777+00:00",
     "generated_by": "build_indexes.py",
     "_generated": true,
     "_do_not_edit": "Fichier auto-généré — toute modification manuelle sera écrasée au prochain run du pipeline.",
@@ -725,11 +725,13 @@
     },
     "CNF:442": {
       "base": "soy_lecithin_oil",
-      "variant": "default",
+      "variant": "oil",
       "category": "additive",
       "name_fr": "huile de lécithine de soja",
       "name_en": "soy lecithin oil",
-      "axes": {},
+      "axes": {
+        "form": "oil"
+      },
       "calories_kcal": 763.0,
       "protein_g": 0.0,
       "carbs_g": 0.0,
@@ -2240,13 +2242,13 @@
     },
     "CIQUAL:18069": {
       "base": "coffee",
-      "variant": "powder_decafeine_instantane",
+      "variant": "powder_decaf_instant",
       "category": "beverage",
       "name_fr": "café",
       "name_en": "coffee",
       "axes": {
         "form": "powder",
-        "treatment": "decafeine_instantane"
+        "treatment": "decaf_instant"
       },
       "calories_kcal": 352.0,
       "protein_g": 11.6,
@@ -2728,7 +2730,8 @@
       "name_en": "capers",
       "axes": {
         "packaging": "canned",
-        "storage_medium": "in_vinegar"
+        "storage_medium": "in_vinegar",
+        "draining": "in_vinegar"
       },
       "calories_kcal": 30.5,
       "protein_g": 2.18,
@@ -2769,14 +2772,14 @@
       "water_g": 83.9
     },
     "CNF:4890": {
-      "base": "capers",
-      "variant": "canned_en_saumure",
+      "base": "capers_canned_in_brine",
+      "variant": "canned_in_brine",
       "category": "condiment",
       "name_fr": "câpres",
       "name_en": "capers",
       "axes": {
         "packaging": "canned",
-        "storage_medium": "en_saumure"
+        "storage_medium": "in_brine"
       },
       "calories_kcal": 23.0,
       "protein_g": 2.36,
@@ -3313,13 +3316,13 @@
       "water_g": 5.09
     },
     "CIQUAL:11096": {
-      "base": "table_salt_iode_fluore",
-      "variant": "iode_fluore",
+      "base": "table_salt_iodized_fluoridated",
+      "variant": "iodized_fluoridated",
       "category": "condiment",
       "name_fr": "sel de table",
       "name_en": "table salt",
       "axes": {
-        "treatment": "iode_fluore"
+        "treatment": "iodized_fluoridated"
       },
       "calories_kcal": 0.0,
       "protein_g": 0.0,
@@ -3808,8 +3811,8 @@
       "water_g": 10.1
     },
     "USDA:2257046": {
-      "base": "oat_milk_refrigere_plain_plant",
-      "variant": "milk_refrigere_plain_plant",
+      "base": "oat_milk_refrigerated_plain_plant",
+      "variant": "milk_refrigerated_plain_plant",
       "category": "cereals and grains",
       "name_fr": "avoine",
       "name_en": "oat",
@@ -3817,7 +3820,7 @@
         "form": "milk",
         "origin": "plant",
         "seasoning": "plain",
-        "thermal_state": "refrigere"
+        "thermal_state": "refrigerated"
       },
       "calories_kcal": 48.3,
       "protein_g": 0.797,
@@ -4869,14 +4872,14 @@
       "water_g": 13.58
     },
     "CNF:501865": {
-      "base": "all_purpose_white_flour_non_blanchi",
-      "variant": "flour_non_blanchi",
+      "base": "all_purpose_white_flour_unbleached",
+      "variant": "flour_unbleached",
       "category": "cereals and grains",
       "name_fr": "blanche tout usage",
       "name_en": "all purpose white",
       "axes": {
         "form": "flour",
-        "treatment": "non_blanchi"
+        "treatment": "unbleached"
       },
       "calories_kcal": 366.0,
       "protein_g": 12.17,
@@ -5202,12 +5205,11 @@
     },
     "CIQUAL:9660": {
       "base": "wheat_germ",
-      "variant": "raw_seed_sprouted",
+      "variant": "raw_seed",
       "category": "cereals and grains",
       "name_fr": "germe de blé",
       "name_en": "wheat germ",
       "axes": {
-        "treatment": "sprouted",
         "part": "seed",
         "cooking_state": "raw"
       },
@@ -5302,14 +5304,13 @@
       "water_g": 9.89
     },
     "CNF:1223": {
-      "base": "wheat_germ_grilled_seed_sprouted_dry",
-      "variant": "grilled_seed_sprouted_dry",
+      "base": "wheat_germ_grilled_seed_dry",
+      "variant": "grilled_seed_dry",
       "category": "cereals and grains",
       "name_fr": "germe de blé",
       "name_en": "wheat germ",
       "axes": {
         "cooking_state": "grilled",
-        "treatment": "sprouted",
         "part": "seed",
         "cooking_process": "dry"
       },
@@ -5357,13 +5358,13 @@
     },
     "USDA:789890": {
       "base": "wheat_all_purpose_flour",
-      "variant": "flour_enrichi_blanchi",
+      "variant": "flour_enriched_bleached",
       "category": "cereals and grains",
       "name_fr": "blé",
       "name_en": "wheat",
       "axes": {
         "form": "flour",
-        "treatment": "enrichi_blanchi"
+        "treatment": "enriched_bleached"
       },
       "calories_kcal": 366.0,
       "protein_g": 10.9,
@@ -5387,14 +5388,14 @@
       "water_g": 9.83
     },
     "USDA:789951": {
-      "base": "wheat_all_purpose_flour_enrichi_non_blanchi",
-      "variant": "flour_enrichi_non_blanchi",
+      "base": "wheat_all_purpose_flour_enriched_unbleached",
+      "variant": "flour_enriched_unbleached",
       "category": "cereals and grains",
       "name_fr": "blé",
       "name_en": "wheat",
       "axes": {
         "form": "flour",
-        "treatment": "enrichi_non_blanchi"
+        "treatment": "enriched_unbleached"
       },
       "calories_kcal": 358.0,
       "protein_g": 13.1,
@@ -5419,13 +5420,13 @@
     },
     "USDA:790146": {
       "base": "wheat_bread_flour",
-      "variant": "flour_enrichi_non_blanchi",
+      "variant": "flour_enriched_unbleached",
       "category": "cereals and grains",
       "name_fr": "blé",
       "name_en": "wheat",
       "axes": {
         "form": "flour",
-        "treatment": "enrichi_non_blanchi"
+        "treatment": "enriched_unbleached"
       },
       "calories_kcal": 363.0,
       "protein_g": 14.3,
@@ -5449,14 +5450,14 @@
       "water_g": 10.7
     },
     "USDA:790018": {
-      "base": "wheat_all_purpose_flour_non_enrichi_non_blanchi",
-      "variant": "flour_non_enrichi_non_blanchi",
+      "base": "wheat_all_purpose_flour_unenriched_unbleached",
+      "variant": "flour_unenriched_unbleached",
       "category": "cereals and grains",
       "name_fr": "blé",
       "name_en": "wheat",
       "axes": {
         "form": "flour",
-        "treatment": "non_enrichi_non_blanchi"
+        "treatment": "unenriched_unbleached"
       },
       "calories_kcal": 362.0,
       "protein_g": 12.0,
@@ -11773,13 +11774,13 @@
     },
     "CNF:4412": {
       "base": "buckwheat_groats",
-      "variant": "roti_dried_dry",
+      "variant": "roasted_dried_dry",
       "category": "cereals and grains",
       "name_fr": "gruau de sarrasin",
       "name_en": "buckwheat groats",
       "axes": {
         "thermal_state": "dried",
-        "treatment": "roti",
+        "treatment": "roasted",
         "cooking_process": "dry"
       },
       "calories_kcal": 346.0,
@@ -11824,13 +11825,13 @@
     },
     "CNF:4413": {
       "base": "buckwheat_groats_roasted",
-      "variant": "cooked_roti_dry",
+      "variant": "cooked_roasted_dry",
       "category": "cereals and grains",
       "name_fr": "gruau de sarrasin",
       "name_en": "buckwheat groats",
       "axes": {
         "cooking_state": "cooked",
-        "treatment": "roti",
+        "treatment": "roasted",
         "cooking_process": "dry"
       },
       "calories_kcal": 92.0,
@@ -12296,13 +12297,13 @@
     },
     "CIQUAL:9610": {
       "base": "wheat_semolina",
-      "variant": "raw_semoule",
+      "variant": "raw_semolina",
       "category": "cereals and grains",
       "name_fr": "semoule de blé",
       "name_en": "wheat semolina",
       "axes": {
         "cooking_state": "raw",
-        "form": "semoule"
+        "form": "semolina"
       },
       "calories_kcal": 350.0,
       "protein_g": 11.8,
@@ -13140,7 +13141,7 @@
       "axes": {
         "packaging": "canned",
         "storage_medium": "in_syrup",
-        "concentration_sirop": "leger"
+        "concentration_sirop": "light"
       },
       "calories_kcal": 61.1,
       "protein_g": 0.94,
@@ -13347,7 +13348,7 @@
       "axes": {
         "packaging": "canned",
         "storage_medium": "in_syrup",
-        "concentration_sirop": "epais"
+        "concentration_sirop": "heavy"
       },
       "calories_kcal": 83.0,
       "protein_g": 0.64,
@@ -13434,14 +13435,14 @@
       "water_g": 86.3
     },
     "CIQUAL:2000": {
-      "base": "pineapple_juice_a_base_de_concentre",
-      "variant": "juice_a_base_de_concentre",
+      "base": "pineapple_juice_from_concentrate",
+      "variant": "juice_from_concentrate",
       "category": "fruit",
       "name_fr": "ananas",
       "name_en": "pineapple",
       "axes": {
         "form": "juice",
-        "treatment": "a_base_de_concentre"
+        "treatment": "from_concentrate"
       },
       "calories_kcal": 52.3,
       "protein_g": 0.41,
@@ -13485,14 +13486,14 @@
       "water_g": 87.1
     },
     "CIQUAL:13716": {
-      "base": "pineapple_canned_dans_du_jus",
-      "variant": "canned_dans_du_jus",
+      "base": "pineapple_canned_in_juice",
+      "variant": "canned_in_juice",
       "category": "fruit",
       "name_fr": "ananas",
       "name_en": "pineapple",
       "axes": {
         "packaging": "canned",
-        "storage_medium": "dans_du_jus"
+        "storage_medium": "in_juice"
       },
       "calories_kcal": 56.0,
       "protein_g": 0.25,
@@ -13584,7 +13585,7 @@
       "name_en": "pineapple (extra sweet variety)",
       "axes": {
         "cooking_state": "raw",
-        "variete": "extra_sucree"
+        "variete": "extra sweet"
       },
       "calories_kcal": 51.0,
       "protein_g": 0.53,
@@ -18041,7 +18042,7 @@
       "name_en": "cantaloupe melon (Charentais)",
       "axes": {
         "cooking_state": "raw",
-        "variete": "charentais"
+        "variete": "Charentais"
       },
       "calories_kcal": 59.8,
       "protein_g": 1.13,
@@ -18579,7 +18580,7 @@
       "name_en": "blackberry",
       "axes": {
         "cooking_state": "raw",
-        "variete": "murier"
+        "variete": "mulberry"
       },
       "calories_kcal": 41.7,
       "protein_g": 1.44,
@@ -19078,14 +19079,14 @@
       "water_g": 88.2
     },
     "CIQUAL:2012": {
-      "base": "orange_juice_a_base_de_concentre",
-      "variant": "juice_a_base_de_concentre",
+      "base": "orange_juice_from_concentrate",
+      "variant": "juice_from_concentrate",
       "category": "fruit",
       "name_fr": "orange",
       "name_en": "orange",
       "axes": {
         "form": "juice",
-        "treatment": "a_base_de_concentre"
+        "treatment": "from_concentrate"
       },
       "calories_kcal": 45.6,
       "protein_g": 0.63,
@@ -19129,15 +19130,15 @@
       "water_g": 89.7
     },
     "USDA:2003597": {
-      "base": "orange_juice_sans_pulpe_refrigere",
-      "variant": "juice_sans_pulpe_refrigere",
+      "base": "orange_juice_pulp_free_refrigerated",
+      "variant": "juice_pulp_free_refrigerated",
       "category": "fruit",
       "name_fr": "orange",
       "name_en": "orange",
       "axes": {
         "form": "juice",
-        "treatment": "sans_pulpe",
-        "thermal_state": "refrigere"
+        "treatment": "pulp_free",
+        "thermal_state": "refrigerated"
       },
       "calories_kcal": 46.5,
       "protein_g": 0.812,
@@ -19456,14 +19457,14 @@
       "water_g": 90.0
     },
     "CIQUAL:2015": {
-      "base": "grapefruit_juice_a_base_de_concentre",
-      "variant": "juice_a_base_de_concentre",
+      "base": "grapefruit_juice_from_concentrate",
+      "variant": "juice_from_concentrate",
       "category": "fruit",
       "name_fr": "pamplemousse",
       "name_en": "grapefruit",
       "axes": {
         "form": "juice",
-        "treatment": "a_base_de_concentre"
+        "treatment": "from_concentrate"
       },
       "calories_kcal": 40.9,
       "protein_g": 0.52,
@@ -19546,12 +19547,14 @@
       "water_g": 89.1
     },
     "CIQUAL:13040": {
-      "base": "pamplemousse",
-      "variant": "default",
+      "base": "grapefruit_raw",
+      "variant": "raw",
       "category": "fruit",
       "name_fr": "pamplemousse",
       "name_en": "grapefruit",
-      "axes": {},
+      "axes": {
+        "cooking_state": "raw"
+      },
       "calories_kcal": 33.5,
       "protein_g": 0.84,
       "carbs_g": 5.92,
@@ -19640,12 +19643,13 @@
     },
     "CNF:1565": {
       "base": "white_grapefruit",
-      "variant": "default",
+      "variant": "raw",
       "category": "fruit",
       "name_fr": "pamplemousse blanc",
       "name_en": "white grapefruit",
       "axes": {
-        "variete": "californie"
+        "variete": "californie",
+        "cooking_state": "raw"
       },
       "calories_kcal": 37.0,
       "protein_g": 0.88,
@@ -19891,13 +19895,14 @@
       "water_g": 90.5
     },
     "CNF:1566": {
-      "base": "pamplemousse_blanc",
-      "variant": "default",
+      "base": "white_grapefruit_raw",
+      "variant": "raw",
       "category": "fruit",
       "name_fr": "pamplemousse blanc",
       "name_en": "white grapefruit",
       "axes": {
-        "variete": "floride"
+        "variete": "floride",
+        "cooking_state": "raw"
       },
       "calories_kcal": 32.0,
       "protein_g": 0.63,
@@ -20375,13 +20380,13 @@
     },
     "USDA:2710818": {
       "base": "plantains_underripe",
-      "variant": "raw_pas_mur",
+      "variant": "raw_unripe",
       "category": "fruit",
       "name_fr": "banane plantain",
       "name_en": "plantains",
       "axes": {
         "cooking_state": "raw",
-        "ripeness": "pas_mur"
+        "ripeness": "unripe"
       },
       "calories_kcal": 145.5,
       "protein_g": 1.23,
@@ -20787,7 +20792,7 @@
       "axes": {
         "packaging": "canned",
         "storage_medium": "in_syrup",
-        "concentration_sirop": "leger"
+        "concentration_sirop": "light"
       },
       "calories_kcal": 63.9,
       "protein_g": 0.25,
@@ -20832,7 +20837,7 @@
       "axes": {
         "packaging": "canned",
         "storage_medium": "in_syrup",
-        "concentration_sirop": "epais"
+        "concentration_sirop": "heavy"
       },
       "calories_kcal": 74.0,
       "protein_g": 0.24,
@@ -21359,14 +21364,14 @@
       "water_g": 88.4
     },
     "CIQUAL:2014": {
-      "base": "apple_juice_a_base_de_concentre",
-      "variant": "juice_a_base_de_concentre",
+      "base": "apple_juice_from_concentrate",
+      "variant": "juice_from_concentrate",
       "category": "fruit",
       "name_fr": "pomme",
       "name_en": "apple",
       "axes": {
         "form": "juice",
-        "treatment": "a_base_de_concentre"
+        "treatment": "from_concentrate"
       },
       "calories_kcal": 48.5,
       "protein_g": 0.24,
@@ -22759,14 +22764,14 @@
       "water_g": 87.8
     },
     "CIQUAL:13730": {
-      "base": "peach_canned_sirop_leger",
-      "variant": "canned_sirop_leger",
+      "base": "peach_canned_in_light_syrup",
+      "variant": "canned_in_light_syrup",
       "category": "fruit",
       "name_fr": "pêche au sirop léger, conserve",
       "name_en": "peach in light syrup, canned",
       "axes": {
         "packaging": "canned",
-        "storage_medium": "sirop_leger"
+        "storage_medium": "in_light_syrup"
       },
       "calories_kcal": 59.0,
       "protein_g": 0.5,
@@ -22802,14 +22807,14 @@
       "water_g": 83.9
     },
     "CNF:5397": {
-      "base": "peach_canned_sirop_epais",
-      "variant": "canned_sirop_epais",
+      "base": "peach_canned_in_heavy_syrup",
+      "variant": "canned_in_heavy_syrup",
       "category": "fruit",
       "name_fr": "pêche au sirop épais, conserve",
       "name_en": "peach in heavy syrup, canned",
       "axes": {
         "packaging": "canned",
-        "storage_medium": "sirop_epais"
+        "storage_medium": "in_heavy_syrup"
       },
       "calories_kcal": 72.0,
       "protein_g": 0.52,
@@ -23411,7 +23416,7 @@
       "axes": {
         "seasoning": "plain",
         "form": "juice",
-        "couleur": "vert"
+        "couleur": "green"
       },
       "calories_kcal": 69.2,
       "protein_g": 0.25,
@@ -23454,14 +23459,14 @@
       "water_g": 82.4
     },
     "CIQUAL:2019": {
-      "base": "grape_juice_a_base_de_concentre",
-      "variant": "juice_a_base_de_concentre",
+      "base": "grape_juice_from_concentrate",
+      "variant": "juice_from_concentrate",
       "category": "fruit",
       "name_fr": "raisin",
       "name_en": "grape",
       "axes": {
         "form": "juice",
-        "treatment": "a_base_de_concentre"
+        "treatment": "from_concentrate"
       },
       "calories_kcal": 67.1,
       "protein_g": 0.31,
@@ -23868,13 +23873,13 @@
     },
     "CIQUAL:11065": {
       "base": "vanilla_alcoholic_extract",
-      "variant": "extract_alcoolique",
+      "variant": "extract_alcoholic",
       "category": "spice",
       "name_fr": "vanille extrait alcoolique",
       "name_en": "vanilla alcoholic extract",
       "axes": {
         "form": "extract",
-        "treatment": "alcoolique"
+        "treatment": "alcoholic"
       },
       "calories_kcal": 240.0,
       "protein_g": 0.05,
@@ -26807,14 +26812,14 @@
       "water_g": 85.8
     },
     "CIQUAL:20074": {
-      "base": "artichoke_steamed_sous_pression",
-      "variant": "steamed_sous_pression",
+      "base": "artichoke_steamed_pressurized",
+      "variant": "steamed_pressurized",
       "category": "vegetable",
       "name_fr": "artichaut",
       "name_en": "artichoke",
       "axes": {
         "cooking_state": "steamed",
-        "thermal_state": "sous_pression"
+        "thermal_state": "pressurized"
       },
       "calories_kcal": 46.4,
       "protein_g": 2.63,
@@ -27461,15 +27466,15 @@
       "water_g": 94.0
     },
     "CNF:501579": {
-      "base": "asparagus_boiled_surgele_salted",
-      "variant": "boiled_surgele_salted",
+      "base": "asparagus_boiled_frozen_salted",
+      "variant": "boiled_frozen_salted",
       "category": "vegetable",
       "name_fr": "Asperge",
       "name_en": "Asparagus",
       "axes": {
         "cooking_state": "boiled",
         "seasoning": "salted",
-        "thermal_state": "surgele"
+        "thermal_state": "frozen"
       },
       "calories_kcal": 18.0,
       "protein_g": 2.95,
@@ -28576,15 +28581,15 @@
       "water_g": 95.3
     },
     "CIQUAL:20301": {
-      "base": "swiss_chard_boiled_leaf_frais",
-      "variant": "boiled_leaf_frais",
+      "base": "swiss_chard_boiled_leaf_fresh",
+      "variant": "boiled_leaf_fresh",
       "category": "vegetable",
       "name_fr": "côte de bette",
       "name_en": "swiss chard",
       "axes": {
         "cooking_state": "boiled",
         "part": "leaf",
-        "packaging": "frais"
+        "packaging": "fresh"
       },
       "calories_kcal": 15.6,
       "protein_g": 0.88,
@@ -29387,7 +29392,7 @@
       "name_en": "baby carrot",
       "axes": {
         "cooking_state": "raw",
-        "taille": "petite"
+        "taille": "baby"
       },
       "calories_kcal": 40.8,
       "protein_g": 0.805,
@@ -29805,15 +29810,15 @@
       "water_g": 92.95
     },
     "CNF:501615": {
-      "base": "carrot_boiled_surgele_salted",
-      "variant": "boiled_surgele_salted",
+      "base": "carrot_boiled_frozen_salted",
+      "variant": "boiled_frozen_salted",
       "category": "vegetable",
       "name_fr": "carotte",
       "name_en": "carrot",
       "axes": {
         "cooking_state": "boiled",
         "seasoning": "salted",
-        "thermal_state": "surgele"
+        "thermal_state": "frozen"
       },
       "calories_kcal": 37.0,
       "protein_g": 0.58,
@@ -30943,14 +30948,14 @@
       "water_g": 94.2
     },
     "CIQUAL:13177": {
-      "base": "chayote_boiled_frais",
-      "variant": "boiled_frais",
+      "base": "chayote_boiled_fresh",
+      "variant": "boiled_fresh",
       "category": "vegetable",
       "name_fr": "chayote",
       "name_en": "chayote",
       "axes": {
         "cooking_state": "boiled",
-        "packaging": "frais"
+        "packaging": "fresh"
       },
       "calories_kcal": 21.6,
       "protein_g": 0.62,
@@ -31887,14 +31892,14 @@
       "water_g": 91.2
     },
     "CIQUAL:20095": {
-      "base": "red_cabbage_boiled_frais",
-      "variant": "boiled_frais",
+      "base": "red_cabbage_boiled_fresh",
+      "variant": "boiled_fresh",
       "category": "vegetable",
       "name_fr": "chou rouge",
       "name_en": "red cabbage",
       "axes": {
         "cooking_state": "boiled",
-        "packaging": "frais"
+        "packaging": "fresh"
       },
       "calories_kcal": 25.3,
       "protein_g": 1.51,
@@ -32082,14 +32087,14 @@
       "water_g": 93.9
     },
     "CIQUAL:20094": {
-      "base": "kohlrabi_boiled_frais",
-      "variant": "boiled_frais",
+      "base": "kohlrabi_boiled_fresh",
+      "variant": "boiled_fresh",
       "category": "vegetable",
       "name_fr": "chou-rave",
       "name_en": "kohlrabi",
       "axes": {
         "cooking_state": "boiled",
-        "packaging": "frais"
+        "packaging": "fresh"
       },
       "calories_kcal": 28.0,
       "protein_g": 1.8,
@@ -33380,15 +33385,15 @@
       "water_g": 92.9
     },
     "CIQUAL:20017": {
-      "base": "cauliflower_boiled_flower_frais",
-      "variant": "boiled_flower_frais",
+      "base": "cauliflower_boiled_flower_fresh",
+      "variant": "boiled_flower_fresh",
       "category": "vegetable",
       "name_fr": "chou-fleur",
       "name_en": "cauliflower",
       "axes": {
         "cooking_state": "boiled",
         "part": "flower",
-        "packaging": "frais"
+        "packaging": "fresh"
       },
       "calories_kcal": 20.9,
       "protein_g": 1.6,
@@ -36035,15 +36040,15 @@
       "water_g": 91.1
     },
     "CNF:501782": {
-      "base": "spaghetti_squash_cooked_salted_au_four",
-      "variant": "cooked_salted_au_four",
+      "base": "spaghetti_squash_cooked_salted_baked",
+      "variant": "cooked_salted_baked",
       "category": "vegetable",
       "name_fr": "courge spaghetti",
       "name_en": "spaghetti squash",
       "axes": {
         "seasoning": "salted",
         "cooking_state": "cooked",
-        "cooking_process": "au_four"
+        "cooking_process": "baked"
       },
       "calories_kcal": 27.0,
       "protein_g": 0.66,
@@ -36117,11 +36122,13 @@
     },
     "CNF:2441": {
       "base": "squash_pumpkin",
-      "variant": "default",
+      "variant": "raw",
       "category": "vegetable",
       "name_fr": "citrouille",
       "name_en": "pumpkin",
-      "axes": {},
+      "axes": {
+        "cooking_state": "raw"
+      },
       "calories_kcal": 26.0,
       "protein_g": 1.0,
       "carbs_g": 6.5,
@@ -36166,12 +36173,13 @@
     },
     "USDA:2727578": {
       "base": "pie_pumpkin",
-      "variant": "default",
+      "variant": "raw",
       "category": "vegetable",
       "name_fr": "citrouille",
       "name_en": "pumpkin",
       "axes": {
-        "variete": "pie_pumpkin_tarte"
+        "variete": "pie pumpkin",
+        "cooking_state": "raw"
       },
       "calories_kcal": 3.4,
       "protein_g": 0.854,
@@ -37373,7 +37381,7 @@
       "name_en": "endive",
       "axes": {
         "cooking_state": "raw",
-        "variete": "scarole"
+        "variete": "escarole"
       },
       "calories_kcal": 17.0,
       "protein_g": 1.25,
@@ -41142,13 +41150,13 @@
     },
     "CIQUAL:13032": {
       "base": "black_olive",
-      "variant": "canned_en_saumure",
+      "variant": "canned_in_brine",
       "category": "vegetable",
       "name_fr": "olive noire",
       "name_en": "black olive",
       "axes": {
         "packaging": "canned",
-        "storage_medium": "en_saumure"
+        "storage_medium": "in_brine"
       },
       "calories_kcal": 173.0,
       "protein_g": 1.38,
@@ -41193,13 +41201,13 @@
     },
     "CIQUAL:13033": {
       "base": "green_olive",
-      "variant": "canned_en_saumure",
+      "variant": "canned_in_brine",
       "category": "vegetable",
       "name_fr": "olive verte",
       "name_en": "green olive",
       "axes": {
         "packaging": "canned",
-        "storage_medium": "en_saumure"
+        "storage_medium": "in_brine"
       },
       "calories_kcal": 164.0,
       "protein_g": 1.13,
@@ -42124,13 +42132,13 @@
       "water_g": 73.88
     },
     "CNF:2243": {
-      "base": "sweet_potato_vacuum",
-      "variant": "vacuum",
+      "base": "sweet_potato_vacuum_packed",
+      "variant": "vacuum_packed",
       "category": "vegetable",
       "name_fr": "patate douce",
       "name_en": "sweet potato",
       "axes": {
-        "packaging": "vacuum"
+        "packaging": "vacuum_packed"
       },
       "calories_kcal": 91.0,
       "protein_g": 1.65,
@@ -42911,12 +42919,13 @@
     },
     "USDA:2747660": {
       "base": "banana_pepper_seeded",
-      "variant": "seedless",
+      "variant": "raw_seedless",
       "category": "vegetable",
       "name_fr": "piment banane",
       "name_en": "banana pepper",
       "axes": {
-        "part": "seedless"
+        "part": "seedless",
+        "cooking_state": "raw"
       },
       "calories_kcal": 24.0,
       "protein_g": 0.723,
@@ -45200,14 +45209,14 @@
       "water_g": 79.9
     },
     "CNF:502438": {
-      "base": "potato_roasted_surgele",
-      "variant": "roasted_surgele",
+      "base": "potato_roasted_frozen",
+      "variant": "roasted_frozen",
       "category": "vegetable",
       "name_fr": "pomme de terre",
       "name_en": "potato",
       "axes": {
         "cooking_state": "roasted",
-        "thermal_state": "surgele"
+        "thermal_state": "frozen"
       },
       "calories_kcal": 130.0,
       "protein_g": 2.22,
@@ -47535,14 +47544,14 @@
     },
     "USDA:2685581": {
       "base": "crushed_tomatoes",
-      "variant": "concassee_canned_mure",
+      "variant": "crushed_canned_ripe",
       "category": "vegetable",
       "name_fr": "tomate concassée, conserve",
       "name_en": "crushed tomatoes, canned",
       "axes": {
         "packaging": "canned",
-        "form": "concassee",
-        "ripeness": "mure"
+        "form": "crushed",
+        "ripeness": "ripe"
       },
       "calories_kcal": 37.9,
       "protein_g": 1.44,
@@ -47564,14 +47573,14 @@
     },
     "USDA:333281": {
       "base": "diced_tomatoes",
-      "variant": "en_des_canned_mure",
+      "variant": "diced_canned_ripe",
       "category": "vegetable",
       "name_fr": "tomate en dés, conserve",
       "name_en": "diced tomatoes, canned",
       "axes": {
         "packaging": "canned",
-        "form": "en_des",
-        "ripeness": "mure"
+        "form": "diced",
+        "ripeness": "ripe"
       },
       "calories_kcal": 18.0,
       "protein_g": 0.84,
@@ -47591,14 +47600,14 @@
     },
     "CNF:2463": {
       "base": "stewed_tomatoes",
-      "variant": "etuvee_canned_mure",
+      "variant": "stewed_canned_ripe",
       "category": "vegetable",
       "name_fr": "tomate étuvée, conserve",
       "name_en": "stewed tomatoes, canned",
       "axes": {
         "packaging": "canned",
-        "cooking_state": "etuvee",
-        "ripeness": "mure"
+        "cooking_state": "stewed",
+        "ripeness": "ripe"
       },
       "calories_kcal": 26.0,
       "protein_g": 0.91,
@@ -47846,14 +47855,14 @@
       "water_g": 72.0
     },
     "CIQUAL:20268": {
-      "base": "tomato_double_concentre_canned",
-      "variant": "double_concentre_canned",
+      "base": "tomato_double_concentrated_canned",
+      "variant": "double_concentrated_canned",
       "category": "vegetable",
       "name_fr": "tomate",
       "name_en": "tomato",
       "axes": {
         "packaging": "canned",
-        "form": "double_concentre"
+        "form": "double_concentrated"
       },
       "calories_kcal": 99.5,
       "protein_g": 3.75,
@@ -48900,14 +48909,14 @@
       "water_g": 90.0
     },
     "CIQUAL:20270": {
-      "base": "spinach_raw_bebe",
-      "variant": "raw_bebe",
+      "base": "spinach_raw_baby",
+      "variant": "raw_baby",
       "category": "vegetable",
       "name_fr": "épinard jeunes pousses",
       "name_en": "baby spinach",
       "axes": {
         "cooking_state": "raw",
-        "ripeness": "bebe"
+        "ripeness": "baby"
       },
       "calories_kcal": 17.0,
       "protein_g": 2.06,
@@ -48949,14 +48958,14 @@
       "water_g": 93.7
     },
     "CIQUAL:20336": {
-      "base": "spinach_boiled_frais",
-      "variant": "boiled_frais",
+      "base": "spinach_boiled_fresh",
+      "variant": "boiled_fresh",
       "category": "vegetable",
       "name_fr": "épinard",
       "name_en": "spinach",
       "axes": {
         "cooking_state": "boiled",
-        "packaging": "frais"
+        "packaging": "fresh"
       },
       "calories_kcal": 26.8,
       "protein_g": 3.38,
@@ -50604,14 +50613,14 @@
       "water_g": 89.78
     },
     "CNF:2078": {
-      "base": "black_eyed_peas_cowpeas_raw_with_seeds_bebe",
-      "variant": "raw_with_seeds_bebe",
+      "base": "black_eyed_peas_cowpeas_raw_with_seeds_baby",
+      "variant": "raw_with_seeds_baby",
       "category": "legumes",
       "name_fr": "dolique à oeil noir",
       "name_en": "black-eyed peas (cowpeas)",
       "axes": {
         "cooking_state": "raw",
-        "ripeness": "bebe",
+        "ripeness": "baby",
         "part": "with_seeds"
       },
       "calories_kcal": 44.0,
@@ -50757,8 +50766,8 @@
       "water_g": 91.3
     },
     "CNF:2079": {
-      "base": "black_eyed_peas_cowpeas_boiled_seed_canned_bebe",
-      "variant": "boiled_seed_canned_bebe",
+      "base": "black_eyed_peas_cowpeas_boiled_seed_canned_baby",
+      "variant": "boiled_seed_canned_baby",
       "category": "legumes",
       "name_fr": "dolique à oeil noir",
       "name_en": "black-eyed peas (cowpeas)",
@@ -50766,7 +50775,7 @@
         "cooking_state": "boiled",
         "part": "seed",
         "packaging": "canned",
-        "ripeness": "bebe"
+        "ripeness": "baby"
       },
       "calories_kcal": 34.0,
       "protein_g": 2.6,
@@ -50976,15 +50985,15 @@
       "water_g": 91.3
     },
     "CNF:501633": {
-      "base": "black_eyed_peas_cowpeas_boiled_seed_salted_bebe",
-      "variant": "boiled_seed_salted_bebe",
+      "base": "black_eyed_peas_cowpeas_boiled_seed_salted_baby",
+      "variant": "boiled_seed_salted_baby",
       "category": "legumes",
       "name_fr": "dolique à œil noir",
       "name_en": "black-eyed peas (cowpeas)",
       "axes": {
         "cooking_state": "boiled",
         "seasoning": "salted",
-        "ripeness": "bebe",
+        "ripeness": "baby",
         "part": "seed"
       },
       "calories_kcal": 34.0,
@@ -58234,15 +58243,15 @@
       "water_g": 88.91
     },
     "CNF:501700": {
-      "base": "green_peas_boiled_surgele_salted",
-      "variant": "boiled_surgele_salted",
+      "base": "green_peas_boiled_frozen_salted",
+      "variant": "boiled_frozen_salted",
       "category": "legumes",
       "name_fr": "petit pois vert",
       "name_en": "green peas",
       "axes": {
         "cooking_state": "boiled",
         "seasoning": "salted",
-        "thermal_state": "surgele"
+        "thermal_state": "frozen"
       },
       "calories_kcal": 78.0,
       "protein_g": 5.15,
@@ -58532,14 +58541,14 @@
       "water_g": 72.1
     },
     "CNF:502262": {
-      "base": "chickpea_canned",
-      "variant": "rince_canned",
+      "base": "chickpea_rinsed_canned",
+      "variant": "rinsed_canned",
       "category": "legumes",
       "name_fr": "pois chiches",
       "name_en": "chickpeas",
       "axes": {
         "packaging": "canned",
-        "treatment": "rince"
+        "treatment": "rinsed"
       },
       "calories_kcal": 138.0,
       "protein_g": 7.04,
@@ -58755,15 +58764,15 @@
       "water_g": 8.54
     },
     "CNF:2580": {
-      "base": "soybean_roasted_seed_torrefie_unsalted",
-      "variant": "roasted_seed_torrefie_unsalted",
+      "base": "soybean_roasted_seed_unsalted",
+      "variant": "roasted_seed_unsalted",
       "category": "legumes",
       "name_fr": "soja",
       "name_en": "soybean",
       "axes": {
         "part": "seed",
         "seasoning": "unsalted",
-        "treatment": "torrefie",
+        "treatment": "roasted",
         "cooking_state": "roasted"
       },
       "calories_kcal": 472.0,
@@ -59158,7 +59167,7 @@
       "name_fr": "sauce soja - shoyu",
       "name_en": "soy sauce - shoyu",
       "axes": {
-        "teneur_sel": "reduit_en_sodium"
+        "teneur_sel": "reduced sodium"
       },
       "calories_kcal": 57.0,
       "protein_g": 9.05,
@@ -59243,14 +59252,14 @@
       "water_g": 84.4
     },
     "CNF:3317": {
-      "base": "soybean_roasted_torrefie_salted",
-      "variant": "roasted_torrefie_salted",
+      "base": "soybean_roasted_salted",
+      "variant": "roasted_salted",
       "category": "legumes",
       "name_fr": "soja",
       "name_en": "soybean",
       "axes": {
         "seasoning": "salted",
-        "treatment": "torrefie",
+        "treatment": "roasted",
         "cooking_state": "roasted"
       },
       "calories_kcal": 472.0,
@@ -61047,13 +61056,13 @@
     },
     "CNF:5497": {
       "base": "flaxseed_linseed",
-      "variant": "oil_seed_pression_a_froid_plant",
+      "variant": "oil_seed_cold_pressed_plant",
       "category": "fats and oils",
       "name_fr": "lin",
       "name_en": "flaxseed (linseed)",
       "axes": {
         "form": "oil",
-        "treatment": "pression_a_froid",
+        "treatment": "cold_pressed",
         "origin": "plant",
         "part": "seed"
       },
@@ -61447,14 +61456,14 @@
       "water_g": 0.0
     },
     "CIQUAL:17270": {
-      "base": "olive_oil_extra_vierge_plant",
-      "variant": "oil_extra_vierge_plant",
+      "base": "olive_oil_extra_virgin_plant",
+      "variant": "oil_extra_virgin_plant",
       "category": "fats and oils",
       "name_fr": "olive",
       "name_en": "olive",
       "axes": {
         "form": "oil",
-        "treatment": "extra_vierge",
+        "treatment": "extra_virgin",
         "origin": "plant"
       },
       "calories_kcal": 899.0,
@@ -61955,7 +61964,7 @@
       "axes": {
         "form": "butter",
         "origin": "plant",
-        "teneur_sel": "reduit_en_sodium"
+        "teneur_sel": "reduced sodium"
       },
       "calories_kcal": 590.0,
       "protein_g": 24.0,
@@ -62098,7 +62107,7 @@
       "water_g": 3.03
     },
     "CNF:2598": {
-      "base": "sesame_tahini_raw_butter_seed_plant",
+      "base": "sesame_tahini_raw_butter_seed_unsalted_plant",
       "variant": "raw_butter_seed_unsalted_plant",
       "category": "nut",
       "name_fr": "sésame (tahini)",
@@ -62314,7 +62323,7 @@
         "seasoning": "salted",
         "origin": "plant",
         "form": "butter",
-        "style": "croquant"
+        "style": "crunchy"
       },
       "calories_kcal": 589.0,
       "protein_g": 24.06,
@@ -62455,7 +62464,7 @@
       "axes": {
         "form": "butter",
         "origin": "plant",
-        "style": "cremeux"
+        "style": "creamy"
       },
       "calories_kcal": 697.2,
       "protein_g": 19.7,
@@ -62484,8 +62493,8 @@
       "water_g": 0.606
     },
     "CNF:2593": {
-      "base": "sesame_tahini_butter_seed_roti_plant_dry",
-      "variant": "butter_seed_roti_plant_dry",
+      "base": "sesame_tahini_butter_seed_roasted_plant_dry",
+      "variant": "butter_seed_roasted_plant_dry",
       "category": "nut",
       "name_fr": "sésame (tahini)",
       "name_en": "sesame (tahini)",
@@ -62493,7 +62502,7 @@
         "form": "butter",
         "origin": "plant",
         "part": "seed",
-        "treatment": "roti",
+        "treatment": "roasted",
         "cooking_process": "dry"
       },
       "calories_kcal": 595.0,
@@ -62598,7 +62607,7 @@
         "seasoning": "salted",
         "origin": "plant",
         "form": "butter",
-        "style": "cremeux"
+        "style": "creamy"
       },
       "calories_kcal": 598.0,
       "protein_g": 22.21,
@@ -62649,7 +62658,7 @@
       "name_fr": "cacahuète (arachide)",
       "name_en": "peanut",
       "axes": {
-        "teneur_sel": "regulier",
+        "teneur_sel": "regular",
         "form": "butter",
         "origin": "plant"
       },
@@ -62680,15 +62689,15 @@
       "water_g": 1.1
     },
     "CNF:6289": {
-      "base": "peanut_butter_naturel_plant",
-      "variant": "butter_naturel_plant",
+      "base": "peanut_butter_natural_plant",
+      "variant": "butter_natural_plant",
       "category": "nut",
       "name_fr": "cacahuète (arachide)",
       "name_en": "peanut",
       "axes": {
         "form": "butter",
         "origin": "plant",
-        "seasoning": "naturel"
+        "seasoning": "natural"
       },
       "calories_kcal": 585.0,
       "protein_g": 23.68,
@@ -62733,15 +62742,15 @@
       "water_g": 1.55
     },
     "CNF:2534": {
-      "base": "almond_with_skin_non_blanchi_peau_conservee_dried",
-      "variant": "with_skin_non_blanchi_peau_conservee_dried",
+      "base": "almond_with_skin_unbleached_on_dried",
+      "variant": "with_skin_unbleached_on_dried",
       "category": "nut",
       "name_fr": "amande",
       "name_en": "almond",
       "axes": {
         "thermal_state": "dried",
         "part": "with_skin",
-        "treatment": "non_blanchi_peau_conservee"
+        "treatment": "unbleached_skin_on"
       },
       "calories_kcal": 579.0,
       "protein_g": 21.15,
@@ -62786,8 +62795,8 @@
       "water_g": 4.41
     },
     "CNF:2536": {
-      "base": "almond_with_skin_grille_a_sec_dried_dry",
-      "variant": "with_skin_grille_a_sec_dried_dry",
+      "base": "almond_with_skin_dry_roasted_dried",
+      "variant": "with_skin_dry_roasted_dried",
       "category": "nut",
       "name_fr": "amande",
       "name_en": "almond",
@@ -62795,7 +62804,7 @@
         "cooking_process": "dry",
         "part": "with_skin",
         "thermal_state": "dried",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 598.0,
       "protein_g": 20.96,
@@ -62840,8 +62849,8 @@
       "water_g": 2.41
     },
     "CNF:2537": {
-      "base": "almond_with_skin_grille_a_lhuile_salted_in_oil",
-      "variant": "with_skin_grille_a_lhuile_salted_in_oil",
+      "base": "almond_with_skin_roasted_in_oil_salted",
+      "variant": "with_skin_roasted_in_oil_salted",
       "category": "nut",
       "name_fr": "amande",
       "name_en": "almond",
@@ -62849,7 +62858,7 @@
         "cooking_process": "in_oil",
         "part": "with_skin",
         "seasoning": "salted",
-        "treatment": "grille_a_lhuile"
+        "treatment": "roasted_in_oil"
       },
       "calories_kcal": 608.0,
       "protein_g": 21.23,
@@ -62894,13 +62903,13 @@
       "water_g": 2.8
     },
     "CNF:2539": {
-      "base": "almond_with_skin_grille_salted_dry",
-      "variant": "with_skin_grille_salted_dry",
+      "base": "almond_with_skin_roasted_salted_dry",
+      "variant": "with_skin_roasted_salted_dry",
       "category": "nut",
       "name_fr": "amande",
       "name_en": "almond",
       "axes": {
-        "treatment": "grille",
+        "treatment": "roasted",
         "part": "with_skin",
         "seasoning": "salted",
         "cooking_process": "dry"
@@ -63206,15 +63215,15 @@
       "water_g": 2.41
     },
     "USDA:2257045": {
-      "base": "almond_milk_refrigere_unsweetened_plant",
-      "variant": "milk_refrigere_unsweetened_plant",
+      "base": "almond_milk_refrigerated_unsweetened_plant",
+      "variant": "milk_refrigerated_unsweetened_plant",
       "category": "nut",
       "name_fr": "amande",
       "name_en": "almond",
       "axes": {
         "form": "milk",
         "origin": "plant",
-        "thermal_state": "refrigere",
+        "thermal_state": "refrigerated",
         "seasoning": "unsweetened"
       },
       "calories_kcal": 19.3,
@@ -63415,14 +63424,14 @@
       "water_g": 2.3
     },
     "CIQUAL:15002": {
-      "base": "peanut_roasted_torrefie_salted_dry",
-      "variant": "roasted_torrefie_salted_dry",
+      "base": "peanut_roasted_salted_dry",
+      "variant": "roasted_salted_dry",
       "category": "nut",
       "name_fr": "cacahuète (arachide)",
       "name_en": "peanut",
       "axes": {
         "seasoning": "salted",
-        "treatment": "torrefie",
+        "treatment": "roasted",
         "cooking_state": "roasted",
         "cooking_process": "dry"
       },
@@ -63467,14 +63476,14 @@
       "water_g": 1.22
     },
     "CIQUAL:15053": {
-      "base": "peanut_roasted_torrefie_unsalted_dry",
-      "variant": "roasted_torrefie_unsalted_dry",
+      "base": "peanut_roasted_unsalted_dry",
+      "variant": "roasted_unsalted_dry",
       "category": "nut",
       "name_fr": "cacahuète (arachide)",
       "name_en": "peanut",
       "axes": {
         "seasoning": "unsalted",
-        "treatment": "torrefie",
+        "treatment": "roasted",
         "cooking_state": "roasted",
         "cooking_process": "dry"
       },
@@ -63868,15 +63877,15 @@
       "water_g": 2.17
     },
     "CNF:3362": {
-      "base": "peanut_grille_a_sec_dried_dry",
-      "variant": "grille_a_sec_dried_dry",
+      "base": "peanut_dry_roasted_dried",
+      "variant": "dry_roasted_dried",
       "category": "nut",
       "name_fr": "cacahuète (arachide)",
       "name_en": "peanut",
       "axes": {
         "cooking_process": "dry",
         "thermal_state": "dried",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 587.0,
       "protein_g": 24.35,
@@ -64805,8 +64814,8 @@
       "water_g": 4.73
     },
     "CNF:2527": {
-      "base": "sunflower_seed_grille_a_sec_dried_dry",
-      "variant": "seed_grille_a_sec_dried_dry",
+      "base": "sunflower_seed_dry_roasted_dried",
+      "variant": "seed_dry_roasted_dried",
       "category": "nut",
       "name_fr": "tournesol",
       "name_en": "sunflower",
@@ -64814,7 +64823,7 @@
         "part": "seed",
         "cooking_process": "dry",
         "thermal_state": "dried",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 582.0,
       "protein_g": 19.33,
@@ -64959,8 +64968,8 @@
       "water_g": 3.48
     },
     "CIQUAL:15038": {
-      "base": "sesame_roasted_seed_grille_a_sec_dry",
-      "variant": "roasted_seed_grille_a_sec_dry",
+      "base": "sesame_roasted_seed_dry",
+      "variant": "roasted_seed_dry",
       "category": "nut",
       "name_fr": "sésame",
       "name_en": "sesame",
@@ -64968,7 +64977,7 @@
         "part": "seed",
         "cooking_state": "roasted",
         "cooking_process": "dry",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 582.0,
       "protein_g": 17.0,
@@ -65057,8 +65066,8 @@
       "water_g": 1.2
     },
     "CNF:2620": {
-      "base": "sunflower_seed_grille_a_sec_dried_salted_dry",
-      "variant": "seed_grille_a_sec_dried_salted_dry",
+      "base": "sunflower_seed_dry_roasted_dried_salted",
+      "variant": "seed_dry_roasted_dried_salted",
       "category": "nut",
       "name_fr": "tournesol",
       "name_en": "sunflower",
@@ -65067,7 +65076,7 @@
         "seasoning": "salted",
         "cooking_process": "dry",
         "thermal_state": "dried",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 582.0,
       "protein_g": 19.33,
@@ -65112,15 +65121,15 @@
       "water_g": 1.2
     },
     "CNF:2642": {
-      "base": "sunflower_seed_grille_a_lhuile_in_oil",
-      "variant": "seed_grille_a_lhuile_in_oil",
+      "base": "sunflower_seed_roasted_in_oil",
+      "variant": "seed_roasted_in_oil",
       "category": "nut",
       "name_fr": "tournesol",
       "name_en": "sunflower",
       "axes": {
         "part": "seed",
         "cooking_process": "in_oil",
-        "treatment": "grille_a_lhuile"
+        "treatment": "roasted_in_oil"
       },
       "calories_kcal": 592.0,
       "protein_g": 20.06,
@@ -65219,8 +65228,8 @@
       "water_g": 1.54
     },
     "CNF:501760": {
-      "base": "sesame_grilled_seed_grille_a_sec_salted_dry",
-      "variant": "grilled_seed_grille_a_sec_salted_dry",
+      "base": "sesame_grilled_seed_dry_roasted_salted",
+      "variant": "grilled_seed_dry_roasted_salted",
       "category": "nut",
       "name_fr": "sésame",
       "name_en": "sesame",
@@ -65229,7 +65238,7 @@
         "seasoning": "salted",
         "cooking_state": "grilled",
         "cooking_process": "dry",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 567.0,
       "protein_g": 16.96,
@@ -65274,15 +65283,15 @@
       "water_g": 5.0
     },
     "CNF:2622": {
-      "base": "sunflower_seed_grille_salted_dry",
-      "variant": "seed_grille_salted_dry",
+      "base": "sunflower_seed_roasted_salted_dry",
+      "variant": "seed_roasted_salted_dry",
       "category": "nut",
       "name_fr": "tournesol",
       "name_en": "sunflower",
       "axes": {
         "part": "seed",
         "seasoning": "salted",
-        "treatment": "grille",
+        "treatment": "roasted",
         "cooking_process": "dry"
       },
       "calories_kcal": 619.0,
@@ -65501,8 +65510,8 @@
       "water_g": 6.62
     },
     "CNF:2619": {
-      "base": "pumpkin_squash_roasted_seed_grille_a_sec_salted_dry",
-      "variant": "roasted_seed_grille_a_sec_salted_dry",
+      "base": "pumpkin_squash_roasted_seed_dry_salted",
+      "variant": "roasted_seed_dry_salted",
       "category": "nut",
       "name_fr": "citrouille - courge",
       "name_en": "pumpkin - squash",
@@ -65511,7 +65520,7 @@
         "seasoning": "salted",
         "cooking_process": "dry",
         "cooking_state": "roasted",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 574.0,
       "protein_g": 29.84,
@@ -65556,8 +65565,8 @@
       "water_g": 2.03
     },
     "CNF:2638": {
-      "base": "pumpkin_squash_roasted_whole_seed_grille_a_sec_salted_dry",
-      "variant": "roasted_whole_seed_grille_a_sec_salted_dry",
+      "base": "pumpkin_squash_roasted_whole_seed_dry_salted",
+      "variant": "roasted_whole_seed_dry_salted",
       "category": "nut",
       "name_fr": "citrouille - courge",
       "name_en": "pumpkin - squash",
@@ -65567,7 +65576,7 @@
         "seasoning": "salted",
         "cooking_process": "dry",
         "cooking_state": "roasted",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 446.0,
       "protein_g": 18.55,
@@ -65608,15 +65617,15 @@
       "water_g": 4.5
     },
     "CNF:2597": {
-      "base": "sesame_flour_seed_eleve_en_gras",
-      "variant": "flour_seed_eleve_en_gras",
+      "base": "sesame_flour_seed_high_fat",
+      "variant": "flour_seed_high_fat",
       "category": "nut",
       "name_fr": "sésame",
       "name_en": "sesame",
       "axes": {
         "form": "flour",
         "part": "seed",
-        "fat_content": "élevé en gras"
+        "fat_content": "high_fat"
       },
       "calories_kcal": 526.0,
       "protein_g": 30.78,
@@ -66599,8 +66608,8 @@
       "water_g": 5.31
     },
     "CNF:2569": {
-      "base": "hazelnut_grilled_grille_a_sec_dried_unsalted_dry",
-      "variant": "grilled_grille_a_sec_dried_unsalted_dry",
+      "base": "hazelnut_dry_roasted_dried_unsalted",
+      "variant": "dry_roasted_dried_unsalted",
       "category": "nut",
       "name_fr": "noisette",
       "name_en": "hazelnut",
@@ -66608,8 +66617,7 @@
         "cooking_process": "dry",
         "thermal_state": "dried",
         "seasoning": "unsalted",
-        "cooking_state": "grilled",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 646.0,
       "protein_g": 15.03,
@@ -66951,8 +66959,8 @@
       "water_g": 1.67
     },
     "CNF:2632": {
-      "base": "macadamia_nuts_bushnuts_queensland_roasted_grille_a_lhuile_salted_in_oil",
-      "variant": "roasted_grille_a_lhuile_salted_in_oil",
+      "base": "macadamia_nuts_bushnuts_queensland_roasted_in_oil_salted",
+      "variant": "roasted_in_oil_salted",
       "category": "nut",
       "name_fr": "noix de macadamia (queensland)",
       "name_en": "macadamia nuts (bushnuts, queensland)",
@@ -66960,7 +66968,7 @@
         "seasoning": "salted",
         "cooking_process": "in_oil",
         "cooking_state": "roasted",
-        "treatment": "grille_a_lhuile"
+        "treatment": "roasted_in_oil"
       },
       "calories_kcal": 718.0,
       "protein_g": 7.26,
@@ -67978,15 +67986,15 @@
       "water_g": 3.52
     },
     "CNF:2583": {
-      "base": "pecans_nuts_grille_a_sec_dried_dry",
-      "variant": "grille_a_sec_dried_dry",
+      "base": "pecans_nuts_dry_roasted_dried",
+      "variant": "dry_roasted_dried",
       "category": "nut",
       "name_fr": "noix de pécan",
       "name_en": "pecans nuts",
       "axes": {
         "cooking_process": "dry",
         "thermal_state": "dried",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 710.0,
       "protein_g": 9.5,
@@ -68062,8 +68070,8 @@
       "water_g": 2.62
     },
     "CNF:2635": {
-      "base": "pecans_nuts_grille_a_sec_dried_salted_dry",
-      "variant": "grille_a_sec_dried_salted_dry",
+      "base": "pecans_nuts_dry_roasted_dried_salted",
+      "variant": "dry_roasted_dried_salted",
       "category": "nut",
       "name_fr": "noix de pécan",
       "name_en": "pecans nuts",
@@ -68071,7 +68079,7 @@
         "seasoning": "salted",
         "cooking_process": "dry",
         "thermal_state": "dried",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 710.0,
       "protein_g": 9.5,
@@ -68367,14 +68375,14 @@
     },
     "CNF:2588": {
       "base": "pistachio_nuts",
-      "variant": "grille_a_sec_dried_dry",
+      "variant": "dry_roasted_dried",
       "category": "nut",
       "name_fr": "pistache",
       "name_en": "pistachio nuts",
       "axes": {
         "cooking_process": "dry",
         "thermal_state": "dried",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 567.0,
       "protein_g": 20.95,
@@ -68547,8 +68555,8 @@
       "water_g": 1.85
     },
     "CNF:2637": {
-      "base": "pistachio_nuts_grille_a_sec_dried_salted_dry",
-      "variant": "grille_a_sec_dried_salted_dry",
+      "base": "pistachio_nuts_dry_roasted_dried_salted",
+      "variant": "dry_roasted_dried_salted",
       "category": "nut",
       "name_fr": "pistache",
       "name_en": "pistachio nuts",
@@ -68556,7 +68564,7 @@
         "seasoning": "salted",
         "cooking_process": "dry",
         "thermal_state": "dried",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 564.0,
       "protein_g": 20.95,
@@ -68602,14 +68610,14 @@
     },
     "CNF:2544": {
       "base": "brazilnut",
-      "variant": "non_blanchi_dried_plain",
+      "variant": "unbleached_dried_plain",
       "category": "nut",
       "name_fr": "noix du Brésil",
       "name_en": "brazilnut",
       "axes": {
         "thermal_state": "dried",
         "seasoning": "plain",
-        "treatment": "non_blanchi"
+        "treatment": "unbleached"
       },
       "calories_kcal": 659.0,
       "protein_g": 14.32,
@@ -68807,15 +68815,15 @@
       "water_g": 1.51
     },
     "CNF:2546": {
-      "base": "cashew_nuts_grille_a_sec_dried_dry",
-      "variant": "grille_a_sec_dried_dry",
+      "base": "cashew_nuts_dry_roasted_dried",
+      "variant": "dry_roasted_dried",
       "category": "nut",
       "name_fr": "noix de cajous",
       "name_en": "cashew nuts",
       "axes": {
         "cooking_process": "dry",
         "thermal_state": "dried",
-        "treatment": "grille_a_sec"
+        "treatment": "dry_roasted"
       },
       "calories_kcal": 574.0,
       "protein_g": 15.31,
@@ -69126,12 +69134,12 @@
     },
     "CIQUAL:22010": {
       "base": "egg",
-      "variant": "dur",
+      "variant": "hard_boiled",
       "category": "dish",
       "name_fr": "oeuf",
       "name_en": "egg",
       "axes": {
-        "cooking_state": "dur"
+        "cooking_state": "hard_boiled"
       },
       "calories_kcal": 134.0,
       "protein_g": 13.5,
@@ -69397,13 +69405,13 @@
       "water_g": 67.8
     },
     "CIQUAL:22505": {
-      "base": "egg_au_plat",
-      "variant": "au_plat",
+      "base": "egg_fried_flat",
+      "variant": "fried_flat",
       "category": "dish",
       "name_fr": "œuf au plat",
       "name_en": "fried egg",
       "axes": {
-        "cooking_state": "au_plat"
+        "cooking_state": "fried_flat"
       },
       "calories_kcal": 157.0,
       "protein_g": 14.6,
@@ -69445,13 +69453,13 @@
       "water_g": 72.6
     },
     "CIQUAL:22014": {
-      "base": "egg_coque",
-      "variant": "coque",
+      "base": "egg_soft_boiled",
+      "variant": "soft_boiled",
       "category": "dish",
       "name_fr": "œuf à la coque",
       "name_en": "soft-boiled egg",
       "axes": {
-        "cooking_state": "coque"
+        "cooking_state": "soft_boiled"
       },
       "calories_kcal": 142.0,
       "protein_g": 12.2,
@@ -69493,13 +69501,13 @@
       "water_g": 76.0
     },
     "CIQUAL:22011": {
-      "base": "egg_poche",
-      "variant": "poche",
+      "base": "egg_poached",
+      "variant": "poached",
       "category": "dish",
       "name_fr": "œuf poché",
       "name_en": "poached egg",
       "axes": {
-        "cooking_state": "poche"
+        "cooking_state": "poached"
       },
       "calories_kcal": 139.0,
       "protein_g": 12.5,
@@ -69541,13 +69549,13 @@
       "water_g": 75.7
     },
     "CIQUAL:22502": {
-      "base": "egg_brouille",
-      "variant": "brouille",
+      "base": "egg_scrambled",
+      "variant": "scrambled",
       "category": "dish",
       "name_fr": "œuf brouillé",
       "name_en": "scrambled egg",
       "axes": {
-        "cooking_state": "brouille"
+        "cooking_state": "scrambled"
       },
       "calories_kcal": 167.0,
       "protein_g": 11.9,
@@ -70453,7 +70461,7 @@
       "name_en": "sauerkraut",
       "axes": {
         "packaging": "canned",
-        "teneur_sel": "faible_en_sodium"
+        "teneur_sel": "low sodium"
       },
       "calories_kcal": 22.0,
       "protein_g": 0.9,
@@ -70927,7 +70935,7 @@
       "name_en": "tomato ketchup (catsup)",
       "axes": {
         "packaging": "pre_packaged",
-        "teneur_sel": "faible"
+        "teneur_sel": "low"
       },
       "calories_kcal": 101.0,
       "protein_g": 1.04,
@@ -71449,14 +71457,14 @@
       "water_g": 15.4
     },
     "CIQUAL:16404": {
-      "base": "butter_sup80pct",
-      "variant": "tendre_sup80pct",
+      "base": "butter_spreadable_sup80pct",
+      "variant": "spreadable_sup80pct",
       "category": "dairy products",
       "name_fr": "beurre",
       "name_en": "butter",
       "axes": {
         "fat_content": "sup80pct",
-        "form": "tendre"
+        "form": "spreadable"
       },
       "calories_kcal": 755.0,
       "protein_g": 0.7,
@@ -71468,14 +71476,14 @@
       "water_g": 15.6
     },
     "CIQUAL:16402": {
-      "base": "butter_demi_sel_80pct",
-      "variant": "demi_sel_80pct",
+      "base": "butter_lightly_salted_80pct",
+      "variant": "lightly_salted_80pct",
       "category": "dairy products",
       "name_fr": "beurre demi-sel",
       "name_en": "butter, semi-salted",
       "axes": {
         "fat_content": "80pct",
-        "seasoning": "demi_sel"
+        "seasoning": "lightly_salted"
       },
       "calories_kcal": 725.0,
       "protein_g": 0.75,
@@ -72011,14 +72019,14 @@
       "water_g": 73.2
     },
     "CIQUAL:19431": {
-      "base": "cream_heavy_refrigere_18pct",
-      "variant": "refrigere_18pct",
+      "base": "cream_heavy_refrigerated_18pct",
+      "variant": "refrigerated_18pct",
       "category": "dairy products",
       "name_fr": "crème épaisse",
       "name_en": "cream, heavy",
       "axes": {
         "fat_content": "18pct",
-        "thermal_state": "refrigere"
+        "thermal_state": "refrigerated"
       },
       "calories_kcal": 162.0,
       "protein_g": 2.65,
@@ -72161,14 +72169,14 @@
       "water_g": 62.9
     },
     "CIQUAL:19410": {
-      "base": "cream_heavy_refrigere_30pct",
-      "variant": "refrigere_30pct",
+      "base": "cream_heavy_refrigerated_30pct",
+      "variant": "refrigerated_30pct",
       "category": "dairy products",
       "name_fr": "crème épaisse",
       "name_en": "cream, heavy",
       "axes": {
         "fat_content": "30pct",
-        "thermal_state": "refrigere"
+        "thermal_state": "refrigerated"
       },
       "calories_kcal": 285.0,
       "protein_g": 2.32,
@@ -72786,13 +72794,13 @@
     },
     "CIQUAL:12006": {
       "base": "camembert_raw_milk",
-      "variant": "lait_cru_cow",
+      "variant": "raw_milk_cow",
       "category": "dairy products",
       "name_fr": "camembert au lait cru",
       "name_en": "Camembert, raw milk",
       "axes": {
         "origin": "cow",
-        "treatment": "lait_cru"
+        "treatment": "raw_milk"
       },
       "calories_kcal": 267.0,
       "protein_g": 20.7,
@@ -74205,14 +74213,14 @@
       "water_g": 39.2
     },
     "CNF:35": {
-      "base": "buffalo_mozzarella_frais_25pct_cow",
-      "variant": "frais_25pct_cow",
+      "base": "buffalo_mozzarella_fresh_25pct_cow",
+      "variant": "fresh_25pct_cow",
       "category": "dairy products",
       "name_fr": "mozzarella di bufala (buflesse)",
       "name_en": "buffalo mozzarella",
       "axes": {
         "origin": "cow",
-        "treatment": "frais",
+        "treatment": "fresh",
         "fat_content": "25pct"
       },
       "calories_kcal": 319.0,
@@ -74258,13 +74266,13 @@
       "water_g": 48.38
     },
     "USDA:329370": {
-      "base": "buffalo_mozzarella_demi_ecreme_cow",
-      "variant": "demi_ecreme_cow",
+      "base": "buffalo_mozzarella_semi_skimmed_cow",
+      "variant": "semi_skimmed_cow",
       "category": "dairy products",
       "name_fr": "mozzarella di bufala (buflesse)",
       "name_en": "buffalo mozzarella",
       "axes": {
-        "fat_content": "demi-écrémé",
+        "fat_content": "semi_skimmed",
         "origin": "cow"
       },
       "calories_kcal": 298.0,
@@ -74386,14 +74394,14 @@
     },
     "CIQUAL:12120": {
       "base": "parmesan",
-      "variant": "pate_dure_dried_cow",
+      "variant": "hard_paste_dried_cow",
       "category": "dairy products",
       "name_fr": "parmesan",
       "name_en": "parmesan",
       "axes": {
         "thermal_state": "dried",
         "origin": "cow",
-        "form": "pate_dure"
+        "form": "hard_paste"
       },
       "calories_kcal": 411.0,
       "protein_g": 31.1,
@@ -74438,7 +74446,7 @@
     },
     "CNF:39": {
       "base": "parmesan_dry_grated_with_anti_caking_agents",
-      "variant": "grated_avec_additifs_dried_cow",
+      "variant": "grated_with_additives_dried_cow",
       "category": "dairy products",
       "name_fr": "parmesan râpé sec (avec anti-agglomérants)",
       "name_en": "parmesan, dry grated (with anti-caking agents)",
@@ -74446,7 +74454,7 @@
         "thermal_state": "dried",
         "origin": "cow",
         "form": "grated",
-        "treatment": "avec_additifs"
+        "treatment": "with_additives"
       },
       "calories_kcal": 420.0,
       "protein_g": 28.42,
@@ -74770,7 +74778,7 @@
       "water_g": 39.1
     },
     "CIQUAL:12118": {
-      "base": "swiss",
+      "base": "swiss_grated_cow",
       "variant": "grated_cow",
       "category": "dairy products",
       "name_fr": "emmental",
@@ -75526,7 +75534,7 @@
       "name_en": "goat cheese",
       "axes": {
         "origin": "goat",
-        "affinage": "mi_affine"
+        "affinage": "semi-aged"
       },
       "calories_kcal": 353.0,
       "protein_g": 21.6,
@@ -76352,7 +76360,7 @@
       "name_en": "Mimolette, semi-aged",
       "axes": {
         "origin": "cow",
-        "affinage": "mi_affine"
+        "affinage": "semi-aged"
       },
       "calories_kcal": 371.0,
       "protein_g": 30.6,
@@ -76398,7 +76406,7 @@
       "name_en": "Mimolette, young",
       "axes": {
         "origin": "cow",
-        "affinage": "jeune"
+        "affinage": "young"
       },
       "calories_kcal": 331.0,
       "protein_g": 28.9,
@@ -78477,13 +78485,13 @@
     },
     "CIQUAL:12832": {
       "base": "goat_crottin_raw_milk",
-      "variant": "lait_cru_goat",
+      "variant": "raw_milk_goat",
       "category": "dairy products",
       "name_fr": "crottin de chèvre au lait cru",
       "name_en": "goat crottin, raw milk",
       "axes": {
         "origin": "goat",
-        "treatment": "lait_cru"
+        "treatment": "raw_milk"
       },
       "calories_kcal": 384.0,
       "protein_g": 23.2,
@@ -78567,13 +78575,13 @@
     },
     "USDA:2259795": {
       "base": "parmesan_grated_refrigerated",
-      "variant": "grated_refrigere_cow",
+      "variant": "grated_refrigerated_cow",
       "category": "dairy products",
       "name_fr": "parmesan",
       "name_en": "parmesan",
       "axes": {
         "form": "grated",
-        "thermal_state": "refrigere",
+        "thermal_state": "refrigerated",
         "origin": "cow"
       },
       "calories_kcal": 403.2,
@@ -78610,7 +78618,7 @@
       "name_en": "Neufchâtel",
       "axes": {
         "origin": "cow",
-        "style": "americain"
+        "style": "American"
       },
       "calories_kcal": 253.0,
       "protein_g": 9.15,
@@ -78714,7 +78722,7 @@
       "name_en": "swiss",
       "axes": {
         "origin": "cow",
-        "style": "canadien"
+        "style": "Canadian"
       },
       "calories_kcal": 380.0,
       "protein_g": 26.93,
@@ -78804,14 +78812,14 @@
       "water_g": 22.8
     },
     "CNF:110": {
-      "base": "buffalo_mozzarella_frais_22_5pct_cow",
-      "variant": "frais_22_5pct_cow",
+      "base": "buffalo_mozzarella_fresh_22_5pct_cow",
+      "variant": "fresh_22_5pct_cow",
       "category": "dairy products",
       "name_fr": "mozzarella di bufala (buflesse)",
       "name_en": "buffalo mozzarella",
       "axes": {
         "origin": "cow",
-        "treatment": "frais",
+        "treatment": "fresh",
         "fat_content": "22.5pct"
       },
       "calories_kcal": 300.0,
@@ -78987,12 +78995,12 @@
     },
     "CIQUAL:12059": {
       "base": "brocciu_whey_cheese",
-      "variant": "frais",
+      "variant": "fresh",
       "category": "dairy products",
       "name_fr": "brocciu fromage à base de lactosérum de brebis et/ou de chèvre non affiné",
       "name_en": "brocciu (whey cheese)",
       "axes": {
-        "treatment": "frais"
+        "treatment": "fresh"
       },
       "calories_kcal": 173.8,
       "protein_g": 10.2,
@@ -79090,12 +79098,13 @@
     },
     "CIQUAL:19250": {
       "base": "sheeps_milk",
-      "variant": "7pct",
+      "variant": "liquid_7pct",
       "category": "dairy products",
       "name_fr": "lait de brebis",
       "name_en": "sheep's milk",
       "axes": {
-        "fat_content": "7pct"
+        "fat_content": "7pct",
+        "form": "liquid"
       },
       "calories_kcal": 103.0,
       "protein_g": 5.68,
@@ -79139,12 +79148,13 @@
     },
     "CIQUAL:19270": {
       "base": "buffalo_milk",
-      "variant": "7pct",
+      "variant": "liquid_7pct",
       "category": "dairy products",
       "name_fr": "lait de bufflesse",
       "name_en": "buffalo milk",
       "axes": {
-        "fat_content": "7pct"
+        "fat_content": "7pct",
+        "form": "liquid"
       },
       "calories_kcal": 86.5,
       "carbs_g": 5.1,
@@ -79176,13 +79186,14 @@
     },
     "CIQUAL:19201": {
       "base": "goats_milk",
-      "variant": "uht_1_5pct",
+      "variant": "liquid_uht_1_5pct",
       "category": "dairy products",
       "name_fr": "Lait de chèvre",
       "name_en": "goat's milk",
       "axes": {
         "thermal_state": "uht",
-        "fat_content": "1.5pct"
+        "fat_content": "1.5pct",
+        "form": "liquid"
       },
       "calories_kcal": 45.8,
       "protein_g": 3.77,
@@ -79226,14 +79237,15 @@
       "water_g": 89.6
     },
     "CIQUAL:19202": {
-      "base": "goats_milk_lait_cru_3pct",
-      "variant": "lait_cru_3pct",
+      "base": "goats_milk_liquid_raw_3pct",
+      "variant": "liquid_raw_milk_3pct",
       "category": "dairy products",
       "name_fr": "lait de chèvre",
       "name_en": "goat's milk",
       "axes": {
         "fat_content": "3pct",
-        "treatment": "lait_cru"
+        "treatment": "raw_milk",
+        "form": "liquid"
       },
       "calories_kcal": 57.4,
       "protein_g": 3.22,
@@ -79267,14 +79279,15 @@
       "water_g": 88.7
     },
     "CIQUAL:19200": {
-      "base": "goats_milk_uht_4pct",
-      "variant": "uht_4pct",
+      "base": "goats_milk_liquid_uht_4pct",
+      "variant": "liquid_uht_4pct",
       "category": "dairy products",
       "name_fr": "lait de chèvre",
       "name_en": "goat's milk",
       "axes": {
         "thermal_state": "uht",
-        "fat_content": "4pct"
+        "fat_content": "4pct",
+        "form": "liquid"
       },
       "calories_kcal": 64.6,
       "protein_g": 2.96,
@@ -79318,12 +79331,13 @@
     },
     "CIQUAL:19225": {
       "base": "mares_milk",
-      "variant": "2pct",
+      "variant": "liquid_2pct",
       "category": "dairy products",
       "name_fr": "lait de jument",
       "name_en": "mare's milk",
       "axes": {
-        "fat_content": "2pct"
+        "fat_content": "2pct",
+        "form": "liquid"
       },
       "calories_kcal": 50.0,
       "protein_g": 2.41,
@@ -79356,13 +79370,14 @@
     },
     "CIQUAL:19042": {
       "base": "milk",
-      "variant": "pasteurized_1_5pct",
+      "variant": "liquid_pasteurized_1_5pct",
       "category": "dairy products",
       "name_fr": "lait",
       "name_en": "milk",
       "axes": {
         "fat_content": "1.5pct",
-        "thermal_state": "pasteurized"
+        "thermal_state": "pasteurized",
+        "form": "liquid"
       },
       "calories_kcal": 46.4,
       "protein_g": 3.19,
@@ -79407,14 +79422,14 @@
     },
     "CIQUAL:19051": {
       "base": "skimmed_pasteurized_milk",
-      "variant": "milk_pasteurized_0pct",
+      "variant": "liquid_pasteurized_0pct",
       "category": "dairy products",
       "name_fr": "lait écrémé pasteurisé",
       "name_en": "skimmed pasteurized milk",
       "axes": {
         "fat_content": "0pct",
         "thermal_state": "pasteurized",
-        "form": "milk"
+        "form": "liquid"
       },
       "calories_kcal": 32.7,
       "protein_g": 3.37,
@@ -79458,14 +79473,15 @@
       "water_g": 90.8
     },
     "CIQUAL:19050": {
-      "base": "milk_uht_0pct",
-      "variant": "uht_0pct",
+      "base": "milk_liquid_uht_0pct",
+      "variant": "liquid_uht_0pct",
       "category": "dairy products",
       "name_fr": "lait",
       "name_en": "milk",
       "axes": {
         "fat_content": "0pct",
-        "thermal_state": "uht"
+        "thermal_state": "uht",
+        "form": "liquid"
       },
       "calories_kcal": 34.4,
       "protein_g": 3.6,
@@ -79508,14 +79524,15 @@
       "water_g": 90.6
     },
     "CIQUAL:19010": {
-      "base": "milk_lait_cru_3_5pct",
-      "variant": "lait_cru_3_5pct",
+      "base": "milk_liquid_raw_3_5pct",
+      "variant": "liquid_raw_milk_3_5pct",
       "category": "dairy products",
       "name_fr": "lait",
       "name_en": "milk",
       "axes": {
         "fat_content": "3.5pct",
-        "treatment": "lait_cru"
+        "treatment": "raw_milk",
+        "form": "liquid"
       },
       "calories_kcal": 39.6,
       "carbs_g": 0.0,
@@ -79548,14 +79565,15 @@
       "water_g": 86.4
     },
     "CIQUAL:19024": {
-      "base": "milk_pasteurized_3_5pct",
-      "variant": "pasteurized_3_5pct",
+      "base": "milk_liquid_pasteurized_3_5pct",
+      "variant": "liquid_pasteurized_3_5pct",
       "category": "dairy products",
       "name_fr": "lait",
       "name_en": "milk",
       "axes": {
         "thermal_state": "pasteurized",
-        "fat_content": "3.5pct"
+        "fat_content": "3.5pct",
+        "form": "liquid"
       },
       "calories_kcal": 61.8,
       "protein_g": 3.3,
@@ -79599,14 +79617,15 @@
       "water_g": 89.1
     },
     "CIQUAL:19023": {
-      "base": "milk_uht_3_5pct",
-      "variant": "uht_3_5pct",
+      "base": "milk_liquid_uht_3_5pct",
+      "variant": "liquid_uht_3_5pct",
       "category": "dairy products",
       "name_fr": "lait",
       "name_en": "milk",
       "axes": {
         "thermal_state": "uht",
-        "fat_content": "3.5pct"
+        "fat_content": "3.5pct",
+        "form": "liquid"
       },
       "calories_kcal": 64.6,
       "protein_g": 3.46,
@@ -79903,14 +79922,15 @@
       "water_g": 25.4
     },
     "CIQUAL:19041": {
-      "base": "milk_uht_1_5pct",
-      "variant": "uht_1_5pct",
+      "base": "milk_liquid_uht_1_5pct",
+      "variant": "liquid_uht_1_5pct",
       "category": "dairy products",
       "name_fr": "lait",
       "name_en": "milk",
       "axes": {
         "fat_content": "1.5pct",
-        "thermal_state": "uht"
+        "thermal_state": "uht",
+        "form": "liquid"
       },
       "calories_kcal": 47.7,
       "protein_g": 3.48,
@@ -80199,14 +80219,14 @@
       "water_g": 2.35
     },
     "CIQUAL:19044": {
-      "base": "milk_powder_demi_ecreme",
-      "variant": "powder_demi_ecreme",
+      "base": "milk_powder_semi_skimmed",
+      "variant": "powder_semi_skimmed",
       "category": "dairy products",
       "name_fr": "Lait",
       "name_en": "milk",
       "axes": {
         "form": "powder",
-        "fat_content": "demi-écrémé"
+        "fat_content": "semi_skimmed"
       },
       "calories_kcal": 459.0,
       "protein_g": 31.5,
