@@ -142,13 +142,13 @@ def enrich_why(recipes: list[dict], filters: dict | None = None) -> list[dict]:
                 continue
             ing_data = ings_dict.get(iid, {})
             dp = ing_data.get("diet_profile", {})
-            af = ing_data.get("allergen_flags", {})
+            af = ing_data.get("allergens_eu", [])
             nf = ing_data.get("nutrition_flags", {})
-            if dp.get("egg_free") is False or dp.get("sans_oeuf") is False or af.get("eggs"):
+            if dp.get("egg_free") is False or dp.get("sans_oeuf") is False or "eggs" in af:
                 agg_diet["egg_free"] = False
-            if dp.get("dairy_free") is False or af.get("milk"):
+            if dp.get("dairy_free") is False or "milk" in af:
                 agg_diet["dairy_free"] = False
-            if dp.get("soy_free") is False or dp.get("sans_soja") is False or af.get("soy"):
+            if dp.get("soy_free") is False or dp.get("sans_soja") is False or "soybeans" in af:
                 agg_diet["soy_free"] = False
             if dp.get("fermented") is True:
                 agg_diet["fermented_free"] = False
@@ -342,7 +342,7 @@ def enrich_one(recipe: dict) -> dict:
         iid = _ing_id(ing)
         if iid and iid not in ings_meta:
             d = _resolve_ing(iid)
-            name_fr = d.get("name_fr") or iid.replace("/", " ").replace("_", " ").title()
+            name_fr = d.get("canonical_name_fr") or iid.replace("/", " ").replace("_", " ").title()
             ings_meta[iid] = {
                 "name_fr":        name_fr,
                 "substitutions":  d.get("substitutions", []),
@@ -391,14 +391,14 @@ def enrich_one(recipe: dict) -> dict:
             continue
         ing_data = ings_dict.get(iid, {})
         dp = ing_data.get("diet_profile", {})
-        af = ing_data.get("allergen_flags", {})
+        af = ing_data.get("allergens_eu", [])
         nf = ing_data.get("nutrition_flags", {})
 
-        if dp.get("egg_free") is False or dp.get("sans_oeuf") is False or af.get("eggs"):
+        if dp.get("egg_free") is False or dp.get("sans_oeuf") is False or "eggs" in af:
             agg_diet["egg_free"] = False
-        if dp.get("dairy_free") is False or af.get("milk"):
+        if dp.get("dairy_free") is False or "milk" in af:
             agg_diet["dairy_free"] = False
-        if dp.get("soy_free") is False or dp.get("sans_soja") is False or af.get("soy"):
+        if dp.get("soy_free") is False or dp.get("sans_soja") is False or "soybeans" in af:
             agg_diet["soy_free"] = False
         if dp.get("fermented") is True:
             agg_diet["fermented_free"] = False

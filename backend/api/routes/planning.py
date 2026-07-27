@@ -236,7 +236,7 @@ def seasonal(month: int):
     from backend.core.data_io import load_ingredients_dict
     try:
         d        = load_ingredients_dict()
-        id_to_fr = {k: v.get("name_fr", k.replace("_", " ").title()) for k, v in d.items()}
+        id_to_fr = {k: v.get("canonical_name_fr", k.replace("_", " ").title()) for k, v in d.items()}
     except Exception:
         id_to_fr = {}
     ids = seasonal_ingredients(month)

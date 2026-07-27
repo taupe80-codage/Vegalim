@@ -161,13 +161,13 @@ def _make_resolvers(ings_dict: dict):
 
     def _get_name_fr(iid: str) -> str:
         d = ings_dict.get(iid)
-        if d and d.get("name_fr"):
-            name = d["name_fr"]
+        if d and d.get("canonical_name_fr"):
+            name = d["canonical_name_fr"]
             return name[0].upper() + name[1:] if name else iid
         base = iid.split("/")[0]
         d = ings_dict.get(base)
-        if d and d.get("name_fr"):
-            name = d["name_fr"]
+        if d and d.get("canonical_name_fr"):
+            name = d["canonical_name_fr"]
             return (name[0].upper() + name[1:]) if name else base
         return iid.replace("_", " ").replace("/", " ").capitalize()
 

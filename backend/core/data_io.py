@@ -161,6 +161,7 @@ def save_json(path: str | Path, data, indent: int = 2) -> bool:
 
 _recipes_cache        = _MtimeCache("load_recipes")
 _ingredients_cache    = _MtimeCache("load_ingredients_dict")
+_ingredients_alias_cache = _MtimeCache("load_ingredients_alias_index")
 _score_graph_cache    = _MtimeCache("load_score_graph")
 _nutrition_db_cache   = _MtimeCache("load_nutrition_db")   # ← P2.2 : pipeline modifie ce fichier
 _ingredient_map_cache = _MtimeCache("load_ingredient_map")
@@ -191,17 +192,54 @@ load_score_graph.cache_clear = _score_graph_cache.cache_clear  # type: ignore[at
 
 
 def load_ingredients_dict() -> dict:
-    """Dictionnaire ingrédients — rechargé si ingredients_dictionary.json est modifié."""
+    """Dictionnaire ingrédients — rechargé si ingredients_dictionary.json est modifié.
+
+    Structure du fichier (build_dict_v2.py) : categories -> subcategories ->
+    ingredient_groups -> {entry_key: entry}. La clé de chaque entrée EST son
+    identifiant (canonical_name_fr/canonical_name_en, axes, axes_fr,
+    diet_profile, allergens_eu, ... — pas de champ 'id'/'name_fr'/'category'
+    interne, contrairement à l'ancien format à plat). Retourne un dict aplati
+    {entry_key: entry}, sans renommer ni injecter de champs — les
+    consommateurs lisent canonical_name_fr/canonical_name_en/allergens_eu
+    directement.
+    """
     _path = DATA_ROOT / "ingredients" / "ingredients_dictionary.json"
 
     def _loader():
-        raw  = load_json(_path, default={"ingredients": []})
-        ings = raw.get("ingredients", raw) if isinstance(raw, dict) else raw
-        return {i["id"]: i for i in ings if isinstance(i, dict) and "id" in i}
+        raw = load_json(_path, default={"categories": {}})
+        if isinstance(raw, dict) and "ingredients" in raw:
+            # Ancien format à plat (rétrocompat, non produit par build_dict_v2.py).
+            ings = raw["ingredients"]
+            return {i["id"]: i for i in ings if isinstance(i, dict) and "id" in i}
+        if isinstance(raw, dict) and "categories" in raw:
+            flat: dict = {}
+            for cat in raw["categories"].values():
+                for sub in (cat or {}).get("subcategories", {}).values():
+                    for key, entry in (sub or {}).get("ingredient_groups", {}).items():
+                        flat[key] = entry
+            return flat
+        return {}
 
     return _ingredients_cache.get(_path, _loader)
 
 load_ingredients_dict.cache_clear = _ingredients_cache.cache_clear  # type: ignore[attr-defined]
+
+
+def load_ingredients_alias_index() -> dict:
+    """alias_index de ingredients_dictionary.json : {ancienne_clé: clé_actuelle}.
+
+    Produit par build_dict_v2.py à chaque rename de clé (fusion, correction
+    d'axe...) — sert de table de synonymes pour la résolution de recherche.
+    """
+    _path = DATA_ROOT / "ingredients" / "ingredients_dictionary.json"
+
+    def _loader():
+        raw = load_json(_path, default={"alias_index": {}})
+        return raw.get("alias_index", {}) if isinstance(raw, dict) else {}
+
+    return _ingredients_alias_cache.get(_path, _loader)
+
+load_ingredients_alias_index.cache_clear = _ingredients_alias_cache.cache_clear  # type: ignore[attr-defined]
 
 
 # ── Table de résolution état de cuisson demandé → fallback ────────────────────
@@ -639,28 +677,57 @@ def compute_recipe_nutrition(recipe_id: str, per_100g: bool = True) -> dict:
         return {}
 
     nutr_db     = load_nutrition_db()
+    ing_map     = load_ingredient_map()
     composition = recipe.get("composition", [])
-    yield_g     = float(recipe.get("yield_g") or 100.0)
     totals: dict[str, float] = {}
     missing_ings: list[str] = []
 
-    for item in composition:
-        ing_id   = item.get("ingredient", "")
-        quantity = float(item.get("quantity") or 0)
-        unit     = (item.get("unit") or "g").lower().strip()
-        qty_g    = quantity * _UNIT_TO_G.get(unit, 1.0)
+    # Poids de chaque ligne en grammes, calculé une fois (réutilisé pour le
+    # yield_g de repli — somme des quantités — et pour la pondération nutrition).
+    qty_g_by_item = [
+        float(item.get("quantity") or 0) * _UNIT_TO_G.get((item.get("unit") or "g").lower().strip(), 1.0)
+        for item in composition
+    ]
+    # yield_g explicite sinon poids total de la composition (aucune perte d'eau
+    # supposée) — un défaut fixe à 100g était faux dès que la recette ne pesait
+    # pas exactement 100g au total (quasi toujours), ex. lait d'avoine
+    # 100g flocons + 800g eau + 1g sel ≈ 901g, pas 100g.
+    yield_g = float(recipe.get("yield_g") or sum(qty_g_by_item) or 100.0)
+
+    def _resolve_nutrition_key(raw_id: str) -> str | None:
+        """'oats/rolled' -> clé nutrition_v2 via ingredient_map_v2 (group_id_v2 /
+        cooking_variants). Fallback sur raw_id tel quel si pas de mapping (couvre
+        les cas où l'id recette EST déjà une clé nutrition_v2 valide)."""
+        base, _, variant_suffix = raw_id.partition("/")
+        entry = ing_map.get(base)
+        if entry:
+            cooking_variants = entry.get("cooking_variants") or {}
+            if variant_suffix and variant_suffix in cooking_variants:
+                return cooking_variants[variant_suffix]
+            if "default" in cooking_variants:
+                return cooking_variants["default"]
+            if entry.get("group_id_v2"):
+                return entry["group_id_v2"]
+        return raw_id
+
+    for item, qty_g in zip(composition, qty_g_by_item):
+        ing_id = item.get("ingredient", "")
 
         if qty_g <= 0 or not ing_id:
             continue
 
-        ing_entry = nutr_db.get(ing_id, {})
+        nutr_key  = _resolve_nutrition_key(ing_id)
+        ing_entry = nutr_db.get(nutr_key, {}) if nutr_key else {}
         if not ing_entry:
             missing_ings.append(ing_id)
             continue
 
-        # Prendre la variante default (la seule nécessaire pour les laits/crèmes)
-        variant = ing_entry.get("variants", {}).get("default", {})
-        ratio   = qty_g / 100.0
+        # Prend la variante 'default' si elle existe, sinon la première
+        # disponible (la quasi-totalité des IGs n'ont qu'un seul variant, dont
+        # la clé reflète ses axes plutôt que le mot littéral 'default').
+        variants = ing_entry.get("variants", {})
+        variant  = variants.get("default") or next(iter(variants.values()), {})
+        ratio    = qty_g / 100.0
 
         for field in _NUTRIENT_FIELDS:
             val = variant.get(field)
@@ -749,8 +816,12 @@ def resolve_ingredient_nutrition(
     ing_entry = nutr_db.get(ingredient_id, {})
     variants  = ing_entry.get("variants", {})
 
-    # Chercher la variante demandée, sinon default
-    result = variants.get(variant) or variants.get("default")
+    # Chercher la variante demandée, sinon 'default' littéral, sinon la seule
+    # variante disponible (la quasi-totalité des IGs n'ont qu'un variant, dont
+    # la clé reflète ses axes plutôt que le mot littéral 'default' — ex.
+    # 'milk_refrigerated_plain_plant', pas 'default').
+    result = (variants.get(variant) or variants.get("default")
+              or (next(iter(variants.values())) if len(variants) == 1 else None))
 
     if result:
         result            = dict(result)   # copie pour ne pas muter le cache

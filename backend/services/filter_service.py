@@ -553,12 +553,12 @@ def apply_filters(
                     continue
                 d = ings_dict.get(iid, {})
                 dp = d.get("diet_profile", {})
-                af = d.get("allergen_flags", {})
-                if dp.get("egg_free") is False or dp.get("sans_oeuf") is False or af.get("eggs"):
+                af = d.get("allergens_eu", [])
+                if dp.get("egg_free") is False or dp.get("sans_oeuf") is False or "eggs" in af:
                     flags["egg_free"] = False
-                if dp.get("dairy_free") is False or dp.get("sans_lactose") is False or af.get("milk"):
+                if dp.get("dairy_free") is False or dp.get("sans_lactose") is False or "milk" in af:
                     flags["dairy_free"] = False
-                if dp.get("soy_free") is False or dp.get("sans_soja") is False or af.get("soy"):
+                if dp.get("soy_free") is False or dp.get("sans_soja") is False or "soybeans" in af:
                     flags["soy_free"] = False
                 if dp.get("fermented") is True:
                     flags["fermented_free"] = False

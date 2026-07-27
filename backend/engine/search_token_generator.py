@@ -206,7 +206,7 @@ def generate_tokens(recipe: dict, ings_dict: dict | None = None) -> list[str]:
         if not iid:
             continue
         d = ings_dict.get(iid, {})
-        for name_field in ("name_fr", "name_en"):
+        for name_field in ("canonical_name_fr", "canonical_name_en"):
             name = d.get(name_field, iid).lower()
             for word in name.replace("-", " ").split():
                 w = _norm(word)

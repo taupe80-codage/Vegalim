@@ -38,23 +38,27 @@ def _synonym_map() -> dict[str, str]:
         # FIX #13 : utilise l'API publique data_io au lieu de la méthode privée
         # get_data.ingredients._ingredients_raw(). Évite les cassures lors des
         # refactors de data_access et garantit un fallback propre si absent.
-        from backend.core.data_io import load_ingredients_dict
+        from backend.core.data_io import load_ingredients_dict, load_ingredients_alias_index
         ingredients_raw = load_ingredients_dict()
+        alias_index = load_ingredients_alias_index()
     except Exception:
         return mapping
 
-    for item in (ingredients_raw if isinstance(ingredients_raw, list) else
-                 ingredients_raw.get("ingredients", list(ingredients_raw.values()))
-                 if isinstance(ingredients_raw, dict) else []):
-        canonical = item.get("id", "")
-        if not canonical:
+    for canonical, entry in ingredients_raw.items():
+        if not isinstance(entry, dict) or not canonical:
             continue
-        for key in ("name_fr", "name_en", "id"):
-            val = item.get(key, "")
+        for key in ("canonical_name_fr", "canonical_name_en"):
+            val = entry.get(key, "")
             if val:
                 mapping[_normalize(val)] = canonical
-        for syn in (item.get("synonyms") or []):
+        mapping[_normalize(canonical)] = canonical
+        for syn in (entry.get("aliases") or []):
             mapping[_normalize(str(syn))] = canonical
+
+    # Anciennes clés (avant fusion/rename par build_dict_v2.py) -> clé actuelle.
+    for old_key, current_key in alias_index.items():
+        if current_key in ingredients_raw:
+            mapping[_normalize(old_key)] = current_key
 
     return mapping
 

@@ -238,7 +238,7 @@ def get_ingredient_sources(
 
     return {
         "ingredient_id":       ingredient_id,
-        "name_fr":             ing.get("name_fr", ingredient_id),
+        "name_fr":             ing.get("canonical_name_fr", ingredient_id),
         "dual":                is_dual,
         "available_sources":   sources,
         "base_recipe_id":      base_recipe_key if is_dual else None,
@@ -333,7 +333,7 @@ def get_ingredient_nutrition(
 
     return {
         "ingredient_id":     ingredient_id,
-        "name_fr":           ing.get("name_fr", ingredient_id),
+        "name_fr":           ing.get("canonical_name_fr", ingredient_id),
         "category":          ing.get("category"),
         "source_mode":       mode,
         "source_used":       source_used,
@@ -387,7 +387,7 @@ def get_ingredients_nutrition_batch(
         nutr.pop("_missing", None)
 
         results[iid] = {
-            "name_fr":    ings[iid].get("name_fr", iid),
+            "name_fr":    ings[iid].get("canonical_name_fr", iid),
             "source_used": source_used,
             "nutrition_per_100g": nutr,
         }

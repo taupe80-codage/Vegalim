@@ -409,7 +409,7 @@ def _resolve_base(base_id: str, d: dict) -> tuple[str, str]:
     if base_id in _BASE_OVERRIDES:
         return _BASE_OVERRIDES[base_id]
     if base_id in d:
-        return d[base_id].get("name_fr", _humanize(base_id)), d[base_id].get("category", "")
+        return d[base_id].get("canonical_name_fr", _humanize(base_id)), d[base_id].get("category", "")
     return _humanize(base_id), ""
 
 
@@ -477,8 +477,8 @@ def _build_catalog() -> list[dict]:
 
         if iid in d:
             entry = d[iid]
-            name_fr  = entry.get("name_fr", _humanize(iid))
-            name_en  = entry.get("name_en", iid)
+            name_fr  = entry.get("canonical_name_fr", _humanize(iid))
+            name_en  = entry.get("canonical_name_en", iid)
             category = entry.get("category", "")
             tokens   = entry.get("search_tokens", [])
         else:

@@ -85,8 +85,8 @@ def list_ingredients(
     results = []
     for iid, ing in page:
         entry = {"id": iid,
-                 "name_fr":   ing.get("name_fr", iid),
-                 "name_en":   ing.get("name_en", iid),
+                 "name_fr":   ing.get("canonical_name_fr", iid),
+                 "name_en":   ing.get("canonical_name_en", iid),
                  "category":  ing.get("category", ""),
                  "family":    ing.get("family", ""),
                  "diet_profile":        ing.get("diet_profile", {}),

@@ -243,14 +243,14 @@ def fridge_suggestions(payload: FridgeRequest, user: dict | None = Depends(get_o
         """
         # 1. Correspondance exacte dans le dictionnaire
         d = ings_dict.get(iid, {})
-        if d.get("name_fr"):
-            return d["name_fr"]
+        if d.get("canonical_name_fr"):
+            return d["canonical_name_fr"]
         # 2. Correspondance sur la partie avant '/' (ex: 'butter' pour 'butter/dairy')
         base = iid.split("/")[0]
         d_base = ings_dict.get(base, {})
-        if d_base.get("name_fr"):
+        if d_base.get("canonical_name_fr"):
             variant = iid.split("/")[-1].replace("_", " ")
-            return f"{d_base['name_fr']} ({variant})" if variant != base else d_base["name_fr"]
+            return f"{d_base['canonical_name_fr']} ({variant})" if variant != base else d_base["canonical_name_fr"]
         # 3. Fallback : humanise l'ID complet
         return iid.replace("_", " ").replace("/", " ")
 
@@ -342,7 +342,7 @@ def missing_ingredients(payload: MissingRequest, user: dict = Depends(get_user))
         d = ings_dict.get(iid, {})
         missing_enriched.append({
             "id":      iid,
-            "name_fr": d.get("name_fr", iid),
+            "name_fr": d.get("canonical_name_fr", iid),
             "category": d.get("category", ""),
             "available_in_france": True,  # optimiste par dÃ©faut
         })
