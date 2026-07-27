@@ -7,7 +7,7 @@
     "stats": {
       "total_cat1": 15,
       "total_cat2": 225,
-      "total_ingredient_groups": 1885,
+      "total_ingredient_groups": 1890,
       "total_variants": 2155,
       "sources": [
         "CIQUAL",
@@ -662,7 +662,7 @@
               ]
             }
           ],
-          "label_fr": "AGENTS ACIDIFIANTS"
+          "label_fr": "agents acidifiants"
         },
         {
           "id": "cat2_00054",
@@ -823,7 +823,7 @@
               ]
             }
           ],
-          "label_fr": "ÉDULCORANTS"
+          "label_fr": "édulcorants"
         },
         {
           "id": "cat2_00001",
@@ -928,7 +928,7 @@
               ]
             }
           ],
-          "label_fr": "GÉLIFIANT"
+          "label_fr": "gélifiant"
         },
         {
           "id": "cat2_00002",
@@ -1105,7 +1105,7 @@
               ]
             }
           ],
-          "label_fr": "LEVURES"
+          "label_fr": "levures"
         },
         {
           "id": "cat2_00003",
@@ -1179,7 +1179,7 @@
               ]
             }
           ],
-          "label_fr": "POUDRES LEVANTES"
+          "label_fr": "poudres levantes"
         },
         {
           "label": "additives",
@@ -1216,8 +1216,12 @@
               "id": "ing_05877",
               "canonical_name_fr": "huile de lécithine de soja",
               "canonical_name_en": "soy lecithin oil",
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "forme": "huile"
+              },
+              "axes_en": {
+                "form": "oil"
+              },
               "preferred_source": "CNF",
               "variants": [
                 {
@@ -1242,10 +1246,10 @@
             }
           ],
           "id": "cat2_10102",
-          "label_fr": "ADDITIFS"
+          "label_fr": "additifs"
         }
       ],
-      "label_fr": "AGENTS LEVANTS & ADDITIFS"
+      "label_fr": "agents levants & additifs"
     },
     {
       "id": "cat1_00065",
@@ -2006,10 +2010,10 @@
               ]
             }
           ],
-          "label_fr": "ALGUES"
+          "label_fr": "algues"
         }
       ],
-      "label_fr": "ALGUES & VÉGÉTAUX MARINS"
+      "label_fr": "algues & végétaux marins"
     },
     {
       "id": "cat1_00119",
@@ -2414,7 +2418,7 @@
               ]
             }
           ],
-          "label_fr": "ALCOOLS"
+          "label_fr": "alcools"
         },
         {
           "id": "cat2_10002",
@@ -2455,7 +2459,7 @@
               ]
             }
           ],
-          "label_fr": "CACAO"
+          "label_fr": "cacao"
         },
         {
           "id": "cat2_00007",
@@ -2616,7 +2620,7 @@
               ]
             }
           ],
-          "label_fr": "CAFÉ"
+          "label_fr": "café"
         },
         {
           "id": "cat2_00183",
@@ -2661,8 +2665,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "forme": "poudre"
+              },
+              "axes_en": {
+                "form": "powder"
+              },
               "preferred_source": "MANUAL",
               "variants": [
                 {
@@ -2681,7 +2689,7 @@
               ]
             }
           ],
-          "label_fr": "THÉ"
+          "label_fr": "thé"
         },
         {
           "id": "cat2_00006",
@@ -2848,12 +2856,12 @@
               ]
             }
           ],
-          "label_fr": "VINS"
+          "label_fr": "vins"
         },
         {
           "id": "cat2_10175",
           "label": "fermented_beverages",
-          "label_fr": "BOISSONS FERMENTÉES",
+          "label_fr": "boissons fermentées",
           "ingredient_groups": [
             {
               "id": "ing_05831",
@@ -2912,7 +2920,7 @@
         {
           "id": "cat2_10176",
           "label": "waters",
-          "label_fr": "EAUX",
+          "label_fr": "eaux",
           "ingredient_groups": [
             {
               "id": "ing_05833",
@@ -2995,7 +3003,7 @@
           ]
         }
       ],
-      "label_fr": "BOISSONS"
+      "label_fr": "boissons"
     },
     {
       "id": "cat1_00186",
@@ -3042,7 +3050,28 @@
                   "source_name_en": null,
                   "source_rank": 1,
                   "is_primary": true
-                },
+                }
+              ]
+            },
+            {
+              "id": "ing_05893",
+              "canonical_name_fr": "câpres",
+              "canonical_name_en": "capers",
+              "indus_conditionne": true,
+              "indus_conditionne_only": true,
+              "conditioning_types": [
+                "EN CONSERVE / APPERTISÉ"
+              ],
+              "axes_fr": {
+                "conditionnement": "conserve",
+                "milieu_conservation": "en saumure"
+              },
+              "axes_en": {
+                "packaging": "canned",
+                "storage_medium": "in_brine"
+              },
+              "preferred_source": "CNF",
+              "variants": [
                 {
                   "id": "var_00189",
                   "source": "CNF",
@@ -3053,16 +3082,12 @@
                   "conditioning_types": [
                     "EN CONSERVE / APPERTISÉ"
                   ],
-                  "axes_en": {
-                    "draining": "brined"
-                  },
-                  "axes_fr": {
-                    "milieu_conservation": "en saumure"
-                  },
+                  "axes_en": {},
+                  "axes_fr": {},
                   "source_name_en": "Capers, canned",
                   "source_name_fr": "Câpres, conserve",
                   "source_rank": 3,
-                  "is_primary": false
+                  "is_primary": true
                 }
               ]
             },
@@ -3145,7 +3170,7 @@
               ]
             }
           ],
-          "label_fr": "CONDIMENTS DIVERS"
+          "label_fr": "condiments divers"
         },
         {
           "id": "cat2_00194",
@@ -3208,7 +3233,7 @@
               ]
             }
           ],
-          "label_fr": "MOUTARDES"
+          "label_fr": "moutardes"
         },
         {
           "id": "cat2_00208",
@@ -3407,7 +3432,7 @@
               ]
             }
           ],
-          "label_fr": "VINAIGRES"
+          "label_fr": "vinaigres"
         },
         {
           "id": "cat2_10123",
@@ -3622,10 +3647,10 @@
               ]
             }
           ],
-          "label_fr": "SEL"
+          "label_fr": "sel"
         }
       ],
-      "label_fr": "CONDIMENTS & SAUCES"
+      "label_fr": "condiments & sauces"
     },
     {
       "id": "cat1_00226",
@@ -3794,7 +3819,7 @@
               ]
             }
           ],
-          "label_fr": "AMARANTE"
+          "label_fr": "amarante"
         },
         {
           "id": "cat2_00242",
@@ -4105,7 +4130,7 @@
               ]
             }
           ],
-          "label_fr": "AVOINE"
+          "label_fr": "avoine"
         },
         {
           "id": "cat2_00009",
@@ -5094,12 +5119,10 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
-                "traitement": "germé",
                 "partie": "graine",
                 "etat_cuisson": "cru"
               },
               "axes_en": {
-                "treatment": "sprouted",
                 "part": "seed",
                 "cooking_state": "raw"
               },
@@ -5183,13 +5206,11 @@
               "conditioning_types": [],
               "axes_fr": {
                 "etat_cuisson": "grillé",
-                "traitement": "germé",
                 "partie": "graine",
                 "procede_cuisson": "à sec"
               },
               "axes_en": {
                 "cooking_state": "grilled",
-                "treatment": "sprouted",
                 "part": "seed",
                 "cooking_process": "dry"
               },
@@ -5389,8 +5410,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "forme": "poudre"
+              },
+              "axes_en": {
+                "form": "powder"
+              },
               "preferred_source": "MANUAL",
               "variants": [
                 {
@@ -5415,8 +5440,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "forme": "farine"
+              },
+              "axes_en": {
+                "form": "flour"
+              },
               "preferred_source": "MANUAL",
               "variants": [
                 {
@@ -5435,7 +5464,7 @@
               ]
             }
           ],
-          "label_fr": "BLÉ"
+          "label_fr": "blé"
         },
         {
           "id": "cat2_00349",
@@ -5556,7 +5585,7 @@
               ]
             }
           ],
-          "label_fr": "BOULGOUR"
+          "label_fr": "boulgour"
         },
         {
           "id": "cat2_00360",
@@ -5735,7 +5764,7 @@
               ]
             }
           ],
-          "label_fr": "COUSCOUS"
+          "label_fr": "couscous"
         },
         {
           "id": "cat2_00451",
@@ -5778,7 +5807,7 @@
               ]
             }
           ],
-          "label_fr": "FONIO"
+          "label_fr": "fonio"
         },
         {
           "id": "cat2_00454",
@@ -5975,7 +6004,7 @@
               ]
             }
           ],
-          "label_fr": "MILLET"
+          "label_fr": "millet"
         },
         {
           "id": "cat2_00467",
@@ -6228,7 +6257,7 @@
               ]
             }
           ],
-          "label_fr": "ORGE"
+          "label_fr": "orge"
         },
         {
           "id": "cat2_00015",
@@ -7969,7 +7998,7 @@
               ]
             }
           ],
-          "label_fr": "PAINS"
+          "label_fr": "pains"
         },
         {
           "id": "cat2_00017",
@@ -8282,7 +8311,7 @@
               ]
             }
           ],
-          "label_fr": "PÂTES"
+          "label_fr": "pâtes"
         },
         {
           "id": "cat2_00659",
@@ -8441,7 +8470,7 @@
               ]
             }
           ],
-          "label_fr": "QUINOA"
+          "label_fr": "quinoa"
         },
         {
           "id": "cat2_00672",
@@ -10190,7 +10219,7 @@
               ]
             }
           ],
-          "label_fr": "RIZ"
+          "label_fr": "riz"
         },
         {
           "id": "cat2_00786",
@@ -10387,7 +10416,7 @@
               ]
             }
           ],
-          "label_fr": "SARRASIN"
+          "label_fr": "sarrasin"
         },
         {
           "id": "cat2_00797",
@@ -10652,7 +10681,7 @@
               ]
             }
           ],
-          "label_fr": "SEIGLE"
+          "label_fr": "seigle"
         },
         {
           "id": "cat2_00013",
@@ -10768,7 +10797,7 @@
               ]
             }
           ],
-          "label_fr": "SEMOULES DE BLÉ"
+          "label_fr": "semoules de blé"
         },
         {
           "id": "cat2_00816",
@@ -11007,7 +11036,7 @@
               ]
             }
           ],
-          "label_fr": "SORGHO"
+          "label_fr": "sorgho"
         },
         {
           "id": "cat2_00829",
@@ -11095,7 +11124,7 @@
               ]
             }
           ],
-          "label_fr": "TAPIOCA"
+          "label_fr": "tapioca"
         },
         {
           "id": "cat2_00833",
@@ -11136,7 +11165,7 @@
               ]
             }
           ],
-          "label_fr": "TEFF"
+          "label_fr": "teff"
         },
         {
           "id": "cat2_00010",
@@ -11361,12 +11390,12 @@
               ]
             }
           ],
-          "label_fr": "VARIÉTÉS ANCIENNES"
+          "label_fr": "variétés anciennes"
         },
         {
           "id": "cat2_10177",
           "label": "generic_grains",
-          "label_fr": "CÉRÉALES GÉNÉRIQUES",
+          "label_fr": "céréales génériques",
           "ingredient_groups": [
             {
               "id": "ing_05821",
@@ -11423,7 +11452,7 @@
           ]
         }
       ],
-      "label_fr": "CÉRÉALES & GRAINS"
+      "label_fr": "céréales & grains"
     },
     {
       "id": "cat1_00838",
@@ -11800,7 +11829,7 @@
               ]
             }
           ],
-          "label_fr": "ABRICOTS"
+          "label_fr": "abricots"
         },
         {
           "id": "cat2_00898",
@@ -12041,7 +12070,7 @@
               ]
             }
           ],
-          "label_fr": "ANANAS"
+          "label_fr": "ananas"
         },
         {
           "id": "cat2_00019",
@@ -12172,7 +12201,7 @@
               ]
             }
           ],
-          "label_fr": "BANANES"
+          "label_fr": "bananes"
         },
         {
           "id": "cat2_00027",
@@ -12253,7 +12282,7 @@
               ]
             }
           ],
-          "label_fr": "BLEUETS"
+          "label_fr": "bleuets"
         },
         {
           "id": "cat2_00948",
@@ -12421,7 +12450,7 @@
               ]
             }
           ],
-          "label_fr": "CANNEBERGES"
+          "label_fr": "canneberges"
         },
         {
           "id": "cat2_00023",
@@ -12502,7 +12531,7 @@
               ]
             }
           ],
-          "label_fr": "CASSIS"
+          "label_fr": "cassis"
         },
         {
           "id": "cat2_00972",
@@ -12774,7 +12803,7 @@
               ]
             }
           ],
-          "label_fr": "CERISES"
+          "label_fr": "cerises"
         },
         {
           "id": "cat2_01016",
@@ -13031,7 +13060,7 @@
               ]
             }
           ],
-          "label_fr": "CITRONS"
+          "label_fr": "citrons"
         },
         {
           "id": "cat2_00025",
@@ -13114,7 +13143,7 @@
               ]
             }
           ],
-          "label_fr": "CLÉMENTINES"
+          "label_fr": "clémentines"
         },
         {
           "id": "cat2_01041",
@@ -13163,7 +13192,7 @@
               ]
             }
           ],
-          "label_fr": "COINGS"
+          "label_fr": "coings"
         },
         {
           "id": "cat2_01045",
@@ -13368,7 +13397,7 @@
               ]
             }
           ],
-          "label_fr": "DATTES"
+          "label_fr": "dattes"
         },
         {
           "id": "cat2_01058",
@@ -13573,7 +13602,7 @@
               ]
             }
           ],
-          "label_fr": "FIGUES"
+          "label_fr": "figues"
         },
         {
           "id": "cat2_01084",
@@ -13692,7 +13721,7 @@
               ]
             }
           ],
-          "label_fr": "FRAISES"
+          "label_fr": "fraises"
         },
         {
           "id": "cat2_01096",
@@ -13875,7 +13904,7 @@
               ]
             }
           ],
-          "label_fr": "FRAMBOISES"
+          "label_fr": "framboises"
         },
         {
           "id": "cat2_01114",
@@ -14034,7 +14063,7 @@
               ]
             }
           ],
-          "label_fr": "FRUITS DE LA PASSION"
+          "label_fr": "fruits de la passion"
         },
         {
           "id": "cat2_00021",
@@ -14447,8 +14476,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "forme": "poudre"
+              },
+              "axes_en": {
+                "form": "powder"
+              },
               "preferred_source": "MANUAL",
               "variants": [
                 {
@@ -14467,7 +14500,7 @@
               ]
             }
           ],
-          "label_fr": "FRUITS EXOTIQUES"
+          "label_fr": "fruits exotiques"
         },
         {
           "id": "cat2_01154",
@@ -14586,7 +14619,7 @@
               ]
             }
           ],
-          "label_fr": "GOYAVES"
+          "label_fr": "goyaves"
         },
         {
           "id": "cat2_01163",
@@ -14703,7 +14736,7 @@
               ]
             }
           ],
-          "label_fr": "GRENADES"
+          "label_fr": "grenades"
         },
         {
           "id": "cat2_00022",
@@ -14858,7 +14891,7 @@
               ]
             }
           ],
-          "label_fr": "GROSEILLES"
+          "label_fr": "groseilles"
         },
         {
           "id": "cat2_01194",
@@ -15027,7 +15060,7 @@
               ]
             }
           ],
-          "label_fr": "KAKIS"
+          "label_fr": "kakis"
         },
         {
           "id": "cat2_01205",
@@ -15152,7 +15185,7 @@
               ]
             }
           ],
-          "label_fr": "KIWIS"
+          "label_fr": "kiwis"
         },
         {
           "id": "cat2_01216",
@@ -15225,7 +15258,7 @@
               ]
             }
           ],
-          "label_fr": "KUMQUATS"
+          "label_fr": "kumquats"
         },
         {
           "id": "cat2_01221",
@@ -15419,7 +15452,7 @@
               ]
             }
           ],
-          "label_fr": "LIMES"
+          "label_fr": "limes"
         },
         {
           "id": "cat2_01242",
@@ -15538,7 +15571,7 @@
               ]
             }
           ],
-          "label_fr": "LITCHIS"
+          "label_fr": "litchis"
         },
         {
           "id": "cat2_00024",
@@ -15758,7 +15791,7 @@
               ]
             }
           ],
-          "label_fr": "MANDARINES"
+          "label_fr": "mandarines"
         },
         {
           "id": "cat2_01274",
@@ -15941,7 +15974,7 @@
               ]
             }
           ],
-          "label_fr": "MANGUES"
+          "label_fr": "mangues"
         },
         {
           "id": "cat2_01287",
@@ -16139,7 +16172,7 @@
               ]
             }
           ],
-          "label_fr": "MELONS"
+          "label_fr": "melons"
         },
         {
           "id": "cat2_00026",
@@ -16242,7 +16275,7 @@
               ]
             }
           ],
-          "label_fr": "MYRTILLES"
+          "label_fr": "myrtilles"
         },
         {
           "id": "cat2_00028",
@@ -16463,7 +16496,7 @@
               ]
             }
           ],
-          "label_fr": "MÛRES"
+          "label_fr": "mûres"
         },
         {
           "id": "cat2_01354",
@@ -16586,7 +16619,7 @@
               ]
             }
           ],
-          "label_fr": "NECTARINES"
+          "label_fr": "nectarines"
         },
         {
           "id": "cat2_01365",
@@ -17096,7 +17129,7 @@
               ]
             }
           ],
-          "label_fr": "ORANGES"
+          "label_fr": "oranges"
         },
         {
           "id": "cat2_01418",
@@ -17243,7 +17276,9 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
+              "axes_fr": {
+                "etat_cuisson": "cru"
+              },
               "axes_en": {
                 "cooking_state": "raw"
               },
@@ -17324,7 +17359,8 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
-                "variete": "californie"
+                "variete": "californie",
+                "etat_cuisson": "cru"
               },
               "axes_en": {
                 "cooking_state": "raw"
@@ -17503,9 +17539,12 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
-                "variete": "floride"
+                "variete": "floride",
+                "etat_cuisson": "cru"
               },
-              "axes_en": {},
+              "axes_en": {
+                "cooking_state": "raw"
+              },
               "preferred_source": "CNF",
               "variants": [
                 {
@@ -17526,7 +17565,7 @@
               ]
             }
           ],
-          "label_fr": "PAMPLEMOUSSES"
+          "label_fr": "pamplemousses"
         },
         {
           "id": "cat2_01433",
@@ -17649,7 +17688,7 @@
               ]
             }
           ],
-          "label_fr": "PAPAYES"
+          "label_fr": "papayes"
         },
         {
           "id": "cat2_01442",
@@ -17702,7 +17741,7 @@
               ]
             }
           ],
-          "label_fr": "PASTÈQUES"
+          "label_fr": "pastèques"
         },
         {
           "id": "cat2_00029",
@@ -17741,7 +17780,7 @@
               ]
             }
           ],
-          "label_fr": "GOJI"
+          "label_fr": "goji"
         },
         {
           "id": "cat2_00020",
@@ -17966,7 +18005,7 @@
               ]
             }
           ],
-          "label_fr": "PLANTAINS"
+          "label_fr": "plantains"
         },
         {
           "id": "cat2_01448",
@@ -18369,7 +18408,7 @@
               ]
             }
           ],
-          "label_fr": "POIRES"
+          "label_fr": "poires"
         },
         {
           "id": "cat2_01531",
@@ -19154,7 +19193,7 @@
               ]
             }
           ],
-          "label_fr": "POMMES"
+          "label_fr": "pommes"
         },
         {
           "id": "cat2_00031",
@@ -19395,7 +19434,7 @@
               ]
             }
           ],
-          "label_fr": "PRUNEAUX"
+          "label_fr": "pruneaux"
         },
         {
           "id": "cat2_00030",
@@ -19652,7 +19691,7 @@
               ]
             }
           ],
-          "label_fr": "PRUNES"
+          "label_fr": "prunes"
         },
         {
           "id": "cat2_01818",
@@ -20035,7 +20074,7 @@
               ]
             }
           ],
-          "label_fr": "PÊCHES"
+          "label_fr": "pêches"
         },
         {
           "id": "cat2_01867",
@@ -20524,7 +20563,7 @@
               ]
             }
           ],
-          "label_fr": "RAISINS"
+          "label_fr": "raisins"
         },
         {
           "id": "cat2_01948",
@@ -20675,7 +20714,7 @@
               ]
             }
           ],
-          "label_fr": "RHUBARBE"
+          "label_fr": "rhubarbe"
         },
         {
           "id": "cat2_01959",
@@ -20724,7 +20763,7 @@
               ]
             }
           ],
-          "label_fr": "SUREAU"
+          "label_fr": "sureau"
         },
         {
           "id": "cat2_01963",
@@ -20773,12 +20812,12 @@
               ]
             }
           ],
-          "label_fr": "TAMARINS"
+          "label_fr": "tamarins"
         },
         {
           "id": "cat2_10178",
           "label": "preserved_fruits",
-          "label_fr": "FRUITS CONSERVÉS",
+          "label_fr": "fruits conservés",
           "ingredient_groups": [
             {
               "id": "ing_05788",
@@ -20809,7 +20848,7 @@
           ]
         }
       ],
-      "label_fr": "FRUITS"
+      "label_fr": "fruits"
     },
     {
       "id": "cat1_01968",
@@ -20952,7 +20991,7 @@
               ]
             }
           ],
-          "label_fr": "VANILLE"
+          "label_fr": "vanille"
         },
         {
           "id": "cat2_10126",
@@ -21001,7 +21040,7 @@
               ]
             }
           ],
-          "label_fr": "GIROFLE"
+          "label_fr": "girofle"
         },
         {
           "id": "cat2_10127",
@@ -21052,7 +21091,7 @@
               ]
             }
           ],
-          "label_fr": "LAURIER"
+          "label_fr": "laurier"
         },
         {
           "id": "cat2_10128",
@@ -21101,7 +21140,7 @@
               ]
             }
           ],
-          "label_fr": "SAFRAN"
+          "label_fr": "safran"
         },
         {
           "id": "cat2_10129",
@@ -21196,7 +21235,7 @@
               ]
             }
           ],
-          "label_fr": "BASILIC"
+          "label_fr": "basilic"
         },
         {
           "id": "cat2_10130",
@@ -21245,7 +21284,7 @@
               ]
             }
           ],
-          "label_fr": "CARDAMOME"
+          "label_fr": "cardamome"
         },
         {
           "id": "cat2_10131",
@@ -21330,7 +21369,7 @@
               ]
             }
           ],
-          "label_fr": "CERFEUIL"
+          "label_fr": "cerfeuil"
         },
         {
           "id": "cat2_10132",
@@ -21379,7 +21418,7 @@
               ]
             }
           ],
-          "label_fr": "CANNELLE"
+          "label_fr": "cannelle"
         },
         {
           "id": "cat2_10133",
@@ -21502,7 +21541,7 @@
               ]
             }
           ],
-          "label_fr": "CORIANDRE"
+          "label_fr": "coriandre"
         },
         {
           "id": "cat2_10134",
@@ -21577,7 +21616,7 @@
               ]
             }
           ],
-          "label_fr": "CURRY"
+          "label_fr": "curry"
         },
         {
           "id": "cat2_10135",
@@ -21712,7 +21751,7 @@
               ]
             }
           ],
-          "label_fr": "ANETH"
+          "label_fr": "aneth"
         },
         {
           "id": "cat2_10136",
@@ -21751,7 +21790,7 @@
               ]
             }
           ],
-          "label_fr": "MACIS"
+          "label_fr": "macis"
         },
         {
           "id": "cat2_10137",
@@ -21802,7 +21841,7 @@
               ]
             }
           ],
-          "label_fr": "MARJOLAINE"
+          "label_fr": "marjolaine"
         },
         {
           "id": "cat2_10138",
@@ -21851,7 +21890,7 @@
               ]
             }
           ],
-          "label_fr": "MUSCADE"
+          "label_fr": "muscade"
         },
         {
           "id": "cat2_10139",
@@ -21902,7 +21941,7 @@
               ]
             }
           ],
-          "label_fr": "ORIGAN"
+          "label_fr": "origan"
         },
         {
           "id": "cat2_10140",
@@ -21951,7 +21990,7 @@
               ]
             }
           ],
-          "label_fr": "PAPRIKA"
+          "label_fr": "paprika"
         },
         {
           "id": "cat2_10141",
@@ -22046,7 +22085,7 @@
               ]
             }
           ],
-          "label_fr": "PERSIL"
+          "label_fr": "persil"
         },
         {
           "id": "cat2_10142",
@@ -22198,7 +22237,7 @@
               ]
             }
           ],
-          "label_fr": "POIVRE"
+          "label_fr": "poivre"
         },
         {
           "id": "cat2_10143",
@@ -22237,7 +22276,7 @@
               ]
             }
           ],
-          "label_fr": "QUATRE ÉPICES"
+          "label_fr": "quatre épices"
         },
         {
           "id": "cat2_10144",
@@ -22332,7 +22371,7 @@
               ]
             }
           ],
-          "label_fr": "ROMARIN"
+          "label_fr": "romarin"
         },
         {
           "id": "cat2_10145",
@@ -22441,7 +22480,7 @@
               ]
             }
           ],
-          "label_fr": "SAUGE"
+          "label_fr": "sauge"
         },
         {
           "id": "cat2_10146",
@@ -22514,7 +22553,7 @@
               ]
             }
           ],
-          "label_fr": "SARRIETTE"
+          "label_fr": "sarriette"
         },
         {
           "id": "cat2_10147",
@@ -22599,7 +22638,7 @@
               ]
             }
           ],
-          "label_fr": "ESTRAGON"
+          "label_fr": "estragon"
         },
         {
           "id": "cat2_10148",
@@ -22694,7 +22733,7 @@
               ]
             }
           ],
-          "label_fr": "THYM"
+          "label_fr": "thym"
         },
         {
           "id": "cat2_10149",
@@ -22769,7 +22808,7 @@
               ]
             }
           ],
-          "label_fr": "CURCUMA"
+          "label_fr": "curcuma"
         },
         {
           "id": "cat2_10150",
@@ -22946,7 +22985,7 @@
               ]
             }
           ],
-          "label_fr": "MENTHE"
+          "label_fr": "menthe"
         },
         {
           "id": "cat2_10151",
@@ -22987,7 +23026,7 @@
               ]
             }
           ],
-          "label_fr": "CITRONNELLE"
+          "label_fr": "citronnelle"
         },
         {
           "id": "cat2_10152",
@@ -23108,7 +23147,7 @@
               ]
             }
           ],
-          "label_fr": "GINGEMBRE"
+          "label_fr": "gingembre"
         },
         {
           "id": "cat2_10153",
@@ -23175,7 +23214,7 @@
               ]
             }
           ],
-          "label_fr": "ANIS"
+          "label_fr": "anis"
         },
         {
           "id": "cat2_10154",
@@ -23226,7 +23265,7 @@
               ]
             }
           ],
-          "label_fr": "CARVI"
+          "label_fr": "carvi"
         },
         {
           "id": "cat2_10155",
@@ -23277,7 +23316,7 @@
               ]
             }
           ],
-          "label_fr": "CUMIN"
+          "label_fr": "cumin"
         },
         {
           "id": "cat2_10156",
@@ -23328,7 +23367,7 @@
               ]
             }
           ],
-          "label_fr": "FENUGREC"
+          "label_fr": "fenugrec"
         },
         {
           "id": "cat2_10157",
@@ -23369,7 +23408,7 @@
               ]
             }
           ],
-          "label_fr": "GRAINE DE MOUTARDE"
+          "label_fr": "graine de moutarde"
         },
         {
           "id": "cat2_10158",
@@ -23420,7 +23459,7 @@
               ]
             }
           ],
-          "label_fr": "PAVOT"
+          "label_fr": "pavot"
         },
         {
           "id": "cat2_10159",
@@ -23469,7 +23508,7 @@
               ]
             }
           ],
-          "label_fr": "AIL"
+          "label_fr": "ail"
         },
         {
           "id": "cat2_10160",
@@ -23510,7 +23549,7 @@
               ]
             }
           ],
-          "label_fr": "CÉLERI"
+          "label_fr": "céleri"
         },
         {
           "id": "cat2_10162",
@@ -23549,7 +23588,7 @@
               ]
             }
           ],
-          "label_fr": "OIGNON"
+          "label_fr": "oignon"
         },
         {
           "id": "cat2_10182",
@@ -23592,12 +23631,12 @@
               ]
             }
           ],
-          "label_fr": "MOLOKHIA"
+          "label_fr": "molokhia"
         },
         {
           "id": "cat2_10180",
           "label": "spice_mixes",
-          "label_fr": "MÉLANGES D'ÉPICES",
+          "label_fr": "mélanges d'épices",
           "ingredient_groups": [
             {
               "id": "ing_05794",
@@ -23606,8 +23645,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "forme": "poudre"
+              },
+              "axes_en": {
+                "form": "powder"
+              },
               "preferred_source": "MANUAL",
               "variants": [
                 {
@@ -23684,8 +23727,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "forme": "poudre"
+              },
+              "axes_en": {
+                "form": "powder"
+              },
               "preferred_source": "MANUAL",
               "variants": [
                 {
@@ -23786,7 +23833,7 @@
         {
           "id": "cat2_10179",
           "label": "aromatic_leaves",
-          "label_fr": "FEUILLES AROMATIQUES",
+          "label_fr": "feuilles aromatiques",
           "ingredient_groups": [
             {
               "id": "ing_05803",
@@ -23895,7 +23942,7 @@
           ]
         }
       ],
-      "label_fr": "HERBES & ÉPICES"
+      "label_fr": "herbes & épices"
     },
     {
       "id": "cat1_02115",
@@ -24014,7 +24061,7 @@
               ]
             }
           ],
-          "label_fr": "AIL"
+          "label_fr": "ail"
         },
         {
           "id": "cat2_02155",
@@ -24357,7 +24404,7 @@
               ]
             }
           ],
-          "label_fr": "ARTICHAUTS"
+          "label_fr": "artichauts"
         },
         {
           "id": "cat2_02182",
@@ -24660,7 +24707,7 @@
               ]
             }
           ],
-          "label_fr": "ASPERGES"
+          "label_fr": "asperges"
         },
         {
           "id": "cat2_02219",
@@ -24855,7 +24902,7 @@
               ]
             }
           ],
-          "label_fr": "AUBERGINES"
+          "label_fr": "aubergines"
         },
         {
           "id": "cat2_02235",
@@ -24990,7 +25037,7 @@
               ]
             }
           ],
-          "label_fr": "AVOCATS"
+          "label_fr": "avocats"
         },
         {
           "id": "cat2_02250",
@@ -25107,7 +25154,7 @@
               ]
             }
           ],
-          "label_fr": "BARDANE"
+          "label_fr": "bardane"
         },
         {
           "id": "cat2_02257",
@@ -25424,7 +25471,7 @@
               ]
             }
           ],
-          "label_fr": "BETTERAVES"
+          "label_fr": "betteraves"
         },
         {
           "id": "cat2_02282",
@@ -25592,7 +25639,7 @@
               ]
             }
           ],
-          "label_fr": "BETTES"
+          "label_fr": "bettes"
         },
         {
           "id": "cat2_02302",
@@ -26083,7 +26130,7 @@
               ]
             }
           ],
-          "label_fr": "BROCOLIS"
+          "label_fr": "brocolis"
         },
         {
           "id": "cat2_02333",
@@ -26528,7 +26575,7 @@
               ]
             }
           ],
-          "label_fr": "CAROTTES"
+          "label_fr": "carottes"
         },
         {
           "id": "cat2_02382",
@@ -27469,7 +27516,7 @@
               ]
             }
           ],
-          "label_fr": "CHAMPIGNONS"
+          "label_fr": "champignons"
         },
         {
           "id": "cat2_02489",
@@ -27598,7 +27645,7 @@
               ]
             }
           ],
-          "label_fr": "CHAYOTTES"
+          "label_fr": "chayottes"
         },
         {
           "id": "cat2_00032",
@@ -27833,7 +27880,7 @@
               ]
             }
           ],
-          "label_fr": "CHICORÉES"
+          "label_fr": "chicorées"
         },
         {
           "id": "cat2_02541",
@@ -28908,7 +28955,7 @@
               "conditioning_types": []
             }
           ],
-          "label_fr": "CHOUX"
+          "label_fr": "choux"
         },
         {
           "id": "cat2_02603",
@@ -29136,7 +29183,7 @@
               ]
             }
           ],
-          "label_fr": "CHOUX ASIATIQUES"
+          "label_fr": "choux asiatiques"
         },
         {
           "id": "cat2_02624",
@@ -29301,7 +29348,7 @@
               ]
             }
           ],
-          "label_fr": "CHOUX DE BRUXELLES"
+          "label_fr": "choux de bruxelles"
         },
         {
           "id": "cat2_02639",
@@ -29610,7 +29657,7 @@
               ]
             }
           ],
-          "label_fr": "CHOUX-FLEURS"
+          "label_fr": "choux-fleurs"
         },
         {
           "id": "cat2_02662",
@@ -29763,7 +29810,7 @@
               ]
             }
           ],
-          "label_fr": "CONCOMBRES"
+          "label_fr": "concombres"
         },
         {
           "id": "cat2_00034",
@@ -31543,8 +31590,12 @@
               "id": "ing_05779",
               "canonical_name_fr": "citrouille",
               "canonical_name_en": "squash (pumpkin)",
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "etat_cuisson": "cru"
+              },
+              "axes_en": {
+                "cooking_state": "raw"
+              },
               "preferred_source": "CNF",
               "variants": [
                 {
@@ -31572,10 +31623,12 @@
               "canonical_name_fr": "citrouille (variété à tarte)",
               "canonical_name_en": "pie pumpkin",
               "axes_fr": {
-                "variete": "pie pumpkin (tarte)"
+                "variete": "pie pumpkin (tarte)",
+                "etat_cuisson": "cru"
               },
               "axes_en": {
-                "variete": "pie pumpkin"
+                "variete": "pie pumpkin",
+                "cooking_state": "raw"
               },
               "preferred_source": "USDA",
               "variants": [
@@ -31606,8 +31659,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "etat_cuisson": "cru"
+              },
+              "axes_en": {
+                "cooking_state": "raw"
+              },
               "preferred_source": "MANUAL",
               "variants": [
                 {
@@ -31626,7 +31683,7 @@
               ]
             }
           ],
-          "label_fr": "COURGES"
+          "label_fr": "courges"
         },
         {
           "id": "cat2_00035",
@@ -31885,7 +31942,7 @@
               ]
             }
           ],
-          "label_fr": "COURGETTES"
+          "label_fr": "courgettes"
         },
         {
           "id": "cat2_02842",
@@ -32052,7 +32109,7 @@
               ]
             }
           ],
-          "label_fr": "CRESSON"
+          "label_fr": "cresson"
         },
         {
           "id": "cat2_02853",
@@ -32067,7 +32124,7 @@
               "conditioning_types": [],
               "axes_fr": {
                 "etat_thermique": "séché",
-                "forme": "flocons"
+                "forme": "paillettes"
               },
               "axes_en": {
                 "thermal_state": "dried",
@@ -32301,7 +32358,7 @@
               ]
             }
           ],
-          "label_fr": "CÉLERI"
+          "label_fr": "céleri"
         },
         {
           "id": "cat2_02872",
@@ -32495,7 +32552,7 @@
               ]
             }
           ],
-          "label_fr": "CÉLERI-RAVE"
+          "label_fr": "céleri-rave"
         },
         {
           "id": "cat2_00033",
@@ -32632,7 +32689,7 @@
               "conditioning_types": []
             }
           ],
-          "label_fr": "ENDIVES"
+          "label_fr": "endives"
         },
         {
           "id": "cat2_02886",
@@ -32745,7 +32802,7 @@
               ]
             }
           ],
-          "label_fr": "FENOUIL"
+          "label_fr": "fenouil"
         },
         {
           "id": "cat2_02912",
@@ -32966,7 +33023,7 @@
               ]
             }
           ],
-          "label_fr": "FEUILLES DE MOUTARDE"
+          "label_fr": "feuilles de moutarde"
         },
         {
           "id": "cat2_02934",
@@ -33119,7 +33176,7 @@
               ]
             }
           ],
-          "label_fr": "GOMBOS"
+          "label_fr": "gombos"
         },
         {
           "id": "cat2_02945",
@@ -33268,7 +33325,7 @@
               ]
             }
           ],
-          "label_fr": "IGNAMES"
+          "label_fr": "ignames"
         },
         {
           "id": "cat2_00043",
@@ -33707,7 +33764,7 @@
               ]
             }
           ],
-          "label_fr": "LAITUES"
+          "label_fr": "laitues"
         },
         {
           "id": "cat2_00038",
@@ -34008,7 +34065,7 @@
               ]
             }
           ],
-          "label_fr": "LÉGUMES RACINES"
+          "label_fr": "légumes racines"
         },
         {
           "id": "cat2_02995",
@@ -34710,7 +34767,7 @@
               ]
             }
           ],
-          "label_fr": "MAÏS"
+          "label_fr": "maïs"
         },
         {
           "id": "cat2_03128",
@@ -35089,7 +35146,7 @@
               ]
             }
           ],
-          "label_fr": "NAVETS"
+          "label_fr": "navets"
         },
         {
           "id": "cat2_00040",
@@ -35768,7 +35825,7 @@
               ]
             }
           ],
-          "label_fr": "OIGNONS"
+          "label_fr": "oignons"
         },
         {
           "id": "cat2_03225",
@@ -35883,7 +35940,7 @@
               ]
             }
           ],
-          "label_fr": "OLIVES"
+          "label_fr": "olives"
         },
         {
           "id": "cat2_03246",
@@ -36036,7 +36093,7 @@
               ]
             }
           ],
-          "label_fr": "PANAIS"
+          "label_fr": "panais"
         },
         {
           "id": "cat2_00042",
@@ -36551,7 +36608,7 @@
               ]
             }
           ],
-          "label_fr": "PATATES DOUCES"
+          "label_fr": "patates douces"
         },
         {
           "id": "cat2_03258",
@@ -37096,10 +37153,12 @@
               "canonical_name_fr": "piment banane, sans graines",
               "canonical_name_en": "banana pepper, seeded",
               "axes_fr": {
-                "partie": "sans graines"
+                "partie": "sans graines",
+                "etat_cuisson": "cru"
               },
               "axes_en": {
-                "part": "seedless"
+                "part": "seedless",
+                "cooking_state": "raw"
               },
               "preferred_source": "USDA",
               "variants": [
@@ -37124,7 +37183,7 @@
               "conditioning_types": []
             }
           ],
-          "label_fr": "PIMENTS"
+          "label_fr": "piments"
         },
         {
           "id": "cat2_03293",
@@ -37255,7 +37314,7 @@
               ]
             }
           ],
-          "label_fr": "PISSENLIT"
+          "label_fr": "pissenlit"
         },
         {
           "id": "cat2_03302",
@@ -37444,7 +37503,7 @@
               ]
             }
           ],
-          "label_fr": "POIREAUX"
+          "label_fr": "poireaux"
         },
         {
           "id": "cat2_03305",
@@ -37981,7 +38040,7 @@
               ]
             }
           ],
-          "label_fr": "POIVRONS"
+          "label_fr": "poivrons"
         },
         {
           "id": "cat2_00041",
@@ -39092,7 +39151,7 @@
               "conditioning_types": []
             }
           ],
-          "label_fr": "POMMES DE TERRE"
+          "label_fr": "pommes de terre"
         },
         {
           "id": "cat2_03405",
@@ -39215,7 +39274,7 @@
               ]
             }
           ],
-          "label_fr": "POURPIER"
+          "label_fr": "pourpier"
         },
         {
           "id": "cat2_03414",
@@ -39350,7 +39409,7 @@
               ]
             }
           ],
-          "label_fr": "POUSSES DE BAMBOU"
+          "label_fr": "pousses de bambou"
         },
         {
           "id": "cat2_03427",
@@ -39471,7 +39530,7 @@
               ]
             }
           ],
-          "label_fr": "LOTUS"
+          "label_fr": "lotus"
         },
         {
           "id": "cat2_03434",
@@ -39766,7 +39825,7 @@
               ]
             }
           ],
-          "label_fr": "RADIS"
+          "label_fr": "radis"
         },
         {
           "id": "cat2_03457",
@@ -40059,7 +40118,7 @@
               ]
             }
           ],
-          "label_fr": "RAIFORT"
+          "label_fr": "raifort"
         },
         {
           "id": "cat2_03476",
@@ -40112,7 +40171,7 @@
               ]
             }
           ],
-          "label_fr": "ROQUETTE"
+          "label_fr": "roquette"
         },
         {
           "id": "cat2_03483",
@@ -40271,7 +40330,7 @@
               ]
             }
           ],
-          "label_fr": "RUTABAGAS"
+          "label_fr": "rutabagas"
         },
         {
           "id": "cat2_03537",
@@ -40906,7 +40965,7 @@
               },
               "axes_en": {
                 "packaging": "canned",
-                "form": "cracked",
+                "form": "crushed",
                 "ripeness": "ripe"
               },
               "preferred_source": "USDA",
@@ -40986,7 +41045,7 @@
               },
               "axes_en": {
                 "packaging": "canned",
-                "cooking_state": "steamed",
+                "cooking_state": "stewed",
                 "ripeness": "ripe"
               },
               "preferred_source": "CNF",
@@ -41251,7 +41310,7 @@
               ],
               "axes_fr": {
                 "conditionnement": "conserve",
-                "forme": "broyé"
+                "forme": "concassée"
               },
               "axes_en": {
                 "packaging": "canned",
@@ -41544,7 +41603,7 @@
               "conditioning_types": []
             }
           ],
-          "label_fr": "TOMATES"
+          "label_fr": "tomates"
         },
         {
           "id": "cat2_03650",
@@ -41625,7 +41684,7 @@
               ]
             }
           ],
-          "label_fr": "TOPINAMBOURS"
+          "label_fr": "topinambours"
         },
         {
           "id": "cat2_03653",
@@ -42008,7 +42067,7 @@
               ]
             }
           ],
-          "label_fr": "TUBERCULES TROPICAUX"
+          "label_fr": "tubercules tropicaux"
         },
         {
           "id": "cat2_03676",
@@ -42393,7 +42452,7 @@
               ]
             }
           ],
-          "label_fr": "ÉPINARDS"
+          "label_fr": "épinards"
         },
         {
           "label": "shallots",
@@ -42512,7 +42571,7 @@
             }
           ],
           "id": "cat2_10105",
-          "label_fr": "ÉCHALOTES"
+          "label_fr": "échalotes"
         },
         {
           "id": "cat2_10163",
@@ -42637,7 +42696,7 @@
               ]
             }
           ],
-          "label_fr": "OSEILLE"
+          "label_fr": "oseille"
         },
         {
           "id": "cat2_10164",
@@ -42712,7 +42771,7 @@
               ]
             }
           ],
-          "label_fr": "MORINGA"
+          "label_fr": "moringa"
         },
         {
           "id": "cat2_10168",
@@ -42797,12 +42856,12 @@
               ]
             }
           ],
-          "label_fr": "PALMIERS"
+          "label_fr": "palmiers"
         },
         {
           "id": "cat2_10183",
           "label": "ferns",
-          "label_fr": "FOUGÈRES",
+          "label_fr": "fougères",
           "ingredient_groups": [
             {
               "id": "ing_02400",
@@ -42839,7 +42898,7 @@
           ]
         }
       ],
-      "label_fr": "LÉGUMES"
+      "label_fr": "légumes"
     },
     {
       "id": "cat1_03714",
@@ -43819,7 +43878,7 @@
               ]
             }
           ],
-          "label_fr": "DOLIQUES"
+          "label_fr": "doliques"
         },
         {
           "id": "cat2_03715",
@@ -44244,7 +44303,7 @@
               ]
             }
           ],
-          "label_fr": "FÈVES"
+          "label_fr": "fèves"
         },
         {
           "id": "cat2_03764",
@@ -48141,7 +48200,7 @@
               ]
             }
           ],
-          "label_fr": "HARICOTS"
+          "label_fr": "haricots"
         },
         {
           "id": "cat2_04082",
@@ -48624,7 +48683,7 @@
               ]
             }
           ],
-          "label_fr": "LENTILLES"
+          "label_fr": "lentilles"
         },
         {
           "id": "cat2_00045",
@@ -49687,7 +49746,7 @@
               ]
             }
           ],
-          "label_fr": "POIS"
+          "label_fr": "pois"
         },
         {
           "id": "cat2_04240",
@@ -49826,7 +49885,28 @@
                       "source_id": "502261"
                     }
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "id": "ing_05894",
+              "canonical_name_fr": "pois chiches",
+              "canonical_name_en": "chickpea",
+              "indus_conditionne": true,
+              "indus_conditionne_only": true,
+              "conditioning_types": [
+                "EN CONSERVE / APPERTISÉ"
+              ],
+              "axes_fr": {
+                "conditionnement": "conserve",
+                "traitement": "rincé"
+              },
+              "axes_en": {
+                "packaging": "canned",
+                "treatment": "rinsed"
+              },
+              "preferred_source": "CNF",
+              "variants": [
                 {
                   "id": "var_05840",
                   "source": "CNF",
@@ -49837,16 +49917,12 @@
                   "conditioning_types": [
                     "EN CONSERVE / APPERTISÉ"
                   ],
-                  "axes_en": {
-                    "treatment": "rinsed"
-                  },
-                  "axes_fr": {
-                    "traitement": "rincé"
-                  },
+                  "axes_en": {},
+                  "axes_fr": {},
                   "source_name_en": "Chickpeas (garbanzo beans, bengal gram), canned, drained, rinsed",
                   "source_name_fr": "Pois chiches (garbanzo), conserve, égouttés et rinsés",
                   "source_rank": 3,
-                  "is_primary": false
+                  "is_primary": true
                 }
               ]
             },
@@ -50028,8 +50104,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "traitement": "torréfié"
+              },
+              "axes_en": {
+                "treatment": "roasted"
+              },
               "preferred_source": "MANUAL",
               "variants": [
                 {
@@ -50048,7 +50128,7 @@
               ]
             }
           ],
-          "label_fr": "POIS CHICHES"
+          "label_fr": "pois chiches"
         },
         {
           "id": "cat2_00047",
@@ -51171,10 +51251,10 @@
               ]
             }
           ],
-          "label_fr": "SOJA"
+          "label_fr": "soja"
         }
       ],
-      "label_fr": "LÉGUMINEUSES"
+      "label_fr": "légumineuses"
     },
     {
       "id": "cat1_04379",
@@ -52502,10 +52582,10 @@
               ]
             }
           ],
-          "label_fr": "HUILES"
+          "label_fr": "huiles"
         }
       ],
-      "label_fr": "MATIÈRES GRASSES & HUILES"
+      "label_fr": "matières grasses & huiles"
     },
     {
       "id": "cat1_04539",
@@ -52778,7 +52858,32 @@
                       "source_id": "2608"
                     }
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "id": "ing_05895",
+              "canonical_name_fr": "sésame (tahini)",
+              "canonical_name_en": "sesame (tahini)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "origine": "végétal",
+                "etat_cuisson": "cru",
+                "forme": "beurre",
+                "partie": "graine",
+                "assaisonnement": "sans sel"
+              },
+              "axes_en": {
+                "part": "seed",
+                "form": "butter",
+                "origin": "plant",
+                "cooking_state": "raw",
+                "seasoning": "unsalted"
+              },
+              "preferred_source": "CNF",
+              "variants": [
                 {
                   "id": "var_04558",
                   "source": "CNF",
@@ -52787,16 +52892,12 @@
                   "name_en": "sesame (tahini)",
                   "indus_conditionne": false,
                   "conditioning_types": [],
-                  "axes_en": {
-                    "seasoning": "unsalted"
-                  },
-                  "axes_fr": {
-                    "assaisonnement": "sans sel"
-                  },
+                  "axes_en": {},
+                  "axes_fr": {},
                   "source_name_en": "Seeds, sesame butter, tahini, unroasted kernels",
                   "source_name_fr": "Graines, beurre de sésame, tahini, graines non rôties",
                   "source_rank": 3,
-                  "is_primary": false
+                  "is_primary": true
                 }
               ]
             },
@@ -53290,7 +53391,7 @@
               ]
             }
           ],
-          "label_fr": "BEURRES DE NOIX"
+          "label_fr": "beurres de noix"
         },
         {
           "id": "cat2_10122",
@@ -53430,7 +53531,7 @@
                 "SEL AJOUTÉ"
               ],
               "axes_fr": {
-                "traitement": "grillé",
+                "traitement": "rôti",
                 "partie": "avec peau",
                 "assaisonnement": "salé",
                 "procede_cuisson": "à sec"
@@ -53753,7 +53854,7 @@
               ]
             }
           ],
-          "label_fr": "AMANDES"
+          "label_fr": "amandes"
         },
         {
           "id": "cat2_04578",
@@ -54436,7 +54537,7 @@
               ]
             }
           ],
-          "label_fr": "CACAHUÈTES"
+          "label_fr": "cacahuètes"
         },
         {
           "id": "cat2_04592",
@@ -55345,7 +55446,7 @@
               "axes_fr": {
                 "partie": "graine",
                 "assaisonnement": "salé",
-                "traitement": "grillé",
+                "traitement": "rôti",
                 "procede_cuisson": "à sec"
               },
               "axes_en": {
@@ -55794,8 +55895,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "forme": "poudre"
+              },
+              "axes_en": {
+                "form": "powder"
+              },
               "preferred_source": "MANUAL",
               "variants": [
                 {
@@ -55814,7 +55919,7 @@
               ]
             }
           ],
-          "label_fr": "GRAINES"
+          "label_fr": "graines"
         },
         {
           "id": "cat2_00052",
@@ -56045,7 +56150,7 @@
               ]
             }
           ],
-          "label_fr": "NOIX"
+          "label_fr": "noix"
         },
         {
           "id": "cat2_10124",
@@ -56300,7 +56405,7 @@
               ]
             }
           ],
-          "label_fr": "NOIX DE COCO"
+          "label_fr": "noix de coco"
         },
         {
           "id": "cat2_10165",
@@ -56467,14 +56572,12 @@
                 "procede_cuisson": "à sec",
                 "etat_thermique": "séché",
                 "assaisonnement": "sans sel",
-                "etat_cuisson": "grillé",
                 "traitement": "grillé à sec"
               },
               "axes_en": {
                 "cooking_process": "dry",
                 "thermal_state": "dried",
                 "seasoning": "unsalted",
-                "cooking_state": "grilled",
                 "treatment": "dry_roasted"
               },
               "preferred_source": "CNF",
@@ -56497,7 +56600,7 @@
               ]
             }
           ],
-          "label_fr": "NOISETTES"
+          "label_fr": "noisettes"
         },
         {
           "id": "cat2_10166",
@@ -56774,7 +56877,7 @@
               ]
             }
           ],
-          "label_fr": "NOIX DE MACADAMIA"
+          "label_fr": "noix de macadamia"
         },
         {
           "id": "cat2_10167",
@@ -57445,7 +57548,7 @@
               ]
             }
           ],
-          "label_fr": "CHATAIGNES"
+          "label_fr": "chataignes"
         },
         {
           "id": "cat2_10169",
@@ -57734,7 +57837,7 @@
               ]
             }
           ],
-          "label_fr": "NOIX DE PÉCAN"
+          "label_fr": "noix de pécan"
         },
         {
           "id": "cat2_10170",
@@ -57849,7 +57952,7 @@
               "conditioning_types": []
             }
           ],
-          "label_fr": "PIGNONS DE PIN"
+          "label_fr": "pignons de pin"
         },
         {
           "id": "cat2_10171",
@@ -58040,7 +58143,7 @@
               ]
             }
           ],
-          "label_fr": "PISTACHES"
+          "label_fr": "pistaches"
         },
         {
           "id": "cat2_10172",
@@ -58130,7 +58233,7 @@
               ]
             }
           ],
-          "label_fr": "NOIX DE BRÉSIL"
+          "label_fr": "noix de brésil"
         },
         {
           "id": "cat2_10173",
@@ -58425,10 +58528,10 @@
               ]
             }
           ],
-          "label_fr": "NOIX DE CAJOU"
+          "label_fr": "noix de cajou"
         }
       ],
-      "label_fr": "NOIX & GRAINES"
+      "label_fr": "noix & graines"
     },
     {
       "label": "prepared_dishes_and_mixes",
@@ -58684,7 +58787,7 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
-                "etat_cuisson": "coque"
+                "etat_cuisson": "à la coque"
               },
               "axes_en": {
                 "cooking_state": "soft_boiled"
@@ -58774,7 +58877,7 @@
             }
           ],
           "id": "cat2_10108",
-          "label_fr": "ŒUFS PRÉPARÉS"
+          "label_fr": "œufs préparés"
         },
         {
           "label": "broths_and_stocks",
@@ -58813,7 +58916,7 @@
             }
           ],
           "id": "cat2_10109",
-          "label_fr": "BOUILLONS & FONDS"
+          "label_fr": "bouillons & fonds"
         },
         {
           "label": "pastry_doughs_and_pie_crusts",
@@ -59533,8 +59636,12 @@
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
+              "axes_fr": {
+                "assaisonnement": "salé"
+              },
+              "axes_en": {
+                "seasoning": "salted"
+              },
               "preferred_source": "MANUAL",
               "variants": [
                 {
@@ -59554,7 +59661,7 @@
             }
           ],
           "id": "cat2_10111",
-          "label_fr": "PÂTES & FONDS DE TARTE"
+          "label_fr": "pâtes & fonds de tarte"
         },
         {
           "label": "prepared_sauces_and_condiments",
@@ -60065,7 +60172,7 @@
             }
           ],
           "id": "cat2_10112",
-          "label_fr": "SAUCES & CONDIMENTS PRÉPARÉS"
+          "label_fr": "sauces & condiments préparés"
         },
         {
           "label": "vegetarian_products_and_prepared_soy",
@@ -60282,7 +60389,7 @@
             }
           ],
           "id": "cat2_10117",
-          "label_fr": "PRODUITS VÉGÉTARIENS / SOJA PRÉPARÉS"
+          "label_fr": "produits végétariens / soja préparés"
         },
         {
           "label": "prepared_desserts_and_confectionery",
@@ -60358,11 +60465,11 @@
             }
           ],
           "id": "cat2_10118",
-          "label_fr": "DESSERTS & CONFISERIES PRÉPARÉS"
+          "label_fr": "desserts & confiseries préparés"
         }
       ],
       "id": "cat1_10101",
-      "label_fr": "PLATS CUISINÉS & PRÉPARATIONS"
+      "label_fr": "plats cuisinés & préparations"
     },
     {
       "id": "cat1_04849",
@@ -60549,7 +60656,26 @@
                       "source_id": "92"
                     }
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "id": "ing_05896",
+              "canonical_name_fr": "beurre",
+              "canonical_name_en": "butter",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "teneur_MG": "sup80pct",
+                "forme": "tendre"
+              },
+              "axes_en": {
+                "fat_content": "sup80pct",
+                "form": "spreadable"
+              },
+              "preferred_source": "CIQUAL",
+              "variants": [
                 {
                   "id": "var_04862",
                   "source": "CIQUAL",
@@ -60558,16 +60684,12 @@
                   "name_en": "butter",
                   "indus_conditionne": false,
                   "conditioning_types": [],
-                  "axes_en": {
-                    "form": "spreadable"
-                  },
-                  "axes_fr": {
-                    "forme": "tendre"
-                  },
+                  "axes_en": {},
+                  "axes_fr": {},
                   "source_name_fr": "Beurre à 80% MG minimum, doux, tendre",
                   "source_name_en": null,
                   "source_rank": 1,
-                  "is_primary": false
+                  "is_primary": true
                 }
               ]
             },
@@ -60856,7 +60978,7 @@
               "conditioning_types": []
             }
           ],
-          "label_fr": "BEURRE"
+          "label_fr": "beurre"
         },
         {
           "id": "cat2_04902",
@@ -61193,7 +61315,7 @@
               ]
             }
           ],
-          "label_fr": "CRÈME"
+          "label_fr": "crème"
         },
         {
           "id": "cat2_10174",
@@ -61330,7 +61452,7 @@
               "conditioning_types": []
             }
           ],
-          "label_fr": "CRÈME FRAÎCHE"
+          "label_fr": "crème fraîche"
         },
         {
           "id": "cat2_04965",
@@ -63100,7 +63222,26 @@
                       "source_id": "746767"
                     }
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "id": "ing_05897",
+              "canonical_name_fr": "emmental",
+              "canonical_name_en": "swiss",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {
+                "origine": "vache",
+                "forme": "râpé"
+              },
+              "axes_en": {
+                "origin": "cow",
+                "form": "grated"
+              },
+              "preferred_source": "CIQUAL",
+              "variants": [
                 {
                   "id": "var_05114",
                   "source": "CIQUAL",
@@ -63109,16 +63250,12 @@
                   "name_en": "swiss",
                   "indus_conditionne": false,
                   "conditioning_types": [],
-                  "axes_en": {
-                    "form": "grated"
-                  },
-                  "axes_fr": {
-                    "forme": "râpé"
-                  },
+                  "axes_en": {},
+                  "axes_fr": {},
                   "source_name_fr": "Emmental ou emmenthal, râpé",
                   "source_name_en": null,
                   "source_rank": 1,
-                  "is_primary": false
+                  "is_primary": true
                 }
               ]
             },
@@ -66595,7 +66732,7 @@
               ]
             }
           ],
-          "label_fr": "FROMAGES"
+          "label_fr": "fromages"
         },
         {
           "id": "cat2_00059",
@@ -66668,7 +66805,7 @@
               ]
             }
           ],
-          "label_fr": "KÉFIR"
+          "label_fr": "kéfir"
         },
         {
           "id": "cat2_00055",
@@ -66742,7 +66879,7 @@
               ]
             }
           ],
-          "label_fr": "LACTOSÉRUM"
+          "label_fr": "lactosérum"
         },
         {
           "id": "cat2_05405",
@@ -66788,10 +66925,12 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
-                "teneur_MG": "7pct"
+                "teneur_MG": "7pct",
+                "forme": "liquide"
               },
               "axes_en": {
-                "fat_content": "7pct"
+                "fat_content": "7pct",
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -66820,10 +66959,12 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
-                "teneur_MG": "7pct"
+                "teneur_MG": "7pct",
+                "forme": "liquide"
               },
               "axes_en": {
-                "fat_content": "7pct"
+                "fat_content": "7pct",
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -66853,11 +66994,13 @@
               "conditioning_types": [],
               "axes_fr": {
                 "etat_thermique": "UHT",
-                "teneur_MG": "1.5pct"
+                "teneur_MG": "1.5pct",
+                "forme": "liquide"
               },
               "axes_en": {
                 "thermal_state": "uht",
-                "fat_content": "1.5pct"
+                "fat_content": "1.5pct",
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -66887,11 +67030,13 @@
               "conditioning_types": [],
               "axes_fr": {
                 "teneur_MG": "3pct",
-                "traitement": "lait_cru"
+                "traitement": "lait_cru",
+                "forme": "liquide"
               },
               "axes_en": {
                 "fat_content": "3pct",
-                "treatment": "raw_milk"
+                "treatment": "raw_milk",
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -66921,11 +67066,13 @@
               "conditioning_types": [],
               "axes_fr": {
                 "etat_thermique": "UHT",
-                "teneur_MG": "4pct"
+                "teneur_MG": "4pct",
+                "forme": "liquide"
               },
               "axes_en": {
                 "thermal_state": "uht",
-                "fat_content": "4pct"
+                "fat_content": "4pct",
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -66954,10 +67101,12 @@
               "indus_conditionne_only": false,
               "conditioning_types": [],
               "axes_fr": {
-                "teneur_MG": "2pct"
+                "teneur_MG": "2pct",
+                "forme": "liquide"
               },
               "axes_en": {
-                "fat_content": "2pct"
+                "fat_content": "2pct",
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -66987,11 +67136,13 @@
               "conditioning_types": [],
               "axes_fr": {
                 "teneur_MG": "1.5pct",
-                "etat_thermique": "pasteurisé"
+                "etat_thermique": "pasteurisé",
+                "forme": "liquide"
               },
               "axes_en": {
                 "fat_content": "1.5pct",
-                "thermal_state": "pasteurized"
+                "thermal_state": "pasteurized",
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -67022,12 +67173,12 @@
               "axes_fr": {
                 "teneur_MG": "0pct",
                 "etat_thermique": "pasteurisé",
-                "forme": "lait"
+                "forme": "liquide"
               },
               "axes_en": {
                 "fat_content": "0pct",
                 "thermal_state": "pasteurized",
-                "form": "milk"
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -67067,11 +67218,13 @@
               "conditioning_types": [],
               "axes_fr": {
                 "teneur_MG": "0pct",
-                "etat_thermique": "UHT"
+                "etat_thermique": "UHT",
+                "forme": "liquide"
               },
               "axes_en": {
                 "fat_content": "0pct",
-                "thermal_state": "uht"
+                "thermal_state": "uht",
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -67101,11 +67254,13 @@
               "conditioning_types": [],
               "axes_fr": {
                 "teneur_MG": "3.5pct",
-                "traitement": "lait_cru"
+                "traitement": "lait_cru",
+                "forme": "liquide"
               },
               "axes_en": {
                 "fat_content": "3.5pct",
-                "treatment": "raw_milk"
+                "treatment": "raw_milk",
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -67135,11 +67290,13 @@
               "conditioning_types": [],
               "axes_fr": {
                 "etat_thermique": "pasteurisé",
-                "teneur_MG": "3.5pct"
+                "teneur_MG": "3.5pct",
+                "forme": "liquide"
               },
               "axes_en": {
                 "thermal_state": "pasteurized",
-                "fat_content": "3.5pct"
+                "fat_content": "3.5pct",
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -67169,11 +67326,13 @@
               "conditioning_types": [],
               "axes_fr": {
                 "etat_thermique": "UHT",
-                "teneur_MG": "3.5pct"
+                "teneur_MG": "3.5pct",
+                "forme": "liquide"
               },
               "axes_en": {
                 "thermal_state": "uht",
-                "fat_content": "3.5pct"
+                "fat_content": "3.5pct",
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -67375,11 +67534,13 @@
               "conditioning_types": [],
               "axes_fr": {
                 "teneur_MG": "1.5pct",
-                "etat_thermique": "UHT"
+                "etat_thermique": "UHT",
+                "forme": "liquide"
               },
               "axes_en": {
                 "fat_content": "1.5pct",
-                "thermal_state": "uht"
+                "thermal_state": "uht",
+                "form": "liquid"
               },
               "preferred_source": "CIQUAL",
               "variants": [
@@ -67435,7 +67596,7 @@
               ]
             }
           ],
-          "label_fr": "LAIT"
+          "label_fr": "lait"
         },
         {
           "id": "cat2_00057",
@@ -67529,7 +67690,7 @@
               ]
             }
           ],
-          "label_fr": "LAIT CONCENTRÉ"
+          "label_fr": "lait concentré"
         },
         {
           "id": "cat2_00056",
@@ -67638,7 +67799,7 @@
               ]
             }
           ],
-          "label_fr": "LAIT EN POUDRE"
+          "label_fr": "lait en poudre"
         },
         {
           "id": "cat2_00058",
@@ -68147,10 +68308,10 @@
               ]
             }
           ],
-          "label_fr": "YAOURTS"
+          "label_fr": "yaourts"
         }
       ],
-      "label_fr": "PRODUITS LAITIERS"
+      "label_fr": "produits laitiers"
     },
     {
       "id": "cat1_05605",
@@ -68281,7 +68442,7 @@
               ]
             }
           ],
-          "label_fr": "MIELS"
+          "label_fr": "miels"
         },
         {
           "id": "cat2_10007",
@@ -68398,7 +68559,7 @@
               ]
             }
           ],
-          "label_fr": "SIROPS"
+          "label_fr": "sirops"
         },
         {
           "id": "cat2_00062",
@@ -68575,7 +68736,7 @@
               ]
             }
           ],
-          "label_fr": "SUCRES"
+          "label_fr": "sucres"
         },
         {
           "label": "chocolate",
@@ -68642,10 +68803,10 @@
             }
           ],
           "id": "cat2_10121",
-          "label_fr": "CHOCOLAT"
+          "label_fr": "chocolat"
         }
       ],
-      "label_fr": "SUCRES, MIELS & CONFISERIES"
+      "label_fr": "sucres, miels & confiseries"
     },
     {
       "id": "cat1_05680",
@@ -69152,10 +69313,10 @@
               ]
             }
           ],
-          "label_fr": "ŒUFS (général)"
+          "label_fr": "œufs (général)"
         }
       ],
-      "label_fr": "ŒUFS"
+      "label_fr": "œufs"
     }
   ]
 }

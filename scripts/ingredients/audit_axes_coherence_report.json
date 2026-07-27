@@ -1,308 +1,33 @@
 {
-  "generated_at": "2026-06-06T02:27:10.085080",
-  "ig_count": 1790,
+  "generated_at": "2026-07-27T02:56:40.020957",
+  "ig_count": 1890,
   "summary": {
-    "NAME_IMPLIES_AXIS_MISSING": 15,
-    "NAME_AXIS_MISMATCH": 28,
-    "OUTLIER_AXIS_VALUE": 87
+    "OUTLIER_AXIS_VALUE": 100
   },
-  "total": 130,
+  "total": 100,
   "issues_A_en_fr": [],
-  "issues_B_name_axes": [
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_00489",
-      "en": "bread, made with milk",
-      "msg": "\"bread, made with milk\" implique form=milk mais axe absent"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05774",
-      "en": "yellow onion, sauteed, in oil",
-      "msg": "\"yellow onion, sauteed, in oil\" implique form=oil mais axe absent"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05774",
-      "en": "yellow onion, sauteed, in oil",
-      "msg": "\"yellow onion, sauteed, in oil\" implique draining=in_oil mais axe absent"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05769",
-      "en": "black olive, in oil",
-      "msg": "\"black olive, in oil\" implique form=oil mais axe absent"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05769",
-      "en": "black olive, in oil",
-      "msg": "\"black olive, in oil\" implique draining=in_oil mais axe absent"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05773",
-      "en": "pumpkin - squash, whole seeds, roasted",
-      "msg": "\"pumpkin - squash, whole seeds, roasted\" implique cooking_state=roasted mais axe absent"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05746",
-      "en": "soft-boiled egg",
-      "msg": "\"soft-boiled egg\" implique cooking_state=boiled mais axe='soft_boiled'"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_04985",
-      "en": "Camembert, raw milk",
-      "msg": "\"Camembert, raw milk\" implique form=milk mais axe absent"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05136",
-      "en": "corsican ewe's milk soft cheese",
-      "msg": "\"corsican ewe's milk soft cheese\" implique form=milk mais axe='paste'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05138",
-      "en": "ewe's milk soft-ripened cheese",
-      "msg": "\"ewe's milk soft-ripened cheese\" implique form=milk mais axe='paste'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05140",
-      "en": "ewe's milk pressed cheese (Pyrenees type)",
-      "msg": "\"ewe's milk pressed cheese (Pyrenees type)\" implique form=milk mais axe='paste'"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05230",
-      "en": "cow's milk mozzarella",
-      "msg": "\"cow's milk mozzarella\" implique form=milk mais axe absent"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05286",
-      "en": "cow's milk tomme",
-      "msg": "\"cow's milk tomme\" implique form=milk mais axe absent"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05369",
-      "en": "ewe's milk fromage blanc",
-      "msg": "\"ewe's milk fromage blanc\" implique form=milk mais axe absent"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05371",
-      "en": "goat's milk fromage blanc",
-      "msg": "\"goat's milk fromage blanc\" implique form=milk mais axe absent"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05408",
-      "en": "goat crottin, raw milk",
-      "msg": "\"goat crottin, raw milk\" implique form=milk mais axe absent"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05410",
-      "en": "sheep's milk",
-      "msg": "\"sheep's milk\" implique form=milk mais axe='whole'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05412",
-      "en": "buffalo milk",
-      "msg": "\"buffalo milk\" implique form=milk mais axe='whole'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05416",
-      "en": "goat's milk",
-      "msg": "\"goat's milk\" implique form=milk mais axe='whole'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05418",
-      "en": "goat's milk",
-      "msg": "\"goat's milk\" implique form=milk mais axe='whole'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05422",
-      "en": "mare's milk",
-      "msg": "\"mare's milk\" implique form=milk mais axe='whole'"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05426",
-      "en": "milk",
-      "msg": "\"milk\" implique form=milk mais axe absent"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05428",
-      "en": "milk",
-      "msg": "\"milk\" implique form=milk mais axe absent"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05432",
-      "en": "milk",
-      "msg": "\"milk\" implique form=milk mais axe='whole'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05434",
-      "en": "milk",
-      "msg": "\"milk\" implique form=milk mais axe='whole'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05436",
-      "en": "milk",
-      "msg": "\"milk\" implique form=milk mais axe='whole'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05454",
-      "en": "milk, buttermilk",
-      "msg": "\"milk, buttermilk\" implique form=milk mais axe='liquid'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05456",
-      "en": "milk, buttermilk",
-      "msg": "\"milk, buttermilk\" implique form=milk mais axe='liquid'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05458",
-      "en": "milk, buttermilk",
-      "msg": "\"milk, buttermilk\" implique form=milk mais axe='liquid'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05466",
-      "en": "milk",
-      "msg": "\"milk\" implique form=milk mais axe='liquid'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05470",
-      "en": "milk",
-      "msg": "\"milk\" implique form=milk mais axe='liquid'"
-    },
-    {
-      "type": "NAME_IMPLIES_AXIS_MISSING",
-      "id": "ing_05749",
-      "en": "milk",
-      "msg": "\"milk\" implique form=milk mais axe absent"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05763",
-      "en": "milk, 2%, liquid",
-      "msg": "\"milk, 2%, liquid\" implique form=milk mais axe='liquid'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05503",
-      "en": "condensed milk",
-      "msg": "\"condensed milk\" implique form=milk mais axe='whole'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05505",
-      "en": "condensed milk",
-      "msg": "\"condensed milk\" implique form=milk mais axe='whole'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05513",
-      "en": "condensed milk",
-      "msg": "\"condensed milk\" implique form=milk mais axe='concentrate'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05507",
-      "en": "milk",
-      "msg": "\"milk\" implique form=milk mais axe='powder'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05509",
-      "en": "milk",
-      "msg": "\"milk\" implique form=milk mais axe='powder'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05750",
-      "en": "milk",
-      "msg": "\"milk\" implique form=milk mais axe='powder'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05482",
-      "en": "ewe's milk yogurt",
-      "msg": "\"ewe's milk yogurt\" implique form=milk mais axe='yogurt'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05484",
-      "en": "ewe's milk yogurt",
-      "msg": "\"ewe's milk yogurt\" implique form=milk mais axe='yogurt'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05490",
-      "en": "goat's milk yogurt",
-      "msg": "\"goat's milk yogurt\" implique form=milk mais axe='yogurt'"
-    },
-    {
-      "type": "NAME_AXIS_MISMATCH",
-      "id": "ing_05494",
-      "en": "greek yogurt, ewe's milk",
-      "msg": "\"greek yogurt, ewe's milk\" implique form=milk mais axe='yogurt'"
-    }
-  ],
+  "issues_B_name_axes": [],
   "issues_C_outliers": [
-    {
-      "type": "OUTLIER_AXIS_VALUE",
-      "id": "ing_00245",
-      "en": "oat",
-      "subcategory": "oats",
-      "msg": "axes_en.form='rolled' est unique dans \"oats\" (5 IGs, toutes autres valeurs: {'rolled': 1, 'flour': 1, 'crushed': 1})"
-    },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_00247",
       "en": "oat",
       "subcategory": "oats",
-      "msg": "axes_en.form='flour' est unique dans \"oats\" (5 IGs, toutes autres valeurs: {'rolled': 1, 'flour': 1, 'crushed': 1})"
-    },
-    {
-      "type": "OUTLIER_AXIS_VALUE",
-      "id": "ing_00263",
-      "en": "oat",
-      "subcategory": "oats",
-      "msg": "axes_en.form='crushed' est unique dans \"oats\" (5 IGs, toutes autres valeurs: {'rolled': 1, 'flour': 1, 'crushed': 1})"
+      "msg": "axes_en.form='flour' est unique dans \"oats\" (5 IGs, toutes autres valeurs: {'flakes': 2, 'flour': 1, 'steel_cut': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_05752",
-      "en": "oats",
+      "en": "oat",
       "subcategory": "oats",
-      "msg": "axes_en.form='steel_cut' est unique dans \"oats\" (5 IGs, toutes autres valeurs: {'rolled': 1, 'flour': 1, 'crushed': 1})"
+      "msg": "axes_en.form='steel_cut' est unique dans \"oats\" (5 IGs, toutes autres valeurs: {'flakes': 2, 'flour': 1, 'steel_cut': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_00271",
       "en": "oat",
       "subcategory": "oats",
-      "msg": "axes_en.form='milk' est unique dans \"oats\" (5 IGs, toutes autres valeurs: {'rolled': 1, 'flour': 1, 'crushed': 1})"
+      "msg": "axes_en.form='milk' est unique dans \"oats\" (5 IGs, toutes autres valeurs: {'flakes': 2, 'flour': 1, 'steel_cut': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
@@ -313,10 +38,10 @@
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
-      "id": "ing_00546",
-      "en": "brown bread",
-      "subcategory": "breads",
-      "msg": "axes_en.form='flour' est unique dans \"breads\" (10 IGs, toutes autres valeurs: {'sliced': 5, 'whole': 4, 'flour': 1})"
+      "id": "ing_05820",
+      "en": "wheatgrass powder",
+      "subcategory": "wheat",
+      "msg": "axes_en.form='powder' est unique dans \"wheat\" (25 IGs, toutes autres valeurs: {'flour': 22, 'cracked': 2, 'powder': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
@@ -335,30 +60,30 @@
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_00770",
-      "en": "pre-cooked white rice",
+      "en": "white rice",
       "subcategory": "rice",
-      "msg": "axes_en.cooking_state='precooked' est unique dans \"rice\" (29 IGs, toutes autres valeurs: {'cooked': 17, 'raw': 11, 'precooked': 1})"
+      "msg": "axes_en.cooking_state='precooked' est unique dans \"rice\" (30 IGs, toutes autres valeurs: {'cooked': 17, 'raw': 12, 'precooked': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_00784",
       "en": "white rice",
       "subcategory": "rice",
-      "msg": "axes_en.seasoning='salted' est unique dans \"rice\" (11 IGs, toutes autres valeurs: {'unsalted': 9, 'salted': 1, 'plain': 1})"
+      "msg": "axes_en.seasoning='salted' est unique dans \"rice\" (12 IGs, toutes autres valeurs: {'unsalted': 10, 'salted': 1, 'plain': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_00756",
       "en": "rice drink",
       "subcategory": "rice",
-      "msg": "axes_en.form='milk' est unique dans \"rice\" (21 IGs, toutes autres valeurs: {'flour': 7, 'long_grain': 7, 'medium_grain': 4})"
+      "msg": "axes_en.form='milk' est unique dans \"rice\" (19 IGs, toutes autres valeurs: {'flour': 6, 'long_grain': 6, 'medium_grain': 4})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_00756",
       "en": "rice drink",
       "subcategory": "rice",
-      "msg": "axes_en.seasoning='plain' est unique dans \"rice\" (11 IGs, toutes autres valeurs: {'unsalted': 9, 'salted': 1, 'plain': 1})"
+      "msg": "axes_en.seasoning='plain' est unique dans \"rice\" (12 IGs, toutes autres valeurs: {'unsalted': 10, 'salted': 1, 'plain': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
@@ -446,17 +171,10 @@
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
-      "id": "ing_02334",
-      "en": "carrot",
-      "subcategory": "carrots",
-      "msg": "axes_en.cooking_state='raw' est unique dans \"carrots\" (5 IGs, toutes autres valeurs: {'boiled': 3, 'raw': 1, 'steamed': 1})"
-    },
-    {
-      "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_02356",
       "en": "carrot",
       "subcategory": "carrots",
-      "msg": "axes_en.cooking_state='steamed' est unique dans \"carrots\" (5 IGs, toutes autres valeurs: {'boiled': 3, 'raw': 1, 'steamed': 1})"
+      "msg": "axes_en.cooking_state='steamed' est unique dans \"carrots\" (6 IGs, toutes autres valeurs: {'boiled': 3, 'raw': 2, 'steamed': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
@@ -488,13 +206,6 @@
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
-      "id": "ing_02575",
-      "en": "red cabbage",
-      "subcategory": "cabbage",
-      "msg": "axes_en.cooking_state='braised' est unique dans \"cabbage\" (26 IGs, toutes autres valeurs: {'boiled': 12, 'raw': 10, 'cooked': 3})"
-    },
-    {
-      "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_02617",
       "en": "bok choy",
       "subcategory": "asian_cabbages",
@@ -512,28 +223,42 @@
       "id": "ing_02652",
       "en": "cauliflower",
       "subcategory": "cauliflower",
-      "msg": "axes_en.cooking_state='steamed' est unique dans \"cauliflower\" (7 IGs, toutes autres valeurs: {'boiled': 4, 'raw': 2, 'steamed': 1})"
+      "msg": "axes_en.cooking_state='steamed' est unique dans \"cauliflower\" (8 IGs, toutes autres valeurs: {'boiled': 5, 'raw': 2, 'steamed': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_02776",
       "en": "red kuri squash",
       "subcategory": "squash",
-      "msg": "axes_en.cooking_state='steamed' est unique dans \"squash\" (52 IGs, toutes autres valeurs: {'raw': 21, 'boiled': 21, 'baked': 5})"
+      "msg": "axes_en.cooking_state='steamed' est unique dans \"squash\" (51 IGs, toutes autres valeurs: {'raw': 22, 'boiled': 19, 'baked': 4})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_02780",
       "en": "pumpkin",
       "subcategory": "squash",
-      "msg": "axes_en.cooking_state='roasted' est unique dans \"squash\" (52 IGs, toutes autres valeurs: {'raw': 21, 'boiled': 21, 'baked': 5})"
+      "msg": "axes_en.cooking_state='roasted' est unique dans \"squash\" (51 IGs, toutes autres valeurs: {'raw': 22, 'boiled': 19, 'baked': 4})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_02768",
+      "en": "green zucchini squash",
+      "subcategory": "zucchini",
+      "msg": "axes_en.cooking_state='cooked' est unique dans \"zucchini\" (6 IGs, toutes autres valeurs: {'raw': 2, 'boiled': 2, 'cooked': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_02770",
+      "en": "green zucchini squash",
+      "subcategory": "zucchini",
+      "msg": "axes_en.cooking_state='roasted' est unique dans \"zucchini\" (6 IGs, toutes autres valeurs: {'raw': 2, 'boiled': 2, 'cooked': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_02862",
       "en": "celery stalk",
       "subcategory": "celery",
-      "msg": "axes_en.cooking_state='braised' est unique dans \"celery\" (5 IGs, toutes autres valeurs: {'raw': 2, 'boiled': 2, 'braised': 1})"
+      "msg": "axes_en.cooking_state='cooked' est unique dans \"celery\" (5 IGs, toutes autres valeurs: {'raw': 2, 'boiled': 2, 'cooked': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
@@ -561,14 +286,14 @@
       "id": "ing_03143",
       "en": "turnip",
       "subcategory": "turnips",
-      "msg": "axes_en.cooking_state='cooked' est unique dans \"turnips\" (10 IGs, toutes autres valeurs: {'boiled': 5, 'raw': 4, 'cooked': 1})"
+      "msg": "axes_en.cooking_state='cooked' est unique dans \"turnips\" (9 IGs, toutes autres valeurs: {'boiled': 5, 'raw': 3, 'cooked': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_03201",
       "en": "onion",
       "subcategory": "onions",
-      "msg": "axes_en.cooking_state='cooked' est unique dans \"onions\" (16 IGs, toutes autres valeurs: {'raw': 8, 'sauteed': 5, 'boiled': 2})"
+      "msg": "axes_en.cooking_state='cooked' est unique dans \"onions\" (15 IGs, toutes autres valeurs: {'raw': 7, 'sauteed': 5, 'boiled': 2})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
@@ -594,7 +319,7 @@
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_01698",
-      "en": "steamed potato",
+      "en": "potato",
       "subcategory": "potatoes",
       "msg": "axes_en.cooking_state='steamed' est unique dans \"potatoes\" (25 IGs, toutes autres valeurs: {'raw': 9, 'boiled': 7, 'baked': 5})"
     },
@@ -603,42 +328,63 @@
       "id": "ing_03582",
       "en": "tomato",
       "subcategory": "tomatoes",
-      "msg": "axes_en.form='powder' est unique dans \"tomatoes\" (11 IGs, toutes autres valeurs: {'juice': 4, 'concentrate': 2, 'powder': 1})"
+      "msg": "axes_en.form='powder' est unique dans \"tomatoes\" (13 IGs, toutes autres valeurs: {'juice': 4, 'crushed': 2, 'powder': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_03588",
       "en": "tomato",
       "subcategory": "tomatoes",
-      "msg": "axes_en.cooking_state='roasted' est unique dans \"tomatoes\" (17 IGs, toutes autres valeurs: {'raw': 13, 'boiled': 3, 'roasted': 1})"
+      "msg": "axes_en.cooking_state='roasted' est unique dans \"tomatoes\" (18 IGs, toutes autres valeurs: {'raw': 13, 'boiled': 3, 'roasted': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_05851",
+      "en": "diced tomatoes",
+      "subcategory": "tomatoes",
+      "msg": "axes_en.form='diced' est unique dans \"tomatoes\" (13 IGs, toutes autres valeurs: {'juice': 4, 'crushed': 2, 'powder': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_05852",
+      "en": "stewed tomatoes",
+      "subcategory": "tomatoes",
+      "msg": "axes_en.cooking_state='stewed' est unique dans \"tomatoes\" (18 IGs, toutes autres valeurs: {'raw': 13, 'boiled': 3, 'roasted': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_03604",
+      "en": "tomato",
+      "subcategory": "tomatoes",
+      "msg": "axes_en.form='concentrated' est unique dans \"tomatoes\" (13 IGs, toutes autres valeurs: {'juice': 4, 'crushed': 2, 'powder': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_03608",
       "en": "tomato",
       "subcategory": "tomatoes",
-      "msg": "axes_en.form='double_concentrate' est unique dans \"tomatoes\" (11 IGs, toutes autres valeurs: {'juice': 4, 'concentrate': 2, 'powder': 1})"
+      "msg": "axes_en.form='double_concentrated' est unique dans \"tomatoes\" (13 IGs, toutes autres valeurs: {'juice': 4, 'crushed': 2, 'powder': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_03614",
       "en": "tomato",
       "subcategory": "tomatoes",
-      "msg": "axes_en.form='pureed' est unique dans \"tomatoes\" (11 IGs, toutes autres valeurs: {'juice': 4, 'concentrate': 2, 'powder': 1})"
+      "msg": "axes_en.form='puree' est unique dans \"tomatoes\" (13 IGs, toutes autres valeurs: {'juice': 4, 'crushed': 2, 'powder': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
-      "id": "ing_03628",
+      "id": "ing_03638",
       "en": "tomato",
       "subcategory": "tomatoes",
-      "msg": "axes_en.form='ground_coarse' est unique dans \"tomatoes\" (11 IGs, toutes autres valeurs: {'juice': 4, 'concentrate': 2, 'powder': 1})"
+      "msg": "axes_en.form='paste' est unique dans \"tomatoes\" (13 IGs, toutes autres valeurs: {'juice': 4, 'crushed': 2, 'powder': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_03644",
       "en": "tomato",
       "subcategory": "tomatoes",
-      "msg": "axes_en.form='sauce' est unique dans \"tomatoes\" (11 IGs, toutes autres valeurs: {'juice': 4, 'concentrate': 2, 'powder': 1})"
+      "msg": "axes_en.form='sauce' est unique dans \"tomatoes\" (13 IGs, toutes autres valeurs: {'juice': 4, 'crushed': 2, 'powder': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
@@ -652,7 +398,7 @@
       "id": "ing_03901",
       "en": "french bean",
       "subcategory": "beans",
-      "msg": "axes_en.cooking_state='cooked' est unique dans \"beans\" (73 IGs, toutes autres valeurs: {'boiled': 45, 'raw': 27, 'cooked': 1})"
+      "msg": "axes_en.cooking_state='cooked' est unique dans \"beans\" (72 IGs, toutes autres valeurs: {'boiled': 44, 'raw': 27, 'cooked': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
@@ -663,17 +409,24 @@
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_04157",
+      "en": "pigeon pea",
+      "subcategory": "peas",
+      "msg": "axes_en.thermal_state='fresh' est unique dans \"peas\" (6 IGs, toutes autres valeurs: {'dried': 4, 'fresh': 1, 'frozen': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_04202",
       "en": "green peas",
       "subcategory": "peas",
-      "msg": "axes_en.seasoning='unsalted' est unique dans \"peas\" (11 IGs, toutes autres valeurs: {'salted': 10, 'unsalted': 1})"
+      "msg": "axes_en.seasoning='unsalted' est unique dans \"peas\" (6 IGs, toutes autres valeurs: {'salted': 5, 'unsalted': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_04232",
       "en": "green peas",
       "subcategory": "peas",
-      "msg": "axes_en.thermal_state='frozen' est unique dans \"peas\" (6 IGs, toutes autres valeurs: {'dried': 5, 'frozen': 1})"
+      "msg": "axes_en.thermal_state='frozen' est unique dans \"peas\" (6 IGs, toutes autres valeurs: {'dried': 4, 'fresh': 1, 'frozen': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
@@ -694,7 +447,7 @@
       "id": "ing_03734",
       "en": "soybean",
       "subcategory": "soy",
-      "msg": "axes_en.cooking_state='steamed' est unique dans \"soy\" (13 IGs, toutes autres valeurs: {'raw': 6, 'boiled': 3, 'cooked': 3})"
+      "msg": "axes_en.cooking_state='steamed' est unique dans \"soy\" (17 IGs, toutes autres valeurs: {'raw': 6, 'roasted': 4, 'boiled': 3})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
@@ -719,10 +472,24 @@
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_04330",
+      "en": "soybean",
+      "subcategory": "soy",
+      "msg": "axes_en.seasoning='plain' est unique dans \"soy\" (6 IGs, toutes autres valeurs: {'unsalted': 2, 'salted': 2, 'plain': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_04314",
       "en": "soybean",
       "subcategory": "soy",
       "msg": "axes_en.form='milk' est unique dans \"soy\" (9 IGs, toutes autres valeurs: {'flour': 5, 'whole': 1, 'cream': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_04314",
+      "en": "soybean",
+      "subcategory": "soy",
+      "msg": "axes_en.seasoning='unsweetened' est unique dans \"soy\" (6 IGs, toutes autres valeurs: {'unsalted': 2, 'salted': 2, 'plain': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
@@ -736,105 +503,161 @@
       "id": "ing_04545",
       "en": "peanut",
       "subcategory": "nut_butters",
-      "msg": "axes_en.seasoning='unsweetened' est unique dans \"nut_butters\" (9 IGs, toutes autres valeurs: {'salted': 5, 'plain': 3, 'unsweetened': 1})"
+      "msg": "axes_en.seasoning='unsweetened' est unique dans \"nut_butters\" (11 IGs, toutes autres valeurs: {'salted': 6, 'plain': 2, 'unsweetened': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
-      "id": "ing_04939",
+      "id": "ing_05895",
       "en": "sesame (tahini)",
       "subcategory": "nut_butters",
-      "msg": "axes_en.form='creamy' est unique dans \"nut_butters\" (16 IGs, toutes autres valeurs: {'butter': 15, 'creamy': 1})"
+      "msg": "axes_en.seasoning='unsalted' est unique dans \"nut_butters\" (11 IGs, toutes autres valeurs: {'salted': 6, 'plain': 2, 'unsweetened': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_05870",
+      "en": "peanut",
+      "subcategory": "nut_butters",
+      "msg": "axes_en.seasoning='natural' est unique dans \"nut_butters\" (11 IGs, toutes autres valeurs: {'salted': 6, 'plain': 2, 'unsweetened': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_04703",
+      "en": "almond",
+      "subcategory": "almonds",
+      "msg": "axes_en.form='whole' est unique dans \"almonds\" (5 IGs, toutes autres valeurs: {'flour': 2, 'milk': 2, 'whole': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_04583",
       "en": "peanut",
       "subcategory": "peanuts",
-      "msg": "axes_en.cooking_state='grilled' est unique dans \"peanuts\" (5 IGs, toutes autres valeurs: {'raw': 4, 'grilled': 1})"
+      "msg": "axes_en.cooking_state='grilled' est unique dans \"peanuts\" (14 IGs, toutes autres valeurs: {'roasted': 9, 'raw': 4, 'grilled': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_04608",
       "en": "flaxseed (linseed)",
       "subcategory": "seeds",
-      "msg": "axes_en.form='powder' est unique dans \"seeds\" (6 IGs, toutes autres valeurs: {'whole': 2, 'flour': 2, 'powder': 1})"
+      "msg": "axes_en.form='ground' est unique dans \"seeds\" (7 IGs, toutes autres valeurs: {'whole': 2, 'flour': 2, 'ground': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_02893",
       "en": "fennel",
       "subcategory": "seeds",
-      "msg": "axes_en.form='spice' est unique dans \"seeds\" (6 IGs, toutes autres valeurs: {'whole': 2, 'flour': 2, 'powder': 1})"
+      "msg": "axes_en.form='spice' est unique dans \"seeds\" (7 IGs, toutes autres valeurs: {'whole': 2, 'flour': 2, 'ground': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_05825",
+      "en": "maca powder",
+      "subcategory": "seeds",
+      "msg": "axes_en.form='powder' est unique dans \"seeds\" (7 IGs, toutes autres valeurs: {'whole': 2, 'flour': 2, 'ground': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_04818",
+      "en": "macadamia nuts",
+      "subcategory": "macadamia_nuts",
+      "msg": "axes_en.cooking_state='grilled' est unique dans \"macadamia_nuts\" (7 IGs, toutes autres valeurs: {'roasted': 4, 'raw': 2, 'grilled': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_04808",
       "en": "european chestnuts (sweet)",
       "subcategory": "chestnuts",
-      "msg": "axes_en.cooking_state='boiled' est unique dans \"chestnuts\" (11 IGs, toutes autres valeurs: {'raw': 3, 'roasted': 3, 'steamed': 3})"
+      "msg": "axes_en.cooking_state='boiled' est unique dans \"chestnuts\" (11 IGs, toutes autres valeurs: {'raw': 3, 'roasted': 3, 'cooked': 3})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_04810",
       "en": "european chestnuts (sweet)",
       "subcategory": "chestnuts",
-      "msg": "axes_en.cooking_state='grilled' est unique dans \"chestnuts\" (11 IGs, toutes autres valeurs: {'raw': 3, 'roasted': 3, 'steamed': 3})"
+      "msg": "axes_en.cooking_state='grilled' est unique dans \"chestnuts\" (11 IGs, toutes autres valeurs: {'raw': 3, 'roasted': 3, 'cooked': 3})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_04711",
+      "en": "cashew nuts",
+      "subcategory": "cashews",
+      "msg": "axes_en.cooking_state='raw' est unique dans \"cashews\" (6 IGs, toutes autres valeurs: {'grilled': 3, 'roasted': 2, 'raw': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_05688",
       "en": "egg",
       "subcategory": "prepared_eggs",
-      "msg": "axes_en.cooking_state='hard_boiled' est unique dans \"prepared_eggs\" (5 IGs, toutes autres valeurs: {'hard_boiled': 1, 'fried': 1, 'soft_boiled': 1})"
+      "msg": "axes_en.cooking_state='hard_boiled' est unique dans \"prepared_eggs\" (5 IGs, toutes autres valeurs: {'hard_boiled': 1, 'fried_flat': 1, 'soft_boiled': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_05745",
-      "en": "fried egg",
+      "en": "egg",
       "subcategory": "prepared_eggs",
-      "msg": "axes_en.cooking_state='fried' est unique dans \"prepared_eggs\" (5 IGs, toutes autres valeurs: {'hard_boiled': 1, 'fried': 1, 'soft_boiled': 1})"
+      "msg": "axes_en.cooking_state='fried_flat' est unique dans \"prepared_eggs\" (5 IGs, toutes autres valeurs: {'hard_boiled': 1, 'fried_flat': 1, 'soft_boiled': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_05746",
-      "en": "soft-boiled egg",
+      "en": "egg",
       "subcategory": "prepared_eggs",
-      "msg": "axes_en.cooking_state='soft_boiled' est unique dans \"prepared_eggs\" (5 IGs, toutes autres valeurs: {'hard_boiled': 1, 'fried': 1, 'soft_boiled': 1})"
+      "msg": "axes_en.cooking_state='soft_boiled' est unique dans \"prepared_eggs\" (5 IGs, toutes autres valeurs: {'hard_boiled': 1, 'fried_flat': 1, 'soft_boiled': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_05747",
-      "en": "poached egg",
+      "en": "egg",
       "subcategory": "prepared_eggs",
-      "msg": "axes_en.cooking_state='poached' est unique dans \"prepared_eggs\" (5 IGs, toutes autres valeurs: {'hard_boiled': 1, 'fried': 1, 'soft_boiled': 1})"
+      "msg": "axes_en.cooking_state='poached' est unique dans \"prepared_eggs\" (5 IGs, toutes autres valeurs: {'hard_boiled': 1, 'fried_flat': 1, 'soft_boiled': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_05748",
-      "en": "scrambled egg",
+      "en": "egg",
       "subcategory": "prepared_eggs",
-      "msg": "axes_en.cooking_state='scrambled' est unique dans \"prepared_eggs\" (5 IGs, toutes autres valeurs: {'hard_boiled': 1, 'fried': 1, 'soft_boiled': 1})"
+      "msg": "axes_en.cooking_state='scrambled' est unique dans \"prepared_eggs\" (5 IGs, toutes autres valeurs: {'hard_boiled': 1, 'fried_flat': 1, 'soft_boiled': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_04863",
+      "en": "butter",
+      "subcategory": "butter",
+      "msg": "axes_en.seasoning='lightly_salted' est unique dans \"butter\" (8 IGs, toutes autres valeurs: {'salted': 5, 'unsalted': 2, 'lightly_salted': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_04921",
+      "en": "cream",
+      "subcategory": "cream",
+      "msg": "axes_en.thermal_state='fresh' est unique dans \"cream\" (7 IGs, toutes autres valeurs: {'uht': 4, 'refrigerated': 2, 'fresh': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_04987",
       "en": "Camembert",
       "subcategory": "cheeses",
-      "msg": "axes_en.thermal_state='pasteurized' est unique dans \"cheeses\" (8 IGs, toutes autres valeurs: {'fresh': 4, 'dried': 2, 'pasteurized': 1})"
+      "msg": "axes_en.thermal_state='pasteurized' est unique dans \"cheeses\" (10 IGs, toutes autres valeurs: {'dried': 4, 'fresh': 4, 'pasteurized': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_05850",
+      "en": "feta (whole cow milk)",
+      "subcategory": "cheeses",
+      "msg": "axes_en.form='crumbled' est unique dans \"cheeses\" (32 IGs, toutes autres valeurs: {'paste': 11, 'whole': 8, 'block': 5})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_05065",
+      "en": "parmesan",
+      "subcategory": "cheeses",
+      "msg": "axes_en.form='hard_paste' est unique dans \"cheeses\" (32 IGs, toutes autres valeurs: {'paste': 11, 'whole': 8, 'block': 5})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_05103",
       "en": "Camembert cream",
       "subcategory": "cheeses",
-      "msg": "axes_en.form='cream' est unique dans \"cheeses\" (26 IGs, toutes autres valeurs: {'paste': 10, 'whole': 8, 'block': 5})"
-    },
-    {
-      "type": "OUTLIER_AXIS_VALUE",
-      "id": "ing_05196",
-      "en": "cooked pressed cheese",
-      "subcategory": "cheeses",
-      "msg": "axes_en.cooking_state='cooked' est unique dans \"cheeses\" (7 IGs, toutes autres valeurs: {'raw': 6, 'cooked': 1})"
+      "msg": "axes_en.form='cream' est unique dans \"cheeses\" (32 IGs, toutes autres valeurs: {'paste': 11, 'whole': 8, 'block': 5})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
@@ -862,14 +685,21 @@
       "id": "ing_05761",
       "en": "parmesan, grated, refrigerated",
       "subcategory": "cheeses",
-      "msg": "axes_en.thermal_state='refrigerated' est unique dans \"cheeses\" (8 IGs, toutes autres valeurs: {'fresh': 4, 'dried': 2, 'pasteurized': 1})"
+      "msg": "axes_en.thermal_state='refrigerated' est unique dans \"cheeses\" (10 IGs, toutes autres valeurs: {'dried': 4, 'fresh': 4, 'pasteurized': 1})"
+    },
+    {
+      "type": "OUTLIER_AXIS_VALUE",
+      "id": "ing_05873",
+      "en": "provolone",
+      "subcategory": "cheeses",
+      "msg": "axes_en.form='sliced' est unique dans \"cheeses\" (32 IGs, toutes autres valeurs: {'paste': 11, 'whole': 8, 'block': 5})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",
       "id": "ing_05472",
       "en": "dulce de leche",
       "subcategory": "milk",
-      "msg": "axes_en.form='jam' est unique dans \"milk\" (17 IGs, toutes autres valeurs: {'whole': 8, 'liquid': 6, 'milk': 2})"
+      "msg": "axes_en.form='jam' est unique dans \"milk\" (19 IGs, toutes autres valeurs: {'liquid': 18, 'jam': 1})"
     },
     {
       "type": "OUTLIER_AXIS_VALUE",

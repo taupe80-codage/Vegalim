@@ -50,7 +50,7 @@ EN_KEY_TO_FR_KEY = {
     "thermal_state": "etat_thermique",
     "form":          "forme",
     "treatment":     "traitement",
-    "cooking_method":"procede_cuisson",
+    "cooking_process":"procede_cuisson",
     "fat_content":   "teneur_MG",
     "seasoning":     "assaisonnement",
     "packaging":     "conditionnement",
@@ -58,6 +58,27 @@ EN_KEY_TO_FR_KEY = {
     "part":          "partie",
     "origin":        "origine",
     "ripeness":      "maturite",
+}
+
+# Valeurs FR alternatives tolérées en plus de la valeur "attendue" par défaut
+# (synonymes légitimes déjà utilisés de façon cohérente ailleurs dans le tree,
+# ou variations d'accord grammatical FR selon le genre du nom canonique).
+EN_VAL_TO_FR_VAL_ALTERNATES: dict[str, dict[str, set[str]]] = {
+    "packaging": {"canned": {"appertisé"}},   # synonyme de "conserve"
+    "ripeness":  {"ripe": {"mûre"}},           # accord féminin (ex. tomate mûre)
+    "form": {
+        # "flocons" (flocons roulés type avoine/pomme de terre) et "paillettes"
+        # (paillettes séchées type céleri/levure) sont deux traductions
+        # valides de "flakes" selon le produit — pas de règle universelle.
+        "flakes": {"flocons"},
+        "crushed": {"concassée"},   # accord féminin (ex. tomate concassée)
+    },
+    "treatment": {
+        # "torréfié" reste valide pour un fruit à coque/graine même quand
+        # cooking_process est renseigné, si cooking_state=roasted porte déjà
+        # l'information "rôti" séparément (double encodage volontaire).
+        "roasted": {"torréfié"},
+    },
 }
 
 # axes_en.value → axes_fr.value attendue — mapping PAR AXE (évite les clés dupliquées)
@@ -70,6 +91,7 @@ EN_VAL_TO_FR_VAL_BY_AXIS: dict[str, dict[str, str]] = {
         "fried": "frit", "grilled": "grillé", "roasted": "rôti", "baked": "au four",
         "sauteed": "sauté", "braised": "étouffée", "precooked": "précuit",
         "hard_boiled": "dur", "soft_boiled": "à la coque", "scrambled": "brouillé",
+        "stewed": "étuvée",
     },
     "thermal_state": {
         "fresh": "frais", "frozen": "surgelé", "dried": "séché",
@@ -83,7 +105,8 @@ EN_VAL_TO_FR_VAL_BY_AXIS: dict[str, dict[str, str]] = {
         "yogurt": "yaourt", "whole": "entier", "ground": "moulu", "extract": "extrait",
         "concentrate": "concentré", "sliced": "tranché", "grated": "râpé",
         "sauce": "sauce", "jam": "confiture", "jelly": "gelée", "compote": "compote",
-        "pureed": "purée", "crushed": "concassé", "diced": "en dés", "crumbled": "émietté",
+        "pureed": "purée", "crushed": "concassé", "cracked": "concassé",
+        "diced": "en dés", "crumbled": "émietté",
         "rolled": "flocons", "flakes": "paillettes", "granulated": "granulé",
         "block": "bloc", "liquid": "liquide", "pieces": "petits morceaux",
         "crunchy": "croquant", "creamy": "crémeux", "whipped": "fouetté",
@@ -91,7 +114,7 @@ EN_VAL_TO_FR_VAL_BY_AXIS: dict[str, dict[str, str]] = {
     "part": {
         "leaf": "feuille", "seed": "graine", "flesh": "chair", "root": "racine",
         "stem": "tige", "peel": "pelure", "flower": "fleur", "sprout": "pousse",
-        "peeled": "sans peau", "pitted": "dénoyauté", "seedless": "sans graines",
+        "peeled": "pelé", "pitted": "dénoyauté", "seedless": "sans graines",
         "with_seeds": "avec graines", "with_skin": "avec peau",
         "tuber": "tubercule", "pod": "gousse",
     },
@@ -109,7 +132,7 @@ EN_VAL_TO_FR_VAL_BY_AXIS: dict[str, dict[str, str]] = {
         "extra_virgin": "extra vierge", "cold_pressed": "pression à froid",
         "textured": "texturé", "decaffeinated": "décaféiné", "marinated": "mariné",
         "pickled": "lacto-fermenté", "toasted": "grillé", "candied": "confit",
-        "unblanched": "non blanchi", "unbleached": "non blanchi chimiquement",
+        "unblanched": "non blanchi", "unbleached": "non blanchi",
         "from_concentrate": "à base de concentré",
     },
     "packaging": {
@@ -127,7 +150,7 @@ EN_VAL_TO_FR_VAL_BY_AXIS: dict[str, dict[str, str]] = {
     "ripeness": {
         "ripe": "mûr", "unripe": "pas mûr",
     },
-    "cooking_method": {
+    "cooking_process": {
         "dry":    "à sec",
         "in_oil": "à l'huile",
     },
@@ -212,15 +235,17 @@ def check_en_fr_coherence(ig_id: str, en_name: str, axes_en: dict, axes_fr: dict
                 continue  # skip lists (edge case)
 
             # Cas spécial : treatment=roasted est context-dépendant
-            #   avec cooking_method (dry/in_oil) → traitement=rôti
-            #   sans cooking_method              → traitement=torréfié
+            #   avec cooking_process (dry/in_oil) → traitement=rôti
+            #   sans cooking_process              → traitement=torréfié
             if en_key == "treatment" and str(en_val) == "roasted":
-                cm = axes_en.get("cooking_method")
+                cm = axes_en.get("cooking_process")
                 expected_fr = "rôti" if cm else "torréfié"
             else:
                 expected_fr = EN_VAL_TO_FR_VAL_BY_AXIS.get(en_key, {}).get(str(en_val))
 
-            if expected_fr and norm(str(fr_val)) != norm(expected_fr):
+            alternates = EN_VAL_TO_FR_VAL_ALTERNATES.get(en_key, {}).get(str(en_val), set())
+            if (expected_fr and norm(str(fr_val)) != norm(expected_fr)
+                    and norm(str(fr_val)) not in {norm(a) for a in alternates}):
                 issues.append({
                     "type": "EN_FR_MISMATCH",
                     "id": ig_id, "en": en_name,
@@ -240,7 +265,45 @@ KNOWN_NAME_EXCEPTIONS = {
     # noms qui contiennent un mot mais l'axe ne correspond pas (intentionnel)
     ("ing_01657", "cooking_state"),   # apple (CNF commence par "raw")
     ("ing_00770", "cooking_state"),   # pre-cooked white rice (contient "cooked" dans fr)
+
+    # "X milk" / "X's milk" en préfixe de fromage/yaourt = modificateur
+    # d'origine (quel animal), pas la forme du produit — le fromage n'est
+    # jamais "sous forme de lait". form=paste/crumbled/yogurt déjà correct.
+    ("ing_00489", "form"),   # bread, made with milk (milk = ingrédient de la recette)
+    ("ing_04985", "form"),   # Camembert, raw milk
+    ("ing_05025", "form"),   # feta (sheep milk)
+    ("ing_05230", "form"),   # cow's milk mozzarella
+    ("ing_05286", "form"),   # cow's milk tomme
+    ("ing_05369", "form"),   # ewe's milk fromage blanc
+    ("ing_05371", "form"),   # goat's milk fromage blanc
+    ("ing_05408", "form"),   # goat crottin, raw milk
+    ("ing_05850", "form"),   # feta (whole cow milk)
+    ("ing_05136", "form"),   # corsican ewe's milk soft cheese
+    ("ing_05138", "form"),   # ewe's milk soft-ripened cheese
+    ("ing_05140", "form"),   # ewe's milk pressed cheese (Pyrenees type)
+
+    # "raw milk" = lait cru/non pasteurisé (un traitement), pas un
+    # cooking_state — déjà porté par axes_en.treatment=raw_milk.
+    ("ing_04985", "cooking_state"),  # Camembert, raw milk
+    ("ing_05408", "cooking_state"),  # goat crottin, raw milk
+    # "cooked pressed cheese" (pâte pressée demi-cuite) : le "cooked"
+    # désigne la cuisson du caillé en fromagerie, pas un cooking_state.
+    ("ing_05196", "cooking_state"),
+
+    # fat_content numérique (ex. '16pct', '0pct') vs catégoriel
+    # (skimmed/low_fat...) — asymétrie intentionnelle, déjà documentée.
+    ("ing_05888", "fat_content"),  # part-skim mozzarella
+    ("ing_05751", "fat_content"),  # skimmed pasteurized milk
+
+    # "roasted chickpea" : convention légumineuse-snack = treatment=roasted
+    # (comme les cacahuètes), pas cooking_state — cf. catégorie A.
+    ("ing_05814", "cooking_state"),
 }
+
+# Formes dérivées du lait acceptables comme alternative à form="milk" quand
+# le nom contient "milk" mais désigne un produit laitier transformé (pas du
+# lait liquide brut) : liquide standard, concentré, en poudre, ou yaourt.
+MILK_FORM_FAMILY = {"liquid", "concentrated", "powder", "yogurt"}
 
 def check_name_axes(ig_id: str, en_name: str, axes_en: dict) -> list[dict]:
     issues = []
@@ -263,6 +326,8 @@ def check_name_axes(ig_id: str, en_name: str, axes_en: dict) -> list[dict]:
                                   "fried", "grilled", "braised", "precooked"}
                 if key == "cooking_state" and str(actual) in COOKING_FAMILY:
                     pass  # variante de cuisson acceptable
+                elif key == "form" and expected_val == "milk" and str(actual) in MILK_FORM_FAMILY:
+                    pass  # forme laitière dérivée acceptable
                 elif (ig_id, key) not in KNOWN_NAME_EXCEPTIONS:
                     issues.append({
                         "type": "NAME_AXIS_MISMATCH",
