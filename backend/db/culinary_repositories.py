@@ -187,10 +187,32 @@ def _base_recipe_excluded_raw() -> frozenset:
 
 @lru_cache(maxsize=1)
 def _ingredients_raw() -> list[dict]:
-    """Cache en mémoire du dictionnaire d'ingrédients."""
+    """Cache en mémoire du dictionnaire d'ingrédients.
+
+    ingredients_dictionary.json (build_dict_v2.py) a la structure imbriquée
+    categories -> subcategories -> ingredient_groups -> {entry_key: entry},
+    sans champ 'id'/'name_fr'/'name_en' interne (la clé EST l'identifiant,
+    les noms sont dans canonical_name_fr/canonical_name_en). L'ancien code
+    supposait un format à plat {"ingredients": [...]} et retombait
+    silencieusement sur un dict vide-en-pratique — voir le même bug déjà
+    corrigé dans backend/core/data_io.py::load_ingredients_dict().
+    """
     from backend.engine.config import DICT_PATH
     data = _load_json(DICT_PATH)
-    items = data.get("ingredients", data) if isinstance(data, dict) else data
+    if isinstance(data, dict) and "ingredients" in data:
+        items = data["ingredients"]  # ancien format à plat, rétrocompat
+    elif isinstance(data, dict) and "categories" in data:
+        items = []
+        for cat in data["categories"].values():
+            for sub in (cat or {}).get("subcategories", {}).values():
+                for key, entry in (sub or {}).get("ingredient_groups", {}).items():
+                    e = dict(entry)
+                    e["id"] = key
+                    e.setdefault("name_fr", e.get("canonical_name_fr", key))
+                    e.setdefault("name_en", e.get("canonical_name_en", key))
+                    items.append(e)
+    else:
+        items = data if isinstance(data, list) else []
     logger.info("Ingrédients chargés en mémoire : %d entrées", len(items))
     return items
 
