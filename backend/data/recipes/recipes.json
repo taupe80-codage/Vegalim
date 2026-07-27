@@ -12594,7 +12594,7 @@
           }
         },
         {
-          "ingredient": "oil/neutral",
+          "ingredient": "sunflower_oil_plant",
           "quantity": 10,
           "unit": "ml",
           "meta": {
@@ -12721,7 +12721,6 @@
         "mijote",
         "minceur",
         "nems",
-        "oil/neutral",
         "potable)",
         "printemps",
         "rice",
@@ -12735,8 +12734,10 @@
         "sans viande",
         "sel",
         "spring",
+        "sunflower",
         "table",
         "tapioca_starch",
+        "tournesol",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -28653,7 +28654,7 @@
           }
         },
         {
-          "ingredient": "mushrooms",
+          "ingredient": "button_mushroom_raw",
           "quantity": null,
           "unit": "100 g",
           "meta": {
@@ -28727,6 +28728,8 @@
         "beurre",
         "ble",
         "butter",
+        "button",
+        "champignon",
         "egg",
         "farine",
         "flour",
@@ -28736,10 +28739,11 @@
         "low calorie",
         "milk_animal/whole",
         "minceur",
-        "mushrooms",
+        "mushroom",
         "oignon",
         "onion",
         "pain",
+        "paris",
         "parsley",
         "persil",
         "purpose",
@@ -39436,13 +39440,9 @@
         "garlic",
         "gluten free",
         "kids",
-        "leger",
         "lent",
-        "light",
         "long",
-        "low calorie",
         "mijote",
-        "minceur",
         "mushroom",
         "noir",
         "oat_milk",
@@ -42963,7 +42963,7 @@
           }
         },
         {
-          "ingredient": "yogurt_plant/default",
+          "ingredient": "soybean_yogurt_plain_plant",
           "quantity": 80,
           "unit": "g",
           "meta": {
@@ -43026,6 +43026,7 @@
         "10 min",
         "20 min",
         "5 min",
+        "anemie",
         "apple",
         "apple_juice",
         "bircher",
@@ -43037,17 +43038,15 @@
         "express",
         "facile enfants",
         "famille",
+        "fer",
         "gluten free",
         "graines",
         "grape",
         "hazelnut",
+        "iron",
         "kids",
-        "leger",
         "lemon",
-        "light",
-        "low calorie",
         "maceration",
-        "minceur",
         "muesli",
         "oat_milk",
         "omega-3",
@@ -43057,10 +43056,11 @@
         "rolled_oats",
         "sans gluten",
         "sans viande",
+        "soja",
+        "soybean",
         "super aliment",
         "swiss",
-        "vegetarien",
-        "yogurt_plant/default"
+        "vegetarien"
       ],
       "difficulty_level": "easy",
       "dish_type": "breakfast",
@@ -44454,7 +44454,7 @@
           }
         },
         {
-          "ingredient": "yogurt_plant/default",
+          "ingredient": "soybean_yogurt_plain_plant",
           "quantity": 60,
           "unit": "g",
           "meta": {
@@ -44597,6 +44597,7 @@
         "20 min",
         "5 min",
         "almond_butter",
+        "anemie",
         "banana",
         "beurre",
         "butter",
@@ -44608,16 +44609,14 @@
         "express",
         "facile enfants",
         "famille",
+        "fer",
         "gluten free",
         "graines",
         "international",
+        "iron",
         "kids",
-        "leger",
-        "light",
-        "low calorie",
         "maceration",
         "maple",
-        "minceur",
         "oat_milk",
         "oats",
         "omega-3",
@@ -44629,13 +44628,14 @@
         "sans gluten",
         "sans viande",
         "sirop",
+        "soja",
+        "soybean",
         "super aliment",
         "syrup",
         "vanilla",
         "vanille",
         "vegan",
-        "vegetarien",
-        "yogurt_plant/default"
+        "vegetarien"
       ],
       "difficulty_level": "easy",
       "dish_type": "breakfast",
@@ -52676,6 +52676,7 @@
       "search_tokens": [
         "(eau",
         "30 minutes",
+        "anemie",
         "apple",
         "braising",
         "cannelle",
@@ -52683,18 +52684,18 @@
         "coeliaque",
         "coriander",
         "d'erable",
+        "digestion",
         "eau",
         "enfants",
         "facile enfants",
         "famille",
+        "fer",
+        "fibre",
         "gluten free",
         "international",
+        "iron",
         "kids",
-        "leger",
-        "light",
-        "low calorie",
         "maple",
-        "minceur",
         "muscade",
         "nutmeg",
         "oat_milk",
@@ -52703,6 +52704,7 @@
         "potable)",
         "quick",
         "rapide",
+        "riche en fibres",
         "rolled_oats",
         "salt",
         "sans gluten",
@@ -55974,10 +55976,6 @@
         "graines",
         "granola",
         "kids",
-        "leger",
-        "light",
-        "low calorie",
-        "minceur",
         "omega-3",
         "quick",
         "rapide",
@@ -56210,20 +56208,25 @@
         "10 min",
         "20 min",
         "5 min",
+        "anemie",
         "banane",
         "blending",
         "coeliaque",
+        "digestion",
         "enfants",
         "epinard",
         "epinards",
         "express",
         "facile enfants",
         "famille",
+        "fer",
+        "fibre",
         "frozen_banana",
         "gluten free",
         "green",
         "ground_flaxseed",
         "international",
+        "iron",
         "kids",
         "leger",
         "light",
@@ -56233,6 +56236,7 @@
         "oat_milk",
         "quick",
         "rapide",
+        "riche en fibres",
         "sans gluten",
         "sans viande",
         "smoothie",
@@ -62087,18 +62091,21 @@
         "10 min",
         "20 min",
         "5 min",
+        "anemie",
         "black",
         "coeliaque",
         "enfants",
         "express",
         "facile enfants",
         "famille",
+        "fer",
         "fig",
         "fig/dried",
         "figue",
         "gluten free",
         "honey",
         "international",
+        "iron",
         "kids",
         "leger",
         "lemon_zest",
@@ -126714,7 +126721,7 @@
           }
         },
         {
-          "ingredient": "yogurt_plant/default",
+          "ingredient": "soybean_yogurt_plain_plant",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -126878,11 +126885,12 @@
         "sans viande",
         "sauteed",
         "sel",
+        "soja",
+        "soybean",
         "table",
         "turmeric",
         "vegan",
-        "vegetarien",
-        "yogurt_plant/default"
+        "vegetarien"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
@@ -129694,7 +129702,7 @@
           }
         },
         {
-          "ingredient": "milk_plant/default",
+          "ingredient": "oat_milk",
           "quantity": 250,
           "unit": "ml",
           "meta": {
@@ -129814,8 +129822,8 @@
         "long",
         "low calorie",
         "mijote",
-        "milk_plant/default",
         "minceur",
+        "oat_milk",
         "oignon",
         "onion",
         "pie",
@@ -144910,7 +144918,7 @@
           }
         },
         {
-          "ingredient": "onion/spice",
+          "ingredient": "onion_raw",
           "quantity": 300,
           "unit": "g",
           "meta": {
@@ -145052,8 +145060,9 @@
         "low calorie",
         "minceur",
         "moyen",
+        "oignon",
         "olive",
-        "onion/spice",
+        "onion",
         "pois",
         "revithia",
         "rosemary",
@@ -305090,14 +305099,10 @@
         "fer",
         "international",
         "iron",
-        "leger",
         "lent",
-        "light",
         "long",
-        "low calorie",
         "manakish",
         "mijote",
-        "minceur",
         "moulues)",
         "olive",
         "oven_cooking",
@@ -366894,7 +366899,7 @@
           }
         },
         {
-          "ingredient": "milk_plant/default",
+          "ingredient": "coconut_milk",
           "quantity": 250,
           "unit": "ml",
           "meta": {
@@ -367018,6 +367023,7 @@
         "braising",
         "butter",
         "cheese",
+        "coconut_milk",
         "enfants",
         "facile enfants",
         "famille",
@@ -367031,7 +367037,6 @@
         "low calorie",
         "mac",
         "macaronis",
-        "milk_plant/default",
         "minceur",
         "pasta",
         "purpose",
@@ -466595,7 +466600,7 @@
           }
         },
         {
-          "ingredient": "milk_plant/default",
+          "ingredient": "oat_milk",
           "quantity": 250,
           "unit": "ml",
           "meta": {
@@ -466693,9 +466698,9 @@
         "lettuce",
         "light",
         "low calorie",
-        "milk_plant/default",
         "minceur",
         "moyen",
+        "oat_milk",
         "papa",
         "peruvian",
         "pommes",
@@ -483785,7 +483790,7 @@
           }
         },
         {
-          "ingredient": "milk_plant/default",
+          "ingredient": "coconut_milk",
           "quantity": 250,
           "unit": "ml",
           "meta": {
@@ -483930,6 +483935,7 @@
         "blanc",
         "bread_flour",
         "butter",
+        "coconut_milk",
         "egg",
         "enfants",
         "facile enfants",
@@ -483942,7 +483948,6 @@
         "lent",
         "long",
         "mijote",
-        "milk_plant/default",
         "muscle",
         "protéines",
         "riche en proteines",
@@ -488371,7 +488376,7 @@
           }
         },
         {
-          "ingredient": "milk_plant/default",
+          "ingredient": "oat_milk",
           "quantity": 250,
           "unit": "ml",
           "meta": {
@@ -488507,9 +488512,9 @@
         "iron",
         "kids",
         "lingonberry",
-        "milk_plant/default",
         "moyen",
         "muscle",
+        "oat_milk",
         "pommes",
         "potato/raw",
         "protéines",
@@ -490132,7 +490137,7 @@
           }
         },
         {
-          "ingredient": "milk_plant/default",
+          "ingredient": "oat_milk",
           "quantity": 250,
           "unit": "ml",
           "meta": {
@@ -490255,7 +490260,7 @@
         "husk",
         "kids",
         "mais",
-        "milk_plant/default",
+        "oat_milk",
         "oignon",
         "olive",
         "onion",
@@ -490455,7 +490460,7 @@
           }
         },
         {
-          "ingredient": "milk_plant/default",
+          "ingredient": "coconut_milk",
           "quantity": 250,
           "unit": "ml",
           "meta": {
@@ -490584,6 +490589,7 @@
         "beurre",
         "ble",
         "butter",
+        "coconut_milk",
         "eau",
         "egg",
         "farine",
@@ -490592,7 +490598,6 @@
         "flour",
         "iron",
         "karelian",
-        "milk_plant/default",
         "moyen",
         "muscle",
         "pies",
@@ -490748,7 +490753,7 @@
           }
         },
         {
-          "ingredient": "yogurt_plant/default",
+          "ingredient": "soybean_yogurt_plain_plant",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -490850,6 +490855,8 @@
         "riche en proteines",
         "roasting",
         "sans viande",
+        "soja",
+        "soybean",
         "sport",
         "tout",
         "usage",
@@ -490857,8 +490864,7 @@
         "vegan_cheese",
         "vegetal",
         "vegetarien",
-        "wheat",
-        "yogurt_plant/default"
+        "wheat"
       ],
       "difficulty_level": "easy",
       "dish_type": "snack",
@@ -491270,7 +491276,7 @@
           }
         },
         {
-          "ingredient": "milk_plant/default",
+          "ingredient": "oat_milk",
           "quantity": 250,
           "unit": "ml",
           "meta": {
@@ -491364,9 +491370,9 @@
         "egg",
         "fromage",
         "gluten free",
-        "milk_plant/default",
         "moyen",
         "muscle",
+        "oat_milk",
         "pain",
         "pao",
         "protéines",
@@ -491768,7 +491774,7 @@
           }
         },
         {
-          "ingredient": "milk_plant/default",
+          "ingredient": "coconut_milk",
           "quantity": 250,
           "unit": "ml",
           "meta": {
@@ -491917,13 +491923,13 @@
         "boiling",
         "butter",
         "central_european",
+        "coconut_milk",
         "egg",
         "farine",
         "fer",
         "flour",
         "iron",
         "jaune",
-        "milk_plant/default",
         "muscle",
         "oignon",
         "onion",
@@ -498638,12 +498644,16 @@
         "lime_juice",
         "mexican",
         "moyen",
+        "muscle",
+        "protéines",
         "raw",
         "riche en fibres",
+        "riche en proteines",
         "salt",
         "sans gluten",
         "sans viande",
         "sel",
+        "sport",
         "table",
         "tomato/fresh",
         "tortilla",
@@ -507285,7 +507295,7 @@
           "variant_name_fr": "fromage de chèvre"
         },
         {
-          "ingredient": "sauce",
+          "ingredient": "mayonnaise",
           "quantity": 30,
           "unit": "g",
           "meta": {
@@ -507413,6 +507423,7 @@
         "lettuce",
         "light",
         "low calorie",
+        "mayonnaise",
         "minceur",
         "noir",
         "olive",
@@ -507426,7 +507437,6 @@
         "salt",
         "sandwich",
         "sans viande",
-        "sauce",
         "sel",
         "table",
         "tomato/fresh",
@@ -524666,15 +524676,12 @@
         "light",
         "low calorie",
         "minceur",
-        "muscle",
         "mushroom",
         "paris",
         "pepper",
         "piment",
         "piquante",
-        "protéines",
         "rice_vinegar",
-        "riche en proteines",
         "sans viande",
         "sauce",
         "sesame",
@@ -524685,7 +524692,6 @@
         "soupe",
         "sour",
         "soy",
-        "sport",
         "stock",
         "vegetable",
         "vegetarien",
@@ -552333,6 +552339,10 @@
         "frying_oil",
         "green",
         "japanese",
+        "leger",
+        "light",
+        "low calorie",
+        "minceur",
         "moyen",
         "oignon",
         "onion",
@@ -556014,7 +556024,7 @@
           }
         },
         {
-          "ingredient": "oil/neutral",
+          "ingredient": "sunflower_oil_plant",
           "quantity": 10,
           "unit": "ml",
           "meta": {
@@ -556100,7 +556110,6 @@
         "mijote",
         "minceur",
         "nems",
-        "oil/neutral",
         "potable)",
         "printemps",
         "rice",
@@ -556114,8 +556123,10 @@
         "sans viande",
         "sel",
         "spring",
+        "sunflower",
         "table",
         "tapioca_starch",
+        "tournesol",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -565249,7 +565260,7 @@
           }
         },
         {
-          "ingredient": "bean",
+          "ingredient": "black_bean_boiled",
           "quantity": 300,
           "unit": "g",
           "meta": {
@@ -565408,6 +565419,7 @@
       "search_tokens": [
         "1 heure",
         "bean",
+        "black",
         "bouillon",
         "braising",
         "coeliaque",
@@ -565416,8 +565428,10 @@
         "fresh_coriander",
         "garlic",
         "gluten free",
+        "haricot",
         "legumes",
         "mijoté",
+        "noir",
         "oignon",
         "olive",
         "onion",
@@ -568294,7 +568308,7 @@
       },
       "composition": [
         {
-          "ingredient": "bean",
+          "ingredient": "white_bean_boiled",
           "quantity": 300,
           "unit": "g",
           "meta": {
@@ -568449,12 +568463,14 @@
         "basil",
         "basilic",
         "bean",
+        "blanc",
         "braising",
         "coeliaque",
         "corn",
         "fresh_herbs",
         "gluten free",
         "granados",
+        "haricot",
         "haricots",
         "international",
         "leger",
@@ -568478,6 +568494,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "white",
         "wok"
       ],
       "difficulty_level": "medium",
@@ -598234,7 +598251,7 @@
           "variant_name_fr": "Fromage de chèvre demi-sec"
         },
         {
-          "ingredient": "sauce",
+          "ingredient": "sauce_brune_vegetarienne",
           "quantity": 40,
           "unit": "g",
           "meta": {
@@ -598374,7 +598391,7 @@
         "salt",
         "sans gluten",
         "sans viande",
-        "sauce",
+        "sauce_brune_vegetarienne",
         "sel",
         "table",
         "vegetarian",
@@ -600139,7 +600156,7 @@
       },
       "composition": [
         {
-          "ingredient": "oil/neutral",
+          "ingredient": "sunflower_oil_plant",
           "quantity": 40,
           "unit": "g",
           "meta": {
@@ -600242,14 +600259,15 @@
         "muscade",
         "nutmeg",
         "oat_milk",
-        "oil/neutral",
         "purpose",
         "quick",
         "rapide",
         "salt",
         "sauce",
         "sel",
+        "sunflower",
         "table",
+        "tournesol",
         "tout",
         "usage",
         "vegan",
@@ -600305,7 +600323,7 @@
           }
         },
         {
-          "ingredient": "vinegar",
+          "ingredient": "white_vinegar_liquid_distilled",
           "quantity": 60,
           "unit": "ml",
           "meta": {
@@ -600379,6 +600397,7 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "blanc",
         "chilli",
         "coeliaque",
         "garlic",
@@ -600405,7 +600424,9 @@
         "vegan",
         "vegetalien",
         "vegetarien",
-        "vinegar"
+        "vinaigre",
+        "vinegar",
+        "white"
       ],
       "servings_user_override": null,
       "instructions": [
@@ -602650,7 +602671,7 @@
           }
         },
         {
-          "ingredient": "vinegar",
+          "ingredient": "white_vinegar_liquid_distilled",
           "quantity": 20,
           "unit": "ml",
           "meta": {
@@ -602714,6 +602735,7 @@
         "20 min",
         "5 min",
         "asian",
+        "blanc",
         "chili",
         "chilli",
         "coeliaque",
@@ -602740,7 +602762,9 @@
         "vegetable_oil",
         "vegetalien",
         "vegetarien",
-        "vinegar"
+        "vinaigre",
+        "vinegar",
+        "white"
       ],
       "instructions": [
         "Étape 1 : Équeuter 200 g de piments rouges frais. Les couper en morceaux grossiers et retirer les graines pour une pâte moins piquante, ou les conserver pour plus d'intensité.",
