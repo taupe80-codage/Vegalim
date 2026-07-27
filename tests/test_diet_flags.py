@@ -457,8 +457,14 @@ class TestComputeHealthScores:
         assert self.compute(r)["fodmap_level"] == "low"
 
     def test_fodmap_medium(self):
-        r = {"id": 1, "ingredients": [{"ingredient_id": "garlic"},
-                                       {"ingredient_id": "onion"}],
+        # garlic/onion (utilisés ici avant fix) sont en réalité classés HIGH
+        # FODMAP par Monash (fructanes) quelle que soit la quantité — leur
+        # combinaison donne toujours "high", jamais "medium" (cf.
+        # test_fodmap_high qui les utilise justement pour obtenir "high").
+        # cabbage/turnip sont les déclencheurs modérés réels (MEDIUM_FODMAP_IDS
+        # uniquement, jamais dans les sets HIGH).
+        r = {"id": 1, "ingredients": [{"ingredient_id": "cabbage"},
+                                       {"ingredient_id": "turnip"}],
              "_nutrition_per_serving": {}}
         assert self.compute(r)["fodmap_level"] == "medium"
 

@@ -30,10 +30,11 @@ def test_models_all_tables_defined():
 
 def test_models_encrypted_health_columns():
     """cycle_phase et health_goal utilisent EncryptedString (RGPD Art. 9)."""
+    import re
     src = open("backend/db/models.py", encoding="utf-8").read()
     assert "EncryptedString" in src
-    assert "cycle_phase   = Column(EncryptedString" in src
-    assert "health_goal   = Column(EncryptedString" in src
+    assert re.search(r"cycle_phase\s*=\s*Column\(EncryptedString", src)
+    assert re.search(r"health_goal\s*=\s*Column\(EncryptedString", src)
 
 def test_models_recipe_history_fields():
     """RecipeHistory a les champs requis pour le learning_engine."""

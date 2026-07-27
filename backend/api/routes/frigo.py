@@ -8,12 +8,13 @@ Routes authentifiÃ©es :
 import logging
 logger = logging.getLogger(__name__)
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel, Field
 from typing import Optional
 
 from backend.core.auth_deps import get_user, get_optional_user
 from backend.core.data_io import load_recipes, load_ingredients_dict
+from backend.core.rate_limiter import check_rate_limit
 
 router = APIRouter(prefix="/frigo", tags=["Mon frigo"])
 
@@ -183,6 +184,7 @@ def _get_all_recipe_ingredient_ids() -> set[str]:
 
 @router.get("/coverage")
 def ingredient_coverage(
+    request: Request,
     keys: str = Query(..., description="Clés frigo séparées par virgule"),
     user: dict | None = Depends(get_optional_user),
 ):
@@ -197,6 +199,7 @@ def ingredient_coverage(
 
     **Public** — pas d'authentification requise.
     """
+    check_rate_limit(request, limit=120, window_seconds=60)
     fridge_keys = [k.strip() for k in keys.split(",") if k.strip()]
     if not fridge_keys:
         return {"covered": [], "uncovered": []}
@@ -215,7 +218,8 @@ def ingredient_coverage(
 
 
 @router.post("/suggestions")
-def fridge_suggestions(payload: FridgeRequest, user: dict | None = Depends(get_optional_user)):
+def fridge_suggestions(payload: FridgeRequest, request: Request,
+                        user: dict | None = Depends(get_optional_user)):
     """
     Retourne les recettes rÃ©alisables avec les ingrÃ©dients du frigo.
     **Public** â€" fonctionnel sans compte (CDC_11 plan gratuit).
@@ -223,6 +227,7 @@ def fridge_suggestions(payload: FridgeRequest, user: dict | None = Depends(get_o
     Tri par complÃ©tude dÃ©croissante (moins d'ingrÃ©dients manquants = prioritaire),
     puis par iconic_score.
     """
+    check_rate_limit(request, limit=60, window_seconds=60)
     fridge = {ing.lower() for ing in payload.ingredients}
     recipes    = load_recipes()
     ings_dict  = load_ingredients_dict()   # pour traduire les IDs manquants en noms FR
@@ -320,11 +325,13 @@ def fridge_suggestions(payload: FridgeRequest, user: dict | None = Depends(get_o
 
 
 @router.post("/manquants")
-def missing_ingredients(payload: MissingRequest, user: dict = Depends(get_user)):
+def missing_ingredients(payload: MissingRequest, request: Request,
+                         user: dict = Depends(get_user)):
     """
     Retourne les ingrÃ©dients manquants pour rÃ©aliser une recette cible
     avec les ingrÃ©dients actuels du frigo.
     """
+    check_rate_limit(request, limit=60, window_seconds=60)
     recipes = load_recipes()
     recipe  = next((r for r in recipes if r["id"] == payload.recipe_id), None)
     if not recipe:

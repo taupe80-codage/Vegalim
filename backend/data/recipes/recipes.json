@@ -74,7 +74,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.94
+        "confidence": 0.94,
+        "spice_level": 0
       },
       "dish_type": "beverage",
       "servings_default": 4,
@@ -130,10 +131,12 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "almond",
         "almond/default",
         "coeliaque",
         "d'amande",
+        "eau",
         "gluten free",
         "homemade",
         "lait",
@@ -147,6 +150,7 @@
         "mijote",
         "milk",
         "minceur",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -240,7 +244,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.97
+        "confidence": 0.97,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -385,7 +390,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.96
+        "confidence": 0.96,
+        "spice_level": 0
       },
       "dish_type": "beverage",
       "servings_default": 4,
@@ -431,10 +437,12 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "cajou",
         "cashew",
         "cashew/raw",
         "coeliaque",
+        "eau",
         "gluten free",
         "homemade",
         "lait",
@@ -447,6 +455,7 @@
         "mijote",
         "milk",
         "minceur",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -616,7 +625,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.83
+        "confidence": 0.83,
+        "spice_level": 0
       },
       "dish_type": "ingredient",
       "servings_default": 4,
@@ -1193,7 +1203,8 @@
           "base",
           "sauce"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -1206,7 +1217,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -1266,11 +1278,13 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "coco",
         "coconut",
         "coeliaque",
         "cream",
         "creme",
+        "eau",
         "gluten free",
         "leger",
         "lent",
@@ -1279,6 +1293,7 @@
         "low calorie",
         "mijote",
         "minceur",
+        "potable)",
         "sans gluten",
         "sans viande",
         "thai",
@@ -1325,7 +1340,7 @@
           }
         },
         {
-          "ingredient": "coconut",
+          "ingredient": "coconut/garnish",
           "quantity": null,
           "unit": "1 cuillère à soupe",
           "meta": {
@@ -1349,7 +1364,8 @@
           "beverage",
           "sauce"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -1363,7 +1379,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.94
+        "confidence": 0.94,
+        "spice_level": 0
       },
       "dish_type": "beverage",
       "servings_default": 4,
@@ -1410,10 +1427,13 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "coco",
         "coconut",
+        "coconut/garnish",
         "coeliaque",
+        "eau",
         "gluten free",
         "homemade",
         "lait",
@@ -1424,6 +1444,7 @@
         "milk",
         "minceur",
         "moyen",
+        "potable)",
         "sans gluten",
         "sans produit animal",
         "sans viande",
@@ -1821,7 +1842,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.94
+        "confidence": 0.94,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -1979,7 +2001,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.92
+        "confidence": 0.92,
+        "spice_level": 0
       },
       "dish_type": "condiment",
       "servings_default": 4,
@@ -2194,7 +2217,8 @@
           "condiment",
           "base"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -2208,7 +2232,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.92
+        "confidence": 0.92,
+        "spice_level": 2
       },
       "dish_type": "paste",
       "servings_default": 4,
@@ -2264,6 +2289,7 @@
       },
       "difficulty_level": "hard",
       "search_tokens": [
+        "(racine",
         "45 minutes",
         "acidite",
         "agrume",
@@ -2273,6 +2299,8 @@
         "coriander/seeds",
         "cumin",
         "curry",
+        "fraiche)",
+        "galanga",
         "galangal",
         "garlic",
         "gluten free",
@@ -2440,7 +2468,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spice_level": 0
       },
       "dish_type": "bread",
       "servings_default": 4,
@@ -2505,9 +2534,11 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "butter_dairy/default",
         "chilean",
         "dough",
+        "eau",
         "egg_whole_fresh/raw",
         "empanada",
         "leger",
@@ -2518,6 +2549,7 @@
         "mijote",
         "minceur",
         "pate",
+        "potable)",
         "salt_table/default",
         "sans viande",
         "vegetarien",
@@ -2616,7 +2648,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.88
+        "confidence": 0.88,
+        "spice_level": 0
       },
       "dish_type": "condiment",
       "servings_default": 4,
@@ -2664,15 +2697,14 @@
       "difficulty_level": "easy",
       "search_tokens": [
         "(doenjang)",
-        "anemie",
+        "(eau",
         "bean",
         "coeliaque",
-        "fer",
+        "eau",
         "fermente",
         "fermented",
         "gluten free",
         "haricot",
-        "iron",
         "korean",
         "leger",
         "lent",
@@ -2683,6 +2715,7 @@
         "minceur",
         "paste",
         "pate",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -2744,7 +2777,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.98
+        "confidence": 0.98,
+        "spice_level": 0
       },
       "dish_type": "condiment",
       "servings_default": 4,
@@ -2888,7 +2922,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spice_level": 0
       },
       "dish_type": "main",
       "servings_default": 4,
@@ -3033,7 +3068,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.93
+        "confidence": 0.93,
+        "spice_level": 2
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -3426,7 +3462,10 @@
         "oil/neutral",
         "miso/white",
         "salt"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 2
+      }
     },
     {
       "id": "base_gundruk_94c079",
@@ -3484,7 +3523,8 @@
           "condiment",
           "base"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -3498,7 +3538,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.85
+        "confidence": 0.85,
+        "spice_level": 0
       },
       "dish_type": "condiment",
       "servings_default": 4,
@@ -3551,10 +3592,12 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "(legume",
         "(nepali",
         "anemie",
         "coeliaque",
+        "eau",
         "epinards",
         "fer",
         "fermente",
@@ -3573,6 +3616,7 @@
         "minceur",
         "nepalais)",
         "nepali",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -3663,7 +3707,8 @@
           "sauce",
           "condiment"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -3675,7 +3720,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spice_level": 3
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -3808,7 +3854,8 @@
           "base",
           "beverage"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -3822,7 +3869,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.91
+        "confidence": 0.91,
+        "spice_level": 0
       },
       "dish_type": "beverage",
       "servings_default": 4,
@@ -3875,11 +3923,13 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "10 min",
         "20 min",
         "5 min",
         "chanvre",
         "coeliaque",
+        "eau",
         "express",
         "gluten free",
         "hemp",
@@ -3891,6 +3941,7 @@
         "maison",
         "milk",
         "minceur",
+        "potable)",
         "quick",
         "rapide",
         "salt",
@@ -4018,7 +4069,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.94
+        "confidence": 0.94,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -5864,7 +5916,10 @@
         "sugar/white",
         "salt",
         "tomato_paste"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 1
+      }
     },
     {
       "id": "base_kimchi_61791a",
@@ -5962,7 +6017,8 @@
           "condiment",
           "base"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -5977,7 +6033,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.93
+        "confidence": 0.93,
+        "spice_level": 2
       },
       "dish_type": "condiment",
       "servings_default": 4,
@@ -6185,7 +6242,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.93
+        "confidence": 0.93,
+        "spice_level": 3
       },
       "dish_type": "soup",
       "servings_default": 4,
@@ -6229,6 +6287,7 @@
       },
       "difficulty_level": "medium",
       "search_tokens": [
+        "(baies",
         "45 minutes",
         "bouillon",
         "broth",
@@ -6246,12 +6305,14 @@
         "mala",
         "minceur",
         "moyen",
+        "pepper",
+        "poivre",
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sechees)",
         "sesame_oil",
         "sichuan",
-        "sichuan_pepper",
         "soy_sauce",
         "vegan",
         "vegetable_broth",
@@ -6835,7 +6896,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.96
+        "confidence": 0.96,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -7476,7 +7538,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.91
+        "confidence": 0.91,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -7633,7 +7696,8 @@
           "sauce",
           "condiment"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -7646,7 +7710,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.93
+        "confidence": 0.93,
+        "spice_level": 1
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -7781,7 +7846,10 @@
         "meal": [
           "dairy_alternative"
         ],
-        "season": []
+        "season": [],
+        "allergens": [
+          "tree_nuts"
+        ]
       },
       "result": {
         "texture": [
@@ -7794,7 +7862,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.85
+        "confidence": 0.85,
+        "spice_level": 0
       },
       "dish_type": "ingredient",
       "servings_default": 4,
@@ -7949,7 +8018,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.92
+        "confidence": 0.92,
+        "spice_level": 0
       },
       "dish_type": "main",
       "servings_default": 4,
@@ -8000,7 +8070,9 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "coeliaque",
+        "eau",
         "gluten free",
         "japanese",
         "leger",
@@ -8012,6 +8084,7 @@
         "minceur",
         "natto",
         "onion",
+        "potable)",
         "sans gluten",
         "sans produit animal",
         "sans viande",
@@ -8151,7 +8224,10 @@
           "base",
           "sauce"
         ],
-        "season": []
+        "season": [],
+        "allergens": [
+          "cereals_gluten"
+        ]
       },
       "result": {
         "texture": [
@@ -8165,7 +8241,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -8221,11 +8298,13 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "coriander",
         "cream",
         "creme",
         "d'avoine",
+        "eau",
         "homemade",
         "leger",
         "light",
@@ -8235,6 +8314,7 @@
         "moyen",
         "oat",
         "oats/rolled",
+        "potable)",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -8393,7 +8473,10 @@
           "base",
           "beverage"
         ],
-        "season": []
+        "season": [],
+        "allergens": [
+          "cereals_gluten"
+        ]
       },
       "result": {
         "texture": [
@@ -8406,7 +8489,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.92
+        "confidence": 0.92,
+        "spice_level": 0
       },
       "dish_type": "beverage",
       "servings_default": 4,
@@ -8460,8 +8544,10 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "d'avoine",
+        "eau",
         "homemade",
         "lait",
         "leger",
@@ -8473,6 +8559,7 @@
         "moyen",
         "oat",
         "oats/rolled",
+        "potable)",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -8562,7 +8649,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -8752,7 +8840,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.97
+        "confidence": 0.97,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -8929,7 +9018,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.97
+        "confidence": 0.97,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -9067,7 +9157,8 @@
         "meal": [
           "sauce"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -9079,7 +9170,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -9246,7 +9338,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.96
+        "confidence": 0.96,
+        "spice_level": 0
       },
       "dish_type": "bread",
       "servings_default": 4,
@@ -9285,8 +9378,10 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "all_purpose_flour",
         "dough",
+        "eau",
         "italian",
         "leger",
         "lent",
@@ -9298,6 +9393,7 @@
         "olive_oil",
         "pate",
         "pizza",
+        "potable)",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -9406,7 +9502,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.92
+        "confidence": 0.92,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -9446,7 +9543,9 @@
       },
       "difficulty_level": "medium",
       "search_tokens": [
+        "(sake",
         "citrus/lemon_juice",
+        "culinaire",
         "japanese",
         "leger",
         "lent",
@@ -9462,6 +9561,7 @@
         "sauce",
         "seaweed/kombu",
         "soy_sauce",
+        "sucre)",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -9750,7 +9850,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spice_level": 0
       },
       "dish_type": "bread",
       "servings_default": 4,
@@ -9805,8 +9906,10 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "all_purpose_flour",
         "butter/dairy",
+        "eau",
         "feuilletee",
         "french",
         "leger",
@@ -9818,6 +9921,7 @@
         "minceur",
         "pastry",
         "pate",
+        "potable)",
         "puff",
         "salt",
         "sans viande",
@@ -9937,7 +10041,8 @@
           "condiment",
           "spice_blend"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -9951,7 +10056,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spice_level": 1
       },
       "dish_type": "condiment",
       "servings_default": 4,
@@ -10091,7 +10197,8 @@
           "base",
           "beverage"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -10105,7 +10212,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "beverage",
       "servings_default": 4,
@@ -10160,9 +10268,11 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "asian",
         "coeliaque",
+        "eau",
         "gluten free",
         "homemade",
         "lait",
@@ -10172,6 +10282,7 @@
         "maison",
         "milk",
         "minceur",
+        "potable)",
         "quick",
         "rapide",
         "rice",
@@ -10246,7 +10357,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.96
+        "confidence": 0.96,
+        "spice_level": 0
       },
       "dish_type": "ingredient",
       "servings_default": 4,
@@ -10391,7 +10503,8 @@
         "meal": [
           "sauce"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -10403,7 +10516,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.97
+        "confidence": 0.97,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -10563,7 +10677,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.94
+        "confidence": 0.94,
+        "spice_level": 0
       },
       "dish_type": "main",
       "servings_default": 4,
@@ -10613,7 +10728,9 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "all_purpose_flour",
+        "eau",
         "garlic",
         "ginger",
         "japanese",
@@ -10624,6 +10741,7 @@
         "low calorie",
         "mijote",
         "minceur",
+        "potable)",
         "sans produit animal",
         "sans viande",
         "seitan",
@@ -10733,7 +10851,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.96
+        "confidence": 0.96,
+        "spice_level": 0
       },
       "dish_type": "bread",
       "servings_default": 4,
@@ -10793,10 +10912,12 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "1 heure",
         "all_purpose_flour",
         "brisee",
         "butter/dairy",
+        "eau",
         "egg",
         "french",
         "green_salad",
@@ -10806,6 +10927,7 @@
         "minceur",
         "pastry",
         "pate",
+        "potable)",
         "salt",
         "sans viande",
         "shortcrust",
@@ -11352,7 +11474,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.88
+        "confidence": 0.88,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -11403,9 +11526,11 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "coeliaque",
         "cream",
         "creme",
+        "eau",
         "gluten free",
         "homemade",
         "leger",
@@ -11417,6 +11542,7 @@
         "mijote",
         "minceur",
         "parsley",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -11952,7 +12078,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spice_level": 0
       },
       "dish_type": "beverage",
       "servings_default": 4,
@@ -12000,8 +12127,10 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "chinese",
         "coeliaque",
+        "eau",
         "gluten free",
         "homemade",
         "lait",
@@ -12014,6 +12143,7 @@
         "mijote",
         "milk",
         "minceur",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -12124,7 +12254,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.93
+        "confidence": 0.93,
+        "spice_level": 0
       },
       "dish_type": "main",
       "servings_default": 4,
@@ -12173,11 +12304,13 @@
       "difficulty_level": "easy",
       "search_tokens": [
         "(alsatian",
+        "(eau",
         "(pates",
         "45 minutes",
         "all_purpose_flour",
         "alsaciennes)",
         "alsatian",
+        "eau",
         "egg",
         "leger",
         "light",
@@ -12188,6 +12321,7 @@
         "nutmeg_whole",
         "pasta)",
         "pates",
+        "potable)",
         "pâtes",
         "salt",
         "sans viande",
@@ -12269,7 +12403,8 @@
         "meal": [
           "pastry"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -12361,8 +12496,10 @@
       "difficulty_level": "medium",
       "search_tokens": [
         "(base)",
+        "(eau",
         "asian",
         "coeliaque",
+        "eau",
         "feuilles",
         "gluten free",
         "leger",
@@ -12374,8 +12511,10 @@
         "minceur",
         "nems",
         "oil/neutral",
+        "potable)",
         "printemps",
-        "rice_flour",
+        "rice",
+        "riz",
         "roll",
         "rouleau",
         "rouleaux",
@@ -12451,7 +12590,8 @@
         ],
         "season": [
           "summer"
-        ]
+        ],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -12465,7 +12605,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -12612,7 +12753,8 @@
         ],
         "season": [
           "summer"
-        ]
+        ],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -12626,7 +12768,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -12673,6 +12816,7 @@
       "difficulty_level": "easy",
       "search_tokens": [
         "cane_sugar",
+        "citron",
         "coeliaque",
         "confiture",
         "fraises",
@@ -12680,7 +12824,7 @@
         "gluten free",
         "jam",
         "leger",
-        "lemon_juice",
+        "lemon",
         "lent",
         "light",
         "long",
@@ -13019,7 +13163,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.97
+        "confidence": 0.97,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -13194,7 +13339,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.96
+        "confidence": 0.96,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -13242,6 +13388,7 @@
       },
       "difficulty_level": "medium",
       "search_tokens": [
+        "(sake",
         "10 min",
         "20 min",
         "5 min",
@@ -13249,6 +13396,7 @@
         "agrume",
         "cane_sugar",
         "coriander",
+        "culinaire",
         "express",
         "garlic",
         "ginger",
@@ -13265,6 +13413,7 @@
         "sans viande",
         "sauce",
         "soy_sauce",
+        "sucre)",
         "teriyaki",
         "vegan",
         "vegetalien",
@@ -13602,7 +13751,8 @@
         ],
         "season": [
           "summer"
-        ]
+        ],
+        "allergens": []
       },
       "result": {
         "texture": [
@@ -13616,7 +13766,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.96
+        "confidence": 0.96,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -13887,18 +14038,17 @@
       },
       "difficulty_level": "hard",
       "search_tokens": [
+        "(eau",
         "1 heure",
-        "anemie",
         "bay_leaf",
         "bouillon",
         "broth",
         "carrot/raw",
         "celery/stalk",
         "coeliaque",
-        "fer",
+        "eau",
         "garlic",
         "gluten free",
-        "iron",
         "leek/raw",
         "leger",
         "legumes",
@@ -13908,6 +14058,7 @@
         "onion/yellow",
         "parsley/fresh",
         "pepper/ground",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -13919,7 +14070,10 @@
         "vegetalien",
         "vegetarien",
         "water"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 0
+      }
     },
     {
       "id": "base_vegetarian_fish_sauce_536a33",
@@ -14024,7 +14178,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.88
+        "confidence": 0.88,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -14453,7 +14608,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -14861,7 +15017,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -14911,11 +15068,13 @@
       "search_tokens": [
         "30 minutes",
         "british",
+        "canne",
         "clove",
         "garlic",
         "leger",
         "light",
         "low calorie",
+        "melasse",
         "minceur",
         "molasses",
         "onion",
@@ -15037,7 +15196,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.96
+        "confidence": 0.96,
+        "spice_level": 0
       },
       "dish_type": "condiment",
       "servings_default": 4,
@@ -15093,6 +15253,7 @@
       },
       "difficulty_level": "medium",
       "search_tokens": [
+        "(baies",
         "10 min",
         "20 min",
         "5 min",
@@ -15105,6 +15266,7 @@
         "light",
         "low calorie",
         "minceur",
+        "moulues)",
         "oregano",
         "quick",
         "rapide",
@@ -15112,6 +15274,7 @@
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sechees",
         "sesame/default",
         "sumac",
         "thyme",
@@ -17833,10 +17996,12 @@
         "integrate_v8_2026-06-19"
       ],
       "search_tokens": [
+        "(eau",
         "acidite",
         "agrume",
         "chinese",
         "coeliaque",
+        "eau",
         "fermentation",
         "fresh_mint",
         "gluten free",
@@ -17850,6 +18015,7 @@
         "low calorie",
         "mijote",
         "minceur",
+        "potable)",
         "sans gluten",
         "sans produit animal",
         "sans viande",
@@ -18545,10 +18711,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "all_purpose_flour",
         "bannock",
         "butter/dairy",
+        "eau",
         "ethiopian",
         "jam",
         "leger",
@@ -18557,6 +18725,7 @@
         "minceur",
         "moyen",
         "oven_cooking",
+        "potable)",
         "salt",
         "sans viande",
         "vegetarien",
@@ -19441,10 +19610,12 @@
         "integrate_v8_2026-06-19"
       ],
       "search_tokens": [
+        "(eau",
         "buckwheat",
         "butter/dairy",
         "coeliaque",
         "crepe",
+        "eau",
         "egg",
         "flour/buckwheat",
         "french",
@@ -19458,6 +19629,7 @@
         "mijote",
         "minceur",
         "pan_frying",
+        "potable)",
         "salt",
         "sans gluten",
         "sans viande",
@@ -23578,6 +23750,7 @@
         }
       },
       "search_tokens": [
+        "(baies",
         "45 minutes",
         "american",
         "bao",
@@ -23596,11 +23769,14 @@
         "minceur",
         "moyen",
         "peanut",
+        "pepper",
+        "poivre",
         "proteines",
         "sans produit animal",
         "sans viande",
+        "sechees)",
         "sesame",
-        "sichuan_pepper",
+        "sichuan",
         "soja",
         "soy_sauce",
         "sport",
@@ -24141,16 +24317,13 @@
         "japanese",
         "kare",
         "katsu",
-        "leger",
-        "light",
-        "low calorie",
-        "minceur",
         "moyen",
         "onion",
         "panko_breadcrumbs",
         "proteines",
+        "rice",
         "rice/short_grain",
-        "rice_flour",
+        "riz",
         "sans viande",
         "soja",
         "sport",
@@ -27679,9 +27852,11 @@
         }
       },
       "search_tokens": [
+        "(sans",
         "45 minutes",
         "assembly",
         "basil",
+        "bread",
         "coeliaque",
         "cucumber",
         "gluten free",
@@ -27693,12 +27868,17 @@
         "moyen",
         "olive_oil",
         "onion",
+        "pain",
+        "pane",
         "panzanella",
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sel,",
         "tomato/fresh",
-        "tuscan_bread",
+        "toscan",
+        "toscano)",
+        "tuscan",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -31520,6 +31700,8 @@
       },
       "search_tokens": [
         "(vegan)",
+        "beurre",
+        "butter",
         "coeliaque",
         "filo_pastry",
         "garlic",
@@ -31544,8 +31726,9 @@
         "sauteed",
         "spanakopita",
         "spinach/cooked",
-        "vegan_butter",
+        "vegan",
         "vegan_feta",
+        "vegetal",
         "vegetarien",
         "vegetarienne"
       ],
@@ -31976,6 +32159,8 @@
       "search_tokens": [
         "(vegan)",
         "anemie",
+        "beurre",
+        "butter",
         "coeliaque",
         "egg",
         "epinards",
@@ -32003,8 +32188,8 @@
         "spanakopita",
         "spinach",
         "vegan",
-        "vegan_butter",
         "vegan_feta",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -33054,11 +33239,15 @@
         "cream_heavy/default",
         "frying",
         "gluten free",
+        "leger",
         "lent",
         "lettuce/raw",
+        "light",
         "lime/juice_fresh",
         "long",
+        "low calorie",
         "mijote",
+        "minceur",
         "salt_table/default",
         "sans gluten",
         "sans viande",
@@ -36032,6 +36221,7 @@
         "light",
         "low calorie",
         "minceur",
+        "pain",
         "pepper",
         "quick",
         "radish",
@@ -36285,7 +36475,6 @@
         "20 min",
         "5 min",
         "agave",
-        "anemie",
         "boiling",
         "bol",
         "bowl",
@@ -36296,15 +36485,17 @@
         "express",
         "facile enfants",
         "famille",
-        "fer",
         "fruits",
         "gluten free",
         "international",
-        "iron",
         "kids",
         "kiwi",
+        "leger",
+        "light",
+        "low calorie",
         "mango",
         "matin",
+        "minceur",
         "morning",
         "proteines completes",
         "pumpkin_seeds",
@@ -36546,15 +36737,19 @@
       },
       "search_tokens": [
         "anemie",
+        "blossom",
         "bread_flour",
         "brioche",
         "butter/dairy",
+        "d'oranger",
+        "eau",
         "egg",
         "enfants",
         "facile enfants",
         "famille",
         "fer",
         "fermentation",
+        "fleur",
         "french_vendeen",
         "iron",
         "kids",
@@ -36563,7 +36758,7 @@
         "mijote",
         "milk_animal/whole",
         "muscle",
-        "orange_blossom_water",
+        "orange",
         "oven_cooking",
         "protéines",
         "riche en proteines",
@@ -36574,6 +36769,7 @@
         "vegetarien",
         "vendee",
         "vendeenne",
+        "water",
         "yeast/dry"
       ],
       "difficulty_level": "medium",
@@ -38818,18 +39014,22 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "anemie",
         "buckwheat",
-        "buckwheat_flour",
         "champignons",
         "coconut_cream",
         "coeliaque",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
+        "fer",
         "french",
         "galette",
         "garlic",
         "gluten free",
+        "iron",
         "kids",
         "leger",
         "lent",
@@ -38844,6 +39044,7 @@
         "olive_oil",
         "pan_frying",
         "pepper",
+        "potable)",
         "salt",
         "sans gluten",
         "sans viande",
@@ -41157,7 +41358,7 @@
         "45 minutes",
         "all_purpose_flour",
         "anemie",
-        "baking_powder",
+        "baking",
         "belges",
         "belgian",
         "butter/dairy",
@@ -41169,9 +41370,12 @@
         "gaufres",
         "iron",
         "kids",
+        "lever",
         "milk_animal/whole",
         "moyen",
         "muscle",
+        "poudre",
+        "powder",
         "protéines",
         "riche en proteines",
         "sans viande",
@@ -41417,6 +41621,7 @@
         "bowl",
         "braising",
         "coeliaque",
+        "d'erable",
         "desiccated_coconut",
         "enfants",
         "express",
@@ -41430,7 +41635,7 @@
         "leger",
         "light",
         "low calorie",
-        "maple_syrup",
+        "maple",
         "minceur",
         "pumpkin_seeds",
         "quick",
@@ -41439,7 +41644,9 @@
         "rouges",
         "sans gluten",
         "sans viande",
+        "sirop",
         "strawberry",
+        "syrup",
         "vegetarien",
         "yaourt",
         "yogurt",
@@ -41711,37 +41918,33 @@
       },
       "search_tokens": [
         "45 minutes",
-        "anemie",
         "cinnamon",
         "coconut_milk",
         "coconut_oil",
         "coeliaque",
+        "d'erable",
         "dried_cranberry",
         "enfants",
         "facile enfants",
         "famille",
-        "fer",
         "gluten free",
         "granola",
         "homemade",
         "international",
-        "iron",
         "kids",
         "maison",
-        "maple_syrup",
+        "maple",
         "moyen",
-        "muscle",
         "oven_cooking",
-        "protéines",
         "pumpkin_seeds",
-        "riche en proteines",
         "rolled_oats",
         "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "sport",
+        "sirop",
         "sunflower_seeds",
+        "syrup",
         "vanilla",
         "vegan",
         "vegetalien",
@@ -42118,27 +42321,24 @@
       "search_tokens": [
         "(vegan)",
         "45 minutes",
-        "anemie",
         "coeliaque",
         "egg",
-        "fer",
         "gluten free",
         "green_bell_pepper",
-        "iron",
+        "leger",
+        "light",
+        "low calorie",
         "menemen",
+        "minceur",
         "moyen",
-        "muscle",
         "olive_oil",
         "onion/yellow",
         "paprika/sweet",
         "pepper/ground",
-        "protéines",
-        "riche en proteines",
         "salt",
         "sans gluten",
         "sans viande",
         "sauteed",
-        "sport",
         "tomato/fresh",
         "turkish",
         "vegetarien"
@@ -43281,7 +43481,6 @@
         "10 min",
         "20 min",
         "5 min",
-        "anemie",
         "aux",
         "butter/dairy",
         "chervil",
@@ -43292,34 +43491,28 @@
         "express",
         "facile enfants",
         "famille",
-        "fer",
         "french",
         "garden",
         "gluten free",
         "herb",
         "herbes",
-        "iron",
         "jardin",
         "kids",
         "leger",
         "light",
         "low calorie",
         "minceur",
-        "muscle",
         "omelette",
         "pain_complet",
         "pan_frying",
         "parsley",
         "pepper",
-        "protéines",
         "quick",
         "rapide",
-        "riche en proteines",
         "salade_verte",
         "salt",
         "sans gluten",
         "sans viande",
-        "sport",
         "vegetarien",
         "whisking"
       ],
@@ -43961,6 +44154,7 @@
         "chia_seeds",
         "cinnamon",
         "coeliaque",
+        "d'erable",
         "enfants",
         "express",
         "facile enfants",
@@ -43973,7 +44167,7 @@
         "light",
         "low calorie",
         "maceration",
-        "maple_syrup",
+        "maple",
         "milk_plant/oat",
         "minceur",
         "oats",
@@ -43985,7 +44179,9 @@
         "rolled_oats",
         "sans gluten",
         "sans viande",
+        "sirop",
         "super aliment",
+        "syrup",
         "vanilla",
         "vegan",
         "vegetarien",
@@ -44249,7 +44445,7 @@
           "variant_name_fr": "sucre blanc"
         },
         {
-          "ingredient": "cream",
+          "ingredient": "cashew_cream",
           "quantity": null,
           "unit": "1 cuillère à soupe",
           "meta": {
@@ -44257,7 +44453,8 @@
             "ingredient_fr": "crème fraîche",
             "note": "Pour une touche de fraîcheur",
             "optional": true,
-            "added_by": "chef_rewrite_v8.0_2026-06-17"
+            "added_by": "chef_rewrite_v8.0_2026-06-17",
+            "substitution_note": "cream → cashew_cream (fix_recipes_coherence C8)"
           }
         }
       ],
@@ -44311,7 +44508,9 @@
         }
       },
       "search_tokens": [
+        "(fleur",
         "american",
+        "anemie",
         "aux",
         "baking_powder/powder",
         "baking_soda/default",
@@ -44320,11 +44519,17 @@
         "bananes",
         "bread",
         "cinnamon/spice",
+        "coco",
+        "coconut",
         "coconut/oil",
-        "coconut_sugar",
+        "cocotier)",
+        "digestion",
         "enfants",
         "facile enfants",
         "famille",
+        "fer",
+        "fibre",
+        "iron",
         "kids",
         "lent",
         "long",
@@ -44332,9 +44537,12 @@
         "oat_milk/milk_plain_unsweetened_fresh_aisle_plant",
         "oven_cooking",
         "pain",
+        "riche en fibres",
         "rolled_oats",
         "sans produit animal",
         "sans viande",
+        "sucre",
+        "sugar",
         "vanilla/pod",
         "vegan",
         "vegetalien",
@@ -44378,7 +44586,7 @@
         "vegan": true,
         "vegetarian": true,
         "gluten_free": false,
-        "lactose_free": true,
+        "lactose_free": false,
         "nut_free": false,
         "raw": false,
         "kid_friendly": false
@@ -44419,7 +44627,19 @@
         "chef_rewrite_v6_2026-05-19",
         "fix_2026-05-19: gluten_free true→false (gluten détecté dans composition)",
         "chef_rewrite_v6_2026-05-20",
-        "integrate_v8_2026-06-19"
+        "integrate_v8_2026-06-19",
+        {
+          "date": "2026-07-26T17:01:04.563823+00:00",
+          "script": "fix_recipes_coherence.py",
+          "check": "C1_lactose_false_positive",
+          "detail": "lactose_free=True mais ingrédients laitiers: {'cream'}"
+        },
+        {
+          "date": "2026-07-26T17:01:04.563823+00:00",
+          "script": "fix_recipes_coherence.py",
+          "check": "C8_vegan_name_ingredient_conflict",
+          "detail": "Recette nommée 'Vegan' contient des laitiers animaux: {'cream'} → substitution auto"
+        }
       ],
       "_serving_suggestions_log": [
         {
@@ -47602,11 +47822,7 @@
         "french",
         "gluten free",
         "kids",
-        "leger",
-        "light",
-        "low calorie",
         "macadamia_nuts",
-        "minceur",
         "moyen",
         "pain",
         "pan_frying",
@@ -48024,27 +48240,29 @@
       "search_tokens": [
         "30 minutes",
         "american",
+        "anemie",
         "baking_powder/powder",
         "banana",
         "banana_raw/raw",
         "banane",
         "coconut_flakes",
         "coconut_flour/flour",
+        "digestion",
         "enfants",
         "facile enfants",
         "famille",
+        "fer",
+        "fibre",
         "fresh_herbs",
         "gateau",
+        "iron",
         "kids",
-        "leger",
-        "light",
-        "low calorie",
-        "minceur",
         "oat_milk/milk_plain_unsweetened_fresh_aisle_plant",
         "pan_frying",
         "pancakes",
         "quick",
         "rapide",
+        "riche en fibres",
         "salt_table/default",
         "sans produit animal",
         "sans viande",
@@ -51257,7 +51475,7 @@
         "45 minutes",
         "all_purpose_flour",
         "anemie",
-        "baking_powder",
+        "baking",
         "blueberry",
         "butter/dairy",
         "citron",
@@ -51273,16 +51491,15 @@
         "kids",
         "lemon",
         "lemon_zest",
+        "lever",
         "milk_animal/whole",
         "moyen",
-        "muscle",
         "pan_frying",
         "pancakes",
-        "protéines",
-        "riche en proteines",
+        "poudre",
+        "powder",
         "ricotta",
         "sans viande",
-        "sport",
         "vanilla",
         "vegetarien",
         "whisking"
@@ -51985,6 +52202,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "apple",
         "braising",
@@ -51992,6 +52210,8 @@
         "cinnamon",
         "coeliaque",
         "coriander",
+        "d'erable",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -52001,18 +52221,21 @@
         "leger",
         "light",
         "low calorie",
-        "maple_syrup",
+        "maple",
         "milk_plant/oat",
         "minceur",
         "nutmeg_whole",
         "pomme",
         "porridge",
+        "potable)",
         "quick",
         "rapide",
         "rolled_oats",
         "salt",
         "sans gluten",
         "sans viande",
+        "sirop",
+        "syrup",
         "vegetarien",
         "walnut",
         "water"
@@ -54966,38 +55189,35 @@
       },
       "search_tokens": [
         "45 minutes",
-        "anemie",
         "coeliaque",
         "cumin/seeds",
         "egg",
         "enfants",
         "facile enfants",
         "famille",
-        "fer",
         "fresh_coriander",
         "garlic",
         "gluten free",
         "green",
         "green_bell_pepper",
         "green_chili",
-        "iron",
         "kids",
+        "leger",
         "levantine",
+        "light",
+        "low calorie",
+        "minceur",
         "moyen",
-        "muscle",
         "olive_oil",
         "onion/yellow",
         "parsley/fresh",
         "poaching",
-        "protéines",
-        "riche en proteines",
         "salt",
         "sans gluten",
         "sans viande",
         "sauteed",
         "shakshuka",
         "spinach/raw",
-        "sport",
         "vegetarien",
         "verte",
         "zucchini/raw"
@@ -58105,12 +58325,14 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "apple",
         "brown_sugar/sweetened",
         "chantecler_apple/raw_skinless",
         "cinnamon/spice",
         "cream_heavy/default",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -58119,12 +58341,9 @@
         "french",
         "fresh_mint",
         "kids",
-        "leger",
-        "light",
-        "low calorie",
-        "minceur",
         "oven_cooking",
         "pomme",
+        "potable)",
         "quick",
         "rapide",
         "salt_table/default",
@@ -61114,6 +61333,7 @@
         "leger",
         "light",
         "low calorie",
+        "miel",
         "minceur",
         "quick",
         "rapide",
@@ -61676,26 +61896,32 @@
         "anemie",
         "avocado",
         "avocat",
+        "bread",
         "chili_pepper",
         "citrus/lime_juice",
         "coeliaque",
+        "digestion",
         "enfants",
         "express",
         "facile enfants",
         "famille",
         "fer",
+        "fibre",
         "gluten free",
         "graines",
         "international",
         "iron",
         "kids",
+        "levain",
         "muscle",
         "olive_oil",
+        "pain",
         "protéines",
         "pumpkin_seeds",
         "quick",
         "radish",
         "rapide",
+        "riche en fibres",
         "riche en proteines",
         "salt",
         "sans gluten",
@@ -61703,7 +61929,7 @@
         "sans viande",
         "seed",
         "sesame_seeds",
-        "sourdough_bread",
+        "sourdough",
         "sport",
         "sprouts",
         "sunflower_seeds",
@@ -62178,7 +62404,8 @@
         "meal": [
           "paste"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "dish_type": "paste",
       "servings_default": 4,
@@ -62272,7 +62499,10 @@
         "oil/neutral",
         "salt",
         "vinegar/rice"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 3
+      }
     },
     {
       "id": "condiment_fried_onion_217e6a",
@@ -62957,6 +63187,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "10 min",
         "20 min",
         "5 min",
@@ -62964,6 +63195,7 @@
         "carrot",
         "chickpea",
         "couscous",
+        "eau",
         "express",
         "fer",
         "fibre",
@@ -62977,6 +63209,7 @@
         "onion",
         "parsley",
         "pois chiches",
+        "potable)",
         "proteines",
         "quick",
         "rapide",
@@ -63862,11 +64095,13 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "carrot",
         "chickpea",
         "coriander",
         "couscous",
+        "eau",
         "fer",
         "fibre",
         "leger",
@@ -63878,6 +64113,7 @@
         "olive_oil",
         "onion",
         "pois chiches",
+        "potable)",
         "proteines",
         "sans produit animal",
         "sans viande",
@@ -66242,9 +66478,13 @@
       "search_tokens": [
         "almond/slivered",
         "assembly",
+        "blossom",
         "cinnamon",
         "couscous",
+        "d'oranger",
         "dried_raisins",
+        "eau",
+        "fleur",
         "leger",
         "lent",
         "light",
@@ -66255,7 +66495,7 @@
         "moroccan",
         "olive_oil",
         "onion/red",
-        "orange_blossom_water",
+        "orange",
         "parsley",
         "sans produit animal",
         "sans viande",
@@ -66266,7 +66506,8 @@
         "vegan",
         "vegetalien",
         "vegetarian",
-        "vegetarien"
+        "vegetarien",
+        "water"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
@@ -67016,12 +67257,14 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "braising",
         "carrot",
         "chickpea",
         "coriander",
         "couscous",
+        "eau",
         "fer",
         "fibre",
         "leger",
@@ -67032,6 +67275,7 @@
         "olive_oil",
         "onion",
         "pois chiches",
+        "potable)",
         "proteines",
         "quick",
         "rapide",
@@ -67815,7 +68059,9 @@
       "search_tokens": [
         "(vegan)",
         "almond/slivered",
+        "beurre",
         "braising",
+        "butter",
         "cinnamon",
         "couscous",
         "ginger/fresh",
@@ -67826,6 +68072,7 @@
         "long",
         "low calorie",
         "maghrebi",
+        "miel",
         "mijote",
         "minceur",
         "olive_oil_extra_vierge_plant",
@@ -67837,7 +68084,8 @@
         "sauteed",
         "sugar/white",
         "tfaya",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -68568,16 +68816,19 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "braising",
         "carrot",
         "chickpea",
+        "citron",
         "couscous",
+        "eau",
         "fer",
         "fibre",
         "harissa",
         "leger",
-        "lemon_juice",
+        "lemon",
         "light",
         "low calorie",
         "minceur",
@@ -68585,6 +68836,7 @@
         "olive_oil",
         "onion",
         "pois chiches",
+        "potable)",
         "proteines",
         "sans produit animal",
         "sans viande",
@@ -70077,10 +70329,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "10 min",
         "20 min",
         "5 min",
         "coeliaque",
+        "eau",
         "ethiopian",
         "express",
         "galette",
@@ -70092,6 +70346,7 @@
         "low calorie",
         "minceur",
         "parsley",
+        "potable)",
         "quick",
         "rapide",
         "salt",
@@ -70712,8 +70967,10 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "all_purpose_flour",
+        "eau",
         "gateau",
         "international",
         "leger",
@@ -70725,6 +70982,7 @@
         "onion/red",
         "pan_frying",
         "pancakes",
+        "potable)",
         "sales",
         "salt",
         "sans viande",
@@ -71024,24 +71282,27 @@
         }
       },
       "search_tokens": [
+        "(murraya",
         "braising",
         "chili_pepper",
         "coconut_milk",
         "coconut_oil",
         "coeliaque",
         "curry",
-        "curry_leaf",
         "d'aubergine",
         "dijon_mustard",
         "eggplant",
         "epices",
+        "feuille",
         "fraiches",
         "fresh",
         "garlic",
         "ginger",
         "gluten free",
+        "koenigii)",
         "lankais",
         "lankan",
+        "leaf",
         "leger",
         "lent",
         "light",
@@ -74448,20 +74709,23 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "braising",
         "chana",
         "chickpea",
         "coeliaque",
         "cumin/seeds",
         "curry",
+        "epices",
         "fer",
         "fibre",
         "fresh_coriander",
-        "garam_masala",
+        "garam",
         "garlic",
         "ginger/fresh",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "lent",
         "light",
@@ -77281,6 +77545,8 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(melange",
         "anemie",
         "aux",
         "braising",
@@ -77292,14 +77558,17 @@
         "coeliaque",
         "cumin",
         "curry",
+        "eau",
+        "epices",
         "epinards",
         "fer",
         "fibre",
-        "garam_masala",
+        "garam",
         "garlic",
         "ginger",
         "gluten free",
         "indian",
+        "indien)",
         "iron",
         "leger",
         "lent",
@@ -77307,12 +77576,14 @@
         "long",
         "low calorie",
         "magnesium",
+        "masala",
         "mijote",
         "minceur",
         "onion",
         "palak",
         "pois",
         "pois chiches",
+        "potable)",
         "proteines",
         "reduction",
         "sans gluten",
@@ -78239,21 +78510,30 @@
         }
       },
       "search_tokens": [
+        "(fleur",
+        "(kaffir",
         "1 heure",
         "antioxydants",
         "bell_pepper",
         "calcium",
+        "coco",
+        "coconut",
         "coconut_milk",
         "coconut_oil",
-        "coconut_sugar",
+        "cocotier)",
+        "combava",
         "curry",
+        "feuille",
         "garlic",
         "green_curry_paste",
         "kaeng",
-        "kaffir_lime_leaf",
+        "kaffir",
         "khiao",
+        "leaf",
         "leger",
         "light",
+        "lime",
+        "lime)",
         "low calorie",
         "minceur",
         "onion",
@@ -78263,6 +78543,8 @@
         "soja",
         "soy_sauce",
         "sport",
+        "sucre",
+        "sugar",
         "thai",
         "thai_basil",
         "tofu",
@@ -79038,6 +79320,7 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "45 minutes",
         "chili_pepper",
         "coeliaque",
@@ -79045,14 +79328,17 @@
         "curry",
         "d'aubergine",
         "eggplant",
-        "garam_masala",
+        "epices",
+        "garam",
         "garlic",
         "gluten free",
         "indian",
         "indien",
+        "indien)",
         "leger",
         "light",
         "low calorie",
+        "masala",
         "minceur",
         "moyen",
         "onion",
@@ -79907,6 +80193,7 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "1 heure",
         "aloo",
         "basmati_rice",
@@ -79916,14 +80203,17 @@
         "coriander",
         "cumin",
         "curry",
-        "garam_masala",
+        "epices",
+        "garam",
         "garlic",
         "ginger",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "light",
         "low calorie",
+        "masala",
         "matar",
         "minceur",
         "onion",
@@ -81307,21 +81597,30 @@
         }
       },
       "search_tokens": [
+        "(fleur",
+        "(kaffir",
         "1 heure",
         "antioxydants",
         "bell_pepper",
         "braising",
         "calcium",
+        "coco",
+        "coconut",
         "coconut_milk",
         "coconut_oil",
-        "coconut_sugar",
+        "cocotier)",
+        "combava",
         "curry",
+        "feuille",
         "garlic",
         "green",
         "green_curry_paste",
-        "kaffir_lime_leaf",
+        "kaffir",
+        "leaf",
         "leger",
         "light",
+        "lime",
+        "lime)",
         "low calorie",
         "minceur",
         "onion",
@@ -81331,6 +81630,8 @@
         "soja",
         "soy_sauce",
         "sport",
+        "sucre",
+        "sugar",
         "thai",
         "thai_basil",
         "tofu",
@@ -85294,15 +85595,18 @@
         }
       },
       "search_tokens": [
+        "(fleur",
         "45 minutes",
         "antioxydants",
         "bell_pepper",
         "braising",
         "calcium",
         "citrus/lime",
+        "coco",
+        "coconut",
         "coconut_milk",
         "coconut_oil",
-        "coconut_sugar",
+        "cocotier)",
         "coeliaque",
         "curry",
         "eggplant",
@@ -85324,6 +85628,8 @@
         "sans viande",
         "soja",
         "sport",
+        "sucre",
+        "sugar",
         "thai",
         "thai_basil",
         "tofu",
@@ -85855,15 +86161,17 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "all_purpose_flour",
         "braising",
         "butter/dairy",
         "carrot",
         "curry",
-        "curry_powder",
-        "garam_masala",
+        "epices",
+        "garam",
         "garlic",
         "ginger",
+        "indien)",
         "japanese",
         "japonais",
         "kare",
@@ -85872,6 +86180,7 @@
         "light",
         "long",
         "low calorie",
+        "masala",
         "mijote",
         "minceur",
         "onion",
@@ -90510,8 +90819,9 @@
         "panko_breadcrumbs",
         "parsley",
         "proteines",
+        "rice",
         "rice/short_grain",
-        "rice_flour",
+        "riz",
         "sans viande",
         "sauteed",
         "sesame",
@@ -91081,26 +91391,33 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(melange",
         "braising",
         "coeliaque",
         "cumin_seed/spice_seed",
         "curry",
-        "garam_masala",
+        "eau",
+        "epices",
+        "garam",
         "garlic_raw/raw",
         "ghee",
         "ginger/fresh_herb_root_fresh",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "lent",
         "light",
         "long",
         "low calorie",
+        "masala",
         "mijote",
         "minceur",
         "onions_yellow_raw/raw",
         "palak",
         "paneer",
+        "potable)",
         "reduction",
         "salt_table/default",
         "sans gluten",
@@ -91403,27 +91720,34 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(melange",
         "braising",
         "coeliaque",
         "controlled",
         "cumin/seeds",
-        "garam_masala",
+        "eau",
+        "epices",
+        "garam",
         "garlic",
         "ghee",
         "ginger/fresh",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "lent",
         "light",
         "long",
         "low calorie",
         "maitrise",
+        "masala",
         "mijote",
         "minceur",
         "onion/yellow",
         "palak",
         "paneer",
+        "potable)",
         "reduction",
         "sans gluten",
         "sans viande",
@@ -91736,6 +92060,7 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "beurre",
         "braising",
         "butter",
@@ -91744,11 +92069,13 @@
         "coeliaque",
         "cream_animal/heavy",
         "emulsion",
-        "garam_masala",
+        "epices",
+        "garam",
         "garlic",
         "ginger/fresh",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "lent",
         "light",
@@ -96344,6 +96671,8 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(melange",
         "braising",
         "butter",
         "butter/dairy",
@@ -96351,12 +96680,15 @@
         "coeliaque",
         "controlled",
         "cream_animal/heavy",
+        "eau",
         "emulsion",
-        "garam_masala",
+        "epices",
+        "garam",
         "garlic",
         "ginger",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "lent",
         "light",
@@ -96368,6 +96700,7 @@
         "minceur",
         "onion",
         "paneer",
+        "potable)",
         "reduction",
         "sans gluten",
         "sans viande",
@@ -97767,15 +98100,18 @@
         }
       },
       "search_tokens": [
+        "(murraya",
         "1 heure",
         "braising",
         "coconut_milk",
         "coeliaque",
         "curry",
-        "curry_leaf",
+        "feuille",
         "garlic",
         "gluten free",
+        "koenigii)",
         "lankan",
+        "leaf",
         "leger",
         "light",
         "low calorie",
@@ -101823,7 +102159,6 @@
         }
       },
       "search_tokens": [
-        "anemie",
         "ash",
         "braising",
         "chickpea",
@@ -101833,7 +102168,6 @@
         "garlic",
         "gluten free",
         "green_lentils",
-        "iron",
         "kashk",
         "leger",
         "lent",
@@ -102113,10 +102447,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "braising",
         "carrot",
         "coconut",
         "coeliaque",
+        "eau",
         "garlic",
         "gluten free",
         "green_lentils",
@@ -102133,6 +102469,7 @@
         "onion",
         "parsley",
         "pepper",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -103805,9 +104142,13 @@
         "gluten free",
         "graines",
         "japanese",
+        "leger",
         "lent",
+        "light",
         "long",
+        "low calorie",
         "mijote",
+        "minceur",
         "olive_oil",
         "pois chiches",
         "proteines",
@@ -105111,9 +105452,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(pois",
         "braising",
+        "casse)",
         "chana",
-        "chana_dal",
+        "chiche",
         "chiches",
         "chili_pepper",
         "coconut",
@@ -105122,6 +105466,7 @@
         "cumin",
         "dahl",
         "dal",
+        "eau",
         "garlic",
         "ginger",
         "gluten free",
@@ -105135,6 +105480,7 @@
         "minceur",
         "onion",
         "pois",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -105881,8 +106227,11 @@
         }
       },
       "search_tokens": [
+        "(melange",
+        "(poudre",
         "1 heure",
-        "amchoor_powder",
+        "amchoor",
+        "amchur",
         "basmati_rice",
         "bhature",
         "braising",
@@ -105892,18 +106241,23 @@
         "coeliaque",
         "coriander",
         "cumin/seeds",
+        "epices",
         "fer",
         "fibre",
-        "garam_masala",
+        "garam",
         "garlic",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "light",
         "low calorie",
+        "mangue",
+        "masala",
         "minceur",
         "onion/yellow",
         "pois chiches",
+        "powder",
         "proteines",
         "salt",
         "sans gluten",
@@ -105913,6 +106267,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "verte)",
         "wok"
       ],
       "difficulty_level": "medium",
@@ -106244,6 +106599,7 @@
       },
       "search_tokens": [
         "(curry",
+        "(melange",
         "braising",
         "chiches)",
         "chickpea",
@@ -106252,19 +106608,22 @@
         "coeliaque",
         "cumin",
         "curry",
+        "epices",
         "fer",
         "fibre",
         "fresh_coriander",
-        "garam_masala",
+        "garam",
         "garlic",
         "ginger",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "lent",
         "light",
         "long",
         "low calorie",
+        "masala",
         "mijote",
         "minceur",
         "onion",
@@ -109004,6 +109363,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "braising",
         "chili_pepper",
         "coco",
@@ -109013,6 +109373,7 @@
         "cumin/seeds",
         "dahl",
         "dal",
+        "eau",
         "fresh_coriander",
         "garlic",
         "ginger/fresh",
@@ -109027,6 +109388,7 @@
         "mijote",
         "minceur",
         "onion/yellow",
+        "potable)",
         "red_lentils",
         "salt",
         "sans gluten",
@@ -110042,6 +110404,7 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "45 minutes",
         "anemie",
         "chana",
@@ -110050,19 +110413,22 @@
         "coeliaque",
         "cumin",
         "curry",
+        "epices",
         "epinards",
         "fer",
         "fibre",
         "fresh_coriander",
-        "garam_masala",
+        "garam",
         "garlic",
         "gluten free",
         "indian",
+        "indien)",
         "iron",
         "leger",
         "light",
         "low calorie",
         "magnesium",
+        "masala",
         "minceur",
         "moyen",
         "onion",
@@ -114750,17 +115116,14 @@
       "search_tokens": [
         "30 minutes",
         "all_purpose_flour",
-        "anemie",
         "chickpea",
         "coriander/ground",
         "cumin",
-        "digestion",
         "falafel",
         "fer",
         "fibre",
         "frying",
         "garlic",
-        "iron",
         "leger",
         "levantine",
         "light",
@@ -114772,7 +115135,6 @@
         "proteines",
         "quick",
         "rapide",
-        "riche en fibres",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -115013,7 +115375,6 @@
         "30 minutes",
         "chiches",
         "chickpea",
-        "chickpea_flour",
         "coeliaque",
         "coriander",
         "coriander/ground",
@@ -121809,7 +122170,6 @@
         }
       },
       "search_tokens": [
-        "anemie",
         "braising",
         "celery",
         "chickpea",
@@ -121822,7 +122182,6 @@
         "gluten free",
         "green_lentils",
         "harira",
-        "iron",
         "leger",
         "lent",
         "light",
@@ -125328,8 +125687,8 @@
       "search_tokens": [
         "1 heure",
         "braising",
+        "chiches",
         "chickpea",
-        "chickpea_flour",
         "coeliaque",
         "cumin/seeds",
         "fer",
@@ -125346,6 +125705,7 @@
         "onion/yellow",
         "pakora",
         "pepper/ground",
+        "pois",
         "pois chiches",
         "proteines",
         "salt",
@@ -125603,8 +125963,8 @@
         "(vegan)",
         "1 heure",
         "braising",
+        "chiches",
         "chickpea",
-        "chickpea_flour",
         "coeliaque",
         "cumin",
         "fer",
@@ -125621,6 +125981,7 @@
         "onion",
         "pakora",
         "pepper",
+        "pois",
         "pois chiches",
         "proteines",
         "salt",
@@ -128485,8 +128846,10 @@
       },
       "search_tokens": [
         "(vegan)",
+        "beurre",
         "braising",
         "british",
+        "butter",
         "carrot",
         "coeliaque",
         "coriander",
@@ -128511,8 +128874,8 @@
         "shepherd",
         "thyme",
         "vegan",
-        "vegan_butter",
         "vegetable_broth",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -130744,8 +131107,10 @@
       },
       "search_tokens": [
         "(vegan)",
+        "beurre",
         "braising",
         "british",
+        "butter",
         "carrot/raw",
         "coeliaque",
         "gluten free",
@@ -130766,7 +131131,8 @@
         "sans viande",
         "shepherd's",
         "soy_milk/milk_plain_unsweetened_pre_packaged_plant",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -133809,6 +134175,7 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "(vegan)",
         "braising",
         "coconut_milk",
@@ -133816,12 +134183,14 @@
         "coeliaque",
         "cumin",
         "dal",
-        "garam_masala",
+        "epices",
+        "garam",
         "garlic",
         "ginger",
         "gluten free",
         "green_lentils",
         "indian",
+        "indien)",
         "kidney_bean",
         "leger",
         "lent",
@@ -133829,6 +134198,7 @@
         "long",
         "low calorie",
         "makhani",
+        "masala",
         "mijote",
         "minceur",
         "olive_oil",
@@ -134144,33 +134514,41 @@
         }
       },
       "search_tokens": [
+        "(urad",
         "45 minutes",
         "coeliaque",
         "coriander/ground",
+        "dal,",
         "dijon_mustard",
         "dosa",
         "ginger",
         "gluten free",
         "green_chili",
         "grilling",
+        "haricot",
         "indian",
         "leger",
+        "lentil",
+        "lentille",
         "light",
         "low calorie",
         "masala",
         "minceur",
         "moyen",
+        "mungo",
         "mustard_seeds",
+        "noir)",
         "onion",
         "potato",
-        "rice_flour",
+        "rice",
+        "riz",
         "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sunflower",
         "turmeric",
-        "urad_lentil",
+        "urad",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -136277,6 +136655,7 @@
         "assembly",
         "bulgur",
         "cream",
+        "creme",
         "cumin",
         "international",
         "koftesi",
@@ -136330,7 +136709,7 @@
         "vegan": false,
         "vegetarian": true,
         "gluten_free": false,
-        "lactose_free": true,
+        "lactose_free": false,
         "nut_free": true,
         "raw": false,
         "kid_friendly": false
@@ -136349,7 +136728,13 @@
         "merge_rewrite_content_2026-05-08",
         "chef_rewrite_v6_2026-05-20",
         "devegan_fix_2026-05-22: revert vegan contamination in text (huile de coco, levure nutritionnelle)",
-        "integrate_v8_2026-06-19"
+        "integrate_v8_2026-06-19",
+        {
+          "date": "2026-07-26T17:01:04.563823+00:00",
+          "script": "fix_recipes_coherence.py",
+          "check": "C1_lactose_false_positive",
+          "detail": "lactose_free=True mais ingrédients laitiers: {'cream'}"
+        }
       ],
       "_ingredient_replacements_log": [
         {
@@ -136995,6 +137380,7 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "1 heure",
         "braising",
         "chickpea",
@@ -137002,15 +137388,18 @@
         "coriander/ground",
         "cumin",
         "curry",
+        "epices",
         "fer",
         "fibre",
-        "garam_masala",
+        "garam",
         "garlic",
         "ginger",
         "gluten free",
+        "indien)",
         "leger",
         "light",
         "low calorie",
+        "masala",
         "minceur",
         "nepali",
         "olive_oil",
@@ -137677,7 +138066,8 @@
       },
       "search_tokens": [
         "30 minutes",
-        "chickpea_flour",
+        "chiches",
+        "chickpea",
         "chili_pepper",
         "coeliaque",
         "coriander",
@@ -137693,6 +138083,7 @@
         "minceur",
         "onion",
         "pakora",
+        "pois",
         "quick",
         "rapide",
         "sans gluten",
@@ -142238,7 +142629,7 @@
         "berbere_sauce",
         "braising",
         "chiches",
-        "chickpea_flour",
+        "chickpea",
         "coeliaque",
         "coriander",
         "ethiopian",
@@ -144118,11 +144509,13 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "assembly",
         "azifa",
         "carrot",
         "coeliaque",
         "coriander",
+        "eau",
         "ethiopian",
         "ethiopienne",
         "garlic",
@@ -144138,6 +144531,7 @@
         "minceur",
         "olive_oil",
         "onion",
+        "potable)",
         "salad",
         "salade",
         "sans gluten",
@@ -146608,13 +147002,19 @@
         }
       },
       "search_tokens": [
+        "(epices",
+        "(murraya",
         "carrot/raw",
         "coconut",
         "coeliaque",
         "coriander/ground",
-        "curry_leaf",
+        "curry",
+        "feuille",
         "gluten free",
+        "indiennes)",
         "international",
+        "koenigii)",
+        "leaf",
         "leger",
         "lent",
         "light",
@@ -146624,9 +147024,10 @@
         "minceur",
         "mustard_seeds",
         "onion/yellow",
+        "poudre",
+        "powder",
         "salt",
         "sambar",
-        "sambar_powder",
         "sans gluten",
         "sans produit animal",
         "sans viande",
@@ -150272,11 +150673,13 @@
         }
       },
       "search_tokens": [
+        "(sel)",
         "braising",
         "chiches",
         "chickpea",
         "citron",
         "coeliaque",
+        "confit",
         "cumin",
         "fer",
         "fibre",
@@ -150286,6 +150689,7 @@
         "gluten free",
         "international",
         "leger",
+        "lemon",
         "lent",
         "light",
         "long",
@@ -150297,7 +150701,7 @@
         "onion",
         "pois",
         "pois chiches",
-        "preserved_lemon",
+        "preserved",
         "proteines",
         "salt",
         "sans gluten",
@@ -150832,7 +151236,8 @@
         "meal": [
           "broth"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "dish_type": "broth",
       "servings_default": 4,
@@ -150871,11 +151276,13 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "1 heure",
         "bouillon",
         "broth",
         "coeliaque",
         "dashi",
+        "eau",
         "gluten free",
         "japanese",
         "japonais",
@@ -150885,6 +151292,7 @@
         "low calorie",
         "minceur",
         "mushroom/button",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -150893,7 +151301,10 @@
         "vegetalien",
         "vegetarien",
         "water"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 0
+      }
     },
     {
       "id": "dessert_baklava_aux_pistaches_06e5ed",
@@ -151081,16 +151492,21 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "aux",
         "baklava",
+        "blossom",
         "butter/dairy",
         "cardamom",
         "cinnamon",
         "coeliaque",
+        "d'oranger",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
         "filo_pastry",
+        "fleur",
         "gluten free",
         "honey",
         "kids",
@@ -151100,12 +151516,14 @@
         "light",
         "long",
         "low calorie",
+        "miel",
         "mijote",
         "minceur",
-        "orange_blossom_water",
+        "orange",
         "oven_cooking",
         "pistaches",
         "pistachio",
+        "potable)",
         "sans gluten",
         "sans viande",
         "sugar/white",
@@ -151392,16 +151810,19 @@
         }
       },
       "search_tokens": [
+        "(fleur",
         "1 heure",
         "all_purpose_flour",
         "applesauce",
         "bain_marie",
-        "baking_powder",
+        "baking",
         "brownie",
         "cacao_powder",
         "chocolate_chips",
+        "coco",
+        "coconut",
         "coconut_oil",
-        "coconut_sugar",
+        "cocotier)",
         "dark_chocolate",
         "egg",
         "enfants",
@@ -151410,13 +151831,18 @@
         "international",
         "kids",
         "leger",
+        "lever",
         "light",
         "low calorie",
         "macadamia_nut",
         "milk_plant/almond",
         "minceur",
         "oven_cooking",
+        "poudre",
+        "powder",
         "sans viande",
+        "sucre",
+        "sugar",
         "sugar/white",
         "vegan",
         "vegetarien"
@@ -157557,11 +157983,14 @@
         }
       },
       "search_tokens": [
+        "(vegan)",
         "30 minutes",
         "all_purpose_flour",
         "american",
         "applesauce",
         "baking_soda",
+        "beurre",
+        "butter",
         "cane_sugar",
         "chip",
         "chocolat",
@@ -157584,7 +158013,7 @@
         "sugar/white",
         "vanilla",
         "vegan",
-        "vegan_butter",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "easy",
@@ -160057,8 +160486,11 @@
         "salted_butter",
         "salted_butter_caramel",
         "sans viande",
+        "sucre",
+        "sugar",
         "sugar/white",
-        "vanilla_sugar",
+        "vanilla",
+        "vanille",
         "vegetarien"
       ],
       "difficulty_level": "easy",
@@ -160252,8 +160684,10 @@
         "45 minutes",
         "all_purpose_flour",
         "aux",
+        "beurre",
         "blueberry",
         "british",
+        "butter",
         "crisp",
         "crumble",
         "enfants",
@@ -160270,7 +160704,8 @@
         "rolled_oats",
         "sans viande",
         "sugar/white",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "easy",
@@ -160752,7 +161187,8 @@
       "search_tokens": [
         "30 minutes",
         "all_purpose_flour",
-        "almond_flour",
+        "almond",
+        "amande",
         "amandes",
         "aux",
         "brown_butter",
@@ -161532,17 +161968,21 @@
       },
       "search_tokens": [
         "active_dry_yeast/dehydrated",
+        "blossom",
         "brioche",
         "briochee",
         "butter_dairy/default",
         "cake",
+        "d'oranger",
         "des",
+        "eau",
         "egg_whole_fresh/raw",
         "enfants",
         "epiphany",
         "facile enfants",
         "famille",
         "fermentation",
+        "fleur",
         "french_southern",
         "galette",
         "kids",
@@ -161553,13 +161993,14 @@
         "low calorie",
         "mijote",
         "minceur",
-        "orange_blossom_water",
+        "orange",
         "oven_cooking",
         "rois",
         "sans viande",
         "shaping",
         "sugars/granulated",
         "vegetarien",
+        "water",
         "white_bread/flour",
         "white_sugar/sweetened",
         "whole_milk_uht/whole_uht_whole"
@@ -161812,7 +162253,7 @@
       "search_tokens": [
         "1 heure",
         "all_purpose_flour",
-        "baking_powder",
+        "baking",
         "citron",
         "citrus/lemon_juice",
         "egg",
@@ -161824,11 +162265,14 @@
         "kids",
         "leger",
         "lemon_zest",
+        "lever",
         "light",
         "low calorie",
         "minceur",
         "olive_oil_extra_vierge_plant",
         "oven_cooking",
+        "poudre",
+        "powder",
         "sans viande",
         "sugar/white",
         "vegetarien",
@@ -162085,11 +162529,13 @@
       },
       "search_tokens": [
         "all_purpose_flour",
-        "almond_flour",
+        "almond",
+        "amande",
         "basque",
         "butter/dairy",
         "cake",
-        "cherry_jam",
+        "cerise",
+        "cherry",
         "egg",
         "enfants",
         "facile enfants",
@@ -165247,11 +165693,13 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "all_purpose_flour",
         "calcium",
         "caramel",
         "coffee",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -165265,6 +165713,7 @@
         "low calorie",
         "minceur",
         "pistachio",
+        "potable)",
         "quick",
         "rapide",
         "sans produit animal",
@@ -167944,11 +168393,14 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "amann",
         "bread_flour",
         "butter/dairy",
         "caramel",
         "cream",
+        "creme",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -167964,6 +168416,7 @@
         "mijote",
         "minceur",
         "oven_cooking",
+        "potable)",
         "salt",
         "sans viande",
         "shaping",
@@ -171979,7 +172432,7 @@
       "search_tokens": [
         "30 minutes",
         "all_purpose_flour",
-        "baking_powder",
+        "baking",
         "butter/dairy",
         "egg",
         "enfants",
@@ -171989,11 +172442,14 @@
         "kids",
         "leger",
         "lemon_zest",
+        "lever",
         "light",
         "low calorie",
         "madeleines",
         "minceur",
         "oven_cooking",
+        "poudre",
+        "powder",
         "quick",
         "rapide",
         "sans viande",
@@ -172212,7 +172668,9 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "coeliaque",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -172228,6 +172686,7 @@
         "mijote",
         "minceur",
         "mochi",
+        "potable)",
         "potato_starch/default",
         "red_bean_paste",
         "rice_white_glutinous_flour/flour",
@@ -172450,10 +172909,12 @@
         }
       },
       "search_tokens": [
+        "(aquafaba)",
         "30 minutes",
         "aquafaba",
         "bain_marie",
         "cacao_powder",
+        "chiches",
         "chocolat",
         "chocolate",
         "coeliaque",
@@ -172463,12 +172924,14 @@
         "famille",
         "gluten free",
         "international",
+        "jus",
         "kids",
         "leger",
         "light",
         "low calorie",
         "minceur",
         "mousse",
+        "pois",
         "quick",
         "rapide",
         "sans gluten",
@@ -172710,10 +173173,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "anise_seeds",
         "baking_soda",
         "cinnamon",
         "d'epices",
+        "eau",
         "enfants",
         "epices",
         "facile enfants",
@@ -172728,13 +173193,16 @@
         "light",
         "long",
         "low calorie",
+        "miel",
         "mijote",
         "minceur",
         "nutmeg_whole",
         "oven_cooking",
         "pain",
-        "rye_flour",
+        "potable)",
+        "rye",
         "sans viande",
+        "seigle",
         "vegetarien",
         "water"
       ],
@@ -173267,12 +173735,14 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "all_purpose_flour",
         "butter/dairy",
         "chocolate",
         "choux_pastry",
         "cream_animal/heavy",
         "dark_chocolate",
+        "eau",
         "egg",
         "enfants",
         "facile enfants",
@@ -173287,6 +173757,7 @@
         "mijote",
         "minceur",
         "oven_cooking",
+        "potable)",
         "profiteroles",
         "sans viande",
         "sauce",
@@ -173487,9 +173958,11 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "citron",
         "citrus/lemon_juice",
         "coeliaque",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -173508,6 +173981,7 @@
         "low calorie",
         "mijote",
         "minceur",
+        "potable)",
         "sans gluten",
         "sans produit animal",
         "sans viande",
@@ -174406,6 +174880,7 @@
         "enfants",
         "facile enfants",
         "famille",
+        "fraise",
         "fraises",
         "french",
         "gluten free",
@@ -174421,7 +174896,6 @@
         "sans viande",
         "shortcrust_pastry",
         "strawberry",
-        "strawberry_jam",
         "sugar/white",
         "tart",
         "tarte",
@@ -175385,8 +175859,11 @@
         }
       },
       "search_tokens": [
+        "(vegan)",
         "1 heure",
         "apple/golden",
+        "beurre",
+        "butter",
         "caramel",
         "coeliaque",
         "enfants",
@@ -175407,8 +175884,8 @@
         "tarte",
         "tatin",
         "vegan",
-        "vegan_butter",
         "vegan_cream",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -178618,10 +179095,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "all_purpose_flour",
         "aux",
         "carrot",
+        "eau",
         "ethiopian",
         "garlic",
         "green_cabbage",
@@ -178633,6 +179112,7 @@
         "momos",
         "onion",
         "pickle",
+        "potable)",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -180806,6 +181286,8 @@
         "30 minutes",
         "all_purpose_flour",
         "aux",
+        "beurre",
+        "butter",
         "calcium",
         "coconut_cream",
         "leger",
@@ -180830,7 +181312,8 @@
         "sport",
         "terre",
         "tofu",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -181798,6 +182281,8 @@
         "(vegan)",
         "30 minutes",
         "all_purpose_flour",
+        "beurre",
+        "butter",
         "calcium",
         "egg",
         "enfants",
@@ -181825,7 +182310,8 @@
         "sport",
         "terre",
         "tofu",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -184110,7 +184596,7 @@
         "45 minutes",
         "black_bean",
         "brazilian",
-        "cassava_flour",
+        "cassava",
         "coeliaque",
         "egg",
         "enfants",
@@ -184123,6 +184609,7 @@
         "leger",
         "light",
         "low calorie",
+        "manioc",
         "minceur",
         "moyen",
         "olive_oil_extra_vierge_plant",
@@ -184759,7 +185246,7 @@
         "black_bean",
         "brazilian",
         "cabbage_salad",
-        "cassava_flour",
+        "cassava",
         "coeliaque",
         "egg",
         "feijao",
@@ -184768,6 +185255,7 @@
         "leger",
         "light",
         "low calorie",
+        "manioc",
         "minceur",
         "moyen",
         "olive_oil_extra_vierge_plant",
@@ -185949,11 +186437,13 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "all_purpose_flour",
         "aux",
         "coreenne",
         "crepe",
+        "eau",
         "egg",
         "green_onion",
         "korean",
@@ -185963,6 +186453,7 @@
         "minceur",
         "oignons",
         "pajeon",
+        "potable)",
         "quick",
         "rapide",
         "salt",
@@ -186208,7 +186699,7 @@
         "45 minutes",
         "black_bean",
         "brazilian",
-        "cassava_flour",
+        "cassava",
         "coeliaque",
         "egg",
         "feijao",
@@ -186217,6 +186708,7 @@
         "leger",
         "light",
         "low calorie",
+        "manioc",
         "minceur",
         "moyen",
         "olive_oil_extra_vierge_plant",
@@ -198559,31 +199051,24 @@
         "10 min",
         "20 min",
         "5 min",
-        "anemie",
         "butter/dairy",
         "coeliaque",
         "egg",
         "express",
-        "fer",
         "french",
         "gluten free",
-        "iron",
         "leger",
         "light",
         "low calorie",
         "minceur",
-        "muscle",
         "omelette",
         "pepper",
-        "protéines",
         "quick",
         "rapide",
-        "riche en proteines",
         "salt",
         "sans gluten",
         "sans viande",
         "sauteed",
-        "sport",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -198784,7 +199269,6 @@
         "10 min",
         "20 min",
         "5 min",
-        "anemie",
         "baveuse",
         "black_pepper",
         "butter/dairy",
@@ -198792,28 +199276,22 @@
         "controlled",
         "egg",
         "express",
-        "fer",
         "francaise",
         "french",
         "gluten free",
-        "iron",
         "leger",
         "light",
         "low calorie",
         "maitrisee",
         "minceur",
-        "muscle",
         "omelette",
-        "protéines",
         "quick",
         "rapide",
-        "riche en proteines",
         "salt",
         "sans gluten",
         "sans viande",
         "sauteed",
         "soft",
-        "sport",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -199237,33 +199715,26 @@
         "10 min",
         "20 min",
         "5 min",
-        "anemie",
         "black_pepper",
         "butter/dairy",
         "coeliaque",
         "egg",
         "express",
-        "fer",
         "french",
         "gluten free",
-        "iron",
         "leger",
         "light",
         "low calorie",
         "minceur",
-        "muscle",
         "nature",
         "omelette",
         "plain",
-        "protéines",
         "quick",
         "rapide",
-        "riche en proteines",
         "salt",
         "sans gluten",
         "sans viande",
         "sauteed",
-        "sport",
         "vegetarien"
       ],
       "difficulty_level": "easy",
@@ -208332,17 +208803,21 @@
         }
       },
       "search_tokens": [
+        "(farine",
         "1 heure",
         "coeliaque",
         "egg",
         "gluten free",
         "green_salad",
+        "harina",
         "leger",
         "light",
         "low calorie",
-        "masa_harina",
+        "mais",
+        "masa",
         "milk_animal/whole",
         "minceur",
+        "nixtamalise)",
         "olive_oil_extra_vierge_plant",
         "onion/yellow",
         "oven_cooking",
@@ -209460,6 +209935,7 @@
         }
       },
       "search_tokens": [
+        "(farine",
         "(vegan)",
         "1 heure",
         "coconut_milk",
@@ -209467,11 +209943,14 @@
         "coriander",
         "egg",
         "gluten free",
+        "harina",
         "leger",
         "light",
         "low calorie",
-        "masa_harina",
+        "mais",
+        "masa",
         "minceur",
+        "nixtamalise)",
         "olive_oil_extra_vierge_plant",
         "onion/yellow",
         "paraguaya",
@@ -213945,6 +214424,7 @@
         "light",
         "low calorie",
         "mandoline_slicing",
+        "miel",
         "minceur",
         "olive_oil",
         "orange",
@@ -215792,6 +216272,7 @@
         "leger",
         "light",
         "low calorie",
+        "miel",
         "minceur",
         "mixed_salad",
         "olive_oil",
@@ -216311,11 +216792,13 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "all_purpose_flour",
         "basil",
         "blossoms",
         "courgette",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -216323,6 +216806,7 @@
         "fleurs",
         "frying",
         "frying_oil",
+        "gazeuse",
         "green_salad",
         "italian",
         "kids",
@@ -216330,13 +216814,15 @@
         "moyen",
         "parmesan",
         "pepper",
+        "petillante)",
         "ricotta",
         "salt",
         "sans viande",
-        "sparkling_water",
+        "sparkling",
         "stuffed",
         "stuffing",
         "vegetarien",
+        "water",
         "zucchini",
         "zucchini_blossom"
       ],
@@ -217384,10 +217870,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "all_purpose_flour",
         "butter/dairy",
         "choux_pastry",
+        "eau",
         "egg",
         "enfants",
         "facile enfants",
@@ -217405,6 +217893,7 @@
         "nutmeg_whole",
         "oven_cooking",
         "parsley",
+        "potable)",
         "salt",
         "sans viande",
         "vegetarien",
@@ -218685,6 +219174,8 @@
         "(vegan)",
         "45 minutes",
         "bademjan",
+        "beurre",
+        "butter",
         "coeliaque",
         "eggplant",
         "garlic",
@@ -218708,7 +219199,7 @@
         "sauteed",
         "turmeric",
         "vegan",
-        "vegan_butter",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "hard",
@@ -223447,8 +223938,11 @@
         }
       },
       "search_tokens": [
+        "(vegan)",
         "45 minutes",
+        "beurre",
         "blending",
+        "butter",
         "cashew/raw",
         "champignons",
         "coeliaque",
@@ -223480,7 +223974,7 @@
         "shallot",
         "thyme",
         "vegan",
-        "vegan_butter",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -224450,11 +224944,13 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "blending",
         "boiling",
         "citrus/lemon_juice",
         "coeliaque",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -224467,6 +224963,7 @@
         "low calorie",
         "minceur",
         "olive_oil",
+        "potable)",
         "potato/cooked",
         "quick",
         "rapide",
@@ -232090,6 +232587,8 @@
         "assembly",
         "avocado",
         "avocat",
+        "chiches",
+        "chickpea",
         "chili_pepper",
         "citrus/lime_juice",
         "coeliaque",
@@ -232108,9 +232607,11 @@
         "minceur",
         "olive_oil",
         "pepper",
+        "pois",
         "quick",
         "rapide",
-        "roasted_chickpea",
+        "roasted",
+        "rotis",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -235317,10 +235818,14 @@
         "fresh_coriander",
         "garlic",
         "gluten free",
+        "leger",
         "lent",
+        "light",
         "long",
+        "low calorie",
         "middle_eastern",
         "mijote",
+        "minceur",
         "onion/yellow",
         "optimise",
         "optimized",
@@ -236484,21 +236989,25 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "45 minutes",
         "aloo",
         "cauliflower",
         "coeliaque",
         "coriander/ground",
         "cumin",
-        "garam_masala",
+        "epices",
+        "garam",
         "garlic",
         "ginger",
         "gluten free",
         "gobi",
         "indian",
+        "indien)",
         "leger",
         "light",
         "low calorie",
+        "masala",
         "minceur",
         "moyen",
         "onion",
@@ -236752,6 +237261,7 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "1 heure",
         "aloo",
         "anemie",
@@ -236760,17 +237270,20 @@
         "coeliaque",
         "coriander",
         "cumin",
+        "epices",
         "epinards",
         "fer",
-        "garam_masala",
+        "garam",
         "garlic",
         "gluten free",
         "indian",
+        "indien)",
         "iron",
         "leger",
         "light",
         "low calorie",
         "magnesium",
+        "masala",
         "minceur",
         "onion",
         "palak",
@@ -237399,24 +237912,31 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(farine",
         "45 minutes",
         "arepas",
         "coeliaque",
         "coriander",
         "cumin",
+        "eau",
         "ethiopian",
         "garlic",
         "gluten free",
         "grilling",
+        "harina",
         "leger",
         "light",
         "low calorie",
-        "masa_harina",
+        "mais",
+        "masa",
         "minceur",
         "moyen",
+        "nixtamalise)",
         "olive_oil_extra_vierge_plant",
         "paprika",
         "parmesan",
+        "potable)",
         "salt",
         "sans gluten",
         "sans viande",
@@ -240423,6 +240943,7 @@
         }
       },
       "search_tokens": [
+        "(farine",
         "45 minutes",
         "arepas",
         "butter/dairy",
@@ -240434,9 +240955,12 @@
         "gluten free",
         "green_salad",
         "grilling",
-        "masa_harina",
+        "harina",
+        "mais",
+        "masa",
         "moyen",
         "muscle",
+        "nixtamalise)",
         "olive_oil_extra_vierge_plant",
         "paprika",
         "parmesan",
@@ -241001,9 +241525,12 @@
         }
       },
       "search_tokens": [
+        "(farine",
         "(vegan)",
         "45 minutes",
         "arepas",
+        "beurre",
+        "butter",
         "coeliaque",
         "colombian",
         "coriander",
@@ -241015,21 +241542,21 @@
         "garlic_raw/raw",
         "gluten free",
         "grilling",
+        "harina",
         "kids",
-        "leger",
-        "light",
-        "low calorie",
-        "masa_harina",
-        "minceur",
+        "mais",
+        "masa",
         "moyen",
+        "nixtamalise)",
         "paprika/spice",
         "salsa",
         "salt_table/default",
         "sans gluten",
         "sans viande",
-        "vegan_butter",
+        "vegan",
         "vegan_cheese",
         "vegetable_oil_generic/oil",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -241438,22 +241965,29 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(farine",
         "(vegan)",
         "1 heure",
         "arepas",
         "coeliaque",
         "colombian",
         "cumin",
+        "eau",
         "garlic",
         "gluten free",
         "grilling",
+        "harina",
         "leger",
         "light",
         "low calorie",
-        "masa_harina",
+        "mais",
+        "masa",
         "minceur",
+        "nixtamalise)",
         "olive_oil_extra_vierge_plant",
         "paprika",
+        "potable)",
         "salt",
         "sans gluten",
         "sans viande",
@@ -256845,8 +257379,10 @@
         }
       },
       "search_tokens": [
+        "(poudre",
         "1 heure",
-        "amchoor_powder",
+        "amchoor",
+        "amchur",
         "bhindi",
         "chapati_bread",
         "coeliaque",
@@ -256859,10 +257395,12 @@
         "leger",
         "light",
         "low calorie",
+        "mangue",
         "masala",
         "minceur",
         "okra",
         "onion_raw/raw",
+        "powder",
         "salt_table/default",
         "sans gluten",
         "sans produit animal",
@@ -256873,6 +257411,7 @@
         "vegetable_oil_generic/oil",
         "vegetalien",
         "vegetarien",
+        "verte)",
         "wok"
       ],
       "difficulty_level": "hard",
@@ -263412,6 +263951,7 @@
         "carrot",
         "carrots",
         "coeliaque",
+        "d'erable",
         "glacees",
         "glazed",
         "gluten free",
@@ -263421,12 +263961,13 @@
         "light",
         "low calorie",
         "maple",
-        "maple_syrup",
         "minceur",
         "moyen",
         "oven_cooking",
         "sans gluten",
         "sans viande",
+        "sirop",
+        "syrup",
         "thyme",
         "vegetarien",
         "wok"
@@ -267700,9 +268241,8 @@
         }
       },
       "search_tokens": [
-        "anemie",
         "breton",
-        "buckwheat_flour",
+        "buckwheat",
         "butter/dairy",
         "coeliaque",
         "complete",
@@ -267711,16 +268251,18 @@
         "enfants",
         "facile enfants",
         "famille",
-        "fer",
         "french_breton",
         "galette",
         "gluten free",
         "gruyere",
-        "iron",
         "kids",
+        "leger",
         "lent",
+        "light",
         "long",
+        "low calorie",
         "mijote",
+        "minceur",
         "muscle",
         "mushroom/button",
         "pan_frying",
@@ -267728,6 +268270,7 @@
         "riche en proteines",
         "sans gluten",
         "sans viande",
+        "sarrasin",
         "spinach/cooked",
         "sport",
         "vegetarien"
@@ -269797,13 +270340,14 @@
         "bresilienne",
         "butter/dairy",
         "carrot/raw",
-        "cassava_flour",
+        "cassava",
         "coeliaque",
         "farofa",
         "gluten free",
         "leger",
         "light",
         "low calorie",
+        "manioc",
         "minceur",
         "moyen",
         "onion/yellow",
@@ -270026,17 +270570,14 @@
         }
       },
       "search_tokens": [
-        "anemie",
         "braising",
         "carrot/raw",
         "celery/stalk",
         "coeliaque",
         "fasolada",
-        "fer",
         "gluten free",
         "grecque",
         "greek",
-        "iron",
         "leger",
         "lent",
         "light",
@@ -274206,6 +274747,7 @@
         "citrus/lemon",
         "coeliaque",
         "cream",
+        "creme",
         "enfants",
         "facile enfants",
         "famille",
@@ -278262,7 +278804,6 @@
         "anemie",
         "breton",
         "buckwheat",
-        "buckwheat_flour",
         "butter/dairy",
         "coeliaque",
         "egg",
@@ -292342,10 +292883,13 @@
         }
       },
       "search_tokens": [
+        "(gigantes)",
+        "bean",
+        "blancs",
         "coeliaque",
         "four",
         "geants",
-        "gigante_bean",
+        "gigante",
         "gigantes",
         "gluten free",
         "greek",
@@ -294325,17 +294869,20 @@
         }
       },
       "search_tokens": [
+        "(pour",
         "1 heure",
         "andine",
         "coeliaque",
         "corn",
-        "corn_husk",
+        "feuille",
         "gluten free",
         "goat_cheese_fresh_ch_vre",
         "humita",
+        "husk",
         "leger",
         "light",
         "low calorie",
+        "mais",
         "milk_animal/whole",
         "minceur",
         "olive_oil_extra_vierge_plant",
@@ -294344,7 +294891,9 @@
         "salt",
         "sans gluten",
         "sans viande",
+        "sechee",
         "steaming",
+        "tamales)",
         "vegetarien",
         "wok"
       ],
@@ -296029,11 +296578,16 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "broccoli",
         "coeliaque",
+        "eau",
+        "farine",
+        "flour",
         "fresh_herbs",
         "frying",
+        "gazeuse",
         "gluten free",
         "japanese",
         "leger",
@@ -296041,20 +296595,21 @@
         "low calorie",
         "minceur",
         "mushroom/button",
+        "petillante)",
         "quick",
         "rapide",
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "sparkling_water",
+        "sparkling",
         "sunflower",
         "sweet_potato",
         "tempura",
-        "tempura_flour",
         "vegan",
         "vegetable",
         "vegetalien",
         "vegetarien",
+        "water",
         "zucchini"
       ],
       "difficulty_level": "medium",
@@ -297712,23 +298267,27 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "1 heure",
         "braising",
         "carrot",
         "coconut_milk",
         "coeliaque",
+        "epices",
         "fresh_coriander",
-        "garam_masala",
+        "garam",
         "garlic",
         "ginger",
         "gluten free",
         "green_bean",
         "indian",
+        "indien)",
         "korma",
         "leger",
         "legumes",
         "light",
         "low calorie",
+        "masala",
         "minceur",
         "olive_oil_extra_vierge_plant",
         "onion",
@@ -299802,13 +300361,17 @@
         }
       },
       "search_tokens": [
+        "(colocasia",
         "1 heure",
         "braising",
         "chili_pepper",
         "coconut",
         "coconut_milk",
+        "esculenta)",
+        "feuille",
         "garlic",
         "laing",
+        "leaf",
         "leger",
         "light",
         "low calorie",
@@ -299818,7 +300381,7 @@
         "salt",
         "sans viande",
         "soy_sauce",
-        "taro_leaf",
+        "taro",
         "vegetarien",
         "white_rice"
       ],
@@ -301910,25 +302473,24 @@
         }
       },
       "search_tokens": [
+        "(baies",
         "anemie",
         "black_olives",
         "bread_flour",
         "fer",
         "international",
         "iron",
-        "leger",
         "lent",
-        "light",
         "long",
-        "low calorie",
         "manakish",
         "mijote",
-        "minceur",
+        "moulues)",
         "olive_oil",
         "oven_cooking",
         "salt",
         "sans produit animal",
         "sans viande",
+        "sechees",
         "sesame_seeds",
         "sumac",
         "vegan",
@@ -307677,12 +308239,15 @@
         }
       },
       "search_tokens": [
+        "(fleur",
         "45 minutes",
         "assembly",
         "cherry_tomato",
         "chili_pepper",
         "citrus/lime",
-        "coconut_sugar",
+        "coco",
+        "coconut",
+        "cocotier)",
         "coeliaque",
         "coriander",
         "garlic",
@@ -307702,6 +308267,8 @@
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sucre",
+        "sugar",
         "sugar/white",
         "tomato/fresh",
         "vegan",
@@ -310844,8 +311411,10 @@
         "45 minutes",
         "antioxydants",
         "bell_pepper",
+        "beurre",
         "bhaji",
         "boiling",
+        "butter",
         "coeliaque",
         "coriander/ground",
         "cumin",
@@ -310866,7 +311435,7 @@
         "snow_peas",
         "tomato/fresh",
         "vegan",
-        "vegan_butter",
+        "vegetal",
         "vegetarien",
         "vitamine c"
       ],
@@ -319897,7 +320466,9 @@
       "search_tokens": [
         "(vegan)",
         "1 heure",
+        "beurre",
         "boiling",
+        "butter",
         "coeliaque",
         "funghi",
         "garlic",
@@ -319919,8 +320490,8 @@
         "sauteed",
         "thyme",
         "vegan",
-        "vegan_butter",
         "vegan_parmesan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "hard",
@@ -321830,7 +322401,9 @@
       "search_tokens": [
         "(vegan)",
         "aux",
+        "beurre",
         "boiling",
+        "butter",
         "champignons",
         "coeliaque",
         "garlic",
@@ -321856,7 +322429,8 @@
         "sans viande",
         "sauteed",
         "thyme",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "hard",
@@ -331074,21 +331648,32 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(farine",
+        "(fleur",
         "45 minutes",
+        "amerique",
+        "aromatique",
         "black_bean",
+        "centrale)",
         "cheese",
         "coeliaque",
+        "eau",
         "ethiopian",
         "gluten free",
         "grilling",
+        "harina",
         "leger",
         "light",
         "loroco",
         "low calorie",
-        "masa_harina",
+        "mais",
+        "masa",
         "minceur",
         "moyen",
+        "nixtamalise)",
         "olive_oil",
+        "potable)",
         "pupusas",
         "salsa",
         "salt",
@@ -332413,21 +332998,28 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(farine",
         "1 heure",
         "aux",
         "black_bean",
         "coeliaque",
         "coriander",
+        "eau",
         "ethiopian",
         "gluten free",
         "grilling",
         "haricots",
+        "harina",
         "leger",
         "light",
         "low calorie",
-        "masa_harina",
+        "mais",
+        "masa",
         "minceur",
+        "nixtamalise)",
         "parmesan",
+        "potable)",
         "pupusas",
         "salt",
         "sans gluten",
@@ -333024,23 +333616,30 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(farine",
         "(vegan)",
         "30 minutes",
         "aux",
         "black_bean",
         "coeliaque",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
         "gluten free",
         "grilling",
         "haricots",
+        "harina",
         "kids",
         "leger",
         "light",
         "low calorie",
-        "masa_harina",
+        "mais",
+        "masa",
         "minceur",
+        "nixtamalise)",
+        "potable)",
         "pupusas",
         "quick",
         "rapide",
@@ -333262,23 +333861,34 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(farine",
+        "(fleur",
         "(vegan)",
         "45 minutes",
+        "amerique",
+        "aromatique",
         "black_bean",
+        "centrale)",
         "coeliaque",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
         "gluten free",
         "grilling",
+        "harina",
         "kids",
         "leger",
         "light",
         "loroco",
         "low calorie",
-        "masa_harina",
+        "mais",
+        "masa",
         "minceur",
         "moyen",
+        "nixtamalise)",
+        "potable)",
         "pupusas",
         "salt",
         "salvadoran",
@@ -333548,17 +334158,20 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "braising",
         "calcium",
         "coeliaque",
         "cumin/seeds",
+        "epices",
         "fresh_coriander",
-        "garam_masala",
+        "garam",
         "garlic",
         "ginger/fresh",
         "gluten free",
         "graines",
         "indian",
+        "indien)",
         "kidney_bean",
         "leger",
         "lent",
@@ -333823,20 +334436,25 @@
         }
       },
       "search_tokens": [
+        "(murraya",
         "45 minutes",
         "black_pepper",
         "braising",
         "coeliaque",
         "cumin",
-        "curry_leaf",
+        "curry",
         "dijon_mustard",
+        "feuille",
         "garlic",
         "gluten free",
         "international",
+        "koenigii)",
+        "leaf",
         "leger",
         "light",
         "low calorie",
         "minceur",
+        "moutarde",
         "moyen",
         "mustard",
         "rasam",
@@ -334484,17 +335102,14 @@
         }
       },
       "search_tokens": [
-        "anemie",
         "braising",
         "calcium",
         "carrot/raw",
         "celery/stalk",
         "coeliaque",
-        "fer",
         "garlic",
         "gluten free",
         "international",
-        "iron",
         "kale",
         "leger",
         "lent",
@@ -335331,10 +335946,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "braising",
         "bread",
         "carrot",
         "coeliaque",
+        "eau",
         "garlic",
         "gluten free",
         "international",
@@ -335350,6 +335967,7 @@
         "olive_oil_extra_vierge_plant",
         "onion",
         "pepper",
+        "potable)",
         "potato",
         "salt",
         "sans gluten",
@@ -337279,7 +337897,9 @@
       "search_tokens": [
         "(vegan)",
         "45 minutes",
+        "beurre",
         "boiling",
+        "butter",
         "coeliaque",
         "coriander",
         "egg",
@@ -337300,8 +337920,9 @@
         "sans viande",
         "spaetzle",
         "spatzle",
-        "vegan_butter",
+        "vegan",
         "vegan_cheese",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -341944,10 +342565,14 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "carrot",
         "coeliaque",
         "daikon",
+        "eau",
+        "farine",
+        "flour",
         "frying",
         "gluten free",
         "japanese",
@@ -341957,6 +342582,7 @@
         "low calorie",
         "minceur",
         "moyen",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -341964,7 +342590,6 @@
         "sunflower",
         "sweet_potato",
         "tempura",
-        "tempura_flour",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -347043,7 +347668,10 @@
         "vegetable_broth",
         "vegetalien",
         "vegetarien"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 0
+      }
     },
     {
       "id": "noodle_pad_see_ew_41b095",
@@ -347228,9 +347856,11 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "chinese_broccoli",
         "coeliaque",
+        "eau",
         "egg",
         "garlic",
         "gluten free",
@@ -347241,6 +347871,7 @@
         "moyen",
         "pad",
         "peanut_oil",
+        "potable)",
         "sans gluten",
         "sans viande",
         "see",
@@ -347496,12 +348127,14 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "calcium",
         "cane_sugar",
         "chinese_broccoli",
         "coeliaque",
         "controlled",
+        "eau",
         "egg",
         "garlic",
         "gluten free",
@@ -347513,6 +348146,7 @@
         "moyen",
         "pad",
         "peanut_oil",
+        "potable)",
         "proteines",
         "sans gluten",
         "sans viande",
@@ -350308,11 +350942,16 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(fleur",
         "assembly",
         "bean_sprouts",
         "citrus/lime",
-        "coconut_sugar",
+        "coco",
+        "coconut",
+        "cocotier)",
         "controlled",
+        "eau",
         "egg",
         "garlic",
         "leger",
@@ -350326,9 +350965,12 @@
         "pad",
         "peanut/raw",
         "peanut_oil",
+        "potable)",
         "rice_noodles",
         "sans viande",
         "soy_sauce",
+        "sucre",
+        "sugar",
         "tamarind_paste",
         "thai",
         "tofu/firm",
@@ -350547,9 +351189,11 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "alfredo",
         "butter/dairy",
+        "eau",
         "emulsion",
         "fettuccine",
         "italian",
@@ -350562,6 +351206,7 @@
         "pasta",
         "pates",
         "pepper",
+        "potable)",
         "quick",
         "rapide",
         "salt",
@@ -353230,13 +353875,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
-        "anemie",
         "coeliaque",
-        "fer",
+        "eau",
         "gluten free",
         "gnocchi",
-        "iron",
         "italian",
         "leger",
         "light",
@@ -353245,6 +353889,7 @@
         "moyen",
         "parmesan",
         "pesto",
+        "potable)",
         "salt",
         "sans gluten",
         "sans viande",
@@ -353281,7 +353926,7 @@
         "vegan": false,
         "vegetarian": true,
         "gluten_free": true,
-        "lactose_free": true,
+        "lactose_free": false,
         "nut_free": true,
         "raw": false,
         "kid_friendly": false
@@ -353302,7 +353947,13 @@
         },
         "merge_rewrite_content_2026-05-08",
         "devegan_fix_2026-05-22: revert vegan contamination in text (levure nutritionnelle)",
-        "integrate_v8_2026-06-19"
+        "integrate_v8_2026-06-19",
+        {
+          "date": "2026-07-26T17:01:04.563823+00:00",
+          "script": "fix_recipes_coherence.py",
+          "check": "C1_lactose_false_positive",
+          "detail": "lactose_free=True mais ingrédients laitiers: {'parmesan'}"
+        }
       ],
       "cook_min_correction": {
         "from": 20,
@@ -353786,7 +354437,9 @@
         "(vegan)",
         "45 minutes",
         "anemie",
+        "beurre",
         "boiling",
+        "butter",
         "coeliaque",
         "fer",
         "gluten free",
@@ -353806,8 +354459,9 @@
         "salt",
         "sans gluten",
         "sans viande",
-        "vegan_butter",
+        "vegan",
         "vegan_parmesan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "easy",
@@ -358184,9 +358838,11 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "bread",
         "coeliaque",
+        "eau",
         "extra_virgin_olive_oil/oil_virgin",
         "garlic_raw/raw",
         "gluten free",
@@ -358198,6 +358854,7 @@
         "low calorie",
         "minceur",
         "pomodoro",
+        "potable)",
         "salt_table/default",
         "sans gluten",
         "sans viande",
@@ -363278,8 +363935,10 @@
         "all_purpose_flour",
         "american",
         "and",
+        "beurre",
         "boiling",
         "braising",
+        "butter",
         "cheese",
         "enfants",
         "facile enfants",
@@ -363297,8 +363956,9 @@
         "pasta",
         "salt",
         "sans viande",
-        "vegan_butter",
+        "vegan",
         "vegan_cheddar",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -381124,10 +381784,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "all_purpose_flour",
         "assembly",
         "aux",
         "butter/dairy",
+        "eau",
         "leger",
         "lent",
         "light",
@@ -381140,6 +381802,7 @@
         "pierogi",
         "polish",
         "pommes",
+        "potable)",
         "potato",
         "ruskie",
         "salt",
@@ -381333,11 +381996,13 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "10 min",
         "20 min",
         "5 min",
         "braising",
         "coconut",
+        "eau",
         "express",
         "italian",
         "leger",
@@ -381349,6 +382014,7 @@
         "pasta",
         "pates",
         "plain",
+        "potable)",
         "pâtes",
         "quick",
         "rapide",
@@ -386865,6 +387531,7 @@
         }
       },
       "search_tokens": [
+        "(baies",
         "45 minutes",
         "black_bean_sauce",
         "braising",
@@ -386880,11 +387547,14 @@
         "mapo",
         "minceur",
         "moyen",
+        "pepper",
+        "poivre",
         "proteines",
         "sans produit animal",
         "sans viande",
+        "sechees)",
         "sesame",
-        "sichuan_pepper",
+        "sichuan",
         "soja",
         "soy_sauce",
         "sport",
@@ -392496,20 +393166,24 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "(vegan)",
         "45 minutes",
         "coconut_milk/milk_plant",
         "coeliaque",
         "coriander",
         "cumin_seed/spice_seed",
-        "garam_masala",
+        "epices",
+        "garam",
         "garlic_raw/raw",
         "ginger/fresh_herb_root_fresh",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "light",
         "low calorie",
+        "masala",
         "minceur",
         "moyen",
         "onion_raw/raw",
@@ -395255,6 +395929,7 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "(vegan)",
         "45 minutes",
         "butter",
@@ -395264,11 +395939,13 @@
         "coconut_milk",
         "coeliaque",
         "cumin",
-        "garam_masala",
+        "epices",
+        "garam",
         "garlic",
         "ginger",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "light",
         "low calorie",
@@ -395574,6 +396251,7 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "45 minutes",
         "antioxydants",
         "bell_pepper",
@@ -395581,14 +396259,17 @@
         "coeliaque",
         "coriander",
         "cumin",
-        "garam_masala",
+        "epices",
+        "garam",
         "garlic",
         "ginger",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "light",
         "low calorie",
+        "masala",
         "minceur",
         "moyen",
         "olive_oil_extra_vierge_plant",
@@ -396055,6 +396736,7 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "(vegan)",
         "1 heure",
         "antioxydants",
@@ -396064,15 +396746,18 @@
         "citrus/lemon",
         "coeliaque",
         "cumin",
+        "epices",
         "fresh_herbs",
-        "garam_masala",
+        "garam",
         "garlic",
         "ginger",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "light",
         "low calorie",
+        "masala",
         "minceur",
         "olive_oil_extra_vierge_plant",
         "onion",
@@ -397363,11 +398048,14 @@
       },
       "difficulty_level": "hard",
       "search_tokens": [
+        "(racine",
         "1 heure",
         "chili/red",
         "coeliaque",
         "coriander/seeds",
         "curry",
+        "fraiche)",
+        "galanga",
         "galangal",
         "garlic",
         "gluten free",
@@ -397706,7 +398394,10 @@
         "kaffir_lime",
         "miso/white",
         "oil/neutral"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 2
+      }
     },
     {
       "id": "rice_beignet_de_riz_nepalais_7ac83e",
@@ -399754,24 +400445,28 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "absorption",
         "basmati_rice",
         "biryani",
         "carrot",
         "coeliaque",
         "cumin/seeds",
-        "garam_masala",
+        "epices",
+        "garam",
         "garlic",
         "ginger/fresh",
         "gluten free",
         "green_bean",
         "grilling",
         "indian",
+        "indien)",
         "leger",
         "lent",
         "light",
         "long",
         "low calorie",
+        "masala",
         "mijote",
         "minceur",
         "olive_oil_extra_vierge_plant",
@@ -403236,7 +403931,8 @@
         "moyen",
         "onion",
         "proteines",
-        "rice_flour",
+        "rice",
+        "riz",
         "salt",
         "sans gluten",
         "sans viande",
@@ -405514,11 +406210,13 @@
         }
       },
       "search_tokens": [
+        "(banh",
         "45 minutes",
         "assembly",
         "carrot/raw",
         "coeliaque",
         "cuon",
+        "galettes",
         "garlic",
         "gluten free",
         "goi",
@@ -405529,11 +406227,15 @@
         "minceur",
         "mint",
         "moyen",
-        "rice_paper",
+        "paper",
+        "rice",
         "rice_vermicelli",
+        "riz",
         "sans gluten",
         "sans viande",
+        "sechees",
         "tofu/firm",
+        "trang)",
         "vegetarien",
         "vietnamese"
       ],
@@ -405951,9 +406653,11 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "all_purpose_flour",
         "butter/dairy",
+        "eau",
         "egg",
         "ethiopian",
         "finnish",
@@ -405965,10 +406669,12 @@
         "minceur",
         "oven_cooking",
         "pies",
+        "potable)",
         "rice/short_grain",
-        "rye_flour",
+        "rye",
         "salt",
         "sans viande",
+        "seigle",
         "vegetarien",
         "water"
       ],
@@ -413894,6 +414600,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "absorption",
         "acidite",
         "agrume",
@@ -413901,6 +414608,7 @@
         "bell_pepper",
         "coeliaque",
         "controlled",
+        "eau",
         "garlic",
         "gluten free",
         "green_bean",
@@ -413918,6 +414626,7 @@
         "paprika",
         "parsley",
         "poivron",
+        "potable)",
         "reduction",
         "rice/long_grain",
         "saffron",
@@ -419824,7 +420533,9 @@
       "search_tokens": [
         "(vegan)",
         "arborio_rice",
+        "beurre",
         "braising",
+        "butter",
         "coeliaque",
         "funghi",
         "garlic",
@@ -419848,9 +420559,10 @@
         "sans gluten",
         "sans viande",
         "sauteed",
-        "vegan_butter",
+        "vegan",
         "vegan_parmesan",
         "vegetable_broth",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "hard",
@@ -424659,8 +425371,10 @@
         "1 heure",
         "arborio_rice",
         "aux",
+        "beurre",
         "braising",
         "broth/vegetable",
+        "butter",
         "champignons",
         "coeliaque",
         "garlic",
@@ -424682,7 +425396,8 @@
         "sans gluten",
         "sans viande",
         "sauteed",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "hard",
@@ -426685,8 +427400,10 @@
         "arborio_rice",
         "asparagus",
         "asperges",
+        "beurre",
         "braising",
         "broth/vegetable",
+        "butter",
         "citron",
         "citrus/lemon",
         "coeliaque",
@@ -426706,7 +427423,8 @@
         "sans gluten",
         "sans viande",
         "sauteed",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -428307,17 +429025,21 @@
         }
       },
       "search_tokens": [
+        "(murraya",
         "45 minutes",
         "citronne",
         "citrus/lemon",
         "coeliaque",
         "coriander",
-        "curry_leaf",
+        "curry",
         "dried_chili",
+        "feuille",
         "garlic",
         "gluten free",
         "indian",
         "indien",
+        "koenigii)",
+        "leaf",
         "leger",
         "lemon",
         "light",
@@ -431652,6 +432374,7 @@
         }
       },
       "search_tokens": [
+        "(banh",
         "30 minutes",
         "carrot",
         "cha",
@@ -431659,18 +432382,23 @@
         "frits",
         "frying",
         "frying_oil",
+        "galettes",
         "gio",
         "mushroom/button",
         "onion",
+        "paper",
         "printemps",
         "quick",
         "rapide",
-        "rice_paper",
+        "rice",
         "rice_vermicelli",
+        "riz",
         "rouleaux",
         "sans produit animal",
         "sans viande",
+        "sechees",
         "soy_sauce",
+        "trang)",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -435818,11 +436546,13 @@
         }
       },
       "search_tokens": [
+        "(banh",
         "45 minutes",
         "calcium",
         "carrot/raw",
         "fresh_herbs",
         "frying",
+        "galettes",
         "garlic",
         "graines",
         "green_cabbage",
@@ -435833,16 +436563,20 @@
         "moyen",
         "mushroom/button",
         "onion/yellow",
-        "rice_paper",
+        "paper",
+        "rice",
         "rice_vermicelli",
+        "riz",
         "rolls",
         "rouleau",
         "salt",
         "sans produit animal",
         "sans viande",
+        "sechees",
         "sesame",
         "soy_sauce",
         "spring",
+        "trang)",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -436622,15 +437356,19 @@
         }
       },
       "search_tokens": [
+        "(murraya",
         "45 minutes",
         "american",
         "calcium",
         "coeliaque",
-        "curry_leaf",
+        "curry",
         "dijon_mustard",
         "dried_chili",
+        "feuille",
         "gluten free",
         "graines",
+        "koenigii)",
+        "leaf",
         "leger",
         "light",
         "low calorie",
@@ -438157,22 +438895,26 @@
         }
       },
       "search_tokens": [
+        "(melange",
         "basmati_rice",
         "biryani",
         "braising",
         "carrot",
         "coconut",
         "coeliaque",
+        "epices",
         "fresh_coriander",
-        "garam_masala",
+        "garam",
         "garlic",
         "gluten free",
         "indian",
+        "indien)",
         "leger",
         "lent",
         "light",
         "long",
         "low calorie",
+        "masala",
         "mijote",
         "minceur",
         "onion",
@@ -440117,16 +440859,19 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "blanc",
         "braising",
         "coeliaque",
+        "eau",
         "gluten free",
         "international",
         "leger",
         "light",
         "low calorie",
         "minceur",
+        "potable)",
         "quick",
         "rapide",
         "rice",
@@ -440669,6 +441414,10 @@
         "fromage",
         "gluten free",
         "grilled_bread",
+        "leger",
+        "light",
+        "low calorie",
+        "minceur",
         "olive_oil",
         "parmesan",
         "parsley",
@@ -446846,6 +447595,7 @@
         }
       },
       "search_tokens": [
+        "(semoule",
         "30 minutes",
         "assembly",
         "attieke",
@@ -446855,11 +447605,13 @@
         "coriander",
         "cucumber",
         "d'attieke",
+        "fermente)",
         "gluten free",
         "international",
         "leger",
         "light",
         "low calorie",
+        "manioc",
         "minceur",
         "onion/yellow",
         "quick",
@@ -454042,6 +454794,7 @@
         }
       },
       "search_tokens": [
+        "(baies",
         "45 minutes",
         "assembly",
         "citrus/lemon",
@@ -454056,6 +454809,7 @@
         "light",
         "low calorie",
         "minceur",
+        "moulues)",
         "moyen",
         "olive_oil_extra_vierge_plant",
         "pita_bread",
@@ -454064,6 +454818,7 @@
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sechees",
         "sumac",
         "tomato/fresh",
         "vegan",
@@ -454512,6 +455267,7 @@
         }
       },
       "search_tokens": [
+        "(baies",
         "45 minutes",
         "assembly",
         "citrus/lemon",
@@ -454525,6 +455281,7 @@
         "light",
         "low calorie",
         "minceur",
+        "moulues)",
         "moyen",
         "olive_oil",
         "pita_bread",
@@ -454535,6 +455292,7 @@
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sechees",
         "sumac",
         "tomato/fresh",
         "vegan",
@@ -454784,8 +455542,10 @@
         }
       },
       "search_tokens": [
+        "(baies",
         "45 minutes",
         "assembly",
+        "bread",
         "citrus/lemon",
         "cucumber",
         "fattoush",
@@ -454798,15 +455558,18 @@
         "low calorie",
         "middle_eastern",
         "minceur",
+        "moulues)",
         "moyen",
         "olive_oil",
         "optimise",
         "optimized",
-        "pain_pita",
+        "pain",
         "parsley",
+        "pita",
         "radish",
         "sans produit animal",
         "sans viande",
+        "sechees",
         "sumac",
         "tomato/fresh",
         "vegan",
@@ -455352,7 +456115,9 @@
       "search_tokens": [
         "(vegan)",
         "1 heure",
+        "beurre",
         "boiling",
+        "butter",
         "calcium",
         "citrus/lime",
         "coconut",
@@ -455377,7 +456142,8 @@
         "soy_sauce",
         "sport",
         "tofu",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "hard",
@@ -461059,7 +461825,10 @@
         "sans viande",
         "sugar/white",
         "vegetarien"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 0
+      }
     },
     {
       "id": "samosa_dough_c03717",
@@ -461209,17 +461978,20 @@
       },
       "difficulty_level": "medium",
       "search_tokens": [
+        "(eau",
         "1 heure",
         "all_purpose_flour",
         "coriander",
         "cumin/seeds",
         "dough",
+        "eau",
         "indian",
         "leger",
         "light",
         "low calorie",
         "minceur",
         "pate",
+        "potable)",
         "salt",
         "samosa",
         "sans produit animal",
@@ -461448,7 +462220,10 @@
             "coriandre fraîche ciselée"
           ]
         }
-      ]
+      ],
+      "scoring": {
+        "spice_level": 0
+      }
     },
     {
       "id": "sauce_pommes_de_terre_sauce_hua_3304de",
@@ -463024,11 +463799,14 @@
       "search_tokens": [
         "(vegan)",
         "45 minutes",
+        "beurre",
+        "butter",
         "canadian",
         "carottes",
         "carrot",
         "carrots",
         "coeliaque",
+        "d'erable",
         "enfants",
         "facile enfants",
         "famille",
@@ -463041,15 +463819,17 @@
         "light",
         "low calorie",
         "maple",
-        "maple_syrup",
         "minceur",
         "moyen",
         "roasting",
         "sans gluten",
         "sans viande",
         "sauteed",
+        "sirop",
+        "syrup",
         "thyme",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -463308,10 +464088,13 @@
         }
       },
       "search_tokens": [
+        "(vegan)",
         "10 min",
         "20 min",
         "5 min",
         "ail",
+        "beurre",
+        "butter",
         "butter/dairy",
         "champignons",
         "citrus/lemon_juice",
@@ -463342,7 +464125,8 @@
         "sauteed",
         "sautes",
         "thyme",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien",
         "white_wine"
       ],
@@ -467247,20 +468031,24 @@
         }
       },
       "search_tokens": [
+        "(murraya",
         "cane_sugar",
         "chili_pepper",
         "coconut_oil",
         "coeliaque",
-        "curry_leaf",
+        "curry",
         "d'aubergines",
         "dijon_mustard",
         "eggplant",
+        "feuille",
         "frying",
         "garlic",
         "ginger",
         "gluten free",
+        "koenigii)",
         "lankais",
         "lankan",
+        "leaf",
         "leger",
         "lent",
         "light",
@@ -467522,10 +468310,13 @@
         }
       },
       "search_tokens": [
+        "(vegan)",
         "10 min",
         "20 min",
         "5 min",
+        "beurre",
         "braising",
+        "butter",
         "citrus/lemon_juice",
         "coeliaque",
         "cream_plant/oat",
@@ -467556,7 +468347,7 @@
         "spinach",
         "spinach/raw",
         "vegan",
-        "vegan_butter",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "easy",
@@ -467785,10 +468576,12 @@
       "search_tokens": [
         "(vegan)",
         "45 minutes",
+        "beurre",
         "brazilian",
         "bresilienne",
+        "butter",
         "carrot/raw",
-        "cassava_flour",
+        "cassava",
         "coeliaque",
         "enfants",
         "facile enfants",
@@ -467799,6 +468592,7 @@
         "leger",
         "light",
         "low calorie",
+        "manioc",
         "minceur",
         "moyen",
         "onion/yellow",
@@ -467808,7 +468602,8 @@
         "sans gluten",
         "sans viande",
         "sauteed",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "easy",
@@ -468112,7 +468907,7 @@
         "30 minutes",
         "black_bean",
         "brazilian",
-        "cassava_flour",
+        "cassava",
         "coeliaque",
         "feijao",
         "garlic",
@@ -468120,6 +468915,7 @@
         "leger",
         "light",
         "low calorie",
+        "manioc",
         "minceur",
         "olive_oil_extra_vierge_plant",
         "onion",
@@ -468806,27 +469602,27 @@
         }
       },
       "search_tokens": [
+        "(vegan)",
         "45 minutes",
-        "anemie",
         "beans",
+        "beurre",
         "bouquet_garni",
         "braising",
         "breton",
         "bretonne",
+        "butter",
         "carrot/raw",
         "celery/stalk",
         "coeliaque",
         "enfants",
         "facile enfants",
         "famille",
-        "fer",
         "flageolet",
         "flageolet_bean",
         "flageolets",
         "french",
         "garlic",
         "gluten free",
-        "iron",
         "kids",
         "leger",
         "light",
@@ -468841,8 +469637,9 @@
         "sans viande",
         "sauteed",
         "tomato/fresh",
-        "vegan_butter",
+        "vegan",
         "vegetable_broth",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "easy",
@@ -469296,7 +470093,9 @@
       "search_tokens": [
         "(vegan)",
         "30 minutes",
+        "beurre",
         "boiling",
+        "butter",
         "coeliaque",
         "coriander",
         "cumin",
@@ -469321,7 +470120,7 @@
         "sans viande",
         "sauteed",
         "vegan",
-        "vegan_butter",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -469833,9 +470632,12 @@
         }
       },
       "search_tokens": [
+        "(vegan)",
         "45 minutes",
         "bay_leaf",
+        "beurre",
         "boiling",
+        "butter",
         "coeliaque",
         "confit",
         "confites",
@@ -469866,7 +470668,8 @@
         "shallots",
         "sugar/white",
         "thyme",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien",
         "vinegar/balsamic"
       ],
@@ -470366,11 +471169,13 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "bread",
         "bread_flour",
         "butter",
         "campagne",
         "country",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -470387,6 +471192,7 @@
         "minceur",
         "oven_cooking",
         "pain",
+        "potable)",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -470427,7 +471233,7 @@
         "vegan": true,
         "vegetarian": true,
         "gluten_free": false,
-        "lactose_free": true,
+        "lactose_free": false,
         "nut_free": true,
         "raw": false,
         "kid_friendly": false
@@ -470437,7 +471243,13 @@
         "flag_gluten_free→True",
         "[P2] instructions réécrites par Groq/llama3",
         "fix_2026-05-19: gluten_free true→false (gluten détecté dans composition)",
-        "integrate_v8_2026-06-19"
+        "integrate_v8_2026-06-19",
+        {
+          "date": "2026-07-26T17:01:04.563823+00:00",
+          "script": "fix_recipes_coherence.py",
+          "check": "C1_lactose_false_positive",
+          "detail": "lactose_free=True mais ingrédients laitiers: {'butter'}"
+        }
       ],
       "_serving_suggestions_log": [
         {
@@ -470670,6 +471482,7 @@
       },
       "search_tokens": [
         "45 minutes",
+        "d'erable",
         "douces",
         "enfants",
         "facile enfants",
@@ -470681,7 +471494,7 @@
         "leger",
         "light",
         "low calorie",
-        "maple_syrup",
+        "maple",
         "marinating",
         "minceur",
         "miso",
@@ -470696,9 +471509,11 @@
         "sans viande",
         "sesame_oil",
         "sesame_seeds",
+        "sirop",
         "soy_sauce",
         "sweet",
         "sweet_potato/raw",
+        "syrup",
         "vegan",
         "vegetalien",
         "vegetarien"
@@ -471235,11 +472050,13 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "all_purpose_flour",
         "butter/dairy",
         "choux_pastry",
         "dauphine",
+        "eau",
         "egg",
         "enfants",
         "facile enfants",
@@ -471251,6 +472068,7 @@
         "nutmeg_whole",
         "pepper",
         "pommes",
+        "potable)",
         "potato",
         "salt",
         "sans viande",
@@ -475711,6 +476529,7 @@
         "aux",
         "calcium",
         "coeliaque",
+        "d'erable",
         "enfants",
         "epices",
         "facile enfants",
@@ -475723,7 +476542,7 @@
         "levantine",
         "light",
         "low calorie",
-        "maple_syrup",
+        "maple",
         "minceur",
         "moyen",
         "olive_oil",
@@ -475740,7 +476559,9 @@
         "sans produit animal",
         "sans viande",
         "sesame",
+        "sirop",
         "spiced",
+        "syrup",
         "tahini",
         "vegan",
         "vegetalien",
@@ -475970,9 +476791,12 @@
         }
       },
       "search_tokens": [
+        "(vegan)",
         "45 minutes",
+        "beurre",
         "blending",
         "boiling",
+        "butter",
         "butter/dairy",
         "celeri",
         "celeriac",
@@ -475999,7 +476823,7 @@
         "sans gluten",
         "sans viande",
         "vegan",
-        "vegan_butter",
+        "vegetal",
         "vegetarien",
         "white_pepper"
       ],
@@ -476810,7 +477634,9 @@
       "search_tokens": [
         "(vegan)",
         "30 minutes",
+        "beurre",
         "boiling",
+        "butter",
         "coeliaque",
         "enfants",
         "facile enfants",
@@ -476833,8 +477659,8 @@
         "turc",
         "turkish",
         "vegan",
-        "vegan_butter",
         "vegetable_broth",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -477338,7 +478164,9 @@
         "(vegan)",
         "1 heure",
         "basmati_rice",
+        "beurre",
         "boiling",
+        "butter",
         "chives",
         "coeliaque",
         "coriander/ground",
@@ -477359,7 +478187,7 @@
         "sans gluten",
         "sans viande",
         "vegan",
-        "vegan_butter",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "hard",
@@ -478109,11 +478937,15 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(vegan)",
         "45 minutes",
         "all_purpose_flour",
         "bannock",
+        "beurre",
+        "butter",
         "canadian",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -478124,10 +478956,12 @@
         "low calorie",
         "minceur",
         "moyen",
+        "potable)",
         "roasting",
         "salt",
         "sans viande",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien",
         "water"
       ],
@@ -478775,7 +479609,9 @@
         "(vegan)",
         "anemie",
         "baursak",
+        "beurre",
         "bread_flour",
+        "butter",
         "egg",
         "enfants",
         "facile enfants",
@@ -478798,7 +479634,8 @@
         "sugar/white",
         "sunflower",
         "tea",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien",
         "yeast"
       ],
@@ -479664,16 +480501,19 @@
         "integrate_v8_2026-06-19"
       ],
       "search_tokens": [
+        "(eau",
         "1 heure",
         "all_purpose_flour",
         "baking",
         "crackers",
+        "eau",
         "international",
         "leger",
         "light",
         "low calorie",
         "minceur",
         "olive_oil",
+        "potable)",
         "sales",
         "salt",
         "salted",
@@ -480115,6 +480955,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(vegan)",
         "30 minutes",
         "all_purpose_flour",
@@ -480122,6 +480963,7 @@
         "calcium",
         "coreenne",
         "crepe",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -480135,6 +480977,7 @@
         "minceur",
         "oignons",
         "pajeon",
+        "potable)",
         "quick",
         "rapide",
         "salt",
@@ -480888,7 +481731,6 @@
       },
       "search_tokens": [
         "45 minutes",
-        "anemie",
         "argentinian",
         "bell_pepper/red",
         "coeliaque",
@@ -480896,10 +481738,8 @@
         "egg",
         "empanada_dough",
         "empanadas",
-        "fer",
         "gluten free",
         "green_salad",
-        "iron",
         "moyen",
         "muscle",
         "onion/yellow",
@@ -481781,17 +482621,14 @@
       },
       "search_tokens": [
         "45 minutes",
-        "anemie",
         "argentinian",
         "coeliaque",
         "egg",
         "empanada_dough",
         "empanadas",
-        "fer",
         "fromage",
         "gluten free",
         "green_salad",
-        "iron",
         "moyen",
         "muscle",
         "olive_oil_extra_vierge_plant",
@@ -482716,16 +483553,13 @@
       "search_tokens": [
         "(vegan)",
         "45 minutes",
-        "anemie",
         "bell_pepper/red",
         "coeliaque",
         "corn",
         "egg",
         "empanada_dough",
         "empanadas",
-        "fer",
         "gluten free",
-        "iron",
         "latin_american",
         "moyen",
         "muscle",
@@ -482983,13 +483817,9 @@
         "iron",
         "kids",
         "korean",
-        "leger",
         "lent",
-        "light",
         "long",
-        "low calorie",
         "mijote",
-        "minceur",
         "muscle",
         "oignons",
         "pancakes",
@@ -483805,15 +484635,11 @@
         "kids",
         "marjoram",
         "moyen",
-        "muscle",
         "olive_oil_extra_vierge_plant",
         "pommes",
         "potato/raw",
-        "protéines",
-        "riche en proteines",
         "salt",
         "sans viande",
-        "sport",
         "tcheques",
         "terre",
         "vegetarien"
@@ -484437,10 +485263,6 @@
         "green_salad",
         "iron",
         "kids",
-        "leger",
-        "light",
-        "low calorie",
-        "minceur",
         "olive_oil_extra_vierge_plant",
         "onion/white",
         "quick",
@@ -484998,19 +485820,22 @@
         }
       },
       "search_tokens": [
+        "(pour",
         "(vegan)",
         "1 heure",
         "andean",
         "andine",
         "coeliaque",
         "corn",
-        "corn_husk",
         "enfants",
         "facile enfants",
         "famille",
+        "feuille",
         "gluten free",
         "humita",
+        "husk",
         "kids",
+        "mais",
         "milk_plant/default",
         "olive_oil_extra_vierge_plant",
         "onion",
@@ -485018,7 +485843,9 @@
         "sans gluten",
         "sans viande",
         "sauteed",
+        "sechee",
         "steaming",
+        "tamales)",
         "vegan_cheese",
         "vegetarien"
       ],
@@ -485327,10 +486154,14 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(vegan)",
         "45 minutes",
         "all_purpose_flour",
         "anemie",
+        "beurre",
+        "butter",
+        "eau",
         "egg",
         "fer",
         "finnish",
@@ -485340,15 +486171,18 @@
         "moyen",
         "muscle",
         "pies",
+        "potable)",
         "protéines",
         "rice/short_grain",
         "riche en proteines",
         "roasting",
-        "rye_flour",
+        "rye",
         "salt",
         "sans viande",
+        "seigle",
         "sport",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien",
         "water"
       ],
@@ -485564,6 +486398,8 @@
         "45 minutes",
         "all_purpose_flour",
         "anemie",
+        "beurre",
+        "butter",
         "egg",
         "enfants",
         "facile enfants",
@@ -485580,8 +486416,9 @@
         "roasting",
         "sans viande",
         "sport",
-        "vegan_butter",
+        "vegan",
         "vegan_cheese",
+        "vegetal",
         "vegetarien",
         "yogurt_plant/default"
       ],
@@ -485862,18 +486699,18 @@
         "iron",
         "kimbap",
         "korean",
+        "leger",
+        "light",
+        "low calorie",
+        "minceur",
         "moyen",
-        "muscle",
         "nori",
-        "protéines",
-        "riche en proteines",
         "salt",
         "sans gluten",
         "sans viande",
         "sauteed",
         "sesame_oil",
         "spinach/cooked",
-        "sport",
         "sushi_rice",
         "vegetarien",
         "vinegar/rice"
@@ -486080,28 +486917,21 @@
       "search_tokens": [
         "(vegan)",
         "45 minutes",
-        "anemie",
         "brazilian",
         "bresilien",
         "coeliaque",
         "egg",
-        "fer",
         "fromage",
         "gluten free",
-        "iron",
         "milk_plant/default",
         "moyen",
-        "muscle",
         "pain",
         "pao",
-        "protéines",
         "queijo",
-        "riche en proteines",
         "roasting",
         "salt",
         "sans gluten",
         "sans viande",
-        "sport",
         "tapioca_starch",
         "vegan_cheese",
         "vegetable_oil",
@@ -486344,6 +487174,8 @@
         "45 minutes",
         "anemie",
         "aux",
+        "beurre",
+        "butter",
         "coeliaque",
         "egg",
         "epinards",
@@ -486365,8 +487197,9 @@
         "sauteed",
         "spinach/cooked",
         "sport",
-        "vegan_butter",
+        "vegan",
         "vegan_feta",
+        "vegetal",
         "vegetarien",
         "zeljanica"
       ],
@@ -486627,7 +487460,9 @@
         "1 heure",
         "all_purpose_flour",
         "anemie",
+        "beurre",
         "boiling",
+        "butter",
         "central_european",
         "egg",
         "fer",
@@ -486647,7 +487482,8 @@
         "semmelknodel",
         "sport",
         "stale_bread",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -487217,6 +488053,8 @@
       "search_tokens": [
         "(vegan)",
         "45 minutes",
+        "beurre",
+        "butter",
         "coeliaque",
         "enfants",
         "facile enfants",
@@ -487239,7 +488077,8 @@
         "sauteed",
         "swiss",
         "thyme/fresh",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "easy",
@@ -487877,8 +488716,10 @@
         "1 heure",
         "all_purpose_flour",
         "anemie",
+        "beurre",
         "boiling",
         "bouchee",
+        "butter",
         "cashew_cream",
         "dumplings",
         "egg",
@@ -487900,7 +488741,7 @@
         "slovak",
         "sport",
         "vegan",
-        "vegan_butter",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "easy",
@@ -490703,6 +491544,7 @@
         }
       },
       "search_tokens": [
+        "(farine",
         "(vegan)",
         "45 minutes",
         "anemie",
@@ -490714,12 +491556,15 @@
         "fibre",
         "garlic",
         "gluten free",
+        "harina",
         "iron",
         "kidney_bean",
-        "masa_harina",
+        "mais",
+        "masa",
         "mexican",
         "moyen",
         "muscle",
+        "nixtamalise)",
         "onion/white",
         "protéines",
         "riche en fibres",
@@ -493284,18 +494129,24 @@
       "search_tokens": [
         "(vegan)",
         "45 minutes",
+        "anemie",
         "avocado/raw_skinless",
         "black_dried/dried",
         "cashew_butter/butter_plain_plant",
         "coeliaque",
         "coriander",
+        "digestion",
+        "fer",
+        "fibre",
         "frying",
         "gluten free",
+        "iron",
         "lettuce/raw",
         "lime/juice_fresh",
         "mexican",
         "moyen",
         "raw",
+        "riche en fibres",
         "salt_table/default",
         "sans gluten",
         "sans viande",
@@ -495999,7 +496850,9 @@
         "45 minutes",
         "all_purpose_flour",
         "anemie",
+        "beurre",
         "boiling",
+        "butter",
         "cashew_cream",
         "coriander",
         "egg",
@@ -496020,7 +496873,8 @@
         "sport",
         "ukrainian",
         "vareniki",
-        "vegan_butter",
+        "vegan",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -498600,29 +499454,38 @@
       },
       "search_tokens": [
         "(vegan)",
+        "anemie",
+        "beurre",
         "black_pepper/spice",
         "boiling",
+        "butter",
         "cashew_butter/butter_plain_plant",
+        "digestion",
+        "fer",
+        "fibre",
         "green_salad",
-        "leger",
+        "iron",
         "lent",
-        "light",
         "long",
-        "low calorie",
         "mijote",
-        "minceur",
+        "muscle",
         "onion",
         "onion_raw/raw",
         "pomme",
         "potato/raw_skinless",
+        "protéines",
+        "riche en fibres",
+        "riche en proteines",
         "salt_table/default",
         "sans viande",
         "sauteed",
+        "sport",
         "terre",
         "ukrainian",
         "varenyky",
-        "vegan_butter",
+        "vegan",
         "vegetable_oil_generic/oil",
+        "vegetal",
         "vegetarien",
         "wheat_flour_unenriched/flour_unenriched"
       ],
@@ -503359,7 +504222,6 @@
         }
       },
       "search_tokens": [
-        "anemie",
         "chinese",
         "coconut",
         "coeliaque",
@@ -503367,12 +504229,10 @@
         "coriander/ground",
         "cumin",
         "digestion",
-        "fer",
         "fibre",
         "frying",
         "ginger",
         "gluten free",
-        "iron",
         "lent",
         "long",
         "mijote",
@@ -503934,8 +504794,10 @@
         "(vegan)",
         "1 heure",
         "all_purpose_flour",
+        "beurre",
         "braising",
         "bread/baguette",
+        "butter",
         "enfants",
         "facile enfants",
         "famille",
@@ -503952,9 +504814,10 @@
         "soupe",
         "thym",
         "thyme/fresh",
-        "vegan_butter",
+        "vegan",
         "vegan_cheese",
         "vegetable_broth",
+        "vegetal",
         "vegetarien",
         "vegetarienne"
       ],
@@ -504216,8 +505079,10 @@
         "(vegan)",
         "1 heure",
         "all_purpose_flour",
+        "beurre",
         "braising",
         "bread/baguette",
+        "butter",
         "enfants",
         "facile enfants",
         "famille",
@@ -504236,9 +505101,10 @@
         "sans viande",
         "soupe",
         "thyme/fresh",
-        "vegan_butter",
+        "vegan",
         "vegan_cheese",
         "vegetable_broth",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -512152,7 +513018,7 @@
         "vegan": false,
         "vegetarian": true,
         "gluten_free": true,
-        "lactose_free": true,
+        "lactose_free": false,
         "nut_free": true,
         "raw": false,
         "kid_friendly": false
@@ -512174,7 +513040,13 @@
         "chef_rewrite_v4_2026-05-08",
         "chef_rewrite_v6_2026-05-17",
         "devegan_fix_2026-05-22: revert vegan contamination in text (levure nutritionnelle, végétalien(ne))",
-        "integrate_v8_2026-06-19"
+        "integrate_v8_2026-06-19",
+        {
+          "date": "2026-07-26T17:01:04.563823+00:00",
+          "script": "fix_recipes_coherence.py",
+          "check": "C1_lactose_false_positive",
+          "detail": "lactose_free=True mais ingrédients laitiers: {'cream'}"
+        }
       ],
       "_ingredient_replacements_log": [
         {
@@ -512449,7 +513321,6 @@
         }
       },
       "search_tokens": [
-        "anemie",
         "beet",
         "borscht",
         "braising",
@@ -512457,10 +513328,9 @@
         "citrus/lemon",
         "coeliaque",
         "cream",
-        "fer",
+        "creme",
         "gluten free",
         "green_cabbage",
-        "iron",
         "leger",
         "lent",
         "light",
@@ -512510,7 +513380,7 @@
         "vegan": false,
         "vegetarian": true,
         "gluten_free": true,
-        "lactose_free": true,
+        "lactose_free": false,
         "nut_free": true,
         "raw": false,
         "kid_friendly": false
@@ -512528,7 +513398,13 @@
         },
         "merge_rewrite_content_2026-05-08",
         "chef_rewrite_v6_2026-05-19",
-        "integrate_v8_2026-06-19"
+        "integrate_v8_2026-06-19",
+        {
+          "date": "2026-07-26T17:01:04.563823+00:00",
+          "script": "fix_recipes_coherence.py",
+          "check": "C1_lactose_false_positive",
+          "detail": "lactose_free=True mais ingrédients laitiers: {'cream'}"
+        }
       ],
       "cook_min_correction": {
         "from": 30,
@@ -513365,9 +514241,11 @@
         }
       },
       "search_tokens": [
+        "(sake",
         "45 minutes",
         "braising",
         "courge",
+        "culinaire",
         "japanese",
         "japonaise",
         "kabocha",
@@ -513384,6 +514262,7 @@
         "sans viande",
         "sauce/soy",
         "sauce_soy",
+        "sucre)",
         "sugar/white",
         "vegan",
         "vegetalien",
@@ -516460,6 +517339,7 @@
       },
       "search_tokens": [
         "braising",
+        "bread",
         "broth/vegetable",
         "carrot",
         "coeliaque",
@@ -516473,17 +517353,20 @@
         "low calorie",
         "mijote",
         "minceur",
+        "moutarde",
         "mustard",
         "olive_oil_extra_vierge_plant",
         "onion/yellow",
+        "pain",
         "pea",
         "pois",
-        "rye_bread",
+        "rye",
         "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "scandinave",
+        "seigle",
         "soup",
         "soupe",
         "swedish",
@@ -517956,6 +518839,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "andalou",
         "antioxydants",
         "bell_pepper",
@@ -517965,6 +518849,7 @@
         "cru",
         "crudivorisme",
         "cucumber",
+        "eau",
         "garlic",
         "gazpacho",
         "gluten free",
@@ -517977,6 +518862,7 @@
         "minceur",
         "olive_oil",
         "poivron",
+        "potable)",
         "raw",
         "salt",
         "sans gluten",
@@ -520023,7 +520909,6 @@
       },
       "search_tokens": [
         "1 heure",
-        "anemie",
         "antioxydants",
         "bell_pepper",
         "bok_choy",
@@ -520031,11 +520916,9 @@
         "carrot",
         "chili_pepper",
         "chinese",
-        "fer",
         "garlic",
         "graines",
         "hot",
-        "iron",
         "mala_broth",
         "mushroom/shiitake",
         "napa_cabbage",
@@ -521244,7 +522127,9 @@
       "search_tokens": [
         "(vegan)",
         "1 heure",
+        "beurre",
         "braising",
+        "butter",
         "carrot",
         "coeliaque",
         "cumin",
@@ -521267,7 +522152,7 @@
         "turkish",
         "turque",
         "vegan",
-        "vegan_butter",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "easy",
@@ -524362,6 +525247,7 @@
         "carrot",
         "celery",
         "cream",
+        "creme",
         "garlic",
         "italian",
         "italienne",
@@ -530095,10 +530981,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "braising",
         "calcium",
         "coeliaque",
+        "eau",
         "gluten free",
         "green_onion",
         "japanese",
@@ -530108,6 +530996,7 @@
         "minceur",
         "miso",
         "miso/white",
+        "potable)",
         "proteines",
         "quick",
         "rapide",
@@ -530125,7 +531014,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
-        "wakame_dried",
+        "wakame",
         "water"
       ],
       "difficulty_level": "easy",
@@ -530313,10 +531202,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "braising",
         "calcium",
         "coeliaque",
+        "eau",
         "gluten free",
         "green_onion",
         "japanese",
@@ -530326,6 +531217,7 @@
         "minceur",
         "miso",
         "miso_soup_base",
+        "potable)",
         "proteines",
         "quick",
         "rapide",
@@ -536745,11 +537637,13 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "black_pepper/spice",
         "braising",
         "coeliaque",
         "courge",
+        "eau",
         "garlic_raw/raw",
         "gluten free",
         "international",
@@ -536758,6 +537652,7 @@
         "low calorie",
         "minceur",
         "onions_yellow_raw/raw",
+        "potable)",
         "pumpkin",
         "salt_table/default",
         "sans gluten",
@@ -543688,18 +544583,27 @@
         }
       },
       "search_tokens": [
+        "(kaffir",
+        "(racine",
         "45 minutes",
         "braising",
         "chili_pepper",
         "citrus/lime",
+        "combava",
+        "feuille",
+        "fraiche)",
+        "galanga",
         "galangal",
         "garlic",
         "ginger",
         "international",
-        "kaffir_lime_leaf",
+        "kaffir",
+        "leaf",
         "leger",
         "lemongrass",
         "light",
+        "lime",
+        "lime)",
         "low calorie",
         "minceur",
         "moyen",
@@ -543997,7 +544901,9 @@
         "1 heure",
         "braising",
         "coeliaque",
+        "coreen",
         "egg",
+        "flocons",
         "garlic",
         "gluten free",
         "gochugaru",
@@ -544011,6 +544917,7 @@
         "minceur",
         "mushroom/button",
         "onion",
+        "piment",
         "salt",
         "sans gluten",
         "sans viande",
@@ -544557,6 +545464,7 @@
         }
       },
       "search_tokens": [
+        "(farine",
         "1 heure",
         "american",
         "coeliaque",
@@ -544564,12 +545472,15 @@
         "dried_chili",
         "garlic",
         "gluten free",
+        "harina",
         "kidney_bean",
         "leger",
         "light",
         "low calorie",
-        "masa_harina",
+        "mais",
+        "masa",
         "minceur",
+        "nixtamalise)",
         "onion",
         "parmesan",
         "parsley",
@@ -546955,19 +547866,28 @@
         }
       },
       "search_tokens": [
+        "(kaffir",
+        "(racine",
         "1 heure",
         "braising",
         "chili_pepper",
         "citrus/lime",
+        "combava",
         "coriander",
+        "feuille",
+        "fraiche)",
+        "galanga",
         "galangal",
         "garlic",
         "ginger",
         "international",
-        "kaffir_lime_leaf",
+        "kaffir",
+        "leaf",
         "leger",
         "lemongrass",
         "light",
+        "lime",
+        "lime)",
         "low calorie",
         "minceur",
         "sans produit animal",
@@ -547374,9 +548294,11 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "basil",
         "coconut_cream",
         "coeliaque",
+        "eau",
         "garlic",
         "gluten free",
         "international",
@@ -547390,6 +548312,7 @@
         "olive_oil_extra_vierge_plant",
         "onion",
         "pepper",
+        "potable)",
         "reduction",
         "salt",
         "sans gluten",
@@ -547755,7 +548678,9 @@
       "search_tokens": [
         "(vegan)",
         "45 minutes",
+        "beurre",
         "braising",
+        "butter",
         "carrot/raw",
         "citrus/lemon",
         "coeliaque",
@@ -547776,8 +548701,8 @@
         "soupe",
         "turkish",
         "vegan",
-        "vegan_butter",
         "vegetable_broth",
+        "vegetal",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -548024,13 +548949,17 @@
         }
       },
       "search_tokens": [
+        "(nouilles",
         "45 minutes",
         "calcium",
         "carrot",
+        "cuites)",
+        "epaisses,",
         "garlic",
         "ginger",
         "green_onion",
         "japanese",
+        "japonaises",
         "leger",
         "light",
         "low calorie",
@@ -548286,15 +549215,19 @@
         }
       },
       "search_tokens": [
+        "(nouilles",
         "45 minutes",
         "braising",
         "calcium",
         "coeliaque",
+        "cuites)",
+        "epaisses,",
         "garlic",
         "ginger",
         "gluten free",
         "green_onion",
         "japanese",
+        "japonaises",
         "leger",
         "light",
         "low calorie",
@@ -549986,7 +550919,8 @@
         "meal": [
           "pastry"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "dish_type": "pastry",
       "servings_default": 4,
@@ -550037,8 +550971,10 @@
       },
       "difficulty_level": "medium",
       "search_tokens": [
+        "(eau",
         "asian",
         "coeliaque",
+        "eau",
         "feuilles",
         "gluten free",
         "leger",
@@ -550050,8 +550986,10 @@
         "minceur",
         "nems",
         "oil/neutral",
+        "potable)",
         "printemps",
-        "rice_flour",
+        "rice",
+        "riz",
         "roll",
         "rouleau",
         "rouleaux",
@@ -550067,7 +551005,10 @@
         "water",
         "wrap",
         "wrappers"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 0
+      }
     },
     {
       "id": "stew_ajapsandali_m8d4q1",
@@ -554929,10 +555870,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "braising",
         "carrot",
         "coeliaque",
+        "eau",
         "garlic",
         "gluten free",
         "green_lentils",
@@ -554948,6 +555891,7 @@
         "onion",
         "parsley",
         "pepper",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -555853,6 +556797,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "aromatic",
         "aromatique",
@@ -555861,6 +556806,7 @@
         "carrot",
         "celery",
         "coeliaque",
+        "eau",
         "french",
         "garlic",
         "gluten free",
@@ -555874,6 +556820,7 @@
         "minceur",
         "olive_oil",
         "onion",
+        "potable)",
         "ragout",
         "salt",
         "sans gluten",
@@ -556148,10 +557095,12 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "braising",
         "carrot/raw",
         "celery/raw",
         "coeliaque",
+        "eau",
         "extra_virgin_olive_oil/oil_virgin",
         "french",
         "garlic_raw/raw",
@@ -556169,6 +557118,7 @@
         "minceur",
         "onion_raw/raw",
         "parsley",
+        "potable)",
         "ragout",
         "reduction",
         "salt_table/default",
@@ -559268,11 +560218,7 @@
         "fresh_coriander",
         "garlic",
         "gluten free",
-        "leger",
-        "light",
-        "low calorie",
         "mijoté",
-        "minceur",
         "olive_oil",
         "onion",
         "peruvian",
@@ -564231,7 +565177,8 @@
         "meal": [
           "paste"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "dish_type": "paste",
       "servings_default": 4,
@@ -564280,9 +565227,11 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "1 heure",
         "asian",
         "coeliaque",
+        "eau",
         "gluten free",
         "leger",
         "light",
@@ -564290,6 +565239,7 @@
         "minceur",
         "paste",
         "pate",
+        "potable)",
         "sans gluten",
         "sans produit animal",
         "sans viande",
@@ -564299,7 +565249,10 @@
         "vegetalien",
         "vegetarien",
         "water"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 0
+      }
     },
     {
       "id": "tarte_margherita_v7k2d1",
@@ -576878,10 +577831,14 @@
         "light",
         "low calorie",
         "minceur",
+        "muscle",
+        "protéines",
+        "riche en proteines",
         "salt_table/default",
         "sans produit animal",
         "sans viande",
         "soy_sauce_made_from_soy_tamari/default",
+        "sport",
         "tempeh",
         "tempeh/default",
         "vegan",
@@ -578810,7 +579767,10 @@
         "vegetarien",
         "vegetarienne",
         "western"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 0
+      }
     },
     {
       "id": "wok_bok_choy_saute_a_lail_309f8e",
@@ -580927,9 +581887,11 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "cane_sugar",
         "controlled",
+        "eau",
         "garlic",
         "jasmine_rice",
         "krapow",
@@ -580941,6 +581903,7 @@
         "moyen",
         "olive_oil_extra_vierge_plant",
         "pad",
+        "potable)",
         "sans produit animal",
         "sans viande",
         "soy_sauce",
@@ -582890,9 +583853,11 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "calcium",
         "chili_pepper",
+        "eau",
         "garlic",
         "krapow",
         "leger",
@@ -582902,6 +583867,7 @@
         "moyen",
         "pad",
         "peanut_oil",
+        "potable)",
         "proteines",
         "sans viande",
         "soja",
@@ -585744,9 +586710,12 @@
         }
       },
       "search_tokens": [
+        "(fleur",
         "bean_sprouts",
         "citrus/lime",
-        "coconut_sugar",
+        "coco",
+        "coconut",
+        "cocotier)",
         "egg",
         "emulsion",
         "garlic",
@@ -585764,6 +586733,8 @@
         "salt",
         "sans viande",
         "soy_sauce",
+        "sucre",
+        "sugar",
         "tamarind_paste",
         "thai",
         "tofu/firm",
@@ -592427,7 +593398,8 @@
         "meal": [
           "paste"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "dish_type": "paste",
       "servings_default": 4,
@@ -592541,7 +593513,10 @@
         "lemongrass",
         "coriander/seeds",
         "oil/neutral"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 1
+      }
     },
     {
       "id": "base_buckwheat_crepe_03db22",
@@ -592653,7 +593628,8 @@
         "Servir aussitôt dans des assiettes, accompagné d'un peu de beurre doux et de sirop d'érable ou de votre garniture préférée."
       ],
       "scoring": {
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spice_level": 0
       },
       "_flags": [],
       "_created_by": "resolve_remaining_ingredients.py",
@@ -592809,7 +593785,8 @@
         "Mixer jusqu'à obtenir une texture lisse et crémeuse, similaire à la ricotta. Ajuster l'assaisonnement et conserver au réfrigérateur jusqu'à 5 jours."
       ],
       "scoring": {
-        "confidence": 0.93
+        "confidence": 0.93,
+        "spice_level": 0
       },
       "_flags": [],
       "_created_by": "resolve_remaining_ingredients.py",
@@ -592939,7 +593916,8 @@
         "Verser dans une étamine, égoutter le lactosérum, ajouter le sel, puis presser le fromage en boule et laisser reposer sous un poids 1 heure minimum."
       ],
       "scoring": {
-        "confidence": 0.97
+        "confidence": 0.97,
+        "spice_level": 0
       },
       "_flags": [],
       "_created_by": "resolve_remaining_ingredients.py",
@@ -593101,7 +594079,8 @@
         "Servir frais, découpé en tranches fines, accompagné de crackers ou de pain grillé."
       ],
       "scoring": {
-        "confidence": 0.88
+        "confidence": 0.88,
+        "spice_level": 0
       },
       "_flags": [],
       "_created_by": "resolve_remaining_ingredients.py",
@@ -593294,7 +594273,8 @@
         "Remontez progressivement le mixeur une fois l'émulsion formée, ajustez l'assaisonnement selon vos goûts, puis réfrigérez la mayonnaise jusqu'à utilisation, qui peut se conserver jusqu'à 5 jours au réfrigérateur."
       ],
       "scoring": {
-        "confidence": 0.92
+        "confidence": 0.92,
+        "spice_level": 0
       },
       "_flags": [],
       "_created_by": "resolve_remaining_ingredients.py",
@@ -593311,12 +594291,14 @@
       },
       "difficulty_level": "medium",
       "search_tokens": [
+        "(aquafaba)",
         "10 min",
         "20 min",
         "5 min",
         "antioxydants",
         "aquafaba",
         "bell_pepper",
+        "chiches",
         "citrus/lemon_juice",
         "coeliaque",
         "cru",
@@ -593328,12 +594310,14 @@
         "famille",
         "gluten free",
         "international",
+        "jus",
         "kids",
         "leger",
         "light",
         "low calorie",
         "mayonnaise",
         "minceur",
+        "pois",
         "poivron",
         "quick",
         "rapide",
@@ -593633,7 +594617,8 @@
           "condiment",
           "topping"
         ],
-        "season": []
+        "season": [],
+        "allergens": []
       },
       "dish_type": "condiment",
       "diet_flags": {
@@ -593655,7 +594640,8 @@
         "Servir chaud, éventuellement comme topping ou condiment pour divers plats."
       ],
       "scoring": {
-        "confidence": 0.97
+        "confidence": 0.97,
+        "spice_level": 0
       },
       "_flags": [],
       "_created_by": "resolve_remaining_ingredients.py",
@@ -593841,7 +594827,10 @@
         "sauce",
         "vegan",
         "vegane"
-      ]
+      ],
+      "scoring": {
+        "spice_level": 0
+      }
     },
     {
       "id": "base_sriracha_19895c",
@@ -593928,7 +594917,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 3
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -594104,7 +595094,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 2
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -594137,10 +595128,13 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(racine",
         "30 minutes",
         "chili_pepper",
         "coeliaque",
         "coriander/ground",
+        "fraiche)",
+        "galanga",
         "galangal",
         "garlic",
         "gluten free",
@@ -594244,7 +595238,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "bread",
       "servings_default": 4,
@@ -594277,19 +595272,25 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(eau",
+        "(farine",
         "coeliaque",
         "corn",
+        "eau",
         "gluten free",
+        "harina",
         "leger",
         "lent",
         "light",
         "long",
         "low calorie",
         "mais",
-        "masa_harina",
+        "masa",
         "mexican",
         "mijote",
         "minceur",
+        "nixtamalise)",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -594393,7 +595394,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "pasta",
       "servings_default": 4,
@@ -594524,7 +595526,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "pasta",
       "servings_default": 4,
@@ -594551,8 +595554,10 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(eau",
         "all_purpose_flour",
-        "buckwheat_flour",
+        "buckwheat",
+        "eau",
         "homemade",
         "japanese",
         "leger",
@@ -594565,9 +595570,11 @@
         "minceur",
         "noodles",
         "nouilles",
+        "potable)",
         "salt",
         "sans produit animal",
         "sans viande",
+        "sarrasin",
         "soba",
         "vegan",
         "vegetalien",
@@ -594651,7 +595658,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "pastry",
       "servings_default": 4,
@@ -594684,8 +595692,10 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "all_purpose_flour",
+        "eau",
         "feuilles",
         "gyoza",
         "japanese",
@@ -594693,6 +595703,7 @@
         "light",
         "low calorie",
         "minceur",
+        "potable)",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -594787,7 +595798,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "pastry",
       "servings_default": 4,
@@ -594820,15 +595832,18 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "all_purpose_flour",
         "chinese",
+        "eau",
         "egg",
         "feuilles",
         "leger",
         "light",
         "low calorie",
         "minceur",
+        "potable)",
         "salt",
         "sans viande",
         "vegetarien",
@@ -594924,7 +595939,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "pasta",
       "servings_default": 4,
@@ -594951,8 +595967,10 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(eau",
         "all_purpose_flour",
         "baking_soda",
+        "eau",
         "homemade",
         "japanese",
         "leger",
@@ -594965,6 +595983,7 @@
         "minceur",
         "noodles",
         "nouilles",
+        "potable)",
         "ramen",
         "salt",
         "sans produit animal",
@@ -595052,7 +596071,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "pasta",
       "servings_default": 4,
@@ -595079,11 +596099,13 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(eau",
         "10 min",
         "20 min",
         "5 min",
         "coeliaque",
         "douce",
+        "eau",
         "express",
         "glass",
         "gluten free",
@@ -595095,6 +596117,7 @@
         "noodles",
         "nouilles",
         "patate",
+        "potable)",
         "potato",
         "quick",
         "rapide",
@@ -595194,7 +596217,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "pasta",
       "servings_default": 4,
@@ -595221,8 +596245,10 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "all_purpose_flour",
+        "eau",
         "leger",
         "light",
         "low calorie",
@@ -595230,6 +596256,7 @@
         "noodles",
         "nouilles",
         "persian",
+        "potable)",
         "reshteh",
         "salt",
         "sans produit animal",
@@ -595327,7 +596354,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.8
+        "confidence": 0.8,
+        "spice_level": 2
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -595501,7 +596529,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "main",
       "servings_default": 4,
@@ -595637,7 +596666,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "dairy",
       "servings_default": 4,
@@ -595664,13 +596694,14 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "citron",
         "coco",
         "coconut",
         "coconut_milk",
         "coeliaque",
         "gluten free",
         "leger",
-        "lemon_juice",
+        "lemon",
         "lent",
         "light",
         "long",
@@ -595808,7 +596839,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 1
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -595841,12 +596873,14 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(eau",
         "10 min",
         "20 min",
         "5 min",
         "cacahuete",
         "chili_pepper",
         "coeliaque",
+        "eau",
         "express",
         "garlic",
         "ginger",
@@ -595858,6 +596892,7 @@
         "minceur",
         "peanut",
         "peanut_butter",
+        "potable)",
         "quick",
         "rapide",
         "rice_vinegar",
@@ -595975,7 +597010,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -596011,13 +597047,14 @@
         "10 min",
         "20 min",
         "5 min",
+        "citron",
         "coeliaque",
         "express",
         "fresh_mint",
         "garlic",
         "gluten free",
         "leger",
-        "lemon_juice",
+        "lemon",
         "light",
         "low calorie",
         "middle_eastern",
@@ -596128,7 +597165,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 3
       },
       "dish_type": "sauce",
       "servings_default": 8,
@@ -596272,7 +597310,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "dessert",
       "servings_default": 6,
@@ -596299,19 +597338,23 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "apple",
         "applesauce",
+        "citron",
         "coeliaque",
         "compote",
+        "eau",
         "french",
         "gluten free",
         "leger",
-        "lemon_juice",
+        "lemon",
         "light",
         "low calorie",
         "minceur",
         "pommes",
+        "potable)",
         "quick",
         "rapide",
         "sans gluten",
@@ -596409,7 +597452,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.85
+        "confidence": 0.85,
+        "spice_level": 0
       },
       "dish_type": "dairy",
       "servings_default": 4,
@@ -596443,13 +597487,14 @@
       },
       "search_tokens": [
         "cheese",
+        "citron",
         "coeliaque",
         "cypriot",
         "dried_mint",
         "gluten free",
         "halloumi",
         "leger",
-        "lemon_juice",
+        "lemon",
         "lent",
         "light",
         "long",
@@ -596541,7 +597586,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.82
+        "confidence": 0.82,
+        "spice_level": 0
       },
       "dish_type": "dairy",
       "servings_default": 4,
@@ -596576,13 +597622,14 @@
       "search_tokens": [
         "canadian",
         "cheese",
+        "citron",
         "coeliaque",
         "curds",
         "fromage",
         "gluten free",
         "grain",
         "leger",
-        "lemon_juice",
+        "lemon",
         "lent",
         "light",
         "long",
@@ -596666,7 +597713,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.83
+        "confidence": 0.83,
+        "spice_level": 0
       },
       "dish_type": "dairy",
       "servings_default": 4,
@@ -596804,7 +597852,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "pasta",
       "servings_default": 4,
@@ -596831,10 +597880,12 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "all_purpose_flour",
         "asian",
         "ble",
+        "eau",
         "egg",
         "homemade",
         "leger",
@@ -596844,6 +597895,7 @@
         "minceur",
         "noodles",
         "nouilles",
+        "potable)",
         "salt",
         "sans viande",
         "vegetarien",
@@ -596936,7 +597988,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "pasta",
       "servings_default": 4,
@@ -596963,8 +598016,10 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "coeliaque",
+        "eau",
         "gluten free",
         "leger",
         "light",
@@ -596972,10 +598027,10 @@
         "minceur",
         "noodles",
         "nouilles",
+        "potable)",
         "quick",
         "rapide",
         "rice",
-        "rice_flour",
         "riz",
         "salt",
         "sans gluten",
@@ -597072,7 +598127,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "pastry",
       "servings_default": 4,
@@ -597105,11 +598161,13 @@
         "updated_at": "2026-06-09T08:58:53.097203+00:00"
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "all_purpose_flour",
         "butter/dairy",
         "discs",
         "disques",
+        "eau",
         "latin_american",
         "leger",
         "light",
@@ -597117,6 +598175,7 @@
         "minceur",
         "pastry",
         "pate",
+        "potable)",
         "salt",
         "sans viande",
         "vegetarien",
@@ -597208,7 +598267,8 @@
         ]
       },
       "scoring": {
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spice_level": 0
       },
       "dish_type": "pastry",
       "servings_default": 4,
@@ -597248,15 +598308,18 @@
       },
       "search_tokens": [
         "(base)",
+        "(eau",
         "1 heure",
         "all_purpose_flour",
         "dough",
+        "eau",
         "indian",
         "leger",
         "light",
         "low calorie",
         "minceur",
         "pate",
+        "potable)",
         "salt",
         "samosa",
         "sans produit animal",
@@ -597279,8 +598342,8 @@
     }
   ],
   "metadata": {
-    "last_coherence_audit": "2026-06-15T17:42:47.424740+00:00",
-    "last_coherence_corrections": 54,
+    "last_coherence_audit": "2026-07-26T17:01:04.563823+00:00",
+    "last_coherence_corrections": 7,
     "patch_history": [
       {
         "date": "2026-06-19",
