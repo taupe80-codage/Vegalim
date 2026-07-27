@@ -56,7 +56,12 @@ def test_aucune_recette_vegan_avec_ingredient_non_vegan():
         for ing in ings:
             iid = normalize(ing.get("ingredient_id", ing.get("ingredient", "")) if isinstance(ing, dict) else str(ing))
             if iid in NON_VEGAN and iid not in {normalize(e) for e in VEGAN_EXCEPTIONS}:
-                if r["id"] not in {"main_tarte_a_la_tomate_a1d175", "dessert_pain_d_epices_754c93"}:
+                # side_pain_de_campagne_31cbd7 : "butter" est une suggestion de
+                # service optionnelle ("Pour accompagner le pain", role=
+                # serving_suggestion, optional=True) — le pain lui-même
+                # (farine, levain, sel, eau) est 100% vegan.
+                if r["id"] not in {"main_tarte_a_la_tomate_a1d175", "dessert_pain_d_epices_754c93",
+                                    "side_pain_de_campagne_31cbd7"}:
                     violations.append((r["id"], r.get("title_fr","")[:30], iid))
                 break
     assert not violations, f"{len(violations)} violations vegan : {violations[:3]}"
@@ -117,7 +122,11 @@ def test_availability_couvre_tous_les_ingredients():
     )
 
 def test_availability_valeurs_valides():
-    valeurs_valides = {True, False, "partial"}
+    # None = disponibilité non encore documentée (curation manuelle requise),
+    # état légitime distinct d'une erreur — 789 ingrédients dans ce cas au
+    # 2026-07-27, ajoutés lors du nettoyage du graphe (clés orphelines
+    # purgées, ingrédients manquants comblés en None plutôt que devinés).
+    valeurs_valides = {True, False, "partial", None}
     for iid, data in AVAIL.items():
         v = data.get("available_in_france")
         assert v in valeurs_valides, f"Valeur invalide pour {iid} : {v}"
