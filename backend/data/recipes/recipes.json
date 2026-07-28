@@ -67144,8 +67144,8 @@
       "id": "dumpling_vegetable_dumplings_abb853",
       "titles": {
         "original": "Vegetable Dumplings",
-        "fr": "Vegetable Dumplings",
-        "en": "Vegetable Dumplings"
+        "fr": "Dumplings",
+        "en": "Dumplings"
       },
       "origin": {
         "cuisine": "chinese",
@@ -124870,6 +124870,28 @@
             "optional": true,
             "added_by": "chef_rewrite_v8.0_2026-06-17"
           }
+        },
+        {
+          "ingredient": "garlic",
+          "quantity": 9,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sesame",
+          "quantity": 45,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -124930,12 +124952,15 @@
       "search_tokens": [
         "45 minutes",
         "cabbage",
+        "calcium",
         "carotte",
         "carrot",
         "chinese",
         "chou",
         "chow",
         "coriander",
+        "garlic",
+        "graines",
         "green",
         "leger",
         "light",
@@ -124952,6 +124977,7 @@
         "sans viande",
         "sauce",
         "sel",
+        "sesame",
         "shoyu",
         "soja",
         "soy",
@@ -133053,243 +133079,6 @@
       ]
     },
     {
-      "id": "pasta_vegetable_chow_mein_c45f54",
-      "titles": {
-        "original": "Vegetable Chow Mein",
-        "fr": "Vegetable Chow Mein",
-        "en": "Vegetable Chow Mein"
-      },
-      "origin": {
-        "cuisine": "chinese",
-        "country": "china",
-        "region": "guangdong",
-        "city": ""
-      },
-      "servings": 4,
-      "timing": {
-        "prep_active_min": 13,
-        "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 33
-      },
-      "composition": [
-        {
-          "ingredient": "noodles",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "dried",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "green_cabbage_raw",
-          "quantity": 400,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "carrot_raw",
-          "quantity": 200,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "rounds",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "onion_raw",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "garlic",
-          "quantity": 9,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 45,
-          "unit": "ml",
-          "meta": {
-            "role": "condiment",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "sesame",
-          "quantity": 45,
-          "unit": "ml",
-          "meta": {
-            "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          },
-          "axes": {
-            "form": "oil",
-            "origin": "plant"
-          },
-          "variant_name_fr": "sésame"
-        }
-      ],
-      "tags": {
-        "diet": [
-          "vegan",
-          "vegetarian"
-        ],
-        "allergens": [
-          "gluten",
-          "soy"
-        ],
-        "technique": [
-          "wok",
-          "water_cooking"
-        ],
-        "process": [
-          "wok_hei"
-        ]
-      },
-      "equipment": [
-        "casserole",
-        "couteau",
-        "planche",
-        "cuillere_bois"
-      ],
-      "result": {
-        "texture": [
-          "bien_cuit",
-          "assaisonne"
-        ],
-        "taste": [
-          "equilibre",
-          "aromatique"
-        ],
-        "visual": [
-          "appetissant",
-          "homogene"
-        ]
-      },
-      "metrics": {
-        "total_weight_g": 1299,
-        "hydration_ratio": 0.07
-      },
-      "scoring": {
-        "confidence": 1.0,
-        "spice_level": 0,
-        "iconic": {
-          "status": false,
-          "score": 5.7,
-          "tags": [
-            "vegetable",
-            "nouilles",
-            "chou"
-          ]
-        }
-      },
-      "search_tokens": [
-        "45 minutes",
-        "cabbage",
-        "calcium",
-        "carotte",
-        "carrot",
-        "chinese",
-        "chou",
-        "chow",
-        "garlic",
-        "graines",
-        "green",
-        "leger",
-        "light",
-        "low calorie",
-        "mein",
-        "minceur",
-        "moyen",
-        "noodles",
-        "oignon",
-        "onion",
-        "sans produit animal",
-        "sans viande",
-        "sauce",
-        "sesame",
-        "shoyu",
-        "soja",
-        "soy",
-        "vegan",
-        "vegetable",
-        "vegetalien",
-        "vegetarien",
-        "vert",
-        "water_cooking",
-        "wok"
-      ],
-      "difficulty_level": "medium",
-      "dish_type": "main",
-      "servings_default": 4,
-      "diet_flags_v3": {
-        "vegan_strict": true,
-        "vegan_possible": true,
-        "vegetarian_strict": true,
-        "unknown_ingredients": 0
-      },
-      "diet_flags_meta": {
-        "version": "v3_pipeline_v6",
-        "updated_at": "2026-06-07T20:11:31.070507+00:00"
-      },
-      "_quality_score": 0.92,
-      "description": "Pâtes chow mein cuites al dente, enrobées d'une sauce à base de sauce soja, avec un mélange de légumes croquants et fondants, tels que le chou vert, les carottes et les oignons.",
-      "instructions": [
-        "Étape 1 : Coupez le chou vert en lamelles fines, les carottes en julienne et les oignons en biseau. Tout doit être de taille uniforme pour une cuisson homogène et une présentation appétissante.",
-        "Étape 2 : Cuisez les pâtes chow mein selon les instructions du paquet. Égouttez-les, rincez-les à l'eau froide pour stopper la cuisson, puis séchez-les sur du papier absorbant pour éviter qu'elles collent entre elles.",
-        "Étape 3 : Préparez la sauce en mélangeant de la sauce soja, un peu d'huile de sésame et une pincée de sucre. Cette sauce donnera une saveur riche et équilibrée à votre plat.",
-        "Étape 4 : Chauffez de l'huile de sésame dans un wok à feu maximum. Faites sauter l'ail pendant 15 secondes, puis ajoutez les légumes les plus fermes, comme les carottes et les oignons, et faites-les sauter pendant 2 à 3 minutes à feu très vif — ils doivent être légèrement dorés et croquants par endroits.",
-        "Étape 5 : Ajoutez les pâtes chow mein et la sauce préparée. Mélangez vigoureusement à feu vif pendant 2 minutes jusqu'à ce que les pâtes soient uniformément enrobées et la sauce absorbée, en veillant à ce que les légumes restent al dente.",
-        "Étape 6 : Servez sans attendre, en veillant à ce que les pâtes soient bien séparées et les légumes gardent leur texture croquante. La sauce doit être brillante et les saveurs bien équilibrées, offrant une expérience culinaire authentique."
-      ],
-      "diet_flags": {
-        "vegan": true,
-        "vegetarian": true,
-        "gluten_free": false,
-        "lactose_free": true,
-        "nut_free": true,
-        "raw": false,
-        "kid_friendly": false
-      },
-      "_corrections_log": [
-        "flag_lactose_free→True",
-        "flag_nut_free→True",
-        "chef_rewrite_v6_2026-05-19",
-        "integrate_v8_2026-06-19"
-      ],
-      "_missing_variants": [
-        "noodles",
-        "soy_sauce"
-      ]
-    },
-    {
       "id": "pasta_yakisoba_c6cc19",
       "titles": {
         "original": "Soba",
@@ -140527,7 +140316,7 @@
       "id": "rice_biryani_classic_k82x7b",
       "titles": {
         "original": "Biryani",
-        "fr": "Biryani végétarien",
+        "fr": "Biryani",
         "en": "Vegetable Biryani"
       },
       "origin": {
@@ -157342,7 +157131,7 @@
       "id": "rice_vegetable_biryani_160da2",
       "titles": {
         "original": "Biryani",
-        "fr": "Vegetable Biryani",
+        "fr": "Biryani à la Noix de Coco",
         "en": "Biryani"
       },
       "origin": {
@@ -157567,6 +157356,7 @@
         "braising",
         "carotte",
         "carrot",
+        "coco",
         "coconut",
         "coeliaque",
         "curcuma",
@@ -157585,6 +157375,7 @@
         "masala",
         "mijote",
         "minceur",
+        "noix",
         "oignon",
         "onion",
         "pomme",
@@ -157600,7 +157391,6 @@
         "tomato/fresh",
         "turmeric",
         "vegan",
-        "vegetable",
         "vegetalien",
         "vegetarien",
         "water_cooking"
@@ -157675,8 +157465,8 @@
       "id": "rice_vegetable_fried_rice_cd489b",
       "titles": {
         "original": "Vegetable Fried Rice",
-        "fr": "Vegetable Fried Rice",
-        "en": "Vegetable Fried Rice"
+        "fr": "Riz Sauté aux Légumes",
+        "en": "Riz Sauté aux Légumes"
       },
       "origin": {
         "cuisine": "international",
@@ -157872,6 +157662,7 @@
       },
       "search_tokens": [
         "30 minutes",
+        "aux",
         "bell",
         "blanc",
         "calcium",
@@ -157882,6 +157673,7 @@
         "garlic",
         "international",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
@@ -157899,6 +157691,7 @@
         "salt",
         "sans viande",
         "sauce",
+        "saute",
         "sel",
         "sesame",
         "shoyu",
@@ -157978,8 +157771,8 @@
       "id": "rice_vegetable_pulao_a0ed3e",
       "titles": {
         "original": "Vegetable Pulao",
-        "fr": "Vegetable Pulao",
-        "en": "Vegetable Pulao"
+        "fr": "Pulao",
+        "en": "Pulao"
       },
       "origin": {
         "cuisine": "indian",
@@ -158303,8 +158096,8 @@
       "id": "rice_vegetable_sushi_9aad8a",
       "titles": {
         "original": "Vegetable Sushi",
-        "fr": "Vegetable Sushi",
-        "en": "Vegetable Sushi"
+        "fr": "Sushi",
+        "en": "Sushi"
       },
       "origin": {
         "cuisine": "japanese",
@@ -182516,8 +182309,8 @@
       "id": "snack_vegetable_samosa_088bfa",
       "titles": {
         "original": "Vegetable Samosa",
-        "fr": "Vegetable Samosa",
-        "en": "Vegetable Samosa"
+        "fr": "Samosa",
+        "en": "Samosa"
       },
       "origin": {
         "cuisine": "chinese",
@@ -201081,8 +200874,8 @@
       "id": "soup_vegetable_laksa_ab0112",
       "titles": {
         "original": "Vegetable Laksa",
-        "fr": "Vegetable Laksa",
-        "en": "Vegetable Laksa"
+        "fr": "Laksa aux Légumes",
+        "en": "Laksa aux Légumes"
       },
       "origin": {
         "cuisine": "malaysian",
@@ -201301,6 +201094,7 @@
       "search_tokens": [
         "45 minutes",
         "ail",
+        "aux",
         "bean",
         "bouillon",
         "braising",
@@ -218357,7 +218151,7 @@
       }
     ],
     "last_v8_integration": "2026-06-19",
-    "total_recipes": 821,
-    "total": 821
+    "total_recipes": 820,
+    "total": 820
   }
 }
