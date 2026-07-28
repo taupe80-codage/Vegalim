@@ -33,11 +33,11 @@ def _recipe(rid=1, *, ingredients=None, composition=None,
     if composition is not None:
         r["composition"] = [{"ingredient": c} for c in composition]
     if technique is not None:
-        r["technique"] = technique if isinstance(technique, list) else [technique]
+        r.setdefault("tags", {})["technique"] = technique if isinstance(technique, list) else [technique]
     if prep_time_min is not None:
-        r["prep_time_min"] = prep_time_min
+        r.setdefault("timing", {})["prep_active_min"] = prep_time_min
     if cook_time_min is not None:
-        r["cook_time_min"] = cook_time_min
+        r.setdefault("timing", {})["cook_min"] = cook_time_min
     if diet_flags is not None:
         r["diet_flags"] = diet_flags
     if health_scores is not None:

@@ -687,14 +687,22 @@ def compute_diet_flags(recipe: dict) -> dict:
     # mais on signale à l'utilisateur que des traces sont présentes.
     lactose_trace_ingredients = [i for i in ids if i in LACTOSE_TRACE_IDS]
 
-    techniques = [str(t).lower() for t in (recipe.get("technique") or [])]
+    # NB : le champ top-level 'technique' n'existe pas dans le schéma recipes.json
+    # (les techniques sont dans tags.technique) — corrigé ici, cette lecture
+    # retournait toujours [] et is_raw était donc toujours False.
+    techniques = [str(t).lower() for t in ((recipe.get("tags") or {}).get("technique") or [])]
     is_raw = any(t in ("raw", "cru", "marinade", "ceviche") for t in techniques)
+
+    # Idem : 'prep_time_min' top-level n'existe pas non plus (→ timing.prep_active_min
+    # + timing.prep_passive_min) — retournait toujours le défaut 999.
+    timing = recipe.get("timing") or {}
+    prep_time_min = (timing.get("prep_active_min") or 0) + (timing.get("prep_passive_min") or 0)
 
     strong_spices = {"chili", "piment", "harissa", "wasabi", "gochujang", "sriracha"}
     is_kid = (
         not any(i in strong_spices for i in ids) and
         len(ids) <= 8 and
-        int(recipe.get("prep_time_min") or 999) <= 30
+        prep_time_min <= 30
     )
 
     flags: dict = {
