@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "base_almond_milk_226291",
         "base_cashew_milk_71947e",
@@ -28,7 +28,7 @@
     },
     {
       "id": 3,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "base_empanada_dough_65661a",
         "base_pizza_dough_6fdabd",
@@ -1177,5 +1177,8 @@
       ],
       "issues": []
     }
+  ],
+  "notes": [
+    "serving_suggestion (478 items, quantity=null, role=serving_suggestion) : feature a construire plus tard (checkbox frontend + inclusion conditionnelle backend), differe par decision utilisateur - ne pas re-signaler par recette, deja note globalement."
   ]
 }
