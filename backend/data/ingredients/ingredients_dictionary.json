@@ -6,9 +6,9 @@
       "ingredients_tree.json",
       "nutrition_v2.json"
     ],
-    "built_at": "2026-07-27",
+    "built_at": "2026-07-28",
     "note": "1 entrée = 1 variant n2 (1 état produit)",
-    "total_entries": 1890,
+    "total_entries": 1915,
     "total_aliases": 122,
     "orphans_count": 0,
     "n2_unplaced": 0,
@@ -2514,6 +2514,103 @@
               "bioavailability_protein": 0.65
             }
           }
+        },
+        "alcohol": {
+          "id": "alcohol",
+          "ingredient_groups": {
+            "kirsch": {
+              "v32_ing_id": "ing_manual_009",
+              "v32_var_id": "var_manual_009",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "kirsch (eau-de-vie de cerise)",
+              "canonical_name_fr": "kirsch (eau-de-vie de cerise)",
+              "canonical_name_en": "kirsch (cherry brandy)",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "nova_group": 4,
+              "bioavailability_protein": 0.65
+            },
+            "cognac": {
+              "v32_ing_id": "ing_manual_010",
+              "v32_var_id": "var_manual_010",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "cognac",
+              "canonical_name_fr": "cognac",
+              "canonical_name_en": "cognac (brandy)",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "nova_group": 4,
+              "bioavailability_protein": 0.65
+            }
+          }
+        },
+        "water": {
+          "id": "water",
+          "ingredient_groups": {
+            "water_plain": {
+              "v32_ing_id": "ing_manual_024",
+              "v32_var_id": "var_manual_024",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "eau",
+              "canonical_name_fr": "eau",
+              "canonical_name_en": "water",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.65
+            }
+          }
         }
       }
     },
@@ -3095,6 +3192,209 @@
               },
               "allergens_eu": [],
               "bioavailability_protein": 0.65
+            }
+          }
+        },
+        "pastes": {
+          "id": "pastes",
+          "ingredient_groups": {
+            "tamarind_paste": {
+              "v32_ing_id": "ing_manual_004",
+              "v32_var_id": "var_manual_004",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "pâte de tamarin",
+              "canonical_name_fr": "pâte de tamarin",
+              "canonical_name_en": "tamarind paste",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "bioavailability_protein": 0.65,
+              "culinary": {
+                "properties": [
+                  "fiber"
+                ]
+              }
+            }
+          }
+        },
+        "flavorings": {
+          "id": "flavorings",
+          "ingredient_groups": {
+            "rose_water": {
+              "v32_ing_id": "ing_manual_012",
+              "v32_var_id": "var_manual_012",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "eau de rose",
+              "canonical_name_fr": "eau de rose",
+              "canonical_name_en": "rose water",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "bioavailability_protein": 0.65
+            }
+          }
+        },
+        "sauces": {
+          "id": "sauces",
+          "ingredient_groups": {
+            "okonomiyaki_sauce": {
+              "v32_ing_id": "ing_manual_015",
+              "v32_var_id": "var_manual_015",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "sauce okonomiyaki",
+              "canonical_name_fr": "sauce okonomiyaki",
+              "canonical_name_en": "okonomiyaki sauce",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "bioavailability_protein": 0.65
+            },
+            "chutney": {
+              "v32_ing_id": "ing_manual_021",
+              "v32_var_id": "var_manual_021",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "chutney (condiment aigre-doux aux fruits)",
+              "canonical_name_fr": "chutney (condiment aigre-doux aux fruits)",
+              "canonical_name_en": "chutney",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "bioavailability_protein": 0.65
+            }
+          }
+        },
+        "pickles": {
+          "id": "pickles",
+          "ingredient_groups": {
+            "prune_umeboshi": {
+              "v32_ing_id": "ing_manual_018",
+              "v32_var_id": "var_manual_018",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "prune umeboshi (prune japonaise salée)",
+              "canonical_name_fr": "prune umeboshi (prune japonaise salée)",
+              "canonical_name_en": "umeboshi (Japanese pickled plum)",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "bioavailability_protein": 0.65
+            }
+          }
+        },
+        "sweet_pastes": {
+          "id": "sweet_pastes",
+          "ingredient_groups": {
+            "red_bean_paste": {
+              "v32_ing_id": "ing_manual_020",
+              "v32_var_id": "var_manual_020",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "pâte de haricots rouges sucrée (anko)",
+              "canonical_name_fr": "pâte de haricots rouges sucrée (anko)",
+              "canonical_name_en": "sweetened red bean paste (anko)",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "bioavailability_protein": 0.65,
+              "culinary": {
+                "properties": [
+                  "fiber"
+                ]
+              }
             }
           }
         }
@@ -22274,6 +22574,117 @@
               }
             }
           }
+        },
+        "berries": {
+          "id": "berries",
+          "ingredient_groups": {
+            "lingonberry": {
+              "v32_ing_id": "ing_manual_013",
+              "v32_var_id": "var_manual_013",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "airelle (lingonberry)",
+              "canonical_name_fr": "airelle (lingonberry)",
+              "canonical_name_en": "lingonberry",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.5,
+              "culinary": {
+                "properties": [
+                  "fresh",
+                  "sweet"
+                ]
+              }
+            },
+            "mixed_berries": {
+              "v32_ing_id": "ing_manual_014",
+              "v32_var_id": "var_manual_014",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "fruits rouges mélangés",
+              "canonical_name_fr": "fruits rouges mélangés",
+              "canonical_name_en": "mixed berries",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.5,
+              "culinary": {
+                "properties": [
+                  "fresh",
+                  "sweet",
+                  "fiber"
+                ]
+              }
+            },
+            "acai_puree": {
+              "v32_ing_id": "ing_manual_019",
+              "v32_var_id": "var_manual_019",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "purée d'açaï",
+              "canonical_name_fr": "purée d'açaï",
+              "canonical_name_en": "acai puree",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.5,
+              "culinary": {
+                "properties": [
+                  "fresh",
+                  "sweet"
+                ]
+              }
+            }
+          }
         }
       }
     },
@@ -29310,6 +29721,41 @@
                 "high_protein": false,
                 "high_fiber": false,
                 "high_fat": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.55,
+              "culinary": {
+                "properties": [
+                  "fresh",
+                  "fiber"
+                ]
+              }
+            },
+            "wood_ear_mushroom": {
+              "v32_ing_id": "ing_manual_008",
+              "v32_var_id": "var_manual_008",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "champignon oreille de bois séché",
+              "canonical_name_fr": "champignon oreille de bois séché",
+              "canonical_name_en": "dried wood ear mushroom",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
               },
               "allergens_eu": [],
               "nova_group": 1,
@@ -46214,6 +46660,122 @@
               }
             }
           }
+        },
+        "leafy_greens": {
+          "id": "leafy_greens",
+          "ingredient_groups": {
+            "vine_leaf": {
+              "v32_ing_id": "ing_manual_006",
+              "v32_var_id": "var_manual_006",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "feuille de vigne (conserve, saumure)",
+              "canonical_name_fr": "feuille de vigne (conserve, saumure)",
+              "canonical_name_en": "vine/grape leaves, canned in brine",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.55,
+              "culinary": {
+                "properties": [
+                  "fresh",
+                  "fiber"
+                ]
+              }
+            },
+            "gundruk": {
+              "v32_ing_id": "ing_manual_007",
+              "v32_var_id": "var_manual_007",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "gundruk (légumes-feuilles fermentés séchés, népalais)",
+              "canonical_name_fr": "gundruk (légumes-feuilles fermentés séchés, népalais)",
+              "canonical_name_en": "gundruk (dried fermented leafy greens)",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": true,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.55,
+              "culinary": {
+                "properties": [
+                  "fresh",
+                  "fiber",
+                  "protein"
+                ]
+              }
+            }
+          }
+        },
+        "mixed": {
+          "id": "mixed",
+          "ingredient_groups": {
+            "assorted_vegetables": {
+              "v32_ing_id": "ing_manual_023",
+              "v32_var_id": "var_manual_023",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "légumes assortis",
+              "canonical_name_fr": "légumes assortis",
+              "canonical_name_en": "assorted/mixed vegetables",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.55,
+              "culinary": {
+                "properties": [
+                  "fresh",
+                  "fiber"
+                ]
+              }
+            }
+          }
         }
       }
     },
@@ -56896,6 +57458,84 @@
                 "high_protein": false,
                 "high_fiber": false,
                 "high_fat": true
+              },
+              "allergens_eu": [],
+              "nova_group": 2,
+              "bioavailability_protein": 0.65,
+              "culinary": {
+                "properties": [
+                  "fat"
+                ]
+              }
+            }
+          }
+        },
+        "vegetable_oils": {
+          "id": "vegetable_oils",
+          "ingredient_groups": {
+            "palm_oil": {
+              "v32_ing_id": "ing_manual_003",
+              "v32_var_id": "var_manual_003",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "huile de palme",
+              "canonical_name_fr": "huile de palme",
+              "canonical_name_en": "palm oil",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": true,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "nova_group": 2,
+              "bioavailability_protein": 0.65,
+              "culinary": {
+                "properties": [
+                  "fat"
+                ]
+              }
+            }
+          }
+        },
+        "flavored_oils": {
+          "id": "flavored_oils",
+          "ingredient_groups": {
+            "truffle_oil": {
+              "v32_ing_id": "ing_manual_017",
+              "v32_var_id": "var_manual_017",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "huile à la truffe",
+              "canonical_name_fr": "huile à la truffe",
+              "canonical_name_en": "truffle oil",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": true,
+                "diabetic_friendly": false
               },
               "allergens_eu": [],
               "nova_group": 2,
@@ -76386,6 +77026,284 @@
                 "properties": [
                   "protein",
                   "fat"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "cereals_and_starches": {
+      "id": "cereals_and_starches",
+      "subcategories": {
+        "flours": {
+          "id": "flours",
+          "ingredient_groups": {
+            "teff_flour": {
+              "v32_ing_id": "ing_manual_001",
+              "v32_var_id": "var_manual_001",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "farine de teff",
+              "canonical_name_fr": "farine de teff",
+              "canonical_name_en": "teff flour",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 2,
+              "bioavailability_protein": 0.67,
+              "culinary": {
+                "properties": [
+                  "starch",
+                  "fiber"
+                ]
+              }
+            },
+            "manioc_flour": {
+              "v32_ing_id": "ing_manual_002",
+              "v32_var_id": "var_manual_002",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "farine de manioc",
+              "canonical_name_fr": "farine de manioc",
+              "canonical_name_en": "cassava/manioc flour",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 2,
+              "bioavailability_protein": 0.67,
+              "culinary": {
+                "properties": [
+                  "starch"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "spices_and_condiments": {
+      "id": "spices_and_condiments",
+      "subcategories": {
+        "spice_blends": {
+          "id": "spice_blends",
+          "ingredient_groups": {
+            "five_spice": {
+              "v32_ing_id": "ing_manual_005",
+              "v32_var_id": "var_manual_005",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "mélange 5 épices chinois",
+              "canonical_name_fr": "mélange 5 épices chinois",
+              "canonical_name_en": "Chinese five spice",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.65,
+              "culinary": {
+                "properties": [
+                  "aromatic",
+                  "fiber"
+                ]
+              }
+            }
+          }
+        },
+        "spices": {
+          "id": "spices",
+          "ingredient_groups": {
+            "juniper_berry": {
+              "v32_ing_id": "ing_manual_022",
+              "v32_var_id": "var_manual_022",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "baie de genièvre",
+              "canonical_name_fr": "baie de genièvre",
+              "canonical_name_en": "juniper berry",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.65,
+              "culinary": {
+                "properties": [
+                  "aromatic",
+                  "fiber"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "desserts": {
+      "id": "desserts",
+      "subcategories": {
+        "ice_cream": {
+          "id": "ice_cream",
+          "ingredient_groups": {
+            "vanilla_ice_cream": {
+              "v32_ing_id": "ing_manual_011",
+              "v32_var_id": "var_manual_011",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "glace à la vanille",
+              "canonical_name_fr": "glace à la vanille",
+              "canonical_name_en": "vanilla ice cream",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "bioavailability_protein": 0.65
+            }
+          }
+        },
+        "biscuits": {
+          "id": "biscuits",
+          "ingredient_groups": {
+            "ladyfinger": {
+              "v32_ing_id": "ing_manual_025",
+              "v32_var_id": "var_manual_025",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "biscuit à la cuillère (boudoir)",
+              "canonical_name_fr": "biscuit à la cuillère (boudoir)",
+              "canonical_name_en": "ladyfinger biscuit (boudoir/savoiardi)",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "bioavailability_protein": 0.65
+            }
+          }
+        }
+      }
+    },
+    "plant_based_proteins": {
+      "id": "plant_based_proteins",
+      "subcategories": {
+        "meat_substitutes": {
+          "id": "meat_substitutes",
+          "ingredient_groups": {
+            "vegetarian_bacon": {
+              "v32_ing_id": "ing_manual_016",
+              "v32_var_id": "var_manual_016",
+              "source": "MANUAL",
+              "source_id": null,
+              "source_label": "bacon végétarien",
+              "canonical_name_fr": "bacon végétarien",
+              "canonical_name_en": "vegetarian bacon",
+              "axes": {},
+              "axes_fr": {},
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": true,
+                "high_fiber": true,
+                "high_fat": false,
+                "diabetic_friendly": true
+              },
+              "allergens_eu": [],
+              "bioavailability_protein": 0.65,
+              "culinary": {
+                "properties": [
+                  "protein"
                 ]
               }
             }

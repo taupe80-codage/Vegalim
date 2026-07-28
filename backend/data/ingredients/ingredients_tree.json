@@ -3001,6 +3001,104 @@
               ]
             }
           ]
+        },
+        {
+          "id": "alcohol",
+          "label": "alcohol",
+          "label_fr": "alcools",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_009",
+              "canonical_name_fr": "kirsch (eau-de-vie de cerise)",
+              "canonical_name_en": "kirsch (cherry brandy)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_009",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "kirsch (eau-de-vie de cerise)",
+                  "name_en": "kirsch (cherry brandy)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "kirsch (cherry brandy)",
+                  "source_name_fr": "kirsch (eau-de-vie de cerise)",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_manual_010",
+              "canonical_name_fr": "cognac",
+              "canonical_name_en": "cognac (brandy)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_010",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "cognac",
+                  "name_en": "cognac (brandy)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "cognac (brandy)",
+                  "source_name_fr": "cognac",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "water",
+          "label": "water",
+          "label_fr": "eau",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_024",
+              "canonical_name_fr": "eau",
+              "canonical_name_en": "water",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_024",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "eau",
+                  "name_en": "water",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "water",
+                  "source_name_fr": "eau",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
         }
       ],
       "label_fr": "boissons"
@@ -3648,6 +3746,209 @@
             }
           ],
           "label_fr": "sel"
+        },
+        {
+          "id": "pastes",
+          "label": "pastes",
+          "label_fr": "pâtes/condiments",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_004",
+              "canonical_name_fr": "pâte de tamarin",
+              "canonical_name_en": "tamarind paste",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_004",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "pâte de tamarin",
+                  "name_en": "tamarind paste",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "tamarind paste",
+                  "source_name_fr": "pâte de tamarin",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "flavorings",
+          "label": "flavorings",
+          "label_fr": "arômes",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_012",
+              "canonical_name_fr": "eau de rose",
+              "canonical_name_en": "rose water",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_012",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "eau de rose",
+                  "name_en": "rose water",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "rose water",
+                  "source_name_fr": "eau de rose",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sauces",
+          "label": "sauces",
+          "label_fr": "sauces",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_015",
+              "canonical_name_fr": "sauce okonomiyaki",
+              "canonical_name_en": "okonomiyaki sauce",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_015",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "sauce okonomiyaki",
+                  "name_en": "okonomiyaki sauce",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "okonomiyaki sauce",
+                  "source_name_fr": "sauce okonomiyaki",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_manual_021",
+              "canonical_name_fr": "chutney (condiment aigre-doux aux fruits)",
+              "canonical_name_en": "chutney",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_021",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "chutney (condiment aigre-doux aux fruits)",
+                  "name_en": "chutney",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "chutney",
+                  "source_name_fr": "chutney (condiment aigre-doux aux fruits)",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pickles",
+          "label": "pickles",
+          "label_fr": "conserves au vinaigre/sel",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_018",
+              "canonical_name_fr": "prune umeboshi (prune japonaise salée)",
+              "canonical_name_en": "umeboshi (Japanese pickled plum)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_018",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "prune umeboshi (prune japonaise salée)",
+                  "name_en": "umeboshi (Japanese pickled plum)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "umeboshi (Japanese pickled plum)",
+                  "source_name_fr": "prune umeboshi (prune japonaise salée)",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sweet_pastes",
+          "label": "sweet_pastes",
+          "label_fr": "pâtes sucrées",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_020",
+              "canonical_name_fr": "pâte de haricots rouges sucrée (anko)",
+              "canonical_name_en": "sweetened red bean paste (anko)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_020",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "pâte de haricots rouges sucrée (anko)",
+                  "name_en": "sweetened red bean paste (anko)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "sweetened red bean paste (anko)",
+                  "source_name_fr": "pâte de haricots rouges sucrée (anko)",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
         }
       ],
       "label_fr": "condiments & sauces"
@@ -20846,6 +21147,97 @@
               ]
             }
           ]
+        },
+        {
+          "id": "berries",
+          "label": "berries",
+          "label_fr": "baies",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_013",
+              "canonical_name_fr": "airelle (lingonberry)",
+              "canonical_name_en": "lingonberry",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_013",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "airelle (lingonberry)",
+                  "name_en": "lingonberry",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "lingonberry",
+                  "source_name_fr": "airelle (lingonberry)",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_manual_014",
+              "canonical_name_fr": "fruits rouges mélangés",
+              "canonical_name_en": "mixed berries",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_014",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "fruits rouges mélangés",
+                  "name_en": "mixed berries",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "mixed berries",
+                  "source_name_fr": "fruits rouges mélangés",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_manual_019",
+              "canonical_name_fr": "purée d'açaï",
+              "canonical_name_en": "acai puree",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_019",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "purée d'açaï",
+                  "name_en": "acai puree",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "acai puree",
+                  "source_name_fr": "purée d'açaï",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
         }
       ],
       "label_fr": "fruits"
@@ -27510,6 +27902,34 @@
                   "axes_fr": {},
                   "source_name_en": "Mushroom, straw, canned, drained solids",
                   "source_name_fr": "Champignon, paille de riz, conserve, égoutté",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_manual_008",
+              "canonical_name_fr": "champignon oreille de bois séché",
+              "canonical_name_en": "dried wood ear mushroom",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_008",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "champignon oreille de bois séché",
+                  "name_en": "dried wood ear mushroom",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "dried wood ear mushroom",
+                  "source_name_fr": "champignon oreille de bois séché",
                   "source_rank": 3,
                   "is_primary": true
                 }
@@ -42896,6 +43316,104 @@
               ]
             }
           ]
+        },
+        {
+          "id": "leafy_greens",
+          "label": "leafy_greens",
+          "label_fr": "légumes-feuilles",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_006",
+              "canonical_name_fr": "feuille de vigne (conserve, saumure)",
+              "canonical_name_en": "vine/grape leaves, canned in brine",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_006",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "feuille de vigne (conserve, saumure)",
+                  "name_en": "vine/grape leaves, canned in brine",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "vine/grape leaves, canned in brine",
+                  "source_name_fr": "feuille de vigne (conserve, saumure)",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_manual_007",
+              "canonical_name_fr": "gundruk (légumes-feuilles fermentés séchés, népalais)",
+              "canonical_name_en": "gundruk (dried fermented leafy greens)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_007",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "gundruk (légumes-feuilles fermentés séchés, népalais)",
+                  "name_en": "gundruk (dried fermented leafy greens)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "gundruk (dried fermented leafy greens)",
+                  "source_name_fr": "gundruk (légumes-feuilles fermentés séchés, népalais)",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mixed",
+          "label": "mixed",
+          "label_fr": "mélanges",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_023",
+              "canonical_name_fr": "légumes assortis",
+              "canonical_name_en": "assorted/mixed vegetables",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_023",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "légumes assortis",
+                  "name_en": "assorted/mixed vegetables",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "assorted/mixed vegetables",
+                  "source_name_fr": "légumes assortis",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
         }
       ],
       "label_fr": "légumes"
@@ -52583,6 +53101,76 @@
             }
           ],
           "label_fr": "huiles"
+        },
+        {
+          "id": "vegetable_oils",
+          "label": "vegetable_oils",
+          "label_fr": "huiles végétales",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_003",
+              "canonical_name_fr": "huile de palme",
+              "canonical_name_en": "palm oil",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_003",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "huile de palme",
+                  "name_en": "palm oil",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "palm oil",
+                  "source_name_fr": "huile de palme",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "flavored_oils",
+          "label": "flavored_oils",
+          "label_fr": "huiles aromatisées",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_017",
+              "canonical_name_fr": "huile à la truffe",
+              "canonical_name_en": "truffle oil",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_017",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "huile à la truffe",
+                  "name_en": "truffle oil",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "truffle oil",
+                  "source_name_fr": "huile à la truffe",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
         }
       ],
       "label_fr": "matières grasses & huiles"
@@ -69317,6 +69905,272 @@
         }
       ],
       "label_fr": "œufs"
+    },
+    {
+      "id": "cereals_and_starches",
+      "label": "cereals_and_starches",
+      "label_fr": "céréales & féculents",
+      "subcategories": [
+        {
+          "id": "flours",
+          "label": "flours",
+          "label_fr": "farines",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_001",
+              "canonical_name_fr": "farine de teff",
+              "canonical_name_en": "teff flour",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_001",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "farine de teff",
+                  "name_en": "teff flour",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "teff flour",
+                  "source_name_fr": "farine de teff",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            },
+            {
+              "id": "ing_manual_002",
+              "canonical_name_fr": "farine de manioc",
+              "canonical_name_en": "cassava/manioc flour",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_002",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "farine de manioc",
+                  "name_en": "cassava/manioc flour",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "cassava/manioc flour",
+                  "source_name_fr": "farine de manioc",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spices_and_condiments",
+      "label": "spices_and_condiments",
+      "label_fr": "épices & condiments",
+      "subcategories": [
+        {
+          "id": "spice_blends",
+          "label": "spice_blends",
+          "label_fr": "mélanges d'épices",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_005",
+              "canonical_name_fr": "mélange 5 épices chinois",
+              "canonical_name_en": "Chinese five spice",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_005",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "mélange 5 épices chinois",
+                  "name_en": "Chinese five spice",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Chinese five spice",
+                  "source_name_fr": "mélange 5 épices chinois",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "spices",
+          "label": "spices",
+          "label_fr": "épices",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_022",
+              "canonical_name_fr": "baie de genièvre",
+              "canonical_name_en": "juniper berry",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_022",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "baie de genièvre",
+                  "name_en": "juniper berry",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "juniper berry",
+                  "source_name_fr": "baie de genièvre",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "label": "desserts",
+      "label_fr": "desserts",
+      "subcategories": [
+        {
+          "id": "ice_cream",
+          "label": "ice_cream",
+          "label_fr": "glaces",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_011",
+              "canonical_name_fr": "glace à la vanille",
+              "canonical_name_en": "vanilla ice cream",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_011",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "glace à la vanille",
+                  "name_en": "vanilla ice cream",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "vanilla ice cream",
+                  "source_name_fr": "glace à la vanille",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "biscuits",
+          "label": "biscuits",
+          "label_fr": "biscuits",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_025",
+              "canonical_name_fr": "biscuit à la cuillère (boudoir)",
+              "canonical_name_en": "ladyfinger biscuit (boudoir/savoiardi)",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_025",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "biscuit à la cuillère (boudoir)",
+                  "name_en": "ladyfinger biscuit (boudoir/savoiardi)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "ladyfinger biscuit (boudoir/savoiardi)",
+                  "source_name_fr": "biscuit à la cuillère (boudoir)",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plant_based_proteins",
+      "label": "plant_based_proteins",
+      "label_fr": "protéines végétales",
+      "subcategories": [
+        {
+          "id": "meat_substitutes",
+          "label": "meat_substitutes",
+          "label_fr": "substituts de viande",
+          "ingredient_groups": [
+            {
+              "id": "ing_manual_016",
+              "canonical_name_fr": "bacon végétarien",
+              "canonical_name_en": "vegetarian bacon",
+              "indus_conditionne": false,
+              "indus_conditionne_only": false,
+              "conditioning_types": [],
+              "axes_fr": {},
+              "axes_en": {},
+              "preferred_source": "MANUAL",
+              "variants": [
+                {
+                  "id": "var_manual_016",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "bacon végétarien",
+                  "name_en": "vegetarian bacon",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "vegetarian bacon",
+                  "source_name_fr": "bacon végétarien",
+                  "source_rank": 3,
+                  "is_primary": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -3,18 +3,18 @@
     "description": "Token index — SOURCE:id → base/variant/IG context",
     "version": "6.0",
     "nutrition_version": "7.2",
-    "generated_at": "2026-07-27T01:12:28.118947+00:00",
+    "generated_at": "2026-07-28T17:32:18.478368+00:00",
     "generated_by": "build_indexes.py",
     "_generated": true,
     "_do_not_edit": "Fichier auto-généré — toute modification manuelle sera écrasée au prochain run du pipeline.",
     "key_format": "SOURCE:source_id  ex: CIQUAL:4028, CNF:501697, USDA:2644288",
-    "total_entries": 1824,
+    "total_entries": 1823,
     "by_source": {
-      "CIQUAL": 974,
+      "CIQUAL": 973,
       "CNF": 687,
       "USDA": 163
     },
-    "with_ig_context": 1824
+    "with_ig_context": 1823
   },
   "index": {
     "CNF:4006": {
@@ -12899,17 +12899,6 @@
       "ig_axes": {
         "form": "oil",
         "origin": "plant"
-      },
-      "var_axes": {}
-    },
-    "CIQUAL:16150": {
-      "base": "palm_oil",
-      "variant": "oil_refined_plant",
-      "ig_id": "ing_04459",
-      "ig_axes": {
-        "form": "oil",
-        "origin": "plant",
-        "treatment": "refined"
       },
       "var_axes": {}
     },
