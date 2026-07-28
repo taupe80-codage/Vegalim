@@ -490635,19 +490635,19 @@
       },
       "composition": [
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 1000,
-          "unit": "ml",
+          "ingredient": "pumpkin_raw",
+          "quantity": 400,
+          "unit": "g",
           "meta": {
-            "role": "base",
-            "form": "",
+            "role": "main_vegetable",
+            "form": "cubed",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic",
-          "quantity": 2,
+          "ingredient": "garlic_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -490668,6 +490668,17 @@
           }
         },
         {
+          "ingredient": "coconut_oil_plant",
+          "quantity": 25,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
           "quantity": 20,
           "unit": "ml",
@@ -490683,7 +490694,7 @@
           "quantity": 10,
           "unit": "ml",
           "meta": {
-            "role": "ingredient",
+            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -490701,37 +490712,47 @@
           }
         },
         {
-          "ingredient": "lemon_grass_fresh_herb",
-          "quantity": 40,
-          "unit": "g",
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 600,
+          "unit": "ml",
           "meta": {
-            "role": "seasoning",
-            "form": "chiffonade",
+            "role": "base",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tofu",
+          "ingredient": "silken_tofu_pre_packaged",
           "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "protein",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "lemon_grass_fresh_herb",
-          "quantity": null,
-          "unit": "quelques feuilles",
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
           "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "feuilles de citron vert",
-            "note": "pour la décoration",
-            "optional": true,
-            "added_by": "chef_rewrite_v8.0_2026-06-13"
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -490791,39 +490812,46 @@
       },
       "search_tokens": [
         "1 heure",
+        "ail",
         "bouillon",
         "braising",
-        "calcium",
-        "citronelle",
+        "citron",
         "coco",
+        "coconut",
         "coconut_milk",
         "courge",
         "garlic",
         "ginataang",
         "gingembre",
         "ginger",
-        "grass",
         "international",
         "kalabasa",
         "lait",
         "leger",
         "legumes",
-        "lemon",
         "light",
+        "lime",
         "low calorie",
         "minceur",
-        "proteines",
+        "noix",
+        "potiron",
+        "pumpkin",
+        "salt",
         "sans viande",
         "sauce",
+        "sel",
         "sesame",
         "shoyu",
+        "silken",
         "soja",
         "soy",
-        "sport",
+        "soyeux",
         "stock",
+        "table",
         "tofu",
         "vegetable",
         "vegetarien",
+        "vert",
         "with"
       ],
       "difficulty_level": "medium",
@@ -490841,7 +490869,7 @@
       },
       "_quality_score": 0.81,
       "_flags": [],
-      "description": "Potage crémeux à base de courge, cuisson douce sous frémissement, bouillon riche et aromatique, parfumé à la noix de coco et au gingembre frais, avec une texture lisse et crémeuse.",
+      "description": "Velouté crémeux de courge (potimarron ou butternut) au lait de coco et gingembre, épaissi de tofu soyeux, relevé d'une pointe de citron vert.",
       "instructions": [
         "Étape 1 : Coupez 400g de courge (potimarron ou butternut) en cubes de 4 cm. Faites revenir 2g d'ail dans 25ml d'huile de coco à feu moyen pendant 5 minutes, jusqu'à ce que l'arôme soit dégagé.",
         "Étape 2 : Ajoutez 11g de gingembre frais et faites revenir pendant 1 minute, en remuant régulièrement, pour libérer les huiles essentielles.",
@@ -496123,19 +496151,19 @@
       },
       "composition": [
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 1000,
-          "unit": "ml",
+          "ingredient": "white_bean_boiled",
+          "quantity": 300,
+          "unit": "g",
           "meta": {
-            "role": "base",
+            "role": "protein",
             "form": "",
-            "state": "sauteed",
+            "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic",
-          "quantity": 2,
+          "ingredient": "garlic_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -496156,23 +496184,56 @@
           }
         },
         {
-          "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 20,
+          "ingredient": "coconut_oil_plant",
+          "quantity": 25,
           "unit": "ml",
           "meta": {
-            "role": "condiment",
+            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "sesame_oil_plant",
-          "quantity": 10,
-          "unit": "ml",
+          "ingredient": "turmeric_powder",
+          "quantity": 2,
+          "unit": "g",
           "meta": {
-            "role": "ingredient",
+            "role": "spice",
             "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tofu_plain_pre_packaged",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "cubed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_grass_fresh_herb",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "chopped",
             "state": "raw",
             "preparation": ""
           }
@@ -496189,23 +496250,45 @@
           }
         },
         {
-          "ingredient": "lemon_grass_fresh_herb",
-          "quantity": 40,
-          "unit": "g",
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 200,
+          "unit": "ml",
           "meta": {
-            "role": "seasoning",
-            "form": "chiffonade",
+            "role": "base",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tofu",
-          "quantity": 200,
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
           "unit": "g",
           "meta": {
-            "role": "protein",
-            "form": "cubed",
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "chopped",
             "state": "raw",
             "preparation": ""
           }
@@ -496272,19 +496355,25 @@
       },
       "search_tokens": [
         "45 minutes",
+        "ail",
+        "bean",
         "beans",
+        "blanc",
         "bouillon",
         "braising",
-        "calcium",
         "caribbean",
+        "citron",
         "citronelle",
         "coco",
         "coconut",
         "coconut_milk",
+        "cumin",
+        "curcuma",
         "garlic",
         "gingembre",
         "ginger",
         "grass",
+        "haricot",
         "haricots",
         "international",
         "lait",
@@ -496292,21 +496381,22 @@
         "legumes",
         "lemon",
         "light",
+        "lime",
         "low calorie",
         "minceur",
         "moyen",
-        "proteines",
+        "noix",
+        "salt",
         "sans viande",
-        "sauce",
-        "sesame",
-        "shoyu",
-        "soja",
-        "soy",
-        "sport",
+        "sel",
         "stock",
+        "table",
         "tofu",
+        "turmeric",
         "vegetable",
         "vegetarien",
+        "vert",
+        "white",
         "with",
         "wok"
       ],
@@ -496330,7 +496420,7 @@
         "to": 25,
         "by": "chef_rewrite_v6_2026-05-12"
       },
-      "description": "Cuisson douce de haricots dans un bouillon riche et aromatique, avec une texture crémeuse due au lait de coco et une saveur parfumée à la noix de coco, le gingembre et la citronnelle.",
+      "description": "Haricots blancs mijotés dans un curry crémeux au lait de coco, curcuma, cumin et citronnelle, relevés de gingembre et citron vert, garnis de coriandre fraîche.",
       "instructions": [
         "Étape 1 : Faites revenir 2 g d'ail et 11,2 g de gingembre râpé dans 25 ml d'huile de coco à feu moyen pendant 5 minutes, jusqu'à ce que les arômes soient libérés et les saveurs mélangées. Ajoutez ensuite 1 cuillère à café de curcuma et 1 cuillère à café de cumin. Cuisez 1 minute, en remuant constamment, pour permettre aux épices de libérer leurs huiles essentielles.",
         "Étape 2 : Incorporez 200 g de tofu ferme égoutté et coupé en dés, ainsi que 40 g de citronnelle fraîche hachée. Mélangez bien pour que les saveurs se mélangent.",
@@ -497694,19 +497784,19 @@
       },
       "composition": [
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 1000,
+          "ingredient": "coconut_oil_plant",
+          "quantity": 10,
           "unit": "ml",
           "meta": {
-            "role": "base",
+            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic",
-          "quantity": 2,
+          "ingredient": "garlic_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -497727,22 +497817,22 @@
           }
         },
         {
-          "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 20,
-          "unit": "ml",
+          "ingredient": "green_curry_paste",
+          "quantity": 30,
+          "unit": "g",
           "meta": {
-            "role": "condiment",
+            "role": "ingredient",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "sesame_oil_plant",
-          "quantity": 10,
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 700,
           "unit": "ml",
           "meta": {
-            "role": "ingredient",
+            "role": "base",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -497760,34 +497850,67 @@
           }
         },
         {
-          "ingredient": "curry_paste",
-          "quantity": 30,
-          "unit": "g",
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 20,
+          "unit": "ml",
           "meta": {
-            "role": "ingredient",
+            "role": "condiment",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "rice_noodles",
+          "ingredient": "rice_vermicelli_raw_dried",
           "quantity": 150,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
-            "form": "dried",
+            "role": "base",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tofu",
+          "ingredient": "tofu_plain_pre_packaged",
           "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "protein",
             "form": "cubed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sesame_oil_plant",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -497851,37 +497974,49 @@
       },
       "search_tokens": [
         "1 heure",
+        "ail",
         "anemie",
+        "bean",
         "bouillon",
         "braising",
-        "calcium",
+        "citron",
+        "coco",
+        "coconut",
         "coconut_milk",
-        "curry_paste",
         "fer",
         "garlic",
         "gingembre",
         "ginger",
+        "green_curry_paste",
+        "haricot",
         "iron",
         "laksa",
         "leger",
         "legumes",
         "light",
+        "lime",
         "low calorie",
         "minceur",
-        "proteines",
-        "rice_noodles",
+        "mung",
+        "mungo",
+        "noix",
+        "rice",
+        "riz",
         "sans viande",
         "sauce",
         "sesame",
         "shoyu",
         "soja",
         "soy",
-        "sport",
+        "sprouts",
         "stock",
         "thai",
         "tofu",
         "vegetable",
-        "vegetarien"
+        "vegetarien",
+        "vermicelle",
+        "vermicelli",
+        "vert"
       ],
       "difficulty_level": "medium",
       "dish_type": "soup",
@@ -497903,7 +498038,7 @@
         "to": 35,
         "by": "chef_rewrite_v6_2026-05-11"
       },
-      "description": "Découvrez cette soupe thaïe crémeuse et parfumée, où le lait de coco se mélange à la pâte de curry vert, créant une texture onctueuse et une couleur orangée intense, caractéristique de la cuisine thaïe.",
+      "description": "Soupe laksa à la thaïe : bouillon de légumes au lait de coco et pâte de curry vert, nouilles de riz, tofu et pousses de soja, parfumée à la citronnelle.",
       "instructions": [
         "Étape 1 : Faites chauffer 10 ml d'huile de coco dans une poêle à feu moyen. Ajoutez 2 g d'ail émincé et 11,2 g de gingembre frais râpé. Faites revenir pendant 2 minutes, jusqu'à ce que les aromates soient parfumés et légèrement dorés, en dégageant un parfum piquant.",
         "Étape 2 : Ajoutez 30 g de pâte de curry vert et faites revenir pendant 1 minute, en remuant constamment, jusqu'à ce que la pâte soit parfumée et légèrement foncée, avec une odeur épicée.",
@@ -507591,19 +507726,74 @@
       },
       "composition": [
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 1000,
-          "unit": "ml",
+          "ingredient": "rice_vermicelli_raw_dried",
+          "quantity": 200,
+          "unit": "g",
           "meta": {
             "role": "base",
             "form": "",
-            "state": "sauteed",
+            "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic",
-          "quantity": 2,
+          "ingredient": "tamarind_raw",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "paste",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coconut_sugar",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tofu_plain_pre_packaged",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "cubed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -507613,22 +507803,33 @@
           }
         },
         {
-          "ingredient": "ginger_raw_root_fresh",
-          "quantity": 11.2,
+          "ingredient": "green_onion_raw",
+          "quantity": 30,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "grated",
+            "role": "vegetable",
+            "form": "sliced",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 20,
+          "ingredient": "peanut_roasted_salted_dry",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "crushed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 15,
           "unit": "ml",
           "meta": {
-            "role": "condiment",
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -507639,41 +507840,19 @@
           "quantity": 10,
           "unit": "ml",
           "meta": {
-            "role": "ingredient",
+            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "coconut_milk",
-          "quantity": 400,
+          "ingredient": "vegetarian_fish_sauce",
+          "quantity": 15,
           "unit": "ml",
           "meta": {
-            "role": "liquid",
+            "role": "condiment",
             "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "lemon_grass_fresh_herb",
-          "quantity": 40,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "chiffonade",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tofu",
-          "quantity": 200,
-          "unit": "g",
-          "meta": {
-            "role": "protein",
-            "form": "cubed",
             "state": "raw",
             "preparation": ""
           }
@@ -507738,36 +507917,51 @@
         }
       },
       "search_tokens": [
+        "(arachide)",
+        "(fleur",
         "45 minutes",
-        "bouillon",
-        "calcium",
-        "citronelle",
-        "coconut_milk",
+        "ail",
+        "bean",
+        "cacahuete",
+        "citron",
+        "coco",
+        "coconut",
+        "cocotier)",
         "garlic",
-        "gingembre",
-        "ginger",
-        "grass",
+        "green",
+        "haricot",
         "leger",
-        "legumes",
-        "lemon",
         "light",
+        "lime",
         "low calorie",
         "minceur",
         "moyen",
+        "mung",
+        "mungo",
+        "oignon",
+        "onion",
         "pad",
-        "proteines",
+        "peanut",
+        "rice",
+        "riz",
         "sans viande",
         "sauce",
         "sesame",
         "shoyu",
         "soja",
         "soy",
-        "sport",
-        "stock",
+        "sprouts",
+        "sucre",
+        "sugar",
+        "tamarin",
+        "tamarind",
         "thai",
         "tofu",
-        "vegetable",
+        "vegetarian_fish_sauce",
         "vegetarien",
+        "vermicelle",
+        "vermicelli",
+        "vert",
         "wok"
       ],
       "difficulty_level": "hard",
@@ -507785,15 +507979,15 @@
       },
       "_quality_score": 1.0,
       "_flags": [],
-      "description": "Nouilles de riz thaïes sautées au wok — sauce tamarin-soja équilibrée, tofu doré, pousses de soja croquantes, avec une touche de lait de coco pour une texture crémeuse",
+      "description": "Pad thaï traditionnel : nouilles de riz sautées au wok avec tofu doré, pousses de soja et oignons verts, dans une sauce sucrée-acidulée au tamarin, sauce soja et sucre de coco, garni de cacahuètes concassées et citron vert.",
       "instructions": [
         "Étape 1 : Faire tremper 200g de vermicelles de riz larges dans l'eau froide pendant 30 minutes, puis les égoutter. Observer la texture des vermicelles qui passent de rigides à souples.",
-        "Étape 2 : Préparer la sauce en mélangeant 20ml de sauce soja, 10ml de lait de coco, 2g d'ail émincé, 11.2g de gingembre râpé, et 40g de citronnelle hachée. Remarquer la couleur ambrée et l'odeur parfumée de la sauce.",
-        "Étape 3 : Chauffer le wok à feu vif, puis faire dorer 200g de tofu pressé en cubes pendant 3 minutes, en le retournant régulièrement. Écouter le son des cubes de tofu qui dorment et sentir l'odeur de la friture.",
-        "Étape 4 : Ajouter les vermicelles égouttés, la sauce préparée, 400ml de lait de coco, et 10ml d'huile de sésame, puis mélanger vigoureusement à feu très vif pendant 2 minutes, jusqu'à couleur ambrée. Observer la consistance crémeuse de la sauce et la couleur dorée des vermicelles.",
-        "Étape 5 : Pousser les vermicelles sur le côté, puis ajouter les pousses de soja, les oignons verts, et le tofu réservé, en les faisant sauter pendant 1 minute. Sentir l'odeur des légumes qui sautent et entendre le son des ingrédients qui cuisent.",
-        "Étape 6 : Ajouter 2g d'ail émincé et 11.2g de gingembre râpé, puis mélanger pendant 30 secondes. Remarquer la saveur intense des épices et la texture des ingrédients.",
-        "Étape 7 : Servir immédiatement, en garnissant de cacahuètes concassées et de citron vert, pour un repas équilibré et savoureux. Déguster les saveurs complexes et la texture crémeuse de la sauce."
+        "Étape 2 : Préparer la sauce en mélangeant 30ml de sauce soja, 30g de pâte de tamarin, 20g de sucre de coco et 15ml de jus de citron vert. Remarquer la couleur ambrée et l'odeur acidulée de la sauce.",
+        "Étape 3 : Chauffer le wok à feu vif avec 10ml d'huile de sésame, puis faire dorer 200g de tofu pressé en cubes pendant 3 minutes, en le retournant régulièrement. Écouter le son des cubes de tofu qui dorent et sentir l'odeur de la friture.",
+        "Étape 4 : Ajouter 6g d'ail émincé et faire revenir 30 secondes, jusqu'à ce qu'il soit parfumé sans colorer.",
+        "Étape 5 : Ajouter les vermicelles égouttés et la sauce préparée, puis mélanger vigoureusement à feu très vif pendant 2 minutes, jusqu'à couleur ambrée et absorption de la sauce.",
+        "Étape 6 : Pousser les vermicelles sur le côté, puis ajouter 100g de pousses de soja et 30g d'oignons verts, en les faisant sauter pendant 1 minute. Sentir l'odeur des légumes qui sautent.",
+        "Étape 7 : Servir immédiatement, en garnissant de 40g de cacahuètes concassées et de citron vert, pour un repas équilibré et savoureux."
       ],
       "diet_flags": {
         "vegan": false,
@@ -519447,19 +519641,30 @@
       },
       "composition": [
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 1000,
+          "ingredient": "coconut_oil_plant",
+          "quantity": 10,
           "unit": "ml",
           "meta": {
-            "role": "base",
+            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic",
-          "quantity": 2,
+          "ingredient": "green_curry_paste",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -519491,17 +519696,6 @@
           }
         },
         {
-          "ingredient": "sesame_oil_plant",
-          "quantity": 10,
-          "unit": "ml",
-          "meta": {
-            "role": "ingredient",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "coconut_milk",
           "quantity": 400,
           "unit": "ml",
@@ -519513,34 +519707,56 @@
           }
         },
         {
-          "ingredient": "curry_paste",
-          "quantity": 30,
-          "unit": "g",
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 600,
+          "unit": "ml",
           "meta": {
-            "role": "ingredient",
+            "role": "base",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "rice_noodles",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "dried",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tofu",
+          "ingredient": "tofu_plain_pre_packaged",
           "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "protein",
             "form": "cubed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "rice_vermicelli_raw_dried",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_onion_raw",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "sliced",
             "state": "raw",
             "preparation": ""
           }
@@ -519604,17 +519820,21 @@
       },
       "search_tokens": [
         "45 minutes",
+        "ail",
         "anemie",
+        "bean",
         "bouillon",
         "braising",
-        "calcium",
         "coco",
+        "coconut",
         "coconut_milk",
-        "curry_paste",
         "fer",
         "garlic",
         "gingembre",
         "ginger",
+        "green",
+        "green_curry_paste",
+        "haricot",
         "iron",
         "laksa",
         "leger",
@@ -519624,20 +519844,27 @@
         "malaysian",
         "minceur",
         "moyen",
-        "proteines",
-        "rice_noodles",
+        "mung",
+        "mungo",
+        "noix",
+        "oignon",
+        "onion",
+        "rice",
+        "riz",
         "sans viande",
         "sauce",
-        "sesame",
         "shoyu",
         "soja",
         "soupe",
         "soy",
-        "sport",
+        "sprouts",
         "stock",
         "tofu",
         "vegetable",
-        "vegetarien"
+        "vegetarien",
+        "vermicelle",
+        "vermicelli",
+        "vert"
       ],
       "difficulty_level": "easy",
       "dish_type": "soup",
@@ -519654,7 +519881,7 @@
       },
       "_quality_score": 0.78,
       "_flags": [],
-      "description": "Soupe végétalienne crémeuse à base de bouillon de légumes, tofu ferme et lait de coco, avec une touche de pâte de curry vert et une texture onctueuse.",
+      "description": "Laksa végétalien crémeux : bouillon de légumes et lait de coco relevé de pâte de curry vert, tofu et vermicelles de riz, garni de pousses de soja et oignons verts.",
       "instructions": [
         "Étape 1 : Faites chauffer 10 ml d'huile de coco dans une poêle à feu moyen, puis ajoutez 30 g de pâte de curry vert et faites-la saisir pendant 2 minutes, en remuant régulièrement, jusqu'à ce que le parfum intense et la légère fumée se dégagent.",
         "Étape 2 : Ajoutez 2 g d'ail et 11,2 g de gingembre frais, hachés finement, et faites-les cuire pendant 1 minute, en remuant régulièrement, jusqu'à ce que le parfum se dégage et que les saveurs commencent à se mélanger.",
@@ -519730,19 +519957,19 @@
       },
       "composition": [
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 1000,
+          "ingredient": "sesame_oil_plant",
+          "quantity": 10,
           "unit": "ml",
           "meta": {
-            "role": "base",
+            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic",
-          "quantity": 2,
+          "ingredient": "garlic_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -519753,7 +519980,7 @@
         },
         {
           "ingredient": "ginger_raw_root_fresh",
-          "quantity": 11.2,
+          "quantity": 15,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -519763,22 +519990,11 @@
           }
         },
         {
-          "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 20,
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 600,
           "unit": "ml",
           "meta": {
-            "role": "condiment",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "sesame_oil_plant",
-          "quantity": 10,
-          "unit": "ml",
-          "meta": {
-            "role": "ingredient",
+            "role": "base",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -519797,22 +520013,88 @@
         },
         {
           "ingredient": "lemon_grass_fresh_herb",
-          "quantity": 40,
+          "quantity": 20,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
-            "form": "chiffonade",
+            "role": "aromatic",
+            "form": "chopped",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tofu",
+          "ingredient": "kaffir_lime_leaf",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "button_mushroom_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "sliced",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tofu_plain_pre_packaged",
           "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "protein",
             "form": "cubed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "sliced",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "chopped",
             "state": "raw",
             "preparation": ""
           }
@@ -519875,25 +520157,39 @@
         }
       },
       "search_tokens": [
+        "(kaffir",
         "1 heure",
+        "ail",
         "bouillon",
         "braising",
-        "calcium",
+        "button",
+        "champignon",
+        "chilli",
+        "citron",
         "citronelle",
         "citronnelle",
         "coco",
         "coconut_milk",
+        "combava",
+        "feuille",
         "garlic",
         "gingembre",
         "ginger",
         "grass",
+        "kaffir",
+        "leaf",
         "leger",
         "legumes",
         "lemon",
         "light",
+        "lime",
+        "lime)",
         "low calorie",
         "minceur",
-        "proteines",
+        "mushroom",
+        "paris",
+        "pepper",
+        "piment",
         "sans viande",
         "sauce",
         "sesame",
@@ -519901,12 +520197,12 @@
         "soja",
         "soupe",
         "soy",
-        "sport",
         "stock",
         "thai",
         "tofu",
         "vegetable",
-        "vegetarien"
+        "vegetarien",
+        "vert"
       ],
       "difficulty_level": "medium",
       "dish_type": "soup",
@@ -519923,7 +520219,7 @@
       },
       "_quality_score": 0.74,
       "_flags": [],
-      "description": "Soupe thaïe crémeuse et parfumée, préparée par cuisson douce sous frémissement, avec un bouillon riche et aromatique issu de la combinaison de bouillon de légumes et de lait de coco, typique de la cuisine thaïe.",
+      "description": "Soupe thaïe crémeuse façon tom kha, au lait de coco, citronnelle, feuilles de combava et gingembre, avec champignons et tofu — relevée de piment et citron vert, garnie de coriandre fraîche.",
       "instructions": [
         "Étape 1 : Faire chauffer l'huile de sésame dans une grande casserole à feu moyen pendant 2 minutes, jusqu'à ce qu'elle soit parfumée et commence à fumer légèrement.",
         "Étape 2 : Ajouter l'ail haché et le gingembre frais haché, cuire 1 minute à feu moyen-vif, en remuant régulièrement, jusqu'à ce qu'ils soient parfumés et légèrement dorés.",
@@ -520697,19 +520993,19 @@
       },
       "composition": [
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 1000,
+          "ingredient": "sesame_oil_plant",
+          "quantity": 20,
           "unit": "ml",
           "meta": {
-            "role": "base",
+            "role": "fat_cooking",
             "form": "",
-            "state": "sauteed",
+            "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic",
-          "quantity": 2,
+          "ingredient": "garlic_raw",
+          "quantity": 9,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -520719,19 +521015,30 @@
           }
         },
         {
-          "ingredient": "ginger_raw_root_fresh",
-          "quantity": 11.2,
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 10,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "grated",
+            "role": "spice",
+            "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tofu_plain_pre_packaged",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "crumbled",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 20,
+          "quantity": 25,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -520741,59 +521048,36 @@
           }
         },
         {
-          "ingredient": "sesame_oil_plant",
-          "quantity": 10,
-          "unit": "ml",
+          "ingredient": "ginger_raw_root_fresh",
+          "quantity": 8,
+          "unit": "g",
           "meta": {
-            "role": "ingredient",
+            "role": "aromatic",
+            "form": "grated",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coconut_sugar",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "coconut_milk",
-          "quantity": 400,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "lemon_grass_fresh_herb",
-          "quantity": 40,
+          "ingredient": "basil_fresh_herb",
+          "quantity": 30,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
-            "form": "chiffonade",
+            "role": "herb",
+            "form": "whole_leaf",
             "state": "raw",
             "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tofu",
-          "quantity": 200,
-          "unit": "g",
-          "meta": {
-            "role": "protein",
-            "form": "cubed",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "thai_basil",
-          "quantity": null,
-          "unit": "quelques feuilles",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "feuilles de basilic thaï fraîches",
-            "note": "Pour la fraîcheur et le parfum",
-            "optional": true,
-            "added_by": "chef_rewrite_v8.0_2026-06-17"
           }
         }
       ],
@@ -520852,23 +521136,24 @@
         }
       },
       "search_tokens": [
+        "(fleur",
         "30 minutes",
+        "ail",
         "basil",
-        "bouillon",
-        "calcium",
-        "citronelle",
-        "coconut_milk",
+        "basilic",
+        "chilli",
+        "coco",
+        "coconut",
+        "cocotier)",
         "garlic",
         "gingembre",
         "ginger",
-        "grass",
         "leger",
-        "legumes",
-        "lemon",
         "light",
         "low calorie",
         "minceur",
-        "proteines",
+        "pepper",
+        "piment",
         "quick",
         "rapide",
         "sans viande",
@@ -520877,12 +521162,10 @@
         "shoyu",
         "soja",
         "soy",
-        "sport",
-        "stock",
+        "sucre",
+        "sugar",
         "thai",
-        "thai_basil",
         "tofu",
-        "vegetable",
         "vegetarien",
         "wok"
       ],
@@ -520902,7 +521185,7 @@
       "_quality_score": 1.0,
       "_flags": [],
       "_chef_note": "Un plat végétalien thaï créatif et savoureux, idéal pour les amateurs de saveurs asiatiques.",
-      "description": "Cuisson douce du tofu thaï dans un bouillon aromatique, avec une sauce soja-gingembre pour une texture dorée et ferme, parfumée au basilic thaï frais et servie sur du riz jasmin parfumé.",
+      "description": "Sauté thaï de tofu émietté au basilic (pad kra pao), relevé d'ail et de piment frais, sauce soja et une pointe de sucre — servi traditionnellement sur riz jasmin, avec les feuilles de basilic thaï ajoutées hors du feu pour préserver leur parfum.",
       "instructions": [
         "Étape 1 : Chauffer 30 ml d'huile de sésame dans un wok à feu vif jusqu'à légère fumée. Saisir l'ail haché et les piments frais 30 secondes, en veillant à ce que l'ail soit légèrement doré.",
         "Étape 2 : Ajouter le tofu ferme pressé et émietté grossièrement. Faire sauter à feu très vif 3 minutes jusqu'à légère coloration dorée, en remuant régulièrement pour éviter la coloration excessive.",
@@ -521395,19 +521678,19 @@
       },
       "composition": [
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 1000,
+          "ingredient": "coconut_oil_plant",
+          "quantity": 10,
           "unit": "ml",
           "meta": {
-            "role": "base",
+            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic",
-          "quantity": 2,
+          "ingredient": "garlic_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -521428,20 +521711,9 @@
           }
         },
         {
-          "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 20,
-          "unit": "ml",
-          "meta": {
-            "role": "condiment",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "sesame_oil_plant",
-          "quantity": 10,
-          "unit": "ml",
+          "ingredient": "green_curry_paste",
+          "quantity": 30,
+          "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
@@ -521461,23 +521733,111 @@
           }
         },
         {
-          "ingredient": "lemon_grass_fresh_herb",
-          "quantity": 40,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "chiffonade",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tofu",
+          "ingredient": "tofu_plain_pre_packaged",
           "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "protein",
             "form": "cubed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_zucchini_squash_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "cubed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "eggplant_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "cubed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_bell_pepper_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "sliced",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_grass_fresh_herb",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "kaffir_lime_leaf",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetarian_fish_sauce",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coconut_sugar",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "chopped",
             "state": "raw",
             "preparation": ""
           }
@@ -521540,38 +521900,49 @@
         }
       },
       "search_tokens": [
+        "(kaffir",
         "45 minutes",
-        "bouillon",
+        "ail",
+        "aubergine",
+        "bell",
         "braising",
-        "calcium",
         "citronelle",
+        "coco",
+        "coconut",
         "coconut_milk",
+        "combava",
+        "courgette",
         "curry",
+        "eggplant",
+        "feuille",
         "garlic",
         "gingembre",
         "ginger",
         "grass",
         "green",
+        "green_curry_paste",
+        "kaffir",
+        "leaf",
         "leger",
-        "legumes",
         "lemon",
         "light",
+        "lime",
+        "lime)",
         "low calorie",
         "minceur",
         "moyen",
-        "proteines",
+        "noix",
+        "pepper",
+        "poivron",
+        "red",
+        "rouge",
         "sans viande",
-        "sauce",
-        "sesame",
-        "shoyu",
-        "soja",
-        "soy",
-        "sport",
-        "stock",
+        "squash",
         "thai",
         "tofu",
-        "vegetable",
-        "vegetarien"
+        "vegetarian_fish_sauce",
+        "vegetarien",
+        "zucchini"
       ],
       "difficulty_level": "hard",
       "dish_type": "soup",
@@ -521593,7 +521964,7 @@
         "to": 25,
         "by": "chef_rewrite_v4_2026-05-09"
       },
-      "description": "Curry thaï végétarien crémeux, aux saveurs de gingembre frais et de citronnelle fraîche, avec une texture onctueuse et une odeur alléchante — bouillon riche et aromatique de la cuisine thaïlandaise, où les parfums de citron et de lait de coco se mélangent en harmonie.",
+      "description": "Curry thaï vert traditionnel (gaeng keow wan) : tofu et légumes mijotés dans une sauce crémeuse à la pâte de curry vert, lait de coco, citronnelle et feuilles de combava, relevée de sauce soja, sucre de coco et citron vert.",
       "instructions": [
         "Étape 1 : Chauffer 10 ml d'huile de coco dans un wok ou une grande sauteuse à feu moyen, jusqu'à ce que l'huile commence à briller et dégager un parfum subtil, en environ 2 minutes.",
         "Étape 2 : Faire revenir 2 g d'ail émincé et 11,2 g de gingembre frais râpé pendant 1 minute, en remuant régulièrement, jusqu'à ce que les parfums soient libérés et la texture devienne légèrement croustillante, avec une odeur piquante.",
@@ -521657,19 +522028,19 @@
       },
       "composition": [
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 1000,
+          "ingredient": "coconut_oil_plant",
+          "quantity": 10,
           "unit": "ml",
           "meta": {
-            "role": "base",
+            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic",
-          "quantity": 2,
+          "ingredient": "garlic_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -521690,20 +522061,9 @@
           }
         },
         {
-          "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 20,
-          "unit": "ml",
-          "meta": {
-            "role": "condiment",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "sesame_oil_plant",
-          "quantity": 10,
-          "unit": "ml",
+          "ingredient": "red_curry_paste",
+          "quantity": 30,
+          "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
@@ -521723,23 +522083,111 @@
           }
         },
         {
-          "ingredient": "lemon_grass_fresh_herb",
-          "quantity": 40,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "chiffonade",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tofu",
+          "ingredient": "tofu_plain_pre_packaged",
           "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "protein",
             "form": "cubed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_zucchini_squash_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "cubed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "eggplant_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "cubed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_bell_pepper_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "sliced",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_grass_fresh_herb",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "kaffir_lime_leaf",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetarian_fish_sauce",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coconut_sugar",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "chopped",
             "state": "raw",
             "preparation": ""
           }
@@ -521802,37 +522250,48 @@
         }
       },
       "search_tokens": [
+        "(kaffir",
         "1 heure",
-        "bouillon",
+        "ail",
+        "aubergine",
+        "bell",
         "braising",
-        "calcium",
         "citronelle",
+        "coco",
+        "coconut",
         "coconut_milk",
+        "combava",
+        "courgette",
         "curry",
+        "eggplant",
+        "feuille",
         "garlic",
         "gingembre",
         "ginger",
         "grass",
+        "green",
+        "kaffir",
+        "leaf",
         "leger",
-        "legumes",
         "lemon",
         "light",
+        "lime",
+        "lime)",
         "low calorie",
         "minceur",
-        "proteines",
+        "noix",
+        "pepper",
+        "poivron",
         "red",
+        "red_curry_paste",
+        "rouge",
         "sans viande",
-        "sauce",
-        "sesame",
-        "shoyu",
-        "soja",
-        "soy",
-        "sport",
-        "stock",
+        "squash",
         "thai",
         "tofu",
-        "vegetable",
-        "vegetarien"
+        "vegetarian_fish_sauce",
+        "vegetarien",
+        "zucchini"
       ],
       "difficulty_level": "hard",
       "dish_type": "soup",
@@ -521849,7 +522308,7 @@
       },
       "_quality_score": 0.81,
       "_flags": [],
-      "description": "Curry thaï rouge végétal crémeux et parfumé, avec une texture onctueuse et une odeur parfumée, issu de la cuisine thaïlandaise où les saveurs épicées et les légumes tendres se rencontrent dans un bouillon riche et aromatique",
+      "description": "Curry thaï rouge traditionnel : tofu et légumes mijotés dans une sauce crémeuse à la pâte de curry rouge, lait de coco, citronnelle et feuilles de combava — plus corsé que la version verte, relevé de sauce soja et citron vert.",
       "instructions": [
         "Étape 1 : Chauffer 10 ml d'huile de noix de coco dans un wok ou une grande sauteuse à feu moyen, jusqu'à ce que l'huile commence à briller et dégager une odeur subtile, en faisant attention à ne pas trop chauffer pour éviter la fumée.",
         "Étape 2 : Faire revenir 2 g d'ail émincé et 11,2 g de gingembre frais râpé pendant 1 minute, en remuant régulièrement, jusqu'à ce que les parfums soient libérés et que la mixture commence à dorer légèrement, en prenant soin de ne pas brûler les ingrédients.",
@@ -524133,19 +524592,19 @@
       },
       "composition": [
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 1000,
+          "ingredient": "coconut_oil_plant",
+          "quantity": 15,
           "unit": "ml",
           "meta": {
-            "role": "base",
+            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic",
-          "quantity": 2,
+          "ingredient": "garlic_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -524166,20 +524625,9 @@
           }
         },
         {
-          "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 20,
-          "unit": "ml",
-          "meta": {
-            "role": "condiment",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "sesame_oil_plant",
-          "quantity": 10,
-          "unit": "ml",
+          "ingredient": "green_curry_paste",
+          "quantity": 30,
+          "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
@@ -524199,34 +524647,89 @@
           }
         },
         {
-          "ingredient": "curry_paste",
-          "quantity": 30,
-          "unit": "g",
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 700,
+          "unit": "ml",
           "meta": {
-            "role": "ingredient",
+            "role": "base",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "rice_noodles",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "dried",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tofu",
+          "ingredient": "tofu_plain_pre_packaged",
           "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "protein",
             "form": "cubed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sesame_oil_plant",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "rice_vermicelli_raw_dried",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
+          "quantity": 60,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_onion_raw",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "sliced",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "chopped",
             "state": "raw",
             "preparation": ""
           }
@@ -524290,16 +524793,21 @@
       },
       "search_tokens": [
         "45 minutes",
+        "ail",
         "anemie",
+        "bean",
         "bouillon",
         "braising",
-        "calcium",
+        "coco",
+        "coconut",
         "coconut_milk",
-        "curry_paste",
         "fer",
         "garlic",
         "gingembre",
         "ginger",
+        "green",
+        "green_curry_paste",
+        "haricot",
         "iron",
         "laksa",
         "leger",
@@ -524309,19 +524817,27 @@
         "malaysian",
         "minceur",
         "moyen",
-        "proteines",
-        "rice_noodles",
+        "mung",
+        "mungo",
+        "noix",
+        "oignon",
+        "onion",
+        "rice",
+        "riz",
         "sans viande",
         "sauce",
         "sesame",
         "shoyu",
         "soja",
         "soy",
-        "sport",
+        "sprouts",
         "stock",
         "tofu",
         "vegetable",
-        "vegetarien"
+        "vegetarien",
+        "vermicelle",
+        "vermicelli",
+        "vert"
       ],
       "difficulty_level": "medium",
       "dish_type": "soup",
@@ -524338,7 +524854,7 @@
       },
       "_quality_score": 0.82,
       "_flags": [],
-      "description": "Soupe végétarien créative à base de bouillon de légumes, parfumée au gingembre frais et au curry, avec un lait de coco onctueux et des vermicelles de riz tendres.",
+      "description": "Laksa aux légumes : bouillon de légumes coco-curry vert, tofu, nouilles de riz et pousses de soja, garni de coriandre fraîche et oignons verts.",
       "instructions": [
         "Étape 1 : Faites chauffer 15 ml d'huile de coco dans une grande casserole à feu moyen. Ajoutez 2 g d'ail et 11,2 g de gingembre frais hachés, puis saisissez pendant 2 minutes, en remuant régulièrement, jusqu'à ce que les aromates soient parfumés et légèrement dorés.",
         "Étape 2 : Ajoutez 30 g de pâte de curry vert et faites cuire pendant 5 minutes à feu moyen-vif, en remuant constamment, jusqu'à ce que la pâte soit bien colorée et parfumée.",
