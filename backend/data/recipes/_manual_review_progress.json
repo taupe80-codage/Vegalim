@@ -218,7 +218,7 @@
     },
     {
       "id": 13,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "main_haricots_rouges_a_la_toma_c44560",
         "main_italian_ribollita_a99546",
@@ -241,7 +241,22 @@
         "rice_poke_bowl_ee65ef",
         "rice_riz_frit_2763d3"
       ],
-      "issues": []
+      "issues": [
+        "main_haricots_rouges_a_la_toma_c44560: huile 25ml texte vs 45ml composition",
+        "main_pav_bhaji_e99df8: beurre 20g texte vs 40g composition",
+        "main_polenta_ai_funghi_b96235: huile sous-comptee (45+20ml texte vs 45ml composition) + beurre jamais mentionne",
+        "main_polenta_aux_champignons_5af074: huile jamais mentionnee dans le texte",
+        "main_rasam_34dc5a: tomate 300g texte vs 480g composition, huile de coco absente, moutarde (graines+dijon) fusionnee en un seul id",
+        "main_soup_k3d2p1: legumes fantomes dans le texte (navets, courgettes, haricots verts, epinards absents de la composition)",
+        "main_tian_provencal_4c7999: mention dupliquee de 45ml huile (composition n a qu une seule entree)",
+        "main_taboule_760c36: menthe mentionnee dans le texte, absente de la composition",
+        "pasta_nouilles_satay_864b31: composition utilisait coconut_milk_plant alors que texte/description decrivent de la creme fraiche laitiere",
+        "pasta_soupe_de_nouilles_thukpa_9c3ce8: huile de coco absente de la composition",
+        "dal_basic_k3d2p1: coconut_milk_plant utilise comme huile de friture (mal etiquete)",
+        "dal_sambar_581de8: coconut_milk_plant utilise comme huile de friture (mal etiquete)",
+        "rice_riz_frit_2763d3: residu de texte tofu-remplace-oeuf alors que composition contient un oeuf reel + oignon jamais cuit + huile de tournesol jamais mentionnee",
+        "DECOUVERTE SYSTEMIQUE: 78 recettes au total mentionnent huile de coco dans le texte sans huile de coco correcte en composition (missing, ou coconut_milk_plant utilise a la place). 4 corrigees ici, ~74 restantes a traiter dans une passe dediee (cas heterogenes : entierement absentes, coconut_milk_plant mal etiquete, ou vraie autre huile deja correcte en composition avec texte residuel a corriger)."
+      ]
     },
     {
       "id": 14,
