@@ -9,7 +9,7 @@
     "built_at": "2026-07-28",
     "note": "1 entrée = 1 variant n2 (1 état produit)",
     "total_entries": 1915,
-    "total_aliases": 122,
+    "total_aliases": 123,
     "orphans_count": 0,
     "n2_unplaced": 0,
     "key_convention": "nutrition_v2",
@@ -16749,7 +16749,11 @@
                 "dairy_free": true,
                 "nut_free": true,
                 "soy_free": true,
-                "egg_free": true
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
               },
               "allergens_eu": [],
               "nova_group": 1,
@@ -38910,7 +38914,7 @@
                 ]
               }
             },
-            "yellow_onion_sauteed_in_oil": {
+            "yellow_onion_usda_sauteed_in_oil": {
               "v32_ing_id": "ing_05774",
               "v32_var_id": "var_05930",
               "source": "USDA",
@@ -38935,7 +38939,11 @@
                 "dairy_free": true,
                 "nut_free": true,
                 "soy_free": true,
-                "egg_free": true
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
               },
               "allergens_eu": [],
               "nova_group": 1,
@@ -77434,7 +77442,8 @@
     "wheat_all_purpose_flour_non_enrichi_non_blanchi_unenriched_unbleached": "wheat_all_purpose_flour_unenriched_unbleached",
     "wheat_germ_grilled_seed_sprouted_dry": "wheat_germ_grilled_seed_dry",
     "wheat_germ_raw_seed_sprouted": "wheat_germ_raw_seed",
-    "white_grapefruit_californie": "white_grapefruit_raw_californie"
+    "white_grapefruit_californie": "white_grapefruit_raw_californie",
+    "yellow_onion_sauteed_in_oil": "yellow_onion_usda_sauteed_in_oil"
   },
   "orphans": []
 }
