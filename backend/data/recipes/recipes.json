@@ -13939,15 +13939,12 @@
         }
       },
       "search_tokens": [
-        "10 min",
-        "20 min",
-        "5 min",
+        "30 minutes",
         "assembly",
         "basil",
         "basilic",
         "coeliaque",
         "cucumber",
-        "express",
         "gluten free",
         "italian",
         "italienne",
@@ -14154,6 +14151,17 @@
             "optional": true,
             "added_by": "chef_rewrite_v8.0_2026-06-17"
           }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -14216,6 +14224,7 @@
         "1 heure",
         "all",
         "beurre",
+        "black",
         "ble",
         "butter",
         "button",
@@ -14230,12 +14239,15 @@
         "milk_animal/whole",
         "minceur",
         "mushroom",
+        "noir",
         "oignon",
         "onion",
         "pain",
         "paris",
         "parsley",
+        "pepper",
         "persil",
+        "poivre",
         "purpose",
         "quenelles",
         "salt",
@@ -21539,6 +21551,28 @@
             "optional": true,
             "added_by": "chef_rewrite_v8.0_2026-06-17"
           }
+        },
+        {
+          "ingredient": "flaxseed_linseed_ground",
+          "quantity": 7,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "ground",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 45,
+          "unit": "ml",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -21598,11 +21632,15 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(linseed)",
         "(vegan)",
         "bell",
         "braising",
         "coeliaque",
         "cumin",
+        "eau",
+        "flaxseed",
         "fresh_coriander",
         "garlic",
         "gluten free",
@@ -21610,6 +21648,7 @@
         "lent",
         "levantine",
         "light",
+        "lin",
         "long",
         "low calorie",
         "mijote",
@@ -21620,6 +21659,7 @@
         "paprika",
         "pepper",
         "poivron",
+        "potable)",
         "red",
         "rouge",
         "sans gluten",
@@ -21629,7 +21669,8 @@
         "tomato/fresh",
         "vegan_feta",
         "vegetarien",
-        "vegetarienne"
+        "vegetarienne",
+        "water"
       ],
       "difficulty_level": "medium",
       "dish_type": "breakfast",
@@ -131401,6 +131442,17 @@
             "optional": true,
             "added_by": "chef_rewrite_v8.0_2026-06-17"
           }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -131458,6 +131510,7 @@
       },
       "search_tokens": [
         "45 minutes",
+        "black",
         "caper",
         "chilli",
         "garlic",
@@ -131467,6 +131520,7 @@
         "low calorie",
         "minceur",
         "moyen",
+        "noir",
         "olive",
         "parsley",
         "pasta",
@@ -131474,6 +131528,7 @@
         "pepper",
         "persil",
         "piment",
+        "poivre",
         "puttanesca",
         "pâtes",
         "salt",
@@ -135638,40 +135693,18 @@
       },
       "composition": [
         {
-          "ingredient": "bread_flour",
-          "quantity": 200,
+          "ingredient": "rice_vermicelli_raw_dried",
+          "quantity": 150,
           "unit": "g",
           "meta": {
-            "role": "carbohydrate",
-            "form": "sifted",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "yeast",
-          "quantity": 7,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "powder",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "white_sugar",
-          "quantity": 10,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
+            "role": "base",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tofu",
+          "ingredient": "tofu_plain_pre_packaged",
           "quantity": 400,
           "unit": "g",
           "meta": {
@@ -135687,7 +135720,7 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "shredded",
             "state": "raw",
             "preparation": ""
           }
@@ -135697,14 +135730,58 @@
           "quantity": 300,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "sliced_thin",
+            "role": "vegetable",
+            "form": "sliced",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic",
+          "ingredient": "carrot_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "julienne",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_zucchini_squash_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "julienne",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_bell_pepper_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "julienne",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_onion_raw",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "sliced",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
           "quantity": 9,
           "unit": "g",
           "meta": {
@@ -135726,6 +135803,17 @@
           }
         },
         {
+          "ingredient": "coconut_oil_plant",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
           "quantity": 45,
           "unit": "ml",
@@ -135737,28 +135825,23 @@
           }
         },
         {
-          "ingredient": "coconut",
-          "quantity": 45,
+          "ingredient": "sesame_oil_plant",
+          "quantity": 10,
           "unit": "ml",
           "meta": {
-            "role": "fat",
+            "role": "condiment",
             "form": "",
             "state": "raw",
             "preparation": ""
-          },
-          "axes": {
-            "form": "oil",
-            "origin": "plant"
-          },
-          "variant_name_fr": "noix de coco"
+          }
         },
         {
-          "ingredient": "onion_raw",
-          "quantity": 150,
-          "unit": "g",
+          "ingredient": "vegetarian_fish_sauce",
+          "quantity": 15,
+          "unit": "ml",
           "meta": {
-            "role": "aromatic",
-            "form": "diced",
+            "role": "condiment",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -135769,10 +135852,11 @@
           "unit": "1 poignée",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "coriandre fraîche ciselée",
-            "note": "Quelques feuilles pour la fraîcheur",
-            "optional": true,
-            "added_by": "chef_rewrite_v8.0_2026-06-15"
+            "form": "",
+            "state": "raw",
+            "preparation": "",
+            "ingredient_fr": "coriandre fraîche",
+            "optional": true
           }
         }
       ],
@@ -135832,17 +135916,19 @@
       },
       "search_tokens": [
         "45 minutes",
-        "blanc",
-        "bread_flour",
+        "ail",
+        "bell",
         "bun",
         "button",
         "cabbage",
-        "calcium",
+        "carotte",
+        "carrot",
         "champignon",
         "chay",
         "chou",
+        "coco",
         "coconut",
-        "coriander",
+        "courgette",
         "garlic",
         "gingembre",
         "ginger",
@@ -135853,28 +135939,33 @@
         "minceur",
         "moyen",
         "mushroom",
+        "noix",
         "oignon",
         "onion",
         "paris",
-        "proteines",
+        "pepper",
+        "poivron",
+        "red",
+        "rice",
+        "riz",
+        "rouge",
         "sans produit animal",
         "sans viande",
         "sauce",
         "shoyu",
         "soja",
         "soy",
-        "sport",
+        "squash",
         "steaming",
-        "sucre",
-        "sugar",
         "tofu",
         "vegan",
         "vegetalien",
         "vegetarien",
+        "vermicelle",
+        "vermicelli",
         "vert",
         "vietnamese",
-        "white",
-        "yeast"
+        "zucchini"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
@@ -135891,7 +135982,7 @@
       },
       "_quality_score": 0.97,
       "_chef_note": "Ce plat est idéal pour les repas végétaliens et peut être servi avec du riz ou des nouilles pour un repas complet.",
-      "description": "Pâtes vietnamiennes à la sauce umami soja — al dente, enrobées uniformément, avec une texture croquante des légumes et une saveur profonde de gingembre et d'ail, dans une cuisine vietnamienne traditionnelle.",
+      "description": "Bún xào végétalien : vermicelles de riz sautés au wok avec tofu doré, chou vert, champignons et légumes en julienne (carotte, courgette, poivron), relevés de sauce soja, huile de sésame et sauce de poisson végétale, parfumés à l'ail et au gingembre.",
       "instructions": [
         "Étape 1 : Couper les légumes (carotte, courgette, poivron) en fines lamelles de 3 mm à la mandoline ou au couteau. Émincer l'oignon vert en biseau.",
         "Étape 2 : Chauffer 30 ml d'huile de coco dans un wok à feu vif jusqu'à légère fumée. Saisir l'ail émincé et l'oignon vert pendant 30 secondes en remuant constamment.",
@@ -153024,15 +153115,14 @@
           }
         },
         {
-          "ingredient": "asperges",
-          "quantity": null,
-          "unit": "4-6 asperges",
+          "ingredient": "green_asparagus_boiled",
+          "quantity": 200,
+          "unit": "g",
           "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "asperges fraîches",
-            "note": "Pour une présentation attrayante",
-            "optional": true,
-            "added_by": "chef_rewrite_v8.0_2026-06-17"
+            "role": "vegetable",
+            "form": "trimmed",
+            "state": "boiled",
+            "preparation": "blanched"
           }
         }
       ],
@@ -153099,6 +153189,8 @@
         "acidite",
         "agrume",
         "arborio_rice",
+        "asparagus",
+        "asperge",
         "asperges",
         "beurre",
         "bouillon",
@@ -153107,6 +153199,7 @@
         "citron",
         "coeliaque",
         "gluten free",
+        "green",
         "italian",
         "jaune",
         "leger",
@@ -153125,6 +153218,7 @@
         "stock",
         "vegetable",
         "vegetarien",
+        "verte",
         "vitamine c",
         "wok",
         "yellow"
@@ -164450,6 +164544,17 @@
             "optional": true,
             "added_by": "chef_rewrite_v8.0_2026-06-17"
           }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -164514,6 +164619,7 @@
         "acidite",
         "agrume",
         "assembly",
+        "black",
         "coeliaque",
         "coriander",
         "cucumber",
@@ -164528,8 +164634,11 @@
         "minceur",
         "moulues)",
         "moyen",
+        "noir",
         "olive",
+        "pepper",
         "pita_bread",
+        "poivre",
         "salade",
         "salt",
         "sans gluten",
@@ -165000,6 +165109,28 @@
             "optional": true,
             "added_by": "chef_rewrite_v8.0_2026-06-17"
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -165069,6 +165200,7 @@
         "acidite",
         "agrume",
         "assembly",
+        "black",
         "bread",
         "cucumber",
         "fattoush",
@@ -165084,18 +165216,24 @@
         "minceur",
         "moulues)",
         "moyen",
+        "noir",
         "olive",
         "optimise",
         "optimized",
         "pain",
         "parsley",
+        "pepper",
         "persil",
         "pita",
+        "poivre",
         "radish",
+        "salt",
         "sans produit animal",
         "sans viande",
         "sechees",
+        "sel",
         "sumac",
+        "table",
         "tomato/fresh",
         "vegan",
         "vegetalien",
@@ -180096,7 +180234,7 @@
         },
         {
           "ingredient": "water",
-          "quantity": 500,
+          "quantity": 545,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -180142,6 +180280,17 @@
             "note": "Pour la décoration et la saveur",
             "optional": true,
             "added_by": "chef_rewrite_v8.0_2026-06-13"
+          }
+        },
+        {
+          "ingredient": "flaxseed_linseed_ground",
+          "quantity": 7,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "ground",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -180199,6 +180348,7 @@
       },
       "search_tokens": [
         "(eau",
+        "(linseed)",
         "(vegan)",
         "30 minutes",
         "all",
@@ -180212,6 +180362,7 @@
         "facile enfants",
         "famille",
         "farine",
+        "flaxseed",
         "flour",
         "graines",
         "green",
@@ -180219,6 +180370,7 @@
         "korean",
         "leger",
         "light",
+        "lin",
         "low calorie",
         "minceur",
         "oignon",
@@ -184863,17 +185015,6 @@
           }
         },
         {
-          "ingredient": "egg",
-          "quantity": 220,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "whole",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "sesame",
           "quantity": 45,
           "unit": "ml",
@@ -185006,7 +185147,7 @@
         "champignon",
         "chilli",
         "chinese",
-        "egg",
+        "coriander",
         "graines",
         "hot",
         "leger",
@@ -191596,7 +191737,6 @@
       "search_tokens": [
         "1 heure",
         "ail",
-        "anemie",
         "bean",
         "bouillon",
         "braising",
@@ -191604,13 +191744,11 @@
         "coco",
         "coconut",
         "coconut_milk",
-        "fer",
         "garlic",
         "gingembre",
         "ginger",
         "green_curry_paste",
         "haricot",
-        "iron",
         "laksa",
         "leger",
         "legumes",
@@ -199078,21 +199216,18 @@
       "search_tokens": [
         "45 minutes",
         "ail",
-        "anemie",
         "bean",
         "bouillon",
         "braising",
         "coco",
         "coconut",
         "coconut_milk",
-        "fer",
         "garlic",
         "gingembre",
         "ginger",
         "green",
         "green_curry_paste",
         "haricot",
-        "iron",
         "laksa",
         "leger",
         "legumes",
@@ -202952,21 +203087,18 @@
       "search_tokens": [
         "45 minutes",
         "ail",
-        "anemie",
         "bean",
         "bouillon",
         "braising",
         "coco",
         "coconut",
         "coconut_milk",
-        "fer",
         "garlic",
         "gingembre",
         "ginger",
         "green",
         "green_curry_paste",
         "haricot",
-        "iron",
         "laksa",
         "leger",
         "legumes",
@@ -206776,6 +206908,28 @@
             "optional": true,
             "added_by": "chef_rewrite_v8.0_2026-06-17"
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -206859,12 +207013,15 @@
         "proteines completes",
         "quinoa",
         "ragout",
+        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sel",
         "sport",
         "stew",
         "stock",
+        "table",
         "terre",
         "vegan",
         "vegetable",
@@ -210838,6 +210995,17 @@
             "optional": true,
             "added_by": "chef_rewrite_v8.0_2026-06-15"
           }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -210897,6 +211065,7 @@
       },
       "search_tokens": [
         "45 minutes",
+        "black",
         "calcium",
         "chou",
         "coeliaque",
@@ -210914,9 +211083,12 @@
         "low calorie",
         "minceur",
         "moyen",
+        "noir",
         "oignon",
         "olive",
         "onion",
+        "pepper",
+        "poivre",
         "salt",
         "sans gluten",
         "sans produit animal",
