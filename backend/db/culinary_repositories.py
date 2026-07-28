@@ -229,6 +229,25 @@ def _ingredients_index() -> dict[str, dict]:
 
 
 @lru_cache(maxsize=1)
+def _derived_registry() -> dict[str, dict]:
+    """
+    Registre derived_from_base_recipes.json : nutrition per-100g + diet_profile
+    calcules depuis la composition propre des recettes base_* (paneer, ghee,
+    bechamel, sauces maison...), pour les recettes qui les referencent comme
+    ingredient plutot que de les redecrire. Fiabilite = fiabilite de la
+    recette source (pas une donnee de reference verifiee comme CIQUAL) - tenu
+    volontairement separe de ingredients_dictionary.json pour cette raison.
+    Cle = id complet de la recette base (ex: 'base_paneer_04e1db').
+    """
+    from backend.engine.config import DATA_ROOT
+    path = DATA_ROOT / "ingredients" / "derived_from_base_recipes.json"
+    if not path.exists():
+        return {}
+    data = _load_json(path)
+    return data.get("recipes", {}) if isinstance(data, dict) else {}
+
+
+@lru_cache(maxsize=1)
 def _recipes_index() -> dict:
     """
     Index id → recette pour accès O(1).
@@ -1077,6 +1096,16 @@ class IngredientRepository:
             if result:
                 return result
 
+        derived = _derived_registry().get(key)
+        if derived:
+            return {
+                "id": key,
+                "name_fr": derived.get("name_fr", key),
+                "name_en": derived.get("name_en", key),
+                "category": "derived_base_recipe",
+                "diet_profile": derived.get("diet_profile"),
+            }
+
         return None
 
     def get_by_id(self, ingredient_id: str) -> dict | None:
@@ -1292,6 +1321,14 @@ class IngredientRepository:
                     ingredient_name, target_key,
                 )
                 return resolved
+
+        # Fallback : derived_from_base_recipes.json (paneer, ghee, bechamel,
+        # sauces maison... referencees comme ingredient par d'autres recettes)
+        derived = _derived_registry().get(key)
+        if derived:
+            logger.debug("derived_base_recipe resolve_nutrition | %r → %r",
+                         ingredient_name, key)
+            return dict(derived.get("nutrition_per_100g") or {})
 
         # Fallback : lookup direct sur le nom d'origine
         return nutr_repo.get(ingredient_name, context=context,
