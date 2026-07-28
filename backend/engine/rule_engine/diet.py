@@ -653,6 +653,44 @@ def _extract_ids(recipe: dict) -> set[str]:
     return ids
 
 
+# ── Verification via diet_profile du dico ──────────────────────────────────
+#
+# Le blocklist bare-word ci-dessus compare l'id COMPLET (ex: "milk_liquid_
+# uht_3_5pct") a des tokens nus ("milk", "lait"...) - ne matche donc jamais
+# les ids composes du dico actuel, meme corrects. ingredients_dictionary.json
+# porte deja un diet_profile verifie par entree (vegan/vegetarian/gluten_free/
+# lactose_free/nut_free) - on le consulte ici via le meme resolveur que la
+# nutrition (IngredientRepository.get_by_name), en AND avec le blocklist :
+# un flag ne peut etre invalide QUE si l'un des deux signaux dit False,
+# jamais valide a tort par une divergence entre les deux (conservateur).
+
+def _dict_diet_signals(recipe: dict) -> dict[str, bool]:
+    """
+    Retourne {flag: True/False} pour vegan/vegetarian/gluten_free/
+    lactose_free/nut_free en agregeant le diet_profile du dico sur chaque
+    item de composition resolu. Un flag reste True si aucun item resolu ne
+    le contredit (items non-resolus par le dico = ignores, pas de signal).
+    """
+    from backend.db.culinary_repositories import IngredientRepository
+    repo = IngredientRepository()
+    flags = ("vegan", "vegetarian", "gluten_free", "lactose_free", "nut_free")
+    signals = {f: True for f in flags}
+    for c in recipe.get("composition", []) or []:
+        if not isinstance(c, dict):
+            continue
+        cid = c.get("ingredient") or c.get("ingredient_id")
+        if not cid:
+            continue
+        item = repo.get_by_name(str(cid))
+        dp = item.get("diet_profile") if item else None
+        if not dp:
+            continue
+        for f in flags:
+            if dp.get(f) is False:
+                signals[f] = False
+    return signals
+
+
 # ── Calcul diet_flags ─────────────────────────────────────────────────────────
 
 def compute_diet_flags(recipe: dict) -> dict:
@@ -682,6 +720,17 @@ def compute_diet_flags(recipe: dict) -> dict:
     is_gluten_free  = not any(i in GLUTEN_IDS for i in ids)
     is_lactose_free = not any(i in LACTOSE_IDS for i in ids)
     is_nut_free     = not any(i in NUT_IDS for i in ids)
+
+    # AND avec le diet_profile du dico (verifie, ne matche pas seulement les
+    # ids en bare-word) - un flag ne peut etre invalide QUE par un signal
+    # positif de "False" de l'un des deux cotes, jamais valide a tort en cas
+    # de divergence.
+    dict_signals = _dict_diet_signals(recipe)
+    is_vegan        = is_vegan        and dict_signals["vegan"]
+    is_vegetarian   = is_vegetarian   and dict_signals["vegetarian"]
+    is_gluten_free  = is_gluten_free  and dict_signals["gluten_free"]
+    is_lactose_free = is_lactose_free and dict_signals["lactose_free"]
+    is_nut_free     = is_nut_free     and dict_signals["nut_free"]
 
     # Ingrédients à traces résiduelles : la recette reste lactose_free=True
     # mais on signale à l'utilisateur que des traces sont présentes.
