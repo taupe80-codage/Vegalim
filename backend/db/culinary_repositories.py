@@ -219,12 +219,37 @@ def _ingredients_raw() -> list[dict]:
 
 @lru_cache(maxsize=1)
 def _ingredients_index() -> dict[str, dict]:
-    """Index nom → ingrédient pour accès O(1)."""
+    """
+    Index nom → ingrédient pour accès O(1).
+
+    Deux passes pour rendre la résolution déterministe : de nombreuses
+    entrées du dico partagent le même name_fr/name_en (ex: "mustard" ->
+    mustard/mustard_oil_plant/mustard_raw_leaf/... partagent tous
+    name_en="mustard") - une seule passe fait gagner arbitrairement la
+    dernière entrée itérée (ex: get_by_name("garlic") résolvait vers
+    garlic_roasted_dry, get_by_name("tomato") vers tomato_dried_in_oil,
+    get_by_name("egg") vers egg_powder - trouvé lors de la revue manuelle,
+    343/230/109 recettes affectées respectivement).
+
+    Passe 1 (id) : prioritaire, jamais écrasée par la passe 2 - une clé
+    de recherche qui correspond exactement à l'id d'une entrée doit
+    toujours résoudre vers CETTE entrée.
+    Passe 2 (name_fr/name_en) : fallback uniquement pour les clés non
+    déjà résolues par un id exact - reste non-déterministe en cas de
+    collision (dernier écrivain gagne), mais n'écrase plus jamais un
+    match id exact.
+    """
     index: dict[str, dict] = {}
     for item in _ingredients_raw():
-        for key in ("name_fr", "name_en", "id"):
+        key = item.get("id")
+        if key:
+            index[str(key).lower()] = item
+    for item in _ingredients_raw():
+        for key in ("name_fr", "name_en"):
             if key in item and item[key]:
-                index[str(item[key]).lower()] = item
+                k = str(item[key]).lower()
+                if k not in index:
+                    index[k] = item
     return index
 
 
