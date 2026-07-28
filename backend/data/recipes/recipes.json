@@ -15598,14 +15598,14 @@
       "_quality_score": 0.95,
       "description": "Gaufres croustillantes et parfumées, avec une texture aérienne et une saveur délicate, idéales pour un petit-déjeuner végétal délicieux, inspirées de la tradition culinaire belge",
       "instructions": [
-        "Étape 1 : Préchauffer le gaufrier à 180°C pendant 5 minutes, en vérifiant la température et la chaleur jusqu'à ce qu'il atteigne une température stable.",
-        "Étape 2 : Mélanger 300g de farine de blé, 50g de sucre et 8g de levure, en créant un mélange homogène et en vérifiant la texture pour s'assurer qu'il est lisse et sans grumeaux.",
-        "Étape 3 : Incorporer 165g de substitut d'œuf végétal (comme de la flaxseed ou de la levure de soja) et 300ml de lait de coco tiède, en mélangeant jusqu'à obtenir une pâte lisse et en vérifiant la consistance pour qu'elle soit fluide mais pas trop liquide.",
-        "Étape 4 : Monter 165g de substitut de blanc d'œuf végétal (comme de la levure de soja ou de l'aquafaba) en neige ferme, en vérifiant la texture et la consistance pour qu'elle soit légère et aérienne, puis les incorporer délicatement à la pâte.",
-        "Étape 5 : Ajouter 3g de vanille en poudre et 100g de beurre fondue, en mélangeant jusqu'à obtenir une pâte homogène et en vérifiant la saveur pour qu'elle soit délicate et parfumée.",
-        "Étape 6 : Verser la pâte dans le gaufrier préchauffé, en créant des gaufres régulières et en vérifiant la cuisson pour qu'elles soient bien réparties et ne débordent pas.",
-        "Étape 7 : Cuire les gaufres pendant 4-5 minutes, en vérifiant la coloration et la texture pour qu'elles soient brun doré et croustillantes, en les retournant à mi-cuisson pour une cuisson uniforme.",
-        "Étape 8 : Servir les gaufres chaudes, en les saupoudrant de sucre glace et en les accompagnant de fruits frais et de crème à la noix de coco, en vérifiant la présentation pour qu'elle soit appétissante et la saveur pour qu'elle soit délicate et équilibrée."
+        "Préchauffer le gaufrier à 180°C pendant 5 minutes, jusqu'à ce qu'il atteigne une température stable.",
+        "Mélanger 300g de farine de blé, 50g de sucre et 8g de levure chimique dans un grand bol, jusqu'à obtenir un mélange homogène et sans grumeaux.",
+        "Séparer 3 œufs. Incorporer les jaunes et 300ml de lait tiède à la farine en fouettant, jusqu'à obtenir une pâte lisse et fluide.",
+        "Monter les blancs d'œufs en neige ferme, puis les incorporer délicatement à la pâte pour lui donner de l'aération.",
+        "Ajouter 3g de vanille en poudre et 100g de beurre fondu, en mélangeant jusqu'à obtenir une pâte homogène et parfumée.",
+        "Verser la pâte dans le gaufrier préchauffé, en répartissant uniformément sans déborder.",
+        "Cuire 4-5 minutes jusqu'à coloration brun doré et texture croustillante, en retournant à mi-cuisson pour une cuisson uniforme.",
+        "Servir chaud, saupoudré de sucre glace et accompagné de fruits frais."
       ],
       "diet_flags": {
         "vegan": false,
@@ -16262,6 +16262,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "macadamia_nuts_raw_unsalted",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -16336,10 +16347,13 @@
         "lemon",
         "light",
         "low calorie",
+        "macadamia",
         "maceration",
         "minceur",
         "muesli",
         "noisette",
+        "noix",
+        "nuts",
         "oat",
         "pomme",
         "quick",
@@ -19190,7 +19204,7 @@
       "_quality_score": 0.79,
       "description": "Délicieux petit-déjeuner végétarien avec purée d'açaï et banane congelée, créant une texture épaisse et crémeuse, parfumé par des notes de fruits rouges et de noix de coco râpée.",
       "instructions": [
-        "Étape 1 : Dans un blender, mélangez 200g de purée d'açaï, 120g de banane congelée et 80ml de lait de coco pendant 2 minutes à feu doux, jusqu'à obtenir une texture épaisse et crémeuse qui nappe la cuillère.",
+        "Étape 1 : Dans un blender, mélangez 200g de purée d'açaï, 120g de banane congelée et 80ml de lait d'amande pendant 2 minutes à feu doux, jusqu'à obtenir une texture épaisse et crémeuse qui nappe la cuillère.",
         "Étape 2 : Ajoutez 21g d'agave et mixez pendant 30 secondes, jusqu'à dissolution complète et à l'obtention d'un mélange homogène et brillant.",
         "Étape 3 : Versez le mélange dans un bol froid et disposez les garnitures : 40g de granola croustillante, 75g de fraises fraîches coupées en dés, 30g de myrtilles et 15g de noix de coco râpée.",
         "Étape 4 : Répartissez 10g de graines de chia sur le dessus pour ajouter une texture croquante et une touche de nutriments, puis laissez reposer 5 minutes pour permettre aux graines de chia d'absorber le liquide et de gonfler.",
@@ -83107,7 +83121,7 @@
           "meta": {
             "role": "garnish",
             "form": "whole",
-            "state": "raw",
+            "state": "cooked",
             "preparation": "sauteed"
           }
         },
@@ -157060,6 +157074,7 @@
         "45 minutes",
         "all",
         "and",
+        "anemie",
         "black",
         "ble",
         "cake",
@@ -157068,11 +157083,13 @@
         "facile enfants",
         "famille",
         "farine",
+        "fer",
         "flour",
         "french_provencal",
         "gateau",
         "herb",
         "herbes",
+        "iron",
         "kids",
         "lait",
         "milk",
@@ -158160,13 +158177,10 @@
         "kids",
         "latin_american",
         "moyen",
-        "muscle",
         "noix",
         "oignon",
         "onion",
-        "protéines",
         "queso",
-        "riche en proteines",
         "roasting",
         "salad",
         "salade",
@@ -158175,7 +158189,6 @@
         "sans produit animal",
         "sans viande",
         "sel",
-        "sport",
         "table",
         "vegan",
         "vegetalien",
@@ -160282,9 +160295,7 @@
         "coriander",
         "coriandre",
         "cumin",
-        "digestion",
         "fer",
-        "fibre",
         "frying",
         "gingembre",
         "ginger",
@@ -160300,7 +160311,6 @@
         "pois",
         "pomme",
         "potato",
-        "riche en fibres",
         "samosa",
         "sans produit animal",
         "sans viande",
