@@ -327,7 +327,7 @@
     },
     {
       "id": 16,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "pasta_gnocchis_a_la_tomate_vega_ca281e",
         "pasta_lasagnes_8adf61",
@@ -350,7 +350,17 @@
         "pasta_puttanesca_v1x9q2",
         "rice_risotto_ai_funghi_395f00"
       ],
-      "issues": []
+      "issues": [
+        "pasta_lasagnes_de_legumes_ultra_9b6a4e: bechamel entiere (farine 50g, huile 50g, lait de coco 600ml) absente de la composition malgre des quantites explicites dans le texte ; fromage vegetal mentionne dans les instructions mais la description parle de levure nutritionnelle et aucun fromage n'existe en composition - texte aligne",
+        "pasta_lasagnes_vegan_412e90: texte annoncait du lait de coco alors que base_bechamel_vegane_7a210c utilise reellement du lait d'avoine",
+        "pasta_mac_and_cheese_b3073b: farine du roux a 200g en composition (erreur d'echelle x10, un roux normal utilise ~20g) ; texte annoncait 20g de beurre vs 40g composition, et farine de riz vs farine de ble reelle",
+        "pasta_pasta_al_pomodoro_3ffaef: etape 7 vide, supprimee",
+        "pasta_pasta_alla_norma_vegan_6e1a92: huile 25ml texte vs 46.2ml composition",
+        "pasta_pasta_e_fagioli_68905b: bouillon vegetal utilise comme milieu de cuisson des pates, absent de la composition (ajoute, quantite estimee)",
+        "pasta_pates_carbonara_7e4f1a: etape 2 vide, supprimee",
+        "pasta_plain_k2d1p1: coconut_milk_plant utilise comme huile de coco (10ml, role light_coating, correspond exactement au texte) -> coconut_oil_plant",
+        "rice_risotto_ai_funghi_395f00: champignons frais 150g composition vs 200g texte ; cepes sechis (20g, quantite explicite) totalement absents de la composition (ajoutes comme porcini_mushroom_raw, pas de variante sechee dans le dictionnaire)"
+      ]
     },
     {
       "id": 17,
