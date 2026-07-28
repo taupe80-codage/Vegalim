@@ -364,7 +364,7 @@
     },
     {
       "id": 17,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "rice_risotto_ai_funghi_vegan_41360e",
         "rice_risotto_al_limone_4088e5",
@@ -377,7 +377,12 @@
         "tarte_margherita_v7k2d1",
         "tarte_pizza_margherita_vegan_02bb9a"
       ],
-      "issues": []
+      "issues": [
+        "rice_risotto_ai_funghi_vegan_41360e, rice_risotto_aux_champignon_25ed38: cepes sechis (20g, quantite explicite) totalement absents de la composition (ajoutes comme porcini_mushroom_raw, meme motif que le lot 16)",
+        "rice_risotto_al_limone_4088e5: citron 15ml composition vs 20ml explicite dans le texte",
+        "rice_risotto_al_limone_vegan_a234ae: mention redondante de fromage vegetal rape en fin de recette alors que la levure nutritionnelle est deja ajoutee a l'etape 5 et qu'aucun parmesan vegetal n'existe dans le dictionnaire - mention supprimee",
+        "salad_caprese_classic_k21x9d: texte parlait de fromage rape dans les 10 etapes alors qu'une vraie caprese utilise de la mozzarella tranchee (coherent avec la composition, form=sliced) - texte corrige (8 occurrences)"
+      ]
     },
     {
       "id": 18,
