@@ -260,7 +260,7 @@
     },
     {
       "id": 14,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "rice_salad_k3d2p1",
         "rice_vegetable_fried_rice_cd489b",
@@ -276,7 +276,17 @@
         "wok_tofu_saute_gingembre_soja_6e901c",
         "wrap_veg_k3d2p1"
       ],
-      "issues": []
+      "issues": [
+        "rice_salad_k3d2p1: huile utilisee deux fois (saisie 40ml + vinaigrette 40ml = 80ml texte vs 40ml composition) ; vinaigre de cidre annonce mais composition avait vinaigre blanc distille",
+        "rice_vegetable_fried_rice_cd489b: huile de sesame/tournesol confondues (sesame utilise 2x pour 35ml vs 15ml composition, tournesol 45ml jamais compte) + etape four incoherente sur un plat sautee au wok",
+        "salad_dattieke_7824bf: coconut_milk_plant utilise comme huile de noix de coco (vinaigrette + filet final)",
+        "sauce_tofu_croustillant_sauce_a_b8be56: idem, coconut_milk_plant utilise comme huile de friture",
+        "stew_lentil_basic_v2_x7k2m9: tomates concassees (100g) mentionnees dans le texte, absentes de la composition",
+        "wok_tofu_saute_aux_legumes_1f3ac2: huile de coco (25ml) utilisee dans le texte, absente de la composition (ajoutee) ; NOTE non corrigee : le texte decrit aussi 5 legumes (carotte, brocoli, poivron, champignons, oignons verts) totalement absents de la composition, sans quantite explicite pour les ajouter avec confiance - a traiter dans une passe dediee",
+        "wok_tofu_saute_gingembre_soja_6e901c: vinaigre de riz (15ml) mentionne dans le texte, absent de la composition (ajoute comme vinegar_liquid, pas d id vinaigre de riz dedie)",
+        "NOTE non corrigee : wrap_veg_k3d2p1 utilise vegetable_stock_dried (bouillon deshydrate) comme fresh_binder pour representer une sauce brune vegetarienne tartinable - aucun ingredient sauce/gravy correct trouve dans le dictionnaire, laisse en l etat faute de meilleure correspondance",
+        "Suite de la decouverte systemique huile de coco (lot 13) : 2 nouvelles occurrences confirmees ce lot (coconut_milk_plant mal etiquete comme huile), toujours ~72 recettes restantes"
+      ]
     },
     {
       "id": 15,

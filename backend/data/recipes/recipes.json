@@ -134934,7 +134934,7 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 40,
+          "quantity": 80,
           "unit": "ml",
           "meta": {
             "role": "coating",
@@ -134944,7 +134944,7 @@
           }
         },
         {
-          "ingredient": "white_vinegar_liquid_distilled",
+          "ingredient": "cider_vinegar_liquid",
           "quantity": 15,
           "unit": "ml",
           "meta": {
@@ -135045,6 +135045,8 @@
         "black",
         "blanc",
         "bread",
+        "cider",
+        "cidre",
         "coeliaque",
         "complet",
         "concombre",
@@ -137601,12 +137603,11 @@
       "_quality_score": 0.9,
       "description": "Riz sauté rapidement au wok avec carotte crue, oignon pice, sauce soja et huile de sésame — léger, grains bien détachés et umami discret, avec une texture croustillante et une odeur parfumée",
       "instructions": [
-        "Étape 1: Faire chauffer 20 ml d'huile de sésame à feu vif pendant 1 minute, puis ajouter 200g de tofu ferme émietté et le faire sauter pendant 30 secondes, jusqu'à ce qu'il soit doré.",
+        "Étape 1: Faire chauffer 45 ml d'huile de tournesol à feu vif pendant 1 minute, puis ajouter 200g de tofu ferme émietté et le faire sauter pendant 30 secondes, jusqu'à ce qu'il soit doré.",
         "Étape 2: Saisir 20g d'ail pendant 15 secondes, puis ajouter 200g de carotte crue et 300g d'oignon pice et les faire revenir pendant 2 minutes, jusqu'à légère coloration et texture tendre.",
         "Étape 3: Ajouter 300g de riz froid et l'émietter avec une fourchette, puis faire sauter pendant 3 minutes à feu maximum, en veillant à ce que le riz crépite et que les grains soient bien détachés.",
         "Étape 4: Assaisonner de 45ml de sauce soja, d'15ml d'huile de sésame et de 5g de sel, et mélanger pendant 1 minute, jusqu'à ce que le parfum soit bien réparti et que les saveurs soient équilibrées.",
-        "Étape 5: Incorporer 55g d'œuf battu et 45ml d'huile de tournesol, et mélanger pendant 1 minute, en servant sans attendre pour préserver la texture croustillante et la chaleur du plat.",
-        "Étape 6: Préchauffer le four à 180°C, puis enfourner pendant 5 minutes, jusqu'à légère dorure et parfum de wok bien présent, en veillant à ce que le plat soit chaud et appétissant."
+        "Étape 5: Incorporer 55g d'œuf battu et mélanger pendant 1 minute, en servant sans attendre pour préserver la texture croustillante et la chaleur du plat."
       ],
       "diet_flags": {
         "vegan": false,
@@ -140091,7 +140092,7 @@
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
+          "ingredient": "coconut_oil_plant",
           "quantity": 45,
           "unit": "ml",
           "meta": {
@@ -147974,7 +147975,7 @@
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
+          "ingredient": "coconut_oil_plant",
           "quantity": 45,
           "unit": "ml",
           "meta": {
@@ -177796,7 +177797,7 @@
         "Étape 1 : Rincez 250 g de lentilles vertes, puis faites revenir 120 g d'oignon en brunoise dans 20 ml d'huile d'olive pendant 8 minutes à feu moyen-vif jusqu'à obtenir une légère dorure et une odeur parfumée.",
         "Étape 2 : Ajoutez 20 g d'ail haché, 120 g de carotte en brunoise. Cuire pendant 1 minute pour activer les parfums et parfumer la préparation, en sentant les arômes se mélanger.",
         "Étape 3 : Incorporez les lentilles et couvrez-les de 2 fois leur volume d'eau chaude (environ 700 ml). Portez à ébullition, puis laissez mijoter à feu doux pendant 25 minutes, en surveillant la texture des lentilles.",
-        "Étape 4 : Ajoutez des tomates concassées (environ 100 g) à mi-cuisson et continuez à mijoter jusqu'à ce que les lentilles soient tendres et conservent leur forme, en vérifiant leur texture régulièrement.",
+        "Étape 4 : Continuez à mijoter jusqu'à ce que les lentilles soient tendres et conservent leur forme, en vérifiant leur texture régulièrement.",
         "Étape 5 : Salez en fin de cuisson avec 5 g de sel et rectifiez l'assaisonnement avec du poivre (environ 2 g) pour équilibrer les saveurs, en goûtant régulièrement.",
         "Étape 6 : Servez chaud avec un filet d'huile d'olive et du persil ciselé. Le ragoût doit être épais, parfumé et les lentilles entières, avec une consistance crémeuse et une couleur appétissante.",
         "Étape 7 : Présentez dans des bols préchauffés, garnis de persil frais et accompagnez d'un peu d'eau fraîche pour un repas équilibré et délicieux."
@@ -183635,6 +183636,17 @@
             "note": "Pour une touche de fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "coconut_oil_plant",
+          "quantity": 25,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -183700,6 +183712,8 @@
         "1 heure",
         "ail",
         "aux",
+        "coco",
+        "coconut",
         "coeliaque",
         "coriander",
         "cornstarch",
@@ -183718,6 +183732,7 @@
         "light",
         "low calorie",
         "minceur",
+        "noix",
         "sans gluten",
         "sans produit animal",
         "sans viande",
@@ -183857,6 +183872,17 @@
             "note": "Pour un peu de croquant et de saveur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "vinegar_liquid",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -183955,6 +183981,8 @@
         "vegetalien",
         "vegetarien",
         "vert",
+        "vinaigre",
+        "vinegar",
         "wok"
       ],
       "difficulty_level": "medium",
