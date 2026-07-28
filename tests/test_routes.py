@@ -240,10 +240,11 @@ def test_ingredient_get_enriched():
     assert ing.get("canonical_name_en") == "tofu"
     assert ing.get("diet_profile", {}).get("vegan") is True
     assert "tofu_plain_pre_packaged" in av
-    # Recettes associées — id sémantique recette "tofu" (distinct des clés du
-    # dico, pontées via ingredient_map_v2.json)
+    # Recettes associées — id "tofu_plain_pre_packaged" directement (le bare
+    # "tofu" a été corrigé partout : il résolvait vers tofu_smoked_pre_packaged
+    # via une collision de nom dans l'index du dico, cf revue manuelle).
     assoc = [r for r in RECIPES if any(
-        (i.get("ingredient","") if isinstance(i,dict) else str(i)) == "tofu"
+        (i.get("ingredient","") if isinstance(i,dict) else str(i)) == "tofu_plain_pre_packaged"
         for i in r.get("composition",[])
     )]
     assert len(assoc) > 0
