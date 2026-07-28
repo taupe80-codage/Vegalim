@@ -290,7 +290,7 @@
     },
     {
       "id": 15,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "base_gnocchi_vegan_dd3b0e",
         "bread_panzanella_italienne_307da1",
@@ -313,7 +313,17 @@
         "pasta_gnocchi_pesto_classic_v2_m7k2q4",
         "pasta_gnocchis_a_la_tomate_8e1632"
       ],
-      "issues": []
+      "issues": [
+        "dal_italian_pasta_e_ceci_3fbb85: bouillon vegetal utilise comme milieu de cuisson des pates (3 mentions), totalement absent de la composition (ajoute, quantite estimee)",
+        "main_parmigiana_di_melanzane_6bd49f: huile 60ml texte vs 45ml composition",
+        "main_polenta_ai_funghi_vegan_ab13cd: beurre vegetal (30g) jamais mentionne dans le texte",
+        "pasta_alfredo_k3d2p1: composition utilisait water (100ml) alors que description/texte decrivent explicitement de la creme fraiche -> cream_heavy",
+        "pasta_carbonara_veg_k3d2p1: texte appelait a tort creme le vrai oeuf (165g, deja correct en composition pour une carbonara authentique) - texte corrige",
+        "side_epinards_a_la_creme_vegan_10afc3: creme de coco 120ml dans le texte vs creme d'avoine 150ml en composition ; beurre vegetal appele huile dans le texte",
+        "soup_minestrone_vegan_10bf61: parmesan vegetal (30g) mentionne dans le texte sans correspondance en composition ni ingredient vegan parmesan disponible dans le dictionnaire - mention supprimee",
+        "DECOUVERTE mineure: 8 recettes vegan au total (levure nutritionnelle) avaient un ecart texte/composition constant (60g texte vs 90g composition, ou 10g vs 15g) - toutes corrigees ce lot",
+        "NOTE verifiee non-bug: plusieurs recettes ont deux entrees huile d'olive distinctes (olive_oil_plant + olive_oil_extra_virgin_plant) - verifie legitime (huile de cuisson + huile de finition, motif culinaire reel confirme par dumpling_pierogi_aux_pommes_de_ter_24a890 qui utilise explicitement les deux), pas une duplication a corriger"
+      ]
     },
     {
       "id": 16,
