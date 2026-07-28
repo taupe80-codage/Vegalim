@@ -21547,28 +21547,6 @@
             "optional": true,
             "added_by": "chef_rewrite_v8.0_2026-06-17"
           }
-        },
-        {
-          "ingredient": "flaxseed_linseed_ground",
-          "quantity": 7,
-          "unit": "g",
-          "meta": {
-            "role": "binder",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 45,
-          "unit": "ml",
-          "meta": {
-            "role": "binder",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
@@ -21628,15 +21606,11 @@
         }
       },
       "search_tokens": [
-        "(eau",
-        "(linseed)",
         "(vegan)",
         "bell",
         "braising",
         "coeliaque",
         "cumin",
-        "eau",
-        "flaxseed",
         "fresh_coriander",
         "garlic",
         "gluten free",
@@ -21644,7 +21618,6 @@
         "lent",
         "levantine",
         "light",
-        "lin",
         "long",
         "low calorie",
         "mijote",
@@ -21655,7 +21628,6 @@
         "paprika",
         "pepper",
         "poivron",
-        "potable)",
         "red",
         "rouge",
         "sans gluten",
@@ -21665,8 +21637,7 @@
         "tomato/fresh",
         "vegan_feta",
         "vegetarien",
-        "vegetarienne",
-        "water"
+        "vegetarienne"
       ],
       "difficulty_level": "medium",
       "dish_type": "breakfast",
@@ -26590,6 +26561,39 @@
             "optional": true,
             "added_by": "chef_rewrite_v8.0_2026-06-15"
           }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "paprika_powder",
+          "quantity": 2.3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -26656,6 +26660,7 @@
         "chickpea",
         "citron",
         "couscous",
+        "cumin",
         "eau",
         "harissa",
         "leger",
@@ -40684,17 +40689,6 @@
             "state": "raw",
             "preparation": ""
           }
-        },
-        {
-          "ingredient": "dijon_mustard",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "condiment",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
@@ -40761,7 +40755,6 @@
         "cumin",
         "curcuma",
         "dal",
-        "dijon_mustard",
         "garlic",
         "gluten free",
         "indian",
@@ -124718,7 +124711,7 @@
           }
         },
         {
-          "ingredient": "rice_vermicelli",
+          "ingredient": "wide_rice_noodles",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -124823,7 +124816,6 @@
         "proteines",
         "quick",
         "rapide",
-        "rice_vermicelli",
         "sans viande",
         "sauce",
         "sauteed",
@@ -124838,7 +124830,8 @@
         "tofu",
         "vegan",
         "vegetarien",
-        "white"
+        "white",
+        "wide_rice_noodles"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
@@ -138171,57 +138164,52 @@
       },
       "composition": [
         {
-          "ingredient": "garlic",
-          "quantity": 15,
+          "ingredient": "rice_vermicelli_raw_dried",
+          "quantity": 200,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "chopped",
+            "role": "base",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "coconut",
-          "quantity": 45.7,
+          "ingredient": "tamarind_raw",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "paste",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 30,
           "unit": "ml",
           "meta": {
-            "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          },
-          "axes": {
-            "form": "oil",
-            "origin": "plant"
-          },
-          "variant_name_fr": "noix de coco"
-        },
-        {
-          "ingredient": "onion_raw",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "white_sugar",
-          "quantity": 14.1,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
+            "role": "condiment",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tofu",
-          "quantity": 400,
+          "ingredient": "coconut_sugar",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tofu_plain_pre_packaged",
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "protein",
@@ -138231,115 +138219,80 @@
           }
         },
         {
-          "ingredient": "rice_vermicelli",
-          "quantity": 200,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "dried",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "bean_sprouts",
+          "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
           "quantity": 100,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "fresh",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "peanut_butter",
-          "quantity": 64,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
+            "role": "vegetable",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tamarind",
+          "ingredient": "garlic_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_onion_raw",
           "quantity": 30,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
+            "role": "vegetable",
+            "form": "sliced",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "peanut_roasted_salted_dry",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "crushed",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 44.9,
+          "ingredient": "sesame_oil_plant",
+          "quantity": 10,
           "unit": "ml",
           "meta": {
-            "role": "ingredient",
+            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "lime",
-          "quantity": 50,
+          "ingredient": "vegetarian_fish_sauce",
+          "quantity": 15,
           "unit": "ml",
           "meta": {
-            "role": "ingredient",
-            "form": "juice",
+            "role": "condiment",
+            "form": "",
             "state": "raw",
             "preparation": ""
-          }
-        },
-        {
-          "ingredient": "green_onion_raw",
-          "quantity": 60,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "chiffonade",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "peanut",
-          "quantity": 80,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "roughly_chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "green_onion_raw",
-          "quantity": null,
-          "unit": "quelques feuilles",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "feuilles de ciboulette fraîches",
-            "note": "Ajoutez une touche de fraîcheur",
-            "optional": true,
-            "added_by": "chef_rewrite_v8.0_2026-06-17"
-          }
-        },
-        {
-          "ingredient": "citrus_lime",
-          "quantity": null,
-          "unit": "1-2 quartiers",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "quartiers de citron vert",
-            "note": "Pour un zeste de citron",
-            "optional": true,
-            "added_by": "chef_rewrite_v8.0_2026-06-17"
           }
         }
       ],
@@ -138397,41 +138350,53 @@
         }
       },
       "search_tokens": [
+        "(arachide)",
+        "(fleur",
         "(vegan)",
         "45 minutes",
-        "bean_sprouts",
-        "blanc",
-        "calcium",
+        "ail",
+        "bean",
+        "cacahuete",
+        "citron",
+        "coco",
         "coconut",
+        "cocotier)",
         "garlic",
         "green",
+        "haricot",
         "leger",
         "light",
         "lime",
         "low calorie",
         "minceur",
         "moyen",
+        "mung",
+        "mungo",
         "oignon",
         "onion",
         "pad",
-        "peanut_butter",
-        "proteines",
-        "rice_vermicelli",
+        "peanut",
+        "rice",
+        "riz",
         "sans viande",
         "sauce",
         "sauteed",
+        "sesame",
         "shoyu",
         "soja",
         "soy",
-        "sport",
+        "sprouts",
         "sucre",
         "sugar",
+        "tamarin",
         "tamarind",
         "thai",
         "tofu",
+        "vegetarian_fish_sauce",
         "vegetarien",
-        "vert",
-        "white"
+        "vermicelle",
+        "vermicelli",
+        "vert"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
@@ -138448,15 +138413,15 @@
       },
       "_quality_score": 0.96,
       "_chef_note": "Assurez-vous de ne pas surcuire les nouilles, car elles peuvent devenir collantes et peu appétissantes.",
-      "description": "Plat thaïlandais où le tofu soyeux fond en bouche, accompagné de nouilles de riz tendres, de légumes croquants et d'une sauce épicée et sucrée, liés par une sauce onctueuse à base de tamarin et de soja, avec des notes de citron vert et de ciboulette fraîche.",
+      "description": "Pad thaï traditionnel : nouilles de riz sautées au wok avec tofu doré, pousses de soja et oignons verts, dans une sauce sucrée-acidulée au tamarin, sauce soja et sucre de coco, garni de cacahuètes concassées et citron vert.",
       "instructions": [
-        "Étape 1 : Faites tremper les vermicelles de riz dans de l'eau froide pendant environ 10 minutes, ou jusqu'à ce qu'elles soient tendres mais encore fermes. Égouttez-les et mettez-les de côté.",
-        "Étape 2 : Dans un bol, mélangez le tamarin, la sauce soja, le sucre blanc et un peu d'eau pour créer une sauce épicée et sucrée. Réduisez cette sauce à feu doux dans une petite poêle pendant environ 2 minutes, en remuant constamment, jusqu'à ce qu'elle ait épaissi légèrement.",
-        "Étape 3 : Dans un wok ou une grande poêle, faites chauffer un peu d'huile de noix de coco à feu vif. Ajoutez l'ail émincé et l'oignon émincé, et faites-les sauter pendant environ 1 minute, en remuant constamment, jusqu'à ce qu'ils soient parfumés et légèrement dorés.",
-        "Étape 4 : Ajoutez le tofu ferme coupé en petits cubes dans le wok et faites-le sauter avec l'ail et l'oignon pendant environ 2 minutes, ou jusqu'à ce que le tofu soit doré de tous les côtés.",
-        "Étape 5 : Ajoutez les vermicelles de riz égouttées, la sauce épicée et sucrée, les pousses de soja et les arachides dans le wok. Faites tout sauter ensemble pendant environ 2 minutes, en remuant constamment, jusqu'à ce que les vermicelles soient bien enrobées de sauce et que les légumes soient tendres.",
-        "Étape 6 : Ajoutez le jus de citron vert et les feuilles de ciboulette émincées dans le wok, et mélangez bien pour que tout soit bien combiné.",
-        "Étape 7 : Servez le Pad Thai chaud, garni de feuilles de ciboulette fraîches, d'arachides et de quartiers de citron vert, si désiré. Présentez dans des bols préchauffés pour conserver la fraîcheur des herbes et la texture des arachides."
+        "Étape 1 : Faire tremper 200g de vermicelles de riz larges dans l'eau froide pendant 30 minutes, puis les égoutter. Observer la texture des vermicelles qui passent de rigides à souples.",
+        "Étape 2 : Préparer la sauce en mélangeant 30ml de sauce soja, 30g de pâte de tamarin, 20g de sucre de coco et 15ml de jus de citron vert. Remarquer la couleur ambrée et l'odeur acidulée de la sauce.",
+        "Étape 3 : Chauffer le wok à feu vif avec 10ml d'huile de sésame, puis faire dorer 200g de tofu pressé en cubes pendant 3 minutes, en le retournant régulièrement. Écouter le son des cubes de tofu qui dorent et sentir l'odeur de la friture.",
+        "Étape 4 : Ajouter 6g d'ail émincé et faire revenir 30 secondes, jusqu'à ce qu'il soit parfumé sans colorer.",
+        "Étape 5 : Ajouter les vermicelles égouttés et la sauce préparée, puis mélanger vigoureusement à feu très vif pendant 2 minutes, jusqu'à couleur ambrée et absorption de la sauce.",
+        "Étape 6 : Pousser les vermicelles sur le côté, puis ajouter 100g de pousses de soja et 30g d'oignons verts, en les faisant sauter pendant 1 minute. Sentir l'odeur des légumes qui sautent.",
+        "Étape 7 : Servir immédiatement, en garnissant de 40g de cacahuètes concassées et de citron vert, pour un repas équilibré et savoureux."
       ],
       "diet_flags": {
         "vegan": false,
@@ -185113,7 +185078,6 @@
         "low calorie",
         "minceur",
         "moyen",
-        "muscle",
         "mushroom",
         "oignon",
         "onion",
@@ -185122,9 +185086,7 @@
         "piment",
         "piquante",
         "proteines",
-        "protéines",
         "rice_vinegar",
-        "riche en proteines",
         "sans viande",
         "sauce",
         "sesame",
@@ -193111,6 +193073,17 @@
             "note": "Pour une touche de fraîcheur",
             "optional": true,
             "added_by": "chef_rewrite_v8.0_2026-06-17"
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 1200,
+          "unit": "ml",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
