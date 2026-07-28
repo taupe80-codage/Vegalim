@@ -24,9 +24,10 @@ _DEFAULT_LEVENSHTEIN = 5
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def _ingredient_set(recipe: dict) -> set[str]:
+    items = recipe.get("composition") or recipe.get("ingredients", [])
     return {
-        (i.get("ingredient_id", "") if isinstance(i, dict) else str(i)).lower()
-        for i in recipe.get("ingredients", [])
+        (i.get("ingredient", i.get("ingredient_id", "")) if isinstance(i, dict) else str(i)).lower()
+        for i in items
     } - {""}
 
 
