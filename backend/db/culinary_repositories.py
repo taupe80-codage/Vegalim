@@ -281,27 +281,6 @@ def _aliases_raw() -> dict[str, str]:
 
 
 @lru_cache(maxsize=1)
-def _base_recipe_aliases_raw() -> dict[str, str]:
-    """
-    Cache en mémoire des aliases recettes-base.
-    Section 'base_recipe_aliases' : {ingredient_key: recipe_id}
-    Priorité maximale — résolu avant recipe_aliases et nutrition_v2.
-    """
-    from backend.engine.config import DATA_ROOT
-    path = DATA_ROOT / "nutrition" / "reference" / "nutrition_aliases_v6.json"
-    if not path.exists():
-        return {}
-    try:
-        data = _load_json(path)
-        bra = data.get("base_recipe_aliases", {})
-        logger.info("Base recipe aliases chargés : %d entrées", len(bra))
-        return bra
-    except Exception as exc:
-        logger.warning("Erreur chargement base_recipe_aliases : %s", exc)
-        return {}
-
-
-@lru_cache(maxsize=1)
 def _reference_db_raw() -> dict[str, dict]:
     """
     Cache en mémoire de la base de référence secondaire (reference_db.json).
@@ -361,119 +340,6 @@ def _v32_ing_id_index() -> dict[str, str]:
         for n2_key, entry in db.items()
         if isinstance(entry, dict) and entry.get("_v32_id")
     }
-
-
-def _compute_nutrition_from_recipe(
-    recipe: dict,
-    depth: int = 0,
-) -> dict | None:
-    """
-    Calcule les valeurs nutritionnelles pour 100g de produit fini
-    en agrégeant les ingrédients de la recette.
-
-    - Supporte les unités : g, ml, kg, l, mg
-    - Ignore les ingrédients sans données nutritionnelles (eau, sel très petite quantité...)
-    - depth guard évite la récursion infinie
-    """
-    if depth > 3:
-        logger.warning("_compute_nutrition_from_recipe: profondeur max atteinte")
-        return None
-
-    UNIT_TO_G = {"g": 1.0, "ml": 1.0, "kg": 1000.0, "l": 1000.0,
-                 "mg": 0.001, "cl": 10.0, "dl": 100.0}
-    NUTRITION_FIELDS = (
-        # Macros — clés exactes nutrition_v2.json
-        "calories_kcal", "protein_g", "carbs_g", "fat_g", "fiber_g", "sugar_g",
-        # Sodium (mg dans N2, pas g)
-        "sodium_mg",
-        # Acides gras — notation N2/CIQUAL (fa_*)
-        "fa_saturated_g", "fa_mufa_g", "fa_pufa_g",
-        "fa_18_3_ala_g", "fa_20_5_epa_g", "fa_22_6_dha_g", "omega3_g",
-        # Minéraux
-        "calcium_mg", "iron_mg", "magnesium_mg", "potassium_mg",
-        "zinc_mg", "phosphorus_mg",
-        # Vitamines
-        "vitamin_c_mg", "vitamin_d_ug", "vitamin_b12_ug",
-        "vitamin_a_rae_ug", "folate_dfe_ug",
-    )
-    SKIP_UNITS = {"pinch", "pincee", "clove", "piece", "gousse",
-                  "bunch", "sprig", "feuille", "leaf"}
-
-    composition = recipe.get("composition") or []
-    totals: dict[str, float] = {}
-    total_weight_g: float = 0.0
-    nutrition_repo = NutritionRepository()
-
-    for item in composition:
-        if not isinstance(item, dict):
-            continue
-        ing_name = item.get("ingredient", "")
-        qty      = item.get("quantity", 0) or 0
-        unit     = (item.get("unit") or "g").lower().strip()
-
-        if unit in SKIP_UNITS or qty <= 0:
-            continue
-
-        factor = UNIT_TO_G.get(unit)
-        if factor is None:
-            continue  # unit inconnue (ex: "tbsp") — ignorer
-
-        weight_g = float(qty) * factor
-        total_weight_g += weight_g
-
-        # Résolution de l'ingrédient : on bypasse get() pour éviter les exclusions
-        # et on force la résolution plate via _resolve_variant_key
-        db      = _nutrition_raw()
-        aliases = _aliases_raw()
-        nutr_data = None
-
-        # a) Lookup exact + résolution variant
-        if ing_name in db:
-            nutr_data = _resolve_variant_key(db, ing_name)
-        # b) Lookup via recipe_aliases
-        if nutr_data is None:
-            slug = ing_name.replace(" ", "_").replace("-", "_")
-            for cand in (ing_name, slug):
-                tgt = aliases.get(cand)
-                if tgt:
-                    nutr_data = _resolve_variant_key(db, tgt)
-                    if nutr_data:
-                        break
-        # c) Lookup normalisé
-        if nutr_data is None:
-            from unicodedata import normalize, category as ucat
-            def _norm(s):
-                s = normalize("NFD", s.lower())
-                s = "".join(c for c in s if ucat(c) != "Mn")
-                return re.sub(r"[\s\-_]+", " ", s).strip()
-            norm_key = _norm(ing_name)
-            for db_key in db:
-                if _norm(db_key) == norm_key:
-                    nutr_data = _resolve_variant_key(db, db_key)
-                    break
-
-        if nutr_data is None:
-            continue
-
-        for field in NUTRITION_FIELDS:
-            val = nutr_data.get(field)
-            if val is not None:
-                try:
-                    totals[field] = totals.get(field, 0.0) + float(val) * weight_g / 100.0
-                except (TypeError, ValueError):
-                    pass
-
-    if total_weight_g <= 0 or not totals:
-        return None
-
-    # Normaliser à 100g de produit fini
-    result = {
-        field: round(v * 100.0 / total_weight_g, 4)
-        for field, v in totals.items()
-    }
-    result["_source"] = f"computed_from_recipe:{recipe.get('id', '?')}"
-    result["_total_weight_g"] = round(total_weight_g, 1)
-    return result
 
 
 def _resolve_variant_key(db: dict, target_key: str) -> dict | None:
@@ -570,7 +436,6 @@ def invalidate_caches() -> None:
     _ingredients_index.cache_clear()
     _recipes_index.cache_clear()
     _aliases_raw.cache_clear()
-    _base_recipe_aliases_raw.cache_clear()
     _base_recipe_excluded_raw.cache_clear()
     _reference_db_raw.cache_clear()
     logger.info("Caches culinaires invalidés")
@@ -794,11 +659,10 @@ class NutritionRepository:
         Retourne None sans crasher si absent, et logue le manque.
 
         Chaîne de résolution (par ordre de priorité) :
-          1. base_recipe_aliases → calcul depuis composition recette-base
-          2. Lookup exact dans nutrition_v2
-          3. Lookup normalisé dans nutrition_v2
-          4. recipe_aliases (base/variant) dans nutrition_v2
-          5. None + log
+          1. Lookup exact dans nutrition_v2
+          2. Lookup normalisé dans nutrition_v2
+          3. recipe_aliases (base/variant) dans nutrition_v2
+          4. None + log
 
         Args:
             ingredient_name : nom en français ou anglais, insensible à la casse.
@@ -815,36 +679,14 @@ class NutritionRepository:
         db       = _nutrition_raw()
         excluded = _base_recipe_excluded_raw()   # keys avec recette-base dédiée
 
-        # 1. base_recipe_aliases — PRIORITÉ MAXIMALE
-        #    ingredient_key → recipe_id → nutrition calculée depuis composition
-        if _depth == 0:
-            bra = _base_recipe_aliases_raw()
-            for candidate in (key, key_slug):
-                recipe_id_target = bra.get(candidate)
-                if not recipe_id_target:
-                    continue
-                base_recipe = next(
-                    (r for r in _recipes_raw() if r.get("id") == recipe_id_target),
-                    None,
-                )
-                if base_recipe is None:
-                    continue
-                computed = _compute_nutrition_from_recipe(base_recipe, depth=_depth)
-                if computed is not None:
-                    logger.debug(
-                        "base_recipe resolved | %r -> %r (computed)",
-                        ingredient_name, recipe_id_target,
-                    )
-                    return computed
-
         # Guard exclusion : ne pas résoudre via nutrition_v2 si recette-base existe
         is_excluded = (key in excluded or key_slug in excluded)
 
-        # 2. Lookup exact nutrition_v2 (si non exclu)
+        # 1. Lookup exact nutrition_v2 (si non exclu)
         if not is_excluded and key in db:
             return db[key]
 
-        # 2b. Lookup direct base/variant (token deja au format feuille)
+        # 1b. Lookup direct base/variant (token deja au format feuille)
         #     Ex : 'seeds/hemp', 'butter/dairy', 'flour/wheat'
         #     Le token n'est pas une cle racine mais pointe directement vers un variant.
         if "/" in key and not is_excluded:
@@ -853,14 +695,14 @@ class NutritionRepository:
                 logger.debug("direct leaf resolved | %r", key)
                 return resolved
 
-        # 3. Lookup normalise nutrition_v2 (si non exclu)
+        # 2. Lookup normalise nutrition_v2 (si non exclu)
         if not is_excluded:
             normalized = self._normalize(key)
             for db_key, entry in db.items():
                 if self._normalize(db_key) == normalized:
                     return entry
 
-        # 4. recipe_aliases → base/variant dans nutrition_v2, __ref__/key ou __null__
+        # 3. recipe_aliases → base/variant dans nutrition_v2, __ref__/key ou __null__
         aliases = _aliases_raw()
         for candidate in (key, key_slug):
             target_key = aliases.get(candidate)
@@ -893,7 +735,7 @@ class NutritionRepository:
                 )
                 return resolved
 
-        # 5. Absent → log + None
+        # 4. Absent → log + None
         if _depth == 0:
             _log_missing_ingredient(
                 name=ingredient_name,
@@ -1031,43 +873,14 @@ class IngredientRepository:
     parent, nutrition_key, substitutions, ingredient_form, ingredient_product.
     """
 
-    # Alias statiques pour les IDs de recettes non standard → ID du dictionnaire
-    _STATIC_ALIASES: dict[str, str] = {
-        "all_purpose_flour":  "flour",
-        "white_flour":        "flour",
-        "whole_wheat_flour":  "flour",
-        "bread_flour":        "flour",
-        "cake_flour":         "flour",
-        "milk_animal/whole":  "milk_animal_whole",
-        "cream_animal/heavy": "cream_animal_heavy",
-        "butter/dairy":       "butter",
-        "oil/olive":          "olive_oil",
-        "oil/sunflower":      "sunflower_oil",
-        "oil/coconut":        "coconut_oil",
-        "onion/yellow":       "onion",
-        "onion/white":        "onion",
-        "onion/red":          "red_onion",
-        "pasta/wheat":        "pasta",
-        "pasta/whole_wheat":  "whole_wheat_pasta",
-        "chicken/breast":     "chicken_breast",
-        "chicken/thigh":      "chicken_thigh",
-        "beef/ground":        "ground_beef",
-        "pork/ground":        "ground_pork",
-        "tomato/canned":      "canned_tomato",
-        "milk_plant/oat":     "milk_plant_oat",
-        "milk_plant/soy":     "milk_plant_soy",
-        "milk_plant/almond":  "milk_plant_almond",
-    }
-
     def get_by_name(self, name: str) -> dict | None:
         """
         Retrouve un ingrédient par son nom (fr ou en), insensible à la casse.
 
         Essaie dans l'ordre :
           1. Match direct (id, name_fr, name_en)
-          2. Alias statiques (_STATIC_ALIASES)
-          3. Slash → underscore  (milk_animal/whole → milk_animal_whole)
-          4. Préfixe avant le slash (chicken/breast → chicken)
+          2. Slash → underscore  (milk_animal/whole → milk_animal_whole)
+          3. Préfixe avant le slash (chicken/breast → chicken)
 
         Returns:
             dict de l'ingrédient, ou None si introuvable.
@@ -1078,12 +891,6 @@ class IngredientRepository:
         result = idx.get(key)
         if result:
             return result
-
-        alias = self._STATIC_ALIASES.get(key)
-        if alias:
-            result = idx.get(alias.lower())
-            if result:
-                return result
 
         normalized = key.replace("/", "_")
         result = idx.get(normalized)
