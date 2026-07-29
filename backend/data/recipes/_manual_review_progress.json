@@ -678,7 +678,7 @@
     },
     {
       "id": 27,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "egg_crepe_coreenne_aux_oignons_ver_356ac2",
         "egg_sundubu_jjigae_bc21e0",
@@ -706,7 +706,20 @@
         "rice_paella_veg_c7m3x1",
         "rice_paella_veg_classic_v4_s9k2x1"
       ],
-      "issues": []
+      "issues": [
+        "egg_crepe_coreenne_aux_oignons_ver_356ac2: yaourt (explicite dans le texte) absent de la composition (ajoute) ; huile 30ml texte vs 45ml composition ; eau 500ml composition vs 150ml explicite dans le texte (physiquement plus coherent pour une pate epaisse d'1cm)",
+        "egg_sundubu_jjigae_bc21e0: huile de sesame 20ml texte vs 15ml composition",
+        "rice_bibimbap_classic_k91x2a: phrase absurde 'remplacer l'oeuf par oeuf' corrigee en decrivant la friture reelle de l'oeuf ; etape finale vide supprimee",
+        "rice_bibimbap_tofu_a265dc: etape vide supprimee",
+        "rice_kimbap_4cb3da: mention erronee de lait (absent de la composition, incoherent avec lactose_free=True) supprimee",
+        "rice_riz_saute_au_kimchi_vegan_af038b: nettoyage d'un artefact de precision flottante sur la quantite d'huile de sesame (meme valeur reelle)",
+        "rice_tteokbokki_0861f2: etape de sauce avec des quantites incoherentes (gochujang 50g vs 30ml composition, sauce soja 15ml vs 45ml composition) et du mirin totalement absent de la composition - texte corrige",
+        "stew_sundubu_tofu_stew_ebe50e: huile (~30ml, '2 cs' explicite dans le texte) absente de la composition (ajoutee)",
+        "egg_tortilla_espagnole_6cd136: BUG MAJEUR - le texte decrivait '5 yaourts de coco' en remplacement de l'oeuf reel (220g, deja present en composition, ingredient central d'une tortilla espagnole) - texte corrige pour decrire l'oeuf reel ; huile 80ml texte vs 45ml composition",
+        "main_pisto_manchego_09ba97: ail 3g texte vs 9g composition, huile 30ml texte vs 45ml composition ; etape finale vide supprimee",
+        "rice_paella_de_verduras_8e54fd: 'assorted_vegetables' etait un placeholder sans donnees nutritionnelles (comme dans le lot 21), remplace par des petits pois (400g), legume traditionnel de la paella espagnole",
+        "rice_paella_veg_c7m3x1: eau (900ml, explicite dans le texte) absente de la composition, coherent avec la recette soeur rice_paella_veg_classic_v4_s9k2x1 qui l'a deja correctement"
+      ]
     },
     {
       "id": 28,
