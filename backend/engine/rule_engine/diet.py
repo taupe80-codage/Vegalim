@@ -670,9 +670,19 @@ def _dict_diet_signals(recipe: dict) -> dict[str, bool]:
     lactose_free/nut_free en agregeant le diet_profile du dico sur chaque
     item de composition resolu. Un flag reste True si aucun item resolu ne
     le contredit (items non-resolus par le dico = ignores, pas de signal).
+
+    Un id de composition qui reference une AUTRE recette (sous-recette
+    partagee, ex: base_paneer_04e1db, base_pesto_905db7, base_noodles_2d0ed7)
+    ne resout jamais via IngredientRepository (ce n'est pas une entree du
+    dico d'ingredients) et etait donc silencieusement ignore - une recette
+    utilisant un paneer ou un pesto reel (laitier) via sa sous-recette
+    pouvait ainsi ressortir vegan=True. On consulte alors les diet_flags
+    deja calcules de cette sous-recette elle-meme, agreges avec la meme
+    regle (un flag n'est invalide que par un signal positif de False).
     """
-    from backend.db.culinary_repositories import IngredientRepository
+    from backend.db.culinary_repositories import IngredientRepository, _recipes_index
     repo = IngredientRepository()
+    recipes_by_id = _recipes_index()
     flags = ("vegan", "vegetarian", "gluten_free", "lactose_free", "nut_free")
     signals = {f: True for f in flags}
     for c in recipe.get("composition", []) or []:
@@ -681,13 +691,20 @@ def _dict_diet_signals(recipe: dict) -> dict[str, bool]:
         cid = c.get("ingredient") or c.get("ingredient_id")
         if not cid:
             continue
-        item = repo.get_by_name(str(cid))
+        cid = str(cid)
+        item = repo.get_by_name(cid)
         dp = item.get("diet_profile") if item else None
-        if not dp:
+        if dp:
+            for f in flags:
+                if dp.get(f) is False:
+                    signals[f] = False
             continue
-        for f in flags:
-            if dp.get(f) is False:
-                signals[f] = False
+        sub_recipe = recipes_by_id.get(cid)
+        if sub_recipe:
+            sub_flags = sub_recipe.get("diet_flags") or {}
+            for f in flags:
+                if sub_flags.get(f) is False:
+                    signals[f] = False
     return signals
 
 
