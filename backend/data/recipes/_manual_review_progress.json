@@ -890,7 +890,7 @@
     },
     {
       "id": 32,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "curry_aubergine_sri_lanka_bf8bcd",
         "curry_d_aubergine_sri_lankais_72254d",
@@ -915,7 +915,22 @@
         "dal_lentil_shepherd_s_pie_477c76",
         "dal_lentil_shepherds_pie_vega_27455d"
       ],
-      "issues": []
+      "issues": [
+        "dal_sri_lankan_dhal_curry_fae1be: texte disait huile de coco alors que la composition utilise de l'huile de tournesol - texte aligne",
+        "dal_soupe_de_pois_chiches_tunisien_86e4b0: coriandre fraiche citee 2 fois dans le texte (assaisonnement + garniture) mais absente de la composition - ajoutee",
+        "egg_ojja_5bdbea: composition a 220g d'oeuf (4 portions) mais le texte ne decrivait qu'un seul puits et un seul oeuf - corrige pour les 4 portions",
+        "egg_shakshuka_eb137b: la feta (150g, deja emiettee en composition) etait decrite comme 'fromage rape' sans quantite ; les oeufs (220g) decrits comme 'des oeufs ou des alternatives' sans quantite - textes precises",
+        "egg_shakshuka_v8f3k2: BUG - description et derniere etape mentionnaient des 'cubes de tofu' poches alors que la composition (champ prep=poached_in_sauce) et l'absence totale de tofu montrent que c'est l'oeuf qui est poche - textes corriges ; huile d'olive 30ml texte vs 20ml composition - texte aligne ; cumin (7.5g) et persil (15g) presents en composition mais jamais mentionnes dans le texte - ajoutes aux etapes",
+        "bread_acorda_a_lail_et_coriandr_048494: etape 4 vide, situee exactement a l'endroit ou les 220g d'oeuf (composition, jamais utilises ailleurs) auraient du etre pochees dans le bouillon - etape completee",
+        "main_caldo_verde_72b654: huile d'olive 30ml texte vs 45ml composition, bouillon 900ml texte vs 750ml composition - textes alignes",
+        "rice_riz_a_la_tomate_portugais_c6cec0: huile d'olive 30ml texte vs 45ml composition - texte aligne",
+        "main_ful_medames_389da8: huile d'olive 30ml texte vs 45ml composition - texte aligne",
+        "main_koshari_classic_v4_q7n5z2: huile de coco utilisee explicitement 3 fois dans le texte (cuisson, friture 80ml, saisie ail) mais totalement absente de la composition - ajoutee",
+        "dal_lentil_shepherd_pie_9a295e: beurre utilise explicitement 2 fois (sauté legumes 40g + puree 40g) mais composition n'avait qu'une seule quantite - portee a 80g",
+        "dal_lentil_shepherd_pie_vegan_926ebd: 'lait de coco' dans le texte alors que la composition est du lait d'avoine - texte corrige ; le beurre vegetal (40g) en composition n'etait jamais mentionne dans le texte - ajoute a l'etape de la puree",
+        "dal_lentil_shepherd_s_pie_477c76: composition n'a que du beurre (aucune huile d'olive) mais le texte de l'etape de sauté disait huile d'olive - corrige en beurre, quantite portee a 60g (40g puree + 20g sauté, motif identique a la recette soeur 9a295e)",
+        "dal_lentil_shepherds_pie_vega_27455d: le beurre vegetal (40g, seul corps gras en composition) n'etait jamais nomme dans le texte (seulement 'un peu d'huile' generique, 2 occurrences) - textes clarifies"
+      ]
     },
     {
       "id": 33,
