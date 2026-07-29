@@ -518,7 +518,7 @@
     },
     {
       "id": 22,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "bread_spanakopita_a_la_muscade_6a9e84",
         "egg_spanakopita_a_la_muscade_9f26d0",
@@ -540,7 +540,17 @@
         "salad_greek_classic_v2_t4m8q1",
         "tarte_moussaka_veg_d55fa8"
       ],
-      "issues": []
+      "issues": [
+        "bread_spanakopita_a_la_muscade_6a9e84, egg_spanakopita_a_la_muscade_9f26d0, egg_spanakopita_f5da1b: le beurre/beurre vegetal de la composition n'etait jamais mentionne dans le texte, qui parlait a tort d'huile d'olive (absente de la composition) - texte aligne",
+        "main_briam_f33bb8: huile d'olive 60ml texte vs 45ml composition",
+        "main_fasolakia_grecques_67b6d9: texte disait echalote alors que la composition utilise de l'oignon - texte aligne",
+        "main_greek_fasolada_612a6f: ail (9g, explicite) absent de la composition",
+        "main_horta_b898d5: texte disait epinards alors que la composition utilise des blettes - texte aligne",
+        "main_moussaka_fcf86b: BUG VEGAN - la composition utilise une bechamel vegetalienne (base_bechamel_vegane) mais le texte decrivait la preparation d'une bechamel laitiere (creme fraiche + lait de vache) non representee en composition - texte corrige pour decrire une bechamel vegetale",
+        "salad_grecque_classique_f83c30, salad_grecque_classique_vegan_a9f9a4: moutarde de Dijon (15g) jamais mentionnee dans le texte de la vinaigrette - ajoutee",
+        "salad_grecque_simplifiee_34b852: texte disait oignon rouge alors que la composition avait de l'oignon generique - composition alignee sur oignon rouge (coherent avec les recettes soeurs et la tradition de la salade grecque)",
+        "5 recettes (salad_grecque_classique_f83c30/vegan_a9f9a4, salad_grecque_simplifiee_34b852/vegan_ec9ed5, salad_greek_classic_v2_t4m8q1): texte disait fromage/tofu rape alors que la composition specifie form=crumbled (emiette) - une feta/tofu de salade grecque s'emiette, ne se rape pas - texte corrige"
+      ]
     },
     {
       "id": 23,
