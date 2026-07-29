@@ -10470,7 +10470,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 95,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -10521,6 +10521,17 @@
             "ingredient_fr": "salade verte",
             "note": "Pour accompagner la focaccia",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 350,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -10578,9 +10589,11 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "baker's",
         "boulanger",
         "bread",
+        "eau",
         "farine",
         "fleur",
         "flour",
@@ -10598,6 +10611,7 @@
         "olive",
         "oven_cooking",
         "pain",
+        "potable)",
         "romarin",
         "rosemary",
         "salad",
@@ -10611,6 +10625,7 @@
         "vegetalien",
         "vegetarien",
         "verte",
+        "water",
         "yeast"
       ],
       "difficulty_level": "easy",
@@ -35814,7 +35829,7 @@
           }
         },
         {
-          "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+          "ingredient": "chickpea_flour",
           "quantity": 20,
           "unit": "g",
           "meta": {
@@ -35852,11 +35867,10 @@
           "diabetes_friendly",
           "high_protein",
           "vegan",
-          "vegetarian"
+          "vegetarian",
+          "gluten_free"
         ],
-        "allergens": [
-          "gluten"
-        ],
+        "allergens": [],
         "technique": [
           "frying"
         ],
@@ -35905,10 +35919,9 @@
       "search_tokens": [
         "30 minutes",
         "ail",
-        "all",
-        "ble",
         "chiches",
         "chickpea",
+        "coeliaque",
         "coriander",
         "coriandre",
         "cumin",
@@ -35917,11 +35930,10 @@
         "facile enfants",
         "falafel",
         "famille",
-        "farine",
         "fibre",
-        "flour",
         "frying",
         "garlic",
+        "gluten free",
         "kids",
         "leger",
         "levantine",
@@ -35932,22 +35944,19 @@
         "parsley",
         "persil",
         "pois",
-        "purpose",
         "quick",
         "rapide",
         "riche en fibres",
         "salt",
+        "sans gluten",
         "sans produit animal",
         "sans viande",
         "sel",
         "table",
-        "tout",
         "traditionnels",
-        "usage",
         "vegan",
         "vegetalien",
-        "vegetarien",
-        "wheat"
+        "vegetarien"
       ],
       "difficulty_level": "medium",
       "dish_type": "snack",
@@ -35969,7 +35978,7 @@
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
-        "gluten_free": false,
+        "gluten_free": true,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -76134,7 +76143,7 @@
         },
         {
           "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 150,
+          "quantity": 50,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -76322,7 +76331,7 @@
         "Étape 1: Mélanger 200 g de masa harina avec 250 ml d'eau tiède salée, 1/2 cuillère à café de cumin et 1/4 cuillère à café de paprika doux, puis pétrir pendant 2 minutes jusqu'à obtenir une pâte homogène.",
         "Étape 2: Laisser reposer la pâte pendant 5 minutes à température ambiante, puis incorporer 50 g de fromage râpé et 9 g d'ail émincé, en mélangeant soigneusement.",
         "Étape 3: Façonner des disques de 1,5 cm d'épaisseur et 10 cm de diamètre, en appliquant une légère pression pour obtenir une surface lisse, puis badigeonner d'huile d'olive.",
-        "Étape 4: Chauffer une poêle huilée avec de l'huile d'olive à feu moyen, puis enfourner les arepas pendant 5 minutes de chaque côté à 180°C, jusqu'à croûte dorée et croustillante.",
+        "Étape 4: Chauffer une poêle huilée avec de l'huile d'olive et 30g de beurre à feu moyen, puis enfourner les arepas pendant 5 minutes de chaque côté à 180°C, jusqu'à croûte dorée et croustillante.",
         "Étape 5: Vérifier la texture en insérant une lame, qui doit ressortir sèche, et la coloration, qui doit être uniformément dorée, en vérifiant également que les arepas soient croustillants et sonnent creux lorsqu'on les frappe.",
         "Étape 6: Servir chaud, en écoutant le son crépite léger et en appréciant la texture croustillante, en accompagnant d'une salade ou d'une sauce de votre choix.",
         "Étape 7: Servir les arepas chauds dans des assiettes, accompagnés d'une salade verte et d'une sauce piquante, en appréciant la combinaison des saveurs et des textures."
@@ -76573,7 +76582,7 @@
         "Étape 1 : Dans un grand bol, mélanger 200g de masa harina avec de l'eau tiède salée (environ 30°C) additionnée de 2,5g de graines de cumin et 2,3g de paprika doux, puis pétrir pendant 5 minutes jusqu'à obtenir une pâte homogène et lisse.",
         "Étape 2 : Incorporer 150g de fromage végétal râpé et 15g d'ail émincé, malaxer jusqu'à ce que tous les ingrédients soient bien intégrés et la pâte devienne homogène.",
         "Étape 3 : Façonner des disques d'arepas d'environ 1,5 cm d'épaisseur, laisser reposer pendant 2 minutes pour que la pâte se détende.",
-        "Étape 4 : Chauffer une poêle avec 45,7ml d'huile végétale à feu moyen-vif (environ 180°C), cuire les arepas pendant 4 minutes de chaque côté, jusqu'à ce qu'ils soient dorés et croustillants.",
+        "Étape 4 : Chauffer une poêle avec 45,7ml d'huile végétale et 30g de beurre végétal à feu moyen-vif (environ 180°C), cuire les arepas pendant 4 minutes de chaque côté, jusqu'à ce qu'ils soient dorés et croustillants.",
         "Étape 5 : Saisir les arepas jusqu'à dorure blonde en les retournant régulièrement, puis les placer quelques secondes sous un grill pour faire fondre le fromage végétal à l'intérieur.",
         "Étape 6 : Vérifier que la lame ressort sèche lorsque l'on pique les arepas, signe qu'ils sont cuits à point.",
         "Étape 7 : Servir les arepas chauds, avec une salade de tomates fraîches et d'avocat pour un repas complet et équilibré, et accompagner d'une sauce ou d'un condiment typique de la cuisine latino-américaine végétalienne.",
@@ -94336,7 +94345,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 90,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -127483,8 +127492,8 @@
       "id": "rice_onigiri_au_saumon_d_umeboshi_cba6bf",
       "titles": {
         "original": "Onigiri Umeboshi",
-        "fr": "Onigiri au Saumon d'Umeboshi",
-        "en": "Onigiri with Saumon D'Umeboshi"
+        "fr": "Onigiri à l'Umeboshi",
+        "en": "Umeboshi Onigiri"
       },
       "origin": {
         "cuisine": "japanese",
@@ -127606,7 +127615,6 @@
         "assembly",
         "blanc",
         "coeliaque",
-        "d'umeboshi",
         "enfants",
         "facile enfants",
         "famille",
@@ -127614,6 +127622,7 @@
         "japanese",
         "japonaise",
         "kids",
+        "l'umeboshi",
         "moyen",
         "nori",
         "onigiri",
@@ -127626,15 +127635,13 @@
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "saumon",
         "sesame",
         "umeboshi",
         "vegan",
         "vegetalien",
         "vegetarien",
         "water_cooking",
-        "white",
-        "with"
+        "white"
       ],
       "difficulty_level": "medium",
       "dish_type": "snack",
@@ -127647,7 +127654,7 @@
         "Étape 3 : Humidifier les mains, les saupoudrer de sel, puis prendre 80 g de riz chaud et creuser un sillon au centre, en prenant soin de ne pas appliquer trop de pression pour éviter de casser les grains de riz.",
         "Étape 4 : Déposer 1 cc de garniture dans le sillon, puis refermer le riz sur la garniture en pressant fermement 5 à 6 fois, pour obtenir une forme compacte et régulière.",
         "Étape 5 : Former un triangle compact, en vérifiant que les onigiri tiennent leur forme sans se défaire, avec une texture légèrement collante et une surface lisse.",
-        "Étape 6 : Entourer d'une bande de nori croustillante, en vérifiant que le nori crépite légèrement lors de la cuisson, puis servir sans attendre, pour préserver la texture croustillante du nori et la fraîcheur de l'umeboshi."
+        "Étape 6 : Entourer d'une bande de nori croustillante et parsemer de 20g de graines de sésame grillées, en vérifiant que le nori crépite légèrement lors de la cuisson, puis servir sans attendre, pour préserver la texture croustillante du nori et la fraîcheur de l'umeboshi."
       ],
       "diet_flags": {
         "vegan": true,
@@ -128050,7 +128057,7 @@
         "Étape 3 : Humidifier les mains, les saupoudrer de sel, puis prendre 80 g de riz chaud et creuser un sillon au centre en utilisant la lame d'un couteau.",
         "Étape 4 : Déposer 1 cc de garniture dans le sillon, puis refermer le riz sur la garniture en pressant fermement 5 à 6 fois, jusqu'à obtenir une texture compacte.",
         "Étape 5 : Former un triangle compact, en vérifiant que les onigiri tiennent leur forme sans se défaire, avec une texture légèrement collante et une surface lisse.",
-        "Étape 6 : Entourer d'une bande de nori croustillante, en vérifiant que le nori crépite légèrement lors de la cuisson, puis servir aussitôt sur une assiette, en vérifiant la texture croustillante du nori."
+        "Étape 6 : Entourer d'une bande de nori croustillante et parsemer de 20g de graines de sésame grillées, en vérifiant que le nori crépite légèrement lors de la cuisson, puis servir aussitôt sur une assiette, en vérifiant la texture croustillante du nori."
       ],
       "diet_flags": {
         "vegan": true,
@@ -156871,7 +156878,7 @@
         },
         {
           "ingredient": "water",
-          "quantity": 545,
+          "quantity": 150,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -156920,6 +156927,17 @@
           "meta": {
             "role": "binder",
             "form": "ground",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cornstarch_flour",
+          "quantity": 8,
+          "unit": "g",
+          "meta": {
+            "role": "thickener",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -156986,12 +157004,14 @@
         "aux",
         "ble",
         "coreenne",
+        "cornstarch",
         "crepe",
         "eau",
         "enfants",
         "facile enfants",
         "famille",
         "farine",
+        "fecule",
         "flaxseed",
         "flour",
         "green",
@@ -157001,6 +157021,7 @@
         "light",
         "lin",
         "low calorie",
+        "mais",
         "minceur",
         "oignon",
         "oignons",
@@ -157034,7 +157055,7 @@
       "_chef_note": "N'oubliez pas de remplacer les ingrédients non végétaliens par leurs équivalents végétaliens, comme le lait de coco ou la crème de coco.",
       "description": "En-cas coréen croustillant et parfumé, réalisé avec de la farine, des oignons verts émincés et une pâte délicate, cuite à la poêle pour une texture dorée et croquante.",
       "instructions": [
-        "Étape 1 : Préparez la pâte en mélangeant 200 g de farine, 150 ml d'eau glacée, 1 cuillère à soupe de fécule de maïs et une pincée de sel. Quelques grumeaux sont normaux — ne pas trop mélanger.",
+        "Étape 1 : Préparez la pâte en mélangeant 200 g de farine, 150 ml d'eau glacée, 1 cuillère à soupe de fécule de maïs, 7g de graines de lin moulues et une pincée de sel. Quelques grumeaux sont normaux — ne pas trop mélanger.",
         "Étape 2 : Émincez finement en biseau 60 g d'oignons verts. Ajoutez à la pâte avec du piment rouge en julienne si désiré.",
         "Étape 3 : Chauffez 30 ml d'huile de sésame dans une grande poêle à feu moyen-vif. Versez la pâte en couche de 1 cm d'épaisseur.",
         "Étape 4 : Faites cuire pendant 3 à 4 minutes sans bouger, jusqu'à ce que le fond soit bien doré et croustillant. Retournez délicatement et faites cuire encore pendant 3 minutes.",
@@ -157491,7 +157512,7 @@
       "_chef_note": "Assurez-vous d'utiliser un fromage végétal râpé de bonne qualité pour une saveur optimale.",
       "description": "Spécialité argentin - pâte dorée en cuisson, offrant une texture croustillante à l'extérieur et tendre à cœur, avec une farce fondante et parfumée au fromage et à l'oignon, parfumée d'arômes délicats.",
       "instructions": [
-        "Étape 1: Préparez la farce en mélangeant 150g de fromage parmesan râpé avec 300g d'oignon jaune haché finement et 2 cuillères à soupe de lait pour lier, jusqu'à obtenir une consistance homogène.",
+        "Étape 1: Préparez la farce en mélangeant 150g de fromage parmesan râpé avec 300g d'oignon jaune haché finement et 220g d'œuf battu pour lier, jusqu'à obtenir une consistance homogène.",
         "Étape 2: Étalez les disques de pâte d'empanada (environ 400g) et garnissez chaque disque d'une cuillerée généreuse de farce, en laissant un bord de 1 cm tout autour.",
         "Étape 3: Plier en demi-lune et scellez les bords en pinçant délicatement ou avec une fourchette pour éviter que la farce ne s'échappe pendant la cuisson, en vérifiant que les bords soient bien fermés.",
         "Étape 4: Badigeonnez les empanadas avec un peu d'huile d'olive (environ 45ml) pour les rendre dorées et croustillantes, en veillant à bien couvrir toute la surface.",
@@ -157563,7 +157584,7 @@
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
+          "ingredient": "coconut_oil_plant",
           "quantity": 45.7,
           "unit": "ml",
           "meta": {
@@ -158134,8 +158155,8 @@
       "description": "En-cas traditionnel andin à base de maïs râpé, oignon caramélisé et fromage végétal râpé, présentant une texture crémeuse et une saveur sucrée, préparé à la vapeur dans des feuilles de maïs tendres.",
       "instructions": [
         "Étape 1 : Râper 300g de maïs frais ou mixer les grains jusqu'à obtenir une pâte grossière. Vous devez sentir l'arôme sucré du maïs et voir une texture crémeuse commencer à apparaître.",
-        "Étape 2 : Faire revenir 300g d'oignon dans 25ml d'huile d'olive extra vierge à feu moyen pendant 5 minutes, jusqu'à ce que l'oignon soit translucide et parfumé. Vous devez entendre le bruit de l'oignon qui caramélise.",
-        "Étape 3 : Incorporer la pâte de maïs, 100ml de lait de coco et assaisonner avec 5g de sel. Mélangez bien pour que les saveurs se mélangent.",
+        "Étape 2 : Faire revenir 300g d'oignon dans 45,7ml d'huile d'olive extra vierge à feu moyen pendant 5 minutes, jusqu'à ce que l'oignon soit translucide et parfumé. Vous devez entendre le bruit de l'oignon qui caramélise.",
+        "Étape 3 : Incorporer la pâte de maïs, 250ml de lait d'avoine et assaisonner avec 5g de sel. Mélangez bien pour que les saveurs se mélangent.",
         "Étape 4 : Déposer 3 cuillères à soupe de pâte sur chaque feuille de maïs séchée humidifiée et refermer en paquet. Vous devez sentir la texture douce de la feuille de maïs.",
         "Étape 5 : Cuire à la vapeur pendant 30 à 35 minutes à 100°C, jusqu'à ce que la pâte soit ferme et les feuilles de maïs soient tendres. Vous devez voir la vapeur s'échapper et entendre le son de l'eau qui bout.",
         "Étape 6 : Servir chaud dans des assiettes, en vérifiant que la lame ressort sèche. Vous devez sentir la chaleur du plat et voir la texture crémeuse de la pâte de maïs."
@@ -158205,7 +158226,7 @@
           }
         },
         {
-          "ingredient": "thyme_dried_herb",
+          "ingredient": "thyme_fresh_herb",
           "quantity": 1.5,
           "unit": "g",
           "meta": {
@@ -158613,7 +158634,7 @@
         "Étape 1 : Préparez la masa en mélangeant 300g de farine de maïs avec 750ml de bouillon végétal chaud, jusqu'à obtenir une pâte lisse et homogène, sans grumeaux, en travaillant la masa pendant environ 5 minutes.",
         "Étape 2 : Préparez la farce en mélangeant 300g de haricots rouges cuits, 10g de piments chili séchés, 15g d'ail émincé, 2,5g de cumin en graines et 5g de sel, jusqu'à ce que la farce soit parfumée et savoureuse, en répartissant bien les saveurs pendant environ 2 minutes.",
         "Étape 3 : Faites revenir 300g d'oignon blanc émincé dans un peu d'huile jusqu'à ce qu'il soit translucide et légèrement caramélisé, en remuant régulièrement pendant environ 5 minutes, jusqu'à obtenir une texture tendre et une couleur dorée.",
-        "Étape 4 : Ajoutez la farce à l'oignon émincé et mélangez bien, en veillant à ce que les saveurs soient bien réparties, pendant environ 2 minutes, jusqu'à ce que la farce soit homogène et parfumée.",
+        "Étape 4 : Ajoutez la farce à l'oignon émincé avec 150g de fromage végétal râpé et mélangez bien, en veillant à ce que les saveurs soient bien réparties, pendant environ 2 minutes, jusqu'à ce que la farce soit homogène et parfumée.",
         "Étape 5 : Étalez la masa sur des feuilles de maïs trempées, en veillant à ce que la masa soit fine et régulière, d'une épaisseur d'environ 2 mm, pour obtenir une texture ferme et régulière.",
         "Étape 6 : Déposez la farce au centre de la masa et refermez en roulant la feuille, en veillant à ce que les tamales soient bien fermés pour ne pas perdre leur farce pendant la cuisson, en appuyant légèrement sur les bords pour les sceller.",
         "Étape 7 : Cuisez les tamales à la vapeur pendant 18 minutes à 100°C, en veillant à ce que la vapeur soit abondante pour cuire les tamales uniformément, jusqu'à ce qu'ils soient fermes et parfumés.",
@@ -158663,7 +158684,7 @@
         },
         {
           "ingredient": "base_pesto_905db7",
-          "quantity": 6,
+          "quantity": 80,
           "unit": "g",
           "meta": {
             "role": "sauce",
@@ -159323,7 +159344,7 @@
         "Étape 5 : Déposer une cuillère de farce au centre de chaque rond et plier en demi-lune, en veillant à bien souder les bords.",
         "Étape 6 : Souder soigneusement les bords en pressant pour former les varenyky, en s'assurant qu'ils soient bien fermés pour éviter qu'ils ne s'ouvert pendant la cuisson.",
         "Étape 7 : Cuire les varenyky dans 2 litres d'eau bouillante salée pendant 8 minutes à feu moyen, en les surveillant pour éviter qu'ils ne collent au fond de la casserole.",
-        "Étape 8 : Égoutter les varenyky et servir chaud, en arrosant d'un peu d'huile végétale pour un toucher croustillant et en les accompagnant d'une sauce à base de crème de cajou pour un contraste de textures.",
+        "Étape 8 : Égoutter les varenyky et servir chaud, en arrosant d'un peu d'huile végétale et de 40g de beurre végétal fondu pour un toucher croustillant et en les accompagnant d'une sauce à base de crème de cajou pour un contraste de textures.",
         "Étape 9 : Assaisonner avec du poivre noir si nécessaire pour rehausser les saveurs et ajouter un peu de sel de table pour équilibrer le goût.",
         "Étape 10 : Servir les varenyky chauds dans des bols préchauffés, garnis d'un peu d'oignon ciselé et d'un filet d'huile végétale, accompagnés d'une salade verte ou de pain grillé."
       ],
@@ -159666,7 +159687,7 @@
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
+          "ingredient": "coconut_oil_plant",
           "quantity": 45,
           "unit": "ml",
           "meta": {

@@ -1305,7 +1305,7 @@
     },
     {
       "id": 45,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "bread_focaccia_bf8608",
         "crepe_pancakes_sales_ultra_stru_1e8bd8",
@@ -1335,7 +1335,23 @@
         "snack_vegetable_samosa_088bfa",
         "tempeh_tempeh_frit_ccb7d2"
       ],
-      "issues": []
+      "issues": [
+        "bread_focaccia_bf8608: huile d'olive utilisee 2 fois explicitement (45+50=95ml) mais composition n'avait que 45ml - corrigee ; l'eau (350ml, explicite) absente de la composition - ajoutee",
+        "dal_falafel_traditionnels_214e07: le texte precise 'farine de pois chiche' alors que la composition etait de la farine de ble - corrige, ce qui rend la recette naturellement sans gluten (flag et tags mis a jour en consequence)",
+        "main_arepas_fromage_e3a54c: fromage 150g en composition vs 50g explicite dans le texte - corrige ; le beurre (30g, en composition) n'etait jamais mentionne dans le texte - ajoute",
+        "main_arepas_fromage_vegan_3a4125: le beurre vegetal (30g, en composition) n'etait jamais mentionne dans le texte - ajoute",
+        "main_manakish_zaatar_580150: huile d'olive utilisee 2 fois explicitement (45+45=90ml) mais composition n'avait que 45ml - corrigee",
+        "rice_onigiri_au_saumon_d_umeboshi_cba6bf: BUG - le titre mentionnait du saumon alors qu'aucun saumon n'existe en composition ni dans le texte (le champ titre 'original' confirmait un simple onigiri umeboshi) - titres fr/en corriges ; le sesame (20g, en composition) n'etait jamais mentionne - ajoute",
+        "rice_onigiri_umeboshi_7a5ef3: le sesame (20g, en composition) n'etait jamais mentionne dans le texte - ajoute",
+        "snack_crepe_coreenne_aux_oignon_a45536: eau 545ml en composition vs 150ml explicite dans le texte - corrigee ; la fecule de mais (explicite) absente de la composition - ajoutee ; les graines de lin (7g, en composition) jamais mentionnees - ajoutees",
+        "snack_empanadas_au_fromage_466bc4: BUG - '2 cuilleres a soupe de lait' dans le texte alors que l'oeuf (220g, en composition) n'etait jamais utilise - texte corrige",
+        "snack_empanadas_au_fromage_vega_79575a, snack_vegetable_samosa_088bfa: coconut_milk_plant (role=fat) representait en realite l'huile de coco citee dans le texte (motif recurrent, 2 recettes) - renomme en coconut_oil_plant",
+        "snack_humita_andine_vegan_1f09bf: le texte disait 'lait de coco' (100ml) alors que la composition utilise du lait d'avoine (250ml) - corrige ; huile d'olive 25ml texte vs 45.7ml composition - corrigee",
+        "snack_rosti_vegan_be15a2: le texte precise 'thym frais' alors que la composition etait du thym seche - corrige",
+        "snack_tamales_vegan_d7cbdc: le fromage vegetal (150g, en composition) n'etait jamais mentionne dans le texte - ajoute",
+        "snack_tarte_soleil_pesto_46f867: pesto 6g en composition vs 80g explicite ('etalez genereusement') dans le texte - corrige",
+        "snack_varenyky_pomme_de_terre_v_8b6240: le beurre vegetal (40g, en composition) n'etait jamais mentionne dans le texte - ajoute"
+      ]
     },
     {
       "id": 46,
