@@ -620,7 +620,7 @@
     },
     {
       "id": 25,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "bread_chilaquiles_13372e",
         "bread_enchiladas_fe7221",
@@ -639,7 +639,13 @@
         "wrap_quesadillas_c8edf2",
         "wrap_quesadillas_vegan_f68baa"
       ],
-      "issues": []
+      "issues": [
+        "bread_chilaquiles_13372e: lait (100ml, explicite dans le texte pour l'emulsion aux oeufs) absent de la composition",
+        "bread_enchiladas_fe7221, main_pozole_82d096, salad_mexicaine_aux_haricots_949e62: huile d'olive sous-comptee dans le texte (15/25/30ml vs 45ml composition)",
+        "main_mexican_enfrijoladas_vega_d6a9a8: creme de coco (20ml, explicite) absente de la composition ; texte disait tortillas de ble alors que base_tortilla_92c2a6 est a base de masa harina (mais, gluten_free=True)",
+        "wrap_quesadillas_c8edf2: meme erreur tortillas de ble vs mais",
+        "wrap_quesadillas_au_fromage_ve_9794c7: texte disait huile d'olive alors que la composition utilise de l'huile vegetale generique - texte aligne"
+      ]
     },
     {
       "id": 26,
