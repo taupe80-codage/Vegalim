@@ -846,7 +846,7 @@
     },
     {
       "id": 31,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "dal_ajapsandali_8ebefc",
         "egg_khachapuri_134434",
@@ -873,7 +873,20 @@
         "main_feijoada_2f6754",
         "protein_moqueca_a65174"
       ],
-      "issues": []
+      "issues": [
+        "dal_ajapsandali_8ebefc: l'aubergine (ingredient central du plat, nomme dans le titre et la description) etait citee dans 2 etapes du texte mais totalement absente de la composition - ajoutee (600g) ; huile d'olive utilisee explicitement 2 fois (20+20ml) mais composition n'avait qu'une seule quantite - portee a 40ml",
+        "main_pkhali_46d354: ingredient 'spinach_cooked' tagge state=raw alors que le texte decrit la cuisson d'epinards crus a la vapeur - id corrige en spinach_raw_mature ; 200g de haricots verts en composition jamais utilises dans le texte (plat mono-legume) - supprimes ; 'grenade sechee' dans le texte alors que la composition est pomegranate_raw - texte corrige",
+        "stew_georgian_vegetable_stew_1cb019: mot anglais 'walnut' laisse tel quel dans une phrase francaise - corrige en 'noix'",
+        "dal_nepali_chickpea_curry_020035, main_nepali_saag_92a5f7: huile d'olive - ecart entre la seule mention explicite du texte et la composition - texte aligne",
+        "main_nepali_tarkari_9199c8, main_nepali_tomato_achar_9575d1: texte disait huile de coco alors que la composition utilise de l'huile de tournesol - texte aligne",
+        "dumpling_pierogi_aux_champignons_v_beca85: huile d'olive utilisee explicitement 3 fois (pate + saisie champignons + friture = 90ml) mais composition n'en avait que 30.4ml - portee a 90ml",
+        "dumpling_pierogi_pommes_de_terre_ca9985: phrase orpheline laissee comme etape 8 independante (continuation de la phrase de l'etape 7) - fusionnee",
+        "rice_bigos_497b21: huile d'olive dans le texte alors que la composition utilise de l'huile de tournesol - texte aligne ; tomates concassees et bouillon de legumes (explicites, quantites precises) totalement absents de la composition - ajoutes ; mention non quantifiable de 'pate de tomate' retiree du texte",
+        "egg_feijo_tropeiro_bb31e4: 400g de haricots noirs dans le texte vs 300g en composition - texte aligne",
+        "egg_pain_au_fromage_bresilien_603bf5: BUG - '220g de yaourt battu' dans le texte correspondait exactement a la quantite du vrai oeuf en composition (aucun yaourt en composition) - texte corrige pour decrire l'oeuf reel ; le lait (250ml) et l'huile d'olive (45ml) en composition n'etaient jamais nommes dans le texte malgre une reference a un 'melange bouillant' non identifie - etape clarifiee",
+        "main_feijoada_2f6754: huile d'olive utilisee ('un peu d'huile d'olive') pour la premiere etape mais totalement absente de la composition - ajoutee (45ml, quantite reprise de la recette soeur feijao tropeiro)",
+        "protein_moqueca_a65174: composition utilise deja de l'huile de palme (dende, authentique pour ce plat bahianais) mais le texte disait huile de coco - texte corrige"
+      ]
     },
     {
       "id": 32,
