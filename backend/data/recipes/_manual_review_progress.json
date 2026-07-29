@@ -1028,7 +1028,7 @@
     },
     {
       "id": 35,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "main_endives_au_gratin_6b58ee",
         "main_flamiche_aux_poireaux_fa3d0b",
@@ -1056,7 +1056,25 @@
         "main_romanian_zacusc_a929ee",
         "main_sancocho_733f70"
       ],
-      "issues": []
+      "issues": [
+        "main_endives_au_gratin_6b58ee: BUG - 8g d'endive pour un plat qui consiste a rouler chaque endive de fromage (erreur de saisie flagrante, meme motif que le chou 0.5g des lots precedents) - corrige a 700g",
+        "main_flamiche_aux_poireaux_fa3d0b: l'appareil oeuf+creme (110g+200ml, en composition) n'etait jamais prepare dans le texte, juste reference comme deja existant - etape de preparation ajoutee avec la muscade (0.5g, egalement orpheline)",
+        "main_poutine_1344e1: composition utilise un fromage en grains/caille, decrit a tort comme 'rape' dans le texte - corrige",
+        "rice_rice_and_beans_caribeen_e3de29, main_haricots_rouges_creoles_ac36f6: le texte precise 'thym frais' alors que la composition etait du thym seche - corrige",
+        "rice_riz_et_pois_caribeen_72144c, dal_shorbat_adas_d4f98a: huile de coco (friture/tadka, explicite) totalement absente de la composition - ajoutee",
+        "base_spaetzle_a22916: '2 cuilleres a soupe d'huile' explicite dans le texte mais aucune huile en composition - ajoutee",
+        "dal_armenian_lentil_soup_0f1067: huile de tournesol 10ml texte vs 45ml composition - texte aligne",
+        "egg_baursak_68b192: le beurre (30g) en composition n'etait jamais mentionne dans le texte - ajoute",
+        "egg_slovak_potato_dumplings_e85ebb: '1 oeuf' dans le texte alors que la composition en compte 220g (equivalent 4 oeufs pour 4 portions) - corrige",
+        "egg_sopa_paraguaya_43987c: le parmesan est utilise 2 fois explicitement (150g+100g=250g) mais composition n'avait qu'une seule quantite - corrigee ; l'oignon (300g) en composition n'etait jamais mentionne dans le texte - ajoute",
+        "main_arepas_vegan_01b62b: eau 500ml en composition vs 300ml explicite dans le texte ; huile d'olive 45.7ml vs 15g explicite - composition alignee sur le texte dans les deux cas",
+        "main_galettes_sarrasin_ce9f40: l'oeuf (220g, prep=fried, garniture emblematique de la 'galette complete') n'etait jamais mentionne dans le texte de garnissage - ajoute",
+        "main_garbure_gasconne_545667: BUG - le chou vert (cite dans le texte) etait a 0.5g en composition (meme erreur de saisie que le lot 33) - corrige a 400g",
+        "main_hungarian_lecs_47d502: description attribuait le plat a la cuisine mediterraneenne au lieu de hongroise - corrigee ; l'oeuf (55g) en composition n'etait jamais mentionne dans le texte - ajoute",
+        "main_papaya_salad_918f58: l'etape 1 rapait 200g de papaye mais l'etape 5 en utilisait 400g (quantite qui correspond a la composition) - incoherence interne corrigee",
+        "main_piperade_basque_3e1c65: BUG - description tronquee ('lie a un melange cremeux de.') completee ; du tofu (absent de la composition) etait cite a l'etape de service alors que l'oeuf battu (220g, ingredient traditionnel de la piperade) est en composition mais jamais cuisine - etape de cuisson des oeufs brouilles ajoutee et texte corrige",
+        "main_sancocho_733f70: yuca et plantain cites dans le texte mais aucun ingredient correspondant n'existe dans le dictionnaire de donnees - retires du texte pour ne plus surclaimer ; bouillon (1.5L, explicite) absent de la composition - ajoute ; huile d'olive 30ml texte vs 45ml composition - alignee"
+      ]
     },
     {
       "id": 36,
