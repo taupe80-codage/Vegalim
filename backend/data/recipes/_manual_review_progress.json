@@ -1213,7 +1213,7 @@
     },
     {
       "id": 43,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "salad_lentil_classic_v3_r7p2k8",
         "salad_salade_mache_aux_noix_081567",
@@ -1240,7 +1240,22 @@
         "side_orge_perle_aux_champignon_2824cb",
         "side_tabbouleh_de_sarrasin_7e68ad"
       ],
-      "issues": []
+      "issues": [
+        "salad_lentil_classic_v3_r7p2k8: description+etape 1 disaient 'lentilles corail' (rouges) mais composition etait du lentille vert - corrige ; huile d'olive citee dans le texte alors que la composition est de l'huile de colza - corrige",
+        "salad_salade_mache_aux_noix_081567: BUG - le roquefort (80g, deja en composition) etait decrit comme 'remplace' par un fromage rape - texte corrige pour utiliser le vrai roquefort",
+        "side_brocoli_roti_sauce_gribic_694128: le tofu ferme (200g, en composition) n'etait jamais utilise dans le texte - integre a l'etape de rotissage ; l'estragon 'frais' du texte correspondait a un ingredient seche en composition - corrige",
+        "side_champignons_sautes_ail_pe_b477e2: beurre vegetal (20g) et beurre (30g) en composition jamais mentionnes dans le texte - integres a l'etape de finition",
+        "side_dauphinois_vegan_c584cb, side_puree_de_celerirave_vegan_a55054: description et etapes disaient 'creme de coco' alors que la composition utilise de la creme d'avoine (base_oat_cream) - textes corriges (motif recurrent, 2 recettes)",
+        "side_de_courge_butternut_d512a4: le lait (200ml, en composition) n'etait jamais mentionne dans le texte (seule la creme liquide l'etait) - ajoute",
+        "side_epinards_a_la_creme_vegan_10afc3: beurre vegetal 15g explicite dans le texte vs 60g en composition - corrige",
+        "side_flageolets_a_la_bretonne_a2af15, side_lentilles_du_puy_echalote_37c76e: doublon manifeste beurre vegetal/beurre (memes quantites, aucun des deux utilise dans le texte) - doublon vegan supprime dans les 2 recettes ; beurre restant integre a la finition des lentilles",
+        "side_petits_pois_a_la_francais_1aa736: beurre utilise 2 fois explicitement (30g+40g=70g) mais composition n'avait que 40g - corrige ; sucre 10g texte vs 5g composition - corrige",
+        "side_pommes_dauphine_73a2c7: la muscade (0.5g, en composition) n'etait jamais mentionnee dans le texte - ajoutee",
+        "egg_galettes_aux_oignons_verts_ff5328: BUG - l'oeuf (220g) en composition etait totalement etranger a cette recette de galette (farine+eau+huile+oignons verts, sans oeuf traditionnellement) et n'apparaissait dans aucune etape - supprime",
+        "main_carottes_glacees_a_lerabl_87d5f0: sirop d'erable 30g en composition vs 80ml explicite dans le texte - corrige",
+        "side_orge_perle_aux_champignon_2824cb: le texte precise 'thym frais' alors que la composition etait du thym seche - corrige",
+        "side_tabbouleh_de_sarrasin_7e68ad: la tomate fraiche (240g, en composition, distincte des tomates cerises) n'etait jamais mentionnee dans le texte - ajoutee"
+      ]
     },
     {
       "id": 44,
