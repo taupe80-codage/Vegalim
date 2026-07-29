@@ -1,0 +1,908 @@
+# Liste des recettes ALIM
+
+820 recettes. Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+
+
+## A
+
+- **Afghan Bolani** _(vegan, main, afghan)_ — `main_afghan_bolani_e66cba`
+- **Afghan Sabzi Chalaw** _(vegan, main, afghan)_ — `dal_afghan_sabzi_chalaw_18f6a5`
+- **Ajapsandali** _(vegan, main, georgian)_ — `dal_ajapsandali_8ebefc`
+- **Ajvar (purée de Poivrons)** _(vegan, main, serbian)_ — `main_ajvar_puree_de_poivrons_5d2e79`
+- **Aligot** _(main, french_auvergnat)_ — `main_aligot_c03237`
+- **Aloo Gobi** _(vegan, main, indian)_ — `main_aloo_gobi_b21c85`
+- **Aloo Palak** _(main, indian)_ — `main_aloo_palak_7e9377`
+- **Arepas** _(main, ethiopian)_ — `main_arepas_a70a2e`
+- **Arepas (Vegan)** _(main, colombian)_ — `main_arepas_vegan_01b62b`
+- **Arepas Fromage** _(snack, colombian)_ — `main_arepas_fromage_e3a54c`
+- **Arepas Fromage (Vegan)** _(snack, colombian)_ — `main_arepas_fromage_vegan_3a4125`
+- **Armenian Lentil Soup** _(vegan, main, armenian)_ — `dal_armenian_lentil_soup_0f1067`
+- **Ash Reshteh** _(main, persian)_ — `dal_ash_reshteh_30aac5`
+- **Ash Reshteh (Vegan)** _(vegan, soup, iranian)_ — `soup_ash_reshteh_vegan_393184`
+- **Aubergines Farcies Turques** _(vegan, main, turkish)_ — `main_aubergines_farcies_turque_9caa16`
+- **Aubergines Imam Bayildi** _(vegan, main, international)_ — `main_aubergines_imam_bayildi_e1443e`
+- **Aubergines Parmigiana Simple** _(main, italian)_ — `main_aubergines_parmigiana_sim_e5028f`
+- **Aubergines Parmigiana Simple (Vegan)** _(main, italian)_ — `main_aubergines_parmigiana_sim_ad314c`
+- **Aubergines Sichuan** _(vegan, main, chinese)_ — `main_aubergines_sichuan_ff9921`
+- **Açorda à L'ail et Coriandre** _(main, portuguese)_ — `bread_acorda_a_lail_et_coriandr_048494`
+
+## B
+
+- **Baba ganoush** _(vegan, starter, levantine)_ — `dip_baba_ghanoush_dbd030`
+- **Bagel Fromage Frais Concombre** _(breakfast, american)_ — `brkf_bagel_fromage_frais_conco_e69b68`
+- **Baingan Bharta** _(vegan, main, indian)_ — `main_baingan_bharta_b5f900`
+- **Baked Ziti** _(main, italian)_ — `main_baked_ziti_b9e13e`
+- **Baked Ziti (Vegan)** _(main, italian)_ — `main_baked_ziti_vegan_ad57f8`
+- **Baklava aux Pistaches** _(dessert, levantine)_ — `dessert_baklava_aux_pistaches_06e5ed`
+- **Banane Caramélisée Philippine** _(vegan, side, philippine)_ — `main_banane_caramelisee_philip_df163c`
+- **Banh Mi Tofu** _(vegan, main, vietnamese)_ — `protein_banh_mi_tofu_9b1ea2`
+- **Bannock** _(main, ethiopian)_ — `bread_bannock_e03ffe`
+- **Bannock (Vegan)** _(snack, canadian)_ — `snack_bannock_vegan_46a1a8`
+- **Bao** _(vegan, main, chinese)_ — `bread_bao_ff9db9`
+- **Batata Harra** _(vegan, main, american)_ — `main_batata_harra_c2de57`
+- **Baursak** _(main, kazakh)_ — `egg_baursak_68b192`
+- **Beignet de Riz Népalais** _(main, nepali)_ — `rice_beignet_de_riz_nepalais_7ac83e`
+- **Beignets de Légumes Indonésiens** _(vegan, main, indonesian)_ — `main_beignets_de_legumes_indon_e74ee9`
+- **Beurre de Cacahuète** _(vegan, sauce, international)_ — `base_peanut_butter_81c37b`
+- **Bhindi Masala** _(vegan, main, indian)_ — `main_bhindi_masala_ade89d`
+- **Bibim Guksu** _(main, korean)_ — `pasta_bibim_guksu_9c8f25`
+- **Bibimbap Tofu** _(main, korean)_ — `rice_bibimbap_tofu_a265dc`
+- **Bibimbap végétarien** _(main, korean)_ — `rice_bibimbap_classic_k91x2a`
+- **Bigos** _(vegan, main, polish)_ — `rice_bigos_497b21`
+- **Biryani** _(main, indian)_ — `rice_biryani_classic_k82x7b`
+- **Biryani à la Noix de Coco** _(vegan, main, indian)_ — `rice_vegetable_biryani_160da2`
+- **Bisque de Champignons** _(soup, french)_ — `soup_bisque_de_champignons_63fa25`
+- **Bissara** _(vegan, main, moroccan)_ — `main_bissara_23c21a`
+- **Blinis Sarrasin Vegan** _(vegan, starter, french)_ — `entry_blinis_sarrasin_vegan_09648c`
+- **Bohémienne Provençale** _(vegan, main, french_provencal)_ — `main_bohemienne_provencale_781b61`
+- **Bok Choy Sauté à L'ail** _(vegan, main, chinese)_ — `wok_bok_choy_saute_a_lail_309f8e`
+- **Borscht** _(soup, polish)_ — `soup_borscht_fd9212`
+- **Borscht végétarien** _(soup, eastern_european)_ — `soup_borscht_classic_k39x2c`
+- **Bouillabaisse Végétarienne** _(vegan, soup, french_provencal)_ — `soup_bouillabaisse_vegetarienne_1d9c92`
+- **Bouillon Dashi Japonais** _(vegan, broth, japanese)_ — `base_dashi_broth_a3a517`
+- **Bouillon de Légumes** _(vegan, broth, universal)_ — `base_vegetable_broth_303b7d`
+- **Bouillon Mala Sichuan** _(vegan, soup, chinese)_ — `base_mala_broth_1ab129`
+- **Bouillon Miso** _(vegan, broth, japanese)_ — `miso_broth_618f1e`
+- **Boulettes Suédoises** _(main, swedish)_ — `dal_boulettes_suedoises_2ac55d`
+- **Boulettes Suédoises (Vegan)** _(main, swedish)_ — `dal_boulettes_suedoises_vegan_fea9f6`
+- **Bowl de céréales méditerranéen** _(vegan, main, mediterranean)_ — `dal_grain_bowl_mediterraneen_2d5531`
+- **Bowl de falafel (vegan)** _(vegan, main, levantine)_ — `falafel_bowl_de_falafel_vegan_f4fd40`
+- **Bowl Quinoa Fruits du Matin** _(breakfast, international)_ — `brkf_bowl_quinoa_fruits_du_mat_2a615c`
+- **Brandade de Betterave** _(vegan, starter, french_creative)_ — `entry_brandade_de_betterave_113c4a`
+- **Brazilian Feijão Tropeiro** _(main, brazilian)_ — `egg_brazilian_feijo_tropeiro_af46ce`
+- **Briam** _(main, greek)_ — `main_briam_f33bb8`
+- **Brioche Vendéenne** _(breakfast, french_vendeen)_ — `brkf_brioche_vendeenne_cf19a4`
+- **Brocoli Rôti Sauce Gribiche Vegan** _(vegan, side, french)_ — `side_brocoli_roti_sauce_gribic_694128`
+- **Brownie Vegan** _(dessert, international)_ — `dessert_brownie_vegan_d4c6bd`
+- **Bruschetta Tomate Basilic** _(vegan, starter, italian)_ — `entry_bruschetta_tomate_basilic_715b9b`
+- **Buddha Bowl** _(vegan, main, japanese)_ — `dal_buddha_bowl_4ffca3`
+- **Buddha's Delight** _(vegan, main, chinese)_ — `protein_buddhas_delight_f736c7`
+- **Bulgarian Shopska Salad** _(main, bulgarian)_ — `main_bulgarian_shopska_salad_d473eb`
+- **Bulgarian Shopska Salad (Vegan)** _(main, bulgarian)_ — `salad_bulgarian_shopska_salad_v_adc716`
+- **Bulgogi Tofu** _(vegan, side, korean)_ — `protein_bulgogi_tofu_fc5de9`
+- **Bun** _(vegan, main, vietnamese)_ — `protein_bun_f5c7db`
+- **Bun Cha** _(vegan, main, vietnamese)_ — `rice_bun_cha_e5c855`
+- **Béchamel** _(sauce, french)_ — `base_bechamel_7db18f`
+- **Béchamel Végane** _(sauce, french)_ — `base_bechamel_vegane_7a210c`
+
+## C
+
+- **Cake Olives et Herbes** _(snack, french_provencal)_ — `snack_cake_olives_et_herbes_d13d34`
+- **Caldo Verde** _(vegan, main, portuguese)_ — `main_caldo_verde_72b654`
+- **Callaloo** _(main, indian)_ — `main_callaloo_f7ae5c`
+- **Canelés Bordelais** _(dessert, french_bordelaise)_ — `dessert_caneles_bordelais_ea24bb`
+- **Cannelé Bordelais** _(dessert, french)_ — `dessert_cannele_bordelais_c55eca`
+- **Caponata** _(vegan, main, italian)_ — `main_caponata_d15a4f`
+- **Caramel au Beurre Salé** _(sauce, french)_ — `salted_butter_caramel_096c73`
+- **Carottes Glacées à L'érable** _(side, international)_ — `main_carottes_glacees_a_lerabl_87d5f0`
+- **Carottes Glacées à L'érable (Vegan)** _(vegan, side, canadian)_ — `side_carottes_glacees_a_lerabl_1d1c44`
+- **Carottes Râpées** _(vegan, starter, french)_ — `entry_carottes_rapees_e66bae`
+- **Carpaccio Betterave Agrumes** _(starter, french)_ — `entry_carpaccio_betterave_agrum_ee8b66`
+- **Cassoulet** _(vegan, main, french)_ — `stew_cassoulet_938fd4`
+- **Caviar D'aubergine** _(vegan, main, international)_ — `main_caviar_d_aubergine_0e824d`
+- **Champignons Sautés Ail Persil** _(side, french)_ — `side_champignons_sautes_ail_pe_b477e2`
+- **Champignons à la Grecque** _(vegan, starter, french)_ — `entry_champignons_a_la_grecque_efe65f`
+- **Chana masala** _(vegan, main, indian)_ — `curry_chickpea_k5x2p9`
+- **Charlotte aux Fraises** _(dessert, french)_ — `dessert_charlotte_aux_fraises_e3f32c`
+- **Cheddar Végane** _(vegan, ingredient, vegan)_ — `base_cheddar_vegane_529b97`
+- **Cheddar Végétal** _(vegan, base, international)_ — `base_vegan_cheddar_024998`
+- **Cheesecake Fruits Rouges** _(dessert, international)_ — `dessert_cheesecake_fruits_rouges_3460f6`
+- **Chia Pudding Coco Mangue** _(dessert, international)_ — `dessert_chia_pudding_coco_mangue_d61cff`
+- **Chia Pudding Framboise** _(breakfast, international)_ — `brkf_chia_pudding_framboise_e8a8fd`
+- **Chilaquiles** _(main, mexican)_ — `bread_chilaquiles_13372e`
+- **Chili Sin Carne** _(vegan, main, american)_ — `main_chili_sin_carne_125ff2`
+- **Chili Sin Carne Épicé** _(vegan, main, american)_ — `main_chili_sin_carne_epice_205657`
+- **Chinese Mapo Tofu** _(vegan, main, chinese)_ — `protein_chinese_mapo_tofu_7edbe0`
+- **Chips de Légumes au Four** _(vegan, starter, french)_ — `entry_chips_de_legumes_au_four_b43876`
+- **Chole (curry de Pois Chiches)** _(vegan, main, indian)_ — `dal_chole_curry_de_pois_chiches_851fca`
+- **Chole Bhature** _(vegan, main, indian)_ — `dal_chole_bhature_dbcac0`
+- **Chou Farci Végétarien** _(vegan, main, french)_ — `main_chou_farci_vegetarien_7a01f5`
+- **Chou Éthiopien Sauté** _(vegan, main, ethiopian)_ — `wok_chou_ethiopien_saute_93ab43`
+- **Choucroute Végétarienne** _(vegan, main, french_alsatian)_ — `main_choucroute_vegetarienne_25c7a3`
+- **Chow Mein** _(main, chinese)_ — `pasta_chow_mein_76aca0`
+- **Clafoutis aux Cerises** _(dessert, french)_ — `dessert_clafoutis_aux_cerises_f81391`
+- **Clafoutis Cerises** _(dessert, french_limousin)_ — `dessert_clafoutis_cerises_0731cf`
+- **Compote de Pommes** _(vegan, dessert, french)_ — `base_applesauce_b0627b`
+- **Compote de Pommes Maison** _(vegan, dessert, french)_ — `dessert_compote_de_pommes_maison_cdbdd0`
+- **Compote Rhubarbe Fraise** _(vegan, breakfast, french)_ — `brkf_compote_rhubarbe_fraise_1d9d38`
+- **Concentré de Tomate** _(vegan, sauce, italian)_ — `base_tomato_paste_26412f`
+- **Confiture de Fraises** _(vegan, sauce, french)_ — `base_strawberry_jam_1e5515`
+- **Cookie Chocolat Vegan** _(dessert, american)_ — `dessert_cookie_chocolat_vegan_b9c6cc`
+- **Coulis de Fraises** _(vegan, sauce, french)_ — `base_strawberry_coulis_49d4ea`
+- **Courge au Lait de Coco** _(soup, international)_ — `soup_courge_au_lait_de_coco_224d09`
+- **Courge Mijotée Japonaise** _(vegan, soup, japanese)_ — `soup_courge_mijotee_japonaise_3852ae`
+- **Couscous de Chou-fleur** _(vegan, side, international)_ — `side_couscous_de_choufleur_ac056b`
+- **Couscous Tfaya (Vegan)** _(vegan, main, maghrebi)_ — `couscous_tfaya_vegan_65aba6`
+- **Couscous Tfaya rapide** _(vegan, main, moroccan)_ — `couscous_tfaya_quick_ee5f20`
+- **Couscous Tfaya végétarien** _(vegan, main, moroccan)_ — `couscous_tfaya_classic_k1d1p6`
+- **Couscous Traditionnel** _(vegan, main, moroccan)_ — `couscous_traditionnel_132078`
+- **Couscous Traditionnel (Vegan)** _(main, maghrebi)_ — `couscous_couscous_traditionnel_veg_46ff36`
+- **Couscous traditionnel végétarien** _(vegan, main, moroccan)_ — `couscous_vegetable_classic_k1d1p7`
+- **Couscous végétarien rapide** _(vegan, main, maghrebi)_ — `couscous_vegetable_quick_k5d3p1`
+- **Crackers Salés** _(vegan, snack, international)_ — `snack_crackers_35f6a8`
+- **Croatian Bean Stew** _(vegan, main, croatian)_ — `stew_croatian_bean_stew_4dfb05`
+- **Crostini Champignons Truffe** _(starter, italian)_ — `entry_crostini_champignons_truf_1d780c`
+- **Crumble aux Myrtilles** _(dessert, british)_ — `main_crumble_aux_myrtilles_5f7d47`
+- **Crumble aux Myrtilles (Vegan)** _(dessert, british)_ — `dessert_crumble_aux_myrtilles_veg_15390f`
+- **Crème Brûlée** _(dessert, french)_ — `dessert_creme_brulee_a19dfa`
+- **Crème d'Avoine Maison** _(vegan, sauce, scandinavian)_ — `base_oat_cream_954865`
+- **Crème de Coco** _(sauce, thai)_ — `base_coconut_cream_10c770`
+- **Crème de Soja Maison** _(vegan, sauce, vegan_cuisine)_ — `base_soy_cream_4dc027`
+- **Crème Fraîche** _(condiment, french)_ — `base_creme_fraiche_b536c1`
+- **Crêpe Complète** _(breakfast, french_breton)_ — `main_crepe_complete_1d0fb7`
+- **Crêpe Coréenne aux Oignons Verts** _(main, korean)_ — `egg_crepe_coreenne_aux_oignons_ver_356ac2`
+- **Crêpe Coréenne aux Oignons Verts (Vegan)** _(snack, korean)_ — `snack_crepe_coreenne_aux_oignon_a45536`
+- **Crêpe de Sarrasin** _(base, french)_ — `base_buckwheat_crepe_03db22`
+- **Crêpe Vietnamienne** _(main, vietnamese)_ — `rice_crepe_vietnamienne_71beca`
+- **Crêpes Bretonnes** _(dessert, french_breton)_ — `dessert_crepes_bretonnes_7b9835`
+- **Crêpes Sucrées** _(breakfast, french)_ — `brkf_crepes_sucrees_e5d14e`
+- **Curry d'aubergine fumée** _(vegan, main, indian)_ — `curry_baingan_bharta_d54d1c`
+- **Curry D'aubergine Indien** _(vegan, main, indian)_ — `curry_daubergine_indien_779e72`
+- **Curry d'aubergine sri lankais — version express** _(main, sri_lankan)_ — `curry_d_aubergine_sri_lankais_72254d`
+- **Curry d'aubergine sri lankais — épices fraîches** _(main, sri_lankan)_ — `curry_aubergine_sri_lanka_bf8bcd`
+- **Curry de pois cassés** _(vegan, main, indian)_ — `curry_split_pea_k2f9x1`
+- **Curry de pois chiches aux épinards** _(vegan, main, indian)_ — `curry_chickpea_spinach_k6518f8`
+- **Curry de Pommes de Terre et Bambou** _(vegan, main, indian)_ — `curry_de_pommes_de_terre_et_bam_e5161e`
+- **Curry de Pommes de Terre et Petits Pois** _(vegan, main, indian)_ — `curry_de_pommes_de_terre_et_pet_9271d8`
+- **Curry japonais** _(main, japanese)_ — `curry_japanese_classic_v3_m8q2z4`
+- **Curry Japonnais rapide** _(vegan, main, japanese)_ — `curry_japanese_4533d1`
+- **Curry pois chiches épinards** _(vegan, main, indian)_ — `dal_curry_pois_chiches_epinards_a7ee14`
+- **Curry sec de pommes de terre et chou-fleur** _(vegan, main, indian)_ — `curry_dry_aloo_gobi_9a6763`
+- **Curry vert thaï** _(main, thai)_ — `curry_curry_vert_thai_6a3792`
+- **Curry vert thaï végétarien** _(main, thai)_ — `curry_green_thai_classic_v3_m9x2k7`
+- **Céleri Rémoulade** _(starter, french)_ — `entry_celeri_remoulade_d5d1b9`
+
+## D
+
+- **Dahl au lait de coco** _(main, indian)_ — `dal_coconut_classic_k1d1p5`
+- **Dahl au lait de coco rapide** _(main, indian)_ — `dal_coconut_dal_ea7cdd`
+- **Dahl de pois chiches** _(vegan, main, indian)_ — `dal_chana_classic_k1d1p4`
+- **Dal de lentilles corail** _(vegan, main, indian)_ — `dal_lentil_corail_classic_k1d1p1`
+- **Dal de Lentilles Corail (Vegan)** _(vegan, main, indian)_ — `dal_de_lentilles_corail_vegan_8cc6a7`
+- **Dal Makhani** _(main, indian)_ — `dal_dal_makhani_c9ce94`
+- **Dal Makhani (Vegan)** _(main, indian)_ — `dal_makhani_vegan_259219`
+- **Dal Tadka** _(vegan, main, indian)_ — `dal_dal_tadka_4c3536`
+- **Daube de Légumes** _(vegan, main, french_provencal)_ — `main_daube_de_legumes_4a045f`
+- **Disques de Pâte** _(pastry, latin_american)_ — `base_pastry_wrappers_a56ee0`
+- **Dolma au Cumin** _(vegan, main, turkish)_ — `rice_dolma_au_cumin_b40a25`
+- **Dolma au Persil** _(vegan, main, turkish)_ — `rice_dolma_au_persil_6aeb1e`
+- **Donburi Tofu Teriyaki** _(vegan, main, japanese)_ — `rice_donburi_tofu_teriyaki_a71cfc`
+- **Dumplings** _(vegan, main, chinese)_ — `dumpling_vegetable_dumplings_abb853`
+
+## E
+
+- **Empanadas** _(snack, argentinian)_ — `snack_empanadas_974cf2`
+- **Empanadas au Fromage** _(snack, argentinian)_ — `snack_empanadas_au_fromage_466bc4`
+- **Empanadas au Fromage (Vegan)** _(snack, latin_american)_ — `snack_empanadas_au_fromage_vega_79575a`
+- **Enchiladas** _(main, mexican)_ — `bread_enchiladas_fe7221`
+- **Enchiladas (Vegan)** _(main, mexican)_ — `wrap_enchiladas_vegan_f70bca`
+- **Endives au Gratin** _(main, french_nordic)_ — `main_endives_au_gratin_6b58ee`
+- **Escalivada** _(vegan, main, spanish)_ — `main_escalivada_1ee1c4`
+- **Ethiopian Atkilt Wat** _(vegan, main, ethiopian)_ — `dal_ethiopian_atkilt_wat_afd168`
+- **Ethiopian Misir Wot** _(vegan, main, ethiopian)_ — `dal_ethiopian_misir_wot_4203c8`
+
+## F
+
+- **Falafel optimisé** _(vegan, main, middle_eastern)_ — `falafel_optimise_2f1451`
+- **Falafel Traditionnels** _(vegan, snack, levantine)_ — `dal_falafel_traditionnels_214e07`
+- **Far Breton aux Pruneaux** _(dessert, french)_ — `dessert_far_breton_aux_pruneaux_069b81`
+- **Farofa Brésilienne** _(main, brazilian)_ — `main_farofa_bresilienne_29e38e`
+- **Farofa Brésilienne (Vegan)** _(vegan, side, brazilian)_ — `side_farofa_bresilienne_vegan_45d889`
+- **Fasolada Grecque** _(vegan, main, greek)_ — `main_fasolada_grecque_d70275`
+- **Fasolakia Grecques** _(vegan, main, greek)_ — `main_fasolakia_grecques_67b6d9`
+- **Fattoush libanais optimisé** _(vegan, main, middle_eastern)_ — `salad_fattoush_classic_x82m5c`
+- **Feijoada** _(vegan, main, brazilian)_ — `main_feijoada_2f6754`
+- **Feijão Tropeiro** _(main, brazilian)_ — `egg_feijo_tropeiro_bb31e4`
+- **Feijão Tropeiro (Vegan)** _(side, brazilian)_ — `side_feijo_tropeiro_vegan_ccc81d`
+- **Fenouil Braisé à l'Orange** _(vegan, side, french)_ — `side_fenouil_braise_a_l_orange_a75916`
+- **Feuilles de Nems / Rouleaux de Printemps (base)** _(vegan, pastry, asian)_ — `base_spring_roll_wrappers_eba962`
+- **Feuilles à Gyoza** _(vegan, pastry, japanese)_ — `base_gyoza_wrapper_0dba00`
+- **Feuilles à Wonton** _(pastry, chinese)_ — `base_wonton_wrapper_7bfeb5`
+- **Feuilletés Champignons** _(starter, french)_ — `entry_feuilletes_champignons_260af3`
+- **Financiers aux Amandes** _(dessert, french)_ — `dessert_financiers_aux_amandes_a02063`
+- **Flageolets à la Bretonne** _(side, french)_ — `side_flageolets_a_la_bretonne_a2af15`
+- **Flamiche aux Poireaux** _(main, french_nordic)_ — `main_flamiche_aux_poireaux_fa3d0b`
+- **Flan Pâtissier** _(dessert, french)_ — `dessert_flan_patissier_aa63b2`
+- **Fleurs de Courgette Farcies** _(starter, italian)_ — `entry_fleurs_de_courgette_farci_c7f460`
+- **Focaccia** _(vegan, snack, italian)_ — `bread_focaccia_bf8608`
+- **Fondant au Chocolat** _(dessert, french)_ — `dessert_fondant_au_chocolat_a4c8aa`
+- **Fricassée Printanière** _(main, french)_ — `main_fricassee_printaniere_619cae`
+- **Fromage de Cajou aux Herbes** _(starter, international)_ — `entry_fromage_de_cajou_aux_herb_4f0f9b`
+- **Fromage en Grain** _(dairy, canadian)_ — `base_fromage_en_grain_a00941`
+- **Fromage Frais (Cream Cheese)** _(sauce, french)_ — `base_cream_cheese_c6e3b6`
+- **Ful Medames** _(vegan, main, egyptian)_ — `main_ful_medames_389da8`
+
+## G
+
+- **Gado Gado** _(main, indonesian)_ — `protein_gado_gado_2412da`
+- **Gado-gado** _(main, indonesian)_ — `protein_gadogado_c0f543`
+- **Gado‑gado Indonésien** _(main, indonesian)_ — `protein_gadogado_indonesien_200c65`
+- **Gado‑gado Indonésien (Vegan)** _(main, indonesian)_ — `salad_gadogado_indonesien_vegan_e4cd75`
+- **Galette de Sarrasin** _(bread, french)_ — `bread_buckwheat_crepe_03db22`
+- **Galette de Teff** _(main, ethiopian)_ — `crepe_galette_de_teff_a1a8d3`
+- **Galette des Rois Briochée** _(dessert, french_southern)_ — `dessert_galette_des_rois_briochee_6f0909`
+- **Galette Sarrasin Champignons** _(breakfast, french)_ — `brkf_galette_sarrasin_champign_f6a798`
+- **Galettes aux Oignons Verts** _(side, international)_ — `egg_galettes_aux_oignons_verts_ff5328`
+- **Galettes de courgette ultra structurées** _(starter, mediterranean)_ — `crepe_galettes_de_courgette_ult_669679`
+- **Galettes de Pois Chiches** _(vegan, main, international)_ — `dal_galettes_de_pois_chiches_db4c7a`
+- **Galettes de Pommes de Terre Suédoises** _(main, swedish)_ — `egg_galettes_de_pommes_de_terre_su_0d7814`
+- **Galettes de Pommes de Terre Tchèques** _(main, czech)_ — `egg_galettes_de_pommes_de_terre_tc_4f360c`
+- **Galettes Sarrasin** _(main, french_breton)_ — `main_galettes_sarrasin_ce9f40`
+- **Garbure Gasconne** _(vegan, main, french_gascon)_ — `main_garbure_gasconne_545667`
+- **Gaspacho de Melon à la Menthe** _(vegan, starter, french)_ — `entry_gaspacho_de_melon_menthe_ee9907`
+- **Gaspacho Provençal** _(vegan, soup, french_mediterranean)_ — `soup_gaspacho_provencal_f69228`
+- **Gaufres Belges** _(breakfast, belgian)_ — `brkf_gaufres_belges_077910`
+- **Gazpacho andalou** _(vegan, soup, spanish)_ — `soup_gazpacho_classic_v2_x9k3m1`
+- **Georgian Vegetable Stew** _(vegan, main, georgian)_ — `stew_georgian_vegetable_stew_1cb019`
+- **Ghee (Beurre Clarifié)** _(condiment, indian)_ — `base_ghee_ec9064`
+- **Girolles à la Crème** _(main, french)_ — `main_girolles_a_la_creme_7d432d`
+- **Gnocchi Al Pesto** _(main, italian)_ — `pasta_gnocchi_al_pesto_5bb01c`
+- **Gnocchi Al Pesto (Vegan)** _(main, italian)_ — `pasta_gnocchi_al_pesto_vegan_954303`
+- **Gnocchi au pesto** _(main, italian)_ — `pasta_gnocchi_pesto_classic_v2_m7k2q4`
+- **Gnocchi Vegan** _(vegan, main, italian)_ — `base_gnocchi_vegan_dd3b0e`
+- **Gnocchis** _(main, italian)_ — `main_gnocchi_f17041`
+- **Gnocchis de Pomme de Terre** _(pasta, italian)_ — `base_gnocchi_8f01d0`
+- **Gnocchis à la Tomate** _(main, italian)_ — `pasta_gnocchis_a_la_tomate_8e1632`
+- **Gnocchis à la Tomate (Vegan)** _(main, italian)_ — `pasta_gnocchis_a_la_tomate_vega_ca281e`
+- **Gochujang** _(vegan, sauce, korean)_ — `base_gochujang_41da6e`
+- **Goi Cuon** _(main, vietnamese)_ — `rice_goi_cuon_efb313`
+- **Gong Bao Tofu** _(vegan, main, american)_ — `bread_gong_bao_tofu_3f7cc1`
+- **Gougères au Fromage** _(starter, french)_ — `entry_gougeres_au_fromage_ebce95`
+- **Granola Bowl Yaourt Fruits Rouges** _(breakfast, international)_ — `brkf_granola_bowl_yaourt_fruit_980183`
+- **Granola Maison** _(vegan, breakfast, international)_ — `brkf_granola_maison_0d3e52`
+- **Gratin dauphinois traditionnel** _(main, french)_ — `gratin_dauphinois_classic_v3_p9x4t2`
+- **Gratin Dauphinois Vegan** _(vegan, side, french)_ — `side_dauphinois_vegan_c584cb`
+- **Gratin de Chou-Fleur** _(main, french)_ — `main_gratin_de_chou_fleur_bad955`
+- **Gratin de Courge Butternut** _(side, french)_ — `side_de_courge_butternut_d512a4`
+- **Gratin de Courgettes** _(main, french)_ — `main_gratin_de_courgettes_35b5b8`
+- **Gratin de macaronis au fromage** _(main, italian)_ — `pasta_mac_and_cheese_b3073b`
+- **Gratin de macaronis au fromage (vegan)** _(main, american)_ — `pasta_mac_and_cheese_vegan_4acb30`
+- **Gratin de Navets** _(main, french)_ — `main_gratin_de_navets_e164d6`
+- **Gratin de Poireaux** _(main, french)_ — `main_gratin_de_poireaux_808071`
+- **Gratin de Potiron** _(main, french)_ — `main_gratin_de_potiron_839446`
+- **Greek Briam** _(main, greek)_ — `main_greek_briam_4091c5`
+- **Greek Briam (Vegan)** _(main, greek)_ — `main_greek_briam_vegan_3fb054`
+- **Greek Fasolada** _(vegan, main, greek)_ — `main_greek_fasolada_612a6f`
+- **Green Curry Tofu** _(main, thai)_ — `curry_green_curry_tofu_2a30dd`
+- **Guacamole** _(vegan, starter, mexican)_ — `dip_guacamole_970186`
+- **Gundruk (Légume Fermenté Népalais)** _(vegan, condiment, nepali)_ — `base_gundruk_94c079`
+- **Gyoza** _(vegan, main, japanese)_ — `dumpling_gyoza_92d264`
+- **Gâteau au Yaourt Citron** _(dessert, french)_ — `dessert_gateau_au_yaourt_citron_f27832`
+- **Gâteau Basque** _(dessert, french_basque)_ — `dessert_gateau_basque_f22cc0`
+- **Gâteau Carottes Vegan** _(vegan, dessert, international)_ — `dessert_gateau_carottes_vegan_9d8a84`
+- **Gözleme aux Épinards** _(main, international)_ — `main_gozleme_aux_epinards_66eccf`
+- **Gözleme aux Épinards (Vegan)** _(snack, turkish)_ — `snack_gozleme_aux_epinards_vega_6ff07b`
+
+## H
+
+- **Halloumi** _(dairy, cypriot)_ — `base_halloumi_293d5e`
+- **Halva de Sésame** _(vegan, dessert, levantine)_ — `dessert_halva_de_sesame_87a706`
+- **Haricots au Lait de Coco** _(soup, international)_ — `soup_haricots_au_lait_de_coco_207254`
+- **Haricots Blancs au Four** _(vegan, main, international)_ — `main_haricots_blancs_au_four_000c13`
+- **Haricots Frits Mexicains** _(vegan, main, mexican)_ — `main_haricots_frits_mexicains_4ba94a`
+- **Haricots frits mexicains** _(vegan, main, mexican)_ — `main_haricots_frits_mexicains_a78841`
+- **Haricots Géants au Four** _(vegan, main, greek)_ — `main_haricots_geants_au_four_1c018b`
+- **Haricots Rouges Créoles** _(vegan, main, creole)_ — `main_haricots_rouges_creoles_ac36f6`
+- **Haricots Rouges à la Tomate** _(vegan, main, international)_ — `main_haricots_rouges_a_la_toma_c44560`
+- **Haricots Verts Amandine** _(starter, french)_ — `entry_haricots_verts_amandine_391638`
+- **Haricots Verts à la Grenobloise** _(side, french)_ — `side_haricots_verts_a_la_greno_f1bdca`
+- **Harira** _(vegan, main, moroccan)_ — `dal_harira_822880`
+- **Harira marocaine traditionnelle** _(vegan, soup, moroccan)_ — `soup_harira_classic_v3_p9x4k2`
+- **Harissa** _(vegan, sauce, moroccan)_ — `base_harissa_ef842f`
+- **Horta** _(vegan, main, greek)_ — `main_horta_b898d5`
+- **Horta Vrasta** _(vegan, main, greek)_ — `main_horta_vrasta_a5fca2`
+- **Hot Pot** _(vegan, soup, chinese)_ — `soup_hot_pot_e7fc15`
+- **Houmous traditionnel** _(vegan, starter, levantine)_ — `dip_hummus_classic_v6_u4k9p2`
+- **Humita Andine** _(main, peruvian)_ — `main_humita_andine_fe7789`
+- **Humita Andine (Vegan)** _(snack, andean)_ — `snack_humita_andine_vegan_1f09bf`
+- **Hummus Traditionnel** _(vegan, main, lebanese)_ — `dal_hummus_traditionnel_7f6ccc`
+- **Hungarian Lecsó** _(main, hungarian)_ — `main_hungarian_lecs_47d502`
+
+## I
+
+- **Italian Pasta E Ceci** _(main, italian)_ — `dal_italian_pasta_e_ceci_3fbb85`
+- **Italian Ribollita** _(vegan, main, international)_ — `main_italian_ribollita_a99546`
+
+## J
+
+- **Japanese Vegetable Tempura** _(vegan, main, japanese)_ — `main_japanese_vegetable_tempur_f57314`
+- **Jeera Aloo** _(vegan, main, indian)_ — `main_jeera_aloo_f4c7a0`
+- **Jeera Rice** _(side, indian)_ — `rice_jeera_rice_a4633c`
+- **Jeera Rice (Vegan)** _(side, indian)_ — `side_jeera_rice_vegan_694fd1`
+
+## K
+
+- **Kadhi Pakora** _(main, indian)_ — `dal_kadhi_pakora_078de2`
+- **Kadhi Pakora (Vegan)** _(main, indian)_ — `dal_kadhi_pakora_vegan_5cb5d4`
+- **Karelian Pies** _(main, ethiopian)_ — `rice_karelian_pies_106cca`
+- **Kashk (Petit-Lait Fermenté)** _(dairy, persian)_ — `base_kashk_fd3ac6`
+- **Kashke Bademjan** _(main, persian)_ — `main_kashke_bademjan_10dd33`
+- **Katsu Curry** _(main, japanese)_ — `bread_katsu_bf3f1e`
+- **Katsu curry (vegan)** _(main, japanese)_ — `curry_katsu_vegan_f2e6a3`
+- **Khachapuri** _(main, georgian)_ — `egg_khachapuri_134434`
+- **Kheer au Riz** _(dessert, indian)_ — `dessert_kheer_au_riz_ee0837`
+- **Khichdi** _(main, international)_ — `dal_khichdi_23f932`
+- **Kibbeh** _(main, lebanese)_ — `main_kibbeh_3d2be1`
+- **Kimbap** _(main, korean)_ — `rice_kimbap_4cb3da`
+- **Kimchi** _(vegan, main, korean)_ — `main_kimchi_1dc648`
+- **Kimchi (base)** _(vegan, condiment, korean)_ — `base_kimchi_61791a`
+- **Kimchi Bokkeumbap** _(main, korean)_ — `rice_kimchi_bokkeumbap_2cbfe6`
+- **Kombucha** _(vegan, beverage, chinese)_ — `beverage_kombucha_3df24c`
+- **Korma de Légumes** _(main, indian)_ — `main_korma_de_legumes_ddde08`
+- **Koshari** _(vegan, main, egyptian)_ — `dal_koshari_15670d`
+- **Koshari Égyptien** _(vegan, main, egyptian)_ — `dal_koshari_egyptien_73828c`
+- **Koshari égyptien traditionnel** _(vegan, main, egyptian)_ — `main_koshari_classic_v4_q7n5z2`
+- **Kouign-Amann** _(dessert, french_breton)_ — `dessert_kouign_amann_a71af6`
+
+## L
+
+- **Lagman** _(main, uzbek)_ — `pasta_lagman_aaae70`
+- **Laing** _(main, philippine)_ — `main_laing_ee9d64`
+- **Lait d'Amande Maison** _(vegan, beverage, mediterranean)_ — `base_almond_milk_226291`
+- **Lait d'Avoine Maison** _(vegan, beverage, scandinavian)_ — `base_oat_milk_3519f4`
+- **Lait de Cajou Maison** _(vegan, beverage, vegan_cuisine)_ — `base_cashew_milk_71947e`
+- **Lait de Chanvre Maison** _(vegan, beverage, vegan_cuisine)_ — `base_hemp_milk_9248fe`
+- **Lait de Coco Maison** _(vegan, beverage, thai)_ — `base_coconut_milk_1ebad9`
+- **Lait de Riz Maison** _(vegan, beverage, asian)_ — `base_rice_milk_128001`
+- **Lait de Soja Maison** _(vegan, beverage, chinese)_ — `base_soy_milk_827b25`
+- **Laksa aux Légumes** _(soup, malaysian)_ — `soup_vegetable_laksa_ab0112`
+- **Laksa Malaisien** _(soup, malaysian)_ — `soup_laksa_malaisien_dd7512`
+- **Laksa Thaï** _(soup, thai)_ — `soup_laksa_thai_7b1720`
+- **Lasagnes** _(main, italian)_ — `pasta_lasagnes_8adf61`
+- **Lasagnes (Vegan)** _(vegan, main, italian)_ — `pasta_lasagnes_vegan_412e90`
+- **Lasagnes de légumes ultra structurées** _(main, italian)_ — `pasta_lasagnes_de_legumes_ultra_9b6a4e`
+- **Lebanese Lentil Soup** _(vegan, main, lebanese)_ — `dal_lebanese_lentil_soup_eae561`
+- **Lentil Shepherd Pie** _(main, british)_ — `dal_lentil_shepherd_pie_9a295e`
+- **Lentil Shepherd Pie (Vegan)** _(main, british)_ — `dal_lentil_shepherd_pie_vegan_926ebd`
+- **Lentil Shepherd's Pie** _(main, british)_ — `dal_lentil_shepherd_s_pie_477c76`
+- **Lentil Shepherd's Pie (Vegan)** _(main, british)_ — `dal_lentil_shepherds_pie_vega_27455d`
+- **Lentilles** _(vegan, main, international)_ — `dal_basic_k3d2p1`
+- **Lentilles aux Épinards** _(vegan, main, indian)_ — `dal_lentilles_aux_epinards_be2017`
+- **Lentilles Beluga au Xérès** _(vegan, starter, french)_ — `entry_lentilles_beluga_au_xeres_de4a76`
+- **Lentilles Corail au Lait de Coco** _(main, indian)_ — `dal_lentilles_corail_au_lait_de_co_19d485`
+- **Lentilles du Puy Échalotes Confites** _(side, french)_ — `side_lentilles_du_puy_echalote_37c76e`
+- **Lentilles mijotées structurées** _(vegan, main, international)_ — `stew_lentil_basic_v2_x7k2m9`
+- **Lobio** _(vegan, main, georgian)_ — `main_lobio_5cdec6`
+- **Loubia Marocaine** _(vegan, main, moroccan)_ — `main_loubia_marocaine_e3b91b`
+- **Légumes Braisés** _(vegan, main, french_provencal)_ — `main_legumes_braises_7030b7`
+
+## M
+
+- **Madeleines** _(dessert, french)_ — `dessert_madeleines_4572e8`
+- **Makdous** _(vegan, main, american)_ — `egg_makdous_cf5efa`
+- **Manakish Zaatar** _(vegan, snack, international)_ — `main_manakish_zaatar_580150`
+- **Mapo Tofu** _(vegan, main, chinese)_ — `protein_mapo_tofu_4b4458`
+- **Mapo Tofu au Champignon** _(vegan, main, chinese)_ — `protein_mapo_tofu_au_champignon_ba9276`
+- **Masala Dosa** _(vegan, main, indian)_ — `dal_masala_dosa_7d4088`
+- **Matbucha** _(vegan, starter, israeli)_ — `entry_matbucha_fbcb0e`
+- **Mayonnaise** _(sauce, french)_ — `base_mayonnaise_0d3e4e`
+- **Mayonnaise Végane** _(vegan, sauce, international)_ — `base_vegan_mayonnaise_b68322`
+- **Menemen** _(main, turkish)_ — `egg_menemen_681f60`
+- **Mercimek Köftesi** _(main, international)_ — `dal_mercimek_koftesi_34f72d`
+- **Mexican Calabacitas** _(vegan, main, mexican)_ — `main_mexican_calabacitas_f3511d`
+- **Mexican Enfrijoladas** _(main, mexican)_ — `bread_mexican_enfrijoladas_578ae7`
+- **Mexican Enfrijoladas (Vegan)** _(main, mexican)_ — `main_mexican_enfrijoladas_vega_d6a9a8`
+- **Mexican Rice** _(vegan, main, mexican)_ — `rice_mexican_rice_94bd67`
+- **Migas Portugaises** _(main, portuguese)_ — `bread_migas_portugaises_76818b`
+- **Minestrone** _(soup, italian)_ — `soup_minestrone_x7p2k1`
+- **Mirza Ghasemi** _(main, persian)_ — `egg_mirza_ghasemi_454e24`
+- **Mochi Matcha** _(vegan, dessert, japanese)_ — `dessert_mochi_matcha_7bf558`
+- **Momos aux Légumes** _(vegan, main, ethiopian)_ — `dumpling_momos_aux_legumes_0adb23`
+- **Moqueca** _(main, brazilian)_ — `protein_moqueca_a65174`
+- **Moroccan Vegetable Couscous** _(vegan, main, moroccan)_ — `couscous_moroccan_vegetable_cousco_f80d61`
+- **Moroccan Zaalouk** _(vegan, main, moroccan)_ — `main_moroccan_zaalouk_d90202`
+- **Moussaka** _(main, greek)_ — `main_moussaka_fcf86b`
+- **Moussaka végétarienne** _(main, greek)_ — `tarte_moussaka_veg_d55fa8`
+- **Mousse au Chocolat Vegan** _(vegan, dessert, international)_ — `dessert_mousse_au_chocolat_vegan_b5d48f`
+- **Mousse Avocat Wasabi** _(starter, japanese)_ — `entry_mousse_avocat_wasabi_773105`
+- **Mozzarella Végane** _(vegan, ingredient, vegan)_ — `base_mozzarella_vegane_fca8c8`
+- **Muesli Bircher** _(breakfast, swiss)_ — `brkf_muesli_bircher_fae6ec`
+- **Muhammara** _(vegan, starter, syrian)_ — `entry_muhammara_cd05ca`
+- **Mujadara** _(vegan, main, lebanese)_ — `dal_mujadara_2f5904`
+- **Mujadara libanaise traditionnelle** _(vegan, main, lebanese)_ — `rice_mujadara_classic_ee2456`
+
+## N
+
+- **Nasi Goreng** _(main, indonesian)_ — `rice_nasi_goreng_edfce4`
+- **Nasi Goreng (Vegan)** _(main, indonesian)_ — `rice_nasi_goreng_vegan_bcc9cb`
+- **Natto** _(vegan, main, japanese)_ — `base_natto_7060f1`
+- **Nepali Aloo Tama** _(vegan, main, nepali)_ — `main_nepali_aloo_tama_4664a3`
+- **Nepali Chickpea Curry** _(vegan, main, nepali)_ — `dal_nepali_chickpea_curry_020035`
+- **Nepali Dal Bhat** _(vegan, main, indian)_ — `dal_nepali_dal_bhat_7860b1`
+- **Nepali Saag** _(vegan, main, nepali)_ — `main_nepali_saag_92a5f7`
+- **Nepali Tarkari** _(vegan, main, nepali)_ — `main_nepali_tarkari_9199c8`
+- **Nepali Tomato Achar** _(vegan, main, nepali)_ — `main_nepali_tomato_achar_9575d1`
+- **Nouilles Coréennes aux Légumes** _(vegan, main, korean)_ — `pasta_nouilles_coreennes_aux_legumes_82115e`
+- **Nouilles de Blé Maison** _(pasta, asian)_ — `base_noodles_2d0ed7`
+- **Nouilles de Patate Douce** _(vegan, pasta, korean)_ — `base_nouilles_de_patate_douce_fdeb79`
+- **Nouilles de Riz** _(vegan, pasta, vietnamese)_ — `base_rice_noodle_831080`
+- **Nouilles Ramen Maison** _(vegan, pasta, japanese)_ — `base_nouilles_ramen_3907e3`
+- **Nouilles Reshteh** _(vegan, pasta, persian)_ — `base_reshteh_noodles_6f783e`
+- **Nouilles Satay** _(main, international)_ — `pasta_nouilles_satay_864b31`
+- **Nouilles Soba Maison** _(vegan, pasta, japanese)_ — `base_soba_noodles_33e97c`
+
+## O
+
+- **Oignon Frit** _(vegan, condiment, international)_ — `base_fried_onion_217e6a`
+- **Ojja** _(main, tunisian)_ — `egg_ojja_5bdbea`
+- **Ojja (Vegan)** _(breakfast, tunisian)_ — `brkf_ojja_vegan_dbbad8`
+- **Okonomiyaki** _(main, japanese)_ — `egg_okonomiyaki_c105e0`
+- **Omelette aux Herbes du Jardin** _(breakfast, french)_ — `brkf_omelette_aux_herbes_du_ja_f21317`
+- **Omelette nature** _(breakfast, french)_ — `egg_omelette_nature_d72ed2`
+- **Onigiri au Saumon d'Umeboshi** _(vegan, snack, japanese)_ — `rice_onigiri_au_saumon_d_umeboshi_cba6bf`
+- **Onigiri Nature** _(vegan, snack, japanese)_ — `rice_onigiri_nature_cd56ab`
+- **Onigiri Umeboshi** _(vegan, snack, japanese)_ — `rice_onigiri_umeboshi_7a5ef3`
+- **Orge Perlé aux Champignons** _(vegan, side, international)_ — `side_orge_perle_aux_champignon_2824cb`
+- **Overnight Oats Vegan** _(breakfast, international)_ — `brkf_overnight_oats_vegan_a1e7b5`
+
+## P
+
+- **Pad Krapow** _(main, thai)_ — `rice_pad_krapow_63acfb`
+- **Pad Krapow végétarien** _(main, thai)_ — `wok_pad_krapow_vegetarien_565aa9`
+- **Pad Krapow végétarien maîtrisé** _(vegan, main, thai)_ — `wok_pad_krapow_tofu_v3_k9x2m7`
+- **Pad See Ew** _(main, thai)_ — `noodle_pad_see_ew_41b095`
+- **Pad See Ew (Vegan)** _(main, thai)_ — `noodle_pad_see_ew_vegan_162330`
+- **Pad See Ew maîtrisé** _(main, thai)_ — `noodle_pad_see_ew_classic_v3_n8x4p2`
+- **Pad Thai** _(soup, thai)_ — `soup_pad_thai_cfe090`
+- **Pad Thai (Vegan)** _(main, thai)_ — `protein_pad_thai_vegan_33c0f3`
+- **Pad thaï végétarien** _(main, thai)_ — `wok_thai_veg_eb92db`
+- **Paella** _(vegan, main, spanish)_ — `rice_paella_e8b8b3`
+- **Paella de Verduras** _(vegan, main, spanish)_ — `rice_paella_de_verduras_8e54fd`
+- **Paella végétarienne maîtrisée** _(vegan, main, spanish)_ — `rice_paella_veg_classic_v4_s9k2x1`
+- **Paella végétarienne traditionnelle** _(vegan, main, spanish)_ — `rice_paella_veg_c7m3x1`
+- **Pain au Fromage Brésilien** _(main, brazilian)_ — `egg_pain_au_fromage_bresilien_603bf5`
+- **Pain aux Bananes Vegan** _(vegan, breakfast, american)_ — `brkf_pain_aux_bananes_vegan_b85f00`
+- **Pain d'Épices** _(dessert, french)_ — `dessert_pain_d_epices_754c93`
+- **Pain de Campagne** _(vegan, side, french)_ — `side_pain_de_campagne_31cbd7`
+- **Pain Perdu** _(breakfast, french)_ — `brkf_pain_perdu_653f48`
+- **Pak Choï Sauté** _(vegan, main, chinese)_ — `wok_pak_choi_saute_62b974`
+- **Pakora** _(vegan, snack, indian)_ — `dal_pakora_b418ab`
+- **Palak Paneer** _(main, indian)_ — `curry_palak_paneer_b4ca11`
+- **Palak Paneer (Vegan)** _(vegan, main, indian)_ — `protein_palak_paneer_vegan_bdac46`
+- **Palak Paneer maîtrisé** _(main, indian)_ — `curry_palak_paneer_classic_v4_m8x3p1`
+- **Pan Con Tomate** _(vegan, main, international)_ — `bread_pan_con_tomate_06a94e`
+- **Pancakes Banane Vegan** _(vegan, breakfast, american)_ — `brkf_pancakes_banane_vegan_c9231e`
+- **Pancakes Ricotta Citron** _(breakfast, international)_ — `brkf_pancakes_ricotta_citron_847c9a`
+- **Pancakes salés ultra structurés** _(snack, international)_ — `crepe_pancakes_sales_ultra_stru_1e8bd8`
+- **Pancit** _(main, philippine)_ — `rice_pancit_bfd33e`
+- **Paneer** _(base, indian)_ — `base_paneer_04e1db`
+- **Paneer Butter Masala** _(main, indian)_ — `curry_paneer_butter_masala_9e638c`
+- **Paneer Butter Masala (Vegan)** _(main, indian)_ — `protein_paneer_butter_masala_vega_6c63de`
+- **Paneer Butter Masala maîtrisé** _(main, indian)_ — `curry_paneer_butter_masala_classic_v4_z7x3p2`
+- **Paneer Tikka** _(main, indian)_ — `protein_paneer_tikka_94f80a`
+- **Paneer Tikka (Vegan)** _(vegan, main, indian)_ — `protein_paneer_tikka_vegan_8bf0a0`
+- **Panna Cotta Coco Vegan** _(vegan, dessert, international)_ — `dessert_panna_cotta_coco_vegan_16d6b5`
+- **Panzanella** _(vegan, main, international)_ — `bread_panzanella_f753c6`
+- **Panzanella Italienne** _(vegan, main, italian)_ — `bread_panzanella_italienne_307da1`
+- **Papaya Salad** _(vegan, main, laotian)_ — `main_papaya_salad_918f58`
+- **Parmigiana Di Melanzane** _(main, italian)_ — `main_parmigiana_di_melanzane_6bd49f`
+- **Parmigiana Di Melanzane (Vegan)** _(main, italian)_ — `main_parmigiana_di_melanzane_v_8f8b8b`
+- **Pasta Al Pomodoro** _(main, italian)_ — `pasta_pasta_al_pomodoro_3ffaef`
+- **Pasta Alla Norma** _(main, italian)_ — `pasta_pasta_alla_norma_5cc26e`
+- **Pasta Alla Norma (Vegan)** _(main, italian)_ — `pasta_pasta_alla_norma_vegan_6e1a92`
+- **Pasta Alla Norma à la Ricotta Salée** _(main, italian)_ — `pasta_pasta_alla_norma_a_la_ricotta__1538f4`
+- **Pasta Alla Norma à la Ricotta Salée (Vegan)** _(main, italian)_ — `pasta_pasta_alla_norma_a_la_ric_d282a6`
+- **Pasta E Fagioli** _(main, italian)_ — `pasta_pasta_e_fagioli_68905b`
+- **Pasta Primavera rapide** _(main, italian)_ — `pasta_primavera_quick_3f5fc5`
+- **Pasta Puttanesca** _(vegan, main, italian)_ — `pasta_pasta_puttanesca_e14266`
+- **Patatas Bravas** _(vegan, main, spanish)_ — `main_patatas_bravas_98ec00`
+- **Patates Douces Rôties au Miso** _(vegan, side, japanese)_ — `side_patates_douces_roties_au_746605`
+- **Pav Bhaji** _(main, international)_ — `main_pav_bhaji_e99df8`
+- **Pav Bhaji (Vegan)** _(main, indian)_ — `main_pav_bhaji_vegan_c1437e`
+- **Persian Ash Reshteh** _(main, american)_ — `pasta_persian_ash_reshteh_8cb79c`
+- **Persian Ash Reshteh (Vegan)** _(vegan, soup, iranian)_ — `soup_persian_ash_reshteh_vegan_968f7d`
+- **Persian Herb Stew** _(vegan, main, persian)_ — `stew_persian_herb_stew_485f3e`
+- **Persian Lentil Soup** _(main, persian)_ — `dal_persian_lentil_soup_71e221`
+- **Peruvian Quinoa Stew** _(vegan, main, peruvian)_ — `stew_peruvian_quinoa_stew_1180bf`
+- **Pesto Genovese** _(sauce, italian)_ — `base_pesto_905db7`
+- **Petits Pois à la Française** _(side, french)_ — `side_petits_pois_a_la_francais_1aa736`
+- **Pho** _(vegan, soup, vietnamese)_ — `soup_pho_ba7e1e`
+- **Pickle d'aubergines sri lankais** _(vegan, side, sri_lankan)_ — `side_eggplant_k1d1p1`
+- **Pico de Gallo** _(vegan, main, international)_ — `main_pico_de_gallo_31e006`
+- **Pierogi aux Champignons** _(main, polish)_ — `dumpling_pierogi_aux_champignons_d86017`
+- **Pierogi aux Champignons (Vegan)** _(main, polish)_ — `dumpling_pierogi_aux_champignons_v_beca85`
+- **Pierogi aux pommes de terre** _(main, polish)_ — `pasta_pierogi_aux_pommes_de_6b3efe`
+- **Pierogi aux Pommes de Terre (Vegan)** _(main, polish)_ — `dumpling_pierogi_aux_pommes_de_ter_24a890`
+- **Pierogi Pommes de Terre** _(main, polish)_ — `dumpling_pierogi_pommes_de_terre_ca9985`
+- **Piperade Basque** _(main, french_basque)_ — `main_piperade_basque_3e1c65`
+- **Pisto Espagnol** _(vegan, main, spanish)_ — `main_pisto_espagnol_7a98be`
+- **Pisto Manchego** _(main, spanish)_ — `main_pisto_manchego_09ba97`
+- **Pistou** _(vegan, sauce, french)_ — `base_pistou_43e29a`
+- **Pita aux Épinards** _(main, levantine)_ — `egg_pita_aux_epinards_f1f6ff`
+- **Pizza Margherita** _(main, italian)_ — `tarte_margherita_v7k2d1`
+- **Pizza Margherita (Vegan)** _(vegan, main, italian)_ — `tarte_pizza_margherita_vegan_02bb9a`
+- **Pkhali** _(vegan, main, georgian)_ — `main_pkhali_46d354`
+- **Plantain Frit au Citron** _(vegan, side, west_african)_ — `main_plantain_frit_au_citron_60d4e3`
+- **Plantain Frit Nature** _(vegan, side, west_african)_ — `main_plantain_frit_nature_323054`
+- **Plov** _(vegan, main, uzbek)_ — `rice_plov_903de4`
+- **Pois Chiches Rôtis** _(vegan, side, international)_ — `dal_pois_chiches_rotis_ff8cc6`
+- **Poivrons Farcis** _(vegan, main, international)_ — `rice_poivrons_farcis_447217`
+- **Poivrons Farcis au Riz** _(main, international)_ — `rice_poivrons_farcis_au_riz_be3ddc`
+- **Poivrons farcis végétariens à riz structurés** _(vegan, main, mediterranean)_ — `rice_poivrons_farcis_vegetarie_f6c4f5`
+- **Poke Bowl** _(vegan, main, international)_ — `rice_poke_bowl_ee65ef`
+- **Polenta Ai Funghi** _(main, international)_ — `main_polenta_ai_funghi_b96235`
+- **Polenta Ai Funghi (Vegan)** _(main, italian)_ — `main_polenta_ai_funghi_vegan_ab13cd`
+- **Polenta aux Champignons** _(main, international)_ — `main_polenta_aux_champignons_5af074`
+- **Polenta aux Champignons (Vegan)** _(main, italian)_ — `main_polenta_aux_champignons_v_b0e1ad`
+- **Pommes Dauphine** _(side, french)_ — `side_pommes_dauphine_73a2c7`
+- **Pommes de Terre Braisées Coréennes** _(vegan, main, korean)_ — `main_pommes_de_terre_braisees_7a56a8`
+- **Pommes de Terre Sauce Huancaína** _(main, peruvian)_ — `sauce_pommes_de_terre_sauce_hua_3304de`
+- **Pommes de terre sautées** _(vegan, main, french)_ — `wok_pommes_de_terre_sautees_8bafe1`
+- **Porridge Pomme Cannelle** _(breakfast, international)_ — `brkf_porridge_pomme_cannelle_9af096`
+- **Potage de Patate Douce** _(soup, international)_ — `soup_potage_de_patate_douce_e4b521`
+- **Potage Parmentier** _(soup, french)_ — `soup_potage_parmentier_9685a7`
+- **Potage Saint-Germain** _(soup, french)_ — `soup_potage_saint_germain_e23f6b`
+- **Potimarron Rôti aux Épices** _(vegan, side, levantine)_ — `side_potimarron_roti_aux_epice_b9c552`
+- **Potée Auvergnate** _(vegan, main, french_auvergnat)_ — `main_potee_auvergnate_fcc003`
+- **Poutine** _(main, canadian)_ — `main_poutine_1344e1`
+- **Poutine (Vegan)** _(vegan, main, canadian)_ — `main_poutine_vegan_18f8c2`
+- **Pozole** _(vegan, main, mexican)_ — `main_pozole_82d096`
+- **Poêlée de légumes** _(vegan, main, international)_ — `main_poelee_de_legumes_f74508`
+- **Poêlée Scandinave de Légumes et Pommes de Terre** _(vegan, main, nordic)_ — `main_poelee_scandinave_de_legu_31947f`
+- **Profiteroles** _(dessert, french)_ — `dessert_profiteroles_0d0e42`
+- **Pulao** _(vegan, main, indian)_ — `rice_vegetable_pulao_a0ed3e`
+- **Pupusas** _(main, ethiopian)_ — `main_pupusas_9d2c72`
+- **Pupusas (Vegan)** _(main, salvadoran)_ — `main_pupusas_vegan_4595d8`
+- **Pupusas aux Haricots** _(main, ethiopian)_ — `main_pupusas_aux_haricots_fc8bfd`
+- **Pupusas aux Haricots (Vegan)** _(main, salvadoran)_ — `main_pupusas_aux_haricots_vega_0e0c06`
+- **Purée de Céleri-Rave Vegan** _(side, french)_ — `side_puree_de_celerirave_vegan_a55054`
+- **Purée de pommes de terre** _(side, french)_ — `side_potatoes_k3d2p1`
+- **Purée de pommes de terre classique** _(side, french)_ — `side_potato_classic_v3_z8m2k7`
+- **Pâte Brisée** _(bread, french)_ — `base_shortcrust_e6e9f0`
+- **Pâte de Curry** _(vegan, paste, thai)_ — `base_curry_paste_49c97f`
+- **Pâte de Curry Jaune** _(vegan, paste, thai)_ — `yellow_curry_paste_077f54`
+- **Pâte de Curry Rouge Thaï** _(vegan, paste, thai)_ — `red_curry_paste_3ee8f5`
+- **Pâte de Curry Vert Thaï** _(vegan, paste, thai)_ — `base_green_curry_paste_250117`
+- **Pâte de Haricot Fermenté (Doenjang)** _(vegan, condiment, korean)_ — `base_fermented_bean_paste_817412`
+- **Pâte de Laksa** _(vegan, sauce, malaysian)_ — `base_laksa_paste_bc7fd5`
+- **Pâte de Miso** _(vegan, sauce, japanese)_ — `base_miso_paste_1faeef`
+- **Pâte de Piment** _(vegan, sauce, asian)_ — `base_pate_piment_b6904a`
+- **Pâte de Piment Maison** _(vegan, paste, asian)_ — `chili_paste_95cb92`
+- **Pâte de Tamarin** _(vegan, paste, asian)_ — `tamarind_paste_b740bb`
+- **Pâte Doubanjiang** _(vegan, sauce, sichuan)_ — `base_doubanjiang_paste_340399`
+- **Pâte Feuilletée** _(bread, french)_ — `base_puff_pastry_fca43b`
+- **Pâte à Empanada** _(bread, chilean)_ — `base_empanada_dough_65661a`
+- **Pâte à Pizza** _(vegan, bread, italian)_ — `base_pizza_dough_6fdabd`
+- **Pâte à Samosa** _(vegan, pastry, indian)_ — `samosa_dough_c03717`
+- **Pâte à Samosa (base)** _(vegan, pastry, indian)_ — `base_samosa_77fac4`
+- **Pâtes Alfredo** _(main, italian)_ — `pasta_alfredo_k3d2p1`
+- **Pâtes arrabbiata** _(vegan, main, italian)_ — `pasta_arrabbiata_a51938`
+- **Pâtes carbonara** _(main, italian)_ — `pasta_pates_carbonara_7e4f1a`
+- **Pâtes carbonara végétarienne** _(main, italian)_ — `pasta_carbonara_veg_k3d2p1`
+- **Pâtes et Haricots** _(main, italian)_ — `pasta_pates_et_haricots_f46830`
+- **Pâtes nature** _(vegan, main, italian)_ — `pasta_plain_k2d1p1`
+- **Pâtes pesto** _(main, italian)_ — `pasta_pesto_k3d2p1`
+- **Pâtes Primavera** _(main, italian)_ — `pasta_pates_primavera_74711d`
+- **Pâtes puttanesca végétariennes** _(vegan, main, italian)_ — `pasta_puttanesca_v1x9q2`
+- **Pâté de Champignons Vegan** _(starter, french)_ — `entry_pate_de_champignons_vegan_b2af97`
+
+## Q
+
+- **Quenelles de Pain** _(main, german)_ — `bread_quenelles_de_pain_813118`
+- **Quesadillas** _(main, mexican)_ — `wrap_quesadillas_c8edf2`
+- **Quesadillas (Vegan)** _(main, mexican)_ — `wrap_quesadillas_vegan_f68baa`
+- **Quesadillas au Fromage** _(main, mexican)_ — `wrap_quesadillas_au_fromage_511e1a`
+- **Quesadillas au Fromage (Vegan)** _(main, mexican)_ — `wrap_quesadillas_au_fromage_ve_9794c7`
+- **Quiche (végétarienne)** _(main, french)_ — `tarte_quiche_vegetarienne_b849b0`
+- **Quiche Lorraine** _(main, french)_ — `tarte_quiche_lorraine_7033e4`
+- **Quiche Lorraine (végétarienne)** _(main, french)_ — `egg_quiche_lorraine_vegetarienne_77343c`
+
+## R
+
+- **Ragoût d'aubergine maîtrisé** _(vegan, main, mediterranean)_ — `stew_eggplant_classic_5d46a1`
+- **Ragoût de Haricots et Maïs** _(vegan, main, international)_ — `stew_ragout_de_haricots_et_mai_122538`
+- **Ragoût de lentilles** _(vegan, main, french)_ — `stew_lentil_classic_v5_h9k3p2`
+- **Ragoût de lentilles structuré à base aromatique** _(vegan, main, french)_ — `stew_lentil_classic_0adae5`
+- **Ragoût de Lentilles Épicé** _(vegan, main, ethiopian)_ — `dal_ragout_de_lentilles_epice_7ee9be`
+- **Ragoût de Plantain** _(vegan, main, west_african)_ — `stew_ragout_de_plantain_2140eb`
+- **Ragoût de Pois Chiches Moulus** _(vegan, main, ethiopian)_ — `dal_ragout_de_pois_chiches_moulus_f64412`
+- **Ragoût géorgien d'aubergines** _(vegan, main, georgian)_ — `stew_ajapsandali_m8d4q1`
+- **Rajma Masala** _(vegan, main, indian)_ — `main_rajma_masala_bce2a4`
+- **Ramen au Miso** _(soup, japanese)_ — `soup_ramen_au_miso_f69c22`
+- **Ras el Hanout** _(vegan, condiment, moroccan)_ — `base_ras_el_hanout_7cd544`
+- **Rasam** _(vegan, main, international)_ — `main_rasam_34dc5a`
+- **Ratatouille niçoise traditionnelle** _(vegan, main, french)_ — `stew_ratatouille_k8d2p4`
+- **Ratatouille rapide** _(vegan, main, french)_ — `main_ratatouille_quick_6eb9af`
+- **Revithia** _(vegan, main, international)_ — `dal_revithia_922f79`
+- **Ribollita Toscane** _(vegan, main, international)_ — `main_ribollita_toscane_4cae34`
+- **Ricotta de Cajou** _(vegan, base, international)_ — `base_cashew_ricotta_5c62e9`
+- **Ricotta Salée** _(ingredient, italian)_ — `base_salted_ricotta_1ecd1c`
+- **Rillettes de Courgettes au Citron** _(starter, french)_ — `entry_rillettes_de_courgettes_a_f46f26`
+- **Rillettes Lentilles Corail** _(vegan, starter, international)_ — `entry_rillettes_lentilles_corai_40d7dc`
+- **Risotto Ai Funghi** _(main, italian)_ — `rice_risotto_ai_funghi_395f00`
+- **Risotto Ai Funghi (Vegan)** _(main, italian)_ — `rice_risotto_ai_funghi_vegan_41360e`
+- **Risotto Al Limone** _(main, italian)_ — `rice_risotto_al_limone_4088e5`
+- **Risotto Al Limone (Vegan)** _(main, italian)_ — `rice_risotto_al_limone_vegan_a234ae`
+- **Risotto aux champignons** _(main, italian)_ — `rice_risotto_aux_champignon_25ed38`
+- **Risotto aux Champignons (Vegan)** _(main, italian)_ — `rice_risotto_aux_champignons_v_13d611`
+- **Risotto Citron Asperges** _(main, italian)_ — `rice_risotto_citron_asperges_f2f765`
+- **Risotto Citron Asperges (Vegan)** _(main, italian)_ — `rice_risotto_citron_asperges_v_e20e67`
+- **Riz au curry japonais** _(vegan, main, japanese)_ — `curry_japonais_1caddf`
+- **Riz au Lait Coco Vegan** _(vegan, dessert, international)_ — `dessert_lait_coco_vegan_3b8a99`
+- **Riz au Lait Vanille** _(dessert, french)_ — `dessert_lait_vanille_cddf17`
+- **Riz blanc** _(vegan, main, international)_ — `rice_white_k1d1p1`
+- **Riz Cantonais** _(main, chinese)_ — `main_fried_rice_a6e811`
+- **Riz Cantonais (base)** _(main, chinese)_ — `base_fried_rice_f230b0`
+- **Riz Citronné Indien** _(vegan, side, indian)_ — `rice_riz_citronne_indien_05c717`
+- **Riz et haricots caribéens** _(vegan, main, caribbean)_ — `rice_rice_and_beans_caribeen_e3de29`
+- **Riz et Pois Caribéen** _(main, caribbean)_ — `rice_riz_et_pois_caribeen_72144c`
+- **Riz Frit** _(main, international)_ — `rice_riz_frit_2763d3`
+- **Riz Frit (Vegan)** _(side, chinese)_ — `side_riz_frit_vegan_d17d25`
+- **Riz Jollof** _(vegan, main, nigerian)_ — `rice_riz_jollof_360727`
+- **Riz Pilaf Turc** _(main, turkish)_ — `rice_riz_pilaf_turc_52cfe9`
+- **Riz Pilaf Turc (Vegan)** _(side, turkish)_ — `side_riz_pilaf_turc_vegan_3bb995`
+- **Riz sauté** _(main, chinese)_ — `rice_fried_classic_v2_k4m8t1`
+- **Riz sauté au kimchi** _(main, korean)_ — `rice_kimchi_fried_rice_1f3e90`
+- **Riz sauté au kimchi (vegan)** _(main, korean)_ — `rice_riz_saute_au_kimchi_vegan_af038b`
+- **Riz Sauté aux Légumes** _(main, international)_ — `rice_vegetable_fried_rice_cd489b`
+- **Riz sauté chinois (vegan)** _(main, chinese)_ — `rice_fried_rice_chinois_vegan_c2b92d`
+- **Riz sauté à la chinoise** _(main, chinese)_ — `rice_fried_rice_chinois_9d1d40`
+- **Riz à la Tomate Portugais** _(vegan, main, portuguese)_ — `rice_riz_a_la_tomate_portugais_c6cec0`
+- **Romanian ZacuscÄƒ** _(vegan, main, romanian)_ — `main_romanian_zacusc_a929ee`
+- **Rouleaux de Printemps Frits** _(vegan, main, vietnamese)_ — `rice_rouleaux_de_printemps_frits_e4d172`
+- **Roux Curry Japonais** _(roux, japanese)_ — `base_japanese_curry_roux_385e52`
+- **Rösti** _(side, swiss)_ — `side_rosti_4ec9f8`
+- **Rösti (Vegan)** _(snack, swiss)_ — `snack_rosti_vegan_be15a2`
+
+## S
+
+- **Sabich** _(main, levantine)_ — `egg_sabich_b270c4`
+- **Sabzi Polo** _(side, persian)_ — `rice_sabzi_polo_e099d2`
+- **Sabzi Polo (Vegan)** _(side, iranian)_ — `side_sabzi_polo_vegan_7bf9df`
+- **Sabzi Sabz** _(vegan, main, persian)_ — `dal_sabzi_sabz_592004`
+- **Salade Achichuk** _(vegan, main, uzbek)_ — `salad_achichuk_e3f0c9`
+- **Salade Andine au Fromage** _(main, bolivian)_ — `salad_andine_au_fromage_c537bd`
+- **Salade Andine au Fromage (Vegan)** _(main, andean)_ — `salad_andine_au_fromage_vegan_566f05`
+- **Salade Asiatique Sésame** _(vegan, main, international)_ — `salad_asiatique_sesame_948f03`
+- **Salade caprese** _(main, italian)_ — `salad_caprese_classic_k21x9d`
+- **Salade Chilienne Tomate-oignon** _(vegan, main, american)_ — `salad_chilienne_tomateoignon_288941`
+- **Salade composée structurée** _(main, french)_ — `salad_mixed_classic_v2a1b2`
+- **Salade composée structurée optimisée** _(main, french)_ — `salad_mixed_structured_v2_p9x4m2`
+- **Salade Couscous Méditerranéenne** _(vegan, main, moroccan)_ — `couscous_couscous_mediterraneenne_bdf9d9`
+- **Salade D'attiéké** _(vegan, main, international)_ — `salad_dattieke_7824bf`
+- **Salade D'aubergine Philippine** _(vegan, main, philippine)_ — `salad_daubergine_philippine_6f16b2`
+- **Salade D'aubergines Marocaine** _(vegan, main, moroccan)_ — `salad_daubergines_marocaine_03fd77`
+- **Salade de Boulgour Turque** _(vegan, main, turkish)_ — `salad_de_boulgour_turque_f80124`
+- **Salade de Chèvre Chaud** _(starter, french)_ — `entry_de_chevre_chaud_a407cd`
+- **Salade de Concombre Japonaise** _(vegan, side, japanese)_ — `rice_salade_de_concombre_japonaise_d66133`
+- **Salade de Haricots aux Yeux Noirs** _(vegan, side, brazilian)_ — `salad_de_haricots_aux_yeux_noir_f442f9`
+- **Salade de lentilles** _(vegan, side, french)_ — `salad_lentil_classic_v3_r7p2k8`
+- **Salade de Lentilles Éthiopienne** _(vegan, main, ethiopian)_ — `dal_salade_de_lentilles_ethiopienn_5a9dd6`
+- **Salade de Papaye Vietnamienne** _(vegan, main, vietnamese)_ — `salad_de_papaye_vietnamienne_add574`
+- **Salade de Pois Chiches** _(vegan, main, international)_ — `dal_salade_de_pois_chiches_2e32de`
+- **Salade de Poivrons et Tomates** _(vegan, main, international)_ — `salad_de_poivrons_et_tomates_d5f4ec`
+- **Salade de Pommes de Terre Allemande** _(vegan, main, german)_ — `salad_de_pommes_de_terre_allema_3cdeab`
+- **Salade de Pousses de Soja Coréenne** _(vegan, side, korean)_ — `salad_de_pousses_de_soja_coreen_d07502`
+- **Salade de Quinoa** _(vegan, main, international)_ — `salad_de_quinoa_e74dea`
+- **Salade de riz** _(vegan, main, international)_ — `rice_salad_k3d2p1`
+- **Salade Fattoush** _(vegan, main, lebanese)_ — `salad_fattoush_035977`
+- **Salade Fattoush au Radis** _(vegan, main, lebanese)_ — `salad_fattoush_au_radis_8dab85`
+- **Salade grecque** _(main, greek)_ — `salad_greek_classic_v2_t4m8q1`
+- **Salade Grecque Classique** _(main, greek)_ — `salad_grecque_classique_f83c30`
+- **Salade Grecque Classique (Vegan)** _(main, greek)_ — `salad_grecque_classique_vegan_a9f9a4`
+- **Salade Grecque Simplifiée** _(main, greek)_ — `salad_grecque_simplifiee_34b852`
+- **Salade Grecque Simplifiée (Vegan)** _(main, greek)_ — `salad_grecque_simplifiee_vegan_ec9ed5`
+- **Salade Grillée Tunisienne** _(vegan, main, tunisian)_ — `salad_grillee_tunisienne_dcb033`
+- **Salade Lyonnaise** _(side, french_lyonnaise)_ — `salad_salade_lyonnaise_f54cfd`
+- **Salade Mexicaine aux Haricots** _(vegan, main, mexican)_ — `salad_mexicaine_aux_haricots_949e62`
+- **Salade Mâche aux Noix** _(side, french)_ — `salad_salade_mache_aux_noix_081567`
+- **Salade Niçoise** _(main, french)_ — `salad_nicoise_3b123f`
+- **Salade Shopska** _(main, bulgarian)_ — `salad_shopska_04dd73`
+- **Salade Shopska (Vegan)** _(main, bulgarian)_ — `salad_shopska_vegan_001f9e`
+- **Salade Turque Çoban** _(vegan, main, turkish)_ — `salad_turque_coban_cdd8c4`
+- **Salmorejo** _(main, international)_ — `bread_salmorejo_a156e9`
+- **Salmorejo (Vegan)** _(vegan, starter, spanish)_ — `entry_salmorejo_vegan_d0b7f7`
+- **Sambar** _(vegan, main, international)_ — `dal_sambar_581de8`
+- **Sambar Indien** _(vegan, main, indian)_ — `dal_sambar_indien_fcf6d8`
+- **Samosa** _(snack, chinese)_ — `snack_vegetable_samosa_088bfa`
+- **Sancocho** _(vegan, main, dominican)_ — `main_sancocho_733f70`
+- **Sandwich végétarien** _(snack, international)_ — `snack_veg_k3d2p1`
+- **Sauce au Yaourt** _(sauce, middle_eastern)_ — `base_sauce_yogurt_0bfeaf`
+- **Sauce Brune Végétarienne** _(vegan, sauce, western)_ — `vegetarian_brown_sauce_4233df`
+- **Sauce Cacahuète** _(vegan, sauce, indonesian)_ — `base_sauce_peanut_d92c5c`
+- **Sauce Hoisin** _(vegan, sauce, chinese)_ — `base_hoisin_033e33`
+- **Sauce Huître Végétarienne** _(vegan, sauce, chinese)_ — `base_vegetarian_oyster_sauce_b74b21`
+- **Sauce Mole Végétarienne** _(vegan, sauce, mexican)_ — `base_mole_d0034f`
+- **Sauce Okonomiyaki** _(vegan, sauce, japanese)_ — `base_okonomiyaki_1e5fba`
+- **Sauce Poisson Végétarienne** _(vegan, sauce, southeast_asian)_ — `base_vegetarian_fish_sauce_536a33`
+- **Sauce Ponzu** _(vegan, sauce, japanese)_ — `base_ponzu_7479fe`
+- **Sauce Sriracha** _(vegan, sauce, thai)_ — `base_sriracha_19895c`
+- **Sauce Teriyaki** _(vegan, sauce, japanese)_ — `base_teriyaki_03b2ff`
+- **Sauce Tomate** _(vegan, sauce, italian)_ — `base_sauce_tomate_926bfa`
+- **Sauce Worcestershire Végane** _(vegan, sauce, british)_ — `base_worcestershire_vegan_5f26ec`
+- **Seitan** _(vegan, main, japanese)_ — `base_seitan_249032`
+- **Serbian ÄuveÄ** _(vegan, main, serbian)_ — `rice_serbian_uve_4a83e2`
+- **Shakshouka** _(main, tunisian)_ — `egg_shakshuka_v8f3k2`
+- **Shakshouka Douce** _(main, international)_ — `egg_shakshouka_douce_12b34f`
+- **Shakshouka Épicée** _(main, international)_ — `egg_shakshouka_epicee_759f26`
+- **Shakshuka** _(main, tunisian)_ — `egg_shakshuka_eb137b`
+- **Shakshuka (Vegan)** _(breakfast, levantine)_ — `brkf_shakshuka_vegan_81fa9a`
+- **Shakshuka Verte** _(breakfast, levantine)_ — `brkf_shakshuka_verte_ad7779`
+- **Shorbat Adas** _(vegan, main, iraqi)_ — `dal_shorbat_adas_d4f98a`
+- **Skordalia** _(vegan, starter, greek)_ — `entry_skordalia_18cd77`
+- **Slovak Potato Dumplings** _(main, slovak)_ — `egg_slovak_potato_dumplings_e85ebb`
+- **Smoothie Bowl Açaï** _(breakfast, brazilian)_ — `brkf_smoothie_bowl_acai_7cf6e0`
+- **Smoothie Vert Épinards Banane** _(breakfast, international)_ — `brkf_smoothie_vert_epinards_ba_eb4142`
+- **Sopa Paraguaya** _(main, paraguayan)_ — `egg_sopa_paraguaya_43987c`
+- **Sorbet Citron** _(vegan, dessert, french)_ — `dessert_sorbet_citron_f23e8f`
+- **Sorbet Mangue Passion** _(vegan, dessert, international)_ — `dessert_sorbet_mangue_passion_583687`
+- **Soufflé au Fromage** _(starter, french)_ — `entry_souffle_au_fromage_64984b`
+- **Soupe Aigre-piquante** _(soup, chinese)_ — `soup_aigrepiquante_4766fe`
+- **Soupe aigre-piquante** _(soup, chinese)_ — `soup_aigrepiquante_5245bb`
+- **Soupe au Chou** _(vegan, soup, international)_ — `soup_au_chou_4be090`
+- **Soupe au Cresson** _(soup, french)_ — `soup_soupe_au_cresson_fce0c6`
+- **Soupe au Pistou** _(soup, french_provencal)_ — `soup_au_pistou_701fac`
+- **Soupe Carottes au Cumin** _(vegan, soup, french)_ — `soup_soupe_carottes_au_cumin_3903f8`
+- **Soupe Courge Butternut** _(soup, french_fusion)_ — `soup_soupe_courge_butternut_2f5cf3`
+- **Soupe de Châtaignes** _(soup, french)_ — `soup_soupe_de_chataignes_6b8e6f`
+- **Soupe de courge** _(soup, international)_ — `soup_pumpkin_k2d1p1`
+- **Soupe de Gundruk** _(vegan, soup, nepali)_ — `soup_de_gundruk_a62723`
+- **Soupe de Haricots Grecs** _(vegan, soup, greek)_ — `soup_de_haricots_grecs_a96296`
+- **Soupe de Lentilles** _(vegan, main, international)_ — `dal_soupe_de_lentilles_621239`
+- **Soupe de légumes** _(vegan, main, international)_ — `main_soup_k3d2p1`
+- **Soupe de Nouilles Thukpa** _(main, international)_ — `pasta_soupe_de_nouilles_thukpa_9c3ce8`
+- **Soupe de Pain à la Tomate** _(vegan, main, ethiopian)_ — `bread_de_pain_a_la_tomate_14891a`
+- **Soupe de Pois Cassés** _(vegan, soup, african)_ — `soup_de_pois_casses_58fc34`
+- **Soupe de Pois Chiches Tunisienne** _(vegan, main, tunisian)_ — `dal_soupe_de_pois_chiches_tunisien_86e4b0`
+- **Soupe de Pois Scandinave** _(vegan, soup, swedish)_ — `soup_de_pois_scandinave_ec245b`
+- **Soupe de Potiron Caribéenne** _(soup, caribbean)_ — `soup_de_potiron_caribeenne_a0fabd`
+- **Soupe de Quinoa** _(vegan, soup, international)_ — `soup_de_quinoa_2df148`
+- **Soupe de Riz Mastava** _(main, persian)_ — `rice_soupe_de_riz_mastava_6db971`
+- **Soupe de tomate** _(soup, international)_ — `soup_tomato_k2d1p1`
+- **Soupe de Topinambours** _(soup, french)_ — `soup_soupe_de_topinambours_175dc4`
+- **Soupe Laksa Coco** _(soup, malaysian)_ — `soup_soupe_laksa_coco_729105`
+- **Soupe Lentilles Turque** _(vegan, main, turkish)_ — `dal_soupe_lentilles_turque_e797cb`
+- **Soupe Lentilles Turque (Vegan)** _(vegan, soup, turkish)_ — `soup_lentilles_turque_vegan_c2febf`
+- **Soupe Minestrone** _(soup, italian)_ — `soup_minestrone_9116a2`
+- **Soupe Minestrone (Vegan)** _(soup, italian)_ — `soup_minestrone_vegan_10bf61`
+- **Soupe Minestrone Italienne** _(soup, italian)_ — `soup_minestrone_italienne_f98e05`
+- **Soupe miso** _(vegan, soup, japanese)_ — `soup_miso_k2d1p1`
+- **Soupe miso traditionnelle** _(vegan, soup, japanese)_ — `soup_miso_classic_v4_r7m2k9`
+- **Soupe Pois Cassés** _(vegan, soup, international)_ — `soup_pois_casses_cf435c`
+- **Soupe Ribollita** _(vegan, main, international)_ — `bread_ribollita_d191b3`
+- **Soupe Thaï Coco Citronnelle** _(soup, thai)_ — `soup_soupe_thai_coco_citronnelle_375c23`
+- **Soupe Udon** _(vegan, soup, japanese)_ — `soup_udon_da9371`
+- **Soupe Udon Miso** _(vegan, soup, japanese)_ — `soup_udon_miso_ef1ceb`
+- **Soupe à l'oignon** _(soup, french)_ — `soup_soup_k3d2p1`
+- **Soupe à l'Oignon au Thym** _(soup, international)_ — `soup_soupe_a_l_oignon_au_thym_4c6c6f`
+- **Soupe à l'Oignon au Thym (Vegan)** _(soup, french)_ — `soup_a_l_oignon_au_thym_vegan_bf7d2f`
+- **Soupe à l'Oignon Gratinée** _(soup, french)_ — `soup_soupe_a_l_oignon_gratinee_f0fd17`
+- **Soupe à l'Oignon Gratinée (Vegan)** _(soup, french)_ — `soup_a_l_oignon_gratinee_vegan_826f59`
+- **Spanakopita** _(main, greek)_ — `egg_spanakopita_f5da1b`
+- **Spanakopita à la Muscade** _(main, greek)_ — `egg_spanakopita_a_la_muscade_9f26d0`
+- **Spanakopita à la Muscade (Vegan)** _(main, greek)_ — `bread_spanakopita_a_la_muscade_6a9e84`
+- **Spring Rolls** _(vegan, main, vietnamese)_ — `rice_spring_rolls_45fdfa`
+- **Spätzle (Pâtes Alsaciennes)** _(main, alsatian)_ — `base_spaetzle_a22916`
+- **Spätzle au Fromage** _(main, german)_ — `main_spatzle_au_fromage_586859`
+- **Sri Lankan Dhal Curry** _(main, sri_lankan)_ — `dal_sri_lankan_dhal_curry_fae1be`
+- **Sri Lankan Jackfruit Curry** _(main, sri_lankan)_ — `curry_sri_lankan_jackfruit_1cff43`
+- **Sri Lankan Pumpkin Curry** _(main, sri_lankan)_ — `curry_sri_lankan_pumpkin_7f1edb`
+- **Sundubu Jjigae** _(main, korean)_ — `egg_sundubu_jjigae_bc21e0`
+- **Sundubu Tofu Stew** _(main, korean)_ — `stew_sundubu_tofu_stew_ebe50e`
+- **Sushi** _(vegan, main, japanese)_ — `rice_vegetable_sushi_9aad8a`
+
+## T
+
+- **Tabbouleh de Sarrasin** _(vegan, side, international)_ — `side_tabbouleh_de_sarrasin_7e68ad`
+- **Taboulé** _(vegan, main, international)_ — `main_taboule_760c36`
+- **Taboulé libanais traditionnel** _(vegan, main, lebanese)_ — `salad_tabbouleh_f7x2p9`
+- **Taboulé Libanais à la Grenade** _(vegan, starter, lebanese)_ — `entry_taboule_libanais_a_la_gre_cae147`
+- **Tacos** _(vegan, main, mexican)_ — `bread_tacos_6fd5c2`
+- **Tacu Tacu** _(vegan, main, peruvian)_ — `rice_tacu_tacu_9e0073`
+- **Tahini** _(vegan, sauce, levantine)_ — `base_tahini_030e18`
+- **Tajine Pois Chiches Citron** _(vegan, main, international)_ — `dal_tajine_pois_chiches_citron_047521`
+- **Tamales** _(soup, american)_ — `soup_tamales_7dd98a`
+- **Tamales (Vegan)** _(snack, mexican)_ — `snack_tamales_vegan_d7cbdc`
+- **Tamarind Rice** _(vegan, side, american)_ — `rice_tamarind_rice_2e5463`
+- **Tapenade d'Olives Noires** _(vegan, starter, french)_ — `entry_tapenade_d_olives_noires_ed6d5d`
+- **Tarte aux Fraises** _(dessert, french)_ — `dessert_tarte_aux_fraises_a05bbd`
+- **Tarte Citron Meringuée** _(dessert, french)_ — `dessert_tarte_citron_meringuee_7f6440`
+- **Tarte Flambée Sucrée Pomme** _(breakfast, french)_ — `brkf_tarte_flambee_sucree_pomm_585c30`
+- **Tarte Oignon Alsacienne** _(main, french_alsatian)_ — `main_tarte_oignon_alsacienne_c49dd2`
+- **Tarte Pommes Normande** _(dessert, french_normand)_ — `dessert_tarte_pommes_normande_f10299`
+- **Tarte Roquefort et Noix** _(main, french_auvergnat)_ — `main_tarte_roquefort_et_noix_b24bec`
+- **Tarte Soleil Pesto** _(snack, french_provencal)_ — `snack_tarte_soleil_pesto_46f867`
+- **Tarte Tatin** _(dessert, french)_ — `dessert_tarte_tatin_9c0f67`
+- **Tarte Tatin Vegan** _(dessert, french)_ — `dessert_tarte_tatin_vegan_1ae13b`
+- **Tarte à la Tomate** _(vegan, main, french_provencal)_ — `main_tarte_a_la_tomate_a1d175`
+- **Tartines Beurre Amande Banane** _(breakfast, international)_ — `brkf_tartines_beurre_amande_ba_9f16cc`
+- **Tartines Ricotta Figue Miel** _(breakfast, international)_ — `brkf_tartines_ricotta_figue_mi_6f7590`
+- **Tempeh Frit** _(vegan, snack, indonesian)_ — `tempeh_tempeh_frit_ccb7d2`
+- **Tempeh Teriyaki** _(vegan, main, japanese)_ — `tempeh_tempeh_teriyaki_da1952`
+- **Tempura de Légumes** _(vegan, main, japanese)_ — `main_tempura_de_legumes_20cc9f`
+- **Terrine de Légumes** _(vegan, starter, french)_ — `entry_terrine_de_legumes_e52466`
+- **Terrine Légumes du Soleil** _(starter, french)_ — `entry_terrine_legumes_du_soleil_e5e24a`
+- **Thai Basil Tofu** _(soup, thai)_ — `soup_thai_basil_tofu_c7e4ad`
+- **Thai Green Curry** _(soup, thai)_ — `soup_thai_green_curry_56dfda`
+- **Thai Red Curry** _(soup, thai)_ — `soup_thai_red_curry_f6bb3c`
+- **Tian Provençal** _(vegan, main, international)_ — `main_tian_provencal_4c7999`
+- **Tian Provençal Vegan** _(vegan, side, french)_ — `side_tian_provencal_vegan_886a6d`
+- **Tiramisu Classique** _(dessert, italian)_ — `dessert_tiramisu_classique_ea8ddb`
+- **Toast Avocat Graines** _(vegan, breakfast, international)_ — `brkf_toast_avocat_graines_dfc001`
+- **Tofu Braisé aux Champignons** _(vegan, main, international)_ — `protein_tofu_braise_aux_champigno_c515dd`
+- **Tofu Brouillé aux Herbes** _(breakfast, international)_ — `brkf_tofu_brouille_aux_herbes_eb117c`
+- **Tofu Croustillant Sauce Ail** _(vegan, main, international)_ — `sauce_tofu_croustillant_sauce_a_b8be56`
+- **Tofu Frit au Bouillon** _(vegan, soup, japanese)_ — `soup_tofu_frit_au_bouillon_1bad0a`
+- **Tofu Froid Japonais** _(vegan, side, japanese)_ — `main_tofu_froid_japonais_506c62`
+- **Tofu sauté aux légumes** _(vegan, main, international)_ — `wok_tofu_saute_aux_legumes_1f3ac2`
+- **Tofu Sauté Gingembre Soja** _(vegan, main, international)_ — `wok_tofu_saute_gingembre_soja_6e901c`
+- **Tofu Teriyaki** _(vegan, main, japanese)_ — `protein_tofu_teriyaki_ffcb47`
+- **Tom Kha** _(soup, international)_ — `soup_tom_kha_cee413`
+- **Tom Yum** _(vegan, soup, international)_ — `soup_tom_yum_8001c0`
+- **Tortilla de Maïs** _(vegan, bread, mexican)_ — `base_tortilla_92c2a6`
+- **Tortilla Espagnole** _(main, spanish)_ — `egg_tortilla_espagnole_6cd136`
+- **Tortilla Española** _(main, spanish)_ — `egg_tortilla_espa_ola_51a108`
+- **Tostadas** _(main, spanish)_ — `bread_tostadas_06442e`
+- **Tostadas (Vegan)** _(snack, mexican)_ — `snack_tostadas_vegan_f7257b`
+- **Tourte aux Champignons** _(main, french)_ — `main_tourte_aux_champignons_85adfb`
+- **Truffade Auvergnate** _(main, french_auvergnat)_ — `main_truffade_auvergnate_01a284`
+- **Tteokbokki** _(vegan, main, korean)_ — `rice_tteokbokki_0861f2`
+- **Turkish Imam Bayildi** _(vegan, main, international)_ — `main_turkish_imam_bayildi_0668d1`
+- **Turkish Mercimek Soup** _(main, international)_ — `dal_turkish_mercimek_soup_a7afcf`
+- **Turkish Mercimek Soup (Vegan)** _(soup, turkish)_ — `soup_turkish_mercimek_soup_veg_f30ebc`
+- **Tzatziki Grec** _(starter, greek)_ — `entry_tzatziki_grec_2b21fb`
+
+## U
+
+- **Uzbek Vegetable Plov** _(vegan, main, uzbek)_ — `rice_uzbek_vegetable_plov_2ff045`
+
+## V
+
+- **Vareniki** _(main, ukrainian)_ — `egg_vareniki_53686a`
+- **Varenyky Pomme de Terre** _(main, ukrainian)_ — `main_varenyky_pomme_de_terre_0bb7cf`
+- **Varenyky Pomme de Terre (Vegan)** _(snack, ukrainian)_ — `snack_varenyky_pomme_de_terre_v_8b6240`
+- **Velouté d'Asperges** _(soup, french)_ — `soup_veloute_d_asperges_7da98f`
+- **Velouté de Céleri-Rave** _(soup, french)_ — `soup_veloute_de_celeri_rave_b33921`
+- **Velouté de Potimarron** _(soup, french)_ — `soup_veloute_de_potimarron_776ea1`
+- **Velouté Potimarron en Verrine** _(starter, french)_ — `entry_veloute_potimarron_en_ver_e5a2ca`
+- **Verrines Avocat Mangue** _(vegan, starter, international)_ — `entry_verrines_avocat_mangue_c5f8c6`
+- **Vichyssoise** _(soup, french)_ — `soup_vichyssoise_d28d4b`
+- **Vinaigrette** _(vegan, sauce, french)_ — `sauce_vinaigrette_174a79`
+
+## W
+
+- **White Bean Dip Ail Rôti** _(vegan, starter, international)_ — `entry_white_bean_dip_ail_roti_e61590`
+- **Wok de légumes** _(vegan, main, chinese)_ — `wok_veg_k3d2p1`
+- **Wrap végétarien** _(main, international)_ — `wrap_veg_k3d2p1`
+
+## Y
+
+- **Yakisoba** _(vegan, main, japanese)_ — `pasta_yakisoba_c6cc19`
+- **Yaourt à la Noix de Coco** _(vegan, dairy, vegan_cuisine)_ — `base_yaourt_coco_552a95`
+
+## Z
+
+- **Za'atar** _(vegan, condiment, levantine)_ — `base_za_atar_2badf3`
+
+## É
+
+- **Épinards Assaisonnés Coréens** _(vegan, side, korean)_ — `main_epinards_assaisonnes_core_b596b9`
+- **Épinards à la Crème Vegan** _(side, french)_ — `side_epinards_a_la_creme_vegan_10afc3`
+
+## Î
+
+- **Île Flottante** _(dessert, french)_ — `dessert_ile_flottante_4623ef`
+
+## Œ
+
+- **œufs en Meurette** _(starter, french_burgundian)_ — `entry_Œufs_en_meurette_b8fce3`
