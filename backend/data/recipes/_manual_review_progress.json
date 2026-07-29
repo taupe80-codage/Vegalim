@@ -1189,7 +1189,7 @@
     },
     {
       "id": 42,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "base_oat_cream_954865",
         "base_soy_cream_4dc027",
@@ -1203,7 +1203,13 @@
         "base_sauce_yogurt_0bfeaf",
         "base_pate_piment_b6904a"
       ],
-      "issues": []
+      "issues": [
+        "Lot des 11 sauces/pates de base (scandinave, vegan, levantine, asie du sud-est, britannique, malaisienne, sichuan, indonesienne, moyen-orientale) - tres majoritairement propre",
+        "base_tahini_030e18: BUG - recette de fabrication du tahini a partir de graines de sesame crues (toastees puis mixees) mais la composition utilisait deja du tahini fini (circulaire) - corrige en graines de sesame crues",
+        "base_worcestershire_vegan_5f26ec: le texte precise 'echalote' alors que la composition utilisait un oignon generique - corrige",
+        "vegetarian_brown_sauce_4233df: le texte precise 'pate de tomate' alors que la composition etait de la tomate fraiche crue - corrige",
+        "base_doubanjiang_paste_340399: le texte decrit des feves seches trempees 12h (technique propre aux legumineuses sechees) alors que la composition etait des feves fraiches - corrige"
+      ]
     },
     {
       "id": 43,
