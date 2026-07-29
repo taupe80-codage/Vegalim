@@ -1355,7 +1355,7 @@
     },
     {
       "id": 46,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "soup_a_l_oignon_au_thym_vegan_bf7d2f",
         "soup_a_l_oignon_gratinee_vegan_826f59",
@@ -1373,7 +1373,14 @@
         "soup_veloute_de_potimarron_776ea1",
         "soup_vichyssoise_d28d4b"
       ],
-      "issues": []
+      "issues": [
+        "Motif tres recurrent sur ce lot de soupes/veloutes francais : le bouillon de legumes est explicitement cite avec une quantite precise dans le texte (700-800ml) mais totalement absent de la composition - ajoute dans 8 recettes (bisque de champignons, potage saint-germain, soupe au cresson, soupe carottes au cumin, soupe de chataignes, soupe de topinambours, veloute d'asperges, veloute de celeri-rave, veloute de potimarron)",
+        "soup_a_l_oignon_au_thym_vegan_bf7d2f, soup_a_l_oignon_gratinee_vegan_826f59, soup_soupe_a_l_oignon_gratinee_f0fd17: le texte precise 'thym frais' alors que la composition etait du thym seche (motif recurrent) ; les 2 premieres avaient aussi 200g de farine jamais mentionnee dans le texte - integree a l'etape de liaison",
+        "soup_bisque_de_champignons_63fa25: beurre 30g explicite vs 40g composition - corrige ; le cognac (20ml, explicite, technique classique du flambe) absent de la composition - ajoute",
+        "soup_potage_saint_germain_e23f6b: l'huile d'olive des croutons (10g, explicite) absente de la composition - ajoutee",
+        "soup_soup_k3d2p1: vin blanc (150ml, explicite) et farine (pour lier la soupe) absents de la composition - ajoutes ; BUG - le texte disait 'fromage parmesan' alors que la composition avait deja ete corrigee en comte plus tot dans cette session (fusion authenticite francaise) - texte non mis a jour a l'epoque, corrige maintenant",
+        "soup_soupe_au_cresson_fce0c6: creme de coco (80ml, explicite) absente de la composition - ajoutee"
+      ]
     },
     {
       "id": 47,

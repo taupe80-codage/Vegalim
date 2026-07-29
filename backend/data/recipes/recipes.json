@@ -10600,14 +10600,10 @@
         "focaccia",
         "green",
         "italian",
-        "leger",
         "lent",
         "levure",
-        "light",
         "long",
-        "low calorie",
         "mijote",
-        "minceur",
         "olive",
         "oven_cooking",
         "pain",
@@ -76303,20 +76299,16 @@
         "mais",
         "masa",
         "moyen",
-        "muscle",
         "nixtamalise)",
         "olive",
         "paprika",
         "parmesan",
-        "protéines",
-        "riche en proteines",
         "salad",
         "salade",
         "salt",
         "sans gluten",
         "sans viande",
         "sel",
-        "sport",
         "table",
         "vegetarien",
         "verte"
@@ -157017,12 +157009,8 @@
         "green",
         "kids",
         "korean",
-        "leger",
-        "light",
         "lin",
-        "low calorie",
         "mais",
-        "minceur",
         "oignon",
         "oignons",
         "onion",
@@ -159918,7 +159906,7 @@
           }
         },
         {
-          "ingredient": "thyme_dried_herb",
+          "ingredient": "thyme_fresh_herb",
           "quantity": 1.5,
           "unit": "g",
           "meta": {
@@ -160043,7 +160031,7 @@
       "instructions": [
         "Étape 1 : Émincer finement 300g d'oignons jaunes. Faire fondre 40g de beurre végétal dans une cocotte à feu très doux, à environ 150°C. Ajouter les oignons, couvrir et cuire 20 minutes, jusqu'à ce qu'ils soient translucides et commencent à caraméliser.",
         "Étape 2 : Découvrir et caraméliser à feu moyen, à environ 180°C, pendant 20 minutes supplémentaires, en remuant régulièrement, jusqu'à couleur brun acajou profond et texture confite.",
-        "Étape 3 : Déglacer avec 100 ml de vin blanc sec ou cidre. Laisser réduire à sec 2 minutes, en veillant à ce que le liquide soit complètement évaporé.",
+        "Étape 3 : Saupoudrer de 200g de farine de blé et mélanger 1 minute pour éviter les grumeaux. Déglacer avec 100 ml de vin blanc sec ou cidre. Laisser réduire à sec 2 minutes, en veillant à ce que le liquide soit complètement évaporé.",
         "Étape 4 : Verser 750 ml de bouillon de légumes chaud. Ajouter 1,5g de thym frais haché et un laurier. Mijoter 15 minutes, en laissant les saveurs se mélanger et les oignons se parfumer.",
         "Étape 5 : Préchauffer le four à 200°C. Verser la soupe dans des bols allant au four. Déposer des croûtons grillés faits de baguette et parsemer de 100g de fromage végétal râpé. Enfourner à 200°C pendant 3 à 4 minutes, jusqu'à ce que la surface soit dorée et le fromage fondu.",
         "Étape 6 : Servir chaud, en vérifiant que la température de la soupe est parfaite et que l'odeur de thym et d'oignons caramélisés est intense et appétissante."
@@ -160168,7 +160156,7 @@
           }
         },
         {
-          "ingredient": "thyme_dried_herb",
+          "ingredient": "thyme_fresh_herb",
           "quantity": 5,
           "unit": "g",
           "meta": {
@@ -160300,7 +160288,7 @@
       "instructions": [
         "Étape 1 : Émincer finement 300g d'oignons jaunes. Faire fondre 40g de beurre végétal dans une cocotte à feu très doux, à environ 100°C, pendant 5 minutes. Ajouter les oignons, couvrir et cuire 20 minutes, en vérifiant que les oignons soient tendres et translucides.",
         "Étape 2 : Découvrir et caraméliser à feu moyen, à environ 150°C, pendant 20 minutes supplémentaires, jusqu'à couleur brun acajou profond et texture confite, en remuant régulièrement pour éviter les brûlures.",
-        "Étape 3 : Déglacer avec 100 ml de vin blanc sec ou cidre, en laissant réduire à sec pendant 2 minutes, tout en grattant les sucs de cuisson pour récupérer les saveurs.",
+        "Étape 3 : Saupoudrer de 200g de farine de blé et mélanger 1 minute pour éviter les grumeaux. Déglacer avec 100 ml de vin blanc sec ou cidre, en laissant réduire à sec pendant 2 minutes, tout en grattant les sucs de cuisson pour récupérer les saveurs.",
         "Étape 4 : Verser 750 ml de bouillon de légumes chaud. Ajouter 5g de thym frais et 2 feuilles de laurier. Mijoter 15 minutes, en vérifiant que les saveurs soient équilibrées et la texture crémeuse.",
         "Étape 5 : Préchauffer le four à 220°C. Verser la soupe dans des bols allant au four. Déposer des croûtons grillés préparés avec 120g de pain baguette et parsemer de 100g de fromage végétal râpé. Gratiner sous le gril pendant 3 à 4 minutes, jusqu'à croûte dorée et fromage fondu.",
         "Étape 6 : Servir chaud, en vérifiant la température et l'odeur de la soupe, en accompagnant d'un peu de poivre fraîchement moulu pour relever les saveurs."
@@ -161804,7 +161792,7 @@
         },
         {
           "ingredient": "butter_sup80pct",
-          "quantity": 40,
+          "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "fat",
@@ -161831,6 +161819,28 @@
           "meta": {
             "role": "herb",
             "form": "leaves",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 600,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cognac",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -161893,17 +161903,20 @@
         }
       },
       "search_tokens": [
+        "(brandy)",
         "45 minutes",
         "ail",
         "beurre",
         "bisque",
         "blending",
+        "bouillon",
         "butter",
         "button",
         "cepe",
         "champignon",
         "champignons",
         "coeliaque",
+        "cognac",
         "cream,",
         "creme",
         "echalote",
@@ -161917,6 +161930,7 @@
         "heavy",
         "kids",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
@@ -161928,8 +161942,10 @@
         "sans viande",
         "sauteed",
         "shallot",
+        "stock",
         "thym",
         "thyme",
+        "vegetable",
         "vegetarien"
       ],
       "difficulty_level": "easy",
@@ -169885,6 +169901,28 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 700,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -169949,6 +169987,7 @@
         "beurre",
         "blending",
         "boiling",
+        "bouillon",
         "butter",
         "coeliaque",
         "cream,",
@@ -169964,6 +170003,7 @@
         "heavy",
         "kids",
         "leger",
+        "legumes",
         "lettuce",
         "light",
         "low calorie",
@@ -169972,6 +170012,7 @@
         "mint",
         "moyen",
         "oignon",
+        "olive",
         "onion",
         "pea",
         "peas",
@@ -169982,6 +170023,8 @@
         "sans gluten",
         "sans viande",
         "soup",
+        "stock",
+        "vegetable",
         "vegetarien",
         "vert"
       ],
@@ -170616,6 +170659,28 @@
             "note": "Pour un repas complet",
             "optional": true
           }
+        },
+        {
+          "ingredient": "white_wine_liquid",
+          "quantity": 150,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "carbohydrate",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -170672,10 +170737,12 @@
         }
       },
       "search_tokens": [
+        "all",
         "baguette",
         "beurre",
         "black",
         "blanc",
+        "ble",
         "bouillon",
         "boule",
         "braising",
@@ -170684,6 +170751,8 @@
         "coeliaque",
         "comte",
         "epinard",
+        "farine",
+        "flour",
         "french",
         "gluten free",
         "jaune",
@@ -170705,6 +170774,7 @@
         "pepper",
         "poivre",
         "pousses",
+        "purpose",
         "salt",
         "sans gluten",
         "sans viande",
@@ -170714,9 +170784,14 @@
         "spinach",
         "stock",
         "table",
+        "tout",
+        "usage",
         "vegetable",
         "vegetarien",
+        "vin",
+        "wheat",
         "white",
+        "wine",
         "yellow"
       ],
       "difficulty_level": "hard",
@@ -170728,7 +170803,7 @@
         "Étape 1: Émincer finement 600 g d'oignons jaunes. Faire fondre 30 g de beurre dans une cocotte. Ajouter les oignons, couvrir et suer à feu très doux 20 minutes. Découvrir et caraméliser 25 minutes à feu moyen jusqu'à brun acajou profond, en remuant régulièrement pour éviter de brûler.",
         "Étape 2: Déglacer avec 150 ml de vin blanc. Réduire 2 minutes. Saupoudrer de farine de blé, mélanger 1 minute pour éviter les grumeaux.",
         "Étape 3: Verser 800 ml de bouillon végétal chaud, préparé avec des légumes frais et des herbes aromatiques. Ajouter du thym et du laurier frais. Mijoter 15 minutes pour laisser les saveurs se mélanger. Assaisonner avec 5 g de sel et 2 g de poivre.",
-        "Étape 4: Verser la soupe dans des bols allant au four. Déposer des croûtons grillés, préparés avec 120 g de pain complet et un filet de beurre. Parsemer généreusement de 120 g de fromage parmesan râpé.",
+        "Étape 4: Verser la soupe dans des bols allant au four. Déposer des croûtons grillés, préparés avec 120 g de pain complet et un filet de beurre. Parsemer généreusement de 120 g de comté râpé.",
         "Étape 5: Préchauffer le four à 200°C. Gratiner 4 à 5 minutes sous le gril jusqu'à ce que la croûte soit dorée et bouillonnante. La soupe doit être fumante, la croûte croustillante et le fromage filant.",
         "Étape 6: Servir aussitôt dans des bols préchauffés, accompagné de croutons supplémentaires ou d'une salade verte pour un repas complet.",
         "Étape 7: Pour un service plus élégant, vous pouvez ajouter quelques feuilles de thym frais sur le dessus de chaque bol avant de servir."
@@ -171071,7 +171146,7 @@
           }
         },
         {
-          "ingredient": "thyme_dried_herb",
+          "ingredient": "thyme_fresh_herb",
           "quantity": 5,
           "unit": "g",
           "meta": {
@@ -171282,6 +171357,28 @@
             "note": "Pour une touche croustillante",
             "optional": true
           }
+        },
+        {
+          "ingredient": "base_coconut_cream_10c770",
+          "quantity": 80,
+          "unit": "ml",
+          "meta": {
+            "role": "binding",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 700,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -171340,9 +171437,11 @@
       },
       "search_tokens": [
         "30 minutes",
+        "base_coconut_cream_10c770",
         "blanc",
         "blending",
         "boiling",
+        "bouillon",
         "bread",
         "coeliaque",
         "cresson",
@@ -171353,6 +171452,7 @@
         "gluten free",
         "kids",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
@@ -171369,8 +171469,10 @@
         "sans viande",
         "soup",
         "soupe",
+        "stock",
         "terre",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
         "watercress",
@@ -171496,6 +171598,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 800,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -171559,6 +171672,7 @@
         "acidite",
         "agrume",
         "blending",
+        "bouillon",
         "carotte",
         "carottes",
         "carrot",
@@ -171575,6 +171689,7 @@
         "gluten free",
         "kids",
         "leger",
+        "legumes",
         "lemon",
         "light",
         "low calorie",
@@ -171589,7 +171704,9 @@
         "sauteed",
         "soup",
         "soupe",
+        "stock",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
         "vitamine c"
@@ -171920,6 +172037,28 @@
             "note": "Pour un contraste de textures",
             "optional": true
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 700,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 9,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -171982,8 +172121,10 @@
         "(marrons)",
         "(sweet)",
         "1 heure",
+        "ail",
         "blanc",
         "blending",
+        "bouillon",
         "braising",
         "branche",
         "bread",
@@ -172002,10 +172143,12 @@
         "facile enfants",
         "famille",
         "french",
+        "garlic",
         "gluten free",
         "heavy",
         "kids",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
@@ -172018,6 +172161,8 @@
         "soup",
         "soupe",
         "stalk",
+        "stock",
+        "vegetable",
         "vegetarien",
         "white"
       ],
@@ -172134,6 +172279,17 @@
             "state": "raw",
             "preparation": "toasted"
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 700,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -172196,6 +172352,7 @@
         "artichoke",
         "beurre",
         "blending",
+        "bouillon",
         "butter",
         "coeliaque",
         "cream,",
@@ -172213,6 +172370,7 @@
         "jerusalem",
         "kids",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
@@ -172224,8 +172382,10 @@
         "sauteed",
         "soup",
         "soupe",
+        "stock",
         "topinambour",
         "topinambours",
+        "vegetable",
         "vegetarien",
         "yellow"
       ],
@@ -176077,6 +176237,17 @@
             "note": "Pour tremper dans le velouté",
             "optional": true
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 700,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -176145,6 +176316,7 @@
         "beurre",
         "blanc",
         "blending",
+        "bouillon",
         "bread",
         "butter",
         "chives",
@@ -176163,6 +176335,7 @@
         "heavy",
         "kids",
         "leger",
+        "legumes",
         "lemon",
         "light",
         "low calorie",
@@ -176174,6 +176347,8 @@
         "sans viande",
         "shallot",
         "steaming",
+        "stock",
+        "vegetable",
         "vegetarien",
         "veloute",
         "vitamine c",
@@ -176299,6 +176474,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 800,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -176362,6 +176548,7 @@
         "1 heure",
         "beurre",
         "blending",
+        "bouillon",
         "butter",
         "celeri",
         "celeriac",
@@ -176380,6 +176567,7 @@
         "jaune",
         "kids",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
@@ -176392,6 +176580,8 @@
         "sans gluten",
         "sans viande",
         "sauteed",
+        "stock",
+        "vegetable",
         "vegetarien",
         "veloute",
         "with",
@@ -176520,6 +176710,17 @@
             "state": "raw",
             "preparation": "toasted"
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 800,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -176585,6 +176786,7 @@
         "ail",
         "beurre",
         "blending",
+        "bouillon",
         "butter",
         "butternut",
         "citrouille",
@@ -176606,6 +176808,7 @@
         "jaune",
         "kids",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
@@ -176619,6 +176822,8 @@
         "sauteed",
         "soup",
         "squash",
+        "stock",
+        "vegetable",
         "vegetarien",
         "veloute",
         "yellow"
