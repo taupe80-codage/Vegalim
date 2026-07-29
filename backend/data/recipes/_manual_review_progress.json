@@ -1475,7 +1475,7 @@
     },
     {
       "id": 49,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "soup_gazpacho_classic_v2_x9k3m1",
         "soup_harira_classic_v3_p9x4k2",
@@ -1483,7 +1483,11 @@
         "soup_soupe_courge_butternut_2f5cf3",
         "soup_tamales_7dd98a"
       ],
-      "issues": []
+      "issues": [
+        "soup_harira_classic_v3_p9x4k2: BUG - aucune huile n'existait en composition alors que le texte demande de faire suer l'oignon dans de l'huile - ajoutee (huile d'olive, plus authentique qu'huile de coco pour un plat marocain, texte corrige) ; bouillon vegetal (1.5L, explicite) absent - ajoute ; cumin, curcuma et cannelle (cites dans le texte, definissant l'identite de la harira) absents - ajoutes",
+        "soup_pho_ba7e1e: l'huile de sesame (10ml, en composition) n'etait jamais mentionnee dans le texte - ajoutee",
+        "soup_soupe_courge_butternut_2f5cf3: bouillon de legumes (400ml, explicite) absent de la composition - ajoute"
+      ]
     },
     {
       "id": 50,

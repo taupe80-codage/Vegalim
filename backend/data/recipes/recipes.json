@@ -165725,6 +165725,61 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 45,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 1500,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "turmeric_powder",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -165783,6 +165838,7 @@
       "search_tokens": [
         "all",
         "ble",
+        "bouillon",
         "braising",
         "branche",
         "celeri",
@@ -165791,6 +165847,7 @@
         "chickpea",
         "coriander",
         "coriandre",
+        "cumin",
         "farine",
         "flour",
         "gingembre",
@@ -165798,6 +165855,7 @@
         "green",
         "harira",
         "leger",
+        "legumes",
         "lent",
         "lentil",
         "lentille",
@@ -165809,6 +165867,7 @@
         "minceur",
         "moroccan",
         "oignon",
+        "olive",
         "onion",
         "parsley",
         "persil",
@@ -165817,6 +165876,7 @@
         "sans produit animal",
         "sans viande",
         "stalk",
+        "stock",
         "tomate",
         "tomato",
         "tout",
@@ -165824,6 +165884,7 @@
         "traditionnelle",
         "usage",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
         "verte",
@@ -165835,7 +165896,7 @@
       "_quality_score": 0.96,
       "description": "Découvrez la Harira, une soupe marocaine traditionnelle végane aux saveurs complexes et textures crémeuses, où les tomates, les légumineuses et les épices se mélangent en harmonie.",
       "instructions": [
-        "Étape 1 : Dans une grande casserole, chauffer l'huile de coco à feu moyen. Faire suer les 120g d'oignon pendant 6–8 minutes sans coloration, jusqu'à ce qu'il soit tendre et parfumé, dégageant un arôme doux et terreux.",
+        "Étape 1 : Dans une grande casserole, chauffer 45ml d'huile d'olive à feu moyen. Faire suer les 120g d'oignon pendant 6–8 minutes sans coloration, jusqu'à ce qu'il soit tendre et parfumé, dégageant un arôme doux et terreux.",
         "Étape 2 : Ajouter les épices (cumin, curcuma, cannelle, 15g de gingembre) et cuire 1 minute en remuant constamment, permettant aux épices de dégager leurs arômes et leurs huiles essentielles, créant une base parfumée.",
         "Étape 3 : Incorporer les 500g de tomates concassées et le concentré de tomate végan, cuire 5 minutes jusqu'à légère réduction, en remuant occasionnellement, pour obtenir une sauce riche et intense.",
         "Étape 4 : Ajouter les 200g de pois chiches, les 150g de lentilles corail et 1,5 litre de bouillon végétal. Porter à frémissement, puis réduire le feu à feu doux, laissant mijoter pour que les saveurs se mélangent et les légumineuses cuisent.",
@@ -167409,29 +167470,29 @@
         "haricot",
         "italian",
         "italienne",
-        "leger",
         "legumes",
         "lent",
-        "light",
         "long",
-        "low calorie",
         "medium",
         "mijote",
-        "minceur",
         "minestrone",
         "moyen",
+        "muscle",
         "oignon",
         "olive",
         "onion",
         "parmesan",
         "pasta",
         "pates",
+        "protéines",
         "red",
+        "riche en proteines",
         "rouge",
         "salt",
         "sans viande",
         "sel",
         "soupe",
+        "sport",
         "stalk",
         "stock",
         "table",
@@ -169260,7 +169321,7 @@
         "Étape 1 : Rôtir les oignons jaunes et le gingembre frais directement à la flamme ou sous le gril préchauffé à 200°C pendant 5 minutes de chaque côté, pour obtenir une belle couleur brune et un parfum intense.",
         "Étape 2 : Mettre les oignons jaunes et le gingembre rôtis dans un grand pot, ajouter 1000 ml de bouillon végétal, 2 cuillères à café de cannelle, 2 cuillères à café d'anis étoilé, 2 clous de girofle et 1 badiane. Laissez mijoter pendant 20 minutes pour libérer les arômes et sentir l'odeur épicée.",
         "Étape 3 : Ajoutez 2 gousses d'ail hachées dans le pot et laissez mijoter pendant 5 minutes pour permettre aux saveurs de se mélanger. Ensuite, mijoter 30 minutes à feu doux, puis filtrer le bouillon à travers une passoire fine pour éliminer les solides.",
-        "Étape 4 : Assaisonner le bouillon de 20 ml de sauce soja végane et 1 pincée de sel, émulsionner pour bien mélanger les saveurs. Goûtez et ajustez l'assaisonnement si nécessaire, en fonction de votre préférence pour le sel et les épices.",
+        "Étape 4 : Assaisonner le bouillon de 20 ml de sauce soja végane, 10 ml d'huile de sésame et 1 pincée de sel, émulsionner pour bien mélanger les saveurs. Goûtez et ajustez l'assaisonnement si nécessaire, en fonction de votre préférence pour le sel et les épices.",
         "Étape 5 : Cuire 150 g de vermicelles de riz selon les instructions, rincer à l'eau froide pour arrêter la cuisson. Les vermicelles doivent être tendres mais encore fermes, avec une texture agréable.",
         "Étape 6 : Trancher finement 200 g de tofu ferme mariné dans une sauce végane, julienne les légumes frais comme les oignons jaunes et les champignons. Vous pouvez également ajouter d'autres légumes de votre choix, comme des carottes ou des poivrons.",
         "Étape 7 : Répartir les nouilles et le tofu dans des bols, verser le bouillon bouillant, garnir de coriandre fraîche ciselée et de quartiers de citron vert. Servez sans attendre, car la chaleur est essentielle pour apprécier les saveurs de la soupe Pho, avec l'odeur parfumée de la coriandre et la fraîcheur du citron.",
@@ -171967,6 +172028,17 @@
             "state": "raw",
             "preparation": "toasted"
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 400,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -172027,6 +172099,7 @@
       "search_tokens": [
         "45 minutes",
         "blending",
+        "bouillon",
         "braising",
         "butternut",
         "citrouille",
@@ -172044,6 +172117,7 @@
         "gluten free",
         "kids",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
@@ -172059,7 +172133,9 @@
         "soup",
         "soupe",
         "squash",
+        "stock",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien"
       ],
@@ -176289,12 +176365,8 @@
         "green",
         "haricot",
         "laksa",
-        "leger",
         "legumes",
-        "light",
-        "low calorie",
         "malaysian",
-        "minceur",
         "moyen",
         "mung",
         "mungo",
