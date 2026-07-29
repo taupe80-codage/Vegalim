@@ -35607,7 +35607,7 @@
         "Étape 1 : Faire revenir l'oignon jaune émincé dans 40 ml d'huile d'olive à feu moyen, sans ajouter d'eau, en remuant souvent, pendant 15 à 20 minutes, jusqu'à coloration brun acajou profond et parfum intense.",
         "Étape 2 : Ajouter l'ail haché et le berbere généreusement (2 à 3 cuillères à soupe). Cuire 2 minutes en remuant constamment, jusqu'à ce que les épices embaument et répandent leur parfum.",
         "Étape 3 : Incorporer les tomates concassées. Cuire 5 minutes, en remuant régulièrement, jusqu'à légère réduction et coloration intense.",
-        "Étape 4 : Ajouter les lentilles corail rincées et 500 ml de bouillon de légumes. Porter à ébullition, puis mijoter à feu doux pendant 20 minutes, en remuant régulièrement, jusqu'à ce que les lentilles soient très fondantes et la sauce nappe la cuillère.",
+        "Étape 4 : Ajouter les lentilles corail rincées et 750 ml de bouillon de légumes. Porter à ébullition, puis mijoter à feu doux pendant 20 minutes, en remuant régulièrement, jusqu'à ce que les lentilles soient très fondantes et la sauce nappe la cuillère.",
         "Étape 5 : Vérifier que les lentilles sont tendres et que la sauce a la consistance désirée. Ajuster si nécessaire, en ajoutant un peu d'eau si le plat est trop épais, ou en laissant mijoter quelques minutes supplémentaires si les lentilles ne sont pas suffisamment tendres.",
         "Étape 6 : Rectifier l'assaisonnement en ajoutant plus d'épices ou de sel si nécessaire.",
         "Étape 7 : Servir chaud sur injera, en présentant le plat avec une touche de verdure, comme du persil haché, pour ajouter une note de fraîcheur et de couleur."
@@ -42837,7 +42837,7 @@
       "_quality_score": 0.87,
       "description": "Ragoût éthiopien végan de lentilles, cuisson douce sous frémissement pour une texture fondante et nappante riche en arômes, avec une saveur épicée qui se développe au fil de la cuisson, caractéristique de la cuisine éthiopienne traditionnelle.",
       "instructions": [
-        "Étape 1 : Faire chauffer 20 ml d'huile de coco à feu moyen dans une grande casserole, en sentant l'odeur légère de l'huile.",
+        "Étape 1 : Faire chauffer 20 ml d'huile d'olive à feu moyen dans une grande casserole, en sentant l'odeur légère de l'huile.",
         "Étape 2 : Ajouter 150 g d'oignon émincé, 2 g d'ail haché et 200 g de carotte en petits dés. Cuire 5 à 7 minutes en remuant régulièrement jusqu'à tendreté, en écoutant le bruit des légumes qui se cuisent.",
         "Étape 3 : Ajouter 200 g de lentilles et mélanger pendant 1 minute pour bien les enrober, en ressentant la texture des lentilles qui commencent à absorber les saveurs.",
         "Étape 4 : Ajouter 1000 ml de bouillon végétal et porter à frémissement, en voyant les bulles qui se forment à la surface.",
@@ -43690,6 +43690,28 @@
             "note": "Pour une touche de fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "fruit",
+            "form": "roughly_chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coconut_milk_plant",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -43757,6 +43779,8 @@
         "azifa",
         "carotte",
         "carrot",
+        "coco",
+        "coconut",
         "coeliaque",
         "coriander",
         "eau",
@@ -43775,6 +43799,7 @@
         "low calorie",
         "mijote",
         "minceur",
+        "noix",
         "oignon",
         "olive",
         "onion",
@@ -43784,6 +43809,8 @@
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "tomate",
+        "tomato",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -102177,7 +102204,7 @@
       "description": "Pupusas, spécialité salvadorienne — pâte de masa harina dorée en cuisson, offrant une texture croustillante à l'extérieur et tendre à cœur, garnie de haricots noirs et de fromage râpé, avec une touche de loroco pour une saveur unique.",
       "instructions": [
         "Étape 1: Dans un grand bol, mélanger 300 g de masa harina (farine de maïs nixtamalisé) avec 500 ml d'eau tiède et 5 g de sel, pour former une pâte lisse et homogène, en travaillant la pâte pendant environ 5 minutes.",
-        "Étape 2: Préparer les garnitures: faire cuire 300 g de haricots noirs, puis les écraser grossièrement, mélanger avec 150 g de fromage râpé (par exemple, du fromage de soja ou du fromage de tofu) et 60 g de loroco haché (fleur aromatique d'Amérique centrale).",
+        "Étape 2: Préparer les garnitures: faire cuire 300 g de haricots noirs, puis les écraser grossièrement, mélanger avec 150 g de fromage blanc râpé et 60 g de loroco haché (fleur aromatique d'Amérique centrale).",
         "Étape 3: Diviser la pâte en 4 à 6 portions, selon la taille désirée pour les pupusas, puis former des boules et les aplatir légèrement en disques d'environ 1 cm d'épaisseur.",
         "Étape 4: Garnir chaque disque de pâte avec une portion de la mixture de haricots noirs, fromage et loroco, en laissant une bordure de 1 cm autour de la garniture.",
         "Étape 5: Refermer les pupusas en pressant les bords de la pâte pour sceller la garniture à l'intérieur, puis les aplatir légèrement pour former des galettes d'environ 1,5 cm d'épaisseur.",
@@ -125390,7 +125417,7 @@
         "Étape 2: Préparer la farce de riz en cuisant 300g de riz dans 250ml de lait 15 min à feu doux jusqu'à absorption complète, en remuant régulièrement pour éviter l'attache.",
         "Étape 3: Abaisser la pâte finement en ovales, julienne les bords pour former des pirogi ovales, en veillant à ce que la pâte soit régulière et fine.",
         "Étape 4: Garnir de riz au lait, replier les bords et pincer pour former des pirogi, en s'assurant que les bords soient bien fermés pour éviter les fuites.",
-        "Étape 5: Badigeonner les pirogi de 30g de beurre fondu remplacé par 30g de beurre fondu, puis enfourner 20 min à 200°C.",
+        "Étape 5: Badigeonner les pirogi de 30g de beurre fondu, puis enfourner 20 min à 200°C.",
         "Étape 6: Cuire 5 min supplémentaires, en surveillant la couleur de la pâte pour obtenir une belle dorure.",
         "Étape 7: Servir chaud, la lame ressort sèche et la croûte est dorée, en accompagnant de salade ou de légumes pour un repas complet."
       ],
@@ -182419,7 +182446,7 @@
       "description": "Sauté éthiopienne de chou frisé au wok à feu très vif — wok hei, légumes croquants, sauce enrobante, parfumée de curcuma et de cumin, avec une texture fondante et des notes de caramelisation.",
       "instructions": [
         "Étape 1 : Émincer finement 300g de chou kale en chiffonnade de 3 mm et ciseler 300g d'oignon jaune en demi-rondelles, jusqu'à obtenir une texture régulière et une couleur vive.",
-        "Étape 2 : Chauffer 30ml d'huile d'olive extra vierge dans une grande poêle ou wok à feu vif, cuire 2 min à feu moyen-vif, en surveillant la température pour éviter la fumée.",
+        "Étape 2 : Chauffer 45ml d'huile d'olive extra vierge dans une grande poêle ou wok à feu vif, cuire 2 min à feu moyen-vif, en surveillant la température pour éviter la fumée.",
         "Étape 3 : Ajouter 9g d'ail écrasé, 3g de graines de cumin et 3g de curcuma en poudre, faire grésiller 30 secondes jusqu'à parfum, en remuant constamment pour éviter la brûlure.",
         "Étape 4 : Incorporer le chou émincé, saisir à feu vif 4 min en remuant régulièrement jusqu'à chou légèrement tendre et légèrement doré, en vérifiant la texture pour éviter la surcuisson.",
         "Étape 5 : Poursuivre la cuisson 4 min à feu moyen, jusqu'à chou légèrement doré et croquant, avec quelques bords caramélisés et une texture fondante, en surveillant la couleur pour obtenir un résultat uniforme.",

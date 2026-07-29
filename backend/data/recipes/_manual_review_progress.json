@@ -649,7 +649,7 @@
     },
     {
       "id": 26,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "bread_bannock_e03ffe",
         "bread_de_pain_a_la_tomate_14891a",
@@ -666,7 +666,15 @@
         "rice_karelian_pies_106cca",
         "wok_chou_ethiopien_saute_93ab43"
       ],
-      "issues": []
+      "issues": [
+        "dal_ethiopian_misir_wot_4203c8: bouillon vegetal 500ml texte vs 750ml composition",
+        "dal_ragout_de_lentilles_epice_7ee9be: huile de coco dans le texte alors que la composition utilise de l'huile d'olive - texte aligne",
+        "dal_salade_de_lentilles_ethiopienn_5a9dd6: tomates (200g) et creme de coco (20ml), toutes deux explicites dans le texte, absentes de la composition (ajoutees)",
+        "main_pupusas_9d2c72: la composition utilise un vrai fromage blanc laitier mais le texte suggerait a tort des alternatives soja/tofu - texte corrige",
+        "rice_karelian_pies_106cca: phrase redondante 'beurre fondu remplace par beurre fondu' simplifiee",
+        "wok_chou_ethiopien_saute_93ab43: huile d'olive 30ml texte vs 45ml composition",
+        "NOTE (hors scope, non corrigee): plusieurs recettes de ce lot sont etiquetees cuisine=ethiopian alors qu'elles sont clairement d'autres origines (bannock canadien, karelian pies finlandais, arepas venezueliens/colombiens, pupusas salvadoriennes, momos himalayens) - probleme de categorisation du champ cuisine, pas de composition/nutrition"
+      ]
     },
     {
       "id": 27,
