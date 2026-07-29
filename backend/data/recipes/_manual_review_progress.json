@@ -979,7 +979,7 @@
     },
     {
       "id": 34,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "couscous_couscous_traditionnel_veg_46ff36",
         "couscous_tfaya_vegan_65aba6",
@@ -1007,7 +1007,24 @@
         "main_choucroute_vegetarienne_25c7a3",
         "main_tarte_oignon_alsacienne_c49dd2"
       ],
-      "issues": []
+      "issues": [
+        "couscous_couscous_traditionnel_veg_46ff36: beurre vegetal (30g) en composition jamais mentionne dans le texte - ajoute",
+        "couscous_tfaya_vegan_65aba6: huile d'olive utilisee 2 fois explicitement (20+40ml) mais composition n'avait qu'une seule quantite - corrigee ; 'sucre de coco' dans le texte alors que la composition est du sucre blanc - corrige ; sirop d'erable (80ml, explicite) absent de la composition - ajoute ; gingembre (5g) jamais mentionne - integre",
+        "couscous_vegetable_quick_k5d3p1: bouillon vegetal (800ml, explicite) absent de la composition - ajoute",
+        "egg_galettes_de_pommes_de_terre_su_0d7814: BUG - '220g de yaourt battu' correspondait exactement a la quantite du vrai oeuf en composition - corrige ; farine 200g en composition alors que le texte n'en utilise explicitement qu'1 cuillere a soupe (~15g) - corrigee ; huile 30ml texte vs 45ml composition ; le lait (250ml, jamais utilise) correspondait en realite a la creme fraiche (100ml, explicite a l'etape 6) - renomme et corrige",
+        "dal_grain_bowl_mediterraneen_2d5531: la courgette (500g, citee dans la description) etait absente de l'etape de decoupe/rotissage des legumes - ajoutee",
+        "egg_pita_aux_epinards_f1f6ff: BUG - composition utilisait du phyllo/filo alors que le titre et toutes les instructions (5 mentions) parlent de pain pita - corrige ; ail (2 gousses, explicite) absent de la composition - ajoute ; feta decrite comme 'rapee' alors que deja emiettee - precise",
+        "egg_sabich_b270c4: BUG - du tofu (absent de la composition) etait cite a l'etape d'assemblage alors que l'oeuf (220g, ingredient traditionnel du sabich) etait en composition mais jamais prepare - etape de cuisson des oeufs durs ajoutee et assemblage corrige",
+        "falafel_bowl_de_falafel_vegan_f4fd40: texte disait huile de coco (x2, motif recurrent) alors que la composition (46.2ml, quasi exacte) est de l'huile d'olive - corrige",
+        "main_laing_ee9d64: lait de coco utilise explicitement 2 fois (400+200=600ml) mais composition n'avait que 445ml - corrige ; huile de coco de friture (15+30=45ml, explicite) totalement absente de la composition - ajoutee",
+        "dal_afghan_sabzi_chalaw_18f6a5: huile de tournesol utilisee 2 fois explicitement (45+20ml) mais composition n'avait qu'une seule quantite - corrigee",
+        "egg_vareniki_53686a: l'oeuf (220g, role=binder) en composition jamais mentionne dans le texte de la pate - ajoute ; beurre utilise 2 fois explicitement (40+20g) mais composition n'avait qu'une seule quantite - corrigee ; fromage blanc decrit comme 'rape' - precise",
+        "main_varenyky_pomme_de_terre_0bb7cf: l'huile de tournesol (45ml en composition) n'etait jamais nommee dans le texte (etape de friture a 180°C parlait vaguement de beurre, peu adapte a cette temperature) - corrigee ; beurre de la pate clarifie avec sa quantite ; fromage blanc 'rape' precise",
+        "salad_fattoush_classic_x82m5c: oignon rouge (cite dans le texte) absent de la composition - ajoute ; persil (20g, explicite) n'etait qu'une suggestion de service sans quantite reelle - promu en ingredient ; menthe fraiche (15g, explicite) absente de la composition - ajoutee",
+        "rice_serbian_uve_4a83e2: texte disait huile d'olive (30ml) alors que la composition est de l'huile de tournesol (45ml) - corrige ; bouillon vegetal (400ml, explicite) absent de la composition - ajoute",
+        "main_choucroute_vegetarienne_25c7a3: texte parlait de pomme granny smith alors que la composition est du golden delicious - texte aligne",
+        "main_tarte_oignon_alsacienne_c49dd2: noix de muscade (0.5g) en composition jamais mentionnee dans le texte de l'appareil - ajoutee"
+      ]
     },
     {
       "id": 35,
