@@ -461,7 +461,7 @@
     },
     {
       "id": 20,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "protein_paneer_butter_masala_vega_6c63de",
         "protein_paneer_tikka_94f80a",
@@ -470,7 +470,10 @@
         "rice_vegetable_biryani_160da2",
         "rice_vegetable_pulao_a0ed3e"
       ],
-      "issues": []
+      "issues": [
+        "protein_paneer_tikka_94f80a: texte disait couper le fromage rape en cubes (contradiction interne, un fromage rape ne se coupe pas en cubes) - rape retire",
+        "rice_vegetable_biryani_160da2, rice_vegetable_pulao_a0ed3e: coconut_milk_plant utilise comme huile de friture (mal etiquete) -> coconut_oil_plant, suite de la decouverte systemique des lots 13-19"
+      ]
     },
     {
       "id": 21,
