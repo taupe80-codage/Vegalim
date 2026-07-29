@@ -1153,7 +1153,7 @@
     },
     {
       "id": 41,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "base_bechamel_7db18f",
         "base_cream_cheese_c6e3b6",
@@ -1181,7 +1181,11 @@
         "base_harissa_ef842f",
         "base_mole_d0034f"
       ],
-      "issues": []
+      "issues": [
+        "Lot des 25 sauces/pates de base (francaises, japonaises, italiennes, thai, chinoises, coreennes, mexicaines, internationales) - tres majoritairement propre : 23 recettes sur 25 totalement coherentes",
+        "base_ponzu_7479fe: levure nutritionnelle (5g, explicite) absente de la composition - ajoutee ; le kombu (5g, en composition) n'etait jamais mentionne dans le texte - ajoute",
+        "base_hoisin_033e33: le texte disait farine de riz alors que la composition (coherente avec gluten_free=False) utilise de la farine de ble - texte corrige"
+      ]
     },
     {
       "id": 42,
