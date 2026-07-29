@@ -6,10 +6,10 @@
       "ingredients_tree.json",
       "nutrition_v2.json"
     ],
-    "built_at": "2026-07-28",
+    "built_at": "2026-07-29",
     "note": "1 entrée = 1 variant n2 (1 état produit)",
     "total_entries": 1915,
-    "total_aliases": 123,
+    "total_aliases": 0,
     "orphans_count": 0,
     "n2_unplaced": 0,
     "key_convention": "nutrition_v2",
@@ -3283,7 +3283,7 @@
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
-                "gluten_free": true,
+                "gluten_free": false,
                 "lactose_free": true,
                 "dairy_free": true,
                 "nut_free": true,
@@ -3294,7 +3294,9 @@
                 "high_fat": false,
                 "diabetic_friendly": false
               },
-              "allergens_eu": [],
+              "allergens_eu": [
+                "cereals_gluten"
+              ],
               "bioavailability_protein": 0.65
             },
             "chutney": {
@@ -8403,7 +8405,7 @@
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
-                "gluten_free": true,
+                "gluten_free": false,
                 "lactose_free": true,
                 "dairy_free": true,
                 "nut_free": true,
@@ -8413,7 +8415,9 @@
                 "high_fiber": false,
                 "high_fat": false
               },
-              "allergens_eu": [],
+              "allergens_eu": [
+                "cereals_gluten"
+              ],
               "nova_group": 3,
               "bioavailability_protein": 0.7,
               "culinary": {
@@ -8771,7 +8775,7 @@
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
-                "gluten_free": true,
+                "gluten_free": false,
                 "lactose_free": true,
                 "dairy_free": true,
                 "nut_free": true,
@@ -8781,7 +8785,9 @@
                 "high_fiber": false,
                 "high_fat": false
               },
-              "allergens_eu": [],
+              "allergens_eu": [
+                "cereals_gluten"
+              ],
               "nova_group": 3,
               "bioavailability_protein": 0.7,
               "culinary": {
@@ -65467,7 +65473,7 @@
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
-                "gluten_free": true,
+                "gluten_free": false,
                 "lactose_free": true,
                 "dairy_free": true,
                 "nut_free": true,
@@ -65477,7 +65483,9 @@
                 "high_fiber": false,
                 "high_fat": false
               },
-              "allergens_eu": [],
+              "allergens_eu": [
+                "cereals_gluten"
+              ],
               "nova_group": 4,
               "bioavailability_protein": 0.65
             }
@@ -77223,11 +77231,11 @@
               "axes_fr": {},
               "aliases": [],
               "diet_profile": {
-                "vegan": true,
+                "vegan": false,
                 "vegetarian": true,
                 "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
+                "lactose_free": false,
+                "dairy_free": false,
                 "nut_free": true,
                 "soy_free": true,
                 "egg_free": true,
@@ -77236,7 +77244,9 @@
                 "high_fat": false,
                 "diabetic_friendly": false
               },
-              "allergens_eu": [],
+              "allergens_eu": [
+                "milk"
+              ],
               "bioavailability_protein": 0.65
             }
           }
@@ -77256,20 +77266,23 @@
               "axes_fr": {},
               "aliases": [],
               "diet_profile": {
-                "vegan": true,
+                "vegan": false,
                 "vegetarian": true,
-                "gluten_free": true,
+                "gluten_free": false,
                 "lactose_free": true,
                 "dairy_free": true,
                 "nut_free": true,
                 "soy_free": true,
-                "egg_free": true,
+                "egg_free": false,
                 "high_protein": false,
                 "high_fiber": false,
                 "high_fat": false,
                 "diabetic_friendly": false
               },
-              "allergens_eu": [],
+              "allergens_eu": [
+                "cereals_gluten",
+                "eggs"
+              ],
               "bioavailability_protein": 0.65
             }
           }
@@ -77296,7 +77309,7 @@
               "diet_profile": {
                 "vegan": true,
                 "vegetarian": true,
-                "gluten_free": true,
+                "gluten_free": false,
                 "lactose_free": true,
                 "dairy_free": true,
                 "nut_free": true,
@@ -77307,7 +77320,9 @@
                 "high_fat": false,
                 "diabetic_friendly": true
               },
-              "allergens_eu": [],
+              "allergens_eu": [
+                "cereals_gluten"
+              ],
               "bioavailability_protein": 0.65,
               "culinary": {
                 "properties": [

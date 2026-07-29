@@ -537,6 +537,51 @@ DAIRY_KEY_TRIGGERS = {
     'custard',              # crème anglaise / crème pâtissière
     'caramel_au_beurre',    # contient du beurre
 }
+
+# Overrides ponctuels pour des entrées MANUAL dont le nom désigne un plat/
+# produit composé (biscuit, glace, pain, nouilles...) plutôt qu'un ingrédient
+# brut — la taxonomie cat1/cat2 seule ne suffit pas à en déduire les allergènes
+# réels (cf. note "hors périmètre" ci-dessus pour DAIRY_KEY_TRIGGERS). Appliqué
+# après enrich(), en plus des 8 flags d'exclusion déterministes.
+MANUAL_DIET_OVERRIDES = {
+    # biscuit à la cuillère (boudoir/savoiardi) : œuf + farine de blé
+    'ladyfinger': {
+        'diet_profile': {'vegan': False, 'gluten_free': False, 'egg_free': False},
+        'allergens_eu': ['eggs', 'cereals_gluten'],
+    },
+    # glace à la vanille : base lait/crème
+    'vanilla_ice_cream': {
+        'diet_profile': {'vegan': False, 'lactose_free': False, 'dairy_free': False},
+        'allergens_eu': ['milk'],
+    },
+    # pane toscano : pain de blé traditionnel (non salé, mais pas sans gluten)
+    'tuscan_bread': {
+        'diet_profile': {'gluten_free': False},
+        'allergens_eu': ['cereals_gluten'],
+    },
+    # nouilles udon : 100% farine de blé
+    'udon': {
+        'diet_profile': {'gluten_free': False},
+        'allergens_eu': ['cereals_gluten'],
+    },
+    # crackers salés : génériquement à base de blé sauf mention contraire
+    'salted_crackers': {
+        'diet_profile': {'gluten_free': False},
+        'allergens_eu': ['cereals_gluten'],
+    },
+    # bacon végétarien : produits courants à base de seitan (gluten de blé) —
+    # composition réelle non déterminable depuis le seul nom, prudence
+    'vegetarian_bacon': {
+        'diet_profile': {'gluten_free': False},
+        'allergens_eu': ['cereals_gluten'],
+    },
+    # sauce okonomiyaki : base type Worcestershire, contient typiquement du blé
+    # (sauce soja / vinaigre de malt) — prudence, composition non déterminable
+    'okonomiyaki_sauce': {
+        'diet_profile': {'gluten_free': False},
+        'allergens_eu': ['cereals_gluten'],
+    },
+}
 BIO_TABLE = [
     ('dairy','',0.92),('eggs','',0.97),('fish','',0.90),('meat','',0.91),
     ('legumes','soy',0.91),('legumes','',0.72),
@@ -825,6 +870,16 @@ for cat in v32.get('categories', []):
 
                 # Enrichissement déterministe
                 enrich(ig_entry, cat_label, sub_label, n2_vr, entry_key)
+
+                # Correctifs ponctuels pour les entrées MANUAL "plat composé"
+                # que la taxonomie seule ne peut pas classer correctement.
+                override = MANUAL_DIET_OVERRIDES.get(entry_key)
+                if override:
+                    ig_entry['diet_profile'].update(override.get('diet_profile', {}))
+                    if override.get('allergens_eu'):
+                        ig_entry['allergens_eu'] = sorted(
+                            set(ig_entry.get('allergens_eu') or []) | set(override['allergens_eu'])
+                        )
 
                 sub_entry['ingredient_groups'][entry_key] = ig_entry
                 placed_var_ids.add(var_id)

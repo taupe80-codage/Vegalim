@@ -11961,7 +11961,8 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
+          "lactose_free",
+          "nut_free",
           "vegan",
           "vegetarian"
         ],
@@ -12022,13 +12023,11 @@
         "basil",
         "basilic",
         "bread",
-        "coeliaque",
         "concombre",
         "cucumber",
         "enfants",
         "facile enfants",
         "famille",
-        "gluten free",
         "international",
         "kids",
         "leger",
@@ -12044,7 +12043,6 @@
         "panzanella",
         "red",
         "rouge",
-        "sans gluten",
         "sans produit animal",
         "sans viande",
         "sel,",
@@ -12081,7 +12079,7 @@
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -47732,9 +47730,9 @@
       ],
       "tags": {
         "diet": [
-          "gluten_free",
           "kid_friendly",
-          "nut_free"
+          "nut_free",
+          "vegetarian"
         ],
         "allergens": [
           "gluten",
@@ -47803,7 +47801,6 @@
         "biscuit",
         "blanc",
         "charlotte",
-        "coeliaque",
         "cream,",
         "creme",
         "cuillere",
@@ -47813,7 +47810,6 @@
         "famille",
         "fraises",
         "french",
-        "gluten free",
         "heavy",
         "kids",
         "ladyfinger",
@@ -47827,7 +47823,6 @@
         "mijote",
         "minceur",
         "refrigeration",
-        "sans gluten",
         "sans viande",
         "strawberry",
         "sucre",
@@ -47857,7 +47852,7 @@
       "diet_flags": {
         "vegan": false,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": false,
         "nut_free": true,
         "raw": false,
@@ -55932,9 +55927,9 @@
       ],
       "tags": {
         "diet": [
-          "gluten_free",
           "kid_friendly",
-          "nut_free"
+          "nut_free",
+          "vegetarian"
         ],
         "allergens": [
           "eggs",
@@ -55994,14 +55989,12 @@
         "cafe",
         "classique",
         "cocoa",
-        "coeliaque",
         "coffee",
         "cuillere",
         "egg",
         "enfants",
         "facile enfants",
         "famille",
-        "gluten free",
         "italian",
         "kids",
         "ladyfinger",
@@ -56013,7 +56006,6 @@
         "minceur",
         "moyen",
         "refrigeration",
-        "sans gluten",
         "sans viande",
         "sucre",
         "sugar",
@@ -56041,7 +56033,7 @@
       "diet_flags": {
         "vegan": false,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": false,
         "nut_free": true,
         "raw": false,
@@ -61233,7 +61225,10 @@
         }
       ],
       "tags": {
-        "diet": [],
+        "diet": [
+          "nut_free",
+          "vegetarian"
+        ],
         "allergens": [
           "eggs",
           "gluten"
@@ -61346,7 +61341,7 @@
         "vegan": false,
         "vegetarian": true,
         "gluten_free": false,
-        "lactose_free": true,
+        "lactose_free": false,
         "nut_free": true,
         "raw": false,
         "kid_friendly": true
