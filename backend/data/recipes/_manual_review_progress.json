@@ -1094,7 +1094,7 @@
     },
     {
       "id": 37,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "base_gnocchi_8f01d0",
         "base_soba_noodles_33e97c",
@@ -1104,7 +1104,10 @@
         "base_noodles_2d0ed7",
         "base_rice_noodle_831080"
       ],
-      "issues": []
+      "issues": [
+        "Lot des 7 recettes base_X (pates/nouilles maison) - tres majoritairement propre : les usages en 2 temps (ex. eau versee en 2 fois, farine incorporee puis reservee) correspondent exactement aux totaux de la composition dans 6 recettes sur 7",
+        "base_rice_noodle_831080: le texte disait 'fecule de tapioca' alors que la composition utilise du cornstarch_flour (fecule de mais, plus proche nutritionnellement d'une fecule pure que la farine de manioc disponible) - texte aligne sur la composition"
+      ]
     },
     {
       "id": 38,
