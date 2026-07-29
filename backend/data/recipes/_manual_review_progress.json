@@ -803,7 +803,7 @@
     },
     {
       "id": 30,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "protein_banh_mi_tofu_9b1ea2",
         "protein_bun_f5c7db",
@@ -828,7 +828,21 @@
         "rice_nasi_goreng_vegan_bcc9cb",
         "salad_gadogado_indonesien_vegan_e4cd75"
       ],
-      "issues": []
+      "issues": [
+        "rice_crepe_vietnamienne_71beca: lait de coco 445ml en composition vs 150ml explicite dans la pate (le reste etait de l'eau) - composition alignee",
+        "rice_rouleaux_de_printemps_frits_e4d172: texte disait huile de coco pour la friture alors que la composition utilise deja de l'huile vegetale (vegetable_oil_plant) - texte aligne",
+        "dal_sabzi_sabz_592004: texte disait huile de coco (x2) alors que la composition utilise de l'huile de tournesol - texte aligne ; description attribuait le plat a la cuisine indienne au lieu de persane",
+        "egg_mirza_ghasemi_454e24: 220g d'oeuf (ingredient central du plat) present en composition mais jamais integre aux instructions - etape corrigee pour decrire les oeufs brouilles",
+        "main_kashke_bademjan_10dd33: etape 7 vide supprimee ; description et derniere etape mentionnaient une creme fraiche absente de la composition alors que le kashk (deja present, 60ml) est le vrai ingredient laitier acidule",
+        "dal_ash_reshteh_30aac5: le texte decrivait de la creme fraiche 'en remplacement du kashk' au lieu d'utiliser le kashk reel (60ml, deja en composition) - texte corrige",
+        "rice_soupe_de_riz_mastava_6db971: 50g de yaourt mentionnes dans le texte (etapes 5-6) mais absents de la composition, incoherent avec lactose_free=True - remplace par une liaison a base de pomme de terre ecrasee",
+        "DECOUVERTE SYSTEMIQUE (5 recettes indonesiennes): coconut_milk_plant etiquete role=fat representait en realite l'huile de coco de friture citee dans le texte (meme motif que lots 13-29) - renomme en coconut_oil_plant dans protein_gadogado_c0f543, protein_gadogado_indonesien_200c65, rice_nasi_goreng_edfce4, rice_nasi_goreng_vegan_bcc9cb, salad_gadogado_indonesien_vegan_e4cd75",
+        "protein_gadogado_c0f543, protein_gado_gado_2412da, salad_gadogado_indonesien_vegan_e4cd75: le lait de coco de la sauce satay/cacahuete (150-400ml, explicite dans le texte) etait absent de la composition car le seul champ coconut_milk_plant avait ete requalifie en huile de friture - ajoute comme ingredient separe",
+        "protein_gadogado_indonesien_200c65: 220g d'oeuf en composition jamais integre au texte (gado-gado traditionnel inclut de l'oeuf dur) - etape ajoutee ; etape 9 incoherente (mentionnait remplacer le beurre par de l'huile alors que le beurre, 30g, est en composition et jamais utilise) - corrigee pour utiliser reellement le beurre",
+        "rice_nasi_goreng_vegan_bcc9cb: etape 6 absurde mentionnant le retrait d'un oeuf et un 'oeuf de lin' de substitution alors qu'aucun des deux n'existe en composition (version deja vegan sans oeuf) - remplacee par une etape d'assaisonnement coherente",
+        "salad_gadogado_indonesien_vegan_e4cd75: jus de citron 20ml texte vs 50ml composition - texte aligne sur la composition",
+        "protein_gado_gado_2412da: huile de coco de friture du tofu et des oignons (etapes 4-5, ~45ml explicite) totalement absente de la composition - ajoutee"
+      ]
     },
     {
       "id": 31,
