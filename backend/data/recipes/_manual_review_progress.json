@@ -1384,7 +1384,7 @@
     },
     {
       "id": 47,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "soup_au_chou_4be090",
         "soup_courge_au_lait_de_coco_224d09",
@@ -1411,7 +1411,20 @@
         "soup_thai_green_curry_56dfda",
         "soup_thai_red_curry_f6bb3c"
       ],
-      "issues": []
+      "issues": [
+        "soup_au_chou_4be090: huile d'olive 25ml texte vs 45ml composition - alignee",
+        "soup_courge_au_lait_de_coco_224d09, soup_haricots_au_lait_de_coco_207254, soup_laksa_thai_7b1720, soup_thai_green_curry_56dfda, soup_thai_red_curry_f6bb3c: ail 2g explicite dans le texte vs 6g composition (motif recurrent sur 5 recettes) - corrige",
+        "soup_potage_de_patate_douce_e4b521: huile de coco (25ml, explicite) absente de la composition ; curcuma et coriandre moulue cites dans le texte mais absents - ajoutes",
+        "soup_tom_kha_cee413: le bouillon de legumes (750ml, en composition) n'etait jamais mentionne dans le texte - ajoute",
+        "soup_miso_k2d1p1: le texte precise 2 fois 'algue wakame' alors que la composition utilisait un melange d'algues generique - corrige",
+        "soup_ramen_au_miso_f69c22: bouillon 900ml explicite vs 1200ml composition - corrige ; etape 6 vide supprimee",
+        "soup_tofu_frit_au_bouillon_1bad0a: huile de coco au texte alors que la composition a une huile vegetale generique - corrige ; bouillon 500ml texte vs 750ml composition - aligne ; mirin, ail et gingembre (tous explicites) absents de la composition - ajoutes",
+        "soup_udon_miso_ef1ceb: mirin et sauce soja (tous deux explicites) absents de la composition - ajoutes",
+        "soup_pad_thai_cfe090: la sauce de poisson vegetarienne (15ml, en composition) n'etait jamais mentionnee dans le texte - ajoutee",
+        "soup_soupe_thai_coco_citronnelle_375c23: citronnelle 40g explicite vs 20g composition - corrigee ; champignons, feuilles de combava et piment (tous en composition) jamais mentionnes dans le texte - ajoutes",
+        "soup_thai_basil_tofu_c7e4ad: huile de sesame 30ml explicite vs 20ml composition - alignee",
+        "soup_thai_green_curry_56dfda, soup_thai_red_curry_f6bb3c: citronnelle 40g explicite vs 20g composition (motif recurrent, 2 recettes) - corrigee"
+      ]
     },
     {
       "id": 48,

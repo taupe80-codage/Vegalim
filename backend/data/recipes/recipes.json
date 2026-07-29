@@ -161433,7 +161433,7 @@
       "description": "Soupe réconfortante aux choux verts, carottes et pommes de terre, mijotée dans un bouillon végétal aromatique, avec une texture crémeuse et des saveurs légèrement sucrées.",
       "instructions": [
         "Étape 1 : Émincer finement les 400 g de chou vert en chiffonnade, couper les 600 g de pommes de terre en cubes de 2 cm et émincer les 300 g d'oignon et les 200 g de carottes.",
-        "Étape 2 : Faire revenir l'oignon dans 25 ml d'huile d'olive à feu moyen pendant 5 minutes, jusqu'à ce qu'il soit translucide et parfumé.",
+        "Étape 2 : Faire revenir l'oignon dans 45 ml d'huile d'olive à feu moyen pendant 5 minutes, jusqu'à ce qu'il soit translucide et parfumé.",
         "Étape 3 : Ajouter les carottes et cuire pendant 3 minutes, en remuant régulièrement, jusqu'à ce qu'elles commencent à ramollir et à dégager leur saveur.",
         "Étape 4 : Incorporer le chou émincé et les pommes de terre, puis verser 750 ml de bouillon de légumes chaud.",
         "Étape 5 : Porter à ébullition, puis mijoter à feu doux pendant 25 minutes, jusqu'à ce que les légumes soient fondants et le bouillon soit légèrement lié.",
@@ -162897,7 +162897,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 6,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -165300,7 +165300,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 6,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -166408,7 +166408,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 6,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -166441,7 +166441,7 @@
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 700,
+          "quantity": 1000,
           "unit": "ml",
           "meta": {
             "role": "base",
@@ -168172,7 +168172,7 @@
           }
         },
         {
-          "ingredient": "mixed_seaweed_dulse_porphyre_nori_dried",
+          "ingredient": "wakame_dried",
           "quantity": 5,
           "unit": "g",
           "meta": {
@@ -168251,10 +168251,8 @@
         }
       },
       "search_tokens": [
-        "(dulse,",
         "(eau",
         "30 minutes",
-        "algues",
         "braising",
         "coeliaque",
         "eau",
@@ -168268,21 +168266,16 @@
         "leger",
         "light",
         "low calorie",
-        "melangees",
         "minceur",
         "miso",
-        "mixed",
-        "nori)",
         "oignon",
         "onion",
-        "porphyre,",
         "potable)",
         "quick",
         "rapide",
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "seaweed",
         "soup",
         "soupe",
         "tofu",
@@ -168290,6 +168283,7 @@
         "vegetalien",
         "vegetarien",
         "vert",
+        "wakame",
         "water"
       ],
       "difficulty_level": "easy",
@@ -168586,7 +168580,7 @@
       "description": "Pad thaï traditionnel : nouilles de riz sautées au wok avec tofu doré, pousses de soja et oignons verts, dans une sauce sucrée-acidulée au tamarin, sauce soja et sucre de coco, garni de cacahuètes concassées et citron vert.",
       "instructions": [
         "Étape 1 : Faire tremper 200g de vermicelles de riz larges dans l'eau froide pendant 30 minutes, puis les égoutter. Observer la texture des vermicelles qui passent de rigides à souples.",
-        "Étape 2 : Préparer la sauce en mélangeant 30ml de sauce soja, 30g de pâte de tamarin, 20g de sucre de coco et 15ml de jus de citron vert. Remarquer la couleur ambrée et l'odeur acidulée de la sauce.",
+        "Étape 2 : Préparer la sauce en mélangeant 30ml de sauce soja, 30g de pâte de tamarin, 20g de sucre de coco, 15ml de sauce de poisson végétarienne et 15ml de jus de citron vert. Remarquer la couleur ambrée et l'odeur acidulée de la sauce.",
         "Étape 3 : Chauffer le wok à feu vif avec 10ml d'huile de sésame, puis faire dorer 200g de tofu pressé en cubes pendant 3 minutes, en le retournant régulièrement. Écouter le son des cubes de tofu qui dorent et sentir l'odeur de la friture.",
         "Étape 4 : Ajouter 6g d'ail émincé et faire revenir 30 secondes, jusqu'à ce qu'il soit parfumé sans colorer.",
         "Étape 5 : Ajouter les vermicelles égouttés et la sauce préparée, puis mélanger vigoureusement à feu très vif pendant 2 minutes, jusqu'à couleur ambrée et absorption de la sauce.",
@@ -169501,6 +169495,39 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "coconut_oil_plant",
+          "quantity": 25,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "turmeric_powder",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -169563,6 +169590,9 @@
         "coco",
         "coconut",
         "coeliaque",
+        "coriander",
+        "coriandre",
+        "curcuma",
         "douce",
         "enfants",
         "facile enfants",
@@ -169591,6 +169621,7 @@
         "sans viande",
         "stock",
         "sweet",
+        "turmeric",
         "vegan",
         "vegetable",
         "vegetalien",
@@ -170300,7 +170331,7 @@
       "composition": [
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 1200,
+          "quantity": 900,
           "unit": "ml",
           "meta": {
             "role": "base",
@@ -170527,7 +170558,6 @@
         "Étape 3 : Cuire les nouilles ramen véganes selon les instructions, égoutter et rincer brièvement à l'eau froide. Vérifiez la texture al dente des nouilles.",
         "Étape 4 : Répartir les nouilles dans des bols profonds chauds et verser le bouillon filtré à 80°C. Regardez la façon dont les nouilles absorbent le bouillon.",
         "Étape 5 : Ajouter 200 g de tofu ferme doré, coupé en dés, et 10 g d'oignon vert émincé sur le dessus de chaque bol. Admirez la couleur dorée du tofu et la fraîcheur de l'oignon vert.",
-        "",
         "Étape 7 : Servir sans attendre : les saveurs et les textures sont à leur meilleur lorsqu'elles sont fraîches et bien chaudes. Appréciez la combinaison parfaite des saveurs et des textures dans ce bol de ramen végétarien."
       ],
       "diet_flags": {
@@ -172769,7 +172799,7 @@
         },
         {
           "ingredient": "lemon_grass_fresh_herb",
-          "quantity": 20,
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -172976,9 +173006,9 @@
         "Étape 1 : Faire chauffer l'huile de sésame dans une grande casserole à feu moyen pendant 2 minutes, jusqu'à ce qu'elle soit parfumée et commence à fumer légèrement.",
         "Étape 2 : Ajouter l'ail haché et le gingembre frais haché, cuire 1 minute à feu moyen-vif, en remuant régulièrement, jusqu'à ce qu'ils soient parfumés et légèrement dorés.",
         "Étape 3 : Ajouter le bouillon de légumes et porter à frémissement. Laisser mijoter 15 minutes à feu doux, en couvrant la casserole, jusqu'à ce que les saveurs soient bien mélangées et le bouillon ait réduit légèrement.",
-        "Étape 4 : Ajouter la sauce soja et ajuster l'assaisonnement. Émulsionner pendant 1 minute pour bien mélanger les saveurs et obtenir une texture homogène.",
+        "Étape 4 : Ajouter la sauce soja et 5g de piment rouge émincé selon le niveau de piquant souhaité, puis ajuster l'assaisonnement. Émulsionner pendant 1 minute pour bien mélanger les saveurs et obtenir une texture homogène.",
         "Étape 5 : Ajouter le lait de coco et porter à frémissement. Réduire à feu doux et laisser cuire pendant 5 minutes, en remuant régulièrement, jusqu'à ce que la soupe soit crémeuse et parfumée, avec une texture onctueuse.",
-        "Étape 6 : Ajouter la citronnelle hachée et le tofu ferme en cubes. Cuire pendant 2 minutes, en remuant régulièrement, jusqu'à ce que le tofu soit chaud et la citronnelle parfumée, en libérant son arôme caractéristique.",
+        "Étape 6 : Ajouter la citronnelle hachée, 150g de champignons de Paris émincés, les 3g de feuilles de combava et le tofu ferme en cubes. Cuire pendant 2 minutes, en remuant régulièrement, jusqu'à ce que le tofu soit chaud et la citronnelle parfumée, en libérant son arôme caractéristique.",
         "Étape 7 : Servir chaud, garni de coriandre fraîche et de tranches de citron vert, pour profiter de la texture crémeuse et des saveurs thaï de cette soupe, idéale pour un repas réconfortant."
       ],
       "diet_flags": {
@@ -173273,7 +173303,7 @@
       "composition": [
         {
           "ingredient": "sesame_oil_plant",
-          "quantity": 20,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat_cooking",
@@ -173515,7 +173545,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 6,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -173603,7 +173633,7 @@
         },
         {
           "ingredient": "lemon_grass_fresh_herb",
-          "quantity": 20,
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -173831,7 +173861,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 6,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -173919,7 +173949,7 @@
         },
         {
           "ingredient": "lemon_grass_fresh_herb",
-          "quantity": 20,
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -174197,6 +174227,39 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "mirin",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 9,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "ginger_raw_root_fresh",
+          "quantity": 9,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -174256,22 +174319,29 @@
         }
       },
       "search_tokens": [
+        "(sake",
         "45 minutes",
         "agedashi",
+        "ail",
         "base_dashi_broth_a3a517",
         "bouillon",
         "braising",
         "coeliaque",
         "cornstarch",
+        "culinaire",
         "enfants",
         "facile enfants",
         "famille",
         "frit",
+        "garlic",
+        "gingembre",
+        "ginger",
         "gluten free",
         "green",
         "huile",
         "japanese",
         "kids",
+        "mirin",
         "moyen",
         "oignon",
         "oil",
@@ -174283,6 +174353,7 @@
         "shoyu",
         "soja",
         "soy",
+        "sucre)",
         "tofu",
         "vegan",
         "vegetable",
@@ -174298,9 +174369,9 @@
       "description": "Bouillon dashi japonais relevé de tofu ferme croustillant, où les saveurs umami se marient à la tendresse des légumes — une recette traditionnelle de la cuisine zen.",
       "instructions": [
         "Étape 1 : Presser 400g de tofu ferme entre deux planches pendant 15 minutes, pour enlever l'excès d'humidité. Couper en cubes de 3 cm et enrober légèrement de 20g de fécule de maïs.",
-        "Étape 2 : Chauffer 100ml d'huile de coco dans une poêle à feu vif. Faire dorer les cubes de tofu pendant 3 minutes par face, jusqu'à ce que la surface soit croustillante et dorée. Réserver.",
+        "Étape 2 : Chauffer 100ml d'huile végétale dans une poêle à feu vif. Faire dorer les cubes de tofu pendant 3 minutes par face, jusqu'à ce que la surface soit croustillante et dorée. Réserver.",
         "Étape 3 : Dans la même poêle, faire revenir 9g d'ail et 9g de gingembre haché pendant 30 secondes à feu moyen.",
-        "Étape 4 : Verser 500ml de bouillon végétal chaud avec 45ml de sauce soja et 20ml de mirin. Porter à frémissement pendant 3 minutes, en remuant régulièrement.",
+        "Étape 4 : Verser 750ml de bouillon végétal chaud avec 45ml de sauce soja et 20ml de mirin. Porter à frémissement pendant 3 minutes, en remuant régulièrement.",
         "Étape 5 : Remettre le tofu dans le bouillon et ajouter des légumes (champignons, pak-choï). Cuire à feu doux pendant 4 minutes, jusqu'à ce que les légumes soient tendres mais gardent leur tenue.",
         "Étape 6 : Servir sans attendre dans des bols profonds, en garnissant de ciboulette fraîche hachée, pour préserver la texture croustillante du tofu et la fraîcheur des herbes."
       ],
@@ -174570,7 +174641,7 @@
       "_chef_note": "Cette soupe est idéale pour les repas végétaliens, avec ses saveurs équilibrées et sa texture crémeuse.",
       "description": "Soupe thaïe crémeuse où le lait de coco et les champignons fondent en bouche, parfumés par la citronnelle et le gingembre frais — une recette traditionnelle de la cuisine zen thaïlandaise.",
       "instructions": [
-        "Étape 1 : Dans une grande casserole, porter 400 ml de lait de coco à frémissement doux, en veillant à ne pas le laisser bouillir pour éviter la séparation. Observer la formation de petites bulles à la surface.",
+        "Étape 1 : Dans une grande casserole, porter 400 ml de lait de coco et 750ml de bouillon de légumes à frémissement doux, en veillant à ne pas le laisser bouillir pour éviter la séparation. Observer la formation de petites bulles à la surface.",
         "Étape 2 : Ajouter 40 g de citronnelle fraîche écrasée, 11,2 g de gingembre frais râpé et 10 g de feuilles de coriandre fraîches. Laisser infuser pendant 10 minutes à feu doux, en sentant les arômes se mélanger et en vérifiant que les saveurs se développent.",
         "Étape 3 : Incorporer 300 g de champignons émincés, 200 g de tofu ferme en dés et 45 ml de sauce soja. Cuire pendant 5 minutes à feu doux, en observant la texture tendre des champignons et en vérifiant que le tofu est bien imprégné des saveurs.",
         "Étape 4 : Assaisonner avec 15 g de sucre, 5 g de sel et le jus de 140 g de lime. Goûter et ajuster les saveurs pour obtenir un équilibre crémeux, acidulé et parfumé, en vérifiant que les saveurs sont bien équilibrées.",
@@ -175715,6 +175786,28 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "mirin",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -175777,6 +175870,7 @@
       },
       "search_tokens": [
         "(nouilles",
+        "(sake",
         "45 minutes",
         "ail",
         "bouillon",
@@ -175784,6 +175878,7 @@
         "button",
         "champignon",
         "cuites)",
+        "culinaire",
         "epaisses,",
         "garlic",
         "gingembre",
@@ -175796,6 +175891,7 @@
         "light",
         "low calorie",
         "minceur",
+        "mirin",
         "miso",
         "moyen",
         "mushroom",
@@ -175805,9 +175901,14 @@
         "salt",
         "sans produit animal",
         "sans viande",
+        "sauce",
         "sel",
+        "shoyu",
+        "soja",
         "soupe",
+        "soy",
         "stock",
+        "sucre)",
         "table",
         "tofu",
         "udon",
