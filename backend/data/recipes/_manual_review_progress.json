@@ -422,7 +422,7 @@
     },
     {
       "id": 19,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "dal_de_lentilles_corail_vegan_8cc6a7",
         "dal_kadhi_pakora_078de2",
@@ -445,7 +445,19 @@
         "main_rajma_masala_bce2a4",
         "protein_palak_paneer_vegan_bdac46"
       ],
-      "issues": []
+      "issues": [
+        "dal_kadhi_pakora_078de2, dal_kadhi_pakora_vegan_5cb5d4: texte annoncait huile de coco alors que la composition utilise de l'huile d'olive deja correcte - texte aligne ; etape finale vide supprimee (078de2)",
+        "dal_lentil_corail_classic_k1d1p1: idem avec huile de tournesol + huile du tadka (15ml suppl.) non comptee (25ml -> 40ml)",
+        "dal_de_lentilles_corail_vegan_8cc6a7, dal_makhani_vegan_259219: huile de coco du tadka non comptee (30.4->45.4ml, 15.2->45.2ml)",
+        "dal_nepali_dal_bhat_7860b1, main_aloo_palak_7e9377: coconut_milk_plant utilise comme huile de friture (mal etiquete) -> coconut_oil_plant",
+        "dal_sambar_indien_fcf6d8: idem + quantite texte (25ml) vs composition (45ml) alignee",
+        "dal_lentilles_aux_epinards_be2017: epinards (200g, explicite dans le texte et le nom du plat) totalement absents de la composition (ajoutes) ; huile de coco texte vs huile d'olive composition",
+        "dal_lentilles_corail_au_lait_de_co_19d485: mention residuelle d'epinards sans quantite ni correspondance en composition (texte probablement copie depuis la recette soeur aux epinards) - supprimee",
+        "main_bhindi_masala_ade89d: huile vegetale 25ml texte vs 45ml composition",
+        "main_callaloo_f7ae5c: lait de coco 200ml texte vs 400ml composition",
+        "main_pav_bhaji_vegan_c1437e: huile de coco mentionnee dans le texte alors que la composition utilise du beurre vegetal (40g, jamais mentionne) - texte corrige (2 occurrences)",
+        "main_rajma_masala_bce2a4: huile de sesame 30ml texte vs 45ml composition"
+      ]
     },
     {
       "id": 20,
