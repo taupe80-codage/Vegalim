@@ -1530,7 +1530,7 @@
     },
     {
       "id": 51,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "entry_bruschetta_tomate_basilic_715b9b",
         "entry_crostini_champignons_truf_1d780c",
@@ -1549,7 +1549,14 @@
         "entry_taboule_libanais_a_la_gre_cae147",
         "entry_Œufs_en_meurette_b8fce3"
       ],
-      "issues": []
+      "issues": [
+        "dip_hummus_classic_v6_u4k9p2: le jus de citron (0.4ml, en composition) etait une erreur de saisie manifeste - le texte precise explicitement '40ml de jus de citron frais' - corrige",
+        "entry_tzatziki_grec_2b21fb: le sel (3g, en composition) est utilise deux fois de maniere explicite dans le texte (degorgement du concombre + assaisonnement final) - somme a 6g",
+        "crepe_galettes_de_courgette_ult_669679: l'huile d'olive (25ml, en composition) est utilisee deux fois de maniere explicite (dans la masse puis pour la cuisson a la poele) - somme a 50ml",
+        "entry_brandade_de_betterave_113c4a: le texte suggerait 'le persil ou la ciboulette' en garniture alors que la composition trace de l'aneth (15g), confirme par le tag visuel 'aneth_vert' du resultat - texte corrige",
+        "entry_mousse_avocat_wasabi_773105: le sesame blanc (15g, en composition) faisait doublon avec le sesame noir deja utilise dans le texte ('graines de sesame noir et de roquette') - retire",
+        "entry_Œufs_en_meurette_b8fce3: le beurre (60g, en composition) est utilise trois fois de maniere explicite dans le texte (20g + 40g + 15g = 75g) - corrige ; le texte precise '5g de thym frais' alors que la composition tracait du thym seche - corrige"
+      ]
     }
   ],
   "notes": [
