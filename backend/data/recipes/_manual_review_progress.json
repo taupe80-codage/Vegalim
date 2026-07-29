@@ -761,7 +761,7 @@
     },
     {
       "id": 29,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "bread_gong_bao_tofu_3f7cc1",
         "egg_makdous_cf5efa",
@@ -788,7 +788,18 @@
         "salad_de_boulgour_turque_f80124",
         "salad_turque_coban_cdd8c4"
       ],
-      "issues": []
+      "issues": [
+        "bread_gong_bao_tofu_3f7cc1: sauce soja 30ml vs 45ml composition, vinaigre de riz 15ml vs 30ml composition, huile de sesame 25ml vs 45ml composition",
+        "main_chili_sin_carne_125ff2, main_chili_sin_carne_epice_205657: huile d'olive 30ml texte vs 45ml composition ; bouillon vegetal (150-200ml, explicite) absent de la composition",
+        "pasta_mac_and_cheese_vegan_4acb30: texte disait huile alors que la composition utilise du beurre vegetal - texte aligne",
+        "pasta_persian_ash_reshteh_8cb79c: kashk (60ml, ingredient traditionnel du plat) jamais mentionne dans le texte - ajoute a l'etape de service",
+        "salad_chilienne_tomateoignon_288941: huile d'olive 20ml texte vs 45ml composition ; jus de citron (10ml, explicite) absent de la composition",
+        "egg_menemen_681f60: huile d'olive 25ml texte vs 45ml composition",
+        "rice_dolma_au_cumin_b40a25, rice_dolma_au_persil_6aeb1e: huile d'olive utilisee deux fois (farce + liquide de cuisson, 30+45ml) mais composition n'avait qu'une seule quantite (45->75ml)",
+        "rice_riz_pilaf_turc_52cfe9: beurre 20g texte vs 40g composition",
+        "salad_de_boulgour_turque_f80124: poivron nomme dans le texte, absent de la composition (ajoute, ~150g, quantite estimee)",
+        "salad_turque_coban_cdd8c4: persil nomme dans le texte, absent de la composition (ajoute, ~20g, quantite estimee)"
+      ]
     },
     {
       "id": 30,

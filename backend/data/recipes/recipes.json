@@ -10899,8 +10899,8 @@
       "_quality_score": 1.0,
       "description": "Pâte farcie de tofu ferme — dorée en cuisson pour une texture croustillante à l'extérieur et tendre à cœur, avec une saveur épicée et sucrée, typique de la cuisine chinoise du Sichuan, parfumée d'ail et de gingembre.",
       "instructions": [
-        "Étape 1 : Presser 400g de tofu ferme pendant 15 minutes, puis couper en cubes de 2 cm. Dans un bol, mélanger 30ml de sauce de soja végétal, 15ml de vinaigre de riz et 10g de sucre. Mariner le tofu dans ce mélange pendant 20 minutes, en faisant attention à ce que chaque cube soit bien enrobé.",
-        "Étape 2 : Chauffer 25ml d'huile de sésame dans un wok à feu vif. Quand l'huile est chaude, ajouter les cubes de tofu et faire dorer pendant 3 à 4 minutes par face, jusqu'à ce que la surface soit croustillante et légèrement caramélisée.",
+        "Étape 1 : Presser 400g de tofu ferme pendant 15 minutes, puis couper en cubes de 2 cm. Dans un bol, mélanger 45ml de sauce de soja végétal, 30ml de vinaigre de riz et 10g de sucre. Mariner le tofu dans ce mélange pendant 20 minutes, en faisant attention à ce que chaque cube soit bien enrobé.",
+        "Étape 2 : Chauffer 45ml d'huile de sésame dans un wok à feu vif. Quand l'huile est chaude, ajouter les cubes de tofu et faire dorer pendant 3 à 4 minutes par face, jusqu'à ce que la surface soit croustillante et légèrement caramélisée.",
         "Étape 3 : Dans le même wok, ajouter 10g de piments séchés et 3g de poivre du Sichuan. Faire sauter pendant 30 secondes, en remuant constamment pour éviter que les épices ne brûlent. Ajouter ensuite 9g d'ail haché et 11,2g de gingembre haché, et faire sauter pendant une minute, en sentant les arômes se dégager.",
         "Étape 4 : Remettre le tofu dans le wok avec 80g d'arachides et la marinade restante. Faire sauter pendant 2 minutes à feu vif, en faisant attention à ce que la sauce caramélise légèrement et enrobé le tofu et les arachides.",
         "Étape 5 : Hors du feu, incorporer 60g d'oignons verts en biseau. La chaleur résiduelle du wok va légèrement cuire les oignons et les intégrer à la sauce.",
@@ -60549,7 +60549,7 @@
       "_quality_score": 0.99,
       "description": "Plat turc d'œufs brouillés dans une sauce tomate-poivron épicée, avec une texture crémeuse et fondante à cœur, réalisée par une cuisson douce — origine culinaire méditerranéenne.",
       "instructions": [
-        "Faire revenir l'oignon émincé et le poivron vert en dés dans 25 ml d'huile d'olive à feu moyen pendant 6 minutes, jusqu'à légère coloration dorée et parfum épicé.",
+        "Faire revenir l'oignon émincé et le poivron vert en dés dans 45 ml d'huile d'olive à feu moyen pendant 6 minutes, jusqu'à légère coloration dorée et parfum épicé.",
         "Ajouter les tomates concassées et le paprika. Assaisonner de sel et piment. Laisser mijoter 8 à 10 minutes à feu moyen, en remuant occasionnellement, jusqu'à obtenir une sauce épaisse et concentrée, avec une couleur rouge profonde.",
         "Casser les œufs directement dans la poêle sur la sauce chaude sans les battre au préalable, en prenant soin de ne pas casser la texture de la sauce.",
         "Remuer délicatement avec une spatule en mouvements lents pour brouiller les œufs tout en les incorporant partiellement à la sauce, pendant environ 3 à 4 minutes, selon la texture souhaitée — crémeux et légèrement coulant.",
@@ -81817,6 +81817,17 @@
             "note": "Pour un repas complet",
             "optional": true
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 150,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -81883,6 +81894,7 @@
         "bean",
         "bell",
         "blanc",
+        "bouillon",
         "braising",
         "bread",
         "carne",
@@ -81896,6 +81908,7 @@
         "haricot",
         "kidney",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
@@ -81913,9 +81926,11 @@
         "sans produit animal",
         "sans viande",
         "sin",
+        "stock",
         "tomate",
         "tomato",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
         "white",
@@ -81927,7 +81942,7 @@
       "_quality_score": 0.97,
       "description": "Ragout de haricots rouges tendres, parfumé d'épices fumées et de coriandre fraîche, lié d'une sauce riche et crémeuse — mijoté à feu doux, inspiré de la cuisine végétalienne créative avec des notes de fumée et de fraîcheur.",
       "instructions": [
-        "Étape 1 : Faire revenir l'oignon émincé dans 30 ml d'huile d'olive extra vierge à feu moyen pendant 6 minutes jusqu'à translucidité, l'oignon doit être tendre et parfumé.",
+        "Étape 1 : Faire revenir l'oignon émincé dans 45 ml d'huile d'olive extra vierge à feu moyen pendant 6 minutes jusqu'à translucidité, l'oignon doit être tendre et parfumé.",
         "Étape 2 : Ajouter le poivron en dés et l'ail, cuire 3 minutes, les légumes doivent être tendres et parfumés.",
         "Étape 3 : Incorporer le cumin, le paprika fumé, cuire 1 minute en remuant, jusqu'à parfum intense, les épices doivent être bien mélangées et parfumées.",
         "Étape 4 : Ajouter les tomates concassées, laisser réduire 8 minutes à feu moyen jusqu'à sauce épaisse et brillante, la sauce doit être riche et crémeuse.",
@@ -82085,6 +82100,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 200,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -82148,6 +82174,7 @@
         "american",
         "bean",
         "bell",
+        "bouillon",
         "braising",
         "carne",
         "chili",
@@ -82162,6 +82189,7 @@
         "haricot",
         "kidney",
         "leger",
+        "legumes",
         "lent",
         "light",
         "long",
@@ -82183,10 +82211,12 @@
         "sans viande",
         "sel",
         "sin",
+        "stock",
         "table",
         "tomate",
         "tomato",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
         "wok"
@@ -82197,7 +82227,7 @@
       "_quality_score": 0.97,
       "description": "Préparation à base de haricots rouges, avec une texture crémeuse et une saveur intense, typique de la cuisine mexicaine épicée, parfumée par les arômes de cumin et de paprika fumé.",
       "instructions": [
-        "Étape 1 : Faire chauffer 30 ml d'huile d'olive à feu moyen, blanchir l'oignon 6 min, ajouter l'ail haché, les légumes doivent être tendres et parfumés, avec une odeur caractéristique.",
+        "Étape 1 : Faire chauffer 45 ml d'huile d'olive à feu moyen, blanchir l'oignon 6 min, ajouter l'ail haché, les légumes doivent être tendres et parfumés, avec une odeur caractéristique.",
         "Étape 2 : Incorporer le cumin, le paprika fumé, le piment chipotle, cuire 1 min en remuant, jusqu'à parfum intense, les épices doivent être bien mélangées et parfumées, avec une couleur brunâtre.",
         "Étape 3 : Ajouter les tomates concassées, les haricots rouges égouttés, verser 200 ml de bouillon de légumes, porter à ébullition, la sauce doit être riche et crémeuse, avec une consistance onctueuse.",
         "Étape 4 : Enfourner 25 min à 180°C, mijoter à feu doux, remuant régulièrement, jusqu'à sauce épaisse et haricots imprégnés, les haricots doivent être tendres et imprégnés de saveur, avec une texture fondante.",
@@ -111809,7 +111839,7 @@
       "description": "Gratin de macaronis crémeux, aux pâtes de blé tendres, nappées d'une sauce onctueuse à base de lait de coco et de fromage végétal râpé, doré au four à 180°C.",
       "instructions": [
         "Étape 1 : Cuire 320g de pâtes de blé al dente dans de l'eau bouillante salée à 100°C pendant 8 min, jusqu'à ce qu'elles soient tendres mais encore fermes, avec une légère résistance à la morsure.",
-        "Étape 2 : Faire fondre 40g d'huile à feu moyen dans une poêle, puis ajouter 200g de farine et cuire 1 min en remuant constamment, jusqu'à obtenir un mélange homogène et sans grumeaux.",
+        "Étape 2 : Faire fondre 40g de beurre végétal à feu moyen dans une poêle, puis ajouter 200g de farine et cuire 1 min en remuant constamment, jusqu'à obtenir un mélange homogène et sans grumeaux.",
         "Étape 3 : Verser progressivement 250ml de lait de coco en fouettant pour obtenir une sauce lisse et crémeuse, en vérifiant que la texture soit veloutée et sans grumeaux.",
         "Étape 4 : Incorporer 150g de fromage végétal râpé hors du feu, en remuant jusqu'à dissolution complète, pour obtenir une sauce homogène et onctueuse.",
         "Étape 5 : Mélanger la sauce crémeuse avec les pâtes égouttées, puis servir sans attendre, car la chaleur est essentielle pour maintenir la texture crémeuse de la sauce.",
@@ -114946,7 +114976,7 @@
         "Étape 3: Incorporez les lentilles vertes, les pois chiches et les haricots blancs, puis couvrez-les d'eau et laissez mijoter pendant 20 minutes à 160°C, jusqu'à ce que les légumes soient tendres.",
         "Étape 4: Ajoutez les nouilles reshteh et faites-les cuire pendant 10 minutes à feu moyen-vif, en vérifiant régulièrement la texture pour éviter la surcuisson.",
         "Étape 5: Incorporez les épinards, le persil, la coriandre et le fenugrec, puis laissez mijoter pendant 5 minutes à feu doux, en surveillant la couleur pour éviter la perte de vitalité.",
-        "Étape 6: Assaisonnez avec du sel et du poivre pour ajuster la saveur, puis servez chaud, en garnissant de menthe fraîche pour un contraste de saveurs et de textures."
+        "Étape 6: Assaisonnez avec du sel et du poivre pour ajuster la saveur, puis servez chaud, garni de kashk et de menthe fraîche pour un contraste de saveurs et de textures."
       ],
       "diet_flags": {
         "vegan": false,
@@ -123534,7 +123564,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 75,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -123752,7 +123782,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 75,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -134386,7 +134416,7 @@
       "_quality_score": 0.83,
       "description": "Riz pilaf turc cuit par réduction concentrée, grain séparé et bien assaisonné aux arômes d'épices et herbes, avec une texture parfaite et une saveur unique.",
       "instructions": [
-        "Étape 1: Faire fondre 20 g de beurre à feu moyen pendant 1 minute, jusqu'à ce qu'elle soit liquide et parfumée, en remplissant la cuisine d'un arôme délicieux.",
+        "Étape 1: Faire fondre 40 g de beurre à feu moyen pendant 1 minute, jusqu'à ce qu'elle soit liquide et parfumée, en remplissant la cuisine d'un arôme délicieux.",
         "Étape 2: Ciseler 300 g d'oignon jaune émincé et le faire revenir jusqu'à translucidité pendant 2 minutes à feu doux, en remuant régulièrement, jusqu'à ce qu'il soit tendre et légèrement caramélisé.",
         "Étape 3: Julienne 300 g de riz long grain cru et le mélanger pendant 2 minutes jusqu'à ce qu'il soit translucide, en évitant de le brûler, tout en ajoutant un peu de saveur à l'beurre.",
         "Étape 4: Verser 750 ml de bouillon de légumes chaud et saler, puis porter à ébullition pendant 2 minutes, en faisant attention à la température, jusqu'à ce que le liquide commence à bouillonner.",
@@ -140111,6 +140141,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "lemon_raw",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "fruit",
+            "form": "juice",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -140179,6 +140220,7 @@
         "blanc",
         "chilena",
         "chilienne",
+        "citron",
         "coeliaque",
         "coriander",
         "coriandre",
@@ -140191,6 +140233,7 @@
         "jaune",
         "kids",
         "leger",
+        "lemon",
         "light",
         "low calorie",
         "minceur",
@@ -140226,7 +140269,7 @@
         "Couper les tomates en dés de 1 cm et les saler généreusement avec 5 g de sel. Laisser dégorger pendant 10 minutes à température ambiante pour permettre aux tomates de rendre leur eau et de mieux absorber les saveurs.",
         "Émincer l'oignon jaune en demi-rondelles fines et le rincer à l'eau froide pendant 2 minutes pour enlever l'âcreté et obtenir une texture plus douce.",
         "Ciseler la coriandre fraîche jusqu'à obtenir des morceaux fins et parfumés, libérant ainsi tous les arômes de cette herbe aromatique.",
-        "Préparer la vinaigrette en mélangeant 10 ml de jus de citron, 20 ml d'huile d'olive, du sel et du poivre. Émulsionner pendant 1 minute jusqu'à obtenir une texture lisse et homogène, signe d'une vinaigrette bien préparée.",
+        "Préparer la vinaigrette en mélangeant 10 ml de jus de citron, 45 ml d'huile d'olive, du sel et du poivre. Émulsionner pendant 1 minute jusqu'à obtenir une texture lisse et homogène, signe d'une vinaigrette bien préparée.",
         "Combiner les tomates, l'oignon jaune, les herbes et la vinaigrette. Mélanger délicatement pendant 1 minute jusqu'à ce que les saveurs soient équilibrées et les textures bien mélangées, permettant ainsi aux saveurs de se fondre en harmonie.",
         "Ajouter 30 ml de vinaigre blanc pour donner une touche acidulée à la salade, puis mélanger à nouveau pour bien intégrer.",
         "Servir sans attendre, car la fraîcheur et la texture des ingrédients sont essentielles pour apprécier pleinement cette salade chilienne.",
@@ -141076,6 +141119,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "red_bell_pepper_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "strips",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -141136,6 +141190,7 @@
       "search_tokens": [
         "45 minutes",
         "assembly",
+        "bell",
         "boulgour",
         "bulgur",
         "citron",
@@ -141152,7 +141207,11 @@
         "olive",
         "onion",
         "parsley",
+        "pepper",
         "persil",
+        "poivron",
+        "red",
+        "rouge",
         "salad",
         "salade",
         "salt",
@@ -147503,6 +147562,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -147584,7 +147654,9 @@
         "oignon",
         "olive",
         "onion",
+        "parsley",
         "pepper",
+        "persil",
         "poivron",
         "quick",
         "rapide",
