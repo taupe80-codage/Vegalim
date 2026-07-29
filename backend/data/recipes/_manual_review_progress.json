@@ -934,7 +934,7 @@
     },
     {
       "id": 33,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "main_aligot_c03237",
         "main_potee_auvergnate_fcc003",
@@ -960,7 +960,22 @@
         "main_spatzle_au_fromage_586859",
         "salad_de_pommes_de_terre_allema_3cdeab"
       ],
-      "issues": []
+      "issues": [
+        "main_potee_auvergnate_fcc003: BUG - le chou vert (ingredient central, decoupe 'en quartiers' dans le texte) etait a 0.5g en composition (erreur de saisie flagrante) - corrige a 400g",
+        "main_tarte_roquefort_et_noix_b24bec: '110g de yaourt' dans le texte correspondait exactement a la quantite du vrai oeuf en composition (aucun yaourt en composition) - texte corrige",
+        "main_truffade_auvergnate_01a284: BUG - description et etape 5 decrivaient un 'fromage vegetal' (2 mentions) et les diet_flags indiquaient vegan=True/lactose_free=True, mais la composition utilisait un vrai fromage laitier (tomme de Savoie) - remplace par un fromage vegan reel du dictionnaire ; nut_free corrige a False (ce fromage vegan contient des noix de cajou) et tags nettoyes",
+        "main_bohemienne_provencale_781b61: huile d'olive 5ml en composition alors que le texte en utilise explicitement 40ml pour saisir les aubergines - corrige",
+        "main_daube_de_legumes_4a045f: composition utilisait de l'orange en 'quartiers' (150g) alors que le texte (description + etape 3) precise a 2 reprises qu'il s'agit de zeste d'orange - forme et quantite corrigees",
+        "main_legumes_braises_7030b7: huile d'olive 4ml composition vs 35ml explicite dans le texte ; vin blanc 100ml composition vs 150ml explicite - corriges",
+        "salad_bulgarian_shopska_salad_v_adc716: huile d'olive et vinaigre - la composition a des valeurs precises (46.2ml/29.7ml) mais l'etape d'assaisonnement utilisait des valeurs bien plus faibles (20ml/10ml) - texte aligne",
+        "salad_shopska_04dd73: le texte disait 'huile de noix' (aurait rompu nut_free=True) alors que la composition est de l'huile d'olive - corrige ; fromage decrit vaguement alors que la composition est de la feta emiettee - precise",
+        "main_humita_andine_fe7789: lait 250ml composition vs 100ml explicite dans le texte ; huile d'olive utilisee 2 fois explicitement (25+45ml) mais composition n'avait qu'une seule quantite - corriges",
+        "rice_tacu_tacu_9e0073: bouillon vegetal (750ml, explicite) absent de la composition - ajoute",
+        "sauce_pommes_de_terre_sauce_hua_3304de: '1 cuillere a soupe d'huile' explicite dans le texte mais aucune huile en composition - ajoutee",
+        "pasta_lagman_aaae70: coconut_milk_plant (role=fat) representait en realite l'huile de coco de friture citee dans le texte (motif recurrent) - renomme en coconut_oil_plant ; tomates concassees, paprika, cumin et piment cites explicitement comme incorpores dans le texte mais totalement absents de la composition - ajoutes",
+        "salad_achichuk_e3f0c9: le persil frais est cite 2 fois dans le texte (preparation + garniture) mais absent de la composition - ajoute",
+        "bread_quenelles_de_pain_813118: '2 cuilleres a soupe de fecule de mais' explicite dans le texte mais absente de la composition - ajoutee"
+      ]
     },
     {
       "id": 34,

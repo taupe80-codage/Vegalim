@@ -12423,6 +12423,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "cornstarch_flour",
+          "quantity": 16,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -12492,14 +12503,17 @@
         "butter",
         "button",
         "champignon",
+        "cornstarch",
         "egg",
         "farine",
+        "fecule",
         "flour",
         "german",
         "lait",
         "leger",
         "light",
         "low calorie",
+        "mais",
         "milk",
         "minceur",
         "mushroom",
@@ -79925,7 +79939,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 5,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -83286,11 +83300,11 @@
         },
         {
           "ingredient": "orange_raw",
-          "quantity": 150,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "supremes",
+            "form": "zest",
             "state": "raw",
             "preparation": ""
           }
@@ -90687,7 +90701,7 @@
         },
         {
           "ingredient": "milk_liquid_uht_3_5pct",
-          "quantity": 250,
+          "quantity": 100,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -90709,7 +90723,7 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "quantity": 70,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -93433,7 +93447,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 4,
+          "quantity": 35,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -93444,7 +93458,7 @@
         },
         {
           "ingredient": "white_wine_liquid",
-          "quantity": 100,
+          "quantity": 150,
           "unit": "ml",
           "meta": {
             "role": "liquid",
@@ -101276,7 +101290,7 @@
       "composition": [
         {
           "ingredient": "green_cabbage_raw",
-          "quantity": 0.5,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "vegetable",
@@ -105850,7 +105864,7 @@
       "instructions": [
         "Étape 1: Préchauffez le four à 180°C. Foncer un moule de 24 cm avec la pâte brisée, en vous assurant qu'elle soit bien étalée et lisse.",
         "Étape 2: Piquez le fond de la pâte avec une fourchette et précuire à blanc pendant 10 minutes à 180°C, jusqu'à ce que le fond soit légèrement doré et croustillant.",
-        "Étape 3: Dans un bol, mélangez 150g de fromage émietté avec 110g de yaourt et 150ml de crème fraîche. Ajoutez des épices et des herbes à votre goût, telles que du thym ou du romarin.",
+        "Étape 3: Dans un bol, mélangez 150g de fromage émietté avec 110g d'œuf battu et 150ml de crème fraîche. Ajoutez des épices et des herbes à votre goût, telles que du thym ou du romarin.",
         "Étape 4: Versez l'appareil sur le fond précuit de la tarte. Disposez les tranches de poire et les cerneaux de noix en rosace, en vous assurant qu'ils soient bien répartis et visibles.",
         "Étape 5: Enfournez la tarte pendant 30-35 minutes à 180°C, jusqu'à ce que la surface soit dorée et que la tarte soit ferme et légèrement soufflée. Vérifiez la cuisson en insérant une lame de couteau dans la tarte.",
         "Étape 6: Si la lame ressort sèche, la tarte est prête. Sinon, prolongez la cuisson de quelques minutes, en vérifiant régulièrement la texture et la couleur de la tarte.",
@@ -106824,7 +106838,7 @@
           }
         },
         {
-          "ingredient": "tomme_de_savoie_cow",
+          "ingredient": "base_vegan_cheddar_024998",
           "quantity": 300,
           "unit": "g",
           "meta": {
@@ -106872,12 +106886,9 @@
         "diet": [
           "gluten_free",
           "kid_friendly",
-          "nut_free",
           "vegetarian"
         ],
-        "allergens": [
-          "milk"
-        ],
+        "allergens": [],
         "technique": [
           "sauteed",
           "pan_frying"
@@ -106930,6 +106941,7 @@
         "45 minutes",
         "ail",
         "auvergnate",
+        "base_vegan_cheddar_024998",
         "coeliaque",
         "enfants",
         "facile enfants",
@@ -106953,10 +106965,7 @@
         "sans produit animal",
         "sans viande",
         "sauteed",
-        "savoie",
         "terre",
-        "tome",
-        "tomme",
         "truffade",
         "vegan",
         "vegetalien",
@@ -106982,7 +106991,7 @@
         "vegetarian": true,
         "gluten_free": true,
         "lactose_free": true,
-        "nut_free": true,
+        "nut_free": false,
         "raw": false,
         "kid_friendly": true
       }
@@ -110577,7 +110586,7 @@
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
+          "ingredient": "coconut_oil_plant",
           "quantity": 45,
           "unit": "ml",
           "meta": {
@@ -110607,6 +110616,50 @@
             "ingredient_fr": "coriandre fraîche",
             "note": "Pour un repas complet et équilibré",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "roughly_chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "paprika_powder",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "ground",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "ground",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "chopped",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -110676,6 +110729,7 @@
         "coco",
         "coconut",
         "coriander",
+        "cumin",
         "garlic",
         "lagman",
         "leger",
@@ -110686,6 +110740,7 @@
         "noix",
         "oignon",
         "onion",
+        "paprika",
         "pepper",
         "poivron",
         "red",
@@ -110698,6 +110753,8 @@
         "soja",
         "soy",
         "table",
+        "tomate",
+        "tomato",
         "uzbek",
         "vegetarien",
         "water_cooking"
@@ -110710,7 +110767,7 @@
       "description": "Préparation de nouilles Lagman cuites al dente, servies avec un ragoût de légumes tendres et parfumés, aux saveurs de l'Asie centrale, avec une texture homogène et des couleurs vives.",
       "instructions": [
         "Étape 1 : Couper les légumes (poivron rouge, carotte crue, oignon jaune) en lamelles de 5 mm pour une cuisson uniforme, en veillant à ce que les morceaux soient réguliers pour une texture homogène.",
-        "Étape 2 : Chauffer 35 ml d'huile de noix de coco dans un wok ou grande sauteuse à feu moyen-vif, jusqu'à ce que l'huile commence à briller et à sentir le coco, puis faire revenir l'oignon jaune et l'ail pendant 2 minutes, en remuant constamment, jusqu'à ce que l'oignon soit translucide.",
+        "Étape 2 : Chauffer 45 ml d'huile de noix de coco dans un wok ou grande sauteuse à feu moyen-vif, jusqu'à ce que l'huile commence à briller et à sentir le coco, puis faire revenir l'oignon jaune et l'ail pendant 2 minutes, en remuant constamment, jusqu'à ce que l'oignon soit translucide.",
         "Étape 3 : Ajouter les légumes fermes (carotte crue, poivron rouge) et cuire 4 minutes en remuant régulièrement, pour obtenir une texture tendre mais encore croquante, en vérifiant que les légumes sont cuits mais pas trop fondants.",
         "Étape 4 : Incorporer les tomates concassées, le paprika, le cumin et le piment, et laisser cuire pendant 1 minute, en remuant constamment, pour permettre aux épices de libérer leurs arômes et de parfumer le ragoût.",
         "Étape 5 : Laisser réduire 5 minutes pour concentrer les saveurs et obtenir une sauce légèrement caramélisée, en surveillant la consistance pour éviter que le ragoût ne devienne trop sec.",
@@ -136538,6 +136595,17 @@
             "note": "Pour une touche de fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 750,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -136596,6 +136664,7 @@
         "ail",
         "bean",
         "blanc",
+        "bouillon",
         "coeliaque",
         "coriander",
         "coriandre",
@@ -136609,6 +136678,7 @@
         "kidney",
         "kids",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
@@ -136625,9 +136695,11 @@
         "sans produit animal",
         "sans viande",
         "sel",
+        "stock",
         "table",
         "tacu",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
         "water_cooking",
@@ -138768,6 +138840,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -138853,7 +138936,9 @@
         "oignon",
         "olive",
         "onion",
+        "parsley",
         "pepper",
+        "persil",
         "poivre",
         "poivron",
         "quick",
@@ -139908,7 +139993,7 @@
         "Étape 2 : Ciseler le concombre en dés similaires, en conservant sa peau pour une texture plus intéressante.",
         "Étape 3 : Émincer le poivron rouge en petits dés, puis finement hacher l'oignon rouge.",
         "Étape 4 : Assembler les légumes dans un saladier, en les disposant de manière à créer une harmonie de couleurs.",
-        "Étape 5 : Assaisonner avec 20 ml d'huile d'olive, 10 ml de vinaigre de vin blanc, du sel et du poivre, en prenant soin de bien mélanger.",
+        "Étape 5 : Assaisonner avec 46,2 ml d'huile d'olive, 29,7 ml de vinaigre de vin blanc, du sel et du poivre, en prenant soin de bien mélanger.",
         "Étape 6 : Mélanger délicatement avec 150g de fromage végétal râpé, en veillant à ce qu'il soit bien réparti. Servir frais dans un bol, garni de quelques feuilles de persil frais."
       ],
       "diet_flags": {
@@ -147052,8 +147137,8 @@
       "instructions": [
         "Étape 1: Laver soigneusement les tomates, concombres, poivrons et oignons, puis les ciseler en morceaux réguliers d'environ 1 cm de côté pour obtenir une texture homogène.",
         "Étape 2: Dans un grand saladier, mélanger délicatement les tomates, concombres, poivrons et oignons ciselés pour former une base de salade harmonieuse et visuellement attrayante.",
-        "Étape 3: Ajouter 150 grammes de fromage râpé, préférablement un fromage à pâte molle, pour donner une touche crémeuse et onctueuse à la salade.",
-        "Étape 4: Préparer la vinaigrette en émulsionnant 45 millilitres d'huile de noix, 100 grammes de jus de citron frais, 5 grammes de sel et 15 grammes de moutarde de Dijon dans un bol, en veillant à obtenir une consistance lisse et homogène.",
+        "Étape 3: Ajouter 150 grammes de feta émiettée, pour donner une touche crémeuse et onctueuse à la salade.",
+        "Étape 4: Préparer la vinaigrette en émulsionnant 45 millilitres d'huile d'olive, 100 grammes de jus de citron frais, 5 grammes de sel et 15 grammes de moutarde de Dijon dans un bol, en veillant à obtenir une consistance lisse et homogène.",
         "Étape 5: Verser la vinaigrette sur la salade et mélanger délicatement, mais avec fermeté, pour que tous les ingrédients soient bien enrobés et que les saveurs se mélangent harmonieusement.",
         "Étape 6: Goûter la salade et ajuster l'assaisonnement avant de servir, en ajoutant éventuellement un peu de sel ou de poivre pour parfaire les saveurs et obtenir l'équilibre désiré.",
         "Étape 7: Servir sans attendre, en garnissant de feuilles de persil frais ou de croûtons croustillants pour ajouter une touche de fraîcheur et de croustillant à la salade."
@@ -148159,6 +148244,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -148238,6 +148334,7 @@
         "milk",
         "minceur",
         "moyen",
+        "olive",
         "pepper",
         "peruvian",
         "piment",
