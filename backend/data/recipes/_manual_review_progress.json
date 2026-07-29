@@ -723,7 +723,7 @@
     },
     {
       "id": 28,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "couscous_couscous_mediterraneenne_bdf9d9",
         "couscous_moroccan_vegetable_cousco_f80d61",
@@ -748,7 +748,16 @@
         "wok_pad_krapow_vegetarien_565aa9",
         "wok_thai_veg_eb92db"
       ],
-      "issues": []
+      "issues": [
+        "couscous_tfaya_classic_k1d1p6, couscous_vegetable_classic_k1d1p7: huile d'olive utilisee deux fois (semoule + legumes/tfaya) mais composition n'avait qu'une seule quantite - corrigee pour couvrir les deux usages",
+        "couscous_tfaya_quick_ee5f20: cumin et paprika nommes dans le texte, absents de la composition (ajoutes, quantites reprises de la recette soeur couscous_traditionnel_132078)",
+        "couscous_vegetable_classic_k1d1p7: eau de cuisson des legumes (1.2L, explicite) absente de la composition",
+        "main_bissara_23c21a, salad_daubergines_marocaine_03fd77: huile d'olive 30ml texte vs 45ml composition",
+        "curry_green_curry_tofu_2a30dd: huile de coco utilisee deux fois (saisie du tofu + pate de curry) mais composition n'avait qu'une seule quantite (30->60ml)",
+        "DECOUVERTE (suite lots 13-27): 5 recettes thai supplementaires (noodle_pad_see_ew_41b095, noodle_pad_see_ew_classic_v3_n8x4p2, noodle_pad_see_ew_vegan_162330, wok_pad_krapow_tofu_v3_k9x2m7, wok_pad_krapow_vegetarien_565aa9, wok_thai_veg_eb92db) mentionnaient huile de coco alors que la composition utilise de l'huile d'arachide/olive deja correcte, ou coconut_milk_plant mal etiquete comme huile - textes alignes",
+        "noodle_pad_see_ew_classic_v3_n8x4p2: sucre 23g en composition vs 8g explicite dans le texte et coherent avec la recette soeur - corrige a 8g",
+        "rice_pad_krapow_63acfb: le texte contenait litteralement l'id brut 'sunflower_oil' au lieu de 'huile de tournesol' - corrige"
+      ]
     },
     {
       "id": 29,
