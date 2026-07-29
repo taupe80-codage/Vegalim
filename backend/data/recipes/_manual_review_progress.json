@@ -588,7 +588,7 @@
     },
     {
       "id": 24,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "bread_bao_ff9db9",
         "dumpling_vegetable_dumplings_abb853",
@@ -607,7 +607,16 @@
         "wok_veg_k3d2p1",
         "base_fried_rice_f230b0"
       ],
-      "issues": []
+      "issues": [
+        "bread_bao_ff9db9: eau de coco mentionnee dans le texte alors qu'aucun ingredient a base de coco n'existe dans la composition - texte corrige en eau simple",
+        "DECOUVERTE: main_aubergines_sichuan_ff9921, protein_chinese_mapo_tofu_7edbe0, protein_mapo_tofu_4b4458 utilisaient tous soy_sauce_tamari (20g) alors que le texte nomme un ingredient totalement different (pate de piment doubanjiang / sauce aux haricots noirs fermentes) - corrige vers base_pate_piment_b6904a, deja utilise correctement par la recette soeur protein_mapo_tofu_au_champignon_ba9276",
+        "rice_fried_classic_v2_k4m8t1: residu de texte tofu-remplace-oeuf alors que la composition contient un oeuf reel (110g) ; ciboulette dans le texte vs oignon vert en composition - textes corriges",
+        "rice_fried_rice_chinois_9d1d40: oeuf a 220g en composition vs '2 oeufs' explicite dans le texte (corrige a 110g)",
+        "rice_fried_rice_chinois_vegan_c2b92d: huile de sesame 15ml texte vs 45.7ml composition ; etape residuelle d'oeufs de lin sans ingredient correspondant dans une recette deja vegan sans besoin de liant - supprimee",
+        "wok_bok_choy_saute_a_lail_309f8e: huile de sesame 25ml texte vs 15ml composition",
+        "wok_veg_k3d2p1: coconut_milk_plant utilise comme huile de friture a haute temperature (mal etiquete) -> coconut_oil_plant",
+        "base_fried_rice_f230b0: l'id generique 'rice' resolvait vers rice_flour (farine de riz) au lieu du riz cuit reellement decrit dans le texte -> white_rice_raw_seed_unenriched ; oeuf en '2 unit' (facteur de conversion non reconnu, retombe sur 50g/unit par defaut) corrige en 110g pour la convention du dataset (55g/oeuf)"
+      ]
     },
     {
       "id": 25,
