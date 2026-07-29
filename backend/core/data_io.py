@@ -518,6 +518,16 @@ def load_prices() -> dict:
 def load_prices_catalog() -> dict:
     return load_json(DATA_ROOT / "config" / "prices_catalog.json", default={})
 
+@lru_cache(maxsize=1)
+def load_ingredient_price_map() -> dict:
+    """Correspondance id d'ingredient de recette -> cle prices_catalog.json.
+
+    Genere par scripts/build_ingredient_price_map.py : les deux vocabulaires
+    (ids de composition des recettes vs cles du catalogue de prix) ont
+    evolue separement, la plupart ne correspondent pas telles quelles.
+    """
+    return load_json(DATA_ROOT / "config" / "ingredient_price_map.json", default={})
+
 
 @lru_cache(maxsize=1)
 def load_flavor_graph() -> dict:

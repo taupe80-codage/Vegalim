@@ -29,15 +29,25 @@ def _item_to_base(qty: float, unit: str) -> tuple[float, str] | None:
     return _pkg_to_base(qty, unit)
 
 def _compute_price(ing_key: str, qty_value: float | None, qty_unit: str | None,
-                   catalog: dict) -> dict:
+                   catalog: dict, price_map: dict | None = None) -> dict:
     """
     Retourne le prix réel d'achat en tenant compte du conditionnement.
     {price, package_label, n_packages, price_unknown, pantry}
+
+    price_map (backend/data/config/ingredient_price_map.json, genere par
+    scripts/build_ingredient_price_map.py) resout les ids d'ingredients de
+    recette (ex. "garlic_raw") vers les cles du catalogue de prix (ex.
+    "garlic") quand elles ne correspondent pas directement — les deux
+    vocabulaires ont evolue separement.
     """
     entry = catalog.get(ing_key)
     if not entry:
         base = ing_key.split("/")[0]
         entry = catalog.get(base)
+    if not entry and price_map:
+        mapped_key = price_map.get(ing_key) or price_map.get(ing_key.split("/")[0])
+        if mapped_key:
+            entry = catalog.get(mapped_key)
 
     pantry = bool(entry.get("pantry")) if entry else False
 
@@ -265,6 +275,7 @@ def _build_result(
     prices: dict,
     ings_dict: dict,
     catalog: dict | None = None,
+    price_map: dict | None = None,
 ) -> dict:
     """
     Construit le dict de sortie standard.
@@ -288,7 +299,7 @@ def _build_result(
         _punit = next((u for u in _order if u in units_map), None)
         qty_value = round(units_map[_punit], 2) if _punit else None
 
-        price_info = _compute_price(ing, qty_value, _punit, catalog)
+        price_info = _compute_price(ing, qty_value, _punit, catalog, price_map)
         if price_info["price_unknown"]:
             n_unknown += 1
 
@@ -404,10 +415,14 @@ def shopping_list(meal_plan: dict, eco: bool = False) -> dict:
     Returns:
         {items, estimated_cost, n_recipes, by_category}
     """
-    from backend.core.data_io import load_prices, load_ingredients_dict, load_recipes, load_prices_catalog
+    from backend.core.data_io import (
+        load_prices, load_ingredients_dict, load_recipes,
+        load_prices_catalog, load_ingredient_price_map,
+    )
 
     prices    = load_prices()
     catalog   = load_prices_catalog()
+    price_map = load_ingredient_price_map()
     ings_dict = load_ingredients_dict()
 
     # Index recettes par ID pour accès rapide
@@ -456,7 +471,7 @@ def shopping_list(meal_plan: dict, eco: bool = False) -> dict:
             for key, qty, unit in _extract_ingredients(recipe, scale=scale):
                 _accumulate(ing_data, key, qty, unit)
 
-    return _build_result(ing_data, n_recipes, eco, prices, ings_dict, catalog)
+    return _build_result(ing_data, n_recipes, eco, prices, ings_dict, catalog, price_map)
 
 
 def shopping_list_from_recipes(recipe_ids: list[str], eco: bool = False) -> dict:
@@ -470,13 +485,17 @@ def shopping_list_from_recipes(recipe_ids: list[str], eco: bool = False) -> dict
     Returns:
         {items, estimated_cost, n_recipes, by_category}
     """
-    from backend.core.data_io import load_prices, load_ingredients_dict, load_recipes, load_prices_catalog
+    from backend.core.data_io import (
+        load_prices, load_ingredients_dict, load_recipes,
+        load_prices_catalog, load_ingredient_price_map,
+    )
 
     if not recipe_ids:
         return {"items": [], "estimated_cost": 0.0, "n_recipes": 0, "by_category": {}}
 
     prices    = load_prices()
     catalog   = load_prices_catalog()
+    price_map = load_ingredient_price_map()
     ings_dict = load_ingredients_dict()
 
     recipe_index: dict[str, dict] = {}
@@ -504,4 +523,4 @@ def shopping_list_from_recipes(recipe_ids: list[str], eco: bool = False) -> dict
         for key, qty, unit in _extract_ingredients(recipe):
             _accumulate(ing_data, key, qty, unit)
 
-    return _build_result(ing_data, n_recipes, eco, prices, ings_dict, catalog)
+    return _build_result(ing_data, n_recipes, eco, prices, ings_dict, catalog, price_map)
