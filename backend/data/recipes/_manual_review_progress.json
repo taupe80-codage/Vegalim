@@ -1428,7 +1428,7 @@
     },
     {
       "id": 48,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "base_mala_broth_1ab129",
         "soup_aigrepiquante_4766fe",
@@ -1456,7 +1456,22 @@
         "soup_de_potiron_caribeenne_a0fabd",
         "soup_gaspacho_provencal_f69228"
       ],
-      "issues": []
+      "issues": [
+        "base_mala_broth_1ab129: huile de coco au texte alors qu'aucune huile de coco n'existe en composition (huile de sesame reelle) - corrige ; le lait de coco n'appartient pas a un bouillon mala sichuan authentique et n'etait pas trace - remplace par une technique de reduction",
+        "soup_aigrepiquante_5245bb: fecule de mais absente (motif de la recette soeur) - ajoutee ; pousses de bambou (200g, en composition) jamais mentionnees - ajoutees ; le texte precisait 'oignons verts' alors que la composition etait un oignon jaune classique (150g, bien trop pour un garnissage cisele) - corrige en oignon vert 60g",
+        "soup_minestrone_9116a2: huile (35ml) et ail (explicite) absents de la composition - ajoutes",
+        "soup_minestrone_italienne_f98e05, soup_minestrone_x7p2k1, soup_borscht_classic_k39x2c: bouillon 1.2L explicite absent ou sous-compte (1000ml) en composition - corrige (3 recettes) ; carotte 80g explicite vs 100g composition sur la 2e",
+        "soup_minestrone_vegan_10bf61: le texte disait 'levure de biere' (60g) alors que la composition est de la levure nutritionnelle (90g) - corrige",
+        "soup_laksa_malaisien_dd7512: BUG - le texte precisait 'pate de curry vert' alors que la composition utilisait la pate de curry generique (rouge) - corrigee ; huile de coco (explicite) absente ; lait de coco et bouillon largement decales (800ml/400ml explicites vs 400ml/1000ml composition) - corriges",
+        "soup_soupe_laksa_coco_729105, soup_vegetable_laksa_ab0112: ail 2g explicite vs 6g composition (motif recurrent) ; bouillon 1000ml explicite vs 700ml composition sur la 2e ; etape vide supprimee sur la 1ere",
+        "soup_ash_reshteh_vegan_393184, soup_persian_ash_reshteh_vegan_968f7d: huile de coco au texte alors que la composition est de l'huile d'olive ; le kashk vegan (yaourt de soja, 60g, en composition) jamais reellement utilise, le texte suggerant a la place une creme de coco absente - corrige dans les 2 recettes",
+        "soup_au_pistou_701fac: le parmesan (30g, en composition) n'etait jamais mentionne dans le texte - ajoute",
+        "soup_bouillabaisse_vegetarienne_1d9c92: composition utilisait de l'orange en 'quartiers' (150g) alors que le texte precise 'zeste d'orange' - corrigee (meme motif que le lot 33)",
+        "soup_lentilles_turque_vegan_c2febf, soup_turkish_mercimek_soup_veg_f30ebc: le beurre vegetal (40g, en composition) etait decrit vaguement comme 'une petite quantite d'huile' - textes precises ; une 2e mention fantome de 20g d'huile retiree sur la 2e",
+        "soup_de_gundruk_a62723: gundruk 60g explicite vs 50g composition - corrige ; huile d'olive 20ml explicite vs 45ml composition - alignee",
+        "soup_de_pois_casses_58fc34, soup_de_pois_scandinave_ec245b: le texte precise 'thym frais' alors que la composition etait du thym seche (motif recurrent) - corrige ; moutarde de Dijon (explicite) absente sur la 1ere - ajoutee",
+        "soup_de_potiron_caribeenne_a0fabd: le lait de coco (100ml, explicite) absent de la composition - ajoute"
+      ]
     },
     {
       "id": 49,

@@ -3292,11 +3292,11 @@
       "servings_default": 4,
       "description": "Bouillon mala végan du Sichuan, pimenté et anesthésiant au poivre de Sichuan séché, avec une texture onctueuse et des saveurs intenses, créé par la combinaison de piments séchés, de poivre de Sichuan, de pâte doubanjiang végane, d'ail et de gingembre, le tout mijoté dans un bouillon de légumes végan.",
       "instructions": [
-        "Étape 1 : Faire chauffer l'huile de coco dans une casserole à feu moyen. Ajouter les piments séchés et le poivre du Sichuan (baies séchées), puis faire revenir pendant 2 minutes en remuant occasionnellement, jusqu'à ce que les épices commencent à libérer leur arôme et à parfumer l'air.",
+        "Étape 1 : Faire chauffer l'huile de sésame dans une casserole à feu moyen. Ajouter les piments séchés et le poivre du Sichuan (baies séchées), puis faire revenir pendant 2 minutes en remuant occasionnellement, jusqu'à ce que les épices commencent à libérer leur arôme et à parfumer l'air.",
         "Étape 2 : Ajouter la pâte doubanjiang végane, l'ail émincé et le gingembre râpé. Faire sauter pendant 3 minutes, en remuant constamment, jusqu'à ce que les arômes soient bien libérés et que le mélange soit parfumé et crépitant.",
         "Étape 3 : Verser le bouillon de légumes chaud végan dans la casserole. Porter le mélange à ébullition, puis réduire le feu à bas pour obtenir un bouillon onctueux et parfumé.",
         "Étape 4 : Ajouter la sauce de soja végane et mélanger bien. Laisser mijoter pendant 20 minutes à feu doux, en remuant occasionnellement, pour permettre aux épices de bien infuser dans le bouillon et de créer une texture riche et crémeuse.",
-        "Étape 5 : Ajouter le lait de coco pour enrichir le bouillon et lui donner une texture plus onctueuse. Goûter et ajuster le niveau de piment selon votre tolérance.",
+        "Étape 5 : Laisser le bouillon réduire légèrement pour l'enrichir et lui donner une texture plus onctueuse. Goûter et ajuster le niveau de piment selon votre tolérance.",
         "Étape 6 : Laisser le bouillon mijoter pendant encore 5 minutes pour permettre aux saveurs de se mélanger et de s'intensifier.",
         "Étape 7 : Filtrer le bouillon si vous le souhaitez, ou servir avec les épices pour une expérience plus intense et une explosion de saveurs.",
         "Étape 8 : Servir le bouillon mala végan chaud, garni de légumes frais et de herbes aromatiques pour une expérience culinaire complète et équilibrée, dans des bols préchauffés, avec une touche d'huile de sésame pour la finition."
@@ -160745,8 +160745,8 @@
           }
         },
         {
-          "ingredient": "onion_raw",
-          "quantity": 150,
+          "ingredient": "green_onion_raw",
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -160775,6 +160775,17 @@
             "ingredient_fr": "crackers de riz",
             "note": "Accompagne bien la soupe",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "cornstarch",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "powder",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -160851,6 +160862,7 @@
         "coeliaque",
         "coriander",
         "gluten free",
+        "green",
         "hot",
         "leger",
         "legumes",
@@ -160882,6 +160894,7 @@
         "vegetable",
         "vegetalien",
         "vegetarien",
+        "vert",
         "vinaigre",
         "vinegar"
       ],
@@ -160892,7 +160905,7 @@
       "description": "Bouillon dashi végétarien relevé d'une pâte miso blanche, où le tofu ferme fond en bouche, avec des morceaux de carotte tendres et des champignons noirs réhydratés — recette fondatrice de la cuisine chinoise végétalienne, avec une touche de piquant et d'aigre.",
       "instructions": [
         "Étape 1 : Faire chauffer le bouillon dashi végétarien à feu moyen-vif. Ajouter le vinaigre de riz et cuire 5 minutes, en remuant occasionnellement, jusqu'à ce que les parfums se mélangent et le bouillon soit chaud et bouillonnant.",
-        "Étape 2 : Incorporer le tofu ferme en cubes, les champignons noirs réhydratés et la carotte en julienne. Cuire 4 minutes, en remuant doucement, jusqu'à ce que les légumes soient légèrement tendres et le tofu soit chaud et moelleux.",
+        "Étape 2 : Incorporer le tofu ferme en cubes, les champignons noirs réhydratés, 200g de pousses de bambou égouttées et la carotte en julienne. Cuire 4 minutes, en remuant doucement, jusqu'à ce que les légumes soient légèrement tendres et le tofu soit chaud et moelleux.",
         "Étape 3 : Assaisonner de sauce soja et délayer la fécule de maïs dans un peu d'eau froide. Verser en filet dans la soupe bouillonnante en remuant constamment. La soupe doit épaissir légèrement en 2 minutes et prendre une texture veloutée et crémeuse.",
         "Étape 4 : Incorporer les oignons verts ciselés et les graines de sésame. Cuire pendant 1 minute, en remuant doucement, jusqu'à ce que les oignons soient légèrement tendres et les graines de sésame soient parfumées.",
         "Étape 5 : Servir la soupe chaude, garnie de feuilles de coriandre fraîche ciselée et d'un filet d'huile de sésame. Accompagner de crackers de riz ou de pain complet toasté."
@@ -161188,12 +161201,12 @@
       "_quality_score": 0.92,
       "description": "Soupe crémeuse aux pois chiches, haricots blancs et lentilles vertes, parfumée par l'ail et le curcuma, avec des nouilles reshteh tendres et des épinards frais, idéale pour un repas réconfortant et savoureux.",
       "instructions": [
-        "Étape 1 : Faire revenir l'oignon émincé dans 46,2 ml d'huile de coco à feu moyen, pendant 8 minutes, jusqu'à ce qu'il soit translucide et parfumé.",
+        "Étape 1 : Faire revenir l'oignon émincé dans 46,2 ml d'huile d'olive à feu moyen, pendant 8 minutes, jusqu'à ce qu'il soit translucide et parfumé.",
         "Étape 2 : Ajouter 15 g d'ail émincé et 2,8 g de curcuma en poudre, et cuire pendant 1 minute, en remuant constamment, jusqu'à ce que l'odeur parfumée se dégage.",
         "Étape 3 : Incorporer 400 g de pois chiches, 300 g de haricots blancs et 300 g de lentilles vertes, et couvrir avec un bouillon végétal. Laisser mijoter pendant 20 minutes à feu doux, jusqu'à ce que les légumes soient tendres.",
         "Étape 4 : Ajouter 300 g d'épinards frais, 30 g de persil frais et 20 g de menthe fraîche, ainsi que 200 g de nouilles reshteh. Cuire pendant 10 minutes, jusqu'à ce que les nouilles soient tendres.",
         "Étape 5 : Vérifier que les nouilles sont tendres et la soupe est crémeuse en vérifiant que la lame ressort sèche après avoir été plongée dans la soupe. Servir chaud, garni de persil frais et de levure nutritionnelle pour un supplément de saveur.",
-        "Étape 6 : Cette soupe est idéale pour un repas réconfortant et savoureux. N'oubliez pas de remplacer le kashk par une crème de coco pour une version végétalienne."
+        "Étape 6 : Incorporez les 60g de yaourt de soja juste avant de servir pour apporter l'onctuosité traditionnellement donnée par le kashk. Cette soupe est idéale pour un repas réconfortant et savoureux."
       ],
       "diet_flags": {
         "vegan": true,
@@ -161711,7 +161724,7 @@
         "Étape 5: Ajouter les pâtes de blé complet, cuire 10-12 min à feu doux, jusqu'à texture tendre et al dente, en vérifiant la consistance régulièrement.",
         "Étape 6: Ajouter le pistou et mélanger délicatement pour bien incorporer les saveurs.",
         "Étape 7: Assaisonner avec du sel et des herbes fraîches si nécessaire, pour obtenir l'équilibre parfait.",
-        "Étape 8: Servir la soupe chaude, garnie de pistou et de légumes tendres, en appréciant les saveurs et les textures, tout en profitant de l'expérience culinaire.",
+        "Étape 8: Servir la soupe chaude, garnie de pistou, de 30g de parmesan râpé et de légumes tendres, en appréciant les saveurs et les textures, tout en profitant de l'expérience culinaire.",
         "Étape 9: Déguster et ajuster l'assaisonnement si nécessaire, pour obtenir la perfection.",
         "Étape 10: Servir dans des bols préchauffés, en savourant la chaleur et la convivialité de la soupe provençale au pistou."
       ],
@@ -162103,7 +162116,7 @@
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 1000,
+          "quantity": 1200,
           "unit": "ml",
           "meta": {
             "role": "base",
@@ -162702,11 +162715,11 @@
         },
         {
           "ingredient": "orange_raw",
-          "quantity": 150,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "supremes",
+            "form": "zest",
             "state": "raw",
             "preparation": ""
           }
@@ -163347,7 +163360,7 @@
       "composition": [
         {
           "ingredient": "gundruk",
-          "quantity": 50,
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -163402,7 +163415,7 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -163909,7 +163922,7 @@
           }
         },
         {
-          "ingredient": "thyme_dried_herb",
+          "ingredient": "thyme_fresh_herb",
           "quantity": 5,
           "unit": "g",
           "meta": {
@@ -163928,6 +163941,17 @@
             "ingredient_fr": "thym frais ciselé",
             "note": "Pour une touche de fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "mustard",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -164008,6 +164032,8 @@
         "light",
         "low calorie",
         "minceur",
+        "moutarde",
+        "mustard",
         "noir",
         "oignon",
         "olive",
@@ -164125,7 +164151,7 @@
           }
         },
         {
-          "ingredient": "thyme_dried_herb",
+          "ingredient": "thyme_fresh_herb",
           "quantity": 3,
           "unit": "g",
           "meta": {
@@ -164423,6 +164449,17 @@
             "note": "Pour une touche de fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "coconut_milk_plant",
+          "quantity": 100,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -164487,6 +164524,8 @@
         "caribeenne",
         "carotte",
         "carrot",
+        "coco",
+        "coconut",
         "coeliaque",
         "coriander",
         "gluten free",
@@ -164497,6 +164536,7 @@
         "minceur",
         "moyen",
         "muscade",
+        "noix",
         "nutmeg",
         "oignon",
         "olive",
@@ -166131,7 +166171,7 @@
       "composition": [
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 1000,
+          "quantity": 400,
           "unit": "ml",
           "meta": {
             "role": "base",
@@ -166186,7 +166226,7 @@
         },
         {
           "ingredient": "coconut_milk_plant",
-          "quantity": 400,
+          "quantity": 800,
           "unit": "ml",
           "meta": {
             "role": "liquid",
@@ -166196,7 +166236,7 @@
           }
         },
         {
-          "ingredient": "base_curry_paste_49c97f",
+          "ingredient": "base_green_curry_paste_250117",
           "quantity": 30,
           "unit": "g",
           "meta": {
@@ -166248,6 +166288,17 @@
             "ingredient_fr": "citron vert",
             "note": "Pour ajouter une touche de citron",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "coconut_oil_plant",
+          "quantity": 25,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -166309,7 +166360,7 @@
       },
       "search_tokens": [
         "ail",
-        "base_curry_paste_49c97f",
+        "base_green_curry_paste_250117",
         "base_rice_noodle_831080",
         "bouillon",
         "braising",
@@ -166852,7 +166903,7 @@
       "_chef_note": "Remplacez le beurre par de l'huile pour une version végétalienne.",
       "description": "Bouillon de légumes turc où les lentilles corail fondent en bouche, parfumé d'oignon jaune caramélisé et de carottes tendres — une recette traditionnelle de la cuisine méditerranéenne.",
       "instructions": [
-        "Étape 1 : Faire revenir 300g d'oignon jaune dans une petite quantité d'huile jusqu'à coloration blonde et parfumé, pendant environ 8 minutes, en remuant régulièrement pour éviter la combustion.",
+        "Étape 1 : Faire revenir 300g d'oignon jaune dans 40g de beurre végétal jusqu'à coloration blonde et parfumé, pendant environ 8 minutes, en remuant régulièrement pour éviter la combustion.",
         "Étape 2 : Ajouter 250g de lentilles corail, 200g de carottes émincées et couvrir d'eau. Cuire 25 minutes à 180°C, en vérifiant que les lentilles sont tendres et les carottes sont cuites.",
         "Étape 3 : Assaisonner de 2,5g de cumin, 5g de sel et poivre, en vérifiant que les lentilles sont bien assaisonnées et les saveurs sont équilibrées.",
         "Étape 4 : Mixer finement jusqu'à consistance veloutée, en écoutant le son de la mixture qui devient homogène et lisse, pendant environ 5 minutes.",
@@ -166978,6 +167029,28 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 35,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 9,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -167038,6 +167111,7 @@
       },
       "search_tokens": [
         "1 heure",
+        "ail",
         "bean",
         "blanc",
         "bouillon",
@@ -167052,6 +167126,7 @@
         "enfants",
         "facile enfants",
         "famille",
+        "garlic",
         "gluten free",
         "green",
         "haricot",
@@ -167064,6 +167139,7 @@
         "minceur",
         "minestrone",
         "oignon",
+        "olive",
         "onion",
         "pasta",
         "pates",
@@ -167248,6 +167324,17 @@
             "note": "Pour une texture crémeuse",
             "optional": true
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 1200,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -167309,6 +167396,7 @@
       "search_tokens": [
         "ail",
         "bean",
+        "bouillon",
         "braising",
         "branche",
         "carotte",
@@ -167322,6 +167410,7 @@
         "italian",
         "italienne",
         "leger",
+        "legumes",
         "lent",
         "light",
         "long",
@@ -167344,9 +167433,11 @@
         "sel",
         "soupe",
         "stalk",
+        "stock",
         "table",
         "tomate",
         "tomato",
+        "vegetable",
         "vegetarien"
       ],
       "difficulty_level": "medium",
@@ -167645,7 +167736,7 @@
         "Étape 3 : Incorporer 500g de courgettes en dés, en appréciant leur texture croquante.",
         "Étape 4 : Verser 1,2 L de bouillon de légumes, porter à ébullition, puis mijoter à feu doux pendant 15 minutes, en sentant les saveurs se mélanger harmonieusement.",
         "Étape 5 : Ajouter 300g de haricots blancs égouttés et 320g de pâtes de blé, cuire encore pendant 10 minutes, jusqu'à ce que les pâtes soient al dente et le bouillon légèrement lié, en appréciant la texture des pâtes.",
-        "Étape 6 : Incorporer 60g de levure de bière pour enrichir la saveur, puis rectifier l'assaisonnement, en goûtant pour ajuster les saveurs.",
+        "Étape 6 : Incorporer 90g de levure nutritionnelle pour enrichir la saveur, puis rectifier l'assaisonnement, en goûtant pour ajuster les saveurs.",
         "Étape 8 : Servir sans attendre, en versant un filet d'huile d'olive extra vierge, pour conserver la chaleur et l'arôme de la soupe.",
         "Étape 9 : Déguster et savourer les saveurs italiennes, en sentant la texture des légumes et des pâtes.",
         "Étape 10 : Servir chaud, garni de feuilles de basilic frais, pour profiter pleinement de la soupe réconfortante."
@@ -167705,7 +167796,7 @@
         },
         {
           "ingredient": "carrot_raw",
-          "quantity": 100,
+          "quantity": 80,
           "unit": "g",
           "meta": {
             "role": "soffritto",
@@ -167790,6 +167881,17 @@
             "note": "Pour ajouter une touche de fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 1200,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -167851,6 +167953,7 @@
         "basilic",
         "bean",
         "blanc",
+        "bouillon",
         "braising",
         "branche",
         "carotte",
@@ -167864,6 +167967,7 @@
         "italian",
         "jaune",
         "leger",
+        "legumes",
         "lent",
         "light",
         "long",
@@ -167881,9 +167985,11 @@
         "soup",
         "squash",
         "stalk",
+        "stock",
         "tomate",
         "tomato",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
         "white",
@@ -168902,7 +169008,7 @@
         "Étape 3 : Incorporer les légumineuses (lentilles vertes, pois chiches et haricots blancs) et les nouilles reshteh, couvrir d'eau et laisser mijoter 20 min à feu moyen, pour que les légumes soient tendres et les nouilles cuites.",
         "Étape 4 : Ajouter les épinards, le persil, la coriandre et le fenugrec, laisser mijoter 10 min supplémentaires, pour que les herbes fraîches ajoutent leur saveur et leur texture à la soupe.",
         "Étape 5 : Vérifier que les légumineuses et les nouilles sont tendres et prêtes à être servies, en vérifiant que la lame ressort sèche.",
-        "Étape 6 : Assaisonner avec du kashk végétal (remplacement du kashk traditionnel) et servir chaud, accompagné de pain ou de crackers, pour une expérience culinaire complète.",
+        "Étape 6 : Incorporer 60g de yaourt de soja en remplacement du kashk traditionnel, puis servir chaud, accompagné de pain ou de crackers, pour une expérience culinaire complète.",
         "Étape 7 : Déguster et apprécier la richesse des saveurs et des textures de cette soupe traditionnelle iranienne, maintenant végétalienne, en savourant chaque bouchée."
       ],
       "diet_flags": {
@@ -172492,7 +172598,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 6,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -172708,8 +172814,7 @@
         "Étape 4 : Ajoutez 400 ml de lait de coco et 600 ml de bouillon végétal, et portez à frémissement à 180°C, en remuant régulièrement, jusqu'à ce que le mélange commence à bouillir.",
         "Étape 5 : Incorporez 200 g de tofu ferme, coupé en dés, et les légumes de votre choix, et faites-les cuire pendant 5 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce que les légumes soient tendres et que le tofu soit cuit.",
         "Étape 6 : Réduisez le feu à 150°C, et laissez mijoter pendant 10 minutes, en remuant régulièrement, jusqu'à ce que le bouillon ait épaissi et que les saveurs soient intensifiées.",
-        "Étape 7 : Servez la soupe sur des vermicelles de riz dans des bols profonds, et garnissez de pousses de soja et d'oignons verts, en appréciant les saveurs et les textures de cette délicieuse soupe végétalienne.",
-        ""
+        "Étape 7 : Servez la soupe sur des vermicelles de riz dans des bols profonds, et garnissez de pousses de soja et d'oignons verts, en appréciant les saveurs et les textures de cette délicieuse soupe végétalienne."
       ],
       "diet_flags": {
         "vegan": true,
@@ -175399,12 +175504,12 @@
       "_chef_note": "Utilisez des lentilles corail pour une texture plus crémeuse et une saveur plus intense.",
       "description": "Soupe turque crémeuse aux lentilles corail tendres, oignon jaune caramélisé et carotte fondante, parfumée au cumin et au citron, avec une texture lisse et veloutée.",
       "instructions": [
-        "Étape 1 : Faire revenir 300g d'oignon jaune émincé et 200g de carotte émincée dans 40g d'huile à feu moyen, jusqu'à ce que les légumes soient tendres et légèrement caramélisés, avec une odeur sucrée et une couleur dorée, environ 8 minutes.",
+        "Étape 1 : Faire revenir 300g d'oignon jaune émincé et 200g de carotte émincée dans 40g de beurre végétal à feu moyen, jusqu'à ce que les légumes soient tendres et légèrement caramélisés, avec une odeur sucrée et une couleur dorée, environ 8 minutes.",
         "Étape 2 : Ajouter 2,5g de cumin en poudre et mélanger pendant 30 secondes pour libérer les arômes, en vérifiant que le cumin est bien réparti.",
         "Étape 3 : Incorporer 250g de lentilles corail rincées et verser 750ml de bouillon végétal, en vérifiant que les lentilles sont bien couvertes.",
         "Étape 4 : Porter à ébullition, écumer et réduire le feu à bas pour laisser mijoter pendant 20 minutes, ou jusqu'à ce que les lentilles soient très fondantes et la soupe ait une consistance crémeuse.",
         "Étape 5 : Mixer la soupe pour obtenir une texture lisse et veloutée, en ajoutant un peu d'eau si nécessaire pour ajuster la consistance, en vérifiant que la soupe est homogène et sans grumeaux.",
-        "Étape 6 : Préparer la garniture en faisant fondre 20g d'huile, puis en ajoutant du paprika fumé hors du feu, en vérifiant que le paprika est bien réparti.",
+        "Étape 6 : Préparer la garniture en faisant fondre un peu d'huile, puis en ajoutant du paprika fumé hors du feu, en vérifiant que le paprika est bien réparti.",
         "Étape 7 : Servir la soupe chaude avec un filet de 30ml de jus de citron et en saupoudrant de menthe séchée pour une touche fraîche, en vérifiant que la soupe est servie à la bonne température.",
         "Étape 8 : Apprécier la saveur réconfortante et équilibrée des lentilles, des épices et du citron, en vérifiant que les saveurs sont bien équilibrées."
       ],
@@ -175979,7 +176084,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 6,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -176023,7 +176128,7 @@
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 700,
+          "quantity": 1000,
           "unit": "ml",
           "meta": {
             "role": "base",
