@@ -104568,12 +104568,8 @@
         "dominican",
         "doux",
         "gluten free",
-        "leger",
         "legumes",
-        "light",
-        "low calorie",
         "mais",
-        "minceur",
         "oignon",
         "olive",
         "onion",
@@ -139376,7 +139372,7 @@
         "Étape 1: Ciseler finement les oignons rouges pendant 2 minutes, jusqu'à ce qu'ils soient translucides et dégagent une odeur sucrée, puis les laisser refroidir.",
         "Étape 2: Julienne les tomates fraîches pendant 2 minutes, jusqu'à ce qu'elles soient tendres et légèrement foncées, en prenant soin de ne pas les écraser.",
         "Étape 3: Broyer les avocats mûrs pendant 1 minute, jusqu'à ce qu'ils soient crémeux et aient une texture onctueuse, en utilisant une fourchette pour obtenir une consistance lisse.",
-        "Étape 4: Émulsionner la vinaigrette avec 50 ml d'huile d'olive, 25 ml de vinaigre de vin blanc et 1 g de sel, en fouettant énergiquement pendant 30 secondes jusqu'à obtenir une consistance lisse et homogène.",
+        "Étape 4: Émulsionner la vinaigrette avec 50 ml d'huile d'olive, 25 ml de vinaigre de vin blanc, 15 g de moutarde de Dijon et 1 g de sel, en fouettant énergiquement pendant 30 secondes jusqu'à obtenir une consistance lisse et homogène.",
         "Étape 5: Réduire la vinaigrette à feu doux pendant 1 minute, jusqu'à ce qu'elle commence à crépiter légèrement et dégage une odeur acidulée, en remuant régulièrement pour éviter la formation de grumeaux.",
         "Étape 6: Mélanger délicatement les ingrédients, y compris le maïs, les tomates, les avocats, les oignons rouges et le parmesan râpé, pendant 1 minute, jusqu'à ce que tous les ingrédients soient enrobés uniformément et que la salade ait une texture harmonieuse.",
         "Étape 7: Assaisonner avec du sel et du poivre au goût, puis servir sans attendre, en prenant soin de conserver la fraîcheur et la texture de la salade.",
@@ -177545,12 +177541,23 @@
           }
         },
         {
-          "ingredient": "thyme_dried_herb",
+          "ingredient": "thyme_fresh_herb",
           "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "herb",
             "form": "leaves",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 500,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -177616,6 +177623,7 @@
         "bean",
         "black",
         "blanc",
+        "bouillon",
         "braising",
         "carotte",
         "carrot",
@@ -177628,6 +177636,7 @@
         "haricot",
         "jaune",
         "leger",
+        "legumes",
         "lent",
         "light",
         "long",
@@ -177649,12 +177658,14 @@
         "sel",
         "squash",
         "stew",
+        "stock",
         "table",
         "thym",
         "thyme",
         "tomate",
         "tomato",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
         "water_cooking",
@@ -177669,7 +177680,7 @@
       "description": "Ragoût croate de haricots blancs cuits, mijotés lentement dans un bouillon végétal pour une sauce épaisse et concentrée, riche en arômes et saveurs traditionnelles.",
       "instructions": [
         "Rincer 300g de haricots blancs secs, les égoutter et les couvrir d'eau froide. Porter à ébullition, puis cuire pendant 45 minutes à feu doux, en vérifiant que les haricots sont tendres.",
-        "Faire revenir 300g d'oignon jaune haché dans 25ml d'huile d'olive à feu moyen pendant 5 minutes, en remuant régulièrement, jusqu'à ce qu'il soit translucide et commence à caraméliser.",
+        "Faire revenir 300g d'oignon jaune haché dans 45ml d'huile d'olive à feu moyen pendant 5 minutes, en remuant régulièrement, jusqu'à ce qu'il soit translucide et commence à caraméliser.",
         "Ajouter 9g d'ail émincé, 200g de carotte crue en dés et 480g de tomates concassées. Faire sauter pendant 2 minutes, en surveillant la coloration et en remuant régulièrement pour éviter les brûlures.",
         "Incorporer les haricots égouttés, 500ml de bouillon végétal chaud, 5g de thym frais et 2g de poivre. Couvrir et laisser mijoter pendant 25 minutes à feu doux, en vérifiant que les saveurs sont bien équilibrées.",
         "Ajouter 500g de courgette crue en dés et poursuivre la cuisson pendant 10 minutes, en vérifiant que les légumes sont tendres mais encore croquants.",
@@ -179965,7 +179976,7 @@
       "description": "Ragoût de plantain créé avec des rondelles de plantain cuites dans une sauce tomate épaisse et parfumée, inspiré de la cuisine caribéenne — texture onctueuse et saveur intense, avec une légère note de piment habanero.",
       "instructions": [
         "Étape 1 : Peler 400g de banane plantain mûrs et les couper en rondelles épaisses de 2 cm, en vérifiant la texture ferme mais non farineuse, avec une légère résistance à la pression.",
-        "Étape 2 : Chauffer 30ml d'huile d'olive extra vierge dans une cocotte à feu moyen, en écoutant le son de l'huile qui chauffe et en sentant son arôme subtil.",
+        "Étape 2 : Chauffer 45ml d'huile d'olive extra vierge dans une cocotte à feu moyen, en écoutant le son de l'huile qui chauffe et en sentant son arôme subtil.",
         "Étape 3 : Faire revenir 300g d'oignon jaune émincé pendant 6 min à feu moyen, jusqu'à légère coloration dorée, en sentant l'arôme sucré de l'oignon et en contrôlant la texture tendre.",
         "Étape 4 : Ajouter 20g d'ail haché, 480g de tomates concassées et 15g de piment habanero haché, en mélangeant bien pour que tous les ingrédients soient enrobés de sauce, en vérifiant la couleur rougeâtre de la sauce.",
         "Étape 5 : Cuire la sauce tomate pendant 8 min à feu moyen, en vérifiant la texture : la sauce doit être épaisse, parfumée et légèrement réduite, en écoutant le son de la sauce qui mijote.",

@@ -1078,7 +1078,7 @@
     },
     {
       "id": 36,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "rice_riz_jollof_360727",
         "salad_andine_au_fromage_c537bd",
@@ -1086,7 +1086,11 @@
         "stew_croatian_bean_stew_4dfb05",
         "stew_ragout_de_plantain_2140eb"
       ],
-      "issues": []
+      "issues": [
+        "salad_andine_au_fromage_c537bd: la moutarde (15g, presente dans la recette soeur vegan et en composition) etait absente du texte de la vinaigrette - ajoutee",
+        "stew_croatian_bean_stew_4dfb05: le texte precise 'thym frais' alors que la composition etait du thym seche - corrige ; bouillon vegetal (500ml, explicite) absent de la composition - ajoute ; huile d'olive 25ml texte vs 45ml composition - alignee",
+        "stew_ragout_de_plantain_2140eb: huile d'olive 30ml texte vs 45ml composition - alignee"
+      ]
     },
     {
       "id": 37,
