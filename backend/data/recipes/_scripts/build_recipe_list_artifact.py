@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Genere le HTML de l'artifact interactif 'Recettes ALIM' (recherche,
+filtres, alertes qualite, detection de doublons, comparaison cote a cote,
 suppression, regroupement pour analyse, renommage) a partir de
 recipe_list.json (lui-meme genere par extract_recipe_list.py).
 
@@ -22,7 +23,8 @@ DEFAULT_OUT = ROOT / "recipe_list_artifact.html"
 data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
 data_json = json.dumps(data, ensure_ascii=False)
 
-html = """<title>Recettes ALIM — liste et sélection</title>
+html = """<meta charset="utf-8">
+<title>Recettes ALIM — liste et sélection</title>
 <style>
 :root {
   --bg: #FAF8F3;
@@ -40,6 +42,10 @@ html = """<title>Recettes ALIM — liste et sélection</title>
   --danger: #A8402E;
   --danger-soft: #F5E4DF;
   --danger-ink: #FFFFFF;
+  --warn: #9A6A17;
+  --warn-soft: #F6EBD6;
+  --dup: #7A4FA3;
+  --dup-soft: #EFE5F5;
   --focus: #2F6FED;
 }
 :root[data-theme="dark"] {
@@ -58,6 +64,10 @@ html = """<title>Recettes ALIM — liste et sélection</title>
   --danger: #D97A63;
   --danger-soft: #3A241D;
   --danger-ink: #1E120D;
+  --warn: #E0B25A;
+  --warn-soft: #3A2E14;
+  --dup: #C7A6E0;
+  --dup-soft: #2E2438;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -76,6 +86,10 @@ html = """<title>Recettes ALIM — liste et sélection</title>
     --danger: #D97A63;
     --danger-soft: #3A241D;
     --danger-ink: #1E120D;
+    --warn: #E0B25A;
+    --warn-soft: #3A2E14;
+    --dup: #C7A6E0;
+    --dup-soft: #2E2438;
   }
 }
 
@@ -91,7 +105,7 @@ body {
 }
 
 .wrap {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
   padding: 0 20px 140px;
 }
@@ -117,9 +131,21 @@ h1 {
 .subhead {
   color: var(--text-dim);
   font-size: 13px;
-  margin: 0 0 14px;
+  margin: 0 0 4px;
 }
 .subhead .count { font-variant-numeric: tabular-nums; color: var(--text); font-weight: 600; }
+
+.stats {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--text-dim);
+  margin: 0 0 12px;
+}
+.stats b { font-variant-numeric: tabular-nums; color: var(--text); }
+.stats .warn-stat b { color: var(--warn); }
+.stats .dup-stat b { color: var(--dup); }
 
 .controls {
   display: flex;
@@ -130,8 +156,8 @@ h1 {
 
 .search-box {
   position: relative;
-  flex: 1 1 240px;
-  min-width: 180px;
+  flex: 1 1 220px;
+  min-width: 160px;
 }
 .search-box svg {
   position: absolute;
@@ -170,8 +196,26 @@ select.filter {
   color: var(--text);
   font-family: inherit;
   cursor: pointer;
+  max-width: 160px;
 }
 select.filter:focus-visible { border-color: var(--focus); box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus) 22%, transparent); }
+
+.flag-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text-dim);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.flag-toggle input { cursor: pointer; }
+.flag-toggle.active-warn { border-color: var(--warn); color: var(--warn); background: var(--warn-soft); }
+.flag-toggle.active-dup { border-color: var(--dup); color: var(--dup); background: var(--dup-soft); }
 
 .btn {
   border: 1px solid var(--border);
@@ -206,23 +250,28 @@ select.filter:focus-visible { border-color: var(--focus); box-shadow: 0 0 0 3px 
 .mode-toggle button + button { border-left: 1px solid var(--border); }
 .mode-toggle button.active.mode-del { background: var(--danger-soft); color: var(--danger); font-weight: 600; }
 .mode-toggle button.active.mode-link { background: var(--link-soft); color: var(--link); font-weight: 600; }
+.mode-toggle button.active.mode-compare { background: var(--dup-soft); color: var(--dup); font-weight: 600; }
 .mode-toggle button:focus-visible { outline: none; box-shadow: inset 0 0 0 2px var(--focus); }
 
-.link-toolbar {
+.link-toolbar, .compare-toolbar {
   display: none;
   align-items: center;
   gap: 8px;
   margin-top: 10px;
   padding: 10px 12px;
-  background: var(--link-soft);
-  border: 1px solid var(--link);
   border-radius: 8px;
   flex-wrap: wrap;
 }
-.link-toolbar.show { display: flex; }
+.link-toolbar { background: var(--link-soft); border: 1px solid var(--link); }
+.compare-toolbar { background: var(--dup-soft); border: 1px solid var(--dup); }
+.link-toolbar.show, .compare-toolbar.show { display: flex; }
 .link-toolbar .lbl { font-size: 13px; color: var(--link); white-space: nowrap; }
-.link-toolbar .lbl .n { font-variant-numeric: tabular-nums; font-weight: 700; }
+.compare-toolbar .lbl { font-size: 13px; color: var(--dup); white-space: nowrap; }
+.link-toolbar .lbl .n, .compare-toolbar .lbl .n { font-variant-numeric: tabular-nums; font-weight: 700; }
 .link-toolbar input[type="text"] { flex: 1 1 160px; min-width: 140px; }
+.btn-compare { background: var(--dup); color: white; border: 1px solid var(--dup); }
+.btn-compare:hover { filter: brightness(1.08); }
+.btn-compare:disabled { background: var(--surface); color: var(--text-dim); border-color: var(--border); }
 
 .groups-list {
   display: flex;
@@ -303,6 +352,7 @@ li.row {
 li.row:hover { background: var(--surface-2); }
 li.row.marked { background: var(--danger-soft); }
 li.row.pending-link { background: var(--link-soft); }
+li.row.pending-compare { background: var(--dup-soft); }
 
 .chk {
   appearance: none;
@@ -321,6 +371,8 @@ li.row.pending-link { background: var(--link-soft); }
 .chk.mode-del:checked::after { border-color: var(--danger-ink); }
 .chk.mode-link:checked { background: var(--link); border-color: var(--link); }
 .chk.mode-link:checked::after { border-color: var(--link-ink); }
+.chk.mode-compare:checked { background: var(--dup); border-color: var(--dup); }
+.chk.mode-compare:checked::after { border-color: white; }
 .chk:checked::after {
   content: "";
   position: absolute;
@@ -378,11 +430,23 @@ li.row:hover .edit-btn, .edit-btn:focus-visible { opacity: 1; outline: none; }
   padding: 1px 6px;
   font-variant-caps: all-small-caps;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 .tag.vegan { color: var(--accent); background: var(--accent-soft); }
 .tag.del { color: var(--danger); background: var(--danger-soft); }
 .tag.link { color: var(--link); background: var(--link-soft); }
 .tag.renamed { color: var(--link); background: var(--link-soft); }
+.tag.warn { color: var(--warn); background: var(--warn-soft); }
+.tag.dup {
+  color: var(--dup);
+  background: var(--dup-soft);
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.02em;
+}
+.tag.dup:hover { filter: brightness(0.95); text-decoration: underline; }
 .row-id {
   font-size: 10.5px;
   color: var(--text-dim);
@@ -495,6 +559,7 @@ mark {
   gap: 10px;
   box-shadow: 0 12px 36px rgba(0,0,0,0.25);
 }
+.modal-box.wide { max-width: min(1400px, calc(100vw - 40px)); }
 .modal-box h2 {
   font-family: Georgia, serif;
   font-weight: 400;
@@ -530,6 +595,61 @@ mark {
   gap: 8px;
 }
 
+.compare-row {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+.compare-card {
+  flex: 0 0 260px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  background: var(--surface-2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.compare-card h3 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.3;
+}
+.compare-line {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.compare-line b { color: var(--text); font-variant-numeric: tabular-nums; }
+.compare-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.compare-desc {
+  font-size: 12.5px;
+  color: var(--text);
+  font-style: italic;
+  line-height: 1.4;
+}
+.compare-compo {
+  font-size: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+  margin: 0;
+}
+.compare-compo table { width: 100%; border-collapse: collapse; }
+.compare-compo td { padding: 2px 0; vertical-align: top; }
+.compare-compo td.qty { color: var(--text-dim); text-align: right; white-space: nowrap; padding-left: 6px; font-variant-numeric: tabular-nums; }
+.compare-remove {
+  align-self: flex-end;
+  border: none;
+  background: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+.compare-remove:hover { color: var(--danger); }
+
 @media (max-width: 480px) {
   h1 { font-size: 21px; }
   .row-id { display: none; }
@@ -540,19 +660,25 @@ mark {
   <header class="top">
     <h1>Recettes ALIM</h1>
     <p class="subhead"><span class="count" id="visibleCount">__TOTAL__</span> / __TOTAL__ recettes</p>
+    <p class="stats" id="statsLine"></p>
     <div class="controls">
       <div class="search-box">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <input type="search" id="search" placeholder="Rechercher un titre, une cuisine, un id…" autocomplete="off">
       </div>
-      <select class="filter" id="filterVegan">
-        <option value="">Tous régimes</option>
-        <option value="vegan">Vegan seulement</option>
-        <option value="notvegan">Non-vegan seulement</option>
-      </select>
+      <select class="filter" id="filterDiet"><option value="">Tous régimes</option></select>
+      <select class="filter" id="filterCuisine"><option value="">Toutes cuisines</option></select>
+      <select class="filter" id="filterType"><option value="">Tous types</option></select>
+      <label class="flag-toggle" id="toggleWarnLbl">
+        <input type="checkbox" id="toggleWarn"> ⚠ Alertes seulement
+      </label>
+      <label class="flag-toggle" id="toggleDupLbl">
+        <input type="checkbox" id="toggleDup"> 🔁 Doublons seulement
+      </label>
       <div class="mode-toggle">
         <button type="button" id="modeDelBtn" class="active mode-del">Suppression</button>
         <button type="button" id="modeLinkBtn" class="mode-link">Lier pour analyse</button>
+        <button type="button" id="modeCompareBtn" class="mode-compare">Comparer</button>
       </div>
     </div>
 
@@ -561,6 +687,11 @@ mark {
       <input type="text" id="groupNote" placeholder="Note pour Claude (optionnel) — ex. « composition suspecte »">
       <button class="btn btn-link" id="saveGroupBtn" disabled>Enregistrer le groupe</button>
       <button class="btn btn-ghost" id="clearPendingBtn">Annuler</button>
+    </div>
+    <div class="compare-toolbar" id="compareToolbar">
+      <span class="lbl"><span class="n" id="compareCount">0</span> / 6 sélectionnée(s) pour comparaison</span>
+      <button class="btn btn-compare" id="openCompareBtn" disabled>Comparer</button>
+      <button class="btn btn-ghost" id="clearCompareBtn">Annuler</button>
     </div>
     <div class="groups-list" id="groupsList"></div>
 
@@ -593,18 +724,46 @@ mark {
   </div>
 </div>
 
+<div class="modal-overlay" id="compareModal">
+  <div class="modal-box wide">
+    <h2>Comparaison</h2>
+    <p>Compare la composition, les portions, le temps, le régime et la confiance des recettes sélectionnées.</p>
+    <div class="compare-row" id="compareRow"></div>
+    <div class="modal-actions">
+      <button class="btn" id="copyCompareBtn">Copier la comparaison pour Claude</button>
+      <button class="btn btn-primary" id="compareModalClose">Fermer</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const DATA = __DATA_JSON__;
 const BY_ID = Object.fromEntries(DATA.map(r => [r.id, r]));
 
-let mode = 'del'; // 'del' | 'link'
+const DIET_LABELS = {
+  vegan: 'vegan', vegetarian: 'végétarien', gluten_free: 'sans gluten',
+  lactose_free: 'sans lactose', nut_free: 'sans fruits à coque',
+  high_protein: 'riche en protéines', low_calorie: 'faible calories',
+  kid_friendly: 'enfants', diabetes_friendly: 'diabète', raw: 'cru',
+};
+const FLAG_LABELS = {
+  no_instructions: 'instructions manquantes',
+  no_description: 'description manquante',
+  no_composition: 'composition vide',
+  low_confidence: 'confiance faible',
+};
+
+let mode = 'del'; // 'del' | 'link' | 'compare'
 const marked = new Set();      // ids marqués pour suppression
 const pendingLink = new Set(); // ids en cours de selection pour un groupe (non persiste)
 const groups = [];             // { note, ids: [] }
 const renamed = new Map();     // id -> { oldTitle, newTitle }
+const compareSet = new Set();  // ids selectionnes pour comparaison (non persiste)
+const MAX_COMPARE = 6;
 
 // ── Sauvegarde automatique (localStorage) ─────────────────────────────────
-// pendingLink n'est pas persiste : c'est une selection en cours, ephemere.
+// pendingLink et compareSet ne sont pas persistes : ce sont des selections
+// en cours, ephemeres.
 const STORAGE_KEY = 'alim_recipe_list_state_v1';
 
 function saveState() {
@@ -630,14 +789,17 @@ function loadState() {
   } catch (e) { return false; }
 }
 
-function clearStoredState() {
-  try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
-}
-
 const listRoot = document.getElementById('listRoot');
 const searchInput = document.getElementById('search');
-const filterVegan = document.getElementById('filterVegan');
+const filterDiet = document.getElementById('filterDiet');
+const filterCuisine = document.getElementById('filterCuisine');
+const filterType = document.getElementById('filterType');
+const toggleWarn = document.getElementById('toggleWarn');
+const toggleDup = document.getElementById('toggleDup');
+const toggleWarnLbl = document.getElementById('toggleWarnLbl');
+const toggleDupLbl = document.getElementById('toggleDupLbl');
 const visibleCountEl = document.getElementById('visibleCount');
+const statsLineEl = document.getElementById('statsLine');
 const noResultsEl = document.getElementById('noResults');
 const jumpEl = document.getElementById('jump');
 const bottombar = document.getElementById('bottombar');
@@ -645,8 +807,12 @@ const bottombarCounts = document.getElementById('bottombarCounts');
 const toastEl = document.getElementById('toast');
 const modeDelBtn = document.getElementById('modeDelBtn');
 const modeLinkBtn = document.getElementById('modeLinkBtn');
+const modeCompareBtn = document.getElementById('modeCompareBtn');
 const linkToolbar = document.getElementById('linkToolbar');
+const compareToolbar = document.getElementById('compareToolbar');
 const pendingLinkCountEl = document.getElementById('pendingLinkCount');
+const compareCountEl = document.getElementById('compareCount');
+const openCompareBtn = document.getElementById('openCompareBtn');
 const groupNoteInput = document.getElementById('groupNote');
 const saveGroupBtn = document.getElementById('saveGroupBtn');
 const groupsListEl = document.getElementById('groupsList');
@@ -676,6 +842,20 @@ function letterOf(title) {
 const ALPHABET = '#ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const availableLetters = new Set(DATA.map(r => letterOf(r.title)));
 
+// ── Filtres dynamiques (peuples depuis les donnees reelles) ───────────────
+function populateSelect(select, values, mapLabel) {
+  const sorted = Array.from(values).sort((a, b) => (mapLabel ? mapLabel(a) : a).localeCompare(mapLabel ? mapLabel(b) : b));
+  for (const v of sorted) {
+    const opt = document.createElement('option');
+    opt.value = v;
+    opt.textContent = mapLabel ? mapLabel(v) : v;
+    select.appendChild(opt);
+  }
+}
+populateSelect(filterDiet, new Set(DATA.flatMap(r => r.diet || [])), v => DIET_LABELS[v] || v);
+populateSelect(filterCuisine, new Set(DATA.map(r => r.cuisine).filter(Boolean)), v => v.replace(/_/g, ' '));
+populateSelect(filterType, new Set(DATA.map(r => r.dish_type).filter(Boolean)));
+
 function buildJumpNav() {
   jumpEl.innerHTML = ALPHABET.map(l => {
     const has = availableLetters.has(l);
@@ -689,9 +869,40 @@ function groupsForId(id) {
   return idxs;
 }
 
+function renderStats() {
+  const nWarn = DATA.filter(r => (r.flags || []).length > 0).length;
+  const nDup = DATA.filter(r => (r.similar || []).length > 0).length;
+  statsLineEl.innerHTML =
+    `<span>${DATA.length} recettes</span>` +
+    `<span class="warn-stat">${nWarn} avec <b>${nWarn}</b> alerte(s) qualité</span>` +
+    `<span class="dup-stat">${nDup} avec doublon <b>potentiel</b></span>`;
+}
+
+function rowBadges(r) {
+  let out = '';
+  for (const tag of (r.diet || [])) {
+    const cls = tag === 'vegan' ? 'tag vegan' : 'tag';
+    out += `<span class="${cls}">${escapeHtml(DIET_LABELS[tag] || tag)}</span>`;
+  }
+  if ((r.allergens || []).length) {
+    out += `<span class="tag warn" title="${escapeHtml(r.allergens.join(', '))}">allergènes (${r.allergens.length})</span>`;
+  }
+  for (const flag of (r.flags || [])) {
+    out += `<span class="tag warn">⚠ ${escapeHtml(FLAG_LABELS[flag] || flag)}</span>`;
+  }
+  if ((r.similar || []).length) {
+    out += `<button type="button" class="tag dup" data-dup-id="${escapeHtml(r.id)}">🔁 doublon possible (${r.similar.length})</button>`;
+  }
+  return out;
+}
+
 function render() {
   const q = searchInput.value.trim();
-  const veganFilter = filterVegan.value;
+  const dietFilter = filterDiet.value;
+  const cuisineFilter = filterCuisine.value;
+  const typeFilter = filterType.value;
+  const warnOnly = toggleWarn.checked;
+  const dupOnly = toggleDup.checked;
   const byLetter = {};
   let visible = 0;
 
@@ -699,8 +910,12 @@ function render() {
     const title = currentTitle(r);
     const haystack = normalize(title + ' ' + r.title + ' ' + r.cuisine + ' ' + r.id + ' ' + r.dish_type);
     const matchesQ = !q || haystack.includes(normalize(q));
-    const matchesVegan = !veganFilter || (veganFilter === 'vegan' ? r.vegan : !r.vegan);
-    if (!matchesQ || !matchesVegan) continue;
+    const matchesDiet = !dietFilter || (r.diet || []).includes(dietFilter);
+    const matchesCuisine = !cuisineFilter || r.cuisine === cuisineFilter;
+    const matchesType = !typeFilter || r.dish_type === typeFilter;
+    const matchesWarn = !warnOnly || (r.flags || []).length > 0;
+    const matchesDup = !dupOnly || (r.similar || []).length > 0;
+    if (!matchesQ || !matchesDiet || !matchesCuisine || !matchesType || !matchesWarn || !matchesDup) continue;
     visible++;
     const L = letterOf(title);
     (byLetter[L] = byLetter[L] || []).push(r);
@@ -719,10 +934,14 @@ function render() {
       const title = currentTitle(r);
       const isMarked = marked.has(r.id);
       const isPending = pendingLink.has(r.id);
+      const isComparePending = compareSet.has(r.id);
       const isRenamed = renamed.has(r.id);
       const memberOf = groupsForId(r.id);
-      const checked = mode === 'del' ? isMarked : isPending;
-      out += `<li class="row${isMarked ? ' marked' : ''}${isPending ? ' pending-link' : ''}" data-id="${r.id}">` +
+      let checked = false;
+      if (mode === 'del') checked = isMarked;
+      else if (mode === 'link') checked = isPending;
+      else checked = isComparePending;
+      out += `<li class="row${isMarked ? ' marked' : ''}${isPending ? ' pending-link' : ''}${isComparePending ? ' pending-compare' : ''}" data-id="${r.id}">` +
         `<input type="checkbox" class="chk mode-${mode}" ${checked ? 'checked' : ''} aria-label="Sélectionner ${escapeHtml(title)}">` +
         `<div class="row-main">` +
         `<div class="row-title-line">` +
@@ -734,7 +953,7 @@ function render() {
         `<div class="row-meta">` +
         (r.cuisine ? `<span class="tag">${escapeHtml(r.cuisine.replace(/_/g, ' '))}</span>` : '') +
         (r.dish_type ? `<span class="tag">${escapeHtml(r.dish_type)}</span>` : '') +
-        (r.vegan ? `<span class="tag vegan">vegan</span>` : '') +
+        rowBadges(r) +
         (isMarked ? `<span class="tag del">à supprimer</span>` : '') +
         (isRenamed ? `<span class="tag renamed">renommée</span>` : '') +
         (memberOf.length ? `<span class="tag link">groupe ${memberOf.join(', ')}</span>` : '') +
@@ -746,9 +965,15 @@ function render() {
   listRoot.innerHTML = out;
 }
 
-// ── Selection (delete / link) ────────────────────────────────────────────
+// ── Selection (delete / link / compare) ──────────────────────────────────
 listRoot.addEventListener('click', (e) => {
   if (e.target.closest('.edit-btn')) return; // gere separement
+  const dupBtn = e.target.closest('.tag.dup');
+  if (dupBtn) {
+    e.stopPropagation();
+    openDuplicateCluster(dupBtn.dataset.dupId);
+    return;
+  }
   const row = e.target.closest('li.row');
   if (!row) return;
   const id = row.dataset.id;
@@ -758,27 +983,59 @@ listRoot.addEventListener('click', (e) => {
 function toggleSelection(id) {
   if (mode === 'del') {
     marked.has(id) ? marked.delete(id) : marked.add(id);
-  } else {
+  } else if (mode === 'link') {
     pendingLink.has(id) ? pendingLink.delete(id) : pendingLink.add(id);
+  } else {
+    if (compareSet.has(id)) {
+      compareSet.delete(id);
+    } else {
+      if (compareSet.size >= MAX_COMPARE) {
+        showToast(`Maximum ${MAX_COMPARE} recettes en comparaison à la fois.`);
+        return;
+      }
+      compareSet.add(id);
+    }
   }
   render();
   syncBars();
   syncLinkToolbar();
+  syncCompareToolbar();
 }
 
 function syncLinkToolbar() {
   pendingLinkCountEl.textContent = pendingLink.size;
   saveGroupBtn.disabled = pendingLink.size < 1;
 }
+function syncCompareToolbar() {
+  compareCountEl.textContent = compareSet.size;
+  openCompareBtn.disabled = compareSet.size < 2;
+}
 
 modeDelBtn.addEventListener('click', () => setMode('del'));
 modeLinkBtn.addEventListener('click', () => setMode('link'));
+modeCompareBtn.addEventListener('click', () => setMode('compare'));
 function setMode(m) {
   mode = m;
   modeDelBtn.classList.toggle('active', m === 'del');
   modeLinkBtn.classList.toggle('active', m === 'link');
+  modeCompareBtn.classList.toggle('active', m === 'compare');
   linkToolbar.classList.toggle('show', m === 'link');
+  compareToolbar.classList.toggle('show', m === 'compare');
   render();
+}
+
+function openDuplicateCluster(id) {
+  const r = BY_ID[id];
+  if (!r) return;
+  compareSet.clear();
+  compareSet.add(id);
+  for (const s of (r.similar || [])) {
+    if (compareSet.size >= MAX_COMPARE) break;
+    compareSet.add(s.id);
+  }
+  setMode('compare');
+  syncCompareToolbar();
+  openCompareModal();
 }
 
 // ── Groupes ──────────────────────────────────────────────────────────────
@@ -798,6 +1055,11 @@ document.getElementById('clearPendingBtn').addEventListener('click', () => {
   syncBars();
   syncLinkToolbar();
 });
+document.getElementById('clearCompareBtn').addEventListener('click', () => {
+  compareSet.clear();
+  render();
+  syncCompareToolbar();
+});
 function renderGroupsList() {
   groupsListEl.innerHTML = groups.map((g, i) =>
     `<span class="group-chip">Groupe ${i + 1} — ${g.ids.length} recette(s)${g.note ? ' · ' + escapeHtml(g.note) : ''}` +
@@ -811,6 +1073,67 @@ groupsListEl.addEventListener('click', (e) => {
   renderGroupsList();
   render();
   syncBars();
+});
+
+// ── Comparaison cote a cote ───────────────────────────────────────────────
+const compareModal = document.getElementById('compareModal');
+const compareRow = document.getElementById('compareRow');
+
+function fmtIngredient(name) {
+  return (name || '').replace(/_/g, ' ');
+}
+
+function compareCardHtml(r) {
+  const diet = (r.diet || []).map(d => `<span class="tag ${d === 'vegan' ? 'vegan' : ''}">${escapeHtml(DIET_LABELS[d] || d)}</span>`).join('');
+  const flags = (r.flags || []).map(f => `<span class="tag warn">⚠ ${escapeHtml(FLAG_LABELS[f] || f)}</span>`).join('');
+  const compo = (r.composition || []).map(c =>
+    `<tr><td>${escapeHtml(fmtIngredient(c.ingredient))}</td><td class="qty">${c.quantity != null ? c.quantity : ''} ${escapeHtml(c.unit || '')}</td></tr>`
+  ).join('');
+  return `<div class="compare-card" data-id="${escapeHtml(r.id)}">` +
+    `<button type="button" class="compare-remove" data-remove-id="${escapeHtml(r.id)}">Retirer ✕</button>` +
+    `<h3>${escapeHtml(currentTitle(r))}</h3>` +
+    `<div class="compare-line">${escapeHtml((r.cuisine || '').replace(/_/g, ' ')) || '—'} · ${escapeHtml(r.dish_type || '—')}</div>` +
+    `<div class="compare-line"><b>${r.servings ?? '?'}</b> pers. · <b>${r.time_total ?? '?'}</b> min · confiance <b>${r.confidence != null ? r.confidence.toFixed(2) : '?'}</b></div>` +
+    `<div class="compare-chips">${diet}${flags}</div>` +
+    (r.description ? `<p class="compare-desc">${escapeHtml(r.description)}</p>` : '') +
+    (compo ? `<div class="compare-compo"><table>${compo}</table></div>` : '<div class="compare-compo">Composition vide.</div>') +
+    `<span class="row-id">${escapeHtml(r.id)}</span>` +
+    `</div>`;
+}
+
+function renderCompareModal() {
+  const ids = Array.from(compareSet);
+  compareRow.innerHTML = ids.map(id => BY_ID[id]).filter(Boolean).map(compareCardHtml).join('');
+}
+function openCompareModal() {
+  renderCompareModal();
+  compareModal.classList.add('show');
+}
+openCompareBtn.addEventListener('click', openCompareModal);
+document.getElementById('compareModalClose').addEventListener('click', () => compareModal.classList.remove('show'));
+compareModal.addEventListener('click', (e) => {
+  if (e.target === compareModal) compareModal.classList.remove('show');
+  const rm = e.target.closest('.compare-remove');
+  if (rm) {
+    compareSet.delete(rm.dataset.removeId);
+    renderCompareModal();
+    render();
+    syncCompareToolbar();
+  }
+});
+document.getElementById('copyCompareBtn').addEventListener('click', () => {
+  const ids = Array.from(compareSet);
+  const items = ids.map(id => BY_ID[id]).filter(Boolean);
+  if (!items.length) { showToast('Rien à comparer.'); return; }
+  const blocks = items.map(r => {
+    const compoLines = (r.composition || []).map(c => `    - ${fmtIngredient(c.ingredient)} : ${c.quantity ?? ''} ${c.unit || ''}`).join('\\n');
+    return `${currentTitle(r)} (${r.id})\\n` +
+      `  cuisine=${r.cuisine || '?'} type=${r.dish_type || '?'} portions=${r.servings ?? '?'} temps=${r.time_total ?? '?'}min confiance=${r.confidence ?? '?'}\\n` +
+      `  regime=${(r.diet || []).join(', ') || 'aucun'}\\n` +
+      `  description: ${r.description || '(vide)'}\\n` +
+      `  composition:\\n${compoLines || '    (vide)'}`;
+  });
+  copyTextRobust(`=== Comparaison (${items.length} recettes) ===\\n\\n` + blocks.join('\\n\\n'));
 });
 
 // ── Renommage inline ─────────────────────────────────────────────────────
@@ -982,14 +1305,20 @@ searchInput.addEventListener('input', () => {
   clearTimeout(debounceT);
   debounceT = setTimeout(render, 60);
 });
-filterVegan.addEventListener('change', render);
+filterDiet.addEventListener('change', render);
+filterCuisine.addEventListener('change', render);
+filterType.addEventListener('change', render);
+toggleWarn.addEventListener('change', () => { toggleWarnLbl.classList.toggle('active-warn', toggleWarn.checked); render(); });
+toggleDup.addEventListener('change', () => { toggleDupLbl.classList.toggle('active-dup', toggleDup.checked); render(); });
 
 buildJumpNav();
+renderStats();
 const restored = loadState();
 render();
 renderGroupsList();
 syncBars();
 syncLinkToolbar();
+syncCompareToolbar();
 if (restored) showToast('Sélection précédente restaurée depuis ce navigateur.');
 </script>
 """
