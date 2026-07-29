@@ -554,7 +554,7 @@
     },
     {
       "id": 23,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "base_natto_7060f1",
         "base_seitan_249032",
@@ -574,7 +574,17 @@
         "rice_vegetable_sushi_9aad8a",
         "tempeh_tempeh_teriyaki_da1952"
       ],
-      "issues": []
+      "issues": [
+        "bread_katsu_bf3f1e: texte disait creme fraiche pour la panure (absente de la composition) alors que l'oeuf est deja disponible - texte corrige",
+        "curry_japanese_4533d1: huile de coco dans le texte alors que la composition utilise de l'huile d'olive - texte aligne",
+        "curry_japanese_classic_v3_m8q2z4: beurre utilise deux fois (25ml initial + 35g roux) mais composition n'avait que 35g (corrige a 60g)",
+        "dumpling_gyoza_92d264: huile de sesame utilisee dans la farce (15ml) ET la sauce d'accompagnement (10ml suppl. explicites), composition n'avait que 15g (corrige a 25g)",
+        "egg_okonomiyaki_c105e0: lait (60ml, explicite) absent de la composition (ajoute) ; oeuf a 220g en composition vs '1 oeuf' explicite dans le texte (corrige a 55g)",
+        "main_japanese_vegetable_tempur_f57314, main_tempura_de_legumes_20cc9f: farine a tempura 120g texte vs 150g composition, et eau 160ml texte vs 200ml/500ml composition - texte aligne",
+        "pasta_yakisoba_c6cc19: huile de coco mentionnee dans la sauce alors qu'aucune huile de coco n'existe en composition (uniquement de l'huile de sesame) - texte corrige, la somme des deux mentions correspond exactement aux 45ml de la composition",
+        "protein_tofu_teriyaki_ffcb47, rice_donburi_tofu_teriyaki_a71cfc: coconut_milk_plant utilise comme huile de friture (mal etiquete) -> coconut_oil_plant",
+        "NOTE non corrigee: tempeh_tempeh_teriyaki_da1952 a des quantites d'huile de sesame/coco incoherentes entre la marinade et l'etape finale (total texte ~65ml vs 45ml composition, une mention de coco totalement absente) - trop ambigu pour une correction fiable sans reecriture speculative, laisse en l'etat"
+      ]
     },
     {
       "id": 24,
