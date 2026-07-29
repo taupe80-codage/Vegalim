@@ -1259,7 +1259,7 @@
     },
     {
       "id": 44,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "main_epinards_assaisonnes_core_b596b9",
         "protein_bulgogi_tofu_fc5de9",
@@ -1287,7 +1287,21 @@
         "side_rosti_4ec9f8",
         "side_sabzi_polo_vegan_7bf9df"
       ],
-      "issues": []
+      "issues": [
+        "protein_bulgogi_tofu_fc5de9: sucre 20g explicite vs 10g composition - corrige ; huile de coco au texte alors qu'aucune huile de coco n'est en composition (huile de sesame deja tracee) - corrige",
+        "salad_de_pousses_de_soja_coreen_d07502: sesame utilise 2 fois explicitement (20g+10g=30g) mais composition n'avait que 20g - corrige ; la moutarde (15g, en composition) n'etait jamais mentionnee dans le texte - ajoutee",
+        "main_tofu_froid_japonais_506c62: le tofu ferme (200g, en composition) n'a pas sa place dans un hiyayakko classique (uniquement du tofu soyeux) et n'etait jamais utilise dans le texte - supprime",
+        "rice_salade_de_concombre_japonaise_d66133: huile de sesame utilisee 2 fois explicitement (15+15=30ml) mais composition n'avait que 15ml - corrigee",
+        "rice_jeera_rice_a4633c, side_farofa_bresilienne_vegan_45d889: composition a du beurre reel/vegetal mais le texte disait huile de coco (motif recurrent, 2 recettes)",
+        "rice_riz_citronne_indien_05c717: huile de tournesol 30ml texte vs 45ml composition - corrigee ; le piment seche (10g, en composition) n'etait jamais mentionne dans le tempering - ajoute",
+        "rice_sabzi_polo_e099d2: '1 cuillere a soupe de sel' (~15g) alors que la composition a 5g - corrige ; le beurre (40g, en composition) n'etait jamais mentionne dans le texte (traditionnellement utilise pour le tahdig) - ajoute",
+        "rice_tamarind_rice_2e5463: BUG - l'ingredient peanut_oil_plant (huile d'arachide) avec une forme 'roughly_chopped' correspondait en realite aux 80g de cacahuetes concassees decrites dans le texte - corrige en peanut_raw ; une moutarde en pot (15g, distincte des graines de moutarde deja tracees) jamais mentionnee dans le texte - supprimee (doublon)",
+        "salad_salade_lyonnaise_f54cfd: BUG - description et etape 5 decrivaient du 'tofu poche' alors que l'oeuf (220g, prep=poached, ingredient traditionnel de la salade lyonnaise) est en composition mais jamais poche dans le texte - etape de pochage ajoutee et texte corrige",
+        "side_carottes_glacees_a_lerabl_1d1c44: le texte disait 'huile' (25g) generique alors que la composition est du beurre vegetal (40g) - corrige",
+        "side_riz_frit_vegan_d17d25: l'etape 2 introduisait une 3e quantite d'huile de sesame (25ml) non tracee, en plus des 15.2ml et 45.7ml d'huile de tournesol deja exactement conformes a la composition - quantite fantome retiree",
+        "side_rosti_4ec9f8: le texte precise 'thym frais' alors que la composition etait du thym seche - corrige ; residu textuel incongru mentionnant un arome de noix de coco juste apres avoir fait fondre du beurre - corrige",
+        "side_sabzi_polo_vegan_7bf9df: le beurre vegetal (40g, en composition) n'etait jamais mentionne dans le texte (motif identique a la version non vegan) - ajoute"
+      ]
     },
     {
       "id": 45,
