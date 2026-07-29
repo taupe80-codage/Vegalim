@@ -477,7 +477,7 @@
     },
     {
       "id": 21,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "egg_quiche_lorraine_vegetarienne_77343c",
         "gratin_dauphinois_classic_v3_p9x4t2",
@@ -502,7 +502,19 @@
         "tarte_quiche_vegetarienne_b849b0",
         "wok_pommes_de_terre_sautees_8bafe1"
       ],
-      "issues": []
+      "issues": [
+        "egg_quiche_lorraine_vegetarienne_77343c: huile (20ml, explicite) pour saisir l'oignon absente de la composition",
+        "gratin_dauphinois_classic_v3_p9x4t2: texte annoncait moitie-moitie 500ml alors que composition est 320ml creme + 220ml lait (540ml, ratio different) - texte corrige",
+        "main_chou_farci_vegetarien_7a01f5: chou vert a 1g en composition, erreur de grandeur evidente pour un plat de chou farci (corrige a 800g)",
+        "main_fricassee_printaniere_619cae: creme 80g composition vs 150ml explicite dans le texte",
+        "main_girolles_a_la_creme_7d432d: vin blanc 50ml texte vs 80ml composition",
+        "main_gratin_de_chou_fleur_bad955: etape finale vide supprimee",
+        "salad_nicoise_3b123f: tofu nomme dans la description et les instructions, totalement absent de la composition (ajoute, 300g, quantite estimee par comparaison a des recettes similaires)",
+        "stew_cassoulet_938fd4: bouillon vegetal (500ml, explicite) utilise comme liquide de cuisson, absent de la composition",
+        "tarte_quiche_lorraine_7033e4: fromage (150g) jamais mentionne dans les instructions - ajoute a l'etape de melange",
+        "tarte_quiche_vegetarienne_b849b0: pate de la quiche etait erronement 'pasta_raw_dried' (des pates) au lieu d'une pate a tarte -> shortcrust_pastry ; 'assorted_vegetables' etait un placeholder sans donnees nutritionnelles (None), remplace par les 3 legumes nommes dans le texte (poivron, courgette, champignon) a quantites egales",
+        "wok_pommes_de_terre_sautees_8bafe1: coconut_milk_plant utilise comme huile de friture (mal etiquete) -> coconut_oil_plant"
+      ]
     },
     {
       "id": 22,
