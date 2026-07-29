@@ -386,7 +386,7 @@
     },
     {
       "id": 18,
-      "status": "pending",
+      "status": "done",
       "recipe_ids": [
         "curry_baingan_bharta_d54d1c",
         "curry_chickpea_k5x2p9",
@@ -409,7 +409,16 @@
         "dal_dal_makhani_c9ce94",
         "dal_dal_tadka_4c3536"
       ],
-      "issues": []
+      "issues": [
+        "curry_chickpea_k5x2p9, curry_daubergine_indien_779e72, curry_dry_aloo_gobi_9a6763, curry_split_pea_k2f9x1, dal_curry_pois_chiches_epinards_a7ee14: texte annoncait huile de coco alors que la composition utilise une autre huile deja correcte (olive/tournesol) - texte aligne, suite de la decouverte systemique du lot 13",
+        "curry_chickpea_spinach_k6518f8, curry_de_pommes_de_terre_et_bam_e5161e, curry_de_pommes_de_terre_et_pet_9271d8, dal_chana_classic_k1d1p4, dal_chole_bhature_dbcac0, dal_chole_curry_de_pois_chiches_851fca: coconut_milk_plant utilise comme huile de friture (mal etiquete) -> coconut_oil_plant",
+        "curry_palak_paneer_b4ca11, curry_palak_paneer_classic_v4_m8x3p1: creme de coco (30ml, quantite explicite) absente de la composition (ajoutee) ; diet_flags vegan/lactose_free corriges via le fix racine compute_diet_flags (paneer et ghee laitiers reels via base_paneer_04e1db/base_ghee_ec9064)",
+        "curry_paneer_butter_masala_classic_v4_z7x3p2: etape finale annoncait une 2e dose d'huile de tournesol (deja utilisee a l'etape 1) au lieu du beurre reellement present en composition (40g, jamais mentionne autrement) - texte corrige",
+        "dal_chana_classic_k1d1p4: eau de cuisson des lentilles (900ml) decrite a tort comme lait de coco dans le texte - corrige",
+        "dal_coconut_classic_k1d1p5: huile de coco de friture (25ml, quantite explicite) absente de la composition (ajoutee, distincte du lait de coco deja present)",
+        "dal_coconut_dal_ea7cdd: huile de coco du tadka (15ml suppl. explicites) non comptee dans la composition (20ml -> 35ml)",
+        "DECOUVERTE SYSTEMIQUE MAJEURE (hors lot, corrigee separement) : compute_diet_flags() ignorait les diet_flags des sous-recettes base_X referencees en composition - 43 recettes ressortaient vegan/gluten_free/lactose_free/nut_free=True a tort malgre un ingredient reel non conforme dans leur sous-recette (paneer laitier, oeuf dans les nouilles/pate, noix de cajou dans le pesto/cheddar vegan...). Fix racine applique dans backend/engine/rule_engine/diet.py + recalcul des 43 recettes concernees (commit separe)."
+      ]
     },
     {
       "id": 19,

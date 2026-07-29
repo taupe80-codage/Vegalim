@@ -24711,7 +24711,7 @@
       "_chef_note": "N'oubliez pas de goûter et d'ajuster l'assaisonnement selon vos préférences.",
       "description": "Curry végétal indien aux pois chiches, avec sauce onctueuse et parfumée, réalisé à partir de tomates fraîches et d'épices comme le curcuma et le garam masala.",
       "instructions": [
-        "Étape 1 : Faire chauffer 25 ml d'huile de coco à feu moyen dans une poêle. Ajouter 150g d'oignons jaunes émincés et les faire revenir pendant 12 minutes, jusqu'à ce qu'ils soient brun doré et fondants.",
+        "Étape 1 : Faire chauffer 25 ml d'huile d'olive à feu moyen dans une poêle. Ajouter 150g d'oignons jaunes émincés et les faire revenir pendant 12 minutes, jusqu'à ce qu'ils soient brun doré et fondants.",
         "Étape 2 : Incorporer 25g d'ail haché et 10g de gingembre frais haché, puis cuire 2 minutes en remuant constamment.",
         "Étape 3 : Ajouter 6g de cumin en graines, 3,8g de curcuma en poudre et 20g de garam masala, puis faire revenir 1 minute, en prenant soin de bien mélanger les épices.",
         "Étape 4 : Ajouter 400g de tomates fraîches concassées et cuire 10 minutes, en remuant occasionnellement, jusqu'à réduction complète de la sauce.",
@@ -24818,7 +24818,7 @@
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
+          "ingredient": "coconut_oil_plant",
           "quantity": 30,
           "unit": "ml",
           "meta": {
@@ -25856,7 +25856,7 @@
       "description": "Curry indien de aubergines crémeuses et parfumées, où les épices torréfiées et la chair fondante se marient dans une sauce onctueuse, typique de la cuisine indienne.",
       "instructions": [
         "Étape 1 : Couper les aubergines en cubes et les saler avec 5g de sel. Laisser dégorger pendant 15 minutes, jusqu'à ce que les aubergines rendent leur eau et soient moins amères.",
-        "Étape 2 : Faire revenir 150g d'oignon dans 45ml d'huile de coco à feu moyen, en ajoutant 9g d'ail, jusqu'à ce qu'ils soient dorés et parfumés, en remuant régulièrement pendant environ 5 minutes.",
+        "Étape 2 : Faire revenir 150g d'oignon dans 45ml d'huile de tournesol à feu moyen, en ajoutant 9g d'ail, jusqu'à ce qu'ils soient dorés et parfumés, en remuant régulièrement pendant environ 5 minutes.",
         "Étape 3 : Ajouter 3g de curcuma, 3g de cumin et 3g de garam masala. Cuire pendant 1 minute, jusqu'à ce que les épices soient parfumées et répandent leur arôme dans la cuisine.",
         "Étape 4 : Incorporer 15g de piment, 600g d'aubergines rincées et 240g de tomates concassées. Cuire pendant 20 minutes, jusqu'à ce que les aubergines soient fondantes et les tomates soient réduites en une sauce crémeuse.",
         "Étape 5 : Assaisonner le curry avec du sel et des épices selon vos goûts. Laisser mijoter pendant 5 minutes, jusqu'à ce que les saveurs soient bien mélangées.",
@@ -25950,7 +25950,7 @@
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
+          "ingredient": "coconut_oil_plant",
           "quantity": 45,
           "unit": "ml",
           "meta": {
@@ -26234,7 +26234,7 @@
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
+          "ingredient": "coconut_oil_plant",
           "quantity": 45,
           "unit": "ml",
           "meta": {
@@ -26703,7 +26703,7 @@
       "description": "Curry sec de pommes de terre et chou-fleur, parfumé aux épices indiennes, avec une texture fondante et des arômes de curcuma et de cumin, préparé selon la technique traditionnelle indienne",
       "instructions": [
         "Étape 1 : Préparez les ingrédients. Couper les pommes de terre crues en cubes de 2 cm et le chou-fleur cru en fleurettes régulières.",
-        "Étape 2 : Chauffer 30 ml d'huile de coco à feu vif dans une poêle. Faire grésiller les graines de cumin pendant 30 secondes, en les faisant sauter pour libérer leurs arômes.",
+        "Étape 2 : Chauffer 45 ml d'huile de tournesol à feu vif dans une poêle. Faire grésiller les graines de cumin pendant 30 secondes, en les faisant sauter pour libérer leurs arômes.",
         "Étape 3 : Ajouter l'oignon jaune et cuire 6 minutes, en remuant régulièrement pour éviter la coloration. L'oignon doit être translucide et parfumé.",
         "Étape 4 : Incorporer l'ail et le gingembre hachés, ainsi que les épices (curcuma, cumin, coriandre). Cuire 1 minute, en remuant bien pour répartir les saveurs.",
         "Étape 5 : Ajouter les pommes de terre et faire revenir 5 minutes à feu moyen-vif, en les faisant sauter pour bien les enrober d'huile et de saveurs.",
@@ -28466,6 +28466,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "coconut_milk_plant",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -28532,6 +28543,8 @@
         "base_ghee_ec9064",
         "base_paneer_04e1db",
         "braising",
+        "coco",
+        "coconut",
         "coeliaque",
         "cumin",
         "curry",
@@ -28555,6 +28568,7 @@
         "masala",
         "mijote",
         "minceur",
+        "noix",
         "oignon",
         "onion",
         "palak",
@@ -28731,6 +28745,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "coconut_milk_plant",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -28802,6 +28827,8 @@
         "base_ghee_ec9064",
         "base_paneer_04e1db",
         "braising",
+        "coco",
+        "coconut",
         "coeliaque",
         "controlled",
         "cumin",
@@ -28825,6 +28852,7 @@
         "masala",
         "mijote",
         "minceur",
+        "noix",
         "oignon",
         "onion",
         "palak",
@@ -29487,7 +29515,7 @@
         "Étape 1: Faire revenir 120 g d'oignon haché dans 20 g d'huile de tournesol à feu moyen pendant 8 minutes, jusqu'à obtenir une belle coloration dorée. Ajouter 25 g d'ail, 10 g de gingembre et les épices (cumin, coriandre, garam masala, paprika) pendant 1 minute, en respirant les arômes qui se dégagent.",
         "Étape 2: Incorporer 400 g de tomates concassées et 40 g de noix de cajou. Cuire pendant 10 minutes en remuant occasionnellement, jusqu'à ce que les tomates soient tendres et les saveurs bien mélangées. Mixer le tout jusqu'à obtenir une sauce lisse et filtrer au chinois pour une texture parfaite.",
         "Étape 3: Remettre la sauce sur le feu. Ajouter 250 g de fromage râpé en cubes. Verser 80 ml de crème et mélanger doucement pour éviter les grumeaux. Mijoter pendant 5 minutes à feu doux, en observant la sauce qui épaissit et devient crémeuse.",
-        "Étape 4: Hors du feu, incorporer 20 g d'huile de tournesol en mélangeant pour monter la sauce — elle doit être brillante et onctueuse, avec une texture qui nappe bien la cuillère.",
+        "Étape 4: Hors du feu, incorporer 40 g de beurre en mélangeant pour monter la sauce — elle doit être brillante et onctueuse, avec une texture qui nappe bien la cuillère.",
         "Étape 5: Assaisonner avec 6 g de sel et 10 g de garam masala. Ajouter 6 g de sucre pour équilibrer les saveurs, en goûtant pour ajuster selon votre préférence.",
         "Étape 6: Ajouter 150 ml d'eau pour ajuster la consistance de la sauce, qui doit être fluide mais pas trop liquide.",
         "Étape 7: Servir chaud, garni de coriandre fraîche. La sauce doit être d'une belle couleur orange profond, très crémeuse et légèrement sucrée, avec un parfum qui invite à la dégustation.",
@@ -29754,12 +29782,12 @@
       "_quality_score": 0.99,
       "description": "Curry végan de pois cassés mijotés avec une base aromatique torréfiée, développant une texture épaisse et crémeuse, avec une couleur jaune profond et un parfum épicé, inspiré de la cuisine indienne traditionnelle.",
       "instructions": [
-        "Étape 1 : Faire revenir 140 g d'oignon dans 35 ml d'huile de coco à feu moyen pendant 6 minutes, jusqu'à ce qu'il soit doré et parfumé, en libérant ses arômes naturels. Ajouter 30 g d'ail et 12 g de gingembre, cuire 1 minute, en remuant constamment pour éviter la coloration excessive.",
+        "Étape 1 : Faire revenir 140 g d'oignon dans 35 ml d'huile de tournesol à feu moyen pendant 6 minutes, jusqu'à ce qu'il soit doré et parfumé, en libérant ses arômes naturels. Ajouter 30 g d'ail et 12 g de gingembre, cuire 1 minute, en remuant constamment pour éviter la coloration excessive.",
         "Étape 2 : Ajouter 5 g de cumin, 3,8 g de curcuma et 12 g de coriandre moulue, cuire 1 minute, en sentant les arômes se mélanger et se fondre ensemble.",
         "Étape 3 : Incorporer 220 g de tomates concassées et 45 g de piment. Réduire 5 minutes, en laissant les saveurs se fondre ensemble et les tomates rendre leur jus.",
         "Étape 4 : Ajouter 300 g de pois cassés et 900 ml d'eau de coco. Porter à ébullition en écumant, puis réduire le feu pour mijoter.",
         "Étape 5 : Mijoter à feu doux 40 minutes en remuant régulièrement, jusqu'à ce que les pois soient entièrement fondus et le curry épais, en vérifiant que la lame ressort sèche et que le curry nappe la cuillère.",
-        "Étape 6 : Préparer le tadka : chauffer 5 ml d'huile de coco, faire grésiller des graines de moutarde et des feuilles de curry 30 secondes. Verser sur le curry, en sentant les arômes se dégager et se mélanger.",
+        "Étape 6 : Préparer le tadka : chauffer 5 ml d'huile de tournesol, faire grésiller des graines de moutarde et des feuilles de curry 30 secondes. Verser sur le curry, en sentant les arômes se dégager et se mélanger.",
         "Étape 7 : Assaisonner avec de la levure nutritionnelle et servir sans attendre, en appréciant la texture crémeuse et la couleur jaune profond du curry, accompagné de riz ou de pain pour un repas complet."
       ],
       "diet_flags": {
@@ -32520,7 +32548,7 @@
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
+          "ingredient": "coconut_oil_plant",
           "quantity": 30,
           "unit": "ml",
           "meta": {
@@ -32731,7 +32759,7 @@
       "_quality_score": 1.0,
       "description": "Découvrez ce dahl de pois chiches végan crémeux et parfumé, mijoté à la perfection avec une sauce épaissie et des épices torréfiées, inspiré de la cuisine indienne traditionnelle. Les pois chiches sont cuits à la perfection et mélangés avec des épices et des herbes fraîches.",
       "instructions": [
-        "Étape 1 : Faites tremper 250g de chana dal pendant 30 minutes dans de l'eau froide. Égouttez et cuisez dans 900ml de lait de coco à 180°C pendant 25 minutes, jusqu'à ce que les lentilles soient tendres mais encore entières.",
+        "Étape 1 : Faites tremper 250g de chana dal pendant 30 minutes dans de l'eau froide. Égouttez et cuisez dans 900ml d'eau à 180°C pendant 25 minutes, jusqu'à ce que les lentilles soient tendres mais encore entières.",
         "Étape 2 : Chauffez 30ml d'huile de coco à feu moyen-vif. Saisissez les graines de cumin pendant 30 secondes, jusqu'à ce qu'elles commencent à parfumer. Faites revenir 120g d'oignon pendant 10 minutes, jusqu'à ce qu'il soit doré et caramélisé.",
         "Étape 3 : Ajoutez 25g d'ail et 10g de gingembre, ainsi que 5g de cumin, 3,8g de curcuma et 10g de coriandre moulue. Cuisez pendant 1 minute, en remuant constamment, jusqu'à ce que les épices soient torréfiées et parfumées. Incorporer 200g de tomates concassées et réduire pendant 8 minutes à feu moyen, en remuant occasionnellement, jusqu'à ce que la sauce soit concentrée et crémeuse.",
         "Étape 4 : Versez les lentilles cuites et l'eau de cuisson réservée dans la sauce. Mijotez pendant 10 minutes à feu doux, à 150°C, en remuant occasionnellement, jusqu'à ce que la sauce ait épaissi et enrobe chaque lentille.",
@@ -32837,7 +32865,7 @@
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
+          "ingredient": "coconut_oil_plant",
           "quantity": 45,
           "unit": "ml",
           "meta": {
@@ -33114,7 +33142,7 @@
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
+          "ingredient": "coconut_oil_plant",
           "quantity": 45,
           "unit": "ml",
           "meta": {
@@ -33468,6 +33496,17 @@
             "note": "Pour accompagner le dahl",
             "optional": true
           }
+        },
+        {
+          "ingredient": "coconut_oil_plant",
+          "quantity": 25,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -33648,7 +33687,7 @@
         },
         {
           "ingredient": "coconut_oil_plant",
-          "quantity": 20,
+          "quantity": 35,
           "unit": "ml",
           "meta": {
             "role": "fat_cooking",
@@ -34170,7 +34209,7 @@
       "_quality_score": 0.93,
       "description": "Curry végan aux pois chiches cuits et épinards crus, parfumé d'épices torréfiées comme le curcuma et le cumin, avec une texture dense et rustique, rappelant les saveurs de l'Inde du Nord.",
       "instructions": [
-        "Étape 1 : Faire chauffer l'huile de coco dans une poêle à feu moyen-vif. Ajouter l'oignon jaune haché et l'ail émincé, puis faire saisir jusqu'à transparence, en sentant l'odeur sucrée des oignons, pendant environ 5 minutes.",
+        "Étape 1 : Faire chauffer l'huile de tournesol dans une poêle à feu moyen-vif. Ajouter l'oignon jaune haché et l'ail émincé, puis faire saisir jusqu'à transparence, en sentant l'odeur sucrée des oignons, pendant environ 5 minutes.",
         "Étape 2 : Ajouter le curcuma, le cumin, et le garam masala, puis blanchir 1 minute, en laissant les épices libérer leurs arômes.",
         "Étape 3 : Incorporer les pois chiches cuits et les tomates concassées, puis cuire 8 min à feu moyen-vif, en laissant les saveurs se mélanger.",
         "Étape 4 : Ajouter les épinards crus et cuire encore 5 min à feu moyen, jusqu'à ce que les épinards soient fondus et les pois chiches tendres.",
