@@ -5,9 +5,13 @@ build_n2_direct.py  —  Reconstruction déterministe de nutrition_v2
 Version SANS flat files : charge directement les sources officielles brutes.
 
 Sources :
-  CIQUAL  : Table_Ciqual_2025_FR_2025_11_03.xlsx  (alim_code → nutriments)
-  USDA    : FoodData_Central_foundation_food_json_2025-12-18.json (fdcId → nutriments)
-  CNF     : cnf/FOOD_NAME.csv + NUTRIENT_AMOUNT.csv (FoodCode → nutriments)
+  CIQUAL     : Table_Ciqual_2025_FR_2025_11_03.xlsx  (alim_code → nutriments)
+  USDA       : FoodData_Central_foundation_food_json_2025-12-18.json (fdcId → nutriments)
+  USDA SR Legacy : sr_legacy/food.csv + nutrient.csv + food_nutrient.csv (fdcId → nutriments)
+               Complement de Foundation Foods : couvre les plats prepares/etats
+               cuisines (ex. "Onions, yellow, sauteed") absents de Foundation
+               Foods, qui ne couvre que les aliments bruts analyses en labo.
+  CNF        : cnf/FOOD_NAME.csv + NUTRIENT_AMOUNT.csv (FoodCode → nutriments)
 
 Usage :
   python build_n2_direct.py               # écrit nutrition_v2_rebuilt.json
@@ -733,6 +737,74 @@ def load_usda(path: Path) -> dict:
     return idx
 
 
+def load_usda_sr_legacy(sr_dir: Path) -> dict:
+    """
+    USDA SR Legacy CSV (food.csv + nutrient.csv + food_nutrient.csv)
+    → {fdcId_int: {n2_field: value}}
+
+    Complement de load_usda() (Foundation Foods) : certains variants du
+    tree referencent des fdcId qui n'existent QUE dans SR Legacy (plats
+    prepares/etats cuisines comme "Onions, yellow, sauteed" ou jus type
+    "Tangerine juice, raw" -- absents de Foundation Foods, qui ne couvre
+    que les aliments bruts analyses en laboratoire). Sans cette source,
+    ces variants sont silencieusement ignores (stats['misses']) et leurs
+    donnees nutritionnelles restent introuvables meme quand le tree les
+    reference correctement -- bug decouvert via l'audit de l'huile de
+    palme (2026-07-30).
+
+    Reutilise USDA_NUTR_MAP (indexe par nutrient_nbr, stable entre les
+    bases USDA) apres resolution nutrient_id → nutrient_nbr via
+    nutrient.csv.
+    """
+    print('  Chargement USDA SR Legacy csv...')
+
+    # 1. nutrient_id → nutrient_nbr (le "number" officiel, celui utilise par USDA_NUTR_MAP)
+    nutrient_nbr_by_id: dict[int, str] = {}
+    with open(sr_dir / 'nutrient.csv', encoding='utf-8-sig', errors='replace', newline='') as f:
+        for row in csv.DictReader(f):
+            try:
+                nutrient_nbr_by_id[int(row['id'])] = str(row['nutrient_nbr']).strip()
+            except (ValueError, KeyError, TypeError):
+                continue
+
+    # 2. fdc_id → description
+    idx: dict[int, dict] = {}
+    with open(sr_dir / 'food.csv', encoding='utf-8-sig', errors='replace', newline='') as f:
+        for row in csv.DictReader(f):
+            try:
+                fid = int(row['fdc_id'])
+            except (ValueError, KeyError, TypeError):
+                continue
+            idx[fid] = {'name_en': row.get('description', ''), 'name_fr': ''}
+
+    # 3. fdc_id + nutrient_id → amount (le plus gros fichier, ~36 Mo)
+    with open(sr_dir / 'food_nutrient.csv', encoding='utf-8-sig', errors='replace', newline='') as f:
+        for row in csv.DictReader(f):
+            try:
+                fid = int(row['fdc_id'])
+            except (ValueError, KeyError, TypeError):
+                continue
+            if fid not in idx:
+                continue
+            try:
+                nutrient_id = int(row['nutrient_id'])
+                amount = row.get('amount', '')
+                if amount == '':
+                    continue
+            except (ValueError, KeyError, TypeError):
+                continue
+            nbr = nutrient_nbr_by_id.get(nutrient_id)
+            n2_f = USDA_NUTR_MAP.get(nbr) if nbr else None
+            if n2_f:
+                try:
+                    idx[fid][n2_f] = float(amount)
+                except ValueError:
+                    pass
+
+    print(f'    → {len(idx)} aliments USDA SR Legacy indexés')
+    return idx
+
+
 def load_cnf(cnf_dir: Path) -> dict:
     """CNF CSV (FOOD_NAME + NUTRIENT_AMOUNT) → {FoodCode_int: {n2_field: value}}"""
     print('  Chargement CNF csv...')
@@ -797,9 +869,17 @@ def load_cnf(cnf_dir: Path) -> dict:
 
 
 def build_raw_index(raw_dir: Path) -> dict:
-    """Charge les 3 sources et retourne un index unifié (SOURCE, sid_int) → nutrients."""
+    """Charge les 4 sources et retourne un index unifié (SOURCE, sid_int) → nutrients."""
     ciq = load_ciqual(raw_dir / 'Table_Ciqual_2025_FR_2025_11_03.xlsx')
     usd = load_usda(raw_dir / 'FoodData_Central_foundation_food_json_2025-12-18.json')
+    sr_dir = raw_dir / 'sr_legacy'
+    if sr_dir.is_dir():
+        usd_sr = load_usda_sr_legacy(sr_dir)
+    else:
+        usd_sr = {}
+        print(f"  ⚠ {sr_dir} absent — extraire FoodData_Central_sr_legacy_food_csv_2018-04.zip"
+              f" (food.csv, nutrient.csv, food_nutrient.csv) sinon les plats prepares/etats"
+              f" cuisines USDA (ex. oignon saute) resteront introuvables.")
     cnf = load_cnf(raw_dir / 'cnf')
 
     idx: dict[tuple, dict] = {}
@@ -807,6 +887,17 @@ def build_raw_index(raw_dir: Path) -> dict:
         idx[('CIQUAL', code)] = v
     for fid, v in usd.items():
         idx[('USDA', fid)] = v
+    # SR Legacy complete Foundation Foods sans jamais l'ecraser : les fdcId
+    # sont uniques dans tout FoodData Central, mais en cas de collision
+    # improbable, Foundation Foods (analyses labo recentes) prime.
+    n_sr_added = 0
+    for fid, v in usd_sr.items():
+        key = ('USDA', fid)
+        if key not in idx:
+            idx[key] = v
+            n_sr_added += 1
+    if usd_sr:
+        print(f'    → {n_sr_added} entrées SR Legacy ajoutées (complément Foundation Foods)')
     for fc, v in cnf.items():
         idx[('CNF', fc)] = v
     print(f'  Index total : {len(idx)} entrées\n')

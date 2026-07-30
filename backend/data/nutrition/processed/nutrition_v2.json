@@ -26,7 +26,7 @@
       "size_bytes": 16671564
     }
   },
-  "total_bases": 1890,
+  "total_bases": 1884,
   "total_variants": 1888,
   "ingredients": {
     "cream_of_tartar": {
@@ -40144,79 +40144,6 @@
         }
       }
     },
-    "golden_delicious_apple": {
-      "taxonomy": {
-        "cat1": "fruits",
-        "cat1_fr": "fruits",
-        "cat2": "apples",
-        "cat2_fr": "pommes",
-        "cat2_type": "axe_nodes",
-        "v32_id": "ing_01536",
-        "name_fr": "pomme Golden Delicious",
-        "name_en": "Golden Delicious apple"
-      },
-      "ingredient_type": "node",
-      "variant_dimensions": [
-        "cooking_state",
-        "part"
-      ],
-      "variant_dimensions_fr": [
-        "etat_cuisson",
-        "partie"
-      ],
-      "indus_conditionne": false,
-      "indus_conditionne_only": false,
-      "conditioning_types": [],
-      "aliases_fr": [],
-      "_v32_id": "ing_01536",
-      "variants": {
-        "raw_with_skin": {
-          "_source": "CNF",
-          "_source_id": 502342,
-          "_v32_ing_id": "ing_01536",
-          "_v32_var_id": "var_05762",
-          "axes": {
-            "cooking_state": "raw",
-            "part": "with_skin"
-          },
-          "axes_fr": {
-            "etat_cuisson": "cru",
-            "partie": "avec peau"
-          },
-          "calories_kcal": 57.0,
-          "protein_g": 0.28,
-          "carbs_g": 13.6,
-          "fat_g": 0.15,
-          "fiber_g": 2.4,
-          "sugar_g": 10.04,
-          "water_g": 85.81,
-          "salt_g": 0.0051,
-          "calcium_mg": 6.0,
-          "iron_mg": 0.13,
-          "magnesium_mg": 5.0,
-          "phosphorus_mg": 10.0,
-          "potassium_mg": 100.0,
-          "sodium_mg": 2.0,
-          "zinc_mg": 0.04,
-          "copper_mg": 0.03,
-          "manganese_mg": 0.035,
-          "selenium_ug": 0.0,
-          "beta_carotene_ug": 25.0,
-          "alpha_tocopherol_mg": 0.18,
-          "vitamin_k1_ug": 1.8,
-          "vitamin_b1_mg": 0.018,
-          "vitamin_b2_mg": 0.026,
-          "vitamin_b3_mg": 0.094,
-          "vitamin_b5_mg": 0.074,
-          "vitamin_b6_mg": 0.051,
-          "folate_ug": 3.0,
-          "name_fr": "pomme Golden Delicious",
-          "name_en": "Golden Delicious apple",
-          "indus_conditionne": false,
-          "conditioning_types": []
-        }
-      }
-    },
     "granny_smith_apple": {
       "taxonomy": {
         "cat1": "fruits",
@@ -45547,45 +45474,6 @@
           "name_en": "tamarind",
           "indus_conditionne": false,
           "conditioning_types": []
-        }
-      }
-    },
-    "umeboshi_plum": {
-      "taxonomy": {
-        "cat1": "fruits",
-        "cat1_fr": "fruits",
-        "cat2": "preserved_fruits",
-        "cat2_fr": "fruits conservés",
-        "cat2_type": "leaf",
-        "v32_id": "ing_05788",
-        "name_fr": "prune umeboshi (prune japonaise salée)",
-        "name_en": "umeboshi plum"
-      },
-      "ingredient_type": "leaf",
-      "variant_dimensions": [],
-      "variant_dimensions_fr": [],
-      "indus_conditionne": false,
-      "indus_conditionne_only": false,
-      "conditioning_types": [],
-      "aliases_fr": [],
-      "_v32_id": "ing_05788",
-      "variants": {
-        "default": {
-          "_source": "MANUAL",
-          "_source_id": null,
-          "_v32_ing_id": "ing_05788",
-          "_v32_var_id": "var_05870",
-          "axes": {},
-          "axes_fr": {},
-          "name_fr": "prune umeboshi (prune japonaise salée)",
-          "name_en": "umeboshi plum",
-          "indus_conditionne": false,
-          "conditioning_types": [],
-          "calories_kcal": 33.0,
-          "protein_g": 0.9,
-          "carbs_g": 10.5,
-          "fat_g": 0.2,
-          "fiber_g": 2.3
         }
       }
     },
@@ -60077,94 +59965,6 @@
           "omega3_g": 0.0,
           "name_fr": "chicorée verte",
           "name_en": "green chicory",
-          "indus_conditionne": false,
-          "conditioning_types": []
-        }
-      }
-    },
-    "escarole": {
-      "taxonomy": {
-        "cat1": "vegetables",
-        "cat1_fr": "légumes",
-        "cat2": "chicory",
-        "cat2_fr": "chicorées",
-        "cat2_type": "axe_nodes",
-        "v32_id": "ing_02522",
-        "name_fr": "scarole",
-        "name_en": "escarole"
-      },
-      "ingredient_type": "node",
-      "variant_dimensions": [
-        "cooking_state"
-      ],
-      "variant_dimensions_fr": [
-        "etat_cuisson"
-      ],
-      "indus_conditionne": false,
-      "indus_conditionne_only": false,
-      "conditioning_types": [],
-      "aliases_fr": [],
-      "_v32_id": "ing_02522",
-      "variants": {
-        "raw": {
-          "_source": "CIQUAL",
-          "_source_id": 20090,
-          "_v32_ing_id": "ing_02522",
-          "_v32_var_id": "var_02523",
-          "axes": {
-            "cooking_state": "raw"
-          },
-          "axes_fr": {
-            "etat_cuisson": "cru"
-          },
-          "calories_kcal": 20.5,
-          "protein_g": 1.44,
-          "carbs_g": 2.0,
-          "fat_g": 0.23,
-          "fiber_g": 2.3,
-          "sugar_g": 0.7,
-          "starch_g": 0.2,
-          "alcohol_g": 0.0,
-          "water_g": 92.9,
-          "fa_saturated_g": 0.049,
-          "fa_mufa_g": 0.004,
-          "fa_pufa_g": 0.089,
-          "fa_18_3_ala_g": 0.013,
-          "fa_20_5_epa_g": 0.0,
-          "fa_22_6_dha_g": 0.0,
-          "fa_18_2_linoleic_g": 0.075,
-          "cholesterol_mg": 0.0,
-          "salt_g": 0.036,
-          "calcium_mg": 53.7,
-          "iron_mg": 0.38,
-          "magnesium_mg": 14.0,
-          "phosphorus_mg": 30.3,
-          "potassium_mg": 314.0,
-          "sodium_mg": 13.7,
-          "zinc_mg": 0.5,
-          "copper_mg": 0.099,
-          "manganese_mg": 0.42,
-          "selenium_ug": 0.6,
-          "iodine_ug": 0.4,
-          "vitamin_a_rae_ug": 125.0,
-          "retinol_ug": 0.0,
-          "beta_carotene_ug": 1500.0,
-          "vitamin_d_ug": 0.0,
-          "vitamin_d2_ug": 0.0,
-          "vitamin_d3_ug": 0.0,
-          "vitamin_c_mg": 11.5,
-          "vitamin_b1_mg": 0.08,
-          "vitamin_b2_mg": 0.12,
-          "vitamin_b3_mg": 0.33,
-          "vitamin_b5_mg": 0.9,
-          "vitamin_b6_mg": 0.013,
-          "folate_dfe_ug": 132.0,
-          "folic_acid_ug": 0.0,
-          "folate_intrinsic_ug": 132.0,
-          "vitamin_b12_ug": 0.0,
-          "omega3_g": 0.013,
-          "name_fr": "scarole",
-          "name_en": "escarole",
           "indus_conditionne": false,
           "conditioning_types": []
         }
@@ -78562,33 +78362,6 @@
           "conditioning_types": []
         }
       }
-    },
-    "yellow_onion_sauteed_in_oil": {
-      "taxonomy": {
-        "cat1": "vegetables",
-        "cat1_fr": "légumes",
-        "cat2": "onions",
-        "cat2_fr": "oignons",
-        "cat2_type": "axe_nodes",
-        "v32_id": "ing_05774",
-        "name_fr": "oignon jaune",
-        "name_en": "yellow onion"
-      },
-      "ingredient_type": "node",
-      "variant_dimensions": [
-        "cooking_state",
-        "cooking_process"
-      ],
-      "variant_dimensions_fr": [
-        "etat_cuisson",
-        "procede_cuisson"
-      ],
-      "indus_conditionne": false,
-      "indus_conditionne_only": false,
-      "conditioning_types": [],
-      "aliases_fr": [],
-      "_v32_id": "ing_05774",
-      "variants": {}
     },
     "black_olive": {
       "taxonomy": {
@@ -114981,7 +114754,7 @@
         "cat2": "vegetable_oils",
         "cat2_fr": "huiles végétales",
         "cat2_type": "leaf",
-        "v32_id": "ing_manual_003",
+        "v32_id": "ing_04459",
         "name_fr": "huile de palme",
         "name_en": "palm oil"
       },
@@ -114992,13 +114765,13 @@
       "indus_conditionne_only": false,
       "conditioning_types": [],
       "aliases_fr": [],
-      "_v32_id": "ing_manual_003",
+      "_v32_id": "ing_04459",
       "variants": {
         "default": {
           "_source": "CIQUAL",
           "_source_id": 16150,
-          "_v32_ing_id": "ing_manual_003",
-          "_v32_var_id": "var_manual_003",
+          "_v32_ing_id": "ing_04459",
+          "_v32_var_id": "var_04460",
           "axes": {},
           "axes_fr": {},
           "calories_kcal": 900.0,
@@ -141119,86 +140892,6 @@
         }
       }
     },
-    "roquefort_blue_cheese": {
-      "taxonomy": {
-        "cat1": "dairy_products",
-        "cat1_fr": "produits laitiers",
-        "cat2": "cheeses",
-        "cat2_fr": "fromages",
-        "cat2_type": "axe_nodes",
-        "v32_id": "ing_05085",
-        "name_fr": "Roquefort (bleu)",
-        "name_en": "Roquefort (blue cheese)"
-      },
-      "ingredient_type": "node",
-      "variant_dimensions": [
-        "origin"
-      ],
-      "variant_dimensions_fr": [
-        "origine"
-      ],
-      "indus_conditionne": false,
-      "indus_conditionne_only": false,
-      "conditioning_types": [],
-      "aliases_fr": [],
-      "_v32_id": "ing_05085",
-      "variants": {
-        "sheep": {
-          "_source": "CNF",
-          "_source_id": 46,
-          "_v32_ing_id": "ing_05085",
-          "_v32_var_id": "var_05086",
-          "axes": {
-            "origin": "sheep"
-          },
-          "axes_fr": {
-            "origine": "brebis"
-          },
-          "calories_kcal": 369.0,
-          "protein_g": 21.54,
-          "carbs_g": 2.0,
-          "fat_g": 30.64,
-          "fiber_g": 0.0,
-          "water_g": 39.38,
-          "fa_saturated_g": 19.263,
-          "fa_mufa_g": 8.474,
-          "fa_pufa_g": 1.32,
-          "fa_18_3_ala_g": 0.704,
-          "fa_20_5_epa_g": 0.0,
-          "fa_22_6_dha_g": 0.0,
-          "fa_18_2_linoleic_g": 0.616,
-          "cholesterol_mg": 90.0,
-          "salt_g": 4.5949,
-          "calcium_mg": 662.0,
-          "iron_mg": 0.56,
-          "magnesium_mg": 30.0,
-          "phosphorus_mg": 392.0,
-          "potassium_mg": 91.0,
-          "sodium_mg": 1809.0,
-          "zinc_mg": 2.08,
-          "copper_mg": 0.034,
-          "manganese_mg": 0.03,
-          "selenium_ug": 14.5,
-          "retinol_ug": 290.0,
-          "beta_carotene_ug": 48.0,
-          "vitamin_d_ug": 0.3,
-          "alpha_tocopherol_mg": 0.25,
-          "vitamin_c_mg": 0.0,
-          "vitamin_b1_mg": 0.04,
-          "vitamin_b2_mg": 0.586,
-          "vitamin_b3_mg": 0.734,
-          "vitamin_b5_mg": 1.731,
-          "vitamin_b6_mg": 0.124,
-          "folate_ug": 49.0,
-          "vitamin_b12_ug": 0.64,
-          "omega3_g": 0.704,
-          "name_fr": "roquefort (bleu)",
-          "name_en": "Roquefort (blue cheese)",
-          "indus_conditionne": false,
-          "conditioning_types": []
-        }
-      }
-    },
     "swiss": {
       "taxonomy": {
         "cat1": "dairy_products",
@@ -157079,81 +156772,6 @@
           "omega3_g": 0,
           "name_fr": "légumes assortis",
           "name_en": "assorted/mixed vegetables",
-          "indus_conditionne": false,
-          "conditioning_types": []
-        }
-      }
-    },
-    "water_plain": {
-      "taxonomy": {
-        "cat1": "beverages",
-        "cat1_fr": "boissons",
-        "cat2": "water",
-        "cat2_fr": "eau",
-        "cat2_type": "leaf",
-        "v32_id": "ing_manual_024",
-        "name_fr": "eau",
-        "name_en": "water"
-      },
-      "ingredient_type": "leaf",
-      "variant_dimensions": [],
-      "variant_dimensions_fr": [],
-      "indus_conditionne": false,
-      "indus_conditionne_only": false,
-      "conditioning_types": [],
-      "aliases_fr": [],
-      "_v32_id": "ing_manual_024",
-      "variants": {
-        "default": {
-          "_source": "MANUAL",
-          "_source_id": null,
-          "_v32_ing_id": "ing_manual_024",
-          "_v32_var_id": "var_manual_024",
-          "axes": {},
-          "axes_fr": {},
-          "calories_kcal": 0,
-          "protein_g": 0,
-          "carbs_g": 0,
-          "fat_g": 0,
-          "fiber_g": 0,
-          "sugar_g": 0,
-          "alcohol_g": 0,
-          "water_g": 0,
-          "fa_saturated_g": 0,
-          "fa_mufa_g": 0,
-          "fa_pufa_g": 0,
-          "fa_18_3_ala_g": 0,
-          "fa_20_5_epa_g": 0,
-          "fa_22_6_dha_g": 0,
-          "fa_18_2_linoleic_g": 0,
-          "cholesterol_mg": 0,
-          "salt_g": 0,
-          "calcium_mg": 0,
-          "iron_mg": 0,
-          "magnesium_mg": 0,
-          "phosphorus_mg": 0,
-          "potassium_mg": 0,
-          "sodium_mg": 0,
-          "zinc_mg": 0,
-          "copper_mg": 0,
-          "manganese_mg": 0,
-          "selenium_ug": 0,
-          "retinol_ug": 0,
-          "beta_carotene_ug": 0,
-          "vitamin_d_ug": 0,
-          "alpha_tocopherol_mg": 0,
-          "vitamin_k1_ug": 0,
-          "vitamin_c_mg": 0,
-          "vitamin_b1_mg": 0,
-          "vitamin_b2_mg": 0,
-          "vitamin_b3_mg": 0,
-          "vitamin_b5_mg": 0,
-          "vitamin_b6_mg": 0,
-          "folate_ug": 0,
-          "vitamin_b12_ug": 0,
-          "omega3_g": 0,
-          "name_fr": "eau",
-          "name_en": "water",
           "indus_conditionne": false,
           "conditioning_types": []
         }

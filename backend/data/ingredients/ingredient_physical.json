@@ -14705,53 +14705,6 @@
       "part": "with_skin"
     }
   },
-  "golden_delicious_apple_raw_with_skin": {
-    "default_unit": "g",
-    "units": {
-      "g": {
-        "g": 1
-      },
-      "kg": {
-        "g": 1000
-      },
-      "1 large": {
-        "g": 215.0
-      },
-      "1 medium": {
-        "g": 169.0
-      },
-      "100ml slices": {
-        "g": 46.07
-      },
-      "1 small": {
-        "g": 129.0
-      },
-      "125ml slices": {
-        "g": 57.59
-      },
-      "250ml slices": {
-        "g": 115.18
-      },
-      "140g": {
-        "g": 140.0
-      }
-    },
-    "density_g_per_ml": null,
-    "water_content_pct": 85.81,
-    "edible_pct": 90.0,
-    "_status": "ok",
-    "_tree_ing_id": "ing_01536",
-    "_tree_var_id": "var_05762",
-    "_dict_v2_key": "golden_delicious_apple_raw_with_skin",
-    "_source": "CNF",
-    "_source_id": "502342",
-    "_name_fr": "pomme Golden Delicious",
-    "_name_en": "Golden Delicious apple",
-    "_axes": {
-      "cooking_state": "raw",
-      "part": "with_skin"
-    }
-  },
   "granny_smith_apple_raw_with_skin": {
     "default_unit": "g",
     "units": {
@@ -16701,29 +16654,6 @@
     "_axes": {
       "cooking_state": "raw"
     }
-  },
-  "umeboshi_plum": {
-    "default_unit": "g",
-    "units": {
-      "g": {
-        "g": 1
-      },
-      "kg": {
-        "g": 1000
-      }
-    },
-    "density_g_per_ml": null,
-    "water_content_pct": null,
-    "edible_pct": null,
-    "_status": "stub",
-    "_tree_ing_id": "ing_05788",
-    "_tree_var_id": "var_05870",
-    "_dict_v2_key": "umeboshi_plum",
-    "_source": "MANUAL",
-    "_source_id": null,
-    "_name_fr": "prune umeboshi (prune japonaise salée)",
-    "_name_en": "umeboshi plum",
-    "_axes": {}
   },
   "vanilla_pod": {
     "default_unit": "g",
@@ -22101,31 +22031,6 @@
     "_source_id": "20163",
     "_name_fr": "chicorée verte",
     "_name_en": "green chicory",
-    "_axes": {
-      "cooking_state": "raw"
-    }
-  },
-  "escarole_raw": {
-    "default_unit": "g",
-    "units": {
-      "g": {
-        "g": 1
-      },
-      "kg": {
-        "g": 1000
-      }
-    },
-    "density_g_per_ml": null,
-    "water_content_pct": 92.9,
-    "edible_pct": null,
-    "_status": "ok",
-    "_tree_ing_id": "ing_02522",
-    "_tree_var_id": "var_02523",
-    "_dict_v2_key": "escarole_raw",
-    "_source": "CIQUAL",
-    "_source_id": "20090",
-    "_name_fr": "scarole",
-    "_name_en": "escarole",
     "_axes": {
       "cooking_state": "raw"
     }
@@ -53336,43 +53241,6 @@
       "origin": "cow"
     }
   },
-  "roquefort_blue_cheese_sheep": {
-    "default_unit": "g",
-    "units": {
-      "g": {
-        "g": 1
-      },
-      "kg": {
-        "g": 1000
-      },
-      "100ml crumbled": {
-        "g": 57.06
-      },
-      "250ml": {
-        "g": 142.65
-      },
-      "50g": {
-        "g": 50.0
-      },
-      "30g": {
-        "g": 30.0
-      }
-    },
-    "density_g_per_ml": null,
-    "water_content_pct": 39.38,
-    "edible_pct": 100.0,
-    "_status": "ok",
-    "_tree_ing_id": "ing_05085",
-    "_tree_var_id": "var_05086",
-    "_dict_v2_key": "roquefort_blue_cheese_sheep",
-    "_source": "CNF",
-    "_source_id": "46",
-    "_name_fr": "Roquefort (bleu)",
-    "_name_en": "Roquefort (blue cheese)",
-    "_axes": {
-      "origin": "sheep"
-    }
-  },
   "swiss_cow": {
     "default_unit": "g",
     "units": {
@@ -58272,6 +58140,90 @@
       "cooking_state": "raw",
       "form": "whole",
       "thermal_state": "fresh"
+    }
+  },
+  "golden_delicious_apple_raw_with_skin": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "1 large": {
+        "g": 215.0
+      },
+      "1 medium": {
+        "g": 169.0
+      },
+      "100ml slices": {
+        "g": 46.07
+      },
+      "1 small": {
+        "g": 129.0
+      },
+      "125ml slices": {
+        "g": 57.59
+      },
+      "250ml slices": {
+        "g": 115.18
+      },
+      "140g": {
+        "g": 140.0
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 85.81,
+    "edible_pct": 90.0,
+    "_status": "ok",
+    "_tree_ing_id": "ing_01577",
+    "_tree_var_id": "var_05762",
+    "_dict_v2_key": "golden_delicious_apple_raw_with_skin",
+    "_source": "CNF",
+    "_source_id": "502342",
+    "_name_fr": "pomme Golden Delicious",
+    "_name_en": "Golden Delicious apple",
+    "_axes": {
+      "cooking_state": "raw",
+      "part": "with_skin"
+    }
+  },
+  "roquefort_blue_cheese_sheep": {
+    "default_unit": "g",
+    "units": {
+      "g": {
+        "g": 1
+      },
+      "kg": {
+        "g": 1000
+      },
+      "100ml crumbled": {
+        "g": 57.06
+      },
+      "250ml": {
+        "g": 142.65
+      },
+      "50g": {
+        "g": 50.0
+      },
+      "30g": {
+        "g": 30.0
+      }
+    },
+    "density_g_per_ml": null,
+    "water_content_pct": 39.38,
+    "edible_pct": 100.0,
+    "_status": "ok",
+    "_tree_ing_id": "ing_05264",
+    "_tree_var_id": "var_05086",
+    "_dict_v2_key": "roquefort_blue_cheese_sheep",
+    "_source": "CNF",
+    "_source_id": "46",
+    "_name_fr": "Roquefort (bleu)",
+    "_name_en": "Roquefort (blue cheese)",
+    "_axes": {
+      "origin": "sheep"
     }
   }
 }

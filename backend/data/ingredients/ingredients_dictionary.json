@@ -8,7 +8,7 @@
     ],
     "built_at": "2026-07-29",
     "note": "1 entrée = 1 variant n2 (1 état produit)",
-    "total_entries": 1915,
+    "total_entries": 1912,
     "total_aliases": 0,
     "orphans_count": 0,
     "n2_unplaced": 0,
@@ -2582,7 +2582,7 @@
           "id": "water",
           "ingredient_groups": {
             "water_plain": {
-              "v32_ing_id": "ing_manual_024",
+              "v32_ing_id": "ing_05834",
               "v32_var_id": "var_manual_024",
               "source": "MANUAL",
               "source_id": null,
@@ -19918,47 +19918,6 @@
                 ]
               }
             },
-            "golden_delicious_apple_raw_with_skin": {
-              "v32_ing_id": "ing_01536",
-              "v32_var_id": "var_05762",
-              "source": "CNF",
-              "source_id": "502342",
-              "source_label": "pomme Golden Delicious, cru, avec peau",
-              "canonical_name_fr": "pomme Golden Delicious",
-              "canonical_name_en": "Golden Delicious apple",
-              "axes": {
-                "cooking_state": "raw",
-                "part": "with_skin"
-              },
-              "axes_fr": {
-                "etat_cuisson": "cru",
-                "partie": "avec peau"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": false,
-                "high_fat": false,
-                "diabetic_friendly": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.5,
-              "culinary": {
-                "properties": [
-                  "fresh",
-                  "sweet"
-                ]
-              }
-            },
             "granny_smith_apple_raw_with_skin": {
               "v32_ing_id": "ing_01538",
               "v32_var_id": "var_01580",
@@ -20727,6 +20686,47 @@
               "allergens_eu": [],
               "nova_group": 1,
               "bioavailability_protein": 0.55,
+              "culinary": {
+                "properties": [
+                  "fresh",
+                  "sweet"
+                ]
+              }
+            },
+            "golden_delicious_apple_raw_with_skin": {
+              "v32_ing_id": "ing_01577",
+              "v32_var_id": "var_01578",
+              "source": "CNF",
+              "source_id": "502342",
+              "source_label": "pomme Golden Delicious, cru, avec peau",
+              "canonical_name_fr": "pomme Golden Delicious",
+              "canonical_name_en": "Golden Delicious apple",
+              "axes": {
+                "cooking_state": "raw",
+                "part": "with_skin"
+              },
+              "axes_fr": {
+                "etat_cuisson": "cru",
+                "partie": "avec peau"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": true,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": true,
+                "dairy_free": true,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": false,
+                "high_fiber": false,
+                "high_fat": false,
+                "diabetic_friendly": false
+              },
+              "allergens_eu": [],
+              "nova_group": 1,
+              "bioavailability_protein": 0.5,
               "culinary": {
                 "properties": [
                   "fresh",
@@ -22548,42 +22548,7 @@
         },
         "preserved_fruits": {
           "id": "cat2_10178",
-          "ingredient_groups": {
-            "umeboshi_plum": {
-              "v32_ing_id": "ing_05788",
-              "v32_var_id": "var_05870",
-              "source": "MANUAL",
-              "source_id": null,
-              "source_label": "prune umeboshi (prune japonaise salée)",
-              "canonical_name_fr": "prune umeboshi (prune japonaise salée)",
-              "canonical_name_en": "umeboshi plum",
-              "axes": {},
-              "axes_fr": {},
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": false,
-                "high_fat": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.7,
-              "culinary": {
-                "properties": [
-                  "fresh",
-                  "sweet"
-                ]
-              }
-            }
-          }
+          "ingredient_groups": {}
         },
         "berries": {
           "id": "berries",
@@ -30055,45 +30020,6 @@
                 "high_fiber": false,
                 "high_fat": false,
                 "diabetic_friendly": false
-              },
-              "allergens_eu": [],
-              "nova_group": 1,
-              "bioavailability_protein": 0.55,
-              "culinary": {
-                "properties": [
-                  "fresh",
-                  "fiber"
-                ]
-              }
-            },
-            "escarole_raw": {
-              "v32_ing_id": "ing_02522",
-              "v32_var_id": "var_02523",
-              "source": "CIQUAL",
-              "source_id": "20090",
-              "source_label": "scarole, cru",
-              "canonical_name_fr": "scarole",
-              "canonical_name_en": "escarole",
-              "axes": {
-                "cooking_state": "raw"
-              },
-              "axes_fr": {
-                "etat_cuisson": "cru"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": false,
-                "high_fat": false,
-                "diabetic_friendly": true
               },
               "allergens_eu": [],
               "nova_group": 1,
@@ -57486,42 +57412,7 @@
         },
         "vegetable_oils": {
           "id": "vegetable_oils",
-          "ingredient_groups": {
-            "palm_oil": {
-              "v32_ing_id": "ing_manual_003",
-              "v32_var_id": "var_manual_003",
-              "source": "MANUAL",
-              "source_id": null,
-              "source_label": "huile de palme",
-              "canonical_name_fr": "huile de palme",
-              "canonical_name_en": "palm oil",
-              "axes": {},
-              "axes_fr": {},
-              "aliases": [],
-              "diet_profile": {
-                "vegan": true,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": true,
-                "dairy_free": true,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": false,
-                "high_fiber": false,
-                "high_fat": true,
-                "diabetic_friendly": false
-              },
-              "allergens_eu": [],
-              "nova_group": 2,
-              "bioavailability_protein": 0.65,
-              "culinary": {
-                "properties": [
-                  "fat"
-                ]
-              }
-            }
-          }
+          "ingredient_groups": {}
         },
         "flavored_oils": {
           "id": "flavored_oils",
@@ -69528,46 +69419,6 @@
                 ]
               }
             },
-            "roquefort_blue_cheese_sheep": {
-              "v32_ing_id": "ing_05085",
-              "v32_var_id": "var_05086",
-              "source": "CNF",
-              "source_id": "46",
-              "source_label": "Roquefort (bleu), brebis",
-              "canonical_name_fr": "Roquefort (bleu)",
-              "canonical_name_en": "Roquefort (blue cheese)",
-              "axes": {
-                "origin": "sheep"
-              },
-              "axes_fr": {
-                "origine": "brebis"
-              },
-              "aliases": [],
-              "diet_profile": {
-                "vegan": false,
-                "vegetarian": true,
-                "gluten_free": true,
-                "lactose_free": false,
-                "dairy_free": false,
-                "nut_free": true,
-                "soy_free": true,
-                "egg_free": true,
-                "high_protein": true,
-                "high_fiber": false,
-                "high_fat": true
-              },
-              "allergens_eu": [
-                "milk"
-              ],
-              "nova_group": 3,
-              "bioavailability_protein": 0.92,
-              "culinary": {
-                "properties": [
-                  "protein",
-                  "fat"
-                ]
-              }
-            },
             "swiss_cow": {
               "v32_ing_id": "ing_05087",
               "v32_var_id": "var_05108",
@@ -73965,6 +73816,46 @@
                   "fat"
                 ]
               }
+            },
+            "roquefort_blue_cheese_sheep": {
+              "v32_ing_id": "ing_05264",
+              "v32_var_id": "var_05265",
+              "source": "CNF",
+              "source_id": "46",
+              "source_label": "Roquefort (bleu), brebis",
+              "canonical_name_fr": "Roquefort (bleu)",
+              "canonical_name_en": "Roquefort (blue cheese)",
+              "axes": {
+                "origin": "sheep"
+              },
+              "axes_fr": {
+                "origine": "brebis"
+              },
+              "aliases": [],
+              "diet_profile": {
+                "vegan": false,
+                "vegetarian": true,
+                "gluten_free": true,
+                "lactose_free": false,
+                "dairy_free": false,
+                "nut_free": true,
+                "soy_free": true,
+                "egg_free": true,
+                "high_protein": true,
+                "high_fiber": false,
+                "high_fat": true
+              },
+              "allergens_eu": [
+                "milk"
+              ],
+              "nova_group": 3,
+              "bioavailability_protein": 0.92,
+              "culinary": {
+                "properties": [
+                  "protein",
+                  "fat"
+                ]
+              }
             }
           }
         },
@@ -77358,7 +77249,6 @@
     "buffalo_mozzarella_frais_25pct_cow_fresh": "buffalo_mozzarella_fresh_25pct_cow",
     "butter_demi_sel_80pct_lightly_salted": "butter_lightly_salted_80pct",
     "butter_sup80pct_tendre": "butter_sup80pct",
-    "capers_canned_in_brine": "capers_canned_in_vinegar",
     "carrot_boiled_surgele_salted_frozen": "carrot_boiled_frozen_salted",
     "carrot_raw_petite": "carrot_raw_baby",
     "cashew_nuts_grille_a_sec_dried_dry_roasted": "cashew_nuts_dry_roasted_dried",
@@ -77449,7 +77339,6 @@
     "sweet_potato_vacuum": "sweet_potato_vacuum_packed",
     "swiss_chard_boiled_leaf_frais_fresh": "swiss_chard_boiled_leaf_fresh",
     "swiss_cheese_cow_canadien": "swiss_cheese_cow_canadian",
-    "swiss_grated_cow": "swiss_cow",
     "table_salt_iode_fluore_iodized_fluoridated": "table_salt_iodized_fluoridated",
     "tomato_double_concentre_canned_concentrated": "tomato_double_concentrated_canned",
     "tomato_ketchup_catsup_pre_packaged_faible": "tomato_ketchup_catsup_pre_packaged_low",
@@ -77458,7 +77347,7 @@
     "wheat_germ_grilled_seed_sprouted_dry": "wheat_germ_grilled_seed_dry",
     "wheat_germ_raw_seed_sprouted": "wheat_germ_raw_seed",
     "white_grapefruit_californie": "white_grapefruit_raw_californie",
-    "yellow_onion_sauteed_in_oil": "yellow_onion_usda_sauteed_in_oil"
+    "yellow_onion_sauteed_in_oil": "yellow_onion_usda"
   },
   "orphans": []
 }

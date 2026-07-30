@@ -2971,6 +2971,21 @@
                   "axes_fr": {},
                   "is_primary": true,
                   "source_rank": 4
+                },
+                {
+                  "id": "var_manual_024",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "eau",
+                  "name_en": "water",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "water",
+                  "source_name_fr": "eau",
+                  "source_rank": 3,
+                  "is_primary": false
                 }
               ]
             },
@@ -3069,36 +3084,7 @@
           "id": "water",
           "label": "water",
           "label_fr": "eau",
-          "ingredient_groups": [
-            {
-              "id": "ing_manual_024",
-              "canonical_name_fr": "eau",
-              "canonical_name_en": "water",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
-              "preferred_source": "MANUAL",
-              "variants": [
-                {
-                  "id": "var_manual_024",
-                  "source": "MANUAL",
-                  "source_id": null,
-                  "name_fr": "eau",
-                  "name_en": "water",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "water",
-                  "source_name_fr": "eau",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            }
-          ]
+          "ingredient_groups": []
         }
       ],
       "label_fr": "boissons"
@@ -3910,6 +3896,19 @@
                   "source_name_fr": "prune umeboshi (prune japonaise salée)",
                   "source_rank": 3,
                   "is_primary": true
+                },
+                {
+                  "id": "var_05870",
+                  "source": "MANUAL",
+                  "source_id": null,
+                  "name_fr": "prune umeboshi (prune japonaise salée)",
+                  "name_en": "umeboshi plum",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "is_primary": false,
+                  "source_rank": 4
                 }
               ]
             }
@@ -18794,40 +18793,6 @@
               ]
             },
             {
-              "id": "ing_01536",
-              "canonical_name_fr": "pomme Golden Delicious",
-              "canonical_name_en": "Golden Delicious apple",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_cuisson": "cru",
-                "partie": "avec peau"
-              },
-              "axes_en": {
-                "cooking_state": "raw",
-                "part": "with_skin"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_05762",
-                  "source": "CNF",
-                  "source_id": "502342",
-                  "name_fr": "pomme Golden Delicious",
-                  "name_en": "Golden Delicious apple",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Apple, Golden Delicious, raw, with skin",
-                  "source_name_fr": "Pomme, Golden Delicious, crue, avec pelure",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
               "id": "ing_01538",
               "canonical_name_fr": "pomme Granny Smith",
               "canonical_name_en": "Granny Smith apple",
@@ -19004,6 +18969,21 @@
                   "source_name_en": null,
                   "source_rank": 1,
                   "is_primary": true
+                },
+                {
+                  "id": "var_05762",
+                  "source": "CNF",
+                  "source_id": "502342",
+                  "name_fr": "pomme Golden Delicious",
+                  "name_en": "Golden Delicious apple",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Apple, Golden Delicious, raw, with skin",
+                  "source_name_fr": "Pomme, Golden Delicious, crue, avec pelure",
+                  "source_rank": 3,
+                  "is_primary": false
                 }
               ]
             },
@@ -21119,34 +21099,7 @@
           "id": "cat2_10178",
           "label": "preserved_fruits",
           "label_fr": "fruits conservés",
-          "ingredient_groups": [
-            {
-              "id": "ing_05788",
-              "canonical_name_fr": "prune umeboshi (prune japonaise salée)",
-              "canonical_name_en": "umeboshi plum",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
-              "preferred_source": "MANUAL",
-              "variants": [
-                {
-                  "id": "var_05870",
-                  "source": "MANUAL",
-                  "source_id": null,
-                  "name_fr": "prune umeboshi (prune japonaise salée)",
-                  "name_en": "umeboshi plum",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "is_primary": true,
-                  "source_rank": 4
-                }
-              ]
-            }
-          ]
+          "ingredient_groups": []
         },
         {
           "id": "berries",
@@ -28197,38 +28150,6 @@
                   "axes_en": {},
                   "axes_fr": {},
                   "source_name_fr": "Chicorée verte, crue",
-                  "source_name_en": null,
-                  "source_rank": 1,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
-              "id": "ing_02522",
-              "canonical_name_fr": "scarole",
-              "canonical_name_en": "escarole",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "etat_cuisson": "cru"
-              },
-              "axes_en": {
-                "cooking_state": "raw"
-              },
-              "preferred_source": "CIQUAL",
-              "variants": [
-                {
-                  "id": "var_02523",
-                  "source": "CIQUAL",
-                  "source_id": "20090",
-                  "name_fr": "scarole",
-                  "name_en": "escarole",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_fr": "Scarole, crue",
                   "source_name_en": null,
                   "source_rank": 1,
                   "is_primary": true
@@ -53106,36 +53027,7 @@
           "id": "vegetable_oils",
           "label": "vegetable_oils",
           "label_fr": "huiles végétales",
-          "ingredient_groups": [
-            {
-              "id": "ing_manual_003",
-              "canonical_name_fr": "huile de palme",
-              "canonical_name_en": "palm oil",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {},
-              "axes_en": {},
-              "preferred_source": "MANUAL",
-              "variants": [
-                {
-                  "id": "var_manual_003",
-                  "source": "MANUAL",
-                  "source_id": null,
-                  "name_fr": "huile de palme",
-                  "name_en": "palm oil",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "palm oil",
-                  "source_name_fr": "huile de palme",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            }
-          ]
+          "ingredient_groups": []
         },
         {
           "id": "flavored_oils",
@@ -63740,38 +63632,6 @@
               ]
             },
             {
-              "id": "ing_05085",
-              "canonical_name_fr": "Roquefort (bleu)",
-              "canonical_name_en": "Roquefort (blue cheese)",
-              "indus_conditionne": false,
-              "indus_conditionne_only": false,
-              "conditioning_types": [],
-              "axes_fr": {
-                "origine": "brebis"
-              },
-              "axes_en": {
-                "origin": "sheep"
-              },
-              "preferred_source": "CNF",
-              "variants": [
-                {
-                  "id": "var_05086",
-                  "source": "CNF",
-                  "source_id": "46",
-                  "name_fr": "roquefort (bleu)",
-                  "name_en": "Roquefort (blue cheese)",
-                  "indus_conditionne": false,
-                  "conditioning_types": [],
-                  "axes_en": {},
-                  "axes_fr": {},
-                  "source_name_en": "Cheese, roquefort (blue)",
-                  "source_name_fr": "Fromage roquefort (bleu)",
-                  "source_rank": 3,
-                  "is_primary": true
-                }
-              ]
-            },
-            {
               "id": "ing_05087",
               "canonical_name_fr": "emmental",
               "canonical_name_en": "swiss",
@@ -65919,6 +65779,21 @@
                   "source_name_en": null,
                   "source_rank": 1,
                   "is_primary": true
+                },
+                {
+                  "id": "var_05086",
+                  "source": "CNF",
+                  "source_id": "46",
+                  "name_fr": "roquefort (bleu)",
+                  "name_en": "Roquefort (blue cheese)",
+                  "indus_conditionne": false,
+                  "conditioning_types": [],
+                  "axes_en": {},
+                  "axes_fr": {},
+                  "source_name_en": "Cheese, roquefort (blue)",
+                  "source_name_fr": "Fromage roquefort (bleu)",
+                  "source_rank": 3,
+                  "is_primary": false
                 }
               ]
             },
