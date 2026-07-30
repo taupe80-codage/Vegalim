@@ -1,11 +1,19 @@
 # CDC 12 — Roadmap & Jalons
 
+> **Mise à jour 2026-07-30** — Ce document datait de l'établissement initial
+> du CDC (mars 2026) et n'avait pas suivi l'avancement réel du projet.
+> Statuts ci-dessous vérifiés directement dans le code à cette date. Les
+> points marqués « non vérifié » n'ont pas été audités — ne pas les
+> supposer faits ou non faits sans re-checker.
+
 ## Horizon de lancement : < 3 mois
 
 ### Critères de succès v1
-1. **1 000 recettes dans le dataset** (actuellement 529 — besoin : +471)
+1. **1 000 recettes dans le dataset** (actuellement **820** — besoin : +180,
+   pas +471 comme initialement estimé)
 2. **Stabilité technique** : 0 bug bloquant, < 500ms par recherche,
-   100 utilisateurs simultanés supportés
+   100 utilisateurs simultanés supportés — *tests de charge non trouvés
+   dans le repo, à faire*
 
 ---
 
@@ -15,12 +23,12 @@
 
 | Tâche | Priorité | Statut |
 |---|---|---|
-| Recalibrer les poids du score global (Q15) | Haute | 🔄 À faire |
-| Compléter les fiches ingrédients (cooking_behavior) | Haute | 🔄 À faire |
-| Enrichir les données accessibilité ingrédients France | Haute | 🔄 À faire |
-| Ajouter champ `preparation_time` aux recettes | Haute | 🔄 À faire |
-| Recalibrer `global_score_engine` selon nouvelles pondérations | Haute | 🔄 À faire |
-| Tests de charge (100 utilisateurs simultanés) | Moyenne | 🔄 À faire |
+| Recalibrer les poids du score global (Q15) | Haute | ⚠️ Non vérifié — `backend/engine/score_engine/` existe, recalibration non confirmée |
+| Compléter les fiches ingrédients (cooking_behavior) | Haute | 🔄 À faire — 0/1915 ingredient_groups ont ce champ |
+| Enrichir les données accessibilité ingrédients France | Haute | 🔄 À faire — 0/1915 ingredient_groups ont ce champ |
+| Ajouter champ `preparation_time` aux recettes | Haute | ✅ Couvert autrement — champ `timing` (prep_active_min/prep_passive_min/cook_min/total_min) déjà présent sur toutes les recettes, juste pas sous ce nom exact |
+| Recalibrer `global_score_engine` selon nouvelles pondérations | Haute | ⚠️ Non vérifié (doublon de la ligne Q15 ci-dessus) |
+| Tests de charge (100 utilisateurs simultanés) | Moyenne | 🔄 À faire — aucun outil (locust/k6/...) trouvé dans le repo |
 | Documentation API Swagger complète | Moyenne | ✅ Auto-générée |
 | Backups graphs automatisés (graph_versioning) | Basse | ✅ Fait |
 
@@ -30,7 +38,12 @@
 
 **Objectif** : atteindre le seuil de 1 000 recettes de qualité
 
-| Tâche | Volume cible |
+**820/1000 recettes actuellement (+180 restantes)** — la répartition
+par sous-catégorie ci-dessous date de l'estimation initiale (quand la
+base était à 529) et n'a pas été revérifiée poste par poste ; à
+recompter avant de s'en servir pour prioriser le travail restant.
+
+| Tâche | Volume cible (estimation initiale, non revérifiée) |
 |---|---|
 | Cuisines sous-représentées (Africaines, Amérique Latine, Asie du Sud-Est) | +150 recettes |
 | Recettes sans gluten identifiées et flagguées | +80 recettes |
@@ -54,20 +67,29 @@
 
 ## Phase 2 — Interface web v1 (J+3 → J+8 semaines)
 
-**Objectif** : remplacer Streamlit par une vraie interface web React/Next.js
+**Objectif** : ~~remplacer Streamlit par~~ une vraie interface web React
 
-| Page | Priorité | Complexité |
+**Bien plus avancée que le statut initial ne le laissait penser.** Le
+frontend React existe déjà (`frontend/src/pages/`, 14 pages), Streamlit a
+déjà été laissé derrière. Divergence par rapport à la décision
+« recommandée » du CDC (Next.js 14 + shadcn/ui) : stack réellement
+utilisée = React + Vite, routing manuel (`Router.jsx`), pas de framework
+Next.js. À trancher formellement dans `CDC_00_DECISIONS_OUVERTES.md`
+(décision #3) si ce n'est pas déjà acté de facto.
+
+| Page | Priorité | Statut |
 |---|---|---|
-| Page recherche + résultats | ⭐⭐⭐ | Moyenne |
-| Fiche recette complète | ⭐⭐⭐ | Haute |
-| Plan semaine | ⭐⭐⭐ | Haute |
-| Liste de courses | ⭐⭐⭐ | Moyenne |
-| Mon frigo | ⭐⭐ | Faible |
-| Profil utilisateur | ⭐⭐ | Moyenne |
-| Accueil / découverte | ⭐⭐ | Moyenne |
-| Fiche ingrédient | ⭐ | Faible |
+| Page recherche + résultats | ⭐⭐⭐ | ✅ `HomePage.jsx` (à confirmer que la recherche y est) |
+| Fiche recette complète | ⭐⭐⭐ | ✅ `RecipeDetailPage.jsx` |
+| Plan semaine | ⭐⭐⭐ | ✅ `PlanningPage.jsx` |
+| Liste de courses | ⭐⭐⭐ | ✅ `ShoppingListPage.jsx` |
+| Mon frigo | ⭐⭐ | ✅ `FrigoPage.jsx` |
+| Profil utilisateur | ⭐⭐ | ✅ `ProfilePage.jsx` |
+| Accueil / découverte | ⭐⭐ | ✅ `HomePage.jsx` |
+| Fiche ingrédient | ⭐ | 🔄 À faire — aucune page dédiée trouvée |
+| *Hors périmètre initial, déjà construites* | — | Favoris, Nutrition, FODMAP, Astro, Cycle, FAQ |
 
-**Stack** : Next.js 14 (App Router) + Tailwind CSS + shadcn/ui
+**Stack réelle** : React 19 + Vite (pas Next.js — divergence à trancher, voir ci-dessus)
 **API** : FastAPI existant en backend (pas de réécriture)
 
 ---
@@ -76,16 +98,23 @@
 
 **Objectif** : déploiement production stable, premiers utilisateurs réels
 
-| Tâche | Description |
-|---|---|
-| Hébergement VPS | Hetzner ou OVH — 4Go RAM, 2 vCPU |
-| PostgreSQL | Comptes utilisateurs, sessions |
-| Redis | Cache API, rate limiting |
-| CI/CD | GitHub Actions → déploiement automatique |
-| Monitoring | Uptime, erreurs, performances (Sentry + UptimeRobot) |
-| HTTPS | Let's Encrypt auto |
-| RGPD | CGU, politique de confidentialité, cookies |
-| Beta test | 20–50 testeurs recrutés (réseau personnel, communautés végé) |
+**Plus avancée que prévu côté configuration** : `docker-compose.yml`
+définit déjà Caddy (reverse proxy HTTPS Let's Encrypt), PostgreSQL et
+Redis ; `backend/db/` a des modèles SQLAlchemy et 2 migrations Alembic ;
+`backend/docs/CGU.md` existe. Non vérifié : si un VPS réel tourne
+actuellement, CI/CD, monitoring, et si une politique de confidentialité
+formelle existe (CGU ≠ politique de confidentialité).
+
+| Tâche | Description | Statut |
+|---|---|---|
+| Hébergement VPS | Hetzner ou OVH — 4Go RAM, 2 vCPU | ⚠️ Non vérifié |
+| PostgreSQL | Comptes utilisateurs, sessions | ✅ Modèles + migrations Alembic en place (`backend/db/`) |
+| Redis | Cache API, rate limiting | ✅ Configuré dans `docker-compose.yml` |
+| CI/CD | GitHub Actions → déploiement automatique | ⚠️ Non vérifié |
+| Monitoring | Uptime, erreurs, performances (Sentry + UptimeRobot) | ⚠️ Non vérifié |
+| HTTPS | Let's Encrypt auto | ✅ Caddy configuré dans `docker-compose.yml` |
+| RGPD | CGU, politique de confidentialité, cookies | 🔄 Partiel — `CGU.md` existe, politique de confidentialité séparée non trouvée |
+| Beta test | 20–50 testeurs recrutés (réseau personnel, communautés végé) | ⚠️ Non vérifiable depuis le code |
 
 ---
 
@@ -110,7 +139,7 @@ Déclenchée après validation de la v1 (feedback utilisateurs + stabilité).
 | Risque | Probabilité | Impact | Mitigation |
 |---|---|---|---|
 | Dataset insuffisant en qualité | Moyenne | Élevé | Process validation strict, prioriser qualité |
-| Interface web trop longue à développer | Haute | Élevé | Partir de composants shadcn/ui, design simple |
+| Interface web trop longue à développer | Haute | Élevé | *Risque en grande partie résorbé — 14 pages React déjà développées, voir Phase 2* |
 | Performances insuffisantes | Faible | Élevé | Cache Redis, tests de charge Phase 3 |
 | Faible adoption initiale | Moyenne | Moyen | Beta test précoce, communautés végé FR |
 | Score nutritionnel contesté | Faible | Moyen | Sources CIQUAL affichées, indicateur fiabilité |
