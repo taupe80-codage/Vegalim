@@ -523,6 +523,22 @@ def _default_variant_nutrients(base: dict) -> dict:
     return variants.get('default') or next(iter(variants.values()), {})
 
 
+def duplicate_source_keys(ingredients: dict) -> dict:
+    """
+    Retourne {SOURCE:source_id: [base/variant, ...]} pour les clés portées par
+    plus d'un variant. La clé SOURCE:source_id est la référence primaire du
+    projet et doit être unique : les index la traitent comme un identifiant
+    O(1), donc un doublon rend tous les variants sauf un inatteignables.
+    """
+    owners: dict[str, list[str]] = {}
+    for base, data in ingredients.items():
+        for vname, vdata in (data.get('variants') or {}).items():
+            src, src_id = vdata.get('_source'), vdata.get('_source_id')
+            if src and src_id is not None:
+                owners.setdefault(f'{src}:{src_id}', []).append(f'{base}/{vname}')
+    return {k: v for k, v in owners.items() if len(v) > 1}
+
+
 def compare_with_previous(new_ingredients: dict) -> dict:
     """
     Compare new_ingredients avec l'actuel nutrition_v2.json.
@@ -1253,6 +1269,11 @@ def run(dry_run: bool = False, promote: bool = False) -> None:
 
     total_variants = sum(len(b.get('variants', {})) for b in n2_ingredients.values())
 
+    # Doublons SOURCE:source_id — la clé est censée être unique : build_indexes.py
+    # fait lookup[key] = entry, donc en cas de doublon le dernier variant écrase
+    # silencieusement le premier, qui devient inatteignable par lookup source.
+    dup_sources = duplicate_source_keys(n2_ingredients)
+
     n2_out = {
         'schema_version': '7.2',
         'schema_family':  'nutrition_v2',
@@ -1274,6 +1295,12 @@ def run(dry_run: bool = False, promote: bool = False) -> None:
     print(f"  Conflits → _alt_sources : {stats['conflicts']}")
     print(f"  Lookup hits / misses  : {stats['hits']} / {stats['misses']}")
     print(f"  Total variants final  : {total_variants}")
+    dup_label = f'⚠ {len(dup_sources)}' if dup_sources else '✅ 0'
+    print(f"  Doublons SOURCE:id    : {dup_label}")
+    if dup_sources:
+        print('  🔴 clés source non uniques (le dernier variant écrase les autres) :')
+        for key, owners in sorted(dup_sources.items()):
+            print(f'      {key} → {", ".join(owners)}')
     empty_v = stats.get('empty_variants', 0)
     leaf_empty = stats.get('leaf_no_variants', [])
     empty_label = f'⚠ {empty_v}' if empty_v > 0 else '✅ 0'

@@ -3,7 +3,7 @@
     "description": "Token index — SOURCE:id → base/variant/IG context",
     "version": "6.0",
     "nutrition_version": "7.2",
-    "generated_at": "2026-07-28T17:32:18.478368+00:00",
+    "generated_at": "2026-08-13T10:22:21.085922+00:00",
     "generated_by": "build_indexes.py",
     "_generated": true,
     "_do_not_edit": "Fichier auto-généré — toute modification manuelle sera écrasée au prochain run du pipeline.",
@@ -11,8 +11,8 @@
     "total_entries": 1823,
     "by_source": {
       "CIQUAL": 973,
-      "CNF": 687,
-      "USDA": 163
+      "CNF": 685,
+      "USDA": 165
     },
     "with_ig_context": 1823
   },
@@ -3775,6 +3775,16 @@
       },
       "var_axes": {}
     },
+    "USDA:169925": {
+      "base": "mandarin",
+      "variant": "default",
+      "ig_id": "ing_01254",
+      "ig_axes": {
+        "seasoning": "plain",
+        "form": "juice"
+      },
+      "var_axes": {}
+    },
     "CNF:1624": {
       "base": "tangerine",
       "variant": "raw_juice_fresh",
@@ -4503,16 +4513,6 @@
       "base": "gala_apple",
       "variant": "raw_with_skin",
       "ig_id": "ing_01534",
-      "ig_axes": {
-        "cooking_state": "raw",
-        "part": "with_skin"
-      },
-      "var_axes": {}
-    },
-    "CNF:502342": {
-      "base": "golden_delicious_apple",
-      "variant": "raw_with_skin",
-      "ig_id": "ing_01577",
       "ig_axes": {
         "cooking_state": "raw",
         "part": "with_skin"
@@ -12893,6 +12893,17 @@
       },
       "var_axes": {}
     },
+    "CIQUAL:16150": {
+      "base": "palm_oil",
+      "variant": "default",
+      "ig_id": "ing_04459",
+      "ig_axes": {
+        "form": "oil",
+        "origin": "plant",
+        "treatment": "refined"
+      },
+      "var_axes": {}
+    },
     "CIQUAL:17325": {
       "base": "poppy_oil_plant",
       "variant": "oil_plant",
@@ -15954,15 +15965,6 @@
       },
       "var_axes": {}
     },
-    "CNF:46": {
-      "base": "roquefort_blue_cheese",
-      "variant": "sheep",
-      "ig_id": "ing_05264",
-      "ig_axes": {
-        "origin": "sheep"
-      },
-      "var_axes": {}
-    },
     "CIQUAL:12115": {
       "base": "swiss",
       "variant": "cow",
@@ -17663,6 +17665,16 @@
         "cooking_state": "raw",
         "form": "whole",
         "thermal_state": "fresh"
+      },
+      "var_axes": {}
+    },
+    "USDA:170004": {
+      "base": "yellow_onion_usda",
+      "variant": "default",
+      "ig_id": "ing_05774",
+      "ig_axes": {
+        "cooking_state": "sauteed",
+        "cooking_process": "in_oil"
       },
       "var_axes": {}
     }

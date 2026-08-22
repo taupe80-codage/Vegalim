@@ -10,7 +10,7 @@ Vérifie les invariants métier critiques :
 import pytest
 from backend.core.data_io import (
     load_recipes, load_nutrition_graph, load_ingredients_dict,
-    load_availability_graph, load_search_index,
+    load_availability_graph, load_search_index, load_nutrition_db,
 )
 from backend.engine.rule_engine.diet import NON_VEGAN, NON_VEGETARIAN, VEGAN_EXCEPTIONS
 
@@ -225,6 +225,162 @@ def test_ajr_valeurs_physiologiquement_plausibles():
         elif not (lo <= v <= hi):
             hors_bornes.append(f"{k}={v} hors bornes [{lo}, {hi}]")
     assert not hors_bornes, f"Valeurs AJR suspectes : {hors_bornes}"
+
+
+# ── Fraîcheur des indexes dérivés de nutrition_v2 ──────────────────────────────
+# nutrition_index.json et ingredient_token_index.json sont générés par
+# build_indexes.py depuis nutrition_v2.json. Rien n'obligeait jusqu'ici à les
+# régénérer : au 2026-07-30 ils étaient un commit en retard (3 entrées fantômes
+# pointant vers des bases supprimées, 3 entrées réelles absentes) sans qu'aucun
+# test ne le détecte. Ces tests échouent dès que la dérive réapparaît.
+# Correctif en cas d'échec : python scripts/nutrition/build_indexes.py
+
+def _n2_raw():
+    """nutrition_v2.json complet (_meta inclus) — load_nutrition_db() ne rend que .ingredients."""
+    from backend.engine.config import NUTRITION_PATH
+    from backend.core.data_io import load_json
+    raw = load_json(NUTRITION_PATH, default={})
+    assert raw, "nutrition_v2.json introuvable ou vide"
+    return raw
+
+
+def _n2_source_keys():
+    """SOURCE:source_id → 'base/variant' pour tous les variants sourcés de nutrition_v2."""
+    n2 = load_nutrition_db()
+    keys = {}
+    for base, data in n2.items():
+        for vname, vdata in (data.get("variants") or {}).items():
+            src, src_id = vdata.get("_source"), vdata.get("_source_id")
+            if src and src_id is not None:
+                keys[f"{src}:{src_id}"] = (base, vname)
+    return n2, keys
+
+
+def _load_index(filename, payload_key):
+    from backend.engine.config import INDEXES_PATH
+    from backend.core.data_io import load_json
+    raw = load_json(INDEXES_PATH / filename, default={})
+    assert raw, f"{filename} introuvable ou vide"
+    return raw["_meta"], raw[payload_key]
+
+
+@pytest.mark.parametrize("filename,payload_key", [
+    ("nutrition_index.json",        "lookup"),
+    ("ingredient_token_index.json", "index"),
+])
+def test_index_couvre_exactement_nutrition_v2(filename, payload_key):
+    """Le jeu de clés de l'index doit correspondre exactement à nutrition_v2."""
+    _, live = _n2_source_keys()
+    _, entries = _load_index(filename, payload_key)
+
+    fantomes = sorted(set(entries) - set(live))
+    absentes = sorted(set(live) - set(entries))
+    assert not fantomes, (
+        f"{filename} : {len(fantomes)} clés pointent vers des variants supprimés "
+        f"de nutrition_v2 → relancer build_indexes.py. Ex : {fantomes[:5]}"
+    )
+    assert not absentes, (
+        f"{filename} : {len(absentes)} variants de nutrition_v2 absents de l'index "
+        f"→ relancer build_indexes.py. Ex : {absentes[:5]}"
+    )
+
+
+@pytest.mark.parametrize("filename,payload_key", [
+    ("nutrition_index.json",        "lookup"),
+    ("ingredient_token_index.json", "index"),
+])
+def test_index_meta_total_entries_exact(filename, payload_key):
+    """
+    _meta.total_entries doit refléter le contenu réel.
+    Un écart signale une édition manuelle du fichier (marqué _do_not_edit)
+    plutôt qu'une régénération par build_indexes.py.
+    """
+    meta, entries = _load_index(filename, payload_key)
+    assert meta["total_entries"] == len(entries), (
+        f"{filename} : _meta.total_entries={meta['total_entries']} "
+        f"mais {len(entries)} entrées réelles — fichier édité hors pipeline"
+    )
+
+
+def test_nutrition_index_valeurs_synchro():
+    """Les valeurs de l'index ne doivent pas diverger de nutrition_v2."""
+    n2 = load_nutrition_db()
+    _, live = _n2_source_keys()
+    _, lookup = _load_index("nutrition_index.json", "lookup")
+
+    divergences = []
+    for key, (base, vname) in live.items():
+        entry = lookup.get(key)
+        if entry is None:
+            continue  # couvert par test_index_couvre_exactement_nutrition_v2
+        variant = n2[base]["variants"][vname]
+        for champ in ("calories_kcal", "protein_g", "fat_g"):
+            if variant.get(champ) != entry.get(champ):
+                divergences.append(
+                    f"{key} ({base}/{vname}) {champ}: n2={variant.get(champ)} "
+                    f"≠ index={entry.get(champ)}"
+                )
+    assert not divergences, (
+        f"{len(divergences)} divergences index/nutrition_v2 → relancer "
+        f"build_indexes.py :\n" + "\n".join(f"  - {d}" for d in divergences[:10])
+    )
+
+
+def test_nutrition_v2_meta_compteurs_exacts():
+    """
+    total_bases / total_variants doivent refléter le contenu réel.
+    Un écart signale une modification de nutrition_v2.json par un script tiers
+    sans passer par build_n2_direct.py (qui recalcule ces compteurs).
+    """
+    raw = _n2_raw()
+    ings = raw["ingredients"]
+    reel_bases    = len(ings)
+    reel_variants = sum(len(b.get("variants") or {}) for b in ings.values())
+    assert raw["total_bases"] == reel_bases, (
+        f"total_bases={raw['total_bases']} mais {reel_bases} bases réelles — "
+        f"nutrition_v2.json modifié hors build_n2_direct.py"
+    )
+    assert raw["total_variants"] == reel_variants, (
+        f"total_variants={raw['total_variants']} mais {reel_variants} variants réels — "
+        f"nutrition_v2.json modifié hors build_n2_direct.py"
+    )
+
+
+# ── Unicité de la clé SOURCE:source_id ─────────────────────────────────────────
+# SOURCE:source_id est la référence primaire du projet et doit être unique :
+# build_indexes.py fait lookup[key] = entry, donc en cas de doublon seul le
+# dernier variant reste atteignable. Les deux entrées ci-dessous sont des
+# doublons connus au 2026-08-13, non corrigés faute d'ID source distinct
+# disponible — figés ici pour que tout NOUVEAU doublon fasse échouer le test.
+DOUBLONS_SOURCE_CONNUS = {
+    "CIQUAL:9119":  ["basmati_rice/raw_seed", "jasmine_rice/raw_seed"],
+    "CIQUAL:20322": ["white_onion_sauteed_dry/sauteed_dry",
+                     "yellow_onion_sauteed_dry/sauteed_dry"],
+}
+
+
+def test_pas_de_nouveau_doublon_source_id():
+    n2 = load_nutrition_db()
+    owners = {}
+    for base, data in n2.items():
+        for vname, vdata in (data.get("variants") or {}).items():
+            src, src_id = vdata.get("_source"), vdata.get("_source_id")
+            if src and src_id is not None:
+                owners.setdefault(f"{src}:{src_id}", []).append(f"{base}/{vname}")
+
+    doublons = {k: sorted(v) for k, v in owners.items() if len(v) > 1}
+    nouveaux = {k: v for k, v in doublons.items() if k not in DOUBLONS_SOURCE_CONNUS}
+    assert not nouveaux, (
+        f"{len(nouveaux)} nouveaux doublons SOURCE:source_id — le dernier variant "
+        f"écrase les autres dans les indexes : {nouveaux}"
+    )
+
+    resolus = set(DOUBLONS_SOURCE_CONNUS) - set(doublons)
+    assert not resolus, (
+        f"Doublons corrigés — retirer de DOUBLONS_SOURCE_CONNUS : {sorted(resolus)}"
+    )
+
+
 if __name__ == "__main__":
     tests = [(n, f) for n, f in globals().items() if n.startswith("test_") and callable(f)]
     ok = fail = 0
