@@ -54,7 +54,7 @@ THRESHOLD = 0.10   # 10 % d'écart minimum pour déclencher mise à jour
 DELAY = 0.4        # secondes entre requêtes
 MAX_BARCODES = 5   # nb max de produits distincts interrogés par ingrédient
 REQUEST_TIMEOUT = 15
-MAX_RETRIES = 2
+MAX_RETRIES = 3
 # OFF bloque en 403 les requetes sans User-Agent explicite (politique anti-abus)
 HEADERS = {"User-Agent": "ALIM-PriceSync/1.0 (script interne, usage non-commercial)"}
 
@@ -73,16 +73,26 @@ def _significant_words(s: str) -> set[str]:
 
 
 def _get_with_retries(url: str, params: dict) -> dict | None:
+    """Requete avec backoff exponentiel. Les 503 (surcharge serveur, frequent
+    sur l'endpoint de recherche classique OFF) recoivent un delai plus long
+    qu'un simple timeout reseau, sinon on relance trop vite dans le mur."""
     for attempt in range(MAX_RETRIES + 1):
         try:
             resp = requests.get(url, params=params, headers=HEADERS, timeout=REQUEST_TIMEOUT)
             resp.raise_for_status()
             return resp.json()
+        except requests.exceptions.HTTPError as e:
+            status = e.response.status_code if e.response is not None else None
+            if attempt == MAX_RETRIES:
+                print(f"    ⚠ API erreur ({url.split('/')[2]}, HTTP {status}): {e}")
+                return None
+            backoff = (3.0 if status == 503 else 1.0) * (attempt + 1)
+            time.sleep(backoff)
         except Exception as e:
             if attempt == MAX_RETRIES:
                 print(f"    ⚠ API erreur ({url.split('/')[2]}): {e}")
                 return None
-            time.sleep(DELAY)
+            time.sleep(1.0 * (attempt + 1))
     return None
 
 
