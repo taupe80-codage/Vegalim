@@ -52,8 +52,10 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        # URL de l'API injectée dans le build Vite — doit correspondre au domaine public
-        VITE_API_URL: ${VITE_API_URL:-https://api.mondomaine.com}
+        # URL de l'API injectée dans le build Vite. Vide (défaut) = même origine :
+        # le frontend est servi par l'API derrière Caddy. À définir seulement si
+        # l'API est sur un autre domaine (penser alors à CORS_ORIGINS).
+        VITE_API_URL: ${VITE_API_URL:-}
     image: alim-api:6.0
     container_name: alim_api
     restart: unless-stopped

@@ -8,7 +8,7 @@
 #   docker build --build-arg VITE_API_URL=https://api.mondomaine.com -t alim-api .
 #
 # L'URL de l'API est figée au moment du build (Vite remplace la variable).
-# Passer VITE_API_URL vide ou "/" si le frontend est servi par la même origine.
+# Par défaut (vide) : même origine — le frontend est servi par l'API.
 # ══════════════════════════════════════════════════════════════════════════════
 
 
@@ -25,7 +25,7 @@ RUN npm ci --silent
 COPY frontend/ ./
 
 # VITE_API_URL est injecté à la compilation — modifiable via --build-arg
-ARG VITE_API_URL=https://api.mondomaine.com
+ARG VITE_API_URL=
 ENV VITE_API_URL=$VITE_API_URL
 
 RUN npm run build
@@ -36,14 +36,11 @@ FROM python:3.13-slim
 
 WORKDIR /app
 
-# Dépendances système (libpq5 requis par psycopg2-binary)
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends libpq5 \
-    && rm -rf /var/lib/apt/lists/*
+# Pas de paquet système : psycopg2-binary embarque sa propre libpq.
 
 # Dépendances Python (couche cachée séparément du code)
 COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --timeout 60 --retries 10 -r requirements.txt
 
 # Code source backend
 COPY backend/ ./backend/

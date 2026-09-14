@@ -77,5 +77,41 @@ Thumbs.db
 # ── Tests ─────────────────────────────────────────────────────────────────────
 tests/
 
-# ── Scripts one-shot (inutiles dans l'image) ─────────────────────────────────
-scripts/recipes/
+# ── Scripts : logs et essais (scripts/recipes/ reste dans l'image : rebuild
+#    du registre et des graphes via le service pipeline) ────────────────────────
+scripts/recipes/logs/
+scripts/recipes/archives/
+scripts/archives/
+scripts/ingredients/_scripts/
+
+# ── Sauvegardes et copies de travail des données (voir .gitignore) ───────────
+# Les motifs .dockerignore sans ** ne s'appliquent qu'à la racine.
+**/*.bak
+**/*.bak[0-9]
+**/*.corrupt_*
+**/__pycache__/
+.alim_zip_extract/
+backups/
+backend/data/_archive/
+backend/data/backups/
+backend/data/ingredients/archives/
+backend/data/nutrition/processed/nutrition_v2_backup_*.json
+backend/data/nutrition/processed/nutrition_v2_rebuilt.json
+backend/data/nutrition/processed/*.zip
+backend/data/nutrition/reference/nutrition_corrected.json
+backend/data/nutrition/reference/nutrition_patched_v8.json
+backend/data/nutrition/reference/ontology_v6*.json
+backend/data/nutrition/reference/taxonomy_session_*.json
+backend/data/recipes/recipes_chef_rewrite_smart*.json
+backend/data/recipes/recipes.rewrite_progress_smart.json
+backend/data/*.html
+backend/data/*.js
+
+# ── Hors application (dossiers locaux à la racine) ───────────────────────────
+premiere_mouture/
+outputs/
+launcher/
+*.exe
+*.xlsx
+*.bat
+proxy_data.json

@@ -11,11 +11,12 @@ Usage :
     alembic current               # voir la version courante
     alembic history               # historique des migrations
 """
+import logging
 import os
 from logging.config import fileConfig
 from pathlib import Path
 
-from sqlalchemy import engine_from_config, pool
+from sqlalchemy import engine_from_config, pool, text
 from alembic import context
 
 # ── Chargement .env (développement) ──────────────────────────────────────────
@@ -35,12 +36,17 @@ config = context.config
 # Injecter l'URL de connexion (priorité : env var > alembic.ini)
 config.set_main_option("sqlalchemy.url", DATABASE_URL)
 
-# Configurer les logs depuis alembic.ini
-if config.config_file_name is not None:
-    fileConfig(config.config_file_name)
+# Logs d'alembic.ini uniquement si personne n'a configuré le logging (CLI brute).
+# Au démarrage de l'API (upgrade dans le lifespan), fileConfig remplaçait le
+# handler racine (niveau WARNING, format JSON perdu) et désactivait les loggers
+# existants : plus aucun log applicatif après la migration (constaté 2026-09-14).
+if config.config_file_name is not None and not logging.getLogger().handlers:
+    fileConfig(config.config_file_name, disable_existing_loggers=False)
 
 # Métadata cible pour --autogenerate
 target_metadata = Base.metadata
+
+_MIGRATION_LOCK_KEY = 0x414C494D  # « ALIM »
 
 
 # ── Migrations hors ligne (sans connexion DB active) ─────────────────────────
@@ -67,6 +73,12 @@ def run_migrations_online() -> None:
         poolclass=pool.NullPool,
     )
     with connectable.connect() as connection:
+        if connection.dialect.name == "postgresql":
+            # Uvicorn --workers N : chaque worker lance `upgrade head` au démarrage.
+            # Sans verrou, deux workers migrent en parallèle une base neuve
+            # (DuplicateTable) et le perdant se rabat sur create_all().
+            connection.execute(text("SELECT pg_advisory_lock(:k)"), {"k": _MIGRATION_LOCK_KEY})
+            connection.commit()
         context.configure(
             connection=connection,
             target_metadata=target_metadata,

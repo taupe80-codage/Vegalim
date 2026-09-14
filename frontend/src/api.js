@@ -5,7 +5,9 @@
  * Toutes les routes backend passent ici — jamais de fetch() nu dans les composants.
  */
 
-const BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+// Vide ou absente : même origine (frontend servi par FastAPI sous /ui, ou
+// derrière Caddy). Le mode dev pointe vers uvicorn via .env.development.
+const BASE = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
 
 // ── Token JWT ────────────────────────────────────────────────────────────────
 
