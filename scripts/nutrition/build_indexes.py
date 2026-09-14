@@ -10,7 +10,7 @@ Produit :
       source_id → {base, variant, valeurs nutritionnelles complètes}
   backend/data/indexes/ingredient_token_index.json
       source_id → {base, variant, ig_id, axes}
-  backend/data/graphs/ingredient_availability_graph_v1.json  (complète les manquants)
+  backend/data/graphs/ingredient_availability_graph_v1.json  (synchronisé sur les clés du dico)
   backend/data/graphs/ingredient_relation_graph.json          (complète les manquants)
 
 Usage :
@@ -32,6 +32,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "backend" / "data"
 N2   = DATA / "nutrition" / "processed" / "nutrition_v2.json"
 TREE = DATA / "ingredients" / "ingredients_tree.json"
+DICT = DATA / "ingredients" / "ingredients_dictionary.json"
 
 OUT_NUTR_IDX  = DATA / "indexes" / "nutrition_index.json"
 OUT_TOKEN_IDX = DATA / "indexes" / "ingredient_token_index.json"
@@ -217,25 +218,45 @@ def build_token_index(ingrs: dict, igs: list, n2_version: str) -> dict:
 
 # ── Extend availability graph ─────────────────────────────────────────────────
 
-def build_availability(ingrs: dict) -> tuple[dict, int]:
+def build_availability() -> tuple[dict, int, list]:
+    """Synchronise le graphe de disponibilité sur les clés du DICTIONNAIRE.
+
+    Le graphe est indexé par clé d'entrée du dico (ex. 'acorn_squash_raw') —
+    c'est le vocabulaire des recettes, et test_availability_couvre_tous_les_ingredients
+    exige l'égalité exacte des deux jeux de clés. L'ancienne version ajoutait
+    les clés de BASE nutrition_v2 ('acorn_squash') : +886 orphelines à chaque
+    run (constaté en c3562f6, puis le 2026-09-14).
+
+    Valeurs curées (available_in_france) conservées ; nouvelles clés du dico
+    ajoutées à None (disponibilité à documenter) ; clés absentes du dico
+    retirées.
+    """
     existing: dict = {}
     if OUT_AVAIL.exists():
         with open(OUT_AVAIL, encoding="utf-8") as f:
             existing = json.load(f)
+    with open(DICT, encoding="utf-8") as f:
+        dico = json.load(f)
 
+    entries: dict = {}
+    for cat_label, cat in dico.get("categories", {}).items():
+        for sub in cat.get("subcategories", {}).values():
+            for key, entry in sub.get("ingredient_groups", {}).items():
+                entries[key] = (cat_label, entry)
+
+    out: dict = {k: v for k, v in existing.items() if k in entries}
+    removed = sorted(k for k in existing if k not in entries)
     added = 0
-    for base, data in ingrs.items():
-        if base in existing:
+    for key, (cat_label, entry) in entries.items():
+        if key in out:
             continue
-        tax = data.get("taxonomy", {})
-        existing[base] = {
+        out[key] = {
             "available_in_france": None,
-            "category": _cat_short(tax),
-            "name_fr":  tax.get("name_fr", ""),
+            "category": _cat_short({"cat1": cat_label}),
+            "name_fr":  entry.get("canonical_name_fr", ""),
         }
         added += 1
-
-    return existing, added
+    return out, added, removed
 
 
 # ── Extend relation graph ─────────────────────────────────────────────────────
@@ -318,8 +339,10 @@ def run(targets: list, dry_run: bool):
 
     if "availability" in targets:
         print("\nExtension ingredient_availability_graph...")
-        avail, added = build_availability(ingrs)
-        print(f"  {len(avail)} entrées totales (+{added} nouvelles)")
+        avail, added, removed = build_availability()
+        print(f"  {len(avail)} entrées totales (+{added} nouvelles, -{len(removed)} absentes du dico)")
+        if removed:
+            print(f"  retirées : {removed[:10]}")
         if not dry_run:
             _write_atomic(OUT_AVAIL, avail)
             print(f"  Ecrit → {OUT_AVAIL}")

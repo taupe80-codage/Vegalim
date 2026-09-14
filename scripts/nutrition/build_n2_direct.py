@@ -609,12 +609,17 @@ def compare_with_previous(new_ingredients: dict) -> dict:
             'nutr_diffs':              len(nutr_diffs),
             'recipe_keys_missing_new': len(recipe_keys_missing_new),
             'recipe_keys_missing_old': len(recipe_keys_missing_old),
+            # seules les clés qui EXISTAIENT en prod et disparaissent sont une
+            # régression : les autres ids de composition sont des clés du dico
+            # (variant-level), jamais des bases n2 — attendu.
+            'recipe_keys_lost':        len(set(recipe_keys_missing_new) - set(recipe_keys_missing_old)),
         },
         'regressions':             regressions,
         'nouveautes':              nouveautes,
         'nutr_diffs':              nutr_diffs,
         'recipe_keys_missing_new': recipe_keys_missing_new,
         'recipe_keys_missing_old': recipe_keys_missing_old,
+        'recipe_keys_lost':        sorted(set(recipe_keys_missing_new) - set(recipe_keys_missing_old)),
     }
 
     COMPARE_LOG.parent.mkdir(parents=True, exist_ok=True)
@@ -637,17 +642,18 @@ def print_compare_report(cmp: dict) -> None:
     reg_label = f'⚠ {reg}' if reg > 0 else f'✅ {reg}'
     print(f"  Régressions (bases perdues)  : {reg_label}")
 
-    rkeys = s['recipe_keys_missing_new']
+    rkeys = s.get('recipe_keys_lost', 0)
     rkeys_label = f'🔴 {rkeys}  ← BLOQUANT' if rkeys > 0 else f'✅ {rkeys}'
-    print(f"  Clés recettes manquantes     : {rkeys_label}")
+    print(f"  Clés recettes perdues        : {rkeys_label}")
+    print(f"  (ids recette hors bases n2, via dico : {s['recipe_keys_missing_new']} — normal)")
 
     print(f"  Nouveautés                   : +{s['nouveautes']}")
     print(f"  Divergences nutritives >20%  : {s['nutr_diffs']}")
 
     if rkeys > 0:
         print()
-        print('  🔴 Clés recettes absentes du nouveau build :')
-        for k in cmp['recipe_keys_missing_new'][:10]:
+        print('  🔴 Clés recettes présentes en prod, absentes du nouveau build :')
+        for k in cmp['recipe_keys_lost'][:10]:
             print(f'      {k}')
         if rkeys > 10:
             print(f'      … et {rkeys - 10} autres (voir compare_n2_versions.json)')
@@ -1005,8 +1011,30 @@ def classify_cat2(groups: list) -> str:
     return 'leaf'
 
 
-def build_n2(v32: dict, raw_idx: dict) -> tuple:
+def previous_base_keys(path: Path) -> dict:
+    """ig_id → clé de base dans le nutrition_v2 existant.
+
+    Les clés de base sont des IDENTIFIANTS (référencés par le dico, les
+    recettes, les index) : les re-slugger à chaque build depuis
+    canonical_name_en les renommait dès qu'un nom était reformulé dans le
+    tree (13 bases au 2026-09-14, ex. 'ladyfinger' →
+    'ladyfinger_biscuit_boudoir_savoiardi'). On réutilise donc la clé
+    existante d'un ig_id ; seuls les nouveaux ig_id reçoivent une clé slug.
+    """
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding='utf-8')).get('ingredients', {})
+    except Exception:
+        return {}
+    return {b.get('_v32_id'): k for k, b in data.items() if b.get('_v32_id')}
+
+
+def build_n2(v32: dict, raw_idx: dict, pinned_keys: dict | None = None) -> tuple:
     n2: dict = {}
+    pinned_keys = pinned_keys or {}
+    # clé épinglée → ig_id propriétaire : un autre IG ne peut pas la prendre
+    reserved = {k: ig for ig, k in pinned_keys.items()}
     stats = {k: 0 for k in ('bases','ombrelle','variants','conflicts','hits','misses','collisions')}
     collision_log: list = []
 
@@ -1026,8 +1054,18 @@ def build_n2(v32: dict, raw_idx: dict) -> tuple:
                 if not base_key:
                     continue
 
+                def _taken(key: str) -> bool:
+                    return ((key in n2 and n2[key].get('_v32_id') != ig_id)
+                            or reserved.get(key, ig_id) != ig_id)
+
+                pinned = pinned_keys.get(ig_id)
+                if pinned and not (pinned in n2 and n2[pinned].get('_v32_id') != ig_id):
+                    if pinned != base_key:
+                        stats.setdefault('pinned_renames_avoided', 0)
+                        stats['pinned_renames_avoided'] += 1
+                    base_key = pinned
                 # Collision base_key → suffixe axes EN
-                if base_key in n2 and n2[base_key].get('_v32_id') != ig_id:
+                elif _taken(base_key):
                     # Un axe qui ne fait que repeter un mot deja dans base_key
                     # (ex. origine=chevre quand le nom dit deja "goat cheese")
                     # est ignore pour ne pas produire un suffixe redondant.
@@ -1043,7 +1081,7 @@ def build_n2(v32: dict, raw_idx: dict) -> tuple:
                         alt = f"{base_key}_{ig_id.replace('ing_','')}"
                     # Garde-fou : si alt_key est déjà prise par un autre ig,
                     # fallback garanti sur ig_id (unique par construction).
-                    if alt in n2 and n2[alt].get('_v32_id') != ig_id:
+                    if _taken(alt):
                         collision_log.append(
                             f"  COLLISION '{base_key}' → '{alt}' DÉJÀ PRIS"
                             f" → fallback '{base_key}_{ig_id.replace('ing_','')}'"
@@ -1203,7 +1241,7 @@ def run(dry_run: bool = False, promote: bool = False) -> None:
     raw_idx = build_raw_index(RAW_DIR)
 
     print('Construction...')
-    n2_ingredients, stats, collision_log = build_n2(v32, raw_idx)
+    n2_ingredients, stats, collision_log = build_n2(v32, raw_idx, previous_base_keys(OUTPUT_N2))
 
     # ── Injection suppléments MANUAL (ingrédients sans source officielle) ─────
     # Lus depuis nutrition_manual_supplements.json (source de vérité déclarative).
@@ -1292,6 +1330,7 @@ def run(dry_run: bool = False, promote: bool = False) -> None:
     print(f"  Bases ombrelle        : {stats['ombrelle']}")
     print(f"  Variants créés        : {stats['variants']}")
     print(f"  Collisions base_key   : {stats['collisions']}")
+    print(f"  Clés existantes gardées (renommage évité) : {stats.get('pinned_renames_avoided', 0)}")
     print(f"  Conflits → _alt_sources : {stats['conflicts']}")
     print(f"  Lookup hits / misses  : {stats['hits']} / {stats['misses']}")
     print(f"  Total variants final  : {total_variants}")

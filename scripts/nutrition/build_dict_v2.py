@@ -23,6 +23,10 @@ from datetime import datetime, timezone; UTC = timezone.utc
 from pathlib import Path
 from collections import defaultdict, OrderedDict
 
+sys.path.insert(0, str(Path(__file__).parent))
+from allergen_rules import (get_allergens, key_allergens, restrict_diet_profile,
+                            is_explicitly_gluten_free)
+
 # ══════════════════════════════════════════════════════════════════
 # TRADUCTION AXES FR → EN (clés et valeurs)
 # ══════════════════════════════════════════════════════════════════
@@ -181,6 +185,9 @@ N2   = DATA / 'nutrition/processed/nutrition_v2.json'
 # Si le fichier n'existe pas encore (première run), la migration méta est ignorée gracieusement.
 DOLD = DATA / 'ingredients/ingredients_dictionary.json'
 OUT  = DATA / 'ingredients/ingredients_dictionary.json'
+# --out <chemin> : écrit ailleurs (ex. scratch) pour comparer avec la prod avant d'écraser
+if '--out' in sys.argv:
+    OUT = Path(sys.argv[sys.argv.index('--out') + 1]).resolve()
 DUAL_SOURCES_FILE = DATA / 'nutrition/reference/dual_nutrition_sources.json'
 
 # ══════════════════════════════════════════════════════════════════
@@ -465,33 +472,7 @@ GLUTEN_KEY_EXCEPTIONS = ('buckwheat',)
 # Sous-catégories qui déclenchent gluten_free=False par leur nom seul
 GLUTEN_SUB_TRIGGERS = ('wheat', 'barley', 'rye', 'spelt', 'kamut', 'bulgur', 'farro', 'einkorn')
 
-ALLERGEN_RULES = [
-    (None,'wheat',['cereals_gluten']),(None,'barley',['cereals_gluten']),
-    (None,'rye',['cereals_gluten']),(None,'oat',['cereals_gluten']),
-    (None,'spelt',['cereals_gluten']),(None,'kamut',['cereals_gluten']),
-    ('cereals','pasta',['cereals_gluten']),('cereals','semolina',['cereals_gluten']),
-    ('dairy',None,['milk']),('eggs',None,['eggs']),(None,'prepared_eggs',['eggs']),
-    (None,'peanut',['peanuts']),
-    ('nuts_and_seeds','almond',['tree_nuts']),('nuts_and_seeds','walnut',['tree_nuts']),
-    ('nuts_and_seeds','hazelnut',['tree_nuts']),('nuts_and_seeds','cashew',['tree_nuts']),
-    ('nuts_and_seeds','pistachio',['tree_nuts']),('nuts_and_seeds','brazil',['tree_nuts']),
-    ('nuts_and_seeds','macadamia',['tree_nuts']),('nuts_and_seeds','pecan',['tree_nuts']),
-    ('nuts_and_seeds','pine',['tree_nuts']),
-    (None,'soy',['soybeans']),(None,'sesame',['sesame']),(None,'mustard',['mustard']),
-    (None,'celery',['celery']),('fish',None,['fish']),
-    (None,'crustacean',['crustaceans']),(None,'shrimp',['crustaceans']),
-    (None,'mussel',['molluscs']),(None,'oyster',['molluscs']),(None,'squid',['molluscs']),
-    (None,'lupin',['lupin']),(None,'wine',['sulphites']),(None,'vinegar',['sulphites']),
-]
-
-def get_allergens(cat: str, sub: str) -> list:
-    cat_l, sub_l = cat.lower(), sub.lower()
-    if any(sub_l.startswith(g) for g in GLUTEN_FREE_SUBS): return []
-    als: set = set()
-    for rc, rs, a in ALLERGEN_RULES:
-        if (rc is None or cat_l.startswith(rc)) and (rs is None or sub_l.startswith(rs)):
-            als.update(a)
-    return sorted(als)
+# ALLERGEN_RULES / get_allergens : déplacés dans allergen_rules.py (partagés avec fix_dict_allergens.py)
 
 NOVA_RULES = [
     ('prepared',None,4),('dairy','cheese',3),('dairy','butter',2),
@@ -706,8 +687,18 @@ def enrich(ig: dict, cat_label: str, sub_label: str, n2_vr: dict, entry_key: str
               if k not in EXCLUSION_FLAGS}
     ig['diet_profile'] = {**base_dp, **old_dp}
 
-    if ig.get('allergens_eu') is None:
-        ig['allergens_eu'] = get_allergens(cat_label, sub_label)
+    # Allergènes : union (ancien dict ∪ taxonomie ∪ clé d'entrée), toujours
+    # recalculée — l'ancien garde `is None` laissait survivre les listes vides
+    # héritées. Puis flags d'exclusion alignés sur les allergènes (False seulement).
+    ig['allergens_eu'] = sorted(
+        set(ig.get('allergens_eu') or [])
+        | set(get_allergens(cat_label, sub_label))
+        | key_allergens(entry_key, sub_label)
+    )
+    if is_explicitly_gluten_free(entry_key):
+        # la règle taxonomique ('cereals','pasta') taguait aussi les pâtes sans gluten
+        ig['allergens_eu'] = [a for a in ig['allergens_eu'] if a != 'cereals_gluten']
+    restrict_diet_profile(ig['diet_profile'], ig['allergens_eu'], entry_key, sub_label)
     if not ig.get('nova_group'):
         n = get_nova(cat_label, sub_label)
         if n: ig['nova_group'] = n
@@ -1046,6 +1037,32 @@ MANUAL = {'rice_noodle':'rice_vermicelli','vine_leaf':'vine_leaves','zaatar':'za
           'lemongrass_stalk':'lemongrass','pine_nut':'pine_nuts','poppy':'poppy_seeds'}
 alias_index: dict[str, str] = {a: c for a, c in MANUAL.items() if c in v2_keys}
 for a, c in aliases.items(): alias_index.setdefault(a, c)
+
+# E : conserver l'alias_index existant. Les étapes A/D ne dérivent des alias
+# que des renommages entre l'ancien et le nouveau dico : un simple rebuild
+# faisait tomber les ~120 alias accumulés (utilisés par
+# search_engine/resolver.py), restaurés à la main après le commit c3562f6.
+# On garde ceux dont la cible existe encore (en suivant une chaîne
+# alias → alias), sans masquer une vraie clé du nouveau dico.
+kept_old = 0
+old_alias_index = (dold.get('alias_index') or {}) if isinstance(dold, dict) else {}
+for a, c in old_alias_index.items():
+    if a in v2_keys or a in alias_index:
+        continue
+    seen = set()
+    while c not in v2_keys and c in old_alias_index and c not in seen:
+        seen.add(c)
+        c = old_alias_index[c]
+    if c not in v2_keys:
+        # cible = base n2 (ex. 'yellow_onion_usda') au lieu d'une clé de variant
+        # du dico : on la résout si un seul variant la prolonge
+        prolongations = [k for k in v2_keys if k.startswith(c + '_')]
+        if len(prolongations) == 1:
+            c = prolongations[0]
+    if c in v2_keys and a != c:
+        alias_index[a] = c
+        kept_old += 1
+print(f'  Alias existants conservés : {kept_old} / {len(old_alias_index)}')
 alias_index = dict(sorted(alias_index.items()))
 print(f'  Alias index : {len(alias_index)} entrées')
 
