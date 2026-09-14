@@ -16,10 +16,9 @@ from typing import Any
 logger = logging.getLogger(__name__)
 
 from backend.core.data_io import (
-    load_score_graph, load_prices, load_availability_graph,
-    load_carbon_footprint, load_flavor_graph,
-    load_global_cuisine_graph, load_ingredients_dict,
-    load_nutrition_graph,
+    load_score_graph, load_prices_catalog, load_availability_graph,
+    load_flavor_graph, load_ingredients_dict, load_nutrition_graph,
+    load_recipes, resolve_catalog_key,
 )
 
 # ── Profils ──────────────────────────────────────────────────────────────────
@@ -41,11 +40,17 @@ for _n, _c in PROFILES.items():
 
 
 # ── Dimensions ────────────────────────────────────────────────────────────────
+#
+# Revu le 2026-09-14 : 4 dimensions sur 7 étaient mortes ou quasi constantes
+# (flavor = 5.0 pour 820/820, prestige cuisine = 5 faute de fichier, ease sur
+# des champs absents, cost/carbon via des référentiels couvrant 5 % des ids).
+# Chaque dimension lit désormais un champ réel des recettes ou un référentiel
+# générique résolu par resolve_catalog_key.
 
 @lru_cache(maxsize=1)
 def _load_data() -> dict:
     """
-    Charge les 8 sources de données nécessaires au scoring.
+    Charge les sources de données nécessaires au scoring.
 
     @lru_cache(maxsize=1) : les loaders sous-jacents sont eux-mêmes mis en
     cache (lru_cache ou _MtimeCache dans data_io). Ce cache évite de
@@ -56,13 +61,12 @@ def _load_data() -> dict:
     """
     return {
         "score_g": load_score_graph(),
-        "prices":  load_prices(),
+        "catalog": load_prices_catalog(),
         "avail":   load_availability_graph(),
-        "carbon":  load_carbon_footprint(),
         "flavor":  load_flavor_graph(),
-        "cuisine": load_global_cuisine_graph(),
         "ings":    load_ingredients_dict(),
         "nutr_g":  load_nutrition_graph(),   # consolidé ici — évite un 2e appel dans score_recipe
+        "recipes": {str(r.get("id")): r for r in load_recipes()},
     }
 
 def _d_nutrition(r, d):
@@ -70,66 +74,85 @@ def _d_nutrition(r, d):
     return round(max(0.0, min(10.0, float(sg.get("nutrition_score", sg.get("overall_score", sg.get("score", 5.0)))))), 2)
 
 def _d_authenticity(r, d):
-    iconic   = float(r.get("scoring", {}).get("iconic", {}).get("score", 50) or 50) / 100.0
-    cid      = (r.get("iconic_status") or {}).get("cuisine_origin", "")
-    prestige = float(d["cuisine"].get(cid, {}).get("prestige_score", 5.0)) / 10.0
-    return round(min(10.0, (iconic * 0.6 + prestige * 0.4) * 10.0), 2)
+    # scoring.iconic.score est sur 10 (6, 5.2…) — l'ancienne division par 100
+    # l'écrasait à ~0.05. Pas de référentiel de prestige par cuisine
+    # (global_cuisine_graph_v1.json n'a jamais existé) : neutre 5 si absent.
+    iconic = (r.get("scoring") or {}).get("iconic") or {}
+    score = iconic.get("score") if isinstance(iconic, dict) else None
+    if not isinstance(score, (int, float)):
+        return 5.0
+    return round(max(0.0, min(10.0, float(score))), 2)
 
 def _get_ings(r):
     ings = r.get("ingredients", [])
     if not ings and r.get("composition"):
-        ings = [c["ingredient"] for c in r.get("composition", [])]
+        ings = [c["ingredient"] for c in r.get("composition", [])
+                if (c.get("meta") or {}).get("role") != "serving_suggestion"]
     return ings
 
 def _d_accessibility(r, d):
     ings = _get_ings(r)
     if not ings: return 7.0
     m = {"True": 10.0, True: 10.0, "partial": 6.0, "False": 2.0, False: 2.0}
-    scores = [m.get(d["avail"].get(i, {}).get("available_in_france"), 7.0) for i in ings]
+    scores = []
+    for i in ings:
+        v = d["avail"].get(i, {}).get("available_in_france")
+        if v in m:
+            scores.append(m[v])
+        elif i.startswith("base_"):
+            scores.append(8.0)       # préparation maison
+        else:
+            # Disponibilité non documentée (~96 % du graphe) : présent au
+            # catalogue de prix grande surface → courant ; sinon incertain.
+            scores.append(8.0 if resolve_catalog_key(i, d["catalog"]) else 5.0)
     return round(sum(scores) / len(scores), 2)
 
 def _d_cost(r, d):
-    ings = _get_ings(r)
-    total    = sum(float(d["prices"].get(i, 0.25)) for i in ings)
-    servings = max(1, int(r.get("servings", 4) or 4))
-    return round(max(0.0, min(10.0, 10.0 - (total / servings) * 1.2)), 2)
+    # Coût réellement consommé (prices_catalog), pas un forfait par ingrédient.
+    # Médiane du dataset ≈ 1,3 €/portion → ~6,7 ; 4 €/portion → 0.
+    from backend.engine.planning_engine.shopping import recipe_cost
+    cost = recipe_cost(r, d["catalog"], d["recipes"])
+    if cost["n_priced"] == 0:
+        return 5.0
+    return round(max(0.0, min(10.0, 10.0 - cost["per_portion_eur"] * 2.5)), 2)
+
+_DIFFICULTY_EASE = {"easy": 9.0, "medium": 6.0, "hard": 3.0}
 
 def _d_ease(r, d):
-    diff = r.get("difficulty") or 0
-    if diff == 1: return 9.0
-    if diff == 3: return 3.0
-    if diff == 2: return 6.0
-    n_t = len(r.get("technique", []) or [])
-    n_i = len(_get_ings(r))
-    if n_t <= 1 and n_i <= 6:  return 9.0
-    if n_t >= 4 or n_i >= 10: return 3.0
-    return 6.0
+    ease = _DIFFICULTY_EASE.get(str(r.get("difficulty_level") or "").lower())
+    if ease is None:
+        n_t = len((r.get("tags") or {}).get("technique") or [])
+        n_i = len(_get_ings(r))
+        ease = 9.0 if (n_t <= 1 and n_i <= 6) else 3.0 if (n_t >= 4 or n_i >= 10) else 6.0
+    # temps actif (hors repos/marinade) : pénalité au-delà d'1 h 30
+    timing = r.get("timing") or {}
+    active = (timing.get("prep_active_min") or 0) + (timing.get("cook_min") or 0)
+    if active > 90:
+        ease -= 1.0
+    return round(max(0.0, min(10.0, ease)), 2)
 
 def _d_carbon(r, d):
-    ings = _get_ings(r)
-    if not ings: return 7.0
-    def _co2(v): return float(v) if isinstance(v, (int, float)) else float(v.get("co2_per_100g", 0.3)) if isinstance(v, dict) else 0.3
-    avg = sum(_co2(d["carbon"].get(i, 0.3)) for i in ings) / len(ings)
-    return round(max(1.0, min(10.0, 10.0 - avg * 6.0)), 2)
+    from backend.engine.rule_engine.carbon import carbon_score
+    res = carbon_score(r)
+    return 7.0 if res["coverage"] == 0 else res["score"]
+
+_BASIC_TASTES = {"sweet", "sour", "salty", "bitter", "umami", "spicy"}
 
 def _d_flavor(r, d):
-    ings = _get_ings(r)
-    if not ings: return 5.0
-    profiles = [str(d["ings"].get(i, {}).get("flavor_profile", "")) for i in ings]
-    profiles = [p for p in profiles if p]
-    
-    base_score = 5.0 + (len(set(profiles)) / max(1, len(profiles))) * 3.0
-    
-    pairs = 0
-    flavor_g = d["flavor"]
-    for i in ings:
-        match_list = flavor_g.get(i, [])
-        for j in ings:
-            if i != j and j in match_list:
-                pairs += 1
-                
-    pairing_bonus = min(2.0, pairs * 0.5)
-    return round(min(10.0, base_score + pairing_bonus), 2)
+    # flavor_graph.json : profils gustatifs par ingrédient générique. Score =
+    # couverture des saveurs de base (équilibre) + diversité aromatique.
+    tastes: set[str] = set()
+    n_mapped = 0
+    for i in _get_ings(r):
+        key = resolve_catalog_key(i, d["flavor"])
+        if key:
+            n_mapped += 1
+            tastes.update(d["flavor"][key])
+    if n_mapped == 0:
+        return 5.0
+    basic = len(tastes & _BASIC_TASTES)
+    aromatic = len(tastes - _BASIC_TASTES - {"neutral"})
+    return round(min(10.0, 3.0 + basic * 1.0 + min(aromatic, 4) * 0.25), 2)
 
 
 # ── Bonus rules ───────────────────────────────────────────────────────────────

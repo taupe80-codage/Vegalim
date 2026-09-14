@@ -26,7 +26,7 @@ try:
 except ImportError:
     pass  # python-dotenv optionnel — utilisez les variables d'environnement systeme
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
@@ -94,7 +94,7 @@ async def lifespan(app: FastAPI):
         from backend.core.data_io import (
             load_recipes, load_nutrition_graph, load_score_graph,
             load_availability_graph, load_ingredients_dict, load_prices,
-            load_seasonality, load_scoring_profiles, load_search_index,
+            load_seasonality, load_search_index,
         )
         recipes = load_recipes()
         logger.info("Dataset chargé : %d recettes", len(recipes))
@@ -104,9 +104,8 @@ async def lifespan(app: FastAPI):
         load_ingredients_dict()
         load_prices()
         load_seasonality()
-        load_scoring_profiles()
         load_search_index()
-        logger.info("Caches warm-up : 9 loaders prêts")
+        logger.info("Caches warm-up : 8 loaders prêts")
     except Exception as e:
         logger.error("Warm-up partiel : %s — certaines fonctionnalités seront indisponibles", e)
 
@@ -330,7 +329,7 @@ async def metrics_middleware(request, call_next):
 
 
 @app.get("/metrics", tags=["Monitoring"])
-def get_metrics_endpoint(request):
+def get_metrics_endpoint(request: Request):
     """
     Métriques runtime : requêtes, latences, erreurs, top routes.
 
@@ -373,7 +372,7 @@ def platform_stats():
         for k in flags:
             if r.get("diet_flags", {}).get(k):
                 flags[k] += 1
-        c = (r.get("iconic_status") or {}).get("cuisine_origin", "")
+        c = (r.get("origin") or {}).get("cuisine", "")
         if c:
             cuisines[c] += 1
 

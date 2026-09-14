@@ -501,11 +501,6 @@ def load_search_index() -> dict:
 
 
 @lru_cache(maxsize=1)
-def load_scoring_profiles() -> dict:
-    return load_json(DATA_ROOT / "graphs" / "scoring_weight_profiles_v1.json", default={})
-
-
-@lru_cache(maxsize=1)
 def load_seasonality() -> dict:
     return load_json(DATA_ROOT / "modules" / "seasonality.json", default={})
 
@@ -529,18 +524,51 @@ def load_ingredient_price_map() -> dict:
     return load_json(DATA_ROOT / "config" / "ingredient_price_map.json", default={})
 
 
+def recipe_cuisine(recipe: dict) -> str:
+    """Cuisine d'origine d'une recette. Schéma actuel : origin.cuisine ;
+    iconic_status.cuisine_origin / cuisine_origin sont des champs d'anciens
+    formats, absents de recipes.json (les lire seuls donnait toujours "")."""
+    return str(
+        (recipe.get("origin") or {}).get("cuisine")
+        or (recipe.get("iconic_status") or {}).get("cuisine_origin")
+        or recipe.get("cuisine_origin")
+        or ""
+    ).lower()
+
+
+def recipe_techniques(recipe: dict) -> list[str]:
+    """Techniques culinaires : tags.technique (schéma actuel), sinon technique."""
+    raw = (recipe.get("tags") or {}).get("technique") or recipe.get("technique") or []
+    if isinstance(raw, str):
+        raw = [raw]
+    return [str(t).lower() for t in raw]
+
+
+def resolve_catalog_key(ingredient_id: str, keys) -> str | None:
+    """Ramène un id de composition de recette (ex. 'garlic_raw', 'oats/rolled')
+    vers une clé des référentiels génériques partagés (prices_catalog,
+    carbon_footprint, flavor_graph — ex. 'garlic', 'oats').
+
+    Ordre : id exact, préfixe avant '/', puis ingredient_price_map. Retourne
+    None si aucune clé de `keys` ne correspond.
+    """
+    if not ingredient_id:
+        return None
+    iid = str(ingredient_id).lower().strip()
+    base = iid.split("/")[0]
+    for candidate in (iid, base):
+        if candidate in keys:
+            return candidate
+    price_map = load_ingredient_price_map()
+    mapped = price_map.get(iid) or price_map.get(base)
+    return mapped if mapped in keys else None
+
+
 @lru_cache(maxsize=1)
 def load_flavor_graph() -> dict:
-    return load_json(DATA_ROOT / "graphs" / "flavor_pairing_graph_v1.json", default={})
-
-
-@lru_cache(maxsize=1)
-def load_global_cuisine_graph() -> dict:
-    return load_json(DATA_ROOT / "graphs" / "global_cuisine_graph_v1.json", default={})
-
-@lru_cache(maxsize=1)
-def load_unit_conversion_graph() -> dict:
-    return load_json(DATA_ROOT / "graphs" / "unit_conversion_graph_v1.json", default={})
+    """Profils gustatifs par ingrédient générique : {'tomato': ['sour', 'sweet', 'umami'], …}.
+    (Pointait vers flavor_pairing_graph_v1.json, qui n'a jamais existé.)"""
+    return load_json(DATA_ROOT / "graphs" / "flavor_graph.json", default={})
 
 
 @lru_cache(maxsize=1)

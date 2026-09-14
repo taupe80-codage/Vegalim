@@ -8,6 +8,7 @@ API :
 """
 from __future__ import annotations
 import logging
+from backend.core.data_io import recipe_cuisine, recipe_techniques
 
 logger = logging.getLogger(__name__)
 
@@ -41,15 +42,13 @@ def _ingredient_similarity(a: dict, b: dict) -> float:
     return len(sa & sb) / len(sa | sb)
 
 def _technique_similarity(a: dict, b: dict) -> float:
-    ta = set(str(t).lower() for t in (a.get("technique") or []))
-    tb = set(str(t).lower() for t in (b.get("technique") or []))
+    ta, tb = set(recipe_techniques(a)), set(recipe_techniques(b))
     if not ta or not tb: return 0.0
     return len(ta & tb) / len(ta | tb)
 
 def _iconic_similarity(a: dict, b: dict) -> float:
     """Même cuisine d'origine → bonus."""
-    ca = (a.get("iconic_status") or {}).get("cuisine_origin", "")
-    cb = (b.get("iconic_status") or {}).get("cuisine_origin", "")
+    ca, cb = recipe_cuisine(a), recipe_cuisine(b)
     return 1.0 if ca and ca == cb else 0.0
 
 

@@ -77,6 +77,8 @@ _CUISINE_TOKENS: dict[str, list[str]] = {
     "East African":  ["est-africain", "afrique de l'est"],
 }
 
+_CUISINE_KEYS = {k.lower().replace(" ", "_"): k for k in _CUISINE_TOKENS}
+
 # Catégories d'ingrédients → thèmes de recherche
 _CATEGORY_TOKENS: dict[str, list[str]] = {
     "plant_protein": ["protéines végétales", "protéines", "protein", "sport", "muscle"],
@@ -221,12 +223,13 @@ def generate_tokens(recipe: dict, ings_dict: dict | None = None) -> list[str]:
             tokens.add(_norm(cat_token))
 
     # ── 3. Cuisine d'origine ──────────────────────────────────────────────────
-    origin = recipe.get("origin", {})
-    cuisine = (recipe.get("iconic_status") or {}).get("cuisine_origin", "") or \
-              recipe.get("cuisine_origin", "") or origin.get("cuisine", "")
+    from backend.core.data_io import recipe_cuisine
+    cuisine = recipe_cuisine(recipe)
     if cuisine:
         tokens.add(_norm(cuisine))
-        for ct in _CUISINE_TOKENS.get(cuisine, []):
+        # recettes : 'sri_lankan', 'french_provencal' ; table : 'Sri Lankan', 'French'
+        key = _CUISINE_KEYS.get(cuisine) or _CUISINE_KEYS.get(cuisine.split("_")[0])
+        for ct in _CUISINE_TOKENS.get(key, []):
             tokens.add(_norm(ct))
 
     # ── 4. Techniques ─────────────────────────────────────────────────────────
@@ -256,10 +259,10 @@ def generate_tokens(recipe: dict, ings_dict: dict | None = None) -> list[str]:
 
     # ── 7. Difficulté ─────────────────────────────────────────────────────────
     diff_val = recipe.get("difficulty")
-    diff_lvl = recipe.get("difficulty level")
-    if diff_lvl == "facile": diff_val = 1
-    elif diff_lvl == "intermediaire": diff_val = 2
-    elif diff_lvl == "difficile" or diff_lvl == "complexe": diff_val = 3
+    diff_lvl = str(recipe.get("difficulty_level") or recipe.get("difficulty level") or "").lower()
+    if diff_lvl in ("easy", "facile"): diff_val = 1
+    elif diff_lvl in ("medium", "intermediaire"): diff_val = 2
+    elif diff_lvl in ("hard", "difficile", "complexe"): diff_val = 3
     for dt in _difficulty_tokens(diff_val):
         tokens.add(_norm(dt))
 

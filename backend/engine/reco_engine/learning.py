@@ -50,6 +50,18 @@ MALUS_DISLIKED   = -1.5
 _HISTORY_DIR = DATA_ROOT.parent / "users" / "history"
 
 
+def recipe_cuisine(recipe: dict) -> str:
+    """Cuisine d'origine : origin.cuisine (schéma actuel), sinon anciens champs.
+    Copie locale de data_io.recipe_cuisine — ce module n'importe data_io que
+    paresseusement (isolé dans tests/test_learning.py)."""
+    return str(
+        (recipe.get("origin") or {}).get("cuisine")
+        or (recipe.get("iconic_status") or {}).get("cuisine_origin")
+        or recipe.get("cuisine_origin")
+        or ""
+    ).lower()
+
+
 # ── Chargement de l'historique ────────────────────────────────────────────────
 
 def _load_history_from_db(email: str) -> dict:
@@ -224,8 +236,7 @@ def extract_preferences(email: str) -> dict:
     # Cuisines
     cuisine_count: dict[str, int] = {}
     for r in liked_recipes:
-        cuisine = (r.get("iconic_status") or {}).get("cuisine_origin", "") or \
-                  r.get("cuisine_origin", "")
+        cuisine = recipe_cuisine(r)
         if cuisine:
             cuisine_count[cuisine] = cuisine_count.get(cuisine, 0) + 1
     if cuisine_count:
@@ -279,8 +290,7 @@ def compute_learning_bonus(recipe: dict, prefs: dict) -> float:
         return MALUS_DISLIKED
 
     # Cuisine favorite
-    cuisine = (recipe.get("iconic_status") or {}).get("cuisine_origin", "") or \
-              recipe.get("cuisine_origin", "")
+    cuisine = recipe_cuisine(recipe)
     if cuisine and cuisine in prefs.get("cuisines_favorite", set()):
         bonus += BONUS_CUISINE
 

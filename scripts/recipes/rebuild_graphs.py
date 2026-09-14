@@ -53,7 +53,9 @@ def rebuild_graphs_and_index():
 
         ns_raw = score_nutrition_values(nutr)
         ns_val = ns_raw.get("score", 0) if isinstance(ns_raw, dict) else float(ns_raw)
-        nutr_score = round(min(max(ns_val / 1.5, 0), 10.0), 1)
+        # ajr_score_with_profile renvoie déjà 0-10 : l'ancien « / 1.5 »
+        # plafonnait la dimension nutrition (40 % du score) à ~4/10.
+        nutr_score = round(min(max(ns_val, 0), 10.0), 1)
 
         try:
             flavor_score = float(quality._d_flavor(r, d))

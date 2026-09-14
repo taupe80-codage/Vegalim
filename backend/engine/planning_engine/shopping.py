@@ -634,3 +634,108 @@ def shopping_list_from_recipes(recipe_ids: list[str], eco: bool = False) -> dict
             _accumulate(ing_data, key, qty, unit)
 
     return _build_result(ing_data, n_recipes, eco, prices, ings_dict, catalog, price_map, recipe_index)
+
+
+# ── Coût consommé d'une recette (scoring, budget) ────────────────────────────
+#
+# Différent de la liste de courses : on facture la quantité UTILISÉE au prix
+# unitaire du conditionnement le plus avantageux, pas des paquets entiers
+# (5 g de sel ≠ un paquet de 1 kg). Sert au score coût et à estimate_price().
+
+def ingredient_cost_eur(ing_key: str, qty: float, unit: str, catalog: dict,
+                        recipe_index: dict | None = None,
+                        _visiting: frozenset = frozenset()) -> float | None:
+    """Coût en € de `qty` `unit` d'un ingrédient, ou None si non chiffrable."""
+    from backend.core.data_io import resolve_catalog_key
+
+    try:
+        n_qty, n_unit = _normalise_unit(float(qty), (unit or "").lower().strip())
+    except (TypeError, ValueError):
+        return None
+    base = _item_to_base(n_qty, n_unit)
+    if base is None or base[0] <= 0:
+        return None
+    needed, needed_unit = base
+
+    key = str(ing_key).lower().strip()
+    if key.startswith("base_") and recipe_index and key in recipe_index and key not in _visiting:
+        if needed_unit == "piece":
+            return None
+        sub = recipe_cost(recipe_index[key], catalog, recipe_index, _visiting | {key})
+        if not sub["total_weight_g"] or sub["n_priced"] == 0:
+            return None
+        return sub["total_eur"] / sub["total_weight_g"] * needed   # 1 g ≈ 1 ml
+
+    entry_key = resolve_catalog_key(key, catalog)
+    if not entry_key:
+        return None
+    entry = catalog[entry_key]
+    # unit_weight_g : poids moyen d'une pièce vendue (ail, œuf, cube de bouillon…)
+    # — permet de chiffrer « 15 g d'ail » quand le catalogue vend des têtes.
+    piece_g = entry.get("unit_weight_g")
+    if needed_unit == "piece" and piece_g:
+        needed, needed_unit = needed * piece_g, "g"
+    best = None
+    for pkg in entry.get("packages", []):
+        conv = _pkg_to_base(pkg.get("qty") or 0, pkg.get("unit") or "")
+        if not conv or conv[0] <= 0:
+            continue
+        if conv[1] == "piece" and needed_unit != "piece" and piece_g:
+            conv = (conv[0] * piece_g, "g")
+        # g ↔ ml interchangeables (approximation cuisine), pièce ≠ poids
+        if (conv[1] == "piece") != (needed_unit == "piece"):
+            continue
+        per_unit = pkg["price"] / conv[0]
+        best = per_unit if best is None else min(best, per_unit)
+    return None if best is None else best * needed
+
+
+def recipe_cost(recipe: dict, catalog: dict | None = None,
+                recipe_index: dict | None = None,
+                _visiting: frozenset = frozenset()) -> dict:
+    """
+    Coût consommé d'une recette.
+
+    Returns:
+        {total_eur, per_portion_eur, n_priced, n_unknown, total_weight_g, details}
+        Les lignes sans quantité numérique ou en suggestion de service sont ignorées.
+    """
+    from backend.core.data_io import load_prices_catalog, load_recipes
+
+    if catalog is None:
+        catalog = load_prices_catalog()
+    if recipe_index is None:
+        recipe_index = {str(r.get("id")): r for r in load_recipes()}
+
+    total = weight = 0.0
+    n_priced = n_unknown = 0
+    details = []
+    for item in recipe.get("composition", []) or []:
+        if not isinstance(item, dict) or (item.get("meta") or {}).get("role") == "serving_suggestion":
+            continue
+        qty = item.get("quantity")
+        if not isinstance(qty, (int, float)) or qty <= 0:
+            continue
+        key = item.get("ingredient") or item.get("ingredient_id") or ""
+        unit = item.get("unit") or "g"
+        norm = _item_to_base(*_normalise_unit(float(qty), unit.lower().strip()))
+        if norm and norm[1] in ("g", "ml"):
+            weight += norm[0]
+        cost = ingredient_cost_eur(key, qty, unit, catalog, recipe_index, _visiting)
+        if cost is None:
+            n_unknown += 1
+            continue
+        n_priced += 1
+        total += cost
+        details.append({"ingredient": key, "cost_eur": round(cost, 3)})
+
+    servings = max(1, int(recipe.get("servings") or 4))
+    details.sort(key=lambda x: -x["cost_eur"])
+    return {
+        "total_eur":       round(total, 2),
+        "per_portion_eur": round(total / servings, 2),
+        "n_priced":        n_priced,
+        "n_unknown":       n_unknown,
+        "total_weight_g":  round(weight, 1),
+        "details":         details,
+    }

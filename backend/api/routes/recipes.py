@@ -30,7 +30,7 @@ from backend.services.filter_service import apply_diet_filter, apply_filters
 from backend.services.enrichment_service import enrich_one, enrich_why
 from backend.core.data_io          import (
     load_recipes, load_nutrition_graph, load_score_graph,
-    load_ingredients_dict, load_availability_graph,
+    load_ingredients_dict, load_availability_graph, recipe_cuisine,
 )
 
 # Engines utilisés directement dans ce fichier (variante vegan + similaires)
@@ -238,7 +238,7 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
             viewed_ids = history.get("viewed", set())
             for r in recipes:
                 if r["id"] in viewed_ids:
-                    c = (r.get("iconic_status") or {}).get("cuisine_origin", "")
+                    c = recipe_cuisine(r)
                     if c:
                         seen_cuisines.add(c)
         except Exception:
@@ -246,7 +246,7 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
 
     cuisine_candidates = [
         r for r in recipes
-        if (r.get("iconic_status") or {}).get("cuisine_origin", "") not in seen_cuisines
+        if recipe_cuisine(r) not in seen_cuisines
         and r["id"] != recette_du_jour["id"]
     ] or [r for r in recipes if r["id"] != recette_du_jour["id"]]
 

@@ -294,7 +294,7 @@ def daily_nutrition(payload: DayNutritionRequest, user: dict | None = Depends(ge
 @router.post("/diversity_score")
 def diversity_score(payload: DiversityScoreRequest, user: dict = Depends(get_user)):
     """Calcule le score de diversitÃƒÂ© nutritionnelle d'un plan hebdomadaire."""
-    from backend.core.data_io import load_recipes
+    from backend.core.data_io import load_recipes, recipe_cuisine, recipe_techniques
     plan = payload.plan
     rmap = {r["id"]: r for r in load_recipes()}
     cuisines, techs, colors, ings = set(), set(), set(), set()
@@ -307,11 +307,11 @@ def diversity_score(payload: DiversityScoreRequest, user: dict = Depends(get_use
                 continue
             r = rmap.get(info.get("id"), {})
             n += 1
-            c = (r.get("iconic_status") or {}).get("cuisine_origin", "")
-            t = r.get("technique", "")
+            c = recipe_cuisine(r)
+            t = recipe_techniques(r)
             p = r.get("color_palette", "")
             if c: cuisines.add(c)
-            if t: techs.add(t[0] if isinstance(t, list) and t else str(t))
+            techs.update(t)
             if p: colors.add(p)
             ings.update(str(i) for i in r.get("ingredients", []))
     return {

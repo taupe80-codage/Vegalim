@@ -160,12 +160,8 @@ def _get_title(recipe: dict) -> str:
 
 def _get_cuisine(recipe: dict) -> str:
     """Extrait la cuisine d'origine (multi-format)."""
-    return (
-        (recipe.get("iconic_status") or {}).get("cuisine_origin") or
-        (recipe.get("scoring", {}).get("iconic") or {}).get("cuisine_origin") or
-        recipe.get("cuisine") or
-        ""
-    ).lower()
+    from backend.core.data_io import recipe_cuisine
+    return recipe_cuisine(recipe) or str(recipe.get("cuisine") or "").lower()
 
 
 def _get_overall_score(recipe: dict, score_graph: dict | None = None) -> float:

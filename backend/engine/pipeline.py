@@ -63,7 +63,8 @@ def _enrich(recipe: dict) -> dict:
         title   = r.get("titles", {}).get("fr") or r.get("titles", {}).get("original") or ""
         r["slug"] = title.lower().replace(" ", "_").replace("(", "").replace(")", "")
     if not r.get("cuisine_origin"):
-        r["cuisine_origin"] = (r.get("iconic_status") or {}).get("cuisine_origin", "")
+        from backend.core.data_io import recipe_cuisine
+        r["cuisine_origin"] = recipe_cuisine(r)
     if not r.get("timing", {}).get("total_min"):
         prep = r.get("prep_time_min") or 0
         cook = r.get("cook_time_min") or 0
