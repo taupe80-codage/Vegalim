@@ -12,8 +12,8 @@ Headers posés :
   Content-Security-Policy   → restreint les sources de contenu autorisées
 
 Note HSTS :
-  Strict-Transport-Security n'est PAS posé ici — Caddy l'ajoute automatiquement
-  sur les connexions HTTPS. Le poser dans FastAPI provoquerait des boucles en
+  Strict-Transport-Security n'est PAS posé ici — il est ajouté par le Caddyfile
+  (Caddy ne le pose pas de lui-même). Le poser dans FastAPI provoquerait des boucles en
   développement HTTP.
 
 Usage :

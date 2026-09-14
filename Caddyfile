@@ -5,7 +5,6 @@
 #   - Certificat Let's Encrypt (HTTPS)
 #   - Redirection HTTP → HTTPS
 #   - HTTP/2 et HTTP/3 (QUIC)
-#   - Strict-Transport-Security (HSTS)
 #   - Compression gzip/zstd
 #
 # Variable d'environnement requise dans .env :
@@ -17,6 +16,10 @@
 # ══════════════════════════════════════════════════════════════════════════════
 
 {$ALIM_DOMAIN:localhost} {
+
+    # ── HSTS ─────────────────────────────────────────────────────────────────
+    # Caddy ne le pose PAS par défaut (vérifié le 2026-09-14 : en-tête absent).
+    header Strict-Transport-Security "max-age=31536000; includeSubDomains"
 
     # ── Compression ──────────────────────────────────────────────────────────
     encode zstd gzip

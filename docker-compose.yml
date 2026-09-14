@@ -20,7 +20,7 @@
 services:
 
   # ── Reverse proxy HTTPS (Caddy) ─────────────────────────────────────────────
-  # Gère automatiquement : certificat Let's Encrypt, HTTP→HTTPS, HTTP/2, HSTS.
+  # Gère : certificat Let's Encrypt, HTTP→HTTPS, HTTP/2 (automatique) et HSTS (Caddyfile).
   # Variable requise dans .env : ALIM_DOMAIN=mondomaine.com
   caddy:
     image: caddy:2-alpine
