@@ -31,9 +31,11 @@ PASSWORD_MIN_LEN = 8
 _RESET_TTL_MINUTES = int(os.getenv("RESET_TOKEN_TTL_MINUTES", "30"))
 
 # ── Environnement ──────────────────────────────────────────────────────────────
-# APP_ENV est la variable canonique (docker-compose, Dockerfile).
-# ALIM_ENV conservé en fallback pour rétro-compatibilité.
-_IS_DEV = os.getenv("APP_ENV", os.getenv("ALIM_ENV", "production")).lower() != "production"
+# Source unique : settings (APP_ENV). Le jeton de reset n'est renvoyé dans la
+# réponse que si APP_ENV=development est écrit EXPLICITEMENT — un déploiement
+# qui oublierait APP_ENV ne doit jamais exposer ces jetons.
+from backend.core.config import settings as _settings
+_IS_DEV = _settings.is_explicit_development
 
 # ── Tentative import DB pour les reset tokens ─────────────────────────────────
 _RESET_DB_OK = False
@@ -143,8 +145,9 @@ class ResetPasswordRequest(BaseModel):
 # ── Routes ────────────────────────────────────────────────────────────────────
 
 @router.post("/register", status_code=status.HTTP_201_CREATED)
-def register(credentials: UserCredentials):
+def register(credentials: UserCredentials, request: Request):
     """Crée un nouveau compte et retourne directement un token JWT."""
+    check_rate_limit(request, limit=5, window_seconds=600)
     try:
         create_user(str(credentials.email), credentials.password)
     except ValueError as e:
@@ -219,11 +222,12 @@ def forgot_password(payload: ForgotPasswordRequest, request: Request):
 
 
 @router.post("/reset-password")
-def reset_password(payload: ResetPasswordRequest):
+def reset_password(payload: ResetPasswordRequest, request: Request):
     """
     Réinitialise le mot de passe avec un token valide.
     Consommation atomique — usage unique garanti.
     """
+    check_rate_limit(request, limit=10, window_seconds=600)
     email = _consume_reset_token(payload.token)
     if not email:
         raise HTTPException(

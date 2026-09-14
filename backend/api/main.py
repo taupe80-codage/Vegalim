@@ -382,7 +382,7 @@ def platform_stats():
     # Plans B2B avec quotas
     plans_info = {
         name: {
-            "daily_limit": plan.get("daily_limit", 0),
+            "daily_limit": plan.get("requests_per_day", 0),   # clé réelle de PLANS
             "description": plan.get("description", ""),
             "features":    plan.get("features", {}),
         }

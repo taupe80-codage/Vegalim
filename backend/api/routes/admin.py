@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 from fastapi import APIRouter, Depends
 from pydantic import BaseModel, Field
 from typing import Optional
-from backend.core.auth_deps import require_api_key
+from backend.core.auth_deps import require_admin
 
 router = APIRouter(prefix="/admin", tags=["Admin"])
 
@@ -33,14 +33,14 @@ class DietFlagsRebuildRequest(BaseModel):
 
 
 @router.get("/quality_audit")
-def quality_audit(_user = Depends(require_api_key)):
+def quality_audit(_user = Depends(require_admin)):
     """Audit qualité complet du dataset."""
     from backend.engine.culinary_data_quality_engine import run_quality_audit  # conservé
     return run_quality_audit()
 
 
 @router.get("/missing_ingredients")
-def missing_ingredients_report(_user = Depends(require_api_key)):
+def missing_ingredients_report(_user = Depends(require_admin)):
     """
     Rapport des ingrédients référencés en recette mais absents du dataset.
     Triés par fréquence décroissante.
@@ -56,14 +56,14 @@ def missing_ingredients_report(_user = Depends(require_api_key)):
 
 
 @router.get("/api_stats")
-def api_stats(_user = Depends(require_api_key)):
+def api_stats(_user = Depends(require_admin)):
     """Statistiques d'utilisation de l'API."""
     from backend.engine.auth_middleware import get_api_stats                   # conservé
     return get_api_stats()
 
 
 @router.post("/pipeline")
-def pipeline_run(payload: PipelineRunRequest, _user = Depends(require_api_key)):
+def pipeline_run(payload: PipelineRunRequest, _user = Depends(require_admin)):
     """Relance le pipeline de traitement complet sur le dataset."""
     from backend.engine.pipeline import run                                    # conservé
     result = run(profile=payload.profile, limit=payload.limit, skip_errors=True)
@@ -74,7 +74,7 @@ def pipeline_run(payload: PipelineRunRequest, _user = Depends(require_api_key)):
 @router.post("/diet_flags/rebuild")
 def diet_flags_rebuild(
     payload: DietFlagsRebuildRequest = DietFlagsRebuildRequest(),
-    _user = Depends(require_api_key),
+    _user = Depends(require_admin),
 ):
     """
     Recalcule les diet_flags sur tout le dataset et sauvegarde.
@@ -106,7 +106,7 @@ def diet_flags_rebuild(
 
 
 @router.get("/diet_flags/audit")
-def diet_flags_audit(_user = Depends(require_api_key)):
+def diet_flags_audit(_user = Depends(require_admin)):
     """Retourne les recettes dont les diet_flags divergent des valeurs calculées."""
     from backend.engine.rule_engine.diet import audit                         # ✅ migré
     from backend.core.data_io import load_recipes
@@ -118,7 +118,7 @@ def diet_flags_audit(_user = Depends(require_api_key)):
 
 
 @router.post("/search_tokens/rebuild")
-def search_tokens_rebuild(_user = Depends(require_api_key)):
+def search_tokens_rebuild(_user = Depends(require_admin)):
     """Regénère les search_tokens sur toutes les recettes."""
     from backend.engine.search_token_generator import batch_generate           # conservé
     from backend.core.data_io import load_recipes
@@ -130,7 +130,7 @@ def search_tokens_rebuild(_user = Depends(require_api_key)):
 
 
 @router.post("/duplicate_check")
-def duplicate_check(_user = Depends(require_api_key)):
+def duplicate_check(_user = Depends(require_admin)):
     """Détecte les doublons dans le dataset."""
     from backend.engine.duplicate_recipe_detector import report               # conservé
     from backend.core.data_io import load_recipes
@@ -139,7 +139,7 @@ def duplicate_check(_user = Depends(require_api_key)):
 
 
 @router.get("/quota")
-def get_quota(_user: dict = Depends(require_api_key)):
+def get_quota(_user: dict = Depends(require_admin)):
     """Quota et informations de plan pour la clé API courante."""
     from backend.engine.auth_middleware import PLANS                           # conservé
     plan      = _user.get("plan", "free")

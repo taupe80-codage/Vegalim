@@ -89,7 +89,20 @@ class _Settings:
         self.log_format: str  = _optional("LOG_FORMAT", "text").lower()  # text | json
 
         # ── Environnement ─────────────────────────────────────────────────────
-        self.env: str         = _optional("APP_ENV", "development").lower()
+        # APP_ENV est la seule variable lue (ALIM_ENV accepté en rétro-compat).
+        # Non défini → "development" pour le confort local, MAIS env_explicit=False :
+        # les comportements dangereux (jeton de reset renvoyé dans la réponse)
+        # exigent APP_ENV=development écrit explicitement.
+        _raw_env = os.getenv("APP_ENV") or os.getenv("ALIM_ENV")
+        self.env_explicit: bool = bool(_raw_env)
+        self.env: str         = (_raw_env or "development").lower()
+
+        # ── Administration ────────────────────────────────────────────────────
+        # Emails autorisés sur /admin/* (en plus d'une clé API valide).
+        # Vide = administration désactivée.
+        self.admin_emails: set[str] = {
+            e.strip().lower() for e in _optional("ADMIN_EMAILS", "").split(",") if e.strip()
+        }
 
         # ── Rate Limiter ──────────────────────────────────────────────────────
         self.rate_limit_default: int = _int_env("RATE_LIMIT_DEFAULT", 60)
@@ -102,6 +115,11 @@ class _Settings:
     @property
     def is_development(self) -> bool:
         return self.env in ("development", "dev", "local")
+
+    @property
+    def is_explicit_development(self) -> bool:
+        """APP_ENV=development écrit explicitement (pas seulement par défaut)."""
+        return self.env_explicit and self.is_development
 
     def validate_production(self) -> list[str]:
         """
@@ -143,6 +161,11 @@ class _Settings:
                 else:
                     log.warning("CONFIG PROD [ATTENTION] : %s", issue)
         elif not self.is_production:
+            if not self.env_explicit:
+                log.warning(
+                    "APP_ENV non défini — mode development par défaut (Swagger et /metrics "
+                    "ouverts, secrets non exigés). Définissez APP_ENV=production pour un déploiement."
+                )
             # En dev, on affiche les warnings non-bloquants
             warnings = self.validate_production()
             for w in warnings:

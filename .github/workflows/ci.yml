@@ -2,11 +2,12 @@
 # ALIM v6 — CI/CD GitHub Actions
 #
 # Déclenché sur :
-#   - push vers main ou develop
-#   - pull request vers main
+#   - push vers master, main ou develop
+#   - pull request vers master ou main
 #
 # Jobs :
-#   test      → pytest (550 tests unitaires, hors tests pipeline)
+#   test      → pytest (hors tests pipeline)
+#   frontend  → ESLint + tests Vitest + build Vite
 #   docker    → build image Docker (validation Dockerfile, sans push)
 #   docker-push → push vers GHCR sur push main (optionnel, activer si besoin)
 # ══════════════════════════════════════════════════════════════════════════════
@@ -15,9 +16,9 @@ name: CI
 
 on:
   push:
-    branches: [main, develop]
+    branches: [master, main, develop]
   pull_request:
-    branches: [main]
+    branches: [master, main]
 
 env:
   PYTHON_VERSION: "3.13"
@@ -65,15 +66,49 @@ jobs:
           path: test-results.xml
 
 
-  # ── Build Docker ─────────────────────────────────────────────────────────────
-  docker:
-    name: Build Docker
+  # ── Frontend ─────────────────────────────────────────────────────────────────
+  frontend:
+    name: Frontend (lint, tests, build)
     runs-on: ubuntu-latest
-    needs: test
+    defaults:
+      run:
+        working-directory: frontend
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: ESLint
+        run: npm run lint
+
+      - name: Tests (Vitest)
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+
+  # ── Build Docker ─────────────────────────────────────────────────────────────
+  docker:
+    name: Build Docker
+    runs-on: ubuntu-latest
+    needs: [test, frontend]
+
+    steps:
+      - name: Checkout (avec les photos Git LFS)
+        uses: actions/checkout@v4
+        with:
+          lfs: true
 
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v3

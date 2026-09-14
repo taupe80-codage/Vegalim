@@ -11,7 +11,7 @@ MIGRATION ÃƒÂ©tape 3 Ã¢â‚¬â€ imports obsolÃƒÂ¨tes remplacÃƒ
 import logging
 logger = logging.getLogger(__name__)
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel, Field
 from typing import Optional, List
 
@@ -171,20 +171,35 @@ def shopping_from_recipes_route(payload: ShoppingFromRecipesRequest, user: dict 
 # ── Correction de prix catalogue ──────────────────────────────────────────────
 
 class PriceUpdateRequest(BaseModel):
-    package_label: str  = Field(..., description="Label du paquet affiché (ex: 'sachet 500g')")
-    new_price:     float = Field(..., gt=0, description="Nouveau prix en euros")
+    package_label: str  = Field(..., max_length=120, description="Label du paquet affiché (ex: 'sachet 500g')")
+    new_price:     float = Field(..., gt=0, le=1000, description="Nouveau prix en euros")
+
+
+# Garde-fous : la correction touche un catalogue PARTAGÉ par tous les utilisateurs.
+PRICE_MAX_RATIO = 5.0          # refus au-delà de ×5 ou ÷5 par rapport au prix actuel
+PRICE_EDITS_PER_HOUR = 20      # par utilisateur
+
 
 @router.put("/prices/{ingredient_key}")
 def update_ingredient_price(
     ingredient_key: str,
     body: PriceUpdateRequest,
-    user: dict | None = Depends(get_optional_user),
+    request: Request,
+    user: dict = Depends(get_user),
 ):
-    """Corrige le prix d'un paquet dans prices_catalog.json."""
+    """Corrige le prix d'un paquet dans prices_catalog.json.
+
+    Compte obligatoire (le catalogue est partagé : la route était ouverte
+    à tous), 20 corrections/heure par utilisateur, variation limitée à ×5.
+    """
     import json
     from datetime import date
     from pathlib import Path
     from backend.core.data_io import load_prices_catalog
+    from backend.core.rate_limiter import check_rate_limit
+
+    email = user.get("email", "")
+    check_rate_limit(request, limit=PRICE_EDITS_PER_HOUR, window_seconds=3600, email=f"price:{email}")
 
     catalog_path = Path(__file__).parent.parent.parent / "data/config/prices_catalog.json"
     try:
@@ -200,16 +215,22 @@ def update_ingredient_price(
     if not packages:
         raise HTTPException(status_code=422, detail="Aucun conditionnement pour cet ingrédient")
 
-    # Cherche le paquet par label (tolérant aux préfixes "N× ")
+    # Cherche le paquet par label (tolérant aux préfixes "N× "). Plus de repli
+    # silencieux sur le premier paquet : il modifiait un autre conditionnement.
     clean_label = body.package_label.split("× ", 1)[-1] if "× " in body.package_label else body.package_label
     target = next((p for p in packages if p["label"] == clean_label), None)
     if target is None:
-        # fallback : premier paquet
-        target = packages[0]
+        raise HTTPException(status_code=404, detail=f"Conditionnement inconnu : {clean_label}")
 
     old_price = target["price"]
     if old_price > 0:
         ratio = body.new_price / old_price
+        if not (1 / PRICE_MAX_RATIO <= ratio <= PRICE_MAX_RATIO):
+            raise HTTPException(
+                status_code=422,
+                detail=f"Variation trop forte ({old_price} € → {body.new_price} €) : "
+                       f"correction limitée à ×{PRICE_MAX_RATIO:g}",
+            )
         for pkg in packages:
             pkg["price"] = round(pkg["price"] * ratio, 2)
     target["price"] = round(body.new_price, 2)  # exact sur le paquet cible
@@ -218,11 +239,16 @@ def update_ingredient_price(
     entry["user_corrected"]  = True
 
     try:
-        catalog_path.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
+        tmp = catalog_path.with_suffix(".tmp")
+        tmp.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
+        tmp.replace(catalog_path)          # écriture atomique
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Écriture catalogue impossible : {e}")
 
-    # Invalide le cache LRU pour que le prochain appel lise les nouveaux prix
+    logger.info("Prix corrigé par %s : %s [%s] %s → %s €",
+                email, ingredient_key, clean_label, old_price, round(body.new_price, 2))
+
+    # Invalide le cache pour que le prochain appel lise les nouveaux prix
     load_prices_catalog.cache_clear()
 
     return {"ok": True, "ingredient": ingredient_key, "package_label": clean_label,

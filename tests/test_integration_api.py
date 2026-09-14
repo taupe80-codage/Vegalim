@@ -31,16 +31,16 @@ def test_routes_all_have_docstring():
     assert not missing, "Routes sans docstring: " + ", ".join(missing)
 
 def test_all_admin_routes_protected():
-    """Toutes les routes admin ont require_api_key."""
+    """Toutes les routes admin exigent require_admin (clé API + ADMIN_EMAILS)."""
     src = open("backend/api/routes/admin.py", encoding="utf-8").read()
     import re
     defs = re.findall(r"def \w+\(([^)]*)\):", src)
     for sig in defs:
         if "router" in sig.lower():
             continue
-        # Chaque fonction doit avoir require_api_key
-        assert "require_api_key" in sig, \
-            f"Route admin sans require_api_key: {sig[:60]}"
+        # Chaque fonction doit avoir require_admin
+        assert "require_admin" in sig, \
+            f"Route admin sans require_admin: {sig[:60]}"
 
 def test_pydantic_models_all_routes():
     """Aucune route ne reçoit payload:dict brut."""
