@@ -14,6 +14,8 @@ Utilise :
 Retourne macros + micros par portion (÷ servings).
 """
 
+import logging
+logger = logging.getLogger(__name__)
 from backend.db.data_access import get_data
 from backend.engine.config import SERVINGS_DEFAULT, FRYING_CAP_G
 
@@ -333,6 +335,7 @@ def compute_nutrition(recipe: dict,
             from backend.engine.nutrition_form_engine import get_form_factor
             form_factor = get_form_factor(token, form)
         except Exception:
+            logger.debug("compute_nutrition : erreur ignorée (repli)", exc_info=False)
             form_factor = 1.0
 
         f = qty_g / 100.0 * form_factor

@@ -264,6 +264,7 @@ def seasonal(month: int):
         d        = load_ingredients_dict()
         id_to_fr = {k: v.get("canonical_name_fr", k.replace("_", " ").title()) for k, v in d.items()}
     except Exception:
+        logger.warning("seasonal : erreur ignorée (repli)", exc_info=True)
         id_to_fr = {}
     ids = seasonal_ingredients(month)
     return {

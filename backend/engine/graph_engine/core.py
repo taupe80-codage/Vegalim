@@ -169,6 +169,7 @@ def get_cycle_ingredients(phase: str) -> list[str]:
         from backend.core.data_io import load_cycle_data
         cycle_data = load_cycle_data()
     except Exception:
+        logger.warning("get_cycle_ingredients : erreur ignorée (repli)", exc_info=True)
         return []
     phases = cycle_data.get("cycle_phases", {})
     key = phase if phase in phases else f"{phase}_phase"

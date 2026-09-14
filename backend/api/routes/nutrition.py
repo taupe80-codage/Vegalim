@@ -234,7 +234,7 @@ def get_ingredient_sources(
                     or rec.get("titles", {}).get("en")
                 )
         except Exception:
-            pass
+            logger.warning("get_ingredient_sources : erreur ignorée (repli)", exc_info=True)
 
     return {
         "ingredient_id":       ingredient_id,
@@ -329,6 +329,7 @@ def get_ingredient_nutrition(
     try:
         ajr_score = round(compute_ajr_score(nutr), 2)
     except Exception:
+        logger.warning("get_ingredient_nutrition : erreur ignorée (repli)", exc_info=True)
         ajr_score = None
 
     return {

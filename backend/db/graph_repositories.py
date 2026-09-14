@@ -249,7 +249,7 @@ class SubstitutionGraphRepository:
                 from backend.db.culinary_repositories import _log_missing_ingredient
                 _log_missing_ingredient(ingredient, context="graph")
             except Exception:
-                pass
+                logger.warning("get_substitutes : erreur ignorée (repli)", exc_info=True)
             return []
 
         if diet:

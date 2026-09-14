@@ -24,6 +24,7 @@ def _season_bonus(recipe: dict, month: int | None) -> float:
         from backend.engine.rule_engine.seasonality import season_bonus
         return season_bonus(recipe, month)
     except Exception:
+        logger.warning("_season_bonus : erreur ignorée (repli)", exc_info=True)
         return 0.0
 
 

@@ -159,7 +159,8 @@ def save_interaction(email: str, recipe_id: int, action: str,
             )
         return True
     except Exception:
-        pass  # Fallback JSON ci-dessous
+        logger.warning("save_interaction : erreur ignorée (repli)", exc_info=True)
+        # Fallback JSON ci-dessous
 
     # Fallback JSON
     try:

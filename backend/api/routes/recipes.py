@@ -243,7 +243,7 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
                     if c:
                         seen_cuisines.add(c)
         except Exception:
-            pass
+            logger.warning("decouverte : erreur ignorée (repli)", exc_info=True)
 
     cuisine_candidates = [
         r for r in recipes

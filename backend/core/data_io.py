@@ -9,10 +9,11 @@ Correction P2.1 :
   _MtimeCache au lieu de @lru_cache. Le cache est invalidé automatiquement
   si le fichier JSON est modifié sur disque, sans nécessiter de redémarrage.
   Cela couvre les writes produits par : pipeline, search_token_generator,
-  culinary_product_engine, scripts d'import.
+  scripts d'import.
 
-  Les loaders statiques (graphes de nutrition, saisons, etc.) conservent
-  @lru_cache — ils ne sont jamais mis à jour pendant l'exécution du serveur.
+  Les autres loaders (graphes, prix, saisons…) utilisent @data_cached
+  (backend/core/data_cache.py) : cache vidé dès qu'un JSON de backend/data
+  change — ils ne restent plus figés jusqu'au redémarrage.
 
 Correction P2.2 — nutrition_db :
   load_nutrition_db() migré de @lru_cache vers _MtimeCache.

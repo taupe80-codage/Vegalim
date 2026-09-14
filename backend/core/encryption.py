@@ -66,6 +66,7 @@ def decrypt_health(value: str | None) -> str | None:
     try:
         return f.decrypt(value.encode()).decode()
     except Exception:
+        logger.debug("decrypt_health : erreur ignorée (repli)", exc_info=False)
         return value  # Valeur stockée en clair (migration)
 
 

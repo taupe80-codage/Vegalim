@@ -53,6 +53,7 @@ def _load_json(path: Path, default):
     try:
         return json.loads(path.read_text(encoding="utf-8"))
     except Exception:
+        logger.error("_load_json : erreur ignorée (repli)", exc_info=True)
         return default
 
 

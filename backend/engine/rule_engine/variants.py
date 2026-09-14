@@ -40,6 +40,7 @@ def _variant_index() -> dict:
         raw = load_vegan_variants_index()
         return raw.get("original_to_vegan", raw) if isinstance(raw, dict) else {}
     except Exception:
+        logger.warning("_variant_index : erreur ignorée (repli)", exc_info=True)
         return {}
 
 def vegan_variant(recipe: dict) -> dict:

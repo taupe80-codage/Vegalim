@@ -541,6 +541,7 @@ def apply_filters(
             from backend.core.data_io import load_ingredients_dict
             ings_dict = load_ingredients_dict()
         except Exception:
+            logger.warning("apply_filters : erreur ignorée (repli)", exc_info=True)
             ings_dict = {}
 
         def _check_diet_flags(recipe: dict) -> dict:

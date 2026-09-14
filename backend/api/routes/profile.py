@@ -171,7 +171,7 @@ def export_profile(user: dict = Depends(get_user)):
             "personalization_active": stats.get("personalization_active", False),
         }
     except Exception:
-        pass
+        logger.warning("export_profile : erreur ignorée (repli)", exc_info=True)
 
     import datetime
     return {
@@ -209,7 +209,7 @@ def export_profile_csv(user: dict = Depends(get_user)):
             "viewed_count":   len(history.get("viewed", set())),
         }
     except Exception:
-        pass
+        logger.warning("export_profile_csv : erreur ignorée (repli)", exc_info=True)
 
     # Construire le CSV
     output  = io.StringIO()

@@ -10,6 +10,8 @@ API :
 Depuis v6 : résolution FR→EN via fr_to_en_mapping avant lookup dict.
 """
 from __future__ import annotations
+import logging
+logger = logging.getLogger(__name__)
 import unicodedata
 import re
 from backend.core.data_cache import data_cached
@@ -42,6 +44,7 @@ def _synonym_map() -> dict[str, str]:
         ingredients_raw = load_ingredients_dict()
         alias_index = load_ingredients_alias_index()
     except Exception:
+        logger.warning("_synonym_map : erreur ignorée (repli)", exc_info=True)
         return mapping
 
     for canonical, entry in ingredients_raw.items():

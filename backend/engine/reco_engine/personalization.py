@@ -77,6 +77,7 @@ def resolve_user_context(
         from backend.services.scoring_service import resolve_profile
         profile_used = resolve_profile("default", effective_profile)
     except Exception:
+        logger.warning("resolve_user_context : erreur ignorée (repli)", exc_info=True)
         profile_used = "default"
 
     # 4. Capacités
@@ -107,6 +108,7 @@ def _check_learning_eligibility(email: str) -> bool:
             repo = RecipeHistoryRepository(db)
             return len(repo.get_liked_recipe_ids(email)) >= MIN_LIKES_TO_ACTIVATE
     except Exception:
+        logger.debug("_check_learning_eligibility : erreur ignorée (repli)", exc_info=False)
         return False
 
 

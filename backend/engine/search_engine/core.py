@@ -53,6 +53,8 @@ Améliorations v4.1 (inchangées) :
 """
 
 from __future__ import annotations
+import logging
+logger = logging.getLogger(__name__)
 
 import datetime
 import json
@@ -1250,6 +1252,7 @@ def search(
             from backend.core.data_io import load_score_graph
             score_graph = load_score_graph()
         except Exception:
+            logger.warning("search : erreur ignorée (repli)", exc_info=True)
             score_graph = {}
 
     if not season_data:
@@ -1257,6 +1260,7 @@ def search(
             from backend.core.data_io import load_seasonality
             season_data = load_seasonality()
         except Exception:
+            logger.warning("search : erreur ignorée (repli)", exc_info=True)
             season_data = {}
 
     # ── Filtrage combiné — une seule passe (A1–A4 inclus) ────────────────────

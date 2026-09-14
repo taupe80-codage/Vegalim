@@ -223,6 +223,7 @@ def score_recipe(recipe: dict, profile: str = "default", context: dict | None = 
         from backend.engine.score_engine.reliability import reliability as _rel
         rel_status = _rel(recipe)["status"]
     except Exception:
+        logger.debug("score_recipe : erreur ignorée (repli)", exc_info=False)
         rel_status = "unknown"
 
     return {

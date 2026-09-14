@@ -156,7 +156,7 @@ def get_quota(_user: dict = Depends(require_admin)):
             with db_session() as db:          # fix: was next(get_db()) → session never closed
                 used = QuotaRepository(db).get_today_count(key_hash)
     except Exception:
-        pass
+        logger.warning("get_quota : erreur ignorée (repli)", exc_info=True)
 
     limit = plan_info.get("daily_limit", 50)
     return {

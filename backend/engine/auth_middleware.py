@@ -25,6 +25,8 @@ Usage dans main.py :
         ...
 """
 
+import logging
+logger = logging.getLogger(__name__)
 import json
 import uuid
 import hashlib
@@ -137,6 +139,7 @@ def _load(path: Path, default):
         try:
             return _safe_json(path)
         except Exception:
+            logger.warning("_load : erreur ignorée (repli)", exc_info=True)
             return default
     return default
 
@@ -246,7 +249,8 @@ def _log_event(user_id: str, event: str, meta: dict | None = None):
             analytics = analytics[-10_000:]
         _save(ANALYTICS_PATH, analytics)
     except Exception:
-        pass  # Silencieux — le logging ne doit pas casser l'API
+        logger.warning("_log_event : erreur ignorée (repli)", exc_info=True)
+        # Silencieux — le logging ne doit pas casser l'API
 
 
 # ── Admin : stats ──────────────────────────────────────────────────────────────
