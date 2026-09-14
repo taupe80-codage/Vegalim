@@ -4,7 +4,7 @@
  * Utilisé par : HomePage, CyclePage, AstroPage, CycleAstroPage.
  */
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { DISH_OPTIONS } from '../constants';
 
 export { DISH_OPTIONS };
@@ -331,26 +331,18 @@ function getActiveItems(group, selected) {
 }
 
 export function OriginAccordion({ groups, selected, onToggle, onBulkToggle }) {
-  // Utilisation de useRef pour préserver l'état ouvert/fermé même si le composant
-  // est re-rendu fréquemment (changements de origins, fetch API, etc.)
-  const openGroupsRef    = useRef(new Set());
-  const openSubGroupsRef = useRef(new Set());
-  const [, forceRender]  = useState(0);
+  // État ouvert/fermé des groupes : vrai state (des refs lues pendant le rendu
+  // + compteur forceRender contournaient le cycle de rendu React).
+  const [openGroups,    setOpenGroups]    = useState(() => new Set());
+  const [openSubGroups, setOpenSubGroups] = useState(() => new Set());
 
-  const toggleGroupOpen = (id) => {
-    const s = openGroupsRef.current;
-    s.has(id) ? s.delete(id) : s.add(id);
-    forceRender(n => n + 1);
-  };
-
-  const toggleSubGroupOpen = (val) => {
-    const s = openSubGroupsRef.current;
-    s.has(val) ? s.delete(val) : s.add(val);
-    forceRender(n => n + 1);
-  };
-
-  const openGroups    = openGroupsRef.current;
-  const openSubGroups = openSubGroupsRef.current;
+  const toggleIn = (setter) => (key) => setter(prev => {
+    const next = new Set(prev);
+    if (next.has(key)) next.delete(key); else next.add(key);
+    return next;
+  });
+  const toggleGroupOpen    = toggleIn(setOpenGroups);
+  const toggleSubGroupOpen = toggleIn(setOpenSubGroups);
 
   return (
     <div className="fao">
@@ -481,7 +473,7 @@ export function useFilterState(initial = {}) {
   const [openSections,  setOpenSections]  = useState(
     () => new Set(['diet', 'restrictions', 'saison', 'dish', 'allergen', 'difficulty', 'health', 'origin'])
   );
-  const [healthExpanded, setHealthExpanded] = useState(new Set());
+  const [, setHealthExpanded] = useState(new Set());
 
   const _toggleSet = (setter) => (val) =>
     setter(prev => {

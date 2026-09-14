@@ -2,7 +2,6 @@ import { useState, useEffect, useMemo } from 'react';
 import { cycle as cycleApi, recipes as recipesApi } from '../api';
 import RecipeCard, { computeAlimScore } from '../components/RecipeCard';
 import { useFilterState, FiltersBlock, localFilterRecipes } from '../components/RecipeFiltersShared';
-import translations from '../translations.json';
 
 const CYCLE_KEY      = 'alim_cycle_phase';
 const MENOPAUSE_KEY  = 'alim_menopause';
@@ -698,12 +697,11 @@ function CyclePhaseDetail({ phase, phaseIndex, onBack, cycleRecipes }) {
 function MenopauseView() {
   const [tab, setTab] = useState('nutrition');
   const [recipes, setRecipes] = useState([]);
-  const [loadingRecipes, setLoadingRecipes] = useState(false);
+  const [loadingRecipes, setLoadingRecipes] = useState(true);   // chargement lancé au montage
   const [visible, setVisible] = useState(20);
 
   useEffect(() => {
     let cancelled = false;
-    setLoadingRecipes(true);
     recipesApi.list({ tags: 'calcium,omega3,phytoestrogens,protein', limit: 500 })
       .catch(() => recipesApi.list({ limit: 200 }))
       .then(data => { if (!cancelled) setRecipes(data.results || []); })
@@ -1037,9 +1035,9 @@ export default function CyclePage() {
     const saved = localStorage.getItem(CYCLE_KEY);
     return CYCLE_PHASES.some(p => p.id === saved) ? saved : 'menstrual';
   });
-  const [cycleData, setCycleData]       = useState(null);
-  const [loadingCycle, setLoadingCycle] = useState(false);
-  const [errorCycle, setErrorCycle]     = useState(null);
+  const [, setCycleData]    = useState(null);
+  const [, setLoadingCycle] = useState(false);
+  const [, setErrorCycle]   = useState(null);
   const [cycleRecipes, setCycleRecipes] = useState([]);
   const [loadingCycleRecipes, setLoadingCycleRecipes] = useState(false);
   const [cycleVisible, setCycleVisible] = useState(20);

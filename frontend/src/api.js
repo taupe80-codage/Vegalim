@@ -33,7 +33,7 @@ async function request(method, path, body = null) {
     try {
       const err = await res.json();
       detail = err.detail || detail;
-    } catch {}
+    } catch { /* corps d'erreur non JSON : on garde « Erreur <status> » */ }
     throw new Error(detail);
   }
 

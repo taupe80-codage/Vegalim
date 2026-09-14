@@ -11,6 +11,7 @@
  */
 
 import { useState, useMemo, useEffect } from 'react';
+import { useToast } from '../ToastContext';
 import { nutrition as nutritionApi, recipes as recipesApi } from '../api';
 import { navigate } from '../Router';
 
@@ -336,6 +337,7 @@ function DeficiencyCard({ deficiency }) {
 // ── Vue Profil + Journal alimentaire ─────────────────────────────────────────
 
 function ProfilJournalView() {
+  const toast = useToast();
   const [profile, setProfile] = useState(() => {
     try { return { ...PROFILE_DEFAULT, ...JSON.parse(localStorage.getItem(PROFILE_KEY) || '{}') }; }
     catch { return { ...PROFILE_DEFAULT }; }
@@ -381,7 +383,7 @@ function ProfilJournalView() {
     try {
       let full = recipe;
       if (!recipe.nutrition && recipe.id) {
-        try { full = await recipesApi.byId(recipe.id); } catch {}
+        try { full = await recipesApi.byId(recipe.id); } catch { /* repli sur la recette partielle déjà affichée */ }
       }
       const raw = full?.nutrition || full?._nutrition || {};
       const n = { ...raw };
@@ -394,7 +396,9 @@ function ProfilJournalView() {
         recipeName: full?.titles?.fr || full?.title_fr || full?.title || 'Recette',
         nutrition:  n,
       }]);
-    } catch {} finally { setAddingId(null); }
+    } catch (err) {
+      toast(`Impossible d'ajouter la recette : ${err.message || 'erreur réseau'}`, 'error');
+    } finally { setAddingId(null); }
   };
 
   const removeEntry = (id) => setJournal(prev => prev.filter(e => e.id !== id));
@@ -887,7 +891,7 @@ function RecipeNutritionView() {
       // Si la recette vient de la liste elle peut manquer de nutrition → fetch complet
       if (!r.nutrition && r.id) {
         setFetchingFull(true);
-        try { r = await recipesApi.byId(r.id); } catch {}
+        try { r = await recipesApi.byId(r.id); } catch { /* repli sur la recette partielle déjà affichée */ }
         finally { setFetchingFull(false); }
       }
       setRecipe(r);
@@ -1091,7 +1095,7 @@ function RecipeNutritionView() {
           </div>
           {detailEntries.length > 0 && (
             <div className="nutr-details-table">
-              {detailEntries.map(({ key, value, ref, ratio, ok }) => {
+              {detailEntries.map(({ key, ratio, ok }) => {
                 const meta = NUTRIENT_META[key];
                 const pct  = Math.round(ratio * 100);
                 return (
@@ -1294,13 +1298,13 @@ function WeekNutritionView() {
 
 export default function NutritionPage() {
   const [view, setView] = useState(() => {
+    if (window.__alim_pending_recipe) return 'recette';   // recette en attente
     const saved = localStorage.getItem('alim_nutr_view');
     return (saved && saved !== 'apports') ? saved : 'profil';
   });
 
   // Auto-switch to recipe view si recette en attente ou event
   useEffect(() => {
-    if (window.__alim_pending_recipe) setView('recette');
     const handler = () => setView('recette');
     window.addEventListener('alim:recipe-selected', handler);
     return () => window.removeEventListener('alim:recipe-selected', handler);

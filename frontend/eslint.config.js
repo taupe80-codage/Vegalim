@@ -23,7 +23,14 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]', argsIgnorePattern: '^_' }],
+      // Contextes (AuthContext, Router…) et composants exportent aussi des
+      // hooks/constantes : n'affecte que le rechargement à chaud en dev.
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
+  },
+  {
+    files: ['vite.config.js', 'vitest.config.js'],
+    languageOptions: { globals: globals.node },
   },
 ])

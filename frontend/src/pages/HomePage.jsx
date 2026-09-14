@@ -97,7 +97,7 @@ export default function HomePage() {
   const [allergens,      setAllergens]      = useState(new Set(_saved?.allergens || []));
   const [healthFilters,  setHealthFilters]  = useState(new Set(_saved?.healthFilters || []));
   const [subFilters,     setSubFilters]     = useState(new Set(_saved?.subFilters || []));
-  const [healthExpanded, setHealthExpanded] = useState(new Set());
+  const [, setHealthExpanded] = useState(new Set());
   const [dishFilters,    setDishFilters]    = useState(new Set(_saved?.dishFilters || []));
   const [origins,        setOrigins]        = useState(new Set(_saved?.origins || []));
 
@@ -125,7 +125,7 @@ export default function HomePage() {
         subFilters: [...subFilters], dishFilters: [...dishFilters],
         origins: [...origins], maxTime,
       }));
-    } catch {}
+    } catch { /* localStorage indisponible (navigation privée) */ }
   }, [diet, dietExtras, season, difficulty, allergens, healthFilters, subFilters, dishFilters, origins, maxTime]);
 
   const { recent, clear: clearRecent } = useRecentlyViewed();
@@ -310,11 +310,13 @@ export default function HomePage() {
     }
   }, [query, diet, dietExtras, season, difficulty, allergens, healthFilters, subFilters, dishFilters, origins, maxTime]);
 
-  useEffect(() => { fetchRecipes({}); }, []);
-
+  // Recherche au montage ET à chaque changement de filtre (debounce 280 ms).
+  // Un 2e effet « fetchRecipes({}) au montage » doublait l'appel API au chargement.
+  // query/maxTime exclus exprès : la saisie texte déclenche sa propre recherche.
   useEffect(() => {
     const t = setTimeout(() => fetchRecipes({ d: diet, de: dietExtras, se: season, dif: difficulty, al: allergens, hf: healthFilters, sf: subFilters, df: dishFilters, or: origins }), 280);
     return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [diet, dietExtras, season, difficulty, allergens, healthFilters, subFilters, dishFilters, origins]);
 
   // ── Tri local ─────────────────────────────────────────────────────────────

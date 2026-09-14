@@ -354,7 +354,7 @@ export default function FrigoPage() {
         dishFilters:   [...fs.dishFilters],
         origins:       [...fs.origins],
       }));
-    } catch {}
+    } catch { /* localStorage indisponible (navigation privée) */ }
   }, [fs.diet, fs.dietExtras, fs.season, fs.difficulty, fs.allergens,
       fs.healthFilters, fs.subFilters, fs.dishFilters, fs.origins]);
 

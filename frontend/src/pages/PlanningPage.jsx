@@ -11,6 +11,7 @@
  */
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { useToast } from '../ToastContext';
 import { createPortal } from 'react-dom';
 import { planning as planningApi, recipes as recipesApi } from '../api';
 import { navigate } from '../Router';
@@ -118,12 +119,12 @@ const MEAL_DEFAULTS = {
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function _loadPlanFilters() {
-  try { const r = localStorage.getItem(PLAN_FILTERS_KEY); if (r) return JSON.parse(r); } catch {}
+  try { const r = localStorage.getItem(PLAN_FILTERS_KEY); if (r) return JSON.parse(r); } catch { /* localStorage indisponible ou JSON corrompu */ }
   return {};
 }
 
 function _loadPlanMeals() {
-  try { const r = localStorage.getItem(PLAN_MEALS_KEY); if (r) return JSON.parse(r); } catch {}
+  try { const r = localStorage.getItem(PLAN_MEALS_KEY); if (r) return JSON.parse(r); } catch { /* localStorage indisponible ou JSON corrompu */ }
   return { breakfast: false, lunch: true, dinner: true };
 }
 
@@ -216,6 +217,7 @@ function SlotPickerPortal({ pos, onClose, children }) {
 // ── RecipeSearchModal ─────────────────────────────────────────────────────────
 
 function RecipeSearchModal({ onSelect, onClose }) {
+  const toast = useToast();
   const [query,     setQuery]     = useState('');
   const [results,   setResults]   = useState([]);
   const [searching, setSearching] = useState(false);
@@ -228,11 +230,13 @@ function RecipeSearchModal({ onSelect, onClose }) {
         const data = await recipesApi.search({ query: query.trim(), limit: 12 });
         const list = Array.isArray(data) ? data : (data?.results || data?.recipes || []);
         setResults(list);
-      } catch {}
+      } catch (err) {
+        toast(`Recherche impossible : ${err.message || 'erreur réseau'}`, 'error');
+      }
       finally { setSearching(false); }
     }, 300);
     return () => clearTimeout(t);
-  }, [query]);
+  }, [query, toast]);
 
   return (
     <div className="rsm-overlay" onClick={e=>e.target===e.currentTarget&&onClose()}>
@@ -612,7 +616,7 @@ function _fmtNet(value, unit) {
   const v = value === Math.round(value) ? Math.round(value) : Math.round(value * 10) / 10;
   const label = { g:'g', ml:'ml', kg:'kg', piece:'pièce', pieces:'pièces',
     pinch:'pincée', leaf:'feuille', tbsp:'c. à s.', tsp:'c. à c.' };
-  return `${v} ${label[unit]||unit}`;
+  return `${v}\u202f${label[unit]||unit}`;   // espace fine insécable
 }
 
 // ── ShoppingView ──────────────────────────────────────────────────────────────
@@ -678,14 +682,14 @@ function ShoppingView({shopping, checked, fridgeIds, fridgeQtys, fridgeSufficien
     if (navigator.share) {
       try {
         await navigator.share({ title: '🛒 Liste de courses', text });
-      } catch {} // annulation utilisateur
+      } catch { /* partage annulé par l'utilisateur */ }
     } else {
       // Fallback : copie dans le presse-papier
       try {
         await navigator.clipboard.writeText(text);
         setCopyDone(true);
         setTimeout(() => setCopyDone(false), 2500);
-      } catch {}
+      } catch { /* presse-papier refusé par le navigateur */ }
     }
   };
 
@@ -728,7 +732,6 @@ function ShoppingView({shopping, checked, fridgeIds, fridgeQtys, fridgeSufficien
                 const id        = item.ingredient;
                 const sufficient = fridgeSufficient.has(id);
                 const fQty      = !sufficient ? (fridgeQtys[id] || 0) : 0;
-                const netValue  = sufficient ? 0 : (item.qty_value != null ? Math.max(0, item.qty_value - fQty) : null);
                 const fullyCovered = sufficient || (item.qty_value != null && fQty >= item.qty_value);
                 const isDone    = checked.has(id) || fullyCovered;
                 return (
@@ -927,7 +930,7 @@ export default function PlanningPage() {
     try {
       const raw = localStorage.getItem(PLAN_KEY);
       if (raw) { const saved = JSON.parse(raw); if (saved && saved.lundi) return saved; }
-    } catch {}
+    } catch { /* localStorage indisponible ou JSON corrompu */ }
     return createDefaultPlan();
   });
 
@@ -952,19 +955,19 @@ export default function PlanningPage() {
 
   // ── Persistance ───────────────────────────────────────────────────────────
   useEffect(()=>{
-    try{if(plan)localStorage.setItem(PLAN_KEY,JSON.stringify(plan));else localStorage.removeItem(PLAN_KEY);}catch{}
+    try{if(plan)localStorage.setItem(PLAN_KEY,JSON.stringify(plan));else localStorage.removeItem(PLAN_KEY);}catch{ /* localStorage indisponible */ }
   },[plan]);
 
   useEffect(()=>{
-    try{localStorage.setItem(CHECKED_KEY,JSON.stringify([...checked]));}catch{}
+    try{localStorage.setItem(CHECKED_KEY,JSON.stringify([...checked]));}catch{ /* localStorage indisponible */ }
   },[checked]);
 
   useEffect(()=>{
-    try{localStorage.setItem(FRIGO_QTYS_KEY,JSON.stringify(fridgeQtys));}catch{}
+    try{localStorage.setItem(FRIGO_QTYS_KEY,JSON.stringify(fridgeQtys));}catch{ /* localStorage indisponible */ }
   },[fridgeQtys]);
 
   useEffect(()=>{
-    try{localStorage.setItem(FRIGO_SUFFICIENT_KEY,JSON.stringify([...fridgeSufficient]));}catch{}
+    try{localStorage.setItem(FRIGO_SUFFICIENT_KEY,JSON.stringify([...fridgeSufficient]));}catch{ /* localStorage indisponible */ }
   },[fridgeSufficient]);
 
   useEffect(()=>{
@@ -979,15 +982,15 @@ export default function PlanningPage() {
         origins:       [...fs.origins],
         maxTime:       fs.maxTime,
       }));
-    }catch{}
+    }catch{ /* localStorage indisponible */ }
   },[fs.diet, fs.dietExtras, fs.difficulty, fs.allergens, fs.healthFilters, fs.subFilters, fs.origins, fs.maxTime]);
 
   useEffect(()=>{
-    try{localStorage.setItem(PLAN_MEALS_KEY, JSON.stringify(enabledMeals));}catch{}
+    try{localStorage.setItem(PLAN_MEALS_KEY, JSON.stringify(enabledMeals));}catch{ /* localStorage indisponible */ }
   },[enabledMeals]);
 
   useEffect(()=>{
-    try{localStorage.setItem('alim_plan_diversity', String(diversity));}catch{}
+    try{localStorage.setItem('alim_plan_diversity', String(diversity));}catch{ /* localStorage indisponible */ }
   },[diversity]);
 
   // ── Helpers UI ────────────────────────────────────────────────────────────
@@ -1137,7 +1140,7 @@ export default function PlanningPage() {
       }
     }catch(err){console.error('replace:',err.message);}
     finally{setReplacing(null);}
-  },[plan, month, fs.diet, fs.difficulty]);
+  },[plan, month, fs.diet, fs.difficulty, fs.allergens]);
 
   // ── Recherche manuelle ────────────────────────────────────────────────────
   const handleSearchSelect = useCallback((recipe)=>{

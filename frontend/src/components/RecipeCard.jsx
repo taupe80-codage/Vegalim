@@ -7,7 +7,7 @@
  *  - Badge +N cliquable avec popover
  *  - Difficulté repositionnée dans le détail au niveau des durées
  */
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { navigate } from '../Router';
 import { useFavorites } from '../FavoritesContext';
 import AddToPlanModal from './AddToPlanModal';
@@ -450,7 +450,7 @@ function buildNutrPctMap(recipe) {
   // 1. Données précalculées (_nutrition avec pct_ajr) — format haut de gamme
   const pre = recipe._nutrition;
   if (pre && typeof pre === 'object') {
-    for (const [key, ajr] of Object.entries(NUTR_AJR)) {
+    for (const key of Object.keys(NUTR_AJR)) {
       const pct = pre[key]?.pct_ajr;
       if (pct != null && !isNaN(pct)) map[key] = pct;
     }
@@ -662,7 +662,7 @@ export function getRecipeImageUrl(recipe) {
 
 // ── RecipeVisual — image réelle ou gradient fallback ─────────────────────────
 
-export function RecipeVisual({ recipe, size = 'card', score = null, alimScore = null }) {
+export function RecipeVisual({ recipe, size = 'card', score: _score = null, alimScore = null }) {
   // Priorité : image_url API → image locale slugifiée → gradient emoji
   const imgUrl = recipe.image_url || recipe.image || getRecipeImageUrl(recipe);
   const [imgFailed, setImgFailed] = useState(false);

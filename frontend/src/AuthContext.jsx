@@ -12,12 +12,12 @@ const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [user,    setUser]    = useState(null);
-  const [loading, setLoading] = useState(true); // vrai tant que le token n'est pas vérifié
+  // vrai tant que le token n'est pas vérifié (faux d'emblée sans token)
+  const [loading, setLoading] = useState(() => !!getToken());
 
   // Au montage : si un token existe, récupérer le profil utilisateur
   useEffect(() => {
-    const token = getToken();
-    if (!token) { setLoading(false); return; }
+    if (!getToken()) return;
 
     authApi.me()
       .then(setUser)
