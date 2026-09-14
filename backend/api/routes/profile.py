@@ -62,7 +62,7 @@ def delete_profile_route(user: dict = Depends(get_user)):
 # ── Routes learning ───────────────────────────────────────────────────────────
 
 class InteractionPayload(BaseModel):
-    recipe_id:    int
+    recipe_id:    str            # ex. « pasta_lasagnes_vegan_412e90 »
     action:       str = "view"   # view | like | dislike | plan | cook | skip
     score_shown:  float | None = None
     profile_used: str   | None = None
@@ -81,6 +81,11 @@ def record_interaction(payload: InteractionPayload,
     if payload.action not in VALID_ACTIONS:
         raise HTTPException(status_code=400,
             detail=f"Action invalide. Valeurs : {sorted(VALID_ACTIONS)}")
+    # recipe_id était typé int alors que les identifiants sont textuels :
+    # toutes les interactions répondaient 422 (constaté le 2026-09-14).
+    from backend.core.data_io import load_recipes
+    if not any(r.get("id") == payload.recipe_id for r in load_recipes()):
+        raise HTTPException(status_code=404, detail="Recette inconnue")
 
     try:
         from backend.services.interaction_service import save_interaction

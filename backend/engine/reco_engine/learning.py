@@ -121,9 +121,9 @@ def load_history(email: str) -> dict:
 
     Returns:
         {
-          "liked":    set[int],   # recipe_ids likés
-          "disliked": set[int],   # recipe_ids dislikés
-          "viewed":   set[int],   # recipe_ids vus
+          "liked":    set[str],   # recipe_ids likés
+          "disliked": set[str],   # recipe_ids dislikés
+          "viewed":   set[str],   # recipe_ids vus
           "raw":      list        # liste brute (recipe_id, action)
         }
     """
@@ -133,7 +133,7 @@ def load_history(email: str) -> dict:
     return history or {"liked": set(), "disliked": set(), "viewed": set(), "raw": []}
 
 
-def save_interaction(email: str, recipe_id: int, action: str,
+def save_interaction(email: str, recipe_id: str, action: str,
                      score_shown: Optional[float] = None,
                      profile_used: Optional[str] = None) -> bool:
     """
@@ -205,7 +205,7 @@ def extract_preferences(email: str) -> dict:
           "techniques_preferred":set[str]  — techniques fréquentes dans likes
           "difficulty_comfort":  int | None — 1/2/3
           "time_window":         tuple[int,int] | None — (min, max) minutes
-          "disliked_ids":        set[int]
+          "disliked_ids":        set[str]
         }
     """
     from backend.core.data_io import load_recipes
