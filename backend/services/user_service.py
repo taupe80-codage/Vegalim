@@ -121,6 +121,24 @@ def authenticate(email: str, password: str) -> dict | None:
         return {"email": email}
 
 
+def account_is_active(email: str) -> bool:
+    """
+    Le compte existe-t-il encore (et est-il actif) ?
+
+    Un JWT reste signé valide jusqu'à expiration : sans ce contrôle, un compte
+    supprimé (RGPD) pouvait encore appeler les routes protégées et renouveler
+    son jeton via /auth/refresh (constaté le 2026-09-14).
+    """
+    if not email:
+        return False
+    if _use_db():
+        with db_session() as db:
+            user = UserRepository(db).get_by_email(email)
+            return bool(user and user.is_active)
+    with _json_lock:
+        return email in _load()
+
+
 def delete_user(email: str) -> bool:
     """Supprime le compte. Retourne True si supprimé."""
     if _use_db():

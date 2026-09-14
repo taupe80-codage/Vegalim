@@ -37,13 +37,19 @@ def get_user(authorization: Optional[str] = Header(default=None)) -> dict:
         )
     token = authorization.removeprefix("Bearer ").strip()
     data  = verify_token(token)
-    if not data:
+    if not data or not _account_active(data):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Token invalide ou expiré",
             headers={"WWW-Authenticate": "Bearer"},
         )
     return data
+
+
+def _account_active(claims: dict) -> bool:
+    """Jeton signé valide ET compte toujours existant (supprimé → refusé)."""
+    from backend.services.user_service import account_is_active
+    return account_is_active(str(claims.get("email") or ""))
 
 
 # ── JWT Bearer — optionnel (CDC_06 plan freemium) ─────────────────────────────
@@ -67,7 +73,7 @@ def get_optional_user(authorization: Optional[str] = Header(default=None)) -> di
         return None
     try:
         data = verify_token(token)
-        return data if data else None
+        return data if data and _account_active(data) else None
     except Exception:
         return None
 

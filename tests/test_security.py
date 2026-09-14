@@ -27,7 +27,9 @@ def client():
 
 
 @pytest.fixture()
-def auth_headers():
+def auth_headers(monkeypatch):
+    import backend.services.user_service as users
+    monkeypatch.setattr(users, "account_is_active", lambda email: email == "securite@test.fr")
     return {"Authorization": f"Bearer {create_token({'email': 'securite@test.fr'})}"}
 
 
@@ -119,3 +121,21 @@ def test_jeton_reset_expose_seulement_en_dev_explicite(monkeypatch, env, exposed
     for k, v in env.items():
         monkeypatch.setenv(k, v)
     assert _Settings().is_explicit_development is exposed
+
+
+# ── Jeton d'un compte supprimé ────────────────────────────────────────────────
+
+def test_jeton_de_compte_supprime_refuse(client, monkeypatch):
+    """Régression 2026-09-14 : le JWT d'un compte effacé restait accepté 24 h."""
+    import backend.services.user_service as users
+    monkeypatch.setattr(users, "account_is_active", lambda email: False)
+    headers = {"Authorization": f"Bearer {create_token({'email': 'efface@test.fr'})}"}
+    assert client.get("/profil/likes", headers=headers).status_code == 401
+    assert client.post("/auth/refresh", headers=headers).status_code == 401
+
+
+def test_jeton_de_compte_supprime_ignore_en_auth_optionnelle(monkeypatch):
+    import backend.services.user_service as users
+    from backend.core.auth_deps import get_optional_user
+    monkeypatch.setattr(users, "account_is_active", lambda email: False)
+    assert get_optional_user(f"Bearer {create_token({'email': 'efface@test.fr'})}") is None
