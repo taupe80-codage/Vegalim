@@ -51,8 +51,21 @@ def total_weight_g(recipe: dict) -> float:
                if isinstance(c.get('quantity'), (int, float)))
 
 
+def recipe_yield(recipe: dict) -> float:
+    """
+    Rendement de la préparation (poids obtenu / poids des ingrédients), champ
+    `yield_factor` de la recette. Sans lui, un paneer fait avec 1 L de lait
+    était compté à la densité du lait (62 kcal/100 g au lieu d'environ 300) et
+    un concentré de tomate à celle des tomates crues (constaté le 2026-09-14).
+    Approximation : les nutriments du liquide éliminé (petit-lait, vapeur,
+    pulpe filtrée) restent comptés — surestime surtout le lactose des fromages.
+    """
+    y = recipe.get('yield_factor')
+    return float(y) if isinstance(y, (int, float)) and 0 < y <= 1 else 1.0
+
+
 def build_entry(recipe: dict) -> dict:
-    weight = total_weight_g(recipe)
+    weight = total_weight_g(recipe) * recipe_yield(recipe)
     nutr = compute_nutrition(recipe, servings=1)
     per100 = {k: (round(v * 100 / weight, 2) if isinstance(v, (int, float)) and weight else v)
               for k, v in nutr.items() if k not in DROP_KEYS}

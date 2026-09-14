@@ -151,16 +151,21 @@ dans `backend/data/nutrition/logs/raw_sources_manifest.json`.
 ```bash
 python scripts/nutrition/build_n2_direct.py --promote
 python scripts/nutrition/build_dict_v2.py
-python scripts/nutrition/build_physical_v2.py          # ingredient_physical.json
 python scripts/nutrition/build_indexes.py
-python scripts/nutrition/build_base_recipe_aliases.py  # alias des préparations base_*
 python scripts/recipes/fix_recipe_diet_allergens.py
 python scripts/recipes/build_derived_base_registry.py   # alterner avec la ligne précédente jusqu'à 0 changement
 python scripts/recipes/rebuild_graphs.py
 ```
 
-Portions irréalistes : `python scripts/recipes/propose_servings.py` produit une
-proposition CSV à valider, appliquée avec `--apply`.
+Portions irréalistes : `python scripts/recipes/propose_servings.py` (plats,
+par l'énergie) ou `--components` (préparations de base, portions de référence
+en grammes et rendement `yield_factor`) produit une proposition CSV à valider,
+appliquée avec `--apply`.
+
+`build_physical_v2.py` et `build_base_recipe_aliases.py` (lancés par
+`run_pipeline.bat`) ne font **pas** partie de ce rebuild : ils régénèrent
+`ingredient_physical.json` et les alias de préparations avec d'autres clés que
+les fichiers actuels (vérifié le 2026-09-14) — à ne relancer qu'après revue.
 
 ---
 

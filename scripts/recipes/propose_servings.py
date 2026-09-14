@@ -28,7 +28,9 @@ dense par nature). On part d'une PORTION DE RÉFÉRENCE en grammes de
 préparation (COMPONENT_PORTION_G : cuillère de ghee 10 g, confiture 20 g,
 verre de lait végétal 250 ml…) et du poids total préparé (eau comprise) :
 servings = poids total / portion. Seules les préparations dont la portion
-actuelle s'écarte de plus de 30 % de la référence sont proposées.
+actuelle s'écarte de plus de 30 % de la référence sont proposées. Le poids
+tient compte du rendement `yield_factor` de la recette (concentré de tomate
+0,35, paneer 0,2…), aussi utilisé par build_derived_base_registry.py.
 """
 import argparse, csv, json, logging, sys
 from pathlib import Path
@@ -101,21 +103,6 @@ COMPONENT_PORTION_G = {
     'base_soy_milk_827b25': 250, 'base_vegetable_broth_303b7d': 250,
     'base_dashi_broth_a3a517': 250, 'miso_broth_618f1e': 250, 'base_mala_broth_1ab129': 250,
 }
-# Rendement (poids obtenu / poids des ingrédients) des préparations réduites,
-# égouttées ou filtrées — sinon les portions se comptent sur le poids cru
-# (1 kg de tomates ≠ 1 kg de concentré). Défaut : 1.
-COMPONENT_YIELD = {
-    'base_tomato_paste_26412f': 0.35,       # réduction
-    'base_strawberry_jam_1e5515': 0.80,     # cuisson du sucre
-    'base_fried_onion_217e6a': 0.40,        # perte d'eau des oignons
-    'base_gundruk_94c079': 0.60,            # flétrissement, jus de fermentation
-    'base_kashk_fd3ac6': 0.50,              # réduction du yaourt
-    'tamarind_paste_b740bb': 0.80,          # fibres et graines retirées
-    'base_cream_cheese_c6e3b6': 0.35,       # petit-lait égoutté
-    'base_oat_cream_954865': 0.85,          # pulpe filtrée
-    'base_soy_cream_4dc027': 0.85,          # okara filtré
-    'base_ghee_ec9064': 0.85,               # eau et protéines du beurre retirées
-}
 COMPONENT_TOLERANCE = 0.30
 MAX_COMPONENT_SERVINGS = 60
 
@@ -133,6 +120,12 @@ def solid_weight_g(recipe: dict) -> float:
             continue
         total += g
     return total
+
+
+def recipe_yield(recipe: dict) -> float:
+    """Rendement `yield_factor` de la recette (réduction, égouttage, filtrage) — défaut 1."""
+    y = recipe.get('yield_factor')
+    return float(y) if isinstance(y, (int, float)) and 0 < y <= 1 else 1.0
 
 
 def total_weight_g(recipe: dict) -> float:
@@ -157,7 +150,7 @@ def component_proposals() -> list[dict]:
         if ref is None:
             continue
         current = ne.resolve_servings(r)
-        weight = total_weight_g(r) * COMPONENT_YIELD.get(r['id'], 1.0)
+        weight = total_weight_g(r) * recipe_yield(r)
         per_portion = weight / current
         if abs(per_portion - ref) / ref <= COMPONENT_TOLERANCE:
             continue
@@ -170,7 +163,7 @@ def component_proposals() -> list[dict]:
             'titre': (r.get('titles') or {}).get('fr', ''),
             'dish_type': r.get('dish_type'),
             'poids_obtenu_g': round(weight),
-            'rendement': COMPONENT_YIELD.get(r['id'], 1.0),
+            'rendement': recipe_yield(r),
             'portion_reference_g': ref,
             'servings_actuels': current,
             'g_par_portion_actuel': round(per_portion),

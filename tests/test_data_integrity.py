@@ -694,3 +694,45 @@ if __name__ == "__main__":
             print(f"  ❌ {name}: {e}")
             fail += 1
     print(f"\n{ok}/{ok+fail} tests passés")
+
+
+# ── Calories dérivées : jamais sur des macros incomplètes ─────────────────────
+# Constaté le 2026-09-14 : Atwater appliqué avant la dérivation des glucides →
+# mûre 6 kcal/100 g, oignon vert 2,7, chou chinois 4,2, 15 haricots secs
+# ~110 au lieu de ~275. Correctif dans build_n2_direct.extract_nutrients.
+
+def test_calories_atwater_jamais_sans_glucides():
+    suspects = []
+    for base, data in load_nutrition_db().items():
+        for vname, v in (data.get("variants") or {}).items():
+            if (v.get("_calories_derived") == "atwater" and v.get("carbs_g") is None
+                    and (v.get("fat_g") or 0) < 50):
+                suspects.append((base, vname, v.get("calories_kcal")))
+    assert not suspects, (
+        f"{len(suspects)} calories Atwater calculées sans glucides (sous-estimées) — "
+        f"relancer build_n2_direct.py --promote : {suspects[:10]}"
+    )
+
+
+def test_extract_nutrients_derive_glucides_avant_calories():
+    b = _import_script("scripts/nutrition/build_n2_direct.py", "build_n2_direct")
+    # mûre USDA : pas de glucides ni de lipides, sucres + fibres renseignés
+    mure = b.extract_nutrients({"protein_g": 1.53, "sugar_g": 6.5, "fiber_g": 5.3, "water_g": 86.4})
+    assert mure["carbs_g"] == pytest.approx(11.8) and mure["calories_kcal"] == pytest.approx(53.3, abs=0.2)
+    # glucides par différence quand les cendres sont connues
+    diff = b.extract_nutrients({"protein_g": 1.0, "fat_g": 0.2, "water_g": 92.0, "ash_g": 0.8})
+    assert diff["_carbs_derived"] == "difference" and diff["carbs_g"] == pytest.approx(6.0)
+    # glucides inconnus et non dérivables → pas de calories plutôt qu'une valeur fausse
+    assert "calories_kcal" not in b.extract_nutrients({"protein_g": 0.7, "water_g": 91.7})
+    # aliment gras sans glucides renseignés (beurre) → calories calculées
+    assert b.extract_nutrients({"fat_g": 81.0, "protein_g": 0.9})["calories_kcal"] == pytest.approx(732.6)
+
+
+def test_rendement_pris_en_compte_dans_le_registre():
+    """Paneer (1 L de lait, rendement 0,2) : densité d'un fromage, pas du lait."""
+    import json
+    from backend.engine.config import DATA_ROOT
+    reg = json.loads((DATA_ROOT / "ingredients" / "derived_from_base_recipes.json")
+                     .read_text(encoding="utf-8"))["recipes"]
+    assert 250 <= reg["base_paneer_04e1db"]["nutrition_per_100g"]["calories"] <= 380
+    assert reg["base_ghee_ec9064"]["nutrition_per_100g"]["calories"] >= 850

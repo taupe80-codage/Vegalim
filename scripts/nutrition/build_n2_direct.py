@@ -961,21 +961,11 @@ def extract_nutrients(raw: dict) -> dict:
             out['calories_kcal'] = round(float(kj) / 4.184, 1)
             out['_calories_derived'] = 'kj'
 
-    # ── Dérivation 2 : calories_kcal via Atwater si kJ aussi absent ──────────
-    # Atwater général : 4 kcal/g prot+glucides, 9 kcal/g lipides, 7 kcal/g alcool
-    # Utilisé quand ni la valeur source ni kJ ne sont disponibles (ou kJ=0 sentinel).
-    if not out.get('calories_kcal'):  # None ou 0.0 → Atwater
-        prot  = out.get('protein_g')  or 0.0
-        carbs = out.get('carbs_g')    or 0.0
-        fat   = out.get('fat_g')      or 0.0
-        alc   = out.get('alcohol_g')  or 0.0
-        if prot + carbs + fat > 0:
-            out['calories_kcal'] = round(4*prot + 4*carbs + 9*fat + 7*alc, 1)
-            out['_calories_derived'] = 'atwater'
-
-    # ── Dérivation 3 : carbs_g depuis fractions si absent ────────────────────
-    # glucides totaux ≈ amidon + sucres + fibres + polyols + acides organiques
-    # (méthode par différence des fractions disponibles)
+    # ── Dérivation 2 : carbs_g si absent (AVANT Atwater) ─────────────────────
+    # Auparavant calculée après Atwater : les calories d'aliments sans glucides
+    # renseignés sortaient avec 0 g de glucides (mûre 6 kcal, oignon vert
+    # 2,7 kcal, chou chinois 4,2 kcal — constaté le 2026-09-14).
+    # 2a. somme des fractions : amidon + sucres + fibres + polyols + acides organiques
     if 'carbs_g' not in out:
         fractions = [
             out.get('starch_g'), out.get('sugar_g'),
@@ -985,6 +975,32 @@ def extract_nutrients(raw: dict) -> dict:
         if len(parts) >= 2:  # au moins 2 fractions connues pour être fiable
             out['carbs_g'] = round(sum(parts), 3)
             out['_carbs_derived'] = True
+    # 2b. par différence : 100 − eau − protéines − lipides − cendres − alcool
+    #     (fibres incluses, comme la somme des fractions ci-dessus)
+    if 'carbs_g' not in out and out.get('water_g') is not None and out.get('protein_g') is not None:
+        ash = raw.get('ash_g')
+        if ash is not None:
+            diff = 100.0 - out['water_g'] - out['protein_g'] - (out.get('fat_g') or 0.0) \
+                   - float(ash) - (out.get('alcohol_g') or 0.0)
+            out['carbs_g'] = round(max(diff, 0.0), 3)
+            out['_carbs_derived'] = 'difference'
+
+    # ── Dérivation 3 : calories_kcal via Atwater si kJ aussi absent ──────────
+    # Atwater général : 4 kcal/g prot+glucides, 9 kcal/g lipides, 7 kcal/g alcool
+    # Utilisé quand ni la valeur source ni kJ ne sont disponibles (ou kJ=0 sentinel).
+    # Glucides requis, sauf aliments gras (beurre, huile : glucides ≈ 0) : sans
+    # eux la valeur serait fausse (quasi nulle pour un fruit, un légume, une
+    # légumineuse) — mieux vaut pas de valeur qu'une valeur fausse.
+    if not out.get('calories_kcal'):  # None ou 0.0 → Atwater
+        prot  = out.get('protein_g')  or 0.0
+        carbs = out.get('carbs_g')
+        fat   = out.get('fat_g')      or 0.0
+        alc   = out.get('alcohol_g')  or 0.0
+        if carbs is None and fat >= 50:
+            carbs = 0.0
+        if carbs is not None and prot + carbs + fat > 0:
+            out['calories_kcal'] = round(4*prot + 4*carbs + 9*fat + 7*alc, 1)
+            out['_calories_derived'] = 'atwater'
 
     # ── Dérivation 4 : sugar_g depuis sucres détaillés si absent ─────────────
     # fructose + glucose + galactose + saccharose + lactose + maltose
