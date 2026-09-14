@@ -504,6 +504,52 @@ def test_tags_allergenes_ne_contredisent_pas_les_regimes():
     assert not vocab, f"Tags allergènes hors vocabulaire recettes : {vocab}"
 
 
+def test_unites_de_composition_connues():
+    # Constaté le 2026-09-14 : « 1 pincée » de muscade comptée 50 g (repli par
+    # défaut des unités inconnues). Toute ligne chiffrée doit avoir une unité
+    # convertible (table UNIT_TO_G, pièce, ou ingredient_physical).
+    from backend.engine import nutrition_engine as ne
+    inconnues = []
+    for r in RECIPES:
+        for c in r.get("composition", []):
+            q = c.get("quantity")
+            if not isinstance(q, (int, float)) or q <= 0:
+                continue
+            u = (c.get("unit") or "piece").lower()
+            if (u not in ne.UNIT_TO_G and u not in ne._PIECE_UNITS
+                    and ne._physical_unit_g(c["ingredient"], u) is None):
+                inconnues.append((r["id"], c["ingredient"], q, u))
+    assert not inconnues, f"{len(inconnues)} lignes à unité inconnue (comptées 50 g) : {inconnues[:10]}"
+
+
+def test_kcal_par_portion_plausibles():
+    # Constaté le 2026-09-14 : servings = valeur par défaut du type de plat pour
+    # toutes les recettes (brioche 500 g de farine « pour 2 » = 1 855 kcal/portion).
+    # Corrigé via scripts/recipes/propose_servings.py (liste validée).
+    from backend.core.data_io import is_component_recipe
+    ps = _import_script("scripts/recipes/propose_servings.py", "propose_servings")
+    hors_plage = [
+        (r["id"], r.get("dish_type"), NUTR_G[r["id"]]["calories"])
+        for r in RECIPES
+        if not is_component_recipe(r) and r.get("dish_type") in ps.KCAL_MAX
+        and (NUTR_G.get(r["id"], {}).get("calories") or 0) > ps.KCAL_MAX[r["dish_type"]]
+    ]
+    assert not hors_plage, (
+        f"{len(hors_plage)} recettes au-delà des kcal/portion plausibles — "
+        f"lancer scripts/recipes/propose_servings.py et valider : {hors_plage[:10]}"
+    )
+
+
+def test_classements_sans_sous_recettes():
+    # Constaté le 2026-09-14 : /recettes/top ne proposait que des base_*
+    # (la recherche sans requête renvoyait l'ordre du fichier).
+    from backend.core.data_io import is_component_recipe
+    from backend.engine.reco_engine.orchestrator import _all_dishes
+    plats = _all_dishes()
+    assert len(plats) >= 700, f"catalogue de plats incomplet : {len(plats)}"
+    assert not [r["id"] for r in plats if is_component_recipe(r)]
+
+
 def test_bouillon_deshydrate_pas_dose_en_liquide():
     fix = _import_script("scripts/recipes/fix_stock_reconstitution.py", "fix_stock_reconstitution")
     liquides = [(r["id"], c.get("quantity"), c.get("unit"))
