@@ -31,6 +31,7 @@ from backend.services.enrichment_service import enrich_one, enrich_why
 from backend.core.data_io          import (
     load_recipes, load_nutrition_graph, load_score_graph,
     load_ingredients_dict, load_availability_graph, recipe_cuisine,
+    is_component_recipe,
 )
 
 # Engines utilisés directement dans ce fichier (variante vegan + similaires)
@@ -209,7 +210,7 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
     import datetime, hashlib
     from backend.engine.rule_engine.seasonality import seasonal_ingredients  # fix: était absent → NameError
 
-    recipes   = load_recipes()
+    recipes   = [r for r in load_recipes() if not is_component_recipe(r)]
     sg        = load_score_graph()
     ng        = load_nutrition_graph()
     email     = (user or {}).get("email")
@@ -219,8 +220,8 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
 
     # ── 1. Recette du jour ────────────────────────────────────────────────────
     def season_score(r):
-        ings = {(i.get("ingredient_id", "") if isinstance(i, dict) else str(i)).lower()
-                for i in r.get("ingredients", [])}
+        ings = {str(c.get("ingredient", "")).lower() for c in r.get("composition", [])
+                if isinstance(c, dict)}
         ratio = len(ings & in_season) / max(len(ings - {"salt", "pepper", "oil"}), 1)
         base  = sg.get(str(r["id"]), {}).get("overall_score", 5.0)
         return ratio * 4 + base * 0.6
@@ -285,7 +286,7 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
             "id": cuisine_a_explorer.get("id"),
             "title_fr": cuisine_a_explorer.get("titles", {}).get("fr"),
             "iconic_score": cuisine_a_explorer.get("scoring", {}).get("iconic", {}).get("score"),
-            "cuisine": (cuisine_a_explorer.get("scoring", {}).get("iconic") or {}).get("cuisine_origin", ""),
+            "cuisine": recipe_cuisine(cuisine_a_explorer),
             "raison":  "cuisine_non_explorée",
         },
         "surprise_nutritionnelle": {

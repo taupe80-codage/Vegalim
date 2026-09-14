@@ -11,6 +11,7 @@ Couverture :
                               nutriments à limiter exclus / ajr personnalisé
     summarize_deficiencies    structure / high vs medium / liste vide
     NUTRIENT_WEIGHTS          cohérence des poids plant-based
+    meal_score                portion : calories non récompensées, pénalités
 """
 from __future__ import annotations
 
@@ -311,3 +312,35 @@ class TestSummarizeDeficiencies:
         s = ajr.summarize_deficiencies(defics)
         assert "x" not in s["high"]
         assert "x" not in s["medium"]
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# meal_score — score d'une portion
+# ═══════════════════════════════════════════════════════════════════════════════
+
+class TestMealScore:
+
+    def test_vide(self, ajr):
+        assert ajr.meal_score({})["score"] == 0.0
+
+    def test_bornes(self, ajr):
+        assert 0.0 <= ajr.meal_score(NUTR_COMPLET)["score"] <= 10.0
+        assert 0.0 <= ajr.meal_score(NUTR_PAUVRE)["score"] <= 10.0
+
+    def test_calories_ne_rapportent_pas_de_points(self, ajr):
+        """Régression 2026-09-14 : l'ancien score journalier faisait monter les
+        plats les plus caloriques (brioche 1 855 kcal dans le top)."""
+        leger = dict(NUTR_COMPLET, calories=600)
+        lourd = dict(NUTR_COMPLET, calories=1800)
+        assert ajr.meal_score(lourd)["score"] < ajr.meal_score(leger)["score"]
+
+    def test_portion_raisonnable_non_penalisee(self, ajr):
+        assert ajr.meal_score(dict(NUTR_COMPLET, saturated_fat=3))["penalties"] == {}
+
+    def test_penalites_sodium_sucre_graisses_saturees(self, ajr):
+        res = ajr.meal_score(dict(NUTR_COMPLET, sodium=2500, sugar=40, saturated_fat=20))
+        assert set(res["penalties"]) == {"sodium", "sugar", "saturated_fat"}
+        assert res["score"] < res["coverage_score"]
+
+    def test_plus_nutritif_mieux_note(self, ajr):
+        assert ajr.meal_score(NUTR_COMPLET)["score"] > ajr.meal_score(NUTR_PAUVRE)["score"]

@@ -23,7 +23,7 @@ from backend.core.data_io import (
 )
 from backend.engine.search_token_generator import batch_generate
 from backend.engine.nutrition_engine import compute_nutrition
-from backend.engine.score_engine.ajr import ajr_score_with_profile as score_nutrition_values
+from backend.engine.score_engine.ajr import meal_score
 import backend.engine.score_engine.quality as quality
 
 
@@ -51,11 +51,10 @@ def rebuild_graphs_and_index():
         nutr = compute_nutrition(r)
         nutrition_graph[rid] = nutr
 
-        ns_raw = score_nutrition_values(nutr)
-        ns_val = ns_raw.get("score", 0) if isinstance(ns_raw, dict) else float(ns_raw)
-        # ajr_score_with_profile renvoie déjà 0-10 : l'ancien « / 1.5 »
-        # plafonnait la dimension nutrition (40 % du score) à ~4/10.
-        nutr_score = round(min(max(ns_val, 0), 10.0), 1)
+        # Score d'une PORTION (1/3 des AJR, pénalités calories/sodium/sucres/
+        # graisses saturées) : l'ancien score AJR journalier récompensait les
+        # plats les plus caloriques.
+        nutr_score = round(meal_score(nutr)["score"], 1)
 
         try:
             flavor_score = float(quality._d_flavor(r, d))

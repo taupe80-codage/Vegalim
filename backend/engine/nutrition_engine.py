@@ -28,7 +28,15 @@ UNIT_TO_G = {
     "branche":        10.0,  "botte":     80.0,
     "piece":          100.0, "cup":       240.0,
     "oz":             28.0,  "lb":        454.0,
+    "mg":             0.001, "cl":        10.0,  "dl": 100.0,
+    # unités « non pondérales » rencontrées dans recipes.json : sans elles, le
+    # repli à 50 g comptait « 1 pincée de muscade » pour 50 g.
+    "pinch":          0.5,   "pincee":    0.5,   "pincée": 0.5,
+    "leaf":           0.5,   "feuille":   0.5,
 }
+
+# unités désignant une pièce entière : même traitement que "piece"
+_PIECE_UNITS = {"piece", "pièce", "pieces", "pièces", "unit", "unité", "units"}
 
 MACROS   = ["calories", "protein", "carbs", "fat", "fiber", "sugar", "sodium",
             "saturated_fat", "monounsaturated_fat", "polyunsaturated_fat"]
@@ -167,6 +175,17 @@ def _physical_edible_pct(ingredient_id: str) -> float:
     return float(pct) / 100.0 if pct is not None else 1.0
 
 
+FRYING_BATH_MIN_G = 250.0   # au-delà, une huile est un bain de friture, pas un assaisonnement
+
+
+def _is_frying_bath(token: str, qty_g: float) -> bool:
+    """Huile en quantité de bain (≥ 250 ml). Les mayonnaises maison (180-200 ml
+    d'huile, émulsionnée et mangée) restent sous le seuil."""
+    tokens = (token or "").lower().split("_")
+    is_oil = "oil" in tokens and "in" not in tokens     # exclut « noix … roasted_in_oil »
+    return qty_g >= FRYING_BATH_MIN_G and is_oil
+
+
 def _qty_to_g(token: str, comp_entry: dict) -> float:
     """Convertit la quantité d'un ingrédient en grammes."""
     if token == "huile_friture":
@@ -178,7 +197,8 @@ def _qty_to_g(token: str, comp_entry: dict) -> float:
     if not isinstance(qty, (int, float)) or qty <= 0:
         return 0.0
 
-    if unit == "piece":
+    if unit in _PIECE_UNITS:
+        unit = "piece"
         ing = get_data.ingredients.get_by_name(token)
         avg_w = None
 
@@ -192,6 +212,15 @@ def _qty_to_g(token: str, comp_entry: dict) -> float:
             phys_g = _physical_unit_g(token, "piece")
             if phys_g:
                 avg_w = phys_g
+
+        # Fallback : poids moyen d'une pièce vendue (prices_catalog.unit_weight_g,
+        # ex. œuf 60 g, citron 120 g) avant le défaut générique de 100 g
+        if avg_w is None:
+            from backend.core.data_io import load_prices_catalog, resolve_catalog_key
+            catalog = load_prices_catalog()
+            key = resolve_catalog_key(token, catalog)
+            if key:
+                avg_w = catalog[key].get("unit_weight_g")
 
         factor = float(avg_w) if avg_w else 100.0
     else:
@@ -293,6 +322,10 @@ def compute_nutrition(recipe: dict,
                 qty_g = 100.0
         else:
             qty_g = _qty_to_g(token, comp_e)
+            # Bain de friture : 500 ml d'huile ne sont pas mangés. On ne compte
+            # que l'huile absorbée (FRYING_CAP_G par portion).
+            if _is_frying_bath(token, qty_g):
+                qty_g = min(qty_g, FRYING_CAP_G * srv)
 
         # Facteur de forme (cru/cuit) via nutrition_form_engine (CDC_05)
         form = comp_e.get("form") if comp_e else None

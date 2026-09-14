@@ -10,6 +10,7 @@ API :
     compute_ajr_score(nutrition)               → float (alias compat)
     ajr_score_with_profile(nutrition, profile) → float (ex score_nutrition_values)
     ajr_score_multi(nutrition, profiles)       → dict {score, coverage, ...}
+    meal_score(nutrition)                      → dict {score, coverage_score, penalties} (1 portion)
     detect_deficiencies(nutrition, ajr?)       → list[dict]
     summarize_deficiencies(deficiencies)       → dict {high: [...], medium: [...]}
 
@@ -185,6 +186,63 @@ def ajr_score_with_profile(
         delta += min(protein * 0.1, 2.0)  # bonus protéine
 
     return round(max(0.0, min(10.0, base + delta)), 2)
+
+
+# ── Score d'une portion (repas) ───────────────────────────────────────────────
+#
+# ajr_score() compare aux besoins d'une JOURNÉE et traite les calories comme un
+# nutriment « à couvrir » : appliqué à une portion, plus un plat est calorique
+# plus il marque de points (brioche 1 855 kcal dans le top, 2026-09-14).
+# meal_score() évalue une portion comme un repas (1/3 des AJR) :
+#   - nutriments bénéfiques couverts à 100 % max (pondérés NUTRIENT_WEIGHTS) ;
+#   - calories, sodium, sucres, graisses saturées : aucun point, pénalité
+#     au-delà de la part d'un repas.
+
+MEAL_SHARE = 1 / 3
+
+_MEAL_BENEFICIAL = (
+    "protein", "fiber", "iron", "calcium", "magnesium", "potassium",
+    "zinc", "vitamin_c", "vitamin_d", "vitamin_b12", "phosphorus",
+)
+
+# nutriment → (référence journalière, tolérance × part repas, pente, pénalité max)
+_MEAL_PENALTIES: dict[str, tuple[float, float, float, float]] = {
+    "calories":      (2000.0, 1.25, 4.0, 3.0),   # > ~830 kcal
+    "sodium":        (2300.0, 1.0,  2.0, 2.0),   # > ~770 mg
+    "sugar":         (50.0,   1.0,  1.0, 1.5),   # > ~17 g
+    "saturated_fat": (20.0,   1.0,  1.0, 1.5),   # > ~6,7 g
+}
+
+
+def meal_score(nutrition: dict, share: float = MEAL_SHARE) -> dict:
+    """Score nutritionnel 0-10 d'une PORTION.
+
+    Returns:
+        {score, coverage_score, penalties: {nutriment: points retirés}}
+    """
+    if not nutrition or not isinstance(nutrition, dict):
+        return {"score": 0.0, "coverage_score": 0.0, "penalties": {}}
+
+    weighted, total_w = 0.0, 0.0
+    for nutrient in _MEAL_BENEFICIAL:
+        ref = AJR.get(nutrient, 0) * share
+        val = nutrition.get(nutrient)
+        if ref <= 0 or val is None:
+            continue
+        w = NUTRIENT_WEIGHTS.get(nutrient, 1.0)
+        weighted += min(1.0, max(0.0, float(val)) / ref) * w
+        total_w  += w
+    coverage = weighted / total_w * 10 if total_w else 0.0
+
+    penalties: dict[str, float] = {}
+    for nutrient, (daily, tolerance, slope, cap) in _MEAL_PENALTIES.items():
+        val = float(nutrition.get(nutrient) or 0)
+        limit = daily * share * tolerance
+        if val > limit:
+            penalties[nutrient] = round(min(cap, (val / limit - 1) * slope), 2)
+
+    score = max(0.0, min(10.0, coverage - sum(penalties.values())))
+    return {"score": round(score, 2), "coverage_score": round(coverage, 2), "penalties": penalties}
 
 
 # ── Score multi-profils ────────────────────────────────────────────────────────

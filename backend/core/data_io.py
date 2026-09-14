@@ -536,6 +536,21 @@ def recipe_cuisine(recipe: dict) -> str:
     ).lower()
 
 
+# dish_type des préparations servant d'ingrédient à d'autres recettes
+COMPONENT_DISH_TYPES = frozenset({
+    "sauce", "condiment", "paste", "base", "ingredient", "broth", "roux", "dairy",
+})
+
+
+def is_component_recipe(recipe: dict) -> bool:
+    """Sous-recette / préparation de base (béchamel, pâte de curry, bouillon,
+    cheddar vegan…) plutôt qu'un plat : exclue des classements généraux
+    (top, découverte, recommandation sans requête), toujours trouvable par
+    une recherche explicite."""
+    return (str(recipe.get("id", "")).startswith("base_")
+            or str(recipe.get("dish_type") or "").lower() in COMPONENT_DISH_TYPES)
+
+
 def recipe_techniques(recipe: dict) -> list[str]:
     """Techniques culinaires : tags.technique (schéma actuel), sinon technique."""
     raw = (recipe.get("tags") or {}).get("technique") or recipe.get("technique") or []

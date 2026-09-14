@@ -99,7 +99,13 @@ def recommend(
         context.diet = normalize_diet(context.diet)
 
     # ── Étape 2 : Recherche ──────────────────────────────────────────────────
-    candidates = _search(query, limit * 3)
+    # Sans requête, la recherche renvoyait les limit×3 premières recettes dans
+    # l'ordre du fichier (base_* en tête) : le « top » ne voyait jamais le
+    # catalogue. On score alors tous les plats (hors sous-recettes).
+    if (query or "").strip():
+        candidates = _search(query, limit * 3)
+    else:
+        candidates = _all_dishes()
 
     # ── Étape 3 : Exclusions historique (dislikes) ───────────────────────────
     excluded = get_excluded_ids(context)
@@ -145,6 +151,16 @@ def recommend(
 
 
 # ── Helpers privés ────────────────────────────────────────────────────────────
+
+def _all_dishes() -> list[dict]:
+    """Tout le catalogue sauf les sous-recettes (voir data_io.is_component_recipe)."""
+    try:
+        from backend.core.data_io import load_recipes, is_component_recipe
+        return [r for r in load_recipes() if isinstance(r, dict) and not is_component_recipe(r)]
+    except Exception as e:
+        logger.error("orchestrator: chargement catalogue impossible — %s", e)
+        return []
+
 
 def _search(query: str, limit: int) -> list[dict]:
     """
