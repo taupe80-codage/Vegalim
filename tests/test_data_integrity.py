@@ -540,6 +540,19 @@ def test_kcal_par_portion_plausibles():
     )
 
 
+def test_portions_des_preparations_de_base_plausibles():
+    # Constaté le 2026-09-14 : ghee « pour 4 » (125 g, 941 kcal par portion),
+    # confiture 115 g, lait végétal 25 g… Portions de référence et rendements
+    # dans scripts/recipes/propose_servings.py (--components).
+    ps = _import_script("scripts/recipes/propose_servings.py", "propose_servings")
+    ecarts = ps.component_proposals()
+    assert not ecarts, (
+        f"{len(ecarts)} préparations de base à portion irréaliste — lancer "
+        f"propose_servings.py --components puis --apply : "
+        f"{[(e['id'], e['g_par_portion_actuel'], e['portion_reference_g']) for e in ecarts[:10]]}"
+    )
+
+
 SODIUM_MAX_MG_PORTION = 2000  # 5 g de sel : l'apport journalier recommandé (OMS)
 
 
