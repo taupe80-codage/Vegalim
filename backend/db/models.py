@@ -69,8 +69,9 @@ class UserProfile(Base):
     budget        = Column(String(20),  nullable=True)   # économique/standard/confort
     servings      = Column(Integer,     nullable=True)
     # Santé — chiffrées (RGPD Art. 9 — données de catégorie spéciale)
-    cycle_phase    = Column(EncryptedString(120), nullable=True)
-    health_goal    = Column(EncryptedString(120), nullable=True)
+    # 512 : un jeton Fernet dépasse 120 caractères dès 16 octets de texte clair
+    cycle_phase    = Column(EncryptedString(512), nullable=True)
+    health_goal    = Column(EncryptedString(512), nullable=True)
     # Consentement explicite RGPD Art. 9 (requis avant toute collecte de données de santé)
     health_consent = Column(Boolean, nullable=False, default=False,
                            server_default=text("false"))
@@ -176,7 +177,7 @@ class RecipeHistory(Base):
     user_email = Column(String(254),
                         ForeignKey("users.email", ondelete="CASCADE"),
                         nullable=False, index=True)
-    recipe_id  = Column(Integer, nullable=False, index=True)
+    recipe_id  = Column(String(100), nullable=False, index=True)   # ids texte (« soup_… »)
     action     = Column(String(30), nullable=False, default="view")
     # Actions : view | like | dislike | plan | cook | skip
     score_shown   = Column(Integer, nullable=True)   # score affiché (0-100)

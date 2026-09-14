@@ -21,7 +21,13 @@ depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade() -> None:
-    """Ajoute health_consent à user_profiles (défaut False — pas de consentement implicite)."""
+    """Ajoute health_consent à user_profiles (défaut False — pas de consentement implicite).
+
+    Idempotent : les bases créées par Base.metadata.create_all() ont déjà la colonne.
+    """
+    columns = {c["name"] for c in sa.inspect(op.get_bind()).get_columns("user_profiles")}
+    if "health_consent" in columns:
+        return
     op.add_column(
         'user_profiles',
         sa.Column(

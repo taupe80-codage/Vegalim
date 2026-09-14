@@ -3,10 +3,9 @@
 -r requirements.txt
 
 # ── Tests ──────────────────────────────────────────────────────────
-pytest>=8.0.0
-httpx>=0.27.0
+pytest==9.0.3
+httpx==0.28.1
 
-# ── Prototype / exploration ─────────────────────────────────────────
-streamlit>=1.30.0
-pandas>=2.0.0
-openpyxl>=3.1.0           # lecture CIQUAL xlsx (pipeline nutrition)
+# ── Analyse de données (scripts d'audit) ────────────────────────────
+pandas==3.0.2
+streamlit==1.56.0        # scripts/tools/recipe_audit_mini_app.py

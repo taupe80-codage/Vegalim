@@ -310,7 +310,7 @@ class RecipeHistoryRepository:
     def __init__(self, db: Session):
         self._db = db
 
-    def record(self, user_email: str, recipe_id: int,
+    def record(self, user_email: str, recipe_id: str,
                action: str = "view",
                score_shown: int | None = None,
                profile_used: str | None = None) -> "RecipeHistory":
@@ -339,7 +339,7 @@ class RecipeHistoryRepository:
             .all()
         )
 
-    def get_liked_recipe_ids(self, user_email: str) -> list[int]:
+    def get_liked_recipe_ids(self, user_email: str) -> list[str]:
         """Retourne les recipe_id avec action='like'."""
         from backend.db.models import RecipeHistory
         rows = (
@@ -350,7 +350,7 @@ class RecipeHistoryRepository:
         )
         return [r.recipe_id for r in rows]
 
-    def get_disliked_recipe_ids(self, user_email: str) -> list[int]:
+    def get_disliked_recipe_ids(self, user_email: str) -> list[str]:
         """Retourne les recipe_id avec action='dislike'."""
         from backend.db.models import RecipeHistory
         rows = (

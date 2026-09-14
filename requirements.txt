@@ -1,28 +1,32 @@
+# Versions figées (==) : un build doit donner le même environnement qu'en test.
+# Mise à jour : modifier ici, relancer la suite de tests, puis committer.
+
 # ── Configuration
-python-dotenv>=1.0.0
-aiofiles>=23.0.0        # requis pour StaticFiles FastAPI
+python-dotenv==1.2.2
+aiofiles==25.1.0          # requis pour StaticFiles FastAPI
 
 # ── API ────────────────────────────────────────────────────────────
-fastapi>=0.111.0
-uvicorn[standard]>=0.29.0
+fastapi==0.136.1
+uvicorn[standard]==0.46.0
 
 # ── Auth & Chiffrement ─────────────────────────────────────────────
-passlib[bcrypt]>=1.7.4
-bcrypt>=4.0.0,<5.0.0      # fix compatibilité passlib truncate_error
-python-jose[cryptography]>=3.3.0
-cryptography>=42.0.0      # Fernet AES-128 — chiffrement données santé (RGPD Art. 9)
+passlib[bcrypt]==1.7.4
+bcrypt==4.3.0             # <5 : compatibilité passlib (truncate_error)
+python-jose[cryptography]==3.5.0
+cryptography==48.0.0      # Fernet AES-128 — chiffrement données santé (RGPD Art. 9)
 
 # ── Validation ─────────────────────────────────────────────────────
-pydantic[email]>=2.0.0
+pydantic[email]==2.13.3
 
 # ── Base de données ────────────────────────────────────────────────
-sqlalchemy>=2.0.0
-psycopg2-binary>=2.9.0   # driver PostgreSQL
-aiosqlite>=0.19.0         # driver SQLite async (dev/tests)
-alembic>=1.13.0           # migrations de schéma
+sqlalchemy==2.0.49
+psycopg2-binary==2.9.12   # driver PostgreSQL
+aiosqlite==0.22.1         # driver SQLite async (dev/tests)
+alembic==1.20.0           # migrations de schéma (appliquées au démarrage)
 
 # ── Rate limiting ──────────────────────────────────────────────────
-redis>=5.0.0              # rate limiting multi-process (optionnel, recommandé prod)
+redis==7.4.0              # rate limiting multi-process (optionnel, recommandé prod)
 
-# ── Pipeline nutrition (tourne dans le même conteneur que l'API) ────────────
-openpyxl>=3.1.0           # lecture CIQUAL xlsx (build_n2_direct.py)
+# ── Pipeline nutrition et scripts (même conteneur que l'API) ────────
+openpyxl==3.1.5           # lecture CIQUAL xlsx (build_n2_direct.py)
+requests==2.33.1          # scripts/update_prices.py (Open Food Facts)
