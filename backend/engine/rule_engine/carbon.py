@@ -13,12 +13,12 @@ moteur que la nutrition (_qty_to_g). Les sous-recettes base_* sont calculées
 depuis leur propre composition.
 """
 from __future__ import annotations
-from functools import lru_cache
+from backend.core.data_cache import data_cached
 
 _LOW  = 0.5   # kg CO₂e / portion
 _HIGH = 1.5
 
-@lru_cache(maxsize=1)
+@data_cached
 def _carbon_db() -> dict:
     from backend.core.data_io import load_carbon_footprint
     return load_carbon_footprint()

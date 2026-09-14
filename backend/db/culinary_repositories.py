@@ -31,7 +31,7 @@ import logging
 import re
 import threading
 from datetime import datetime, timezone
-from functools import lru_cache
+from backend.core.data_cache import data_cached
 from pathlib import Path
 from typing import Any
 
@@ -137,7 +137,7 @@ def _load_json(path: Path) -> Any:
         raise RuntimeError(f"Erreur chargement {path.name} : {e}") from e
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _recipes_raw() -> list[dict]:
     """Cache en mémoire du dataset recettes. Rechargé uniquement au redémarrage."""
     from backend.engine.config import RECIPES_PATH
@@ -147,7 +147,7 @@ def _recipes_raw() -> list[dict]:
     return recipes
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _nutrition_raw() -> dict[str, dict]:
     """
     Cache en mémoire de la base nutritionnelle (clé = nom ingrédient).
@@ -163,7 +163,7 @@ def _nutrition_raw() -> dict[str, dict]:
     return clean
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _base_recipe_excluded_raw() -> frozenset:
     """
     Ensemble des ingredient_keys exclus du lookup nutrition_v2.
@@ -185,7 +185,7 @@ def _base_recipe_excluded_raw() -> frozenset:
         return frozenset()
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _ingredients_raw() -> list[dict]:
     """Cache en mémoire du dictionnaire d'ingrédients.
 
@@ -217,7 +217,7 @@ def _ingredients_raw() -> list[dict]:
     return items
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _ingredients_index() -> dict[str, dict]:
     """
     Index nom → ingrédient pour accès O(1).
@@ -253,7 +253,7 @@ def _ingredients_index() -> dict[str, dict]:
     return index
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _derived_registry() -> dict[str, dict]:
     """
     Registre derived_from_base_recipes.json : nutrition per-100g + diet_profile
@@ -272,7 +272,7 @@ def _derived_registry() -> dict[str, dict]:
     return data.get("recipes", {}) if isinstance(data, dict) else {}
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _recipes_index() -> dict:
     """
     Index id → recette pour accès O(1).
@@ -284,7 +284,7 @@ def _recipes_index() -> dict:
     return {r["id"]: r for r in _recipes_raw() if "id" in r}
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _aliases_raw() -> dict[str, str]:
     """
     Cache en mémoire des aliases recette → nutrition_key.
@@ -305,7 +305,7 @@ def _aliases_raw() -> dict[str, str]:
         return {}
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _reference_db_raw() -> dict[str, dict]:
     """
     Cache en mémoire de la base de référence secondaire (reference_db.json).
@@ -352,7 +352,7 @@ def _resolve_ref_key(ref_key: str) -> dict | None:
     return first if isinstance(first, dict) else None
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _v32_ing_id_index() -> dict[str, str]:
     """
     Index inverse : _v32_id (tree ing_group ID) → clé racine dans nutrition_v2.

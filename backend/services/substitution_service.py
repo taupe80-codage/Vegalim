@@ -8,10 +8,10 @@ Utile pour les régimes vegan ou sans lactose.
 Les règles sont chargées depuis le graphe de substitution
 (ingredient_substitution_rules_graph_v1.json) via data_io.
 """
-from functools import lru_cache
+from backend.core.data_cache import data_cached
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _load_subs() -> dict:
     """Charge les substitutions depuis le graphe de référence (source unique)."""
     from backend.core.data_io import load_substitution_graph

@@ -7,7 +7,7 @@ API :
 """
 from __future__ import annotations
 import logging
-from functools import lru_cache
+from backend.core.data_cache import data_cached
 
 logger = logging.getLogger(__name__)
 
@@ -25,7 +25,7 @@ VEGAN_SUBS: dict[str, str | None] = {
     "mayonnaise": "mayonnaise_vegan",
 }
 
-@lru_cache(maxsize=1)
+@data_cached
 def _variant_index() -> dict:
     """
     Charge l'index des variantes vegan pré-calculées.

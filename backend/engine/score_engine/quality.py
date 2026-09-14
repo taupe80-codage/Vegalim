@@ -10,7 +10,7 @@ API :
 """
 from __future__ import annotations
 import logging
-from functools import lru_cache
+from backend.core.data_cache import data_cached
 from typing import Any
 
 logger = logging.getLogger(__name__)
@@ -47,7 +47,7 @@ for _n, _c in PROFILES.items():
 # Chaque dimension lit désormais un champ réel des recettes ou un référentiel
 # générique résolu par resolve_catalog_key.
 
-@lru_cache(maxsize=1)
+@data_cached
 def _load_data() -> dict:
     """
     Charge les sources de données nécessaires au scoring.

@@ -12,7 +12,7 @@ Depuis v6 : résolution FR→EN via fr_to_en_mapping avant lookup dict.
 from __future__ import annotations
 import unicodedata
 import re
-from functools import lru_cache
+from backend.core.data_cache import data_cached
 
 
 def _normalize(text: str) -> str:
@@ -22,7 +22,7 @@ def _normalize(text: str) -> str:
     return re.sub(r"[\s\-_]+", " ", ascii_s).strip()
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _fr_to_en_map() -> dict[str, str]:
     """Mapping FR→EN normalisé depuis fr_to_en_mapping.json (879 paires)."""
     from backend.core.data_io import load_fr_to_en
@@ -30,7 +30,7 @@ def _fr_to_en_map() -> dict[str, str]:
     return {_normalize(k): v for k, v in raw.items()}
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def _synonym_map() -> dict[str, str]:
     """Construit le mapping {synonyme_normalisé → id_canonique}."""
     mapping: dict[str, str] = {}

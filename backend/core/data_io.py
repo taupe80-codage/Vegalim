@@ -39,7 +39,7 @@ import json
 import logging
 import os
 import threading
-from functools import lru_cache
+from backend.core.data_cache import data_cached
 from pathlib import Path
 
 from backend.engine.config import DATA_ROOT
@@ -354,7 +354,7 @@ def resolve_cooking_gid(
 # ── Loaders statiques (@lru_cache) — jamais modifiés en cours d'exécution ──────
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_ingredients_tree() -> dict:
     """
     Arbre ingrédients v8 — référence taxonomique canonique (1782 groupes, 2077 variants).
@@ -373,7 +373,7 @@ def load_ingredients_tree() -> dict:
     )
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def get_ingredients_tree_index() -> dict:
     """
     Index plat du tree pour résolution rapide : canonical_name_en normalisé → liste de groupes.
@@ -455,7 +455,7 @@ def resolve_ingredient_cooking_variant(
     return candidates[0]
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_nutrition_graph() -> dict:
     return load_json(DATA_ROOT / "graphs" / "recipe_nutrition_graph_v1.json", default={})
 
@@ -487,7 +487,7 @@ def load_nutrition_db() -> dict:
 load_nutrition_db.cache_clear = _nutrition_db_cache.cache_clear  # type: ignore[attr-defined]
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_substitution_graph() -> dict:
     return load_json(
         DATA_ROOT / "graphs" / "ingredient_substitution_rules_graph_v1.json",
@@ -495,25 +495,25 @@ def load_substitution_graph() -> dict:
     )
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_search_index() -> dict:
     return load_json(DATA_ROOT / "indexes" / "search_index.json", default={})
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_seasonality() -> dict:
     return load_json(DATA_ROOT / "modules" / "seasonality.json", default={})
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_prices() -> dict:
     return load_json(DATA_ROOT / "config" / "prices.json", default={})
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_prices_catalog() -> dict:
     return load_json(DATA_ROOT / "config" / "prices_catalog.json", default={})
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_ingredient_price_map() -> dict:
     """Correspondance id d'ingredient de recette -> cle prices_catalog.json.
 
@@ -579,29 +579,29 @@ def resolve_catalog_key(ingredient_id: str, keys) -> str | None:
     return mapped if mapped in keys else None
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_flavor_graph() -> dict:
     """Profils gustatifs par ingrédient générique : {'tomato': ['sour', 'sweet', 'umami'], …}.
     (Pointait vers flavor_pairing_graph_v1.json, qui n'a jamais existé.)"""
     return load_json(DATA_ROOT / "graphs" / "flavor_graph.json", default={})
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_carbon_footprint() -> dict:
     return load_json(DATA_ROOT / "config" / "carbon_footprint.json", default={})
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_availability_graph() -> dict:
     return load_json(DATA_ROOT / "graphs" / "ingredient_availability_graph_v1.json", default={})
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_vegan_variants_index() -> dict:
     return load_json(DATA_ROOT / "config" / "vegan_variants_index.json", default={})
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_fr_to_en() -> dict:
     """Mapping FR→EN pour la migration des clés ingrédients (879 entrées, v1.0)."""
     raw = load_json(DATA_ROOT / "ingredients" / "fr_to_en_mapping.json",
@@ -631,7 +631,7 @@ def load_ingredient_physical() -> dict:
 load_ingredient_physical.cache_clear = _ingredient_physical_cache.cache_clear  # type: ignore[attr-defined]
 
 
-@lru_cache(maxsize=1)
+@data_cached
 def load_astro_nutrition() -> dict:
     raw = load_json(DATA_ROOT / "modules" / "astro_nutrition.json", default={})
     return raw.get("ingredients_astro_map", {})

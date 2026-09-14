@@ -8,9 +8,9 @@ API :
     season_bonus(recipe, month)  → float
 """
 from __future__ import annotations
-from functools import lru_cache
+from backend.core.data_cache import data_cached
 
-@lru_cache(maxsize=1)
+@data_cached
 def _db() -> dict:
     from backend.db.data_access import get_data
     return get_data.graphs.get_raw("seasonality") or {}
