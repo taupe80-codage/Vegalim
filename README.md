@@ -106,6 +106,21 @@ Documentation interactive complète : `/docs` (désactivée en production).
 
 ---
 
+## Clés API (B2B et administration)
+
+```bash
+python scripts/api_keys.py create email@exemple.com [--plan free|starter|pro] [--expires-days 90]
+python scripts/api_keys.py list
+python scripts/api_keys.py revoke <ID>            # ou --email email@exemple.com
+python scripts/api_keys.py plan email@exemple.com pro
+```
+
+La clé n'est affichée qu'à la création (en-tête `X-API-Key`). Pour `/admin/*`,
+l'email du compte doit aussi figurer dans `ADMIN_EMAILS`. En Docker :
+`docker compose exec api python scripts/api_keys.py …`.
+
+---
+
 ## Tests
 
 ```bash
@@ -128,7 +143,9 @@ dans `backend/data/nutrition/logs/raw_sources_manifest.json`.
 ```bash
 python scripts/nutrition/build_n2_direct.py --promote
 python scripts/nutrition/build_dict_v2.py
+python scripts/nutrition/build_physical_v2.py          # ingredient_physical.json
 python scripts/nutrition/build_indexes.py
+python scripts/nutrition/build_base_recipe_aliases.py  # alias des préparations base_*
 python scripts/recipes/fix_recipe_diet_allergens.py
 python scripts/recipes/build_derived_base_registry.py   # alterner avec la ligne précédente jusqu'à 0 changement
 python scripts/recipes/rebuild_graphs.py
