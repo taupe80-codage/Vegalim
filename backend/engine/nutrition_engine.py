@@ -231,6 +231,18 @@ def _qty_to_g(token: str, comp_entry: dict) -> float:
 
     return float(qty) * factor * _physical_edible_pct(token)
 
+def _retained_fraction(meta: dict) -> float:
+    """
+    Part réellement consommée d'un ingrédient (meta.retained_pct, 0-100).
+    Ex. : sel de l'eau de cuisson des gnocchis, sel de dégorgement rincé du
+    kimchi. La liste de courses et le carbone gardent la quantité achetée.
+    """
+    pct = meta.get("retained_pct") if meta else None
+    if isinstance(pct, (int, float)) and 0 <= pct <= 100:
+        return pct / 100.0
+    return 1.0
+
+
 def compute_nutrition(recipe: dict,
                       servings: int | None = None) -> dict:
     """
@@ -328,6 +340,7 @@ def compute_nutrition(recipe: dict,
             # que l'huile absorbée (FRYING_CAP_G par portion).
             if _is_frying_bath(token, qty_g):
                 qty_g = min(qty_g, FRYING_CAP_G * srv)
+            qty_g *= _retained_fraction(meta)
 
         # Facteur de forme (cru/cuit) via nutrition_form_engine (CDC_05)
         form = comp_e.get("form") if comp_e else None

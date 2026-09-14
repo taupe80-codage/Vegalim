@@ -1540,7 +1540,7 @@
         "region": "",
         "city": ""
       },
-      "servings": 4,
+      "servings": 40,
       "timing": {
         "prep_active_min": 30,
         "prep_passive_min": 86400,
@@ -1606,7 +1606,7 @@
         "spice_level": 0
       },
       "dish_type": "condiment",
-      "servings_default": 4,
+      "servings_default": 40,
       "_chef_note": "La durée de fermentation détermine la profondeur de saveur. Un doenjang de 6 mois à 1 an développe une complexité proche du miso vieilli japonais.",
       "description": "Pâte de soya fermentée à la saveur complexe, issue d'une fermentation lente en saumure, avec une texture crémeuse et une odeur umami prononcée, typique de la cuisine coréenne.",
       "instructions": [
@@ -1631,7 +1631,6 @@
       "search_tokens": [
         "(doenjang)",
         "(eau",
-        "anemie",
         "asia",
         "asiatique",
         "bean",
@@ -1642,12 +1641,10 @@
         "easy",
         "eau",
         "facile",
-        "fer",
         "fermente",
         "fermented",
         "gluten free",
         "haricot",
-        "iron",
         "korean",
         "leger",
         "lent",
@@ -3111,7 +3108,7 @@
         "region": "",
         "city": ""
       },
-      "servings": 4,
+      "servings": 16,
       "timing": {
         "prep_active_min": 45,
         "prep_passive_min": 4320,
@@ -3164,7 +3161,8 @@
           "quantity": 40,
           "unit": "g",
           "meta": {
-            "role": "seasoning"
+            "role": "seasoning",
+            "retained_pct": 40
           }
         },
         {
@@ -3214,7 +3212,7 @@
         "spice_level": 2
       },
       "dish_type": "condiment",
-      "servings_default": 4,
+      "servings_default": 16,
       "_chef_note": "Le kimchi vieilli (vieux kimchi) plus acide est idéal pour cuisiner les jjigae (ragoûts). Le kimchi frais de 1-2 jours est meilleur en accompagnement direct.",
       "description": "Découvrez le kimchi, un chou fermenté coréen épicé et végétal, condiment emblématique de la cuisine coréenne, développant des arômes complexes et une acidité vive.",
       "instructions": [
@@ -3682,7 +3680,7 @@
         "region": "",
         "city": ""
       },
-      "servings": 8,
+      "servings": 40,
       "timing": {
         "prep_active_min": 30,
         "prep_passive_min": 43200,
@@ -3746,7 +3744,7 @@
         "spice_level": 0
       },
       "dish_type": "sauce",
-      "servings_default": 8,
+      "servings_default": 40,
       "description": "Pâte de soja fermentée japonaise végane aux notes profondes d'umami, parfaite pour les bouillons et marinades, avec une texture crémeuse et une odeur intense",
       "instructions": [
         "Étape 1 : Faire tremper 500g de fèves de soja dans l'eau froide pendant 12 heures, puis les cuire 6 heures jusqu'à ce qu'elles soient très tendres et aient une texture crémeuse.",
@@ -5987,7 +5985,7 @@
         "country": "italy",
         "region": "sicile"
       },
-      "servings": 4,
+      "servings": 18,
       "timing": {
         "prep_active_min": 10,
         "prep_passive_min": 2880,
@@ -6040,7 +6038,7 @@
         "spice_level": 0
       },
       "dish_type": "ingredient",
-      "servings_default": 4,
+      "servings_default": 18,
       "description": "Ricotta salée, pressée et séchée, avec une texture ferme et une saveur uniforme, parfaite pour ajouter une touche de saveur à vos plats italiens",
       "instructions": [
         "Étape 1: Préparez le fromage râpé en le laissant égoutter pendant 12 heures dans une étamine pour en extraire l'excès d'humidité, jusqu'à obtenir une consistance crémeuse.",
@@ -20954,7 +20952,6 @@
         "10 min",
         "20 min",
         "5 min",
-        "anemie",
         "avocado",
         "avocat",
         "bean",
@@ -20970,27 +20967,22 @@
         "facile",
         "facile enfants",
         "famille",
-        "fer",
         "graines",
         "haricot",
         "international",
-        "iron",
         "kids",
         "levain",
         "lime",
         "mung",
         "mungo",
-        "muscle",
         "olive",
         "pain",
         "pepper",
         "piment",
-        "protéines",
         "pumpkin",
         "quick",
         "radish",
         "rapide",
-        "riche en proteines",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -20999,7 +20991,6 @@
         "sesame",
         "simple",
         "sourdough",
-        "sport",
         "sprouts",
         "squash",
         "sunflower",
@@ -112494,7 +112485,8 @@
             "role": "seasoning",
             "form": "",
             "state": "raw",
-            "preparation": ""
+            "preparation": "",
+            "retained_pct": 10
           }
         },
         {
@@ -113137,7 +113129,8 @@
             "role": "seasoning",
             "form": "",
             "state": "raw",
-            "preparation": ""
+            "preparation": "",
+            "retained_pct": 10
           }
         },
         {
@@ -131233,7 +131226,7 @@
         "region": "kanto",
         "city": ""
       },
-      "servings": 2,
+      "servings": 4,
       "timing": {
         "prep_active_min": 9,
         "prep_passive_min": 0,
@@ -131380,6 +131373,10 @@
         "japonais",
         "japonais)",
         "japonaise",
+        "leger",
+        "light",
+        "low calorie",
+        "minceur",
         "moyen",
         "nori",
         "onigiri",
@@ -131408,7 +131405,7 @@
       ],
       "difficulty_level": "medium",
       "dish_type": "snack",
-      "servings_default": 2,
+      "servings_default": 4,
       "_quality_score": 0.91,
       "description": "Plat de riz japonais traditionnel, les onigiri sont façonnés avec soin à partir de riz sushi cuit à la perfection, assaisonné avec précision, puis garnis de prune umeboshi émincée, le tout enveloppé dans une feuille de nori croustillante, offrant une texture contrastée et un goût subtil.",
       "instructions": [
@@ -187721,7 +187718,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -187863,7 +187860,7 @@
       "description": "Sauté indonésienne de tempeh fumé au wok à feu très vif, avec des légumes croquants, une sauce enrobante et parfumée, créant une texture tendre et croustillante — une spécialité de la cuisine indonésienne, préparée avec soin et attention.",
       "instructions": [
         "Couper le tempeh fumé en tranches ou cubes de 1 cm, pour obtenir une texture tendre et croustillante.",
-        "Préparer la marinade : mélanger 45 ml de sauce soja, 3 g de coriandre moulue, 9 g d'ail émincé, 5 g de sel de table et 2 g de poivre noir, afin d'obtenir une sauce parfumée et équilibrée.",
+        "Préparer la marinade : mélanger 45 ml de sauce soja, 3 g de coriandre moulue, 9 g d'ail émincé, 2 g de sel de table et 2 g de poivre noir, afin d'obtenir une sauce parfumée et équilibrée.",
         "Faire mariner le tempeh fumé au moins 15 minutes, pour que les saveurs pénètrent profondément dans la texture.",
         "Chauffer 45 ml d'huile végétale dans une poêle à feu vif, jusqu'à ce que l'huile soit chaude et prête à frire.",
         "Faire frire le tempeh fumé en plusieurs fois sans surcharger la poêle, 3-4 minutes par face, jusqu'à ce que le tempeh soit bien doré et croustillant.",

@@ -540,6 +540,32 @@ def test_kcal_par_portion_plausibles():
     )
 
 
+SODIUM_MAX_MG_PORTION = 2000  # 5 g de sel : l'apport journalier recommandé (OMS)
+
+
+def test_sodium_par_portion_plausible():
+    # Constaté le 2026-09-14 : miso « pour 8 » (100 g de pâte par portion,
+    # 4,9 g de sodium), sel de l'eau de cuisson des gnocchis compté en entier.
+    # Corrigés : portions de référence des condiments, meta.retained_pct.
+    trop_sales = [(r["id"], r.get("servings"), NUTR_G.get(r["id"], {}).get("sodium"))
+                  for r in RECIPES
+                  if (NUTR_G.get(r["id"], {}).get("sodium") or 0) > SODIUM_MAX_MG_PORTION]
+    assert not trop_sales, (
+        f"{len(trop_sales)} recettes > {SODIUM_MAX_MG_PORTION} mg de sodium par portion "
+        f"(portion irréaliste, sel d'eau de cuisson ou de dégorgement ?) : {trop_sales[:10]}"
+    )
+
+
+def test_retained_pct_reduit_la_nutrition_pas_la_quantite_achetee():
+    from backend.engine import nutrition_engine as ne
+    ligne = {"ingredient": "table_salt_unenriched", "quantity": 15, "unit": "g", "meta": {}}
+    recette = {"id": "t", "servings": 1, "composition": [ligne]}
+    entier = ne.compute_nutrition(recette)["sodium"]
+    ligne["meta"]["retained_pct"] = 10
+    assert ne.compute_nutrition(recette)["sodium"] == pytest.approx(entier / 10, rel=0.02)
+    assert ne._qty_to_g("table_salt_unenriched", ligne) == 15
+
+
 def test_classements_sans_sous_recettes():
     # Constaté le 2026-09-14 : /recettes/top ne proposait que des base_*
     # (la recherche sans requête renvoyait l'ordre du fichier).
