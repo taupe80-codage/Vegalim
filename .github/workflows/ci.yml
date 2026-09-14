@@ -8,6 +8,8 @@
 # Jobs :
 #   test      → pytest (hors tests pipeline)
 #   frontend  → ESLint + tests Vitest + build Vite
+#   integration → API en production (2 workers) sur PostgreSQL + Redis réels,
+#                 test de fumée scripts/smoke_test.py
 #   docker    → build image Docker (validation Dockerfile, sans push)
 #   docker-push → push vers GHCR sur push main (optionnel, activer si besoin)
 # ══════════════════════════════════════════════════════════════════════════════
@@ -98,6 +100,96 @@ jobs:
         run: npm run build
 
 
+  # ── Intégration : production sur PostgreSQL + Redis ──────────────────────────
+  # pytest tourne sous SQLite sans vrais workers : il n'a vu ni les interactions
+  # refusées, ni les logs muets après migration, ni les migrations concurrentes,
+  # ni le jeton d'un compte supprimé toujours accepté (tous trouvés en test de
+  # production le 2026-09-14). Ce job rejoue ce test à chaque push.
+  integration:
+    name: Intégration (PostgreSQL + Redis, production)
+    runs-on: ubuntu-latest
+    needs: [test, frontend]
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: alim
+          POSTGRES_PASSWORD: ci-password
+          POSTGRES_DB: alim_db
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U alim -d alim_db"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+      redis:
+        image: redis:7-alpine
+        ports: ["6379:6379"]
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s --health-timeout 3s --health-retries 10
+
+    env:
+      APP_ENV: production
+      DATABASE_URL: postgresql://alim:ci-password@localhost:5432/alim_db
+      REDIS_URL: redis://localhost:6379/0
+      SECRET_KEY: ci-integration-secret-key-0123456789abcdef
+      # Clé Fernet de test (non utilisée ailleurs)
+      HEALTH_DATA_KEY: 7Xz1c2fXq2ZcP9nY9m1b6ZkD0wS3uVxRtLqJ8aHfE0c=
+      METRICS_TOKEN: ci-metrics-token
+      CORS_ORIGINS: http://localhost:8000
+      PYTHONIOENCODING: utf-8
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Setup Node ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Compiler le frontend (servi sous /ui)
+        working-directory: frontend
+        run: npm ci && npm run build
+
+      - name: Démarrer l'API (production, 2 workers)
+        run: |
+          nohup uvicorn backend.api.main:app --host 127.0.0.1 --port 8000 --workers 2             > api.log 2>&1 &
+
+      - name: Test de fumée
+        run: |
+          python scripts/smoke_test.py --base-url http://127.0.0.1:8000             --metrics-token "$METRICS_TOKEN" --expect-production --wait 120
+
+      - name: Migrations appliquées une seule fois, logs applicatifs présents
+        run: |
+          set -e
+          upgrades=$(grep -c "Running upgrade" api.log || true)
+          migrated=$(grep -c "DB migrée" api.log || true)
+          echo "Running upgrade : $upgrades — DB migrée : $migrated"
+          if grep -q "fallback create_all" api.log; then echo "::error::repli create_all"; exit 1; fi
+          [ "$migrated" -eq 2 ] || { echo "::error::logs applicatifs absents après migration"; exit 1; }
+          [ "$upgrades" -eq "$(ls alembic/versions/*.py | wc -l)" ] || { echo "::error::migrations rejouées"; exit 1; }
+          python -m alembic check
+
+      - name: Journal de l'API
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: integration-api-log
+          path: api.log
+
+
   # ── Build Docker ─────────────────────────────────────────────────────────────
   docker:
     name: Build Docker
@@ -119,8 +211,7 @@ jobs:
           context: .
           push: false
           tags: alim-api:ci
-          build-args: |
-            VITE_API_URL=https://api.mondomaine.com
+          # VITE_API_URL vide : frontend servi en même origine par l'API
           cache-from: type=gha
           cache-to: type=gha,mode=max
 

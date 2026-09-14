@@ -151,8 +151,10 @@ class DailyQuota(Base):
                        primary_key=True)
     count      = Column(Integer, nullable=False, default=0)
 
+    # Unicité (clé, jour) garantie par la clé primaire composite. L'ancienne
+    # UniqueConstraint identique était absorbée par la PK sous PostgreSQL et
+    # faisait échouer `alembic check` (constaté le 2026-09-14).
     __table_args__ = (
-        UniqueConstraint("key_hash", "quota_date", name="uq_quota_key_date"),
         Index("ix_quota_date", "quota_date"),  # pour le nettoyage des vieux enregistrements
     )
 

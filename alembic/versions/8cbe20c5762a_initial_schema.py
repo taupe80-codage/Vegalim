@@ -94,7 +94,6 @@ def upgrade() -> None:
                       sa.ForeignKey("api_keys.key_hash", ondelete="CASCADE"), primary_key=True),
             sa.Column("quota_date", sa.Date(), primary_key=True),
             sa.Column("count", sa.Integer(), nullable=False),
-            sa.UniqueConstraint("key_hash", "quota_date", name="uq_quota_key_date"),
         )
         op.create_index("ix_quota_date", "daily_quotas", ["quota_date"])
 

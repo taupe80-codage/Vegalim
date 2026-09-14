@@ -128,9 +128,17 @@ pytest                              # backend
 cd frontend && npm run lint && npm test && npm run build
 ```
 
-La CI GitHub Actions (`.github/workflows/ci.yml`) lance pytest, le lint,
-les tests et le build du frontend, puis le build Docker, à chaque push sur
-`master`, `main` ou `develop`.
+Test de fumée d'une instance démarrée (compte jetable créé puis supprimé) :
+
+```bash
+python scripts/smoke_test.py --base-url https://mondomaine.com --metrics-token "$METRICS_TOKEN" --expect-production
+```
+
+La CI GitHub Actions (`.github/workflows/ci.yml`) lance, à chaque push sur
+`master`, `main` ou `develop` : pytest, le lint, les tests et le build du
+frontend, un job d'intégration (API en production avec 2 workers sur
+PostgreSQL 16 et Redis 7, test de fumée, migrations et `alembic check`), puis
+le build Docker.
 
 ---
 
