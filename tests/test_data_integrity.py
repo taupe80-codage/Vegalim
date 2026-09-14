@@ -381,6 +381,201 @@ def test_pas_de_nouveau_doublon_source_id():
     )
 
 
+# ── Allergènes / régimes : dico ↔ recettes ─────────────────────────────────────
+#
+# Constaté le 2026-09-14 : allergens_eu vide pour œuf, beurre, tofu, sésame…
+# (liste vide héritée jamais recalculée par build_dict_v2.py) et
+# gluten_free=True sur pain/pâtes/couscous → 93 recettes gluten_free=True
+# contenaient du gluten. Correctifs : scripts/nutrition/allergen_rules.py,
+# fix_dict_allergens.py, scripts/recipes/fix_recipe_diet_allergens.py.
+
+def _import_script(relpath: str, name: str):
+    import importlib.util
+    from pathlib import Path
+    path = Path(__file__).resolve().parents[1] / relpath
+    spec = importlib.util.spec_from_file_location(name, path)
+    mod = importlib.util.module_from_spec(spec)
+    import sys
+    sys.path.insert(0, str(path.parent))
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def _dict_entries_with_sub():
+    import json
+    from backend.engine.config import DATA_ROOT
+    raw = json.loads((DATA_ROOT / "ingredients" / "ingredients_dictionary.json").read_text(encoding="utf-8"))
+    for cat in raw["categories"].values():
+        for sub_label, sub in cat.get("subcategories", {}).items():
+            for key, entry in sub.get("ingredient_groups", {}).items():
+                yield key, sub_label, entry
+
+
+def test_dico_allergenes_regles_appliquees():
+    rules = _import_script("scripts/nutrition/allergen_rules.py", "allergen_rules")
+    manquants = []
+    for key, sub, entry in _dict_entries_with_sub():
+        attendus = rules.key_allergens(key, sub)
+        absents = attendus - set(entry.get("allergens_eu") or [])
+        if absents:
+            manquants.append((key, sorted(absents)))
+    assert not manquants, (
+        f"{len(manquants)} entrées du dico sans les allergènes déduits de leur nom "
+        f"— lancer scripts/nutrition/fix_dict_allergens.py : {manquants[:10]}"
+    )
+
+
+def test_dico_diet_profile_coherent_avec_allergenes():
+    rules = _import_script("scripts/nutrition/allergen_rules.py", "allergen_rules")
+    incoherents = []
+    for key, sub, entry in _dict_entries_with_sub():
+        dp = entry.get("diet_profile") or {}
+        attendu = rules.restrict_diet_profile(dict(dp), entry.get("allergens_eu"), key, sub)
+        diff = {f: dp.get(f) for f, v in attendu.items() if dp.get(f) != v}
+        if diff:
+            incoherents.append((key, diff))
+    assert not incoherents, (
+        f"{len(incoherents)} entrées avec un flag de régime contredit par leurs "
+        f"allergènes : {incoherents[:10]}"
+    )
+
+
+def _core_composition(recipe):
+    return [c for c in recipe.get("composition", []) or []
+            if isinstance(c, dict) and c.get("ingredient")
+            and (c.get("meta") or {}).get("role") != "serving_suggestion"]
+
+
+@pytest.mark.parametrize("flag", ["vegan", "gluten_free", "lactose_free", "nut_free"])
+def test_diet_flag_recette_non_contredit_par_ingredient(flag):
+    from backend.db.culinary_repositories import IngredientRepository
+    repo = IngredientRepository()
+    violations = []
+    for r in RECIPES:
+        if not (r.get("diet_flags") or {}).get(flag):
+            continue
+        for c in _core_composition(r):
+            item = repo.get_by_name(c["ingredient"])
+            if item and (item.get("diet_profile") or {}).get(flag) is False:
+                violations.append((r["id"], c["ingredient"]))
+    assert not violations, (
+        f"{len(violations)} recettes {flag}=True avec un ingrédient {flag}=False "
+        f"— lancer scripts/recipes/fix_recipe_diet_allergens.py : {violations[:10]}"
+    )
+
+
+def test_tags_allergenes_couvrent_les_ingredients():
+    from backend.db.culinary_repositories import IngredientRepository
+    fix = _import_script("scripts/recipes/fix_recipe_diet_allergens.py", "fix_recipe_diet_allergens")
+    repo = IngredientRepository()
+    manquants = []
+    for r in RECIPES:
+        tags = set((r.get("tags") or {}).get("allergens") or [])
+        for c in _core_composition(r):
+            item = repo.get_by_name(c["ingredient"])
+            for a in (item or {}).get("allergens_eu") or []:
+                for t in fix.ALLERGEN_TAG.get(a, [a]):
+                    if t not in tags:
+                        manquants.append((r["id"], c["ingredient"], t))
+    assert not manquants, (
+        f"{len(manquants)} allergènes d'ingrédients absents de tags.allergens "
+        f"(filtre de recherche) : {manquants[:10]}"
+    )
+
+
+def test_bouillon_deshydrate_pas_dose_en_liquide():
+    fix = _import_script("scripts/recipes/fix_stock_reconstitution.py", "fix_stock_reconstitution")
+    liquides = [(r["id"], c.get("quantity"), c.get("unit"))
+                for r in RECIPES for c in r.get("composition", [])
+                if c.get("ingredient") == fix.STOCK_KEY and fix.is_liquid_dose(c)]
+    assert not liquides, (
+        f"{len(liquides)} lignes de bouillon DÉSHYDRATÉ dosées comme du bouillon "
+        f"liquide (~190 mg de sodium par ml compté) : {liquides[:10]}"
+    )
+
+
+def test_registre_sous_recettes_synchro():
+    # Sous-processus : compute_nutrition dépend d'états globaux (caches, repos)
+    # que d'autres modules de test modifient — le calcul in-process divergeait
+    # uniquement en suite complète.
+    import subprocess, sys
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[1]
+    res = subprocess.run(
+        [sys.executable, str(root / "scripts/recipes/build_derived_base_registry.py"), "--check"],
+        capture_output=True, text=True, encoding="utf-8", errors="replace", cwd=root,
+    )
+    assert res.returncode == 0, (
+        "derived_from_base_recipes.json périmé — lancer "
+        "scripts/recipes/build_derived_base_registry.py :\n" + res.stdout[-1500:]
+    )
+
+
+# ── Scoring : pas de dimension morte ───────────────────────────────────────────
+#
+# Constaté le 2026-09-14 : flavor = 5.0 pour 820/820 recettes (fichier
+# flavor_pairing_graph_v1.json inexistant), prestige cuisine constant,
+# ease/cost/carbon quasi constants (champs absents, clés non résolues).
+
+def test_fichiers_references_par_data_io_existent():
+    import re
+    from pathlib import Path
+    from backend.engine.config import DATA_ROOT
+    src = (Path(__file__).resolve().parents[1] / "backend/core/data_io.py").read_text(encoding="utf-8")
+    chemins = {"/".join(re.findall(r'"([^"]+)"', m))
+               for m in re.findall(r'DATA_ROOT((?:\s*/\s*"[^"]+")+)', src)}
+    absents = sorted(c for c in chemins if not (DATA_ROOT / c).exists())
+    assert not absents, f"Fichiers de données introuvables (loader silencieusement vide) : {absents}"
+
+
+def test_dimensions_score_non_constantes():
+    import backend.engine.score_engine.quality as quality
+    quality._load_data.cache_clear()
+    data = quality._load_data()
+    dims = ("nutrition", "authenticity", "accessibility", "cost", "ease", "carbon", "flavor")
+    constantes = {}
+    for dim in dims:
+        fn = getattr(quality, f"_d_{dim}")
+        valeurs = {fn(r, data) for r in RECIPES}
+        if len(valeurs) < 5:
+            constantes[dim] = sorted(valeurs)
+    assert not constantes, f"Dimensions de score (quasi) constantes sur le dataset : {constantes}"
+
+
+# ── Rebuild complet sans perte ─────────────────────────────────────────────────
+#
+# Constaté le 2026-09-14 : 22 ingrédients MANUAL saisis directement dans
+# nutrition_v2.json (absents de nutrition_manual_supplements.json) auraient
+# perdu leurs valeurs au prochain build_n2_direct.py --promote, et
+# build_dict_v2.py recalculait l'alias_index de zéro.
+
+def test_variants_manual_declares_dans_supplements():
+    import json
+    from backend.engine.config import DATA_ROOT
+    supp = json.loads((DATA_ROOT / "nutrition" / "reference" / "nutrition_manual_supplements.json")
+                      .read_text(encoding="utf-8"))["supplements"]
+    declares = {s.get("ig_id") for s in supp.values()}
+    non_declares = [
+        (base, vk) for base, data in load_nutrition_db().items()
+        for vk, v in (data.get("variants") or {}).items()
+        if v.get("_source") == "MANUAL" and v.get("_v32_ing_id") not in declares
+    ]
+    assert not non_declares, (
+        f"{len(non_declares)} variants MANUAL absents de nutrition_manual_supplements.json "
+        f"— perdus au prochain build_n2_direct.py --promote : {non_declares[:10]}"
+    )
+
+
+def test_alias_index_cibles_existent():
+    import json
+    from backend.engine.config import DATA_ROOT
+    raw = json.loads((DATA_ROOT / "ingredients" / "ingredients_dictionary.json").read_text(encoding="utf-8"))
+    casses = {a: c for a, c in (raw.get("alias_index") or {}).items() if c not in INGS}
+    masquants = sorted(a for a in (raw.get("alias_index") or {}) if a in INGS)
+    assert not casses, f"Alias vers des clés inexistantes du dico : {casses}"
+    assert not masquants, f"Alias qui masquent une vraie clé du dico : {masquants}"
+
+
 if __name__ == "__main__":
     tests = [(n, f) for n, f in globals().items() if n.startswith("test_") and callable(f)]
     ok = fail = 0

@@ -3,7 +3,7 @@
     "description": "Token index — SOURCE:id → base/variant/IG context",
     "version": "6.0",
     "nutrition_version": "7.2",
-    "generated_at": "2026-08-13T10:22:21.085922+00:00",
+    "generated_at": "2026-09-14T06:11:26.360248+00:00",
     "generated_by": "build_indexes.py",
     "_generated": true,
     "_do_not_edit": "Fichier auto-généré — toute modification manuelle sera écrasée au prochain run du pipeline.",
@@ -3777,7 +3777,7 @@
     },
     "USDA:169925": {
       "base": "mandarin",
-      "variant": "default",
+      "variant": "juice_plain",
       "ig_id": "ing_01254",
       "ig_axes": {
         "seasoning": "plain",
@@ -8735,6 +8735,16 @@
       },
       "var_axes": {}
     },
+    "USDA:170004": {
+      "base": "yellow_onion_usda",
+      "variant": "sauteed_in_oil",
+      "ig_id": "ing_05774",
+      "ig_axes": {
+        "cooking_state": "sauteed",
+        "cooking_process": "in_oil"
+      },
+      "var_axes": {}
+    },
     "CIQUAL:13032": {
       "base": "black_olive",
       "variant": "canned_in_brine",
@@ -12895,7 +12905,7 @@
     },
     "CIQUAL:16150": {
       "base": "palm_oil",
-      "variant": "default",
+      "variant": "oil_refined_plant",
       "ig_id": "ing_04459",
       "ig_axes": {
         "form": "oil",
@@ -17665,16 +17675,6 @@
         "cooking_state": "raw",
         "form": "whole",
         "thermal_state": "fresh"
-      },
-      "var_axes": {}
-    },
-    "USDA:170004": {
-      "base": "yellow_onion_usda",
-      "variant": "default",
-      "ig_id": "ing_05774",
-      "ig_axes": {
-        "cooking_state": "sauteed",
-        "cooking_process": "in_oil"
       },
       "var_axes": {}
     }
