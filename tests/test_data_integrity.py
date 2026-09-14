@@ -483,6 +483,27 @@ def test_tags_allergenes_couvrent_les_ingredients():
     )
 
 
+def test_tags_allergenes_ne_contredisent_pas_les_regimes():
+    # Constaté le 2026-09-14 : 93 recettes (dont 79 vegan) gardaient des tags
+    # lait/œufs/gluten hérités de leur version non vegan, sans aucun
+    # ingrédient correspondant — la recette disparaissait des recherches
+    # « sans lait » alors que son flag de régime était juste.
+    fix = _import_script("scripts/recipes/fix_recipe_diet_allergens.py", "fix_recipe_diet_allergens")
+    contradictions = []
+    for r in RECIPES:
+        tags = set((r.get("tags") or {}).get("allergens") or [])
+        for flag, exclus in fix.FLAG_EXCLUDES.items():
+            if (r.get("diet_flags") or {}).get(flag) and tags & exclus:
+                contradictions.append((r["id"], flag, sorted(tags & exclus)))
+    vocab = sorted({a for r in RECIPES for a in (r.get("tags") or {}).get("allergens") or []
+                    if a in fix.TAG_ALIASES})
+    assert not contradictions, (
+        f"{len(contradictions)} recettes dont un tag allergène contredit le régime "
+        f"— lancer scripts/recipes/fix_recipe_diet_allergens.py : {contradictions[:10]}"
+    )
+    assert not vocab, f"Tags allergènes hors vocabulaire recettes : {vocab}"
+
+
 def test_bouillon_deshydrate_pas_dose_en_liquide():
     fix = _import_script("scripts/recipes/fix_stock_reconstitution.py", "fix_stock_reconstitution")
     liquides = [(r["id"], c.get("quantity"), c.get("unit"))

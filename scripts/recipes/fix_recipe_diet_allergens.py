@@ -11,6 +11,12 @@ uniquement.
   - tags.diet : retire les régimes contredits par un flag passé à False.
   - tags.allergens : ajoute les allergènes des ingrédients (vocabulaire des
     recettes : gluten, soy, milk + lactose…) et ceux des sous-recettes base_*.
+  - tags.allergens : retire un tag UNIQUEMENT s'il contredit un flag de régime
+    vrai (ex. 'eggs' sur une recette vegan) ET qu'aucun ingrédient ni
+    sous-recette ne le justifie — restes des versions non vegan des plats
+    (160 cas au 2026-09-14). Les autres tags sans ingrédient correspondant
+    sont conservés (ex. céleri des bouillons du commerce).
+  - vocabulaire : 'cereals_gluten' (dico) → 'gluten' (recettes).
 
 Les lignes meta.role == 'serving_suggestion' (accompagnements optionnels,
 ex. « toasts » avec une confiture) sont ignorées : elles ne font pas partie
@@ -47,6 +53,16 @@ ALLERGEN_TAG = {
     'sesame': ['sesame'], 'celery': ['celery'], 'mustard': ['mustard'],
     'sulphites': ['sulphites'], 'lupin': ['lupin'],
 }
+
+
+# flag de régime vrai → tags d'allergènes qu'il exclut
+FLAG_EXCLUDES = {
+    'vegan':        {'milk', 'lactose', 'eggs'},
+    'lactose_free': {'milk', 'lactose'},
+    'gluten_free':  {'gluten'},
+    'nut_free':     {'tree_nuts', 'peanuts'},
+}
+TAG_ALIASES = {'cereals_gluten': 'gluten', 'soybeans': 'soy'}
 
 
 def _core_composition(recipe: dict) -> list[dict]:
@@ -86,9 +102,23 @@ def one_pass(recipes: list[dict], repo: IngredientRepository, stats: Counter) ->
                 found = []
             for a in found:
                 wanted.update(ALLERGEN_TAG.get(a, [a]))
+        for i, a in enumerate(list(allergens)):
+            if a in TAG_ALIASES:
+                canon = TAG_ALIASES[a]
+                allergens[i] = canon
+                stats[f'tags.allergens {a}->{canon}'] += 1
+                changed += 1
+        if len(set(allergens)) != len(allergens):
+            allergens[:] = list(dict.fromkeys(allergens))
         for a in sorted(wanted - set(allergens)):
             allergens.append(a)
             stats[f'tags.allergens +{a}'] += 1
+            changed += 1
+
+        excluded = set().union(*(s for f, s in FLAG_EXCLUDES.items() if flags.get(f) is True))
+        for a in [a for a in allergens if a in excluded and a not in wanted]:
+            allergens.remove(a)
+            stats[f'tags.allergens -{a} (contredit un flag, sans ingrédient)'] += 1
             changed += 1
     return changed
 
