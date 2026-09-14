@@ -1,172 +1,150 @@
 # ALIM v6 — Plateforme Culinaire Végétarienne
 
-API de recommandation végétarienne. 529+ recettes, 40+ cuisines.
-Score CDC v4 7 dimensions. Auth JWT (B2C) + API key (B2B).
-PostgreSQL avec fallback SQLite.
+API de recommandation végétarienne et application web React.
+820 recettes (dont 88 préparations de base), 100 cuisines, nutrition calculée
+depuis CIQUAL / CNF / USDA. Auth JWT (B2C) + clé API (B2B).
+PostgreSQL en production, SQLite en développement.
 
 ---
 
-## Lancement rapide
+## Prérequis
+
+- Python 3.13+ et Node.js 24+
+- **Git LFS** : les 728 photos de recettes (`frontend/public/images/`) sont stockées
+  avec Git LFS. Installer puis activer avant de cloner :
 
 ```bash
-# 1. Dépendances Python
-pip install -r requirements.txt
+git lfs install
+```
 
-# 2. Variables d'environnement (minimum)
-export SECRET_KEY="votre-cle-secrete-longue-et-aleatoire"
+---
 
-# 3. Démarrage
+## Lancement rapide (développement)
+
+```bash
+pip install -r requirements-dev.txt
+cp .env.example .env              # à la racine du projet
+cd frontend && npm install && npm run build && cd ..
 uvicorn backend.api.main:app --reload
-# API : http://localhost:8000/docs
-# UI  : http://localhost:8000/ui
 ```
 
----
+- API et documentation : http://localhost:8000/docs
+- Application : http://localhost:8000/ui
+- Frontend en mode dev (rechargement à chaud) : `cd frontend && npm run dev`
 
-## Frontends
-
-Deux frontends coexistent. `ALIM_FRONTEND` détermine lequel est servi.
-
-| Mode | Variable | Prérequis | Usage |
-|---|---|---|---|
-| `auto` (défaut) | — | — | React si `frontend/dist/` existe, sinon vanilla |
-| `react` | `ALIM_FRONTEND=react` | `npm run build` | Production |
-| `vanilla` | `ALIM_FRONTEND=vanilla` | — | Dev sans Node.js |
-
-### Build React (une fois)
-
-```bash
-cd frontend
-npm install   # ~96 Mo — jamais commité (voir .gitignore)
-npm run build # génère frontend/dist/
-```
-
-### Vanilla (sans Node.js)
-
-`frontend_vanilla/index.html` — HTML + JS mono-fichier, aucune dépendance.
-Servi automatiquement si `frontend/dist/` est absent.
+Les migrations de base de données (Alembic) sont appliquées au démarrage.
 
 ---
 
 ## Variables d'environnement
 
-| Variable | Description | Défaut |
+Référence complète et commentée : [`.env.example`](.env.example).
+
+| Variable | Rôle | Défaut |
 |---|---|---|
-| `SECRET_KEY` | Clé JWT — **obligatoire en prod** | clé éphémère (dev) |
+| `APP_ENV` | `production` \| `development` | `development` (avertissement au démarrage) |
+| `SECRET_KEY` | Clé JWT — **bloquante en production** | clé éphémère |
+| `HEALTH_DATA_KEY` | Chiffrement Fernet des données de santé (RGPD Art. 9) — **bloquante en production** | données en clair |
+| `ADMIN_EMAILS` | Emails autorisés sur `/admin/*` (en plus d'une clé API) | vide = admin désactivé |
 | `DATABASE_URL` | `postgresql://user:pwd@host:5432/db` | SQLite `alim_dev.db` |
-| `DB_HOST` / `DB_PORT` / `DB_NAME` / `DB_USER` / `DB_PASSWORD` | Paramètres PG individuels | — |
-| `ALIM_ENV` | `development` → active les helpers dev (reset token visible) | `production` |
-| `ALIM_FRONTEND` | `auto` \| `react` \| `vanilla` | `auto` |
-| `CORS_ORIGINS` | Origines CORS (virgule-séparées) | `*` |
-| `HEALTH_DATA_KEY` | Clé chiffrement données santé (RGPD Art. 9) | — |
-| `REDIS_URL` | Rate limiter Redis (multi-process) | mémoire (dev) |
-| `LOG_LEVEL` | `DEBUG` \| `INFO` \| `WARNING` | `INFO` |
-| `LOG_FORMAT` | `json` → logs structurés | texte |
-| `DB_ECHO` | `true` → logs SQL SQLAlchemy | `false` |
-| `DB_POOL_SIZE` / `DB_MAX_OVERFLOW` | Pool PG | `5` / `10` |
-| `RESET_TOKEN_TTL_MINUTES` | TTL tokens reset mot de passe | `30` |
+| `CORS_ORIGINS` | Origines autorisées (virgules) | `*` |
+| `REDIS_URL` | Rate limiting partagé entre workers | mémoire |
+| `METRICS_TOKEN` | Jeton exigé pour `/metrics` en production | — |
+| `JWT_EXPIRE_MINUTES` | Durée de validité des jetons | `1440` |
+| `RESET_TOKEN_TTL_MINUTES` | Durée des jetons de réinitialisation | `30` |
+| `LOG_LEVEL` / `LOG_FORMAT` | Niveau / `json` pour des logs structurés | `INFO` / texte |
+
+Le jeton de réinitialisation de mot de passe n'est renvoyé dans la réponse
+qu'avec `APP_ENV=development` **explicite** (jamais par défaut).
 
 ---
 
 ## Structure
 
 ```
-project_final_v6_migrated/
-├── backend/              ← FastAPI (API + moteurs + DB)
-│   ├── api/              ← Routes + main.py + router.py
-│   │   └── routes/       ← auth, recipes, nutrition, planning, admin, ingredients, frigo
-│   ├── core/             ← Sécurité, JWT, rate limiting, data_io, logger, validators
-│   ├── db/               ← SQLAlchemy (models, session, migrations, repositories)
-│   ├── engine/           ← 20+ moteurs Python (reco, score, search, cycle, nutrition…)
-│   │   ├── reco_engine/  ← orchestrator, personalization, scoring
-│   │   ├── score_engine/ ← quality, reliability, ajr, health, explainer
-│   │   ├── search_engine/← core, similar, resolver
-│   │   ├── rule_engine/  ← diet, seasonality, validation, carbon, variants
-│   │   └── planning_engine/ ← servings, budget
-│   └── services/         ← Couche service (scoring, reco, filter, profile, user…)
-├── frontend/             ← React 19 + Vite + hash router custom
-│   └── src/
-│       ├── pages/        ← 7 pages (Home, RecipeDetail, Frigo, Planning, Nutrition, Profile, CycleAstro)
-│       ├── components/   ← 4 composants (Navbar, RecipeCard, AuthModal, RecipeLegend)
-│       ├── api.js        ← Couche client centralisée
-│       ├── Router.jsx    ← Hash router custom (zéro dépendance)
-│       └── AuthContext.jsx
-├── alim_engine/          ← Scripts batch autonomes (corrector, rewriter, pipeline)
-├── backend/data/         ← Dataset JSON
-│   ├── recipes/          ← recipes.json (4.4 MB), recipes_v2.json (4.8 MB)
-│   ├── ingredients/      ← dictionnaire, fr_to_en_mapping, ingredient_physical
-│   ├── graphs/           ← 28 graphes JSON (nutrition, scoring, flavor, cycle…)
-│   ├── nutrition/        ← nutrition_database.json
-│   └── modules/          ← seasonality, astro_nutrition
-├── tests/                ← 12 fichiers pytest (intégration, DB, engines, routes…)
-├── scripts/              ← Scripts utilitaires (build_index, import_data…)
-└── docs/                 ← CGU + documentation
+├── backend/
+│   ├── api/            ← main.py, router.py, routes/ (auth, recipes, nutrition,
+│   │                     planning, profile, ingredients, frigo, graph, admin)
+│   ├── core/           ← config, sécurité/JWT, rate limiting, data_io, data_cache
+│   ├── db/             ← SQLAlchemy (models, session, repositories)
+│   ├── engine/         ← moteurs : reco, score, search, rule (régimes, carbone…),
+│   │                     planning (courses, budget), nutrition, cycle
+│   ├── services/       ← couche service (reco, filtres, profils, clés API…)
+│   └── data/           ← dataset JSON (recettes, ingrédients, nutrition, graphes, prix)
+├── frontend/           ← React 19 + Vite, hash router maison, tests Vitest
+├── alembic/            ← migrations de schéma
+├── scripts/            ← pipeline nutrition, outils recettes, prix
+├── tests/              ← pytest (données, routes, sécurité, migrations, moteurs…)
+└── docs/               ← cahier des charges (CDC_*)
 ```
+
+Les données chargées par l'API sont mises en cache et **rechargées
+automatiquement** quand un fichier JSON de `backend/data/` change (pas de
+redémarrage nécessaire après un rebuild).
 
 ---
 
-## Routes API principales
+## Routes principales
 
-| Méthode | Route | Auth | Description |
+| Méthode | Route | Accès | Description |
 |---|---|---|---|
-| POST | `/auth/register` | — | Créer un compte |
-| POST | `/auth/login` | — | Token JWT |
-| POST | `/auth/forgot-password` | — | Demande reset |
-| POST | `/auth/reset-password` | — | Reset mot de passe |
-| POST | `/auth/refresh` | JWT | Renouveler token |
-| DELETE | `/auth/account` | JWT | Supprimer compte (RGPD) |
-| GET | `/profil/` | JWT | Lire profil |
-| POST | `/profil/update` | JWT | Mettre à jour |
-| POST | `/recettes/recherche` | JWT | Recherche paginée |
-| GET | `/recettes/top` | JWT | Top recettes |
-| POST | `/recommend` | JWT | Recommandation personnalisée |
-| GET | `/nutrition/ajr_score` | — | Score AJR |
-| GET | `/planning/mealplan` | API key | Plan 7 jours |
-| POST | `/planning/shopping_list` | — | Liste de courses |
-| POST | `/admin/pipeline` | API key | Relancer pipeline |
-| POST | `/admin/diet_flags/rebuild` | API key | Recalculer diet flags |
-| GET | `/healthz` | — | Health check détaillé |
-| GET | `/stats` | — | Statistiques plateforme |
-| GET | `/ui` | — | Interface utilisateur |
+| POST | `/auth/register`, `/auth/login` | public (limité) | Compte, jeton JWT |
+| POST | `/auth/forgot-password`, `/auth/reset-password` | public (limité) | Réinitialisation |
+| DELETE | `/auth/account` | JWT | Suppression du compte (RGPD) |
+| GET / POST | `/profil/`, `/profil/update` | JWT | Profil utilisateur |
+| GET | `/recettes/top`, `/recettes/search`, `/recettes/{id}` | public | Catalogue |
+| POST | `/recettes/recherche` | public, personnalisé si connecté | Recherche filtrée |
+| POST | `/recettes/recommend` | JWT | Recommandation personnalisée |
+| POST | `/nutrition/ajr_score` | public | Score AJR |
+| GET | `/planning/mealplan` | public, personnalisé si connecté | Plan de repas |
+| POST | `/planning/shopping_list_from_recipes` | public | Liste de courses chiffrée |
+| PUT | `/planning/prices/{clé}` | JWT (limité) | Corriger un prix du catalogue |
+| * | `/admin/*` | clé API + `ADMIN_EMAILS` | Pipeline, audits, rebuilds |
+| GET | `/healthz`, `/stats`, `/metrics` | public (`/metrics` protégé en prod) | Supervision |
+
+Documentation interactive complète : `/docs` (désactivée en production).
 
 ---
 
 ## Tests
 
 ```bash
-# Tous les tests
-pytest
-
-# Par catégorie
-pytest tests/test_data_integrity.py   # invariants dataset
-pytest tests/test_routes.py           # logique API
-pytest tests/test_db.py               # base de données
-pytest tests/test_pipeline.py         # pipeline scoring
+pytest                              # backend
+cd frontend && npm run lint && npm test && npm run build
 ```
+
+La CI GitHub Actions (`.github/workflows/ci.yml`) lance pytest, le lint,
+les tests et le build du frontend, puis le build Docker, à chaque push sur
+`master`, `main` ou `develop`.
 
 ---
 
-## Production
+## Rebuild des données
+
+Les sources brutes (CIQUAL, CNF, USDA — 97 Mo) ne sont pas versionnées :
+les placer dans `backend/data/nutrition/raw/` ; leurs empreintes attendues sont
+dans `backend/data/nutrition/logs/raw_sources_manifest.json`.
 
 ```bash
-# PostgreSQL + workers multiples
-export DATABASE_URL="postgresql://user:pwd@host:5432/alim_db"
-export SECRET_KEY="$(openssl rand -hex 32)"
-export ALIM_ENV="production"
-export CORS_ORIGINS="https://votre-domaine.com"
-
-uvicorn backend.api.main:app --workers 4 --host 0.0.0.0 --port 8000
+python scripts/nutrition/build_n2_direct.py --promote
+python scripts/nutrition/build_dict_v2.py
+python scripts/nutrition/build_indexes.py
+python scripts/recipes/fix_recipe_diet_allergens.py
+python scripts/recipes/build_derived_base_registry.py   # alterner avec la ligne précédente jusqu'à 0 changement
+python scripts/recipes/rebuild_graphs.py
 ```
 
-> `ALIM_ENV=production` désactive `_dev_reset_token` dans les réponses auth.
-> `HEALTH_DATA_KEY` requis pour le chiffrement RGPD des données de santé.
+Portions irréalistes : `python scripts/recipes/propose_servings.py` produit une
+proposition CSV à valider, appliquée avec `--apply`.
 
-## a faire
-corriger pipeline pour composite_ingredients.json
-La formule de calcul pour le pipeline sera:
-# Nutrition de X grammes de composite_ingredient
-ratio = x / batch_yield["quantity"]  # ex: 10g de garam_masala sur batch de 50g = 0.2
-for comp in components:
-    contrib = comp["quantity"] * ratio  # quantité effective de ce composant
-    # → lookup dans nutrition table
+---
 
+## Production (Docker)
+
+```bash
+cp .env.example .env    # APP_ENV=production, SECRET_KEY, HEALTH_DATA_KEY, POSTGRES_PASSWORD, CORS_ORIGINS…
+docker compose up --build
+```
+
+Services : `api` (FastAPI + frontend compilé), `db` (PostgreSQL 16),
+`redis`, `caddy` (HTTPS), `backup` (sauvegardes PostgreSQL).

@@ -212,47 +212,31 @@ app.add_middleware(SecurityHeadersMiddleware)
 app.include_router(router)
 
 
-# ── Sélection du frontend ──────────────────────────────────────────────────────
+# ── Frontend ───────────────────────────────────────────────────────────────────
 #
-# ALIM_FRONTEND (variable d'environnement) :
-#   auto    (défaut) → React build si frontend/dist/ existe, sinon vanilla
-#   react           → React build  : frontend/dist/  (npm run build requis)
-#   vanilla         → HTML mono-fichier : frontend_vanilla/
+# Frontend unique : React 19 + Vite (frontend/), servi depuis frontend/dist/.
+#   cd frontend && npm install && npm run build
 #
-# Architecture des deux frontends :
-#   frontend/         — React 19 + Vite (hash router, aucune dépendance serveur)
-#                       Lancer : cd frontend && npm install && npm run build
-#   frontend_vanilla/ — HTML+JS sans build step (dev sans Node.js)
+# Le repli « frontend_vanilla/ » documenté auparavant n'a jamais existé dans le
+# dépôt : sans build, /ui répondait 503 dans les deux modes.
+# ALIM_FRONTEND=react (Docker) rend le build obligatoire au démarrage.
 #
 _PROJECT_ROOT   = _Path(__file__).resolve().parent.parent.parent
 _DIST           = _PROJECT_ROOT / "frontend" / "dist"
-_VANILLA        = _PROJECT_ROOT / "frontend_vanilla"
-_FRONTEND_MODE  = os.getenv("ALIM_FRONTEND", "auto").lower()
+_FRONTEND_INDEX = _DIST / "index.html"
 
-def _resolve_frontend() -> tuple[str, _Path]:
-    """Retourne (mode_actif, chemin_index_html)."""
-    if _FRONTEND_MODE == "react":
-        if not _DIST.exists():
-            raise RuntimeError(
-                "ALIM_FRONTEND=react mais frontend/dist/ absent. "
-                "Lancer : cd frontend && npm install && npm run build"
-            )
-        return "react", _DIST / "index.html"
-    if _FRONTEND_MODE == "vanilla":
-        return "vanilla", _VANILLA / "index.html"
-    # auto : react si dist présent, sinon vanilla
-    if _DIST.exists() and (_DIST / "index.html").exists():
-        return "react", _DIST / "index.html"
-    return "vanilla", _VANILLA / "index.html"
-
-_frontend_mode, _frontend_index = _resolve_frontend()
-logger.info("Frontend : %s -> %s", _frontend_mode, _frontend_index)
+if os.getenv("ALIM_FRONTEND", "").lower() == "react" and not _FRONTEND_INDEX.exists():
+    raise RuntimeError(
+        "ALIM_FRONTEND=react mais frontend/dist/ absent. "
+        "Lancer : cd frontend && npm install && npm run build"
+    )
+logger.info("Frontend : %s", _FRONTEND_INDEX if _FRONTEND_INDEX.exists() else "absent (npm run build)")
 
 # ── Montage des assets statiques ───────────────────────────────────────────────
-if _frontend_mode == "react" and (_DIST / "assets").exists():
+if (_DIST / "assets").exists():
     # Build Vite : assets hashés sous /assets/
     app.mount("/assets", StaticFiles(directory=str(_DIST / "assets")), name="assets")
-    # images des recettes servies depuis dist/images/
+    # images des recettes servies depuis dist/images/ (copiées depuis public/, Git LFS)
     if (_DIST / "images").exists():
         app.mount("/images", StaticFiles(directory=str(_DIST / "images")), name="images")
     # favicon depuis dist/
@@ -260,33 +244,26 @@ if _frontend_mode == "react" and (_DIST / "assets").exists():
         @app.get("/favicon.svg", include_in_schema=False)
         def favicon_react():
             return FileResponse(str(_DIST / "favicon.svg"))
-elif _VANILLA.exists():
-    # Vanilla : assets servis sous /static/
-    app.mount("/static", StaticFiles(directory=str(_VANILLA)), name="static")
 
 
 @app.get("/ui", include_in_schema=False)
 @app.get("/ui/{path:path}", include_in_schema=False)
 def frontend_app(path: str = ""):
     """
-    Frontend ALIM.
-
-    - react   : React 19 build Vite (frontend/dist/index.html)
-    - vanilla : HTML mono-fichier  (frontend_vanilla/index.html)
+    Frontend ALIM (React 19, build Vite frontend/dist/index.html).
 
     Hash router côté client → un seul index.html pour toutes les routes.
     """
-    if not _frontend_index.exists():
+    if not _FRONTEND_INDEX.exists():
         from fastapi.responses import JSONResponse
         return JSONResponse(
             status_code=503,
             content={
                 "detail": "Frontend non disponible.",
-                "hint":   "react → cd frontend && npm run build | vanilla → frontend_vanilla/ requis",
-                "mode":   _frontend_mode,
+                "hint":   "cd frontend && npm install && npm run build",
             }
         )
-    return FileResponse(str(_frontend_index))
+    return FileResponse(str(_FRONTEND_INDEX))
 
 
 # ── Middleware headers quota (B2B) ─────────────────────────────────────────────

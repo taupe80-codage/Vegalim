@@ -34,3 +34,16 @@ et l'historique de `backend/data/config/prices_catalog.json`).
 **Prochaine étape si on reprend ce sujet** : lister précisément quels
 programmes d'affiliation sont ouverts aujourd'hui et leurs conditions
 d'inscription, avant d'investir du temps d'intégration.
+
+## Nutrition des ingrédients composites
+
+**Piste (reprise du README) : calcul depuis `composite_ingredients.json`**
+
+Pour X grammes d'un ingrédient composite (ex. garam masala) :
+
+```python
+ratio = x / batch_yield["quantity"]   # 10 g sur un lot de 50 g = 0.2
+for comp in components:
+    contrib = comp["quantity"] * ratio  # quantité effective du composant
+    # → lookup dans la table nutrition
+```
