@@ -63,7 +63,7 @@ def delete_profile_route(user: dict = Depends(get_user)):
 
 class InteractionPayload(BaseModel):
     recipe_id:    str            # ex. « pasta_lasagnes_vegan_412e90 »
-    action:       str = "view"   # view | like | dislike | plan | cook | skip
+    action:       str = "view"   # view | like | dislike | unlike | undislike | plan | cook | skip
     score_shown:  float | None = None
     profile_used: str   | None = None
 
@@ -75,9 +75,10 @@ def record_interaction(payload: InteractionPayload,
     Enregistre une interaction utilisateur avec une recette.
     Alimente le moteur de personnalisation pour les recommandations futures.
 
-    Actions valides : view | like | dislike | plan | cook | skip
+    Actions valides : view | like | dislike | unlike | undislike | plan | cook | skip
+    (like/dislike remplacent l'avis précédent ; unlike/undislike le retirent)
     """
-    VALID_ACTIONS = {"view", "like", "dislike", "plan", "cook", "skip"}
+    VALID_ACTIONS = {"view", "like", "dislike", "unlike", "undislike", "plan", "cook", "skip"}
     if payload.action not in VALID_ACTIONS:
         raise HTTPException(status_code=400,
             detail=f"Action invalide. Valeurs : {sorted(VALID_ACTIONS)}")
@@ -99,6 +100,15 @@ def record_interaction(payload: InteractionPayload,
         score_shown  = payload.score_shown,
         profile_used = payload.profile_used,
     )
+
+
+@router.get("/likes")
+def list_likes(user: dict = Depends(get_user)):
+    """Recettes likées (favoris du compte), de la plus récente à la plus ancienne."""
+    from backend.services.interaction_service import load_history
+    history = load_history(user["email"])
+    order = history.get("liked_order") or sorted(history.get("liked", set()))
+    return {"liked": list(order)}
 
 
 @router.get("/learning")

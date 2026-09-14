@@ -9,7 +9,9 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { useRouter, navigate } from '../Router';
-import { recipes as recipesApi } from '../api';
+import { recipes as recipesApi, profile as profileApi } from '../api';
+import { useAuth } from '../AuthContext';
+import { recordViewOnce } from '../favoritesSync';
 import translations from '../translations.json';
 import physData from '../ingredientPhysical.json';
 import { formatIngredientQty } from '../formatIngredientQty';
@@ -238,6 +240,7 @@ function ingredientMatches(fridgeId, recipeId) {
 
 export default function RecipeDetailPage() {
   const { params } = useRouter();
+  const loggedIn = !!useAuth()?.user;
   const toast = useToast();
 
   const [recipe,   setRecipe]   = useState(null);
@@ -309,6 +312,11 @@ export default function RecipeDetailPage() {
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
   }, [params.id]);
+
+  // ── Vue enregistrée côté compte (personnalisation), une fois par session ───
+  useEffect(() => {
+    if (loggedIn && recipe?.id) recordViewOnce(profileApi.interaction, recipe.id);
+  }, [loggedIn, recipe?.id]);
 
   // ── Chargement similaires (une fois la recette chargée) ────────────────────
   useEffect(() => {

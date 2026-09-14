@@ -161,6 +161,9 @@ export const planning = {
 export const profile = {
   get:    ()        => get('/profil'),
   update: (payload) => post('/profil/update', payload),
+  // Interactions (compte connecté) : like | unlike | view… — alimentent la personnalisation
+  interaction: (recipe_id, action) => post('/profil/interaction', { recipe_id, action }),
+  likes:       ()                  => get('/profil/likes'),
 };
 
 // ── Ingrédients ───────────────────────────────────────────────────────────────

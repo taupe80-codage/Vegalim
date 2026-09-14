@@ -78,10 +78,12 @@ def _load_history_from_db(email: str) -> dict:
         with db_session() as db:
             repo = RecipeHistoryRepository(db)
             recent = repo.get_recent(email, limit=200)
-            liked    = set(repo.get_liked_recipe_ids(email))
+            liked_order = repo.get_liked_recipe_ids(email)
+            liked    = set(liked_order)
             disliked = set(repo.get_disliked_recipe_ids(email))
             viewed   = {e.recipe_id for e in recent}
             return {
+                "liked_order": liked_order,
                 "liked":    liked,
                 "disliked": disliked,
                 "viewed":   viewed,
@@ -105,6 +107,7 @@ def _load_history_from_json(email: str) -> dict:
         with open(path, encoding="utf-8") as f:
             data = json.load(f)
         return {
+            "liked_order": list(data.get("liked", [])),
             "liked":    set(data.get("liked", [])),
             "disliked": set(data.get("disliked", [])),
             "viewed":   set(data.get("viewed", [])),
@@ -171,12 +174,17 @@ def save_interaction(email: str, recipe_id: str, action: str,
         if path.exists():
             with open(path, encoding="utf-8") as f:
                 data = json.load(f)
-        if action == "like"    and recipe_id not in data["liked"]:
-            data["liked"].append(recipe_id)
-        if action == "dislike" and recipe_id not in data["disliked"]:
-            data["disliked"].append(recipe_id)
-        data["viewed"] = list(set(data.get("viewed", []) + [recipe_id]))[-500:]
-        data["raw"]    = (data.get("raw", []) + [[recipe_id, action]])[-200:]
+        # Même sémantique que RecipeHistoryRepository.record : un avis par recette
+        if action in ("like", "dislike", "unlike", "undislike"):
+            data["liked"]    = [i for i in data["liked"]    if i != recipe_id]
+            data["disliked"] = [i for i in data["disliked"] if i != recipe_id]
+        if action == "like":
+            data["liked"].insert(0, recipe_id)
+        if action == "dislike":
+            data["disliked"].insert(0, recipe_id)
+        if action not in ("unlike", "undislike"):
+            data["viewed"] = list(set(data.get("viewed", []) + [recipe_id]))[-500:]
+            data["raw"]    = (data.get("raw", []) + [[recipe_id, action]])[-200:]
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False)
         return True

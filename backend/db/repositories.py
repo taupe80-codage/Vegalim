@@ -310,12 +310,28 @@ class RecipeHistoryRepository:
     def __init__(self, db: Session):
         self._db = db
 
+    # Avis explicites : un seul état par recette (like OU dislike), jamais purgés.
+    OPINIONS = ("like", "dislike")
+    # Retrait d'un avis : unlike retire le like, undislike retire le dislike.
+    RETRACTIONS = {"unlike": "like", "undislike": "dislike"}
+
     def record(self, user_email: str, recipe_id: str,
                action: str = "view",
                score_shown: int | None = None,
-               profile_used: str | None = None) -> "RecipeHistory":
-        """Enregistre une interaction. Purge automatique au-delà de MAX_HISTORY."""
+               profile_used: str | None = None) -> "RecipeHistory | None":
+        """
+        Enregistre une interaction. Purge automatique au-delà de MAX_HISTORY.
+
+        like/dislike remplacent l'avis précédent sur la recette (pas de doublon,
+        un like efface un dislike) ; unlike/undislike retirent l'avis et
+        n'ajoutent rien (retour None).
+        """
         from backend.db.models import RecipeHistory
+        if action in self.RETRACTIONS:
+            self._delete_actions(user_email, recipe_id, (self.RETRACTIONS[action],))
+            return None
+        if action in self.OPINIONS:
+            self._delete_actions(user_email, recipe_id, self.OPINIONS)
         entry = RecipeHistory(
             user_email   = user_email,
             recipe_id    = recipe_id,
@@ -339,13 +355,24 @@ class RecipeHistoryRepository:
             .all()
         )
 
+    def _delete_actions(self, user_email: str, recipe_id: str, actions: tuple) -> int:
+        from backend.db.models import RecipeHistory
+        return (
+            self._db.query(RecipeHistory)
+            .filter(RecipeHistory.user_email == user_email,
+                    RecipeHistory.recipe_id == str(recipe_id),
+                    RecipeHistory.action.in_(actions))
+            .delete(synchronize_session=False)
+        )
+
     def get_liked_recipe_ids(self, user_email: str) -> list[str]:
-        """Retourne les recipe_id avec action='like'."""
+        """Retourne les recipe_id avec action='like', du plus récent au plus ancien."""
         from backend.db.models import RecipeHistory
         rows = (
             self._db.query(RecipeHistory.recipe_id)
             .filter(RecipeHistory.user_email == user_email,
                     RecipeHistory.action == "like")
+            .order_by(RecipeHistory.created_at.desc(), RecipeHistory.id.desc())
             .all()
         )
         return [r.recipe_id for r in rows]
@@ -371,22 +398,32 @@ class RecipeHistoryRepository:
         )
 
     def _purge_excess(self, user_email: str) -> int:
-        """Supprime les entrées au-delà de MAX_HISTORY (les plus anciennes)."""
+        """
+        Supprime les interactions passives (vues, skips…) au-delà de MAX_HISTORY,
+        les plus anciennes d'abord. Les likes/dislikes ne sont jamais purgés :
+        auparavant 500 vues suffisaient à effacer les favoris.
+        """
         from backend.db.models import RecipeHistory
-        total = self.count(user_email)
+        passive = (
+            self._db.query(RecipeHistory)
+            .filter(RecipeHistory.user_email == user_email,
+                    RecipeHistory.action.notin_(self.OPINIONS))
+        )
+        total = passive.count()
         if total <= self.MAX_HISTORY:
             return 0
         excess = total - self.MAX_HISTORY
         oldest = (
             self._db.query(RecipeHistory.id)
-            .filter(RecipeHistory.user_email == user_email)
-            .order_by(RecipeHistory.created_at.asc())
+            .filter(RecipeHistory.user_email == user_email,
+                    RecipeHistory.action.notin_(self.OPINIONS))
+            .order_by(RecipeHistory.created_at.asc(), RecipeHistory.id.asc())
             .limit(excess)
-            .subquery()
+            .all()
         )
         deleted = (
             self._db.query(RecipeHistory)
-            .filter(RecipeHistory.id.in_(oldest))
+            .filter(RecipeHistory.id.in_([row.id for row in oldest]))
             .delete(synchronize_session=False)
         )
         return deleted
