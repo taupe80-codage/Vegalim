@@ -252,6 +252,9 @@ logger.info("Frontend : %s -> %s", _frontend_mode, _frontend_index)
 if _frontend_mode == "react" and (_DIST / "assets").exists():
     # Build Vite : assets hashés sous /assets/
     app.mount("/assets", StaticFiles(directory=str(_DIST / "assets")), name="assets")
+    # images des recettes servies depuis dist/images/
+    if (_DIST / "images").exists():
+        app.mount("/images", StaticFiles(directory=str(_DIST / "images")), name="images")
     # favicon depuis dist/
     if (_DIST / "favicon.svg").exists():
         @app.get("/favicon.svg", include_in_schema=False)
