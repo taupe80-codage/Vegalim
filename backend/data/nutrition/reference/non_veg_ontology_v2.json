@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "version": "2.0",
+    "type": "dietary_classifier_ontology",
+    "priority_order": [
+      "safe_exact",
+      "safe_pattern",
+      "non_veg_strict",
+      "non_veg_pattern",
+      "ambiguous"
+    ]
+  },
+
+  "safe_exact": [
+    "lait de coco","lait de soja","lait d'amande","lait d avoine",
+    "beurre de cacao","crème de soja","crème végétale",
+    "fromage végétal","boudin végétal",
+    "oreille de judas","langue de chat",
+    "tofu","tempeh","seitan"
+  ],
+
+  "safe_pattern": [
+    "(lait|beurre|crème|fromage) (de|d') (soja|coco|amande|riz|avoine)",
+    "(plant-based|vegan|vegetarian|meatless|veggie) .*",
+    "(arome|arôme|gout|goût|saveur|flavor) (bacon|poulet|boeuf|beef|chicken|bacon)( végétal)?"
+  ],
+
+  "non_veg_strict": [
+    "beef","pork","chicken","turkey","duck","lamb",
+    "fish","salmon","tuna","anchovy",
+    "shrimp","crab","lobster",
+    "gelatin","collagen","lard","tallow",
+    "bacon","ham","prosciutto","salami",
+    "bouillon de poulet","bouillon de boeuf","sauce poisson"
+  ],
+
+  "non_veg_pattern": [
+    "with (beef|chicken|pork|fish)",
+    "(beef|chicken|pork|fish) (sauce|broth|stock)",
+    "(meat|fish) .*"
+  ],
+
+  "ambiguous": [
+    "arome","arôme","extrait","saveur","flavor","bouillon","sauce"
+  ],
+
+  "anti_false_positive": [
+    "coconut meat",
+    "nut meat",
+    "meatless",
+    "plant meat"
+  ]
+}
