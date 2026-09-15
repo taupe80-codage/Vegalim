@@ -212,10 +212,11 @@ def apply(recipes: list[dict]) -> list[str]:
     by_id = {r["id"]: r for r in recipes}
     log = []
 
+    # recettes supprimées depuis (doublons, remove_duplicate_recipes_2026_09_15.py) : ignorées
+    ABSENTE = {"composition": [], "timing": {}}
+
     def need(rid):
-        if rid not in by_id:
-            raise SystemExit(f"recette inconnue : {rid}")
-        return by_id[rid]
+        return by_id.get(rid, ABSENTE)
 
     for rid, cuit, sec, qty in LEGUMES_SECS:
         for c in need(rid)["composition"]:
@@ -278,13 +279,13 @@ def apply(recipes: list[dict]) -> list[str]:
 
     for rid, dt in DISH_TYPE.items():
         r = need(rid)
-        if r.get("dish_type") != dt:
+        if r is not ABSENTE and r.get("dish_type") != dt:
             log.append(f"type de plat       {rid}: {r.get('dish_type')} → {dt}")
             r["dish_type"] = dt
 
     for rid, n in PORTIONS.items():
         r = need(rid)
-        if r.get("servings") != n:
+        if r is not ABSENTE and r.get("servings") != n:
             log.append(f"portions           {rid}: {r.get('servings')} → {n}")
             r["servings"] = n
             if "servings_default" in r:

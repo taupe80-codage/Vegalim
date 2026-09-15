@@ -142,7 +142,8 @@ def test_variantes_ont_recipe_origin_ai_variant():
     assert not wrong, f"{len(wrong)} variantes avec recipe_origin incorrect"
 
 def test_nb_recettes_attendu():
-    assert len(RECIPES) >= 770, f"Attendu >= 770 recettes, got {len(RECIPES)}"
+    # 820 → 731 le 2026-09-15 : 89 doublons supprimés (remove_duplicate_recipes_2026_09_15.py)
+    assert len(RECIPES) >= 725, f"Attendu >= 725 recettes, got {len(RECIPES)}"
 
 
 
@@ -585,7 +586,7 @@ def test_classements_sans_sous_recettes():
     from backend.core.data_io import is_component_recipe
     from backend.engine.reco_engine.orchestrator import _all_dishes
     plats = _all_dishes()
-    assert len(plats) >= 700, f"catalogue de plats incomplet : {len(plats)}"
+    assert len(plats) >= 630, f"catalogue de plats incomplet : {len(plats)}"  # 634 après dédoublonnage
     assert not [r["id"] for r in plats if is_component_recipe(r)]
 
 
