@@ -32,7 +32,7 @@
 - **Baklava aux Pistaches** _(kid_friendly, dessert, levantine)_ — `dessert_baklava_aux_pistaches_06e5ed`
 - **Banane Caramélisée Philippine** _(gluten_free, vegan, vegetarian, side, philippine)_ — `main_banane_caramelisee_philip_df163c`
 - **Banh Mi Tofu** _(high_protein, vegan, vegetarian, main, vietnamese)_ — `protein_banh_mi_tofu_9b1ea2`
-- **Bannock** _(main, ethiopian)_ — `bread_bannock_e03ffe` 🔁 doublon possible : Bannock (Vegan)
+- **Bannock** _(bread, ethiopian)_ — `bread_bannock_e03ffe` 🔁 doublon possible : Bannock (Vegan)
 - **Bannock (Vegan)** _(kid_friendly, low_calorie, nut_free, snack, canadian)_ — `snack_bannock_vegan_46a1a8` 🔁 doublon possible : Bannock
 - **Bao** _(high_protein, vegan, vegetarian, main, chinese)_ — `bread_bao_ff9db9`
 - **Batata Harra** _(gluten_free, vegan, vegetarian, main, american)_ — `main_batata_harra_c2de57`
@@ -393,7 +393,7 @@
 
 - **Nasi Goreng** _(main, indonesian)_ — `rice_nasi_goreng_edfce4` 🔁 doublon possible : Nasi Goreng (Vegan)
 - **Nasi Goreng (Vegan)** _(lactose_free, nut_free, main, indonesian)_ — `rice_nasi_goreng_vegan_bcc9cb` 🔁 doublon possible : Nasi Goreng
-- **Natto** _(vegan, vegetarian, gluten_free, high_protein, main, japanese)_ — `base_natto_7060f1`
+- **Natto** _(vegan, vegetarian, gluten_free, high_protein, condiment, japanese)_ — `base_natto_7060f1`
 - **Nepali Aloo Tama** _(gluten_free, vegan, vegetarian, main, nepali)_ — `main_nepali_aloo_tama_4664a3`
 - **Nepali Chickpea Curry** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, nepali)_ — `dal_nepali_chickpea_curry_020035`
 - **Nepali Dal Bhat** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_nepali_dal_bhat_7860b1`

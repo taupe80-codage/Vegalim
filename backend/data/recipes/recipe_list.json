@@ -1149,8 +1149,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "coriander_spice_seed",
-        "quantity": 3,
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 20,
         "unit": "g"
       },
       {
@@ -1174,7 +1174,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -1746,7 +1746,7 @@
     "id": "bread_bannock_e03ffe",
     "title": "Bannock",
     "cuisine": "ethiopian",
-    "dish_type": "main",
+    "dish_type": "bread",
     "vegan": false,
     "diet": [],
     "allergens": [
@@ -1776,7 +1776,7 @@
       },
       {
         "ingredient": "water",
-        "quantity": 500,
+        "quantity": 120,
         "unit": "ml"
       },
       {
@@ -1936,6 +1936,11 @@
         "ingredient": "white_rice_raw_seed_unenriched",
         "quantity": null,
         "unit": "1 portion"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 100,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -3539,7 +3544,7 @@
         "unit": "ml"
       },
       {
-        "ingredient": "chilli_pepper_raw",
+        "ingredient": "red_hot_chili_pepper_spice_dried",
         "quantity": 20,
         "unit": "g"
       },
@@ -6598,7 +6603,7 @@
       "milk"
     ],
     "servings": 4,
-    "time_total": 50,
+    "time_total": 30,
     "confidence": 1.0,
     "description": "Plat végétarien équilibré à base de tortillas de maïs, avec une sauce tomate riche et crémeuse, des oignons tendres et parfumés, et un fromage fondu et crémeux, présentant des textures contrastées et des saveurs intenses.",
     "composition": [
@@ -6619,17 +6624,17 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parmesan_grated_dried_cow",
         "quantity": 150,
         "unit": "g"
       },
       {
-        "ingredient": "coriander_spice_seed",
-        "quantity": 3,
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -6639,26 +6644,16 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 240,
+        "quantity": 3,
         "unit": "g"
       },
       {
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
-      },
-      {
-        "ingredient": "milk_liquid_uht_3_5pct",
-        "quantity": 100,
-        "unit": "ml"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -7486,7 +7481,7 @@
       "gluten_free"
     ],
     "allergens": [],
-    "servings": 18,
+    "servings": 11,
     "time_total": 95,
     "confidence": 0.96,
     "description": "Concentré de tomate maison, intense et savoureux, obtenu par une cuisson lente de tomates fraîches, idéal pour sauces et ragoûts délicieux à la texture onctueuse et à la couleur rouge intense.",
@@ -7645,7 +7640,7 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon",
+        "ingredient": "lemon_juice",
         "quantity": 10,
         "unit": "ml"
       }
@@ -8684,7 +8679,7 @@
         "unit": "1 poignée"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -8765,7 +8760,7 @@
         "unit": "1 feuille"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -8783,7 +8778,7 @@
       "lactose"
     ],
     "servings": 17,
-    "time_total": 1469,
+    "time_total": 1685,
     "confidence": 0.92,
     "description": "Crème fraîche épaisse et onctueuse, fermentée à partir de crème entière, avec une texture veloutée et une légère acidité, parfaite pour les sauces et les desserts de la cuisine française",
     "composition": [
@@ -11488,13 +11483,13 @@
         "unit": "g"
       },
       {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 150,
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 120,
         "unit": "g"
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -11536,9 +11531,14 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": [
       {
@@ -13236,7 +13236,7 @@
       },
       {
         "ingredient": "water",
-        "quantity": 350,
+        "quantity": 150,
         "unit": "ml"
       }
     ],
@@ -13521,7 +13521,7 @@
         "unit": "ml"
       },
       {
-        "ingredient": "lemon",
+        "ingredient": "lemon_juice",
         "quantity": 20,
         "unit": "ml"
       },
@@ -15408,22 +15408,22 @@
       "soy"
     ],
     "servings": 16,
-    "time_total": 4340,
+    "time_total": 4360,
     "confidence": 0.93,
     "description": "Pâte de piment fermentée coréenne, profondément umami et légèrement sucrée, avec une texture lisse et une couleur rouge-brun profond, obtenue par fermentation de poivrons rouges, de riz gluant et de farine de soja.",
     "composition": [
       {
-        "ingredient": "chilli_pepper_raw",
+        "ingredient": "gochugaru",
         "quantity": 100,
         "unit": "g"
       },
       {
-        "ingredient": "white_rice_raw_seed_unenriched",
+        "ingredient": "white_glutinous_rice_seed_dried",
         "quantity": 50,
         "unit": "g"
       },
       {
-        "ingredient": "soybean_raw_dried",
+        "ingredient": "soybean_flour_raw_whole",
         "quantity": 50,
         "unit": "g"
       },
@@ -16834,7 +16834,7 @@
       "gluten_free"
     ],
     "allergens": [],
-    "servings": 7,
+    "servings": 1,
     "time_total": 14420,
     "confidence": 0.85,
     "description": "Légume fermenté népalais préparé à partir de feuilles d'épinard séchées et fermentées, développant une texture croustillante et une saveur acide et umami après plusieurs jours de fermentation à température ambiante.",
@@ -16842,11 +16842,6 @@
       {
         "ingredient": "spinach_raw_mature",
         "quantity": 500,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 10,
         "unit": "g"
       },
       {
@@ -18164,7 +18159,7 @@
     "description": "Pâte de piment tunisienne aux épices grillées, condiment incontournable de la cuisine nord-africaine végane, avec une texture lisse et une saveur intense de piment et d'épices. La harissa est préparée avec des piments séchés ramollis, des épices grillées et de l'huile d'olive, puis mixée pour obtenir une pâte homogène.",
     "composition": [
       {
-        "ingredient": "chilli_pepper_raw",
+        "ingredient": "red_hot_chili_pepper_spice_dried",
         "quantity": 100,
         "unit": "g"
       },
@@ -19354,7 +19349,7 @@
       "soy"
     ],
     "servings": 4,
-    "time_total": 39,
+    "time_total": 60,
     "confidence": 1.0,
     "description": "Katsu de tofu croustillant sur lit de riz japonais, nappé d'une sauce curry onctueuse et parfumée, où les saveurs de l'oignon caramélisé et de l'ail torréfié se mélangent en harmonie, avec une texture crémeuse et une couleur dorée appétissante.",
     "composition": [
@@ -19370,17 +19365,17 @@
       },
       {
         "ingredient": "rice_flour",
-        "quantity": 200,
+        "quantity": 60,
         "unit": "g"
       },
       {
         "ingredient": "egg_raw",
-        "quantity": 220,
+        "quantity": 110,
         "unit": "g"
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -19414,7 +19409,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -20059,7 +20054,7 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 20190,
+    "time_total": 14430,
     "confidence": 0.9,
     "description": "Boisson végane fermentée à base de thé vert sucré, légèrement acidulée et pétillante, avec une culture symbiotique de bactéries et de levures, offrant une saveur unique et des bienfaits pour la santé.",
     "composition": [
@@ -20069,7 +20064,7 @@
         "unit": "ml"
       },
       {
-        "ingredient": "matcha_green_tea_powder",
+        "ingredient": "tea_leaf",
         "quantity": 8,
         "unit": "g"
       },
@@ -20708,7 +20703,7 @@
       "gluten"
     ],
     "servings": 4,
-    "time_total": 45,
+    "time_total": 35,
     "confidence": 0.92,
     "description": "Lait d'avoine maison créé en faisant tremper des flocons d'avoine roulés dans de l'eau froide, puis en mixant et filtrant le mélange pour obtenir un liquide fluide et légèrement sucré, idéal pour les recettes véganes.",
     "composition": [
@@ -20894,7 +20889,7 @@
       },
       {
         "ingredient": "water",
-        "quantity": 800,
+        "quantity": 1100,
         "unit": "ml"
       },
       {
@@ -22579,9 +22574,9 @@
     "description": "Mayonnaise végétarienne crémeuse et fraîche, préparée avec de l'huile de tournesol et de la moutarde de Dijon, offrant une texture lisse et une odeur piquante de moutarde.",
     "composition": [
       {
-        "ingredient": "egg_raw",
-        "quantity": 1,
-        "unit": "piece"
+        "ingredient": "egg_yolk_raw",
+        "quantity": 20,
+        "unit": "g"
       },
       {
         "ingredient": "sunflower_oil_plant",
@@ -22589,7 +22584,7 @@
         "unit": "ml"
       },
       {
-        "ingredient": "lemon",
+        "ingredient": "lemon_juice",
         "quantity": 10,
         "unit": "ml"
       },
@@ -22938,13 +22933,13 @@
         "unit": "ml"
       },
       {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 150,
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 80,
         "unit": "g"
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -22971,6 +22966,16 @@
         "ingredient": "jalapeno_pepper_raw",
         "quantity": null,
         "unit": "1 piment"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
       }
     ],
     "n_instructions": 8,
@@ -23185,6 +23190,11 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 100,
+        "unit": "ml"
       }
     ],
     "n_instructions": 10,
@@ -24308,7 +24318,7 @@
     "id": "base_natto_7060f1",
     "title": "Natto",
     "cuisine": "japanese",
-    "dish_type": "main",
+    "dish_type": "condiment",
     "vegan": true,
     "diet": [
       "vegan",
@@ -24340,7 +24350,7 @@
         "unit": "1 oignon"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -30269,7 +30279,7 @@
     ],
     "allergens": [],
     "servings": 11,
-    "time_total": 20,
+    "time_total": 10,
     "confidence": 0.95,
     "description": "Pistou provençal végan créé avec basilic frais, ail parfumé et huile d'olive, offrant une texture lisse et une saveur parfumée d'été, typique de la cuisine méditerranéenne.",
     "composition": [
@@ -32769,7 +32779,7 @@
     ],
     "allergens": [],
     "servings": 16,
-    "time_total": 40,
+    "time_total": 20,
     "confidence": 0.92,
     "description": "Pâte de curry végan aromatique, où les piments frais, le lemongrass et les épices se mélangent pour créer une texture crémeuse et des saveurs épicées, typiques de la cuisine thaïe avec une touche de fraîcheur due au citron vert.",
     "composition": [
@@ -32834,7 +32844,7 @@
         "unit": "1/2 citron"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 8,
     "flags": [],
     "similar": [
       {
@@ -33015,7 +33025,7 @@
     "description": "Pâte de curry vert thaï végétalienne riche et parfumée, avec une texture lisse et une odeur épicée, idéale pour des currys délicieux et parfumés, inspirée de la cuisine thaïlandaise traditionnelle.",
     "composition": [
       {
-        "ingredient": "red_hot_chili_pepper_raw",
+        "ingredient": "serrano_pepper_raw",
         "quantity": 60,
         "unit": "g"
       },
@@ -33432,7 +33442,7 @@
       "lactose"
     ],
     "servings": 4,
-    "time_total": 175,
+    "time_total": 235,
     "confidence": 0.95,
     "description": "Pâte feuilletée croustillante et délicieuse, idéale pour les millefeuilles et les feuilletés, avec une texture croquante et une couleur dorée.",
     "composition": [
@@ -33457,7 +33467,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -33507,7 +33517,7 @@
         "unit": "ml"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -34198,7 +34208,7 @@
       },
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
+        "quantity": 60,
         "unit": "g"
       },
       {
@@ -34229,6 +34239,11 @@
       {
         "ingredient": "cornstarch_flour",
         "quantity": 16,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutmeg_spice",
+        "quantity": 1,
         "unit": "g"
       }
     ],
@@ -35247,7 +35262,7 @@
         "unit": "g"
       },
       {
-        "ingredient": "ginger_raw_root_fresh",
+        "ingredient": "ginger_powder",
         "quantity": 5,
         "unit": "g"
       },
@@ -35282,7 +35297,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -37657,7 +37672,7 @@
         "unit": "1 poignée"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 7,
     "flags": [],
     "similar": [
       {
@@ -40493,7 +40508,7 @@
         "unit": "quelques feuilles"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -41157,12 +41172,12 @@
       "sulphites"
     ],
     "servings": 8,
-    "time_total": 10,
+    "time_total": 1455,
     "confidence": 0.94,
     "description": "Sauce hoisin végane chinoise, sucrée-salée et parfumée, idéale pour accompagner le canard laqué et les rouleaux de printemps, avec une texture lisse et une saveur profondément umami.",
     "composition": [
       {
-        "ingredient": "soybean_raw_dried",
+        "ingredient": "soybean_boiled_dried",
         "quantity": 40,
         "unit": "g"
       },
@@ -41253,6 +41268,11 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 220,
+        "unit": "ml"
       }
     ],
     "n_instructions": 5,
@@ -41277,7 +41297,7 @@
     "description": "Sauce mole végétalienne riche, à base d'un mélange de piments grillés, de tomates fraîches et de chocolat noir, parfaite pour accompagner vos plats préférés avec une texture crémeuse et une couleur riche, inspirée par la cuisine mexicaine traditionnelle.",
     "composition": [
       {
-        "ingredient": "chilli_pepper_raw",
+        "ingredient": "red_hot_chili_pepper_spice_dried",
         "quantity": 50,
         "unit": "g"
       },
@@ -41310,6 +41330,11 @@
         "ingredient": "cinnamon",
         "quantity": 2,
         "unit": "g"
+      },
+      {
+        "ingredient": "coconut_oil_plant",
+        "quantity": 10,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -41332,7 +41357,7 @@
       "sulphites"
     ],
     "servings": 8,
-    "time_total": 20,
+    "time_total": 15,
     "confidence": 0.95,
     "description": "Sauce okonomiyaki végane japonaise, sucrée et fumée, réalisée à partir de ketchup et de sauce Worcestershire végane. Elle est l'accompagnement incontournable des galettes Osaka, avec une texture lisse et une couleur riche.",
     "composition": [
@@ -41373,7 +41398,7 @@
     "allergens": [
       "soy"
     ],
-    "servings": 23,
+    "servings": 33,
     "time_total": 40,
     "confidence": 0.88,
     "description": "Sauce végétalienne créée avec des algues wakame, des champignons de Paris et du tamari, offrant une saveur umami et salée avec une texture lisse et une odeur marine.",
@@ -41412,6 +41437,11 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 100,
+        "unit": "ml"
       }
     ],
     "n_instructions": 5,
@@ -41577,7 +41607,7 @@
         "unit": "1 ou 2 tranches"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -41713,8 +41743,8 @@
     "description": "Pâte de gluten de blé ferme et savoureuse, idéale pour les plats végétaliens créatifs, avec une texture élastique et une saveur umami prononcée, issue de la tradition culinaire asiatique",
     "composition": [
       {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 300,
+        "ingredient": "vital_wheat_gluten_flour",
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -41738,7 +41768,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 11,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -44772,8 +44802,8 @@
     "description": "Découvrez ce plat grec végétal à base d'épinards cuits et de pâte filo croustillante, parfumé à la muscade et au poivre, avec une texture fondante à l'intérieur et croustillante à l'extérieur",
     "composition": [
       {
-        "ingredient": "spinach_cooked",
-        "quantity": 300,
+        "ingredient": "spinach_raw_mature",
+        "quantity": 500,
         "unit": "g"
       },
       {
@@ -44783,7 +44813,7 @@
       },
       {
         "ingredient": "yellow_onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -44798,7 +44828,7 @@
       },
       {
         "ingredient": "nutmeg_spice",
-        "quantity": 5,
+        "quantity": 1,
         "unit": "g"
       },
       {
@@ -45801,9 +45831,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lime_raw",
-        "quantity": 140,
-        "unit": "g"
+        "ingredient": "lime_juice_fresh",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
@@ -45824,9 +45854,14 @@
         "ingredient": "green_salad_raw_plain",
         "quantity": null,
         "unit": "1 assiette"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -50306,7 +50341,7 @@
     "description": "Mélange d'herbes et épices moyen-oriental végan au thym séché, sumac et sésame grillé, pour accompagner vos plats avec une saveur terreuse et une texture parfumée.",
     "composition": [
       {
-        "ingredient": "thyme_fresh_herb",
+        "ingredient": "thyme_dried_herb",
         "quantity": 20,
         "unit": "g"
       },
@@ -50336,7 +50371,7 @@
         "unit": "1 tranche"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },

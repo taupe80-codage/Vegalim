@@ -82,8 +82,8 @@
       "_chef_note": "La pulpe récupérée (okara d'amande) se congèle ou se sèche à 80°C pour usage en biscuiterie.",
       "description": "Lait d'amande maison crémeux et parfumé, à la texture onctueuse et à l'arôme subtil, idéal pour les recettes véganes françaises et les desserts délicieux",
       "instructions": [
-        "Étape 1 : Faire tremper 100g d'amandes dans 800ml d'eau froide pendant 8 heures ou une nuit, jusqu'à ce qu'elles doublent de volume et que la peau se détache facilement, révélant leur texture tendre.",
-        "Étape 2 : Égoutter, rincer, puis peler les amandes optionnellement pour un lait plus blanc et doux, en prenant soin de conserver leur fraîcheur.",
+        "Étape 1 : Faire tremper 100g d'amandes dans de l'eau froide pendant 8 heures ou une nuit, jusqu'à ce qu'elles doublent de volume et que la peau se détache facilement, révélant leur texture tendre.",
+        "Étape 2 : Égoutter et jeter l'eau de trempage, rincer, puis peler les amandes optionnellement pour un lait plus blanc et doux, en prenant soin de conserver leur fraîcheur.",
         "Étape 3 : Mixer les amandes avec 800ml d'eau froide à pleine puissance pendant 1 minute, jusqu'à obtenir un liquide blanc homogène et crémeux, avec une texture lisse et une odeur parfumée.",
         "Étape 4 : Ajouter 0,5g de sel pour améliorer la saveur et la texture, en veillant à bien dissoudre le sel pour éviter les grumeaux.",
         "Étape 5 : Filtrer le mélange à travers un sac à lait végétal ou une étamine fine, en pressant la pulpe pour extraire le maximum de liquide, jusqu'à obtenir un lait d'amande clair et pur.",
@@ -555,7 +555,7 @@
       "instructions": [
         "Étape 1 : Faites tremper les 200g de cajous dans de l'eau pendant 4 heures pour les ramollir et les rendre plus faciles à mixer.",
         "Étape 2 : Égouttez les cajous et mettez-les dans un mixer avec 35g de levure de bière, 20ml de jus de citron frais, 15ml de vinaigre de cidre et 8g de sel. Mixez jusqu'à obtenir une texture lisse et crémeuse.",
-        "Étape 3 : Ajoutez 40g de fécule de tapioca et 25ml d'huile de noix de coco dans le mixer. Mixez à nouveau jusqu'à bien incorporer tous les ingrédients.",
+        "Étape 3 : Ajoutez 40g de fécule de maïs et 25ml de lait de coco dans le mixer. Mixez à nouveau jusqu'à bien incorporer tous les ingrédients.",
         "Étape 4 : Versez le mélange dans une casserole et faites cuire à feu moyen en remuant constamment jusqu'à ce que la texture devienne filante et crémeuse.",
         "Étape 5 : Continuez à cuire et à remuer pendant environ 10 minutes, ou jusqu'à ce que le mélange atteigne la consistance désirée.",
         "Étape 6 : Retirez la casserole du feu et laissez refroidir légèrement le mélange.",
@@ -927,7 +927,7 @@
           }
         },
         {
-          "ingredient": "lemon",
+          "ingredient": "lemon_juice",
           "quantity": 20,
           "unit": "ml",
           "meta": {
@@ -998,10 +998,9 @@
       "difficulty_level": "easy",
       "search_tokens": [
         "(cream",
-        "acidite",
-        "agrume",
         "cheese",
         "cheese)",
+        "citron",
         "classique",
         "coeliaque",
         "cream",
@@ -1034,8 +1033,7 @@
         "sel",
         "simple",
         "table",
-        "vegetarien",
-        "vitamine c"
+        "vegetarien"
       ],
       "yield_factor": 0.35,
       "nutrition_reference": "cream_cheese/block_whole_cow"
@@ -1054,9 +1052,9 @@
       "servings": 17,
       "timing": {
         "prep_active_min": 5,
-        "prep_passive_min": 1440,
-        "cook_min": 24,
-        "total_min": 1469
+        "prep_passive_min": 1680,
+        "cook_min": 0,
+        "total_min": 1685
       },
       "composition": [
         {
@@ -1162,8 +1160,8 @@
       "timing": {
         "prep_active_min": 20,
         "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 40
+        "cook_min": 0,
+        "total_min": 20
       },
       "composition": [
         {
@@ -1309,8 +1307,7 @@
         "Étape 5 : Goûter et ajuster la saveur. Si nécessaire, ajouter un peu plus de sel ou d'huile de tournesol pour atteindre l'équilibre parfait.",
         "Étape 6 : Conserver la pâte de curry dans un pot hermétique au réfrigérateur jusqu'à 2 semaines, ou congeler en portions pour une utilisation future.",
         "Étape 7 : Utiliser cette pâte de curry comme base pour préparer des currys thaïs et asiatiques délicieux, en la mélangeant avec des légumes, des fruits ou des protéines végétales.",
-        "Étape 8 : Lors de la cuisson, la pâte de curry va libérer ses huiles essentielles et parfumer la sauce, créant ainsi un plat végan savoureux et aromatique.",
-        "Étape 9 : Servir chaud, garni de feuilles de coriandre fraîches ou de rondelles de citron vert, pour une touche de fraîcheur et de couleur."
+        "Étape 8 : Lors de la cuisson, la pâte de curry va libérer ses huiles essentielles et parfumer la sauce, créant ainsi un plat végan savoureux et aromatique."
       ],
       "diet_flags": {
         "vegan": true,
@@ -1324,7 +1321,9 @@
       "difficulty_level": "hard",
       "search_tokens": [
         "(racine",
-        "45 minutes",
+        "10 min",
+        "20 min",
+        "5 min",
         "acidite",
         "agrume",
         "ail",
@@ -1340,6 +1339,7 @@
         "cumin",
         "curcuma",
         "curry",
+        "express",
         "fort",
         "fraiche)",
         "galanga",
@@ -1353,13 +1353,14 @@
         "light",
         "low calorie",
         "minceur",
-        "moyen",
         "oignon",
         "onion",
         "paste",
         "pate",
         "pepper",
         "piment",
+        "quick",
+        "rapide",
         "red",
         "rouge",
         "salt",
@@ -1476,14 +1477,13 @@
       "instructions": [
         "Étape 1: Dans un grand bol, mélangez 300g de farine de blé non enrichie avec 5g de sel de table. Assurez-vous que les ingrédients soient bien combinés et que la farine soit lisse et sans grumeaux.",
         "Étape 2: Ajoutez 80g de beurre doux solide coupé en dés et incorporez-le du bout des doigts jusqu'à obtenir une texture sableuse. La pâte doit commencer à prendre forme et à avoir une consistance homogène.",
-        "Étape 3: Ajoutez progressivement 60ml d'eau froide et pétrissez brièvement jusqu'à ce que la pâte soit lisse et élastique. Vous devez obtenir une pâte qui se déforme facilement mais qui garde sa forme.",
+        "Étape 3: Ajoutez l'œuf battu, puis progressivement 60ml d'eau froide, et pétrissez brièvement jusqu'à ce que la pâte soit lisse et élastique. Vous devez obtenir une pâte qui se déforme facilement mais qui garde sa forme.",
         "Étape 4: Formez une boule avec la pâte, enveloppez-la dans du film alimentaire et réfrigérez pendant 30 minutes pour que la pâte repose et que les gluten se détendent.",
         "Étape 5: Étalez la pâte en cercles de 12-15 cm de diamètre et 3 mm d'épaisseur. La pâte doit être fine et régulière pour obtenir des empanadas croustillantes.",
         "Étape 6: Garnissez les empanadas avec vos ingrédients préférés, puis pliez et soudez les bords en appuyant fermement pour éviter que la garniture ne s'échappe pendant la cuisson.",
         "Étape 7: Préchauffez le four à 200°C. Faites cuire les empanadas au four pendant 15-20 minutes, ou jusqu'à ce qu'elles soient dorées et croustillantes. Vous pouvez également les faire cuire à la poêle avec un peu d'huile d'olive.",
-        "Étape 8: Servir aussitôt, garni d'une salade verte ou d'une sauce piquante, pour maintenir la texture croustillante des empanadas.",
-        "Étape 9: Vous pouvez également congeler les empanadas non cuites pour les utiliser plus tard. Il suffit de les décongeler et de les cuire comme indiqué.",
-        "Étape 10: Vérifiez que la pâte est à la bonne température avant de la travailler. Elle doit être fraîche mais pas trop froide, pour obtenir les meilleurs résultats."
+        "Étape 8: Vous pouvez également congeler les empanadas non cuites pour les utiliser plus tard. Il suffit de les décongeler et de les cuire comme indiqué.",
+        "Étape 9: Vérifiez que la pâte est à la bonne température avant de la travailler. Elle doit être fraîche mais pas trop froide, pour obtenir les meilleurs résultats."
       ],
       "diet_flags": {
         "vegan": false,
@@ -1862,7 +1862,7 @@
       "servings_default": 4,
       "description": "Gnocchi végans légers et moelleux, faits à partir de pommes de terre cuites et de farine, présentant une texture tendre à l'intérieur et légèrement croustillante à l'extérieur, parfaits pour une recette italienne végane traditionnelle",
       "instructions": [
-        "Étape 1 : Faites cuire 600g de pommes de terre entières avec leur peau pendant 25 minutes dans de l'eau bouillante salée avec 5g de sel. Les pommes de terre doivent être tendres et légèrement croustillantes à l'extérieur.",
+        "Étape 1 : Faites cuire 600g de pommes de terre entières avec leur peau pendant 25 minutes dans de l'eau bouillante salée. Les pommes de terre doivent être tendres à cœur.",
         "Étape 2 : Épluchez à chaud et écrasez immédiatement en purée fine pour éviter que les pommes de terre ne deviennent glutineuses. Laissez refroidir 10 minutes pour que la purée soit facile à travailler et atteigne une température confortable pour les mains.",
         "Étape 3 : Incorporer progressivement 150g de farine avec 15ml d'huile d'olive et 5g de sel. Mélangez doucement pour éviter de trop travailler la pâte, qui doit rester légère et aérée.",
         "Étape 4 : Formez des rouleaux de 2 cm de diamètre en appliquant une pression légère et constante. Coupez ensuite en tronçons de 2 cm pour obtenir des gnocchi réguliers qui cuiront de manière uniforme.",
@@ -1939,12 +1939,12 @@
       "timing": {
         "prep_active_min": 20,
         "prep_passive_min": 4320,
-        "cook_min": 0,
-        "total_min": 4340
+        "cook_min": 20,
+        "total_min": 4360
       },
       "composition": [
         {
-          "ingredient": "chilli_pepper_raw",
+          "ingredient": "gochugaru",
           "quantity": 100,
           "unit": "g",
           "meta": {
@@ -1952,7 +1952,7 @@
           }
         },
         {
-          "ingredient": "white_rice_raw_seed_unenriched",
+          "ingredient": "white_glutinous_rice_seed_dried",
           "quantity": 50,
           "unit": "g",
           "meta": {
@@ -1960,7 +1960,7 @@
           }
         },
         {
-          "ingredient": "soybean_raw_dried",
+          "ingredient": "soybean_flour_raw_whole",
           "quantity": 50,
           "unit": "g",
           "meta": {
@@ -2019,7 +2019,7 @@
       "description": "Pâte de piment fermentée coréenne, profondément umami et légèrement sucrée, avec une texture lisse et une couleur rouge-brun profond, obtenue par fermentation de poivrons rouges, de riz gluant et de farine de soja.",
       "instructions": [
         "Étape 1 : Faites cuire 50g de riz gluant et mixez-le en pâte homogène. Laissez refroidir, jusqu'à ce qu'il atteigne une température ambiante et une texture lisse, ressemblant à de la pâte à modeler.",
-        "Étape 2 : Mélangez 100g de poudre de poivron rouge, 50g de farine de soja fermenté (meju), 15g de sel de mer et 20g de sucre de canne dans un bol. Remuez soigneusement pour bien intégrer les ingrédients.",
+        "Étape 2 : Mélangez 100g de piment coréen en poudre (gochugaru), 50g de farine de soja fermenté (meju), 15g de sel de mer et 20g de sucre de canne dans un bol. Remuez soigneusement pour bien intégrer les ingrédients.",
         "Étape 3 : Incorporez la pâte de riz refroidie dans le mélange de poivron rouge et de farine de soja. Mélangez soigneusement jusqu'à obtenir une consistance épaisse et homogène, avec une couleur rouge-brun profond, ressemblant à de la terre cuite.",
         "Étape 4 : Placez le mélange dans un récipient hermétique. Laissez fermenter pendant 2 à 3 jours à température ambiante, en vérifiant régulièrement la fermentation, jusqu'à ce que le mélange commence à émettre une odeur umami caractéristique, rappelant les champignons et les noix.",
         "Étape 5 : Réfrigérez le gochujang après fermentation. Il se conservera plusieurs mois et gagnera en complexité de saveur au fil du temps, développant des notes de fruits et de noix, tout en restant piquant et umami.",
@@ -2040,11 +2040,14 @@
         "asia",
         "asiatique",
         "blanc",
-        "chilli",
         "coeliaque",
         "coree",
         "coreen",
+        "flocons",
         "gluten free",
+        "glutineux",
+        "glutinous",
+        "gochugaru",
         "gochujang",
         "intermediaire",
         "korean",
@@ -2056,7 +2059,6 @@
         "mijote",
         "minceur",
         "moyen",
-        "pepper",
         "piment",
         "rice",
         "riz",
@@ -2097,7 +2099,7 @@
       },
       "composition": [
         {
-          "ingredient": "red_hot_chili_pepper_raw",
+          "ingredient": "serrano_pepper_raw",
           "quantity": 60,
           "unit": "g",
           "meta": {
@@ -2207,7 +2209,7 @@
       "servings_default": 14,
       "description": "Pâte de curry vert thaï végétalienne riche et parfumée, avec une texture lisse et une odeur épicée, idéale pour des currys délicieux et parfumés, inspirée de la cuisine thaïlandaise traditionnelle.",
       "instructions": [
-        "Étape 1 : Dans un mortier ou un blender, combinez 60g de piment rouge émincé, 40g de citronnelle émincée, 25g de gingembre frais émincé et 25g d'ail émincé.",
+        "Étape 1 : Dans un mortier ou un blender, combinez 60g de piment vert émincé, 40g de citronnelle émincée, 25g de gingembre frais émincé et 25g d'ail émincé.",
         "Étape 2 : Ajoutez 30g d'oignon émincé, 20g de coriandre émincée et 4g de cumin en poudre. Mélangez bien pour combiner, en sentant la texture des ingrédients se mélanger.",
         "Étape 3 : Ajoutez 15ml d'huile de tournesol et 10g de miso blanc. Mélangez jusqu'à obtenir une pâte lisse et homogène.",
         "Étape 4 : Ajoutez 4g de sel et mélangez bien pour combiner, en ressentant le sel qui rehausse les saveurs des épices.",
@@ -2233,7 +2235,6 @@
         "asiatique",
         "avance",
         "chef",
-        "chili",
         "citronelle",
         "coeliaque",
         "complexe",
@@ -2242,14 +2243,12 @@
         "cumin",
         "curry",
         "express",
-        "fort",
         "garlic",
         "gingembre",
         "ginger",
         "gluten free",
         "grass",
         "green",
-        "hot",
         "leger",
         "lemon",
         "light",
@@ -2264,13 +2263,12 @@
         "piment",
         "quick",
         "rapide",
-        "red",
-        "rouge",
         "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sel",
+        "serrano",
         "sunflower",
         "table",
         "technique",
@@ -2299,7 +2297,7 @@
         "region": "himalaya",
         "city": ""
       },
-      "servings": 7,
+      "servings": 1,
       "timing": {
         "prep_active_min": 20,
         "prep_passive_min": 14400,
@@ -2313,14 +2311,6 @@
           "unit": "g",
           "meta": {
             "role": "base"
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 10,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning"
           }
         },
         {
@@ -2361,12 +2351,12 @@
         "spice_level": 0
       },
       "dish_type": "condiment",
-      "servings_default": 7,
+      "servings_default": 1,
       "_chef_note": "Le gundruk séché se conserve des mois. On le réhydrate avant utilisation pour préparer soupes et ragoûts népalais.",
       "description": "Légume fermenté népalais préparé à partir de feuilles d'épinard séchées et fermentées, développant une texture croustillante et une saveur acide et umami après plusieurs jours de fermentation à température ambiante.",
       "instructions": [
         "Étape 1 : Laver soigneusement 500g d'épinards. Laisser légèrement flétrir au soleil pendant 1 à 2 heures pour réduire l'humidité. Les feuilles doivent perdre une partie de leur tonicité.",
-        "Étape 2 : Masser légèrement les feuilles avec 10g de sel pour briser les cellules et libérer le jus naturel. Les feuilles doivent ramollir notablement, perdant leur fermeté initiale.",
+        "Étape 2 : Écraser légèrement les feuilles pour briser les cellules et libérer le jus naturel. Les feuilles doivent ramollir notablement, perdant leur fermeté initiale.",
         "Étape 3 : Tasser fermement les légumes dans un pot propre en verre ou terre cuite. Verser 50ml d'eau pour couvrir si nécessaire. Sceller légèrement en laissant les gaz s'échapper pour permettre une fermentation contrôlée.",
         "Étape 4 : Laisser fermenter à température ambiante (18–25°C) pendant 7 à 10 jours. Vérifier quotidiennement que les légumes développent une odeur acide caractéristique et que leur texture se modifie, devenant plus molle et dégageant une saveur umami.",
         "Étape 5 : Sécher les légumes fermentés au soleil pendant 2 à 3 jours jusqu'à déshydratation complète. Il est essentiel de les retourner régulièrement pour assurer un séchage homogène et éviter la moisissure.",
@@ -2387,17 +2377,22 @@
         "(eau",
         "(legume",
         "(nepali",
+        "anemie",
         "coeliaque",
         "debutant",
+        "digestion",
         "easy",
         "eau",
         "epinard",
         "facile",
+        "fer",
         "fermente",
         "fermented",
+        "fibre",
         "gluten free",
         "greens)",
         "gundruk",
+        "iron",
         "leger",
         "lent",
         "light",
@@ -2408,20 +2403,18 @@
         "nepalais)",
         "nepali",
         "potable)",
-        "salt",
+        "riche en fibres",
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "sel",
         "simple",
         "spinach",
-        "table",
         "vegan",
         "vegetalien",
         "vegetarien",
         "water"
       ],
-      "yield_factor": 0.6
+      "yield_factor": 0.12
     },
     {
       "id": "base_harissa_ef842f",
@@ -2444,7 +2437,7 @@
       },
       "composition": [
         {
-          "ingredient": "chilli_pepper_raw",
+          "ingredient": "red_hot_chili_pepper_spice_dried",
           "quantity": 100,
           "unit": "g",
           "meta": {
@@ -2545,15 +2538,17 @@
         "1 heure",
         "africain",
         "ail",
-        "chilli",
+        "chili",
         "coeliaque",
         "coriander",
         "coriandre",
         "cumin",
         "epice",
+        "fort",
         "garlic",
         "gluten free",
         "harissa",
+        "hot",
         "intermediaire",
         "leger",
         "light",
@@ -2566,6 +2561,8 @@
         "olive",
         "pepper",
         "piment",
+        "red",
+        "rouge",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -2732,14 +2729,14 @@
       },
       "servings": 8,
       "timing": {
-        "prep_active_min": 5,
-        "prep_passive_min": 0,
+        "prep_active_min": 10,
+        "prep_passive_min": 1440,
         "cook_min": 5,
-        "total_min": 10
+        "total_min": 1455
       },
       "composition": [
         {
-          "ingredient": "soybean_raw_dried",
+          "ingredient": "soybean_boiled_dried",
           "quantity": 40,
           "unit": "g",
           "meta": {
@@ -2858,9 +2855,6 @@
       },
       "difficulty_level": "medium",
       "search_tokens": [
-        "10 min",
-        "20 min",
-        "5 min",
         "ail",
         "all",
         "asiatique",
@@ -2871,7 +2865,6 @@
         "chinois",
         "enfants",
         "epices",
-        "express",
         "facile enfants",
         "famille",
         "farine",
@@ -2882,14 +2875,15 @@
         "intermediaire",
         "kids",
         "leger",
+        "lent",
         "light",
+        "long",
         "low calorie",
         "melange",
+        "mijote",
         "minceur",
         "moyen",
         "purpose",
-        "quick",
-        "rapide",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -3031,15 +3025,13 @@
       "_chef_note": "Conservez le roux dans un contenant hermétique au réfrigérateur pendant jusqu'à 2 semaines.",
       "description": "Roux de curry japonais végétarien créatif, parfumé et savoureux, à base d'une farine lisse et d'un curry en poudre, avec une texture onctueuse et une odeur aromatique de noix de muscade et de clou de girofle",
       "instructions": [
-        "Étape 1: Faites chauffer 50g de beurre dans une poêle à feu moyen, à environ 180°C. Ajoutez 5g d'ail émincé et faites-le revenir pendant 2 minutes, jusqu'à ce qu'il soit doré et parfumé.",
+        "Étape 1: Faites fondre 50g de beurre dans une poêle à feu moyen. Ajoutez 5g d'ail émincé et faites-le revenir pendant 2 minutes, jusqu'à ce qu'il soit doré et parfumé.",
         "Étape 2: Ajoutez 50g de farine et remuez constamment pour éviter les grumeaux. Faites cuire pendant environ 2 minutes, jusqu'à ce que le mélange soit léger et parfumé.",
         "Étape 3: Ajoutez 15g de curry en poudre, 5g de sucre, 5g de sel et 10g de tomate en purée. Remuez bien pour combiner.",
         "Étape 4: Ajoutez 20g de pomme golden hachée et remuez pour bien combiner.",
         "Étape 5: Continuez à cuire pendant environ 5 minutes, en remuant constamment, jusqu'à ce que le roux soit lisse et d'une couleur brun doré.",
         "Étape 6: Retirez du feu et laissez refroidir complètement.",
-        "Étape 7: Une fois refroidi, vous pouvez utiliser ce roux pour préparer votre curry japonais en ajoutant 400ml de bouillon végétal. 20g de roux suffisent pour une portion.",
-        "Étape 8: Servir chaud, en vous régaland d'un plat créatif et savoureux.",
-        "Étape 9: Accompagnez de riz ou de nouilles pour un repas complet."
+        "Étape 7: Une fois refroidi, vous pouvez utiliser ce roux pour préparer votre curry japonais en ajoutant 400ml de bouillon végétal. 20g de roux suffisent pour une portion."
       ],
       "diet_flags": {
         "vegan": false,
@@ -3226,7 +3218,7 @@
         "Étape 4 : Tassez le mélange dans des pots hermétiques, en laissant 2 cm d'espace en haut. Laissez fermenter à température ambiante pendant 1 à 3 jours selon votre goût pour l'acidité.",
         "Étape 5 : Goûtez quotidiennement pour ajuster la fermentation. Lorsque l'acidité est à votre goût, transférez le kimchi au réfrigérateur. Il continuera à fermenter lentement et se bonifiera pendant des semaines.",
         "Étape 6 : Observez la texture et la couleur du kimchi. Il doit être ferme, avec une couleur vive et une odeur piquante. Si nécessaire, ajustez la fermentation en laissant plus longtemps à température ambiante.",
-        "Étape 7 : Servez votre kimchi végétal créé avec amour, accompagné de plats traditionnels coréens ou comme condiment pour ajouter une touche d'exotisme à vos repas.",
+        "Étape 7 : Servez le kimchi accompagné de plats traditionnels coréens ou comme condiment pour ajouter une touche d'exotisme à vos repas.",
         "Étape 8 : Vous pouvez également ajouter d'autres ingrédients pour créer des variantes personnalisées."
       ],
       "diet_flags": {
@@ -3332,7 +3324,7 @@
           }
         },
         {
-          "ingredient": "chilli_pepper_raw",
+          "ingredient": "red_hot_chili_pepper_spice_dried",
           "quantity": 20,
           "unit": "g",
           "meta": {
@@ -3437,7 +3429,7 @@
         "Étape 1 : Faire chauffer l'huile de sésame dans une casserole à feu moyen. Ajouter les piments séchés et le poivre du Sichuan (baies séchées), puis faire revenir pendant 2 minutes en remuant occasionnellement, jusqu'à ce que les épices commencent à libérer leur arôme et à parfumer l'air.",
         "Étape 2 : Ajouter la pâte doubanjiang végane, l'ail émincé et le gingembre râpé. Faire sauter pendant 3 minutes, en remuant constamment, jusqu'à ce que les arômes soient bien libérés et que le mélange soit parfumé et crépitant.",
         "Étape 3 : Verser le bouillon de légumes chaud végan dans la casserole. Porter le mélange à ébullition, puis réduire le feu à bas pour obtenir un bouillon onctueux et parfumé.",
-        "Étape 4 : Ajouter la sauce de soja végane et mélanger bien. Laisser mijoter pendant 20 minutes à feu doux, en remuant occasionnellement, pour permettre aux épices de bien infuser dans le bouillon et de créer une texture riche et crémeuse.",
+        "Étape 4 : Ajouter la sauce de soja végane et mélanger bien. Laisser mijoter pendant 20 minutes à feu doux, en remuant occasionnellement, pour permettre aux épices de bien infuser dans le bouillon et de concentrer le bouillon.",
         "Étape 5 : Laisser le bouillon réduire légèrement pour l'enrichir et lui donner une texture plus onctueuse. Goûter et ajuster le niveau de piment selon votre tolérance.",
         "Étape 6 : Laisser le bouillon mijoter pendant encore 5 minutes pour permettre aux saveurs de se mélanger et de s'intensifier.",
         "Étape 7 : Filtrer le bouillon si vous le souhaitez, ou servir avec les épices pour une expérience plus intense et une explosion de saveurs.",
@@ -3462,16 +3454,18 @@
         "base_doubanjiang_paste_340399",
         "bouillon",
         "broth",
-        "chilli",
+        "chili",
         "chine",
         "chinese",
         "chinois",
         "coriander",
         "coriandre",
         "eau",
+        "fort",
         "garlic",
         "gingembre",
         "ginger",
+        "hot",
         "intermediaire",
         "leger",
         "legumes",
@@ -3484,6 +3478,8 @@
         "piment",
         "poivre",
         "potable)",
+        "red",
+        "rouge",
         "sans produit animal",
         "sans viande",
         "sauce",
@@ -3523,9 +3519,9 @@
       },
       "composition": [
         {
-          "ingredient": "egg_raw",
-          "quantity": 1,
-          "unit": "piece",
+          "ingredient": "egg_yolk_raw",
+          "quantity": 20,
+          "unit": "g",
           "meta": {
             "role": "base",
             "note": "jaune seulement"
@@ -3540,7 +3536,7 @@
           }
         },
         {
-          "ingredient": "lemon",
+          "ingredient": "lemon_juice",
           "quantity": 10,
           "unit": "ml",
           "meta": {
@@ -3614,7 +3610,7 @@
         "Étape 4: Ajoutez le jus de citron et mélangez bien. Le jus de citron aidera à stabiliser l'émulsion et à donner un peu de saveur à la mayonnaise, avec une note de fraîcheur et d'acidité.",
         "Étape 5: Goûtez la mayonnaise et ajustez l'assaisonnement si nécessaire. Vous pouvez ajouter un peu plus de sel, de moutarde ou de jus de citron selon vos goûts, en fonction de la texture et de la saveur que vous recherchez.",
         "Étape 6: Conservez la mayonnaise dans un pot hermétique au réfrigérateur. Elle peut se conserver pendant 3 jours maximum, en conservant sa texture et sa saveur intactes.",
-        "Étape 7: Utilisez cette mayonnaise végétarienne comme base pour vos recettes, en l'ajoutant à des salades, des sauces ou des plats de votre choix, pour ajouter de la crémeux et de la saveur à vos préparations. Servir fraîche, dans des bols ou des assiettes, accompagnée de crackers ou de légumes crus."
+        "Étape 7: Utilisez cette mayonnaise végétarienne comme base pour vos recettes, en l'ajoutant à des salades, des sauces ou des plats de votre choix, pour ajouter de la crémeux et de la saveur à vos préparations."
       ],
       "diet_flags": {
         "vegan": false,
@@ -3630,13 +3626,13 @@
         "10 min",
         "20 min",
         "5 min",
-        "acidite",
-        "agrume",
         "chives",
         "ciboulette",
+        "citron",
         "classique",
         "coeliaque",
-        "egg",
+        "d'œuf",
+        "egg,",
         "enfants",
         "express",
         "facile enfants",
@@ -3646,6 +3642,7 @@
         "french",
         "gluten free",
         "intermediaire",
+        "jaune",
         "kids",
         "leger",
         "lemon",
@@ -3666,8 +3663,7 @@
         "table",
         "tournesol",
         "vegetarien",
-        "vitamine c",
-        "œuf"
+        "yolk"
       ]
     },
     {
@@ -3827,7 +3823,7 @@
       },
       "composition": [
         {
-          "ingredient": "chilli_pepper_raw",
+          "ingredient": "red_hot_chili_pepper_spice_dried",
           "quantity": 50,
           "unit": "g",
           "meta": {
@@ -3880,6 +3876,17 @@
           "unit": "g",
           "meta": {
             "role": "spice"
+          }
+        },
+        {
+          "ingredient": "coconut_oil_plant",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -3938,17 +3945,21 @@
         "ail",
         "baking",
         "cacao",
-        "chilli",
+        "chili",
         "chocolat",
         "chocolate",
         "cinnamon",
+        "coco",
         "cocoa,",
+        "coconut",
         "coeliaque",
         "cumin",
         "dark",
         "epice",
+        "fort",
         "garlic",
         "gluten free",
+        "hot",
         "intermediaire",
         "latino",
         "leger",
@@ -3964,12 +3975,15 @@
         "mole",
         "moyen",
         "noir",
+        "noix",
         "oignon",
         "onion",
         "patisser",
         "pepper",
         "piment",
         "plus",
+        "red",
+        "rouge",
         "sans gluten",
         "sans produit animal",
         "sans viande",
@@ -4074,8 +4088,8 @@
       "servings_default": 12,
       "description": "Mozzarella végane crémeuse et fondante, obtenue par cuisson lente de lait de cajou et de fécule de tapioca, avec une texture filante et une saveur délicate, idéale pour les pizzas et les salades.",
       "instructions": [
-        "Étape 1 : Dans une casserole, mélangez 250 ml de lait de cajou, 50 g de fécule de tapioca, 30 ml d'huile de coco, 15 ml de jus de citron et 4 g de sel, en remuant constamment pour éviter les grumeaux.",
-        "Étape 2 : Placez la casserole sur feu moyen, environ 180°C, et continuez à remuer pour éviter les grumeaux et obtenir une texture lisse.",
+        "Étape 1 : Dans une casserole, mélangez 250 ml de lait de cajou, 50 g de fécule de maïs, 30 ml d'huile de coco, 15 ml de jus de citron et 4 g de sel, en remuant constamment pour éviter les grumeaux.",
+        "Étape 2 : Placez la casserole sur feu moyen et continuez à remuer pour éviter les grumeaux et obtenir une texture lisse.",
         "Étape 3 : Lorsque le mélange commence à épaissir, après environ 5 minutes, augmentez légèrement le feu et continuez à remuer pour obtenir une texture crémeuse et filante.",
         "Étape 4 : La texture deviendra crémeuse et filante en 7 à 10 minutes, vous obtiendrez une consistance similaire à de la mozzarella fondue, avec une couleur blanche et une odeur délicate.",
         "Étape 5 : Retirez la casserole du feu et laissez-la refroidir légèrement, pendant environ 2 minutes, pour éviter de brûler la mozzarella.",
@@ -4206,7 +4220,7 @@
         "confidence": 0.92,
         "spice_level": 0
       },
-      "dish_type": "main",
+      "dish_type": "condiment",
       "servings_default": 4,
       "_chef_note": "Le natto est un ingrédient riche en protéines et en probiotiques. Il est recommandé de le consommer régulièrement pour maintenir une bonne santé digestive.",
       "description": "Fèves de soja fermentées japonaises crémeuses et parfumées, avec une texture filante et une odeur umami caractéristique, obtenue après une fermentation à 40°C pendant 22 à 24 heures.",
@@ -4219,8 +4233,7 @@
         "Étape 6 : Laissez reposer les fèves de soja fermentées pendant 24 heures au réfrigérateur, en les couvrant d'un film plastique pour préserver leur fraîcheur et leur saveur.",
         "Étape 7 : Votre natto est prêt à être consommé, avec une texture crémeuse et une saveur riche en umami. Vous pouvez l'utiliser dans des salades, des sauces ou comme ingrédient dans des plats japonais végétaliens.",
         "Étape 8 : Conservez le natto dans un récipient hermétique au réfrigérateur pendant plusieurs jours, en le gardant à une température inférieure à 4°C pour préserver sa fraîcheur.",
-        "Étape 9 : Vous pouvez également le congeler pour une utilisation ultérieure, en le divisant en portions individuelles et en les stockant dans des sacs hermétiques pour une conservation optimale.",
-        "Étape 10 : Servir le natto à température ambiante, après avoir laissé décongeler les portions individuelles pendant quelques heures, en les remuant régulièrement pour obtenir une texture lisse et crémeuse."
+        "Étape 9 : Vous pouvez également le congeler pour une utilisation ultérieure, en le divisant en portions individuelles et en les stockant dans des sacs hermétiques pour une conservation optimale."
       ],
       "diet_flags": {
         "vegan": true,
@@ -4378,8 +4391,7 @@
         "Étape 6 : Laissez refroidir la crème à température ambiante.",
         "Étape 7 : Conservez la crème au réfrigérateur dans un contenant hermétique jusqu'à 5 jours.",
         "Étape 8 : Avant de servir, secouez bien le contenant pour réémulsionner la crème.",
-        "Étape 9 : Utilisez cette crème d'avoine maison dans vos sauces, quiches et autres préparations véganes.",
-        "Étape 10 : Servir aussitôt, garni de coriandre ciselée et d'un filet d'huile de tournesol."
+        "Étape 9 : Utilisez cette crème d'avoine maison dans vos sauces, quiches et autres préparations véganes."
       ],
       "diet_flags": {
         "vegan": true,
@@ -4444,8 +4456,8 @@
       "timing": {
         "prep_active_min": 5,
         "prep_passive_min": 30,
-        "cook_min": 10,
-        "total_min": 45
+        "cook_min": 0,
+        "total_min": 35
       },
       "composition": [
         {
@@ -4575,8 +4587,8 @@
       "timing": {
         "prep_active_min": 5,
         "prep_passive_min": 10,
-        "cook_min": 5,
-        "total_min": 20
+        "cook_min": 0,
+        "total_min": 15
       },
       "composition": [
         {
@@ -4652,7 +4664,7 @@
         "Étape 2 : Fouettez énergiquement jusqu'à dissolution complète du sucre, en vous assurant que les saveurs sont bien intégrées. La sauce doit être homogène et sans grumeaux.",
         "Étape 3 : Goûtez et ajustez le sucre ou le Worcestershire selon vos préférences personnelles pour obtenir l'équilibre parfait. La sauce doit être sucrée, salée et légèrement fumée.",
         "Étape 4 : Laissez reposer la sauce pendant 10 minutes pour que les saveurs se mélangent harmonieusement. Vous pouvez sentir les arômes se développer et la sauce se stabiliser.",
-        "Étape 5 : Appliquez cette délicieuse sauce à l'aide d'un pinceau sur vos okonomiyaki chauds, et savourez l'explosion de saveurs. La sauce doit être chaude et crémeuse, avec une texture qui complète parfaitement les galettes.",
+        "Étape 5 : Appliquez cette délicieuse sauce à l'aide d'un pinceau sur vos okonomiyaki chauds, et savourez l'explosion de saveurs.",
         "Étape 6 : Conservez la sauce au réfrigérateur pendant un mois pour une utilisation future. La sauce peut être réchauffée avant de servir, en la plaçant au micro-ondes pendant quelques secondes ou en la chauffant doucement sur la cuisinière.",
         "Étape 7 : Utilisez cette sauce pour accompagner vos plats végans préférés, tels que les okonomiyaki, les yakisoba ou les tempuras. La sauce est polyvalente et peut être adaptée à de nombreux plats différents."
       ],
@@ -4788,7 +4800,7 @@
         "Étape 5 : Ajoutez 3g de sel, puis mixer encore pendant 1 minute pour bien incorporer, vérifiez la consistance crémeuse en vous arrêtant pour goûter",
         "Étape 6 : Goûtez et ajustez le sel si nécessaire, pour un équilibre parfait des saveurs, en vérifiant que la saveur est riche et intense",
         "Étape 7 : Conservez à température ambiante pendant 1 mois, dans un contenant hermétique, pour préserver les arômes et la texture",
-        "Étape 8 : Servez sans attendre sur du pain complet toasté, ou utilisez comme ingrédient dans vos recettes véganes favorites, en profitant de la chaleur et de la fraîcheur du beurre de cacahuète",
+        "Étape 8 : Tartinez sur du pain complet toasté, ou utilisez comme ingrédient dans vos recettes véganes favorites",
         "Étape 9 : Expérimentez de nouvelles recettes avec votre beurre de cacahuète, comme des sauces ou des desserts végans, en vous laissant guider par votre imagination et vos goûts"
       ],
       "diet_flags": {
@@ -5020,8 +5032,8 @@
       "timing": {
         "prep_active_min": 10,
         "prep_passive_min": 0,
-        "cook_min": 10,
-        "total_min": 20
+        "cook_min": 0,
+        "total_min": 10
       },
       "composition": [
         {
@@ -5483,9 +5495,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 30,
-        "prep_passive_min": 120,
+        "prep_passive_min": 180,
         "cook_min": 25,
-        "total_min": 175
+        "total_min": 235
       },
       "composition": [
         {
@@ -5557,14 +5569,13 @@
       "_chef_note": "Pâte Feuilletée végétale",
       "description": "Pâte feuilletée croustillante et délicieuse, idéale pour les millefeuilles et les feuilletés, avec une texture croquante et une couleur dorée.",
       "instructions": [
-        "Étape 1: Dans un grand bol, mélangez 250g de farine de blé avec 5g de sel et 50g de beurre fondue, puis ajoutez progressivement 100ml d'eau froide tout en remuant jusqu'à obtenir une détrempe homogène et lisse.",
+        "Étape 1: Dans un grand bol, mélangez 250g de farine de blé avec 5g de sel et 50g de beurre fondu, puis ajoutez progressivement 100ml d'eau froide tout en remuant jusqu'à obtenir une détrempe homogène et lisse.",
         "Étape 2: Étalez la détrempe en un rectangle régulier d'environ 1 cm d'épaisseur, puis placez le reste du beurre (150g) aplati au centre, en veillant à bien le répartir.",
-        "Étape 3: Rabattez délicatement les bords de la détrempe sur l'beurre pour former un rectangle plus grand, en faisant attention à ne pas appliquer trop de pression, puis étalez-le en un rectangle trois fois plus long, jusqu'à atteindre une épaisseur d'environ 0,5 cm.",
+        "Étape 3: Rabattez délicatement les bords de la détrempe sur le beurre pour former un rectangle plus grand, en faisant attention à ne pas appliquer trop de pression, puis étalez-le en un rectangle trois fois plus long, jusqu'à atteindre une épaisseur d'environ 0,5 cm.",
         "Étape 4: Pliez le rectangle en trois (tour simple), en pliant les deux extrémités vers le centre, puis tournez-le de 90 degrés pour que les plis soient perpendiculaires à vous, et réfrigérez pendant 30 minutes pour permettre à la pâte de se reposer.",
-        "Étape 5: Répétez les étapes de pliage, d'étalage et de réfrigération cinq fois au total, en laissant reposer la pâte entre chaque double tour, pour développer les couches croustillantes de la pâte feuilletée.",
-        "Étape 6: Après les derniers plis, étalez la pâte une dernière fois à la épaisseur désirée, puis utilisez votre pâte feuilletée immédiatement pour confectionner vos millefeuilles, galettes des rois ou autres feuilletés, ou conservez-la au réfrigérateur pendant trois jours, ou congelez-la pour une utilisation future.",
-        "Étape 7: Avant de servir, vérifiez que la lame ressort sèche et que la pâte est dorée et croustillante !",
-        "Étape 8: Pour une cuisson parfaite, préchauffez votre four à 200°C et enfournez vos préparations à base de pâte feuilletée pendant environ 20-25 minutes, ou jusqu'à ce qu'elles soient dorées et croustillantes."
+        "Étape 5: Répétez l'étalage, le pliage en trois et la réfrigération jusqu'à 6 tours simples au total, en laissant reposer la pâte entre chaque tour, pour développer les couches croustillantes de la pâte feuilletée.",
+        "Étape 6: Après les derniers plis, étalez la pâte une dernière fois à l'épaisseur désirée, puis utilisez votre pâte feuilletée immédiatement pour confectionner vos millefeuilles, galettes des rois ou autres feuilletés, ou conservez-la au réfrigérateur pendant trois jours, ou congelez-la pour une utilisation future.",
+        "Étape 7: Pour une cuisson parfaite, préchauffez votre four à 200°C et enfournez vos préparations à base de pâte feuilletée pendant environ 20-25 minutes, ou jusqu'à ce qu'elles soient dorées et croustillantes."
       ],
       "diet_flags": {
         "vegan": false,
@@ -5663,7 +5674,7 @@
           }
         },
         {
-          "ingredient": "ginger_raw_root_fresh",
+          "ingredient": "ginger_powder",
           "quantity": 5,
           "unit": "g",
           "meta": {
@@ -5752,14 +5763,13 @@
       "_chef_note": "Chaque épicier marocain a sa recette secrète — certaines comptent jusqu'à 30 épices. Ce blend de base peut être enrichi de rose séchée, de lavande ou de galanga.",
       "description": "Mélange d'épices marocain végan aux notes chaudes, florales et légèrement sucrées, avec une texture fine et poudreuse, issu de la tradition culinaire nord-africaine.",
       "instructions": [
-        "Étape 1 : Faire griller à sec dans une poêle froide à feu moyen le cumin, la coriandre et le cardamome entiers pendant 2 à 3 minutes en remuant constamment, jusqu'à dégagement du parfum et à l'apparition d'une couleur légèrement dorée.",
+        "Étape 1 : Faire griller à sec dans une poêle froide à feu moyen le cumin, la coriandre et la cardamome entiers pendant 2 à 3 minutes en remuant constamment, jusqu'à dégagement du parfum et à l'apparition d'une couleur légèrement dorée.",
         "Étape 2 : Laisser refroidir les épices grillées avant de les moudre au mortier ou au moulin à épices, en veillant à obtenir une poudre fine et homogène.",
-        "Étape 3 : Dans un bol, mélanger le cumin moulu, la coriandre moulue, le cardamome moulu, le cumin cru, la coriandre crue, la cannelle, le gingembre, le curcuma, le poivre, le paprika, la noix de muscade et les clous de girofle, en veillant à bien intégrer tous les ingrédients.",
-        "Étape 4 : Ajouter les épices crues restantes si nécessaire, en ajustant les quantités pour obtenir l'équilibre désiré.",
-        "Étape 5 : Mélanger à nouveau jusqu'à ce que le mélange soit parfaitement homogène et que les arômes soient bien équilibrés.",
-        "Étape 6 : Goûter et ajuster le mélange d'épices si nécessaire, en ajoutant un peu plus de cumin, de coriandre ou de poivre pour atteindre le niveau de saveur désiré.",
-        "Étape 7 : Conserver le ras el hanout dans un pot hermétique à l'abri de la lumière et de l'humidité, en veillant à utiliser le mélange dans les 3 mois pour préserver son intensité aromatique.",
-        "Étape 8 : Utiliser ce mélange d'épices végan pour assaisonner des plats tels que des tagines, des couscous ou des légumes grillés, en ajoutant une touche de saveur marocaine à vos créations culinaires."
+        "Étape 3 : Dans un bol, mélanger le cumin, la coriandre et la cardamome moulus, la cannelle, le gingembre moulu, le curcuma, le poivre, le paprika, la noix de muscade et les clous de girofle, en veillant à bien intégrer tous les ingrédients.",
+        "Étape 4 : Mélanger à nouveau jusqu'à ce que le mélange soit parfaitement homogène et que les arômes soient bien équilibrés.",
+        "Étape 5 : Goûter et ajuster le mélange d'épices si nécessaire, en ajoutant un peu plus de cumin, de coriandre ou de poivre pour atteindre le niveau de saveur désiré.",
+        "Étape 6 : Conserver le ras el hanout dans un pot hermétique à l'abri de la lumière et de l'humidité, en veillant à utiliser le mélange dans les 3 mois pour préserver son intensité aromatique.",
+        "Étape 7 : Utiliser ce mélange d'épices végan pour assaisonner des plats tels que des tagines, des couscous ou des légumes grillés, en ajoutant une touche de saveur marocaine à vos créations culinaires."
       ],
       "diet_flags": {
         "vegan": true,
@@ -5854,7 +5864,7 @@
         },
         {
           "ingredient": "water",
-          "quantity": 800,
+          "quantity": 1100,
           "unit": "ml",
           "meta": {
             "role": "liquid"
@@ -6034,8 +6044,8 @@
       "servings_default": 18,
       "description": "Ricotta salée, pressée et séchée, avec une texture ferme et une saveur uniforme, parfaite pour ajouter une touche de saveur à vos plats italiens",
       "instructions": [
-        "Étape 1: Préparez le fromage râpé en le laissant égoutter pendant 12 heures dans une étamine pour en extraire l'excès d'humidité, jusqu'à obtenir une consistance crémeuse.",
-        "Étape 2: Dans un bol, mélangez délicatement le fromage râpé avec 30g de sel de mer, en veillant à bien répartir le sel pour obtenir une saveur uniforme et une texture lisse.",
+        "Étape 1: Laissez égoutter la ricotta pendant 12 heures dans une étamine pour en extraire l'excès d'humidité, jusqu'à obtenir une consistance crémeuse.",
+        "Étape 2: Dans un bol, mélangez délicatement la ricotta égouttée avec 30g de sel de mer, en veillant à bien répartir le sel pour obtenir une saveur uniforme et une texture lisse.",
         "Étape 3: Placez le mélange dans un moule ou une forme pour le presser et le sécher pendant 24 à 48 heures au réfrigérateur, à une température de 4°C.",
         "Étape 4: Vérifiez la texture après 24 heures; si elle est encore trop humide, laissez-la sécher pendant quelques heures supplémentaires, jusqu'à atteindre une texture ferme et sèche.",
         "Étape 5: Une fois la ricotta salée sèche et ferme, vous pouvez la râper ou la couper en dés pour l'ajouter à vos recettes favorites, telles que des salades, des pâtes ou des sauces.",
@@ -6254,8 +6264,8 @@
       },
       "composition": [
         {
-          "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-          "quantity": 300,
+          "ingredient": "vital_wheat_gluten_flour",
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "base"
@@ -6328,17 +6338,15 @@
       "servings_default": 4,
       "description": "Pâte de gluten de blé ferme et savoureuse, idéale pour les plats végétaliens créatifs, avec une texture élastique et une saveur umami prononcée, issue de la tradition culinaire asiatique",
       "instructions": [
-        "Étape 1 : Dans un grand bol, mélangez 300g de farine de blé avec 150ml d'eau tiède, jusqu'à obtenir une pâte lisse et homogène. Pétrissez pendant 5 minutes, jusqu'à ce que la pâte devienne élastique et se décolle facilement des parois du bol.",
-        "Étape 2 : Laissez reposer la pâte dans un bain d'eau froide pendant 20 minutes, pour permettre au gluten de se développer. Vous devriez sentir la pâte devenir plus ferme et plus dense.",
-        "Étape 3 : Rincez la pâte sous l'eau froide en la malaxant doucement, jusqu'à ce que l'eau soit claire et que seul le gluten reste. Cette étape est cruciale pour obtenir un seitan tendre et savoureux.",
-        "Étape 4 : Ajoutez 30ml de sauce de soja, 2 gousses d'ail émincées et 5g de gingembre râpé à la pâte de gluten. Mélangez bien pour que les saveurs soient réparties de manière homogène.",
-        "Étape 5 : Façonnez le gluten en un rouleau compact et enroulez-le dans du papier aluminium pour maintenir la forme.",
-        "Étape 6 : Placez le rouleau de seitan dans un cuiseur à vapeur et cuisez pendant 45 minutes, ou jusqu'à ce que le seitan soit ferme et cuit.",
-        "Étape 7 : Laissez refroidir le seitan avant de le trancher et de le faire mariner dans votre sauce préférée. Le seitan est maintenant prêt à être utilisé dans vos recettes végétaliennes favorites.",
-        "Étape 8 : Pour une texture plus tendre, vous pouvez laisser le seitan reposer pendant quelques heures avant de le servir.",
-        "Étape 9 : Pour une saveur plus intense, vous pouvez ajouter d'autres ingrédients à la pâte de gluten, tels que des herbes fraîches ou des épices.",
-        "Étape 10 : Pour une présentation plus appétissante, vous pouvez trancher le seitan en fines lamelles et les disposer sur un plat de service.",
-        "Étape 11 : Pour conserver le seitan, vous pouvez le placer dans un contenant hermétique et le réfrigérer pendant plusieurs jours."
+        "Étape 1 : Dans un grand bol, mélangez 150g de gluten de blé avec 150ml d'eau tiède. Pétrissez pendant 5 minutes, jusqu'à ce que la pâte devienne élastique.",
+        "Étape 2 : Ajoutez 30ml de sauce de soja, 2 gousses d'ail émincées et 5g de gingembre râpé à la pâte de gluten. Mélangez bien pour que les saveurs soient réparties de manière homogène.",
+        "Étape 3 : Façonnez le gluten en un rouleau compact et enroulez-le dans du papier aluminium pour maintenir la forme.",
+        "Étape 4 : Placez le rouleau de seitan dans un cuiseur à vapeur et cuisez pendant 45 minutes, ou jusqu'à ce que le seitan soit ferme et cuit.",
+        "Étape 5 : Laissez refroidir le seitan avant de le trancher et de le faire mariner dans votre sauce préférée. Le seitan est maintenant prêt à être utilisé dans vos recettes végétaliennes favorites.",
+        "Étape 6 : Pour une texture plus tendre, vous pouvez laisser le seitan reposer pendant quelques heures avant de le servir.",
+        "Étape 7 : Pour une saveur plus intense, vous pouvez ajouter d'autres ingrédients à la pâte de gluten, tels que des herbes fraîches ou des épices.",
+        "Étape 8 : Pour une présentation plus appétissante, vous pouvez trancher le seitan en fines lamelles et les disposer sur un plat de service.",
+        "Étape 9 : Pour conserver le seitan, vous pouvez le placer dans un contenant hermétique et le réfrigérer pendant plusieurs jours."
       ],
       "diet_flags": {
         "vegan": true,
@@ -6353,7 +6361,6 @@
       "search_tokens": [
         "(eau",
         "ail",
-        "all",
         "asia",
         "asiatique",
         "ble",
@@ -6364,11 +6371,10 @@
         "facile",
         "facile enfants",
         "famille",
-        "farine",
-        "flour",
         "garlic",
         "gingembre",
         "ginger",
+        "gluten",
         "japanese",
         "japon",
         "japonais",
@@ -6381,7 +6387,6 @@
         "mijote",
         "minceur",
         "potable)",
-        "purpose",
         "sans produit animal",
         "sans viande",
         "sauce",
@@ -6390,11 +6395,10 @@
         "simple",
         "soja",
         "soy",
-        "tout",
-        "usage",
         "vegan",
         "vegetalien",
         "vegetarien",
+        "vital",
         "water",
         "wheat"
       ]
@@ -6505,13 +6509,13 @@
       "servings_default": 4,
       "description": "Pâte brisée végétarienne légère et friable, idéale pour quiches, tartes et tourtes, avec une texture croustillante et dorée. Parfaite pour une base de tarte salée ou sucrée, cette pâte brisée est facile à préparer et offre une texture délicate.",
       "instructions": [
-        "Étape 1: Dans un grand bol, mélanger 250g de farine avec 125g de beurre froide, en utilisant vos doigts ou une spatule, jusqu'à obtenir une texture ressemblant à du sable grossier et sablonneux.",
-        "Étape 2: Ajouter 30ml d'eau froide et 4g de sel. Mélanger jusqu'à ce que la pâte commence à se former et devienne légèrement collante. Ne pas trop pétrir pour éviter que la pâte ne devienne dure.",
+        "Étape 1: Dans un grand bol, mélanger 250g de farine avec 125g de beurre froid, en utilisant vos doigts ou une spatule, jusqu'à obtenir une texture ressemblant à du sable grossier et sablonneux.",
+        "Étape 2: Ajouter l'œuf battu, 30ml d'eau froide et 4g de sel. Mélanger jusqu'à ce que la pâte commence à se former et devienne légèrement collante. Ne pas trop pétrir pour éviter que la pâte ne devienne dure.",
         "Étape 3: Rassembler la pâte en une boule et l'aplatir légèrement en un disque. Envelopper dans du film plastique et réfrigérer pendant au moins 30 minutes pour que la pâte se repose et devienne plus facile à étaler.",
         "Étape 4: Étaler la pâte sur un plan fariné à une épaisseur d'environ 3 mm. Foncer un moule à tarte légèrement huilé avec du beurre pour éviter que la pâte ne colle.",
         "Étape 5: Piquer le fond de la tarte avec une fourchette pour éviter qu'elle ne gonfle pendant la cuisson et pour créer des petits trous qui permettront à la vapeur de s'échapper.",
         "Étape 6: Préchauffer le four à 180°C. Cuire à blanc pendant 15 minutes, en vérifiant régulièrement la couleur dorée de la pâte pour éviter qu'elle ne brûle.",
-        "Étape 7: Laisser refroidir avant de garnir avec vos ingrédients préférés, en respectant les règles de la cuisine végétarienne et en choisissant des ingrédients frais et de saison pour une saveur optimale. Servir dans un plat décoratif, accompagné d'une salade verte ou d'un légume grillé."
+        "Étape 7: Laisser refroidir avant de garnir avec vos ingrédients préférés, en respectant les règles de la cuisine végétarienne et en choisissant des ingrédients frais et de saison pour une saveur optimale."
       ],
       "diet_flags": {
         "vegan": false,
@@ -6678,8 +6682,7 @@
         "Étape 6 : Laisser refroidir la crème à température ambiante, puis la placer au réfrigérateur pour qu'elle épaississe pendant au moins 2 heures, en vérifiant que la crème est ferme et crémeuse.",
         "Étape 7 : La diluer avec de l'eau si elle est trop épaisse. La crème est maintenant prête à être utilisée dans vos recettes véganes préférées.",
         "Étape 8 : Conserver la crème de soja maison au réfrigérateur pendant jusqu'à 5 jours. Il est possible de la congeler pour une utilisation future, en vérifiant que la crème est bien congelée et sans cristaux de glace.",
-        "Étape 9 : Utiliser la crème de soja maison comme base pour préparer des sauces crémeuses, des quiches et des desserts végans délicieux, en expérimentant avec différentes saveurs et ingrédients pour créer vos propres recettes uniques.",
-        "Étape 10 : Servir la crème de soja maison froide, garnie d'une feuille de persil frais et accompagnée de crackers ou de pain grillé, pour un snack sain et délicieux."
+        "Étape 9 : Utiliser la crème de soja maison comme base pour préparer des sauces crémeuses, des quiches et des desserts végans délicieux, en expérimentant avec différentes saveurs et ingrédients pour créer vos propres recettes uniques."
       ],
       "diet_flags": {
         "vegan": true,
@@ -7169,7 +7172,7 @@
       "instructions": [
         "Étape 1 : Dans un grand bol, mélangez 200g de farine de riz, 50g de fécule de maïs et 3g de sel jusqu'à obtenir un mélange homogène et sans grumeaux, en vérifiant que la farine de riz est bien intégrée.",
         "Étape 2 : Ajoutez progressivement 300ml d'eau tiède en remuant constamment pour éviter les grumeaux, jusqu'à obtenir une pâte lisse, élastique et légèrement brillante, avec une consistance qui se détache facilement des parois du bol.",
-        "Étape 3 : Laissez reposer la pâte pendant 30 minutes, cela permettra à la farine de riz d'absorber complètement l'eau et de développer une texture plus élastique, en vérifiant que la pâte a doublé de volume.",
+        "Étape 3 : Laissez reposer la pâte pendant 30 minutes, cela permettra à la farine de riz d'absorber complètement l'eau et de développer une texture plus élastique.",
         "Étape 4 : Chauffez une poêle légèrement huilée avec 10ml d'huile de tournesol à feu moyen, jusqu'à ce qu'elle soit chaude mais pas fumante, en vérifiant que la température est d'environ 180°C.",
         "Étape 5 : À l'aide d'une louche, déposez une petite quantité de pâte dans la poêle et étalez-la uniformément pour former une fine feuille de nem, en vérifiant que la feuille est régulière et sans grumeaux.",
         "Étape 6 : Faites cuire pendant 1 minute, jusqu'à ce que la feuille soit translucide et légèrement ferme au toucher, en vérifiant que la feuille est cuite mais pas trop dorée.",
@@ -7273,7 +7276,7 @@
           }
         },
         {
-          "ingredient": "lemon",
+          "ingredient": "lemon_juice",
           "quantity": 10,
           "unit": "ml",
           "meta": {
@@ -7337,9 +7340,8 @@
         "10 min",
         "20 min",
         "5 min",
-        "acidite",
-        "agrume",
         "blanc",
+        "citron",
         "classique",
         "coeliaque",
         "coulis",
@@ -7373,7 +7375,6 @@
         "vegan",
         "vegetalien",
         "vegetarien",
-        "vitamine c",
         "white"
       ]
     },
@@ -7780,8 +7781,7 @@
         "Étape 5 : Filtrage : si vous préférez une sauce plus lisse, filtrez-la à travers une passoire fine. Sinon, passez à l'étape suivante.",
         "Étape 6 : Utilisation : utilisez la sauce teriyaki végétarienne chaude ou froide, selon vos préférences. Vous pouvez l'associer à des légumes sautés, des tofu grillés ou des nouilles.",
         "Étape 7 : Conservation : conserver la sauce au réfrigérateur pendant 1 mois. Avant de l'utiliser, secouez bien le bocal.",
-        "Étape 8 : Variations : vous pouvez personnaliser cette sauce en ajoutant des ingrédients supplémentaires, tels que des tranches de citron ou des feuilles de thé vert.",
-        "Étape 9 : Présentation : servez la sauce teriyaki végétarienne dans un bol ou une saucière, garnie de feuilles de coriandre ou de tranches de citron, pour une présentation élégante."
+        "Étape 8 : Présentation : servez la sauce teriyaki végétarienne dans un bol ou une saucière."
       ],
       "diet_flags": {
         "vegan": true,
@@ -7856,7 +7856,7 @@
         "region": "",
         "city": ""
       },
-      "servings": 18,
+      "servings": 11,
       "timing": {
         "prep_active_min": 5,
         "prep_passive_min": 0,
@@ -7921,7 +7921,7 @@
         "spice_level": 0
       },
       "dish_type": "sauce",
-      "servings_default": 18,
+      "servings_default": 11,
       "_chef_note": "Un concentré de tomate intense et riche, idéal pour les sauces et les ragoûts.",
       "description": "Concentré de tomate maison, intense et savoureux, obtenu par une cuisson lente de tomates fraîches, idéal pour sauces et ragoûts délicieux à la texture onctueuse et à la couleur rouge intense.",
       "instructions": [
@@ -7985,7 +7985,7 @@
         "vegetalien",
         "vegetarien"
       ],
-      "yield_factor": 0.35
+      "yield_factor": 0.22
     },
     {
       "id": "base_vegetable_broth_303b7d",
@@ -8127,7 +8127,7 @@
       "instructions": [
         "Étape 1 : Dans une grande casserole, faites chauffer 15ml d'huile de coco à feu moyen, en sentant son parfum subtil, pendant environ 2 minutes, jusqu'à ce qu'elle commence à fondre et à dégager un parfum légèrement sucré.",
         "Étape 2 : Ajoutez 150g d'oignon jaune émincé, 100g de carotte crue émincée, 100g de céleri émincé et 80g de poireau cru émincé. Faites-les revenir pendant environ 5 minutes, en remuant régulièrement, jusqu'à ce qu'ils soient tendres et légèrement dorés, en dégageant un parfum sucré, en observant la couleur qui passe du vert au doré.",
-        "Étape 3 : Ajoutez 20g d'ail émincé, 3g de thym frais et 2g de laurier. Faites-les infuser pendant 1 minute, en remuant régulièrement, en sentant les arômes se mélanger et en observant la couleur qui se transforme.",
+        "Étape 3 : Ajoutez 20g d'ail émincé, 3g de thym séché et 2g de laurier. Faites-les infuser pendant 1 minute, en remuant régulièrement, en sentant les arômes se mélanger et en observant la couleur qui se transforme.",
         "Étape 4 : Versez 1500ml d'eau dans la casserole et portez à ébullition, en observant les bulles qui se forment à la surface, pendant environ 5 minutes, jusqu'à ce que l'eau commence à bouillir.",
         "Étape 5 : Réduisez le feu à feu doux et laissez cuire pendant 45 minutes, en remuant régulièrement, jusqu'à ce que les légumes soient très tendres et que le bouillon soit riche et parfumé, en sentant la consistance qui se transforme et en observant la couleur qui se clarifie.",
         "Étape 6 : Ajoutez 8g de sel et 2g de poivre noir. Mélangez bien pour combiner, en sentant les saveurs qui se mélangent et en observant la texture qui se transforme.",
@@ -8219,7 +8219,7 @@
         "country": "thailand",
         "region": ""
       },
-      "servings": 23,
+      "servings": 33,
       "timing": {
         "prep_active_min": 10,
         "prep_passive_min": 10,
@@ -8285,6 +8285,17 @@
             "note": "Pour la fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 100,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -8314,14 +8325,14 @@
         "spice_level": 0
       },
       "dish_type": "sauce",
-      "servings_default": 23,
+      "servings_default": 33,
       "description": "Sauce végétalienne créée avec des algues wakame, des champignons de Paris et du tamari, offrant une saveur umami et salée avec une texture lisse et une odeur marine.",
       "instructions": [
         "Étape 1 : Faire infuser 20g d'algues wakame fraîches et 50g de champignons de Paris dans 100ml d'eau chaude à 90°C pendant 10 minutes, jusqu'à ce que les algues soient tendres et les champignons soient parfumés.",
         "Étape 2 : Filtrer le mélange à l'aide d'une passoire fine pour récupérer le liquide infusé et le verser dans un bol.",
         "Étape 3 : Ajouter 120ml de sauce tamari, 30ml de jus de citron vert frais, 8g de sel et 5g de sucre de canne au liquide infusé.",
         "Étape 4 : Mélanger le tout jusqu'à ce que le sucre et le sel soient dissous, puis réduire légèrement le mélange sur feu doux à 50°C pendant 5 minutes, en remuant régulièrement, jusqu'à ce que la sauce ait épaissi légèrement et ait une consistance sirupeuse.",
-        "Étape 5 : Servir aussitôt dans des bols préchauffés, garni d'un filet de citron vert et d'une feuille de coriandre fraîche ciselée."
+        "Étape 5 : Laisser refroidir, verser dans une bouteille propre et conserver au réfrigérateur jusqu'à 2 semaines."
       ],
       "diet_flags": {
         "vegan": true,
@@ -8334,12 +8345,14 @@
       },
       "difficulty_level": "medium",
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "blanc",
         "button",
         "champignon",
         "citron",
         "coriander",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -8355,6 +8368,7 @@
         "mushroom",
         "paris",
         "poisson",
+        "potable)",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -8374,6 +8388,7 @@
         "vegetarienne",
         "vert",
         "wakame",
+        "water",
         "white"
       ]
     },
@@ -8446,6 +8461,17 @@
             "note": "Pour une touche de fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 220,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -8480,11 +8506,11 @@
       "servings_default": 8,
       "description": "Sauce huître végane à base de shiitaké, offrant une saveur umami intense et une texture épaisse et onctueuse, avec un profil sucré et umami qui évoque la terre et le champignon.",
       "instructions": [
-        "Étape 1 : Réhydrater 150g de champignons shiitake frais dans 200ml d'eau chaude pendant environ 20 minutes, jusqu'à ce qu'ils soient tendres et leur eau de réhydratation soit trouble et parfumée, avec une odeur de terre et de champignon.",
-        "Étape 2 : Mixer les champignons shiitake réhydratés avec leur eau de réhydratation pour obtenir une pâte lisse et homogène, en veillant à ce qu'il ne reste pas de morceaux de champignons.",
+        "Étape 1 : Faire infuser 150g de champignons shiitake frais émincés dans 200ml d'eau chaude pendant environ 20 minutes, jusqu'à ce qu'ils soient tendres et que l'eau soit trouble et parfumée, avec une odeur de terre et de champignon.",
+        "Étape 2 : Mixer les champignons shiitake avec leur eau d'infusion pour obtenir une pâte lisse et homogène, en veillant à ce qu'il ne reste pas de morceaux de champignons.",
         "Étape 3 : Dans une casserole, mélanger la pâte de shiitake avec 80ml de sauce soja, 40g de sucre de canne et 3g de sel. Porter le mélange à ébullition à feu moyen en remuant constamment, jusqu'à ce que le sucre soit dissous et la sauce commence à bouillir.",
         "Étape 4 : Épaissir la sauce en ajoutant 15g de fécule de maïs délayée dans 20ml d'eau froide, en remuant sans cesse pour éviter les grumeaux. La sauce est prête lorsqu'elle nappe la cuillère et a une texture onctueuse, ce qui devrait prendre environ 5 minutes à feu doux.",
-        "Étape 5 : Servir la sauce chaude, garnie de quelques feuilles de coriandre fraîche ciselée si désiré."
+        "Étape 5 : Laisser refroidir et conserver en bocal au réfrigérateur jusqu'à 2 semaines."
       ],
       "diet_flags": {
         "vegan": true,
@@ -8497,6 +8523,7 @@
       },
       "difficulty_level": "medium",
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "asiatique",
         "blanc",
@@ -8506,6 +8533,7 @@
         "chinois",
         "coriander",
         "cornstarch",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -8521,6 +8549,7 @@
         "moyen",
         "mushroom",
         "oyster",
+        "potable)",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -8538,6 +8567,7 @@
         "vegetarian",
         "vegetarien",
         "vegetarienne",
+        "water",
         "white",
         "wok"
       ]
@@ -8753,7 +8783,7 @@
       },
       "composition": [
         {
-          "ingredient": "thyme_fresh_herb",
+          "ingredient": "thyme_dried_herb",
           "quantity": 20,
           "unit": "g",
           "meta": {
@@ -8844,12 +8874,11 @@
         "Étape 2 : Mélanger le thym séché, l'origan séché et le sumac (baies séchées moulues) dans un bol. Si le thym est en branches, effeuiller et broyer légèrement au mortier pour libérer les arômes et obtenir une texture fine.",
         "Étape 3 : Ajouter les graines de sésame grillées et le sel. Mélanger jusqu'à homogénéité, en veillant à ce que les ingrédients soient bien mélangés et que la texture soit uniforme.",
         "Étape 4 : Conserver dans un pot hermétique jusqu'à 3 mois, en gardant le mélange à l'abri de la lumière et de l'humidité.",
-        "Étape 5 : Servir sans attendre, mélangé à l'huile d'olive pour tremper le pain végan, ou saupoudrer sur les légumes rôtis, en profitant de la saveur et de la texture parfumée.",
+        "Étape 5 : Servir mélangé à l'huile d'olive pour tremper le pain végan, ou saupoudrer sur les légumes rôtis, en profitant de la saveur et de la texture parfumée.",
         "Étape 6 : Utiliser comme marinade pour les légumes ou les tofu, en les laissant reposer pendant au moins 30 minutes, pour que les saveurs pénètrent profondément.",
         "Étape 7 : Ajouter à vos salades ou vos sauces pour un supplément de saveur et d'arôme, en veillant à ne pas surcharger le plat.",
         "Étape 8 : Utiliser comme garniture pour les plats de légumes ou de céréales, pour ajouter une touche de couleur et de saveur, et pour créer un contraste visuel.",
-        "Étape 9 : Mélanger avec de l'huile d'olive et du jus de citron pour créer une sauce végane délicieuse, en ajustant les quantités pour obtenir la saveur désirée.",
-        "Étape 10 : Servir dans des bols préchauffés, accompagné d'un filet d'huile d'olive et d'un peu de pain végan, pour apprécier pleinement les saveurs et les textures de ce mélange d'herbes et d'épices."
+        "Étape 9 : Mélanger avec de l'huile d'olive et du jus de citron pour créer une sauce végane délicieuse, en ajustant les quantités pour obtenir la saveur désirée."
       ],
       "diet_flags": {
         "vegan": true,
@@ -8921,9 +8950,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 20,
-        "prep_passive_min": 20160,
+        "prep_passive_min": 14400,
         "cook_min": 10,
-        "total_min": 20190
+        "total_min": 14430
       },
       "composition": [
         {
@@ -8938,7 +8967,7 @@
           }
         },
         {
-          "ingredient": "matcha_green_tea_powder",
+          "ingredient": "tea_leaf",
           "quantity": 8,
           "unit": "g",
           "meta": {
@@ -9039,7 +9068,7 @@
       "description": "Boisson végane fermentée à base de thé vert sucré, légèrement acidulée et pétillante, avec une culture symbiotique de bactéries et de levures, offrant une saveur unique et des bienfaits pour la santé.",
       "instructions": [
         "Étape 1 : Porter 1000 ml d'eau à ébullition dans une grande casserole, en veillant à ce que l'eau atteigne une température de 100 °C.",
-        "Étape 2 : Ajouter 8 g de thé vert et laisser infuser pendant 5 minutes.",
+        "Étape 2 : Ajouter 8 g de thé vert en feuilles et laisser infuser pendant 5 minutes.",
         "Étape 3 : Retirer le thé de l'eau chaude et ajouter 80 g de sucre blanc pour le dissoudre complètement, en remuant régulièrement.",
         "Étape 4 : Laisser le mélange refroidir à température ambiante, en surveillant la température pour qu'elle atteigne environ 20-24 °C.",
         "Étape 5 : Verser le mélange dans un bocal en verre propre et stérilisé, en ajoutant le SCOBY (Symbiotic Culture of Bacteria and Yeast) et 100 ml de kombucha de démarrage.",
@@ -9060,7 +9089,6 @@
       },
       "search_tokens": [
         "(eau",
-        "(poudre)",
         "acidite",
         "agrume",
         "asiatique",
@@ -9072,7 +9100,6 @@
         "eau",
         "fermentation",
         "gluten free",
-        "green",
         "intermediaire",
         "kombucha",
         "leger",
@@ -9081,14 +9108,12 @@
         "light",
         "long",
         "low calorie",
-        "matcha",
         "menthe",
         "mijote",
         "minceur",
         "mint",
         "moyen",
         "potable)",
-        "powder",
         "sans gluten",
         "sans produit animal",
         "sans viande",
@@ -9160,8 +9185,8 @@
           }
         },
         {
-          "ingredient": "coriander_spice_seed",
-          "quantity": 3,
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 20,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -9322,9 +9347,8 @@
         "Étape 3: Incorporer le pain rassis en morceaux et laisser ramollir pendant 5 minutes à feu doux, en remuant occasionnellement, jusqu'à ce que le pain soit complètement imbibé de liquide.",
         "Étape 4: Faire un puits dans la préparation et y casser les 220g d'œufs pour les pocher directement dans le bouillon pendant 3 à 4 minutes, jusqu'à ce que le blanc soit pris et le jaune encore coulant.",
         "Étape 5: Ajouter la coriandre fraîche ciselée et le sel, puis laisser infuser pendant 1 minute, en laissant les saveurs se mélanger et les arômes se dégager.",
-        "Étape 6: Vérifier que les saveurs sont équilibrées, et rectifier l'assaisonnement si nécessaire, en ajoutant plus de sel, de coriandre ou de lait si besoin.",
-        "Étape 7: Servir chaud, parsemé de coriandre fraîche ciselée et de pain grillé.",
-        "Étape 8: Laisser reposer pendant 2 minutes avant de servir, en laissant les saveurs se mélanger et les arômes se dégager."
+        "Étape 6: Vérifier que les saveurs sont équilibrées, et rectifier l'assaisonnement si nécessaire, en ajoutant plus de sel ou de coriandre si besoin.",
+        "Étape 7: Servir chaud, parsemé de coriandre fraîche ciselée et de pain grillé."
       ],
       "diet_flags": {
         "vegan": false,
@@ -9392,7 +9416,7 @@
         },
         {
           "ingredient": "water",
-          "quantity": 500,
+          "quantity": 120,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -9510,21 +9534,21 @@
         "wheat"
       ],
       "difficulty_level": "easy",
-      "dish_type": "main",
+      "dish_type": "bread",
       "servings_default": 4,
       "_quality_score": 0.79,
       "description": "Bannock végétarien croustillant, à texture dorée et tendre, issu de la tradition autochtone canadienne, préparé avec soin à partir de farine de blé et beurre, pour une saveur riche et une texture croustillante.",
       "instructions": [
         "Étape 1: Dans un grand saladier, mélangez 200g de farine de blé avec 5g de sel, jusqu'à obtenir une texture homogène et bien mélangée, sans grumeaux visibles.",
-        "Étape 2: Ajoutez 40g de beurre fondue et mélangez jusqu'à ce que la mixture ressemble à du sable fin, avec une texture granuleuse uniforme.",
-        "Étape 3: Versez 500ml d'eau tiède petit à petit, tout en pétrissant la pâte avec vos mains jusqu'à obtenir une consistance lisse et souple, qui ne colle plus aux mains.",
+        "Étape 2: Ajoutez 40g de beurre fondu et mélangez jusqu'à ce que la mixture ressemble à du sable fin, avec une texture granuleuse uniforme.",
+        "Étape 3: Versez 120ml d'eau tiède petit à petit, tout en pétrissant la pâte avec vos mains jusqu'à obtenir une consistance lisse et souple, qui ne colle plus aux mains.",
         "Étape 4: Façonnez la pâte en une galette épaisse d'environ 2 cm, en appuyant légèrement pour aplanir la surface et obtenir une forme régulière.",
         "Étape 5: Chauffez une poêle antiadhésive ou un comal à feu moyen, en ajoutant une fine couche de beurre pour éviter que le bannock ne colle, et en vérifiant que la poêle est bien chaude avant de procéder.",
         "Étape 6: Placez le bannock dans la poêle et faites-le cuire 8-10 minutes de chaque côté, en couvrant la poêle avec un couvercle pour retenir la chaleur et en vérifiant régulièrement la couleur et la texture.",
         "Étape 7: Vérifiez la cuisson en insérant un couteau au centre du bannock - il doit ressortir propre et sec, sans trace de pâte crue.",
         "Étape 8: Laissez le bannock reposer pendant 5 minutes avant de le découper en tranches régulières, en veillant à ce qu'il soit encore chaud mais non brûlant.",
-        "Étape 9: Servez-le chaud, accompagné de votre confiture végétarien préférée ou de délicieuses garnitures végétariennes, en profitant de la texture croustillante et de la saveur riche du bannock.",
-        "Étape 10: Décorez avec des herbes fraîches, comme du persil ou de la coriandre, pour ajouter une touche de fraîcheur et de couleur à votre plat, et servez-le dans un plat préchauffé pour conserver la chaleur."
+        "Étape 9: Servez-le chaud, accompagné de votre confiture préférée ou de délicieuses garnitures végétariennes, en profitant de la texture croustillante et de la saveur riche du bannock.",
+        "Étape 10: Décorez avec des herbes fraîches, comme du persil ou de la coriandre, pour ajouter une touche de fraîcheur et de couleur à votre plat."
       ],
       "diet_flags": {
         "vegan": false,
@@ -9699,6 +9723,17 @@
             "note": "Pour accompagner les bao",
             "optional": true
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 100,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -9824,13 +9859,13 @@
       "_quality_score": 0.9,
       "description": "Galette végane à base de tofu soyeux, à pâte légère et croustillante, cuite en poêle pour un extérieur doré et un cœur tendre, inspirée de la cuisine chinoise",
       "instructions": [
-        "Étape 1 : Mélanger 200g de farine à pain, 7g de levure sèche, 10g de sucre de canne et 100ml d'eau tiède. Pétrir 5 minutes à feu doux, jusqu'à obtenir une pâte lisse et élastique, avec une texture homogène et une odeur légèrement sucrée.",
+        "Étape 1 : Mélanger 200g de farine à pain, 7g de levure fraîche, 10g de sucre de canne et 100ml d'eau tiède. Pétrir 5 minutes, jusqu'à obtenir une pâte lisse et élastique, avec une texture homogène et une odeur légèrement sucrée.",
         "Étape 2 : Laisser lever 1 heure à 25°C, dans un endroit chaud et sec, puis diviser en boules régulières, en veillant à ce que chaque boule soit lisse et sans défauts.",
         "Étape 3 : Saisir 400g de tofu ferme et des légumes (400g de chou vert, 150g de champignons shiitake, 9g d'ail, 11.2g de gingembre) 3 minutes à feu moyen-vif, en remuant constamment, jusqu'à ce que les légumes soient tendres et parfumés, avec une odeur de gingembre et d'ail.",
         "Étape 4 : Ajouter 45ml de sauce soja végétale et 30ml de sauce hoisin végétale. Mélanger bien, en faisant attention à ce que tous les ingrédients soient bien enrobés de sauce, avec une texture crémeuse et une saveur équilibrée.",
         "Étape 5 : Abaisser chaque boule en ovale, garnir avec le mélange de tofu et de légumes, et replier en forme de bao, en appuyant délicatement sur les bords pour les sceller, en veillant à ce que les bords soient bien joints et les bao soient réguliers.",
-        "Étape 6 : Cuire à la vapeur 12 minutes à 100°C dans un panier en bambou, jusqu'à ce que les bao soient dorés et gonflés, avec une texture tendre et aérienne, et une odeur de vapeur de bambou.",
-        "Étape 7 : Goûter et rectifier l'assaisonnement, en ajoutant un peu de sauce soja ou de sauce hoisin si nécessaire. Servir sans attendre, accompagné d'une salade verte ou d'un bol de riz végétal, en profitant de la chaleur et de la fraîcheur des ingrédients. Servir chaud, parsemé d'oignon vert ciselé."
+        "Étape 6 : Cuire à la vapeur 12 minutes à 100°C dans un panier en bambou, jusqu'à ce que les bao soient gonflés, avec une texture tendre et aérienne, et une odeur de vapeur de bambou.",
+        "Étape 7 : Goûter et rectifier l'assaisonnement, en ajoutant un peu de sauce soja ou de sauce hoisin si nécessaire. Servir chaud, parsemé d'oignon vert ciselé."
       ],
       "diet_flags": {
         "vegan": true,
@@ -9991,8 +10026,8 @@
       "description": "Crêpe bretonne à base de farine de sarrasin, naturellement sans gluten de blé, avec une texture souple et des bords croustillants lors de la cuisson à la poêle.",
       "instructions": [
         "Étape 1: Mélanger 250g de farine de sarrasin et 5g de sel dans un grand bol. Ajouter 1 cuillère à soupe de graines de lin et mélanger bien pour éviter les grumeaux.",
-        "Étape 2: Ajouter progressivement 500ml d'eau en fouettant pour obtenir une pâte lisse et homogène. La pâte doit être fluide et sans grumeaux.",
-        "Étape 3: Incorporer 20g de beurre fondue. Laisser reposer la pâte au moins 1 heure au réfrigérateur pour permettre aux graines de lin de gonfler et à la pâte de se détendre.",
+        "Étape 2: Ajouter l'œuf battu, puis progressivement 500ml d'eau en fouettant pour obtenir une pâte lisse et homogène. La pâte doit être fluide et sans grumeaux.",
+        "Étape 3: Incorporer 20g de beurre fondu. Laisser reposer la pâte au moins 1 heure au réfrigérateur pour permettre aux graines de lin de gonfler et à la pâte de se détendre.",
         "Étape 4: Huiler légèrement une poêle chauffée à feu moyen. Verser une louche de pâte et répartir rapidement pour obtenir une crêpe fine et régulière.",
         "Étape 5: Cuire 2 minutes jusqu'à ce que les bords soient dorés et croustillants. Retourner et cuire 1 minute de l'autre côté. La crêpe doit être souple et légèrement dorée.",
         "Étape 6: Répéter l'opération jusqu'à épuisement de la pâte. Garnir les crêpes avec vos ingrédients préférés, tels que des légumes sautés, des fruits ou des sauces.",
@@ -10066,9 +10101,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 15,
-        "prep_passive_min": 10,
-        "cook_min": 25,
-        "total_min": 50
+        "prep_passive_min": 0,
+        "cook_min": 15,
+        "total_min": 30
       },
       "composition": [
         {
@@ -10106,7 +10141,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -10116,8 +10151,8 @@
           }
         },
         {
-          "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 150,
+          "ingredient": "queso_fresco_block_cow",
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -10127,8 +10162,8 @@
           }
         },
         {
-          "ingredient": "coriander_spice_seed",
-          "quantity": 3,
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -10150,22 +10185,11 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
             "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 240,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "diced",
             "state": "raw",
             "preparation": ""
           }
@@ -10179,17 +10203,6 @@
             "ingredient_fr": "coriandre fraîche ciselée",
             "note": "Pour une touche de fraîcheur",
             "optional": true
-          }
-        },
-        {
-          "ingredient": "milk_liquid_uht_3_5pct",
-          "quantity": 100,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
           }
         }
       ],
@@ -10247,7 +10260,7 @@
         }
       },
       "search_tokens": [
-        "1 heure",
+        "30 minutes",
         "base_tortilla_92c2a6",
         "chilaquiles",
         "coeliaque",
@@ -10255,9 +10268,9 @@
         "coriandre",
         "egg",
         "epice",
+        "fresco",
         "gluten free",
         "intermediaire",
-        "lait",
         "latino",
         "leger",
         "light",
@@ -10265,13 +10278,14 @@
         "mexicain",
         "mexican",
         "mexique",
-        "milk",
         "minceur",
         "moyen",
         "oignon",
         "olive",
         "onion",
-        "parmesan",
+        "queso",
+        "quick",
+        "rapide",
         "salt",
         "sans gluten",
         "sans viande",
@@ -10289,16 +10303,12 @@
       "_quality_score": 0.93,
       "description": "Plat végétarien équilibré à base de tortillas de maïs, avec une sauce tomate riche et crémeuse, des oignons tendres et parfumés, et un fromage fondu et crémeux, présentant des textures contrastées et des saveurs intenses.",
       "instructions": [
-        "Étape 1: Faire chauffer 20 ml d'huile d'olive extra vierge à feu moyen-vif, saisir l'oignon 3 min jusqu'à translucide, il doit être tendre et parfumé.",
-        "Étape 2: Ajouter la sauce tomate faite de tomates fraîches (240g) et de sel (3g), cuire 5 min à feu moyen, réduire légèrement jusqu'à épaississement, la sauce doit être riche et crémeuse.",
-        "Étape 3: Incorporer les tortillas (320g) coupées en julienne, mélanger délicatement 2 min pour imprégner sans casser, les tortillas doivent être bien enrobées de sauce.",
-        "Étape 4: Préparer une émulsion de jaune d'œuf (2 œufs) et de lait (100ml), émulsionner rapidement 1 min jusqu'à texture crémeuse, la texture doit être lisse et homogène.",
-        "Étape 5: Assaisonner avec sel (5g) et coriandre (3g), servir chaud sans attendre, textures contrastées et saveurs équilibrées, les saveurs doivent être intenses et équilibrées.",
-        "Étape 6: Ajouter le fromage râpé (150g de parmesan), mélanger pour que le fromage soit fondu et crémeux.",
-        "Étape 7: Ajouter un filet d'huile d'olive extra vierge (25ml) pour donner un éclat et une texture finale, les saveurs doivent être intenses et les textures contrastées.",
-        "Étape 8: Servir chaud, décorer avec des herbes fraîches si désiré, les saveurs doivent être équilibrées et les textures doivent être contrastées.",
-        "Étape 9: Déguster et ajuster l'assaisonnement au besoin, les saveurs doivent être intenses et équilibrées.",
-        "Étape 10: Servir dans un plat chaud, avec une présentation appétissante et des garnitures fraîches."
+        "Étape 1 : Couper les tortillas en 6 triangles. Chauffer 30 ml d'huile d'olive dans une grande poêle à feu moyen-vif et faire dorer les triangles 3 à 4 minutes en les retournant, jusqu'à ce qu'ils soient croustillants. Égoutter sur du papier absorbant.",
+        "Étape 2 : Dans la même poêle, faire revenir l'oignon émincé 4 minutes à feu moyen jusqu'à ce qu'il soit translucide.",
+        "Étape 3 : Ajouter la sauce tomate et le sel, puis laisser mijoter 5 minutes jusqu'à léger épaississement.",
+        "Étape 4 : Pendant ce temps, cuire les œufs au plat dans les 15 ml d'huile restants, 3 minutes, jusqu'à ce que le blanc soit pris et le jaune encore coulant.",
+        "Étape 5 : Hors du feu, ajouter les tortillas croustillantes dans la sauce et mélanger 1 minute pour les enrober sans les ramollir complètement.",
+        "Étape 6 : Répartir dans les assiettes, déposer un œuf sur chaque portion, émietter le queso fresco et parsemer de coriandre ciselée. Servir aussitôt."
       ],
       "diet_flags": {
         "vegan": false,
@@ -10593,8 +10603,8 @@
           }
         },
         {
-          "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 150,
+          "ingredient": "queso_fresco_block_cow",
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -10605,7 +10615,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -10701,6 +10711,17 @@
             "note": "Quelques feuilles pour la fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -10772,6 +10793,7 @@
         "cumin",
         "enchiladas",
         "epice",
+        "fresco",
         "garlic",
         "gluten free",
         "haricot",
@@ -10791,9 +10813,9 @@
         "olive",
         "onion",
         "oven_cooking",
-        "parmesan",
         "pepper",
         "piment",
+        "queso",
         "salt",
         "sans gluten",
         "sans viande",
@@ -10815,11 +10837,10 @@
         "Étape 1: Préparez la sauce enchilada en faisant revenir 9g d'ail dans 45ml d'huile d'olive extra vierge pendant 30 secondes, jusqu'à ce que l'odeur d'ail soit parfumée et la couleur légèrement dorée.",
         "Étape 2: Ajoutez 480g de tomates concassées, 40g de piments ancho réhydratés, 3g de cumin et 3g de coriandre moulue, puis mijotez pendant 12 minutes, en remuant occasionnellement, jusqu'à ce que la sauce soit épaisse et parfumée.",
         "Étape 3: Mixez la sauce pour la rendre lisse et homogène, puis assaisonnez-la avec 5g de sel.",
-        "Étape 4: Garnissez 320g de tortillas avec une mixture de 300g de haricots noirs égouttés, 150g de parmesan râpé et 300g d'oignon émincé, puis roulez-les fermement pour former des rouleaux compacts.",
+        "Étape 4: Garnissez 320g de tortillas avec une mixture de 300g de haricots noirs égouttés, 80g de queso fresco émietté et 150g d'oignon émincé, puis roulez-les fermement pour former des rouleaux compacts.",
         "Étape 5: Disposez les tortillas roulées côte à côte dans un plat, puis nappez-les généreusement de sauce enchilada chaude, en veillant à ce que tous les rouleaux soient bien enrobés.",
-        "Étape 6: Parsemez de parmesan râpé et enfournez à 180°C pendant 20 à 22 minutes, ou jusqu'à ce que le fromage soit fondu et gratiné, avec une couleur dorée et une texture croustillante.",
-        "Étape 7: Garnissez d'une coriandre fraîche et d'un peu de crème fraîche, puis servez chaud.",
-        "Étape 8: Servez dans des bols préchauffés, garni de coriandre ciselée et d'un filet d'huile d'olive. Accompagnez de pain pita tiède."
+        "Étape 6: Parsemez du reste de queso fresco et enfournez à 180°C pendant 20 à 22 minutes, ou jusqu'à ce que la sauce bouillonne et que le fromage soit doré.",
+        "Étape 7: Garnissez de coriandre fraîche ciselée, puis servez chaud."
       ],
       "diet_flags": {
         "vegan": false,
@@ -10931,7 +10952,7 @@
         },
         {
           "ingredient": "water",
-          "quantity": 350,
+          "quantity": 150,
           "unit": "ml",
           "meta": {
             "role": "liquid",
@@ -11049,7 +11070,7 @@
       "_quality_score": 0.94,
       "description": "Pain plat italien à mie aérée, résultat d'une fermentation lente, d'une huile d'olive généreuse et d'une cuisson au four pour obtenir une croûte dorée et croustillante, avec des notes d'arômes herbacés provenant du romarin et de la fleur de sel.",
       "instructions": [
-        "Étape 1 : Mélanger 200g de farine à pain avec 7g de levure sèche et 5g de sel de mer. Ajouter 45ml d'huile d'olive et 350ml d'eau tiède. Mélanger jusqu'à obtenir une pâte grossière, avec une texture qui commence à se décoller des parois du bol.",
+        "Étape 1 : Mélanger 200g de farine à pain avec 7g de levure fraîche et 5g de sel de mer. Ajouter 45ml d'huile d'olive et 150ml d'eau tiède. Mélanger jusqu'à obtenir une pâte grossière, avec une texture qui commence à se décoller des parois du bol.",
         "Étape 2 : Pétrir la pâte pendant 8 à 10 minutes pour obtenir une texture lisse, souple et élastique, qui respire l'arôme des céréales.",
         "Étape 3 : Couvrir la pâte et laisser lever pendant 1h30 à température ambiante, jusqu'à ce que le volume ait doublé et que la pâte commence à sentir la fermentation.",
         "Étape 4 : Huiler généreusement un plat de 30x40 cm avec 50ml d'huile d'olive. Étaler la pâte sans dégazer et couvrir pendant 30 minutes, en laissant la pâte se détendre et en prenant conscience de son poids.",
@@ -11391,10 +11412,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 19,
-        "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 39
+        "prep_active_min": 20,
+        "prep_passive_min": 10,
+        "cook_min": 30,
+        "total_min": 60
       },
       "composition": [
         {
@@ -11421,7 +11442,7 @@
         },
         {
           "ingredient": "rice_flour",
-          "quantity": 200,
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -11432,7 +11453,7 @@
         },
         {
           "ingredient": "egg_raw",
-          "quantity": 220,
+          "quantity": 110,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -11443,7 +11464,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -11575,7 +11596,7 @@
       },
       "search_tokens": [
         "(eau",
-        "45 minutes",
+        "1 heure",
         "ail",
         "asia",
         "asiatique",
@@ -11600,7 +11621,6 @@
         "light",
         "low calorie",
         "minceur",
-        "moyen",
         "oignon",
         "onion",
         "potable)",
@@ -11627,14 +11647,12 @@
       "_chef_note": "Pour une meilleure texture, utilisez de la farine de riz et des chapelures de panko pour la panure du tofu.",
       "description": "Katsu de tofu croustillant sur lit de riz japonais, nappé d'une sauce curry onctueuse et parfumée, où les saveurs de l'oignon caramélisé et de l'ail torréfié se mélangent en harmonie, avec une texture crémeuse et une couleur dorée appétissante.",
       "instructions": [
-        "Étape 1: Ciseler finement l'oignon et l'ail, puis les faire revenir 5 min à feu moyen dans l'huile de tournesol, jusqu'à ce que l'oignon soit caramélisé et l'ail soit torréfié, en sentant l'arôme caractéristique de l'oignon caramélisé.",
-        "Étape 2: Ajouter le cari en poudre, faire torréfier 1 min, puis verser le bouillon de légumes, réduire, en observant la sauce épaissir et en humant son parfum intense, jusqu'à ce que la sauce ait atteint la consistance désirée.",
-        "Étape 3: Cuire 10 min jusqu'à épaississement, en remuant régulièrement, jusqu'à texture onctueuse et en vérifiant que la sauce a atteint la consistance désirée, en écoutant le son de la sauce qui se réduit.",
-        "Étape 4: Couper le tofu en tranches épaisses, les paner avec de la farine de riz, de l'œuf battu et des chapelures de panko, puis saisir 3 min de chaque côté à feu moyen-vif, en écoutant le son de la panure qui se croustille, jusqu'à ce que la panure soit dorée et croustillante.",
-        "Étape 5: Faire frire les tranches de tofu dans l'huile de tournesol chaude 4 min de chaque côté, jusqu'à dorure blonde et croquante, en vérifiant la couleur et la texture de la panure, en écoutant le son de la panure qui se croustille.",
-        "Étape 6: Préparer le riz japonais, julienne les oignons, puis dresser le riz, déposer le katsu de tofu et napper de sauce curry, en créant un visuel appétissant et équilibré, en vérifiant que les saveurs et les textures se mélangent en harmonie.",
-        "Étape 7: Servir chaud.",
-        "Étape 8: Ajouter une touche de fromage râpé pour un parfum umami intense et une texture crémeuse supplémentaire, en relevant le plat d'un niveau culinaire supérieur, en vérifiant que les saveurs et les textures se mélangent en harmonie."
+        "Étape 1 : Rincer 300 g de riz japonais jusqu'à ce que l'eau soit claire, puis le cuire à couvert avec 350 ml d'eau pendant 12 minutes à feu doux. Laisser reposer 10 minutes hors du feu.",
+        "Étape 2 : Émincer l'oignon et l'ail, puis les faire revenir 5 minutes à feu moyen dans 15 ml d'huile de tournesol jusqu'à ce que l'oignon soit doré.",
+        "Étape 3 : Ajouter le curry en poudre et 20 g de farine de riz, remuer 1 minute, puis verser progressivement 400 ml d'eau chaude et le bouillon en poudre en fouettant. Laisser mijoter 10 minutes jusqu'à ce que la sauce nappe la cuillère.",
+        "Étape 4 : Égoutter le tofu, le couper en 4 tranches épaisses et les éponger. Les passer dans 40 g de farine de riz, puis dans les œufs battus, puis dans la chapelure panko.",
+        "Étape 5 : Chauffer 30 ml d'huile de tournesol dans une grande poêle à feu moyen-vif et dorer les tranches 3 à 4 minutes de chaque côté, jusqu'à ce que la panure soit croustillante. Égoutter sur du papier absorbant.",
+        "Étape 6 : Trancher le katsu, le dresser sur le riz et napper de sauce curry. Servir chaud."
       ],
       "diet_flags": {
         "vegan": false,
@@ -11701,8 +11719,8 @@
           }
         },
         {
-          "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 150,
+          "ingredient": "queso_fresco_block_cow",
+          "quantity": 80,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -11713,7 +11731,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -11775,6 +11793,28 @@
             "ingredient_fr": "piment jalapeño",
             "note": "Ajoute une touche de piquant",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -11842,8 +11882,10 @@
         "coeliaque",
         "coriander",
         "coriandre",
+        "cumin",
         "enfrijoladas",
         "epice",
+        "fresco",
         "garlic",
         "gluten free",
         "haricot",
@@ -11863,13 +11905,16 @@
         "olive",
         "onion",
         "oven_cooking",
-        "parmesan",
         "pepper",
         "piment",
+        "queso",
         "red",
         "rouge",
+        "salt",
         "sans gluten",
         "sans viande",
+        "sel",
+        "table",
         "vegetarien",
         "wok"
       ],
@@ -11885,8 +11930,8 @@
         "Étape 4: Tremper chaque tortilla dans la sauce haricots chaude pendant 10 secondes de chaque côté, pour bien l'imprégner et lui donner une texture souple et élastique. La tortilla doit être souple et colorée, avec une odeur délicieuse de sauce haricots.",
         "Étape 5: Plier en deux ou rouler les tortillas et disposer dans un plat légèrement huilé avec de l'huile d'olive, en les espaçant uniformément pour une cuisson égale.",
         "Étape 6: Napper du reste de sauce haricots sur les tortillas, en les recouvrant généreusement pour qu'elles soient bien imbibées.",
-        "Étape 7: Préchauffer le four à 200°C. Passer les enfrijoladas sous le gril chaud pendant 5 minutes, jusqu'à gratinage léger et doré, en surveillant la cuisson pour éviter les brûlures.",
-        "Étape 8: Servir les enfrijoladas chaudes, garnies d'oignon rouge, de coriandre fraîche et de piment jalapeño, si désiré, pour ajouter une touche de fraîcheur et de piquant."
+        "Étape 7: Préchauffer le gril du four. Passer les enfrijoladas sous le gril pendant 5 minutes, jusqu'à gratinage léger et doré, en surveillant la cuisson pour éviter les brûlures.",
+        "Étape 8: Servir les enfrijoladas chaudes, garnies de queso fresco émietté, de coriandre fraîche et, si désiré, de piment jalapeño, pour ajouter une touche de fraîcheur et de piquant."
       ],
       "diet_flags": {
         "vegan": false,
@@ -11995,6 +12040,17 @@
             "note": "Quelques feuilles pour la fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 100,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -12050,6 +12106,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "ail",
         "blanc",
@@ -12059,6 +12116,7 @@
         "coriander",
         "debutant",
         "easy",
+        "eau",
         "enfants",
         "facile",
         "facile enfants",
@@ -12076,6 +12134,7 @@
         "paprika",
         "portugaises",
         "portuguese",
+        "potable)",
         "quick",
         "rapide",
         "salt",
@@ -12088,6 +12147,7 @@
         "vegetalien",
         "vegetarien",
         "vert",
+        "water",
         "white",
         "wok"
       ],
@@ -12097,7 +12157,7 @@
       "_quality_score": 0.66,
       "description": "Migas portugaises végétariennes, parfumées à l'ail et au paprika doux, servies chaudes avec une texture croustillante et moelleuse, typique de la cuisine traditionnelle portugaise",
       "instructions": [
-        "Étape 1 : Coupez 150g de pain complet rassis en cubes irréguliers de 2 cm. Arrosez de 100 ml d'eau salée et laissez absorber pendant 10 minutes, jusqu'à ce que le pain soit légèrement ramolli.",
+        "Étape 1 : Coupez 150g de pain blanc rassis en cubes irréguliers de 2 cm. Arrosez de 100 ml d'eau salée et laissez absorber pendant 10 minutes, jusqu'à ce que le pain soit légèrement ramolli.",
         "Étape 2 : Chauffez 45 ml d'huile d'olive vierge extra dans une grande poêle à feu moyen. Faites revenir 9g d'ail cru pendant 2 minutes, jusqu'à ce qu'il soit parfumé et légèrement doré.",
         "Étape 3 : Ajoutez 400g de chou vert cru émincé et faites-le sauter pendant 4 minutes, jusqu'à ce qu'il soit tendre et légèrement caramélisé.",
         "Étape 4 : Ajoutez le pain imbibé et faites-le sauter à feu moyen-vif pendant 8 à 10 minutes, en remuant régulièrement, jusqu'à ce que les cubes de pain soient dorés et croustillants par endroits.",
@@ -12534,7 +12594,7 @@
       "_quality_score": 0.99,
       "description": "Panzanella italienne fraîche et parfumée, réalisée avec du pain complet croustillant, des tomates juteuses, du concombre croquant et du basilic frais, dans une harmonie de saveurs et de textures qui célèbre la cuisine italienne.",
       "instructions": [
-        "Étape 1 : Préchauffer le four à 180 °C. Couper le pain complet de 150g en cubes de 2 cm, les arroser d'huile d'olive et les faire dorer au four pendant 12 minutes, jusqu'à obtenir une surface croustillante et dorée.",
+        "Étape 1 : Préchauffer le four à 180 °C. Couper le pain rassis de 150g en cubes de 2 cm, les arroser d'huile d'olive et les faire dorer au four pendant 12 minutes, jusqu'à obtenir une surface croustillante et dorée.",
         "Étape 2 : Couper les tomates de 480g en quartiers, les saler avec du sel de 5g et les laisser dégorger pendant 10 minutes, en récupérant ainsi le jus précieux et en révélant leur saveur intense.",
         "Étape 3 : Émincer finement l'oignon de 150g et couper le concombre de 350g en tranches fines, afin de préparer les légumes pour la salade et de libérer leurs arômes.",
         "Étape 4 : Préparer la vinaigrette dans un grand saladier en dissolvant le sel dans le vinaigre de vin rouge de 30ml, puis en ajoutant le jus des tomates et en émulsionnant avec l'huile d'olive de 45ml, en créant ainsi une sauce onctueuse et parfumée.",
@@ -12619,7 +12679,7 @@
         },
         {
           "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-          "quantity": 200,
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -12689,6 +12749,17 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "nutmeg_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -12779,8 +12850,10 @@
         "milk",
         "minceur",
         "moyen",
+        "muscade",
         "mushroom",
         "noir",
+        "nutmeg",
         "oignon",
         "onion",
         "pain",
@@ -12812,7 +12885,7 @@
       "instructions": [
         "Étape 1: Émietter 150 g de pain rassis et le faire tremper dans 250 ml de lait de vache tiède pendant 10 minutes, jusqu'à ce que le pain soit complètement ramolli. Presser légèrement pour enlever l'excès de liquide.",
         "Étape 2: Dans un bol, mélanger le pain émietté avec 2 cuillères à soupe de fécule de maïs, 300 g d'oignon haché revenu dans du beurre, noix de muscade, 5 g de sel et poivre, jusqu'à obtenir une pâte homogène.",
-        "Étape 3: Ajouter 30 g de persil frais haché et 200 g de farine pour lier la pâte. Mélanger jusqu'à ce que la pâte soit lisse et sans grumeaux.",
+        "Étape 3: Ajouter 30 g de persil frais haché et 60 g de farine pour lier la pâte. Mélanger jusqu'à ce que la pâte soit lisse et sans grumeaux.",
         "Étape 4: Ajouter 220 g d'œuf battu pour lier la pâte et former des quenelles ovales de 8 cm avec les mains humides en compressant fermement pour obtenir une texture lisse, en veillant à ce que les quenelles soient régulières et bien compactées.",
         "Étape 5: Porter de l'eau salée à frémissement. Plonger les quenelles et cuire à feu doux pendant 12 à 15 minutes, jusqu'à ce que la surface soit ferme et que les quenelles remontent à la surface.",
         "Étape 6: Égoutter les quenelles et les servir chaudes avec une sauce aux herbes ou champignons. La texture doit être moelleuse et légèrement spongieuse, ni trop ferme ni trop collante.",
@@ -13037,15 +13110,12 @@
       "_quality_score": 0.84,
       "description": "Préparation de salmorejo à base de tomates mûres, avec une texture crémeuse et une saveur riche, typique de la cuisine andalouse, caractérisée par son odeur fraîche de tomates et son aspect velouté",
       "instructions": [
-        "Étape 1: Julienne les tomates mûres en quartiers, puis les mixer avec du pain blanc rassis imbibé d'eau froide pendant 5 min, en écoutant le son crépitant des tomates qui se déchirent.",
-        "Étape 2: Émulsionner le mélange de tomates, pain essoré, 2 gousses d'ail et 45 ml d'huile d'olive extra vierge à pleine puissance pendant 4 min, jusqu'à texture parfaitement lisse, en sentant l'arôme des tomates qui se mélange avec l'ail.",
-        "Étape 3: Ajouter 30 ml de vinaigre de Xérès et 5 g de sel, puis mixer à nouveau pour bien intégrer les saveurs, en goûtant régulièrement pour ajuster l'assaisonnement.",
-        "Étape 4: Filtrer le mélange au chinois fin en pressant bien pour une texture veloutée sans peaux ni graines, en écoutant le son crépitant de la mixture.",
-        "Étape 5: Réduire la sauce si nécessaire pour obtenir la texture désirée, en goûtant régulièrement pour ajuster l'assaisonnement, en sentant la texture épaisse et crémeuse.",
-        "Étape 6: Réfrigérer minimum 2 heures, puis servir très froid en petits bols, en vérifiant la texture épaisse et crémeuse, en sentant la fraîcheur de la préparation.",
-        "Étape 7: Garnir d'un filet d'huile d'olive extra vierge et de persil frais, en nacrant les ingrédients pour une présentation appétissante, en sentant l'arôme des herbes fraîches qui se mélangent avec les tomates.",
-        "Étape 8: Décorer avec des tomates cerises fraîches et des feuilles de basilic pour une touche de couleur et de fraîcheur, en sentant l'arôme des herbes fraîches qui se mélangent avec les tomates.",
-        "Étape 9: Servir sans attendre, garni de persil frais et d'un filet d'huile d'olive extra vierge."
+        "Étape 1 : Couper les tomates en quartiers. Faire tremper le pain rassis 5 minutes dans un peu d'eau froide, puis l'essorer.",
+        "Étape 2 : Mixer les tomates, le pain essoré et l'ail à pleine puissance pendant 2 minutes, puis ajouter l'huile d'olive en filet sans cesser de mixer, jusqu'à obtenir une crème lisse et épaisse.",
+        "Étape 3 : Ajouter le vinaigre et le sel, mixer à nouveau, goûter et ajuster.",
+        "Étape 4 : Passer au chinois fin en pressant bien pour retirer les peaux et les graines.",
+        "Étape 5 : Réfrigérer au moins 2 heures.",
+        "Étape 6 : Servir très froid en petits bols, garni des œufs durs écalés et hachés."
       ],
       "diet_flags": {
         "vegan": false,
@@ -13079,8 +13149,8 @@
       },
       "composition": [
         {
-          "ingredient": "spinach_cooked",
-          "quantity": 300,
+          "ingredient": "spinach_raw_mature",
+          "quantity": 500,
           "unit": "g",
           "meta": {
             "role": "vegetable",
@@ -13102,7 +13172,7 @@
         },
         {
           "ingredient": "yellow_onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -13135,7 +13205,7 @@
         },
         {
           "ingredient": "nutmeg_spice",
-          "quantity": 5,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -13303,8 +13373,8 @@
       "_quality_score": 0.99,
       "description": "Découvrez ce plat grec végétal à base d'épinards cuits et de pâte filo croustillante, parfumé à la muscade et au poivre, avec une texture fondante à l'intérieur et croustillante à l'extérieur",
       "instructions": [
-        "Étape 1 : Laver et sécher 300g d'épinards crus. Faire revenir 300g d'oignon jaune dans 25 g de beurre végétal à feu moyen pendant 4 minutes, jusqu'à ce que l'oignon soit translucide. Ajouter 20g d'ail et cuire pendant 1 minute supplémentaire, jusqu'à ce que l'ail soit parfumé. Ajouter les épinards et cuire 5 minutes jusqu'à réduction complète. Laisser refroidir puis essorer.",
-        "Étape 2 : Mélanger les épinards cuits essorés avec 150g de fromage végétal râpé, 1 cuillère à soupe de graines de lin mélangées à 3 cuillères à soupe d'eau (liant), 5g de muscade, 5g de sel et 2g de poivre.",
+        "Étape 1 : Laver et sécher 500g d'épinards crus. Faire revenir 150g d'oignon jaune dans 25 g de beurre végétal à feu moyen pendant 4 minutes, jusqu'à ce que l'oignon soit translucide. Ajouter 20g d'ail et cuire pendant 1 minute supplémentaire, jusqu'à ce que l'ail soit parfumé. Ajouter les épinards et cuire 5 minutes jusqu'à réduction complète. Laisser refroidir puis essorer.",
+        "Étape 2 : Mélanger les épinards cuits essorés avec 150g de tofu ferme émietté, 1g de muscade, 5g de sel et 2g de poivre.",
         "Étape 3 : Badigeonner chaque feuille de pâte filo de beurre végétal fondu au pinceau. Superposer 4 à 6 feuilles de pâte filo, en veillant à ne pas les superposer trop étroitement pour permettre une bonne cuisson.",
         "Étape 4 : Répartir la garniture d'épinards sur les feuilles de pâte filo, en laissant un bord de 2 cm sans garniture. Couvrir de 4 autres feuilles huilées.",
         "Étape 5 : Inciser le dessus sans traverser la garniture, en faisant des incisions régulières pour permettre une bonne ventilation. Enfourner à 180°C pendant 40 à 45 minutes jusqu'à surface brun doré uniforme et croustillante.",
@@ -13431,9 +13501,9 @@
           }
         },
         {
-          "ingredient": "lime_raw",
-          "quantity": 140,
-          "unit": "g",
+          "ingredient": "lime_juice_fresh",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -13483,6 +13553,17 @@
             "ingredient_fr": "salade de feuilles vertes",
             "note": "Pour accompagner les tacos",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -13597,15 +13678,14 @@
       "description": "Tacos végans aux saveurs éclatantes, avec des tortillas croustillantes, une garniture chaude parfumée et des accompagnements froids croquants, inspirés de la cuisine mexicaine",
       "instructions": [
         "Étape 1 : Chauffer 320g de tortillas de maïs une par une dans une poêle sèche à feu moyen, 20 secondes par face, jusqu'à légère souplesse avec quelques taches dorées, en les retournant délicatement pour éviter les brûlures.",
-        "Étape 2 : Préparer la garniture chaude : faire revenir 150g d'oignon rouge et 9g d'ail dans 45ml d'huile d'olive extra vierge dans une poêle, pendant 4 minutes, en remuant régulièrement pour éviter les brûlures, jusqu'à ce que l'oignon soit translucide et l'ail parfumé.",
+        "Étape 2 : Préparer la garniture chaude : faire revenir la moitié de l'oignon rouge (75g) et 9g d'ail dans 45ml d'huile d'olive extra vierge dans une poêle, pendant 4 minutes, en remuant régulièrement pour éviter les brûlures, jusqu'à ce que l'oignon soit translucide et l'ail parfumé.",
         "Étape 3 : Ajouter 300g de haricots noirs, 3g de cumin et 3g de paprika à la poêle, en remuant bien pour combiner les saveurs, et assaisonner de 5g de sel pour rehausser les arômes.",
         "Étape 4 : Ajouter 480g de tomates fraîches coupées en dés à la poêle, en les laissant cuire pendant 2 minutes, jusqu'à ce qu'elles commencent à ramollir et à libérer leur jus.",
-        "Étape 5 : Préparer les accompagnements froids : ciseler finement la coriandre, en laissant les feuilles les plus tendres pour une meilleure texture, émincer 150g d'oignon rouge en fines lamelles, et couper 400g d'avocat en tranches régulières pour une présentation élégante.",
+        "Étape 5 : Préparer les accompagnements froids : ciseler finement la coriandre, en laissant les feuilles les plus tendres pour une meilleure texture, émincer le reste de l'oignon rouge en fines lamelles, et couper 400g d'avocat en tranches régulières pour une présentation élégante.",
         "Étape 6 : Assembler les tacos au dernier moment : déposer 2 cuillères à soupe de garniture chaude sur chaque tortilla, en veillant à ne pas surcharger pour que les tacos tiennent bien, et en laissant un peu d'espace pour les garnitures froides.",
-        "Étape 7 : Garnir chaque taco de coriandre, oignon rouge, avocat, tomates fraîches et un trait de jus de 140g de citron vert, en pressant légèrement le citron pour libérer les huiles essentielles et les saveurs.",
+        "Étape 7 : Garnir chaque taco de coriandre, oignon rouge, avocat, tomates fraîches et un trait de jus de citron vert.",
         "Étape 8 : Servir sans attendre : les tacos doivent être servis chauds, avec les garnitures froides, pour profiter de la combinaison parfaite de chaud et de froid, de croustillant et de fondant.",
-        "Étape 9 : Pour une présentation encore plus élégante, vous pouvez ajouter des fleurs de coriandre ou des lamelles de citron vert sur les tacos, et servir avec une salade de feuilles vertes ou des chips de maïs véganes.",
-        "Étape 10 : Enfin, n'oubliez pas de partager vos créations culinaires avec vos proches et de profiter de la joie de la cuisine végane, qui allie saveurs, textures et bien-être."
+        "Étape 9 : Pour une présentation encore plus élégante, vous pouvez ajouter des fleurs de coriandre ou des lamelles de citron vert sur les tacos, et servir avec une salade de feuilles vertes ou des chips de maïs véganes."
       ],
       "diet_flags": {
         "vegan": true,
