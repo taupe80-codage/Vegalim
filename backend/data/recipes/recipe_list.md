@@ -101,7 +101,7 @@
 - **Cheddar Végétal** _(vegan, vegetarian, gluten_free, base, international)_ — `base_vegan_cheddar_024998` 🔁 doublon possible : Cheddar Végane
 - **Cheesecake Fruits Rouges** _(gluten_free, kid_friendly, nut_free, dessert, international)_ — `dessert_cheesecake_fruits_rouges_3460f6`
 - **Chia Pudding Coco Mangue** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, dessert, international)_ — `dessert_chia_pudding_coco_mangue_d61cff`
-- **Chia Pudding Framboise** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, international)_ — `brkf_chia_pudding_framboise_e8a8fd`
+- **Chia Pudding Framboise** _(diabetes_friendly, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, international)_ — `brkf_chia_pudding_framboise_e8a8fd`
 - **Chilaquiles** _(gluten_free, main, mexican)_ — `bread_chilaquiles_13372e`
 - **Chili Sin Carne** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, american)_ — `main_chili_sin_carne_125ff2`
 - **Chips de Légumes au Four** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, french)_ — `entry_chips_de_legumes_au_four_b43876`
@@ -121,10 +121,10 @@
 - **Coulis de Fraises** _(vegan, vegetarian, gluten_free, sauce, french)_ — `base_strawberry_coulis_49d4ea`
 - **Courge au Lait de Coco** _(diabetes_friendly, high_protein, vegetarian, soup, international)_ — `soup_courge_au_lait_de_coco_224d09` 🔁 doublon possible : Lait de Coco Maison, Riz au Lait Coco Vegan
 - **Courge Mijotée Japonaise** _(vegan, vegetarian, side, japanese)_ — `soup_courge_mijotee_japonaise_3852ae`
+- **Couscous aux légumes express** _(high_protein, vegan, vegetarian, main, moroccan)_ — `couscous_tfaya_quick_ee5f20`
 - **Couscous de Chou-fleur** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, vegan, vegetarian, side, international)_ — `side_couscous_de_choufleur_ac056b`
-- **Couscous Tfaya (Vegan)** _(vegan, vegetarian, main, maghrebi)_ — `couscous_tfaya_vegan_65aba6` 🔁 doublon possible : Couscous Tfaya rapide, Couscous Tfaya végétarien
-- **Couscous Tfaya rapide** _(high_protein, vegan, vegetarian, main, moroccan)_ — `couscous_tfaya_quick_ee5f20` 🔁 doublon possible : Couscous Tfaya (Vegan), Couscous Tfaya végétarien
-- **Couscous Tfaya végétarien** _(vegan, vegetarian, main, moroccan)_ — `couscous_tfaya_classic_k1d1p6` 🔁 doublon possible : Couscous Tfaya (Vegan), Couscous Tfaya rapide
+- **Couscous Tfaya (Vegan)** _(vegan, vegetarian, main, maghrebi)_ — `couscous_tfaya_vegan_65aba6` 🔁 doublon possible : Couscous Tfaya végétarien
+- **Couscous Tfaya végétarien** _(vegan, vegetarian, main, moroccan)_ — `couscous_tfaya_classic_k1d1p6` 🔁 doublon possible : Couscous Tfaya (Vegan)
 - **Couscous Traditionnel** _(high_protein, vegan, vegetarian, main, moroccan)_ — `couscous_traditionnel_132078`
 - **Crackers Salés** _(vegan, vegetarian, snack, international)_ — `snack_crackers_35f6a8`
 - **Croatian Bean Stew** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, croatian)_ — `stew_croatian_bean_stew_4dfb05`
@@ -151,8 +151,8 @@
 - **Curry de pois chiches aux épinards** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `curry_chickpea_spinach_k6518f8`
 - **Curry de Pommes de Terre et Bambou** _(gluten_free, vegan, vegetarian, main, indian)_ — `curry_de_pommes_de_terre_et_bam_e5161e`
 - **Curry de Pommes de Terre et Petits Pois** _(gluten_free, vegan, vegetarian, main, indian)_ — `curry_de_pommes_de_terre_et_pet_9271d8`
-- **Curry japonais** _(diabetes_friendly, main, japanese)_ — `curry_japanese_classic_v3_m8q2z4` 🔁 doublon possible : Riz au curry japonais, Roux Curry Japonais
-- **Curry Japonnais rapide** _(vegetarian, main, japanese)_ — `curry_japanese_4533d1`
+- **Curry japonais** _(diabetes_friendly, main, japanese)_ — `curry_japanese_classic_v3_m8q2z4` 🔁 doublon possible : Curry japonais rapide, Riz au curry japonais, Roux Curry Japonais
+- **Curry japonais rapide** _(vegetarian, main, japanese)_ — `curry_japanese_4533d1` 🔁 doublon possible : Curry japonais, Riz au curry japonais, Roux Curry Japonais
 - **Curry sec de pommes de terre et chou-fleur** _(gluten_free, vegan, vegetarian, main, indian)_ — `curry_dry_aloo_gobi_9a6763`
 - **Céleri Rémoulade** _(gluten_free, kid_friendly, lactose_free, nut_free, raw, vegetarian, starter, french)_ — `entry_celeri_remoulade_d5d1b9`
 
@@ -222,7 +222,7 @@
 - **Galette des Rois Briochée** _(kid_friendly, nut_free, dessert, french_southern)_ — `dessert_galette_des_rois_briochee_6f0909`
 - **Galette Sarrasin Champignons** _(kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, french)_ — `brkf_galette_sarrasin_champign_f6a798` 🔁 doublon possible : Galette de Sarrasin
 - **Galettes aux Oignons Verts** _(side, international)_ — `egg_galettes_aux_oignons_verts_ff5328`
-- **Galettes de courgette ultra structurées** _(vegetarian, starter, mediterranean)_ — `crepe_galettes_de_courgette_ult_669679`
+- **Galettes de courgette** _(vegetarian, starter, mediterranean)_ — `crepe_galettes_de_courgette_ult_669679`
 - **Galettes de Pois Chiches** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, international)_ — `dal_galettes_de_pois_chiches_db4c7a`
 - **Galettes de Pommes de Terre Suédoises** _(main, swedish)_ — `egg_galettes_de_pommes_de_terre_su_0d7814` 🔁 doublon possible : Galettes de Pommes de Terre Tchèques
 - **Galettes de Pommes de Terre Tchèques** _(main, czech)_ — `egg_galettes_de_pommes_de_terre_tc_4f360c` 🔁 doublon possible : Galettes de Pommes de Terre Suédoises
@@ -443,7 +443,7 @@
 - **Pan Con Tomate** _(vegan, vegetarian, main, international)_ — `bread_pan_con_tomate_06a94e`
 - **Pancakes Banane Vegan** _(kid_friendly, lactose_free, nut_free, vegan, vegetarian, breakfast, american)_ — `brkf_pancakes_banane_vegan_c9231e`
 - **Pancakes Ricotta Citron** _(high_protein, kid_friendly, nut_free, breakfast, international)_ — `brkf_pancakes_ricotta_citron_847c9a`
-- **Pancakes salés ultra structurés** _(vegetarian, snack, international)_ — `crepe_pancakes_sales_ultra_stru_1e8bd8`
+- **Pancakes salés à l'oignon rouge** _(vegetarian, snack, international)_ — `crepe_pancakes_sales_ultra_stru_1e8bd8`
 - **Pancit** _(vegetarian, main, philippine)_ — `rice_pancit_bfd33e`
 - **Paneer** _(vegetarian, gluten_free, base, indian)_ — `base_paneer_04e1db`
 - **Paneer Butter Masala** _(diabetes_friendly, gluten_free, high_protein, main, indian)_ — `curry_paneer_butter_masala_9e638c` 🔁 doublon possible : Paneer Butter Masala (Vegan)
@@ -582,7 +582,7 @@
 - **Risotto aux Champignons (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, italian)_ — `rice_risotto_aux_champignons_v_13d611` 🔁 doublon possible : Risotto aux champignons
 - **Risotto Citron Asperges** _(diabetes_friendly, gluten_free, main, italian)_ — `rice_risotto_citron_asperges_f2f765` 🔁 doublon possible : Risotto Citron Asperges (Vegan)
 - **Risotto Citron Asperges (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, italian)_ — `rice_risotto_citron_asperges_v_e20e67` 🔁 doublon possible : Risotto Citron Asperges
-- **Riz au curry japonais** _(vegetarian, main, japanese)_ — `curry_japonais_1caddf` 🔁 doublon possible : Curry japonais, Roux Curry Japonais
+- **Riz au curry japonais** _(vegetarian, main, japanese)_ — `curry_japonais_1caddf` 🔁 doublon possible : Curry japonais, Curry japonais rapide, Roux Curry Japonais
 - **Riz au Lait Coco Vegan** _(kid_friendly, lactose_free, nut_free, vegan, vegetarian, dessert, international)_ — `dessert_lait_coco_vegan_3b8a99` 🔁 doublon possible : Lait de Coco Maison, Courge au Lait de Coco, Dahl au lait de coco
 - **Riz au Lait Vanille** _(gluten_free, kid_friendly, nut_free, dessert, french)_ — `dessert_lait_vanille_cddf17`
 - **Riz blanc** _(gluten_free, vegan, vegetarian, main, international)_ — `rice_white_k1d1p1`
@@ -598,7 +598,7 @@
 - **Riz sauté chinois (vegan)** _(kid_friendly, lactose_free, nut_free, main, chinese)_ — `rice_fried_rice_chinois_vegan_c2b92d`
 - **Riz à la Tomate Portugais** _(gluten_free, vegan, vegetarian, main, portuguese)_ — `rice_riz_a_la_tomate_portugais_c6cec0`
 - **Rouleaux de Printemps Frits** _(diabetes_friendly, vegan, vegetarian, main, vietnamese)_ — `rice_rouleaux_de_printemps_frits_e4d172`
-- **Roux Curry Japonais** _(vegetarian, roux, japanese)_ — `base_japanese_curry_roux_385e52` 🔁 doublon possible : Curry japonais, Riz au curry japonais
+- **Roux Curry Japonais** _(vegetarian, roux, japanese)_ — `base_japanese_curry_roux_385e52` 🔁 doublon possible : Curry japonais, Curry japonais rapide, Riz au curry japonais
 - **Rösti** _(gluten_free, side, swiss)_ — `side_rosti_4ec9f8` 🔁 doublon possible : Rösti (Vegan)
 - **Rösti (Vegan)** _(gluten_free, kid_friendly, low_calorie, nut_free, snack, swiss)_ — `snack_rosti_vegan_be15a2` 🔁 doublon possible : Rösti
 

@@ -13775,8 +13775,8 @@
         },
         {
           "ingredient": "lime_juice_fresh",
-          "quantity": 140,
-          "unit": "g",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -13785,9 +13785,9 @@
           }
         },
         {
-          "ingredient": "cream_heavy",
+          "ingredient": "sour_cream_fermented_18pct",
           "quantity": 100,
-          "unit": "ml",
+          "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "thick",
@@ -13815,6 +13815,28 @@
             "ingredient_fr": "coriandre fraîche ciselée",
             "note": "Pour une touche de fraîcheur et de couleur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "vegetable_oil_plant",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -13882,15 +13904,15 @@
         "citron",
         "coeliaque",
         "coriander",
-        "cream,",
+        "cream",
         "creme",
-        "epaisse",
+        "cumin",
         "espagne",
         "espagnol",
         "frying",
         "gluten free",
         "haricot",
-        "heavy",
+        "huile",
         "intermediaire",
         "leger",
         "lent",
@@ -13904,15 +13926,20 @@
         "minceur",
         "moyen",
         "noir",
+        "oil",
         "salt",
         "sans gluten",
         "sans viande",
         "sel",
+        "sour",
         "spanish",
+        "sure",
         "table",
         "tomate",
         "tomato",
         "tostadas",
+        "vegetable",
+        "vegetale",
         "vegetarien",
         "vert"
       ],
@@ -13925,11 +13952,10 @@
       "instructions": [
         "Étape 1: Faire frire les tortillas dans l'huile chaude à 180°C pendant environ 2-3 minutes de chaque côté, jusqu'à ce qu'elles soient dorées et croustillantes, ou les passer au four préchauffé à 200°C pendant 10 minutes, en vérifiant leur texture croustillante.",
         "Étape 2: Écraser et assaisonner 300g de haricots noirs avec 5g de sel de table, 1 cuillère à café de cumin et 2 cuillères à soupe de jus de citron vert frais, en vérifiant que les haricots soient bien écrasés et parfumés.",
-        "Étape 3: Étaler une couche généreuse de 300g de haricots écrasés sur chaque tostada, en laissant un petit espace libre autour des bords.",
-        "Étape 4: Garnir de 300g de laitue ciselée, de 480g de tomates fraîches en dés et de 400g d'avocat tranché, en ajoutant un peu de jus de citron vert frais pour éviter l'oxydation.",
-        "Étape 5: Arroser de 2 cuillères à soupe de jus de citron vert frais, ajouter 100ml de crème fraîche et assaisonner avec 5g de sel de table, en vérifiant que la sauce soit crémeuse et bien assaisonnée.",
-        "Étape 6: Mélanger délicatement tous les ingrédients pour bien les intégrer.",
-        "Étape 7: Servir aussitôt dans des assiettes préchauffées, garni d'un peu de laitue ciselée et d'un filet de jus de citron vert frais, accompagné d'un peu de pain ou de riz pour un repas complet."
+        "Étape 3: Répartir les haricots écrasés sur les tostadas, en laissant un petit espace libre autour des bords.",
+        "Étape 4: Garnir de laitue ciselée, de tomates en dés et d'avocat tranché, en ajoutant un peu de jus de citron vert frais pour éviter l'oxydation.",
+        "Étape 5: Arroser de 2 cuillères à soupe de jus de citron vert frais, puis déposer une cuillerée de crème aigre sur chaque tostada.",
+        "Étape 6: Servir aussitôt."
       ],
       "diet_flags": {
         "vegan": false,
@@ -13956,10 +13982,10 @@
       },
       "servings": 2,
       "timing": {
-        "prep_active_min": 8,
+        "prep_active_min": 5,
         "prep_passive_min": 0,
-        "cook_min": 10,
-        "total_min": 18
+        "cook_min": 3,
+        "total_min": 8
       },
       "composition": [
         {
@@ -13986,7 +14012,7 @@
         },
         {
           "ingredient": "cucumber_raw_with_skin",
-          "quantity": 1750,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "vegetable",
@@ -14165,13 +14191,10 @@
       "description": "Découvrez ce bagel végétarien frais et savoureux, avec une crème fraîche onctueuse et des légumes croquants, parfait pour un petit-déjeuner délicieux et équilibré, inspiré de la cuisine créative",
       "instructions": [
         "Étape 1: Faites toaster le bagel de 100g dans un grille-pain ou four à 180°C pendant 3 minutes, jusqu'à obtenir une face intérieure légèrement dorée et croustillante, avec une odeur de pain chaud et une texture ferme.",
-        "Étape 2: Mélangez 60g de crème fraîche avec 10g d'aneth ciselé finement, 4,9ml de jus de citron, 1g de sel et 1g de poivre pour créer une texture lisse et parfumée, avec une odeur d'herbes fraîches et un goût légèrement acidulé.",
-        "Étape 3: Étalez généreusement la crème fraîche aux herbes sur les deux moitiés du bagel chaud, en veillant à ce que la surface soit uniformément recouverte et que la crème soit bien répartie.",
-        "Étape 4: Disposez des tranches fines de concombre de 1750g, les câpres égouttées de 15g et les rondelles de radis de 45g en couches superposées pour ajouter de la fraîcheur et du croquant, avec une texture variée et une couleur vive.",
-        "Étape 5: Parsemez d'aneth frais supplémentaire pour ajouter de la saveur et de la fraîcheur, et servez sans attendre: le bagel doit être chaud et croustillant, la crème fraîche onctueuse, les légumes croquants en contraste.",
-        "Étape 6: Vérifiez que la crème fraîche est lisse et crémeuse, et ajustez si nécessaire en ajoutant un peu de jus de citron ou de sel pour obtenir la texture parfaite.",
-        "Étape 7: Présentez le bagel de manière appétissante, avec les légumes disposés de manière harmonieuse et la crème fraîche visible, pour un effet visuel attrayant et un appétit renforcé.",
-        "Étape 8: Évaluez la saveur et la texture du bagel, et ajustez les ingrédients ou les proportions si nécessaire pour améliorer le résultat et obtenir un équilibre parfait de saveurs et de textures."
+        "Étape 2: Mélangez 60g de fromage frais avec 10g d'aneth ciselé finement, 4,9ml de jus de citron, 1g de sel et 1g de poivre pour créer une texture lisse et parfumée, avec une odeur d'herbes fraîches et un goût légèrement acidulé.",
+        "Étape 3: Étalez généreusement le fromage frais aux herbes sur les deux moitiés du bagel chaud, en veillant à ce que la surface soit uniformément recouverte et que le fromage soit bien réparti.",
+        "Étape 4: Disposez des tranches fines de concombre (100g), les câpres égouttées de 15g et les rondelles de radis de 45g en couches superposées pour ajouter de la fraîcheur et du croquant, avec une texture variée et une couleur vive.",
+        "Étape 5: Parsemez d'aneth frais supplémentaire pour ajouter de la saveur et de la fraîcheur, et servez sans attendre: le bagel doit être chaud et croustillant, le fromage frais onctueux, les légumes croquants en contraste."
       ],
       "diet_flags": {
         "vegan": false,
@@ -14409,7 +14432,7 @@
       "_quality_score": 0.84,
       "description": "Découvrez un petit-déjeuner créatif à base de quinoa cuit à la perfection, avec une texture crémeuse et parfumée, accompagné de fruits exotiques tels que la mangue, le kiwi et les fraises, présentés de manière harmonieuse et visuellement attrayante, idéal pour un petit-déjeuner sain et équilibré.",
       "instructions": [
-        "Étape 1 : Rincer 150g de quinoa et le cuire dans 280ml d'eau bouillante salée. Laisser cuire 12 minutes à feu doux, puis laisser reposer 5 minutes, jusqu'à ce que les grains soient tendres et légèrement croustillants.",
+        "Étape 1 : Rincer 150g de quinoa et le cuire dans 280ml d'eau bouillante salée. Laisser cuire 12 minutes à feu doux, puis laisser reposer 5 minutes, jusqu'à ce que les grains soient tendres.",
         "Étape 2 : Dans un bol, mélanger 120ml de lait de coco, 42g de sirop d'agave et 1,5g de vanille. Ajouter ce mélange au quinoa tiède et mélanger jusqu'à obtenir une texture crémeuse et parfumée.",
         "Étape 3 : Couper 150g de mangue en dés, trancher 90g de kiwi en fines rondelles et découper 75g de fraises en quartiers. Les fruits doivent être frais et colorés.",
         "Étape 4 : Répartir le quinoa dans des bols. Disposer les fruits par sections harmonieuses sur le dessus, en créant un visuel attrayant et appétissant.",
@@ -14526,6 +14549,17 @@
             "state": "lukewarm",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 8,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -14629,10 +14663,13 @@
         "orange",
         "oven_cooking",
         "pain",
+        "salt",
         "sans viande",
+        "sel",
         "shaping",
         "sucre",
         "sugar",
+        "table",
         "vegetarien",
         "vendee",
         "vendeenne",
@@ -14647,13 +14684,12 @@
       "_quality_score": 0.95,
       "description": "Brioche tressée vendéenne à la fleur d'oranger, savoureuse et parfumée, avec une mie filante et un parfum floral délicat, traditionnellement préparée à Pâques.",
       "instructions": [
-        "Incorporer 80ml de lait tiède et 3g de fleur d'oranger. Pétrir pendant 8 minutes à vitesse moyenne, jusqu'à obtenir une pâte lisse et élastique, avec une texture douce et une odeur légèrement sucrée.",
-        "Étape 2: Incorporer progressivement 150g de beurre fondue en petits morceaux tout en pétrissant, en remplacement du beurre, jusqu'à ce que la pâte soit lisse, brillante et se détache des parois. La pâte doit avoir une consistance crémeuse et une odeur parfumée.",
-        "Étape 3: Laisser pousser la pâte pendant 2 heures à température ambiante, puis 8 heures au réfrigérateur, pour permettre à la levure de développer ses arômes et à la pâte de se détendre. Le froid ralentit la levure et développe les arômes, donnant une pâte plus complexe et parfumée.",
-        "Étape 4: Façonner la pâte en 3 boudins de longueur égale, puis tresser serrément pour créer une brioche tressée élégante. Déposer sur plaque et laisser lever pendant 1 heure à température ambiante, jusqu'à ce que la pâte ait doublé de volume et ait une texture légère et aérée.",
-        "Enfourner à 170°C pendant 30 à 35 minutes, jusqu'à ce que la brioche soit cuite et sonne creux quand on frappe le dessous.",
-        "Étape 6: Laisser refroidir la brioche pendant quelques minutes avant de la servir, pour permettre aux saveurs de se développer et à la texture de se stabiliser. La brioche doit être chaude mais pas brûlante, avec une texture moelleuse et une odeur parfumée. Servir sans attendre.",
-        "Étape 7: Servir la brioche tressée vendéenne chaude, accompagnée d'un thé ou d'un café, pour apprécier pleinement les saveurs et les textures de cette pâtisserie traditionnelle. La brioche doit être savourée lentement, pour permettre aux arômes de se développer et à la texture de se déguster."
+        "Étape 1 : Dans le bol d'un robot, mélanger 500g de farine, 100g de sucre, 8g de sel et 10g de levure fraîche émiettée (sans contact direct avec le sel). Ajouter 220g d'œufs battus, 80ml de lait tiède et 3g de fleur d'oranger. Pétrir 8 minutes à vitesse moyenne, jusqu'à obtenir une pâte lisse et élastique.",
+        "Étape 2 : Incorporer progressivement 150g de beurre mou en petits morceaux tout en pétrissant, jusqu'à ce que la pâte soit lisse, brillante et se détache des parois.",
+        "Étape 3 : Laisser pousser la pâte 2 heures à température ambiante, puis 8 heures au réfrigérateur : le froid ralentit la levure et développe les arômes.",
+        "Étape 4 : Diviser la pâte en 3 boudins de longueur égale et les tresser. Déposer sur une plaque et laisser lever 1 heure à température ambiante, jusqu'à ce que la pâte ait doublé de volume.",
+        "Étape 5 : Enfourner à 170°C pendant 30 à 35 minutes, jusqu'à ce que la brioche soit dorée et sonne creux quand on frappe le dessous.",
+        "Étape 6 : Laisser tiédir sur une grille avant de servir, avec un thé ou un café."
       ],
       "diet_flags": {
         "vegan": false,
@@ -14699,7 +14735,7 @@
         },
         {
           "ingredient": "coconut_milk_plant",
-          "quantity": 350,
+          "quantity": 150,
           "unit": "ml",
           "meta": {
             "role": "liquid",
@@ -14751,19 +14787,31 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "oat_milk_refrigerated_plain_plant",
+          "quantity": 200,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
           "vegetarian"
         ],
-        "allergens": [],
+        "allergens": [
+          "gluten"
+        ],
         "technique": [
           "refrigeration"
         ],
@@ -14803,10 +14851,10 @@
       "search_tokens": [
         "agave",
         "anemie",
+        "avoine",
         "chia",
         "coco",
         "coconut",
-        "coeliaque",
         "d'agave",
         "debutant",
         "easy",
@@ -14816,7 +14864,6 @@
         "famille",
         "fer",
         "framboise",
-        "gluten free",
         "international",
         "iron",
         "kids",
@@ -14824,10 +14871,10 @@
         "long",
         "mijote",
         "noix",
+        "oat",
         "pudding",
         "raspberry",
         "refrigeration",
-        "sans gluten",
         "sans produit animal",
         "sans viande",
         "simple",
@@ -14845,7 +14892,7 @@
       "_quality_score": 0.71,
       "description": "Douceur végétarien au petit-déjeuner avec graines de chia et framboises, créant une texture gélatineuse et ferme après une nuit de réfrigération, idéale pour un début de journée frais et équilibré.",
       "instructions": [
-        "Étape 1 : Dans un bol, mélangez 60g de graines de chia avec 350ml de lait de coco et 1,5g de vanille en poudre. Fouettez vigoureusement pendant 1 minute pour bien combiner les ingrédients et éviter les agglomérats.",
+        "Étape 1 : Dans un bol, mélangez 60g de graines de chia avec 150ml de lait de coco, 200ml de lait d'avoine et 1,5g de vanille en poudre. Fouettez vigoureusement pendant 1 minute pour bien combiner les ingrédients et éviter les agglomérats.",
         "Étape 2 : Laissez reposer le mélange pendant 5 minutes, puis fouettez à nouveau pour obtenir une texture lisse et homogène, vérifiant que les graines de chia commencent à gonfler.",
         "Étape 3 : Réfrigérez le pudding pendant au moins 8 heures, ou jusqu'à ce qu'il atteigne une consistance gélatineuse et ferme au toucher, indiquant qu'il est prêt à être accompagné de la couche de framboises.",
         "Étape 4 : Dans un blender, mixez 150g de framboises avec 42g de sirop d'agave jusqu'à obtenir un coulis lisse et onctueux, en vérifiant la texture et la saveur pour ajuster au besoin et obtenir un équilibre parfait entre douceur et acidité.",
@@ -14856,7 +14903,7 @@
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -15299,8 +15346,7 @@
         "Étape 6: Répéter l'étape 4 et 5 jusqu'à épuisement de la pâte, en empilant les crêpes sur une assiette.",
         "Étape 7: Servir les crêpes chaudes avec un choix de sucre, beurre, citron, confiture ou sirop d'érable, selon vos préférences.",
         "Étape 8: Pour une touche finale, vous pouvez saupoudrer les crêpes de sucre glace ou de noix de coco râpée pour un effet visuel et gustatif supplémentaire.",
-        "Étape 9: Pour les amateurs de saveurs intenses, vous pouvez également ajouter des morceaux de fruits frais, comme des fraises ou des framboises, pour une explosion de saveurs dans chaque bouchée.",
-        "Étape 10: Enfin, servir les crêpes dans des assiettes préchauffées, accompagnées de votre choix de garniture, et apprécier ce moment de partage et de convivialité."
+        "Étape 9: Pour les amateurs de saveurs intenses, vous pouvez également ajouter des morceaux de fruits frais, comme des fraises ou des framboises, pour une explosion de saveurs dans chaque bouchée."
       ],
       "diet_flags": {
         "vegan": false,
@@ -15327,15 +15373,15 @@
       },
       "servings": 2,
       "timing": {
-        "prep_active_min": 65,
+        "prep_active_min": 15,
         "prep_passive_min": 60,
-        "cook_min": 40,
-        "total_min": 165
+        "cook_min": 20,
+        "total_min": 95
       },
       "composition": [
         {
           "ingredient": "buckwheat_flour",
-          "quantity": 200,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "base",
@@ -15346,7 +15392,7 @@
         },
         {
           "ingredient": "water",
-          "quantity": 300,
+          "quantity": 180,
           "unit": "ml",
           "meta": {
             "role": "liquid",
@@ -15357,7 +15403,7 @@
         },
         {
           "ingredient": "oat_milk_refrigerated_plain_plant",
-          "quantity": 100,
+          "quantity": 60,
           "unit": "ml",
           "meta": {
             "role": "liquid",
@@ -15555,11 +15601,11 @@
       "_quality_score": 0.8,
       "description": "Galette sarrasin croustillante aux champignons tendres, parfumée au thym frais et au poivre, pour un petit-déjeuner français végétarien délicieux",
       "instructions": [
-        "Étape 1 : Dans un grand bol, mélangez 200g de farine de sarrasin, 300ml d'eau et 100ml de lait d'avoine. Laissez reposer pendant 1 heure, jusqu'à ce que le mélange soit lisse et homogène, avec une texture crémeuse.",
+        "Étape 1 : Dans un grand bol, mélangez 120g de farine de sarrasin, 180ml d'eau et 60ml de lait d'avoine. Laissez reposer pendant 1 heure, jusqu'à ce que le mélange soit lisse et homogène, avec une texture crémeuse.",
         "Étape 2 : Faites chauffer 20ml d'huile d'olive dans une poêle à feu moyen. Ajoutez 300g de champignons émincés, 10g d'ail haché et 2g de thym frais. Faites revenir pendant 5 minutes, en remuant régulièrement, jusqu'à ce que les champignons soient tendres et parfumés, avec une odeur aromatique.",
         "Étape 3 : Préchauffez une crêpière bien chaude à 180°C. Légèrement huilez la crêpière avec de l'huile d'olive.",
-        "Étape 4 : Versez une petite quantité de pâte dans la crêpière et étalez-la uniformément pour former une galette fine. Cuisez pendant 4 minutes, jusqu'à ce que la galette soit dorée et croustillante, avec une texture croquante.",
-        "Étape 5 : Retournez la galette et cuisez pendant encore 4 minutes, jusqu'à ce que l'autre côté soit également doré, avec une couleur uniforme.",
+        "Étape 4 : Versez une petite quantité de pâte dans la crêpière et étalez-la uniformément pour former une galette fine. Cuisez pendant 2 minutes, jusqu'à ce que les bords soient dorés et croustillants.",
+        "Étape 5 : Retournez la galette et cuisez pendant encore 1 minute, jusqu'à ce que l'autre côté soit également doré, avec une couleur uniforme.",
         "Étape 6 : Garnissez la galette de champignons sautés et pliez-la en carré. Servez chaud, avec un peu de sel et de poivre si nécessaire.",
         "Étape 7 : Pour une présentation plus appétissante, vous pouvez garnir votre galette de quelques feuilles de thym frais et de tranches de champignons sautés, pour un aspect visuel attractif."
       ],
@@ -15778,14 +15824,13 @@
       "_quality_score": 0.95,
       "description": "Gaufres croustillantes et parfumées, avec une texture aérienne et une saveur délicate, idéales pour un petit-déjeuner délicieux, inspirées de la tradition culinaire belge",
       "instructions": [
-        "Préchauffer le gaufrier à 180°C pendant 5 minutes, jusqu'à ce qu'il atteigne une température stable.",
-        "Mélanger 300g de farine de blé, 50g de sucre et 8g de levure chimique dans un grand bol, jusqu'à obtenir un mélange homogène et sans grumeaux.",
-        "Séparer 3 œufs. Incorporer les jaunes et 300ml de lait tiède à la farine en fouettant, jusqu'à obtenir une pâte lisse et fluide.",
-        "Monter les blancs d'œufs en neige ferme, puis les incorporer délicatement à la pâte pour lui donner de l'aération.",
-        "Ajouter 3g de vanille en poudre et 100g de beurre fondu, en mélangeant jusqu'à obtenir une pâte homogène et parfumée.",
-        "Verser la pâte dans le gaufrier préchauffé, en répartissant uniformément sans déborder.",
-        "Cuire 4-5 minutes jusqu'à coloration brun doré et texture croustillante, en retournant à mi-cuisson pour une cuisson uniforme.",
-        "Servir chaud, saupoudré de sucre glace et accompagné de fruits frais."
+        "Étape 1 : Préchauffer le gaufrier.",
+        "Étape 2 : Mélanger 300g de farine de blé, 50g de sucre et 8g de levure chimique dans un grand bol.",
+        "Étape 3 : Séparer 3 œufs. Incorporer les jaunes et 300ml de lait tiède à la farine en fouettant, jusqu'à obtenir une pâte lisse et fluide.",
+        "Étape 4 : Ajouter 3g de vanille en poudre et 100g de beurre fondu, en mélangeant jusqu'à obtenir une pâte homogène.",
+        "Étape 5 : Monter les blancs en neige ferme, puis les incorporer délicatement à la pâte.",
+        "Étape 6 : Verser une louche de pâte dans le gaufrier chaud en la répartissant sans déborder, puis cuire 4 à 5 minutes jusqu'à coloration brun doré.",
+        "Étape 7 : Servir chaud, saupoudré de sucre glace et accompagné de fruits frais."
       ],
       "diet_flags": {
         "vegan": false,
@@ -16016,10 +16061,10 @@
       "instructions": [
         "Étape 1 : Versez 200g de yaourt dans un bol, appréciez la texture crémeuse et l'odeur légèrement sucrée. Vérifiez que le yaourt est bien froid et crémeux.",
         "Étape 2 : Répartissez 75g de fraises, 30g de framboises et 30g de myrtilles sur le yaourt, admirez les couleurs vives des fruits et leur texture tendre.",
-        "Étape 3 : Parsemez 60g de granola sur les fruits, écoutez le craquement agréable des céréales et vérifiez que le granola est bien croustillant.",
-        "Étape 4 : Saupoudrez 10g de noix de coco râpée et 15g de graines de courge sur le granola, sentez l'arôme des épices et vérifiez que les graines sont bien réparties.",
+        "Étape 3 : Parsemez 60g de flocons d'avoine sur les fruits.",
+        "Étape 4 : Saupoudrez 10g de noix de coco râpée et 15g de graines de courge par-dessus.",
         "Étape 5 : Arrosez de 20g de sirop d'érable, appréciez la douceur et la luminosité du sirop, et vérifiez que le sirop est bien réparti.",
-        "Étape 6 : Servir sans attendre : le croquant du granola et la fraîcheur des fruits sont essentiels pour apprécier cette recette. Vérifiez que le yaourt est toujours crémeux et les fruits tendres.",
+        "Étape 6 : Servir sans attendre : le croquant des flocons et la fraîcheur des fruits sont essentiels pour apprécier cette recette. Vérifiez que le yaourt est toujours crémeux et les fruits tendres.",
         "Étape 7 : Vérifiez que les saveurs sont bien équilibrées et que les textures sont agréables. Ajustez au besoin en ajoutant plus de sirop d'érable ou en remuant les fruits."
       ],
       "diet_flags": {
@@ -16557,8 +16602,8 @@
       "_quality_score": 0.66,
       "description": "Petit-déjeuner végétal crémeux à base de flocons d'avoine et de chia, parfumé au citron et à la cannelle, avec une texture onctueuse et des saveurs équilibrées, inspiré de la cuisine suisse",
       "instructions": [
-        "Étape 1 : Dans un bol, mélangez 120g de flocons d'avoine avec 150ml de jus de pomme, 100ml de lait et 20g de graines de chia. Remuez bien pour que les ingrédients soient bien mélangés et que les flocons d'avoine soient bien imprégnés de liquide.",
-        "Étape 2 : Râpez 180g de pomme crus directement dans le bol et ajoutez 14,6ml de jus de citron fraîchement pressé. Mélangez délicatement pour que la pomme soit bien répartie et que le jus de citron soit bien incorporé.",
+        "Étape 1 : Dans un bol, mélangez 120g de flocons d'avoine avec 150ml de jus de pomme, 100ml de lait d'avoine et 20g de graines de chia. Remuez bien pour que les ingrédients soient bien mélangés et que les flocons d'avoine soient bien imprégnés de liquide.",
+        "Étape 2 : Râpez 180g de pomme crue directement dans le bol et ajoutez 14,6ml de jus de citron fraîchement pressé. Mélangez délicatement pour que la pomme soit bien répartie et que le jus de citron soit bien incorporé.",
         "Étape 3 : Ajoutez 1,1g de cannelle en poudre et 20g de noisettes concassées. Mélangez à nouveau pour que les saveurs soient bien réparties et que les noisettes soient bien incorporées.",
         "Étape 4 : Ajoutez 30g de raisins (de vigne) et 20g de noix de macadamia concassées pour ajouter de la texture et du goût. Mélangez bien pour que les ingrédients soient bien répartis.",
         "Étape 5 : Couvrez le bol avec un film plastique et réfrigérez pendant au moins 8 heures ou toute la nuit, afin que les saveurs se mélangent et que les flocons d'avoine soient bien imprégnés.",
@@ -16623,7 +16668,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -16656,7 +16701,7 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45.7,
+          "quantity": 25,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -17056,7 +17101,7 @@
         "Étape 1: Préparez 220g d'œufs, ajoutez 2g de sel et 1g de poivre, fouettez vigoureusement pour obtenir une texture lisse et crémeuse.",
         "Étape 2: Ciselez 10g de ciboulette, 8g de persil frais et 5g de cerfeuil, leurs parfums et couleurs vont illuminer votre omelette.",
         "Étape 3: Incorporez délicatement les herbes ciselées au mélange d'œufs, en veillant à ne pas les écraser, pour préserver leur fraîcheur et leur saveur.",
-        "Étape 4: Chauffez 15g de beurre dans une poêle antiadhésive à feu moyen-vif pendant 1 minute, sentez l'odeur chaude et légère de l'huile.",
+        "Étape 4: Chauffez 15g de beurre dans une poêle antiadhésive à feu moyen-vif pendant 1 minute, jusqu'à ce qu'il mousse.",
         "Étape 5: Versez le mélange dans la poêle, remuez en petits cercles jusqu'à prise partielle, cuire 2 min à feu moyen, observez la texture qui se forme et les bords qui commencent à se décoller.",
         "Étape 6: Arrêtez de remuer, laissez 30 secondes, puis pliez l'omelette en deux, la chaleur et l'humidité vont continuer à la cuire légèrement.",
         "Étape 7: Présentez votre omelette sur un plat, avec un peu de persil frais et un filet de beurre, pour un petit-déjeuner ou un brunch élégant et savoureux.",
@@ -17292,11 +17337,11 @@
       "_quality_score": 0.87,
       "description": "Petit-déjeuner végétal crémeux à base de flocons d'avoine et de graines de chia, avec une texture onctueuse et des saveurs parfumées de vanille et de cannelle.",
       "instructions": [
-        "Étape 1 : Dans un bocal, mélangez 80 g de flocons d'avoine, 200 ml de lait, 60 g de yaourt et 15 g de graines de chia pendant 1 minute, jusqu'à obtenir un mélange homogène et crémeux.",
+        "Étape 1 : Dans un bocal, mélangez 80 g de flocons d'avoine, 200 ml de lait d'avoine, 60 g de yaourt de soja et 15 g de graines de chia pendant 1 minute, jusqu'à obtenir un mélange homogène et crémeux.",
         "Étape 2 : Ajoutez 20 g de sirop d'érable, 1,5 g de vanille et 1,1 g de cannelle, puis mélangez pendant 30 secondes, jusqu'à dissolution complète et parfum envoûtant.",
         "Étape 3 : Réfrigérez le mélange pendant 8 heures ou une nuit pour permettre aux saveurs de se développer et aux flocons d'avoine de gonfler.",
         "Étape 4 : Le matin, remuez le mélange et ajustez la consistance avec un peu de lait si nécessaire, pour obtenir une texture onctueuse et crémeuse.",
-        "Étape 5 : Garnissez de 60 g de banane tranchée et 16 g de beurre d'amandes pour un ajout de saveur et de texture croquante.",
+        "Étape 5 : Garnissez de 60 g de banane tranchée et 16 g de beurre d'amandes.",
         "Étape 6 : Servez sans attendre.",
         "Étape 7 : Vérifiez que la consistance est onctueuse et crémeuse, avec une touche de sucre et de saveur qui vous régale, en ajustant la quantité de sirop d'érable si nécessaire."
       ],
@@ -17431,7 +17476,7 @@
           }
         },
         {
-          "ingredient": "grenoble_walnut_igp_candied",
+          "ingredient": "walnut_shelled_dried",
           "quantity": 60,
           "unit": "g",
           "meta": {
@@ -17539,6 +17584,7 @@
         "ble",
         "bread",
         "burger",
+        "cerneau",
         "cinnamon",
         "coco",
         "coconut",
@@ -17549,8 +17595,6 @@
         "facile",
         "facile enfants",
         "famille",
-        "grenoble",
-        "igp",
         "kids",
         "leger",
         "lent",
@@ -17568,6 +17612,7 @@
         "powder",
         "sans produit animal",
         "sans viande",
+        "shelled",
         "simple",
         "soda",
         "soude",
@@ -17579,7 +17624,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
-        "walnut",
+        "walnut,",
         "wheat",
         "white"
       ],
@@ -17594,7 +17639,7 @@
         "Étape 3 : Ajoutez 3g de vanille en poudre et 60 ml de lait d'avoine, mélangez jusqu'à homogénéisation.",
         "Étape 4 : Mélangez 220g de farine, 5g de poudre à lever et 3g de bicarbonate de soude, incorporez aux bananes en mélangeant juste jusqu'à disparition de la farine.",
         "Étape 5 : Ajoutez 60g de noix concassées et 20g de flocons d'avoine, mélangez délicatement pour ne pas écraser les noix.",
-        "Étape 6 : Versez la préparation dans le moule, enfournez pendant 55 minutes à 180°C, vérifiez que la lame d'un couteau insérée au centre ressort sèche.",
+        "Étape 6 : Versez la préparation dans le moule, saupoudrez de 15g de sucre, enfournez pendant 55 minutes à 180°C, vérifiez que la lame d'un couteau insérée au centre ressort sèche.",
         "Étape 7 : Laissez refroidir complètement dans le moule avant de démouler.",
         "Étape 8 : Une fois refroidi, vous pouvez trancher et servir, accompagné d'un peu de lait de coco ou d'un jus de fruits frais.",
         "Étape 9 : Conservez vos restes dans un contenant hermétique, à température ambiante, pour une conservation de plusieurs jours.",
@@ -17821,14 +17866,13 @@
       "_chef_note": "Utiliser du pain rassis pour obtenir la meilleure texture.",
       "description": "Pain perdu croustillant à l'extérieur, moelleux et parfumé à l'intérieur, issu de la tradition culinaire française, avec des saveurs délicates de vanille et de caramel. Ce plat est idéal pour un petit-déjeuner complet et équilibré.",
       "instructions": [
-        "Étape 1: Dans un plat creux, mélanger 150 ml de lait entier avec 40 g de sucre blanc, 3 g de vanille en poudre et 1,1 g de canelle. Fouetter jusqu'à obtenir un mélange homogène et parfumé, environ 2 minutes.",
+        "Étape 1: Dans un plat creux, mélanger 150 ml de lait entier avec 40 g de sucre blanc, 3 g de vanille en poudre et 1,1 g de cannelle. Fouetter jusqu'à obtenir un mélange homogène et parfumé, environ 2 minutes.",
         "Étape 2: Ajouter 165 g d'œuf entier cru dans le mélange et battre jusqu'à obtenir une consistance lisse et homogène, environ 1 minute.",
         "Étape 3: Couper 300 g de pain rassis en tranches épaisses de 2 cm. Tremper chaque tranche 1 minute par face dans le mélange jusqu'à bien imbibée et parfumée, en veillant à ce que le pain soit complètement saturé.",
         "Étape 4: Faire fondre 30 g de beurre doux dans une poêle antiadhésive à feu moyen, à environ 180°C. Déposer les tranches imbibées et laisser cuire pendant 3 à 4 minutes par face, jusqu'à surface brun doré caramélisée et croustillante.",
-        "Étape 5: Cuire pendant 3 à 4 minutes par face, jusqu'à ce que l'intérieur soit moelleux et parfumé. Vérifier que la surface est bien dorée et croustillante.",
-        "Étape 6: Servir aussitôt dans des assiettes, accompagné d'un café ou d'un thé pour un petit-déjeuner complet et équilibré.",
-        "Étape 7: Pour une présentation plus élégante, saupoudrer de sucre glace ou de noix de macadamia concassées avant de servir.",
-        "Étape 8: Accompagner d'une salade de fruits frais ou d'un yaourt nature pour un repas plus complet."
+        "Étape 5: Servir aussitôt dans des assiettes, accompagné d'un café ou d'un thé pour un petit-déjeuner complet et équilibré.",
+        "Étape 6: Pour une présentation plus élégante, saupoudrer de sucre glace avant de servir.",
+        "Étape 7: Accompagner d'une salade de fruits frais ou d'un yaourt nature pour un repas plus complet."
       ],
       "diet_flags": {
         "vegan": false,
@@ -17928,7 +17972,7 @@
           }
         },
         {
-          "ingredient": "coconut_flour",
+          "ingredient": "coconut_sugar",
           "quantity": 30,
           "unit": "g",
           "meta": {
@@ -18034,6 +18078,7 @@
         }
       },
       "search_tokens": [
+        "(fleur",
         "30 minutes",
         "americain",
         "american",
@@ -18048,6 +18093,7 @@
         "cidre",
         "coco",
         "coconut",
+        "cocotier)",
         "debutant",
         "easy",
         "enfants",
@@ -18102,13 +18148,12 @@
         "Étape 1 : Écrasez 240 g de bananes très mûres à la fourchette jusqu'à obtenir une purée lisse. Mélangez-la avec 240 ml de lait d'avoine non sucré et 15 ml de vinaigre de cidre, en sentant la fraîcheur du mélange.",
         "Étape 2 : Laissez reposer pendant 5 minutes pour former un 'buttermilk' végétal, jusqu'à ce que vous remarquiez une légère fermentation et une odeur acidulée.",
         "Étape 3 : Dans un bol, mélangez 200 g de farine de blé non enrichie, 8 g de poudre à lever, 2 g de sel de table, 30 g de sucre de noix de coco et 15 g de sucre blanc. Ajoutez le mélange banane-lait d'avoine et remuez jusqu'à obtenir une pâte lisse et homogène.",
-        "Étape 4 : Chauffez une poêle antiadhésive à feu moyen, avec une noix d'huile végétale. Attendez que la poêle soit chaude et que l'huile commence à fumer légèrement.",
+        "Étape 4 : Chauffez une poêle antiadhésive à feu moyen, avec une noix d'huile végétale. Attendez que la poêle soit chaude et que l'huile soit chaude.",
         "Étape 5 : Versez une petite quantité de pâte dans la poêle et cuisez pendant 2 à 3 minutes, jusqu'à ce que des bulles apparaissent en surface et que les bords commencent à sécher. Retournez les pancakes avec précaution.",
         "Étape 6 : Cuisez pendant 1 à 2 minutes de l'autre côté, jusqu'à ce que les pancakes soient dorés et légèrement bombés. Vous devriez sentir l'odeur délicieuse des bananes cuites.",
-        "Étape 7 : Servez les pancakes chauds, accompagnés de votre choix de garnitures : noix de coco râpée, herbes fraîches, sirop d'érable ou fruits frais. Servir sans attendre.",
+        "Étape 7 : Servez les pancakes chauds, accompagnés de votre choix de garnitures : noix de coco râpée, sirop d'érable ou fruits frais. Servir sans attendre.",
         "Étape 8 : Pour une présentation plus élégante, vous pouvez disposer les pancakes en forme de tour et les arroser d'un filet de sirop ou de jus de fruits.",
-        "Étape 9 : Pour conserver les pancakes, vous pouvez les placer dans un contenant hermétique et les réchauffer au four ou à la poêle lorsque vous en avez besoin.",
-        "Étape 10 : Servez les pancakes dans des assiettes préchauffées, accompagnés d'une salade de fruits frais ou d'un bol de yaourt de coco. Vous pouvez également les servir avec une sauce au chocolat ou une compote de fruits."
+        "Étape 9 : Pour conserver les pancakes, vous pouvez les placer dans un contenant hermétique et les réchauffer au four ou à la poêle lorsque vous en avez besoin."
       ],
       "diet_flags": {
         "vegan": true,
@@ -18355,13 +18400,13 @@
       "_quality_score": 1.0,
       "description": "Pancakes parfumés au citron, avec une texture légère et croustillante, réalisés avec du ricotta, des myrtilles fraîches et une touche de vanille, offrant une expérience gustative délicate et fraîche.",
       "instructions": [
-        "Étape 1: Dans un bol, mélangez 200g de ricotta avec 60ml de lait, 5g de zeste de citron et 1,5g de vanille en poudre. Remuez jusqu'à obtenir une texture lisse et crémeuse, environ 2 minutes.",
-        "Étape 2: Ajoutez 150g de farine et 6g de poudre à lever. Mélangez jusqu'à ce que la pâte soit homogène, en évitant les grumeaux, pendant environ 3 minutes.",
-        "Étape 3: Dans un autre bol, battez 3 œufs en neige ferme avec une pincée de sel. Incorporez les blancs en neige dans la pâte en 3 fois, en soulevant délicatement pour conserver la légèreté, pendant environ 4 minutes.",
-        "Étape 4: Chauffez une poêle antiadhésive avec un peu de beurre à feu doux, à environ 180°C. Versez 2 cuillères à soupe de pâte par pancake. Cuisez pendant 3 minutes jusqu'à ce que des bulles apparaissent à la surface et que les bords soient secs.",
-        "Étape 5: Retournez les pancakes et cuisez pendant 2 minutes de plus, jusqu'à ce que les deux côtés soient dorés.",
-        "Étape 6: Ajoutez 80g de bleuets frais et 20g de beurre fondu pour donner une texture croustillante. Faites chauffer pendant 1 minute pour que les bleuets soient légèrement cuits.",
-        "Étape 7: Servez les pancakes empilés avec des fruits frais, un peu de miel et de la crème. Présentez-les dans des assiettes préchauffées, avec une touche de vanille et un filet de beurre fondu."
+        "Étape 1 : Dans un bol, mélangez 200g de ricotta avec 60ml de lait, 5g de zeste de citron et 1,5g de vanille en poudre jusqu'à obtenir une texture lisse.",
+        "Étape 2 : Séparez 3 œufs. Ajoutez les jaunes, 150g de farine et 6g de poudre à lever, puis mélangez jusqu'à ce que la pâte soit homogène.",
+        "Étape 3 : Battez les blancs en neige ferme avec une pincée de sel, puis incorporez-les à la pâte en 3 fois, en soulevant délicatement.",
+        "Étape 4 : Chauffez une poêle antiadhésive à feu moyen-doux avec un peu de beurre. Versez 2 cuillères à soupe de pâte par pancake et cuisez 3 minutes, jusqu'à ce que des bulles apparaissent et que les bords soient secs.",
+        "Étape 5 : Retournez les pancakes et cuisez 2 minutes de plus, jusqu'à ce que les deux faces soient dorées.",
+        "Étape 6 : Dans la poêle, réchauffez 80g de myrtilles 1 minute avec le reste du beurre.",
+        "Étape 7 : Servez les pancakes empilés, nappés des myrtilles chaudes."
       ],
       "diet_flags": {
         "vegan": false,
@@ -18617,8 +18662,7 @@
         "Étape 5 : Ajuster la consistance avec un peu de lait de coco chaud si le porridge est trop épais. Il doit couler lentement de la cuillère, avec une texture lisse et crémeuse, et une température chaude qui se maintient.",
         "Étape 6 : Verser le porridge dans des bols chauds. Garnir de tranches de pomme fraîche, de noix concassées et d'un filet de sirop d'érable. La présentation doit être appétissante et invitante, avec une touche de couleur et de texture.",
         "Étape 7 : Servir sans attendre, pour apprécier pleinement les saveurs et la texture du porridge.",
-        "Étape 8 : Assurez-vous de servir dans des bols chauds pour maintenir la température et la texture du porridge, et pour éviter que le porridge ne refroidisse trop vite.",
-        "Étape 9 : Pour une touche finale, vous pouvez saupoudrer de cannelle ou de noix de muscade sur le dessus du porridge, pour ajouter une note de saveur et de parfum. Servir aussitôt dans des bols préchauffés, garni de coriandre ciselée et d'un filet d'huile d'olive."
+        "Étape 8 : Pour une touche finale, vous pouvez saupoudrer de cannelle ou de noix de muscade sur le dessus du porridge, pour ajouter une note de saveur et de parfum."
       ],
       "diet_flags": {
         "vegan": true,
@@ -18675,7 +18719,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -18697,7 +18741,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 46.2,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -18746,6 +18790,17 @@
           "meta": {
             "role": "herb",
             "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -18834,11 +18889,14 @@
         "poivron",
         "red",
         "rouge",
+        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
+        "sel",
         "shakshuka",
+        "table",
         "tofu",
         "tomate",
         "tomato",
@@ -18853,15 +18911,14 @@
       "_quality_score": 0.96,
       "description": "Shakshuka végétalienne créative, avec tomates concassées, poivron rouge, oignon jaune, servie dans une sauce méditerranéenne parfumée et crépitante, inspirée de la cuisine levantine.",
       "instructions": [
-        "Étape 1 : Faire chauffer 46,2 ml d'huile d'olive dans une grande poêle à feu moyen-vif, en sentant l'arôme légèrement sucré de l'huile.",
-        "Étape 2 : Saisir 300 g d'oignon jaune jusqu'à translucidité, puis ajouter 15 g d'ail et 320 g de poivron rouge, et cuire 5 minutes, en écoutant le craquement des légumes.",
-        "Étape 3 : Assaisonner avec 2,5 g de cumin et 2,3 g de paprika doux, en sentant les arômes épicés se mélanger.",
+        "Étape 1 : Faire chauffer 30 ml d'huile d'olive dans une grande poêle à feu moyen-vif, en sentant l'arôme légèrement sucré de l'huile.",
+        "Étape 2 : Saisir 150 g d'oignon jusqu'à translucidité, puis ajouter 15 g d'ail et 320 g de poivron rouge, et cuire 5 minutes, en écoutant le craquement des légumes.",
+        "Étape 3 : Assaisonner avec 2,5 g de cumin et 2,3 g de paprika doux et 3 g de sel, en sentant les arômes épicés se mélanger.",
         "Étape 4 : Ajouter 480 g de tomates concassées et laisser réduire 10 minutes à feu moyen, en remuant régulièrement, en observant la couleur rouge vif des tomates.",
         "Étape 5 : Former 4-6 petits creux dans la sauce avec une cuillère, jusqu'à ce que la sauce soit légèrement crépitante, en entendant le son crépitant de la sauce.",
-        "Étape 6 : Ajouter 150 g de fromage végétal râpé et laisser fondre légèrement, en sentant la texture crémeuse du fromage.",
+        "Étape 6 : Déposer 150 g de tofu émietté dans les creux, couvrir et laisser chauffer 5 minutes à feu doux.",
         "Étape 7 : Ajouter 10 g de coriandre fraîche hachée et remuer délicatement, en sentant l'arôme frais de la coriandre.",
-        "Étape 8 : Servir chaud.",
-        "Étape 9 : Servir dans des bols préchauffés, garni de coriandre ciselée et d'un filet d'huile d'olive."
+        "Étape 8 : Servir chaud."
       ],
       "diet_flags": {
         "vegan": true,
@@ -18896,7 +18953,7 @@
       "composition": [
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 46.2,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -19156,16 +19213,15 @@
       "_chef_note": "Remplacez les œufs par des alternatives végétales pour une version végétarienne.",
       "description": "Shakshuka créatif aux saveurs levantines, avec une sauce verte parfumée et des légumes tendres, servie chaud avec une texture ferme et des saveurs équilibrées.",
       "instructions": [
-        "Étape 1: Faire chauffer 46,2 ml d'huile d'olive dans une poêle à feu moyen, jusqu'à obtenir une texture fluide et une odeur légèrement grillée, pendant environ 2 minutes.",
+        "Étape 1: Faire chauffer 30 ml d'huile d'olive dans une poêle à feu moyen, jusqu'à obtenir une texture fluide et une odeur légèrement grillée, pendant environ 2 minutes.",
         "Étape 2: Ajouter 150 g d'oignon jaune et 15 g d'ail, faire revenir 5 minutes jusqu'à légère coloration dorée et une odeur parfumée, en remuant régulièrement pour éviter la coloration excessive.",
         "Étape 3: Incorporer 300 g de poivron vert et 15 g de piment vert, cuire 4 minutes jusqu'à légère tendreté et une texture croquante, en vérifiant la tendreté des poivrons.",
         "Étape 4: Ajouter 250 g de courgettes et 100 g d'épinards crus, cuire 5 minutes jusqu'à réduction complète des épinards et une texture tendre, en remuant régulièrement pour éviter la coloration excessive.",
-        "Étape 5: Creuser des nids dans la sauce et ajouter des tofu brouillés (en remplacement des œufs) dans chaque nid, en veillant à bien les enrober de sauce, et cuire pendant 2 minutes pour que le tofu soit chaud et la sauce soit bien répartie.",
-        "Étape 6: Couvrir et cuire 5-7 minutes à feu doux jusqu'à texture ferme et une odeur de légumes cuits, en vérifiant la texture du tofu et la tendreté des légumes.",
-        "Étape 7: Garnir de 15 g de persil frais et 10 g de coriandre fraîche, et servir chaud avec une sauce verte vif et parfumée.",
-        "Étape 8: Assaisonner avec 2,5 g de cumin en graines et 3 g de sel, en veillant à bien équilibrer les saveurs, et ajouter 2 g de poivre pour relever les saveurs.",
-        "Étape 9: Rectifier l'assaisonnement si nécessaire, en ajoutant plus de sel, de poivre ou de cumin pour obtenir le goût désiré, et en vérifiant la texture et les saveurs du plat.",
-        "Étape 10: Servir sans attendre."
+        "Étape 5: Assaisonner avec 2,5 g de cumin, 3 g de sel et 2 g de poivre. Creuser 4 nids dans les légumes et y casser les œufs.",
+        "Étape 6: Couvrir et cuire 5-7 minutes à feu doux jusqu'à ce que les blancs soient pris et les jaunes encore coulants.",
+        "Étape 7: Garnir de 15 g de persil frais et 10 g de coriandre fraîche, et servir chaud.",
+        "Étape 8: Rectifier l'assaisonnement si nécessaire, en ajoutant plus de sel, de poivre ou de cumin pour obtenir le goût désiré, et en vérifiant la texture et les saveurs du plat.",
+        "Étape 9: Servir sans attendre."
       ],
       "diet_flags": {
         "vegan": false,
@@ -19193,8 +19249,8 @@
       "servings": 2,
       "timing": {
         "prep_active_min": 10,
-        "prep_passive_min": 0,
-        "cook_min": 5,
+        "prep_passive_min": 5,
+        "cook_min": 0,
         "total_min": 15
       },
       "composition": [
@@ -19405,12 +19461,12 @@
       "_quality_score": 0.79,
       "description": "Délicieux petit-déjeuner végétarien avec purée d'açaï et banane congelée, créant une texture épaisse et crémeuse, parfumé par des notes de fruits rouges et de noix de coco râpée.",
       "instructions": [
-        "Étape 1 : Dans un blender, mélangez 200g de purée d'açaï, 120g de banane congelée et 80ml de lait d'amande pendant 2 minutes à feu doux, jusqu'à obtenir une texture épaisse et crémeuse qui nappe la cuillère.",
+        "Étape 1 : Dans un blender, mélangez 200g de purée d'açaï, 120g de banane congelée et 80ml de lait d'amande pendant 2 minutes, jusqu'à obtenir une texture épaisse et crémeuse qui nappe la cuillère.",
         "Étape 2 : Ajoutez 21g d'agave et mixez pendant 30 secondes, jusqu'à dissolution complète et à l'obtention d'un mélange homogène et brillant.",
-        "Étape 3 : Versez le mélange dans un bol froid et disposez les garnitures : 40g de granola croustillante, 75g de fraises fraîches coupées en dés, 30g de myrtilles et 15g de noix de coco râpée.",
+        "Étape 3 : Versez le mélange dans un bol froid et disposez les garnitures : 40g de flocons d'avoine, 75g de fraises fraîches coupées en dés, 30g de myrtilles et 15g de noix de coco râpée.",
         "Étape 4 : Répartissez 10g de graines de chia sur le dessus pour ajouter une texture croquante et une touche de nutriments, puis laissez reposer 5 minutes pour permettre aux graines de chia d'absorber le liquide et de gonfler.",
         "Étape 5 : Servez sans attendre.",
-        "Étape 6 : Vérifiez que la consistance est crémeuse et ajustez si nécessaire en ajoutant un peu plus de lait de coco pour obtenir un résultat crémeux et appétissant."
+        "Étape 6 : Vérifiez que la consistance est crémeuse et ajustez si nécessaire en ajoutant un peu plus de lait d'amande pour obtenir un résultat crémeux et appétissant."
       ],
       "diet_flags": {
         "vegan": true,
@@ -19612,8 +19668,8 @@
         "Étape 2 : Ajoutez 5g de spiruline séchée et 15g de graines de lin moulues à votre mélange pour une touche de nutriments supplémentaires.",
         "Étape 3 : Placez tous les ingrédients dans un blender et mixez pendant 2 minutes à pleine puissance, jusqu'à obtenir une texture lisse et crémeuse.",
         "Étape 4 : Goûtez et ajustez la sucrosité si besoin, en ajoutant des glaçons pour une texture plus froide et plus rafraîchissante.",
-        "Étape 5 : Vérifiez que soyeuse sans fibres apparentes.",
-        "Étape 6 : Ajoutez un peu de grain de lin en garnish pour plus de texture et de saveur.",
+        "Étape 5 : Vérifiez que la texture est soyeuse, sans fibres apparentes.",
+        "Étape 6 : Ajoutez quelques graines de lin en garniture pour plus de texture et de saveur.",
         "Étape 7 : Servir dans un verre frais."
       ],
       "diet_flags": {
@@ -19886,9 +19942,9 @@
         "Étape 2: Dans un grand bol, mélangez 200g de farine de blé non enrichie, 90ml d'eau, 30.4ml d'huile et 2g de sel de table. Pétrissez pendant 5 minutes jusqu'à obtenir une pâte lisse et élastique, qui se décolle facilement des mains.",
         "Étape 3: Étalez la pâte très finement, à environ 2mm d'épaisseur, pour obtenir une texture croustillante et une surface lisse.",
         "Étape 4: Dans un bol séparé, mélangez 150g de crème fraîche avec 2.3g de cannelle en poudre et 8g de sucre vanillé. La crème doit être lisse et parfumée, avec une odeur délicate de vanille.",
-        "Étape 5: Étalez la crème fraîche sur la pâte, en laissant un petit bord sans crème autour des bords, d'environ 1 cm d'épaisseur.",
+        "Étape 5: Étalez la crème fraîche sur la pâte, en laissant un petit bord sans crème autour des bords, d'environ 1 cm.",
         "Étape 6: Disposez les fines lamelles de pommes Chantecler (environ 360g) sur la crème fraîche, en les espaçant régulièrement pour une cuisson uniforme, et en les faisant chevaucher légèrement pour une présentation appétissante.",
-        "Étape 7: Parsemez de sucre roux (40g) et de cannelle (2.3g) pour ajouter un peu de sucre et de saveur, et pour donner une touche de couleur dorée à la surface.",
+        "Étape 7: Parsemez de sucre roux (40g) pour ajouter un peu de sucre et de saveur, et pour donner une touche de couleur dorée à la surface.",
         "Étape 8: Ajoutez un peu de sucre blanc (15g) pour équilibrer les saveurs et pour ajouter une touche de douceur à la tarte.",
         "Étape 9: Placez la tarte sur la plaque chaude et cuisez pendant 8-10 minutes, ou jusqu'à ce que la pâte soit croustillante et dorée, avec une surface légèrement caramelisée.",
         "Étape 10: Sortez la tarte du four et laissez-la refroidir pendant quelques minutes avant de servir, pour permettre aux saveurs de se mêler et à la pâte de se raffermir. Servez aussitôt dans des assiettes, garni de quelques feuilles de menthe fraîche si désiré."
@@ -19920,8 +19976,8 @@
       "timing": {
         "prep_active_min": 5,
         "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 25
+        "cook_min": 3,
+        "total_min": 8
       },
       "composition": [
         {
@@ -20000,17 +20056,6 @@
             "state": "raw",
             "preparation": ""
           }
-        },
-        {
-          "ingredient": "butter_sup80pct",
-          "quantity": 30,
-          "unit": "g",
-          "meta": {
-            "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
@@ -20061,7 +20106,9 @@
         }
       },
       "search_tokens": [
-        "30 minutes",
+        "10 min",
+        "20 min",
+        "5 min",
         "almond",
         "amande",
         "banana",
@@ -20075,6 +20122,7 @@
         "debutant",
         "easy",
         "enfants",
+        "express",
         "facile",
         "facile enfants",
         "famille",
@@ -20111,7 +20159,7 @@
         "Étape 2: Étalez 2 cuillères à soupe de beurre d'amandes généreusement sur chaque tartine encore chaude, en sentant la texture onctueuse du beurre d'amandes.",
         "Étape 3: Coupez 120g de banane mûre en rondelles de 5 mm et disposez-les harmonieusement sur les tartines.",
         "Étape 4: Saupoudrez de graines de chanvre, d'une pincée de cannelle et d'une pointe de fleur de sel, en sentant l'arôme piquant de la cannelle.",
-        "Étape 5: Remplacez le miel par un filet de sirop de dattes ou de coco et servez sans attendre: la chaleur du pain toasté et la fraîcheur de la banane sont essentielles pour apprécier pleinement ce petit-déjeuner.",
+        "Étape 5: Arrosez d'un filet de miel et servez sans attendre.",
         "Étape 6: Vérifiez que le pain est croustillant et le beurre d'amandes est onctueux, en sentant la consistance des ingrédients.",
         "Étape 7: Assaisonnez avec un peu de sel de mer ou de fleur de sel si nécessaire pour relever les saveurs.",
         "Étape 8: Garnissez avec des feuilles de menthe fraîche ou des pétales de fleurs comestibles pour une touche de fraîcheur.",
@@ -20171,8 +20219,8 @@
           }
         },
         {
-          "ingredient": "fig_dried",
-          "quantity": 150,
+          "ingredient": "fig_raw",
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "garnish",
@@ -20183,7 +20231,7 @@
         },
         {
           "ingredient": "honey",
-          "quantity": 30.0,
+          "quantity": 15.0,
           "unit": "ml",
           "meta": {
             "role": "sweetener",
@@ -20357,12 +20405,11 @@
       "description": "Tartines aux saveurs méditerranéennes: pain multigrain croustillant, fromage râpé crémeux, figues séchées tendres et thym frais parfumé.",
       "instructions": [
         "Étape 1: Préchauffez votre four à 180°C. Toaster les tartines de pain multigrain pendant 2-3 minutes, jusqu'à obtenir une dorure blonde et un parfum toasté.",
-        "Étape 2: Dans un bol, travaillez le fromage râpé avec le zeste de citron et un peu de sel pour obtenir une texture aérée et crémeuse, pendant environ 5 minutes, jusqu'à ce que le mélange soit lisse et homogène.",
-        "Étape 3: Couper les figues séchées en quartiers et les réhydrater si nécessaire dans de l'eau tiède pendant 5 minutes, jusqu'à ce qu'elles soient tendres et parfumées.",
-        "Étape 4: Étalez le fromage râpé sur les tartines chaudes, en épaisseur de 5 mm, pour créer une base crémeuse et lisse.",
-        "Étape 5: Disposez les quartiers de figues sur le fromage râpé, arrosez de sirop de fleurs d'oranger, et parsemez de thym frais concassé pour ajouter de la texture et du parfum.",
-        "Étape 6: Terminez avec un tour de poivre noir pour ajouter une touche de piquant, et servez avant que le pain ne ramollisse, pour préserver la fraîcheur des saveurs.",
-        "Étape 7: Garnissez avec des feuilles de thym frais et servez sans attendre, pour profiter de la fraîcheur des saveurs et de la texture croustillante du pain."
+        "Étape 2: Dans un bol, travaillez la ricotta avec le zeste de citron et un peu de sel pour obtenir une texture aérée et crémeuse, pendant environ 5 minutes, jusqu'à ce que le mélange soit lisse et homogène.",
+        "Étape 3: Couper les figues fraîches en quartiers.",
+        "Étape 4: Étalez la ricotta sur les tartines chaudes, en épaisseur de 5 mm, pour créer une base crémeuse et lisse.",
+        "Étape 5: Disposez les quartiers de figues sur la ricotta, arrosez de miel et parsemez de thym séché pour ajouter de la texture et du parfum.",
+        "Étape 6: Terminez avec un tour de poivre noir pour ajouter une touche de piquant, et servez avant que le pain ne ramollisse, pour préserver la fraîcheur des saveurs."
       ],
       "diet_flags": {
         "vegan": false,
@@ -20397,7 +20444,7 @@
       "composition": [
         {
           "ingredient": "sourdough_bread",
-          "quantity": 200,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "base",
@@ -20630,7 +20677,7 @@
       "_quality_score": 0.99,
       "description": "Petit-déjeuner végan créatif, avec une texture croustillante de pain complet toasté et une saveur riche d'avocat crémeux, relevé par des graines croquantes et des tranches de radis fraîches, dans une présentation colorée et appétissante",
       "instructions": [
-        "Étape 1 : Toaster les tranches de pain complet au four pendant 2-3 min à 180°C, en les retournant à mi-cuisson, jusqu'à ce que la surface soit dorée et croustillante, avec une odeur de pain grillé.",
+        "Étape 1 : Toaster les tranches de pain au levain au four pendant 2-3 min à 180°C, en les retournant à mi-cuisson, jusqu'à ce que la surface soit dorée et croustillante, avec une odeur de pain grillé.",
         "Étape 2 : Couper les avocats en deux, retirer le noyau et écraser la chair dans un bol avec le jus de citron, la fleur de sel et les flocons de piment, en mélangeant jusqu'à obtenir une texture crémeuse et une saveur équilibrée.",
         "Étape 3 : Étaler généreusement l'avocat sur les toasts chauds pendant 1 min, en veillant à ce que la couche soit épaisse et uniforme, avec une texture lisse et crémeuse.",
         "Étape 4 : Parsemer de graines de courge, graines de sésame et graines de tournesol pour un ajout de texture et de saveur, en les répartissant de manière harmonieuse sur le toast.",
@@ -21122,14 +21169,14 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 13,
-        "prep_passive_min": 0,
+        "prep_active_min": 15,
+        "prep_passive_min": 30,
         "cook_min": 0,
-        "total_min": 13
+        "total_min": 45
       },
       "composition": [
         {
-          "ingredient": "couscous_cooked_seed_unsalted",
+          "ingredient": "couscous_to_cook_seed_dried",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -21217,27 +21264,6 @@
           }
         },
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 10.1,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 800 ml d'eau"
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 800.0,
-          "unit": "ml",
-          "meta": {
-            "role": "seasoning",
-            "note": "pour reconstituer le bouillon"
-          }
-        },
-        {
           "ingredient": "parsley_fresh_herb",
           "quantity": null,
           "unit": "1 poignée",
@@ -21246,6 +21272,39 @@
             "ingredient_fr": "persil ciselé",
             "note": "Pour une touche de fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "acid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -21303,25 +21362,22 @@
       },
       "search_tokens": [
         "(eau",
-        "10 min",
-        "20 min",
-        "5 min",
+        "45 minutes",
         "africain",
         "assembly",
-        "bouillon",
         "carotte",
         "carrot",
         "chiches",
         "chickpea",
+        "citron",
         "courgette",
         "couscous",
         "eau",
         "epice",
-        "express",
         "green",
         "intermediaire",
         "leger",
-        "legumes",
+        "lemon",
         "light",
         "low calorie",
         "maroc",
@@ -21337,18 +21393,17 @@
         "persil",
         "pois",
         "potable)",
-        "quick",
-        "rapide",
         "salade",
+        "salt",
         "sans produit animal",
         "sans viande",
+        "sel",
         "squash",
-        "stock",
+        "table",
         "tajine",
         "tomate",
         "tomato",
         "vegan",
-        "vegetable",
         "vegetalien",
         "vegetarien",
         "water",
@@ -21361,13 +21416,12 @@
       "_chef_note": "Pour un couscous parfait, il est essentiel de laisser gonfler la semoule pendant le temps nécessaire et de mélanger les ingrédients de manière délicate.",
       "description": "Salade méditerranéenne à base de couscous, pois chiches et légumes, caractérisée par une texture légère et des saveurs méditerranéennes, avec une dominante de couleurs vives et une odeur fraîche.",
       "instructions": [
-        "Verser 200 ml d'eau bouillante sur le couscous dans un grand saladier, couvrir hermétiquement et laisser gonfler pendant 5 minutes à température ambiante, jusqu'à ce que les grains soient tendres et séparés.",
-        "Égrainer le couscous à la fourchette en incorporant 20 ml d'huile d'olive, jusqu'à ce que les grains soient bien séparés et légers, avec une texture aérée.",
-        "Julienne les carottes et les courgettes en petits dés réguliers de 1 cm, puis mélanger à la semoule froide, en veillant à ce que les légumes soient bien répartis.",
-        "Ajouter les pois chiches, les tomates et l'oignon émincé. Mélanger bien pour que les saveurs soient réparties de manière uniforme, en contrôlant la texture et la couleur des légumes.",
-        "Incorporer le bouillon de légumes, puis mélanger délicatement pour bien enrober chaque grain, en vérifiant que le liquide soit bien absorbé.",
-        "Goûter et rectifier l'assaisonnement. Le couscous doit être aéré et chaque légume identifiable, avec une saveur méditerranéenne équilibrée.",
-        "Servir aussitôt, garni de persil ciselé et d'un filet d'huile d'olive. Accompagner de pain pita tiède."
+        "Étape 1 : Verser 200 ml d'eau bouillante salée sur 200 g de semoule dans un grand saladier, couvrir et laisser gonfler 5 minutes.",
+        "Étape 2 : Égrainer à la fourchette en incorporant 20 ml d'huile d'olive, puis laisser refroidir.",
+        "Étape 3 : Couper les carottes et les courgettes en petits dés de 1 cm, les tomates en dés, et émincer finement l'oignon.",
+        "Étape 4 : Mélanger la semoule froide avec les légumes et les pois chiches égouttés.",
+        "Étape 5 : Assaisonner avec le jus de citron et le sel, ajouter le persil ciselé et mélanger délicatement.",
+        "Étape 6 : Réfrigérer 30 minutes et servir frais."
       ],
       "diet_flags": {
         "vegan": true,
@@ -21401,7 +21455,7 @@
       },
       "composition": [
         {
-          "ingredient": "couscous_cooked_seed_unsalted",
+          "ingredient": "couscous_to_cook_seed_dried",
           "quantity": 300,
           "unit": "g",
           "meta": {
@@ -21520,6 +21574,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 380,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -21586,6 +21651,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "africain",
         "almond",
         "amande",
@@ -21618,6 +21684,7 @@
         "orange",
         "parsley",
         "persil",
+        "potable)",
         "raisin",
         "red",
         "rouge",
@@ -21646,10 +21713,10 @@
       "_chef_note": "Pour une expérience culinaire authentique, servez le couscous avec de la tfaya chaude et des amandes croquantes.",
       "description": "Couscous végétal marocain sucré-salé, avec une texture aérienne et une tfaya d'oignons confits, raisins et épices parfumées, typique de la cuisine marocaine",
       "instructions": [
-        "Étape 1 : Réhydrater la semoule : verser 300 g de couscous dans un grand saladier, arroser de 200 ml d'eau bouillante salée, couvrir pendant 5 minutes. Égrainer à la fourchette en incorporant 20 ml d'huile d'olive, en veillant à ce que les grains soient bien séparés et aérés.",
+        "Étape 1 : Réhydrater la semoule : verser 300 g de couscous dans un grand saladier, arroser de 300 ml d'eau bouillante salée, couvrir pendant 5 minutes. Égrainer à la fourchette en incorporant 20 ml d'huile d'olive, en veillant à ce que les grains soient bien séparés et aérés.",
         "Étape 2 : Cuire la semoule à la vapeur dans le haut du couscoussier pendant 10 minutes. Sortir, égrainer de nouveau à la main en l'aérant — c'est cette double opération qui donne la texture légère et aérienne, caractéristique du couscous traditionnel.",
         "Étape 3 : Préparer la tfaya : faire fondre 450 g d'oignons rouges émincés dans 40 ml d'huile d'olive à feu moyen pendant 10 minutes, puis réduire à feu doux. Cuire encore 20 minutes en remuant souvent, jusqu'à ce que les oignons soient de couleur brun doré et d'une texture confite, parfumée par les épices.",
-        "Étape 4 : Ajouter 4,5 g de curcuma en poudre, 30 g de sucre et une pincée de poivre noir. Mélanger bien pour que les saveurs se combinent harmonieusement. Incorporer 120 g de raisins secs et 80 ml d'eau. Laisser mijoter 10 minutes à feu doux, jusqu'à ce que la sauce soit légèrement sirupeuse et les oignons brillants.",
+        "Étape 4 : Ajouter 3,8 g de curcuma en poudre, 30 g de sucre et une pincée de poivre noir. Mélanger bien pour que les saveurs se combinent harmonieusement. Incorporer 120 g de raisins secs et 80 ml d'eau. Laisser mijoter 10 minutes à feu doux, jusqu'à ce que la sauce soit légèrement sirupeuse et les oignons brillants.",
         "Étape 5 : Ajouter 4,5 g de cannelle en poudre pour parfumer la tfaya. Mélanger bien pour que les saveurs se combinent harmonieusement.",
         "Étape 6 : Torréfier 80 g d'amandes effilées dans une poêle sèche à feu moyen pendant 3 minutes, jusqu'à légère coloration dorée. Réserver pour la garniture finale.",
         "Étape 7 : Réchauffer la semoule une dernière fois à la vapeur pendant 5 minutes, puis égrainer. Dresser en dôme dans un plat creux. Verser la tfaya au centre sans mélanger, pour préserver les contrastes de textures et de saveurs.",
@@ -21671,7 +21738,7 @@
       "id": "couscous_tfaya_quick_ee5f20",
       "titles": {
         "original": "Couscous Tfaya rapide",
-        "fr": "Couscous Tfaya rapide",
+        "fr": "Couscous aux légumes express",
         "en": "Quick Tfaya Couscous"
       },
       "origin": {
@@ -21689,7 +21756,7 @@
       },
       "composition": [
         {
-          "ingredient": "couscous_cooked_seed_unsalted",
+          "ingredient": "couscous_to_cook_seed_dried",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -21888,6 +21955,7 @@
         "(eau",
         "1 heure",
         "africain",
+        "aux",
         "bouillon",
         "braising",
         "carotte",
@@ -21900,6 +21968,7 @@
         "cumin",
         "eau",
         "epice",
+        "express",
         "green",
         "intermediaire",
         "leger",
@@ -21947,9 +22016,7 @@
         "Étape 5 : Ajoutez les courgettes en rondelles et prolongez la cuisson pendant 10 minutes à découvert. Les courgettes doivent être cuites mais conserver une légère tenue, avec une couleur verte vive.",
         "Étape 6 : Pendant ce temps, préparez le couscous. Versez 200 ml d'eau bouillante sur la semoule dans un grand saladier. Couvrez hermétiquement et laissez gonfler pendant 5 minutes, jusqu'à ce que la semoule soit légère et aérée.",
         "Étape 7 : Égrainez la semoule à la fourchette en incorporant les 20 ml d'huile d'olive. Les grains doivent être séparés, légers et non collants, avec une texture soyeuse.",
-        "Étape 8 : Dresser la semoule en dôme dans les assiettes creuses, répartissez les légumes autour et versez quelques louches de bouillon parfumé sur l'ensemble. Servez chaud et savourez les saveurs marocaines, riches et épicées.",
-        "Étape 9 : Pour une touche finale, vous pouvez saupoudrer de levure nutritionnelle râpée sur le dessus, qui apporte une saveur umami et une texture croustillante.",
-        "Étape 10 : Accompagnez ce plat de pain complet ou de crackers végétaliens. Servir dans des assiettes creuses, avec une touche de coriandre ciselée et un filet d'huile d'olive."
+        "Étape 8 : Dresser la semoule en dôme dans les assiettes creuses, répartissez les légumes autour et versez quelques louches de bouillon parfumé sur l'ensemble. Servez chaud et savourez les saveurs marocaines, riches et épicées."
       ],
       "diet_flags": {
         "vegan": true,
@@ -21983,7 +22050,7 @@
       },
       "composition": [
         {
-          "ingredient": "couscous_cooked_seed_unsalted",
+          "ingredient": "couscous_to_cook_seed_dried",
           "quantity": 300,
           "unit": "g",
           "meta": {
@@ -22049,17 +22116,6 @@
           }
         },
         {
-          "ingredient": "vegan_butter",
-          "quantity": 50,
-          "unit": "g",
-          "meta": {
-            "role": "fat",
-            "form": "diced",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "olive_oil_extra_virgin_plant",
           "quantity": 60,
           "unit": "ml",
@@ -22116,10 +22172,21 @@
         },
         {
           "ingredient": "maple_syrup",
-          "quantity": 80,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 400,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -22184,13 +22251,12 @@
         "(vegan)",
         "almond",
         "amande",
-        "beurre",
         "black",
         "blanc",
         "braising",
-        "butter",
         "cinnamon",
         "couscous",
+        "d'erable",
         "gingembre",
         "ginger",
         "grape",
@@ -22202,6 +22268,7 @@
         "long",
         "low calorie",
         "maghrebi",
+        "maple",
         "mijote",
         "minceur",
         "moyen",
@@ -22218,12 +22285,13 @@
         "sans viande",
         "sauteed",
         "sel",
+        "sirop",
         "sucre",
         "sugar",
+        "syrup",
         "table",
         "tfaya",
         "vegan",
-        "vegetal",
         "vegetalien",
         "vegetarien",
         "white",
@@ -22238,12 +22306,11 @@
         "Étape 1 : Réhydrater 300g de semoule de couscous en versant 400ml d'eau bouillante salée. Couvrir hermétiquement pendant 5 minutes, puis égrainer à la fourchette en incorporant 20ml d'huile d'olive pour éviter que les grains ne collent.",
         "Étape 2 : Cuire le couscous à la vapeur douce pendant 10 minutes. Égrainer de nouveau à la main pour aérer et ajouter un peu d'huile d'olive pour éviter que les grains ne collent, tout en vérifiant que les grains sont tendres et séparés.",
         "Étape 3 : Préparer la tfaya végétalienne en faisant fondre 450g d'oignons jaunes émincés avec 5g de gingembre râpé dans 40ml d'huile d'olive extra vierge à feu moyen pendant 10 minutes, puis à feu doux pendant 20 minutes en remuant souvent. Les oignons doivent être tendres et légèrement caramélisés, avec une couleur dorée et un parfum sucré.",
-        "Étape 4 : Ajouter 2,3g de cannelle en poudre, 15g de sucre blanc, 80g de raisins secs et 80ml de sirop d'érable. Mijoter pendant 10 minutes à feu doux jusqu'à ce que la sauce soit légèrement sirupeuse et parfumée, avec un arôme floral et fruité.",
+        "Étape 4 : Ajouter 2,3g de cannelle en poudre, 15g de sucre blanc, 80g de raisins secs et 40ml de sirop d'érable. Mijoter pendant 10 minutes à feu doux jusqu'à ce que la sauce soit légèrement sirupeuse et parfumée, avec un arôme floral et fruité.",
         "Étape 5 : Torréfier séparément 60g d'amandes effilées à sec pendant 3 minutes pour obtenir une texture croquante et un parfum grillé, en vérifiant que les amandes sont dorées et croustillantes.",
         "Étape 6 : Réchauffer le couscous pendant 5 minutes à la vapeur, puis égrainer une dernière fois pour obtenir une texture aérée et légère. Dresser en dôme dans un plat creux, en vérifiant que le couscous est chaud et parfumé.",
-        "Étape 7 : Déposer la tfaya au centre du couscous sans mélanger, parsemer d'amandes torréfiées et d'un filet d'huile d'olive. Servir sans attendre, pour apprécier les saveurs et les textures de ce plat créatif et délicieux, avec la chaleur et la fraîcheur des ingrédients.",
-        "Étape 8 : Garnir de feuilles de persil frais pour une touche de fraîcheur et de couleur, en vérifiant que les feuilles sont tendres et parfumées.",
-        "Étape 9 : Servir chaud et apprécier les saveurs et les textures de ce plat créatif et délicieux, en vérifiant que le plat est présenté de manière appétissante et que les ingrédients sont de qualité."
+        "Étape 7 : Déposer la tfaya au centre du couscous sans mélanger, parsemer d'amandes torréfiées. Servir chaud.",
+        "Étape 8 : Garnir de feuilles de persil frais pour une touche de fraîcheur et de couleur, en vérifiant que les feuilles sont tendres et parfumées."
       ],
       "diet_flags": {
         "vegan": true,
@@ -22277,7 +22344,7 @@
       },
       "composition": [
         {
-          "ingredient": "couscous_cooked_seed_unsalted",
+          "ingredient": "couscous_to_cook_seed_dried",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -22626,7 +22693,7 @@
         },
         {
           "ingredient": "sunflower_oil_plant",
-          "quantity": 45,
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -22754,7 +22821,7 @@
       "instructions": [
         "Étape 1 : Dans un grand bol, mélanger 200 g de farine de teff avec 500 ml d'eau tiède et 5 g de sel. Laisser fermenter à température ambiante pendant 24 à 48 heures, jusqu'à ce que la pâte commence à bulle et à émettre une odeur légèrement acidulée.",
         "Étape 2 : Remuer la pâte fermentée et ajouter un peu d'eau si nécessaire pour obtenir une consistance fluide et lisse, semblable à celle d'une pâte à crêpes.",
-        "Étape 3 : Chauffer une grande poêle plate ou plaque en fonte à feu moyen-vif. Ajouter 45 ml d'huile végétale pour graisser légèrement la surface.",
+        "Étape 3 : Chauffer une grande poêle plate ou plaque en fonte à feu moyen-vif. Graisser légèrement la surface avec un peu d'huile (15 ml pour toute la pâte).",
         "Étape 4 : Verser une louche de pâte en spirale de l'extérieur vers l'intérieur, en commençant par le bord de la poêle et en terminant au centre. Couvrir immédiatement pour piéger la chaleur et favoriser la cuisson.",
         "Étape 5 : Cuire pendant 2 à 3 minutes sans retourner, jusqu'à ce que la surface de la galette soit parsemée de petits trous et que les bords soient secs et croustillants.",
         "Étape 6 : Retirer délicatement la galette de la poêle et laisser refroidir pendant 2 minutes sur une assiette ou un plateau. La texture doit être spongieuse et légèrement acidulée.",
@@ -22775,7 +22842,7 @@
       "id": "crepe_galettes_de_courgette_ult_669679",
       "titles": {
         "original": "Zucchini Fritters",
-        "fr": "Galettes de courgette ultra structurées",
+        "fr": "Galettes de courgette",
         "en": "Ultra Structured Zucchini Fritters"
       },
       "origin": {
@@ -22929,7 +22996,6 @@
         "sel",
         "squash",
         "structured",
-        "structurees",
         "table",
         "tout",
         "ultra",
@@ -22949,10 +23015,10 @@
       "instructions": [
         "Étape 1 : Râper finement 400 g de courgettes. Saler (5 g) avec du sel de mer et mélanger. Laisser dégorger 15 minutes jusqu'à extraction d'eau visible, vous devez voir l'eau s'écouler.",
         "Étape 2 : Tordre les courgettes dans un torchon propre en pressant au maximum pour retirer le plus d'eau possible — étape clé pour une galette croustillante. Vous devez sentir la courgette devenir plus légère.",
-        "Étape 3 : Mélanger les courgettes essorées avec 80 g d'oignon pice haché, 65 g de farine de blé végétal, 25 ml d'huile d'olive, sel de mer et poivre noir. Assaisonner avec des herbes fraîches comme le thym ou la sauge. La masse doit tenir mais rester humide, vous devez sentir qu'elle est prête à être façonnée.",
+        "Étape 3 : Mélanger les courgettes essorées avec 80 g d'oignon haché, 65 g de farine de blé, 25 ml d'huile d'olive, sel de mer et poivre noir. Assaisonner avec des herbes fraîches comme le thym ou la sauge. La masse doit tenir mais rester humide, vous devez sentir qu'elle est prête à être façonnée.",
         "Étape 4 : Chauffer 25 ml d'huile d'olive dans une poêle antiadhésive à feu moyen-vif. Déposer des cuillerées de 60 g et aplatir à 1,5 cm d'épaisseur. Vous devez voir la galette commencer à prendre forme.",
         "Étape 5 : Cuire 3 à 4 minutes par face sans toucher jusqu'à surface brun doré croustillante. Retourner délicatement une seule fois. Vous devez sentir l'arôme des courgettes et de l'oignon qui se dégage.",
-        "Étape 6 : Égoutter sur papier absorbant. Servir chaud avec un yaourt à la menthe fraîche. L'extérieur doit être doré et croustillant, l'intérieur moelleux.",
+        "Étape 6 : Égoutter sur papier absorbant. Servir chaud avec un yaourt végétal à la menthe. L'extérieur doit être doré et croustillant, l'intérieur moelleux.",
         "Étape 7 : Pour une variante, vous pouvez ajouter des épices comme le paprika ou le cumin pour donner un goût plus exotique.",
         "Étape 8 : Pour conserver les galettes, vous pouvez les placer dans un contenant hermétique et les réfrigérer pendant jusqu'à 24 heures.",
         "Étape 9 : Pour réchauffer les galettes, vous pouvez les placer dans une poêle avec un peu d'huile d'olive et les cuire à feu doux jusqu'à ce qu'elles soient chaudes et croustillantes à nouveau."
@@ -22971,7 +23037,7 @@
       "id": "crepe_pancakes_sales_ultra_stru_1e8bd8",
       "titles": {
         "original": "Savory Pancakes",
-        "fr": "Pancakes salés ultra structurés",
+        "fr": "Pancakes salés à l'oignon rouge",
         "en": "Ultra Structured Savory Pancakes"
       },
       "origin": {
@@ -23108,6 +23174,7 @@
         "intermediaire",
         "international",
         "kids",
+        "l'oignon",
         "leger",
         "light",
         "low calorie",
@@ -23129,7 +23196,6 @@
         "savory",
         "sel",
         "structured",
-        "structures",
         "table",
         "tout",
         "ultra",
@@ -23150,9 +23216,8 @@
         "Étape 2 : Laisser reposer la pâte pendant 10 minutes à température ambiante pour permettre au gluten de se développer et à la farine d'absorber l'eau. La pâte doit être lisse et sans grumeaux.",
         "Étape 3 : Chauffer une poêle antiadhésive avec une fine couche d'huile d'olive à feu moyen-vif. Lorsque la poêle est chaude, verser une louche de pâte par pancake. Cuire pendant 2-3 minutes, jusqu'à ce que la surface soit dorée et que des bulles se forment.",
         "Étape 4 : Retourner les pancakes avec précaution et cuire pendant 1-2 minutes à feu moyen, en vérifiant que la surface est dorée des deux côtés. Les pancakes doivent être légèrement boursouflés, avec une texture moelleuse à l'intérieur.",
-        "Étape 5 : Servir les pancakes sans attendre. Vous pouvez les empiler et les accompagner de yaourt ou d'une sauce végétarien de votre choix.",
-        "Étape 6 : Contrôler la texture en insérant une lame dans un pancake. La lame doit ressortir sèche et sans trace de pâte. Si les pancakes sont trop épais, vous pouvez les étaler un peu plus avant de les cuire.",
-        "Étape 7 : Pour conserver les pancakes, vous pouvez les emballer hermétiquement dans un sac en plastique ou un contenant hermétique et les conserver au réfrigérateur pendant jusqu'à 24 heures. Réchauffer les pancakes au four préchauffé à 180°C pendant quelques minutes avant de les servir."
+        "Étape 5 : Servir les pancakes sans attendre. Vous pouvez les empiler et les accompagner de yaourt végétal ou d'une sauce de votre choix.",
+        "Étape 6 : Pour conserver les pancakes, vous pouvez les emballer hermétiquement dans un sac en plastique ou un contenant hermétique et les conserver au réfrigérateur pendant jusqu'à 24 heures. Réchauffer les pancakes au four préchauffé à 180°C pendant quelques minutes avant de les servir."
       ],
       "diet_flags": {
         "vegan": true,
@@ -23307,17 +23372,6 @@
           }
         },
         {
-          "ingredient": "mustard",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "condiment",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "coriander",
           "quantity": null,
           "unit": "1 poignée",
@@ -23394,6 +23448,7 @@
         "coco",
         "coconut",
         "coeliaque",
+        "coriander",
         "curcuma",
         "curry",
         "d'aubergine",
@@ -23457,10 +23512,9 @@
         "Étape 3 : Dans le même wok à feu moyen, faire revenir 150 g d'oignon émincé pendant 5 minutes. Ajouter 25 g d'ail émincé, 12 g de gingembre râpé, 5 g de graines de moutarde et 6 g de feuilles de curry (Murraya koenigii). Cuire pendant 2 minutes, en remuant régulièrement, jusqu'à ce que les épices soient parfumées et les oignons translucides.",
         "Étape 4 : Incorporer 45 g de piment chili émincé, 3,8 g de curcuma en poudre et 6 g de sel. Cuire pendant 1 minute, en remuant régulièrement, pour permettre aux épices de libérer leurs arômes.",
         "Étape 5 : Verser 300 ml de lait de coco dans le wok. Porter à frémissement, puis remettre les aubergines dans la sauce. Mijoter à feu doux pendant 10 minutes, en remuant régulièrement, jusqu'à ce que la sauce soit légèrement épaissie et les aubergines soient fondantes.",
-        "Étape 6 : Ajouter 15 g de moutarde de Dijon dans la sauce et mélanger bien pour obtenir une texture lisse et parfumée.",
-        "Étape 7 : Servir le curry sur du riz basmati, dans un bol préchauffé. Ajouter un filet de jus de citron vert pour une touche de fraîcheur.",
-        "Étape 8 : Rectifier l'assaisonnement si nécessaire pour obtenir un équilibre parfait de saveurs.",
-        "Étape 9 : Vérifier que la sauce est crémeuse et parfumée, et que les aubergines sont fondantes. Si nécessaire, ajuster la cuisson pour obtenir la texture désirée."
+        "Étape 6 : Servir le curry sur du riz basmati. Ajouter un filet de jus de citron vert pour une touche de fraîcheur.",
+        "Étape 7 : Rectifier l'assaisonnement si nécessaire pour obtenir un équilibre parfait de saveurs.",
+        "Étape 8 : Vérifier que la sauce est crémeuse et parfumée, et que les aubergines sont fondantes. Si nécessaire, ajuster la cuisson pour obtenir la texture désirée."
       ],
       "diet_flags": {
         "vegan": true,
@@ -23582,8 +23636,8 @@
           }
         },
         {
-          "ingredient": "coriander_spice_leaf_dried",
-          "quantity": 12,
+          "ingredient": "coriander_spice_seed",
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -23746,11 +23800,11 @@
       "instructions": [
         "Étape 1 : Piquer les aubergines entières de 650g. Griller directement à la flamme vive du gaz en retournant toutes les 5 minutes, ou sous le gril à 250°C pendant 25 à 30 minutes, jusqu'à peau entièrement carbonisée et chair fondante.",
         "Étape 2 : Laisser tiédir dans une passoire 10 minutes. Retirer la peau brûlée en tirant. Égoutter la chair 15 minutes. Écraser grossièrement à la fourchette.",
-        "Étape 3 : Chauffer 30 ml d'huile de tournesol à feu moyen. Faire revenir 130g d'oignon 8 minutes jusqu'à dorure profonde. Ajouter 30g d'ail, 12g de gingembre, 5g de graines de cumin et 12g de coriandre moulue. Cuire 1 minute.",
+        "Étape 3 : Chauffer 30 ml d'huile de tournesol à feu moyen. Faire revenir 130g d'oignon 8 minutes jusqu'à dorure profonde. Ajouter 30g d'ail, 12g de gingembre, 5g de graines de cumin et 5g de coriandre moulue. Cuire 1 minute.",
         "Étape 4 : Incorporer 220g de tomates concassées. Réduire 8 minutes jusqu'à sauce épaisse et brillante.",
         "Étape 5 : Ajouter la chair d'aubergine écrasée et 3,8g de curcuma moulue. Mélanger et cuire 5 minutes. La texture doit être rustique et fondante, avec des notes fumées prononcées.",
         "Étape 6 : Ajouter 45g de piment et 6g de sel de table. Rectifier l'assaisonnement. Garnir de 12g de coriandre fraîche.",
-        "Étape 7 : Servir aussitôt dans des bols préchauffés, garni de coriandre fraîche ciselée et d'un filet d'huile de tournesol. Accompagner d'un pain pita tiède ou de riz basmati."
+        "Étape 7 : Servir aussitôt, accompagné de naan ou de riz basmati."
       ],
       "diet_flags": {
         "vegan": true,
@@ -23903,6 +23957,28 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 200,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "acid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -23962,6 +24038,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(melange",
         "ail",
         "braising",
@@ -23974,6 +24051,7 @@
         "cumin",
         "curcuma",
         "curry",
+        "eau",
         "epice",
         "epices",
         "garam",
@@ -24000,6 +24078,7 @@
         "olive",
         "onion",
         "pois",
+        "potable)",
         "reduction",
         "salt",
         "sans gluten",
@@ -24015,6 +24094,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "water",
         "yellow"
       ],
       "difficulty_level": "medium",
@@ -24366,11 +24446,10 @@
       "instructions": [
         "Étape 1 : Chauffer 30 ml d'huile de coco dans une grande sauteuse à feu moyen. Faire grésiller 6 grammes de graines de cumin 30 secondes jusqu'à crépitement. Ajouter 150 grammes d'oignon jaune émincé et cuire 10 à 12 minutes jusqu'à couleur blonde dorée et texture fondante.",
         "Étape 2 : Incorporer 25 grammes d'ail haché et 10 grammes de gingembre frais haché. Cuire 2 minutes. Ajouter 250 grammes de tomates concassées et cuire à feu moyen 10 minutes en remuant — la sauce doit réduire et l'huile remonter légèrement en surface, signe de concentration.",
-        "Étape 3 : Ajouter 3,8 grammes de curcuma en poudre, 30 grammes de piment, 6 grammes de cumin en graines et 10 grammes de garam masala. Faire revenir 1 minute pour activer les épices.",
+        "Étape 3 : Ajouter 3,8 grammes de curcuma en poudre, 30 grammes de piment et 10 grammes de garam masala. Faire revenir 1 minute pour activer les épices.",
         "Étape 4 : Incorporer 300 grammes de pois chiches cuits égouttés avec 200 ml d'eau. Mijoter à feu doux 12 minutes. Écraser grossièrement un quart des pois chiches contre les parois pour lier naturellement la sauce.",
         "Étape 5 : Ajouter 250 grammes d'épinards crus en deux ou trois fois. Mélanger et cuire exactement 3 minutes — juste jusqu'à ce qu'ils tombent. Saler avec 7 grammes de sel en fin de cuisson.",
-        "Étape 6 : Rectifier l'assaisonnement. Servir sans attendre : la chaleur est essentielle pour maintenir la texture crémeuse de la sauce et la saveur fraîche des épinards. La sauce doit napper les pois chiches, être vert profond grâce aux épinards, et chaque légumineuse bien enrobée. Accompagner de riz basmati ou de naan.",
-        "Étape 7 : Pour une présentation élégante, disposer les pois chiches et les épinards dans un plat, puis arroser de sauce. Parsemer de levure nutritionnelle pour un effet fromage."
+        "Étape 6 : Rectifier l'assaisonnement. Servir sans attendre : la chaleur est essentielle pour maintenir la texture crémeuse de la sauce et la saveur fraîche des épinards. La sauce doit napper les pois chiches, être vert profond grâce aux épinards, et chaque légumineuse bien enrobée. Accompagner de riz basmati ou de naan."
       ],
       "diet_flags": {
         "vegan": true,
@@ -24614,8 +24693,7 @@
         "Étape 3 : Dans le même wok à feu moyen, faire revenir 150 g d'oignon émincé 5 minutes. Ajouter 9 g d'ail émincé, 20 g de poudre de curry sri lankais, 3 g de curcuma et 15 g de piment chili. Cuire 2 minutes. Respirez l'arôme piquant des épices et l'oignon caramélisé.",
         "Étape 4 : Incorporer 400 ml de lait de coco. Porter à frémissement. Remettre les aubergines. Mijoter à feu doux 10 minutes jusqu'à sauce légèrement épaissie et aubergines fondantes. Écoutez le doux bouillonnement de la sauce et sentez la chaleur du curry.",
         "Étape 5 : Assaisonner avec 5 g de sel. Goûter et ajuster l'assaisonnement si nécessaire.",
-        "Étape 6 : Ajouter des feuilles de citron ou de coriandre fraîche pour une touche de fraîcheur et de couleur. Servir le curry d'aubergine sri lankais chaud, accompagné de riz basmati ou de naan cuit à la perfection.",
-        "Étape 7 : Présentez le plat avec élégance et simplicité, en mettant en valeur les couleurs et les textures des ingrédients."
+        "Étape 6 : Ajouter des feuilles de citron ou de coriandre fraîche pour une touche de fraîcheur et de couleur. Servir le curry d'aubergine sri lankais chaud, accompagné de riz basmati ou de naan cuit à la perfection."
       ],
       "diet_flags": {
         "vegan": true,
@@ -24937,7 +25015,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -24970,7 +25048,7 @@
         },
         {
           "ingredient": "coconut_oil_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -25033,6 +25111,39 @@
             "note": "Pour accompagner le curry",
             "optional": true
           }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yellow_mustard_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 200,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -25041,7 +25152,9 @@
           "vegan",
           "vegetarian"
         ],
-        "allergens": [],
+        "allergens": [
+          "mustard"
+        ],
         "technique": [
           "wok",
           "braising"
@@ -25101,6 +25214,7 @@
         "coconut",
         "coeliaque",
         "coriander",
+        "cumin",
         "curcuma",
         "curry",
         "epice",
@@ -25150,14 +25264,12 @@
       "description": "Curry végan créatif aux pommes de terre et bambou, présentant une sauce onctueuse et parfumée, avec une texture fondante des pommes de terre et une saveur épicée, inspiré de la cuisine indienne",
       "instructions": [
         "Étape 1 : Rincer abondamment les pousses de bambou en conserve. Couper les 600g de pommes de terre en cubes de 2 cm. Observer la texture ferme et la couleur crème des pommes de terre.",
-        "Étape 2 : Chauffer 45ml d'huile de coco à feu moyen dans une poêle. Faire grésiller le cumin et la moutarde pendant 30 secondes, en dégageant un parfum épicé. Ajouter 300g d'oignon émincé et cuire pendant 6 minutes jusqu'à légère dorure, en remuant régulièrement pour éviter la coloration excessive.",
+        "Étape 2 : Chauffer 30ml d'huile de coco à feu moyen dans une poêle. Faire grésiller le cumin et la moutarde pendant 30 secondes, en dégageant un parfum épicé. Ajouter 150g d'oignon émincé et cuire pendant 6 minutes jusqu'à légère dorure, en remuant régulièrement pour éviter la coloration excessive.",
         "Étape 3 : Incorporer 20g d'ail émincé et 15g de gingembre râpé. Cuire pendant 1 minute, en sentant l'arôme piquant de l'ail et du gingembre.",
-        "Étape 4 : Ajouter 3g de curcuma, les pommes de terre et les 200g de pousses de bambou. Verser 200ml d'eau et ajouter 5g de sel. Couvrir et mijoter à feu doux pendant 18 minutes jusqu'à ce que les pommes de terre soient fondantes, en vérifiant régulièrement la consistance.",
-        "Étape 5 : Ajouter 480g de tomates concassées et rectifier l'assaisonnement avec du sel si nécessaire. Garnir de coriandre fraîche.",
+        "Étape 4 : Ajouter 3g de curcuma, les pommes de terre et les 200g de pousses de bambou. Ajouter 480g de tomates concassées, 200ml d'eau et 5g de sel. Couvrir et mijoter à feu doux pendant 18 minutes jusqu'à ce que les pommes de terre soient fondantes, en vérifiant régulièrement la consistance.",
+        "Étape 5 : Rectifier l'assaisonnement et garnir de coriandre fraîche.",
         "Étape 6 : Servir chaud.",
-        "Étape 7 : Observer la sauce onctueuse et parfumée, en sentant les arômes des épices et des légumes. Rectifier l'assaisonnement si nécessaire pour un équilibre parfait des saveurs.",
-        "Étape 8 : Servir avec un accompagnement de riz basmati ou de naan.",
-        "Étape 9 : Présenter le plat avec les couleurs vives des légumes et la coriandre fraîche, en créant une expérience sensorielle globale."
+        "Étape 7 : Servir avec un accompagnement de riz basmati ou de naan."
       ],
       "diet_flags": {
         "vegan": true,
@@ -25202,7 +25314,7 @@
           }
         },
         {
-          "ingredient": "snow_peas_raw",
+          "ingredient": "green_peas_boiled_frozen_salted",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -25214,7 +25326,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -25258,7 +25370,7 @@
         },
         {
           "ingredient": "coconut_oil_plant",
-          "quantity": 45,
+          "quantity": 25,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -25331,6 +25443,39 @@
             "ingredient_fr": "pain naan",
             "note": "Pour accompagner le curry",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "turmeric_powder",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 200,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -25408,6 +25553,7 @@
         "gingembre",
         "ginger",
         "gluten free",
+        "green",
         "inde",
         "indian",
         "indien",
@@ -25416,7 +25562,6 @@
         "leger",
         "light",
         "low calorie",
-        "mange",
         "masala",
         "matar",
         "minceur",
@@ -25425,6 +25570,7 @@
         "oignon",
         "onion",
         "peas",
+        "petit",
         "petits",
         "pois",
         "pomme",
@@ -25437,16 +25583,15 @@
         "sans produit animal",
         "sans viande",
         "sel",
-        "snow",
         "spicy",
         "table",
         "terre",
         "tomate",
         "tomato",
-        "tout",
         "vegan",
         "vegetalien",
         "vegetarien",
+        "vert",
         "wok"
       ],
       "difficulty_level": "medium",
@@ -25457,8 +25602,8 @@
       "instructions": [
         "Étape 1 : Faites chauffer 25 ml d'huile de coco dans une sauteuse à feu moyen. Ajoutez les graines de cumin et faites-les grésiller pendant 30 secondes, en sentant leur parfum épicé se répandre dans l'air.",
         "Étape 2 : Ajoutez l'oignon jaune émincé et cuisez pendant 6 minutes, jusqu'à ce qu'il soit doré et caramélisé. Ajoutez l'ail et le gingembre hachés, ainsi que le curcuma, la coriandre moulue et le garam masala. Cuisez pendant 1 minute en remuant, en laissant les saveurs se mélanger et en sentant les arômes se développer.",
-        "Étape 3 : Ajoutez les pommes de terre crues en cubes de 2 cm. Mélangez pour bien enrober les pommes de terre de la mixture d'épices. Versez 200 ml d'eau de coco et portez à ébullition. Couvrez et cuisez à feu doux pendant 12 minutes, en laissant les pommes de terre absorber les saveurs.",
-        "Étape 4 : Ajoutez les tomates fraîches hachées et les pois mange-tout surgelés. Cuisez pendant 5 minutes, jusqu'à ce que les pommes de terre soient fondantes et les pois mange-tout chauds. Remuez régulièrement pour éviter que les légumes ne collent au fond de la sauteuse.",
+        "Étape 3 : Ajoutez les pommes de terre crues en cubes de 2 cm. Mélangez pour bien enrober les pommes de terre de la mixture d'épices. Versez 200 ml d'eau et portez à ébullition. Couvrez et cuisez à feu doux pendant 12 minutes, en laissant les pommes de terre absorber les saveurs.",
+        "Étape 4 : Ajoutez les tomates fraîches hachées et les petits pois surgelés. Cuisez pendant 5 minutes, jusqu'à ce que les pommes de terre soient fondantes et les petits pois chauds. Remuez régulièrement pour éviter que les légumes ne collent au fond de la sauteuse.",
         "Étape 5 : Rectifiez l'assaisonnement. Ajoutez du sel et du poivre au goût. Garnissez de coriandre fraîche et d'un jus de citron frais, en sentant la fraîcheur et la vivacité des saveurs.",
         "Étape 6 : Servez chaud, accompagné de riz basmati ou de pain naan cuit à la perfection.",
         "Étape 7 : Pour une touche finale, vous pouvez ajouter un peu de crème de coco pour donner une texture crémeuse à votre curry, ou bien des feuilles de coriandre fraîche pour un effet visuel et olfactif."
@@ -25801,7 +25946,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -26040,13 +26185,13 @@
       "_quality_score": 0.78,
       "description": "Plat thaïlandais végétarien créatif où le tofu ferme fond en bouche, dans une sauce dense parfumée à l'ail émincé, aux notes de citronnier kaffir et de basilic thaï, sur fond de lait de coco crémeux.",
       "instructions": [
-        "Étape 1 : Saisir 300 g de tofu ferme dans 30 ml d'huile de coco à 180°C, jusqu'à coloration dorée. Réserver sur du papier absorbant pour éliminer l'excès d'huile.",
+        "Étape 1 : Saisir 300 g de tofu ferme dans 30 ml d'huile de coco à feu moyen-vif, jusqu'à coloration dorée. Réserver sur du papier absorbant pour éliminer l'excès d'huile.",
         "Étape 2 : Faire revenir 20 g de pâte de curry vert dans 30 ml d'huile de coco à feu moyen, pendant 2 minutes, en remuant constamment, jusqu'à parfum intense et couleur légèrement foncée.",
         "Étape 3 : Ajouter 9 g d'ail finement haché et faire revenir pendant 1 minute, en remuant constamment, jusqu'à parfum intense et légère coloration.",
-        "Étape 4 : Ajouter 400 ml de lait de coco, 300 g d'oignon finement émincé, 160 g de poivron émincé et 250 g de courgette émincée. Cuire 10 minutes à feu moyen-vif, en remuant occasionnellement, jusqu'à ce que les légumes soient tendres et la sauce commence à épaissir.",
+        "Étape 4 : Ajouter 400 ml de lait de coco, 150 g d'oignon finement émincé, 160 g de poivron émincé et 250 g de courgette émincée. Cuire 10 minutes à feu moyen-vif, en remuant occasionnellement, jusqu'à ce que les légumes soient tendres et la sauce commence à épaissir.",
         "Étape 5 : Ajouter le tofu réservé, 20 g de feuilles de basilic thaï hachées, 4 g de feuilles de citronnier kaffir et 3 g de sucre de coco. Laisser mijoter 12 minutes, en remuant occasionnellement, jusqu'à ce que le curry ait épaissi légèrement et les saveurs soient bien intégrées.",
         "Étape 6 : Ajouter 45 ml de sauce soja et un filet de jus de citron vert, jusqu'à saveur équilibrée. Goûtez et ajustez l'assaisonnement si nécessaire.",
-        "Étape 7 : Servir chaud, parsemé de feuilles de basilic frais et de graines de sésame pour une touche de croquant.",
+        "Étape 7 : Servir chaud, parsemé de feuilles de basilic frais.",
         "Étape 8 : Pour une présentation plus élégante, disposer les légumes et le tofu dans un motif harmonieux sur le plat, puis verser la sauce curry par-dessus."
       ],
       "diet_flags": {
@@ -26063,7 +26208,7 @@
       "id": "curry_japanese_4533d1",
       "titles": {
         "original": "Japanese Curry",
-        "fr": "Curry Japonnais rapide",
+        "fr": "Curry japonais rapide",
         "en": "Quick Japanese Curry"
       },
       "origin": {
@@ -26104,7 +26249,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -26162,17 +26307,6 @@
           "unit": "ml",
           "meta": {
             "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -26254,7 +26388,6 @@
         "japanese",
         "japon",
         "japonais",
-        "japonnais",
         "kids",
         "leger",
         "legumes",
@@ -26270,11 +26403,8 @@
         "potato",
         "quick",
         "rapide",
-        "salt",
         "sans viande",
-        "sel",
         "stock",
-        "table",
         "terre",
         "vegetable",
         "vegetarien",
@@ -26288,15 +26418,15 @@
       "_chef_note": "Le curry japonais est un plat traditionnel qui combine les saveurs des épices à celles des légumes.",
       "description": "Curry de pommes de terre crémeux sur mélange d'épices japonais, avec une sauce riche et parfumée qui nappe les légumes tendres — une spécialité culinaire japonaise",
       "instructions": [
-        "Étape 1: Éplucher et couper 600g de pommes de terre crues en dés réguliers, ainsi que 200g de carottes crues en rondelles fines et 300g d'oignon jaune en cubes petits, pour une base de légumes variés.",
+        "Étape 1: Éplucher et couper 600g de pommes de terre crues en dés réguliers, ainsi que 200g de carottes crues en rondelles fines et 150g d'oignon jaune en petits cubes, pour une base de légumes variés.",
         "Étape 2: Faire chauffer 45ml d'huile d'olive dans une grande casserole à feu moyen, puis ajouter les cubes d'oignon jaune et les faire revenir jusqu'à coloration dorée, en remuant régulièrement, pendant environ 8 minutes, jusqu'à ce que les oignons soient tendres et parfumés.",
         "Étape 3: Ajouter les dés de pommes de terre crues et les rondelles de carottes crues à la casserole, puis faire sauter le tout pendant 5 minutes à feu moyen, en remuant constamment, jusqu'à ce que les légumes commencent à ramollir et à libérer leur saveur.",
         "Étape 4: Émincer 9g d'ail et l'ajouter à la casserole, puis faire revenir pendant 1 minute, en remuant bien, jusqu'à ce que l'odeur d'ail soit parfumée et se mélange aux autres saveurs.",
         "Étape 5: Ajouter 80g de roux de curry japonais à la casserole et remuer jusqu'à dissolution complète, en veillant à ce que le mélange soit homogène et que les épices soient bien réparties.",
         "Étape 6: Verser 750ml de bouillon de légumes dans la casserole, puis porter le mélange à ébullition à feu vif, en remuant régulièrement pour éviter les grumeaux.",
         "Étape 7: Réduire le feu à moyen, couvrir la casserole et laisser cuire pendant 20 minutes, ou jusqu'à ce que les légumes soient tendres et la sauce ait épaissi, en remuant occasionnellement pour contrôler la texture.",
-        "Étape 8: Assaisonner le curry de sel et de poivre au goût, puis servir chaud, garni de persil plat et de carottes râpées si désiré, pour une touche de fraîcheur et de couleur.",
-        "Étape 9: Accompagner le curry de riz basmati cuit ou de nouilles de riz, pour un repas complet et équilibré qui combine saveurs et textures.",
+        "Étape 8: Goûter et poivrer le curry, puis servir chaud, garni de persil plat et de carottes râpées si désiré, pour une touche de fraîcheur et de couleur.",
+        "Étape 9: Accompagner le curry de riz japonais, pour un repas complet et équilibré qui combine saveurs et textures.",
         "Étape 10: Pour une présentation plus élégante, disposer les légumes et la sauce dans un plat creux, puis décorer de feuilles de persil et de carottes râpées, pour un effet visuel appétissant."
       ],
       "diet_flags": {
@@ -26324,10 +26454,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 40,
+        "prep_active_min": 20,
         "prep_passive_min": 5,
-        "cook_min": 50,
-        "total_min": 95
+        "cook_min": 35,
+        "total_min": 60
       },
       "composition": [
         {
@@ -26537,6 +26667,7 @@
       "search_tokens": [
         "(eau",
         "(melange",
+        "1 heure",
         "ail",
         "all",
         "asia",
@@ -26566,12 +26697,9 @@
         "kare",
         "leger",
         "legumes",
-        "lent",
         "light",
-        "long",
         "low calorie",
         "masala",
-        "mijote",
         "minceur",
         "moyen",
         "oignon",
@@ -26601,14 +26729,13 @@
       "_chef_note": "Pour un curry encore plus crémeux, vous pouvez ajouter un peu de crème de coco en fin de cuisson.",
       "description": "Curry japonais créatif, riche et parfumé, avec des légumes mijotés tendres et un roux brun caramélisé qui dégage une odeur de noisette, élaboré à partir de techniques traditionnelles japonaises.",
       "instructions": [
-        "Éplucher et couper les carottes en gros cubes réguliers. Chauffer 25 ml de beurre dans une cocote. Faire revenir l'oignon jaune 6 minutes jusqu'à translucidité, en remuant régulièrement pour éviter la coloration. L'oignon doit être tendre et parfumé.",
-        "Ajouter les carottes et les pommes de terre. Faire revenir 3 minutes, en les faisant sauter pour bien les enrober d'huile. Les légumes doivent commencer à ramollir et à dégager leur saveur. Verser 800 ml de bouillon de légumes chaud et porter à ébullition en écumant, puis couvrir et cuire à feu moyen 18 à 20 minutes jusqu'à légumes tendres.",
-        "Pendant la cuisson des légumes, préparer le roux en mélangeant 35 g de farine de blé T55 avec 35 g de beurre dans une poêle, en faisant fondre l'huile et en remuant jusqu'à obtenir une pâte lisse et homogène. Le roux doit être brun clair et dégager une odeur de noisette.",
-        "Hors du feu, incorporer le roux dans les légumes, en remuant jusqu'à dissolution complète. La sauce doit commencer à épaissir et à devenir crémeuse. Ajouter les 20 g d'ail et les 15 g de gingembre hachés, ainsi que les 7,5 g de curry en poudre et les 5 g de garam masala. Remuer bien pour répartir les saveurs.",
-        "Remettre à feu doux pendant 5 minutes, en remuant régulièrement pour éviter l'attache. La sauce doit épaissir, devenir brillante et légèrement caramélisée. Rectifier le sel et le niveau d'épice au goût. La sauce doit être riche et parfumée, avec une texture lisse et crémeuse.",
-        "Ajouter 15 g de sucre pour équilibrer les saveurs et donner un côté légèrement sucré au curry. Remuer bien pour dissoudre le sucre.",
-        "Servir le curry japonais sur du riz blanc japonais à grain court, bien chaud. La sauce doit être nappante, brun doré, légèrement sucrée et profondément parfumée. Le riz doit être cuit à la perfection, avec une texture ferme et une saveur neutre.",
-        "Garnir de feuilles de persil ou de ciboulette hachée pour un peu de fraîcheur et de couleur. Les feuilles doivent être fraîches et parfumées, et ajouter une touche de couleur au plat."
+        "Étape 1 : Éplucher et couper les carottes et les pommes de terre en gros cubes, émincer l'oignon, hacher l'ail et le gingembre.",
+        "Étape 2 : Dans une cocotte, faire fondre 25 g de beurre et faire revenir l'oignon 6 minutes à feu moyen jusqu'à ce qu'il soit translucide. Ajouter l'ail et le gingembre, cuire 1 minute.",
+        "Étape 3 : Ajouter les carottes et les pommes de terre, faire revenir 3 minutes, puis verser 850 ml d'eau chaude et le bouillon en poudre. Porter à ébullition en écumant, couvrir et cuire à feu moyen 18 à 20 minutes, jusqu'à ce que les légumes soient tendres.",
+        "Étape 4 : Pendant ce temps, préparer le roux : faire fondre 35 g de beurre dans une poêle, ajouter 35 g de farine et cuire en remuant 5 à 8 minutes, jusqu'à ce qu'il soit brun clair et sente la noisette. Hors du feu, incorporer 7,5 g de curry en poudre et 5 g de garam masala.",
+        "Étape 5 : Délayer le roux dans une louche de bouillon, puis l'incorporer aux légumes en remuant jusqu'à dissolution complète. Ajouter 15 g de sucre.",
+        "Étape 6 : Laisser mijoter 5 minutes à feu doux en remuant, jusqu'à ce que la sauce épaississe et devienne brillante. Rectifier l'assaisonnement.",
+        "Étape 7 : Servir bien chaud sur du riz japonais."
       ],
       "diet_flags": {
         "vegan": false,

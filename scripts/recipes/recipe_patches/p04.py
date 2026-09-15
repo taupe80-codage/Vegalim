@@ -1,0 +1,160 @@
+"""Lot 4 : tostadas et petits-déjeuners."""
+
+PATCHES = {
+    "bread_tostadas_06442e": [
+        ("add", "vegetable_oil_plant", 30, "ml", "fat"),
+        ("add", "cumin_spice_seed", 2, "g", "spice"),
+        ("qty", "lime_juice_fresh", 40, "ml"),
+        ("ing", "cream_heavy", "sour_cream_fermented_18pct", 100, "g"),
+        ("txt", "Étaler une couche généreuse de 300g de haricots écrasés sur chaque tostada", "Répartir les haricots écrasés sur les tostadas"),
+        ("txt", "Garnir de 300g de laitue ciselée, de 480g de tomates fraîches en dés et de 400g d'avocat tranché",
+         "Garnir de laitue ciselée, de tomates en dés et d'avocat tranché"),
+        ("txt", "ajouter 100ml de crème fraîche et assaisonner avec 5g de sel de table, en vérifiant que la sauce soit crémeuse et bien assaisonnée",
+         "puis déposer une cuillerée de crème aigre sur chaque tostada"),
+        ("step-", "Mélanger délicatement tous les ingrédients pour bien les intégrer."),
+        ("txt", "Servir aussitôt dans des assiettes préchauffées, garni d'un peu de laitue ciselée et d'un filet de jus de citron vert frais, accompagné d'un peu de pain ou de riz pour un repas complet.",
+         "Servir aussitôt."),
+    ],
+    "brkf_bagel_fromage_frais_conco_e69b68": [
+        ("qty", "cucumber_raw_with_skin", 100),
+        ("txt", "tranches fines de concombre de 1750g", "tranches fines de concombre (100g)"),
+        ("txt", "60g de crème fraîche", "60g de fromage frais"),
+        ("txt", "la crème fraîche aux herbes", "le fromage frais aux herbes"),
+        ("txt", "que la crème soit bien répartie", "que le fromage soit bien réparti"),
+        ("txt", "la crème fraîche onctueuse", "le fromage frais onctueux"),
+        ("step-", "Vérifiez que la crème fraîche est lisse"),
+        ("step-", "Présentez le bagel de manière appétissante"),
+        ("step-", "Évaluez la saveur et la texture du bagel"),
+        ("time", 5, 0, 3),
+    ],
+    "brkf_bowl_quinoa_fruits_du_mat_2a615c": [
+        ("txt", "tendres et légèrement croustillants", "tendres"),
+    ],
+    "brkf_brioche_vendeenne_cf19a4": [
+        ("add", "table_salt_unenriched", 8, "g", "seasoning"),
+        ("steps", [
+            "Dans le bol d'un robot, mélanger 500g de farine, 100g de sucre, 8g de sel et 10g de levure fraîche émiettée (sans contact direct avec le sel). Ajouter 220g d'œufs battus, 80ml de lait tiède et 3g de fleur d'oranger. Pétrir 8 minutes à vitesse moyenne, jusqu'à obtenir une pâte lisse et élastique.",
+            "Incorporer progressivement 150g de beurre mou en petits morceaux tout en pétrissant, jusqu'à ce que la pâte soit lisse, brillante et se détache des parois.",
+            "Laisser pousser la pâte 2 heures à température ambiante, puis 8 heures au réfrigérateur : le froid ralentit la levure et développe les arômes.",
+            "Diviser la pâte en 3 boudins de longueur égale et les tresser. Déposer sur une plaque et laisser lever 1 heure à température ambiante, jusqu'à ce que la pâte ait doublé de volume.",
+            "Enfourner à 170°C pendant 30 à 35 minutes, jusqu'à ce que la brioche soit dorée et sonne creux quand on frappe le dessous.",
+            "Laisser tiédir sur une grille avant de servir, avec un thé ou un café.",
+        ]),
+    ],
+    "brkf_chia_pudding_framboise_e8a8fd": [
+        ("qty", "coconut_milk_plant", 150),
+        ("add", "oat_milk_refrigerated_plain_plant", 200, "ml", "liquid"),
+        ("txt", "350ml de lait de coco", "150ml de lait de coco, 200ml de lait d'avoine"),
+    ],
+    "brkf_crepes_sucrees_e5d14e": [
+        ("step-", "apprécier ce moment de partage et de convivialité"),
+    ],
+    "brkf_galette_sarrasin_champign_f6a798": [
+        ("qty", "buckwheat_flour", 120),
+        ("qty", "water", 180),
+        ("qty", "oat_milk_refrigerated_plain_plant", 60),
+        ("txt", "mélangez 200g de farine de sarrasin, 300ml d'eau et 100ml de lait d'avoine", "mélangez 120g de farine de sarrasin, 180ml d'eau et 60ml de lait d'avoine"),
+        ("txt", "Cuisez pendant 4 minutes, jusqu'à ce que la galette soit dorée et croustillante, avec une texture croquante.",
+         "Cuisez pendant 2 minutes, jusqu'à ce que les bords soient dorés et croustillants."),
+        ("txt", "cuisez pendant encore 4 minutes", "cuisez pendant encore 1 minute"),
+        ("time", 15, 60, 20),
+    ],
+    "brkf_gaufres_belges_077910": [
+        ("steps", [
+            "Préchauffer le gaufrier.",
+            "Mélanger 300g de farine de blé, 50g de sucre et 8g de levure chimique dans un grand bol.",
+            "Séparer 3 œufs. Incorporer les jaunes et 300ml de lait tiède à la farine en fouettant, jusqu'à obtenir une pâte lisse et fluide.",
+            "Ajouter 3g de vanille en poudre et 100g de beurre fondu, en mélangeant jusqu'à obtenir une pâte homogène.",
+            "Monter les blancs en neige ferme, puis les incorporer délicatement à la pâte.",
+            "Verser une louche de pâte dans le gaufrier chaud en la répartissant sans déborder, puis cuire 4 à 5 minutes jusqu'à coloration brun doré.",
+            "Servir chaud, saupoudré de sucre glace et accompagné de fruits frais.",
+        ]),
+    ],
+    "brkf_granola_bowl_yaourt_fruit_980183": [
+        ("txt", "Parsemez 60g de granola sur les fruits, écoutez le craquement agréable des céréales et vérifiez que le granola est bien croustillant.",
+         "Parsemez 60g de flocons d'avoine sur les fruits."),
+        ("txt", "sur le granola, sentez l'arôme des épices et vérifiez que les graines sont bien réparties", "par-dessus"),
+        ("txt", "le croquant du granola", "le croquant des flocons"),
+    ],
+    "brkf_muesli_bircher_fae6ec": [
+        ("txt", "100ml de lait et 20g", "100ml de lait d'avoine et 20g"),
+        ("txt", "180g de pomme crus", "180g de pomme crue"),
+    ],
+    "brkf_ojja_vegan_dbbad8": [
+        ("qty", "onion_raw", 150),
+        ("qty", "olive_oil_extra_virgin_plant", 25),
+    ],
+    "brkf_omelette_aux_herbes_du_ja_f21317": [
+        ("txt", "sentez l'odeur chaude et légère de l'huile", "jusqu'à ce qu'il mousse"),
+    ],
+    "brkf_overnight_oats_vegan_a1e7b5": [
+        ("txt", "200 ml de lait, 60 g de yaourt", "200 ml de lait d'avoine, 60 g de yaourt de soja"),
+        ("txt", " pour un ajout de saveur et de texture croquante", ""),
+    ],
+    "brkf_pain_aux_bananes_vegan_b85f00": [
+        ("ing", "grenoble_walnut_igp_candied", "walnut_shelled_dried"),
+        ("txt", "Versez la préparation dans le moule, enfournez", "Versez la préparation dans le moule, saupoudrez de 15g de sucre, enfournez"),
+    ],
+    "brkf_pain_perdu_653f48": [
+        ("txt", "1,1 g de canelle", "1,1 g de cannelle"),
+        ("step-", "Cuire pendant 3 à 4 minutes par face, jusqu'à ce que l'intérieur soit moelleux"),
+        ("txt", " ou de noix de macadamia concassées", ""),
+    ],
+    "brkf_pancakes_banane_vegan_c9231e": [
+        ("ing", "coconut_flour", "coconut_sugar"),
+        ("txt", "que l'huile commence à fumer légèrement", "que l'huile soit chaude"),
+        ("txt", "noix de coco râpée, herbes fraîches, sirop d'érable ou fruits frais", "noix de coco râpée, sirop d'érable ou fruits frais"),
+        ("step-", "Servez les pancakes dans des assiettes préchauffées"),
+    ],
+    "brkf_pancakes_ricotta_citron_847c9a": [
+        ("steps", [
+            "Dans un bol, mélangez 200g de ricotta avec 60ml de lait, 5g de zeste de citron et 1,5g de vanille en poudre jusqu'à obtenir une texture lisse.",
+            "Séparez 3 œufs. Ajoutez les jaunes, 150g de farine et 6g de poudre à lever, puis mélangez jusqu'à ce que la pâte soit homogène.",
+            "Battez les blancs en neige ferme avec une pincée de sel, puis incorporez-les à la pâte en 3 fois, en soulevant délicatement.",
+            "Chauffez une poêle antiadhésive à feu moyen-doux avec un peu de beurre. Versez 2 cuillères à soupe de pâte par pancake et cuisez 3 minutes, jusqu'à ce que des bulles apparaissent et que les bords soient secs.",
+            "Retournez les pancakes et cuisez 2 minutes de plus, jusqu'à ce que les deux faces soient dorées.",
+            "Dans la poêle, réchauffez 80g de myrtilles 1 minute avec le reste du beurre.",
+            "Servez les pancakes empilés, nappés des myrtilles chaudes.",
+        ]),
+    ],
+    "brkf_porridge_pomme_cannelle_9af096": [
+        ("txt", " Servir aussitôt dans des bols préchauffés, garni de coriandre ciselée et d'un filet d'huile d'olive.", ""),
+        ("step-", "Assurez-vous de servir dans des bols chauds"),
+    ],
+    "brkf_shakshuka_vegan_81fa9a": [
+        ("qty", "onion_raw", 150),
+        ("qty", "olive_oil_plant", 30),
+        ("add", "table_salt_unenriched", 3, "g", "seasoning"),
+        ("txt", "46,2 ml d'huile d'olive", "30 ml d'huile d'olive"),
+        ("txt", "300 g d'oignon jaune", "150 g d'oignon"),
+        ("txt", "2,3 g de paprika doux,", "2,3 g de paprika doux et 3 g de sel,"),
+        ("txt", "Ajouter 150 g de fromage végétal râpé et laisser fondre légèrement, en sentant la texture crémeuse du fromage.",
+         "Déposer 150 g de tofu émietté dans les creux, couvrir et laisser chauffer 5 minutes à feu doux."),
+        ("step-", "Servir dans des bols préchauffés"),
+    ],
+    # les œufs de la composition étaient remplacés par du tofu dans le texte
+    "brkf_shakshuka_verte_ad7779": [
+        ("qty", "olive_oil_plant", 30),
+        ("txt", "46,2 ml d'huile d'olive", "30 ml d'huile d'olive"),
+        ("txt", "Creuser des nids dans la sauce et ajouter des tofu brouillés (en remplacement des œufs) dans chaque nid, en veillant à bien les enrober de sauce, et cuire pendant 2 minutes pour que le tofu soit chaud et la sauce soit bien répartie.",
+         "Assaisonner avec 2,5 g de cumin, 3 g de sel et 2 g de poivre. Creuser 4 nids dans les légumes et y casser les œufs."),
+        ("txt", "jusqu'à texture ferme et une odeur de légumes cuits, en vérifiant la texture du tofu et la tendreté des légumes",
+         "jusqu'à ce que les blancs soient pris et les jaunes encore coulants"),
+        ("txt", "et servir chaud avec une sauce verte vif et parfumée", "et servir chaud"),
+        ("step-", "Assaisonner avec 2,5 g de cumin en graines et 3 g de sel"),
+    ],
+    "brkf_smoothie_bowl_acai_7cf6e0": [
+        ("txt", "pendant 2 minutes à feu doux", "pendant 2 minutes"),
+        ("txt", "40g de granola croustillante", "40g de flocons d'avoine"),
+        ("txt", "un peu plus de lait de coco", "un peu plus de lait d'amande"),
+        ("time", 10, 5, 0),
+    ],
+    "brkf_smoothie_vert_epinards_ba_eb4142": [
+        ("txt", "Vérifiez que soyeuse sans fibres apparentes.", "Vérifiez que la texture est soyeuse, sans fibres apparentes."),
+        ("txt", "un peu de grain de lin en garnish", "quelques graines de lin en garniture"),
+    ],
+    "brkf_tarte_flambee_sucree_pomm_585c30": [
+        ("txt", "Parsemez de sucre roux (40g) et de cannelle (2.3g)", "Parsemez de sucre roux (40g)"),
+        ("txt", "d'environ 1 cm d'épaisseur", "d'environ 1 cm"),
+    ],
+}

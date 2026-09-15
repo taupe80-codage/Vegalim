@@ -1255,7 +1255,7 @@
       "gluten"
     ],
     "servings": 2,
-    "time_total": 18,
+    "time_total": 8,
     "confidence": 0.9,
     "description": "Découvrez ce bagel végétarien frais et savoureux, avec une crème fraîche onctueuse et des légumes croquants, parfait pour un petit-déjeuner délicieux et équilibré, inspiré de la cuisine créative",
     "composition": [
@@ -1271,7 +1271,7 @@
       },
       {
         "ingredient": "cucumber_raw_with_skin",
-        "quantity": 1750,
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -1305,7 +1305,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -4225,9 +4225,14 @@
         "ingredient": "milk_liquid_uht_3_5pct",
         "quantity": 80,
         "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 8,
+        "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -6203,6 +6208,16 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 200,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 15,
+        "unit": "ml"
       }
     ],
     "n_instructions": 8,
@@ -6540,14 +6555,15 @@
     "vegan": false,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "kid_friendly",
       "lactose_free",
       "low_calorie",
       "nut_free",
       "vegetarian"
     ],
-    "allergens": [],
+    "allergens": [
+      "gluten"
+    ],
     "servings": 2,
     "time_total": 485,
     "confidence": 0.9,
@@ -6560,7 +6576,7 @@
       },
       {
         "ingredient": "coconut_milk_plant",
-        "quantity": 350,
+        "quantity": 150,
         "unit": "ml"
       },
       {
@@ -6582,6 +6598,11 @@
         "ingredient": "coconut_flesh_dried",
         "quantity": 15,
         "unit": "g"
+      },
+      {
+        "ingredient": "oat_milk_refrigerated_plain_plant",
+        "quantity": 200,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -7796,6 +7817,95 @@
     "similar": []
   },
   {
+    "id": "couscous_tfaya_quick_ee5f20",
+    "title": "Couscous aux légumes express",
+    "cuisine": "moroccan",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "high_protein",
+      "vegan",
+      "vegetarian"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 47,
+    "confidence": 1.0,
+    "description": "Couscous végan marocain, semoule légère et aérée, parfumée aux épices et mijotée dans un bouillon végétal riche, avec des légumes tendres et des pois chiches, servie avec une sauce onctueuse et des saveurs épicées",
+    "composition": [
+      {
+        "ingredient": "couscous_to_cook_seed_dried",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 200,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_zucchini_squash_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chickpea_boiled",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 10.1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 800.0,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coriander",
+        "quantity": null,
+        "unit": "1 poignée"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 8,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "side_couscous_de_choufleur_ac056b",
     "title": "Couscous de Chou-fleur",
     "cuisine": "international",
@@ -7894,7 +8004,7 @@
     "description": "Couscous créatif aux saveurs parfumées, avec une texture aérée et légère, accompagné d'une tfaya végétalienne riche en oignon caramélisé, raisins secs et amandes croquantes, préparé selon la tradition culinaire nord-africaine.",
     "composition": [
       {
-        "ingredient": "couscous_cooked_seed_unsalted",
+        "ingredient": "couscous_to_cook_seed_dried",
         "quantity": 300,
         "unit": "g"
       },
@@ -7924,11 +8034,6 @@
         "unit": "g"
       },
       {
-        "ingredient": "vegan_butter",
-        "quantity": 50,
-        "unit": "g"
-      },
-      {
         "ingredient": "olive_oil_extra_virgin_plant",
         "quantity": 60,
         "unit": "ml"
@@ -7955,118 +8060,18 @@
       },
       {
         "ingredient": "maple_syrup",
-        "quantity": 80,
+        "quantity": 40,
         "unit": "ml"
-      }
-    ],
-    "n_instructions": 9,
-    "flags": [],
-    "similar": [
-      {
-        "id": "couscous_tfaya_quick_ee5f20",
-        "title": "Couscous Tfaya rapide",
-        "score": 1.0
-      },
-      {
-        "id": "couscous_tfaya_classic_k1d1p6",
-        "title": "Couscous Tfaya végétarien",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "couscous_tfaya_quick_ee5f20",
-    "title": "Couscous Tfaya rapide",
-    "cuisine": "moroccan",
-    "dish_type": "main",
-    "vegan": true,
-    "diet": [
-      "high_protein",
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [
-      "gluten"
-    ],
-    "servings": 4,
-    "time_total": 47,
-    "confidence": 1.0,
-    "description": "Couscous végan marocain, semoule légère et aérée, parfumée aux épices et mijotée dans un bouillon végétal riche, avec des légumes tendres et des pois chiches, servie avec une sauce onctueuse et des saveurs épicées",
-    "composition": [
-      {
-        "ingredient": "couscous_cooked_seed_unsalted",
-        "quantity": 200,
-        "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 200,
+        "quantity": 400,
         "unit": "ml"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 20,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_zucchini_squash_raw",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "chickpea_boiled",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 10.1,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 800.0,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "coriander",
-        "quantity": null,
-        "unit": "1 poignée"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "paprika_powder",
-        "quantity": 3,
-        "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 8,
     "flags": [],
     "similar": [
-      {
-        "id": "couscous_tfaya_vegan_65aba6",
-        "title": "Couscous Tfaya (Vegan)",
-        "score": 1.0
-      },
       {
         "id": "couscous_tfaya_classic_k1d1p6",
         "title": "Couscous Tfaya végétarien",
@@ -8094,7 +8099,7 @@
     "description": "Couscous végétal marocain sucré-salé, avec une texture aérienne et une tfaya d'oignons confits, raisins et épices parfumées, typique de la cuisine marocaine",
     "composition": [
       {
-        "ingredient": "couscous_cooked_seed_unsalted",
+        "ingredient": "couscous_to_cook_seed_dried",
         "quantity": 300,
         "unit": "g"
       },
@@ -8147,6 +8152,11 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 380,
+        "unit": "ml"
       }
     ],
     "n_instructions": 10,
@@ -8155,11 +8165,6 @@
       {
         "id": "couscous_tfaya_vegan_65aba6",
         "title": "Couscous Tfaya (Vegan)",
-        "score": 1.0
-      },
-      {
-        "id": "couscous_tfaya_quick_ee5f20",
-        "title": "Couscous Tfaya rapide",
         "score": 1.0
       }
     ]
@@ -8184,7 +8189,7 @@
     "description": "Plat marocain traditionnel à base de couscous, offrant une semoule légère et aérée, accompagnée de légumes tendres et parfumés, avec une texture onctueuse et des arômes épicés de cumin, de paprika et de cannelle.",
     "composition": [
       {
-        "ingredient": "couscous_cooked_seed_unsalted",
+        "ingredient": "couscous_to_cook_seed_dried",
         "quantity": 200,
         "unit": "g"
       },
@@ -9235,7 +9240,7 @@
         "unit": "quelques morceaux"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -9298,8 +9303,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "coriander_spice_leaf_dried",
-        "quantity": 12,
+        "ingredient": "coriander_spice_seed",
+        "quantity": 5,
         "unit": "g"
       },
       {
@@ -9458,7 +9463,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -9543,17 +9548,12 @@
         "unit": "g"
       },
       {
-        "ingredient": "mustard",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 8,
     "flags": [],
     "similar": [
       {
@@ -9742,7 +9742,7 @@
         "unit": "1 pièce"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -9757,7 +9757,9 @@
       "vegan",
       "vegetarian"
     ],
-    "allergens": [],
+    "allergens": [
+      "mustard"
+    ],
     "servings": 4,
     "time_total": 43,
     "confidence": 1.0,
@@ -9775,7 +9777,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -9790,7 +9792,7 @@
       },
       {
         "ingredient": "coconut_oil_plant",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -9817,9 +9819,24 @@
         "ingredient": "basmati_rice_raw_seed",
         "quantity": null,
         "unit": "200g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_mustard_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 200,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -9846,13 +9863,13 @@
         "unit": "g"
       },
       {
-        "ingredient": "snow_peas_raw",
+        "ingredient": "green_peas_boiled_frozen_salted",
         "quantity": 200,
         "unit": "g"
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -9872,7 +9889,7 @@
       },
       {
         "ingredient": "coconut_oil_plant",
-        "quantity": 45,
+        "quantity": 25,
         "unit": "ml"
       },
       {
@@ -9904,6 +9921,21 @@
         "ingredient": "indian_bread_naan",
         "quantity": null,
         "unit": "1 pièce"
+      },
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 200,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -9925,7 +9957,7 @@
       "milk"
     ],
     "servings": 4,
-    "time_total": 95,
+    "time_total": 60,
     "confidence": 1.0,
     "description": "Curry japonais créatif, riche et parfumé, avec des légumes mijotés tendres et un roux brun caramélisé qui dégage une odeur de noisette, élaboré à partir de techniques traditionnelles japonaises.",
     "composition": [
@@ -9995,9 +10027,14 @@
         "unit": "quelques feuilles"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": [
+      {
+        "id": "curry_japanese_4533d1",
+        "title": "Curry japonais rapide",
+        "score": 1.0
+      },
       {
         "id": "curry_japonais_1caddf",
         "title": "Riz au curry japonais",
@@ -10012,7 +10049,7 @@
   },
   {
     "id": "curry_japanese_4533d1",
-    "title": "Curry Japonnais rapide",
+    "title": "Curry japonais rapide",
     "cuisine": "japanese",
     "dish_type": "main",
     "vegan": false,
@@ -10042,7 +10079,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -10069,16 +10106,27 @@
         "ingredient": "olive_oil_plant",
         "quantity": 45,
         "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
       }
     ],
     "n_instructions": 10,
     "flags": [],
-    "similar": []
+    "similar": [
+      {
+        "id": "curry_japanese_classic_v3_m8q2z4",
+        "title": "Curry japonais",
+        "score": 1.0
+      },
+      {
+        "id": "curry_japonais_1caddf",
+        "title": "Riz au curry japonais",
+        "score": 1.0
+      },
+      {
+        "id": "base_japanese_curry_roux_385e52",
+        "title": "Roux Curry Japonais",
+        "score": 0.67
+      }
+    ]
   },
   {
     "id": "curry_dry_aloo_gobi_9a6763",
@@ -13887,7 +13935,7 @@
       },
       {
         "ingredient": "sunflower_oil_plant",
-        "quantity": 45,
+        "quantity": 15,
         "unit": "ml"
       },
       {
@@ -13983,23 +14031,23 @@
       "gluten"
     ],
     "servings": 2,
-    "time_total": 165,
+    "time_total": 95,
     "confidence": 0.9,
     "description": "Galette sarrasin croustillante aux champignons tendres, parfumée au thym frais et au poivre, pour un petit-déjeuner français végétarien délicieux",
     "composition": [
       {
         "ingredient": "buckwheat_flour",
-        "quantity": 200,
+        "quantity": 120,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 300,
+        "quantity": 180,
         "unit": "ml"
       },
       {
         "ingredient": "oat_milk_refrigerated_plain_plant",
-        "quantity": 100,
+        "quantity": 60,
         "unit": "ml"
       },
       {
@@ -14098,7 +14146,7 @@
   },
   {
     "id": "crepe_galettes_de_courgette_ult_669679",
-    "title": "Galettes de courgette ultra structurées",
+    "title": "Galettes de courgette",
     "cuisine": "mediterranean",
     "dish_type": "starter",
     "vegan": false,
@@ -14665,7 +14713,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -16706,7 +16754,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -25377,7 +25425,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -25392,7 +25440,7 @@
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45.7,
+        "quantity": 25,
         "unit": "ml"
       },
       {
@@ -26568,7 +26616,7 @@
         "unit": "g"
       },
       {
-        "ingredient": "grenoble_walnut_igp_candied",
+        "ingredient": "walnut_shelled_dried",
         "quantity": 60,
         "unit": "g"
       },
@@ -26771,7 +26819,7 @@
         "unit": "1 cuillère à soupe"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -27188,7 +27236,7 @@
         "unit": "g"
       },
       {
-        "ingredient": "coconut_flour",
+        "ingredient": "coconut_sugar",
         "quantity": 30,
         "unit": "g"
       },
@@ -27213,7 +27261,7 @@
         "unit": "1 poignée"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -27296,7 +27344,7 @@
   },
   {
     "id": "crepe_pancakes_sales_ultra_stru_1e8bd8",
-    "title": "Pancakes salés ultra structurés",
+    "title": "Pancakes salés à l'oignon rouge",
     "cuisine": "international",
     "dish_type": "snack",
     "vegan": false,
@@ -27337,7 +27385,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -31596,7 +31644,7 @@
         "unit": "1 poignée"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -36612,6 +36660,11 @@
         "score": 1.0
       },
       {
+        "id": "curry_japanese_4533d1",
+        "title": "Curry japonais rapide",
+        "score": 1.0
+      },
+      {
         "id": "base_japanese_curry_roux_385e52",
         "title": "Roux Curry Japonais",
         "score": 0.67
@@ -37681,6 +37734,11 @@
         "score": 0.67
       },
       {
+        "id": "curry_japanese_4533d1",
+        "title": "Curry japonais rapide",
+        "score": 0.67
+      },
+      {
         "id": "curry_japonais_1caddf",
         "title": "Riz au curry japonais",
         "score": 0.67
@@ -38612,12 +38670,12 @@
       "gluten"
     ],
     "servings": 4,
-    "time_total": 13,
+    "time_total": 45,
     "confidence": 1.0,
     "description": "Salade méditerranéenne à base de couscous, pois chiches et légumes, caractérisée par une texture légère et des saveurs méditerranéennes, avec une dominante de couleurs vives et une odeur fraîche.",
     "composition": [
       {
-        "ingredient": "couscous_cooked_seed_unsalted",
+        "ingredient": "couscous_to_cook_seed_dried",
         "quantity": 200,
         "unit": "g"
       },
@@ -38657,22 +38715,27 @@
         "unit": "g"
       },
       {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 10.1,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 800.0,
-        "unit": "ml"
-      },
-      {
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -41886,7 +41949,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -41896,7 +41959,7 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -41918,9 +41981,14 @@
         "ingredient": "coriander_raw_fresh_herb",
         "quantity": 10,
         "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 8,
     "flags": [],
     "similar": [
       {
@@ -41954,7 +42022,7 @@
     "composition": [
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -42018,7 +42086,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -46996,7 +47064,7 @@
       "milk"
     ],
     "servings": 2,
-    "time_total": 25,
+    "time_total": 8,
     "confidence": 0.9,
     "description": "Petit-déjeuner végétarien créatif avec pain complet croustillant, beurre d'amandes onctueux et banane jaune vif, relevé de cannelle et de graines de chanvre, sur fond de cannelle chaude et de pain toasté",
     "composition": [
@@ -47034,11 +47102,6 @@
         "ingredient": "honey",
         "quantity": 15.0,
         "unit": "ml"
-      },
-      {
-        "ingredient": "butter_sup80pct",
-        "quantity": 30,
-        "unit": "g"
       }
     ],
     "n_instructions": 9,
@@ -47076,13 +47139,13 @@
         "unit": "g"
       },
       {
-        "ingredient": "fig_dried",
-        "quantity": 150,
+        "ingredient": "fig_raw",
+        "quantity": 200,
         "unit": "g"
       },
       {
         "ingredient": "honey",
-        "quantity": 30.0,
+        "quantity": 15.0,
         "unit": "ml"
       },
       {
@@ -47111,7 +47174,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -47795,7 +47858,7 @@
     "composition": [
       {
         "ingredient": "sourdough_bread",
-        "quantity": 200,
+        "quantity": 120,
         "unit": "g"
       },
       {
@@ -48725,13 +48788,13 @@
       },
       {
         "ingredient": "lime_juice_fresh",
-        "quantity": 140,
-        "unit": "g"
+        "quantity": 40,
+        "unit": "ml"
       },
       {
-        "ingredient": "cream_heavy",
+        "ingredient": "sour_cream_fermented_18pct",
         "quantity": 100,
-        "unit": "ml"
+        "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
@@ -48742,9 +48805,19 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "vegetable_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 2,
+        "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {

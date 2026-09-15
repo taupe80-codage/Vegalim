@@ -9,6 +9,7 @@ Opérations :
   ("qty", id, quantité[, unité])                      change une quantité
   ("add", id, quantité, unité, rôle)                  ajoute un ingrédient
   ("del", id)                                         retire un ingrédient
+  ("delq", id, quantité)                              retire la ligne ayant cette quantité (doublon)
   ("txt", ancien, nouveau)                            remplace un passage des instructions
   ("step-", passage)                                  supprime l'étape qui contient le passage
   ("steps", [texte, …])                               réécrit toutes les étapes (« Étape N : » ajouté)
@@ -126,6 +127,13 @@ def apply_op(r: dict, op: tuple) -> str | None:
         r["composition"].append({"ingredient": iid, "quantity": q, "unit": unit,
                                  "meta": {"role": role, "form": "", "state": "raw", "preparation": ""}})
         return f"+ {iid} {q} {unit}"
+    if kind == "delq":  # retire la ligne de cet ingrédient ayant cette quantité (ingrédient en double)
+        iid, q = args
+        line = next((c for c in _lines(r) if c.get("ingredient") == iid and c.get("quantity") == q), None)
+        if line is None:
+            return None
+        r["composition"].remove(line)
+        return f"- {iid} {q}"
     if kind == "del":
         (iid,) = args
         line = _find(r, iid)
