@@ -22,9 +22,33 @@ from backend.core.data_io import (
     load_nutrition_db, load_ingredients_dict, load_ingredient_physical,
 )
 from backend.engine.search_token_generator import batch_generate
-from backend.engine.nutrition_engine import compute_nutrition
+from backend.engine.nutrition_engine import compute_nutrition, resolve_servings
 from backend.engine.score_engine.ajr import meal_score
 import backend.engine.score_engine.quality as quality
+
+
+def recipe_nutrition(r: dict, registry: dict) -> dict:
+    """
+    Nutrition par portion. Les préparations dotées d'une `nutrition_reference`
+    (fromages caillés maison…) reprennent la fiche de référence du registre
+    des sous-recettes, rapportée au poids obtenu par portion — le calcul depuis
+    les ingrédients y compterait le petit-lait égoutté.
+    """
+    entry = registry.get(str(r.get("id"))) if r.get("nutrition_reference") else None
+    if not entry:
+        return compute_nutrition(r)
+    srv = resolve_servings(r)
+    factor = entry["total_weight_g"] / srv / 100.0
+    nutr = {k: (round(v * factor, 1) if isinstance(v, (int, float)) else v)
+            for k, v in entry["nutrition_per_100g"].items()}
+    nutr["calories"] = round(entry["nutrition_per_100g"]["calories"] * factor)
+    nutr["sodium"] = round(entry["nutrition_per_100g"]["sodium"] * factor)
+    nutr["salt"] = round(entry["nutrition_per_100g"].get("salt", 0) * factor, 2)
+    if nutr.get("glycemic_index") is None:
+        nutr.pop("glycemic_index", None)
+    nutr["servings_used"] = srv
+    nutr["source"] = "nutrition_reference"
+    return nutr
 
 
 def rebuild_graphs_and_index():
@@ -45,10 +69,12 @@ def rebuild_graphs_and_index():
     nutrition_graph = {}
     scoring_graph = {}
     d = quality._load_data()
+    from backend.db.culinary_repositories import _derived_registry
+    registry = _derived_registry()
 
     for i, r in enumerate(recipes):
         rid = str(r.get("id"))
-        nutr = compute_nutrition(r)
+        nutr = recipe_nutrition(r, registry)
         nutrition_graph[rid] = nutr
 
         # Score d'une PORTION (1/3 des AJR, pénalités calories/sodium/sucres/

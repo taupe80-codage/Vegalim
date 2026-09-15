@@ -4,7 +4,7 @@
     "new_bases": 1909,
     "regressions": 0,
     "nouveautes": 0,
-    "nutr_diffs": 32,
+    "nutr_diffs": 9,
     "recipe_keys_missing_new": 232,
     "recipe_keys_missing_old": 232,
     "recipe_keys_lost": 0
@@ -13,82 +13,22 @@
   "nouveautes": [],
   "nutr_diffs": [
     {
-      "key": "agar_dried",
-      "diffs": {
-        "calories_kcal": {
-          "old": 27.5,
-          "new": 39.4,
-          "delta_pct": 43.3
-        }
-      }
-    },
-    {
       "key": "black_bean_dried",
       "diffs": {
         "calories_kcal": {
-          "old": 110.6,
-          "new": 273.8,
-          "delta_pct": 147.6
-        }
-      }
-    },
-    {
-      "key": "black_truffle_mushroom",
-      "diffs": {
-        "calories_kcal": {
-          "old": 27.7,
-          "new": 66.3,
-          "delta_pct": 139.4
-        }
-      }
-    },
-    {
-      "key": "blackberry",
-      "diffs": {
-        "calories_kcal": {
-          "old": 6.1,
-          "new": 52.7,
-          "delta_pct": 763.9
-        }
-      }
-    },
-    {
-      "key": "brown_bean",
-      "diffs": {
-        "calories_kcal": {
-          "old": 112.5,
-          "new": 277.7,
-          "delta_pct": 146.8
-        }
-      }
-    },
-    {
-      "key": "caesars_mushroom",
-      "diffs": {
-        "calories_kcal": {
-          "old": 10.7,
-          "new": 23.3,
-          "delta_pct": 117.8
-        }
-      }
-    },
-    {
-      "key": "carioca_bean",
-      "diffs": {
-        "calories_kcal": {
-          "old": 113.8,
-          "new": 275.8,
-          "delta_pct": 142.4
-        }
-      }
-    },
-    {
-      "key": "cloud_ears_mushroom",
-      "diffs": {
-        "calories_kcal": {
-          "old": 30.7,
-          "new": 55.6,
-          "delta_pct": 81.1
+          "old": 273.8,
+          "new": 341.0,
+          "delta_pct": 24.5
+        },
+        "carbs_g": {
+          "old": 40.8,
+          "new": 62.36,
+          "delta_pct": 52.8
+        },
+        "fiber_g": {
+          "old": 4.2,
+          "new": 15.5,
+          "delta_pct": 269.0
         }
       }
     },
@@ -96,9 +36,19 @@
       "key": "cranberry_beans",
       "diffs": {
         "calories_kcal": {
-          "old": 108.7,
-          "new": 271.1,
-          "delta_pct": 149.4
+          "old": 271.1,
+          "new": 335.0,
+          "delta_pct": 23.6
+        },
+        "carbs_g": {
+          "old": 40.6,
+          "new": 60.05,
+          "delta_pct": 47.9
+        },
+        "fiber_g": {
+          "old": 4.3,
+          "new": 24.7,
+          "delta_pct": 474.4
         }
       }
     },
@@ -106,29 +56,19 @@
       "key": "dark_red_kidney",
       "diffs": {
         "calories_kcal": {
-          "old": 115.4,
-          "new": 279.4,
-          "delta_pct": 142.1
-        }
-      }
-    },
-    {
-      "key": "field_mushroom",
-      "diffs": {
-        "calories_kcal": {
-          "old": 12.8,
-          "new": 25.4,
-          "delta_pct": 98.4
-        }
-      }
-    },
-    {
-      "key": "flor_de_mayo_bean",
-      "diffs": {
-        "calories_kcal": {
-          "old": 100.9,
-          "new": 276.9,
-          "delta_pct": 174.4
+          "old": 279.4,
+          "new": 337.0,
+          "delta_pct": 20.6
+        },
+        "carbs_g": {
+          "old": 41.0,
+          "new": 61.29,
+          "delta_pct": 49.5
+        },
+        "fiber_g": {
+          "old": 4.3,
+          "new": 15.2,
+          "delta_pct": 253.5
         }
       }
     },
@@ -136,49 +76,19 @@
       "key": "great_northern_bean_dried",
       "diffs": {
         "calories_kcal": {
-          "old": 110.0,
-          "new": 278.8,
-          "delta_pct": 153.5
-        }
-      }
-    },
-    {
-      "key": "green_onion",
-      "diffs": {
-        "calories_kcal": {
-          "old": 2.7,
-          "new": 30.7,
-          "delta_pct": 1037.0
-        }
-      }
-    },
-    {
-      "key": "leeks_cooked",
-      "diffs": {
-        "calories_kcal": {
-          "old": 3.2,
-          "new": 32.2,
-          "delta_pct": 906.2
-        }
-      }
-    },
-    {
-      "key": "light_red_kidney",
-      "diffs": {
-        "calories_kcal": {
-          "old": 109.3,
-          "new": 273.7,
-          "delta_pct": 150.4
-        }
-      }
-    },
-    {
-      "key": "light_tan_bean",
-      "diffs": {
-        "calories_kcal": {
-          "old": 109.9,
-          "new": 277.5,
-          "delta_pct": 152.5
+          "old": 278.8,
+          "new": 339.0,
+          "delta_pct": 21.6
+        },
+        "carbs_g": {
+          "old": 42.2,
+          "new": 62.37,
+          "delta_pct": 47.8
+        },
+        "fiber_g": {
+          "old": 4.3,
+          "new": 20.2,
+          "delta_pct": 369.8
         }
       }
     },
@@ -186,19 +96,24 @@
       "key": "medium_red_bean",
       "diffs": {
         "calories_kcal": {
-          "old": 111.4,
-          "new": 270.2,
-          "delta_pct": 142.5
-        }
-      }
-    },
-    {
-      "key": "napa_cabbage_raw_leaf",
-      "diffs": {
-        "calories_kcal": {
-          "old": 4.2,
-          "new": 21.0,
-          "delta_pct": 400.0
+          "old": 270.2,
+          "new": 333.0,
+          "delta_pct": 23.2
+        },
+        "carbs_g": {
+          "old": 39.7,
+          "new": 60.01,
+          "delta_pct": 51.2
+        },
+        "fat_g": {
+          "old": 1.04,
+          "new": 0.83,
+          "delta_pct": 20.2
+        },
+        "fiber_g": {
+          "old": 4.3,
+          "new": 24.9,
+          "delta_pct": 479.1
         }
       }
     },
@@ -206,29 +121,19 @@
       "key": "navy_bean_dried_canned",
       "diffs": {
         "calories_kcal": {
-          "old": 110.0,
-          "new": 279.6,
-          "delta_pct": 154.2
-        }
-      }
-    },
-    {
-      "key": "pawpaw",
-      "diffs": {
-        "calories_kcal": {
-          "old": 4.6,
-          "new": 24.0,
-          "delta_pct": 421.7
-        }
-      }
-    },
-    {
-      "key": "pie_pumpkin",
-      "diffs": {
-        "calories_kcal": {
-          "old": 3.4,
-          "new": 33.7,
-          "delta_pct": 891.2
+          "old": 279.6,
+          "new": 337.0,
+          "delta_pct": 20.5
+        },
+        "carbs_g": {
+          "old": 42.4,
+          "new": 60.75,
+          "delta_pct": 43.3
+        },
+        "fiber_g": {
+          "old": 4.3,
+          "new": 15.3,
+          "delta_pct": 255.8
         }
       }
     },
@@ -236,9 +141,19 @@
       "key": "pink_bean_dried",
       "diffs": {
         "calories_kcal": {
-          "old": 104.4,
-          "new": 273.2,
-          "delta_pct": 161.7
+          "old": 273.2,
+          "new": 343.0,
+          "delta_pct": 25.5
+        },
+        "carbs_g": {
+          "old": 42.2,
+          "new": 64.19,
+          "delta_pct": 52.1
+        },
+        "fiber_g": {
+          "old": 4.1,
+          "new": 12.7,
+          "delta_pct": 209.8
         }
       }
     },
@@ -246,59 +161,19 @@
       "key": "pinto_bean_dried_canned",
       "diffs": {
         "calories_kcal": {
-          "old": 106.0,
-          "new": 276.4,
-          "delta_pct": 160.8
-        }
-      }
-    },
-    {
-      "key": "prune_cooked_pitted_dried_unsweetened",
-      "diffs": {
-        "calories_kcal": {
-          "old": 7.1,
-          "new": 125.9,
-          "delta_pct": 1673.2
-        }
-      }
-    },
-    {
-      "key": "purslane",
-      "diffs": {
-        "calories_kcal": {
-          "old": 11.4,
-          "new": 24.8,
-          "delta_pct": 117.5
-        }
-      }
-    },
-    {
-      "key": "radish",
-      "diffs": {
-        "calories_kcal": {
-          "old": 35.7,
-          "new": 50.1,
-          "delta_pct": 40.3
-        }
-      }
-    },
-    {
-      "key": "royal_jelly",
-      "diffs": {
-        "calories_kcal": {
-          "old": 88.0,
-          "new": 144.0,
-          "delta_pct": 63.6
-        }
-      }
-    },
-    {
-      "key": "small_kidney_bean",
-      "diffs": {
-        "calories_kcal": {
-          "old": 105.5,
-          "new": 273.1,
-          "delta_pct": 158.9
+          "old": 276.4,
+          "new": 347.0,
+          "delta_pct": 25.5
+        },
+        "carbs_g": {
+          "old": 42.6,
+          "new": 62.55,
+          "delta_pct": 46.8
+        },
+        "fiber_g": {
+          "old": 4.1,
+          "new": 15.5,
+          "delta_pct": 278.0
         }
       }
     },
@@ -306,29 +181,19 @@
       "key": "small_white_bean",
       "diffs": {
         "calories_kcal": {
-          "old": 109.9,
-          "new": 277.1,
-          "delta_pct": 152.1
-        }
-      }
-    },
-    {
-      "key": "tan_bean",
-      "diffs": {
-        "calories_kcal": {
-          "old": 117.5,
-          "new": 279.1,
-          "delta_pct": 137.5
-        }
-      }
-    },
-    {
-      "key": "tomatillo",
-      "diffs": {
-        "calories_kcal": {
-          "old": 4.2,
-          "new": 27.6,
-          "delta_pct": 557.1
+          "old": 277.1,
+          "new": 336.0,
+          "delta_pct": 21.3
+        },
+        "carbs_g": {
+          "old": 41.8,
+          "new": 62.25,
+          "delta_pct": 48.9
+        },
+        "fiber_g": {
+          "old": 4.3,
+          "new": 24.9,
+          "delta_pct": 479.1
         }
       }
     }

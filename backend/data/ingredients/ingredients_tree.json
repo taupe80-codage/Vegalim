@@ -39864,8 +39864,8 @@
           "ingredient_groups": [
             {
               "id": "ing_03435",
-              "canonical_name_fr": "radis",
-              "canonical_name_en": "radish",
+              "canonical_name_fr": "graine germée de radis",
+              "canonical_name_en": "radish sprouts",
               "indus_conditionne": false,
               "indus_conditionne_only": false,
               "conditioning_types": [],
@@ -39887,8 +39887,8 @@
                   "id": "var_03436",
                   "source": "CIQUAL",
                   "source_id": "15030",
-                  "name_fr": "radis",
-                  "name_en": "radish",
+                  "name_fr": "graine germée de radis",
+                  "name_en": "radish sprouts",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes_en": {},
@@ -46530,17 +46530,23 @@
                 {
                   "id": "var_03904",
                   "source": "USDA",
-                  "source_id": "747444",
+                  "source_id": "173734",
                   "name_fr": "haricot noir",
                   "name_en": "black bean",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes_en": {},
                   "axes_fr": {},
-                  "source_name_en": "Beans, Dry, Black (0% moisture)",
+                  "source_name_en": "Beans, black, mature seeds, raw",
                   "source_name_fr": null,
                   "source_rank": 2,
-                  "is_primary": true
+                  "is_primary": true,
+                  "_replaced_source": {
+                    "source": "USDA",
+                    "source_id": "747444",
+                    "source_name": "Beans, Dry, Black (0% moisture)",
+                    "reason": "Foundation Foods sur matière sèche (0 % d'humidité), sans sucres : ~275 kcal au lieu de ~340 (2026-09-15)"
+                  }
                 }
               ]
             },
@@ -46626,17 +46632,23 @@
                 {
                   "id": "var_03910",
                   "source": "USDA",
-                  "source_id": "747440",
+                  "source_id": "173744",
                   "name_fr": "haricot rouge foncé",
                   "name_en": "dark Red Kidney",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes_en": {},
                   "axes_fr": {},
-                  "source_name_en": "Beans, Dry, Dark Red Kidney (0% moisture)",
+                  "source_name_en": "Beans, kidney, red, mature seeds, raw",
                   "source_name_fr": null,
                   "source_rank": 2,
-                  "is_primary": true
+                  "is_primary": true,
+                  "_replaced_source": {
+                    "source": "USDA",
+                    "source_id": "747440",
+                    "source_name": "Beans, Dry, Dark Red Kidney (0% moisture)",
+                    "reason": "Foundation Foods sur matière sèche (0 % d'humidité), sans sucres : ~275 kcal au lieu de ~340 (2026-09-15)"
+                  }
                 }
               ]
             },
@@ -46690,17 +46702,23 @@
                 {
                   "id": "var_03914",
                   "source": "USDA",
-                  "source_id": "747446",
+                  "source_id": "175190",
                   "name_fr": "haricot great northern",
                   "name_en": "great northern bean",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes_en": {},
                   "axes_fr": {},
-                  "source_name_en": "Beans, Dry, Great Northern (0% moisture)",
+                  "source_name_en": "Beans, great northern, mature seeds, raw",
                   "source_name_fr": null,
                   "source_rank": 2,
-                  "is_primary": true
+                  "is_primary": true,
+                  "_replaced_source": {
+                    "source": "USDA",
+                    "source_id": "747446",
+                    "source_name": "Beans, Dry, Great Northern (0% moisture)",
+                    "reason": "Foundation Foods sur matière sèche (0 % d'humidité), sans sucres : ~275 kcal au lieu de ~340 (2026-09-15)"
+                  }
                 }
               ]
             },
@@ -46786,17 +46804,23 @@
                 {
                   "id": "var_03920",
                   "source": "USDA",
-                  "source_id": "747430",
+                  "source_id": "175193",
                   "name_fr": "haricot rouge moyen",
                   "name_en": "medium Red bean",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes_en": {},
                   "axes_fr": {},
-                  "source_name_en": "Beans, Dry, Medium Red (0% moisture)",
+                  "source_name_en": "Beans, kidney, all types, mature seeds, raw",
                   "source_name_fr": null,
                   "source_rank": 2,
-                  "is_primary": true
+                  "is_primary": true,
+                  "_replaced_source": {
+                    "source": "USDA",
+                    "source_id": "747430",
+                    "source_name": "Beans, Dry, Medium Red (0% moisture)",
+                    "reason": "Foundation Foods sur matière sèche (0 % d'humidité), sans sucres : ~275 kcal au lieu de ~340 (2026-09-15)"
+                  }
                 }
               ]
             },
@@ -46822,17 +46846,23 @@
                 {
                   "id": "var_03922",
                   "source": "USDA",
-                  "source_id": "747441",
+                  "source_id": "173745",
                   "name_fr": "haricot navy",
                   "name_en": "navy bean",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes_en": {},
                   "axes_fr": {},
-                  "source_name_en": "Beans, Dry, Navy (0% moisture)",
+                  "source_name_en": "Beans, navy, mature seeds, raw",
                   "source_name_fr": null,
                   "source_rank": 2,
-                  "is_primary": true
+                  "is_primary": true,
+                  "_replaced_source": {
+                    "source": "USDA",
+                    "source_id": "747441",
+                    "source_name": "Beans, Dry, Navy (0% moisture)",
+                    "reason": "Foundation Foods sur matière sèche (0 % d'humidité), sans sucres : ~275 kcal au lieu de ~340 (2026-09-15)"
+                  }
                 }
               ]
             },
@@ -46854,17 +46884,23 @@
                 {
                   "id": "var_03924",
                   "source": "USDA",
-                  "source_id": "747439",
+                  "source_id": "173748",
                   "name_fr": "haricot rose",
                   "name_en": "pink bean",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes_en": {},
                   "axes_fr": {},
-                  "source_name_en": "Beans, Dry, Pink (0% moisture)",
+                  "source_name_en": "Beans, pink, mature seeds, raw",
                   "source_name_fr": null,
                   "source_rank": 2,
-                  "is_primary": true
+                  "is_primary": true,
+                  "_replaced_source": {
+                    "source": "USDA",
+                    "source_id": "747439",
+                    "source_name": "Beans, Dry, Pink (0% moisture)",
+                    "reason": "Foundation Foods sur matière sèche (0 % d'humidité), sans sucres : ~275 kcal au lieu de ~340 (2026-09-15)"
+                  }
                 }
               ]
             },
@@ -46890,17 +46926,23 @@
                 {
                   "id": "var_03926",
                   "source": "USDA",
-                  "source_id": "747445",
+                  "source_id": "175199",
                   "name_fr": "haricot pinto",
                   "name_en": "pinto bean",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes_en": {},
                   "axes_fr": {},
-                  "source_name_en": "Beans, Dry, Pinto (0% moisture)",
+                  "source_name_en": "Beans, pinto, mature seeds, raw",
                   "source_name_fr": null,
                   "source_rank": 2,
-                  "is_primary": true
+                  "is_primary": true,
+                  "_replaced_source": {
+                    "source": "USDA",
+                    "source_id": "747445",
+                    "source_name": "Beans, Dry, Pinto (0% moisture)",
+                    "reason": "Foundation Foods sur matière sèche (0 % d'humidité), sans sucres : ~275 kcal au lieu de ~340 (2026-09-15)"
+                  }
                 }
               ]
             },
@@ -46954,17 +46996,23 @@
                 {
                   "id": "var_03932",
                   "source": "USDA",
-                  "source_id": "747442",
+                  "source_id": "173749",
                   "name_fr": "haricot blanc petit",
                   "name_en": "small White bean",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes_en": {},
                   "axes_fr": {},
-                  "source_name_en": "Beans, Dry, Small White (0% moisture)",
+                  "source_name_en": "Beans, small white, mature seeds, raw",
                   "source_name_fr": null,
                   "source_rank": 2,
-                  "is_primary": true
+                  "is_primary": true,
+                  "_replaced_source": {
+                    "source": "USDA",
+                    "source_id": "747442",
+                    "source_name": "Beans, Dry, Small White (0% moisture)",
+                    "reason": "Foundation Foods sur matière sèche (0 % d'humidité), sans sucres : ~275 kcal au lieu de ~340 (2026-09-15)"
+                  }
                 }
               ]
             },
@@ -48515,17 +48563,23 @@
                 {
                   "id": "var_00963",
                   "source": "USDA",
-                  "source_id": "747437",
+                  "source_id": "175189",
                   "name_fr": "haricot canneberge",
                   "name_en": "cranberry beans",
                   "indus_conditionne": false,
                   "conditioning_types": [],
                   "axes_en": {},
                   "axes_fr": {},
-                  "source_name_en": "Beans, Dry, Cranberry (0% moisture)",
+                  "source_name_en": "Beans, cranberry (roman), mature seeds, raw",
                   "source_name_fr": null,
                   "source_rank": 2,
-                  "is_primary": true
+                  "is_primary": true,
+                  "_replaced_source": {
+                    "source": "USDA",
+                    "source_id": "747437",
+                    "source_name": "Beans, Dry, Cranberry (0% moisture)",
+                    "reason": "Foundation Foods sur matière sèche (0 % d'humidité), sans sucres : ~275 kcal au lieu de ~340 (2026-09-15)"
+                  }
                 }
               ]
             },

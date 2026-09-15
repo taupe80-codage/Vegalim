@@ -736,3 +736,51 @@ def test_rendement_pris_en_compte_dans_le_registre():
                      .read_text(encoding="utf-8"))["recipes"]
     assert 250 <= reg["base_paneer_04e1db"]["nutrition_per_100g"]["calories"] <= 380
     assert reg["base_ghee_ec9064"]["nutrition_per_100g"]["calories"] >= 850
+
+
+# ── Correspondances vérifiées le 2026-09-15 (sources : CIQUAL, USDA SR, CNF) ──
+
+def test_radis_des_recettes_est_le_radis_rouge():
+    """`radish` pointait vers « Graine germée de radis » (CIQUAL 15030, 50 kcal)."""
+    from backend.engine.nutrition_engine import get_data, _normalize_n_data
+    n = get_data.ingredients.resolve_nutrition("radish", use_cooked=False)
+    assert str(n.get("_source_id")) == "20045" and _normalize_n_data(n)["calories"] < 20
+
+
+def test_legumineuses_cuites_pas_resolues_en_sec():
+    """
+    Haricots « égouttés / écrasés » (state cooked) comptés secs : ×2,5 kcal.
+    Lentilles exclues : les recettes les cuisent depuis le sec (25 min à l'eau),
+    `state: cooked` y décrit l'état final et la fiche sèche est la bonne.
+    """
+    import re
+    from backend.engine.nutrition_engine import get_data
+    fautes = []
+    for r in RECIPES:
+        for c in r.get("composition", []):
+            meta = c.get("meta") or {}
+            if meta.get("state") != "cooked" or not re.search(r"(^|_)bean(_|$)", c.get("ingredient", "")):
+                continue
+            n = get_data.ingredients.resolve_nutrition(c["ingredient"], use_cooked=True, cooking_state="cooked")
+            if n and n.get("water_g") is not None and n["water_g"] < 30:
+                fautes.append((r["id"], c["ingredient"], n.get("water_g")))
+    assert not fautes, f"légumineuses cuites résolues vers une fiche sèche : {fautes[:10]}"
+
+
+def test_fromages_caille_maison_sur_fiche_de_reference():
+    """Paneer & co : fiche queso fresco (pas le lactose du petit-lait égoutté)."""
+    import json
+    from backend.engine.config import DATA_ROOT
+    reg = json.loads((DATA_ROOT / "ingredients" / "derived_from_base_recipes.json")
+                     .read_text(encoding="utf-8"))["recipes"]
+    for rid in ("base_paneer_04e1db", "base_halloumi_293d5e", "base_fromage_en_grain_a00941"):
+        n = reg[rid]["nutrition_per_100g"]
+        assert n["carbs"] < 6 and 15 <= n["protein"] <= 25, (rid, n["carbs"], n["protein"])
+
+
+def test_haricots_secs_sur_base_humide():
+    """Plus de fiche USDA « 0 % moisture » pour les haricots utilisés."""
+    n2 = load_nutrition_db()
+    for base in ("black_bean_dried", "great_northern_bean_dried", "medium_red_bean"):
+        v = next(iter(n2[base]["variants"].values()))
+        assert (v.get("water_g") or 0) > 8 and 320 <= v["calories_kcal"] <= 360, (base, v.get("water_g"), v["calories_kcal"])
