@@ -894,3 +894,12 @@ def test_titres_sans_mojibake():
     fautes = [(r["id"], v) for r in RECIPES for v in (r.get("titles") or {}).values()
               if re.search(r"Ã.|Ä[\u0080-\u00bf]|â€|\ufffd", v or "")]
     assert not fautes, f"titres mal encodés : {fautes}"
+
+
+def test_instructions_sans_remplissage_ni_test_de_lame_hors_four():
+    """Texte généré : « Déguster et apprécier… », « lame ressort sèche » dans une soupe,
+    « mijoter à 180 °C » (363 recettes nettoyées le 2026-09-15 par clean_recipe_texts.py)."""
+    cl = _import_script("scripts/recipes/clean_recipe_texts.py", "clean_recipe_texts")
+    restantes = [r["id"] for r in RECIPES if cl.nettoyer(r) != (r.get("instructions") or [])]
+    assert not restantes, (
+        f"{len(restantes)} recettes à nettoyer — lancer scripts/recipes/clean_recipe_texts.py : {restantes[:10]}")
