@@ -784,3 +784,46 @@ def test_haricots_secs_sur_base_humide():
     for base in ("black_bean_dried", "great_northern_bean_dried", "medium_red_bean"):
         v = next(iter(n2[base]["variants"].values()))
         assert (v.get("water_g") or 0) > 8 and 320 <= v["calories_kcal"] <= 360, (base, v.get("water_g"), v["calories_kcal"])
+
+
+# ── Pipeline outillé : run_pipeline.bat et index de recherche ─────────────────
+
+def test_run_pipeline_bat_sequence_validee():
+    """
+    Le launcher lance run_pipeline.bat : il lançait build_physical_v2.py et
+    build_base_recipe_aliases.py (1007 clés de poids unitaires renommées,
+    alias non voulus) et fix_recipes_coherence --apply remettait 72 portions
+    calibrées au défaut (constaté le 2026-09-15).
+    """
+    from pathlib import Path
+    bat = (Path(__file__).resolve().parents[1] / "run_pipeline.bat").read_text(encoding="utf-8")
+    commandes = [l.strip() for l in bat.splitlines() if l.strip().lower().startswith("python ")]
+    texte = " ; ".join(commandes)
+    for interdit in ("build_physical_v2", "build_base_recipe_aliases", "--apply"):
+        assert interdit not in texte, f"run_pipeline.bat lance encore {interdit}"
+    ordre = ["build_n2_direct.py --promote", "build_dict_v2.py", "build_indexes.py",
+             "fix_recipe_diet_allergens.py", "build_derived_base_registry.py",
+             "rebuild_graphs.py", "build_index.py"]
+    positions = [texte.find(e) for e in ordre]
+    assert all(p >= 0 for p in positions) and positions == sorted(positions), (
+        f"séquence de rebuild incomplète ou désordonnée : {dict(zip(ordre, positions))}")
+
+
+def test_search_index_a_jour():
+    """search_index.json n'était plus régénéré depuis juillet (390 mots-clés décalés)."""
+    import json
+    from pathlib import Path
+    ROOT = Path(__file__).resolve().parents[1]
+    bi = _import_script("scripts/build_index.py", "build_index")
+    attendu = bi.build_index(RECIPES)
+    actuel = json.loads((ROOT / "backend/data/indexes/search_index.json").read_text(encoding="utf-8"))["tokens"]
+    ecarts = sorted(k for k in set(attendu) | set(actuel)
+                    if sorted(attendu.get(k, [])) != sorted(actuel.get(k, [])))
+    assert not ecarts, f"{len(ecarts)} mots-clés périmés — lancer scripts/build_index.py : {ecarts[:10]}"
+
+
+def test_fix_recipes_coherence_ne_touche_pas_aux_portions_calibrees():
+    fx = _import_script("scripts/nutrition/fix_recipes_coherence.py", "fix_recipes_coherence")
+    import inspect
+    src = inspect.getsource(fx)
+    assert "C6_servings_uncalibrated" not in src

@@ -171,15 +171,15 @@ ACTIONS: tuple[Action, ...] = (
     Action(
         key="run_pipeline_bat",
         category="Pipeline complet",
-        title="Pipeline nutrition complet (CIQUAL / USDA / CNF)",
+        title="Rebuild complet des donnees (CIQUAL / USDA / CNF -> recettes)",
         description=(
-            "Ouvre le pipeline nutrition en 5 etapes dans une fenetre de console "
-            "dediee : reconstruction de nutrition_v2.json depuis CIQUAL/USDA/CNF, "
-            "du dictionnaire d'ingredients v2, de ingredient_physical.json, des "
-            "index et graphs, avec des etapes optionnelles (coherence recettes, "
-            "reindexation, graphs de scoring) confirmees au clavier. Long "
-            "(plusieurs minutes) et interactif -- se pilote dans sa propre "
-            "fenetre, pas dans ce panneau."
+            "Ouvre dans une console dediee le rebuild valide (meme sequence que "
+            "le README) : nutrition_v2 depuis CIQUAL/USDA Foundation + SR Legacy/"
+            "CNF, dictionnaire, index nutrition, regimes/allergenes et registre "
+            "des sous-recettes (jusqu'a stabilisation), graphes nutrition et "
+            "scoring, index de recherche, puis controles en lecture seule "
+            "(portions, coherence, tests d'integrite). S'arrete a la premiere "
+            "erreur. Plusieurs minutes ; verifier git diff avant de commiter."
         ),
         kind="console",
         bat="run_pipeline.bat",

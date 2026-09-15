@@ -335,16 +335,19 @@ def run_checks(recipes: list[dict]) -> list[dict]:
                       f"Description template détectée: '{desc[:80]}'",
                       fix={"description": new_desc})
 
-        # C6 — servings calibration
+        # C6 — servings absent ou invalide
+        # Ne compare plus au défaut du dish_type : depuis le 2026-09-14 les
+        # portions sont calibrées recette par recette (propose_servings.py,
+        # listes validées). L'ancien contrôle remettait ces 72 recettes au
+        # défaut avec --apply (ghee 42 → 4, brioche 8 → 6…).
         srv = r.get("servings")
         expected = DEFAULT_SERVINGS.get(dt, 4)
-        if srv != expected:
-            issue("info", rid, tf, "C6_servings_uncalibrated",
-                  f"servings={srv} mais dish_type={dt} → attendu {expected}",
+        if not isinstance(srv, int) or srv <= 0:
+            issue("warning", rid, tf, "C6_servings_invalid",
+                  f"servings={srv!r} invalide (dish_type={dt}) → défaut {expected}",
                   fix={
                       "servings": expected,
                       "servings_default": expected,
-                      "servings_user_override": None,
                   })
 
         # C7 — titre dupliqué

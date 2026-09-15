@@ -155,15 +155,19 @@ python scripts/nutrition/build_indexes.py
 python scripts/recipes/fix_recipe_diet_allergens.py
 python scripts/recipes/build_derived_base_registry.py   # alterner avec la ligne précédente jusqu'à 0 changement
 python scripts/recipes/rebuild_graphs.py
+python scripts/build_index.py                         # search_index.json
 ```
+
+`run_pipeline.bat` (action « Rebuild complet » du launcher) enchaîne exactement
+cette séquence puis les contrôles en lecture seule.
 
 Portions irréalistes : `python scripts/recipes/propose_servings.py` (plats,
 par l'énergie) ou `--components` (préparations de base, portions de référence
 en grammes et rendement `yield_factor`) produit une proposition CSV à valider,
 appliquée avec `--apply`.
 
-`build_physical_v2.py` et `build_base_recipe_aliases.py` (lancés par
-`run_pipeline.bat`) ne font **pas** partie de ce rebuild : ils régénèrent
+`build_physical_v2.py` et `build_base_recipe_aliases.py` ne font **pas**
+partie de ce rebuild : ils régénèrent
 `ingredient_physical.json` et les alias de préparations avec d'autres clés que
 les fichiers actuels (vérifié le 2026-09-14) — à ne relancer qu'après revue.
 
