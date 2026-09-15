@@ -827,3 +827,70 @@ def test_fix_recipes_coherence_ne_touche_pas_aux_portions_calibrees():
     import inspect
     src = inspect.getsource(fx)
     assert "C6_servings_uncalibrated" not in src
+
+
+# ── Relecture des 820 recettes (docs/revue_recettes_2026-09-15) ───────────────
+
+def _texte(r):
+    return " ".join(r.get("instructions") or [])
+
+
+def _lignes(r):
+    return [c for c in r.get("composition") or []
+            if (c.get("meta") or {}).get("role") != "serving_suggestion"]
+
+
+# quantité du texte non précisée (pois chiches « secs » sans poids) : à revoir à la main
+_LEGUMES_SECS_AMBIGUS = {"dal_hummus_traditionnel_7f6ccc"}
+
+
+def test_legumineuses_trempees_pas_comptees_cuites():
+    """Pois chiches / haricots trempés secs mais fiche *_boiled : kcal ÷ 2,5 (31 recettes au 2026-09-15)."""
+    import re
+    trempe = re.compile(r"tremp\w*\s+(?:les\s+|\d+\s*g\s+de\s+)?(?:pois chiches|haricots|lentilles|fèves)"
+                        r"(?:\s+\w+){0,2}\s+sec", re.I)
+    fautes = [(r["id"], c["ingredient"]) for r in RECIPES if r["id"] not in _LEGUMES_SECS_AMBIGUS
+              and trempe.search(_texte(r)) and not re.search(r"\bsi (?:les )?haricots (?:sont )?secs", _texte(r), re.I)
+              for c in _lignes(r) if re.search(r"(bean|chickpea|lentil|cowpea|pea)s?_boiled", c["ingredient"])]
+    assert not fautes, f"légumineuses trempées sèches mais comptées cuites : {fautes[:10]}"
+
+
+def test_riz_saute_compte_cuit():
+    """Riz sauté « cuit froid de la veille » compté cru : +60 % de kcal (12 recettes au 2026-09-15)."""
+    import re
+    riz_cuit = re.compile(r"riz[^.]{0,40}(?:cuit\w* froid|froid de la veille|cuit de la veille)", re.I)
+    cuit_ici = re.compile(r"cui(?:re|sez|t)\s[^.]{0,20}riz[^.]{0,30}la veille|cuire \d+\s*g de riz", re.I)
+    fautes = [r["id"] for r in RECIPES if riz_cuit.search(_texte(r)) and not cuit_ici.search(_texte(r))
+              and any(c["ingredient"] in ("white_rice_raw_seed_unenriched", "white_rice_short_grain_seed_dried")
+                      for c in _lignes(r))]
+    assert not fautes, f"riz cuit froid compté cru : {fautes}"
+
+
+def test_kid_friendly_sans_piment_fort():
+    import re
+    fautes = []
+    for r in RECIPES:
+        if not (r.get("diet_flags") or {}).get("kid_friendly"):
+            continue
+        piment = sum(c.get("quantity") or 0 for c in _lignes(r)
+                     if re.search(r"chil|pate_piment|gochujang|kimchi|habanero", c["ingredient"])
+                     and c.get("unit") in ("g", "ml"))
+        if piment >= 10:
+            fautes.append((r["id"], piment))
+    assert not fautes, f"kid_friendly avec ≥ 10 g de piment : {fautes}"
+
+
+def test_regime_cru_sans_cuisson_et_temps_total_coherent():
+    crus_cuits = [r["id"] for r in RECIPES
+                  if (r.get("diet_flags") or {}).get("raw") and ((r.get("timing") or {}).get("cook_min") or 0) > 0]
+    assert not crus_cuits, f"régime raw avec cuisson : {crus_cuits}"
+    faux_total = [r["id"] for r in RECIPES if (t := r.get("timing")) and t.get("total_min") !=
+                  sum(t.get(k) or 0 for k in ("prep_active_min", "prep_passive_min", "cook_min"))]
+    assert not faux_total, f"total_min ≠ actif + passif + cuisson : {faux_total[:10]}"
+
+
+def test_titres_sans_mojibake():
+    import re
+    fautes = [(r["id"], v) for r in RECIPES for v in (r.get("titles") or {}).values()
+              if re.search(r"Ã.|Ä[\u0080-\u00bf]|â€|\ufffd", v or "")]
+    assert not fautes, f"titres mal encodés : {fautes}"

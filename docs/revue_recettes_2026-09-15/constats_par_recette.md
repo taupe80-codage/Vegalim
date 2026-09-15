@@ -1,0 +1,775 @@
+# Relecture recette par recette — incohérences
+
+Types : ING = ingrédient du texte ≠ composition (impact nutrition) · MISS = ingrédient
+de la composition jamais utilisé / ingrédient du texte absent · QTY = quantité ·
+TIME = temps · TXT = texte absurde ou hors sujet · FILL = étapes de remplissage ·
+DATA = autre donnée.
+
+## Lot 1
+- base_almond_milk_226291 · TIME cook_min 10 sans cuisson · TXT eau de trempage 800 ml réutilisée pour mixer (même 800 ml)
+- base_cheddar_vegane_529b97 · ING composition « fécule de maïs » / texte « fécule de tapioca » · ING composition lait de coco 25 ml / texte « huile de noix de coco »
+- base_creme_fraiche_b536c1 · TIME cook_min 24 sans cuisson (fermentation = passif)
+- base_curry_paste_49c97f · TIME cook_min 20 sans cuisson · TXT « Servir chaud, garni de coriandre » pour une pâte de curry
+- base_empanada_dough_65661a · MISS œuf dans la composition, jamais utilisé dans les étapes · TXT « Servir aussitôt… salade verte » pour une pâte crue
+- base_gnocchi_vegan_dd3b0e · TXT pommes de terre bouillies « légèrement croustillantes à l'extérieur » · QTY 5 g de sel utilisés deux fois (eau + pâte)
+- base_gochujang_41da6e · ING piment frais 100 g / texte « poudre de piment » (gochugaru) · ING soja sec / texte « farine de soja fermenté (meju) » · ING riz blanc / « riz gluant » · TIME cook_min 0 alors que le riz est cuit
+- base_green_curry_paste_250117 · ING piment ROUGE pour une pâte de curry VERT · TIME cook_min 15 sans cuisson · FILL
+- base_gundruk_94c079 · DATA texte = séchage complet au soleil 2-3 jours → yield_factor 0,6 trop élevé (≈ 0,1-0,15)
+- base_harissa_ef842f · ING piment frais / texte « piments séchés » réhydratés
+- base_hoisin_033e33 · ING soja sec 40 g / texte « fèves de soja cuites » (×2,5 kcal) · TIME 2 h + 24 h de repos non comptés
+- base_japanese_curry_roux_385e52 · TXT « Servir chaud… Bon appétit » pour un roux
+- base_mala_broth_1ab129 · ING piment frais / texte « piments séchés »
+- base_mayonnaise_0d3e4e · TIME cook_min 10 sans cuisson · ING œuf entier / texte « jaune d'œuf »
+- base_cream_cheese_c6e3b6, base_mayonnaise_0d3e4e · DATA ingrédient `lemon` en ml (jus) au lieu de `lemon_juice`
+- base_mole_d0034f · ING piment frais 50 g / texte « piments séchés » grillés et réhydratés · MISS huile de coco dans le texte, absente de la composition
+- base_mozzarella_vegane_fca8c8 · ING fécule de maïs / texte « fécule de tapioca » (indispensable au filant) · TXT « feu moyen, environ 180 °C »
+- base_natto_7060f1 · TXT « Servir après avoir laissé décongeler » · DATA dish_type main pour un condiment fermenté
+- base_oat_cream_954865 · TXT « Servir aussitôt dans des bols préchauffés, garni de coriandre » pour une crème de cuisine
+- base_oat_milk_3519f4 · TIME cook_min 10 sans cuisson · TXT « la lame d'une cuillère ressort sèche » (lait)
+- base_okonomiyaki_1e5fba · TIME cook_min 5 sans cuisson · TXT sauce froide « doit être chaude et crémeuse »
+
+## Lot 2
+- base_peanut_butter_81c37b · TXT « Servez sans attendre… chaleur et fraîcheur » pour une pâte à tartiner conservée 1 mois · FILL
+- base_pesto_905db7, base_pistou_43e29a · TIME cook_min 10 sans cuisson
+- base_puff_pastry_fca43b · TXT « tour simple » puis « double tour ×5 » contradictoires · TXT « vérifiez que la lame ressort sèche » (pâte crue)
+- base_ras_el_hanout_7cd544 · ING gingembre FRAIS 5 g dans un mélange d'épices sèches (→ gingembre moulu) · TXT « cumin moulu… cumin cru » en double
+- base_rice_milk_128001 · MISS 300 ml d'eau de cuisson du riz absents de la composition
+- base_salted_ricotta_1ecd1c · TXT « fromage râpé » au lieu de ricotta · TIME cook_min 2880 (séchage = passif) → total 5770 compte 2 fois
+- base_seitan_249032 · DATA MAJEUR : 300 g de farine lavée (amidon éliminé, reste ~80 g de gluten) mais nutrition = farine entière → 56,9 g de glucides et 9,8 g de protéines par portion au lieu d'un seitan riche en protéines
+- base_shortcrust_e6e9f0 · MISS œuf dans la composition, jamais utilisé · TXT suggestion « salade verte » pour une pâte crue
+- base_soy_cream_4dc027 · TXT « lame sèche », « garnie de persil, crackers » pour une crème de cuisine
+- base_spring_roll_wrappers_eba962 · TXT pâte de riz qui « double de volume » · DATA crêpes poêlées ≠ feuilles de nem
+- base_strawberry_coulis_49d4ea · TXT « lame ressort sèche » (coulis) · DATA `lemon` en ml
+- base_tomato_paste_26412f · DATA texte « réduit de 75-80 % » → yield_factor 0,35 trop élevé (≈ 0,22)
+- base_vegetable_broth_303b7d · DATA légumes filtrés mais comptés dans la nutrition · ING thym séché / texte « thym frais » · DATA difficulté hard pour un bouillon
+- base_vegetarian_fish_sauce_536a33 · MISS 100 ml d'eau d'infusion absents · TXT « Servir aussitôt dans des bols préchauffés » (condiment)
+- base_vegetarian_oyster_sauce_b74b21 · TXT « réhydrater des shiitake frais » · MISS 220 ml d'eau absents · TXT « servir chaud, coriandre » (condiment)
+- base_za_atar_2badf3 · ING thym FRAIS 20 g / texte « thym séché » · TXT « Servir dans des bols préchauffés » (mélange d'épices)
+- beverage_kombucha_3df24c · ING matcha (poudre, non retirable) / texte « infuser le thé puis le retirer » · MISS SCOBY + 100 ml de kombucha de départ · TIME passif 720 min alors que fermentation 7-14 jours · DATA sucre compté en entier (en grande partie fermenté)
+- bread_acorda_a_lail_et_coriandr_048494 · ING coriandre GRAINES 3 g / texte « coriandre fraîche ciselée » · TXT « lame ressort sèche », « lait si besoin » (absent)
+- bread_bannock_e03ffe · QTY 500 ml d'eau pour 200 g de farine (pâte « lisse qui ne colle plus » impossible ; ~120 ml) · DATA dish_type main
+- bread_bao_ff9db9 · ING levure fraîche / texte « levure sèche » · MISS 100 ml d'eau absents · TXT « pétrir à feu doux », bao vapeur « dorés »
+
+## Lot 3
+- bread_buckwheat_crepe_03db22 · MISS œuf 100 g jamais utilisé dans les étapes
+- bread_chilaquiles_13372e · MAJEUR recette incohérente : parmesan 150 g (cuisine mexicaine), sauce tomate en conserve 400 g ET tomates fraîches 240 g, « émulsion jaune d'œuf + lait », tortillas « en julienne », coriandre en graines / texte fraîche · QTY huile 20+25 ml / composition 45
+- bread_enchiladas_fe7221 · ING parmesan 150 g · MISS « crème fraîche », « pain pita » · ING coriandre graines / fraîche · TXT « bols préchauffés » · QTY 300 g d'oignon cru dans la farce
+- bread_focaccia_bf8608 · QTY 350 ml d'eau pour 200 g de farine (175 % d'hydratation ; ~140-160 ml) · ING levure fraîche / « levure sèche »
+- bread_katsu_bf3f1e · MAJEUR : farine de riz 200 g + œuf 220 g pour paner 400 g de tofu, « réduire à 160 °C », « julienne les oignons », « fromage râpé » absent, huile 45 ml pour sauter ET frire · 896 kcal/portion
+- bread_mexican_enfrijoladas_578ae7 · MISS parmesan 150 g jamais utilisé · MISS cumin et sel du texte absents de la composition
+- bread_migas_portugaises_76818b · ING pain blanc / « pain complet » · MISS 100 ml d'eau salée
+- bread_panzanella_f753c6 · ING composition oignon 300 g / texte « échalote de 300 g » · MISS câpres et sel du texte absents · TIME cook_min 25 / 12 min de four
+- bread_panzanella_italienne_307da1 · ING pain blanc / « pain complet »
+- bread_quenelles_de_pain_813118 · QTY 200 g de farine + 150 g de pain + fécule (pâte très lourde) · MISS muscade du texte absente
+- bread_ribollita_d191b3 · MISS 600 ml d'eau et sel absents · DATA ail 2 g
+- bread_salmorejo_a156e9 · MISS œuf dur 110 g jamais utilisé · ING vinaigre blanc distillé / « vinaigre de Xérès » · TXT « réduire la sauce » et « bols préchauffés » pour une soupe froide · MISS basilic, tomates cerises
+- bread_spanakopita_a_la_muscade_6a9e84 · ING tofu 150 g / texte « fromage végétal râpé » · MISS graines de lin · ING épinards CUITS 300 g / texte épinards crus lavés · QTY muscade 5 g
+- bread_tacos_6fd5c2 · QTY oignon rouge 150 g utilisé deux fois dans le texte · ING citron vert entier 140 g / « jus »
+- bread_tostadas_06442e · MISS huile de friture, cumin absents · QTY « 300 g de haricots sur CHAQUE tostada » · QTY jus de citron vert 140 g
+- brkf_bagel_fromage_frais_conco_e69b68 · QTY concombre 1 750 g (875 g/portion) · ING fromage frais / texte « crème fraîche » · TIME cook_min 10 / 3 min · FILL ×4
+- brkf_brioche_vendeenne_cf19a4 · MISS étape de pétrissage farine/sucre/œufs/levure absente (le texte commence par « incorporer le lait ») · TXT « beurre fondu… en remplacement du beurre » · MISS sel
+- brkf_chia_pudding_framboise_e8a8fd · QTY 350 ml de lait de coco (conserve) → 641 kcal et 48 g de lipides au petit-déjeuner · TIME 8 h de repos non comptées (total 5 min)
+- brkf_galette_sarrasin_champign_f6a798 · QTY 200 g de farine pour 2 (550 kcal) · TIME actif 65 min, galette « 4 min par face »
+- brkf_granola_bowl_yaourt_fruit_980183 · ING flocons d'avoine crus 60 g / texte « granola »
+- brkf_muesli_bircher_fae6ec · TIME 8 h de réfrigération non comptées (total 10 min)
+- brkf_ojja_vegan_dbbad8 · QTY tomate 240 + poivron 160 + oignon 150 g et 23 g d'huile PAR portion (petit-déjeuner 547 kcal)
+- SYSTÉMIQUE (lot 3) : famille bread_* et autres avec quantités « gabarit » identiques (œuf 220 g, oignon 300 g, parmesan 150 g, tomate 480 g, huile 45 ml, ail 9 g, tortilla 320 g) plaquées sans lien avec la recette → à mesurer sur tout le corpus
+
+## Lot 4
+- brkf_overnight_oats_vegan_a1e7b5 · TIME 8 h de réfrigération non comptées (total 5 min)
+- brkf_pain_aux_bananes_vegan_b85f00 · ING noix de Grenoble CONFITES / « noix concassées » · MISS sucre blanc 15 g jamais utilisé
+- brkf_pain_perdu_653f48 · TXT cuisson « 3 à 4 min par face » répétée deux fois
+- brkf_pancakes_banane_vegan_c9231e · ING farine de coco 30 g (rôle sucrant) / texte « 30 g de sucre de noix de coco »
+- brkf_pancakes_ricotta_citron_847c9a · TXT « battez 3 œufs (entiers) en neige » · MISS miel · TXT beurre fondu « pour texture croustillante » sur les myrtilles
+- brkf_porridge_pomme_cannelle_9af096 · TXT dernière étape « garni de coriandre et d'huile d'olive » sur un porridge sucré (+ suggestion coriandre)
+- brkf_shakshuka_vegan_81fa9a · ING tofu 150 g / texte « fromage végétal râpé » · TXT « bols préchauffés »
+- brkf_shakshuka_verte_ad7779 · ING MAJEUR : 220 g d'œufs dans la composition, le texte les remplace par du tofu brouillé (recette non végane) · QTY cumin ajouté deux fois
+- brkf_smoothie_bowl_acai_7cf6e0 · TXT « mixer à feu doux » · ING flocons d'avoine / « granola », lait d'amande / « lait de coco » · TIME cook_min 5
+- brkf_smoothie_vert_epinards_ba_eb4142 · TXT « lame ressort sèche » (smoothie) · TIME cook_min 2
+- brkf_tartines_beurre_amande_ba_9f16cc · MISS beurre 30 g jamais utilisé · ING miel dans la composition, texte « remplacez le miel par du sirop de dattes » · TIME cook_min 20 / grille-pain 3 min
+- brkf_tartines_ricotta_figue_mi_6f7590 · ING ricotta / « fromage râpé » · ING miel / « sirop de fleurs d'oranger » · ING thym séché / frais · QTY figues SÉCHÉES 75 g/portion (520 kcal)
+- brkf_toast_avocat_graines_dfc001 · ING pain au levain / « pain complet » · TXT « lame ressort sèche »
+- chili_paste_95cb92 · DATA kid_friendly pour une pâte de piment
+- couscous_* · DATA MAJEUR SYSTÉMIQUE : ingrédient `couscous_cooked_seed_unsalted` (couscous CUIT ~112 kcal/100 g) utilisé pour la semoule SÈCHE réhydratée dans le texte (~360 kcal/100 g) → glucides/énergie sous-estimés ×3 · recettes : couscous_couscous_traditionnel_veg_46ff36, couscous_moroccan_vegetable_cousco_f80d61, couscous_tfaya_classic_k1d1p6, couscous_tfaya_quick_ee5f20, couscous_tfaya_vegan_65aba6, couscous_traditionnel_132078, couscous_vegetable_classic_k1d1p7, couscous_vegetable_quick_k5d3p1, couscous_couscous_mediterraneenne_bdf9d9
+- couscous_couscous_mediterraneenne_bdf9d9 · QTY 800 ml d'eau + bouillon « incorporés » à une SALADE · TXT « bols préchauffés » pour une salade froide
+- couscous_moroccan / tfaya_quick / traditionnel_132078 / mediterraneenne · DATA quasi-doublons : même composition (couscous 200, carotte 200, courgette 250, pois chiches 200, tomate 300, oignon 150, bouillon 800 ml) et mêmes kcal
+- couscous_tfaya_quick_ee5f20 · DATA « Tfaya » sans tfaya (ni oignons confits, ni raisins, ni cannelle) · MISS levure nutritionnelle
+- couscous_vegetable_quick_k5d3p1 · TIME « rapide » : actif 45 + cuisson 50 min
+- crepe_galette_de_teff_a1a8d3 · TIME fermentation 24-48 h non comptée (total 19 min) · QTY 45 ml d'huile « pour graisser légèrement »
+- curry_aubergine_sri_lanka_bf8bcd · ING moutarde de Dijon 15 g dans un curry sri lankais · TXT « servir à 80 °C »
+
+## Lot 5
+- curry_chickpea_k5x2p9 · MISS sel (Na 20 mg/portion), 200 ml d'eau, jus de citron du texte absents
+- curry_chickpea_spinach_k6518f8 · QTY cumin 6 g ajouté deux fois (étapes 1 et 3)
+- curry_curry_vert_thai_6a3792 · TXT « Enfourner 5 min à 180 °C » (curry) · MISS sucre blanc 15 g jamais utilisé
+- curry_de_pommes_de_terre_et_bam_e5161e · MISS cumin, graines de moutarde, 200 ml d'eau du texte absents · TXT 480 g de tomates ajoutées crues en fin de cuisson
+- curry_de_pommes_de_terre_et_pet_9271d8 · ING titre « petits pois » / composition pois MANGE-TOUT · MISS curcuma, coriandre moulue, 200 ml d'eau de coco
+- curry_green_curry_tofu_2a30dd · TXT « mijoter à 160 °C »
+- curry_green_thai_classic_v3_m9x2k7 · ING poivron rouge / « poivron vert » · QTY sucre de coco 10 g + sucre blanc 15 g, texte « 15 g de sucre de coco » · DATA `lime` en ml
+- curry_japanese_classic_v3_m8q2z4 · MISS bouillon 850 ml, curry en poudre et garam masala jamais ajoutés dans le texte
+- curry_japonais_1caddf · MISS « Riz au curry » sans riz dans la composition · TXT « réduisez le feu à 180 °C », « lame ressort sèche »
+- curry_katsu_vegan_f2e6a3 · QTY farine de riz 200 g pour la pâte à paner + riz 300 g → 819 kcal/portion
+- curry_palak_paneer_b4ca11, curry_palak_paneer_classic_v4_m8x3p1 · ING paneer / texte « fromage VÉGÉTAL râpé » · ING lait de coco / « crème de coco » · (classic) ghee / « huile de coco », épinards CUITS « blanchis 1 min », « lame ressort sèche »
+- curry_paneer_butter_masala_9e638c, curry_paneer_butter_masala_classic_v4_z7x3p2 · ING paneer / « fromage râpé en cubes » · (classic) TXT « Démouler »
+- curry_split_pea_k2f9x1 · MISS 900 ml d'eau de coco, graines de moutarde, feuilles de curry, levure nutritionnelle, sel (Na 35) · TXT « lame ressort sèche »
+- curry_sri_lankan_jackfruit_1cff43 · TXT « Démouler » (curry)
+- curry_sri_lankan_pumpkin_7f1edb · TXT courge « blanchie… caramélisée », « naan cuit 8 min »
+- dal_afghan_sabzi_chalaw_18f6a5 · MISS « Chalaw » (plat de riz) sans riz, « riz au safran » en accompagnement · MISS 700 ml d'eau
+- dal_ajapsandali_8ebefc · ING lentilles corail CUITES revenues puis cuites 20 min dans 800 ml (= sèches) · DATA lentilles absentes de l'ajapsandali traditionnel · QTY ail 2 g
+- dal_armenian_lentil_soup_0f1067 · ING lentilles vertes CUITES remises à mijoter 20 min · TXT « mijoter à 160 °C » · QTY 800 ml / composition 750 ml
+- dal_ash_reshteh_30aac5 · MISS bouillon végétal absent de la composition · TXT nouilles « légèrement croustillantes » après 12 min dans le bouillon
+- dal_basic_k3d2p1 · ING MAJEUR lentilles vertes CUITES 250 g mijotées 25-30 min dans 700 ml (= lentilles sèches ×2,5 kcal) → 144 kcal/portion · MISS thym, laurier, cumin, vinaigre
+- dal_boulettes_suedoises_2ac55d · QTY 300 g d'oignon cru + 220 g d'œufs pour 400 g de pois chiches (pâte liquide)
+- dal_boulettes_suedoises_vegan_fea9f6 · MISS graines de lin, crème/lait de coco de la sauce
+- dal_buddha_bowl_4ffca3 · QTY 810 kcal/portion · TXT « bol préchauffé » (bowl froid)
+- SYSTÉMIQUE (lot 5) : légumineuses `*_boiled` (cuites) utilisées alors que le texte les cuit à partir du sec (lentilles notamment) → à vérifier sur tout le corpus, symétrique du cas des haricots
+
+## Lot 6
+- LÉGUMINEUSES CUITES / SÈCHES (systémique confirmé) : lentilles ou pois chiches `*_boiled` alors que le texte les cuit à partir du sec (rincer / tremper puis 15-90 min dans 600-1000 ml) → énergie ÷2,5 : dal_chana… (non : chana_dal sec OK), dal_chole_curry_de_pois_chiches_851fca (400 g secs trempés 12 h + 1 h 30), dal_coconut_classic_k1d1p5, dal_coconut_dal_ea7cdd, dal_dal_makhani_c9ce94 (haricots rouges), dal_dal_tadka_4c3536, dal_de_lentilles_corail_vegan_8cc6a7, dal_ethiopian_misir_wot_4203c8, dal_falafel_traditionnels_214e07 (pois chiches secs trempés, crus), dal_hummus_traditionnel_7f6ccc, dal_khichdi_23f932, dal_lebanese_lentil_soup_eae561, dal_lentil_corail_classic_k1d1p1, dal_lentil_shepherd_pie_9a295e, dal_lentil_shepherd_pie_vegan_926ebd, dal_lentil_shepherd_s_pie_477c76, dal_lentilles_aux_epinards_be2017, dal_lentilles_corail_au_lait_de_co_19d485 (+ lot 5 : dal_basic, dal_armenian, dal_ajapsandali) → liste à établir par script
+- dal_chana_classic_k1d1p4 · TXT « cuire dans l'eau à 180 °C », « mijoter à 150 °C »
+- dal_chole_bhature_dbcac0 · MISS bhature (farine, huile de friture) absents de la composition · MISS gingembre, 200 ml d'eau · TXT « Démouler les bhature », températures 170/180/150 °C sur feu
+- dal_chole_curry_de_pois_chiches_851fca · TIME trempage 12 h + cuisson 1 h 30 non comptés
+- dal_curry_pois_chiches_epinards_a7ee14 · TXT « lame ressort sèche » · MISS lait de coco, levure
+- dal_dal_makhani_c9ce94 · TIME trempage 8 h non compté
+- dal_ethiopian_atkilt_wat_afd168 · MISS sel (Na 85), 150 ml d'eau
+- dal_ethiopian_misir_wot_4203c8 · DATA kid_friendly avec 20 g de berbéré
+- dal_falafel_traditionnels_214e07 · QTY « frire dans 45 ml d'huile à 175 °C » · TIME trempage 12 h
+- dal_galettes_de_pois_chiches_db4c7a · MISS sel (Na 66)
+- dal_grain_bowl_mediterraneen_2d5531 · TXT « Démouler, couper en parts » (bowl)
+- dal_hummus_traditionnel_7f6ccc · TXT « mixer à feu moyen-vif », « servir chaud à 40 °C » · MISS sel (Na 22), eau, persil · DATA dish_type main pour un houmous
+- dal_kadhi_pakora_078de2, dal_kadhi_pakora_vegan_5cb5d4 · QTY friture dans 45 ml d'huile · MISS 400 ml d'eau
+- dal_khichdi_23f932 · MISS sel (Na 8), 600 ml d'eau
+- dal_koshari_15670d · TXT « cuire les lentilles DANS l'huile 20 min », riz cuit dans l'huile
+- dal_koshari_egyptien_73828c · ING « lentilles corail » / vertes · QTY riz 300 + pâtes 320 + lentilles 300 g → 828 kcal · TXT « 300 g de riz dans chaque bol »
+- dal_lentil_corail_classic_k1d1p1 · MISS sel (Na 27), 700 ml d'eau · TXT « à 150 °C »
+- dal_lentil_shepherd_pie_9a295e · TXT « cuire à la poêle à 180 °C », « lame ressort sèche »
+- dal_lentil_shepherd_s_pie_477c76, dal_lentil_shepherds_pie_vega_27455d · MISS bouillon de cuisson des lentilles et sel (Na 84-88)
+- dal_lentilles_aux_epinards_be2017, dal_lentilles_corail_au_lait_de_co_19d485 · QTY ail 2 g
+
+## Lot 7
+- LÉGUMINEUSES CUITES / SÈCHES (suite) : dal_makhani_vegan_259219, dal_mercimek_koftesi_34f72d, dal_mujadara_2f5904, dal_nepali_dal_bhat_7860b1, dal_ragout_de_lentilles_epice_7ee9be, dal_revithia_922f79 (pois chiches secs trempés), dal_salade_de_lentilles_ethiopienn_5a9dd6, dal_salade_de_pois_chiches_2e32de (trempés 12 h), dal_sambar_indien_fcf6d8, dal_shorbat_adas_d4f98a, dal_soupe_de_lentilles_621239, dal_soupe_lentilles_turque_e797cb, dal_sri_lankan_dhal_curry_fae1be, dal_turkish_mercimek_soup_a7afcf
+- dal_makhani_vegan_259219 · QTY texte 150 g de haricots + 50 g de lentilles / composition 100 + 250 g · QTY 50 ml d'huile d'olive + 45 ml d'huile de coco · TIME trempage 12 h
+- dal_masala_dosa_7d4088 · MISS préparation de la pâte à dosa absente (« préparer ou utiliser une pâte fermentée ») malgré riz + urad dans la composition · MISS feuilles de curry · ING « moutarde » 15 g (condiment) en plus des graines
+- dal_mercimek_koftesi_34f72d · MISS eau de réhydratation du boulgour · DATA non marqué végan alors que tout est végétal · TXT köfte crus traditionnellement, ici enfournés
+- dal_nepali_chickpea_curry_020035 · MISS sel (Na 45), 150 ml d'eau · QTY épices ajoutées deux fois
+- dal_nepali_dal_bhat_7860b1 · MISS « Bhat » = riz 300 g absent de la composition · QTY ail 2 g
+- dal_pakora_b418ab · MISS sel (Na 110), eau de la pâte · QTY friture dans 45 ml
+- dal_persian_lentil_soup_71e221 · TXT « mijoter à 180 °C », « lame ressort sèche »
+- dal_pois_chiches_rotis_ff8cc6 · MISS sel (Na 13)
+- dal_ragout_de_lentilles_epice_7ee9be · MISS « épicé » sans aucune épice · TXT « saveurs éthiopiennes »
+- dal_ragout_de_pois_chiches_moulus_f64412 · MISS bouillon de cuisson absent
+- dal_revithia_922f79 · MISS sel (Na 48) · TIME trempage 12 h + four non comptés
+- dal_salade_de_lentilles_ethiopienn_5a9dd6 · QTY eau 1 000 ml / texte 600 ml · TXT « à 160 °C », salade réchauffée · MISS sel (Na 46) · ING lait de coco / « crème de coco »
+- dal_sambar_indien_fcf6d8 · MISS graines de moutarde, feuilles de curry, « légumes de saison »
+- dal_shorbat_adas_d4f98a · MISS paprika du tadka · QTY cumin deux fois, carottes ajoutées APRÈS mixage
+- dal_soupe_de_pois_chiches_tunisien_86e4b0 · MISS SOUPE sans eau ni bouillon dans la composition · TXT « lame de la cuillère ressort sèche »
+- dal_sri_lankan_dhal_curry_fae1be · MISS bouillon de cuisson des lentilles
+- dal_tajine_pois_chiches_citron_047521 · MISS 100 ml d'eau
+- dal_turkish_mercimek_soup_a7afcf · QTY beurre 40 g utilisé pour revenir ET pour la garniture · ING menthe fraîche / « menthe séchée »
+- base_dashi_broth_a3a517 · ING champignons crus / « champignons séchés » · DATA kombu et champignons retirés mais comptés
+- dessert_baklava_aux_pistaches_06e5ed · ING miel 100 g / texte « sirop de dattes » · TXT « servir sans attendre, chaleur » après 4 h d'imbibition
+- dessert_brownie_vegan_d4c6bd · ING lait d'amande / « lait de coco » · MISS sucre blanc 15 g
+- dessert_caneles_bordelais_ea24bb, dessert_cannele_bordelais_c55eca · DATA doublon (même recette) · TIME inversés : le premier compte 24 h de repos absentes du texte, le second a 24 h de repos dans le texte et passif 0
+- dessert_charlotte_aux_fraises_e3f32c · QTY « 24 biscuits » = 24 g dans la composition (≈ 190 g) · ING mascarpone / « fromage râpé » · MISS sirop d'imbibage · TXT « la sauce doit être chaude »
+
+## Lot 8
+- dessert_cheesecake_fruits_rouges_3460f6 · MISS 200 g de biscuits digestifs absents de la composition → régime gluten_free FAUX · TIME 1 h + 4 h de refroidissement non comptées
+- dessert_chia_pudding_coco_mangue_d61cff · TIME 8 h de réfrigération non comptées, cook_min 8 sans cuisson
+- dessert_clafoutis_aux_cerises_f81391 · ING œufs 165 g / texte « 165 g de yaourt » · MISS crème 100 ml jamais utilisée
+- dessert_clafoutis_aux_cerises_f81391, dessert_clafoutis_cerises_0731cf · DATA quasi-doublon
+- dessert_cookie_chocolat_vegan_b9c6cc · ING beurre végétal 145 g / texte « 150 g d'huile fondue » · ING chocolat 40 % / « plus de 70 % »
+- dessert_crumble_aux_myrtilles_veg_15390f · QTY 200 g de farine + 80 g d'avoine pour 40 g de matière grasse et 14 g de sucre (le crumble ne peut pas se former) · ING beurre végétal / « huile fondue en morceaux »
+- dessert_far_breton_aux_pruneaux_069b81 · ING MAJEUR prune FRAÎCHE / « pruneaux » (≈ 5× plus énergétiques) · ING œufs 220 g / « 220 g de yaourt » · QTY rhum 30 ml utilisé deux fois
+- dessert_financiers_aux_amandes_a02063 · MISS amandes effilées · QTY sucre 195 g / texte 180 g
+- dessert_flan_patissier_aa63b2 · TXT « lame ressort sèche » sur une crème cuite · TIME 2 h de refroidissement
+- dessert_gateau_au_yaourt_citron_f27832 · MISS œufs 165 g jamais utilisés dans le texte
+- dessert_gateau_carottes_vegan_9d8a84 · QTY sucre 210 g / texte 150 g · MISS beurre de cajou 150 g (glaçage) jamais utilisé → 689 kcal · ING noix CONFITES
+- dessert_kheer_au_riz_ee0837 · TXT riz qui « commence à germer » en 30 min de trempage
+- dessert_kouign_amann_a71af6 · TXT « 200 g de beurre FONDU en plaquette » · MISS tourage du sucre dans la pâte (seul le moule est sucré)
+- dessert_lait_coco_vegan_3b8a99, dessert_panna_cotta_coco_vegan_16d6b5 · ING farine de coco 60 g (rôle « sweetener ») / texte « 60 g de sucre de coco » · (riz au lait) TXT « levure nutritionnelle râpée » sur un dessert
+- dessert_pain_d_epices_754c93 · ING miel 200 g / texte « sirop d'agave (remplaçant le miel) » · MISS muscade
+- dessert_panna_cotta_coco_vegan_16d6b5 · QTY lait de coco 800 ml / texte 450 ml · ING fruit de la passion / « coulis de fruits rouges »
+- dessert_profiteroles_0d0e42 · QTY texte 125 ml d'eau, 50 g de beurre, 75 g de farine / composition 200 ml, 80 g, 150 g · MISS quantité d'œufs
+- SYSTÉMIQUE : `coconut_flour` utilisé pour du « sucre de coco » (lots 4 et 8) → à vérifier sur le corpus
+
+## Lot 9
+- dessert_sorbet_mangue_passion_583687 · MISS 150 ml d'eau du sirop
+- dessert_tarte_citron_meringuee_7f6440 · TXT MAJEUR : « œufs végétaux (remplacement des œufs) », « beurre à la place du beurre pour éviter les produits laitiers » dans une recette avec œufs et beurre · QTY sucre 150 + 200 g dans le texte / 200 g dans la composition
+- dessert_tarte_tatin_vegan_1ae13b · ING beurre végétal 90 g / texte « 60 g d'huile »
+- dessert_tiramisu_classique_ea8ddb · DATA MAJEUR `coffee_powder_instant` 250 ml (café SOLUBLE EN POUDRE compté ~250 g) pour 250 ml d'espresso · DATA kid_friendly avec marsala et café · TIME 4 h de réfrigération
+- dip_guacamole_970186 · QTY MAJEUR gabarit : 480 g de tomate + 300 g d'oignon pour 400 g d'avocat · ING coriandre GRAINES « ciselée » · TIME cook_min 10 sans cuisson
+- dip_hummus_classic_v6_u4k9p2 · MISS 80 ml d'eau · DATA `lemon` en ml
+- dumpling_gyoza_92d264 · QTY 800 g de farce (tofu 400 + chou 400) pour 200 g de pâte · TXT « dorer à 200 °C »
+- dumpling_momos_aux_legumes_0adb23 · QTY 500 ml d'eau pour 200 g de farine · MISS huile de coco, gingembre du texte absents
+- dumpling_pierogi_aux_champignons_v_beca85 · QTY tofu 400 g / texte 100 g → 655 kcal
+- dumpling_pierogi_aux_pommes_de_ter_24a890 · MISS tofu ferme 400 g et beurre végétal 30 g jamais utilisés → 743 kcal · MISS muscade
+- dumpling_pierogi_pommes_de_terre_ca9985 · QTY œufs 220 g / texte « un œuf »
+- dumpling_vegetable_dumplings_abb853 · QTY 1,2 kg de farce pour 200 g de pâte
+- egg_baursak_68b192 · ING levure fraîche / « sèche » · TXT « pétrir à feu doux » · QTY friture dans 45 ml, 220 g d'œufs pour 200 g de farine · DATA dish_type main pour des beignets
+- egg_brazilian_feijo_tropeiro_af46ce, egg_feijo_tropeiro_bb31e4 · DATA doublon · (brazilian) MISS sel (Na 82), TXT « lame d'une spatule ressort sèche »
+- egg_crepe_coreenne_aux_oignons_ver_356ac2 · MISS œufs 220 g jamais utilisés (le texte utilise un yaourt)
+- egg_galettes_aux_oignons_verts_ff5328 · MISS sel et 120 ml d'eau du texte · ING sauce soja 45 ml seulement « pour servir » · ING huile végétale / « huile de sésame »
+- egg_galettes_de_pommes_de_terre_tc_4f360c · QTY 200 g de farine + 220 g d'œufs pour 600 g de pommes de terre
+- egg_khachapuri_134434 · ING parmesan 150 g (fromage géorgien frais attendu) · MISS levure · TXT « pétrir à feu moyen », « émulsionner le fromage avec de la levure »
+- egg_makdous_cf5efa · TIME macération 1 semaine non comptée · QTY 45 ml d'huile pour recouvrir des bocaux · DATA kid_friendly avec piment
+- egg_ojja_5bdbea · TXT « à feu doux à 150 °C / 120 °C »
+- egg_okonomiyaki_c105e0 · TXT « katsuobushi » (bonite séchée, POISSON) dans une recette végétarienne · MISS mayonnaise · QTY oignons verts 60 g dans la pâte ET en garniture
+
+## Lot 10
+- egg_omelette_nature_d72ed2 · TXT le texte remplace les œufs par des graines de lin · MISS lait/crème du texte
+- egg_pain_au_fromage_bresilien_603bf5 · ING fécule de maïs / texte « fécule de tapioca » (pão de queijo = tapioca) · ING chèvre au lieu de fromage type minas/parmesan
+- egg_quiche_lorraine_vegetarienne_77343c · MISS œufs 220 g jamais utilisés (texte : tofu soyeux) → 665 kcal
+- egg_sabich_b270c4 · MISS sel (Na 118)
+- egg_shakshouka_douce_12b34f, egg_shakshouka_epicee_759f26, egg_shakshuka_eb137b, egg_shakshuka_v8f3k2 · DATA 4 quasi-doublons · (eb137b) TXT « à 160 °C » sur feu · (v8f3k2) MISS les œufs ne sont jamais ajoutés dans le texte, pas de sel (Na 84)
+- egg_sopa_paraguaya_43987c · QTY parmesan 250 g → Na 1678, 690 kcal
+- egg_spanakopita_a_la_muscade_9f26d0, egg_spanakopita_f5da1b · DATA doublon
+- egg_sundubu_jjigae_bc21e0 · MISS œufs 220 g jamais utilisés · QTY courgette 500 g
+- egg_tortilla_espa_ola_51a108, egg_tortilla_espagnole_6cd136 · DATA doublon · (6cd136) MISS sel (Na 98)
+- egg_vareniki_53686a · TXT « pétrir à feu doux » · MISS sel (Na 100) · MISS oignon jamais utilisé
+- entry_blinis_sarrasin_vegan_09648c · TXT levure ajoutée APRÈS la levée
+- entry_brandade_de_betterave_113c4a · QTY huile d'olive 4 ml · TXT « lame sèche… dorée » · MISS sel
+- entry_carottes_rapees_e66bae · QTY huile 3 ml, vinaigre 1 ml · TIME cook_min 15 sans cuisson
+- entry_carpaccio_betterave_agrum_ee8b66 · ING betterave CRUE 800 g / texte « betteraves cuites » · QTY 800 g pour 4 → 356 kcal
+- entry_celeri_remoulade_d5d1b9 · QTY mayonnaise 4 g · TIME cook_min 10 sans cuisson
+- entry_champignons_a_la_grecque_efe65f · MISS 300 ml d'eau, laurier · QTY graines de coriandre 1 g · TXT « servir sans attendre » après 2 h au froid
+- entry_crostini_champignons_truf_1d780c · DATA `base_soy_cream_4dc027` sans libellé (« ? ») · ING libellé « levure de bière » pour levure nutritionnelle
+- entry_feuilletes_champignons_260af3 · MISS sel/poivre du texte · TIME 30 min de refroidissement non comptées (passif 0)
+- entry_fleurs_de_courgette_farci_c7f460 · ING courgette 240 g au lieu de FLEURS de courgette (plat = fleurs) · MISS pas de dimension « friture » : 500 ml d'huile à vérifier (retained_pct)
+- entry_fromage_de_cajou_aux_herb_4f0f9b · ING cajou « grillées à l'huile » pour des noix crues trempées · ING thym séché / texte « herbes de Provence » · TXT fin gabarit « bols préchauffés… riz basmati » pour un fromage
+
+
+## Lot 11
+- entry_gaspacho_de_melon_menthe_ee9907 · ING vinaigre de vin rouge / texte « xérès » · TIME cook_min 10 sans cuisson, 2 h de froid non comptées
+- entry_haricots_verts_amandine_391638 · MISS sel (Na 11) · ING `lemon` entier 50 g pour du jus
+- entry_lentilles_beluga_au_xeres_de4a76 · ING lentille verte / « beluga » · TXT MAJEUR salade tiède qui devient « soupe » avec 500 ml de bouillon ajouté à la fin · QTY texte 600 ml d'eau / 500 ml
+- entry_matbucha_fbcb0e · QTY gabarit tomate 480 g · MISS persil du texte
+- entry_mousse_avocat_wasabi_773105 · ING lait de coco / « crème de coco » · TIME cook_min 10 sans cuisson
+- entry_muhammara_cd05ca · ING MAJEUR jus de grenade au lieu de MÉLASSE de grenade · DATA `base_pate_piment_b6904a` sans libellé
+- entry_pate_de_champignons_vegan_b2af97 · ING libellé « Armagnac » / id cognac · DATA `base_soy_cream` sans libellé · TIME 4 h de froid non comptées
+- entry_rillettes_lentilles_corai_40d7dc · ING `red_lentil_boiled` alors que le texte cuit les lentilles (systémique) · QTY échalote 150 g · TIME 1 h de froid
+- entry_salmorejo_vegan_d0b7f7 · DATA régime `raw` + kid_friendly avec 15 g d'ail cru · ING vinaigre blanc (xérès attendu) · TIME 2 h de froid non comptées
+- entry_skordalia_18cd77 · DATA kid_friendly avec 20 g d'ail cru · ING pain « grillé » / texte pain rassis · TXT « lame ressort » · MISS eau 30 ml absente du texte
+- entry_tapenade_d_olives_noires_ed6d5d · QTY 80 g de tapenade/portion → Na 1838 · TIME cook_min 10 sans cuisson
+- entry_terrine_legumes_du_soleil_e5e24a · TIME réfrigération non comptée (texte ≈ 290 min / 60) · ING thym / « herbes de Provence », courgettes « jaunes »
+- entry_tzatziki_grec_2b21fb · TXT « bols préchauffés » + « température ambiante » pour un tzatziki · TIME cook_min 10 sans cuisson · DATA 3 g de sel de dégorgement jeté compté (Na 624)
+- entry_veloute_potimarron_en_ver_e5a2ca · ING butternut / « potimarron » · TXT « enfourner » la casserole de soupe · ING lait de coco / « crème de coco »
+- entry_verrines_avocat_mangue_c5f8c6 · TIME cook_min 10 sans cuisson
+- entry_white_bean_dip_ail_roti_e61590 · QTY « une tête d'ail » rôtie / ail 5 g · TXT « servir sans attendre… chaleur » pour un dip
+- entry_Œufs_en_meurette_b8fce3 · MISS sel (Na 246), laurier · TXT œuf poché « jusqu'à coagulation complète » (jaune coulant attendu)
+- falafel_bowl_de_falafel_vegan_f4fd40 · MISS ail, persil, cumin des falafels absents · ING tofu soyeux « en cubes » · DATA `lemon_raw` en ml · TIME cook 12 min pour riz + falafels
+- falafel_optimise_2f1451 · MISS sel (Na 43) · QTY coriandre 140 g · TXT 4 étapes de remplissage (conservation, variantes)
+- main_afghan_bolani_e66cba · QTY MAJEUR gabarit (oignon 300, ail 9, tomate 480, coriandre 3, huile 45) : le bolani n'a pas de tomate · MISS eau de la pâte · TIME pommes de terre « cuites » non comptées
+- main_ajvar_puree_de_poivrons_5d2e79 · DATA dish_type main pour une tartinade · QTY aubergine 600 > poivron 320 (ajvar = majoritairement poivron)
+- main_aloo_gobi_b21c85 · TXT « lame ressort sèche » · DATA diff hard · MISS coriandre fraîche
+- main_aloo_palak_7e9377 · QTY gabarit (oignon 300, ail 9) · MISS gingembre, 100 ml d'eau/lait de coco
+
+## Lot 12
+- main_arepas_a70a2e · QTY MAJEUR gabarit : 480 g de tomate + 150 g de parmesan + 500 ml d'eau dans une pâte d'arepas (Na 1154) · TXT « poêle… enfourner 6 min de chaque côté à 180 °C », « lame ressort sèche »
+- main_arepas_fromage_e3a54c · MISS 250 ml d'eau · ING parmesan (fromage frais/queso blanco attendu) · TXT poêle + « enfourner à 180 °C »
+- main_arepas_fromage_vegan_3a4125 · DATA `base_vegan_cheddar_024998` sans libellé · MISS eau · TXT 2 étapes de remplissage, « lame ressort sèche » · DATA 5 portions / arepas classiques 4
+- main_arepas_vegan_01b62b · QTY gabarit tomate 480 g (garniture optionnelle) · DATA doublon partiel des arepas vegan
+- main_aubergines_farcies_turque_9caa16 · QTY gabarit (oignon 300, ail 9, tomate 480, huile 45) · TXT levure nutritionnelle et « sauce crémeuse aux herbes » absentes · TIME four 40 min / cuisson 35 · TXT « lame ressort sèche »
+- main_aubergines_imam_bayildi_e1443e · DATA quasi-doublon de la précédente · TXT sel de dégorgement = tout le sel
+- main_aubergines_parmigiana_sim_ad314c · QTY levure nutritionnelle 90 g · MISS persil/basilic · TXT « tendres et al dente »
+- main_aubergines_parmigiana_sim_e5028f · DATA doublon végétarien de la version vegan (acceptable) · TXT étape conservation
+- main_aubergines_sichuan_ff9921 · DATA `base_pate_piment` sans libellé · QTY fécule de maïs 20 g · ING vinaigre / « vinaigre de riz » · TXT « blanchir dans 45 ml d'huile »
+- main_baingan_bharta_b5f900 · MISS sel (Na 41) · QTY gabarit (oignon 300, tomate 480, ail 9, coriandre 3) · TXT « oignon brun doré… translucide »
+- main_baked_ziti_b9e13e · QTY gabarit oignon 300 g · MISS tomate fraîche 240 g jamais utilisée · Na 1331
+- main_baked_ziti_vegan_ad57f8 · QTY levure nutritionnelle 90 g · Na 1242 · MISS tomate 240 g utilisée seulement en « tranches » de garniture
+- main_banane_caramelisee_philip_df163c · DATA « philippine » (turon/banana cue : sucre brun, pas de sel 5 g) · QTY sel 5 g « une pincée » → Na 496 · DATA dish_type side
+- main_batata_harra_c2de57 · ING coriandre GRAINES / texte coriandre (fraîche en garniture attendue) · RAS sinon
+- main_beignets_de_legumes_indon_e74ee9 · MISS eau de la pâte · DATA kid_friendly OK · DATA dish_type main pour des bakwan (snack)
+- main_bhindi_masala_ade89d · QTY gabarit (oignon 300, tomate 480, ail 9) · ING coriandre feuille séchée / texte coriandre fraîche · DATA diff hard
+- main_bissara_23c21a · TXT MAJEUR incohérent : « blanchir les fèves sèches 5 min… tendres », puis 40 min de cuisson non comptées (cook 30) · MISS 900 ml d'eau · TXT « lame ressort sèche » dans une purée, « levure nutritionnelle râpée » absente · ING citron entier 100 g
+- main_bohemienne_provencale_781b61 · MISS sel (Na 37) · MISS poivron 320 g jamais utilisé
+- main_briam_f33bb8 · TIME four 50–60 min / cuisson 35 · TXT « fromage végétal râpé » absent
+- main_bulgarian_shopska_salad_d473eb · ING feta (sirene) acceptable · ING vinaigre blanc distillé / « vinaigre de vin blanc » · TIME cook_min 10 sans cuisson · DATA dish_type main
+- main_caldo_verde_72b654 · Na 1008 (bouillon + 5 g de sel) · QTY gabarit oignon 300 g
+- main_callaloo_f7ae5c · TXT « ragoût indien » pour un plat caribéen · MISS piment scotch bonnet · ING épinard / feuilles de dasheen (substitution acceptable) · QTY gabarit (oignon 300, tomate 480)
+- main_caponata_d15a4f · TXT charabia « juliennez les tomates concassées », « brounoisez les olives » · MISS sel · QTY gabarit oignon 300 g
+- main_carottes_glacees_a_lerabl_87d5f0 · QTY carottes 200 g pour 4 (50 g/p) alors que sirop 80 g · QTY beurre 40 g / texte 25 g + noix · MISS 50 ml d'eau, sel
+- main_caviar_d_aubergine_0e824d · DATA dish_type main pour une tartinade · TXT « servir sans attendre… chaleur » après « température ambiante » · ING citron entier 100 g
+- main_chili_sin_carne_125ff2 · MISS sel (Na 140) · QTY gabarit
+- main_chili_sin_carne_epice_205657 · TXT « enfourner 25 min… mijoter à feu doux », « lame ressort sèche », « haricots croustillants et dorés » · TIME passif 60 injustifié
+- main_chou_farci_vegetarien_7a01f5 · MISS huile d'olive (utilisée 3 fois), sel (Na 71) · TXT la farce (lentilles, riz) n'est jamais assemblée
+- main_choucroute_vegetarienne_25c7a3 · QTY huile 2 ml · MISS sel/poivre, carvi absent du texte · DATA kid_friendly avec vin blanc 200 ml
+- main_crepe_complete_1d0fb7 · MISS œuf jamais utilisé dans le texte (galette « complète » = œuf) · MISS 500 ml d'eau, 5 g de sel · TXT « lame ressort sèche » · DATA dish_type breakfast
+
+## Lot 13
+- main_crumble_aux_myrtilles_5f7d47 · QTY 200 g de myrtilles pour 200 g de farine + 80 g d'avoine (garniture/crumble inversés) · QTY beurre 40 g pour 280 g de sec (crumble impossible), sucre 10 g · DATA dish_type dessert mais id `main_`
+- main_daube_de_legumes_4a045f · QTY huile 4 ml · MISS sel · TIME passif 120 injustifié
+- main_endives_au_gratin_6b58ee · MISS sel (Na 178) · TXT « enrouler chaque endive de fromage » (version végé du jambon) OK
+- main_epinards_assaisonnes_core_b596b9 · TXT « jusqu'à ce que la lame ressorte sèche » en essorant des épinards · ING sésame « noir » / sésame blanc · TIME cook 20 pour 30 s de blanchiment
+- main_escalivada_1ee1c4 · TIME four 40–50 min + 30 min de marinade / cuisson 12 · QTY gabarit oignon 300 g
+- main_farofa_bresilienne_29e38e · QTY gabarit oignon 300 g · TXT étape de remplissage
+- main_fasolada_grecque_d70275 · ING MAJEUR `white_bean_boiled` alors que le texte trempe et cuit des haricots secs 1 h 30 · TIME trempage 12 h + 1 h 30 / total 103 · MISS céleri garni OK · TXT 3 étapes de remplissage
+- main_fasolakia_grecques_67b6d9 · QTY haricots verts 300 g < oignon 300 g + tomate 480 g (plat = haricots) · TXT « les échalotes » · DATA rôle plant_protein
+- main_feijoada_2f6754 · ING orange ENTIÈRE 180 g / « jus d'orange » · TXT « mijoter 25 min à 180 °C », « blanchir » les carottes, « nacrer » les haricots · MISS bouillon
+- main_flamiche_aux_poireaux_fa3d0b · QTY poireaux 1,2 kg pour 4 → 640 kcal · MISS sel
+- main_fricassee_printaniere_619cae · ING MAJEUR `fava_bean_dried` (fèves SÈCHES, ~340 kcal/100 g) pour des fèves fraîches blanchies 3 min · MISS sel (Na 32), estragon · DATA asperges 300 g → « 40 g/p » (erreur de portion ?)
+- main_fried_rice_a6e811 · ING MAJEUR riz CRU 400 g (`white_rice_raw`) alors que le texte utilise 400 g de riz cuit froid → 495 kcal au lieu de ~300
+- main_ful_medames_389da8 · ING `fava_bean_dried` 300 g OK mais TIME trempage 12 h + 1 h de cuisson / total 33 · MISS sel (Na 45), persil · QTY gabarit oignon 300 g (cru, en garniture) · ING citron entier 100 g
+- main_galettes_sarrasin_ce9f40 · TXT « casser 1 œuf (220 g) » · MISS 500 ml d'eau, sel
+- main_garbure_gasconne_545667 · ING `fava_bean_dried` 150 g « fresh » · MISS sel (Na 136), huile/graisse, eau · TXT « croustillant du plat »
+- main_girolles_a_la_creme_7d432d · MISS sel (Na 27) · DATA kid_friendly avec vin blanc · DATA dish_type main pour 150 g de girolles/portion (304 kcal)
+- main_gnocchi_f17041 · TIME four 45 min / cuisson 30 · ING pommes de terre crues comptées (OK) · DATA lactose_free OK
+- main_gozleme_aux_epinards_66eccf · QTY gabarit oignon 300 g · MISS 180 ml d'eau · TIME repos 30 min non compté · Na 954
+- main_gratin_de_chou_fleur_bad955 · TXT « béchamel… à 180 °C » · TXT « lame ressort sèche » · MISS sel
+- main_gratin_de_courgettes_35b5b8 · TXT ordre illogique : sauce aux œufs versée APRÈS 25 min de four · TIME dégorgement OK
+- main_gratin_de_navets_e164d6 · TXT « beurrez… avec de l'huile » · MISS sel · TIME four 55 + blanchiment / cuisson 55 (OK)
+- main_gratin_de_poireaux_808071 · TXT « béchamel à 180 °C », « lame ressort sèche » · MISS sel
+- main_gratin_de_potiron_839446 · DATA `base_creme_fraiche_b536c1` sans libellé · MISS sel
+- main_greek_briam_4091c5 · TXT « retirer le papier aluminium » jamais posé · TIME blanchiment + 35 min / 40
+- main_greek_briam_vegan_3fb054 · ING tofu nature / texte « fromage végétal râpé » · MISS sel (Na 53) · QTY oignon 300 g / texte l'utilise partiellement
+- main_greek_fasolada_612a6f · ING MAJEUR `white_bean_boiled` pour des haricots secs trempés 12 h + 1 h 30–2 h · MISS sel (Na 42) · DATA doublon de main_fasolada_grecque
+- main_haricots_blancs_au_four_000c13 · MISS tomates, thym, laurier, ail, bouillon 150 ml (tous dans le texte, absents de la composition) · QTY gabarit oignon 300 g · TXT 3 étapes de remplissage
+- main_haricots_frits_mexicains_4ba94a, main_haricots_frits_mexicains_a78841 · DATA doublon · « lame ressort sèche » dans les deux · QTY gabarit oignon 300 g pour 300 g de haricots
+- main_haricots_geants_au_four_1c018b · ING `gigante_bean` « cooked » : vérifier la base (sec ou cuit ?) → 353 kcal · QTY gabarit (oignon 300, tomate 480)
+
+## Lot 14
+(le gabarit oignon 300 / ail 9 / tomate 480 / huile 45 / épices 3 g est quasi général sur les `main_*` : n'est plus relevé que s'il contredit le plat)
+- main_haricots_rouges_a_la_toma_c44560 · TXT « mijoter à feu moyen à 180 °C / 150 °C », « lame ressort sèche… dorée » · MISS ail 9 g du texte
+- main_haricots_rouges_creoles_ac36f6 · MISS piment de Cayenne · RAS sinon
+- main_horta_b898d5 · MISS sel (Na 58) · TXT blanchir 5 min PUIS cuire 8 min (double cuisson) · ING citron entier 100 g
+- main_horta_vrasta_a5fca2 · ING endive / « chicorée sauvage » · TXT charabia « saisir… coloration dorée », « nacrez les herbes », « lame ressort sèche », « réduire le jus de citron » · DATA doublon de main_horta
+- main_humita_andine_fe7789 · MISS poivron rouge du texte · ING feuilles de maïs 80 g comptées comme aliment (non consommées) · QTY oignon 300 g pour 300 g de maïs (6 épis ≠ 300 g) · ING chèvre / queso fresco
+- main_hungarian_lecs_47d502 · DATA régime lactose_free mais pas vegan : œuf 55 g + tofu 200 g + épinards (lecsó = poivrons/tomate/oignon, sans épinard ni tofu) · TXT « à feu doux, à 80 °C »
+- main_italian_ribollita_a99546 · MISS 800 ml de bouillon, thym/romarin · QTY texte 200 g d'oignon / 300 g · MISS sel (Na 260)
+- main_japanese_vegetable_tempur_f57314 · QTY MAJEUR friture « 45 ml d'huile dans un wok profond à 175 °C » · QTY 1,6 kg de légumes pour 150 g de farine
+- main_jeera_aloo_f4c7a0 · ING huile de SÉSAME 45 ml pour un plat indien · TXT « mijoter 5 min à 150 °C » · ING citron entier 100 g (+« citron vert » en garniture)
+- main_kashke_bademjan_10dd33 · DATA `base_kashk_fd3ac6` sans libellé · MISS noix (garniture classique) OK · TXT « oignon rouge » / jaune, « julienne… badigeonnez de beurre », « nacrez les aubergines » · MISS huile de tournesol 45 ml jamais utilisée
+- main_kibbeh_3d2be1 · MISS huile de friture (45 ml « à 175 °C ») · QTY muscade 5 g · DATA vegan : kibbeh sans viande = kibbeh batata/yaqtin normalement avec potiron ou pomme de terre (liant absent)
+- main_kimchi_1dc648 · DATA MAJEUR kid_friendly avec 20 g de piment coréen · DATA dish_type main (accompagnement) · TIME 2 h + 24 h de fermentation / total 135 · TXT « servir sans attendre : la chaleur… » · TXT sel de salage rincé mais compté
+- main_korma_de_legumes_ddde08 · DATA korma sans noix de cajou/crème (normalement noix → nut_free à revoir si ajouté) · ING huile d'olive · MISS 100 ml d'eau · TXT étape de remplissage
+- main_koshari_classic_v4_q7n5z2 · ING lentille VERTE / texte « lentilles corail » (koshari = lentilles brunes) · ING huile de COCO 80 ml pour un plat égyptien · MISS sel (Na 43), cumin, piment, pois chiches · QTY 869 kcal/portion
+- main_laing_ee9d64 · MISS l'oignon est ajouté cru… « préalablement cuit » en fin : ordre incohérent · TXT étape de remplissage · QTY lait de coco 600 ml → 450 kcal (réaliste pour le laing)
+- main_legumes_braises_7030b7 · MISS sel (Na 73), herbes de Provence · QTY fenouil 100 g
+- main_lobio_5cdec6 · ING MAJEUR `kidney_bean_boiled` pour des haricots secs trempés 12 h + 1 h · QTY grenade 280 g en garniture · TXT « lame ressort sèche », « mijoter à 80 °C » · MISS coriandre fraîche
+- main_loubia_marocaine_e3b91b · TXT « si haricots secs » : ambigu mais cohérent avec cooked · TXT curcuma ajouté après cuisson · RAS
+- main_manakish_zaatar_580150 · DATA `base_za_atar_2badf3` sans libellé · MISS 100 ml d'eau · DATA 5 portions / texte 4 boules · TIME cuisson 35 pour 8 min de four · ING `bread_flour_blanched` (?)
+- main_mexican_calabacitas_f3511d · MISS sel (Na 46)
+- main_mexican_enfrijoladas_vega_d6a9a8 · DATA `base_tortilla_92c2a6`, `base_mole_d0034f`, `base_vegan_cheddar` sans libellé · DATA MAJEUR `nut_free` absent mais vérifier : mole contient souvent arachides/sésame · ING lait de coco / « crème de coco » · TXT 2 étapes de remplissage
+- main_moroccan_zaalouk_d90202 · ING coriandre graines / zaalouk = coriandre + persil frais · QTY oignon 300 g (le zaalouk n'en contient pas) · DATA diff hard
+- main_moussaka_fcf86b · DATA `base_bechamel_vegane_7a210c` sans libellé · TXT « oignon jaune » / `onion_raw` · DATA kid_friendly OK · MISS lentilles/protéine (moussaka vegan sans protéine, 8 g)
+- main_nepali_aloo_tama_4664a3 · ING MAJEUR aloo tama = pousses de bambou FERMENTÉES + haricots cornille (absents) · ING huile d'olive (moutarde attendue)
+- main_nepali_saag_92a5f7 · ING moutarde condiment 15 g / saag népalais = feuilles de moutarde · TXT cumin compté 2 fois (3 g) · TXT « lame ressort sèche » · MISS haricots verts/carottes non typiques
+- main_nepali_tarkari_9199c8 · RAS notable (huile 45 / texte 30)
+- main_nepali_tomato_achar_9575d1 · QTY aubergine 600 g > tomate 480 g dans un « tomato achar » · DATA kid_friendly avec 15 g de piment · DATA dish_type main (condiment) · MISS coriandre fraîche · TIME cuisson 12 pour grillage + réduction
+- main_papaya_salad_918f58 · ING `papaya_raw` (mûre, sucrée) pour de la papaye VERTE · QTY haricots verts 300 g · QTY 140 g de « jus de citron vert » (id citron entier) · QTY sucre de coco 10 + sucre blanc 15 g · TXT « bols préchauffés » pour une salade · TIME cook_min 15 sans cuisson · DATA `base_vegetarian_fish_sauce` sans libellé
+- main_parmigiana_di_melanzane_6bd49f · TXT sauce : « 240 g de tomates + 300 g d'oignon… 12 min à 180 °C » ; 400 g de sauce tomate jamais mentionnée · TXT 3 étapes de remplissage · Na 1354
+- main_parmigiana_di_melanzane_v_8f8b8b · QTY levure nutritionnelle 90 g · MISS oignon 300 g jamais utilisé · TXT « tendres et al dente » · DATA quasi-doublon de main_aubergines_parmigiana_sim_ad314c
+
+## Lot 15
+- main_patatas_bravas_98ec00 · TXT « réduire 10 min à 180 °C », « nacrez les pommes de terre » · QTY sauce tomate salée 400 g + 5 g de sel → Na 911 · DATA kid_friendly (sauce brava pimentée)
+- main_pav_bhaji_e99df8, main_pav_bhaji_vegan_c1437e · ING pois MANGE-TOUT / pav bhaji = petits pois · MISS sel (Na 45/43), pav bhaji masala · DATA gluten_free alors que le plat se sert avec des pav (pain) · DATA quasi-doublons
+- main_pico_de_gallo_31e006 · ING MAJEUR coriandre GRAINES 3 g / « coriandre fraîche ciselée » · QTY oignon 300 g pour 480 g de tomates · TXT « blanchir l'oignon », « lame ressort sèche » · TIME cook_min 10 sans cuisson · DATA dish_type main · ING citron vert entier 140 g
+- main_piperade_basque_3e1c65 · QTY huile 3 ml · MISS sel (Na 111) · ING piment ancho / « piment d'Espelette », poivrons « rouges et verts » / seulement rouges · DATA lactose_free OK
+- main_pisto_espagnol_7a98be · MISS thym/romarin · TXT « riz basmati »
+- main_pisto_manchego_09ba97 · MISS œuf 55 g jamais utilisé · TXT « 1 oignon rouge » / 300 g, « 1 poivron » / 320 g · DATA lactose_free mais pas vegan à cause de l'œuf fantôme
+- main_pkhali_46d354 · ING coriandre graines seule (pkhali = coriandre fraîche + fenugrec bleu) · QTY grenade 280 g dans la pâte · TXT « enfourner les boulettes » (pkhali se sert cru) · DATA dish_type main
+- main_plantain_frit_au_citron_60d4e3 · ING citron entier 100 g · DATA quasi-doublon de plantain nature · TIME passif 10 injustifié
+- main_plantain_frit_nature_323054 · TXT « démouler sur un plat » · RAS
+- main_poelee_de_legumes_f74508 · RAS (OK)
+- main_poelee_scandinave_de_legu_31947f · TXT étape de remplissage · RAS
+- main_polenta_ai_funghi_b96235 · MISS 1 L d'eau · TXT « réduire le feu à 150 °C » · QTY huile 65 ml / texte 45+20 OK · TXT le parmesan et le beurre sont ajoutés aux oignons, pas à la polenta
+- main_polenta_ai_funghi_vegan_ab13cd · QTY levure nutritionnelle 90 g · QTY huile 85,7 ml · TXT « démouler, napper de sauce » (pas de sauce)
+- main_polenta_aux_champignons_5af074 · MISS 1 L de bouillon (Na 793 déjà élevé via parmesan + 5 g sel) · QTY oignon 300 g ajouté après les champignons · TXT 2 étapes de remplissage · DATA quasi-doublon de ai_funghi
+- main_polenta_aux_champignons_v_b0e1ad · QTY levure nutritionnelle 90 g, 2 huiles d'olive (45,7 + 40 ml) dont une jamais utilisée · MISS bouillon 1 L, oignon jamais utilisé · DATA quasi-doublon
+- main_pommes_de_terre_braisees_7a56a8 · QTY texte en cuillères (2 c.s. soja = 30 ml / 45 ml ; 1 c.s. sucre ; 1 gousse / 9 g ; 1 c.s. sésame / 20 g) · ING huile d'olive · DATA gluten_free absent alors que tamari (OK prudent)
+- main_potee_auvergnate_fcc003 · MISS sel « 1 c. à café » (Na 153) · TXT « blanchir… éliminer l'amertume » puis 2 h · RAS sinon
+- main_poutine_1344e1 · ING MAJEUR cottage 0,4 % SÉCHÉ pour du fromage en grains · MISS huile de friture, sauce brune (seulement 2,5 g de bouillon + eau) → 149 kcal, L 0.3 pour une poutine · TXT « servir à 70 °C »
+- main_poutine_vegan_18f8c2 · MISS huile de friture · DATA `base_vegan_cheddar` sans libellé · TXT « pain pita » avec une poutine
+- main_pozole_82d096 · MISS ail, 1 L de bouillon · TXT « bouillon chaud à 180 °C », « enfourner à 180 °C » un pozole · ING piments frais 15 g / « piments séchés réhydratés » · DATA kid_friendly
+- main_pupusas_9d2c72 · ING fromage blanc 2,5 % « râpé » (quesillo attendu) · TXT « faire cuire 300 g de haricots » alors que cuits · MISS huile
+- main_pupusas_aux_haricots_fc8bfd · ING parmesan 150 g → Na 1146 · TXT « plaque préchauffée à 200 °C », « nacrer les pupusas » · TIME passif 30 injustifié · MISS huile
+- main_pupusas_aux_haricots_vega_0e0c06, main_pupusas_vegan_4595d8 · DATA quasi-doublons (+ loroco) · DATA `base_vegan_cheddar` sans libellé · TXT « comal à 180 °C » · DATA nut_free absent (fromage végétal de cajou ?)
+- main_rajma_masala_bce2a4 · MISS sel (Na 19) · ING huile de SÉSAME 45 ml pour un plat indien · MISS curcuma/coriandre moulue
+- main_rasam_34dc5a · ING moutarde de DIJON 15 g dans un rasam · MISS 700 ml d'eau du texte (200 + 500) · QTY bouillon 750 ml en plus → soupe diluée · DATA dish_type main (soupe) · DATA kid_friendly « intensément poivrée »
+- main_ratatouille_quick_6eb9af · TIME mijotage 20 + tomates 10 + légumes ≈ 50 min / cuisson 30 · RAS sinon
+- main_ribollita_toscane_4cae34 · MISS 900 ml de bouillon · TXT « levure nutritionnelle » absente · DATA quasi-doublon de main_italian_ribollita
+- main_romanian_zacusc_a929ee · DATA MOJIBAKE dans le titre « ZacuscÄƒ » · TXT zacuscă se sert froide (conserve) / « servir sans attendre : la chaleur » · DATA dish_type main (tartinade) · TIME grillage 5 min insuffisant
+
+## Lot 16
+- main_sancocho_733f70 · Na 1442 (18,8 g de bouillon + 5 g de sel) · TXT pommes de terre et maïs ajoutés deux fois · ING coriandre graines / fraîche · TXT « pain pita » + « riz blanc » · MISS manioc/plantain/yuca (base du sancocho)
+- main_soup_k3d2p1 · RAS (cohérente)
+- main_spatzle_au_fromage_586859 · DATA `base_spaetzle_a22916` sans libellé + le texte refait la pâte (250 g de farine, 180 ml de lait) → double comptage possible avec l'œuf 55 g · ING parmesan 150 g (emmental/bergkäse attendu) → Na 1419 · TXT « fromage filant »
+- main_taboule_760c36 · MISS sel (Na 27) · TIME 30 min de réhydratation + 30 min de froid / total 11 · QTY persil 30 g (taboulé libanais = persil majoritaire, cf. entry_taboule 150 g) · DATA kid_friendly OK
+- main_tarte_a_la_tomate_a1d175 · QTY huile 2 ml · MISS sel · TXT four 180 puis 190 °C · TXT étape de remplissage
+- main_tarte_oignon_alsacienne_c49dd2 · DATA `base_creme_fraiche` sans libellé · MISS sel · TIME confit 30 + repos 20 + four 35 ≈ OK
+- main_tarte_roquefort_et_noix_b24bec · DATA MAJEUR kid_friendly avec roquefort · ING poire rôle « vegetable » · TXT « lame ressort sèche » · QTY 718 kcal
+- main_tempura_de_legumes_20cc9f · QTY MAJEUR 500 ml d'eau pour 150 g de farine (pâte 1:1 attendue) · MISS huile de friture (45 ml « friteuse ») · TXT étape de remplissage
+- main_tian_provencal_4c7999 · MISS sel (Na 48) · TIME four 45–50 min / cuisson 35
+- main_tofu_froid_japonais_506c62 · MISS nori · TIME cook_min 9 sans cuisson · DATA dish_type side OK
+- main_tourte_aux_champignons_85adfb · ING pâte feuilletée VÉGÉTALE alors que beurre et crème dans la recette (cohérent végétarien, mais doublon avec pur beurre ailleurs) · MISS sel
+- main_truffade_auvergnate_01a284 · DATA MAJEUR truffade « vegan » : fromage végétal 300 g au lieu de tome fraîche, huile 3 ml pour 900 g de pommes de terre sautées 25 min · DATA `base_vegan_cheddar` sans libellé · DATA nut_free absent
+- main_turkish_imam_bayildi_0668d1 · MISS sel (Na 43) · DATA TRIPLE doublon (main_aubergines_imam_bayildi, main_aubergines_farcies_turque) · TXT étape de remplissage
+- main_varenyky_pomme_de_terre_0bb7cf · TXT « pétrir 10 min à feu doux », « lame ressort sèche » · TXT ordre inversé : poêlés PUIS cuits à la vapeur · QTY gabarit oignon 300 g / « un oignon »
+- miso_broth_618f1e · ING bouillon de légumes / « dashi végétarien » · Na 1177 · DATA kid_friendly OK
+- noodle_pad_see_ew_41b095, noodle_pad_see_ew_classic_v3_n8x4p2 · MISS œufs 110 g jamais utilisés dans le texte (pad see ew = œuf brouillé) · ING brocoli chinois CUIT sauté 2 min · DATA doublon · (41b095) nouilles « hydrated » 400 g / (classic) « dry » 400 g avec les mêmes kcal → l'un des deux est faux · ING sauce soja légère au lieu de soja sucrée/sombre · MISS coriandre, citron vert du texte
+- noodle_pad_see_ew_vegan_162330 · QTY MAJEUR tofu 800 g (200 g/p) pour 200 g de nouilles → P 30,6 · TXT « vermicelles de riz » / pad see ew = nouilles larges · ING huile de coco, gingembre (non typiques)
+- pasta_alfredo_k3d2p1 · RAS (728 kcal cohérent pour 100 g de pâtes + 20 g de beurre)
+- pasta_arrabbiata_a51938 · QTY pâtes 200 g pour 4 (50 g/p) · QTY huile 25 ml / texte 45 ml · MISS persil, citron, basilic du texte · TXT 3 étapes de remplissage · DATA kid_friendly avec piment
+- pasta_bibim_guksu_9c8f25 · DATA `base_soba_noodles`, `base_gochujang` sans libellé · MISS œuf 55 g jamais utilisé · TXT « sauce émulsionnée puis réduite à feu vif » (sauce crue normalement) · Na 1427 · ING soba (sarrasin) / somyeon (blé) · DATA gluten_free absent OK
+- pasta_carbonara_veg_k3d2p1 · QTY pâtes 200 g pour 4 · MISS huile d'olive du texte · TXT 5 g de sel en plus de l'eau à 10 g/L (Na 893)
+- pasta_chow_mein_76aca0 · TXT « lame ressorte sèche » pour des nouilles · MISS huile de sésame 45 ml jamais utilisée (2 huiles 45 ml) · QTY oignon 300 g · Na 1299
+- pasta_gnocchi_al_pesto_5bb01c · DATA MAJEUR 15 g de sel de l'eau de cuisson comptés comme consommés · ING eau 1,5 L comptée (375 g/p) · TXT « gnocchi dorés » à l'eau, le texte refait un pesto alors que base_pesto est utilisée · QTY pesto 50 g pour 4 · DATA `base_pesto` sans libellé
+- pasta_gnocchi_al_pesto_vegan_954303 · DATA MAJEUR titre « Vegan » mais régime vegan absent (base_pesto classique au parmesan ?) · QTY levure nutritionnelle 90 g · DATA `base_gnocchi_vegan` sans libellé
+- pasta_gnocchi_pesto_classic_v2_m7k2q4 · QTY ail 25 g dans un pesto · TXT étape conservation · DATA doublon de gnocchi_al_pesto
+- pasta_gnocchis_a_la_tomate_8e1632 · DATA MAJEUR 15 g de sel + 1,5 L d'eau de cuisson comptés · TXT « sauce à la tomate végétarien », 2 étapes de remplissage
+- pasta_gnocchis_a_la_tomate_vega_ca281e · QTY levure nutritionnelle 90 g « râpée » · QTY gabarit tomate 480 g
+- pasta_lagman_aaae70 · ING huile de coco pour un plat ouïghour · QTY gabarit · Na 1288 · DATA `base_noodles` sans libellé
+- pasta_lasagnes_8adf61 · DATA `base_bechamel` 400 ml + texte refait la béchamel (60 g de beurre + lait, SANS farine) · TXT « retirer le papier aluminium » jamais posé · QTY 795 kcal · TXT « pâtes sèches » sans précuisson ni liquide suffisant
+
+## Lot 17
+- pasta_lasagnes_de_legumes_ultra_9b6a4e · QTY MAJEUR lait de coco 600 ml dans la béchamel → 690 kcal, L 43 · MISS levure nutritionnelle du texte · DATA huile d'olive en double (30 ml + 50 g) · QTY pâtes 200 g pour 4 · TXT 2 étapes de remplissage
+- pasta_lasagnes_vegan_412e90 · TXT béchamel = lait d'avoine + levure nutritionnelle sans farine ni matière grasse (et `base_bechamel_vegane` compté en plus) · TXT « retirer le papier aluminium » jamais posé · TXT garniture « noix de coco »
+- pasta_mac_and_cheese_b3073b · TXT « beurre fondu à 50 °C », « béchamel à 80 °C » · QTY 1 L d'eau non salée pour 320 g de pâtes · MISS ciboulette
+- pasta_mac_and_cheese_vegan_4acb30 · QTY MAJEUR farine 200 g pour le roux (20 g dans la version classique) → 803 kcal, G 106 · ING lait de coco / lait végétal · DATA `base_vegan_cheddar` sans libellé
+- pasta_nouilles_coreennes_aux_legumes_82115e · TXT « servir tiède… la chaleur est essentielle » · MISS oignons verts · QTY oignon 300 g (japchae)
+- pasta_nouilles_satay_864b31 · QTY MAJEUR 400 ml de crème épaisse + 30 g de beurre + 90 ml d'huile → 992 kcal, L 72 (satay = lait de coco) · MISS huile 2× 45 ml / composition 45 · ING citron vert entier 140 g
+- pasta_pasta_al_pomodoro_3ffaef · MISS sel (Na 143), sucre · MISS parmesan 30 g jamais utilisé
+- pasta_pasta_alla_norma_5cc26e · MISS sel (Na 66) · ING ricotta fraîche / alla norma = ricotta SALATA
+- pasta_pasta_alla_norma_a_la_ric_d282a6 · DATA 4 recettes alla norma quasi identiques (5cc26e, d282a6, 1538f4, 6e1a92) · DATA `base_cashew_ricotta` 60 g / texte « fromage végétal râpé » · DATA kid_friendly incohérent entre versions
+- pasta_pasta_alla_norma_a_la_ricotta__1538f4 · ING « ricotta salée » absente : parmesan à pâte dure 60 g jamais utilisé dans le texte · ING pâtes complètes / « pâtes de blé » · TXT « croustillant des aubergines »
+- pasta_pasta_alla_norma_vegan_6e1a92 · QTY ricotta de cajou 250 g → 755 kcal · MISS sel
+- pasta_pasta_e_fagioli_68905b, pasta_pates_et_haricots_f46830 · DATA doublon · TXT « lame ressort sèche » dans les deux, « blanchir l'oignon dans l'huile » · QTY 320 g de pâtes + 300 g de haricots → 582 kcal, Na 1128
+- pasta_pasta_puttanesca_e14266, pasta_puttanesca_v1x9q2 · DATA doublon · (v1x9q2) QTY piment 30 g + kid_friendly, Na 1404, ail 25 g · (e14266) TXT « lame ressort sèche »
+- pasta_pates_carbonara_7e4f1a · DATA parmesan en double (56 g pâte dure + 24 g râpé) · TXT le « mélange crémeux » n'est jamais préparé, « crème fraîche » mentionnée · TXT « croustillant » · DATA doublon de pasta_carbonara_veg · QTY pâtes 200 g pour 4
+- pasta_pates_primavera_74711d, pasta_primavera_quick_3f5fc5 · DATA doublon · (74711d) MISS carotte 200 g jamais utilisée · ING pois mange-tout rôle plant_protein
+- pasta_persian_ash_reshteh_8cb79c · TXT « mijoter 20 min à 160 °C » · QTY herbes 50 g au total (ash reshteh = ~300 g d'herbes : persil, coriandre, aneth, épinard) · ING coriandre GRAINES / coriandre fraîche · DATA `base_kashk`, `base_reshteh_noodles` sans libellé · MISS oignons frits à la menthe
+- pasta_pesto_k3d2p1 · TXT « 400 g de pâtes fraîches » / id pâtes sèches · TXT étape « vin blanc » de remplissage · DATA kid_friendly OK
+- pasta_pierogi_aux_pommes_de_6b3efe · TIME cuisson des pommes de terre non comptée (cook 15) · QTY beurre 40 g / texte « 2 c.s. » + caramélisation · DATA doublon (cf. dumpling_pierogi_*)
+- pasta_plain_k2d1p1 · DATA MAJEUR eau de cuisson 4 L comptée (1000 g/portion) · ING huile de COCO sur des pâtes nature · TXT sel 10 g/L (40 g) / composition 4 g
+- pasta_soupe_de_nouilles_thukpa_9c3ce8 · Na 1748 · TXT « nouilles de riz » / base_noodles (blé) · MISS coriandre, oignons verts, citron, épices · TXT sauce soja ajoutée après le service
+- pasta_yakisoba_c6cc19 · ING soba (sarrasin) / yakisoba = nouilles de blé · MISS levure nutritionnelle 15 g · TXT étape de remplissage
+- protein_banh_mi_tofu_9b1ea2 · ING coriandre graines / « coriandre fraîche ciselée » · QTY concombre 350 g dans 4 sandwiches · DATA `base_vegan_mayonnaise` sans libellé
+- protein_buddhas_delight_f736c7 · ING shiitake FRAIS / texte séchés réhydratés · ING lait de coco 45 ml / « 30 ml d'huile de coco » · ING vermicelles de soja / « vermicelles de riz »
+- protein_bulgogi_tofu_fc5de9 · TIME pressage 20 min non compté, cuisson 45 pour ~10 min · QTY huile de sésame 60 ml + sel 5 g + soja → Na 919 · DATA dish_type side
+- protein_bun_f5c7db · MISS champignons 300 g jamais utilisés · TXT tofu ajouté cru 1 min · DATA `base_vegetarian_fish_sauce` sans libellé · ING huile de coco
+- protein_chinese_mapo_tofu_7edbe0 · ING `base_pate_piment` / « sauce aux haricots noirs fermentés » (doubanjiang) · QTY 750 ml de bouillon pour 400 g de tofu (sauce courte attendue) · MISS fécule de maïs
+- protein_gado_gado_2412da · MISS œuf 55 g jamais utilisé, sucre 10 g · QTY 798 kcal (lait de coco 400 ml + arachides + huile 45) · QTY oignon 300 g en crudités · TXT « bols préchauffés » pour une salade
+
+## Lot 18
+- protein_gadogado_c0f543 · ING beurre 30 g dans un gado-gado · MISS ail, piment, sésame du texte · QTY oignon 300 g frits · TXT 3 étapes de remplissage · DATA TRIPLE doublon (protein_gado_gado, gadogado, gadogado_indonesien)
+- protein_gadogado_indonesien_200c65 · ING beurre fondu 30 g « selon les principes de la cuisine indonésienne » · QTY jus de citron vert 140 g dans la sauce · TXT étape de remplissage
+- protein_mapo_tofu_4b4458, protein_mapo_tofu_au_champignon_ba9276 · DATA doublons de protein_chinese_mapo_tofu · MISS 200 ml de bouillon, fécule · (ba9276) TXT « wok à 180 °C », étape de remplissage
+- protein_moqueca_a65174 · ING coriandre GRAINES / « coriandre ciselée » · MISS 100 ml de bouillon · ING citron vert entier 140 g
+- protein_pad_thai_vegan_33c0f3 · TXT « vermicelles de riz larges » (id vermicelles fins) · DATA `base_vegetarian_fish_sauce` jamais utilisée dans le texte · MISS œuf absent OK (vegan)
+- protein_palak_paneer_vegan_bdac46 · TXT « blanchir à 90 °C » · TXT « pain pita » avec palak paneer · RAS
+- protein_paneer_butter_masala_vega_6c63de · ING huile d'olive · TXT huile ajoutée 2 fois, « croquant des oignons caramélisés » dans une sauce mixée · MISS noix de cajou (classique) OK pour nut_free · TIME cuisson 10 pour ~15 min
+- protein_paneer_tikka_94f80a · DATA `base_paneer_04e1db` sans libellé · TIME marinade 1 h non comptée · TXT « lame ressort sèche », épices ajoutées 2 fois · QTY oignon 300 g · ING citron entier 100 g
+- protein_paneer_tikka_vegan_8bf0a0 · MISS sel (Na 46) · TIME marinade non comptée · TXT four 12 min PUIS « feu vif » 3 min
+- protein_tofu_braise_aux_champigno_c515dd · QTY bouillon 750 ml / texte 100 ml → Na 866 · QTY fécule 20 g · MISS sésame en graines · ING shiitake frais OK
+- protein_tofu_teriyaki_ffcb47 · DATA `base_teriyaki` 60 ml / texte 40 ml + 10 g de sucre de coco absent · QTY huile de coco 45 ml (dont 30 ml DANS la sauce) · TIME pressage 20 min · MISS concombre, menthe, riz de service
+- red_curry_paste_3ee8f5 · ING MAJEUR piments FRAIS 40 g / texte piments SÉCHÉS réhydratés (40 g secs ≈ 150 g réhydratés) · ING miso au lieu de pâte de crevettes (OK vegan) · TXT « servir dans un bol… avec du riz » pour une pâte de curry · QTY 11 portions de 25 kcal
+- rice_beignet_de_riz_nepalais_7ac83e · MISS sel (Na 5, « 1 c. à café » dans le texte) · TIME riz cuit la veille non compté · ING beignet népalais (sel roti) = riz trempé moulu + sucre, pas d'oignon · TXT « poêle à 180 °C »
+- rice_bibimbap_classic_k91x2a · MISS huile, sauce soja, courgette jamais utilisée · QTY ail 20 g ajouté cru à la fin · TXT « 1 œuf au plat » / 220 g · DATA gluten_free avec gochujang (contient du blé en général)
+- rice_bibimbap_tofu_a265dc · DATA gluten_free absent OK · QTY 593 kcal · MISS œufs 220 g jamais utilisés dans le texte · DATA doublon partiel
+- rice_bigos_497b21 · ING MAJEUR riz 300 g CRU ajouté « cuit » à la fin : le bigos ne contient pas de riz (495 kcal) · TIME 45 + 10 min de mijotage / cuisson 30 · MISS champignons séchés, levure nutritionnelle · Na 1041
+- rice_biryani_classic_k82x7b · ING huile d'olive · MISS coriandre, safran · TXT « feu très doux… à 180 °C » · TXT 8 g de sel + « eau fortement salée » · QTY garam masala 12,5 g
+- rice_bun_cha_e5c855 · TXT MAJEUR « blanchir laitue, menthe, concombre 2 min » · TXT vermicelles cuits 12 min « jusqu'à absorption » · ING coriandre graines · MISS sel · DATA `base_vegetarian_fish_sauce` sans libellé · DATA doublon partiel de protein_bun
+- rice_crepe_vietnamienne_71beca · QTY garniture 900 g (tofu 400 + oignon 300 + …) pour 150 g de farine · MISS 150 ml d'eau, huile de coco, sauce · TXT « 200 g de tofu » / 400 g
+- rice_dolma_au_cumin_b40a25 · MISS sel (Na 16) · QTY riz 300 g / texte 150 g, oignon 300 / 150 · TIME cuisson 10 + 45 / 45 · ING citron entier 100 g
+- rice_dolma_au_persil_6aeb1e · QTY riz 300 / 150, oignon 300 / 150 · DATA doublon de dolma_au_cumin · DATA kid_friendly OK
+- rice_donburi_tofu_teriyaki_a71cfc · QTY oignon 300 g · ING huile de coco · TXT « riz crémeux » · DATA `base_teriyaki` sans libellé
+- rice_fried_classic_v2_k4m8t1 · ING MAJEUR riz CRU 300 g / texte « 300 g de riz cuit froid » (même défaut que main_fried_rice) · TXT « oignon vert… légèrement dorée »
+- rice_fried_rice_chinois_9d1d40 · ING riz cru 300 g + « cuire 8 min » (sous-cuit) · TXT « 2 œufs » = 110 g OK · DATA doublon de main_fried_rice
+- rice_fried_rice_chinois_vegan_c2b92d · ING MAJEUR riz CRU / « riz cuit froid de la veille » · ING huile de sésame 45,7 ml pour sauter (brûle à feu vif)
+- rice_goi_cuon_efb313 · MISS sel/sauce (Na 47) · QTY ail 20 g jamais utilisé · TXT « blanchir les carottes » (crues en rouleau) · DATA dish_type main · TIME cuisson 20 ≈ OK
+- rice_jeera_rice_a4633c · TXT « huile de coco parfumée » / beurre · TXT riz basmati / id riz blanc standard · TXT « eau bouillante salée » + 5 g de sel
+- rice_karelian_pies_106cca · QTY MAJEUR 500 ml d'eau pour 350 g de farine (pâte liquide) · QTY riz 300 g cru dans 250 ml de lait (absorption impossible) · MISS œufs 220 g jamais utilisés (beurre d'œuf traditionnel) · QTY 748 kcal · TXT « julienne les bords », « lame ressort sèche »
+- rice_kimbap_4cb3da · MISS œufs 220 g jamais utilisés dans le texte, concombre non mentionné · TXT « nacrer le riz », « 10 min à température ambiante » · TXT « wasabi » (japonais) · QTY épinards 300 g + ail 20 g · DATA gluten_free OK
+
+## Lot 19
+(SYSTÉMIQUE « variantes vegan » : levure nutritionnelle 60–90 g, 2 huiles d'olive 45,7 + 40 ml, beurre végétal 30 g, riz/pâtes 320 g au lieu de 150–200 g → +250 kcal par rapport à la version d'origine)
+- rice_kimchi_bokkeumbap_2cbfe6 · DATA `base_kimchi` sans libellé · ING riz CRU / « riz cuit froid » · QTY huile de colza 45 ml ajoutée À LA FIN · TXT « 2 œufs » / 220 g
+- rice_kimchi_fried_rice_1f3e90 · TXT MAJEUR « riz blanc CRU non enrichi froid » sauté 3 min · QTY oignon doux 300 g cru à la fin · MISS gochujang 5 ml, huile végétale 45 ml jamais utilisée · DATA doublon · TXT étape « épices de votre choix »
+- rice_mexican_rice_94bd67 · QTY échalote 300 g · TXT « texture crémeuse » · Na 955
+- rice_mujadara_classic_ee2456 · ING MAJEUR `green_lentil_boiled` alors que les lentilles sont cuites 20 min dans 600 ml (texte = sèches) → protéines/kcal sous-estimées · QTY cumin 7,5 g
+- rice_nasi_goreng_edfce4 · ING riz cru / « riz froid » · DATA `base_fried_onion` sans libellé · TXT « pain pita tiède » avec un nasi goreng · MISS kecap manis, sambal
+- rice_nasi_goreng_vegan_bcc9cb · ING riz cru / « riz cuit froid » · QTY sauce soja 20 ml / 45 ml · QTY oignon frit 20 / 40 g · DATA doublon
+- rice_onigiri_au_saumon_d_umeboshi_cba6bf · DATA MAJEUR id « au_saumon » pour une recette vegan · QTY 2 portions de 150 g de riz cru (619 kcal) / texte 80 g de riz cuit par onigiri · MISS sel · TXT « nori crépite lors de la cuisson » · DATA kid_friendly
+- rice_onigiri_nature_cd56ab · TXT « enfourner les onigiri 5 min à 180 °C… croustillants » · ING riz vinaigré (sushi) pour des onigiri · QTY 2 portions à 646 kcal · DATA triple doublon
+- rice_onigiri_umeboshi_7a5ef3 · TXT « reposer 10 min à 60 °C », « creuser avec la lame d'un couteau », « nori crépite » · DATA doublon (4 portions ici / 2 ailleurs)
+- rice_pad_krapow_63acfb · ING riz CRU / « riz cuit » sauté 8 min · TXT « blanchir le tofu », « nacrer les légumes » (aucun légume), « al dente des pâtes » · ING basilic / basilic thaï sacré · DATA `base_vegetarian_oyster_sauce` sans libellé · MISS œuf au plat (servi dessus)
+- rice_paella_de_verduras_8e54fd · QTY petits pois 400 g jamais mentionnés dans le texte · MISS sel · QTY gabarit oignon 300 g
+- rice_paella_e8b8b3 · ING riz long / paella = riz rond · DATA 4 paellas quasi identiques (8e54fd, e8b8b3, c7m3x1, s9k2x1)
+- rice_paella_veg_c7m3x1 · TXT « eau chaude végétale », « lame ressort sèche », haricots verts « si désiré » alors que dans la composition · TXT 2 étapes de remplissage
+- rice_paella_veg_classic_v4_s9k2x1 · ING riz long · QTY 900 ml « 2 fois le volume » · TXT « assiettes préchauffées » après « servir dans la poêle »
+- rice_pancit_bfd33e · DATA `base_rice_noodle` / pancit bihon OK · Na 1029 · ING huile de sésame 45 ml pour sauter · MISS oignons verts, citron (calamansi)
+- rice_plov_903de4 · ING huile d'olive (plov = huile de coton/tournesol) · MISS 500 ml d'eau, cumin présent · QTY pois chiches 400 g « coupés en deux » · QTY ail 20 g (plov = têtes entières) OK
+- rice_poivrons_farcis_447217 · QTY poivrons 320 g (≈ 2 poivrons) pour 4 portions + 300 g de riz cru / texte 200 g · QTY oignon 300 g · TIME riz 10 + four 45 / cuisson 55 OK
+- rice_poivrons_farcis_au_riz_be3ddc · DATA doublon · QTY poivrons 320 g pour 4 · TXT « servir avec un yaourt » (vegan)
+- rice_poivrons_farcis_vegetarie_f6c4f5 · TXT « 1 oignon », « 1 gousse » / 20 g, « légumes hachés » non définis · DATA triple doublon
+- rice_poke_bowl_ee65ef · TXT « enfourner les graines de sésame 5 min à 180 °C », « servir chaud » un poke · ING riz cru OK (cuit dans le texte) · QTY 673 kcal (avocat 400 g + tofu 400 g) · MISS sucre du riz à sushi
+- rice_rice_and_beans_caribeen_e3de29 · MISS lait de coco (rice and peas caribéen), piment · TXT « blanchir l'oignon à feu vif » sans huile, « enfourner 25 min à 180 °C » après ébullition · QTY huile 45 ml jamais mentionnée
+- rice_risotto_ai_funghi_395f00 · ING MAJEUR `porcini_mushroom_raw` 20 g pour des cèpes SÉCHÉS (≈ 200 g frais) · QTY riz 150 g pour 4 (38 g/p) → risotto léger 290 kcal · TXT 3 étapes de remplissage · MISS eau de trempage 200 ml
+- rice_risotto_ai_funghi_vegan_41360e · ING cèpes séchés = raw · QTY riz 320 g / version classique 150 g · QTY levure 90 g, 2 huiles (45,7 + 40 ml), beurre végétal 30 g jamais utilisé → 659 kcal · TXT « croustillant » d'un risotto
+- rice_risotto_al_limone_4088e5 · DATA `lemon` en ml · TXT « bouillon à 80 °C » · QTY riz 150 g pour 4 · DATA kid_friendly OK
+- rice_risotto_al_limone_vegan_a234ae · QTY riz 320 g, levure 90 g, 2 huiles → 588 kcal (277 en classique) · MISS ail présent OK · TXT « croustillant »
+- rice_risotto_aux_champignon_25ed38 · ING cèpes séchés = raw · QTY beurre 40 g / texte 20 + 25 g · Na 1169 · MISS eau de trempage
+- rice_risotto_aux_champignons_v_13d611 · QTY riz 320 g · DATA doublon de risotto_ai_funghi_vegan · QTY persil 30 g
+- rice_risotto_citron_asperges_f2f765 · ING asperges BOUILLIES comptées alors que le texte les blanchit · ING citron entier 100 g (jus + zeste) · TXT « beurre fondu battu pour incorporer l'air », étape conservation · DATA kid_friendly
+- rice_risotto_citron_asperges_v_e20e67 · DATA asperges 400 g → « 53 g/p » (portion mal calculée : 100 g/p attendu) · QTY riz 320 g · MISS huile 25 ml mentionnée OK
+- rice_riz_a_la_tomate_portugais_c6cec0 · QTY 750 ml de bouillon pour 300 g de riz + 480 g de tomates (arroz de tomate = « malandrinho », OK) · Na 979 · DATA kid_friendly OK
+
+## Lot 20
+- rice_riz_citronne_indien_05c717 · ING riz CRU / « riz basmati cuit » · TXT « enfourner 10 min à 180 °C » · QTY oignon 150 g + ail 20 g (absents du lemon rice) · MISS dal (urad/chana) · ING citron entier 100 g
+- rice_riz_et_pois_caribeen_72144c · MISS 400 ml d'eau · TXT « pois » = haricots rouges OK · DATA doublon de rice_rice_and_beans_caribeen (celle-ci avec lait de coco) · QTY 612 kcal
+- rice_riz_frit_2763d3 · ING riz cru / « riz cuit froid » · TXT riz sauté 2 fois · QTY oignon 300 g · Na 1021 · DATA 6e recette de riz sauté (main_fried_rice, rice_fried_classic, rice_fried_rice_chinois, …_vegan, riz_frit, vegetable_fried_rice)
+- rice_riz_jollof_360727 · TXT MAJEUR ordre absurde : « ciseler l'oignon 1 min à feu doux » avant de chauffer l'huile, ail « saisi 7 min », riz « émulsionné », enfourner sans liquide, « lame ressort sèche » · MISS eau/bouillon (riz cru sans liquide), piment · TXT « pain pita »
+- rice_riz_pilaf_turc_52cfe9 · TXT « julienne 300 g de riz », « enfourner à 180 °C… réduire au minimum », « lame ressort sèche », remplissage · MISS sel · QTY oignon 300 g
+- rice_riz_saute_au_kimchi_vegan_af038b · ING riz court CRU OK (cuit dans le texte) · QTY huile de sésame 60,9 ml (45,7 + 15,2) · DATA kid_friendly avec kimchi
+- rice_rouleaux_de_printemps_frits_e4d172 · MISS vermicelles 150 g jamais utilisés · TXT « blanchir à feu moyen » · QTY oignon 300 g · DATA dish_type main / « snack » dans le texte · MISS sel
+- rice_sabzi_polo_e099d2 · TXT « eau salée à 180 °C », « lame ressort sèche » · ING coriandre GRAINES / herbe fraîche · QTY herbes 75 g pour 300 g de riz (sabzi polo ≈ 1 part d'herbes pour 1 de riz) · TXT fenugrec « frais »
+- rice_salad_k3d2p1 · DATA MAJEUR régime `raw` pour une salade de riz CUIT avec légumes saisis · TXT « saisir tomates et concombre 3 min » · MISS persil, levure nutritionnelle · TXT 2 étapes de remplissage
+- rice_salade_de_concombre_japonaise_d66133 · TXT MAJEUR « blanchir » puis « saisir jusqu'à dorure » le concombre, « réduire la vinaigrette 2 min » (sunomono cru) · DATA kid_friendly OK · TIME cook 10
+- rice_serbian_uve_4a83e2 · DATA MOJIBAKE « Serbian ÄuveÄ » (Đuveč) · TXT four 35 + 10 min / cuisson 45 OK
+- rice_soupe_de_riz_mastava_6db971 · TXT « enfourner la soupe 25 min à 180 °C » · QTY 300 g de riz + 600 g de pommes de terre dans 750 ml → pas une soupe, 541 kcal · MISS épices, tomate · DATA kid_friendly OK
+- rice_spring_rolls_45fdfa · TXT charabia : « blanchir » après avoir sauté, « rouler jusqu'à dorure blonde », « nacrer les champignons » · MISS vermicelles, ail jamais utilisés · QTY oignon 300 g, chou 400 g pour 120 g de galettes
+- rice_tacu_tacu_9e0073 · TXT MAJEUR tacu tacu = galette de riz et haricots écrasés POÊLÉE, ici riz pilaf « grains séparés » · ING coriandre graines · Na 950 · DATA kid_friendly OK
+- rice_tamarind_rice_2e5463 · ING huile de SÉSAME (gingelly OK en Inde du Sud) · RAS sinon · DATA nut_free absent OK (arachides)
+- rice_tteokbokki_0861f2 · ING MAJEUR `puffed_rice_cakes` (galettes de riz soufflé, ~390 kcal/100 g secs) pour des tteok (~230 kcal/100 g) → 553 kcal · MISS 400 ml de bouillon · QTY oignon 300 g · DATA kid_friendly avec gochujang
+- rice_uzbek_vegetable_plov_2ff045 · ING épinards 300 g dans un plov (carotte jaune attendue) · ING coriandre feuille séchée · TXT « texture crémeuse » · MISS carottes, pois chiches, cumin OK
+- rice_vegetable_biryani_160da2 · DATA titre « à la Noix de Coco » : aucune noix de coco sauf l'huile · MISS oignons frits séparés · TXT « lame ressortant sèche » · QTY 572 kcal
+- rice_vegetable_fried_rice_cd489b · ING riz cru / « riz froid » · TXT « oignon pice » (coquille) · QTY oignon 300 g
+- rice_vegetable_pulao_a0ed3e · ING huile de coco · QTY poivron 320 g + mange-tout (pulao = petits pois) · Na 984
+- rice_vegetable_sushi_9aad8a · QTY MAJEUR avocat 400 g + tofu 400 g → 706 kcal pour des sushis · MISS sel · TXT 3 étapes de remplissage (« ajouter du tofu ou des pois chiches ») · MISS sauce soja
+- rice_white_k1d1p1 · QTY eau 450 ml = 1,5× / texte « 1,2 fois le volume » · RAS
+- salad_achichuk_e3f0c9 · QTY oignon 300 g (achichuk = oignon abondant, OK) · ING poivron rouge (achichuk = tomate, oignon, piment) · TXT « julienne les tomates », « blanchir l'oignon » · ING vinaigre / pas de vinaigrette traditionnelle
+- salad_andine_au_fromage_c537bd · ING parmesan 150 g (queso fresco attendu) → Na 1249 · TXT « ciseler les oignons 2 min jusqu'à translucides », « julienne les tomates 2 min », « réduire la vinaigrette », « bols préchauffés » · ING maïs doux cru (choclo cuit)
+- salad_andine_au_fromage_vegan_566f05 · DATA régime `raw` avec maïs (souvent cuit) et fromage végétal transformé · DATA `base_vegan_cheddar` sans libellé, nut_free absent · TIME cook 17 sans cuisson
+- salad_asiatique_sesame_948f03 · MISS vinaigre de riz · Na 939 (soja 45 ml + sel 5 g) · TIME cook 20 sans cuisson · TXT étape de remplissage
+- salad_bulgarian_shopska_salad_v_adc716 · ING tofu nature / « fromage végétal râpé » · DATA régime raw OK · TIME cook 10 sans cuisson
+- salad_caprese_classic_k21x9d · QTY basilic 100 g (≈ 10× trop) · TXT « chaleur et croustillant du mozzarella », « le mozzarella » · DATA dish_type main
+- salad_chilienne_tomateoignon_288941 · ING coriandre GRAINES / « coriandre fraîche ciselée » · QTY sel 5 g de dégorgement + « sel » · DATA dish_type main · TXT étape de remplissage
+- salad_dattieke_7824bf · ING huile de COCO dans une vinaigrette (fige à froid) · TXT « bols préchauffés », « pain pita tiède », « levure nutritionnelle » · QTY oignon 300 g · TIME cook 13 sans cuisson
+- rice_vegetable_sushi_9aad8a · (compl.) MISS tofu 400 g jamais utilisé hors étape de remplissage · TXT « jusqu'à crépitation légère »
+
+## Lot 21
+(SYSTÉMIQUE salades : verbes de cuisson injectés dans des préparations crues — « julienne les tomates », « blanchir/saisir/nacrer le concombre », « réduire la vinaigrette à feu doux », « bols préchauffés »)
+- salad_daubergine_philippine_6f16b2 · MISS sauce soja du texte · ING huile de sésame (ensaladang talong : vinaigre + bagoong) · QTY oignon 300 g · TXT « cuire la salade 5 min » + « bols préchauffés »
+- salad_daubergines_marocaine_03fd77 · MISS jus de citron, olives · QTY oignon 300 g jamais utilisé · TXT « texture croquante » pour un zaalouk · DATA quasi-doublon de main_moroccan_zaalouk
+- salad_de_boulgour_turque_f80124 · TXT « laisser tiédir jusqu'à coloration blonde », « réduire la vinaigrette de moitié » · MISS concentré de tomate / piment (kısır) · ING citron entier 100 g
+- salad_de_haricots_aux_yeux_noir_f442f9 · ING MAJEUR `black_eyed_peas_boiled` pour des haricots secs trempés 12 h + 45 min · TIME 775 min / 56 · DATA kid_friendly OK
+- salad_de_papaye_vietnamienne_add574 · ING `papaya_raw` (mûre) pour de la papaye VERTE · TXT « bain glacé pour stopper la cuisson », « réduire la vinaigrette 5 min » · MISS herbes (rau răm, menthe) · DATA kid_friendly avec 15 g de piment · DATA nut_free absent OK
+- salad_de_poivrons_et_tomates_d5f4ec · TIME grill 15 + marinade 20 / total 38 OK · RAS
+- salad_de_pommes_de_terre_allema_3cdeab · QTY oignon 300 g · MISS bouillon · ING huile d'olive + vinaigre blanc (Kartoffelsalat : huile neutre + vinaigre de vin/cidre) · RAS
+- salad_de_pousses_de_soja_coreen_d07502 · ING moutarde de DIJON 15 g dans un kongnamul · TXT « réduire la sauce soja », « ciseler des graines de sésame en lamelles » · DATA kid_friendly avec 10 g de piment · QTY sésame 30 g
+- salad_de_quinoa_e74dea · MISS sel (Na 48) · QTY oignon 300 g cru · ING citron entier 100 g
+- salad_fattoush_035977, salad_fattoush_au_radis_8dab85, salad_fattoush_classic_x82m5c · DATA triple doublon · (035977) MISS radis, herbes, oignon · (8dab85) MISS persil/menthe du texte · (x82m5c) TXT « levure nutritionnelle », « bols préchauffés » · QTY pita 240–300 g
+- salad_gadogado_indonesien_vegan_e4cd75 · MISS pousses de soja, oignons frits, krupuk du texte · QTY beurre végétal 30 g jamais utilisé · DATA 5e gado-gado
+- salad_grecque_classique_f83c30 · TXT MAJEUR « saisir les concombres », « blanchir l'oignon rouge… coloration dorée », « réduire la vinaigrette 1 min à feu doux » · ING moutarde de Dijon 15 g (horiatiki n'en contient pas) · QTY texte 2 c.s. huile + 1 c.s. citron / 45 ml + 100 g
+- salad_grecque_classique_vegan_a9f9a4 · MISS sel · ING tofu nature / « fromage végétal… tel que du tofu ou des légumes grillés »
+- salad_grecque_simplifiee_34b852 · TXT « nacrer les concombres 3 min », « julienne les tomates en quartiers » · MISS origan · QTY oignon rouge 300 g · DATA doublon
+- salad_grecque_simplifiee_vegan_ec9ed5 · MISS sel (Na 185) · QTY oignon 300 g · DATA 5 salades grecques (f83c30, a9f9a4, 34b852, ec9ed5, greek_classic_v2)
+- salad_greek_classic_v2_t4m8q1 · Na 1354 (olives à l'huile + feta + sel) · QTY texte 1 c.s. vinaigre / 10 g, 3 c.s. huile / 40 ml OK · DATA régime raw OK
+- salad_grillee_tunisienne_dcb033 · TXT charabia : « blanchir les tomates 5 min à 180 °C », « nacrer les oignons », « réduire la vinaigrette », « huile chaude pour une texture croquante » · MISS piment (mechouia = piments forts), ail, carvi · QTY oignon 300 g · DATA kid_friendly
+- salad_lentil_classic_v3_r7p2k8 · ING MAJEUR `red_lentil_boiled` alors que le texte cuit 250 g de lentilles sèches 22 min · ING lentilles CORAIL « entières » en salade (se délitent) · MISS sel (Na 26), herbes · TXT « huile d'olive » / colza, « croustillant de l'oignon » · TXT étape noix de pin
+- salad_mexicaine_aux_haricots_949e62 · ING coriandre GRAINES / fraîche · MISS cumin, piment · TXT « saisir les haricots », « crépitement de l'avocat », « bols préchauffés »
+- salad_mixed_classic_v2a1b2 · TXT « réduire la vinaigrette 2 min à 80 °C » · TIME 1442 min (conservation 24 h lue comme durée) · TXT 3 étapes de remplissage
+- salad_mixed_structured_v2_p9x4m2 · TIME cook 15 sans cuisson · DATA doublon · TXT « poivre de Cayenne », « fleurs comestibles »
+- salad_nicoise_3b123f · MISS œufs 220 g jamais utilisés (œuf dur = base de la niçoise) · ING tofu 300 g « cooked » à la place du thon · DATA lactose_free OK · TXT étape de remplissage
+- salad_salade_lyonnaise_f54cfd · QTY huile 4 ml, vinaigre 2 ml, moutarde 4,5 ml pour 4 · ING endive / « frisée » · MISS sel (Na 247) · TXT œufs pochés 220 g = 4 œufs OK
+- salad_salade_mache_aux_noix_081567 · QTY huile de noix 3 g + balsamique 1 g + moutarde 15 g (vinaigrette = moutarde pure) · TXT « 1 poire » / 150 g OK · DATA MAJEUR kid_friendly avec roquefort
+- salad_shopska_04dd73 · ING citron 100 g + moutarde 15 g (shopska = huile + vinaigre, sans moutarde) · ING feta / sirene · Na 995 · QTY oignon 300 g · DATA doublon (3 shopska : main_bulgarian, salad_bulgarian_vegan, salad_shopska, …_vegan)
+- salad_shopska_vegan_001f9e · ING tofu nature / « fromage végétal » · TXT « émincer l'oignon très finement pour éviter la texture croquante »
+- salad_tabbouleh_f7x2p9 · MISS concombre 350 g jamais utilisé (et absent du taboulé libanais) · TXT « huile d'olive chaude qui crépite » · ING `lemon` entier 70 g · DATA 3e taboulé
+- salad_turque_coban_cdd8c4 · TXT « la chaleur et le croustillant des légumes » · MISS poivron vert, piment · QTY oignon 300 g · ING citron 100 g + vinaigre absent OK
+
+## Lot 22
+- salted_butter_caramel_096c73 · TXT « servir sans attendre » après mise en pot stérilisé · RAS
+- samosa_dough_c03717 · TXT « servir la pâte à samosa dans des bols… coriandre » · TIME cook_min 10 sans cuisson
+- sauce_pommes_de_terre_sauce_hua_3304de · ING cream cheese / queso fresco, piment ANCHO / « piment amarillo » · MISS olives, persil, biscuits (galletas) · TXT « servir chaud » (servi froid) · DATA kid_friendly avec piment
+- sauce_tofu_croustillant_sauce_a_b8be56 · MISS levure nutritionnelle du texte · TIME pressage 20 min non compté · ING huile de coco · TXT 2 étapes de remplissage
+- sauce_vinaigrette_174a79 · ING vinaigre blanc distillé · TIME cook_min 5 sans cuisson · TXT étape dupliquée (service)
+- side_brocoli_roti_sauce_gribic_694128 · ING cornichons AIGRE-DOUX / gribiche (cornichons au vinaigre) · ING vinaigre blanc / « vinaigre de vin blanc » · TXT 2 étapes de remplissage · Na 728
+- side_carottes_glacees_a_lerabl_1d1c44 · QTY carottes 200 g pour 4 · MISS sel (Na 26) · TIME cuisson 35 pour ~15 min · DATA doublon vegan de main_carottes_glacees
+- side_champignons_sautes_ail_pe_b477e2 · DATA MAJEUR beurre végétal 20 g ET beurre 30 g ET 46 ml d'huile (texte : 25 ml + « 20 g d'huile » + 20 g + 30 g) → L 22 · DATA doublon mal fusionné version vegan / classique
+- side_couscous_de_choufleur_ac056b · ING raisins FRAIS (raisins secs attendus) · RAS
+- side_dauphinois_vegan_c584cb · DATA `base_oat_cream` sans libellé · TXT « bols préchauffés », « filet d'huile végétale »
+- side_de_courge_butternut_d512a4 · TIME four 30 min / cuisson 45, passif 15 · TXT « huiler avec du beurre »
+- side_eggplant_k1d1p1 · ING moutarde de DIJON 15 g dans un pickle sri lankais (graines de moutarde broyées) · QTY huile de coco 100 ml / texte 30 ml · QTY piment 60 g · MISS sel (Na 94) · TXT « enfourner le pickle » · TIME repos 30 min + refroidissement
+- side_epinards_a_la_creme_vegan_10afc3 · TXT « lame ressort sèche », « service à 50 °C » · DATA `base_oat_cream` sans libellé
+- side_farofa_bresilienne_vegan_45d889 · DATA doublon vegan de main_farofa_bresilienne (seul le beurre change) · QTY oignon 300 g
+- side_feijo_tropeiro_vegan_ccc81d · DATA 3e feijão tropeiro · ING haricots noirs (carioca/rajado attendus) · MISS chou kale, œuf (version vegan OK) · QTY oignon 300 g
+- side_fenouil_braise_a_l_orange_a75916 · QTY orange entière 180 g + jus 150 ml / texte « jus d'une orange » · DATA kid_friendly avec 100 ml de vin
+- side_flageolets_a_la_bretonne_a2af15 · ING thym séché 10 g / « bouquet garni » · TXT « beurre à 170 °C », « mijoter à 150 °C », « service à 60 °C » · Na 902 (conserve + sel)
+- side_haricots_verts_a_la_greno_f1bdca · MISS citron en segments (grenobloise) · RAS
+- side_jeera_rice_vegan_694fd1 · DATA doublon vegan de rice_jeera_rice · TXT « vous devez entendre / voir » ×7
+- side_lentilles_du_puy_echalote_37c76e · TXT « cuire dans l'eau à 180 °C » · QTY huile 30,8 ml / « 30 g » · RAS
+- side_orge_perle_aux_champignon_2824cb · Na 885 · RAS
+- side_pain_de_campagne_31cbd7 · ING MAJEUR `sourdough_bread` (pain au levain CUIT) 150 g pour du levain actif · DATA 4 portions = 1 pain entier de ~950 g → 550 kcal/portion · DATA régimes vegan et lactose_free absents alors qu'aucun produit animal · Na 1165
+- side_patates_douces_roties_au_746605 · RAS
+- side_petits_pois_a_la_francais_1aa736 · TXT oignons grelots ajoutés 2 fois (début + « préalablement cuits » à la fin) · QTY beurre 70 g (30 + 40) · Na 470 OK
+- side_pommes_dauphine_73a2c7 · DATA friture 500 ml → L 33,6 (vérifier retained_pct) · ING pommes de terre « cooked » avec id cru (OK) · RAS
+- side_potato_classic_v3_z8m2k7, side_potatoes_k3d2p1 · DATA doublon · (z8m2k7) TXT 6 g de sel dans l'eau PUIS 6 g ajoutés · TXT « lait animal », « beurre fondue… elle enrobe »
+- side_potimarron_roti_aux_epice_b9c552 · TXT « faire griller les graines de grenade à sec… texture croustillante » · DATA `base_ras_el_hanout` sans libellé · TXT « plats levantins » pour un ras el hanout
+- side_puree_de_celerirave_vegan_a55054 · DATA `base_oat_cream` sans libellé · RAS
+- side_riz_frit_vegan_d17d25 · ING riz CRU / « riz cuit froid de la veille » · TXT 45,7 ml d'huile ajoutée À LA FIN « pour la texture croustillante » · DATA 8e riz sauté · QTY oignon 300 g
+
+## Lot 23
+(SYSTÉMIQUE snacks vegan : 2 portions pour 200 g de farine → 500–600 kcal ; `kid_friendly` + nut_free absent avec fromage végétal non libellé)
+- side_riz_pilaf_turc_vegan_3bb995 · TXT « cuire 15 min à 150 °C » sur feu, « lame ressort sèche », « texture croustillante » · QTY 750 ml de bouillon pour 300 g de riz · QTY oignon 300 g
+- side_rosti_4ec9f8 · QTY oignon 300 g pour 600 g de pommes de terre (rösti = pommes de terre seules) · TIME 2×8–10 min / cuisson 10 · TXT étape de remplissage
+- side_sabzi_polo_vegan_7bf9df · ING coriandre graines · QTY herbes 75 g · TXT tahdig 5 min à la poêle / cf. version four 25 min · DATA doublon
+- side_tabbouleh_de_sarrasin_7e68ad · TXT « égoutter » un sarrasin cuit par absorption · RAS
+- side_tian_provencal_vegan_886a6d · DATA « vegan » d'un tian déjà vegan (doublon de main_tian_provencal) · TIME four 40 + ? / 60 OK
+- snack_bannock_vegan_46a1a8 · QTY MAJEUR 500 ml d'eau pour 200 g de farine (pâte = pâte à crêpe) · MISS levure chimique (bannock) · DATA 2 portions → 506 kcal, Na 980 · MISS huile de cuisson
+- snack_cake_olives_et_herbes_d13d34 · TXT MAJEUR « mélanger 165 g de YAOURT » / œufs 165 g ; la farine et le parmesan ne sont jamais incorporés · MISS levure chimique · MISS tomate fraîche 240 g jamais utilisée · TXT étape vide « vous devriez sentir une odeur de terre »
+- snack_crackers_35f6a8 · DATA 2 portions pour 200 g de farine → 583 kcal, Na 980 · RAS sinon
+- snack_crepe_coreenne_aux_oignon_a45536 · QTY huile de sésame 45,7 ml / texte 30 ml pour frire · DATA 2 portions → 611 kcal · DATA doublon vegan de egg_crepe_coreenne · ING huile de sésame pour poêler
+- snack_empanadas_974cf2 · DATA `base_empanada_dough` sans libellé · ING parmesan 150 g · TXT « blanchir le maïs à feu vif… croustillant », œuf battu CRU dans la farce · MISS huile d'olive du texte · DATA 7 portions
+- snack_empanadas_au_fromage_466bc4 · ING parmesan 150 g + 300 g d'oignon CRU + 220 g d'œuf cru en farce · Na 924 · TXT « assiettes préchauffées… persil » · DATA doublon
+- snack_empanadas_au_fromage_vega_79575a · DATA MAJEUR titre « Vegan » mais régimes vegan/lactose_free absents (base_empanada_dough contient probablement du beurre/œuf ?) · ING huile de coco en badigeon · TXT « oignon caramélisé » sans cuisson
+- snack_gozleme_aux_epinards_vega_6ff07b · ING épinards CUITS 300 g « raw » · MISS 180 ml d'eau, ail « 1 g » · QTY oignon 300 g jamais utilisé · TXT « feu moyen (180 °C) » · TIME repos 30 min non compté · DATA nut_free absent (fromage végétal)
+- snack_humita_andine_vegan_1f09bf · ING feuilles de maïs 80 g comptées · TXT « lame ressort sèche » · QTY oignon 300 g / 300 g de maïs · MISS fromage végétal 150 g jamais utilisé dans le texte · DATA gluten_free absent alors que maïs (vérifier base_vegan_cheddar)
+- snack_rosti_vegan_be15a2 · DATA 2 portions (300 g de pommes de terre + 150 g d'oignon/portion) · TIME 2×10 min / 25 · DATA doublon
+- snack_tamales_vegan_d7cbdc · QTY MAJEUR 750 ml de bouillon pour 300 g de masa (≈ 300 ml attendus) + masa sans matière grasse · MISS feuilles de maïs, huile · TIME vapeur 18 min (tamales = 60–90 min) · QTY oignon 300 g · DATA nut_free absent
+- snack_tarte_soleil_pesto_46f867 · DATA `base_pesto` sans libellé · MISS tomates séchées 80 g jamais utilisées · ING tomates fraîches en dés dans une tarte soleil (détrempe) · DATA régime nut_free absent OK (pignons)
+- snack_tostadas_vegan_f7257b · DATA MAJEUR régime `raw` pour des tortillas frites et haricots cuits · MISS huile de friture, cumin · DATA `base_tortilla` sans libellé · ING beurre de cajou 100 ml / « crème de cashew » · DATA nut_free absent OK
+- snack_varenyky_pomme_de_terre_v_8b6240 · QTY beurre de cajou 150 g dans une farce de pommes de terre · MISS 120 ml d'eau · TIME passif 60 injustifié · TXT « beurre fondu pour un toucher croustillant » · DATA 8 portions · DATA doublon (3 varenyky/vareniki)
+- snack_veg_k3d2p1 · TXT MAJEUR charabia : « disposer la laitue jusqu'à ce que la lame ressorte sèche », « blanchir les tomates 1 min », « huile chaude qui crépite », « chèvre frais râpé » · DATA `base_mayonnaise` sans libellé (contient œuf → OK végétarien)
+- snack_vegetable_samosa_088bfa · ING MAJEUR feuilles de WONTON (+ recette de pâte à samosa existante non utilisée) · ING mange-tout / petits pois · MISS sel (Na 164), huile de friture (huile de coco 45 ml) · TXT « lame ressort sèche » ×2, « farce < 20 °C » · TIME passif 60 injustifié
+- soup_a_l_oignon_au_thym_vegan_bf7d2f, soup_a_l_oignon_gratinee_vegan_826f59 · DATA doublon · QTY MAJEUR farine 200 g pour 750 ml de bouillon (≈ 20 g attendus) → 462 kcal, G 65 · QTY oignon 300 g seulement (soupe à l'oignon ≈ 1 kg) · MISS vin blanc 100 ml · TXT « feu très doux à 100/150 °C » · DATA kid_friendly, nut_free absent
+- soup_aigrepiquante_4766fe · QTY MAJEUR tofu 800 g → P 30,5 · MISS champignons séchés du texte · Na 1419 · ING vinaigre / « vinaigre de riz »
+- soup_aigrepiquante_5245bb · QTY huile de sésame 45 ml en finition · MISS champignons noirs, dashi · DATA doublon
+- soup_ash_reshteh_vegan_393184 · QTY légumineuses 1 kg (pois chiches 400 + haricots 300 + lentilles 300) → 634 kcal · TXT « lame ressort sèche » dans une soupe, « levure » · MISS bouillon, herbes (aneth, coriandre), oignons frits à la menthe · DATA `base_reshteh_noodles` sans libellé
+- soup_au_chou_4be090 · Na 1014 · QTY oignon 300 g · RAS
+- soup_au_pistou_701fac · QTY pâtes 320 g dans une soupe (80 g/p) → 636 kcal · DATA `base_pistou` 40 g (sans libellé) · TXT « réduire le feu à 150 °C » · MISS bouillon, sel (Na 236), haricots verts · ING pâtes complètes · TXT 2 étapes de remplissage
+- soup_bisque_de_champignons_63fa25 · ING cèpes FRAIS 200 g (OK) · ING libellé « Armagnac » / cognac · DATA kid_friendly avec 20 ml de cognac flambé · MISS sel · TXT « bisque » sans crustacé (nom d'usage OK)
+- soup_borscht_classic_k39x2c · Na 1422 (15 g de bouillon + 6 g de sel) · TXT « lame ressort sèche » pour vérifier l'équilibre des saveurs · ING vinaigre blanc / borscht OK · DATA suggestion crème fraîche OK (végétarien)
+
+## Lot 24
+- soup_borscht_fd9212 · ING citron entier 100 g · TXT « pain pita tiède » · TIME passif 60 injustifié · Na 1264 · DATA doublon de soup_borscht_classic · TXT étape de remplissage
+- soup_bouillabaisse_vegetarienne_1d9c92 · QTY huile 4 ml · MISS sel (Na 46), bouillon, rouille · ING orange entière 10 g / « zeste »
+- soup_courge_au_lait_de_coco_224d09 · QTY ail 2 g · Na 862 · RAS
+- soup_courge_mijotee_japonaise_3852ae · DATA dish_type soup pour un nimono (courge mijotée) · TXT « enfourner avec otoshibuta », « lame ressort sèche », « sauce dorée qui crépite » · DATA `base_dashi_broth` sans libellé · ING tamari 45 ml → Na 844
+- soup_de_gundruk_a62723 · TXT « mijoter 20 min à 180 °C » · ING huile d'olive · QTY oignon 300 g · MISS 700 ml d'eau (hors composition, OK neutre)
+- soup_de_haricots_grecs_a96296 · ING MAJEUR `white_bean_boiled` + trempage 12 h dans le texte · TXT « cuire 25 min à 180 °C », « son crépitant de la soupe » · MISS eau/bouillon · DATA 4e fasolada · TXT 2 étapes de remplissage
+- soup_de_pois_casses_58fc34 · Na 1020 · RAS
+- soup_de_pois_scandinave_ec245b · TIME trempage d'une nuit non compté · DATA gluten_free absent sans raison · QTY moutarde 25 g · DATA doublon (3 soupes de pois cassés)
+- soup_de_potiron_caribeenne_a0fabd · QTY muscade « entière » 5 g retirée mais comptée · MISS piment (scotch bonnet), « saveurs épicées » · ING huile d'olive · Na 1005
+- soup_de_quinoa_2df148 · TXT le quinoa est « blanchi 5 min » puis jamais réintégré · QTY 600 g de pommes de terre + 250 g de quinoa → 497 kcal · MISS poivre
+- soup_gaspacho_provencal_f69228 · QTY huile 4 ml · MISS sel (Na 23), vinaigre · RAS sinon
+- soup_gazpacho_classic_v2_x9k3m1 · ING vinaigre blanc / « vinaigre de fruit » (xérès) · TXT huile incorporée 2 fois · MISS pain rassis (gazpacho andalou) · TIME 90 / 120 min de froid
+- soup_haricots_au_lait_de_coco_207254 · QTY ail 2 g · TXT « lame ressort sèche » · QTY 426 kcal
+- soup_harira_classic_v3_p9x4k2 · ING `green_lentil_boiled` / texte « lentilles corail » cuites 25–30 min (sèches) · MISS concentré de tomate, citron, vermicelles, pois chiches trempés OK · Na 946
+- soup_hot_pot_e7fc15 · QTY pak-choï 800 g + chou napa 900 g + poivron 320 g → portion > 900 g · DATA `base_mala_broth` sans libellé · MISS miso, huile d'olive du texte · TXT « poivron vert » / rouge, « tofu soyeux » / ferme, « enfourner les shiitake » · Na 1622 · QTY eau 1,5 L en plus du bouillon
+- soup_laksa_malaisien_dd7512 · QTY lait de coco 800 ml → 622 kcal, L 52 · ING pâte de curry VERT (laksa = pâte rouge) · MISS échalotes, citronnelle, kaffir, légumes du texte · DATA `base_rice_noodle` rôle « seasoning » · QTY tofu texte 100 g / 200 g · QTY ail 2 g / « 3 gousses »
+- soup_laksa_thai_7b1720 · DATA nom « laksa thaï » (le laksa est malaisien/singapourien) · QTY ail 2 g · MISS pousses de soja, citron vert du texte · TXT 3 étapes de remplissage
+- soup_lentilles_turque_vegan_c2febf · ING MAJEUR `red_lentil_boiled` pour 250 g de lentilles sèches cuites 25 min · TXT « cuire 25 min à 180 °C » · QTY oignon 300 g · MISS eau, paprika/menthe séchée, citron · TXT étape « crème de coco »
+- soup_minestrone_9116a2 · DATA pâtes, eau et bouillon en rôle « seasoning » · TXT « 3 gousses d'ail » / 9 g · TXT 2 étapes de remplissage · DATA kid_friendly
+- soup_minestrone_italienne_f98e05 · QTY pâtes 320 g dans une soupe → 595 kcal · Na 1429 · QTY oignon 300 g · TXT 5 étapes de remplissage
+- soup_minestrone_vegan_10bf61 · QTY pâtes 320 g + levure nutritionnelle 90 g → 656 kcal · QTY huile 46,2 / texte 35 ml
+- soup_minestrone_x7p2k1 · TXT MAJEUR le soffritto (carotte, céleri) est ajouté À LA FIN après les pâtes · QTY ail 20 g · MISS sel · DATA 4 minestrones
+- soup_miso_classic_v4_r7m2k9 · QTY oignon vert 150 g (10 g dans l'autre version) · TXT « tofu soyeux » / ferme, « huile de coco chaude qui crépite », « levure nutritionnelle », « texture crémeuse », « copeaux de dashi en poudre » · MISS kombu · DATA doublon
+- soup_miso_k2d1p1 · TXT « odeur de noix de coco », « huile de coco chaude » dans une soupe miso · TXT wakamé utilisé 2 fois (dashi + garniture) / 5 g · TXT « son de crépitation »
+- soup_pad_thai_cfe090 · DATA MAJEUR dish_type soup pour un pad thaï sauté · DATA doublon exact de protein_pad_thai_vegan (mêmes quantités, mêmes nutriments)
+- soup_persian_ash_reshteh_vegan_968f7d · DATA 3e ash reshteh (pasta_persian_ash_reshteh, soup_ash_reshteh_vegan) · TXT « lame ressort sèche » · ING coriandre graines · TXT étape de remplissage
+- soup_pho_ba7e1e · MISS cannelle, anis étoilé, girofle, champignons (texte) · QTY ail 2 g / « 2 gousses » · QTY oignon 150 g · MISS pousses de soja, basilic thaï · TXT « julienne les oignons jaunes »
+- soup_pois_casses_cf435c · TXT « huile à 180 °C qui fume », « laisser nacrer 2 min » · MISS 1 L d'eau · TIME cuisson 35 = 10 + 25 OK · DATA 3e soupe de pois cassés
+- soup_potage_de_patate_douce_e4b521 · QTY lait de coco 400 ml / texte « 80 ml de crème de coco » · QTY bouillon 800 / 750 ml · TXT ail cru ajouté à la fin · MISS citron, sel
+- soup_potage_parmentier_9685a7 · QTY huile 2 ml · MISS sel (Na 46), muscade, 900 ml d'eau/bouillon · RAS sinon
+
+## Lot 25
+(SYSTÉMIQUE soupes : huile 2 ml, ail 2 g, sel absent sur une série de veloutés ; « soupe à 180 °C »)
+- soup_potage_saint_germain_e23f6b · ING petits pois FRAIS (Saint-Germain = pois cassés) acceptable · TXT « lame ressort sèche » · MISS sel, pain des croûtons · QTY huile 10 ml « 10 g »
+- soup_pumpkin_k2d1p1 · MISS graines de courge du texte · TXT 3 étapes de remplissage · RAS
+- soup_ramen_au_miso_f69c22 · QTY ail 2 g · MISS champignons, oignon 150 g jamais utilisés · TXT « bouillon filtré à 80 °C », « tofu doré » jamais cuit · DATA `base_noodles` sans libellé (régime vegan absent car nouilles aux œufs ?)
+- soup_soup_k3d2p1 · TXT pain « complet » / baguette · MISS thym, laurier · Na 1252 · RAS (quantités d'oignon correctes : 600 g)
+- soup_soupe_a_l_oignon_au_thym_4c6c6f · QTY MAJEUR farine 200 g ajoutée « pour épaissir » à la fin → 470 kcal, G 58 (gratinée voisine : 20 g) · MISS vin blanc · DATA kid_friendly · TXT « jus de citron » · DATA doublon (4 soupes à l'oignon)
+- soup_soupe_a_l_oignon_gratinee_f0fd17 · MISS vin blanc 150 ml · QTY oignon 300 g · Na 1271
+- soup_soupe_au_cresson_fce0c6 · QTY huile 2 ml · MISS sel · QTY cresson « 300 g » ajouté 2 fois dans le texte · DATA `base_coconut_cream` sans libellé
+- soup_soupe_carottes_au_cumin_3903f8 · QTY huile 2 ml · ING citron entier 100 g / « un filet » · MISS cumin jamais utilisé dans le texte (plat « au cumin ») · MISS sel
+- soup_soupe_courge_butternut_2f5cf3 · QTY huile 2 ml · MISS sel (Na 267) · QTY curry 1 g
+- soup_soupe_de_chataignes_6b8e6f · ING châtaignes CRUES / « châtaignes cuites égouttées » · QTY huile 2 ml · MISS thym, laurier, muscade, cerfeuil, sel · DATA nut_free absent (OK : châtaigne = fruit à coque au sens large)
+- soup_soupe_de_topinambours_175dc4 · TXT « lame ressort sèche » · MISS huile de noisette, citron · TXT « mijoter 10 min… puis 25 min » · TXT 2 étapes de remplissage
+- soup_soupe_laksa_coco_729105 · TXT « frémissement à 180 °C », « réduire le feu à 150 °C » · ING pâte de curry VERT · QTY ail 2 g · DATA 4e laksa (dd7512, 7b1720, 729105, ab0112)
+- soup_soupe_thai_coco_citronnelle_375c23 · ING huile de SÉSAME · TXT citronnelle et combava ajoutés 2 min avant la fin (infusion attendue) · MISS galanga · DATA quasi-doublon de soup_tom_kha
+- soup_tamales_7dd98a · DATA MAJEUR dish_type soup pour des tamales · TXT « enfourner 25 min… texture croustillante » (tamales = vapeur), farce préparée APRÈS l'enfournement · ING parmesan 150 g → Na 1633 · QTY 750 ml de bouillon pour 300 g de masa · MISS feuilles de maïs · DATA doublon de snack_tamales_vegan
+- soup_thai_basil_tofu_c7e4ad · DATA MAJEUR dish_type soup pour un tofu sauté au basilic (pad krapow) · DATA kid_friendly avec 10 g de piment · ING huile de sésame, basilic / basilic thaï
+- soup_thai_green_curry_56dfda, soup_thai_red_curry_f6bb3c · DATA dish_type soup pour des currys · DATA doublons (seule la pâte change) · QTY ail 2 g · TXT « 2 à 3 c.s. de pâte » / 30 g, « 20 ml de soja » absent de la composition · DATA `base_curry_paste`, `base_green_curry_paste`, `base_vegetarian_fish_sauce` sans libellé · TXT étape de remplissage (vert)
+- soup_tofu_frit_au_bouillon_1bad0a · QTY huile 500 ml / texte 100 ml → L 28,7 · MISS champignons, pak-choï du texte · DATA `base_dashi_broth` sans libellé · DATA dish_type soup (agedashi tofu) · TIME pressage 15 min non compté
+- soup_tom_kha_cee413 · MISS galanga (tom KHA = galanga), combava, piment · ING citron vert ENTIER 140 g / jus · Na 1408 · TXT « lame d'une cuillère ressort sèche », « laisser refroidir avant de servir » · TXT 2 étapes de remplissage
+- soup_tom_yum_8001c0 · TXT galanga et combava ajoutés 2 fois (20 g + 20 g / 3 + 3 g) · QTY piment 1 g (tom yum = épicé) · ING citron vert entier 70 g / « jus » · TXT « texture crémeuse » (tom yum clair) · MISS champignons, tomate · QTY 56 kcal (bouillon seul : dish_type main-course douteux) · QTY ail 2 g
+- soup_tomato_k2d1p1 · TXT « servir à 70 °C », « porter à 100 °C », 3 étapes de remplissage · RAS
+- soup_turkish_mercimek_soup_veg_f30ebc · ING MAJEUR `red_lentil_boiled` pour 250 g de lentilles sèches cuites 20 min · MISS paprika, huile de la garniture · ING menthe fraîche 20 g / « menthe séchée » · DATA doublon de soup_lentilles_turque_vegan · QTY oignon 300 g
+- soup_udon_da9371 · TXT « bouillon à 180 °C », « tofu crémeux » · QTY tofu 400 g + ail 20 g · MISS huile de sésame · Na 1379 · TXT 3 étapes de remplissage (« partager avec vos proches »)
+- soup_udon_miso_ef1ceb · TXT « dashi à 180 °C », tofu SOYEUX / ferme, ail cru ajouté en fin · Na 1394 (bouillon + miso + sel 5 g) · DATA doublon
+- soup_vegetable_laksa_ab0112 · ING pâte de curry vert · QTY ail 2 g · MISS sel · DATA 4e laksa
+- soup_veloute_d_asperges_7da98f · DATA asperges 700 g → « 93 g/p » (portion mal calculée) · ING citron entier 50 g · MISS sel
+- soup_veloute_de_celeri_rave_b33921 · QTY huile de noisette 1 g · TXT « saveur anisée » du céleri-rave, « croustillant des noisettes » cuites 2 min dans la soupe · MISS sel
+- soup_veloute_de_potimarron_776ea1 · ING butternut / « potimarron » « sans l'éplucher » · MISS muscade, sel · TXT beurre ajouté 2 fois (25 g) · DATA quasi-doublon de entry_veloute_potimarron
+- soup_vichyssoise_d28d4b · TXT « réduire le feu à 180 °C » · QTY ciboulette 1 g · MISS eau/bouillon · TXT étape de remplissage
+- stew_ajapsandali_m8d4q1 · MISS sel (Na 16), piment, basilic, coriandre en herbes (ajapsandali = herbes abondantes) · MISS « pain végétal » · RAS sinon
+
+## Lot 26
+- stew_cassoulet_938fd4 · ING `white_bean_boiled` + trempage 8 h + cuisson 45 min dans le texte · MISS chapelure (croûte), ail · TIME four 1 h 30 + 45 min / cuisson 75 · TXT « oignon 200 g » / 300 g · Na 857
+- stew_croatian_bean_stew_4dfb05 · ING MAJEUR `white_bean_boiled` alors que le texte cuit 300 g de haricots SECS 45 min (sans trempage) · MISS persil · TIME 45 + 25 + 10 min / cuisson 60 · TXT étape de remplissage
+- stew_eggplant_classic_5d46a1 · MISS sel (Na 20) · TIME dégorgement 20 min / passif 5 · MISS levure nutritionnelle, basilic, citron du texte
+- stew_georgian_vegetable_stew_1cb019 · ING coriandre graines · MISS herbes fraîches (persil/coriandre) · TXT ail ajouté cru à la fin · QTY oignon 300 g · DATA nut_free absent OK (noix)
+- stew_lentil_basic_v2_x7k2m9, stew_lentil_classic_0adae5 · ING MAJEUR `green_lentil_boiled` alors que 250 g de lentilles sèches sont cuites 25 min dans 700–750 ml → 150 kcal au lieu de ~290 (cf. stew_lentil_classic_v5 : `green_lentil_dried` → 289 kcal) · DATA triple doublon · (x7k2m9) TXT « accompagner d'un peu d'eau fraîche » · (0adae5) TXT étape de remplissage
+- stew_lentil_classic_v5_h9k3p2 · TXT « levure nutritionnelle » absente · RAS (référence correcte)
+- stew_persian_herb_stew_485f3e · QTY MAJEUR persil 30 g pour un ghormeh sabzi (≈ 300–400 g d'herbes) · ING coriandre GRAINES · MISS citrons séchés (limoo omani), ciboulette · ING citron entier 100 g / « jus » · TXT « mijoter à 180 °C », « lame ressort sèche » · Na 955
+- stew_peruvian_quinoa_stew_1180bf · QTY 250 g de quinoa + 600 g de pommes de terre + haricots + maïs → 653 kcal · TXT « cuire 15 min à 180 °C… la lame ressort sèche » · MISS ají, tomate · QTY oignon 300 g
+- stew_ragout_de_haricots_et_mai_122538 · MISS ail, épices, 250 ml de bouillon, citron du texte · QTY oignon 300 g
+- stew_ragout_de_plantain_2140eb · DATA MAJEUR kid_friendly avec 15 g de piment HABANERO · MISS 300 ml d'eau · ING huile d'olive (huile de palme attendue)
+- stew_ratatouille_k8d2p4 · TXT « chaque légume revenu séparément dans 70 ml » (quantité totale unique) · MISS poivre, basilic · RAS sinon · DATA 3e ratatouille (+ tian, bohémienne, pisto)
+- stew_sundubu_tofu_stew_ebe50e · DATA MAJEUR titre et régimes : œuf 220 g + `base_dashi_broth` → vegetarian OK, mais tofu SOYEUX 400 g + tofu ferme 200 g jamais mentionné · QTY courgette 500 g, oignon 300 g · TXT « enfourner le ragoût à 200 °C », « ciseler pendant 1 minute » · DATA gluten_free avec gochujang (contient du blé) · DATA doublon de egg_sundubu_jjigae · TXT « 2 c.s. d'huile » / 30 ml OK
+- tamarind_paste_b740bb · TXT « servir sans attendre » une pâte de conservation · RAS
+- tarte_margherita_v7k2d1 · DATA `base_pizza_dough` sans libellé + le texte refait la pâte (300 g de farine) → double comptage possible · ING tomates FRAÎCHES 200 g / « sauce tomate » · TXT « tranches de mozzarella râpé » · MISS levure du texte OK (dans la base)
+- tarte_moussaka_veg_d55fa8 · MISS beurre 45 g de la béchamel · TXT « béchamel à 70 °C » (ne peut épaissir) · TIME dégorgement 20 + four 40 + farce / cuisson 45 · MISS protéine (lentilles) · TXT 3 étapes de remplissage · QTY ail 30 g
+- tarte_pizza_margherita_vegan_02bb9a · ING tofu nature 250 g / mozzarella végétale · QTY 400 g de sauce tomate salée + 240 g de tomates → Na 1265 · TIME pâte (levée) non comptée : 36 min / texte 169 · TXT « accompagner de riz » · DATA suggestion « noix de coco râpée » sur une pizza
+- tarte_quiche_lorraine_7033e4 · DATA MAJEUR « quiche lorraine » : œufs 220 g jamais utilisés, le texte utilise « 220 g de tofu écrasé » ; tofu 200 g ET œufs 220 g comptés → 691 kcal · QTY oignon 300 g · MISS huile, muscade · TXT « la lame ressort sèche… tremblante au centre » · DATA doublon de egg_quiche_lorraine_vegetarienne
+- tarte_quiche_vegetarienne_b849b0 · QTY pâte brisée 80 g pour un moule de 26 cm (≈ 230 g) · ING parmesan 120 g → Na 1147 · QTY légumes 200 g (texte) · MISS oignons, huile d'olive 20 g du texte · TXT 2 étapes de remplissage
+- tempeh_tempeh_frit_ccb7d2 · ING tempeh / « tempeh fumé » · ING coriandre feuille séchée / « coriandre moulue » (graines) · DATA 2 portions de 150 g → Na 1711 · DATA kid_friendly · TXT « bols préchauffés », « sauce pimentée »
+- tempeh_tempeh_teriyaki_da1952 · QTY huile de sésame 45 ml ajoutée APRÈS cuisson + 20 ml + « huile de coco 10 ml » absente · DATA `base_teriyaki` 60 / 30 ml · TIME marinade 20 min non comptée
+- vegetarian_brown_sauce_4233df · ING champignons FRAIS 20 g / « réhydratés » (séchés) · TXT « croustillant des champignons » · MISS miso présent dans la composition mais pas dans le texte (tronqué ?) · TXT étape de remplissage
+- wok_bok_choy_saute_a_lail_309f8e · QTY huile de tournesol 45 ml versée À LA FIN « pour enrichir » · Na 1025 (soja 45 ml + sel 5 g) · DATA doublon de wok_pak_choi_saute
+- wok_chou_ethiopien_saute_93ab43 · ING kale / tikil gomen = chou blanc + carottes + pommes de terre · QTY oignon 300 g · TXT « chauffer l'huile… cuire 2 min » · RAS
+- wok_pad_krapow_tofu_v3_k9x2m7 · ING huile d'OLIVE « odeur de noix de coco » · QTY sucre 23 g (texte 5 + 15) · QTY ail 25 g · TXT 3 étapes de remplissage (levure nutritionnelle) · DATA triple doublon (rice_pad_krapow, soup_thai_basil_tofu, wok_pad_krapow ×2)
+- wok_pad_krapow_vegetarien_565aa9 · DATA kid_friendly avec piment thaï · DATA nut_free absent (huile d'arachide) OK · QTY sucre 8 g + « 5 g de sucre de canne » absent
+- wok_pak_choi_saute_62b974 · TXT « huile de sésame à 180 °C qui fume » · Na 1025 · DATA kid_friendly OK
+- wok_pommes_de_terre_sautees_8bafe1 · ING huile de COCO pour des pommes de terre sautées ail-persil · RAS sinon
+- wok_thai_veg_eb92db · MISS œufs 110 g jamais utilisés (pad thaï = œuf) · MISS sel, sauce soja, sucre blanc 15 g du texte · ING citron vert entier 70 g · TIME trempage 20 + pressage 15 → passif 20 · DATA 4e pad thaï (+ doublon soup_pad_thai)
+- wok_tofu_saute_aux_legumes_1f3ac2 · MISS MAJEUR tous les légumes (carotte, brocoli, poivron, champignons, oignons verts) du titre absents de la composition → 362 kcal, 8,6 g de glucides · QTY huile de sésame 60 ml / texte 15 ml · MISS sucre 5 g · TIME pressage 15 min OK
+
+## Lot 27–28 (dont préparations de base)
+- wok_tofu_saute_gingembre_soja_6e901c · QTY huile de sésame 60 ml / texte 25 ml · TIME pressage 15 + marinade 20 min / passif 0 · TXT « éviter les grumeaux » ×2 · MISS graines de sésame
+- wok_veg_k3d2p1 · TXT « wok à 200 °C, huile à 180 °C », « ail doré et croustillant en 10 s » · ING huile de coco · TXT « levure nutritionnelle râpée »
+- wrap_enchiladas_vegan_f70bca · QTY oignon 300 g CRU dans la farce · QTY piment ancho 40 g · DATA `base_tortilla`, `base_vegan_cheddar` sans libellé · TXT « crème de coco », « riz végétal »
+- wrap_quesadillas_au_fromage_511e1a · ING parmesan 150 g → Na 1348 · TXT oignon et poivron « cuits égouttés » jamais cuits · TXT « placer 320 g de tortillas dans la poêle » · DATA kid_friendly OK
+- wrap_quesadillas_au_fromage_ve_9794c7, wrap_quesadillas_c8edf2, wrap_quesadillas_vegan_f68baa · DATA 4 quesadillas quasi identiques · (c8edf2) ING chèvre frais « râpé », tomates 480 g crues en garniture · (vegan) DATA nut_free absent (fromage de cajou), `base_vegan_cheddar` sans libellé, Na ~960
+- wrap_veg_k3d2p1 · MISS « sauce brune végétarienne » (bouillon 0,5 g + 40 ml d'eau à la place) · TXT huile chauffée APRÈS le service · DATA `base_buckwheat_crepe` sans libellé · QTY 141 kcal/portion
+- yellow_curry_paste_077f54 · DATA MAJEUR kid_friendly sur une pâte de curry à 20 g de piment · QTY curcuma 15 g · MISS galanga, échalote, pâte de crevettes (OK vegan)
+- base_buckwheat_crepe_03db22 · DATA unités « 2 piece » (œuf) · TXT « servir avec sirop d'érable » pour une base salée · RAS
+- base_cashew_ricotta_5c62e9 · MISS 30–60 ml d'eau · TIME trempage 2 h OK · RAS
+- base_paneer_04e1db · DATA MAJEUR rendement : 1 L de lait = 4 « portions » de 250 g de lait ; le petit-lait égoutté (≈ 80 %) semble compté → paneer réel ≈ 180 g · TIME 60 min de pressage OK
+- base_vegan_cheddar_024998 · ING MAJEUR noix de cajou « grillées à l'huile » pour des noix crues trempées · DATA tartinade molle utilisée partout comme « fromage végétal râpé / fondu » · DATA régime nut_free correctement absent, mais les recettes qui l'utilisent n'en héritent pas toutes (cf. lots 12, 15, 23)
+- base_vegan_mayonnaise_b68322 · RAS
+- base_fried_onion_217e6a · TXT « égoutter » l'huile, 60 ml comptés en entier · TXT coquille « lesisser »
+- base_bechamel_vegane_7a210c · DATA difficulté `None` · RAS
+- base_sriracha_19895c · TIME fermentation 5–7 jours / passif 1440 min (1 jour) · ING piments frais OK
+- base_laksa_paste_bc7fd5 · DATA kid_friendly avec 30 g de piment · DATA MAJEUR cette base existe mais les 4 laksas utilisent `base_green_curry_paste`
+- base_tortilla_92c2a6 · TIME repos 10 min / passif 30 · RAS
+- base_gnocchi_8f01d0 · DATA unité « 1 unit » (œuf) · DATA recette de base jamais utilisée (les gnocchis utilisent `potato_gnocchi_to_cook`) · RAS
+- base_soba_noodles_33e97c · DATA gluten : 50 g de farine de blé → gluten_free absent OK ; mais bibim guksu/yakisoba l'utilisent comme nouilles de blé · RAS
+- base_gyoza_wrapper_0dba00, base_wonton_wrapper_7bfeb5 · TIME cuisson 0 OK (feuilles crues) · RAS
+- base_nouilles_ramen_3907e3 · TIME bicarbonate cuit 30 min au four / cuisson 3 · RAS
+- base_nouilles_de_patate_douce_fdeb79 · ING `sweet_potato_flour` / « amidon de patate douce » (fécule ≠ farine) · RAS
+- base_reshteh_noodles_6f783e · RAS
+- base_doubanjiang_paste_340399 · ING piments FRAIS / « piments rouges secs » · TIME fermentation 3 mois / passif 4320 min (3 jours) · MISS koji/farine (fermentation des fèves)
+- base_fried_rice_f230b0 · ING riz CRU 300 g / « riz cuit la veille » (même erreur que les 8 riz sautés) · DATA dish_type main pour une base
+- base_yaourt_coco_552a95 · MISS ferments/probiotiques (2 capsules) · TIME cuisson 3 min / cook 0 (signalé)
+- base_sauce_peanut_d92c5c · MISS sucre (« équilibre acidité-sel-sucre ») · DATA kid_friendly avec piment
+- base_sauce_yogurt_0bfeaf · RAS
+- base_pate_piment_b6904a · DATA MAJEUR kid_friendly sur une pâte de 200 g de piments · DATA utilisée comme « doubanjiang », « pâte de piment doux », « sauce aux haricots noirs » dans d'autres recettes
+- base_applesauce_b0627b · RAS
+- base_halloumi_293d5e · TXT MAJEUR halloumi caillé au citron (impossible : présure indispensable pour un fromage qui tient à la cuisson) · DATA rendement du lait 2 L incohérent (sel 15 g → Na affiché 391) · TIME cook 0 alors que 30 min de chauffe
+- base_fromage_en_grain_a00941 · TXT MAJEUR caillé au citron/vinaigre au lieu de présure (texture « qui couine » impossible) · TIME 48 h de conservation lues comme durée · DATA rendement 4 L de lait → 303 kcal/portion
+- base_kashk_fd3ac6 · RAS (réduction de yaourt acceptable)
+- base_noodles_2d0ed7 · DATA contient de l'œuf → toutes les recettes vegan qui l'utiliseraient seraient fausses (vérifier : pasta_chow_mein, lagman, thukpa, satay, ramen = végétariennes OK)
+- base_rice_noodle_831080 · TIME 24 h de conservation lues comme durée · RAS
+- base_pastry_wrappers_a56ee0 · TIME cook 0 alors que 20–25 min de four dans le texte (cuisson du plat final) · DATA beurre → probablement `base_empanada_dough` : explique l'absence de vegan sur snack_empanadas_au_fromage_vega (à vérifier)
+- base_samosa_77fac4 · DATA doublon de samosa_dough_c03717 · TIME friture dans le texte / cook 0 · DATA jamais utilisée par snack_vegetable_samosa (qui prend des feuilles de wonton)
