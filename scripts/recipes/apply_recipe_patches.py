@@ -9,6 +9,7 @@ Opérations :
   ("qty", id, quantité[, unité])                      change une quantité
   ("add", id, quantité, unité, rôle)                  ajoute un ingrédient
   ("del", id)                                         retire un ingrédient
+  ("sugg-", id)                                       retire une suggestion de service
   ("delq", id, quantité)                              retire la ligne ayant cette quantité (doublon)
   ("txt", ancien, nouveau)                            remplace un passage des instructions
   ("step-", passage)                                  supprime l'étape qui contient le passage
@@ -134,6 +135,13 @@ def apply_op(r: dict, op: tuple) -> str | None:
             return None
         r["composition"].remove(line)
         return f"- {iid} {q}"
+    if kind == "sugg-":  # retire une suggestion de service
+        (iid,) = args
+        lines = [c for c in r.get("composition") or []
+                 if c.get("ingredient") == iid and (c.get("meta") or {}).get("role") == "serving_suggestion"]
+        for c in lines:
+            r["composition"].remove(c)
+        return f"- suggestion {iid}" if lines else None
     if kind == "del":
         (iid,) = args
         line = _find(r, iid)

@@ -68,89 +68,6 @@
     "similar": []
   },
   {
-    "id": "dal_afghan_sabzi_chalaw_18f6a5",
-    "title": "Afghan Sabzi Chalaw",
-    "cuisine": "afghan",
-    "dish_type": "main",
-    "vegan": true,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 4366,
-    "confidence": 1.0,
-    "description": "Plat afghan végan préparé avec des épinards crus, des lentilles vertes, des carottes et des oignons, aromatisé avec du curcuma, du cumin et de la coriandre, pour une texture crémeuse et parfumée, évoquant la cuisine afghane.",
-    "composition": [
-      {
-        "ingredient": "spinach_raw_baby",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_lentil_dried",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 9,
-        "unit": "g"
-      },
-      {
-        "ingredient": "turmeric_powder",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander_spice_leaf_dried",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "sunflower_oil_plant",
-        "quantity": 65,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander",
-        "quantity": null,
-        "unit": "1 poignée"
-      }
-    ],
-    "n_instructions": 9,
-    "flags": [],
-    "similar": []
-  },
-  {
     "id": "dal_ajapsandali_8ebefc",
     "title": "Ajapsandali",
     "cuisine": "georgian",
@@ -172,7 +89,7 @@
     "description": "Ragoût géorgien d'aubergines et légumes mijotés, avec une base de tomates concassées réduites, une texture fondante et des arômes fumés issus de la cuisson lente, parfumé par les épices et les herbes fraîches.",
     "composition": [
       {
-        "ingredient": "red_lentil_boiled",
+        "ingredient": "red_lentil_dried",
         "quantity": 200,
         "unit": "g"
       },
@@ -183,7 +100,7 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 2,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -237,7 +154,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -739,13 +656,13 @@
     "description": "Soupe arménienne aux lentilles vertes, oignon, ail et épices, crémeuse et parfumée, avec une consistance onctueuse et un parfum sucré, inspirée de la cuisine traditionnelle arménienne.",
     "composition": [
       {
-        "ingredient": "green_lentil_boiled",
-        "quantity": 300,
+        "ingredient": "green_lentil_dried",
+        "quantity": 200,
         "unit": "g"
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -779,9 +696,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "vegetable_stock_dried",
@@ -795,7 +712,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -3666,12 +3583,12 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 100,
         "unit": "g"
       },
       {
         "ingredient": "egg_raw",
-        "quantity": 220,
+        "quantity": 110,
         "unit": "g"
       },
       {
@@ -3681,7 +3598,7 @@
       },
       {
         "ingredient": "nutmeg_spice",
-        "quantity": 5,
+        "quantity": 1,
         "unit": "g"
       },
       {
@@ -3705,7 +3622,7 @@
         "unit": "1 portion"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
     "similar": [
       {
@@ -3742,7 +3659,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -3752,7 +3669,7 @@
       },
       {
         "ingredient": "nutmeg_spice",
-        "quantity": 5,
+        "quantity": 1,
         "unit": "g"
       },
       {
@@ -3774,6 +3691,21 @@
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "flaxseed_linseed_ground",
+        "quantity": 7,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coconut_milk_plant",
+        "quantity": 150,
+        "unit": "ml"
       }
     ],
     "n_instructions": 6,
@@ -3809,7 +3741,7 @@
     "composition": [
       {
         "ingredient": "quinoa_raw_dried",
-        "quantity": 250,
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -3843,9 +3775,9 @@
         "unit": "ml"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "olive_oil_plant",
@@ -3878,7 +3810,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -4501,7 +4433,7 @@
     "composition": [
       {
         "ingredient": "quinoa_raw_dried",
-        "quantity": 250,
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -4511,7 +4443,7 @@
       },
       {
         "ingredient": "avocado_raw",
-        "quantity": 400,
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -4530,13 +4462,13 @@
         "unit": "ml"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 45,
+        "quantity": 20,
         "unit": "ml"
       },
       {
@@ -4546,7 +4478,7 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 20,
+        "quantity": 5,
         "unit": "g"
       },
       {
@@ -4560,7 +4492,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -6853,7 +6785,7 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 795,
+    "time_total": 835,
     "confidence": 1.0,
     "description": "Curry végan de pois chiches sur base d'épices torréfiées, avec une texture dense et rustique, parfumé à la coriandre fraîche et aux notes de cumin et de garam masala — une spécialité indienne traditionnelle à base de gingembre frais et d'oignon caramélisé.",
     "composition": [
@@ -6925,12 +6857,13 @@
     "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "high_protein",
       "vegan",
       "vegetarian"
     ],
-    "allergens": [],
+    "allergens": [
+      "gluten"
+    ],
     "servings": 4,
     "time_total": 55,
     "confidence": 1.0,
@@ -6943,7 +6876,7 @@
       },
       {
         "ingredient": "yellow_onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -6990,9 +6923,29 @@
         "ingredient": "basmati_rice_raw_seed",
         "quantity": null,
         "unit": "100g"
+      },
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 310,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 10,
+        "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -9576,7 +9529,9 @@
       "vegan",
       "vegetarian"
     ],
-    "allergens": [],
+    "allergens": [
+      "mustard"
+    ],
     "servings": 4,
     "time_total": 120,
     "confidence": 0.99,
@@ -9640,6 +9595,21 @@
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 900,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "yellow_mustard_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "curry_leaf",
+        "quantity": 3,
         "unit": "g"
       }
     ],
@@ -10288,7 +10258,7 @@
     "description": "Dahl végétarien aux lentilles corail cuites dans un lait de coco parfumé, créant une texture onctueuse et une saveur équilibrée, avec des notes d'épices et d'herbes fraîches.",
     "composition": [
       {
-        "ingredient": "red_lentil_boiled",
+        "ingredient": "red_lentil_dried",
         "quantity": 250,
         "unit": "g"
       },
@@ -10487,7 +10457,7 @@
     "description": "Délicieuse préparation indienne de lentilles corail mijotées avec une base aromatique torréfiée (tadka) pour une texture crémeuse homogène et une diffusion optimale des épices.",
     "composition": [
       {
-        "ingredient": "red_lentil_boiled",
+        "ingredient": "red_lentil_dried",
         "quantity": 250,
         "unit": "g"
       },
@@ -10545,9 +10515,19 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 700,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
+        "quantity": 15,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": [
       {
@@ -10586,7 +10566,7 @@
     "description": "Dal de lentilles corail crémeux, parfumé aux épices indiennes, avec une texture onctueuse et des notes de cumin et de coriandre, inspiré de la cuisine végétalienne indienne",
     "composition": [
       {
-        "ingredient": "red_lentil_boiled",
+        "ingredient": "red_lentil_dried",
         "quantity": 300,
         "unit": "g"
       },
@@ -10637,7 +10617,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       }
     ],
@@ -10674,7 +10654,7 @@
       "milk"
     ],
     "servings": 4,
-    "time_total": 81,
+    "time_total": 591,
     "confidence": 1.0,
     "description": "Dal makhani traditionnel: lentilles noires (urad dal) et haricots rouges mijotés longuement dans une sauce tomate épicée, enrichis de beurre et de crème, parfumés au garam masala et au fenugrec — riche et onctueux.",
     "composition": [
@@ -10783,7 +10763,7 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 801,
+    "time_total": 851,
     "confidence": 1.0,
     "description": "Plat indien crémeux à base de lentilles vertes et haricots rouges, avec une sauce parfumée aux épices et une texture lisse, typique de la cuisine végétarien du Pendjab.",
     "composition": [
@@ -10816,11 +10796,6 @@
         "ingredient": "ginger_raw_root_fresh",
         "quantity": 11.2,
         "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 50,
-        "unit": "ml"
       },
       {
         "ingredient": "coconut_oil_plant",
@@ -10881,7 +10856,7 @@
     "description": "Dal tadka traditionnel : lentilles corail mijotées dans un bouillon parfumé au curcuma, nappées d'un tadka (tempering) de cumin, moutarde et ail doré versé bouillant, garni d'oignons frits croustillants et de coriandre fraîche.",
     "composition": [
       {
-        "ingredient": "red_lentil_boiled",
+        "ingredient": "red_lentil_dried",
         "quantity": 200,
         "unit": "g"
       },
@@ -11880,6 +11855,11 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 150,
+        "unit": "ml"
       }
     ],
     "n_instructions": 8,
@@ -11907,7 +11887,7 @@
     "description": "Plat éthiopien traditionnel mijoté dans un bouillon de légumes aromatique, présentant une texture crémeuse et des saveurs complexes de lentilles corail, oignon jaune caramélisé, ail parfumé, et berbere.",
     "composition": [
       {
-        "ingredient": "red_lentil_boiled",
+        "ingredient": "red_lentil_dried",
         "quantity": 250,
         "unit": "g"
       },
@@ -12079,7 +12059,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -14217,7 +14197,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -14227,7 +14207,7 @@
       },
       {
         "ingredient": "chickpea_flour",
-        "quantity": 150,
+        "quantity": 60,
         "unit": "g"
       },
       {
@@ -14249,6 +14229,11 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
       }
     ],
     "n_instructions": 8,
@@ -18019,8 +18004,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "green_lentil_boiled",
-        "quantity": 300,
+        "ingredient": "green_lentil_dried",
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -18030,7 +18015,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -18075,7 +18060,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -18586,7 +18571,7 @@
     "id": "dal_hummus_traditionnel_7f6ccc",
     "title": "Hummus Traditionnel",
     "cuisine": "lebanese",
-    "dish_type": "main",
+    "dish_type": "starter",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -18609,9 +18594,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "olive_oil_plant",
@@ -18635,6 +18620,16 @@
       },
       {
         "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
         "quantity": 5,
         "unit": "g"
       }
@@ -18753,7 +18748,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -19103,7 +19098,7 @@
         "unit": "g"
       },
       {
-        "ingredient": "olive_oil_plant",
+        "ingredient": "sunflower_oil_plant",
         "quantity": 45,
         "unit": "ml"
       },
@@ -19116,6 +19111,11 @@
         "ingredient": "black_pepper_spice",
         "quantity": 2,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 520,
+        "unit": "ml"
       }
     ],
     "n_instructions": 9,
@@ -19184,8 +19184,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 45,
         "unit": "ml"
       },
       {
@@ -19197,6 +19197,11 @@
         "ingredient": "black_pepper_spice",
         "quantity": 2,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 530,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -19501,12 +19506,12 @@
       },
       {
         "ingredient": "rice_flour",
-        "quantity": 200,
+        "quantity": 60,
         "unit": "g"
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -19531,7 +19536,7 @@
       },
       {
         "ingredient": "sesame_oil_plant",
-        "quantity": 45.7,
+        "quantity": 40,
         "unit": "ml"
       },
       {
@@ -19691,12 +19696,12 @@
     "composition": [
       {
         "ingredient": "white_rice_raw_seed_unenriched",
-        "quantity": 300,
+        "quantity": 200,
         "unit": "g"
       },
       {
-        "ingredient": "green_lentil_boiled",
-        "quantity": 300,
+        "ingredient": "red_lentil_dried",
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -19728,6 +19733,11 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1000,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -20238,23 +20248,23 @@
       "sulphites"
     ],
     "servings": 4,
-    "time_total": 37,
+    "time_total": 62,
     "confidence": 1.0,
     "description": "Plat égyptien végan à base de lentilles vertes, où les saveurs se marient dans une texture tendre et parfumée, typique de la cuisine méditerranéenne avec des notes de cumin et de tomate.",
     "composition": [
       {
-        "ingredient": "green_lentil_boiled",
-        "quantity": 300,
+        "ingredient": "green_lentil_dried",
+        "quantity": 150,
         "unit": "g"
       },
       {
         "ingredient": "white_rice_raw_seed_unenriched",
-        "quantity": 300,
+        "quantity": 200,
         "unit": "g"
       },
       {
         "ingredient": "rice_vermicelli_raw_dried",
-        "quantity": 150,
+        "quantity": 50,
         "unit": "g"
       },
       {
@@ -20296,9 +20306,14 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -20322,18 +20337,18 @@
     "description": "Plat égyptien de riz parfumé, lentilles corail tendres et pâtes al dente, sauce tomate acidulée et épicée, oignons jaunes frits croustillants, parfumé de cumin et de vinaigre blanc",
     "composition": [
       {
-        "ingredient": "green_lentil_boiled",
-        "quantity": 300,
+        "ingredient": "green_lentil_dried",
+        "quantity": 150,
         "unit": "g"
       },
       {
         "ingredient": "white_rice_raw_seed_unenriched",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
         "ingredient": "pasta_raw_dried",
-        "quantity": 320,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -20368,7 +20383,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -20387,7 +20402,7 @@
         "unit": "2-3 pains"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 4,
     "flags": [],
     "similar": [
       {
@@ -21339,7 +21354,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -21358,9 +21373,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "olive_oil_plant",
@@ -21379,11 +21394,11 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -21406,8 +21421,8 @@
     "description": "Lentilles vertes cuites, mélangées à des pommes de terre crémeuses et des carottes fondantes, parfumées au thym frais.",
     "composition": [
       {
-        "ingredient": "green_lentil_boiled",
-        "quantity": 300,
+        "ingredient": "green_lentil_dried",
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -21422,7 +21437,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -21447,7 +21462,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -21459,6 +21474,11 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
       }
     ],
     "n_instructions": 8,
@@ -21495,8 +21515,8 @@
     "description": "Gratin végétarien britannique à base de lentilles vertes cuites à la perfection, avec une texture crémeuse et une saveur riche, inspiré de la cuisine traditionnelle anglaise.",
     "composition": [
       {
-        "ingredient": "green_lentil_boiled",
-        "quantity": 300,
+        "ingredient": "green_lentil_dried",
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -21511,7 +21531,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -21528,6 +21548,16 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 9.4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 750,
+        "unit": "ml"
       }
     ],
     "n_instructions": 9,
@@ -21565,7 +21595,7 @@
     "composition": [
       {
         "ingredient": "green_lentil_dried",
-        "quantity": 300,
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -21580,7 +21610,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -21597,6 +21627,16 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 9.4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 750,
+        "unit": "ml"
       }
     ],
     "n_instructions": 8,
@@ -21636,8 +21676,8 @@
     "description": "Plat indien traditionnel à base de lentilles vertes, cuisson lente et douce sous frémissement, offrant une texture fondante et nappante, avec des saveurs équilibrées de légumes et d'épices, accompagné de la fraîcheur des épinards.",
     "composition": [
       {
-        "ingredient": "green_lentil_boiled",
-        "quantity": 200,
+        "ingredient": "green_lentil_dried",
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -21647,7 +21687,7 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 2,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -21676,7 +21716,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -21814,7 +21854,7 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 2,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -22451,7 +22491,7 @@
       "mustard"
     ],
     "servings": 4,
-    "time_total": 33,
+    "time_total": 790,
     "confidence": 1.0,
     "description": "Crêpe indienne croustillante à base de farine de riz, lentille urad, pomme de terre, avec une sauce dense et parfumée, présentant une texture extérieure dorée et croustillante, et une texture intérieure moelleuse, inspirée de la cuisine indienne du sud.",
     "composition": [
@@ -22472,7 +22512,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -22511,11 +22551,6 @@
         "unit": "g"
       },
       {
-        "ingredient": "mustard",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
@@ -22524,9 +22559,19 @@
         "ingredient": "base_pate_piment_b6904a",
         "quantity": null,
         "unit": "2 cuillères à soupe"
+      },
+      {
+        "ingredient": "curry_leaf",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 250,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -22791,15 +22836,17 @@
     "title": "Mercimek Köftesi",
     "cuisine": "international",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
-      "vegetarian"
+      "vegetarian",
+      "vegan",
+      "lactose_free"
     ],
     "allergens": [
       "gluten"
     ],
     "servings": 4,
-    "time_total": 37,
+    "time_total": 60,
     "confidence": 1.0,
     "description": "Mercimek Köftesi, plat turc mijoté avec amour, où les lentilles rouges tendres se mélangent à un boulgour parfumé et des oignons caramélisés, créant une texture onctueuse et des saveurs épicées, typiques de la cuisine méditerranéenne.",
     "composition": [
@@ -22815,7 +22862,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -22859,12 +22906,12 @@
         "unit": "1 feuille"
       },
       {
-        "ingredient": "cream",
-        "quantity": null,
-        "unit": "1 cuillère à café"
+        "ingredient": "water",
+        "quantity": 600,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -24087,18 +24134,18 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 31,
+    "time_total": 91,
     "confidence": 1.0,
     "description": "Ragoût libanais de lentilles vertes crémeuses et parfumées, mijotées avec amour pour une sauce épaisse et concentrée, avec un contraste de textures fondantes et croustillantes, et un parfum envoûtant de cumin et d'oignon caramélisé.",
     "composition": [
       {
-        "ingredient": "green_lentil_boiled",
-        "quantity": 300,
+        "ingredient": "green_lentil_dried",
+        "quantity": 250,
         "unit": "g"
       },
       {
         "ingredient": "white_rice_raw_seed_unenriched",
-        "quantity": 300,
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -24125,9 +24172,14 @@
         "ingredient": "black_pepper_spice",
         "quantity": 2,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1000,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -24515,7 +24567,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -24557,6 +24609,11 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 150,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -24585,7 +24642,7 @@
     "description": "Curry indien crémeux de lentilles corail, parfumé d'épices et de gingembre, accompagné de riz basmati parfumé et de légumes fondants, avec une texture crémeuse et nappante, typique de la cuisine népalaise.",
     "composition": [
       {
-        "ingredient": "red_lentil_boiled",
+        "ingredient": "red_lentil_dried",
         "quantity": 200,
         "unit": "g"
       },
@@ -24596,7 +24653,7 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 2,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -24638,9 +24695,14 @@
         "ingredient": "coriander_raw_fresh_herb",
         "quantity": 10,
         "unit": "g"
+      },
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 300,
+        "unit": "g"
       }
     ],
-    "n_instructions": 11,
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -26901,7 +26963,7 @@
       "vegetarian"
     ],
     "allergens": [],
-    "servings": 2,
+    "servings": 4,
     "time_total": 23,
     "confidence": 1.0,
     "description": "Pakora croustillant à l'extérieur et tendre à cœur, parfumé aux épices indiennes, réalisé avec une pâte à base de farine de pois chiche et frit dans de l'huile de tournesol chaude.",
@@ -26945,9 +27007,19 @@
         "ingredient": "lime",
         "quantity": null,
         "unit": "2 tranches"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 120,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -27018,7 +27090,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 6,
+        "quantity": 4,
         "unit": "g"
       },
       {
@@ -27032,7 +27104,7 @@
         "unit": "ml"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 8,
     "flags": [],
     "similar": [
       {
@@ -27570,7 +27642,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 6,
+        "quantity": 4,
         "unit": "g"
       },
       {
@@ -27584,7 +27656,7 @@
         "unit": "1 poignée"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": [
       {
@@ -29215,7 +29287,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -29254,9 +29326,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
       },
       {
         "ingredient": "vegetable_stock_dried",
@@ -29270,7 +29342,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -30842,7 +30914,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -35003,7 +35075,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -35023,7 +35095,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -35035,6 +35107,16 @@
         "ingredient": "sourdough_bread",
         "quantity": null,
         "unit": "1 pièce"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 9.4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 750,
+        "unit": "ml"
       }
     ],
     "n_instructions": 8,
@@ -36617,7 +36699,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -36637,18 +36719,18 @@
       },
       {
         "ingredient": "sesame_oil_plant",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
       },
       {
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "white_rice_short_grain_seed_dried",
+        "quantity": 300,
+        "unit": "g"
       }
     ],
     "n_instructions": 7,
@@ -37940,6 +38022,94 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "dal_afghan_sabzi_chalaw_18f6a5",
+    "title": "Sabzi afghan aux épinards et lentilles",
+    "cuisine": "afghan",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "gluten_free",
+      "vegan",
+      "vegetarian"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 61,
+    "confidence": 1.0,
+    "description": "Plat afghan végan préparé avec des épinards crus, des lentilles vertes, des carottes et des oignons, aromatisé avec du curcuma, du cumin et de la coriandre, pour une texture crémeuse et parfumée, évoquant la cuisine afghane.",
+    "composition": [
+      {
+        "ingredient": "spinach_raw_baby",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_lentil_dried",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_spice_leaf_dried",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander",
+        "quantity": null,
+        "unit": "1 poignée"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 700,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -45234,7 +45404,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -45259,13 +45429,13 @@
       },
       {
         "ingredient": "coconut_oil_plant",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
-        "ingredient": "lime_raw",
-        "quantity": 140,
-        "unit": "g"
+        "ingredient": "lime_juice_fresh",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
@@ -45288,7 +45458,7 @@
         "unit": "150g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -45321,7 +45491,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {

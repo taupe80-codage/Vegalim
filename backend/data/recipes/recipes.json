@@ -14850,7 +14850,6 @@
       },
       "search_tokens": [
         "agave",
-        "anemie",
         "avoine",
         "chia",
         "coco",
@@ -14862,14 +14861,16 @@
         "facile",
         "facile enfants",
         "famille",
-        "fer",
         "framboise",
         "international",
-        "iron",
         "kids",
+        "leger",
         "lent",
+        "light",
         "long",
+        "low calorie",
         "mijote",
+        "minceur",
         "noix",
         "oat",
         "pudding",
@@ -20346,7 +20347,6 @@
         "10 min",
         "20 min",
         "5 min",
-        "anemie",
         "aux",
         "black",
         "bread",
@@ -20360,12 +20360,10 @@
         "facile",
         "facile enfants",
         "famille",
-        "fer",
         "fig",
         "figue",
         "honey",
         "international",
-        "iron",
         "kids",
         "leger",
         "lemon",
@@ -20639,8 +20637,12 @@
         "haricot",
         "international",
         "kids",
+        "leger",
         "levain",
+        "light",
         "lime",
+        "low calorie",
+        "minceur",
         "mung",
         "mungo",
         "olive",
@@ -26792,7 +26794,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -26835,21 +26837,10 @@
         },
         {
           "ingredient": "sesame_oil_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -26864,6 +26855,17 @@
             "ingredient_fr": "persil plat",
             "note": "Pour une touche de fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "white_rice_short_grain_seed_dried",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "carbohydrate",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -26928,6 +26930,7 @@
         "asia",
         "asiatique",
         "base_japanese_curry_roux_385e52",
+        "blanc",
         "bouillon",
         "carotte",
         "carrot",
@@ -26956,17 +26959,15 @@
         "potato",
         "rice",
         "riz",
-        "salt",
         "sans viande",
-        "sel",
         "sesame",
         "stock",
-        "table",
         "terre",
         "vegetable",
         "vegetarien",
         "water",
         "water_cooking",
+        "white",
         "wok"
       ],
       "difficulty_level": "medium",
@@ -26976,13 +26977,13 @@
       "_chef_note": "Le riz au curry japonais est un plat traditionnel qui combine les saveurs des épices à celles du riz.",
       "description": "Riz au curry japonais crémeux, parsemé de pommes de terre et de carottes tendres, sur fond d'épices japonais équilibré",
       "instructions": [
-        "Étape 1: Dans une poêle chaude, ajoutez 45 ml d'huile de sésame et faites saisir les oignons 3 minutes à feu moyen-vif, jusqu'à ce qu'ils deviennent translucides et émettent une odeur sucrée.",
+        "Étape 1: Dans une poêle chaude, ajoutez 30 ml d'huile de sésame et faites saisir les oignons 3 minutes à feu moyen-vif, jusqu'à ce qu'ils deviennent translucides et émettent une odeur sucrée.",
         "Étape 2: Ajoutez les carottes et les pommes de terre, faites-les revenir 4 minutes à feu moyen, en remuant régulièrement, jusqu'à ce qu'ils commencent à ramollir et à prendre une teinte dorée.",
-        "Étape 3: Versez 750 ml de bouillon de légumes chaud, préparé avec des légumes végétariens, et portez à ébullition. Écumez si nécessaire, puis réduisez le feu.",
+        "Étape 3: Versez 750 ml de bouillon de légumes chaud et portez à ébullition. Écumez si nécessaire, puis réduisez le feu.",
         "Étape 4: Laissez cuire 15 minutes, en vérifiant régulièrement la tendreté des légumes. Les pommes de terre et les carottes doivent être tendres.",
-        "Étape 5: Hors du feu, ajoutez 80 g de roux curry japonais, préparé avec de la farine de riz et des épices végétariennes. Émulsionnez jusqu'à dissolution complète, en remuant vigoureusement, jusqu'à ce que la sauce soit lisse et crémeuse.",
-        "Étape 6: Laissez reposer 2 minutes, en vérifiant la coloration de la sauce, qui doit atteindre une teinte dorée blonde. Si nécessaire, ajustez la consistance en ajoutant un peu de bouillon de légumes ou de lait.",
-        "Étape 7: Servez le curry japonais sur du riz cuit, préparé avec du riz et de l'eau, et garnissez de persil plat et de carottes râpées, si désiré."
+        "Étape 5: Hors du feu, ajoutez 80 g de roux curry japonais. Émulsionnez jusqu'à dissolution complète, en remuant vigoureusement, jusqu'à ce que la sauce soit lisse et crémeuse.",
+        "Étape 6: Laissez reposer 2 minutes, en vérifiant la coloration de la sauce, qui doit atteindre une teinte dorée blonde. Si nécessaire, ajustez la consistance en ajoutant un peu de bouillon de légumes.",
+        "Étape 7: Pendant la cuisson, rincez 300 g de riz japonais et cuisez-le à couvert dans 360 ml d'eau 12 minutes. Servez le curry sur le riz."
       ],
       "diet_flags": {
         "vegan": false,
@@ -27039,7 +27040,7 @@
         },
         {
           "ingredient": "rice_flour",
-          "quantity": 200,
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -27050,7 +27051,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -27104,7 +27105,7 @@
         },
         {
           "ingredient": "sesame_oil_plant",
-          "quantity": 45.7,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -27248,10 +27249,10 @@
       "instructions": [
         "Étape 1 : Préparez le tofu ferme en le coupant en tranches épaisses. Dans un bol, mélangez la farine de riz et un peu d'eau pour créer une pâte lisse.",
         "Étape 2 : Trempez chaque tranche de tofu ferme dans la pâte de farine de riz, puis roulez-les dans les chapelures de panko pour les paner uniformément.",
-        "Étape 3 : Faites chauffer une quantité généreuse d'huile de sésame dans une poêle à feu moyen. Lorsque l'huile est chaude, ajoutez les tranches de tofu panées et faites-les frire jusqu'à ce qu'elles soient dorées et croustillantes des deux côtés, environ 4 minutes de chaque côté.",
+        "Étape 3 : Faites chauffer 30 ml d'huile de sésame dans une poêle à feu moyen. Lorsque l'huile est chaude, ajoutez les tranches de tofu panées et faites-les frire jusqu'à ce qu'elles soient dorées et croustillantes des deux côtés, environ 4 minutes de chaque côté.",
         "Étape 4 : Pendant que le tofu cuit, faites revenir les oignons jaunes émincés dans un peu d'huile de sésame dans une autre poêle à feu moyen, jusqu'à ce qu'ils soient translucides et parfumés. Ajoutez l'ail émincé et faites cuire pendant 1 minute, en remuant constamment.",
-        "Étape 5 : Ajoutez le curry en poudre aux oignons et mélangez bien pour que les oignons soient enrobés de curry. Faites cuire pendant 1 minute, en remuant constamment, jusqu'à ce que le mélange soit parfumé.",
-        "Étape 6 : Versez le bouillon de légumes dans la poêle avec les oignons et le curry, et laissez réduire à feu doux pendant environ 5 minutes, en remuant occasionnellement, jusqu'à ce que la sauce ait épaissi et réduit de moitié. Ajoutez un peu de crème de coco pour donner une texture crémeuse.",
+        "Étape 5 : Ajoutez le curry en poudre et 20 g de farine de riz aux oignons et mélangez bien pour que les oignons soient enrobés de curry. Faites cuire pendant 1 minute, en remuant constamment, jusqu'à ce que le mélange soit parfumé.",
+        "Étape 6 : Versez le bouillon de légumes dans la poêle avec les oignons et le curry, et laissez réduire à feu doux pendant environ 5 minutes, en remuant occasionnellement, jusqu'à ce que la sauce ait épaissi et réduit de moitié.",
         "Étape 7 : Préparez le riz japonais selon les instructions du paquet. Généralement, il faut le rincer, le mettre dans une casserole avec de l'eau, porter à ébullition, puis réduire le feu et laisser cuire à couvert pendant environ 15 minutes, ou jusqu'à ce que l'eau soit absorbée et que le riz soit tendre.",
         "Étape 8 : Pour servir, placez une portion de riz cuit sur une assiette, puis déposez une tranche de tofu pané et cuit sur le dessus. Nappez généreusement de sauce curry chaude et servez sans attendre, pour préserver la texture croustillante du tofu et la chaleur de la sauce.",
         "Étape 9 : Décorez avec des herbes fraîches, telles que du persil ou de la coriandre, pour ajouter une touche de fraîcheur et de couleur à votre plat."
@@ -27388,7 +27389,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 6,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -27545,14 +27546,13 @@
       "description": "Curry crémeux d'épinards frais et de fromage végétal râpé, présentant un équilibre subtil entre la fraîcheur des épinards et la richesse du fromage, avec une texture lisse et parfumée obtenue après une cuisson minutieuse",
       "instructions": [
         "Étape 1 : Blanchir 400 g d'épinards crus dans l'eau bouillante salée pendant 1 minute. Plonger ensuite dans l'eau glacée pour fixer la couleur verte. Égoutter, presser et mixer grossièrement pendant 2 minutes jusqu'à obtenir une consistance lisse et homogène.",
-        "Étape 2 : Faire revenir 150 g d'oignons jaunes crus, 10 g d'ail cru et 10 g de gingembre frais dans 30 ml de ghee à feu moyen pendant 7 minutes, en remuant régulièrement, jusqu'à obtenir une coloration dorée. Ajouter 5 g de graines de cumin, 4 g de garam masala et 6 g de sel de table. Cuire 1 minute en remuant constamment pour éviter de brûler les épices.",
+        "Étape 2 : Faire revenir 150 g d'oignons jaunes crus, 10 g d'ail cru et 10 g de gingembre frais dans 30 ml de ghee à feu moyen pendant 7 minutes, en remuant régulièrement, jusqu'à obtenir une coloration dorée. Ajouter 5 g de graines de cumin, 4 g de garam masala et 4 g de sel de table. Cuire 1 minute en remuant constamment pour éviter de brûler les épices.",
         "Étape 3 : Incorporer 200 g de tomates concassées et cuire pendant 6 minutes, en remuant occasionnellement, jusqu'à obtenir une sauce épaisse et parfumée. Ajouter les épinards mixés et 100 ml d'eau. Mijoter 5 minutes à feu doux en remuant régulièrement pour prévenir les adhérences.",
-        "Étape 4 : Incorporer 250 g de fromage végétal râpé en cubes si souhaité. Cuire 3 minutes à feu doux en remuant doucement pour éviter de défaire le fromage et conserver sa texture.",
-        "Étape 5 : Ajouter 30 ml de crème de coco et mélanger pendant 1 minute pour obtenir une sauce crémeuse et parfumée. Rectifier l'assaisonnement en fonction des goûts, en ajustant le sel ou les épices si nécessaire.",
-        "Étape 6 : Cuire pendant 2 minutes supplémentaires pour permettre aux saveurs de se mélanger harmonieusement. Vérifier que la sauce est lisse et crémeuse, avec un équilibre parfait entre la fraîcheur des épinards et la richesse du fromage végétal.",
-        "Étape 7 : Servir chaud, garni de feuilles d'épinards frais et de noix de coco râpée si désiré, pour un repas complet et équilibré. Présenter dans des bols préchauffés pour conserver la chaleur.",
-        "Étape 8 : Accompagner de riz basmati ou de naan pour un repas complet et équilibré. Les herbes fraîches comme la coriandre ou le persil peuvent être ajoutées pour une touche de fraîcheur et de couleur.",
-        "Étape 9 : Pour une présentation visuelle attrayante, disposer les ingrédients de manière harmonieuse sur le plat de service. La coriandre ciselée ou les noix de coco râpées peuvent être utilisées comme garniture pour ajouter une touche de couleur et de fraîcheur."
+        "Étape 4 : Incorporer 250 g de paneer en cubes. Cuire 3 minutes à feu doux en remuant doucement pour éviter de défaire le fromage et conserver sa texture.",
+        "Étape 5 : Ajouter 30 ml de lait de coco et mélanger pendant 1 minute pour obtenir une sauce crémeuse et parfumée. Rectifier l'assaisonnement en fonction des goûts, en ajustant le sel ou les épices si nécessaire.",
+        "Étape 6 : Cuire pendant 2 minutes supplémentaires pour permettre aux saveurs de se mélanger harmonieusement. Vérifier que la sauce est lisse et crémeuse, avec un équilibre parfait entre la fraîcheur des épinards et la richesse du paneer.",
+        "Étape 7 : Servir chaud, garni de feuilles d'épinards frais, pour un repas complet et équilibré.",
+        "Étape 8 : Accompagner de riz basmati ou de naan pour un repas complet et équilibré. Les herbes fraîches comme la coriandre ou le persil peuvent être ajoutées pour une touche de fraîcheur et de couleur."
       ],
       "diet_flags": {
         "vegan": false,
@@ -27708,7 +27708,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 6,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -27869,14 +27869,13 @@
       "_chef_note": "Utiliser des ingrédients végétaliens pour une version sans produit animal.",
       "description": "Curry de fromage râpé en sauce tomate crémeuse enrichie de cajous mixés, avec une texture lisse et une couleur orange profond, inspiré de la cuisine indienne.",
       "instructions": [
-        "Étape 1: Faire revenir 120 g d'oignon jaune haché dans 20 ml de canola_oil à feu moyen pendant 8 minutes, jusqu'à obtenir une belle coloration dorée. Ajouter 10 g de gingembre frais, 10 g d'ail et 4 g de garam masala pendant 1 minute.",
+        "Étape 1: Faire revenir 120 g d'oignon jaune haché dans 20 ml d'huile de colza à feu moyen pendant 8 minutes, jusqu'à obtenir une belle coloration dorée. Ajouter 10 g de gingembre frais, 10 g d'ail et 4 g de garam masala pendant 1 minute.",
         "Étape 2: Incorporer 400 g de tomates concassées et 40 g de noix de cajou. Cuire pendant 10 minutes. Mixer le tout jusqu'à obtenir une sauce lisse et filtrer au chinois pour une texture parfaite.",
-        "Étape 3: Remettre la sauce sur le feu. Ajouter 250 g de fromage râpé en cubes de 2 cm. Verser 80 ml de crème de lait. Mijoter pendant 5 minutes à feu doux.",
+        "Étape 3: Remettre la sauce sur le feu. Ajouter 250 g de paneer en cubes de 2 cm. Verser 80 ml de crème de lait. Mijoter pendant 5 minutes à feu doux.",
         "Étape 4: Hors du feu, incorporer 40 g de beurre en mélangeant pour monter la sauce — elle doit être brillante et onctueuse.",
-        "Étape 5: Assaisonner avec 6 g de sel et 4 g de garam masala. Ajouter 6 g de sucre pour équilibrer les saveurs.",
+        "Étape 5: Assaisonner avec 4 g de sel. Ajouter 6 g de sucre pour équilibrer les saveurs.",
         "Étape 6: Ajouter 150 ml d'eau pour ajuster la consistance de la sauce.",
-        "Étape 7: Servir chaud, garni de coriandre fraîche. La sauce doit être orange profond, crémeuse et légèrement sucrée.",
-        "Étape 8: Présenter dans des bols préchauffés, avec une touche de coriandre ciselée et un filet d'huile de canola."
+        "Étape 7: Servir chaud, garni de coriandre fraîche. La sauce doit être orange profond, crémeuse et légèrement sucrée."
       ],
       "diet_flags": {
         "vegan": false,
@@ -28040,6 +28039,39 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 900,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yellow_mustard_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "curry_leaf",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -28050,7 +28082,9 @@
           "vegan",
           "vegetarian"
         ],
-        "allergens": [],
+        "allergens": [
+          "mustard"
+        ],
         "technique": [
           "braising",
           "toasting",
@@ -28159,13 +28193,13 @@
       "_quality_score": 0.99,
       "description": "Curry végan de pois cassés mijotés avec une base aromatique torréfiée, développant une texture épaisse et crémeuse, avec une couleur jaune profond et un parfum épicé, inspiré de la cuisine indienne traditionnelle.",
       "instructions": [
-        "Étape 1 : Faire revenir 140 g d'oignon dans 35 ml d'huile de tournesol à feu moyen pendant 6 minutes, jusqu'à ce qu'il soit doré et parfumé, en libérant ses arômes naturels. Ajouter 30 g d'ail et 12 g de gingembre, cuire 1 minute, en remuant constamment pour éviter la coloration excessive.",
+        "Étape 1 : Faire revenir 140 g d'oignon dans 30 ml d'huile de tournesol à feu moyen pendant 6 minutes, jusqu'à ce qu'il soit doré et parfumé, en libérant ses arômes naturels. Ajouter 30 g d'ail et 12 g de gingembre, cuire 1 minute, en remuant constamment pour éviter la coloration excessive.",
         "Étape 2 : Ajouter 5 g de cumin, 3,8 g de curcuma et 12 g de coriandre moulue, cuire 1 minute, en sentant les arômes se mélanger et se fondre ensemble.",
         "Étape 3 : Incorporer 220 g de tomates concassées et 45 g de piment. Réduire 5 minutes, en laissant les saveurs se fondre ensemble et les tomates rendre leur jus.",
-        "Étape 4 : Ajouter 300 g de pois cassés et 900 ml d'eau de coco. Porter à ébullition en écumant, puis réduire le feu pour mijoter.",
+        "Étape 4 : Ajouter 300 g de pois cassés et 900 ml d'eau. Porter à ébullition en écumant, puis réduire le feu pour mijoter.",
         "Étape 5 : Mijoter à feu doux 40 minutes en remuant régulièrement, jusqu'à ce que les pois soient entièrement fondus et le curry épais, en vérifiant que le curry nappe la cuillère.",
         "Étape 6 : Préparer le tadka : chauffer 5 ml d'huile de tournesol, faire grésiller des graines de moutarde et des feuilles de curry 30 secondes. Verser sur le curry, en sentant les arômes se dégager et se mélanger.",
-        "Étape 7 : Assaisonner avec de la levure nutritionnelle et servir sans attendre."
+        "Étape 7 : Saler, parsemer de coriandre fraîche et servir."
       ],
       "diet_flags": {
         "vegan": true,
@@ -28222,7 +28256,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -28277,7 +28311,7 @@
         },
         {
           "ingredient": "coconut_oil_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat_cooking",
@@ -28287,9 +28321,9 @@
           }
         },
         {
-          "ingredient": "lime_raw",
-          "quantity": 140,
-          "unit": "g",
+          "ingredient": "lime_juice_fresh",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -28454,16 +28488,14 @@
       "_quality_score": 0.77,
       "description": "Curry sri lankais de jackfruit sur fond de curry sri lankais épicé, avec une sauce crémeuse et parfumée — texture tendre et saveur intense, parfumé par les épices et les herbes fraîches",
       "instructions": [
-        "Étape 1 : Égoutter et effilocher 400g de jackfruit en conserve, ciseler 300g d'oignons jaunes et 9g d'ail pour libérer leurs arômes, en prenant soin de bien les émincer pour une texture homogène",
-        "Étape 2 : Faire revenir l'oignon jaune et l'ail 3 min dans 45ml d'huile de coco chaude à feu moyen-vif, jusqu'à ce qu'ils soient tendres et parfumés, en remuant régulièrement pour éviter la coloration excessive",
+        "Étape 1 : Égoutter et effilocher 400g de jackfruit en conserve, ciseler 150g d'oignons jaunes et 9g d'ail pour libérer leurs arômes, en prenant soin de bien les émincer pour une texture homogène",
+        "Étape 2 : Faire revenir l'oignon jaune et l'ail 3 min dans 30ml d'huile de coco chaude à feu moyen-vif, jusqu'à ce qu'ils soient tendres et parfumés, en remuant régulièrement pour éviter la coloration excessive",
         "Étape 3 : Ajouter 20g de curry sri lankais et le jackfruit, laisser mijoter 5 min pour permettre aux saveurs de se mélanger et de développer une intensité aromatique",
         "Étape 4 : Incorporer 400ml de lait de coco, 300g de haricots verts et 500g de courgettes, laisser mijoter 15 min à feu moyen, en remuant régulièrement pour maintenir une texture crémeuse et éviter l'attache",
         "Étape 5 : Ajouter 240g de tomates fraîches et laisser mijoter 5 min à feu doux, jusqu'à ce que les légumes soient tendres et la sauce ait épaissi, en vérifiant la texture pour obtenir une consistance onctueuse",
-        "Étape 6 : Assaisonner de 5g de sel et de jus de 140g de citron vert, goûter et rectifier l'assaisonnement pour obtenir un équilibre parfait entre les saveurs épicées et acides",
-        "Étape 7 : Servir aussitôt dans des bols préchauffés.",
-        "Étape 8 : Garnir de feuilles de coriandre fraîche et de tranches de citron vert pour un toucher de fraîcheur et de couleur, et ajouter un peu de piquant avec des feuilles de coriandre fraîchement hachées",
-        "Étape 9 : Accompagner de riz basmati ou de naan pour un repas complet et délicieux, en profitant de la combinaison des saveurs et des textures pour un expérience culinaire enrichissante",
-        "Étape 10 : Démouler et servir chaud."
+        "Étape 6 : Assaisonner de 5g de sel et de 40 ml de jus de citron vert, goûter et rectifier l'assaisonnement pour obtenir un équilibre parfait entre les saveurs épicées et acides",
+        "Étape 7 : Garnir de feuilles de coriandre fraîche et de tranches de citron vert pour un toucher de fraîcheur et de couleur, et ajouter un peu de piquant avec des feuilles de coriandre fraîchement hachées",
+        "Étape 8 : Accompagner de riz basmati ou de naan pour un repas complet et délicieux, en profitant de la combinaison des saveurs et des textures pour un expérience culinaire enrichissante"
       ],
       "diet_flags": {
         "vegan": true,
@@ -28520,7 +28552,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -28702,13 +28734,13 @@
       "_quality_score": 0.75,
       "description": "Un curry crémeux et parfumé de courge sri-lankais, où les saveurs de curcuma et de curry sri-lankais se mélangent en harmonie, créant une texture onctueuse et une odeur appétissante.",
       "instructions": [
-        "Étape 1 : Faites chauffer 45ml d'huile de tournesol dans une poêle à feu moyen. Ajoutez 300g d'oignons émincés et 9g d'ail écrasé, puis faites-les revenir pendant 3 minutes, jusqu'à ce qu'ils soient tendres et fragrances.",
+        "Étape 1 : Faites chauffer 45ml d'huile de tournesol dans une poêle à feu moyen. Ajoutez 150g d'oignons émincés et 9g d'ail écrasé, puis faites-les revenir pendant 3 minutes, jusqu'à ce qu'ils soient tendres et parfumés.",
         "Étape 2 : Ajoutez 20g de curry sri-lankais, 3g de curcuma et 5g de feuille de curry. Faites revenir pendant 1 minute, en remuant constamment, jusqu'à ce que les épices soient parfumées et les feuilles de curry commencent à se défaire.",
-        "Étape 3 : Ajoutez 600g de courge en cubes et faites-les blanchir pendant 5 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce qu'elles soient tendres et légèrement caramélisées.",
+        "Étape 3 : Ajoutez 600g de courge en cubes et faites-les revenir pendant 5 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce qu'elles soient légèrement colorées.",
         "Étape 4 : Versez 400ml de lait de coco et portez à ébullition. Réduisez le feu à moyen et laissez mijoter pendant 15 minutes, en remuant occasionnellement, jusqu'à ce que la courge soit tendre et la sauce ait épaissi.",
         "Étape 5 : Réduisez la sauce en la laissant mijoter pendant quelques minutes, jusqu'à ce qu'elle atteigne la consistance désirée. Assaisonnez de 5g de sel et ajustez la saveur équilibrée.",
         "Étape 6 : Faites nacrer les feuilles de curry restantes dans un peu d'huile de tournesol et utilisez-les comme garniture.",
-        "Étape 7 : Servez le curry chaud, accompagné de riz ou de naan cuit à feu moyen-vif pendant 8 minutes, jusqu'à ce qu'il soit doré et croustillant."
+        "Étape 7 : Servez le curry chaud, accompagné de riz ou de naan."
       ],
       "diet_flags": {
         "vegan": true,
@@ -28724,7 +28756,7 @@
       "id": "dal_afghan_sabzi_chalaw_18f6a5",
       "titles": {
         "original": "Afghan Sabzi Chalaw",
-        "fr": "Afghan Sabzi Chalaw",
+        "fr": "Sabzi afghan aux épinards et lentilles",
         "en": "Afghan Sabzi Chalaw"
       },
       "origin": {
@@ -28736,9 +28768,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 21,
-        "prep_passive_min": 4320,
-        "cook_min": 25,
-        "total_min": 4366
+        "prep_passive_min": 0,
+        "cook_min": 40,
+        "total_min": 61
       },
       "composition": [
         {
@@ -28831,7 +28863,7 @@
         },
         {
           "ingredient": "sunflower_oil_plant",
-          "quantity": 65,
+          "quantity": 45,
           "unit": "ml",
           "meta": {
             "role": "fat_cooking",
@@ -28871,6 +28903,17 @@
             "ingredient_fr": "coriandre fraîche ciselée",
             "note": "Pour la fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 700,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -28932,6 +28975,7 @@
         "afghan",
         "afghanistan",
         "ail",
+        "aux",
         "avance",
         "black",
         "braising",
@@ -28946,6 +28990,7 @@
         "cumin",
         "curcuma",
         "epinard",
+        "epinards",
         "garlic",
         "gluten free",
         "green",
@@ -28954,6 +28999,7 @@
         "lent",
         "lentil",
         "lentille",
+        "lentilles",
         "light",
         "long",
         "low calorie",
@@ -28995,10 +29041,9 @@
         "Étape 3 : Incorporer 300g d'épinards crus, 3g de curcuma en poudre, 3g de cumin en poudre et 3g de coriandre moulue. Faire revenir pendant 3 minutes, jusqu'à ce que les épinards soient réduits et les saveurs soient bien mélangées.",
         "Étape 4 : Ajouter 200g de carottes crues en rondelles et 300g de lentilles vertes rincées. Couvrir de 700ml d'eau froide et porter à ébullition.",
         "Étape 5 : Mijoter à feu doux pendant 25 minutes, jusqu'à ce que les lentilles soient tendres et la sauce soit légèrement liée. Saler en fin de cuisson avec 5g de sel de table et 2g de poivre noir.",
-        "Étape 6 : Ajouter 20ml d'huile de tournesol pour enrober les légumes et les lentilles.",
-        "Étape 7 : Laisser reposer pendant 5 minutes pour que les saveurs se mélangent.",
-        "Étape 8 : Servir chaud, garni de coriandre fraîche hachée, accompagné de riz végan au safran.",
-        "Étape 9 : Réserver les restes dans un contenant hermétique au réfrigérateur pour une durée de 3 jours, en les réchauffant avant de servir."
+        "Étape 6 : Laisser reposer pendant 5 minutes pour que les saveurs se mélangent.",
+        "Étape 7 : Servir chaud, garni de coriandre fraîche hachée, accompagné de riz basmati (chalaw).",
+        "Étape 8 : Réserver les restes dans un contenant hermétique au réfrigérateur pour une durée de 3 jours, en les réchauffant avant de servir."
       ],
       "diet_flags": {
         "vegan": true,
@@ -29032,7 +29077,7 @@
       },
       "composition": [
         {
-          "ingredient": "red_lentil_boiled",
+          "ingredient": "red_lentil_dried",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -29055,7 +29100,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -29300,15 +29345,13 @@
       "description": "Ragoût géorgien d'aubergines et légumes mijotés, avec une base de tomates concassées réduites, une texture fondante et des arômes fumés issus de la cuisson lente, parfumé par les épices et les herbes fraîches.",
       "instructions": [
         "Étape 1 : Faire chauffer 20 ml d'huile d'olive extra vierge dans une poêle à feu moyen. Ajouter 150 g d'oignon jaune émincé et faire revenir pendant 5 minutes, jusqu'à ce qu'il soit translucide et parfumé, avec une légère coloration dorée.",
-        "Étape 2 : Ajouter 2 g d'ail émincé et 11,2 g de gingembre frais râpé. Faire revenir pendant 1 minute, en remuant constamment, jusqu'à ce que les arômes soient libérés et que le mélange commence à parfumer la cuisine.",
+        "Étape 2 : Ajouter 10 g d'ail émincé et 11,2 g de gingembre frais râpé. Faire revenir pendant 1 minute, en remuant constamment, jusqu'à ce que les arômes soient libérés et que le mélange commence à parfumer la cuisine.",
         "Étape 3 : Incorporer 200 g de lentilles corail et faire revenir pendant 1 minute, en remuant constamment, jusqu'à ce que les lentilles soient bien enrobées et commencent à absorber les saveurs.",
         "Étape 4 : Ajouter 300 g de tomates concassées, 5 g de graines de cumin, 5 g de curcuma en poudre et 800 ml de bouillon végétal. Porter à ébullition, puis réduire le feu et laisser mijoter pendant 20 minutes, jusqu'à ce que les lentilles soient tendres et que le liquide ait réduit, laissant une sauce onctueuse.",
         "Étape 5 : Ajouter 10 g de coriandre fraîche émincée et mélanger délicatement. Laisser mijoter pendant 2 minutes, jusqu'à ce que les saveurs soient bien combinées et que la coriandre ait libéré son parfum.",
         "Étape 6 : Couper les aubergines en cubes de 3 cm. Faire revenir les aubergines séparément dans 20 ml d'huile d'olive extra vierge à feu vif pendant 7 minutes, jusqu'à ce qu'elles soient dorées et croustillantes à l'extérieur, tout en restant tendres à l'intérieur. Réserver.",
         "Étape 7 : Incorporer les aubergines réservées dans le ragoût et mélanger délicatement. Laisser mijoter pendant 5 minutes, jusqu'à ce que les aubergines soient tendres et confites, absorbant toutes les saveurs du ragoût.",
-        "Étape 8 : Assaisonner et garnir de coriandre fraîche. Servir tiède ou froid, selon vos préférences.",
-        "Étape 9 : Déguster et ajuster l'assaisonnement si nécessaire. Vous pouvez ajouter un peu de levure nutritionnelle pour donner un goût umami et enrichir le plat.",
-        "Étape 10 : Servir dans des bols préchauffés, garni de coriandre fraîche ciselée et d'un filet d'huile d'olive. Accompagner de pain pita tiède."
+        "Étape 8 : Assaisonner et garnir de coriandre fraîche. Servir tiède ou froid, selon vos préférences."
       ],
       "diet_flags": {
         "vegan": true,
@@ -29342,8 +29385,8 @@
       },
       "composition": [
         {
-          "ingredient": "green_lentil_boiled",
-          "quantity": 300,
+          "ingredient": "green_lentil_dried",
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -29354,7 +29397,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -29430,9 +29473,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -29463,7 +29506,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -29601,11 +29644,11 @@
       "_quality_score": 0.93,
       "description": "Soupe arménienne aux lentilles vertes, oignon, ail et épices, crémeuse et parfumée, avec une consistance onctueuse et un parfum sucré, inspirée de la cuisine traditionnelle arménienne.",
       "instructions": [
-        "Étape 1 : Dans une poêle chaude, faites fondre 45 ml d'huile de tournesol et ajoutez l'oignon émincé (300g) et l'ail haché (9g). Faites-les revenir 3 minutes à feu moyen jusqu'à ce qu'ils soient translucides et dégagent un parfum sucré.",
+        "Étape 1 : Dans une poêle chaude, faites fondre 45 ml d'huile de tournesol et ajoutez l'oignon émincé (150g) et l'ail haché (9g). Faites-les revenir 3 minutes à feu moyen jusqu'à ce qu'ils soient translucides et dégagent un parfum sucré.",
         "Étape 2 : Ajoutez les carottes hachées (200g) et les tomates coupées en dés (480g). Faites-les cuire 5 minutes à feu moyen-vif, en remuant constamment, jusqu'à ce que les légumes soient légèrement colorés et tendres.",
-        "Étape 3 : Incorporez les lentilles vertes (300g), le cumin (3g) et le paprika (3g). Couvrez-les de 800 ml de bouillon végétal chaud et portez à ébullition.",
-        "Étape 4 : Réduisez le feu à feu doux et laissez mijoter pendant 20 minutes, ou jusqu'à ce que les lentilles soient tendres et la soupe ait une consistance crémeuse.",
-        "Étape 5 : Ajoutez le jus de citron (100g) et assaisonnez avec du sel (5g) et du poivre (2g). Laissez infuser 2 minutes à feu doux pour permettre aux saveurs de se mélanger.",
+        "Étape 3 : Incorporez les lentilles vertes rincées (200g), le cumin (3g) et le paprika (3g). Couvrez-les de 750 ml de bouillon végétal chaud et portez à ébullition.",
+        "Étape 4 : Réduisez le feu à feu doux et laissez mijoter pendant 30 minutes, ou jusqu'à ce que les lentilles soient tendres et la soupe ait une consistance crémeuse.",
+        "Étape 5 : Ajoutez le jus de citron (40 ml) et assaisonnez avec du sel (2g) et du poivre (2g). Laissez infuser 2 minutes à feu doux pour permettre aux saveurs de se mélanger.",
         "Étape 6 : Mixez partiellement la soupe pour obtenir une texture crémeuse et onctueuse.",
         "Étape 7 : Servez chaud, garni de quelques feuilles de persil frais, et savourez cette délicieuse soupe arménienne aux lentilles vertes !"
       ],
@@ -29653,7 +29696,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -29664,7 +29707,7 @@
         },
         {
           "ingredient": "egg_raw",
-          "quantity": 220,
+          "quantity": 110,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -29686,7 +29729,7 @@
         },
         {
           "ingredient": "nutmeg_spice",
-          "quantity": 5,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -29836,12 +29879,11 @@
       "_quality_score": 0.9,
       "description": "Boulettes suédoises végétariennes, tendres et parfumées, préparées avec des pois chiches et une chapelure fine, dans une sauce crémeuse aux herbes fraîches — texture dense et rustique, saveur intense et équilibrée, avec une odeur de noix de muscade.",
       "instructions": [
-        "Écrasez 400g de pois chiches avec 300g d'oignon haché et 60g de chapelure fine, en veillant à obtenir une texture homogène et lisse, pendant environ 5 minutes.",
-        "Ajoutez 220g d'œuf, 5g de muscade moulue, 5g de sel et 2g de poivre, puis mélangez délicatement pour éviter de rendre la pâte trop dense, pendant environ 2 minutes.",
-        "Formez des boulettes de taille uniforme, en les roulant délicatement entre vos mains pour leur donner une forme parfaite, pendant environ 3 minutes.",
-        "Faites-les dorer dans 45ml d'huile à feu moyen, en les retournant régulièrement pour obtenir une coloration uniforme, environ 3-4 minutes par face, jusqu'à ce qu'elles soient bien dorées.",
-        "Laissez les boulettes reposer quelques minutes avant de les servir, afin que les saveurs puissent se mélanger et que la texture devienne tendre et fondante, pendant environ 5 minutes.",
-        "Servir chaud dans des assiettes préchauffées, accompagné d'une salade verte ou de légumes sautés pour un repas complet et équilibré."
+        "Étape 1 : Écraser 400g de pois chiches cuits avec 100g d'oignon finement haché et 60g de chapelure jusqu'à obtenir une pâte homogène.",
+        "Étape 2 : Ajouter 110g d'œufs battus (2 œufs), 1g de muscade moulue, 5g de sel et 2g de poivre, puis mélanger.",
+        "Étape 3 : Former des boulettes de 3 cm de diamètre en les roulant entre les mains humides.",
+        "Étape 4 : Faire dorer les boulettes dans 45ml d'huile à feu moyen pendant 8 à 10 minutes, en les retournant régulièrement.",
+        "Étape 5 : Servir chaud avec une purée de pommes de terre, de la confiture d'airelles ou des légumes sautés."
       ],
       "diet_flags": {
         "vegan": false,
@@ -29887,7 +29929,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -29909,7 +29951,7 @@
         },
         {
           "ingredient": "nutmeg_spice",
-          "quantity": 5,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -29960,6 +30002,39 @@
             "ingredient_fr": "persil frais haché",
             "note": "Pour un parfum frais et éclatant",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "flaxseed_linseed_ground",
+          "quantity": 7,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 45,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coconut_milk_plant",
+          "quantity": 150,
+          "unit": "ml",
+          "meta": {
+            "role": "sauce",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -30015,6 +30090,8 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(linseed)",
         "(vegan)",
         "45 minutes",
         "black",
@@ -30022,19 +30099,25 @@
         "breadcrumbs",
         "chiches",
         "chickpea",
+        "coco",
+        "coconut",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
+        "flaxseed",
         "intermediaire",
         "kids",
         "leger",
         "light",
+        "lin",
         "low calorie",
         "meatballs",
         "minceur",
         "moyen",
         "muscade",
         "noir",
+        "noix",
         "nutmeg",
         "oignon",
         "onion",
@@ -30043,6 +30126,7 @@
         "persil",
         "pois",
         "poivre",
+        "potable)",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -30055,7 +30139,8 @@
         "tournesol",
         "vegan",
         "vegetalien",
-        "vegetarien"
+        "vegetarien",
+        "water"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
@@ -30064,11 +30149,11 @@
       "_chef_note": "Assurez-vous d'utiliser des ingrédients végétaliens pour respecter les règles véganes.",
       "description": "Boulettes suédoises véganes crémeuses et parfumées, servies avec une sauce onctueuse et une texture moelleuse, inspirées de la cuisine scandinave. Elles sont préparées avec des pois chiches, des oignons et des épices, puis cuites dans une huile végétale pour donner une saveur riche et complexe.",
       "instructions": [
-        "Étape 1 : Écraser 400g de pois chiches cuits avec 300g d'oignon jaune haché et 60g de chapelure dans un bol jusqu'à obtenir une texture homogène, avec une consistance lisse et crémeuse, pendant environ 5 minutes.",
-        "Étape 2 : Ajouter 1 cuillère à soupe de graines de lin préparées avec 3 cuillères à soupe d'eau pour lier la pâte, ainsi que 5g de noix de muscade, 5g de sel et 2g de poivre. Mélanger délicatement pour éviter de trop travailler la pâte, pendant environ 2 minutes.",
+        "Étape 1 : Écraser 400g de pois chiches cuits avec 100g d'oignon jaune haché et 60g de chapelure dans un bol jusqu'à obtenir une texture homogène, avec une consistance lisse et crémeuse, pendant environ 5 minutes.",
+        "Étape 2 : Ajouter 1 cuillère à soupe de graines de lin préparées avec 3 cuillères à soupe d'eau pour lier la pâte, ainsi que 1g de noix de muscade, 5g de sel et 2g de poivre. Mélanger délicatement pour éviter de trop travailler la pâte, pendant environ 2 minutes.",
         "Étape 3 : Former des boulettes de taille uniforme avec la pâte préparée, en veillant à ce qu'elles soient bien sphériques et régulières, avec un diamètre d'environ 3 cm.",
         "Étape 4 : Chauffer 45,7ml d'huile de tournesol dans une poêle à feu moyen. Faire dorer les boulettes de tous côtés pendant 3-4 minutes par face, jusqu'à ce qu'elles soient dorées et parfumées.",
-        "Étape 5 : Préparer une sauce crémeuse végétale pour accompagner les boulettes. Vous pouvez utiliser une crème de coco mélangée avec un peu de lait de coco et des herbes fraîches pour cela, en remuant pendant environ 2 minutes.",
+        "Étape 5 : Préparer une sauce crémeuse végétale pour accompagner les boulettes. Chauffer 150 ml de lait de coco avec un peu de sel, de poivre et de muscade pendant 2 minutes, jusqu'à léger épaississement.",
         "Étape 6 : Servir les boulettes chaudes nappées de la sauce crémeuse préparée, en les disposant sur un lit de légumes sautés ou de riz parfumé, avec un peu de persil frais haché et un filet de jus de citron pour leur donner un parfum frais et éclatant."
       ],
       "diet_flags": {
@@ -30104,7 +30189,7 @@
       "composition": [
         {
           "ingredient": "quinoa_raw_dried",
-          "quantity": 250,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "grain",
@@ -30126,7 +30211,7 @@
         },
         {
           "ingredient": "avocado_raw",
-          "quantity": 400,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "fruit",
@@ -30169,9 +30254,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -30181,7 +30266,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -30203,7 +30288,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 20,
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -30346,16 +30431,12 @@
       "_quality_score": 0.94,
       "description": "Bol végétal créatif à base de quinoa cuit, pois chiches rôtis, avocat tranché, sauce tahini crémeuse et nappante, offrant une texture crémeuse et une odeur parfumée de citron et de coriandre fraîche, avec des notes de sésame et de carotte crue.",
       "instructions": [
-        "Cuire 250g de quinoa dans deux fois son volume d'eau salée, en entendant le son de l'eau qui bout, pendant environ 15 minutes, jusqu'à ce que l'eau soit complètement absorbée et que les grains soient tendres.",
-        "Laisser refroidir le quinoa pendant environ 5 minutes, en sentant la fraîcheur du quinoa refroidi.",
-        "Rôtir 400g de pois chiches égouttés avec 45ml d'huile d'olive, du sel et du poivre, pendant 25 minutes à 200°C, en sentant l'odeur des pois chiches qui rôtissent et en vérifiant leur texture croustillante.",
-        "Préparer la sauce tahini : mélanger 45ml de tahini, 100g de jus de citron, 20g d'ail râpé et 45ml d'eau, en sentant l'odeur de la tahini, pendant environ 2 minutes, jusqu'à obtenir une sauce lisse et crémeuse.",
-        "Couper 400g d'avocat en tranches, 350g de concombre en rondelles et 200g de carotte crue en rubans, en voyant les couleurs des légumes, pendant environ 5 minutes.",
-        "Disposer le quinoa cuit au fond du bol, en sentant la texture du quinoa, en faisant attention à ne pas écraser les grains.",
-        "Ajouter les pois chiches rôtis, l'avocat, le concombre et la carotte crue par sections, en voyant la beauté des légumes, en faisant attention à la présentation.",
-        "Arroser généreusement de sauce tahini, en sentant l'odeur de la tahini, en faisant attention à ne pas trop mouiller les légumes.",
-        "Garnir de 15g de graines de sésame noir et de 10g de coriandre fraîche, en sentant la fraîcheur de la coriandre, en faisant attention à la quantité.",
-        "Servir aussitôt dans un bol préchauffé, en ajoutant un filet d'huile d'olive et en décorant avec des feuilles de coriandre fraîche."
+        "Étape 1 : Rincer 200g de quinoa et le cuire dans deux fois son volume d'eau salée pendant environ 15 minutes, jusqu'à absorption complète. Laisser tiédir.",
+        "Étape 2 : Préchauffer le four à 200°C. Égoutter et sécher 400g de pois chiches, les mélanger avec 20ml d'huile d'olive, du sel et du poivre, puis les rôtir 25 minutes jusqu'à ce qu'ils soient croustillants.",
+        "Étape 3 : Préparer la sauce tahini : mélanger 45ml de tahini, 40ml de jus de citron, 5g d'ail râpé et 45ml d'eau jusqu'à obtenir une sauce lisse.",
+        "Étape 4 : Couper 200g d'avocat en tranches, 350g de concombre en rondelles et 200g de carotte en rubans.",
+        "Étape 5 : Répartir le quinoa dans les bols, puis disposer par sections les pois chiches rôtis, l'avocat, le concombre et la carotte.",
+        "Étape 6 : Arroser de sauce tahini, parsemer de 15g de graines de sésame et de 10g de coriandre fraîche, puis servir."
       ],
       "diet_flags": {
         "vegan": true,
@@ -30673,13 +30754,13 @@
       "_quality_score": 1.0,
       "description": "Découvrez ce dahl de pois chiches végan crémeux et parfumé, mijoté à la perfection avec une sauce épaissie et des épices torréfiées, inspiré de la cuisine indienne traditionnelle. Les pois chiches sont cuits à la perfection et mélangés avec des épices et des herbes fraîches.",
       "instructions": [
-        "Étape 1 : Faites tremper 250g de chana dal pendant 30 minutes dans de l'eau froide. Égouttez et cuisez dans 900ml d'eau à 180°C pendant 25 minutes, jusqu'à ce que les lentilles soient tendres mais encore entières.",
+        "Étape 1 : Faites tremper 250g de chana dal pendant 30 minutes dans de l'eau froide. Égouttez et cuisez dans 900ml d'eau frémissante pendant 25 minutes, jusqu'à ce que les lentilles soient tendres mais encore entières.",
         "Étape 2 : Chauffez 30ml d'huile de coco à feu moyen-vif. Saisissez les graines de cumin pendant 30 secondes, jusqu'à ce qu'elles commencent à parfumer. Faites revenir 120g d'oignon pendant 10 minutes, jusqu'à ce qu'il soit doré et caramélisé.",
-        "Étape 3 : Ajoutez 25g d'ail et 10g de gingembre, ainsi que 5g de cumin, 3,8g de curcuma et 10g de coriandre moulue. Cuisez pendant 1 minute, en remuant constamment, jusqu'à ce que les épices soient torréfiées et parfumées. Incorporer 200g de tomates concassées et réduire pendant 8 minutes à feu moyen, en remuant occasionnellement, jusqu'à ce que la sauce soit concentrée et crémeuse.",
+        "Étape 3 : Ajoutez 25g d'ail et 10g de gingembre, ainsi que 3,8g de curcuma et 10g de coriandre moulue. Cuisez pendant 1 minute, en remuant constamment, jusqu'à ce que les épices soient torréfiées et parfumées. Incorporer 200g de tomates concassées et réduire pendant 8 minutes à feu moyen, en remuant occasionnellement, jusqu'à ce que la sauce soit concentrée et crémeuse.",
         "Étape 4 : Versez les lentilles cuites et l'eau de cuisson réservée dans la sauce. Mijotez pendant 10 minutes à feu doux, en remuant occasionnellement, jusqu'à ce que la sauce ait épaissi et enrobe chaque lentille.",
         "Étape 5 : Salez en fin de cuisson avec 6g de sel, et ajustez l'assaisonnement si nécessaire. Garnissez de 10g de coriandre fraîche hachée pour un ajout de fraîcheur et de couleur.",
         "Étape 6 : Servez chaud, accompagné de riz basmati ou de naan pour un repas végan complet et délicieux.",
-        "Étape 7 : Laissez reposer pendant quelques minutes avant de servir, pour que les saveurs se mélangent et la sauce se fige légèrement. Vous pouvez également ajouter un peu de levure nutritionnelle pour un goût umami supplémentaire."
+        "Étape 7 : Laissez reposer pendant quelques minutes avant de servir, pour que les saveurs se mélangent et la sauce se fige légèrement."
       ],
       "diet_flags": {
         "vegan": true,
@@ -30725,7 +30806,7 @@
         },
         {
           "ingredient": "yellow_onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -30832,17 +30913,62 @@
             "note": "Pour un repas complet",
             "optional": true
           }
+        },
+        {
+          "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "carbohydrate",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 310,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 40,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_frying",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "ginger_raw_root_fresh",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "high_protein",
           "vegan",
           "vegetarian"
         ],
-        "allergens": [],
+        "allergens": [
+          "gluten"
+        ],
         "technique": [
           "wok",
           "braising"
@@ -30893,25 +31019,27 @@
         "(poudre",
         "1 heure",
         "ail",
+        "all",
         "amchoor",
         "amchur",
         "basmati",
         "bhature",
+        "ble",
         "braising",
         "chiches",
         "chickpea",
         "chole",
         "coco",
         "coconut",
-        "coeliaque",
         "coriander",
         "cumin",
         "curry",
         "epice",
         "epices",
+        "farine",
+        "flour",
         "garam",
         "garlic",
-        "gluten free",
         "inde",
         "indian",
         "indien",
@@ -30930,10 +31058,10 @@
         "onion",
         "pois",
         "powder",
+        "purpose",
         "rice",
         "riz",
         "salt",
-        "sans gluten",
         "sans produit animal",
         "sans viande",
         "sel",
@@ -30941,10 +31069,13 @@
         "table",
         "tomate",
         "tomato",
+        "tout",
+        "usage",
         "vegan",
         "vegetalien",
         "vegetarien",
         "verte)",
+        "wheat",
         "wok",
         "yellow"
       ],
@@ -30954,21 +31085,20 @@
       "_quality_score": 0.93,
       "description": "Curry indien végan de pois chiches sur base d'épices torréfiées — texture dense et rustique, parfumé d'ail et de gingembre, avec une sauce onctueuse et des bhature croustillants.",
       "instructions": [
-        "Étape 1 : Saisir l'oignon jaune haché dans 35 ml d'huile de coco à 170°C pendant 8 minutes jusqu'à dorure blonde. Vous entendrez un léger grésillement et sentirez l'odeur de l'oignon caramélisé.",
+        "Étape 1 : Saisir l'oignon jaune haché dans 35 ml d'huile de coco à feu moyen pendant 8 minutes jusqu'à dorure blonde. Vous entendrez un léger grésillement et sentirez l'odeur de l'oignon caramélisé.",
         "Étape 2 : Ajouter l'ail émincé et le gingembre râpé, ainsi que les épices (cumin en graines, garam masala et amchur), cuire 1 minute à feu moyen. Les épices commenceront à libérer leurs arômes et le mélange sera parfumé.",
         "Étape 3 : Incorporer les tomates concassées, réduire 8 minutes jusqu'à sauce épaisse. La sauce commencera à bouillonner et à se concentrer, avec une couleur rougeâtre intense.",
-        "Étape 4 : Ajouter les pois chiches égouttés (400g), le sel (5g) et 200 ml d'eau, mijoter 20 minutes à 150°C. La sauce doit devenir foncée et concentrée, avec une texture crémeuse.",
+        "Étape 4 : Ajouter les pois chiches égouttés (400g), le sel (5g) et 200 ml d'eau, mijoter 20 minutes à feu doux. La sauce doit devenir foncée et concentrée, avec une texture crémeuse.",
         "Étape 5 : Écraser quelques pois chiches pour épaissir, la sauce doit être foncée et concentrée, avec une consistance onctueuse.",
-        "Étape 6 : Préparer la pâte pour les bhature en mélangeant la farine de blé, l'huile de coco et l'eau. Laisser reposer 1 heure, puis former des disques de 12 cm, avec une surface lisse et une texture élastique.",
-        "Étape 7 : Frire les bhature dans l'huile de coco à 175°C pendant 1 minute par face jusqu'à dorés et soufflés. Vous devriez entendre un léger sifflement lors de la friture et sentir l'odeur de la friture chaude.",
+        "Étape 6 : Préparer la pâte des bhature en mélangeant 200g de farine de blé, une pincée de sel, 10 ml d'huile de coco et 110 ml d'eau. Laisser reposer 1 heure, puis former des disques de 12 cm, avec une surface lisse et une texture élastique.",
+        "Étape 7 : Frire les bhature dans un bain d'huile de tournesol à 175°C pendant 1 minute par face jusqu'à dorés et soufflés. Vous devriez entendre un léger sifflement lors de la friture et sentir l'odeur de la friture chaude.",
         "Étape 8 : Servir les bhature avec le curry de pois chiches et profiter de la texture dense et rustique, avec une sauce chaude et parfumée. Servir sans attendre pour conserver la texture croustillante des bhature et la chaleur de la sauce.",
-        "Étape 9 : Garnir avec des herbes fraîches, comme le cilantro ou la coriandre, pour ajouter une touche de fraîcheur et de couleur. Les herbes fraîches apporteront une note de fraîcheur et de saveur à la recette.",
-        "Étape 10 : Démouler les bhature, les servir chauds avec le curry, garnis de coriandre fraîche ciselée et d'un filet d'huile de coco. Accompagner de riz basmati ou de naan pour un repas complet."
+        "Étape 9 : Garnir avec des herbes fraîches, comme la coriandre, pour ajouter une touche de fraîcheur et de couleur. Les herbes fraîches apporteront une note de fraîcheur et de saveur à la recette."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -30992,8 +31122,8 @@
       "timing": {
         "prep_active_min": 15,
         "prep_passive_min": 720,
-        "cook_min": 60,
-        "total_min": 795
+        "cook_min": 100,
+        "total_min": 835
       },
       "composition": [
         {
@@ -31282,7 +31412,7 @@
       },
       "composition": [
         {
-          "ingredient": "red_lentil_boiled",
+          "ingredient": "red_lentil_dried",
           "quantity": 250,
           "unit": "g",
           "meta": {
@@ -31573,7 +31703,7 @@
         "Étape 1 : Rincer 250g de lentilles corail jusqu'à eau claire. Les cuire dans 750ml d'eau à frémissement doux pendant 15 minutes jusqu'à désagrégation complète et texture crémeuse, en remuant régulièrement pour éviter qu'elles accrochent.",
         "Étape 2 : Dans une sauteuse, chauffer 25ml d'huile de coco à feu moyen. Faire grésiller 6g de graines de cumin pendant 30 secondes, jusqu'à parfum émis. Ajouter 120g d'oignon jaune haché et cuire 7 minutes jusqu'à légère translucidité dorée, en remuant occasionnellement.",
         "Étape 3 : Incorporer 25g d'ail haché et 10g de gingembre frais haché, ainsi que 3,8g de curcuma en poudre. Cuire 1 minute en remuant constamment — les épices doivent embaumer sans brûler, dégageant un parfum intense.",
-        "Étape 4 : Verser 400ml de lait de coco dans les lentilles cuites. Mélanger et mijoter encore 5 minutes à feu doux jusqu'à sauce crémeuse et légèrement épaissie, en vérifiant que la sauce nappe la cuillère.",
+        "Étape 4 : Verser 425ml de lait de coco dans les lentilles cuites. Mélanger et mijoter encore 5 minutes à feu doux jusqu'à sauce crémeuse et légèrement épaissie, en vérifiant que la sauce nappe la cuillère.",
         "Étape 5 : Assaisonner de 6g de sel. La sauce doit avoir une couleur jaune orangée et une texture lisse.",
         "Étape 6 : Ajouter 30g de piment chili haché pour un peu de piquant, si désiré. Mélanger délicatement pour répartir uniformément.",
         "Étape 7 : Servir chaud, garni de 10g de coriandre fraîche hachée, accompagné de riz basmati ou de pain naan végétarien, selon votre préférence.",
@@ -31605,9 +31735,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 21,
-        "prep_passive_min": 0,
-        "cook_min": 60,
-        "total_min": 81
+        "prep_passive_min": 480,
+        "cook_min": 90,
+        "total_min": 591
       },
       "composition": [
         {
@@ -31963,7 +32093,7 @@
       },
       "composition": [
         {
-          "ingredient": "red_lentil_boiled",
+          "ingredient": "red_lentil_dried",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -32254,8 +32384,8 @@
         "Étape 5 : Ajouter 11,2 g de gingembre frais haché, puis faire sauter 1 minute jusqu'à ce que les parfums se dégagent.",
         "Étape 6 : Ajouter 300 g de tomates concassées et laisser mijoter quelques minutes, jusqu'à ce que la sauce nappe et que les saveurs s'intensifient.",
         "Étape 7 : Verser le tadka bouillant directement sur les lentilles en un seul geste.",
-        "Étape 8 : Garnir d'oignons frits croustillants et de 10 g de coriandre fraîche hachée pour une touche de couleur et de fraîcheur.",
-        "Étape 9 : Servir sans attendre, dans des bols préchauffés."
+        "Étape 8 : Garnir de 10 g de coriandre fraîche hachée pour une touche de couleur et de fraîcheur.",
+        "Étape 9 : Servir sans attendre."
       ],
       "diet_flags": {
         "vegan": true,
@@ -32289,7 +32419,7 @@
       },
       "composition": [
         {
-          "ingredient": "red_lentil_boiled",
+          "ingredient": "red_lentil_dried",
           "quantity": 300,
           "unit": "g",
           "meta": {
@@ -32399,7 +32529,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -32534,10 +32664,10 @@
         "Étape 1 : Rincer 300 g de lentilles corail sous l'eau froide jusqu'à eau claire, puis égoutter. Cela permet de retirer les impuretés et d'améliorer la texture finale.",
         "Étape 2 : Chauffer 30 ml d'huile de coco dans une casserole à feu moyen. Faire revenir 150 g d'oignon jaune émincé pendant 6 à 8 minutes, jusqu'à dorure translucide et parfumé. Remuer régulièrement pour éviter la coloration excessive.",
         "Étape 3 : Ajouter 10 g d'ail haché, 2,8 g de curcuma, 2,5 g de cumin et 2 g de coriandre moulue. Cuire pendant 1 minute, en remuant régulièrement, jusqu'à ce que les épices embaument sans brûler et libèrent leurs arômes.",
-        "Étape 4 : Incorporer les lentilles et 700 ml de bouillon de légumes bouillant. Mijoter à feu doux pendant 18 à 20 minutes à 90°C, jusqu'à ce que les lentilles soient désagrégées et la texture soit crémeuse. Vérifier la texture en écrasant une lentille avec une cuillère.",
+        "Étape 4 : Incorporer les lentilles et 700 ml de bouillon de légumes bouillant. Mijoter à feu doux pendant 18 à 20 minutes, jusqu'à ce que les lentilles soient désagrégées et la texture soit crémeuse. Vérifier la texture en écrasant une lentille avec une cuillère.",
         "Étape 5 : Préparer le tadka vegan : faire chauffer 15 ml d'huile de coco, puis faire grésiller 4 g de graines de moutarde pendant 30 secondes. Verser sur le dal et remuer doucement pour répartir les saveurs.",
         "Étape 6 : Servir sans attendre, car le dal doit être crémeux et très parfumé, accompagné de riz basmati. La chaleur et la texture crémeuse sont essentielles pour apprécier pleinement ce plat.",
-        "Étape 7 : Rectifier l'assaisonnement avec 5 g de sel si nécessaire, en vérifiant que le dal soit crémeux et très parfumé. Goûter et ajuster pour obtenir l'équilibre parfait des saveurs."
+        "Étape 7 : Rectifier l'assaisonnement avec 2 g de sel si nécessaire, en vérifiant que le dal soit crémeux et très parfumé. Goûter et ajuster pour obtenir l'équilibre parfait des saveurs."
       ],
       "diet_flags": {
         "vegan": true,
@@ -32679,6 +32809,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 150,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -32738,6 +32879,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(melange",
         "45 minutes",
         "africain",
@@ -32753,6 +32895,7 @@
         "chickpea",
         "chou",
         "coeliaque",
+        "eau",
         "epice",
         "epices",
         "ethiopian",
@@ -32775,6 +32918,7 @@
         "parsley",
         "persil",
         "pois",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -32788,6 +32932,7 @@
         "vegetarien",
         "vert",
         "wat",
+        "water",
         "wok"
       ],
       "difficulty_level": "medium",
@@ -32838,7 +32983,7 @@
       },
       "composition": [
         {
-          "ingredient": "red_lentil_boiled",
+          "ingredient": "red_lentil_dried",
           "quantity": 250,
           "unit": "g",
           "meta": {
@@ -33006,19 +33151,15 @@
         "coeliaque",
         "corail",
         "eau",
-        "enfants",
         "epice",
         "epices",
         "ethiopian",
         "ethiopie",
         "ethiopien",
         "ethiopien)",
-        "facile enfants",
-        "famille",
         "garlic",
         "gluten free",
         "intermediaire",
-        "kids",
         "leger",
         "legumes",
         "lentil",
@@ -33071,7 +33212,7 @@
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
-        "kid_friendly": true
+        "kid_friendly": false
       }
     },
     {
@@ -33289,12 +33430,9 @@
         "Étape 2 : Mixer les pois chiches avec 9 g d'ail haché, 30 g de persil frais haché, 6 g de coriandre moulue, 3 g de cumin et 5 g de sel, jusqu'à obtenir une texture granuleuse comme du sable humide. L'odeur des épices et des herbes doit commencer à se dégager.",
         "Étape 3 : Incorporer 20 g de farine de pois chiches et réfrigérer pendant au moins 30 minutes pour raffermir le mélange. La texture doit devenir plus ferme et moins collante.",
         "Étape 4 : Former des boulettes ou galettes de 35 g en compressant fermement le mélange. Vous devez sentir la texture dense et lisse sous vos doigts.",
-        "Étape 5 : Faire frire les falafel dans 45 ml d'huile d'olive préchauffée à 175°C pendant 3 à 4 minutes par côté, jusqu'à obtenir une croûte brun doré croustillante. La couleur doit être uniforme et la texture croustillante.",
+        "Étape 5 : Faire dorer les falafel à la poêle dans 45 ml d'huile d'olive chaude pendant 3 à 4 minutes par côté, jusqu'à obtenir une croûte brun doré croustillante. La couleur doit être uniforme et la texture croustillante.",
         "Étape 6 : Égoutter les falafel sur du papier absorbant pour enlever l'excès d'huile. Vous devez entendre le son des falafel qui s'égouttent et sentir l'odeur de la friture.",
-        "Étape 7 : Servir les falafel sans attendre, avec du pain pita, de la sauce tahini et une salade fraîche, pour préserver la croûte croustillante et la texture fraîche. La présentation doit être attrayante et appétissante.",
-        "Étape 8 : Déguster et ajuster la quantité de sel ou d'épices si nécessaire pour obtenir le goût désiré. Vous devez sentir l'équilibre des saveurs et la texture satisfaisante.",
-        "Étape 9 : Présenter les falafel de manière créative, en les disposant sur un plat avec les accompagnements choisis. La présentation doit être visuellement attrayante et invitante.",
-        "Étape 10 : Servir et profiter de ce plat levantin traditionnel, riche en saveurs et en textures. Vous devez sentir la satisfaction de déguster un plat délicieux et équilibré."
+        "Étape 7 : Servir les falafel sans attendre, avec du pain pita, de la sauce tahini et une salade fraîche, pour préserver la croûte croustillante et la texture fraîche. La présentation doit être attrayante et appétissante."
       ],
       "diet_flags": {
         "vegan": true,
@@ -33340,7 +33478,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -33362,7 +33500,7 @@
         },
         {
           "ingredient": "chickpea_flour",
-          "quantity": 150,
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -33413,6 +33551,17 @@
             "ingredient_fr": "coriandre fraîche ciselée",
             "note": "Quelques feuilles pour la fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -33500,9 +33649,12 @@
         "olive",
         "onion",
         "pois",
+        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sel",
+        "table",
         "vegan",
         "vegetalien",
         "vegetarien"
@@ -33514,8 +33666,8 @@
       "description": "Galettes de pois chiches croustillantes à l'extérieur et fondantes à cœur, parfumées aux épices et au cumin, avec une texture légèrement croquante due à la farine de pois chiche, inspirées par la cuisine méditerranéenne",
       "instructions": [
         "Étape 1 : Rincer et égoutter les 400g de pois chiches cuits, en écoutant le son de l'eau qui s'écoule et en sentant la fraîcheur de l'eau.",
-        "Étape 2 : Mixer grossièrement les pois chiches avec 300g d'oignon, 9g d'ail, 3g de cumin et 3g de coriandre, en humant l'odeur des épices et en sentant la texture des légumes.",
-        "Étape 3 : Incorporer 150g de farine de pois chiche et mélanger — la texture doit tenir sans être trop sèche, en sentant la consistance de la pâte et en vérifiant qu'elle ne colle pas aux doigts.",
+        "Étape 2 : Mixer grossièrement les pois chiches avec 100g d'oignon, 9g d'ail, 3g de cumin, 3g de coriandre et 5g de sel, en humant l'odeur des épices et en sentant la texture des légumes.",
+        "Étape 3 : Incorporer 60g de farine de pois chiche et mélanger — la texture doit tenir sans être trop sèche, en sentant la consistance de la pâte et en vérifiant qu'elle ne colle pas aux doigts.",
         "Étape 4 : Former des galettes de 1 cm d'épaisseur et réfrigérer 20 minutes, en voyant les galettes prendre forme et en sentant leur fermeté.",
         "Étape 5 : Chauffer 45ml d'huile d'olive extra vierge dans une poêle à feu moyen-vif, en écoutant le son de l'huile qui chauffe et en sentant la chaleur qui se dégage.",
         "Étape 6 : Cuire les galettes 4-5 minutes de chaque côté jusqu'à croûte dorée, en voyant la coloration des galettes et en sentant leur croustillance.",
@@ -33555,7 +33707,7 @@
       "composition": [
         {
           "ingredient": "quinoa_raw_dried",
-          "quantity": 250,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "grain",
@@ -33631,9 +33783,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -33828,16 +33980,14 @@
       "_quality_score": 0.96,
       "description": "Bouillon de quinoa créatif et savoureux, relevé par des légumes rôtis colorés tels que l'aubergine, le poivron et la courgette, et une sauce tahini parfumée, typique de la cuisine méditerranéenne, avec une texture crémeuse et des arômes de zaatar et de persil frais.",
       "instructions": [
-        "Étape 1 : Cuire 250g de quinoa cru dans 500ml d'eau bouillante salée. Couvrir et cuire à feu doux pendant 12 minutes, en vérifiant que les grains sont tendres et séparés, avec une texture légèrement ferme.",
+        "Étape 1 : Cuire 200g de quinoa cru dans 400ml d'eau bouillante salée. Couvrir et cuire à feu doux pendant 12 minutes, en vérifiant que les grains sont tendres et séparés, avec une texture légèrement ferme.",
         "Étape 2 : Préchauffer le four à 200°C. Couper 320g de poivron rouge, 600g d'aubergine et 500g de courgette en cubes de 2 cm. Enrober d'huile d'olive, sel et herbes. Rôtir pendant 25 minutes jusqu'à légèrement dorés et fondants, en sentant l'arôme des légumes.",
-        "Étape 3 : Préparer la sauce tahini : fouetter 45ml de tahini avec le jus de 100g de citron, 9g d'ail râpé et 45ml d'eau froide jusqu'à consistance crémeuse. La sauce doit être lisse et parfumée.",
+        "Étape 3 : Préparer la sauce tahini : fouetter 45ml de tahini avec 40ml de jus de citron, 9g d'ail râpé et 45ml d'eau froide jusqu'à consistance crémeuse. La sauce doit être lisse et parfumée.",
         "Étape 4 : Ajouter 400g de pois chiches dans un bol, arroser d'un filet d'huile d'olive et parsemer de 20g de zaatar. Enfourner pendant 10 minutes pour les rendre croustillants, en entendant le craquement des pois chiches.",
         "Étape 5 : Dresser les bols : quinoa en base, légumes rôtis en sections, pois chiches rôtis croustillants et 200g de tomates cerises coupées en deux. Arroser généreusement de sauce tahini, en sentant la crémeuse sur les légumes.",
-        "Étape 6 : Parsemer de 30g de persil frais, de graines de sésame et d'un filet d'huile d'olive. Servir tiède.",
-        "Étape 7 : Ajouter un peu de levure nutritionnelle pour donner un goût umami, en sentant la profondeur du plat.",
-        "Étape 8 : Garnir de tranches de citron et de feuilles de persil, pour une touche de fraîcheur et de couleur.",
-        "Étape 9 : Servir sans attendre : la chaleur et le croustillant des pois chiches sont essentiels pour apprécier pleinement ce bowl végétal méditerranéen.",
-        "Étape 10 : Démouler, napper de sauce tahini, couper en parts. Servir chaud avec une salade verte."
+        "Étape 6 : Parsemer de 30g de persil frais et d'un filet d'huile d'olive. Servir tiède.",
+        "Étape 7 : Garnir de tranches de citron et de feuilles de persil, pour une touche de fraîcheur et de couleur.",
+        "Étape 8 : Servir sans attendre : la chaleur et le croustillant des pois chiches sont essentiels pour apprécier pleinement ce bowl végétal méditerranéen."
       ],
       "diet_flags": {
         "vegan": true,
@@ -33882,8 +34032,8 @@
           }
         },
         {
-          "ingredient": "green_lentil_boiled",
-          "quantity": 300,
+          "ingredient": "green_lentil_dried",
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -33905,7 +34055,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -34003,7 +34153,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -34149,11 +34299,11 @@
       "_chef_note": "Pour une texture plus épaisse, laisser réduire légèrement le bouillon avant de servir.",
       "description": "Découvrez cette soupe marocaine végane aux pois chiches, au bouillon dense et rustique, parfumée aux épices, avec une texture crémeuse et une couleur dorée",
       "instructions": [
-        "Étape 1 : Dans une grande casserole, faire chauffer 45 ml d'huile d'olive extra vierge à feu moyen. Ajouter 300 g d'oignon jaune et 80 g de céleri, laisser cuire jusqu'à coloration blonde en remuant régulièrement, en sentant les arômes se dégager, pendant environ 5 minutes.",
+        "Étape 1 : Dans une grande casserole, faire chauffer 45 ml d'huile d'olive extra vierge à feu moyen. Ajouter 150 g d'oignon jaune et 80 g de céleri, laisser cuire jusqu'à coloration blonde en remuant régulièrement, en sentant les arômes se dégager, pendant environ 5 minutes.",
         "Étape 2 : Incorporer 3 g de coriandre moulue, 3 g de curcuma et 11,2 g de gingembre frais râpé. Laisser cuire 1 minute en remuant constamment pour dégager les arômes, en observant la couleur dorée qui se forme.",
-        "Étape 3 : Ajouter 400 g de pois chiches et 300 g de lentilles vertes, ainsi que 480 g de tomates concassées. Laisser cuire 5 minutes à feu moyen, en remuant occasionnellement, en écoutant les légumineuses commencer à mijoter.",
-        "Étape 4 : Verser 750 ml de bouillon végétal et porter à ébullition. Réduire ensuite le feu à doux et laisser mijoter 20 minutes ou jusqu'à ce que les légumineuses soient tendres, en sentant la texture dense et rustique se former.",
-        "Étape 5 : Assaisonner avec 5 g de sel et rectifier l'assaisonnement si nécessaire. Laisser cuire encore 2 minutes, en goûtant les saveurs équilibrées.",
+        "Étape 3 : Ajouter 400 g de pois chiches et 150 g de lentilles vertes rincées, ainsi que 480 g de tomates concassées. Laisser cuire 5 minutes à feu moyen, en remuant occasionnellement, en écoutant les légumineuses commencer à mijoter.",
+        "Étape 4 : Verser 750 ml de bouillon végétal et porter à ébullition. Réduire ensuite le feu à doux et laisser mijoter 35 minutes ou jusqu'à ce que les légumineuses soient tendres, en sentant la texture dense et rustique se former.",
+        "Étape 5 : Assaisonner avec 2 g de sel et rectifier l'assaisonnement si nécessaire. Laisser cuire encore 2 minutes, en goûtant les saveurs équilibrées.",
         "Étape 6 : Ajouter 3 g de cannelle moulue et laisser infuser 1 minute, en sentant les arômes se mêler.",
         "Étape 7 : Vérifier que les légumineuses sont tendres et que la soupe a une texture crémeuse. Servir chaud, garni de coriandre fraîche ciselée si désiré.",
         "Étape 8 : Conserver les restes au réfrigérateur pendant 3 jours, en réchauffant à feu doux avant de servir."
@@ -34201,9 +34351,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -34261,6 +34411,28 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 60,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -34323,6 +34495,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(tahini)",
         "ail",
         "chiches",
@@ -34330,6 +34503,7 @@
         "citron",
         "coeliaque",
         "cumin",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -34353,7 +34527,10 @@
         "moyen",
         "moyen-orient",
         "olive",
+        "parsley",
+        "persil",
         "pois",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -34365,22 +34542,23 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "water",
         "water_cooking"
       ],
       "difficulty_level": "medium",
-      "dish_type": "main",
+      "dish_type": "starter",
       "servings_default": 4,
       "_quality_score": 0.91,
       "_chef_note": "L'houmous est un condiment traditionnel libanais à base de pois chiches.",
       "description": "Préparation libanaise de pois chiches cuits, mélangés avec du tahin et du jus de citron frais, offrant une texture lisse et onctueuse, avec un équilibre d'acidité et d'aromates végétaliens, caractéristique de la cuisine méditerranéenne.",
       "instructions": [
-        "Étape 1 : Faire tremper les pois chiches secs pendant 12 heures, puis les cuire 1 heure avec une pincée de bicarbonate de soude. Vous obtiendrez ainsi une texture tendre et une saveur riche.",
-        "Étape 2 : Mixer les pois chiches tièdes avec le tahin, le jus de citron frais et l'ail émincé pendant 4 minutes à feu moyen-vif. La consistance commencera à devenir lisse et crémeuse.",
+        "Étape 1 : Faire tremper 160 g de pois chiches secs pendant 12 heures, puis les cuire 1 heure avec une pincée de bicarbonate de soude (environ 400 g de pois chiches cuits). Vous obtiendrez ainsi une texture tendre et une saveur riche.",
+        "Étape 2 : Mixer les pois chiches tièdes avec le tahin, le jus de citron frais et l'ail émincé pendant 4 minutes. La consistance commencera à devenir lisse et crémeuse.",
         "Étape 3 : Incorporer progressivement l'eau froide tout en continuant de mixer jusqu'à obtenir une texture lisse et crémeuse. Vous sentirez la mixture devenir plus légère et aérienne.",
-        "Étape 4 : Assaisonner de sel et continuer à mixer 1 minute à feu doux. Le sel mettra en valeur les saveurs des pois chiches et du tahin.",
+        "Étape 4 : Assaisonner de sel et continuer à mixer 1 minute. Le sel mettra en valeur les saveurs des pois chiches et du tahin.",
         "Étape 5 : Ajouter le cumin en poudre et mélanger bien. Le cumin apportera une touche chaude et aromatique à votre houmous.",
         "Étape 6 : Étaler l'houmous dans un plat creux et arroser d'huile d'olive. L'huile d'olive ajoutera une richesse et une finesse à votre préparation.",
-        "Étape 7 : Garnir de pois chiches entiers et de persil plat, servir chaud. La présentation sera ainsi colorée et appétissante, avec une touche de fraîcheur grâce au persil."
+        "Étape 7 : Garnir de pois chiches entiers et de persil plat, servir à température ambiante. La présentation sera ainsi colorée et appétissante, avec une touche de fraîcheur grâce au persil."
       ],
       "diet_flags": {
         "vegan": true,
@@ -34437,7 +34615,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -34630,14 +34808,14 @@
       "_chef_note": "Utiliser des pâtes de qualité et des ingrédients frais pour obtenir le meilleur résultat.",
       "description": "Pâtes italiennes cuites al dente, enrobées d'une sauce méditerranéenne à base de tomates concassées, de pois chiches et d'herbes aromatiques, avec une texture crémeuse et des saveurs intenses.",
       "instructions": [
-        "Étape 1: Faire revenir 300g d'oignon pendant 6 minutes à feu moyen dans 45ml d'huile d'olive, jusqu'à ce que l'oignon soit translucide et parfumé, en remuant régulièrement pour éviter la coloration excessive.",
+        "Étape 1: Faire revenir 150g d'oignon pendant 6 minutes à feu moyen dans 45ml d'huile d'olive, jusqu'à ce que l'oignon soit translucide et parfumé, en remuant régulièrement pour éviter la coloration excessive.",
         "Étape 2: Ajouter 9g d'ail émincé et faire cuire pendant 1 minute, en surveillant pour éviter que l'ail ne brûle, puis incorporer 3g de romarin frais haché.",
         "Étape 3: Ajouter 480g de tomates concassées et laisser cuire pendant 2 minutes, en remuant occasionnellement, pour permettre aux saveurs de se mélanger et aux tomates de commencer à fondre.",
         "Étape 4: Incorporer 400g de pois chiches égouttés et écraser 1/3 d'entre eux à la fourchette pour épaissir la sauce, en veillant à conserver une texture légèrement rustique.",
         "Étape 5: Verser du bouillon végétal jusqu'à couvrir légèrement les ingrédients, puis porter à frémissement et laisser cuire pendant 5 minutes pour permettre aux saveurs de se développer.",
         "Étape 6: Ajouter 320g de pâtes courtes (ditalini ou tubetti) directement dans la casserole et cuire pendant 8 à 10 minutes dans le bouillon, jusqu'à ce qu'elles soient al dente, en vérifiant régulièrement la texture.",
         "Étape 7: Ajouter du bouillon végétal si nécessaire pour maintenir une texture crémeuse, mais pas trop liquide, et rectifier l'assaisonnement avec du sel et du poivre en conséquence.",
-        "Étape 8: Arroser d'huile d'olive et servir chaud, en saupoudrant de fromage râpé et en ajoutant un tour de poivre noir fraîchement moulu pour rehausser les saveurs."
+        "Étape 8: Arroser d'huile d'olive et servir chaud, en saupoudrant de parmesan râpé et en ajoutant un tour de poivre noir fraîchement moulu pour rehausser les saveurs."
       ],
       "diet_flags": {
         "vegan": false,
@@ -34748,7 +34926,7 @@
           }
         },
         {
-          "ingredient": "olive_oil_plant",
+          "ingredient": "sunflower_oil_plant",
           "quantity": 45,
           "unit": "ml",
           "meta": {
@@ -34776,6 +34954,17 @@
           "meta": {
             "role": "spice",
             "form": "ground",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 520,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -34838,6 +35027,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "ail",
         "avance",
@@ -34851,6 +35041,7 @@
         "cumin",
         "curcuma",
         "curry",
+        "eau",
         "epice",
         "garlic",
         "gluten free",
@@ -34865,21 +35056,24 @@
         "minceur",
         "noir",
         "oignon",
-        "olive",
         "onion",
         "pakora",
         "pepper",
         "pois",
         "poivre",
+        "potable)",
         "salt",
         "sans gluten",
         "sans viande",
         "sel",
         "spicy",
+        "sunflower",
         "table",
         "technique",
+        "tournesol",
         "turmeric",
         "vegetarien",
+        "water",
         "wok",
         "yaourt",
         "yellow",
@@ -34893,7 +35087,7 @@
       "instructions": [
         "Étape 1: Préparer la pâte à pakora en mélangeant 150 g de farine de pois chiches avec 3 g de curcuma en poudre, 3 g de cumin en poudre, une pincée de sel et en ajoutant progressivement de l'eau pour obtenir une pâte épaisse et homogène, sans grumeaux.",
         "Étape 2: Couper les 300 g d'oignon jaune en rondelles épaisses ou en quartiers, puis les réserver. Cette étape est cruciale pour obtenir des pakora de taille uniforme.",
-        "Étape 3: Chauffer 45 ml d'huile d'olive dans une casserole profonde à 170-180 °C, jusqu'à ce qu'une goutte de pâte remonte immédiatement et grésille, indiquant que l'huile est prête pour la friture.",
+        "Étape 3: Chauffer un bain d'huile de tournesol dans une casserole profonde à 170-180 °C, jusqu'à ce qu'une goutte de pâte remonte immédiatement et grésille, indiquant que l'huile est prête pour la friture.",
         "Étape 4: Tremper les morceaux d'oignon jaune dans la pâte pour les enrober uniformément, puis les plonger délicatement dans l'huile chaude en plusieurs fournées sans surcharger, pour éviter que les pakora ne collent entre eux.",
         "Étape 5: Frire pendant 3 à 4 minutes en retournant à mi-cuisson, jusqu'à obtenir une coloration dorée uniforme et une surface croustillante. Les pakora doivent être secs au toucher et ne doivent plus être huileux.",
         "Étape 6: Égoutter les pakora sur du papier absorbant. Préparer la sauce kadhi en fouettant 200 g de yaourt avec 2 cuillerées de farine de pois chiches et 400 ml d'eau, jusqu'à obtenir un mélange lisse et homogène.",
@@ -35010,8 +35204,8 @@
           }
         },
         {
-          "ingredient": "olive_oil_plant",
-          "quantity": 46.2,
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 45,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -35038,6 +35232,17 @@
           "meta": {
             "role": "spice",
             "form": "ground",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 530,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -35098,6 +35303,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(vegan)",
         "1 heure",
         "ail",
@@ -35112,6 +35318,7 @@
         "cumin",
         "curcuma",
         "curry",
+        "eau",
         "epice",
         "garlic",
         "gluten free",
@@ -35125,12 +35332,12 @@
         "minceur",
         "noir",
         "oignon",
-        "olive",
         "onion",
         "pakora",
         "pepper",
         "pois",
         "poivre",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -35140,12 +35347,15 @@
         "soja",
         "soybean",
         "spicy",
+        "sunflower",
         "table",
         "technique",
+        "tournesol",
         "turmeric",
         "vegan",
         "vegetalien",
-        "vegetarien"
+        "vegetarien",
+        "water"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
@@ -35155,7 +35365,7 @@
       "description": "Plat indien créatif aux pois chiches, oignon émincé, ail haché, avec une sauce onctueuse et des pakora croustillants, relevés de curcuma et de cumin, dans une sauce qui nappe la cuillère.",
       "instructions": [
         "Étape 1 : Préparez la pâte à pakora en mélangeant 150g de farine de pois chiches avec 2,8g de curcuma, 2,5g de cumin, une pincée de sel et ajoutez de l'eau progressivement (environ 120 à 150ml) jusqu'à obtenir une pâte épaisse et homogène qui adhère aux légumes sans couler. Vous devez sentir la texture de la pâte et voir sa consistance épaisse, légèrement collante.",
-        "Étape 2 : Coupez 300g d'oignon en rondelles épaisses et délicates. Chauffez 46ml d'huile d'olive dans une casserole profonde à 170-180°C — un peu de pâte doit remonter immédiatement en surface. Vous devez entendre le bruit de l'huile qui chauffe et sentir son arôme.",
+        "Étape 2 : Coupez 300g d'oignon en rondelles épaisses et délicates. Chauffez un bain d'huile de tournesol dans une casserole profonde à 170-180°C — un peu de pâte doit remonter immédiatement en surface. Vous devez entendre le bruit de l'huile qui chauffe et sentir son arôme.",
         "Étape 3 : Trempez les rondelles d'oignon dans la pâte pour les enrober uniformément. Plongez-les délicatement dans l'huile chaude en petites fournées sans surcharger. Vous devez voir les pakora qui sont en train de frire et sentir leur arôme croustillant, avec une légère fumée.",
         "Étape 4 : Fritez pendant 3 à 4 minutes en retournant à mi-cuisson jusqu'à coloration brun doré uniforme et surface croustillante et sèche. Égouttez sur du papier absorbant et salez légèrement. Vous devez voir les pakora qui sont croustillants et sentir leur texture croustillante, avec une légère croquant.",
         "Étape 5 : Préparez la sauce kadhi en fouettant 200g de yaourt végétal avec 2 cuillerées à soupe de farine de pois chiches restante et 400ml d'eau jusqu'à consistance lisse. Versez dans une casserole, portez à frémissement en remuant constamment. Ajoutez 15g d'ail haché et cuisez pendant 10 minutes à feu doux en remuant jusqu'à ce que la sauce épaississe et nappe la cuillère. Vous devez sentir l'arôme de la sauce et voir sa consistance lisse, avec une légère onctuosité.",
@@ -35195,7 +35405,7 @@
       "composition": [
         {
           "ingredient": "white_rice_raw_seed_unenriched",
-          "quantity": 300,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -35205,8 +35415,8 @@
           }
         },
         {
-          "ingredient": "green_lentil_boiled",
-          "quantity": 300,
+          "ingredient": "red_lentil_dried",
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -35280,6 +35490,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 1000,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -35333,21 +35554,23 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "blanc",
         "braising",
         "canola",
         "coeliaque",
+        "corail",
         "coriander",
         "cumin",
         "curcuma",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
         "gingembre",
         "ginger",
         "gluten free",
-        "green",
         "intermediaire",
         "international",
         "khichdi",
@@ -35359,6 +35582,8 @@
         "low calorie",
         "minceur",
         "moyen",
+        "potable)",
+        "red",
         "rice",
         "riz",
         "salt",
@@ -35371,7 +35596,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
-        "verte",
+        "water",
         "water_cooking",
         "white"
       ],
@@ -35381,11 +35606,11 @@
       "_quality_score": 0.79,
       "description": "Bouillie réconfortante de riz basmati et lentilles vertes du Gujarat mijotés ensemble avec curcuma, cumin et gingembre frais, texture crémeuse et dorée, parfumée par les épices et le gingembre cuit à feu doux.",
       "instructions": [
-        "Étape 1 : Rincer 300g de riz basmati et 300g de lentilles vertes sous l'eau froide jusqu'à eau claire. Égoutter et réserver.",
+        "Étape 1 : Rincer 200g de riz basmati et 150g de lentilles corail sous l'eau froide jusqu'à eau claire. Égoutter et réserver.",
         "Étape 2 : Chauffer 45ml d'huile de colza dans une casserole à fond épais à feu moyen. Ajouter 3g de graines de cumin et faire grésiller pendant 30 secondes, jusqu'à ce que vous sentiez une odeur agréable de cumin.",
         "Étape 3 : Incorporer 11,2g de gingembre frais râpé et faire revenir pendant 1 minute, jusqu'à ce que le gingembre soit tendre et parfumé.",
-        "Étape 4 : Ajouter le riz basmati et les lentilles vertes. Mélanger pendant 1 minute pour bien enrober de l'huile de colza et de gingembre.",
-        "Étape 5 : Verser 600ml d'eau bouillante avec 3g de curcuma et du sel. Porter à ébullition, couvrir et cuire à feu doux pendant 15 minutes, jusqu'à absorption complète de l'eau.",
+        "Étape 4 : Ajouter le riz basmati et les lentilles corail. Mélanger pendant 1 minute pour bien enrober de l'huile de colza et de gingembre.",
+        "Étape 5 : Verser 1 litre d'eau bouillante avec 3g de curcuma et du sel. Porter à ébullition, couvrir et cuire à feu doux pendant 20 minutes, jusqu'à absorption complète de l'eau.",
         "Étape 6 : Laisser reposer à couvert pendant 5 minutes hors du feu, jusqu'à ce que la bouillie ait une texture légèrement crémeuse et les lentilles soient fondues. Vous devriez voir la bouillie se déformer légèrement lorsqu'elle refroidit.",
         "Étape 7 : Servir chaud."
       ],
@@ -35416,13 +35641,13 @@
       "timing": {
         "prep_active_min": 17,
         "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 37
+        "cook_min": 45,
+        "total_min": 62
       },
       "composition": [
         {
-          "ingredient": "green_lentil_boiled",
-          "quantity": 300,
+          "ingredient": "green_lentil_dried",
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -35433,7 +35658,7 @@
         },
         {
           "ingredient": "white_rice_raw_seed_unenriched",
-          "quantity": 300,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -35444,7 +35669,7 @@
         },
         {
           "ingredient": "rice_vermicelli_raw_dried",
-          "quantity": 150,
+          "quantity": 50,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -35540,6 +35765,17 @@
             "note": "Quelques feuilles pour la fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -35596,7 +35832,6 @@
         }
       },
       "search_tokens": [
-        "45 minutes",
         "ail",
         "blanc",
         "coeliaque",
@@ -35611,10 +35846,13 @@
         "koshari",
         "kushari",
         "leger",
+        "lent",
         "lentil",
         "lentille",
         "light",
+        "long",
         "low calorie",
+        "mijote",
         "minceur",
         "moyen",
         "oignon",
@@ -35622,9 +35860,12 @@
         "onion",
         "rice",
         "riz",
+        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sel",
+        "table",
         "tomate",
         "tomato",
         "vegan",
@@ -35644,16 +35885,11 @@
       "_quality_score": 0.97,
       "description": "Plat égyptien végan à base de lentilles vertes, où les saveurs se marient dans une texture tendre et parfumée, typique de la cuisine méditerranéenne avec des notes de cumin et de tomate.",
       "instructions": [
-        "Étape 1 : Cuire 300g de lentilles vertes dans de l'huile d'olive extra vierge 20 min à feu moyen, jusqu'à texture tendre et coloration brune claire, en remuant régulièrement pour éviter l'attache.",
-        "Étape 2 : Faire cuire 300g de riz long grain et 150g de vermicelles de riz dans de l'huile d'olive extra vierge 15 min à feu moyen, jusqu'à texture crémeuse et coloration blanche, en vérifiant la texture pour éviter la surcuisson.",
-        "Étape 3 : Saisir 300g d'oignon jaune émincé dans de l'huile d'olive extra vierge 5 min à feu moyen-vif, jusqu'à coloration dorée et texture croustillante, en remuant constamment pour éviter la combustion.",
-        "Étape 4 : Émulsionner 30ml de vinaigre blanc, 9g d'ail haché et 3g de cumin en grains dans un bol, jusqu'à texture lisse et parfumée, en ajoutant un peu d'huile d'olive extra vierge pour émulsionner.",
-        "Étape 5 : Enfourner 240g de tomates coupées en dés avec de l'huile d'olive extra vierge 10 min à 180°C, jusqu'à texture molle et coloration rouge, en vérifiant la texture pour éviter la dessiccation.",
-        "Étape 6 : Nacrer 10g de vermicelles grillés avec de l'huile d'olive extra vierge 2 min à feu moyen, jusqu'à texture croustillante et coloration dorée, en remuant constamment pour éviter la combustion.",
-        "Étape 7 : Superposer les lentilles, le riz et les vermicelles, nappés de sauce tomate végétalienne et parsemés d'oignon croustillant, en ajoutant des herbes fraîches pour la saveur et la texture.",
-        "Étape 8 : Ajouter des épices végétaliennes pour relever les saveurs et la texture, en vérifiant la saveur pour ajuster les épices.",
-        "Étape 9 : Servir chaud, avec une texture crémeuse et une coloration dorée, en ajoutant des graines de sésame croustillantes pour la texture et la saveur.",
-        "Étape 10 : Servir dans des bols préchauffés, garni de coriandre ciselée et d'un filet d'huile d'olive extra vierge. Accompagner de pain pita tiède."
+        "Étape 1 : Rincer 150 g de lentilles vertes et les cuire 25 minutes dans de l'eau bouillante salée, jusqu'à ce qu'elles soient tendres. Égoutter.",
+        "Étape 2 : Émincer finement 300 g d'oignon et le faire frire dans 30 ml d'huile d'olive à feu moyen 15 à 20 minutes, jusqu'à ce qu'il soit brun et croustillant. Égoutter sur du papier absorbant.",
+        "Étape 3 : Dans la même casserole, avec le reste d'huile, faire dorer 50 g de vermicelles de riz brisés pendant 2 minutes. Ajouter 200 g de riz rincé, 450 ml d'eau et une pincée de sel, couvrir et cuire 15 minutes à feu doux.",
+        "Étape 4 : Préparer la sauce : faire revenir 9 g d'ail haché et 3 g de cumin pendant 1 minute, ajouter 240 g de tomates en dés et 400 g de sauce tomate, puis laisser mijoter 10 minutes. Hors du feu, ajouter 30 ml de vinaigre blanc.",
+        "Étape 5 : Mélanger le riz et les lentilles, répartir dans les bols, napper de sauce tomate et parsemer d'oignons croustillants."
       ],
       "diet_flags": {
         "vegan": true,
@@ -35687,8 +35923,8 @@
       },
       "composition": [
         {
-          "ingredient": "green_lentil_boiled",
-          "quantity": 300,
+          "ingredient": "green_lentil_dried",
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -35699,7 +35935,7 @@
         },
         {
           "ingredient": "white_rice_raw_seed_unenriched",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -35710,7 +35946,7 @@
         },
         {
           "ingredient": "pasta_raw_dried",
-          "quantity": 320,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -35787,7 +36023,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -35941,13 +36177,10 @@
       "_quality_score": 1.0,
       "description": "Plat égyptien de riz parfumé, lentilles corail tendres et pâtes al dente, sauce tomate acidulée et épicée, oignons jaunes frits croustillants, parfumé de cumin et de vinaigre blanc",
       "instructions": [
-        "Étape 1 : Cuire séparément les lentilles corail dans de l'eau bouillante salée pendant 20 minutes, ou jusqu'à ce qu'elles soient tendres et se détachent facilement. Cuire également le riz long grain dans de l'eau salée pendant 12 minutes, ou jusqu'à ce qu'il soit cuit et qu'il se sépare facilement. Faire cuire les ziti al dente pendant 8 minutes, ou jusqu'à ce qu'ils soient fermes mais pas durs.",
-        "Étape 2 : Préparer les oignons jaunes frits en éminçant 300 grammes d'oignons jaunes en rondelles très fines. Faire frire dans 45 ml d'huile d'olive à feu moyen-vif pendant 20 minutes, ou jusqu'à ce qu'ils soient brun doré et croustillants, en remuant régulièrement pour éviter la combustion. Égoutter sur du papier absorbant.",
-        "Étape 3 : Préparer la sauce tomate épicée en faisant revenir 9 grammes d'ail haché dans un peu d'huile d'olive. Ajouter 240 grammes de tomates concassées, 30 ml de vinaigre blanc, 3 grammes de cumin en poudre, 5 grammes de sel et 400 grammes de sauce tomate. Cuire pendant 15 minutes, ou jusqu'à ce que la sauce soit concentrée et légèrement épaissie, en remuant occasionnellement.",
-        "Étape 4 : Assembler le plat en couches dans chaque bol : 300 grammes de riz parfumé, 300 grammes de lentilles corail, 320 grammes de ziti, et napper généreusement de sauce tomate épicée.",
-        "Étape 5 : Couvrir d'oignons jaunes frits croustillants et parsemer de levure nutritionnelle pour donner un goût umami au plat.",
-        "Étape 6 : Ajouter un peu de vinaigre blanc pour équilibrer les saveurs. Chaque couche doit être identifiable, les oignons croquants, la sauce épicée et acidulée.",
-        "Étape 7 : Servir chaud dans des bols préchauffés, garni de coriandre ciselée et d'un filet d'huile d'olive. Accompagner de pain pita tiède."
+        "Étape 1 : Cuire séparément 150 g de lentilles vertes rincées 25 minutes dans de l'eau bouillante salée, 150 g de riz long grain 12 minutes dans de l'eau salée et 150 g de petites pâtes 8 minutes, al dente. Égoutter.",
+        "Étape 2 : Émincer 300 g d'oignons jaunes en rondelles très fines et les faire frire dans 30 ml d'huile d'olive à feu moyen-vif pendant 20 minutes, jusqu'à ce qu'ils soient bruns et croustillants. Égoutter sur du papier absorbant.",
+        "Étape 3 : Préparer la sauce tomate épicée : faire revenir 9 g d'ail haché dans 15 ml d'huile d'olive, ajouter 240 g de tomates concassées, 400 g de sauce tomate, 3 g de cumin en poudre et 2 g de sel. Cuire 15 minutes, puis ajouter 30 ml de vinaigre blanc.",
+        "Étape 4 : Dans chaque bol, superposer le riz, les lentilles et les pâtes, napper de sauce tomate et couvrir d'oignons croustillants. Servir chaud."
       ],
       "diet_flags": {
         "vegan": true,
@@ -35993,7 +36226,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -36036,9 +36269,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -36080,7 +36313,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -36204,11 +36437,10 @@
       "description": "Soupe libanaise crémeuse et parfumée, où les lentilles vertes cuites à la perfection fondent en bouche, accompagnées d'oignon jaune caramélisé, de carotte tendre et d'épices chaudes, dans un bouillon de légumes onctueux et parfumé au cumin, avec une touche de jus de citron frais.",
       "instructions": [
         "Étape 1 : Rincer 300g de lentilles vertes et les mettre dans une grande casserole avec de l'eau froide. Porter à ébullition, puis réduire le feu à feu moyen et laisser cuire 10 minutes, en remuant occasionnellement, jusqu'à ce que les lentilles soient tendres et leur texture soit lisse.",
-        "Étape 2 : Faire revenir 300g d'oignon jaune et 200g de carotte dans 45ml d'huile d'olive, jusqu'à légère coloration et parfum envoûtant. Ajouter 3g de cumin en graines et faire revenir 30 secondes, jusqu'à ce que les épices dégagent leur arôme.",
+        "Étape 2 : Faire revenir 150g d'oignon jaune et 200g de carotte dans 45ml d'huile d'olive, jusqu'à légère coloration et parfum envoûtant. Ajouter 3g de cumin en graines et faire revenir 30 secondes, jusqu'à ce que les épices dégagent leur arôme.",
         "Étape 3 : Incorporer 480g de tomates et la préparation aux lentilles. Ajouter 750ml de bouillon de légumes et laisser mijoter 25 minutes, en remuant occasionnellement, jusqu'à ce que les lentilles soient très tendres et la soupe soit crémeuse, avec une texture onctueuse.",
-        "Étape 4 : Assaisonner de 5g de sel et ajouter 100g de jus de citron frais. Servir chaud, en contrôlant la texture et la coloration, qui devraient être appétissantes et invitantes.",
-        "Étape 5 : Pour une présentation plus appétissante, vous pouvez ajouter des feuilles de coriandre fraîche ou des graines de sésame sur le dessus de la soupe, qui ajoutent une touche de fraîcheur et de croquant.",
-        "Étape 6 : Cette soupe est idéale pour un repas réconfortant et équilibré, qui vous permettra de vous ressourcer et de vous régaler."
+        "Étape 4 : Assaisonner de 2g de sel et ajouter 40 ml de jus de citron frais. Servir chaud, en contrôlant la texture et la coloration, qui devraient être appétissantes et invitantes.",
+        "Étape 5 : Pour une présentation plus appétissante, vous pouvez ajouter des feuilles de coriandre fraîche ou des graines de sésame sur le dessus de la soupe, qui ajoutent une touche de fraîcheur et de croquant."
       ],
       "diet_flags": {
         "vegan": true,
@@ -36242,7 +36474,7 @@
       },
       "composition": [
         {
-          "ingredient": "red_lentil_boiled",
+          "ingredient": "red_lentil_dried",
           "quantity": 250,
           "unit": "g",
           "meta": {
@@ -36368,6 +36600,28 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 700,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "acid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -36506,8 +36760,7 @@
         "Étape 4 : Ajouter les lentilles et 700ml d'eau bouillante. Mijoter à feu doux pendant 18 à 20 minutes jusqu'à lentilles désagrégées et texture crémeuse nappe-cuillère.",
         "Étape 5 : Préparer le tadka : faire chauffer 15ml d'huile de tournesol, faire grésiller les graines de cumin pendant 30 secondes. Verser sur le dal, avec un son de crépitation et une odeur parfumée.",
         "Étape 6 : Assaisonner de sel et de jus de citron vert. La sauce doit napper la cuillère, la couleur être jaune clair.",
-        "Étape 7 : Servir avec du riz basmati, en garnissant de 10g de coriandre fraîche hachée et 30g de piment chili haché, si désiré.",
-        "Étape 8 : Ajouter un filet de jus de citron vert et une pincée de levure nutritionnelle pour un supplément de saveur et de texture."
+        "Étape 7 : Servir avec du riz basmati, en garnissant de 10g de coriandre fraîche hachée et 30g de piment chili haché, si désiré."
       ],
       "diet_flags": {
         "vegan": true,
@@ -36541,8 +36794,8 @@
       },
       "composition": [
         {
-          "ingredient": "green_lentil_boiled",
-          "quantity": 300,
+          "ingredient": "green_lentil_dried",
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -36575,7 +36828,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -36629,7 +36882,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -36658,6 +36911,17 @@
             "ingredient_fr": "coriandre fraîche ciselée",
             "note": "Pour une touche de fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -36741,6 +37005,7 @@
         "moyen",
         "oat",
         "oignon",
+        "olive",
         "onion",
         "pie",
         "pomme",
@@ -36772,14 +37037,14 @@
       "_chef_note": "Un plat végétalien crémeux et savoureux, parfait pour les repas en famille.",
       "description": "Lentilles vertes cuites, mélangées à des pommes de terre crémeuses et des carottes fondantes, parfumées au thym frais.",
       "instructions": [
-        "Étape 1 : Faites revenir 300 g d'oignons en dés dans un peu d'huile à feu moyen, jusqu'à ce qu'ils soient tendres et parfumés.",
-        "Étape 2 : Ajoutez 200 g de carottes en dés et faites-les cuire pendant 5 minutes, puis ajoutez 300 g de lentilles vertes et 750 ml de bouillon végétal, et faites cuire pendant 20 minutes.",
-        "Étape 3 : Assaisonnez avec 5 g de thym frais et 5 g de sel de mer.",
+        "Étape 1 : Faites revenir 150 g d'oignons en dés dans 15 ml d'huile d'olive à feu moyen, jusqu'à ce qu'ils soient tendres et parfumés.",
+        "Étape 2 : Ajoutez 200 g de carottes en dés et faites-les cuire pendant 5 minutes, puis ajoutez 200 g de lentilles vertes rincées et 750 ml de bouillon végétal, et faites cuire pendant 25 minutes.",
+        "Étape 3 : Assaisonnez avec 5 g de thym frais et 2 g de sel.",
         "Étape 4 : Faites cuire 600 g de pommes de terre dans de l'eau bouillante pendant 15-20 minutes, jusqu'à ce qu'elles soient tendres.",
         "Étape 5 : Écrasez les pommes de terre avec 40 g de beurre végétal, un peu de bouillon végétal et de sel, en ajoutant 250 ml de lait d'avoine.",
         "Étape 6 : Versez les lentilles dans un plat à gratin, puis recouvrez-les avec la purée de pommes de terre.",
         "Étape 7 : Enfournez à 180°C pendant 25 minutes, jusqu'à ce que la surface soit dorée.",
-        "Étape 8 : Servez chaud, en préchauffant des bols et en ajoutant un filet d'huile d'olive."
+        "Étape 8 : Servez chaud."
       ],
       "diet_flags": {
         "vegan": true,
@@ -36813,8 +37078,8 @@
       },
       "composition": [
         {
-          "ingredient": "green_lentil_boiled",
-          "quantity": 300,
+          "ingredient": "green_lentil_dried",
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -36847,7 +37112,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -36884,6 +37149,28 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 9.4,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 750,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -36946,9 +37233,11 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "anglais",
         "beurre",
+        "bouillon",
         "braising",
         "britannique",
         "british",
@@ -36956,6 +37245,7 @@
         "carotte",
         "carrot",
         "coeliaque",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -36965,6 +37255,7 @@
         "kids",
         "lait",
         "leger",
+        "legumes",
         "lentil",
         "lentille",
         "light",
@@ -36977,16 +37268,20 @@
         "oven_cooking",
         "pie",
         "pomme",
+        "potable)",
         "potato",
         "salt",
         "sans gluten",
         "sans viande",
         "sel",
         "shepherd's",
+        "stock",
         "table",
         "terre",
+        "vegetable",
         "vegetarien",
-        "verte"
+        "verte",
+        "water"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
@@ -36994,12 +37289,12 @@
       "_quality_score": 0.84,
       "description": "Gratin végétarien britannique à base de lentilles vertes cuites à la perfection, avec une texture crémeuse et une saveur riche, inspiré de la cuisine traditionnelle anglaise.",
       "instructions": [
-        "Étape 1: Faire cuire 300g de lentilles vertes dans un bouillon végétal chaud et parfumé jusqu'à tendreté, environ 25 minutes, en vérifiant régulièrement leur texture pour obtenir une consistance crémeuse.",
-        "Étape 2: Faire revenir 300g d'oignon jaune émincé et 200g de carotte crue râpée dans 20g de beurre à feu moyen, en remuant occasionnellement, jusqu'à ce que les légumes soient tendres et parfumés, environ 10 minutes.",
+        "Étape 1: Faire cuire 200g de lentilles vertes dans 750 ml de bouillon végétal chaud et parfumé jusqu'à tendreté, environ 25 minutes, en vérifiant régulièrement leur texture pour obtenir une consistance crémeuse.",
+        "Étape 2: Faire revenir 150g d'oignon jaune émincé et 200g de carotte crue râpée dans 20g de beurre à feu moyen, en remuant occasionnellement, jusqu'à ce que les légumes soient tendres et parfumés, environ 10 minutes.",
         "Étape 3: Mélanger les lentilles cuites aux légumes sautés, et assaisonner avec du sel de mer et du poivre noir fraîchement moulu. Vous obtiendrez un mélange harmonieux et parfumé.",
         "Étape 4: Cuire 600g de pommes de terre crues à l'eau bouillante salée, puis les égoutter. Vous entendrez le son de l'eau bouillante et sentirez la vapeur chaude.",
         "Étape 5: Écraser les pommes de terre cuites avec 40g de beurre et 250ml de lait, du sel et du poivre pour obtenir une purée lisse et crémeuse. Vous obtiendrez une texture onctueuse.",
-        "Étape 6: Verser les lentilles dans un plat à gratin beurré d'huile d'olive. Vous verrez le mélange se déposer uniformément.",
+        "Étape 6: Verser les lentilles dans un plat à gratin beurré. Vous verrez le mélange se déposer uniformément.",
         "Étape 7: Couvrir uniformément le mélange de lentilles avec la purée de pommes de terre. Vous obtiendrez une surface lisse et régulière.",
         "Étape 8: Strier la surface avec une fourchette pour qu'elle dore bien. Vous verrez les traces de la fourchette et sentirez l'odeur de la purée qui commence à dorer.",
         "Étape 9: Enfourner à 200°C pendant 20-25 minutes jusqu'à gratinage doré. Vous sentirez l'odeur de la purée dorée et voyez la surface qui prend une belle couleur brune."
@@ -37037,7 +37332,7 @@
       "composition": [
         {
           "ingredient": "green_lentil_dried",
-          "quantity": 300,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -37070,7 +37365,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -37107,6 +37402,28 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 9.4,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 750,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -37164,9 +37481,11 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(vegan)",
         "anglais",
         "beurre",
+        "bouillon",
         "braising",
         "britannique",
         "british",
@@ -37174,10 +37493,12 @@
         "carotte",
         "carrot",
         "coeliaque",
+        "eau",
         "gluten free",
         "green",
         "intermediaire",
         "leger",
+        "legumes",
         "lent",
         "lentil",
         "lentille",
@@ -37191,6 +37512,7 @@
         "onion",
         "pie",
         "pomme",
+        "potable)",
         "potato",
         "roasting",
         "salt",
@@ -37201,13 +37523,16 @@
         "shepherd's",
         "soja",
         "soybean",
+        "stock",
         "table",
         "terre",
         "vegan",
+        "vegetable",
         "vegetal",
         "vegetalien",
         "vegetarien",
-        "verte"
+        "verte",
+        "water"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
@@ -37216,14 +37541,14 @@
       "_chef_note": "Un plat végétalien crémeux et savoureux, parfait pour les repas en famille.",
       "description": "Lentilles vertes cuites à la perfection, mélangées avec des carottes et des oignons tendres, recouvertes d'une purée de pommes de terre crémeuse et dorée, typique de la cuisine britannique revisitée avec amour et créativité végétalienne.",
       "instructions": [
-        "Étape 1 : Faites cuire 300 g de lentilles vertes dans un bouillon végétal jusqu'à tendreté, environ 25 minutes, en veillant à ce qu'elles soient bien tendres et parfumées.",
-        "Étape 2 : Faites revenir 300 g d'oignons et 200 g de carottes en dés dans un peu de beurre végétal à feu moyen, jusqu'à ce qu'ils soient tendres et parfumés, en remuant régulièrement pour éviter la coloration excessive.",
+        "Étape 1 : Faites cuire 200 g de lentilles vertes dans 750 ml de bouillon végétal jusqu'à tendreté, environ 25 minutes, en veillant à ce qu'elles soient bien tendres et parfumées.",
+        "Étape 2 : Faites revenir 150 g d'oignons et 200 g de carottes en dés dans un peu de beurre végétal à feu moyen, jusqu'à ce qu'ils soient tendres et parfumés, en remuant régulièrement pour éviter la coloration excessive.",
         "Étape 3 : Ajoutez les lentilles cuites aux oignons et carottes, et mélangez bien pour obtenir un mélange harmonieux.",
         "Étape 4 : Faites cuire 600 g de pommes de terre à l'eau bouillante salée, puis égouttez-les et laissez-les refroidir légèrement pour faciliter l'écrasage.",
         "Étape 5 : Écrasez les pommes de terre avec un peu de beurre végétal, de lait de soja et du sel, pour obtenir une purée lisse et crémeuse.",
         "Étape 6 : Versez les lentilles dans un plat à gratin, puis recouvrez-les uniformément avec la purée de pommes de terre, en veillant à ce que la surface soit lisse et régulière.",
         "Étape 7 : Enfournez à 200°C pendant 20-25 minutes, jusqu'à gratinage doré et croustillant, en surveillant la cuisson pour éviter la surcuisson.",
-        "Étape 8 : Servez chaud, dans des bols préchauffés, en accompagnant d'un saladier de légumes frais pour un repas complet et équilibré."
+        "Étape 8 : Servez chaud, en accompagnant d'un saladier de légumes frais pour un repas complet et équilibré."
       ],
       "diet_flags": {
         "vegan": true,
@@ -37257,8 +37582,8 @@
       },
       "composition": [
         {
-          "ingredient": "green_lentil_boiled",
-          "quantity": 200,
+          "ingredient": "green_lentil_dried",
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "base",
@@ -37280,7 +37605,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -37469,14 +37794,12 @@
       "description": "Plat indien traditionnel à base de lentilles vertes, cuisson lente et douce sous frémissement, offrant une texture fondante et nappante, avec des saveurs équilibrées de légumes et d'épices, accompagné de la fraîcheur des épinards.",
       "instructions": [
         "Étape 1 : Faire chauffer 20 ml d'huile d'olive à feu moyen dans une grande poêle, en sentant l'odeur délicate de l'huile qui commence à se développer.",
-        "Étape 2 : Ajouter 150 g d'oignon émincé, 2 g d'ail haché et 200 g de carotte en petits dés. Cuire 5 à 7 minutes en remuant jusqu'à tendreté.",
-        "Étape 3 : Ajouter 200 g de lentilles vertes et mélanger 1 minute pour bien les enrober d'huile et de saveurs, en sentant la texture des lentilles qui commence à se révéler.",
+        "Étape 2 : Ajouter 150 g d'oignon émincé, 10 g d'ail haché et 200 g de carotte en petits dés. Cuire 5 à 7 minutes en remuant jusqu'à tendreté.",
+        "Étape 3 : Ajouter 150 g de lentilles vertes rincées et mélanger 1 minute pour bien les enrober d'huile et de saveurs, en sentant la texture des lentilles qui commence à se révéler.",
         "Étape 4 : Ajouter 1000 ml de bouillon végétal à base de légumes et porter à frémissement. Laisser mijoter 20 à 25 minutes à feu doux, en contrôlant la texture des lentilles qui doivent être fondantes mais non écrasées, tout en sentant l'arôme des légumes qui se développe.",
         "Étape 5 : Ajouter 200 g d'épinards frais et laisser cuire pendant 2-3 minutes, jusqu'à ce que les épinards aient ramolli et que la sauce ait pris une couleur verte émeraude.",
         "Étape 6 : Rectifier l'assaisonnement en fonction de vos goûts, en utilisant des épices véganes telles que du curcuma, du cumin ou du poivre, pour donner une saveur intense et équilibrée au plat.",
-        "Étape 7 : Servir chaud sans attendre.",
-        "Étape 8 : Déguster et ajuster la quantité de liquide si nécessaire pour obtenir la consistance désirée, en ajoutant un peu de crème de coco pour une texture plus crémeuse si désiré.",
-        "Étape 9 : Présenter le plat en le garnissant de feuilles d'épinards frais pour une touche de couleur et de fraîcheur, et en ajoutant un peu de levure nutritionnelle pour un aspect plus doré et une saveur plus intense."
+        "Étape 7 : Servir chaud sans attendre."
       ],
       "diet_flags": {
         "vegan": true,
@@ -37533,7 +37856,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -37733,11 +38056,11 @@
       "instructions": [
         "Étape 1 : Rincer 200g de lentilles corail, les égoutter et les laisser tremper 10 min dans de l'eau froide. Vous verrez les lentilles se gonfler et prendre une texture plus tendre.",
         "Étape 2 : Dans une poêle, chauffer 20ml d'huile d'olive à feu moyen-vif, puis ajouter 150g d'oignon jaune émincé et 200g de carotte râpée. Faire cuire pendant 6 min en remuant régulièrement, jusqu'à ce que les légumes soient translucides et parfumés.",
-        "Étape 3 : Ajouter 2g d'ail émincé et faire cuire 1 min à feu doux en remuant constamment. Vous obtiendrez un mélange parfumé et aromatique.",
+        "Étape 3 : Ajouter 10g d'ail émincé et faire cuire 1 min à feu doux en remuant constamment. Vous obtiendrez un mélange parfumé et aromatique.",
         "Étape 4 : Verser les lentilles égouttées, 1000ml de bouillon de légumes et 200ml de lait de coco dans la poêle. Porter à ébullition, puis réduire à feu doux et laisser cuire pendant 18 min, ou jusqu'à ce que les lentilles soient tendres et la sauce crémeuse.",
         "Étape 5 : Laisser mijoter 2 minutes supplémentaires pour que la sauce soit bien crémeuse.",
         "Étape 6 : Rectifier l'assaisonnement en ajoutant du sel, du poivre et des herbes fraîches si nécessaire.",
-        "Étape 7 : Servir chaud, en garnissant de feuilles de coriandre fraîches et de noix de coco râpée."
+        "Étape 7 : Servir chaud, en garnissant de feuilles de coriandre fraîches."
       ],
       "diet_flags": {
         "vegan": true,
@@ -37766,8 +38089,8 @@
       "timing": {
         "prep_active_min": 21,
         "prep_passive_min": 720,
-        "cook_min": 60,
-        "total_min": 801
+        "cook_min": 110,
+        "total_min": 851
       },
       "composition": [
         {
@@ -37832,17 +38155,6 @@
           "meta": {
             "role": "aromatic",
             "form": "grated",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "olive_oil_plant",
-          "quantity": 50,
-          "unit": "ml",
-          "meta": {
-            "role": "fat",
-            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -37997,7 +38309,6 @@
         "minceur",
         "noix",
         "oignon",
-        "olive",
         "onion",
         "rouge",
         "salt",
@@ -38023,14 +38334,14 @@
       "_chef_note": "La cuisson lente des lentilles et des légumes donne une texture crémeuse et une saveur riche.",
       "description": "Plat indien crémeux à base de lentilles vertes et haricots rouges, avec une sauce parfumée aux épices et une texture lisse, typique de la cuisine végétarien du Pendjab.",
       "instructions": [
-        "Étape 1 : Faire tremper 150 g de haricots rouges et 50 g de lentilles vertes pendant 12 heures. Cuire dans l'eau bouillante à 100°C pendant 1 heure, jusqu'à tendreté complète. La texture doit être al dente.",
+        "Étape 1 : Faire tremper 150 g de haricots rouges et 50 g de lentilles vertes pendant 12 heures. Cuire dans l'eau bouillante pendant 1 heure, jusqu'à tendreté complète.",
         "Étape 2 : Faire revenir 150 g d'oignon jaune haché dans 30 ml d'huile de coco à feu moyen pendant 8 minutes, jusqu'à dorure profonde. L'odeur doit être caramelisée et délicieuse. Ajouter 15 g d'ail et 11 g de gingembre frais hachés, ainsi que 2,5 g de graines de cumin et 2,5 g de garam masala.",
         "Étape 3 : Incorporer 360 g de tomates concassées et cuire pendant 8 minutes à feu moyen, en remuant régulièrement. La sauce doit commencer à épaissir et à libérer son arôme.",
-        "Étape 4 : Ajouter les légumineuses cuites avec 200 ml d'eau et laisser mijoter à feu très doux pendant au moins 30 minutes à 80°C. La sauce doit commencer à épaissir et à devenir crémeuse.",
+        "Étape 4 : Ajouter les légumineuses cuites avec 200 ml d'eau et laisser mijoter à feu très doux pendant au moins 30 minutes. La sauce doit commencer à épaissir et à devenir crémeuse.",
         "Étape 5 : Incorporer 100 ml de lait de coco et rectifier l'assaisonnement avec 5 g de sel. La sauce doit être crémeuse et parfumée.",
-        "Étape 6 : Ajouter 50 ml d'huile d'olive et 15 ml d'huile de coco pour donner une texture lisse et une saveur riche. Laisser mijoter pendant 10 minutes supplémentaires, jusqu'à ce que la sauce soit noire profonde, crémeuse et très parfumée.",
-        "Étape 7 : Servir sans attendre, en vérifiant que la sauce soit crémeuse et très parfumée, avec une texture lisse et une saveur épicée, typique de la cuisine indienne végétarien.",
-        "Étape 8 : Garnir avec des herbes fraîches, comme du cilantro ou du basilic, pour ajouter une touche de fraîcheur et de couleur."
+        "Étape 6 : Ajouter 15 ml d'huile de coco pour donner une texture lisse et une saveur riche. Laisser mijoter pendant 10 minutes supplémentaires, jusqu'à ce que la sauce soit noire profonde, crémeuse et très parfumée.",
+        "Étape 7 : Servir sans attendre, en vérifiant que la sauce soit crémeuse et très parfumée, avec une texture lisse et une saveur épicée, typique de la cuisine indienne.",
+        "Étape 8 : Garnir avec des herbes fraîches, comme de la coriandre, pour ajouter une touche de fraîcheur et de couleur."
       ],
       "diet_flags": {
         "vegan": true,
@@ -38057,10 +38368,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 21,
-        "prep_passive_min": 0,
-        "cook_min": 12,
-        "total_min": 33
+        "prep_active_min": 30,
+        "prep_passive_min": 720,
+        "cook_min": 40,
+        "total_min": 790
       },
       "composition": [
         {
@@ -38098,7 +38409,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -38185,17 +38496,6 @@
           }
         },
         {
-          "ingredient": "mustard",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "condiment",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "coriander",
           "quantity": null,
           "unit": "1 poignée",
@@ -38215,6 +38515,28 @@
             "ingredient_fr": "sauce légèrement épicée",
             "note": "Complète le dosa",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "curry_leaf",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 250,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -38275,7 +38597,6 @@
       },
       "search_tokens": [
         "(urad",
-        "45 minutes",
         "avance",
         "chef",
         "chili",
@@ -38299,14 +38620,16 @@
         "indien",
         "jaune",
         "leger",
+        "lent",
         "lentil",
         "lentille",
         "light",
+        "long",
         "low calorie",
         "masala",
+        "mijote",
         "minceur",
         "moutarde",
-        "moyen",
         "mungo",
         "mustard",
         "noir)",
@@ -38344,14 +38667,12 @@
       "_quality_score": 0.97,
       "description": "Crêpe indienne croustillante à base de farine de riz, lentille urad, pomme de terre, avec une sauce dense et parfumée, présentant une texture extérieure dorée et croustillante, et une texture intérieure moelleuse, inspirée de la cuisine indienne du sud.",
       "instructions": [
-        "Étape 1 : Préparer ou utiliser une pâte à dosa fermentée — la consistance doit être fluide comme une pâte à crêpe légère, vérifiez.",
-        "Étape 2 : Préparer la farce : cuire les 600 g de pommes de terre 15–20 minutes jusqu'à fondantes. Écraser grossièrement, notez la consistance crémeuse.",
-        "Étape 3 : Dans une poêle, torréfier les 3 g de graines de moutarde 30 secondes jusqu'au crépitement, ajouter les feuilles de curry et les 300 g d'oignons jaunes, sentez l'odeur parfumée.",
-        "Étape 4 : Cuire l'oignon jaune 6–8 minutes jusqu'à translucide et doré. Incorporer les 3 g de curcuma, les pommes de terre écrasées et le gingembre frais ciselé. Mélanger et rectifier, vérifiez les saveurs épicées.",
-        "Étape 5 : Chauffer une poêle antiadhésive à feu moyen-vif. Verser une louche de pâte et étaler en cercle fin (2 mm) en spiral, observez la texture lisse.",
-        "Étape 6 : Cuire 2–3 minutes jusqu'à bords dorés et surface mate. Déposer la farce sur un côté, sentez la chaleur dégagée.",
-        "Étape 7 : Plier le dosa en deux ou en cône. La surface extérieure doit être croustillante et dorée, l'intérieur moelleux, admirez la présentation soignée.",
-        "Étape 8 : Servir aussitôt dans des assiettes préchauffées, accompagné d'une sauce légèrement épicée et d'un peu de coriandre fraîche ciselée pour la fraîcheur."
+        "Étape 1 : La veille, faire tremper 150 g d'urad dal pendant 4 heures, l'égoutter et le mixer finement avec un peu d'eau. Mélanger avec 150 g de farine de riz, 3 g de sel et environ 250 ml d'eau pour obtenir une pâte fluide. Couvrir et laisser fermenter 8 à 12 heures dans un endroit tiède.",
+        "Étape 2 : Préparer la farce : cuire 600 g de pommes de terre à l'eau 15 à 20 minutes jusqu'à ce qu'elles soient tendres, puis les écraser grossièrement.",
+        "Étape 3 : Chauffer 15 ml d'huile dans une poêle, faire crépiter 3 g de graines de moutarde 30 secondes, puis ajouter les feuilles de curry, le piment vert et 150 g d'oignon émincé. Cuire 6 à 8 minutes jusqu'à ce que l'oignon soit doré.",
+        "Étape 4 : Ajouter 3 g de curcuma, 3 g de coriandre moulue, le gingembre râpé, les pommes de terre écrasées et 2 g de sel. Mélanger et rectifier l'assaisonnement.",
+        "Étape 5 : Chauffer une poêle antiadhésive à feu moyen-vif et l'huiler légèrement. Verser une louche de pâte et l'étaler en spirale en un cercle fin.",
+        "Étape 6 : Cuire 2 à 3 minutes jusqu'à ce que les bords soient dorés et la surface mate. Déposer un peu de farce sur un côté, plier le dosa et servir aussitôt avec un chutney."
       ],
       "diet_flags": {
         "vegan": true,
@@ -38378,10 +38699,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
-        "prep_passive_min": 0,
+        "prep_active_min": 25,
+        "prep_passive_min": 15,
         "cook_min": 20,
-        "total_min": 37
+        "total_min": 60
       },
       "composition": [
         {
@@ -38408,7 +38729,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -38506,20 +38827,22 @@
           }
         },
         {
-          "ingredient": "cream",
-          "quantity": null,
-          "unit": "1 cuillère à café",
+          "ingredient": "water",
+          "quantity": 600,
+          "unit": "ml",
           "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "crème",
-            "note": "Pour une touche de richesse",
-            "optional": true
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
       "tags": {
         "diet": [
-          "vegetarian"
+          "vegetarian",
+          "vegan",
+          "lactose_free"
         ],
         "allergens": [
           "gluten"
@@ -38571,14 +38894,14 @@
         }
       },
       "search_tokens": [
-        "45 minutes",
+        "(eau",
+        "1 heure",
         "assembly",
         "boulgour",
         "bulgur",
         "corail",
-        "cream",
-        "creme",
         "cumin",
+        "eau",
         "intermediaire",
         "international",
         "koftesi",
@@ -38597,14 +38920,19 @@
         "paprika",
         "parsley",
         "persil",
+        "potable)",
         "red",
         "salt",
+        "sans produit animal",
         "sans viande",
         "sel",
         "table",
         "tomate",
         "tomato",
+        "vegan",
+        "vegetalien",
         "vegetarien",
+        "water",
         "water_cooking"
       ],
       "difficulty_level": "medium",
@@ -38613,21 +38941,18 @@
       "_quality_score": 0.93,
       "description": "Mercimek Köftesi, plat turc mijoté avec amour, où les lentilles rouges tendres se mélangent à un boulgour parfumé et des oignons caramélisés, créant une texture onctueuse et des saveurs épicées, typiques de la cuisine méditerranéenne.",
       "instructions": [
-        "Étape 1: Faire chauffer 25 ml d'huile d'olive extra vierge à feu moyen. Ajouter l'oignon émincé et faire saisir pendant 5 minutes, jusqu'à ce qu'il devienne translucide et parfumé, avec une odeur qui remplit la cuisine.",
-        "Étape 2: Ajouter les tomates concassées et les faire blanchir pendant 2 minutes à feu vif. Ensuite, les mixer en purée pour obtenir une texture lisse et vibrante de couleur.",
-        "Étape 3: Cuire les lentilles rouges pendant 18 minutes à feu doux, jusqu'à ce qu'elles soient tendres et se séparent facilement. Laisser refroidir légèrement.",
-        "Étape 4: Nacrer le boulgour pendant 5 minutes à feu moyen, en remuant occasionnellement, jusqu'à ce qu'il soit parfumé et légèrement doré. Ensuite, le réhydrater dans de l'eau chaude, en vérifiant que les grains se détachent.",
-        "Étape 5: Émulsionner les lentilles cuites, le boulgour, l'oignon, la purée de tomate, le cumin, le paprika et le sel pendant 2 minutes, jusqu'à obtenir une texture homogène et parfumée.",
-        "Étape 6: Ciseler le persil frais et l'incorporer à la pâte. Former des boulettes allongées et les enfourner pendant 12 minutes à 180°C, jusqu'à ce qu'elles soient dorées et croustillantes, avec une belle présentation.",
-        "Étape 7: Servir aussitôt dans des assiettes préchauffées, garni de persil ciselé et d'un filet d'huile d'olive. Accompagner de laitue fraîche et d'une touche de crème, si désiré.",
-        "Étape 8: Rectifier l'assaisonnement en fonction des goûts personnels, en ajoutant peut-être un peu plus de sel ou de cumin.",
-        "Étape 9: Présenter le plat de manière appétissante, en ajoutant des herbes fraîches et des tranches de tomate, pour un effet visuel attrayant."
+        "Étape 1 : Rincer 250 g de lentilles corail et les cuire dans 600 ml d'eau à feu doux pendant 15 minutes, jusqu'à absorption presque complète.",
+        "Étape 2 : Hors du feu, incorporer 250 g de boulgour fin, couvrir et laisser gonfler 15 minutes.",
+        "Étape 3 : Pendant ce temps, faire revenir 150 g d'oignon émincé dans 45 ml d'huile d'olive pendant 5 minutes jusqu'à ce qu'il soit translucide, puis ajouter 20 g de concentré de tomate, 3 g de cumin et 3 g de paprika. Cuire 1 minute.",
+        "Étape 4 : Mélanger les lentilles et le boulgour avec la préparation à l'oignon, 5 g de sel et 30 g de persil ciselé. Pétrir quelques minutes jusqu'à obtenir une pâte homogène qui se tient.",
+        "Étape 5 : Façonner des boulettes allongées en les pressant dans la paume de la main.",
+        "Étape 6 : Servir à température ambiante sur des feuilles de laitue, avec les tomates coupées en quartiers."
       ],
       "diet_flags": {
-        "vegan": false,
+        "vegan": true,
         "vegetarian": true,
         "gluten_free": false,
-        "lactose_free": false,
+        "lactose_free": true,
         "nut_free": true,
         "raw": false,
         "kid_friendly": false
@@ -38649,14 +38974,14 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 11,
-        "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 31
+        "prep_passive_min": 10,
+        "cook_min": 70,
+        "total_min": 91
       },
       "composition": [
         {
-          "ingredient": "green_lentil_boiled",
-          "quantity": 300,
+          "ingredient": "green_lentil_dried",
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -38667,7 +38992,7 @@
         },
         {
           "ingredient": "white_rice_raw_seed_unenriched",
-          "quantity": 300,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -38730,6 +39055,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 1000,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -38784,11 +39120,12 @@
         }
       },
       "search_tokens": [
-        "45 minutes",
+        "(eau",
         "black",
         "blanc",
         "coeliaque",
         "cumin",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -38799,13 +39136,16 @@
         "kids",
         "lebanese",
         "leger",
+        "lent",
         "lentil",
         "lentille",
         "liban",
         "libanais",
         "light",
+        "long",
         "low calorie",
         "mediterranee",
+        "mijote",
         "minceur",
         "moyen",
         "moyen-orient",
@@ -38816,6 +39156,7 @@
         "onion",
         "pepper",
         "poivre",
+        "potable)",
         "rice",
         "riz",
         "salt",
@@ -38828,6 +39169,7 @@
         "vegetalien",
         "vegetarien",
         "verte",
+        "water",
         "water_cooking",
         "white"
       ],
@@ -38839,14 +39181,11 @@
       "instructions": [
         "Étape 1 : Émincer 300g d'oignon en demi-rondelles. Faire confire dans 45ml d'huile d'olive à feu moyen pendant 30 minutes en remuant régulièrement jusqu'à obtenir une couleur brun caramel profond et un parfum envoûtant.",
         "Étape 2 : Réserver la moitié des oignons confits pour la garniture. Avec le reste, faire revenir 3g de cumin pendant 1 minute en remuant constamment pour libérer les huiles essentielles.",
-        "Étape 3 : Ajouter 300g de lentilles vertes rincées et 800ml d'eau froide. Porter à ébullition puis mijoter 20 minutes en laissant les saveurs se mélanger et les lentilles se ramollir.",
-        "Étape 4 : Incorporer 300g de riz long grain rincé et 200ml d'eau supplémentaire. Ajouter 5g de sel pour rehausser les saveurs. Couvrir et cuire à feu très doux pendant 18 minutes jusqu'à absorption complète de l'eau et obtention d'une consistance crémeuse.",
+        "Étape 3 : Ajouter 250g de lentilles vertes rincées et 800ml d'eau froide. Porter à ébullition puis mijoter 20 minutes en laissant les saveurs se mélanger et les lentilles se ramollir.",
+        "Étape 4 : Incorporer 200g de riz long grain rincé et 200ml d'eau supplémentaire. Ajouter 5g de sel pour rehausser les saveurs. Couvrir et cuire à feu très doux pendant 18 minutes jusqu'à absorption complète de l'eau et obtention d'une consistance crémeuse.",
         "Étape 5 : Laisser reposer 10 minutes pour permettre aux saveurs de se stabiliser et aux textures de se définir. Égrainer délicatement le riz et les lentilles pour obtenir une consistance aérée.",
         "Étape 6 : Servir surmonté des oignons caramélisés croustillants réservés, qui ajoutent une texture croquante et un parfum sucré au plat.",
-        "Étape 7 : Apprécier les saveurs complexes et les textures variées de ce ragoût libanais, où le contraste fondants/croustillants est l'essence du plat.",
-        "Étape 8 : Notez que la qualité des lentilles et du riz est essentielle pour un résultat optimal. Choisissez des ingrédients frais et de bonne qualité pour obtenir le meilleur résultat.",
-        "Étape 9 : Pour une présentation élégante, vous pouvez ajouter des herbes fraîches comme du persil ou de la coriandre sur le dessus du plat.",
-        "Étape 10 : Enfin, servez ce délicieux ragoût libanais avec un peu de levure nutritionnelle pour ajouter une touche de saveur umami et une texture croquante."
+        "Étape 7 : Pour une présentation élégante, vous pouvez ajouter des herbes fraîches comme du persil ou de la coriandre sur le dessus du plat."
       ],
       "diet_flags": {
         "vegan": true,
@@ -38903,7 +39242,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -38999,6 +39338,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 150,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -39058,6 +39408,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(melange",
         "1 heure",
         "ail",
@@ -39073,6 +39424,7 @@
         "cumin",
         "curcuma",
         "curry",
+        "eau",
         "epices",
         "garam",
         "garlic",
@@ -39090,6 +39442,7 @@
         "olive",
         "onion",
         "pois",
+        "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -39103,6 +39456,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "water",
         "wok"
       ],
       "difficulty_level": "hard",
@@ -39114,7 +39468,7 @@
         "Étape 1 : Saisir l'oignon émincé dans 45 ml d'huile d'olive à feu moyen pendant 5 minutes jusqu'à dorure blonde, en remuant régulièrement pour obtenir une coloration uniforme. L'odeur de l'oignon cuit doit être sucrée et légèrement caramélisée.",
         "Étape 2 : Ajouter l'ail haché et le gingembre haché, ainsi que les épices (garam masala, cumin, coriandre moulue et curcuma), et cuire 1 minute à feu moyen en remuant constamment pour libérer les arômes. Les épices doivent dégager une odeur chaude et parfumée.",
         "Étape 3 : Incorporer les tomates concassées et réduire 6 minutes à feu doux jusqu'à obtenir une sauce épaisse et parfumée, en écrasant les tomates pour obtenir la texture désirée. La sauce doit être lisse et légèrement brillante.",
-        "Étape 4 : Ajouter les pois chiches cuits égouttés avec 150 ml d'eau, ainsi que les épices (garam masala, cumin, coriandre moulue et curcuma), et mijoter 15 minutes à feu doux pour permettre aux saveurs de se mélanger. Les pois chiches doivent être tendres et la sauce doit les napper uniformément.",
+        "Étape 4 : Ajouter les pois chiches cuits égouttés avec 150 ml d'eau, et mijoter 15 minutes à feu doux pour permettre aux saveurs de se mélanger. Les pois chiches doivent être tendres et la sauce doit les napper uniformément.",
         "Étape 5 : Écraser quelques pois chiches contre les parois pour épaissir naturellement la sauce, et rectifier l'assaisonnement en fonction des préférences. La sauce doit être légèrement épaisse et crémeuse.",
         "Étape 6 : Vérifier que la sauce nappe les pois chiches, est légèrement épaisse et bien épicée, avec une texture crémeuse. La couleur doit être brun doré et la texture doit être dense et rustique.",
         "Étape 7 : Servir chaud. Vous pouvez accompagner ce curry de riz basmati ou de naan pour un repas complet et équilibré."
@@ -39151,7 +39505,7 @@
       },
       "composition": [
         {
-          "ingredient": "red_lentil_boiled",
+          "ingredient": "red_lentil_dried",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -39174,7 +39528,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -39269,6 +39623,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "white_rice_raw_seed_unenriched",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "carbohydrate",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -39335,6 +39700,7 @@
         "ail",
         "avance",
         "bhat",
+        "blanc",
         "bouillon",
         "chef",
         "coco",
@@ -39371,6 +39737,8 @@
         "onion",
         "potable)",
         "red",
+        "rice",
+        "riz",
         "sans gluten",
         "sans produit animal",
         "sans viande",
@@ -39386,6 +39754,7 @@
         "vegetarien",
         "water",
         "water_cooking",
+        "white",
         "wok"
       ],
       "difficulty_level": "hard",
@@ -39395,16 +39764,13 @@
       "description": "Curry indien crémeux de lentilles corail, parfumé d'épices et de gingembre, accompagné de riz basmati parfumé et de légumes fondants, avec une texture crémeuse et nappante, typique de la cuisine népalaise.",
       "instructions": [
         "Étape 1 : Rincer 200g de lentilles corail et les égoutter. Dans une casserole, faire revenir 150g d'oignon dans 20ml d'huile de coco à feu moyen pendant 6 minutes, en remuant régulièrement pour obtenir une coloration uniforme dorée et une odeur parfumée.",
-        "Étape 2 : Ajouter 2g d'ail et 5g de cumin, ainsi que 5g de curcuma, et cuire 1 minute en remuant pour libérer les arômes et les saveurs. La casserole doit embaumer d'arômes épicés.",
+        "Étape 2 : Ajouter 10g d'ail et 5g de cumin, ainsi que 5g de curcuma, et cuire 1 minute en remuant pour libérer les arômes et les saveurs. La casserole doit embaumer d'arômes épicés.",
         "Étape 3 : Verser 200g de lentilles corail et 800ml de bouillon végétal bouillant. Mijoter à feu doux pendant 18 minutes jusqu'à ce que les lentilles soient fondues et la texture soit crémeuse et nappante.",
         "Étape 4 : Préparer le riz : cuire 300g de riz basmati par absorption dans 450ml d'eau salée — couvrir, 12 minutes à feu doux, reposer 5 minutes pour permettre aux grains de se séparer et de devenir légers.",
         "Étape 5 : Ajouter 11.2g de gingembre dans la casserole avec les lentilles et les épices. Laisser mijoter 5 minutes supplémentaires pour que les saveurs se mélangent et que la texture devienne encore plus crémeuse.",
         "Étape 6 : Ajouter 300g de tomate dans la casserole avec les lentilles et les épices. Laisser mijoter 5 minutes supplémentaires pour que les saveurs se mélangent et que la texture devienne encore plus crémeuse.",
         "Étape 7 : Ajouter 10g de coriandre fraîche hachée dans le dal et remuer pour que les saveurs et les couleurs se mélangent.",
-        "Étape 8 : Servir le riz en dôme avec le dal versé autour, les légumes fondants sur le côté et les pickles (achaar) pour ajouter une touche de fraîcheur et de piquant.",
-        "Étape 9 : Vérifier que les lentilles sont fondues et que la texture est crémeuse et nappante, et que les grains de riz sont séparés et parfumés.",
-        "Étape 10 : Ajouter un filet d'huile de coco sur le dal et le riz pour ajouter une touche de richesse et de saveur.",
-        "Étape 11 : Présenter le plat de manière appétissante, en faisant attention à la couleur, à la texture et à la présentation. Servir chaud."
+        "Étape 8 : Servir le riz en dôme avec le dal versé autour, les légumes fondants sur le côté et les pickles (achaar) pour ajouter une touche de fraîcheur et de piquant."
       ],
       "diet_flags": {
         "vegan": true,
@@ -39429,7 +39795,7 @@
         "region": "punjab",
         "city": ""
       },
-      "servings": 2,
+      "servings": 4,
       "timing": {
         "prep_active_min": 11,
         "prep_passive_min": 0,
@@ -39524,6 +39890,28 @@
             "note": "Pour une touche d'acidité",
             "optional": true
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 120,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -39580,6 +39968,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "chiches",
         "chickpea",
@@ -39590,6 +39979,7 @@
         "curry",
         "debutant",
         "easy",
+        "eau",
         "epice",
         "facile",
         "frying",
@@ -39610,32 +40000,36 @@
         "pepper",
         "piment",
         "pois",
+        "potable)",
         "quick",
         "rapide",
+        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sel",
         "simple",
         "spicy",
         "sunflower",
+        "table",
         "tournesol",
         "vegan",
         "vegetalien",
-        "vegetarien"
+        "vegetarien",
+        "water"
       ],
       "difficulty_level": "easy",
       "dish_type": "snack",
-      "servings_default": 2,
+      "servings_default": 4,
       "_quality_score": 0.91,
       "description": "Pakora croustillant à l'extérieur et tendre à cœur, parfumé aux épices indiennes, réalisé avec une pâte à base de farine de pois chiche et frit dans de l'huile de tournesol chaude.",
       "instructions": [
         "Étape 1 : Dans un grand bol, mélangez 150g de farine de pois chiche avec 1 cuillère à café de piment, 11,2g de gingembre râpé, 3g de coriandre moulue et du sel. Ajoutez progressivement 120ml d'eau pour obtenir une pâte épaisse et enrobante, avec une texture lisse et une odeur parfumée.",
         "Étape 2 : Coupez 300g d'oignons en rondelles fines et régulières. Trempez les morceaux dans la pâte pour les enrober uniformément, en vous assurant qu'ils soient bien recouverts.",
-        "Étape 3 : Chauffez 45 ml d'huile de tournesol dans un wok profond à 170°C, en surveillant la température pour obtenir une huile chaude et parfumée. Plongez délicatement les morceaux enrobés dans l'huile chaude par petites quantités, en les espaçant pour éviter qu'ils ne se collent.",
+        "Étape 3 : Chauffez un bain d'huile de tournesol dans un wok profond à 170°C, en surveillant la température pour obtenir une huile chaude et parfumée. Plongez délicatement les morceaux enrobés dans l'huile chaude par petites quantités, en les espaçant pour éviter qu'ils ne se collent.",
         "Étape 4 : Faites frire pendant 3 à 4 minutes en retournant régulièrement, jusqu'à ce que les pakoras soient dorés et croustillants, avec une texture croustillante à l'extérieur et tendre à cœur. Égouttez-les sur du papier absorbant et salez légèrement pour apporter une touche de saveur.",
         "Étape 5 : Servez les pakoras chauds avec une chutney végétalienne à la menthe ou au tamarin.",
-        "Étape 6 : Pour une présentation plus appétissante, garnissez les pakoras de feuilles de coriandre fraîche et de tranches de citron vert.",
-        "Étape 7 : Servez les pakoras dans des bols en papier ou des assiettes en terre cuite, accompagnés de riz basmati ou de naan pour un repas complet et équilibré."
+        "Étape 6 : Pour une présentation plus appétissante, garnissez les pakoras de feuilles de coriandre fraîche et de tranches de citron vert."
       ],
       "diet_flags": {
         "vegan": true,
@@ -39681,7 +40075,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -39768,9 +40162,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 30,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -39801,7 +40195,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -39957,16 +40351,16 @@
       "_quality_score": 0.92,
       "description": "Soupe persane crémeuse aux lentilles vertes séchées, oignon cru caramélisé, ail cru parfumé et épices, mijotée dans un bouillon de légumes aromatique et huile d'olive vierge extra, avec carottes crues, tomates, curcuma, cumin, cannelle, citron cru, sel de table et poivre noir, le tout mijoté à 180°C pendant 25 minutes pour une texture épaisse et crémeuse.",
       "instructions": [
-        "Étape 1: Faire revenir 300g d'oignon cru dans 45ml d'huile d'olive vierge extra, pendant 3 minutes à feu moyen-vif, jusqu'à parfum délicat et tendresse, en remuant régulièrement pour éviter la coloration.",
+        "Étape 1: Faire revenir 150g d'oignon dans 45ml d'huile d'olive vierge extra, pendant 3 minutes à feu moyen-vif, jusqu'à parfum délicat et tendresse, en remuant régulièrement pour éviter la coloration.",
         "Étape 2: Ajouter 9g d'ail cru et faire revenir pendant 1 minute, jusqu'à ce que l'ail soit parfumé et tendre.",
         "Étape 3: Ajouter 300g de lentilles vertes séchées, 3g de curcuma, 3g de cumin et 3g de cannelle, mélanger pendant 2 minutes, jusqu'à ce que les épices soient bien intégrées et les lentilles enrobées.",
         "Étape 4: Ajouter 200g de carottes crues et 480g de tomates, mélanger pendant 2 minutes, jusqu'à ce que les légumes soient tendres et parfumés, en dégageant les arômes des tomates.",
         "Étape 5: Couvrir de 750ml de bouillon de légumes et laisser mijoter pendant 25 minutes, jusqu'à ce que les lentilles soient tendres et la sauce épaisse, en vérifiant la consistance régulièrement.",
-        "Étape 6: Mixer partiellement pour une texture épaisse et crémeuse, vérifier que ajuster si nécessaire.",
-        "Étape 7: Ajouter 5g de sel de table et 2g de poivre noir, mélanger pour intégrer les saveurs.",
+        "Étape 6: Mixer partiellement pour obtenir une texture épaisse et crémeuse.",
+        "Étape 7: Ajouter 2g de sel de table et 2g de poivre noir, mélanger pour intégrer les saveurs.",
         "Étape 8: Ajouter 30g de beurre doux et mélanger pour enrober les saveurs.",
-        "Étape 9: Rectifier l'assaisonnement si nécessaire, en ajoutant un peu de sel de table, de poivre noir ou de jus de citron cru pour équilibrer les saveurs.",
-        "Étape 10: Servir aussitôt dans des bols préchauffés, en garnissant de coriandre fraîche ciselée et d'un filet d'huile d'olive vierge extra, accompagné d'un pain pita tiède ou de riz basmati."
+        "Étape 9: Rectifier l'assaisonnement si nécessaire, en ajoutant un peu de sel de table, de poivre noir ou de jus de citron pour équilibrer les saveurs.",
+        "Étape 10: Servir aussitôt, accompagné de pain ou de riz basmati."
       ],
       "diet_flags": {
         "vegan": false,
@@ -40172,9 +40566,7 @@
         "Étape 5 : Remettez au four pendant 15 à 20 minutes, jusqu'à ce que les pois chiches soient croustillants et dorés, en surveillant les dernières minutes car ils peuvent brunir rapidement.",
         "Étape 6 : Laissez refroidir sur la plaque, les pois chiches croustilleront davantage en refroidissant et en prenant une texture encore plus croquante.",
         "Étape 7 : Servez chaud ou froid, selon vos préférences, comme snack ou garniture de salades. Les pois chiches doivent être craquants sous la dent et bien épicés, avec une saveur intense et parfumée.",
-        "Étape 8 : Vous pouvez personnaliser cette recette en ajoutant d'autres épices ou herbes à votre goût, comme de la levure nutritionnelle pour un parfum fromagé ou des herbes fraîches pour une touche de fraîcheur.",
-        "Étape 9 : Pour une variante plus croustillante, vous pouvez essayer de les faire frire dans de l'huile d'olive après les avoir rôtis, mais surveillez la température pour éviter qu'ils ne brûlent et pour conserver leur texture croustillante.",
-        "Étape 10 : Conservez les pois chiches rôtis dans un contenant hermétique pour les garder frais et croustillants plus longtemps, en les protégeant de l'humidité et de la lumière directe. Servez-les dans un bol en terre cuite, garnis de quelques feuilles de persil frais et d'un filet d'huile d'olive."
+        "Étape 8 : Conservez les pois chiches rôtis dans un contenant hermétique pour les garder frais et croustillants plus longtemps, en les protégeant de l'humidité et de la lumière directe."
       ],
       "diet_flags": {
         "vegan": true,
@@ -40220,7 +40612,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -40264,7 +40656,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -40293,6 +40685,28 @@
             "ingredient_fr": "pain éthiopien",
             "note": "Pour un repas traditionnel",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 9.4,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 750,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -40354,17 +40768,20 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(melange",
         "45 minutes",
         "africain",
         "ail",
         "berbere",
+        "bouillon",
         "braising",
         "bread",
         "chiches",
         "chickpea",
         "coeliaque",
         "coriander",
+        "eau",
         "enfants",
         "epice",
         "epices",
@@ -40379,6 +40796,7 @@
         "intermediaire",
         "kids",
         "leger",
+        "legumes",
         "levain",
         "light",
         "low calorie",
@@ -40390,6 +40808,7 @@
         "onion",
         "pain",
         "pois",
+        "potable)",
         "ragout",
         "salt",
         "sans gluten",
@@ -40398,10 +40817,13 @@
         "sel",
         "shiro",
         "sourdough",
+        "stock",
         "table",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
+        "water",
         "wok"
       ],
       "difficulty_level": "medium",
@@ -40410,13 +40832,13 @@
       "_quality_score": 0.88,
       "description": "Ragoût crémeux de pois chiches moulus, aux saveurs éthiopiennes, avec une texture nappante et des légumineuses fondantes, préparé avec une sauce berbere aromatique.",
       "instructions": [
-        "Étape 1 : Faites chauffer 45 ml d'huile d'olive extra vierge dans une casserole à fond épais, jusqu'à ce qu'elle devienne liquide et brillante.",
-        "Étape 2 : Ajoutez 300 g d'oignon émincé et 9 g d'ail émincé, puis faites-les revenir pendant 7 minutes à feu moyen, en remuant occasionnellement, jusqu'à ce qu'ils soient légèrement dorés et parfumés.",
-        "Étape 3 : Ajoutez 20 g de sauce berbere et mélangez pour libérer les arômes des épices, pendant environ 1 minute.",
+        "Étape 1 : Faites chauffer 45 ml d'huile d'olive extra vierge dans une casserole à fond épais à feu moyen.",
+        "Étape 2 : Ajoutez 150 g d'oignon émincé et 9 g d'ail émincé, puis faites-les revenir pendant 7 minutes à feu moyen, en remuant occasionnellement, jusqu'à ce qu'ils soient légèrement dorés et parfumés.",
+        "Étape 3 : Ajoutez 20 g de berbéré et mélangez pour libérer les arômes des épices, pendant environ 1 minute.",
         "Étape 4 : Incorporer 150 g de farine de pois chiches et mélangez bien pour éviter les grumeaux, en ajoutant un peu de liquide de cuisson si nécessaire.",
-        "Étape 5 : Versez le liquide de cuisson (bouillon végétal) et portez à ébullition, en remuant constamment pour éviter les grumeaux.",
+        "Étape 5 : Versez 750 ml de bouillon végétal et portez à ébullition, en remuant constamment pour éviter les grumeaux.",
         "Étape 6 : Réduisez le feu et laissez mijoter pendant 20 minutes à feu doux, en couvrant la casserole, jusqu'à ce que les ingrédients soient tendres et la sauce crémeuse.",
-        "Étape 7 : Rectifiez l'assaisonnement avec 5 g de sel.",
+        "Étape 7 : Rectifiez l'assaisonnement avec 2 g de sel.",
         "Étape 8 : Servez chaud, garni de feuilles de coriandre fraîches et accompagné de pain ou de crêpes éthiopiennes."
       ],
       "diet_flags": {

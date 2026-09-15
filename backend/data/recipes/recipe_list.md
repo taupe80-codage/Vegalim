@@ -6,7 +6,6 @@
 ## A
 
 - **Afghan Bolani** _(vegan, vegetarian, main, afghan)_ — `main_afghan_bolani_e66cba`
-- **Afghan Sabzi Chalaw** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, afghan)_ — `dal_afghan_sabzi_chalaw_18f6a5`
 - **Ajapsandali** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, georgian)_ — `dal_ajapsandali_8ebefc`
 - **Ajvar (purée de Poivrons)** _(diabetes_friendly, gluten_free, vegan, vegetarian, starter, serbian)_ — `main_ajvar_puree_de_poivrons_5d2e79`
 - **Aligot** _(gluten_free, kid_friendly, nut_free, main, french_auvergnat)_ — `main_aligot_c03237`
@@ -106,7 +105,7 @@
 - **Chili Sin Carne** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, american)_ — `main_chili_sin_carne_125ff2`
 - **Chips de Légumes au Four** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, french)_ — `entry_chips_de_legumes_au_four_b43876`
 - **Chole (curry de Pois Chiches)** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_chole_curry_de_pois_chiches_851fca`
-- **Chole Bhature** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_chole_bhature_dbcac0`
+- **Chole Bhature** _(diabetes_friendly, high_protein, vegan, vegetarian, main, indian)_ — `dal_chole_bhature_dbcac0`
 - **Chou Farci Végétarien** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, main, french)_ — `main_chou_farci_vegetarien_7a01f5`
 - **Chou Éthiopien Sauté** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, ethiopian)_ — `wok_chou_ethiopien_saute_93ab43`
 - **Choucroute Végétarienne** _(gluten_free, nut_free, vegetarian, main, french_alsatian)_ — `main_choucroute_vegetarienne_25c7a3`
@@ -292,7 +291,7 @@
 - **Houmous traditionnel** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, starter, levantine)_ — `dip_hummus_classic_v6_u4k9p2`
 - **Humita Andine** _(gluten_free, main, peruvian)_ — `main_humita_andine_fe7789` 🔁 doublon possible : Humita Andine (Vegan)
 - **Humita Andine (Vegan)** _(diabetes_friendly, high_protein, kid_friendly, snack, andean)_ — `snack_humita_andine_vegan_1f09bf` 🔁 doublon possible : Humita Andine
-- **Hummus Traditionnel** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, lebanese)_ — `dal_hummus_traditionnel_7f6ccc`
+- **Hummus Traditionnel** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, starter, lebanese)_ — `dal_hummus_traditionnel_7f6ccc`
 - **Hungarian Lecsó** _(diabetes_friendly, gluten_free, main, hungarian)_ — `main_hungarian_lecs_47d502`
 
 ## I
@@ -368,7 +367,7 @@
 - **Mayonnaise** _(vegetarian, gluten_free, sauce, french)_ — `base_mayonnaise_0d3e4e` 🔁 doublon possible : Mayonnaise Végane
 - **Mayonnaise Végane** _(vegan, vegetarian, gluten_free, sauce, international)_ — `base_vegan_mayonnaise_b68322` 🔁 doublon possible : Mayonnaise
 - **Menemen** _(diabetes_friendly, gluten_free, high_protein, main, turkish)_ — `egg_menemen_681f60`
-- **Mercimek Köftesi** _(vegetarian, main, international)_ — `dal_mercimek_koftesi_34f72d`
+- **Mercimek Köftesi** _(vegetarian, vegan, lactose_free, main, international)_ — `dal_mercimek_koftesi_34f72d`
 - **Mexican Calabacitas** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, mexican)_ — `main_mexican_calabacitas_f3511d`
 - **Mexican Enfrijoladas** _(gluten_free, high_protein, main, mexican)_ — `bread_mexican_enfrijoladas_578ae7` 🔁 doublon possible : Mexican Enfrijoladas (Vegan)
 - **Mexican Enfrijoladas (Vegan)** _(diabetes_friendly, gluten_free, high_protein, lactose_free, main, mexican)_ — `main_mexican_enfrijoladas_vega_d6a9a8` 🔁 doublon possible : Mexican Enfrijoladas
@@ -605,6 +604,7 @@
 ## S
 
 - **Sabich** _(diabetes_friendly, gluten_free, high_protein, main, levantine)_ — `egg_sabich_b270c4`
+- **Sabzi afghan aux épinards et lentilles** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, afghan)_ — `dal_afghan_sabzi_chalaw_18f6a5`
 - **Sabzi Polo** _(gluten_free, side, persian)_ — `rice_sabzi_polo_e099d2` 🔁 doublon possible : Sabzi Polo (Vegan)
 - **Sabzi Polo (Vegan)** _(gluten_free, nut_free, side, iranian)_ — `side_sabzi_polo_vegan_7bf9df` 🔁 doublon possible : Sabzi Polo
 - **Sabzi Sabz** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, persian)_ — `dal_sabzi_sabz_592004`
