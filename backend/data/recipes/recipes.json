@@ -40868,8 +40868,8 @@
       "timing": {
         "prep_active_min": 13,
         "prep_passive_min": 720,
-        "cook_min": 30,
-        "total_min": 763
+        "cook_min": 195,
+        "total_min": 928
       },
       "composition": [
         {
@@ -40939,9 +40939,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -41066,11 +41066,11 @@
       "instructions": [
         "Étape 1 : Faire tremper 400g de pois chiches secs dans de l'eau pendant au moins 12 heures, puis égoutter et rincer soigneusement. La texture doit être ferme mais non dure, avec une légère fermeté sous la dent.",
         "Étape 2 : Placer les pois chiches dans un plat allant au four avec 300g d'oignon émincé grossièrement, 9g d'ail émincé et 3g de romarin frais. Couvrir d'eau de 3 cm au-dessus, en veillant à ce que tous les ingrédients soient bien immergés, avec une couche d'eau cristalline et limpide.",
-        "Étape 3 : Arroser généreusement d'45 ml d'huile d'olive, en faisant attention à ce que l'huile soit bien répartie sur tous les ingrédients, créant une fine couche dorée et brillante. Couvrir de papier aluminium pour maintenir l'humidité et enfourner à 150°C pendant 2h30 à 3h, avec une odeur de cuisson qui se répand dans la cuisine.",
+        "Étape 3 : Arroser de 45 ml d'huile d'olive, en faisant attention à ce que l'huile soit bien répartie sur tous les ingrédients, créant une fine couche dorée et brillante. Couvrir de papier aluminium pour maintenir l'humidité et enfourner à 150°C pendant 2h30 à 3h, avec une odeur de cuisson qui se répand dans la cuisine.",
         "Étape 4 : Vérifier la texture des pois chiches, qui doivent être fondants et tendres, se détachant facilement sous la pression de la fourchette. Le bouillon doit être légèrement lié, avec une consistance crémeuse et une saveur riche. Si nécessaire, prolonger la cuisson de 30 minutes.",
         "Étape 5 : Ajouter 480g de tomate concassée et mélanger délicatement pour éviter de casser les pois chiches, en créant une harmonie de saveurs et de textures. Laisser cuire encore 15 minutes pour permettre aux saveurs de se mélanger et de se fondre en une symphonie culinaire.",
-        "Étape 6 : Assaisonner généreusement avec du sel, du jus de citron (environ 100g) et du poivre, en goûtant régulièrement pour ajuster l'assaisonnement. La saveur doit être équilibrée, avec une pointe d'acidité et une touche de fraîcheur, évoquant la fraîcheur de la mer Méditerranée.",
-        "Étape 7 : Goûter et rectifier l'assaisonnement si nécessaire. Servir chaud, garni de feuilles de romarin frais et accompagné de pain de campagne et d'olives pour un repas complet et savoureux, qui transporte les sens dans les paysages ensoleillés de la Grèce antique."
+        "Étape 6 : Assaisonner généreusement avec du sel, 40 ml de jus de citron et du poivre, en goûtant régulièrement pour ajuster l'assaisonnement. La saveur doit être équilibrée, avec une pointe d'acidité et une touche de fraîcheur.",
+        "Étape 7 : Goûter et rectifier l'assaisonnement si nécessaire. Servir chaud, garni de feuilles de romarin frais et accompagné de pain de campagne et d'olives pour un repas complet et savoureux."
       ],
       "diet_flags": {
         "vegan": true,
@@ -41149,7 +41149,7 @@
         },
         {
           "ingredient": "yellow_onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -41203,9 +41203,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -41231,6 +41231,17 @@
           "meta": {
             "role": "spice",
             "form": "ground",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 150,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -41353,14 +41364,12 @@
       "instructions": [
         "Étape 1 : Faire revenir l'oignon jaune et l'ail dans 30 ml d'huile de tournesol à feu moyen pendant 6 minutes, jusqu'à ce que les oignons soient légèrement translucides et dégagent un parfum caramélisé.",
         "Étape 2 : Ajouter 300g d'épinards crus, 3g de fenugrec et 30g de persil frais hachés finement, en écoutant le son crépitant des herbes qui sautent dans la poêle, pendant 2 minutes.",
-        "Étape 3 : Faire revenir pendant 5 minutes supplémentaires, jusqu'à ce que les herbes soient tendres et légèrement concentrées, en vérifiant que les feuilles sont molles et que les tiges sont croustillantes.",
+        "Étape 3 : Faire revenir pendant 5 minutes supplémentaires, jusqu'à ce que les herbes soient tendres et légèrement concentrées, en vérifiant que les feuilles sont molles.",
         "Étape 4 : Incorporer 400g de pois chiches cuits, 3g de curcuma, 5g de sel et 2g de poivre, en mélangeant pour bien enrober les pois chiches de saveurs.",
         "Étape 5 : Ajouter 480g de tomates concassées et 150 ml d'eau, en laissant mijoter à feu doux pendant 20 minutes, jusqu'à ce que la sauce soit légèrement liée et les épices bien intégrées, en goûtant régulièrement pour ajuster l'assaisonnement.",
-        "Étape 6 : Presser le jus de 100g de citron, en rectifiant le sel et le poivre pour obtenir un équilibre de saveurs, en sentant l'acidité du citron qui équilibre les saveurs.",
+        "Étape 6 : Ajouter 40 ml de jus de citron, en rectifiant le sel et le poivre pour obtenir un équilibre de saveurs, en sentant l'acidité du citron qui équilibre les saveurs.",
         "Étape 7 : Servir sur du riz ou avec du pain, en présentant le plat avec une touche de fraîcheur et de couleurs, en décorant avec des herbes fraîches hachées.",
-        "Étape 8 : Ajouter un filet d'huile de tournesol pour donner un peu de brillance au plat, en sentant son arôme qui complète les saveurs.",
-        "Étape 9 : Rectifier l'assaisonnement une dernière fois, en goûtant pour s'assurer que les saveurs sont équilibrées et délicieuses.",
-        "Étape 10 : Servir sans attendre : la chaleur et la fraîcheur du plat sont essentielles pour apprécier les saveurs et les textures."
+        "Étape 8 : Servir sans attendre : la chaleur et la fraîcheur du plat sont essentielles pour apprécier les saveurs et les textures."
       ],
       "diet_flags": {
         "vegan": true,
@@ -41417,7 +41426,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 2,
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -41450,7 +41459,7 @@
         },
         {
           "ingredient": "water",
-          "quantity": 1000,
+          "quantity": 600,
           "unit": "ml",
           "meta": {
             "role": "seasoning",
@@ -41498,6 +41507,17 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "acid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -41570,6 +41590,7 @@
         "azifa",
         "carotte",
         "carrot",
+        "citron",
         "coco",
         "coconut",
         "coeliaque",
@@ -41585,6 +41606,7 @@
         "green",
         "intermediaire",
         "leger",
+        "lemon",
         "lent",
         "lentil",
         "lentille",
@@ -41624,11 +41646,11 @@
       "_chef_note": "Cette salade de lentilles éthiopienne est une variante fraîche et délicate de la cuisine traditionnelle.",
       "description": "Salade éthiopienne crémeuse et nappante, avec des lentilles tendres et une texture légèrement ferme, issue de la tradition culinaire éthiopienne, parfumée par les saveurs sucrées des oignons et les notes fraîches de la coriandre.",
       "instructions": [
-        "Étape 1 : Rincer les lentilles vertes et les cuire pendant 22-25 minutes dans 600 ml d'eau non salée à frémissement doux, à 160°C, jusqu'à ce qu'elles soient tendres mais entières, avec une texture légèrement ferme.",
+        "Étape 1 : Rincer les lentilles vertes et les cuire pendant 22-25 minutes dans 600 ml d'eau non salée à frémissement doux, jusqu'à ce qu'elles soient tendres mais entières, avec une texture légèrement ferme.",
         "Étape 2 : Chauffer 20 ml d'huile d'olive extra vierge à feu moyen et faire revenir l'oignon émincé pendant 7 minutes jusqu'à ce qu'il soit translucide et doré, en dégageant un parfum sucré.",
         "Étape 3 : Ajouter l'ail haché et la carotte en petits dés, puis cuire pendant 2 minutes à feu moyen jusqu'à ce que les saveurs soient dégagées et les légumes légèrement tendres.",
-        "Étape 4 : Incorporer 200 g de tomates concassées et 20 ml de crème de coco, puis réduire pendant 5 minutes à feu moyen jusqu'à ce que la sauce soit légèrement concentrée et crémeuse.",
-        "Étape 5 : Ajouter les lentilles refroidies et mélanger délicatement, puis chauffer pendant 3 minutes à feu doux jusqu'à ce que le plat soit légèrement réchauffé et les saveurs bien mélangées.",
+        "Étape 4 : Incorporer 200 g de tomates concassées et 20 ml de lait de coco, puis réduire pendant 5 minutes à feu moyen jusqu'à ce que la sauce soit légèrement concentrée et crémeuse.",
+        "Étape 5 : Ajouter les lentilles refroidies et mélanger délicatement, puis laisser tiédir quelques minutes pour que les saveurs se mélangent.",
         "Étape 6 : Assaisonner de sel de mer et de jus de citron fraîchement pressé, puis servir à température ambiante.",
         "Étape 7 : Garnir de feuilles de coriandre fraîche ciselée et de tranches de citron, puis servir avec du pain éthiopien ou des crackers."
       ],
@@ -41665,7 +41687,7 @@
       "composition": [
         {
           "ingredient": "chickpea_raw_dried",
-          "quantity": 400,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -41708,9 +41730,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -41859,9 +41881,9 @@
       "_quality_score": 0.86,
       "description": "Salade végétalienne créative aux pois chiches tendres, concombre croquant, tomates fraîches et vinaigrette citronnée, inspirée par les saveurs méditerranéennes",
       "instructions": [
-        "Étape 1 : Faire tremper 400g de pois chiches pendant 12 heures, puis les cuire 45 minutes à feu moyen, jusqu'à ce qu'ils soient tendres et que les saveurs soient développées, avec une texture crémeuse et une odeur délicieuse.",
+        "Étape 1 : Faire tremper 250g de pois chiches secs pendant 12 heures, puis les cuire 45 minutes à feu moyen, jusqu'à ce qu'ils soient tendres et que les saveurs soient développées, avec une texture crémeuse et une odeur délicieuse.",
         "Étape 2 : Couper 350g de concombre en dés frais et croquants, 480g de tomates en deux, et 150g d'oignon rouge finement émincé, pour obtenir des légumes colorés et parfumés.",
-        "Étape 3 : Préparer la vinaigrette : fouetter le jus de 100g de citron, 45ml d'huile d'olive, et 5g de sel, pour créer une sauce citronnée et rafraîchissante, avec une odeur citronnée et une consistance fluide.",
+        "Étape 3 : Préparer la vinaigrette : fouetter 40 ml de jus de citron, 45ml d'huile d'olive, et 5g de sel, pour créer une sauce citronnée et rafraîchissante, avec une odeur citronnée et une consistance fluide.",
         "Étape 4 : Mélanger les pois chiches tièdes avec la vinaigrette, ajouter les légumes et herbes fraîches, pour une salade colorée et parfumée, avec une texture variée et une saveur équilibrée.",
         "Étape 5 : Laisser mariner 15 minutes à température ambiante, pour permettre aux saveurs de se développer et de se mélanger, et aux légumes de conserver leur fraîcheur et leur croquant.",
         "Étape 6 : Vérifier que les pois chiches soient tendres, la vinaigrette bien répartie, et servir frais, avec une présentation appétissante et des couleurs vives.",
@@ -41911,7 +41933,7 @@
         },
         {
           "ingredient": "yellow_onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -42010,7 +42032,7 @@
         },
         {
           "ingredient": "coconut_oil_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -42039,6 +42061,17 @@
             "ingredient_fr": "riz basmati cuit",
             "note": "Accompagne parfaitement le sambar",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 700,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -42162,13 +42195,13 @@
       "_quality_score": 0.93,
       "description": "Plat végan traditionnel indien à base de lentilles jaunes crémeuses, oignon jaune caramélisé, tomates concassées et épices parfumées, mijoté dans un bouillon aromatique avec une texture veloutée et des arômes de curry et de tamarin.",
       "instructions": [
-        "Étape 1 : Faire cuire 250 g de lentilles jaunes moelleuses avec 3 g de curcuma en poudre dans 600 ml d'eau à feu moyen pendant 15 minutes, jusqu'à ce que les lentilles soient tendres et la texture crémeuse. La couleur doit être jaune pâle.",
-        "Étape 2 : Dans une poêle, chauffer 45 ml d'huile de coco et faire revenir 300 g d'oignon jaune émincé jusqu'à parfumé, en remuant régulièrement pour éviter la coloration excessive. Les oignons doivent être dorés et caramélisés, avec une odeur sucrée.",
+        "Étape 1 : Faire cuire 250 g de lentilles corail avec 3 g de curcuma en poudre dans 600 ml d'eau à feu moyen pendant 15 minutes, jusqu'à ce que les lentilles soient tendres et la texture crémeuse. La couleur doit être jaune pâle.",
+        "Étape 2 : Dans une poêle, chauffer 30 ml d'huile de coco et faire revenir 150 g d'oignon jaune émincé jusqu'à parfumé, en remuant régulièrement pour éviter la coloration excessive. Les oignons doivent être dorés et caramélisés, avec une odeur sucrée.",
         "Étape 3 : Ajouter 480 g de tomates concassées, 200 g de carotte crue coupée en dés, et 30 ml de pâte de tamarin diluée dans 100 ml d'eau chaude. Laisser mijoter 5 minutes, en sentant les arômes se mélanger et la sauce commencer à épaissir.",
-        "Étape 4 : Incorporer les lentilles cuites, 20 g de poudre de sambar végétal, et 3 g de graines de moutarde. Laisser cuire 10 minutes à feu doux, en observant la sauce épaissir et les saveurs se développer.",
+        "Étape 4 : Incorporer les lentilles cuites, 20 g de poudre de sambar, et 3 g de graines de moutarde. Laisser cuire 10 minutes à feu doux, en observant la sauce épaissir et les saveurs se développer.",
         "Étape 5 : Ajouter 5 g de feuilles de curry fraîches et 3 g de coriandre moulue. Laisser mijoter encore 2 minutes.",
         "Étape 6 : Assaisonner avec du sel de mer à votre goût, en vérifiant la balance des saveurs. Le sambar doit être crémeux et parfumé, avec une texture veloutée et des saveurs complexes.",
-        "Étape 7 : Servir chaud, garni de feuilles de curry fraîches et de coriandre moulue pour ajouter une touche de fraîcheur et de couleur, accompagné de riz basmati cuit à la perfection ou des naans frais."
+        "Étape 7 : Servir chaud, accompagné de riz basmati ou d'idlis."
       ],
       "diet_flags": {
         "vegan": true,
@@ -42214,7 +42247,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -42280,7 +42313,7 @@
         },
         {
           "ingredient": "coconut_oil_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -42299,6 +42332,39 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "yellow_mustard_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "curry_leaf",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 700,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -42308,7 +42374,9 @@
           "vegan",
           "vegetarian"
         ],
-        "allergens": [],
+        "allergens": [
+          "mustard"
+        ],
         "technique": [
           "water_cooking",
           "wok",
@@ -42357,6 +42425,8 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(murraya",
         "1 heure",
         "braising",
         "carotte",
@@ -42367,22 +42437,30 @@
         "corail",
         "curcuma",
         "curry",
+        "eau",
         "epice",
+        "feuille",
         "gluten free",
         "inde",
         "indian",
         "indien",
         "intermediaire",
+        "jaune",
+        "koenigii)",
+        "leaf",
         "leger",
         "lentil",
         "lentille",
         "light",
         "low calorie",
         "minceur",
+        "moutarde",
         "moyen",
+        "mustard",
         "noix",
         "oignon",
         "onion",
+        "potable)",
         "red",
         "salt",
         "sambar",
@@ -42399,8 +42477,10 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "water",
         "water_cooking",
-        "wok"
+        "wok",
+        "yellow"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
@@ -42409,15 +42489,14 @@
       "description": "Plat indien végétal mijoté, où les lentilles corail fondent en bouche, accompagnées d'oignon caramélisé, de carotte tendre et de tomate parfumée, avec une sauce crémeuse au tamarin et au curcuma, typique de la cuisine indienne.",
       "instructions": [
         "Étape 1 : Rincer 250 g de lentilles corail et les cuire avec 600 ml d'eau et 3 g de curcuma pendant 18 minutes, jusqu'à désagrégation complète. La texture doit être crémeuse et la couleur dorée.",
-        "Étape 2 : Dans une poêle, chauffer 45 ml d'huile de coco et faire revenir 300 g d'oignon coupé en dés et 200 g de carotte coupée en dés pendant 6 minutes, jusqu'à ce qu'ils soient tendres et parfumés. L'odeur des oignons doit être sucrée et les carottes doivent être légèrement caramélisées.",
+        "Étape 2 : Dans une poêle, chauffer 30 ml d'huile de coco et faire revenir 150 g d'oignon coupé en dés et 200 g de carotte coupée en dés pendant 6 minutes, jusqu'à ce qu'ils soient tendres et parfumés. L'odeur des oignons doit être sucrée et les carottes doivent être légèrement caramélisées.",
         "Étape 3 : Ajouter 10 g de cari en poudre, 3 g de graines de moutarde, et 5 g de feuilles de curry fraîches. Faire grésiller 1 minute, en remuant constamment, jusqu'à ce que les épices soient parfumées et les graines de moutarde craquent.",
         "Étape 4 : Incorporer 480 g de tomates concassées et 30 ml de tamarin dilué dans 100 ml d'eau chaude. Cuire 5 minutes, en remuant occasionnellement, jusqu'à ce que les tomates soient tendres et la sauce soit crémeuse.",
-        "Étape 5 : Mélanger avec les lentilles cuites et ajouter des légumes de saison (haricots verts, aubergine, tomate). Laisser mijoter 15 minutes à feu doux, en remuant occasionnellement, jusqu'à ce que les légumes soient tendres et la sauce soit parfumée.",
+        "Étape 5 : Mélanger avec les lentilles cuites et ajouter les carottes. Laisser mijoter 15 minutes à feu doux, en remuant occasionnellement, jusqu'à ce que les légumes soient tendres et la sauce soit parfumée.",
         "Étape 6 : Rectifier le sel et l'acidité. Le sambar doit être légèrement acide et parfumé. Ajouter du sel ou du tamarin si nécessaire.",
-        "Étape 7 : Servir chaud, accompagné de riz ou d'idlis, et garni de feuilles de curry fraîches et de noix de coco râpée si désiré.",
-        "Étape 8 : Pour une présentation plus élégante, disposer les idlis ou le riz dans un bol, puis ajouter une louche de sambar par-dessus. Garnir de noix de coco râpée et de feuilles de curry fraîches.",
-        "Étape 9 : Pour une variante plus piquante, ajouter quelques piments rouges concassés ou une pincée de poudre de piment dans le sambar pendant la cuisson.",
-        "Étape 10 : Pour conserver le sambar, le laisser refroidir complètement, puis le mettre dans un contenant hermétique et le réfrigérer pendant jusqu'à 3 jours. Réchauffer avant de servir."
+        "Étape 7 : Servir chaud, accompagné de riz ou d'idlis, et garni de feuilles de curry fraîches.",
+        "Étape 8 : Pour une variante plus piquante, ajouter quelques piments rouges concassés ou une pincée de poudre de piment dans le sambar pendant la cuisson.",
+        "Étape 9 : Pour conserver le sambar, le laisser refroidir complètement, puis le mettre dans un contenant hermétique et le réfrigérer pendant jusqu'à 3 jours. Réchauffer avant de servir."
       ],
       "diet_flags": {
         "vegan": true,
@@ -42463,7 +42542,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -42517,9 +42596,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -42550,7 +42629,7 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -42561,7 +42640,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -42587,6 +42666,17 @@
           "unit": "ml",
           "meta": {
             "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "paprika_powder",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -42710,16 +42800,13 @@
       "_quality_score": 0.93,
       "description": "Plat traditionnel à base de lentilles rouges, oignons caramélisés et épices, présentant une texture crémeuse et une couleur dorée, avec une odeur parfumée de cumin et de curcuma.",
       "instructions": [
-        "Étape 1 : Rincer 250g de lentilles rouges, puis les blanchir 2 min à feu vif dans de l'eau bouillante, jusqu'à ce qu'elles soient légèrement tendres.",
-        "Étape 2 : Saisir 300g d'oignon jaune émincé dans 45ml d'huile d'olive à feu moyen pendant 6 min, jusqu'à dorure blonde et parfum caramelisé.",
-        "Étape 3 : Ajouter 9g d'ail émincé, 3g de cumin et 3g de curcuma, cuire 1 min à feu moyen en remuant constamment, jusqu'à ce que les épices soient parfumées.",
-        "Étape 4 : Verser les lentilles, 750ml de bouillon de légumes et 100g de jus de citron, porter à ébullition, puis réduire à feu doux pendant 20 min, jusqu'à ce que les lentilles soient tendres.",
-        "Étape 5 : Mixer partiellement la soupe pour obtenir une texture crémeuse, assaisonner avec du sel et du jus de citron, jusqu'à ce que la saveur soit équilibrée.",
-        "Étape 6 : Ajouter 200g de carotte émincée et cuire pendant 5 min, jusqu'à ce que la carotte soit tendre.",
-        "Étape 7 : Préparer le tadka : chauffer 20ml d'huile de coco à feu moyen, faire grésiller 3g de cumin et 3g de paprika pendant 30 secondes, jusqu'à parfum intense et fumé.",
-        "Étape 8 : Verser le tadka sur la soupe, garnir de citron et servir avec du pain croustillant, pour un contraste de textures.",
-        "Étape 9 : Rectifier l'assaisonnement si nécessaire, en ajoutant plus de sel, de jus de citron ou de cumin selon les goûts, jusqu'à ce que la saveur soit parfaite.",
-        "Étape 10 : Servir chaud, en saupoudrant de levure nutritionnelle pour un parfum de noix et un aspect croustillant, pour un repas complet et équilibré, accompagné de crudités ou de pain grillé."
+        "Étape 1 : Rincer 250 g de lentilles corail et les égoutter.",
+        "Étape 2 : Faire revenir 150 g d'oignon émincé et 200 g de carotte en dés dans 30 ml d'huile d'olive à feu moyen pendant 6 minutes, jusqu'à ce que l'oignon soit doré.",
+        "Étape 3 : Ajouter 9 g d'ail émincé, 3 g de cumin et 3 g de curcuma, puis cuire 1 minute en remuant.",
+        "Étape 4 : Verser les lentilles et 750 ml de bouillon de légumes, porter à ébullition puis cuire à feu doux 20 minutes, jusqu'à ce que les lentilles soient fondantes.",
+        "Étape 5 : Mixer la soupe pour obtenir une texture crémeuse, puis ajouter 40 ml de jus de citron et 2 g de sel.",
+        "Étape 6 : Préparer le tadka : chauffer 20 ml d'huile de coco, faire grésiller 3 g de paprika 20 secondes, puis le verser sur la soupe.",
+        "Étape 7 : Servir chaud avec du pain croustillant."
       ],
       "diet_flags": {
         "vegan": true,
@@ -42753,8 +42840,8 @@
       },
       "composition": [
         {
-          "ingredient": "green_lentil_boiled",
-          "quantity": 200,
+          "ingredient": "green_lentil_dried",
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "base",
@@ -42776,7 +42863,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -42941,12 +43028,11 @@
       "instructions": [
         "Étape 1 : Faire chauffer l'huile d'olive à feu moyen dans une grande casserole, en sentant l'arôme subtil de l'huile",
         "Étape 2 : Ajouter l'oignon émincé, l'ail et la carotte en petits dés, puis cuire pendant 5 à 7 minutes en remuant régulièrement jusqu'à tendreté.",
-        "Étape 3 : Ajouter les 200g de lentilles vertes et mélanger pendant 1 minute pour bien les enrober d'huile et de saveurs, en écoutant le bruit des lentilles qui se mélangent",
+        "Étape 3 : Ajouter 150g de lentilles vertes rincées et mélanger pendant 1 minute pour bien les enrober d'huile et de saveurs, en écoutant le bruit des lentilles qui se mélangent",
         "Étape 4 : Ajouter le bouillon végétal (1000ml) et porter à frémissement, en sentant la vapeur chaude qui s'échappe de la casserole",
         "Étape 5 : Laisser mijoter pendant 20 à 25 minutes à feu doux, ou jusqu'à ce que les lentilles soient fondantes mais non écrasées, en vérifiant régulièrement la texture",
-        "Étape 6 : Ajouter une pincée de levure nutritionnelle pour donner un goût umami et une texture crémeuse.",
-        "Étape 7 : Rectifier l'assaisonnement en fonction de vos goûts, en ajoutant un peu de sel, de poivre ou d'autres épices pour donner un équilibre parfait aux saveurs",
-        "Étape 8 : Servir chaud sans attendre, accompagné de riz basmati ou de pain naan."
+        "Étape 6 : Rectifier l'assaisonnement en fonction de vos goûts, en ajoutant un peu de sel, de poivre ou d'autres épices pour donner un équilibre parfait aux saveurs",
+        "Étape 7 : Servir chaud sans attendre, accompagné de pain."
       ],
       "diet_flags": {
         "vegan": true,
@@ -42975,8 +43061,8 @@
       "timing": {
         "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 45,
-        "total_min": 60
+        "cook_min": 25,
+        "total_min": 40
       },
       "composition": [
         {
@@ -43002,9 +43088,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -43047,7 +43133,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -43074,6 +43160,28 @@
           "meta": {
             "role": "herb",
             "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 9.4,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 1000,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -43136,10 +43244,12 @@
         }
       },
       "search_tokens": [
-        "1 heure",
+        "(eau",
+        "45 minutes",
         "ail",
         "black",
         "blanc",
+        "bouillon",
         "braising",
         "bread",
         "chiches",
@@ -43148,6 +43258,7 @@
         "coriander",
         "coriandre",
         "cumin",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -43156,6 +43267,7 @@
         "kids",
         "lablabi",
         "leger",
+        "legumes",
         "lemon",
         "light",
         "low calorie",
@@ -43167,18 +43279,22 @@
         "pepper",
         "pois",
         "poivre",
+        "potable)",
         "salt",
         "sans produit animal",
         "sans viande",
         "sel",
         "soup",
         "soupe",
+        "stock",
         "table",
         "tunisian",
         "tunisienne",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
+        "water",
         "white"
       ],
       "difficulty_level": "medium",
@@ -43187,16 +43303,11 @@
       "_quality_score": 1.0,
       "description": "Soupe tunisienne créative aux pois chiches, parfumée par le cumin et le citron, avec une texture rustique due au pain rassis émietté et aux pois chiches cuits, rappelant les saveurs de la cuisine méditerranéenne",
       "instructions": [
-        "Étape 1 : Faire chauffer 45 ml d'huile d'olive à feu moyen, jusqu'à ce qu'elle devienne liquide et parfumée, en environ 2 minutes. Ajouter 9g d'ail haché et faire revenir pendant 2 minutes, en remuant constamment, jusqu'à ce que l'odeur soit parfumée et l'ail soit doré.",
-        "Étape 2 : Ajouter 400g de pois chiches cuits et 3g de cumin en poudre. Faire revenir pendant 2 minutes, en remuant constamment, jusqu'à ce que les pois chiches soient bien enrobés de cumin et dégagent une odeur aromatique.",
-        "Étape 3 : Incorporer 150g de pain rassis émietté et 5g de sel marin. Faire revenir pendant 1 minute, en remuant constamment, jusqu'à ce que le pain soit doré et croustillant, avec une texture croquante.",
-        "Étape 4 : Ajouter 100g de jus de citron frais et 2g de poivre noir. Faire bouillir pendant 5 minutes, en remuant occasionnellement, jusqu'à ce que la soupe soit chaude et parfumée, avec une couleur dorée et un parfum de citron.",
-        "Étape 5 : Mixer un tiers de la soupe pour lier naturellement le bouillon, puis remettre dans la casserole. La texture doit être mi-lisse mi-rustique, avec des morceaux de pois chiches et de pain, et une consistance crémeuse.",
-        "Étape 6 : Assaisonner de levure nutritionnelle et de coriandre fraîche hachée. La soupe doit être légèrement piquante et parfumée, avec une note de citron et de cumin, et une odeur de coriandre fraîche.",
-        "Étape 7 : Servir chaud, accompagné de pain tunisien ou de crackers végétaux, et décoré d'une feuille de coriandre fraîche et d'un filet de jus de citron. Servir sans attendre, car la chaleur et le croustillant du pain sont essentiels pour apprécier cette soupe.",
-        "Étape 8 : Ajuster si nécessaire en ajoutant un peu d'eau ou en laissant réduire pendant quelques minutes, jusqu'à ce que la soupe ait une consistance crémeuse et une texture rustique.",
-        "Étape 9 : Goûter et ajuster l'assaisonnement si nécessaire, en ajoutant un peu de sel, de poivre ou de citron, pour obtenir un équilibre de saveurs.",
-        "Étape 10 : Servir et apprécier la soupe tunisienne créative aux pois chiches, parfumée et rustique, avec une texture et une saveur uniques."
+        "Étape 1 : Faire chauffer 30 ml d'huile d'olive à feu moyen, ajouter 9 g d'ail haché et 3 g de cumin, puis cuire 1 minute en remuant.",
+        "Étape 2 : Ajouter 400 g de pois chiches cuits, 1 litre d'eau et le bouillon en poudre. Porter à ébullition puis laisser mijoter 20 minutes.",
+        "Étape 3 : Mixer un tiers de la soupe pour lier le bouillon, puis ajouter 40 ml de jus de citron, 2 g de sel et 2 g de poivre.",
+        "Étape 4 : Répartir 150 g de pain rassis en morceaux dans les bols et verser la soupe bouillante par-dessus.",
+        "Étape 5 : Arroser des 15 ml d'huile d'olive restants, parsemer de coriandre fraîche et servir aussitôt."
       ],
       "diet_flags": {
         "vegan": true,
@@ -43230,7 +43341,7 @@
       },
       "composition": [
         {
-          "ingredient": "red_lentil_boiled",
+          "ingredient": "red_lentil_dried",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -43253,7 +43364,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -43424,14 +43535,13 @@
       "_quality_score": 0.87,
       "description": "Soupe crémeuse et parfumée aux lentilles corail, servie avec un pain naan croustillant et un filet d'huile d'olive, évoquant les saveurs de la cuisine turque avec une texture onctueuse et des arômes subtils de légumes grillés.",
       "instructions": [
-        "Étape 1 : Faire chauffer l'huile d'olive (20ml) à feu moyen dans une grande casserole, en sentant son parfum subtil et en vérifiant que la température atteint 180°C.",
-        "Étape 2 : Ajouter l'oignon jaune émincé (150g), l'ail (2g) et la carotte (200g) en petits dés, puis cuire pendant 5 à 7 minutes en remuant régulièrement jusqu'à tendreté.",
+        "Étape 1 : Faire chauffer l'huile d'olive (20ml) à feu moyen dans une grande casserole.",
+        "Étape 2 : Ajouter l'oignon jaune émincé (150g), l'ail (10g) et la carotte (200g) en petits dés, puis cuire pendant 5 à 7 minutes en remuant régulièrement jusqu'à tendreté.",
         "Étape 3 : Ajouter les 200g de lentilles corail et mélanger pendant 1 minute pour bien les enrober d'huile et de saveurs, en écoutant le bruit des grains qui se mélangent et en sentant les saveurs qui se développent.",
-        "Étape 4 : Ajouter le bouillon de légumes (1000ml) et porter à frémissement, en sentant la vapeur chaude qui s'échappe et en vérifiant que la température atteint 95°C.",
-        "Étape 5 : Laisser mijoter pendant 20 à 25 minutes à feu doux, ou jusqu'à ce que les lentilles soient fondantes mais non écrasées, en vérifiant régulièrement que la lame ressort sèche et en sentant la texture qui se développe.",
-        "Étape 6 : Ajouter de la levure nutritionnelle (1 cuillère à café) pour donner un côté umami à la soupe.",
-        "Étape 7 : Rectifier l'assaisonnement en fonction de vos goûts, puis servir chaud sans attendre.",
-        "Étape 8 : Garnir de persil frais haché pour une touche de fraîcheur et de couleur, en admirant la présentation de la soupe et en sentant les saveurs qui se développent."
+        "Étape 4 : Ajouter le bouillon de légumes (1000ml) et porter à frémissement.",
+        "Étape 5 : Laisser mijoter pendant 20 à 25 minutes à feu doux, ou jusqu'à ce que les lentilles soient complètement fondantes.",
+        "Étape 6 : Rectifier l'assaisonnement en fonction de vos goûts, puis servir chaud sans attendre.",
+        "Étape 7 : Garnir de persil frais haché pour une touche de fraîcheur et de couleur, en admirant la présentation de la soupe et en sentant les saveurs qui se développent."
       ],
       "diet_flags": {
         "vegan": true,
@@ -43488,7 +43598,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -43554,7 +43664,7 @@
         },
         {
           "ingredient": "sunflower_oil_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat_cooking",
@@ -43564,9 +43674,9 @@
           }
         },
         {
-          "ingredient": "lime_raw",
-          "quantity": 140,
-          "unit": "g",
+          "ingredient": "lime_juice_fresh",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -43580,6 +43690,28 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 7.5,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 600,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -43645,6 +43777,7 @@
         "asiatique",
         "aubergine",
         "avance",
+        "bouillon",
         "braising",
         "carotte",
         "carrot",
@@ -43663,6 +43796,7 @@
         "gluten free",
         "lankan",
         "leger",
+        "legumes",
         "lentil",
         "lentille",
         "light",
@@ -43682,12 +43816,14 @@
         "sri lanka",
         "sri lankais",
         "sri_lankan",
+        "stock",
         "sunflower",
         "table",
         "technique",
         "tournesol",
         "turmeric",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
         "vert",
@@ -43699,16 +43835,14 @@
       "_quality_score": 0.77,
       "description": "Curry sri-lankais crémeux aux lentilles corail et légumes, parfumé et relevé par des épices, où les textures tendres des légumes et la sauce onctueuse se marient dans une harmonie de saveurs et de couleurs.",
       "instructions": [
-        "Étape 1 : Faites cuire les 250g de lentilles corail dans un bouillon de légumes végétal pendant 20 minutes à feu moyen, jusqu'à obtenir une texture tendre et une odeur de légumes.",
-        "Étape 2 : Faites revenir 300g d'oignon et 9g d'ail dans 45ml d'huile de tournesol chaude à feu moyen-vif pendant 3 minutes, jusqu'à obtenir une texture dorée et une odeur d'oignon.",
+        "Étape 1 : Faites cuire les 250g de lentilles corail dans 600 ml de bouillon de légumes pendant 20 minutes à feu moyen, jusqu'à obtenir une texture tendre et une odeur de légumes.",
+        "Étape 2 : Faites revenir 150g d'oignon et 9g d'ail dans 30ml d'huile de tournesol chaude à feu moyen-vif pendant 3 minutes, jusqu'à obtenir une texture dorée et une odeur d'oignon.",
         "Étape 3 : Ajoutez 20g de curry sri-lankais et 3g de curcuma, puis laissez mijoter pendant 2 minutes, jusqu'à ce que les épices soient torréfiées et aient une odeur de curry.",
         "Étape 4 : Incorporer 400ml de lait de coco et les lentilles cuites, puis laissez mijoter pendant 10 minutes à feu doux, jusqu'à obtenir une sauce crémeuse et une odeur de noix de coco.",
-        "Étape 5 : Ajoutez 600g d'aubergine et 200g de carotte, puis laissez mijoter pendant 10 minutes à feu doux, jusqu'à ce que les légumes soient tendres et la sauce crémeuse.",
-        "Étape 6 : Assaisonnez avec 5g de sel et le jus de 140g de citron vert, puis goûtez et rectifiez l'assaisonnement, jusqu'à obtenir une sauce équilibrée et une odeur de citron.",
+        "Étape 5 : Ajoutez 600g d'aubergine et 200g de carotte, puis laissez mijoter pendant 20 minutes à feu doux, jusqu'à ce que les légumes soient tendres et la sauce crémeuse.",
+        "Étape 6 : Assaisonnez avec 5g de sel et 40 ml de jus de citron vert, puis goûtez et rectifiez l'assaisonnement, jusqu'à obtenir une sauce équilibrée et une odeur de citron.",
         "Étape 7 : Servez sans attendre, en préservant les textures et les saveurs, et accompagnez le curry de riz ou de naan pour un repas équilibré et délicieux.",
-        "Étape 8 : Décorez avec des herbes fraîches, comme de la coriandre ou du persil, pour ajouter une touche de couleur et de fraîcheur.",
-        "Étape 9 : Vous pouvez également ajouter d'autres légumes, comme des poivrons ou des courgettes, pour varier les saveurs et les textures.",
-        "Étape 10 : Enfin, n'oubliez pas de partager ce délicieux curry avec vos proches et de savourer les moments partagés autour de la table."
+        "Étape 8 : Décorez avec des herbes fraîches, comme de la coriandre ou du persil, pour ajouter une touche de couleur et de fraîcheur."
       ],
       "diet_flags": {
         "vegan": true,
@@ -43754,7 +43888,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -43842,7 +43976,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -43858,6 +43992,17 @@
           "meta": {
             "role": "herb",
             "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 100,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -43919,6 +44064,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(sel)",
         "ail",
         "avance",
@@ -43935,6 +44081,7 @@
         "coriandre",
         "cumin",
         "curcuma",
+        "eau",
         "garlic",
         "gingembre",
         "ginger",
@@ -43953,6 +44100,7 @@
         "olive",
         "onion",
         "pois",
+        "potable)",
         "preserved",
         "salt",
         "sans gluten",
@@ -43965,7 +44113,8 @@
         "turmeric",
         "vegan",
         "vegetalien",
-        "vegetarien"
+        "vegetarien",
+        "water"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
@@ -43974,13 +44123,13 @@
       "description": "Ragoût de pois chiches crémeux et parfumé, avec une torréfaction d'épices pour une texture dense et rustique, accompagné de citron confit et d'olives noires, dans un plat qui réchauffe les sens.",
       "instructions": [
         "Étape 1 : Faire chauffer 45 ml d'huile d'olive extra vierge dans un tajine ou une cocotte à feu moyen, jusqu'à ce que l'huile commence à briller et dégager une légère odeur de noix.",
-        "Étape 2 : Ajouter 300 g d'oignon émincé et 9 g d'ail émincé, faire revenir jusqu'à légère coloration, en remuant régulièrement, pendant environ 5 minutes, jusqu'à ce que les oignons soient translucides et dégagent un parfum sucré.",
+        "Étape 2 : Ajouter 150 g d'oignon émincé et 9 g d'ail émincé, faire revenir jusqu'à légère coloration, en remuant régulièrement, pendant environ 5 minutes, jusqu'à ce que les oignons soient translucides et dégagent un parfum sucré.",
         "Étape 3 : Ajouter 3 g de cumin, 11,2 g de gingembre frais râpé et 3 g de curcuma, remuer pendant 1 minute pour torréfier les épices et libérer leurs parfums, en sentant les arômes épicés et chauds.",
         "Étape 4 : Incorporer 400 g de pois chiches égouttés, bien mélanger pour enrober les pois chiches des épices, pendant environ 2 minutes, jusqu'à ce que les pois chiches soient bien recouverts de la mixture d'épices.",
         "Étape 5 : Ajouter 160 g de citron confit coupé en quartiers et 80 g d'olives noires, mélanger délicatement pour ne pas écraser les olives, en prenant soin de bien répartir les citrons et les olives dans le plat.",
         "Étape 6 : Verser un peu d'eau ou de bouillon pour créer une sauce légère, environ 100 ml, en fonction de la consistance désirée, en veillant à ce que le liquide soit suffisant pour couvrir les pois chiches mais pas trop abondant.",
         "Étape 7 : Couvrir le tajine et laisser mijoter à feu doux pendant 20-25 minutes, en remuant occasionnellement, jusqu'à ce que les pois chiches soient tendres et la sauce ait épaissi, en sentant les parfums se mélanger et se développer.",
-        "Étape 8 : Rectifier l'assaisonnement avec 5 g de sel et ajuster les épices selon les goûts, en tenant compte que le citron confit apporte déjà du sel, en goûtant et en ajustant pour obtenir l'équilibre parfait.",
+        "Étape 8 : Rectifier l'assaisonnement avec 2 g de sel et ajuster les épices selon les goûts, en tenant compte que le citron confit apporte déjà du sel, en goûtant et en ajustant pour obtenir l'équilibre parfait.",
         "Étape 9 : Servir le tajine chaud, garni de 10 g de coriandre fraîche hachée, accompagné de couscous ou de pain, pour un repas complet et parfumé."
       ],
       "diet_flags": {
@@ -44015,7 +44164,7 @@
       },
       "composition": [
         {
-          "ingredient": "red_lentil_boiled",
+          "ingredient": "red_lentil_dried",
           "quantity": 250,
           "unit": "g",
           "meta": {
@@ -44027,7 +44176,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -44059,9 +44208,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -44102,8 +44251,8 @@
           }
         },
         {
-          "ingredient": "mint_fresh_herb",
-          "quantity": 20,
+          "ingredient": "dried_mint_herb",
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "herb",
@@ -44181,6 +44330,7 @@
         "coeliaque",
         "corail",
         "cumin",
+        "dried",
         "eau",
         "enfants",
         "facile enfants",
@@ -44221,12 +44371,12 @@
       "_quality_score": 0.9,
       "description": "Soupe crémeuse aux lentilles corail, oignon jaune et carotte cuite, parfumée à la menthe et au citron, avec une texture lisse et veloutée.",
       "instructions": [
-        "Étape 1: Faire chauffer l'beurre dans une casserole à feu moyen, puis ajouter l'oignon jaune et la carotte cuite en petits dés. Faire revenir pendant 5 minutes, jusqu'à ce que les légumes soient tendres et parfument la cuisine d'une odeur délicieuse.",
+        "Étape 1: Faire fondre 20g de beurre dans une casserole à feu moyen, puis ajouter l'oignon et la carotte en petits dés. Faire revenir pendant 5 minutes, jusqu'à ce que les légumes soient tendres et parfument la cuisine d'une odeur délicieuse.",
         "Étape 2: Ajouter le cumin en poudre et mélanger pendant 30 secondes, pour que les saveurs se mélangent et libèrent leurs arômes.",
         "Étape 3: Incorporer les 250g de lentilles corail rincées et verser les 750ml de bouillon végétal. Porter à ébullition, puis réduire le feu et laisser mijoter pendant 20 minutes, jusqu'à ce que les lentilles soient très fondantes et la consistance soit crémeuse.",
         "Étape 4: Mixer la soupe pour obtenir une texture lisse et veloutée, en vérifiant que les légumes soient bien broyés. Rectifier l'assaisonnement si nécessaire, en ajoutant un peu de sel ou de poivre pour équilibrer les saveurs.",
-        "Étape 5: Préparer la garniture: faire fondre les 40g de beurre, puis ajouter les 20g de menthe séchée et les 100g de jus de citron frais. Mélanger bien pour que les saveurs se combinent et créent une sauce parfumée.",
-        "Étape 6: Servir la soupe chaude, en garnissant de la préparation à base de menthe et de citron. Décorer avec des feuilles de menthe fraîche pour un effet visuel appétissant.",
+        "Étape 5: Préparer la garniture: faire fondre les 20g de beurre restants et ajouter 3g de menthe séchée. Mélanger bien pour que les saveurs se combinent et créent une sauce parfumée.",
+        "Étape 6: Ajouter 40 ml de jus de citron à la soupe et la servir chaude, arrosée du beurre à la menthe.",
         "Étape 7: Conserver les restes de soupe au réfrigérateur pour les consommer dans les 3 jours suivants, en les réchauffant à feu doux avant de servir."
       ],
       "diet_flags": {
@@ -44269,7 +44419,7 @@
           }
         },
         {
-          "ingredient": "button_mushroom_raw",
+          "ingredient": "shiitake_mushroom_dried",
           "quantity": 15,
           "unit": "g",
           "meta": {
@@ -44312,13 +44462,12 @@
       "servings_default": 4,
       "description": "Un bouillon végan japonais à base de kombu, riche et limpide, où les saveurs umami se libèrent avec une texture soyeuse et une odeur envoûtante, typique de la cuisine zen japonaise.",
       "instructions": [
-        "Étape 1 : Faites tremper 20g de kombu et 15g de champignons de Paris séchés dans 1000ml d'eau froide pendant 30 minutes, pour permettre aux saveurs et aux arômes de se libérer. Vous remarquerez la couleur de l'eau commencer à changer.",
-        "Étape 2 : Portez l'eau à 60°C, en veillant à ne pas la faire bouillir, et maintenez cette température pendant 15 minutes, pour extraire les principes actifs du kombu et des champignons de Paris. L'odeur umami commence à se dégager.",
+        "Étape 1 : Faites tremper 20g de kombu et 15g de champignons shiitake séchés dans 1000ml d'eau froide pendant 30 minutes, pour permettre aux saveurs et aux arômes de se libérer. Vous remarquerez la couleur de l'eau commencer à changer.",
+        "Étape 2 : Portez l'eau à 60°C, en veillant à ne pas la faire bouillir, et maintenez cette température pendant 15 minutes, pour extraire les principes actifs du kombu et des shiitakes. L'odeur umami commence à se dégager.",
         "Étape 3 : Retirez le kombu de l'eau avant qu'elle n'atteigne l'ébullition, pour éviter que le bouillon ne devienne amer. Vous pouvez sentir la différence de texture de l'eau.",
-        "Étape 4 : Ajoutez 2g de sel de mer végan et mélangez bien pour assaisonner le bouillon. Le goût devient plus riche et équilibré.",
+        "Étape 4 : Ajoutez 2g de sel et mélangez bien pour assaisonner le bouillon. Le goût devient plus riche et équilibré.",
         "Étape 5 : Filtrer le bouillon à travers une passoire fine pour éliminer les particules solides et obtenir un liquide clair et limpide. La transparence du bouillon est désormais parfaite.",
-        "Étape 6 : Utilisez le bouillon dashi immédiatement ou conservez-le au réfrigérateur pendant 3 jours pour plus tard. Il est prêt à être utilisé comme base pour vos plats végans japonais.",
-        "Étape 7 : Vous pouvez également ajouter d'autres ingrédients végans pour créer des variations de ce bouillon, comme des légumes ou des herbes aromatiques."
+        "Étape 6 : Utilisez le bouillon dashi immédiatement ou conservez-le au réfrigérateur pendant 3 jours pour plus tard. Il est prêt à être utilisé comme base pour vos plats végans japonais."
       ],
       "diet_flags": {
         "vegan": true,
@@ -44337,7 +44486,6 @@
         "asiatique",
         "bouillon",
         "broth",
-        "button",
         "champignon",
         "coeliaque",
         "dashi",
@@ -44355,13 +44503,13 @@
         "low calorie",
         "minceur",
         "mushroom",
-        "paris",
         "potable)",
         "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sel",
+        "shiitake",
         "simple",
         "table",
         "vegan",
@@ -44389,9 +44537,9 @@
       "servings": 12,
       "timing": {
         "prep_active_min": 30,
-        "prep_passive_min": 0,
+        "prep_passive_min": 240,
         "cook_min": 45,
-        "total_min": 75
+        "total_min": 315
       },
       "composition": [
         {
@@ -44618,14 +44766,13 @@
       "_chef_note": "Ce dessert levantine est idéal pour les occasions spéciales, avec son mélange de saveurs et de textures croustillantes et parfumées.",
       "description": "Dessert levantine végétarien croustillant, aux textures délicates de filo et de pistaches, parfumé par la cannelle et la cardamome, issu de la tradition culinaire méditerranéenne.",
       "instructions": [
-        "Étape 1: Broyer les pistaches et les noix avec le sucre, la cannelle et la cardamome. Vous obtiendrez une poudre parfumée et délicate.",
-        "Étape 2: Huiler un plat rectangulaire avec du beurre. Déposer 8 feuilles de filo en badigeonnant chacune de beurre, pour une texture croustillante et dorée.",
+        "Étape 1: Broyer les pistaches et les noix avec 50 g de sucre, la cannelle et la cardamome. Vous obtiendrez une poudre parfumée et délicate.",
+        "Étape 2: Beurrer un plat rectangulaire. Déposer 8 feuilles de filo en badigeonnant chacune de beurre, pour une texture croustillante et dorée.",
         "Étape 3: Étaler la garniture aux pistaches, en veillant à bien répartir les saveurs et les textures. Couvrir de 8 autres feuilles badigeonnées de beurre.",
         "Étape 4: Découper en losanges réguliers, en faisant attention à ne pas écraser les feuilles de filo. Cuire pendant 35-40 minutes à 160°C, jusqu'à ce que le baklava soit doré et croustillant.",
-        "Étape 5: Préparer le sirop: faire bouillir l'eau, le sucre, le sirop de dattes et l'eau de fleur d'oranger pendant 10 minutes, en remuant régulièrement pour éviter les grumeaux.",
+        "Étape 5: Préparer le sirop: faire bouillir 150 ml d'eau, 150 g de sucre, le miel et l'eau de fleur d'oranger pendant 10 minutes, en remuant régulièrement pour éviter les grumeaux.",
         "Étape 6: Verser le sirop froid sur le baklava chaud, en veillant à bien imbiber les feuilles de filo. Laisser absorber pendant 4 heures, pour que les saveurs se mélangent et que les textures se préservent.",
-        "Étape 7: Goûter et rectifier l'assaisonnement, en ajoutant un peu de cannelle ou de cardamome si nécessaire. Servir sans attendre: la chaleur et le croustillant sont essentiels pour apprécier pleinement ce dessert.",
-        "Étape 8: Présenter le baklava sur un plat de service, en décorant avec des pistaches concassées et un peu de sirop de dattes. Vous obtiendrez un dessert végétarien élégant et savoureux, idéal pour les occasions spéciales."
+        "Étape 7: Présenter le baklava sur un plat de service, en décorant avec des pistaches concassées. Vous obtiendrez un dessert végétarien élégant et savoureux, idéal pour les occasions spéciales."
       ],
       "diet_flags": {
         "vegan": false,
@@ -44769,17 +44916,6 @@
           }
         },
         {
-          "ingredient": "white_sugar",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "sweetener",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "macadamia_nuts_raw_unsalted",
           "quantity": null,
           "unit": "1 poignée",
@@ -44854,7 +44990,6 @@
         "bain_marie",
         "baking",
         "base_applesauce_b0627b",
-        "blanc",
         "ble",
         "brownie",
         "cacao",
@@ -44907,7 +45042,6 @@
         "vegetarien",
         "water",
         "wheat",
-        "white",
         "≥40%"
       ],
       "difficulty_level": "easy",
@@ -44918,12 +45052,12 @@
       "instructions": [
         "Étape 1 : Préchauffer le four à 180°C. Tapisser un moule carré de papier cuisson, en veillant à bien couvrir les bords pour une cuisson uniforme et éviter que le brownie ne colle.",
         "Étape 2 : Faire fondre 180g de chocolat noir avec 60ml d'huile de coco au bain-marie, en remuant occasionnellement pour éviter les grumeaux et obtenir une texture lisse et brillante.",
-        "Étape 3 : Dans un bol séparé, mélanger 60ml de lait de coco, 120g de sucre de coco et 80g de compote de pomme. Mélanger jusqu'à obtenir une consistance homogène et soyeuse.",
+        "Étape 3 : Dans un bol séparé, mélanger 60ml de lait d'amande, 120g de sucre de coco et 80g de compote de pomme. Mélanger jusqu'à obtenir une consistance homogène et soyeuse.",
         "Étape 4 : Ajouter 1 œuf de lin (1 cuillère à soupe de graines de lin + 3 cuillères à soupe d'eau) au mélange et mélanger délicatement.",
         "Étape 5 : Tamiser 100g de farine, 30g de poudre de cacao et 5g de poudre à pâte. Incorporer ces ingrédients secs dans le mélange chocolaté en deux fois.",
         "Étape 6 : Ajouter 60g de pépites de chocolat végétal et mélanger délicatement pour répartir uniformément.",
         "Étape 7 : Verser le mélange dans le moule préparé et enfourner pendant 22-25 minutes, ou jusqu'à ce que le centre soit encore légèrement fondant et que la surface soit légèrement ferme au toucher.",
-        "Étape 8 : Laisser refroidir pendant 20 minutes avant de découper. Servir chaud, avec une texture fondante et un goût intense de chocolat, idéal pour un dessert réconfortant."
+        "Étape 8 : Laisser refroidir pendant 20 minutes avant de découper. Servir tiède, avec une texture fondante et un goût intense de chocolat, idéal pour un dessert réconfortant."
       ],
       "diet_flags": {
         "vegan": true,
@@ -45173,13 +45307,12 @@
       "_chef_note": "Utiliser des moules en cuivre pour une meilleure cuisson et une présentation plus élégante.",
       "description": "Dessert végétarien créatif, à texture fondante et croustillante, inspiré de la tradition bordelaise, avec une croûte caramélisée et un intérieur moelleux.",
       "instructions": [
-        "La veille: chauffer 500 ml de lait avec 5 g de gousse de vanille et 50 g de beurre. Mélanger 100 g de farine avec 250 g de sucre en poudre, jusqu'à obtenir un mélange homogène.",
-        "Incorporer les ingrédients liquides progressivement, puis ajouter 50 ml de rhum et 110 g d'œuf mélangé à 36 g de jaune d'œuf. Réfrigérer pendant au moins 24 heures pour permettre aux saveurs de se mélanger.",
-        "Préchauffer le four à 250°C. Huiler généreusement les moules en cuivre ou silicone avec du beurre pour éviter que les cannelés ne collent.",
-        "Remplir les moules aux 3/4. Cuire pendant 15 minutes à 250°C, puis baisser la température à 190°C pour 45-50 minutes, ou jusqu'à ce que les cannelés soient dorés et croustillants.",
-        "Démouler immédiatement pour préserver la texture croustillante de la croûte. La croûte doit être caramélisée et croustillante, tandis que l'intérieur reste fondant.",
-        "Laisser refroidir sur une grille pendant au moins 30 minutes avant de servir pour permettre aux saveurs de se stabiliser.",
-        "Servir tiède."
+        "Étape 1 : La veille, chauffer 500 ml de lait avec la vanille et 50 g de beurre jusqu'à ce que le beurre fonde. Laisser tiédir.",
+        "Étape 2 : Mélanger 100 g de farine et 250 g de sucre, puis ajouter 110 g d'œufs et 36 g de jaunes. Verser le lait tiède progressivement en fouettant, puis ajouter 50 ml de rhum.",
+        "Étape 3 : Couvrir et réfrigérer au moins 24 heures.",
+        "Étape 4 : Préchauffer le four à 250°C. Beurrer généreusement les moules en cuivre ou en silicone.",
+        "Étape 5 : Remuer la pâte, remplir les moules aux 3/4 et cuire 15 minutes à 250°C, puis 45 à 50 minutes à 190°C, jusqu'à ce que les cannelés soient bien bruns.",
+        "Étape 6 : Démouler aussitôt et laisser refroidir au moins 30 minutes sur une grille : la croûte doit être caramélisée et croustillante, l'intérieur fondant."
       ],
       "diet_flags": {
         "vegan": false,
@@ -45214,7 +45347,7 @@
       "composition": [
         {
           "ingredient": "ladyfinger",
-          "quantity": 24,
+          "quantity": 190,
           "unit": "g",
           "meta": {
             "role": "base",
@@ -45258,7 +45391,7 @@
         },
         {
           "ingredient": "white_sugar",
-          "quantity": 80,
+          "quantity": 110,
           "unit": "g",
           "meta": {
             "role": "sweetener",
@@ -45268,9 +45401,9 @@
           }
         },
         {
-          "ingredient": "lemon",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 30,
+          "unit": "ml",
           "meta": {
             "role": "acidity",
             "form": "wedges",
@@ -45284,6 +45417,17 @@
           "unit": "g",
           "meta": {
             "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 100,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -45356,18 +45500,19 @@
       "search_tokens": [
         "(boudoir)",
         "(boudoir/savoiardi)",
-        "acidite",
-        "agrume",
+        "(eau",
         "assembly",
         "aux",
         "base_strawberry_coulis_49d4ea",
         "biscuit",
         "blanc",
         "charlotte",
+        "citron",
         "classique",
         "cream,",
         "creme",
         "cuillere",
+        "eau",
         "enfants",
         "epaisse",
         "facile enfants",
@@ -45390,13 +45535,14 @@
         "mijote",
         "minceur",
         "moyen",
+        "potable)",
         "refrigeration",
         "sans viande",
         "strawberry",
         "sucre",
         "sugar",
         "vegetarien",
-        "vitamine c",
+        "water",
         "whisking",
         "white"
       ],
@@ -45406,15 +45552,15 @@
       "_quality_score": 0.78,
       "description": "Charlotte aux fraises sur biscuits imbibés, mousse crémeuse à la vanille et au fromage. Démoulée sur coulis, c'est le dessert festif printanier par excellence.",
       "instructions": [
-        "Étape 1: Tapisser un moule à charlotte de 24 biscuits imbibés dans un sirop léger à base de sucre et d'eau. Les biscuits doivent être imbibés mais pas trop mouillés. Vous devez sentir l'odeur sucrée et les biscuits doivent être légèrement flexibles.",
-        "Étape 2: Préparer la mousse en émulsionnant 200ml de crème fraîche, 250g de fromage râpé, 80g de sucre et le jus d'un citron. La mousse doit être lisse et aérienne. Vous devez sentir la texture crémeuse et la saveur acidulée du citron.",
+        "Étape 1: Tapisser un moule à charlotte de 24 biscuits imbibés dans un sirop léger (30 g de sucre dissous dans 100 ml d'eau). Les biscuits doivent être imbibés mais pas trop mouillés. Vous devez sentir l'odeur sucrée et les biscuits doivent être légèrement flexibles.",
+        "Étape 2: Préparer la mousse en fouettant 200ml de crème fraîche, 250g de mascarpone, 80g de sucre et le jus d'un citron. La mousse doit être lisse et aérienne. Vous devez sentir la texture crémeuse et la saveur acidulée du citron.",
         "Étape 3: Alterner couches de mousse et de fraises fraîches coupées en tranches fines. Les fraises doivent être disposées de manière harmonieuse et les couches doivent être régulières. Vous devez voir les couches se former et sentir l'odeur des fraises fraîches.",
         "Étape 4: Ajouter une couche de fraises fraîches coupées en dés et saupoudrer de sucre pour balancer les saveurs. Les fraises doivent être bien réparties et le sucre doit être bien dosé.",
         "Étape 5: Couvrir d'une dernière couche de biscuits imbibés et réfrigérer pendant 6 heures minimum. La charlotte doit être bien froide et les saveurs doivent être bien mélangées. Vous devez sentir la charlotte se raffermir et les saveurs se mélanger.",
-        "Étape 6: Démouler la charlotte et garnir de fraises fraîches. Rectifier l'assaisonnement si nécessaire. La charlotte doit être présentée de manière appétissante et les saveurs doivent être équilibrées.",
+        "Étape 6: Démouler la charlotte et garnir de fraises fraîches. La charlotte doit être présentée de manière appétissante et les saveurs doivent être équilibrées.",
         "Étape 7: Servir immédiatement pour préserver les textures et les saveurs. La charlotte doit être dégustée frais pour apprécier pleinement ses saveurs et ses textures.",
         "Étape 8: Décorer avec des feuilles de menthe fraîche pour ajouter une touche de fraîcheur et de couleur. Les feuilles de menthe doivent être disposées de manière harmonieuse et la couleur doit être vive.",
-        "Étape 9: Présenter la charlotte sur un plat de service et servir avec une sauce au coulis de fraises. La sauce doit être chaude et les fraises doivent être bien réparties."
+        "Étape 9: Présenter la charlotte sur un plat de service et servir avec une sauce au coulis de fraises."
       ],
       "diet_flags": {
         "vegan": false,
@@ -45439,12 +45585,12 @@
         "region": "world",
         "city": ""
       },
-      "servings": 6,
+      "servings": 10,
       "timing": {
         "prep_active_min": 30,
-        "prep_passive_min": 240,
-        "cook_min": 55,
-        "total_min": 325
+        "prep_passive_min": 300,
+        "cook_min": 65,
+        "total_min": 395
       },
       "composition": [
         {
@@ -45482,7 +45628,7 @@
         },
         {
           "ingredient": "white_sugar",
-          "quantity": 150,
+          "quantity": 190,
           "unit": "g",
           "meta": {
             "role": "sweetener",
@@ -45545,18 +45691,29 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
         "diet": [
-          "gluten_free",
           "kid_friendly",
           "nut_free"
         ],
         "allergens": [
           "eggs",
           "lactose",
-          "milk"
+          "milk",
+          "gluten"
         ],
         "technique": [
           "oven_cooking",
@@ -45603,6 +45760,7 @@
         }
       },
       "search_tokens": [
+        "all",
         "avance",
         "bain_marie",
         "base_creme_fraiche_b536c1",
@@ -45610,23 +45768,24 @@
         "berry",
         "beurre",
         "blanc",
+        "ble",
         "butter",
         "cheese",
         "cheesecake",
         "chef",
         "citron",
-        "coeliaque",
         "complexe",
         "cream",
         "egg",
         "enfants",
         "facile enfants",
         "famille",
+        "farine",
+        "flour",
         "frais",
         "fromage",
         "fruits",
         "gateau",
-        "gluten free",
         "international",
         "kids",
         "leger",
@@ -45641,43 +45800,44 @@
         "mixed",
         "oven_cooking",
         "peel",
+        "purpose",
         "refrigeration",
         "rouges",
-        "sans gluten",
         "sans viande",
         "strawberry",
         "sucre",
         "sugar",
         "technique",
+        "tout",
+        "usage",
         "vanilla",
         "vanille",
         "vegetarien",
+        "wheat",
         "white",
         "zeste",
         "œuf"
       ],
       "difficulty_level": "hard",
       "dish_type": "dessert",
-      "servings_default": 6,
+      "servings_default": 10,
       "_quality_score": 0.95,
       "_chef_note": "Utiliser des fruits frais de saison pour obtenir la meilleure saveur et texture possible.",
       "description": "Dessert végétarien créatif, fondant et bien cuit, avec une explosion de saveurs fruitées et une texture crémeuse, préparé avec du fromage frais et des fruits rouges, dans la tradition des desserts français élégants.",
       "instructions": [
-        "Étape 1: Préparez la base en mixant 200 g de biscuits digestifs en poudre avec 80 g de beurre fondu. Tassez le mélange dans un moule à charnière pour créer une base solide qui sera le fondement de votre cheesecake.",
-        "Étape 2: Dans un bol, battez 600 g de fromage avec 150 g de sucre, 3 g de vanille en poudre et 5 g de zeste de citron jusqu'à obtenir une pâte lisse et crémeuse, sans grumeaux.",
+        "Étape 1: Préparez la base en sablant 120 g de farine avec 40 g de sucre et 80 g de beurre fondu, puis précuisez-la 10 minutes à 170°C. Tassez le mélange dans un moule à charnière pour créer une base solide qui sera le fondement de votre cheesecake.",
+        "Étape 2: Dans un bol, battez 600 g de fromage frais avec 150 g de sucre, 3 g de vanille en poudre et 5 g de zeste de citron jusqu'à obtenir une pâte lisse et crémeuse, sans grumeaux.",
         "Étape 3: Incorporez 165 g d'œuf et 120 g de crème fraîche dans la pâte de fromage. Mélangez jusqu'à ce que le mélange soit homogène et sans grumeaux, pour une texture onctueuse.",
         "Étape 4: Ajoutez 150 g de fruits rouges mélangés et 100 g de fraises à la pâte. Mélangez délicatement pour ne pas écraser les fruits et préserver leur texture fraîche et leur saveur intense.",
         "Étape 5: Versez la pâte sur la base de biscuits préparée à l'étape 1. Étalez-la uniformément pour une cuisson régulière et une présentation élégante.",
-        "Étape 6: Enfournez le cheesecake à 160°C pendant 55 minutes, ou jusqu'à ce que la lame d'un couteau ressorte sèche. Cela indique que le cheesecake est cuit et prêt à être dégusté.",
+        "Étape 6: Enfournez le cheesecake à 160°C pendant 55 minutes, jusqu'à ce que le centre soit pris mais encore légèrement tremblotant.",
         "Étape 7: Laissez refroidir le cheesecake dans le four éteint pendant 1 heure, puis réfrigérez-le pendant 4 heures pour qu'il se stabilise et devienne plus ferme, avec une texture crémeuse parfaite.",
-        "Étape 8: Pour servir, nappez le cheesecake de coulis de fruits rouges et décorez-le avec des fruits frais.",
-        "Étape 9: Présentez le cheesecake avec fierté et régalez vos sens avec chaque bouchée. La combinaison de saveurs et de textures est un véritable délice pour les papilles, un régal pour les yeux et le palais.",
-        "Étape 10: Le cheesecake aux fruits rouges végétarien est un choix idéal pour toute occasion spéciale ou simplement pour un dessert délicieux et mémorable."
+        "Étape 8: Pour servir, décorez le cheesecake avec des fruits rouges frais."
       ],
       "diet_flags": {
         "vegan": false,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": false,
         "nut_free": true,
         "raw": false,
@@ -45889,8 +46049,7 @@
         "Étape 6 : Servez le pudding avec les dés de mangue fraîche et de la noix de coco râpée. Vérifiez que le pudding est crémeux et parfumé, avec une texture lisse et une saveur équilibrée.",
         "Étape 7 : Décorez avec des feuilles de menthe fraîche ou des fleurs comestibles pour ajouter une touche de fraîcheur et de couleur.",
         "Étape 8 : Ajustez la saveur si nécessaire en ajoutant un peu de sirop d'agave ou de vanille en poudre.",
-        "Étape 9 : Servez sans attendre, car la chaleur et la fraîcheur sont essentielles pour apprécier ce dessert végétarien crémeux et parfumé.",
-        "Étape 10 : Conservez les restes au réfrigérateur pendant jusqu'à 3 jours et servez frais."
+        "Étape 9 : Conservez les restes au réfrigérateur pendant jusqu'à 3 jours et servez frais."
       ],
       "diet_flags": {
         "vegan": true,
@@ -46142,7 +46301,7 @@
         "Étape 4: Ajoutez 2g de kirsch et 5g de vanille en poudre. Mélangez jusqu'à ce que les parfums soient bien incorporés et la pâte soit lisse, pendant environ 1 minute.",
         "Étape 5: Versez une fine couche de pâte dans le plat préparé et enfournez pendant 3 minutes à 180°C pour créer une base croustillante.",
         "Étape 6: Disposez 500g de cerises fraîches sur la couche de pâte précuite et versez le reste de la pâte par-dessus. Enfournez pendant 35 minutes à 180°C, jusqu'à ce que la surface soit brun doré.",
-        "Étape 7: Servir chaud, dans des assiettes préchauffées, avec une couche de sucre glace et un filet de crème fraîche si désiré."
+        "Étape 7: Servir tiède, avec une couche de sucre glace et un filet de crème fraîche si désiré."
       ],
       "diet_flags": {
         "vegan": false,
@@ -46229,6 +46388,17 @@
             "note": "Pour une touche de crémeux et de fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -46284,6 +46454,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "apple",
         "base_soy_cream_4dc027",
@@ -46297,6 +46468,7 @@
         "compote",
         "debutant",
         "easy",
+        "eau",
         "enfants",
         "facile",
         "facile enfants",
@@ -46315,6 +46487,7 @@
         "moyen",
         "pomme",
         "pommes",
+        "potable)",
         "sans gluten",
         "sans produit animal",
         "sans viande",
@@ -46324,6 +46497,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "water",
         "white"
       ],
       "difficulty_level": "easy",
@@ -46362,7 +46536,7 @@
         "region": "new_york",
         "city": ""
       },
-      "servings": 6,
+      "servings": 18,
       "timing": {
         "prep_active_min": 15,
         "prep_passive_min": 0,
@@ -46574,18 +46748,16 @@
       ],
       "difficulty_level": "easy",
       "dish_type": "dessert",
-      "servings_default": 6,
+      "servings_default": 18,
       "_quality_score": 1.0,
       "_chef_note": "Assurez-vous de ne pas trop cuire les cookies, car ils durcissent en refroidissant.",
       "description": "Gâteau américain croustillant à l'extérieur et moelleux à l'intérieur, réalisé avec une pâte à base de farine de blé, de sucre de canne et de pépites de chocolat noir, typique de la pâtisserie végétalienne créative.",
       "instructions": [
-        "Étape 1 : Préchauffer le four à 175°C. Dans un bol, mélanger 150 g d'huile fondue avec 150 g de sucre de canne et 2 cuillères à soupe de compote de pommes (liant végétal). Ajouter 1 cuillère à café de vanille en poudre.",
+        "Étape 1 : Préchauffer le four à 175°C. Dans un bol, mélanger 145 g de beurre végétal fondu avec 150 g de sucre de canne et 2 cuillères à soupe de compote de pommes (liant végétal). Ajouter 1 cuillère à café de vanille en poudre.",
         "Étape 2 : Incorporer 220 g de farine de blé, 5 g de bicarbonate de sodium et une pincée de sel de mer. Mélanger jusqu'à obtenir une pâte homogène et légèrement collante, avec une texture lisse et une couleur dorée claire.",
-        "Étape 3 : Ajouter 180 g de pépites de chocolat noir à plus de 70% de cacao et mélanger délicatement pour répartir uniformément les pépites dans la pâte.",
+        "Étape 3 : Ajouter 180 g de pépites de chocolat noir (au moins 40 % de cacao) et mélanger délicatement pour répartir uniformément les pépites dans la pâte.",
         "Étape 4 : Former des boules de 40 g de pâte sur une plaque de four chemisée avec du papier sulfurisé, en les espaçant de 5 cm. Aplatir légèrement chaque boule pour former des cookies de 1 cm d'épaisseur.",
-        "Étape 5 : Enfourner pendant 10 à 12 minutes, jusqu'à ce que les bords soient dorés mais le centre encore légèrement mou. Laisser refroidir 5 minutes sur la plaque avant de transférer les cookies sur une grille pour refroidir complètement.",
-        "Étape 6 : Vérifier que les cookies sont croustillants sur les bords et moelleux au centre en les cassant délicatement : la lame d'un couteau doit ressortir sèche des bords mais rencontrer une légère résistance au centre.",
-        "Étape 7 : Servir sans attendre."
+        "Étape 5 : Enfourner pendant 10 à 12 minutes, jusqu'à ce que les bords soient dorés mais le centre encore légèrement mou. Laisser refroidir 5 minutes sur la plaque avant de transférer les cookies sur une grille pour refroidir complètement."
       ],
       "diet_flags": {
         "vegan": true,
@@ -46642,7 +46814,7 @@
         },
         {
           "ingredient": "white_sugar",
-          "quantity": 120,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "sweetener",
@@ -46767,13 +46939,13 @@
       "_chef_note": "Assurez-vous de utiliser des ingrédients de qualité pour obtenir le meilleur résultat possible.",
       "description": "Dessert français crémeux et caramélisé, caractérisé par une texture lisse et une surface dorée croustillante, préparé avec crème fraîche, sucre, et vanille, typique de la pâtisserie française élégante.",
       "instructions": [
-        "Étape 1: Préchauffer le four à 150°C, en vous assurant qu'il est bien chaud avant de commencer.",
+        "Étape 1: Préchauffer le four à 150°C.",
         "Étape 2: Porter 500 ml de crème fraîche à frémissement avec 5 g de gousse de vanille, laissant infuser pendant 10 minutes pour permettre aux saveurs de se mélanger.",
         "Étape 3: Dans un bol, mélanger 90 g de jaune d'œuf avec 120 g de sucre blanc jusqu'à obtenir un mélange homogène.",
-        "Étape 4: Verser la crème chaude en filet en fouettant doucement les jaunes d'œuf, puis filtrer au chinois pour éliminer toute impureté et obtenir une texture parfaite.",
+        "Étape 4: Verser la crème chaude en filet en fouettant doucement les jaunes d'œuf, puis filtrer au chinois puis répartir dans 6 ramequins.",
         "Étape 5: Enfourner pendant 35 minutes à 150°C dans un bain-marie, jusqu'à ce que la crème soit légèrement tremblante et montre une texture crémeuse.",
-        "Étape 6: Réfrigérer pendant au moins 2 heures pour permettre à la crème de se raffermir, puis saupoudrer de sucre et caraméliser au chalumeau pour obtenir une surface croustillante et dorée.",
-        "Étape 7: Servir aussitôt dans des ramequins, garni d'une touche de vanille et d'un filet de caramel."
+        "Étape 6: Réfrigérer pendant au moins 2 heures pour permettre à la crème de se raffermir, puis saupoudrer de 30 g de sucre et caraméliser au chalumeau pour obtenir une surface croustillante et dorée.",
+        "Étape 7: Servir dès que le caramel a durci."
       ],
       "diet_flags": {
         "vegan": false,
@@ -46997,11 +47169,11 @@
       "_quality_score": 1.0,
       "description": "Crêpes fines et délicates, réalisées avec une pâte à base de farine de blé, lait et beurre, servies avec un caramel au beurre salé. La texture fine et le goût subtil du beurre caractérisent ces crêpes bretonnes traditionnelles.",
       "instructions": [
-        "Étape 1: Mélanger 250 g de farine de blé avec 5 g de sel. Creuser un puits. Ajouter 165 g d'œufs battus et 30 g de sucre blanc, en fouettant pour obtenir un mélange homogène.",
-        "Étape 2: Verser 500 ml de lait froide en filet tout en fouettant jusqu'à pâte lisse et fluide. Ajouter 54 g de beurre fondu refroidi et 1 g de sucre vanillé. Laisser reposer 1 heure minimum au réfrigérateur pour permettre à la pâte de se détendre.",
+        "Étape 1: Mélanger 250 g de farine de blé avec une pincée de sel. Creuser un puits. Ajouter 165 g d'œufs battus et 30 g de sucre blanc, en fouettant pour obtenir un mélange homogène.",
+        "Étape 2: Verser 500 ml de lait froid en filet tout en fouettant jusqu'à pâte lisse et fluide. Ajouter 54 g de beurre fondu refroidi et 1 g de sucre vanillé. Laisser reposer 1 heure minimum au réfrigérateur pour permettre à la pâte de se détendre.",
         "Étape 3: Chauffer une crêpière ou grande poêle fonte à feu moyen-vif, environ 180°C. Beurrer légèrement avec du beurre pour éviter que les crêpes ne collent.",
         "Étape 4: Verser une louche de pâte et étaler rapidement en couche très fine en inclinant la poêle. Cuire 2 minutes jusqu'à ce que les bords soient croustillants et la surface mate, en vérifiant que la crêpe est dorée et légèrement gonflée.",
-        "Étape 5: Retourner et cuire 30 secondes. La galette doit être fine avec des taches brunes caractéristiques, croustillante sur les bords. Garnir immédiatement avec un caramel au beurre salé, en prenant soin de ne pas trop en mettre pour ne pas détruire la texture délicate des crêpes.",
+        "Étape 5: Retourner et cuire 30 secondes. La crêpe doit être fine avec des taches brunes caractéristiques, croustillante sur les bords. Garnir selon vos envies : sucre, confiture ou caramel au beurre salé.",
         "Étape 6: Servir chaud."
       ],
       "diet_flags": {

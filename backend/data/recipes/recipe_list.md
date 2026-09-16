@@ -98,7 +98,7 @@
 - **Charlotte aux Fraises** _(kid_friendly, nut_free, vegetarian, dessert, french)_ — `dessert_charlotte_aux_fraises_e3f32c`
 - **Cheddar Végane** _(vegan, ingredient, vegan)_ — `base_cheddar_vegane_529b97` 🔁 doublon possible : Cheddar Végétal
 - **Cheddar Végétal** _(vegan, vegetarian, gluten_free, base, international)_ — `base_vegan_cheddar_024998` 🔁 doublon possible : Cheddar Végane
-- **Cheesecake Fruits Rouges** _(gluten_free, kid_friendly, nut_free, dessert, international)_ — `dessert_cheesecake_fruits_rouges_3460f6`
+- **Cheesecake Fruits Rouges** _(kid_friendly, nut_free, dessert, international)_ — `dessert_cheesecake_fruits_rouges_3460f6`
 - **Chia Pudding Coco Mangue** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, dessert, international)_ — `dessert_chia_pudding_coco_mangue_d61cff`
 - **Chia Pudding Framboise** _(diabetes_friendly, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, international)_ — `brkf_chia_pudding_framboise_e8a8fd`
 - **Chilaquiles** _(gluten_free, main, mexican)_ — `bread_chilaquiles_13372e`

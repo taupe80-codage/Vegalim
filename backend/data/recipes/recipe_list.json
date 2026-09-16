@@ -1461,7 +1461,7 @@
       "tree_nuts"
     ],
     "servings": 12,
-    "time_total": 75,
+    "time_total": 315,
     "confidence": 0.9,
     "description": "Dessert levantine végétarien croustillant, aux textures délicates de filo et de pistaches, parfumé par la cannelle et la cardamome, issu de la tradition culinaire méditerranéenne.",
     "composition": [
@@ -1516,7 +1516,7 @@
         "unit": "ml"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -3327,7 +3327,7 @@
         "unit": "g"
       },
       {
-        "ingredient": "button_mushroom_raw",
+        "ingredient": "shiitake_mushroom_dried",
         "quantity": 15,
         "unit": "g"
       },
@@ -3342,7 +3342,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -4332,11 +4332,6 @@
         "ingredient": "water",
         "quantity": 45,
         "unit": "ml"
-      },
-      {
-        "ingredient": "white_sugar",
-        "quantity": 15,
-        "unit": "g"
       },
       {
         "ingredient": "macadamia_nuts_raw_unsalted",
@@ -5388,7 +5383,7 @@
         "unit": "1 cuillère à soupe"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -6180,7 +6175,7 @@
     "composition": [
       {
         "ingredient": "ladyfinger",
-        "quantity": 24,
+        "quantity": 190,
         "unit": "g"
       },
       {
@@ -6200,18 +6195,23 @@
       },
       {
         "ingredient": "white_sugar",
-        "quantity": 80,
+        "quantity": 110,
         "unit": "g"
       },
       {
-        "ingredient": "lemon",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
       },
       {
         "ingredient": "base_strawberry_coulis_49d4ea",
         "quantity": 100,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 100,
+        "unit": "ml"
       }
     ],
     "n_instructions": 9,
@@ -6354,17 +6354,17 @@
     "dish_type": "dessert",
     "vegan": false,
     "diet": [
-      "gluten_free",
       "kid_friendly",
       "nut_free"
     ],
     "allergens": [
       "eggs",
       "lactose",
-      "milk"
+      "milk",
+      "gluten"
     ],
-    "servings": 6,
-    "time_total": 325,
+    "servings": 10,
+    "time_total": 395,
     "confidence": 0.9,
     "description": "Dessert végétarien créatif, fondant et bien cuit, avec une explosion de saveurs fruitées et une texture crémeuse, préparé avec du fromage frais et des fruits rouges, dans la tradition des desserts français élégants.",
     "composition": [
@@ -6385,7 +6385,7 @@
       },
       {
         "ingredient": "white_sugar",
-        "quantity": 150,
+        "quantity": 190,
         "unit": "g"
       },
       {
@@ -6412,9 +6412,14 @@
         "ingredient": "strawberry",
         "quantity": 100,
         "unit": "g"
+      },
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 120,
+        "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -6475,7 +6480,7 @@
         "unit": "quelques feuilles"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -7380,6 +7385,11 @@
         "ingredient": "base_soy_cream_4dc027",
         "quantity": null,
         "unit": "1 cuillère à soupe"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 30,
+        "unit": "ml"
       }
     ],
     "n_instructions": 6,
@@ -7536,7 +7546,7 @@
     "allergens": [
       "gluten"
     ],
-    "servings": 6,
+    "servings": 18,
     "time_total": 27,
     "confidence": 0.9,
     "description": "Gâteau américain croustillant à l'extérieur et moelleux à l'intérieur, réalisé avec une pâte à base de farine de blé, de sucre de canne et de pépites de chocolat noir, typique de la pâtisserie végétalienne créative.",
@@ -7582,7 +7592,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -8579,7 +8589,7 @@
       },
       {
         "ingredient": "white_sugar",
-        "quantity": 120,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -35598,7 +35608,7 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 763,
+    "time_total": 928,
     "confidence": 1.0,
     "description": "Délice végan à base de pois chiches, présentant une texture dense et rustique, parfumée aux herbes fraîches et aux notes de romarin, avec une odeur envoûtante de citron et de tomate fraîche, évoquant la cuisine méditerranéenne traditionnelle.",
     "composition": [
@@ -35633,9 +35643,9 @@
         "unit": "ml"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
@@ -38310,7 +38320,7 @@
       },
       {
         "ingredient": "yellow_onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -38334,9 +38344,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
@@ -38347,9 +38357,14 @@
         "ingredient": "black_pepper_spice",
         "quantity": 2,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 150,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -39481,7 +39496,7 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 2,
+        "quantity": 5,
         "unit": "g"
       },
       {
@@ -39496,7 +39511,7 @@
       },
       {
         "ingredient": "water",
-        "quantity": 1000,
+        "quantity": 600,
         "unit": "ml"
       },
       {
@@ -39518,6 +39533,11 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 20,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -39617,7 +39637,7 @@
     "composition": [
       {
         "ingredient": "chickpea_raw_dried",
-        "quantity": 400,
+        "quantity": 250,
         "unit": "g"
       },
       {
@@ -39636,9 +39656,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "olive_oil_plant",
@@ -40842,7 +40862,7 @@
       },
       {
         "ingredient": "yellow_onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -40887,7 +40907,7 @@
       },
       {
         "ingredient": "coconut_oil_plant",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -40899,6 +40919,11 @@
         "ingredient": "basmati_rice_raw_seed",
         "quantity": null,
         "unit": "1 portion"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 700,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -40917,7 +40942,9 @@
       "vegan",
       "vegetarian"
     ],
-    "allergens": [],
+    "allergens": [
+      "mustard"
+    ],
     "servings": 4,
     "time_total": 47,
     "confidence": 1.0,
@@ -40930,7 +40957,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -40960,16 +40987,31 @@
       },
       {
         "ingredient": "coconut_oil_plant",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "yellow_mustard_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "curry_leaf",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 700,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -42287,7 +42329,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -42311,9 +42353,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "vegetable_stock_dried",
@@ -42327,12 +42369,12 @@
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -42344,9 +42386,14 @@
         "ingredient": "coconut_oil_plant",
         "quantity": 20,
         "unit": "ml"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 3,
+        "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -43514,8 +43561,8 @@
     "description": "Soupe végétalienne à base de lentilles vertes, crémeuse et parfumée, avec une texture fondante et des saveurs délicates, inspirée de la cuisine indienne",
     "composition": [
       {
-        "ingredient": "green_lentil_boiled",
-        "quantity": 200,
+        "ingredient": "green_lentil_dried",
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -43525,7 +43572,7 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 2,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -43549,7 +43596,7 @@
         "unit": "ml"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": [
       {
@@ -43884,7 +43931,7 @@
       "gluten"
     ],
     "servings": 4,
-    "time_total": 60,
+    "time_total": 40,
     "confidence": 1.0,
     "description": "Soupe tunisienne créative aux pois chiches, parfumée par le cumin et le citron, avec une texture rustique due au pain rassis émietté et aux pois chiches cuits, rappelant les saveurs de la cuisine méditerranéenne",
     "composition": [
@@ -43899,9 +43946,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "cumin_spice_seed",
@@ -43920,7 +43967,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -43932,9 +43979,19 @@
         "ingredient": "coriander_raw_fresh_herb",
         "quantity": 10,
         "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 9.4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1000,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -44313,7 +44370,7 @@
     "description": "Soupe crémeuse et parfumée aux lentilles corail, servie avec un pain naan croustillant et un filet d'huile d'olive, évoquant les saveurs de la cuisine turque avec une texture onctueuse et des arômes subtils de légumes grillés.",
     "composition": [
       {
-        "ingredient": "red_lentil_boiled",
+        "ingredient": "red_lentil_dried",
         "quantity": 200,
         "unit": "g"
       },
@@ -44324,7 +44381,7 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 2,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -44348,7 +44405,7 @@
         "unit": "ml"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": [
       {
@@ -45327,7 +45384,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -45357,21 +45414,31 @@
       },
       {
         "ingredient": "sunflower_oil_plant",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
-        "ingredient": "lime_raw",
-        "quantity": 140,
-        "unit": "g"
+        "ingredient": "lime_juice_fresh",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 7.5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 600,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -46240,7 +46307,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -46280,13 +46347,18 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
         "ingredient": "coriander_raw_fresh_herb",
         "quantity": 10,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 100,
+        "unit": "ml"
       }
     ],
     "n_instructions": 9,
@@ -49276,13 +49348,13 @@
     "description": "Soupe crémeuse aux lentilles corail, oignon jaune et carotte cuite, parfumée à la menthe et au citron, avec une texture lisse et veloutée.",
     "composition": [
       {
-        "ingredient": "red_lentil_boiled",
+        "ingredient": "red_lentil_dried",
         "quantity": 250,
         "unit": "g"
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -49296,9 +49368,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "vegetable_stock_dried",
@@ -49316,8 +49388,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "mint_fresh_herb",
-        "quantity": 20,
+        "ingredient": "dried_mint_herb",
+        "quantity": 3,
         "unit": "g"
       }
     ],
