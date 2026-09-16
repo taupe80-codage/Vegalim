@@ -58935,6 +58935,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "base_mayonnaise_0d3e4e",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -58946,7 +58957,8 @@
           "eggs",
           "gluten",
           "lactose",
-          "milk"
+          "milk",
+          "mustard"
         ],
         "technique": [
           "wok"
@@ -58999,6 +59011,7 @@
         "all",
         "asia",
         "asiatique",
+        "base_mayonnaise_0d3e4e",
         "ble",
         "cabbage",
         "chou",
@@ -59050,12 +59063,12 @@
       "_quality_score": 0.93,
       "description": "Pâte souple dorée en cuisson, issue de la cuisine japonaise, avec une texture croustillante à l'extérieur et moelleuse à l'intérieur, parfumée par les oignons verts et le chou vert émincé.",
       "instructions": [
-        "Étape 1: Mélanger 200g de farine, 60ml de lait, 1 œuf, 400g de chou vert émincé et les garnitures.",
+        "Étape 1: Mélanger 200g de farine, 60ml de lait, 55 g d'œuf et 400g de chou vert émincé.",
         "Étape 2: Saisir une poêle avec 45ml d'huile d'olive extra vierge à feu moyen-doux, verser la préparation en galette épaisse d'environ 2 cm d'épaisseur.",
         "Étape 3: Cuire pendant 8 minutes à feu moyen-vif, jusqu'à ce que la face inférieure soit dorée et la surface presque prise, crépitant légèrement.",
         "Étape 4: Retourner délicatement, cuire pendant 6 minutes à feu moyen, jusqu'à ce que la face supérieure soit dorée et le centre cuit, avec une légère fermeté au toucher.",
-        "Étape 5: Nacrer la surface avec 60ml de sauce okonomiyaki, émulsionner avec une mayonnaise japonaise.",
-        "Étape 6: Parsemer de 5g de katsuobushi ciselé et 60g d'oignons verts julienne, servir sans attendre pour préserver la texture croustillante de la galette dans une assiette préchauffée."
+        "Étape 5: Étaler 60ml de sauce okonomiyaki sur la galette, puis ajouter un filet de mayonnaise (30 g).",
+        "Étape 6: Parsemer de 5g d'algues séchées émiettées et de 60g d'oignons verts émincés, puis servir sans attendre."
       ],
       "diet_flags": {
         "vegan": false,
@@ -59239,12 +59252,11 @@
       "_quality_score": 0.85,
       "description": "Préparation française à base d'œuf, cuisson contrôlée pour une texture fondante à cœur, bien assaisonnée, avec une odeur légèrement torréfiée.",
       "instructions": [
-        "Étape 1: Dans un bol, mélanger 1 cuillère à soupe de graines de lin avec 3 cuillères à soupe d'eau, le sel et le poivre, pour obtenir une texture crémeuse après 5 minutes de repos.",
-        "Étape 2: Ajouter un peu de lait ou de crème fraîche pour donner de la richesse à l'omelette.",
-        "Étape 3: Faire fondre du beurre dans une poêle antiadhésive à feu moyen-vif, en veillant à ce qu'elle ne brûle pas, pendant environ 2 minutes.",
-        "Étape 4: Verser le mélange dans la poêle et remuer immédiatement pendant 20 secondes pour répartir uniformément, en veillant à ce que le mélange soit lisse et sans grumeaux.",
-        "Étape 5: Arrêter de remuer, incliner la poêle et laisser glisser l'omelette pendant 1 min 15 secondes, en laissant les bords se former et en vérifiant que la surface soit légèrement ferme au toucher.",
-        "Étape 6: Plier l'omelette en rouleau et servir sans attendre, en profitant de sa texture fondante et crémeuse, après 45 secondes de cuisson finale, pour préserver sa fraîcheur et son croustillant."
+        "Étape 1 : Casser 220 g d'œufs dans un bol, ajouter 2 g de sel et 1 g de poivre, puis battre à la fourchette.",
+        "Étape 2 : Faire fondre 20 g de beurre dans une poêle antiadhésive à feu moyen-vif, jusqu'à ce qu'il mousse.",
+        "Étape 3 : Verser les œufs et remuer immédiatement pendant 20 secondes pour répartir la prise.",
+        "Étape 4 : Arrêter de remuer, incliner la poêle et laisser prendre 1 minute : la surface doit rester légèrement baveuse.",
+        "Étape 5 : Plier l'omelette en rouleau et servir aussitôt."
       ],
       "diet_flags": {
         "vegan": false,
@@ -59278,7 +59290,7 @@
       },
       "composition": [
         {
-          "ingredient": "cornstarch_flour",
+          "ingredient": "tapioca_raw_dried",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -59289,7 +59301,7 @@
           }
         },
         {
-          "ingredient": "goat_cheese_fresh",
+          "ingredient": "queso_fresco_block_cow",
           "quantity": 150,
           "unit": "g",
           "meta": {
@@ -59405,10 +59417,7 @@
         "brazilian",
         "bresil",
         "bresilien",
-        "cheese,",
-        "chevre",
         "coeliaque",
-        "cornstarch",
         "debutant",
         "easy",
         "egg",
@@ -59416,29 +59425,28 @@
         "facile",
         "facile enfants",
         "famille",
-        "fecule",
-        "fresh",
+        "fresco",
         "fromage",
         "gluten free",
-        "goat",
         "kids",
         "lait",
         "latino",
         "leger",
         "light",
         "low calorie",
-        "mais",
         "milk",
         "minceur",
         "olive",
         "oven_cooking",
         "pain",
+        "queso",
         "salt",
         "sans gluten",
         "sans viande",
         "sel",
         "simple",
         "table",
+        "tapioca",
         "vegetarien",
         "with",
         "œuf"
@@ -59452,7 +59460,7 @@
         "Étape 1: Préchauffer le four à 200°C. Dans un grand bol, mélanger soigneusement 200 g de fécule de tapioca avec 5 g de sel jusqu'à obtenir un mélange homogène.",
         "Étape 2: Faire chauffer 250 ml de lait et 45 ml d'huile d'olive extra vierge pendant 8 minutes à feu moyen-vif jusqu'à ébullition, puis verser le mélange bouillant sur la fécule et mélanger rapidement pour éviter la formation de grumeaux.",
         "Étape 3: Laisser tiédir pendant 5 minutes, puis incorporer progressivement 220 g d'œuf battu, en travaillant la pâte jusqu'à obtenir une texture lisse et cohérente.",
-        "Étape 4: Ajouter 150 g de fromage de chèvre demi-sec râpé finement et bien mélanger, puis former des boules de pâte d'environ 30 g chacune.",
+        "Étape 4: Ajouter 150 g de fromage frais type minas râpé et bien mélanger, puis former des boules de pâte d'environ 30 g chacune.",
         "Étape 5: Enfourner pendant 20 minutes à 200°C, jusqu'à ce que la surface soit dorée et légèrement craquelée, et que l'intérieur soit filant de fromage fondu.",
         "Étape 6: Vérifier que la coloration est dorée, signes d'une cuisson parfaite.",
         "Étape 7: Servir sans attendre, pour apprécier la texture croustillante et le fromage fondu à point, accompagné d'un filet d'huile d'olive extra vierge."
@@ -59545,7 +59553,7 @@
         },
         {
           "ingredient": "yellow_onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -59556,7 +59564,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -59701,7 +59709,7 @@
       "description": "Pâte feuilletée croustillante à l'extérieur et tendre à cœur, parfumée par les épinards crus et le fromage râpé, avec une texture dorée en cuisson — inspirée de la cuisine méditerranéenne.",
       "instructions": [
         "Étape 1: Préchauffez le four à 200°C. Ouvrez les pitas en deux dans leur épaisseur ou coupez-les en deux et ouvrez-les, en prenant soin de ne pas les déchirer.",
-        "Étape 2: Faites revenir 300g d'oignon jaune haché dans 15 ml de beurre à feu moyen pendant 4 minutes, en remuant régulièrement, jusqu'à ce qu'il soit translucide. Ajoutez ensuite 300g d'épinards crus frais et faites-les réduire pendant 3 minutes, en les laissant fondre doucement.",
+        "Étape 2: Faites revenir 150g d'oignon jaune haché dans 15 ml de beurre à feu moyen pendant 4 minutes, en remuant régulièrement, jusqu'à ce qu'il soit translucide. Ajoutez ensuite 300g d'épinards crus frais et faites-les réduire pendant 3 minutes, en les laissant fondre doucement.",
         "Étape 3: Égouttez et pressez les épinards pour éliminer l'excès d'eau. Mélangez-les ensuite avec 150g de feta émiettée, 220g d'œuf battu, 2 gousses d'ail haché et un peu de sel, en prenant soin de bien les incorporer.",
         "Étape 4: Garnissez généreusement chaque pita de la préparation épinards-fromage, en veillant à ne pas les surcharger.",
         "Étape 5: Badigeonnez les bords des pitas avec un peu de beurre, puis enfournez-les pendant 12 à 15 minutes, à 200°C, jusqu'à ce que les pitas soient croustillantes et la garniture dorée.",
@@ -59751,7 +59759,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -59795,7 +59803,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -59811,17 +59819,6 @@
           "meta": {
             "role": "spice",
             "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 200,
-          "unit": "g",
-          "meta": {
-            "role": "protein",
-            "form": "cubed",
             "state": "raw",
             "preparation": ""
           }
@@ -59955,7 +59952,6 @@
         "table",
         "thym",
         "thyme",
-        "tofu",
         "vegetarien",
         "œuf"
       ],
@@ -59967,10 +59963,10 @@
       "instructions": [
         "Étape 1: Préchauffer le four à 180°C. Foncer un moule de 26 cm avec 200 g de pâte brisée. Piquer le fond avec une fourchette pendant 2 minutes pour éviter les bulles d'air.",
         "Étape 2: Enfourner pendant 12 minutes à 180°C, puis cuire encore pendant 5 minutes, jusqu'à ce que la croûte soit dorée et les bords soient légèrement croustillants.",
-        "Étape 3: Faire revenir 300 g d'oignon jaune dans 20 ml d'huile à feu moyen pendant 5 minutes, en remuant régulièrement, jusqu'à ce qu'il soit doré et parfumé, avec une texture tendre et caramélisée.",
-        "Étape 4: Dans un bol, mélanger 200 g de tofu soyeux écrasé, 200 ml de crème de lait et 5 g de sel de mer. Ajouter 2 g de poivre noir et 150 g de fromage de chèvre frais, puis remuer pour combiner, en vérifiant que la texture soit lisse et homogène.",
-        "Étape 5: Répartir la garniture sur le fond de la quiche, puis verser le mélange de tofu et de crème de lait, en faisant attention de ne pas déborder.",
-        "Étape 6: Enfourner pendant 30-35 minutes à 180°C, jusqu'à ce que la surface soit dorée et que la lame d'un couteau ressorte sèche, en vérifiant la texture toutes les 5 minutes pour éviter la surcuisson.",
+        "Étape 3: Faire revenir 150 g d'oignon jaune dans 20 ml d'huile à feu moyen pendant 5 minutes, en remuant régulièrement, jusqu'à ce qu'il soit doré et parfumé, avec une texture tendre et caramélisée.",
+        "Étape 4: Dans un bol, battre 220 g d'œufs avec 200 ml de crème et 3 g de sel. Ajouter 2 g de poivre noir et 150 g de fromage de chèvre frais, puis remuer pour combiner, en vérifiant que la texture soit lisse et homogène.",
+        "Étape 5: Répartir la garniture sur le fond de la quiche, puis verser le mélange œufs-crème, en faisant attention de ne pas déborder.",
+        "Étape 6: Enfourner pendant 30-35 minutes à 180°C, jusqu'à ce que la surface soit dorée et le centre juste pris, en vérifiant la texture toutes les 5 minutes pour éviter la surcuisson.",
         "Étape 7: Servir chaud, garni de feuilles de thym frais et accompagné d'une salade verte."
       ],
       "diet_flags": {
@@ -60282,7 +60278,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -60474,9 +60470,9 @@
       "description": "Ragoût tunisien de tomates — réduction concentrée pour une sauce épaisse, parfumée et riche en saveurs, avec une texture onctueuse et un arôme intense de poivron, d'oignon et de cumin.",
       "instructions": [
         "Étape 1: Faire chauffer l'huile d'olive à 45 ml dans une poêle à feu moyen-vif pendant 2 minutes, jusqu'à ce que l'huile commence à briller et à émettre un léger parfum.",
-        "Étape 2: Saisir l'oignon jaune à 300 g et l'ail à 9 g pendant 3 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que l'oignon soit translucide et l'ail soit parfumé.",
+        "Étape 2: Saisir l'oignon à 150 g et l'ail à 9 g pendant 3 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que l'oignon soit translucide et l'ail soit parfumé.",
         "Étape 3: Ajouter le poivron rouge à 320 g et assaisonner avec du cumin à 3 g, du paprika à 3 g et du sel, laisser parfumer pendant 1 minute à feu doux, en remuant régulièrement, jusqu'à ce que les saveurs soient bien mélangées.",
-        "Étape 4: Ajouter les tomates concassées à 480 g et laisser réduire pendant 12 minutes à 160°C, en remuant régulièrement, jusqu'à ce que la sauce soit épaisse et concentrée.",
+        "Étape 4: Ajouter les tomates concassées à 480 g et laisser réduire pendant 12 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que la sauce soit épaisse et concentrée.",
         "Étape 5: Incorporer 150 g de feta émiettée dans la sauce et laisser fondre pendant 2 minutes à feu doux, en remuant régulièrement, jusqu'à ce que le fromage soit bien fondu.",
         "Étape 6: Former 4-6 petits creux dans la sauce avec une cuillère, puis ajouter les œufs (220 g au total) dans chaque creux.",
         "Étape 7: Enfourner pendant 8 minutes à 180°C, jusqu'à coagulation des ingrédients et crépitation légère de la sauce, en vérifiant régulièrement la texture et la couleur de la sauce."
@@ -60536,7 +60532,7 @@
         },
         {
           "ingredient": "egg_raw",
-          "quantity": 220,
+          "quantity": 110,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -60693,12 +60689,11 @@
       "_quality_score": 0.95,
       "description": "Quenelles de pommes de terre slovaques, pochées puis sautées au beurre pour une texture dorée et croustillante, avec une odeur de pomme de terre cuite, typiques de la cuisine traditionnelle slovaque.",
       "instructions": [
-        "Cuire 600 g de pommes de terre dans l'eau bouillante salée pendant 25 min à feu moyen, puis égoutter et peler encore chaudes, en prenant soin de conserver leur moelleux.",
-        "Écraser les pommes de terre au presse-purée, puis incorporer 200 g de farine tout usage, les 220 g d'œufs et une pincée de sel, jusqu'à obtenir une pâte homogène et lisse, sans grumeaux.",
-        "Former des boulettes de 40 g ou des galettes allongées, puis plonger dans une grande casserole d'eau bouillante salée, en veillant à ce qu'elles soient complètement immergées.",
-        "Cuire pendant 8 à 10 min à feu moyen-vif, jusqu'à ce que les dumplings remontent et restent en surface 2 min supplémentaires, en vérifiant qu'ils soient cuits mais encore moelleux.",
-        "Égoutter les dumplings, puis servir nappés de beurre fondu à 50°C et de fromage blanc, accompagnés de lardons végétaux dorés, en prenant soin de conserver leur texture croustillante.",
-        "Présenter les dumplings chauds, avec une surface lisse et un son crépite légèrement lorsqu'on les coupe, pour une consommation immédiate."
+        "Étape 1 : Cuire 600 g de pommes de terre à l'eau bouillante salée pendant 25 minutes, puis les égoutter et les peler encore chaudes.",
+        "Étape 2 : Les écraser au presse-purée, puis incorporer 200 g de farine, 110 g d'œufs et une pincée de sel, jusqu'à obtenir une pâte homogène.",
+        "Étape 3 : Former des boulettes de 40 g, puis les plonger dans une grande casserole d'eau bouillante salée.",
+        "Étape 4 : Cuire 8 à 10 minutes : les dumplings sont prêts quand ils remontent et restent 2 minutes en surface.",
+        "Étape 5 : Égoutter et servir chauds, nappés de 40 g de beurre fondu et de 150 g de fromage blanc."
       ],
       "diet_flags": {
         "vegan": false,
@@ -60723,7 +60718,7 @@
         "region": "asuncion",
         "city": "asuncion"
       },
-      "servings": 4,
+      "servings": 6,
       "timing": {
         "prep_active_min": 13,
         "prep_passive_min": 0,
@@ -60744,7 +60739,7 @@
         },
         {
           "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 250,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -60922,14 +60917,14 @@
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
-      "servings_default": 4,
+      "servings_default": 6,
       "_quality_score": 0.92,
       "_chef_note": "Remplacez les œufs par des yaourts de coco et le lait par du lait de coco pour une version végétalienne.",
       "description": "Préparation à base de masa harina, avec une texture croustillante en surface et moelleuse à l'intérieur, inspirée de la cuisine paraguayenne traditionnelle. Cette sopa paraguaya est un pain de maïs savoureux, croustillant en surface et moelleux à l'intérieur.",
       "instructions": [
-        "Étape 1: Préchauffer le four à 180°C. Dans un bol, mélanger les ingrédients secs: 200 g de masa harina, 150 g de parmesan râpé et 5 g de sel.",
+        "Étape 1: Préchauffer le four à 180°C. Dans un bol, mélanger les ingrédients secs : 200 g de masa harina, 100 g de parmesan râpé et 5 g de sel.",
         "Étape 2: Ajouter 220 g d'œuf, 250 ml de lait, 45 ml d'huile d'olive et 300 g d'oignon jaune finement haché. Mélanger jusqu'à obtenir une pâte homogène.",
-        "Étape 3: Ajouter 100 g de parmesan râpé. La pâte doit être épaisse comme un cake, avec une consistance dense mais pas trop ferme.",
+        "Étape 3: Ajouter le reste du fromage râpé. La pâte doit être épaisse comme un cake, avec une consistance dense mais pas trop ferme.",
         "Étape 4: Verser la pâte dans un moule graissé avec de l'huile d'olive de 25×20 cm. Parsemer de parmesan râpé sur le dessus pour un effet croustillant.",
         "Étape 5: Enfourner pendant 30 à 35 minutes, jusqu'à ce que la surface soit dorée et la lame d'un couteau ressorte sèche. La surface doit être légèrement croustillante.",
         "Étape 6: Laisser tiédir pendant 10 minutes.",
@@ -61001,7 +60996,7 @@
         },
         {
           "ingredient": "yellow_onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -61034,7 +61029,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -61050,6 +61045,28 @@
           "meta": {
             "role": "spice",
             "form": "ground",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 9,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "nutmeg_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -61117,6 +61134,7 @@
       "search_tokens": [
         "(filo)",
         "1 heure",
+        "ail",
         "beurre",
         "black",
         "butter",
@@ -61127,6 +61145,7 @@
         "famille",
         "feta",
         "filo",
+        "garlic",
         "grec",
         "grece",
         "greek",
@@ -61140,7 +61159,9 @@
         "mediterranee",
         "minceur",
         "moyen",
+        "muscade",
         "noir",
+        "nutmeg",
         "oignon",
         "onion",
         "oven_cooking",
@@ -61167,16 +61188,16 @@
       "_quality_score": 0.99,
       "description": "Tourte grecque aux épinards cuits et fromage râpé, avec une pâte filo croustillante en couches et une farce épinards-fromage fondante et parfumée, parfumée de poivre noir et de sel de table.",
       "instructions": [
-        "Étape 1: Laver et sécher soigneusement 300g d'épinards crus. Faire revenir 300g d'oignon jaune cru et 2 gousses d'ail dans 25 g de beurre pendant 4 minutes, en remuant régulièrement, jusqu'à ce que l'oignon soit translucide.",
+        "Étape 1: Laver et sécher soigneusement 300g d'épinards crus. Faire revenir 150g d'oignon jaune et 2 gousses d'ail dans 25 g de beurre pendant 4 minutes, en remuant régulièrement, jusqu'à ce que l'oignon soit translucide.",
         "Étape 2: Ajouter les épinards crus à l'oignon et l'ail, puis cuire pendant 5 minutes supplémentaires, en remuant occasionnellement, jusqu'à ce que les épinards soient bien réduits et mélangés.",
         "Étape 3: Essorer énergiquement le mélange d'épinards dans un torchon pour en extraire l'excès d'humidité.",
-        "Étape 4: Mélanger les épinards essorés avec 150g de fromage râpé, 2 œufs préparés, du sel de table, du poivre noir et de la muscade.",
-        "Étape 5: Badigeonner chaque feuille de pâte filo de beurre fondu au pinceau. Superposer 4 à 6 feuilles de pâte filo dans un moule préalablement huilé avec du beurre doux.",
+        "Étape 4: Mélanger les épinards essorés avec 150g de feta émiettée, 220 g d'œufs battus, du sel de table, du poivre noir et de la muscade.",
+        "Étape 5: Badigeonner chaque feuille de pâte filo de beurre fondu au pinceau. Superposer 4 à 6 feuilles de pâte filo dans un moule beurré.",
         "Étape 6: Répartir uniformément la garniture d'épinards et de fromage sur les feuilles de pâte filo.",
         "Étape 7: Couvrir la garniture avec 4 à 6 feuilles de pâte filo supplémentaires, en les huilant également et en rentrant les bords pour sceller la tourte.",
         "Étape 8: Inciser le dessus de la tourte pour permettre la vapeur de s'échapper pendant la cuisson.",
         "Étape 9: Enfourner la tourte à 180°C pendant 40 à 45 minutes, ou jusqu'à ce que la surface soit dorée et croustillante. Vérifier que la lame d'un couteau ressorte sèche après avoir piqué la tourte.",
-        "Étape 10: Laisser la tourte tiédir pendant 10 minutes avant de la couper et de la servir chaud, accompagnée d'un peu de poivre noir et de sel de table, dans des assiettes préchauffées."
+        "Étape 10: Laisser la tourte tiédir pendant 10 minutes avant de la couper et de la servir chaud,."
       ],
       "diet_flags": {
         "vegan": false,
@@ -61233,7 +61254,7 @@
         },
         {
           "ingredient": "green_zucchini_squash_raw",
-          "quantity": 500,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "vegetable",
@@ -61244,7 +61265,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -61332,7 +61353,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -61356,7 +61377,6 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "high_protein"
         ],
         "allergens": [
@@ -61421,7 +61441,6 @@
         "champignon",
         "chef",
         "chili",
-        "coeliaque",
         "complexe",
         "coree",
         "coreen",
@@ -61429,7 +61448,6 @@
         "egg",
         "fort",
         "garlic",
-        "gluten free",
         "green",
         "hot",
         "jjigae",
@@ -61447,7 +61465,6 @@
         "red",
         "rouge",
         "salt",
-        "sans gluten",
         "sans viande",
         "sel",
         "sesame",
@@ -61471,17 +61488,17 @@
       "description": "Préparation coréenne de tofu soyeux, cuisson délicate pour une texture fondante, parfumée au gochujang et au piment coréen, avec une base de bouillon végétal dashi.",
       "instructions": [
         "Étape 1: Chauffer 15ml d'huile de sésame à feu moyen et faire revenir 9g d'ail haché pendant 1 minute, jusqu'à ce qu'il soit doré et parfumé.",
-        "Étape 2: Saisir 300g de champignons de Paris émincés et 500g de courgette en dés, puis cuire pendant 3 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce qu'ils soient tendres.",
+        "Étape 2: Saisir 300g de champignons de Paris émincés et 200g de courgette en dés, puis cuire pendant 3 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce qu'ils soient tendres.",
         "Étape 3: Verser 750ml de bouillon végétal dashi et porter à ébullition, en veillant à ce que le liquide soit clair et limpide.",
         "Étape 4: Déposer 400g de tofu soyeux dans le bouillon bouillant et laisser frémir pendant 3 minutes sans remuer, afin de préserver sa texture délicate.",
         "Étape 5: Incorporer 30ml de gochujang et 10g de piment coréen, puis cuire pendant 1 minute à feu doux, en remuant doucement, pour permettre aux saveurs de se mélanger.",
-        "Étape 6: Ajouter 200g de tofu ferme émietté et cuire pendant 1 minute à feu doux, en veillant à ce que le tofu soit bien réparti dans le bouillon.",
-        "Étape 7: Assaisonner avec 5g de sel et servir chaud, garni de 60g d'oignon vert haché, pour ajouter une touche de fraîcheur et de couleur."
+        "Étape 6: Ajouter 200g de tofu ferme émietté, casser les 220 g d'œufs dans le bouillon frémissant et cuire 2 minutes à feu doux.",
+        "Étape 7: Assaisonner avec 2g de sel et servir chaud, garni de 60g d'oignon vert haché, pour ajouter une touche de fraîcheur et de couleur."
       ],
       "diet_flags": {
         "vegan": false,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -61533,7 +61550,7 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -61662,8 +61679,8 @@
       "_chef_note": "Cette tortilla est idéale pour les repas végétaliens, avec ses saveurs équilibrées et sa texture croustillante.",
       "description": "Spécialité espagnole — pâte de pommes de terre dorées en cuisson pour une texture croustillante à l'extérieur et tendre à cœur, avec une odeur de légumes sautés.",
       "instructions": [
-        "Étape 1: Éplucher 600 g de pommes de terre crues et les ciseler en julienne de 3 mm. Blanchir pendant 2 minutes à feu vif, en observant la texture tendre et en vérifiant que les pommes de terre sont légèrement ramollies.",
-        "Étape 2: Chauffer 45 ml d'huile d'olive dans une poêle et faire nacrer 300 g d'oignons jaunes pendant 5 minutes à feu doux, en sentant les arômes se mélanger et en observant la couleur dorée des oignons.",
+        "Étape 1: Éplucher 600 g de pommes de terre crues et les couper en fines rondelles de 3 mm.",
+        "Étape 2: Chauffer 45 ml d'huile d'olive dans une poêle et faire fondre 150 g d'oignons pendant 5 minutes à feu doux, en sentant les arômes se mélanger et en observant la couleur dorée des oignons.",
         "Étape 3: Ajouter les pommes de terre et faire confire pendant 15 minutes à feu moyen, en observant la texture dorée et croustillante des pommes de terre et en vérifiant que les oignons sont bien fondus.",
         "Étape 4: Dans un bol, battre 220 g d'œuf avec 5 g de sel, en émulsionnant pour obtenir une texture lisse et en vérifiant que la mixture est homogène.",
         "Étape 5: Incorporer les pommes de terre au mélange d'œuf et laisser reposer pendant 5 minutes, en sentant les saveurs se mélanger et en vérifiant que les pommes de terre sont bien enrobées.",
@@ -61736,7 +61753,7 @@
         },
         {
           "ingredient": "egg_raw",
-          "quantity": 220,
+          "quantity": 110,
           "unit": "g",
           "meta": {
             "role": "binder",
@@ -61773,6 +61790,17 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 120,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -61833,12 +61861,14 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "30 minutes",
         "all",
         "beurre",
         "blanc",
         "ble",
         "butter",
+        "eau",
         "egg",
         "enfants",
         "facile enfants",
@@ -61856,6 +61886,7 @@
         "oignon",
         "onion",
         "pomme",
+        "potable)",
         "potato",
         "purpose",
         "quick",
@@ -61870,6 +61901,7 @@
         "usage",
         "vareniki",
         "vegetarien",
+        "water",
         "water_cooking",
         "wheat",
         "wok",
@@ -61881,9 +61913,9 @@
       "_quality_score": 0.9,
       "description": "Pâtes farcies à la pomme de terre cuite et fromage, cuites à la vapeur et servies avec une sauce crémeuse, dans la tradition ukrainienne.",
       "instructions": [
-        "Étape 1: Préparez la pâte en mélangeant 200g de farine de blé, 220g d'œuf, 40g de beurre et 120ml d'eau, puis pétrissez pendant 8 minutes à feu doux, jusqu'à obtenir une pâte souple et homogène.",
+        "Étape 1: Préparez la pâte en mélangeant 200g de farine de blé, 110g d'œuf, 40g de beurre et 120ml d'eau, puis pétrissez pendant 8 minutes, jusqu'à obtenir une pâte souple et homogène.",
         "Étape 2: Laissez reposer la pâte pendant 30 minutes à température ambiante, pour qu'elle se détende et devienne plus facile à travailler.",
-        "Étape 3: Cuisez 600g de pommes de terre pendant 15 minutes à l'eau bouillante, puis écrasez-les avec 150g de fromage blanc, 20g de beurre et des épices, pour obtenir une farce crémeuse et parfumée.",
+        "Étape 3: Cuisez 600g de pommes de terre pendant 15 minutes à l'eau bouillante, puis écrasez-les avec 150g de fromage blanc, 20g de beurre et 150 g d'oignon revenu, pour obtenir une farce crémeuse et parfumée.",
         "Étape 4: Étalez la pâte finement à 2 mm d'épaisseur, puis découpez des cercles de 8 cm à l'aide d'un emporte-pièce, pour former les vareniki.",
         "Étape 5: Déposez une cuillère de farce au centre de chaque cercle, puis pliez en demi-lune et soudez soigneusement les bords, pour former des galettes bien fermées.",
         "Étape 6: Faites cuire les vareniki pendant 8 minutes à feu moyen-vif dans de l'eau bouillante salée, jusqu'à ce qu'ils remontent à la surface et soient tendres, mais encore fermes au toucher.",
@@ -62144,12 +62176,11 @@
       "description": "Blinis sarrasin dorés et croustillants, avec une texture aérienne et une saveur délicate, issus de la tradition culinaire française, préparés avec de la farine de sarrasin, de la farine de blé et des graines de sésame.",
       "instructions": [
         "Mélanger 100g de farine de sarrasin, 100g de farine de blé et 3g de sel de table dans un saladier, en les incorporant délicatement pour obtenir un mélange homogène.",
-        "Fouetter 250ml de lait d'avoine tiède et 15ml de vinaigre de cidre dans un autre saladier, en les incorporant pour obtenir un mélange lisse, puis laisser reposer pendant 5 minutes pour permettre à la levure de s'activer.",
+        "Délayer 5g de levure fraîche dans 250ml de lait d'avoine tiède avec 15ml de vinaigre de cidre, puis laisser reposer 5 minutes.",
         "Incorporer le liquide aux farines, en mélangeant jusqu'à obtenir une pâte lisse et élastique, puis laisser lever pendant 30 minutes à température ambiante pour permettre à la pâte de doubler de volume.",
-        "Ajouter 5g de levure instant et mélanger délicatement pour une répartition uniforme.",
         "Cuire des petites louches de pâte dans une poêle légèrement huilée avec 30ml d'huile végétale à feu moyen, pendant 2 minutes par face, en les retournant délicatement pour éviter de les briser.",
         "Faire nacrer les blinis jusqu'à ce qu'ils soient dorés et croustillants, en les retournant régulièrement pour obtenir une coloration uniforme.",
-        "Garnir les blinis de 80g de beurre d'acajou, de 10g de ciboulette hachée et de 10g de sésame, en les recouvrant généreusement pour obtenir une texture crémeuse et une saveur parfumée.",
+        "Garnir les blinis de 80g de purée de cajou, de 10g de ciboulette hachée et de 10g de sésame, en les recouvrant généreusement pour obtenir une texture crémeuse et une saveur parfumée.",
         "Servir les blinis tièdes, accompagnés d'une salade verte, pour obtenir un repas équilibré et savoureux."
       ],
       "diet_flags": {
@@ -62178,9 +62209,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 15,
-        "prep_passive_min": 0,
-        "cook_min": 70,
-        "total_min": 85
+        "prep_passive_min": 15,
+        "cook_min": 45,
+        "total_min": 75
       },
       "composition": [
         {
@@ -62218,7 +62249,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 4,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -62228,9 +62259,9 @@
           }
         },
         {
-          "ingredient": "lemon",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "acidity",
             "form": "wedges",
@@ -62280,6 +62311,17 @@
             "form": "whole",
             "state": "raw",
             "preparation": "toasted"
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -62346,8 +62388,6 @@
         }
       },
       "search_tokens": [
-        "acidite",
-        "agrume",
         "ail",
         "and",
         "aneth",
@@ -62360,6 +62400,7 @@
         "brandade",
         "capers",
         "capres",
+        "citron",
         "classique",
         "coeliaque",
         "cumin",
@@ -62384,16 +62425,18 @@
         "olive",
         "oven_cooking",
         "roasting",
+        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sel",
         "sesame",
         "simple",
         "spread",
+        "table",
         "vegan",
         "vegetalien",
         "vegetarien",
-        "vitamine c",
         "weed",
         "white"
       ],
@@ -62405,11 +62448,11 @@
       "description": "Brandade végétalienne créative de betteraves rôties et haricots blancs à l'ail confit, offrant une texture onctueuse et une explosion de saveurs méditerranéennes.",
       "instructions": [
         "Étape 1 : Préchauffer le four à 180°C. Envelopper les betteraves entières dans du papier aluminium et les cuire pendant 45 minutes, jusqu'à ce qu'elles soient tendres et que la lame ressorte facilement.",
-        "Étape 2 : Éplucher les betteraves refroidies et les mixer finement avec 15g d'ail émincé, 4ml d'huile d'olive et le jus de 100g de citron frais, jusqu'à obtenir une consistance lisse.",
+        "Étape 2 : Éplucher les betteraves refroidies et les mixer finement avec 15g d'ail émincé, 30ml d'huile d'olive et 40 ml de jus de citron, jusqu'à obtenir une consistance lisse.",
         "Étape 3 : Incorporer 200g de haricots blancs mixés pour obtenir une texture crémeuse et végétale, en veillant à ce que le mélange soit homogène et sans grumeaux.",
         "Étape 4 : Assaisonner avec 2,5g de cumin en poudre, du sel et du poivre, en goûtant régulièrement jusqu'à ce que le mélange soit parfumé et équilibré.",
         "Étape 5 : Servir sur des tartines avec 30g de câpres et 15g d'aneth frais ciselé, en saupoudrant de 20g de graines de sésame et en ajoutant un filet de jus de citron pour un apéritif ou un repas léger et sain.",
-        "Étape 6 : Vérifier que la couleur soit uniformément dorée, ajustant l'assaisonnement si nécessaire pour un goût équilibré et végétal.",
+        "Étape 6 : Ajuster l'assaisonnement si nécessaire pour un goût équilibré et végétal.",
         "Étape 7 : Présenter avec une odeur parfumée de betterave et de cumin, en décorant avec des herbes fraîches pour un plat visuellement attrayant et savoureux."
       ],
       "diet_flags": {
@@ -62681,7 +62724,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 3,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -62692,7 +62735,7 @@
         },
         {
           "ingredient": "cider_vinegar_liquid",
-          "quantity": 1,
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "acidity",
@@ -62730,6 +62773,17 @@
           "meta": {
             "role": "herb",
             "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -62837,11 +62891,14 @@
         "rapees",
         "rapide",
         "raw",
+        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sel",
         "shallot",
         "simple",
+        "table",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -62856,7 +62913,7 @@
       "description": "Carottes râpées croquantes, liées par une vinaigrette moutardée à base de vinaigre de cidre, servies fraîches avec une touche de persil frais — un classique de la cuisine française.",
       "instructions": [
         "Étape 1 : Râper 500g de carottes crues à la râpe pour obtenir des lamelles fines de 3 à 4 mm, puis les rincer sous un filet d'eau froide pour enlever l'excès de terre.",
-        "Étape 2 : Dans un bol, mélanger 3ml d'huile d'olive, 1ml de vinaigre de cidre et 4,5ml de moutarde de Dijon pour préparer la vinaigrette, en vérifiant que les ingrédients sont bien incorporés et que la texture est lisse.",
+        "Étape 2 : Dans un bol, mélanger 30ml d'huile d'olive, 15ml de vinaigre de cidre, 2g de sel et 4,5ml de moutarde de Dijon pour préparer la vinaigrette, en vérifiant que les ingrédients sont bien incorporés et que la texture est lisse.",
         "Étape 3 : Émincer 30g d'échalote et hacher 20g de persil frais, puis les ajouter à la vinaigrette et bien mélanger pour que les saveurs soient équilibrées.",
         "Étape 4 : Verser la vinaigrette sur les carottes râpées et mélanger énergiquement pendant environ 2 minutes pour que les carottes soient bien enrobées.",
         "Étape 5 : Laisser mariner les carottes à température ambiante pendant 15 minutes, en vérifiant régulièrement que les carottes ne deviennent pas trop tendres, mais restent légèrement croquantes.",
@@ -62894,8 +62951,8 @@
       },
       "composition": [
         {
-          "ingredient": "beetroot_raw_root",
-          "quantity": 800,
+          "ingredient": "beetroot_cooked_root",
+          "quantity": 500,
           "unit": "g",
           "meta": {
             "role": "base",
@@ -63133,7 +63190,7 @@
       "_quality_score": 0.83,
       "description": "Entrée français typique, préparée selon la tradition. Composée principalement de betterave, orange, grapefruit, elle ouvre le repas avec fraîcheur et caractère.",
       "instructions": [
-        "Étape 1: Préparez les betteraves cuites en les tranchant en fines lamelles à la mandoline. Vous pouvez également les faire cuire à la vapeur pour préserver leurs couleurs et leurs saveurs.",
+        "Étape 1: Trancher 500 g de betteraves cuites en fines lamelles à la mandoline.",
         "Étape 2: Préparez les agrumes en levant les suprêmes d'orange et de pamplemousse. Disposez-les sur les betteraves pour créer un joli contraste de couleurs.",
         "Étape 3: Préparez la vinaigrette en mélangeant le vinaigre balsamique, le miel et l'huile d'olive. Vous pouvez également ajouter un filet de jus de citron pour rehausser les saveurs.",
         "Étape 4: Arrosez les betteraves et les agrumes de vinaigrette au moment de servir. Vous pouvez également ajouter quelques feuilles de roquette pour un croquant agréable.",
@@ -63184,7 +63241,7 @@
         },
         {
           "ingredient": "base_mayonnaise_0d3e4e",
-          "quantity": 4,
+          "quantity": 80,
           "unit": "g",
           "meta": {
             "role": "sauce",
@@ -63205,9 +63262,9 @@
           }
         },
         {
-          "ingredient": "lemon",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "acidity",
             "form": "wedges",
@@ -63228,7 +63285,7 @@
         },
         {
           "ingredient": "sweet_and_sour_gherkin_flavored_pre_packaged",
-          "quantity": 3,
+          "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "condiment",
@@ -63244,6 +63301,17 @@
           "meta": {
             "role": "herb",
             "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -63313,8 +63381,6 @@
       },
       "search_tokens": [
         "45 minutes",
-        "acidite",
-        "agrume",
         "aigre",
         "and",
         "assembly",
@@ -63323,6 +63389,7 @@
         "capres",
         "celeri",
         "celeriac",
+        "citron",
         "classique",
         "coeliaque",
         "cornichon",
@@ -63355,13 +63422,15 @@
         "rave",
         "raw",
         "remoulade",
+        "salt",
         "sans gluten",
         "sans viande",
+        "sel",
         "simple",
         "sour",
         "sweet",
+        "table",
         "vegetarien",
-        "vitamine c",
         "vivant"
       ],
       "difficulty_level": "easy",
@@ -63371,12 +63440,12 @@
       "description": "Céleri-rave râpé à la rémoulade moutardée, câpres et cornichons, avec une texture légèrement croquante et un goût frais, typique des brasseries françaises.",
       "instructions": [
         "Étape 1: Peler le céleri-rave et le râper finement à la râpe mandoline, en citronnant immédiatement avec le jus de citron pour éviter le noircissement et préserver sa fraîcheur.",
-        "Étape 2: Préparer la rémoulade: mélanger 4 grammes de mayonnaise avec 9,1 millilitres de moutarde de Dijon, 100 grammes de jus de citron, 20 grammes de câpres égouttées et 3 grammes de cornichons hachés finement.",
+        "Étape 2: Préparer la rémoulade: mélanger 80 grammes de mayonnaise avec 9,1 millilitres de moutarde de Dijon, 40 ml de jus de citron, 20 grammes de câpres égouttées et 30 grammes de cornichons hachés finement.",
         "Étape 3: Incorporer 600 grammes de céleri râpé à la sauce rémoulade, en mélangeant délicatement pendant environ 2 minutes jusqu'à enrobage homogène, en vérifiant la texture, jusqu'à ce que le céleri soit légèrement croquant et bien enrobé.",
         "Étape 4: Goûter et ajuster l'acidité et le sel, en réduisant la quantité de citron ou de sel si nécessaire, pour obtenir un équilibre de saveurs.",
         "Étape 5: Laisser mariner 30 minutes au frais pour attendrir légèrement les fibres, en vérifiant la texture toutes les 10 minutes, jusqu'à ce que le céleri soit tendre mais encore croquant, avec une texture fraîche et aérée.",
         "Étape 6: Décorer de 15 grammes de persil plat ciselé, en saupoudrant sur le plat pour ajouter une note fraîche et colorée.",
-        "Étape 7: Servir bien frais, en vérifiant la coloration, jusqu'à ce que le céleri soit d'une belle couleur verte et le persil soit encore frais et parfumé."
+        "Étape 7: Servir bien frais."
       ],
       "diet_flags": {
         "vegan": false,
@@ -63433,7 +63502,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 100,
+          "quantity": 60,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -63455,7 +63524,7 @@
         },
         {
           "ingredient": "coriander_spice_seed",
-          "quantity": 1,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -63503,6 +63572,28 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 300,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "bay_leaf_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -63572,7 +63663,9 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "ail",
+        "bay",
         "braising",
         "button",
         "champignon",
@@ -63584,6 +63677,7 @@
         "coriandre",
         "debutant",
         "easy",
+        "eau",
         "enfants",
         "facile",
         "facile enfants",
@@ -63595,6 +63689,8 @@
         "gluten free",
         "grecque",
         "kids",
+        "laurier",
+        "leaf",
         "leger",
         "lemon",
         "lent",
@@ -63610,6 +63706,7 @@
         "paris",
         "parsley",
         "persil",
+        "potable)",
         "refrigeration",
         "sans gluten",
         "sans produit animal",
@@ -63621,7 +63718,8 @@
         "tomato",
         "vegan",
         "vegetalien",
-        "vegetarien"
+        "vegetarien",
+        "water"
       ],
       "difficulty_level": "easy",
       "dish_type": "starter",
@@ -63629,11 +63727,11 @@
       "_quality_score": 1.0,
       "description": "Champignons de Paris marinés dans un court-bouillon huile d'olive-tomate concassée-coriandre. Hors-d'œuvre typique de la cuisine bistrotière française, avec une texture fondante et une sauce acidulée.",
       "instructions": [
-        "Étape 1 : Préparer la court-bouillon aromatique : porter à ébullition 300 ml d'eau avec 100 ml d'huile d'olive, le jus d'un citron, les graines de coriandre, thym, laurier et grains de poivre. La préparation doit bouillonner pendant environ 5 minutes.",
+        "Étape 1 : Préparer la court-bouillon aromatique : porter à ébullition 300 ml d'eau avec 60 ml d'huile d'olive, le jus d'un citron, les graines de coriandre, thym, laurier et grains de poivre. La préparation doit bouillonner pendant environ 5 minutes.",
         "Étape 2 : Ajouter les champignons de Paris entiers (petits) ou coupés en deux si gros. Cuire à feu moyen pendant 8 minutes, en vérifiant que les champignons commencent à ramollir.",
         "Étape 3 : Incorporer les tomates concassées et l'ail haché. Cuire encore pendant 5 minutes, en remuant régulièrement pour éviter que les tomates n'attachent.",
         "Étape 4 : Laisser refroidir dans le court-bouillon. Réfrigérer minimum 2 heures — les champignons s'imprègnent des arômes en refroidissant. Vérifier que les champignons soient bien imprégnés et que la sauce ait une consistance sirupeuse.",
-        "Étape 5 : Servir froid en entrée avec du pain. Les champignons doivent être fondants et bien imprégnés, la sauce acidulée et parfumée à la coriandre. Servir sans attendre pour conserver la fraîcheur des saveurs."
+        "Étape 5 : Servir froid en entrée avec du pain. Les champignons doivent être fondants et bien imprégnés, la sauce acidulée et parfumée."
       ],
       "diet_flags": {
         "vegan": true,
@@ -63884,7 +63982,7 @@
         "Étape 5 : Ajouter 3g de romarin ciselé, en mélangeant délicatement.",
         "Étape 6 : Étaler les tranches en une seule couche sur des plaques sans chevauchement.",
         "Étape 7 : Cuire pendant 20-25 minutes, en retournant à mi-cuisson, puis laisser refroidir sur une grille.",
-        "Étape 8 : Servir chaud, en présentant les chips dans un bol, accompagné d'une salade verte."
+        "Étape 8 : Servir à température ambiante, dans un bol."
       ],
       "diet_flags": {
         "vegan": true,
@@ -64462,7 +64560,7 @@
       "description": "Salade française crémeuse, avec des toasts de baguette croustillants et un fromage fondu, accompagnée d'une roquette fraîche et d'une vinaigrette parfumée.",
       "instructions": [
         "Préchauffer le four à 180°C, en vous assurant qu'il atteigne la température désirée pour une cuisson optimale. La chaleur doit être bien répartie pour éviter les points chauds.",
-        "Mélanger la roquette, le mesclun, les noix et les cranberries dans un saladier, en les incorporant délicatement pour obtenir un mélange coloré et parfumé. La roquette doit être fraîche et croquante, tandis que les noix doivent être croustillantes.",
+        "Mélanger la roquette, la laitue, les noix et les cranberries dans un saladier, en les incorporant délicatement pour obtenir un mélange coloré et parfumé. La roquette doit être fraîche et croquante, tandis que les noix doivent être croustillantes.",
         "Couper le fromage en rondelles épaisses, puis les déposer sur des toasts de baguette, en les recouvrant généreusement pour obtenir une texture crémeuse. Le fromage doit être fondu et crémeux, avec une texture lisse et homogène.",
         "Enfourner pendant 5 minutes à 180°C, jusqu'à ce que le fromage soit doré et crépitant, en dégageant un parfum appétissant. Le fromage doit être fondu et crémeux, avec une texture lisse et homogène.",
         "Préparer la vinaigrette en fouettant l'huile d'olive, le vinaigre de cidre, le sirop d'érable et la moutarde, en les incorporant pour obtenir un mélange lisse et équilibré. La vinaigrette doit être onctueuse et parfumée, avec un équilibre parfait entre l'acidité et la douceur.",
@@ -64496,9 +64594,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 20,
-        "prep_passive_min": 0,
+        "prep_passive_min": 30,
         "cook_min": 20,
-        "total_min": 40
+        "total_min": 70
       },
       "composition": [
         {
@@ -64588,6 +64686,28 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -64651,9 +64771,9 @@
         }
       },
       "search_tokens": [
-        "45 minutes",
         "all",
         "beurre",
+        "black",
         "butter",
         "button",
         "cepe",
@@ -64679,25 +64799,33 @@
         "heavy",
         "kids",
         "leger",
+        "lent",
         "light",
+        "long",
         "low calorie",
+        "mijote",
         "minceur",
-        "moyen",
         "mushroom",
+        "noir",
         "oven_cooking",
         "paris",
         "parsley",
         "pastry,",
         "pate",
+        "pepper",
         "persil",
+        "poivre",
         "porcini",
         "puff",
         "pur",
+        "salt",
         "sans viande",
         "sauteed",
+        "sel",
         "shallot",
         "shaping",
         "simple",
+        "table",
         "turnovers",
         "vegetarien",
         "œuf"
@@ -64708,8 +64836,8 @@
       "_quality_score": 1.0,
       "description": "Feuilletés croustillants aux champignons sauvages, dorés à la perfection et parfumés d'une duxelles crémeuse, idéaux pour une entrée festive. La texture feuilletée et la saveur terreuse des champignons sont mises en valeur par une cuisson soignée.",
       "instructions": [
-        "Étape 1: Préparez la duxelles en hachant très finement 300g de champignons de Paris et 50g de cèpes. Faites-les revenir dans 20g de beurre à feu doux jusqu'à ce qu'ils soient tendres et fragrans.",
-        "Étape 2: Faites suer 60g d'échalote hachée dans l'beurre à feu doux pendant 5 minutes, puis ajoutez les champignons hachés et faites évaporer leur eau à feu moyen-vif pendant 10 minutes, en remuant régulièrement, jusqu'à ce que le mélange soit sec et parfumé.",
+        "Étape 1: Préparez la duxelles en hachant très finement 300g de champignons de Paris et 50g de cèpes. Faites-les revenir dans 20g de beurre à feu doux jusqu'à ce qu'ils soient tendres et parfumés.",
+        "Étape 2: Faites suer 60g d'échalote hachée dans le beurre à feu doux pendant 5 minutes, puis ajoutez les champignons hachés et faites évaporer leur eau à feu moyen-vif pendant 10 minutes, en remuant régulièrement, jusqu'à ce que le mélange soit sec et parfumé.",
         "Étape 3: Incorporez 15g de persil frais haché, 60ml de crème fraîche, du sel et du poivre dans la duxelles. Laissez refroidir complètement à température ambiante pendant au moins 30 minutes.",
         "Étape 4: Coupez la pâte feuilletée en rectangles de 10×6 cm. Déposez 1 cuillère à soupe de duxelles sur la moitié de chaque rectangle, en laissant une bordure d'environ 1 cm autour.",
         "Étape 5: Plier les rectangles en fermant hermétiquement et pressez les bords avec les dents d'une fourchette pour obtenir un joint étanche. Badigeonnez les bords avec un peu de beurre pour les rendre plus tendres.",
@@ -64825,7 +64953,7 @@
         },
         {
           "ingredient": "vegetable_oil_plant",
-          "quantity": 500,
+          "quantity": 60,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -64997,9 +65125,9 @@
         "Étape 2: Introduisez délicatement la farce dans chaque fleur de courgette sans les déchirer, en refermant les pétales en les tordant légèrement, pendant environ 2 minutes par fleur.",
         "Étape 3: Préparez la pâte à beignet légère en mélangeant 100g de farine, 150ml d'eau gazeuse froide et 4g de sel pendant 2 minutes, jusqu'à obtenir une consistance lisse et fluide.",
         "Étape 4: Trempez chaque fleur farcie dans la pâte à beignet, en vous assurant qu'elle soit complètement recouverte, pendant environ 30 secondes par fleur.",
-        "Étape 5: Faites frire les fleurs de courgette farcies dans 500ml d'huile à 180°C pendant 2 à 3 minutes, jusqu'à ce qu'elles soient dorées et croustillantes.",
+        "Étape 5: Faites frire les fleurs de courgette farcies dans un bain d'huile à 180°C pendant 2 à 3 minutes, jusqu'à ce qu'elles soient dorées et croustillantes.",
         "Étape 6: Égouttez les fleurs de courgette sur du papier absorbant pour enlever l'excès d'huile pendant environ 1 minute.",
-        "Étape 7: Servez chaud, dans des assiettes préchauffées, pour préserver la texture croustillante: les fleurs de courgette doivent être servies immédiatement pour profiter de leur texture croustillante et de leur saveur délicate."
+        "Étape 7: Servez sans attendre, pour profiter de la texture croustillante et de la saveur délicate des fleurs."
       ],
       "diet_flags": {
         "vegan": false,
@@ -65033,7 +65161,7 @@
       },
       "composition": [
         {
-          "ingredient": "cashew_nuts_roasted_in_oil",
+          "ingredient": "cashew_nuts_raw",
           "quantity": 250,
           "unit": "g",
           "meta": {
@@ -65254,14 +65382,14 @@
       "_quality_score": 0.69,
       "description": "Entrée végétalienne crémeuse et parfumée aux herbes fraîches, inspirée de la cuisine internationale, avec une texture molle et une légère fermentation.",
       "instructions": [
-        "Étape 1 : Faire tremper 250g de noix de cajou dans l'eau froide pendant 6 à 8 heures, jusqu'à ce qu'elles soient tendres et prêtes à être utilisées, avec une texture molle et une légère fermentation.",
+        "Étape 1 : Faire tremper 250g de noix de cajou dans l'eau froide pendant 6 à 8 heures, jusqu'à ce qu'elles soient tendres et prêtes à être utilisées, avec une texture molle.",
         "Étape 2 : Égoutter et rincer les noix de cajou, puis les mixer finement avec 43.7ml de jus de citron, 20g de levure nutritionnelle, 5g d'ail et 5g de sel, jusqu'à obtenir une pâte lisse et homogène, avec une odeur parfumée et une couleur crème.",
         "Étape 3 : Ajouter progressivement 60ml de lait d'avoine pour obtenir la consistance désirée, en remuant constamment pour éviter les grumeaux, et en vérifiant la texture pour obtenir une crème légère et aérienne.",
-        "Étape 4 : Incorporer 15g de ciboulette ciselée, 10g d'aneth, 10g de persil et 5g d'herbes de Provence séchées, en mélangeant délicatement pour préserver les saveurs et les textures.",
+        "Étape 4 : Incorporer 15g de ciboulette ciselée, 10g d'aneth, 10g de persil et 5g de thym séché, en mélangeant délicatement pour préserver les saveurs et les textures.",
         "Étape 5 : Former un cylindre avec la préparation et l'enrouler dans du film alimentaire, en serrant bien pour obtenir une forme régulière, et en vérifiant que la surface soit lisse et uniforme.",
-        "Étape 6 : Rouler le cylindre dans les herbes de Provence séchées pour obtenir une texture et une saveur supplémentaires, en appuyant légèrement pour faire adhérer les herbes, et en créant une belle présentation avec les herbes qui dépassent du cylindre.",
+        "Étape 6 : Rouler le cylindre dans un peu de thym séché pour obtenir une texture et une saveur supplémentaires, en appuyant légèrement pour faire adhérer les herbes, et en créant une belle présentation avec les herbes qui dépassent du cylindre.",
         "Étape 7 : Laisser reposer au réfrigérateur pendant au moins 30 minutes avant de servir, pour permettre aux saveurs de se mélanger et de se développer, et pour obtenir une texture ferme et crémeuse qui se détache facilement du film alimentaire.",
-        "Étape 8 : Servir aussitôt, garni de ciboulette ciselée et d'un filet d'huile d'olive. Accompagner d'un pain pita tiède ou de riz basmati."
+        "Étape 8 : Servir frais, avec du pain grillé ou des crudités."
       ],
       "diet_flags": {
         "vegan": true,
@@ -65489,7 +65617,7 @@
       "instructions": [
         "Étape 1 : Peler 1000g de melon et retirer les graines. Couper en morceaux de 2 cm et réserver dans un bol pour éviter l'oxydation.",
         "Étape 2 : Mixer le melon avec 30ml de jus de citron vert, 10g de feuilles de menthe fraîche et 30.8ml d'huile d'olive dans un blender, jusqu'à obtenir une texture lisse et crémeuse, en vérifiant régulièrement pour éviter la sur-mixité.",
-        "Étape 3 : Ajouter 15ml de vinaigre de xérès et 3g de sel. Goûter et ajuster l'assaisonnement si nécessaire, en vérifiant que le melon conserve sa saveur douce et que le citron vert ajoute une touche d'acidité.",
+        "Étape 3 : Ajouter 15ml de vinaigre de vin rouge et 3g de sel. Goûter et ajuster l'assaisonnement si nécessaire, en vérifiant que le melon conserve sa saveur douce et que le citron vert ajoute une touche d'acidité.",
         "Étape 4 : Réfrigérer la préparation pendant au moins 2 heures à 4°C pour permettre aux saveurs de se mélanger et de se stabiliser, en vérifiant que la température est maintenue pour éviter la contamination.",
         "Étape 5 : Servir très frais dans des verrines ou petits bols glacés, en décorant avec des dés de melon et des feuilles de menthe fraîche pour ajouter une touche de couleur et de fraîcheur.",
         "Étape 6 : Ajouter un filet d'huile d'olive et servir sans attendre, en profitant de la fraîcheur du gaspacho et de la texture crémeuse du melon."
@@ -65806,9 +65934,9 @@
           }
         },
         {
-          "ingredient": "lemon",
-          "quantity": 50.0,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 20,
+          "unit": "ml",
           "meta": {
             "role": "acidity",
             "form": "wedges",
@@ -65912,8 +66040,6 @@
       },
       "search_tokens": [
         "30 minutes",
-        "acidite",
-        "agrume",
         "almond",
         "almondine",
         "amande",
@@ -65924,6 +66050,7 @@
         "boiling",
         "brown_butter",
         "butter",
+        "citron",
         "classique",
         "coeliaque",
         "debutant",
@@ -65960,8 +66087,7 @@
         "table",
         "vegetarien",
         "vert",
-        "verts",
-        "vitamine c"
+        "verts"
       ],
       "difficulty_level": "easy",
       "dish_type": "starter",
@@ -65975,8 +66101,8 @@
         "Étape 4: Faire griller les amandes pendant 3 minutes, en les remuant régulièrement, jusqu'à ce qu'elles soient dorées et parfumées.",
         "Étape 5: Ajouter les haricots verts égouttés dans la poêle avec les amandes et faire sauter pendant 2 minutes à feu vif pour les enrober de beurre et de saveur d'amandes.",
         "Étape 6: Ajouter 30g d'échalote finement hachée dans la poêle et faire revenir pendant 1 minute, en remuant constamment, jusqu'à ce qu'elle soit translucide et parfumée.",
-        "Étape 7: Assaisonner de sel, poivre et jus de citron (en utilisant 50g de citron) pour donner une touche d'acidité et de fraîcheur.",
-        "Étape 8: Servir aussitôt, garni de quelques feuilles de persil frais pour une touche de couleur et de fraîcheur."
+        "Étape 7: Assaisonner de sel, poivre et 20 ml de jus de citron pour donner une touche d'acidité et de fraîcheur.",
+        "Étape 8: Servir aussitôt."
       ],
       "diet_flags": {
         "vegan": false,
@@ -66290,13 +66416,12 @@
       "_quality_score": 0.95,
       "description": "Potage crémeux aux lentilles beluga, parfumé au thym frais et au xérès, avec une texture fondante et moelleuse, réalisé avec des échalotes ciselées et des feuilles de persil frais.",
       "instructions": [
-        "Étape 1 : Rincez 200g de lentilles beluga, puis cuisez-les pendant 25 minutes à feu moyen dans 600ml d'eau salée avec 3g de thym frais. Les lentilles doivent être tendres mais encore fermes.",
-        "Étape 2 : Préparez la vinaigrette au xérès en fouettant 15ml de vinaigre de xérès avec 4,5ml de moutarde de Dijon, 4g de sel de table et 2g de poivre noir concassé. La vinaigrette doit être homogène et parfumée.",
+        "Étape 1 : Rincez 200g de lentilles vertes (ou beluga), puis cuisez-les pendant 25 minutes à feu moyen dans 500 ml de bouillon de légumes avec 3g de thym frais. Les lentilles doivent être tendres mais encore fermes.",
+        "Étape 2 : Préparez la vinaigrette au xérès en fouettant 15ml de vinaigre avec 4,5ml de moutarde de Dijon, 4g de sel de table et 2g de poivre noir concassé. La vinaigrette doit être homogène et parfumée.",
         "Étape 3 : Émulsionnez la vinaigrette avec 30,8ml d'huile d'olive vierge extra, puis mélangez avec les lentilles tièdes. La sauce doit être lisse et crémeuse.",
         "Étape 4 : Ajoutez 60g d'échalotes ciselées finement et 10g de persil frais haché, ainsi que 100g de carottes râpées et 40g de céleri haché. Mélangez délicatement. Les saveurs doivent être équilibrées et parfumées.",
         "Étape 5 : Vérifiez que les lentilles sont entières et brillantes, la vinaigrette acidulée et parfumée au xérès. Rectifiez l'assaisonnement si nécessaire.",
-        "Étape 6 : Ajoutez 500ml de bouillon de légumes et mélangez bien. La soupe doit être chaude et parfumée.",
-        "Étape 7 : Servez la soupe tiède, garnie de feuilles de persil frais et accompagnée de pain grillé ou de crackers, si désiré."
+        "Étape 6 : Servez la salade tiède, garnie de feuilles de persil frais et accompagnée de pain grillé ou de crackers, si désiré."
       ],
       "diet_flags": {
         "vegan": true,
@@ -66353,7 +66478,7 @@
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 480,
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "sauce_base",
@@ -66423,6 +66548,17 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -66517,7 +66653,9 @@
         "moyen-orient",
         "olive",
         "paprika",
+        "parsley",
         "pepper",
+        "persil",
         "piment",
         "poivron",
         "red",
@@ -66549,7 +66687,7 @@
         "Préchauffer le four à 200°C, puis griller les poivrons rouges et verts pendant 30 minutes, ou jusqu'à ce qu'ils soient noircis et que la peau se décolle facilement.",
         "Peler les poivrons, les épépiner, puis les couper en julienne de 1 cm pour une texture croquante.",
         "Chauffer 46,2 ml d'huile d'olive dans une poêle avec 20 g d'ail émincé pendant 2 minutes, ou jusqu'à ce que l'ail soit parfumé et commence à dorer.",
-        "Ajouter 480 g de tomates pelées concassées et les poivrons grillés dans la poêle, puis cuire pendant 10 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que les légumes soient tendres et commencent à confire.",
+        "Ajouter 300 g de tomates pelées concassées et les poivrons grillés dans la poêle, puis cuire pendant 10 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que les légumes soient tendres et commencent à confire.",
         "Incorporer 15 g de piment, 2 g de paprika fumé, 5 g de sucre et 4 g de sel dans la poêle, puis mélanger bien pour que les saveurs soient équilibrées.",
         "Cuire la matbucha à feu doux pendant 45 minutes, ou jusqu'à ce que les légumes soient confits et que la sauce ait une consistance épaisse et crémeuse.",
         "Laisser refroidir la matbucha, puis la servir à température ambiante, parsemée de persil haché pour une touche de fraîcheur et de couleur, car la chaleur pourrait altérer la texture crémeuse et la fraîcheur des saveurs."
@@ -66775,8 +66913,8 @@
       "_quality_score": 0.72,
       "description": "Mousse d'avocat au wasabi, crémeuse et légère, avec une pointe de wasabi piquant, typique de la cuisine japonaise contemporaine, aux notes de fraîcheur et de légèreté.",
       "instructions": [
-        "Étape 1 : Coupez 3 avocats en deux, retirez le noyau et récupérez la chair, en prenant soin de ne pas écraser la chair pour éviter l'oxydation.",
-        "Étape 2 : Mixez la chair d'avocat avec 30ml de jus de citron vert, 50ml de crème de coco, 5g de wasabi et 3g de sel pendant environ 2 minutes, jusqu'à obtenir une texture lisse et homogène.",
+        "Étape 1 : Coupez 400 g d'avocats en deux, retirez le noyau et récupérez la chair, en prenant soin de ne pas écraser la chair pour éviter l'oxydation.",
+        "Étape 2 : Mixez la chair d'avocat avec 30ml de jus de citron vert, 50ml de lait de coco, 5g de wasabi et 3g de sel pendant environ 2 minutes, jusqu'à obtenir une texture lisse et homogène.",
         "Étape 3 : Goûtez et ajustez la quantité de wasabi selon l'intensité souhaitée, en ajoutant éventuellement quelques grammes supplémentaires si nécessaire.",
         "Étape 4 : Répartissez la mousse dans des verrines à l'aide d'une poche à douille pour une belle présentation, en veillant à ne pas créer de bulles d'air.",
         "Étape 5 : Garnissez de graines de sésame noir et de roquette fraîche, en prenant soin de ne pas écraser les feuilles délicates.",
@@ -67033,7 +67171,7 @@
         "Étape 1 : Faites griller les poivrons rouges pendant 20 minutes sous le gril préchauffé à 250°C, ou sur flamme, jusqu'à ce qu'ils soient bien rouges et que la peau se décolle facilement, en vérifiant régulièrement leur couleur et leur texture.",
         "Étape 2 : Pelez et épépinez les poivrons grillés, puis laissez-les refroidir complètement à température ambiante pendant environ 10 minutes.",
         "Étape 3 : Faites griller légèrement les noix de Grenoble dans une poêle sèche pendant 2-3 minutes, en les remuant constamment, pour leur donner une saveur torréfiée et une texture croustillante.",
-        "Étape 4 : Mixer les poivrons grillés, les noix de Grenoble, l'ail, la pâte de piment doux, le jus de citron frais, la mélasse de grenade, la chapelure fine et le cumin en poudre pendant 2 minutes, jusqu'à obtenir une texture légèrement granuleuse et une couleur homogène, en vérifiant la consistance régulièrement.",
+        "Étape 4 : Mixer les poivrons grillés, les noix de Grenoble, l'ail, la pâte de piment doux, le jus de citron frais, le jus de grenade, la chapelure fine et le cumin en poudre pendant 2 minutes, jusqu'à obtenir une texture légèrement granuleuse et une couleur homogène, en vérifiant la consistance régulièrement.",
         "Étape 5 : Ajoutez l'huile d'olive extra vierge en filet tout en remuant pour lier les ingrédients et obtenir une consistance onctueuse et crémeuse, en vérifiant la texture et la saveur.",
         "Étape 6 : Rectifiez l'assaisonnement si nécessaire pour équilibrer les saveurs, en ajoutant du sel fin ou du poivre noir selon les goûts.",
         "Étape 7 : Servez la muhammara sans attendre, pour préserver la fraîcheur et la texture, avec un filet d'huile d'olive extra vierge et des feuilles de persil frais pour une touche de fraîcheur et de couleur."
@@ -67633,7 +67771,7 @@
         },
         {
           "ingredient": "shallot_raw",
-          "quantity": 150,
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -68116,7 +68254,7 @@
           }
         },
         {
-          "ingredient": "white_bread_roasted",
+          "ingredient": "white_bread_unsalted",
           "quantity": 100,
           "unit": "g",
           "meta": {
@@ -68139,7 +68277,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 100,
+          "quantity": 60,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -68286,7 +68424,7 @@
         "Faire tremper le pain rassis dans de l'eau pendant 2 minutes, puis le presser pour en extraire l'excès d'eau, jusqu'à ce qu'il soit ramolli mais encore ferme.",
         "Écraser 20 grammes d'ail avec 5 grammes de sel dans un mortier jusqu'à obtenir une pâte lisse et parfumée, avec une odeur piquante d'ail.",
         "Incorporer 400 grammes de pommes de terre chaudes et 100 grammes de pain rassis dans le mortier, et mélanger jusqu'à ce que le mélange soit homogène et crémeux, avec une texture lisse et aérienne.",
-        "Ajouter progressivement 100 millilitres d'huile d'olive en filet tout en mélangeant, jusqu'à ce que la skordalia ait une consistance onctueuse et crémeuse, avec une texture qui nappe la cuillère.",
+        "Ajouter progressivement 60 millilitres d'huile d'olive en filet tout en mélangeant, jusqu'à ce que la skordalia ait une consistance onctueuse et crémeuse, avec une texture qui nappe la cuillère.",
         "Incorporer 43,7 millilitres de jus de citron et mélanger bien, puis goûter et ajuster l'assaisonnement selon vos préférences, en vérifiant que la sauce ait un équilibre entre l'acidité du citron et la richesse de l'huile d'olive.",
         "Servir la skordalia à température ambiante, parsemée de persil haché pour une touche de fraîcheur et de couleur, en conservant la fraîcheur du persil et la texture crémeuse de la sauce."
       ],
@@ -68538,13 +68676,13 @@
       "description": "Entrée française typique, préparée selon la tradition, avec une texture aérienne et une saveur intense de fromage.",
       "instructions": [
         "Étape 1: Préchauffez le four à 190°C, puis beurrez et farinez des ramequins pour éviter que le soufflé ne colle.",
-        "Étape 2: Faites fondre le beurre dans une casserole, puis incorporez la farine pour faire une roux, en remuant constamment.",
+        "Étape 2: Faites fondre le beurre dans une casserole, puis incorporez la farine pour faire un roux, en remuant constamment.",
         "Étape 3: Versez le lait chaud progressivement dans la casserole, en remuant sans cesse pour éviter les grumeaux.",
         "Étape 4: Cuisez la béchamel pendant 5 minutes à feu moyen, en remuant régulièrement, jusqu'à ce qu'elle épaississe et devienne lisse.",
         "Étape 5: Incorporez les jaunes d'œufs un à un dans la béchamel, puis ajoutez le gruyère râpé et la noix de muscade, mélangez bien pour obtenir une texture homogène.",
-        "Étape 6: Monte les blancs d'œufs en neige ferme, puis incorporez-les délicatement à la béchamel, en soulevant la masse pour ne pas casser les blancs.",
+        "Étape 6: Montez les blancs d'œufs en neige ferme, puis incorporez-les délicatement à la béchamel, en soulevant la masse pour ne pas casser les blancs.",
         "Étape 7: Remplissez les ramequins aux 3/4 avec la préparation, puis enfournez pour 25-30 minutes, ou jusqu'à ce que le soufflé soit gonflé et doré.",
-        "Étape 8: Démoulez le soufflé chaud et servez-le dans des assiettes préchauffées, accompagné d'une salade verte ou d'un pain croustillant."
+        "Étape 8: Servez aussitôt à la sortie du four, accompagné d'une salade verte ou d'un pain croustillant."
       ],
       "diet_flags": {
         "vegan": false,
@@ -68823,7 +68961,7 @@
       "composition": [
         {
           "ingredient": "black_olive_canned_in_oil",
-          "quantity": 200,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "base",
@@ -68834,7 +68972,7 @@
         },
         {
           "ingredient": "capers_canned_in_vinegar",
-          "quantity": 30,
+          "quantity": 20,
           "unit": "g",
           "meta": {
             "role": "base",
@@ -68900,7 +69038,7 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 61.5,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -69031,10 +69169,10 @@
       "_quality_score": 0.81,
       "description": "Tapenade provençale à base d'olives noires, parfumée au thym frais et au romarin, présentant une texture lisse et crémeuse, idéale pour accompagner des crudités ou des crackers dans un apéritif élégant",
       "instructions": [
-        "Étape 1 : Égoutter 200g d'olives noires et 30g de câpres, puis les mixer avec 5g d'ail pour créer une base de tapenade homogène et parfumée.",
+        "Étape 1 : Égoutter 120g d'olives noires et 20g de câpres, puis les mixer avec 5g d'ail pour créer une base de tapenade homogène et parfumée.",
         "Étape 2 : Ajouter 29.1ml de jus de citron frais et 4.5ml de moutarde de Dijon pour donner de la complexité et de l'équilibre à la tapenade, tout en respectant la tradition provençale.",
         "Étape 3 : Incorporer 2g de thym frais et 1g de romarin frais pour ajouter des notes herbacées et méditerranéennes à la tapenade, en veillant à bien les hacher pour une répartition égale des saveurs.",
-        "Étape 4 : Mixer le mélange pendant environ 5 minutes, ou jusqu'à obtenir une pâte lisse et crémeuse, en ajoutant en filet 61.5ml d'huile d'olive extra-vierge pour donner de la richesse et de la profondeur à la tapenade.",
+        "Étape 4 : Mixer le mélange pendant environ 5 minutes, ou jusqu'à obtenir une pâte lisse et crémeuse, en ajoutant en filet 30ml d'huile d'olive extra-vierge pour donner de la richesse et de la profondeur à la tapenade.",
         "Étape 5 : Rectifier l'assaisonnement en fonction des goûts, en ajoutant éventuellement un peu de sel ou de poivre, pour que la tapenade soit parfaitement équilibrée et prête à être servie.",
         "Étape 6 : Préparer des crudités ou des crackers pour accompagner la tapenade, en choisissant des légumes frais et croquants pour un contraste de textures agréable.",
         "Étape 7 : Servir la tapenade dans un bol avec les crudités ou les crackers préparés, en garnissant avec des feuilles de thym frais ou de romarin pour ajouter une touche de couleur et de parfum à la présentation."
@@ -69543,14 +69681,14 @@
       "_quality_score": 0.95,
       "description": "Entrée française typique, préparée selon la tradition, composée principalement de poivron rouge, courgette jaune, aubergine noire, elle ouvre le repas avec fraîcheur et caractère, présentant une texture tendre et légèrement caramélisée.",
       "instructions": [
-        "Étape 1: Préchauffez le four à 200°C. Grillez les poivrons rouges (30 min), les courgettes jaunes et les aubergines noires en lamelles (20 min) jusqu'à ce qu'ils soient tendres et légèrement caramélisés, en les retournant régulièrement pour une cuisson uniforme.",
+        "Étape 1: Préchauffez le four à 200°C. Grillez les poivrons rouges (30 min), les courgettes et les aubergines en lamelles (20 min) jusqu'à ce qu'ils soient tendres et légèrement caramélisés, en les retournant régulièrement pour une cuisson uniforme.",
         "Étape 2: Pelez les poivrons, éliminez la peau et les graines. Laissez-les refroidir sur une grille pour éviter qu'ils ne deviennent trop humides.",
         "Étape 3: Tapissez un moule à cake de film alimentaire en le laissant dépasser pour faciliter le démoulage, en vous assurant que le film est bien tendu pour éviter les plis.",
         "Étape 4: Disposez en couches alternées les légumes grillés et le fromage de chèvre émietté, en commençant et en terminant par une couche de légumes pour une présentation harmonieuse.",
-        "Étape 5: Assaisonnez chaque couche d'herbes de Provence, d'huile d'olive, de sel de Guérande et de poivre noir. Vous pouvez également ajouter un filet de vinaigre balsamique pour rehausser les saveurs et ajouter une touche d'acidité.",
+        "Étape 5: Assaisonnez chaque couche de thym séché, d'huile d'olive, de sel et de poivre noir. Vous pouvez également ajouter un filet de vinaigre balsamique pour rehausser les saveurs et ajouter une touche d'acidité.",
         "Étape 6: Repliez le film alimentaire sur la terrine et pressez fermement pour que les saveurs se mélangent, en vous assurant que les légumes soient bien serrés pour éviter les vides d'air. Réfrigérez pendant au moins 4 heures pour que les saveurs se mélangent et que les textures se stabilisent.",
         "Étape 7: Démoulez la terrine, trancher et servez sur un lit de mesclun frais avec une vinaigrette balsamique légère, en vous assurant que les tranches soient régulières pour une présentation élégante. Vous pouvez également ajouter quelques noix ou graines pour un croquant agréable et une touche de texture.",
-        "Étape 8: Goûtez et rectifiez l'assaisonnement si nécessaire, en vérifiant que les saveurs soient équilibrées et que les textures soient agréables. Servez sans attendre, en vous assurant que les tranches soient servies à température ambiante pour profiter des saveurs et des textures."
+        "Étape 8: Goûtez et rectifiez l'assaisonnement si nécessaire, en vérifiant que les saveurs soient équilibrées et que les textures soient agréables."
       ],
       "diet_flags": {
         "vegan": false,
@@ -69651,7 +69789,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 6,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -69778,13 +69916,13 @@
       "_quality_score": 0.87,
       "description": "Sauce fraîche et crémeuse aux saveurs d'aneth et d'ail, typique de la cuisine grecque, préparée avec du concombre râpé et du yaourt grec, relevée par le jus de citron et l'huile d'olive, pour une texture lisse et crémeuse.",
       "instructions": [
-        "Étape 1 : Râpez 350g de concombre et assaisonnez-le de 3g de sel de table, puis laissez-le dégorger pendant 15 minutes dans une passoire pour en extraire l'excès d'eau.",
+        "Étape 1 : Râpez 350g de concombre et assaisonnez-le d'un peu de sel, puis laissez-le dégorger pendant 15 minutes dans une passoire pour en extraire l'excès d'eau.",
         "Étape 2 : Pressez le concombre râpé dans un torchon pour en extraire toute l'eau résiduelle, jusqu'à obtenir une texture sèche et compacte.",
         "Étape 3 : Écrasez 10g d'ail et ciselez 15g d'aneth frais pour les intégrer dans votre sauce, en veillant à obtenir une texture homogène.",
         "Étape 4 : Mélangez 400g de yaourt grec avec le concombre pressé, l'ail écrasé, l'aneth ciselé, 30,8ml d'huile d'olive vierge extra et 14,6ml de jus de citron, en remuant délicatement pour éviter de créer des bulles d'air.",
         "Étape 5 : Assaisonnez avec 3g de sel de table et 1g de poivre noir, puis goûtez et rectifiez l'assaisonnement si nécessaire pour équilibrer les saveurs, en vérifiant que la sauce nappe la cuillère sans être trop liquide.",
         "Étape 6 : Réfrigérez le tzatziki pendant au moins 1 heure pour permettre aux saveurs de se mélanger et de se développer, en couvrant le bol avec du film plastique pour éviter la formation d'une pellicule.",
-        "Étape 7 : Servez le tzatziki à température ambiante, garni de quelques feuilles d'aneth frais et d'un filet d'huile d'olive, accompagné de crackers ou de légumes crus pour un apéritif équilibré."
+        "Étape 7 : Servez le tzatziki bien frais, garni de quelques feuilles d'aneth frais et d'un filet d'huile d'olive, accompagné de crackers ou de légumes crus pour un apéritif équilibré."
       ],
       "diet_flags": {
         "vegan": false,
@@ -69800,7 +69938,7 @@
       "id": "entry_veloute_potimarron_en_ver_e5a2ca",
       "titles": {
         "original": "Butternut Veloute Verrine",
-        "fr": "Velouté Potimarron en Verrine",
+        "fr": "Velouté de butternut en verrine",
         "en": "Butternut Veloute Verrine"
       },
       "origin": {
@@ -70047,7 +70185,6 @@
         "persil",
         "poivre",
         "potable)",
-        "potimarron",
         "pumpkin",
         "salt",
         "sans gluten",
@@ -70073,12 +70210,12 @@
       "_chef_note": "Cette recette est idéale pour une entrée ou un accompagnement, et peut être servie chaude ou froide selon vos préférences.",
       "description": "Velouté de potimarron crémeux et parfumé, avec une texture lisse et une saveur équilibrée, typique de la cuisine française d'automne. Ce plat réchauffant est préparé avec soin, en faisant cuire les légumes jusqu'à tendreté avant de les mixer avec du bouillon végétal pour obtenir une consistance onctueuse.",
       "instructions": [
-        "Éplucher le potimarron, puis le couper en cubes d'environ 2 cm pour faciliter sa cuisson, pendant environ 5 minutes.",
+        "Éplucher la courge butternut, puis le couper en cubes d'environ 2 cm pour faciliter sa cuisson, pendant environ 5 minutes.",
         "Faire revenir l'oignon dans l'huile d'olive pendant 3 minutes à feu moyen, jusqu'à ce qu'il soit translucide et parfumé, en remuant régulièrement.",
-        "Ajouter les cubes de potimarron et cuire pendant 8 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce que les légumes commencent à colorer légèrement et soient tendres.",
-        "Recouvrir les légumes avec le bouillon végétal, puis enfourner pendant 25 minutes à 180°C, jusqu'à ce que le potimarron soit tendre et se laisse écraser facilement.",
-        "Mixer le mélange de potimarron et de bouillon jusqu'à obtenir une texture lisse et crémeuse, en ajustant la quantité de liquide si nécessaire.",
-        "Incorporer la crème de coco en émulsionnant pour ajouter de la richesse et de la crémeux à la velouté, pendant environ 2 minutes.",
+        "Ajouter les cubes de courge et cuire pendant 8 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce que les légumes commencent à colorer légèrement et soient tendres.",
+        "Recouvrir les légumes avec le bouillon végétal, puis laisser mijoter 25 minutes à couvert, jusqu'à ce que la courge soit tendre et se laisse écraser facilement.",
+        "Mixer la courge et le bouillon jusqu'à obtenir une texture lisse et crémeuse, en ajustant la quantité de liquide si nécessaire.",
+        "Incorporer le lait de coco en émulsionnant pour ajouter de la richesse et de la crémeux à la velouté, pendant environ 2 minutes.",
         "Assaisonner la velouté avec le gingembre frais râpé, la muscade, le poivre et le sel, et ajuster les saveurs selon vos préférences.",
         "Répartir la velouté dans des verrines, puis garnir avec des graines de courge grillées et du persil frais ciselé pour une touche de fraîcheur et de couleur, en servant sans attendre pour conserver la texture crémeuse."
       ],
@@ -70375,7 +70512,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 5,
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -70580,7 +70717,7 @@
         "Étape 3 : Ajouter 43.7ml de jus de citron frais, 30.9ml de tahini, 61.5ml d'huile d'olive, 5g de sel et 2g de poivre concassé. Mixer très finement pour obtenir une texture lisse et homogène.",
         "Étape 4 : Ajuster la consistance de la dip en ajoutant un peu d'eau si nécessaire, puis rectifier l'assaisonnement en ajoutant plus de sel ou de jus de citron pour équilibrer les saveurs.",
         "Étape 5 : Verser la dip dans un bol, arroser d'un filet d'huile d'olive et saupoudrer de 2g de paprika fumé pour ajouter de la couleur et de la saveur. Parsemer de 10g de persil frais haché pour une touche de fraîcheur.",
-        "Étape 6 : Servir sans attendre, en garnissant de persil frais si désiré, pour profiter de la chaleur et de la fraîcheur de la dip."
+        "Étape 6 : Servir frais ou à température ambiante, garni de persil."
       ],
       "diet_flags": {
         "vegan": true,
@@ -70711,6 +70848,28 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "bay_leaf_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -70780,6 +70939,7 @@
         "1 heure",
         "ail",
         "baguette",
+        "bay",
         "beurre",
         "blanc",
         "boule",
@@ -70801,6 +70961,8 @@
         "garlic",
         "intermediaire",
         "jaune",
+        "laurier",
+        "leaf",
         "leger",
         "light",
         "low calorie",
@@ -70813,9 +70975,12 @@
         "poaching",
         "red",
         "rouge",
+        "salt",
         "sans viande",
         "sauce",
+        "sel",
         "stalk",
+        "table",
         "thym",
         "thyme",
         "vegetarien",
@@ -70834,9 +70999,9 @@
       "instructions": [
         "Étape 1: Préparez les légumes. Ciselez finement 150g d'oignon jaune, 100g de carotte crue et 40g de céleri en tronçons fins. Faites-les suer dans 20g de beurre à feu doux pendant 5 minutes, jusqu'à ce qu'ils soient tendres et légèrement colorés.",
         "Étape 2: Ajoutez 500ml de vin rouge de Bourgogne, 5g de thym frais, 2 gousses d'ail émincé et 1 feuille de laurier. Portez à ébullition, puis réduisez à feu moyen pendant 20 minutes, en remuant occasionnellement, jusqu'à ce que la sauce ait réduit de moitié.",
-        "Étape 3: Filtrez la sauce au chinois et remettez-la sur feu doux. Incorporez 40g de beurre froide pour monter la sauce et lui donner une texture crémeuse.",
+        "Étape 3: Filtrez la sauce au chinois et remettez-la sur feu doux. Incorporez 40g de beurre froid pour monter la sauce et lui donner une texture crémeuse.",
         "Étape 4: Préparez les croûtons. Frottez des tranches de baguette avec de l'ail émincé et faites-les dorer dans 15g de beurre pendant 2 minutes de chaque côté, jusqu'à ce qu'ils soient dorés et croustillants.",
-        "Étape 5: Pochez des œufs dans de l'eau frémissante vinaigrée pendant 3 minutes, jusqu'à coagulation complète. Égouttez-les sur du papier absorbant.",
+        "Étape 5: Pochez des œufs dans de l'eau frémissante vinaigrée pendant 3 minutes, jusqu'à ce que le blanc soit pris et le jaune encore coulant. Égouttez-les sur du papier absorbant.",
         "Étape 6: Déposez un croûton dans une assiette creuse chaude, posez un œuf poché dessus et nappez de sauce meurette chaude. Garnissez de thym frais et servez sans attendre, pour profiter de la chaleur et du croustillant des croûtons.",
         "Étape 7: Vérifiez que la sauce nappe bien l'œuf et les croûtons, et que les saveurs sont équilibrées. Si nécessaire, ajustez la sauce avec un peu de sel ou de poivre."
       ],
@@ -70867,8 +71032,8 @@
       "timing": {
         "prep_active_min": 17,
         "prep_passive_min": 0,
-        "cook_min": 12,
-        "total_min": 29
+        "cook_min": 25,
+        "total_min": 42
       },
       "composition": [
         {
@@ -70884,7 +71049,7 @@
         },
         {
           "ingredient": "white_rice_raw_seed_unenriched",
-          "quantity": 300,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -70938,7 +71103,7 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
+          "ingredient": "lemon_juice",
           "quantity": 30,
           "unit": "ml",
           "meta": {
@@ -70965,6 +71130,50 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 12,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 2.5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 300,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -71033,7 +71242,8 @@
       "search_tokens": [
         "(tahini)",
         "(vegan)",
-        "30 minutes",
+        "45 minutes",
+        "ail",
         "blanc",
         "bol",
         "bowl",
@@ -71041,8 +71251,10 @@
         "chickpea",
         "citron",
         "coeliaque",
+        "cumin",
         "falafel",
         "frying",
+        "garlic",
         "gluten free",
         "intermediaire",
         "leger",
@@ -71054,9 +71266,9 @@
         "minceur",
         "moyen",
         "olive",
+        "parsley",
+        "persil",
         "pois",
-        "quick",
-        "rapide",
         "rice",
         "riz",
         "salt",
@@ -71084,11 +71296,11 @@
       "_chef_note": "La combinaison de textures et de saveurs donne un plat équilibré et savoureux.",
       "description": "Plat levantine croustillant et coloré, avec des falafels dorés, du riz al dente et des légumes frais croquants, le tout lié par une sauce tahini onctueuse et parfumée.",
       "instructions": [
-        "Étape 1 : Cuire 300 g de riz à la méthode absorption (450 ml d'eau, 12 minutes à feu très doux à couvert). Égrainer et réserver. Le riz doit être moelleux et séparé.",
+        "Étape 1 : Cuire 200 g de riz à la méthode absorption (300 ml d'eau, 12 minutes à feu très doux à couvert). Égrainer et réserver. Le riz doit être moelleux et séparé.",
         "Étape 2 : Préparer les falafels : mixer 400 g de pois chiches (cuits ou en conserve rincés) avec 10 g d'ail, du persil, 2,5 g de cumin, 5 g de sel et un filet d'huile d'olive jusqu'à texture granuleuse qui se tient. Former des boulettes de 3 cm. Les falafels doivent être fermes et avoir une texture uniforme.",
         "Étape 3 : Cuire les falafels dans 46 ml d'huile d'olive à feu moyen-vif pendant 3 à 4 minutes par face, jusqu'à croûte brun dorée et croustillante. Les falafels doivent être dorés et émettre un son croustillant lorsqu'on les casse.",
         "Étape 4 : Préparer la sauce tahini : mélanger 46 ml de tahini avec 30 ml de jus de citron, une gousse d'ail râpée et 2 à 3 cuillerées d'eau froide jusqu'à sauce crémeuse, lisse et qui coule en ruban. La sauce doit être lisse et avoir une texture onctueuse.",
-        "Étape 5 : Dresser les bols : déposer le riz chaud en base, répartir les feuilles de laitue lavées et essorées, les dés de tomate et les 200 g de tofu soyeux coupé en cubes. Disposer les falafels chauds par-dessus. Les bols doivent présenter une variété de couleurs et de textures.",
+        "Étape 5 : Dresser les bols : déposer le riz chaud en base, répartir les feuilles de laitue lavées et essorées, les dés de tomate et les 200 g de tofu soyeux en cuillerées. Disposer les falafels chauds par-dessus. Les bols doivent présenter une variété de couleurs et de textures.",
         "Étape 6 : Verser généreusement la sauce tahini. Chaque bol doit présenter des textures contrastées : falafels croustillants, légumes frais croquants, riz moelleux et sauce onctueuse. La sauce doit être répartie de manière uniforme.",
         "Étape 7 : Servir sans attendre, car la chaleur et le croustillant des falafels sont essentiels pour apprécier pleinement les saveurs et les textures de ce plat. Le plat doit être servi chaud, avec du riz, du pain ou une garniture de noix de coco / herbes fraîches."
       ],
@@ -71169,7 +71381,7 @@
         },
         {
           "ingredient": "coriander_raw_fresh_herb",
-          "quantity": 140,
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "herb",
@@ -71191,7 +71403,7 @@
         },
         {
           "ingredient": "sunflower_oil_plant",
-          "quantity": 500,
+          "quantity": 60,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -71321,16 +71533,12 @@
       "description": "Falafel végan croustillant à l'extérieur, tendre et parfumé à l'intérieur, préparé avec des pois chiches et des herbes fraîches, caractéristique de la cuisine méditerranéenne.",
       "instructions": [
         "Étape 1 : Faire tremper 300 g de pois chiches secs pendant 12 heures. Égoutter et sécher soigneusement pour éviter toute humidité résiduelle qui pourrait faire s'effondrer les falafels à la friture. La texture doit être sèche et non collante.",
-        "Étape 2 : Mixer par impulsions 120 g d'oignon jaune, 25 g d'ail, 20 g de persil frais, 15 g de coriandre fraîche, 6 g de cumin en graines, sel et piment avec les pois chiches. Arrêter lorsque la texture est granuleuse comme du sable humide, sans réduire en pâte. Il faut sentir les grains de pois chiches sous les doigts.",
-        "Étape 3 : Incorporer 125 g de coriandre fraîche et réfrigérer pendant 30 minutes pour raffermir l'appareil. La mixture doit être ferme mais encore malléable.",
+        "Étape 2 : Mixer par impulsions 120 g d'oignon jaune, 25 g d'ail, 20 g de persil frais, 40 g de coriandre fraîche, 6 g de cumin en graines, sel et piment avec les pois chiches. Arrêter lorsque la texture est granuleuse comme du sable humide, sans réduire en pâte. Il faut sentir les grains de pois chiches sous les doigts.",
+        "Étape 3 : Réfrigérer pendant 30 minutes pour raffermir l'appareil. La mixture doit être ferme mais encore malléable.",
         "Étape 4 : Former des boulettes de 30 g en compressant fermement. Une boulette bien formée doit tenir sans se fissurer. La surface doit être lisse et uniforme.",
-        "Étape 5 : Chauffer 500 ml d'huile de tournesol à 175°C. Frire par lots pendant 3 à 4 minutes par côté jusqu'à obtenir une croûte brun doré croustillante. Le son de la friture doit être constant et les falafels doivent flotter à la surface.",
+        "Étape 5 : Chauffer un bain d'huile de tournesol à 175°C. Frire par lots pendant 3 à 4 minutes par côté jusqu'à obtenir une croûte brun doré croustillante. Le son de la friture doit être constant et les falafels doivent flotter à la surface.",
         "Étape 6 : Égoutter sur papier absorbant. Servir sans attendre : l'extérieur doit être croustillant, l'intérieur vert, humide et parfumé. La chaleur est essentielle pour maintenir la texture croustillante.",
-        "Étape 7 : Les saveurs doivent être équilibrées, avec une dominante de pois chiches et d'herbes.",
-        "Étape 8 : Pour une présentation plus appétissante, vous pouvez ajouter des feuilles de persil frais et des tranches de citron.",
-        "Étape 9 : Pour une variante plus épicée, vous pouvez ajouter un peu de piment rouge dans la pâte à falafel.",
-        "Étape 10 : Pour conserver les falafels, vous pouvez les placer dans un contenant hermétique au réfrigérateur pendant quelques jours ou les congeler pour une utilisation ultérieure.",
-        "Étape 11 : Pour réchauffer les falafels, vous pouvez les passer au four à 180°C pendant quelques minutes ou les frire à nouveau jusqu'à ce qu'ils soient croustillants."
+        "Étape 7 : Les saveurs doivent être équilibrées, avec une dominante de pois chiches et d'herbes."
       ],
       "diet_flags": {
         "vegan": true,

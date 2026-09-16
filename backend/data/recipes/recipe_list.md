@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 205 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 203 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -711,7 +711,7 @@
 - **Sri Lankan Dhal Curry** _(diabetes_friendly, gluten_free, vegetarian, main, sri_lankan)_ — `dal_sri_lankan_dhal_curry_fae1be`
 - **Sri Lankan Jackfruit Curry** _(diabetes_friendly, gluten_free, vegetarian, main, sri_lankan)_ — `curry_sri_lankan_jackfruit_1cff43`
 - **Sri Lankan Pumpkin Curry** _(diabetes_friendly, gluten_free, vegetarian, main, sri_lankan)_ — `curry_sri_lankan_pumpkin_7f1edb`
-- **Sundubu Jjigae** _(diabetes_friendly, gluten_free, high_protein, main, korean)_ — `egg_sundubu_jjigae_bc21e0`
+- **Sundubu Jjigae** _(diabetes_friendly, high_protein, main, korean)_ — `egg_sundubu_jjigae_bc21e0`
 - **Sundubu Tofu Stew** _(diabetes_friendly, gluten_free, high_protein, main, korean)_ — `stew_sundubu_tofu_stew_ebe50e`
 - **Sushi** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, japanese)_ — `rice_vegetable_sushi_9aad8a`
 
@@ -781,9 +781,9 @@
 - **Varenyky Pomme de Terre** _(main, ukrainian)_ — `main_varenyky_pomme_de_terre_0bb7cf` 🔁 doublon possible : Varenyky Pomme de Terre (Vegan)
 - **Varenyky Pomme de Terre (Vegan)** _(snack, ukrainian)_ — `snack_varenyky_pomme_de_terre_v_8b6240` 🔁 doublon possible : Varenyky Pomme de Terre
 - **Velouté d'Asperges** _(gluten_free, nut_free, soup, french)_ — `soup_veloute_d_asperges_7da98f`
+- **Velouté de butternut en verrine** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, starter, french)_ — `entry_veloute_potimarron_en_ver_e5a2ca`
 - **Velouté de Céleri-Rave** _(gluten_free, soup, french)_ — `soup_veloute_de_celeri_rave_b33921`
-- **Velouté de Potimarron** _(gluten_free, kid_friendly, nut_free, soup, french)_ — `soup_veloute_de_potimarron_776ea1` 🔁 doublon possible : Velouté Potimarron en Verrine
-- **Velouté Potimarron en Verrine** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, starter, french)_ — `entry_veloute_potimarron_en_ver_e5a2ca` 🔁 doublon possible : Velouté de Potimarron
+- **Velouté de Potimarron** _(gluten_free, kid_friendly, nut_free, soup, french)_ — `soup_veloute_de_potimarron_776ea1`
 - **Verrines Avocat Mangue** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, international)_ — `entry_verrines_avocat_mangue_c5f8c6`
 - **Vichyssoise** _(gluten_free, kid_friendly, nut_free, soup, french)_ — `soup_vichyssoise_d28d4b`
 - **Vinaigrette** _(gluten_free, vegan, vegetarian, sauce, french)_ — `sauce_vinaigrette_174a79`

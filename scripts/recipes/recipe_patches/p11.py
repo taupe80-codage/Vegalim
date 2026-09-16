@@ -1,0 +1,160 @@
+"""Lot 11 : plats aux œufs (okonomiyaki → vareniki) et entrées (blinis → fleurs de courgette)."""
+
+PATCHES = {
+    "egg_okonomiyaki_c105e0": [
+        ("add", "base_mayonnaise_0d3e4e", 30, "g", "condiment"),
+        ("txt", "Mélanger 200g de farine, 60ml de lait, 1 œuf, 400g de chou vert émincé et les garnitures.",
+         "Mélanger 200g de farine, 60ml de lait, 55 g d'œuf et 400g de chou vert émincé."),
+        ("txt", "Nacrer la surface avec 60ml de sauce okonomiyaki, émulsionner avec une mayonnaise japonaise.",
+         "Étaler 60ml de sauce okonomiyaki sur la galette, puis ajouter un filet de mayonnaise (30 g)."),
+        ("txt", "Parsemer de 5g de katsuobushi ciselé et 60g d'oignons verts julienne, servir sans attendre pour préserver la texture croustillante de la galette dans une assiette préchauffée.",
+         "Parsemer de 5g d'algues séchées émiettées et de 60g d'oignons verts émincés, puis servir sans attendre."),
+    ],
+    # le texte remplaçait les œufs par des graines de lin
+    "egg_omelette_nature_d72ed2": [
+        ("steps", [
+            "Casser 220 g d'œufs dans un bol, ajouter 2 g de sel et 1 g de poivre, puis battre à la fourchette.",
+            "Faire fondre 20 g de beurre dans une poêle antiadhésive à feu moyen-vif, jusqu'à ce qu'il mousse.",
+            "Verser les œufs et remuer immédiatement pendant 20 secondes pour répartir la prise.",
+            "Arrêter de remuer, incliner la poêle et laisser prendre 1 minute : la surface doit rester légèrement baveuse.",
+            "Plier l'omelette en rouleau et servir aussitôt.",
+        ]),
+    ],
+    "egg_pain_au_fromage_bresilien_603bf5": [
+        ("ing", "cornstarch_flour", "tapioca_raw_dried"),
+        ("ing", "goat_cheese_fresh", "queso_fresco_block_cow"),
+        ("txt", "150 g de fromage de chèvre demi-sec râpé finement", "150 g de fromage frais type minas râpé"),
+    ],
+    "egg_pita_aux_epinards_f1f6ff": [
+        ("qty", "yellow_onion_raw", 150),
+        ("qty", "table_salt_unenriched", 2),
+        ("txt", "Faites revenir 300g d'oignon jaune haché", "Faites revenir 150g d'oignon jaune haché"),
+    ],
+    # les œufs n'étaient jamais utilisés : le texte parlait de tofu soyeux
+    "egg_quiche_lorraine_vegetarienne_77343c": [
+        ("del", "tofu_plain_pre_packaged"),
+        ("qty", "onion_raw", 150),
+        ("qty", "table_salt_unenriched", 3),
+        ("txt", "Faire revenir 300 g d'oignon jaune", "Faire revenir 150 g d'oignon jaune"),
+        ("txt", "mélanger 200 g de tofu soyeux écrasé, 200 ml de crème de lait et 5 g de sel de mer", "battre 220 g d'œufs avec 200 ml de crème et 3 g de sel"),
+        ("txt", "puis verser le mélange de tofu et de crème de lait", "puis verser le mélange œufs-crème"),
+        ("txt", "jusqu'à ce que la surface soit dorée et que la lame d'un couteau ressorte sèche", "jusqu'à ce que la surface soit dorée et le centre juste pris"),
+    ],
+    "egg_shakshuka_eb137b": [
+        ("qty", "onion_raw", 150),
+        ("txt", "Saisir l'oignon jaune à 300 g", "Saisir l'oignon à 150 g"),
+        ("txt", "laisser réduire pendant 12 minutes à 160°C", "laisser réduire pendant 12 minutes à feu moyen"),
+    ],
+    "egg_slovak_potato_dumplings_e85ebb": [
+        ("qty", "egg_raw", 110),
+        ("steps", [
+            "Cuire 600 g de pommes de terre à l'eau bouillante salée pendant 25 minutes, puis les égoutter et les peler encore chaudes.",
+            "Les écraser au presse-purée, puis incorporer 200 g de farine, 110 g d'œufs et une pincée de sel, jusqu'à obtenir une pâte homogène.",
+            "Former des boulettes de 40 g, puis les plonger dans une grande casserole d'eau bouillante salée.",
+            "Cuire 8 à 10 minutes : les dumplings sont prêts quand ils remontent et restent 2 minutes en surface.",
+            "Égoutter et servir chauds, nappés de 40 g de beurre fondu et de 150 g de fromage blanc.",
+        ]),
+    ],
+    "egg_sopa_paraguaya_43987c": [
+        ("qty", "parmesan_grated_dried_cow", 150),
+        ("serv", 6),
+        ("txt", "Ajouter 100 g de parmesan râpé.", "Ajouter le reste du fromage râpé."),
+        ("txt", "mélanger les ingrédients secs: 200 g de masa harina, 150 g de parmesan râpé", "mélanger les ingrédients secs : 200 g de masa harina, 100 g de parmesan râpé"),
+    ],
+    "egg_spanakopita_f5da1b": [
+        ("add", "garlic_raw", 9, "g", "aromatic"),
+        ("add", "nutmeg_spice", 1, "g", "spice"),
+        ("qty", "table_salt_unenriched", 2),
+        ("qty", "yellow_onion_raw", 150),
+        ("txt", "Faire revenir 300g d'oignon jaune cru", "Faire revenir 150g d'oignon jaune"),
+        ("txt", "avec 150g de fromage râpé, 2 œufs préparés", "avec 150g de feta émiettée, 220 g d'œufs battus"),
+        ("txt", "dans un moule préalablement huilé avec du beurre doux", "dans un moule beurré"),
+        ("txt", " accompagnée d'un peu de poivre noir et de sel de table, dans des assiettes préchauffées", ""),
+    ],
+    "egg_sundubu_jjigae_bc21e0": [
+        ("qty", "green_zucchini_squash_raw", 200),
+        ("qty", "onion_raw", 150),
+        ("qty", "table_salt_unenriched", 2),
+        ("flag", "gluten_free", False),  # gochujang : contient du blé
+        ("txt", "500g de courgette en dés", "200g de courgette en dés"),
+        ("txt", "Ajouter 200g de tofu ferme émietté et cuire pendant 1 minute à feu doux, en veillant à ce que le tofu soit bien réparti dans le bouillon.",
+         "Ajouter 200g de tofu ferme émietté, casser les 220 g d'œufs dans le bouillon frémissant et cuire 2 minutes à feu doux."),
+        ("txt", "Assaisonner avec 5g de sel", "Assaisonner avec 2g de sel"),
+    ],
+    "egg_tortilla_espa_ola_51a108": [
+        ("qty", "onion_raw", 150),
+        ("txt", "les ciseler en julienne de 3 mm. Blanchir pendant 2 minutes à feu vif, en observant la texture tendre et en vérifiant que les pommes de terre sont légèrement ramollies.",
+         "les couper en fines rondelles de 3 mm."),
+        ("txt", "faire nacrer 300 g d'oignons jaunes", "faire fondre 150 g d'oignons"),
+    ],
+    "egg_vareniki_53686a": [
+        ("qty", "egg_raw", 110),
+        ("add", "water", 120, "ml", "liquid"),
+        ("txt", "mélangeant 200g de farine de blé, 220g d'œuf, 40g de beurre et 120ml d'eau, puis pétrissez pendant 8 minutes à feu doux",
+         "mélangeant 200g de farine de blé, 110g d'œuf, 40g de beurre et 120ml d'eau, puis pétrissez pendant 8 minutes"),
+        ("txt", "écrasez-les avec 150g de fromage blanc, 20g de beurre et des épices", "écrasez-les avec 150g de fromage blanc, 20g de beurre et 150 g d'oignon revenu"),
+    ],
+    "entry_blinis_sarrasin_vegan_09648c": [
+        ("txt", "Fouetter 250ml de lait d'avoine tiède et 15ml de vinaigre de cidre dans un autre saladier, en les incorporant pour obtenir un mélange lisse, puis laisser reposer pendant 5 minutes pour permettre à la levure de s'activer.",
+         "Délayer 5g de levure fraîche dans 250ml de lait d'avoine tiède avec 15ml de vinaigre de cidre, puis laisser reposer 5 minutes."),
+        ("step-", "Ajouter 5g de levure instant"),
+        ("txt", "80g de beurre d'acajou", "80g de purée de cajou"),
+    ],
+    "entry_brandade_de_betterave_113c4a": [
+        ("qty", "olive_oil_plant", 30),
+        ("ing", "lemon", "lemon_juice", 40, "ml"),
+        ("add", "table_salt_unenriched", 3, "g", "seasoning"),
+        ("txt", "4ml d'huile d'olive et le jus de 100g de citron frais", "30ml d'huile d'olive et 40 ml de jus de citron"),
+        ("txt", "Vérifier que la couleur soit uniformément dorée, ajustant l'assaisonnement si nécessaire", "Ajuster l'assaisonnement si nécessaire"),
+        ("time", 15, 15, 45),
+    ],
+    "entry_carottes_rapees_e66bae": [
+        ("qty", "olive_oil_plant", 30),
+        ("qty", "cider_vinegar_liquid", 15),
+        ("add", "table_salt_unenriched", 2, "g", "seasoning"),
+        ("txt", "mélanger 3ml d'huile d'olive, 1ml de vinaigre de cidre et 4,5ml de moutarde de Dijon",
+         "mélanger 30ml d'huile d'olive, 15ml de vinaigre de cidre, 2g de sel et 4,5ml de moutarde de Dijon"),
+    ],
+    "entry_carpaccio_betterave_agrum_ee8b66": [
+        ("ing", "beetroot_raw_root", "beetroot_cooked_root", 500),
+        ("txt", "Préparez les betteraves cuites en les tranchant en fines lamelles à la mandoline. Vous pouvez également les faire cuire à la vapeur pour préserver leurs couleurs et leurs saveurs.",
+         "Trancher 500 g de betteraves cuites en fines lamelles à la mandoline."),
+    ],
+    "entry_celeri_remoulade_d5d1b9": [
+        ("qty", "base_mayonnaise_0d3e4e", 80),
+        ("qty", "sweet_and_sour_gherkin_flavored_pre_packaged", 30),
+        ("ing", "lemon", "lemon_juice", 40, "ml"),
+        ("add", "table_salt_unenriched", 2, "g", "seasoning"),
+        ("txt", "mélanger 4 grammes de mayonnaise avec 9,1 millilitres de moutarde de Dijon, 100 grammes de jus de citron, 20 grammes de câpres égouttées et 3 grammes de cornichons hachés finement",
+         "mélanger 80 grammes de mayonnaise avec 9,1 millilitres de moutarde de Dijon, 40 ml de jus de citron, 20 grammes de câpres égouttées et 30 grammes de cornichons hachés finement"),
+        ("txt", "Servir bien frais, en vérifiant la coloration, jusqu'à ce que le céleri soit d'une belle couleur verte et le persil soit encore frais et parfumé.",
+         "Servir bien frais."),
+    ],
+    "entry_champignons_a_la_grecque_efe65f": [
+        ("add", "water", 300, "ml", "liquid"),
+        ("add", "bay_leaf_spice", 1, "g", "herb"),
+        ("qty", "coriander_spice_seed", 3),
+        ("qty", "olive_oil_plant", 60),
+        ("txt", "porter à ébullition 300 ml d'eau avec 100 ml d'huile d'olive", "porter à ébullition 300 ml d'eau avec 60 ml d'huile d'olive"),
+        ("txt", "la sauce acidulée et parfumée à la coriandre. Servir sans attendre pour conserver la fraîcheur des saveurs.", "la sauce acidulée et parfumée."),
+    ],
+    "entry_chips_de_legumes_au_four_b43876": [
+        ("txt", "Servir chaud, en présentant les chips dans un bol, accompagné d'une salade verte.", "Servir à température ambiante, dans un bol."),
+    ],
+    "entry_de_chevre_chaud_a407cd": [
+        ("txt", "Mélanger la roquette, le mesclun, les noix", "Mélanger la roquette, la laitue, les noix"),
+    ],
+    "entry_feuilletes_champignons_260af3": [
+        ("add", "table_salt_unenriched", 3, "g", "seasoning"),
+        ("add", "black_pepper_spice", 1, "g", "seasoning"),
+        ("txt", "tendres et fragrans", "tendres et parfumés"),
+        ("txt", "Faites suer 60g d'échalote hachée dans l'beurre", "Faites suer 60g d'échalote hachée dans le beurre"),
+        ("time", 20, 30, 20),
+    ],
+    "entry_fleurs_de_courgette_farci_c7f460": [
+        ("qty", "vegetable_oil_plant", 60),
+        ("txt", "dans 500ml d'huile à 180°C", "dans un bain d'huile à 180°C"),
+        ("txt", "Servez chaud, dans des assiettes préchauffées, pour préserver la texture croustillante: les fleurs de courgette doivent être servies immédiatement pour profiter de leur texture croustillante et de leur saveur délicate.",
+         "Servez sans attendre, pour profiter de la texture croustillante et de la saveur délicate des fleurs."),
+    ],
+}
