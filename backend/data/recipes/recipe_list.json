@@ -13,7 +13,7 @@
       "gluten"
     ],
     "servings": 4,
-    "time_total": 27,
+    "time_total": 42,
     "confidence": 1.0,
     "description": "Bolani afghan croustillant, à base de farine, de pommes de terre tendres et d'oignons parfumés, avec une mie aérée et une croute craquante, typique de la cuisine afghane.",
     "composition": [
@@ -38,11 +38,6 @@
         "unit": "g"
       },
       {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
         "ingredient": "coriander_spice_seed",
         "quantity": 3,
         "unit": "g"
@@ -61,6 +56,11 @@
         "ingredient": "black_pepper_spice",
         "quantity": 2,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 120,
+        "unit": "ml"
       }
     ],
     "n_instructions": 6,
@@ -180,12 +180,12 @@
     "composition": [
       {
         "ingredient": "red_bell_pepper_raw",
-        "quantity": 320,
+        "quantity": 800,
         "unit": "g"
       },
       {
         "ingredient": "eggplant_raw",
-        "quantity": 600,
+        "quantity": 300,
         "unit": "g"
       },
       {
@@ -335,6 +335,11 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
       }
     ],
     "n_instructions": 8,
@@ -406,6 +411,16 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 100,
+        "unit": "ml"
       }
     ],
     "n_instructions": 6,
@@ -505,8 +520,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 50,
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 80,
         "unit": "g"
       },
       {
@@ -543,6 +558,11 @@
         "ingredient": "green_salad_raw_plain",
         "quantity": null,
         "unit": "1 portion"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 250,
+        "unit": "ml"
       }
     ],
     "n_instructions": 6,
@@ -569,7 +589,7 @@
     "allergens": [
       "tree_nuts"
     ],
-    "servings": 5,
+    "servings": 4,
     "time_total": 43,
     "confidence": 1.0,
     "description": "Arepas croustillants à la croûte dorée, au cœur moelleux et parfumés à l'ail, inspirés de la cuisine végétalienne latino-américaine, avec une texture crémeuse due au fromage végétal fondu à l'intérieur.",
@@ -623,9 +643,14 @@
         "ingredient": "tomato_sauce_salted_canned",
         "quantity": null,
         "unit": "2 cuillères à soupe"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 250,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -844,7 +869,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -863,7 +888,7 @@
         "unit": "une tranche"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -910,7 +935,7 @@
       },
       {
         "ingredient": "nutritional_yeast_flakes",
-        "quantity": 90,
+        "quantity": 20,
         "unit": "g"
       },
       {
@@ -932,6 +957,11 @@
         "ingredient": "green_salad_raw_plain",
         "quantity": null,
         "unit": "1 portion"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
       }
     ],
     "n_instructions": 8,
@@ -1008,7 +1038,7 @@
       },
       {
         "ingredient": "cornstarch",
-        "quantity": 20,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -1350,7 +1380,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -1411,7 +1441,7 @@
       },
       {
         "ingredient": "nutritional_yeast_flakes",
-        "quantity": 90,
+        "quantity": 20,
         "unit": "g"
       },
       {
@@ -1426,7 +1456,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -1544,17 +1574,17 @@
       },
       {
         "ingredient": "white_sugar",
-        "quantity": 10,
+        "quantity": 40,
         "unit": "g"
       },
       {
         "ingredient": "sunflower_oil_plant",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 1,
         "unit": "g"
       },
       {
@@ -1563,7 +1593,7 @@
         "unit": "une portion"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -1912,9 +1942,9 @@
         "unit": "ml"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
@@ -1925,6 +1955,11 @@
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
       }
     ],
     "n_instructions": 8,
@@ -2054,7 +2089,7 @@
     "id": "main_beignets_de_legumes_indon_e74ee9",
     "title": "Beignets de Légumes Indonésiens",
     "cuisine": "indonesian",
-    "dish_type": "main",
+    "dish_type": "snack",
     "vegan": true,
     "diet": [
       "vegan",
@@ -2095,7 +2130,7 @@
       },
       {
         "ingredient": "sunflower_oil_plant",
-        "quantity": 500,
+        "quantity": 60,
         "unit": "ml"
       },
       {
@@ -2107,6 +2142,11 @@
         "ingredient": "spinach_raw_baby",
         "quantity": null,
         "unit": "une portion"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 200,
+        "unit": "ml"
       }
     ],
     "n_instructions": 6,
@@ -2196,7 +2236,7 @@
         "unit": "g"
       },
       {
-        "ingredient": "coriander_spice_leaf_dried",
+        "ingredient": "coriander_spice_seed",
         "quantity": 3,
         "unit": "g"
       },
@@ -2219,6 +2259,11 @@
         "ingredient": "white_pita_bread",
         "quantity": null,
         "unit": "2-3 pains"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
       }
     ],
     "n_instructions": 7,
@@ -2811,7 +2856,7 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 43,
+    "time_total": 548,
     "confidence": 1.0,
     "description": "Bouillon de fèves sèches crémeux, parfumé à l'ail et au cumin, offrant une texture lisse et une saveur parfumée, typique de la cuisine marocaine, où les fèves se détachent facilement avec une fourchette et la lame ressort sèche.",
     "composition": [
@@ -2841,14 +2886,19 @@
         "unit": "ml"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 900,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -4068,7 +4118,7 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 52,
+    "time_total": 77,
     "confidence": 1.0,
     "description": "Ragoût de légumes grecs, où les aubergines, courgettes et pommes de terre fondent en bouche, parfumés d'ail et d'origan — technique traditionnelle de la cuisine méditerranéenne.",
     "composition": [
@@ -4612,7 +4662,7 @@
     "id": "main_bulgarian_shopska_salad_d473eb",
     "title": "Bulgarian Shopska Salad",
     "cuisine": "bulgarian",
-    "dish_type": "main",
+    "dish_type": "starter",
     "vegan": false,
     "diet": [
       "diabetes_friendly",
@@ -4665,7 +4715,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -5266,7 +5316,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       }
     ],
@@ -5481,6 +5531,11 @@
         "ingredient": "basil_fresh_herb",
         "quantity": 20,
         "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
       }
     ],
     "n_instructions": 8,
@@ -5550,7 +5605,7 @@
     "composition": [
       {
         "ingredient": "carrot_raw",
-        "quantity": 200,
+        "quantity": 600,
         "unit": "g"
       },
       {
@@ -5572,6 +5627,11 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 1,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 50,
+        "unit": "ml"
       }
     ],
     "n_instructions": 6,
@@ -5908,9 +5968,9 @@
         "unit": "ml"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
       },
       {
         "ingredient": "olive_oil_plant",
@@ -5931,9 +5991,14 @@
         "ingredient": "black_pepper_spice",
         "quantity": 2,
         "unit": "g"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 2,
+        "unit": "g"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -7053,6 +7118,11 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
       }
     ],
     "n_instructions": 6,
@@ -7183,8 +7253,13 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 2,
+        "quantity": 20,
         "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
       }
     ],
     "n_instructions": 6,
@@ -8497,12 +8572,12 @@
     "composition": [
       {
         "ingredient": "blueberry",
-        "quantity": 200,
+        "quantity": 500,
         "unit": "g"
       },
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -8512,12 +8587,12 @@
       },
       {
         "ingredient": "white_sugar",
-        "quantity": 10,
+        "quantity": 60,
         "unit": "g"
       },
       {
         "ingredient": "butter_salted",
-        "quantity": 40,
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -8804,7 +8879,7 @@
     "id": "main_crepe_complete_1d0fb7",
     "title": "Crêpe Complète",
     "cuisine": "french_breton",
-    "dish_type": "breakfast",
+    "dish_type": "main",
     "vegan": false,
     "diet": [
       "gluten_free",
@@ -8849,6 +8924,16 @@
       {
         "ingredient": "butter_sup80pct",
         "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 500,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
         "unit": "g"
       }
     ],
@@ -11002,7 +11087,7 @@
       "sulphites"
     ],
     "servings": 4,
-    "time_total": 200,
+    "time_total": 80,
     "confidence": 0.9,
     "description": "Daube provençale végétarienne : aubergines, courgettes et carottes marinés au vin rouge, mijotés avec olives et zeste d'orange, présentant une texture fondante et une sauce sirupeuse.",
     "composition": [
@@ -11038,7 +11123,7 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 4,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -11771,6 +11856,11 @@
         "ingredient": "nutmeg_spice",
         "quantity": 0.5,
         "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
       }
     ],
     "n_instructions": 7,
@@ -11791,7 +11881,7 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 59,
+    "time_total": 97,
     "confidence": 1.0,
     "description": "Plat de légumes espagnol par marinade, où les aubergines, poivrons et oignons confits développent une chair fondante et des arômes concentrés, avec une texture tendre et des couleurs vives — origine culinaire méditerranéenne.",
     "composition": [
@@ -12238,7 +12328,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -12328,7 +12418,7 @@
     "composition": [
       {
         "ingredient": "french_bean_raw",
-        "quantity": 300,
+        "quantity": 600,
         "unit": "g"
       },
       {
@@ -12490,9 +12580,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "orange_raw",
-        "quantity": 180,
-        "unit": "g"
+        "ingredient": "orange_raw_juice_fresh",
+        "quantity": 120,
+        "unit": "ml"
       },
       {
         "ingredient": "bay_leaf_spice",
@@ -12517,6 +12607,16 @@
       {
         "ingredient": "olive_oil_extra_virgin_plant",
         "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 300,
         "unit": "ml"
       }
     ],
@@ -13105,7 +13205,7 @@
     "composition": [
       {
         "ingredient": "leeks_raw",
-        "quantity": 1200,
+        "quantity": 800,
         "unit": "g"
       },
       {
@@ -13132,9 +13232,14 @@
         "ingredient": "nutmeg_spice",
         "quantity": 0.5,
         "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -13434,7 +13539,7 @@
         "unit": "g"
       },
       {
-        "ingredient": "fava_bean_dried",
+        "ingredient": "broadbeans_fava_beans_raw_fresh",
         "quantity": 150,
         "unit": "g"
       },
@@ -13464,9 +13569,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon",
-        "quantity": 50.0,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 20,
+        "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
@@ -13653,7 +13758,7 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 753,
+    "time_total": 813,
     "confidence": 1.0,
     "description": "Ful Medames, plat traditionnel égyptien à base de fèves, oignons et ail, cuit à la perfection et assaisonné de cumin et de paprika, offrant une texture crémeuse et une saveur épicée.",
     "composition": [
@@ -13673,9 +13778,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
       },
       {
         "ingredient": "cumin_spice_seed",
@@ -13700,6 +13805,11 @@
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
         "unit": "g"
       }
     ],
@@ -14516,6 +14626,16 @@
         "ingredient": "butter_sup80pct",
         "quantity": 20,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 500,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
       }
     ],
     "n_instructions": 7,
@@ -14596,6 +14716,16 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1500,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 20,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -15307,7 +15437,7 @@
       "eggs"
     ],
     "servings": 4,
-    "time_total": 60,
+    "time_total": 80,
     "confidence": 0.93,
     "description": "Boulettes italiennes de pomme de terre et farine, moelleuses et légèrement fermes.",
     "composition": [
@@ -15998,6 +16128,11 @@
       {
         "ingredient": "black_pepper_spice",
         "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutmeg_spice",
+        "quantity": 0.5,
         "unit": "g"
       }
     ],
@@ -17311,13 +17446,18 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 180,
+        "unit": "ml"
       }
     ],
     "n_instructions": 5,
@@ -50914,7 +51054,7 @@
       "soy"
     ],
     "servings": 4,
-    "time_total": 31,
+    "time_total": 16,
     "confidence": 1.0,
     "description": "Épinards coréens blanchis à la perfection, tendres et parfumés, avec une texture croquante et une saveur intense, typique de la cuisine coréenne, où les notes d'ail et de piment coréen se marient avec la douceur des épinards.",
     "composition": [

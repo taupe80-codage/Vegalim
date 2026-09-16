@@ -37,7 +37,7 @@
 - **Batata Harra** _(gluten_free, vegan, vegetarian, main, american)_ — `main_batata_harra_c2de57`
 - **Baursak** _(snack, kazakh)_ — `egg_baursak_68b192`
 - **Beignet de Riz Népalais** _(gluten_free, vegetarian, main, nepali)_ — `rice_beignet_de_riz_nepalais_7ac83e`
-- **Beignets de Légumes Indonésiens** _(vegan, vegetarian, main, indonesian)_ — `main_beignets_de_legumes_indon_e74ee9`
+- **Beignets de Légumes Indonésiens** _(vegan, vegetarian, snack, indonesian)_ — `main_beignets_de_legumes_indon_e74ee9`
 - **Beurre de Cacahuète** _(vegan, vegetarian, gluten_free, sauce, international)_ — `base_peanut_butter_81c37b`
 - **Bhindi Masala** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, indian)_ — `main_bhindi_masala_ade89d`
 - **Bibim Guksu** _(main, korean)_ — `pasta_bibim_guksu_9c8f25`
@@ -70,7 +70,7 @@
 - **Bruschetta Tomate Basilic** _(kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, italian)_ — `entry_bruschetta_tomate_basilic_715b9b`
 - **Buddha Bowl** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, japanese)_ — `dal_buddha_bowl_4ffca3`
 - **Buddha's Delight** _(diabetes_friendly, high_protein, vegan, vegetarian, main, chinese)_ — `protein_buddhas_delight_f736c7`
-- **Bulgarian Shopska Salad** _(diabetes_friendly, gluten_free, main, bulgarian)_ — `main_bulgarian_shopska_salad_d473eb` 🔁 doublon possible : Bulgarian Shopska Salad (Vegan)
+- **Bulgarian Shopska Salad** _(diabetes_friendly, gluten_free, starter, bulgarian)_ — `main_bulgarian_shopska_salad_d473eb` 🔁 doublon possible : Bulgarian Shopska Salad (Vegan)
 - **Bulgarian Shopska Salad (Vegan)** _(diabetes_friendly, gluten_free, low_calorie, nut_free, raw, main, bulgarian)_ — `salad_bulgarian_shopska_salad_v_adc716` 🔁 doublon possible : Bulgarian Shopska Salad
 - **Bulgogi Tofu** _(diabetes_friendly, high_protein, vegan, vegetarian, side, korean)_ — `protein_bulgogi_tofu_fc5de9`
 - **Bun** _(high_protein, vegan, vegetarian, main, vietnamese)_ — `protein_bun_f5c7db`
@@ -135,7 +135,7 @@
 - **Crème de Coco** _(vegetarian, gluten_free, sauce, thai)_ — `base_coconut_cream_10c770`
 - **Crème de Soja Maison** _(vegan, vegetarian, lactose_free, gluten_free, sauce, vegan_cuisine)_ — `base_soy_cream_4dc027`
 - **Crème Fraîche** _(vegetarian, condiment, french)_ — `base_creme_fraiche_b536c1`
-- **Crêpe Complète** _(gluten_free, kid_friendly, nut_free, breakfast, french_breton)_ — `main_crepe_complete_1d0fb7`
+- **Crêpe Complète** _(gluten_free, kid_friendly, nut_free, main, french_breton)_ — `main_crepe_complete_1d0fb7`
 - **Crêpe Coréenne aux Oignons Verts** _(main, korean)_ — `egg_crepe_coreenne_aux_oignons_ver_356ac2` 🔁 doublon possible : Crêpe Coréenne aux Oignons Verts (Vegan)
 - **Crêpe Coréenne aux Oignons Verts (Vegan)** _(kid_friendly, lactose_free, nut_free, snack, korean)_ — `snack_crepe_coreenne_aux_oignon_a45536` 🔁 doublon possible : Crêpe Coréenne aux Oignons Verts
 - **Crêpe de Sarrasin** _(vegetarian, base, french)_ — `base_buckwheat_crepe_03db22`
