@@ -127912,10 +127912,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
+        "prep_active_min": 10,
         "prep_passive_min": 15,
-        "cook_min": 10,
-        "total_min": 36
+        "cook_min": 0,
+        "total_min": 25
       },
       "composition": [
         {
@@ -128042,7 +128042,7 @@
         }
       },
       "search_tokens": [
-        "45 minutes",
+        "30 minutes",
         "asia",
         "asiatique",
         "assembly",
@@ -128065,7 +128065,8 @@
         "light",
         "low calorie",
         "minceur",
-        "moyen",
+        "quick",
+        "rapide",
         "salad",
         "salade",
         "sans produit animal",
@@ -128090,12 +128091,11 @@
       "_chef_note": "Cette salade est parfaite pour un repas léger et rafraîchissant.",
       "description": "Salade japonaise de concombre croquant, parfumée au gingembre frais et à la sauce soja, sur fond de vinaigre de riz, idéale pour accompagner les plats traditionnels nippons.",
       "instructions": [
-        "Étape 1 : Julienne 350g de concombre en fines rondelles de 2 mm, puis blanchir pendant 2 minutes à feu vif, jusqu'à ce qu'elles soient tendres mais encore croquantes.",
-        "Étape 2 : Saisir les rondelles de concombre dans une poêle chaude avec 15ml d'huile de sésame, jusqu'à dorure blonde, en les faisant sauter régulièrement pour une cuisson uniforme.",
-        "Étape 3 : Préparer la vinaigrette en émulsionnant 30ml de vinaigre de riz, 45ml de sauce soja et 15ml d'huile de sésame, en fouettant énergiquement pour obtenir une texture lisse et homogène.",
-        "Étape 4 : Incorporer 11,2g de gingembre frais râpé finement dans la vinaigrette, puis réduire pendant 2 minutes à feu moyen, en remuant constamment, jusqu'à ce que le mélange soit parfumé et légèrement épaissi.",
-        "Étape 5 : Mélanger les rondelles de concombre avec la vinaigrette, puis laisser mariner pendant 15 minutes à température ambiante, en les laissant reposer pour que les saveurs puissent pénétrer profondément dans le concombre.",
-        "Étape 6 : Garnir de 20g de graines de sésame grillées et servir frais, en veillant à ce que les graines soient encore croquantes pour ajouter une texture agréable à la salade."
+        "Étape 1 : Tailler 350 g de concombre en fines rondelles de 2 mm, les laisser dégorger 10 minutes dans une passoire, puis les presser doucement pour éliminer l'eau.",
+        "Étape 2 : Préparer la vinaigrette en fouettant 30 ml de vinaigre de riz, 45 ml de sauce soja et 30 ml d'huile de sésame, jusqu'à obtenir une émulsion lisse.",
+        "Étape 3 : Incorporer 11 g de gingembre frais râpé finement à la vinaigrette.",
+        "Étape 4 : Mélanger les rondelles de concombre à la vinaigrette, puis laisser mariner 15 minutes au frais.",
+        "Étape 5 : Garnir de 20 g de graines de sésame torréfiées et servir frais."
       ],
       "diet_flags": {
         "vegan": true,
@@ -128419,7 +128419,7 @@
       "composition": [
         {
           "ingredient": "white_rice_short_grain_seed_dried",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -128441,7 +128441,7 @@
         },
         {
           "ingredient": "potato_raw_flesh",
-          "quantity": 600,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -128475,7 +128475,7 @@
         },
         {
           "ingredient": "water",
-          "quantity": 750.0,
+          "quantity": 1400,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -128495,7 +128495,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -128511,6 +128511,17 @@
           "meta": {
             "role": "herb",
             "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -128612,6 +128623,8 @@
         "stock",
         "table",
         "terre",
+        "tomate",
+        "tomato",
         "vegan",
         "vegetable",
         "vegetalien",
@@ -128627,13 +128640,12 @@
       "description": "Soupe persane créative à base de riz rond, carotte crue, pomme de terre crue et oignon blanc, avec une texture crémeuse et une saveur équilibrée, inspirée des traditions culinaires perses",
       "instructions": [
         "Étape 1 : Faire chauffer 25 ml d'huile d'olive extra vierge à feu moyen. Ajouter 150g d'oignon blanc émincé et le faire saisir pendant 5 minutes, jusqu'à ce qu'il devienne blond et parfumé, en remuant régulièrement.",
-        "Étape 2 : Ajouter 200g de carotte crue en julienne et 600g de pomme de terre crue en dés. Cuire pendant 8 minutes à feu moyen-vif, en remuant occasionnellement, jusqu'à ce que les légumes commencent à tendre et prennent une couleur légèrement dorée.",
-        "Étape 3 : Incorporer 300g de riz rond rincé et les épices. Cuire pendant 2 minutes en remuant constamment, jusqu'à ce que le riz soit bien enrobé des saveurs et commence à toaster légèrement.",
-        "Étape 4 : Verser 750 ml de bouillon de légumes chaud et porter à ébullition. Ensuite, enfourner pendant 25 minutes à 180°C, jusqu'à ce que le riz soit cuit et les légumes soient tendres, en vérifiant régulièrement la texture.",
+        "Étape 2 : Ajouter 200g de carotte crue en julienne et 400g de pomme de terre crue en dés. Cuire pendant 8 minutes à feu moyen-vif, en remuant occasionnellement, jusqu'à ce que les légumes commencent à tendre et prennent une couleur légèrement dorée.",
+        "Étape 3 : Incorporer 150g de riz rond rincé et les épices. Cuire pendant 2 minutes en remuant constamment, jusqu'à ce que le riz soit bien enrobé des saveurs et commence à toaster légèrement.",
+        "Étape 4 : Ajouter 300 g de tomates concassées, verser 1,4 L de bouillon de légumes chaud et porter à ébullition, puis laisser mijoter 25 minutes à couvert, jusqu'à ce que le riz soit cuit et les légumes tendres.",
         "Étape 5 : Pendant ce temps, vérifier la cuisson du riz et des pommes de terre, qui doivent commencer à se déliter légèrement pour épaissir naturellement la soupe.",
         "Étape 6 : Une fois la soupe cuite, écraser légèrement une partie des pommes de terre à la fourchette pour obtenir une texture crémeuse et homogène, en vérifiant que la soupe nappe la cuillère.",
-        "Étape 7 : Servir chaud, garni de 10g d'herbes fraîches ciselées, telles que du coriandre, et accompagné d'un filet de bouillon chaud.",
-        "Étape 8 : Présenter dans des bols préchauffés, avec une garniture de coriandre fraîche ciselée et un filet d'huile d'olive extra vierge."
+        "Étape 7 : Servir chaud, garni de 10g d'herbes fraîches ciselées, telles que du coriandre, et accompagné d'un filet de bouillon chaud."
       ],
       "diet_flags": {
         "vegan": true,
@@ -128690,7 +128702,7 @@
         },
         {
           "ingredient": "green_cabbage_raw",
-          "quantity": 400,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "vegetable",
@@ -128701,7 +128713,7 @@
         },
         {
           "ingredient": "button_mushroom_raw",
-          "quantity": 300,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -128723,7 +128735,7 @@
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -128756,7 +128768,7 @@
         },
         {
           "ingredient": "sesame_oil_plant",
-          "quantity": 45,
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -128767,7 +128779,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -128909,13 +128921,13 @@
       "_quality_score": 0.9,
       "description": "Rouleaux de printemps croustillants, préparés avec des galettes de riz séchées, des carottes crues, du chou vert, des champignons et des vermicelles de riz, avec une sauce soja émulsionnée, offrant une texture ferme et une odeur de légumes frais.",
       "instructions": [
-        "Étape 1 : Saisir les légumes (carottes crues, chou vert, oignon jaune) dans de l'huile de sésame chaude pendant 3 minutes à feu moyen-vif. Vous devriez obtenir une texture tendre et une odeur de légumes.",
-        "Étape 2 : Blanchir les carottes crues et le chou vert pendant 5 minutes dans de l'eau bouillante salée. La texture doit être tendre mais encore ferme.",
-        "Étape 3 : Nacrer les champignons de Paris dans de l'huile de sésame chaude pendant 2 minutes. Vous devriez obtenir une texture dorée et une odeur de champignons.",
-        "Étape 4 : Émulsionner la sauce soja avec de l'eau et du jus de citron pendant 1 minute. La sauce doit être lisse et avoir une odeur de soja.",
-        "Étape 5 : Réhydrater les galettes de riz séchées pendant 15-20 secondes dans de l'eau tiède. Les feuilles doivent être flexibles et prêtes à être enroulées.",
-        "Étape 6 : Rouler les spring rolls fermement en une pression continue jusqu'à dorure blonde. Vous devriez obtenir une texture croquante et une odeur de riz.",
-        "Étape 7 : Servir dans les 30 minutes avec sauce nuoc-châm. Vous pouvez ajouter des légumes ou des herbes fraîches pour plus de saveur et de fraîcheur."
+        "Étape 1 : Réhydrater 150 g de vermicelles de riz 5 minutes dans l'eau chaude, les égoutter et les couper en tronçons.",
+        "Étape 2 : Tailler la carotte en julienne, puis émincer le chou vert, les champignons et l'oignon jaune.",
+        "Étape 3 : Faire sauter les légumes 4 minutes à feu vif dans 20 ml d'huile de sésame avec 9 g d'ail haché, jusqu'à ce qu'ils soient tendres, saler avec 3 g de sel, puis laisser refroidir.",
+        "Étape 4 : Mélanger les légumes refroidis avec les vermicelles et 30 ml de sauce soja.",
+        "Étape 5 : Réhydrater les galettes de riz une par une 15 à 20 secondes dans l'eau tiède, jusqu'à ce qu'elles soient souples.",
+        "Étape 6 : Déposer la garniture au bas de chaque galette, replier les côtés et rouler serré.",
+        "Étape 7 : Servir dans les 30 minutes, avec une sauce nuoc-cham."
       ],
       "diet_flags": {
         "vegan": true,
@@ -128993,8 +129005,8 @@
           }
         },
         {
-          "ingredient": "coriander_spice_seed",
-          "quantity": 3,
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -129016,7 +129028,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -129173,13 +129185,13 @@
       "_chef_note": "Utiliser des haricots et du riz de bonne qualité pour obtenir le meilleur résultat.",
       "description": "Préparation traditionnelle de riz et haricots péruviens, caractérisée par une texture de grains séparés et une saveur parfumée due à la combinaison d'oignons caramélisés, d'ail écrasé et de coriandre moulue, typique de la cuisine péruvienne avec des notes de terre et de soleil.",
       "instructions": [
-        "Étape 1 : Faire chauffer 45 ml d'huile d'olive extra vierge dans une poêle à feu moyen-vif. Ajouter 150 g d'oignons jaunes émincés et les faire revenir pendant 3 minutes, jusqu'à ce qu'ils soient translucides et légèrement caramélisés, en libérant leur parfum sucré.",
-        "Étape 2 : Ajouter 9 g d'ail écrasé, préalablement choisi pour son arôme intense, et faire revenir pendant 2 minutes, jusqu'à ce que l'odeur d'ail se dégage et les oignons soient parfumés, en créant une base aromatique riche.",
-        "Étape 3 : Incorporer 300 g de haricots rouges cuits et faire cuire pendant 5 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que les haricots soient bien chauds et les oignons soient tendres, en conservant leur texture légèrement ferme.",
-        "Étape 4 : Ajouter 300 g de riz long grain et faire nacrer pendant 2 minutes à feu moyen-vif, en remuant constamment, jusqu'à ce que le riz soit légèrement doré et parfumé, en commençant à dévoiler son arôme naturel.",
-        "Étape 5 : Verser 750 ml de bouillon végétal et porter à ébullition, puis réduire à feu doux et cuire pendant 15 minutes, jusqu'à absorption complète du liquide et que le riz et les haricots soient tendres, en atteignant une texture crémeuse et une saveur équilibrée.",
-        "Étape 6 : Assaisonner avec 5 g de sel et 3 g de coriandre moulue, choisie pour son parfum subtil et son pouvoir d'assaisonnement, en rectifiant l'assaisonnement si nécessaire pour obtenir l'équilibre parfait.",
-        "Étape 7 : Servir sans attendre."
+        "Étape 1 : Cuire 300 g de riz long grain dans 750 ml de bouillon végétal, à couvert et à feu doux, pendant 15 minutes, puis le laisser refroidir : il doit rester légèrement collant.",
+        "Étape 2 : Chauffer 25 ml d'huile d'olive dans une poêle et faire revenir l'oignon émincé 5 minutes jusqu'à ce qu'il soit translucide, puis ajouter 9 g d'ail haché et cuire 1 minute.",
+        "Étape 3 : Ajouter 300 g de haricots rouges cuits et les écraser grossièrement à la fourchette avec l'oignon, 3 minutes à feu moyen.",
+        "Étape 4 : Mélanger la purée de haricots au riz refroidi, saler avec 3 g de sel et ajouter 10 g de coriandre fraîche ciselée.",
+        "Étape 5 : Former quatre galettes ovales bien tassées.",
+        "Étape 6 : Chauffer les 20 ml d'huile restants dans une poêle antiadhésive et dorer les galettes 4 minutes de chaque côté, jusqu'à ce qu'une croûte dorée se forme.",
+        "Étape 7 : Servir chaud, avec une salsa criolla."
       ],
       "diet_flags": {
         "vegan": true,
@@ -129465,8 +129477,8 @@
       },
       "composition": [
         {
-          "ingredient": "puffed_rice_cakes",
-          "quantity": 400,
+          "ingredient": "white_glutinous_rice_flour",
+          "quantity": 220,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -129551,6 +129563,28 @@
             "note": "Pour une touche de fraîcheur et de couleur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 400,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -129610,28 +129644,32 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "asia",
         "asiatique",
         "base_gochujang_41da6e",
         "blanc",
+        "bouillon",
         "braising",
-        "cakes",
         "coree",
         "coreen",
         "coriander",
-        "gateaux",
+        "eau",
+        "glutineux",
+        "glutinous",
         "green",
         "intermediaire",
         "korean",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
         "moyen",
         "oignon",
         "onion",
-        "puffed",
+        "potable)",
         "rice",
         "riz",
         "sans produit animal",
@@ -129640,15 +129678,17 @@
         "sesame",
         "shoyu",
         "soja",
-        "souffles",
         "soy",
+        "stock",
         "sucre",
         "sugar",
         "tteokbokki",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
         "vert",
+        "water",
         "white"
       ],
       "difficulty_level": "medium",
@@ -129658,14 +129698,13 @@
       "_chef_note": "Assurez-vous d'utiliser des gâteaux de riz frais et de les cuire à la bonne température pour obtenir la texture moelleuse parfaite.",
       "description": "Gâteaux de riz coréens fondants en sauce épicée gochujang — cuisson braisée pour obtenir une texture moelleuse et une sauce nappante, réduite et brillante, typique de la cuisine de rue coréenne.",
       "instructions": [
-        "Étape 1 : Plonger les gâteaux de riz (tteok) dans l'eau froide pendant 10 minutes pour les ramollir s'ils sont congelés, vérifiant qu'ils soient bien égouttés avant la suite de la préparation.",
-        "Étape 2 : Préparer la sauce : mélanger 30 g de gochujang, 15 g de sucre blanc et 45 ml de sauce soja, en veillant à obtenir une texture lisse et homogène.",
+        "Étape 1 : Préparer les tteok : mélanger 220 g de farine de riz gluant avec de l'eau bouillante, pétrir en pâte souple, former des bâtonnets de 6 cm et les cuire 10 minutes à la vapeur (ou utiliser 400 g de tteok du commerce, trempés 10 minutes à l'eau froide).",
+        "Étape 2 : Préparer la sauce : mélanger 30 g de gochujang, 10 g de sucre blanc et 45 ml de sauce soja, en veillant à obtenir une texture lisse et homogène.",
         "Étape 3 : Porter 400 ml de bouillon végétal à ébullition à feu vif, puis incorporer la sauce gochujang préparée, en remuant constamment pour éviter les grumeaux.",
         "Étape 4 : Ajouter les gâteaux de riz égouttés dans le bouillon ébullissant. Cuire à feu moyen pendant 8 à 10 minutes en remuant régulièrement, jusqu'à ce que les gâteaux soient fondants et la sauce soit réduite et brillante, enrobant chaque pièce de manière uniforme.",
         "Étape 5 : Ajouter des oignons émincés pour une touche de saveur, en les faisant revenir légèrement dans un peu d'huile de sésame pour les attendrir.",
         "Étape 6 : Ajouter des oignons verts émincés pour une touche de fraîcheur, en les faisant légèrement revenir avec les oignons.",
-        "Étape 7 : Assaisonner avec du sel et du poivre pour équilibrer les saveurs, en vérifiant que la sauce nappe bien la cuillère et que les gâteaux ont absorbé les saveurs de la sauce.",
-        "Étape 8 : Servir sans attendre, en accompagnant d'une garniture de feuilles de coriandre fraîche pour une touche de couleur et de fraîcheur, et en présentant dans des bols préchauffés pour conserver la chaleur."
+        "Étape 7 : Servir sans attendre, parsemé d'oignons verts émincés."
       ],
       "diet_flags": {
         "vegan": true,
@@ -129732,7 +129771,7 @@
           }
         },
         {
-          "ingredient": "spinach_raw_baby",
+          "ingredient": "carrot_raw",
           "quantity": 300,
           "unit": "g",
           "meta": {
@@ -129765,8 +129804,8 @@
           }
         },
         {
-          "ingredient": "coriander_spice_leaf_dried",
-          "quantity": 3,
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -129798,7 +129837,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -129881,6 +129920,8 @@
         "black",
         "blanc",
         "bouillon",
+        "carotte",
+        "carrot",
         "chef",
         "coeliaque",
         "complexe",
@@ -129888,10 +129929,8 @@
         "coriandre",
         "cumin",
         "eau",
-        "epinard",
         "garlic",
         "gluten free",
-        "jeunes",
         "leger",
         "legumes",
         "light",
@@ -129905,7 +129944,6 @@
         "plov",
         "poivre",
         "potable)",
-        "pousses",
         "rice",
         "riz",
         "salt",
@@ -129913,7 +129951,6 @@
         "sans produit animal",
         "sans viande",
         "sel",
-        "spinach",
         "stock",
         "table",
         "technique",
@@ -129934,12 +129971,12 @@
       "description": "Plov végétalien de Samarcande : riz blanc cuit longuement au bouillon avec oignon, ail, cumin et coriandre, grains ambrés et parfumés, avec une texture tendre et une odeur aromatique",
       "instructions": [
         "Étape 1 : Faites revenir l'oignon émincé dans l'huile d'olive vierge extra à feu moyen-vif, en remuant régulièrement, pendant environ 5 minutes, jusqu'à ce qu'il soit caramélisé et parfumé, avec une couleur dorée et un parfum sucré.",
-        "Étape 2 : Ajoutez les gousses d'ail écrasées et les épices (cumin et coriandre), puis faites sauter pendant environ 2 minutes, en remuant constamment, pour réveiller les arômes, avec un son de grésillement et une odeur piquante.",
-        "Étape 3 : Incorporez le riz blanc lavé et mélangez bien pendant 1 minute à feu doux, pour que les grains soient bien enrobés des saveurs, avec une texture crémeuse et une odeur de riz cuit.",
+        "Étape 2 : Ajoutez 300 g de carotte en bâtonnets, les gousses d'ail écrasées et 3 g de cumin, puis faites sauter pendant environ 2 minutes, en remuant constamment, pour réveiller les arômes, avec un son de grésillement et une odeur piquante.",
+        "Étape 3 : Incorporez le riz blanc lavé et mélangez bien pendant 1 minute à feu doux, pour que les grains soient bien enrobés des saveurs.",
         "Étape 4 : Couvrez le mélange de riz avec du bouillon de légumes chaud et faites cuire à feu doux, couvert, pendant environ 20 minutes, en vérifiant régulièrement la texture du riz pour éviter qu'il ne soit trop cuit, avec une consistance tendre et une odeur de riz cuit.",
-        "Étape 5 : Ajoutez les épinards crus et mélangez délicatement pour les incorporer au plov, en prenant soin de ne pas écraser les feuilles, avec une texture fraîche et une odeur d'épinards crus.",
+        "Étape 5 : Ajoutez 10 g de coriandre fraîche ciselée et mélangez délicatement.",
         "Étape 6 : Laissez reposer le plov pendant 10 minutes, pour que les saveurs se mélangent et que le riz absorbe bien le liquide, avec une texture crémeuse et une odeur de plov cuit.",
-        "Étape 7 : Servez le plov chaud, garni de gousses d'ail rôties et de feuilles d'épinards fraîches, pour un repas végétalien savoureux et équilibré, avec une présentation appétissante et une odeur de plov cuit."
+        "Étape 7 : Servez le plov chaud, garni de coriandre fraîche ciselée, pour un repas végétalien savoureux et équilibré, avec une présentation appétissante et une odeur de plov cuit."
       ],
       "diet_flags": {
         "vegan": true,
