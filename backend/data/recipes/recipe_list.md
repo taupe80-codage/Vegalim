@@ -42,7 +42,7 @@
 - **Bhindi Masala** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, indian)_ — `main_bhindi_masala_ade89d`
 - **Bibim Guksu** _(main, korean)_ — `pasta_bibim_guksu_9c8f25`
 - **Bibimbap Tofu** _(high_protein, main, korean)_ — `rice_bibimbap_tofu_a265dc`
-- **Bibimbap végétarien** _(gluten_free, main, korean)_ — `rice_bibimbap_classic_k91x2a`
+- **Bibimbap végétarien** _(main, korean)_ — `rice_bibimbap_classic_k91x2a`
 - **Bigos** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, polish)_ — `rice_bigos_497b21`
 - **Biryani** _(diabetes_friendly, gluten_free, main, indian)_ — `rice_biryani_classic_k82x7b`
 - **Biryani à la Noix de Coco** _(gluten_free, vegan, vegetarian, main, indian)_ — `rice_vegetable_biryani_160da2`
@@ -243,7 +243,7 @@
 - **Gnocchis à la Tomate** _(diabetes_friendly, vegetarian, main, italian)_ — `pasta_gnocchis_a_la_tomate_8e1632` 🔁 doublon possible : Gnocchis à la Tomate (Vegan)
 - **Gnocchis à la Tomate (Vegan)** _(lactose_free, nut_free, main, italian)_ — `pasta_gnocchis_a_la_tomate_vega_ca281e` 🔁 doublon possible : Gnocchis à la Tomate
 - **Gochujang** _(vegan, vegetarian, sauce, korean)_ — `base_gochujang_41da6e`
-- **Goi Cuon** _(diabetes_friendly, gluten_free, high_protein, vegetarian, main, vietnamese)_ — `rice_goi_cuon_efb313`
+- **Goi Cuon** _(diabetes_friendly, high_protein, vegetarian, main, vietnamese)_ — `rice_goi_cuon_efb313`
 - **Gong Bao Tofu** _(diabetes_friendly, high_protein, vegan, vegetarian, main, american)_ — `bread_gong_bao_tofu_3f7cc1`
 - **Gougères au Fromage** _(kid_friendly, nut_free, starter, french)_ — `entry_gougeres_au_fromage_ebce95`
 - **Granola Bowl Yaourt Fruits Rouges** _(kid_friendly, lactose_free, vegetarian, breakfast, international)_ — `brkf_granola_bowl_yaourt_fruit_980183`
