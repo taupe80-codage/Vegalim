@@ -234,9 +234,9 @@
 - **Georgian Vegetable Stew** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, georgian)_ — `stew_georgian_vegetable_stew_1cb019`
 - **Ghee (Beurre Clarifié)** _(vegetarian, condiment, indian)_ — `base_ghee_ec9064`
 - **Girolles à la Crème** _(gluten_free, nut_free, main, french)_ — `main_girolles_a_la_creme_7d432d`
-- **Gnocchi Al Pesto** _(vegetarian, main, italian)_ — `pasta_gnocchi_al_pesto_5bb01c` 🔁 doublon possible : Gnocchi Al Pesto (Vegan), Gnocchi au pesto
-- **Gnocchi Al Pesto (Vegan)** _(main, italian)_ — `pasta_gnocchi_al_pesto_vegan_954303` 🔁 doublon possible : Gnocchi Al Pesto, Gnocchi au pesto
-- **Gnocchi au pesto** _(main, italian)_ — `pasta_gnocchi_pesto_classic_v2_m7k2q4` 🔁 doublon possible : Gnocchi Al Pesto, Gnocchi Al Pesto (Vegan)
+- **Gnocchi Al Pesto** _(vegetarian, main, italian)_ — `pasta_gnocchi_al_pesto_5bb01c` 🔁 doublon possible : Gnocchi au pesto, Gnocchi au pesto crémeux
+- **Gnocchi au pesto** _(main, italian)_ — `pasta_gnocchi_pesto_classic_v2_m7k2q4` 🔁 doublon possible : Gnocchi Al Pesto, Gnocchi au pesto crémeux
+- **Gnocchi au pesto crémeux** _(main, italian)_ — `pasta_gnocchi_al_pesto_vegan_954303` 🔁 doublon possible : Gnocchi Al Pesto, Gnocchi au pesto
 - **Gnocchi Vegan** _(vegan, vegetarian, main, italian)_ — `base_gnocchi_vegan_dd3b0e`
 - **Gnocchis** _(vegetarian, main, italian)_ — `main_gnocchi_f17041`
 - **Gnocchis de Pomme de Terre** _(vegetarian, pasta, italian)_ — `base_gnocchi_8f01d0`

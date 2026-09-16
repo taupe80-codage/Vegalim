@@ -1,0 +1,110 @@
+"""Lot 21 : tofu froid, tourte, truffade, varenyky, nouilles et gnocchis."""
+
+PATCHES = {
+    "main_tofu_froid_japonais_506c62": [
+        ("add", "nori_dried", 3, "g", "garnish"),
+    ],
+    "main_tourte_aux_champignons_85adfb": [
+        ("add", "table_salt_unenriched", 3, "g", "seasoning"),
+    ],
+    "main_truffade_auvergnate_01a284": [
+        ("qty", "olive_oil_plant", 40),
+        ("txt", "Faire chauffer 3ml d'huile d'olive", "Faire chauffer 40ml d'huile d'olive"),
+    ],
+    "main_varenyky_pomme_de_terre_0bb7cf": [
+        ("add", "water", 120, "ml", "liquid"),
+        ("txt", "en mélangeant 200g de farine avec de l'eau tiède, du sel et 40g de beurre. Pétrissez pendant 10 minutes à feu doux",
+         "en mélangeant 200g de farine avec 120 ml d'eau tiède, du sel et 40g de beurre. Pétrissez pendant 10 minutes"),
+        ("txt", "Écrasez-les avec un oignon blanc sauté", "Écrasez-les avec l'oignon émincé et sauté"),
+        ("txt", "Faites chauffer 45ml d'huile de tournesol dans une poêle. Saisissez les varenyky pendant 2 minutes de chaque côté, jusqu'à obtenir une dorure blonde et croustillante.",
+         "Pocher les varenyky 4 minutes dans une grande casserole d'eau bouillante salée, jusqu'à ce qu'ils remontent à la surface."),
+        ("txt", "Cuisez les varenyky pendant 10 minutes à la vapeur, jusqu'à ce qu'ils soient tendres. Vérifiez que les varenyky sont cuits en les piquant avec une fourchette: ils doivent être tendres et ne pas résister à la pression.",
+         "Égouttez-les, puis faites-les dorer 2 minutes de chaque côté dans 45 ml d'huile de tournesol."),
+    ],
+    "miso_broth_618f1e": [
+        ("qty", "miso_fermented", 40),
+        ("qty", "soy_sauce_shoyu_reduced_sodium", 10),
+        ("txt", "800ml de bouillon dashi végétarien", "800ml de bouillon de légumes"),
+        ("txt", "délayez 60g de miso blanc", "délayez 40g de miso blanc"),
+    ],
+    "noodle_pad_see_ew_classic_v3_n8x4p2": [
+        ("txt", "Remettre le tofu et ajouter les légumes verts sautés.",
+         "Pousser les nouilles sur un côté du wok, casser les 110 g d'œufs et les brouiller rapidement, puis remettre le tofu."),
+        ("step-", "Mélanger délicatement pour ne pas écraser les nouilles."),
+    ],
+    "noodle_pad_see_ew_vegan_162330": [
+        ("qty", "tofu_plain_pre_packaged", 200),
+        ("qty", "base_rice_noodle_831080", 300),
+        ("txt", "Faites tremper les vermicelles de riz", "Faites tremper les nouilles de riz larges"),
+        ("txt", "Ajoutez les vermicelles de riz égouttées", "Ajoutez les nouilles de riz égouttées"),
+        ("txt", "dans des bols préchauffés, sans attendre", "sans attendre"),
+    ],
+    "pasta_arrabbiata_a51938": [
+        ("qty", "pasta_raw_dried", 320),
+        ("qty", "olive_oil_plant", 45),
+        ("add", "parsley_fresh_herb", 10, "g", "herb"),
+        ("flag", "kid_friendly", False),  # piment
+        ("txt", ", en ajoutant un filet de jus de citron pour équilibrer les saveurs et ajouter une touche de fraîcheur", ""),
+        ("step-", "Pour une sauce plus crémeuse, ajouter un peu de crème de coco"),
+        ("step-", "Garnir de feuilles de basilic frais pour une touche de couleur"),
+    ],
+    "pasta_bibim_guksu_9c8f25": [
+        ("qty", "table_salt_unenriched", 2),
+        ("qty", "soy_sauce_shoyu_reduced_sodium", 30),
+        ("txt", "mélanger 30ml de gochujang, 30ml de vinaigre de riz, 15g de sucre, 45ml de sauce soja et 15ml d'huile de sésame pendant 2 minutes à feu doux, en remuant constamment pour obtenir une consistance homogène.",
+         "mélanger 30ml de gochujang, 30ml de vinaigre de riz, 15g de sucre, 30ml de sauce soja et 15ml d'huile de sésame jusqu'à obtenir une sauce lisse."),
+        ("step-", "Réduire la sauce à feu moyen-vif pendant 2 minutes"),
+        ("txt", "350g de concombre tranché frais et 20g de graines de sésame toastées",
+         "350g de concombre tranché, un demi-œuf dur par bol et 20g de graines de sésame toastées"),
+    ],
+    "pasta_carbonara_veg_k3d2p1": [
+        ("qty", "pasta_raw_dried", 320),
+        ("qty", "table_salt_unenriched", 2),
+        ("txt", "Cuire 200g de pâtes de blé", "Cuire 320g de pâtes de blé"),
+        ("txt", "Ajouter 5g de sel et 2g de poivre noir pour assaisonner", "Ajouter 2g de sel et 2g de poivre noir pour assaisonner"),
+        ("step-", "Ajouter un peu d'huile pour donner une texture plus onctueuse"),
+        ("txt", "Servir aussitôt dans des assiettes préchauffées, garni de persil ciselé et d'un filet d'huile d'olive.", "Servir aussitôt."),
+    ],
+    "pasta_chow_mein_76aca0": [
+        ("del", "sesame_oil_plant"),
+        ("qty", "table_salt_unenriched", 2),
+        ("txt", "Assaisonner avec 5g de sel et servir le chow mein chaud, dans des bols préchauffés, en vérifiant",
+         "Assaisonner avec 2g de sel et servir le chow mein chaud, en vérifiant"),
+    ],
+    # l'eau de cuisson et son sel étaient comptés comme ingrédients consommés
+    "pasta_gnocchi_al_pesto_5bb01c": [
+        ("del", "water"),
+        ("qty", "table_salt_unenriched", 3),
+        ("qty", "base_pesto_905db7", 120),
+        ("txt", "Faire bouillir 1500ml d'eau de source à 100°C et ajouter 15g de sel de mer. Cuire les gnocchi pendant 2-3 minutes à feu vif, jusqu'à ce qu'ils soient dorés et légèrement gonflés.",
+         "Porter une grande casserole d'eau salée à ébullition et cuire les gnocchi 2 à 3 minutes, jusqu'à ce qu'ils remontent à la surface."),
+        ("step-", "Préparer le pesto en mixant du basilic frais"),
+        ("txt", "Saisir les gnocchi égouttés avec le pesto", "Mélanger les gnocchi égouttés avec 120 g de pesto"),
+    ],
+    "pasta_gnocchi_al_pesto_vegan_954303": [
+        ("qty", "nutritional_yeast_flakes", 20),
+        ("title", "Gnocchi au pesto crémeux"),
+        ("txt", "Incorporer 90g de levure nutritionnelle", "Incorporer 20g de levure maltée"),
+    ],
+    "pasta_gnocchi_pesto_classic_v2_m7k2q4": [
+        ("qty", "garlic_raw", 10),
+        ("step-", "Conserver les restes dans un contenant hermétique"),
+    ],
+    "pasta_gnocchis_a_la_tomate_8e1632": [
+        ("del", "water"),
+        ("qty", "table_salt_unenriched", 3),
+        ("txt", "Porter 1,5 L d'eau à forte ébullition. Ajouter 15 g de sel de table pour assaisonner.", "Porter une grande casserole d'eau salée à ébullition."),
+        ("step-", "Pour une présentation plus élégante, disposer les gnocchi"),
+    ],
+    "pasta_gnocchis_a_la_tomate_vega_ca281e": [
+        ("qty", "nutritional_yeast_flakes", 20),
+        ("txt", "parsemé de 90 g de levure nutritionnelle râpée", "parsemé de 20 g de levure maltée"),
+        ("txt", "Servir chaud, dans des assiettes préchauffées, avec une touche", "Servir chaud, avec une touche"),
+    ],
+    "pasta_lagman_aaae70": [
+        ("ing", "coconut_oil_plant", "sunflower_oil_plant"),
+        ("qty", "table_salt_unenriched", 2),
+        ("txt", "Chauffer 45 ml d'huile de noix de coco dans un wok ou grande sauteuse à feu moyen-vif, jusqu'à ce que l'huile commence à briller et à sentir le coco",
+         "Chauffer 45 ml d'huile de tournesol dans un wok ou une grande sauteuse à feu moyen-vif, jusqu'à ce qu'elle soit bien chaude"),
+    ],
+}

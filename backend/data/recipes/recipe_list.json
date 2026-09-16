@@ -2321,7 +2321,7 @@
       },
       {
         "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -2331,7 +2331,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -2345,7 +2345,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -3589,12 +3589,12 @@
       },
       {
         "ingredient": "miso_fermented",
-        "quantity": 60,
+        "quantity": 40,
         "unit": "g"
       },
       {
         "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 15,
+        "quantity": 10,
         "unit": "ml"
       },
       {
@@ -7318,7 +7318,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -7330,11 +7330,6 @@
         "ingredient": "garlic_raw",
         "quantity": 9,
         "unit": "g"
-      },
-      {
-        "ingredient": "sesame_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -15202,62 +15197,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "water",
-        "quantity": 1500,
-        "unit": "ml"
-      },
-      {
         "ingredient": "table_salt_unenriched",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_pesto_905db7",
-        "quantity": 50,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": null,
-        "unit": "1 cuillère à soupe"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "pasta_gnocchi_al_pesto_vegan_954303",
-        "title": "Gnocchi Al Pesto (Vegan)",
-        "score": 1.0
-      },
-      {
-        "id": "pasta_gnocchi_pesto_classic_v2_m7k2q4",
-        "title": "Gnocchi au pesto",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "pasta_gnocchi_al_pesto_vegan_954303",
-    "title": "Gnocchi Al Pesto (Vegan)",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [],
-    "allergens": [
-      "lactose",
-      "gluten",
-      "milk",
-      "tree_nuts"
-    ],
-    "servings": 4,
-    "time_total": 36,
-    "confidence": 0.85,
-    "description": "Gnocchis végans cuites dans une eau bouillante salée, servies avec une sauce pesto crémeuse et parfumée, relevée de levure nutritionnelle pour un goût umami intense, typique de la cuisine italienne.",
-    "composition": [
-      {
-        "ingredient": "base_gnocchi_vegan_dd3b0e",
-        "quantity": 500,
+        "quantity": 3,
         "unit": "g"
       },
       {
@@ -15266,43 +15207,23 @@
         "unit": "g"
       },
       {
-        "ingredient": "nutritional_yeast_flakes",
-        "quantity": 90,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 20,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 30,
-        "unit": "g"
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": null,
+        "unit": "1 cuillère à soupe"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
-      {
-        "id": "pasta_gnocchi_al_pesto_5bb01c",
-        "title": "Gnocchi Al Pesto",
-        "score": 1.0
-      },
       {
         "id": "pasta_gnocchi_pesto_classic_v2_m7k2q4",
         "title": "Gnocchi au pesto",
         "score": 1.0
+      },
+      {
+        "id": "pasta_gnocchi_al_pesto_vegan_954303",
+        "title": "Gnocchi au pesto crémeux",
+        "score": 0.67
       }
     ]
   },
@@ -15346,7 +15267,7 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 25,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -15365,7 +15286,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -15375,8 +15296,77 @@
       },
       {
         "id": "pasta_gnocchi_al_pesto_vegan_954303",
-        "title": "Gnocchi Al Pesto (Vegan)",
-        "score": 1.0
+        "title": "Gnocchi au pesto crémeux",
+        "score": 0.67
+      }
+    ]
+  },
+  {
+    "id": "pasta_gnocchi_al_pesto_vegan_954303",
+    "title": "Gnocchi au pesto crémeux",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [],
+    "allergens": [
+      "lactose",
+      "gluten",
+      "milk",
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 36,
+    "confidence": 0.85,
+    "description": "Gnocchis végans cuites dans une eau bouillante salée, servies avec une sauce pesto crémeuse et parfumée, relevée de levure nutritionnelle pour un goût umami intense, typique de la cuisine italienne.",
+    "composition": [
+      {
+        "ingredient": "base_gnocchi_vegan_dd3b0e",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_pesto_905db7",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegan_butter",
+        "quantity": 30,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 7,
+    "flags": [],
+    "similar": [
+      {
+        "id": "pasta_gnocchi_al_pesto_5bb01c",
+        "title": "Gnocchi Al Pesto",
+        "score": 0.67
+      },
+      {
+        "id": "pasta_gnocchi_pesto_classic_v2_m7k2q4",
+        "title": "Gnocchi au pesto",
+        "score": 0.67
       }
     ]
   },
@@ -15543,13 +15533,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "water",
-        "quantity": 1500,
-        "unit": "ml"
-      },
-      {
         "ingredient": "table_salt_unenriched",
-        "quantity": 15,
+        "quantity": 3,
         "unit": "g"
       },
       {
@@ -15573,7 +15558,7 @@
         "unit": "1 tranche"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -15628,7 +15613,7 @@
       },
       {
         "ingredient": "nutritional_yeast_flakes",
-        "quantity": 90,
+        "quantity": 20,
         "unit": "g"
       },
       {
@@ -16517,7 +16502,7 @@
         "unit": "g"
       },
       {
-        "ingredient": "coconut_milk_plant",
+        "ingredient": "oat_milk_refrigerated_plain_plant",
         "quantity": 250,
         "unit": "ml"
       },
@@ -16533,7 +16518,7 @@
       },
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
+        "quantity": 20,
         "unit": "g"
       },
       {
@@ -20913,13 +20898,13 @@
         "unit": "ml"
       },
       {
-        "ingredient": "coconut_oil_plant",
+        "ingredient": "sunflower_oil_plant",
         "quantity": 45,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -21536,7 +21521,7 @@
       },
       {
         "ingredient": "nutritional_yeast_flakes",
-        "quantity": 60,
+        "quantity": 30,
         "unit": "g"
       },
       {
@@ -21584,7 +21569,7 @@
     "composition": [
       {
         "ingredient": "pasta_raw_dried",
-        "quantity": 200,
+        "quantity": 250,
         "unit": "g"
       },
       {
@@ -21609,7 +21594,7 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 30,
+        "quantity": 60,
         "unit": "ml"
       },
       {
@@ -21623,17 +21608,17 @@
         "unit": "g"
       },
       {
-        "ingredient": "olive_oil_plant",
-        "quantity": 50,
-        "unit": "g"
+        "ingredient": "coconut_milk_plant",
+        "quantity": 400,
+        "unit": "ml"
       },
       {
-        "ingredient": "coconut_milk_plant",
-        "quantity": 600,
-        "unit": "ml"
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 20,
+        "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -25354,6 +25339,11 @@
         "ingredient": "garlic_raw",
         "quantity": 20,
         "unit": "g"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 40,
+        "unit": "g"
       }
     ],
     "n_instructions": 7,
@@ -25616,14 +25606,14 @@
         "unit": "ml"
       },
       {
-        "ingredient": "cream_heavy",
-        "quantity": 400,
+        "ingredient": "coconut_milk_plant",
+        "quantity": 300,
         "unit": "ml"
       },
       {
-        "ingredient": "lime_raw",
-        "quantity": 140,
-        "unit": "g"
+        "ingredient": "lime_juice_fresh",
+        "quantity": 30,
+        "unit": "ml"
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
@@ -25632,12 +25622,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "butter_sup80pct",
-        "quantity": 30,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -25649,6 +25634,11 @@
         "ingredient": "chives_raw_fresh",
         "quantity": null,
         "unit": "quelques feuilles"
+      },
+      {
+        "ingredient": "peanut_raw",
+        "quantity": 20,
+        "unit": "g"
       }
     ],
     "n_instructions": 8,
@@ -26547,7 +26537,7 @@
       },
       {
         "ingredient": "tofu_plain_pre_packaged",
-        "quantity": 800,
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -26557,7 +26547,7 @@
       },
       {
         "ingredient": "base_rice_noodle_831080",
-        "quantity": 200,
+        "quantity": 300,
         "unit": "g"
       },
       {
@@ -26641,7 +26631,7 @@
         "unit": "ml"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -34337,7 +34327,7 @@
     "composition": [
       {
         "ingredient": "pasta_raw_dried",
-        "quantity": 200,
+        "quantity": 320,
         "unit": "g"
       },
       {
@@ -34357,16 +34347,21 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 25,
+        "quantity": 45,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 4,
         "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -34390,7 +34385,7 @@
     "composition": [
       {
         "ingredient": "pasta_raw_dried",
-        "quantity": 200,
+        "quantity": 320,
         "unit": "g"
       },
       {
@@ -34410,7 +34405,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -34419,7 +34414,7 @@
         "unit": "1 poignée"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 9,
     "flags": [],
     "similar": []
   },
@@ -45787,8 +45782,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 150,
+        "ingredient": "gruyere",
+        "quantity": 120,
         "unit": "g"
       },
       {
@@ -45812,17 +45807,12 @@
         "unit": "g"
       },
       {
-        "ingredient": "egg_raw",
-        "quantity": 55,
-        "unit": "g"
-      },
-      {
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
         "unit": "quelques feuilles"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 4,
     "flags": [],
     "similar": []
   },
@@ -47420,6 +47410,11 @@
         "ingredient": "green_salad_raw_plain",
         "quantity": null,
         "unit": "une portion"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
       }
     ],
     "n_instructions": 6,
@@ -47501,7 +47496,7 @@
       "tree_nuts",
       "lactose"
     ],
-    "servings": 4,
+    "servings": 6,
     "time_total": 65,
     "confidence": 0.92,
     "description": "Tarte auvergnate à la crème fraîche et aux noix, avec un fond de pâte brisée croustillant et une texture onctueuse. L'alliance sucré-salé typique du terroir français, revisitée avec des saveurs.",
@@ -47537,7 +47532,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -47746,12 +47741,17 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 2,
+        "quantity": 20,
         "unit": "ml"
       },
       {
         "ingredient": "thyme_fresh_herb",
         "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
         "unit": "g"
       }
     ],
@@ -48052,12 +48052,12 @@
       },
       {
         "ingredient": "water",
-        "quantity": 500,
+        "quantity": 200,
         "unit": "ml"
       },
       {
         "ingredient": "sunflower_oil_plant",
-        "quantity": 45,
+        "quantity": 80,
         "unit": "ml"
       },
       {
@@ -48071,7 +48071,7 @@
         "unit": "1 petite racine"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -48340,7 +48340,7 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 48,
+    "time_total": 63,
     "confidence": 1.0,
     "description": "Tian provençal cuit au four, avec des légumes tendres et une surface caramélisée, parfumé par le thym frais et les herbes de Provence, dans une présentation visuelle colorée.",
     "composition": [
@@ -48991,6 +48991,11 @@
       {
         "ingredient": "sesame_raw_seed",
         "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nori_dried",
+        "quantity": 3,
         "unit": "g"
       }
     ],
@@ -49683,6 +49688,11 @@
         "ingredient": "green_salad_raw_plain",
         "quantity": null,
         "unit": "1 portion"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
       }
     ],
     "n_instructions": 9,
@@ -49725,7 +49735,7 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 3,
+        "quantity": 40,
         "unit": "ml"
       },
       {
@@ -50219,6 +50229,11 @@
         "ingredient": "black_pepper_spice",
         "quantity": 2,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 120,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
