@@ -125738,7 +125738,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -125862,7 +125862,7 @@
         "Étape 1 : Faire chauffer 45 ml d'huile d'olive dans une poêle à feu moyen. Ajouter 150g d'oignon émincé et faire revenir pendant 6 minutes jusqu'à ce qu'il devienne translucide, en remuant régulièrement pour éviter la coloration.",
         "Étape 2 : Ajouter 9g d'ail haché et 300g de tomates fraîches concassées ou en conserve. Cuire pendant 8 minutes jusqu'à ce que la sauce soit légèrement concentrée et parfumée, en laissant les saveurs se mélanger harmonieusement.",
         "Étape 3 : Incorporer 300g de riz cru (non rincé pour garder l'amidon). Nacrer pendant 2 minutes en mélangeant jusqu'à ce que les grains soient translucides en bordure, en surveillant la texture pour éviter la surcuisson.",
-        "Étape 4 : Verser 750 ml de bouillon végétal chaud et assaisonner de 5g de sel. Porter à ébullition, puis couvrir et cuire à feu doux pendant 15 minutes sans ouvrir, en laissant le riz absorber les saveurs du bouillon.",
+        "Étape 4 : Verser 750 ml de bouillon végétal chaud et assaisonner de 3g de sel. Porter à ébullition, puis couvrir et cuire à feu doux pendant 15 minutes sans ouvrir, en laissant le riz absorber les saveurs du bouillon.",
         "Étape 5 : Laisser reposer pendant 5 minutes avec le couvercle fermé. Égrainer le riz à la fourchette. Le riz doit être légèrement rouge, parfumé à la tomate, avec chaque grain séparé, en vérifiant que les grains sont cuits mais encore fermes.",
         "Étape 6 : Ajouter 30g de persil frais haché et mélanger délicatement. Servir chaud, parsemé de persil frais, en profitant de l'arôme et de la texture du plat.",
         "Étape 7 : Vérifier que le riz est cuit à point et que les saveurs sont bien équilibrées. Si nécessaire, ajuster l'assaisonnement avant de servir."
@@ -125910,9 +125910,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -125988,7 +125988,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -126028,6 +126028,17 @@
             "ingredient_fr": "coriandre fraîche ciselée",
             "note": "Quelques feuilles pour la fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -126157,9 +126168,8 @@
         "Étape 2 : Ajouter 5g de feuilles de curry et 3g de curcuma en poudre. Faire grésiller 30 secondes, en remuant constamment, jusqu'à ce que l'odeur soit parfumée et les feuilles de curry commencent à se dérouler.",
         "Étape 3 : Incorporer 80g de cacahuètes crues et les faire dorer 2 minutes à feu moyen, en remuant constamment, jusqu'à ce que les cacahuètes soient dorées et parfumées.",
         "Étape 4 : Ajouter 300g de riz basmati cuit, émietté, ainsi que 20g d'ail haché et 150g d'oignon blanc émincé. Faire sauter 3 minutes à feu moyen-vif, en remuant constamment, jusqu'à ce que le riz soit bien mélangé avec les épices, les cacahuètes, l'ail et l'oignon.",
-        "Étape 5 : Presser le jus de 100g de citron frais sur le riz, en vérifiant que le jus est bien exprimé. Assaisonner de 5g de sel et mélanger 1 minute, jusqu'à ce que le riz soit bien assaisonné et parfumé.",
-        "Étape 6 : Enfourner 10 minutes à 180°C, en vérifiant que la température est stable, jusqu'à légère dorure et parfum au citron.",
-        "Étape 7 : Garnir de coriandre fraîche et de cacahuètes grillées. Servir chaud, en vérifiant que le riz est encore chaud et parfumé."
+        "Étape 5 : Verser 40 ml de jus de citron frais sur le riz. Assaisonner de 3g de sel et mélanger 1 minute, jusqu'à ce que le riz soit bien assaisonné et parfumé.",
+        "Étape 6 : Garnir de coriandre fraîche et de cacahuètes grillées. Servir chaud, en vérifiant que le riz est encore chaud et parfumé."
       ],
       "diet_flags": {
         "vegan": true,
@@ -126238,7 +126248,7 @@
         },
         {
           "ingredient": "coconut_milk_plant",
-          "quantity": 400,
+          "quantity": 250,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -126260,7 +126270,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -126275,6 +126285,17 @@
           "unit": "ml",
           "meta": {
             "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 400,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -126333,6 +126354,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "ail",
         "and",
@@ -126345,6 +126367,7 @@
         "coco",
         "coconut",
         "coeliaque",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
@@ -126364,6 +126387,7 @@
         "onion",
         "peas",
         "pois",
+        "potable)",
         "rice",
         "riz",
         "rouge",
@@ -126379,6 +126403,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "water",
         "water_cooking",
         "white",
         "wok"
@@ -126391,8 +126416,8 @@
       "instructions": [
         "Étape 1 : Faire chauffer 15 ml d'huile de coco dans une poêle à feu moyen-vif. Ajouter 150 g d'oignon jaune émincé et 9 g d'ail émincé. Saisir jusqu'à parfumation, environ 3 minutes, en remuant régulièrement pour éviter la coloration excessive, jusqu'à ce que l'oignon soit translucide et légèrement doré.",
         "Étape 2 : Ajouter 300 g de pois et cuire pendant 5 minutes à feu moyen, en remuant occasionnellement, jusqu'à ce qu'ils commencent à ramollir et libèrent leur saveur, en vérifiant que les pois sont tendres mais encore fermes.",
-        "Étape 3 : Incorporer 300 g de riz long grain et émulsionner avec 400 ml de lait de coco pendant 2 minutes, en remuant constamment pour éviter les grumeaux, jusqu'à ce que le riz soit bien enrobé et le mélange commence à épaissir.",
-        "Étape 4 : Verser 400 ml d'eau, ajouter 5 g de sel et porter à ébullition, en vérifiant que le liquide bout uniformément.",
+        "Étape 3 : Incorporer 300 g de riz long grain et mélanger avec 250 ml de lait de coco pendant 2 minutes, en remuant constamment, jusqu'à ce que le riz soit bien enrobé et le mélange commence à épaissir.",
+        "Étape 4 : Verser 400 ml d'eau, ajouter 3 g de sel et porter à ébullition, en vérifiant que le liquide bout uniformément.",
         "Étape 5 : Réduire le feu à moyen-bas et cuire pendant 15 minutes, ou jusqu'à absorption complète de l'eau et que le riz soit cuit, en vérifiant que les grains de riz sont tendres et séparés.",
         "Étape 6 : Laisser reposer pendant 5 minutes, puis ciseler 3 g de thym frais sur le dessus.",
         "Étape 7 : Servir chaud."
@@ -126423,9 +126448,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 15,
-        "prep_passive_min": 10,
-        "cook_min": 25,
-        "total_min": 50
+        "prep_passive_min": 5,
+        "cook_min": 35,
+        "total_min": 55
       },
       "composition": [
         {
@@ -126507,7 +126532,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -126523,6 +126548,28 @@
           "meta": {
             "role": "aromatic",
             "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 600,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -126580,16 +126627,20 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "ail",
         "bell",
         "blanc",
+        "bouillon",
         "coeliaque",
+        "eau",
         "garlic",
         "gluten free",
         "intermediaire",
         "jollof",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
@@ -126601,6 +126652,7 @@
         "paprika",
         "pepper",
         "poivron",
+        "potable)",
         "red",
         "rice",
         "riz",
@@ -126610,14 +126662,17 @@
         "sans produit animal",
         "sans viande",
         "sel",
+        "stock",
         "table",
         "thym",
         "thyme",
         "tomate",
         "tomato",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
+        "water",
         "water_cooking",
         "white",
         "wok"
@@ -126628,13 +126683,13 @@
       "_quality_score": 0.93,
       "description": "Riz jollof cuit par réduction concentrée, aux grains séparés et bien assaisonnés, avec une texture tendre et une odeur parfumée de thym et de paprika, typique de la cuisine ouest-africaine.",
       "instructions": [
-        "Étape 1 : Ciseler l'oignon (150g) en julienne fine, 1 minute à feu doux. Les oignons devraient commencer à ramollir et à libérer leur parfum.",
-        "Étape 2 : Faire chauffer l'huile d'olive extra vierge (45ml) dans une casserole à feu moyen, 2 minutes. L'huile devrait être chaude et prête à recevoir les aromates.",
-        "Étape 3 : Saisir l'ail (20g) 7 minutes à feu moyen jusqu'à parfum et légère coloration. Le mélange devrait commencer à sentir bon et à développer une couleur dorée.",
-        "Étape 4 : Ajouter les tomates (300g) et les poivrons (320g), faire revenir 3 minutes à feu moyen en remuant. Les légumes devraient commencer à ramollir et à libérer leur jus.",
-        "Étape 5 : Incorporer le riz (300g) et les épices (paprika 3g, thym 3g), émulsionner 2 minutes à feu doux. Le riz devrait commencer à absorber les saveurs et les parfums.",
-        "Étape 6 : Enfourner à 180°C pendant 25 minutes jusqu'à que le riz soit cuit et la lame ressorte sèche. Vous devriez voir le riz cuit et les légumes tendres, avec une texture crémeuse et une odeur parfumée.",
-        "Étape 7 : Servir aussitôt dans des bols préchauffés, garni de feuilles de thym frais et d'un filet d'huile d'olive. Accompagner de pain pita tiède."
+        "Étape 1 : Émincer l'oignon. Mixer les tomates et le poivron rouge en purée lisse.",
+        "Étape 2 : Chauffer 45 ml d'huile d'olive dans une cocotte à feu moyen, puis faire revenir l'oignon 6 minutes jusqu'à ce qu'il soit translucide.",
+        "Étape 3 : Ajouter 20 g d'ail haché, 3 g de paprika et 3 g de thym, puis cuire 1 minute en remuant.",
+        "Étape 4 : Verser la purée de tomate et de poivron, puis laisser réduire 10 minutes à feu moyen, jusqu'à ce que le mélange épaississe et que l'huile remonte en surface.",
+        "Étape 5 : Ajouter 300 g de riz long grain et l'enrober de sauce pendant 2 minutes en remuant.",
+        "Étape 6 : Verser 600 ml de bouillon chaud, saler avec 3 g de sel, porter à ébullition, puis couvrir et cuire 20 minutes à feu très doux sans remuer.",
+        "Étape 7 : Laisser reposer 5 minutes hors du feu, égrainer à la fourchette et servir chaud, garni de thym frais."
       ],
       "diet_flags": {
         "vegan": true,
@@ -126719,6 +126774,17 @@
           "meta": {
             "role": "ingredient",
             "note": "pour reconstituer le bouillon"
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -126806,9 +126872,12 @@
         "potable)",
         "rice",
         "riz",
+        "salt",
         "sans gluten",
         "sans viande",
+        "sel",
         "stock",
+        "table",
         "turc",
         "turkish",
         "turquie",
@@ -126826,12 +126895,12 @@
       "_quality_score": 0.83,
       "description": "Riz pilaf turc cuit par réduction concentrée, grain séparé et bien assaisonné aux arômes d'épices et herbes, avec une texture parfaite et une saveur unique.",
       "instructions": [
-        "Étape 1: Faire fondre 40 g de beurre à feu moyen pendant 1 minute, jusqu'à ce qu'elle soit liquide et parfumée, en remplissant la cuisine d'un arôme délicieux.",
-        "Étape 2: Ciseler 150 g d'oignon jaune émincé et le faire revenir jusqu'à translucidité pendant 2 minutes à feu doux, en remuant régulièrement, jusqu'à ce qu'il soit tendre et légèrement caramélisé.",
-        "Étape 3: Julienne 300 g de riz long grain cru et le mélanger pendant 2 minutes jusqu'à ce qu'il soit translucide, en évitant de le brûler, tout en ajoutant un peu de saveur à l'beurre.",
-        "Étape 4: Verser 750 ml de bouillon de légumes chaud et saler, puis porter à ébullition pendant 2 minutes, en faisant attention à la température, jusqu'à ce que le liquide commence à bouillonner.",
-        "Étape 5: Réduire au minimum et enfourner pendant 15 minutes à 180°C sans soulever le couvercle, pour permettre au riz de cuire uniformément et d'absorber tous les arômes.",
-        "Étape 6: Laisser reposer pendant 5 minutes, puis servir chaud, en vérifiant que le riz est cuit à point."
+        "Étape 1 : Rincer 300 g de riz long grain à l'eau claire jusqu'à ce qu'elle soit limpide, puis l'égoutter.",
+        "Étape 2 : Faire fondre 40 g de beurre à feu moyen dans une casserole, ajouter 150 g d'oignon jaune émincé et le faire revenir 5 minutes jusqu'à ce qu'il soit translucide.",
+        "Étape 3 : Ajouter le riz égoutté et le nacrer 2 minutes en remuant, jusqu'à ce que les grains soient translucides en bordure.",
+        "Étape 4 : Verser 750 ml de bouillon de légumes chaud, saler avec 3 g de sel et porter à ébullition.",
+        "Étape 5 : Couvrir, réduire au minimum et cuire 15 minutes sans soulever le couvercle.",
+        "Étape 6 : Laisser reposer 5 minutes à couvert, puis égrainer à la fourchette et servir chaud."
       ],
       "diet_flags": {
         "vegan": false,
@@ -126888,7 +126957,7 @@
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 44.9,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -126899,7 +126968,7 @@
         },
         {
           "ingredient": "sesame_oil_plant",
-          "quantity": 60.9,
+          "quantity": 45,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -126939,6 +127008,17 @@
             "ingredient_fr": "coriandre fraîche ciselée",
             "note": "Quelques feuilles pour la fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -127004,6 +127084,7 @@
         "coree",
         "coreen",
         "coriander",
+        "coriandre",
         "fried",
         "garlic",
         "intermediaire",
@@ -127040,11 +127121,11 @@
       "instructions": [
         "Étape 1 : Cuire les 300 g de riz à grains courts à la méthode absorption. Étaler sur une plaque et laisser refroidir complètement — le riz froid est indispensable pour un sauté non collant.",
         "Étape 2 : Hacher grossièrement les 200 g de kimchi. Réserver le jus séparément.",
-        "Étape 3 : Chauffer les 45,7 ml d'huile de sésame dans une grande poêle ou wok à feu vif. Faire sauter les 150 g d'oignon émincé et les 15 g d'ail haché 2 à 3 minutes jusqu'à légère coloration dorée.",
+        "Étape 3 : Chauffer 30 ml d'huile de sésame dans une grande poêle ou wok à feu vif. Faire sauter les 150 g d'oignon émincé et les 15 g d'ail haché 2 à 3 minutes jusqu'à légère coloration dorée.",
         "Étape 4 : Ajouter le kimchi haché et sauter 2 minutes à feu vif jusqu'à ce qu'il commence à caraméliser légèrement sur les bords.",
         "Étape 5 : Ajouter le riz froid en émiettant les blocs. Mélanger vigoureusement à feu vif 2 à 3 minutes pour que chaque grain soit bien enrobé et légèrement grillé.",
-        "Étape 6 : Verser les 44,9 ml de sauce soja et un peu de jus de kimchi réservé. Cuire encore 1 à 2 minutes en remuant. Le riz doit être sec, coloré d'un brun-rouge caractéristique et légèrement croustillant par endroits.",
-        "Étape 7 : Verser les 15,2 ml d'huile de sésame hors du feu, mélanger. Servir aussitôt dans des bols préchauffés, garni de quelques feuilles de coriandre fraîche ciselée et d'un filet d'huile de sésame."
+        "Étape 6 : Verser les 30 ml de sauce soja et un peu de jus de kimchi réservé. Cuire encore 1 à 2 minutes en remuant. Le riz doit être sec, coloré d'un brun-rouge caractéristique et légèrement croustillant par endroits.",
+        "Étape 7 : Verser les 15 ml d'huile de sésame restants hors du feu et mélanger. Servir aussitôt, garni de coriandre fraîche ciselée."
       ],
       "diet_flags": {
         "vegan": true,
@@ -127145,10 +127226,21 @@
         },
         {
           "ingredient": "vegetable_oil_plant",
-          "quantity": 500,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -127247,13 +127339,16 @@
         "rice",
         "riz",
         "rouleaux",
+        "salt",
         "sans produit animal",
         "sans viande",
         "sauce",
         "sechees",
+        "sel",
         "shoyu",
         "soja",
         "soy",
+        "table",
         "trang)",
         "vegan",
         "vegetable",
@@ -127274,12 +127369,12 @@
       "_chef_note": "Pour des rouleaux de printemps encore plus croustillants, utilisez de l'huile de coco de qualité supérieure et faites frire à la bonne température.",
       "description": "Rouleaux de printemps frits croustillants, à base de feuilles de riz, carotte râpée, oignon émincé et champignons de Paris, avec une texture dorée et croustillante, inspirés de la cuisine vietnamienne.",
       "instructions": [
-        "Étape 1 : Julienne la carotte crue, l'oignon blanc émincé et les champignons de Paris, puis blanchir à feu moyen pendant 3 minutes pour obtenir une texture tendre.",
-        "Étape 2 : Mélanger les légumes avec la sauce soja et laisser refroidir complètement pour permettre aux saveurs de se mélanger.",
+        "Étape 1 : Tailler la carotte en julienne, émincer l'oignon et les champignons, puis les faire sauter 3 minutes à feu vif jusqu'à ce qu'ils soient tendres. Réhydrater 150 g de vermicelles de riz 5 minutes à l'eau chaude, les égoutter et les couper en tronçons.",
+        "Étape 2 : Mélanger les légumes, les vermicelles, la sauce soja et 3 g de sel, puis laisser refroidir complètement pour permettre aux saveurs de se mélanger.",
         "Étape 3 : Déposer la farce sur les feuilles de riz, replier les côtés et rouler serré pour obtenir des rouleaux réguliers.",
         "Étape 4 : Faire frire les rouleaux dans l'huile végétale à 170°C, 4 minutes de chaque côté, pour obtenir une texture croustillante et dorée.",
-        "Étape 5 : Égoutter sur papier absorbant pour enlever l'excès d'huile, puis servir chaud pour un snack délicieux.",
-        "Étape 6 : Rectifier l'assaisonnement avec du sel et des herbes fraîches pour parfaire le goût, puis servir sans attendre pour conserver la texture croustillante et le goût frais."
+        "Étape 5 : Égoutter sur papier absorbant pour enlever l'excès d'huile, puis servir chaud.",
+        "Étape 6 : Servir sans attendre pour conserver la texture croustillante."
       ],
       "diet_flags": {
         "vegan": true,
@@ -127325,7 +127420,7 @@
         },
         {
           "ingredient": "parsley_fresh_herb",
-          "quantity": 30,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "herb",
@@ -127335,8 +127430,8 @@
           }
         },
         {
-          "ingredient": "coriander_spice_seed",
-          "quantity": 3,
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -127347,7 +127442,7 @@
         },
         {
           "ingredient": "dill_weed_fresh_herb_leaf",
-          "quantity": 20,
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -127369,7 +127464,7 @@
         },
         {
           "ingredient": "chives_raw_fresh",
-          "quantity": 25,
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "herb",
@@ -127413,7 +127508,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -127522,9 +127617,9 @@
       "_quality_score": 0.93,
       "description": "Cuisson de riz basmati à la persane, avec grains séparés et bien assaisonnés, parfumés par des herbes fraîches et le safran, créant une texture moelleuse et une croûte croustillante dorée.",
       "instructions": [
-        "Étape 1: Faire bouillir de l'eau salée à 180°C, puis cuire le riz basmati 8 min à feu moyen-vif, en veillant à ce que les grains soient séparés et ne collent pas.",
+        "Étape 1: Porter une grande casserole d'eau salée à ébullition, puis cuire le riz basmati 8 min à feu moyen-vif, en veillant à ce que les grains soient séparés et ne collent pas.",
         "Étape 2: Saisir les herbes fraîches (persil, coriandre, aneth, ciboulette, fenugrec) dans 20 ml d'huile d'olive jusqu'à parfum dégagé, en écoutant le son crépitant des herbes et en vérifiant leur couleur verte vif.",
-        "Étape 3: Mélanger les herbes dans le riz en cours de cuisson, en remuant constamment pour éviter que le riz ne colle et en ajoutant 5g de sel pour rehausser les saveurs.",
+        "Étape 3: Mélanger les herbes dans le riz en cours de cuisson, en remuant constamment pour éviter que le riz ne colle et en ajoutant 3g de sel pour rehausser les saveurs.",
         "Étape 4: Ajouter le safran et l'huile d'olive restante, puis mélanger délicatement pour que les grains de riz soient bien enrobés.",
         "Étape 5: Préchauffer le four à 180°C, avec 40g de beurre au fond du plat, puis enfourner le riz 25 min pour créer une croûte croustillante (tahdig) au fond du riz, en vérifiant régulièrement la couleur dorée et en ajustant le temps de cuisson si nécessaire.",
         "Étape 6: Puis servir en retournant le riz pour dégager la croûte dorée, en prenant soin de ne pas briser la croûte.",
@@ -127607,7 +127702,7 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 80,
+          "quantity": 60,
           "unit": "ml",
           "meta": {
             "role": "coating",
@@ -127658,6 +127753,17 @@
             "ingredient_fr": "pain complet",
             "note": "Pour un repas plus complet",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -127740,7 +127846,9 @@
         "olive",
         "onion",
         "pain",
+        "parsley",
         "pepper",
+        "persil",
         "poivre",
         "raw",
         "red",
@@ -127774,13 +127882,10 @@
       "instructions": [
         "Étape 1 : Cuire 250g de riz long grain pendant 12 minutes à feu moyen dans de l'eau bouillante salée, jusqu'à ce qu'il soit tendre mais pas collant, puis rincer à l'eau froide pour stopper la cuisson.",
         "Étape 2 : Préparer les légumes : couper 300g de tomates en dés, 250g de concombres en rondelles fines et émincer 80g d'oignon rouge pour ajouter une touche de douceur.",
-        "Étape 3 : Saisir les légumes pendant 3 minutes à feu moyen-vif dans 40ml d'huile d'olive extra vierge jusqu'à légère coloration, puis laisser refroidir pour conserver leur fraîcheur.",
-        "Étape 4 : Préparer la vinaigrette : fouetter 40ml d'huile d'olive extra vierge avec 15ml de vinaigre de cidre, 4g de sel et 2g de poivre, jusqu'à texture lisse et homogène.",
-        "Étape 5 : Mélanger le riz refroidi avec les légumes, la vinaigrette, puis goûter et ajuster l'assaisonnement en fonction de vos goûts.",
-        "Étape 6 : Réfrigérer pendant 30 minutes avant de servir, pour que les saveurs se mélangent et que la salade soit fraîche.",
-        "Étape 7 : Assaisonner au goût avec un peu de levure nutritionnelle pour un effet umami.",
-        "Étape 8 : Décorer avec des feuilles de persil frais pour une touche de couleur et de fraîcheur.",
-        "Étape 9 : Servir dans un bol en verre pour apprécier la beauté de la salade, garni de quelques feuilles de persil frais."
+        "Étape 3 : Préparer la vinaigrette : fouetter 60ml d'huile d'olive extra vierge avec 15ml de vinaigre de cidre, 4g de sel et 2g de poivre, jusqu'à texture lisse et homogène.",
+        "Étape 4 : Mélanger le riz refroidi avec les légumes, la vinaigrette, puis goûter et ajuster l'assaisonnement en fonction de vos goûts.",
+        "Étape 5 : Réfrigérer pendant 30 minutes avant de servir, pour que les saveurs se mélangent et que la salade soit fraîche.",
+        "Étape 6 : Décorer avec des feuilles de persil frais pour une touche de couleur et de fraîcheur."
       ],
       "diet_flags": {
         "vegan": true,

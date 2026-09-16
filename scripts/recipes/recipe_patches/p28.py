@@ -1,0 +1,90 @@
+"""Lot 28 : riz à la tomate, lemon rice, riz et pois, jollof, pilaf, rouleaux, sabzi polo."""
+
+PATCHES = {
+    "rice_riz_a_la_tomate_portugais_c6cec0": [
+        ("qty", "table_salt_unenriched", 3),
+        ("txt", "assaisonner de 5g de sel", "assaisonner de 3g de sel"),
+    ],
+    "rice_riz_citronne_indien_05c717": [
+        ("ing", "lemon_raw", "lemon_juice", 40, "ml"),
+        ("qty", "table_salt_unenriched", 3),
+        ("add", "coriander_raw_fresh_herb", 10, "g", "herb"),
+        ("txt", "Presser le jus de 100g de citron frais sur le riz, en vérifiant que le jus est bien exprimé. Assaisonner de 5g de sel",
+         "Verser 40 ml de jus de citron frais sur le riz. Assaisonner de 3g de sel"),
+        ("step-", "Enfourner 10 minutes à 180°C"),
+    ],
+    "rice_riz_et_pois_caribeen_72144c": [
+        ("qty", "coconut_milk_plant", 250),
+        ("qty", "table_salt_unenriched", 3),
+        ("add", "water", 400, "ml", "liquid"),
+        ("txt", "émulsionner avec 400 ml de lait de coco pendant 2 minutes, en remuant constamment pour éviter les grumeaux",
+         "mélanger avec 250 ml de lait de coco pendant 2 minutes, en remuant constamment"),
+        ("txt", "ajouter 5 g de sel et porter à ébullition", "ajouter 3 g de sel et porter à ébullition"),
+    ],
+    # ordre des étapes absurde et aucun liquide pour 300 g de riz cru
+    "rice_riz_jollof_360727": [
+        ("qty", "table_salt_unenriched", 3),
+        ("add", "water", 600, "ml", "liquid"),
+        ("add", "vegetable_stock_dried", 5, "g", "ingredient"),
+        ("steps", [
+            "Émincer l'oignon. Mixer les tomates et le poivron rouge en purée lisse.",
+            "Chauffer 45 ml d'huile d'olive dans une cocotte à feu moyen, puis faire revenir l'oignon 6 minutes jusqu'à ce qu'il soit translucide.",
+            "Ajouter 20 g d'ail haché, 3 g de paprika et 3 g de thym, puis cuire 1 minute en remuant.",
+            "Verser la purée de tomate et de poivron, puis laisser réduire 10 minutes à feu moyen, jusqu'à ce que le mélange épaississe et que l'huile remonte en surface.",
+            "Ajouter 300 g de riz long grain et l'enrober de sauce pendant 2 minutes en remuant.",
+            "Verser 600 ml de bouillon chaud, saler avec 3 g de sel, porter à ébullition, puis couvrir et cuire 20 minutes à feu très doux sans remuer.",
+            "Laisser reposer 5 minutes hors du feu, égrainer à la fourchette et servir chaud, garni de thym frais.",
+        ]),
+        ("time", 15, 5, 35),
+    ],
+    "rice_riz_pilaf_turc_52cfe9": [
+        ("add", "table_salt_unenriched", 3, "g", "seasoning"),
+        ("steps", [
+            "Rincer 300 g de riz long grain à l'eau claire jusqu'à ce qu'elle soit limpide, puis l'égoutter.",
+            "Faire fondre 40 g de beurre à feu moyen dans une casserole, ajouter 150 g d'oignon jaune émincé et le faire revenir 5 minutes jusqu'à ce qu'il soit translucide.",
+            "Ajouter le riz égoutté et le nacrer 2 minutes en remuant, jusqu'à ce que les grains soient translucides en bordure.",
+            "Verser 750 ml de bouillon de légumes chaud, saler avec 3 g de sel et porter à ébullition.",
+            "Couvrir, réduire au minimum et cuire 15 minutes sans soulever le couvercle.",
+            "Laisser reposer 5 minutes à couvert, puis égrainer à la fourchette et servir chaud.",
+        ]),
+    ],
+    "rice_riz_saute_au_kimchi_vegan_af038b": [
+        ("qty", "sesame_oil_plant", 45),
+        ("qty", "soy_sauce_shoyu_reduced_sodium", 30),
+        ("add", "coriander_raw_fresh_herb", 10, "g", "garnish"),
+        ("txt", "Chauffer les 45,7 ml d'huile de sésame", "Chauffer 30 ml d'huile de sésame"),
+        ("txt", "Verser les 44,9 ml de sauce soja", "Verser les 30 ml de sauce soja"),
+        ("txt", "Verser les 15,2 ml d'huile de sésame hors du feu, mélanger. Servir aussitôt dans des bols préchauffés, garni de quelques feuilles de coriandre fraîche ciselée et d'un filet d'huile de sésame.",
+         "Verser les 15 ml d'huile de sésame restants hors du feu et mélanger. Servir aussitôt, garni de coriandre fraîche ciselée."),
+    ],
+    # 500 ml d'huile de friture comptés comme mangés
+    "rice_rouleaux_de_printemps_frits_e4d172": [
+        ("qty", "vegetable_oil_plant", 40),
+        ("add", "table_salt_unenriched", 3, "g", "seasoning"),
+        ("txt", "Julienne la carotte crue, l'oignon blanc émincé et les champignons de Paris, puis blanchir à feu moyen pendant 3 minutes pour obtenir une texture tendre.",
+         "Tailler la carotte en julienne, émincer l'oignon et les champignons, puis les faire sauter 3 minutes à feu vif jusqu'à ce qu'ils soient tendres. Réhydrater 150 g de vermicelles de riz 5 minutes à l'eau chaude, les égoutter et les couper en tronçons."),
+        ("txt", "Mélanger les légumes avec la sauce soja et laisser refroidir complètement",
+         "Mélanger les légumes, les vermicelles, la sauce soja et 3 g de sel, puis laisser refroidir complètement"),
+        ("txt", "puis servir chaud pour un snack délicieux", "puis servir chaud"),
+        ("txt", "Rectifier l'assaisonnement avec du sel et des herbes fraîches pour parfaire le goût, puis servir sans attendre pour conserver la texture croustillante et le goût frais.",
+         "Servir sans attendre pour conserver la texture croustillante."),
+    ],
+    "rice_sabzi_polo_e099d2": [
+        ("ing", "coriander_spice_seed", "coriander_raw_fresh_herb", 30),
+        ("qty", "parsley_fresh_herb", 100),
+        ("qty", "dill_weed_fresh_herb_leaf", 60),
+        ("qty", "chives_raw_fresh", 40),
+        ("qty", "table_salt_unenriched", 3),
+        ("txt", "Faire bouillir de l'eau salée à 180°C, puis cuire le riz basmati 8 min à feu moyen-vif",
+         "Porter une grande casserole d'eau salée à ébullition, puis cuire le riz basmati 8 min à feu moyen-vif"),
+        ("txt", "en ajoutant 5g de sel pour rehausser les saveurs", "en ajoutant 3g de sel pour rehausser les saveurs"),
+    ],
+    "rice_salad_k3d2p1": [
+        ("qty", "olive_oil_extra_virgin_plant", 60),
+        ("add", "parsley_fresh_herb", 15, "g", "herb"),
+        ("txt", "fouetter 40ml d'huile d'olive extra vierge avec 15ml de vinaigre de cidre", "fouetter 60ml d'huile d'olive extra vierge avec 15ml de vinaigre de cidre"),
+        ("step-", "Saisir les légumes pendant 3 minutes à feu moyen-vif"),
+        ("step-", "Assaisonner au goût avec un peu de levure nutritionnelle"),
+        ("step-", "Servir dans un bol en verre"),
+    ],
+}
