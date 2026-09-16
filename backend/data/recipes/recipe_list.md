@@ -35,7 +35,7 @@
 - **Bannock (Vegan)** _(kid_friendly, low_calorie, nut_free, snack, canadian)_ — `snack_bannock_vegan_46a1a8` 🔁 doublon possible : Bannock
 - **Bao** _(high_protein, vegan, vegetarian, main, chinese)_ — `bread_bao_ff9db9`
 - **Batata Harra** _(gluten_free, vegan, vegetarian, main, american)_ — `main_batata_harra_c2de57`
-- **Baursak** _(main, kazakh)_ — `egg_baursak_68b192`
+- **Baursak** _(snack, kazakh)_ — `egg_baursak_68b192`
 - **Beignet de Riz Népalais** _(gluten_free, vegetarian, main, nepali)_ — `rice_beignet_de_riz_nepalais_7ac83e`
 - **Beignets de Légumes Indonésiens** _(vegan, vegetarian, main, indonesian)_ — `main_beignets_de_legumes_indon_e74ee9`
 - **Beurre de Cacahuète** _(vegan, vegetarian, gluten_free, sauce, international)_ — `base_peanut_butter_81c37b`
