@@ -1,0 +1,108 @@
+"""Lot 19 : polentas, poutines, pozole, pupusas, rajma, rasam, ribollita, sancocho."""
+
+PATCHES = {
+    "main_polenta_ai_funghi_b96235": [
+        ("add", "water", 1000, "ml", "liquid"),
+        ("txt", "Ajouter 60 g de parmesan râpé et 40 g de beurre doux, mélanger pour bien combiner",
+         "Incorporer 60 g de parmesan râpé et 40 g de beurre doux à la polenta, mélanger pour bien combiner"),
+    ],
+    "main_polenta_ai_funghi_vegan_ab13cd": [
+        ("qty", "nutritional_yeast_flakes", 20),
+        ("qty", "olive_oil_extra_virgin_plant", 45),
+        ("add", "water", 1000, "ml", "liquid"),
+        ("txt", "Incorporer 30 g de beurre végétal, la levure de bière et le thym frais", "Incorporer 30 g de beurre végétal, 20 g de levure maltée et le thym frais"),
+        ("step-", "Démouler, napper de sauce"),
+    ],
+    "main_polenta_aux_champignons_5af074": [
+        ("add", "vegetable_stock_dried", 12, "g", "ingredient"),
+        ("add", "water", 1000, "ml", "liquid"),
+        ("step-", "Déguster et ajuster l'assaisonnement si nécessaire"),
+    ],
+    "main_polenta_aux_champignons_v_b0e1ad": [
+        ("del", "olive_oil_plant"),
+        ("qty", "nutritional_yeast_flakes", 20),
+        ("add", "vegetable_stock_dried", 12, "g", "ingredient"),
+        ("add", "water", 1000, "ml", "liquid"),
+        ("txt", "90g de levure de bière hors feu", "20g de levure maltée hors feu"),
+        ("txt", "Assaisonner avec 15g d'ail, 5g de thym frais", "Ajouter l'oignon émincé, 15g d'ail, 5g de thym frais"),
+    ],
+    "main_pommes_de_terre_braisees_7a56a8": [
+        ("txt", "Mélanger 2 cuillères à soupe de sauce soja, 1 cuillère à soupe de sucre, 1 cuillère à soupe d'eau et 1 gousse d'ail écrasée",
+         "Mélanger 45 ml de sauce soja, 10 g de sucre, 1 cuillère à soupe d'eau et 9 g d'ail écrasé"),
+        ("txt", "dans 2 cuillères à soupe d'huile d'olive extra vierge", "dans 45 ml d'huile d'olive extra vierge"),
+        ("txt", "Ajouter 1 cuillère à soupe de sésame", "Ajouter 20 g de graines de sésame"),
+    ],
+    "main_potee_auvergnate_fcc003": [
+        ("add", "table_salt_unenriched", 5, "g", "seasoning"),
+        ("add", "water", 2000, "ml", "liquid"),
+        ("txt", "Ajouter 1 cuillère à café de sel", "Ajouter 5 g de sel"),
+    ],
+    # fromage en grains, huile de friture et sauce brune manquaient (149 kcal, 0,3 g de lipides)
+    "main_poutine_1344e1": [
+        ("ing", "cottage_uncreamed_curd_0_4_m_f_dried_4pct_cow", "base_fromage_en_grain_a00941"),
+        ("add", "sunflower_oil_plant", 60, "ml", "fat_frying"),
+        ("add", "cornstarch", 10, "g", "thickener"),
+        ("qty", "vegetable_stock_dried", 5),
+        ("txt", "Chauffer la sauce brune végétarienne dans une petite casserole à feu moyen, en remuant occasionnellement pour éviter les grumeaux, jusqu'à ce qu'elle atteigne une température de 80°C.",
+         "Préparer la sauce brune : délayer 10 g de fécule dans 200 ml de bouillon de légumes, puis chauffer en remuant jusqu'à épaississement."),
+        ("txt", "la poutine se mange très chaude, idéalement à une température de 70°C, pour", "la poutine se mange très chaude, pour"),
+        ("step-", "Servir aussitôt dans un plat préchauffé"),
+    ],
+    "main_poutine_vegan_18f8c2": [
+        ("add", "sunflower_oil_plant", 60, "ml", "fat_frying"),
+        ("add", "cornstarch", 10, "g", "thickener"),
+        ("qty", "vegetable_stock_dried", 5),
+        ("txt", "Chauffer la sauce brune végétarienne dans une petite casserole à feu moyen, en remuant occasionnellement, jusqu'à ce qu'elle soit chaude et prête à être servie.",
+         "Préparer la sauce brune : délayer 10 g de fécule dans 200 ml de bouillon de légumes, puis chauffer en remuant jusqu'à épaississement."),
+        ("txt", "Servir aussitôt dans des bols préchauffés.", "Servir aussitôt."),
+    ],
+    "main_pozole_82d096": [
+        ("ing", "chilli_pepper_raw", "red_hot_chili_pepper_spice_dried", 10),
+        ("add", "garlic_raw", 9, "g", "aromatic"),
+        ("add", "vegetable_stock_dried", 12, "g", "ingredient"),
+        ("add", "water", 1000, "ml", "liquid"),
+        ("qty", "table_salt_unenriched", 2),
+        ("txt", "15g de piments séchés réhydratés", "10g de piments séchés réhydratés"),
+        ("txt", "verser 1 L de bouillon de légumes chaud à 180°C, saler avec 5g de sel", "verser 1 L de bouillon de légumes chaud, saler avec 2g de sel"),
+        ("txt", "Enfourner à 180°C pendant 25 min", "Laisser mijoter 25 min à feu doux"),
+    ],
+    "main_pupusas_9d2c72": [
+        ("add", "vegetable_oil_plant", 20, "ml", "fat"),
+        ("txt", "faire cuire 300 g de haricots noirs, puis les écraser grossièrement", "écraser grossièrement 300 g de haricots noirs cuits"),
+    ],
+    "main_pupusas_aux_haricots_fc8bfd": [
+        ("ing", "parmesan_grated_dried_cow", "cows_milk_mozzarella_cow"),
+        ("add", "vegetable_oil_plant", 20, "ml", "fat"),
+        ("txt", "Nacrer les pupusas avec un peu d'huile chaude, en les badigeonnant délicatement", "Badigeonner les pupusas d'un peu d'huile"),
+        ("time", 9, 0, 18),
+    ],
+    "main_rajma_masala_bce2a4": [
+        ("ing", "sesame_oil_plant", "sunflower_oil_plant"),
+        ("add", "turmeric_powder", 3, "g", "spice"),
+        ("txt", "Chauffer 45 ml d'huile de sésame", "Chauffer 45 ml d'huile de tournesol"),
+        ("txt", "Incorporer 3 g de garam masala, faire sauter 30 secondes", "Incorporer 3 g de garam masala et 3 g de curcuma, faire sauter 30 secondes"),
+    ],
+    "main_rasam_34dc5a": [
+        ("del", "mustard"),
+        ("dish", "soup"),
+        ("txt", " et 15 g de moutarde de Dijon, rectifier", ", rectifier"),
+    ],
+    "main_ribollita_toscane_4cae34": [
+        ("add", "vegetable_stock_dried", 11, "g", "ingredient"),
+        ("add", "water", 900, "ml", "liquid"),
+        ("txt", " et un peu de levure nutritionnelle pour ajouter du parfum et de la texture", ""),
+    ],
+    "main_romanian_zacusc_a929ee": [
+        ("dish", "starter"),
+        ("txt", "puis servir sans attendre : la chaleur est essentielle pour maintenir la texture onctueuse et la saveur intense de ce plat traditionnel roumain.",
+         "puis laisser refroidir : la zacuscă se sert froide, en tartinade."),
+        ("time", 19, 0, 45),
+    ],
+    "main_sancocho_733f70": [
+        ("ing", "coriander_spice_seed", "coriander_raw_fresh_herb", 10),
+        ("qty", "vegetable_stock_dried", 9),
+        ("qty", "table_salt_unenriched", 2),
+        ("txt", "Incorporer les pommes de terre crues et le maïs. Cuire encore 15 minutes", "Poursuivre la cuisson 15 minutes"),
+        ("step-", "Servir dans des bols préchauffés, garni de coriandre fraîche ciselée et d'un filet d'huile d'olive."),
+    ],
+}

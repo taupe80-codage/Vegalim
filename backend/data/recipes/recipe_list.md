@@ -472,7 +472,7 @@
 - **Petits Pois à la Française** _(gluten_free, kid_friendly, low_calorie, nut_free, side, french)_ — `side_petits_pois_a_la_francais_1aa736`
 - **Pho** _(vegan, vegetarian, soup, vietnamese)_ — `soup_pho_ba7e1e`
 - **Pickle d'aubergines sri lankais** _(gluten_free, vegan, vegetarian, side, sri_lankan)_ — `side_eggplant_k1d1p1`
-- **Pico de Gallo** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, international)_ — `main_pico_de_gallo_31e006`
+- **Pico de Gallo** _(diabetes_friendly, gluten_free, vegan, vegetarian, starter, international)_ — `main_pico_de_gallo_31e006`
 - **Pierogi aux Champignons** _(main, polish)_ — `dumpling_pierogi_aux_champignons_d86017` 🔁 doublon possible : Pierogi aux Champignons (Vegan)
 - **Pierogi aux Champignons (Vegan)** _(diabetes_friendly, kid_friendly, lactose_free, nut_free, main, polish)_ — `dumpling_pierogi_aux_champignons_v_beca85` 🔁 doublon possible : Pierogi aux Champignons
 - **Pierogi aux pommes de terre** _(main, polish)_ — `pasta_pierogi_aux_pommes_de_6b3efe` 🔁 doublon possible : Pierogi aux Pommes de Terre (Vegan), Pierogi Pommes de Terre
@@ -485,7 +485,7 @@
 - **Pita aux Épinards** _(diabetes_friendly, high_protein, main, levantine)_ — `egg_pita_aux_epinards_f1f6ff`
 - **Pizza Margherita** _(main, italian)_ — `tarte_margherita_v7k2d1` 🔁 doublon possible : Pizza Margherita (Vegan)
 - **Pizza Margherita (Vegan)** _(diabetes_friendly, high_protein, kid_friendly, lactose_free, nut_free, vegan, vegetarian, main, italian)_ — `tarte_pizza_margherita_vegan_02bb9a` 🔁 doublon possible : Pizza Margherita
-- **Pkhali** _(gluten_free, vegan, vegetarian, main, georgian)_ — `main_pkhali_46d354`
+- **Pkhali** _(gluten_free, vegan, vegetarian, starter, georgian)_ — `main_pkhali_46d354`
 - **Plantain Frit au Citron** _(gluten_free, vegan, vegetarian, side, west_african)_ — `main_plantain_frit_au_citron_60d4e3`
 - **Plantain Frit Nature** _(gluten_free, vegan, vegetarian, side, west_african)_ — `main_plantain_frit_nature_323054`
 - **Plov** _(gluten_free, high_protein, vegan, vegetarian, main, uzbek)_ — `rice_plov_903de4`
@@ -565,7 +565,7 @@
 - **Rajma Masala** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `main_rajma_masala_bce2a4`
 - **Ramen au Miso** _(diabetes_friendly, high_protein, vegetarian, soup, japanese)_ — `soup_ramen_au_miso_f69c22`
 - **Ras el Hanout** _(vegan, vegetarian, gluten_free, condiment, moroccan)_ — `base_ras_el_hanout_7cd544`
-- **Rasam** _(gluten_free, vegan, vegetarian, main, international)_ — `main_rasam_34dc5a`
+- **Rasam** _(gluten_free, vegan, vegetarian, soup, international)_ — `main_rasam_34dc5a`
 - **Ratatouille niçoise traditionnelle** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, french)_ — `stew_ratatouille_k8d2p4`
 - **Revithia** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, international)_ — `dal_revithia_922f79`
 - **Ribollita Toscane** _(diabetes_friendly, vegan, vegetarian, main, international)_ — `main_ribollita_toscane_4cae34`
@@ -802,7 +802,7 @@
 ## Z
 
 - **Za'atar** _(vegan, vegetarian, gluten_free, condiment, levantine)_ — `base_za_atar_2badf3`
-- **Zacuscă roumaine** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, romanian)_ — `main_romanian_zacusc_a929ee`
+- **Zacuscă roumaine** _(diabetes_friendly, gluten_free, vegan, vegetarian, starter, romanian)_ — `main_romanian_zacusc_a929ee`
 
 ## É
 

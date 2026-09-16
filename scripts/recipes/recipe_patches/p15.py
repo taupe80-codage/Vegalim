@@ -1,0 +1,117 @@
+"""Lot 15 : gratins, briam, plats de haricots, tempura, plats persans."""
+
+PATCHES = {
+    "main_gratin_de_chou_fleur_bad955": [
+        ("add", "table_salt_unenriched", 4, "g", "seasoning"),
+        ("txt", "Faites cuire pendant 4 minutes à 180°C", "Faites cuire pendant 4 minutes à feu moyen"),
+        ("txt", "dans un plat huilé avec du beurre", "dans un plat beurré"),
+        ("step-", "Vérifiez la cuisson en insérant une lame de couteau dans le gratin"),
+    ],
+    "main_gratin_de_courgettes_35b5b8": [
+        ("txt", "en saupoudrant de parmesan râpé.",
+         "en saupoudrant de parmesan râpé. Battre l'œuf, l'incorporer à la béchamel, napper les courgettes et parsemer de noix de muscade."),
+        ("step-", "Battre l'oeuf dans un bol et le mélanger à la béchamel"),
+        ("txt", "Servir chaud, garni de feuilles de persil fraîches ou de lamelles de citron, pour préserver la fraîcheur et le croustillant du gratin.",
+         "Servir chaud."),
+    ],
+    "main_gratin_de_navets_e164d6": [
+        ("add", "table_salt_unenriched", 3, "g", "seasoning"),
+        ("txt", "Beurrez un plat à gratin avec de l'huile pour éviter", "Beurrez un plat à gratin pour éviter"),
+        ("txt", "Servir chaud, dans des assiettes préchauffées, en garnissant", "Servir chaud, en garnissant"),
+    ],
+    "main_gratin_de_poireaux_808071": [
+        ("add", "table_salt_unenriched", 4, "g", "seasoning"),
+        ("txt", "Faites cuire pendant 4 minutes à 180°C", "Faites cuire pendant 4 minutes à feu moyen"),
+        ("txt", "dans un plat beurré avec du beurre", "dans un plat beurré"),
+        ("step-", "Vérifiez la cuisson en insérant une lame de couteau dans le gratin"),
+    ],
+    "main_gratin_de_potiron_839446": [
+        ("add", "table_salt_unenriched", 3, "g", "seasoning"),
+        ("txt", "Huiler un plat avec du beurre en couche régulière", "Beurrer un plat en couche régulière"),
+        ("txt", "idéal pour un repas d'automne confortable, dans des assiettes préchauffées", "idéal pour un repas d'automne"),
+    ],
+    "main_greek_briam_4091c5": [
+        ("txt", "Émincer finement 9g d'ail et blanchir les légumes 5 minutes à l'eau bouillante salée, jusqu'à ce que les légumes commencent à tendrer.",
+         "Émincer finement 9g d'ail."),
+        ("txt", "Retirer le papier aluminium et ajouter 150g de fromage râpé", "Ajouter 150g de feta émiettée"),
+        ("time", 17, 0, 50),
+    ],
+    "main_greek_briam_vegan_3fb054": [
+        ("txt", "Ajouter 150 g de fromage végétal râpé (remplacement du feta)", "Ajouter 150 g de tofu ferme émietté"),
+        ("txt", "Servir chaud, dans des bols préchauffés, en vérifiant", "Servir chaud, en vérifiant"),
+        ("time", 17, 0, 60),
+    ],
+    "main_greek_fasolada_612a6f": [
+        ("add", "water", 1500, "ml", "liquid"),
+    ],
+    "main_haricots_blancs_au_four_000c13": [
+        ("add", "tomato_raw_ripe", 400, "g", "vegetable"),
+        ("add", "garlic_raw", 9, "g", "aromatic"),
+        ("add", "thyme_fresh_herb", 3, "g", "herb"),
+        ("add", "bay_leaf_spice", 1, "g", "herb"),
+        ("add", "vegetable_stock_dried", 2, "g", "ingredient"),
+        ("add", "water", 150, "ml", "liquid"),
+        ("step-", "Pour un service élégant"),
+        ("step-", "Servir sans attendre et partager avec plaisir"),
+    ],
+    "main_haricots_frits_mexicains_a78841": [
+        ("add", "water", 100, "ml", "liquid"),
+        ("txt", "en réservant 100 ml du liquide de conserve pour une utilisation ultérieure", "en réservant 100 ml d'eau de cuisson"),
+        ("txt", "Servir chaud, dans des bols préchauffés, pour apprécier", "Servir chaud, pour apprécier"),
+    ],
+    "main_haricots_rouges_a_la_toma_c44560": [
+        ("add", "garlic_raw", 9, "g", "aromatic"),
+        ("txt", "Rectifier l'assaisonnement avec du sel, vérifier que la coloration est dorée blonde, puis servir chaud sans attendre pour préserver la fraîcheur des saveurs.",
+         "Rectifier l'assaisonnement avec du sel, puis servir chaud."),
+    ],
+    "main_haricots_rouges_creoles_ac36f6": [
+        ("add", "red_hot_chili_pepper_spice_dried", 1, "g", "spice"),
+    ],
+    "main_horta_b898d5": [
+        ("ing", "lemon_raw", "lemon_juice", 40, "ml"),
+        ("step-", "Faire bouillir de l'eau salée à 100°C, puis blanchir les légumes verts pendant 5 minutes"),
+        ("txt", "presser le jus de 100 g de citron sur les légumes", "arroser de 40 ml de jus de citron"),
+    ],
+    "main_humita_andine_fe7789": [
+        ("add", "red_bell_pepper_raw", 150, "g", "vegetable"),
+        ("del", "corn_husk"),
+        ("qty", "olive_oil_extra_virgin_plant", 25),
+        ("txt", "sur chaque feuille de maïs humidifiée (environ 80 g)", "sur chaque feuille de maïs humidifiée"),
+        ("txt", ", en utilisant de l'huile d'olive extra vierge (45 ml) pour éviter que les feuilles ne collent,", ", en huilant légèrement les feuilles,"),
+    ],
+    # lecsó : poivrons, tomates, oignon et œuf (ni tofu ni épinards)
+    "main_hungarian_lecs_47d502": [
+        ("del", "tofu_plain_pre_packaged"),
+        ("del", "spinach_raw_mature"),
+        ("txt", "Saisir les oignons blancs dans l'huile d'olive", "Saisir les oignons dans l'huile d'olive"),
+        ("txt", "laisser mijoter 20 minutes à feu doux, à 80°C", "laisser mijoter 20 minutes à feu doux"),
+        ("step-", "Ajouter le tofu ferme coupé en dés"),
+        ("txt", "Assaisonner de sel, poivre et paprika, puis incorporer les épinards crus frais, en les laissant fondre doucement dans la préparation.",
+         "Assaisonner de sel, de poivre et de paprika."),
+        ("txt", "jusqu'à ce que les épinards soient tendres et le liquide réduit", "jusqu'à ce que le liquide soit réduit"),
+    ],
+    "main_japanese_vegetable_tempur_f57314": [
+        ("qty", "green_zucchini_squash_raw", 200),
+        ("qty", "sweet_potato_raw", 200),
+        ("qty", "button_mushroom_raw", 150),
+        ("qty", "broccoli_raw", 200),
+        ("qty", "sunflower_oil_plant", 80),
+        ("txt", "Chauffer 45 ml d'huile de tournesol dans un wok profond à 175°C", "Chauffer un bain d'huile de tournesol dans un wok profond à 175°C"),
+        ("txt", "500 g de courgettes, 400 g de patates douces, 300 g de champignons et 400 g de brocolis",
+         "200 g de courgettes, 200 g de patates douces, 150 g de champignons et 200 g de brocolis"),
+    ],
+    "main_jeera_aloo_f4c7a0": [
+        ("ing", "sesame_oil_plant", "sunflower_oil_plant"),
+        ("ing", "lemon_raw", "lemon_juice", 30, "ml"),
+        ("txt", "dans l'huile de sésame (45ml) chaude", "dans l'huile de tournesol (45ml) chaude"),
+        ("txt", "Assaisonner avec du jus de citron (100g) et servir chaud dans des bols, garni d'un peu de citron vert et de coriandre fraîche ciselée.",
+         "Assaisonner avec 30 ml de jus de citron et servir chaud, garni de coriandre fraîche ciselée."),
+    ],
+    "main_kashke_bademjan_10dd33": [
+        ("del", "sunflower_oil_plant"),
+        ("txt", "Julienne les 600 g d'aubergines, badigeonnez-les de beurre", "Coupez les 600 g d'aubergines en tranches, badigeonnez-les d'un peu de beurre fondu"),
+        ("txt", "Nacrez les aubergines cuites", "Écrasez grossièrement les aubergines cuites"),
+        ("txt", "Émulsionnez le mélange avec 60 ml de kashk", "Incorporez 60 ml de kashk"),
+        ("txt", "Faites une brunoise de 20 g de menthe fraîche, puis frirez-la dans 40 g de beurre", "Ciselez 20 g de menthe fraîche, puis faites-la revenir dans 40 g de beurre"),
+    ],
+}
