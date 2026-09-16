@@ -107,7 +107,7 @@ PATCHES = {
         ("qty", "coconut_oil_plant", 30),
         ("txt", "Chauffer 45ml d'huile de coco", "Chauffer 30ml d'huile de coco"),
         ("txt", "Ajouter 300g d'oignon émincé", "Ajouter 150g d'oignon émincé"),
-        ("txt", "Verser 200ml d'eau et ajouter 5g de sel.", "Ajouter 480g de tomates concassées, 200ml d'eau et 5g de sel."),
+        ("txt", "Verser 200ml d'eau et ajouter 5g de sel.", "Ajouter 300g de tomates concassées, 200ml d'eau et 5g de sel."),
         ("txt", "Ajouter 480g de tomates concassées et rectifier l'assaisonnement avec du sel si nécessaire. Garnir de coriandre fraîche.",
          "Rectifier l'assaisonnement et garnir de coriandre fraîche."),
         ("step-", "Observer la sauce onctueuse et parfumée"),
