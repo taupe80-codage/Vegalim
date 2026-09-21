@@ -1,0 +1,154 @@
+"""Lot 44 : sauce brune, woks, enchiladas, quesadillas, wrap, pâte de curry jaune."""
+
+PATCHES = {
+    "vegetarian_brown_sauce_4233df": [
+        ("ing", "button_mushroom_raw", "shiitake_mushroom_dried", 5),
+        ("txt", "Ajouter les champignons (20g) réhydratés", "Ajouter les champignons séchés (5 g) réhydratés et hachés"),
+        ("txt", "Servir sans attendre, car la chaleur et le croustillant des champignons sont essentiels à l'expérience culinaire.", "Utiliser aussitôt ou conserver 3 jours au réfrigérateur."),
+    ],
+    # tikil gomen : chou blanc et carotte, pas du kale
+    "wok_chou_ethiopien_saute_93ab43": [
+        ("ing", "kale_raw", "green_cabbage_raw", 400),
+        ("add", "carrot_raw", 150, "g", "vegetable"),
+        ("txt", "Émincer finement 300g de chou kale en chiffonnade de 3 mm", "Émincer finement 400g de chou blanc, tailler 150 g de carotte en bâtonnets"),
+        ("txt", "Chauffer 45ml d'huile d'olive extra vierge dans une grande poêle ou wok à feu vif, cuire 2 min à feu moyen-vif, en surveillant la température pour éviter la fumée.",
+         "Chauffer 45ml d'huile d'olive dans une grande poêle ou un wok et y faire revenir l'oignon 5 minutes à feu moyen."),
+        ("txt", "Incorporer le chou émincé", "Incorporer le chou et la carotte"),
+        ("txt", ", le chou doit être vert brillant et parfumé, en vérifiant que la sauce enrobe uniformément les légumes", ""),
+    ],
+    "wok_pad_krapow_vegetarien_565aa9": [
+        ("txt", ", 5g de sucre de canne et 8g de sucre", " et 8g de sucre"),
+        ("step-", "Présenter le Pad Krapow dans un bol"),
+    ],
+    "wok_pak_choi_saute_62b974": [
+        ("qty", "soy_sauce_shoyu_reduced_sodium", 30),
+        ("qty", "table_salt_unenriched", 1),
+        ("qty", "sesame_oil_plant", 20),
+        ("txt", "Chauffez l'huile de sésame dans un wok à feu moyen-vif, jusqu'à ce qu'elle fume légèrement et crépite, signalant qu'elle est prête pour la cuisson.", "Chauffez 20 ml d'huile de sésame dans un wok à feu moyen-vif."),
+        ("txt", "arrosez-les de sauce soja", "arrosez-les de 30 ml de sauce soja"),
+        ("txt", "Assaisonnez de sel et de graines de sésame", "Parsemez de 15 g de graines de sésame"),
+        ("txt", "Servir aussitôt dans des bols préchauffés.", "Servir aussitôt."),
+    ],
+    "wok_pommes_de_terre_sautees_8bafe1": [
+        ("ing", "coconut_oil_plant", "sunflower_oil_plant"),
+        ("txt", "Chauffer 40ml d'huile de coco", "Chauffer 40ml d'huile de tournesol"),
+        ("txt", ", en écoutant le son des pommes de terre qui doivent craquer légèrement", ""),
+        ("txt", ", en sentant son parfum qui se mêle à celui du persil", ""),
+    ],
+    # œufs jamais utilisés, soja et sucre blanc absents du texte
+    "wok_thai_veg_eb92db": [
+        ("ing", "lime", "lime_juice_fresh", 30, "ml"),
+        ("qty", "white_sugar", 8),
+        ("txt", "30 grammes de pâte de tamarin diluée avec 12 grammes de sucre de coco et 60 ml d'eau",
+         "30 grammes de pâte de tamarin, 20 ml de sauce soja, 12 grammes de sucre de coco, 8 g de sucre, 3 g de sel et 60 ml d'eau"),
+        ("txt", "Remettre le tofu cuit et mélanger délicatement", "Pousser les nouilles, brouiller les 2 œufs (110 g) dans le wok, puis remettre le tofu cuit et mélanger délicatement"),
+        ("txt", ", de quartiers de citron vert et de piment séché", " et de piment séché"),
+        ("step-", "Déguster et ajuster l'assaisonnement si nécessaire"),
+        ("txt", "Ajouter un filet de jus de citron vert", "Arroser de 30 ml de jus de citron vert"),
+        ("step-", "Garnir de feuilles de coriandre fraîche"),
+        ("time", 20, 35, 25),
+    ],
+    # aucun des légumes du titre dans la composition
+    "wok_tofu_saute_aux_legumes_1f3ac2": [
+        ("qty", "sesame_oil_plant", 25),
+        ("qty", "cornstarch", 10),
+        ("add", "carrot_raw", 150, "g", "vegetable"),
+        ("add", "broccoli_raw", 200, "g", "vegetable"),
+        ("add", "red_bell_pepper_raw", 150, "g", "vegetable"),
+        ("add", "button_mushroom_raw", 150, "g", "vegetable"),
+        ("add", "green_onion_raw", 40, "g", "vegetable"),
+        ("add", "white_sugar", 5, "g", "sweetener"),
+        ("txt", "Ajouter les légumes fermes (carotte, brocoli, poivron)", "Ajouter les légumes fermes (150 g de carotte, 200 g de brocoli, 150 g de poivron)"),
+        ("txt", "Incorporer les légumes tendres (champignons, oignons verts)", "Incorporer les légumes tendres (150 g de champignons, 40 g d'oignons verts)"),
+        ("txt", "Ajouter la fécule de maïs (20 g) pour épaissir la sauce, en mélangeant bien pour éviter les grumeaux.", "Ajouter 10 g de fécule de maïs délayée dans 30 ml d'eau froide pour épaissir la sauce."),
+        ("txt", " Servir chaud sur riz ou nouilles, en conservant la chaleur pour apprécier pleinement les saveurs et la texture.", ""),
+        ("txt", "Servir aussitôt, en garnissant d'un filet d'huile de sésame et de quelques feuilles de coriandre fraîche, pour un plat visuellement appétissant et parfumé.", "Servir aussitôt, arrosé de 10 ml d'huile de sésame, avec du riz."),
+    ],
+    "wok_tofu_saute_gingembre_soja_6e901c": [
+        ("qty", "sesame_oil_plant", 25),
+        ("add", "sesame_raw_seed", 10, "g", "garnish"),
+        ("txt", " et cuire pendant 3 minutes, en remuant constamment pour éviter les grumeaux.", " et cuire pendant 3 minutes."),
+        ("txt", "pendant 1 minute, en remuant constamment pour éviter les grumeaux et obtenir une sauce sirupeuse.", "pendant 1 minute, jusqu'à obtenir une sauce sirupeuse."),
+        ("step-", "Goûter et rectifier l'assaisonnement si nécessaire"),
+        ("txt", "garni de graines de sésame", "garni de 10 g de graines de sésame"),
+        ("time", 13, 35, 10),
+    ],
+    "wok_veg_k3d2p1": [
+        ("ing", "coconut_oil_plant", "sunflower_oil_plant"),
+        ("txt", "Ajouter l'huile de coco et chauffer immédiatement à 180°C, jusqu'à crépitation légère et à ce que l'huile soit chaude et prête à saisir les légumes.", "Ajouter 25 ml d'huile de tournesol."),
+        ("txt", "Saisir l'ail pendant 10 secondes en remuant sans arrêt, jusqu'à parfum intense et à ce que l'ail soit doré et croustillant.", "Saisir l'ail 30 secondes en remuant sans arrêt, jusqu'à ce qu'il soit parfumé."),
+        ("txt", "Servir chaud, garni de levure nutritionnelle râpée pour un parfum umami intense et en vérifiant la texture finale, jusqu'à ce que le plat soit prêt à être dégusté.", "Servir chaud, avec du riz."),
+    ],
+    # oignon cru dans la farce, 40 g d'ancho, crème de coco et « riz végétal »
+    "wrap_enchiladas_vegan_f70bca": [
+        ("qty", "ancho_pepper_spice_dried", 20),
+        ("qty", "olive_oil_extra_virgin_plant", 45),
+        ("txt", "en faisant revenir 15g d'ail haché dans 45,7ml d'huile d'olive extra vierge", "en faisant revenir 150 g d'oignon émincé et 15g d'ail haché dans 45ml d'huile d'olive"),
+        ("txt", "40g de piments ancho réhydratés", "20g de piments ancho réhydratés"),
+        ("step-", "Vérifiez que la sauce ait une consistance onctueuse"),
+        ("txt", "de 150g de fromage végétal râpé et de 150g d'oignon jaune émincé", "de 100g de fromage végétal râpé"),
+        ("txt", "Parsemez de fromage végétal râpé", "Parsemez des 50 g de fromage végétal restants"),
+        ("step-", "Garnissez d'herbes fraîches et de crème de coco"),
+        ("txt", "accompagnées d'une salade verte ou de riz végétal pour un repas complet", "accompagnées d'une salade verte"),
+    ],
+    # parmesan, légumes « cuits égouttés » jamais cuits
+    "wrap_quesadillas_au_fromage_511e1a": [
+        ("ing", "parmesan_grated_dried_cow", "queso_chihuahua_whole_cow"),
+        ("qty", "table_salt_unenriched", 1),
+        ("steps", [
+            "Faire revenir l'oignon émincé et le poivron en lanières dans 25 ml d'huile d'olive, 7 minutes à feu moyen, puis réserver.",
+            "Essuyer la poêle et la badigeonner d'un peu des 20 ml d'huile restants.",
+            "Placer une tortilla dans la poêle et parsemer une moitié d'un quart des 150 g de fromage râpé et des légumes.",
+            "Replier la tortilla en demi-lune et cuire 2 minutes, jusqu'à ce que le dessous soit doré.",
+            "Retourner et cuire encore 2 minutes, jusqu'à ce que le fromage soit fondu. Répéter avec les autres tortillas.",
+            "Couper en triangles et servir aussitôt, avec des quartiers de citron vert.",
+        ]),
+        ("time", 11, 0, 25),
+    ],
+    "wrap_quesadillas_au_fromage_ve_9794c7": [
+        ("qty", "vegetable_oil_plant", 45),
+        ("qty", "table_salt_unenriched", 2),
+        ("txt", "Faire chauffer 45,7 ml d'huile végétale", "Faire chauffer 45 ml d'huile végétale"),
+        ("txt", ", avec une pâte croustillante, un fromage filant et des légumes fondants visibles à la coupe", ""),
+    ],
+    # chèvre « râpé », 480 g de tomates crues en garniture
+    "wrap_quesadillas_c8edf2": [
+        ("qty", "tomato_raw_ripe", 150),
+        ("qty", "table_salt_unenriched", 2),
+        ("steps", [
+            "Faire revenir l'oignon émincé dans 25 ml d'huile d'olive 5 minutes à feu moyen, ajouter 150 g de tomates en dés égouttées et cuire 3 minutes.",
+            "Émietter 150 g de fromage de chèvre frais.",
+            "Répartir la garniture et le chèvre sur une moitié de chaque tortilla, puis la replier.",
+            "Cuire les quesadillas 2 minutes de chaque côté dans une poêle badigeonnée des 20 ml d'huile restants, jusqu'à ce qu'elles soient dorées.",
+            "Saler légèrement (2 g), couper en triangles et servir aussitôt.",
+        ]),
+    ],
+    "wrap_quesadillas_vegan_f68baa": [
+        ("qty", "tomato_raw_ripe", 150),
+        ("qty", "olive_oil_extra_virgin_plant", 30),
+        ("qty", "table_salt_unenriched", 2),
+        ("steps", [
+            "Faire chauffer 15 ml d'huile d'olive dans une poêle à feu moyen, faire revenir l'oignon émincé 5 minutes, ajouter 150 g de tomates en dés et cuire 3 minutes.",
+            "Mélanger les légumes avec 150 g de fromage végétal râpé.",
+            "Répartir la garniture sur une moitié de chaque tortilla (320 g au total), puis la replier.",
+            "Cuire 2 minutes de chaque côté dans la poêle badigeonnée des 15 ml d'huile restants, jusqu'à ce que la tortilla soit dorée.",
+            "Saler (2 g), couper en triangles et servir aussitôt.",
+        ]),
+    ],
+    # « sauce brune » remplacée par 0,5 g de bouillon + 40 ml d'eau ; huile chauffée après le service
+    "wrap_veg_k3d2p1": [
+        ("del", "vegetable_stock_dried"),
+        ("del", "water"),
+        ("txt", "Étaler 2 cuillères à soupe de sauce brune végétarienne sur la galette", "Étaler un quart des 80 g de chèvre frais sur la galette"),
+        ("txt", "Ajouter les carottes crues émincées et le concombre coupé en fines lamelles, ainsi que du fromage de chèvre râpé.",
+         "Ajouter les carottes râpées et le concombre en fines lamelles, assaisonnés de 10 ml d'huile d'olive, 2 g de sel et de poivre."),
+        ("txt", " et que la sauce brune végétarienne est encore chaude et généreuse à chaque bouchée", ""),
+        ("step-", "Faire chauffer 10 ml d'huile d'olive extra vierge dans une poêle"),
+    ],
+    "yellow_curry_paste_077f54": [
+        ("qty", "turmeric_powder", 8),
+        ("txt", "mixer 15g de curcuma", "mixer 8g de curcuma"),
+        ("step-", "Goûtez la pâte et ajustez la saveur si nécessaire"),
+        ("step-", "Utilisez cette pâte pour préparer des plats délicieux"),
+    ],
+}

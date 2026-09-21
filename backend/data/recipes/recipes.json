@@ -167884,6 +167884,28 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -167942,8 +167964,11 @@
       "search_tokens": [
         "ail",
         "aubergine",
+        "basil",
+        "basilic",
         "bay",
         "bell",
+        "black",
         "braising",
         "classique",
         "coeliaque",
@@ -167968,10 +167993,12 @@
         "minceur",
         "moyen",
         "nicoise",
+        "noir",
         "oignon",
         "olive",
         "onion",
         "pepper",
+        "poivre",
         "poivron",
         "ratatouille",
         "red",
@@ -168003,12 +168030,11 @@
       "description": "Ragoût provençal de légumes cuits séparément puis assemblés, avec une liaison lente dans une base tomate concentrée. Les aubergines, les courgettes et les poivrons sont cuits à point, légèrement dorés, tandis que l'oignon et l'ail sont confits pour créer une sauce parfumée. Cette recette traditionnelle niçoise est idéale pour déguster les saveurs de la Provence.",
       "instructions": [
         "Étape 1 : Préparez les légumes. Coupez les aubergines en dés de 3 cm. Salez les aubergines et laissez-les reposer 15 minutes pour en extraire l'excès d'eau. Rincez-les, séchez-les.",
-        "Étape 2 : Faites revenir chaque légume séparément dans 70 ml d'huile d'olive à feu vif pendant 5 à 7 minutes, en les remuant régulièrement, jusqu'à ce qu'ils soient légèrement dorés. Réservez-les au fur et à mesure pour conserver leur texture.",
-        "Étape 3 : Dans la même poêle, faites confire l'oignon à feu doux pendant 10 minutes, en remuant occasionnellement, jusqu'à ce qu'il soit tendre et parfumé. Ajoutez l'ail et continuez à cuire pendant 2 minutes. Ajoutez les tomates concassées, le thym et le laurier. Cuisez pendant 10 minutes, en remuant occasionnellement, jusqu'à ce que la sauce soit réduite et parfumée.",
+        "Étape 2 : Faites revenir successivement chaque légume dans un peu d'huile d'olive (50 ml au total) à feu vif pendant 5 à 7 minutes, en les remuant régulièrement, jusqu'à ce qu'ils soient légèrement dorés. Réservez-les au fur et à mesure pour conserver leur texture.",
+        "Étape 3 : Dans la même poêle, faites confire l'oignon dans les 20 ml d'huile restants, à feu doux pendant 10 minutes, en remuant occasionnellement, jusqu'à ce qu'il soit tendre et parfumé. Ajoutez l'ail et continuez à cuire pendant 2 minutes. Ajoutez les tomates concassées, le thym et le laurier. Cuisez pendant 10 minutes, en remuant occasionnellement, jusqu'à ce que la sauce soit réduite et parfumée.",
         "Étape 4 : Réunissez tous les légumes dans la poêle. Mélangez délicatement pour ne pas écraser les légumes. Couvrez et mijotez à feu très doux pendant 20 minutes, en remuant occasionnellement, jusqu'à ce que les légumes soient fondants et la sauce concentrée.",
-        "Étape 5 : Retirez le couvercle pendant les 5 dernières minutes de cuisson pour lier la sauce. Assaisonnez avec du sel et ajoutez des herbes fraîches déchirées. La ratatouille est encore meilleure réchauffée.",
-        "Étape 6 : Vérifiez que les légumes soient tendres et la sauce nappe la cuillère. Ajustez la consistance si nécessaire.",
-        "Étape 7 : Servez sans attendre, en accompagnant de pain ou de riz pour profiter pleinement des saveurs de cette ratatouille niçoise traditionnelle."
+        "Étape 5 : Retirez le couvercle pendant les 5 dernières minutes de cuisson pour lier la sauce. Assaisonnez avec 6 g de sel et du poivre, puis ajoutez 10 g de basilic déchiré. La ratatouille est encore meilleure réchauffée.",
+        "Étape 6 : Servez sans attendre, en accompagnant de pain ou de riz pour profiter pleinement des saveurs de cette ratatouille niçoise traditionnelle."
       ],
       "diet_flags": {
         "vegan": true,
@@ -168037,8 +168063,8 @@
       "timing": {
         "prep_active_min": 17,
         "prep_passive_min": 0,
-        "cook_min": 35,
-        "total_min": 52
+        "cook_min": 20,
+        "total_min": 37
       },
       "composition": [
         {
@@ -168065,7 +168091,7 @@
         },
         {
           "ingredient": "green_zucchini_squash_raw",
-          "quantity": 500,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "vegetable",
@@ -168141,17 +168167,6 @@
           }
         },
         {
-          "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 200,
-          "unit": "g",
-          "meta": {
-            "role": "protein",
-            "form": "cubed",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "sesame_oil_plant",
           "quantity": 30,
           "unit": "ml",
@@ -168166,7 +168181,6 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "high_protein"
         ],
         "allergens": [
@@ -168220,7 +168234,7 @@
         }
       },
       "search_tokens": [
-        "1 heure",
+        "45 minutes",
         "ail",
         "asia",
         "asiatique",
@@ -168230,13 +168244,11 @@
         "braising",
         "button",
         "champignon",
-        "coeliaque",
         "coree",
         "coreen",
         "courgette",
         "egg",
         "garlic",
-        "gluten free",
         "green",
         "intermediaire",
         "korean",
@@ -168251,7 +168263,6 @@
         "onion",
         "paris",
         "ragout",
-        "sans gluten",
         "sans viande",
         "sesame",
         "silken",
@@ -168270,18 +168281,18 @@
       "_quality_score": 0.96,
       "description": "Ragoût coréen crémeux à base de tofu soyeux, avec une sauce onctueuse et des légumes tendres, inspiré de la cuisine traditionnelle coréenne, où les saveurs de gochujang et de kimchi se mélangent en harmonie.",
       "instructions": [
-        "Étape 1: Chauffer 2 cuillères à soupe d'huile dans un pot en terre cuite à feu moyen pendant 2 minutes, jusqu'à ce que l'huile commence à fumer et dégage un parfum subtil.",
-        "Étape 2: Faire revenir 3 gousses d'ail émincé et 1 oignon émincé pendant 2 minutes, jusqu'à ce qu'ils soient translucides et dégagent un parfum doux et sucré.",
+        "Étape 1: Chauffer 30 ml d'huile de sésame dans un poêlon en terre à feu moyen.",
+        "Étape 2: Faire revenir 9 g d'ail et l'oignon émincés pendant 2 minutes, jusqu'à ce qu'ils soient translucides et dégagent un parfum doux et sucré.",
         "Étape 3: Ajouter 30 ml de gochujang et 200 g de kimchi, et cuire en remuant pendant 2 minutes, jusqu'à ce que le mélange soit parfumé et les saveurs se mélangent.",
-        "Étape 4: Verser 750 ml de bouillon végétarien et porter à frémissement. Ensuite, enfourner à 200°C pendant 20 minutes, jusqu'à ce que le ragoût soit chaud et les saveurs soient bien intégrées.",
-        "Étape 5: Incorporer 300 g de champignons de Paris en dés et 500 g de courgette crue en dés, et cuire pendant 10 minutes, jusqu'à ce que les légumes soient tendres et commencent à ramollir.",
-        "Étape 6: Ajouter délicatement 400 g de tofu soyeux en morceaux grossiers, et ciseler pendant 1 minute, jusqu'à ce que le tofu soit bien réparti dans le ragoût et les saveurs soient équilibrées.",
-        "Étape 7: Ajouter 220 g d'œuf battu et cuire pendant 2 minutes, jusqu'à ce que l'œuf soit pris et les saveurs soient bien intégrées. Rectifier l'assaisonnement et servir chaud, en garnissant de feuilles de coriandre fraîche si désiré, pour un repas complet et savoureux."
+        "Étape 4: Verser 750 ml de dashi végétal et laisser frémir 10 minutes.",
+        "Étape 5: Incorporer 300 g de champignons de Paris en dés et 200 g de courgette en dés, et cuire pendant 10 minutes, jusqu'à ce que les légumes soient tendres et commencent à ramollir.",
+        "Étape 6: Ajouter délicatement 400 g de tofu soyeux en morceaux grossiers, et laisser chauffer 2 minutes sans remuer.",
+        "Étape 7: Casser les 4 œufs (220 g) à la surface et cuire 2 minutes, jusqu'à ce que les blancs soient pris. Rectifier l'assaisonnement et servir chaud, avec du riz."
       ],
       "diet_flags": {
         "vegan": false,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -168347,9 +168358,7 @@
       "instructions": [
         "Étape 1 : Casser la pulpe de tamarin en petits morceaux pour faciliter la réhydratation, puis les couvrir d'eau chaude à 90°C pendant 20 minutes, permettant ainsi à la pulpe de ramollir complètement.",
         "Étape 2 : Malaxer la pulpe ramollie à l'aide d'une fourchette pour libérer les fibres et les jus, puis passer le mélange au tamis fin pour obtenir une pâte lisse et homogène, sans grumeaux ni particules solides.",
-        "Étape 3 : Conserver la pâte de tamarin obtenue dans un pot hermétique au réfrigérateur à une température inférieure à 4°C, où elle peut se conserver pendant 2 à 3 semaines sans altérer sa qualité ou son goût.",
-        "Étape 4 : Avant de servir, vérifier que la pâte a une consistance lisse et une odeur fruitée intense, caractéristiques de la pâte de tamarin de qualité.",
-        "Étape 5 : Servir sans attendre, en utilisant la pâte de tamarin comme base pour diverses sauces et plats, profitant ainsi de son acidité intense et de sa saveur fruitée unique."
+        "Étape 3 : Conserver la pâte de tamarin obtenue dans un pot hermétique au réfrigérateur à une température inférieure à 4°C, où elle peut se conserver pendant 2 à 3 semaines sans altérer sa qualité ou son goût."
       ],
       "diet_flags": {
         "vegan": true,
@@ -168433,8 +168442,8 @@
           }
         },
         {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 200,
+          "ingredient": "tomato_sauce_salted_canned",
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
@@ -168478,7 +168487,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 4,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -168585,13 +168594,12 @@
       "_quality_score": 0.95,
       "description": "Pizza Margherita authentique, fermentation lente de la pâte, cuisson à très haute température, tomate San Marzano concentrée et fromage fondu à cœur, avec une croûte croustillante et un intérieur moelleux.",
       "instructions": [
-        "Étape 1: Préparer la pâte en mélangeant 300 g de farine de type 00, 5 g de levure sèche, 5 g de sel fin et 15 ml d'huile d'olive extra vierge. Ajouter 190 ml d'eau tiède progressivement. Pétrir pendant 10 minutes jusqu'à obtenir une pâte lisse et élastique. Laisser lever pendant 2 heures à température ambiante.",
+        "Étape 1: Sortir 300 g de pâte à pizza levée (préparée 2 heures à l'avance) et la laisser revenir à température ambiante.",
         "Étape 2: Préchauffer le four à 250°C avec une plaque ou une pierre à l'intérieur pendant au moins 30 minutes.",
-        "Étape 3: Étaler la pâte en un disque fin de 30 cm de diamètre. Napper de sauce tomate en laissant un bord de 2 cm.",
-        "Étape 4: Répartir des tranches de fromage mozzarella râpé sur la sauce tomate. Enfourner immédiatement sur la plaque chaude pendant 8 à 10 minutes, jusqu'à ce que les bords soient brun doré et légèrement soufflés.",
+        "Étape 3: Étaler la pâte en un disque fin de 30 cm de diamètre. Napper de 150 g de sauce tomate en laissant un bord de 2 cm.",
+        "Étape 4: Répartir 200 g de mozzarella égouttée en morceaux sur la sauce. Enfourner immédiatement sur la plaque chaude pendant 8 à 10 minutes, jusqu'à ce que les bords soient brun doré et légèrement soufflés.",
         "Étape 5: Sortir du four et déposer des feuilles de basilic frais sur la pizza. Ajouter un filet d'huile d'olive extra vierge. La croûte doit être croustillante en dessous et moelleuse en bord, le fromage fondu et légèrement coloré.",
-        "Étape 6: Observer la texture de la croûte et la coloration du fromage. Si nécessaire, prolonger la cuisson de 1 à 2 minutes pour obtenir la texture désirée.",
-        "Étape 7: Servir chaud, garni de feuilles de basilic frais et accompagné d'un filet d'huile d'olive extra vierge."
+        "Étape 6: Servir chaud."
       ],
       "diet_flags": {
         "vegan": false,
@@ -168619,9 +168627,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 45,
-        "prep_passive_min": 20,
-        "cook_min": 45,
-        "total_min": 110
+        "prep_passive_min": 30,
+        "cook_min": 60,
+        "total_min": 135
       },
       "composition": [
         {
@@ -168659,7 +168667,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 30,
+          "quantity": 15,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -168754,6 +168762,17 @@
             "ingredient_fr": "salade verte",
             "note": "Un accompagnement frais et équilibré",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "butter_sup80pct",
+          "quantity": 45,
+          "unit": "g",
+          "meta": {
+            "role": "bechamel",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -168881,15 +168900,12 @@
       "_chef_note": "Cette moussaka est un véritable délice, avec des saveurs équilibrées et des textures variées.",
       "description": "Gratin végétal méditerranéen créatif, avec des aubergines caramélisées et une béchamel crémeuse, aux saveurs épanouies, texture onctueuse et parfum intense, inspiré par la cuisine grecque traditionnelle.",
       "instructions": [
-        "Étape 1 : Couper 650g d'aubergines en tranches de 7mm, saler et laisser dégorger pendant 20 minutes, puis rincer, sécher et faire griller ou frire à feu vif pendant 2 à 3 minutes par face, jusqu'à doré, en sentant l'odeur des aubergines qui commencent à caraméliser.",
-        "Étape 2 : Préparer la farce végétale : faire revenir 140g d'oignon dans 20ml d'huile vierge extra, ajouter 30g d'ail haché, 350g de tomates concassées, 0,5g de muscade moulue et des herbes, mijoter pendant 15 minutes à 80°C, jusqu'à farce épaisse et parfumée.",
-        "Étape 3 : Préparer la béchamel crémeuse : fondre 45g de beurre dans une casserole, incorporer 45g de farine de blé, verser 450ml de lait entier chaud en fouettant, cuire pendant 5 minutes à 70°C, jusqu'à texture lisse et crémeuse, lier avec du sel de table et du poivre noir.",
+        "Étape 1 : Couper 650g d'aubergines en tranches de 7mm, saler et laisser dégorger pendant 20 minutes, puis rincer, sécher et les faire griller avec 25 ml d'huile d'olive, 2 à 3 minutes par face, jusqu'à ce qu'elles soient dorées.",
+        "Étape 2 : Préparer la farce végétale : faire revenir 140g d'oignon dans 20ml d'huile vierge extra, ajouter 15g d'ail haché, 350g de tomates concassées, 0,5g de muscade moulue et des herbes, mijoter pendant 15 minutes à feu doux, jusqu'à farce épaisse et parfumée.",
+        "Étape 3 : Préparer la béchamel crémeuse : fondre 45g de beurre dans une casserole, incorporer 45g de farine de blé, verser 450ml de lait entier chaud en fouettant, cuire pendant 5 minutes à feu doux, jusqu'à texture lisse et crémeuse, lier avec du sel de table et du poivre noir.",
         "Étape 4 : Assembler la moussaka : alterner les tranches d'aubergines, la farce végétale et la béchamel crémeuse dans un plat à gratin, en terminant par une couche de béchamel.",
-        "Étape 5 : Enfourner à 180°C pendant 40 minutes, jusqu'à surface dorée et légèrement soufflée, en sentant l'odeur de la moussaka qui cuit et la voyant prendre forme.",
-        "Étape 6 : Laisser reposer pendant 10 minutes pour permettre à la moussaka de se couper proprement, puis servir chaud ou froid selon les préférences.",
-        "Étape 7 : Déguster et ajuster l'assaisonnement si nécessaire.",
-        "Étape 8 : Vous pouvez accompagner la moussaka de salade verte ou de légumes grillés pour un repas complet et équilibré.",
-        "Étape 9 : Présenter la moussaka dans un plat de service, en ajoutant une garniture de persil frais haché et un filet d'huile vierge extra, pour une présentation visuelle attrayante et un parfum intense."
+        "Étape 5 : Enfourner à 180°C pendant 40 minutes, jusqu'à surface dorée et légèrement soufflée.",
+        "Étape 6 : Laisser reposer pendant 10 minutes pour permettre à la moussaka de se couper proprement, puis servir chaud ou froid selon les préférences."
       ],
       "diet_flags": {
         "vegan": false,
@@ -168918,8 +168934,8 @@
       "timing": {
         "prep_active_min": 11,
         "prep_passive_min": 120,
-        "cook_min": 25,
-        "total_min": 156
+        "cook_min": 10,
+        "total_min": 141
       },
       "composition": [
         {
@@ -168935,7 +168951,7 @@
         },
         {
           "ingredient": "tomato_sauce_salted_canned",
-          "quantity": 400,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "condiment",
@@ -168968,33 +168984,11 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 46.2,
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "fat",
             "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 240,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "diced",
             "state": "raw",
             "preparation": ""
           }
@@ -169108,12 +169102,9 @@
         "persil",
         "pizza",
         "roasting",
-        "salt",
         "sans produit animal",
         "sans viande",
-        "sel",
         "simple",
-        "table",
         "tofu",
         "tomate",
         "tomato",
@@ -169127,13 +169118,12 @@
       "_quality_score": 0.8,
       "description": "Crustine croustillante surmontée d'une sauce tomate onctueuse et de feuilles de basilic frais, technique italienne revisitée pour une version végétalienne créative avec une texture fondante.",
       "instructions": [
-        "Étape 1 : Préparer la pâte à pizza en mélangeant 300 g de farine T00, 7 g de levure, 5 g de sel de table, 10 ml d'huile d'olive vierge extra et 190 ml d'eau tiède. Pétrir pendant 10 minutes, jusqu'à obtenir une pâte lisse et élastique, puis laisser lever pendant 2 heures, ou jusqu'à ce que le volume ait doublé.",
+        "Étape 1 : Sortir 300 g de pâte à pizza levée (préparée 2 heures à l'avance) et la laisser revenir à température ambiante.",
         "Étape 2 : Préchauffer le four à 250°C avec la plaque pendant 30 minutes, en s'assurant qu'elle soit bien chaude avant d'y déposer la pâte.",
-        "Étape 3 : Étaler la pâte en disque fin de 30 cm de diamètre, en veillant à ce qu'elle soit régulière et sans défauts. Napper de 400 g de sauce tomate salée en laissant 2 cm de bord, en prenant soin de ne pas trop charger la pâte.",
-        "Étape 4 : Répartir 250 g de tofu nature sur la sauce tomate, en utilisant un tofu à texture ferme pour une texture crémeuse. Enfourner pendant 8 à 10 minutes jusqu'à ce que les bords soient brun doré et légèrement soufflés, en surveillant la cuisson pour éviter une coloration trop prononcée.",
-        "Étape 5 : Sortir la pizza du four et ajouter des feuilles de basilic frais, en les disposant de manière harmonieuse sur la surface de la pizza. Arroser d'un filet d'huile d'olive vierge extra pour ajouter une touche de saveur et de fraîcheur.",
-        "Étape 6 : Ajouter des tomates fraîches coupées en dés pour une touche de fraîcheur et de saveur. Assaisonner avec du sel de table pour rehausser les saveurs.",
-        "Étape 7 : Servir aussitôt dans des assiettes préchauffées, garni de feuilles de basilic frais et accompagné d'un filet d'huile d'olive vierge extra. Accompagner de riz, de pain ou d'une garniture de noix de coco et d'herbes fraîches, en laissant libre cours à la créativité pour trouver le meilleur accompagnement à cette pizza végétalienne."
+        "Étape 3 : Étaler la pâte en disque fin de 30 cm de diamètre, en veillant à ce qu'elle soit régulière et sans défauts. Napper de 150 g de sauce tomate en laissant 2 cm de bord, en prenant soin de ne pas trop charger la pâte.",
+        "Étape 4 : Répartir 250 g de tofu ferme émietté sur la sauce tomate. Enfourner pendant 8 à 10 minutes jusqu'à ce que les bords soient brun doré et légèrement soufflés, en surveillant la cuisson pour éviter une coloration trop prononcée.",
+        "Étape 5 : Sortir la pizza du four et ajouter des feuilles de basilic frais, en les disposant de manière harmonieuse sur la surface de la pizza. Arroser de 20 ml d'huile d'olive vierge extra pour ajouter une touche de saveur et de fraîcheur.",
+        "Étape 6 : Servir aussitôt."
       ],
       "diet_flags": {
         "vegan": true,
@@ -169168,7 +169158,7 @@
       "composition": [
         {
           "ingredient": "shortcrust_pastry_all_butter_raw_paste_pre_packaged",
-          "quantity": 80,
+          "quantity": 230,
           "unit": "g",
           "meta": {
             "role": "starch",
@@ -169212,7 +169202,7 @@
         },
         {
           "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 120,
+          "quantity": 80,
           "unit": "g",
           "meta": {
             "role": "dairy",
@@ -169256,7 +169246,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 4,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -169285,6 +169275,28 @@
             "ingredient_fr": "feuilles de persil frais",
             "note": "Pour une touche de fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -169375,6 +169387,8 @@
         "minceur",
         "mushroom",
         "noir",
+        "oignon",
+        "onion",
         "oven_cooking",
         "paris",
         "parmesan",
@@ -169409,14 +169423,13 @@
       "instructions": [
         "Étape 1: Préchauffer le four à 180°C pour une cuisson parfaite, en vérifiant que la température est bien réglée pour éviter toute erreur.",
         "Étape 2: Foncer un moule de 26 cm avec une pâte précuite à base de farine de blé, piquer le fond pour éviter les bulles et assurer une cuisson uniforme.",
-        "Étape 3: Faire revenir les oignons et les légumes choisis dans 20 g d'huile d'olive à feu moyen pendant 6 minutes, en surveillant la texture et la couleur pour atteindre une légère caramelisation.",
+        "Étape 3: Faire revenir 100 g d'oignon émincé et les légumes dans 20 ml d'huile d'olive à feu moyen pendant 6 minutes, en surveillant la texture et la couleur pour atteindre une légère caramelisation.",
         "Étape 4: Fouetter 4 œufs avec 200 ml de crème liquide et 100 ml de lait entier, en ajoutant du sel, du poivre et des épices pour donner un bouquet aromatique équilibré.",
         "Étape 5: Répartir la garniture composée de 200 g de légumes variés (poivrons, courgettes, champignons) sur le fond précuit, en veillant à une répartition homogène pour une présentation appétissante.",
-        "Étape 6: Ajouter 120 g de parmesan râpé sur la garniture pour un goût salé et une texture croquante.",
+        "Étape 6: Ajouter 80 g de parmesan râpé sur la garniture pour un goût salé et une texture croquante.",
         "Étape 7: Enfourner pendant 30 à 35 minutes, en surveillant la surface pour atteindre une couleur dorée et en vérifiant que le centre est légèrement tremblant, ce qui indique une cuisson parfaite.",
         "Étape 8: Sortir la quiche du four et laisser refroidir pendant quelques minutes avant de servir.",
-        "Étape 9: Servir chaud, accompagné d'une salade verte ou de légumes grillés pour un repas complet et équilibré.",
-        "Étape 10: Pour une présentation plus élégante, parsemer de feuilles de persil frais ou de fleurs comestibles pour ajouter une touche de couleur et de fraîcheur."
+        "Étape 9: Servir chaud, accompagné d'une salade verte ou de légumes grillés pour un repas complet et équilibré."
       ],
       "diet_flags": {
         "vegan": false,
@@ -169441,7 +169454,7 @@
         "region": "java",
         "city": ""
       },
-      "servings": 2,
+      "servings": 4,
       "timing": {
         "prep_active_min": 13,
         "prep_passive_min": 15,
@@ -169473,7 +169486,7 @@
         },
         {
           "ingredient": "soy_sauce_tamari",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -169483,7 +169496,7 @@
           }
         },
         {
-          "ingredient": "coriander_spice_leaf_dried",
+          "ingredient": "coriander_spice_seed",
           "quantity": 3,
           "unit": "g",
           "meta": {
@@ -169643,18 +169656,17 @@
       ],
       "difficulty_level": "medium",
       "dish_type": "snack",
-      "servings_default": 2,
+      "servings_default": 4,
       "_quality_score": 0.84,
       "description": "Sauté indonésienne de tempeh fumé au wok à feu très vif, avec des légumes croquants, une sauce enrobante et parfumée, créant une texture tendre et croustillante — une spécialité de la cuisine indonésienne, préparée avec soin et attention.",
       "instructions": [
-        "Couper le tempeh fumé en tranches ou cubes de 1 cm, pour obtenir une texture tendre et croustillante.",
-        "Préparer la marinade : mélanger 45 ml de sauce soja, 3 g de coriandre moulue, 9 g d'ail émincé, 2 g de sel de table et 2 g de poivre noir, afin d'obtenir une sauce parfumée et équilibrée.",
-        "Faire mariner le tempeh fumé au moins 15 minutes, pour que les saveurs pénètrent profondément dans la texture.",
+        "Couper le tempeh en tranches ou cubes de 1 cm, pour obtenir une texture tendre et croustillante.",
+        "Préparer la marinade : mélanger 30 ml de sauce soja, 3 g de coriandre moulue, 9 g d'ail émincé, 2 g de sel de table et 2 g de poivre noir, afin d'obtenir une sauce parfumée et équilibrée.",
+        "Faire mariner le tempeh au moins 15 minutes, pour que les saveurs pénètrent profondément dans la texture.",
         "Chauffer 45 ml d'huile végétale dans une poêle à feu vif, jusqu'à ce que l'huile soit chaude et prête à frire.",
-        "Faire frire le tempeh fumé en plusieurs fois sans surcharger la poêle, 3-4 minutes par face, jusqu'à ce que le tempeh soit bien doré et croustillant.",
-        "Retourner et cuire jusqu'à ce que le tempeh soit croustillant et doré, en vérifiant régulièrement la couleur et la texture.",
+        "Faire frire le tempeh en plusieurs fois sans surcharger la poêle, 3-4 minutes par face, jusqu'à ce que le tempeh soit bien doré et croustillant.",
         "Égoutter sur du papier absorbant, pour enlever l'excès d'huile, et saler légèrement à la sortie de la friture, pour apporter une touche de saveur.",
-        "Servir chaud dans des bols préchauffés, accompagné de riz et d'une sauce pimentée, pour un repas équilibré et savoureux, garni de coriandre fraîche ciselée pour une touche de fraîcheur."
+        "Servir chaud, avec du riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -169733,7 +169745,7 @@
         },
         {
           "ingredient": "sesame_oil_plant",
-          "quantity": 45,
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -169751,6 +169763,17 @@
             "ingredient_fr": "oignons verts ciselés",
             "note": "Ajouter une touche de fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "green_onion_raw",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -169853,13 +169876,12 @@
       "_quality_score": 0.92,
       "description": "Tempeh japonais caramélisé — sauce teriyaki réduite enrobant des tranches dorées et fermes, parsemées de graines de sésame grillées, dans une tradition de cuisine zen, avec une texture croustillante à l'extérieur et tendre à l'intérieur.",
       "instructions": [
-        "Étape 1 : Couper le tempeh en tranches de 1 cm ou en cubes, puis les faire mariner pendant 20 minutes dans un mélange de 30 ml de sauce teriyaki, 20 ml d'huile de sésame et 10 ml d'huile de coco.",
+        "Étape 1 : Couper le tempeh en tranches de 1 cm ou en cubes, puis les faire mariner pendant 20 minutes dans un mélange de 60 ml de sauce teriyaki et 20 ml d'huile de sésame.",
         "Étape 2 : Chauffer une poêle antiadhésive huilée à feu moyen-vif. Faire dorer les tranches de tempeh pendant 3 minutes par face, jusqu'à ce que la surface soit caramélisée et croustillante, avec une couleur dorée intense.",
-        "Étape 3 : Verser la marinade restante dans la poêle et laisser caraméliser pendant 1 à 2 minutes en retournant le tempeh pour bien l'enrober, permettant ainsi à la sauce de réduire et de devenir sirupeuse.",
-        "Étape 4 : Ajouter 9 grammes d'ail haché finement et 20 grammes de graines de sésame grillées pour parsemer le tempeh.",
-        "Étape 5 : Faire chauffer 45 ml d'huile de sésame dans la poêle pour ajouter une saveur riche au tempeh.",
-        "Étape 6 : Servir le tempeh caramélisé sur un lit de riz chaud, avec la sauce teriyaki sirupeuse enrobant chaque tranche, et parsemer de graines de sésame grillées pour un contraste de textures.",
-        "Étape 7 : Présenter le plat avec une touche de fraîcheur, en ajoutant des oignons verts ciselés sur le dessus."
+        "Étape 3 : Ajouter 9 g d'ail haché, puis verser la marinade restante dans la poêle et laisser caraméliser pendant 1 à 2 minutes en retournant le tempeh pour bien l'enrober, permettant ainsi à la sauce de réduire et de devenir sirupeuse.",
+        "Étape 4 : Parsemer de 20 grammes de graines de sésame grillées.",
+        "Étape 5 : Servir le tempeh caramélisé sur un lit de riz chaud, avec la sauce teriyaki sirupeuse enrobant chaque tranche, et parsemer de graines de sésame grillées pour un contraste de textures.",
+        "Étape 6 : Présenter le plat avec une touche de fraîcheur, en ajoutant 20 g d'oignons verts ciselés sur le dessus."
       ],
       "diet_flags": {
         "vegan": true,
@@ -169910,8 +169932,8 @@
           }
         },
         {
-          "ingredient": "button_mushroom_raw",
-          "quantity": 20,
+          "ingredient": "shiitake_mushroom_dried",
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "umami",
@@ -170004,12 +170026,12 @@
       "description": "Sauce brune végétarienne umami, idéale pour accompagner des pâtes ou des gnocchis, avec une texture onctueuse et une couleur brune riche obtenue grâce à la caramélisation des oignons et à l'ajout de miso blanc.",
       "instructions": [
         "Faire revenir l'oignon (60g) et l'ail (10g) dans l'huile d'olive (15ml) pendant 5 min à feu moyen, jusqu'à caramélisation légère et parfum intense, en remuant régulièrement pour éviter l'attache.",
-        "Ajouter les champignons (20g) réhydratés et la pâte de tomate (20g), cuire 3 min en remuant régulièrement pour éviter l'attache et obtenir une texture homogène.",
+        "Ajouter les champignons séchés (5 g) réhydratés et hachés et la pâte de tomate (20g), cuire 3 min en remuant régulièrement pour éviter l'attache et obtenir une texture homogène.",
         "Saupoudrer la farine de blé (20g) et mélanger 1 min pour bien incorporer et former un mélange homogène, en veillant à ce que la farine soit bien dissoute.",
         "Verser le bouillon de légumes chaud (400ml) progressivement en fouettant pour éviter les grumeaux, en veillant à obtenir une consistance lisse et fluide, puis ajouter la sauce soja (20ml) et le miso blanc délayé dans une louche de bouillon.",
         "Incorporer le mélange et remuer bien pour dissoudre complètement, puis cuire à feu doux pendant 15 min, en remuant occasionnellement, jusqu'à consistance nappante et saveur intense.",
         "Vérifier que la sauce nappe la cuillère et a une texture onctueuse, puis filtrer si souhaité pour un résultat plus lisse.",
-        "Servir sans attendre, car la chaleur et le croustillant des champignons sont essentiels à l'expérience culinaire."
+        "Utiliser aussitôt ou conserver 3 jours au réfrigérateur."
       ],
       "diet_flags": {
         "vegan": true,
@@ -170032,7 +170054,6 @@
         "bouillon",
         "brown",
         "brune",
-        "button",
         "champignon",
         "chef",
         "complexe",
@@ -170053,7 +170074,6 @@
         "oignon",
         "olive",
         "onion",
-        "paris",
         "pepper",
         "poivre",
         "potable)",
@@ -170061,6 +170081,7 @@
         "sans produit animal",
         "sans viande",
         "sauce",
+        "shiitake",
         "shoyu",
         "soja",
         "soy",
@@ -170106,8 +170127,8 @@
       },
       "composition": [
         {
-          "ingredient": "kale_raw",
-          "quantity": 300,
+          "ingredient": "green_cabbage_raw",
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -170203,6 +170224,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "carrot_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -170266,6 +170298,9 @@
         "ail",
         "black",
         "bread",
+        "cabbage",
+        "carotte",
+        "carrot",
         "chou",
         "coeliaque",
         "cumin",
@@ -170277,9 +170312,9 @@
         "garlic",
         "gluten free",
         "gomen",
+        "green",
         "intermediaire",
         "jaune",
-        "kale",
         "leger",
         "levain",
         "light",
@@ -170305,6 +170340,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "vert",
         "wok",
         "yellow"
       ],
@@ -170314,12 +170350,12 @@
       "_quality_score": 0.92,
       "description": "Sauté éthiopienne de chou frisé au wok à feu très vif — wok hei, légumes croquants, sauce enrobante, parfumée de curcuma et de cumin, avec une texture fondante et des notes de caramelisation.",
       "instructions": [
-        "Étape 1 : Émincer finement 300g de chou kale en chiffonnade de 3 mm et ciseler 150g d'oignon jaune en demi-rondelles, jusqu'à obtenir une texture régulière et une couleur vive.",
-        "Étape 2 : Chauffer 45ml d'huile d'olive extra vierge dans une grande poêle ou wok à feu vif, cuire 2 min à feu moyen-vif, en surveillant la température pour éviter la fumée.",
+        "Étape 1 : Émincer finement 400g de chou blanc, tailler 150 g de carotte en bâtonnets et ciseler 150g d'oignon jaune en demi-rondelles, jusqu'à obtenir une texture régulière et une couleur vive.",
+        "Étape 2 : Chauffer 45ml d'huile d'olive dans une grande poêle ou un wok et y faire revenir l'oignon 5 minutes à feu moyen.",
         "Étape 3 : Ajouter 9g d'ail écrasé, 3g de graines de cumin et 3g de curcuma en poudre, faire grésiller 30 secondes jusqu'à parfum, en remuant constamment pour éviter la brûlure.",
-        "Étape 4 : Incorporer le chou émincé, saisir à feu vif 4 min en remuant régulièrement jusqu'à chou légèrement tendre et légèrement doré, en vérifiant la texture pour éviter la surcuisson.",
+        "Étape 4 : Incorporer le chou et la carotte, saisir à feu vif 4 min en remuant régulièrement jusqu'à chou légèrement tendre et légèrement doré, en vérifiant la texture pour éviter la surcuisson.",
         "Étape 5 : Poursuivre la cuisson 4 min à feu moyen, jusqu'à chou légèrement doré et croquant, avec quelques bords caramélisés et une texture fondante, en surveillant la couleur pour obtenir un résultat uniforme.",
-        "Étape 6 : Assaisonner de 5g de sel, servir chaud avec injera ou riz, le chou doit être vert brillant et parfumé, en vérifiant que la sauce enrobe uniformément les légumes."
+        "Étape 6 : Assaisonner de 5g de sel, servir chaud avec injera ou riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -170556,10 +170592,9 @@
       "instructions": [
         "Étape 1 : Chauffer 25ml d'huile d'arachide dans un wok à feu vif jusqu'à obtenir une légère fumée. Ajouter 10g d'ail haché et 5g de piment thaï, et faire saisir pendant 30 secondes – l'ail doit blondir sans brûler.",
         "Étape 2 : Ajouter 300g de tofu émietté et faire sauter à feu très vif pendant 3 minutes, jusqu'à obtenir une légère coloration dorée.",
-        "Étape 3 : Assaisonner avec 25ml de sauce soja, 5g de sucre de canne et 8g de sucre. Mélanger pendant 30 secondes pour émulsionner les saveurs.",
+        "Étape 3 : Assaisonner avec 25ml de sauce soja et 8g de sucre. Mélanger pendant 30 secondes pour émulsionner les saveurs.",
         "Étape 4 : Ajouter 30ml d'eau pour ajuster la consistance. Hors du feu, incorporer généreusement 20g de feuilles de basilic thaï – elles doivent flétrir dans la chaleur résiduelle sans cuire.",
-        "Étape 5 : Servir aussitôt sur du riz jasmin chaud, en veillant à ce que le plat soit bien équilibré et parfumé.",
-        "Étape 6 : Présenter le Pad Krapow dans un bol, en garnissant de feuilles de basilic frais et en servant avec une petite salade de légumes croquants."
+        "Étape 5 : Servir aussitôt sur du riz jasmin chaud, en veillant à ce que le plat soit bien équilibré et parfumé."
       ],
       "diet_flags": {
         "vegan": true,
@@ -170627,7 +170662,7 @@
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -170649,7 +170684,7 @@
         },
         {
           "ingredient": "sesame_oil_plant",
-          "quantity": 45,
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -170660,7 +170695,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -170795,12 +170830,12 @@
       "instructions": [
         "Étape 1 : Séparez les feuilles et les tiges du pak choï, ciselez les tiges en tronçons de 3 cm pour une cuisson uniforme et une texture tendre.",
         "Étape 2 : Émincez l'ail et râpez le gingembre frais jusqu'à obtenir une texture fine, libérant ainsi tous les arômes et les huiles essentielles.",
-        "Étape 3 : Chauffez l'huile de sésame dans un wok à feu moyen-vif, jusqu'à ce qu'elle fume légèrement et crépite, signalant qu'elle est prête pour la cuisson.",
+        "Étape 3 : Chauffez 20 ml d'huile de sésame dans un wok à feu moyen-vif.",
         "Étape 4 : Saisissez l'ail et le gingembre pendant 30 secondes, jusqu'à parfum doré, en remuant constamment pour éviter la coloration excessive et maintenir les arômes.",
         "Étape 5 : Ajoutez les tiges de pak choï et faites-les sauter pendant 2 minutes à feu moyen, jusqu'à légère coloration, tout en maintenant une texture croquante et en évitant la surcuisson.",
-        "Étape 6 : Incorporer les feuilles de pak choï et les oignons verts, arrosez-les de sauce soja et cuire pendant 3 minutes à feu doux, jusqu'à tendreté, en veillant à ce que les feuilles restent vertes et fraîches, avec une texture délicate.",
-        "Étape 7 : Assaisonnez de sel et de graines de sésame pour ajouter une touche de saveur et de croquant à votre plat, tout en équilibrant les saveurs.",
-        "Étape 8 : Servir aussitôt dans des bols préchauffés."
+        "Étape 6 : Incorporer les feuilles de pak choï et les oignons verts, arrosez-les de 30 ml de sauce soja et cuire pendant 3 minutes à feu doux, jusqu'à tendreté, en veillant à ce que les feuilles restent vertes et fraîches, avec une texture délicate.",
+        "Étape 7 : Parsemez de 15 g de graines de sésame pour ajouter une touche de saveur et de croquant à votre plat, tout en équilibrant les saveurs.",
+        "Étape 8 : Servir aussitôt."
       ],
       "diet_flags": {
         "vegan": true,
@@ -170845,7 +170880,7 @@
           }
         },
         {
-          "ingredient": "coconut_oil_plant",
+          "ingredient": "sunflower_oil_plant",
           "quantity": 40,
           "unit": "ml",
           "meta": {
@@ -170960,8 +170995,6 @@
         "ail",
         "black",
         "classique",
-        "coco",
-        "coconut",
         "coeliaque",
         "enfants",
         "facile enfants",
@@ -170980,7 +171013,6 @@
         "minceur",
         "moyen",
         "noir",
-        "noix",
         "parsley",
         "pepper",
         "persil",
@@ -170996,8 +171028,10 @@
         "sauteed",
         "sautees",
         "sel",
+        "sunflower",
         "table",
         "terre",
+        "tournesol",
         "vegan",
         "vegetalien",
         "vegetarien"
@@ -171009,10 +171043,10 @@
       "description": "Pommes de terre sautées végan, croustillantes à l'extérieur et fondantes à l'intérieur, parfumées à l'ail et au persil frais, dans une technique de cuisson rapide inspirée de la cuisine asiatique.",
       "instructions": [
         "Étape 1 : Préparation des pommes de terre. Couper 750g de pommes de terre crues en cubes réguliers de 2 cm sans les éplucher si jeunes. Rincer sous l'eau froide pour retirer l'amidon, puis sécher avec un linge propre pour une meilleure adhérence.",
-        "Étape 2 : Préchauffage de l'huile. Chauffer 40ml d'huile de coco dans une grande poêle à feu vif, en attendant que l'huile commence à fumer légèrement.",
+        "Étape 2 : Préchauffage de l'huile. Chauffer 40ml d'huile de tournesol dans une grande poêle à feu vif, en attendant que l'huile commence à fumer légèrement.",
         "Étape 3 : Saisie des pommes de terre. Faire dorer les cubes sans bouger pendant 5 minutes pour former une croûte dorée, en vérifiant la couleur et la texture qui doivent être uniformément dorées.",
-        "Étape 4 : Cuisson des pommes de terre. Retourner et cuire encore 5 à 7 minutes en remuant régulièrement jusqu'à surface dorée croustillante sur toutes les faces et intérieur tendre, en écoutant le son des pommes de terre qui doivent craquer légèrement.",
-        "Étape 5 : Addition de l'ail et du persil. Ajouter 8g d'ail haché et 10g de persil frais haché les 2 dernières minutes — l'ail doit blondir sans brûler, en sentant son parfum qui se mêle à celui du persil.",
+        "Étape 4 : Cuisson des pommes de terre. Retourner et cuire encore 5 à 7 minutes en remuant régulièrement jusqu'à surface dorée croustillante sur toutes les faces et intérieur tendre.",
+        "Étape 5 : Addition de l'ail et du persil. Ajouter 8g d'ail haché et 10g de persil frais haché les 2 dernières minutes — l'ail doit blondir sans brûler.",
         "Étape 6 : Assaisonnement. Saler généreusement avec 6g de sel et poivrer avec 2g de poivre, en vérifiant que les pommes de terre soient croustillantes en surface, fondantes à l'intérieur, dorées uniformément.",
         "Étape 7 : Vérification de la cuisson. Vérifier que les pommes de terre soient cuites à point, en les goûtant pour ajuster l'assaisonnement si nécessaire, puis servir sans attendre pour préserver la texture croustillante et la chaleur des pommes de terre."
       ],
@@ -171042,9 +171076,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 20,
-        "prep_passive_min": 20,
+        "prep_passive_min": 35,
         "cook_min": 25,
-        "total_min": 65
+        "total_min": 80
       },
       "composition": [
         {
@@ -171147,9 +171181,9 @@
           }
         },
         {
-          "ingredient": "lime",
-          "quantity": 70,
-          "unit": "g",
+          "ingredient": "lime_juice_fresh",
+          "quantity": 30,
+          "unit": "ml",
           "meta": {
             "role": "acidity",
             "form": "wedges",
@@ -171192,7 +171226,7 @@
         },
         {
           "ingredient": "white_sugar",
-          "quantity": 15,
+          "quantity": 8,
           "unit": "g",
           "meta": {
             "role": "sweetener",
@@ -171269,6 +171303,7 @@
         "bean",
         "cacahuete",
         "chef",
+        "citron",
         "coco",
         "coconut",
         "cocotier)",
@@ -171311,6 +171346,7 @@
         "tofu",
         "vegetarian",
         "vegetarien",
+        "vert",
         "wok",
         "œuf"
       ],
@@ -171324,13 +171360,11 @@
         "Étape 1: Faire tremper les vermicelles de riz larges pendant 20 minutes dans l'eau froide jusqu'à ce qu'elles soient souples mais encore légèrement fermes. Égoutter et réserver.",
         "Étape 2: Presser le tofu ferme pendant 15 minutes pour en extraire l'excès d'humidité. Couper en cubes de 2 cm. Chauffer 25 ml d'huile d'arachide dans le wok à feu vif. Saisir le tofu sans remuer pendant 2 minutes jusqu'à coloration dorée, retourner, cuire encore 1 minute. Réserver sur du papier absorbant.",
         "Étape 3: Dans le même wok très chaud, sauter 9 grammes d'ail haché pendant 30 secondes sans coloration, en veillant à ce qu'il ne brûle pas. Pousser l'ail sur le côté du wok.",
-        "Étape 4: Ajouter les 200 grammes de vermicelles égouttés et verser immédiatement la sauce tamarin préparée en mélangeant 30 grammes de pâte de tamarin diluée avec 12 grammes de sucre de coco et 60 ml d'eau. Mélanger vigoureusement à feu très vif pendant 2 minutes en soulevant les vermicelles pour les enrober sans les casser, en vérifiant leur texture pour qu'elles soient tendres mais encore fermes.",
+        "Étape 4: Ajouter les 200 grammes de vermicelles égouttés et verser immédiatement la sauce tamarin préparée en mélangeant 30 grammes de pâte de tamarin, 20 ml de sauce soja, 12 grammes de sucre de coco, 8 g de sucre, 3 g de sel et 60 ml d'eau. Mélanger vigoureusement à feu très vif pendant 2 minutes en soulevant les vermicelles pour les enrober sans les casser, en vérifiant leur texture pour qu'elles soient tendres mais encore fermes.",
         "Étape 5: Ajouter 150 grammes de pousses de soja et mélanger rapidement pour combiner tous les ingrédients, en prenant soin de ne pas écraser les pousses.",
-        "Étape 6: Remettre le tofu cuit et mélanger délicatement pour éviter de casser les vermicelles, en veillant à ce que le tofu soit bien réparti.",
-        "Étape 7: Servir sans attendre, en garnissant de 30 grammes de cacahuètes concassées, de quartiers de citron vert et de piment séché. Les vermicelles doivent être ambrés, luisants et bien assaisonnés, avec une texture qui balance entre la fermeté et la tendresse.",
-        "Étape 8: Déguster et ajuster l'assaisonnement si nécessaire, en ajoutant un peu de sauce tamarin ou de sucre pour atteindre l'équilibre parfait, en fonction des goûts personnels.",
-        "Étape 9: Ajouter un filet de jus de citron vert pour équilibrer les saveurs et ajouter une touche de fraîcheur.",
-        "Étape 10: Garnir de feuilles de coriandre fraîche pour une touche de fraîcheur et de couleur, en terminant la préparation avec élégance."
+        "Étape 6: Pousser les nouilles, brouiller les 2 œufs (110 g) dans le wok, puis remettre le tofu cuit et mélanger délicatement pour éviter de casser les vermicelles, en veillant à ce que le tofu soit bien réparti.",
+        "Étape 7: Servir sans attendre, en garnissant de 30 grammes de cacahuètes concassées et de piment séché. Les vermicelles doivent être ambrés, luisants et bien assaisonnés, avec une texture qui balance entre la fermeté et la tendresse.",
+        "Étape 8: Arroser de 30 ml de jus de citron vert pour équilibrer les saveurs et ajouter une touche de fraîcheur."
       ],
       "diet_flags": {
         "vegan": false,
@@ -171387,7 +171421,7 @@
         },
         {
           "ingredient": "sesame_oil_plant",
-          "quantity": 60,
+          "quantity": 25,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -171420,7 +171454,7 @@
         },
         {
           "ingredient": "cornstarch",
-          "quantity": 20,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -171446,6 +171480,72 @@
           "unit": "ml",
           "meta": {
             "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "carrot_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "broccoli_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_bell_pepper_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "button_mushroom_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_onion_raw",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_sugar",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -171515,6 +171615,13 @@
         "1 heure",
         "ail",
         "aux",
+        "bell",
+        "broccoli",
+        "brocoli",
+        "button",
+        "carotte",
+        "carrot",
+        "champignon",
         "coco",
         "coconut",
         "coriander",
@@ -171535,7 +171642,13 @@
         "low calorie",
         "minceur",
         "moyen",
+        "mushroom",
         "noix",
+        "paris",
+        "pepper",
+        "poivron",
+        "red",
+        "rouge",
         "sans produit animal",
         "sans viande",
         "sauce",
@@ -171561,11 +171674,11 @@
         "Étape 2 : Préparer la sauce en mélangeant 45 ml de sauce de soja, 15 ml d'huile de sésame et 5 g de sucre. Réserver pour plus tard.",
         "Étape 3 : Chauffer 25 ml d'huile de coco dans le wok à feu vif. Faire dorer le tofu pendant 3 minutes par face, jusqu'à ce que la surface soit croustillante et dorée. Réserver.",
         "Étape 4 : Faire sauter l'ail émincé (9 g) et le gingembre frais émincé (11,2 g) pendant 30 secondes, jusqu'à ce que les arômes soient intenses et les saveurs dégagées.",
-        "Étape 5 : Ajouter les légumes fermes (carotte, brocoli, poivron) et sauter pendant 3 minutes à feu très vif, jusqu'à ce qu'ils soient légèrement croquants.",
-        "Étape 6 : Incorporer les légumes tendres (champignons, oignons verts) et la sauce préparée. Cuire pendant 2 minutes, jusqu'à ce que les légumes soient tendres et la sauce soit brillante.",
-        "Étape 7 : Ajouter la fécule de maïs (20 g) pour épaissir la sauce, en mélangeant bien pour éviter les grumeaux.",
-        "Étape 8 : Remettre le tofu dans le wok et mélanger pendant 1 minute, pour que les saveurs se mélangent et le tofu soit bien enrobé de sauce. Servir chaud sur riz ou nouilles, en conservant la chaleur pour apprécier pleinement les saveurs et la texture.",
-        "Étape 9 : Servir aussitôt, en garnissant d'un filet d'huile de sésame et de quelques feuilles de coriandre fraîche, pour un plat visuellement appétissant et parfumé."
+        "Étape 5 : Ajouter les légumes fermes (150 g de carotte, 200 g de brocoli, 150 g de poivron) et sauter pendant 3 minutes à feu très vif, jusqu'à ce qu'ils soient légèrement croquants.",
+        "Étape 6 : Incorporer les légumes tendres (150 g de champignons, 40 g d'oignons verts) et la sauce préparée. Cuire pendant 2 minutes, jusqu'à ce que les légumes soient tendres et la sauce soit brillante.",
+        "Étape 7 : Ajouter 10 g de fécule de maïs délayée dans 30 ml d'eau froide pour épaissir la sauce.",
+        "Étape 8 : Remettre le tofu dans le wok et mélanger pendant 1 minute, pour que les saveurs se mélangent et le tofu soit bien enrobé de sauce.",
+        "Étape 9 : Servir aussitôt, arrosé de 10 ml d'huile de sésame, avec du riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -171593,9 +171706,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 13,
-        "prep_passive_min": 20,
+        "prep_passive_min": 35,
         "cook_min": 10,
-        "total_min": 43
+        "total_min": 58
       },
       "composition": [
         {
@@ -171644,7 +171757,7 @@
         },
         {
           "ingredient": "sesame_oil_plant",
-          "quantity": 60,
+          "quantity": 25,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -171681,6 +171794,17 @@
           "unit": "ml",
           "meta": {
             "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sesame_raw_seed",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -171749,7 +171873,7 @@
         }
       },
       "search_tokens": [
-        "45 minutes",
+        "1 heure",
         "ail",
         "enfants",
         "facile enfants",
@@ -171794,10 +171918,9 @@
         "Étape 1 : Presser le tofu ferme pendant 15 minutes pour en extraire l'excès d'humidité, afin d'obtenir une texture plus ferme.",
         "Étape 2 : Couper le tofu ferme en cubes de 2 cm et le mariner pendant 20 minutes dans 30 ml de sauce soja et du gingembre râpé frais.",
         "Étape 3 : Chauffer 25 ml d'huile de sésame dans un wok à feu vif et faire dorer le tofu égoutté pendant 3 à 4 minutes par face, jusqu'à obtenir une surface caramélisée et dorée.",
-        "Étape 4 : Sauter l'ail pendant 15 secondes, puis ajouter les oignons verts en tronçons et cuire pendant 3 minutes, en remuant constamment pour éviter les grumeaux.",
-        "Étape 5 : Verser la marinade réservée avec 15 ml de vinaigre de riz et laisser caraméliser pendant 1 minute, en remuant constamment pour éviter les grumeaux et obtenir une sauce sirupeuse.",
-        "Étape 6 : Goûter et rectifier l'assaisonnement si nécessaire, en ajoutant un peu de sauce soja pour équilibrer les saveurs.",
-        "Étape 7 : Servir sans attendre, garni de graines de sésame et d'oignons verts, en veillant à ce que le tofu soit bien chaud et la sauce bien sirupeuse."
+        "Étape 4 : Sauter l'ail pendant 15 secondes, puis ajouter les oignons verts en tronçons et cuire pendant 3 minutes.",
+        "Étape 5 : Verser la marinade réservée avec 15 ml de vinaigre de riz et laisser caraméliser pendant 1 minute, jusqu'à obtenir une sauce sirupeuse.",
+        "Étape 6 : Servir sans attendre, garni de 10 g de graines de sésame et d'oignons verts, en veillant à ce que le tofu soit bien chaud et la sauce bien sirupeuse."
       ],
       "diet_flags": {
         "vegan": true,
@@ -171886,7 +172009,7 @@
           }
         },
         {
-          "ingredient": "coconut_oil_plant",
+          "ingredient": "sunflower_oil_plant",
           "quantity": 25,
           "unit": "ml",
           "meta": {
@@ -171999,8 +172122,6 @@
         "chine",
         "chinese",
         "chinois",
-        "coco",
-        "coconut",
         "courgette",
         "fry",
         "garlic",
@@ -172013,7 +172134,6 @@
         "low calorie",
         "minceur",
         "moyen",
-        "noix",
         "nutritional",
         "oignon",
         "onion",
@@ -172031,7 +172151,9 @@
         "soy",
         "squash",
         "stir",
+        "sunflower",
         "table",
+        "tournesol",
         "vegan",
         "vegetable",
         "vegetalien",
@@ -172048,12 +172170,12 @@
       "instructions": [
         "Étape 1 : Julienne les carottes crues en fines lamelles, ciseler l'oignon en petits morceaux et l'ail en minuscules dés, jusqu'à obtenir une texture fine et régulière.",
         "Étape 2 : Chauffer le wok à feu vif pendant 2 min, jusqu'à apparition d'une légère fumée visible et à ce que le métal soit chaud au toucher.",
-        "Étape 3 : Ajouter l'huile de coco et chauffer immédiatement à 180°C, jusqu'à crépitation légère et à ce que l'huile soit chaude et prête à saisir les légumes.",
-        "Étape 4 : Saisir l'ail pendant 10 secondes en remuant sans arrêt, jusqu'à parfum intense et à ce que l'ail soit doré et croustillant.",
+        "Étape 3 : Ajouter 25 ml d'huile de tournesol.",
+        "Étape 4 : Saisir l'ail 30 secondes en remuant sans arrêt, jusqu'à ce qu'il soit parfumé.",
         "Étape 5 : Ajouter les carottes crues et cuire 2 min à feu moyen-vif, en sautant constamment et en les remuant régulièrement, jusqu'à texture tendre et à ce que les carottes soient légèrement dorées.",
         "Étape 6 : Ajouter l'oignon et le poivron rouge, ainsi que les courgettes, cuire 2 min supplémentaires, en remuant régulièrement et en vérifiant la texture, jusqu'à coloration dorée et à ce que les légumes soient cuits mais encore croquants.",
         "Étape 7 : Assaisonner avec du sel et de la sauce de soja, en remuant bien pour répartir les saveurs et en vérifiant la texture, jusqu'à ce que les saveurs soient équilibrées et à ce que la sauce soit onctueuse et parfumée.",
-        "Étape 8 : Servir chaud, garni de levure nutritionnelle râpée pour un parfum umami intense et en vérifiant la texture finale, jusqu'à ce que le plat soit prêt à être dégusté."
+        "Étape 8 : Servir chaud, avec du riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -172154,7 +172276,7 @@
         },
         {
           "ingredient": "ancho_pepper_spice_dried",
-          "quantity": 40,
+          "quantity": 20,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -172187,7 +172309,7 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45.7,
+          "quantity": 45,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -172332,13 +172454,11 @@
       "_chef_note": "Vous pouvez personnaliser les enchiladas en ajoutant d'autres légumes ou herbes à votre goût.",
       "description": "Rouleaux de tortillas mexicaines tendres, garnis de haricots noirs crémeux, de fromage végétal fondu et d'oignon jaune caramélisé, le tout nappé d'une sauce enchilada épicée et servie chaud.",
       "instructions": [
-        "Étape 1 : Préparez la sauce enchilada en faisant revenir 15g d'ail haché dans 45,7ml d'huile d'olive extra vierge, puis ajoutez 300g de tomates concassées, 40g de piments ancho réhydratés, 2,5g de cumin en poudre et 2g de coriandre moulue. Laissez mijoter pendant 12 minutes à feu doux, en remuant occasionnellement, jusqu'à ce que la sauce ait réduit légèrement et que les saveurs se soient bien mélangées.",
-        "Étape 2 : Vérifiez que la sauce ait une consistance onctueuse et une saveur équilibrée.",
-        "Étape 3 : Garnissez 320g de tortillas de 300g de haricots noirs égouttés, de 150g de fromage végétal râpé et de 150g d'oignon jaune émincé. Roulez-les fermement, en veillant à ce que les bords soient bien joints pour éviter que le contenu ne s'échappe pendant la cuisson.",
-        "Étape 4 : Disposez les tortillas roulées côte à côte dans un plat et nappez-les généreusement de sauce enchilada chaude, en veillant à ce que chaque rouleau soit bien enrobé de sauce.",
-        "Étape 5 : Parsemez de fromage végétal râpé et enfournez dans un four préchauffé à 180°C pendant 20 à 22 minutes, ou jusqu'à ce que le fromage soit fondu et gratiné. Vérifiez que les rouleaux soient chauds et que la sauce bulle légèrement.",
-        "Étape 6 : Garnissez d'herbes fraîches et de crème de coco pour servir. Vous pouvez également ajouter un peu de coriandre fraîche hachée pour une touche de fraîcheur.",
-        "Étape 7 : Servez les enchiladas chaudes, accompagnées d'une salade verte ou de riz végétal pour un repas complet."
+        "Étape 1 : Préparez la sauce enchilada en faisant revenir 150 g d'oignon émincé et 15g d'ail haché dans 45ml d'huile d'olive, puis ajoutez 300g de tomates concassées, 20g de piments ancho réhydratés, 2,5g de cumin en poudre et 2g de coriandre moulue. Laissez mijoter pendant 12 minutes à feu doux, en remuant occasionnellement, jusqu'à ce que la sauce ait réduit légèrement et que les saveurs se soient bien mélangées.",
+        "Étape 2 : Garnissez 320g de tortillas de 300g de haricots noirs égouttés, de 100g de fromage végétal râpé. Roulez-les fermement, en veillant à ce que les bords soient bien joints pour éviter que le contenu ne s'échappe pendant la cuisson.",
+        "Étape 3 : Disposez les tortillas roulées côte à côte dans un plat et nappez-les généreusement de sauce enchilada chaude, en veillant à ce que chaque rouleau soit bien enrobé de sauce.",
+        "Étape 4 : Parsemez des 50 g de fromage végétal restants et enfournez dans un four préchauffé à 180°C pendant 20 à 22 minutes, ou jusqu'à ce que le fromage soit fondu et gratiné. Vérifiez que les rouleaux soient chauds et que la sauce bulle légèrement.",
+        "Étape 5 : Servez les enchiladas chaudes, accompagnées d'une salade verte."
       ],
       "diet_flags": {
         "vegan": true,
@@ -172367,8 +172487,8 @@
       "timing": {
         "prep_active_min": 11,
         "prep_passive_min": 0,
-        "cook_min": 10,
-        "total_min": 21
+        "cook_min": 25,
+        "total_min": 36
       },
       "composition": [
         {
@@ -172394,7 +172514,7 @@
           }
         },
         {
-          "ingredient": "parmesan_grated_dried_cow",
+          "ingredient": "queso_chihuahua_whole_cow",
           "quantity": 150,
           "unit": "g",
           "meta": {
@@ -172428,7 +172548,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -172513,10 +172633,11 @@
         }
       },
       "search_tokens": [
-        "30 minutes",
+        "45 minutes",
         "base_tortilla_92c2a6",
         "bell",
         "cheese",
+        "chihuahua",
         "coeliaque",
         "coriander",
         "debutant",
@@ -172539,15 +172660,14 @@
         "mexican",
         "mexique",
         "minceur",
+        "moyen",
         "oignon",
         "olive",
         "onion",
-        "parmesan",
         "pepper",
         "poivron",
         "quesadillas",
-        "quick",
-        "rapide",
+        "queso",
         "red",
         "rouge",
         "salt",
@@ -172566,15 +172686,12 @@
       "_quality_score": 0.91,
       "description": "Quesadillas végétariennes croustillantes, remplies d'oignon jaune cuit et de poivron rouge, avec un fromage parmesan fondu et crémeux, servies chaudes avec une touche de fraîcheur.",
       "instructions": [
-        "Étape 1: Chauffer une poêle antiadhésive à feu moyen-vif sans matière grasse pendant 2 minutes jusqu'à ce qu'une goutte d'eau s'évapore instantanément, révélant une surface chaude et sèche.",
-        "Étape 2: Ajouter 45 ml d'huile d'olive extra vierge dans la poêle et laisser chauffer pendant 1 minute, jusqu'à ce que l'huile commence à briller et à émettre un léger parfum.",
-        "Étape 3: Placer 320 g de tortillas dans la poêle. Parsemer la moitié de la surface de 150 g de fromage parmesan râpé, de 150 g d'oignon jaune cuit égoutté et de 320 g de poivron rouge cuit égoutté, en veillant à répartir uniformément les ingrédients.",
-        "Étape 4: Replier la tortilla en demi-lune et appuyer légèrement avec une spatule, en faisant attention à ne pas écraser les ingrédients.",
-        "Étape 5: Cuire 2 minutes sans bouger jusqu'à ce que le dessous soit doré et croustillant, avec une odeur de noisette et une texture croquante. Retourner délicatement.",
-        "Étape 6: Cuire l'autre face 2 minutes jusqu'à dorure identique et fromage entièrement fondu, en vérifiant que la quesadilla sonne légèrement creux quand on tapote.",
-        "Étape 7: Laisser reposer 1 minute avant de couper en 3 triangles. Servir sans attendre: la chaleur et le croustillant sont essentiels pour apprécier pleinement l'intérieur filant et l'extérieur croustillant.",
-        "Étape 8: Garnir de coriandre fraîche et de citron vert pour ajouter une touche de fraîcheur et de couleur.",
-        "Étape 9: Servir chaud dans des assiettes préchauffées, avec une salade verte à côté pour un repas équilibré."
+        "Étape 1 : Faire revenir l'oignon émincé et le poivron en lanières dans 25 ml d'huile d'olive, 7 minutes à feu moyen, puis réserver.",
+        "Étape 2 : Essuyer la poêle et la badigeonner d'un peu des 20 ml d'huile restants.",
+        "Étape 3 : Placer une tortilla dans la poêle et parsemer une moitié d'un quart des 150 g de fromage râpé et des légumes.",
+        "Étape 4 : Replier la tortilla en demi-lune et cuire 2 minutes, jusqu'à ce que le dessous soit doré.",
+        "Étape 5 : Retourner et cuire encore 2 minutes, jusqu'à ce que le fromage soit fondu. Répéter avec les autres tortillas.",
+        "Étape 6 : Couper en triangles et servir aussitôt, avec des quartiers de citron vert."
       ],
       "diet_flags": {
         "vegan": false,
@@ -172653,7 +172770,7 @@
         },
         {
           "ingredient": "vegetable_oil_plant",
-          "quantity": 45.7,
+          "quantity": 45,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -172664,7 +172781,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -172782,13 +172899,13 @@
       "_quality_score": 0.94,
       "description": "Quesadillas mexicaines croustillantes, avec une texture al dente, garnies d'oignon caramélisé, de poivron croquant et de fromage végétal fondu, issus de la tradition culinaire mexicaine.",
       "instructions": [
-        "Étape 1 : Faire chauffer 45,7 ml d'huile végétale dans une poêle à feu moyen. Faire revenir les 150 g d'oignon jaune émincé et les 320 g de poivrons rouges en lanières pendant 7 minutes jusqu'à ce qu'ils soient fondants et légèrement caramélisés, avec une odeur de légumes grillés.",
+        "Étape 1 : Faire chauffer 45 ml d'huile végétale dans une poêle à feu moyen. Faire revenir les 150 g d'oignon jaune émincé et les 320 g de poivrons rouges en lanières pendant 7 minutes jusqu'à ce qu'ils soient fondants et légèrement caramélisés, avec une odeur de légumes grillés.",
         "Étape 2 : Essuyer la poêle et la chauffer à feu moyen sans matière grasse. Placer une tortilla dans la poêle, en veillant à ce qu'elle soit bien chaude et légèrement croustillante à la base.",
         "Étape 3 : Parsemer la moitié de la tortilla de 75 g de fromage végétal râpé, répartir une portion de légumes cuits, puis rabattre l'autre moitié de la tortilla sur la garniture, en pressant légèrement pour éviter les bulles d'air.",
         "Étape 4 : Cuire pendant 2 à 3 minutes jusqu'à ce que la face inférieure soit dorée et croustillante, avec un son de friture, et que le fromage commence à fondre, en vérifiant la texture de la tortilla pour éviter qu'elle ne brûle.",
         "Étape 5 : Retourner délicatement et cuire encore 2 minutes jusqu'à dorure uniforme et fromage entièrement fondu, en vérifiant que la tortilla est croustillante et le fromage filant.",
         "Étape 6 : Retirer de la poêle et laisser reposer 1 minute avant de découper en 3 triangles, pour permettre au fromage de se figer légèrement et à la tortilla de rester croustillante. Répéter pour les autres tortillas.",
-        "Étape 7 : Servir sans attendre, pour conserver la texture croustillante de la tortilla et le fromage filant, avec une pâte croustillante, un fromage filant et des légumes fondants visibles à la coupe."
+        "Étape 7 : Servir sans attendre, pour conserver la texture croustillante de la tortilla et le fromage filant."
       ],
       "diet_flags": {
         "vegan": true,
@@ -172834,7 +172951,7 @@
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "fruit",
@@ -172878,7 +172995,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -173014,14 +173131,11 @@
       "_quality_score": 0.91,
       "description": "Quesadillas mexicaines végétariennes, où la texture croustillante des tortillas donne way à une garniture onctueuse d'oignon et de tomate, cuite à la perfection dans une poêle antiadhésive.",
       "instructions": [
-        "Étape 1: Râper 150 g de fromage de chèvre frais et préparer la garniture avec 150 g d'oignon jaune finement émincé et 300 g de tomates fraîches en dés, jusqu'à obtenir une texture homogène et en sentant l'arôme des légumes frais.",
-        "Étape 2: Chauffer 45 ml d'huile d'olive extra vierge dans une poêle antiadhésive à feu moyen-vif pendant 1 minute, en observant la surface qui commence à briller et en entendant le son léger de l'huile qui chauffe.",
-        "Étape 3: Déposer la garniture et le fromage de chèvre frais sur une moitié de 320 g de tortillas de maïs, en laissant un bord de 1 cm, en prenant soin de répartir uniformément les ingrédients pour une cuisson égale.",
-        "Étape 4: Plier la tortilla en deux et faire chauffer 2 min dans la poêle à feu moyen-vif jusqu'à ce que la tortilla commence à dorir, en entendant le son de crépitation qui indique la cuisson et en voyant la couleur dorée qui commence à apparaître.",
-        "Étape 5: Cuire 2 min de chaque côté à feu moyen-vif jusqu'à ce que le fromage de chèvre soit fondu et la tortilla dorée, en vérifiant la texture croustillante de la tortilla et la couleur dorée qui indique la cuisson parfaite.",
-        "Étape 6: Ajouter une pincée de 5 g de sel pour rehausser les saveurs, en sentant l'arôme qui se dégage.",
-        "Étape 7: Couper en triangles et servir chaud dans des assiettes préchauffées, en vérifiant la texture croustillante de la tortilla.",
-        "Étape 8: Décorer avec des feuilles de coriandre fraîche et servir avec une sauce piquante végétarienne, en ajoutant une touche de piquant et de saveur au plat."
+        "Étape 1 : Faire revenir l'oignon émincé dans 25 ml d'huile d'olive 5 minutes à feu moyen, ajouter 150 g de tomates en dés égouttées et cuire 3 minutes.",
+        "Étape 2 : Émietter 150 g de fromage de chèvre frais.",
+        "Étape 3 : Répartir la garniture et le chèvre sur une moitié de chaque tortilla, puis la replier.",
+        "Étape 4 : Cuire les quesadillas 2 minutes de chaque côté dans une poêle badigeonnée des 20 ml d'huile restants, jusqu'à ce qu'elles soient dorées.",
+        "Étape 5 : Saler légèrement (2 g), couper en triangles et servir aussitôt."
       ],
       "diet_flags": {
         "vegan": false,
@@ -173067,7 +173181,7 @@
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "fruit",
@@ -173100,7 +173214,7 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45.7,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -173111,7 +173225,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -173236,13 +173350,11 @@
       "_chef_note": "Ajustez la quantité de sel et d'huile selon vos préférences personnelles.",
       "description": "Quesadillas croustillantes et dorées, remplies d'un mélange d'oignon jaune caramélisé, tomates fraîches et fromage végétal râpé, servies chaudes avec une touche de sel et une texture ferme mais non rigide.",
       "instructions": [
-        "Étape 1 : Faites chauffer 45,7 ml d'huile d'olive dans une poêle à feu moyen. Ajoutez 150 g d'oignon jaune et 300 g de tomates, puis sautez pendant 5 minutes en remuant régulièrement, jusqu'à ce que les légumes soient tendres et fragrants, avec une couleur légèrement caramélisée.",
-        "Étape 2 : Préparez la garniture en mélangeant les légumes sautés avec 150 g de fromage végétal râpé, en veillant à obtenir un mélange homogène.",
-        "Étape 3 : Déposez la garniture sur une moitié de 320 g de tortillas, en laissant un bord de 1 cm sans garniture pour faciliter le pliage.",
-        "Étape 4 : Plier les tortillas en deux pour former des demi-cercles et faire chauffer dans une poêle à feu moyen-vif pendant 2 minutes de chaque côté, jusqu'à ce que la tortilla soit dorée et croustillante, avec un son de friture léger.",
-        "Étape 5 : Cuire à feu moyen-vif pendant 2-3 minutes, en vérifiant régulièrement, jusqu'à ce que la tortilla soit croustillante et dorée, avec une texture ferme mais non rigide.",
-        "Étape 6 : Couper les quesadillas en triangles et servir sans attendre, en saupoudrant de sel (5 g) à la fin, pour préserver la croustillité et la chaleur des quesadillas.",
-        "Étape 7 : Servir aussitôt dans des assiettes préchauffées, avec une touche de sel et une présentation appétissante."
+        "Étape 1 : Faire chauffer 15 ml d'huile d'olive dans une poêle à feu moyen, faire revenir l'oignon émincé 5 minutes, ajouter 150 g de tomates en dés et cuire 3 minutes.",
+        "Étape 2 : Mélanger les légumes avec 150 g de fromage végétal râpé.",
+        "Étape 3 : Répartir la garniture sur une moitié de chaque tortilla (320 g au total), puis la replier.",
+        "Étape 4 : Cuire 2 minutes de chaque côté dans la poêle badigeonnée des 15 ml d'huile restants, jusqu'à ce que la tortilla soit dorée.",
+        "Étape 5 : Saler (2 g), couper en triangles et servir aussitôt."
       ],
       "diet_flags": {
         "vegan": true,
@@ -173328,27 +173440,6 @@
             "form": "grated",
             "state": "raw",
             "preparation": ""
-          }
-        },
-        {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 0.5,
-          "unit": "g",
-          "meta": {
-            "role": "fresh_binder",
-            "form": "",
-            "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 40 ml d'eau"
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 40.0,
-          "unit": "ml",
-          "meta": {
-            "role": "fresh_binder",
-            "note": "pour reconstituer le bouillon"
           }
         },
         {
@@ -173449,12 +173540,10 @@
         }
       },
       "search_tokens": [
-        "(eau",
         "30 minutes",
         "assembly",
         "base_buckwheat_crepe_03db22",
         "black",
-        "bouillon",
         "carotte",
         "carrot",
         "cheese,",
@@ -173465,7 +173554,6 @@
         "cucumber",
         "debutant",
         "easy",
-        "eau",
         "facile",
         "fresh",
         "fromage",
@@ -173473,7 +173561,6 @@
         "goat",
         "international",
         "leger",
-        "legumes",
         "lettuce",
         "light",
         "low calorie",
@@ -173482,7 +173569,6 @@
         "olive",
         "pepper",
         "poivre",
-        "potable)",
         "quick",
         "rapide",
         "salt",
@@ -173490,12 +173576,9 @@
         "sans viande",
         "sel",
         "simple",
-        "stock",
         "table",
-        "vegetable",
         "vegetarian",
         "vegetarien",
-        "water",
         "wrap"
       ],
       "difficulty_level": "easy",
@@ -173505,11 +173588,10 @@
       "description": "Wrap végétarien: galette de sarrasin croustillante, garnie de légumes frais et de sauce brune végétarienne, roulée serrée pour une texture fondante et une expérience gustative riche.",
       "instructions": [
         "Étape 1: Chauffer chaque galette de sarrasin 20 secondes par face à feu moyen jusqu'à ce qu'elle soit souple et dorée, avec une légère odeur de noisette.",
-        "Étape 2: Étaler 2 cuillères à soupe de sauce brune végétarienne sur la galette en laissant 2 cm de bord, puis disposer une feuille de laitue fraîche.",
-        "Étape 3: Ajouter les carottes crues émincées et le concombre coupé en fines lamelles, ainsi que du fromage de chèvre râpé.",
+        "Étape 2: Étaler un quart des 80 g de chèvre frais sur la galette en laissant 2 cm de bord, puis disposer une feuille de laitue fraîche.",
+        "Étape 3: Ajouter les carottes râpées et le concombre en fines lamelles, assaisonnés de 10 ml d'huile d'olive, 2 g de sel et de poivre.",
         "Étape 4: Saisir les côtés de la galette pour éviter les fuites, puis rouler fermement en appliquant une légère pression pour obtenir un wrap serré.",
-        "Étape 5: Couper en biseau et servir sans attendre, en vérifiant que le wrap tient sans se défaire et que la sauce brune végétarienne est encore chaude et généreuse à chaque bouchée.",
-        "Étape 6: Faire chauffer 10 ml d'huile d'olive extra vierge dans une poêle à feu doux pour ajouter un peu de saveur et de moelleux aux légumes, puis servir le wrap sur une assiette préchauffée."
+        "Étape 5: Couper en biseau et servir sans attendre, en vérifiant que le wrap tient sans se défaire."
       ],
       "diet_flags": {
         "vegan": false,
@@ -173543,7 +173625,7 @@
       "composition": [
         {
           "ingredient": "turmeric_powder",
-          "quantity": 15,
+          "quantity": 8,
           "unit": "g",
           "meta": {
             "role": "base"
@@ -173625,12 +173707,10 @@
       "_chef_note": "Cette pâte de curry jaune est idéale pour les plats végétariens et végans.",
       "description": "Pâte de curry jaune douce et parfumée, dominée par le curcuma et le cumin, idéale pour les légumes et le tofu, avec une texture lisse et une couleur jaune vif, parfumée par la citronnelle et les épices.",
       "instructions": [
-        "Étape 1 : Dans un mortier ou un blender, mixer 15g de curcuma, 20g de piments rouges, 20g d'ail, 30g d'oignon jaune, et 25g de citronnelle fraîche jusqu'à obtenir une pâte grossière et parfumée, avec une odeur de citron et d'épices.",
+        "Étape 1 : Dans un mortier ou un blender, mixer 8g de curcuma, 20g de piments rouges, 20g d'ail, 30g d'oignon jaune, et 25g de citronnelle fraîche jusqu'à obtenir une pâte grossière et parfumée, avec une odeur de citron et d'épices.",
         "Étape 2 : Ajoutez 5g de cumin et 5g de coriandre en grains. Mixer pendant environ 2 minutes, jusqu'à ce que la pâte soit lisse et que les épices soient bien incorporées, avec un son de broyage régulier.",
         "Étape 3 : Ajoutez 15ml d'huile de tournesol et mixer pendant environ 1 minute, jusqu'à ce que la pâte soit homogène et lisse, avec une texture crémeuse et une couleur jaune uniforme.",
-        "Étape 4 : Goûtez la pâte et ajustez la saveur si nécessaire, en ajoutant plus de piments pour une saveur plus épicée ou plus de citronnelle pour une saveur plus citronnée.",
-        "Étape 5 : Conservez la pâte de curry jaune dans un contenant hermétique au réfrigérateur pendant jusqu'à 2 semaines, en vérifiant régulièrement que la pâte reste fraîche et parfumée.",
-        "Étape 6 : Utilisez cette pâte pour préparer des plats délicieux et parfumés avec des légumes et du tofu, en ajoutant la pâte à la fin de la cuisson pour préserver les saveurs et les arômes. Servez chaud, garni de feuilles de citronnelle fraîche et accompagné de riz ou de légumes crus."
+        "Étape 4 : Conservez la pâte de curry jaune dans un contenant hermétique au réfrigérateur pendant jusqu'à 2 semaines, en vérifiant régulièrement que la pâte reste fraîche et parfumée."
       ],
       "diet_flags": {
         "vegan": true,
