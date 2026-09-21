@@ -130044,7 +130044,7 @@
         },
         {
           "ingredient": "potato_raw_flesh",
-          "quantity": 600,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -130137,6 +130137,17 @@
           "meta": {
             "role": "herb",
             "form": "chopped",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coconut_milk_plant",
+          "quantity": 200,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -130266,8 +130277,8 @@
         "Étape 1 : Rincer le riz basmati (300g) et le faire tremper dans de l'eau pendant 20 minutes, puis égoutter. Observez la texture du riz qui commence à ramollir.",
         "Étape 2 : Faire cuire le riz dans 1,5 L d'eau bouillante salée (5g de sel) à feu moyen pendant 7 minutes, jusqu'à mi-cuisson. Réserver. Le riz commence à dégager un parfum légèrement sucré.",
         "Étape 3 : Dans une poêle, chauffer 45ml d'huile de coco à feu moyen. Ajouter les oignons émincés (150g) et faire revenir pendant 10 minutes, jusqu'à dorure blonde. Les oignons commencent à caraméliser et à dégager un parfum sucré.",
-        "Étape 4 : Ajouter les carottes (200g), les pommes de terre (600g), les tomates (300g), les pois mange-tout (200g), l'ail (9g), le curcuma (3g) et le garam masala (mélange épices indien) (3g). Faire revenir pendant 8 minutes à feu moyen, jusqu'à tendreté. Les légumes commencent à se fondre ensemble et à dégager un parfum épicé.",
-        "Étape 5 : Dans une grande casserole, alterner couches de riz cuit et de légumes, en commençant et en terminant par une couche de riz. Parsemer d'oignons frits et de coriandre fraîche (10g). La casserole commence à dégager un parfum complexe et appétissant.",
+        "Étape 4 : Ajouter les carottes (200g), les pommes de terre (400g), les tomates (300g), les pois mange-tout (200g), l'ail (9g), le curcuma (3g) et le garam masala (mélange épices indien) (3g). Faire revenir pendant 8 minutes à feu moyen, jusqu'à tendreté. Les légumes commencent à se fondre ensemble et à dégager un parfum épicé.",
+        "Étape 5 : Dans une grande casserole, alterner couches de riz cuit et de légumes, en commençant et en terminant par une couche de riz. Arroser de 200 ml de lait de coco, puis parsemer de coriandre fraîche (10g). La casserole commence à dégager un parfum complexe et appétissant.",
         "Étape 6 : Enfourner à 180°C pendant 25 minutes, jusqu'à cuisson complète et parfum. Le riz est cuit à point et les légumes sont tendres.",
         "Étape 7 : Laisser reposer pendant 5 minutes avant de servir.",
         "Étape 8 : Servir chaud, en décorant de coriandre fraîche et en accompagnant d'une salade de légumes frais. Le plat est prêt à être dégusté et apprécié."
@@ -130338,7 +130349,7 @@
         },
         {
           "ingredient": "red_bell_pepper_raw",
-          "quantity": 320,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
@@ -130348,7 +130359,7 @@
           }
         },
         {
-          "ingredient": "snow_peas_raw",
+          "ingredient": "green_peas_raw",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -130424,7 +130435,7 @@
           }
         },
         {
-          "ingredient": "coconut_oil_plant",
+          "ingredient": "sunflower_oil_plant",
           "quantity": 45,
           "unit": "ml",
           "meta": {
@@ -130436,7 +130447,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -130524,8 +130535,6 @@
         "carrot",
         "chef",
         "cinnamon",
-        "coco",
-        "coconut",
         "coeliaque",
         "complexe",
         "cumin",
@@ -130534,6 +130543,7 @@
         "epice",
         "garlic",
         "gluten free",
+        "green",
         "inde",
         "indian",
         "indien",
@@ -130542,13 +130552,12 @@
         "legumes",
         "light",
         "low calorie",
-        "mange",
         "minceur",
-        "noix",
         "oignon",
         "onion",
         "peas",
         "pepper",
+        "petit",
         "pois",
         "poivron",
         "potable)",
@@ -130560,15 +130569,16 @@
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "snow",
         "spicy",
         "stock",
+        "sunflower",
         "technique",
-        "tout",
+        "tournesol",
         "vegan",
         "vegetable",
         "vegetalien",
         "vegetarien",
+        "vert",
         "water",
         "water_cooking",
         "wok",
@@ -130580,10 +130590,10 @@
       "_quality_score": 0.9,
       "description": "Plat de riz basmati cuit par nacrage, grain séparé et bien assaisonné, avec une texture parfumée et une couleur dorée, typique de la cuisine indienne.",
       "instructions": [
-        "Étape 1 : Faire chauffer 45 ml d'huile de coco dans une poêle à feu moyen et ajouter 150 g d'oignon jaune, ainsi que 9 g d'ail, en faisant revenir pendant 2 minutes, jusqu'à ce que l'oignon soit translucide et l'ail parfumé.",
+        "Étape 1 : Faire chauffer 45 ml d'huile de tournesol dans une poêle à feu moyen et ajouter 150 g d'oignon jaune, ainsi que 9 g d'ail, en faisant revenir pendant 2 minutes, jusqu'à ce que l'oignon soit translucide et l'ail parfumé.",
         "Étape 2 : Ajouter 3 g de graines de cumin, 2 g de cardamome et 3 g de cannelle, et faire revenir pendant 1 minute, en veillant à ce que les épices soient bien parfumées et les arômes se dégagent.",
         "Étape 3 : Ajouter 300 g de riz basmati lavé et faire revenir pendant 2 minutes, en remuant régulièrement, jusqu'à ce que le riz soit nacré et les grains soient bien enrobés d'huile et d'épices.",
-        "Étape 4 : Incorporer 320 g de poivron rouge, 200 g de pois mange-tout et 200 g de carotte, et couvrir de 750 ml de bouillon végétal, en veillant à ce que le liquide soit à niveau et les légumes soient bien immergés.",
+        "Étape 4 : Incorporer 150 g de poivron rouge, 200 g de petits pois et 200 g de carotte, et couvrir de 750 ml de bouillon végétal, en veillant à ce que le liquide soit à niveau et les légumes soient bien immergés.",
         "Étape 5 : Cuire à feu doux, couvert, pendant 18 minutes, jusqu'à absorption du liquide et cuisson du riz, en vérifiant régulièrement que le riz ne colle pas au fond de la poêle.",
         "Étape 6 : Laisser reposer pendant 5 minutes, puis égrainer le pulao à la fourchette.",
         "Étape 7 : Servir chaud."
@@ -130643,7 +130653,7 @@
         },
         {
           "ingredient": "avocado_raw",
-          "quantity": 400,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "fruit",
@@ -130654,7 +130664,7 @@
         },
         {
           "ingredient": "cucumber_raw_with_skin",
-          "quantity": 350,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "vegetable",
@@ -130676,7 +130686,7 @@
         },
         {
           "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 400,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "protein",
@@ -130728,12 +130738,22 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "high_protein",
           "vegan",
           "vegetarian"
@@ -130741,7 +130761,8 @@
         "allergens": [
           "sesame",
           "soy",
-          "sulphites"
+          "sulphites",
+          "gluten"
         ],
         "technique": [
           "assembly",
@@ -130798,10 +130819,8 @@
         "blanc",
         "carotte",
         "carrot",
-        "coeliaque",
         "concombre",
         "cucumber",
-        "gluten free",
         "intermediaire",
         "japanese",
         "japon",
@@ -130815,11 +130834,14 @@
         "rice",
         "riz",
         "salt",
-        "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sauce",
         "sel",
         "sesame",
+        "shoyu",
+        "soja",
+        "soy",
         "sucre",
         "sugar",
         "sushi",
@@ -130843,17 +130865,15 @@
         "Étape 1 : Rincer le riz à sushi et le faire cuire par absorption pendant 12 minutes à feu doux, jusqu'à cuisson complète. Observez la texture tendre et la couleur légèrement translucide.",
         "Étape 2 : Préparer l'assaisonnement en dissolvant le vinaigre de riz, le sucre et le sel dans l'eau chaude. Remuez jusqu'à dissolution complète et sentez l'arôme acidulé.",
         "Étape 3 : Étaler le riz chaud et verser l'assaisonnement, aérer avec un éventail jusqu'à refroidissement. Notez la consistance crémeuse et la saveur équilibrée.",
-        "Étape 4 : Ciseler les avocats, les concombres et les carottes en bâtonnets réguliers de 5 mm, les faire julienne.",
+        "Étape 4 : Tailler l'avocat, le concombre et la carotte en bâtonnets réguliers de 5 mm. Couper le tofu en longues lanières et le saisir 2 minutes à la poêle dans 15 ml d'huile de sésame.",
         "Étape 5 : Poser une feuille de nori sur le makisu et étaler le riz, déposer les garnitures en ligne. Sentez la texture douce du riz et la fermeté des légumes.",
         "Étape 6 : Rouler en serrant fermement, humidifier le bord de nori pour sceller, couper en 8 tronçons nets. Observez la forme régulière et la présentation appétissante.",
-        "Étape 7 : Servir frais, accompagné de sauce soja et de wasabi, jusqu'à crépitation légère.",
-        "Étape 8 : Ajouter des légumes supplémentaires, tels que du tofu ferme ou des pois chiches, pour une variété de saveurs et de textures.",
-        "Étape 9 : Présenter le sushi sur un plat ou un bol, avec des feuilles de shiso ou des fleurs comestibles pour une touche de couleur et de fraîcheur. Admirez la présentation élégante et appétissante."
+        "Étape 7 : Servir frais, accompagné de 30 ml de sauce soja."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -131011,11 +131031,11 @@
       "description": "Un riz blanc cuit à la perfection, avec des grains séparés et non collants, légèrement brillants et parfumés. Cette recette permet d'obtenir un riz blanc tendre et aéré, idéal pour accompagner vos plats préférés.",
       "instructions": [
         "Étape 1 : Rincez le riz à grain long 3 à 4 fois sous l'eau froide jusqu'à eau claire, en sentant la texture des grains se défaire légèrement.",
-        "Étape 2 : Mettez le riz dans une casserole avec 1,2 fois le volume d'eau froide et une pincée de sel. Portez à ébullition vive à découvert, en écoutant le bruit de l'eau qui bout.",
+        "Étape 2 : Mettez le riz dans une casserole avec 450 ml d'eau froide (1,5 fois son volume) et une pincée de sel. Portez à ébullition vive à découvert, en écoutant le bruit de l'eau qui bout.",
         "Étape 3 : Dès l'ébullition, couvrez hermétiquement et cuisez à feu très doux exactement 12 minutes sans jamais soulever le couvercle, en sentant la vapeur qui monte doucement.",
         "Étape 4 : Retirez du feu. Laissez reposer 10 minutes couvercle toujours fermé — la vapeur termine la cuisson uniformément, en sentant l'odeur du riz cuit qui se dégage.",
         "Étape 5 : Égrainez délicatement à la fourchette. Les grains doivent être séparés, légèrement brillants et non collants, en sentant la texture des grains qui se séparent facilement.",
-        "Étape 6 : Servez chaud dans des assiettes préchauffées."
+        "Étape 6 : Servez chaud."
       ],
       "diet_flags": {
         "vegan": true,
@@ -131116,7 +131136,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -131268,13 +131288,13 @@
       "_chef_note": "La fraîcheur des légumes est essentielle pour obtenir une salade délicieuse et rafraîchissante.",
       "description": "Salade fraîche et croquante, aux légumes méditerranéens colorés et parfumés, avec une texture variée et une saveur équilibrée, inspirée par les saveurs du Moyen-Orient, où les tomates juteuses, les concombres croquants et les poivrons sucrés se mélangent en harmonie.",
       "instructions": [
-        "Étape 1 : Julienne les tomates fraîches en fines lanières et les concombres en demi-lunes jusqu'à obtenir des morceaux réguliers, avec une texture ferme et une couleur vibrante, en prenant soin de conserver leur fraîcheur et leur humidité.",
-        "Étape 2 : Émincer l'oignon jaune en fines rondelles, rincer 2 min à l'eau froide pour enlever l'âcreté et blanchir légèrement, jusqu'à ce qu'il devienne translucide et perde son odeur piquante, en faisant attention à ne pas le rendre trop mou.",
-        "Étape 3 : Brounoise les poivrons rouges en petits dés, ciseler les feuilles de persil jusqu'à obtenir des morceaux fins, avec une odeur fraîche et herbacée, en faisant ressortir leur couleur et leur parfum.",
-        "Étape 4 : Mélanger tous les légumes dans un saladier, assaisonner avec 5g de sel et 2g de poivre jusqu'à ce que les saveurs soient équilibrées et les textures variées, en prenant soin de ne pas trop saler ou poivrer.",
+        "Étape 1 : Couper les tomates en fines tranches et les concombres en demi-lunes régulières.",
+        "Étape 2 : Émincer l'oignon jaune en fines rondelles et le rincer 2 minutes à l'eau froide pour enlever son âcreté.",
+        "Étape 3 : Tailler les poivrons rouges en petits dés, ciseler les feuilles de persil jusqu'à obtenir des morceaux fins, avec une odeur fraîche et herbacée, en faisant ressortir leur couleur et leur parfum.",
+        "Étape 4 : Mélanger tous les légumes dans un saladier, assaisonner avec 3g de sel et 2g de poivre jusqu'à ce que les saveurs soient équilibrées et les textures variées, en prenant soin de ne pas trop saler ou poivrer.",
         "Étape 5 : Préparer la vinaigrette avec 45ml d'huile d'olive et 30ml de vinaigre blanc, émulsionner 2 min jusqu'à texture lisse et crémeuse, avec une consistance légère et une saveur acidulée, en faisant attention à ne pas la rendre trop épaisse.",
         "Étape 6 : Verser la vinaigrette sur le saladier et mélanger délicatement 1 min jusqu'à ce que les légumes soient bien enrobés et la sauce soit homogène, avec une couleur uniforme et une odeur appétissante, en prenant soin de ne pas trop mélanger.",
-        "Étape 7 : Servir sans attendre, en garnissant de feuilles de persil frais et en accompagnant d'un pain croustillant, pour un repas léger et savoureux, car la fraîcheur des ingrédients et la texture du pain sont essentielles à cette salade, et il est important de servir immédiatement pour conserver toutes les saveurs et les textures."
+        "Étape 7 : Servir sans attendre, garni de feuilles de persil frais et accompagné de pain croustillant."
       ],
       "diet_flags": {
         "vegan": true,
@@ -131303,12 +131323,12 @@
       "timing": {
         "prep_active_min": 17,
         "prep_passive_min": 0,
-        "cook_min": 10,
-        "total_min": 27
+        "cook_min": 0,
+        "total_min": 17
       },
       "composition": [
         {
-          "ingredient": "sweet_corn_raw_fresh",
+          "ingredient": "sweet_corn_on_the_cob_cooked",
           "quantity": 300,
           "unit": "g",
           "meta": {
@@ -131342,7 +131362,7 @@
         },
         {
           "ingredient": "avocado_raw",
-          "quantity": 400,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "fruit",
@@ -131352,8 +131372,8 @@
           }
         },
         {
-          "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 150,
+          "ingredient": "queso_fresco_block_cow",
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -131397,7 +131417,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -131487,7 +131507,9 @@
         }
       },
       "search_tokens": [
-        "30 minutes",
+        "10 min",
+        "20 min",
+        "5 min",
         "andine",
         "assembly",
         "avocado",
@@ -131495,9 +131517,13 @@
         "blanc",
         "bolivian",
         "bread",
+        "cob",
         "coeliaque",
         "corn",
         "doux",
+        "epis",
+        "express",
+        "fresco",
         "fromage",
         "gluten free",
         "intermediaire",
@@ -131513,9 +131539,9 @@
         "olive",
         "onion",
         "pain",
-        "parmesan",
         "parsley",
         "persil",
+        "queso",
         "quick",
         "rapide",
         "red",
@@ -131529,6 +131555,7 @@
         "solterito",
         "sweet",
         "table",
+        "the",
         "tomate",
         "tomato",
         "vegetarien",
@@ -131543,14 +131570,13 @@
       "_chef_note": "Remplacez le fromage par du fromage végétal râpé pour une version végétalienne.",
       "description": "Salade fraîche et croquante, aux saveurs de maïs, tomates et avocats, avec une texture onctueuse et une odeur sucrée, typique de la cuisine andine, préparée avec des ingrédients frais et de qualité.",
       "instructions": [
-        "Étape 1: Ciseler finement les oignons rouges pendant 2 minutes, jusqu'à ce qu'ils soient translucides et dégagent une odeur sucrée, puis les laisser refroidir.",
-        "Étape 2: Julienne les tomates fraîches pendant 2 minutes, jusqu'à ce qu'elles soient tendres et légèrement foncées, en prenant soin de ne pas les écraser.",
-        "Étape 3: Broyer les avocats mûrs pendant 1 minute, jusqu'à ce qu'ils soient crémeux et aient une texture onctueuse, en utilisant une fourchette pour obtenir une consistance lisse.",
-        "Étape 4: Émulsionner la vinaigrette avec 50 ml d'huile d'olive, 25 ml de vinaigre de vin blanc, 15 g de moutarde de Dijon et 1 g de sel, en fouettant énergiquement pendant 30 secondes jusqu'à obtenir une consistance lisse et homogène.",
-        "Étape 5: Réduire la vinaigrette à feu doux pendant 1 minute, jusqu'à ce qu'elle commence à crépiter légèrement et dégage une odeur acidulée, en remuant régulièrement pour éviter la formation de grumeaux.",
-        "Étape 6: Mélanger délicatement les ingrédients, y compris le maïs, les tomates, les avocats, les oignons rouges et le parmesan râpé, pendant 1 minute, jusqu'à ce que tous les ingrédients soient enrobés uniformément et que la salade ait une texture harmonieuse.",
-        "Étape 7: Assaisonner avec du sel et du poivre au goût, puis servir sans attendre, en prenant soin de conserver la fraîcheur et la texture de la salade.",
-        "Étape 8: Garnir avec des feuilles de persil fraîches pour ajouter une touche de couleur et de fraîcheur à la salade, puis servir aussitôt."
+        "Étape 1: Émincer finement les oignons rouges et les rincer à l'eau froide. Égrener le maïs cuit.",
+        "Étape 2: Couper les tomates en dés réguliers.",
+        "Étape 3: Couper les avocats en dés.",
+        "Étape 4: Émulsionner la vinaigrette avec 45 ml d'huile d'olive, 30 ml de vinaigre de vin blanc, 15 g de moutarde de Dijon et 1 g de sel, en fouettant énergiquement pendant 30 secondes jusqu'à obtenir une consistance lisse et homogène.",
+        "Étape 5: Mélanger délicatement les ingrédients, y compris le maïs, les tomates, les avocats, les oignons rouges et le queso fresco émietté, pendant 1 minute, jusqu'à ce que tous les ingrédients soient enrobés uniformément et que la salade ait une texture harmonieuse.",
+        "Étape 6: Assaisonner avec du sel et du poivre au goût, puis servir sans attendre, en prenant soin de conserver la fraîcheur et la texture de la salade.",
+        "Étape 7: Garnir avec des feuilles de persil fraîches pour ajouter une touche de couleur et de fraîcheur à la salade, puis servir aussitôt."
       ],
       "diet_flags": {
         "vegan": false,
@@ -131584,7 +131610,7 @@
       },
       "composition": [
         {
-          "ingredient": "sweet_corn_raw_fresh",
+          "ingredient": "sweet_corn_on_the_cob_cooked",
           "quantity": 300,
           "unit": "g",
           "meta": {
@@ -131618,7 +131644,7 @@
         },
         {
           "ingredient": "avocado_raw",
-          "quantity": 400,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "fruit",
@@ -131629,7 +131655,7 @@
         },
         {
           "ingredient": "base_vegan_cheddar_024998",
-          "quantity": 150,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -131640,7 +131666,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 46.2,
+          "quantity": 45,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -131651,7 +131677,7 @@
         },
         {
           "ingredient": "white_vinegar_liquid_distilled",
-          "quantity": 29.7,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -131673,7 +131699,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -131761,9 +131787,11 @@
         "avocat",
         "base_vegan_cheddar_024998",
         "blanc",
+        "cob",
         "coeliaque",
         "corn",
         "doux",
+        "epis",
         "express",
         "fromage",
         "gluten free",
@@ -131796,6 +131824,7 @@
         "solterito",
         "sweet",
         "table",
+        "the",
         "tomate",
         "tomato",
         "vegan",
@@ -131811,12 +131840,12 @@
       "_quality_score": 0.83,
       "description": "Salade fraîche et croquante à base de maïs, d'oignon rouge, de tomates, d'avocat et de fromage végétal râpé, avec une texture crémeuse et une odeur parfumée de persil frais, inspirée de la cuisine andine.",
       "instructions": [
-        "Étape 1 : Couper 300 g de maïs en morceaux réguliers, 150 g d'oignon rouge en fines lamelles et 300 g de tomates en dés, en veillant à ce que les légumes soient frais et croquants.",
-        "Étape 2 : Couper 400 g d'avocat en dés et les ajouter à la salade, en profitant de la texture crémeuse qu'il apporte.",
-        "Étape 3 : Mélanger 46.2 ml d'huile d'olive, 29.7 ml de vinaigre de vin blanc et 15 g de moutarde de Dijon pour préparer la vinaigrette, en s'assurant qu'elle soit bien émulsionnée après environ 2 minutes de whisking.",
+        "Étape 1 : Égrener 300 g de maïs cuit, couper 150 g d'oignon rouge en fines lamelles et 300 g de tomates en dés, en veillant à ce que les légumes soient frais et croquants.",
+        "Étape 2 : Couper 200 g d'avocat en dés et les ajouter à la salade, en profitant de la texture crémeuse qu'il apporte.",
+        "Étape 3 : Mélanger 45 ml d'huile d'olive, 30 ml de vinaigre de vin blanc et 15 g de moutarde de Dijon pour préparer la vinaigrette, en s'assurant qu'elle soit bien émulsionnée après environ 2 minutes de whisking.",
         "Étape 4 : Verser la vinaigrette sur la salade et mélanger délicatement pendant environ 3 minutes pour enrober tous les ingrédients, en vérifiant que la salade soit bien enrobée et harmonieuse.",
-        "Étape 5 : Assaisonner avec 5 g de sel et ajuster l'assaisonnement si nécessaire, en goûtant régulièrement pour atteindre l'équilibre parfait.",
-        "Étape 6 : Ajouter 150 g de fromage végétal râpé pour donner un peu de fermeté et de saveur, en veillant à ce qu'il soit bien réparti sur toute la salade.",
+        "Étape 5 : Assaisonner avec 3 g de sel et ajuster l'assaisonnement si nécessaire, en goûtant régulièrement pour atteindre l'équilibre parfait.",
+        "Étape 6 : Ajouter 120 g de fromage végétal râpé pour donner un peu de fermeté et de saveur, en veillant à ce qu'il soit bien réparti sur toute la salade.",
         "Étape 7 : Garnir de 30 g de persil frais haché et servir frais."
       ],
       "diet_flags": {
@@ -131874,7 +131903,7 @@
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -131907,7 +131936,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -131926,6 +131955,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "vinegar_liquid",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -131936,7 +131976,8 @@
         "allergens": [
           "gluten",
           "sesame",
-          "soy"
+          "soy",
+          "sulphites"
         ],
         "technique": [
           "assembly",
@@ -132024,7 +132065,9 @@
         "vegan",
         "vegetalien",
         "vegetarien",
-        "vert"
+        "vert",
+        "vinaigre",
+        "vinegar"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
@@ -132033,11 +132076,10 @@
       "description": "Salade asiatique sésame, préparée avec du chou vert émincé, des carottes râpées, de la sauce soja et des graines de sésame grillées, pour une texture croquante et une saveur parfumée, inspirée de la cuisine asiatique.",
       "instructions": [
         "Étape 1 : Émincer finement 400g de chou vert et râper 200g de carottes, pour obtenir des textures variées et une présentation visuelle appétissante.",
-        "Étape 2 : Préparer la vinaigrette : mélanger 15ml d'huile de sésame, 45ml de sauce soja, et 15g de gingembre râpé, pour créer une sauce parfumée et équilibrée.",
+        "Étape 2 : Préparer la vinaigrette : mélanger 15ml d'huile de sésame, 30ml de sauce soja, 15 ml de vinaigre de riz et 15g de gingembre râpé, pour créer une sauce parfumée et équilibrée.",
         "Étape 3 : Mélanger le chou et les carottes avec la vinaigrette, laisser mariner 15 minutes pour attendrir le chou et permettre aux saveurs de se développer.",
         "Étape 4 : Ajouter 20g de graines de sésame grillées et goûter pour rectifier l'assaisonnement, en ajustant les quantités de sauce soja ou d'huile de sésame si nécessaire.",
-        "Étape 5 : Laisser reposer 5 minutes pour permettre aux saveurs de se mélanger et de se développer pleinement, avant de servir.",
-        "Étape 6 : Présenter le plat bien assaisonné, avec des textures préservées et des graines de sésame croustillantes."
+        "Étape 5 : Présenter le plat bien assaisonné, avec des textures préservées et des graines de sésame croustillantes."
       ],
       "diet_flags": {
         "vegan": true,
@@ -132127,7 +132169,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 46.2,
+          "quantity": 45,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -132138,7 +132180,7 @@
         },
         {
           "ingredient": "white_vinegar_liquid_distilled",
-          "quantity": 29.7,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -132149,7 +132191,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -132302,8 +132344,8 @@
         "Étape 2 : Ciseler le concombre en dés similaires, en conservant sa peau pour une texture plus intéressante.",
         "Étape 3 : Émincer le poivron rouge en petits dés, puis finement hacher l'oignon rouge.",
         "Étape 4 : Assembler les légumes dans un saladier, en les disposant de manière à créer une harmonie de couleurs.",
-        "Étape 5 : Assaisonner avec 46,2 ml d'huile d'olive, 29,7 ml de vinaigre de vin blanc, du sel et du poivre, en prenant soin de bien mélanger.",
-        "Étape 6 : Mélanger délicatement avec 150g de fromage végétal râpé, en veillant à ce qu'il soit bien réparti. Servir frais dans un bol, garni de quelques feuilles de persil frais."
+        "Étape 5 : Assaisonner avec 45 ml d'huile d'olive, 30 ml de vinaigre de vin blanc, du sel et du poivre, en prenant soin de bien mélanger.",
+        "Étape 6 : Parsemer de 150 g de tofu ferme émietté (en remplacement du sirene) et servir frais."
       ],
       "diet_flags": {
         "vegan": true,

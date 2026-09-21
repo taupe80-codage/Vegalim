@@ -713,7 +713,7 @@
 - **Sri Lankan Pumpkin Curry** _(diabetes_friendly, gluten_free, vegetarian, main, sri_lankan)_ — `curry_sri_lankan_pumpkin_7f1edb`
 - **Sundubu Jjigae** _(diabetes_friendly, high_protein, main, korean)_ — `egg_sundubu_jjigae_bc21e0`
 - **Sundubu Tofu Stew** _(diabetes_friendly, gluten_free, high_protein, main, korean)_ — `stew_sundubu_tofu_stew_ebe50e`
-- **Sushi** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, japanese)_ — `rice_vegetable_sushi_9aad8a`
+- **Sushi** _(diabetes_friendly, high_protein, vegan, vegetarian, main, japanese)_ — `rice_vegetable_sushi_9aad8a`
 
 ## T
 

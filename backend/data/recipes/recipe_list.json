@@ -2728,7 +2728,7 @@
       },
       {
         "ingredient": "potato_raw_flesh",
-        "quantity": 600,
+        "quantity": 400,
         "unit": "g"
       },
       {
@@ -2770,6 +2770,11 @@
         "ingredient": "coriander_raw_fresh_herb",
         "quantity": 10,
         "unit": "g"
+      },
+      {
+        "ingredient": "coconut_milk_plant",
+        "quantity": 200,
+        "unit": "ml"
       }
     ],
     "n_instructions": 8,
@@ -4797,17 +4802,17 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
+        "quantity": 45,
         "unit": "ml"
       },
       {
         "ingredient": "white_vinegar_liquid_distilled",
-        "quantity": 29.7,
+        "quantity": 30,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       },
       {
@@ -32991,11 +32996,11 @@
       },
       {
         "ingredient": "red_bell_pepper_raw",
-        "quantity": 320,
+        "quantity": 150,
         "unit": "g"
       },
       {
-        "ingredient": "snow_peas_raw",
+        "ingredient": "green_peas_raw",
         "quantity": 200,
         "unit": "g"
       },
@@ -33030,13 +33035,13 @@
         "unit": "ml"
       },
       {
-        "ingredient": "coconut_oil_plant",
+        "ingredient": "sunflower_oil_plant",
         "quantity": 45,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       },
       {
@@ -38970,7 +38975,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       },
       {
@@ -39005,12 +39010,12 @@
       "mustard"
     ],
     "servings": 4,
-    "time_total": 27,
+    "time_total": 17,
     "confidence": 1.0,
     "description": "Salade fraîche et croquante, aux saveurs de maïs, tomates et avocats, avec une texture onctueuse et une odeur sucrée, typique de la cuisine andine, préparée avec des ingrédients frais et de qualité.",
     "composition": [
       {
-        "ingredient": "sweet_corn_raw_fresh",
+        "ingredient": "sweet_corn_on_the_cob_cooked",
         "quantity": 300,
         "unit": "g"
       },
@@ -39026,12 +39031,12 @@
       },
       {
         "ingredient": "avocado_raw",
-        "quantity": 400,
+        "quantity": 200,
         "unit": "g"
       },
       {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 150,
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 120,
         "unit": "g"
       },
       {
@@ -39051,7 +39056,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       },
       {
@@ -39065,7 +39070,7 @@
         "unit": "4 tranches"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": [
       {
@@ -39097,7 +39102,7 @@
     "description": "Salade fraîche et croquante à base de maïs, d'oignon rouge, de tomates, d'avocat et de fromage végétal râpé, avec une texture crémeuse et une odeur parfumée de persil frais, inspirée de la cuisine andine.",
     "composition": [
       {
-        "ingredient": "sweet_corn_raw_fresh",
+        "ingredient": "sweet_corn_on_the_cob_cooked",
         "quantity": 300,
         "unit": "g"
       },
@@ -39113,22 +39118,22 @@
       },
       {
         "ingredient": "avocado_raw",
-        "quantity": 400,
+        "quantity": 200,
         "unit": "g"
       },
       {
         "ingredient": "base_vegan_cheddar_024998",
-        "quantity": 150,
+        "quantity": 120,
         "unit": "g"
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
+        "quantity": 45,
         "unit": "ml"
       },
       {
         "ingredient": "white_vinegar_liquid_distilled",
-        "quantity": 29.7,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -39138,7 +39143,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       },
       {
@@ -39170,7 +39175,8 @@
     "allergens": [
       "gluten",
       "sesame",
-      "soy"
+      "soy",
+      "sulphites"
     ],
     "servings": 4,
     "time_total": 26,
@@ -39189,7 +39195,7 @@
       },
       {
         "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -39204,16 +39210,21 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
         "ingredient": "ginger_raw_root_fresh",
         "quantity": 15,
         "unit": "g"
+      },
+      {
+        "ingredient": "vinegar_liquid",
+        "quantity": 15,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -46355,7 +46366,6 @@
     "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "high_protein",
       "vegan",
       "vegetarian"
@@ -46363,7 +46373,8 @@
     "allergens": [
       "sesame",
       "soy",
-      "sulphites"
+      "sulphites",
+      "gluten"
     ],
     "servings": 4,
     "time_total": 35,
@@ -46382,12 +46393,12 @@
       },
       {
         "ingredient": "avocado_raw",
-        "quantity": 400,
+        "quantity": 200,
         "unit": "g"
       },
       {
         "ingredient": "cucumber_raw_with_skin",
-        "quantity": 350,
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -46397,7 +46408,7 @@
       },
       {
         "ingredient": "tofu_plain_pre_packaged",
-        "quantity": 400,
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -46419,9 +46430,14 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 30,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
