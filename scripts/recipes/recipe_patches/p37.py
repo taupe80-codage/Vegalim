@@ -1,0 +1,87 @@
+"""Lot 37 : samosa, soupes (oignon vegan → bouillabaisse)."""
+
+PATCHES = {
+    # feuilles de wonton (à l'œuf) alors qu'une pâte à samosa existe ; mange-tout pour des petits pois
+    "snack_vegetable_samosa_088bfa": [
+        ("ing", "base_wonton_wrapper_7bfeb5", "base_samosa_77fac4", 380),
+        ("ing", "snow_peas_raw", "green_peas_raw", 150),
+        ("ing", "coconut_oil_plant", "sunflower_oil_plant", 40),
+        ("add", "table_salt_unenriched", 5, "g", "seasoning"),
+        ("flag", "vegan", True),
+        ("txt", "Faire blanchir les pommes de terre crues pendant 8 minutes à feu moyen-vif", "Cuire les pommes de terre en dés 12 minutes à l'eau bouillante"),
+        ("txt", "dans l'huile de noix de coco, ajouter", "dans 10 ml d'huile de tournesol, ajouter"),
+        ("txt", "Incorporer les pois mange-tout pendant 1 minute, mélanger et assaisonner, en vérifiant que les pois soient tendres.",
+         "Incorporer 150 g de petits pois et les pommes de terre écrasées, cuire 2 minutes et saler avec 5 g de sel."),
+        ("txt", ", en vérifiant que la température soit inférieure à 20°C", ""),
+        ("txt", "Ciseler les feuilles de wonton en rectangles, les plier pour former des cônes", "Abaisser finement la pâte à samosa, la découper en demi-cercles et les plier en cônes"),
+        ("txt", "dans l'huile de noix de coco chaude à 180°C", "dans un bain d'huile de tournesol à 180°C"),
+        ("time", 13, 40, 25),
+    ],
+    # 200 g de farine pour 750 ml de bouillon, 300 g d'oignon pour une soupe à l'oignon, vin absent
+    "soup_a_l_oignon_gratinee_vegan_826f59": [
+        ("qty", "yellow_onion_raw", 800),
+        ("qty", "wheat_all_purpose_flour_unenriched_unbleached", 20),
+        ("qty", "table_salt_unenriched", 2),
+        ("add", "white_wine_liquid", 100, "ml", "liquid"),
+        ("add", "bay_leaf_spice", 1, "g", "herb"),
+        ("flag", "kid_friendly", False),
+        ("txt", "Émincer finement 300g d'oignons jaunes", "Émincer finement 800g d'oignons jaunes"),
+        ("txt", "à feu très doux, à environ 100°C, pendant 5 minutes", "à feu très doux"),
+        ("txt", "à feu moyen, à environ 150°C, pendant 20 minutes", "à feu moyen pendant 20 minutes"),
+        ("txt", "Saupoudrer de 200g de farine de blé", "Saupoudrer de 20g de farine de blé"),
+        ("txt", "Servir chaud, en vérifiant la température et l'odeur de la soupe, en accompagnant d'un peu de poivre fraîchement moulu pour relever les saveurs.", "Servir chaud, poivré au moulin."),
+    ],
+    "soup_aigrepiquante_5245bb": [
+        ("qty", "sesame_oil_plant", 10),
+        ("qty", "soy_sauce_shoyu_reduced_sodium", 30),
+        ("add", "shiitake_mushroom_dried", 10, "g", "ingredient"),
+        ("txt", "Faire chauffer le bouillon dashi végétarien", "Faire chauffer le bouillon de légumes"),
+        ("txt", "les champignons noirs réhydratés", "10 g de shiitakés séchés réhydratés, les champignons de Paris émincés"),
+        ("txt", "garnie de feuilles de coriandre fraîche ciselée et d'un filet d'huile de sésame. Accompagner de crackers de riz ou de pain complet toasté.", "arrosée de 10 ml d'huile de sésame."),
+    ],
+    "soup_au_chou_4be090": [
+        ("qty", "table_salt_unenriched", 2),
+    ],
+    # 320 g de pâtes, ni bouillon ni sel, haricots verts absents
+    "soup_au_pistou_701fac": [
+        ("qty", "whole_wheat_pasta_raw_dried", 120),
+        ("add", "french_bean_raw", 150, "g", "vegetable"),
+        ("add", "water", 1200, "ml", "liquid"),
+        ("add", "vegetable_stock_dried", 10, "g", "ingredient"),
+        ("add", "table_salt_unenriched", 2, "g", "seasoning"),
+        ("txt", "Incorporer les courgettes, les tomates et les haricots blancs", "Incorporer les courgettes, 150 g de haricots verts en tronçons, les tomates et les haricots blancs"),
+        ("txt", "Couvrir de bouillon de légumes chaud", "Couvrir de 1,2 L de bouillon de légumes chaud"),
+        ("txt", "Ajouter les pâtes de blé complet", "Ajouter 120 g de petites pâtes de blé complet"),
+        ("txt", "Assaisonner avec du sel et des herbes fraîches si nécessaire, pour obtenir l'équilibre parfait.", "Saler avec 2 g de sel."),
+        ("step-", "Déguster et ajuster l'assaisonnement si nécessaire"),
+        ("step-", "Servir dans des bols préchauffés"),
+    ],
+    "soup_bisque_de_champignons_63fa25": [
+        ("add", "table_salt_unenriched", 3, "g", "seasoning"),
+        ("txt", "Rectifiez sel et poivre.", "Salez avec 3 g de sel et poivrez."),
+    ],
+    "soup_borscht_classic_k39x2c": [
+        ("qty", "vegetable_stock_dried", 10),
+        ("qty", "table_salt_unenriched", 3),
+        ("txt", "saler et poivrer à goût", "saler avec 3 g de sel et poivrer"),
+        ("step-", "Avant de servir, vérifiez"),
+    ],
+    "soup_borscht_fd9212": [
+        ("ing", "lemon", "lemon_juice", 40, "ml"),
+        ("qty", "table_salt_unenriched", 3),
+        ("txt", "Ajouter le jus de 100 g de citron et une pincée de sel", "Ajouter 40 ml de jus de citron et 3 g de sel"),
+        ("step-", "Pour une présentation plus élégante, vous pouvez ajouter quelques betteraves"),
+        ("step-", "Servir aussitôt dans des bols préchauffés"),
+        ("time", 15, 0, 40),
+    ],
+    "soup_bouillabaisse_vegetarienne_1d9c92": [
+        ("qty", "olive_oil_plant", 30),
+        ("qty", "table_salt_unenriched", 2),
+        ("add", "water", 1000, "ml", "liquid"),
+        ("add", "vegetable_stock_dried", 12.5, "g", "ingredient"),
+        ("txt", "dans 4 ml d'huile d'olive", "dans 30 ml d'huile d'olive"),
+        ("txt", "Mouiller avec le bouillon végétal", "Mouiller avec 1 L de bouillon végétal"),
+        ("txt", "avec une rouille végétalienne et des croûtons croustillants, si désiré, pour ajouter une texture croustillante et une saveur intense.", "avec des croûtons frottés à l'ail."),
+        ("step-", "Pour une présentation plus élégante, vous pouvez ajouter quelques feuilles de persil"),
+    ],
+}

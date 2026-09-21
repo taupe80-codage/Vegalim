@@ -646,7 +646,7 @@
 - **Salmorejo (Vegan)** _(diabetes_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, spanish)_ — `entry_salmorejo_vegan_d0b7f7` 🔁 doublon possible : Salmorejo
 - **Sambar** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, international)_ — `dal_sambar_581de8`
 - **Sambar Indien** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, indian)_ — `dal_sambar_indien_fcf6d8`
-- **Samosa** _(vegetarian, snack, chinese)_ — `snack_vegetable_samosa_088bfa`
+- **Samosa** _(vegetarian, vegan, snack, chinese)_ — `snack_vegetable_samosa_088bfa`
 - **Sancocho** _(gluten_free, vegan, vegetarian, main, dominican)_ — `main_sancocho_733f70`
 - **Sandwich végétarien** _(snack, international)_ — `snack_veg_k3d2p1`
 - **Sauce au Yaourt** _(vegetarian, gluten_free, sauce, middle_eastern)_ — `base_sauce_yogurt_0bfeaf`
@@ -702,7 +702,7 @@
 - **Soupe Thaï Coco Citronnelle** _(diabetes_friendly, high_protein, vegetarian, soup, thai)_ — `soup_soupe_thai_coco_citronnelle_375c23`
 - **Soupe Udon Miso** _(diabetes_friendly, high_protein, vegan, vegetarian, soup, japanese)_ — `soup_udon_miso_ef1ceb` 🔁 doublon possible : Soupe miso
 - **Soupe à l'oignon** _(soup, french)_ — `soup_soup_k3d2p1` 🔁 doublon possible : Soupe à l'Oignon Gratinée (Vegan)
-- **Soupe à l'Oignon Gratinée (Vegan)** _(diabetes_friendly, kid_friendly, soup, french)_ — `soup_a_l_oignon_gratinee_vegan_826f59` 🔁 doublon possible : Soupe à l'oignon
+- **Soupe à l'Oignon Gratinée (Vegan)** _(diabetes_friendly, soup, french)_ — `soup_a_l_oignon_gratinee_vegan_826f59` 🔁 doublon possible : Soupe à l'oignon
 - **Spanakopita** _(diabetes_friendly, high_protein, main, greek)_ — `egg_spanakopita_f5da1b`
 - **Spanakopita à la Muscade (Vegan)** _(high_protein, nut_free, main, greek)_ — `bread_spanakopita_a_la_muscade_6a9e84`
 - **Spring Rolls** _(diabetes_friendly, vegan, vegetarian, main, vietnamese)_ — `rice_spring_rolls_45fdfa`

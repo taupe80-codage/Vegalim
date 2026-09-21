@@ -150554,14 +150554,14 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 13,
-        "prep_passive_min": 60,
+        "prep_passive_min": 40,
         "cook_min": 25,
-        "total_min": 98
+        "total_min": 78
       },
       "composition": [
         {
-          "ingredient": "base_wonton_wrapper_7bfeb5",
-          "quantity": 160,
+          "ingredient": "base_samosa_77fac4",
+          "quantity": 380,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -150582,8 +150582,8 @@
           }
         },
         {
-          "ingredient": "snow_peas_raw",
-          "quantity": 200,
+          "ingredient": "green_peas_raw",
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -150626,8 +150626,8 @@
           }
         },
         {
-          "ingredient": "coconut_oil_plant",
-          "quantity": 45,
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -150657,15 +150657,26 @@
             "note": "Quelques feuilles pour la fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
         "diet": [
-          "vegetarian"
+          "vegetarian",
+          "vegan"
         ],
         "allergens": [
-          "gluten",
-          "eggs"
+          "gluten"
         ],
         "technique": [
           "frying"
@@ -150714,42 +150725,47 @@
       },
       "search_tokens": [
         "asiatique",
-        "base_wonton_wrapper_7bfeb5",
+        "base_samosa_77fac4",
         "chine",
         "chinese",
         "chinois",
-        "coco",
-        "coconut",
         "coriander",
         "coriandre",
         "cumin",
         "frying",
         "gingembre",
         "ginger",
+        "green",
         "intermediaire",
         "leger",
         "lent",
         "light",
         "long",
         "low calorie",
-        "mange",
         "mijote",
         "minceur",
         "moyen",
-        "noix",
         "oignon",
         "onion",
         "peas",
+        "petit",
         "pois",
         "pomme",
         "potato",
+        "salt",
         "samosa",
+        "sans produit animal",
         "sans viande",
-        "snow",
+        "sel",
+        "sunflower",
+        "table",
         "terre",
-        "tout",
+        "tournesol",
+        "vegan",
         "vegetable",
+        "vegetalien",
         "vegetarien",
+        "vert",
         "wok"
       ],
       "difficulty_level": "medium",
@@ -150758,16 +150774,16 @@
       "_quality_score": 0.96,
       "description": "Spécialité indienne — pâte feuilletée, dorée en cuisson pour une texture croustillante à l'extérieur et tendre à cœur, parfumée aux saveurs de cumin et de coriandre, avec des notes de gingembre frais.",
       "instructions": [
-        "Étape 1 : Faire blanchir les pommes de terre crues pendant 8 minutes à feu moyen-vif, puis les écraser grossièrement avec une fourchette.",
-        "Étape 2 : Saisir l'oignon blanc pendant 2 minutes dans l'huile de noix de coco, ajouter les graines de cumin et le coriandre en poudre, ainsi que le gingembre frais, et faire revenir jusqu'à ce que le mélange soit parfumé et légèrement doré.",
-        "Étape 3 : Incorporer les pois mange-tout pendant 1 minute, mélanger et assaisonner, en vérifiant que les pois soient tendres.",
-        "Étape 4 : Laisser refroidir la farce pendant 10 minutes, jusqu'à refroidissement complet, en vérifiant que la température soit inférieure à 20°C.",
-        "Étape 5 : Ciseler les feuilles de wonton en rectangles, les plier pour former des cônes, et les sceller hermétiquement avec un peu d'eau, en veillant à ce que les bords soient bien scellés.",
+        "Étape 1 : Cuire les pommes de terre en dés 12 minutes à l'eau bouillante, puis les écraser grossièrement avec une fourchette.",
+        "Étape 2 : Saisir l'oignon blanc pendant 2 minutes dans 10 ml d'huile de tournesol, ajouter les graines de cumin et le coriandre en poudre, ainsi que le gingembre frais, et faire revenir jusqu'à ce que le mélange soit parfumé et légèrement doré.",
+        "Étape 3 : Incorporer 150 g de petits pois et les pommes de terre écrasées, cuire 2 minutes et saler avec 5 g de sel.",
+        "Étape 4 : Laisser refroidir la farce pendant 10 minutes, jusqu'à refroidissement complet.",
+        "Étape 5 : Abaisser finement la pâte à samosa, la découper en demi-cercles et les plier en cônes, et les sceller hermétiquement avec un peu d'eau, en veillant à ce que les bords soient bien scellés.",
         "Étape 6 : Remplir les cônes de farce et les fermer hermétiquement, en veillant à ce que les bords soient bien scellés et que les samosas soient prêts à être frits.",
-        "Étape 7 : Faire frire les samosas dans l'huile de noix de coco chaude à 180°C jusqu'à ce qu'ils soient dorés et croustillants, en les retournant régulièrement pour une cuisson uniforme, pendant environ 3-4 minutes de chaque côté."
+        "Étape 7 : Faire frire les samosas dans un bain d'huile de tournesol à 180°C jusqu'à ce qu'ils soient dorés et croustillants, en les retournant régulièrement pour une cuisson uniforme, pendant environ 3-4 minutes de chaque côté."
       ],
       "diet_flags": {
-        "vegan": false,
+        "vegan": true,
         "vegetarian": true,
         "gluten_free": false,
         "lactose_free": true,
@@ -150799,7 +150815,7 @@
       "composition": [
         {
           "ingredient": "yellow_onion_raw",
-          "quantity": 300,
+          "quantity": 800,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
@@ -150864,7 +150880,7 @@
         },
         {
           "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-          "quantity": 200,
+          "quantity": 20,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -150875,7 +150891,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -150905,16 +150921,38 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "white_wine_liquid",
+          "quantity": 100,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "bay_leaf_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
         "diet": [
-          "diabetes_friendly",
-          "kid_friendly"
+          "diabetes_friendly"
         ],
         "allergens": [
           "gluten",
-          "tree_nuts"
+          "tree_nuts",
+          "sulphites"
         ],
         "technique": [
           "braising",
@@ -150967,6 +151005,7 @@
         "all",
         "baguette",
         "base_vegan_cheddar_024998",
+        "bay",
         "beurre",
         "black",
         "blanc",
@@ -150978,9 +151017,6 @@
         "butter",
         "classique",
         "eau",
-        "enfants",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "francais",
@@ -150989,8 +151025,9 @@
         "gratinee",
         "intermediaire",
         "jaune",
-        "kids",
         "l'oignon",
+        "laurier",
+        "leaf",
         "leger",
         "legumes",
         "light",
@@ -151022,9 +151059,11 @@
         "vegetal",
         "vegetalien",
         "vegetarien",
+        "vin",
         "water",
         "wheat",
         "white",
+        "wine",
         "yellow"
       ],
       "difficulty_level": "medium",
@@ -151034,12 +151073,12 @@
       "_chef_note": "Remplacez le beurre par de l'huile et le fromage par du fromage végétal râpé.",
       "description": "Soupe française à base d'oignon jaune, fondant et parfumée, avec une texture crémeuse et une odeur de thym frais — préparée avec une technique de cuisson lente pour une saveur intense.",
       "instructions": [
-        "Étape 1 : Émincer finement 300g d'oignons jaunes. Faire fondre 40g de beurre végétal dans une cocotte à feu très doux, à environ 100°C, pendant 5 minutes. Ajouter les oignons, couvrir et cuire 20 minutes, en vérifiant que les oignons soient tendres et translucides.",
-        "Étape 2 : Découvrir et caraméliser à feu moyen, à environ 150°C, pendant 20 minutes supplémentaires, jusqu'à couleur brun acajou profond et texture confite, en remuant régulièrement pour éviter les brûlures.",
-        "Étape 3 : Saupoudrer de 200g de farine de blé et mélanger 1 minute pour éviter les grumeaux. Déglacer avec 100 ml de vin blanc sec ou cidre, en laissant réduire à sec pendant 2 minutes, tout en grattant les sucs de cuisson pour récupérer les saveurs.",
+        "Étape 1 : Émincer finement 800g d'oignons jaunes. Faire fondre 40g de beurre végétal dans une cocotte à feu très doux. Ajouter les oignons, couvrir et cuire 20 minutes, en vérifiant que les oignons soient tendres et translucides.",
+        "Étape 2 : Découvrir et caraméliser à feu moyen pendant 20 minutes supplémentaires, jusqu'à couleur brun acajou profond et texture confite, en remuant régulièrement pour éviter les brûlures.",
+        "Étape 3 : Saupoudrer de 20g de farine de blé et mélanger 1 minute pour éviter les grumeaux. Déglacer avec 100 ml de vin blanc sec ou cidre, en laissant réduire à sec pendant 2 minutes, tout en grattant les sucs de cuisson pour récupérer les saveurs.",
         "Étape 4 : Verser 750 ml de bouillon de légumes chaud. Ajouter 5g de thym frais et 2 feuilles de laurier. Mijoter 15 minutes, en vérifiant que les saveurs soient équilibrées et la texture crémeuse.",
         "Étape 5 : Préchauffer le four à 220°C. Verser la soupe dans des bols allant au four. Déposer des croûtons grillés préparés avec 120g de pain baguette et parsemer de 100g de fromage végétal râpé. Gratiner sous le gril pendant 3 à 4 minutes, jusqu'à croûte dorée et fromage fondu.",
-        "Étape 6 : Servir chaud, en vérifiant la température et l'odeur de la soupe, en accompagnant d'un peu de poivre fraîchement moulu pour relever les saveurs."
+        "Étape 6 : Servir chaud, poivré au moulin."
       ],
       "diet_flags": {
         "vegan": true,
@@ -151048,7 +151087,7 @@
         "lactose_free": true,
         "nut_free": false,
         "raw": false,
-        "kid_friendly": true
+        "kid_friendly": false
       }
     },
     {
@@ -151150,7 +151189,7 @@
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -151172,7 +151211,7 @@
         },
         {
           "ingredient": "sesame_oil_plant",
-          "quantity": 45,
+          "quantity": 10,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -151232,6 +151271,17 @@
           "meta": {
             "role": "ingredient",
             "form": "powder",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "shiitake_mushroom_dried",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -151360,11 +151410,11 @@
       "_quality_score": 0.97,
       "description": "Bouillon dashi végétarien relevé d'une pâte miso blanche, où le tofu ferme fond en bouche, avec des morceaux de carotte tendres et des champignons noirs réhydratés — recette fondatrice de la cuisine chinoise végétalienne, avec une touche de piquant et d'aigre.",
       "instructions": [
-        "Étape 1 : Faire chauffer le bouillon dashi végétarien à feu moyen-vif. Ajouter le vinaigre de riz et cuire 5 minutes, en remuant occasionnellement, jusqu'à ce que les parfums se mélangent et le bouillon soit chaud et bouillonnant.",
-        "Étape 2 : Incorporer le tofu ferme en cubes, les champignons noirs réhydratés, 200g de pousses de bambou égouttées et la carotte en julienne. Cuire 4 minutes, en remuant doucement, jusqu'à ce que les légumes soient légèrement tendres et le tofu soit chaud et moelleux.",
+        "Étape 1 : Faire chauffer le bouillon de légumes à feu moyen-vif. Ajouter le vinaigre de riz et cuire 5 minutes, en remuant occasionnellement, jusqu'à ce que les parfums se mélangent et le bouillon soit chaud et bouillonnant.",
+        "Étape 2 : Incorporer le tofu ferme en cubes, 10 g de shiitakés séchés réhydratés, les champignons de Paris émincés, 200g de pousses de bambou égouttées et la carotte en julienne. Cuire 4 minutes, en remuant doucement, jusqu'à ce que les légumes soient légèrement tendres et le tofu soit chaud et moelleux.",
         "Étape 3 : Assaisonner de sauce soja et délayer la fécule de maïs dans un peu d'eau froide. Verser en filet dans la soupe bouillonnante en remuant constamment. La soupe doit épaissir légèrement en 2 minutes et prendre une texture veloutée et crémeuse.",
         "Étape 4 : Incorporer les oignons verts ciselés et les graines de sésame. Cuire pendant 1 minute, en remuant doucement, jusqu'à ce que les oignons soient légèrement tendres et les graines de sésame soient parfumées.",
-        "Étape 5 : Servir la soupe chaude, garnie de feuilles de coriandre fraîche ciselée et d'un filet d'huile de sésame. Accompagner de crackers de riz ou de pain complet toasté."
+        "Étape 5 : Servir la soupe chaude, arrosée de 10 ml d'huile de sésame."
       ],
       "diet_flags": {
         "vegan": true,
@@ -151486,7 +151536,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -151714,7 +151764,7 @@
         },
         {
           "ingredient": "whole_wheat_pasta_raw_dried",
-          "quantity": 320,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -151774,6 +151824,50 @@
           "meta": {
             "role": "cheese",
             "form": "grated",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "french_bean_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 1200,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -151854,6 +151948,7 @@
         "courgette",
         "francais",
         "france",
+        "french",
         "french_provencal",
         "garlic",
         "green",
@@ -151884,6 +151979,7 @@
         "tomato",
         "vegetable",
         "vegetarien",
+        "vert",
         "wheat",
         "white",
         "whole",
@@ -151898,14 +151994,12 @@
       "instructions": [
         "Étape 1: Faire revenir l'oignon blanc et l'ail dans 45 ml d'huile d'olive dans une grande marmite, jusqu'à parfum dégagé et légère coloration dorée, en remuant régulièrement.",
         "Étape 2: Ajouter les carottes et le céleri en dés, cuire 5 min à feu moyen, jusqu'à légère coloration blonde et texture tendre, tout en sentant l'arôme des légumes.",
-        "Étape 3: Incorporer les courgettes, les tomates et les haricots blancs, cuire 10 min à feu doux, en remuant régulièrement, pour obtenir une texture uniforme et une couleur vibrante.",
-        "Étape 4: Couvrir de bouillon de légumes chaud, porter à ébullition, puis réduire le feu, en écoutant le bruit de l'ébullition et en sentant la chaleur.",
-        "Étape 5: Ajouter les pâtes de blé complet, cuire 10-12 min à feu doux, jusqu'à texture tendre et al dente, en vérifiant la consistance régulièrement.",
+        "Étape 3: Incorporer les courgettes, 150 g de haricots verts en tronçons, les tomates et les haricots blancs, cuire 10 min à feu doux, en remuant régulièrement, pour obtenir une texture uniforme et une couleur vibrante.",
+        "Étape 4: Couvrir de 1,2 L de bouillon de légumes chaud, porter à ébullition, puis réduire le feu, en écoutant le bruit de l'ébullition et en sentant la chaleur.",
+        "Étape 5: Ajouter 120 g de petites pâtes de blé complet, cuire 10-12 min à feu doux, jusqu'à texture tendre et al dente, en vérifiant la consistance régulièrement.",
         "Étape 6: Ajouter le pistou et mélanger délicatement pour bien incorporer les saveurs.",
-        "Étape 7: Assaisonner avec du sel et des herbes fraîches si nécessaire, pour obtenir l'équilibre parfait.",
-        "Étape 8: Servir la soupe chaude, garnie de pistou, de 30g de parmesan râpé et de légumes tendres.",
-        "Étape 9: Déguster et ajuster l'assaisonnement si nécessaire, pour obtenir la perfection.",
-        "Étape 10: Servir dans des bols préchauffés."
+        "Étape 7: Saler avec 2 g de sel.",
+        "Étape 8: Servir la soupe chaude, garnie de pistou, de 30g de parmesan râpé et de légumes tendres."
       ],
       "diet_flags": {
         "vegan": false,
@@ -152046,6 +152140,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -152145,12 +152250,15 @@
         "paris",
         "porcini",
         "potable)",
+        "salt",
         "sans gluten",
         "sans viande",
         "sauteed",
+        "sel",
         "shallot",
         "simple",
         "stock",
+        "table",
         "thym",
         "thyme",
         "vegetable",
@@ -152167,7 +152275,7 @@
         "Étape 2: Faites sauter les champignons. Ajoutez les champignons et faites-les sauter à feu vif pendant 8 minutes, jusqu'à légère dorure et évaporation complète de l'eau — les champignons doivent réduire de moitié et avoir une texture tendre.",
         "Étape 3: Ajoutez le thym et le liquide. Incorporez 3 grammes de thym frais et 20 ml de cognac. Flambé si souhaité. Versez 600 ml de bouillon de légumes chaud. Mijotez pendant 15 minutes, en laissant les saveurs se mélanger et les arômes se développer.",
         "Étape 4: Mixer le potage. Mixer entièrement. Incorporez 150 ml de crème fraîche. Passez au chinois pour une texture veloutée et lisse.",
-        "Étape 5: Rectifiez et servez. Rectifiez sel et poivre. La bisque doit être d'un brun doré profond, intensément parfumée aux champignons, crémeuse et légèrement boisée. Garnissez de champignons poêlés et servez sans attendre, pour préserver la chaleur et la texture de la bisque."
+        "Étape 5: Rectifiez et servez. Salez avec 3 g de sel et poivrez. La bisque doit être d'un brun doré profond, intensément parfumée aux champignons, crémeuse et légèrement boisée. Garnissez de champignons poêlés et servez sans attendre, pour préserver la chaleur et la texture de la bisque."
       ],
       "diet_flags": {
         "vegan": false,
@@ -152312,7 +152420,7 @@
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 15.1,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "base",
@@ -152333,7 +152441,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 6,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -152512,10 +152620,9 @@
         "Étape 1: Faire revenir l'oignon jaune émincé dans 30 ml d'huile d'olive extra vierge à feu moyen pendant 5 minutes, jusqu'à ce qu'il devienne translucide et parfumé. Ajouter les betteraves crues râpées et les carottes en brunoise. Cuire 8 minutes en remuant, jusqu'à ce que les légumes commencent à fondre et libèrent leurs arômes.",
         "Étape 2: Incorporer les tomates concassées, l'ail haché, le sucre (8 g) et le vinaigre blanc (20 ml). Cuire 5 minutes pour concentrer les saveurs et les couleurs, en remuant régulièrement pour éviter l'attache.",
         "Étape 3: Ajouter les pommes de terre en cubes, le chou vert émincé finement et 1,2 L de bouillon de légumes chaud. Porter à ébullition puis mijoter à feu doux pendant 20 minutes, ou jusqu'à ce que les pommes de terre soient fondantes et les saveurs se soient harmonisées.",
-        "Étape 4: Quand les pommes de terre sont cuites, saler et poivrer à goût. Ajouter l'aneth frais ciselé hors du feu pour préserver son parfum délicat et éviter que les saveurs ne se perdent.",
+        "Étape 4: Quand les pommes de terre sont cuites, saler avec 3 g de sel et poivrer. Ajouter l'aneth frais ciselé hors du feu pour préserver son parfum délicat et éviter que les saveurs ne se perdent.",
         "Étape 5: Servir bien chaud dans des bols profonds, en vous assurant que chaque bol reçoive une portion généreuse de légumes et de liquide. Le borscht doit être d'un rouge-grenat brillant, légèrement acidulé et réconfortant.",
-        "Étape 6: Avant de servir, vérifiez. Cette soupe se conserve bien au réfrigérateur pendant quelques jours, son goût ne faisant que s'améliorer avec le temps, les saveurs se mariant de mieux en mieux.",
-        "Étape 7: Enfin, accompagnez le borscht d'une touche de crème fraîche pour une touche de richesse et de velouté, qui équilibrera les saveurs et les textures de cette délicieuse soupe."
+        "Étape 6: Enfin, accompagnez le borscht d'une touche de crème fraîche pour une touche de richesse et de velouté, qui équilibrera les saveurs et les textures de cette délicieuse soupe."
       ],
       "diet_flags": {
         "vegan": false,
@@ -152543,9 +152650,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 15,
-        "prep_passive_min": 60,
-        "cook_min": 25,
-        "total_min": 100
+        "prep_passive_min": 0,
+        "cook_min": 40,
+        "total_min": 55
       },
       "composition": [
         {
@@ -152636,9 +152743,9 @@
           }
         },
         {
-          "ingredient": "lemon",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "acidifier",
             "form": "juice",
@@ -152648,7 +152755,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -152749,8 +152856,7 @@
       },
       "search_tokens": [
         "(eau",
-        "acidite",
-        "agrume",
+        "1 heure",
         "beetroot",
         "betterave",
         "black",
@@ -152761,6 +152867,7 @@
         "carotte",
         "carrot",
         "chou",
+        "citron",
         "coeliaque",
         "eau",
         "gluten free",
@@ -152769,11 +152876,8 @@
         "leger",
         "legumes",
         "lemon",
-        "lent",
         "light",
-        "long",
         "low calorie",
-        "mijote",
         "minceur",
         "moyen",
         "noir",
@@ -152802,7 +152906,6 @@
         "vegetable",
         "vegetarien",
         "vert",
-        "vitamine c",
         "water"
       ],
       "difficulty_level": "medium",
@@ -152814,10 +152917,8 @@
         "Étape 1: Faire revenir 150 g d'oignon émincé dans 30 ml d'huile de tournesol à feu moyen pendant 5 minutes, en remuant régulièrement, jusqu'à ce qu'il soit translucide et parfumé. Ajouter 600 g de betteraves râpées et 200 g de carottes râpées. Cuire pendant 8 minutes, en remuant occasionnellement, jusqu'à ce que les légumes soient légèrement fondants et commencent à révéler leur couleur.",
         "Étape 2: Incorporer 300 g de chou vert finement émincé et 300 g de pommes de terre en dés. Verser 1000 ml de bouillon de légumes chaud. Porter à ébullition en augmentant le feu, en veillant à ce que les légumes soient bien recouverts de liquide.",
         "Étape 3: Réduire le feu à doux et mijoter pendant 25 minutes, en couvrant partiellement la casserole, jusqu'à ce que tous les légumes soient tendres et que les saveurs se soient bien mélangées. La soupe doit être parfumée et avoir une consistance crémeuse.",
-        "Étape 4: Ajouter le jus de 100 g de citron et une pincée de sel. Rectifier l'assaisonnement pour équilibrer le goût, en ajoutant plus de citron ou de sel si nécessaire.",
-        "Étape 5: Servir le borscht chaud, garni de feuilles de persil fraîches ou d'une cuillère de crème fraîche, accompagné de pain noir ou de cracker de seigle pour un repas complet et savoureux.",
-        "Étape 6: Pour une présentation plus élégante, vous pouvez ajouter quelques betteraves râpées crus sur le dessus de la soupe, ce qui apportera une touche de fraîcheur et de couleur.",
-        "Étape 7: Servir aussitôt dans des bols préchauffés, garni de persil ciselé et d'un filet d'huile de tournesol. Accompagner de pain pita tiède."
+        "Étape 4: Ajouter 40 ml de jus de citron et 3 g de sel. Rectifier l'assaisonnement pour équilibrer le goût, en ajoutant plus de citron ou de sel si nécessaire.",
+        "Étape 5: Servir le borscht chaud, garni de feuilles de persil fraîches ou d'une cuillère de crème fraîche, accompagné de pain noir ou de cracker de seigle pour un repas complet et savoureux."
       ],
       "diet_flags": {
         "vegan": false,
@@ -152929,7 +153030,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 4,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -152973,10 +153074,32 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 1000,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 12.5,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -153103,12 +153226,11 @@
       "_chef_note": "Cette bouillabaisse végétarienne est une adaptation créative du grand classique marseillais. Elle est parfaite pour les repas en famille ou avec des amis.",
       "description": "Bouillon parfumé au safran et au fenouil, avec une texture onctueuse et des saveurs méditerranéennes, préparé avec des légumes tendres et des haricots blancs, servi avec une rouille végétalienne et des croûtons croustillants.",
       "instructions": [
-        "Étape 1 : Faire revenir le fenouil, l'oignon et l'ail dans 4 ml d'huile d'olive à feu moyen, jusqu'à ce que les légumes soient tendres et parfumés, en remuant régulièrement pendant environ 5 minutes.",
+        "Étape 1 : Faire revenir le fenouil, l'oignon et l'ail dans 30 ml d'huile d'olive à feu moyen, jusqu'à ce que les légumes soient tendres et parfumés, en remuant régulièrement pendant environ 5 minutes.",
         "Étape 2 : Ajouter les tomates concassées, le safran, le zeste d'orange et le thym. Laisser infuser pendant 2 minutes, en remuant régulièrement, pour permettre aux saveurs de se mélanger et de développer une fragrance aromatique.",
-        "Étape 3 : Mouiller avec le bouillon végétal et ajouter les pommes de terre épluchées et coupées en dés. Cuire pendant 15 minutes à feu moyen, ou jusqu'à ce que les pommes de terre soient tendres et se détachent facilement avec une fourchette.",
+        "Étape 3 : Mouiller avec 1 L de bouillon végétal et ajouter les pommes de terre épluchées et coupées en dés. Cuire pendant 15 minutes à feu moyen, ou jusqu'à ce que les pommes de terre soient tendres et se détachent facilement avec une fourchette.",
         "Étape 4 : Ajouter les courgettes et les haricots blancs. Cuire pendant 10 minutes supplémentaires, ou jusqu'à ce que les légumes soient tendres et gardent une légère fermeté.",
-        "Étape 5 : Goûter et rectifier l'assaisonnement. Servir chaud, dans des bols, avec une rouille végétalienne et des croûtons croustillants, si désiré, pour ajouter une texture croustillante et une saveur intense.",
-        "Étape 6 : Pour une présentation plus élégante, vous pouvez ajouter quelques feuilles de persil fraîche ou des lamelles de citron, qui apporteront une touche de fraîcheur et de couleur aux bols."
+        "Étape 5 : Goûter et rectifier l'assaisonnement. Servir chaud, dans des bols, avec des croûtons frottés à l'ail."
       ],
       "diet_flags": {
         "vegan": true,

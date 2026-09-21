@@ -2859,6 +2859,11 @@
         "ingredient": "cognac",
         "quantity": 20,
         "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
       }
     ],
     "n_instructions": 5,
@@ -3097,7 +3102,7 @@
       "celery"
     ],
     "servings": 4,
-    "time_total": 100,
+    "time_total": 55,
     "confidence": 1.0,
     "description": "Soupe traditionnelle polonaise et ukrainienne à base de betterave, avec une texture crémeuse et des saveurs révélées par le mijotage, servie chaude avec une touche de fraîcheur apportée par les betteraves râpées crus.",
     "composition": [
@@ -3142,13 +3147,13 @@
         "unit": "ml"
       },
       {
-        "ingredient": "lemon",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       },
       {
@@ -3167,7 +3172,7 @@
         "unit": "1 cuillère à soupe"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 5,
     "flags": [],
     "similar": [
       {
@@ -3248,7 +3253,7 @@
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 15.1,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -3258,7 +3263,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 6,
+        "quantity": 3,
         "unit": "g"
       },
       {
@@ -3282,7 +3287,7 @@
         "unit": "1 cuillère à soupe"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -3348,7 +3353,7 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 4,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -3368,11 +3373,21 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1000,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 12.5,
         "unit": "g"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -41653,22 +41668,22 @@
     "title": "Samosa",
     "cuisine": "chinese",
     "dish_type": "snack",
-    "vegan": false,
+    "vegan": true,
     "diet": [
-      "vegetarian"
+      "vegetarian",
+      "vegan"
     ],
     "allergens": [
-      "gluten",
-      "eggs"
+      "gluten"
     ],
     "servings": 4,
-    "time_total": 98,
+    "time_total": 78,
     "confidence": 1.0,
     "description": "Spécialité indienne — pâte feuilletée, dorée en cuisson pour une texture croustillante à l'extérieur et tendre à cœur, parfumée aux saveurs de cumin et de coriandre, avec des notes de gingembre frais.",
     "composition": [
       {
-        "ingredient": "base_wonton_wrapper_7bfeb5",
-        "quantity": 160,
+        "ingredient": "base_samosa_77fac4",
+        "quantity": 380,
         "unit": "g"
       },
       {
@@ -41677,8 +41692,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "snow_peas_raw",
-        "quantity": 200,
+        "ingredient": "green_peas_raw",
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -41697,8 +41712,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "coconut_oil_plant",
-        "quantity": 45,
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 40,
         "unit": "ml"
       },
       {
@@ -41710,6 +41725,11 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
       }
     ],
     "n_instructions": 7,
@@ -43573,7 +43593,7 @@
       },
       {
         "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -43583,7 +43603,7 @@
       },
       {
         "ingredient": "sesame_oil_plant",
-        "quantity": 45,
+        "quantity": 10,
         "unit": "ml"
       },
       {
@@ -43609,6 +43629,11 @@
       {
         "ingredient": "cornstarch",
         "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "shiitake_mushroom_dried",
+        "quantity": 10,
         "unit": "g"
       }
     ],
@@ -43678,7 +43703,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -43801,7 +43826,7 @@
       },
       {
         "ingredient": "whole_wheat_pasta_raw_dried",
-        "quantity": 320,
+        "quantity": 120,
         "unit": "g"
       },
       {
@@ -43828,9 +43853,29 @@
         "ingredient": "parmesan_grated_dried_cow",
         "quantity": 30,
         "unit": "g"
+      },
+      {
+        "ingredient": "french_bean_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1200,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -45591,12 +45636,12 @@
     "dish_type": "soup",
     "vegan": false,
     "diet": [
-      "diabetes_friendly",
-      "kid_friendly"
+      "diabetes_friendly"
     ],
     "allergens": [
       "gluten",
-      "tree_nuts"
+      "tree_nuts",
+      "sulphites"
     ],
     "servings": 4,
     "time_total": 60,
@@ -45605,7 +45650,7 @@
     "composition": [
       {
         "ingredient": "yellow_onion_raw",
-        "quantity": 300,
+        "quantity": 800,
         "unit": "g"
       },
       {
@@ -45635,12 +45680,12 @@
       },
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
+        "quantity": 20,
         "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -45651,6 +45696,16 @@
       {
         "ingredient": "thyme_fresh_herb",
         "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_wine_liquid",
+        "quantity": 100,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "bay_leaf_spice",
+        "quantity": 1,
         "unit": "g"
       }
     ],
