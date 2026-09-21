@@ -134802,8 +134802,8 @@
       "timing": {
         "prep_active_min": 11,
         "prep_passive_min": 0,
-        "cook_min": 25,
-        "total_min": 36
+        "cook_min": 5,
+        "total_min": 16
       },
       "composition": [
         {
@@ -134830,7 +134830,7 @@
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -134852,7 +134852,7 @@
         },
         {
           "ingredient": "red_hot_chili_pepper_spice_dried",
-          "quantity": 10,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -134863,22 +134863,11 @@
         },
         {
           "ingredient": "sesame_raw_seed",
-          "quantity": 30,
+          "quantity": 20,
           "unit": "g",
           "meta": {
             "role": "garnish",
             "form": "whole",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "mustard",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "condiment",
-            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -134998,11 +134987,9 @@
       "instructions": [
         "Étape 1 : Blanchir 200g de pousses de soja pendant 1 minute à feu vif, puis les plonger sous l'eau froide pour stopper la cuisson, jusqu'à ce qu'elles soient fraîches et croustillantes.",
         "Étape 2 : Saisir 9g d'ail haché dans 15ml d'huile de sésame pendant 2 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que l'ail soit parfumé et légèrement doré.",
-        "Étape 3 : Émulsionner 45ml de sauce soja, 15g de moutarde de Dijon, 10g de piment coréen et 20g de graines de sésame dans un bol, en remuant vigoureusement, jusqu'à obtenir une sauce lisse et homogène.",
+        "Étape 3 : Mélanger dans un bol 30ml de sauce soja, 3g de piment coréen, l'ail revenu avec son huile et 20g de graines de sésame torréfiées.",
         "Étape 4 : Mélanger les pousses de soja refroidies avec l'assaisonnement, en massant légèrement pendant 2 minutes, jusqu'à ce que les pousses soient uniformément colorées et parfumées.",
-        "Étape 5 : Réduire la sauce soja pendant 2 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce qu'elle soit légèrement épaissie et crépite légèrement.",
-        "Étape 6 : Ciseler 10g de graines de sésame supplémentaires pour parsemer, en les coupant en fines lamelles, jusqu'à obtenir une texture croustillante.",
-        "Étape 7 : Servir sans attendre, parsemé de sésame croustillant."
+        "Étape 5 : Servir frais ou à température ambiante."
       ],
       "diet_flags": {
         "vegan": true,
@@ -135080,9 +135067,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 50,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -135230,7 +135217,7 @@
         "Rincer 250g de quinoa cru, puis cuire 12 minutes à feu doux dans 2 fois son volume d'eau salée pour obtenir un quinoa tendre et séparé.",
         "Étaler le quinoa cuit pour le refroidir rapidement à température ambiante, évitant ainsi la formation de grumeaux.",
         "Couper 350g de concombre, 300g de tomates et 150g d'oignon jaune en dés réguliers de 5 mm pour une belle présentation.",
-        "Préparer la vinaigrette : dissoudre le sel dans 100g de jus de citron frais, ajouter 45ml d'huile d'olive et du poivre pour une saveur équilibrée.",
+        "Préparer la vinaigrette : dissoudre 5 g de sel dans 50 ml de jus de citron frais, ajouter 45ml d'huile d'olive et du poivre pour une saveur équilibrée.",
         "Mélanger le quinoa refroidi avec les légumes et la vinaigrette, laisser reposer 15 minutes pour que les saveurs se mélangent et les saveurs se développent.",
         "Goûter et ajuster la salade, vérifier que les grains de quinoa sont bien séparés et que la salade est fraîche et parfumée pour un repas satisfaisant.",
         "Servir dans des assiettes fraîches, garnir avec des feuilles de persil frais ciselées pour une touche de couleur et de fraîcheur."
@@ -135312,7 +135299,7 @@
         },
         {
           "ingredient": "pain_pita",
-          "quantity": 300,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "garnish",
@@ -135322,9 +135309,9 @@
           }
         },
         {
-          "ingredient": "lemon",
+          "ingredient": "lemon_juice",
           "quantity": 60,
-          "unit": "g",
+          "unit": "ml",
           "meta": {
             "role": "sauce",
             "form": "wedges",
@@ -135367,7 +135354,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -135536,13 +135523,11 @@
       "_chef_note": "Pour une version plus fraîche, vous pouvez ajouter un peu de jus de citron frais à la vinaigrette.",
       "description": "Salade libanaise fraîche, acidulée, avec légumes croquants et croûtons de pain pita dorés, relevés par la saveur piquante du sumac et la fraîcheur du citron.",
       "instructions": [
-        "Étape 1 : Préchauffer le four à 200°C. Toaster les morceaux de pain pita dans 25 ml d'huile d'olive pendant 8 minutes, jusqu'à ce qu'ils soient dorés et croustillants. Réserver.",
+        "Étape 1 : Préchauffer le four à 200°C. Toaster 200 g de pain pita en morceaux avec 25 ml d'huile d'olive pendant 8 minutes, jusqu'à ce qu'ils soient dorés et croustillants. Réserver.",
         "Étape 2 : Couper 220 g de tomates en dés de 1 cm. Couper également 200 g de concombre en dés, ainsi que 150 g de laitue et 100 g de radis en dés de même taille. Émincer finement l'oignon rouge.",
-        "Étape 3 : Ciseler 20 g de persil plat et 15 g de menthe fraîche. Préparer la vinaigrette en mélangeant 60 g de jus de citron, 20 ml d'huile d'olive restante, 6 g de sumac, du sel et du poivre.",
+        "Étape 3 : Ciseler 20 g de persil plat et 15 g de menthe fraîche. Préparer la vinaigrette en mélangeant 60 ml de jus de citron, 20 ml d'huile d'olive restante, 6 g de sumac, du sel et du poivre.",
         "Étape 4 : Assembler les légumes et les herbes dans un saladier. Verser la vinaigrette et mélanger délicatement. Ajouter les croûtons de pain pita au dernier moment pour conserver leur croustillant.",
-        "Étape 5 : Servir sans attendre, pour profiter du contraste entre les textures fraîches et croustillantes.",
-        "Étape 6 : Pour une touche finale, ajouter un peu de levure nutritionnelle pour donner un goût plus riche et encore plus de profondeur à la salade, si désiré.",
-        "Étape 7 : Servir, garni de persil plat ciselé et d'un filet d'huile d'olive."
+        "Étape 5 : Servir sans attendre, pour profiter du contraste entre les textures fraîches et croustillantes."
       ],
       "diet_flags": {
         "vegan": true,
@@ -135577,7 +135562,7 @@
       "composition": [
         {
           "ingredient": "potato_raw_flesh",
-          "quantity": 600,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -135599,7 +135584,7 @@
         },
         {
           "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 400,
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "protein",
@@ -135632,7 +135617,7 @@
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 44.9,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -135642,7 +135627,7 @@
           }
         },
         {
-          "ingredient": "lime_raw",
+          "ingredient": "lime_juice_fresh",
           "quantity": 50,
           "unit": "ml",
           "meta": {
@@ -135665,21 +135650,10 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "vegan_butter",
-          "quantity": 30,
-          "unit": "g",
-          "meta": {
-            "role": "fat",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -135713,6 +135687,39 @@
           "unit": "ml",
           "meta": {
             "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "base_fried_onion_217e6a",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coconut_sugar",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -135836,13 +135843,13 @@
       "_quality_score": 1.0,
       "description": "Salade de pommes de terre fondantes, haricots verts légèrement croquants, concombre frais et tofu ferme doré, liés par une sauce cacahuète onctueuse et parfumée, sur fond de saveurs indonésiennes avec une sauce crémeuse et des textures variées",
       "instructions": [
-        "Étape 1 : Préparer la sauce cacahuète en mélangeant 64 g de beurre de cacahuète avec 150 ml de lait de coco, 30 ml de sauce soja, 50 ml de jus de citron, 1 cuillère à café de pâte de piment et 10 g de sucre de palme. Allonger avec un peu d'eau chaude — la sauce doit napper la cuillère. La sauce doit être lisse et crémeuse.",
-        "Étape 2 : Cuire les 300 g de haricots verts 5 minutes dans l'eau bouillante salée — légèrement croquants. Cuire les 600 g de pommes de terre en cubes de 3 cm 18 minutes jusqu'à fondants. Plonger les haricots dans l'eau glacée pour conserver leur couleur verte. Les pommes de terre doivent être tendres et les haricots verts doivent conserver leur couleur verte.",
-        "Étape 3 : Presser le 400 g de tofu ferme 15 minutes. Couper en cubes de 2 cm. Faire dorer dans 25 ml d'huile de noix de coco à feu moyen-vif 3 à 4 minutes par face jusqu'à surface croustillante dorée. Le tofu doit être doré et croustillant.",
-        "Étape 4 : Trancher finement le concombre en rondelles et préparer les pousses de soja. Les rondelles de concombre doivent être fines et les pousses de soja doivent être fraîches.",
+        "Étape 1 : Préparer la sauce cacahuète en mélangeant 64 g de beurre de cacahuète avec 150 ml de lait de coco, 30 ml de sauce soja, 50 ml de jus de citron vert et 10 g de sucre de palme. Allonger avec un peu d'eau chaude — la sauce doit napper la cuillère. La sauce doit être lisse et crémeuse.",
+        "Étape 2 : Cuire les 300 g de haricots verts 5 minutes dans l'eau bouillante salée — légèrement croquants. Cuire les 400 g de pommes de terre en cubes de 3 cm 18 minutes jusqu'à fondants. Plonger les haricots dans l'eau glacée pour conserver leur couleur verte. Les pommes de terre doivent être tendres et les haricots verts doivent conserver leur couleur verte.",
+        "Étape 3 : Presser les 300 g de tofu ferme 15 minutes. Couper en cubes de 2 cm. Faire dorer dans 25 ml d'huile de noix de coco à feu moyen-vif 3 à 4 minutes par face jusqu'à surface croustillante dorée. Le tofu doit être doré et croustillant.",
+        "Étape 4 : Trancher finement le concombre en rondelles et rincer 150 g de pousses de soja. Les rondelles de concombre doivent être fines et les pousses de soja doivent être fraîches.",
         "Étape 5 : Dresser sur un grand plat ou dans des bols individuels : pommes de terre, haricots verts, concombre, pousses de soja et tofu par sections. Les ingrédients doivent être disposés de manière harmonieuse.",
-        "Étape 6 : Napper généreusement de sauce cacahuète tiède. Parsemer d'oignons frits croustillants et de chips de krupuk. La sauce doit être tiède et les oignons frits doivent être croustillants.",
-        "Étape 7 : Servir aussitôt, garni de feuilles de coriandre fraîche ciselée et accompagné de crackers de riz. Chaque bouchée doit combiner plusieurs textures, la sauce unificatrice."
+        "Étape 6 : Napper généreusement de sauce cacahuète tiède. Parsemer de 20 g d'oignons frits croustillants. La sauce doit être tiède et les oignons frits doivent être croustillants.",
+        "Étape 7 : Servir aussitôt. Chaque bouchée doit combiner plusieurs textures, la sauce unificatrice."
       ],
       "diet_flags": {
         "vegan": true,
@@ -135932,7 +135939,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 46.2,
+          "quantity": 45,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -135942,7 +135949,7 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
+          "ingredient": "lemon_juice",
           "quantity": 30,
           "unit": "ml",
           "meta": {
@@ -135969,6 +135976,17 @@
           "unit": "g",
           "meta": {
             "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -136095,10 +136113,10 @@
         "Étape 1 : Couper les tomates en quartiers réguliers, en prenant soin de ne pas les écraser, pour obtenir une texture agréable.",
         "Étape 2 : Émincer l'oignon rouge en fines lamelles, en déchirant les feuillets pour ajouter une touche de douceur et de fraîcheur à la salade.",
         "Étape 3 : Mélanger les tomates, le concombre en dés, l'oignon et les olives noires dans un saladier, en les combinant délicatement pour éviter de les écraser et préserver leur texture.",
-        "Étape 4 : Préparer la vinaigrette en mélangeant 46,2 ml d'huile d'olive, 30 ml de jus de citron, 15 g de moutarde de Dijon et 1 g d'origan, en les battant énergiquement pendant environ 2 minutes pour obtenir une sauce lisse et parfumée.",
+        "Étape 4 : Préparer la vinaigrette en mélangeant 45 ml d'huile d'olive, 30 ml de jus de citron, 15 g de moutarde de Dijon et 1 g d'origan, en les battant énergiquement pendant environ 2 minutes pour obtenir une sauce lisse et parfumée.",
         "Étape 5 : Verser la vinaigrette sur la salade et mélanger délicatement pour équilibrer les saveurs, en ajustant la quantité de vinaigrette pour obtenir la saveur désirée.",
-        "Étape 6 : Ajouter 150 g de fromage végétal émietté, tel que du tofu ou des légumes grillés, et l'incorporer dans la salade pour ajouter une touche de saveur et de texture.",
-        "Étape 7 : Assaisonner de sel et de poivre à votre goût, en ajustant la quantité pour équilibrer les saveurs et obtenir la saveur désirée."
+        "Étape 6 : Parsemer de 150 g de tofu ferme émietté (en remplacement de la feta).",
+        "Étape 7 : Assaisonner avec 3 g de sel et du poivre."
       ],
       "diet_flags": {
         "vegan": true,
@@ -136166,7 +136184,7 @@
         },
         {
           "ingredient": "black_olive_canned_in_oil",
-          "quantity": 80,
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "garnish",
@@ -136210,7 +136228,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 3,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "balance",
@@ -136369,9 +136387,7 @@
         "Étape 3: Assaisonner de sel et de poivre, puis ajouter 1 cuillère à soupe de vinaigre de vin rouge et 3 cuillères à soupe d'huile d'olive extra-vierge, et mélanger délicatement.",
         "Étape 4: Déposer la feta émiettée en surface sans mélanger, en laissant une petite bordure sans fromage, puis poivrer généreusement.",
         "Étape 5: Laisser reposer 10 minutes pour permettre aux saveurs de se mélanger et aux légumes de rendre leur jus.",
-        "Étape 6: Vérifier que les légumes sont fermes et croquants, et que le fromage est crémeux et bien lié.",
-        "Étape 7: Servir dans des assiettes propres et fraîches, en garnissant de feuilles de persil frais et en ajoutant une légère touche d'huile d'olive.",
-        "Étape 8: Assaisonner au goût, en ajoutant éventuellement un peu de sel ou de poivre pour ajuster les saveurs."
+        "Étape 6: Servir dans des assiettes propres et fraîches, avec une légère touche d'huile d'olive."
       ],
       "diet_flags": {
         "vegan": false,
@@ -136438,9 +136454,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -136490,6 +136506,28 @@
             "ingredient_fr": "coriandre fraîche ciselée",
             "note": "Quelques feuilles pour la fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -136601,14 +136639,12 @@
       "_quality_score": 0.91,
       "description": "Salade tunisienne grillée, aux poivrons rouges tendres, tomates juteuses et oignons caramélisés, parfumée d'un mélange d'épices et de citron, avec une texture croquante et des saveurs intenses.",
       "instructions": [
-        "Étape 1 : Saisir 320g de poivrons rouges à feu moyen-vif pendant 8 min, jusqu'à dorure blonde et légère carbonisation, en les retournant régulièrement pour une cuisson uniforme.",
-        "Étape 2 : Blanchir 300g de tomates fraîches pendant 5 min à 180°C, jusqu'à coloration rosée et texture molle, en les arrosant d'un filet d'huile d'olive pour éviter la dessiccation.",
-        "Étape 3 : Nacrer 150g d'oignons blancs pendant 3 min à feu doux, jusqu'à transparence et légère caramélisation, en les remuant fréquemment pour éviter la brûlure.",
-        "Étape 4 : Émulsionner la vinaigrette avec 100ml de jus de citron frais, 45ml d'huile d'olive, 3g de graines de cumin et 5g de sel de mer, en fouettant énergiquement pour obtenir une texture lisse et crémeuse.",
-        "Étape 5 : Réduire la vinaigrette pendant 2 min à feu moyen, jusqu'à crépitation légère et texture sirupeuse, en la remuant constamment pour éviter la caramelisation excessive.",
-        "Étape 6 : Ciseler les poivrons en lanières fines, julienne les tomates en dés et brunoise les oignons en petits cubes, en prenant soin de conserver leur texture et leur saveur.",
-        "Étape 7 : Mélanger les légumes grillés avec la vinaigrette et assaisonner à nouveau si nécessaire, en ajustant le sel et le cumin pour obtenir un équilibre de saveurs parfait.",
-        "Étape 8 : Servir aussitôt, en saupoudrant de graines de cumin et en arrosant d'huile d'olive chaude pour un parfum intense et une texture croquante, accompagné d'un pain pita tiède ou de riz basmati pour un repas complet."
+        "Étape 1 : Griller les poivrons, les piments, les tomates et l'oignon entiers sous le gril du four à 250°C pendant 25 minutes, en les retournant, jusqu'à ce que la peau soit noircie.",
+        "Étape 2 : Les enfermer 10 minutes dans un saladier couvert, puis les peler et les épépiner.",
+        "Étape 3 : Hacher finement les légumes grillés au couteau.",
+        "Étape 4 : Piler 10 g d'ail avec 3 g de cumin et 5 g de sel.",
+        "Étape 5 : Mélanger les légumes hachés avec l'ail pilé, 40 ml de jus de citron et 45 ml d'huile d'olive.",
+        "Étape 6 : Servir tiède ou froid, avec du pain."
       ],
       "diet_flags": {
         "vegan": true,
@@ -136617,7 +136653,7 @@
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
-        "kid_friendly": true
+        "kid_friendly": false
       }
     },
     {
@@ -136642,7 +136678,7 @@
       },
       "composition": [
         {
-          "ingredient": "red_lentil_dried",
+          "ingredient": "green_lentil_dried",
           "quantity": 250,
           "unit": "g",
           "meta": {
@@ -136702,6 +136738,17 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -136821,14 +136868,12 @@
       "_chef_note": "Cette salade de lentilles est une préparation classique, parfumée et savoureuse, idéale pour un repas complet et équilibré.",
       "description": "Salade végane de lentilles corail cuites, parfumée d'oignon jaune caramélisé et de carotte crue râpée, préparée avec soin pour une expérience culinaire française exceptionnelle.",
       "instructions": [
-        "Étape 1 : Rincer 250g de lentilles corail, puis les cuire 22 min à feu moyen dans 3 fois leur volume d'eau jusqu'à tendres mais entières, en vérifiant régulièrement pour éviter la surcuisson.",
+        "Étape 1 : Rincer 250g de lentilles vertes, puis les cuire 22 min à feu moyen dans 3 fois leur volume d'eau jusqu'à tendres mais entières, en vérifiant régulièrement pour éviter la surcuisson.",
         "Étape 2 : Émincer 120g de carotte crue, puis la râper finement. Émincer également 80g d'oignon jaune, puis le saisir 5 min à feu moyen-vif dans une poêle avec un peu d'huile de colza jusqu'à légère coloration dorée, en remuant constamment pour une cuisson uniforme.",
         "Étape 3 : Préparer la vinaigrette végane : émulsionner 20ml d'huile de colza avec 15ml de vinaigre de vin rouge, du sel et du poivre, ainsi que des herbes fraîches comme du thym ou du romarin, jusqu'à obtenir une texture lisse et une saveur équilibrée.",
         "Étape 4 : Égoutter les lentilles cuites, les verser sur la vinaigrette et mélanger immédiatement pour que les lentilles absorbent bien les saveurs, puis laisser tiédir 10 min pour que les arômes se mélangent.",
         "Étape 5 : Ajouter l'oignon jaune émincé et la carotte crue râpée, mélanger délicatement pour ne pas écraser les lentilles, puis ajouter des herbes fraîches comme de la ciboulette ou du persil pour une touche de fraîcheur.",
-        "Étape 6 : Vérifier que les lentilles sont entières, la vinaigrette bien équilibrée, et la salade légèrement acidulée, avec une consistance crémeuse apportée par l'huile d'olive.",
-        "Étape 7 : Assaisonner au goût avec du sel, du poivre et des herbes fraîches, puis servir sans attendre, car la chaleur et le croustillant de l'oignon jaune sont essentiels pour cette salade végane de lentilles, garnie de feuilles de persil ou de ciboulette pour une présentation appétissante.",
-        "Étape 8 : Pour une touche finale, vous pouvez ajouter des noix ou des graines toastées, comme des noix de pin ou des graines de sésame, pour une texture croquante et un goût plus intense."
+        "Étape 6 : Assaisonner au goût avec du sel, du poivre et des herbes fraîches, puis servir sans attendre, garnie de 10 g de persil ciselé."
       ],
       "diet_flags": {
         "vegan": true,
@@ -136856,9 +136901,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 15,
-        "prep_passive_min": 20,
-        "cook_min": 10,
-        "total_min": 45
+        "prep_passive_min": 10,
+        "cook_min": 0,
+        "total_min": 25
       },
       "composition": [
         {
@@ -136874,7 +136919,7 @@
         },
         {
           "ingredient": "avocado_raw",
-          "quantity": 400,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "fruit",
@@ -136906,9 +136951,9 @@
           }
         },
         {
-          "ingredient": "lime_raw",
-          "quantity": 140,
-          "unit": "g",
+          "ingredient": "lime_juice_fresh",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -136928,8 +136973,8 @@
           }
         },
         {
-          "ingredient": "coriander_spice_seed",
-          "quantity": 3,
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -136958,6 +137003,17 @@
             "ingredient_fr": "coriandre fraîche ciselée",
             "note": "Pour une touche de fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -137071,11 +137127,11 @@
       "_quality_score": 1.0,
       "description": "Salade mexicaine aux haricots noirs, avocat, tomate et coriandre fraîche, avec une texture crémeuse et onctueuse, préparée avec une vinaigrette légère et parfumée à base d'huile d'olive extra vierge.",
       "instructions": [
-        "Étape 1 : Saisir les haricots noirs pendant 2 minutes à feu vif, puis les égoutter et les sécher légèrement sur un torchon pour éviter l'excès d'humidité.",
+        "Étape 1 : Rincer et égoutter les haricots noirs cuits, puis les sécher légèrement sur un torchon.",
         "Étape 2 : Ciseler la coriandre fraîche jusqu'à obtenir une texture fine, puis couper les tomates et l'oignon rouge en petits dés pour une présentation harmonieuse.",
-        "Étape 3 : Couper l'avocat en dés au dernier moment, puis le citronner immédiatement avec du jus de citron vert pour éviter l'oxydation, jusqu'à coloration verte uniforme.",
-        "Étape 4 : Préparer la vinaigrette : émulsionner 45 ml d'huile d'olive extra vierge, du jus de 2 citrons verts, 1 cc de cumin, du sel, du poivre et une pointe de piment, jusqu'à texture lisse et homogène.",
-        "Étape 5 : Mélanger délicatement les haricots noirs, les légumes, l'avocat et la vinaigrette, sans écraser l'avocat, jusqu'à son crépitement léger et la cohésion des saveurs.",
+        "Étape 3 : Couper l'avocat en dés au dernier moment, puis l'arroser d'un peu de jus de citron vert pour éviter l'oxydation.",
+        "Étape 4 : Préparer la vinaigrette : émulsionner 45 ml d'huile d'olive extra vierge, 40 ml de jus de citron vert, 2 g de cumin, 5 g de sel et du poivre, jusqu'à texture lisse et homogène.",
+        "Étape 5 : Mélanger délicatement les haricots noirs, les légumes, l'avocat et la vinaigrette, sans écraser l'avocat.",
         "Étape 6 : Parsemer de coriandre fraîche et servir sans attendre, en vérifiant que l'avocat soit crémeux et les haricots fermes, avec une texture onctueuse et une saveur équilibrée."
       ],
       "diet_flags": {
@@ -137312,10 +137368,8 @@
         "Étape 4 : Râper 100g de carotte crue pour apporter une texture croquante et une touche de couleur vive, en prenant soin de râper dans le sens des fibres pour une meilleure texture.",
         "Étape 5 : Dans un bol, mélanger 10ml de vinaigre de vin rouge avec 20ml d'huile d'olive et 4g de sel de mer pour créer une vinaigrette équilibrée et parfumée, en remuant pendant environ 30 secondes pour bien émulsionner les liquides.",
         "Étape 6 : Disposer la laitue sur un grand plat, puis ajouter les tomates, le concombre et les carottes en respectant leur texture et leur couleur, pour créer un visuel appétissant et équilibré, en laissant un espace de 1 cm entre chaque ingrédient pour une meilleure présentation.",
-        "Étape 7 : Arroser la salade de la vinaigrette préparée et assaisonner avec du poivre de Cayenne au goût, pour ajouter une touche de piquant, en vérifiant que la vinaigrette soit bien répartie sur tous les ingrédients.",
-        "Étape 8 : Servir frais, en vérifiant que chaque composant soit identifiable et bien assaisonné, offrant une combinaison de plusieurs textures et saveurs, et en vérifiant que la salade soit servie à une température de 10°C pour une meilleure fraîcheur.",
-        "Étape 9 : Garnir de feuilles de persil frais et de fleurs comestibles pour une touche de couleur et de fraîcheur, en prenant soin de disposer les garnitures de manière harmonieuse pour une présentation appétissante.",
-        "Étape 10 : Déguster et ajuster l'assaisonnement si nécessaire, en vérifiant que les saveurs soient équilibrées et que la texture soit agréable."
+        "Étape 7 : Arroser la salade de la vinaigrette préparée et poivrer, en vérifiant que la vinaigrette soit bien répartie sur tous les ingrédients.",
+        "Étape 8 : Servir frais, en vérifiant que chaque composant soit identifiable et bien assaisonné, offrant une combinaison de plusieurs textures et saveurs."
       ],
       "diet_flags": {
         "vegan": true,
@@ -137562,9 +137616,8 @@
         "Étape 1: Blanchir 300g de haricots verts dans de l'eau bouillante salée pendant 5-6 minutes, jusqu'à ce qu'ils soient tendres mais encore croquants.",
         "Étape 2: Couper 300g de tomates en quartiers, assaisonner de sel et laisser dégorger 5 minutes, jusqu'à ce que les tomates soient légèrement ramollies et leurs saveurs se développent.",
         "Étape 3: Préparer la vinaigrette: dissoudre 5g de sel dans 30ml de vinaigre de vin rouge, émulsionner avec 45ml d'huile d'olive, jusqu'à obtenir une sauce homogène et crémeuse.",
-        "Étape 4: Disposer 300g de laitue, les tomates, les haricots verts, le tofu, et 80g d'olives, chacun visible et distinct, pour créer un visuel attractif et coloré.",
-        "Étape 5: Verser la vinaigrette au moment de servir, en préservant la texture croquante des légumes et en servant frais.",
-        "Étape 6: Rectifier l'assaisonnement si nécessaire et servir sans attendre, pour profiter pleinement des saveurs et des textures de cette salade Niçoise, où chaque élément conserve sa fraîcheur et son authenticité."
+        "Étape 4: Cuire les 220 g d'œufs 9 minutes à l'eau bouillante, les écaler et les couper en quartiers. Disposer 300g de laitue, les tomates, les haricots verts, le tofu, les œufs et 80g d'olives, chacun visible et distinct, pour créer un visuel attractif et coloré.",
+        "Étape 5: Verser la vinaigrette au moment de servir, en préservant la texture croquante des légumes et en servant frais."
       ],
       "diet_flags": {
         "vegan": false,
@@ -137598,7 +137651,7 @@
       },
       "composition": [
         {
-          "ingredient": "endive_raw",
+          "ingredient": "green_chicory_raw",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -137632,7 +137685,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 4,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -137643,7 +137696,7 @@
         },
         {
           "ingredient": "red_wine_vinegar_liquid",
-          "quantity": 2,
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "acidity",
@@ -137654,7 +137707,7 @@
         },
         {
           "ingredient": "mustard",
-          "quantity": 4.5,
+          "quantity": 10,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -137670,6 +137723,17 @@
           "meta": {
             "role": "aromatic",
             "form": "sliced_thin",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -137792,11 +137856,11 @@
       "description": "Frisée croquante aux croûtons d'ail et œuf poché, liés par une vinaigrette chaude et piquante, évoquant l'emblème des bouchons lyonnais, rustique et généreux.",
       "instructions": [
         "Étape 1: Laver et essorer soigneusement 200g de frisée, puis l'éfeuiller en morceaux réguliers pour créer une base de salade aérée et fraîche.",
-        "Étape 2: Faire dorer 120g de pain baguette en cubes dans 4ml d'huile d'olive à feu moyen pendant 3-4 minutes, en les remuant régulièrement, jusqu'à ce que les croûtons soient dorés et croustillants.",
-        "Étape 3: Préparer la vinaigrette chaude en faisant suer 30g d'échalote dans un peu d'huile d'olive pendant 1 minute, jusqu'à ce qu'elle soit translucide, puis en déglaçant avec 2ml de vinaigre de vin rouge pour ajouter une touche acidulée.",
-        "Étape 4: Ajouter 4,5ml de moutarde de Dijon à la vinaigrette et mélanger pour donner une saveur piquante et équilibrée, en vérifiant que la sauce nappe la cuillère.",
+        "Étape 2: Faire dorer 120g de pain baguette en cubes dans 15ml d'huile d'olive à feu moyen pendant 3-4 minutes, en les remuant régulièrement, jusqu'à ce que les croûtons soient dorés et croustillants.",
+        "Étape 3: Préparer la vinaigrette chaude en faisant suer 30g d'échalote dans 15ml d'huile d'olive pendant 1 minute, jusqu'à ce qu'elle soit translucide, puis en déglaçant avec 15ml de vinaigre de vin rouge pour ajouter une touche acidulée.",
+        "Étape 4: Ajouter 10ml de moutarde de Dijon à la vinaigrette et mélanger pour donner une saveur piquante et équilibrée, en vérifiant que la sauce nappe la cuillère.",
         "Étape 5: Dresser la frisée, disposer les croûtons croustillants, pocher délicatement les 220g d'œufs dans une eau frémissante additionnée d'un trait de vinaigre pendant 3 minutes, les déposer sur la salade et verser la vinaigrette chaude par-dessus pour créer une salade lyonnaise harmonieuse et savoureuse. Servir sans attendre pour préserver la fraîcheur et le croustillant des croûtons.",
-        "Étape 6: Vérifier que la salade est bien assaisonnée et rectifier si nécessaire, en ajoutant un peu de sel ou de poivre pour affiner les saveurs."
+        "Étape 6: Vérifier que la salade est bien assaisonnée et rectifier si nécessaire, en ajoutant 2 g de sel et du poivre pour affiner les saveurs."
       ],
       "diet_flags": {
         "vegan": false,
@@ -137875,7 +137939,7 @@
         },
         {
           "ingredient": "walnut_oil_plant",
-          "quantity": 3,
+          "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "fat",
@@ -137886,7 +137950,7 @@
         },
         {
           "ingredient": "balsamic_vinegar_liquid",
-          "quantity": 1,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "acidity",
@@ -137897,7 +137961,7 @@
         },
         {
           "ingredient": "mustard",
-          "quantity": 15,
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "condiment",
@@ -138025,7 +138089,7 @@
       "instructions": [
         "Étape 1: Laver et essorer délicatement 150g de mâche pour préserver sa texture délicate et éviter qu'elle ne perde son aspect frais.",
         "Étape 2: Peler et couper en fines lamelles 1 poire pour ajouter une touche de sucre à la salade et créer un contraste de textures avec les noix.",
-        "Étape 3: Préparer la vinaigrette en mélangeant 3g d'huile de noix, 1g de vinaigre balsamique et 15g de moutarde de Dijon dans un bol, jusqu'à obtenir une sauce homogène et onctueuse.",
+        "Étape 3: Préparer la vinaigrette en mélangeant 30g d'huile de noix, 10g de vinaigre balsamique et 5g de moutarde de Dijon dans un bol, jusqu'à obtenir une sauce homogène et onctueuse.",
         "Étape 4: Disposer dans un saladier la mâche, la poire et 60g de noix pour créer une composition visuelle attrayante et équilibrée.",
         "Étape 5: Arroser la salade de vinaigrette et parsemer de 80g de roquefort émietté pour ajouter une note salée et crémeuse.",
         "Étape 6: Servir sans attendre, pour apprécier la fraîcheur de la mâche, la douceur de la poire et la croquant des noix, tout en conservant la texture délicate de la salade."
@@ -138128,9 +138192,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "red_wine_vinegar_liquid",
+          "quantity": 20,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -138140,21 +138204,10 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "mustard",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "condiment",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -138169,7 +138222,8 @@
         "allergens": [
           "lactose",
           "milk",
-          "mustard"
+          "mustard",
+          "sulphites"
         ],
         "technique": [
           "assembly"
@@ -138270,10 +138324,10 @@
         "Étape 1: Laver soigneusement les tomates, concombres, poivrons et oignons, puis les ciseler en morceaux réguliers d'environ 1 cm de côté pour obtenir une texture homogène.",
         "Étape 2: Dans un grand saladier, mélanger délicatement les tomates, concombres, poivrons et oignons ciselés pour former une base de salade harmonieuse et visuellement attrayante.",
         "Étape 3: Ajouter 150 grammes de feta émiettée, pour donner une touche crémeuse et onctueuse à la salade.",
-        "Étape 4: Préparer la vinaigrette en émulsionnant 45 millilitres d'huile d'olive, 100 grammes de jus de citron frais, 5 grammes de sel et 15 grammes de moutarde de Dijon dans un bol, en veillant à obtenir une consistance lisse et homogène.",
+        "Étape 4: Préparer la vinaigrette en émulsionnant 45 millilitres d'huile d'olive, 20 millilitres de vinaigre de vin rouge et 2 grammes de sel dans un bol, en veillant à obtenir une consistance lisse et homogène.",
         "Étape 5: Verser la vinaigrette sur la salade et mélanger délicatement, mais avec fermeté, pour que tous les ingrédients soient bien enrobés et que les saveurs se mélangent harmonieusement.",
         "Étape 6: Goûter la salade et ajuster l'assaisonnement avant de servir, en ajoutant éventuellement un peu de sel ou de poivre pour parfaire les saveurs et obtenir l'équilibre désiré.",
-        "Étape 7: Servir sans attendre, en garnissant de feuilles de persil frais ou de croûtons croustillants pour ajouter une touche de fraîcheur et de croustillant à la salade."
+        "Étape 7: Servir sans attendre."
       ],
       "diet_flags": {
         "vegan": false,
@@ -138363,7 +138417,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 46.2,
+          "quantity": 45,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -138373,8 +138427,8 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 30,
+          "ingredient": "red_wine_vinegar_liquid",
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "fruit",
@@ -138385,21 +138439,10 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "mustard",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "condiment",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -138416,7 +138459,8 @@
         ],
         "allergens": [
           "mustard",
-          "soy"
+          "soy",
+          "sulphites"
         ],
         "technique": [
           "raw"
@@ -138521,10 +138565,10 @@
       "description": "Salade bulgare fraîche et colorée, composée de tomates coupées en dés, de concombres en dés similaires, d'oignon émincé et de poivron en petits dés réguliers, le tout relevé d'un assaisonnement traditionnel à base d'huile d'olive, de jus de citron, de sel et de moutarde de Dijon, et couronné de fromage végétal émietté.",
       "instructions": [
         "Étape 1 : Couper 300g de tomates en dés de 1,5 cm, en veillant à ce qu'ils soient fermes et de couleur vive, et 350g de concombres en dés similaires, en retirant les graines pour une texture plus tendre.",
-        "Étape 2 : Émincer 150g d'oignon très finement, pour éviter la texture croquante, et 320g de poivron en petits dés réguliers, en conservant la fraîcheur des couleurs.",
-        "Étape 3 : Assembler les légumes dans un saladier et assaisonner avec 46,2ml d'huile d'olive, 30ml de jus de citron frais, 5g de sel et 15g de moutarde de Dijon, en mélangeant délicatement pour ne pas abîmer les légumes.",
+        "Étape 2 : Émincer 150g d'oignon finement, et 320g de poivron en petits dés réguliers, en conservant la fraîcheur des couleurs.",
+        "Étape 3 : Assembler les légumes dans un saladier et assaisonner avec 45 ml d'huile d'olive, 20 ml de vinaigre de vin rouge et 3 g de sel, en mélangeant délicatement pour ne pas abîmer les légumes.",
         "Étape 4 : Goûter pour ajuster l'assaisonnement si nécessaire, en vérifiant que les saveurs soient équilibrées et que les légumes soient bien enrobés de l'assaisonnement.",
-        "Étape 5 : Couvrir le dessus de la salade avec 150g de fromage végétal émietté, en le dispersant uniformément pour une présentation harmonieuse.",
+        "Étape 5 : Couvrir le dessus de la salade avec 150g de tofu ferme émietté, en le dispersant uniformément pour une présentation harmonieuse.",
         "Étape 6 : Servir la salade fraîche sans attendre."
       ],
       "diet_flags": {
@@ -138603,9 +138647,9 @@
           }
         },
         {
-          "ingredient": "lemon",
-          "quantity": 70,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 50,
+          "unit": "ml",
           "meta": {
             "role": "acidity",
             "form": "juice",
@@ -138642,17 +138686,6 @@
           "meta": {
             "role": "seasoning",
             "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "cucumber_raw_with_skin",
-          "quantity": 350,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "rounds",
             "state": "raw",
             "preparation": ""
           }
@@ -138769,8 +138802,8 @@
         "Étape 4 : Couper 200g de tomates en brunoise fine, retirer l'excès de jus pour éviter une texture aqueuse. Les tomates doivent être coupées en petits dés réguliers.",
         "Étape 5 : Émincer très finement 40g d'oignon, puis le rincer à l'eau froide pour adoucir. L'oignon doit être transparent et délicat.",
         "Étape 6 : Assembler dans un grand bol : persil, menthe, tomate, oignon et boulgour, en mélangeant délicatement pour obtenir une texture homogène. Les ingrédients doivent être bien distribués et visibles.",
-        "Étape 7 : Assaisonner avec 5g de sel et un filet d'huile d'olive chaude qui crépite légèrement. La salade doit être parfumée et légèrement huilée.",
-        "Étape 8 : Ajouter un filet de jus de citron frais pour équilibrer les saveurs. Le citron doit ajouter une note d'acidité et de fraîcheur.",
+        "Étape 7 : Assaisonner avec 5g de sel et 45 ml d'huile d'olive. La salade doit être parfumée et légèrement huilée.",
+        "Étape 8 : Ajouter 50 ml de jus de citron frais pour équilibrer les saveurs. Le citron doit ajouter une note d'acidité et de fraîcheur.",
         "Étape 9 : Mélanger délicatement pour obtenir une texture finale homogène et équilibrée. La salade doit être prête à être servie et dégustée."
       ],
       "diet_flags": {
