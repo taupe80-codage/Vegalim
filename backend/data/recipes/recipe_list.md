@@ -174,7 +174,7 @@
 
 - **Empanadas** _(diabetes_friendly, high_protein, snack, argentinian)_ — `snack_empanadas_974cf2`
 - **Empanadas au Fromage** _(diabetes_friendly, high_protein, snack, argentinian)_ — `snack_empanadas_au_fromage_466bc4` 🔁 doublon possible : Empanadas au Fromage (Vegan)
-- **Empanadas au Fromage (Vegan)** _(high_protein, snack, latin_american)_ — `snack_empanadas_au_fromage_vega_79575a` 🔁 doublon possible : Empanadas au Fromage
+- **Empanadas au Fromage (Vegan)** _(high_protein, vegan, lactose_free, snack, latin_american)_ — `snack_empanadas_au_fromage_vega_79575a` 🔁 doublon possible : Empanadas au Fromage
 - **Enchiladas** _(gluten_free, high_protein, main, mexican)_ — `bread_enchiladas_fe7221` 🔁 doublon possible : Enchiladas (Vegan)
 - **Enchiladas (Vegan)** _(diabetes_friendly, gluten_free, high_protein, lactose_free, main, mexican)_ — `wrap_enchiladas_vegan_f70bca` 🔁 doublon possible : Enchiladas
 - **Endives au Gratin** _(kid_friendly, nut_free, main, french_nordic)_ — `main_endives_au_gratin_6b58ee`
@@ -779,7 +779,7 @@
 
 - **Vareniki** _(main, ukrainian)_ — `egg_vareniki_53686a`
 - **Varenyky Pomme de Terre** _(main, ukrainian)_ — `main_varenyky_pomme_de_terre_0bb7cf` 🔁 doublon possible : Varenyky Pomme de Terre (Vegan)
-- **Varenyky Pomme de Terre (Vegan)** _(snack, ukrainian)_ — `snack_varenyky_pomme_de_terre_v_8b6240` 🔁 doublon possible : Varenyky Pomme de Terre
+- **Varenyky Pomme de Terre (Vegan)** _(nut_free, snack, ukrainian)_ — `snack_varenyky_pomme_de_terre_v_8b6240` 🔁 doublon possible : Varenyky Pomme de Terre
 - **Velouté d'Asperges** _(gluten_free, nut_free, soup, french)_ — `soup_veloute_d_asperges_7da98f`
 - **Velouté de butternut en verrine** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, starter, french)_ — `entry_veloute_potimarron_en_ver_e5a2ca`
 - **Velouté de Céleri-Rave** _(gluten_free, soup, french)_ — `soup_veloute_de_celeri_rave_b33921`

@@ -1756,8 +1756,8 @@
     "allergens": [
       "gluten"
     ],
-    "servings": 2,
-    "time_total": 39,
+    "servings": 4,
+    "time_total": 32,
     "confidence": 1.0,
     "description": "Pain plat cuit à la poêle, à base de farine, avec une texture croustillante à l'extérieur et moelleuse à l'intérieur, typique de la tradition autochtone canadienne.",
     "composition": [
@@ -1773,18 +1773,28 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 500,
+        "quantity": 150,
         "unit": "ml"
       },
       {
         "ingredient": "strawberry_jam",
         "quantity": null,
         "unit": "1 cuillère à soupe"
+      },
+      {
+        "ingredient": "baking_powder",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 10,
+        "unit": "ml"
       }
     ],
     "n_instructions": 9,
@@ -5220,7 +5230,7 @@
       "milk"
     ],
     "servings": 6,
-    "time_total": 40,
+    "time_total": 65,
     "confidence": 0.9,
     "description": "Cake apéritif moelleux et doré, garni d'olives, tomates séchées et herbes de Provence, idéal pour l'apéritif avec une texture fondante et une odeur de terre et d'herbes.",
     "composition": [
@@ -5265,12 +5275,12 @@
         "unit": "g"
       },
       {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 240,
+        "ingredient": "baking_powder",
+        "quantity": 10,
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -8363,7 +8373,7 @@
     "allergens": [
       "gluten"
     ],
-    "servings": 2,
+    "servings": 6,
     "time_total": 60,
     "confidence": 0.88,
     "description": "Biscuits secs croustillants obtenus par mélange de farine de blé, d'huile d'olive et de sel, puis cuisson à haute température pour une texture cassante et dorée, caractéristique des crackers salés traditionnels.",
@@ -9024,7 +9034,7 @@
       "gluten",
       "sesame"
     ],
-    "servings": 2,
+    "servings": 4,
     "time_total": 21,
     "confidence": 1.0,
     "description": "En-cas coréen croustillant et parfumé, réalisé avec de la farine, des oignons verts émincés et une pâte délicate, cuite à la poêle pour une texture dorée et croquante.",
@@ -9046,7 +9056,7 @@
       },
       {
         "ingredient": "sesame_oil_plant",
-        "quantity": 45.7,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -11462,7 +11472,7 @@
         "unit": "g"
       },
       {
-        "ingredient": "parmesan_grated_dried_cow",
+        "ingredient": "queso_fresco_block_cow",
         "quantity": 150,
         "unit": "g"
       },
@@ -11488,13 +11498,18 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
         "ingredient": "green_salad_raw_plain",
         "quantity": null,
         "unit": "1 portion"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -11528,18 +11543,18 @@
         "unit": "g"
       },
       {
-        "ingredient": "parmesan_grated_dried_cow",
+        "ingredient": "queso_fresco_block_cow",
         "quantity": 150,
         "unit": "g"
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
         "ingredient": "egg_raw",
-        "quantity": 220,
+        "quantity": 55,
         "unit": "g"
       },
       {
@@ -11549,7 +11564,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -11578,27 +11593,21 @@
     "title": "Empanadas au Fromage (Vegan)",
     "cuisine": "latin_american",
     "dish_type": "snack",
-    "vegan": false,
+    "vegan": true,
     "diet": [
-      "high_protein"
+      "high_protein",
+      "vegan",
+      "lactose_free"
     ],
     "allergens": [
-      "eggs",
       "gluten",
-      "lactose",
-      "milk",
       "tree_nuts"
     ],
     "servings": 6,
-    "time_total": 36,
+    "time_total": 71,
     "confidence": 1.0,
     "description": "Empanadas croustillantes et dorées, remplies d'un mélange de fromage végétal et d'oignon jaune caramélisé, parfumées à l'huile de coco et servies chaudes.",
     "composition": [
-      {
-        "ingredient": "base_empanada_dough_65661a",
-        "quantity": 400,
-        "unit": "g"
-      },
       {
         "ingredient": "base_vegan_cheddar_024998",
         "quantity": 150,
@@ -11606,12 +11615,12 @@
       },
       {
         "ingredient": "yellow_onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
-        "ingredient": "coconut_oil_plant",
-        "quantity": 45.7,
+        "ingredient": "olive_oil_plant",
+        "quantity": 15,
         "unit": "ml"
       },
       {
@@ -11623,9 +11632,24 @@
         "ingredient": "green_salad_raw_plain",
         "quantity": null,
         "unit": "une portion"
+      },
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 50,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 100,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -17523,7 +17547,7 @@
       "tree_nuts"
     ],
     "servings": 5,
-    "time_total": 29,
+    "time_total": 59,
     "confidence": 1.0,
     "description": "Gözleme turc croustillant, aux épinards cuits et fromage végétal, avec une pâte fine et dorée, issu de la tradition culinaire turque. La pâte est pétrie à la main et cuite à la poêle pour obtenir une texture croustillante.",
     "composition": [
@@ -17543,13 +17567,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "white_onion_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45.7,
+        "quantity": 20,
         "unit": "ml"
       },
       {
@@ -17566,9 +17585,19 @@
         "ingredient": "mint_fresh_herb",
         "quantity": null,
         "unit": "1 cuillère à soupe"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 180,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 5,
+        "unit": "g"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
     "similar": [
       {
@@ -18846,7 +18875,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 150,
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -18866,12 +18895,12 @@
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45.7,
+        "quantity": 20,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       }
     ],
@@ -32435,7 +32464,7 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -32460,7 +32489,7 @@
       },
       {
         "ingredient": "sesame_tahini_raw_butter_seed_plant",
-        "quantity": 15.5,
+        "quantity": 15,
         "unit": "ml"
       },
       {
@@ -37938,16 +37967,16 @@
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
+        "quantity": 6.3,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 750.0,
+        "quantity": 500,
         "unit": "ml"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -38417,7 +38446,7 @@
       "milk"
     ],
     "servings": 4,
-    "time_total": 21,
+    "time_total": 41,
     "confidence": 1.0,
     "description": "Rösti créatif, avec une texture croustillante dorée à l'extérieur et une chair de pomme de terre tendre à l'intérieur, parfumée au thym frais et à l'oignon émincé.",
     "composition": [
@@ -38429,11 +38458,6 @@
       {
         "ingredient": "butter_sup80pct",
         "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
         "unit": "g"
       },
       {
@@ -38452,7 +38476,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": [
       {
@@ -38475,8 +38499,8 @@
       "nut_free"
     ],
     "allergens": [],
-    "servings": 2,
-    "time_total": 36,
+    "servings": 4,
+    "time_total": 41,
     "confidence": 1.0,
     "description": "Rösti croustillant à base de pommes de terre crues, doré à la poêle avec une texture croustillante et une odeur parfumée, typique de la cuisine suisse avec une touche de thym frais.",
     "composition": [
@@ -38488,11 +38512,6 @@
       {
         "ingredient": "vegan_butter",
         "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 300,
         "unit": "g"
       },
       {
@@ -38780,7 +38799,7 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 49,
+    "time_total": 59,
     "confidence": 1.0,
     "description": "Riz basmati parfumé, cuit à la perfection avec des herbes fraîches et un safran doré, accompagné d'une croûte croustillante au fond, technique traditionnelle persane.",
     "composition": [
@@ -38791,17 +38810,17 @@
       },
       {
         "ingredient": "parsley_fresh_herb",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
         "quantity": 30,
         "unit": "g"
       },
       {
-        "ingredient": "coriander_spice_seed",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
         "ingredient": "dill_weed_fresh_herb_leaf",
-        "quantity": 20,
+        "quantity": 60,
         "unit": "g"
       },
       {
@@ -38811,7 +38830,7 @@
       },
       {
         "ingredient": "chives_raw_fresh",
-        "quantity": 25,
+        "quantity": 40,
         "unit": "g"
       },
       {
@@ -38826,7 +38845,7 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -38835,7 +38854,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": [
       {
@@ -41789,7 +41808,7 @@
       "mustard"
     ],
     "servings": 2,
-    "time_total": 20,
+    "time_total": 17,
     "confidence": 1.0,
     "description": "Sandwich végétarien équilibré avec des légumes frais, du fromage fondu et un pain croustillant.",
     "composition": [
@@ -41839,7 +41858,7 @@
         "unit": "1 portion"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -46538,12 +46557,12 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
+        "quantity": 45,
         "unit": "ml"
       },
       {
         "ingredient": "lemon_juice",
-        "quantity": 58.3,
+        "quantity": 60,
         "unit": "ml"
       },
       {
@@ -47105,7 +47124,7 @@
       "tree_nuts"
     ],
     "servings": 6,
-    "time_total": 35,
+    "time_total": 107,
     "confidence": 1.0,
     "description": "En-cas mexicaine à base de farine de maïs, bouillon végétal chaud et haricots rouges, tendre et humide, avec une texture ferme et une farce parfumée, rappelant la tradition culinaire du Mexique.",
     "composition": [
@@ -47116,12 +47135,12 @@
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
+        "quantity": 3.8,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 750.0,
+        "quantity": 300,
         "unit": "ml"
       },
       {
@@ -47141,7 +47160,7 @@
       },
       {
         "ingredient": "white_onion_raw",
-        "quantity": 300,
+        "quantity": 150,
         "unit": "g"
       },
       {
@@ -47158,6 +47177,11 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 70,
+        "unit": "ml"
       }
     ],
     "n_instructions": 8,
@@ -47752,11 +47776,6 @@
       {
         "ingredient": "parmesan_grated_dried_cow",
         "quantity": 50,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 240,
         "unit": "g"
       },
       {
@@ -48626,7 +48645,7 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 61.5,
+        "quantity": 60,
         "unit": "ml"
       },
       {
@@ -49768,12 +49787,12 @@
       },
       {
         "ingredient": "avocado_raw",
-        "quantity": 400,
+        "quantity": 200,
         "unit": "g"
       },
       {
         "ingredient": "tomato_raw_ripe",
-        "quantity": 480,
+        "quantity": 300,
         "unit": "g"
       },
       {
@@ -49788,21 +49807,26 @@
       },
       {
         "ingredient": "cashew_butter_plain_plant",
-        "quantity": 100,
+        "quantity": 40,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       },
       {
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 2,
+        "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -50450,13 +50474,14 @@
     "cuisine": "ukrainian",
     "dish_type": "snack",
     "vegan": false,
-    "diet": [],
+    "diet": [
+      "nut_free"
+    ],
     "allergens": [
-      "gluten",
-      "tree_nuts"
+      "gluten"
     ],
     "servings": 8,
-    "time_total": 100,
+    "time_total": 70,
     "confidence": 1.0,
     "description": "Pâtes farcies tendres à la pomme de terre cuite, parfumées d'oignon jaune caramélisé et de poivre, préparées selon la tradition ukrainienne avec une pâte lisse et élastique.",
     "composition": [
@@ -50473,11 +50498,6 @@
       {
         "ingredient": "onion_raw",
         "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cashew_butter_plain_plant",
-        "quantity": 150,
         "unit": "g"
       },
       {
@@ -50504,9 +50524,14 @@
         "ingredient": "green_salad_raw_plain",
         "quantity": null,
         "unit": "1 portion"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 120,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 8,
     "flags": [],
     "similar": [
       {
