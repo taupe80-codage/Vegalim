@@ -162934,7 +162934,7 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
+          "ingredient": "lemon_juice",
           "quantity": 30,
           "unit": "ml",
           "meta": {
@@ -162978,11 +162978,33 @@
         },
         {
           "ingredient": "mint_fresh_herb",
-          "quantity": 20,
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "herb",
             "form": "chiffonade",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "paprika_powder",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -163078,6 +163100,7 @@
         "moyen-orient",
         "oignon",
         "onion",
+        "paprika",
         "potable)",
         "red",
         "sans gluten",
@@ -163086,6 +163109,8 @@
         "soup",
         "soupe",
         "stock",
+        "sunflower",
+        "tournesol",
         "turc",
         "turkish",
         "turquie",
@@ -163109,8 +163134,8 @@
         "Étape 3 : Incorporer 250g de lentilles corail rincées et verser 750ml de bouillon végétal, en vérifiant que les lentilles sont bien couvertes.",
         "Étape 4 : Porter à ébullition, écumer et réduire le feu à bas pour laisser mijoter pendant 20 minutes, ou jusqu'à ce que les lentilles soient très fondantes et la soupe ait une consistance crémeuse.",
         "Étape 5 : Mixer la soupe pour obtenir une texture lisse et veloutée, en ajoutant un peu d'eau si nécessaire pour ajuster la consistance, en vérifiant que la soupe est homogène et sans grumeaux.",
-        "Étape 6 : Préparer la garniture en faisant fondre un peu d'huile, puis en ajoutant du paprika fumé hors du feu, en vérifiant que le paprika est bien réparti.",
-        "Étape 7 : Servir la soupe chaude avec un filet de 30ml de jus de citron et en saupoudrant de menthe séchée pour une touche fraîche, en vérifiant que la soupe est servie à la bonne température."
+        "Étape 6 : Préparer la garniture en chauffant 15 ml d'huile, puis en ajoutant 2 g de paprika hors du feu.",
+        "Étape 7 : Servir la soupe chaude avec un filet de 30ml de jus de citron et en parsemant de 5 g de menthe ciselée."
       ],
       "diet_flags": {
         "vegan": true,
@@ -163217,17 +163242,6 @@
           "meta": {
             "role": "ingredient",
             "note": "pour reconstituer le bouillon"
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
           }
         },
         {
@@ -163370,18 +163384,15 @@
         "onion",
         "paris",
         "potable)",
-        "salt",
         "sans produit animal",
         "sans viande",
         "sauce",
-        "sel",
         "shoyu",
         "soja",
         "soupe",
         "soy",
         "stock",
         "sucre)",
-        "table",
         "tofu",
         "udon",
         "vegan",
@@ -163398,15 +163409,11 @@
       "_quality_score": 0.97,
       "description": "Bouillon udon japonais végan crémeux, où les nouilles fondent en bouche avec un tofu soyeux et des saveurs umami — recette fondatrice de la cuisine zen japonaise.",
       "instructions": [
-        "Étape 1 : Cuire 320g de nouilles udon fraîches dans 2L d'eau bouillante non salée pendant 3 minutes, puis égoutter et rincer à l'eau froide pour stopper la cuisson. Observez la texture al dente des nouilles.",
-        "Étape 2 : Préparer le bouillon végétal : porter 750ml de dashi végétal à frémissement, ajouter 15ml de sauce soja et 15ml de mirin pour un parfum riche et umami. Sentez l'arôme qui se dégage.",
-        "Étape 3 : Délayer 30g de miso blanc hors du feu dans une louche de bouillon chaud, en remuant doucement pour éviter les grumeaux. Notez la couleur crémeuse qui se forme.",
-        "Étape 4 : Ajouter 400g de tofu soyeux en dés, 300g de champignons émincés et 60g de ciboulette hachée. Laisser frémir 3-4 minutes à feu moyen, jusqu'à ce que les saveurs se mélangent et que les ingrédients soient tendres. Écoutez le doux bouillonnement.",
-        "Étape 5 : Ajouter 20g d'ail émincé et 15g de gingembre émincé pour un parfum supplémentaire. Laisser cuire encore 1 minute.",
-        "Étape 6 : Répartir les udon dans des bols profonds préchauffés, verser le bouillon chaud et les garnitures par-dessus. Observez la belle présentation et les couleurs vives.",
-        "Étape 7 : Vérifier que les udon ont une texture glissante et que le bouillon a une coloration ambrée, servir sans attendre : la chaleur est essentielle pour apprécier les saveurs complexes et équilibrées.",
-        "Étape 8 : Assaisonner avec 5g de sel pour rehausser les saveurs, si nécessaire. Goûtez et ajustez pour atteindre l'équilibre parfait.",
-        "Étape 9 : Garnir avec des ciboulettes supplémentaires, si désiré, pour une touche de fraîcheur et de couleur. Admirez la présentation finale et servez avec joie."
+        "Étape 1 : Cuire 320g de nouilles udon fraîches dans 2L d'eau bouillante non salée pendant 3 minutes, puis égoutter et rincer à l'eau froide pour stopper la cuisson.",
+        "Étape 2 : Préparer le bouillon végétal : porter 750ml de bouillon végétal à frémissement avec 20 g d'ail et 15 g de gingembre émincés, puis ajouter 15ml de sauce soja et 15ml de mirin pour un parfum riche et umami.",
+        "Étape 3 : Délayer 30g de miso blanc hors du feu dans une louche de bouillon chaud, en remuant doucement pour éviter les grumeaux.",
+        "Étape 4 : Ajouter 400g de tofu ferme en dés, 300g de champignons émincés et 60g d'oignon vert ciselé. Laisser frémir 3-4 minutes à feu moyen, jusqu'à ce que les saveurs se mélangent et que les ingrédients soient tendres.",
+        "Étape 5 : Répartir les udon dans des bols profonds, verser le bouillon chaud et les garnitures par-dessus, puis servir sans attendre."
       ],
       "diet_flags": {
         "vegan": true,
@@ -163452,7 +163459,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -163473,7 +163480,7 @@
           }
         },
         {
-          "ingredient": "base_green_curry_paste_250117",
+          "ingredient": "base_curry_paste_49c97f",
           "quantity": 30,
           "unit": "g",
           "meta": {
@@ -163591,6 +163598,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -163655,7 +163673,7 @@
         "ail",
         "asiatique",
         "aux",
-        "base_green_curry_paste_250117",
+        "base_curry_paste_49c97f",
         "bean",
         "bouillon",
         "braising",
@@ -163707,12 +163725,12 @@
       "_quality_score": 0.82,
       "description": "Laksa aux légumes : bouillon de légumes coco-curry vert, tofu, nouilles de riz et pousses de soja, garni de coriandre fraîche et oignons verts.",
       "instructions": [
-        "Étape 1 : Faites chauffer 15 ml d'huile de coco dans une grande casserole à feu moyen. Ajoutez 2 g d'ail et 11,2 g de gingembre frais hachés, puis saisissez pendant 2 minutes, en remuant régulièrement, jusqu'à ce que les aromates soient parfumés et légèrement dorés.",
-        "Étape 2 : Ajoutez 30 g de pâte de curry vert et faites cuire pendant 5 minutes à feu moyen-vif, en remuant constamment, jusqu'à ce que la pâte soit bien colorée et parfumée.",
+        "Étape 1 : Faites chauffer 15 ml d'huile de coco dans une grande casserole à feu moyen. Ajoutez 10 g d'ail et 11,2 g de gingembre frais hachés, puis saisissez pendant 2 minutes, en remuant régulièrement, jusqu'à ce que les aromates soient parfumés et légèrement dorés.",
+        "Étape 2 : Ajoutez 30 g de pâte de curry rouge et faites cuire pendant 5 minutes à feu moyen-vif, en remuant constamment, jusqu'à ce que la pâte soit bien colorée et parfumée.",
         "Étape 3 : Versez 400 ml de lait de coco et 1000 ml de bouillon végétal, puis portez à ébullition. Réduisez ensuite à feu moyen et laissez mijoter pendant 15 minutes, en remuant occasionnellement, jusqu'à ce que les saveurs soient bien mélangées.",
-        "Étape 4 : Ajoutez 200 g de tofu ferme coupé en dés et 20 ml de sauce soja végétale, puis faites cuire pendant 8 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce que le tofu soit bien cuit et les légumes soient tendres.",
+        "Étape 4 : Ajoutez 200 g de tofu ferme coupé en dés et 20 ml de sauce soja végétale, puis faites cuire pendant 8 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce que le tofu soit bien chaud.",
         "Étape 5 : Ajoutez 10 ml d'huile de sésame et 150 g de vermicelles de riz, puis faites cuire pendant 2 minutes, en remuant constamment, jusqu'à ce que les vermicelles soient bien cuits et la sauce soit onctueuse.",
-        "Étape 6 : Assaisonnez avec du sel et du poivre, puis laissez réduire pendant 2 minutes à feu doux, en remuant occasionnellement, jusqu'à ce que la sauce soit bien épaissie.",
+        "Étape 6 : Salez avec 2 g de sel.",
         "Étape 7 : Servez la soupe dans des bols profonds, garnie de pousses de soja, d'oignons verts ciselés et de feuilles de coriandre fraîche."
       ],
       "diet_flags": {
@@ -163791,9 +163809,9 @@
           }
         },
         {
-          "ingredient": "lemon",
-          "quantity": 50.0,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 15,
+          "unit": "ml",
           "meta": {
             "role": "acidity",
             "form": "wedges",
@@ -163842,6 +163860,17 @@
           "meta": {
             "role": "liquid",
             "note": "pour reconstituer le bouillon"
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -163905,8 +163934,6 @@
       "search_tokens": [
         "(eau",
         "45 minutes",
-        "acidite",
-        "agrume",
         "asparagus",
         "asperge",
         "beurre",
@@ -163917,6 +163944,7 @@
         "butter",
         "chives",
         "ciboulette",
+        "citron",
         "classique",
         "coeliaque",
         "cream,",
@@ -163947,16 +163975,18 @@
         "pain",
         "poaching",
         "potable)",
+        "salt",
         "sans gluten",
         "sans viande",
+        "sel",
         "shallot",
         "simple",
         "steaming",
         "stock",
+        "table",
         "vegetable",
         "vegetarien",
         "veloute",
-        "vitamine c",
         "water",
         "white"
       ],
@@ -163970,7 +164000,7 @@
         "Cuire les pointes 5 minutes à la vapeur jusqu'à tendreté, en veillant à conserver leur texture croquante et leur saveur fraîche. Réserver les pointes pour une utilisation finale.",
         "Faire fondre le beurre à feu moyen, en ajoutant l'échalote émincée pour libérer ses huiles essentielles et ses saveurs. Ajouter les tronçons d'asperges pour les faire cuire et obtenir une texture plus tendre.",
         "Mouiller avec le bouillon de légumes et cuire 20 minutes à feu moyen, ou jusqu'à ce que les légumes soient tendres et se laissent écraser facilement. Mixer finement à l'aide d'un mixeur plongeant pour obtenir une texture lisse et crémeuse.",
-        "Incorporer la crème et le jus de citron pour enrichir la texture et les saveurs. Émulsionner pour obtenir une texture homogène et une saveur équilibrée.",
+        "Incorporer la crème, 15 ml de jus de citron et 3 g de sel pour enrichir la texture et les saveurs. Émulsionner pour obtenir une texture homogène et une saveur équilibrée.",
         "Dresser le velouté avec les pointes d'asperges en garniture, en saupoudrant de ciboulette ciselée pour ajouter une touche de fraîcheur et de couleur. Servir chaud."
       ],
       "diet_flags": {
@@ -164061,7 +164091,7 @@
         },
         {
           "ingredient": "hazelnut_oil_plant",
-          "quantity": 1,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "fat",
@@ -164100,6 +164130,17 @@
           "meta": {
             "role": "ingredient",
             "note": "pour reconstituer le bouillon"
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -164202,11 +164243,14 @@
         "onion",
         "potable)",
         "rave",
+        "salt",
         "sans gluten",
         "sans viande",
         "sauteed",
+        "sel",
         "simple",
         "stock",
+        "table",
         "vegetable",
         "vegetarien",
         "veloute",
@@ -164226,9 +164270,8 @@
         "Étape 3: Mouiller avec 800 ml de bouillon de légumes froid et porter à ébullition, en veillant à ce que les saveurs se mélangent harmonieusement.",
         "Étape 4: Cuire à couvert pendant 25 minutes, ou jusqu'à ce que le céleri-rave soit totalement fondant et que les saveurs soient bien intégrées.",
         "Étape 5: Mixer la préparation à pleine puissance pendant 3 minutes, jusqu'à obtenir une texture lisse et crémeuse, en vérifiant que le mélange soit homogène.",
-        "Étape 6: Incorporer 100 ml de crème fraîche et quelques noisettes grillées, puis cuire pendant 2 minutes supplémentaires, en remuant constamment pour éviter la formation de grumeaux.",
-        "Étape 7: Rectifier l'assaisonnement avec de la noix de muscade fraîchement râpée et servir chaud, décoré de noisettes concassées et d'un filet d'huile de noisette.",
-        "Étape 8: Servir dans des bols préchauffés, en profitant de la chaleur et du croustillant des noisettes pour accentuer l'expérience gustative."
+        "Étape 6: Incorporer 100 ml de crème fraîche et réchauffer 2 minutes.",
+        "Étape 7: Assaisonner avec 3 g de sel et la noix de muscade fraîchement râpée et servir chaud, décoré de noisettes concassées et de 10 ml d'huile de noisette."
       ],
       "diet_flags": {
         "vegan": false,
@@ -164262,7 +164305,7 @@
       },
       "composition": [
         {
-          "ingredient": "butternut_squash_raw",
+          "ingredient": "red_kuri_squash_raw_skinless",
           "quantity": 800,
           "unit": "g",
           "meta": {
@@ -164358,6 +164401,28 @@
             "role": "ingredient",
             "note": "pour reconstituer le bouillon"
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "nutmeg_spice",
+          "quantity": 0.5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -164426,7 +164491,6 @@
         "blending",
         "bouillon",
         "butter",
-        "butternut",
         "citrouille",
         "classique",
         "coeliaque",
@@ -164452,24 +164516,31 @@
         "heavy",
         "jaune",
         "kids",
+        "kuri",
         "leger",
         "legumes",
         "light",
         "low calorie",
         "minceur",
         "moyen",
+        "muscade",
+        "nutmeg",
         "oignon",
         "onion",
         "potable)",
         "potimarron",
         "pumpkin",
+        "red",
+        "salt",
         "sans gluten",
         "sans viande",
         "sauteed",
+        "sel",
         "simple",
         "soup",
         "squash",
         "stock",
+        "table",
         "vegetable",
         "vegetarien",
         "veloute",
@@ -164483,12 +164554,11 @@
       "description": "Velouté d'automne au potimarron, gingembre frais et crème fraîche. Sa couleur orangée et sa douceur épicée en font un classique hivernal, avec une texture veloutée et nappante.",
       "instructions": [
         "Couper le potimarron en cubes de 4 cm sans l'éplucher, en veillant à conserver la peau pour obtenir une couleur plus intense et une texture plus tendre. Cette étape est cruciale pour la texture finale.",
-        "Faire revenir l'oignon jaune émincé et l'ail émincé dans l'beurre à feu moyen pendant 5 minutes, en évitant la coloration et en favorisant la transparence des oignons. Ajouter le gingembre frais râpé pour libérer ses huiles essentielles et ses saveurs. L'odeur du gingembre frais doit commencer à se dégager.",
+        "Faire revenir l'oignon jaune émincé et l'ail émincé dans 25 g de beurre à feu moyen pendant 5 minutes, en évitant la coloration et en favorisant la transparence des oignons. Ajouter le gingembre frais râpé pour libérer ses huiles essentielles et ses saveurs. L'odeur du gingembre frais doit commencer à se dégager.",
         "Incorporer les cubes de potimarron et mouiller avec 800 ml de bouillon de légumes chaud. Porter à ébullition, puis réduire le feu et laisser mijoter à couvert pendant 25 minutes, ou jusqu'à ce que le potimarron soit entièrement tendre et se laisse écraser facilement. La température doit être régulière pour une cuisson homogène.",
         "Mixer à pleine puissance pendant 3 minutes pour obtenir un velouté parfaitement lisse et brillant, sans aucun grumeau. Incorporer la crème fraîche pour enrichir la texture et les saveurs. La consistance doit être crémeuse et légère.",
-        "Assaisonner avec du sel, du poivre et de la muscade pour équilibrer les saveurs et les textures. La texture doit être veloutée, nappante et de couleur orange profond. Un léger tour de moulin à poivre peut être ajouté pour un peu de piquant.",
-        "Servir chaud, en accompagnant le velouté de graines de courge torréfiées pour ajouter une touche de croquant et de saveur, ainsi que d'une larme de crème fraîche pour enrichir la texture et les saveurs. La chaleur du velouté doit être conservée pour apprécier pleinement les saveurs et les textures.",
-        "Pour terminer, ajouter un filet de beurre sur le velouté pour donner un éclat et une saveur supplémentaire. Cette étape est facultative mais recommandée pour une présentation plus élégante."
+        "Assaisonner avec 3 g de sel, du poivre et une pincée de muscade pour équilibrer les saveurs et les textures. La texture doit être veloutée, nappante et de couleur orange profond. Un léger tour de moulin à poivre peut être ajouté pour un peu de piquant.",
+        "Servir chaud, en accompagnant le velouté de graines de courge torréfiées pour ajouter une touche de croquant et de saveur. La chaleur du velouté doit être conservée pour apprécier pleinement les saveurs et les textures."
       ],
       "diet_flags": {
         "vegan": false,
@@ -164578,7 +164648,7 @@
         },
         {
           "ingredient": "chives_raw_fresh",
-          "quantity": 1,
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "garnish",
@@ -164593,6 +164663,17 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 800,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -164656,6 +164737,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "beurre",
         "blending",
         "butter",
@@ -164667,6 +164749,7 @@
         "creme",
         "debutant",
         "easy",
+        "eau",
         "enfants",
         "epaisse",
         "facile",
@@ -164690,6 +164773,7 @@
         "onion",
         "poireau",
         "pomme",
+        "potable)",
         "potato",
         "refrigeration",
         "salt",
@@ -164700,7 +164784,8 @@
         "table",
         "terre",
         "vegetarien",
-        "vichyssoise"
+        "vichyssoise",
+        "water"
       ],
       "difficulty_level": "easy",
       "dish_type": "soup",
@@ -164708,12 +164793,11 @@
       "_quality_score": 0.88,
       "description": "Velouté glacé de poireaux et pommes de terre nappé de crème fraîche et ciboulette, offrant une texture lisse et une saveur délicate, typique de l'élégance bistrotière estivale.",
       "instructions": [
-        "Émincer les blancs de poireaux et l'oignon, les faire fondre dans l'beurre sans coloration, en veillant à obtenir une texture tendre et une odeur parfumée, pendant environ 10 minutes.",
-        "Ajouter les pommes de terre pelées en cubes et mouiller avec de l'eau. Porter à ébullition, puis réduire le feu et laisser mijoter pendant 25 minutes, ou jusqu'à ce que les pommes de terre soient tendres et se laissent facilement écraser.",
-        "Mixer finement le mélange de poireaux et de pommes de terre, en ajoutant la crème fraîche pour obtenir une texture lisse et crémeuse. Assaisonner avec du sel à goût.",
+        "Émincer les blancs de poireaux et l'oignon, les faire fondre dans 30 g de beurre sans coloration, en veillant à obtenir une texture tendre et une odeur parfumée, pendant environ 10 minutes.",
+        "Ajouter les pommes de terre pelées en cubes et mouiller avec 800 ml d'eau. Porter à ébullition, puis réduire le feu et laisser mijoter pendant 25 minutes, ou jusqu'à ce que les pommes de terre soient tendres et se laissent facilement écraser.",
+        "Mixer finement le mélange de poireaux et de pommes de terre, en ajoutant la crème fraîche pour obtenir une texture lisse et crémeuse. Assaisonner avec 5 g de sel.",
         "Réfrigérer le velouté au moins 2 heures avant de servir, pour permettre aux saveurs de se mélanger et à la texture de se raffermir.",
-        "Juste avant de servir, décorer de ciboulette ciselée pour ajouter une touche de fraîcheur et de couleur. Servir bien froid.",
-        "Pour un effet visuel supplémentaire, vous pouvez ajouter des feuilles de ciboulette fraîche ou des zestes de citron sur le dessus du velouté, pour créer un contraste de couleurs et de textures."
+        "Juste avant de servir, décorer de ciboulette ciselée pour ajouter une touche de fraîcheur et de couleur. Servir bien froid."
       ],
       "diet_flags": {
         "vegan": false,
@@ -164855,6 +164939,28 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -164914,11 +165020,14 @@
         "ail",
         "ajapsandali",
         "aubergine",
+        "basil",
+        "basilic",
         "bell",
         "blanc",
         "braising",
         "bread",
         "caucase",
+        "chilli",
         "coeliaque",
         "coriander",
         "coriandre",
@@ -164947,6 +165056,7 @@
         "parsley",
         "pepper",
         "persil",
+        "piment",
         "poivron",
         "ragout",
         "red",
@@ -164980,11 +165090,10 @@
       "instructions": [
         "Étape 1 : Préparez les légumes. Coupez les aubergines en cubes de 3 cm. Salez les aubergines et laissez-les reposer 15 minutes pour en extraire l'excès d'eau. Rincez-les, séchez-les. Émincez l'oignon jaune en demi-lunes fines.",
         "Étape 2 : Faites dorer les aubergines dans 40 ml d'huile d'olive à feu vif pendant 7 minutes, en les retournant régulièrement, jusqu'à ce qu'elles soient dorées. Réservez-les. Dans la même poêle, faites suer l'oignon jaune et l'ail à feu moyen pendant 7 minutes, en remuant occasionnellement, jusqu'à ce qu'ils soient tendres et parfumés.",
-        "Étape 3 : Ajoutez les poivrons rouges dans la poêle et faites-les cuire pendant 5 minutes à feu moyen-vif, en les remuant régulièrement, jusqu'à ce qu'ils commencent à ramollir. Incorporez les tomates concassées, la coriandre fraîche hachée et les épices géorgiennes. Cuisez pendant 8 minutes, en remuant occasionnellement, jusqu'à ce que les saveurs soient bien mélangées.",
+        "Étape 3 : Ajoutez les poivrons rouges dans la poêle et faites-les cuire pendant 5 minutes à feu moyen-vif, en les remuant régulièrement, jusqu'à ce qu'ils commencent à ramollir. Incorporez les tomates concassées, 10 g de coriandre fraîche, 10 g de basilic et 5 g de piment haché. Cuisez pendant 8 minutes, en remuant occasionnellement, jusqu'à ce que les saveurs soient bien mélangées.",
         "Étape 4 : Remettez les aubergines dans la poêle. Couvrez et mijotez pendant 15 minutes à feu doux, en remuant occasionnellement, jusqu'à ce que les légumes soient fondants et confits dans la sauce tomate parfumée.",
-        "Étape 5 : Assaisonnez et garnissez de persil frais. Préparez le pain végétal pour servir.",
-        "Étape 6 : Vérifiez que les légumes sont tendres et que la sauce a épaissi. Ajustez l'assaisonnement si nécessaire.",
-        "Étape 7 : Servez tiède ou à température ambiante, accompagné de pain végétal et garni de persil frais."
+        "Étape 5 : Assaisonnez et garnissez de persil frais.",
+        "Étape 6 : Servez tiède ou à température ambiante, accompagné de pain et garni de persil frais."
       ],
       "diet_flags": {
         "vegan": true,
@@ -165013,8 +165122,8 @@
       "timing": {
         "prep_active_min": 15,
         "prep_passive_min": 480,
-        "cook_min": 75,
-        "total_min": 570
+        "cook_min": 135,
+        "total_min": 630
       },
       "composition": [
         {
@@ -165147,16 +165256,39 @@
             "role": "liquid",
             "note": "pour reconstituer le bouillon"
           }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "breadcrumbs_dried",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "vegan",
           "vegetarian"
         ],
-        "allergens": [],
+        "allergens": [
+          "gluten"
+        ],
         "technique": [
           "braising",
           "oven_cooking"
@@ -165217,12 +165349,10 @@
         "carrot",
         "cassoulet",
         "classique",
-        "coeliaque",
         "eau",
         "francais",
         "france",
         "french",
-        "gluten free",
         "haricot",
         "intermediaire",
         "laurier",
@@ -165245,7 +165375,6 @@
         "persil",
         "potable)",
         "salt",
-        "sans gluten",
         "sans produit animal",
         "sans viande",
         "sel",
@@ -165270,17 +165399,17 @@
       "description": "Ragoût français de haricots blancs mijotés, parfumé au thym frais, avec une sauce nappante et une liaison naturelle par l'amidon, cuite à feu doux pour une texture tendre et une saveur intense.",
       "instructions": [
         "Étape 1 : Faire tremper les haricots blancs pendant au moins 8 heures, puis les cuire 45 minutes à l'eau bouillante pour obtenir une texture tendre et crémeuse.",
-        "Étape 2 : Faire revenir 200g d'oignon jaune émincé, 200g de carotte crue râpée et 300g de tomates fraîches concassées dans 45ml d'huile d'olive pour créer une base aromatique riche et parfumée, en remuant régulièrement pendant 10 minutes.",
+        "Étape 2 : Faire revenir 150g d'oignon jaune émincé, 10 g d'ail haché, 200g de carotte crue râpée et 300g de tomates fraîches concassées dans 45ml d'huile d'olive pour créer une base aromatique riche et parfumée, en remuant régulièrement pendant 10 minutes.",
         "Étape 3 : Ajouter les haricots cuits, 3g de thym frais haché et 2g de laurier séché, puis couvrir de 500ml de bouillon végétal chaud pour donner du corps au ragoût et intensifier les saveurs.",
-        "Étape 4 : Verser le mélange dans une cassole en terre cuite et couvrir de chapelure fine pour créer une croûte croustillante dorée.",
+        "Étape 4 : Verser le mélange dans une cassole en terre cuite et couvrir de 40 g de chapelure fine pour créer une croûte croustillante dorée.",
         "Étape 5 : Préchauffer le four à 160°C, puis cuire pendant 1h30 en croûtant plusieurs fois pour obtenir une texture dorée et croustillante, en surveillant la température et la couleur de la croûte.",
-        "Étape 6 : Goûter et rectifier l'assaisonnement avec du sel de mer et des herbes fraîches pour parfaire le goût et équilibrer les saveurs.",
-        "Étape 7 : Servir sans attendre, garni de persil frais haché et accompagné de pain grillé pour un repas complet et savoureux."
+        "Étape 6 : Assaisonner avec 5 g de sel.",
+        "Étape 7 : Servir sans attendre, accompagné de pain grillé pour un repas complet et savoureux."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -165304,8 +165433,8 @@
       "timing": {
         "prep_active_min": 17,
         "prep_passive_min": 0,
-        "cook_min": 60,
-        "total_min": 77
+        "cook_min": 85,
+        "total_min": 102
       },
       "composition": [
         {
@@ -165567,8 +165696,7 @@
         "Ajouter 9g d'ail émincé, 200g de carotte crue en dés et 300g de tomates concassées. Faire sauter pendant 2 minutes, en surveillant la coloration et en remuant régulièrement pour éviter les brûlures.",
         "Incorporer les haricots égouttés, 500ml de bouillon végétal chaud, 5g de thym frais et 2g de poivre. Couvrir et laisser mijoter pendant 25 minutes à feu doux, en vérifiant que les saveurs sont bien équilibrées.",
         "Ajouter 500g de courgette crue en dés et poursuivre la cuisson pendant 10 minutes, en vérifiant que les légumes sont tendres mais encore croquants.",
-        "Assaisonner de 5g de sel et poivre. Retirer le thym et servir chaud, garni de persil haché et d'un filet d'huile d'olive.",
-        "Déguster et apprécier les saveurs riches et la texture tendre de ce ragoût croate, mijoté avec amour et soin."
+        "Assaisonner de 5g de sel et poivre. Retirer le thym et servir chaud, arrosé d'un filet d'huile d'olive."
       ],
       "diet_flags": {
         "vegan": true,
@@ -165596,9 +165724,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 30,
-        "prep_passive_min": 5,
+        "prep_passive_min": 20,
         "cook_min": 45,
-        "total_min": 80
+        "total_min": 95
       },
       "composition": [
         {
@@ -165677,6 +165805,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -165740,6 +165879,8 @@
       "search_tokens": [
         "ail",
         "aubergine",
+        "basil",
+        "basilic",
         "blanc",
         "braising",
         "coeliaque",
@@ -165795,9 +165936,8 @@
         "Étape 3 : Réserver les aubergines et faire confire 130g d'oignon à feu doux 10 minutes jusqu'à ce que l'oignon soit translucide et dégage une odeur sucrée, en ajoutant 25g d'ail pour renforcer l'arôme.",
         "Étape 4 : Ajouter 320g de tomates fraîches concassées et 3g de sucre blanc, puis cuire 8 minutes jusqu'à sauce épaisse et brillante, en remuant régulièrement pour éviter les grumeaux.",
         "Étape 5 : Remettre les aubergines dans la sauce, couvrir et mijoter 10 minutes à feu doux en mélangeant délicatement une fois pour que les aubergines soient bien enrobées et la sauce liée.",
-        "Étape 6 : Assaisonner de sel, de levure nutritionnelle et d'herbes fraîches pour équilibrer les saveurs. Les aubergines doivent être fondantes et bien enrobées, la sauce concentrée et parfumée.",
-        "Étape 7 : Servir tiède ou froid, en ajoutant un filet d'huile d'olive pour une touche de fraîcheur et un peu de levure nutritionnelle pour rehausser les saveurs, en veillant à conserver la texture crémeuse et la saveur intense.",
-        "Étape 8 : Garnir de feuilles de basilic fraîches et de tranches de citron pour une présentation élégante et une touche d'acidité."
+        "Étape 6 : Assaisonner avec 5 g de sel. Les aubergines doivent être fondantes et bien enrobées, la sauce concentrée et parfumée.",
+        "Étape 7 : Servir tiède ou froid, garni de 5 g de feuilles de basilic."
       ],
       "diet_flags": {
         "vegan": true,
@@ -165972,6 +166112,39 @@
             "note": "Pour tremper dans la sauce",
             "optional": true
           }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 200,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -166094,13 +166267,13 @@
       "_quality_score": 0.97,
       "description": "Ragoût géorgien de légumes, mijotage lent pour une chair fondante et confite riche en arômes, avec une sauce parfumée et des légumes tendres, aux saveurs de coriandre et de fenugrec, typiques de la cuisine caucasienne.",
       "instructions": [
-        "Étape 1 : Couper les aubergines en cubes de 3 cm, les poivrons rouges en lanières et les oignons blancs en demi-lunes. Faire revenir les oignons dans 30 ml d'huile de tournesol à feu moyen pendant 5 minutes, jusqu'à ce qu'ils soient translucides.",
+        "Étape 1 : Couper les aubergines en cubes de 3 cm, les poivrons rouges en lanières et les oignons blancs en demi-lunes. Faire revenir les oignons et 9 g d'ail émincé dans 45 ml d'huile de tournesol à feu moyen pendant 5 minutes, jusqu'à ce qu'ils soient translucides.",
         "Étape 2 : Ajouter les aubergines et les poivrons au mélange d'oignons. Faire sauter à feu vif pendant 5 minutes, jusqu'à ce que les légumes soient légèrement colorés et émettent un parfum agréable.",
         "Étape 3 : Incorporer les tomates concassées, la coriandre en poudre et le fenugrec dans le mélange de légumes. Cuire pendant 3 minutes, en remuant régulièrement, jusqu'à ce que les saveurs soient bien mélangées.",
         "Étape 4 : Verser 200 ml d'eau dans le mélange de légumes. Couvrir et mijoter à feu doux pendant 25 minutes, jusqu'à ce que les légumes soient fondants et la sauce parfumée.",
-        "Étape 5 : Ajouter des noix concassées et des herbes fraîches ciselées, comme du persil ou de la coriandre, dans le ragoût pour ajouter de la texture et de la saveur.",
-        "Étape 6 : Assaisonner le ragoût avec du sel et du poivre pour ajuster les saveurs. Ajouter des gousses d'ail émincées pour renforcer le parfum.",
-        "Étape 7 : Servir chaud, accompagné de riz ou de pain pour tremper dans la sauce, et garni de coriandre fraîche ciselée pour un toucher de fraîcheur."
+        "Étape 5 : Ajouter 80 g de noix concassées, 15 g de persil et 15 g de coriandre ciselés dans le ragoût pour ajouter de la texture et de la saveur.",
+        "Étape 6 : Assaisonner avec 5 g de sel et 2 g de poivre.",
+        "Étape 7 : Servir chaud, accompagné de riz ou de pain pour tremper dans la sauce."
       ],
       "diet_flags": {
         "vegan": true,
@@ -166242,6 +166415,17 @@
             "note": "Pour une touche de fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -166373,7 +166557,7 @@
         "Étape 6 : Ajouter 240g de tomates fraîches les 10 dernières minutes pour une légère acidité et une touche de couleur, ainsi que pour équilibrer les saveurs.",
         "Étape 7 : Rectifier la texture : ajouter de l'eau si trop épais, mijoter découvert si trop liquide, pour obtenir une consistance crémeuse et délicieuse.",
         "Étape 8 : Saler en fin de cuisson avec 5g de sel de table pour équilibrer les saveurs et ajouter un filet d'huile d'olive vierge extra pour une touche de fraîcheur et de créativité.",
-        "Étape 9 : Servir chaud, garni de persil ciselé et de levure nutritionnelle râpée pour une touche de saveur et de texture additionnelles."
+        "Étape 9 : Servir chaud, garni de 10 g de persil ciselé."
       ],
       "diet_flags": {
         "vegan": true,
@@ -166408,7 +166592,7 @@
       "composition": [
         {
           "ingredient": "parsley_fresh_herb",
-          "quantity": 30,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "herb",
@@ -166418,8 +166602,8 @@
           }
         },
         {
-          "ingredient": "coriander_spice_seed",
-          "quantity": 3,
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -166484,9 +166668,9 @@
           }
         },
         {
-          "ingredient": "lemon_raw",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -166517,7 +166701,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -166533,6 +166717,17 @@
           "meta": {
             "role": "spice",
             "form": "ground",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chives_raw_fresh",
+          "quantity": 50,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -166665,9 +166860,9 @@
       "description": "Ragoût persan aux herbes fraîches, mijotage lent pour une sauce épaisse et parfumée, avec un mélange d'arômes de persil, coriandre et fenugrec, typique de la cuisine iranienne.",
       "instructions": [
         "Étape 1 : Faire chauffer 45ml d'huile de tournesol dans une grande casserole à feu moyen-vif, puis ajouter 150g d'oignon jaune émincé et faire saisir pendant 5 minutes, en remuant régulièrement, jusqu'à ce que les oignons soient dorés et parfumés.",
-        "Étape 2 : Incorporer 30g de persil frais haché, 3g de coriandre moulue et 3g de fenugrec, puis faire revenir pendant 10 minutes à feu moyen, en remuant occasionnellement, jusqu'à ce que les herbes soient tendres et parfumées.",
+        "Étape 2 : Incorporer 200g de persil, 100g de coriandre et 50g de ciboulette finement hachés, ainsi que 3g de fenugrec séché, puis faire revenir pendant 10 minutes à feu moyen, en remuant occasionnellement, jusqu'à ce que les herbes soient tendres et parfumées.",
         "Étape 3 : Ajouter 300g de haricots rouges et 750ml de bouillon végétal, puis porter à ébullition, en remuant régulièrement, avant de réduire le feu à moyen.",
-        "Étape 4 : Assaisonner avec 3g de curcuma, 5g de sel et 2g de poivre, ainsi que 100g de jus de citron frais, puis laisser mijoter pendant 20 minutes, en remuant occasionnellement, jusqu'à ce que les saveurs soient bien intégrées.",
+        "Étape 4 : Assaisonner avec 3g de curcuma, 3g de sel et 2g de poivre, ainsi que 40 ml de jus de citron frais, puis laisser mijoter pendant 20 minutes, en remuant occasionnellement, jusqu'à ce que les saveurs soient bien intégrées.",
         "Étape 5 : Réduire le feu à bas et laisser mijoter pendant 10 minutes supplémentaires, en remuant régulièrement, pour que les saveurs se concentrent et la sauce épaississe.",
         "Étape 6 : Puis servir chaud, garni de feuilles de persil frais et d'un filet de jus de citron, pour un repas complet et parfumé."
       ],
@@ -166704,7 +166899,7 @@
       "composition": [
         {
           "ingredient": "quinoa_raw_dried",
-          "quantity": 250,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "grain",
@@ -166715,7 +166910,7 @@
         },
         {
           "ingredient": "potato_raw_flesh",
-          "quantity": 600,
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -166781,7 +166976,7 @@
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 9.4,
+          "quantity": 11,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -166793,7 +166988,7 @@
         },
         {
           "ingredient": "water",
-          "quantity": 750.0,
+          "quantity": 900,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -166839,6 +167034,28 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -166964,14 +167181,14 @@
       "_quality_score": 0.93,
       "description": "Ragoût crémeux de quinoa, pommes de terre fondantes et haricots noirs, parfumé au cumin et à la coriandre fraîche, dans un bouillon végétal savoureux, avec une texture onctueuse et des arômes épicés.",
       "instructions": [
-        "Étape 1 : Rincer 250g de quinoa cru à l'eau froide et toaster à sec dans une casserole 2 min à feu moyen, en écoutant le son sec des grains qui sautent.",
+        "Étape 1 : Rincer 150g de quinoa cru à l'eau froide et le toaster à sec 2 min dans une casserole à feu moyen.",
         "Étape 2 : Saisir 150g d'oignon jaune émincé et 20g d'ail haché dans 45ml d'huile d'olive 5 min à feu moyen-vif, jusqu'à parfum et légère coloration dorée.",
-        "Étape 3 : Ajouter 3g de cumin en poudre et mélanger 1 min, en sentant l'arôme piquant du cumin.",
-        "Étape 4 : Incorporer 600g de pommes de terre crues coupées en dés, 300g de haricots noirs égouttés et 300g de maïs, en mélangeant bien pour que tous les ingrédients soient enrobés de sauce.",
-        "Étape 5 : Verser 750ml de bouillon végétal chaud, en écoutant le son de la liquide qui coule, et porter à ébullition.",
-        "Étape 6 : Ajouter le quinoa rincé, couvrir et cuire 15 min, en vérifiant la texture :.",
+        "Étape 3 : Ajouter 3g de cumin en poudre et mélanger 1 min.",
+        "Étape 4 : Incorporer 300g de pommes de terre crues coupées en dés, 300g de haricots noirs égouttés, 300g de maïs, 200 g de tomates concassées et 10 g d'ají (ou de piment) haché, en mélangeant bien pour que tous les ingrédients soient enrobés de sauce.",
+        "Étape 5 : Verser 900ml de bouillon végétal chaud et porter à ébullition.",
+        "Étape 6 : Ajouter le quinoa rincé, couvrir et cuire 15 min à feu doux.",
         "Étape 7 : Vérifier que les légumes sont tendres et les saveurs bien équilibrées, puis servir chaud, en décorant avec de la coriandre fraîche hachée.",
-        "Étape 8 : Assaisonner avec du sel et du poivre au goût, en rectifiant l'assaisonnement pour un équilibre parfait, et servir dans des bols préchauffés."
+        "Étape 8 : Assaisonner avec 5 g de sel et du poivre."
       ],
       "diet_flags": {
         "vegan": true,
@@ -167091,6 +167308,61 @@
             "note": "Pour un plat plus coloré et parfumé",
             "optional": true
           }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "paprika_powder",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 250,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -167149,18 +167421,23 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
+        "ail",
         "basil",
         "basilic",
         "bean",
         "blanc",
+        "bouillon",
         "braising",
         "coeliaque",
         "corn",
         "doux",
+        "eau",
         "enfants",
         "facile enfants",
         "famille",
+        "garlic",
         "gluten free",
         "granados",
         "haricot",
@@ -167169,6 +167446,7 @@
         "international",
         "kids",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "mais",
@@ -167177,22 +167455,27 @@
         "oignon",
         "olive",
         "onion",
+        "paprika",
         "parsley",
         "persil",
         "porotos",
+        "potable)",
         "ragout",
         "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sel",
+        "stock",
         "sweet",
         "table",
         "tomate",
         "tomato",
         "vegan",
+        "vegetable",
         "vegetalien",
         "vegetarien",
+        "water",
         "white",
         "wok"
       ],
@@ -167202,11 +167485,11 @@
       "_quality_score": 0.92,
       "description": "Ragoût de haricots et maïs mijoté lentement pour une sauce épaisse, concentrée et parfumée, avec une texture onctueuse et des saveurs de légumes tendres, typique de la cuisine méditerranéenne, où l'oignon caramélisé et les tomates fraîches se marient à la perfection.",
       "instructions": [
-        "Étape 1 : Faire revenir l'oignon 8 min à feu moyen, jusqu'à légère caramelisation et parfum dégagé, en sentant les arômes dégagés.",
-        "Étape 2 : Ajouter les tomates concassées et les épices, cuire 10 min à feu moyen, jusqu'à légère réduction et sauce onctueuse, en vérifiant la texture et la couleur de la sauce.",
-        "Étape 3 : Incorporer les haricots égouttés et le maïs en grains, verser 250 ml de bouillon de légumes, mijoter 25 min à feu doux, jusqu'à sauce épaisse et légumes tendres, en écoutant le son de la cuisson.",
-        "Étape 4 : Ajouter le basilic ciselé et rectifier l'assaisonnement, en ajoutant un filet de jus de citron si nécessaire, en vérifiant la saveur et la texture du plat.",
-        "Étape 5 : Servir chaud, dans des bols préchauffés, en ajoutant des herbes fraîches si nécessaire, pour un plat réconfortant et savoureux."
+        "Étape 1 : Faire revenir l'oignon et 10 g d'ail émincés dans 45 ml d'huile d'olive, 8 min à feu moyen.",
+        "Étape 2 : Ajouter les tomates concassées et 3 g de paprika, cuire 10 min à feu moyen, jusqu'à légère réduction et sauce onctueuse, en vérifiant la texture et la couleur de la sauce.",
+        "Étape 3 : Incorporer les haricots égouttés et le maïs en grains, verser 250 ml de bouillon de légumes, mijoter 25 min à feu doux, jusqu'à sauce épaisse et légumes tendres.",
+        "Étape 4 : Ajouter le basilic ciselé et rectifier l'assaisonnement, en ajoutant 10 ml de jus de citron, en vérifiant la saveur et la texture du plat.",
+        "Étape 5 : Servir chaud."
       ],
       "diet_flags": {
         "vegan": true,
@@ -167274,7 +167557,7 @@
         },
         {
           "ingredient": "chilli_pepper_raw",
-          "quantity": 15,
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -167325,6 +167608,17 @@
             "ingredient_fr": "riz blanc cuit",
             "note": "Pour absorber la sauce",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 300,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -167385,6 +167679,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "1 heure",
         "afrique de l'ouest",
         "ail",
@@ -167394,6 +167689,7 @@
         "braising",
         "chilli",
         "coeliaque",
+        "eau",
         "garlic",
         "gluten free",
         "intermediaire",
@@ -167411,6 +167707,7 @@
         "pepper",
         "piment",
         "plantain",
+        "potable)",
         "ragout",
         "rice",
         "riz",
@@ -167426,6 +167723,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "water",
         "west_african",
         "white",
         "wok",
@@ -167438,12 +167736,12 @@
       "description": "Ragoût de plantain créé avec des rondelles de plantain cuites dans une sauce tomate épaisse et parfumée, inspiré de la cuisine caribéenne — texture onctueuse et saveur intense, avec une légère note de piment habanero.",
       "instructions": [
         "Étape 1 : Peler 400g de banane plantain mûrs et les couper en rondelles épaisses de 2 cm, en vérifiant la texture ferme mais non farineuse, avec une légère résistance à la pression.",
-        "Étape 2 : Chauffer 45ml d'huile d'olive extra vierge dans une cocotte à feu moyen, en écoutant le son de l'huile qui chauffe et en sentant son arôme subtil.",
+        "Étape 2 : Chauffer 45ml d'huile d'olive extra vierge dans une cocotte à feu moyen.",
         "Étape 3 : Faire revenir 150g d'oignon jaune émincé pendant 6 min à feu moyen, jusqu'à légère coloration dorée, en sentant l'arôme sucré de l'oignon et en contrôlant la texture tendre.",
-        "Étape 4 : Ajouter 20g d'ail haché, 300g de tomates concassées et 15g de piment habanero haché, en mélangeant bien pour que tous les ingrédients soient enrobés de sauce, en vérifiant la couleur rougeâtre de la sauce.",
-        "Étape 5 : Cuire la sauce tomate pendant 8 min à feu moyen, en vérifiant la texture : la sauce doit être épaisse, parfumée et légèrement réduite, en écoutant le son de la sauce qui mijote.",
+        "Étape 4 : Ajouter 20g d'ail haché, 300g de tomates concassées et 5g de piment habanero haché, en mélangeant bien pour que tous les ingrédients soient enrobés de sauce, en vérifiant la couleur rougeâtre de la sauce.",
+        "Étape 5 : Cuire la sauce tomate pendant 8 min à feu moyen, en vérifiant la texture : la sauce doit être épaisse, parfumée et légèrement réduite.",
         "Étape 6 : Incorporer les rondelles de banane plantain, en les plaçant délicatement dans la sauce pour éviter de les écraser, en contrôlant la température pour éviter la surchauffe.",
-        "Étape 7 : Verser 300ml d'eau chaude, en écoutant le son de la liquide qui coule, et assaisonner de 5g de sel, en rectifiant l'assaisonnement pour un équilibre parfait et en vérifiant la texture finale onctueuse.",
+        "Étape 7 : Verser 300ml d'eau chaude, et assaisonner de 5g de sel, puis laisser mijoter 15 minutes à couvert, jusqu'à ce que la banane plantain soit tendre.",
         "Étape 8 : Servir sans attendre."
       ],
       "diet_flags": {

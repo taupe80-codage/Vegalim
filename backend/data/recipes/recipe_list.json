@@ -5895,13 +5895,14 @@
     "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "vegan",
       "vegetarian"
     ],
-    "allergens": [],
+    "allergens": [
+      "gluten"
+    ],
     "servings": 4,
-    "time_total": 570,
+    "time_total": 630,
     "confidence": 1.0,
     "description": "Ragoût français de haricots blancs mijotés, parfumé au thym frais, avec une sauce nappante et une liaison naturelle par l'amidon, cuite à feu doux pour une texture tendre et une saveur intense.",
     "composition": [
@@ -5964,6 +5965,16 @@
         "ingredient": "water",
         "quantity": 500.0,
         "unit": "ml"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "breadcrumbs_dried",
+        "quantity": 40,
+        "unit": "g"
       }
     ],
     "n_instructions": 7,
@@ -8432,7 +8443,7 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 77,
+    "time_total": 102,
     "confidence": 1.0,
     "description": "Ragoût croate de haricots blancs cuits, mijotés lentement dans un bouillon végétal pour une sauce épaisse et concentrée, riche en arômes et saveurs traditionnelles.",
     "composition": [
@@ -8497,7 +8508,7 @@
         "unit": "ml"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -15151,6 +15162,21 @@
         "ingredient": "white_bread_unsalted",
         "quantity": null,
         "unit": "1 tranche"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 200,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -21432,7 +21458,7 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 2,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -21441,7 +21467,7 @@
         "unit": "g"
       },
       {
-        "ingredient": "base_green_curry_paste_250117",
+        "ingredient": "base_curry_paste_49c97f",
         "quantity": 30,
         "unit": "g"
       },
@@ -21493,6 +21519,11 @@
       {
         "ingredient": "coriander_raw_fresh_herb",
         "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
         "unit": "g"
       }
     ],
@@ -29695,12 +29726,12 @@
     "composition": [
       {
         "ingredient": "parsley_fresh_herb",
-        "quantity": 30,
+        "quantity": 200,
         "unit": "g"
       },
       {
-        "ingredient": "coriander_spice_seed",
-        "quantity": 3,
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -29729,9 +29760,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 100,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
       },
       {
         "ingredient": "vegetable_stock_dried",
@@ -29745,12 +29776,17 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       },
       {
         "ingredient": "black_pepper_spice",
         "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chives_raw_fresh",
+        "quantity": 50,
         "unit": "g"
       }
     ],
@@ -29885,12 +29921,12 @@
     "composition": [
       {
         "ingredient": "quinoa_raw_dried",
-        "quantity": 250,
+        "quantity": 150,
         "unit": "g"
       },
       {
         "ingredient": "potato_raw_flesh",
-        "quantity": 600,
+        "quantity": 300,
         "unit": "g"
       },
       {
@@ -29920,12 +29956,12 @@
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
+        "quantity": 11,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 750.0,
+        "quantity": 900,
         "unit": "ml"
       },
       {
@@ -29946,6 +29982,16 @@
       {
         "ingredient": "black_pepper_spice",
         "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 10,
         "unit": "g"
       }
     ],
@@ -35467,7 +35513,7 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 80,
+    "time_total": 95,
     "confidence": 1.0,
     "description": "Ragoût d'aubergine créatif, avec aubergines fondantes et sauce parfumée, mijoté à feu doux pour une texture veloutée et une saveur intense, typique de la cuisine méditerranéenne.",
     "composition": [
@@ -35505,9 +35551,14 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 5,
+        "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -35567,6 +35618,31 @@
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
         "unit": "quelques feuilles"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 250,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 10,
+        "unit": "ml"
       }
     ],
     "n_instructions": 5,
@@ -35643,6 +35719,11 @@
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
       }
     ],
     "n_instructions": 9,
@@ -35684,7 +35765,7 @@
       },
       {
         "ingredient": "chilli_pepper_raw",
-        "quantity": 15,
+        "quantity": 5,
         "unit": "g"
       },
       {
@@ -35706,6 +35787,11 @@
         "ingredient": "white_rice_raw_seed_unenriched",
         "quantity": null,
         "unit": "150g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 300,
+        "unit": "ml"
       }
     ],
     "n_instructions": 8,
@@ -35852,9 +35938,19 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 5,
+        "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -45652,11 +45748,6 @@
         "unit": "ml"
       },
       {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
         "ingredient": "garlic_raw",
         "quantity": 20,
         "unit": "g"
@@ -45677,7 +45768,7 @@
         "unit": "ml"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 5,
     "flags": [],
     "similar": [
       {
@@ -50406,7 +50497,7 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
+        "ingredient": "lemon_juice",
         "quantity": 30,
         "unit": "ml"
       },
@@ -50427,8 +50518,18 @@
       },
       {
         "ingredient": "mint_fresh_herb",
-        "quantity": 20,
+        "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -50838,9 +50939,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon",
-        "quantity": 50.0,
-        "unit": "g"
+        "ingredient": "lemon_juice",
+        "quantity": 15,
+        "unit": "ml"
       },
       {
         "ingredient": "chives_raw_fresh",
@@ -50861,6 +50962,11 @@
         "ingredient": "water",
         "quantity": 700.0,
         "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
       }
     ],
     "n_instructions": 6,
@@ -51001,7 +51107,7 @@
       },
       {
         "ingredient": "hazelnut_oil_plant",
-        "quantity": 1,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -51018,9 +51124,14 @@
         "ingredient": "water",
         "quantity": 800.0,
         "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -51045,7 +51156,7 @@
     "description": "Velouté d'automne au potimarron, gingembre frais et crème fraîche. Sa couleur orangée et sa douceur épicée en font un classique hivernal, avec une texture veloutée et nappante.",
     "composition": [
       {
-        "ingredient": "butternut_squash_raw",
+        "ingredient": "red_kuri_squash_raw_skinless",
         "quantity": 800,
         "unit": "g"
       },
@@ -51088,9 +51199,19 @@
         "ingredient": "water",
         "quantity": 800.0,
         "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutmeg_spice",
+        "quantity": 0.5,
+        "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -51213,16 +51334,21 @@
       },
       {
         "ingredient": "chives_raw_fresh",
-        "quantity": 1,
+        "quantity": 5,
         "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 800,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },

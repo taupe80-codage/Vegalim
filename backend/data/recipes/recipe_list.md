@@ -90,7 +90,7 @@
 - **Carottes Glacées à L'érable (Vegan)** _(diabetes_friendly, gluten_free, kid_friendly, low_calorie, nut_free, vegan, vegetarian, side, canadian)_ — `side_carottes_glacees_a_lerabl_1d1c44` 🔁 doublon possible : Carottes Glacées à L'érable
 - **Carottes Râpées** _(gluten_free, kid_friendly, lactose_free, nut_free, raw, vegan, vegetarian, starter, french)_ — `entry_carottes_rapees_e66bae`
 - **Carpaccio Betterave Agrumes** _(diabetes_friendly, gluten_free, kid_friendly, low_calorie, starter, french)_ — `entry_carpaccio_betterave_agrum_ee8b66`
-- **Cassoulet** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, french)_ — `stew_cassoulet_938fd4`
+- **Cassoulet** _(diabetes_friendly, vegan, vegetarian, main, french)_ — `stew_cassoulet_938fd4`
 - **Caviar D'aubergine** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, starter, international)_ — `main_caviar_d_aubergine_0e824d`
 - **Champignons Sautés Ail Persil** _(diabetes_friendly, gluten_free, kid_friendly, low_calorie, nut_free, side, french)_ — `side_champignons_sautes_ail_pe_b477e2`
 - **Champignons à la Grecque** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, starter, french)_ — `entry_champignons_a_la_grecque_efe65f`
