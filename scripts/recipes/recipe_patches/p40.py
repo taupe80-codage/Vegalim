@@ -1,0 +1,101 @@
+"""Lot 40 : soupes (châtaignes → tomate), tamales, currys."""
+
+PATCHES = {
+    "soup_soupe_de_chataignes_6b8e6f": [
+        ("ing", "european_chestnuts_sweet_raw_peeled", "european_chestnuts_sweet_cooked"),
+        ("qty", "olive_oil_extra_virgin_plant", 15),
+        ("add", "thyme_fresh_herb", 2, "g", "herb"),
+        ("add", "bay_leaf_spice", 1, "g", "herb"),
+        ("add", "nutmeg_spice", 0.5, "g", "spice"),
+        ("add", "table_salt_unenriched", 3, "g", "seasoning"),
+        ("txt", "et 2 gousses d'ail écrasées dans 2 ml d'huile d'olive", "et 9 g d'ail écrasé dans 15 ml d'huile d'olive"),
+        ("txt", "assaisonner de sel, poivre et muscade", "assaisonner de 3 g de sel, de poivre et d'une pincée de muscade"),
+        ("step-", "Vérifier que la texture est crémeuse et que la couleur est brun doré"),
+        ("step-", "Décorer de châtaignes entières et de cerfeuil frais"),
+        ("txt", "Servir chaud dans des bols préchauffés, garni d'un peu de thym frais et de quelques feuilles de cerfeuil, accompagné d'un peu de pain grillé ou de crackers pour un contraste de textures.", "Servir chaud."),
+    ],
+    "soup_soupe_de_topinambours_175dc4": [
+        ("add", "table_salt_unenriched", 3, "g", "seasoning"),
+        ("txt", "puis porter à ébullition. Laisser mijoter pendant 10 minutes.", "puis porter à ébullition."),
+        ("txt", ", ou jusqu'à ce que les topinambours soient totalement fondants et que la lame d'un couteau ressorte sèche", ", jusqu'à ce que les topinambours soient totalement fondants"),
+        ("txt", "assaisonner de sel, poivre et muscade", "assaisonner de 3 g de sel, de poivre et de muscade"),
+        ("step-", "Vérifier que la texture est légèrement sucrée"),
+        ("txt", "Décorer de noisettes grillées et d'un filet d'huile de noisette pour ajouter une touche de saveur et de couleur.", "Parsemer de 30 g de noisettes grillées concassées."),
+        ("step-", "Apprécier le goût caractéristique de noisette"),
+    ],
+    # citronnelle et combava ajoutés 2 min avant la fin : ils doivent infuser
+    "soup_soupe_thai_coco_citronnelle_375c23": [
+        ("txt", "jusqu'à ce qu'elle soit parfumée et commence à fumer légèrement", "jusqu'à ce qu'elle soit chaude"),
+        ("txt", "Ajouter le bouillon de légumes et porter à frémissement.", "Ajouter le bouillon de légumes, la citronnelle écrasée et les 3g de feuilles de combava, puis porter à frémissement."),
+        ("txt", "Ajouter la citronnelle hachée, 150g de champignons de Paris émincés, les 3g de feuilles de combava et le tofu ferme en cubes. Cuire pendant 2 minutes, en remuant régulièrement, jusqu'à ce que le tofu soit chaud et la citronnelle parfumée, en libérant son arôme caractéristique.",
+         "Ajouter 150g de champignons de Paris émincés et le tofu ferme en cubes. Cuire 5 minutes, jusqu'à ce que les champignons soient tendres."),
+        ("txt", "Servir chaud, garni de coriandre fraîche et de tranches de citron vert", "Servir chaud, arrosé de 20 ml de jus de citron vert et garni de coriandre fraîche"),
+    ],
+    # tamales enfournés « croustillants », farce préparée après la cuisson, parmesan, 750 ml pour 300 g de masa
+    "soup_tamales_7dd98a": [
+        ("ing", "parmesan_grated_dried_cow", "queso_fresco_block_cow", 100),
+        ("qty", "water", 300),
+        ("qty", "vegetable_stock_dried", 3.8),
+        ("qty", "table_salt_unenriched", 3),
+        ("add", "sunflower_oil_plant", 70, "ml", "fat"),
+        ("steps", [
+            "Mélanger 300 g de masa harina avec 60 ml d'huile de tournesol, 3 g de sel et environ 300 ml de bouillon végétal tiède, jusqu'à obtenir une pâte souple et homogène.",
+            "Faire revenir 150 g d'oignon et 9 g d'ail émincés dans 10 ml d'huile, 5 minutes à feu moyen.",
+            "Ajouter 300 g de haricots rouges, 10 g de piment séché et 3 g de cumin, cuire 5 minutes en écrasant grossièrement, puis incorporer 100 g de queso fresco émietté.",
+            "Étaler la pâte sur des feuilles de maïs trempées, déposer la farce au centre et refermer.",
+            "Cuire les tamales à la vapeur pendant 1 heure, jusqu'à ce que la pâte se détache facilement de la feuille.",
+            "Servir chauds, avec une salsa.",
+        ]),
+        ("time", 17, 30, 60),
+    ],
+    "soup_thai_red_curry_f6bb3c": [
+        ("qty", "garlic_raw", 10),
+        ("txt", "Faire revenir 2 g d'ail émincé", "Faire revenir 10 g d'ail émincé"),
+        ("txt", "Ajouter 2 à 3 cuillères à soupe de pâte de curry rouge végétal", "Ajouter 30 g de pâte de curry rouge"),
+        ("txt", "Assaisonner avec 20 ml de sauce de soja végétale, du sucre de palme et du jus de citron vert", "Assaisonner avec 15 ml de sauce poisson végétale, 10 g de sucre de coco et 15 ml de jus de citron vert"),
+    ],
+    # 500 ml d'huile comptés (100 ml dans le texte), légumes du texte absents
+    "soup_tofu_frit_au_bouillon_1bad0a": [
+        ("qty", "vegetable_oil_plant", 40),
+        ("add", "button_mushroom_raw", 150, "g", "vegetable"),
+        ("add", "bok_choy_raw", 200, "g", "vegetable"),
+        ("txt", "ajouter des légumes (champignons, pak-choï)", "ajouter 150 g de champignons émincés et 200 g de pak-choï"),
+        ("txt", "en garnissant de ciboulette fraîche hachée", "en garnissant de 60 g d'oignon vert ciselé"),
+        ("time", 11, 15, 30),
+    ],
+    # tom kha sans galanga ni combava, citron vert entier, Na 1408
+    "soup_tom_kha_cee413": [
+        ("ing", "lime_raw", "lime_juice_fresh", 40, "ml"),
+        ("qty", "soy_sauce_shoyu_reduced_sodium", 20),
+        ("qty", "table_salt_unenriched", 2),
+        ("add", "galangal", 20, "g", "aromatic"),
+        ("add", "kaffir_lime_leaf", 3, "g", "aromatic"),
+        ("add", "chilli_pepper_raw", 5, "g", "spice"),
+        ("txt", "Ajouter 40 g de citronnelle fraîche écrasée, 11,2 g de gingembre frais râpé et 10 g de feuilles de coriandre fraîches.",
+         "Ajouter 40 g de citronnelle fraîche écrasée, 20 g de galanga en rondelles, 11 g de gingembre, 3 g de feuilles de combava et 5 g de piment écrasé."),
+        ("txt", "et 45 ml de sauce soja", "et 20 ml de sauce soja"),
+        ("txt", "Assaisonner avec 15 g de sucre, 5 g de sel et le jus de 140 g de lime.", "Assaisonner avec 15 g de sucre, 2 g de sel et 40 ml de jus de citron vert."),
+        ("step-", "Contrôler la température de la soupe"),
+        ("step-", "Déguster et ajuster les saveurs selon les préférences"),
+    ],
+    # galanga/combava ajoutés deux fois, 1 g de piment, ni champignons ni tomate
+    "soup_tom_yum_8001c0": [
+        ("qty", "garlic_raw", 10),
+        ("qty", "chilli_pepper_raw", 10),
+        ("ing", "lime", "lime_juice_fresh", 40, "ml"),
+        ("add", "button_mushroom_raw", 200, "g", "vegetable"),
+        ("add", "tomato_raw_ripe", 150, "g", "vegetable"),
+        ("add", "coriander_raw_fresh_herb", 10, "g", "herb"),
+        ("txt", "Incorporer 2 g d'ail émincé et 11,2 g de gingembre frais. Cuire pendant 2 minutes, en observant la texture tendre de l'ail et le parfum du gingembre.",
+         "Incorporer 10 g d'ail émincé, 11 g de gingembre frais, 200 g de champignons émincés et 150 g de tomates en quartiers. Cuire 5 minutes."),
+        ("txt", "Incorporer 70 g de jus de citron vert et 1 g de piment frais", "Incorporer 40 ml de jus de citron vert et 10 g de piment frais écrasé"),
+        ("step-", "Ajouter les 20 g de galanga et les 3 g de feuilles de kaffir"),
+    ],
+    "soup_tomato_k2d1p1": [
+        ("add", "basil_fresh_herb", 5, "g", "herb"),
+        ("txt", "Porter à ébullition à 100°C.", "Porter à ébullition."),
+        ("txt", "Servir avec un filet de crème de coco et du basilic frais, pour une touche de délice et de fraîcheur, en déposant délicatement les feuilles de basilic sur la surface de la soupe.", "Garnir de 5 g de basilic frais."),
+        ("step-", "Rectifier la consistance de la soupe"),
+        ("txt", "Servir chaud, dans des bols préchauffés.", "Servir chaud."),
+    ],
+}

@@ -160216,7 +160216,7 @@
       },
       "composition": [
         {
-          "ingredient": "european_chestnuts_sweet_raw_peeled",
+          "ingredient": "european_chestnuts_sweet_cooked",
           "quantity": 400,
           "unit": "g",
           "meta": {
@@ -160250,7 +160250,7 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 2,
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -160308,6 +160308,50 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "thyme_fresh_herb",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "bay_leaf_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "nutmeg_spice",
+          "quantity": 0.5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -160377,6 +160421,7 @@
         "(sweet)",
         "1 heure",
         "ail",
+        "bay",
         "blanc",
         "blending",
         "bouillon",
@@ -160409,11 +160454,15 @@
         "gluten free",
         "heavy",
         "kids",
+        "laurier",
+        "leaf",
         "leger",
         "legumes",
         "light",
         "low calorie",
         "minceur",
+        "muscade",
+        "nutmeg",
         "oignon",
         "olive",
         "onion",
@@ -160426,6 +160475,8 @@
         "soupe",
         "stalk",
         "stock",
+        "thym",
+        "thyme",
         "vegetable",
         "vegetarien",
         "water",
@@ -160438,15 +160489,13 @@
       "_chef_note": "Cette recette est une variante végétalienne de la classique soupe de châtaignes.",
       "description": "Soupe crémeuse de châtaignes cuites, liée à la crème fraîche et parfumée aux épices, évoquant les forêts françaises en hiver avec une texture veloutée.",
       "instructions": [
-        "Étape 1: Faire revenir 150 g d'oignon émincé et 2 gousses d'ail écrasées dans 2 ml d'huile d'olive vierge extra à feu moyen pendant 5 minutes, jusqu'à ce qu'ils soient parfumés et légèrement dorés.",
+        "Étape 1: Faire revenir 150 g d'oignon émincé et 9 g d'ail écrasé dans 15 ml d'huile d'olive vierge extra à feu moyen pendant 5 minutes, jusqu'à ce qu'ils soient parfumés et légèrement dorés.",
         "Étape 2: Ajouter 400 g de châtaignes cuites égouttées, 80 g de céleri émincé, 1 branche de thym frais et 2 feuilles de laurier, puis faire revenir pendant 3 minutes, en remuant régulièrement, jusqu'à ce que les saveurs se mélangent.",
         "Étape 3: Verser 700 ml de bouillon de légumes chaud et porter à ébullition, en surveillant la température pour éviter la surchauffe.",
         "Étape 4: Mijoter pendant 15 minutes, ou jusqu'à ce que les châtaignes soient tendres et que le liquide ait réduit légèrement, en vérifiant la texture toutes les 5 minutes.",
         "Étape 5: Mixer la préparation finement jusqu'à obtenir une texture veloutée et crémeuse, en utilisant un blender ou un mixeur pour éviter les grumeaux.",
-        "Étape 6: Incorporer 80 ml de crème fraîche et assaisonner de sel, poivre et muscade, en goûtant pour ajuster les saveurs.",
-        "Étape 7: Vérifier que la texture est crémeuse et que la couleur est brun doré chaud, en ajoutant un peu de crème fraîche si nécessaire pour obtenir la consistance désirée.",
-        "Étape 8: Décorer de châtaignes entières et de cerfeuil frais, en ajoutant un peu de thym pour parfumer.",
-        "Étape 9: Servir chaud dans des bols préchauffés, garni d'un peu de thym frais et de quelques feuilles de cerfeuil, accompagné d'un peu de pain grillé ou de crackers pour un contraste de textures."
+        "Étape 6: Incorporer 80 ml de crème fraîche et assaisonner de 3 g de sel, de poivre et d'une pincée de muscade, en goûtant pour ajuster les saveurs.",
+        "Étape 7: Servir chaud."
       ],
       "diet_flags": {
         "vegan": false,
@@ -160565,6 +160614,17 @@
             "role": "ingredient",
             "note": "pour reconstituer le bouillon"
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -160661,13 +160721,16 @@
         "oignon",
         "onion",
         "potable)",
+        "salt",
         "sans gluten",
         "sans viande",
         "sauteed",
+        "sel",
         "simple",
         "soup",
         "soupe",
         "stock",
+        "table",
         "topinambour",
         "topinambours",
         "vegetable",
@@ -160684,14 +160747,12 @@
       "instructions": [
         "Étape 1: Éplucher les topinambours en les plongeant dans l'eau citronnée au fur et à mesure pour éviter le noircissement, pendant environ 10 minutes.",
         "Étape 2: Faire suer l'oignon jaune et l'ail dans 30 g de beurre à feu doux pendant 5 minutes, jusqu'à ce qu'ils soient parfumés et légèrement caramélisés.",
-        "Étape 3: Ajouter les topinambours et 700 ml de bouillon de légumes, puis porter à ébullition. Laisser mijoter pendant 10 minutes.",
-        "Étape 4: Cuire à couvert pendant 25 minutes, ou jusqu'à ce que les topinambours soient totalement fondants et que la lame d'un couteau ressorte sèche.",
+        "Étape 3: Ajouter les topinambours et 700 ml de bouillon de légumes, puis porter à ébullition.",
+        "Étape 4: Cuire à couvert pendant 25 minutes, jusqu'à ce que les topinambours soient totalement fondants.",
         "Étape 5: Mixer la préparation finement jusqu'à obtenir une texture veloutée, en ajoutant si nécessaire un peu d'eau pour ajuster la consistance.",
-        "Étape 6: Incorporer 100 ml de crème fraîche et assaisonner de sel, poivre et muscade. Mélanger bien pour que les saveurs se fondent.",
-        "Étape 7: Vérifier que la texture est légèrement sucrée et que la couleur est crème, en ajustant si nécessaire l'assaisonnement.",
-        "Étape 8: Décorer de noisettes grillées et d'un filet d'huile de noisette pour ajouter une touche de saveur et de couleur.",
-        "Étape 9: Servir sans attendre.",
-        "Étape 10: Apprécier le goût caractéristique de noisette et d'artichaut du topinambour, résultat d'une cuisson soigneuse et d'une sélection d'ingrédients de qualité."
+        "Étape 6: Incorporer 100 ml de crème fraîche et assaisonner de 3 g de sel, de poivre et de muscade. Mélanger bien pour que les saveurs se fondent.",
+        "Étape 7: Parsemer de 30 g de noisettes grillées concassées.",
+        "Étape 8: Servir sans attendre."
       ],
       "diet_flags": {
         "vegan": false,
@@ -160999,13 +161060,13 @@
       "_quality_score": 0.74,
       "description": "Soupe thaïe crémeuse façon tom kha, au lait de coco, citronnelle, feuilles de combava et gingembre, avec champignons et tofu — relevée de piment et citron vert, garnie de coriandre fraîche.",
       "instructions": [
-        "Étape 1 : Faire chauffer l'huile de sésame dans une grande casserole à feu moyen pendant 2 minutes, jusqu'à ce qu'elle soit parfumée et commence à fumer légèrement.",
+        "Étape 1 : Faire chauffer l'huile de sésame dans une grande casserole à feu moyen pendant 2 minutes, jusqu'à ce qu'elle soit chaude.",
         "Étape 2 : Ajouter l'ail haché et le gingembre frais haché, cuire 1 minute à feu moyen-vif, en remuant régulièrement, jusqu'à ce qu'ils soient parfumés et légèrement dorés.",
-        "Étape 3 : Ajouter le bouillon de légumes et porter à frémissement. Laisser mijoter 15 minutes à feu doux, en couvrant la casserole, jusqu'à ce que les saveurs soient bien mélangées et le bouillon ait réduit légèrement.",
+        "Étape 3 : Ajouter le bouillon de légumes, la citronnelle écrasée et les 3g de feuilles de combava, puis porter à frémissement. Laisser mijoter 15 minutes à feu doux, en couvrant la casserole, jusqu'à ce que les saveurs soient bien mélangées et le bouillon ait réduit légèrement.",
         "Étape 4 : Ajouter la sauce soja et 5g de piment rouge émincé selon le niveau de piquant souhaité, puis ajuster l'assaisonnement. Émulsionner pendant 1 minute pour bien mélanger les saveurs et obtenir une texture homogène.",
         "Étape 5 : Ajouter le lait de coco et porter à frémissement. Réduire à feu doux et laisser cuire pendant 5 minutes, en remuant régulièrement, jusqu'à ce que la soupe soit crémeuse et parfumée, avec une texture onctueuse.",
-        "Étape 6 : Ajouter la citronnelle hachée, 150g de champignons de Paris émincés, les 3g de feuilles de combava et le tofu ferme en cubes. Cuire pendant 2 minutes, en remuant régulièrement, jusqu'à ce que le tofu soit chaud et la citronnelle parfumée, en libérant son arôme caractéristique.",
-        "Étape 7 : Servir chaud, garni de coriandre fraîche et de tranches de citron vert, pour profiter de la texture crémeuse et des saveurs thaï de cette soupe, idéale pour un repas réconfortant."
+        "Étape 6 : Ajouter 150g de champignons de Paris émincés et le tofu ferme en cubes. Cuire 5 minutes, jusqu'à ce que les champignons soient tendres.",
+        "Étape 7 : Servir chaud, arrosé de 20 ml de jus de citron vert et garni de coriandre fraîche, pour profiter de la texture crémeuse et des saveurs thaï de cette soupe, idéale pour un repas réconfortant."
       ],
       "diet_flags": {
         "vegan": true,
@@ -161033,9 +161094,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 17,
-        "prep_passive_min": 10,
-        "cook_min": 25,
-        "total_min": 52
+        "prep_passive_min": 30,
+        "cook_min": 60,
+        "total_min": 107
       },
       "composition": [
         {
@@ -161051,7 +161112,7 @@
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 9.4,
+          "quantity": 3.8,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -161063,7 +161124,7 @@
         },
         {
           "ingredient": "water",
-          "quantity": 750.0,
+          "quantity": 300,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -161093,8 +161154,8 @@
           }
         },
         {
-          "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 150,
+          "ingredient": "queso_fresco_block_cow",
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -161138,7 +161199,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -161156,6 +161217,17 @@
             "ingredient_fr": "persil frais ciselé",
             "note": "Pour une touche de fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 70,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -161217,7 +161289,6 @@
       "search_tokens": [
         "(eau",
         "(farine",
-        "1 heure",
         "ail",
         "americain",
         "american",
@@ -161229,6 +161300,7 @@
         "cumin",
         "eau",
         "fort",
+        "fresco",
         "garlic",
         "gluten free",
         "haricot",
@@ -161238,21 +161310,24 @@
         "kidney",
         "leger",
         "legumes",
+        "lent",
         "light",
+        "long",
         "low calorie",
         "mais",
         "masa",
+        "mijote",
         "minceur",
         "moyen",
         "nixtamalise)",
         "oignon",
         "onion",
-        "parmesan",
         "parsley",
         "pepper",
         "persil",
         "piment",
         "potable)",
+        "queso",
         "red",
         "rouge",
         "salt",
@@ -161261,8 +161336,10 @@
         "sel",
         "steaming",
         "stock",
+        "sunflower",
         "table",
         "tamales",
+        "tournesol",
         "usa",
         "vegetable",
         "vegetarien",
@@ -161275,14 +161352,12 @@
       "_chef_note": "Utiliser des ingrédients de bonne qualité pour obtenir le meilleur résultat.",
       "description": "Pâte de maïs dorée en cuisson pour une texture croustillante à l'extérieur et tendre à cœur, typique de la cuisine mexicaine traditionnelle, avec une farce parfumée aux haricots rouges, piment séché et épices.",
       "instructions": [
-        "Étape 1: Émulsionner 300 g de masa harina (farine de maïs nixtamalisé) avec 750 ml de bouillon végétal pendant 5 minutes à feu doux, jusqu'à obtenir une pâte lisse et homogène, sans grumeaux visibles.",
-        "Étape 2: Ciseler 150 g d'oignons jaunes et 9 g d'ail, puis les faire revenir pendant 3 minutes à feu moyen-vif, jusqu'à dorure blonde et parfumée, en remuant régulièrement pour éviter la coloration excessive.",
-        "Étape 3: Ajouter 300 g de haricots rouges, 10 g de piment séché et 3 g de graines de cumin, puis cuire pendant 5 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que les saveurs soient bien mélangées et les haricots soient tendres.",
-        "Étape 4: Étaler la pâte de maïs sur des feuilles de maïs trempées, puis déposer la farce au centre, en laissant un bord de 2 cm sans farce pour faciliter le pliage.",
-        "Étape 5: Enfourner pendant 25 minutes à 180°C, jusqu'à coloration dorée et texture croustillante, en vérifiant régulièrement pour éviter la surcuisson.",
-        "Étape 6: Préparer la farce en mélangeant les haricots rouges, le piment séché et les épices avec 150 g de fromage râpé (par exemple, du parmesan), en ajoutant un peu de sel et de poivre au goût.",
-        "Étape 7: Servir les tamales chauds, en les accompagnant d'une sauce au fromage et de feuilles de persil frais ciselées, pour un repas complet et savoureux.",
-        "Étape 8: Rectifier l'assaisonnement et servir sans attendre, en présentant les tamales dans un plat avec une garniture de persil frais et une sauce au fromage."
+        "Étape 1 : Mélanger 300 g de masa harina avec 60 ml d'huile de tournesol, 3 g de sel et environ 300 ml de bouillon végétal tiède, jusqu'à obtenir une pâte souple et homogène.",
+        "Étape 2 : Faire revenir 150 g d'oignon et 9 g d'ail émincés dans 10 ml d'huile, 5 minutes à feu moyen.",
+        "Étape 3 : Ajouter 300 g de haricots rouges, 10 g de piment séché et 3 g de cumin, cuire 5 minutes en écrasant grossièrement, puis incorporer 100 g de queso fresco émietté.",
+        "Étape 4 : Étaler la pâte sur des feuilles de maïs trempées, déposer la farce au centre et refermer.",
+        "Étape 5 : Cuire les tamales à la vapeur pendant 1 heure, jusqu'à ce que la pâte se détache facilement de la feuille.",
+        "Étape 6 : Servir chauds, avec une salsa."
       ],
       "diet_flags": {
         "vegan": false,
@@ -161328,7 +161403,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -161596,11 +161671,11 @@
       "description": "Curry thaï rouge traditionnel : tofu et légumes mijotés dans une sauce crémeuse à la pâte de curry rouge, lait de coco, citronnelle et feuilles de combava — plus corsé que la version verte, relevé de sauce soja et citron vert.",
       "instructions": [
         "Étape 1 : Chauffer 10 ml d'huile de noix de coco dans un wok ou une grande sauteuse à feu moyen, jusqu'à ce que l'huile commence à briller et dégager une odeur subtile, en faisant attention à ne pas trop chauffer pour éviter la fumée.",
-        "Étape 2 : Faire revenir 2 g d'ail émincé et 11,2 g de gingembre frais râpé pendant 1 minute, en remuant régulièrement, jusqu'à ce que les parfums soient libérés et que la mixture commence à dorer légèrement, en prenant soin de ne pas brûler les ingrédients.",
-        "Étape 3 : Ajouter 2 à 3 cuillères à soupe de pâte de curry rouge végétal, faire revenir pendant 2 minutes en remuant constamment, jusqu'à ce que la pâte soit parfumée et légèrement foncée, avec une texture lisse et crémeuse, en veillant à ce que la pâte soit bien incorporée.",
+        "Étape 2 : Faire revenir 10 g d'ail émincé et 11,2 g de gingembre frais râpé pendant 1 minute, en remuant régulièrement, jusqu'à ce que les parfums soient libérés et que la mixture commence à dorer légèrement, en prenant soin de ne pas brûler les ingrédients.",
+        "Étape 3 : Ajouter 30 g de pâte de curry rouge, faire revenir pendant 2 minutes en remuant constamment, jusqu'à ce que la pâte soit parfumée et légèrement foncée, avec une texture lisse et crémeuse, en veillant à ce que la pâte soit bien incorporée.",
         "Étape 4 : Verser 400 ml de lait de coco, en mélangeant progressivement pour éviter les grumeaux, puis porter à frémissement doux, en observant la formation de petites bulles à la surface, en prenant soin de ne pas trop ébullitionner pour conserver les saveurs.",
         "Étape 5 : Ajouter 200 g de tofu ferme coupé en dés, les légumes (courgette, aubergine, poivron) coupés en morceaux, 40 g de citronnelle et les feuilles de kaffir, cuire à feu moyen pendant 12 à 15 minutes, en remuant occasionnellement, jusqu'à ce que les légumes soient tendres et le tofu soit cuit, en vérifiant régulièrement la tendreté des légumes.",
-        "Étape 6 : Assaisonner avec 20 ml de sauce de soja végétale, du sucre de palme et du jus de citron vert, goûter et ajuster l'équilibre épicé/sucré/acidulé selon les goûts, en recherchant une saveur riche et complexe, en prenant soin de ne pas trop assaisonner pour ne pas altérer les saveurs naturelles.",
+        "Étape 6 : Assaisonner avec 15 ml de sauce poisson végétale, 10 g de sucre de coco et 15 ml de jus de citron vert, goûter et ajuster l'équilibre épicé/sucré/acidulé selon les goûts, en recherchant une saveur riche et complexe, en prenant soin de ne pas trop assaisonner pour ne pas altérer les saveurs naturelles.",
         "Étape 7 : Terminer avec du basilic thaï frais haché, la sauce doit être rouge, légèrement plus épicée que le curry vert, crémeuse et enrobant les légumes et le tofu tendres, avec une texture onctueuse et une odeur parfumée, en prenant soin de bien mélanger les ingrédients pour obtenir une texture homogène.",
         "Étape 8 : Servir le curry thaï rouge chaud, accompagné de riz jasmin ou de nouilles de riz, pour un repas thaï authentique et délicieux."
       ],
@@ -161630,9 +161705,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 11,
-        "prep_passive_min": 0,
+        "prep_passive_min": 15,
         "cook_min": 30,
-        "total_min": 41
+        "total_min": 56
       },
       "composition": [
         {
@@ -161692,7 +161767,7 @@
         },
         {
           "ingredient": "vegetable_oil_plant",
-          "quantity": 500,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -161729,6 +161804,28 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "button_mushroom_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "bok_choy_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -161793,14 +161890,19 @@
       },
       "search_tokens": [
         "(sake",
-        "45 minutes",
+        "1 heure",
         "agedashi",
         "ail",
         "asia",
         "asiatique",
         "base_dashi_broth_a3a517",
+        "bok",
         "bouillon",
         "braising",
+        "button",
+        "champignon",
+        "choi",
+        "choy",
         "cornstarch",
         "culinaire",
         "debutant",
@@ -161824,10 +161926,12 @@
         "low calorie",
         "minceur",
         "mirin",
-        "moyen",
+        "mushroom",
         "oignon",
         "oil",
         "onion",
+        "pak",
+        "paris",
         "sans produit animal",
         "sans viande",
         "sauce",
@@ -161854,8 +161958,8 @@
         "Étape 2 : Chauffer 100ml d'huile végétale dans une poêle à feu vif. Faire dorer les cubes de tofu pendant 3 minutes par face, jusqu'à ce que la surface soit croustillante et dorée. Réserver.",
         "Étape 3 : Dans la même poêle, faire revenir 9g d'ail et 9g de gingembre haché pendant 30 secondes à feu moyen.",
         "Étape 4 : Verser 750ml de bouillon végétal chaud avec 45ml de sauce soja et 20ml de mirin. Porter à frémissement pendant 3 minutes, en remuant régulièrement.",
-        "Étape 5 : Remettre le tofu dans le bouillon et ajouter des légumes (champignons, pak-choï). Cuire à feu doux pendant 4 minutes, jusqu'à ce que les légumes soient tendres mais gardent leur tenue.",
-        "Étape 6 : Servir sans attendre dans des bols profonds, en garnissant de ciboulette fraîche hachée, pour préserver la texture croustillante du tofu et la fraîcheur des herbes."
+        "Étape 5 : Remettre le tofu dans le bouillon et ajouter 150 g de champignons émincés et 200 g de pak-choï. Cuire à feu doux pendant 4 minutes, jusqu'à ce que les légumes soient tendres mais gardent leur tenue.",
+        "Étape 6 : Servir sans attendre dans des bols profonds, en garnissant de 60 g d'oignon vert ciselé, pour préserver la texture croustillante du tofu et la fraîcheur des herbes."
       ],
       "diet_flags": {
         "vegan": true,
@@ -161955,7 +162059,7 @@
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 45,
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -161965,9 +162069,9 @@
           }
         },
         {
-          "ingredient": "lime_raw",
-          "quantity": 140,
-          "unit": "g",
+          "ingredient": "lime_juice_fresh",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "fruit",
             "form": "juice",
@@ -161977,7 +162081,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -162014,6 +162118,39 @@
           "unit": "g",
           "meta": {
             "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "galangal",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "kaffir_lime_leaf",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -162136,12 +162273,10 @@
       "description": "Soupe thaïe crémeuse où le lait de coco et les champignons fondent en bouche, parfumés par la citronnelle et le gingembre frais — une recette traditionnelle de la cuisine zen thaïlandaise.",
       "instructions": [
         "Étape 1 : Dans une grande casserole, porter 400 ml de lait de coco et 750ml de bouillon de légumes à frémissement doux, en veillant à ne pas le laisser bouillir pour éviter la séparation. Observer la formation de petites bulles à la surface.",
-        "Étape 2 : Ajouter 40 g de citronnelle fraîche écrasée, 11,2 g de gingembre frais râpé et 10 g de feuilles de coriandre fraîches. Laisser infuser pendant 10 minutes à feu doux, en sentant les arômes se mélanger et en vérifiant que les saveurs se développent.",
-        "Étape 3 : Incorporer 300 g de champignons émincés, 200 g de tofu ferme en dés et 45 ml de sauce soja. Cuire pendant 5 minutes à feu doux, en observant la texture tendre des champignons et en vérifiant que le tofu est bien imprégné des saveurs.",
-        "Étape 4 : Assaisonner avec 15 g de sucre, 5 g de sel et le jus de 140 g de lime. Goûter et ajuster les saveurs pour obtenir un équilibre crémeux, acidulé et parfumé, en vérifiant que les saveurs sont bien équilibrées.",
-        "Étape 5 : Servir la soupe chaude, garnie de feuilles de coriandre fraîches et de tranches de lime. Servir sans attendre pour préserver la chaleur et la texture de la soupe.",
-        "Étape 6 : Contrôler la température de la soupe pour éviter qu'elle ne soit trop chaude, en laissant refroidir légèrement avant de servir.",
-        "Étape 7 : Déguster et ajuster les saveurs selon les préférences, en ajoutant plus de sauce soja, de sucre ou de lime si nécessaire. Vérifier que les saveurs sont bien équilibrées et que la texture est onctueuse et crémeuse."
+        "Étape 2 : Ajouter 40 g de citronnelle fraîche écrasée, 20 g de galanga en rondelles, 11 g de gingembre, 3 g de feuilles de combava et 5 g de piment écrasé. Laisser infuser pendant 10 minutes à feu doux, en sentant les arômes se mélanger et en vérifiant que les saveurs se développent.",
+        "Étape 3 : Incorporer 300 g de champignons émincés, 200 g de tofu ferme en dés et 20 ml de sauce soja. Cuire pendant 5 minutes à feu doux, en observant la texture tendre des champignons et en vérifiant que le tofu est bien imprégné des saveurs.",
+        "Étape 4 : Assaisonner avec 15 g de sucre, 2 g de sel et 40 ml de jus de citron vert. Goûter et ajuster les saveurs pour obtenir un équilibre crémeux, acidulé et parfumé, en vérifiant que les saveurs sont bien équilibrées.",
+        "Étape 5 : Servir la soupe chaude, garnie de feuilles de coriandre fraîches et de tranches de lime. Servir sans attendre pour préserver la chaleur et la texture de la soupe."
       ],
       "diet_flags": {
         "vegan": true,
@@ -162197,7 +162332,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -162273,9 +162408,9 @@
           }
         },
         {
-          "ingredient": "lime",
-          "quantity": 70,
-          "unit": "g",
+          "ingredient": "lime_juice_fresh",
+          "quantity": 40,
+          "unit": "ml",
           "meta": {
             "role": "seasoning",
             "form": "wedges",
@@ -162285,7 +162420,7 @@
         },
         {
           "ingredient": "chilli_pepper_raw",
-          "quantity": 1,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -162303,6 +162438,39 @@
             "ingredient_fr": "coriandre fraîche ciselée",
             "note": "Pour la fraîcheur",
             "optional": true
+          }
+        },
+        {
+          "ingredient": "button_mushroom_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -162373,6 +162541,7 @@
         "braising",
         "chef",
         "chilli",
+        "citron",
         "citronelle",
         "combava",
         "complexe",
@@ -162414,6 +162583,7 @@
         "vegetable",
         "vegetalien",
         "vegetarien",
+        "vert",
         "water",
         "yam",
         "yum"
@@ -162427,11 +162597,10 @@
       "instructions": [
         "Étape 1 : Dans une grande casserole, faire frémir 1000 ml de bouillon de légumes à feu moyen, en ajoutant 40 g de citronnelle écrasée, 20 g de galanga et 3 g de feuilles de kaffir froissées, pendant environ 5 minutes.",
         "Étape 2 : Laisser infuser pendant 10 minutes, jusqu'à ce que les saveurs soient bien développées et que le bouillon ait une couleur blonde légère.",
-        "Étape 3 : Incorporer 2 g d'ail émincé et 11,2 g de gingembre frais. Cuire pendant 2 minutes, en observant la texture tendre de l'ail et le parfum du gingembre.",
+        "Étape 3 : Incorporer 10 g d'ail émincé, 11 g de gingembre frais, 200 g de champignons émincés et 150 g de tomates en quartiers. Cuire 5 minutes.",
         "Étape 4 : Ajouter 20 ml de sauce soja et 10 ml d'huile de sésame. Cuire pendant 1 minute, en sentant les saveurs se mélanger et la sauce soja se lier au bouillon.",
-        "Étape 5 : Incorporer 70 g de jus de citron vert et 1 g de piment frais. Cuire pendant 1 minute, en ajustant les saveurs selon les préférences.",
-        "Étape 6 : Ajouter les 20 g de galanga et les 3 g de feuilles de kaffir froissées dans le bouillon pour parfaire les saveurs.",
-        "Étape 7 : Servir la soupe chaude, garnie de feuilles de coriandre fraîches et de tranches de citron vert."
+        "Étape 5 : Incorporer 40 ml de jus de citron vert et 10 g de piment frais écrasé. Cuire pendant 1 minute, en ajustant les saveurs selon les préférences.",
+        "Étape 6 : Servir la soupe chaude, garnie de feuilles de coriandre fraîches et de tranches de citron vert."
       ],
       "diet_flags": {
         "vegan": true,
@@ -162562,6 +162731,17 @@
             "note": "Pour une touche de délice",
             "optional": true
           }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -162672,12 +162852,11 @@
       "instructions": [
         "Étape 1 : Couper 840 g de tomates mûres en quartiers. Faire revenir 120 g d'oignon dans 20 ml d'huile d'olive extra vierge à feu moyen pendant 5 minutes, jusqu'à ce que les aromates soient fondants et légèrement translucides, dégageant un parfum sucré.",
         "Étape 2 : Ajouter 10 g d'ail et les tomates, une pincée de sel et 2 g de poivre. Cuire à feu moyen pendant 15 minutes, jusqu'à ce que les tomates soient fondantes et la sauce concentrée, avec une consistance épaisse et un son de bulles régulières.",
-        "Étape 3 : Verser 400 ml d'eau chaude. Porter à ébullition à 100°C. Laisser mijoter pendant 10 minutes, en vérifiant que les tomates soient complètement défaçonnées.",
+        "Étape 3 : Verser 400 ml d'eau chaude. Porter à ébullition. Laisser mijoter pendant 10 minutes, en vérifiant que les tomates soient complètement défaçonnées.",
         "Étape 4 : Mixer entièrement pour obtenir un velouté lisse et crémeux, en utilisant un blender ou un mixeur, jusqu'à ce que la texture soit homogène et sans grumeaux.",
         "Étape 5 : Rectifier l'assaisonnement avec du sel et du poivre. La soupe doit être rouge profond, veloutée et légèrement sucrée naturellement, avec une odeur de tomate fraîche.",
-        "Étape 6 : Servir avec un filet de crème de coco et du basilic frais, pour une touche de délice et de fraîcheur, en déposant délicatement les feuilles de basilic sur la surface de la soupe.",
-        "Étape 7 : Rectifier la consistance de la soupe en ajoutant un peu d'eau chaude si nécessaire, en vérifiant que la soupe soit ni trop épaisse ni trop liquide.",
-        "Étape 8 : Servir chaud, dans des bols préchauffés."
+        "Étape 6 : Garnir de 5 g de basilic frais.",
+        "Étape 7 : Servir chaud."
       ],
       "diet_flags": {
         "vegan": true,
