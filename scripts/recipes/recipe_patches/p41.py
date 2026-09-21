@@ -27,11 +27,11 @@ PATCHES = {
         ("step-", "Garnir avec des ciboulettes supplémentaires"),
     ],
     "soup_vegetable_laksa_ab0112": [
-        ("ing", "base_green_curry_paste_250117", "base_curry_paste_49c97f"),
+        ("ing", "base_green_curry_paste_250117", "base_laksa_paste_bc7fd5"),
         ("qty", "garlic_raw", 10),
         ("add", "table_salt_unenriched", 2, "g", "seasoning"),
         ("txt", "Ajoutez 2 g d'ail", "Ajoutez 10 g d'ail"),
-        ("txt", "30 g de pâte de curry vert", "30 g de pâte de curry rouge"),
+        ("txt", "30 g de pâte de curry vert", "30 g de pâte de laksa"),
         ("txt", ", jusqu'à ce que le tofu soit bien cuit et les légumes soient tendres", ", jusqu'à ce que le tofu soit bien chaud"),
         ("txt", "Assaisonnez avec du sel et du poivre, puis laissez réduire pendant 2 minutes à feu doux, en remuant occasionnellement, jusqu'à ce que la sauce soit bien épaissie.", "Salez avec 2 g de sel."),
     ],

@@ -163480,7 +163480,7 @@
           }
         },
         {
-          "ingredient": "base_curry_paste_49c97f",
+          "ingredient": "base_laksa_paste_bc7fd5",
           "quantity": 30,
           "unit": "g",
           "meta": {
@@ -163673,7 +163673,7 @@
         "ail",
         "asiatique",
         "aux",
-        "base_curry_paste_49c97f",
+        "base_laksa_paste_bc7fd5",
         "bean",
         "bouillon",
         "braising",
@@ -163726,7 +163726,7 @@
       "description": "Laksa aux légumes : bouillon de légumes coco-curry vert, tofu, nouilles de riz et pousses de soja, garni de coriandre fraîche et oignons verts.",
       "instructions": [
         "Étape 1 : Faites chauffer 15 ml d'huile de coco dans une grande casserole à feu moyen. Ajoutez 10 g d'ail et 11,2 g de gingembre frais hachés, puis saisissez pendant 2 minutes, en remuant régulièrement, jusqu'à ce que les aromates soient parfumés et légèrement dorés.",
-        "Étape 2 : Ajoutez 30 g de pâte de curry rouge et faites cuire pendant 5 minutes à feu moyen-vif, en remuant constamment, jusqu'à ce que la pâte soit bien colorée et parfumée.",
+        "Étape 2 : Ajoutez 30 g de pâte de laksa et faites cuire pendant 5 minutes à feu moyen-vif, en remuant constamment, jusqu'à ce que la pâte soit bien colorée et parfumée.",
         "Étape 3 : Versez 400 ml de lait de coco et 1000 ml de bouillon végétal, puis portez à ébullition. Réduisez ensuite à feu moyen et laissez mijoter pendant 15 minutes, en remuant occasionnellement, jusqu'à ce que les saveurs soient bien mélangées.",
         "Étape 4 : Ajoutez 200 g de tofu ferme coupé en dés et 20 ml de sauce soja végétale, puis faites cuire pendant 8 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce que le tofu soit bien chaud.",
         "Étape 5 : Ajoutez 10 ml d'huile de sésame et 150 g de vermicelles de riz, puis faites cuire pendant 2 minutes, en remuant constamment, jusqu'à ce que les vermicelles soient bien cuits et la sauce soit onctueuse.",
@@ -173805,8 +173805,8 @@
         },
         {
           "ingredient": "egg_raw",
-          "quantity": 2,
-          "unit": "piece",
+          "quantity": 110,
+          "unit": "g",
           "meta": {
             "role": "binding"
           }
@@ -173867,7 +173867,7 @@
         "Creuser un puits au centre, y ajouter 2 œufs entiers crus battus et verser progressivement 500ml de lait entier tout en fouettant pour éviter les grumeaux.",
         "Incorporer 20g de beurre doux fondu, puis laisser reposer la pâte 30 minutes au réfrigérateur.",
         "Cuire chaque crêpe 2 minutes par face dans une crêpière légèrement beurrée à feu moyen.",
-        "Servir aussitôt dans des assiettes, accompagné d'un peu de beurre doux et de sirop d'érable ou de votre garniture préférée."
+        "Empiler les crêpes sous un torchon jusqu'à utilisation."
       ],
       "scoring": {
         "confidence": 0.95,
@@ -173957,6 +173957,17 @@
           "meta": {
             "role": "seasoning"
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 45,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -173996,6 +174007,7 @@
       },
       "difficulty_level": "easy",
       "search_tokens": [
+        "(eau",
         "biere",
         "cajou",
         "cashew",
@@ -174003,6 +174015,7 @@
         "coeliaque",
         "debutant",
         "easy",
+        "eau",
         "facile",
         "gluten free",
         "international",
@@ -174018,6 +174031,7 @@
         "noix",
         "nutritional",
         "nuts",
+        "potable)",
         "ricotta",
         "salt",
         "sans gluten",
@@ -174029,6 +174043,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "water",
         "yeast"
       ]
     },
@@ -174171,7 +174186,7 @@
       },
       "composition": [
         {
-          "ingredient": "cashew_nuts_roasted_in_oil",
+          "ingredient": "cashew_nuts_raw",
           "quantity": 150,
           "unit": "g",
           "meta": {
@@ -174217,6 +174232,17 @@
           "meta": {
             "role": "seasoning"
           }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 60,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -174250,7 +174276,7 @@
         "Rôtir 60g de poivron rouge à 200°C pendant 20 minutes, laisser refroidir et peler.",
         "Mixer 150g de noix de cajou égouttées, 60g de poivron rouge rôti, 30g de levure nutritionnelle, 30ml de jus de citron, 5g d'ail et 5g de sel avec 60ml d'eau jusqu'à texture parfaitement lisse.",
         "Verser dans un moule et réfrigérer 2 heures minimum pour que le fromage prenne une texture plus ferme et découpable.",
-        "Servir frais, découpé en tranches fines, accompagné de crackers ou de pain grillé."
+        "Conserver 5 jours au réfrigérateur ; s'utilise en tartinade ou fondu."
       ],
       "scoring": {
         "confidence": 0.88,
@@ -174259,6 +174285,7 @@
       "servings_user_override": null,
       "difficulty_level": "medium",
       "search_tokens": [
+        "(eau",
         "ail",
         "bell",
         "biere",
@@ -174267,6 +174294,7 @@
         "cheddar",
         "citron",
         "coeliaque",
+        "eau",
         "garlic",
         "gluten free",
         "intermediaire",
@@ -174286,6 +174314,7 @@
         "nuts",
         "pepper",
         "poivron",
+        "potable)",
         "red",
         "rouge",
         "salt",
@@ -174298,6 +174327,7 @@
         "vegetal",
         "vegetalien",
         "vegetarien",
+        "water",
         "yeast"
       ]
     },
@@ -174490,7 +174520,7 @@
         },
         {
           "ingredient": "sunflower_oil_plant",
-          "quantity": 60,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat"
@@ -174534,8 +174564,8 @@
         "Chauffer 60ml d'huile de tournesol dans une grande poêle à feu moyen-vif.",
         "Ajouter les oignons et 5g de sel. Cuire 5 minutes à feu vif en remuant constamment.",
         "Baisser le feu à moyen et continuer à cuire pendant 15-20 minutes en remuant régulièrement, jusqu'à obtenir une couleur dorée uniforme et une texture fondante.",
-        "Égoutter les oignons sur du papier absorbant et lesisser refroidir légèrement.",
-        "Servir chaud, éventuellement comme topping ou condiment pour divers plats."
+        "Égoutter les oignons sur du papier absorbant et laisser refroidir légèrement.",
+        "Utiliser en garniture ; se conserve 3 jours au réfrigérateur."
       ],
       "scoring": {
         "confidence": 0.97,
@@ -175072,9 +175102,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 20,
-        "prep_passive_min": 30,
+        "prep_passive_min": 10,
         "cook_min": 15,
-        "total_min": 65
+        "total_min": 45
       },
       "composition": [
         {
@@ -175145,6 +175175,7 @@
       "search_tokens": [
         "(eau",
         "(farine",
+        "45 minutes",
         "coeliaque",
         "corn",
         "debutant",
@@ -175156,17 +175187,15 @@
         "harina",
         "latino",
         "leger",
-        "lent",
         "light",
-        "long",
         "low calorie",
         "mais",
         "masa",
         "mexicain",
         "mexican",
         "mexique",
-        "mijote",
         "minceur",
+        "moyen",
         "nixtamalise)",
         "potable)",
         "salt",
@@ -175230,8 +175259,8 @@
         },
         {
           "ingredient": "egg_raw",
-          "quantity": 1,
-          "unit": "unit",
+          "quantity": 55,
+          "unit": "g",
           "meta": {
             "role": "base"
           }
@@ -175650,8 +175679,8 @@
         },
         {
           "ingredient": "egg_raw",
-          "quantity": 1,
-          "unit": "unit",
+          "quantity": 55,
+          "unit": "g",
           "meta": {
             "role": "base"
           }
@@ -175776,8 +175805,8 @@
       "timing": {
         "prep_active_min": 20,
         "prep_passive_min": 60,
-        "cook_min": 3,
-        "total_min": 83
+        "cook_min": 33,
+        "total_min": 113
       },
       "composition": [
         {
@@ -176219,8 +176248,8 @@
           }
         },
         {
-          "ingredient": "chilli_pepper_raw",
-          "quantity": 100,
+          "ingredient": "red_hot_chili_pepper_spice_dried",
+          "quantity": 50,
           "unit": "g",
           "meta": {
             "role": "base"
@@ -176290,11 +176319,13 @@
         "avance",
         "bean",
         "chef",
-        "chilli",
+        "chili",
         "complexe",
         "doubanjiang",
         "fava",
         "feve",
+        "fort",
+        "hot",
         "leger",
         "lent",
         "light",
@@ -176306,6 +176337,8 @@
         "pate",
         "pepper",
         "piment",
+        "red",
+        "rouge",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -176324,7 +176357,7 @@
       "servings_user_override": null,
       "instructions": [
         "Étape 1 : Rincer 200 g de fèves sèches et les faire tremper 12 heures dans l'eau froide. Égoutter, peler les fèves en les pressant entre les doigts et les sécher sur un torchon.",
-        "Étape 2 : Équeuter 100 g de piments rouges secs et les mixer finement au robot avec 30 g de sel jusqu'à obtenir une pâte de piment grossière.",
+        "Étape 2 : Équeuter 50 g de piments rouges secs et les mixer finement au robot avec 30 g de sel jusqu'à obtenir une pâte de piment grossière.",
         "Étape 3 : Mélanger fèves, pâte de piment et 20 ml de sauce soja dans un bol en céramique ou bocal stérilisé. Bien amalgamer jusqu'à ce que les fèves soient enrobées uniformément.",
         "Étape 4 : Transvaser dans un bocal à large ouverture. Tasser légèrement pour éliminer les bulles d'air et couvrir d'une fine couche de sel. Fermer avec un tissu respirant fixé par un élastique.",
         "Étape 5 : Laisser fermenter à température ambiante (18-22 °C) pendant au moins 3 mois en remuant une fois par semaine. La pâte doit développer une couleur rouge sombre et une odeur complexe et fermentée.",
@@ -176731,6 +176764,17 @@
           "meta": {
             "role": "spice"
           }
+        },
+        {
+          "ingredient": "white_sugar",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -176788,6 +176832,7 @@
         "ail",
         "asiatique",
         "beurre",
+        "blanc",
         "butter",
         "cacahuete",
         "chilli",
@@ -176820,12 +176865,15 @@
         "simple",
         "soja",
         "soy",
+        "sucre",
+        "sugar",
         "vegan",
         "vegetalien",
         "vegetarien",
         "vinaigre",
         "vinegar",
-        "water"
+        "water",
+        "white"
       ],
       "servings_user_override": null,
       "instructions": [
@@ -176833,7 +176881,7 @@
         "Étape 2 : Dans un bol, mélanger 120 g de beurre de cacahuète avec 30 ml de sauce soja, 10 ml d'huile de sésame, 15 ml de vinaigre de riz et l'ail-gingembre râpé.",
         "Étape 3 : Fouetter en ajoutant 60 ml d'eau tiède progressivement jusqu'à obtenir une sauce lisse, brillante et nappante. Ajuster la consistance selon l'usage : plus épaisse pour tremper, plus fluide pour napper.",
         "Étape 4 : Chauffer doucement dans une petite casserole à feu doux en remuant — la sauce ne doit pas bouillir pour préserver les arômes de sésame.",
-        "Étape 5 : Ajouter 5 g de piment rouge émincé ou une cuillère à café de sambal oelek selon le niveau de chaleur souhaité. Goûter et ajuster l'équilibre acidité-sel-sucre.",
+        "Étape 5 : Ajouter 5 g de piment rouge émincé ou une cuillère à café de sambal oelek selon le niveau de chaleur souhaité. Ajouter 5 g de sucre et goûter.",
         "Étape 6 : Servir tiède avec des nems, satay, nouilles soba ou légumes crus. La sauce se conserve 5 jours au réfrigérateur — la réchauffer doucement en ajoutant un filet d'eau si elle a épaissi."
       ]
     },
@@ -177734,8 +177782,8 @@
         },
         {
           "ingredient": "egg_raw",
-          "quantity": 1,
-          "unit": "unit",
+          "quantity": 55,
+          "unit": "g",
           "meta": {
             "role": "base"
           }
