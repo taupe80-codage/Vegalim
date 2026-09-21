@@ -194,7 +194,7 @@
 - **Feijoada** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, brazilian)_ — `main_feijoada_2f6754`
 - **Feijão Tropeiro** _(gluten_free, high_protein, main, brazilian)_ — `egg_feijo_tropeiro_bb31e4` 🔁 doublon possible : Feijão Tropeiro (Vegan)
 - **Feijão Tropeiro (Vegan)** _(gluten_free, high_protein, lactose_free, nut_free, side, brazilian)_ — `side_feijo_tropeiro_vegan_ccc81d` 🔁 doublon possible : Feijão Tropeiro
-- **Fenouil Braisé à l'Orange** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, side, french)_ — `side_fenouil_braise_a_l_orange_a75916`
+- **Fenouil Braisé à l'Orange** _(diabetes_friendly, gluten_free, lactose_free, low_calorie, nut_free, vegan, vegetarian, side, french)_ — `side_fenouil_braise_a_l_orange_a75916`
 - **Feuilles de Nems / Rouleaux de Printemps (base)** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, pastry, asian)_ — `base_spring_roll_wrappers_eba962`
 - **Feuilles à Gyoza** _(vegan, vegetarian, pastry, japanese)_ — `base_gyoza_wrapper_0dba00`
 - **Feuilles à Wonton** _(vegetarian, pastry, chinese)_ — `base_wonton_wrapper_7bfeb5`
@@ -433,7 +433,7 @@
 - **Pain au Fromage Brésilien** _(diabetes_friendly, gluten_free, high_protein, main, brazilian)_ — `egg_pain_au_fromage_bresilien_603bf5`
 - **Pain aux Bananes Vegan** _(kid_friendly, lactose_free, vegan, vegetarian, breakfast, american)_ — `brkf_pain_aux_bananes_vegan_b85f00`
 - **Pain d'Épices** _(kid_friendly, lactose_free, nut_free, dessert, french)_ — `dessert_pain_d_epices_754c93`
-- **Pain de Campagne** _(kid_friendly, nut_free, vegetarian, side, french)_ — `side_pain_de_campagne_31cbd7`
+- **Pain de Campagne** _(kid_friendly, nut_free, vegetarian, vegan, lactose_free, bread, french)_ — `side_pain_de_campagne_31cbd7`
 - **Pain Perdu** _(kid_friendly, breakfast, french)_ — `brkf_pain_perdu_653f48`
 - **Pak Choï Sauté** _(vegan, vegetarian, main, chinese)_ — `wok_pak_choi_saute_62b974`
 - **Pakora** _(gluten_free, high_protein, vegan, vegetarian, snack, indian)_ — `dal_pakora_b418ab`
