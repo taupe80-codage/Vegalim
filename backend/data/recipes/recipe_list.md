@@ -612,8 +612,8 @@
 - **Salade Andine au Fromage** _(diabetes_friendly, gluten_free, main, bolivian)_ — `salad_andine_au_fromage_c537bd` 🔁 doublon possible : Salade Andine au Fromage (Vegan)
 - **Salade Andine au Fromage (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, main, andean)_ — `salad_andine_au_fromage_vegan_566f05` 🔁 doublon possible : Salade Andine au Fromage
 - **Salade Asiatique Sésame** _(vegan, vegetarian, main, international)_ — `salad_asiatique_sesame_948f03`
-- **Salade caprese** _(gluten_free, high_protein, main, italian)_ — `salad_caprese_classic_k21x9d`
-- **Salade Chilienne Tomate-oignon** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, american)_ — `salad_chilienne_tomateoignon_288941`
+- **Salade caprese** _(gluten_free, high_protein, starter, italian)_ — `salad_caprese_classic_k21x9d`
+- **Salade Chilienne Tomate-oignon** _(diabetes_friendly, gluten_free, vegan, vegetarian, side, american)_ — `salad_chilienne_tomateoignon_288941`
 - **Salade composée structurée optimisée** _(diabetes_friendly, gluten_free, vegetarian, main, french)_ — `salad_mixed_structured_v2_p9x4m2`
 - **Salade Couscous Méditerranéenne** _(high_protein, vegan, vegetarian, main, moroccan)_ — `couscous_couscous_mediterraneenne_bdf9d9`
 - **Salade D'attiéké** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, international)_ — `salad_dattieke_7824bf`
