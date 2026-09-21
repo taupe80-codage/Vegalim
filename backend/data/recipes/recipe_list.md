@@ -503,7 +503,7 @@
 - **Porridge Pomme Cannelle** _(kid_friendly, lactose_free, low_calorie, vegetarian, breakfast, international)_ — `brkf_porridge_pomme_cannelle_9af096`
 - **Potage de Patate Douce** _(gluten_free, vegetarian, soup, international)_ — `soup_potage_de_patate_douce_e4b521`
 - **Potage Parmentier** _(gluten_free, kid_friendly, lactose_free, nut_free, vegetarian, soup, french)_ — `soup_potage_parmentier_9685a7`
-- **Potage Saint-Germain** _(gluten_free, kid_friendly, nut_free, soup, french)_ — `soup_potage_saint_germain_e23f6b`
+- **Potage Saint-Germain** _(kid_friendly, nut_free, soup, french)_ — `soup_potage_saint_germain_e23f6b`
 - **Potimarron Rôti aux Épices** _(gluten_free, kid_friendly, lactose_free, low_calorie, vegan, vegetarian, side, levantine)_ — `side_potimarron_roti_aux_epice_b9c552`
 - **Potée Auvergnate** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, main, french_auvergnat)_ — `main_potee_auvergnate_fcc003`
 - **Poutine** _(gluten_free, high_protein, vegetarian, main, canadian)_ — `main_poutine_1344e1` 🔁 doublon possible : Poutine (Vegan)

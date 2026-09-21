@@ -157486,7 +157486,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -157582,6 +157582,61 @@
             "note": "Pour la fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "star_anise",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cloves",
+          "quantity": 0.5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -157650,6 +157705,7 @@
         "bouillon",
         "braising",
         "chef",
+        "cinnamon",
         "complexe",
         "coriander",
         "coriandre",
@@ -157697,13 +157753,12 @@
       "description": "Soupe vietnamienne végane à base de bouillon parfumé et aromatique, où les vermicelles de riz fondent en bouche avec une texture tendre, servie avec des légumes frais et une touche de coriandre fraîche ciselée, sur fond d'odeurs de gingembre et de cannelle",
       "instructions": [
         "Étape 1 : Rôtir les oignons jaunes et le gingembre frais directement à la flamme ou sous le gril préchauffé à 200°C pendant 5 minutes de chaque côté, pour obtenir une belle couleur brune et un parfum intense.",
-        "Étape 2 : Mettre les oignons jaunes et le gingembre rôtis dans un grand pot, ajouter 1000 ml de bouillon végétal, 2 cuillères à café de cannelle, 2 cuillères à café d'anis étoilé, 2 clous de girofle et 1 badiane. Laissez mijoter pendant 20 minutes pour libérer les arômes et sentir l'odeur épicée.",
-        "Étape 3 : Ajoutez 2 gousses d'ail hachées dans le pot et laissez mijoter pendant 5 minutes pour permettre aux saveurs de se mélanger. Ensuite, mijoter 30 minutes à feu doux, puis filtrer le bouillon à travers une passoire fine pour éliminer les solides.",
+        "Étape 2 : Mettre les oignons jaunes et le gingembre rôtis dans un grand pot, ajouter 1000 ml de bouillon végétal, 1 bâton de cannelle, 3 étoiles de badiane et 2 clous de girofle. Laissez mijoter pendant 20 minutes pour libérer les arômes et sentir l'odeur épicée.",
+        "Étape 3 : Ajoutez 10 g d'ail haché dans le pot et laissez mijoter pendant 5 minutes pour permettre aux saveurs de se mélanger. Ensuite, mijoter 30 minutes à feu doux, puis filtrer le bouillon à travers une passoire fine pour éliminer les solides.",
         "Étape 4 : Assaisonner le bouillon de 20 ml de sauce soja végane, 10 ml d'huile de sésame et 1 pincée de sel, émulsionner pour bien mélanger les saveurs. Goûtez et ajustez l'assaisonnement si nécessaire, en fonction de votre préférence pour le sel et les épices.",
         "Étape 5 : Cuire 150 g de vermicelles de riz selon les instructions, rincer à l'eau froide pour arrêter la cuisson. Les vermicelles doivent être tendres mais encore fermes, avec une texture agréable.",
-        "Étape 6 : Trancher finement 200 g de tofu ferme mariné dans une sauce végane, julienne les légumes frais comme les oignons jaunes et les champignons. Vous pouvez également ajouter d'autres légumes de votre choix, comme des carottes ou des poivrons.",
-        "Étape 7 : Répartir les nouilles et le tofu dans des bols, verser le bouillon bouillant, garnir de coriandre fraîche ciselée et de quartiers de citron vert. Servez sans attendre.",
-        "Étape 8 : Ajoutez des herbes fraîches supplémentaires si vous le souhaitez, comme de la menthe ou du basilic, pour donner une touche personnelle à votre soupe Pho. Vous pouvez également servir avec des crackers ou du pain grillé pour une texture croquante."
+        "Étape 6 : Trancher finement 200 g de tofu ferme mariné dans une sauce végane et rincer 100 g de pousses de soja.",
+        "Étape 7 : Répartir les nouilles et le tofu dans des bols, verser le bouillon bouillant, garnir des pousses de soja, de coriandre, de 10 g de basilic thaï et de quartiers de citron vert. Servez sans attendre."
       ],
       "diet_flags": {
         "vegan": true,
@@ -157771,7 +157826,7 @@
         },
         {
           "ingredient": "coconut_milk_plant",
-          "quantity": 400,
+          "quantity": 80,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -157844,6 +157899,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -157904,6 +157970,7 @@
         "ail",
         "bouillon",
         "braising",
+        "citron",
         "coco",
         "coconut",
         "coeliaque",
@@ -157927,6 +157994,7 @@
         "kids",
         "leger",
         "legumes",
+        "lemon",
         "light",
         "low calorie",
         "minceur",
@@ -157959,12 +158027,12 @@
       "description": "Potage crémeux de patates douces, parfumé à l'ail et au gingembre, mijoté dans un bouillon de légumes jusqu'à obtenir une texture soyeuse et une couleur orange profonde, caractéristique de la cuisine internationale.",
       "instructions": [
         "Étape 1 : Peler les patates douces et les couper en cubes de 4 cm, en vérifiant la texture et la couleur des patates pour s'assurer qu'elles sont fermes et exemptes de défauts.",
-        "Étape 2 : Faire revenir l'oignon jaune et le gingembre dans 25 ml d'huile de coco à feu moyen pendant 5 minutes, en sentant les arômes dégagés et en vérifiant que les oignons sont translucides.",
-        "Étape 3 : Ajouter les patates douces avec le curcuma et la coriandre moulue, mouiller avec 800 ml de bouillon de légumes chaud, en vérifiant la texture et la couleur du plat pour s'assurer qu'il est homogène.",
+        "Étape 2 : Faire revenir l'oignon jaune, 9 g d'ail et le gingembre dans 25 ml d'huile de coco à feu moyen pendant 5 minutes, en sentant les arômes dégagés et en vérifiant que les oignons sont translucides.",
+        "Étape 3 : Ajouter les patates douces avec le curcuma et la coriandre moulue, mouiller avec 750 ml de bouillon de légumes chaud, en vérifiant la texture et la couleur du plat pour s'assurer qu'il est homogène.",
         "Étape 4 : Porter à ébullition puis mijoter à couvert pendant 20 minutes jusqu'à ce que les patates douces soient totalement fondantes, en écoutant le son de la cuisson et en vérifiant que les patates sont tendres.",
         "Étape 5 : Mixer à pleine puissance jusqu'à obtenir un velouté orange profond parfaitement lisse, en vérifiant la texture et la couleur du plat pour s'assurer qu'il est crémeux et uniforme.",
-        "Étape 6 : Incorporer 80 ml de crème de coco et assaisonner de sel et de jus de citron, en ajoutant un filet de jus de citron si nécessaire, en vérifiant la saveur et la texture du plat pour s'assurer qu'il est équilibré.",
-        "Étape 7 : Ajouter les 9 grammes d'ail haché pour parfumer le plat, puis servir chaud, en vérifiant la présentation et la température du plat, en ajoutant des herbes fraîches si nécessaire pour une touche de fraîcheur."
+        "Étape 6 : Incorporer 80 ml de lait de coco et 10 ml de jus de citron, en vérifiant la saveur et la texture du plat pour s'assurer qu'il est équilibré.",
+        "Étape 7 : Servir chaud."
       ],
       "diet_flags": {
         "vegan": true,
@@ -158032,7 +158100,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 2,
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -158058,6 +158126,28 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 900,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "nutmeg_spice",
+          "quantity": 0.5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -158121,6 +158211,7 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "and",
         "blending",
@@ -158129,6 +158220,7 @@
         "coeliaque",
         "debutant",
         "easy",
+        "eau",
         "enfants",
         "facile",
         "facile enfants",
@@ -158145,6 +158237,8 @@
         "low calorie",
         "minceur",
         "moyen",
+        "muscade",
+        "nutmeg",
         "oignon",
         "olive",
         "onion",
@@ -158153,6 +158247,7 @@
         "persil",
         "poireau",
         "pomme",
+        "potable)",
         "potage",
         "potato",
         "salt",
@@ -158166,7 +158261,8 @@
         "terre",
         "vegan",
         "vegetalien",
-        "vegetarien"
+        "vegetarien",
+        "water"
       ],
       "difficulty_level": "easy",
       "dish_type": "soup",
@@ -158175,11 +158271,10 @@
       "description": "Potage familial de poireaux et pommes de terre, créant une texture légèrement veloutée et crémeuse naturellement sans ajout de crème, incarnant la cuisine bourgeoise française.",
       "instructions": [
         "Étape 1 : Préparez les légumes. Lavez et émincez les blancs et verts tendres de 600 g de poireaux en rondelles. Épluchez 500 g de pommes de terre crues et coupez-les en cubes de 3 cm. Émincez également 150 g d'oignon blanc.",
-        "Étape 2 : Faites suer les poireaux et l'oignon. Dans une cocotte, faites suer les poireaux et l'oignon dans 2 ml d'huile d'olive à feu doux pendant 8 minutes sans coloration, jusqu'à ce qu'ils soient translucides.",
+        "Étape 2 : Faites suer les poireaux et l'oignon. Dans une cocotte, faites suer les poireaux et l'oignon dans 15 ml d'huile d'olive à feu doux pendant 8 minutes sans coloration, jusqu'à ce qu'ils soient translucides.",
         "Étape 3 : Ajoutez les pommes de terre et le liquide. Ajoutez les pommes de terre et couvrez-les de 900 ml d'eau ou de bouillon froid. Portez à ébullition, puis cuisez à feu moyen pendant 25 minutes, jusqu'à ce que les pommes de terre soient fondantes.",
         "Étape 4 : Mixer le potage. Mixer grossièrement pour une texture rustique ou finement pour un potage lisse. Ajustez la consistance avec du bouillon.",
-        "Étape 5 : Assaisonnez et servez. Assaisonnez de sel, poivre et noix de muscade. Parsemez de 10 g de persil frais haché. La texture doit être légèrement veloutée, crémeuse naturellement sans ajout de crème. Servez avec du pain de campagne chaud.",
-        "Étape 6 : Vérifiez la température. Vérifiez que le potage est chaud et prêt à être servi. Si nécessaire, réchauffez-le à feu doux pendant quelques minutes."
+        "Étape 5 : Assaisonnez et servez. Assaisonnez avec 5 g de sel, du poivre et une pincée de muscade. Parsemez de 10 g de persil frais haché. La texture doit être légèrement veloutée, crémeuse naturellement sans ajout de crème. Servez avec du pain de campagne chaud."
       ],
       "diet_flags": {
         "vegan": true,
@@ -158309,17 +158404,39 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_bread_baguette",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
         "diet": [
-          "gluten_free",
           "kid_friendly",
           "nut_free"
         ],
         "allergens": [
           "lactose",
-          "milk"
+          "milk",
+          "gluten"
         ],
         "technique": [
           "blending",
@@ -158371,13 +158488,16 @@
       "search_tokens": [
         "(eau",
         "45 minutes",
+        "baguette",
         "beurre",
+        "blanc",
         "blending",
         "boiling",
         "bouillon",
+        "boule",
+        "bread",
         "butter",
         "classique",
-        "coeliaque",
         "cream,",
         "creme",
         "debutant",
@@ -158392,7 +158512,6 @@
         "france",
         "french",
         "germain",
-        "gluten free",
         "green",
         "heavy",
         "kids",
@@ -158408,6 +158527,7 @@
         "oignon",
         "olive",
         "onion",
+        "pain",
         "pea",
         "peas",
         "petit",
@@ -158415,15 +158535,18 @@
         "potable)",
         "potage",
         "saint",
-        "sans gluten",
+        "salt",
         "sans viande",
+        "sel",
         "simple",
         "soup",
         "stock",
+        "table",
         "vegetable",
         "vegetarien",
         "vert",
-        "water"
+        "water",
+        "white"
       ],
       "difficulty_level": "easy",
       "dish_type": "soup",
@@ -158434,15 +158557,15 @@
         "Étape 1: Préparez les légumes. Faites fondre 500 g de petits pois frais ou surgelés avec 100 g de laitue émincée et 150 g d'oignon dans 700 ml de bouillon de légumes léger. Portez à ébullition, puis cuisez pendant 15 minutes à feu doux, jusqu'à ce que les légumes soient tendres.",
         "Étape 2: Mixer le potage. Mixer entièrement à pleine puissance pendant environ 5 minutes, jusqu'à texture parfaitement lisse et verte éclatante.",
         "Étape 3: Ajoutez la crème et le beurre. Incorporer 80 ml de crème et 30 g de beurre doux, puis mélangez bien pour obtenir une texture veloutée sans fibres.",
-        "Étape 4: Ajustez la consistance et assaisonnez. Ajustez la consistance avec du bouillon de légumes. Assaisonnez de sel et poivre.",
+        "Étape 4: Ajustez la consistance et assaisonnez. Ajustez la consistance avec du bouillon de légumes. Assaisonnez avec 2 g de sel et du poivre.",
         "Étape 5: Ajoutez la menthe fraîche. Ajoutez 10 g de feuilles de menthe fraîche hors du feu. Mélangez délicatement pour répartir la menthe de manière homogène.",
-        "Étape 6: Préparez les croûtons. Faites chauffer 10 g d'huile d'olive dans une poêle à feu moyen, puis ajoutez des cubes de pain et faites-les dorer pendant 2-3 minutes de chaque côté, jusqu'à ce qu'ils soient croustillants et dorés.",
+        "Étape 6: Préparez les croûtons. Faites chauffer 10 ml d'huile d'olive dans une poêle à feu moyen, puis ajoutez 40 g de pain en cubes et faites-les dorer pendant 2-3 minutes de chaque côté, jusqu'à ce qu'ils soient croustillants et dorés.",
         "Étape 7: Servez. Servez chaud ou froid selon la saison, décoré de croûtons et feuilles de menthe fraîche."
       ],
       "diet_flags": {
         "vegan": false,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": false,
         "nut_free": true,
         "raw": false,
@@ -158546,6 +158669,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "pumpkin_squash_raw_seed",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -158607,6 +158741,7 @@
         "black",
         "braising",
         "butternut",
+        "citrouille",
         "coeliaque",
         "courge",
         "eau",
@@ -158659,11 +158794,9 @@
         "Étape 1 : Couper 800g de courge butternut en cubes de 4 cm sans éplucher, puis faire revenir 120g d'oignon jaune émincé et 8g d'ail frais dans 20ml d'huile végétale à feu moyen pendant 5 minutes, jusqu'à ce que les aromates soient fondants et légèrement translucides.",
         "Étape 2 : Ajouter 5g de sel de table et 2g de poivre noir moulu. Mouiller avec 600ml d'eau. Porter à ébullition puis mijoter à couvert pendant 25 minutes, jusqu'à ce que la courge soit totalement fondante.",
         "Étape 3 : Mixer à pleine puissance pendant 3 minutes, jusqu'à obtenir un velouté parfaitement lisse et brillant.",
-        "Étape 4 : Rectifier l'assaisonnement avec du sel de table et du poivre noir moulu. La texture doit être veloutée et nappante, la couleur orange intense.",
-        "Étape 5 : Faire griller des graines de courge pour ajouter une touche de croquant.",
-        "Étape 6 : Servir le velouté chaud, garni de graines de courge grillées et d'un filet d'huile végétale pour une touche de délice.",
-        "Étape 7 : Pour un service plus élégant, ajouter un peu d'huile végétale en forme de rosace sur le dessus du velouté.",
-        "Étape 8 : Présenter le velouté dans des bols préchauffés, avec une garniture de graines de courge grillées et un filet d'huile végétale, accompagné d'un pain grillé ou de crackers végétaliens."
+        "Étape 4 : Rectifier l'assaisonnement. La texture doit être veloutée et nappante, la couleur orange intense.",
+        "Étape 5 : Faire griller 20 g de graines de courge à sec 3 minutes à la poêle.",
+        "Étape 6 : Servir le velouté chaud, garni de graines de courge grillées et d'un filet d'huile végétale pour une touche de délice."
       ],
       "diet_flags": {
         "vegan": true,
@@ -158698,7 +158831,7 @@
       "composition": [
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 11.3,
+          "quantity": 8,
           "unit": "g",
           "meta": {
             "role": "base",
@@ -158719,7 +158852,7 @@
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
@@ -158763,7 +158896,7 @@
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 20,
+          "quantity": 10,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -158940,11 +159073,11 @@
       "_quality_score": 1.0,
       "description": "Bouillon de légumes végétal parfumé au miso, où les champignons de Paris fondent en bouche, relevé par la douceur de l'oignon vert — recette fondatrice de la cuisine japonaise végétarien.",
       "instructions": [
-        "Étape 1 : Faire chauffer 900 ml de bouillon de légumes végétal à feu moyen-vif avec 2 cuillères à soupe de pâte de miso végétal et 20 ml de sauce soja sans gluten, pendant 8 minutes, en remuant régulièrement. Observez la couleur dorée du bouillon et son parfum umami.",
-        "Étape 2 : Ajouter 11,2 g de gingembre émincé frais et 2 g d'ail émincé dans le bouillon et laisser infuser pendant 2 minutes. Respirez l'arôme piquant du gingembre et de l'ail.",
-        "Étape 3 : Cuire les nouilles ramen véganes selon les instructions, égoutter et rincer brièvement à l'eau froide. Vérifiez la texture al dente des nouilles.",
-        "Étape 4 : Répartir les nouilles dans des bols profonds chauds et verser le bouillon filtré à 80°C. Regardez la façon dont les nouilles absorbent le bouillon.",
-        "Étape 5 : Ajouter 200 g de tofu ferme doré, coupé en dés, et 10 g d'oignon vert émincé sur le dessus de chaque bol. Admirez la couleur dorée du tofu et la fraîcheur de l'oignon vert.",
+        "Étape 1 : Faire chauffer 900 ml de bouillon de légumes végétal à feu moyen-vif avec 30 g de miso et 10 ml de sauce soja, pendant 8 minutes, en remuant régulièrement.",
+        "Étape 2 : Ajouter 11 g de gingembre frais émincé, 10 g d'ail émincé, 150 g d'oignon émincé et 200 g de champignons émincés dans le bouillon et laisser cuire 8 minutes.",
+        "Étape 3 : Cuire les nouilles ramen véganes selon les instructions, égoutter et rincer brièvement à l'eau froide.",
+        "Étape 4 : Répartir les nouilles dans des bols profonds chauds et verser le bouillon chaud.",
+        "Étape 5 : Ajouter 200 g de tofu ferme coupé en dés et doré 5 minutes à la poêle dans 10 ml d'huile de sésame, puis 10 g d'oignon vert émincé.",
         "Étape 6 : Servir sans attendre : les saveurs et les textures sont à leur meilleur lorsqu'elles sont fraîches et bien chaudes."
       ],
       "diet_flags": {
@@ -159056,7 +159189,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -159104,6 +159237,28 @@
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "thyme_dried_herb",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "bay_leaf_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -159238,11 +159393,10 @@
       "instructions": [
         "Étape 1: Émincer finement 600 g d'oignons jaunes. Faire fondre 30 g de beurre dans une cocotte. Ajouter les oignons, couvrir et suer à feu très doux 20 minutes. Découvrir et caraméliser 25 minutes à feu moyen jusqu'à brun acajou profond, en remuant régulièrement pour éviter de brûler.",
         "Étape 2: Déglacer avec 150 ml de vin blanc. Réduire 2 minutes. Saupoudrer de farine de blé, mélanger 1 minute pour éviter les grumeaux.",
-        "Étape 3: Verser 800 ml de bouillon végétal chaud, préparé avec des légumes frais et des herbes aromatiques. Ajouter du thym et du laurier frais. Mijoter 15 minutes pour laisser les saveurs se mélanger. Assaisonner avec 5 g de sel et 2 g de poivre.",
-        "Étape 4: Verser la soupe dans des bols allant au four. Déposer des croûtons grillés, préparés avec 120 g de pain complet et un filet de beurre. Parsemer généreusement de 120 g de comté râpé.",
+        "Étape 3: Verser 800 ml de bouillon végétal chaud. Ajouter du thym et du laurier frais. Mijoter 15 minutes pour laisser les saveurs se mélanger. Assaisonner avec 2 g de sel et 2 g de poivre.",
+        "Étape 4: Verser la soupe dans des bols allant au four. Déposer des croûtons grillés, préparés avec 120 g de baguette. Parsemer généreusement de 120 g de comté râpé.",
         "Étape 5: Préchauffer le four à 200°C. Gratiner 4 à 5 minutes sous le gril jusqu'à ce que la croûte soit dorée et bouillonnante. La soupe doit être fumante, la croûte croustillante et le fromage filant.",
-        "Étape 6: Servir aussitôt dans des bols préchauffés, accompagné de croutons supplémentaires ou d'une salade verte pour un repas complet.",
-        "Étape 7: Pour un service plus élégant, vous pouvez ajouter quelques feuilles de thym frais sur le dessus de chaque bol avant de servir."
+        "Étape 6: Servir aussitôt."
       ],
       "diet_flags": {
         "vegan": false,
@@ -159310,7 +159464,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 2,
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -159360,6 +159514,17 @@
           "meta": {
             "role": "ingredient",
             "note": "pour reconstituer le bouillon"
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -159455,13 +159620,16 @@
         "potato",
         "quick",
         "rapide",
+        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sel",
         "simple",
         "soup",
         "soupe",
         "stock",
+        "table",
         "terre",
         "vegan",
         "vegetable",
@@ -159478,11 +159646,11 @@
       "_chef_note": "Assurez-vous de utiliser un bouillon végétal pour respecter les règles végétarien.",
       "description": "Potage léger de cresson cuit brièvement pour préserver sa couleur verte intense et ses notes poivrées, typique de la cuisine française, avec une texture crémeuse et légère.",
       "instructions": [
-        "Étape 1 : Laver abondamment 300g de cresson de fontaine. Retirer les tiges les plus épaisses. Faire revenir 150g d'oignon jaune dans 2ml d'huile d'olive à feu doux pendant 5 minutes, sans coloration, jusqu'à ce que l'oignon soit translucide.",
+        "Étape 1 : Laver abondamment 300g de cresson de fontaine. Retirer les tiges les plus épaisses. Faire revenir 150g d'oignon jaune dans 15ml d'huile d'olive à feu doux pendant 5 minutes, sans coloration, jusqu'à ce que l'oignon soit translucide.",
         "Étape 2 : Ajouter 300g de pommes de terre crues en cubes et 700ml de bouillon végétal. Cuire pendant 20 minutes jusqu'à ce que les pommes de terre soient fondantes et que la lame d'un couteau pénètre facilement.",
-        "Étape 3 : Ajouter 300g de cresson de fontaine en grande quantité. Cuire exactement 3 minutes à feu vif — ne pas trop cuire pour conserver la couleur verte et les vitamines. La soupe doit commencer à bouillonner légèrement.",
+        "Étape 3 : Ajouter le cresson. Cuire exactement 3 minutes à feu vif — ne pas trop cuire pour conserver la couleur verte et les vitamines. La soupe doit commencer à bouillonner légèrement.",
         "Étape 4 : Mixer immédiatement à pleine puissance jusqu'à obtenir une soupe verte vif et lisse. Incorporer 80ml de crème de coco. La texture doit être crémeuse mais encore légère.",
-        "Étape 5 : Rectifier l'assaisonnement avec du sel et du poivre. Servir aussitôt dans des bols préchauffés, en veillant à conserver la chaleur pour préserver la couleur intense et le goût piquant du cresson."
+        "Étape 5 : Saler avec 2 g de sel, poivrer et servir aussitôt."
       ],
       "diet_flags": {
         "vegan": true,
@@ -159561,7 +159729,7 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 2,
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -159571,9 +159739,9 @@
           }
         },
         {
-          "ingredient": "lemon",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "lemon_juice",
+          "quantity": 15,
+          "unit": "ml",
           "meta": {
             "role": "acidity",
             "form": "wedges",
@@ -159611,6 +159779,17 @@
           "meta": {
             "role": "ingredient",
             "note": "pour reconstituer le bouillon"
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -159673,13 +159852,12 @@
       "search_tokens": [
         "(eau",
         "45 minutes",
-        "acidite",
-        "agrume",
         "blending",
         "bouillon",
         "carotte",
         "carottes",
         "carrot",
+        "citron",
         "classique",
         "coeliaque",
         "coriander",
@@ -159710,19 +159888,21 @@
         "olive",
         "onion",
         "potable)",
+        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
+        "sel",
         "simple",
         "soup",
         "soupe",
         "stock",
+        "table",
         "vegan",
         "vegetable",
         "vegetalien",
         "vegetarien",
-        "vitamine c",
         "water"
       ],
       "difficulty_level": "easy",
@@ -159732,11 +159912,11 @@
       "_chef_note": "N'oubliez pas de rectifier l'assaisonnement avant de servir.",
       "description": "Soupe lisse et crémeuse de carottes au cumin et gingembre frais, relevée de jus de citron frais et coriandre fraîche ciselée, avec une texture veloutée et une couleur orange intense, parfumée par les épices chaudes.",
       "instructions": [
-        "Étape 1 : Peler 600g de carottes et les couper en rondelles fines. Faire revenir 150g d'oignon dans 2ml d'huile d'olive extra vierge à feu moyen pendant 5 minutes, jusqu'à ce que les oignons soient translucides et parfument la cuisine. Ajouter 5g de cumin en poudre, faire grésiller 30 secondes pour libérer les huiles essentielles.",
+        "Étape 1 : Peler 600g de carottes et les couper en rondelles fines. Faire revenir 150g d'oignon dans 15ml d'huile d'olive extra vierge à feu moyen pendant 5 minutes, jusqu'à ce que les oignons soient translucides et parfument la cuisine. Ajouter 5g de cumin en poudre, faire grésiller 30 secondes pour libérer les huiles essentielles.",
         "Étape 2 : Incorporer les carottes et 15g de gingembre frais râpé. Mouiller avec 800ml de bouillon végétal chaud, en veillant à ce que les légumes soient complètement immergés.",
         "Étape 3 : Porter à ébullition puis mijoter à couvert pendant 25 minutes jusqu'à ce que les carottes soient fondantes et se laissent facilement piquer avec une fourchette.",
-        "Étape 4 : Mixer finement jusqu'à obtenir une texture veloutée et une couleur orange brillante. Assaisonner de sel et poivre, en goûtant pour ajuster la saveur.",
-        "Étape 5 : Servir chaud dans des bols préchauffés, avec un filet de jus de citron frais pressé et une pincée de coriandre fraîche ciselée, pour préserver la chaleur et la texture crémeuse."
+        "Étape 4 : Mixer finement jusqu'à obtenir une texture veloutée et une couleur orange brillante. Assaisonner de 2 g de sel et de poivre, en goûtant pour ajuster la saveur.",
+        "Étape 5 : Servir chaud, avec 15 ml de jus de citron frais et une pincée de coriandre fraîche ciselée, pour préserver la chaleur et la texture crémeuse."
       ],
       "diet_flags": {
         "vegan": true,
@@ -159815,7 +159995,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 2,
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -159826,7 +160006,7 @@
         },
         {
           "ingredient": "curry",
-          "quantity": 1,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -159865,6 +160045,17 @@
           "meta": {
             "role": "ingredient",
             "note": "pour reconstituer le bouillon"
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -159963,14 +160154,17 @@
         "onion",
         "potable)",
         "pumpkin",
+        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "sel",
         "simple",
         "soup",
         "soupe",
         "squash",
         "stock",
+        "table",
         "vegan",
         "vegetable",
         "vegetalien",
@@ -159984,12 +160178,11 @@
       "_chef_note": "Ce velouté est idéal pour les soirées d'hiver, car il est réconfortant et parfumé. Vous pouvez le servir avec du pain grillé ou des croûtons pour un repas complet.",
       "description": "Velouté de courge butternut au lait de coco et gingembre, fusionnant douceur hivernale et épices orientales pour une texture crémeuse et une couleur orange vif, typique de la cuisine automnale.",
       "instructions": [
-        "Étape 1 : Peler la courge butternut et couper en cubes de 4 cm. Faire revenir l'oignon dans 2 ml d'huile d'olive à feu moyen pendant 5 minutes, jusqu'à ce que les oignons soient translucides et parfumés.",
+        "Étape 1 : Peler la courge butternut et couper en cubes de 4 cm. Faire revenir l'oignon dans 15 ml d'huile d'olive à feu moyen pendant 5 minutes, jusqu'à ce que les oignons soient translucides et parfumés.",
         "Étape 2 : Ajouter les cubes de courge butternut et saupoudrer de cari. Faire revenir pendant 2 minutes, en remuant régulièrement, pour permettre aux saveurs de se mélanger.",
         "Étape 3 : Ajouter 11,2 g de gingembre frais râpé, puis verser 200 ml de lait de coco et 400 ml de bouillon de légumes. Porter à ébullition, puis réduire le feu et laisser mijoter pendant 25 minutes, ou jusqu'à ce que la courge soit tendre et fondante.",
         "Étape 4 : Mixer la soupe à pleine puissance jusqu'à obtenir un velouté parfaitement lisse et d'une couleur orange vif.",
-        "Étape 5 : Assaisonner de sel et de poivre. La soupe doit être crémeuse et sucrée naturellement, légèrement épicée. Servir chaud, garni de graines de courge grillées et d'un filet de crème de coco.",
-        "Étape 6 : Pour une présentation plus élégante, vous pouvez ajouter quelques feuilles de coriandre fraîche ou des lamelles de gingembre cuit."
+        "Étape 5 : Assaisonner avec 3 g de sel et du poivre. La soupe doit être crémeuse et sucrée naturellement, légèrement épicée. Servir chaud, garni de graines de courge grillées et d'un filet de lait de coco."
       ],
       "diet_flags": {
         "vegan": true,
