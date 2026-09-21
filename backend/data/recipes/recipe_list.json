@@ -7805,7 +7805,7 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 2,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -7820,7 +7820,7 @@
       },
       {
         "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 20,
+        "quantity": 10,
         "unit": "ml"
       },
       {
@@ -7889,7 +7889,7 @@
       "soy"
     ],
     "servings": 4,
-    "time_total": 44,
+    "time_total": 39,
     "confidence": 1.0,
     "description": "Bouillon dashi végétal parfumé à la sauce soja, où la courge kabocha fond en bouche, tendre et dorée, avec une sauce réduite et sirupeuse. Ce plat mijoté est une recette fondatrice de la cuisine japonaise, mettant en valeur la courge kabocha cuite à la perfection.",
     "composition": [
@@ -7900,12 +7900,12 @@
       },
       {
         "ingredient": "base_dashi_broth_a3a517",
-        "quantity": 700,
+        "quantity": 400,
         "unit": "ml"
       },
       {
         "ingredient": "soy_sauce_tamari",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -14872,7 +14872,9 @@
       "vegan",
       "vegetarian"
     ],
-    "allergens": [],
+    "allergens": [
+      "sulphites"
+    ],
     "servings": 4,
     "time_total": 135,
     "confidence": 0.95,
@@ -14905,7 +14907,7 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 4,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -14917,9 +14919,14 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "red_wine_vinegar_liquid",
+        "quantity": 15,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -14992,13 +14999,13 @@
     "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "raw",
       "vegan",
       "vegetarian"
     ],
     "allergens": [
-      "sulphites"
+      "sulphites",
+      "gluten"
     ],
     "servings": 4,
     "time_total": 145,
@@ -15031,7 +15038,7 @@
         "unit": "ml"
       },
       {
-        "ingredient": "white_vinegar_liquid_distilled",
+        "ingredient": "red_wine_vinegar_liquid",
         "quantity": 18,
         "unit": "g"
       },
@@ -15049,6 +15056,11 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      },
+      {
+        "ingredient": "white_bread_baguette",
+        "quantity": 50,
+        "unit": "g"
       }
     ],
     "n_instructions": 8,
@@ -17760,7 +17772,7 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 2,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -17795,7 +17807,7 @@
       },
       {
         "ingredient": "coconut_milk_plant",
-        "quantity": 400,
+        "quantity": 250,
         "unit": "ml"
       },
       {
@@ -18503,7 +18515,7 @@
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 18.8,
+        "quantity": 12,
         "unit": "g"
       },
       {
@@ -18525,6 +18537,16 @@
         "ingredient": "cinnamon",
         "quantity": 3,
         "unit": "g"
+      },
+      {
+        "ingredient": "tomato_paste_unsalted_canned",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 15,
+        "unit": "ml"
       }
     ],
     "n_instructions": 9,
@@ -18675,7 +18697,7 @@
       },
       {
         "ingredient": "bok_choy_raw",
-        "quantity": 800,
+        "quantity": 300,
         "unit": "g"
       },
       {
@@ -18690,12 +18712,12 @@
       },
       {
         "ingredient": "red_bell_pepper_raw",
-        "quantity": 320,
+        "quantity": 150,
         "unit": "g"
       },
       {
         "ingredient": "napa_cabbage_raw",
-        "quantity": 900,
+        "quantity": 300,
         "unit": "g"
       },
       {
@@ -18705,7 +18727,7 @@
       },
       {
         "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -18724,7 +18746,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -29560,8 +29582,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "coriander_spice_seed",
-        "quantity": 2,
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 30,
         "unit": "g"
       },
       {
@@ -29586,7 +29608,7 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
+        "quantity": 45,
         "unit": "ml"
       },
       {
@@ -29633,9 +29655,14 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1500,
+        "unit": "ml"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
     "similar": [
       {
@@ -44216,6 +44243,11 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 700,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -44580,7 +44612,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -44744,12 +44776,12 @@
       },
       {
         "ingredient": "nutmeg_spice",
-        "quantity": 5,
+        "quantity": 1,
         "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -44761,6 +44793,16 @@
         "ingredient": "coconut_milk_plant",
         "quantity": 100,
         "unit": "ml"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 5,
+        "unit": "g"
       }
     ],
     "n_instructions": 6,
@@ -44788,7 +44830,7 @@
     "composition": [
       {
         "ingredient": "quinoa_raw_dried",
-        "quantity": 250,
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -44798,7 +44840,7 @@
       },
       {
         "ingredient": "potato_raw_flesh",
-        "quantity": 600,
+        "quantity": 300,
         "unit": "g"
       },
       {
@@ -44808,12 +44850,12 @@
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
+        "quantity": 12,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 750.0,
+        "quantity": 1200,
         "unit": "ml"
       },
       {
@@ -44828,11 +44870,16 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -45189,7 +45236,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
     "similar": [
       {
@@ -45241,7 +45288,7 @@
       },
       {
         "ingredient": "pasta_raw_dried",
-        "quantity": 320,
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -45256,12 +45303,12 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 20,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -45276,7 +45323,7 @@
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 15.1,
+        "quantity": 12,
         "unit": "g"
       },
       {
@@ -45285,7 +45332,7 @@
         "unit": "ml"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
@@ -45342,7 +45389,7 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
     "similar": [
       {

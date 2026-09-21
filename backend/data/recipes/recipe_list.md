@@ -230,7 +230,7 @@
 - **Gaspacho de Melon à la Menthe** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, french)_ — `entry_gaspacho_de_melon_menthe_ee9907`
 - **Gaspacho Provençal** _(gluten_free, kid_friendly, lactose_free, nut_free, raw, vegan, vegetarian, soup, french_mediterranean)_ — `soup_gaspacho_provencal_f69228`
 - **Gaufres Belges** _(kid_friendly, nut_free, breakfast, belgian)_ — `brkf_gaufres_belges_077910`
-- **Gazpacho andalou** _(diabetes_friendly, gluten_free, raw, vegan, vegetarian, soup, spanish)_ — `soup_gazpacho_classic_v2_x9k3m1`
+- **Gazpacho andalou** _(diabetes_friendly, raw, vegan, vegetarian, soup, spanish)_ — `soup_gazpacho_classic_v2_x9k3m1`
 - **Georgian Vegetable Stew** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, georgian)_ — `stew_georgian_vegetable_stew_1cb019`
 - **Ghee (Beurre Clarifié)** _(vegetarian, condiment, indian)_ — `base_ghee_ec9064`
 - **Girolles à la Crème** _(gluten_free, nut_free, main, french)_ — `main_girolles_a_la_creme_7d432d`
