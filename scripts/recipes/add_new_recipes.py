@@ -75,7 +75,10 @@ GENERIC = {"riz", "sauce", "salade", "soupe", "legumes", "legume", "maison", "ve
            # mots qui veulent dire « plat » ou un ingrédient de base dans une autre langue
            "sopa", "caldo", "ensalada", "pasta", "pane", "arroz", "riz", "dal", "curry", "wat",
            "wot", "chorba", "shorba", "polo", "pilav", "pilaf",
-           "aux", "des", "les", "sur", "lait", "eau", "mais", "paneer", "gallo", "tofu"}
+           "aux", "des", "les", "sur", "lait", "eau", "mais", "paneer", "gallo", "tofu",
+           "blanc", "blanche", "blancs", "vert", "verte", "verts", "rouge", "rouges", "noir",
+           "noirs", "jaune", "maison", "chou", "carotte", "erable", "sirop", "sucre", "cidre",
+           "matin", "jardin", "hiver", "ete", "printemps", "automne", "pain", "tarte", "gateau"}
 
 # adjectifs de pays et de région : ils ne distinguent pas un plat d'un autre
 GENTILES = {"francais", "francaise", "italien", "italienne", "italiennes", "espagnol", "espagnole",
@@ -92,7 +95,7 @@ GENTILES = {"francais", "francaise", "italien", "italienne", "italiennes", "espa
             "persan", "persane", "iranien", "iranienne", "afghan", "afghane", "nepalais",
             "sri", "lankais", "provencal", "provencale", "nicois", "nicoise", "bretonnes",
             "castillane", "andalouse", "sicilienne", "napolitaine", "romaine", "milanais",
-            "costaricien", "salvadorien", "canadien", "canadienne", "quebecois", "americain",
+            "costaricien", "salvadorien", "canadien", "canadienne", "quebecois", "quebecoise", "americain",
             "americaine", "vegetariens", "vegetariennes", "vegane", "veganes"}
 
 

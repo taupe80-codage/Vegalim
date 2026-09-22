@@ -16,7 +16,7 @@ et diététiques précis.
 
 **Stack** : FastAPI · Python · PostgreSQL · SQLAlchemy  
 **Frontends** : React (B2C) + HTML vanilla (admin/B2B)  
-**Recettes** : 793 recettes JSON, schéma CDC v4
+**Recettes** : 812 recettes JSON, schéma CDC v4
 
 ---
 
@@ -67,7 +67,7 @@ backend/data/
 │   ├── ingredient_physical.json           ← données physiques unités→grammes
 │   └── fr_to_en_mapping.json             ← mapping FR→base_name (v2.1+)
 ├── recipes/
-│   └── recipes.json                      ← 793 recettes CDC v4
+│   └── recipes.json                      ← 812 recettes CDC v4
 └── outputs/                              ← rapports validator
     ├── validation_report.json
     └── correction_proposals.json
