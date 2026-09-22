@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 105 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 91 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -92,6 +92,7 @@
 - **Champignons Sautés Ail Persil** _(diabetes_friendly, gluten_free, kid_friendly, low_calorie, nut_free, side, french)_ — `side_champignons_sautes_ail_pe_b477e2`
 - **Champignons à la Grecque** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, starter, french)_ — `entry_champignons_a_la_grecque_efe65f`
 - **Chana masala** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `curry_chickpea_k5x2p9`
+- **Chana palak, pois chiches aux épinards (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, indian)_ — `protein_palak_paneer_vegan_bdac46`
 - **Charlotte aux Fraises** _(kid_friendly, nut_free, vegetarian, dessert, french)_ — `dessert_charlotte_aux_fraises_e3f32c`
 - **Cheddar Végane** _(vegan, ingredient, vegan)_ — `base_cheddar_vegane_529b97` 🔁 doublon possible : Cheddar Végétal
 - **Cheddar Végétal** _(vegan, vegetarian, gluten_free, base, international)_ — `base_vegan_cheddar_024998` 🔁 doublon possible : Cheddar Végane
@@ -172,6 +173,8 @@
 - **Enchiladas rojas aux haricots noirs et queso fresco** _(high_protein, vegetarian, gluten_free, nut_free, main, mexican)_ — `bread_enchiladas_fe7221`
 - **Enchiladas verdes à la patate douce et aux épinards (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, main, mexican)_ — `wrap_enchiladas_vegan_f70bca`
 - **Endives au Gratin** _(kid_friendly, nut_free, main, french_nordic)_ — `main_endives_au_gratin_6b58ee`
+- **Enfrijoladas d'Oaxaca au queso fresco** _(high_protein, vegetarian, gluten_free, nut_free, main, mexican)_ — `bread_mexican_enfrijoladas_578ae7`
+- **Enmoladas aux légumes rôtis (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, mexican)_ — `main_mexican_enfrijoladas_vega_d6a9a8`
 - **Escalivada** _(diabetes_friendly, gluten_free, vegan, vegetarian, side, spanish)_ — `main_escalivada_1ee1c4`
 - **Ethiopian Atkilt Wat** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, ethiopian)_ — `dal_ethiopian_atkilt_wat_afd168`
 - **Ethiopian Misir Wot** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, ethiopian)_ — `dal_ethiopian_misir_wot_4203c8`
@@ -296,14 +299,13 @@
 
 ## K
 
-- **Kadhi Pakora** _(diabetes_friendly, gluten_free, high_protein, main, indian)_ — `dal_kadhi_pakora_078de2` 🔁 doublon possible : Kadhi Pakora (Vegan)
-- **Kadhi Pakora (Vegan)** _(diabetes_friendly, gluten_free, high_protein, nut_free, main, indian)_ — `dal_kadhi_pakora_vegan_5cb5d4` 🔁 doublon possible : Kadhi Pakora
+- **Kadhi gujarati sucré-acidulé aux pois chiches (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, indian)_ — `dal_kadhi_pakora_vegan_5cb5d4`
+- **Kadhi pakora du Pendjab** _(diabetes_friendly, high_protein, vegetarian, gluten_free, nut_free, main, indian)_ — `dal_kadhi_pakora_078de2`
 - **Kare raisu aux oignons caramélisés** _(vegetarian, nut_free, main, japanese)_ — `curry_japonais_1caddf`
 - **Karelian Pies** _(high_protein, main, nordic)_ — `rice_karelian_pies_106cca`
 - **Kashk (Petit-Lait Fermenté)** _(vegetarian, gluten_free, dairy, persian)_ — `base_kashk_fd3ac6`
 - **Kashke Bademjan** _(diabetes_friendly, gluten_free, main, persian)_ — `main_kashke_bademjan_10dd33`
-- **Katsu Curry** _(high_protein, main, japanese)_ — `bread_katsu_bf3f1e` 🔁 doublon possible : Katsu curry (vegan)
-- **Katsu curry (vegan)** _(diabetes_friendly, high_protein, lactose_free, nut_free, main, japanese)_ — `curry_katsu_vegan_f2e6a3` 🔁 doublon possible : Katsu Curry
+- **Katsu curry d'aubergine, sauce curry maison (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, nut_free, main, japanese)_ — `curry_katsu_vegan_f2e6a3`
 - **Khachapuri** _(main, georgian)_ — `egg_khachapuri_134434`
 - **Kheer au Riz** _(gluten_free, kid_friendly, dessert, indian)_ — `dessert_kheer_au_riz_ee0837`
 - **Khichdi** _(gluten_free, vegetarian, main, international)_ — `dal_khichdi_23f932`
@@ -316,6 +318,7 @@
 - **Kimchijeon, crêpe croustillante au kimchi (vegan)** _(vegan, vegetarian, lactose_free, nut_free, snack, korean)_ — `snack_crepe_coreenne_aux_oignon_a45536`
 - **Kombucha** _(vegan, gluten_free, lactose_free, beverage, chinese)_ — `beverage_kombucha_3df24c`
 - **Korma de Légumes** _(diabetes_friendly, gluten_free, vegetarian, main, indian)_ — `main_korma_de_legumes_ddde08`
+- **Korma de légumes au tofu et à la noix de cajou (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, main, indian)_ — `protein_paneer_butter_masala_vega_6c63de`
 - **Koshari de fête à la shatta** _(high_protein, vegan, vegetarian, lactose_free, nut_free, main, egyptian)_ — `main_koshari_classic_v4_q7n5z2`
 - **Koshari du Caire aux pois chiches, sauce daqqa** _(vegan, vegetarian, lactose_free, nut_free, main, egyptian)_ — `dal_koshari_egyptien_73828c`
 - **Koshari express aux lentilles corail** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, egyptian)_ — `dal_koshari_15670d`
@@ -361,8 +364,6 @@
 - **Menemen** _(diabetes_friendly, gluten_free, high_protein, main, turkish)_ — `egg_menemen_681f60`
 - **Mercimek Köftesi** _(vegetarian, vegan, lactose_free, main, international)_ — `dal_mercimek_koftesi_34f72d`
 - **Mexican Calabacitas** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, mexican)_ — `main_mexican_calabacitas_f3511d`
-- **Mexican Enfrijoladas** _(gluten_free, high_protein, main, mexican)_ — `bread_mexican_enfrijoladas_578ae7` 🔁 doublon possible : Mexican Enfrijoladas (Vegan)
-- **Mexican Enfrijoladas (Vegan)** _(diabetes_friendly, gluten_free, high_protein, lactose_free, main, mexican)_ — `main_mexican_enfrijoladas_vega_d6a9a8` 🔁 doublon possible : Mexican Enfrijoladas
 - **Mexican Rice** _(gluten_free, vegan, vegetarian, main, mexican)_ — `rice_mexican_rice_94bd67`
 - **Migas Portugaises** _(diabetes_friendly, vegetarian, main, portuguese)_ — `bread_migas_portugaises_76818b`
 - **Minestrone d'hiver milanais au riz et chou de Milan** _(diabetes_friendly, vegetarian, gluten_free, nut_free, soup, italian)_ — `soup_minestrone_italienne_f98e05`
@@ -384,8 +385,8 @@
 
 ## N
 
-- **Nasi Goreng** _(main, indonesian)_ — `rice_nasi_goreng_edfce4` 🔁 doublon possible : Nasi Goreng (Vegan)
-- **Nasi Goreng (Vegan)** _(lactose_free, nut_free, main, indonesian)_ — `rice_nasi_goreng_vegan_bcc9cb` 🔁 doublon possible : Nasi Goreng
+- **Nasi goreng au tempeh et aux haricots verts (vegan)** _(vegan, vegetarian, lactose_free, nut_free, main, indonesian)_ — `rice_nasi_goreng_vegan_bcc9cb`
+- **Nasi goreng kampung à l'œuf au plat** _(vegetarian, lactose_free, nut_free, main, indonesian)_ — `rice_nasi_goreng_edfce4`
 - **Natto** _(vegan, vegetarian, gluten_free, high_protein, condiment, japanese)_ — `base_natto_7060f1`
 - **Nepali Aloo Tama** _(gluten_free, vegan, vegetarian, main, nepali)_ — `main_nepali_aloo_tama_4664a3`
 - **Nepali Chickpea Curry** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, nepali)_ — `dal_nepali_chickpea_curry_020035`
@@ -405,8 +406,8 @@
 ## O
 
 - **Oignon Frit** _(vegan, vegetarian, gluten_free, condiment, international)_ — `base_fried_onion_217e6a`
-- **Ojja** _(diabetes_friendly, gluten_free, high_protein, main, tunisian)_ — `egg_ojja_5bdbea` 🔁 doublon possible : Ojja (Vegan)
-- **Ojja (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, breakfast, tunisian)_ — `brkf_ojja_vegan_dbbad8` 🔁 doublon possible : Ojja
+- **Ojja aux pois chiches et tofu brouillé au carvi (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, breakfast, tunisian)_ — `brkf_ojja_vegan_dbbad8`
+- **Ojja tunisienne aux œufs, poivrons et harissa** _(diabetes_friendly, gluten_free, high_protein, main, tunisian)_ — `egg_ojja_5bdbea`
 - **Okonomiyaki** _(nut_free, vegetarian, main, japanese)_ — `egg_okonomiyaki_c105e0`
 - **Omelette aux Herbes du Jardin** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, low_calorie, nut_free, breakfast, french)_ — `brkf_omelette_aux_herbes_du_ja_f21317`
 - **Omelette nature** _(diabetes_friendly, gluten_free, high_protein, breakfast, french)_ — `egg_omelette_nature_d72ed2`
@@ -432,16 +433,14 @@
 - **Pajeon aux oignons verts, sauce soja vinaigrée** _(vegetarian, lactose_free, nut_free, main, korean)_ — `egg_crepe_coreenne_aux_oignons_ver_356ac2`
 - **Pak Choï Sauté** _(vegan, vegetarian, side, chinese)_ — `wok_pak_choi_saute_62b974`
 - **Pakora** _(gluten_free, high_protein, vegan, vegetarian, snack, indian)_ — `dal_pakora_b418ab`
-- **Palak Paneer** _(diabetes_friendly, gluten_free, high_protein, main, indian)_ — `curry_palak_paneer_b4ca11` 🔁 doublon possible : Palak Paneer (Vegan)
-- **Palak Paneer (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, vegan, vegetarian, main, indian)_ — `protein_palak_paneer_vegan_bdac46` 🔁 doublon possible : Palak Paneer
+- **Palak paneer du Pendjab au ghee** _(diabetes_friendly, gluten_free, high_protein, main, indian)_ — `curry_palak_paneer_b4ca11`
 - **Pan Con Tomate** _(vegan, vegetarian, main, international)_ — `bread_pan_con_tomate_06a94e`
 - **Pancakes Banane Vegan** _(kid_friendly, lactose_free, nut_free, vegan, vegetarian, breakfast, american)_ — `brkf_pancakes_banane_vegan_c9231e`
 - **Pancakes Ricotta Citron** _(high_protein, kid_friendly, nut_free, breakfast, international)_ — `brkf_pancakes_ricotta_citron_847c9a`
 - **Pancakes salés à l'oignon rouge** _(vegetarian, snack, international)_ — `crepe_pancakes_sales_ultra_stru_1e8bd8`
 - **Pancit** _(vegetarian, main, philippine)_ — `rice_pancit_bfd33e`
 - **Paneer** _(vegetarian, gluten_free, base, indian)_ — `base_paneer_04e1db`
-- **Paneer Butter Masala** _(diabetes_friendly, gluten_free, high_protein, main, indian)_ — `curry_paneer_butter_masala_9e638c` 🔁 doublon possible : Paneer Butter Masala (Vegan)
-- **Paneer Butter Masala (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, indian)_ — `protein_paneer_butter_masala_vega_6c63de` 🔁 doublon possible : Paneer Butter Masala
+- **Paneer makhani de Delhi (paneer butter masala)** _(diabetes_friendly, gluten_free, high_protein, main, indian)_ — `curry_paneer_butter_masala_9e638c`
 - **Paneer Tikka** _(diabetes_friendly, gluten_free, high_protein, main, indian)_ — `protein_paneer_tikka_94f80a` 🔁 doublon possible : Paneer Tikka (Vegan)
 - **Paneer Tikka (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, low_calorie, nut_free, vegan, vegetarian, main, indian)_ — `protein_paneer_tikka_vegan_8bf0a0` 🔁 doublon possible : Paneer Tikka
 - **Panna Cotta Coco Vegan** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, dessert, international)_ — `dessert_panna_cotta_coco_vegan_16d6b5`
@@ -754,6 +753,7 @@
 - **Tofu Croustillant Sauce Ail** _(diabetes_friendly, high_protein, vegan, vegetarian, main, international)_ — `sauce_tofu_croustillant_sauce_a_b8be56`
 - **Tofu Frit au Bouillon** _(diabetes_friendly, high_protein, vegan, vegetarian, soup, japanese)_ — `soup_tofu_frit_au_bouillon_1bad0a`
 - **Tofu Froid Japonais** _(vegan, vegetarian, side, japanese)_ — `main_tofu_froid_japonais_506c62`
+- **Tofu katsu curry, panure panko et roux japonais** _(high_protein, vegetarian, nut_free, main, japanese)_ — `bread_katsu_bf3f1e`
 - **Tofu sauté aux légumes** _(diabetes_friendly, high_protein, vegan, vegetarian, main, international)_ — `wok_tofu_saute_aux_legumes_1f3ac2`
 - **Tofu Sauté Gingembre Soja** _(diabetes_friendly, high_protein, vegan, vegetarian, main, international)_ — `wok_tofu_saute_gingembre_soja_6e901c`
 - **Tofu Teriyaki** _(diabetes_friendly, high_protein, vegan, vegetarian, main, japanese)_ — `protein_tofu_teriyaki_ffcb47` 🔁 doublon possible : Donburi Tofu Teriyaki

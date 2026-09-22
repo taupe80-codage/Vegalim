@@ -11407,7 +11407,7 @@
       "id": "bread_katsu_bf3f1e",
       "titles": {
         "original": "Katsu Kare",
-        "fr": "Katsu Curry",
+        "fr": "Tofu katsu curry, panure panko et roux japonais",
         "en": "Katsu Curry"
       },
       "origin": {
@@ -11418,10 +11418,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 20,
+        "prep_active_min": 25,
         "prep_passive_min": 10,
         "cook_min": 30,
-        "total_min": 60
+        "total_min": 65
       },
       "composition": [
         {
@@ -11430,14 +11430,14 @@
           "unit": "g",
           "meta": {
             "role": "protein",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "breadcrumbs_dried",
-          "quantity": 80,
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -11448,11 +11448,11 @@
         },
         {
           "ingredient": "rice_flour",
-          "quantity": 60,
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
-            "form": "sifted",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -11463,7 +11463,7 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -11474,57 +11474,58 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "garlic_raw",
-          "quantity": 9,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "curry",
-          "quantity": 10,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 9.4,
+          "ingredient": "carrot_raw",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "potato_raw_flesh",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "base_japanese_curry_roux_385e52",
+          "quantity": 80,
           "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 750 ml d'eau"
+            "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 750.0,
+          "quantity": 600,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
-            "note": "pour reconstituer le bouillon"
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
           "ingredient": "sunflower_oil_plant",
-          "quantity": 45,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -11535,7 +11536,7 @@
         },
         {
           "ingredient": "white_rice_short_grain_seed_dried",
-          "quantity": 300,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -11547,11 +11548,15 @@
       ],
       "tags": {
         "diet": [
-          "high_protein"
+          "high_protein",
+          "vegetarian",
+          "nut_free"
         ],
         "allergens": [
           "eggs",
           "gluten",
+          "lactose",
+          "milk",
           "soy"
         ],
         "technique": [
@@ -11602,43 +11607,49 @@
       },
       "search_tokens": [
         "(eau",
-        "1 heure",
-        "ail",
         "asia",
         "asiatique",
         "avance",
+        "base_japanese_curry_roux_385e52",
         "blanc",
-        "bouillon",
         "breadcrumbs",
+        "carotte",
+        "carrot",
         "chapelure",
         "chef",
         "complexe",
         "curry",
+        "curry,",
         "eau",
         "egg",
-        "garlic",
         "japanese",
         "japon",
         "japonais",
         "kare",
         "katsu",
         "leger",
-        "legumes",
+        "lent",
         "light",
+        "long",
         "low calorie",
+        "mijote",
         "minceur",
         "oignon",
         "onion",
+        "panko",
+        "panure",
+        "pomme",
         "potable)",
+        "potato",
         "rice",
         "riz",
+        "roux",
         "sans viande",
-        "stock",
         "sunflower",
         "technique",
+        "terre",
         "tofu",
         "tournesol",
-        "vegetable",
         "vegetarien",
         "water",
         "water_cooking",
@@ -11651,20 +11662,19 @@
       "servings_default": 4,
       "_quality_score": 0.97,
       "_chef_note": "Pour une meilleure texture, utilisez de la farine de riz et des chapelures de panko pour la panure du tofu.",
-      "description": "Katsu de tofu croustillant sur lit de riz japonais, nappé d'une sauce curry onctueuse et parfumée, où les saveurs de l'oignon caramélisé et de l'ail torréfié se mélangent en harmonie, avec une texture crémeuse et une couleur dorée appétissante.",
+      "description": "Tranches de tofu ferme panées à l'œuf et au panko, frites jusqu'à être croustillantes, servies sur du riz avec une sauce au roux de curry japonais, carottes et pommes de terre.",
       "instructions": [
-        "Étape 1 : Rincer 300 g de riz japonais jusqu'à ce que l'eau soit claire, puis le cuire à couvert avec 350 ml d'eau pendant 12 minutes à feu doux. Laisser reposer 10 minutes hors du feu.",
-        "Étape 2 : Émincer l'oignon et l'ail, puis les faire revenir 5 minutes à feu moyen dans 15 ml d'huile de tournesol jusqu'à ce que l'oignon soit doré.",
-        "Étape 3 : Ajouter le curry en poudre et 20 g de farine de riz, remuer 1 minute, puis verser progressivement 400 ml d'eau chaude et le bouillon en poudre en fouettant. Laisser mijoter 10 minutes jusqu'à ce que la sauce nappe la cuillère.",
-        "Étape 4 : Égoutter le tofu, le couper en 4 tranches épaisses et les éponger. Les passer dans 40 g de farine de riz, puis dans les œufs battus, puis dans la chapelure panko.",
-        "Étape 5 : Chauffer 30 ml d'huile de tournesol dans une grande poêle à feu moyen-vif et dorer les tranches 3 à 4 minutes de chaque côté, jusqu'à ce que la panure soit croustillante. Égoutter sur du papier absorbant.",
-        "Étape 6 : Trancher le katsu, le dresser sur le riz et napper de sauce curry. Servir chaud."
+        "Étape 1 : Cuire 250 g de riz japonais rincé dans 300 ml d'eau, 12 minutes à couvert, puis laisser reposer.",
+        "Étape 2 : Sauce : faire revenir 150 g d'oignon dans 10 ml d'huile, ajouter 120 g de carotte et 200 g de pommes de terre en dés et 600 ml d'eau, puis cuire 15 minutes. Hors du feu, dissoudre 80 g de roux de curry, puis mijoter 5 minutes.",
+        "Étape 3 : Couper 400 g de tofu pressé en 8 tranches, les passer dans 40 g de farine de riz, puis dans 2 œufs battus (110 g) et enfin dans 60 g de panko.",
+        "Étape 4 : Frire les tranches dans l'huile chaude, 3 minutes de chaque côté, jusqu'à ce qu'elles soient dorées (environ 30 ml d'huile absorbée).",
+        "Étape 5 : Servir le tofu tranché sur le riz, nappé de sauce curry."
       ],
       "diet_flags": {
         "vegan": false,
         "vegetarian": true,
         "gluten_free": false,
-        "lactose_free": true,
+        "lactose_free": false,
         "nut_free": true,
         "raw": false,
         "kid_friendly": false
@@ -11674,21 +11684,21 @@
       "id": "bread_mexican_enfrijoladas_578ae7",
       "titles": {
         "original": "Mexican Enfrijoladas",
-        "fr": "Mexican Enfrijoladas",
+        "fr": "Enfrijoladas d'Oaxaca au queso fresco",
         "en": "Mexican Enfrijoladas"
       },
       "origin": {
         "cuisine": "mexican",
         "country": "mexico",
-        "region": "ciudad_de_mexico",
-        "city": ""
+        "region": "oaxaca",
+        "city": "oaxaca"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 13,
-        "prep_passive_min": 0,
-        "cook_min": 30,
-        "total_min": 43
+        "prep_active_min": 15,
+        "prep_passive_min": 10,
+        "cook_min": 20,
+        "total_min": 45
       },
       "composition": [
         {
@@ -11697,14 +11707,14 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "black_bean_boiled",
-          "quantity": 300,
+          "quantity": 450,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -11714,9 +11724,9 @@
           }
         },
         {
-          "ingredient": "base_mole_d0034f",
-          "quantity": 200,
-          "unit": "ml",
+          "ingredient": "queso_fresco_block_cow",
+          "quantity": 100,
+          "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
@@ -11725,44 +11735,88 @@
           }
         },
         {
-          "ingredient": "queso_fresco_block_cow",
-          "quantity": 80,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "grated",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 9,
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "ancho_pepper_spice_dried",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "dry",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "bay_leaf",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 350,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_onion_raw",
+          "quantity": 50,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -11774,7 +11828,18 @@
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "chopped",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -11800,34 +11865,14 @@
             "note": "Ajoute une touche de piquant",
             "optional": true
           }
-        },
-        {
-          "ingredient": "cumin_spice_seed",
-          "quantity": 3,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 4,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
         "diet": [
+          "high_protein",
+          "vegetarian",
           "gluten_free",
-          "high_protein"
+          "nut_free"
         ],
         "allergens": [
           "lactose",
@@ -11879,16 +11924,20 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "45 minutes",
         "ail",
-        "base_mole_d0034f",
+        "ancho",
         "base_tortilla_92c2a6",
+        "bay_leaf",
         "bean",
         "black",
         "coeliaque",
         "coriander",
         "coriandre",
         "cumin",
+        "d'oaxaca",
+        "eau",
         "enfrijoladas",
         "epice",
         "fresco",
@@ -11896,7 +11945,6 @@
         "gluten free",
         "haricot",
         "intermediaire",
-        "jalapeno",
         "latino",
         "leger",
         "light",
@@ -11913,31 +11961,27 @@
         "oven_cooking",
         "pepper",
         "piment",
+        "potable)",
         "queso",
         "red",
         "rouge",
-        "salt",
         "sans gluten",
         "sans viande",
-        "sel",
-        "table",
         "vegetarien",
+        "water",
         "wok"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.97,
-      "description": "Plat mexicain à base de tortilla, avec une sauce haricots noirs onctueuse et parfumée, servie avec des tortillas souples et élastiques, légèrement croustillantes, et un fromage râpé pour une touche salée et umami.",
+      "description": "Tortillas repliées et nappées d'une sauce veloutée de haricots noirs à l'avocatier et au piment, garnies de queso fresco, d'oignon rouge et de coriandre.",
       "instructions": [
-        "Étape 1: Égoutter les haricots noirs cuits en réservant 150 ml de leur eau de cuisson. Mixer les haricots avec l'eau réservée, l'ail, le cumin et le sel jusqu'à obtenir une sauce épaisse mais fluide, avec une texture onctueuse et une odeur parfumée.",
-        "Étape 2: Faire chauffer la sauce haricots dans une sauteuse à feu moyen pendant 5 minutes en remuant constamment, en incorporant la sauce mole et l'oignon blanc revenu dans l'huile d'olive. La sauce doit napper la cuillère et être bien chaude, avec une couleur riche et intense.",
-        "Étape 3: Chauffer les tortillas une par une dans une poêle sèche à feu moyen pendant 20 secondes par face, jusqu'à légère souplesse et quelques taches brunes, en les retournant délicatement pour éviter les cassures.",
-        "Étape 4: Tremper chaque tortilla dans la sauce haricots chaude pendant 10 secondes de chaque côté, pour bien l'imprégner et lui donner une texture souple et élastique. La tortilla doit être souple et colorée, avec une odeur délicieuse de sauce haricots.",
-        "Étape 5: Plier en deux ou rouler les tortillas et disposer dans un plat légèrement huilé avec de l'huile d'olive, en les espaçant uniformément pour une cuisson égale.",
-        "Étape 6: Napper du reste de sauce haricots sur les tortillas, en les recouvrant généreusement pour qu'elles soient bien imbibées.",
-        "Étape 7: Préchauffer le gril du four. Passer les enfrijoladas sous le gril pendant 5 minutes, jusqu'à gratinage léger et doré, en surveillant la cuisson pour éviter les brûlures.",
-        "Étape 8: Servir les enfrijoladas chaudes, garnies de queso fresco émietté, de coriandre fraîche et, si désiré, de piment jalapeño, pour ajouter une touche de fraîcheur et de piquant."
+        "Étape 1 : Faire tremper 10 g de piment ancho épépiné dans l'eau chaude 10 minutes.",
+        "Étape 2 : Mixer 450 g de haricots noirs avec 350 ml d'eau, le piment, 100 g d'oignon, 6 g d'ail, 2 g de cumin et 3 g de sel.",
+        "Étape 3 : Cuire la sauce 10 minutes dans 20 ml d'huile avec 1 g de laurier : elle doit être veloutée et nappante.",
+        "Étape 4 : Réchauffer les tortillas une à une dans 10 ml d'huile, les tremper dans la sauce et les replier en quatre dans les assiettes.",
+        "Étape 5 : Napper du reste de sauce et garnir de 100 g de queso fresco émietté, de 50 g d'oignon rouge émincé et de 10 g de coriandre."
       ],
       "diet_flags": {
         "vegan": false,
@@ -16637,7 +16681,7 @@
       "id": "brkf_ojja_vegan_dbbad8",
       "titles": {
         "original": "Ojja () (Vegan)",
-        "fr": "Ojja (Vegan)",
+        "fr": "Ojja aux pois chiches et tofu brouillé au carvi (vegan)",
         "en": "Ojja () (Vegan)"
       },
       "origin": {
@@ -16648,63 +16692,107 @@
       },
       "servings": 2,
       "timing": {
-        "prep_active_min": 13,
+        "prep_active_min": 10,
         "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 33
+        "cook_min": 22,
+        "total_min": 32
       },
       "composition": [
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 480,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "red_bell_pepper_raw",
-          "quantity": 320,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "strips",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 220,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
+          "ingredient": "chickpea_boiled",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "base_harissa_ef842f",
-          "quantity": 15,
+          "quantity": 12,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "paste",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "caraway_spice_seed",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "turmeric_powder",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -16721,8 +16809,19 @@
           }
         },
         {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -16737,15 +16836,17 @@
           "unit": "1 tranche",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "pain tunisien",
-            "note": "Pour un repas complet",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
+          "vegan",
+          "vegetarian",
           "gluten_free",
           "lactose_free",
           "nut_free"
@@ -16799,16 +16900,21 @@
       "search_tokens": [
         "(vegan)",
         "45 minutes",
-        "baguette",
+        "ail",
+        "aux",
         "base_harissa_ef842f",
         "bell",
-        "blanc",
-        "boule",
-        "bread",
+        "brouille",
+        "caraway",
+        "carvi",
+        "chiches",
+        "chickpea",
         "coeliaque",
+        "curcuma",
         "enfants",
         "facile enfants",
         "famille",
+        "garlic",
         "gluten free",
         "intermediaire",
         "kids",
@@ -16821,9 +16927,11 @@
         "ojja",
         "olive",
         "onion",
-        "pain",
+        "parsley",
         "pepper",
+        "persil",
         "poaching",
+        "pois",
         "poivron",
         "red",
         "rouge",
@@ -16838,23 +16946,22 @@
         "tomate",
         "tomato",
         "tunisian",
+        "turmeric",
         "vegan",
         "vegetalien",
-        "vegetarien",
-        "white"
+        "vegetarien"
       ],
       "difficulty_level": "medium",
       "dish_type": "breakfast",
       "servings_default": 2,
       "_quality_score": 0.91,
-      "description": "Plat végétal créatif à base de tomates fraîches, poivrons et oignons, mijoté dans une sauce épicée à la harissa, avec une texture tendre et des saveurs intenses, typique de la cuisine nord-africaine.",
+      "description": "Ojja végétale : sauce de tomates et poivrons à la harissa, au carvi et à l'ail, pois chiches et tofu émietté mijotés dedans, servie avec du pain.",
       "instructions": [
-        "Étape 1 : Faire chauffer l'huile d'olive extra vierge à feu moyen-vif, ajouter l'oignon et faire revenir jusqu'à coloration blonde et texture caramélisée, en remuant régulièrement pour éviter la brûlure.",
-        "Étape 2 : Ajouter le poivron et la harissa, cuire 2 min en remuant, jusqu'à légère tendreté et saveur piquante, en sentant l'odeur épicée de la harissa.",
-        "Étape 3 : Incorporer les tomates concassées, saler avec du sel et laisser mijoter 15 min à feu moyen, jusqu'à texture tendre et saveur intense, en vérifiant la consistance et en ajoutant un peu d'eau si nécessaire.",
-        "Étape 4 : Faire un puits dans la sauce et ajouter des flocons de tofu, couvrir et cuire 8 min à feu doux, jusqu'à texture ferme et saveur bien intégrée.",
-        "Étape 5 : Vérifier que les flocons de tofu sont pris et les saveurs bien mélangées, en goûtant et en ajustant l'assaisonnement si nécessaire.",
-        "Étape 6 : Servir directement dans la poêle avec du pain tunisien et accompagner de légumes crus, pour un repas équilibré et savoureux, en présentant de manière appétissante et en ajoutant des herbes fraîches pour la décoration."
+        "Étape 1 : Faire revenir 100 g d'oignon et 250 g de poivron émincés dans 25 ml d'huile d'olive, 6 minutes.",
+        "Étape 2 : Ajouter 6 g d'ail, 12 g de harissa et 1 g de carvi moulu, puis cuire 1 minute.",
+        "Étape 3 : Ajouter 400 g de tomates concassées et 2 g de sel, puis mijoter 10 minutes.",
+        "Étape 4 : Ajouter 150 g de pois chiches et 200 g de tofu émietté avec 1 g de curcuma, puis cuire 5 minutes.",
+        "Étape 5 : Parsemer de 10 g de persil et servir avec du pain."
       ],
       "diet_flags": {
         "vegan": true,
@@ -27082,7 +27189,7 @@
       "id": "curry_katsu_vegan_f2e6a3",
       "titles": {
         "original": "Katsu Curry (Vegan)",
-        "fr": "Katsu curry (vegan)",
+        "fr": "Katsu curry d'aubergine, sauce curry maison (vegan)",
         "en": "Katsu Curry (Vegan)"
       },
       "origin": {
@@ -27093,26 +27200,26 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 19,
+        "prep_active_min": 25,
         "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 39
+        "cook_min": 35,
+        "total_min": 60
       },
       "composition": [
         {
-          "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 400,
+          "ingredient": "eggplant_raw",
+          "quantity": 500,
           "unit": "g",
           "meta": {
-            "role": "protein",
-            "form": "cubed",
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "breadcrumbs_dried",
-          "quantity": 80,
+          "quantity": 90,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -27127,7 +27234,7 @@
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
-            "form": "sifted",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -27138,28 +27245,72 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "carrot_raw",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "apple_raw",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 15,
+          "quantity": 9,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "curry",
-          "quantity": 6,
+          "ingredient": "curry_powder",
+          "quantity": 8,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+          "quantity": 25,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -27167,28 +27318,29 @@
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 9.4,
+          "quantity": 8,
           "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 750 ml d'eau"
+            "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 750.0,
+          "quantity": 850,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
-            "note": "pour reconstituer le bouillon"
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
-          "ingredient": "sesame_oil_plant",
-          "quantity": 40,
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 60,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -27224,13 +27376,14 @@
         "diet": [
           "diabetes_friendly",
           "high_protein",
+          "vegan",
+          "vegetarian",
           "lactose_free",
           "nut_free"
         ],
         "allergens": [
           "gluten",
-          "soy",
-          "sesame"
+          "soy"
         ],
         "technique": [
           "sauteed",
@@ -27277,20 +27430,29 @@
       "search_tokens": [
         "(eau",
         "(vegan)",
-        "45 minutes",
+        "1 heure",
         "ail",
+        "all",
+        "apple",
         "asia",
         "asiatique",
+        "aubergine",
         "avance",
-        "blanc",
+        "ble",
         "boiling",
         "bouillon",
         "breadcrumbs",
+        "carotte",
+        "carrot",
         "chapelure",
         "chef",
         "complexe",
         "curry",
+        "d'aubergine,",
         "eau",
+        "eggplant",
+        "farine",
+        "flour",
         "garlic",
         "japanese",
         "japon",
@@ -27300,45 +27462,46 @@
         "legumes",
         "light",
         "low calorie",
+        "maison",
         "minceur",
-        "moyen",
         "oignon",
         "onion",
-        "parsley",
-        "persil",
+        "pomme",
         "potable)",
+        "purpose",
         "rice",
         "riz",
         "sans produit animal",
         "sans viande",
+        "sauce",
         "sauteed",
-        "sesame",
+        "shoyu",
+        "soja",
+        "soy",
         "stock",
         "technique",
-        "tofu",
+        "tout",
+        "usage",
         "vegan",
         "vegetable",
         "vegetalien",
         "vegetarien",
         "water",
-        "white"
+        "wheat"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.96,
       "_chef_note": "Assurez-vous de bien égoutter les tranches de tofu après les avoir trempées dans la pâte de farine de riz pour éviter que les chapelures ne tombent pendant la friture.",
-      "description": "Plat japonais où le tofu ferme, croustillant et al dente, se marie avec une sauce curry crémeuse et parfumée, servie avec du riz japonais tendre et parfumé",
+      "description": "Tranches d'aubergine panées au panko sans œuf (pâte de farine et d'eau) et dorées, servies sur du riz avec une sauce curry maison à la pomme, sans beurre.",
       "instructions": [
-        "Étape 1 : Préparez le tofu ferme en le coupant en tranches épaisses. Dans un bol, mélangez la farine de riz et un peu d'eau pour créer une pâte lisse.",
-        "Étape 2 : Trempez chaque tranche de tofu ferme dans la pâte de farine de riz, puis roulez-les dans les chapelures de panko pour les paner uniformément.",
-        "Étape 3 : Faites chauffer 30 ml d'huile de sésame dans une poêle à feu moyen. Lorsque l'huile est chaude, ajoutez les tranches de tofu panées et faites-les frire jusqu'à ce qu'elles soient dorées et croustillantes des deux côtés, environ 4 minutes de chaque côté.",
-        "Étape 4 : Pendant que le tofu cuit, faites revenir les oignons jaunes émincés dans un peu d'huile de sésame dans une autre poêle à feu moyen, jusqu'à ce qu'ils soient translucides et parfumés. Ajoutez l'ail émincé et faites cuire pendant 1 minute, en remuant constamment.",
-        "Étape 5 : Ajoutez le curry en poudre et 20 g de farine de riz aux oignons et mélangez bien pour que les oignons soient enrobés de curry. Faites cuire pendant 1 minute, en remuant constamment, jusqu'à ce que le mélange soit parfumé.",
-        "Étape 6 : Versez le bouillon de légumes dans la poêle avec les oignons et le curry, et laissez réduire à feu doux pendant environ 5 minutes, en remuant occasionnellement, jusqu'à ce que la sauce ait épaissi et réduit de moitié.",
-        "Étape 7 : Préparez le riz japonais selon les instructions du paquet. Généralement, il faut le rincer, le mettre dans une casserole avec de l'eau, porter à ébullition, puis réduire le feu et laisser cuire à couvert pendant environ 15 minutes, ou jusqu'à ce que l'eau soit absorbée et que le riz soit tendre.",
-        "Étape 8 : Pour servir, placez une portion de riz cuit sur une assiette, puis déposez une tranche de tofu pané et cuit sur le dessus. Nappez généreusement de sauce curry chaude et servez sans attendre, pour préserver la texture croustillante du tofu et la chaleur de la sauce.",
-        "Étape 9 : Décorez avec des herbes fraîches, telles que du persil ou de la coriandre, pour ajouter une touche de fraîcheur et de couleur à votre plat."
+        "Étape 1 : Cuire 300 g de riz japonais rincé dans 360 ml d'eau, 12 minutes à couvert.",
+        "Étape 2 : Sauce : faire revenir 150 g d'oignon et 120 g de carotte dans 15 ml d'huile, 8 minutes, ajouter 9 g d'ail, 25 g de farine et 8 g de curry, puis 400 ml d'eau, 8 g de bouillon, 80 g de pomme râpée et 15 ml de sauce soja. Mijoter 15 minutes et mixer.",
+        "Étape 3 : Couper 500 g d'aubergines en tranches épaisses de 1,5 cm. Délayer 60 g de farine de riz dans 90 ml d'eau.",
+        "Étape 4 : Tremper les tranches dans la pâte, puis les enrober de 90 g de panko.",
+        "Étape 5 : Les dorer dans 45 ml d'huile, 4 minutes de chaque côté à feu moyen, jusqu'à ce qu'elles soient tendres à cœur.",
+        "Étape 6 : Servir sur le riz, nappé de sauce curry."
       ],
       "diet_flags": {
         "vegan": true,
@@ -27354,7 +27517,7 @@
       "id": "curry_palak_paneer_b4ca11",
       "titles": {
         "original": "Palak Paneer",
-        "fr": "Palak Paneer",
+        "fr": "Palak paneer du Pendjab au ghee",
         "en": "Spinach Paneer Curry"
       },
       "origin": {
@@ -27582,6 +27745,7 @@
         "epinard",
         "garam",
         "garlic",
+        "ghee",
         "gingembre",
         "ginger",
         "gluten free",
@@ -27604,6 +27768,7 @@
         "onion",
         "palak",
         "paneer",
+        "pendjab",
         "potable)",
         "pousses",
         "reduction",
@@ -27626,7 +27791,7 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.99,
-      "description": "Curry crémeux d'épinards frais et de fromage végétal râpé, présentant un équilibre subtil entre la fraîcheur des épinards et la richesse du fromage, avec une texture lisse et parfumée obtenue après une cuisson minutieuse",
+      "description": "Paneer maison en cubes dans une purée d'épinards blanchis, relevée d'ail, de gingembre, de cumin et de garam masala, montée au ghee.",
       "instructions": [
         "Étape 1 : Blanchir 400 g d'épinards crus dans l'eau bouillante salée pendant 1 minute. Plonger ensuite dans l'eau glacée pour fixer la couleur verte. Égoutter, presser et mixer grossièrement pendant 2 minutes jusqu'à obtenir une consistance lisse et homogène.",
         "Étape 2 : Faire revenir 150 g d'oignons jaunes crus, 10 g d'ail cru et 10 g de gingembre frais dans 30 ml de ghee à feu moyen pendant 7 minutes, en remuant régulièrement, jusqu'à obtenir une coloration dorée. Ajouter 5 g de graines de cumin, 4 g de garam masala et 4 g de sel de table. Cuire 1 minute en remuant constamment pour éviter de brûler les épices.",
@@ -27651,14 +27816,14 @@
       "id": "curry_paneer_butter_masala_9e638c",
       "titles": {
         "original": "Paneer Butter Masala",
-        "fr": "Paneer Butter Masala",
+        "fr": "Paneer makhani de Delhi (paneer butter masala)",
         "en": "Paneer Butter Masala"
       },
       "origin": {
         "cuisine": "indian",
         "country": "india",
-        "region": "punjab",
-        "city": "amritsar"
+        "region": "delhi",
+        "city": "delhi"
       },
       "servings": 4,
       "timing": {
@@ -27885,6 +28050,7 @@
       },
       "search_tokens": [
         "(melange",
+        "(paneer",
         "ail",
         "avance",
         "base_paneer_04e1db",
@@ -27902,6 +28068,7 @@
         "cream,",
         "creme",
         "curry",
+        "delhi",
         "emulsion",
         "epaisse",
         "epice",
@@ -27922,7 +28089,9 @@
         "light",
         "long",
         "low calorie",
+        "makhani",
         "masala",
+        "masala)",
         "mijote",
         "minceur",
         "noix",
@@ -27950,7 +28119,7 @@
       "servings_default": 4,
       "_quality_score": 1.0,
       "_chef_note": "Utiliser des ingrédients végétaliens pour une version sans produit animal.",
-      "description": "Curry de fromage râpé en sauce tomate crémeuse enrichie de cajous mixés, avec une texture lisse et une couleur orange profond, inspiré de la cuisine indienne.",
+      "description": "Paneer maison mijoté dans une sauce veloutée de tomates, beurre, crème et cajou, relevée de gingembre et de garam masala, douce et légèrement sucrée.",
       "instructions": [
         "Étape 1: Faire revenir 120 g d'oignon jaune haché dans 20 ml d'huile de colza à feu moyen pendant 8 minutes, jusqu'à obtenir une belle coloration dorée. Ajouter 10 g de gingembre frais, 10 g d'ail et 4 g de garam masala pendant 1 minute.",
         "Étape 2: Incorporer 400 g de tomates concassées et 40 g de noix de cajou. Cuire pendant 10 minutes. Mixer le tout jusqu'à obtenir une sauce lisse et filtrer au chinois pour une texture parfaite.",
@@ -35171,7 +35340,7 @@
       "id": "dal_kadhi_pakora_078de2",
       "titles": {
         "original": "Kadhi Pakora",
-        "fr": "Kadhi Pakora",
+        "fr": "Kadhi pakora du Pendjab",
         "en": "Kadhi Pakora"
       },
       "origin": {
@@ -35182,48 +35351,15 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 19,
+        "prep_active_min": 25,
         "prep_passive_min": 0,
-        "cook_min": 35,
-        "total_min": 54
+        "cook_min": 45,
+        "total_min": 70
       },
       "composition": [
         {
-          "ingredient": "chickpea_boiled",
-          "quantity": 400,
-          "unit": "g",
-          "meta": {
-            "role": "plant_protein",
-            "form": "",
-            "state": "cooked",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "yellow_onion_raw",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "garlic_raw",
-          "quantity": 9,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "yogurt_plain_3pct",
-          "quantity": 200,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -35234,10 +35370,54 @@
         },
         {
           "ingredient": "chickpea_flour",
-          "quantity": 150,
+          "quantity": 180,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yellow_onion_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chickpea_boiled",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "ginger_raw_root_fresh",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -35249,7 +35429,7 @@
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -35260,17 +35440,61 @@
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "fenugreek_spice_seed",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_hot_chili_pepper_spice_dried",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "sunflower_oil_plant",
-          "quantity": 45,
+          "quantity": 50,
           "unit": "ml",
           "meta": {
             "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 900,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -35288,22 +35512,11 @@
           }
         },
         {
-          "ingredient": "black_pepper_spice",
-          "quantity": 2,
-          "unit": "g",
+          "ingredient": "basmati_rice_raw_seed",
+          "quantity": null,
+          "unit": "1 portion",
           "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 520,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
+            "role": "serving_suggestion",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -35313,8 +35526,10 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
+          "high_protein",
+          "vegetarian",
           "gluten_free",
-          "high_protein"
+          "nut_free"
         ],
         "allergens": [
           "lactose",
@@ -35367,53 +35582,58 @@
         }
       },
       "search_tokens": [
-        "(eau",
-        "1 heure",
         "ail",
         "avance",
-        "black",
         "braising",
         "chef",
         "chiches",
         "chickpea",
+        "chili",
         "coeliaque",
         "complexe",
+        "coriander",
+        "coriandre",
         "cumin",
         "curcuma",
         "curry",
-        "eau",
         "epice",
+        "fenugrec",
+        "fenugreek",
+        "fort",
         "garlic",
+        "gingembre",
+        "ginger",
         "gluten free",
+        "hot",
         "inde",
         "indian",
         "indien",
         "jaune",
         "kadhi",
         "leger",
+        "lent",
         "light",
+        "long",
         "low calorie",
+        "mijote",
         "minceur",
-        "noir",
         "oignon",
         "onion",
         "pakora",
+        "pendjab",
         "pepper",
+        "piment",
         "pois",
-        "poivre",
-        "potable)",
-        "salt",
+        "red",
+        "rouge",
         "sans gluten",
         "sans viande",
-        "sel",
         "spicy",
         "sunflower",
-        "table",
         "technique",
         "tournesol",
         "turmeric",
         "vegetarien",
-        "water",
         "wok",
         "yaourt",
         "yellow",
@@ -35423,17 +35643,13 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.96,
-      "description": "Pakora croustillants dans une sauce kadhi crémeuse, parfumée aux épices et au curcuma, typique de la cuisine indienne, où les pois chiches fondent en bouche avec une texture soyeuse.",
+      "description": "Sauce onctueuse de yaourt et de farine de pois chiches mijotée au curcuma et au fenugrec, dans laquelle on plonge des pakoras d'oignon croustillants, tempérée au cumin et au piment.",
       "instructions": [
-        "Étape 1: Préparer la pâte à pakora en mélangeant 150 g de farine de pois chiches avec 3 g de curcuma en poudre, 3 g de cumin en poudre, une pincée de sel et en ajoutant progressivement de l'eau pour obtenir une pâte épaisse et homogène, sans grumeaux.",
-        "Étape 2: Couper les 300 g d'oignon jaune en rondelles épaisses ou en quartiers, puis les réserver. Cette étape est cruciale pour obtenir des pakora de taille uniforme.",
-        "Étape 3: Chauffer un bain d'huile de tournesol dans une casserole profonde à 170-180 °C, jusqu'à ce qu'une goutte de pâte remonte immédiatement et grésille, indiquant que l'huile est prête pour la friture.",
-        "Étape 4: Tremper les morceaux d'oignon jaune dans la pâte pour les enrober uniformément, puis les plonger délicatement dans l'huile chaude en plusieurs fournées sans surcharger, pour éviter que les pakora ne collent entre eux.",
-        "Étape 5: Frire pendant 3 à 4 minutes en retournant à mi-cuisson, jusqu'à obtenir une coloration dorée uniforme et une surface croustillante. Les pakora doivent être secs au toucher et ne doivent plus être huileux.",
-        "Étape 6: Égoutter les pakora sur du papier absorbant. Préparer la sauce kadhi en fouettant 200 g de yaourt avec 2 cuillerées de farine de pois chiches et 400 ml d'eau, jusqu'à obtenir un mélange lisse et homogène.",
-        "Étape 7: Ajouter 9 g d'ail émincé et 400 g de pois chiches cuits à la sauce kadhi, puis porter à frémissement en remuant constamment pour éviter les grumeaux et obtenir une texture crémeuse.",
-        "Étape 8: Cuire pendant 10 minutes à feu doux jusqu'à épaississement, en ajoutant 5 g de sel et 2 g de poivre au goût, pour obtenir une sauce kadhi onctueuse et parfumée.",
-        "Étape 9: Plonger les pakora dans la sauce kadhi chaude et cuire encore 5 minutes, pour que les pakora absorbent bien les saveurs de la sauce."
+        "Étape 1 : Fouetter 400 g de yaourt avec 60 g de farine de pois chiches, 3 g de curcuma, 3 g de sel et 800 ml d'eau.",
+        "Étape 2 : Porter à ébullition en remuant, puis ajouter 6 g d'ail et 10 g de gingembre râpés et mijoter 30 minutes à feu doux : le kadhi doit napper la cuillère.",
+        "Étape 3 : Pakoras : mélanger 120 g de farine de pois chiches, 200 g d'oignon émincé, 150 g de pois chiches écrasés, 10 g de coriandre, 2 g de sel et 100 ml d'eau en une pâte épaisse.",
+        "Étape 4 : Frire des cuillerées de pâte dans l'huile chaude, 4 minutes, jusqu'à ce qu'elles soient dorées (environ 40 ml d'huile absorbée), puis les plonger dans le kadhi.",
+        "Étape 5 : Tempérage : chauffer 10 ml d'huile, y faire grésiller 3 g de cumin, 1 g de fenugrec et 2 g de piment, puis verser sur le kadhi. Servir avec du riz."
       ],
       "diet_flags": {
         "vegan": false,
@@ -35449,59 +35665,26 @@
       "id": "dal_kadhi_pakora_vegan_5cb5d4",
       "titles": {
         "original": "Kadhi Pakora (Vegan)",
-        "fr": "Kadhi Pakora (Vegan)",
+        "fr": "Kadhi gujarati sucré-acidulé aux pois chiches (vegan)",
         "en": "Vegan Kadhi Pakora"
       },
       "origin": {
         "cuisine": "indian",
         "country": "india",
-        "region": "punjab",
-        "city": ""
+        "region": "gujarat",
+        "city": "ahmedabad"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 19,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 30,
-        "total_min": 49
+        "cook_min": 25,
+        "total_min": 40
       },
       "composition": [
         {
-          "ingredient": "chickpea_boiled",
-          "quantity": 400,
-          "unit": "g",
-          "meta": {
-            "role": "plant_protein",
-            "form": "",
-            "state": "cooked",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "onion_raw",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "garlic_raw",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "soybean_yogurt_plain_plant",
-          "quantity": 200,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -35512,7 +35695,7 @@
         },
         {
           "ingredient": "chickpea_flour",
-          "quantity": 150,
+          "quantity": 50,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -35522,30 +35705,118 @@
           }
         },
         {
-          "ingredient": "turmeric_powder",
-          "quantity": 2.8,
+          "ingredient": "chickpea_boiled",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "ginger_raw_root_fresh",
+          "quantity": 12,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "brown_sugar",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "turmeric_powder",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yellow_mustard_spice_seed",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cumin_spice_seed",
-          "quantity": 2.5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cloves",
+          "quantity": 0.5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "curry_leaf",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "sunflower_oil_plant",
-          "quantity": 45,
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -35555,8 +35826,30 @@
           }
         },
         {
+          "ingredient": "water",
+          "quantity": 700,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -35566,22 +35859,11 @@
           }
         },
         {
-          "ingredient": "black_pepper_spice",
-          "quantity": 2,
-          "unit": "g",
+          "ingredient": "basmati_rice_raw_seed",
+          "quantity": null,
+          "unit": "1 portion",
           "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 530,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
+            "role": "serving_suggestion",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -35591,11 +35873,15 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "high_protein",
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
           "nut_free"
         ],
         "allergens": [
+          "mustard",
           "soy"
         ],
         "technique": [
@@ -35643,74 +35929,78 @@
         }
       },
       "search_tokens": [
-        "(eau",
+        "(murraya",
         "(vegan)",
-        "1 heure",
-        "ail",
+        "45 minutes",
+        "acidule",
+        "aux",
         "avance",
-        "black",
         "braising",
+        "brown",
         "chef",
         "chiches",
         "chickpea",
+        "chilli",
+        "cinnamon",
+        "cloves",
         "coeliaque",
         "complexe",
         "cumin",
         "curcuma",
         "curry",
-        "eau",
         "epice",
-        "garlic",
+        "feuille",
+        "gingembre",
+        "ginger",
         "gluten free",
+        "gujarati",
         "inde",
         "indian",
         "indien",
+        "jaune",
         "kadhi",
+        "koenigii)",
+        "leaf",
         "leger",
         "light",
         "low calorie",
         "minceur",
-        "noir",
-        "oignon",
-        "onion",
+        "moutarde",
+        "moyen",
+        "mustard",
         "pakora",
         "pepper",
+        "piment",
         "pois",
-        "poivre",
-        "potable)",
-        "salt",
+        "roux",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
-        "sel",
         "soja",
         "soybean",
         "spicy",
-        "sunflower",
-        "table",
+        "sucre",
+        "sugar",
         "technique",
-        "tournesol",
         "turmeric",
         "vegan",
         "vegetalien",
         "vegetarien",
-        "water"
+        "yellow"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.99,
       "_chef_note": "Utilisez des pois chiches de qualité pour obtenir la meilleure saveur et texture.",
-      "description": "Plat indien créatif aux pois chiches, oignon émincé, ail haché, avec une sauce onctueuse et des pakora croustillants, relevés de curcuma et de cumin, dans une sauce qui nappe la cuillère.",
+      "description": "Le kadhi du Gujarat, plus fluide et légèrement sucré : yaourt de soja et farine de pois chiches au gingembre et au piment vert, pois chiches, tempérage de moutarde et feuilles de curry.",
       "instructions": [
-        "Étape 1 : Préparez la pâte à pakora en mélangeant 150g de farine de pois chiches avec 2,8g de curcuma, 2,5g de cumin, une pincée de sel et ajoutez de l'eau progressivement (environ 120 à 150ml) jusqu'à obtenir une pâte épaisse et homogène qui adhère aux légumes sans couler. Vous devez sentir la texture de la pâte et voir sa consistance épaisse, légèrement collante.",
-        "Étape 2 : Coupez 300g d'oignon en rondelles épaisses et délicates. Chauffez un bain d'huile de tournesol dans une casserole profonde à 170-180°C — un peu de pâte doit remonter immédiatement en surface. Vous devez entendre le bruit de l'huile qui chauffe et sentir son arôme.",
-        "Étape 3 : Trempez les rondelles d'oignon dans la pâte pour les enrober uniformément. Plongez-les délicatement dans l'huile chaude en petites fournées sans surcharger. Vous devez voir les pakora qui sont en train de frire et sentir leur arôme croustillant, avec une légère fumée.",
-        "Étape 4 : Fritez pendant 3 à 4 minutes en retournant à mi-cuisson jusqu'à coloration brun doré uniforme et surface croustillante et sèche. Égouttez sur du papier absorbant et salez légèrement. Vous devez voir les pakora qui sont croustillants et sentir leur texture croustillante, avec une légère croquant.",
-        "Étape 5 : Préparez la sauce kadhi en fouettant 200g de yaourt végétal avec 2 cuillerées à soupe de farine de pois chiches restante et 400ml d'eau jusqu'à consistance lisse. Versez dans une casserole, portez à frémissement en remuant constamment. Ajoutez 15g d'ail haché et cuisez pendant 10 minutes à feu doux en remuant jusqu'à ce que la sauce épaississe et nappe la cuillère. Vous devez sentir l'arôme de la sauce et voir sa consistance lisse, avec une légère onctuosité.",
-        "Étape 6 : Plongez les pakora dans la sauce kadhi chaude, cuisez encore 5 minutes. La sauce doit être jaune-dorée, onctueuse, et les pakora réhydratés mais encore légèrement résistants. Vous devez voir la texture parfaite de la sauce et sentir son arôme parfumé, avec une légère saveur de pois chiches.",
-        "Étape 7 : Servez bien chaud, en vérifiant que les pakora sont croustillants et la sauce est onctueuse. Vous devez sentir la chaleur du plat et voir la texture parfaite des pakora et de la sauce, avec une légère fumée et un arôme parfumé."
+        "Étape 1 : Fouetter 400 g de yaourt de soja avec 50 g de farine de pois chiches, 2 g de curcuma, 4 g de sel et 700 ml d'eau.",
+        "Étape 2 : Ajouter 12 g de gingembre et 6 g de piment vert pilés, et 15 g de sucre roux, puis porter à ébullition en remuant.",
+        "Étape 3 : Ajouter 300 g de pois chiches et mijoter 15 minutes à feu doux : le kadhi doit rester fluide.",
+        "Étape 4 : Tempérage : chauffer 20 ml d'huile, y faire éclater 2 g de moutarde et 2 g de cumin, ajouter 1 g de cannelle, 0,5 g de clous de girofle et 5 g de feuilles de curry, puis verser sur le kadhi.",
+        "Étape 5 : Parsemer de 10 g de coriandre et servir avec du riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -59545,7 +59835,7 @@
       "id": "egg_ojja_5bdbea",
       "titles": {
         "original": "Ojja",
-        "fr": "Ojja",
+        "fr": "Ojja tunisienne aux œufs, poivrons et harissa",
         "en": "Ojja"
       },
       "origin": {
@@ -59707,6 +59997,7 @@
       },
       "search_tokens": [
         "45 minutes",
+        "aux",
         "base_harissa_ef842f",
         "bell",
         "coeliaque",
@@ -59716,6 +60007,7 @@
         "facile enfants",
         "famille",
         "gluten free",
+        "harissa",
         "intermediaire",
         "kids",
         "leger",
@@ -59729,6 +60021,7 @@
         "onion",
         "pepper",
         "poivron",
+        "poivrons",
         "red",
         "rouge",
         "salt",
@@ -59739,16 +60032,18 @@
         "tomate",
         "tomato",
         "tunisian",
+        "tunisienne",
         "vegetarien",
         "water_cooking",
         "wok",
-        "œuf"
+        "œuf",
+        "œufs,"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.88,
-      "description": "Ragoût de tomates mijoté lentement pour une sauce épaisse et concentrée, parfumé de poivron rouge et d'oignon blanc, avec une texture onctueuse et une saveur piquante de harissa.",
+      "description": "Plat de Tunis mijoté : poivrons et tomates fondus à l'ail, à la harissa et au carvi, œufs cassés dans la sauce et cuits juste pris, à saucer avec du pain.",
       "instructions": [
         "Étape 1: Faire chauffer 45 ml d'huile d'olive dans une poêle à feu moyen. Ajouter 150 g d'oignon émincé et le faire revenir pendant 3 minutes, en remuant régulièrement, jusqu'à ce qu'il soit translucide et commence à caraméliser.",
         "Étape 2: Ajouter 320 g de poivron rouge concassé et 10 g de harissa, puis faire revenir pendant 1 minute à feu moyen, en remuant constamment, jusqu'à ce que les saveurs soient bien mélangées.",
@@ -92770,21 +93065,21 @@
       "id": "main_mexican_enfrijoladas_vega_d6a9a8",
       "titles": {
         "original": "Mexican Enfrijoladas (Vegan)",
-        "fr": "Mexican Enfrijoladas (Vegan)",
+        "fr": "Enmoladas aux légumes rôtis (vegan)",
         "en": "Vegan Mexican Enfrijoladas"
       },
       "origin": {
         "cuisine": "mexican",
         "country": "mexico",
-        "region": "ciudad_de_mexico",
-        "city": ""
+        "region": "puebla",
+        "city": "puebla"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 13,
+        "prep_active_min": 20,
         "prep_passive_min": 0,
-        "cook_min": 40,
-        "total_min": 53
+        "cook_min": 30,
+        "total_min": 50
       },
       "composition": [
         {
@@ -92793,14 +93088,47 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "base_mole_d0034f",
+          "quantity": 250,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sweet_potato_raw",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_zucchini_squash_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "black_bean_boiled",
-          "quantity": 300,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -92810,55 +93138,44 @@
           }
         },
         {
-          "ingredient": "base_mole_d0034f",
-          "quantity": 200,
-          "unit": "ml",
+          "ingredient": "yellow_onion_raw",
+          "quantity": 100,
+          "unit": "g",
           "meta": {
-            "role": "ingredient",
+            "role": "aromatic_base",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "base_vegan_cheddar_024998",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "grated",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "yellow_onion_raw",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "garlic_raw",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45.7,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sesame_seed_hulled_dried",
+          "quantity": 8,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_onion_raw",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -92870,17 +93187,17 @@
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
-          "quantity": 20,
-          "unit": "ml",
+          "ingredient": "table_salt_unenriched",
+          "quantity": 2,
+          "unit": "g",
           "meta": {
-            "role": "ingredient",
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -92890,12 +93207,15 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "high_protein",
-          "lactose_free"
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
-          "tree_nuts"
+          "sesame"
         ],
         "technique": [
           "sauteed",
@@ -92942,30 +93262,31 @@
       "search_tokens": [
         "(vegan)",
         "1 heure",
-        "ail",
+        "aux",
         "base_mole_d0034f",
         "base_tortilla_92c2a6",
-        "base_vegan_cheddar_024998",
         "bean",
         "black",
-        "coco",
-        "coconut",
         "coeliaque",
         "coriander",
         "coriandre",
+        "courgette",
+        "douce",
         "enfants",
         "enfrijoladas",
+        "enmoladas",
         "epice",
         "facile enfants",
         "famille",
-        "garlic",
         "gluten free",
+        "green",
         "haricot",
         "intermediaire",
         "jaune",
         "kids",
         "latino",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "mexicain",
@@ -92974,41 +93295,49 @@
         "minceur",
         "moyen",
         "noir",
-        "noix",
         "oignon",
         "olive",
         "onion",
+        "patate",
+        "potato",
+        "red",
         "roasting",
+        "rotis",
+        "rouge",
+        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
+        "sel",
+        "sesame",
+        "squash",
+        "sweet",
+        "table",
         "vegan",
         "vegetalien",
         "vegetarien",
-        "yellow"
+        "yellow",
+        "zucchini"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.94,
-      "description": "Rouleaux de tortillas mexicaines tendres, imbibés d'une sauce haricots noirs crémeuse et parfumée, accompagnés d'un fromage végétal râpé croustillant et d'une touche de coriandre fraîche émeraude, avec une odeur de grain torréfié et une texture délicate.",
+      "description": "Tortillas garnies de patate douce, courgette et haricots noirs rôtis, roulées et nappées de mole au chocolat et aux piments, parsemées de sésame et d'oignon rouge.",
       "instructions": [
-        "Étape 1 : Faire chauffer 45,7 ml d'huile d'olive extra vierge à feu moyen dans une poêle, ajouter 150 g d'oignon jaune émincé et faire revenir pendant 5 minutes, jusqu'à ce que les oignons soient légèrement colorés en blonde et dégagent un parfum sucré.",
-        "Étape 2 : Ajouter 15 g d'ail haché et faire sauter pendant 1 minute, jusqu'à ce que l'ail soit parfumé et légèrement croustillant, avec une texture qui craque sous la dent.",
-        "Étape 3 : Ajouter 200 ml de sauce mole et 300 g de haricots noirs cuits, faire chauffer pendant 2 minutes, en remuant constamment, jusqu'à ce que la sauce soit chaude et les haricots soient bien enrobés.",
-        "Étape 4 : Chauffer 320 g de tortillas de maïs une par une dans une poêle sèche pendant 30 secondes de chaque côté, jusqu'à ce qu'elles soient légèrement flexibles et dégagent une odeur de grain torréfié.",
-        "Étape 5 : Tremper chaque tortilla dans la sauce haricots chaude, jusqu'à ce qu'elle soit légèrement saturée, puis laisser égoutter un instant pour éviter l'excès de liquide.",
-        "Étape 6 : Plier en deux ou rouler les tortillas, disposer dans un plat et saupoudrer de 150 g de fromage végétal râpé pour un contraste croustillant et savoureux.",
-        "Étape 7 : Servir sans attendre, garni de feuilles de coriandre fraîche émeraude et accompagner de votre choix de légumes ou salade, pour préserver la fraîcheur et la texture des ingrédients.",
-        "Étape 8 : Ajouter 20 ml de lait de coco pour un contraste crémeux et velouté, si désiré, pour enrichir la sauce et les saveurs du plat."
+        "Étape 1 : Préchauffer le four à 210°C. Rôtir 300 g de patate douce et 200 g de courgette en dés avec 100 g d'oignon, 25 ml d'huile d'olive et 2 g de sel, 25 minutes.",
+        "Étape 2 : Mélanger les légumes rôtis avec 200 g de haricots noirs.",
+        "Étape 3 : Réchauffer 250 ml de mole et les tortillas (dans 5 ml d'huile).",
+        "Étape 4 : Garnir et rouler les tortillas, les disposer dans les assiettes et les napper de mole chaud.",
+        "Étape 5 : Parsemer de 8 g de sésame grillé, de 40 g d'oignon rouge émincé et de 10 g de coriandre."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
         "gluten_free": true,
         "lactose_free": true,
-        "nut_free": false,
+        "nut_free": true,
         "raw": false,
         "kid_friendly": true
       }
@@ -116261,7 +116590,7 @@
       "id": "protein_palak_paneer_vegan_bdac46",
       "titles": {
         "original": "Palak Paneer",
-        "fr": "Palak Paneer (Vegan)",
+        "fr": "Chana palak, pois chiches aux épinards (vegan)",
         "en": "Vegan Palak Paneer"
       },
       "origin": {
@@ -116272,30 +116601,41 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 21,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 41
+        "cook_min": 30,
+        "total_min": 45
       },
       "composition": [
         {
+          "ingredient": "chickpea_boiled",
+          "quantity": 360,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "spinach_raw_baby",
-          "quantity": 300,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 300,
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 200,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "cubed",
+            "role": "fruit",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -116306,69 +116646,80 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 15,
+          "quantity": 12,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "ginger_raw_root_fresh",
-          "quantity": 11.2,
+          "quantity": 12,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "grated",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "turmeric_powder",
-          "quantity": 2.8,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cumin_spice_seed",
-          "quantity": 2.5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garam_masala",
-          "quantity": 2.5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "coconut_milk_plant",
-          "quantity": 200,
+          "quantity": 60,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -116378,8 +116729,8 @@
           }
         },
         {
-          "ingredient": "vegetable_oil_plant",
-          "quantity": 45.7,
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -116389,8 +116740,19 @@
           }
         },
         {
+          "ingredient": "water",
+          "quantity": 150,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -116400,29 +116762,27 @@
           }
         },
         {
-          "ingredient": "coriander",
+          "ingredient": "basmati_rice_raw_seed",
           "quantity": null,
-          "unit": "1 poignée",
+          "unit": "1 portion",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "coriandre fraîche ciselée",
-            "note": "Quelques feuilles pour la fraîcheur",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
+          "vegan",
+          "vegetarian",
           "gluten_free",
           "lactose_free",
-          "nut_free",
-          "vegan",
-          "vegetarian"
+          "nut_free"
         ],
-        "allergens": [
-          "soy"
-        ],
+        "allergens": [],
         "technique": [
           "sauteed"
         ],
@@ -116469,25 +116829,29 @@
         "(vegan)",
         "45 minutes",
         "ail",
+        "aux",
         "avance",
+        "chana",
         "chef",
+        "chiches",
+        "chickpea",
+        "chilli",
         "coco",
         "coconut",
         "coeliaque",
         "complexe",
-        "coriander",
         "cumin",
         "curcuma",
         "curry",
         "epice",
         "epices",
         "epinard",
+        "epinards",
         "garam",
         "garlic",
         "gingembre",
         "ginger",
         "gluten free",
-        "huile",
         "inde",
         "indian",
         "indien",
@@ -116501,26 +116865,27 @@
         "moyen",
         "noix",
         "oignon",
-        "oil",
         "onion",
         "palak",
+        "palak,",
         "paneer",
+        "pepper",
+        "piment",
+        "pois",
         "pousses",
-        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
-        "sel",
         "spicy",
         "spinach",
-        "table",
+        "sunflower",
         "technique",
-        "tofu",
+        "tomate",
+        "tomato",
+        "tournesol",
         "turmeric",
         "vegan",
-        "vegetable",
-        "vegetale",
         "vegetalien",
         "vegetarien"
       ],
@@ -116528,15 +116893,13 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.85,
-      "description": "Bouillon épicé aux épinards crus, où le tofu ferme fond en bouche, avec une sauce onctueuse et parfumée à l'huile de coco — recette fondatrice de la cuisine indienne végétalienne, aux saveurs intenses et équilibrées.",
+      "description": "Curry du nord de l'Inde : pois chiches mijotés dans une sauce d'épinards, de tomate, d'oignon et de gingembre, parfumée au cumin et au garam masala.",
       "instructions": [
-        "Étape 1 : Blanchir les épinards crus 2 minutes dans l'eau bouillante, les refroidir à l'eau glacée, puis les mixer en purée lisse et verte.",
-        "Étape 2 : Faire revenir l'oignon dans l'huile végétale pendant 3 minutes à feu moyen, en ajoutant l'ail et le gingembre pour les laisser parfumer pendant 1 minute, jusqu'à ce que l'arôme soit intense et les oignons soient translucides.",
-        "Étape 3 : Ajouter les épices curcuma, cumin et garam masala pour les laisser parfumer pendant 1 minute.",
-        "Étape 4 : Incorporer la purée d'épinards crus et laisser cuire pendant 5 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que la sauce épaississe légèrement et devienne crémeuse.",
-        "Étape 5 : Ajouter le tofu ferme en cubes et laisser cuire pendant 2 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que le tofu soit bien enrobé de sauce et ait une texture tendre.",
-        "Étape 6 : Ajouter le lait de coco et laisser cuire pendant 2 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que la sauce épaississe et nappe les ingrédients, avec une consistance riche et onctueuse.",
-        "Étape 7 : Assaisonner avec du sel et servir chaud, accompagné de riz basmati ou de naan."
+        "Étape 1 : Blanchir 400 g d'épinards 1 minute, les refroidir et les mixer avec 150 ml d'eau.",
+        "Étape 2 : Faire grésiller 3 g de cumin dans 30 ml d'huile, ajouter 150 g d'oignon haché et le dorer 8 minutes.",
+        "Étape 3 : Ajouter 12 g d'ail, 12 g de gingembre et 5 g de piment hachés, puis 2 g de curcuma, et cuire 1 minute. Ajouter 200 g de tomates concassées et cuire 5 minutes.",
+        "Étape 4 : Ajouter 360 g de pois chiches, la purée d'épinards et 4 g de sel, puis mijoter 10 minutes.",
+        "Étape 5 : Terminer avec 60 ml de lait de coco et 3 g de garam masala. Servir avec du riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -116552,7 +116915,7 @@
       "id": "protein_paneer_butter_masala_vega_6c63de",
       "titles": {
         "original": "Paneer Butter Masala",
-        "fr": "Paneer Butter Masala (Vegan)",
+        "fr": "Korma de légumes au tofu et à la noix de cajou (vegan)",
         "en": "Vegan Paneer Butter Masala"
       },
       "origin": {
@@ -116563,30 +116926,63 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 23,
-        "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 43
+        "prep_active_min": 20,
+        "prep_passive_min": 15,
+        "cook_min": 30,
+        "total_min": 65
       },
       "composition": [
         {
           "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 300,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "ingredient": "cauliflower_raw_flower",
+          "quantity": 250,
           "unit": "g",
           "meta": {
-            "role": "fruit",
-            "form": "roughly_chopped",
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "carrot_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "potato_raw_flesh",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_peas_raw",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -116597,39 +116993,39 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 15,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "ginger_raw_root_fresh",
-          "quantity": 11.2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "olive_oil_plant",
-          "quantity": 40,
-          "unit": "ml",
+          "ingredient": "cashew_nuts_raw",
+          "quantity": 50,
+          "unit": "g",
           "meta": {
-            "role": "fat_cooking",
+            "role": "thickener",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -116648,51 +117044,62 @@
         },
         {
           "ingredient": "cardamom",
-          "quantity": 2.0,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cinnamon",
-          "quantity": 2.3,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "cumin_spice_seed",
-          "quantity": 2.5,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garam_masala",
-          "quantity": 2.5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 200,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -116707,7 +117114,7 @@
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -116716,12 +117123,14 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
+          "vegan",
+          "vegetarian",
           "gluten_free",
-          "lactose_free",
-          "nut_free"
+          "lactose_free"
         ],
         "allergens": [
-          "soy"
+          "soy",
+          "tree_nuts"
         ],
         "technique": [
           "sauteed"
@@ -116765,78 +117174,85 @@
         }
       },
       "search_tokens": [
-        "(melange",
         "(vegan)",
-        "45 minutes",
         "ail",
         "avance",
         "butter",
+        "cajou",
         "cardamom",
+        "carotte",
+        "carrot",
+        "cashew",
+        "cauliflower",
         "chef",
+        "chou",
         "cinnamon",
         "coco",
         "coconut",
         "coeliaque",
         "complexe",
-        "cumin",
         "curry",
         "epice",
-        "epices",
-        "garam",
+        "fleur",
         "garlic",
         "gingembre",
         "ginger",
         "gluten free",
+        "green",
         "inde",
         "indian",
         "indien",
-        "indien)",
+        "korma",
         "leger",
+        "legumes",
+        "lent",
         "light",
+        "long",
         "low calorie",
         "masala",
+        "mijote",
         "minceur",
-        "moyen",
         "noix",
+        "nuts",
         "oignon",
-        "olive",
         "onion",
         "paneer",
-        "salt",
+        "peas",
+        "petit",
+        "pois",
+        "pomme",
+        "potato",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
-        "sel",
         "spicy",
-        "table",
         "technique",
+        "terre",
         "tofu",
-        "tomate",
-        "tomato",
         "vegan",
         "vegetalien",
-        "vegetarien"
+        "vegetarien",
+        "vert"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.96,
-      "description": "Sauce onctueuse et parfumée à base de tofu ferme, de tomates tendres, d'oignon jaune caramélisé et d'épices chaudes, relevée par une touche de crème de coco et servie chaude.",
+      "description": "Navratan korma végétal : chou-fleur, carotte, petits pois, pomme de terre et tofu dans une sauce douce de cajou et de lait de coco, parfumée à la cardamome et à la cannelle.",
       "instructions": [
-        "Étape 1 : Faire revenir l'oignon jaune, l'ail et le gingembre dans l'huile d'olive pendant 3 minutes à feu moyen, en ajoutant les tomates et en les laissant cuire jusqu'à ce qu'elles soient tendres et commencent à se défaire.",
-        "Étape 2 : Mixer les tomates en sauce lisse et ajouter 2 g de cardamome, 2,3 g de cannelle, 2,5 g de cumin et 2,5 g de garam masala pour les laisser parfumer pendant 1 minute, en remuant régulièrement pour éviter les grumeaux.",
-        "Étape 3 : Incorporer le lait de coco et laisser cuire pendant 5 minutes à feu doux, en remuant régulièrement, jusqu'à ce que la sauce épaississe et devienne crémeuse.",
-        "Étape 4 : Ajouter le tofu ferme en cubes et laisser cuire pendant 2 minutes à feu doux, en remuant régulièrement, jusqu'à ce que le tofu soit bien enrobé de sauce et commence à se détacher en petits morceaux.",
-        "Étape 5 : Assaisonner avec 5 g de sel.",
-        "Étape 6 : Servir chaud, garni de 10 g de coriandre fraîche."
+        "Étape 1 : Faire tremper 50 g de noix de cajou 15 minutes dans l'eau chaude, puis les mixer avec 200 ml d'eau en crème lisse.",
+        "Étape 2 : Dorer 250 g de tofu en dés dans 15 ml d'huile, puis réserver.",
+        "Étape 3 : Faire revenir 150 g d'oignon, 10 g d'ail et 10 g de gingembre hachés dans 15 ml d'huile, 6 minutes, avec 1 g de cardamome et 1 g de cannelle.",
+        "Étape 4 : Ajouter 200 g de pommes de terre, 150 g de carotte et 250 g de chou-fleur en petits morceaux, la crème de cajou, 200 ml de lait de coco et 4 g de sel, puis mijoter 15 minutes à couvert.",
+        "Étape 5 : Ajouter 120 g de petits pois, le tofu et 2 g de garam masala, puis cuire 5 minutes. Parsemer de 10 g de coriandre."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
         "gluten_free": true,
         "lactose_free": true,
-        "nut_free": true,
+        "nut_free": false,
         "raw": false,
         "kid_friendly": false
       }
@@ -122779,7 +123195,7 @@
       "id": "rice_nasi_goreng_edfce4",
       "titles": {
         "original": "Nasi Goreng",
-        "fr": "Nasi Goreng",
+        "fr": "Nasi goreng kampung à l'œuf au plat",
         "en": "Nasi Goreng"
       },
       "origin": {
@@ -122790,15 +123206,15 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 19,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 12,
-        "total_min": 31
+        "cook_min": 15,
+        "total_min": 30
       },
       "composition": [
         {
           "ingredient": "white_rice_cooked_long_grain_seed",
-          "quantity": 300,
+          "quantity": 600,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -122808,12 +123224,12 @@
           }
         },
         {
-          "ingredient": "onion_raw",
-          "quantity": 150,
+          "ingredient": "shallot_raw",
+          "quantity": 80,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -122824,29 +123240,51 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "carrot_raw",
-          "quantity": 200,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "green_cabbage_raw",
-          "quantity": 400,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tofu_plain_pre_packaged",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -122857,14 +123295,14 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -122874,8 +123312,19 @@
           }
         },
         {
+          "ingredient": "brown_sugar",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "base_fried_onion_217e6a",
-          "quantity": 40,
+          "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -122896,23 +123345,12 @@
           }
         },
         {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 2,
+          "ingredient": "cucumber_raw_with_skin",
+          "quantity": 150,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
+            "role": "vegetable",
             "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 200,
-          "unit": "g",
-          "meta": {
-            "role": "protein",
-            "form": "cubed",
             "state": "raw",
             "preparation": ""
           }
@@ -122930,7 +123368,11 @@
         }
       ],
       "tags": {
-        "diet": [],
+        "diet": [
+          "vegetarian",
+          "lactose_free",
+          "nut_free"
+        ],
         "allergens": [
           "eggs",
           "gluten",
@@ -122985,21 +123427,23 @@
         }
       },
       "search_tokens": [
-        "45 minutes",
+        "30 minutes",
         "ail",
         "asiatique",
         "avance",
         "base_fried_onion_217e6a",
         "blanc",
+        "brown",
         "cabbage",
         "carotte",
         "carrot",
         "chef",
+        "chilli",
         "chou",
         "coco",
         "coconut",
         "complexe",
-        "coriander",
+        "echalote",
         "egg",
         "frying",
         "garlic",
@@ -123008,25 +123452,30 @@
         "indonesian",
         "indonesie",
         "indonesien",
+        "kampung",
+        "l'œuf",
         "leger",
         "light",
         "low calorie",
         "minceur",
-        "moyen",
         "nasi",
         "noix",
-        "oignon",
-        "onion",
+        "pepper",
+        "piment",
+        "plat",
+        "quick",
+        "rapide",
         "rice",
         "riz",
-        "salt",
+        "roux",
         "sans viande",
         "sauce",
-        "sel",
+        "shallot",
         "shoyu",
         "soja",
         "soy",
-        "table",
+        "sucre",
+        "sugar",
         "technique",
         "tofu",
         "vegetarien",
@@ -123039,15 +123488,14 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.84,
-      "description": "Plat indonésien végétarien à base de riz grain séparé et bien assaisonné, avec une explosion de saveurs et de textures, où les légumes sautés ajoutent une touche de fraîcheur et de croquant, typique de la cuisine asiatique",
+      "description": "Riz sauté des villages javanais : riz de la veille sauté avec échalotes, ail, piment et sauce soja sucrée, chou et carotte, surmonté d'un œuf au plat et d'oignons frits.",
       "instructions": [
-        "Étape 1: Faire chauffer 15 ml d'huile de coco dans un wok à feu vif, en ajoutant 200 g de tofu ferme émincé pour le faire dorer de tous côtés, jusqu'à ce qu'il soit croustillant et doré.",
-        "Étape 2: Ajouter 25 ml d'huile de coco et faire sauter 9 g d'ail émincé et 150 g d'oignons émincés pendant 1 minute, en les laissant libérer leurs arômes et parfums, jusqu'à ce qu'ils soient translucides et parfumés.",
-        "Étape 3: Incorporer 300 g de riz froid, en le faisant sauter pendant 3 minutes à feu maximum, pour obtenir une texture croustillante et séparée, en remuant constamment pour éviter que le riz ne colle.",
-        "Étape 4: Assaisonner de 45 ml de sauce soja et incorporer 200 g de carottes émincées et 400 g de chou vert émincé, en les laissant cuire pendant 2 minutes pour conserver leur fraîcheur et leur texture croquante.",
-        "Étape 5: Ajouter 40 g d'oignons frits, 220 g d'œuf brouillé et 5 g de sel, en les incorporant délicatement pour ne pas écraser les légumes, et en vérifiant l'assaisonnement pour rectifier si nécessaire.",
-        "Étape 6: Cuire 2 minutes à feu moyen, en vérifiant la texture croustillante du riz et en rectifiant l'assaisonnement si nécessaire, jusqu'à ce que le riz soit chaud et parfumé.",
-        "Étape 7: Servir aussitôt, garni de coriandre ciselée."
+        "Étape 1 : Piler 80 g d'échalotes, 9 g d'ail et 6 g de piment en pâte.",
+        "Étape 2 : Dorer 200 g de tofu en dés dans 15 ml d'huile de coco, puis réserver.",
+        "Étape 3 : Faire revenir la pâte dans 15 ml d'huile, 2 minutes, ajouter 120 g de carotte et 200 g de chou émincés, puis sauter 3 minutes.",
+        "Étape 4 : Ajouter 600 g de riz cuit froid, 30 ml de sauce soja mélangée à 10 g de sucre roux, et le tofu, puis sauter 4 minutes à feu vif.",
+        "Étape 5 : Cuire 4 œufs (220 g) au plat dans 10 ml d'huile.",
+        "Étape 6 : Servir le riz surmonté d'un œuf, parsemé de 30 g d'oignons frits, avec 150 g de concombre en rondelles."
       ],
       "diet_flags": {
         "vegan": false,
@@ -123063,7 +123511,7 @@
       "id": "rice_nasi_goreng_vegan_bcc9cb",
       "titles": {
         "original": "Nasi Goreng (Vegan)",
-        "fr": "Nasi Goreng (Vegan)",
+        "fr": "Nasi goreng au tempeh et aux haricots verts (vegan)",
         "en": "Nasi Goreng (Vegan) (Vegan)"
       },
       "origin": {
@@ -123074,15 +123522,15 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 19,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 25,
-        "total_min": 44
+        "cook_min": 20,
+        "total_min": 35
       },
       "composition": [
         {
           "ingredient": "white_rice_cooked_long_grain_seed",
-          "quantity": 300,
+          "quantity": 600,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
@@ -123092,52 +123540,74 @@
           }
         },
         {
-          "ingredient": "onion_raw",
-          "quantity": 150,
+          "ingredient": "tempeh_tempe_raw_fermented",
+          "quantity": 200,
           "unit": "g",
           "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
+            "role": "protein",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic_raw",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "carrot_raw",
+          "ingredient": "french_bean_raw",
           "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "green_cabbage_raw",
-          "quantity": 400,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "shallot_raw",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 12,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 20,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -123147,8 +123617,19 @@
           }
         },
         {
+          "ingredient": "brown_sugar",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "base_fried_onion_217e6a",
-          "quantity": 20,
+          "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -123159,7 +123640,7 @@
         },
         {
           "ingredient": "coconut_oil_plant",
-          "quantity": 45.7,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -123169,23 +123650,12 @@
           }
         },
         {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 2,
-          "unit": "g",
+          "ingredient": "lime_juice_fresh",
+          "quantity": 10,
+          "unit": "ml",
           "meta": {
-            "role": "seasoning",
+            "role": "condiment",
             "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 200,
-          "unit": "g",
-          "meta": {
-            "role": "protein",
-            "form": "cubed",
             "state": "raw",
             "preparation": ""
           }
@@ -123204,6 +123674,8 @@
       ],
       "tags": {
         "diet": [
+          "vegan",
+          "vegetarian",
           "lactose_free",
           "nut_free"
         ],
@@ -123254,71 +123726,79 @@
         }
       },
       "search_tokens": [
+        "(tempe)",
         "(vegan)",
         "45 minutes",
         "ail",
         "asiatique",
+        "aux",
         "avance",
         "base_fried_onion_217e6a",
+        "bean",
         "blanc",
+        "brown",
         "cabbage",
-        "carotte",
-        "carrot",
         "chef",
+        "chilli",
         "chou",
+        "citron",
         "coco",
         "coconut",
         "complexe",
-        "coriander",
+        "echalote",
+        "french",
         "frying",
         "garlic",
         "goreng",
         "green",
+        "haricot",
+        "haricots",
         "indonesian",
         "indonesie",
         "indonesien",
         "leger",
         "light",
+        "lime",
         "low calorie",
         "minceur",
         "moyen",
         "nasi",
         "noix",
-        "oignon",
-        "onion",
+        "pepper",
+        "piment",
         "rice",
         "riz",
-        "salt",
+        "roux",
         "sans produit animal",
         "sans viande",
         "sauce",
         "sauteed",
-        "sel",
+        "shallot",
         "shoyu",
         "soja",
         "soy",
-        "table",
+        "sucre",
+        "sugar",
         "technique",
-        "tofu",
+        "tempeh",
         "vegan",
         "vegetalien",
         "vegetarien",
         "vert",
+        "verts",
         "white"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.93,
-      "description": "Plat indonésien végétalien à base de riz cuit froid, de tofu ferme et de légumes sautés, avec une texture croquante et al dente, parfumé par la sauce soja et les épices, inspiré des saveurs d'Asie du Sud-Est.",
+      "description": "Riz sauté indonésien végétal : tempeh doré, haricots verts et chou sautés avec une pâte d'échalote, d'ail et de piment, sauce soja sucrée et oignons frits.",
       "instructions": [
-        "Étape 1 : Faire chauffer 20 ml d'huile de coco à feu vif dans une grande poêle. Ajouter 150 g d'oignon jaune émincé et 15 g d'ail haché, faire revenir 2 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que les oignons soient translucides et les arômes se dégagent.",
-        "Étape 2 : Ajouter 200 g de carotte râpée et 200 g de tofu ferme coupé en petits morceaux, faire sauter 3 minutes à feu vif, en remuant constamment, jusqu'à ce que les carottes commencent à ramollir et le tofu soit doré.",
-        "Étape 3 : Ajouter 300 g de riz cuit froid et 20 ml de sauce soja, faire sauter 4 minutes à feu vif, en remuant régulièrement, jusqu'à ce que le riz soit chaud et bien mélangé avec les légumes et la sauce.",
-        "Étape 4 : Assaisonner avec 2 g de sel et du poivre noir fraîchement moulu. Faire cuire 2 minutes à feu moyen, en remuant occasionnellement, jusqu'à ce que les saveurs soient bien intégrées.",
-        "Étape 5 : Ajouter 400 g de chou vert émincé et faire sauter 2 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que les légumes soient tendres mais encore croquants.",
-        "Étape 6 : Incorporer le reste des légumes sautés et rectifier l'assaisonnement en sel et poivre, en mélangeant bien pour que toutes les saveurs se répartissent uniformément.",
-        "Étape 7 : Servir chaud, parsemé de 20 g d'oignon frit croustillant et de quelques feuilles de coriandre fraîche hachée, afin de conserver la fraîcheur et la texture de ce plat indonésien végétalien."
+        "Étape 1 : Piler 80 g d'échalotes, 12 g d'ail et 6 g de piment en pâte.",
+        "Étape 2 : Couper 200 g de tempeh en dés et le dorer dans 20 ml d'huile de coco, 6 minutes. Réserver.",
+        "Étape 3 : Faire revenir la pâte dans 20 ml d'huile, 2 minutes, ajouter 200 g de haricots verts en tronçons et 150 g de chou émincé, puis sauter 4 minutes.",
+        "Étape 4 : Ajouter 600 g de riz cuit froid, 30 ml de sauce soja mélangée à 10 g de sucre roux, et le tempeh, puis sauter 4 minutes à feu vif.",
+        "Étape 5 : Arroser de 10 ml de jus de citron vert et parsemer de 30 g d'oignons frits."
       ],
       "diet_flags": {
         "vegan": true,
