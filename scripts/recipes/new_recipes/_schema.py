@@ -11,7 +11,7 @@ DIET_FLAGS = ("vegan", "vegetarian", "gluten_free", "lactose_free", "nut_free")
 def recipe(*, rid, fr, en, cuisine, country, region="", city="", dish, servings=4,
            prep=0, rest=0, cook=0, compo, steps, desc, texture=(), taste=(),
            difficulty="easy", spice=0, kid_friendly=True, technique=(), meal=None,
-           original=None, allow_similar=()):
+           original=None, allow_similar=(), raw=False):
     """Construit une recette complète.
 
     compo : [(ingredient, quantité, unité, rôle[, état]), …] ; quantité None = suggestion de service.
@@ -42,7 +42,7 @@ def recipe(*, rid, fr, en, cuisine, country, region="", city="", dish, servings=
         "difficulty_level": difficulty,
         "description": desc,
         "instructions": [f"Étape {n} : {t}" for n, t in enumerate(steps, 1)],
-        "diet_flags": {**{f: True for f in DIET_FLAGS}, "raw": False,
+        "diet_flags": {**{f: True for f in DIET_FLAGS}, "raw": raw,
                        "kid_friendly": kid_friendly},
         "_allow_similar": list(allow_similar),
     }

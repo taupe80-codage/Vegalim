@@ -155,6 +155,55 @@
     "similar": []
   },
   {
+    "id": "beverage_agua_fresca_pasteque_5b72c9",
+    "title": "Agua fresca de pastèque et citron vert",
+    "cuisine": "mexican",
+    "dish_type": "beverage",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 10,
+    "confidence": 0.9,
+    "description": "Boisson mexicaine d'été : chair de pastèque mixée et filtrée, relevée de citron vert et à peine sucrée, servie sur glace avec de la menthe.",
+    "composition": [
+      {
+        "ingredient": "watermelon_raw",
+        "quantity": 1200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
+        "quantity": 50,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 400,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "dal_ajapsandali_8ebefc",
     "title": "Ajapsandali",
     "cuisine": "georgian",
@@ -509,6 +558,77 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "dessert_alfajores_dulce_de_leche_7b41e9",
+    "title": "Alfajores au dulce de leche",
+    "cuisine": "argentinian",
+    "dish_type": "dessert",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 10,
+    "time_total": 180,
+    "confidence": 0.9,
+    "description": "Biscuits argentins très friables à la fécule de maïs, collés deux par deux avec du dulce de leche obtenu en cuisant du lait concentré, puis roulés dans la noix de coco.",
+    "composition": [
+      {
+        "ingredient": "cornstarch_flour",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 110,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "condensed_milk_concentrated_sweetened_canned_whole",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_flesh_dried",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "baking_powder",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_peel_raw",
+        "quantity": 5,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -2983,6 +3103,81 @@
     "similar": []
   },
   {
+    "id": "dessert_basbousa_5c19f7",
+    "title": "Basbousa, gâteau de semoule au sirop",
+    "cuisine": "egyptian",
+    "dish_type": "dessert",
+    "vegan": false,
+    "diet": [
+      "vegetarian"
+    ],
+    "allergens": [
+      "gluten",
+      "lactose",
+      "milk",
+      "tree_nuts"
+    ],
+    "servings": 8,
+    "time_total": 70,
+    "confidence": 0.9,
+    "description": "Gâteau égyptien de semoule et de noix de coco, cuit en plaque puis imbibé brûlant d'un sirop au citron et à la fleur d'oranger, décoré d'amandes.",
+    "composition": [
+      {
+        "ingredient": "wheat_semolina_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_flesh_dried",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yogurt_plain_3pct",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 220,
+        "unit": "g"
+      },
+      {
+        "ingredient": "baking_powder",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "orange_blossom_water",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "almond_raw_with_skin_unsalted",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 200,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "main_batata_harra_c2de57",
     "title": "Batata Harra",
     "cuisine": "american",
@@ -4712,6 +4907,61 @@
     "similar": []
   },
   {
+    "id": "snack_energy_balls_dattes_7e51a2",
+    "title": "Boules d'énergie dattes, noix et cacao",
+    "cuisine": "international",
+    "dish_type": "snack",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "allergens": [
+      "gluten",
+      "tree_nuts"
+    ],
+    "servings": 8,
+    "time_total": 45,
+    "confidence": 0.9,
+    "description": "Bouchées crues sans cuisson : dattes mixées avec noix, flocons d'avoine et cacao, roulées en billes et raffermies au frais.",
+    "composition": [
+      {
+        "ingredient": "date_with_skin_dried",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "walnut_shelled_dried",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oat_flakes_whole_seed",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cocoa_powder_unsweetened",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_flesh_dried",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "dal_boulettes_suedoises_vegan_fea9f6",
     "title": "Boulettes suédoises aux lentilles et champignons, sauce brune (vegan)",
     "cuisine": "swedish",
@@ -5485,6 +5735,56 @@
       },
       {
         "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "dessert_brigadeiros_9d63a4",
+    "title": "Brigadeiros au chocolat",
+    "cuisine": "brazilian",
+    "dish_type": "dessert",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 10,
+    "time_total": 90,
+    "confidence": 0.9,
+    "description": "Les truffes brésiliennes des anniversaires : lait concentré sucré et cacao cuits jusqu'à se détacher de la casserole, roulés en boules dans les vermicelles de chocolat.",
+    "composition": [
+      {
+        "ingredient": "condensed_milk_concentrated_sweetened_canned_whole",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cocoa_powder_unsweetened",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "dark_chocolate_40_cocoa_baking_tablet",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
         "quantity": 1,
         "unit": "g"
       }
@@ -7355,6 +7655,76 @@
     "similar": []
   },
   {
+    "id": "entry_carpaccio_courgettes_citron_9a26d4",
+    "title": "Carpaccio de courgettes au citron et parmesan",
+    "cuisine": "italian",
+    "dish_type": "starter",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk",
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 0.9,
+    "description": "Entrée crue : courgettes tranchées à la mandoline, marinées au citron et à l'huile d'olive, avec copeaux de parmesan, pignons et menthe.",
+    "composition": [
+      {
+        "ingredient": "green_zucchini_squash_raw",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_peel_raw",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "pine_nuts_raw",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "stew_cassoulet_938fd4",
     "title": "Cassoulet",
     "cuisine": "french",
@@ -8522,6 +8892,91 @@
     "similar": []
   },
   {
+    "id": "brkf_chilla_pois_chiches_2f95e6",
+    "title": "Chilla, galettes de pois chiches aux légumes",
+    "cuisine": "indian",
+    "dish_type": "breakfast",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 35,
+    "confidence": 0.9,
+    "description": "Petit-déjeuner indien sans gluten : pâte de farine de pois chiches aux oignons, tomates et coriandre, cuite en galettes fines à la poêle.",
+    "composition": [
+      {
+        "ingredient": "chickpea_flour",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 400,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": [
+      {
+        "id": "dal_galettes_de_pois_chiches_db4c7a",
+        "title": "Galettes de Pois Chiches",
+        "score": 0.6
+      }
+    ]
+  },
+  {
     "id": "sauce_chimichurri_2e64f8",
     "title": "Chimichurri",
     "cuisine": "argentinian",
@@ -9197,6 +9652,76 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "dessert_churros_chocolat_3f82b6",
+    "title": "Churros et chocolat chaud épais",
+    "cuisine": "spanish",
+    "dish_type": "dessert",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 6,
+    "time_total": 40,
+    "confidence": 0.9,
+    "description": "Pâte à choux sans œufs poussée à la douille cannelée et frite, roulée dans le sucre et la cannelle, servie avec un chocolat chaud épais à tremper.",
+    "composition": [
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 500,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 70,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cinnamon",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "dark_chocolate_40_cocoa_baking_tablet",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "milk_liquid_uht_3_5pct",
+        "quantity": 400,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cornstarch_flour",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -12903,6 +13428,55 @@
     "similar": []
   },
   {
+    "id": "dessert_daifuku_haricots_rouges_8a37c2",
+    "title": "Daifuku à la pâte de haricots rouges",
+    "cuisine": "japanese",
+    "dish_type": "dessert",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 8,
+    "time_total": 35,
+    "confidence": 0.9,
+    "description": "Petits mochi japonais : pâte de riz gluant cuite à la vapeur, souple et élastique, roulée autour d'une boule de pâte de haricots rouges sucrée.",
+    "composition": [
+      {
+        "ingredient": "white_glutinous_rice_flour",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bean_paste",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cornstarch_flour",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 260,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "dal_dal_makhani_c9ce94",
     "title": "Dal makhani de Delhi au beurre et à la crème",
     "cuisine": "indian",
@@ -13619,6 +14193,53 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "snack_edamame_sel_sesame_4c83b5",
+    "title": "Edamame au sel de sésame",
+    "cuisine": "japanese",
+    "dish_type": "snack",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "sesame",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 13,
+    "confidence": 0.9,
+    "description": "Gousses de soja vert cuites à l'eau salée, égouttées puis roulées dans un sel de sésame grillé : on presse la gousse pour manger les graines.",
+    "composition": [
+      {
+        "ingredient": "edamame_raw",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sesame_seed_hulled_dried",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1500,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -17027,7 +17648,13 @@
     ],
     "n_instructions": 8,
     "flags": [],
-    "similar": []
+    "similar": [
+      {
+        "id": "brkf_chilla_pois_chiches_2f95e6",
+        "title": "Chilla, galettes de pois chiches aux légumes",
+        "score": 0.6
+      }
+    ]
   },
   {
     "id": "egg_galettes_de_pommes_de_terre_su_0d7814",
@@ -21402,6 +22029,61 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 2,
         "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "beverage_horchata_riz_4a91d3",
+    "title": "Horchata de riz à la cannelle",
+    "cuisine": "mexican",
+    "dish_type": "beverage",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "allergens": [
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 490,
+    "confidence": 0.9,
+    "description": "Boisson mexicaine sans produit laitier : riz cru et cannelle trempés une nuit, mixés puis filtrés, sucrés et servis sur glace.",
+    "composition": [
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cinnamon",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "almond_raw_skinless_unsalted",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vanilla_extract",
+        "quantity": 5,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1400,
+        "unit": "ml"
       }
     ],
     "n_instructions": 5,
@@ -25933,6 +26615,56 @@
       }
     ],
     "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "beverage_lassi_mangue_6c28f1",
+    "title": "Lassi à la mangue et à la cardamome",
+    "cuisine": "indian",
+    "dish_type": "beverage",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 10,
+    "confidence": 0.9,
+    "description": "Boisson indienne fraîche : yaourt battu avec de la purée de mangue, un peu de sucre et de cardamome, servie très froide.",
+    "composition": [
+      {
+        "ingredient": "yogurt_plain_3pct",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mango_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cardamom",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 200,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 4,
     "flags": [],
     "similar": []
   },
@@ -32542,6 +33274,74 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "bread_pain_sarrasin_sans_gluten_8d52c4",
+    "title": "Pain de sarrasin sans gluten",
+    "cuisine": "french",
+    "dish_type": "bread",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 10,
+    "time_total": 125,
+    "confidence": 0.9,
+    "description": "Pain sans gluten à la farine de sarrasin et de riz, levé à la levure et lié aux graines de lin moulues, à la mie dense et au goût de noisette.",
+    "composition": [
+      {
+        "ingredient": "buckwheat_flour",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "rice_flour",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_starch_flour",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "flaxseed_linseed_ground",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "bakers_yeast_dehydrated",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 480,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "honey",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 8,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -44433,6 +45233,102 @@
     "similar": []
   },
   {
+    "id": "starter_rouleaux_crus_cacahuete_5a38f1",
+    "title": "Rouleaux de riz crus aux légumes, sauce cacahuète",
+    "cuisine": "vietnamese",
+    "dish_type": "starter",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "allergens": [
+      "gluten",
+      "peanuts",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 30,
+    "confidence": 0.9,
+    "description": "Rouleaux frais non cuits : galettes de riz humidifiées, garnies de vermicelles, carotte, concombre, avocat et herbes, avec une sauce cacahuète au citron vert.",
+    "composition": [
+      {
+        "ingredient": "rice_paper",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "rice_vermicelli_raw_dried",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cucumber_raw_with_skin",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "avocado_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lettuce",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "peanut_butter_natural_plant",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coconut_sugar",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 80,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "base_japanese_curry_roux_385e52",
     "title": "Roux Curry Japonais",
     "cuisine": "japanese",
@@ -45985,6 +46881,75 @@
     "similar": []
   },
   {
+    "id": "side_kale_massee_avocat_3d18e7",
+    "title": "Salade de kale massée à l'avocat",
+    "cuisine": "american",
+    "dish_type": "side",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 0.9,
+    "description": "Salade crue : feuilles de kale massées à la main avec de l'avocat, du citron et du sel jusqu'à s'attendrir, avec graines de tournesol et tomates cerises.",
+    "composition": [
+      {
+        "ingredient": "kale_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "avocado_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_seed_dried",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cherry_tomato_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_onion_raw",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "salad_lentil_classic_v3_r7p2k8",
     "title": "Salade de lentilles",
     "cuisine": "french",
@@ -46522,6 +47487,91 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "salad_quinoa_concombre_feta_7c64b8",
+    "title": "Salade de quinoa, concombre et feta",
+    "cuisine": "mediterranean",
+    "dish_type": "starter",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 30,
+    "confidence": 0.9,
+    "description": "Salade sans gluten et complète : quinoa refroidi, concombre, tomates cerises, feta et herbes, en vinaigrette au citron et à l'huile d'olive.",
+    "composition": [
+      {
+        "ingredient": "quinoa_raw_dried",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cucumber_raw_with_skin",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cherry_tomato_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "feta",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_onion_raw",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 400,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -49835,6 +50885,67 @@
     "similar": []
   },
   {
+    "id": "snack_sigara_boregi_2e57d8",
+    "title": "Sigara böreği au fromage et à la menthe",
+    "cuisine": "turkish",
+    "dish_type": "snack",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 6,
+    "time_total": 35,
+    "confidence": 0.9,
+    "description": "Cigares de pâte filo farcis de fromage de brebis, persil et menthe, roulés serré puis frits jusqu'à être dorés et craquants.",
+    "composition": [
+      {
+        "ingredient": "phyllo_filo_pastry_raw_paste",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "feta",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 55,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "entry_skordalia_18cd77",
     "title": "Skordalia",
     "cuisine": "greek",
@@ -50175,6 +51286,55 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "snack_socca_nicoise_6b47d9",
+    "title": "Socca niçoise à la farine de pois chiches",
+    "cuisine": "french_provencal",
+    "dish_type": "snack",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 82,
+    "confidence": 0.9,
+    "description": "Galette niçoise sans gluten : pâte liquide de farine de pois chiches et d'huile d'olive, cuite très chaud jusqu'à être dorée et souple, poivrée au moment de servir.",
+    "composition": [
+      {
+        "ingredient": "chickpea_flour",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 600,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -56557,6 +57717,50 @@
       }
     ],
     "n_instructions": 8,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "beverage_the_menthe_marocain_8f34b7",
+    "title": "Thé à la menthe marocain",
+    "cuisine": "moroccan",
+    "dish_type": "beverage",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 15,
+    "confidence": 0.9,
+    "description": "Thé vert gunpowder rincé puis infusé avec une grosse poignée de menthe fraîche et du sucre, versé de haut pour le faire mousser.",
+    "composition": [
+      {
+        "ingredient": "tea_leaf",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1000,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
