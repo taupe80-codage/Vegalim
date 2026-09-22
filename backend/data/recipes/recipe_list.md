@@ -1,12 +1,13 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 79 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 69 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
 
 - **Afghan Bolani** _(vegan, vegetarian, main, afghan)_ — `main_afghan_bolani_e66cba`
 - **Ajapsandali** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, georgian)_ — `dal_ajapsandali_8ebefc`
+- **Ajo blanco de Málaga aux amandes et au raisin (vegan)** _(diabetes_friendly, low_calorie, vegan, vegetarian, lactose_free, starter, spanish)_ — `entry_salmorejo_vegan_d0b7f7`
 - **Ajvar (purée de Poivrons)** _(diabetes_friendly, gluten_free, vegan, vegetarian, starter, serbian)_ — `main_ajvar_puree_de_poivrons_5d2e79`
 - **Aligot** _(gluten_free, kid_friendly, nut_free, main, french_auvergnat)_ — `main_aligot_c03237`
 - **Aloo Gobi** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, indian)_ — `main_aloo_gobi_b21c85`
@@ -26,6 +27,7 @@
 - **Baba ganoush** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, starter, levantine)_ — `dip_baba_ghanoush_dbd030`
 - **Baek sundubu, ragoût de tofu soyeux doux** _(diabetes_friendly, high_protein, vegetarian, lactose_free, nut_free, main, korean)_ — `egg_sundubu_jjigae_bc21e0`
 - **Bagel Fromage Frais Concombre** _(kid_friendly, nut_free, breakfast, american)_ — `brkf_bagel_fromage_frais_conco_e69b68`
+- **Baghali polo aux fèves et à l'aneth (vegan)** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, side, persian)_ — `side_sabzi_polo_vegan_7bf9df`
 - **Baingan Bharta** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, indian)_ — `main_baingan_bharta_b5f900`
 - **Baked ziti new-yorkais à la ricotta** _(high_protein, vegetarian, nut_free, main, american)_ — `main_baked_ziti_b9e13e`
 - **Baklava aux Pistaches** _(kid_friendly, dessert, levantine)_ — `dessert_baklava_aux_pistaches_06e5ed`
@@ -595,19 +597,17 @@
 - **Riz à la Tomate Portugais** _(gluten_free, vegan, vegetarian, main, portuguese)_ — `rice_riz_a_la_tomate_portugais_c6cec0`
 - **Rouleaux de Printemps Frits** _(diabetes_friendly, vegan, vegetarian, main, vietnamese)_ — `rice_rouleaux_de_printemps_frits_e4d172`
 - **Roux Curry Japonais** _(vegetarian, roux, japanese)_ — `base_japanese_curry_roux_385e52` 🔁 doublon possible : Curry japonais au roux maison et à la pomme râpée
-- **Rösti** _(gluten_free, side, swiss)_ — `side_rosti_4ec9f8` 🔁 doublon possible : Rösti (Vegan)
-- **Rösti (Vegan)** _(gluten_free, kid_friendly, low_calorie, nut_free, snack, swiss)_ — `snack_rosti_vegan_be15a2` 🔁 doublon possible : Rösti
+- **Rösti aux légumes racines et à la ciboulette (vegan)** _(kid_friendly, low_calorie, vegan, vegetarian, gluten_free, lactose_free, nut_free, side, swiss)_ — `snack_rosti_vegan_be15a2`
+- **Rösti bernois au beurre** _(vegetarian, gluten_free, nut_free, side, swiss)_ — `side_rosti_4ec9f8`
 
 ## S
 
 - **Sabich** _(diabetes_friendly, gluten_free, high_protein, main, levantine)_ — `egg_sabich_b270c4`
 - **Sabzi afghan aux épinards et lentilles** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, afghan)_ — `dal_afghan_sabzi_chalaw_18f6a5`
-- **Sabzi Polo** _(gluten_free, side, persian)_ — `rice_sabzi_polo_e099d2` 🔁 doublon possible : Sabzi Polo (Vegan)
-- **Sabzi Polo (Vegan)** _(gluten_free, nut_free, side, iranian)_ — `side_sabzi_polo_vegan_7bf9df` 🔁 doublon possible : Sabzi Polo
+- **Sabzi polo de Norouz au tahdig** _(gluten_free, side, persian)_ — `rice_sabzi_polo_e099d2`
 - **Sabzi Sabz** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, persian)_ — `dal_sabzi_sabz_592004`
 - **Salade Achichuk** _(diabetes_friendly, gluten_free, vegan, vegetarian, side, uzbek)_ — `salad_achichuk_e3f0c9`
-- **Salade Andine au Fromage** _(diabetes_friendly, gluten_free, main, bolivian)_ — `salad_andine_au_fromage_c537bd` 🔁 doublon possible : Salade Andine au Fromage (Vegan)
-- **Salade Andine au Fromage (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, main, andean)_ — `salad_andine_au_fromage_vegan_566f05` 🔁 doublon possible : Salade Andine au Fromage
+- **Salade andine au quinoa, avocat et haricots noirs (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, andean)_ — `salad_andine_au_fromage_vegan_566f05`
 - **Salade Asiatique Sésame** _(vegan, vegetarian, side, international)_ — `salad_asiatique_sesame_948f03`
 - **Salade caprese** _(gluten_free, high_protein, starter, italian)_ — `salad_caprese_classic_k21x9d`
 - **Salade Chilienne Tomate-oignon** _(diabetes_friendly, gluten_free, vegan, vegetarian, side, american)_ — `salad_chilienne_tomateoignon_288941`
@@ -641,8 +641,7 @@
 - **Salade shopska aux haricots blancs et poivrons grillés (vegan)** _(diabetes_friendly, low_calorie, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, bulgarian)_ — `salad_shopska_vegan_001f9e`
 - **Salade shopska de Sofia au sirene** _(diabetes_friendly, vegetarian, gluten_free, nut_free, starter, bulgarian)_ — `main_bulgarian_shopska_salad_d473eb`
 - **Salade Turque Çoban** _(diabetes_friendly, gluten_free, vegan, vegetarian, side, turkish)_ — `salad_turque_coban_cdd8c4`
-- **Salmorejo** _(high_protein, vegetarian, main, international)_ — `bread_salmorejo_a156e9` 🔁 doublon possible : Salmorejo (Vegan)
-- **Salmorejo (Vegan)** _(diabetes_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, spanish)_ — `entry_salmorejo_vegan_d0b7f7` 🔁 doublon possible : Salmorejo
+- **Salmorejo cordobés à l'œuf dur** _(high_protein, vegetarian, lactose_free, nut_free, starter, spanish)_ — `bread_salmorejo_a156e9`
 - **Sambar d'Udupi à la noix de coco et au potiron** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, indian)_ — `dal_sambar_indien_fcf6d8`
 - **Sambar tamoul aux aubergines et gombos** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, indian)_ — `dal_sambar_581de8`
 - **Samosa** _(vegetarian, vegan, snack, chinese)_ — `snack_vegetable_samosa_088bfa`
@@ -662,8 +661,8 @@
 - **Sauce Tomate** _(vegan, vegetarian, gluten_free, sauce, italian)_ — `base_sauce_tomate_926bfa`
 - **Sauce Worcestershire Végane** _(vegan, vegetarian, sauce, british)_ — `base_worcestershire_vegan_5f26ec`
 - **Seitan** _(vegan, vegetarian, high_protein, main, japanese)_ — `base_seitan_249032`
-- **Shakshuka** _(diabetes_friendly, gluten_free, high_protein, main, tunisian)_ — `egg_shakshuka_eb137b` 🔁 doublon possible : Shakshuka (Vegan)
-- **Shakshuka (Vegan)** _(diabetes_friendly, gluten_free, high_protein, nut_free, breakfast, levantine)_ — `brkf_shakshuka_vegan_81fa9a` 🔁 doublon possible : Shakshuka
+- **Shakshuka d'aubergine au tofu soyeux et au sumac (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, breakfast, levantine)_ — `brkf_shakshuka_vegan_81fa9a`
+- **Shakshuka tunisienne aux poivrons et à la feta** _(diabetes_friendly, gluten_free, high_protein, main, tunisian)_ — `egg_shakshuka_eb137b`
 - **Shakshuka Verte** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, low_calorie, nut_free, breakfast, levantine)_ — `brkf_shakshuka_verte_ad7779`
 - **Shepherd's pie vegan aux champignons, purée au céleri-rave** _(vegan, vegetarian, lactose_free, nut_free, main, british)_ — `dal_lentil_shepherds_pie_vega_27455d` 🔁 doublon possible : Purée de Céleri-Rave Vegan
 - **Shorbat Adas** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, iraqi)_ — `dal_shorbat_adas_d4f98a`
@@ -671,6 +670,7 @@
 - **Slovak Potato Dumplings** _(main, slovak)_ — `egg_slovak_potato_dumplings_e85ebb`
 - **Smoothie Bowl Açaï** _(diabetes_friendly, kid_friendly, lactose_free, low_calorie, vegetarian, breakfast, brazilian)_ — `brkf_smoothie_bowl_acai_7cf6e0`
 - **Smoothie Vert Épinards Banane** _(diabetes_friendly, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, international)_ — `brkf_smoothie_vert_epinards_ba_eb4142`
+- **Solterito d'Arequipa au fromage frais** _(diabetes_friendly, vegetarian, gluten_free, nut_free, main, peruvian)_ — `salad_andine_au_fromage_c537bd`
 - **Sopa Paraguaya** _(gluten_free, high_protein, main, paraguayan)_ — `egg_sopa_paraguaya_43987c`
 - **Sorbet Citron** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, dessert, french)_ — `dessert_sorbet_citron_f23e8f`
 - **Sorbet Mangue Passion** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, dessert, international)_ — `dessert_sorbet_mangue_passion_583687`

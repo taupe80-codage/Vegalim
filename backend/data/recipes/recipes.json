@@ -12957,59 +12957,59 @@
       "id": "bread_salmorejo_a156e9",
       "titles": {
         "original": "Salmorejo",
-        "fr": "Salmorejo",
+        "fr": "Salmorejo cordobés à l'œuf dur",
         "en": "Salmorejo"
       },
       "origin": {
-        "cuisine": "international",
+        "cuisine": "spanish",
         "country": "spain",
-        "region": "cordoue",
+        "region": "andalousie",
         "city": "cordoue"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 13,
+        "prep_active_min": 15,
         "prep_passive_min": 120,
-        "cook_min": 10,
-        "total_min": 143
+        "cook_min": 0,
+        "total_min": 135
       },
       "composition": [
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "quantity": 800,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "white_bread_baguette",
-          "quantity": 120,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "sliced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 9,
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "ingredient": "olive_oil_extra_virgin_plant",
+          "quantity": 70,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -13020,7 +13020,7 @@
         },
         {
           "ingredient": "white_vinegar_liquid_distilled",
-          "quantity": 30,
+          "quantity": 10,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -13035,14 +13035,14 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "sliced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -13066,12 +13066,14 @@
       "tags": {
         "diet": [
           "high_protein",
-          "vegetarian"
+          "vegetarian",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
+          "eggs",
           "gluten",
-          "sulphites",
-          "eggs"
+          "sulphites"
         ],
         "technique": [
           "assembly"
@@ -13125,15 +13127,20 @@
         "blanc",
         "boule",
         "bread",
+        "cordobes",
+        "dur",
         "egg",
+        "espagne",
+        "espagnol",
         "garlic",
         "intermediaire",
-        "international",
+        "l'œuf",
         "leger",
         "lent",
         "light",
         "long",
         "low calorie",
+        "mediterranee",
         "mijote",
         "minceur",
         "moyen",
@@ -13145,6 +13152,7 @@
         "salt",
         "sans viande",
         "sel",
+        "spanish",
         "table",
         "tomate",
         "tomato",
@@ -13155,17 +13163,16 @@
         "œuf"
       ],
       "difficulty_level": "medium",
-      "dish_type": "main",
+      "dish_type": "starter",
       "servings_default": 4,
       "_quality_score": 0.84,
-      "description": "Préparation de salmorejo à base de tomates mûres, avec une texture crémeuse et une saveur riche, typique de la cuisine andalouse, caractérisée par son odeur fraîche de tomates et son aspect velouté",
+      "description": "La crème froide de Cordoue : tomates mûres mixées avec pain, ail et beaucoup d'huile d'olive jusqu'à être veloutée, servie bien fraîche avec des œufs durs hachés.",
       "instructions": [
-        "Étape 1 : Couper les tomates en quartiers. Faire tremper le pain rassis 5 minutes dans un peu d'eau froide, puis l'essorer.",
-        "Étape 2 : Mixer les tomates, le pain essoré et l'ail à pleine puissance pendant 2 minutes, puis ajouter l'huile d'olive en filet sans cesser de mixer, jusqu'à obtenir une crème lisse et épaisse.",
-        "Étape 3 : Ajouter le vinaigre et le sel, mixer à nouveau, goûter et ajuster.",
-        "Étape 4 : Passer au chinois fin en pressant bien pour retirer les peaux et les graines.",
-        "Étape 5 : Réfrigérer au moins 2 heures.",
-        "Étape 6 : Servir très froid en petits bols, garni des œufs durs écalés et hachés."
+        "Étape 1 : Mixer 800 g de tomates mûres, puis les passer au chinois.",
+        "Étape 2 : Ajouter 150 g de pain rassis en morceaux et laisser tremper 10 minutes.",
+        "Étape 3 : Mixer avec 5 g d'ail, 10 ml de vinaigre et 3 g de sel, puis verser 70 ml d'huile d'olive en filet en mixant, jusqu'à obtenir une crème épaisse.",
+        "Étape 4 : Réfrigérer au moins 2 heures.",
+        "Étape 5 : Servir bien froid, parsemé de 2 œufs durs (110 g) hachés et d'un filet d'huile."
       ],
       "diet_flags": {
         "vegan": false,
@@ -18794,7 +18801,7 @@
       "id": "brkf_shakshuka_vegan_81fa9a",
       "titles": {
         "original": "Shakshuka (Vegan)",
-        "fr": "Shakshuka (Vegan)",
+        "fr": "Shakshuka d'aubergine au tofu soyeux et au sumac (vegan)",
         "en": "Shakshuka Végétarienne (Vegan)"
       },
       "origin": {
@@ -18805,52 +18812,118 @@
       },
       "servings": 2,
       "timing": {
-        "prep_active_min": 17,
-        "prep_passive_min": 10,
+        "prep_active_min": 15,
+        "prep_passive_min": 0,
         "cook_min": 35,
-        "total_min": 62
+        "total_min": 50
       },
       "composition": [
         {
+          "ingredient": "eggplant_raw",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 480,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "red_bell_pepper_raw",
-          "quantity": 320,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "strips",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 15,
+          "quantity": 9,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "silken_tofu_pre_packaged",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "turmeric_powder",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "paprika_powder",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sumac",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -18867,45 +18940,12 @@
           }
         },
         {
-          "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "crumbled",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "cumin_spice_seed",
-          "quantity": 2.5,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "paprika_powder",
-          "quantity": 2.3,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "coriander_raw_fresh_herb",
           "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -18925,8 +18965,11 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "high_protein",
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
           "nut_free"
         ],
         "allergens": [
@@ -18977,25 +19020,29 @@
         }
       },
       "search_tokens": [
+        "(baies",
         "(vegan)",
+        "1 heure",
         "ail",
+        "aubergine",
         "bell",
         "braising",
         "coeliaque",
         "coriander",
         "coriandre",
         "cumin",
+        "curcuma",
+        "d'aubergine",
+        "eggplant",
         "garlic",
         "gluten free",
         "intermediaire",
         "leger",
-        "lent",
         "levantine",
         "light",
-        "long",
         "low calorie",
-        "mijote",
         "minceur",
+        "moulues)",
         "moyen",
         "oignon",
         "olive",
@@ -19005,17 +19052,19 @@
         "poivron",
         "red",
         "rouge",
-        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
-        "sel",
+        "sechees",
         "shakshuka",
-        "table",
+        "silken",
+        "soyeux",
+        "sumac",
         "tofu",
         "tomate",
         "tomato",
+        "turmeric",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -19025,16 +19074,13 @@
       "dish_type": "breakfast",
       "servings_default": 2,
       "_quality_score": 0.96,
-      "description": "Shakshuka végétalienne créative, avec tomates concassées, poivron rouge, oignon jaune, servie dans une sauce méditerranéenne parfumée et crépitante, inspirée de la cuisine levantine.",
+      "description": "Sauce tomate aux aubergines et poivrons fondus, épicée au cumin et au paprika fumé, avec des cuillerées de tofu soyeux au curcuma qui rappellent les œufs, relevée de sumac.",
       "instructions": [
-        "Étape 1 : Faire chauffer 30 ml d'huile d'olive dans une grande poêle à feu moyen-vif, en sentant l'arôme légèrement sucré de l'huile.",
-        "Étape 2 : Saisir 150 g d'oignon jusqu'à translucidité, puis ajouter 15 g d'ail et 320 g de poivron rouge, et cuire 5 minutes, en écoutant le craquement des légumes.",
-        "Étape 3 : Assaisonner avec 2,5 g de cumin et 2,3 g de paprika doux et 3 g de sel, en sentant les arômes épicés se mélanger.",
-        "Étape 4 : Ajouter 480 g de tomates concassées et laisser réduire 10 minutes à feu moyen, en remuant régulièrement, en observant la couleur rouge vif des tomates.",
-        "Étape 5 : Former 4-6 petits creux dans la sauce avec une cuillère, jusqu'à ce que la sauce soit légèrement crépitante, en entendant le son crépitant de la sauce.",
-        "Étape 6 : Déposer 150 g de tofu émietté dans les creux, couvrir et laisser chauffer 5 minutes à feu doux.",
-        "Étape 7 : Ajouter 10 g de coriandre fraîche hachée et remuer délicatement, en sentant l'arôme frais de la coriandre.",
-        "Étape 8 : Servir chaud."
+        "Étape 1 : Faire revenir 250 g d'aubergine en dés dans 20 ml d'huile d'olive, 8 minutes, puis ajouter 100 g d'oignon et 200 g de poivron émincés et cuire 5 minutes.",
+        "Étape 2 : Ajouter 9 g d'ail, 2 g de cumin et 2 g de paprika, puis 400 g de tomates concassées et 2 g de sel, et mijoter 15 minutes.",
+        "Étape 3 : Égoutter 250 g de tofu soyeux et le mélanger avec 1 g de curcuma, 10 ml d'huile et 1 g de sel.",
+        "Étape 4 : Creuser des puits dans la sauce, y déposer le tofu en cuillerées, couvrir et chauffer 5 minutes.",
+        "Étape 5 : Parsemer de 2 g de sumac et de 10 g de coriandre, puis servir dans la poêle."
       ],
       "diet_flags": {
         "vegan": true,
@@ -61488,7 +61534,7 @@
       "id": "egg_shakshuka_eb137b",
       "titles": {
         "original": "Shakshouka",
-        "fr": "Shakshuka",
+        "fr": "Shakshuka tunisienne aux poivrons et à la feta",
         "en": "Shakshouka"
       },
       "origin": {
@@ -61690,6 +61736,7 @@
       "search_tokens": [
         "1 heure",
         "ail",
+        "aux",
         "bell",
         "braising",
         "coeliaque",
@@ -61712,6 +61759,7 @@
         "paprika",
         "pepper",
         "poivron",
+        "poivrons",
         "red",
         "rouge",
         "salt",
@@ -61724,6 +61772,7 @@
         "tomate",
         "tomato",
         "tunisian",
+        "tunisienne",
         "vegetarien",
         "wok",
         "œuf"
@@ -61732,7 +61781,7 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.96,
-      "description": "Ragoût tunisien de tomates — réduction concentrée pour une sauce épaisse, parfumée et riche en saveurs, avec une texture onctueuse et un arôme intense de poivron, d'oignon et de cumin.",
+      "description": "Poivrons et tomates mijotés au cumin et au paprika, œufs pochés dans la sauce et feta émiettée, à servir dans la poêle avec du pain.",
       "instructions": [
         "Étape 1: Faire chauffer l'huile d'olive à 45 ml dans une poêle à feu moyen-vif pendant 2 minutes, jusqu'à ce que l'huile commence à briller et à émettre un léger parfum.",
         "Étape 2: Saisir l'oignon à 150 g et l'ail à 9 g pendant 3 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que l'oignon soit translucide et l'ail soit parfumé.",
@@ -69306,59 +69355,59 @@
       "id": "entry_salmorejo_vegan_d0b7f7",
       "titles": {
         "original": "Salmorejo (Vegan)",
-        "fr": "Salmorejo (Vegan)",
+        "fr": "Ajo blanco de Málaga aux amandes et au raisin (vegan)",
         "en": "Vegan Salmorejo"
       },
       "origin": {
         "cuisine": "spanish",
         "country": "spain",
-        "region": "cordoue",
-        "city": ""
+        "region": "andalousie",
+        "city": "malaga"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 13,
+        "prep_active_min": 15,
         "prep_passive_min": 120,
         "cook_min": 0,
-        "total_min": 133
+        "total_min": 135
       },
       "composition": [
         {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "ingredient": "almond_raw_skinless_unsalted",
+          "quantity": 100,
           "unit": "g",
           "meta": {
-            "role": "fruit",
-            "form": "roughly_chopped",
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "white_bread_unsalted",
-          "quantity": 120,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "sliced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 15,
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 46.2,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -69369,7 +69418,7 @@
         },
         {
           "ingredient": "white_vinegar_liquid_distilled",
-          "quantity": 29.7,
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -69379,8 +69428,30 @@
           }
         },
         {
+          "ingredient": "water",
+          "quantity": 600,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chasselas_grape_raw",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -69393,15 +69464,15 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "lactose_free",
           "low_calorie",
-          "nut_free",
           "vegan",
-          "vegetarian"
+          "vegetarian",
+          "lactose_free"
         ],
         "allergens": [
           "gluten",
-          "sulphites"
+          "sulphites",
+          "tree_nuts"
         ],
         "technique": [
           "raw"
@@ -69445,25 +69516,38 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(vegan)",
         "ail",
+        "ajo",
+        "almond",
+        "amande",
+        "amandes",
+        "aux",
         "blanc",
+        "blanco",
         "bread",
+        "chasselas",
+        "eau",
         "espagne",
         "espagnol",
         "garlic",
+        "grape",
         "intermediaire",
         "leger",
         "lent",
         "light",
         "long",
         "low calorie",
+        "malaga",
         "mediterranee",
         "mijote",
         "minceur",
         "moyen",
         "olive",
         "pain",
+        "potable)",
+        "raisin",
         "raw",
         "salmorejo",
         "salt",
@@ -69472,13 +69556,12 @@
         "sel",
         "spanish",
         "table",
-        "tomate",
-        "tomato",
         "vegan",
         "vegetalien",
         "vegetarien",
         "vinaigre",
         "vinegar",
+        "water",
         "white"
       ],
       "difficulty_level": "medium",
@@ -69486,21 +69569,20 @@
       "servings_default": 4,
       "_quality_score": 0.82,
       "_chef_note": "Remplacez l'œuf dur par un ingrédient végétal, comme le tofu ou la purée de légumes, pour une version végétalienne.",
-      "description": "Entrée espagnole typique, servie fraîche pour une fraîcheur et une vitalité intenses, composée principalement de tomates mûres, de pain rassis, d'ail et d'huile d'olive, qui ouvre le repas avec une fraîcheur et un caractère authentiques.",
+      "description": "La soupe froide blanche d'Andalousie, antérieure au gaspacho : amandes, pain, ail, huile d'olive et vinaigre mixés avec de l'eau glacée, servie avec des grains de raisin.",
       "instructions": [
-        "Étape 1 : Coupez 300g de tomates mûres en quartiers fins pour libérer leurs saveurs et leurs arômes.",
-        "Étape 2 : Déchirez 120g de pain blanc rassis en petits morceaux et imbibez-les d'eau froide pendant 5 minutes, puis égouttez-les soigneusement pour en extraire l'excès d'humidité.",
-        "Étape 3 : Mixez les tomates, le pain essoré, 15g d'ail émincé finement et 46.2ml d'huile d'olive pendant 4 minutes jusqu'à obtenir une texture lisse et homogène, en vérifiant régulièrement la consistance.",
-        "Étape 4 : Filtrer le mélange au chinois fin en pressant bien pour obtenir une texture épaisse et crémeuse, en éliminant les particules solides.",
-        "Étape 5 : Assaisonnez avec 29.7ml de vinaigre blanc, 5g de sel et du poivre fraîchement moulu, puis réfrigérez pendant au moins 2 heures pour permettre aux saveurs de se développer et de se stabiliser.",
-        "Étape 6 : Servez très froid, garni de dés de tomates cerises fraîches et d'un filet d'huile d'olive."
+        "Étape 1 : Faire tremper 100 g de pain rassis sans croûte dans un peu d'eau 5 minutes, puis l'essorer.",
+        "Étape 2 : Mixer 100 g d'amandes mondées avec 6 g d'ail, le pain et 200 ml d'eau glacée jusqu'à obtenir une pâte fine.",
+        "Étape 3 : Ajouter 40 ml d'huile d'olive en filet, puis 15 ml de vinaigre, 3 g de sel et 400 ml d'eau glacée.",
+        "Étape 4 : Réfrigérer au moins 2 heures.",
+        "Étape 5 : Servir très froid, garni de 120 g de grains de raisin coupés en deux."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
         "gluten_free": false,
         "lactose_free": true,
-        "nut_free": true,
+        "nut_free": false,
         "raw": false,
         "kid_friendly": false
       }
@@ -130418,7 +130500,7 @@
       "id": "rice_sabzi_polo_e099d2",
       "titles": {
         "original": "Sabzi Polo",
-        "fr": "Sabzi Polo",
+        "fr": "Sabzi polo de Norouz au tahdig",
         "en": "Sabzi Polo"
       },
       "origin": {
@@ -130620,6 +130702,7 @@
         "light",
         "low calorie",
         "minceur",
+        "norouz",
         "olive",
         "parsley",
         "persian",
@@ -130634,6 +130717,7 @@
         "sans viande",
         "sel",
         "table",
+        "tahdig",
         "technique",
         "vegetarien",
         "water_cooking",
@@ -130643,7 +130727,7 @@
       "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.93,
-      "description": "Cuisson de riz basmati à la persane, avec grains séparés et bien assaisonnés, parfumés par des herbes fraîches et le safran, créant une texture moelleuse et une croûte croustillante dorée.",
+      "description": "Le riz aux herbes du Nouvel An persan : basmati cuit à l'étouffée avec persil, coriandre, aneth, ciboulette et fenugrec, fond croustillant (tahdig) au beurre et safran.",
       "instructions": [
         "Étape 1: Porter une grande casserole d'eau salée à ébullition, puis cuire le riz basmati 8 min à feu moyen-vif, en veillant à ce que les grains soient séparés et ne collent pas.",
         "Étape 2: Saisir les herbes fraîches (persil, coriandre, aneth, ciboulette, fenugrec) dans 20 ml d'huile d'olive jusqu'à parfum dégagé, en écoutant le son crépitant des herbes et en vérifiant leur couleur verte vif.",
@@ -134341,41 +134425,41 @@
       "id": "salad_andine_au_fromage_c537bd",
       "titles": {
         "original": "Solterito",
-        "fr": "Salade Andine au Fromage",
+        "fr": "Solterito d'Arequipa au fromage frais",
         "en": "Andine Au Fromage Salad"
       },
       "origin": {
-        "cuisine": "bolivian",
-        "country": "bolivia",
-        "region": "la_paz",
-        "city": ""
+        "cuisine": "peruvian",
+        "country": "peru",
+        "region": "arequipa",
+        "city": "arequipa"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
-        "prep_passive_min": 0,
+        "prep_active_min": 20,
+        "prep_passive_min": 10,
         "cook_min": 0,
-        "total_min": 17
+        "total_min": 30
       },
       "composition": [
         {
-          "ingredient": "sweet_corn_on_the_cob_cooked",
-          "quantity": 300,
+          "ingredient": "broadbeans_fava_beans_boiled_fresh",
+          "quantity": 250,
           "unit": "g",
           "meta": {
-            "role": "vegetable",
-            "form": "whole_grain",
-            "state": "raw",
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
             "preparation": ""
           }
         },
         {
-          "ingredient": "red_onion_raw",
-          "quantity": 150,
+          "ingredient": "sweet_corn_on_the_cob_cooked",
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -134386,36 +134470,69 @@
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "avocado_raw",
-          "quantity": 200,
+          "ingredient": "red_onion_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_olive_canned_in_brine",
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "sliced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "queso_fresco_block_cow",
-          "quantity": 120,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -134425,44 +134542,22 @@
           }
         },
         {
-          "ingredient": "white_vinegar_liquid_distilled",
-          "quantity": 30,
-          "unit": "ml",
-          "meta": {
-            "role": "ingredient",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "parsley_fresh_herb",
-          "quantity": 30,
+          "quantity": 15,
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 3,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "mustard",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "condiment",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -134483,13 +134578,13 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free"
+          "vegetarian",
+          "gluten_free",
+          "nut_free"
         ],
         "allergens": [
           "lactose",
-          "milk",
-          "sulphites",
-          "mustard"
+          "milk"
         ],
         "technique": [
           "assembly"
@@ -134538,47 +134633,60 @@
         }
       },
       "search_tokens": [
-        "10 min",
-        "20 min",
-        "5 min",
+        "(fava",
+        "(feves",
+        "30 minutes",
+        "andin",
         "andine",
         "assembly",
-        "avocado",
-        "avocat",
+        "beans)",
+        "black",
         "blanc",
-        "bolivian",
         "bread",
+        "broadbeans",
+        "chilli",
+        "citron",
         "cob",
         "coeliaque",
         "corn",
+        "d'arequipa",
+        "des",
         "doux",
         "epis",
-        "express",
+        "fava)",
+        "frais",
         "fresco",
         "fromage",
         "gluten free",
+        "gourganes",
         "intermediaire",
+        "latino",
         "leger",
         "light",
+        "lime",
         "low calorie",
         "mais",
+        "marais,",
         "minceur",
-        "moutarde",
         "moyen",
-        "mustard",
+        "noire",
         "oignon",
         "olive",
         "onion",
         "pain",
         "parsley",
+        "pepper",
+        "perou",
         "persil",
+        "peruvian",
+        "peruvien",
+        "piment",
         "queso",
         "quick",
         "rapide",
         "red",
         "rouge",
         "salad",
-        "salade",
         "salt",
         "sans gluten",
         "sans viande",
@@ -134590,8 +134698,7 @@
         "tomate",
         "tomato",
         "vegetarien",
-        "vinaigre",
-        "vinegar",
+        "vert",
         "white"
       ],
       "difficulty_level": "medium",
@@ -134599,15 +134706,12 @@
       "servings_default": 4,
       "_quality_score": 0.89,
       "_chef_note": "Remplacez le fromage par du fromage végétal râpé pour une version végétalienne.",
-      "description": "Salade fraîche et croquante, aux saveurs de maïs, tomates et avocats, avec une texture onctueuse et une odeur sucrée, typique de la cuisine andine, préparée avec des ingrédients frais et de qualité.",
+      "description": "Salade du sud du Pérou : fèves, maïs, tomate, oignon rouge, olives noires et fromage frais, relevés de piment et de citron vert.",
       "instructions": [
-        "Étape 1: Émincer finement les oignons rouges et les rincer à l'eau froide. Égrener le maïs cuit.",
-        "Étape 2: Couper les tomates en dés réguliers.",
-        "Étape 3: Couper les avocats en dés.",
-        "Étape 4: Émulsionner la vinaigrette avec 45 ml d'huile d'olive, 30 ml de vinaigre de vin blanc, 15 g de moutarde de Dijon et 1 g de sel, en fouettant énergiquement pendant 30 secondes jusqu'à obtenir une consistance lisse et homogène.",
-        "Étape 5: Mélanger délicatement les ingrédients, y compris le maïs, les tomates, les avocats, les oignons rouges et le queso fresco émietté, pendant 1 minute, jusqu'à ce que tous les ingrédients soient enrobés uniformément et que la salade ait une texture harmonieuse.",
-        "Étape 6: Assaisonner avec du sel et du poivre au goût, puis servir sans attendre, en prenant soin de conserver la fraîcheur et la texture de la salade.",
-        "Étape 7: Garnir avec des feuilles de persil fraîches pour ajouter une touche de couleur et de fraîcheur à la salade, puis servir aussitôt."
+        "Étape 1 : Émincer finement 100 g d'oignon rouge et le laisser tremper 10 minutes dans l'eau froide, puis l'égoutter.",
+        "Étape 2 : Couper 300 g de tomates et 150 g de fromage frais en dés, égrener 250 g de maïs cuit et peler 250 g de fèves.",
+        "Étape 3 : Mélanger avec 40 g d'olives noires, 6 g de piment haché et 15 g de persil.",
+        "Étape 4 : Assaisonner avec 30 ml de jus de citron vert, 30 ml d'huile d'olive et 2 g de sel, puis servir frais."
       ],
       "diet_flags": {
         "vegan": false,
@@ -134623,7 +134727,7 @@
       "id": "salad_andine_au_fromage_vegan_566f05",
       "titles": {
         "original": "Solterito (Vegan)",
-        "fr": "Salade Andine au Fromage (Vegan)",
+        "fr": "Salade andine au quinoa, avocat et haricots noirs (vegan)",
         "en": "Solterito (Vegan)"
       },
       "origin": {
@@ -134634,41 +134738,52 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
+        "prep_active_min": 20,
         "prep_passive_min": 0,
-        "cook_min": 0,
-        "total_min": 17
+        "cook_min": 12,
+        "total_min": 32
       },
       "composition": [
         {
-          "ingredient": "sweet_corn_on_the_cob_cooked",
-          "quantity": 300,
+          "ingredient": "quinoa_raw_dried",
+          "quantity": 150,
           "unit": "g",
           "meta": {
-            "role": "vegetable",
-            "form": "whole_grain",
+            "role": "carbohydrate",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "red_onion_raw",
-          "quantity": 150,
+          "ingredient": "black_bean_boiled",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sweet_corn_on_the_cob_cooked",
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -134679,25 +134794,47 @@
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "sliced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "base_vegan_cheddar_024998",
-          "quantity": 120,
+          "ingredient": "red_onion_raw",
+          "quantity": 80,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "grated",
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -134707,23 +134844,23 @@
           }
         },
         {
-          "ingredient": "white_vinegar_liquid_distilled",
-          "quantity": 30,
-          "unit": "ml",
+          "ingredient": "cumin_spice_seed",
+          "quantity": 1,
+          "unit": "g",
           "meta": {
-            "role": "ingredient",
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "parsley_fresh_herb",
-          "quantity": 30,
-          "unit": "g",
+          "ingredient": "water",
+          "quantity": 300,
+          "unit": "ml",
           "meta": {
-            "role": "herb",
-            "form": "chopped",
+            "role": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -134738,30 +134875,18 @@
             "state": "raw",
             "preparation": ""
           }
-        },
-        {
-          "ingredient": "mustard",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "condiment",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
+          "vegan",
+          "vegetarian",
           "gluten_free",
-          "lactose_free"
+          "lactose_free",
+          "nut_free"
         ],
-        "allergens": [
-          "sulphites",
-          "mustard",
-          "tree_nuts"
-        ],
+        "allergens": [],
         "technique": [
           "raw"
         ],
@@ -134806,43 +134931,47 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(vegan)",
-        "10 min",
-        "20 min",
-        "5 min",
+        "45 minutes",
         "andean",
         "andin",
         "andine",
         "andins",
         "avocado",
         "avocat",
-        "base_vegan_cheddar_024998",
-        "blanc",
+        "bean",
+        "black",
+        "citron",
         "cob",
         "coeliaque",
+        "coriander",
+        "coriandre",
         "corn",
+        "cumin",
         "doux",
+        "eau",
         "epis",
-        "express",
-        "fromage",
         "gluten free",
+        "haricot",
+        "haricots",
         "intermediaire",
         "latino",
         "leger",
         "light",
+        "lime",
         "low calorie",
         "mais",
         "minceur",
-        "moutarde",
         "moyen",
-        "mustard",
+        "noir",
+        "noirs",
         "oignon",
         "olive",
         "onion",
-        "parsley",
-        "persil",
-        "quick",
-        "rapide",
+        "potable)",
+        "quinoa",
+        "quinoa,",
         "raw",
         "red",
         "rouge",
@@ -134861,30 +134990,26 @@
         "vegan",
         "vegetalien",
         "vegetarien",
-        "vinaigre",
-        "vinegar",
-        "white"
+        "vert",
+        "water"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.83,
-      "description": "Salade fraîche et croquante à base de maïs, d'oignon rouge, de tomates, d'avocat et de fromage végétal râpé, avec une texture crémeuse et une odeur parfumée de persil frais, inspirée de la cuisine andine.",
+      "description": "Salade complète des Andes : quinoa, haricots noirs, maïs, tomate, avocat et oignon rouge, en vinaigrette citron vert-coriandre.",
       "instructions": [
-        "Étape 1 : Égrener 300 g de maïs cuit, couper 150 g d'oignon rouge en fines lamelles et 300 g de tomates en dés, en veillant à ce que les légumes soient frais et croquants.",
-        "Étape 2 : Couper 200 g d'avocat en dés et les ajouter à la salade, en profitant de la texture crémeuse qu'il apporte.",
-        "Étape 3 : Mélanger 45 ml d'huile d'olive, 30 ml de vinaigre de vin blanc et 15 g de moutarde de Dijon pour préparer la vinaigrette, en s'assurant qu'elle soit bien émulsionnée après environ 2 minutes de whisking.",
-        "Étape 4 : Verser la vinaigrette sur la salade et mélanger délicatement pendant environ 3 minutes pour enrober tous les ingrédients, en vérifiant que la salade soit bien enrobée et harmonieuse.",
-        "Étape 5 : Assaisonner avec 3 g de sel et ajuster l'assaisonnement si nécessaire, en goûtant régulièrement pour atteindre l'équilibre parfait.",
-        "Étape 6 : Ajouter 120 g de fromage végétal râpé pour donner un peu de fermeté et de saveur, en veillant à ce qu'il soit bien réparti sur toute la salade.",
-        "Étape 7 : Garnir de 30 g de persil frais haché et servir frais."
+        "Étape 1 : Rincer 150 g de quinoa et le cuire dans 300 ml d'eau salée avec 1 g de sel, 12 minutes à couvert, puis le laisser refroidir.",
+        "Étape 2 : Couper 250 g de tomates et 200 g d'avocat en dés, émincer 80 g d'oignon rouge et égrener 200 g de maïs.",
+        "Étape 3 : Vinaigrette : mélanger 30 ml de jus de citron vert, 30 ml d'huile d'olive, 1 g de cumin et 2 g de sel.",
+        "Étape 4 : Mélanger le quinoa, 200 g de haricots noirs, les légumes et 15 g de coriandre avec la vinaigrette, puis servir frais."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
         "gluten_free": true,
         "lactose_free": true,
-        "nut_free": false,
+        "nut_free": true,
         "raw": false,
         "kid_friendly": false
       }
@@ -149398,30 +149523,30 @@
       "id": "side_rosti_4ec9f8",
       "titles": {
         "original": "Rösti",
-        "fr": "Rösti",
+        "fr": "Rösti bernois au beurre",
         "en": "Swiss Rösti"
       },
       "origin": {
         "cuisine": "swiss",
         "country": "switzerland",
-        "region": "vaud",
-        "city": ""
+        "region": "berne",
+        "city": "berne"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
-        "prep_passive_min": 10,
-        "cook_min": 20,
-        "total_min": 41
+        "prep_active_min": 10,
+        "prep_passive_min": 600,
+        "cook_min": 40,
+        "total_min": 650
       },
       "composition": [
         {
           "ingredient": "potato_raw_with_skin",
-          "quantity": 600,
+          "quantity": 700,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -149432,25 +149557,14 @@
           "unit": "g",
           "meta": {
             "role": "fat_cooking",
-            "form": "diced",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "thyme_fresh_herb",
-          "quantity": 3,
-          "unit": "g",
-          "meta": {
-            "role": "herb",
-            "form": "leaves",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -149461,11 +149575,11 @@
         },
         {
           "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -149473,7 +149587,9 @@
       ],
       "tags": {
         "diet": [
-          "gluten_free"
+          "vegetarian",
+          "gluten_free",
+          "nut_free"
         ],
         "allergens": [
           "lactose",
@@ -149524,7 +149640,7 @@
         }
       },
       "search_tokens": [
-        "45 minutes",
+        "bernois",
         "beurre",
         "black",
         "butter",
@@ -149538,10 +149654,12 @@
         "gluten free",
         "kids",
         "leger",
+        "lent",
         "light",
+        "long",
         "low calorie",
+        "mijote",
         "minceur",
-        "moyen",
         "noir",
         "pepper",
         "poivre",
@@ -149556,8 +149674,6 @@
         "swiss",
         "table",
         "terre",
-        "thym",
-        "thyme",
         "vegetarien",
         "wok"
       ],
@@ -149566,15 +149682,13 @@
       "servings_default": 4,
       "_quality_score": 0.85,
       "_chef_note": "Pour un rösti parfait, il est essentiel de ne pas trop remuer la préparation et de laisser cuire à feu moyen-vif.",
-      "description": "Rösti créatif, avec une texture croustillante dorée à l'extérieur et une chair de pomme de terre tendre à l'intérieur, parfumée au thym frais et à l'oignon émincé.",
+      "description": "La galette de pommes de terre de Berne : pommes de terre cuites la veille, râpées grossièrement et dorées lentement au beurre en une seule grande galette croustillante.",
       "instructions": [
-        "Éplucher les pommes de terre crues (600g) et les râper grossièrement. Laisser dégorger pendant 10 minutes, puis essorer soigneusement dans un torchon pour éliminer l'excès d'humidité.",
-        "Incorporer le thym frais (3g), le sel (5g) et le poivre (2g). Mélanger bien pour que les saveurs soient réparties de manière uniforme.",
-        "Faire fondre 40g de beurre dans une grande poêle antiadhésive à feu moyen-vif, en sentant l'arôme subtil du beurre fondu.",
-        "Verser la préparation en couche uniforme d'environ 1 cm d'épaisseur. Appuyer légèrement avec une spatule pour que la surface soit plane et les pommes de terre soient bien compactées.",
-        "Cuire pendant 8-10 minutes sans remuer, jusqu'à ce que la surface soit dorée et croustillante, en écoutant le son crépitant de la cuisson.",
-        "Retourner le rösti à l'aide d'une assiette et faire glisser de nouveau dans la poêle. Cuire l'autre face pendant 8-10 minutes, jusqu'à ce qu'elle soit bien dorée et croustillante, en sentant l'odeur appétissante de la pomme de terre cuit.",
-        "Couper en parts et servir chaud."
+        "Étape 1 : La veille, cuire 700 g de pommes de terre avec la peau à l'eau, 15 minutes : elles doivent rester fermes. Les laisser refroidir une nuit au frais.",
+        "Étape 2 : Les éplucher et les râper grossièrement, puis saler avec 3 g de sel et poivrer avec 1 g de poivre.",
+        "Étape 3 : Faire fondre 30 g de beurre dans une poêle de 24 cm, y tasser les pommes de terre en galette et cuire 12 minutes à feu moyen-doux, jusqu'à ce que le dessous soit doré.",
+        "Étape 4 : Retourner la galette à l'aide d'une assiette, ajouter 10 g de beurre et cuire encore 10 minutes.",
+        "Étape 5 : Servir aussitôt, coupé en parts."
       ],
       "diet_flags": {
         "vegan": false,
@@ -149590,21 +149704,21 @@
       "id": "side_sabzi_polo_vegan_7bf9df",
       "titles": {
         "original": "Sabzi Polo (Vegan)",
-        "fr": "Sabzi Polo (Vegan)",
+        "fr": "Baghali polo aux fèves et à l'aneth (vegan)",
         "en": "Vegan Sabzi Polo"
       },
       "origin": {
-        "cuisine": "iranian",
-        "country": "international",
-        "region": "tehran_province",
-        "city": ""
+        "cuisine": "persian",
+        "country": "iran",
+        "region": "tehran",
+        "city": "tehran"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 19,
-        "prep_passive_min": 0,
-        "cook_min": 40,
-        "total_min": 59
+        "prep_active_min": 15,
+        "prep_passive_min": 60,
+        "cook_min": 50,
+        "total_min": 125
       },
       "composition": [
         {
@@ -149619,88 +149733,55 @@
           }
         },
         {
-          "ingredient": "parsley_fresh_herb",
-          "quantity": 100,
+          "ingredient": "broadbeans_fava_beans_boiled_fresh",
+          "quantity": 250,
           "unit": "g",
           "meta": {
-            "role": "herb",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "coriander_raw_fresh_herb",
-          "quantity": 30,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
             "preparation": ""
           }
         },
         {
           "ingredient": "dill_weed_fresh_herb_leaf",
-          "quantity": 60,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "fenugreek",
-          "quantity": 3.5,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "whole_grain",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "chives_raw_fresh",
-          "quantity": 40,
+          "quantity": 50,
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "chiffonade",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "saffron",
-          "quantity": 0.5,
+          "quantity": 0.3,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "pinch",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "vegan_butter",
-          "quantity": 40,
+          "ingredient": "turmeric_powder",
+          "quantity": 1,
           "unit": "g",
           "meta": {
-            "role": "fat_cooking",
-            "form": "diced",
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 30,
+          "quantity": 45,
           "unit": "ml",
           "meta": {
-            "role": "fat",
+            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -149708,10 +149789,21 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 1500,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -149720,7 +149812,10 @@
       ],
       "tags": {
         "diet": [
+          "vegan",
+          "vegetarian",
           "gluten_free",
+          "lactose_free",
           "nut_free"
         ],
         "allergens": [],
@@ -149764,33 +149859,42 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "(fava",
+        "(feves",
         "(vegan)",
-        "1 heure",
         "aneth",
+        "aux",
         "avance",
+        "baghali",
         "basmati",
-        "beurre",
+        "beans)",
         "boiling",
-        "butter",
+        "broadbeans",
         "chef",
-        "chives",
-        "ciboulette",
         "coeliaque",
         "complexe",
-        "coriander",
-        "coriandre",
+        "curcuma",
+        "des",
         "dill",
-        "fenugreek",
+        "eau",
+        "fava)",
+        "feves",
         "gluten free",
-        "iranian",
+        "gourganes",
+        "l'aneth",
         "leger",
+        "lent",
         "light",
+        "long",
         "low calorie",
+        "marais,",
+        "mijote",
         "minceur",
         "olive",
-        "parsley",
-        "persil",
+        "persian",
         "polo",
+        "potable)",
         "rice",
         "riz",
         "sabzi",
@@ -149802,10 +149906,11 @@
         "sel",
         "table",
         "technique",
+        "turmeric",
         "vegan",
-        "vegetal",
         "vegetalien",
         "vegetarien",
+        "water",
         "weed"
       ],
       "difficulty_level": "hard",
@@ -149813,15 +149918,14 @@
       "servings_default": 4,
       "_quality_score": 0.95,
       "_chef_note": "Remplacez le beurre par de l'huile d'olive ou de l'huile d'olive pour une version végétalienne.",
-      "description": "Riz basmati parfumé, cuit à la perfection avec des herbes fraîches et un safran doré, accompagné d'une croûte croustillante au fond, technique traditionnelle persane.",
+      "description": "Riz persan aux fèves fraîches et à l'aneth, cuit à l'étouffée à l'huile d'olive avec un fond croustillant, parfumé au safran.",
       "instructions": [
-        "Étape 1 : Faites cuire le riz basmati (300g) dans 600ml d'eau bouillante salée (5g de sel) à feu vif pendant 10 minutes, jusqu'à ce que les grains soient tendres mais encore légèrement fermes.",
-        "Étape 2 : Préparez les herbes fraîches hachées : persil (100g), aneth (60g), ciboulette (40g), coriandre (30g) et fenugrec séché (3.5g), en veillant à ce qu'elles soient bien fines pour une meilleure répartition de saveurs.",
-        "Étape 3 : Mélangez délicatement les herbes hachées dans le riz en cours de cuisson, en prenant soin de ne pas écraser les grains, pour obtenir une répartition homogène des herbes.",
-        "Étape 4 : Ajoutez le safran (0.5g) infusé dans 2 cuillerées d'eau chaude au riz, réduisez le feu à doux et poursuivez la cuisson pendant 5 minutes, en remuant occasionnellement pour éviter que le riz n'attache.",
-        "Étape 5 : Préparez la croûte croustillante (tahdig) en versant 40g de beurre végétal fondu et 30 ml d'huile d'olive dans le fond d'une poêle, puis en y ajoutant une couche fine de riz cuit, en appuyant légèrement pour former une croûte régulière.",
-        "Étape 6 : Couvrez et faites cuire à feu doux pendant environ 25 minutes, jusqu'à ce qu'elle soit dorée et croustillante, en vérifiant régulièrement pour éviter la brûlure.",
-        "Étape 7 : Servez le riz en retournant délicatement la poêle pour dégager la croûte dorée, puis parsemez de ciboulette hachée fraîche pour une touche de fraîcheur et de couleur."
+        "Étape 1 : Rincer 300 g de riz basmati et le laisser tremper 1 heure dans l'eau salée.",
+        "Étape 2 : Le précuire 6 minutes dans 1,5 L d'eau bouillante avec 4 g de sel, puis l'égoutter : les grains doivent rester fermes. Mélanger avec 250 g de fèves pelées et 50 g d'aneth ciselé.",
+        "Étape 3 : Chauffer 30 ml d'huile d'olive avec 1 g de curcuma au fond d'une cocotte, puis y étaler le riz en dôme.",
+        "Étape 4 : Faire infuser 0,3 g de safran dans 30 ml d'eau chaude et l'arroser sur le riz avec 15 ml d'huile.",
+        "Étape 5 : Couvrir d'un couvercle enveloppé d'un torchon et cuire 40 minutes à feu très doux, jusqu'à ce que le fond soit doré.",
+        "Étape 6 : Démouler et servir le riz avec des morceaux de tahdig."
       ],
       "diet_flags": {
         "vegan": true,
@@ -152622,7 +152726,7 @@
       "id": "snack_rosti_vegan_be15a2",
       "titles": {
         "original": "Rösti (Vegan)",
-        "fr": "Rösti (Vegan)",
+        "fr": "Rösti aux légumes racines et à la ciboulette (vegan)",
         "en": "Swiss Rösti (Vegan)"
       },
       "origin": {
@@ -152633,48 +152737,92 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
-        "prep_passive_min": 10,
+        "prep_active_min": 20,
+        "prep_passive_min": 0,
         "cook_min": 20,
-        "total_min": 41
+        "total_min": 40
       },
       "composition": [
         {
           "ingredient": "potato_raw_with_skin",
-          "quantity": 600,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "vegan_butter",
-          "quantity": 40,
+          "ingredient": "carrot_raw",
+          "quantity": 150,
           "unit": "g",
           "meta": {
-            "role": "fat_cooking",
-            "form": "diced",
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "thyme_fresh_herb",
-          "quantity": 1.5,
+          "ingredient": "celeriac_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "potato_starch_flour",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chives_raw_fresh",
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "leaves",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 35,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -152685,11 +152833,11 @@
         },
         {
           "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -152700,20 +152848,25 @@
           "unit": "une portion",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "salade verte fraîche",
-            "note": "Pour accompagner les rösti",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
       "tags": {
         "diet": [
-          "gluten_free",
           "kid_friendly",
           "low_calorie",
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
           "nut_free"
         ],
-        "allergens": [],
+        "allergens": [
+          "celery"
+        ],
         "technique": [
           "sauteed"
         ],
@@ -152757,9 +152910,14 @@
       "search_tokens": [
         "(vegan)",
         "45 minutes",
-        "beurre",
+        "aux",
         "black",
-        "butter",
+        "carotte",
+        "carrot",
+        "celeri",
+        "celeriac",
+        "chives",
+        "ciboulette",
         "coeliaque",
         "debutant",
         "easy",
@@ -152767,19 +152925,25 @@
         "facile",
         "facile enfants",
         "famille",
+        "fecule",
         "gluten free",
         "green",
         "kids",
         "leger",
+        "legumes",
         "light",
         "low calorie",
         "minceur",
         "moyen",
         "noir",
+        "oignon",
+        "onion",
         "pepper",
         "poivre",
         "pomme",
         "potato",
+        "racines",
+        "rave",
         "rosti",
         "salad",
         "salade",
@@ -152790,32 +152954,28 @@
         "sauteed",
         "sel",
         "simple",
+        "starch",
+        "sunflower",
         "swiss",
         "table",
         "terre",
-        "thym",
-        "thyme",
+        "tournesol",
         "vegan",
-        "vegetal",
         "vegetalien",
         "vegetarien",
         "verte"
       ],
       "difficulty_level": "easy",
-      "dish_type": "snack",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.88,
       "_chef_note": "Ajustez la quantité de sel et d'huile selon vos préférences personnelles.",
-      "description": "Rösti croustillant à base de pommes de terre crues, doré à la poêle avec une texture croustillante et une odeur parfumée, typique de la cuisine suisse avec une touche de thym frais.",
+      "description": "Galettes croustillantes de pommes de terre, carotte, céleri-rave et oignon râpés, dorées à l'huile et parsemées de ciboulette.",
       "instructions": [
-        "Étape 1 : Épluchez 600 g de pommes de terre crues et râpez-les grossièrement. Salez avec 5 g de sel et laissez dégorger pendant 10 minutes, puis essorez soigneusement dans un torchon pour enlever l'excès d'humidité.",
-        "Étape 2 : Incorporez 1,5 g de thym frais, et 2 g de poivre dans les pommes de terre râpées, en mélangeant délicatement pour obtenir une texture homogène.",
-        "Étape 3 : Faites chauffer 40 g de beurre végétal dans une grande poêle antiadhésive à feu moyen-vif, jusqu'à ce que l'huile commence à fumer légèrement et à avoir une odeur parfumée.",
-        "Étape 4 : Versez la préparation en couche uniforme d'environ 1 cm d'épaisseur et appuyez légèrement avec une spatule pour obtenir une surface lisse et régulière.",
-        "Étape 5 : Cuisez pendant 8-10 minutes sans remuer, jusqu'à ce que le bas soit doré et croustillant, avec une couleur dorée claire et un son de friture régulier.",
-        "Étape 6 : Retournez le rösti à l'aide d'une assiette et faites glisser de nouveau dans la poêle, en prenant soin de ne pas endommager la surface croustillante.",
-        "Étape 7 : Cuisez l'autre face pendant 8-10 minutes, jusqu'à ce qu'elle soit bien dorée et croustillante, avec une texture ferme et une couleur dorée foncée.",
-        "Étape 8 : Coupez en parts et servez chaud."
+        "Étape 1 : Râper 400 g de pommes de terre, 150 g de carotte, 150 g de céleri-rave et 80 g d'oignon, puis presser dans un torchon pour retirer l'eau.",
+        "Étape 2 : Mélanger avec 15 g de fécule, 3 g de sel, 1 g de poivre et 10 g de ciboulette ciselée.",
+        "Étape 3 : Former 8 galettes fines et les cuire dans 35 ml d'huile, 5 minutes de chaque côté à feu moyen, jusqu'à ce qu'elles soient dorées.",
+        "Étape 4 : Égoutter sur du papier absorbant et servir chaud."
       ],
       "diet_flags": {
         "vegan": true,

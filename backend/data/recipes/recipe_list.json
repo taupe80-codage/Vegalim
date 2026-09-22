@@ -159,6 +159,74 @@
     "similar": []
   },
   {
+    "id": "entry_salmorejo_vegan_d0b7f7",
+    "title": "Ajo blanco de Málaga aux amandes et au raisin (vegan)",
+    "cuisine": "spanish",
+    "dish_type": "starter",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "low_calorie",
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "allergens": [
+      "gluten",
+      "sulphites",
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 135,
+    "confidence": 1.0,
+    "description": "La soupe froide blanche d'Andalousie, antérieure au gaspacho : amandes, pain, ail, huile d'olive et vinaigre mixés avec de l'eau glacée, servie avec des grains de raisin.",
+    "composition": [
+      {
+        "ingredient": "almond_raw_skinless_unsalted",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_bread_unsalted",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_vinegar_liquid_distilled",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 600,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "chasselas_grape_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "main_ajvar_puree_de_poivrons_5d2e79",
     "title": "Ajvar (purée de Poivrons)",
     "cuisine": "serbian",
@@ -1405,6 +1473,70 @@
       }
     ],
     "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "side_sabzi_polo_vegan_7bf9df",
+    "title": "Baghali polo aux fèves et à l'aneth (vegan)",
+    "cuisine": "persian",
+    "dish_type": "side",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 125,
+    "confidence": 1.0,
+    "description": "Riz persan aux fèves fraîches et à l'aneth, cuit à l'étouffée à l'huile d'olive avec un fond croustillant, parfumé au safran.",
+    "composition": [
+      {
+        "ingredient": "basmati_rice_raw_seed",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "broadbeans_fava_beans_boiled_fresh",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "dill_weed_fresh_herb_leaf",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "saffron",
+        "quantity": 0.3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1500,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -38918,100 +39050,71 @@
     ]
   },
   {
-    "id": "side_rosti_4ec9f8",
-    "title": "Rösti",
+    "id": "snack_rosti_vegan_be15a2",
+    "title": "Rösti aux légumes racines et à la ciboulette (vegan)",
     "cuisine": "swiss",
     "dish_type": "side",
-    "vegan": false,
+    "vegan": true,
     "diet": [
-      "gluten_free"
+      "kid_friendly",
+      "low_calorie",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
-      "lactose",
-      "milk"
+      "celery"
     ],
     "servings": 4,
-    "time_total": 41,
+    "time_total": 40,
     "confidence": 1.0,
-    "description": "Rösti créatif, avec une texture croustillante dorée à l'extérieur et une chair de pomme de terre tendre à l'intérieur, parfumée au thym frais et à l'oignon émincé.",
+    "description": "Galettes croustillantes de pommes de terre, carotte, céleri-rave et oignon râpés, dorées à l'huile et parsemées de ciboulette.",
     "composition": [
       {
         "ingredient": "potato_raw_with_skin",
-        "quantity": 600,
+        "quantity": 400,
         "unit": "g"
       },
       {
-        "ingredient": "butter_sup80pct",
-        "quantity": 40,
+        "ingredient": "carrot_raw",
+        "quantity": 150,
         "unit": "g"
       },
       {
-        "ingredient": "thyme_fresh_herb",
+        "ingredient": "celeriac_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_starch_flour",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chives_raw_fresh",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
         "quantity": 3,
         "unit": "g"
       },
       {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "snack_rosti_vegan_be15a2",
-        "title": "Rösti (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "snack_rosti_vegan_be15a2",
-    "title": "Rösti (Vegan)",
-    "cuisine": "swiss",
-    "dish_type": "snack",
-    "vegan": false,
-    "diet": [
-      "gluten_free",
-      "kid_friendly",
-      "low_calorie",
-      "nut_free"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 41,
-    "confidence": 1.0,
-    "description": "Rösti croustillant à base de pommes de terre crues, doré à la poêle avec une texture croustillante et une odeur parfumée, typique de la cuisine suisse avec une touche de thym frais.",
-    "composition": [
-      {
-        "ingredient": "potato_raw_with_skin",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "thyme_fresh_herb",
-        "quantity": 1.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
+        "quantity": 1,
         "unit": "g"
       },
       {
@@ -39020,15 +39123,54 @@
         "unit": "une portion"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 4,
     "flags": [],
-    "similar": [
+    "similar": []
+  },
+  {
+    "id": "side_rosti_4ec9f8",
+    "title": "Rösti bernois au beurre",
+    "cuisine": "swiss",
+    "dish_type": "side",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 650,
+    "confidence": 1.0,
+    "description": "La galette de pommes de terre de Berne : pommes de terre cuites la veille, râpées grossièrement et dorées lentement au beurre en une seule grande galette croustillante.",
+    "composition": [
       {
-        "id": "side_rosti_4ec9f8",
-        "title": "Rösti",
-        "score": 1.0
+        "ingredient": "potato_raw_with_skin",
+        "quantity": 700,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
       }
-    ]
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
   },
   {
     "id": "egg_sabich_b270c4",
@@ -39195,7 +39337,7 @@
   },
   {
     "id": "rice_sabzi_polo_e099d2",
-    "title": "Sabzi Polo",
+    "title": "Sabzi polo de Norouz au tahdig",
     "cuisine": "persian",
     "dish_type": "side",
     "vegan": false,
@@ -39209,7 +39351,7 @@
     "servings": 4,
     "time_total": 54,
     "confidence": 1.0,
-    "description": "Cuisson de riz basmati à la persane, avec grains séparés et bien assaisonnés, parfumés par des herbes fraîches et le safran, créant une texture moelleuse et une croûte croustillante dorée.",
+    "description": "Le riz aux herbes du Nouvel An persan : basmati cuit à l'étouffée avec persil, coriandre, aneth, ciboulette et fenugrec, fond croustillant (tahdig) au beurre et safran.",
     "composition": [
       {
         "ingredient": "basmati_rice_raw_seed",
@@ -39264,90 +39406,7 @@
     ],
     "n_instructions": 7,
     "flags": [],
-    "similar": [
-      {
-        "id": "side_sabzi_polo_vegan_7bf9df",
-        "title": "Sabzi Polo (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "side_sabzi_polo_vegan_7bf9df",
-    "title": "Sabzi Polo (Vegan)",
-    "cuisine": "iranian",
-    "dish_type": "side",
-    "vegan": false,
-    "diet": [
-      "gluten_free",
-      "nut_free"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 59,
-    "confidence": 1.0,
-    "description": "Riz basmati parfumé, cuit à la perfection avec des herbes fraîches et un safran doré, accompagné d'une croûte croustillante au fond, technique traditionnelle persane.",
-    "composition": [
-      {
-        "ingredient": "basmati_rice_raw_seed",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander_raw_fresh_herb",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "dill_weed_fresh_herb_leaf",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "fenugreek",
-        "quantity": 3.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "chives_raw_fresh",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "saffron",
-        "quantity": 0.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "rice_sabzi_polo_e099d2",
-        "title": "Sabzi Polo",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dal_sabzi_sabz_592004",
@@ -39509,126 +39568,43 @@
     "similar": []
   },
   {
-    "id": "salad_andine_au_fromage_c537bd",
-    "title": "Salade Andine au Fromage",
-    "cuisine": "bolivian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free"
-    ],
-    "allergens": [
-      "lactose",
-      "milk",
-      "sulphites",
-      "mustard"
-    ],
-    "servings": 4,
-    "time_total": 17,
-    "confidence": 1.0,
-    "description": "Salade fraîche et croquante, aux saveurs de maïs, tomates et avocats, avec une texture onctueuse et une odeur sucrée, typique de la cuisine andine, préparée avec des ingrédients frais et de qualité.",
-    "composition": [
-      {
-        "ingredient": "sweet_corn_on_the_cob_cooked",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "avocado_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "queso_fresco_block_cow",
-        "quantity": 120,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "white_vinegar_liquid_distilled",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "mustard",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_bread_roasted",
-        "quantity": null,
-        "unit": "4 tranches"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "salad_andine_au_fromage_vegan_566f05",
-        "title": "Salade Andine au Fromage (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "salad_andine_au_fromage_vegan_566f05",
-    "title": "Salade Andine au Fromage (Vegan)",
+    "title": "Salade andine au quinoa, avocat et haricots noirs (vegan)",
     "cuisine": "andean",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
+      "vegan",
+      "vegetarian",
       "gluten_free",
-      "lactose_free"
+      "lactose_free",
+      "nut_free"
     ],
-    "allergens": [
-      "sulphites",
-      "mustard",
-      "tree_nuts"
-    ],
+    "allergens": [],
     "servings": 4,
-    "time_total": 17,
+    "time_total": 32,
     "confidence": 1.0,
-    "description": "Salade fraîche et croquante à base de maïs, d'oignon rouge, de tomates, d'avocat et de fromage végétal râpé, avec une texture crémeuse et une odeur parfumée de persil frais, inspirée de la cuisine andine.",
+    "description": "Salade complète des Andes : quinoa, haricots noirs, maïs, tomate, avocat et oignon rouge, en vinaigrette citron vert-coriandre.",
     "composition": [
       {
-        "ingredient": "sweet_corn_on_the_cob_cooked",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_onion_raw",
+        "ingredient": "quinoa_raw_dried",
         "quantity": 150,
         "unit": "g"
       },
       {
+        "ingredient": "black_bean_boiled",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sweet_corn_on_the_cob_cooked",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
         "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
+        "quantity": 250,
         "unit": "g"
       },
       {
@@ -39637,45 +39613,44 @@
         "unit": "g"
       },
       {
-        "ingredient": "base_vegan_cheddar_024998",
-        "quantity": 120,
+        "ingredient": "red_onion_raw",
+        "quantity": 80,
         "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
+        "quantity": 30,
+        "unit": "ml"
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "white_vinegar_liquid_distilled",
         "quantity": 30,
         "unit": "ml"
       },
       {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": 30,
+        "ingredient": "cumin_spice_seed",
+        "quantity": 1,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 300,
+        "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 3,
         "unit": "g"
-      },
-      {
-        "ingredient": "mustard",
-        "quantity": 15,
-        "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 4,
     "flags": [],
-    "similar": [
-      {
-        "id": "salad_andine_au_fromage_c537bd",
-        "title": "Salade Andine au Fromage",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "salad_asiatique_sesame_948f03",
@@ -41997,47 +41972,49 @@
   },
   {
     "id": "bread_salmorejo_a156e9",
-    "title": "Salmorejo",
-    "cuisine": "international",
-    "dish_type": "main",
+    "title": "Salmorejo cordobés à l'œuf dur",
+    "cuisine": "spanish",
+    "dish_type": "starter",
     "vegan": false,
     "diet": [
       "high_protein",
-      "vegetarian"
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
+      "eggs",
       "gluten",
-      "sulphites",
-      "eggs"
+      "sulphites"
     ],
     "servings": 4,
-    "time_total": 143,
+    "time_total": 135,
     "confidence": 1.0,
-    "description": "Préparation de salmorejo à base de tomates mûres, avec une texture crémeuse et une saveur riche, typique de la cuisine andalouse, caractérisée par son odeur fraîche de tomates et son aspect velouté",
+    "description": "La crème froide de Cordoue : tomates mûres mixées avec pain, ail et beaucoup d'huile d'olive jusqu'à être veloutée, servie bien fraîche avec des œufs durs hachés.",
     "composition": [
       {
         "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
+        "quantity": 800,
         "unit": "g"
       },
       {
         "ingredient": "white_bread_baguette",
-        "quantity": 120,
+        "quantity": 150,
         "unit": "g"
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 9,
+        "quantity": 5,
         "unit": "g"
       },
       {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 70,
         "unit": "ml"
       },
       {
         "ingredient": "white_vinegar_liquid_distilled",
-        "quantity": 30,
+        "quantity": 10,
         "unit": "ml"
       },
       {
@@ -42047,7 +42024,7 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       },
       {
@@ -42056,79 +42033,9 @@
         "unit": "quelques feuilles"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "entry_salmorejo_vegan_d0b7f7",
-        "title": "Salmorejo (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "entry_salmorejo_vegan_d0b7f7",
-    "title": "Salmorejo (Vegan)",
-    "cuisine": "spanish",
-    "dish_type": "starter",
-    "vegan": true,
-    "diet": [
-      "diabetes_friendly",
-      "lactose_free",
-      "low_calorie",
-      "nut_free",
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [
-      "gluten",
-      "sulphites"
-    ],
-    "servings": 4,
-    "time_total": 133,
-    "confidence": 1.0,
-    "description": "Entrée espagnole typique, servie fraîche pour une fraîcheur et une vitalité intenses, composée principalement de tomates mûres, de pain rassis, d'ail et d'huile d'olive, qui ouvre le repas avec une fraîcheur et un caractère authentiques.",
-    "composition": [
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_bread_unsalted",
-        "quantity": 120,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "white_vinegar_liquid_distilled",
-        "quantity": 29.7,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "bread_salmorejo_a156e9",
-        "title": "Salmorejo",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dal_sambar_indien_fcf6d8",
@@ -43372,8 +43279,101 @@
     "similar": []
   },
   {
+    "id": "brkf_shakshuka_vegan_81fa9a",
+    "title": "Shakshuka d'aubergine au tofu soyeux et au sumac (vegan)",
+    "cuisine": "levantine",
+    "dish_type": "breakfast",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "high_protein",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "soy"
+    ],
+    "servings": 2,
+    "time_total": 50,
+    "confidence": 1.0,
+    "description": "Sauce tomate aux aubergines et poivrons fondus, épicée au cumin et au paprika fumé, avec des cuillerées de tofu soyeux au curcuma qui rappellent les œufs, relevée de sumac.",
+    "composition": [
+      {
+        "ingredient": "eggplant_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "silken_tofu_pre_packaged",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sumac",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "egg_shakshuka_eb137b",
-    "title": "Shakshuka",
+    "title": "Shakshuka tunisienne aux poivrons et à la feta",
     "cuisine": "tunisian",
     "dish_type": "main",
     "vegan": false,
@@ -43390,7 +43390,7 @@
     "servings": 4,
     "time_total": 52,
     "confidence": 1.0,
-    "description": "Ragoût tunisien de tomates — réduction concentrée pour une sauce épaisse, parfumée et riche en saveurs, avec une texture onctueuse et un arôme intense de poivron, d'oignon et de cumin.",
+    "description": "Poivrons et tomates mijotés au cumin et au paprika, œufs pochés dans la sauce et feta émiettée, à servir dans la poêle avec du pain.",
     "composition": [
       {
         "ingredient": "tomato_raw_ripe",
@@ -43450,94 +43450,7 @@
     ],
     "n_instructions": 7,
     "flags": [],
-    "similar": [
-      {
-        "id": "brkf_shakshuka_vegan_81fa9a",
-        "title": "Shakshuka (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "brkf_shakshuka_vegan_81fa9a",
-    "title": "Shakshuka (Vegan)",
-    "cuisine": "levantine",
-    "dish_type": "breakfast",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "high_protein",
-      "nut_free"
-    ],
-    "allergens": [
-      "soy"
-    ],
-    "servings": 2,
-    "time_total": 62,
-    "confidence": 1.0,
-    "description": "Shakshuka végétalienne créative, avec tomates concassées, poivron rouge, oignon jaune, servie dans une sauce méditerranéenne parfumée et crépitante, inspirée de la cuisine levantine.",
-    "composition": [
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 480,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_bell_pepper_raw",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "tofu_plain_pre_packaged",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 2.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "paprika_powder",
-        "quantity": 2.3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander_raw_fresh_herb",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 3,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 8,
-    "flags": [],
-    "similar": [
-      {
-        "id": "egg_shakshuka_eb137b",
-        "title": "Shakshuka",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "brkf_shakshuka_verte_ad7779",
@@ -44078,6 +43991,92 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "salad_andine_au_fromage_c537bd",
+    "title": "Solterito d'Arequipa au fromage frais",
+    "cuisine": "peruvian",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 30,
+    "confidence": 1.0,
+    "description": "Salade du sud du Pérou : fèves, maïs, tomate, oignon rouge, olives noires et fromage frais, relevés de piment et de citron vert.",
+    "composition": [
+      {
+        "ingredient": "broadbeans_fava_beans_boiled_fresh",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sweet_corn_on_the_cob_cooked",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_olive_canned_in_brine",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_bread_roasted",
+        "quantity": null,
+        "unit": "4 tranches"
+      }
+    ],
+    "n_instructions": 4,
     "flags": [],
     "similar": []
   },
