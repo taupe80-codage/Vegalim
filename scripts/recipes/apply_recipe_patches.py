@@ -105,6 +105,23 @@ def _has_nutrition(iid: str) -> bool:
     return n.get("calories_kcal") is not None or iid.startswith("base_")
 
 
+DIET_FLAGS = ("vegan", "vegetarian", "gluten_free", "lactose_free", "nut_free")
+
+
+def reset_diet(r: dict) -> None:
+    """Composition réécrite : régimes remis à vrai et allergènes vidés.
+
+    fix_recipe_diet_allergens.py (lancé ensuite) ne fait que rétrograder les flags et
+    ajouter les allergènes : il recalcule donc l'état exact à partir de la nouvelle
+    composition, sans garder les restrictions de l'ancienne."""
+    flags = r.setdefault("diet_flags", {})
+    for f in DIET_FLAGS:
+        flags[f] = True
+    tags = r.setdefault("tags", {})
+    tags["diet"] = [d for d in tags.get("diet") or [] if d not in DIET_FLAGS] + list(DIET_FLAGS)
+    tags["allergens"] = []
+
+
 def apply_op(r: dict, op: tuple) -> str | None:
     kind, args = op[0], op[1:]
     if kind == "ing":
@@ -277,6 +294,7 @@ def apply_op(r: dict, op: tuple) -> str | None:
             if not is_sugg(c) and not _has_nutrition(c["ingredient"]):
                 raise PatchError(f"pas de fiche nutritionnelle : {c['ingredient']}")
         r["composition"] = new
+        reset_diet(r)
         return f"composition réécrite ({len(new)} ingrédients)"
     raise PatchError(f"opération inconnue : {kind}")
 

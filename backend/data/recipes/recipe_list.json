@@ -1904,11 +1904,14 @@
     "title": "Barszcz polonais clair aux champignons",
     "cuisine": "polish",
     "dish_type": "soup",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
+      "vegan",
+      "vegetarian",
       "gluten_free",
-      "vegetarian"
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
       "celery"
@@ -1992,11 +1995,6 @@
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
         "unit": "quelques feuilles"
-      },
-      {
-        "ingredient": "cream",
-        "quantity": null,
-        "unit": "1 cuillère à soupe"
       }
     ],
     "n_instructions": 5,
@@ -3194,10 +3192,13 @@
     "vegan": false,
     "diet": [
       "diabetes_friendly",
+      "vegetarian",
       "gluten_free",
-      "vegetarian"
+      "nut_free"
     ],
     "allergens": [
+      "lactose",
+      "milk",
       "sulphites"
     ],
     "servings": 4,
@@ -3286,9 +3287,14 @@
         "unit": "g"
       },
       {
-        "ingredient": "cream",
+        "ingredient": "cream_sour_18pct",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "rye_bread",
         "quantity": null,
-        "unit": "1 cuillère à soupe"
+        "unit": "1 tranche"
       }
     ],
     "n_instructions": 6,
@@ -3909,15 +3915,14 @@
     "vegan": true,
     "diet": [
       "diabetes_friendly",
+      "vegan",
+      "vegetarian",
       "gluten_free",
       "lactose_free",
-      "nut_free",
-      "vegan",
-      "vegetarian"
+      "nut_free"
     ],
     "allergens": [
-      "sesame",
-      "soy"
+      "sesame"
     ],
     "servings": 4,
     "time_total": 45,
@@ -7519,13 +7524,13 @@
     "dish_type": "dessert",
     "vegan": true,
     "diet": [
-      "gluten_free",
       "kid_friendly",
-      "lactose_free",
       "low_calorie",
-      "nut_free",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [],
     "servings": 6,
@@ -7779,7 +7784,9 @@
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "gluten_free"
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
     ],
     "allergens": [
       "lactose",
@@ -8223,11 +8230,11 @@
     "vegan": true,
     "diet": [
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "lactose_free"
     ],
     "allergens": [
       "gluten",
-      "sulphites",
       "tree_nuts"
     ],
     "servings": 4,
@@ -8321,9 +8328,9 @@
     ],
     "allergens": [
       "gluten",
-      "tree_nuts",
       "lactose",
-      "milk"
+      "milk",
+      "tree_nuts"
     ],
     "servings": 4,
     "time_total": 90,
@@ -10217,13 +10224,13 @@
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "vegetarian"
+      "vegetarian",
+      "nut_free"
     ],
     "allergens": [
-      "celery",
       "gluten",
-      "milk",
-      "lactose"
+      "lactose",
+      "milk"
     ],
     "servings": 4,
     "time_total": 45,
@@ -10297,7 +10304,9 @@
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "diabetes_friendly"
+      "diabetes_friendly",
+      "vegetarian",
+      "nut_free"
     ],
     "allergens": [
       "gluten",
@@ -11042,10 +11051,12 @@
     "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "high_protein",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [],
     "servings": 4,
@@ -12179,7 +12190,9 @@
       "high_protein",
       "vegan",
       "vegetarian",
-      "gluten_free"
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
       "sesame"
@@ -15239,29 +15252,135 @@
     "similar": []
   },
   {
-    "id": "pasta_gnocchi_al_pesto_5bb01c",
-    "title": "Gnocchi Al Pesto",
+    "id": "pasta_gnocchis_a_la_tomate_8e1632",
+    "title": "Gnocchi alla sorrentina",
     "cuisine": "italian",
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "vegetarian"
+      "diabetes_friendly",
+      "vegetarian",
+      "nut_free"
     ],
     "allergens": [
-      "milk",
-      "tree_nuts",
       "gluten",
-      "lactose"
+      "lactose",
+      "milk"
     ],
     "servings": 4,
-    "time_total": 36,
+    "time_total": 40,
     "confidence": 1.0,
-    "description": "Pâtes italiennes à la sauce aromatique crémeuse, al dente, enrobées uniformément de pesto, avec une texture délicate et une odeur fraîche de basilic",
+    "description": "Spécialité de Sorrente : gnocchis enrobés de sauce tomate au basilic, couverts de mozzarella puis gratinés au four jusqu'à ce que le fromage file.",
     "composition": [
       {
         "ingredient": "potato_gnocchi_to_cook",
-        "quantity": 400,
+        "quantity": 500,
         "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cows_milk_mozzarella_cow",
+        "quantity": 125,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_bread_unsalted",
+        "quantity": null,
+        "unit": "1 tranche"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "pasta_gnocchi_al_pesto_vegan_954303",
+    "title": "Gnocchi au pesto de roquette et noix (vegan)",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "allergens": [
+      "gluten",
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 20,
+    "confidence": 0.85,
+    "description": "Gnocchis maison sans œuf enrobés d'un pesto vegan de roquette, basilic et cerneaux de noix, relevé à la levure nutritionnelle.",
+    "composition": [
+      {
+        "ingredient": "base_gnocchi_vegan_dd3b0e",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "arugula_raw",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "walnut_shelled_dried",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 50,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 10,
+        "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
@@ -15269,34 +15388,18 @@
         "unit": "g"
       },
       {
-        "ingredient": "base_pesto_905db7",
-        "quantity": 120,
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
         "unit": "g"
-      },
-      {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": null,
-        "unit": "1 cuillère à soupe"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 4,
     "flags": [],
-    "similar": [
-      {
-        "id": "pasta_gnocchi_pesto_classic_v2_m7k2q4",
-        "title": "Gnocchi au pesto",
-        "score": 1.0
-      },
-      {
-        "id": "pasta_gnocchi_al_pesto_vegan_954303",
-        "title": "Gnocchi au pesto crémeux",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "pasta_gnocchi_pesto_classic_v2_m7k2q4",
-    "title": "Gnocchi au pesto",
+    "title": "Gnocchi au pesto génois pilé au mortier",
     "cuisine": "italian",
     "dish_type": "main",
     "vegan": false,
@@ -15310,7 +15413,7 @@
     "servings": 4,
     "time_total": 45,
     "confidence": 1.0,
-    "description": "Gnocchi cuits à la perfection, servis avec une sauce pesto crémeuse et parfumée, réalisée avec du basilic frais et du parmesan, offrant une texture homogène et une saveur intense, typique de la cuisine italienne",
+    "description": "Pesto alla genovese préparé au mortier : basilic frais, pignons, ail, parmesan et huile d'olive pilés jusqu'à obtenir une crème verte, qui enrobe des gnocchis de pomme de terre.",
     "composition": [
       {
         "ingredient": "potato_gnocchi_to_cook",
@@ -15355,40 +15458,36 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "pasta_gnocchi_al_pesto_5bb01c",
-        "title": "Gnocchi Al Pesto",
-        "score": 1.0
-      },
-      {
-        "id": "pasta_gnocchi_al_pesto_vegan_954303",
-        "title": "Gnocchi au pesto crémeux",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
-    "id": "pasta_gnocchi_al_pesto_vegan_954303",
-    "title": "Gnocchi au pesto crémeux",
+    "id": "pasta_gnocchi_al_pesto_5bb01c",
+    "title": "Gnocchi au pesto, haricots verts et pommes de terre",
     "cuisine": "italian",
     "dish_type": "main",
     "vegan": false,
-    "diet": [],
+    "diet": [
+      "vegetarian"
+    ],
     "allergens": [
-      "lactose",
       "gluten",
+      "lactose",
       "milk",
       "tree_nuts"
     ],
     "servings": 4,
-    "time_total": 36,
-    "confidence": 0.85,
-    "description": "Gnocchis végans cuites dans une eau bouillante salée, servies avec une sauce pesto crémeuse et parfumée, relevée de levure nutritionnelle pour un goût umami intense, typique de la cuisine italienne.",
+    "time_total": 20,
+    "confidence": 1.0,
+    "description": "Comme les trofie de Gênes, des gnocchis cuits avec des haricots verts, enrobés de pesto maison et servis avec du parmesan.",
     "composition": [
       {
-        "ingredient": "base_gnocchi_vegan_dd3b0e",
+        "ingredient": "potato_gnocchi_to_cook",
         "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "french_bean_raw",
+        "quantity": 250,
         "unit": "g"
       },
       {
@@ -15397,40 +15496,85 @@
         "unit": "g"
       },
       {
-        "ingredient": "nutritional_yeast_flakes",
-        "quantity": 20,
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": null,
+        "unit": "1 cuillère à soupe"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "main_gnocchi_f17041",
+    "title": "Gnocchi maison au beurre et à la sauge",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 80,
+    "confidence": 0.93,
+    "description": "Gnocchis de pomme de terre roulés à la main, pochés puis enrobés de beurre noisette à la sauge et de parmesan, à la vénitienne.",
+    "composition": [
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 800,
         "unit": "g"
       },
       {
-        "ingredient": "olive_oil_plant",
-        "quantity": 20,
-        "unit": "ml"
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sage_fresh_herb",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": 30,
+        "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 2,
+        "quantity": 5,
         "unit": "g"
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
+        "quantity": 1,
         "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "pasta_gnocchi_al_pesto_5bb01c",
-        "title": "Gnocchi Al Pesto",
-        "score": 0.67
       },
       {
-        "id": "pasta_gnocchi_pesto_classic_v2_m7k2q4",
-        "title": "Gnocchi au pesto",
-        "score": 0.67
+        "ingredient": "tomato_sauce_salted_canned",
+        "quantity": null,
+        "unit": "une cuillère à soupe"
       }
-    ]
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
   },
   {
     "id": "base_gnocchi_vegan_dd3b0e",
@@ -15472,54 +15616,6 @@
       }
     ],
     "n_instructions": 7,
-    "flags": [],
-    "similar": []
-  },
-  {
-    "id": "main_gnocchi_f17041",
-    "title": "Gnocchis",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "vegetarian"
-    ],
-    "allergens": [
-      "gluten",
-      "eggs"
-    ],
-    "servings": 4,
-    "time_total": 80,
-    "confidence": 0.93,
-    "description": "Boulettes italiennes de pomme de terre et farine, moelleuses et légèrement fermes.",
-    "composition": [
-      {
-        "ingredient": "potato_raw_flesh",
-        "quantity": 800,
-        "unit": "g"
-      },
-      {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "egg_raw",
-        "quantity": 50,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_sauce_salted_canned",
-        "quantity": null,
-        "unit": "une cuillère à soupe"
-      }
-    ],
-    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -15572,71 +15668,14 @@
     "similar": []
   },
   {
-    "id": "pasta_gnocchis_a_la_tomate_8e1632",
-    "title": "Gnocchis à la Tomate",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "vegetarian"
-    ],
-    "allergens": [
-      "gluten"
-    ],
-    "servings": 4,
-    "time_total": 48,
-    "confidence": 1.0,
-    "description": "Gnocchis à la sauce tomate, moelleux et enrobés d'une sauce onctueuse et parfumée, issue de la tradition italienne, avec une texture tendre et une saveur riche",
-    "composition": [
-      {
-        "ingredient": "potato_gnocchi_to_cook",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 20,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "white_bread_unsalted",
-        "quantity": null,
-        "unit": "1 tranche"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "pasta_gnocchis_a_la_tomate_vega_ca281e",
-        "title": "Gnocchis à la Tomate (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "pasta_gnocchis_a_la_tomate_vega_ca281e",
-    "title": "Gnocchis à la Tomate (Vegan)",
+    "title": "Gnocchis poêlés aux tomates cerises et basilic (vegan)",
     "cuisine": "italian",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
+      "vegan",
+      "vegetarian",
       "lactose_free",
       "nut_free"
     ],
@@ -15644,9 +15683,9 @@
       "gluten"
     ],
     "servings": 4,
-    "time_total": 48,
+    "time_total": 25,
     "confidence": 0.85,
-    "description": "Gnocchis à la tomate, sauce onctueuse et saveurs italiennes, avec une texture moelleuse et une couleur rouge intense, préparés avec soin à la manière traditionnelle italienne.",
+    "description": "Gnocchis maison vegan dorés à la poêle, puis sautés avec des tomates cerises éclatées, de l'ail et du basilic, saupoudrés de levure nutritionnelle.",
     "composition": [
       {
         "ingredient": "base_gnocchi_vegan_dd3b0e",
@@ -15654,13 +15693,13 @@
         "unit": "g"
       },
       {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
+        "ingredient": "cherry_tomato_raw",
+        "quantity": 400,
         "unit": "g"
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 15,
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -15670,29 +15709,23 @@
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 46.2,
+        "quantity": 35,
         "unit": "ml"
       },
       {
         "ingredient": "nutritional_yeast_flakes",
-        "quantity": 20,
+        "quantity": 15,
         "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 4,
     "flags": [],
-    "similar": [
-      {
-        "id": "pasta_gnocchis_a_la_tomate_8e1632",
-        "title": "Gnocchis à la Tomate",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "base_gochujang_41da6e",
@@ -17617,9 +17650,12 @@
     "title": "Hachis de lentilles à la patate douce (vegan)",
     "cuisine": "british",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
+      "vegan",
+      "vegetarian",
+      "lactose_free",
       "nut_free"
     ],
     "allergens": [
@@ -18432,7 +18468,9 @@
       "diabetes_friendly",
       "high_protein",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
       "celery",
@@ -19696,14 +19734,13 @@
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "vegetarian"
+      "vegetarian",
+      "nut_free"
     ],
     "allergens": [
-      "celery",
       "gluten",
-      "milk",
       "lactose",
-      "sesame"
+      "milk"
     ],
     "servings": 4,
     "time_total": 70,
@@ -20798,7 +20835,9 @@
     "diet": [
       "high_protein",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
       "gluten",
@@ -20887,7 +20926,9 @@
     "vegan": true,
     "diet": [
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
       "gluten",
@@ -20980,9 +21021,11 @@
     "dish_type": "main",
     "vegan": true,
     "diet": [
-      "gluten_free",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
       "sulphites"
@@ -22855,12 +22898,12 @@
     "vegan": true,
     "diet": [
       "diabetes_friendly",
+      "low_calorie",
+      "vegan",
+      "vegetarian",
       "gluten_free",
       "lactose_free",
-      "low_calorie",
-      "nut_free",
-      "vegan",
-      "vegetarian"
+      "nut_free"
     ],
     "allergens": [
       "mustard"
@@ -24607,7 +24650,9 @@
     "vegan": true,
     "diet": [
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
       "gluten"
@@ -28600,15 +28645,17 @@
     "title": "Parippu sri lankais au lait de coco",
     "cuisine": "sri_lankan",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "high_protein",
-      "vegetarian"
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
-      "celery",
       "mustard"
     ],
     "servings": 4,
@@ -30407,38 +30454,28 @@
   },
   {
     "id": "dumpling_pierogi_aux_champignons_d86017",
-    "title": "Pierogi aux Champignons",
+    "title": "Pierogi aux champignons et à la crème aigre",
     "cuisine": "polish",
     "dish_type": "main",
     "vegan": false,
-    "diet": [],
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
     "allergens": [
       "eggs",
-      "gluten"
+      "gluten",
+      "lactose",
+      "milk"
     ],
     "servings": 4,
-    "time_total": 33,
+    "time_total": 105,
     "confidence": 1.0,
-    "description": "Pierogi aux champignons, pâte légère et croustillante, farce parfumée de gingembre et d'ail, cuisson poêle pour un extérieur doré et un cœur tendre, typique de la cuisine polonaise.",
+    "description": "Pierogi à la pâte aux œufs, farcis de champignons et d'oignons revenus à la marjolaine, servis dorés au beurre avec de la crème aigre.",
     "composition": [
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
         "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "button_mushroom_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 6,
         "unit": "g"
       },
       {
@@ -30447,75 +30484,13 @@
         "unit": "g"
       },
       {
-        "ingredient": "canola",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "ginger_raw_root_fresh",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": null,
-        "unit": "quelques feuilles"
-      },
-      {
-        "ingredient": "sour_cream_fermented_18pct",
-        "quantity": null,
-        "unit": "2 cuillères à soupe"
-      },
-      {
         "ingredient": "water",
-        "quantity": 120,
+        "quantity": 110,
         "unit": "ml"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dumpling_pierogi_aux_champignons_v_beca85",
-        "title": "Pierogi aux Champignons (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "dumpling_pierogi_aux_champignons_v_beca85",
-    "title": "Pierogi aux Champignons (Vegan)",
-    "cuisine": "polish",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "kid_friendly",
-      "lactose_free",
-      "nut_free"
-    ],
-    "allergens": [
-      "gluten",
-      "soy"
-    ],
-    "servings": 4,
-    "time_total": 38,
-    "confidence": 1.0,
-    "description": "Pâtes fraîches tendres, garnies d'un mélange de champignons sautés et de tofu, cuites à la vapeur puis dorées à la poêle, offrant une texture délicate et une saveur umami, typique de la cuisine polonaise.",
-    "composition": [
-      {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 300,
-        "unit": "g"
       },
       {
         "ingredient": "button_mushroom_raw",
-        "quantity": 300,
+        "quantity": 400,
         "unit": "g"
       },
       {
@@ -30525,66 +30500,69 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 10,
+        "quantity": 6,
         "unit": "g"
       },
       {
-        "ingredient": "tofu_plain_pre_packaged",
-        "quantity": 100,
+        "ingredient": "breadcrumbs_dried",
+        "quantity": 20,
         "unit": "g"
       },
       {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 60,
+        "ingredient": "marjoram_spice_dried",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "canola",
+        "quantity": 15,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 4,
         "unit": "g"
       },
       {
-        "ingredient": "ginger_raw_root_fresh",
-        "quantity": 15,
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
         "unit": "g"
       },
       {
-        "ingredient": "green_salad_raw_plain",
+        "ingredient": "sour_cream_fermented_18pct",
         "quantity": null,
-        "unit": "une portion"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 120,
-        "unit": "ml"
+        "unit": "2 cuillères à soupe"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "dumpling_pierogi_aux_champignons_d86017",
-        "title": "Pierogi aux Champignons",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
-    "id": "pasta_pierogi_aux_pommes_de_6b3efe",
-    "title": "Pierogi aux pommes de terre",
+    "id": "dumpling_pierogi_aux_pommes_de_ter_24a890",
+    "title": "Pierogi aux pommes de terre et à l'aneth (vegan)",
     "cuisine": "polish",
     "dish_type": "main",
-    "vegan": false,
-    "diet": [],
+    "vegan": true,
+    "diet": [
+      "high_protein",
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
     "allergens": [
-      "gluten",
-      "lactose",
-      "milk"
+      "gluten"
     ],
     "servings": 4,
-    "time_total": 95,
+    "time_total": 110,
     "confidence": 1.0,
-    "description": "Ravioles polonaises farcies aux pommes de terre — pâte souple au repos contrôlé, farce pomme de terre-oignon fondante, cuisson eau puis poêlée à l'beurre pour la coloration finale.",
+    "description": "Pâte à l'huile sans œuf, farce de pommes de terre écrasées aux oignons caramélisés, à l'aneth et à la muscade, pierogi dorés à la poêle.",
     "composition": [
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
@@ -30597,70 +30575,9 @@
         "unit": "ml"
       },
       {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 6,
-        "unit": "g"
-      },
-      {
-        "ingredient": "potato_raw_flesh",
-        "quantity": 500,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "butter_sup80pct",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dumpling_pierogi_aux_pommes_de_ter_24a890",
-        "title": "Pierogi aux Pommes de Terre (Vegan)",
-        "score": 1.0
-      },
-      {
-        "id": "dumpling_pierogi_pommes_de_terre_ca9985",
-        "title": "Pierogi Pommes de Terre",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "dumpling_pierogi_aux_pommes_de_ter_24a890",
-    "title": "Pierogi aux Pommes de Terre (Vegan)",
-    "cuisine": "polish",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "high_protein",
-      "lactose_free",
-      "nut_free"
-    ],
-    "allergens": [
-      "gluten",
-      "soy"
-    ],
-    "servings": 4,
-    "time_total": 25,
-    "confidence": 1.0,
-    "description": "Pâtes tendres aux pommes de terre, croustillantes à l'extérieur et crémeuses à l'intérieur, relevées par la saveur délicate du tofu soyeux, typiques de la cuisine polonaise avec une texture homogène et une odeur appétissante",
-    "composition": [
-      {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
-        "unit": "g"
+        "ingredient": "olive_oil_plant",
+        "quantity": 45,
+        "unit": "ml"
       },
       {
         "ingredient": "potato_raw_flesh",
@@ -30668,34 +30585,14 @@
         "unit": "g"
       },
       {
-        "ingredient": "silken_tofu_pre_packaged",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
         "ingredient": "onion_raw",
-        "quantity": 150,
+        "quantity": 200,
         "unit": "g"
       },
       {
-        "ingredient": "olive_oil_plant",
-        "quantity": 80,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "ingredient": "dill_weed_fresh_herb_leaf",
+        "quantity": 10,
         "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coconut_milk_plant",
-        "quantity": null,
-        "unit": "2 cuillères à soupe"
       },
       {
         "ingredient": "nutmeg_spice",
@@ -30703,33 +30600,197 @@
         "unit": "g"
       },
       {
-        "ingredient": "water",
-        "quantity": 100,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "pasta_pierogi_aux_pommes_de_6b3efe",
-        "title": "Pierogi aux pommes de terre",
-        "score": 1.0
+        "ingredient": "vegan_butter",
+        "quantity": 20,
+        "unit": "g"
       },
       {
-        "id": "dumpling_pierogi_pommes_de_terre_ca9985",
-        "title": "Pierogi Pommes de Terre",
-        "score": 1.0
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_milk_plant",
+        "quantity": null,
+        "unit": "2 cuillères à soupe"
       }
-    ]
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
   },
   {
-    "id": "dumpling_pierogi_pommes_de_terre_ca9985",
-    "title": "Pierogi Pommes de Terre",
+    "id": "pasta_pierogi_aux_pommes_de_6b3efe",
+    "title": "Pierogi de Lublin au sarrasin et pommes de terre",
     "cuisine": "polish",
     "dish_type": "main",
     "vegan": false,
-    "diet": [],
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 110,
+    "confidence": 1.0,
+    "description": "Spécialité de la région de Lublin : pierogi farcis de kasza (gruau de sarrasin grillé), de pommes de terre et d'oignons, à la saveur de noisette, puis dorés à la poêle.",
+    "composition": [
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "buckwheat_groats_roasted_dried_dry",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "marjoram_spice_dried",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "dumpling_pierogi_aux_champignons_v_beca85",
+    "title": "Pierogi du réveillon, choucroute et champignons (vegan)",
+    "cuisine": "polish",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "kid_friendly",
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 115,
+    "confidence": 1.0,
+    "description": "Pierogi de Wigilia, le repas maigre de Noël polonais : farce de choucroute et de champignons revenus à l'oignon, pâte à l'huile sans œuf.",
+    "composition": [
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sauerkraut_canned_low_sodium",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "button_mushroom_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "porcini_mushroom_raw",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "bay_leaf",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "allspice_powder",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_salad_raw_plain",
+        "quantity": null,
+        "unit": "une portion"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "dumpling_pierogi_pommes_de_terre_ca9985",
+    "title": "Pierogi ruskie, pommes de terre et fromage blanc",
+    "cuisine": "polish",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
     "allergens": [
       "eggs",
       "gluten",
@@ -30737,33 +30798,38 @@
       "milk"
     ],
     "servings": 4,
-    "time_total": 23,
+    "time_total": 110,
     "confidence": 1.0,
-    "description": "Pierogi aux pommes de terre cuites, crémeux et dorés, avec une texture fondante à l'intérieur et croustillante à l'extérieur, inspirés de la cuisine polonaise traditionnelle",
+    "description": "Les pierogi les plus populaires de Pologne : farce de pommes de terre, twaróg (fromage blanc) et oignons dorés au beurre, pochés puis servis nappés d'oignons fondants.",
     "composition": [
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "potato_boiled_with_skin",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "fromage_blanc_plain_2_5pct_cow",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
+        "quantity": 300,
         "unit": "g"
       },
       {
         "ingredient": "egg_raw",
         "quantity": 55,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 110,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "fromage_blanc_plain_2_5pct_cow",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -30777,25 +30843,14 @@
         "unit": "g"
       },
       {
-        "ingredient": "water",
-        "quantity": 80,
-        "unit": "ml"
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "pasta_pierogi_aux_pommes_de_6b3efe",
-        "title": "Pierogi aux pommes de terre",
-        "score": 1.0
-      },
-      {
-        "id": "dumpling_pierogi_aux_pommes_de_ter_24a890",
-        "title": "Pierogi aux Pommes de Terre (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "main_piperade_basque_3e1c65",
@@ -41599,9 +41654,11 @@
     "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
       "mustard"
@@ -41694,9 +41751,11 @@
     "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
       "mustard"
@@ -43093,14 +43152,17 @@
     "title": "Shepherd's pie vegan aux champignons, purée au céleri-rave",
     "cuisine": "british",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free",
       "nut_free"
     ],
     "allergens": [
-      "soy",
       "celery",
-      "gluten"
+      "gluten",
+      "soy"
     ],
     "servings": 4,
     "time_total": 75,
@@ -46877,10 +46939,12 @@
     "dish_type": "main",
     "vegan": true,
     "diet": [
-      "gluten_free",
       "high_protein",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
       "sesame"
@@ -46952,25 +47016,25 @@
   },
   {
     "id": "side_tabbouleh_de_sarrasin_7e68ad",
-    "title": "Tabbouleh de Sarrasin",
-    "cuisine": "international",
+    "title": "Taboulé de sarrasin au concombre",
+    "cuisine": "levantine",
     "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "kid_friendly",
-      "lactose_free",
       "low_calorie",
-      "nut_free",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 30,
+    "time_total": 27,
     "confidence": 0.9,
-    "description": "Salade fraîche et parfumée, préparée avec du sarrasin cuit, des herbes fraîches comme le persil et la menthe, des tomates cerises et des concombres, le tout assaisonné d'une vinaigrette légère à base d'huile d'olive et de jus de citron.",
+    "description": "Variante sans gluten : grains de sarrasin cuits, concombre, tomates cerises, persil et menthe, dans une vinaigrette citronnée.",
     "composition": [
       {
         "ingredient": "buckwheat_raw_whole_seed",
@@ -46989,12 +47053,12 @@
       },
       {
         "ingredient": "cherry_tomato_raw",
-        "quantity": 150,
+        "quantity": 250,
         "unit": "g"
       },
       {
         "ingredient": "cucumber_raw_with_skin",
-        "quantity": 175.0,
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -47004,7 +47068,7 @@
       },
       {
         "ingredient": "lemon_juice",
-        "quantity": 60,
+        "quantity": 50,
         "unit": "ml"
       },
       {
@@ -47014,16 +47078,11 @@
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 240,
+        "quantity": 1,
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 4,
     "flags": [],
     "similar": []
   },
@@ -47044,7 +47103,7 @@
     "servings": 4,
     "time_total": 40,
     "confidence": 0.999,
-    "description": "Salade libanaise traditionnelle, où le persil ciselé finement se marie avec la fraîcheur de la menthe et la douceur des tomates, relevée par l'acidité du citron et l'onctuosité de l'huile d'olive, sur fond de boulgour croquant.",
+    "description": "Le taboulé des montagnes libanaises : une salade de persil ciselé au couteau, à peine de boulgour, tomates, oignon et menthe, assaisonnée de citron et d'huile d'olive.",
     "composition": [
       {
         "ingredient": "parsley_fresh_herb",
@@ -47089,28 +47148,22 @@
     ],
     "n_instructions": 9,
     "flags": [],
-    "similar": [
-      {
-        "id": "entry_taboule_libanais_a_la_gre_cae147",
-        "title": "Taboulé Libanais à la Grenade",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "entry_taboule_libanais_a_la_gre_cae147",
-    "title": "Taboulé Libanais à la Grenade",
+    "title": "Taboulé libanais à la grenade et au sumac",
     "cuisine": "lebanese",
     "dish_type": "starter",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
       "kid_friendly",
-      "lactose_free",
       "low_calorie",
-      "nut_free",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
       "gluten"
@@ -47118,7 +47171,7 @@
     "servings": 4,
     "time_total": 30,
     "confidence": 0.9,
-    "description": "Entrée lebanese typique, préparée selon la tradition. Composée principalement de persil, menthe, boulgour, elle ouvre le repas avec fraîcheur et caractère.",
+    "description": "Taboulé d'herbes à la libanaise, persil et menthe dominants, relevé de sumac et parsemé de grains de grenade pour une note acidulée et croquante.",
     "composition": [
       {
         "ingredient": "parsley_fresh_herb",
@@ -47142,39 +47195,38 @@
       },
       {
         "ingredient": "lemon_juice",
-        "quantity": 72.8,
+        "quantity": 60,
         "unit": "ml"
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
+        "quantity": 45,
         "unit": "ml"
       },
       {
         "ingredient": "pomegranate_raw",
-        "quantity": 60,
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sumac",
+        "quantity": 2,
         "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 4,
+        "quantity": 3,
         "unit": "g"
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
+        "quantity": 1,
         "unit": "g"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 4,
     "flags": [],
-    "similar": [
-      {
-        "id": "salad_tabbouleh_f7x2p9",
-        "title": "Taboulé libanais traditionnel",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "bread_tacos_6fd5c2",
@@ -48976,78 +49028,9 @@
     "similar": []
   },
   {
-    "id": "main_tian_provencal_4c7999",
-    "title": "Tian Provençal",
-    "cuisine": "international",
-    "dish_type": "main",
-    "vegan": true,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 63,
-    "confidence": 1.0,
-    "description": "Tian provençal cuit au four, avec des légumes tendres et une surface caramélisée, parfumé par le thym frais et les herbes de Provence, dans une présentation visuelle colorée.",
-    "composition": [
-      {
-        "ingredient": "green_zucchini_squash_raw",
-        "quantity": 500,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "eggplant_raw",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 9,
-        "unit": "g"
-      },
-      {
-        "ingredient": "thyme_fresh_herb",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "side_tian_provencal_vegan_886a6d",
-        "title": "Tian Provençal Vegan",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "side_tian_provencal_vegan_886a6d",
-    "title": "Tian Provençal Vegan",
-    "cuisine": "french",
+    "title": "Tian niçois aux pommes de terre et au romarin (vegan)",
+    "cuisine": "french_provencal",
     "dish_type": "side",
     "vegan": true,
     "diet": [
@@ -49063,7 +49046,7 @@
     "servings": 4,
     "time_total": 75,
     "confidence": 0.9,
-    "description": "Accompagnement français provençal, où les courgettes, tomates, aubergines et pommes de terre fondent en bouche après une cuisson lente, avec une texture tendre et une saveur méditerranéenne.",
+    "description": "Accompagnement vegan cuit lentement : pommes de terre, courgettes, aubergines et tomates en lamelles, arrosés d'huile d'olive, parfumés au romarin et au thym.",
     "composition": [
       {
         "ingredient": "green_zucchini_squash_raw",
@@ -49123,13 +49106,88 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
+    "similar": []
+  },
+  {
+    "id": "main_tian_provencal_4c7999",
+    "title": "Tian provençal gratiné au chèvre",
+    "cuisine": "french_provencal",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 75,
+    "confidence": 1.0,
+    "description": "Tian en plat complet : rosaces de courgettes, aubergines et tomates sur un lit d'oignons fondus, gratinées au chèvre et à la chapelure parfumée au thym.",
+    "composition": [
       {
-        "id": "main_tian_provencal_4c7999",
-        "title": "Tian Provençal",
-        "score": 1.0
+        "ingredient": "green_zucchini_squash_raw",
+        "quantity": 450,
+        "unit": "g"
+      },
+      {
+        "ingredient": "eggplant_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "goat_cheese_log",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "breadcrumbs_dried",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "thyme_fresh_herb",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
       }
-    ]
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
   },
   {
     "id": "dessert_tiramisu_classique_ea8ddb",

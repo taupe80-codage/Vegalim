@@ -206,7 +206,8 @@ VARIANTS = {
             ("water", 1400, "ml", "base"),
             ("black_pepper_spice", 1, "g", "seasoning"),
             ("dill_weed_fresh_herb_leaf", 10, "g", "garnish"),
-            ("cream", None, "1 cuillère à soupe", "serving_suggestion"),
+            ("cream_sour_18pct", 80, "g", "garnish"),
+            ("rye_bread", None, "1 tranche", "serving_suggestion"),
         ]),
         ("steps", [
             "Porter à ébullition 1,4 L d'eau avec 10 g de bouillon déshydraté et 1 g de laurier. Ajouter 250 g de pommes de terre en cubes et cuire 10 minutes.",
@@ -214,7 +215,7 @@ VARIANTS = {
             "Ajouter 400 g de betterave crue en julienne, 30 g de concentré de tomate, 20 ml de vinaigre et 5 g de sucre, puis étuver 10 minutes à couvert : le vinaigre fixe la couleur.",
             "Ajouter 250 g de chou émincé dans le bouillon et cuire 5 minutes, puis y verser la betterave et 240 g de haricots rouges. Mijoter 10 minutes.",
             "Hors du feu, ajouter 15 g d'ail pilé et 1 g de poivre, couvrir et laisser reposer 10 minutes.",
-            "Servir parsemé de 10 g d'aneth ciselé, avec une cuillerée de crème aigre.",
+            "Servir parsemé de 10 g d'aneth ciselé, avec 20 g de crème aigre par bol.",
         ]),
         ("time", 25, 10, 40),
     ],
@@ -237,6 +238,7 @@ VARIANTS = {
             ("lemon_juice", 40, "ml", "acidifier"),
             ("white_sugar", 5, "g", "balance"),
             ("black_pepper_spice", 1, "g", "spice"),
+            ("parsley_fresh_herb", None, "quelques feuilles", "serving_suggestion"),
         ]),
         ("steps", [
             "Mettre dans une grande casserole 150 g de carotte, 100 g de céleri-rave et 100 g d'oignon coupés en gros morceaux, 100 g de cèpes émincés, 1 g de laurier, 1 g de piment de la Jamaïque, 10 g de bouillon déshydraté et 1,5 L d'eau. Mijoter 30 minutes.",
