@@ -127,7 +127,7 @@ VARIANTS = {
     # ── Enfrijoladas d'Oaxaca / enmoladas vegan aux légumes rôtis ──
     "bread_mexican_enfrijoladas_578ae7": [
         ("title", "Enfrijoladas d'Oaxaca au queso fresco"),
-        ("desc", "Tortillas repliées et nappées d'une sauce veloutée de haricots noirs à l'avocatier et au piment, "
+        ("desc", "Tortillas repliées et nappées d'une sauce veloutée de haricots noirs au piment ancho et au laurier, "
                  "garnies de queso fresco, d'oignon rouge et de coriandre."),
         ("origin", {"region": "oaxaca", "city": "oaxaca"}),
         ("compo", [
