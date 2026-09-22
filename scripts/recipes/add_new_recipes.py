@@ -61,13 +61,18 @@ GENERIC = {"riz", "sauce", "salade", "soupe", "legumes", "legume", "maison", "ve
            "traditionnel", "traditionnelle", "classique", "poele", "poelee", "four", "beurre", "huile",
            "tomate", "tomates", "oignon", "oignons", "pommes", "terre", "epices", "epice", "epicee",
            "fromage", "citron", "coco", "curry", "sautee", "saute", "sautes", "sautees", "petits",
-           "haricots", "lentilles", "pois", "chiches", "champignons", "aubergine", "aubergines"}
+           "haricots", "lentilles", "pois", "chiches", "champignons", "aubergine", "aubergines",
+           "mangue", "banane", "bananes", "avocat", "chocolat", "pomme", "poire", "gluant",
+           "vapeur", "frais", "fraiche", "fraiches", "herbes", "tofu", "vermicelles", "nouilles",
+           "citronnelle", "gingembre", "coriandre", "menthe", "basilic", "cacahuetes", "sesame",
+           "tempeh", "seitan", "quinoa", "boulgour", "sarrasin", "polenta", "semoule",
+           "legumes", "vietnamien", "vietnamienne", "indonesiennes", "malaisien", "thaie", "thai"}
 
 
 def _title_tokens(title: str) -> set[str]:
     import re, unicodedata
     t = unicodedata.normalize("NFKD", title.lower().replace("œ", "oe")).encode("ascii", "ignore").decode()
-    return {w for w in re.split(r"[^a-z]+", t) if len(w) >= 4 and w not in GENERIC}
+    return {w for w in re.split(r"[^a-z]+", t) if len(w) >= 3 and w not in GENERIC}
 
 
 def check(new: list[dict], existing: list[dict]) -> None:
@@ -91,9 +96,10 @@ def check(new: list[dict], existing: list[dict]) -> None:
             raise RecipeError(f"{r['id']} : titre déjà utilisé « {r['titles']['fr']} »")
         # seulement le nom du plat (avant la première virgule) : les ingrédients cités ensuite
         # sont partagés par beaucoup de recettes
-        for tok in sorted(_title_tokens(r["titles"]["fr"].split(",")[0])):
+        allowed = set(r.get("_allow_similar") or ())
+        for tok in sorted(_title_tokens(r["titles"]["fr"].split(",")[0]) - allowed):
             hits = index.get(tok, [])
-            if hits and len(hits) <= 3:
+            if hits and len(hits) <= 2:
                 raise RecipeError(f"{r['id']} « {r['titles']['fr']} » : le mot « {tok} » figure déjà "
                                   f"dans {hits} — plat probablement déjà présent")
         for c in r["composition"]:
@@ -121,7 +127,7 @@ def main() -> int:
     have = {r["id"] for r in recipes}
     added = [r for r in new if r["id"] not in have]
     for r in added:
-        recipes.append(r)
+        recipes.append({k: v for k, v in r.items() if not k.startswith("_")})
     print(f"{len(new)} recettes dans les lots, {len(added)} ajoutée(s)"
           + (" (dry-run)" if args.dry_run else ""))
     for r in added:

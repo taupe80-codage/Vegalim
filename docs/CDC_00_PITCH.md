@@ -31,7 +31,7 @@ Les végétariens manquent d'un outil qui combine trois choses à la fois :
 Une plateforme qui pense **végétarien en premier** (pas "omnivore avec filtre"),
 avec :
 
-- **748 recettes** de 96 cuisines mondiales, authentiques et culturellement
+- **763 recettes** de 96 cuisines mondiales, authentiques et culturellement
   sourcées — objectif 10 000+
 - **Nutrition CIQUAL** complète : micronutriments, AJR, formes d'ingrédients,
   indicateur de fiabilité visible
@@ -87,7 +87,7 @@ francophones, attentifs à leur santé et à l'environnement.
 
 - **102 engines Python** opérationnels (scoring, nutrition, recherche, planification)
 - **101 routes FastAPI** documentées
-- **100% couverture nutritionnelle** (CIQUAL/CNF/USDA) sur 748 recettes
+- **100% couverture nutritionnelle** (CIQUAL/CNF/USDA) sur 763 recettes
 - **Tests automatisés** : 21 tests, 0 bug bloquant
 - **Stack** : Python/FastAPI (backend) → Next.js/React (frontend à construire)
 

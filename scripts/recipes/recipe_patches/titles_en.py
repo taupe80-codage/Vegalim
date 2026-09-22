@@ -204,4 +204,5 @@ TITLES_EN = {
     "main_fried_rice_a6e811": "Dan Chao Fan, Egg and Scallion Fried Rice",
     "base_fried_rice_f230b0": "Cantonese Fried Rice with Peas and Carrots",
     "base_curry_paste_49c97f": "Fresh Red Chili Curry Paste",
+    "soup_tom_kha_cee413": "Tom Kha, Thai Coconut Mushroom Soup",
 }

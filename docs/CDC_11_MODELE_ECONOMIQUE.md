@@ -87,7 +87,7 @@ ses propres clés d'accès et sa propre grille tarifaire.
 ### Fonctionnalités API différenciantes
 - Moteur de recommandation végétarien prêt à l'emploi
 - Scoring nutritionnel adaptatif (6+ profils santé)
-- 748 recettes mondiales documentées (extensible à 10 000+)
+- 763 recettes mondiales documentées (extensible à 10 000+)
 - Détection de carences et recettes correctrices
 - Adaptation cycle féminin
 - Moteur de substitution (261 ingrédients couverts)
