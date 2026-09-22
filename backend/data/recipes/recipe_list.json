@@ -246,6 +246,96 @@
     "similar": []
   },
   {
+    "id": "soup_ajiaco_legumes_8e40b6",
+    "title": "Ajiaco de légumes aux trois pommes de terre",
+    "cuisine": "colombian",
+    "dish_type": "soup",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 65,
+    "confidence": 0.9,
+    "description": "Soupe épaisse de Bogotá : trois sortes de pommes de terre dont une se défait pour lier le bouillon, maïs en épis, coriandre et câpres, servie avec de la crème et de l'avocat.",
+    "composition": [
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_raw_with_skin",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sweet_corn_on_the_cob_cooked",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "capers_canned_in_vinegar",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sour_cream_fermented_18pct",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "avocado_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1400,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "entry_salmorejo_vegan_d0b7f7",
     "title": "Ajo blanco de Málaga aux amandes et au raisin (vegan)",
     "cuisine": "spanish",
@@ -5857,6 +5947,72 @@
     ]
   },
   {
+    "id": "brkf_cachapa_fromage_4a2c85",
+    "title": "Cachapa au fromage frais",
+    "cuisine": "latin_american",
+    "dish_type": "breakfast",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 30,
+    "confidence": 0.9,
+    "description": "Crêpe épaisse de maïs frais vénézuélienne, légèrement sucrée, pliée sur du fromage frais qui fond à la chaleur.",
+    "composition": [
+      {
+        "ingredient": "sweet_corn_raw_fresh",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "corn_flour_seed",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "milk_liquid_uht_3_5pct",
+        "quantity": 80,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": [
+      {
+        "id": "base_cream_cheese_c6e3b6",
+        "title": "Fromage Frais (Cream Cheese)",
+        "score": 0.67
+      }
+    ]
+  },
+  {
     "id": "pasta_cacio_e_pepe_8f3417",
     "title": "Cacio e pepe",
     "cuisine": "italian",
@@ -6652,6 +6808,87 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "entry_causa_limena_9c61b8",
+    "title": "Causa limeña à l'avocat",
+    "cuisine": "peruvian",
+    "dish_type": "starter",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "mustard"
+    ],
+    "servings": 4,
+    "time_total": 110,
+    "confidence": 0.9,
+    "description": "Entrée péruvienne montée en couches : purée de pommes de terre au citron et au piment jaune, garniture d'avocat et de tomate, servie bien fraîche.",
+    "composition": [
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "avocado_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_mayonnaise_0d3e4e",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
+        "quantity": 50,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "red_onion_raw",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -7644,6 +7881,72 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "sauce_chimichurri_2e64f8",
+    "title": "Chimichurri",
+    "cuisine": "argentinian",
+    "dish_type": "sauce",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "sulphites"
+    ],
+    "servings": 8,
+    "time_total": 70,
+    "confidence": 0.9,
+    "description": "La sauce crue des grillades argentines : persil, ail et origan hachés, vinaigre de vin rouge, huile et piment, laissée reposer pour que les saveurs se lient.",
+    "composition": [
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oregano_spice_dried",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_hot_chili_pepper_spice_dried",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_wine_vinegar_liquid",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 4,
     "flags": [],
     "similar": []
   },
@@ -13070,6 +13373,78 @@
     "similar": []
   },
   {
+    "id": "snack_esquites_7b40e6",
+    "title": "Esquites, maïs à la mexicaine en gobelet",
+    "cuisine": "mexican",
+    "dish_type": "snack",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "lactose",
+      "milk",
+      "mustard"
+    ],
+    "servings": 4,
+    "time_total": 22,
+    "confidence": 0.9,
+    "description": "Le maïs de rue mexicain servi à la cuillère : grains sautés au beurre avec de l'épazote, mêlés de mayonnaise, de fromage cotija, de piment en poudre et de citron vert.",
+    "composition": [
+      {
+        "ingredient": "sweet_corn_raw_fresh",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_mayonnaise_0d3e4e",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cotija_block_cow",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_hot_chili_pepper_spice_dried",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "dal_ethiopian_atkilt_wat_afd168",
     "title": "Ethiopian Atkilt Wat",
     "cuisine": "ethiopian",
@@ -14971,7 +15346,13 @@
     ],
     "n_instructions": 7,
     "flags": [],
-    "similar": []
+    "similar": [
+      {
+        "id": "brkf_cachapa_fromage_4a2c85",
+        "title": "Cachapa au fromage frais",
+        "score": 0.67
+      }
+    ]
   },
   {
     "id": "base_cheddar_vegane_529b97",
@@ -24424,6 +24805,95 @@
     "similar": []
   },
   {
+    "id": "stew_locro_courge_mais_3c7e90",
+    "title": "Locro de courge et maïs",
+    "cuisine": "argentinian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 560,
+    "confidence": 0.9,
+    "description": "Ragoût andin des jours de fête, ici sans viande : maïs blanc et haricots trempés, courge qui fond et lie le bouillon, servi avec une huile au paprika fumé.",
+    "composition": [
+      {
+        "ingredient": "hominy_boiled_flour_canned",
+        "quantity": 350,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_bean_canned",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butternut_squash_raw_skinless",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sweet_potato_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1300,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "main_loubia_marocaine_e3b91b",
     "title": "Loubia Marocaine",
     "cuisine": "moroccan",
@@ -26716,6 +27186,97 @@
       }
     ],
     "n_instructions": 9,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "rice_moros_y_cristianos_6c83d1",
+    "title": "Moros y cristianos, riz aux haricots noirs cubain",
+    "cuisine": "caribbean",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "sulphites"
+    ],
+    "servings": 4,
+    "time_total": 50,
+    "confidence": 0.9,
+    "description": "Riz cubain cuit avec les haricots noirs et leur jus, dans un sofrito d'oignon, poivron, ail, cumin et laurier, jusqu'à prendre une couleur sombre.",
+    "composition": [
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 320,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_bean_boiled",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 180,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_bell_pepper_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oregano_spice_dried",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "bay_leaf",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_vinegar_liquid_distilled",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 650,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -31992,6 +32553,102 @@
     "similar": []
   },
   {
+    "id": "main_pastel_de_choclo_8d52a4",
+    "title": "Pastel de choclo végétarien",
+    "cuisine": "chilean",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 70,
+    "confidence": 0.9,
+    "description": "Gratin chilien : garniture de lentilles, oignons et olives sous une épaisse crème de maïs au basilic, caramélisée au four avec un voile de sucre.",
+    "composition": [
+      {
+        "ingredient": "sweet_corn_raw_fresh",
+        "quantity": 700,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_lentil_dried",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_olive_canned_in_brine",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 110,
+        "unit": "g"
+      },
+      {
+        "ingredient": "milk_liquid_uht_3_5pct",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 500,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "main_patatas_bravas_98ec00",
     "title": "Patatas Bravas",
     "cuisine": "spanish",
@@ -34879,6 +35536,85 @@
     "similar": []
   },
   {
+    "id": "stew_porotos_granados_6a35c9",
+    "title": "Porotos granados, haricots, maïs et courge",
+    "cuisine": "chilean",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 60,
+    "confidence": 0.9,
+    "description": "Le ragoût d'été chilien : haricots blancs frais, maïs râpé et courge fondue, parfumés au basilic et au paprika, épais comme une purée.",
+    "composition": [
+      {
+        "ingredient": "white_bean_canned",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sweet_corn_raw_fresh",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butternut_squash_raw_skinless",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 700,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "brkf_porridge_millet_coco_2f94a1",
     "title": "Porridge de millet au lait de coco et à la mangue",
     "cuisine": "international",
@@ -35832,6 +36568,61 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "entry_provoleta_origan_5b81c7",
+    "title": "Provoleta grillée à l'origan",
+    "cuisine": "argentinian",
+    "dish_type": "starter",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 13,
+    "confidence": 0.9,
+    "description": "L'entrée du barbecue argentin : une tranche épaisse de provolone saisie jusqu'à former une croûte, fondante à cœur, parfumée à l'origan et au piment.",
+    "composition": [
+      {
+        "ingredient": "provolone_paste_cow",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oregano_spice_dried",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_hot_chili_pepper_spice_dried",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_bread_baguette",
+        "quantity": 160,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -38505,6 +39296,93 @@
     "similar": []
   },
   {
+    "id": "rice_quinoa_chaufa_4f7d21",
+    "title": "Quinoa chaufa, quinoa sauté à la péruvienne",
+    "cuisine": "peruvian",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten",
+      "sesame",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 35,
+    "confidence": 0.9,
+    "description": "Rencontre du Pérou et de la Chine : quinoa sauté au wok avec sauce soja, gingembre, œufs, poivron et oignons verts, comme un arroz chaufa sans riz.",
+    "composition": [
+      {
+        "ingredient": "quinoa_raw_dried",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 165,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_peas_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sesame_oil_plant",
+        "quantity": 10,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 500,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "stew_eggplant_classic_5d46a1",
     "title": "Ragoût d'aubergine maîtrisé",
     "cuisine": "mediterranean",
@@ -38956,6 +39834,76 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "side_rajas_con_crema_2d9f74",
+    "title": "Rajas con crema, poivrons à la crème",
+    "cuisine": "mexican",
+    "dish_type": "side",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 35,
+    "confidence": 0.9,
+    "description": "Lanières de poivrons grillés et pelés, fondues avec de l'oignon, du maïs et de la crème, à glisser dans des tortillas ou à servir avec du riz.",
+    "composition": [
+      {
+        "ingredient": "green_bell_pepper_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sweet_corn_canned",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sour_cream_fermented_18pct",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 4,
     "flags": [],
     "similar": []
   },
@@ -47213,6 +48161,96 @@
     "similar": []
   },
   {
+    "id": "soup_sopa_de_tortilla_5e28c1",
+    "title": "Sopa de tortilla",
+    "cuisine": "mexican",
+    "dish_type": "soup",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 40,
+    "confidence": 0.9,
+    "description": "Bouillon de tomate grillée aux piments pasilla, dans lequel on plonge des lanières de tortilla frites, avec avocat, fromage frais et crème.",
+    "composition": [
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_tortilla_92c2a6",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ancho_pepper_spice_dried",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "avocado_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sour_cream_fermented_18pct",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1000,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "egg_sopa_paraguaya_43987c",
     "title": "Sopa Paraguaya",
     "cuisine": "paraguayan",
@@ -54215,6 +55253,65 @@
     "similar": []
   },
   {
+    "id": "side_tostones_mojo_9f57b2",
+    "title": "Tostones et mojo à l'ail",
+    "cuisine": "caribbean",
+    "dish_type": "side",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 0.9,
+    "description": "Rondelles de plantain vert frites deux fois, écrasées entre les deux cuissons pour rester croustillantes, servies avec un mojo d'ail et de citron vert.",
+    "composition": [
+      {
+        "ingredient": "plantain_banana_raw",
+        "quantity": 700,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "main_tourte_aux_champignons_85adfb",
     "title": "Tourte aux Champignons",
     "cuisine": "french",
@@ -55073,6 +56170,102 @@
       }
     ],
     "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "main_vatapa_legumes_7d19c3",
+    "title": "Vatapá de légumes au lait de coco",
+    "cuisine": "brazilian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "allergens": [
+      "gluten",
+      "peanuts",
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 50,
+    "confidence": 0.9,
+    "description": "Crème bahianaise épaissie au pain et aux cacahuètes, parfumée au lait de coco, au gingembre et à l'huile de palme, avec des légumes et servie sur du riz.",
+    "composition": [
+      {
+        "ingredient": "white_bread_unsalted",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "peanut_butter_natural_plant",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_milk_plant",
+        "quantity": 400,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cashew_nuts_raw",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 180,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "palm_oil_refined_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 400,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": null,
+        "unit": "1 portion"
+      }
+    ],
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
