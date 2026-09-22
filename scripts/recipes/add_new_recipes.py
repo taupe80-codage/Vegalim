@@ -34,6 +34,9 @@ class RecipeError(Exception):
     pass
 
 
+WARNINGS: list[str] = []
+
+
 def load_lots() -> list[dict]:
     out, seen = [], set()
     for f in sorted(LOT_DIR.glob("n*.py")):
@@ -66,13 +69,38 @@ GENERIC = {"riz", "sauce", "salade", "soupe", "legumes", "legume", "maison", "ve
            "vapeur", "frais", "fraiche", "fraiches", "herbes", "tofu", "vermicelles", "nouilles",
            "citronnelle", "gingembre", "coriandre", "menthe", "basilic", "cacahuetes", "sesame",
            "tempeh", "seitan", "quinoa", "boulgour", "sarrasin", "polenta", "semoule",
-           "legumes", "vietnamien", "vietnamienne", "indonesiennes", "malaisien", "thaie", "thai"}
+           "spaghetti", "pates", "gnocchi", "risotto", "millet", "orge", "haricot", "blancs",
+           "oeuf", "oeufs", "soupe", "salade", "porridge", "chaud", "chauds", "confites",
+           "legumes",
+           # mots qui veulent dire « plat » ou un ingrédient de base dans une autre langue
+           "sopa", "caldo", "ensalada", "pasta", "pane", "arroz", "riz", "dal", "curry", "wat",
+           "wot", "chorba", "shorba", "polo", "pilav", "pilaf",
+           "aux", "des", "les", "sur", "lait", "eau", "mais", "paneer", "gallo", "tofu"}
+
+# adjectifs de pays et de région : ils ne distinguent pas un plat d'un autre
+GENTILES = {"francais", "francaise", "italien", "italienne", "italiennes", "espagnol", "espagnole",
+            "grec", "grecque", "grecques", "turc", "turque", "libanais", "libanaise", "marocain",
+            "marocaine", "tunisien", "tunisienne", "egyptien", "egyptienne", "ethiopien",
+            "ethiopienne", "kenyane", "ghaneen", "senegalais", "nigerian", "mexicain", "mexicaine",
+            "mexicaines", "peruvien", "peruvienne", "argentin", "argentine", "bresilien",
+            "bresilienne", "indien", "indienne", "indiennes", "japonais", "japonaise", "chinois",
+            "chinoise", "coreen", "coreenne", "coreennes", "thai", "thaie", "thailandais",
+            "vietnamien", "vietnamienne", "indonesien", "indonesienne", "indonesiennes",
+            "malaisien", "malaisienne", "philippin", "philippine", "polonais", "polonaise",
+            "ukrainien", "ukrainienne", "allemand", "allemande", "anglais", "anglaise", "suisse",
+            "portugais", "portugaise", "hongrois", "hongroise", "bulgare", "georgien", "georgienne",
+            "persan", "persane", "iranien", "iranienne", "afghan", "afghane", "nepalais",
+            "sri", "lankais", "provencal", "provencale", "nicois", "nicoise", "bretonnes",
+            "castillane", "andalouse", "sicilienne", "napolitaine", "romaine", "milanais",
+            "costaricien", "salvadorien", "canadien", "canadienne", "quebecois", "americain",
+            "americaine", "vegetariens", "vegetariennes", "vegane", "veganes"}
 
 
 def _title_tokens(title: str) -> set[str]:
     import re, unicodedata
     t = unicodedata.normalize("NFKD", title.lower().replace("œ", "oe")).encode("ascii", "ignore").decode()
-    return {w for w in re.split(r"[^a-z]+", t) if len(w) >= 3 and w not in GENERIC}
+    return {w for w in re.split(r"[^a-z]+", t)
+            if len(w) >= 3 and w not in GENERIC and w not in GENTILES}
 
 
 def check(new: list[dict], existing: list[dict]) -> None:
@@ -99,9 +127,14 @@ def check(new: list[dict], existing: list[dict]) -> None:
         allowed = set(r.get("_allow_similar") or ())
         for tok in sorted(_title_tokens(r["titles"]["fr"].split(",")[0]) - allowed):
             hits = index.get(tok, [])
-            if hits and len(hits) <= 2:
+            if not hits:
+                continue
+            # un mot long et unique dans tout le dataset = presque sûrement le même plat
+            if len(tok) >= 5 and len(hits) == 1:
                 raise RecipeError(f"{r['id']} « {r['titles']['fr']} » : le mot « {tok} » figure déjà "
-                                  f"dans {hits} — plat probablement déjà présent")
+                                  f"dans {hits} — plat probablement déjà présent "
+                                  f"(allow_similar=(\"{tok}\",) si c'est un faux positif)")
+            WARNINGS.append(f"{r['id']} « {r['titles']['fr']} » : « {tok} » aussi dans {hits[:3]}")
         for c in r["composition"]:
             iid = c["ingredient"]
             if iid in sub_ids:  # sous-recette (préparation de base)
@@ -128,6 +161,10 @@ def main() -> int:
     added = [r for r in new if r["id"] not in have]
     for r in added:
         recipes.append({k: v for k, v in r.items() if not k.startswith("_")})
+    if WARNINGS:
+        print(f"{len(WARNINGS)} rapprochement(s) de titre à vérifier :")
+        for w in WARNINGS:
+            print("  ?", w)
     print(f"{len(new)} recettes dans les lots, {len(added)} ajoutée(s)"
           + (" (dry-run)" if args.dry_run else ""))
     for r in added:

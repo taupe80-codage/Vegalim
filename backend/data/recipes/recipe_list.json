@@ -1477,6 +1477,87 @@
     "similar": []
   },
   {
+    "id": "soup_avgolemono_vegetarien_5a71e9",
+    "title": "Avgolemono, soupe grecque au citron et à l'œuf",
+    "cuisine": "greek",
+    "dish_type": "soup",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "celery",
+      "eggs"
+    ],
+    "servings": 4,
+    "time_total": 30,
+    "confidence": 0.9,
+    "description": "Soupe grecque veloutée : bouillon de légumes et riz, lié hors du feu avec des œufs battus au jus de citron, sans jamais bouillir pour rester soyeux.",
+    "composition": [
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 165,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 70,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "celery_stalk_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "dill_weed_fresh_herb_leaf",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1300,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "bread_acorda_a_lail_et_coriandr_048494",
     "title": "Açorda à L'ail et Coriandre",
     "cuisine": "portuguese",
@@ -2055,6 +2136,75 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "starter_balila_pois_chiches_3f62d8",
+    "title": "Balila, pois chiches chauds au cumin et au citron",
+    "cuisine": "lebanese",
+    "dish_type": "starter",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 15,
+    "confidence": 0.9,
+    "description": "Mezze libanais du matin : pois chiches réchauffés dans leur eau, écrasés du bout de la cuillère, assaisonnés d'ail, de cumin, de citron et d'huile d'olive.",
+    "composition": [
+      {
+        "ingredient": "chickpea_boiled",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_pita_bread",
+        "quantity": null,
+        "unit": "1 pain"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -5707,6 +5857,51 @@
     ]
   },
   {
+    "id": "pasta_cacio_e_pepe_8f3417",
+    "title": "Cacio e pepe",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 17,
+    "confidence": 0.9,
+    "description": "Trois ingrédients et un tour de main : poivre torréfié, pecorino romano et eau de cuisson fouettés en crème qui enrobe les pâtes, sans jamais chauffer le fromage directement.",
+    "composition": [
+      {
+        "ingredient": "pasta_raw_dried",
+        "quantity": 360,
+        "unit": "g"
+      },
+      {
+        "ingredient": "pecorino_sheep",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "snack_cake_olives_et_herbes_d13d34",
     "title": "Cake Olives et Herbes",
     "cuisine": "french_provencal",
@@ -8351,6 +8546,83 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "brkf_congee_gingembre_8b5d24",
+    "title": "Congee au gingembre et aux champignons",
+    "cuisine": "chinese",
+    "dish_type": "breakfast",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "allergens": [
+      "gluten",
+      "peanuts",
+      "sesame",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 60,
+    "confidence": 0.9,
+    "description": "Bouillie de riz cantonaise cuite longuement jusqu'à devenir crémeuse, parfumée au gingembre, garnie de champignons sautés, d'oignons verts et d'un filet d'huile de sésame.",
+    "composition": [
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 180,
+        "unit": "g"
+      },
+      {
+        "ingredient": "shiitake_mushroom_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sesame_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "peanut_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1800,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -15566,6 +15838,82 @@
     ]
   },
   {
+    "id": "brkf_gallo_pinto_3d47f2",
+    "title": "Gallo pinto, riz et haricots du Costa Rica",
+    "cuisine": "latin_american",
+    "dish_type": "breakfast",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 0.9,
+    "description": "Le petit-déjeuner costaricien : riz de la veille sauté avec des haricots noirs, poivron, oignon et coriandre, relevé d'une sauce brune type Lizano.",
+    "composition": [
+      {
+        "ingredient": "white_rice_cooked_long_grain_seed",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_bean_boiled",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 220,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "main_garbure_gasconne_545667",
     "title": "Garbure Gasconne",
     "cuisine": "french_gascon",
@@ -19695,6 +20043,86 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "brkf_huevos_rancheros_6a80e5",
+    "title": "Huevos rancheros",
+    "cuisine": "mexican",
+    "dish_type": "breakfast",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs"
+    ],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 0.9,
+    "description": "Le petit-déjeuner des fermes mexicaines : tortillas de maïs poêlées, haricots noirs écrasés, œufs au plat et sauce tomate au piment, avec coriandre et avocat.",
+    "composition": [
+      {
+        "ingredient": "base_tortilla_92c2a6",
+        "quantity": 240,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 220,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_bean_boiled",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 350,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "jalapeno_pepper_raw",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "avocado_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -30468,6 +30896,101 @@
     "similar": []
   },
   {
+    "id": "protein_paneer_bhurji_7e3c50",
+    "title": "Paneer bhurji, paneer émietté aux épices",
+    "cuisine": "indian",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 0.9,
+    "description": "Paneer émietté sauté avec oignon, tomate, gingembre et garam masala, comme des œufs brouillés épicés : prêt en un quart d'heure, à manger avec des rotis.",
+    "composition": [
+      {
+        "ingredient": "base_paneer_04e1db",
+        "quantity": 350,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_bell_pepper_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garam_masala",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "indian_bread_naan",
+        "quantity": null,
+        "unit": "1 pièce"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "curry_paneer_butter_masala_9e638c",
     "title": "Paneer makhani de Delhi (paneer butter masala)",
     "cuisine": "indian",
@@ -34356,6 +34879,71 @@
     "similar": []
   },
   {
+    "id": "brkf_porridge_millet_coco_2f94a1",
+    "title": "Porridge de millet au lait de coco et à la mangue",
+    "cuisine": "international",
+    "dish_type": "breakfast",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "allergens": [
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 0.9,
+    "description": "Petit-déjeuner sans gluten : millet cuit dans un lait de coco légèrement sucré à la cardamome, servi avec de la mangue fraîche et des amandes grillées.",
+    "composition": [
+      {
+        "ingredient": "millet_raw_whole_seed",
+        "quantity": 180,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_milk_plant",
+        "quantity": 300,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 500,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "mango_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "almond_raw_with_skin_unsalted",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "maple_syrup",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cardamom",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "brkf_porridge_pomme_cannelle_9af096",
     "title": "Porridge Pomme Cannelle",
     "cuisine": "international",
@@ -36821,6 +37409,76 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "pasta_al_limone_2a68d3",
+    "title": "Pâtes au citron et au basilic",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 20,
+    "confidence": 0.9,
+    "description": "Pâtes de la côte amalfitaine : crème, zeste et jus de citron montés avec du parmesan, relevés de basilic, prêts le temps que les pâtes cuisent.",
+    "composition": [
+      {
+        "ingredient": "pasta_raw_dried",
+        "quantity": 360,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cream_liquid_uht",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_peel_raw",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -42328,6 +42986,75 @@
     "similar": []
   },
   {
+    "id": "salad_haricots_blancs_roquette_9c5b02",
+    "title": "Salade de haricots blancs, roquette et tomates confites",
+    "cuisine": "italian",
+    "dish_type": "starter",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 10,
+    "confidence": 0.9,
+    "description": "Salade toscane sans cuisson : haricots blancs, roquette poivrée, tomates séchées et oignon rouge, assaisonnés au citron, à l'huile d'olive et à l'origan.",
+    "composition": [
+      {
+        "ingredient": "white_bean_canned",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "arugula_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_dried",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_onion_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "oregano_spice_dried",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "salad_lentil_classic_v3_r7p2k8",
     "title": "Salade de lentilles",
     "cuisine": "french",
@@ -46346,6 +47073,146 @@
     "similar": []
   },
   {
+    "id": "soup_sopa_de_ajo_9e12b7",
+    "title": "Sopa de ajo castillane",
+    "cuisine": "spanish",
+    "dish_type": "soup",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 30,
+    "confidence": 0.9,
+    "description": "Soupe de pauvre de Castille, devenue un classique : ail doré dans l'huile d'olive, paprika fumé, pain rassis et un œuf poché dans le bouillon.",
+    "composition": [
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_bread_baguette",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 220,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1200,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "soup_sopa_de_fideo_7b91c4",
+    "title": "Sopa de fideo mexicaine",
+    "cuisine": "mexican",
+    "dish_type": "soup",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 0.9,
+    "description": "Soupe de tous les jours au Mexique : vermicelles dorés à l'huile puis mijotés dans un bouillon de tomate, ail et oignon, servis avec du citron vert et de l'avocat.",
+    "composition": [
+      {
+        "ingredient": "pasta_raw_dried",
+        "quantity": 180,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1100,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "avocado_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "egg_sopa_paraguaya_43987c",
     "title": "Sopa Paraguaya",
     "cuisine": "paraguayan",
@@ -47000,6 +47867,83 @@
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "soup_oeufs_mais_chinoise_5c30a8",
+    "title": "Soupe chinoise aux œufs et au maïs",
+    "cuisine": "chinese",
+    "dish_type": "soup",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten",
+      "sesame",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 15,
+    "confidence": 0.9,
+    "description": "Soupe express : bouillon au gingembre lié à la fécule, maïs doux, et œufs battus versés en filet pour former des rubans soyeux.",
+    "composition": [
+      {
+        "ingredient": "sweet_corn_canned",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 165,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cornstarch_flour",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sesame_oil_plant",
+        "quantity": 10,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1000,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_pepper_spice",
+        "quantity": 1,
         "unit": "g"
       }
     ],
@@ -48634,6 +49578,61 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "pasta_aglio_olio_6d2b95",
+    "title": "Spaghetti aglio e olio",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 17,
+    "confidence": 0.9,
+    "description": "Le plat de minuit romain : ail doré lentement dans l'huile d'olive avec du piment, spaghetti liés à l'eau de cuisson et beaucoup de persil.",
+    "composition": [
+      {
+        "ingredient": "pasta_raw_dried",
+        "quantity": 360,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_hot_chili_pepper_spice_dried",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -53594,6 +54593,102 @@
       }
     ],
     "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "brkf_upma_semoule_4c5e77",
+    "title": "Upma, semoule indienne aux légumes",
+    "cuisine": "indian",
+    "dish_type": "breakfast",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "allergens": [
+      "gluten",
+      "mustard",
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 0.9,
+    "description": "Petit-déjeuner du sud de l'Inde : semoule torréfiée puis gonflée dans l'eau avec un tempérage de moutarde, feuilles de curry, gingembre et légumes croquants.",
+    "composition": [
+      {
+        "ingredient": "wheat_semolina_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_peas_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_mustard_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "curry_leaf",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cashew_nuts_raw",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 600,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },

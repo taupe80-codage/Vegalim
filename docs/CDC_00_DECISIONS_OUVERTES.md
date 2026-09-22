@@ -13,7 +13,7 @@
 
 **Décision 2 — Priorité données vs interface (la plus urgente)**
 Recommandation : **Option A — données en premier**.
-Raison : une belle interface sur 763 recettes créera de la frustration
+Raison : une belle interface sur 778 recettes créera de la frustration
 (manque de diversité, métadonnées incomplètes). 1 000 recettes bien
 documentées avant l'interface = meilleure first impression.
 Durée estimée : 3–4 semaines à plein temps.

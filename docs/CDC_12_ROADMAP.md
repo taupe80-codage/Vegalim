@@ -9,7 +9,7 @@
 ## Horizon de lancement : < 3 mois
 
 ### Critères de succès v1
-1. **1 000 recettes dans le dataset** (actuellement **763** — besoin : +237,
+1. **1 000 recettes dans le dataset** (actuellement **778** — besoin : +222,
    pas +471 comme initialement estimé)
 2. **Stabilité technique** : 0 bug bloquant, < 500ms par recherche,
    100 utilisateurs simultanés supportés — *tests de charge non trouvés
@@ -38,7 +38,7 @@
 
 **Objectif** : atteindre le seuil de 1 000 recettes de qualité
 
-**763/1000 recettes actuellement (+237 restantes)** — la répartition
+**778/1000 recettes actuellement (+222 restantes)** — la répartition
 par sous-catégorie ci-dessous date de l'estimation initiale (quand la
 base était à 529) et n'a pas été revérifiée poste par poste ; à
 recompter avant de s'en servir pour prioriser le travail restant.
