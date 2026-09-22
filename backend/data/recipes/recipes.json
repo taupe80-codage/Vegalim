@@ -9361,30 +9361,41 @@
       "id": "bread_bannock_e03ffe",
       "titles": {
         "original": "Bannock",
-        "fr": "Bannock",
+        "fr": "Bannock au four, pain des Premières Nations",
         "en": "Bannock"
       },
       "origin": {
-        "cuisine": "ethiopian",
+        "cuisine": "canadian",
         "country": "canada",
         "region": "prairie",
         "city": ""
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 7,
+        "prep_active_min": 10,
         "prep_passive_min": 0,
-        "cook_min": 30,
-        "total_min": 37
+        "cook_min": 25,
+        "total_min": 35
       },
       "composition": [
         {
           "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-          "quantity": 200,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
-            "form": "sifted",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "baking_powder",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "leavening",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -9395,17 +9406,6 @@
           "unit": "g",
           "meta": {
             "role": "fat_cooking",
-            "form": "diced",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -9413,10 +9413,21 @@
         },
         {
           "ingredient": "water",
-          "quantity": 120,
+          "quantity": 170,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -9428,14 +9439,17 @@
           "unit": "2 cuillères à soupe",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "confiture végétarienne",
-            "note": "Choisissez une confiture végétarienne à votre goût",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
       "tags": {
-        "diet": [],
+        "diet": [
+          "vegetarian",
+          "nut_free"
+        ],
         "allergens": [
           "gluten",
           "lactose",
@@ -9489,34 +9503,39 @@
       "search_tokens": [
         "(eau",
         "45 minutes",
-        "africain",
         "all",
+        "baking",
         "bannock",
         "beurre",
         "ble",
         "butter",
+        "canadian",
         "debutant",
+        "des",
         "easy",
         "eau",
         "enfants",
-        "epice",
-        "ethiopian",
-        "ethiopie",
-        "ethiopien",
         "facile",
         "facile enfants",
         "famille",
         "farine",
         "flour",
+        "four,",
         "fraise",
         "kids",
         "leger",
+        "lever",
         "light",
         "low calorie",
         "minceur",
         "moyen",
+        "nations",
         "oven_cooking",
+        "pain",
         "potable)",
+        "poudre",
+        "powder",
+        "premieres",
         "purpose",
         "salt",
         "sans viande",
@@ -9534,18 +9553,13 @@
       "dish_type": "bread",
       "servings_default": 4,
       "_quality_score": 0.79,
-      "description": "Bannock végétarien croustillant, à texture dorée et tendre, issu de la tradition autochtone canadienne, préparé avec soin à partir de farine de blé et beurre, pour une saveur riche et une texture croustillante.",
+      "description": "Pain rapide sans levure des Premières Nations du Canada : farine, poudre à lever, beurre et eau, façonné en galette épaisse et cuit au four jusqu'à ce qu'il soit doré.",
       "instructions": [
-        "Étape 1: Dans un grand saladier, mélangez 200g de farine de blé avec 5g de sel, jusqu'à obtenir une texture homogène et bien mélangée, sans grumeaux visibles.",
-        "Étape 2: Ajoutez 40g de beurre fondu et mélangez jusqu'à ce que la mixture ressemble à du sable fin, avec une texture granuleuse uniforme.",
-        "Étape 3: Versez 120ml d'eau tiède petit à petit, tout en pétrissant la pâte avec vos mains jusqu'à obtenir une consistance lisse et souple, qui ne colle plus aux mains.",
-        "Étape 4: Façonnez la pâte en une galette épaisse d'environ 2 cm, en appuyant légèrement pour aplanir la surface et obtenir une forme régulière.",
-        "Étape 5: Chauffez une poêle antiadhésive ou un comal à feu moyen, en ajoutant une fine couche de beurre pour éviter que le bannock ne colle, et en vérifiant que la poêle est bien chaude avant de procéder.",
-        "Étape 6: Placez le bannock dans la poêle et faites-le cuire 8-10 minutes de chaque côté, en couvrant la poêle avec un couvercle pour retenir la chaleur et en vérifiant régulièrement la couleur et la texture.",
-        "Étape 7: Vérifiez la cuisson en insérant un couteau au centre du bannock - il doit ressortir propre et sec, sans trace de pâte crue.",
-        "Étape 8: Laissez le bannock reposer pendant 5 minutes avant de le découper en tranches régulières, en veillant à ce qu'il soit encore chaud mais non brûlant.",
-        "Étape 9: Servez-le chaud, accompagné de votre confiture préférée ou de délicieuses garnitures végétariennes, en profitant de la texture croustillante et de la saveur riche du bannock.",
-        "Étape 10: Décorez avec des herbes fraîches, comme du persil ou de la coriandre, pour ajouter une touche de fraîcheur et de couleur à votre plat."
+        "Étape 1 : Préchauffer le four à 200°C.",
+        "Étape 2 : Mélanger 250 g de farine, 10 g de poudre à lever et 3 g de sel, puis sabler avec 40 g de beurre froid du bout des doigts.",
+        "Étape 3 : Ajouter 170 ml d'eau et mélanger juste assez pour former une pâte souple, sans pétrir.",
+        "Étape 4 : Façonner une galette de 2 cm d'épaisseur sur une plaque farinée et la piquer à la fourchette.",
+        "Étape 5 : Cuire 25 minutes, jusqu'à ce que le dessous sonne creux. Servir tiède, coupé en parts."
       ],
       "diet_flags": {
         "vegan": false,
@@ -10550,7 +10564,7 @@
       "id": "bread_enchiladas_fe7221",
       "titles": {
         "original": "Enchiladas",
-        "fr": "Enchiladas",
+        "fr": "Enchiladas rojas aux haricots noirs et queso fresco",
         "en": "Enchiladas"
       },
       "origin": {
@@ -10561,10 +10575,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 21,
-        "prep_passive_min": 12,
-        "cook_min": 32,
-        "total_min": 65
+        "prep_active_min": 25,
+        "prep_passive_min": 15,
+        "cook_min": 30,
+        "total_min": 70
       },
       "composition": [
         {
@@ -10573,7 +10587,7 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -10595,7 +10609,7 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -10606,7 +10620,7 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -10617,7 +10631,7 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -10628,18 +10642,18 @@
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "ancho_pepper_spice_dried",
-          "quantity": 40,
+          "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "whole",
+            "form": "",
             "state": "dry",
             "preparation": ""
           }
@@ -10650,25 +10664,25 @@
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "coriander_spice_seed",
-          "quantity": 3,
+          "ingredient": "oregano_spice_dried",
+          "quantity": 1,
           "unit": "g",
           "meta": {
-            "role": "spice",
-            "form": "ground",
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "quantity": 35,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -10679,10 +10693,21 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -10698,23 +10723,14 @@
             "note": "Quelques feuilles pour la fraîcheur",
             "optional": true
           }
-        },
-        {
-          "ingredient": "coriander_raw_fresh_herb",
-          "quantity": 10,
-          "unit": "g",
-          "meta": {
-            "role": "herb",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
         "diet": [
+          "high_protein",
+          "vegetarian",
           "gluten_free",
-          "high_protein"
+          "nut_free"
         ],
         "allergens": [
           "lactose",
@@ -10768,6 +10784,7 @@
       "search_tokens": [
         "ail",
         "ancho",
+        "aux",
         "avance",
         "base_tortilla_92c2a6",
         "bean",
@@ -10784,6 +10801,7 @@
         "garlic",
         "gluten free",
         "haricot",
+        "haricots",
         "latino",
         "leger",
         "lent",
@@ -10796,13 +10814,17 @@
         "mijote",
         "minceur",
         "noir",
+        "noirs",
         "oignon",
         "olive",
         "onion",
+        "oregano",
+        "origan",
         "oven_cooking",
         "pepper",
         "piment",
         "queso",
+        "rojas",
         "salt",
         "sans gluten",
         "sans viande",
@@ -10819,15 +10841,13 @@
       "servings_default": 4,
       "_quality_score": 0.97,
       "_chef_note": "Assurez-vous d'utiliser des tortillas de bonne qualité pour une texture optimale.",
-      "description": "Enchiladas créatives, parfumées et croustillantes, inspirées de la cuisine mexicaine, avec une sauce riche et des saveurs équilibrées.",
+      "description": "Tortillas roulées autour de haricots noirs, nappées d'une sauce rouge aux piments ancho séchés et à la tomate, parsemées de queso fresco et gratinées.",
       "instructions": [
-        "Étape 1: Préparez la sauce enchilada en faisant revenir 9g d'ail dans 45ml d'huile d'olive extra vierge pendant 30 secondes, jusqu'à ce que l'odeur d'ail soit parfumée et la couleur légèrement dorée.",
-        "Étape 2: Ajoutez 300g de tomates concassées, 40g de piments ancho réhydratés, 3g de cumin et 3g de coriandre moulue, puis mijotez pendant 12 minutes, en remuant occasionnellement, jusqu'à ce que la sauce soit épaisse et parfumée.",
-        "Étape 3: Mixez la sauce pour la rendre lisse et homogène, puis assaisonnez-la avec 5g de sel.",
-        "Étape 4: Garnissez 320g de tortillas avec une mixture de 300g de haricots noirs égouttés, 80g de queso fresco émietté et 150g d'oignon émincé, puis roulez-les fermement pour former des rouleaux compacts.",
-        "Étape 5: Disposez les tortillas roulées côte à côte dans un plat, puis nappez-les généreusement de sauce enchilada chaude, en veillant à ce que tous les rouleaux soient bien enrobés.",
-        "Étape 6: Parsemez du reste de queso fresco et enfournez à 180°C pendant 20 à 22 minutes, ou jusqu'à ce que la sauce bouillonne et que le fromage soit doré.",
-        "Étape 7: Garnissez de coriandre fraîche ciselée, puis servez chaud."
+        "Étape 1 : Épépiner 30 g de piments ancho, les griller 30 secondes à sec, puis les faire tremper 15 minutes dans 250 ml d'eau chaude.",
+        "Étape 2 : Mixer les piments et leur eau avec 300 g de tomates, 50 g d'oignon, 6 g d'ail, 3 g de cumin, 1 g d'origan et 2 g de sel, puis cuire la sauce 10 minutes dans 15 ml d'huile.",
+        "Étape 3 : Faire revenir 100 g d'oignon et 3 g d'ail dans 20 ml d'huile, ajouter 300 g de haricots noirs et 1 g de sel, puis les écraser grossièrement.",
+        "Étape 4 : Préchauffer le four à 190°C. Tremper les tortillas une à une dans la sauce, les garnir de haricots, les rouler et les ranger dans un plat.",
+        "Étape 5 : Napper du reste de sauce, parsemer de 120 g de queso fresco et cuire 15 minutes. Servir avec 10 g de coriandre."
       ],
       "diet_flags": {
         "vegan": false,
@@ -29729,7 +29749,7 @@
       "id": "dal_boulettes_suedoises_2ac55d",
       "titles": {
         "original": "Swedish Meatballs",
-        "fr": "Boulettes Suédoises",
+        "fr": "Köttbullar végétariennes aux pois chiches, sauce crème et airelles",
         "en": "Boulettes Suédoises"
       },
       "origin": {
@@ -29740,10 +29760,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 15,
-        "prep_passive_min": 0,
-        "cook_min": 25,
-        "total_min": 40
+        "prep_active_min": 20,
+        "prep_passive_min": 15,
+        "cook_min": 20,
+        "total_min": 55
       },
       "composition": [
         {
@@ -29763,25 +29783,25 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "egg_raw",
-          "quantity": 110,
+          "quantity": 55,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "breadcrumbs",
-          "quantity": 60,
+          "quantity": 50,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -29796,14 +29816,25 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
-            "form": "pinch",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "ingredient": "allspice_powder",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -29813,8 +29844,74 @@
           }
         },
         {
+          "ingredient": "butter_sup80pct",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cream_heavy_refrigerated_18pct",
+          "quantity": 150,
+          "unit": "ml",
+          "meta": {
+            "role": "sauce",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 150,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lingonberry",
+          "quantity": 60,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -29825,35 +29922,40 @@
         },
         {
           "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "green_salad_raw_plain",
+          "ingredient": "potato_raw_flesh",
           "quantity": null,
-          "unit": "1 portion",
+          "unit": "1 portion de purée",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "salade verte",
-            "note": "Pour un repas complet et équilibré",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "high_protein"
+          "high_protein",
+          "vegetarian",
+          "nut_free"
         ],
         "allergens": [
           "eggs",
-          "gluten"
+          "gluten",
+          "lactose",
+          "milk",
+          "soy"
         ],
         "technique": [
           "wok"
@@ -29899,15 +30001,31 @@
         }
       },
       "search_tokens": [
-        "45 minutes",
-        "black",
+        "(eau",
+        "1 heure",
+        "airelles",
+        "all",
+        "allspice",
+        "aux",
+        "beurre",
+        "ble",
         "boulettes",
         "breadcrumbs",
+        "butter",
         "chiches",
+        "chiches,",
         "chickpea",
+        "cream,",
+        "creme",
+        "eau",
         "egg",
-        "green",
+        "epaisse",
+        "farine",
+        "flour",
+        "heavy",
         "intermediaire",
+        "jamaique",
+        "kottbullar",
         "leger",
         "light",
         "low calorie",
@@ -29915,24 +30033,28 @@
         "minceur",
         "moyen",
         "muscade",
-        "noir",
         "nutmeg",
         "oignon",
-        "olive",
         "onion",
-        "pepper",
+        "piments",
         "pois",
-        "poivre",
-        "salad",
-        "salade",
-        "salt",
+        "potable)",
+        "purpose",
         "sans viande",
-        "sel",
+        "sauce",
+        "shoyu",
+        "soja",
+        "soy",
         "suedoises",
+        "sunflower",
         "swedish",
-        "table",
+        "tournesol",
+        "tout",
+        "usage",
         "vegetarien",
-        "verte",
+        "vegetariennes",
+        "water",
+        "wheat",
         "wok",
         "œuf"
       ],
@@ -29940,19 +30062,19 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.9,
-      "description": "Boulettes suédoises végétariennes, tendres et parfumées, préparées avec des pois chiches et une chapelure fine, dans une sauce crémeuse aux herbes fraîches — texture dense et rustique, saveur intense et équilibrée, avec une odeur de noix de muscade.",
+      "description": "Boulettes à la suédoise de pois chiches, oignon et muscade, nappées d'une sauce à la crème et à la sauce soja, servies avec des airelles et une purée.",
       "instructions": [
-        "Étape 1 : Écraser 400g de pois chiches cuits avec 100g d'oignon finement haché et 60g de chapelure jusqu'à obtenir une pâte homogène.",
-        "Étape 2 : Ajouter 110g d'œufs battus (2 œufs), 1g de muscade moulue, 5g de sel et 2g de poivre, puis mélanger.",
-        "Étape 3 : Former des boulettes de 3 cm de diamètre en les roulant entre les mains humides.",
-        "Étape 4 : Faire dorer les boulettes dans 45ml d'huile à feu moyen pendant 8 à 10 minutes, en les retournant régulièrement.",
-        "Étape 5 : Servir chaud avec une purée de pommes de terre, de la confiture d'airelles ou des légumes sautés."
+        "Étape 1 : Mixer grossièrement 400 g de pois chiches avec 100 g d'oignon, 1 œuf (55 g), 50 g de chapelure, 1 g de muscade, 1 g de piment de la Jamaïque, 3 g de sel et 1 g de poivre.",
+        "Étape 2 : Former 24 boulettes de la taille d'une noix et les réfrigérer 15 minutes.",
+        "Étape 3 : Les dorer dans 30 ml d'huile, 8 minutes, en les roulant. Réserver.",
+        "Étape 4 : Sauce : faire fondre 15 g de beurre, ajouter 10 g de farine, puis 150 ml d'eau, 150 ml de crème et 10 ml de sauce soja, et cuire 3 minutes.",
+        "Étape 5 : Remettre les boulettes 2 minutes dans la sauce et servir avec 60 g d'airelles et une purée."
       ],
       "diet_flags": {
         "vegan": false,
         "vegetarian": true,
         "gluten_free": false,
-        "lactose_free": true,
+        "lactose_free": false,
         "nut_free": true,
         "raw": false,
         "kid_friendly": false
@@ -29962,31 +30084,42 @@
       "id": "dal_boulettes_suedoises_vegan_fea9f6",
       "titles": {
         "original": "Swedish Meatballs (Vegan)",
-        "fr": "Boulettes Suédoises (Vegan)",
+        "fr": "Boulettes suédoises aux lentilles et champignons, sauce brune (vegan)",
         "en": "Swedish Meatballs (Vegan)"
       },
       "origin": {
         "cuisine": "swedish",
-        "country": "international",
+        "country": "sweden",
         "region": "svealand",
         "city": ""
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 15,
-        "prep_passive_min": 10,
-        "cook_min": 20,
-        "total_min": 45
+        "prep_active_min": 25,
+        "prep_passive_min": 0,
+        "cook_min": 45,
+        "total_min": 70
       },
       "composition": [
         {
-          "ingredient": "chickpea_boiled",
-          "quantity": 400,
+          "ingredient": "green_lentil_dried",
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
             "form": "",
-            "state": "cooked",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "button_mushroom_raw",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
             "preparation": ""
           }
         },
@@ -29996,7 +30129,7 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -30013,19 +30146,41 @@
           }
         },
         {
+          "ingredient": "flaxseed_linseed_ground",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "thyme_dried_herb",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "nutmeg_spice",
           "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
-            "form": "pinch",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "sunflower_oil_plant",
-          "quantity": 45.7,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -30035,8 +30190,52 @@
           }
         },
         {
+          "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "oat_milk_refrigerated_plain_plant",
+          "quantity": 200,
+          "unit": "ml",
+          "meta": {
+            "role": "sauce",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 450,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -30047,11 +30246,11 @@
         },
         {
           "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -30066,50 +30265,20 @@
             "note": "Pour un parfum frais et éclatant",
             "optional": true
           }
-        },
-        {
-          "ingredient": "flaxseed_linseed_ground",
-          "quantity": 7,
-          "unit": "g",
-          "meta": {
-            "role": "binder",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 45,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "coconut_milk_plant",
-          "quantity": 150,
-          "unit": "ml",
-          "meta": {
-            "role": "sauce",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
           "high_protein",
+          "vegan",
+          "vegetarian",
           "lactose_free",
           "nut_free"
         ],
         "allergens": [
-          "gluten"
+          "gluten",
+          "soy"
         ],
         "technique": [
           "sauteed"
@@ -30156,68 +30325,82 @@
         "(eau",
         "(linseed)",
         "(vegan)",
-        "45 minutes",
-        "black",
+        "all",
+        "aux",
+        "avoine",
+        "ble",
         "boulettes",
         "breadcrumbs",
-        "chiches",
-        "chickpea",
-        "coco",
-        "coconut",
+        "brune",
+        "button",
+        "champignon",
+        "champignons,",
         "eau",
         "enfants",
         "facile enfants",
         "famille",
+        "farine",
         "flaxseed",
+        "flour",
+        "green",
         "intermediaire",
         "kids",
         "leger",
+        "lent",
+        "lentil",
+        "lentille",
+        "lentilles",
         "light",
         "lin",
+        "long",
         "low calorie",
         "meatballs",
+        "mijote",
         "minceur",
         "moyen",
         "muscade",
-        "noir",
-        "noix",
+        "mushroom",
         "nutmeg",
+        "oat",
         "oignon",
         "onion",
-        "parsley",
-        "pepper",
-        "persil",
-        "pois",
-        "poivre",
+        "paris",
         "potable)",
-        "salt",
+        "purpose",
         "sans produit animal",
         "sans viande",
+        "sauce",
         "sauteed",
-        "sel",
+        "shoyu",
+        "soja",
+        "soy",
         "suedoises",
         "sunflower",
         "swedish",
-        "table",
+        "thym",
+        "thyme",
         "tournesol",
+        "tout",
+        "usage",
         "vegan",
         "vegetalien",
         "vegetarien",
-        "water"
+        "verte",
+        "water",
+        "wheat"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.93,
       "_chef_note": "Assurez-vous d'utiliser des ingrédients végétaliens pour respecter les règles véganes.",
-      "description": "Boulettes suédoises véganes crémeuses et parfumées, servies avec une sauce onctueuse et une texture moelleuse, inspirées de la cuisine scandinave. Elles sont préparées avec des pois chiches, des oignons et des épices, puis cuites dans une huile végétale pour donner une saveur riche et complexe.",
+      "description": "Boulettes végétales de lentilles et de champignons au thym, liées au lin, servies dans une sauce brune au lait d'avoine et à la sauce soja.",
       "instructions": [
-        "Étape 1 : Écraser 400g de pois chiches cuits avec 100g d'oignon jaune haché et 60g de chapelure dans un bol jusqu'à obtenir une texture homogène, avec une consistance lisse et crémeuse, pendant environ 5 minutes.",
-        "Étape 2 : Ajouter 1 cuillère à soupe de graines de lin préparées avec 3 cuillères à soupe d'eau pour lier la pâte, ainsi que 1g de noix de muscade, 5g de sel et 2g de poivre. Mélanger délicatement pour éviter de trop travailler la pâte, pendant environ 2 minutes.",
-        "Étape 3 : Former des boulettes de taille uniforme avec la pâte préparée, en veillant à ce qu'elles soient bien sphériques et régulières, avec un diamètre d'environ 3 cm.",
-        "Étape 4 : Chauffer 45,7ml d'huile de tournesol dans une poêle à feu moyen. Faire dorer les boulettes de tous côtés pendant 3-4 minutes par face, jusqu'à ce qu'elles soient dorées et parfumées.",
-        "Étape 5 : Préparer une sauce crémeuse végétale pour accompagner les boulettes. Chauffer 150 ml de lait de coco avec un peu de sel, de poivre et de muscade pendant 2 minutes, jusqu'à léger épaississement.",
-        "Étape 6 : Servir les boulettes chaudes nappées de la sauce crémeuse préparée, en les disposant sur un lit de légumes sautés ou de riz parfumé, avec un peu de persil frais haché et un filet de jus de citron pour leur donner un parfum frais et éclatant."
+        "Étape 1 : Cuire 150 g de lentilles vertes dans 400 ml d'eau, 25 minutes, puis les égoutter. Mélanger 10 g de lin moulu avec 30 ml d'eau.",
+        "Étape 2 : Faire revenir 100 g d'oignon et 250 g de champignons hachés dans 10 ml d'huile, 8 minutes, jusqu'à évaporation.",
+        "Étape 3 : Mixer grossièrement lentilles, champignons, lin, 60 g de chapelure, 1 g de thym, 1 g de muscade, 2 g de sel et 1 g de poivre, puis former 24 boulettes.",
+        "Étape 4 : Les dorer dans 25 ml d'huile, 8 minutes. Réserver.",
+        "Étape 5 : Sauce brune : faire roussir 15 g de farine dans 5 ml d'huile, puis ajouter 200 ml de lait d'avoine, 20 ml d'eau et 20 ml de sauce soja, et cuire 3 minutes. Y réchauffer les boulettes."
       ],
       "diet_flags": {
         "vegan": true,
@@ -31785,14 +31968,14 @@
       "id": "dal_dal_makhani_c9ce94",
       "titles": {
         "original": "Dal Makhani",
-        "fr": "Dal Makhani",
+        "fr": "Dal makhani de Delhi au beurre et à la crème",
         "en": "Dal Makhani"
       },
       "origin": {
         "cuisine": "indian",
         "country": "india",
-        "region": "punjab",
-        "city": "amritsar"
+        "region": "delhi",
+        "city": "delhi"
       },
       "servings": 4,
       "timing": {
@@ -32048,16 +32231,19 @@
         "ail",
         "avance",
         "bean",
+        "beurre",
         "bouillon",
         "braising",
         "chef",
         "coeliaque",
         "complexe",
+        "creme",
         "cumin",
         "curcuma",
         "curry",
         "dal",
         "dal,",
+        "delhi",
         "eau",
         "epice",
         "epices",
@@ -32112,7 +32298,7 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.78,
-      "description": "Dal makhani traditionnel: lentilles noires (urad dal) et haricots rouges mijotés longuement dans une sauce tomate épicée, enrichis de beurre et de crème, parfumés au garam masala et au fenugrec — riche et onctueux.",
+      "description": "Le dal des grandes tables de Delhi : lentilles urad noires et haricots rouges trempés une nuit, mijotés longuement avec tomate, gingembre et épices, puis enrichis de beurre et de crème.",
       "instructions": [
         "Étape 1: Faire tremper 150 g de lentilles noires (urad dal) et 100 g de haricots rouges pendant 8 heures ou toute la nuit, puis les égoutter et les cuire dans 400 ml de bouillon de légumes pendant 45 minutes, jusqu'à ce qu'ils soient très tendres.",
         "Étape 2: Faire fondre 20 g de beurre dans une poêle à feu moyen-vif. Ajouter 150 g d'oignon jaune haché et faire dorer profondément, en sentant l'odeur sucrée des oignons caramélisés.",
@@ -38525,37 +38711,26 @@
       "id": "dal_makhani_vegan_259219",
       "titles": {
         "original": "Dal Makhani",
-        "fr": "Dal Makhani (Vegan)",
+        "fr": "Rajma masala du Pendjab (vegan)",
         "en": "Dal Makhani (Vegan)"
       },
       "origin": {
         "cuisine": "indian",
         "country": "india",
         "region": "punjab",
-        "city": ""
+        "city": "amritsar"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 21,
+        "prep_active_min": 20,
         "prep_passive_min": 720,
-        "cook_min": 110,
-        "total_min": 851
+        "cook_min": 100,
+        "total_min": 840
       },
       "composition": [
         {
-          "ingredient": "green_lentil_dried",
-          "quantity": 50,
-          "unit": "g",
-          "meta": {
-            "role": "protein",
-            "form": "",
-            "state": "dried",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "kidney_bean_dried",
-          "quantity": 150,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "protein",
@@ -38566,22 +38741,22 @@
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 360,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "sauce_base",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -38592,25 +38767,36 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "ginger_raw_root_fresh",
-          "quantity": 11.2,
+          "quantity": 15,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "coconut_oil_plant",
-          "quantity": 45.2,
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 35,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -38620,44 +38806,88 @@
           }
         },
         {
-          "ingredient": "coconut_milk_plant",
-          "quantity": 100,
-          "unit": "ml",
+          "ingredient": "cumin_spice_seed",
+          "quantity": 3,
+          "unit": "g",
           "meta": {
-            "role": "binder",
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "cumin_spice_seed",
-          "quantity": 2.5,
+          "ingredient": "coriander_spice_seed",
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "turmeric_powder",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garam_masala",
-          "quantity": 2.5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 1200,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "basmati_rice_raw_seed",
+          "quantity": null,
+          "unit": "1 portion",
+          "meta": {
+            "role": "serving_suggestion",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -38667,6 +38897,8 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
+          "vegan",
+          "vegetarian",
           "gluten_free",
           "lactose_free",
           "nut_free"
@@ -38724,11 +38956,13 @@
         "bean",
         "braising",
         "chef",
-        "coco",
-        "coconut",
+        "chilli",
         "coeliaque",
         "complexe",
+        "coriander",
+        "coriandre",
         "cumin",
+        "curcuma",
         "curry",
         "dal",
         "epice",
@@ -38738,7 +38972,6 @@
         "gingembre",
         "ginger",
         "gluten free",
-        "green",
         "haricot",
         "inde",
         "indian",
@@ -38747,8 +38980,6 @@
         "kidney",
         "leger",
         "lent",
-        "lentil",
-        "lentille",
         "light",
         "long",
         "low calorie",
@@ -38756,41 +38987,41 @@
         "masala",
         "mijote",
         "minceur",
-        "noix",
         "oignon",
         "onion",
+        "pendjab",
+        "pepper",
+        "piment",
+        "rajma",
         "rouge",
-        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
-        "sel",
         "spicy",
-        "table",
+        "sunflower",
         "technique",
         "tomate",
         "tomato",
+        "tournesol",
+        "turmeric",
         "vegan",
         "vegetalien",
-        "vegetarien",
-        "verte"
+        "vegetarien"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.99,
       "_chef_note": "La cuisson lente des lentilles et des légumes donne une texture crémeuse et une saveur riche.",
-      "description": "Plat indien crémeux à base de lentilles vertes et haricots rouges, avec une sauce parfumée aux épices et une texture lisse, typique de la cuisine végétarien du Pendjab.",
+      "description": "Le curry de haricots rouges du Pendjab : haricots trempés une nuit puis mijotés dans une sauce épaisse d'oignon, tomate, gingembre, ail et garam masala, servi sur du riz.",
       "instructions": [
-        "Étape 1 : Faire tremper 150 g de haricots rouges et 50 g de lentilles vertes pendant 12 heures. Cuire dans l'eau bouillante pendant 1 heure, jusqu'à tendreté complète.",
-        "Étape 2 : Faire revenir 150 g d'oignon jaune haché dans 30 ml d'huile de coco à feu moyen pendant 8 minutes, jusqu'à dorure profonde. L'odeur doit être caramelisée et délicieuse. Ajouter 15 g d'ail et 11 g de gingembre frais hachés, ainsi que 2,5 g de graines de cumin et 2,5 g de garam masala.",
-        "Étape 3 : Incorporer 360 g de tomates concassées et cuire pendant 8 minutes à feu moyen, en remuant régulièrement. La sauce doit commencer à épaissir et à libérer son arôme.",
-        "Étape 4 : Ajouter les légumineuses cuites avec 200 ml d'eau et laisser mijoter à feu très doux pendant au moins 30 minutes. La sauce doit commencer à épaissir et à devenir crémeuse.",
-        "Étape 5 : Incorporer 100 ml de lait de coco et rectifier l'assaisonnement avec 5 g de sel. La sauce doit être crémeuse et parfumée.",
-        "Étape 6 : Ajouter 15 ml d'huile de coco pour donner une texture lisse et une saveur riche. Laisser mijoter pendant 10 minutes supplémentaires, jusqu'à ce que la sauce soit noire profonde, crémeuse et très parfumée.",
-        "Étape 7 : Servir sans attendre, en vérifiant que la sauce soit crémeuse et très parfumée, avec une texture lisse et une saveur épicée, typique de la cuisine indienne.",
-        "Étape 8 : Garnir avec des herbes fraîches, comme de la coriandre, pour ajouter une touche de fraîcheur et de couleur."
+        "Étape 1 : Faire tremper 250 g de haricots rouges 12 heures, les égoutter, puis les cuire 1 heure dans 1 L d'eau fraîche (après 10 minutes d'ébullition vive), jusqu'à ce qu'ils soient tendres.",
+        "Étape 2 : Faire grésiller 3 g de cumin dans 35 ml d'huile, ajouter 200 g d'oignon haché et le dorer 12 minutes.",
+        "Étape 3 : Ajouter 15 g d'ail, 15 g de gingembre et 5 g de piment hachés, puis 3 g de coriandre moulue et 2 g de curcuma, et cuire 1 minute.",
+        "Étape 4 : Ajouter 400 g de tomates mixées et 4 g de sel, puis cuire 10 minutes jusqu'à ce que l'huile se sépare.",
+        "Étape 5 : Ajouter les haricots avec 200 ml de leur eau et mijoter 20 minutes, en écrasant quelques haricots pour épaissir. Ajouter 3 g de garam masala.",
+        "Étape 6 : Servir parsemé de 10 g de coriandre, avec du riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -47719,7 +47950,7 @@
       "id": "dessert_crumble_aux_myrtilles_veg_15390f",
       "titles": {
         "original": "Blueberry Crisp (Vegan)",
-        "fr": "Crumble aux Myrtilles (Vegan)",
+        "fr": "Crumble myrtilles-citron aux amandes et à l'avoine (vegan)",
         "en": "Blueberry Crisp (Vegan)"
       },
       "origin": {
@@ -47730,15 +47961,15 @@
       },
       "servings": 6,
       "timing": {
-        "prep_active_min": 9,
+        "prep_active_min": 10,
         "prep_passive_min": 0,
-        "cook_min": 35,
-        "total_min": 44
+        "cook_min": 30,
+        "total_min": 40
       },
       "composition": [
         {
           "ingredient": "blueberry",
-          "quantity": 200,
+          "quantity": 500,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -47748,12 +47979,23 @@
           }
         },
         {
-          "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-          "quantity": 100,
+          "ingredient": "lemon_peel_raw",
+          "quantity": 4,
           "unit": "g",
           "meta": {
-            "role": "base",
-            "form": "sifted",
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cornstarch_flour",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "thickener",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -47770,7 +48012,29 @@
           }
         },
         {
-          "ingredient": "white_sugar",
+          "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+          "quantity": 60,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "almond_raw_with_skin_unsalted",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coconut_sugar",
           "quantity": 60,
           "unit": "g",
           "meta": {
@@ -47781,12 +48045,12 @@
           }
         },
         {
-          "ingredient": "vegan_butter",
-          "quantity": 100,
-          "unit": "g",
+          "ingredient": "coconut_oil_plant",
+          "quantity": 70,
+          "unit": "ml",
           "meta": {
             "role": "fat",
-            "form": "diced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -47796,10 +48060,13 @@
         "diet": [
           "diabetes_friendly",
           "kid_friendly",
-          "nut_free"
+          "vegan",
+          "vegetarian",
+          "lactose_free"
         ],
         "allergens": [
-          "gluten"
+          "gluten",
+          "tree_nuts"
         ],
         "technique": [
           "roasting"
@@ -47842,19 +48109,25 @@
         }
       },
       "search_tokens": [
+        "(fleur",
         "(vegan)",
         "45 minutes",
         "all",
+        "almond",
+        "amande",
+        "amandes",
         "anglais",
         "aux",
         "avoine",
-        "beurre",
-        "blanc",
         "ble",
         "blueberry",
         "britannique",
         "british",
-        "butter",
+        "citron",
+        "coco",
+        "coconut",
+        "cocotier)",
+        "cornstarch",
         "crisp",
         "crumble",
         "debutant",
@@ -47864,15 +48137,21 @@
         "facile enfants",
         "famille",
         "farine",
+        "fecule",
         "flour",
         "kids",
+        "l'avoine",
         "leger",
+        "lemon",
         "light",
         "low calorie",
+        "mais",
         "minceur",
         "moyen",
         "myrtilles",
+        "noix",
         "oat",
+        "peel",
         "purpose",
         "roasting",
         "sans produit animal",
@@ -47883,33 +48162,28 @@
         "tout",
         "usage",
         "vegan",
-        "vegetal",
         "vegetalien",
         "vegetarien",
         "wheat",
-        "white"
+        "zeste"
       ],
       "difficulty_level": "easy",
       "dish_type": "dessert",
       "servings_default": 6,
       "_quality_score": 0.88,
-      "description": "Dessert britannique traditionnel, cuit à la perfection, où les myrtilles fondent en bouche sous un crumble croustillant à base de farine, de flocons d'avoine et de sucre, avec une texture sableuse grossière.",
+      "description": "Myrtilles relevées de zeste de citron sous un crumble d'avoine, d'amandes concassées et de sucre de coco, lié à l'huile de coco.",
       "instructions": [
-        "Étape 1 : Préchauffez le four à 180°C. Disposez 200g de myrtilles fraîches dans un plat à gratin en les répartissant uniformément.",
-        "Étape 2 : Préparez le crumble : mélangez 100g de farine de blé, 80g de flocons d'avoine et 60g de sucre dans un saladier jusqu'à obtenir un mélange homogène.",
-        "Étape 3 : Incorporez 100g de beurre végétal froid en morceaux du bout des doigts jusqu'à obtenir une texture sableuse grossière, avec des éléments de crumble de différentes tailles.",
-        "Étape 4 : Répartissez le crumble uniformément sur les myrtilles, en veillant à couvrir toute la surface.",
-        "Étape 5 : Enfournez pendant 30-35 minutes, ou jusqu'à ce que le crumble soit doré et croustillant, avec une légère coloration brune.",
-        "Étape 6 : Vérifiez que les fruits bouillonnent légèrement sur les bords et que le jus des myrtilles est visible, en indiquant que le dessert est cuit à point.",
-        "Étape 7 : Laissez tiédir pendant 10 minutes avant de servir, pour permettre au crumble de se stabiliser et aux myrtilles de conserver leur saveur.",
-        "Étape 8 : Servez tiède avec de la crème de coco ou une boule de glace vanille, pour ajouter une touche de fraîcheur et de crémeux au dessert."
+        "Étape 1 : Préchauffer le four à 180°C.",
+        "Étape 2 : Mélanger 500 g de myrtilles avec 4 g de zeste de citron et 10 g de fécule de maïs, puis les étaler dans un plat.",
+        "Étape 3 : Mélanger 80 g de flocons d'avoine, 60 g de farine, 40 g d'amandes concassées et 60 g de sucre de coco, puis ajouter 70 ml d'huile de coco fondue jusqu'à former des miettes.",
+        "Étape 4 : Répartir sur les fruits et cuire 30 minutes, jusqu'à ce que le dessus soit doré."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
         "gluten_free": false,
         "lactose_free": true,
-        "nut_free": true,
+        "nut_free": false,
         "raw": false,
         "kid_friendly": true
       }
@@ -57149,7 +57423,7 @@
       "id": "egg_crepe_coreenne_aux_oignons_ver_356ac2",
       "titles": {
         "original": "Pajeon",
-        "fr": "Crêpe Coréenne aux Oignons Verts",
+        "fr": "Pajeon aux oignons verts, sauce soja vinaigrée",
         "en": "Crêpe Coréenne with Oignons Verts"
       },
       "origin": {
@@ -57160,30 +57434,30 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
+        "prep_active_min": 10,
         "prep_passive_min": 0,
-        "cook_min": 10,
-        "total_min": 21
+        "cook_min": 25,
+        "total_min": 35
       },
       "composition": [
         {
           "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
-            "form": "sifted",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "green_onion_raw",
-          "quantity": 60,
+          "ingredient": "rice_flour",
+          "quantity": 50,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "chiffonade",
+            "role": "carbohydrate",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -57194,15 +57468,26 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 150,
+          "quantity": 250,
           "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_onion_raw",
+          "quantity": 200,
+          "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
@@ -57223,7 +57508,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -57233,11 +57518,33 @@
           }
         },
         {
-          "ingredient": "yogurt_plain_3pct",
-          "quantity": 125,
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_vinegar_liquid_distilled",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "gochugaru",
+          "quantity": 1,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -57245,12 +57552,16 @@
         }
       ],
       "tags": {
-        "diet": [],
+        "diet": [
+          "vegetarian",
+          "lactose_free",
+          "nut_free"
+        ],
         "allergens": [
           "eggs",
           "gluten",
-          "lactose",
-          "milk"
+          "soy",
+          "sulphites"
         ],
         "technique": [
           "wok"
@@ -57298,11 +57609,12 @@
       },
       "search_tokens": [
         "(eau",
-        "30 minutes",
+        "45 minutes",
         "all",
         "asia",
         "asiatique",
         "aux",
+        "blanc",
         "ble",
         "coree",
         "coreen",
@@ -57317,7 +57629,9 @@
         "facile enfants",
         "famille",
         "farine",
+        "flocons",
         "flour",
+        "gochugaru",
         "green",
         "huile",
         "kids",
@@ -57326,19 +57640,25 @@
         "light",
         "low calorie",
         "minceur",
+        "moyen",
         "oignon",
         "oignons",
         "oil",
         "onion",
         "pajeon",
+        "piment",
         "potable)",
         "purpose",
-        "quick",
-        "rapide",
+        "rice",
+        "riz",
         "salt",
         "sans viande",
+        "sauce",
         "sel",
+        "shoyu",
         "simple",
+        "soja",
+        "soy",
         "table",
         "tout",
         "usage",
@@ -57347,31 +57667,34 @@
         "vegetarien",
         "vert",
         "verts",
+        "verts,",
+        "vinaigre",
+        "vinaigree",
+        "vinegar",
         "water",
         "wheat",
+        "white",
         "with",
         "wok",
-        "yaourt",
-        "yogurt",
         "œuf"
       ],
       "difficulty_level": "easy",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.95,
-      "description": "Crêpe coréenne croustillante et dorée, parfumée aux oignons verts, réalisée avec de la farine, des oignons verts et du lait, cuite à feu moyen-vif pour obtenir une texture croquante.",
+      "description": "La crêpe coréenne des jours de pluie : pâte fine à l'œuf couvrant une nappe d'oignons verts entiers, poêlée jusqu'à être croustillante, trempée dans une sauce soja au vinaigre.",
       "instructions": [
-        "Étape 1: Préparer la pâte pour la crêpe: mélanger 200g de farine avec 150ml d'eau glacée, 110 g d'œufs battus, 125 g de yaourt et une pincée de sel. Ajouter 60g d'oignons verts émincés et mélanger délicatement pendant environ 2 minutes, jusqu'à obtenir une pâte lisse et homogène.",
-        "Étape 2: Chauffer 45 ml d'huile dans une grande poêle à feu moyen-vif. Verser la pâte en couche d'environ 1 cm d'épaisseur, en veillant à recouvrir toute la surface de la poêle.",
-        "Étape 3: Cuire pendant 3 à 4 minutes sans bouger, jusqu'à ce que le fond de la crêpe soit doré et croustillant, avec une couleur brun doré. Retourner délicatement et cuire encore pendant 3 minutes, en vérifiant régulièrement la cuisson pour éviter une coloration trop foncée.",
-        "Étape 4: Couper la crêpe en portions et servir avec une sauce trempette à la sauce soja.",
-        "Étape 5: Vérifier que la crêpe est croustillante, dorée et parfumée aux oignons. Servir chaud et apprécier la saveur coréenne de cette crêpe, en profitant de la texture croquante et de l'arôme des oignons verts."
+        "Étape 1 : Fouetter 150 g de farine, 50 g de farine de riz, 2 œufs (110 g), 250 ml d'eau glacée et 2 g de sel en une pâte fluide.",
+        "Étape 2 : Couper 200 g d'oignons verts en tronçons de 10 cm.",
+        "Étape 3 : Chauffer 15 ml d'huile dans une grande poêle, y ranger un tiers des oignons verts, puis couvrir d'un tiers de la pâte.",
+        "Étape 4 : Cuire 4 minutes à feu moyen-vif, retourner, ajouter un filet d'huile et cuire encore 3 minutes en appuyant. Répéter deux fois.",
+        "Étape 5 : Sauce : mélanger 30 ml de sauce soja, 15 ml de vinaigre et 1 g de gochugaru. Servir la crêpe coupée en carrés."
       ],
       "diet_flags": {
         "vegan": false,
         "vegetarian": true,
         "gluten_free": false,
-        "lactose_free": false,
+        "lactose_free": true,
         "nut_free": true,
         "raw": false,
         "kid_friendly": true
@@ -79165,13 +79488,13 @@
       "id": "main_carottes_glacees_a_lerabl_87d5f0",
       "titles": {
         "original": "Maple Glazed Carrots",
-        "fr": "Carottes Glacées à L'érable",
+        "fr": "Carottes glacées au beurre et à l'érable du Québec",
         "en": "Carottes Glacées à L'érable"
       },
       "origin": {
-        "cuisine": "international",
-        "country": "international",
-        "region": "world",
+        "cuisine": "canadian",
+        "country": "canada",
+        "region": "quebec",
         "city": ""
       },
       "servings": 4,
@@ -79308,6 +79631,7 @@
         "45 minutes",
         "beurre",
         "butter",
+        "canadian",
         "carotte",
         "carottes",
         "carrot",
@@ -79322,7 +79646,6 @@
         "glazed",
         "gluten free",
         "intermediaire",
-        "international",
         "kids",
         "l'erable",
         "leger",
@@ -79333,6 +79656,7 @@
         "moyen",
         "oven_cooking",
         "potable)",
+        "quebec",
         "salt",
         "sans gluten",
         "sans viande",
@@ -79350,7 +79674,7 @@
       "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.86,
-      "description": "Cuisson de carottes tendres et croquantes, nappées d'un glaçage sirupeux à l'érable, parfumées au thym frais — technique de réduction pour une sauce onctueuse et brillante.",
+      "description": "Carottes cuites à couvert puis glacées au beurre et au sirop d'érable jusqu'à ce qu'elles brillent, parfumées au thym frais.",
       "instructions": [
         "Étape 1: Peler 600 g de carottes et les couper en bâtonnets réguliers de 6 cm ou en rondelles épaisses de 1 cm pour une cuisson uniforme, en veillant à ce que les morceaux soient de taille similaire pour une cuisson égale.",
         "Étape 2: Chauffer 25 g de beurre dans une grande poêle à feu moyen, en vérifiant que l'huile est chaude mais pas fumante. Ajouter les carottes et faire revenir 3 minutes en remuant constamment pour éviter de les brûler.",
@@ -80683,7 +81007,7 @@
       "id": "main_crumble_aux_myrtilles_5f7d47",
       "titles": {
         "original": "Blueberry Crisp",
-        "fr": "Crumble aux Myrtilles",
+        "fr": "Crumble pommes-myrtilles au beurre salé",
         "en": "Crumble with Myrtilles"
       },
       "origin": {
@@ -80694,15 +81018,26 @@
       },
       "servings": 6,
       "timing": {
-        "prep_active_min": 9,
-        "prep_passive_min": 10,
-        "cook_min": 32,
-        "total_min": 51
+        "prep_active_min": 15,
+        "prep_passive_min": 0,
+        "cook_min": 35,
+        "total_min": 50
       },
       "composition": [
         {
           "ingredient": "blueberry",
-          "quantity": 500,
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "apple_raw",
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -80717,24 +81052,24 @@
           "unit": "g",
           "meta": {
             "role": "base",
-            "form": "sifted",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "oat_flakes_whole_seed",
-          "quantity": 80,
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "base",
-            "form": "flakes",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "white_sugar",
+          "ingredient": "brown_sugar",
           "quantity": 60,
           "unit": "g",
           "meta": {
@@ -80746,11 +81081,22 @@
         },
         {
           "ingredient": "butter_salted",
-          "quantity": 100,
+          "quantity": 90,
           "unit": "g",
           "meta": {
             "role": "fat",
-            "form": "diced",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -80761,25 +81107,17 @@
           "unit": "1 boule",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "Glace à la vanille",
-            "note": "Pour un contraste de températures",
-            "optional": true
-          }
-        },
-        {
-          "ingredient": "yogurt_plain_3pct",
-          "quantity": null,
-          "unit": "1 pot",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "Yaourt",
-            "note": "Pour un contraste de textures",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
       "tags": {
-        "diet": [],
+        "diet": [
+          "vegetarian",
+          "nut_free"
+        ],
         "allergens": [
           "gluten",
           "lactose",
@@ -80834,15 +81172,16 @@
         "1 heure",
         "all",
         "anglais",
-        "aux",
+        "apple",
         "avoine",
         "beurre",
-        "blanc",
         "ble",
         "blueberry",
         "britannique",
         "british",
+        "brown",
         "butter",
+        "cinnamon",
         "cream",
         "crisp",
         "crumble",
@@ -80864,7 +81203,11 @@
         "myrtilles",
         "oat",
         "oven_cooking",
+        "pomme",
+        "pommes",
         "purpose",
+        "roux",
+        "sale",
         "sans viande",
         "simple",
         "sucre",
@@ -80875,23 +81218,19 @@
         "vanille",
         "vegetarien",
         "wheat",
-        "white",
-        "with",
-        "yaourt",
-        "yogurt"
+        "with"
       ],
       "difficulty_level": "easy",
       "dish_type": "dessert",
       "servings_default": 6,
       "_quality_score": 0.85,
-      "description": "Crumble aux myrtilles croustillant, avec une texture sableuse et dorée, typique de la cuisine britannique traditionnelle, parfumé par les myrtilles fraîches et la douceur du sucre blanc.",
+      "description": "Crumble à l'anglaise : pommes fondantes et myrtilles sous une pâte sablée croustillante au beurre salé et aux flocons d'avoine.",
       "instructions": [
-        "Étape 1: Préchauffer le four à 180°C. Disposer 500g de myrtilles dans un plat à gratin, en les répartissant uniformément pour une cuisson égale.",
-        "Étape 2: Préparer le crumble: mélanger 100g de farine de blé, 80g de flocons d'avoine et 60g de sucre dans un bol, jusqu'à obtenir un mélange homogène.",
-        "Étape 3: Faire fondre 100g de beurre, puis l'incorporer dans le mélange de crumble, en remuant du bout des doigts, jusqu'à ce que la texture devienne sableuse et grossière, ressemblant à du sable humide.",
-        "Étape 4: Répartir le crumble uniformément sur les myrtilles, en veillant à couvrir toute la surface pour une cuisson uniforme.",
-        "Étape 5: Enfourner pendant 30-35 minutes, en vérifiant régulièrement, jusqu'à ce que le crumble soit doré et les myrtilles bouillonnent légèrement sur les bords, avec une légère effervescence.",
-        "Étape 6: Laisser tiédir pendant 10 minutes. Servir tiède, accompagné d'une boule de glace à la vanille ou d'un yaourt, pour un contraste de températures et de textures agréable."
+        "Étape 1 : Préchauffer le four à 180°C.",
+        "Étape 2 : Couper 300 g de pommes en dés, les mélanger avec 300 g de myrtilles et 1 g de cannelle, puis les étaler dans un plat.",
+        "Étape 3 : Sabler 100 g de farine, 60 g de flocons d'avoine et 60 g de sucre roux avec 90 g de beurre salé froid.",
+        "Étape 4 : Répartir la pâte en miettes sur les fruits.",
+        "Étape 5 : Cuire 35 minutes, jusqu'à ce que le dessus soit doré et le jus bouillonne. Servir tiède."
       ],
       "diet_flags": {
         "vegan": false,
@@ -141982,7 +142321,7 @@
       "id": "side_carottes_glacees_a_lerabl_1d1c44",
       "titles": {
         "original": "Maple Glazed Carrots (Vegan)",
-        "fr": "Carottes Glacées à L'érable (Vegan)",
+        "fr": "Carottes rôties à l'érable, cumin et sésame (vegan)",
         "en": "Maple Glazed Carrots (Vegan)"
       },
       "origin": {
@@ -141993,10 +142332,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 7,
+        "prep_active_min": 10,
         "prep_passive_min": 0,
-        "cook_min": 15,
-        "total_min": 22
+        "cook_min": 33,
+        "total_min": 43
       },
       "composition": [
         {
@@ -142005,14 +142344,14 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "maple_syrup",
-          "quantity": 60,
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "sweetener",
@@ -142022,30 +142361,52 @@
           }
         },
         {
-          "ingredient": "vegan_butter",
-          "quantity": 40,
-          "unit": "g",
+          "ingredient": "olive_oil_plant",
+          "quantity": 25,
+          "unit": "ml",
           "meta": {
             "role": "fat",
-            "form": "diced",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sesame_seed_hulled_dried",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "thyme_fresh_herb",
-          "quantity": 1.5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "leaves",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 3,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -142058,14 +142419,17 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "kid_friendly",
           "low_calorie",
-          "nut_free",
           "vegan",
-          "vegetarian"
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
         ],
-        "allergens": [],
+        "allergens": [
+          "sesame"
+        ],
         "technique": [
           "sauteed",
           "roasting"
@@ -142111,47 +142475,45 @@
       },
       "search_tokens": [
         "(vegan)",
-        "30 minutes",
-        "beurre",
-        "butter",
+        "45 minutes",
         "canadian",
         "carotte",
         "carottes",
         "carrot",
         "carrots",
         "coeliaque",
+        "cumin",
         "d'erable",
         "enfants",
         "facile enfants",
         "famille",
-        "glacees",
         "glazed",
         "gluten free",
         "intermediaire",
         "kids",
-        "l'erable",
+        "l'erable,",
         "leger",
         "light",
         "low calorie",
         "maple",
         "minceur",
         "moyen",
-        "quick",
-        "rapide",
+        "olive",
         "roasting",
+        "roties",
         "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
         "sel",
+        "sesame",
         "sirop",
         "syrup",
         "table",
         "thym",
         "thyme",
         "vegan",
-        "vegetal",
         "vegetalien",
         "vegetarien"
       ],
@@ -142160,14 +142522,12 @@
       "servings_default": 4,
       "_quality_score": 0.89,
       "_chef_note": "Un accompagnement délicieux et parfumé, prêt à être dégusté.",
-      "description": "Carottes glacées à l'érable, parfumées au thym frais, avec une texture tendre et une sauce sirupeuse qui colle aux carottes, préparées avec soin dans une poêle à feu moyen.",
+      "description": "Carottes entières rôties au four avec sirop d'érable, cumin et huile d'olive, parsemées de graines de sésame grillées.",
       "instructions": [
-        "Étape 1 : Peler 600g de carottes et les couper en bâtonnets réguliers de 6 cm ou en rondelles épaisses de 1 cm pour une cuisson uniforme.",
-        "Étape 2 : Chauffer 40g de beurre végétal dans une grande poêle à feu moyen, puis ajouter les carottes et faire revenir 3 min en remuant, jusqu'à ce qu'elles commencent à ramollir et libèrent une odeur légèrement sucrée.",
-        "Étape 3 : Verser 60g de sirop d'érable et ajouter 3 g de sel, puis porter à ébullition, en sentant l'arôme sucré se dégager et en observant la formation de bulles.",
-        "Étape 4 : Couvrir et cuire à feu doux pendant 8 min jusqu'à ce que les carottes soient tendres, mais encore al dente, en vérifiant leur texture régulièrement pour éviter la surcuisson.",
-        "Étape 5 : Découvrir et laisser réduire le glaçage pendant 3 à 4 min à feu moyen, en remuant occasionnellement, jusqu'à obtenir une sauce sirupeuse et brillante qui colle aux carottes et libère un parfum intense.",
-        "Étape 6 : Ajouter 1,5g de thym frais haché pour une touche de parfum herbacé, puis servir chaud et savourer les saveurs."
+        "Étape 1 : Préchauffer le four à 210°C.",
+        "Étape 2 : Mélanger 600 g de carottes épluchées et coupées en deux dans la longueur avec 25 ml d'huile d'olive, 2 g de cumin, 2 g de thym et 2 g de sel.",
+        "Étape 3 : Rôtir 25 minutes, puis arroser de 40 g de sirop d'érable et rôtir encore 8 minutes.",
+        "Étape 4 : Parsemer de 10 g de graines de sésame grillées et servir."
       ],
       "diet_flags": {
         "vegan": true,
@@ -148605,7 +148965,7 @@
       "id": "snack_bannock_vegan_46a1a8",
       "titles": {
         "original": "Bannock () (Vegan)",
-        "fr": "Bannock (Vegan)",
+        "fr": "Bannock frit aux bleuets (vegan)",
         "en": "Bannock () (Vegan)"
       },
       "origin": {
@@ -148616,10 +148976,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 7,
-        "prep_passive_min": 5,
-        "cook_min": 20,
-        "total_min": 32
+        "prep_active_min": 10,
+        "prep_passive_min": 0,
+        "cook_min": 15,
+        "total_min": 25
       },
       "composition": [
         {
@@ -148628,25 +148988,69 @@
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
-            "form": "sifted",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "baking_powder",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "leavening",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "blueberry_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_sugar",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "vegan_butter",
-          "quantity": 40,
+          "quantity": 20,
           "unit": "g",
           "meta": {
             "role": "fat_cooking",
-            "form": "diced",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 140,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 3,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -148656,11 +149060,11 @@
           }
         },
         {
-          "ingredient": "water",
-          "quantity": 150,
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 30,
           "unit": "ml",
           "meta": {
-            "role": "ingredient",
+            "role": "fat",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -148676,34 +149080,15 @@
             "note": "Pour accompagner le bannock",
             "optional": true
           }
-        },
-        {
-          "ingredient": "baking_powder",
-          "quantity": 10,
-          "unit": "g",
-          "meta": {
-            "role": "leavening",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "sunflower_oil_plant",
-          "quantity": 10,
-          "unit": "ml",
-          "meta": {
-            "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
         "diet": [
           "kid_friendly",
           "low_calorie",
+          "vegan",
+          "vegetarian",
+          "lactose_free",
           "nut_free"
         ],
         "allergens": [
@@ -148752,12 +149137,17 @@
       "search_tokens": [
         "(eau",
         "(vegan)",
-        "45 minutes",
+        "30 minutes",
         "all",
+        "aux",
         "baking",
         "bannock",
         "beurre",
+        "blanc",
         "ble",
+        "bleuet",
+        "bleuets",
+        "blueberry",
         "butter",
         "canadian",
         "debutant",
@@ -148770,17 +149160,19 @@
         "farine",
         "flour",
         "fraise",
+        "frit",
         "kids",
         "leger",
         "lever",
         "light",
         "low calorie",
         "minceur",
-        "moyen",
         "potable)",
         "poudre",
         "powder",
         "purpose",
+        "quick",
+        "rapide",
         "roasting",
         "salt",
         "sans produit animal",
@@ -148788,6 +149180,8 @@
         "sel",
         "simple",
         "strawberry",
+        "sucre",
+        "sugar",
         "sunflower",
         "table",
         "tournesol",
@@ -148798,23 +149192,20 @@
         "vegetalien",
         "vegetarien",
         "water",
-        "wheat"
+        "wheat",
+        "white"
       ],
       "difficulty_level": "easy",
       "dish_type": "snack",
       "servings_default": 4,
       "_quality_score": 0.82,
-      "description": "Pain plat cuit à la poêle, à base de farine, avec une texture croustillante à l'extérieur et moelleuse à l'intérieur, typique de la tradition autochtone canadienne.",
+      "description": "Version poêlée du bannock, comme dans les pow-wow : petits pains à la pâte aux bleuets sauvages, dorés à l'huile, moelleux à cœur.",
       "instructions": [
-        "Étape 1 : Dans un saladier, mélangez 200g de farine, 10 g de levure chimique et 3g de sel jusqu'à obtenir une texture homogène.",
-        "Étape 2 : Ajoutez 40g de beurre végétal et incorporez-le du bout des doigts jusqu'à obtenir une texture sableuse, avec des morceaux de beurre de la taille d'un petit pois.",
-        "Étape 3 : Versez 150ml d'eau petit à petit, en remuant avec une spatule, et pétrissez brièvement jusqu'à obtenir une pâte souple et légèrement collante.",
-        "Étape 4 : Façonnez la pâte en galette épaisse d'environ 2 cm, en veillant à ce qu'elle soit régulière et lisse.",
-        "Étape 5 : Chauffez une poêle ou un comal à feu moyen avec 10 ml d'huile, jusqu'à ce qu'elle brille et commence à fumer légèrement.",
-        "Étape 6 : Cuisez le bannock 8-10 minutes de chaque côté, feu doux, à couvert, en vérifiant régulièrement la couleur et la texture, jusqu'à ce qu'il soit doré et croustillant.",
-        "Étape 7 : Vérifiez la cuisson au centre avec un couteau — il doit ressortir propre et sec, sans trace de pâte crue.",
-        "Étape 8 : Laissez reposer 5 minutes avant de découper, pour que la pâte se détende et le bannock soit plus facile à couper.",
-        "Étape 9 : Servez chaud, avec de la confiture."
+        "Étape 1 : Mélanger 200 g de farine, 10 g de poudre à lever, 15 g de sucre et 2 g de sel, puis sabler avec 20 g de beurre végétal.",
+        "Étape 2 : Ajouter 140 ml d'eau, puis incorporer délicatement 100 g de bleuets.",
+        "Étape 3 : Former 8 petites galettes de 1,5 cm d'épaisseur.",
+        "Étape 4 : Les cuire dans une poêle avec 30 ml d'huile de tournesol, 4 minutes de chaque côté à feu moyen, jusqu'à ce qu'elles soient dorées.",
+        "Étape 5 : Égoutter sur du papier absorbant et servir tiède."
       ],
       "diet_flags": {
         "vegan": true,
@@ -149269,7 +149660,7 @@
       "id": "snack_crepe_coreenne_aux_oignon_a45536",
       "titles": {
         "original": "Pajeon (Vegan)",
-        "fr": "Crêpe Coréenne aux Oignons Verts (Vegan)",
+        "fr": "Kimchijeon, crêpe croustillante au kimchi (vegan)",
         "en": "Pajeon (Vegan)"
       },
       "origin": {
@@ -149280,37 +149671,59 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
+        "prep_active_min": 10,
         "prep_passive_min": 0,
-        "cook_min": 10,
-        "total_min": 21
+        "cook_min": 15,
+        "total_min": 25
       },
       "composition": [
         {
           "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
-            "form": "sifted",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "potato_starch_flour",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "thickener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "base_kimchi_61791a",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "green_onion_raw",
-          "quantity": 60,
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "chiffonade",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 150,
+          "quantity": 180,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -149320,8 +149733,30 @@
           }
         },
         {
+          "ingredient": "gochugaru",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "sesame_oil_plant",
-          "quantity": 30,
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 25,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -149332,7 +149767,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -149351,33 +149786,12 @@
             "note": "Pour la décoration et la saveur",
             "optional": true
           }
-        },
-        {
-          "ingredient": "flaxseed_linseed_ground",
-          "quantity": 7,
-          "unit": "g",
-          "meta": {
-            "role": "binder",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "cornstarch_flour",
-          "quantity": 8,
-          "unit": "g",
-          "meta": {
-            "role": "thickener",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
+          "vegan",
+          "vegetarian",
           "lactose_free",
           "nut_free"
         ],
@@ -149429,44 +149843,41 @@
       },
       "search_tokens": [
         "(eau",
-        "(linseed)",
         "(vegan)",
         "30 minutes",
         "all",
         "asia",
         "asiatique",
-        "aux",
+        "base_kimchi_61791a",
         "ble",
         "coree",
         "coreen",
-        "coreenne",
-        "cornstarch",
         "crepe",
+        "croustillante",
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "farine",
         "fecule",
-        "flaxseed",
+        "flocons",
         "flour",
+        "gochugaru",
         "green",
-        "kids",
+        "kimchi",
+        "kimchijeon,",
         "korean",
         "leger",
         "light",
-        "lin",
         "low calorie",
-        "mais",
         "minceur",
         "oignon",
-        "oignons",
         "onion",
         "pajeon",
+        "piment",
+        "pomme",
         "potable)",
+        "potato",
         "purpose",
         "quick",
         "rapide",
@@ -149477,14 +149888,17 @@
         "sel",
         "sesame",
         "simple",
+        "starch",
+        "sunflower",
         "table",
+        "terre",
+        "tournesol",
         "tout",
         "usage",
         "vegan",
         "vegetalien",
         "vegetarien",
         "vert",
-        "verts",
         "water",
         "wheat"
       ],
@@ -149493,14 +149907,13 @@
       "servings_default": 4,
       "_quality_score": 0.95,
       "_chef_note": "N'oubliez pas de remplacer les ingrédients non végétaliens par leurs équivalents végétaliens, comme le lait de coco ou la crème de coco.",
-      "description": "En-cas coréen croustillant et parfumé, réalisé avec de la farine, des oignons verts émincés et une pâte délicate, cuite à la poêle pour une texture dorée et croquante.",
+      "description": "Crêpe coréenne sans œuf au kimchi haché et à son jus, avec oignons verts et fécule pour le croustillant, poêlée à l'huile de sésame.",
       "instructions": [
-        "Étape 1 : Préparez la pâte en mélangeant 200 g de farine, 150 ml d'eau glacée, 1 cuillère à soupe de fécule de maïs, 7g de graines de lin moulues et une pincée de sel. Quelques grumeaux sont normaux — ne pas trop mélanger.",
-        "Étape 2 : Émincez finement en biseau 60 g d'oignons verts. Ajoutez à la pâte avec du piment rouge en julienne si désiré.",
-        "Étape 3 : Chauffez 30 ml d'huile de sésame dans une grande poêle à feu moyen-vif. Versez la pâte en couche de 1 cm d'épaisseur.",
-        "Étape 4 : Faites cuire pendant 3 à 4 minutes sans bouger, jusqu'à ce que le fond soit bien doré et croustillant. Retournez délicatement et faites cuire encore pendant 3 minutes.",
-        "Étape 5 : Coupez en portions et servez avec une sauce trempette végétalienne (sauce soja, vinaigre de riz, huile de sésame et graines de sésame). Le pajeon doit être croustillant, doré et parfumé aux oignons.",
-        "Étape 6 : Vous pouvez accompagner votre pajeon de votre sauce favorite. Servez chaud, garni de graines de sésame et d'oignons verts émincés."
+        "Étape 1 : Hacher 250 g de kimchi en gardant son jus, émincer 40 g d'oignons verts.",
+        "Étape 2 : Mélanger 150 g de farine, 30 g de fécule, 180 ml d'eau glacée, 2 g de gochugaru et 1 g de sel, puis ajouter le kimchi, son jus et les oignons verts.",
+        "Étape 3 : Chauffer 15 ml d'huile de tournesol et 5 ml d'huile de sésame dans une poêle, y étaler la moitié de la pâte en couche fine.",
+        "Étape 4 : Cuire 4 minutes à feu moyen-vif jusqu'à ce que le dessous soit croustillant, retourner et cuire 3 minutes. Répéter.",
+        "Étape 5 : Couper en parts et servir chaud."
       ],
       "diet_flags": {
         "vegan": true,
@@ -149509,7 +149922,7 @@
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
-        "kid_friendly": true
+        "kid_friendly": false
       }
     },
     {
@@ -174060,7 +174473,7 @@
       "id": "wrap_enchiladas_vegan_f70bca",
       "titles": {
         "original": "Enchiladas (Vegan)",
-        "fr": "Enchiladas (Vegan)",
+        "fr": "Enchiladas verdes à la patate douce et aux épinards (vegan)",
         "en": "Enchiladas Végétariennes (Vegan)"
       },
       "origin": {
@@ -174071,10 +174484,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 21,
-        "prep_passive_min": 12,
-        "cook_min": 25,
-        "total_min": 58
+        "prep_active_min": 25,
+        "prep_passive_min": 0,
+        "cook_min": 50,
+        "total_min": 75
       },
       "composition": [
         {
@@ -174083,14 +174496,36 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sweet_potato_raw",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "spinach_raw_baby",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "black_bean_boiled",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -174101,84 +174536,84 @@
         },
         {
           "ingredient": "base_vegan_cheddar_024998",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomatillo_raw",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "fruit",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "serrano_pepper_raw",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "yellow_onion_raw",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 15,
+          "quantity": 9,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "fruit",
-            "form": "roughly_chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "ancho_pepper_spice_dried",
+          "ingredient": "coriander_raw_fresh_herb",
           "quantity": 20,
           "unit": "g",
           "meta": {
-            "role": "spice",
-            "form": "whole",
-            "state": "dry",
+            "role": "herb",
+            "form": "",
+            "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cumin_spice_seed",
-          "quantity": 2.5,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "coriander_spice_seed",
           "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "quantity": 35,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -174189,7 +174624,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -174213,8 +174648,10 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "high_protein",
+          "vegan",
+          "vegetarian",
+          "gluten_free",
           "lactose_free"
         ],
         "allergens": [
@@ -174265,9 +174702,8 @@
       },
       "search_tokens": [
         "(vegan)",
-        "1 heure",
         "ail",
-        "ancho",
+        "aux",
         "avance",
         "base_tortilla_92c2a6",
         "base_vegan_cheddar_024998",
@@ -174279,41 +174715,52 @@
         "coriander",
         "coriandre",
         "cumin",
+        "douce",
         "enchiladas",
         "epice",
+        "epinard",
+        "epinards",
         "garlic",
         "gluten free",
         "haricot",
         "jaune",
+        "jeunes",
         "latino",
         "leger",
+        "lent",
         "light",
+        "long",
         "low calorie",
         "mexicain",
         "mexican",
         "mexique",
+        "mijote",
         "minceur",
         "noir",
         "oignon",
         "olive",
         "onion",
+        "patate",
         "pepper",
         "piment",
+        "potato",
+        "pousses",
         "roasting",
-        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
-        "sel",
-        "table",
+        "serrano",
+        "spinach",
+        "sweet",
         "technique",
-        "tomate",
-        "tomato",
+        "tomatille",
+        "tomatillo",
         "vegan",
         "vegetalien",
         "vegetarien",
         "vegetariennes",
+        "verdes",
         "yellow"
       ],
       "difficulty_level": "hard",
@@ -174321,13 +174768,13 @@
       "servings_default": 4,
       "_quality_score": 1.0,
       "_chef_note": "Vous pouvez personnaliser les enchiladas en ajoutant d'autres légumes ou herbes à votre goût.",
-      "description": "Rouleaux de tortillas mexicaines tendres, garnis de haricots noirs crémeux, de fromage végétal fondu et d'oignon jaune caramélisé, le tout nappé d'une sauce enchilada épicée et servie chaud.",
+      "description": "Enchiladas à la sauce verte de tomatilles, piment serrano et coriandre, garnies de patate douce rôtie, d'épinards et de haricots noirs, gratinées au cheddar végétal.",
       "instructions": [
-        "Étape 1 : Préparez la sauce enchilada en faisant revenir 150 g d'oignon émincé et 15g d'ail haché dans 45ml d'huile d'olive, puis ajoutez 300g de tomates concassées, 20g de piments ancho réhydratés, 2,5g de cumin en poudre et 2g de coriandre moulue. Laissez mijoter pendant 12 minutes à feu doux, en remuant occasionnellement, jusqu'à ce que la sauce ait réduit légèrement et que les saveurs se soient bien mélangées.",
-        "Étape 2 : Garnissez 320g de tortillas de 300g de haricots noirs égouttés, de 100g de fromage végétal râpé. Roulez-les fermement, en veillant à ce que les bords soient bien joints pour éviter que le contenu ne s'échappe pendant la cuisson.",
-        "Étape 3 : Disposez les tortillas roulées côte à côte dans un plat et nappez-les généreusement de sauce enchilada chaude, en veillant à ce que chaque rouleau soit bien enrobé de sauce.",
-        "Étape 4 : Parsemez des 50 g de fromage végétal restants et enfournez dans un four préchauffé à 180°C pendant 20 à 22 minutes, ou jusqu'à ce que le fromage soit fondu et gratiné. Vérifiez que les rouleaux soient chauds et que la sauce bulle légèrement.",
-        "Étape 5 : Servez les enchiladas chaudes, accompagnées d'une salade verte."
+        "Étape 1 : Préchauffer le four à 210°C. Rôtir 400 g de patate douce en dés avec 20 ml d'huile d'olive, 2 g de cumin et 1 g de sel, 25 minutes.",
+        "Étape 2 : Sauce verte : cuire 400 g de tomatilles, 10 g de serrano, 50 g d'oignon et 9 g d'ail dans l'eau bouillante 8 minutes, puis les mixer avec 20 g de coriandre, 15 ml d'huile et 2 g de sel.",
+        "Étape 3 : Faire tomber 150 g d'épinards avec 50 g d'oignon, puis les mélanger à la patate douce et à 150 g de haricots noirs.",
+        "Étape 4 : Baisser le four à 190°C. Garnir et rouler les tortillas, les ranger dans un plat et les napper de sauce verte.",
+        "Étape 5 : Parsemer de 100 g de cheddar végétal et cuire 15 minutes."
       ],
       "diet_flags": {
         "vegan": true,

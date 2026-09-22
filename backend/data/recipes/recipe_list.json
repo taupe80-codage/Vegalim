@@ -1550,24 +1550,32 @@
   },
   {
     "id": "bread_bannock_e03ffe",
-    "title": "Bannock",
-    "cuisine": "ethiopian",
+    "title": "Bannock au four, pain des Premières Nations",
+    "cuisine": "canadian",
     "dish_type": "bread",
     "vegan": false,
-    "diet": [],
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
     "allergens": [
       "gluten",
       "lactose",
       "milk"
     ],
     "servings": 4,
-    "time_total": 37,
+    "time_total": 35,
     "confidence": 1.0,
-    "description": "Bannock végétarien croustillant, à texture dorée et tendre, issu de la tradition autochtone canadienne, préparé avec soin à partir de farine de blé et beurre, pour une saveur riche et une texture croustillante.",
+    "description": "Pain rapide sans levure des Premières Nations du Canada : farine, poudre à lever, beurre et eau, façonné en galette épaisse et cuit au four jusqu'à ce qu'il soit doré.",
     "composition": [
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "baking_powder",
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -1576,59 +1584,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
         "ingredient": "water",
-        "quantity": 120,
+        "quantity": 170,
         "unit": "ml"
-      },
-      {
-        "ingredient": "strawberry_jam",
-        "quantity": null,
-        "unit": "2 cuillères à soupe"
-      }
-    ],
-    "n_instructions": 10,
-    "flags": [],
-    "similar": [
-      {
-        "id": "snack_bannock_vegan_46a1a8",
-        "title": "Bannock (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "snack_bannock_vegan_46a1a8",
-    "title": "Bannock (Vegan)",
-    "cuisine": "canadian",
-    "dish_type": "snack",
-    "vegan": false,
-    "diet": [
-      "kid_friendly",
-      "low_calorie",
-      "nut_free"
-    ],
-    "allergens": [
-      "gluten"
-    ],
-    "servings": 4,
-    "time_total": 32,
-    "confidence": 1.0,
-    "description": "Pain plat cuit à la poêle, à base de farine, avec une texture croustillante à l'extérieur et moelleuse à l'intérieur, typique de la tradition autochtone canadienne.",
-    "composition": [
-      {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 40,
-        "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
@@ -1636,14 +1594,41 @@
         "unit": "g"
       },
       {
-        "ingredient": "water",
-        "quantity": 150,
-        "unit": "ml"
-      },
-      {
         "ingredient": "strawberry_jam",
         "quantity": null,
-        "unit": "1 cuillère à soupe"
+        "unit": "2 cuillères à soupe"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "snack_bannock_vegan_46a1a8",
+    "title": "Bannock frit aux bleuets (vegan)",
+    "cuisine": "canadian",
+    "dish_type": "snack",
+    "vegan": true,
+    "diet": [
+      "kid_friendly",
+      "low_calorie",
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 1.0,
+    "description": "Version poêlée du bannock, comme dans les pow-wow : petits pains à la pâte aux bleuets sauvages, dorés à l'huile, moelleux à cœur.",
+    "composition": [
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 200,
+        "unit": "g"
       },
       {
         "ingredient": "baking_powder",
@@ -1651,20 +1636,44 @@
         "unit": "g"
       },
       {
-        "ingredient": "sunflower_oil_plant",
-        "quantity": 10,
+        "ingredient": "blueberry_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegan_butter",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 140,
         "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "strawberry_jam",
+        "quantity": null,
+        "unit": "1 cuillère à soupe"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "bread_bannock_e03ffe",
-        "title": "Bannock",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "bread_bao_ff9db9",
@@ -3515,103 +3524,36 @@
     "similar": []
   },
   {
-    "id": "dal_boulettes_suedoises_2ac55d",
-    "title": "Boulettes Suédoises",
-    "cuisine": "swedish",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "high_protein"
-    ],
-    "allergens": [
-      "eggs",
-      "gluten"
-    ],
-    "servings": 4,
-    "time_total": 40,
-    "confidence": 1.0,
-    "description": "Boulettes suédoises végétariennes, tendres et parfumées, préparées avec des pois chiches et une chapelure fine, dans une sauce crémeuse aux herbes fraîches — texture dense et rustique, saveur intense et équilibrée, avec une odeur de noix de muscade.",
-    "composition": [
-      {
-        "ingredient": "chickpea_boiled",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "ingredient": "egg_raw",
-        "quantity": 110,
-        "unit": "g"
-      },
-      {
-        "ingredient": "breadcrumbs",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "nutmeg_spice",
-        "quantity": 1,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_salad_raw_plain",
-        "quantity": null,
-        "unit": "1 portion"
-      }
-    ],
-    "n_instructions": 5,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dal_boulettes_suedoises_vegan_fea9f6",
-        "title": "Boulettes Suédoises (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "dal_boulettes_suedoises_vegan_fea9f6",
-    "title": "Boulettes Suédoises (Vegan)",
+    "title": "Boulettes suédoises aux lentilles et champignons, sauce brune (vegan)",
     "cuisine": "swedish",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
       "high_protein",
+      "vegan",
+      "vegetarian",
       "lactose_free",
       "nut_free"
     ],
     "allergens": [
-      "gluten"
+      "gluten",
+      "soy"
     ],
     "servings": 4,
-    "time_total": 45,
+    "time_total": 70,
     "confidence": 1.0,
-    "description": "Boulettes suédoises véganes crémeuses et parfumées, servies avec une sauce onctueuse et une texture moelleuse, inspirées de la cuisine scandinave. Elles sont préparées avec des pois chiches, des oignons et des épices, puis cuites dans une huile végétale pour donner une saveur riche et complexe.",
+    "description": "Boulettes végétales de lentilles et de champignons au thym, liées au lin, servies dans une sauce brune au lait d'avoine et à la sauce soja.",
     "composition": [
       {
-        "ingredient": "chickpea_boiled",
-        "quantity": 400,
+        "ingredient": "green_lentil_dried",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "button_mushroom_raw",
+        "quantity": 250,
         "unit": "g"
       },
       {
@@ -3622,6 +3564,16 @@
       {
         "ingredient": "breadcrumbs",
         "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "flaxseed_linseed_ground",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "thyme_dried_herb",
+        "quantity": 1,
         "unit": "g"
       },
       {
@@ -3631,49 +3583,48 @@
       },
       {
         "ingredient": "sunflower_oil_plant",
-        "quantity": 45.7,
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oat_milk_refrigerated_plain_plant",
+        "quantity": 200,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 450,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
+        "quantity": 1,
         "unit": "g"
       },
       {
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
         "unit": "1 poignée"
-      },
-      {
-        "ingredient": "flaxseed_linseed_ground",
-        "quantity": 7,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "coconut_milk_plant",
-        "quantity": 150,
-        "unit": "ml"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "dal_boulettes_suedoises_2ac55d",
-        "title": "Boulettes Suédoises",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dal_grain_bowl_mediterraneen_2d5531",
@@ -5339,8 +5290,8 @@
   },
   {
     "id": "main_carottes_glacees_a_lerabl_87d5f0",
-    "title": "Carottes Glacées à L'érable",
-    "cuisine": "international",
+    "title": "Carottes glacées au beurre et à l'érable du Québec",
+    "cuisine": "canadian",
     "dish_type": "side",
     "vegan": false,
     "diet": [
@@ -5353,7 +5304,7 @@
     "servings": 4,
     "time_total": 32,
     "confidence": 1.0,
-    "description": "Cuisson de carottes tendres et croquantes, nappées d'un glaçage sirupeux à l'érable, parfumées au thym frais — technique de réduction pour une sauce onctueuse et brillante.",
+    "description": "Carottes cuites à couvert puis glacées au beurre et au sirop d'érable jusqu'à ce qu'elles brillent, parfumées au thym frais.",
     "composition": [
       {
         "ingredient": "carrot_raw",
@@ -5388,70 +5339,7 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "side_carottes_glacees_a_lerabl_1d1c44",
-        "title": "Carottes Glacées à L'érable (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "side_carottes_glacees_a_lerabl_1d1c44",
-    "title": "Carottes Glacées à L'érable (Vegan)",
-    "cuisine": "canadian",
-    "dish_type": "side",
-    "vegan": true,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "kid_friendly",
-      "low_calorie",
-      "nut_free",
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 22,
-    "confidence": 1.0,
-    "description": "Carottes glacées à l'érable, parfumées au thym frais, avec une texture tendre et une sauce sirupeuse qui colle aux carottes, préparées avec soin dans une poêle à feu moyen.",
-    "composition": [
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "maple_syrup",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "thyme_fresh_herb",
-        "quantity": 1.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 3,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "main_carottes_glacees_a_lerabl_87d5f0",
-        "title": "Carottes Glacées à L'érable",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "entry_carottes_rapees_e66bae",
@@ -5514,6 +5402,70 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "side_carottes_glacees_a_lerabl_1d1c44",
+    "title": "Carottes rôties à l'érable, cumin et sésame (vegan)",
+    "cuisine": "canadian",
+    "dish_type": "side",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "kid_friendly",
+      "low_calorie",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "sesame"
+    ],
+    "servings": 4,
+    "time_total": 43,
+    "confidence": 1.0,
+    "description": "Carottes entières rôties au four avec sirop d'érable, cumin et huile d'olive, parsemées de graines de sésame grillées.",
+    "composition": [
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "maple_syrup",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sesame_seed_hulled_dried",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "thyme_fresh_herb",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 4,
     "flags": [],
     "similar": []
   },
@@ -8414,21 +8366,26 @@
     "similar": []
   },
   {
-    "id": "main_crumble_aux_myrtilles_5f7d47",
-    "title": "Crumble aux Myrtilles",
+    "id": "dessert_crumble_aux_myrtilles_veg_15390f",
+    "title": "Crumble myrtilles-citron aux amandes et à l'avoine (vegan)",
     "cuisine": "british",
     "dish_type": "dessert",
-    "vegan": false,
-    "diet": [],
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "kid_friendly",
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
     "allergens": [
       "gluten",
-      "lactose",
-      "milk"
+      "tree_nuts"
     ],
     "servings": 6,
-    "time_total": 51,
+    "time_total": 40,
     "confidence": 1.0,
-    "description": "Crumble aux myrtilles croustillant, avec une texture sableuse et dorée, typique de la cuisine britannique traditionnelle, parfumé par les myrtilles fraîches et la douceur du sucre blanc.",
+    "description": "Myrtilles relevées de zeste de citron sous un crumble d'avoine, d'amandes concassées et de sucre de coco, lié à l'huile de coco.",
     "composition": [
       {
         "ingredient": "blueberry",
@@ -8436,8 +8393,13 @@
         "unit": "g"
       },
       {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 100,
+        "ingredient": "lemon_peel_raw",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cornstarch_flour",
+        "quantity": 10,
         "unit": "g"
       },
       {
@@ -8446,90 +8408,94 @@
         "unit": "g"
       },
       {
-        "ingredient": "white_sugar",
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "almond_raw_with_skin_unsalted",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_sugar",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_oil_plant",
+        "quantity": 70,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "main_crumble_aux_myrtilles_5f7d47",
+    "title": "Crumble pommes-myrtilles au beurre salé",
+    "cuisine": "british",
+    "dish_type": "dessert",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 6,
+    "time_total": 50,
+    "confidence": 1.0,
+    "description": "Crumble à l'anglaise : pommes fondantes et myrtilles sous une pâte sablée croustillante au beurre salé et aux flocons d'avoine.",
+    "composition": [
+      {
+        "ingredient": "blueberry",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "apple_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oat_flakes_whole_seed",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "brown_sugar",
         "quantity": 60,
         "unit": "g"
       },
       {
         "ingredient": "butter_salted",
-        "quantity": 100,
+        "quantity": 90,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cinnamon",
+        "quantity": 1,
         "unit": "g"
       },
       {
         "ingredient": "vanilla_ice_cream",
         "quantity": null,
         "unit": "1 boule"
-      },
-      {
-        "ingredient": "yogurt_plain_3pct",
-        "quantity": null,
-        "unit": "1 pot"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "dessert_crumble_aux_myrtilles_veg_15390f",
-        "title": "Crumble aux Myrtilles (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "dessert_crumble_aux_myrtilles_veg_15390f",
-    "title": "Crumble aux Myrtilles (Vegan)",
-    "cuisine": "british",
-    "dish_type": "dessert",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "kid_friendly",
-      "nut_free"
-    ],
-    "allergens": [
-      "gluten"
-    ],
-    "servings": 6,
-    "time_total": 44,
-    "confidence": 1.0,
-    "description": "Dessert britannique traditionnel, cuit à la perfection, où les myrtilles fondent en bouche sous un crumble croustillant à base de farine, de flocons d'avoine et de sucre, avec une texture sableuse grossière.",
-    "composition": [
-      {
-        "ingredient": "blueberry",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "ingredient": "oat_flakes_whole_seed",
-        "quantity": 80,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_sugar",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 100,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 8,
-    "flags": [],
-    "similar": [
-      {
-        "id": "main_crumble_aux_myrtilles_5f7d47",
-        "title": "Crumble aux Myrtilles",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dessert_creme_brulee_a19dfa",
@@ -8800,141 +8766,6 @@
     "n_instructions": 6,
     "flags": [],
     "similar": []
-  },
-  {
-    "id": "egg_crepe_coreenne_aux_oignons_ver_356ac2",
-    "title": "Crêpe Coréenne aux Oignons Verts",
-    "cuisine": "korean",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [],
-    "allergens": [
-      "eggs",
-      "gluten",
-      "lactose",
-      "milk"
-    ],
-    "servings": 4,
-    "time_total": 21,
-    "confidence": 1.0,
-    "description": "Crêpe coréenne croustillante et dorée, parfumée aux oignons verts, réalisée avec de la farine, des oignons verts et du lait, cuite à feu moyen-vif pour obtenir une texture croquante.",
-    "composition": [
-      {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_onion_raw",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "egg_raw",
-        "quantity": 110,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 150,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "vegetable_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yogurt_plain_3pct",
-        "quantity": 125,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 5,
-    "flags": [],
-    "similar": [
-      {
-        "id": "snack_crepe_coreenne_aux_oignon_a45536",
-        "title": "Crêpe Coréenne aux Oignons Verts (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "snack_crepe_coreenne_aux_oignon_a45536",
-    "title": "Crêpe Coréenne aux Oignons Verts (Vegan)",
-    "cuisine": "korean",
-    "dish_type": "snack",
-    "vegan": false,
-    "diet": [
-      "kid_friendly",
-      "lactose_free",
-      "nut_free"
-    ],
-    "allergens": [
-      "gluten",
-      "sesame"
-    ],
-    "servings": 4,
-    "time_total": 21,
-    "confidence": 1.0,
-    "description": "En-cas coréen croustillant et parfumé, réalisé avec de la farine, des oignons verts émincés et une pâte délicate, cuite à la poêle pour une texture dorée et croquante.",
-    "composition": [
-      {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_onion_raw",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 150,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "sesame_oil_plant",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "sesame_raw_seed",
-        "quantity": null,
-        "unit": "1 cuillère à soupe"
-      },
-      {
-        "ingredient": "flaxseed_linseed_ground",
-        "quantity": 7,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cornstarch_flour",
-        "quantity": 8,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "egg_crepe_coreenne_aux_oignons_ver_356ac2",
-        "title": "Crêpe Coréenne aux Oignons Verts",
-        "score": 1.0
-      }
-    ]
   },
   {
     "id": "base_buckwheat_crepe_03db22",
@@ -10451,7 +10282,7 @@
   },
   {
     "id": "dal_dal_makhani_c9ce94",
-    "title": "Dal Makhani",
+    "title": "Dal makhani de Delhi au beurre et à la crème",
     "cuisine": "indian",
     "dish_type": "main",
     "vegan": false,
@@ -10469,7 +10300,7 @@
     "servings": 4,
     "time_total": 591,
     "confidence": 1.0,
-    "description": "Dal makhani traditionnel: lentilles noires (urad dal) et haricots rouges mijotés longuement dans une sauce tomate épicée, enrichis de beurre et de crème, parfumés au garam masala et au fenugrec — riche et onctueux.",
+    "description": "Le dal des grandes tables de Delhi : lentilles urad noires et haricots rouges trempés une nuit, mijotés longuement avec tomate, gingembre et épices, puis enrichis de beurre et de crème.",
     "composition": [
       {
         "ingredient": "urad_lentil",
@@ -10554,97 +10385,7 @@
     ],
     "n_instructions": 8,
     "flags": [],
-    "similar": [
-      {
-        "id": "dal_makhani_vegan_259219",
-        "title": "Dal Makhani (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "dal_makhani_vegan_259219",
-    "title": "Dal Makhani (Vegan)",
-    "cuisine": "indian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "lactose_free",
-      "nut_free"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 851,
-    "confidence": 1.0,
-    "description": "Plat indien crémeux à base de lentilles vertes et haricots rouges, avec une sauce parfumée aux épices et une texture lisse, typique de la cuisine végétarien du Pendjab.",
-    "composition": [
-      {
-        "ingredient": "green_lentil_dried",
-        "quantity": 50,
-        "unit": "g"
-      },
-      {
-        "ingredient": "kidney_bean_dried",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 360,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "ginger_raw_root_fresh",
-        "quantity": 11.2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coconut_oil_plant",
-        "quantity": 45.2,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "coconut_milk_plant",
-        "quantity": 100,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 2.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garam_masala",
-        "quantity": 2.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 8,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dal_dal_makhani_c9ce94",
-        "title": "Dal Makhani",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dal_dal_tadka_4c3536",
@@ -11404,22 +11145,24 @@
   },
   {
     "id": "bread_enchiladas_fe7221",
-    "title": "Enchiladas",
+    "title": "Enchiladas rojas aux haricots noirs et queso fresco",
     "cuisine": "mexican",
     "dish_type": "main",
     "vegan": false,
     "diet": [
+      "high_protein",
+      "vegetarian",
       "gluten_free",
-      "high_protein"
+      "nut_free"
     ],
     "allergens": [
       "lactose",
       "milk"
     ],
     "servings": 4,
-    "time_total": 65,
+    "time_total": 70,
     "confidence": 1.0,
-    "description": "Enchiladas créatives, parfumées et croustillantes, inspirées de la cuisine mexicaine, avec une sauce riche et des saveurs équilibrées.",
+    "description": "Tortillas roulées autour de haricots noirs, nappées d'une sauce rouge aux piments ancho séchés et à la tomate, parsemées de queso fresco et gratinées.",
     "composition": [
       {
         "ingredient": "base_tortilla_92c2a6",
@@ -11453,7 +11196,7 @@
       },
       {
         "ingredient": "ancho_pepper_spice_dried",
-        "quantity": 40,
+        "quantity": 30,
         "unit": "g"
       },
       {
@@ -11462,114 +11205,23 @@
         "unit": "g"
       },
       {
-        "ingredient": "coriander_spice_seed",
-        "quantity": 3,
+        "ingredient": "oregano_spice_dried",
+        "quantity": 1,
         "unit": "g"
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
+        "quantity": 35,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
-      },
-      {
-        "ingredient": "coriander",
-        "quantity": null,
-        "unit": "1 poignée"
       },
       {
         "ingredient": "coriander_raw_fresh_herb",
         "quantity": 10,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "wrap_enchiladas_vegan_f70bca",
-        "title": "Enchiladas (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "wrap_enchiladas_vegan_f70bca",
-    "title": "Enchiladas (Vegan)",
-    "cuisine": "mexican",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "high_protein",
-      "lactose_free"
-    ],
-    "allergens": [
-      "tree_nuts"
-    ],
-    "servings": 4,
-    "time_total": 58,
-    "confidence": 1.0,
-    "description": "Rouleaux de tortillas mexicaines tendres, garnis de haricots noirs crémeux, de fromage végétal fondu et d'oignon jaune caramélisé, le tout nappé d'une sauce enchilada épicée et servie chaud.",
-    "composition": [
-      {
-        "ingredient": "base_tortilla_92c2a6",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_bean_boiled",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_vegan_cheddar_024998",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "ancho_pepper_spice_dried",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 2.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander_spice_seed",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
         "unit": "g"
       },
       {
@@ -11580,13 +11232,104 @@
     ],
     "n_instructions": 5,
     "flags": [],
-    "similar": [
+    "similar": []
+  },
+  {
+    "id": "wrap_enchiladas_vegan_f70bca",
+    "title": "Enchiladas verdes à la patate douce et aux épinards (vegan)",
+    "cuisine": "mexican",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "high_protein",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "allergens": [
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 75,
+    "confidence": 1.0,
+    "description": "Enchiladas à la sauce verte de tomatilles, piment serrano et coriandre, garnies de patate douce rôtie, d'épinards et de haricots noirs, gratinées au cheddar végétal.",
+    "composition": [
       {
-        "id": "bread_enchiladas_fe7221",
-        "title": "Enchiladas",
-        "score": 1.0
+        "ingredient": "base_tortilla_92c2a6",
+        "quantity": 320,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sweet_potato_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "spinach_raw_baby",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_bean_boiled",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_vegan_cheddar_024998",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomatillo_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "serrano_pepper_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander",
+        "quantity": null,
+        "unit": "1 poignée"
       }
-    ]
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
   },
   {
     "id": "main_endives_au_gratin_6b58ee",
@@ -20508,6 +20251,82 @@
     "similar": []
   },
   {
+    "id": "snack_crepe_coreenne_aux_oignon_a45536",
+    "title": "Kimchijeon, crêpe croustillante au kimchi (vegan)",
+    "cuisine": "korean",
+    "dish_type": "snack",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "sesame"
+    ],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 1.0,
+    "description": "Crêpe coréenne sans œuf au kimchi haché et à son jus, avec oignons verts et fécule pour le croustillant, poêlée à l'huile de sésame.",
+    "composition": [
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_starch_flour",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_kimchi_61791a",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 180,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "gochugaru",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sesame_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sesame_raw_seed",
+        "quantity": null,
+        "unit": "1 cuillère à soupe"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "beverage_kombucha_3df24c",
     "title": "Kombucha",
     "cuisine": "chinese",
@@ -20984,6 +20803,115 @@
         "ingredient": "vanilla_ice_cream",
         "quantity": null,
         "unit": "1 boule"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "dal_boulettes_suedoises_2ac55d",
+    "title": "Köttbullar végétariennes aux pois chiches, sauce crème et airelles",
+    "cuisine": "swedish",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "high_protein",
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten",
+      "lactose",
+      "milk",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 55,
+    "confidence": 1.0,
+    "description": "Boulettes à la suédoise de pois chiches, oignon et muscade, nappées d'une sauce à la crème et à la sauce soja, servies avec des airelles et une purée.",
+    "composition": [
+      {
+        "ingredient": "chickpea_boiled",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 55,
+        "unit": "g"
+      },
+      {
+        "ingredient": "breadcrumbs",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutmeg_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "allspice_powder",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cream_heavy_refrigerated_18pct",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 10,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lingonberry",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": null,
+        "unit": "1 portion de purée"
       }
     ],
     "n_instructions": 5,
@@ -27578,6 +27506,83 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "egg_crepe_coreenne_aux_oignons_ver_356ac2",
+    "title": "Pajeon aux oignons verts, sauce soja vinaigrée",
+    "cuisine": "korean",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten",
+      "soy",
+      "sulphites"
+    ],
+    "servings": 4,
+    "time_total": 35,
+    "confidence": 1.0,
+    "description": "La crêpe coréenne des jours de pluie : pâte fine à l'œuf couvrant une nappe d'oignons verts entiers, poêlée jusqu'à être croustillante, trempée dans une sauce soja au vinaigre.",
+    "composition": [
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "rice_flour",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 110,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 250,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_oil_plant",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_vinegar_liquid_distilled",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "gochugaru",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -36370,7 +36375,119 @@
     ],
     "n_instructions": 7,
     "flags": [],
-    "similar": []
+    "similar": [
+      {
+        "id": "dal_makhani_vegan_259219",
+        "title": "Rajma masala du Pendjab (vegan)",
+        "score": 0.67
+      }
+    ]
+  },
+  {
+    "id": "dal_makhani_vegan_259219",
+    "title": "Rajma masala du Pendjab (vegan)",
+    "cuisine": "indian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 840,
+    "confidence": 1.0,
+    "description": "Le curry de haricots rouges du Pendjab : haricots trempés une nuit puis mijotés dans une sauce épaisse d'oignon, tomate, gingembre, ail et garam masala, servi sur du riz.",
+    "composition": [
+      {
+        "ingredient": "kidney_bean_dried",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garam_masala",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1200,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "basmati_rice_raw_seed",
+        "quantity": null,
+        "unit": "1 portion"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": [
+      {
+        "id": "main_rajma_masala_bce2a4",
+        "title": "Rajma Masala",
+        "score": 0.67
+      }
+    ]
   },
   {
     "id": "soup_ramen_au_miso_f69c22",
