@@ -44,6 +44,9 @@ PATCHES = {
         ("qty", "onion_raw", 150),
         ("txt", "Saisir l'oignon jaune à 300 g", "Saisir l'oignon à 150 g"),
         ("txt", "laisser réduire pendant 12 minutes à 160°C", "laisser réduire pendant 12 minutes à feu moyen"),
+        ('add', 'table_salt_unenriched', 3, 'g', 'seasoning'),
+        ('txt', 'du paprika à 3 g et du sel', 'du paprika à 3 g et 3 g de sel'),
+        ('txt', "Enfourner pendant 8 minutes à 180°C, jusqu'à coagulation des ingrédients et crépitation légère de la sauce, en vérifiant régulièrement la texture et la couleur de la sauce.", "Couvrir et cuire 8 minutes à feu doux, jusqu'à ce que les blancs soient pris, puis parsemer de 10 g de coriandre ciselée."),
     ],
     "egg_slovak_potato_dumplings_e85ebb": [
         ("qty", "egg_raw", 110),
@@ -119,6 +122,11 @@ PATCHES = {
         ("ing", "beetroot_raw_root", "beetroot_cooked_root", 500),
         ("txt", "Préparez les betteraves cuites en les tranchant en fines lamelles à la mandoline. Vous pouvez également les faire cuire à la vapeur pour préserver leurs couleurs et leurs saveurs.",
          "Trancher 500 g de betteraves cuites en fines lamelles à la mandoline."),
+        ('qty', 'olive_oil_plant', 45),
+        ('txt', ' Vous pouvez également ajouter un filet de jus de citron pour rehausser les saveurs.', ''),
+        ('txt', ' Vous pouvez également ajouter quelques feuilles de roquette pour un croquant agréable.', ' Ajoutez 40 g de roquette.'),
+        ('txt', 'Parsemez de noix concassées pour un croquant agréable. Vous pouvez également ajouter quelques graines pour un supplément de texture et de saveur.', 'Parsemez de 30 g de noix concassées et de 60 g de feta émiettée.'),
+        ('txt', ' Vous pouvez également ajouter quelques tranches de pain grillé pour un accompagnement croquant.', ''),
     ],
     "entry_celeri_remoulade_d5d1b9": [
         ("qty", "base_mayonnaise_0d3e4e", 80),
@@ -137,6 +145,10 @@ PATCHES = {
         ("qty", "olive_oil_plant", 60),
         ("txt", "porter à ébullition 300 ml d'eau avec 100 ml d'huile d'olive", "porter à ébullition 300 ml d'eau avec 60 ml d'huile d'olive"),
         ("txt", "la sauce acidulée et parfumée à la coriandre. Servir sans attendre pour conserver la fraîcheur des saveurs.", "la sauce acidulée et parfumée."),
+        ('qty', 'lemon_juice', 30),
+        ('add', 'table_salt_unenriched', 3, 'g', 'seasoning'),
+        ('txt', "le jus d'un citron, les graines de coriandre, thym, laurier et grains de poivre", '30 ml de jus de citron, les graines de coriandre, le thym, le laurier, des grains de poivre et 3 g de sel'),
+        ('txt', 'Servir froid en entrée avec du pain.', 'Servir froid en entrée, parsemé de 15 g de persil et de 10 g de coriandre ciselés, avec du pain.'),
     ],
     "entry_chips_de_legumes_au_four_b43876": [
         ("txt", "Servir chaud, en présentant les chips dans un bol, accompagné d'une salade verte.", "Servir à température ambiante, dans un bol."),

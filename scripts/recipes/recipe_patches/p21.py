@@ -26,6 +26,7 @@ PATCHES = {
         ("qty", "soy_sauce_shoyu_reduced_sodium", 10),
         ("txt", "800ml de bouillon dashi végétarien", "800ml de bouillon de légumes"),
         ("txt", "délayez 60g de miso blanc", "délayez 40g de miso blanc"),
+        ('txt', 'Ajoutez 15ml de sauce soja', 'Ajoutez 10ml de sauce soja'),
     ],
     "noodle_pad_see_ew_classic_v3_n8x4p2": [
         ("txt", "Remettre le tofu et ajouter les légumes verts sautés.",
@@ -70,6 +71,7 @@ PATCHES = {
         ("qty", "table_salt_unenriched", 2),
         ("txt", "Assaisonner avec 5g de sel et servir le chow mein chaud, dans des bols préchauffés, en vérifiant",
          "Assaisonner avec 2g de sel et servir le chow mein chaud, en vérifiant"),
+        ('txt', "Saisir 150g d'oignon jaune et 200g de carotte crue", "Saisir 150g d'oignon jaune, 9 g d'ail haché et 200g de carotte crue"),
     ],
     # l'eau de cuisson et son sel étaient comptés comme ingrédients consommés
     "pasta_gnocchi_al_pesto_5bb01c": [
@@ -85,10 +87,16 @@ PATCHES = {
         ("qty", "nutritional_yeast_flakes", 20),
         ("title", "Gnocchi au pesto crémeux"),
         ("txt", "Incorporer 90g de levure nutritionnelle", "Incorporer 20g de levure maltée"),
+        ('del', 'vegan_butter'),
+        ('qty', 'table_salt_unenriched', 2),
+        ('txt', "Faire bouillir une casserole d'eau salée (en ajoutant 5g de sel) à 100°C", "Faire bouillir une grande casserole d'eau salée"),
     ],
     "pasta_gnocchi_pesto_classic_v2_m7k2q4": [
         ("qty", "garlic_raw", 10),
         ("step-", "Conserver les restes dans un contenant hermétique"),
+        ('qty', 'table_salt_unenriched', 1),
+        ('txt', "Porter 4 L d'eau à forte ébullition à 100°C.", "Porter 4 L d'eau à forte ébullition."),
+        ('txt', "4 cs d'eau de cuisson chaude à 80°C", "4 cs d'eau de cuisson chaude"),
     ],
     "pasta_gnocchis_a_la_tomate_8e1632": [
         ("del", "water"),
@@ -106,5 +114,7 @@ PATCHES = {
         ("qty", "table_salt_unenriched", 2),
         ("txt", "Chauffer 45 ml d'huile de noix de coco dans un wok ou grande sauteuse à feu moyen-vif, jusqu'à ce que l'huile commence à briller et à sentir le coco",
          "Chauffer 45 ml d'huile de tournesol dans un wok ou une grande sauteuse à feu moyen-vif, jusqu'à ce qu'elle soit bien chaude"),
+        ('qty', 'soy_sauce_shoyu_reduced_sodium', 30),
+        ('txt', 'Incorporer les tomates concassées, le paprika, le cumin et le piment', 'Incorporer les tomates concassées, 30 ml de sauce soja, le paprika, le cumin et le piment'),
     ],
 }

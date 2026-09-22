@@ -38,6 +38,7 @@ PATCHES = {
         ("txt", "Faire chauffer le bouillon dashi végétarien", "Faire chauffer le bouillon de légumes"),
         ("txt", "les champignons noirs réhydratés", "10 g de shiitakés séchés réhydratés, les champignons de Paris émincés"),
         ("txt", "garnie de feuilles de coriandre fraîche ciselée et d'un filet d'huile de sésame. Accompagner de crackers de riz ou de pain complet toasté.", "arrosée de 10 ml d'huile de sésame."),
+        ('txt', 'Incorporer les oignons verts ciselés et les graines de sésame.', 'Incorporer les oignons verts ciselés, 15 g de piment émincé et les graines de sésame.'),
     ],
     "soup_au_chou_4be090": [
         ("qty", "table_salt_unenriched", 2),

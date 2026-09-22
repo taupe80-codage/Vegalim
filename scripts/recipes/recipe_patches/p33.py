@@ -8,6 +8,7 @@ PATCHES = {
          "émulsionnez 40 ml de jus de citron, 45 ml d'huile d'olive, 5 g de sel et du poivre"),
         ("txt", ", en servant sans attendre pour conserver la fraîcheur : la chaleur et le croustillant des légumes sont essentiels ici.", ", puis servez sans attendre."),
         ("step-", "Vérifiez que les dés de légumes sont nets et fermes"),
+        ('dish', 'side'),
     ],
     "salted_butter_caramel_096c73": [
         ("txt", "incorporer l'beurre en dés", "incorporer le beurre en dés"),

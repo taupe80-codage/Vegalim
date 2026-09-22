@@ -45,5 +45,7 @@ PATCHES = {
         ("txt", "les oignons blancs et l'ail en morceaux", "l'oignon et l'ail en morceaux"),
         ("txt", "Incorporer les oignons blancs et l'ail.", "Incorporer l'oignon et l'ail."),
         ("txt", ", avec un peu de levure nutritionnelle râpée pour ajouter une touche de saveur umami, laissant", ", en laissant"),
+        ('dish', 'side'),
+        ('step-', 'Vérification de la cuisson.'),
     ],
 }

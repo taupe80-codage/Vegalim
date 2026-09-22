@@ -20,6 +20,7 @@ PATCHES = {
         ("ing", "lemon_raw", "lemon_juice", 30, "ml"),
         ("add", "coriander_raw_fresh_herb", 10, "g", "herb"),
         ("txt", "Faire revenir l'ail et l'oignon dans l'huile d'olive", "Faire revenir l'ail dans l'huile d'olive"),
+        ('dish', 'side'),
     ],
     # moussaka végétalienne sans aucune protéine : lentilles ajoutées à la sauce
     "main_moussaka_fcf86b": [
@@ -53,6 +54,8 @@ PATCHES = {
         ("qty", "french_bean_raw", 150),
         ("txt", "Ajouter 300g de haricots verts coupés en deux", "Ajouter 150g de haricots verts coupés en deux"),
         ("txt", "10g de sucre de coco et 140g de jus de citron vert", "10g de sucre de coco et 40 ml de jus de citron vert"),
+        ('del', 'tomato_raw_ripe'),
+        ('txt', '200g de tomates cerises et 240g de tomates coupées en dés', '200g de tomates cerises coupées en deux'),
     ],
     "main_parmigiana_di_melanzane_6bd49f": [
         ("qty", "table_salt_unenriched", 2),
@@ -60,12 +63,15 @@ PATCHES = {
          "puis en ajoutant 240g de tomates concassées, 400g de sauce tomate et l'oignon émincé. Cuire pendant 12 minutes à feu moyen"),
         ("step-", "Ajouter un peu de poivre pour relever le goût"),
         ("step-", "Pour une présentation élégante, garnir de feuilles de basilic frais et de tranches de citron"),
+        ('txt', "d'aubergines, de mozzarella et de parmesan", "d'aubergines, de mozzarella, de feuilles de basilic et de parmesan"),
     ],
     "main_parmigiana_di_melanzane_v_8f8b8b": [
         ("qty", "nutritional_yeast_flakes", 20),
         ("qty", "table_salt_unenriched", 2),
         ("txt", "puis en ajoutant les tomates concassées, le sel et le poivre", "puis en ajoutant l'oignon émincé, les tomates concassées, le sel et le poivre"),
         ("txt", "et que les aubergines soient tendres et al dente, signe d'une cuisson parfaite", "et que les aubergines soient tendres"),
+        ('qty', 'olive_oil_plant', 45),
+        ('txt', "puis d'une couche de fromage végétal râpé, en alternant", "puis de feuilles de basilic et d'une couche de fromage végétal râpé, en alternant"),
     ],
     "main_patatas_bravas_98ec00": [
         ("qty", "table_salt_unenriched", 2),

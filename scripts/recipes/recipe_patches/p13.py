@@ -43,6 +43,10 @@ PATCHES = {
         ("add", "basil_fresh_herb", 10, "g", "herb"),
         ("txt", "en utilisant environ 90 grammes de levure nutritionnelle", "en utilisant 20 grammes de levure nutritionnelle"),
         ("txt", "et que les aubergines soient tendres et al dente", "et que les aubergines soient tendres"),
+        ('del', 'tomato_raw_ripe'),
+        ('qty', 'table_salt_unenriched', 2),
+        ('qty', 'olive_oil_plant', 45),
+        ('txt', "puis d'une couche de fromage végétal râpé, en veillant", "puis de quelques feuilles de basilic et d'une couche de fromage végétal râpé, en veillant"),
     ],
     "main_aubergines_parmigiana_sim_e5028f": [
         ("qty", "table_salt_unenriched", 2),
@@ -99,6 +103,7 @@ PATCHES = {
     "main_bhindi_masala_ade89d": [
         ("ing", "coriander_spice_leaf_dried", "coriander_spice_seed"),
         ("add", "coriander_raw_fresh_herb", 10, "g", "herb"),
+        ('step-', 'Préparer le plat de service en disposant le curry de gombo'),
     ],
     "main_bissara_23c21a": [
         ("add", "water", 900, "ml", "liquid"),

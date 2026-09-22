@@ -38,6 +38,9 @@ PATCHES = {
         ("txt", ", avec un léger croquant des oignons caramélisés", ""),
         ("step-", "Ajouter l'huile d'olive pour donner une texture onctueuse"),
         ("time", 23, 0, 20),
+        ('txt', 'les épices cardamom, cinnamon, cumin et garam masala', '2 g de cardamome, 2,3 g de cannelle, 2,5 g de cumin et 2,5 g de garam masala'),
+        ('txt', 'Assaisonner avec du sel et servir sans attendre, en vérifiant que les saveurs sont équilibrées et que la texture est onctueuse et crémeuse.', 'Assaisonner avec 5 g de sel.'),
+        ('txt', 'Servir chaud, en garnissant de coriandre fraîche et en vérifiant que les saveurs sont équilibrées et que la sauce a une couleur riche et intense.', 'Servir chaud, garni de 10 g de coriandre fraîche.'),
     ],
     "protein_paneer_tikka_94f80a": [
         ("ing", "lemon_raw", "lemon_juice", 30, "ml"),
@@ -51,5 +54,8 @@ PATCHES = {
         ("txt", "Faire cuire les brochettes pendant 3 minutes à feu vif, en les retournant régulièrement, jusqu'à ce qu'elles soient bien dorées et croustillantes.",
          "Passer les brochettes 3 minutes sous le gril, en les retournant, jusqu'à ce qu'elles soient bien dorées."),
         ("time", 21, 45, 15),
+        ('qty', 'olive_oil_extra_virgin_plant', 45),
+        ('txt', "Badigeonner les brochettes avec 45,7ml d'huile d'olive et servir sans attendre : la chaleur et le croustillant sont essentiels pour apprécier pleinement les saveurs.", "Badigeonner les brochettes de 45 ml d'huile d'olive et servir sans attendre."),
+        ('step-', 'Garnir avec des herbes fraîches et vérifier'),
     ],
 }

@@ -40,8 +40,9 @@ PATCHES = {
     ],
     "pasta_nouilles_coreennes_aux_legumes_82115e": [
         ("add", "green_onion_raw", 40, "g", "garnish"),
-        ("txt", "Servir tiède ou à température ambiante : la chaleur est essentielle pour garder les saveurs et les textures des légumes et des nouilles.",
-         "Servir tiède ou à température ambiante."),
+        ("txt", "Assaisonner avec du sel et du poivre selon le goût. Servir tiède ou à température ambiante : la chaleur est essentielle pour garder les saveurs et les textures des légumes et des nouilles.",
+         "Poivrer et servir tiède ou à température ambiante."),
+        ('step-', 'Vérifier que les nouilles sont bien enrobées'),
     ],
     # satay à la crème épaisse (400 ml) + beurre + 90 ml d'huile : 992 kcal
     "pasta_nouilles_satay_864b31": [

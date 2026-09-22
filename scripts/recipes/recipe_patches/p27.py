@@ -103,6 +103,8 @@ PATCHES = {
         ("txt", "Réhydratez 20 g de cèpes séchés dans 200 ml d'eau chaude pendant 20 minutes. Filtrez et réservez le liquide.",
          "Émincez 150 g de cèpes frais."),
         ("txt", "Faites revenir les champignons frais émincés dans 20 g de beurre", "Faites revenir les champignons et les cèpes émincés dans 20 g de beurre"),
+        ('del', 'olive_oil_plant'),
+        ('txt', 'Assaisonnez avec du sel et du poivre noir, et ajustez la saveur si nécessaire.', 'Assaisonnez avec 2 g de sel et du poivre noir.'),
     ],
     "rice_risotto_aux_champignons_v_13d611": [
         ("qty", "white_rice_raw_seed_unenriched", 280),

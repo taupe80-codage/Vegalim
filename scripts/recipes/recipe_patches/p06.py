@@ -133,6 +133,9 @@ PATCHES = {
         ("txt", "cuisez dans 900ml d'eau à 180°C pendant 25 minutes", "cuisez dans 900ml d'eau frémissante pendant 25 minutes"),
         ("txt", "ainsi que 5g de cumin, 3,8g de curcuma", "ainsi que 3,8g de curcuma"),
         ("txt", " Vous pouvez également ajouter un peu de levure nutritionnelle pour un goût umami supplémentaire.", ""),
+        ('qty', 'chilli_pepper_raw', 10),
+        ('txt', "Ajoutez 25g d'ail et 10g de gingembre,", "Ajoutez 25g d'ail, 10g de gingembre et 10 g de piment vert haché,"),
+        ('step-', 'Laissez reposer pendant quelques minutes avant de servir'),
     ],
     "dal_chole_bhature_dbcac0": [
         ("add", "wheat_all_purpose_flour_unenriched_unbleached", 200, "g", "carbohydrate"),

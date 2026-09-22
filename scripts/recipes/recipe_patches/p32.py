@@ -75,6 +75,7 @@ PATCHES = {
             "Mélanger les légumes hachés avec l'ail pilé, 40 ml de jus de citron et 45 ml d'huile d'olive.",
             "Servir tiède ou froid, avec du pain.",
         ]),
+        ('dish', 'side'),
     ],
     # lentilles corail « entières » en salade : ce sont des lentilles vertes
     "salad_lentil_classic_v3_r7p2k8": [
@@ -104,6 +105,7 @@ PATCHES = {
         ("txt", ", et en vérifiant que la salade soit servie à une température de 10°C pour une meilleure fraîcheur", ""),
         ("step-", "Garnir de feuilles de persil frais et de fleurs comestibles"),
         ("step-", "Déguster et ajuster l'assaisonnement si nécessaire"),
+        ('dish', 'side'),
     ],
     # 220 g d'œufs jamais utilisés dans une niçoise
     "salad_nicoise_3b123f": [
@@ -156,5 +158,6 @@ PATCHES = {
         ("ing", "lemon", "lemon_juice", 50, "ml"),
         ("txt", "un filet d'huile d'olive chaude qui crépite légèrement", "45 ml d'huile d'olive"),
         ("txt", "Ajouter un filet de jus de citron frais", "Ajouter 50 ml de jus de citron frais"),
+        ('dish', 'side'),
     ],
 }

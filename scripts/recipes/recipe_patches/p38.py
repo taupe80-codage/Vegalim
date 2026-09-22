@@ -88,6 +88,7 @@ PATCHES = {
         ("txt", "et le concentré de tomate végan", "et 20 g de concentré de tomate"),
         ("txt", "dans un peu d'eau froide végane", "dans un peu d'eau froide"),
         ("txt", "en ajoutant un filet de citron", "en ajoutant 15 ml de jus de citron"),
+        ('txt', "Faire suer les 120g d'oignon", "Faire suer les 120g d'oignon et 80 g de céleri émincé"),
     ],
     # 2 kg de légumes, eau en plus du bouillon, shiitakés enfournés, bouillon « réduit sirupeux »
     "soup_hot_pot_e7fc15": [
@@ -142,5 +143,7 @@ PATCHES = {
         ("add", "water", 1500, "ml", "liquid"),
         ("txt", "couvrir d'eau et laisser mijoter 20 min", "couvrir de 1,5 L d'eau et laisser mijoter 20 min"),
         ("step-", "Vérifier que les légumineuses et les nouilles sont tendres"),
+        ('txt', "Ajouter l'ail, le curcuma et les épices", "Ajouter l'ail, le curcuma et 5 g de piment séché"),
+        ('txt', 'puis servir chaud, accompagné de pain ou de crackers', 'puis servir chaud, parsemé de 20 g de menthe ciselée'),
     ],
 }

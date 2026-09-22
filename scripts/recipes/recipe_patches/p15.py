@@ -6,6 +6,7 @@ PATCHES = {
         ("txt", "Faites cuire pendant 4 minutes à 180°C", "Faites cuire pendant 4 minutes à feu moyen"),
         ("txt", "dans un plat huilé avec du beurre", "dans un plat beurré"),
         ("step-", "Vérifiez la cuisson en insérant une lame de couteau dans le gratin"),
+        ('txt', "jusqu'à ce que la béchamel épaississe et devienne crémeuse.", "jusqu'à ce que la béchamel épaississe, puis l'assaisonner avec 4 g de sel et une pincée de muscade."),
     ],
     "main_gratin_de_courgettes_35b5b8": [
         ("txt", "en saupoudrant de parmesan râpé.",
@@ -24,6 +25,8 @@ PATCHES = {
         ("txt", "Faites cuire pendant 4 minutes à 180°C", "Faites cuire pendant 4 minutes à feu moyen"),
         ("txt", "dans un plat beurré avec du beurre", "dans un plat beurré"),
         ("step-", "Vérifiez la cuisson en insérant une lame de couteau dans le gratin"),
+        ('txt', "jusqu'à ce que la béchamel épaississe et devienne crémeuse, avec une consistance onctueuse.", "jusqu'à ce que la béchamel épaississe, puis l'assaisonner avec 4 g de sel et une pincée de muscade."),
+        ('step-', 'La chaleur est essentielle pour garder la texture crémeuse'),
     ],
     "main_gratin_de_potiron_839446": [
         ("add", "table_salt_unenriched", 3, "g", "seasoning"),
@@ -35,6 +38,9 @@ PATCHES = {
          "Émincer finement 9g d'ail."),
         ("txt", "Retirer le papier aluminium et ajouter 150g de fromage râpé", "Ajouter 150g de feta émiettée"),
         ("time", 17, 0, 50),
+        ('txt', "Couper 600g d'aubergine crue en cubes de 2 cm", "Émincer 150 g d'oignon, couper 600g d'aubergine crue en cubes de 2 cm"),
+        ('txt', 'Vérifier que les légumes sont tendres et que le fromage est doré, en vérifiant la texture et la couleur. Servir sans attendre.', 'Servir sans attendre.'),
+        ('step-', 'Parsemer de persil frais haché et servir chaud.'),
     ],
     "main_greek_briam_vegan_3fb054": [
         ("txt", "Ajouter 150 g de fromage végétal râpé (remplacement du feta)", "Ajouter 150 g de tofu ferme émietté"),
@@ -71,6 +77,7 @@ PATCHES = {
         ("ing", "lemon_raw", "lemon_juice", 40, "ml"),
         ("step-", "Faire bouillir de l'eau salée à 100°C, puis blanchir les légumes verts pendant 5 minutes"),
         ("txt", "presser le jus de 100 g de citron sur les légumes", "arroser de 40 ml de jus de citron"),
+        ('dish', 'side'),
     ],
     "main_humita_andine_fe7789": [
         ("add", "red_bell_pepper_raw", 150, "g", "vegetable"),
@@ -89,6 +96,8 @@ PATCHES = {
         ("txt", "Assaisonner de sel, poivre et paprika, puis incorporer les épinards crus frais, en les laissant fondre doucement dans la préparation.",
          "Assaisonner de sel, de poivre et de paprika."),
         ("txt", "jusqu'à ce que les épinards soient tendres et le liquide réduit", "jusqu'à ce que le liquide soit réduit"),
+        ('step-', 'Réduire la sauce si nécessaire'),
+        ('txt', 'Servir chaud, parsemé de persil ciselé et accompagné', 'Servir chaud, accompagné'),
     ],
     "main_japanese_vegetable_tempur_f57314": [
         ("qty", "green_zucchini_squash_raw", 200),

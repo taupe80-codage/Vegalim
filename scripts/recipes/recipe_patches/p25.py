@@ -75,12 +75,16 @@ PATCHES = {
         ("qty", "sesame_oil_plant", 15),
         ("add", "sunflower_oil_plant", 30, "ml", "fat"),
         ("txt", "Chauffer 45,7 ml d'huile de sésame dans le wok", "Chauffer 30 ml d'huile de tournesol dans le wok"),
+        ('qty', 'soy_sauce_shoyu_reduced_sodium', 30),
+        ('txt', 'Assaisonner de 44,9 ml de sauce soja et poivre', "Assaisonner de 30 ml de sauce soja, 15 ml d'huile de sésame et de poivre"),
     ],
     "rice_goi_cuon_efb313": [
         ("del", "garlic_raw"),
         ("add", "soy_sauce_shoyu_reduced_sodium", 20, "ml", "condiment"),
         ("txt", "et blanchissez-les pendant 3 minutes à l'eau bouillante salée, jusqu'à ce qu'elles soient tendres mais encore croquantes, puis plongez-les dans un bain d'eau glacée pour arrêter la cuisson",
          "et réservez-les crues pour garder leur croquant"),
+        ('del', 'table_salt_unenriched'),
+        ('txt', 'Servez les rouleaux de printemps avec une sauce de votre choix', 'Servez les rouleaux avec 20 ml de sauce soja pour tremper'),
     ],
     "rice_jeera_rice_a4633c": [
         ("add", "water", 450, "ml", "liquid"),

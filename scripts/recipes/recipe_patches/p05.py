@@ -15,6 +15,7 @@ PATCHES = {
          "Couper les figues fraîches en quartiers."),
         ("txt", "arrosez de sirop de fleurs d'oranger, et parsemez de thym frais concassé", "arrosez de miel et parsemez de thym séché"),
         ("step-", "Garnissez avec des feuilles de thym frais et servez sans attendre"),
+        ('txt', 'arrosez de miel et parsemez de thym séché', 'arrosez de miel et parsemez de thym séché et de 20 g de noix concassées'),
     ],
     "brkf_toast_avocat_graines_dfc001": [
         ("qty", "sourdough_bread", 120),
@@ -87,6 +88,8 @@ PATCHES = {
         ("txt", "12g de coriandre moulue", "5g de coriandre moulue"),
         ("txt", "Servir aussitôt dans des bols préchauffés, garni de coriandre fraîche ciselée et d'un filet d'huile de tournesol. Accompagner d'un pain pita tiède ou de riz basmati.",
          "Servir aussitôt, accompagné de naan ou de riz basmati."),
+        ('qty', 'chilli_pepper_raw', 15),
+        ('txt', 'Ajouter 45g de piment', 'Ajouter 15g de piment vert haché'),
     ],
     "curry_chickpea_k5x2p9": [
         ("add", "water", 200, "ml", "liquid"),

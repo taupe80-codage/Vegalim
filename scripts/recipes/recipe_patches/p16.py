@@ -5,6 +5,8 @@ PATCHES = {
         ("add", "sunflower_oil_plant", 60, "ml", "fat_frying"),
         ("qty", "nutmeg_spice", 1),
         ("txt", "Frire dans l'huile d'olive à 175°C", "Frire dans un bain d'huile à 175°C"),
+        ('qty', 'onion_raw', 300),
+        ('txt', '(cannelle, cumin, piments de la Jamaïque)', '(cannelle, cumin, piment de la Jamaïque, muscade)'),
     ],
     "main_kimchi_1dc648": [
         ("flag", "kid_friendly", False),  # 20 g de piment coréen
@@ -32,6 +34,11 @@ PATCHES = {
         ("txt", "Ajouter 9g d'ail haché et 15g de piment haché. Faire revenir pendant 2 minutes, jusqu'à ce que l'odeur soit parfumée.",
          "Ajouter 150 g d'oignon émincé, 9g d'ail haché et 15g de piment haché. Faire revenir pendant 5 minutes, jusqu'à ce que l'oignon soit doré et parfumé."),
         ("step-", "préalablement cuit à feu doux dans 30 ml d'huile de noix de coco"),
+        ('qty', 'coconut_oil_plant', 15),
+        ('qty', 'soy_sauce_shoyu_reduced_sodium', 20),
+        ('qty', 'table_salt_unenriched', 2),
+        ('txt', 'saler légèrement avec 5g de sel', 'saler légèrement avec 2g de sel'),
+        ('txt', 'Ajouter 200 ml de lait de coco supplémentaire en fin de cuisson.', 'Ajouter 200 ml de lait de coco supplémentaire et 20 ml de sauce soja en fin de cuisson.'),
     ],
     "main_legumes_braises_7030b7": [
         ("txt", "et les oignons blancs en lamelles", "et l'oignon en lamelles"),

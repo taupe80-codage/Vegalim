@@ -17,6 +17,8 @@ PATCHES = {
         ("add", "vegetable_stock_dried", 12, "g", "ingredient"),
         ("add", "water", 1000, "ml", "liquid"),
         ("step-", "Déguster et ajuster l'assaisonnement si nécessaire"),
+        ('qty', 'table_salt_unenriched', 1),
+        ('txt', '5 g de sel de table', '1 g de sel'),
     ],
     "main_polenta_aux_champignons_v_b0e1ad": [
         ("del", "olive_oil_plant"),
@@ -91,6 +93,9 @@ PATCHES = {
         ("add", "vegetable_stock_dried", 11, "g", "ingredient"),
         ("add", "water", 900, "ml", "liquid"),
         ("txt", " et un peu de levure nutritionnelle pour ajouter du parfum et de la texture", ""),
+        ('qty', 'table_salt_unenriched', 2),
+        ('txt', 'Assaisonner de 5g de sel', 'Assaisonner de 2g de sel'),
+        ('step-', 'Vérifier que la consistance est dense et crémeuse'),
     ],
     "main_romanian_zacusc_a929ee": [
         ("dish", "starter"),

@@ -14,6 +14,7 @@ PATCHES = {
         ("txt", "en huilant un plat de 30×20 cm avec du beurre", "en beurrant un plat de 30×20 cm"),
         ("txt", "Fouetter 220 g de yaourt", "Fouetter 220 g d'œufs"),
         ("txt", " et 30 ml de rhum pour parfumer la pâte", " pour parfumer la pâte"),
+        ('qty', 'butter_sup80pct', 15),
     ],
     "dessert_financiers_aux_amandes_a02063": [
         ("add", "almond_raw_with_skin_unsalted", 20, "g", "garnish"),
@@ -57,6 +58,7 @@ PATCHES = {
         ("serv", 8),
         ("txt", "Laisser refroidir avant de servir. Ce gâteau carottes végétalien est délicieux chaud ou froid, accompagné de votre choix de garniture, comme une crème de noix de cajou ou un glaçage au citron. Servir dans un plat de service, napper de sauce et découper en parts. Se déguste chaud ou tiède, accompagné d'une salade verte.",
          "Laisser refroidir complètement. Préparer le glaçage en mélangeant 150 g de purée de cajou avec 29 ml de jus de citron, le napper sur le gâteau, puis découper en parts."),
+        ('txt', 'Ajouter les carottes râpées et 60g de noix', 'Ajouter les carottes râpées, le gingembre frais et 60g de noix'),
     ],
     "dessert_ile_flottante_4623ef": [
         ("txt", "Ajouter 150 g de sucre et blanchir les jaunes d'œuf avec le sucre, jusqu'à obtenir une consistance lisse et crémeuse.",

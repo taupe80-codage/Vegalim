@@ -42,6 +42,7 @@ PATCHES = {
         ("txt", "assaisonner avec 5g de sel", "assaisonner avec 3g de sel"),
         ("txt", "Servir sans attendre, en garnissant de feuilles de persil frais et en accompagnant d'un pain croustillant, pour un repas léger et savoureux, car la fraîcheur des ingrédients et la texture du pain sont essentielles à cette salade, et il est important de servir immédiatement pour conserver toutes les saveurs et les textures.",
          "Servir sans attendre, garni de feuilles de persil frais et accompagné de pain croustillant."),
+        ('dish', 'side'),
     ],
     # parmesan 150 g à la place du queso fresco, maïs cru
     "salad_andine_au_fromage_c537bd": [
@@ -81,6 +82,7 @@ PATCHES = {
         ("txt", "mélanger 15ml d'huile de sésame, 45ml de sauce soja, et 15g de gingembre râpé",
          "mélanger 15ml d'huile de sésame, 30ml de sauce soja, 15 ml de vinaigre de riz et 15g de gingembre râpé"),
         ("step-", "Laisser reposer 5 minutes pour permettre aux saveurs"),
+        ('dish', 'side'),
     ],
     "salad_bulgarian_shopska_salad_v_adc716": [
         ("qty", "olive_oil_plant", 45),

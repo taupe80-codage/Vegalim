@@ -26,6 +26,7 @@ PATCHES = {
         ("qty", "table_salt_unenriched", 3),
         ("add", "water", 1200, "ml", "liquid"),
         ("txt", "puis couvrez-les d'eau et laissez mijoter pendant 20 minutes à 160°C", "puis couvrez-les de 1,2 L d'eau et laissez mijoter 20 minutes à feu doux"),
+        ('txt', "Ajoutez l'ail et le curcuma", "Ajoutez l'ail, le curcuma et 5 g de piment séché"),
     ],
     "pasta_pesto_k3d2p1": [
         ("txt", "aux 400 g de pâtes fraîches", "aux 400 g de pâtes"),
@@ -72,6 +73,7 @@ PATCHES = {
         ("qty", "cucumber_raw_with_skin", 150),
         ("txt", "de 350 g de concombre en tranches", "de 150 g de concombre en tranches"),
         ("step-", "Enfournez le sandwich pendant 2 minutes à 180°C"),
+        ('txt', ', 11,2 g de gingembre frais et 3 g de coriandre moulue dans un bol', ' et 11 g de gingembre frais dans un bol'),
     ],
     "protein_buddhas_delight_f736c7": [
         ("ing", "shiitake_mushroom_raw", "shiitake_mushroom_dried", 30),

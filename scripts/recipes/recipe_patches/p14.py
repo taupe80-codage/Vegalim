@@ -9,12 +9,14 @@ PATCHES = {
     "main_caponata_d15a4f": [
         ("add", "table_salt_unenriched", 3, "g", "seasoning"),
         ("txt", "Ciselez les aubergines en cubes de 2 cm", "Coupez les aubergines en cubes de 2 cm"),
-        ("txt", "Nacrez les oignons blancs émincés à feu moyen", "Faites revenir l'oignon émincé à feu moyen"),
+        ("txt", "Nacrez les oignons blancs émincés à feu moyen", "Faites revenir l'oignon émincé dans les 15 ml d'huile restants à feu moyen"),
         ("txt", "Juliennez les tomates concassées et ajoutez-les à la poêle", "Ajoutez les tomates concassées à la poêle"),
         ("txt", "Brounoisez les olives noires et les câpres", "Hachez grossièrement les olives noires et les câpres"),
         ("txt", "Émulsionnez la sauce avec le vinaigre rouge et le sucre, en la fouettant jusqu'à obtention d'une texture lisse et d'un équilibre sucré-acidulé bien marqué.",
          "Ajoutez le vinaigre de vin rouge et le sucre, puis laissez réduire 2 minutes jusqu'à obtenir un équilibre sucré-acidulé bien marqué."),
-        ("txt", "Ajoutez l'huile d'olive et le sel pour rehausser les saveurs, puis servez", "Ajoutez 3 g de sel pour rehausser les saveurs, puis servez"),
+        ("txt", "Ajoutez l'huile d'olive et le sel pour rehausser les saveurs, puis servez sans attendre pour préserver la chaleur et les saveurs de la caponata.",
+         "Ajoutez 3 g de sel pour rehausser les saveurs, puis parsemez de 20 g de basilic ciselé. Servir tiède ou froid."),
+        ('txt', 'faites-les sauter à feu vif pendant 8 minutes', "faites-les sauter dans 30 ml d'huile d'olive à feu vif pendant 8 minutes"),
     ],
     "main_carottes_glacees_a_lerabl_87d5f0": [
         ("qty", "carrot_raw", 600),
@@ -46,6 +48,9 @@ PATCHES = {
         ("dish", "main"),
         ("txt", "Retourner la galette et déposer le fromage râpé en laissant 2 cm de bord.",
          "Retourner la galette, casser l'œuf au centre et déposer le fromage râpé autour en laissant 2 cm de bord."),
+        ('qty', 'table_salt_unenriched', 2),
+        ('txt', '150g de farine de sarrasin, 5g de sel', '150g de farine de sarrasin, 2g de sel'),
+        ('step-', 'Vérifier que les légumes sont tendres, le fromage fondu.'),
     ],
     "main_crumble_aux_myrtilles_5f7d47": [
         ("qty", "blueberry", 500),
@@ -69,6 +74,7 @@ PATCHES = {
         ("add", "table_salt_unenriched", 4, "g", "seasoning"),
         ("txt", "jusqu'à ce que la roux soit lisse et parfumée", "jusqu'à ce que le roux soit lisse et parfumé"),
         ("txt", "disposer dans un plat huilé de beurre", "disposer dans un plat beurré"),
+        ('step-', 'Vérifier que la sauce nappe la cuillère et rectifier'),
     ],
     "main_epinards_assaisonnes_core_b596b9": [
         ("txt", "Ajouter 20g de graines de sésame noir", "Ajouter 20g de graines de sésame"),
@@ -79,6 +85,7 @@ PATCHES = {
     ],
     "main_escalivada_1ee1c4": [
         ("time", 17, 30, 50),
+        ('dish', 'side'),
     ],
     "main_farofa_bresilienne_29e38e": [
         ("step-", "Accompagner de plats traditionnels brésiliens"),
@@ -87,6 +94,7 @@ PATCHES = {
         ("qty", "french_bean_raw", 600),
         ("txt", "Équêter les haricots verts de 300g et les couper en deux", "Équeuter 600g de haricots verts et les couper en deux"),
         ("txt", "jusqu'à ce que les échalotes soient tendres", "jusqu'à ce que les oignons soient tendres"),
+        ('step-', 'Dans un bol, servir les fasolakia'),
     ],
     "main_feijoada_2f6754": [
         ("ing", "orange_raw", "orange_raw_juice_fresh", 120, "ml"),
@@ -96,6 +104,8 @@ PATCHES = {
         ("txt", "Incorporer les haricots noirs égouttés et nacrer 2 minutes", "Incorporer les haricots noirs égouttés et les enrober 2 minutes"),
         ("txt", "Verser le jus d'orange fraîchement pressé et un peu de bouillon végétal", "Verser 120 ml de jus d'orange fraîchement pressé et 300 ml de bouillon végétal"),
         ("txt", "Servir dans des bols préchauffés, accompagné", "Servir bien chaud, accompagné"),
+        ('txt', "dans un peu d'huile d'olive", "dans 45 ml d'huile d'olive"),
+        ('txt', '300 ml de bouillon végétal, laisser mijoter', '300 ml de bouillon végétal avec 2 feuilles de laurier, laisser mijoter'),
     ],
     "main_flamiche_aux_poireaux_fa3d0b": [
         ("qty", "leeks_raw", 800),
@@ -130,8 +140,13 @@ PATCHES = {
         ("add", "water", 1500, "ml", "liquid"),
         ("add", "olive_oil_plant", 20, "ml", "fat"),
         ("txt", "Faire revenir l'oignon et l'ail dans une grande cocotte", "Faire revenir l'oignon et l'ail dans 20 ml d'huile d'olive, dans une grande cocotte"),
-        ("txt", "Couvrir d'eau et ajouter le thym", "Couvrir de 1,5 litre d'eau et ajouter le thym"),
+        ("txt", "Couvrir d'eau et ajouter le thym et l'ail.", "Ajouter 150 g de fèves sèches trempées la veille, couvrir de 1,5 litre d'eau et ajouter le thym."),
         ("txt", "dans un pot-au-feu traditionnel", "dans des assiettes creuses"),
+        ('txt', 'Ajouter les légumes (chou vert, carottes, navets, pommes de terre)', 'Ajouter les légumes (400 g de poireaux, chou vert, carottes, navets, pommes de terre)'),
+        ('step-', 'Ajouter les fèves en fin de cuisson'),
+        ('step-', 'Vérifier que les légumes sont tendres et fondants'),
+        ('txt', 'Servir la garbure chaude, parfumée et garnie de persil frais, dans des assiettes creuses.', 'Servir la garbure chaude dans des assiettes creuses, avec du pain de campagne.'),
+        ('step-', 'Vérifier que la saveur de la garbure'),
     ],
     "main_girolles_a_la_creme_7d432d": [
         ("flag", "kid_friendly", False),  # 80 ml de vin blanc

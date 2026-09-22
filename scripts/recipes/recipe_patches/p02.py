@@ -59,6 +59,9 @@ PATCHES = {
          "mélangez 150g de gluten de blé avec 150ml d'eau tiède. Pétrissez pendant 5 minutes, jusqu'à ce que la pâte devienne élastique."),
         ("step-", "Laissez reposer la pâte dans un bain d'eau froide"),
         ("step-", "Rincez la pâte sous l'eau froide en la malaxant"),
+        ('step-', 'Pour une texture plus tendre'),
+        ('step-', 'Pour une saveur plus intense'),
+        ('step-', 'Pour une présentation plus appétissante'),
     ],
     "base_shortcrust_e6e9f0": [
         ("txt", "125g de beurre froide", "125g de beurre froid"),

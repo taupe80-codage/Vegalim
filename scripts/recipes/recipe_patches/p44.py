@@ -28,6 +28,7 @@ PATCHES = {
         ("txt", "arrosez-les de sauce soja", "arrosez-les de 30 ml de sauce soja"),
         ("txt", "Assaisonnez de sel et de graines de sésame", "Parsemez de 15 g de graines de sésame"),
         ("txt", "Servir aussitôt dans des bols préchauffés.", "Servir aussitôt."),
+        ('dish', 'side'),
     ],
     "wok_pommes_de_terre_sautees_8bafe1": [
         ("ing", "coconut_oil_plant", "sunflower_oil_plant"),
@@ -78,6 +79,7 @@ PATCHES = {
         ("txt", "Ajouter l'huile de coco et chauffer immédiatement à 180°C, jusqu'à crépitation légère et à ce que l'huile soit chaude et prête à saisir les légumes.", "Ajouter 25 ml d'huile de tournesol."),
         ("txt", "Saisir l'ail pendant 10 secondes en remuant sans arrêt, jusqu'à parfum intense et à ce que l'ail soit doré et croustillant.", "Saisir l'ail 30 secondes en remuant sans arrêt, jusqu'à ce qu'il soit parfumé."),
         ("txt", "Servir chaud, garni de levure nutritionnelle râpée pour un parfum umami intense et en vérifiant la texture finale, jusqu'à ce que le plat soit prêt à être dégusté.", "Servir chaud, avec du riz."),
+        ('dish', 'side'),
     ],
     # oignon cru dans la farce, 40 g d'ancho, crème de coco et « riz végétal »
     "wrap_enchiladas_vegan_f70bca": [
@@ -144,6 +146,7 @@ PATCHES = {
          "Ajouter les carottes râpées et le concombre en fines lamelles, assaisonnés de 10 ml d'huile d'olive, 2 g de sel et de poivre."),
         ("txt", " et que la sauce brune végétarienne est encore chaude et généreuse à chaque bouchée", ""),
         ("step-", "Faire chauffer 10 ml d'huile d'olive extra vierge dans une poêle"),
+        ('qty', 'base_buckwheat_crepe_03db22', 320),
     ],
     "yellow_curry_paste_077f54": [
         ("qty", "turmeric_powder", 8),

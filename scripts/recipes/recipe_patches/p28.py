@@ -20,6 +20,8 @@ PATCHES = {
         ("txt", "émulsionner avec 400 ml de lait de coco pendant 2 minutes, en remuant constamment pour éviter les grumeaux",
          "mélanger avec 250 ml de lait de coco pendant 2 minutes, en remuant constamment"),
         ("txt", "ajouter 5 g de sel et porter à ébullition", "ajouter 3 g de sel et porter à ébullition"),
+        ('txt', 'Ajouter 300 g de pois et cuire', 'Ajouter 300 g de haricots rouges cuits et cuire'),
+        ('txt', ', en vérifiant que les pois sont tendres mais encore fermes', ''),
     ],
     # ordre des étapes absurde et aucun liquide pour 300 g de riz cru
     "rice_riz_jollof_360727": [

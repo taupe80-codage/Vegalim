@@ -94,6 +94,8 @@ PATCHES = {
     "brkf_pain_aux_bananes_vegan_b85f00": [
         ("ing", "grenoble_walnut_igp_candied", "walnut_shelled_dried"),
         ("txt", "Versez la préparation dans le moule, enfournez", "Versez la préparation dans le moule, saupoudrez de 15g de sucre, enfournez"),
+        ('txt', '5g de poudre à lever et 3g de bicarbonate de soude', '5g de poudre à lever, 3g de bicarbonate de soude et 2 g de cannelle'),
+        ('step-', 'Servez votre pain aux bananes dans un plat de service'),
     ],
     "brkf_pain_perdu_653f48": [
         ("txt", "1,1 g de canelle", "1,1 g de cannelle"),

@@ -55,6 +55,7 @@ PATCHES = {
         ("txt", "rectifiez l'assaisonnement avec 5 g de sel", "rectifiez l'assaisonnement avec 2 g de sel"),
         ("step-", "Vérifiez que les flageolets sont tendres"),
         ("txt", "Servez chaud, en contrôlant la température pour un service, pour préserver la tendresse des flageolets et la saveur de la sauce.", "Servez chaud."),
+        ('txt', "Faites revenir 150 g d'oignon jaune en brunoise", "Faites revenir 150 g d'oignon jaune, 100 g de carotte et 40 g de céleri en brunoise"),
     ],
     "side_haricots_verts_a_la_greno_f1bdca": [
         ("qty", "lemon_juice", 30),

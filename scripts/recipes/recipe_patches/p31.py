@@ -41,6 +41,7 @@ PATCHES = {
         ("txt", ", du vinaigre blanc et de la sauce soja.", " et du vinaigre blanc."),
         ("step-", "Faire cuire le mélange pendant 5 minutes à feu moyen"),
         ("step-", "Servir, garni d'un filet d'huile de sésame et d'une touche de coriandre"),
+        ('dish', 'side'),
     ],
     # zaalouk : pas d'oignon, jus de citron cité mais absent
     "salad_daubergines_marocaine_03fd77": [
@@ -50,6 +51,7 @@ PATCHES = {
         ("txt", "Assaisonner de jus de citron, 5 grammes de sel", "Assaisonner de 20 ml de jus de citron, 3 grammes de sel"),
         ("step-", "Vérifier que la salade ait des notes fumées"),
         ("step-", "Ajouter des feuilles de persil frais hachées et des olives noires"),
+        ('dish', 'side'),
     ],
     # kısır : oignon cru, concentré de tomate (présent mais jamais utilisé)
     "salad_de_boulgour_turque_f80124": [
@@ -72,6 +74,7 @@ PATCHES = {
         ("step-", "Réduire la vinaigrette si nécessaire"),
         ("txt", "Servir sans attendre, en présentant la salade dans des bols individuels,", "Servir sans attendre, parsemé de 10 g de coriandre fraîche ciselée,"),
         ("time", 15, 10, 0),
+        ('dish', 'side'),
     ],
     "salad_de_pommes_de_terre_allema_3cdeab": [
         ("ing", "olive_oil_extra_virgin_plant", "sunflower_oil_plant"),
