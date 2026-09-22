@@ -12420,6 +12420,98 @@
     "similar": []
   },
   {
+    "id": "soup_turkish_mercimek_soup_veg_f30ebc",
+    "title": "Ezogelin çorbası, lentilles, boulgour et menthe (vegan)",
+    "cuisine": "turkish",
+    "dish_type": "soup",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "low_calorie",
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 50,
+    "confidence": 1.0,
+    "description": "Soupe de Gaziantep plus rustique que la mercimek : lentilles corail, boulgour et riz mijotés au concentré de tomate et au piment pul biber, parfumés à la menthe séchée.",
+    "composition": [
+      {
+        "ingredient": "red_lentil_dried",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "bulgur_raw_dried",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_paste_unsalted_canned",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_hot_chili_pepper_spice_dried",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "dried_mint_herb",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1300,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "dal_falafel_traditionnels_214e07",
     "title": "Falafel libanais au sésame",
     "cuisine": "levantine",
@@ -23905,8 +23997,8 @@
   },
   {
     "id": "dal_mercimek_koftesi_34f72d",
-    "title": "Mercimek Köftesi",
-    "cuisine": "international",
+    "title": "Mercimek köftesi, boulettes de lentilles au boulgour",
+    "cuisine": "turkish",
     "dish_type": "main",
     "vegan": true,
     "diet": [
@@ -23920,7 +24012,7 @@
     "servings": 4,
     "time_total": 60,
     "confidence": 1.0,
-    "description": "Mercimek Köftesi, plat turc mijoté avec amour, où les lentilles rouges tendres se mélangent à un boulgour parfumé et des oignons caramélisés, créant une texture onctueuse et des saveurs épicées, typiques de la cuisine méditerranéenne.",
+    "description": "Spécialité turque sans cuisson de viande : lentilles corail et boulgour fin gonflés ensemble, pétris avec oignon, concentré de tomate, épices et persil, façonnés en quenelles servies dans la laitue.",
     "composition": [
       {
         "ingredient": "red_lentil_dried",
@@ -23984,6 +24076,75 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "dal_turkish_mercimek_soup_a7afcf",
+    "title": "Mercimek çorbası d'Istanbul au beurre pimenté",
+    "cuisine": "turkish",
+    "dish_type": "soup",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "gluten_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 45,
+    "confidence": 1.0,
+    "description": "La soupe de lentilles corail des lokantas : lentilles, oignon et carotte mixés en velouté, servie avec un filet de beurre fondu à la menthe séchée, et du citron.",
+    "composition": [
+      {
+        "ingredient": "red_lentil_dried",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 9.4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 750.0,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "dried_mint_herb",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -47728,24 +47889,25 @@
     "similar": []
   },
   {
-    "id": "soup_tamales_7dd98a",
-    "title": "Tamales",
-    "cuisine": "american",
-    "dish_type": "main",
-    "vegan": false,
+    "id": "snack_tamales_vegan_d7cbdc",
+    "title": "Tamales de frijol à la sauce rouge (vegan)",
+    "cuisine": "mexican",
+    "dish_type": "snack",
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
+      "high_protein",
+      "vegan",
+      "vegetarian",
       "gluten_free",
-      "high_protein"
+      "lactose_free",
+      "nut_free"
     ],
-    "allergens": [
-      "lactose",
-      "milk"
-    ],
-    "servings": 4,
-    "time_total": 107,
+    "allergens": [],
+    "servings": 6,
+    "time_total": 125,
     "confidence": 1.0,
-    "description": "Pâte de maïs dorée en cuisson pour une texture croustillante à l'extérieur et tendre à cœur, typique de la cuisine mexicaine traditionnelle, avec une farce parfumée aux haricots rouges, piment séché et épices.",
+    "description": "Tamales végétaux fourrés de haricots noirs écrasés et d'une sauce rouge aux piments ancho, à l'ail et au cumin, cuits à la vapeur en feuilles de maïs.",
     "composition": [
       {
         "ingredient": "masa_harina",
@@ -47753,33 +47915,43 @@
         "unit": "g"
       },
       {
+        "ingredient": "baking_powder",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 3.8,
+        "quantity": 4,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 300,
+        "quantity": 450,
         "unit": "ml"
       },
       {
-        "ingredient": "kidney_bean_boiled",
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "black_bean_boiled",
         "quantity": 300,
         "unit": "g"
       },
       {
-        "ingredient": "red_hot_chili_pepper_spice_dried",
-        "quantity": 10,
+        "ingredient": "ancho_pepper_spice_dried",
+        "quantity": 15,
         "unit": "g"
       },
       {
-        "ingredient": "queso_fresco_block_cow",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
+        "ingredient": "tomato_raw_ripe",
         "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_onion_raw",
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -47789,7 +47961,94 @@
       },
       {
         "ingredient": "cumin_spice_seed",
-        "quantity": 3,
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "corn_husk",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "soup_tamales_7dd98a",
+    "title": "Tamales rajas con queso",
+    "cuisine": "mexican",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "high_protein",
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 125,
+    "confidence": 1.0,
+    "description": "Tamales de Mexico : pâte de maïs battue à l'huile, garnie de lanières de poivron et de piment vert revenues à l'oignon et de fromage frais, cuite à la vapeur dans des feuilles de maïs.",
+    "composition": [
+      {
+        "ingredient": "masa_harina",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "baking_powder",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 350,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "green_bell_pepper_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "jalapeno_pepper_raw",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "corn_husk",
+        "quantity": 40,
         "unit": "g"
       },
       {
@@ -47801,108 +48060,11 @@
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
         "unit": "1 poignée"
-      },
-      {
-        "ingredient": "sunflower_oil_plant",
-        "quantity": 70,
-        "unit": "ml"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "snack_tamales_vegan_d7cbdc",
-        "title": "Tamales (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "snack_tamales_vegan_d7cbdc",
-    "title": "Tamales (Vegan)",
-    "cuisine": "mexican",
-    "dish_type": "snack",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "high_protein",
-      "lactose_free"
-    ],
-    "allergens": [
-      "tree_nuts"
-    ],
-    "servings": 6,
-    "time_total": 107,
-    "confidence": 1.0,
-    "description": "En-cas mexicaine à base de farine de maïs, bouillon végétal chaud et haricots rouges, tendre et humide, avec une texture ferme et une farce parfumée, rappelant la tradition culinaire du Mexique.",
-    "composition": [
-      {
-        "ingredient": "masa_harina",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 3.8,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 300,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "kidney_bean_boiled",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_hot_chili_pepper_spice_dried",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_vegan_cheddar_024998",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 2.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "sunflower_oil_plant",
-        "quantity": 70,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 8,
-    "flags": [],
-    "similar": [
-      {
-        "id": "soup_tamales_7dd98a",
-        "title": "Tamales",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "rice_tamarind_rice_2e5463",
@@ -50660,107 +50822,23 @@
   },
   {
     "id": "bread_tostadas_06442e",
-    "title": "Tostadas",
-    "cuisine": "spanish",
+    "title": "Tostadas aux haricots noirs, avocat et crème",
+    "cuisine": "mexican",
     "dish_type": "main",
     "vegan": false,
     "diet": [
+      "vegetarian",
       "gluten_free",
-      "vegetarian"
+      "nut_free"
     ],
     "allergens": [
-      "milk",
-      "lactose"
+      "lactose",
+      "milk"
     ],
     "servings": 4,
-    "time_total": 65,
-    "confidence": 1.0,
-    "description": "Tostadas croustillantes garnies de haricots noirs écrasés, de tomates fraîches, d'avocat et de laitue, le tout lié par une sauce crémeuse à base de crème fraîche et de jus de citron vert, offrant une expérience culinaire équilibrée et fraîche.",
-    "composition": [
-      {
-        "ingredient": "base_tortilla_92c2a6",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_bean_boiled",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "avocado_raw",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "lettuce",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "lime_juice_fresh",
-        "quantity": 40,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "sour_cream_fermented_18pct",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander",
-        "quantity": null,
-        "unit": "1 poignée"
-      },
-      {
-        "ingredient": "vegetable_oil_plant",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 2,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "snack_tostadas_vegan_f7257b",
-        "title": "Tostadas (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "snack_tostadas_vegan_f7257b",
-    "title": "Tostadas (Vegan)",
-    "cuisine": "mexican",
-    "dish_type": "snack",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "vegetarian"
-    ],
-    "allergens": [
-      "tree_nuts"
-    ],
-    "servings": 6,
     "time_total": 35,
     "confidence": 1.0,
-    "description": "En-cas mexicaine croustillante et parfumée, avec des haricots noirs fondants, des tomates fraîches, de l'avocat crémeux et de la laitue ciselée sur des tortillas dorées à la perfection, le tout accompagné d'un filet de jus de citron vert.",
+    "description": "Tortillas croustillantes cuites au four, tartinées de haricots noirs refrits, garnies de laitue, tomate, avocat, crème et queso fresco, arrosées de citron vert.",
     "composition": [
       {
         "ingredient": "base_tortilla_92c2a6",
@@ -50779,22 +50857,143 @@
       },
       {
         "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
+        "quantity": 200,
         "unit": "g"
       },
       {
         "ingredient": "lettuce",
-        "quantity": 300,
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sour_cream_fermented_18pct",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 60,
         "unit": "g"
       },
       {
         "ingredient": "lime_juice_fresh",
-        "quantity": 50,
+        "quantity": 30,
         "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander",
+        "quantity": null,
+        "unit": "1 poignée"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "snack_tostadas_vegan_f7257b",
+    "title": "Tostadas de tinga de champignons (vegan)",
+    "cuisine": "mexican",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "allergens": [
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 45,
+    "confidence": 1.0,
+    "description": "Tostadas garnies de tinga de champignons effilochés, mijotés avec oignon, tomate et paprika fumé, avec avocat, chou croquant et crème de cajou au citron vert.",
+    "composition": [
+      {
+        "ingredient": "base_tortilla_92c2a6",
+        "quantity": 320,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oyster_mushroom_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_bean_boiled",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oregano_spice_dried",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "avocado_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_cabbage_raw",
+        "quantity": 100,
+        "unit": "g"
       },
       {
         "ingredient": "cashew_butter_plain_plant",
         "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_oil_plant",
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -50806,22 +51005,11 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 2,
-        "unit": "g"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "bread_tostadas_06442e",
-        "title": "Tostadas",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "main_tourte_aux_champignons_85adfb",
@@ -51021,165 +51209,6 @@
     "n_instructions": 7,
     "flags": [],
     "similar": []
-  },
-  {
-    "id": "dal_turkish_mercimek_soup_a7afcf",
-    "title": "Turkish Mercimek Soup",
-    "cuisine": "international",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free"
-    ],
-    "allergens": [
-      "lactose",
-      "milk"
-    ],
-    "servings": 4,
-    "time_total": 45,
-    "confidence": 1.0,
-    "description": "Soupe crémeuse aux lentilles corail, oignon jaune et carotte cuite, parfumée à la menthe et au citron, avec une texture lisse et veloutée.",
-    "composition": [
-      {
-        "ingredient": "red_lentil_dried",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "lemon_juice",
-        "quantity": 40,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 750.0,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "butter_sup80pct",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "dried_mint_herb",
-        "quantity": 3,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "soup_turkish_mercimek_soup_veg_f30ebc",
-        "title": "Turkish Mercimek Soup (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "soup_turkish_mercimek_soup_veg_f30ebc",
-    "title": "Turkish Mercimek Soup (Vegan)",
-    "cuisine": "turkish",
-    "dish_type": "soup",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "low_calorie",
-      "nut_free"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 45,
-    "confidence": 1.0,
-    "description": "Soupe turque crémeuse aux lentilles corail tendres, oignon jaune caramélisé et carotte fondante, parfumée au cumin et au citron, avec une texture lisse et veloutée.",
-    "composition": [
-      {
-        "ingredient": "red_lentil_dried",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 2.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "lemon_juice",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 750.0,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "mint_fresh_herb",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "paprika_powder",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "sunflower_oil_plant",
-        "quantity": 15,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dal_turkish_mercimek_soup_a7afcf",
-        "title": "Turkish Mercimek Soup",
-        "score": 1.0
-      }
-    ]
   },
   {
     "id": "side_feijo_tropeiro_vegan_ccc81d",
@@ -51565,40 +51594,123 @@
     "similar": []
   },
   {
+    "id": "snack_varenyky_pomme_de_terre_v_8b6240",
+    "title": "Varenyky aux griottes (vegan)",
+    "cuisine": "ukrainian",
+    "dish_type": "dessert",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 6,
+    "time_total": 95,
+    "confidence": 1.0,
+    "description": "Le dessert d'été ukrainien : raviolis à la pâte à l'eau farcis de griottes sucrées, pochés et servis nappés de leur jus réduit.",
+    "composition": [
+      {
+        "ingredient": "wheat_flour",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 160,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sour_cherry_raw",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cornstarch_flour",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_salad_raw_plain",
+        "quantity": null,
+        "unit": "1 portion"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "main_varenyky_pomme_de_terre_0bb7cf",
-    "title": "Varenyky Pomme de Terre",
+    "title": "Varenyky ukrainiens à la pomme de terre et à l'aneth, oignons frits",
     "cuisine": "ukrainian",
     "dish_type": "main",
     "vegan": false,
-    "diet": [],
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
     "allergens": [
       "gluten",
       "lactose",
       "milk"
     ],
     "servings": 4,
-    "time_total": 50,
+    "time_total": 105,
     "confidence": 1.0,
-    "description": "Préparation de pâte souple dorée en cuisson, issue de la tradition culinaire ukrainienne, avec une texture tendre et une odeur de pomme de terre cuite.",
+    "description": "Raviolis ukrainiens à la pâte à l'eau, farcis de purée, de fromage blanc et d'aneth, pochés puis servis avec des oignons frits au beurre et de la crème aigre.",
     "composition": [
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
+        "quantity": 300,
         "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 160,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
       },
       {
         "ingredient": "potato_raw_flesh",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
+        "quantity": 500,
         "unit": "g"
       },
       {
         "ingredient": "fromage_blanc_plain_2_5pct_cow",
-        "quantity": 150,
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "dill_weed_fresh_herb_leaf",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -51607,108 +51719,24 @@
         "unit": "g"
       },
       {
-        "ingredient": "sunflower_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 4,
         "unit": "g"
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
+        "quantity": 1,
         "unit": "g"
       },
       {
-        "ingredient": "water",
-        "quantity": 120,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "snack_varenyky_pomme_de_terre_v_8b6240",
-        "title": "Varenyky Pomme de Terre (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "snack_varenyky_pomme_de_terre_v_8b6240",
-    "title": "Varenyky Pomme de Terre (Vegan)",
-    "cuisine": "ukrainian",
-    "dish_type": "snack",
-    "vegan": false,
-    "diet": [
-      "nut_free"
-    ],
-    "allergens": [
-      "gluten"
-    ],
-    "servings": 8,
-    "time_total": 70,
-    "confidence": 1.0,
-    "description": "Pâtes farcies tendres à la pomme de terre cuite, parfumées d'oignon jaune caramélisé et de poivre, préparées selon la tradition ukrainienne avec une pâte lisse et élastique.",
-    "composition": [
-      {
-        "ingredient": "wheat_flour",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "potato_raw_with_skin",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_oil_plant",
-        "quantity": 45.7,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_salad_raw_plain",
+        "ingredient": "sour_cream_fermented_18pct",
         "quantity": null,
-        "unit": "1 portion"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 120,
-        "unit": "ml"
+        "unit": "2 cuillères à soupe"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_varenyky_pomme_de_terre_0bb7cf",
-        "title": "Varenyky Pomme de Terre",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "soup_veloute_d_asperges_7da98f",

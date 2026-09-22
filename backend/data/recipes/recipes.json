@@ -13758,21 +13758,21 @@
       "id": "bread_tostadas_06442e",
       "titles": {
         "original": "Tostadas",
-        "fr": "Tostadas",
+        "fr": "Tostadas aux haricots noirs, avocat et crème",
         "en": "Tostadas"
       },
       "origin": {
-        "cuisine": "spanish",
-        "country": "spain",
-        "region": "castille",
+        "cuisine": "mexican",
+        "country": "mexico",
+        "region": "ciudad_de_mexico",
         "city": "mexico"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 15,
-        "prep_passive_min": 30,
-        "cook_min": 20,
-        "total_min": 65
+        "prep_active_min": 20,
+        "prep_passive_min": 0,
+        "cook_min": 15,
+        "total_min": 35
       },
       "composition": [
         {
@@ -13781,7 +13781,7 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -13799,84 +13799,84 @@
         },
         {
           "ingredient": "avocado_raw",
-          "quantity": 400,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "sliced",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "fruit",
-            "form": "roughly_chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "lettuce",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "leaves",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "lime_juice_fresh",
-          "quantity": 40,
-          "unit": "ml",
-          "meta": {
-            "role": "fruit",
-            "form": "juice",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "sour_cream_fermented_18pct",
-          "quantity": 100,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "thick",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "coriander",
-          "quantity": null,
-          "unit": "1 poignée",
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 200,
+          "unit": "g",
           "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "coriandre fraîche ciselée",
-            "note": "Pour une touche de fraîcheur et de couleur",
-            "optional": true
+            "role": "fruit",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lettuce",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sour_cream_fermented_18pct",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "queso_fresco_block_cow",
+          "quantity": 60,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 60,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "fruit",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
           "ingredient": "vegetable_oil_plant",
-          "quantity": 30,
+          "quantity": 25,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -13895,16 +13895,39 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander",
+          "quantity": null,
+          "unit": "1 poignée",
+          "meta": {
+            "role": "serving_suggestion",
+            "ingredient_fr": "coriandre fraîche ciselée",
+            "note": "Pour une touche de fraîcheur et de couleur",
+            "optional": true
+          }
         }
       ],
       "tags": {
         "diet": [
+          "vegetarian",
           "gluten_free",
-          "vegetarian"
+          "nut_free"
         ],
         "allergens": [
-          "milk",
-          "lactose"
+          "lactose",
+          "milk"
         ],
         "technique": [
           "frying",
@@ -13952,7 +13975,9 @@
         }
       },
       "search_tokens": [
+        "45 minutes",
         "assembly",
+        "aux",
         "avocado",
         "avocat",
         "base_tortilla_92c2a6",
@@ -13960,36 +13985,39 @@
         "black",
         "citron",
         "coeliaque",
-        "coriander",
         "cream",
         "creme",
         "cumin",
-        "espagne",
-        "espagnol",
+        "epice",
+        "fresco",
         "frying",
         "gluten free",
         "haricot",
+        "haricots",
         "huile",
         "intermediaire",
+        "latino",
         "leger",
-        "lent",
         "lettuce",
         "light",
         "lime",
-        "long",
         "low calorie",
-        "mediterranee",
-        "mijote",
+        "mexicain",
+        "mexican",
+        "mexique",
         "minceur",
         "moyen",
         "noir",
+        "noirs,",
+        "oignon",
         "oil",
+        "onion",
+        "queso",
         "salt",
         "sans gluten",
         "sans viande",
         "sel",
         "sour",
-        "spanish",
         "sure",
         "table",
         "tomate",
@@ -14005,14 +14033,13 @@
       "servings_default": 4,
       "_quality_score": 0.92,
       "_chef_note": "Assurez-vous d'utiliser des tortillas fraîches et de les faire frire à la bonne température pour obtenir la texture croustillante parfaite.",
-      "description": "Tostadas croustillantes garnies de haricots noirs écrasés, de tomates fraîches, d'avocat et de laitue, le tout lié par une sauce crémeuse à base de crème fraîche et de jus de citron vert, offrant une expérience culinaire équilibrée et fraîche.",
+      "description": "Tortillas croustillantes cuites au four, tartinées de haricots noirs refrits, garnies de laitue, tomate, avocat, crème et queso fresco, arrosées de citron vert.",
       "instructions": [
-        "Étape 1: Faire frire les tortillas dans l'huile chaude à 180°C pendant environ 2-3 minutes de chaque côté, jusqu'à ce qu'elles soient dorées et croustillantes, ou les passer au four préchauffé à 200°C pendant 10 minutes, en vérifiant leur texture croustillante.",
-        "Étape 2: Écraser et assaisonner 300g de haricots noirs avec 5g de sel de table, 1 cuillère à café de cumin et 2 cuillères à soupe de jus de citron vert frais, en vérifiant que les haricots soient bien écrasés et parfumés.",
-        "Étape 3: Répartir les haricots écrasés sur les tostadas, en laissant un petit espace libre autour des bords.",
-        "Étape 4: Garnir de laitue ciselée, de tomates en dés et d'avocat tranché, en ajoutant un peu de jus de citron vert frais pour éviter l'oxydation.",
-        "Étape 5: Arroser de 2 cuillères à soupe de jus de citron vert frais, puis déposer une cuillerée de crème aigre sur chaque tostada.",
-        "Étape 6: Servir aussitôt."
+        "Étape 1 : Préchauffer le four à 200°C. Badigeonner les tortillas de 15 ml d'huile et les cuire 8 minutes, jusqu'à ce qu'elles soient croustillantes.",
+        "Étape 2 : Faire revenir 60 g d'oignon haché dans 10 ml d'huile, ajouter 300 g de haricots noirs, 2 g de cumin et 2 g de sel, puis les écraser avec un peu d'eau en purée épaisse.",
+        "Étape 3 : Écraser 200 g d'avocat avec 20 ml de jus de citron vert et 1 g de sel.",
+        "Étape 4 : Tartiner chaque tostada de haricots, puis garnir de 150 g de laitue émincée, 200 g de tomate en dés et d'avocat.",
+        "Étape 5 : Terminer avec 80 g de crème, 60 g de queso fresco émietté et 10 ml de jus de citron vert."
       ],
       "diet_flags": {
         "vegan": false,
@@ -39704,13 +39731,13 @@
       "id": "dal_mercimek_koftesi_34f72d",
       "titles": {
         "original": "Mercimek Köftesi",
-        "fr": "Mercimek Köftesi",
+        "fr": "Mercimek köftesi, boulettes de lentilles au boulgour",
         "en": "Mercimek Köftesi"
       },
       "origin": {
-        "cuisine": "international",
-        "country": "international",
-        "region": "world",
+        "cuisine": "turkish",
+        "country": "turkey",
+        "region": "anatolie",
         "city": ""
       },
       "servings": 4,
@@ -39913,23 +39940,27 @@
         "(eau",
         "1 heure",
         "assembly",
+        "boulettes",
         "boulgour",
         "bulgur",
         "corail",
         "cumin",
         "eau",
         "intermediaire",
-        "international",
         "koftesi",
+        "koftesi,",
         "leger",
         "lentil",
         "lentille",
+        "lentilles",
         "lettuce",
         "light",
         "low calorie",
+        "mediterranee",
         "mercimek",
         "minceur",
         "moyen",
+        "moyen-orient",
         "oignon",
         "olive",
         "onion",
@@ -39945,6 +39976,9 @@
         "table",
         "tomate",
         "tomato",
+        "turc",
+        "turkish",
+        "turquie",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -39955,7 +39989,7 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.93,
-      "description": "Mercimek Köftesi, plat turc mijoté avec amour, où les lentilles rouges tendres se mélangent à un boulgour parfumé et des oignons caramélisés, créant une texture onctueuse et des saveurs épicées, typiques de la cuisine méditerranéenne.",
+      "description": "Spécialité turque sans cuisson de viande : lentilles corail et boulgour fin gonflés ensemble, pétris avec oignon, concentré de tomate, épices et persil, façonnés en quenelles servies dans la laitue.",
       "instructions": [
         "Étape 1 : Rincer 250 g de lentilles corail et les cuire dans 600 ml d'eau à feu doux pendant 15 minutes, jusqu'à absorption presque complète.",
         "Étape 2 : Hors du feu, incorporer 250 g de boulgour fin, couvrir et laisser gonfler 15 minutes.",
@@ -45216,14 +45250,14 @@
       "id": "dal_turkish_mercimek_soup_a7afcf",
       "titles": {
         "original": "Turkish Mercimek Soup",
-        "fr": "Turkish Mercimek Soup",
+        "fr": "Mercimek çorbası d'Istanbul au beurre pimenté",
         "en": "Turkish Mercimek Soup"
       },
       "origin": {
-        "cuisine": "international",
-        "country": "international",
-        "region": "world",
-        "city": ""
+        "cuisine": "turkish",
+        "country": "turkey",
+        "region": "istanbul",
+        "city": "istanbul"
       },
       "servings": 4,
       "timing": {
@@ -45399,7 +45433,9 @@
         "citron",
         "coeliaque",
         "corail",
+        "corbası",
         "cumin",
+        "d'istanbul",
         "dried",
         "eau",
         "enfants",
@@ -45407,7 +45443,6 @@
         "famille",
         "gluten free",
         "intermediaire",
-        "international",
         "kids",
         "leger",
         "legumes",
@@ -45416,13 +45451,16 @@
         "lentille",
         "light",
         "low calorie",
+        "mediterranee",
         "menthe",
         "mercimek",
         "minceur",
         "mint",
         "moyen",
+        "moyen-orient",
         "oignon",
         "onion",
+        "pimente",
         "potable)",
         "red",
         "sans gluten",
@@ -45430,16 +45468,18 @@
         "soup",
         "soupe",
         "stock",
+        "turc",
         "turkish",
+        "turquie",
         "vegetable",
         "vegetarien",
         "water"
       ],
       "difficulty_level": "medium",
-      "dish_type": "main",
+      "dish_type": "soup",
       "servings_default": 4,
       "_quality_score": 0.9,
-      "description": "Soupe crémeuse aux lentilles corail, oignon jaune et carotte cuite, parfumée à la menthe et au citron, avec une texture lisse et veloutée.",
+      "description": "La soupe de lentilles corail des lokantas : lentilles, oignon et carotte mixés en velouté, servie avec un filet de beurre fondu à la menthe séchée, et du citron.",
       "instructions": [
         "Étape 1: Faire fondre 20g de beurre dans une casserole à feu moyen, puis ajouter l'oignon et la carotte en petits dés. Faire revenir pendant 5 minutes, jusqu'à ce que les légumes soient tendres et parfument la cuisine d'une odeur délicieuse.",
         "Étape 2: Ajouter le cumin en poudre et mélanger pendant 30 secondes, pour que les saveurs se mélangent et libèrent leurs arômes.",
@@ -105928,7 +105968,7 @@
       "id": "main_varenyky_pomme_de_terre_0bb7cf",
       "titles": {
         "original": "Varenyky Pomme De Terre",
-        "fr": "Varenyky Pomme de Terre",
+        "fr": "Varenyky ukrainiens à la pomme de terre et à l'aneth, oignons frits",
         "en": "Terre Varenyky Pomme"
       },
       "origin": {
@@ -105939,52 +105979,85 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 15,
-        "prep_passive_min": 0,
+        "prep_active_min": 40,
+        "prep_passive_min": 30,
         "cook_min": 35,
-        "total_min": 50
+        "total_min": 105
       },
       "composition": [
         {
           "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-          "quantity": 200,
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
-            "form": "sifted",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 160,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "potato_raw_flesh",
-          "quantity": 600,
+          "quantity": 500,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "cubed",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "onion_raw",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "fromage_blanc_plain_2_5pct_cow",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "plain",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "dill_weed_fresh_herb_leaf",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -105995,17 +106068,6 @@
           "unit": "g",
           "meta": {
             "role": "fat_cooking",
-            "form": "diced",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "sunflower_oil_plant",
-          "quantity": 45,
-          "unit": "ml",
-          "meta": {
-            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -106013,7 +106075,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -106024,21 +106086,21 @@
         },
         {
           "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "water",
-          "quantity": 120,
-          "unit": "ml",
+          "ingredient": "sour_cream_fermented_18pct",
+          "quantity": null,
+          "unit": "2 cuillères à soupe",
           "meta": {
-            "role": "liquid",
+            "role": "serving_suggestion",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -106046,7 +106108,10 @@
         }
       ],
       "tags": {
-        "diet": [],
+        "diet": [
+          "vegetarian",
+          "nut_free"
+        ],
         "allergens": [
           "gluten",
           "lactose",
@@ -106099,29 +106164,38 @@
       },
       "search_tokens": [
         "(eau",
-        "1 heure",
         "all",
+        "aneth",
         "beurre",
         "black",
         "blanc",
         "ble",
         "butter",
+        "cream",
+        "creme",
+        "dill",
         "eau",
         "enfants",
         "facile enfants",
         "famille",
         "farine",
         "flour",
+        "frits",
         "fromage",
         "intermediaire",
         "kids",
+        "l'aneth,",
         "leger",
+        "lent",
         "light",
+        "long",
         "low calorie",
+        "mijote",
         "minceur",
         "moyen",
         "noir",
         "oignon",
+        "oignons",
         "onion",
         "pepper",
         "poivre",
@@ -106132,17 +106206,21 @@
         "salt",
         "sans viande",
         "sel",
+        "sour",
         "sunflower",
+        "sure",
         "table",
         "terre",
         "tournesol",
         "tout",
         "ukrainian",
+        "ukrainiens",
         "usage",
         "varenyky",
         "vegetarien",
         "water",
         "water_cooking",
+        "weed",
         "wheat",
         "wok"
       ],
@@ -106150,15 +106228,13 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.97,
-      "description": "Préparation de pâte souple dorée en cuisson, issue de la tradition culinaire ukrainienne, avec une texture tendre et une odeur de pomme de terre cuite.",
+      "description": "Raviolis ukrainiens à la pâte à l'eau, farcis de purée, de fromage blanc et d'aneth, pochés puis servis avec des oignons frits au beurre et de la crème aigre.",
       "instructions": [
-        "Étape 1: Préparez la pâte en mélangeant 200g de farine avec 120 ml d'eau tiède, du sel et 40g de beurre. Pétrissez pendant 10 minutes, jusqu'à obtenir une pâte lisse et élastique qui ne colle plus aux mains.",
-        "Étape 2: Faites cuire les pommes de terre crues pendant 20 minutes à la vapeur, jusqu'à ce qu'elles soient tendres et faciles à écraser. Écrasez-les avec l'oignon émincé et sauté pendant 5 minutes à feu moyen, jusqu'à obtenir une purée légèrement dorée et parfumée.",
-        "Étape 3: Ajoutez 150g de fromage blanc à la purée de pommes de terre et mélangez bien, jusqu'à ce que le fromage soit bien incorporé et la purée homogène.",
-        "Étape 4: Étalez la pâte finement à 2 mm d'épaisseur, en utilisant un rouleau à pâtisserie pour obtenir une surface lisse et régulière. Découpez des ronds de 8 cm à l'aide d'un emporte-pièce, en veillant à ne pas étirer la pâte.",
-        "Étape 5: Garnissez chaque rond de pâte avec la purée de pommes de terre, en laissant un bord de 1 cm tout autour. Pliez en demi-lune et scellez soigneusement les bords en pressant, pour éviter que la purée ne s'échappe pendant la cuisson.",
-        "Étape 6: Pocher les varenyky 4 minutes dans une grande casserole d'eau bouillante salée, jusqu'à ce qu'ils remontent à la surface.",
-        "Étape 7: Égouttez-les, puis faites-les dorer 2 minutes de chaque côté dans 45 ml d'huile de tournesol."
+        "Étape 1 : Pétrir 300 g de farine avec 160 ml d'eau tiède, 15 ml d'huile et 2 g de sel, puis laisser reposer 30 minutes.",
+        "Étape 2 : Cuire 500 g de pommes de terre à l'eau 20 minutes, les écraser avec 100 g de fromage blanc, 10 g d'aneth ciselé, 2 g de sel et 1 g de poivre.",
+        "Étape 3 : Étaler la pâte finement, découper des disques de 7 cm, garnir, replier en demi-lune et pincer les bords.",
+        "Étape 4 : Pocher les varenyky 4 minutes dans l'eau bouillante salée après qu'ils remontent.",
+        "Étape 5 : Faire frire 200 g d'oignon émincé dans 40 g de beurre jusqu'à ce qu'il soit doré, et en napper les varenyky. Servir avec de la crème aigre."
       ],
       "diet_flags": {
         "vegan": false,
@@ -152991,7 +153067,7 @@
       "id": "snack_tamales_vegan_d7cbdc",
       "titles": {
         "original": "Tamales (Vegan)",
-        "fr": "Tamales (Vegan)",
+        "fr": "Tamales de frijol à la sauce rouge (vegan)",
         "en": "Tamales Végétariens (Vegan)"
       },
       "origin": {
@@ -153002,10 +153078,10 @@
       },
       "servings": 6,
       "timing": {
-        "prep_active_min": 17,
+        "prep_active_min": 35,
         "prep_passive_min": 30,
         "cook_min": 60,
-        "total_min": 107
+        "total_min": 125
       },
       "composition": [
         {
@@ -153014,34 +153090,57 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "powder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "baking_powder",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "leavening",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 3.8,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 750 ml d'eau"
+            "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 300,
+          "quantity": 450,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
-            "note": "pour reconstituer le bouillon"
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
-          "ingredient": "kidney_bean_boiled",
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 60,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_bean_boiled",
           "quantity": 300,
           "unit": "g",
           "meta": {
@@ -153052,77 +153151,77 @@
           }
         },
         {
-          "ingredient": "red_hot_chili_pepper_spice_dried",
-          "quantity": 10,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "whole",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "base_vegan_cheddar_024998",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "grated",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "white_onion_raw",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "garlic_raw",
+          "ingredient": "ancho_pepper_spice_dried",
           "quantity": 15,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "cumin_spice_seed",
-          "quantity": 2.5,
-          "unit": "g",
-          "meta": {
             "role": "spice",
-            "form": "ground",
-            "state": "raw",
+            "form": "",
+            "state": "dry",
             "preparation": ""
           }
         },
         {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 150,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
+            "role": "fruit",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "sunflower_oil_plant",
-          "quantity": 70,
-          "unit": "ml",
+          "ingredient": "white_onion_raw",
+          "quantity": 100,
+          "unit": "g",
           "meta": {
-            "role": "fat",
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 9,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "corn_husk",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -153132,13 +153231,14 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "high_protein",
-          "lactose_free"
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
         ],
-        "allergens": [
-          "tree_nuts"
-        ],
+        "allergens": [],
         "technique": [
           "steaming"
         ],
@@ -153182,29 +153282,33 @@
       "search_tokens": [
         "(eau",
         "(farine",
+        "(pour",
         "(vegan)",
         "ail",
-        "base_vegan_cheddar_024998",
+        "ancho",
+        "baking",
         "bean",
+        "black",
         "blanc",
         "bouillon",
-        "chili",
         "coeliaque",
+        "corn",
         "cumin",
         "eau",
         "epice",
-        "fort",
+        "feuille",
+        "frijol",
         "garlic",
         "gluten free",
         "haricot",
         "harina",
-        "hot",
+        "husk",
         "intermediaire",
-        "kidney",
         "latino",
         "leger",
         "legumes",
         "lent",
+        "lever",
         "light",
         "long",
         "low calorie",
@@ -153217,23 +153321,27 @@
         "minceur",
         "moyen",
         "nixtamalise)",
+        "noir",
         "oignon",
         "onion",
         "pepper",
         "piment",
         "potable)",
-        "red",
+        "poudre",
+        "powder",
         "rouge",
-        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "sel",
+        "sauce",
+        "sechee",
         "steaming",
         "stock",
         "sunflower",
-        "table",
         "tamales",
+        "tamales)",
+        "tomate",
+        "tomato",
         "tournesol",
         "vegan",
         "vegetable",
@@ -153248,23 +153356,20 @@
       "servings_default": 6,
       "_quality_score": 0.92,
       "_chef_note": "Remplacez le fromage par 150g de fromage végétal râpé pour ajouter une touche de saveur.",
-      "description": "En-cas mexicaine à base de farine de maïs, bouillon végétal chaud et haricots rouges, tendre et humide, avec une texture ferme et une farce parfumée, rappelant la tradition culinaire du Mexique.",
+      "description": "Tamales végétaux fourrés de haricots noirs écrasés et d'une sauce rouge aux piments ancho, à l'ail et au cumin, cuits à la vapeur en feuilles de maïs.",
       "instructions": [
-        "Étape 1 : Préparez la masa en mélangeant 300g de farine de maïs avec 60 ml d'huile de tournesol et environ 300 ml de bouillon végétal chaud, jusqu'à obtenir une pâte lisse et homogène, sans grumeaux, en travaillant la masa pendant environ 5 minutes.",
-        "Étape 2 : Préparez la farce en mélangeant 300g de haricots rouges cuits, 10g de piments chili séchés, 15g d'ail émincé, 2,5g de cumin en graines et 5g de sel, jusqu'à ce que la farce soit parfumée et savoureuse, en répartissant bien les saveurs pendant environ 2 minutes.",
-        "Étape 3 : Faites revenir 150g d'oignon blanc émincé dans 10 ml d'huile jusqu'à ce qu'il soit translucide et légèrement caramélisé, en remuant régulièrement pendant environ 5 minutes, jusqu'à obtenir une texture tendre et une couleur dorée.",
-        "Étape 4 : Ajoutez la farce à l'oignon émincé avec 150g de fromage végétal râpé et mélangez bien, en veillant à ce que les saveurs soient bien réparties, pendant environ 2 minutes, jusqu'à ce que la farce soit homogène et parfumée.",
-        "Étape 5 : Étalez la masa sur des feuilles de maïs trempées, en veillant à ce que la masa soit fine et régulière, d'une épaisseur d'environ 2 mm, pour obtenir une texture ferme et régulière.",
-        "Étape 6 : Déposez la farce au centre de la masa et refermez en roulant la feuille, en veillant à ce que les tamales soient bien fermés pour ne pas perdre leur farce pendant la cuisson, en appuyant légèrement sur les bords pour les sceller.",
-        "Étape 7 : Cuisez les tamales à la vapeur pendant 1 heure, en veillant à ce que la vapeur soit abondante pour cuire les tamales uniformément, jusqu'à ce qu'ils soient fermes et parfumés.",
-        "Étape 8 : Servez les tamales chauds, avec une texture ferme et une farce parfumée, en les accompagnant d'une sauce piquante ou d'un bol de bouillon végétal, pour apprécier pleinement les saveurs et les textures de ce plat traditionnel mexicain."
+        "Étape 1 : Faire tremper 40 g de feuilles de maïs 30 minutes, et 15 g de piments ancho épépinés 15 minutes dans 100 ml d'eau chaude.",
+        "Étape 2 : Mixer les piments et leur eau avec 150 g de tomate, 50 g d'oignon, 9 g d'ail, 2 g de cumin et 1 g de sel, puis cuire la sauce 8 minutes dans 10 ml d'huile.",
+        "Étape 3 : Écraser 300 g de haricots noirs avec 50 g d'oignon haché et la moitié de la sauce.",
+        "Étape 4 : Battre 300 g de masa harina avec 5 g de poudre à lever, 3 g de sel, 50 ml d'huile et 350 ml de bouillon tiède (4 g de bouillon déshydraté).",
+        "Étape 5 : Garnir les feuilles de pâte, de haricots et d'un peu de sauce, replier et cuire 60 minutes à la vapeur. Servir avec le reste de sauce."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
         "gluten_free": true,
         "lactose_free": true,
-        "nut_free": false,
+        "nut_free": true,
         "raw": false,
         "kid_friendly": false
       }
@@ -153480,7 +153585,7 @@
       "id": "snack_tostadas_vegan_f7257b",
       "titles": {
         "original": "Tostadas (Vegan)",
-        "fr": "Tostadas (Vegan)",
+        "fr": "Tostadas de tinga de champignons (vegan)",
         "en": "Tostadas Végétariennes (Vegan)"
       },
       "origin": {
@@ -153489,12 +153594,12 @@
         "region": "ciudad_de_mexico",
         "city": ""
       },
-      "servings": 6,
+      "servings": 4,
       "timing": {
-        "prep_active_min": 15,
+        "prep_active_min": 20,
         "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 35
+        "cook_min": 25,
+        "total_min": 45
       },
       "composition": [
         {
@@ -153503,14 +153608,25 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "oyster_mushroom_raw",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "black_bean_boiled",
-          "quantity": 300,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "protein",
@@ -153520,45 +153636,78 @@
           }
         },
         {
-          "ingredient": "avocado_raw",
-          "quantity": 200,
+          "ingredient": "onion_raw",
+          "quantity": 120,
           "unit": "g",
           "meta": {
-            "role": "fruit",
-            "form": "sliced",
+            "role": "aromatic_base",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "lettuce",
-          "quantity": 300,
+          "ingredient": "garlic_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "paprika",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "oregano_spice_dried",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "avocado_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "fruit",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_cabbage_raw",
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "leaves",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "lime_juice_fresh",
-          "quantity": 50,
-          "unit": "ml",
-          "meta": {
-            "role": "fruit",
-            "form": "juice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -153566,10 +153715,32 @@
         {
           "ingredient": "cashew_butter_plain_plant",
           "quantity": 40,
-          "unit": "ml",
+          "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "thick",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "fruit",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_oil_plant",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -153595,24 +153766,15 @@
             "note": "Pour un peu de fraîcheur supplémentaire",
             "optional": true
           }
-        },
-        {
-          "ingredient": "cumin_spice_seed",
-          "quantity": 2,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
+          "vegan",
+          "vegetarian",
           "gluten_free",
-          "vegetarian"
+          "lactose_free"
         ],
         "allergens": [
           "tree_nuts"
@@ -153661,25 +153823,29 @@
       "search_tokens": [
         "(vegan)",
         "45 minutes",
+        "ail",
         "avocado",
         "avocat",
         "base_tortilla_92c2a6",
         "bean",
         "black",
+        "cabbage",
         "cajou",
         "cashew",
+        "champignon",
+        "champignons",
+        "chou",
         "citron",
         "coeliaque",
-        "coriander",
-        "cumin",
         "epice",
         "frying",
+        "garlic",
         "gluten free",
+        "green",
         "haricot",
         "intermediaire",
         "latino",
         "leger",
-        "lettuce",
         "light",
         "lime",
         "low calorie",
@@ -153688,15 +153854,21 @@
         "mexique",
         "minceur",
         "moyen",
+        "mushroom",
         "noir",
         "noix",
+        "oignon",
+        "onion",
+        "oregano",
+        "origan",
+        "oyster",
+        "paprika",
+        "pleurote",
         "raw",
-        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "sel",
-        "table",
+        "tinga",
         "tomate",
         "tomato",
         "tostadas",
@@ -153707,18 +153879,17 @@
         "vert"
       ],
       "difficulty_level": "medium",
-      "dish_type": "snack",
-      "servings_default": 6,
+      "dish_type": "main",
+      "servings_default": 4,
       "_quality_score": 0.95,
       "_chef_note": "Respecter les quantités d'ingrédients pour un résultat optimal.",
-      "description": "En-cas mexicaine croustillante et parfumée, avec des haricots noirs fondants, des tomates fraîches, de l'avocat crémeux et de la laitue ciselée sur des tortillas dorées à la perfection, le tout accompagné d'un filet de jus de citron vert.",
+      "description": "Tostadas garnies de tinga de champignons effilochés, mijotés avec oignon, tomate et paprika fumé, avec avocat, chou croquant et crème de cajou au citron vert.",
       "instructions": [
-        "Étape 1 : Passer les tortillas au four préchauffé à 180°C pendant 8 minutes, jusqu'à ce qu'elles soient dorées et croustillantes, en vérifiant régulièrement leur couleur pour éviter une coloration trop foncée.",
-        "Étape 2 : Écraser et assaisonner les haricots noirs avec du sel, un peu de jus de citron vert et 2 g de cumin, en veillant à obtenir une consistance lisse et crémeuse.",
-        "Étape 3 : Étaler une couche généreuse de haricots noirs sur chaque tostada, en laissant un petit espace vide autour des bords pour une présentation élégante.",
-        "Étape 4 : Garnir de laitue ciselée, de tomates en dés et d'avocat tranché, en prenant soin de disposer les ingrédients de manière harmonieuse et visuellement appétissante.",
-        "Étape 5 : Arroser de jus de citron vert et ajouter 40 ml de crème de cajou détendue à l'eau pour un toucher crémeux et rafraîchissant, en ajustant la quantité selon les goûts personnels.",
-        "Étape 6 : Servir sans attendre, en présentant les tostadas croustillantes et parfumées dans des assiettes, avec une garniture de laitue ciselée et un filet de jus de citron vert."
+        "Étape 1 : Préchauffer le four à 200°C. Badigeonner les tortillas de 15 ml d'huile et les cuire 8 minutes.",
+        "Étape 2 : Tinga : effilocher 400 g de pleurotes et les dorer dans 15 ml d'huile, 6 minutes, puis ajouter 120 g d'oignon émincé et 6 g d'ail, et cuire 4 minutes.",
+        "Étape 3 : Ajouter 250 g de tomates mixées, 3 g de paprika fumé, 1 g d'origan et 2 g de sel, puis mijoter 10 minutes. Ajouter 200 g de haricots noirs.",
+        "Étape 4 : Crème : délayer 40 g de beurre de cajou avec 20 ml de jus de citron vert, 1 g de sel et 30 ml d'eau.",
+        "Étape 5 : Garnir les tostadas de tinga, de 100 g de chou émincé et de 150 g d'avocat, puis napper de crème de cajou et arroser de 10 ml de citron vert."
       ],
       "diet_flags": {
         "vegan": true,
@@ -153734,70 +153905,48 @@
       "id": "snack_varenyky_pomme_de_terre_v_8b6240",
       "titles": {
         "original": "Varenyky Pomme De Terre (Vegan)",
-        "fr": "Varenyky Pomme de Terre (Vegan)",
+        "fr": "Varenyky aux griottes (vegan)",
         "en": "Varenyky Pomme De Terre (Vegan)"
       },
       "origin": {
         "cuisine": "ukrainian",
-        "country": "international",
+        "country": "ukraine",
         "region": "kiev",
         "city": ""
       },
-      "servings": 8,
+      "servings": 6,
       "timing": {
-        "prep_active_min": 15,
+        "prep_active_min": 40,
         "prep_passive_min": 30,
         "cook_min": 25,
-        "total_min": 70
+        "total_min": 95
       },
       "composition": [
         {
           "ingredient": "wheat_flour",
-          "quantity": 200,
-          "unit": "g",
-          "meta": {
-            "role": "carbohydrate",
-            "form": "sifted",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "potato_raw_with_skin",
-          "quantity": 600,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "cubed",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "onion_raw",
           "quantity": 300,
           "unit": "g",
           "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
+            "role": "carbohydrate",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "vegan_butter",
-          "quantity": 40,
-          "unit": "g",
+          "ingredient": "water",
+          "quantity": 160,
+          "unit": "ml",
           "meta": {
-            "role": "fat_cooking",
-            "form": "diced",
+            "role": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "vegetable_oil_plant",
-          "quantity": 45.7,
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "fat_cooking",
@@ -153807,23 +153956,45 @@
           }
         },
         {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "ingredient": "sour_cherry_raw",
+          "quantity": 500,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
+            "role": "ingredient",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "ingredient": "white_sugar",
+          "quantity": 60,
           "unit": "g",
           "meta": {
-            "role": "spice",
-            "form": "ground",
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cornstarch_flour",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "thickener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -153838,21 +154009,13 @@
             "note": "Pour un accompagnement frais",
             "optional": true
           }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 120,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
         "diet": [
+          "vegan",
+          "vegetarian",
+          "lactose_free",
           "nut_free"
         ],
         "allergens": [
@@ -153903,13 +154066,17 @@
       "search_tokens": [
         "(eau",
         "(vegan)",
-        "beurre",
-        "black",
+        "aux",
+        "blanc",
         "ble",
         "boiling",
-        "butter",
+        "cherry",
+        "cornstarch",
         "eau",
+        "fecule",
         "green",
+        "griotte",
+        "griottes",
         "huile",
         "intermediaire",
         "leger",
@@ -153917,18 +154084,13 @@
         "light",
         "long",
         "low calorie",
+        "mais",
         "mijote",
         "minceur",
         "moyen",
-        "noir",
-        "oignon",
         "oil",
-        "onion",
-        "pepper",
-        "poivre",
         "pomme",
         "potable)",
-        "potato",
         "salad",
         "salade",
         "salt",
@@ -153936,35 +154098,35 @@
         "sans viande",
         "sauteed",
         "sel",
+        "sour",
+        "sucre",
+        "sugar",
         "table",
         "terre",
         "ukrainian",
         "varenyky",
         "vegan",
         "vegetable",
-        "vegetal",
         "vegetale",
         "vegetalien",
         "vegetarien",
         "verte",
         "water",
-        "wheat"
+        "wheat",
+        "white"
       ],
       "difficulty_level": "medium",
-      "dish_type": "snack",
-      "servings_default": 8,
+      "dish_type": "dessert",
+      "servings_default": 6,
       "_quality_score": 0.95,
       "_chef_note": "Respecter les quantités d'ingrédients pour un résultat optimal.",
-      "description": "Pâtes farcies tendres à la pomme de terre cuite, parfumées d'oignon jaune caramélisé et de poivre, préparées selon la tradition ukrainienne avec une pâte lisse et élastique.",
+      "description": "Le dessert d'été ukrainien : raviolis à la pâte à l'eau farcis de griottes sucrées, pochés et servis nappés de leur jus réduit.",
       "instructions": [
-        "Étape 1 : Préparer la pâte en mélangeant 200g de farine de blé avec 45,7ml d'huile végétale, 5g de sel de table et 120ml d'eau tiède, puis pétrir pendant 8 minutes jusqu'à obtenir une pâte lisse et élastique.",
-        "Étape 2 : Cuire 600g de pommes de terre crues pendant 15 minutes, puis les écraser avec 300g d'oignon jaune sauté pendant 5-8 minutes jusqu'à légère coloration dorée et parfum caramélisé.",
-        "Étape 3 : Assaisonner la farce avec du poivre noir.",
-        "Étape 4 : Étaler la pâte finement à environ 3mm d'épaisseur et découper des ronds de 10cm de diamètre.",
-        "Étape 5 : Déposer une cuillère de farce au centre de chaque rond et plier en demi-lune, en veillant à bien souder les bords.",
-        "Étape 6 : Souder soigneusement les bords en pressant pour former les varenyky, en s'assurant qu'ils soient bien fermés pour éviter qu'ils ne s'ouvert pendant la cuisson.",
-        "Étape 7 : Cuire les varenyky dans 2 litres d'eau bouillante salée pendant 8 minutes à feu moyen, en les surveillant pour éviter qu'ils ne collent au fond de la casserole.",
-        "Étape 8 : Égoutter les varenyky et servir chaud, nappés de 40g de beurre végétal fondu."
+        "Étape 1 : Dénoyauter 500 g de griottes, les mélanger avec 40 g de sucre et laisser dégorger 30 minutes, puis les égoutter en gardant le jus.",
+        "Étape 2 : Pétrir 300 g de farine avec 160 ml d'eau tiède, 15 ml d'huile et 1 g de sel, puis laisser reposer 30 minutes.",
+        "Étape 3 : Étaler la pâte finement, découper des disques de 7 cm, garnir de 3 ou 4 griottes roulées dans 10 g de fécule, puis replier et bien souder.",
+        "Étape 4 : Pocher les varenyky 4 minutes dans l'eau frémissante après qu'ils remontent.",
+        "Étape 5 : Réduire le jus des griottes avec 20 g de sucre 5 minutes et en napper les varenyky. Servir tiède."
       ],
       "diet_flags": {
         "vegan": true,
@@ -164906,21 +165068,21 @@
       "id": "soup_tamales_7dd98a",
       "titles": {
         "original": "Tamales",
-        "fr": "Tamales",
+        "fr": "Tamales rajas con queso",
         "en": "Tamales"
       },
       "origin": {
-        "cuisine": "american",
+        "cuisine": "mexican",
         "country": "mexico",
-        "region": "oaxaca",
-        "city": ""
+        "region": "ciudad_de_mexico",
+        "city": "mexico"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
+        "prep_active_min": 35,
         "prep_passive_min": 30,
         "cook_min": 60,
-        "total_min": 107
+        "total_min": 125
       },
       "composition": [
         {
@@ -164929,94 +165091,106 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "powder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "baking_powder",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "leavening",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 3.8,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 750 ml d'eau"
+            "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 300,
+          "quantity": 350,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
-            "note": "pour reconstituer le bouillon"
-          }
-        },
-        {
-          "ingredient": "kidney_bean_boiled",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "plant_protein",
             "form": "",
-            "state": "cooked",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "red_hot_chili_pepper_spice_dried",
-          "quantity": 10,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "whole",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "queso_fresco_block_cow",
-          "quantity": 100,
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 60,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_bell_pepper_raw",
+          "quantity": 200,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "grated",
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "jalapeno_pepper_raw",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic_raw",
-          "quantity": 9,
+          "ingredient": "queso_fresco_block_cow",
+          "quantity": 150,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "chopped",
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "cumin_spice_seed",
-          "quantity": 3,
+          "ingredient": "corn_husk",
+          "quantity": 40,
           "unit": "g",
           "meta": {
-            "role": "spice",
-            "form": "ground",
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -165042,24 +165216,15 @@
             "note": "Pour une touche de fraîcheur",
             "optional": true
           }
-        },
-        {
-          "ingredient": "sunflower_oil_plant",
-          "quantity": 70,
-          "unit": "ml",
-          "meta": {
-            "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
+          "high_protein",
+          "vegetarian",
           "gluten_free",
-          "high_protein"
+          "nut_free"
         ],
         "allergens": [
           "lactose",
@@ -165113,33 +165278,36 @@
       "search_tokens": [
         "(eau",
         "(farine",
-        "ail",
-        "americain",
-        "american",
-        "bean",
+        "(pour",
+        "baking",
+        "bell",
         "bouillon",
-        "burger",
-        "chili",
         "coeliaque",
-        "cumin",
+        "con",
+        "corn",
         "eau",
-        "fort",
+        "epice",
+        "feuille",
         "fresco",
-        "garlic",
         "gluten free",
-        "haricot",
+        "green",
         "harina",
-        "hot",
+        "husk",
         "intermediaire",
-        "kidney",
+        "jalapeno",
+        "latino",
         "leger",
         "legumes",
         "lent",
+        "lever",
         "light",
         "long",
         "low calorie",
         "mais",
         "masa",
+        "mexicain",
+        "mexican",
+        "mexique",
         "mijote",
         "minceur",
         "moyen",
@@ -165150,23 +165318,27 @@
         "pepper",
         "persil",
         "piment",
+        "poivron",
         "potable)",
+        "poudre",
+        "powder",
         "queso",
-        "red",
-        "rouge",
+        "rajas",
         "salt",
         "sans gluten",
         "sans viande",
+        "sechee",
         "sel",
         "steaming",
         "stock",
         "sunflower",
         "table",
         "tamales",
+        "tamales)",
         "tournesol",
-        "usa",
         "vegetable",
         "vegetarien",
+        "vert",
         "water"
       ],
       "difficulty_level": "medium",
@@ -165174,14 +165346,13 @@
       "servings_default": 4,
       "_quality_score": 0.93,
       "_chef_note": "Utiliser des ingrédients de bonne qualité pour obtenir le meilleur résultat.",
-      "description": "Pâte de maïs dorée en cuisson pour une texture croustillante à l'extérieur et tendre à cœur, typique de la cuisine mexicaine traditionnelle, avec une farce parfumée aux haricots rouges, piment séché et épices.",
+      "description": "Tamales de Mexico : pâte de maïs battue à l'huile, garnie de lanières de poivron et de piment vert revenues à l'oignon et de fromage frais, cuite à la vapeur dans des feuilles de maïs.",
       "instructions": [
-        "Étape 1 : Mélanger 300 g de masa harina avec 60 ml d'huile de tournesol, 3 g de sel et environ 300 ml de bouillon végétal tiède, jusqu'à obtenir une pâte souple et homogène.",
-        "Étape 2 : Faire revenir 150 g d'oignon et 9 g d'ail émincés dans 10 ml d'huile, 5 minutes à feu moyen.",
-        "Étape 3 : Ajouter 300 g de haricots rouges, 10 g de piment séché et 3 g de cumin, cuire 5 minutes en écrasant grossièrement, puis incorporer 100 g de queso fresco émietté.",
-        "Étape 4 : Étaler la pâte sur des feuilles de maïs trempées, déposer la farce au centre et refermer.",
-        "Étape 5 : Cuire les tamales à la vapeur pendant 1 heure, jusqu'à ce que la pâte se détache facilement de la feuille.",
-        "Étape 6 : Servir chauds, avec une salsa."
+        "Étape 1 : Faire tremper 40 g de feuilles de maïs 30 minutes dans l'eau chaude.",
+        "Étape 2 : Battre 300 g de masa harina avec 5 g de poudre à lever, 3 g de sel, 50 ml d'huile et 350 ml de bouillon tiède (4 g de bouillon déshydraté), 5 minutes, jusqu'à ce que la pâte soit légère.",
+        "Étape 3 : Faire revenir 200 g de poivron vert et 20 g de jalapeño en lanières avec 100 g d'oignon dans 10 ml d'huile, 6 minutes.",
+        "Étape 4 : Étaler 2 cuillerées de pâte sur chaque feuille, garnir de rajas et de fromage frais (150 g en tout), puis replier.",
+        "Étape 5 : Cuire debout à la vapeur 60 minutes, jusqu'à ce que la pâte se détache de la feuille."
       ],
       "diet_flags": {
         "vegan": false,
@@ -166696,26 +166867,26 @@
       "id": "soup_turkish_mercimek_soup_veg_f30ebc",
       "titles": {
         "original": "Turkish Mercimek Soup (Vegan)",
-        "fr": "Turkish Mercimek Soup (Vegan)",
+        "fr": "Ezogelin çorbası, lentilles, boulgour et menthe (vegan)",
         "en": "Vegan Turkish Mercimek Soup"
       },
       "origin": {
         "cuisine": "turkish",
         "country": "turkey",
-        "region": "anatolie",
-        "city": ""
+        "region": "gaziantep",
+        "city": "gaziantep"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 15,
+        "prep_active_min": 10,
         "prep_passive_min": 0,
-        "cook_min": 30,
-        "total_min": 45
+        "cook_min": 40,
+        "total_min": 50
       },
       "composition": [
         {
           "ingredient": "red_lentil_dried",
-          "quantity": 250,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -166725,88 +166896,67 @@
           }
         },
         {
+          "ingredient": "bulgur_raw_dried",
+          "quantity": 50,
+          "unit": "g",
+          "meta": {
+            "role": "carbohydrate",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_raw_seed_unenriched",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "carbohydrate",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "yellow_onion_raw",
           "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "carrot_raw",
-          "quantity": 200,
+          "ingredient": "garlic_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
-            "role": "vegetable",
-            "form": "rounds",
+            "role": "aromatic",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "cumin_spice_seed",
-          "quantity": 2.5,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "lemon_juice",
+          "ingredient": "tomato_paste_unsalted_canned",
           "quantity": 30,
-          "unit": "ml",
-          "meta": {
-            "role": "fruit",
-            "form": "juice",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 9.4,
           "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 750 ml d'eau"
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 750.0,
-          "unit": "ml",
-          "meta": {
-            "role": "ingredient",
-            "note": "pour reconstituer le bouillon"
-          }
-        },
-        {
-          "ingredient": "vegan_butter",
-          "quantity": 40,
-          "unit": "g",
-          "meta": {
-            "role": "fat_cooking",
-            "form": "diced",
-            "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "mint_fresh_herb",
-          "quantity": 5,
+          "ingredient": "red_hot_chili_pepper_spice_dried",
+          "quantity": 2,
           "unit": "g",
           "meta": {
-            "role": "herb",
-            "form": "chiffonade",
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -166823,11 +166973,55 @@
           }
         },
         {
-          "ingredient": "sunflower_oil_plant",
-          "quantity": 15,
+          "ingredient": "dried_mint_herb",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 35,
           "unit": "ml",
           "meta": {
             "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 9,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 1300,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "fruit",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -166837,11 +167031,15 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "low_calorie",
+          "vegan",
+          "vegetarian",
+          "lactose_free",
           "nut_free"
         ],
-        "allergens": [],
+        "allergens": [
+          "gluten"
+        ],
         "technique": [
           "braising"
         ],
@@ -166889,30 +167087,33 @@
       "search_tokens": [
         "(eau",
         "(vegan)",
-        "45 minutes",
-        "beurre",
+        "1 heure",
+        "ail",
+        "blanc",
         "bouillon",
+        "boulgour",
         "braising",
-        "butter",
-        "carotte",
-        "carrot",
-        "citron",
-        "coeliaque",
+        "bulgur",
+        "chili",
         "corail",
-        "cumin",
+        "corbası,",
+        "dried",
         "eau",
         "enfants",
+        "ezogelin",
         "facile enfants",
         "famille",
-        "gluten free",
+        "fort",
+        "garlic",
+        "hot",
         "intermediaire",
         "jaune",
         "kids",
         "leger",
         "legumes",
-        "lemon",
         "lentil",
         "lentille",
+        "lentilles,",
         "light",
         "low calorie",
         "mediterranee",
@@ -166923,27 +167124,32 @@
         "moyen",
         "moyen-orient",
         "oignon",
+        "olive",
         "onion",
         "paprika",
+        "pepper",
+        "piment",
         "potable)",
         "red",
-        "sans gluten",
+        "rice",
+        "riz",
+        "rouge",
         "sans produit animal",
         "sans viande",
         "soup",
         "soupe",
         "stock",
-        "sunflower",
-        "tournesol",
+        "tomate",
+        "tomato",
         "turc",
         "turkish",
         "turquie",
         "vegan",
         "vegetable",
-        "vegetal",
         "vegetalien",
         "vegetarien",
         "water",
+        "white",
         "yellow"
       ],
       "difficulty_level": "medium",
@@ -166951,20 +167157,18 @@
       "servings_default": 4,
       "_quality_score": 0.93,
       "_chef_note": "Utilisez des lentilles corail pour une texture plus crémeuse et une saveur plus intense.",
-      "description": "Soupe turque crémeuse aux lentilles corail tendres, oignon jaune caramélisé et carotte fondante, parfumée au cumin et au citron, avec une texture lisse et veloutée.",
+      "description": "Soupe de Gaziantep plus rustique que la mercimek : lentilles corail, boulgour et riz mijotés au concentré de tomate et au piment pul biber, parfumés à la menthe séchée.",
       "instructions": [
-        "Étape 1 : Faire revenir 150g d'oignon jaune émincé et 200g de carotte émincée dans 40g de beurre végétal à feu moyen, jusqu'à ce que les légumes soient tendres et légèrement caramélisés, avec une odeur sucrée et une couleur dorée, environ 8 minutes.",
-        "Étape 2 : Ajouter 2,5g de cumin en poudre et mélanger pendant 30 secondes pour libérer les arômes, en vérifiant que le cumin est bien réparti.",
-        "Étape 3 : Incorporer 250g de lentilles corail rincées et verser 750ml de bouillon végétal, en vérifiant que les lentilles sont bien couvertes.",
-        "Étape 4 : Porter à ébullition, écumer et réduire le feu à bas pour laisser mijoter pendant 20 minutes, ou jusqu'à ce que les lentilles soient très fondantes et la soupe ait une consistance crémeuse.",
-        "Étape 5 : Mixer la soupe pour obtenir une texture lisse et veloutée, en ajoutant un peu d'eau si nécessaire pour ajuster la consistance, en vérifiant que la soupe est homogène et sans grumeaux.",
-        "Étape 6 : Préparer la garniture en chauffant 15 ml d'huile, puis en ajoutant 2 g de paprika hors du feu.",
-        "Étape 7 : Servir la soupe chaude avec un filet de 30ml de jus de citron et en parsemant de 5 g de menthe ciselée."
+        "Étape 1 : Faire revenir 150 g d'oignon et 6 g d'ail hachés dans 20 ml d'huile d'olive, 5 minutes, puis ajouter 30 g de concentré de tomate et 2 g de paprika, et cuire 1 minute.",
+        "Étape 2 : Ajouter 200 g de lentilles corail, 50 g de boulgour et 30 g de riz rincés, 1,3 L d'eau et 9 g de bouillon.",
+        "Étape 3 : Mijoter 30 minutes à feu doux en remuant de temps en temps, sans mixer : la soupe doit rester épaisse et granuleuse.",
+        "Étape 4 : Chauffer 15 ml d'huile avec 3 g de menthe séchée et 2 g de pul biber, 30 secondes, puis verser sur la soupe.",
+        "Étape 5 : Servir avec 30 ml de jus de citron."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,

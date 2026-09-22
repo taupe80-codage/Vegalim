@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 69 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 61 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -182,6 +182,7 @@
 - **Escalivada** _(diabetes_friendly, gluten_free, vegan, vegetarian, side, spanish)_ — `main_escalivada_1ee1c4`
 - **Ethiopian Atkilt Wat** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, ethiopian)_ — `dal_ethiopian_atkilt_wat_afd168`
 - **Ethiopian Misir Wot** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, ethiopian)_ — `dal_ethiopian_misir_wot_4203c8`
+- **Ezogelin çorbası, lentilles, boulgour et menthe (vegan)** _(diabetes_friendly, low_calorie, vegan, vegetarian, lactose_free, nut_free, soup, turkish)_ — `soup_turkish_mercimek_soup_veg_f30ebc`
 
 ## F
 
@@ -371,7 +372,8 @@
 - **Mayonnaise** _(vegetarian, gluten_free, sauce, french)_ — `base_mayonnaise_0d3e4e` 🔁 doublon possible : Mayonnaise Végane
 - **Mayonnaise Végane** _(vegan, vegetarian, gluten_free, sauce, international)_ — `base_vegan_mayonnaise_b68322` 🔁 doublon possible : Mayonnaise
 - **Menemen** _(diabetes_friendly, gluten_free, high_protein, main, turkish)_ — `egg_menemen_681f60`
-- **Mercimek Köftesi** _(vegetarian, vegan, lactose_free, main, international)_ — `dal_mercimek_koftesi_34f72d`
+- **Mercimek köftesi, boulettes de lentilles au boulgour** _(vegetarian, vegan, lactose_free, main, turkish)_ — `dal_mercimek_koftesi_34f72d`
+- **Mercimek çorbası d'Istanbul au beurre pimenté** _(diabetes_friendly, gluten_free, soup, turkish)_ — `dal_turkish_mercimek_soup_a7afcf`
 - **Mexican Calabacitas** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, mexican)_ — `main_mexican_calabacitas_f3511d`
 - **Mexican Rice** _(gluten_free, vegan, vegetarian, main, mexican)_ — `rice_mexican_rice_94bd67`
 - **Migas Portugaises** _(diabetes_friendly, vegetarian, main, portuguese)_ — `bread_migas_portugaises_76818b`
@@ -722,8 +724,8 @@
 - **Tacu Tacu** _(gluten_free, vegan, vegetarian, main, peruvian)_ — `rice_tacu_tacu_9e0073`
 - **Tahini** _(vegan, vegetarian, gluten_free, sauce, levantine)_ — `base_tahini_030e18`
 - **Tajine Pois Chiches Citron** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, international)_ — `dal_tajine_pois_chiches_citron_047521`
-- **Tamales** _(diabetes_friendly, gluten_free, high_protein, main, american)_ — `soup_tamales_7dd98a` 🔁 doublon possible : Tamales (Vegan)
-- **Tamales (Vegan)** _(diabetes_friendly, gluten_free, high_protein, lactose_free, snack, mexican)_ — `snack_tamales_vegan_d7cbdc` 🔁 doublon possible : Tamales
+- **Tamales de frijol à la sauce rouge (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, snack, mexican)_ — `snack_tamales_vegan_d7cbdc`
+- **Tamales rajas con queso** _(diabetes_friendly, high_protein, vegetarian, gluten_free, nut_free, main, mexican)_ — `soup_tamales_7dd98a`
 - **Tamarind Rice** _(gluten_free, vegan, vegetarian, side, american)_ — `rice_tamarind_rice_2e5463`
 - **Tandoori de chou-fleur et pois chiches, chutney à la menthe (vegan)** _(diabetes_friendly, low_calorie, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, indian)_ — `protein_paneer_tikka_vegan_8bf0a0`
 - **Tapenade d'Olives Noires** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, french)_ — `entry_tapenade_d_olives_noires_ed6d5d`
@@ -762,13 +764,11 @@
 - **Tom Yum** _(diabetes_friendly, vegan, vegetarian, soup, international)_ — `soup_tom_yum_8001c0`
 - **Tortilla de Maïs** _(vegan, vegetarian, gluten_free, bread, mexican)_ — `base_tortilla_92c2a6`
 - **Tortilla Española** _(gluten_free, main, spanish)_ — `egg_tortilla_espa_ola_51a108`
-- **Tostadas** _(gluten_free, vegetarian, main, spanish)_ — `bread_tostadas_06442e` 🔁 doublon possible : Tostadas (Vegan)
-- **Tostadas (Vegan)** _(diabetes_friendly, gluten_free, vegetarian, snack, mexican)_ — `snack_tostadas_vegan_f7257b` 🔁 doublon possible : Tostadas
+- **Tostadas aux haricots noirs, avocat et crème** _(vegetarian, gluten_free, nut_free, main, mexican)_ — `bread_tostadas_06442e`
+- **Tostadas de tinga de champignons (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, main, mexican)_ — `snack_tostadas_vegan_f7257b`
 - **Tourte aux Champignons** _(kid_friendly, nut_free, main, french)_ — `main_tourte_aux_champignons_85adfb`
 - **Truffade Auvergnate** _(gluten_free, kid_friendly, vegetarian, main, french_auvergnat)_ — `main_truffade_auvergnate_01a284`
 - **Tteokbokki** _(vegan, vegetarian, main, korean)_ — `rice_tteokbokki_0861f2`
-- **Turkish Mercimek Soup** _(diabetes_friendly, gluten_free, main, international)_ — `dal_turkish_mercimek_soup_a7afcf` 🔁 doublon possible : Turkish Mercimek Soup (Vegan)
-- **Turkish Mercimek Soup (Vegan)** _(diabetes_friendly, gluten_free, low_calorie, nut_free, soup, turkish)_ — `soup_turkish_mercimek_soup_veg_f30ebc` 🔁 doublon possible : Turkish Mercimek Soup
 - **Tutu de feijão, purée de haricots noirs à la farine de manioc (vegan)** _(high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, side, brazilian)_ — `side_feijo_tropeiro_vegan_ccc81d`
 - **Tzatziki Grec** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, low_calorie, nut_free, vegetarian, starter, greek)_ — `entry_tzatziki_grec_2b21fb`
 
@@ -780,8 +780,8 @@
 
 - **Vada pav, beignet de pomme de terre en petit pain (vegan)** _(low_calorie, vegan, vegetarian, lactose_free, nut_free, main, indian)_ — `main_pav_bhaji_vegan_c1437e`
 - **Vareniki** _(main, ukrainian)_ — `egg_vareniki_53686a`
-- **Varenyky Pomme de Terre** _(main, ukrainian)_ — `main_varenyky_pomme_de_terre_0bb7cf` 🔁 doublon possible : Varenyky Pomme de Terre (Vegan)
-- **Varenyky Pomme de Terre (Vegan)** _(nut_free, snack, ukrainian)_ — `snack_varenyky_pomme_de_terre_v_8b6240` 🔁 doublon possible : Varenyky Pomme de Terre
+- **Varenyky aux griottes (vegan)** _(vegan, vegetarian, lactose_free, nut_free, dessert, ukrainian)_ — `snack_varenyky_pomme_de_terre_v_8b6240`
+- **Varenyky ukrainiens à la pomme de terre et à l'aneth, oignons frits** _(vegetarian, nut_free, main, ukrainian)_ — `main_varenyky_pomme_de_terre_0bb7cf`
 - **Velouté d'Asperges** _(gluten_free, nut_free, soup, french)_ — `soup_veloute_d_asperges_7da98f`
 - **Velouté de butternut en verrine** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, starter, french)_ — `entry_veloute_potimarron_en_ver_e5a2ca`
 - **Velouté de Céleri-Rave** _(gluten_free, soup, french)_ — `soup_veloute_de_celeri_rave_b33921`
