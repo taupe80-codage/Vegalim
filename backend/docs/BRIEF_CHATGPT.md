@@ -1,5 +1,9 @@
 # BRIEF PROJET ALIM_V2 — Pour collaboration avec ChatGPT
 
+> **Document historique (état d'avril 2026, projet ALIM_V2).** Les chiffres qui suivent
+> (529 recettes, 161 tests, 23 routes…) sont périmés : voir `README.md` pour l'état actuel
+> (731 recettes, 99 cuisines).
+
 ## Contexte
 
 Ce document décrit l'état exact du projet **ALIM_V2** afin que tu puisses
