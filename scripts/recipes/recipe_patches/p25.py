@@ -92,6 +92,7 @@ PATCHES = {
         ("txt", "Verser 450 ml d'eau bouillante salée (1,5 fois le volume du riz)", "Verser 450 ml d'eau bouillante (1,5 fois le volume du riz)"),
     ],
     "rice_karelian_pies_106cca": [
+        ("origin", {"cuisine": "nordic"}),  # était « ethiopian »
         ("qty", "water", 200),
         ("qty", "white_rice_short_grain_seed_dried", 150),
         ("qty", "milk_liquid_uht_3_5pct", 500),

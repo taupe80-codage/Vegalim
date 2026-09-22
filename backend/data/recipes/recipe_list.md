@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 198 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 189 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -111,12 +111,13 @@
 - **Choucroute Végétarienne** _(gluten_free, nut_free, vegetarian, main, french_alsatian)_ — `main_choucroute_vegetarienne_25c7a3`
 - **Chow Mein** _(vegetarian, main, chinese)_ — `pasta_chow_mein_76aca0`
 - **Clafoutis Cerises** _(kid_friendly, nut_free, dessert, french_limousin)_ — `dessert_clafoutis_cerises_0731cf`
-- **Compote de Pommes** _(vegan, vegetarian, gluten_free, dessert, french)_ — `base_applesauce_b0627b` 🔁 doublon possible : Compote de Pommes Maison
-- **Compote de Pommes Maison** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, dessert, french)_ — `dessert_compote_de_pommes_maison_cdbdd0` 🔁 doublon possible : Compote de Pommes
+- **Compote de pommes nature** _(vegan, vegetarian, gluten_free, dessert, french)_ — `base_applesauce_b0627b`
+- **Compote pommes-poires à la vanille** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, dessert, french)_ — `dessert_compote_de_pommes_maison_cdbdd0`
 - **Compote Rhubarbe Fraise** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, breakfast, french)_ — `brkf_compote_rhubarbe_fraise_1d9d38`
 - **Concentré de Tomate** _(vegan, vegetarian, gluten_free, sauce, italian)_ — `base_tomato_paste_26412f`
 - **Confiture de Fraises** _(vegan, vegetarian, gluten_free, sauce, french)_ — `base_strawberry_jam_1e5515`
 - **Cookie Chocolat Vegan** _(kid_friendly, lactose_free, nut_free, dessert, american)_ — `dessert_cookie_chocolat_vegan_b9c6cc`
+- **Cottage pie végétarien aux lentilles et au cheddar** _(gluten_free, main, british)_ — `dal_lentil_shepherd_s_pie_477c76`
 - **Coulis de Fraises** _(vegan, vegetarian, gluten_free, sauce, french)_ — `base_strawberry_coulis_49d4ea`
 - **Courge au Lait de Coco** _(diabetes_friendly, high_protein, vegetarian, soup, international)_ — `soup_courge_au_lait_de_coco_224d09` 🔁 doublon possible : Lait de Coco Maison, Riz au Lait Coco Vegan
 - **Courge Mijotée Japonaise** _(vegan, vegetarian, side, japanese)_ — `soup_courge_mijotee_japonaise_3852ae`
@@ -150,8 +151,8 @@
 - **Curry de pois chiches aux épinards** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `curry_chickpea_spinach_k6518f8`
 - **Curry de Pommes de Terre et Bambou** _(gluten_free, vegan, vegetarian, main, indian)_ — `curry_de_pommes_de_terre_et_bam_e5161e`
 - **Curry de Pommes de Terre et Petits Pois** _(gluten_free, vegan, vegetarian, main, indian)_ — `curry_de_pommes_de_terre_et_pet_9271d8`
-- **Curry japonais** _(diabetes_friendly, main, japanese)_ — `curry_japanese_classic_v3_m8q2z4` 🔁 doublon possible : Curry japonais rapide, Riz au curry japonais, Roux Curry Japonais
-- **Curry japonais rapide** _(vegetarian, main, japanese)_ — `curry_japanese_4533d1` 🔁 doublon possible : Curry japonais, Riz au curry japonais, Roux Curry Japonais
+- **Curry japonais au potiron et aux shiitakés** _(vegetarian, main, japanese)_ — `curry_japanese_4533d1`
+- **Curry japonais au roux maison et à la pomme râpée** _(diabetes_friendly, main, japanese)_ — `curry_japanese_classic_v3_m8q2z4` 🔁 doublon possible : Roux Curry Japonais
 - **Curry sec de pommes de terre et chou-fleur** _(gluten_free, vegan, vegetarian, main, indian)_ — `curry_dry_aloo_gobi_9a6763`
 - **Céleri Rémoulade** _(gluten_free, kid_friendly, lactose_free, nut_free, raw, vegetarian, starter, french)_ — `entry_celeri_remoulade_d5d1b9`
 
@@ -159,11 +160,10 @@
 
 - **Dahl au lait de coco** _(diabetes_friendly, gluten_free, high_protein, vegetarian, main, indian)_ — `dal_coconut_classic_k1d1p5` 🔁 doublon possible : Lait de Coco Maison, Riz au Lait Coco Vegan
 - **Dahl de pois chiches** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_chana_classic_k1d1p4`
-- **Dal de lentilles corail** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_lentil_corail_classic_k1d1p1` 🔁 doublon possible : Dal de Lentilles Corail (Vegan), Koshari express aux lentilles corail, Rillettes Lentilles Corail
-- **Dal de Lentilles Corail (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, low_calorie, nut_free, vegan, vegetarian, main, indian)_ — `dal_de_lentilles_corail_vegan_8cc6a7` 🔁 doublon possible : Dal de lentilles corail, Koshari express aux lentilles corail, Rillettes Lentilles Corail
 - **Dal Makhani** _(diabetes_friendly, gluten_free, high_protein, vegetarian, main, indian)_ — `dal_dal_makhani_c9ce94` 🔁 doublon possible : Dal Makhani (Vegan)
 - **Dal Makhani (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, indian)_ — `dal_makhani_vegan_259219` 🔁 doublon possible : Dal Makhani
 - **Dal Tadka** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_dal_tadka_4c3536`
+- **Dal tadka du Pendjab** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_lentil_corail_classic_k1d1p1`
 - **Daube de Légumes** _(gluten_free, lactose_free, nut_free, vegan, vegetarian, main, french_provencal)_ — `main_daube_de_legumes_4a045f`
 - **Disques de Pâte** _(vegetarian, pastry, latin_american)_ — `base_pastry_wrappers_a56ee0`
 - **Dolma au Persil** _(gluten_free, vegan, vegetarian, main, turkish)_ — `rice_dolma_au_persil_6aeb1e`
@@ -272,6 +272,7 @@
 
 ## H
 
+- **Hachis de lentilles à la patate douce (vegan)** _(diabetes_friendly, nut_free, main, british)_ — `dal_lentil_shepherd_pie_vegan_926ebd`
 - **Halloumi** _(vegetarian, gluten_free, dairy, cypriot)_ — `base_halloumi_293d5e`
 - **Halva de Sésame** _(kid_friendly, lactose_free, vegan, vegetarian, dessert, levantine)_ — `dessert_halva_de_sesame_87a706`
 - **Haricots au Lait de Coco** _(diabetes_friendly, high_protein, vegetarian, soup, international)_ — `soup_haricots_au_lait_de_coco_207254` 🔁 doublon possible : Lait de Coco Maison, Riz au Lait Coco Vegan
@@ -308,7 +309,8 @@
 
 - **Kadhi Pakora** _(diabetes_friendly, gluten_free, high_protein, main, indian)_ — `dal_kadhi_pakora_078de2` 🔁 doublon possible : Kadhi Pakora (Vegan)
 - **Kadhi Pakora (Vegan)** _(diabetes_friendly, gluten_free, high_protein, nut_free, main, indian)_ — `dal_kadhi_pakora_vegan_5cb5d4` 🔁 doublon possible : Kadhi Pakora
-- **Karelian Pies** _(high_protein, main, ethiopian)_ — `rice_karelian_pies_106cca`
+- **Kare raisu aux oignons caramélisés** _(vegetarian, main, japanese)_ — `curry_japonais_1caddf`
+- **Karelian Pies** _(high_protein, main, nordic)_ — `rice_karelian_pies_106cca`
 - **Kashk (Petit-Lait Fermenté)** _(vegetarian, gluten_free, dairy, persian)_ — `base_kashk_fd3ac6`
 - **Kashke Bademjan** _(diabetes_friendly, gluten_free, main, persian)_ — `main_kashke_bademjan_10dd33`
 - **Katsu Curry** _(high_protein, main, japanese)_ — `bread_katsu_bf3f1e` 🔁 doublon possible : Katsu curry (vegan)
@@ -325,7 +327,7 @@
 - **Korma de Légumes** _(diabetes_friendly, gluten_free, vegetarian, main, indian)_ — `main_korma_de_legumes_ddde08`
 - **Koshari de fête à la shatta** _(high_protein, vegan, vegetarian, main, egyptian)_ — `main_koshari_classic_v4_q7n5z2`
 - **Koshari du Caire aux pois chiches, sauce daqqa** _(vegan, vegetarian, main, egyptian)_ — `dal_koshari_egyptien_73828c`
-- **Koshari express aux lentilles corail** _(gluten_free, vegan, vegetarian, main, egyptian)_ — `dal_koshari_15670d` 🔁 doublon possible : Dal de lentilles corail, Dal de Lentilles Corail (Vegan)
+- **Koshari express aux lentilles corail** _(gluten_free, vegan, vegetarian, main, egyptian)_ — `dal_koshari_15670d`
 - **Kouign-Amann** _(kid_friendly, nut_free, dessert, french_breton)_ — `dessert_kouign_amann_a71af6`
 
 ## L
@@ -344,12 +346,8 @@
 - **Lasagnes (Vegan)** _(diabetes_friendly, high_protein, lactose_free, vegan, vegetarian, main, italian)_ — `pasta_lasagnes_vegan_412e90` 🔁 doublon possible : Lasagnes
 - **Lasagnes de légumes ultra structurées** _(vegetarian, main, italian)_ — `pasta_lasagnes_de_legumes_ultra_9b6a4e`
 - **Lebanese Lentil Soup** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, lebanese)_ — `dal_lebanese_lentil_soup_eae561`
-- **Lentil Shepherd Pie (Vegan)** _(diabetes_friendly, nut_free, main, british)_ — `dal_lentil_shepherd_pie_vegan_926ebd` 🔁 doublon possible : Lentil Shepherd's Pie, Lentil Shepherd's Pie (Vegan)
-- **Lentil Shepherd's Pie** _(gluten_free, main, british)_ — `dal_lentil_shepherd_s_pie_477c76` 🔁 doublon possible : Lentil Shepherd Pie (Vegan), Lentil Shepherd's Pie (Vegan)
-- **Lentil Shepherd's Pie (Vegan)** _(gluten_free, nut_free, main, british)_ — `dal_lentil_shepherds_pie_vega_27455d` 🔁 doublon possible : Lentil Shepherd Pie (Vegan), Lentil Shepherd's Pie
 - **Lentilles aux Épinards** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_lentilles_aux_epinards_be2017`
 - **Lentilles Beluga au Xérès** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, french)_ — `entry_lentilles_beluga_au_xeres_de4a76`
-- **Lentilles Corail au Lait de Coco** _(diabetes_friendly, gluten_free, high_protein, vegetarian, main, indian)_ — `dal_lentilles_corail_au_lait_de_co_19d485`
 - **Lentilles du Puy Échalotes Confites** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, low_calorie, nut_free, side, french)_ — `side_lentilles_du_puy_echalote_37c76e`
 - **Lobio** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, georgian)_ — `main_lobio_5cdec6`
 - **Loubia Marocaine** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, moroccan)_ — `main_loubia_marocaine_e3b91b`
@@ -362,6 +360,7 @@
 - **Manakish Zaatar** _(vegan, vegetarian, snack, international)_ — `main_manakish_zaatar_580150`
 - **Mapo Tofu** _(diabetes_friendly, high_protein, vegan, vegetarian, main, chinese)_ — `protein_mapo_tofu_4b4458`
 - **Masala Dosa** _(gluten_free, vegan, vegetarian, main, indian)_ — `dal_masala_dosa_7d4088`
+- **Masoor dal bengali au panch phoron** _(diabetes_friendly, gluten_free, lactose_free, low_calorie, nut_free, vegan, vegetarian, main, indian)_ — `dal_de_lentilles_corail_vegan_8cc6a7`
 - **Matbucha** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, israeli)_ — `entry_matbucha_fbcb0e`
 - **Mayonnaise** _(vegetarian, gluten_free, sauce, french)_ — `base_mayonnaise_0d3e4e` 🔁 doublon possible : Mayonnaise Végane
 - **Mayonnaise Végane** _(vegan, vegetarian, gluten_free, sauce, international)_ — `base_vegan_mayonnaise_b68322` 🔁 doublon possible : Mayonnaise
@@ -451,6 +450,7 @@
 - **Panna Cotta Coco Vegan** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, dessert, international)_ — `dessert_panna_cotta_coco_vegan_16d6b5`
 - **Panzanella Italienne** _(diabetes_friendly, vegan, vegetarian, main, italian)_ — `bread_panzanella_italienne_307da1`
 - **Papaya Salad** _(vegan, vegetarian, main, laotian)_ — `main_papaya_salad_918f58`
+- **Parippu sri lankais au lait de coco** _(diabetes_friendly, gluten_free, high_protein, vegetarian, main, sri_lankan)_ — `dal_lentilles_corail_au_lait_de_co_19d485`
 - **Parmigiana Di Melanzane** _(diabetes_friendly, gluten_free, high_protein, main, italian)_ — `main_parmigiana_di_melanzane_6bd49f` 🔁 doublon possible : Parmigiana Di Melanzane (Vegan)
 - **Parmigiana Di Melanzane (Vegan)** _(diabetes_friendly, gluten_free, high_protein, lactose_free, main, italian)_ — `main_parmigiana_di_melanzane_v_8f8b8b` 🔁 doublon possible : Parmigiana Di Melanzane
 - **Pasta Al Pomodoro** _(main, italian)_ — `pasta_pasta_al_pomodoro_3ffaef`
@@ -515,7 +515,7 @@
 - **Pupusas** _(diabetes_friendly, gluten_free, high_protein, main, ethiopian)_ — `main_pupusas_9d2c72` 🔁 doublon possible : Pupusas (Vegan)
 - **Pupusas (Vegan)** _(gluten_free, high_protein, kid_friendly, lactose_free, main, salvadoran)_ — `main_pupusas_vegan_4595d8` 🔁 doublon possible : Pupusas
 - **Pupusas aux Haricots** _(diabetes_friendly, gluten_free, high_protein, main, ethiopian)_ — `main_pupusas_aux_haricots_fc8bfd`
-- **Purée de Céleri-Rave Vegan** _(diabetes_friendly, kid_friendly, lactose_free, low_calorie, nut_free, side, french)_ — `side_puree_de_celerirave_vegan_a55054`
+- **Purée de Céleri-Rave Vegan** _(diabetes_friendly, kid_friendly, lactose_free, low_calorie, nut_free, side, french)_ — `side_puree_de_celerirave_vegan_a55054` 🔁 doublon possible : Shepherd's pie vegan aux champignons, purée au céleri-rave
 - **Purée de pommes de terre** _(gluten_free, side, french)_ — `side_potatoes_k3d2p1`
 - **Pâte Brisée** _(vegetarian, bread, french)_ — `base_shortcrust_e6e9f0`
 - **Pâte de Curry** _(vegan, vegetarian, gluten_free, paste, thai)_ — `base_curry_paste_49c97f` 🔁 doublon possible : Pâte de Curry Jaune
@@ -571,7 +571,7 @@
 - **Ricotta de Cajou** _(vegan, vegetarian, gluten_free, base, international)_ — `base_cashew_ricotta_5c62e9`
 - **Ricotta Salée** _(vegetarian, ingredient, italian)_ — `base_salted_ricotta_1ecd1c`
 - **Rillettes de Courgettes au Citron** _(diabetes_friendly, gluten_free, kid_friendly, low_calorie, nut_free, starter, french)_ — `entry_rillettes_de_courgettes_a_f46f26`
-- **Rillettes Lentilles Corail** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, international)_ — `entry_rillettes_lentilles_corai_40d7dc` 🔁 doublon possible : Dal de lentilles corail, Dal de Lentilles Corail (Vegan)
+- **Rillettes Lentilles Corail** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, international)_ — `entry_rillettes_lentilles_corai_40d7dc`
 - **Risotto Ai Funghi** _(gluten_free, main, italian)_ — `rice_risotto_ai_funghi_395f00` 🔁 doublon possible : Risotto Ai Funghi (Vegan)
 - **Risotto Ai Funghi (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, italian)_ — `rice_risotto_ai_funghi_vegan_41360e` 🔁 doublon possible : Risotto Ai Funghi
 - **Risotto Al Limone** _(gluten_free, main, italian)_ — `rice_risotto_al_limone_4088e5` 🔁 doublon possible : Risotto Al Limone (Vegan)
@@ -580,7 +580,6 @@
 - **Risotto aux Champignons (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, italian)_ — `rice_risotto_aux_champignons_v_13d611` 🔁 doublon possible : Risotto aux champignons
 - **Risotto Citron Asperges** _(diabetes_friendly, gluten_free, main, italian)_ — `rice_risotto_citron_asperges_f2f765` 🔁 doublon possible : Risotto Citron Asperges (Vegan)
 - **Risotto Citron Asperges (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, italian)_ — `rice_risotto_citron_asperges_v_e20e67` 🔁 doublon possible : Risotto Citron Asperges
-- **Riz au curry japonais** _(vegetarian, main, japanese)_ — `curry_japonais_1caddf` 🔁 doublon possible : Curry japonais, Curry japonais rapide, Roux Curry Japonais
 - **Riz au Lait Coco Vegan** _(kid_friendly, lactose_free, nut_free, vegan, vegetarian, dessert, international)_ — `dessert_lait_coco_vegan_3b8a99` 🔁 doublon possible : Lait de Coco Maison, Courge au Lait de Coco, Dahl au lait de coco
 - **Riz au Lait Vanille** _(gluten_free, kid_friendly, nut_free, dessert, french)_ — `dessert_lait_vanille_cddf17`
 - **Riz blanc** _(gluten_free, vegan, vegetarian, main, international)_ — `rice_white_k1d1p1`
@@ -596,7 +595,7 @@
 - **Riz sauté chinois (vegan)** _(kid_friendly, lactose_free, nut_free, main, chinese)_ — `rice_fried_rice_chinois_vegan_c2b92d`
 - **Riz à la Tomate Portugais** _(gluten_free, vegan, vegetarian, main, portuguese)_ — `rice_riz_a_la_tomate_portugais_c6cec0`
 - **Rouleaux de Printemps Frits** _(diabetes_friendly, vegan, vegetarian, main, vietnamese)_ — `rice_rouleaux_de_printemps_frits_e4d172`
-- **Roux Curry Japonais** _(vegetarian, roux, japanese)_ — `base_japanese_curry_roux_385e52` 🔁 doublon possible : Curry japonais, Curry japonais rapide, Riz au curry japonais
+- **Roux Curry Japonais** _(vegetarian, roux, japanese)_ — `base_japanese_curry_roux_385e52` 🔁 doublon possible : Curry japonais au roux maison et à la pomme râpée
 - **Rösti** _(gluten_free, side, swiss)_ — `side_rosti_4ec9f8` 🔁 doublon possible : Rösti (Vegan)
 - **Rösti (Vegan)** _(gluten_free, kid_friendly, low_calorie, nut_free, snack, swiss)_ — `snack_rosti_vegan_be15a2` 🔁 doublon possible : Rösti
 
@@ -665,6 +664,7 @@
 - **Shakshuka** _(diabetes_friendly, gluten_free, high_protein, main, tunisian)_ — `egg_shakshuka_eb137b` 🔁 doublon possible : Shakshuka (Vegan)
 - **Shakshuka (Vegan)** _(diabetes_friendly, gluten_free, high_protein, nut_free, breakfast, levantine)_ — `brkf_shakshuka_vegan_81fa9a` 🔁 doublon possible : Shakshuka
 - **Shakshuka Verte** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, low_calorie, nut_free, breakfast, levantine)_ — `brkf_shakshuka_verte_ad7779`
+- **Shepherd's pie vegan aux champignons, purée au céleri-rave** _(nut_free, main, british)_ — `dal_lentil_shepherds_pie_vega_27455d` 🔁 doublon possible : Purée de Céleri-Rave Vegan
 - **Shorbat Adas** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, iraqi)_ — `dal_shorbat_adas_d4f98a`
 - **Skordalia** _(lactose_free, nut_free, vegan, vegetarian, starter, greek)_ — `entry_skordalia_18cd77`
 - **Slovak Potato Dumplings** _(main, slovak)_ — `egg_slovak_potato_dumplings_e85ebb`

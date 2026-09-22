@@ -26207,41 +26207,63 @@
       "id": "curry_japanese_4533d1",
       "titles": {
         "original": "Japanese Curry",
-        "fr": "Curry japonais rapide",
+        "fr": "Curry japonais au potiron et aux shiitakés",
         "en": "Quick Japanese Curry"
       },
       "origin": {
         "cuisine": "japanese",
         "country": "japan",
-        "region": "kanto",
-        "city": "tokyo"
+        "region": "hokkaido",
+        "city": "sapporo"
       },
       "servings": 4,
       "timing": {
         "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 25,
-        "total_min": 40
+        "cook_min": 30,
+        "total_min": 45
       },
       "composition": [
         {
+          "ingredient": "pumpkin_raw",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "shiitake_mushroom_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "potato_raw_flesh",
-          "quantity": 600,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "carrot_raw",
-          "quantity": 200,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -26252,7 +26274,7 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -26263,7 +26285,7 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -26281,31 +26303,43 @@
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 9.4,
+          "quantity": 8,
           "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 750 ml d'eau"
+            "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 750.0,
+          "quantity": 700,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
-            "note": "pour reconstituer le bouillon"
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
-          "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_short_grain_seed_dried",
+          "quantity": null,
+          "unit": "1 portion",
+          "meta": {
+            "role": "serving_suggestion",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -26373,10 +26407,13 @@
         "ail",
         "asia",
         "asiatique",
+        "aux",
         "base_japanese_curry_roux_385e52",
+        "blanc",
         "bouillon",
         "carotte",
         "carrot",
+        "champignon",
         "curry",
         "eau",
         "enfants",
@@ -26394,20 +26431,28 @@
         "low calorie",
         "minceur",
         "moyen",
+        "mushroom",
         "oignon",
-        "olive",
         "onion",
         "pomme",
         "potable)",
         "potato",
+        "potiron",
+        "pumpkin",
         "quick",
-        "rapide",
+        "rice",
+        "riz",
         "sans viande",
+        "shiitake",
+        "shiitakes",
         "stock",
+        "sunflower",
         "terre",
+        "tournesol",
         "vegetable",
         "vegetarien",
         "water",
+        "white",
         "wok"
       ],
       "difficulty_level": "medium",
@@ -26415,18 +26460,13 @@
       "servings_default": 4,
       "_quality_score": 0.89,
       "_chef_note": "Le curry japonais est un plat traditionnel qui combine les saveurs des épices à celles des légumes.",
-      "description": "Curry de pommes de terre crémeux sur mélange d'épices japonais, avec une sauce riche et parfumée qui nappe les légumes tendres — une spécialité culinaire japonaise",
+      "description": "Curry d'automne à la mode d'Hokkaido : potiron, shiitakés et pommes de terre mijotés dans une sauce au roux de curry, naturellement douce grâce au potiron.",
       "instructions": [
-        "Étape 1: Éplucher et couper 600g de pommes de terre crues en dés réguliers, ainsi que 200g de carottes crues en rondelles fines et 150g d'oignon jaune en petits cubes, pour une base de légumes variés.",
-        "Étape 2: Faire chauffer 45ml d'huile d'olive dans une grande casserole à feu moyen, puis ajouter les cubes d'oignon jaune et les faire revenir jusqu'à coloration dorée, en remuant régulièrement, pendant environ 8 minutes, jusqu'à ce que les oignons soient tendres et parfumés.",
-        "Étape 3: Ajouter les dés de pommes de terre crues et les rondelles de carottes crues à la casserole, puis faire sauter le tout pendant 5 minutes à feu moyen, en remuant constamment, jusqu'à ce que les légumes commencent à ramollir et à libérer leur saveur.",
-        "Étape 4: Émincer 9g d'ail et l'ajouter à la casserole, puis faire revenir pendant 1 minute, en remuant bien, jusqu'à ce que l'odeur d'ail soit parfumée et se mélange aux autres saveurs.",
-        "Étape 5: Ajouter 80g de roux de curry japonais à la casserole et remuer jusqu'à dissolution complète, en veillant à ce que le mélange soit homogène et que les épices soient bien réparties.",
-        "Étape 6: Verser 750ml de bouillon de légumes dans la casserole, puis porter le mélange à ébullition à feu vif, en remuant régulièrement pour éviter les grumeaux.",
-        "Étape 7: Réduire le feu à moyen, couvrir la casserole et laisser cuire pendant 20 minutes, ou jusqu'à ce que les légumes soient tendres et la sauce ait épaissi, en remuant occasionnellement pour contrôler la texture.",
-        "Étape 8: Goûter et poivrer le curry, puis servir chaud, garni de persil plat et de carottes râpées si désiré, pour une touche de fraîcheur et de couleur.",
-        "Étape 9: Accompagner le curry de riz japonais, pour un repas complet et équilibré qui combine saveurs et textures.",
-        "Étape 10: Pour une présentation plus élégante, disposer les légumes et la sauce dans un plat creux, puis décorer de feuilles de persil et de carottes râpées, pour un effet visuel appétissant."
+        "Étape 1 : Faire revenir 150 g d'oignon émincé dans 20 ml d'huile de tournesol, 5 minutes, puis ajouter 9 g d'ail haché et 150 g de shiitakés émincés et cuire 3 minutes.",
+        "Étape 2 : Ajouter 250 g de pommes de terre et 120 g de carotte en cubes, 700 ml d'eau et 8 g de bouillon déshydraté, puis mijoter 10 minutes.",
+        "Étape 3 : Ajouter 400 g de potiron en gros cubes et cuire encore 10 minutes, jusqu'à ce qu'il soit tendre sans se défaire.",
+        "Étape 4 : Hors du feu, dissoudre 80 g de roux de curry japonais, puis remettre sur feu doux 5 minutes en remuant, jusqu'à ce que la sauce épaississe.",
+        "Étape 5 : Servir sur du riz japonais."
       ],
       "diet_flags": {
         "vegan": false,
@@ -26442,7 +26482,7 @@
       "id": "curry_japanese_classic_v3_m8q2z4",
       "titles": {
         "original": "Kare Raisu",
-        "fr": "Curry japonais",
+        "fr": "Curry japonais au roux maison et à la pomme râpée",
         "en": "Japanese Curry"
       },
       "origin": {
@@ -26454,8 +26494,8 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 20,
-        "prep_passive_min": 5,
-        "cook_min": 35,
+        "prep_passive_min": 0,
+        "cook_min": 40,
         "total_min": 60
       },
       "composition": [
@@ -26465,9 +26505,9 @@
           "unit": "g",
           "meta": {
             "role": "base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
-            "preparation": "caramelized"
+            "preparation": ""
           }
         },
         {
@@ -26476,9 +26516,9 @@
           "unit": "g",
           "meta": {
             "role": "texture",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
-            "preparation": "melted"
+            "preparation": ""
           }
         },
         {
@@ -26487,9 +26527,20 @@
           "unit": "g",
           "meta": {
             "role": "texture",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
-            "preparation": "melted"
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "apple_raw",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
@@ -26498,7 +26549,7 @@
           "unit": "g",
           "meta": {
             "role": "binding",
-            "form": "sifted",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -26509,39 +26560,40 @@
           "unit": "g",
           "meta": {
             "role": "roux_support",
-            "form": "diced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 10.7,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "cooking_medium",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 850 ml d'eau"
+            "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 850.0,
+          "quantity": 850,
           "unit": "ml",
           "meta": {
             "role": "cooking_medium",
-            "note": "pour reconstituer le bouillon"
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 20,
+          "quantity": 15,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -26552,14 +26604,14 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "white_sugar",
-          "quantity": 15,
+          "ingredient": "honey",
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "sweetener",
@@ -26569,36 +26621,47 @@
           }
         },
         {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "curry_powder",
-          "quantity": 7.5,
+          "quantity": 8,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garam_masala",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "parsley_fresh_herb",
+          "ingredient": "white_rice_short_grain_seed_dried",
           "quantity": null,
-          "unit": "quelques feuilles",
+          "unit": "1 portion",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "feuilles de persil hachée",
-            "note": "Pour un peu de fraîcheur et de couleur",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -26609,7 +26672,8 @@
         "allergens": [
           "gluten",
           "lactose",
-          "milk"
+          "milk",
+          "soy"
         ],
         "technique": [
           "braising"
@@ -26665,14 +26729,13 @@
       },
       "search_tokens": [
         "(eau",
-        "(melange",
         "1 heure",
         "ail",
         "all",
+        "apple",
         "asia",
         "asiatique",
         "beurre",
-        "blanc",
         "ble",
         "bouillon",
         "braising",
@@ -26681,14 +26744,12 @@
         "carrot",
         "curry",
         "eau",
-        "epices",
         "farine",
         "flour",
-        "garam",
         "garlic",
         "gingembre",
         "ginger",
-        "indien)",
+        "honey",
         "intermediaire",
         "japanese",
         "japon",
@@ -26698,7 +26759,8 @@
         "legumes",
         "light",
         "low calorie",
-        "masala",
+        "maison",
+        "miel",
         "minceur",
         "moyen",
         "oignon",
@@ -26708,33 +26770,35 @@
         "potato",
         "purpose",
         "raisu",
+        "rapee",
+        "roux",
         "sans viande",
+        "sauce",
+        "shoyu",
+        "soja",
+        "soy",
         "stock",
-        "sucre",
-        "sugar",
         "terre",
         "tout",
         "usage",
         "vegetable",
         "vegetarien",
         "water",
-        "wheat",
-        "white"
+        "wheat"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 1.0,
       "_chef_note": "Pour un curry encore plus crémeux, vous pouvez ajouter un peu de crème de coco en fin de cuisson.",
-      "description": "Curry japonais créatif, riche et parfumé, avec des légumes mijotés tendres et un roux brun caramélisé qui dégage une odeur de noisette, élaboré à partir de techniques traditionnelles japonaises.",
+      "description": "Curry japonais préparé sans tablette : roux brun au beurre, poudre de curry et garam masala, adouci de pomme râpée et de miel, avec pommes de terre et carottes fondantes.",
       "instructions": [
-        "Étape 1 : Éplucher et couper les carottes et les pommes de terre en gros cubes, émincer l'oignon, hacher l'ail et le gingembre.",
-        "Étape 2 : Dans une cocotte, faire fondre 25 g de beurre et faire revenir l'oignon 6 minutes à feu moyen jusqu'à ce qu'il soit translucide. Ajouter l'ail et le gingembre, cuire 1 minute.",
-        "Étape 3 : Ajouter les carottes et les pommes de terre, faire revenir 3 minutes, puis verser 850 ml d'eau chaude et le bouillon en poudre. Porter à ébullition en écumant, couvrir et cuire à feu moyen 18 à 20 minutes, jusqu'à ce que les légumes soient tendres.",
-        "Étape 4 : Pendant ce temps, préparer le roux : faire fondre 35 g de beurre dans une poêle, ajouter 35 g de farine et cuire en remuant 5 à 8 minutes, jusqu'à ce qu'il soit brun clair et sente la noisette. Hors du feu, incorporer 7,5 g de curry en poudre et 5 g de garam masala.",
-        "Étape 5 : Délayer le roux dans une louche de bouillon, puis l'incorporer aux légumes en remuant jusqu'à dissolution complète. Ajouter 15 g de sucre.",
-        "Étape 6 : Laisser mijoter 5 minutes à feu doux en remuant, jusqu'à ce que la sauce épaississe et devienne brillante. Rectifier l'assaisonnement.",
-        "Étape 7 : Servir bien chaud sur du riz japonais."
+        "Étape 1 : Faire fondre 25 g de beurre dans une cocotte et y faire revenir 220 g d'oignon émincé 8 minutes. Ajouter 15 g d'ail et 15 g de gingembre hachés, puis cuire 1 minute.",
+        "Étape 2 : Ajouter 400 g de pommes de terre et 200 g de carottes en gros cubes, 850 ml d'eau chaude et 10 g de bouillon déshydraté. Mijoter 15 minutes.",
+        "Étape 3 : Roux : faire fondre 35 g de beurre, ajouter 35 g de farine et cuire 6 à 8 minutes en remuant, jusqu'à ce qu'il soit couleur noisette. Hors du feu, ajouter 8 g de poudre de curry et 4 g de garam masala.",
+        "Étape 4 : Délayer le roux dans une louche de bouillon et le verser dans la cocotte avec 120 g de pomme râpée, 10 g de miel et 15 ml de sauce soja.",
+        "Étape 5 : Mijoter 10 minutes à feu doux en remuant, jusqu'à ce que la sauce soit épaisse et brillante.",
+        "Étape 6 : Servir sur du riz japonais."
       ],
       "diet_flags": {
         "vegan": false,
@@ -26750,30 +26814,41 @@
       "id": "curry_japonais_1caddf",
       "titles": {
         "original": "Japanese Curry Rice",
-        "fr": "Riz au curry japonais",
+        "fr": "Kare raisu aux oignons caramélisés",
         "en": "Japanese Curry Rice"
       },
       "origin": {
         "cuisine": "japanese",
         "country": "japan",
         "region": "kanto",
-        "city": "tokyo"
+        "city": "yokosuka"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 13,
+        "prep_active_min": 15,
         "prep_passive_min": 10,
-        "cook_min": 25,
-        "total_min": 48
+        "cook_min": 45,
+        "total_min": 70
       },
       "composition": [
         {
+          "ingredient": "onion_raw",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "potato_raw_flesh",
-          "quantity": 600,
+          "quantity": 450,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -26784,18 +26859,7 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "onion_raw",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -26813,31 +26877,43 @@
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 9.4,
+          "quantity": 8,
           "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 750 ml d'eau"
+            "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 750.0,
+          "quantity": 1060,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
-            "note": "pour reconstituer le bouillon"
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
-          "ingredient": "sesame_oil_plant",
-          "quantity": 30,
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 25,
           "unit": "ml",
           "meta": {
             "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_short_grain_seed_dried",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "carbohydrate",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -26852,17 +26928,6 @@
             "ingredient_fr": "persil plat",
             "note": "Pour une touche de fraîcheur",
             "optional": true
-          }
-        },
-        {
-          "ingredient": "white_rice_short_grain_seed_dried",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "carbohydrate",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
           }
         }
       ],
@@ -26923,12 +26988,13 @@
       },
       "search_tokens": [
         "(eau",
-        "1 heure",
         "asia",
         "asiatique",
+        "aux",
         "base_japanese_curry_roux_385e52",
         "blanc",
         "bouillon",
+        "caramelises",
         "carotte",
         "carrot",
         "curry",
@@ -26940,26 +27006,33 @@
         "japanese",
         "japon",
         "japonais",
+        "kare",
         "kids",
         "leger",
         "legumes",
+        "lent",
         "light",
+        "long",
         "low calorie",
+        "mijote",
         "minceur",
         "moyen",
         "oignon",
+        "oignons",
         "onion",
         "parsley",
         "persil",
         "pomme",
         "potable)",
         "potato",
+        "raisu",
         "rice",
         "riz",
         "sans viande",
-        "sesame",
         "stock",
+        "sunflower",
         "terre",
+        "tournesol",
         "vegetable",
         "vegetarien",
         "water",
@@ -26972,15 +27045,14 @@
       "servings_default": 4,
       "_quality_score": 0.88,
       "_chef_note": "Le riz au curry japonais est un plat traditionnel qui combine les saveurs des épices à celles du riz.",
-      "description": "Riz au curry japonais crémeux, parsemé de pommes de terre et de carottes tendres, sur fond d'épices japonais équilibré",
+      "description": "Le kare raisu des cantines japonaises : oignons longuement caramélisés, pommes de terre et carottes dans une sauce au roux de curry, servi à côté d'un riz japonais.",
       "instructions": [
-        "Étape 1: Dans une poêle chaude, ajoutez 30 ml d'huile de sésame et faites saisir les oignons 3 minutes à feu moyen-vif, jusqu'à ce qu'ils deviennent translucides et émettent une odeur sucrée.",
-        "Étape 2: Ajoutez les carottes et les pommes de terre, faites-les revenir 4 minutes à feu moyen, en remuant régulièrement, jusqu'à ce qu'ils commencent à ramollir et à prendre une teinte dorée.",
-        "Étape 3: Versez 750 ml de bouillon de légumes chaud et portez à ébullition. Écumez si nécessaire, puis réduisez le feu.",
-        "Étape 4: Laissez cuire 15 minutes, en vérifiant régulièrement la tendreté des légumes. Les pommes de terre et les carottes doivent être tendres.",
-        "Étape 5: Hors du feu, ajoutez 80 g de roux curry japonais. Émulsionnez jusqu'à dissolution complète, en remuant vigoureusement, jusqu'à ce que la sauce soit lisse et crémeuse.",
-        "Étape 6: Laissez reposer 2 minutes, en vérifiant la coloration de la sauce, qui doit atteindre une teinte dorée blonde. Si nécessaire, ajustez la consistance en ajoutant un peu de bouillon de légumes.",
-        "Étape 7: Pendant la cuisson, rincez 300 g de riz japonais et cuisez-le à couvert dans 360 ml d'eau 12 minutes. Servez le curry sur le riz."
+        "Étape 1 : Émincer finement 300 g d'oignons et les caraméliser dans 25 ml d'huile de tournesol, 25 minutes à feu moyen-doux, jusqu'à ce qu'ils soient brun ambré.",
+        "Étape 2 : Ajouter 450 g de pommes de terre et 200 g de carottes en cubes, puis faire revenir 3 minutes.",
+        "Étape 3 : Verser 700 ml d'eau et 8 g de bouillon déshydraté, puis mijoter 15 minutes.",
+        "Étape 4 : Pendant ce temps, rincer 300 g de riz japonais et le cuire à couvert dans 360 ml d'eau, 12 minutes, puis le laisser reposer 10 minutes.",
+        "Étape 5 : Hors du feu, dissoudre 80 g de roux de curry dans la sauce, puis mijoter 5 minutes en remuant.",
+        "Étape 6 : Servir dans des assiettes creuses, le riz d'un côté et le curry de l'autre."
       ],
       "diet_flags": {
         "vegan": false,
@@ -32397,41 +32469,41 @@
       "id": "dal_de_lentilles_corail_vegan_8cc6a7",
       "titles": {
         "original": "Masoor Dal (Vegan)",
-        "fr": "Dal de Lentilles Corail (Vegan)",
+        "fr": "Masoor dal bengali au panch phoron",
         "en": "Masoor Dal (Vegan)"
       },
       "origin": {
         "cuisine": "indian",
         "country": "india",
-        "region": "punjab",
-        "city": ""
+        "region": "bengale_occidental",
+        "city": "kolkata"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 19,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 25,
-        "total_min": 44
+        "cook_min": 30,
+        "total_min": 45
       },
       "composition": [
         {
           "ingredient": "red_lentil_dried",
-          "quantity": 300,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "protein",
             "form": "",
-            "state": "cooked",
+            "state": "dried",
             "preparation": ""
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -32442,14 +32514,36 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "coconut_oil_plant",
-          "quantity": 45.4,
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "fruit",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 8,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -32460,75 +32554,98 @@
         },
         {
           "ingredient": "turmeric_powder",
-          "quantity": 2.8,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "cumin_spice_seed",
-          "quantity": 2.5,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "coriander_spice_seed",
-          "quantity": 2,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "yellow_mustard_spice_seed",
-          "quantity": 4,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 8.8,
+          "ingredient": "cumin_spice_seed",
+          "quantity": 2,
           "unit": "g",
           "meta": {
-            "role": "cooking_liquid",
+            "role": "spice",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 700 ml d'eau"
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "fenugreek_spice_seed",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "fennel_spice_seed",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 700.0,
+          "quantity": 900,
           "unit": "ml",
           "meta": {
             "role": "cooking_liquid",
-            "note": "pour reconstituer le bouillon"
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 2,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "basmati_rice_raw_seed",
+          "quantity": null,
+          "unit": "1 portion",
+          "meta": {
+            "role": "serving_suggestion",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -32589,26 +32706,26 @@
         }
       },
       "search_tokens": [
-        "(eau",
         "(vegan)",
         "45 minutes",
         "ail",
         "avance",
-        "bouillon",
+        "bengali",
         "chef",
-        "coco",
-        "coconut",
+        "chilli",
+        "citron",
         "coeliaque",
         "complexe",
         "corail",
-        "coriander",
-        "coriandre",
         "cumin",
         "curcuma",
         "curry",
         "dal",
-        "eau",
         "epice",
+        "fennel",
+        "fenouil",
+        "fenugrec",
+        "fenugreek",
         "garlic",
         "gluten free",
         "inde",
@@ -32616,10 +32733,9 @@
         "indien",
         "jaune",
         "leger",
-        "legumes",
+        "lemon",
         "lentil",
         "lentille",
-        "lentilles",
         "light",
         "low calorie",
         "masoor",
@@ -32627,27 +32743,27 @@
         "moutarde",
         "moyen",
         "mustard",
-        "noix",
         "oignon",
         "onion",
-        "potable)",
+        "panch",
+        "pepper",
+        "phoron",
+        "piment",
         "red",
-        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
-        "sel",
         "spicy",
-        "stock",
-        "table",
+        "sunflower",
         "technique",
+        "tomate",
+        "tomato",
+        "tournesol",
         "turmeric",
         "vegan",
-        "vegetable",
         "vegetalien",
         "vegetarien",
-        "water",
         "yellow"
       ],
       "difficulty_level": "hard",
@@ -32655,15 +32771,13 @@
       "servings_default": 4,
       "_quality_score": 1.0,
       "_chef_note": "La cuisson lente des lentilles donne une texture crémeuse et une saveur épicée.",
-      "description": "Dal de lentilles corail crémeux, parfumé aux épices indiennes, avec une texture onctueuse et des notes de cumin et de coriandre, inspiré de la cuisine végétalienne indienne",
+      "description": "Dal fluide de Calcutta : lentilles corail au curcuma, tempérées au panch phoron (moutarde, cumin, fenugrec, fenouil) grésillé dans l'huile, avec un filet de citron.",
       "instructions": [
-        "Étape 1 : Rincer 300 g de lentilles corail sous l'eau froide jusqu'à eau claire, puis égoutter. Cela permet de retirer les impuretés et d'améliorer la texture finale.",
-        "Étape 2 : Chauffer 30 ml d'huile de coco dans une casserole à feu moyen. Faire revenir 150 g d'oignon jaune émincé pendant 6 à 8 minutes, jusqu'à dorure translucide et parfumé. Remuer régulièrement pour éviter la coloration excessive.",
-        "Étape 3 : Ajouter 10 g d'ail haché, 2,8 g de curcuma, 2,5 g de cumin et 2 g de coriandre moulue. Cuire pendant 1 minute, en remuant régulièrement, jusqu'à ce que les épices embaument sans brûler et libèrent leurs arômes.",
-        "Étape 4 : Incorporer les lentilles et 700 ml de bouillon de légumes bouillant. Mijoter à feu doux pendant 18 à 20 minutes, jusqu'à ce que les lentilles soient désagrégées et la texture soit crémeuse. Vérifier la texture en écrasant une lentille avec une cuillère.",
-        "Étape 5 : Préparer le tadka vegan : faire chauffer 15 ml d'huile de coco, puis faire grésiller 4 g de graines de moutarde pendant 30 secondes. Verser sur le dal et remuer doucement pour répartir les saveurs.",
-        "Étape 6 : Servir sans attendre, car le dal doit être crémeux et très parfumé, accompagné de riz basmati. La chaleur et la texture crémeuse sont essentielles pour apprécier pleinement ce plat.",
-        "Étape 7 : Rectifier l'assaisonnement avec 2 g de sel si nécessaire, en vérifiant que le dal soit crémeux et très parfumé. Goûter et ajuster pour obtenir l'équilibre parfait des saveurs."
+        "Étape 1 : Rincer 250 g de lentilles corail et les cuire dans 900 ml d'eau avec 3 g de curcuma et 4 g de sel, 20 minutes, puis les fouetter : le dal doit rester fluide.",
+        "Étape 2 : Chauffer 30 ml d'huile et y faire grésiller le panch phoron (2 g de moutarde, 2 g de cumin, 1 g de fenugrec et 2 g de fenouil en graines) 30 secondes.",
+        "Étape 3 : Ajouter 100 g d'oignon émincé et 8 g de piment vert fendu, puis cuire 5 minutes. Ajouter 10 g d'ail haché et 150 g de tomate en dés, puis cuire 3 minutes.",
+        "Étape 4 : Verser ce tempérage sur le dal et laisser frémir 3 minutes.",
+        "Étape 5 : Hors du feu, ajouter 15 ml de jus de citron. Servir avec du riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -36540,7 +36654,7 @@
       "id": "dal_lentil_corail_classic_k1d1p1",
       "titles": {
         "original": "Masoor Dal",
-        "fr": "Dal de lentilles corail",
+        "fr": "Dal tadka du Pendjab",
         "en": "Red Lentil Dal"
       },
       "origin": {
@@ -36551,10 +36665,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 25,
-        "prep_passive_min": 5,
+        "prep_active_min": 20,
+        "prep_passive_min": 0,
         "cook_min": 35,
-        "total_min": 65
+        "total_min": 55
       },
       "composition": [
         {
@@ -36564,8 +36678,8 @@
           "meta": {
             "role": "base",
             "form": "",
-            "state": "cooked",
-            "preparation": "simmered"
+            "state": "dried",
+            "preparation": ""
           }
         },
         {
@@ -36574,18 +36688,18 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
-            "preparation": "melted"
+            "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 25,
+          "quantity": 20,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -36596,7 +36710,7 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -36607,9 +36721,9 @@
           "unit": "g",
           "meta": {
             "role": "sauce_base",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
-            "preparation": "reduced"
+            "preparation": ""
           }
         },
         {
@@ -36629,40 +36743,51 @@
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
-            "preparation": "toasted"
+            "preparation": ""
           }
         },
         {
           "ingredient": "turmeric_powder",
-          "quantity": 3.8,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "coriander_spice_seed",
-          "quantity": 10,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garam_masala",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "chilli_pepper_raw",
-          "quantity": 30,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -36673,14 +36798,14 @@
           "unit": "g",
           "meta": {
             "role": "garnish",
-            "form": "chiffonade",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -36706,6 +36831,17 @@
           "unit": "ml",
           "meta": {
             "role": "acid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "basmati_rice_raw_seed",
+          "quantity": null,
+          "unit": "1 portion",
+          "meta": {
+            "role": "serving_suggestion",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -36775,6 +36911,8 @@
         }
       },
       "search_tokens": [
+        "(melange",
+        "1 heure",
         "ail",
         "braising",
         "chilli",
@@ -36789,7 +36927,9 @@
         "debutant",
         "easy",
         "epice",
+        "epices",
         "facile",
+        "garam",
         "garlic",
         "gingembre",
         "ginger",
@@ -36797,32 +36937,29 @@
         "inde",
         "indian",
         "indien",
+        "indien)",
         "leger",
-        "lent",
         "lentil",
         "lentille",
-        "lentilles",
         "light",
-        "long",
         "low calorie",
+        "masala",
         "masoor",
-        "mijote",
         "minceur",
         "oignon",
         "onion",
+        "pendjab",
         "pepper",
         "piment",
         "red",
         "reduction",
-        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "sel",
         "simple",
         "spicy",
         "sunflower",
-        "table",
+        "tadka",
         "toasting",
         "tomate",
         "tomato",
@@ -36836,15 +36973,13 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 1.0,
-      "description": "Délicieuse préparation indienne de lentilles corail mijotées avec une base aromatique torréfiée (tadka) pour une texture crémeuse homogène et une diffusion optimale des épices.",
+      "description": "Le dal tadka des dhabas du Pendjab : lentilles corail épaisses aux tomates, gingembre et ail, finies par un tadka de cumin et de piment grésillé, et de la coriandre fraîche.",
       "instructions": [
-        "Étape 1 : Rincer 250g de lentilles corail jusqu'à eau claire. Chauffer 25ml d'huile de tournesol dans une casserole à feu moyen. Faire revenir 140g d'oignon haché pendant 7 minutes à feu moyen jusqu'à dorure translucide et texture tendre.",
-        "Étape 2 : Ajouter 25g d'ail et 10g de gingembre hachés, ainsi que 5g de cumin, 3,8g de curcuma et 10g de coriandre moulue. Cuire pendant 1 minute en remuant — les épices doivent embaumer et libérer leurs arômes.",
-        "Étape 3 : Incorporer 250g de tomates concassées. Réduire pendant 5 minutes à feu moyen, avec une texture crémeuse et une coloration rougeâtre.",
-        "Étape 4 : Ajouter les lentilles et 700ml d'eau bouillante. Mijoter à feu doux pendant 18 à 20 minutes jusqu'à lentilles désagrégées et texture crémeuse nappe-cuillère.",
-        "Étape 5 : Préparer le tadka : faire chauffer 15ml d'huile de tournesol, faire grésiller les graines de cumin pendant 30 secondes. Verser sur le dal, avec un son de crépitation et une odeur parfumée.",
-        "Étape 6 : Assaisonner de sel et de jus de citron vert. La sauce doit napper la cuillère, la couleur être jaune clair.",
-        "Étape 7 : Servir avec du riz basmati, en garnissant de 10g de coriandre fraîche hachée et 30g de piment chili haché, si désiré."
+        "Étape 1 : Rincer 250 g de lentilles corail et les cuire dans 700 ml d'eau avec 3 g de curcuma, 20 minutes, jusqu'à ce qu'elles se défassent.",
+        "Étape 2 : Chauffer 25 ml d'huile et faire revenir 140 g d'oignon émincé 8 minutes, jusqu'à ce qu'il soit doré. Ajouter 15 g d'ail et 10 g de gingembre hachés, puis 4 g de coriandre moulue et 2 g de garam masala, et cuire 1 minute.",
+        "Étape 3 : Ajouter 250 g de tomates concassées et 4 g de sel, puis réduire 5 minutes. Verser sur les lentilles et mijoter 5 minutes.",
+        "Étape 4 : Tadka : chauffer 15 ml d'huile, y faire grésiller 5 g de graines de cumin, 5 g d'ail émincé et 10 g de piment vert fendu, 1 minute, puis verser sur le dal.",
+        "Étape 5 : Ajouter 15 ml de jus de citron vert, parsemer de 10 g de coriandre fraîche ciselée et servir avec du riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -36860,7 +36995,7 @@
       "id": "dal_lentil_shepherd_pie_vegan_926ebd",
       "titles": {
         "original": "Lentil Shepherd Pie (Vegan)",
-        "fr": "Lentil Shepherd Pie (Vegan)",
+        "fr": "Hachis de lentilles à la patate douce (vegan)",
         "en": "Vegan Lentil Shepherd Pie"
       },
       "origin": {
@@ -36871,10 +37006,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 15,
-        "prep_passive_min": 20,
+        "prep_active_min": 20,
+        "prep_passive_min": 0,
         "cook_min": 60,
-        "total_min": 95
+        "total_min": 80
       },
       "composition": [
         {
@@ -36884,17 +37019,17 @@
           "meta": {
             "role": "plant_protein",
             "form": "",
-            "state": "cooked",
+            "state": "dried",
             "preparation": ""
           }
         },
         {
-          "ingredient": "potato_raw_flesh",
-          "quantity": 600,
+          "ingredient": "sweet_potato_raw",
+          "quantity": 700,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -36905,7 +37040,7 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -36916,46 +37051,102 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 9.4,
+          "ingredient": "garlic_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
+            "role": "aromatic",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 750 ml d'eau"
+            "preparation": ""
           }
         },
         {
-          "ingredient": "water",
-          "quantity": 750.0,
-          "unit": "ml",
+          "ingredient": "tomato_paste_unsalted_canned",
+          "quantity": 30,
+          "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "note": "pour reconstituer le bouillon"
+            "role": "umami",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "thyme_fresh_herb",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "paprika",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
           "ingredient": "vegan_butter",
-          "quantity": 40,
+          "quantity": 25,
           "unit": "g",
           "meta": {
             "role": "fat_cooking",
-            "form": "diced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "oat_milk_refrigerated_plain_plant",
-          "quantity": 250,
+          "quantity": 100,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 8,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 700,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -36976,17 +37167,6 @@
           }
         },
         {
-          "ingredient": "thyme_fresh_herb",
-          "quantity": 5,
-          "unit": "g",
-          "meta": {
-            "role": "herb",
-            "form": "leaves",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "coriander",
           "quantity": null,
           "unit": "1 poignée",
@@ -36995,17 +37175,6 @@
             "ingredient_fr": "coriandre fraîche ciselée",
             "note": "Pour une touche de fraîcheur",
             "optional": true
-          }
-        },
-        {
-          "ingredient": "olive_oil_plant",
-          "quantity": 15,
-          "unit": "ml",
-          "meta": {
-            "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
           }
         }
       ],
@@ -37060,8 +37229,8 @@
         }
       },
       "search_tokens": [
-        "(eau",
         "(vegan)",
+        "ail",
         "anglais",
         "avoine",
         "beurre",
@@ -37072,15 +37241,17 @@
         "butter",
         "carotte",
         "carrot",
-        "coriander",
-        "eau",
+        "douce",
+        "garlic",
         "green",
+        "hachis",
         "intermediaire",
         "leger",
         "legumes",
         "lent",
         "lentil",
         "lentille",
+        "lentilles",
         "light",
         "long",
         "low calorie",
@@ -37091,44 +37262,39 @@
         "oignon",
         "olive",
         "onion",
+        "paprika",
+        "patate",
         "pie",
-        "pomme",
-        "potable)",
         "potato",
         "roasting",
-        "salt",
         "sans produit animal",
         "sans viande",
-        "sel",
         "shepherd",
         "stock",
-        "table",
-        "terre",
+        "sweet",
         "thym",
         "thyme",
+        "tomate",
+        "tomato",
         "vegan",
         "vegetable",
         "vegetal",
         "vegetalien",
         "vegetarien",
-        "verte",
-        "water"
+        "verte"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.95,
       "_chef_note": "Un plat végétalien crémeux et savoureux, parfait pour les repas en famille.",
-      "description": "Lentilles vertes cuites, mélangées à des pommes de terre crémeuses et des carottes fondantes, parfumées au thym frais.",
+      "description": "Hachis végétal aux lentilles vertes, carottes et thym, recouvert d'une purée de patate douce au paprika fumé et au lait d'avoine, gratinée au four.",
       "instructions": [
-        "Étape 1 : Faites revenir 150 g d'oignons en dés dans 15 ml d'huile d'olive à feu moyen, jusqu'à ce qu'ils soient tendres et parfumés.",
-        "Étape 2 : Ajoutez 200 g de carottes en dés et faites-les cuire pendant 5 minutes, puis ajoutez 200 g de lentilles vertes rincées et 750 ml de bouillon végétal, et faites cuire pendant 25 minutes.",
-        "Étape 3 : Assaisonnez avec 5 g de thym frais et 2 g de sel.",
-        "Étape 4 : Faites cuire 600 g de pommes de terre dans de l'eau bouillante pendant 15-20 minutes, jusqu'à ce qu'elles soient tendres.",
-        "Étape 5 : Écrasez les pommes de terre avec 40 g de beurre végétal, un peu de bouillon végétal et de sel, en ajoutant 250 ml de lait d'avoine.",
-        "Étape 6 : Versez les lentilles dans un plat à gratin, puis recouvrez-les avec la purée de pommes de terre.",
-        "Étape 7 : Enfournez à 180°C pendant 25 minutes, jusqu'à ce que la surface soit dorée.",
-        "Étape 8 : Servez chaud."
+        "Étape 1 : Faire revenir 150 g d'oignon en dés dans 15 ml d'huile d'olive 5 minutes, puis ajouter 200 g de carottes en dés et 6 g d'ail haché, et cuire 3 minutes.",
+        "Étape 2 : Ajouter 200 g de lentilles vertes rincées, 30 g de concentré de tomate, 5 g de thym, 700 ml d'eau et 8 g de bouillon déshydraté, puis mijoter 25 minutes jusqu'à ce que le liquide soit presque absorbé.",
+        "Étape 3 : Cuire 700 g de patates douces en cubes à la vapeur 15 minutes, puis les écraser avec 25 g de beurre végétal, 100 ml de lait d'avoine, 2 g de paprika fumé et 2 g de sel.",
+        "Étape 4 : Préchauffer le four à 200°C. Étaler les lentilles dans un plat et les couvrir de purée de patate douce.",
+        "Étape 5 : Enfourner 20 minutes, jusqu'à ce que les bords soient dorés. Servir chaud."
       ],
       "diet_flags": {
         "vegan": true,
@@ -37144,7 +37310,7 @@
       "id": "dal_lentil_shepherd_s_pie_477c76",
       "titles": {
         "original": "Lentil Shepherd's Pie",
-        "fr": "Lentil Shepherd's Pie",
+        "fr": "Cottage pie végétarien aux lentilles et au cheddar",
         "en": "Lentil Shepherd's Pie"
       },
       "origin": {
@@ -37155,10 +37321,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
+        "prep_active_min": 20,
         "prep_passive_min": 0,
-        "cook_min": 45,
-        "total_min": 56
+        "cook_min": 55,
+        "total_min": 75
       },
       "composition": [
         {
@@ -37168,28 +37334,39 @@
           "meta": {
             "role": "plant_protein",
             "form": "",
-            "state": "cooked",
+            "state": "dried",
             "preparation": ""
           }
         },
         {
           "ingredient": "potato_raw_flesh",
-          "quantity": 600,
+          "quantity": 700,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "carrot_raw",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_peas_raw",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -37200,25 +37377,47 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_paste_unsalted_canned",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "umami",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "thyme_dried_herb",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "butter_sup80pct",
-          "quantity": 60,
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "fat_cooking",
-            "form": "diced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "milk_liquid_uht_3_5pct",
-          "quantity": 250,
+          "quantity": 150,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -37228,11 +37427,11 @@
           }
         },
         {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "ingredient": "cheddar_cow",
+          "quantity": 60,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
+            "role": "topping",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -37240,7 +37439,7 @@
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 9.4,
+          "quantity": 8,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -37251,10 +37450,32 @@
         },
         {
           "ingredient": "water",
-          "quantity": 750,
+          "quantity": 700,
           "unit": "ml",
           "meta": {
             "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -37318,8 +37539,8 @@
       },
       "search_tokens": [
         "(eau",
-        "1 heure",
         "anglais",
+        "aux",
         "beurre",
         "bouillon",
         "braising",
@@ -37328,7 +37549,9 @@
         "butter",
         "carotte",
         "carrot",
+        "cheddar",
         "coeliaque",
+        "cottage",
         "eau",
         "enfants",
         "facile enfants",
@@ -37340,30 +37563,39 @@
         "lait",
         "leger",
         "legumes",
+        "lent",
         "lentil",
         "lentille",
+        "lentilles",
         "light",
+        "long",
         "low calorie",
+        "mijote",
         "milk",
         "minceur",
         "moyen",
         "oignon",
         "onion",
         "oven_cooking",
+        "peas",
+        "petit",
         "pie",
+        "pois",
         "pomme",
         "potable)",
         "potato",
-        "salt",
         "sans gluten",
         "sans viande",
-        "sel",
         "shepherd's",
         "stock",
-        "table",
         "terre",
+        "thym",
+        "thyme",
+        "tomate",
+        "tomato",
         "vegetable",
         "vegetarien",
+        "vert",
         "verte",
         "water"
       ],
@@ -37371,17 +37603,13 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.84,
-      "description": "Gratin végétarien britannique à base de lentilles vertes cuites à la perfection, avec une texture crémeuse et une saveur riche, inspiré de la cuisine traditionnelle anglaise.",
+      "description": "Cottage pie à l'anglaise : lentilles vertes mijotées au thym avec carottes, petits pois et tomate, couvertes d'une purée au beurre gratinée au cheddar.",
       "instructions": [
-        "Étape 1: Faire cuire 200g de lentilles vertes dans 750 ml de bouillon végétal chaud et parfumé jusqu'à tendreté, environ 25 minutes, en vérifiant régulièrement leur texture pour obtenir une consistance crémeuse.",
-        "Étape 2: Faire revenir 150g d'oignon jaune émincé et 200g de carotte crue râpée dans 20g de beurre à feu moyen, en remuant occasionnellement, jusqu'à ce que les légumes soient tendres et parfumés, environ 10 minutes.",
-        "Étape 3: Mélanger les lentilles cuites aux légumes sautés, et assaisonner avec du sel de mer et du poivre noir fraîchement moulu. Vous obtiendrez un mélange harmonieux et parfumé.",
-        "Étape 4: Cuire 600g de pommes de terre crues à l'eau bouillante salée, puis les égoutter. Vous entendrez le son de l'eau bouillante et sentirez la vapeur chaude.",
-        "Étape 5: Écraser les pommes de terre cuites avec 40g de beurre et 250ml de lait, du sel et du poivre pour obtenir une purée lisse et crémeuse. Vous obtiendrez une texture onctueuse.",
-        "Étape 6: Verser les lentilles dans un plat à gratin beurré. Vous verrez le mélange se déposer uniformément.",
-        "Étape 7: Couvrir uniformément le mélange de lentilles avec la purée de pommes de terre. Vous obtiendrez une surface lisse et régulière.",
-        "Étape 8: Strier la surface avec une fourchette pour qu'elle dore bien. Vous verrez les traces de la fourchette et sentirez l'odeur de la purée qui commence à dorer.",
-        "Étape 9: Enfourner à 200°C pendant 20-25 minutes jusqu'à gratinage doré. Vous sentirez l'odeur de la purée dorée et voyez la surface qui prend une belle couleur brune."
+        "Étape 1 : Faire revenir 150 g d'oignon et 150 g de carotte en dés dans 10 g de beurre, 8 minutes.",
+        "Étape 2 : Ajouter 200 g de lentilles vertes rincées, 30 g de concentré de tomate, 1 g de thym, 700 ml d'eau et 8 g de bouillon déshydraté. Mijoter 25 minutes, jusqu'à ce que les lentilles soient tendres et le liquide presque absorbé, puis ajouter 120 g de petits pois.",
+        "Étape 3 : Pendant ce temps, cuire 700 g de pommes de terre à l'eau salée 20 minutes, puis les écraser avec 30 g de beurre, 150 ml de lait chaud, 2 g de sel et 1 g de poivre.",
+        "Étape 4 : Préchauffer le four à 200°C. Verser les lentilles dans un plat, couvrir de purée et strier à la fourchette.",
+        "Étape 5 : Parsemer de 60 g de cheddar râpé et enfourner 20 minutes, jusqu'à ce que le dessus soit doré."
       ],
       "diet_flags": {
         "vegan": false,
@@ -37397,7 +37625,7 @@
       "id": "dal_lentil_shepherds_pie_vega_27455d",
       "titles": {
         "original": "Lentil Shepherd's Pie (Vegan)",
-        "fr": "Lentil Shepherd's Pie (Vegan)",
+        "fr": "Shepherd's pie vegan aux champignons, purée au céleri-rave",
         "en": "Lentil Shepherd'S Pie (Vegan)"
       },
       "origin": {
@@ -37408,41 +37636,63 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
-        "prep_passive_min": 20,
-        "cook_min": 45,
-        "total_min": 76
+        "prep_active_min": 25,
+        "prep_passive_min": 0,
+        "cook_min": 50,
+        "total_min": 75
       },
       "composition": [
         {
           "ingredient": "green_lentil_dried",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
             "form": "",
-            "state": "cooked",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "button_mushroom_raw",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "potato_raw_with_skin",
-          "quantity": 600,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "cubed",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "celeriac_raw",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "carrot_raw",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -37453,25 +37703,69 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "rosemary_fresh_herb",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "vegan_butter",
-          "quantity": 40,
+          "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "fat_cooking",
-            "form": "diced",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "soybean_milk_unsweetened_plant",
-          "quantity": 250,
+          "quantity": 120,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -37481,19 +37775,8 @@
           }
         },
         {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 9.4,
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -37504,10 +37787,21 @@
         },
         {
           "ingredient": "water",
-          "quantity": 750,
+          "quantity": 600,
           "unit": "ml",
           "meta": {
             "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -37516,11 +37810,12 @@
       ],
       "tags": {
         "diet": [
-          "gluten_free",
           "nut_free"
         ],
         "allergens": [
-          "soy"
+          "soy",
+          "celery",
+          "gluten"
         ],
         "technique": [
           "braising",
@@ -37565,24 +37860,26 @@
         }
       },
       "search_tokens": [
-        "(eau",
         "(vegan)",
+        "ail",
         "anglais",
+        "aux",
         "beurre",
-        "bouillon",
         "braising",
         "britannique",
         "british",
         "butter",
+        "button",
         "carotte",
         "carrot",
-        "coeliaque",
-        "eau",
-        "gluten free",
+        "celeri",
+        "celeriac",
+        "champignon",
+        "champignons,",
+        "garlic",
         "green",
         "intermediaire",
         "leger",
-        "legumes",
         "lent",
         "lentil",
         "lentille",
@@ -37592,52 +37889,52 @@
         "mijote",
         "minceur",
         "moyen",
+        "mushroom",
         "oignon",
+        "olive",
         "onion",
+        "paris",
         "pie",
         "pomme",
-        "potable)",
         "potato",
+        "puree",
+        "rave",
         "roasting",
-        "salt",
-        "sans gluten",
+        "romarin",
+        "rosemary",
         "sans produit animal",
         "sans viande",
-        "sel",
+        "sauce",
         "shepherd's",
+        "shoyu",
         "soja",
+        "soy",
         "soybean",
-        "stock",
-        "table",
         "terre",
         "vegan",
-        "vegetable",
         "vegetal",
         "vegetalien",
         "vegetarien",
-        "verte",
-        "water"
+        "verte"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.87,
       "_chef_note": "Un plat végétalien crémeux et savoureux, parfait pour les repas en famille.",
-      "description": "Lentilles vertes cuites à la perfection, mélangées avec des carottes et des oignons tendres, recouvertes d'une purée de pommes de terre crémeuse et dorée, typique de la cuisine britannique revisitée avec amour et créativité végétalienne.",
+      "description": "Garniture de lentilles et de champignons au romarin et à la sauce soja, sous une purée légère mi-pomme de terre mi-céleri-rave au lait de soja.",
       "instructions": [
-        "Étape 1 : Faites cuire 200 g de lentilles vertes dans 750 ml de bouillon végétal jusqu'à tendreté, environ 25 minutes, en veillant à ce qu'elles soient bien tendres et parfumées.",
-        "Étape 2 : Faites revenir 150 g d'oignons et 200 g de carottes en dés dans un peu de beurre végétal à feu moyen, jusqu'à ce qu'ils soient tendres et parfumés, en remuant régulièrement pour éviter la coloration excessive.",
-        "Étape 3 : Ajoutez les lentilles cuites aux oignons et carottes, et mélangez bien pour obtenir un mélange harmonieux.",
-        "Étape 4 : Faites cuire 600 g de pommes de terre à l'eau bouillante salée, puis égouttez-les et laissez-les refroidir légèrement pour faciliter l'écrasage.",
-        "Étape 5 : Écrasez les pommes de terre avec un peu de beurre végétal, de lait de soja et du sel, pour obtenir une purée lisse et crémeuse.",
-        "Étape 6 : Versez les lentilles dans un plat à gratin, puis recouvrez-les uniformément avec la purée de pommes de terre, en veillant à ce que la surface soit lisse et régulière.",
-        "Étape 7 : Enfournez à 200°C pendant 20-25 minutes, jusqu'à gratinage doré et croustillant, en surveillant la cuisson pour éviter la surcuisson.",
-        "Étape 8 : Servez chaud, en accompagnant d'un saladier de légumes frais pour un repas complet et équilibré."
+        "Étape 1 : Cuire 150 g de lentilles vertes rincées dans 600 ml d'eau avec 6 g de bouillon déshydraté, 25 minutes, puis les égoutter.",
+        "Étape 2 : Faire dorer 300 g de champignons émincés dans 15 ml d'huile d'olive à feu vif 6 minutes. Ajouter 150 g d'oignon et 150 g de carotte en dés, 6 g d'ail et 3 g de romarin hachés, puis cuire 8 minutes.",
+        "Étape 3 : Ajouter les lentilles et 20 ml de sauce soja, puis mijoter 5 minutes.",
+        "Étape 4 : Cuire 400 g de pommes de terre et 300 g de céleri-rave en cubes à l'eau salée 20 minutes, puis les écraser avec 30 g de beurre végétal, 120 ml de lait de soja chaud et 2 g de sel.",
+        "Étape 5 : Préchauffer le four à 200°C. Étaler la garniture dans un plat, couvrir de purée et strier à la fourchette.",
+        "Étape 6 : Enfourner 20 minutes, jusqu'à ce que le dessus soit doré."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -37899,21 +38196,21 @@
       "id": "dal_lentilles_corail_au_lait_de_co_19d485",
       "titles": {
         "original": "Lentilles Corail Au Lait De Coco",
-        "fr": "Lentilles Corail au Lait de Coco",
+        "fr": "Parippu sri lankais au lait de coco",
         "en": "Lentilles Corail with Lait De Coco"
       },
       "origin": {
-        "cuisine": "indian",
-        "country": "india",
-        "region": "punjab",
-        "city": ""
+        "cuisine": "sri_lankan",
+        "country": "sri_lanka",
+        "region": "province_occidentale",
+        "city": "colombo"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 13,
-        "prep_passive_min": 10,
+        "prep_active_min": 15,
+        "prep_passive_min": 0,
         "cook_min": 30,
-        "total_min": 53
+        "total_min": 45
       },
       "composition": [
         {
@@ -37929,11 +38226,11 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -37944,24 +38241,101 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "carrot_raw",
-          "quantity": 200,
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "olive_oil_plant",
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 8,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coconut_milk_plant",
+          "quantity": 300,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 400,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "turmeric_powder",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "curry_leaf",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yellow_mustard_spice_seed",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coconut_oil_plant",
           "quantity": 20,
           "unit": "ml",
           "meta": {
@@ -37972,57 +38346,25 @@
           }
         },
         {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 12.6,
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 1000 ml d'eau"
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 1000.0,
-          "unit": "ml",
-          "meta": {
-            "role": "seasoning",
-            "note": "pour reconstituer le bouillon"
-          }
-        },
-        {
-          "ingredient": "coconut_milk_plant",
-          "quantity": 200,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "coriandre",
+          "ingredient": "white_rice_raw_seed_unenriched",
           "quantity": null,
-          "unit": "quelques feuilles",
+          "unit": "1 portion",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "feuilles de coriandre fraîches",
-            "note": "Pour une touche de fraîcheur",
-            "optional": true
-          }
-        },
-        {
-          "ingredient": "coconut_flesh_dried",
-          "quantity": null,
-          "unit": "1 cuillère à soupe",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "noix de coco râpée",
-            "note": "Pour une touche de saveur délicieuse",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -38034,7 +38376,8 @@
           "vegetarian"
         ],
         "allergens": [
-          "celery"
+          "celery",
+          "mustard"
         ],
         "technique": [
           "braising"
@@ -38084,67 +38427,75 @@
       },
       "search_tokens": [
         "(eau",
-        "1 heure",
+        "(murraya",
+        "45 minutes",
         "ail",
-        "bouillon",
+        "asiatique",
         "braising",
-        "carotte",
-        "carrot",
+        "chilli",
+        "cinnamon",
         "coco",
         "coconut",
         "coeliaque",
         "corail",
-        "coriandre",
+        "curcuma",
         "curry",
         "eau",
-        "epice",
+        "feuille",
         "garlic",
         "gluten free",
-        "inde",
-        "indian",
-        "indien",
         "intermediaire",
+        "jaune",
+        "koenigii)",
         "lait",
+        "lankais",
+        "leaf",
         "leger",
-        "legumes",
         "lentil",
         "lentille",
         "lentilles",
         "light",
         "low calorie",
         "minceur",
+        "moutarde",
         "moyen",
+        "mustard",
         "noix",
         "oignon",
-        "olive",
         "onion",
+        "parippu",
+        "pepper",
+        "piment",
         "potable)",
         "red",
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "spicy",
-        "stock",
+        "sri",
+        "sri lanka",
+        "sri lankais",
+        "sri_lankan",
+        "tomate",
+        "tomato",
+        "turmeric",
         "vegan",
-        "vegetable",
         "vegetalien",
         "vegetarien",
         "water",
-        "with"
+        "with",
+        "yellow"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.77,
-      "description": "Préparation de lentilles corail cuites à feu doux avec du lait de coco, offrant une texture fondante et nappante, typique de la cuisine indienne. Les lentilles corail sont cuites dans un mélange parfumé d'oignon, d'ail et de carotte, avec une touche de noix de coco râpée pour une saveur délicieuse et une texture crémeuse.",
+      "description": "Le dhal curry de Colombo : lentilles corail cuites dans le lait de coco avec curcuma, cannelle et piment vert, tempérées à l'huile de coco, aux feuilles de curry et aux oignons.",
       "instructions": [
-        "Étape 1 : Rincer 200g de lentilles corail, les égoutter et les laisser tremper 10 min dans de l'eau froide. Vous verrez les lentilles se gonfler et prendre une texture plus tendre.",
-        "Étape 2 : Dans une poêle, chauffer 20ml d'huile d'olive à feu moyen-vif, puis ajouter 150g d'oignon jaune émincé et 200g de carotte râpée. Faire cuire pendant 6 min en remuant régulièrement, jusqu'à ce que les légumes soient translucides et parfumés.",
-        "Étape 3 : Ajouter 10g d'ail émincé et faire cuire 1 min à feu doux en remuant constamment. Vous obtiendrez un mélange parfumé et aromatique.",
-        "Étape 4 : Verser les lentilles égouttées, 1000ml de bouillon de légumes et 200ml de lait de coco dans la poêle. Porter à ébullition, puis réduire à feu doux et laisser cuire pendant 18 min, ou jusqu'à ce que les lentilles soient tendres et la sauce crémeuse.",
-        "Étape 5 : Laisser mijoter 2 minutes supplémentaires pour que la sauce soit bien crémeuse.",
-        "Étape 6 : Rectifier l'assaisonnement en ajoutant du sel, du poivre et des herbes fraîches si nécessaire.",
-        "Étape 7 : Servir chaud, en garnissant de feuilles de coriandre fraîches."
+        "Étape 1 : Rincer 200 g de lentilles corail et les mettre dans une casserole avec 400 ml d'eau, 60 g d'oignon émincé, 8 g de piment vert fendu, 100 g de tomate en dés, 2 g de curcuma et 1 g de cannelle.",
+        "Étape 2 : Porter à ébullition et cuire 15 minutes, jusqu'à ce que les lentilles soient tendres.",
+        "Étape 3 : Ajouter 300 ml de lait de coco et 4 g de sel, puis mijoter 5 minutes à feu doux sans faire bouillir.",
+        "Étape 4 : Tempérage : chauffer 20 ml d'huile de coco, y faire éclater 2 g de graines de moutarde, puis ajouter 60 g d'oignon émincé, 10 g d'ail et 5 g de feuilles de curry, et faire dorer 4 minutes.",
+        "Étape 5 : Verser le tempérage sur le dhal et servir avec du riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -46449,7 +46800,7 @@
       "id": "dessert_compote_de_pommes_maison_cdbdd0",
       "titles": {
         "original": "Compote de Pommes",
-        "fr": "Compote de Pommes Maison",
+        "fr": "Compote pommes-poires à la vanille",
         "en": "Compote de Pommes"
       },
       "origin": {
@@ -46461,25 +46812,36 @@
       "servings": 6,
       "timing": {
         "prep_active_min": 10,
-        "prep_passive_min": 10,
+        "prep_passive_min": 0,
         "cook_min": 20,
-        "total_min": 40
+        "total_min": 30
       },
       "composition": [
         {
           "ingredient": "chantecler_apple_raw_skinless",
-          "quantity": 1000,
+          "quantity": 600,
           "unit": "g",
           "meta": {
             "role": "main_fruit",
-            "form": "pieces",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "pear_raw_with_skin",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "main_fruit",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "lemon_juice",
-          "quantity": 14.6,
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "acidifier",
@@ -46489,22 +46851,44 @@
           }
         },
         {
+          "ingredient": "vanilla_extract",
+          "quantity": 5,
+          "unit": "ml",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "cinnamon",
-          "quantity": 2.3,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "white_sugar",
-          "quantity": 30,
+          "quantity": 20,
           "unit": "g",
           "meta": {
             "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -46516,17 +46900,6 @@
           "unit": "1 cuillère à soupe",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "crème de soja",
-            "note": "Pour une touche de crémeux et de fraîcheur",
-            "optional": true
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 30,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -46587,7 +46960,7 @@
       },
       "search_tokens": [
         "(eau",
-        "45 minutes",
+        "30 minutes",
         "apple",
         "base_soy_cream_4dc027",
         "blanc",
@@ -46614,18 +46987,23 @@
         "lemon",
         "light",
         "low calorie",
-        "maison",
         "minceur",
-        "moyen",
+        "pear",
+        "poire",
+        "poires",
         "pomme",
         "pommes",
         "potable)",
+        "quick",
+        "rapide",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "simple",
         "sucre",
         "sugar",
+        "vanilla",
+        "vanille",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -46636,14 +47014,13 @@
       "dish_type": "dessert",
       "servings_default": 6,
       "_quality_score": 0.81,
-      "description": "Compote de pommes maison, fondante et parfumée, réalisée avec des pommes Chantecler tendres, une touche de cannelle et un équilibre parfait entre le sucré et l'acidité, idéale pour un dessert réconfortant et sain.",
+      "description": "Compote gourmande de pommes et de poires fondantes, parfumée à la vanille et à la cannelle, peu sucrée, à servir tiède ou froide.",
       "instructions": [
-        "Étape 1 : Éplucher, épépiner et couper 1000 g de pommes Chantecler en morceaux réguliers, pour une texture homogène et une cuisson uniforme.",
-        "Étape 2 : Placer les pommes dans une casserole avec 14,6 ml de jus de citron frais, 2,3 g de cannelle en poudre et 2 cuillères à soupe d'eau, pour un mélange aromatique et une texture onctueuse.",
-        "Étape 3 : Cuire à couvert à feu doux pendant 20 minutes en remuant régulièrement, jusqu'à ce que les pommes soient tendres et se défont en bouche, en vérifiant la texture et la saveur.",
-        "Étape 4 : Écraser les pommes à la fourchette ou mixer selon la texture souhaitée, pour une compote lisse ou chunky, en fonction des préférences personnelles.",
-        "Étape 5 : Goûter et ajuster le sucre avec 30 g de sucre blanc, pour un équilibre parfait entre le sucré et l'acidité, en tenant compte des saveurs et des textures.",
-        "Étape 6 : Servir tiède ou froid, dans des bols individuels, garnis d'une pincée de cannelle et d'un filet de jus de citron, pour une présentation élégante et un goût raffiné."
+        "Étape 1 : Éplucher, épépiner et couper en morceaux 600 g de pommes Chantecler et 400 g de poires.",
+        "Étape 2 : Les mettre dans une casserole avec 15 ml de jus de citron, 30 ml d'eau, 20 g de sucre et 1 g de cannelle.",
+        "Étape 3 : Couvrir et cuire 20 minutes à feu doux en remuant de temps en temps, jusqu'à ce que les fruits se défassent.",
+        "Étape 4 : Hors du feu, ajouter 5 ml d'extrait de vanille et écraser à la fourchette, en gardant quelques morceaux.",
+        "Étape 5 : Servir tiède ou froid."
       ],
       "diet_flags": {
         "vegan": true,
@@ -119556,7 +119933,7 @@
         "en": "Karelian Pies"
       },
       "origin": {
-        "cuisine": "ethiopian",
+        "cuisine": "nordic",
         "country": "finland",
         "region": "northern_karelia",
         "city": ""
@@ -119715,7 +120092,6 @@
       "search_tokens": [
         "(eau",
         "1 heure",
-        "africain",
         "all",
         "beurre",
         "blanc",
@@ -119724,10 +120100,6 @@
         "eau",
         "egg",
         "enfants",
-        "epice",
-        "ethiopian",
-        "ethiopie",
-        "ethiopien",
         "facile enfants",
         "famille",
         "farine",
@@ -119743,6 +120115,7 @@
         "milk",
         "minceur",
         "moyen",
+        "nordic",
         "oven_cooking",
         "pies",
         "potable)",
@@ -177452,7 +177825,7 @@
     {
       "id": "base_applesauce_b0627b",
       "titles": {
-        "fr": "Compote de Pommes",
+        "fr": "Compote de pommes nature",
         "en": "Applesauce"
       },
       "origin": {
@@ -177533,7 +177906,7 @@
       },
       "dish_type": "dessert",
       "servings_default": 6,
-      "description": "Compote de pommes maison simple et naturelle. Texture onctueuse par cuisson lente des pommes avec un minimum de sucre.",
+      "description": "Compote de pommes simple, peu sucrée, qui sert de base aux desserts et aux goûters : pommes cuites lentement avec un peu de citron, écrasées ou mixées.",
       "difficulty_level": "easy",
       "diet_flags": {
         "vegan": true,
@@ -177571,6 +177944,7 @@
         "light",
         "low calorie",
         "minceur",
+        "nature",
         "pomme",
         "pommes",
         "potable)",

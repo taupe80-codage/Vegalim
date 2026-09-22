@@ -7472,7 +7472,7 @@
   },
   {
     "id": "base_applesauce_b0627b",
-    "title": "Compote de Pommes",
+    "title": "Compote de pommes nature",
     "cuisine": "french",
     "dish_type": "dessert",
     "vegan": true,
@@ -7485,7 +7485,7 @@
     "servings": 6,
     "time_total": 30,
     "confidence": 0.9,
-    "description": "Compote de pommes maison simple et naturelle. Texture onctueuse par cuisson lente des pommes avec un minimum de sucre.",
+    "description": "Compote de pommes simple, peu sucrée, qui sert de base aux desserts et aux goûters : pommes cuites lentement avec un peu de citron, écrasées ou mixées.",
     "composition": [
       {
         "ingredient": "apple_raw_with_skin",
@@ -7510,17 +7510,11 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "dessert_compote_de_pommes_maison_cdbdd0",
-        "title": "Compote de Pommes Maison",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dessert_compote_de_pommes_maison_cdbdd0",
-    "title": "Compote de Pommes Maison",
+    "title": "Compote pommes-poires à la vanille",
     "cuisine": "french",
     "dish_type": "dessert",
     "vegan": true,
@@ -7535,50 +7529,54 @@
     ],
     "allergens": [],
     "servings": 6,
-    "time_total": 40,
+    "time_total": 30,
     "confidence": 0.9,
-    "description": "Compote de pommes maison, fondante et parfumée, réalisée avec des pommes Chantecler tendres, une touche de cannelle et un équilibre parfait entre le sucré et l'acidité, idéale pour un dessert réconfortant et sain.",
+    "description": "Compote gourmande de pommes et de poires fondantes, parfumée à la vanille et à la cannelle, peu sucrée, à servir tiède ou froide.",
     "composition": [
       {
         "ingredient": "chantecler_apple_raw_skinless",
-        "quantity": 1000,
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "pear_raw_with_skin",
+        "quantity": 400,
         "unit": "g"
       },
       {
         "ingredient": "lemon_juice",
-        "quantity": 14.6,
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vanilla_extract",
+        "quantity": 5,
         "unit": "ml"
       },
       {
         "ingredient": "cinnamon",
-        "quantity": 2.3,
+        "quantity": 1,
         "unit": "g"
       },
       {
         "ingredient": "white_sugar",
-        "quantity": 30,
+        "quantity": 20,
         "unit": "g"
-      },
-      {
-        "ingredient": "base_soy_cream_4dc027",
-        "quantity": null,
-        "unit": "1 cuillère à soupe"
       },
       {
         "ingredient": "water",
         "quantity": 30,
         "unit": "ml"
+      },
+      {
+        "ingredient": "base_soy_cream_4dc027",
+        "quantity": null,
+        "unit": "1 cuillère à soupe"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "base_applesauce_b0627b",
-        "title": "Compote de Pommes",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "brkf_compote_rhubarbe_fraise_1d9d38",
@@ -7767,6 +7765,99 @@
       {
         "ingredient": "dark_chocolate_40_cocoa_baking_tablet",
         "quantity": 180,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "dal_lentil_shepherd_s_pie_477c76",
+    "title": "Cottage pie végétarien aux lentilles et au cheddar",
+    "cuisine": "british",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "gluten_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 75,
+    "confidence": 1.0,
+    "description": "Cottage pie à l'anglaise : lentilles vertes mijotées au thym avec carottes, petits pois et tomate, couvertes d'une purée au beurre gratinée au cheddar.",
+    "composition": [
+      {
+        "ingredient": "green_lentil_dried",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 700,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_peas_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_paste_unsalted_canned",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "thyme_dried_herb",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "milk_liquid_uht_3_5pct",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cheddar_cow",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 700,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
         "unit": "g"
       }
     ],
@@ -10120,113 +10211,8 @@
     "similar": []
   },
   {
-    "id": "curry_japanese_classic_v3_m8q2z4",
-    "title": "Curry japonais",
-    "cuisine": "japanese",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly"
-    ],
-    "allergens": [
-      "gluten",
-      "lactose",
-      "milk"
-    ],
-    "servings": 4,
-    "time_total": 60,
-    "confidence": 1.0,
-    "description": "Curry japonais créatif, riche et parfumé, avec des légumes mijotés tendres et un roux brun caramélisé qui dégage une odeur de noisette, élaboré à partir de techniques traditionnelles japonaises.",
-    "composition": [
-      {
-        "ingredient": "onion_raw",
-        "quantity": 220,
-        "unit": "g"
-      },
-      {
-        "ingredient": "potato_raw_flesh",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 35,
-        "unit": "g"
-      },
-      {
-        "ingredient": "butter_sup80pct",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 10.7,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 850.0,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "ginger_raw_root_fresh",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_sugar",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "curry_powder",
-        "quantity": 7.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garam_masala",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": null,
-        "unit": "quelques feuilles"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "curry_japanese_4533d1",
-        "title": "Curry japonais rapide",
-        "score": 1.0
-      },
-      {
-        "id": "curry_japonais_1caddf",
-        "title": "Riz au curry japonais",
-        "score": 1.0
-      },
-      {
-        "id": "base_japanese_curry_roux_385e52",
-        "title": "Roux Curry Japonais",
-        "score": 0.67
-      }
-    ]
-  },
-  {
     "id": "curry_japanese_4533d1",
-    "title": "Curry japonais rapide",
+    "title": "Curry japonais au potiron et aux shiitakés",
     "cuisine": "japanese",
     "dish_type": "main",
     "vegan": false,
@@ -10240,18 +10226,28 @@
       "lactose"
     ],
     "servings": 4,
-    "time_total": 40,
+    "time_total": 45,
     "confidence": 1.0,
-    "description": "Curry de pommes de terre crémeux sur mélange d'épices japonais, avec une sauce riche et parfumée qui nappe les légumes tendres — une spécialité culinaire japonaise",
+    "description": "Curry d'automne à la mode d'Hokkaido : potiron, shiitakés et pommes de terre mijotés dans une sauce au roux de curry, naturellement douce grâce au potiron.",
     "composition": [
       {
+        "ingredient": "pumpkin_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "shiitake_mushroom_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
         "ingredient": "potato_raw_flesh",
-        "quantity": 600,
+        "quantity": 250,
         "unit": "g"
       },
       {
         "ingredient": "carrot_raw",
-        "quantity": 200,
+        "quantity": 120,
         "unit": "g"
       },
       {
@@ -10271,37 +10267,132 @@
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
+        "quantity": 8,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 750.0,
+        "quantity": 700,
         "unit": "ml"
       },
       {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 20,
         "unit": "ml"
+      },
+      {
+        "ingredient": "white_rice_short_grain_seed_dried",
+        "quantity": null,
+        "unit": "1 portion"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "curry_japanese_classic_v3_m8q2z4",
+    "title": "Curry japonais au roux maison et à la pomme râpée",
+    "cuisine": "japanese",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly"
+    ],
+    "allergens": [
+      "gluten",
+      "lactose",
+      "milk",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 60,
+    "confidence": 1.0,
+    "description": "Curry japonais préparé sans tablette : roux brun au beurre, poudre de curry et garam masala, adouci de pomme râpée et de miel, avec pommes de terre et carottes fondantes.",
+    "composition": [
+      {
+        "ingredient": "onion_raw",
+        "quantity": 220,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "apple_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 35,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 850,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "honey",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "curry_powder",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garam_masala",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_rice_short_grain_seed_dried",
+        "quantity": null,
+        "unit": "1 portion"
+      }
+    ],
+    "n_instructions": 6,
     "flags": [],
     "similar": [
       {
-        "id": "curry_japanese_classic_v3_m8q2z4",
-        "title": "Curry japonais",
-        "score": 1.0
-      },
-      {
-        "id": "curry_japonais_1caddf",
-        "title": "Riz au curry japonais",
-        "score": 1.0
-      },
-      {
         "id": "base_japanese_curry_roux_385e52",
         "title": "Roux Curry Japonais",
-        "score": 0.67
+        "score": 0.6
       }
     ]
   },
@@ -10650,215 +10741,6 @@
     "similar": []
   },
   {
-    "id": "dal_lentil_corail_classic_k1d1p1",
-    "title": "Dal de lentilles corail",
-    "cuisine": "indian",
-    "dish_type": "main",
-    "vegan": true,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "high_protein",
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 65,
-    "confidence": 1.0,
-    "description": "Délicieuse préparation indienne de lentilles corail mijotées avec une base aromatique torréfiée (tadka) pour une texture crémeuse homogène et une diffusion optimale des épices.",
-    "composition": [
-      {
-        "ingredient": "red_lentil_dried",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 140,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 25,
-        "unit": "g"
-      },
-      {
-        "ingredient": "ginger_raw_root_fresh",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "sunflower_oil_plant",
-        "quantity": 40,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "turmeric_powder",
-        "quantity": 3.8,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander_spice_seed",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "chilli_pepper_raw",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander_raw_fresh_herb",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 700,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "lime_juice_fresh",
-        "quantity": 15,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dal_de_lentilles_corail_vegan_8cc6a7",
-        "title": "Dal de Lentilles Corail (Vegan)",
-        "score": 1.0
-      },
-      {
-        "id": "dal_koshari_15670d",
-        "title": "Koshari express aux lentilles corail",
-        "score": 0.67
-      },
-      {
-        "id": "entry_rillettes_lentilles_corai_40d7dc",
-        "title": "Rillettes Lentilles Corail",
-        "score": 0.67
-      }
-    ]
-  },
-  {
-    "id": "dal_de_lentilles_corail_vegan_8cc6a7",
-    "title": "Dal de Lentilles Corail (Vegan)",
-    "cuisine": "indian",
-    "dish_type": "main",
-    "vegan": true,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "lactose_free",
-      "low_calorie",
-      "nut_free",
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [
-      "mustard"
-    ],
-    "servings": 4,
-    "time_total": 44,
-    "confidence": 1.0,
-    "description": "Dal de lentilles corail crémeux, parfumé aux épices indiennes, avec une texture onctueuse et des notes de cumin et de coriandre, inspiré de la cuisine végétalienne indienne",
-    "composition": [
-      {
-        "ingredient": "red_lentil_dried",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coconut_oil_plant",
-        "quantity": 45.4,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "turmeric_powder",
-        "quantity": 2.8,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 2.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander_spice_seed",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_mustard_spice_seed",
-        "quantity": 4,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 8.8,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 700.0,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 2,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dal_lentil_corail_classic_k1d1p1",
-        "title": "Dal de lentilles corail",
-        "score": 1.0
-      },
-      {
-        "id": "dal_koshari_15670d",
-        "title": "Koshari express aux lentilles corail",
-        "score": 0.67
-      },
-      {
-        "id": "entry_rillettes_lentilles_corai_40d7dc",
-        "title": "Rillettes Lentilles Corail",
-        "score": 0.67
-      }
-    ]
-  },
-  {
     "id": "dal_dal_makhani_c9ce94",
     "title": "Dal Makhani",
     "cuisine": "indian",
@@ -11149,6 +11031,110 @@
       }
     ],
     "n_instructions": 9,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "dal_lentil_corail_classic_k1d1p1",
+    "title": "Dal tadka du Pendjab",
+    "cuisine": "indian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "gluten_free",
+      "high_protein",
+      "vegan",
+      "vegetarian"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 55,
+    "confidence": 1.0,
+    "description": "Le dal tadka des dhabas du Pendjab : lentilles corail épaisses aux tomates, gingembre et ail, finies par un tadka de cumin et de piment grésillé, et de la coriandre fraîche.",
+    "composition": [
+      {
+        "ingredient": "red_lentil_dried",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 140,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_spice_seed",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garam_masala",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 700,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "basmati_rice_raw_seed",
+        "quantity": null,
+        "unit": "1 portion"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -17627,6 +17613,104 @@
     ]
   },
   {
+    "id": "dal_lentil_shepherd_pie_vegan_926ebd",
+    "title": "Hachis de lentilles à la patate douce (vegan)",
+    "cuisine": "british",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 80,
+    "confidence": 1.0,
+    "description": "Hachis végétal aux lentilles vertes, carottes et thym, recouvert d'une purée de patate douce au paprika fumé et au lait d'avoine, gratinée au four.",
+    "composition": [
+      {
+        "ingredient": "green_lentil_dried",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sweet_potato_raw",
+        "quantity": 700,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_paste_unsalted_canned",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "thyme_fresh_herb",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegan_butter",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oat_milk_refrigerated_plain_plant",
+        "quantity": 100,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 700,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander",
+        "quantity": null,
+        "unit": "1 poignée"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "base_halloumi_293d5e",
     "title": "Halloumi",
     "cuisine": "cypriot",
@@ -19606,9 +19690,80 @@
     ]
   },
   {
+    "id": "curry_japonais_1caddf",
+    "title": "Kare raisu aux oignons caramélisés",
+    "cuisine": "japanese",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian"
+    ],
+    "allergens": [
+      "celery",
+      "gluten",
+      "milk",
+      "lactose",
+      "sesame"
+    ],
+    "servings": 4,
+    "time_total": 70,
+    "confidence": 1.0,
+    "description": "Le kare raisu des cantines japonaises : oignons longuement caramélisés, pommes de terre et carottes dans une sauce au roux de curry, servi à côté d'un riz japonais.",
+    "composition": [
+      {
+        "ingredient": "onion_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 450,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_japanese_curry_roux_385e52",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1060,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_rice_short_grain_seed_dried",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": null,
+        "unit": "1 poignée"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "rice_karelian_pies_106cca",
     "title": "Karelian Pies",
-    "cuisine": "ethiopian",
+    "cuisine": "nordic",
     "dish_type": "main",
     "vegan": false,
     "diet": [
@@ -20905,18 +21060,7 @@
     ],
     "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "dal_lentil_corail_classic_k1d1p1",
-        "title": "Dal de lentilles corail",
-        "score": 0.67
-      },
-      {
-        "id": "dal_de_lentilles_corail_vegan_8cc6a7",
-        "title": "Dal de Lentilles Corail (Vegan)",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dessert_kouign_amann_a71af6",
@@ -21838,258 +21982,6 @@
     "similar": []
   },
   {
-    "id": "dal_lentil_shepherd_pie_vegan_926ebd",
-    "title": "Lentil Shepherd Pie (Vegan)",
-    "cuisine": "british",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "nut_free"
-    ],
-    "allergens": [
-      "gluten"
-    ],
-    "servings": 4,
-    "time_total": 95,
-    "confidence": 1.0,
-    "description": "Lentilles vertes cuites, mélangées à des pommes de terre crémeuses et des carottes fondantes, parfumées au thym frais.",
-    "composition": [
-      {
-        "ingredient": "green_lentil_dried",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "potato_raw_flesh",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 750.0,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "oat_milk_refrigerated_plain_plant",
-        "quantity": 250,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "thyme_fresh_herb",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander",
-        "quantity": null,
-        "unit": "1 poignée"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 15,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 8,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dal_lentil_shepherd_s_pie_477c76",
-        "title": "Lentil Shepherd's Pie",
-        "score": 1.0
-      },
-      {
-        "id": "dal_lentil_shepherds_pie_vega_27455d",
-        "title": "Lentil Shepherd's Pie (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "dal_lentil_shepherd_s_pie_477c76",
-    "title": "Lentil Shepherd's Pie",
-    "cuisine": "british",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "gluten_free"
-    ],
-    "allergens": [
-      "lactose",
-      "milk"
-    ],
-    "servings": 4,
-    "time_total": 56,
-    "confidence": 1.0,
-    "description": "Gratin végétarien britannique à base de lentilles vertes cuites à la perfection, avec une texture crémeuse et une saveur riche, inspiré de la cuisine traditionnelle anglaise.",
-    "composition": [
-      {
-        "ingredient": "green_lentil_dried",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "potato_raw_flesh",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "butter_sup80pct",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "milk_liquid_uht_3_5pct",
-        "quantity": 250,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 750,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 9,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dal_lentil_shepherd_pie_vegan_926ebd",
-        "title": "Lentil Shepherd Pie (Vegan)",
-        "score": 1.0
-      },
-      {
-        "id": "dal_lentil_shepherds_pie_vega_27455d",
-        "title": "Lentil Shepherd's Pie (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "dal_lentil_shepherds_pie_vega_27455d",
-    "title": "Lentil Shepherd's Pie (Vegan)",
-    "cuisine": "british",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "gluten_free",
-      "nut_free"
-    ],
-    "allergens": [
-      "soy"
-    ],
-    "servings": 4,
-    "time_total": 76,
-    "confidence": 1.0,
-    "description": "Lentilles vertes cuites à la perfection, mélangées avec des carottes et des oignons tendres, recouvertes d'une purée de pommes de terre crémeuse et dorée, typique de la cuisine britannique revisitée avec amour et créativité végétalienne.",
-    "composition": [
-      {
-        "ingredient": "green_lentil_dried",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "potato_raw_with_skin",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "soybean_milk_unsweetened_plant",
-        "quantity": 250,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 750,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 8,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dal_lentil_shepherd_pie_vegan_926ebd",
-        "title": "Lentil Shepherd Pie (Vegan)",
-        "score": 1.0
-      },
-      {
-        "id": "dal_lentil_shepherd_s_pie_477c76",
-        "title": "Lentil Shepherd's Pie",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "dal_lentilles_aux_epinards_be2017",
     "title": "Lentilles aux Épinards",
     "cuisine": "indian",
@@ -22254,81 +22146,6 @@
       }
     ],
     "n_instructions": 6,
-    "flags": [],
-    "similar": []
-  },
-  {
-    "id": "dal_lentilles_corail_au_lait_de_co_19d485",
-    "title": "Lentilles Corail au Lait de Coco",
-    "cuisine": "indian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "high_protein",
-      "vegetarian"
-    ],
-    "allergens": [
-      "celery"
-    ],
-    "servings": 4,
-    "time_total": 53,
-    "confidence": 1.0,
-    "description": "Préparation de lentilles corail cuites à feu doux avec du lait de coco, offrant une texture fondante et nappante, typique de la cuisine indienne. Les lentilles corail sont cuites dans un mélange parfumé d'oignon, d'ail et de carotte, avec une touche de noix de coco râpée pour une saveur délicieuse et une texture crémeuse.",
-    "composition": [
-      {
-        "ingredient": "red_lentil_dried",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 20,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 12.6,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 1000.0,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "coconut_milk_plant",
-        "quantity": 200,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "coriandre",
-        "quantity": null,
-        "unit": "quelques feuilles"
-      },
-      {
-        "ingredient": "coconut_flesh_dried",
-        "quantity": null,
-        "unit": "1 cuillère à soupe"
-      }
-    ],
-    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -23027,6 +22844,109 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "dal_de_lentilles_corail_vegan_8cc6a7",
+    "title": "Masoor dal bengali au panch phoron",
+    "cuisine": "indian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "gluten_free",
+      "lactose_free",
+      "low_calorie",
+      "nut_free",
+      "vegan",
+      "vegetarian"
+    ],
+    "allergens": [
+      "mustard"
+    ],
+    "servings": 4,
+    "time_total": 45,
+    "confidence": 1.0,
+    "description": "Dal fluide de Calcutta : lentilles corail au curcuma, tempérées au panch phoron (moutarde, cumin, fenugrec, fenouil) grésillé dans l'huile, avec un filet de citron.",
+    "composition": [
+      {
+        "ingredient": "red_lentil_dried",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_mustard_spice_seed",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "fenugreek_spice_seed",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "fennel_spice_seed",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 900,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "basmati_rice_raw_seed",
+        "quantity": null,
+        "unit": "1 portion"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -28676,6 +28596,102 @@
     "similar": []
   },
   {
+    "id": "dal_lentilles_corail_au_lait_de_co_19d485",
+    "title": "Parippu sri lankais au lait de coco",
+    "cuisine": "sri_lankan",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "gluten_free",
+      "high_protein",
+      "vegetarian"
+    ],
+    "allergens": [
+      "celery",
+      "mustard"
+    ],
+    "servings": 4,
+    "time_total": 45,
+    "confidence": 1.0,
+    "description": "Le dhal curry de Colombo : lentilles corail cuites dans le lait de coco avec curcuma, cannelle et piment vert, tempérées à l'huile de coco, aux feuilles de curry et aux oignons.",
+    "composition": [
+      {
+        "ingredient": "red_lentil_dried",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_milk_plant",
+        "quantity": 300,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 400,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cinnamon",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "curry_leaf",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_mustard_spice_seed",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_oil_plant",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": null,
+        "unit": "1 portion"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "main_parmigiana_di_melanzane_6bd49f",
     "title": "Parmigiana Di Melanzane",
     "cuisine": "italian",
@@ -33495,7 +33511,13 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": []
+    "similar": [
+      {
+        "id": "dal_lentil_shepherds_pie_vega_27455d",
+        "title": "Shepherd's pie vegan aux champignons, purée au céleri-rave",
+        "score": 0.6
+      }
+    ]
   },
   {
     "id": "side_potatoes_k3d2p1",
@@ -36753,18 +36775,7 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "dal_lentil_corail_classic_k1d1p1",
-        "title": "Dal de lentilles corail",
-        "score": 0.67
-      },
-      {
-        "id": "dal_de_lentilles_corail_vegan_8cc6a7",
-        "title": "Dal de Lentilles Corail (Vegan)",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "rice_risotto_ai_funghi_395f00",
@@ -37437,93 +37448,6 @@
         "id": "rice_risotto_citron_asperges_f2f765",
         "title": "Risotto Citron Asperges",
         "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "curry_japonais_1caddf",
-    "title": "Riz au curry japonais",
-    "cuisine": "japanese",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "vegetarian"
-    ],
-    "allergens": [
-      "celery",
-      "gluten",
-      "milk",
-      "lactose",
-      "sesame"
-    ],
-    "servings": 4,
-    "time_total": 48,
-    "confidence": 1.0,
-    "description": "Riz au curry japonais crémeux, parsemé de pommes de terre et de carottes tendres, sur fond d'épices japonais équilibré",
-    "composition": [
-      {
-        "ingredient": "potato_raw_flesh",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_japanese_curry_roux_385e52",
-        "quantity": 80,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 750.0,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "sesame_oil_plant",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": null,
-        "unit": "1 poignée"
-      },
-      {
-        "ingredient": "white_rice_short_grain_seed_dried",
-        "quantity": 300,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "curry_japanese_classic_v3_m8q2z4",
-        "title": "Curry japonais",
-        "score": 1.0
-      },
-      {
-        "id": "curry_japanese_4533d1",
-        "title": "Curry japonais rapide",
-        "score": 1.0
-      },
-      {
-        "id": "base_japanese_curry_roux_385e52",
-        "title": "Roux Curry Japonais",
-        "score": 0.67
       }
     ]
   },
@@ -38626,18 +38550,8 @@
     "similar": [
       {
         "id": "curry_japanese_classic_v3_m8q2z4",
-        "title": "Curry japonais",
-        "score": 0.67
-      },
-      {
-        "id": "curry_japanese_4533d1",
-        "title": "Curry japonais rapide",
-        "score": 0.67
-      },
-      {
-        "id": "curry_japonais_1caddf",
-        "title": "Riz au curry japonais",
-        "score": 0.67
+        "title": "Curry japonais au roux maison et à la pomme râpée",
+        "score": 0.6
       }
     ]
   },
@@ -43173,6 +43087,111 @@
     "n_instructions": 9,
     "flags": [],
     "similar": []
+  },
+  {
+    "id": "dal_lentil_shepherds_pie_vega_27455d",
+    "title": "Shepherd's pie vegan aux champignons, purée au céleri-rave",
+    "cuisine": "british",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "nut_free"
+    ],
+    "allergens": [
+      "soy",
+      "celery",
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 75,
+    "confidence": 1.0,
+    "description": "Garniture de lentilles et de champignons au romarin et à la sauce soja, sous une purée légère mi-pomme de terre mi-céleri-rave au lait de soja.",
+    "composition": [
+      {
+        "ingredient": "green_lentil_dried",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "button_mushroom_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_raw_with_skin",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "celeriac_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "rosemary_fresh_herb",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegan_butter",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "soybean_milk_unsweetened_plant",
+        "quantity": 120,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 600,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": [
+      {
+        "id": "side_puree_de_celerirave_vegan_a55054",
+        "title": "Purée de Céleri-Rave Vegan",
+        "score": 0.6
+      }
+    ]
   },
   {
     "id": "dal_shorbat_adas_d4f98a",
