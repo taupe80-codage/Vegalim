@@ -75,6 +75,7 @@ PATCHES = {
         ("txt", "Servir sans attendre, en présentant la salade dans des bols individuels,", "Servir sans attendre, parsemé de 10 g de coriandre fraîche ciselée,"),
         ("time", 15, 10, 0),
         ('dish', 'side'),
+        ("ing", "papaya_raw", "green_papaya"),  # fiche papaye verte ajoutée le 2026-09-22
     ],
     "salad_de_pommes_de_terre_allema_3cdeab": [
         ("ing", "olive_oil_extra_virgin_plant", "sunflower_oil_plant"),

@@ -55,13 +55,13 @@ PATCHES = {
             "Servir chaud, avec une salsa criolla.",
         ]),
     ],
-    # `puffed_rice_cakes` (galettes soufflées, 385 kcal) pour des tteok cuits à la vapeur
+    # `puffed_rice_cakes` (galettes soufflées, 385 kcal) pour des tteok : fiche `tteok` ajoutée le 2026-09-22
     "rice_tteokbokki_0861f2": [
-        ("ing", "puffed_rice_cakes", "white_glutinous_rice_flour", 220, "g"),
+        ("ing", "puffed_rice_cakes", "tteok", 400, "g"),
         ("add", "water", 400, "ml", "liquid"),
         ("add", "vegetable_stock_dried", 5, "g", "ingredient"),
         ("txt", "Plonger les gâteaux de riz (tteok) dans l'eau froide pendant 10 minutes pour les ramollir s'ils sont congelés, vérifiant qu'ils soient bien égouttés avant la suite de la préparation.",
-         "Préparer les tteok : mélanger 220 g de farine de riz gluant avec de l'eau bouillante, pétrir en pâte souple, former des bâtonnets de 6 cm et les cuire 10 minutes à la vapeur (ou utiliser 400 g de tteok du commerce, trempés 10 minutes à l'eau froide)."),
+         "Faire tremper 400 g de tteok (bâtonnets de gâteau de riz) 10 minutes dans l'eau froide s'ils sont durs, puis les égoutter."),
         ("txt", "15 g de sucre blanc", "10 g de sucre blanc"),
         ("step-", "Assaisonner avec du sel et du poivre pour équilibrer les saveurs"),
         ("txt", "Servir sans attendre, en accompagnant d'une garniture de feuilles de coriandre fraîche pour une touche de couleur et de fraîcheur, et en présentant dans des bols préchauffés pour conserver la chaleur.",

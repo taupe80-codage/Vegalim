@@ -56,6 +56,7 @@ PATCHES = {
         ("txt", "10g de sucre de coco et 140g de jus de citron vert", "10g de sucre de coco et 40 ml de jus de citron vert"),
         ('del', 'tomato_raw_ripe'),
         ('txt', '200g de tomates cerises et 240g de tomates coupées en dés', '200g de tomates cerises coupées en deux'),
+        ("ing", "papaya_raw", "green_papaya"),  # fiche papaye verte ajoutée le 2026-09-22
     ],
     "main_parmigiana_di_melanzane_6bd49f": [
         ("qty", "table_salt_unenriched", 2),
