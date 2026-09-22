@@ -4805,170 +4805,6 @@
     "similar": []
   },
   {
-    "id": "main_bulgarian_shopska_salad_d473eb",
-    "title": "Bulgarian Shopska Salad",
-    "cuisine": "bulgarian",
-    "dish_type": "starter",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free"
-    ],
-    "allergens": [
-      "lactose",
-      "milk",
-      "sulphites"
-    ],
-    "servings": 4,
-    "time_total": 24,
-    "confidence": 1.0,
-    "description": "Salade fraîche et croquante aux saveurs méditerranéennes, préparée avec des tomates, des concombres, des poivrons, des oignons rouges et du fromage feta, le tout relevé par une vinaigrette légère.",
-    "composition": [
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cucumber_raw_with_skin",
-        "quantity": 350,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_bell_pepper_raw",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "feta",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "white_vinegar_liquid_distilled",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": null,
-        "unit": "1 poignée"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "salad_bulgarian_shopska_salad_v_adc716",
-        "title": "Bulgarian Shopska Salad (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "salad_bulgarian_shopska_salad_v_adc716",
-    "title": "Bulgarian Shopska Salad (Vegan)",
-    "cuisine": "bulgarian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "low_calorie",
-      "nut_free",
-      "raw"
-    ],
-    "allergens": [
-      "sulphites",
-      "soy"
-    ],
-    "servings": 4,
-    "time_total": 17,
-    "confidence": 1.0,
-    "description": "Salade bulgare fraîche et colorée, composée de tomates, concombre et poivron rouge, relevée d'un assaisonnement traditionnel à base d'huile d'olive et de vinaigre de vin blanc, avec une touche de fromage végétal râpé.",
-    "composition": [
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cucumber_raw_with_skin",
-        "quantity": 350,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_bell_pepper_raw",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tofu_plain_pre_packaged",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "white_vinegar_liquid_distilled",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": null,
-        "unit": "quelques feuilles"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "main_bulgarian_shopska_salad_d473eb",
-        "title": "Bulgarian Shopska Salad",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "protein_bulgogi_tofu_fc5de9",
     "title": "Bulgogi Tofu",
     "cuisine": "korean",
@@ -14222,24 +14058,25 @@
     ]
   },
   {
-    "id": "bread_buckwheat_crepe_03db22",
-    "title": "Galette de Sarrasin",
-    "cuisine": "french",
-    "dish_type": "bread",
+    "id": "main_galettes_sarrasin_ce9f40",
+    "title": "Galette complète forestière, œuf, gruyère et champignons",
+    "cuisine": "french_breton",
+    "dish_type": "main",
     "vegan": false,
     "diet": [
-      "vegetarian",
-      "gluten_free"
+      "gluten_free",
+      "kid_friendly",
+      "nut_free"
     ],
     "allergens": [
       "eggs",
-      "milk",
-      "lactose"
+      "lactose",
+      "milk"
     ],
     "servings": 4,
     "time_total": 95,
-    "confidence": 0.92,
-    "description": "Crêpe bretonne à base de farine de sarrasin, naturellement sans gluten de blé, avec une texture souple et des bords croustillants lors de la cuisson à la poêle.",
+    "confidence": 0.98,
+    "description": "Galette de blé noir garnie comme une complète : œuf miroir, gruyère fondu, champignons sautés et épinards, repliée en carré.",
     "composition": [
       {
         "ingredient": "buckwheat_flour",
@@ -14247,18 +14084,23 @@
         "unit": "g"
       },
       {
-        "ingredient": "water",
-        "quantity": 500,
-        "unit": "ml"
+        "ingredient": "egg_raw",
+        "quantity": 220,
+        "unit": "g"
       },
       {
-        "ingredient": "egg_raw",
+        "ingredient": "gruyere",
         "quantity": 100,
         "unit": "g"
       },
       {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "ingredient": "button_mushroom_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "spinach_raw_mature",
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -14267,20 +14109,95 @@
         "unit": "g"
       },
       {
-        "ingredient": "flaxseed_linseed_ground",
-        "quantity": 7,
+        "ingredient": "water",
+        "quantity": 500,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
         "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 7,
     "flags": [],
-    "similar": [
+    "similar": []
+  },
+  {
+    "id": "brkf_galette_sarrasin_champign_f6a798",
+    "title": "Galette de sarrasin aux champignons à l'ail et au thym (vegan)",
+    "cuisine": "french",
+    "dish_type": "breakfast",
+    "vegan": false,
+    "diet": [
+      "kid_friendly",
+      "lactose_free",
+      "low_calorie",
+      "nut_free",
+      "vegetarian"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 2,
+    "time_total": 95,
+    "confidence": 0.9,
+    "description": "Galette de sarrasin sans œuf ni beurre, à la pâte eau et lait d'avoine, garnie de champignons poêlés à l'ail et au thym.",
+    "composition": [
       {
-        "id": "brkf_galette_sarrasin_champign_f6a798",
-        "title": "Galette Sarrasin Champignons",
-        "score": 0.67
+        "ingredient": "buckwheat_flour",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 180,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "oat_milk_refrigerated_plain_plant",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "button_mushroom_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "thyme_fresh_herb",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30.8,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_milk_plant",
+        "quantity": null,
+        "unit": "2 cuillères à soupe"
       }
-    ]
+    ],
+    "n_instructions": 7,
+    "flags": [],
+    "similar": []
   },
   {
     "id": "crepe_galette_de_teff_a1a8d3",
@@ -14395,88 +14312,6 @@
     "similar": []
   },
   {
-    "id": "brkf_galette_sarrasin_champign_f6a798",
-    "title": "Galette Sarrasin Champignons",
-    "cuisine": "french",
-    "dish_type": "breakfast",
-    "vegan": false,
-    "diet": [
-      "kid_friendly",
-      "lactose_free",
-      "low_calorie",
-      "nut_free",
-      "vegetarian"
-    ],
-    "allergens": [
-      "gluten"
-    ],
-    "servings": 2,
-    "time_total": 95,
-    "confidence": 0.9,
-    "description": "Galette sarrasin croustillante aux champignons tendres, parfumée au thym frais et au poivre, pour un petit-déjeuner français végétarien délicieux",
-    "composition": [
-      {
-        "ingredient": "buckwheat_flour",
-        "quantity": 120,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 180,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "oat_milk_refrigerated_plain_plant",
-        "quantity": 60,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "button_mushroom_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "thyme_fresh_herb",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 30.8,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coconut_milk_plant",
-        "quantity": null,
-        "unit": "2 cuillères à soupe"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "bread_buckwheat_crepe_03db22",
-        "title": "Galette de Sarrasin",
-        "score": 0.67
-      }
-    ]
-  },
-  {
     "id": "egg_galettes_aux_oignons_verts_ff5328",
     "title": "Galettes aux Oignons Verts",
     "cuisine": "international",
@@ -14531,6 +14366,57 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "bread_buckwheat_crepe_03db22",
+    "title": "Galettes de blé noir bretonnes, pâte à l'eau",
+    "cuisine": "french_breton",
+    "dish_type": "bread",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 155,
+    "confidence": 0.92,
+    "description": "La pâte traditionnelle de Haute-Bretagne : farine de blé noir, eau et sel, longuement battue puis reposée, cuite sur une crêpière beurrée pour des galettes fines et croustillantes.",
+    "composition": [
+      {
+        "ingredient": "buckwheat_flour",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 550,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 55,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 20,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -14790,72 +14676,6 @@
         "score": 0.6
       }
     ]
-  },
-  {
-    "id": "main_galettes_sarrasin_ce9f40",
-    "title": "Galettes Sarrasin",
-    "cuisine": "french_breton",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "gluten_free",
-      "kid_friendly",
-      "nut_free"
-    ],
-    "allergens": [
-      "eggs",
-      "lactose",
-      "milk"
-    ],
-    "servings": 4,
-    "time_total": 95,
-    "confidence": 0.98,
-    "description": "Galette de sarrasin bretonne croustillante, garnie de fromage râpé, de champignons sautés et d'épinards frais, symbolisant l'emblème de la crêperie bretonne, naturellement sans gluten.",
-    "composition": [
-      {
-        "ingredient": "buckwheat_flour",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "egg_raw",
-        "quantity": 220,
-        "unit": "g"
-      },
-      {
-        "ingredient": "gruyere",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "ingredient": "button_mushroom_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "spinach_raw_mature",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "ingredient": "butter_sup80pct",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 500,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": []
   },
   {
     "id": "main_garbure_gasconne_545667",
@@ -26919,8 +26739,96 @@
     "similar": []
   },
   {
+    "id": "noodle_pad_see_ew_vegan_162330",
+    "title": "Pad kee mao, nouilles ivres au basilic (vegan)",
+    "cuisine": "thai",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "high_protein",
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "allergens": [
+      "gluten",
+      "peanuts",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 37,
+    "confidence": 1.0,
+    "description": "Les « nouilles ivres » de Bangkok : larges nouilles de riz sautées très vivement avec piment, ail, basilic thaï, brocoli, poivron et tofu, dans une sauce soja et « huître » végétale.",
+    "composition": [
+      {
+        "ingredient": "base_rice_noodle_831080",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tofu_plain_pre_packaged",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "broccoli_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "base_vegetarian_oyster_sauce_b74b21",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "peanut_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coriander",
+        "quantity": null,
+        "unit": "1 poignée"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "rice_pad_krapow_63acfb",
-    "title": "Pad Krapow",
+    "title": "Pad krapow au tofu, riz jasmin et œuf frit",
     "cuisine": "thai",
     "dish_type": "main",
     "vegan": false,
@@ -26936,7 +26844,7 @@
     "servings": 4,
     "time_total": 49,
     "confidence": 1.0,
-    "description": "Pâtes thaï à la sauce soja, al dente, enrobées uniformément, avec un parfum de basilic thaï et une texture légèrement croquante, inspirée de la cuisine de rue thaïlandaise",
+    "description": "Le plat de rue le plus commandé de Bangkok : tofu émietté sauté au basilic sacré, ail et piment, servi sur du riz avec un œuf frit croustillant (khai dao).",
     "composition": [
       {
         "ingredient": "tofu_plain_pre_packaged",
@@ -27001,24 +26909,20 @@
     ],
     "n_instructions": 7,
     "flags": [],
-    "similar": [
-      {
-        "id": "wok_pad_krapow_vegetarien_565aa9",
-        "title": "Pad Krapow végétarien",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "wok_pad_krapow_vegetarien_565aa9",
-    "title": "Pad Krapow végétarien",
+    "title": "Pad krapow aux haricots verts et champignons (vegan)",
     "cuisine": "thai",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
       "high_protein",
-      "vegetarian"
+      "vegan",
+      "vegetarian",
+      "lactose_free"
     ],
     "allergens": [
       "gluten",
@@ -27026,9 +26930,9 @@
       "soy"
     ],
     "servings": 4,
-    "time_total": 35,
+    "time_total": 45,
     "confidence": 1.0,
-    "description": "Sauté thaï au basilic sacré : technique wok à très haute température pour le wok hei, caramélisation éclair du tofu émietté, équilibre sucré-salé-pimenté intense, avec une touche de fumée et d'arôme de basilic",
+    "description": "Krapow végétal : tofu, haricots verts croquants et champignons sautés au wok avec ail, piment et basilic, servis sur un riz jasmin.",
     "composition": [
       {
         "ingredient": "tofu_plain_pre_packaged",
@@ -27036,23 +26940,33 @@
         "unit": "g"
       },
       {
+        "ingredient": "french_bean_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "button_mushroom_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
         "ingredient": "garlic_raw",
-        "quantity": 10,
+        "quantity": 12,
         "unit": "g"
       },
       {
         "ingredient": "chilli_pepper_raw",
-        "quantity": 5,
+        "quantity": 6,
         "unit": "g"
       },
       {
         "ingredient": "basil_fresh_herb",
-        "quantity": 20,
+        "quantity": 25,
         "unit": "g"
       },
       {
         "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 25,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -27067,94 +26981,22 @@
       },
       {
         "ingredient": "water",
-        "quantity": 30,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 5,
-    "flags": [],
-    "similar": [
-      {
-        "id": "rice_pad_krapow_63acfb",
-        "title": "Pad Krapow",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "noodle_pad_see_ew_vegan_162330",
-    "title": "Pad See Ew (Vegan)",
-    "cuisine": "thai",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "high_protein",
-      "lactose_free",
-      "nut_free"
-    ],
-    "allergens": [
-      "gluten",
-      "soy"
-    ],
-    "servings": 4,
-    "time_total": 35,
-    "confidence": 1.0,
-    "description": "Plat thaïlandais à base de tofu ferme, cuit à la perfection et al dente, avec une sauce soja sucrée et des légumes frais, parfumé par l'ail et le gingembre. La texture croquante des légumes et la chaleur des nouilles de riz créent un contraste délicieux.",
-    "composition": [
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "ginger_raw_root_fresh",
-        "quantity": 11.2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coconut_oil_plant",
-        "quantity": 45.7,
+        "quantity": 400,
         "unit": "ml"
       },
       {
-        "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 44.9,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "tofu_plain_pre_packaged",
-        "quantity": 200,
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 250,
         "unit": "g"
-      },
-      {
-        "ingredient": "broccoli_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_rice_noodle_831080",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_sugar",
-        "quantity": 14.1,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander",
-        "quantity": null,
-        "unit": "1 poignée"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
   {
     "id": "noodle_pad_see_ew_classic_v3_n8x4p2",
-    "title": "Pad See Ew maîtrisé",
+    "title": "Pad see ew au brocoli chinois, tofu et œuf",
     "cuisine": "thai",
     "dish_type": "main",
     "vegan": false,
@@ -27170,7 +27012,7 @@
     "servings": 4,
     "time_total": 67,
     "confidence": 1.0,
-    "description": "Sauté thaïlandais de nouilles de riz larges au wok, avec tofu ferme, brocoli chinois et sauce soja, créant un équilibre de textures et de saveurs, avec des notes de caramel et d'arôme fumé",
+    "description": "Larges nouilles de riz caramélisées au wok avec sauce soja sucrée, brocoli chinois (kai lan), tofu et œuf, pour un goût fumé typique.",
     "composition": [
       {
         "ingredient": "base_rice_noodle_831080",
@@ -27224,29 +27066,61 @@
   },
   {
     "id": "protein_pad_thai_vegan_33c0f3",
-    "title": "Pad Thai (Vegan)",
+    "title": "Pad thaï aux légumes croquants (vegan)",
     "cuisine": "thai",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
       "high_protein",
+      "vegan",
+      "vegetarian",
       "lactose_free"
     ],
     "allergens": [
       "gluten",
       "peanuts",
-      "soy",
-      "sesame"
+      "sesame",
+      "soy"
     ],
     "servings": 4,
     "time_total": 65,
     "confidence": 1.0,
-    "description": "Pad thaï traditionnel : nouilles de riz sautées au wok avec tofu doré, pousses de soja et oignons verts, dans une sauce sucrée-acidulée au tamarin, sauce soja et sucre de coco, garni de cacahuètes concassées et citron vert.",
+    "description": "Pad thaï sans œuf, riche en légumes : carotte et chou rouge en julienne, pousses de soja et tofu, nappés d'une sauce tamarin-soja, cacahuètes et citron vert.",
     "composition": [
       {
         "ingredient": "rice_vermicelli_raw_dried",
         "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tofu_plain_pre_packaged",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_cabbage_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
         "unit": "g"
       },
       {
@@ -27260,39 +27134,14 @@
         "unit": "ml"
       },
       {
+        "ingredient": "base_vegetarian_fish_sauce_536a33",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
         "ingredient": "coconut_sugar",
         "quantity": 20,
         "unit": "g"
-      },
-      {
-        "ingredient": "tofu_plain_pre_packaged",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 6,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_onion_raw",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "peanut_roasted_salted_dry",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "lime_juice_fresh",
-        "quantity": 15,
-        "unit": "ml"
       },
       {
         "ingredient": "sesame_oil_plant",
@@ -27300,24 +27149,28 @@
         "unit": "ml"
       },
       {
-        "ingredient": "base_vegetarian_fish_sauce_536a33",
+        "ingredient": "peanut_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "peanut_roasted_salted_dry",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
         "quantity": 15,
         "unit": "ml"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "wok_thai_veg_eb92db",
-        "title": "Pad thaï végétarien",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "wok_thai_veg_eb92db",
-    "title": "Pad thaï végétarien",
+    "title": "Pad thaï de Bangkok au tofu et à l'œuf",
     "cuisine": "thai",
     "dish_type": "main",
     "vegan": false,
@@ -27333,7 +27186,7 @@
     "servings": 4,
     "time_total": 80,
     "confidence": 1.0,
-    "description": "Nouilles de riz sautées au wok avec tofu doré, sauce tamarin équilibrée et garnitures fraîches, offrant une texture croquante et une saveur umami intense, caractéristique de la cuisine thaïlandaise.",
+    "description": "Pad thaï de rue : nouilles de riz sautées au tamarin et au sucre de coco, tofu doré, œuf brouillé dans le wok, pousses de soja, cacahuètes et citron vert.",
     "composition": [
       {
         "ingredient": "base_rice_noodle_831080",
@@ -27408,13 +27261,7 @@
     ],
     "n_instructions": 8,
     "flags": [],
-    "similar": [
-      {
-        "id": "protein_pad_thai_vegan_33c0f3",
-        "title": "Pad Thai (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "rice_paella_veg_c7m3x1",
@@ -35453,45 +35300,72 @@
   },
   {
     "id": "wrap_quesadillas_c8edf2",
-    "title": "Quesadillas",
+    "title": "Quesadillas aux champignons et au chèvre frais, pico de gallo",
     "cuisine": "mexican",
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "gluten_free"
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
     ],
     "allergens": [
       "lactose",
       "milk"
     ],
     "servings": 4,
-    "time_total": 31,
+    "time_total": 45,
     "confidence": 1.0,
-    "description": "Quesadillas mexicaines végétariennes, où la texture croustillante des tortillas donne way à une garniture onctueuse d'oignon et de tomate, cuite à la perfection dans une poêle antiadhésive.",
+    "description": "Quesadillas de Mexico garnies de champignons sautés à l'ail et au piment, de chèvre frais, servies avec une pico de gallo à la tomate et à la coriandre.",
     "composition": [
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "goat_cheese_fresh",
-        "quantity": 150,
-        "unit": "g"
-      },
       {
         "ingredient": "base_tortilla_92c2a6",
         "quantity": 320,
         "unit": "g"
       },
       {
+        "ingredient": "button_mushroom_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "goat_cheese_fresh",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime_juice_fresh",
+        "quantity": 10,
+        "unit": "ml"
+      },
+      {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
+        "quantity": 35,
         "unit": "ml"
       },
       {
@@ -35510,39 +35384,192 @@
         "unit": "2 cuillères à soupe"
       }
     ],
-    "n_instructions": 5,
+    "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "wrap_quesadillas_vegan_f68baa",
-        "title": "Quesadillas (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
-    "id": "wrap_quesadillas_vegan_f68baa",
-    "title": "Quesadillas (Vegan)",
+    "id": "wrap_quesadillas_au_fromage_ve_9794c7",
+    "title": "Quesadillas aux haricots noirs et cheddar végétal (vegan)",
     "cuisine": "mexican",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "kid_friendly",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
       "lactose_free"
     ],
     "allergens": [
       "tree_nuts"
     ],
     "servings": 4,
-    "time_total": 41,
+    "time_total": 40,
     "confidence": 1.0,
-    "description": "Quesadillas croustillantes et dorées, remplies d'un mélange d'oignon jaune caramélisé, tomates fraîches et fromage végétal râpé, servies chaudes avec une touche de sel et une texture ferme mais non rigide.",
+    "description": "Quesadillas vegan garnies de haricots noirs écrasés au cumin, poivrons et oignon revenus, et de cheddar végétal maison qui fond à la cuisson.",
     "composition": [
       {
+        "ingredient": "base_tortilla_92c2a6",
+        "quantity": 320,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_bean_boiled",
+        "quantity": 240,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_vegan_cheddar_024998",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
         "ingredient": "yellow_onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_oil_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "wrap_quesadillas_au_fromage_511e1a",
+    "title": "Quesadillas de rajas au queso Chihuahua",
+    "cuisine": "mexican",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 45,
+    "confidence": 1.0,
+    "description": "Quesadillas du nord du Mexique : lanières de poivrons grillés et de piment vert (rajas) revenues avec l'oignon, et queso Chihuahua fondant.",
+    "composition": [
+      {
+        "ingredient": "base_tortilla_92c2a6",
+        "quantity": 320,
+        "unit": "g"
+      },
+      {
+        "ingredient": "queso_chihuahua_whole_cow",
         "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_bell_pepper_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime",
+        "quantity": null,
+        "unit": "1/2"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "wrap_quesadillas_vegan_f68baa",
+    "title": "Quesadillas patate douce, maïs et cheddar végétal (vegan)",
+    "cuisine": "mexican",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "kid_friendly",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "allergens": [
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 45,
+    "confidence": 1.0,
+    "description": "Quesadillas végétales à la purée de patate douce rôtie au paprika, maïs doux, tomate et cheddar végétal, dorées à la poêle.",
+    "composition": [
+      {
+        "ingredient": "base_tortilla_92c2a6",
+        "quantity": 320,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sweet_potato_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sweet_corn_canned",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_vegan_cheddar_024998",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -35551,13 +35578,8 @@
         "unit": "g"
       },
       {
-        "ingredient": "base_vegan_cheddar_024998",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_tortilla_92c2a6",
-        "quantity": 320,
+        "ingredient": "paprika",
+        "quantity": 2,
         "unit": "g"
       },
       {
@@ -35578,143 +35600,7 @@
     ],
     "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "wrap_quesadillas_c8edf2",
-        "title": "Quesadillas",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "wrap_quesadillas_au_fromage_511e1a",
-    "title": "Quesadillas au Fromage",
-    "cuisine": "mexican",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "gluten_free"
-    ],
-    "allergens": [
-      "lactose",
-      "milk"
-    ],
-    "servings": 4,
-    "time_total": 36,
-    "confidence": 1.0,
-    "description": "Quesadillas végétariennes croustillantes, remplies d'oignon jaune cuit et de poivron rouge, avec un fromage parmesan fondu et crémeux, servies chaudes avec une touche de fraîcheur.",
-    "composition": [
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_bell_pepper_raw",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "queso_chihuahua_whole_cow",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_tortilla_92c2a6",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 1,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander",
-        "quantity": null,
-        "unit": "1 poignée"
-      },
-      {
-        "ingredient": "lime",
-        "quantity": null,
-        "unit": "1/2"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "wrap_quesadillas_au_fromage_ve_9794c7",
-        "title": "Quesadillas au Fromage (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "wrap_quesadillas_au_fromage_ve_9794c7",
-    "title": "Quesadillas au Fromage (Vegan)",
-    "cuisine": "mexican",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "kid_friendly",
-      "lactose_free"
-    ],
-    "allergens": [
-      "tree_nuts"
-    ],
-    "servings": 4,
-    "time_total": 28,
-    "confidence": 1.0,
-    "description": "Quesadillas mexicaines croustillantes, avec une texture al dente, garnies d'oignon caramélisé, de poivron croquant et de fromage végétal fondu, issus de la tradition culinaire mexicaine.",
-    "composition": [
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_bell_pepper_raw",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_vegan_cheddar_024998",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_tortilla_92c2a6",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 2,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "wrap_quesadillas_au_fromage_511e1a",
-        "title": "Quesadillas au Fromage",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "tarte_quiche_vegetarienne_b849b0",
@@ -41590,24 +41476,26 @@
   },
   {
     "id": "salad_shopska_04dd73",
-    "title": "Salade Shopska",
+    "title": "Salade ovcharska du berger, œufs et champignons",
     "cuisine": "bulgarian",
     "dish_type": "main",
     "vegan": false,
     "diet": [
       "diabetes_friendly",
-      "gluten_free"
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
     ],
     "allergens": [
+      "eggs",
       "lactose",
       "milk",
-      "mustard",
       "sulphites"
     ],
     "servings": 4,
-    "time_total": 15,
+    "time_total": 35,
     "confidence": 1.0,
-    "description": "Salade fraîche et croquante, préparée avec des tomates juteuses, des concombres rafraîchissants, des oignons émincés et des poivrons colorés, le tout lié par une vinaigrette crémeuse et relevée, issue de la tradition culinaire bulgare.",
+    "description": "Cousine plus copieuse de la shopska : tomates, concombre et poivron, champignons sautés, œufs durs et fromage de brebis, un vrai plat complet des tavernes bulgares.",
     "composition": [
       {
         "ingredient": "tomato_raw_ripe",
@@ -41616,27 +41504,37 @@
       },
       {
         "ingredient": "cucumber_raw_with_skin",
-        "quantity": 350,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
+        "quantity": 250,
         "unit": "g"
       },
       {
         "ingredient": "red_bell_pepper_raw",
-        "quantity": 320,
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "button_mushroom_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 220,
         "unit": "g"
       },
       {
         "ingredient": "feta",
-        "quantity": 150,
+        "quantity": 120,
         "unit": "g"
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 45,
+        "quantity": 40,
         "unit": "ml"
       },
       {
@@ -41645,43 +41543,44 @@
         "unit": "ml"
       },
       {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
         "ingredient": "table_salt_unenriched",
-        "quantity": 2,
+        "quantity": 1,
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "salad_shopska_vegan_001f9e",
-        "title": "Salade Shopska (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
-    "id": "salad_shopska_vegan_001f9e",
-    "title": "Salade Shopska (Vegan)",
+    "id": "salad_bulgarian_shopska_salad_v_adc716",
+    "title": "Salade shopska au tofu mariné à l'aneth (vegan)",
     "cuisine": "bulgarian",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "low_calorie",
-      "nut_free",
-      "raw"
+      "raw",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
-      "mustard",
       "soy",
       "sulphites"
     ],
     "servings": 4,
-    "time_total": 15,
+    "time_total": 40,
     "confidence": 1.0,
-    "description": "Salade bulgare fraîche et colorée, composée de tomates coupées en dés, de concombres en dés similaires, d'oignon émincé et de poivron en petits dés réguliers, le tout relevé d'un assaisonnement traditionnel à base d'huile d'olive, de jus de citron, de sel et de moutarde de Dijon, et couronné de fromage végétal émietté.",
+    "description": "Shopska végétale : les crudités classiques couvertes d'un tofu émietté mariné au citron, à l'aneth et au sel, qui imite la fraîcheur acidulée du sirene.",
     "composition": [
       {
         "ingredient": "tomato_raw_ripe",
@@ -41690,22 +41589,115 @@
       },
       {
         "ingredient": "cucumber_raw_with_skin",
-        "quantity": 350,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
+        "quantity": 300,
         "unit": "g"
       },
       {
         "ingredient": "red_bell_pepper_raw",
-        "quantity": 320,
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_onion_raw",
+        "quantity": 80,
         "unit": "g"
       },
       {
         "ingredient": "tofu_plain_pre_packaged",
-        "quantity": 150,
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "dill_weed_fresh_herb_leaf",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_vinegar_liquid_distilled",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": null,
+        "unit": "quelques feuilles"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "salad_shopska_vegan_001f9e",
+    "title": "Salade shopska aux haricots blancs et poivrons grillés (vegan)",
+    "cuisine": "bulgarian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "low_calorie",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "sulphites"
+    ],
+    "servings": 4,
+    "time_total": 35,
+    "confidence": 1.0,
+    "description": "Version plat complet et végétale : poivrons grillés, haricots blancs, tomates, concombre et oignon, en vinaigrette au vin rouge et au persil.",
+    "composition": [
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cucumber_raw_with_skin",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_bean_boiled",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
         "unit": "g"
       },
       {
@@ -41724,15 +41716,86 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 4,
     "flags": [],
-    "similar": [
+    "similar": []
+  },
+  {
+    "id": "main_bulgarian_shopska_salad_d473eb",
+    "title": "Salade shopska de Sofia au sirene",
+    "cuisine": "bulgarian",
+    "dish_type": "starter",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk",
+      "sulphites"
+    ],
+    "servings": 4,
+    "time_total": 45,
+    "confidence": 1.0,
+    "description": "La salade nationale bulgare : tomates, concombre, poivrons grillés et oignon rouge, assaisonnés simplement, entièrement recouverts de sirene (fromage de brebis saumuré) râpé.",
+    "composition": [
       {
-        "id": "salad_shopska_04dd73",
-        "title": "Salade Shopska",
-        "score": 1.0
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 350,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cucumber_raw_with_skin",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_onion_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "feta",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "red_wine_vinegar_liquid",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": null,
+        "unit": "1 poignée"
       }
-    ]
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
   },
   {
     "id": "salad_turque_coban_cdd8c4",

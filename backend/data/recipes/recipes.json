@@ -9878,21 +9878,21 @@
       "id": "bread_buckwheat_crepe_03db22",
       "titles": {
         "original": "Galette de Sarrasin",
-        "fr": "Galette de Sarrasin",
+        "fr": "Galettes de blé noir bretonnes, pâte à l'eau",
         "en": "Buckwheat Crepe"
       },
       "origin": {
-        "cuisine": "french",
+        "cuisine": "french_breton",
         "country": "france",
-        "region": "brittany",
-        "city": ""
+        "region": "bretagne",
+        "city": "rennes"
       },
       "servings": 4,
       "timing": {
         "prep_active_min": 10,
-        "prep_passive_min": 60,
+        "prep_passive_min": 120,
         "cook_min": 25,
-        "total_min": 95
+        "total_min": 155
       },
       "composition": [
         {
@@ -9901,31 +9901,31 @@
           "unit": "g",
           "meta": {
             "role": "base",
-            "form": "powder",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 500,
+          "quantity": 550,
           "unit": "ml",
           "meta": {
             "role": "hydration",
-            "form": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "egg_raw",
-          "quantity": 100,
+          "quantity": 55,
           "unit": "g",
           "meta": {
             "role": "binding",
-            "form": "whole",
+            "form": "",
             "state": "raw",
-            "preparation": "beaten"
+            "preparation": ""
           }
         },
         {
@@ -9945,18 +9945,7 @@
           "unit": "g",
           "meta": {
             "role": "fat",
-            "form": "melted",
-            "state": "raw",
-            "preparation": "melted"
-          }
-        },
-        {
-          "ingredient": "flaxseed_linseed_ground",
-          "quantity": 7,
-          "unit": "g",
-          "meta": {
-            "role": "texture",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -9965,12 +9954,13 @@
       "tags": {
         "diet": [
           "vegetarian",
-          "gluten_free"
+          "gluten_free",
+          "nut_free"
         ],
         "allergens": [
           "eggs",
-          "milk",
-          "lactose"
+          "lactose",
+          "milk"
         ],
         "technique": [
           "pan_frying"
@@ -10020,16 +10010,13 @@
       "dish_type": "bread",
       "servings_default": 4,
       "_quality_score": 0.9,
-      "description": "Crêpe bretonne à base de farine de sarrasin, naturellement sans gluten de blé, avec une texture souple et des bords croustillants lors de la cuisson à la poêle.",
+      "description": "La pâte traditionnelle de Haute-Bretagne : farine de blé noir, eau et sel, longuement battue puis reposée, cuite sur une crêpière beurrée pour des galettes fines et croustillantes.",
       "instructions": [
-        "Étape 1: Mélanger 250g de farine de sarrasin et 5g de sel dans un grand bol. Ajouter 1 cuillère à soupe de graines de lin et mélanger bien pour éviter les grumeaux.",
-        "Étape 2: Ajouter l'œuf battu, puis progressivement 500ml d'eau en fouettant pour obtenir une pâte lisse et homogène. La pâte doit être fluide et sans grumeaux.",
-        "Étape 3: Incorporer 20g de beurre fondu. Laisser reposer la pâte au moins 1 heure au réfrigérateur pour permettre aux graines de lin de gonfler et à la pâte de se détendre.",
-        "Étape 4: Huiler légèrement une poêle chauffée à feu moyen. Verser une louche de pâte et répartir rapidement pour obtenir une crêpe fine et régulière.",
-        "Étape 5: Cuire 2 minutes jusqu'à ce que les bords soient dorés et croustillants. Retourner et cuire 1 minute de l'autre côté. La crêpe doit être souple et légèrement dorée.",
-        "Étape 6: Répéter l'opération jusqu'à épuisement de la pâte. Garnir les crêpes avec vos ingrédients préférés, tels que des légumes sautés, des fruits ou des sauces.",
-        "Étape 7: Servir chaud ! Les crêpes de sarrasin sont un délice pour les papilles et une excellente option pour un repas sain et équilibré.",
-        "Étape 8: Pour conserver les crêpes, il est possible de les congeler ou de les réfrigérer pendant quelques jours. Il suffit de les réchauffer à la poêle ou au four pour les rendre à nouveau croustillantes et délicieuses."
+        "Étape 1 : Mélanger 250 g de farine de blé noir avec 5 g de sel, puis verser 400 ml d'eau froide petit à petit en battant énergiquement 5 minutes, jusqu'à ce que la pâte fasse des bulles.",
+        "Étape 2 : Ajouter 1 œuf (55 g) et 150 ml d'eau, puis battre encore 2 minutes.",
+        "Étape 3 : Laisser reposer au moins 2 heures au frais.",
+        "Étape 4 : Chauffer une crêpière ou une grande poêle et la graisser au beurre (20 g en tout).",
+        "Étape 5 : Verser une louche de pâte, l'étaler finement et cuire 2 minutes, jusqu'à ce que les bords soient dentelés et croustillants, puis retourner 30 secondes."
       ],
       "diet_flags": {
         "vegan": false,
@@ -10042,8 +10029,9 @@
       },
       "search_tokens": [
         "(eau",
-        "(linseed)",
         "beurre",
+        "ble",
+        "bretonnes,",
         "buckwheat",
         "butter",
         "classique",
@@ -10054,21 +10042,23 @@
         "eau",
         "egg",
         "facile",
-        "flaxseed",
         "francais",
         "france",
-        "french",
+        "french_breton",
         "galette",
+        "galettes",
         "gluten free",
+        "l'eau",
         "leger",
         "lent",
         "light",
-        "lin",
         "long",
         "low calorie",
         "mijote",
         "minceur",
+        "noir",
         "pan_frying",
+        "pate",
         "potable)",
         "salt",
         "sans gluten",
@@ -15359,7 +15349,7 @@
       "id": "brkf_galette_sarrasin_champign_f6a798",
       "titles": {
         "original": "Buckwheat Mushroom Galette",
-        "fr": "Galette Sarrasin Champignons",
+        "fr": "Galette de sarrasin aux champignons à l'ail et au thym (vegan)",
         "en": "Buckwheat Mushroom Galette"
       },
       "origin": {
@@ -15539,7 +15529,9 @@
       },
       "search_tokens": [
         "(eau",
+        "(vegan)",
         "ail",
+        "aux",
         "avoine",
         "black",
         "buckwheat",
@@ -15560,6 +15552,7 @@
         "garlic",
         "intermediaire",
         "kids",
+        "l'ail",
         "leger",
         "lent",
         "light",
@@ -15596,7 +15589,7 @@
       "dish_type": "breakfast",
       "servings_default": 2,
       "_quality_score": 0.8,
-      "description": "Galette sarrasin croustillante aux champignons tendres, parfumée au thym frais et au poivre, pour un petit-déjeuner français végétarien délicieux",
+      "description": "Galette de sarrasin sans œuf ni beurre, à la pâte eau et lait d'avoine, garnie de champignons poêlés à l'ail et au thym.",
       "instructions": [
         "Étape 1 : Dans un grand bol, mélangez 120g de farine de sarrasin, 180ml d'eau et 60ml de lait d'avoine. Laissez reposer pendant 1 heure, jusqu'à ce que le mélange soit lisse et homogène, avec une texture crémeuse.",
         "Étape 2 : Faites chauffer 20ml d'huile d'olive dans une poêle à feu moyen. Ajoutez 300g de champignons émincés, 10g d'ail haché et 2g de thym frais. Faites revenir pendant 5 minutes, en remuant régulièrement, jusqu'à ce que les champignons soient tendres et parfumés, avec une odeur aromatique.",
@@ -78039,7 +78032,7 @@
       "id": "main_bulgarian_shopska_salad_d473eb",
       "titles": {
         "original": "Bulgarian Shopska Salad",
-        "fr": "Bulgarian Shopska Salad",
+        "fr": "Salade shopska de Sofia au sirene",
         "en": "Bulgarian Shopska Salad"
       },
       "origin": {
@@ -78050,52 +78043,52 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
-        "prep_passive_min": 7,
-        "cook_min": 0,
-        "total_min": 24
+        "prep_active_min": 20,
+        "prep_passive_min": 10,
+        "cook_min": 15,
+        "total_min": 45
       },
       "composition": [
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "quantity": 350,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cucumber_raw_with_skin",
-          "quantity": 350,
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "red_bell_pepper_raw",
-          "quantity": 320,
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "strips",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "red_onion_raw",
-          "quantity": 150,
+          "quantity": 80,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -78106,14 +78099,25 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "crumbled",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -78123,8 +78127,8 @@
           }
         },
         {
-          "ingredient": "white_vinegar_liquid_distilled",
-          "quantity": 30,
+          "ingredient": "red_wine_vinegar_liquid",
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -78135,22 +78139,11 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
             "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "black_pepper_spice",
-          "quantity": 2,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
             "state": "raw",
             "preparation": ""
           }
@@ -78170,7 +78163,9 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free"
+          "vegetarian",
+          "gluten_free",
+          "nut_free"
         ],
         "allergens": [
           "lactose",
@@ -78224,11 +78219,9 @@
         }
       },
       "search_tokens": [
-        "30 minutes",
+        "45 minutes",
         "assembly",
         "bell",
-        "black",
-        "blanc",
         "bulgarian",
         "coeliaque",
         "concombre",
@@ -78241,17 +78234,12 @@
         "low calorie",
         "minceur",
         "moyen",
-        "noir",
         "oignon",
-        "olive",
         "onion",
         "parsley",
         "pepper",
         "persil",
-        "poivre",
         "poivron",
-        "quick",
-        "rapide",
         "red",
         "rouge",
         "salad",
@@ -78261,27 +78249,29 @@
         "sans viande",
         "sel",
         "shopska",
+        "sirene",
+        "sofia",
+        "sunflower",
         "table",
         "tomate",
         "tomato",
+        "tournesol",
         "vegetarien",
+        "vin",
         "vinaigre",
         "vinegar",
-        "white"
+        "wine"
       ],
       "difficulty_level": "medium",
       "dish_type": "starter",
       "servings_default": 4,
       "_quality_score": 0.96,
-      "description": "Salade fraîche et croquante aux saveurs méditerranéennes, préparée avec des tomates, des concombres, des poivrons, des oignons rouges et du fromage feta, le tout relevé par une vinaigrette légère.",
+      "description": "La salade nationale bulgare : tomates, concombre, poivrons grillés et oignon rouge, assaisonnés simplement, entièrement recouverts de sirene (fromage de brebis saumuré) râpé.",
       "instructions": [
-        "Étape 1: Coupez les tomates (300g) en dés de 1,5 cm, le concombre (350g) en dés similaires et le poivron (320g) en petits dés.",
-        "Étape 2: Émincez très finement l'oignon rouge (150g).",
-        "Étape 3: Assaisonnez les légumes avec de l'huile d'olive (45 ml), une pointe de vinaigre blanc (30 ml), du sel (2g) et du poivre (2g).",
-        "Étape 4: Mélangez délicatement les légumes et répartissez-les dans des assiettes.",
-        "Étape 5: Couvrez généreusement de feta (150g) sans mélanger.",
-        "Étape 6: Vérifiez que les légumes sont bien assaisonnés et que la feta est répartie uniformément.",
-        "Étape 7: Servez sans attendre."
+        "Étape 1 : Griller 300 g de poivrons sous le gril du four, 15 minutes, en les retournant, puis les enfermer 10 minutes dans un saladier couvert, les peler et les couper en lanières.",
+        "Étape 2 : Couper 350 g de tomates et 300 g de concombre en dés, émincer finement 80 g d'oignon rouge et ciseler 10 g de persil.",
+        "Étape 3 : Mélanger les légumes avec 30 ml d'huile de tournesol, 15 ml de vinaigre de vin et 1 g de sel.",
+        "Étape 4 : Répartir dans les assiettes et couvrir entièrement de 150 g de sirene (ou feta) râpé finement."
       ],
       "diet_flags": {
         "vegan": false,
@@ -83461,7 +83451,7 @@
       "id": "main_galettes_sarrasin_ce9f40",
       "titles": {
         "original": "Galettes de Sarrasin",
-        "fr": "Galettes Sarrasin",
+        "fr": "Galette complète forestière, œuf, gruyère et champignons",
         "en": "Breton Buckwheat Galette"
       },
       "origin": {
@@ -83636,8 +83626,10 @@
         "butter",
         "button",
         "champignon",
+        "champignons",
         "classique",
         "coeliaque",
+        "complete",
         "debutant",
         "easy",
         "eau",
@@ -83647,6 +83639,7 @@
         "facile",
         "facile enfants",
         "famille",
+        "forestiere,",
         "francais",
         "france",
         "french_breton",
@@ -83676,13 +83669,14 @@
         "table",
         "vegetarien",
         "water",
-        "œuf"
+        "œuf",
+        "œuf,"
       ],
       "difficulty_level": "easy",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.94,
-      "description": "Galette de sarrasin bretonne croustillante, garnie de fromage râpé, de champignons sautés et d'épinards frais, symbolisant l'emblème de la crêperie bretonne, naturellement sans gluten.",
+      "description": "Galette de blé noir garnie comme une complète : œuf miroir, gruyère fondu, champignons sautés et épinards, repliée en carré.",
       "instructions": [
         "Étape 1: Mélanger 250 g de farine de sarrasin, 5 g de sel et 500 ml d'eau froide. Fouetter jusqu'à obtenir une pâte lisse et fluide, vérifiant que la consistance est homogène et sans grumeaux.",
         "Étape 2: Ajouter un peu de beurre fondu pour donner de la souplesse à la pâte. Laisser reposer 1 heure au réfrigérateur pour permettre à la farine de sarrasin d'absorber l'eau.",
@@ -104943,7 +104937,7 @@
       "id": "noodle_pad_see_ew_classic_v3_n8x4p2",
       "titles": {
         "original": "Pad See Ew",
-        "fr": "Pad See Ew maîtrisé",
+        "fr": "Pad see ew au brocoli chinois, tofu et œuf",
         "en": "Controlled Pad See Ew"
       },
       "origin": {
@@ -105134,6 +105128,7 @@
         "cacahuete",
         "chinese",
         "chinois",
+        "chinois,",
         "controlled",
         "curry",
         "eau",
@@ -105145,7 +105140,6 @@
         "light",
         "long",
         "low calorie",
-        "maitrise",
         "mijote",
         "minceur",
         "moyen",
@@ -105174,7 +105168,7 @@
       "servings_default": 4,
       "_quality_score": 1.0,
       "_chef_note": "Pour un résultat optimal, utilisez un wok très chaud et manipulez les ingrédients rapidement pour éviter qu'ils ne collent ou ne brûlent.",
-      "description": "Sauté thaïlandais de nouilles de riz larges au wok, avec tofu ferme, brocoli chinois et sauce soja, créant un équilibre de textures et de saveurs, avec des notes de caramel et d'arôme fumé",
+      "description": "Larges nouilles de riz caramélisées au wok avec sauce soja sucrée, brocoli chinois (kai lan), tofu et œuf, pour un goût fumé typique.",
       "instructions": [
         "Étape 1: Préparer les nouilles de riz larges en les trempant dans l'eau froide pendant 30 minutes. Égoutter et séparer les nouilles à la main pour éviter qu'elles ne collent.",
         "Étape 2: Chauffer l'huile d'arachide dans le wok à feu maximum. Saisir le tofu ferme pressé en cubes pendant 3 minutes jusqu'à surface croustillante dorée, en faisant attention à ne pas brûler. Réserver.",
@@ -105199,7 +105193,7 @@
       "id": "noodle_pad_see_ew_vegan_162330",
       "titles": {
         "original": "Pad See Ew (Vegan)",
-        "fr": "Pad See Ew (Vegan)",
+        "fr": "Pad kee mao, nouilles ivres au basilic (vegan)",
         "en": "Vegan Pad See Ew"
       },
       "origin": {
@@ -105212,49 +105206,16 @@
       "timing": {
         "prep_active_min": 15,
         "prep_passive_min": 10,
-        "cook_min": 10,
-        "total_min": 35
+        "cook_min": 12,
+        "total_min": 37
       },
       "composition": [
         {
-          "ingredient": "garlic_raw",
-          "quantity": 15,
+          "ingredient": "base_rice_noodle_831080",
+          "quantity": 300,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "ginger_raw_root_fresh",
-          "quantity": 11.2,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic",
-            "form": "grated",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "coconut_oil_plant",
-          "quantity": 45.7,
-          "unit": "ml",
-          "meta": {
-            "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 44.9,
-          "unit": "ml",
-          "meta": {
-            "role": "condiment",
+            "role": "ingredient",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -105266,39 +105227,105 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "broccoli_raw",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "secondary_vegetable",
-            "form": "florets",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "base_rice_noodle_831080",
-          "quantity": 300,
+          "ingredient": "red_bell_pepper_raw",
+          "quantity": 150,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "dried",
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "base_vegetarian_oyster_sauce_b74b21",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "white_sugar",
-          "quantity": 14.1,
+          "quantity": 8,
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "peanut_oil_plant",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -105320,11 +105347,13 @@
         "diet": [
           "diabetes_friendly",
           "high_protein",
-          "lactose_free",
-          "nut_free"
+          "vegan",
+          "vegetarian",
+          "lactose_free"
         ],
         "allergens": [
           "gluten",
+          "peanuts",
           "soy"
         ],
         "technique": [
@@ -105368,29 +105397,41 @@
         }
       },
       "search_tokens": [
+        "(arachide)",
         "(vegan)",
         "45 minutes",
         "ail",
         "asiatique",
         "base_rice_noodle_831080",
+        "base_vegetarian_oyster_sauce_b74b21",
+        "basil",
+        "basilic",
+        "bell",
         "blanc",
         "broccoli",
         "brocoli",
-        "coco",
-        "coconut",
+        "cacahuete",
+        "chilli",
         "coriander",
         "curry",
         "garlic",
-        "gingembre",
-        "ginger",
         "intermediaire",
+        "ivres",
+        "kee",
         "leger",
         "light",
         "low calorie",
+        "mao,",
         "minceur",
         "moyen",
-        "noix",
+        "nouilles",
         "pad",
+        "peanut",
+        "pepper",
+        "piment",
+        "poivron",
+        "red",
+        "rouge",
         "sans produit animal",
         "sans viande",
         "sauce",
@@ -105414,22 +105455,20 @@
       "servings_default": 4,
       "_quality_score": 0.96,
       "_chef_note": "N'oubliez pas de remuer constamment les ingrédients dans le wok pour éviter qu'ils ne collent ou ne brûlent.",
-      "description": "Plat thaïlandais à base de tofu ferme, cuit à la perfection et al dente, avec une sauce soja sucrée et des légumes frais, parfumé par l'ail et le gingembre. La texture croquante des légumes et la chaleur des nouilles de riz créent un contraste délicieux.",
+      "description": "Les « nouilles ivres » de Bangkok : larges nouilles de riz sautées très vivement avec piment, ail, basilic thaï, brocoli, poivron et tofu, dans une sauce soja et « huître » végétale.",
       "instructions": [
-        "Étape 1 : Faites tremper les nouilles de riz larges dans de l'eau froide pendant environ 10 minutes, ou jusqu'à ce qu'elles soient tendres mais encore fermes. Égouttez-les et mettez-les de côté.",
-        "Étape 2 : Dans un wok ou une grande poêle, faites chauffer un peu d'huile de coco à feu vif. Ajoutez l'ail émincé et le gingembre râpé, et faites-les sauter pendant environ 1 minute, en remuant constamment, jusqu'à ce qu'ils soient parfumés et légèrement dorés.",
-        "Étape 3 : Ajoutez les nouilles de riz égouttées dans le wok et faites-les sauter avec l'ail et le gingembre pendant environ 2 minutes, en remuant constamment, jusqu'à ce qu'elles commencent à dorer légèrement.",
-        "Étape 4 : Ajoutez le brocoli dans le wok et continuez à faire sauter pendant environ 2 minutes, ou jusqu'à ce que le brocoli soit tendre mais encore croquant.",
-        "Étape 5 : Dans un bol, mélangez la sauce soja, le sucre et un peu d'eau pour créer une sauce sucrée et salée. Versez cette sauce dans le wok et mélangez bien pour que les nouilles et les légumes soient enrobés.",
-        "Étape 6 : Ajoutez le tofu ferme coupé en petits cubes dans le wok et faites-le sauter avec les nouilles et les légumes pendant environ 1 minute, en remuant constamment, jusqu'à ce que le tofu soit chaud et bien mélangé.",
-        "Étape 7 : Servez le Pad See Ew chaud, garni de légumes frais et de sauce soja sucrée, sans attendre pour conserver la texture croquante des légumes et la chaleur des nouilles."
+        "Étape 1 : Piler 15 g d'ail avec 10 g de piment.",
+        "Étape 2 : Dorer 200 g de tofu en dés dans 15 ml d'huile d'arachide, 5 minutes, puis réserver.",
+        "Étape 3 : Dans 15 ml d'huile, faire grésiller la pâte ail-piment 30 secondes, ajouter 150 g de brocoli en petits bouquets et 150 g de poivron en lanières et sauter 3 minutes à feu vif.",
+        "Étape 4 : Ajouter 300 g de nouilles de riz, 30 ml de sauce soja, 20 ml de sauce « huître » végétale et 8 g de sucre, puis sauter 3 minutes.",
+        "Étape 5 : Ajouter le tofu et 20 g de basilic, mélanger 30 secondes et servir aussitôt."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
         "gluten_free": false,
         "lactose_free": true,
-        "nut_free": true,
+        "nut_free": false,
         "raw": false,
         "kid_friendly": false
       }
@@ -115049,7 +115088,7 @@
       "id": "protein_pad_thai_vegan_33c0f3",
       "titles": {
         "original": "Pad Thai",
-        "fr": "Pad Thai (Vegan)",
+        "fr": "Pad thaï aux légumes croquants (vegan)",
         "en": "Pad Thai (Vegan)"
       },
       "origin": {
@@ -115078,12 +115117,78 @@
           }
         },
         {
+          "ingredient": "tofu_plain_pre_packaged",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "carrot_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_cabbage_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_onion_raw",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "tamarind_raw",
           "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "seasoning",
-            "form": "paste",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -115091,6 +115196,17 @@
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
           "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "base_vegetarian_fish_sauce_536a33",
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "condiment",
@@ -115111,56 +115227,34 @@
           }
         },
         {
-          "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 200,
-          "unit": "g",
+          "ingredient": "sesame_oil_plant",
+          "quantity": 10,
+          "unit": "ml",
           "meta": {
-            "role": "protein",
-            "form": "cubed",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
-          "quantity": 100,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
+            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic_raw",
-          "quantity": 6,
-          "unit": "g",
+          "ingredient": "peanut_oil_plant",
+          "quantity": 15,
+          "unit": "ml",
           "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "green_onion_raw",
-          "quantity": 30,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "sliced",
+            "role": "fat_cooking",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "peanut_roasted_salted_dry",
-          "quantity": 40,
+          "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "garnish",
-            "form": "crushed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -115175,41 +115269,21 @@
             "state": "raw",
             "preparation": ""
           }
-        },
-        {
-          "ingredient": "sesame_oil_plant",
-          "quantity": 10,
-          "unit": "ml",
-          "meta": {
-            "role": "fat_cooking",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "base_vegetarian_fish_sauce_536a33",
-          "quantity": 15,
-          "unit": "ml",
-          "meta": {
-            "role": "condiment",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
           "high_protein",
+          "vegan",
+          "vegetarian",
           "lactose_free"
         ],
         "allergens": [
           "gluten",
           "peanuts",
-          "soy",
-          "sesame"
+          "sesame",
+          "soy"
         ],
         "technique": [
           "sauteed"
@@ -115253,29 +115327,32 @@
         }
       },
       "search_tokens": [
-        "(arachide)",
         "(fleur",
         "(vegan)",
         "ail",
         "asiatique",
+        "aux",
         "avance",
         "base_vegetarian_fish_sauce_536a33",
         "bean",
-        "cacahuete",
+        "cabbage",
+        "carotte",
+        "carrot",
         "chef",
-        "citron",
+        "chou",
         "coco",
         "coconut",
         "cocotier)",
         "complexe",
+        "croquants",
         "curry",
         "garlic",
         "green",
         "haricot",
         "leger",
+        "legumes",
         "lent",
         "light",
-        "lime",
         "long",
         "low calorie",
         "mijote",
@@ -115285,9 +115362,10 @@
         "oignon",
         "onion",
         "pad",
-        "peanut",
+        "red",
         "rice",
         "riz",
+        "rouge",
         "sans produit animal",
         "sans viande",
         "sauce",
@@ -115317,15 +115395,14 @@
       "servings_default": 4,
       "_quality_score": 0.96,
       "_chef_note": "Assurez-vous de ne pas surcuire les nouilles, car elles peuvent devenir collantes et peu appétissantes.",
-      "description": "Pad thaï traditionnel : nouilles de riz sautées au wok avec tofu doré, pousses de soja et oignons verts, dans une sauce sucrée-acidulée au tamarin, sauce soja et sucre de coco, garni de cacahuètes concassées et citron vert.",
+      "description": "Pad thaï sans œuf, riche en légumes : carotte et chou rouge en julienne, pousses de soja et tofu, nappés d'une sauce tamarin-soja, cacahuètes et citron vert.",
       "instructions": [
-        "Étape 1 : Faire tremper 200g de vermicelles de riz dans l'eau froide pendant 30 minutes, puis les égoutter. Observer la texture des vermicelles qui passent de rigides à souples.",
-        "Étape 2 : Préparer la sauce en mélangeant 30ml de sauce soja, 30g de pâte de tamarin, 20g de sucre de coco, 15ml de jus de citron vert et 15 ml de sauce poisson végétale. Remarquer la couleur ambrée et l'odeur acidulée de la sauce.",
-        "Étape 3 : Chauffer le wok à feu vif avec 10ml d'huile de sésame, puis faire dorer 200g de tofu pressé en cubes pendant 3 minutes, en le retournant régulièrement. Écouter le son des cubes de tofu qui dorent et sentir l'odeur de la friture.",
-        "Étape 4 : Ajouter 6g d'ail émincé et faire revenir 30 secondes, jusqu'à ce qu'il soit parfumé sans colorer.",
-        "Étape 5 : Ajouter les vermicelles égouttés et la sauce préparée, puis mélanger vigoureusement à feu très vif pendant 2 minutes, jusqu'à couleur ambrée et absorption de la sauce.",
-        "Étape 6 : Pousser les vermicelles sur le côté, puis ajouter 100g de pousses de soja et 30g d'oignons verts, en les faisant sauter pendant 1 minute. Sentir l'odeur des légumes qui sautent.",
-        "Étape 7 : Servir immédiatement, en garnissant de 40g de cacahuètes concassées et de citron vert, pour un repas équilibré et savoureux."
+        "Étape 1 : Faire tremper 200 g de nouilles de riz 30 minutes dans l'eau tiède, puis les égoutter.",
+        "Étape 2 : Sauce : délayer 30 g de pulpe de tamarin dans 30 ml d'eau chaude, filtrer, puis ajouter 30 ml de sauce soja, 15 ml de sauce « poisson » végétale et 20 g de sucre de coco.",
+        "Étape 3 : Dorer 200 g de tofu en dés dans 15 ml d'huile d'arachide, 5 minutes, puis réserver.",
+        "Étape 4 : Dans 10 ml d'huile de sésame, sauter 6 g d'ail, 150 g de carotte et 150 g de chou rouge en julienne 2 minutes à feu vif.",
+        "Étape 5 : Ajouter les nouilles et la sauce, puis sauter 3 minutes. Ajouter le tofu, 100 g de pousses de soja et 30 g d'oignons verts.",
+        "Étape 6 : Servir avec 30 g de cacahuètes concassées et 15 ml de jus de citron vert."
       ],
       "diet_flags": {
         "vegan": true,
@@ -122808,7 +122885,7 @@
       "id": "rice_pad_krapow_63acfb",
       "titles": {
         "original": "Pad Krapow",
-        "fr": "Pad Krapow",
+        "fr": "Pad krapow au tofu, riz jasmin et œuf frit",
         "en": "Pad Krapow"
       },
       "origin": {
@@ -123030,7 +123107,9 @@
         "coriander",
         "curry",
         "egg",
+        "frit",
         "garlic",
+        "jasmin",
         "krapow",
         "leger",
         "light",
@@ -123056,6 +123135,7 @@
         "thai",
         "thailande",
         "tofu",
+        "tofu,",
         "tournesol",
         "vegetarien",
         "white",
@@ -123066,7 +123146,7 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.93,
-      "description": "Pâtes thaï à la sauce soja, al dente, enrobées uniformément, avec un parfum de basilic thaï et une texture légèrement croquante, inspirée de la cuisine de rue thaïlandaise",
+      "description": "Le plat de rue le plus commandé de Bangkok : tofu émietté sauté au basilic sacré, ail et piment, servi sur du riz avec un œuf frit croustillant (khai dao).",
       "instructions": [
         "Étape 1: Faire chauffer 30 ml d'huile de tournesol à feu moyen-vif, puis saisir 9g d'ail et 15g de piment jusqu'à parfum, en sentant l'odeur piquante et en voyant les légumes commencer à dorer, pendant environ 2 minutes.",
         "Étape 2: Ajouter 400g de tofu ferme émietté et faire sauter 5 minutes à feu vif, en remuant régulièrement, jusqu'à ce qu'il soit doré.",
@@ -133199,7 +133279,7 @@
       "id": "salad_bulgarian_shopska_salad_v_adc716",
       "titles": {
         "original": "Bulgarian Shopska Salad (Vegan)",
-        "fr": "Bulgarian Shopska Salad (Vegan)",
+        "fr": "Salade shopska au tofu mariné à l'aneth (vegan)",
         "en": "Vegan Bulgarian Shopska Salad"
       },
       "origin": {
@@ -133210,10 +133290,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
-        "prep_passive_min": 0,
+        "prep_active_min": 20,
+        "prep_passive_min": 20,
         "cook_min": 0,
-        "total_min": 17
+        "total_min": 40
       },
       "composition": [
         {
@@ -133222,58 +133302,80 @@
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cucumber_raw_with_skin",
-          "quantity": 350,
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "red_bell_pepper_raw",
-          "quantity": 320,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "strips",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "red_onion_raw",
-          "quantity": 150,
+          "quantity": 80,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 150,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "crumbled",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "dill_weed_fresh_herb_leaf",
+          "quantity": 8,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -133284,7 +133386,7 @@
         },
         {
           "ingredient": "white_vinegar_liquid_distilled",
-          "quantity": 30,
+          "quantity": 15,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -133306,11 +133408,11 @@
         },
         {
           "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -133330,14 +133432,17 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "low_calorie",
-          "nut_free",
-          "raw"
+          "raw",
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
-          "sulphites",
-          "soy"
+          "soy",
+          "sulphites"
         ],
         "technique": [
           "raw"
@@ -133384,24 +133489,27 @@
       },
       "search_tokens": [
         "(vegan)",
-        "10 min",
-        "20 min",
-        "5 min",
+        "45 minutes",
+        "aneth",
         "bell",
         "black",
         "blanc",
         "bulgarian",
+        "citron",
         "coeliaque",
         "concombre",
         "cru",
         "crudivorisme",
         "cucumber",
-        "express",
+        "dill",
         "gluten free",
         "intermediaire",
+        "l'aneth",
         "leger",
+        "lemon",
         "light",
         "low calorie",
+        "marine",
         "minceur",
         "moyen",
         "noir",
@@ -133413,8 +133521,6 @@
         "persil",
         "poivre",
         "poivron",
-        "quick",
-        "rapide",
         "raw",
         "red",
         "rouge",
@@ -133436,20 +133542,19 @@
         "vinaigre",
         "vinegar",
         "vivant",
+        "weed",
         "white"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.76,
-      "description": "Salade bulgare fraîche et colorée, composée de tomates, concombre et poivron rouge, relevée d'un assaisonnement traditionnel à base d'huile d'olive et de vinaigre de vin blanc, avec une touche de fromage végétal râpé.",
+      "description": "Shopska végétale : les crudités classiques couvertes d'un tofu émietté mariné au citron, à l'aneth et au sel, qui imite la fraîcheur acidulée du sirene.",
       "instructions": [
-        "Étape 1 : Ciseler les tomates en dés de 1,5 cm pour une meilleure présentation.",
-        "Étape 2 : Ciseler le concombre en dés similaires, en conservant sa peau pour une texture plus intéressante.",
-        "Étape 3 : Émincer le poivron rouge en petits dés, puis finement hacher l'oignon rouge.",
-        "Étape 4 : Assembler les légumes dans un saladier, en les disposant de manière à créer une harmonie de couleurs.",
-        "Étape 5 : Assaisonner avec 45 ml d'huile d'olive, 30 ml de vinaigre de vin blanc, du sel et du poivre, en prenant soin de bien mélanger.",
-        "Étape 6 : Parsemer de 150 g de tofu ferme émietté (en remplacement du sirene) et servir frais."
+        "Étape 1 : Émietter 250 g de tofu ferme et le mélanger avec 20 ml de jus de citron, 8 g d'aneth ciselé, 10 ml d'huile d'olive et 2 g de sel. Laisser mariner 20 minutes.",
+        "Étape 2 : Couper 300 g de tomates, 300 g de concombre et 250 g de poivron en dés, émincer 80 g d'oignon rouge.",
+        "Étape 3 : Assaisonner les légumes avec 30 ml d'huile d'olive, 15 ml de vinaigre, 1 g de sel et 1 g de poivre.",
+        "Étape 4 : Dresser et couvrir du tofu mariné."
       ],
       "diet_flags": {
         "vegan": true,
@@ -139233,7 +139338,7 @@
       "id": "salad_shopska_04dd73",
       "titles": {
         "original": "Salade Shopska",
-        "fr": "Salade Shopska",
+        "fr": "Salade ovcharska du berger, œufs et champignons",
         "en": "Shopska Salad"
       },
       "origin": {
@@ -139244,10 +139349,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 15,
+        "prep_active_min": 20,
         "prep_passive_min": 0,
-        "cook_min": 0,
-        "total_min": 15
+        "cook_min": 15,
+        "total_min": 35
       },
       "composition": [
         {
@@ -139256,58 +139361,80 @@
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cucumber_raw_with_skin",
-          "quantity": 350,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "onion_raw",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "red_bell_pepper_raw",
-          "quantity": 320,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "strips",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "button_mushroom_raw",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "egg_raw",
+          "quantity": 220,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "feta",
-          "quantity": 150,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "crumbled",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -139322,14 +139449,25 @@
           "unit": "ml",
           "meta": {
             "role": "fruit",
-            "form": "juice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -139342,12 +139480,14 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free"
+          "vegetarian",
+          "gluten_free",
+          "nut_free"
         ],
         "allergens": [
+          "eggs",
           "lactose",
           "milk",
-          "mustard",
           "sulphites"
         ],
         "technique": [
@@ -139397,16 +139537,18 @@
         }
       },
       "search_tokens": [
-        "10 min",
-        "20 min",
-        "5 min",
+        "45 minutes",
         "assembly",
         "bell",
+        "berger,",
         "bulgarian",
+        "button",
+        "champignon",
+        "champignons",
         "coeliaque",
         "concombre",
         "cucumber",
-        "express",
+        "egg",
         "feta",
         "gluten free",
         "intermediaire",
@@ -139415,13 +139557,16 @@
         "low calorie",
         "minceur",
         "moyen",
+        "mushroom",
         "oignon",
         "olive",
         "onion",
+        "ovcharska",
+        "paris",
+        "parsley",
         "pepper",
+        "persil",
         "poivron",
-        "quick",
-        "rapide",
         "red",
         "rouge",
         "salad",
@@ -139438,21 +139583,21 @@
         "vin",
         "vinaigre",
         "vinegar",
-        "wine"
+        "wine",
+        "œuf",
+        "œufs"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.81,
-      "description": "Salade fraîche et croquante, préparée avec des tomates juteuses, des concombres rafraîchissants, des oignons émincés et des poivrons colorés, le tout lié par une vinaigrette crémeuse et relevée, issue de la tradition culinaire bulgare.",
+      "description": "Cousine plus copieuse de la shopska : tomates, concombre et poivron, champignons sautés, œufs durs et fromage de brebis, un vrai plat complet des tavernes bulgares.",
       "instructions": [
-        "Étape 1: Laver soigneusement les tomates, concombres, poivrons et oignons, puis les ciseler en morceaux réguliers d'environ 1 cm de côté pour obtenir une texture homogène.",
-        "Étape 2: Dans un grand saladier, mélanger délicatement les tomates, concombres, poivrons et oignons ciselés pour former une base de salade harmonieuse et visuellement attrayante.",
-        "Étape 3: Ajouter 150 grammes de feta émiettée, pour donner une touche crémeuse et onctueuse à la salade.",
-        "Étape 4: Préparer la vinaigrette en émulsionnant 45 millilitres d'huile d'olive, 20 millilitres de vinaigre de vin rouge et 2 grammes de sel dans un bol, en veillant à obtenir une consistance lisse et homogène.",
-        "Étape 5: Verser la vinaigrette sur la salade et mélanger délicatement, mais avec fermeté, pour que tous les ingrédients soient bien enrobés et que les saveurs se mélangent harmonieusement.",
-        "Étape 6: Goûter la salade et ajuster l'assaisonnement avant de servir, en ajoutant éventuellement un peu de sel ou de poivre pour parfaire les saveurs et obtenir l'équilibre désiré.",
-        "Étape 7: Servir sans attendre."
+        "Étape 1 : Cuire 4 œufs (220 g) 9 minutes à l'eau bouillante, les refroidir, les écaler et les couper en quartiers.",
+        "Étape 2 : Faire sauter 250 g de champignons émincés dans 10 ml d'huile d'olive, 6 minutes à feu vif, puis laisser tiédir.",
+        "Étape 3 : Couper 300 g de tomates, 250 g de concombre et 200 g de poivron en dés, émincer 80 g d'oignon.",
+        "Étape 4 : Mélanger les légumes et les champignons avec 30 ml d'huile d'olive, 20 ml de vinaigre de vin rouge et 1 g de sel.",
+        "Étape 5 : Dresser, disposer les œufs, puis couvrir de 120 g de fromage de brebis émietté et de 10 g de persil ciselé."
       ],
       "diet_flags": {
         "vegan": false,
@@ -139468,7 +139613,7 @@
       "id": "salad_shopska_vegan_001f9e",
       "titles": {
         "original": "Salade Shopska (Vegan)",
-        "fr": "Salade Shopska (Vegan)",
+        "fr": "Salade shopska aux haricots blancs et poivrons grillés (vegan)",
         "en": "Šopska Salata (Vegan)"
       },
       "origin": {
@@ -139479,10 +139624,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 15,
+        "prep_active_min": 20,
         "prep_passive_min": 0,
-        "cook_min": 0,
-        "total_min": 15
+        "cook_min": 15,
+        "total_min": 35
       },
       "composition": [
         {
@@ -139491,51 +139636,62 @@
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cucumber_raw_with_skin",
-          "quantity": 350,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "onion_raw",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "red_bell_pepper_raw",
-          "quantity": 320,
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "strips",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 150,
+          "ingredient": "onion_raw",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_bean_boiled",
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "crumbled",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -139557,7 +139713,7 @@
           "unit": "ml",
           "meta": {
             "role": "fruit",
-            "form": "juice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -139577,14 +139733,14 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "low_calorie",
-          "nut_free",
-          "raw"
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
-          "mustard",
-          "soy",
           "sulphites"
         ],
         "technique": [
@@ -139632,18 +139788,20 @@
       },
       "search_tokens": [
         "(vegan)",
-        "10 min",
-        "20 min",
-        "5 min",
+        "45 minutes",
+        "aux",
+        "bean",
         "bell",
+        "blanc",
+        "blancs",
         "bulgarian",
         "coeliaque",
         "concombre",
-        "cru",
-        "crudivorisme",
         "cucumber",
-        "express",
         "gluten free",
+        "grilles",
+        "haricot",
+        "haricots",
         "intermediaire",
         "leger",
         "light",
@@ -139653,10 +139811,11 @@
         "oignon",
         "olive",
         "onion",
+        "parsley",
         "pepper",
+        "persil",
         "poivron",
-        "quick",
-        "rapide",
+        "poivrons",
         "raw",
         "red",
         "rouge",
@@ -139670,7 +139829,6 @@
         "shopska",
         "sopska",
         "table",
-        "tofu",
         "tomate",
         "tomato",
         "vegan",
@@ -139679,7 +139837,7 @@
         "vin",
         "vinaigre",
         "vinegar",
-        "vivant",
+        "white",
         "wine"
       ],
       "difficulty_level": "medium",
@@ -139687,14 +139845,12 @@
       "servings_default": 4,
       "_quality_score": 0.81,
       "_chef_note": "Utilisez des ingrédients frais et de saison pour une meilleure saveur.",
-      "description": "Salade bulgare fraîche et colorée, composée de tomates coupées en dés, de concombres en dés similaires, d'oignon émincé et de poivron en petits dés réguliers, le tout relevé d'un assaisonnement traditionnel à base d'huile d'olive, de jus de citron, de sel et de moutarde de Dijon, et couronné de fromage végétal émietté.",
+      "description": "Version plat complet et végétale : poivrons grillés, haricots blancs, tomates, concombre et oignon, en vinaigrette au vin rouge et au persil.",
       "instructions": [
-        "Étape 1 : Couper 300g de tomates en dés de 1,5 cm, en veillant à ce qu'ils soient fermes et de couleur vive, et 350g de concombres en dés similaires, en retirant les graines pour une texture plus tendre.",
-        "Étape 2 : Émincer 150g d'oignon finement, et 320g de poivron en petits dés réguliers, en conservant la fraîcheur des couleurs.",
-        "Étape 3 : Assembler les légumes dans un saladier et assaisonner avec 45 ml d'huile d'olive, 20 ml de vinaigre de vin rouge et 3 g de sel, en mélangeant délicatement pour ne pas abîmer les légumes.",
-        "Étape 4 : Goûter pour ajuster l'assaisonnement si nécessaire, en vérifiant que les saveurs soient équilibrées et que les légumes soient bien enrobés de l'assaisonnement.",
-        "Étape 5 : Couvrir le dessus de la salade avec 150g de tofu ferme émietté, en le dispersant uniformément pour une présentation harmonieuse.",
-        "Étape 6 : Servir la salade fraîche sans attendre."
+        "Étape 1 : Griller 300 g de poivrons sous le gril du four, 15 minutes, les peler et les couper en lanières.",
+        "Étape 2 : Couper 300 g de tomates et 250 g de concombre en dés, émincer 80 g d'oignon et ciseler 15 g de persil.",
+        "Étape 3 : Rincer et égoutter 300 g de haricots blancs cuits.",
+        "Étape 4 : Mélanger le tout avec 45 ml d'huile d'olive, 20 ml de vinaigre de vin rouge et 3 g de sel, puis servir frais."
       ],
       "diet_flags": {
         "vegan": true,
@@ -139702,7 +139858,7 @@
         "gluten_free": true,
         "lactose_free": true,
         "nut_free": true,
-        "raw": true,
+        "raw": false,
         "kid_friendly": false
       }
     },
@@ -171654,7 +171810,7 @@
       "id": "wok_pad_krapow_vegetarien_565aa9",
       "titles": {
         "original": "Pad Krapow",
-        "fr": "Pad Krapow végétarien",
+        "fr": "Pad krapow aux haricots verts et champignons (vegan)",
         "en": "Vegetarian Pad Krapow"
       },
       "origin": {
@@ -171667,8 +171823,8 @@
       "timing": {
         "prep_active_min": 20,
         "prep_passive_min": 5,
-        "cook_min": 10,
-        "total_min": 35
+        "cook_min": 20,
+        "total_min": 45
       },
       "composition": [
         {
@@ -171677,47 +171833,69 @@
           "unit": "g",
           "meta": {
             "role": "protein",
-            "form": "cubed",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "french_bean_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "button_mushroom_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 10,
+          "quantity": 12,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "chilli_pepper_raw",
-          "quantity": 5,
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "chopped",
+            "form": "",
             "state": "pounded",
             "preparation": ""
           }
         },
         {
           "ingredient": "basil_fresh_herb",
-          "quantity": 20,
+          "quantity": 25,
           "unit": "g",
           "meta": {
             "role": "signature_flavor",
-            "form": "chiffonade",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "soy_sauce_shoyu_reduced_sodium",
-          "quantity": 25,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "umami_salty",
@@ -171750,10 +171928,21 @@
         },
         {
           "ingredient": "water",
-          "quantity": 30,
+          "quantity": 400,
           "unit": "ml",
           "meta": {
             "role": "light_binding",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_raw_seed_unenriched",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "carbohydrate",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -171764,7 +171953,9 @@
         "diet": [
           "diabetes_friendly",
           "high_protein",
-          "vegetarian"
+          "vegan",
+          "vegetarian",
+          "lactose_free"
         ],
         "allergens": [
           "gluten",
@@ -171822,31 +172013,44 @@
       "search_tokens": [
         "(arachide)",
         "(eau",
+        "(vegan)",
         "45 minutes",
         "ail",
         "asiatique",
+        "aux",
         "avance",
         "basil",
         "basilic",
+        "bean",
         "blanc",
+        "button",
         "cacahuete",
+        "champignon",
+        "champignons",
         "chef",
         "chilli",
         "complexe",
         "curry",
         "eau",
+        "french",
         "garlic",
+        "haricot",
+        "haricots",
         "krapow",
         "leger",
         "light",
         "low calorie",
         "minceur",
         "moyen",
+        "mushroom",
         "pad",
+        "paris",
         "peanut",
         "pepper",
         "piment",
         "potable)",
+        "rice",
+        "riz",
         "sans produit animal",
         "sans viande",
         "sauce",
@@ -171863,6 +172067,8 @@
         "vegetalien",
         "vegetarian",
         "vegetarien",
+        "vert",
+        "verts",
         "water",
         "white",
         "wok"
@@ -171871,13 +172077,14 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 1.0,
-      "description": "Sauté thaï au basilic sacré : technique wok à très haute température pour le wok hei, caramélisation éclair du tofu émietté, équilibre sucré-salé-pimenté intense, avec une touche de fumée et d'arôme de basilic",
+      "description": "Krapow végétal : tofu, haricots verts croquants et champignons sautés au wok avec ail, piment et basilic, servis sur un riz jasmin.",
       "instructions": [
-        "Étape 1 : Chauffer 25ml d'huile d'arachide dans un wok à feu vif jusqu'à obtenir une légère fumée. Ajouter 10g d'ail haché et 5g de piment thaï, et faire saisir pendant 30 secondes – l'ail doit blondir sans brûler.",
-        "Étape 2 : Ajouter 300g de tofu émietté et faire sauter à feu très vif pendant 3 minutes, jusqu'à obtenir une légère coloration dorée.",
-        "Étape 3 : Assaisonner avec 25ml de sauce soja et 8g de sucre. Mélanger pendant 30 secondes pour émulsionner les saveurs.",
-        "Étape 4 : Ajouter 30ml d'eau pour ajuster la consistance. Hors du feu, incorporer généreusement 20g de feuilles de basilic thaï – elles doivent flétrir dans la chaleur résiduelle sans cuire.",
-        "Étape 5 : Servir aussitôt sur du riz jasmin chaud, en veillant à ce que le plat soit bien équilibré et parfumé."
+        "Étape 1 : Rincer 250 g de riz et le cuire à couvert dans 370 ml d'eau, 12 minutes, puis le laisser reposer.",
+        "Étape 2 : Piler 12 g d'ail avec 6 g de piment.",
+        "Étape 3 : Émietter 300 g de tofu et le faire dorer dans 25 ml d'huile d'arachide à feu vif, 6 minutes.",
+        "Étape 4 : Ajouter la pâte ail-piment, 200 g de haricots verts en tronçons et 200 g de champignons émincés, puis sauter 4 minutes.",
+        "Étape 5 : Ajouter 30 ml de sauce soja, 8 g de sucre et 30 ml d'eau, sauter 1 minute, puis 25 g de basilic hors du feu.",
+        "Étape 6 : Servir sur le riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -172347,7 +172554,7 @@
       "id": "wok_thai_veg_eb92db",
       "titles": {
         "original": "Pad Thai",
-        "fr": "Pad thaï végétarien",
+        "fr": "Pad thaï de Bangkok au tofu et à l'œuf",
         "en": "Vegetarian Pad Thai"
       },
       "origin": {
@@ -172582,6 +172789,7 @@
         "ail",
         "asiatique",
         "avance",
+        "bangkok",
         "base_rice_noodle_831080",
         "bean",
         "cacahuete",
@@ -172596,6 +172804,7 @@
         "emulsion",
         "garlic",
         "haricot",
+        "l'œuf",
         "leger",
         "lent",
         "light",
@@ -172638,7 +172847,7 @@
       "servings_default": 4,
       "_quality_score": 0.97,
       "_chef_note": "Pour un résultat optimal, utilisez un wok très chaud et manipulez les ingrédients rapidement pour éviter qu'ils ne collent ou ne brûlent.",
-      "description": "Nouilles de riz sautées au wok avec tofu doré, sauce tamarin équilibrée et garnitures fraîches, offrant une texture croquante et une saveur umami intense, caractéristique de la cuisine thaïlandaise.",
+      "description": "Pad thaï de rue : nouilles de riz sautées au tamarin et au sucre de coco, tofu doré, œuf brouillé dans le wok, pousses de soja, cacahuètes et citron vert.",
       "instructions": [
         "Étape 1: Faire tremper les vermicelles de riz larges pendant 20 minutes dans l'eau froide jusqu'à ce qu'elles soient souples mais encore légèrement fermes. Égoutter et réserver.",
         "Étape 2: Presser le tofu ferme pendant 15 minutes pour en extraire l'excès d'humidité. Couper en cubes de 2 cm. Chauffer 25 ml d'huile d'arachide dans le wok à feu vif. Saisir le tofu sans remuer pendant 2 minutes jusqu'à coloration dorée, retourner, cuire encore 1 minute. Réserver sur du papier absorbant.",
@@ -173757,41 +173966,30 @@
       "id": "wrap_quesadillas_au_fromage_511e1a",
       "titles": {
         "original": "Quesadillas",
-        "fr": "Quesadillas au Fromage",
+        "fr": "Quesadillas de rajas au queso Chihuahua",
         "en": "Cheese Quesadillas"
       },
       "origin": {
         "cuisine": "mexican",
         "country": "mexico",
-        "region": "ciudad_de_mexico",
-        "city": "mexico"
+        "region": "chihuahua",
+        "city": ""
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
+        "prep_active_min": 20,
         "prep_passive_min": 0,
         "cook_min": 25,
-        "total_min": 36
+        "total_min": 45
       },
       "composition": [
         {
-          "ingredient": "yellow_onion_raw",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "red_bell_pepper_raw",
+          "ingredient": "base_tortilla_92c2a6",
           "quantity": 320,
           "unit": "g",
           "meta": {
-            "role": "vegetable",
-            "form": "strips",
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -173802,25 +174000,58 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "base_tortilla_92c2a6",
-          "quantity": 320,
+          "ingredient": "red_bell_pepper_raw",
+          "quantity": 200,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "whole",
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_bell_pepper_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yellow_onion_raw",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "quantity": 35,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -173841,31 +174072,22 @@
           }
         },
         {
-          "ingredient": "coriander",
-          "quantity": null,
-          "unit": "1 poignée",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "coriandre fraîche ciselée",
-            "note": "Ajoute une touche de fraîcheur",
-            "optional": true
-          }
-        },
-        {
           "ingredient": "lime",
           "quantity": null,
           "unit": "1/2",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "citron vert",
-            "note": "Pour un peu d'acidité",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
       "tags": {
         "diet": [
-          "gluten_free"
+          "vegetarian",
+          "gluten_free",
+          "nut_free"
         ],
         "allergens": [
           "lactose",
@@ -173921,19 +174143,15 @@
         "bell",
         "cheese",
         "chihuahua",
+        "chilli",
         "coeliaque",
-        "coriander",
         "debutant",
         "easy",
-        "enfants",
         "epice",
         "facile",
-        "facile enfants",
-        "famille",
-        "fromage",
         "gluten free",
+        "green",
         "jaune",
-        "kids",
         "latino",
         "leger",
         "light",
@@ -173948,9 +174166,11 @@
         "olive",
         "onion",
         "pepper",
+        "piment",
         "poivron",
         "quesadillas",
         "queso",
+        "rajas",
         "red",
         "rouge",
         "salt",
@@ -173960,6 +174180,7 @@
         "simple",
         "table",
         "vegetarien",
+        "vert",
         "wok",
         "yellow"
       ],
@@ -173967,14 +174188,13 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.91,
-      "description": "Quesadillas végétariennes croustillantes, remplies d'oignon jaune cuit et de poivron rouge, avec un fromage parmesan fondu et crémeux, servies chaudes avec une touche de fraîcheur.",
+      "description": "Quesadillas du nord du Mexique : lanières de poivrons grillés et de piment vert (rajas) revenues avec l'oignon, et queso Chihuahua fondant.",
       "instructions": [
-        "Étape 1 : Faire revenir l'oignon émincé et le poivron en lanières dans 25 ml d'huile d'olive, 7 minutes à feu moyen, puis réserver.",
-        "Étape 2 : Essuyer la poêle et la badigeonner d'un peu des 20 ml d'huile restants.",
-        "Étape 3 : Placer une tortilla dans la poêle et parsemer une moitié d'un quart des 150 g de fromage râpé et des légumes.",
-        "Étape 4 : Replier la tortilla en demi-lune et cuire 2 minutes, jusqu'à ce que le dessous soit doré.",
-        "Étape 5 : Retourner et cuire encore 2 minutes, jusqu'à ce que le fromage soit fondu. Répéter avec les autres tortillas.",
-        "Étape 6 : Couper en triangles et servir aussitôt, avec des quartiers de citron vert."
+        "Étape 1 : Préparer la garniture : griller 200 g de poivron rouge et 150 g de poivron vert, les peler et les couper en lanières, puis les faire revenir 5 minutes avec 120 g d'oignon émincé et 10 g de piment vert dans 20 ml d'huile d'olive et 1 g de sel.",
+        "Étape 2 : Chauffer une poêle à feu moyen et la badigeonner d'un peu des 15 ml d'huile restants.",
+        "Étape 3 : Poser une tortilla, garnir une moitié d'un quart de la garniture et de 150 g de queso Chihuahua râpé, puis replier en demi-lune.",
+        "Étape 4 : Cuire 2 à 3 minutes de chaque côté, jusqu'à ce que la tortilla soit dorée et la garniture chaude. Répéter avec les autres tortillas.",
+        "Étape 5 : Couper en triangles et servir aussitôt."
       ],
       "diet_flags": {
         "vegan": false,
@@ -173983,14 +174203,14 @@
         "lactose_free": false,
         "nut_free": true,
         "raw": false,
-        "kid_friendly": true
+        "kid_friendly": false
       }
     },
     {
       "id": "wrap_quesadillas_au_fromage_ve_9794c7",
       "titles": {
         "original": "Quesadillas (Vegan)",
-        "fr": "Quesadillas au Fromage (Vegan)",
+        "fr": "Quesadillas aux haricots noirs et cheddar végétal (vegan)",
         "en": "Quesadillas (Vegan)"
       },
       "origin": {
@@ -174001,59 +174221,81 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 17,
-        "total_min": 28
+        "cook_min": 25,
+        "total_min": 40
       },
       "composition": [
-        {
-          "ingredient": "yellow_onion_raw",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "red_bell_pepper_raw",
-          "quantity": 320,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "strips",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "base_vegan_cheddar_024998",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "grated",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
         {
           "ingredient": "base_tortilla_92c2a6",
           "quantity": 320,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_bean_boiled",
+          "quantity": 240,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "base_vegan_cheddar_024998",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_bell_pepper_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yellow_onion_raw",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "vegetable_oil_plant",
-          "quantity": 45,
+          "quantity": 35,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -174077,8 +174319,10 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "kid_friendly",
+          "vegan",
+          "vegetarian",
+          "gluten_free",
           "lactose_free"
         ],
         "allergens": [
@@ -174126,11 +174370,16 @@
       },
       "search_tokens": [
         "(vegan)",
-        "30 minutes",
+        "45 minutes",
+        "aux",
         "base_tortilla_92c2a6",
         "base_vegan_cheddar_024998",
+        "bean",
         "bell",
+        "black",
+        "cheddar",
         "coeliaque",
+        "cumin",
         "debutant",
         "easy",
         "enfants",
@@ -174138,8 +174387,9 @@
         "facile",
         "facile enfants",
         "famille",
-        "fromage",
         "gluten free",
+        "haricot",
+        "haricots",
         "huile",
         "jaune",
         "kids",
@@ -174151,14 +174401,15 @@
         "mexican",
         "mexique",
         "minceur",
+        "moyen",
+        "noir",
+        "noirs",
         "oignon",
         "oil",
         "onion",
         "pepper",
         "poivron",
         "quesadillas",
-        "quick",
-        "rapide",
         "red",
         "rouge",
         "salt",
@@ -174171,6 +174422,7 @@
         "table",
         "vegan",
         "vegetable",
+        "vegetal",
         "vegetale",
         "vegetalien",
         "vegetarien",
@@ -174180,15 +174432,13 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.94,
-      "description": "Quesadillas mexicaines croustillantes, avec une texture al dente, garnies d'oignon caramélisé, de poivron croquant et de fromage végétal fondu, issus de la tradition culinaire mexicaine.",
+      "description": "Quesadillas vegan garnies de haricots noirs écrasés au cumin, poivrons et oignon revenus, et de cheddar végétal maison qui fond à la cuisson.",
       "instructions": [
-        "Étape 1 : Faire chauffer 45 ml d'huile végétale dans une poêle à feu moyen. Faire revenir les 150 g d'oignon jaune émincé et les 320 g de poivrons rouges en lanières pendant 7 minutes jusqu'à ce qu'ils soient fondants et légèrement caramélisés, avec une odeur de légumes grillés.",
-        "Étape 2 : Essuyer la poêle et la chauffer à feu moyen sans matière grasse. Placer une tortilla dans la poêle, en veillant à ce qu'elle soit bien chaude et légèrement croustillante à la base.",
-        "Étape 3 : Parsemer la moitié de la tortilla de 75 g de fromage végétal râpé, répartir une portion de légumes cuits, puis rabattre l'autre moitié de la tortilla sur la garniture, en pressant légèrement pour éviter les bulles d'air.",
-        "Étape 4 : Cuire pendant 2 à 3 minutes jusqu'à ce que la face inférieure soit dorée et croustillante, avec un son de friture, et que le fromage commence à fondre, en vérifiant la texture de la tortilla pour éviter qu'elle ne brûle.",
-        "Étape 5 : Retourner délicatement et cuire encore 2 minutes jusqu'à dorure uniforme et fromage entièrement fondu, en vérifiant que la tortilla est croustillante et le fromage filant.",
-        "Étape 6 : Retirer de la poêle et laisser reposer 1 minute avant de découper en 3 triangles, pour permettre au fromage de se figer légèrement et à la tortilla de rester croustillante. Répéter pour les autres tortillas.",
-        "Étape 7 : Servir sans attendre, pour conserver la texture croustillante de la tortilla et le fromage filant."
+        "Étape 1 : Préparer la garniture : faire revenir 120 g d'oignon et 200 g de poivron émincés dans 20 ml d'huile, 7 minutes, puis ajouter 240 g de haricots noirs, 2 g de cumin et 2 g de sel et les écraser grossièrement.",
+        "Étape 2 : Chauffer une poêle à feu moyen et la badigeonner d'un peu des 15 ml d'huile restants.",
+        "Étape 3 : Poser une tortilla, garnir une moitié d'un quart de la garniture et de 120 g de cheddar végétal râpé, puis replier en demi-lune.",
+        "Étape 4 : Cuire 2 à 3 minutes de chaque côté, jusqu'à ce que la tortilla soit dorée et la garniture chaude. Répéter avec les autres tortillas.",
+        "Étape 5 : Couper en triangles et servir aussitôt."
       ],
       "diet_flags": {
         "vegan": true,
@@ -174204,7 +174454,7 @@
       "id": "wrap_quesadillas_c8edf2",
       "titles": {
         "original": "Quesadillas",
-        "fr": "Quesadillas",
+        "fr": "Quesadillas aux champignons et au chèvre frais, pico de gallo",
         "en": "Quesadillas"
       },
       "origin": {
@@ -174215,59 +174465,114 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
+        "prep_active_min": 20,
         "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 31
+        "cook_min": 25,
+        "total_min": 45
       },
       "composition": [
-        {
-          "ingredient": "yellow_onion_raw",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "fruit",
-            "form": "roughly_chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "goat_cheese_fresh",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "grated",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
         {
           "ingredient": "base_tortilla_92c2a6",
           "quantity": 320,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "button_mushroom_raw",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "goat_cheese_fresh",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yellow_onion_raw",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "fruit",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "quantity": 35,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -174312,7 +174617,9 @@
       ],
       "tags": {
         "diet": [
-          "gluten_free"
+          "vegetarian",
+          "gluten_free",
+          "nut_free"
         ],
         "allergens": [
           "lactose",
@@ -174364,12 +174671,19 @@
       },
       "search_tokens": [
         "45 minutes",
-        "base_pate_piment_b6904a",
+        "ail",
+        "aux",
         "base_tortilla_92c2a6",
+        "button",
+        "champignon",
+        "champignons",
         "cheese,",
         "chevre",
+        "chilli",
+        "citron",
         "coeliaque",
         "coriander",
+        "coriandre",
         "debutant",
         "easy",
         "enfants",
@@ -174377,8 +174691,11 @@
         "facile",
         "facile enfants",
         "famille",
+        "frais,",
         "fresh",
         "fromage",
+        "gallo",
+        "garlic",
         "gluten free",
         "goat",
         "jaune",
@@ -174386,15 +174703,21 @@
         "latino",
         "leger",
         "light",
+        "lime",
         "low calorie",
         "mexicain",
         "mexican",
         "mexique",
         "minceur",
         "moyen",
+        "mushroom",
         "oignon",
         "olive",
         "onion",
+        "paris",
+        "pepper",
+        "pico",
+        "piment",
         "quesadillas",
         "salt",
         "sans gluten",
@@ -174405,6 +174728,7 @@
         "tomate",
         "tomato",
         "vegetarien",
+        "vert",
         "wok",
         "yellow"
       ],
@@ -174412,13 +174736,14 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.91,
-      "description": "Quesadillas mexicaines végétariennes, où la texture croustillante des tortillas donne way à une garniture onctueuse d'oignon et de tomate, cuite à la perfection dans une poêle antiadhésive.",
+      "description": "Quesadillas de Mexico garnies de champignons sautés à l'ail et au piment, de chèvre frais, servies avec une pico de gallo à la tomate et à la coriandre.",
       "instructions": [
-        "Étape 1 : Faire revenir l'oignon émincé dans 25 ml d'huile d'olive 5 minutes à feu moyen, ajouter 150 g de tomates en dés égouttées et cuire 3 minutes.",
-        "Étape 2 : Émietter 150 g de fromage de chèvre frais.",
-        "Étape 3 : Répartir la garniture et le chèvre sur une moitié de chaque tortilla, puis la replier.",
-        "Étape 4 : Cuire les quesadillas 2 minutes de chaque côté dans une poêle badigeonnée des 20 ml d'huile restants, jusqu'à ce qu'elles soient dorées.",
-        "Étape 5 : Saler légèrement (2 g), couper en triangles et servir aussitôt."
+        "Étape 1 : Pico de gallo : mélanger 200 g de tomates en petits dés, 40 g d'oignon ciselé, 10 g de coriandre, 3 g de piment haché, 10 ml de jus de citron vert et 1 g de sel.",
+        "Étape 2 : Préparer la garniture : faire sauter 250 g de champignons émincés avec 80 g d'oignon, 6 g d'ail et 3 g de piment dans 20 ml d'huile d'olive, 7 minutes, puis saler avec 1 g de sel.",
+        "Étape 3 : Chauffer une poêle à feu moyen et la badigeonner d'un peu des 15 ml d'huile restants.",
+        "Étape 4 : Poser une tortilla, garnir une moitié d'un quart de la garniture et de 120 g de chèvre frais émietté, puis replier en demi-lune.",
+        "Étape 5 : Cuire 2 à 3 minutes de chaque côté, jusqu'à ce que la tortilla soit dorée et la garniture chaude. Répéter avec les autres tortillas.",
+        "Étape 6 : Couper en triangles et servir avec la pico de gallo."
       ],
       "diet_flags": {
         "vegan": false,
@@ -174434,7 +174759,7 @@
       "id": "wrap_quesadillas_vegan_f68baa",
       "titles": {
         "original": "Quesadillas (Vegan)",
-        "fr": "Quesadillas (Vegan)",
+        "fr": "Quesadillas patate douce, maïs et cheddar végétal (vegan)",
         "en": "Quesadillas Végétariennes (Vegan)"
       },
       "origin": {
@@ -174445,19 +174770,63 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
-        "prep_passive_min": 10,
-        "cook_min": 20,
-        "total_min": 41
+        "prep_active_min": 15,
+        "prep_passive_min": 0,
+        "cook_min": 30,
+        "total_min": 45
       },
       "composition": [
         {
-          "ingredient": "yellow_onion_raw",
+          "ingredient": "base_tortilla_92c2a6",
+          "quantity": 320,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sweet_potato_raw",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sweet_corn_canned",
           "quantity": 150,
           "unit": "g",
           "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "base_vegan_cheddar_024998",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yellow_onion_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -174468,29 +174837,18 @@
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "base_vegan_cheddar_024998",
-          "quantity": 150,
+          "ingredient": "paprika",
+          "quantity": 2,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "grated",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "base_tortilla_92c2a6",
-          "quantity": 320,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "whole",
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -174523,17 +174881,19 @@
           "unit": "1 poignée",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "coriandre fraîche ciselée",
-            "note": "Pour ajouter une touche de fraîcheur",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "kid_friendly",
+          "vegan",
+          "vegetarian",
+          "gluten_free",
           "lactose_free"
         ],
         "allergens": [
@@ -174585,9 +174945,14 @@
         "45 minutes",
         "base_tortilla_92c2a6",
         "base_vegan_cheddar_024998",
+        "cheddar",
         "coeliaque",
         "coriander",
+        "corn",
         "debutant",
+        "douce",
+        "douce,",
+        "doux",
         "easy",
         "enfants",
         "epice",
@@ -174601,6 +174966,7 @@
         "leger",
         "light",
         "low calorie",
+        "mais",
         "mexicain",
         "mexican",
         "mexique",
@@ -174609,6 +174975,9 @@
         "oignon",
         "olive",
         "onion",
+        "paprika",
+        "patate",
+        "potato",
         "quesadillas",
         "salt",
         "sans gluten",
@@ -174617,10 +174986,12 @@
         "sauteed",
         "sel",
         "simple",
+        "sweet",
         "table",
         "tomate",
         "tomato",
         "vegan",
+        "vegetal",
         "vegetalien",
         "vegetarien",
         "vegetariennes",
@@ -174631,13 +175002,13 @@
       "servings_default": 4,
       "_quality_score": 0.87,
       "_chef_note": "Ajustez la quantité de sel et d'huile selon vos préférences personnelles.",
-      "description": "Quesadillas croustillantes et dorées, remplies d'un mélange d'oignon jaune caramélisé, tomates fraîches et fromage végétal râpé, servies chaudes avec une touche de sel et une texture ferme mais non rigide.",
+      "description": "Quesadillas végétales à la purée de patate douce rôtie au paprika, maïs doux, tomate et cheddar végétal, dorées à la poêle.",
       "instructions": [
-        "Étape 1 : Faire chauffer 15 ml d'huile d'olive dans une poêle à feu moyen, faire revenir l'oignon émincé 5 minutes, ajouter 150 g de tomates en dés et cuire 3 minutes.",
-        "Étape 2 : Mélanger les légumes avec 150 g de fromage végétal râpé.",
-        "Étape 3 : Répartir la garniture sur une moitié de chaque tortilla (320 g au total), puis la replier.",
-        "Étape 4 : Cuire 2 minutes de chaque côté dans la poêle badigeonnée des 15 ml d'huile restants, jusqu'à ce que la tortilla soit dorée.",
-        "Étape 5 : Saler (2 g), couper en triangles et servir aussitôt."
+        "Étape 1 : Préparer la garniture : cuire 300 g de patate douce en cubes à la vapeur 12 minutes et l'écraser avec 2 g de paprika et 2 g de sel ; faire revenir 100 g d'oignon dans 15 ml d'huile d'olive, puis ajouter 150 g de tomates en dés égouttées et 150 g de maïs.",
+        "Étape 2 : Chauffer une poêle à feu moyen et la badigeonner d'un peu des 15 ml d'huile restants.",
+        "Étape 3 : Poser une tortilla, garnir une moitié d'un quart de la garniture et de 120 g de cheddar végétal râpé, puis replier en demi-lune.",
+        "Étape 4 : Cuire 2 à 3 minutes de chaque côté, jusqu'à ce que la tortilla soit dorée et la garniture chaude. Répéter avec les autres tortillas.",
+        "Étape 5 : Couper en triangles et servir aussitôt."
       ],
       "diet_flags": {
         "vegan": true,

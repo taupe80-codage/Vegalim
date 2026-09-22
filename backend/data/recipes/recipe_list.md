@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 159 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 145 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -71,8 +71,6 @@
 - **Bruschetta Tomate Basilic** _(kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, italian)_ — `entry_bruschetta_tomate_basilic_715b9b`
 - **Buddha Bowl** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, japanese)_ — `dal_buddha_bowl_4ffca3`
 - **Buddha's Delight** _(diabetes_friendly, high_protein, vegan, vegetarian, main, chinese)_ — `protein_buddhas_delight_f736c7`
-- **Bulgarian Shopska Salad** _(diabetes_friendly, gluten_free, starter, bulgarian)_ — `main_bulgarian_shopska_salad_d473eb` 🔁 doublon possible : Bulgarian Shopska Salad (Vegan)
-- **Bulgarian Shopska Salad (Vegan)** _(diabetes_friendly, gluten_free, low_calorie, nut_free, raw, main, bulgarian)_ — `salad_bulgarian_shopska_salad_v_adc716` 🔁 doublon possible : Bulgarian Shopska Salad
 - **Bulgogi Tofu** _(diabetes_friendly, high_protein, vegan, vegetarian, side, korean)_ — `protein_bulgogi_tofu_fc5de9`
 - **Bun** _(high_protein, vegan, vegetarian, main, vietnamese)_ — `protein_bun_f5c7db`
 - **Bun Cha** _(diabetes_friendly, high_protein, vegan, vegetarian, main, vietnamese)_ — `rice_bun_cha_e5c855`
@@ -217,16 +215,16 @@
 
 - **Gado‑gado Indonésien** _(high_protein, main, indonesian)_ — `protein_gadogado_indonesien_200c65` 🔁 doublon possible : Gado‑gado Indonésien (Vegan)
 - **Gado‑gado Indonésien (Vegan)** _(high_protein, lactose_free, main, indonesian)_ — `salad_gadogado_indonesien_vegan_e4cd75` 🔁 doublon possible : Gado‑gado Indonésien
-- **Galette de Sarrasin** _(vegetarian, gluten_free, bread, french)_ — `bread_buckwheat_crepe_03db22` 🔁 doublon possible : Galette Sarrasin Champignons
+- **Galette complète forestière, œuf, gruyère et champignons** _(gluten_free, kid_friendly, nut_free, main, french_breton)_ — `main_galettes_sarrasin_ce9f40`
+- **Galette de sarrasin aux champignons à l'ail et au thym (vegan)** _(kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, french)_ — `brkf_galette_sarrasin_champign_f6a798`
 - **Galette de Teff** _(gluten_free, vegetarian, main, ethiopian)_ — `crepe_galette_de_teff_a1a8d3`
 - **Galette des Rois Briochée** _(kid_friendly, nut_free, dessert, french_southern)_ — `dessert_galette_des_rois_briochee_6f0909`
-- **Galette Sarrasin Champignons** _(kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, french)_ — `brkf_galette_sarrasin_champign_f6a798` 🔁 doublon possible : Galette de Sarrasin
 - **Galettes aux Oignons Verts** _(side, international)_ — `egg_galettes_aux_oignons_verts_ff5328`
+- **Galettes de blé noir bretonnes, pâte à l'eau** _(vegetarian, gluten_free, nut_free, bread, french_breton)_ — `bread_buckwheat_crepe_03db22`
 - **Galettes de courgette** _(vegetarian, starter, mediterranean)_ — `crepe_galettes_de_courgette_ult_669679`
 - **Galettes de Pois Chiches** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, international)_ — `dal_galettes_de_pois_chiches_db4c7a`
 - **Galettes de Pommes de Terre Suédoises** _(main, swedish)_ — `egg_galettes_de_pommes_de_terre_su_0d7814` 🔁 doublon possible : Galettes de Pommes de Terre Tchèques
 - **Galettes de Pommes de Terre Tchèques** _(main, czech)_ — `egg_galettes_de_pommes_de_terre_tc_4f360c` 🔁 doublon possible : Galettes de Pommes de Terre Suédoises
-- **Galettes Sarrasin** _(gluten_free, kid_friendly, nut_free, main, french_breton)_ — `main_galettes_sarrasin_ce9f40`
 - **Garbure Gasconne** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, main, french_gascon)_ — `main_garbure_gasconne_545667`
 - **Gaspacho de Melon à la Menthe** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, french)_ — `entry_gaspacho_de_melon_menthe_ee9907`
 - **Gaspacho Provençal** _(gluten_free, kid_friendly, lactose_free, nut_free, raw, vegan, vegetarian, soup, french_mediterranean)_ — `soup_gaspacho_provencal_f69228`
@@ -426,12 +424,12 @@
 
 ## P
 
-- **Pad Krapow** _(diabetes_friendly, high_protein, main, thai)_ — `rice_pad_krapow_63acfb` 🔁 doublon possible : Pad Krapow végétarien
-- **Pad Krapow végétarien** _(diabetes_friendly, high_protein, vegetarian, main, thai)_ — `wok_pad_krapow_vegetarien_565aa9` 🔁 doublon possible : Pad Krapow
-- **Pad See Ew (Vegan)** _(diabetes_friendly, high_protein, lactose_free, nut_free, main, thai)_ — `noodle_pad_see_ew_vegan_162330`
-- **Pad See Ew maîtrisé** _(high_protein, main, thai)_ — `noodle_pad_see_ew_classic_v3_n8x4p2`
-- **Pad Thai (Vegan)** _(diabetes_friendly, high_protein, lactose_free, main, thai)_ — `protein_pad_thai_vegan_33c0f3` 🔁 doublon possible : Pad thaï végétarien
-- **Pad thaï végétarien** _(high_protein, main, thai)_ — `wok_thai_veg_eb92db` 🔁 doublon possible : Pad Thai (Vegan)
+- **Pad kee mao, nouilles ivres au basilic (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, main, thai)_ — `noodle_pad_see_ew_vegan_162330`
+- **Pad krapow au tofu, riz jasmin et œuf frit** _(diabetes_friendly, high_protein, main, thai)_ — `rice_pad_krapow_63acfb`
+- **Pad krapow aux haricots verts et champignons (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, main, thai)_ — `wok_pad_krapow_vegetarien_565aa9`
+- **Pad see ew au brocoli chinois, tofu et œuf** _(high_protein, main, thai)_ — `noodle_pad_see_ew_classic_v3_n8x4p2`
+- **Pad thaï aux légumes croquants (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, main, thai)_ — `protein_pad_thai_vegan_33c0f3`
+- **Pad thaï de Bangkok au tofu et à l'œuf** _(high_protein, main, thai)_ — `wok_thai_veg_eb92db`
 - **Paella végétarienne traditionnelle** _(gluten_free, vegan, vegetarian, main, spanish)_ — `rice_paella_veg_c7m3x1`
 - **Pain au Fromage Brésilien** _(diabetes_friendly, gluten_free, high_protein, main, brazilian)_ — `egg_pain_au_fromage_bresilien_603bf5`
 - **Pain aux Bananes Vegan** _(kid_friendly, lactose_free, vegan, vegetarian, breakfast, american)_ — `brkf_pain_aux_bananes_vegan_b85f00`
@@ -549,10 +547,10 @@
 ## Q
 
 - **Quenelles de Pain** _(diabetes_friendly, high_protein, main, german)_ — `bread_quenelles_de_pain_813118`
-- **Quesadillas** _(gluten_free, main, mexican)_ — `wrap_quesadillas_c8edf2` 🔁 doublon possible : Quesadillas (Vegan)
-- **Quesadillas (Vegan)** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, main, mexican)_ — `wrap_quesadillas_vegan_f68baa` 🔁 doublon possible : Quesadillas
-- **Quesadillas au Fromage** _(gluten_free, main, mexican)_ — `wrap_quesadillas_au_fromage_511e1a` 🔁 doublon possible : Quesadillas au Fromage (Vegan)
-- **Quesadillas au Fromage (Vegan)** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, main, mexican)_ — `wrap_quesadillas_au_fromage_ve_9794c7` 🔁 doublon possible : Quesadillas au Fromage
+- **Quesadillas aux champignons et au chèvre frais, pico de gallo** _(vegetarian, gluten_free, nut_free, main, mexican)_ — `wrap_quesadillas_c8edf2`
+- **Quesadillas aux haricots noirs et cheddar végétal (vegan)** _(diabetes_friendly, kid_friendly, vegan, vegetarian, gluten_free, lactose_free, main, mexican)_ — `wrap_quesadillas_au_fromage_ve_9794c7`
+- **Quesadillas de rajas au queso Chihuahua** _(vegetarian, gluten_free, nut_free, main, mexican)_ — `wrap_quesadillas_au_fromage_511e1a`
+- **Quesadillas patate douce, maïs et cheddar végétal (vegan)** _(diabetes_friendly, kid_friendly, vegan, vegetarian, gluten_free, lactose_free, main, mexican)_ — `wrap_quesadillas_vegan_f68baa`
 - **Quiche aux légumes du soleil et au parmesan** _(vegetarian, nut_free, main, french)_ — `tarte_quiche_vegetarienne_b849b0`
 - **Quiche aux oignons confits et au chèvre frais** _(diabetes_friendly, high_protein, main, french)_ — `egg_quiche_lorraine_vegetarienne_77343c`
 
@@ -640,8 +638,10 @@
 - **Salade Mexicaine aux Haricots** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, mexican)_ — `salad_mexicaine_aux_haricots_949e62`
 - **Salade Mâche aux Noix** _(gluten_free, raw, vegetarian, side, french)_ — `salad_salade_mache_aux_noix_081567`
 - **Salade Niçoise** _(diabetes_friendly, gluten_free, high_protein, main, french)_ — `salad_nicoise_3b123f`
-- **Salade Shopska** _(diabetes_friendly, gluten_free, main, bulgarian)_ — `salad_shopska_04dd73` 🔁 doublon possible : Salade Shopska (Vegan)
-- **Salade Shopska (Vegan)** _(diabetes_friendly, gluten_free, low_calorie, nut_free, raw, main, bulgarian)_ — `salad_shopska_vegan_001f9e` 🔁 doublon possible : Salade Shopska
+- **Salade ovcharska du berger, œufs et champignons** _(diabetes_friendly, vegetarian, gluten_free, nut_free, main, bulgarian)_ — `salad_shopska_04dd73`
+- **Salade shopska au tofu mariné à l'aneth (vegan)** _(diabetes_friendly, low_calorie, raw, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, bulgarian)_ — `salad_bulgarian_shopska_salad_v_adc716`
+- **Salade shopska aux haricots blancs et poivrons grillés (vegan)** _(diabetes_friendly, low_calorie, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, bulgarian)_ — `salad_shopska_vegan_001f9e`
+- **Salade shopska de Sofia au sirene** _(diabetes_friendly, vegetarian, gluten_free, nut_free, starter, bulgarian)_ — `main_bulgarian_shopska_salad_d473eb`
 - **Salade Turque Çoban** _(diabetes_friendly, gluten_free, vegan, vegetarian, side, turkish)_ — `salad_turque_coban_cdd8c4`
 - **Salmorejo** _(high_protein, vegetarian, main, international)_ — `bread_salmorejo_a156e9` 🔁 doublon possible : Salmorejo (Vegan)
 - **Salmorejo (Vegan)** _(diabetes_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, spanish)_ — `entry_salmorejo_vegan_d0b7f7` 🔁 doublon possible : Salmorejo
