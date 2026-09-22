@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 175 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 171 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -24,6 +24,7 @@
 ## B
 
 - **Baba ganoush** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, starter, levantine)_ — `dip_baba_ghanoush_dbd030`
+- **Baek sundubu, ragoût de tofu soyeux doux** _(diabetes_friendly, high_protein, vegetarian, lactose_free, nut_free, main, korean)_ — `egg_sundubu_jjigae_bc21e0`
 - **Bagel Fromage Frais Concombre** _(kid_friendly, nut_free, breakfast, american)_ — `brkf_bagel_fromage_frais_conco_e69b68`
 - **Baingan Bharta** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, indian)_ — `main_baingan_bharta_b5f900`
 - **Baked Ziti** _(high_protein, main, italian)_ — `main_baked_ziti_b9e13e` 🔁 doublon possible : Baked Ziti (Vegan)
@@ -172,9 +173,9 @@
 
 ## E
 
-- **Empanadas** _(diabetes_friendly, high_protein, snack, argentinian)_ — `snack_empanadas_974cf2`
-- **Empanadas au Fromage** _(diabetes_friendly, high_protein, snack, argentinian)_ — `snack_empanadas_au_fromage_466bc4` 🔁 doublon possible : Empanadas au Fromage (Vegan)
-- **Empanadas au Fromage (Vegan)** _(high_protein, vegan, lactose_free, snack, latin_american)_ — `snack_empanadas_au_fromage_vega_79575a` 🔁 doublon possible : Empanadas au Fromage
+- **Empanadas fromage-oignon de Buenos Aires** _(diabetes_friendly, high_protein, snack, argentinian)_ — `snack_empanadas_au_fromage_466bc4`
+- **Empanadas salteñas humita, maïs et fromage frais** _(diabetes_friendly, high_protein, snack, argentinian)_ — `snack_empanadas_974cf2`
+- **Empanadas vegan à l'oignon caramélisé et au cheddar végétal** _(high_protein, vegan, lactose_free, snack, argentinian)_ — `snack_empanadas_au_fromage_vega_79575a`
 - **Enchiladas** _(gluten_free, high_protein, main, mexican)_ — `bread_enchiladas_fe7221` 🔁 doublon possible : Enchiladas (Vegan)
 - **Enchiladas (Vegan)** _(diabetes_friendly, gluten_free, high_protein, lactose_free, main, mexican)_ — `wrap_enchiladas_vegan_f70bca` 🔁 doublon possible : Enchiladas
 - **Endives au Gratin** _(kid_friendly, nut_free, main, french_nordic)_ — `main_endives_au_gratin_6b58ee`
@@ -323,6 +324,7 @@
 - **Kimchi** _(vegan, vegetarian, side, korean)_ — `main_kimchi_1dc648` 🔁 doublon possible : Kimchi (base)
 - **Kimchi (base)** _(vegan, vegetarian, gluten_free, condiment, korean)_ — `base_kimchi_61791a` 🔁 doublon possible : Kimchi
 - **Kimchi Bokkeumbap** _(main, korean)_ — `rice_kimchi_bokkeumbap_2cbfe6`
+- **Kimchi sundubu jjigae épicé** _(diabetes_friendly, high_protein, vegetarian, gluten_free, lactose_free, nut_free, main, korean)_ — `stew_sundubu_tofu_stew_ebe50e`
 - **Kombucha** _(vegan, gluten_free, lactose_free, beverage, chinese)_ — `beverage_kombucha_3df24c`
 - **Korma de Légumes** _(diabetes_friendly, gluten_free, vegetarian, main, indian)_ — `main_korma_de_legumes_ddde08`
 - **Koshari de fête à la shatta** _(high_protein, vegan, vegetarian, lactose_free, nut_free, main, egyptian)_ — `main_koshari_classic_v4_q7n5z2`
@@ -371,6 +373,8 @@
 - **Mexican Enfrijoladas (Vegan)** _(diabetes_friendly, gluten_free, high_protein, lactose_free, main, mexican)_ — `main_mexican_enfrijoladas_vega_d6a9a8` 🔁 doublon possible : Mexican Enfrijoladas
 - **Mexican Rice** _(gluten_free, vegan, vegetarian, main, mexican)_ — `rice_mexican_rice_94bd67`
 - **Migas Portugaises** _(diabetes_friendly, vegetarian, main, portuguese)_ — `bread_migas_portugaises_76818b`
+- **Minestrone d'hiver milanais au riz et chou de Milan** _(diabetes_friendly, vegetarian, gluten_free, nut_free, soup, italian)_ — `soup_minestrone_italienne_f98e05`
+- **Minestrone d'été alla genovese, au basilic** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, nut_free, soup, italian)_ — `soup_minestrone_9116a2`
 - **Mirza Ghasemi** _(diabetes_friendly, gluten_free, high_protein, main, persian)_ — `egg_mirza_ghasemi_454e24`
 - **Mochi Matcha** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, dessert, japanese)_ — `dessert_mochi_matcha_7bf558`
 - **Momos aux Légumes** _(vegan, vegetarian, main, ethiopian)_ — `dumpling_momos_aux_legumes_0adb23`
@@ -457,7 +461,6 @@
 - **Pasta Alla Norma** _(high_protein, main, italian)_ — `pasta_pasta_alla_norma_5cc26e` 🔁 doublon possible : Pasta Alla Norma à la Ricotta Salée (Vegan)
 - **Pasta Alla Norma à la Ricotta Salée (Vegan)** _(diabetes_friendly, lactose_free, vegetarian, main, italian)_ — `pasta_pasta_alla_norma_a_la_ric_d282a6` 🔁 doublon possible : Pasta Alla Norma
 - **Pasta E Fagioli** _(main, italian)_ — `pasta_pasta_e_fagioli_68905b`
-- **Pasta Puttanesca** _(vegan, vegetarian, main, italian)_ — `pasta_pasta_puttanesca_e14266`
 - **Patatas Bravas** _(gluten_free, vegan, vegetarian, main, spanish)_ — `main_patatas_bravas_98ec00`
 - **Patates Douces Rôties au Miso** _(kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, side, japanese)_ — `side_patates_douces_roties_au_746605`
 - **Pav Bhaji** _(gluten_free, main, international)_ — `main_pav_bhaji_e99df8` 🔁 doublon possible : Pav Bhaji (Vegan)
@@ -540,7 +543,7 @@
 - **Pâtes nature** _(vegan, vegetarian, main, italian)_ — `pasta_plain_k2d1p1`
 - **Pâtes pesto** _(main, italian)_ — `pasta_pesto_k3d2p1`
 - **Pâtes Primavera** _(main, italian)_ — `pasta_pates_primavera_74711d`
-- **Pâtes puttanesca végétariennes** _(vegan, vegetarian, main, italian)_ — `pasta_puttanesca_v1x9q2`
+- **Pâtes puttanesca aux tomates cerises rôties et chapelure à l'ail** _(vegan, vegetarian, lactose_free, nut_free, main, italian)_ — `pasta_puttanesca_v1x9q2`
 - **Pâté de Champignons Vegan** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, starter, french)_ — `entry_pate_de_champignons_vegan_b2af97`
 
 ## Q
@@ -550,8 +553,8 @@
 - **Quesadillas (Vegan)** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, main, mexican)_ — `wrap_quesadillas_vegan_f68baa` 🔁 doublon possible : Quesadillas
 - **Quesadillas au Fromage** _(gluten_free, main, mexican)_ — `wrap_quesadillas_au_fromage_511e1a` 🔁 doublon possible : Quesadillas au Fromage (Vegan)
 - **Quesadillas au Fromage (Vegan)** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, main, mexican)_ — `wrap_quesadillas_au_fromage_ve_9794c7` 🔁 doublon possible : Quesadillas au Fromage
-- **Quiche (végétarienne)** _(main, french)_ — `tarte_quiche_vegetarienne_b849b0`
-- **Quiche Lorraine (végétarienne)** _(diabetes_friendly, high_protein, main, french)_ — `egg_quiche_lorraine_vegetarienne_77343c`
+- **Quiche aux légumes du soleil et au parmesan** _(vegetarian, nut_free, main, french)_ — `tarte_quiche_vegetarienne_b849b0`
+- **Quiche aux oignons confits et au chèvre frais** _(diabetes_friendly, high_protein, main, french)_ — `egg_quiche_lorraine_vegetarienne_77343c`
 
 ## R
 
@@ -695,13 +698,12 @@
 - **Soupe de tomate** _(diabetes_friendly, gluten_free, vegetarian, soup, international)_ — `soup_tomato_k2d1p1` 🔁 doublon possible : Soupe de Pain à la Tomate
 - **Soupe de Topinambours** _(gluten_free, soup, french)_ — `soup_soupe_de_topinambours_175dc4`
 - **Soupe Lentilles Turque** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, turkish)_ — `dal_soupe_lentilles_turque_e797cb` 🔁 doublon possible : Soupe de Lentilles
-- **Soupe Minestrone** _(diabetes_friendly, high_protein, vegetarian, soup, italian)_ — `soup_minestrone_9116a2` 🔁 doublon possible : Soupe Minestrone Italienne
-- **Soupe Minestrone Italienne** _(diabetes_friendly, soup, italian)_ — `soup_minestrone_italienne_f98e05` 🔁 doublon possible : Soupe Minestrone
 - **Soupe miso** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, soup, japanese)_ — `soup_miso_k2d1p1` 🔁 doublon possible : Soupe Udon Miso
 - **Soupe Thaï Coco Citronnelle** _(diabetes_friendly, high_protein, vegetarian, soup, thai)_ — `soup_soupe_thai_coco_citronnelle_375c23`
 - **Soupe Udon Miso** _(diabetes_friendly, high_protein, vegan, vegetarian, soup, japanese)_ — `soup_udon_miso_ef1ceb` 🔁 doublon possible : Soupe miso
 - **Soupe à l'oignon** _(soup, french)_ — `soup_soup_k3d2p1` 🔁 doublon possible : Soupe à l'Oignon Gratinée (Vegan)
 - **Soupe à l'Oignon Gratinée (Vegan)** _(diabetes_friendly, soup, french)_ — `soup_a_l_oignon_gratinee_vegan_826f59` 🔁 doublon possible : Soupe à l'oignon
+- **Spaghetti alla puttanesca napolitaine** _(vegan, vegetarian, lactose_free, nut_free, main, italian)_ — `pasta_pasta_puttanesca_e14266`
 - **Spanakopita** _(diabetes_friendly, high_protein, main, greek)_ — `egg_spanakopita_f5da1b`
 - **Spanakopita à la Muscade (Vegan)** _(high_protein, nut_free, main, greek)_ — `bread_spanakopita_a_la_muscade_6a9e84`
 - **Spring Rolls** _(diabetes_friendly, vegan, vegetarian, main, vietnamese)_ — `rice_spring_rolls_45fdfa`
@@ -710,8 +712,6 @@
 - **Sri Lankan Dhal Curry** _(diabetes_friendly, gluten_free, vegetarian, main, sri_lankan)_ — `dal_sri_lankan_dhal_curry_fae1be`
 - **Sri Lankan Jackfruit Curry** _(diabetes_friendly, gluten_free, vegetarian, main, sri_lankan)_ — `curry_sri_lankan_jackfruit_1cff43`
 - **Sri Lankan Pumpkin Curry** _(diabetes_friendly, gluten_free, vegetarian, main, sri_lankan)_ — `curry_sri_lankan_pumpkin_7f1edb`
-- **Sundubu Jjigae** _(diabetes_friendly, high_protein, main, korean)_ — `egg_sundubu_jjigae_bc21e0`
-- **Sundubu Tofu Stew** _(diabetes_friendly, high_protein, main, korean)_ — `stew_sundubu_tofu_stew_ebe50e`
 - **Sushi** _(diabetes_friendly, high_protein, vegan, vegetarian, main, japanese)_ — `rice_vegetable_sushi_9aad8a`
 
 ## T

@@ -60348,7 +60348,7 @@
       "id": "egg_quiche_lorraine_vegetarienne_77343c",
       "titles": {
         "original": "Quiche Lorraine (végétarienne)",
-        "fr": "Quiche Lorraine (végétarienne)",
+        "fr": "Quiche aux oignons confits et au chèvre frais",
         "en": "Lorraine (Végétarienne) Quiche"
       },
       "origin": {
@@ -60525,6 +60525,7 @@
       "search_tokens": [
         "(vegetarienne)",
         "all",
+        "aux",
         "beurre",
         "black",
         "brisee",
@@ -60532,10 +60533,12 @@
         "cheese,",
         "chevre",
         "classique",
+        "confits",
         "cream,",
         "creme",
         "egg",
         "epaisse",
+        "frais",
         "francais",
         "france",
         "french",
@@ -60555,6 +60558,7 @@
         "moyen",
         "noir",
         "oignon",
+        "oignons",
         "olive",
         "onion",
         "oven_cooking",
@@ -60578,7 +60582,7 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.92,
-      "description": "Quiche végétarienne française, cuite au four pour une texture ferme et dorée, avec une garniture de tofu soyeux et d'oignon caramélisé, parfumée au fromage de chèvre et aux épices.",
+      "description": "Quiche végétarienne à la lorraine : pâte brisée précuite, lit d'oignons fondus, appareil œufs-crème et chèvre frais émietté, cuite jusqu'à ce que le centre soit juste pris.",
       "instructions": [
         "Étape 1: Préchauffer le four à 180°C. Foncer un moule de 26 cm avec 200 g de pâte brisée. Piquer le fond avec une fourchette pendant 2 minutes pour éviter les bulles d'air.",
         "Étape 2: Enfourner pendant 12 minutes à 180°C, puis cuire encore pendant 5 minutes, jusqu'à ce que la croûte soit dorée et les bords soient légèrement croustillants.",
@@ -61846,7 +61850,7 @@
       "id": "egg_sundubu_jjigae_bc21e0",
       "titles": {
         "original": "Sundubu Jjigae",
-        "fr": "Sundubu Jjigae",
+        "fr": "Baek sundubu, ragoût de tofu soyeux doux",
         "en": "Sundubu Jjigae"
       },
       "origin": {
@@ -61857,52 +61861,63 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 23,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 30,
-        "total_min": 53
+        "cook_min": 20,
+        "total_min": 35
       },
       "composition": [
         {
           "ingredient": "silken_tofu_pre_packaged",
-          "quantity": 400,
+          "quantity": 600,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "shiitake_mushroom_raw",
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "button_mushroom_raw",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "green_zucchini_squash_raw",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "diced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -61913,28 +61928,6 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "base_gochujang_41da6e",
-          "quantity": 30,
-          "unit": "ml",
-          "meta": {
-            "role": "condiment",
-            "form": "paste",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "red_hot_chili_pepper_spice_dried",
-          "quantity": 10,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -61942,10 +61935,21 @@
         },
         {
           "ingredient": "base_dashi_broth_a3a517",
-          "quantity": 750,
+          "quantity": 700,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "soy_sauce_shoyu_reduced_sodium",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -61957,25 +61961,25 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "green_onion_raw",
-          "quantity": 60,
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "chiffonade",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "sesame_oil_plant",
-          "quantity": 15,
+          "quantity": 10,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -61986,7 +61990,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -61996,12 +62000,12 @@
           }
         },
         {
-          "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 200,
-          "unit": "g",
+          "ingredient": "white_rice_short_grain_seed_dried",
+          "quantity": null,
+          "unit": "1 portion",
           "meta": {
-            "role": "protein",
-            "form": "cubed",
+            "role": "serving_suggestion",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -62010,10 +62014,14 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "high_protein"
+          "high_protein",
+          "vegetarian",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
           "eggs",
+          "gluten",
           "sesame",
           "soy"
         ],
@@ -62062,49 +62070,51 @@
         }
       },
       "search_tokens": [
-        "1 heure",
+        "45 minutes",
         "ail",
         "asia",
         "asiatique",
         "avance",
+        "baek",
         "base_dashi_broth_a3a517",
-        "base_gochujang_41da6e",
         "braising",
         "button",
         "champignon",
         "chef",
-        "chili",
         "complexe",
         "coree",
         "coreen",
         "courgette",
+        "doux",
         "egg",
-        "fort",
         "garlic",
         "green",
-        "hot",
         "jjigae",
         "korean",
         "leger",
         "light",
         "low calorie",
         "minceur",
+        "moyen",
         "mushroom",
         "oignon",
         "onion",
         "paris",
-        "pepper",
-        "piment",
-        "red",
-        "rouge",
+        "ragout",
         "salt",
         "sans viande",
+        "sauce",
         "sel",
         "sesame",
+        "shiitake",
+        "shoyu",
         "silken",
+        "soja",
+        "soy",
         "soyeux",
         "squash",
         "sundubu",
+        "sundubu,",
         "table",
         "technique",
         "tofu",
@@ -62118,15 +62128,14 @@
       "servings_default": 4,
       "_quality_score": 0.96,
       "_chef_note": "Cette préparation est parfaite pour un repas végétalien équilibré et savoureux.",
-      "description": "Préparation coréenne de tofu soyeux, cuisson délicate pour une texture fondante, parfumée au gochujang et au piment coréen, avec une base de bouillon végétal dashi.",
+      "description": "La version blanche et non pimentée du sundubu : tofu soyeux, champignons et courgette dans un bouillon dashi clair à la sauce soja, œufs pochés dans le ragoût et oignons verts.",
       "instructions": [
-        "Étape 1: Chauffer 15ml d'huile de sésame à feu moyen et faire revenir 9g d'ail haché pendant 1 minute, jusqu'à ce qu'il soit doré et parfumé.",
-        "Étape 2: Saisir 300g de champignons de Paris émincés et 200g de courgette en dés, puis cuire pendant 3 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce qu'ils soient tendres.",
-        "Étape 3: Verser 750ml de bouillon végétal dashi et porter à ébullition, en veillant à ce que le liquide soit clair et limpide.",
-        "Étape 4: Déposer 400g de tofu soyeux dans le bouillon bouillant et laisser frémir pendant 3 minutes sans remuer, afin de préserver sa texture délicate.",
-        "Étape 5: Incorporer 30ml de gochujang et 10g de piment coréen, puis cuire pendant 1 minute à feu doux, en remuant doucement, pour permettre aux saveurs de se mélanger.",
-        "Étape 6: Ajouter 200g de tofu ferme émietté, casser les 220 g d'œufs dans le bouillon frémissant et cuire 2 minutes à feu doux.",
-        "Étape 7: Assaisonner avec 2g de sel et servir chaud, garni de 60g d'oignon vert haché, pour ajouter une touche de fraîcheur et de couleur."
+        "Étape 1 : Dans un poêlon en terre ou une casserole, faire revenir 100 g d'oignon émincé et 9 g d'ail haché dans 10 ml d'huile de sésame, 3 minutes.",
+        "Étape 2 : Ajouter 100 g de shiitakés et 150 g de champignons émincés, puis 150 g de courgette en demi-rondelles, et cuire 3 minutes.",
+        "Étape 3 : Verser 700 ml de dashi, 15 ml de sauce soja et 1 g de sel, puis porter à frémissement.",
+        "Étape 4 : Ajouter 600 g de tofu soyeux en grosses cuillerées et laisser frémir 5 minutes sans remuer.",
+        "Étape 5 : Casser 4 œufs (220 g) à la surface et cuire 2 minutes, jusqu'à ce que les blancs soient pris.",
+        "Étape 6 : Parsemer de 40 g d'oignons verts émincés et servir bouillant, avec du riz."
       ],
       "diet_flags": {
         "vegan": false,
@@ -110694,21 +110703,21 @@
       "id": "pasta_pasta_puttanesca_e14266",
       "titles": {
         "original": "Pasta Puttanesca",
-        "fr": "Pasta Puttanesca",
+        "fr": "Spaghetti alla puttanesca napolitaine",
         "en": "Pasta Puttanesca"
       },
       "origin": {
         "cuisine": "italian",
         "country": "italy",
-        "region": "latium",
+        "region": "campania",
         "city": "naples"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 15,
+        "prep_active_min": 10,
         "prep_passive_min": 0,
         "cook_min": 20,
-        "total_min": 35
+        "total_min": 30
       },
       "composition": [
         {
@@ -110717,18 +110726,18 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "dried",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -110750,7 +110759,7 @@
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "pitted",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -110761,25 +110770,36 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "chilli_pepper_raw",
-          "quantity": 15,
+          "quantity": 8,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "chopped",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "oregano_spice_dried",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -110790,7 +110810,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -110805,17 +110825,6 @@
           "unit": "1 poignée",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "persil plat haché",
-            "note": "Pour une touche de fraîcheur",
-            "optional": true
-          }
-        },
-        {
-          "ingredient": "black_pepper_spice",
-          "quantity": 2,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -110825,7 +110834,9 @@
       "tags": {
         "diet": [
           "vegan",
-          "vegetarian"
+          "vegetarian",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
           "gluten"
@@ -110876,8 +110887,9 @@
         }
       },
       "search_tokens": [
-        "45 minutes",
+        "30 minutes",
         "ail",
+        "alla",
         "black",
         "capers",
         "capres",
@@ -110893,22 +110905,26 @@
         "mediterranee",
         "minceur",
         "moyen",
-        "noir",
+        "napolitaine",
         "noire",
         "olive",
+        "oregano",
+        "origan",
         "parsley",
         "pasta",
         "pates",
         "pepper",
         "persil",
         "piment",
-        "poivre",
         "puttanesca",
         "pâtes",
+        "quick",
+        "rapide",
         "salt",
         "sans produit animal",
         "sans viande",
         "sel",
+        "spaghetti",
         "table",
         "tomate",
         "tomato",
@@ -110922,14 +110938,13 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.72,
-      "description": "Pâtes italiennes cuites à feu moyen-vif, avec une sauce tomate légèrement réduite et brillante, parfumée à l'ail et au piment, et enrobées d'olives noires et de câpres — al dente, avec une texture ferme.",
+      "description": "La puttanesca de Naples, sans anchois : sauce tomate vive à l'ail et au piment, olives de Gaète, câpres et origan, liée à l'huile d'olive.",
       "instructions": [
-        "Étape 1 : Porter 4 L d'eau à forte ébullition, saler généreusement avec 5 g de sel, et cuire 320 g de pâtes de blé selon les indications du paquet moins 1 minute pour les obtenir al dente, avec une texture ferme.",
-        "Étape 2 : Pendant la cuisson des pâtes, chauffer 40 ml d'huile d'olive dans une grande sauteuse à feu moyen, et faire revenir 9 g d'ail émincé et 15 g de piment 1 minute sans coloration, jusqu'à ce que l'arôme se dégage.",
-        "Étape 3 : Ajouter 300 g de tomates concassées, 20 g de câpres rincées et 80 g d'olives noires dénoyautées, cuire à feu moyen-vif 8 minutes jusqu'à ce que la sauce soit légèrement réduite et brillante, avec une consistance épaisse.",
-        "Étape 4 : Égoutter les pâtes al dente directement dans la sauteuse, et mélanger vigoureusement en ajoutant un peu d'eau de cuisson pour créer une émulsion brillante et parfumée, avec une texture crémeuse.",
-        "Étape 5 : Assaisonner avec du sel, en vérifiant que les saveurs sont équilibrées, pour un équilibre parfait.",
-        "Étape 6 : Servir sans attendre, parsemé de persil plat haché, et arrosé d'huile d'olive pour une touche de richesse et de fraîcheur."
+        "Étape 1 : Faire chauffer 40 ml d'huile d'olive avec 9 g d'ail émincé et 8 g de piment frais haché, 1 minute, sans colorer.",
+        "Étape 2 : Ajouter 400 g de tomates concassées et cuire 10 minutes à feu vif.",
+        "Étape 3 : Ajouter 80 g d'olives noires dénoyautées, 20 g de câpres rincées et 1 g d'origan, puis cuire 3 minutes.",
+        "Étape 4 : Cuire 320 g de spaghetti dans l'eau bouillante salée avec 3 g de sel, 1 minute de moins que le temps indiqué.",
+        "Étape 5 : Égoutter les pâtes, les terminer 1 minute dans la sauce avec une louche d'eau de cuisson, puis servir."
       ],
       "diet_flags": {
         "vegan": true,
@@ -112186,52 +112201,41 @@
       "id": "pasta_puttanesca_v1x9q2",
       "titles": {
         "original": "Spaghetti alla Puttanesca",
-        "fr": "Pâtes puttanesca végétariennes",
+        "fr": "Pâtes puttanesca aux tomates cerises rôties et chapelure à l'ail",
         "en": "Vegetarian Puttanesca Pasta"
       },
       "origin": {
         "cuisine": "italian",
         "country": "italy",
-        "region": "latium",
-        "city": "naples"
+        "region": "",
+        "city": ""
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 20,
+        "prep_active_min": 10,
         "prep_passive_min": 0,
-        "cook_min": 30,
-        "total_min": 50
+        "cook_min": 25,
+        "total_min": 35
       },
       "composition": [
         {
           "ingredient": "pasta_raw_dried",
-          "quantity": 400,
+          "quantity": 360,
           "unit": "g",
           "meta": {
             "role": "starch",
-            "form": "dried",
-            "state": "raw",
-            "preparation": "al_dente"
-          }
-        },
-        {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 420,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic_raw",
-          "quantity": 12,
+          "ingredient": "cherry_tomato_raw",
+          "quantity": 500,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "chopped",
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -112242,7 +112246,7 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "pitted",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -112259,6 +112263,61 @@
           }
         },
         {
+          "ingredient": "garlic_raw",
+          "quantity": 12,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "breadcrumbs_dried",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "topping",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "olive_oil_plant",
           "quantity": 45,
           "unit": "ml",
@@ -112266,23 +112325,12 @@
             "role": "fat",
             "form": "",
             "state": "raw",
-            "preparation": "sweated"
-          }
-        },
-        {
-          "ingredient": "chilli_pepper_raw",
-          "quantity": 10,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "flakes",
-            "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -112295,7 +112343,9 @@
       "tags": {
         "diet": [
           "vegan",
-          "vegetarian"
+          "vegetarian",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
           "gluten"
@@ -112346,14 +112396,23 @@
         }
       },
       "search_tokens": [
-        "1 heure",
+        "45 minutes",
         "ail",
         "alla",
         "assembly",
+        "aux",
+        "basil",
+        "basilic",
         "black",
+        "breadcrumbs",
         "capers",
         "capres",
+        "cerise",
+        "cerises",
+        "chapelure",
+        "cherry",
         "chilli",
+        "citron",
         "debutant",
         "easy",
         "emulsion",
@@ -112362,11 +112421,14 @@
         "italian",
         "italie",
         "italien",
+        "l'ail",
         "leger",
+        "lemon",
         "light",
         "low calorie",
         "mediterranee",
         "minceur",
+        "moyen",
         "noire",
         "olive",
         "pasta",
@@ -112375,6 +112437,7 @@
         "piment",
         "puttanesca",
         "reduction",
+        "roties",
         "salt",
         "sans produit animal",
         "sans viande",
@@ -112383,26 +112446,24 @@
         "spaghetti",
         "table",
         "tomate",
+        "tomates",
         "tomato",
         "vegan",
         "vegetalien",
         "vegetarian",
-        "vegetarien",
-        "vegetariennes"
+        "vegetarien"
       ],
       "difficulty_level": "easy",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 1.0,
-      "description": "Pâtes italiennes véganes enrobées d'une sauce tomate concentrée, relevée par olives noires et câpres, présentant une texture crémeuse et une saveur intense, typique de la cuisine méditerranéenne.",
+      "description": "Puttanesca au four : tomates cerises rôties jusqu'à éclater avec olives et câpres, pâtes enrobées de leur jus et couvertes d'une chapelure croustillante à l'ail et au citron.",
       "instructions": [
-        "Étape 1 : Porter 4 litres d'eau salée à ébullition à feu vif, puis ajuster à feu moyen pour cuire les 400g de pâtes de blé pendant 8 minutes, ou jusqu'à ce qu'elles soient al dente.",
-        "Étape 2 : Cuire les pâtes selon les indications moins 1 minute, réserver 1 tasse d'eau de cuisson pour ajuster la sauce à la fin de la préparation.",
-        "Étape 3 : Chauffer 45ml d'huile d'olive dans une sauteuse à feu moyen, faire revenir 12g d'ail haché finement et 10g de piment rouge concassé 1 minute sans coloration, jusqu'à ce que l'odeur d'ail soit parfumée.",
-        "Étape 4 : Ajouter 420g de tomates concassées et cuire 8 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce que la sauce soit légèrement réduite et les tomates soient tendres.",
-        "Étape 5 : Incorporer 60g d'olives noires dénoyautées et 20g de câpres rincées, mijoter 3 minutes pour une sauce épaisse et parfumée, en ajoutant 2g de sel pour rehausser les saveurs et en remuant délicatement.",
-        "Étape 6 : Égoutter les pâtes al dente, transvaser dans la sauteuse et mélanger vigoureusement avec l'eau de cuisson réservée pour créer une émulsion brillante et une texture crémeuse.",
-        "Étape 7 : Servir chaud."
+        "Étape 1 : Préchauffer le four à 200°C. Mélanger dans un plat 500 g de tomates cerises, 60 g d'olives, 20 g de câpres, 8 g d'ail émincé, 6 g de piment et 30 ml d'huile d'olive, puis rôtir 20 minutes.",
+        "Étape 2 : Chapelure : dorer 40 g de chapelure dans 15 ml d'huile d'olive avec 4 g d'ail râpé, 3 minutes, puis ajouter 10 ml de jus de citron.",
+        "Étape 3 : Cuire 360 g de pâtes dans l'eau bouillante légèrement salée (1 g de sel), puis les égoutter en gardant une louche d'eau.",
+        "Étape 4 : Mélanger les pâtes aux tomates rôties en les écrasant légèrement avec un peu d'eau de cuisson.",
+        "Étape 5 : Servir parsemé de 15 g de basilic et de chapelure à l'ail."
       ],
       "diet_flags": {
         "vegan": true,
@@ -148872,14 +148933,14 @@
       "id": "snack_empanadas_974cf2",
       "titles": {
         "original": "Empanadas",
-        "fr": "Empanadas",
+        "fr": "Empanadas salteñas humita, maïs et fromage frais",
         "en": "Empanadas"
       },
       "origin": {
         "cuisine": "argentinian",
         "country": "argentina",
-        "region": "buenos_aires",
-        "city": ""
+        "region": "salta",
+        "city": "salta"
       },
       "servings": 7,
       "timing": {
@@ -149057,8 +149118,11 @@
         "enfants",
         "facile enfants",
         "famille",
+        "frais",
         "fresco",
+        "fromage",
         "green",
+        "humita,",
         "intermediaire",
         "jaune",
         "kids",
@@ -149080,6 +149144,7 @@
         "salad",
         "salade",
         "salt",
+        "saltenas",
         "sans viande",
         "sel",
         "sweet",
@@ -149094,7 +149159,7 @@
       "servings_default": 7,
       "_quality_score": 0.83,
       "_chef_note": "N'oubliez pas de bien assaisonner les empanadas avec du sel et des épices pour une saveur optimale.",
-      "description": "Spécialité argentine — pâte dorée en cuisson pour une texture croustillante à l'extérieur et tendre à cœur, avec une farce parfumée aux saveurs de poivron et d'oignon caramélisés, accompagnée de fromage parmesan.",
+      "description": "Empanadas du nord-ouest argentin, garnies de humita : maïs, poivron et oignon revenus, queso fresco et œuf dur, cuites au four jusqu'à ce qu'elles soient bien dorées.",
       "instructions": [
         "Étape 1: Faites revenir les oignons jaunes et les poivrons rouges dans 20 ml d'huile d'olive pendant 5 minutes à feu moyen, jusqu'à ce qu'ils soient tendres et légèrement caramélisés, en remuant régulièrement.",
         "Étape 2: Ajoutez le maïs et faites-le sauter 3 minutes à feu vif, en remuant.",
@@ -149118,7 +149183,7 @@
       "id": "snack_empanadas_au_fromage_466bc4",
       "titles": {
         "original": "Empanadas De Queso",
-        "fr": "Empanadas au Fromage",
+        "fr": "Empanadas fromage-oignon de Buenos Aires",
         "en": "Empanadas De Queso"
       },
       "origin": {
@@ -149282,8 +149347,10 @@
       },
       "search_tokens": [
         "45 minutes",
+        "aires",
         "argentinian",
         "base_empanada_dough_65661a",
+        "buenos",
         "debutant",
         "easy",
         "egg",
@@ -149324,7 +149391,7 @@
       "servings_default": 7,
       "_quality_score": 0.89,
       "_chef_note": "Assurez-vous d'utiliser un fromage végétal râpé de bonne qualité pour une saveur optimale.",
-      "description": "Spécialité argentin - pâte dorée en cuisson, offrant une texture croustillante à l'extérieur et tendre à cœur, avec une farce fondante et parfumée au fromage et à l'oignon, parfumée d'arômes délicats.",
+      "description": "Les empanadas de queso y cebolla des pizzerias de Buenos Aires : fromage frais fondant et oignons compotés dans une pâte au beurre dorée au four.",
       "instructions": [
         "Étape 1: Faites revenir 150 g d'oignon haché finement 8 minutes dans 15 ml d'huile d'olive, laissez tiédir, puis mélangez-le avec 150 g de queso fresco émietté et 55 g d'œuf battu pour lier.",
         "Étape 2: Étalez les disques de pâte d'empanada (environ 400g) et garnissez chaque disque d'une cuillerée généreuse de farce, en laissant un bord de 1 cm tout autour.",
@@ -149347,13 +149414,13 @@
       "id": "snack_empanadas_au_fromage_vega_79575a",
       "titles": {
         "original": "Empanadas De Queso (Vegan)",
-        "fr": "Empanadas au Fromage (Vegan)",
+        "fr": "Empanadas vegan à l'oignon caramélisé et au cheddar végétal",
         "en": "Empanadas De Queso (Vegan)"
       },
       "origin": {
-        "cuisine": "latin_american",
-        "country": "international",
-        "region": "latin_america",
+        "cuisine": "argentinian",
+        "country": "argentina",
+        "region": "buenos_aires",
         "city": ""
       },
       "servings": 6,
@@ -149506,9 +149573,11 @@
         "(eau",
         "(vegan)",
         "all",
-        "amerique latine",
+        "argentinian",
         "base_vegan_cheddar_024998",
         "ble",
+        "caramelise",
+        "cheddar",
         "debutant",
         "easy",
         "eau",
@@ -149519,12 +149588,10 @@
         "famille",
         "farine",
         "flour",
-        "fromage",
         "green",
         "jaune",
         "kids",
-        "latin_american",
-        "latino",
+        "l'oignon",
         "leger",
         "lent",
         "light",
@@ -149552,6 +149619,7 @@
         "tout",
         "usage",
         "vegan",
+        "vegetal",
         "vegetalien",
         "vegetarien",
         "verte",
@@ -149564,7 +149632,7 @@
       "servings_default": 6,
       "_quality_score": 0.89,
       "_chef_note": "Assurez-vous de bien sceller les empanadas pour éviter que la farce ne s'échappe pendant la cuisson.",
-      "description": "Empanadas croustillantes et dorées, remplies d'un mélange de fromage végétal et d'oignon jaune caramélisé, parfumées à l'huile de coco et servies chaudes.",
+      "description": "Empanadas à la pâte à l'huile, sans beurre ni œuf, garnies d'oignons caramélisés et de cheddar végétal maison, dorées au four.",
       "instructions": [
         "Étape 1 : Préparer la pâte : mélanger 250 g de farine, 5 g de sel, 50 ml d'huile de tournesol et environ 100 ml d'eau tiède, pétrir brièvement, puis laisser reposer 30 minutes sous un linge.",
         "Étape 2 : Faire revenir 150 g d'oignon émincé 10 minutes à feu doux dans une poêle antiadhésive, jusqu'à ce qu'il soit fondant et doré, puis le laisser tiédir et le mélanger aux 150 g de fromage végétal.",
@@ -157350,30 +157418,30 @@
       "id": "soup_minestrone_9116a2",
       "titles": {
         "original": "Soupe Minestrone",
-        "fr": "Soupe Minestrone",
+        "fr": "Minestrone d'été alla genovese, au basilic",
         "en": "Soupe Minestrone"
       },
       "origin": {
         "cuisine": "italian",
         "country": "italy",
-        "region": "lombardie",
-        "city": ""
+        "region": "liguria",
+        "city": "genes"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 19,
+        "prep_active_min": 20,
         "prep_passive_min": 0,
         "cook_min": 30,
-        "total_min": 49
+        "total_min": 50
       },
       "composition": [
         {
           "ingredient": "carrot_raw",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -157384,47 +157452,58 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "green_zucchini_squash_raw",
-          "quantity": 250,
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "french_bean_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 400,
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "white_bean_boiled",
-          "quantity": 200,
+          "quantity": 240,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -157435,42 +157514,43 @@
         },
         {
           "ingredient": "pasta_raw_dried",
-          "quantity": 100,
+          "quantity": 80,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
-            "form": "dried",
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 12.6,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "seasoning",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 1000 ml d'eau"
+            "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 1000.0,
+          "quantity": 1200,
           "unit": "ml",
           "meta": {
             "role": "seasoning",
-            "note": "pour reconstituer le bouillon"
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
-          "ingredient": "olive_oil_plant",
-          "quantity": 35,
-          "unit": "ml",
+          "ingredient": "basil_fresh_herb",
+          "quantity": 25,
+          "unit": "g",
           "meta": {
-            "role": "fat",
+            "role": "herb",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -157486,13 +157566,27 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 40,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
           "high_protein",
-          "vegetarian"
+          "vegan",
+          "vegetarian",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
           "celery",
@@ -157548,7 +157642,10 @@
         "(eau",
         "1 heure",
         "ail",
+        "alla",
         "avance",
+        "basil",
+        "basilic",
         "bean",
         "blanc",
         "bouillon",
@@ -157561,11 +157658,14 @@
         "chef",
         "complexe",
         "courgette",
+        "d'ete",
         "eau",
         "enfants",
         "facile enfants",
         "famille",
+        "french",
         "garlic",
+        "genovese,",
         "green",
         "haricot",
         "italian",
@@ -157580,7 +157680,6 @@
         "minceur",
         "minestrone",
         "oignon",
-        "olive",
         "onion",
         "pasta",
         "pates",
@@ -157598,6 +157697,7 @@
         "vegetable",
         "vegetalien",
         "vegetarien",
+        "vert",
         "water",
         "white",
         "zucchini"
@@ -157606,13 +157706,14 @@
       "dish_type": "soup",
       "servings_default": 4,
       "_quality_score": 0.82,
-      "description": "Soupe italienne végétarien où les carottes, le céleri et l'oignon fondent dans un bouillon végétal parfumé, avec des pâtes al dente et une texture crémeuse.",
+      "description": "Minestrone ligure de saison : courgettes, haricots blancs, tomates et petites pâtes, servi avec une cuillerée de pistou au basilic et à l'ail.",
       "instructions": [
-        "Étape 1 : Faire revenir 200g de carottes en brunoise, 80g de céleri en brunoise et 150g d'oignon en brunoise dans 35 ml d'huile à feu moyen, pendant 7 minutes, jusqu'à légère coloration blonde et parfum dégagé.",
-        "Étape 2 : Ajouter 9 g d'ail émincé et 400g de tomates concassées, cuire pendant 5 minutes, en remuant régulièrement, jusqu'à parfum dégagé et légère réduction.",
-        "Étape 3 : Incorporer 250g de courgettes en dés et 200g de haricots blancs égouttés, couvrir de 1000 ml de bouillon de légumes chaud, mijoter pendant 15 minutes, en remuant régulièrement.",
-        "Étape 4 : Ajouter 100g de petites pâtes, cuire encore pendant 8 à 10 minutes, jusqu'à pâtes al dente et bouillon légèrement lié.",
-        "Étape 5 : Poivrer et servir aussitôt."
+        "Étape 1 : Faire revenir 120 g d'oignon, 150 g de carotte et 80 g de céleri en dés dans 15 ml d'huile d'olive, 6 minutes.",
+        "Étape 2 : Ajouter 300 g de tomates concassées, 1,2 L d'eau et 10 g de bouillon déshydraté, puis porter à ébullition.",
+        "Étape 3 : Ajouter 150 g de haricots verts en tronçons et 300 g de courgettes en dés, puis mijoter 10 minutes.",
+        "Étape 4 : Ajouter 240 g de haricots blancs et 80 g de petites pâtes, puis cuire 9 minutes.",
+        "Étape 5 : Pistou : piler ou mixer 25 g de basilic avec 9 g d'ail et 25 ml d'huile d'olive.",
+        "Étape 6 : Servir le minestrone avec une cuillerée de pistou dans chaque bol."
       ],
       "diet_flags": {
         "vegan": true,
@@ -157628,30 +157729,30 @@
       "id": "soup_minestrone_italienne_f98e05",
       "titles": {
         "original": "Soupe Minestrone Italienne",
-        "fr": "Soupe Minestrone Italienne",
+        "fr": "Minestrone d'hiver milanais au riz et chou de Milan",
         "en": "Soupe Minestrone Italienne"
       },
       "origin": {
         "cuisine": "italian",
         "country": "italy",
         "region": "lombardie",
-        "city": ""
+        "city": "milan"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 15,
-        "prep_passive_min": 10,
-        "cook_min": 40,
-        "total_min": 65
+        "prep_active_min": 20,
+        "prep_passive_min": 5,
+        "cook_min": 55,
+        "total_min": 80
       },
       "composition": [
         {
           "ingredient": "carrot_raw",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -157662,7 +157763,7 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -157673,14 +157774,36 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "savoy_cabbage_raw",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "potato_raw_flesh",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "kidney_bean_boiled",
-          "quantity": 300,
+          "quantity": 240,
           "unit": "g",
           "meta": {
             "role": "protein",
@@ -157690,30 +157813,41 @@
           }
         },
         {
-          "ingredient": "pasta_raw_dried",
-          "quantity": 100,
+          "ingredient": "white_rice_short_grain_seed_dried",
+          "quantity": 80,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "dried",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "ingredient": "tomato_paste_unsalted_canned",
+          "quantity": 20,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sage_fresh_herb",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -157723,23 +157857,12 @@
           }
         },
         {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 2,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "garlic_raw",
-          "quantity": 10,
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -157750,7 +157873,29 @@
           "unit": "g",
           "meta": {
             "role": "cheese",
-            "form": "grated",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 1300,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -157765,36 +157910,17 @@
             "note": "Pour une texture crémeuse",
             "optional": true
           }
-        },
-        {
-          "ingredient": "vegetable_stock_dried",
-          "quantity": 12,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "",
-            "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 1200 ml d'eau"
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 1200.0,
-          "unit": "ml",
-          "meta": {
-            "role": "ingredient",
-            "note": "pour reconstituer le bouillon"
-          }
         }
       ],
       "tags": {
         "diet": [
-          "diabetes_friendly"
+          "diabetes_friendly",
+          "vegetarian",
+          "gluten_free",
+          "nut_free"
         ],
         "allergens": [
           "celery",
-          "gluten",
           "lactose",
           "milk"
         ],
@@ -157848,16 +157974,19 @@
       "search_tokens": [
         "ail",
         "bean",
-        "bouillon",
+        "blanc",
         "braising",
         "branche",
+        "cabbage",
         "carotte",
         "carrot",
         "celeri",
         "celery",
-        "cream",
-        "creme",
+        "chou",
+        "coeliaque",
+        "d'hiver",
         "garlic",
+        "gluten free",
         "haricot",
         "intermediaire",
         "italian",
@@ -157866,13 +157995,14 @@
         "italienne",
         "kidney",
         "leger",
-        "legumes",
         "lent",
         "light",
         "long",
         "low calorie",
         "mediterranee",
         "mijote",
+        "milan",
+        "milanais",
         "minceur",
         "minestrone",
         "moyen",
@@ -157882,36 +158012,40 @@
         "parmesan",
         "pasta",
         "pates",
+        "pomme",
+        "potato",
+        "rice",
+        "riz",
         "rouge",
-        "salt",
+        "sage",
+        "sans gluten",
         "sans viande",
-        "sel",
+        "sauge",
+        "savoy",
         "soupe",
         "stalk",
-        "stock",
-        "table",
+        "terre",
         "tomate",
         "tomato",
-        "vegetable",
-        "vegetarien"
+        "vegetarien",
+        "white"
       ],
       "difficulty_level": "medium",
       "dish_type": "soup",
       "servings_default": 4,
       "_quality_score": 0.97,
-      "description": "Bouillon italien végétarien créé avec des haricots rouges tendres, des pâtes de blé cuites al dente et des légumes parfumés, dans un bouillon végétal savoureux et épicé, avec une touche de parmesan pour une richesse supplémentaire.",
+      "description": "Minestrone alla milanese : chou de Milan, pommes de terre et haricots rouges mijotés longuement, épaissis au riz plutôt qu'aux pâtes et servis avec du parmesan.",
       "instructions": [
-        "Étape 1: Faire revenir 200g de carottes crues en brunoise, 80g de céleri en tronçons et 150g d'oignon jaune émincé dans 45ml d'huile d'olive à feu moyen pendant 8 minutes, jusqu'à légère coloration blonde et parfum délicat.",
-        "Étape 2: Ajouter 10g d'ail émincé et 300g de tomates concassées. Cuire 5 minutes en remuant régulièrement, jusqu'à légère réduction et parfum intense.",
-        "Étape 3: Incorporer 300g de haricots rouges égouttés et verser 1,2L de bouillon végétal chaud. Porter à ébullition, puis mijoter à feu doux pendant 15 minutes.",
-        "Étape 4: Ajouter 100 g de petites pâtes, 2 g de sel et du poivre. Laisser cuire encore 10 minutes, jusqu'à ce que les pâtes soient al dente et le bouillon légèrement lié.",
-        "Étape 5: Saupoudrer de 30g de parmesan râpé pour une touche de richesse.",
-        "Étape 6: Servir chaud."
+        "Étape 1 : Faire revenir 150 g d'oignon, 150 g de carotte et 80 g de céleri en dés avec 6 g d'ail et 3 g de sauge hachés dans 30 ml d'huile d'olive, 8 minutes.",
+        "Étape 2 : Ajouter 20 g de concentré de tomate, 200 g de pommes de terre en dés, 250 g de chou de Milan émincé, 1,3 L d'eau et 10 g de bouillon déshydraté. Mijoter 30 minutes à couvert.",
+        "Étape 3 : Ajouter 240 g de haricots rouges et 80 g de riz rond, puis cuire 15 minutes, jusqu'à ce que le riz soit tendre et la soupe épaisse.",
+        "Étape 4 : Laisser reposer 5 minutes hors du feu.",
+        "Étape 5 : Servir parsemé de 30 g de parmesan râpé."
       ],
       "diet_flags": {
         "vegan": false,
         "vegetarian": true,
-        "gluten_free": false,
+        "gluten_free": true,
         "lactose_free": false,
         "nut_free": true,
         "raw": false,
@@ -169059,7 +169193,7 @@
       "id": "stew_sundubu_tofu_stew_ebe50e",
       "titles": {
         "original": "Sundubu Tofu Stew",
-        "fr": "Sundubu Tofu Stew",
+        "fr": "Kimchi sundubu jjigae épicé",
         "en": "Sundubu Tofu Stew"
       },
       "origin": {
@@ -169070,51 +169204,84 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 37
+        "cook_min": 25,
+        "total_min": 40
       },
       "composition": [
         {
           "ingredient": "silken_tofu_pre_packaged",
-          "quantity": 400,
+          "quantity": 500,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "cubed",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "button_mushroom_raw",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "green_zucchini_squash_raw",
-          "quantity": 200,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "diced",
+            "role": "protein",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "base_kimchi_61791a",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "button_mushroom_raw",
           "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_zucchini_squash_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 12,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "gochugaru",
+          "quantity": 8,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -169126,14 +169293,14 @@
           "unit": "ml",
           "meta": {
             "role": "condiment",
-            "form": "paste",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "base_dashi_broth_a3a517",
-          "quantity": 750,
+          "quantity": 700,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -169148,39 +169315,39 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "onion_raw",
-          "quantity": 150,
+          "ingredient": "green_onion_raw",
+          "quantity": 40,
           "unit": "g",
           "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "garlic_raw",
-          "quantity": 9,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic",
-            "form": "chopped",
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "sesame_oil_plant",
-          "quantity": 30,
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_short_grain_seed_dried",
+          "quantity": null,
+          "unit": "1 portion",
+          "meta": {
+            "role": "serving_suggestion",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -169190,12 +169357,16 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "high_protein"
+          "high_protein",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
           "eggs",
-          "soy",
-          "sesame"
+          "sesame",
+          "soy"
         ],
         "technique": [
           "braising"
@@ -169253,13 +169424,20 @@
         "braising",
         "button",
         "champignon",
+        "coeliaque",
         "coree",
         "coreen",
         "courgette",
         "egg",
+        "epice",
+        "flocons",
         "garlic",
+        "gluten free",
+        "gochugaru",
         "green",
         "intermediaire",
+        "jjigae",
+        "kimchi",
         "korean",
         "leger",
         "light",
@@ -169271,7 +169449,9 @@
         "oignon",
         "onion",
         "paris",
+        "piment",
         "ragout",
+        "sans gluten",
         "sans viande",
         "sesame",
         "silken",
@@ -169281,6 +169461,7 @@
         "sundubu",
         "tofu",
         "vegetarien",
+        "vert",
         "zucchini",
         "œuf"
       ],
@@ -169288,20 +169469,19 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.96,
-      "description": "Ragoût coréen crémeux à base de tofu soyeux, avec une sauce onctueuse et des légumes tendres, inspiré de la cuisine traditionnelle coréenne, où les saveurs de gochujang et de kimchi se mélangent en harmonie.",
+      "description": "Le sundubu rouge des restaurants de Séoul : kimchi bien fermenté revenu avec une huile au piment gochugaru, gochujang, tofu soyeux et œufs, servi bouillonnant.",
       "instructions": [
-        "Étape 1: Chauffer 30 ml d'huile de sésame dans un poêlon en terre à feu moyen.",
-        "Étape 2: Faire revenir 9 g d'ail et l'oignon émincés pendant 2 minutes, jusqu'à ce qu'ils soient translucides et dégagent un parfum doux et sucré.",
-        "Étape 3: Ajouter 30 ml de gochujang et 200 g de kimchi, et cuire en remuant pendant 2 minutes, jusqu'à ce que le mélange soit parfumé et les saveurs se mélangent.",
-        "Étape 4: Verser 750 ml de dashi végétal et laisser frémir 10 minutes.",
-        "Étape 5: Incorporer 300 g de champignons de Paris en dés et 200 g de courgette en dés, et cuire pendant 10 minutes, jusqu'à ce que les légumes soient tendres et commencent à ramollir.",
-        "Étape 6: Ajouter délicatement 400 g de tofu soyeux en morceaux grossiers, et laisser chauffer 2 minutes sans remuer.",
-        "Étape 7: Casser les 4 œufs (220 g) à la surface et cuire 2 minutes, jusqu'à ce que les blancs soient pris. Rectifier l'assaisonnement et servir chaud, avec du riz."
+        "Étape 1 : Huile pimentée : chauffer doucement 20 ml d'huile de sésame avec 100 g d'oignon émincé, 12 g d'ail haché et 8 g de gochugaru, 2 minutes, sans brûler le piment.",
+        "Étape 2 : Ajouter 250 g de kimchi haché et le faire revenir 4 minutes, jusqu'à ce qu'il soit translucide.",
+        "Étape 3 : Ajouter 30 ml de gochujang, 200 g de champignons et 150 g de courgette, puis verser 700 ml de dashi et mijoter 8 minutes.",
+        "Étape 4 : Ajouter 500 g de tofu soyeux en grosses cuillerées et laisser frémir 5 minutes.",
+        "Étape 5 : Casser 4 œufs (220 g) à la surface et cuire 2 minutes.",
+        "Étape 6 : Parsemer de 40 g d'oignons verts émincés et servir bouillant, avec du riz."
       ],
       "diet_flags": {
         "vegan": false,
         "vegetarian": true,
-        "gluten_free": false,
+        "gluten_free": true,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -170148,7 +170328,7 @@
       "id": "tarte_quiche_vegetarienne_b849b0",
       "titles": {
         "original": "Quiche",
-        "fr": "Quiche (végétarienne)",
+        "fr": "Quiche aux légumes du soleil et au parmesan",
         "en": "Vegetarian Quiche"
       },
       "origin": {
@@ -170160,9 +170340,9 @@
       "servings": 4,
       "timing": {
         "prep_active_min": 25,
-        "prep_passive_min": 20,
-        "cook_min": 35,
-        "total_min": 80
+        "prep_passive_min": 0,
+        "cook_min": 50,
+        "total_min": 75
       },
       "composition": [
         {
@@ -170171,9 +170351,9 @@
           "unit": "g",
           "meta": {
             "role": "starch",
-            "form": "dried",
+            "form": "",
             "state": "raw",
-            "preparation": "par_cooked"
+            "preparation": ""
           }
         },
         {
@@ -170182,14 +170362,14 @@
           "unit": "g",
           "meta": {
             "role": "protein",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cream_heavy",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -170200,7 +170380,7 @@
         },
         {
           "ingredient": "milk_liquid_uht_3_5pct",
-          "quantity": 100,
+          "quantity": 150,
           "unit": "ml",
           "meta": {
             "role": "batter_softening",
@@ -170211,79 +170391,46 @@
         },
         {
           "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 80,
+          "quantity": 50,
           "unit": "g",
           "meta": {
             "role": "dairy",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "red_bell_pepper_raw",
-          "quantity": 67,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
             "form": "",
             "state": "raw",
-            "preparation": "par_cooked"
+            "preparation": ""
           }
         },
         {
           "ingredient": "green_zucchini_squash_raw",
-          "quantity": 67,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
             "form": "",
             "state": "raw",
-            "preparation": "par_cooked"
+            "preparation": ""
           }
         },
         {
           "ingredient": "button_mushroom_raw",
-          "quantity": 66,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "vegetable",
             "form": "",
             "state": "raw",
-            "preparation": "par_cooked"
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 2,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
             "preparation": ""
-          }
-        },
-        {
-          "ingredient": "black_pepper_spice",
-          "quantity": 2,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "parsley_fresh_herb",
-          "quantity": null,
-          "unit": "quelques feuilles",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "feuilles de persil frais",
-            "note": "Pour une touche de fraîcheur",
-            "optional": true
           }
         },
         {
@@ -170292,6 +170439,17 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "oregano_spice_dried",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -170307,10 +170465,46 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_salad_raw_plain",
+          "quantity": null,
+          "unit": "1 portion",
+          "meta": {
+            "role": "serving_suggestion",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
-        "diet": [],
+        "diet": [
+          "vegetarian",
+          "nut_free"
+        ],
         "allergens": [
           "eggs",
           "gluten",
@@ -170362,12 +170556,11 @@
         }
       },
       "search_tokens": [
-        "(vegetarienne)",
         "all",
+        "aux",
         "avance",
         "bell",
         "beurre",
-        "black",
         "brisee",
         "butter",
         "button",
@@ -170387,6 +170580,7 @@
         "heavy",
         "lait",
         "leger",
+        "legumes",
         "lent",
         "light",
         "long",
@@ -170395,18 +170589,17 @@
         "milk",
         "minceur",
         "mushroom",
-        "noir",
         "oignon",
+        "olive",
         "onion",
+        "oregano",
+        "origan",
         "oven_cooking",
         "paris",
         "parmesan",
-        "parsley",
         "pastry,",
         "pate",
         "pepper",
-        "persil",
-        "poivre",
         "poivron",
         "pur",
         "quiche",
@@ -170416,6 +170609,7 @@
         "sans viande",
         "sel",
         "shortcrust",
+        "soleil",
         "squash",
         "table",
         "technique",
@@ -170428,17 +170622,14 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.89,
-      "description": "Quiche végétarienne créative, pâte précuite à blanc pour éviter le détrempage, appareil à base de lait et de crème animale cuits lentement à température modérée pour une texture ferme mais fondante sans bulles ni surcuisson, avec une garniture de légumes variés",
+      "description": "Quiche d'été garnie de poivron, courgette et champignons revenus à l'huile d'olive, dans un appareil œufs, crème et lait relevé de parmesan et d'origan.",
       "instructions": [
-        "Étape 1: Préchauffer le four à 180°C pour une cuisson parfaite, en vérifiant que la température est bien réglée pour éviter toute erreur.",
-        "Étape 2: Foncer un moule de 26 cm avec une pâte précuite à base de farine de blé, piquer le fond pour éviter les bulles et assurer une cuisson uniforme.",
-        "Étape 3: Faire revenir 100 g d'oignon émincé et les légumes dans 20 ml d'huile d'olive à feu moyen pendant 6 minutes, en surveillant la texture et la couleur pour atteindre une légère caramelisation.",
-        "Étape 4: Fouetter 4 œufs avec 200 ml de crème liquide et 100 ml de lait entier, en ajoutant du sel, du poivre et des épices pour donner un bouquet aromatique équilibré.",
-        "Étape 5: Répartir la garniture composée de 200 g de légumes variés (poivrons, courgettes, champignons) sur le fond précuit, en veillant à une répartition homogène pour une présentation appétissante.",
-        "Étape 6: Ajouter 80 g de parmesan râpé sur la garniture pour un goût salé et une texture croquante.",
-        "Étape 7: Enfourner pendant 30 à 35 minutes, en surveillant la surface pour atteindre une couleur dorée et en vérifiant que le centre est légèrement tremblant, ce qui indique une cuisson parfaite.",
-        "Étape 8: Sortir la quiche du four et laisser refroidir pendant quelques minutes avant de servir.",
-        "Étape 9: Servir chaud, accompagné d'une salade verte ou de légumes grillés pour un repas complet et équilibré."
+        "Étape 1 : Préchauffer le four à 180°C. Foncer un moule de 26 cm avec 230 g de pâte brisée, piquer le fond et précuire 12 minutes.",
+        "Étape 2 : Faire revenir 100 g d'oignon émincé, 150 g de poivron en lanières, 150 g de courgette en dés et 120 g de champignons émincés dans 20 ml d'huile d'olive, 8 minutes, jusqu'à évaporation de l'eau.",
+        "Étape 3 : Fouetter 4 œufs (220 g) avec 150 ml de crème, 150 ml de lait, 1 g de sel, 1 g de poivre et 1 g d'origan.",
+        "Étape 4 : Répartir les légumes sur le fond de tarte, verser l'appareil et parsemer de 50 g de parmesan.",
+        "Étape 5 : Enfourner 30 à 35 minutes, jusqu'à ce que le centre soit juste pris.",
+        "Étape 6 : Laisser tiédir 5 minutes avant de servir, avec une salade verte."
       ],
       "diet_flags": {
         "vegan": false,
