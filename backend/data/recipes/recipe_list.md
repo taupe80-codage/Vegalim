@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 203 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 200 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -122,8 +122,8 @@
 - **Courge Mijotée Japonaise** _(vegan, vegetarian, side, japanese)_ — `soup_courge_mijotee_japonaise_3852ae`
 - **Couscous aux légumes express** _(high_protein, vegan, vegetarian, main, moroccan)_ — `couscous_tfaya_quick_ee5f20`
 - **Couscous de Chou-fleur** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, vegan, vegetarian, side, international)_ — `side_couscous_de_choufleur_ac056b`
-- **Couscous Tfaya (Vegan)** _(vegan, vegetarian, main, maghrebi)_ — `couscous_tfaya_vegan_65aba6` 🔁 doublon possible : Couscous Tfaya végétarien
-- **Couscous Tfaya végétarien** _(vegan, vegetarian, main, moroccan)_ — `couscous_tfaya_classic_k1d1p6` 🔁 doublon possible : Couscous Tfaya (Vegan)
+- **Couscous tfaya aux pois chiches et patate douce (vegan)** _(vegan, vegetarian, main, maghrebi)_ — `couscous_tfaya_vegan_65aba6`
+- **Couscous tfaya de Fès au beurre et au miel** _(vegetarian, main, moroccan)_ — `couscous_tfaya_classic_k1d1p6`
 - **Couscous Traditionnel** _(high_protein, vegan, vegetarian, main, moroccan)_ — `couscous_traditionnel_132078`
 - **Crackers Salés** _(vegan, vegetarian, snack, international)_ — `snack_crackers_35f6a8`
 - **Croatian Bean Stew** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, croatian)_ — `stew_croatian_bean_stew_4dfb05`
@@ -159,8 +159,8 @@
 
 - **Dahl au lait de coco** _(diabetes_friendly, gluten_free, high_protein, vegetarian, main, indian)_ — `dal_coconut_classic_k1d1p5` 🔁 doublon possible : Lait de Coco Maison, Riz au Lait Coco Vegan
 - **Dahl de pois chiches** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_chana_classic_k1d1p4`
-- **Dal de lentilles corail** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_lentil_corail_classic_k1d1p1` 🔁 doublon possible : Dal de Lentilles Corail (Vegan), Rillettes Lentilles Corail
-- **Dal de Lentilles Corail (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, low_calorie, nut_free, vegan, vegetarian, main, indian)_ — `dal_de_lentilles_corail_vegan_8cc6a7` 🔁 doublon possible : Dal de lentilles corail, Rillettes Lentilles Corail
+- **Dal de lentilles corail** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_lentil_corail_classic_k1d1p1` 🔁 doublon possible : Dal de Lentilles Corail (Vegan), Koshari express aux lentilles corail, Rillettes Lentilles Corail
+- **Dal de Lentilles Corail (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, low_calorie, nut_free, vegan, vegetarian, main, indian)_ — `dal_de_lentilles_corail_vegan_8cc6a7` 🔁 doublon possible : Dal de lentilles corail, Koshari express aux lentilles corail, Rillettes Lentilles Corail
 - **Dal Makhani** _(diabetes_friendly, gluten_free, high_protein, vegetarian, main, indian)_ — `dal_dal_makhani_c9ce94` 🔁 doublon possible : Dal Makhani (Vegan)
 - **Dal Makhani (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, indian)_ — `dal_makhani_vegan_259219` 🔁 doublon possible : Dal Makhani
 - **Dal Tadka** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_dal_tadka_4c3536`
@@ -283,8 +283,8 @@
 - **Haricots Rouges à la Tomate** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, international)_ — `main_haricots_rouges_a_la_toma_c44560`
 - **Haricots Verts Amandine** _(gluten_free, kid_friendly, starter, french)_ — `entry_haricots_verts_amandine_391638`
 - **Haricots Verts à la Grenobloise** _(diabetes_friendly, kid_friendly, low_calorie, nut_free, side, french)_ — `side_haricots_verts_a_la_greno_f1bdca`
-- **Harira** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, moroccan)_ — `dal_harira_822880`
-- **Harira marocaine traditionnelle** _(diabetes_friendly, high_protein, vegan, vegetarian, soup, moroccan)_ — `soup_harira_classic_v3_p9x4k2`
+- **Harira express aux vermicelles** _(diabetes_friendly, high_protein, vegan, vegetarian, soup, moroccan)_ — `dal_harira_822880`
+- **Harira marocaine traditionnelle à la tadouira** _(diabetes_friendly, high_protein, vegan, vegetarian, soup, moroccan)_ — `soup_harira_classic_v3_p9x4k2`
 - **Harissa** _(vegan, vegetarian, gluten_free, sauce, moroccan)_ — `base_harissa_ef842f`
 - **Horta** _(gluten_free, vegan, vegetarian, side, greek)_ — `main_horta_b898d5`
 - **Hot Pot** _(diabetes_friendly, high_protein, vegan, vegetarian, soup, chinese)_ — `soup_hot_pot_e7fc15`
@@ -324,9 +324,9 @@
 - **Kimchi Bokkeumbap** _(main, korean)_ — `rice_kimchi_bokkeumbap_2cbfe6`
 - **Kombucha** _(vegan, gluten_free, lactose_free, beverage, chinese)_ — `beverage_kombucha_3df24c`
 - **Korma de Légumes** _(diabetes_friendly, gluten_free, vegetarian, main, indian)_ — `main_korma_de_legumes_ddde08`
-- **Koshari** _(gluten_free, vegan, vegetarian, main, egyptian)_ — `dal_koshari_15670d`
-- **Koshari Égyptien** _(vegan, vegetarian, main, egyptian)_ — `dal_koshari_egyptien_73828c` 🔁 doublon possible : Koshari égyptien traditionnel
-- **Koshari égyptien traditionnel** _(high_protein, vegan, vegetarian, main, egyptian)_ — `main_koshari_classic_v4_q7n5z2` 🔁 doublon possible : Koshari Égyptien
+- **Koshari de fête à la shatta** _(high_protein, vegan, vegetarian, main, egyptian)_ — `main_koshari_classic_v4_q7n5z2`
+- **Koshari du Caire aux pois chiches, sauce daqqa** _(vegan, vegetarian, main, egyptian)_ — `dal_koshari_egyptien_73828c`
+- **Koshari express aux lentilles corail** _(gluten_free, vegan, vegetarian, main, egyptian)_ — `dal_koshari_15670d` 🔁 doublon possible : Dal de lentilles corail, Dal de Lentilles Corail (Vegan)
 - **Kouign-Amann** _(kid_friendly, nut_free, dessert, french_breton)_ — `dessert_kouign_amann_a71af6`
 
 ## L

@@ -8113,7 +8113,7 @@
   },
   {
     "id": "couscous_tfaya_vegan_65aba6",
-    "title": "Couscous Tfaya (Vegan)",
+    "title": "Couscous tfaya aux pois chiches et patate douce (vegan)",
     "cuisine": "maghrebi",
     "dish_type": "main",
     "vegan": true,
@@ -8127,34 +8127,39 @@
       "tree_nuts"
     ],
     "servings": 4,
-    "time_total": 82,
+    "time_total": 60,
     "confidence": 1.0,
-    "description": "Couscous créatif aux saveurs parfumées, avec une texture aérée et légère, accompagné d'une tfaya végétalienne riche en oignon caramélisé, raisins secs et amandes croquantes, préparé selon la tradition culinaire nord-africaine.",
+    "description": "Couscous végétal complet : semoule vapeur, patate douce rôtie à la cannelle, pois chiches et tfaya d'oignons caramélisés au sirop d'érable et au gingembre, parsemés d'amandes.",
     "composition": [
       {
         "ingredient": "couscous_to_cook_seed_dried",
-        "quantity": 300,
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sweet_potato_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chickpea_boiled",
+        "quantity": 240,
         "unit": "g"
       },
       {
         "ingredient": "yellow_onion_raw",
-        "quantity": 450,
+        "quantity": 400,
         "unit": "g"
       },
       {
         "ingredient": "grape_dried",
-        "quantity": 80,
-        "unit": "g"
-      },
-      {
-        "ingredient": "almond_raw_with_skin_unsalted",
         "quantity": 60,
         "unit": "g"
       },
       {
-        "ingredient": "cinnamon",
-        "quantity": 2.3,
-        "unit": "g"
+        "ingredient": "maple_syrup",
+        "quantity": 30,
+        "unit": "ml"
       },
       {
         "ingredient": "ginger_raw_root_fresh",
@@ -8162,69 +8167,64 @@
         "unit": "g"
       },
       {
+        "ingredient": "cinnamon",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 60,
+        "quantity": 50,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "almond_raw_with_skin_unsalted",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 300,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 4,
         "unit": "g"
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_sugar",
-        "quantity": 15,
+        "quantity": 1,
         "unit": "g"
       },
       {
         "ingredient": "persil",
         "quantity": null,
         "unit": "une poignée"
-      },
-      {
-        "ingredient": "maple_syrup",
-        "quantity": 40,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 400,
-        "unit": "ml"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "couscous_tfaya_classic_k1d1p6",
-        "title": "Couscous Tfaya végétarien",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "couscous_tfaya_classic_k1d1p6",
-    "title": "Couscous Tfaya végétarien",
+    "title": "Couscous tfaya de Fès au beurre et au miel",
     "cuisine": "moroccan",
     "dish_type": "main",
-    "vegan": true,
+    "vegan": false,
     "diet": [
-      "vegan",
       "vegetarian"
     ],
     "allergens": [
       "gluten",
-      "tree_nuts"
+      "tree_nuts",
+      "lactose",
+      "milk"
     ],
     "servings": 4,
-    "time_total": 125,
+    "time_total": 90,
     "confidence": 1.0,
-    "description": "Couscous végétal marocain sucré-salé, avec une texture aérienne et une tfaya d'oignons confits, raisins et épices parfumées, typique de la cuisine marocaine",
+    "description": "Le couscous tfaya des grandes occasions à Fès : semoule roulée au beurre et cuite deux fois à la vapeur, oignons confits au miel, à la cannelle et aux raisins, amandes grillées et fleur d'oranger.",
     "composition": [
       {
         "ingredient": "couscous_to_cook_seed_dried",
@@ -8238,13 +8238,23 @@
       },
       {
         "ingredient": "grape_dried",
-        "quantity": 120,
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 40,
         "unit": "g"
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 60,
+        "quantity": 20,
         "unit": "ml"
+      },
+      {
+        "ingredient": "honey",
+        "quantity": 40,
+        "unit": "g"
       },
       {
         "ingredient": "cinnamon",
@@ -8253,17 +8263,12 @@
       },
       {
         "ingredient": "turmeric_powder",
-        "quantity": 3.8,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_sugar",
-        "quantity": 30,
+        "quantity": 2,
         "unit": "g"
       },
       {
         "ingredient": "almond_raw_with_skin_unsalted",
-        "quantity": 80,
+        "quantity": 60,
         "unit": "g"
       },
       {
@@ -8272,30 +8277,24 @@
         "unit": "g"
       },
       {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": null,
-        "unit": "1 poignée"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
         "ingredient": "water",
         "quantity": 380,
         "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": null,
+        "unit": "1 poignée"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "couscous_tfaya_vegan_65aba6",
-        "title": "Couscous Tfaya (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "couscous_traditionnel_132078",
@@ -10736,6 +10735,11 @@
         "score": 1.0
       },
       {
+        "id": "dal_koshari_15670d",
+        "title": "Koshari express aux lentilles corail",
+        "score": 0.67
+      },
+      {
         "id": "entry_rillettes_lentilles_corai_40d7dc",
         "title": "Rillettes Lentilles Corail",
         "score": 0.67
@@ -10828,6 +10832,11 @@
         "id": "dal_lentil_corail_classic_k1d1p1",
         "title": "Dal de lentilles corail",
         "score": 1.0
+      },
+      {
+        "id": "dal_koshari_15670d",
+        "title": "Koshari express aux lentilles corail",
+        "score": 0.67
       },
       {
         "id": "entry_rillettes_lentilles_corai_40d7dc",
@@ -18374,33 +18383,38 @@
   },
   {
     "id": "dal_harira_822880",
-    "title": "Harira",
+    "title": "Harira express aux vermicelles",
     "cuisine": "moroccan",
-    "dish_type": "main",
+    "dish_type": "soup",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "high_protein",
       "vegan",
       "vegetarian"
     ],
     "allergens": [
-      "celery"
+      "celery",
+      "gluten"
     ],
     "servings": 4,
-    "time_total": 68,
+    "time_total": 55,
     "confidence": 1.0,
-    "description": "Découvrez cette soupe marocaine végane aux pois chiches, au bouillon dense et rustique, parfumée aux épices, avec une texture crémeuse et une couleur dorée",
+    "description": "Harira de semaine, prête en 45 minutes : pois chiches, lentilles, tomates et céleri, vermicelles cuits dans le bouillon, herbes fraîches et citron, sans liaison à la farine.",
     "composition": [
       {
         "ingredient": "chickpea_boiled",
-        "quantity": 400,
+        "quantity": 300,
         "unit": "g"
       },
       {
         "ingredient": "green_lentil_dried",
-        "quantity": 150,
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "pasta_raw_dried",
+        "quantity": 50,
         "unit": "g"
       },
       {
@@ -18420,18 +18434,13 @@
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
+        "quantity": 12,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 750.0,
+        "quantity": 1200,
         "unit": "ml"
-      },
-      {
-        "ingredient": "coriander_spice_seed",
-        "quantity": 3,
-        "unit": "g"
       },
       {
         "ingredient": "turmeric_powder",
@@ -18440,22 +18449,37 @@
       },
       {
         "ingredient": "ginger_raw_root_fresh",
-        "quantity": 11.2,
+        "quantity": 10,
         "unit": "g"
       },
       {
         "ingredient": "cinnamon",
-        "quantity": 3,
+        "quantity": 2,
         "unit": "g"
       },
       {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 2,
+        "quantity": 1,
         "unit": "g"
       },
       {
@@ -18464,13 +18488,13 @@
         "unit": "1 poignée"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
   {
     "id": "soup_harira_classic_v3_p9x4k2",
-    "title": "Harira marocaine traditionnelle",
+    "title": "Harira marocaine traditionnelle à la tadouira",
     "cuisine": "moroccan",
     "dish_type": "soup",
     "vegan": true,
@@ -18487,7 +18511,7 @@
     "servings": 4,
     "time_total": 115,
     "confidence": 1.0,
-    "description": "Découvrez la Harira, une soupe marocaine traditionnelle végane aux saveurs complexes et textures crémeuses, où les tomates, les légumineuses et les épices se mélangent en harmonie.",
+    "description": "La harira du ftour de Ramadan : lentilles corail, pois chiches et tomates longuement mijotés, liés en fin de cuisson par la tadouira (farine délayée), relevés d'herbes fraîches et de citron.",
     "composition": [
       {
         "ingredient": "tomato_raw_ripe",
@@ -20654,8 +20678,192 @@
     "similar": []
   },
   {
+    "id": "main_koshari_classic_v4_q7n5z2",
+    "title": "Koshari de fête à la shatta",
+    "cuisine": "egyptian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "high_protein",
+      "vegan",
+      "vegetarian"
+    ],
+    "allergens": [
+      "gluten",
+      "sulphites"
+    ],
+    "servings": 4,
+    "time_total": 85,
+    "confidence": 1.0,
+    "description": "Koshari généreux des repas de fête : riz aux vermicelles, lentilles, pâtes, sauce tomate longuement réduite et shatta, la sauce pimentée égyptienne, pour relever le tout.",
+    "composition": [
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "rice_vermicelli_raw_dried",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_lentil_dried",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "pasta_raw_dried",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_vinegar_liquid_distilled",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_spice_seed",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "dal_koshari_egyptien_73828c",
+    "title": "Koshari du Caire aux pois chiches, sauce daqqa",
+    "cuisine": "egyptian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian"
+    ],
+    "allergens": [
+      "gluten",
+      "sulphites"
+    ],
+    "servings": 4,
+    "time_total": 60,
+    "confidence": 1.0,
+    "description": "Le koshari des échoppes du Caire : riz, lentilles brunes, macaronis et pois chiches en couches, sauce tomate épicée, daqqa à l'ail et au vinaigre, et oignons frits croustillants.",
+    "composition": [
+      {
+        "ingredient": "green_lentil_dried",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "pasta_raw_dried",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chickpea_boiled",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_sauce_salted_canned",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 240,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_vinegar_liquid_distilled",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander",
+        "quantity": null,
+        "unit": "1 poignée"
+      },
+      {
+        "ingredient": "white_pita_bread",
+        "quantity": null,
+        "unit": "2-3 pains"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "dal_koshari_15670d",
-    "title": "Koshari",
+    "title": "Koshari express aux lentilles corail",
     "cuisine": "egyptian",
     "dish_type": "main",
     "vegan": true,
@@ -20668,12 +20876,12 @@
       "sulphites"
     ],
     "servings": 4,
-    "time_total": 62,
+    "time_total": 40,
     "confidence": 1.0,
-    "description": "Plat égyptien végan à base de lentilles vertes, où les saveurs se marient dans une texture tendre et parfumée, typique de la cuisine méditerranéenne avec des notes de cumin et de tomate.",
+    "description": "Version rapide du koshari cuite en une seule casserole : lentilles corail, riz et vermicelles dorés, nappés d'une sauce tomate au cumin et d'oignons frits.",
     "composition": [
       {
-        "ingredient": "green_lentil_dried",
+        "ingredient": "red_lentil_dried",
         "quantity": 150,
         "unit": "g"
       },
@@ -20689,12 +20897,7 @@
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_sauce_salted_canned",
-        "quantity": 400,
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -20703,213 +20906,58 @@
         "unit": "g"
       },
       {
+        "ingredient": "tomato_sauce_salted_canned",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
         "ingredient": "cumin_spice_seed",
         "quantity": 3,
         "unit": "g"
       },
       {
+        "ingredient": "red_hot_chili_pepper_spice_dried",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
         "ingredient": "white_vinegar_liquid_distilled",
-        "quantity": 30,
+        "quantity": 20,
         "unit": "ml"
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
+        "quantity": 40,
         "unit": "ml"
       },
       {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 240,
+        "ingredient": "water",
+        "quantity": 700,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
         "unit": "g"
       },
       {
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 3,
-        "unit": "g"
       }
     ],
     "n_instructions": 5,
     "flags": [],
-    "similar": []
-  },
-  {
-    "id": "dal_koshari_egyptien_73828c",
-    "title": "Koshari Égyptien",
-    "cuisine": "egyptian",
-    "dish_type": "main",
-    "vegan": true,
-    "diet": [
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [
-      "gluten",
-      "sulphites"
-    ],
-    "servings": 4,
-    "time_total": 54,
-    "confidence": 1.0,
-    "description": "Plat égyptien de riz parfumé, lentilles corail tendres et pâtes al dente, sauce tomate acidulée et épicée, oignons jaunes frits croustillants, parfumé de cumin et de vinaigre blanc",
-    "composition": [
-      {
-        "ingredient": "green_lentil_dried",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_rice_raw_seed_unenriched",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "pasta_raw_dried",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_sauce_salted_canned",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 9,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_vinegar_liquid_distilled",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 240,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander",
-        "quantity": null,
-        "unit": "1 poignée"
-      },
-      {
-        "ingredient": "white_pita_bread",
-        "quantity": null,
-        "unit": "2-3 pains"
-      }
-    ],
-    "n_instructions": 4,
-    "flags": [],
     "similar": [
       {
-        "id": "main_koshari_classic_v4_q7n5z2",
-        "title": "Koshari égyptien traditionnel",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "main_koshari_classic_v4_q7n5z2",
-    "title": "Koshari égyptien traditionnel",
-    "cuisine": "egyptian",
-    "dish_type": "main",
-    "vegan": true,
-    "diet": [
-      "high_protein",
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [
-      "gluten",
-      "sulphites"
-    ],
-    "servings": 4,
-    "time_total": 105,
-    "confidence": 1.0,
-    "description": "Plat égyptien multicouche vegan, combinant riz croustillant, lentilles corail tendres et pâtes al dente avec une sauce tomate acidulée et des oignons frits dorés croustillants, inspiré par la tradition culinaire égyptienne.",
-    "composition": [
-      {
-        "ingredient": "white_rice_raw_seed_unenriched",
-        "quantity": 250,
-        "unit": "g"
+        "id": "dal_lentil_corail_classic_k1d1p1",
+        "title": "Dal de lentilles corail",
+        "score": 0.67
       },
       {
-        "ingredient": "green_lentil_dried",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "pasta_raw_dried",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_vinegar_liquid_distilled",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "sunflower_oil_plant",
-        "quantity": 80,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 3,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dal_koshari_egyptien_73828c",
-        "title": "Koshari Égyptien",
-        "score": 1.0
+        "id": "dal_de_lentilles_corail_vegan_8cc6a7",
+        "title": "Dal de Lentilles Corail (Vegan)",
+        "score": 0.67
       }
     ]
   },

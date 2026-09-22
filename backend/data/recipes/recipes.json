@@ -21423,7 +21423,7 @@
       "id": "couscous_tfaya_classic_k1d1p6",
       "titles": {
         "original": "Couscous Tfaya",
-        "fr": "Couscous Tfaya végétarien",
+        "fr": "Couscous tfaya de Fès au beurre et au miel",
         "en": "Vegetarian Couscous Tfaya"
       },
       "origin": {
@@ -21434,10 +21434,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 45,
-        "prep_passive_min": 20,
-        "cook_min": 60,
-        "total_min": 125
+        "prep_active_min": 30,
+        "prep_passive_min": 5,
+        "cook_min": 55,
+        "total_min": 90
       },
       "composition": [
         {
@@ -21448,7 +21448,7 @@
             "role": "base",
             "form": "",
             "state": "raw",
-            "preparation": "steamed"
+            "preparation": ""
           }
         },
         {
@@ -21457,14 +21457,14 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
-            "preparation": "long_confit"
+            "preparation": ""
           }
         },
         {
           "ingredient": "grape_dried",
-          "quantity": 120,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "sweet_garnish",
@@ -21474,11 +21474,33 @@
           }
         },
         {
+          "ingredient": "butter_sup80pct",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "olive_oil_plant",
-          "quantity": 60,
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "honey",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -21490,40 +21512,29 @@
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "turmeric_powder",
-          "quantity": 3.8,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "white_sugar",
-          "quantity": 30,
-          "unit": "g",
-          "meta": {
-            "role": "balance",
-            "form": "",
-            "state": "raw",
-            "preparation": "caramelized"
-          }
-        },
-        {
           "ingredient": "almond_raw_with_skin_unsalted",
-          "quantity": 80,
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "garnish",
-            "form": "slivered",
+            "form": "",
             "state": "toasted",
             "preparation": ""
           }
@@ -21540,28 +21551,6 @@
           }
         },
         {
-          "ingredient": "parsley_fresh_herb",
-          "quantity": null,
-          "unit": "1 poignée",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "persil frais",
-            "note": "Quelques feuilles pour la fraîcheur",
-            "optional": true
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "water",
           "quantity": 380,
           "unit": "ml",
@@ -21571,16 +21560,39 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": null,
+          "unit": "1 poignée",
+          "meta": {
+            "role": "serving_suggestion",
+            "ingredient_fr": "persil frais",
+            "note": "Quelques feuilles pour la fraîcheur",
+            "optional": true
+          }
         }
       ],
       "tags": {
         "diet": [
-          "vegan",
           "vegetarian"
         ],
         "allergens": [
           "gluten",
-          "tree_nuts"
+          "tree_nuts",
+          "lactose",
+          "milk"
         ],
         "technique": [
           "steaming",
@@ -21642,16 +21654,19 @@
         "almond",
         "amande",
         "assembly",
-        "blanc",
+        "beurre",
         "blossom",
+        "butter",
         "cinnamon",
         "couscous",
         "curcuma",
         "d'oranger",
         "eau",
         "epice",
+        "fes",
         "fleur",
         "grape",
+        "honey",
         "intermediaire",
         "leger",
         "lent",
@@ -21660,6 +21675,7 @@
         "low calorie",
         "maroc",
         "marocain",
+        "miel",
         "mijote",
         "minceur",
         "moroccan",
@@ -21668,53 +21684,41 @@
         "olive",
         "onion",
         "orange",
-        "parsley",
-        "persil",
         "potable)",
         "raisin",
         "red",
         "rouge",
         "salt",
-        "sans produit animal",
         "sans viande",
         "sel",
         "steaming",
-        "sucre",
-        "sugar",
         "table",
         "tajine",
         "tfaya",
         "turmeric",
-        "vegan",
-        "vegetalien",
         "vegetarian",
         "vegetarien",
-        "water",
-        "white"
+        "water"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 1.0,
       "_chef_note": "Pour une expérience culinaire authentique, servez le couscous avec de la tfaya chaude et des amandes croquantes.",
-      "description": "Couscous végétal marocain sucré-salé, avec une texture aérienne et une tfaya d'oignons confits, raisins et épices parfumées, typique de la cuisine marocaine",
+      "description": "Le couscous tfaya des grandes occasions à Fès : semoule roulée au beurre et cuite deux fois à la vapeur, oignons confits au miel, à la cannelle et aux raisins, amandes grillées et fleur d'oranger.",
       "instructions": [
-        "Étape 1 : Réhydrater la semoule : verser 300 g de couscous dans un grand saladier, arroser de 300 ml d'eau bouillante salée, couvrir pendant 5 minutes. Égrainer à la fourchette en incorporant 20 ml d'huile d'olive, en veillant à ce que les grains soient bien séparés et aérés.",
-        "Étape 2 : Cuire la semoule à la vapeur dans le haut du couscoussier pendant 10 minutes. Sortir, égrainer de nouveau à la main en l'aérant — c'est cette double opération qui donne la texture légère et aérienne, caractéristique du couscous traditionnel.",
-        "Étape 3 : Préparer la tfaya : faire fondre 450 g d'oignons rouges émincés dans 40 ml d'huile d'olive à feu moyen pendant 10 minutes, puis réduire à feu doux. Cuire encore 20 minutes en remuant souvent, jusqu'à ce que les oignons soient de couleur brun doré et d'une texture confite, parfumée par les épices.",
-        "Étape 4 : Ajouter 3,8 g de curcuma en poudre, 30 g de sucre et une pincée de poivre noir. Mélanger bien pour que les saveurs se combinent harmonieusement. Incorporer 120 g de raisins secs et 80 ml d'eau. Laisser mijoter 10 minutes à feu doux, jusqu'à ce que la sauce soit légèrement sirupeuse et les oignons brillants.",
-        "Étape 5 : Ajouter 4,5 g de cannelle en poudre pour parfumer la tfaya. Mélanger bien pour que les saveurs se combinent harmonieusement.",
-        "Étape 6 : Torréfier 80 g d'amandes effilées dans une poêle sèche à feu moyen pendant 3 minutes, jusqu'à légère coloration dorée. Réserver pour la garniture finale.",
-        "Étape 7 : Réchauffer la semoule une dernière fois à la vapeur pendant 5 minutes, puis égrainer. Dresser en dôme dans un plat creux. Verser la tfaya au centre sans mélanger, pour préserver les contrastes de textures et de saveurs.",
-        "Étape 8 : Parsemer les amandes torréfiées et 5 g d'eau de fleur d'oranger sur le dessus. Accompagner d'un filet d'huile d'olive pour une touche de fraîcheur.",
-        "Étape 9 : Servir chaud.",
-        "Étape 10 : Conserver les restes au réfrigérateur pendant 24 heures, puis réchauffer à la vapeur avant de servir."
+        "Étape 1 : Arroser 300 g de semoule de 300 ml d'eau salée tiède, laisser gonfler 5 minutes puis l'égrener avec 20 g de beurre.",
+        "Étape 2 : Cuire la semoule 10 minutes à la vapeur du couscoussier, l'égrener à nouveau à la main, puis la cuire encore 10 minutes.",
+        "Étape 3 : Tfaya : faire fondre 450 g d'oignons rouges émincés dans 20 ml d'huile d'olive et 20 g de beurre, 30 minutes à feu doux, jusqu'à ce qu'ils soient confits.",
+        "Étape 4 : Ajouter 2 g de curcuma, 4,5 g de cannelle, 40 g de miel, 100 g de raisins secs et 80 ml d'eau, puis laisser réduire 10 minutes jusqu'à consistance sirupeuse.",
+        "Étape 5 : Torréfier 60 g d'amandes à sec 3 minutes.",
+        "Étape 6 : Dresser la semoule en dôme, déposer la tfaya au centre, parsemer d'amandes et arroser de 5 g d'eau de fleur d'oranger."
       ],
       "diet_flags": {
-        "vegan": true,
+        "vegan": false,
         "vegetarian": true,
         "gluten_free": false,
-        "lactose_free": true,
+        "lactose_free": false,
         "nut_free": false,
         "raw": false,
         "kid_friendly": false
@@ -22018,7 +22022,7 @@
       "id": "couscous_tfaya_vegan_65aba6",
       "titles": {
         "original": "Couscous Tfaya (Vegan)",
-        "fr": "Couscous Tfaya (Vegan)",
+        "fr": "Couscous tfaya aux pois chiches et patate douce (vegan)",
         "en": "Tfaya Couscous (Vegan)"
       },
       "origin": {
@@ -22029,15 +22033,15 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
-        "prep_passive_min": 20,
-        "cook_min": 45,
-        "total_min": 82
+        "prep_active_min": 20,
+        "prep_passive_min": 0,
+        "cook_min": 40,
+        "total_min": 60
       },
       "composition": [
         {
           "ingredient": "couscous_to_cook_seed_dried",
-          "quantity": 300,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "grain",
@@ -22047,19 +22051,41 @@
           }
         },
         {
+          "ingredient": "sweet_potato_raw",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chickpea_boiled",
+          "quantity": 240,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "yellow_onion_raw",
-          "quantity": 450,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "grape_dried",
-          "quantity": 80,
+          "quantity": 60,
           "unit": "g",
           "meta": {
             "role": "sweetener",
@@ -22069,23 +22095,12 @@
           }
         },
         {
-          "ingredient": "almond_raw_with_skin_unsalted",
-          "quantity": 60,
-          "unit": "g",
+          "ingredient": "maple_syrup",
+          "quantity": 30,
+          "unit": "ml",
           "meta": {
-            "role": "garnish",
-            "form": "slivered",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "cinnamon",
-          "quantity": 2.3,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
+            "role": "sweetener",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -22096,14 +22111,25 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "ground",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 60,
+          "quantity": 50,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -22113,8 +22139,30 @@
           }
         },
         {
+          "ingredient": "almond_raw_with_skin_unsalted",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "toasted",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 300,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -22125,21 +22173,10 @@
         },
         {
           "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "white_sugar",
-          "quantity": 15,
-          "unit": "g",
-          "meta": {
-            "role": "sweetener",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -22154,28 +22191,6 @@
             "ingredient_fr": "feuilles de persil frais",
             "note": "Pour une touche de fraîcheur et de couleur",
             "optional": true
-          }
-        },
-        {
-          "ingredient": "maple_syrup",
-          "quantity": 40,
-          "unit": "ml",
-          "meta": {
-            "role": "sweetener",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 400,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
           }
         }
       ],
@@ -22234,37 +22249,39 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(vegan)",
+        "1 heure",
         "almond",
         "amande",
-        "black",
-        "blanc",
+        "aux",
         "braising",
+        "chiches",
+        "chickpea",
         "cinnamon",
         "couscous",
         "d'erable",
+        "douce",
+        "eau",
         "gingembre",
         "ginger",
         "grape",
         "intermediaire",
         "jaune",
         "leger",
-        "lent",
         "light",
-        "long",
         "low calorie",
         "maghrebi",
         "maple",
-        "mijote",
         "minceur",
         "moyen",
-        "noir",
         "oignon",
         "olive",
         "onion",
-        "pepper",
-        "persil",
-        "poivre",
+        "patate",
+        "pois",
+        "potable)",
+        "potato",
         "raisin",
         "salt",
         "sans produit animal",
@@ -22272,31 +22289,28 @@
         "sauteed",
         "sel",
         "sirop",
-        "sucre",
-        "sugar",
+        "sweet",
         "syrup",
         "table",
         "tfaya",
         "vegan",
         "vegetalien",
         "vegetarien",
-        "white",
+        "water",
         "yellow"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.93,
-      "description": "Couscous créatif aux saveurs parfumées, avec une texture aérée et légère, accompagné d'une tfaya végétalienne riche en oignon caramélisé, raisins secs et amandes croquantes, préparé selon la tradition culinaire nord-africaine.",
+      "description": "Couscous végétal complet : semoule vapeur, patate douce rôtie à la cannelle, pois chiches et tfaya d'oignons caramélisés au sirop d'érable et au gingembre, parsemés d'amandes.",
       "instructions": [
-        "Étape 1 : Réhydrater 300g de semoule de couscous en versant 400ml d'eau bouillante salée. Couvrir hermétiquement pendant 5 minutes, puis égrainer à la fourchette en incorporant 20ml d'huile d'olive pour éviter que les grains ne collent.",
-        "Étape 2 : Cuire le couscous à la vapeur douce pendant 10 minutes. Égrainer de nouveau à la main pour aérer et ajouter un peu d'huile d'olive pour éviter que les grains ne collent, tout en vérifiant que les grains sont tendres et séparés.",
-        "Étape 3 : Préparer la tfaya végétalienne en faisant fondre 450g d'oignons jaunes émincés avec 5g de gingembre râpé dans 40ml d'huile d'olive extra vierge à feu moyen pendant 10 minutes, puis à feu doux pendant 20 minutes en remuant souvent. Les oignons doivent être tendres et légèrement caramélisés, avec une couleur dorée et un parfum sucré.",
-        "Étape 4 : Ajouter 2,3g de cannelle en poudre, 15g de sucre blanc, 80g de raisins secs et 40ml de sirop d'érable. Mijoter pendant 10 minutes à feu doux jusqu'à ce que la sauce soit légèrement sirupeuse et parfumée, avec un arôme floral et fruité.",
-        "Étape 5 : Torréfier séparément 60g d'amandes effilées à sec pendant 3 minutes pour obtenir une texture croquante et un parfum grillé, en vérifiant que les amandes sont dorées et croustillantes.",
-        "Étape 6 : Réchauffer le couscous pendant 5 minutes à la vapeur, puis égrainer une dernière fois pour obtenir une texture aérée et légère. Dresser en dôme dans un plat creux, en vérifiant que le couscous est chaud et parfumé.",
-        "Étape 7 : Déposer la tfaya au centre du couscous sans mélanger, parsemer d'amandes torréfiées. Servir chaud.",
-        "Étape 8 : Garnir de feuilles de persil frais pour une touche de fraîcheur et de couleur, en vérifiant que les feuilles sont tendres et parfumées."
+        "Étape 1 : Préchauffer le four à 200°C. Couper 400 g de patate douce en cubes, les mélanger avec 15 ml d'huile d'olive, 1 g de cannelle et 1 g de sel, puis les rôtir 25 minutes.",
+        "Étape 2 : Tfaya : faire fondre 400 g d'oignons émincés avec 5 g de gingembre râpé dans 25 ml d'huile d'olive, 25 minutes à feu doux.",
+        "Étape 3 : Ajouter 2 g de cannelle, 30 ml de sirop d'érable, 60 g de raisins secs et 240 g de pois chiches, puis mijoter 10 minutes.",
+        "Étape 4 : Arroser 250 g de semoule de 300 ml d'eau bouillante salée, couvrir 5 minutes, puis l'égrener avec 10 ml d'huile d'olive.",
+        "Étape 5 : Torréfier 40 g d'amandes à sec 3 minutes.",
+        "Étape 6 : Dresser la semoule, disposer la patate douce et la tfaya aux pois chiches, parsemer d'amandes et poivrer."
       ],
       "diet_flags": {
         "vegan": true,
@@ -33985,7 +33999,7 @@
       "id": "dal_harira_822880",
       "titles": {
         "original": "Harira",
-        "fr": "Harira",
+        "fr": "Harira express aux vermicelles",
         "en": "Harira"
       },
       "origin": {
@@ -33996,15 +34010,15 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 23,
-        "prep_passive_min": 10,
-        "cook_min": 35,
-        "total_min": 68
+        "prep_active_min": 15,
+        "prep_passive_min": 0,
+        "cook_min": 40,
+        "total_min": 55
       },
       "composition": [
         {
           "ingredient": "chickpea_boiled",
-          "quantity": 400,
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -34015,12 +34029,23 @@
         },
         {
           "ingredient": "green_lentil_dried",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
             "form": "",
-            "state": "cooked",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "pasta_raw_dried",
+          "quantity": 50,
+          "unit": "g",
+          "meta": {
+            "role": "carbohydrate",
+            "form": "",
+            "state": "raw",
             "preparation": ""
           }
         },
@@ -34030,7 +34055,7 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -34041,7 +34066,7 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -34052,39 +34077,29 @@
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 9.4,
+          "quantity": 12,
           "unit": "g",
           "meta": {
             "role": "ingredient",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 750 ml d'eau"
+            "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 750.0,
+          "quantity": 1200,
           "unit": "ml",
           "meta": {
-            "role": "ingredient",
-            "note": "pour reconstituer le bouillon"
-          }
-        },
-        {
-          "ingredient": "coriander_spice_seed",
-          "quantity": 3,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
+            "role": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -34095,36 +34110,69 @@
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "ginger_raw_root_fresh",
-          "quantity": 11.2,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cinnamon",
-          "quantity": 3,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -34135,7 +34183,7 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -34159,13 +34207,13 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "high_protein",
           "vegan",
           "vegetarian"
         ],
         "allergens": [
-          "celery"
+          "celery",
+          "gluten"
         ],
         "technique": [
           "braising",
@@ -34215,7 +34263,9 @@
       },
       "search_tokens": [
         "(eau",
+        "1 heure",
         "africain",
+        "aux",
         "avance",
         "bouillon",
         "braising",
@@ -34226,37 +34276,33 @@
         "chiches",
         "chickpea",
         "cinnamon",
-        "coeliaque",
         "complexe",
         "coriander",
         "coriandre",
         "curcuma",
         "eau",
         "epice",
+        "express",
         "gingembre",
         "ginger",
-        "gluten free",
         "green",
         "harira",
         "leger",
         "legumes",
-        "lent",
         "lentil",
         "lentille",
         "light",
-        "long",
         "low calorie",
         "maroc",
         "marocain",
-        "mijote",
         "minceur",
         "moroccan",
         "oignon",
-        "olive",
         "onion",
+        "pasta",
+        "pates",
         "pois",
         "potable)",
-        "sans gluten",
         "sans produit animal",
         "sans viande",
         "stalk",
@@ -34270,30 +34316,28 @@
         "vegetable",
         "vegetalien",
         "vegetarien",
+        "vermicelles",
         "verte",
         "water",
         "water_cooking"
       ],
       "difficulty_level": "hard",
-      "dish_type": "main",
+      "dish_type": "soup",
       "servings_default": 4,
       "_quality_score": 0.93,
       "_chef_note": "Pour une texture plus épaisse, laisser réduire légèrement le bouillon avant de servir.",
-      "description": "Découvrez cette soupe marocaine végane aux pois chiches, au bouillon dense et rustique, parfumée aux épices, avec une texture crémeuse et une couleur dorée",
+      "description": "Harira de semaine, prête en 45 minutes : pois chiches, lentilles, tomates et céleri, vermicelles cuits dans le bouillon, herbes fraîches et citron, sans liaison à la farine.",
       "instructions": [
-        "Étape 1 : Dans une grande casserole, faire chauffer 45 ml d'huile d'olive extra vierge à feu moyen. Ajouter 150 g d'oignon jaune et 80 g de céleri, laisser cuire jusqu'à coloration blonde en remuant régulièrement, en sentant les arômes se dégager, pendant environ 5 minutes.",
-        "Étape 2 : Incorporer 3 g de coriandre moulue, 3 g de curcuma et 11,2 g de gingembre frais râpé. Laisser cuire 1 minute en remuant constamment pour dégager les arômes, en observant la couleur dorée qui se forme.",
-        "Étape 3 : Ajouter 400 g de pois chiches et 150 g de lentilles vertes rincées, ainsi que 300 g de tomates concassées. Laisser cuire 5 minutes à feu moyen, en remuant occasionnellement, en écoutant les légumineuses commencer à mijoter.",
-        "Étape 4 : Verser 750 ml de bouillon végétal et porter à ébullition. Réduire ensuite le feu à doux et laisser mijoter 35 minutes ou jusqu'à ce que les légumineuses soient tendres, en sentant la texture dense et rustique se former.",
-        "Étape 5 : Assaisonner avec 2 g de sel et rectifier l'assaisonnement si nécessaire. Laisser cuire encore 2 minutes, en goûtant les saveurs équilibrées.",
-        "Étape 6 : Ajouter 3 g de cannelle moulue et laisser infuser 1 minute, en sentant les arômes se mêler.",
-        "Étape 7 : Vérifier que les légumineuses sont tendres et que la soupe a une texture crémeuse. Servir chaud, garni de coriandre fraîche ciselée si désiré.",
-        "Étape 8 : Conserver les restes au réfrigérateur pendant 3 jours, en réchauffant à feu doux avant de servir."
+        "Étape 1 : Faire revenir 150 g d'oignon et 80 g de céleri émincés dans 30 ml d'huile d'olive, 5 minutes à feu moyen.",
+        "Étape 2 : Ajouter 3 g de curcuma, 10 g de gingembre râpé et 2 g de cannelle, puis cuire 1 minute.",
+        "Étape 3 : Ajouter 300 g de tomates concassées, 100 g de lentilles vertes rincées et 1,2 L de bouillon, puis mijoter 25 minutes.",
+        "Étape 4 : Ajouter 300 g de pois chiches et 50 g de vermicelles, puis cuire encore 8 minutes.",
+        "Étape 5 : Hors du feu, ajouter 15 g de coriandre et 15 g de persil ciselés et 20 ml de jus de citron. Servir chaud."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -35610,7 +35654,7 @@
       "id": "dal_koshari_15670d",
       "titles": {
         "original": "Kushari",
-        "fr": "Koshari",
+        "fr": "Koshari express aux lentilles corail",
         "en": "Koshari"
       },
       "origin": {
@@ -35621,20 +35665,20 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
+        "prep_active_min": 10,
         "prep_passive_min": 0,
-        "cook_min": 45,
-        "total_min": 62
+        "cook_min": 30,
+        "total_min": 40
       },
       "composition": [
         {
-          "ingredient": "green_lentil_dried",
+          "ingredient": "red_lentil_dried",
           "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
             "form": "",
-            "state": "cooked",
+            "state": "dried",
             "preparation": ""
           }
         },
@@ -35655,29 +35699,18 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "dried",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tomato_sauce_salted_canned",
-          "quantity": 400,
-          "unit": "g",
-          "meta": {
-            "role": "condiment",
-            "form": "smooth",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -35688,7 +35721,18 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_sauce_salted_canned",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -35699,14 +35743,25 @@
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_hot_chili_pepper_spice_dried",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "white_vinegar_liquid_distilled",
-          "quantity": 30,
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -35717,7 +35772,7 @@
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -35727,12 +35782,23 @@
           }
         },
         {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 240,
+          "ingredient": "water",
+          "quantity": 700,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
           "unit": "g",
           "meta": {
-            "role": "vegetable",
-            "form": "diced",
+            "role": "seasoning",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -35746,17 +35812,6 @@
             "ingredient_fr": "coriandre fraîche ciselée",
             "note": "Quelques feuilles pour la fraîcheur",
             "optional": true
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 3,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
           }
         }
       ],
@@ -35814,34 +35869,44 @@
         }
       },
       "search_tokens": [
+        "(eau",
+        "45 minutes",
         "ail",
+        "aux",
         "blanc",
+        "chili",
         "coeliaque",
-        "coriander",
+        "corail",
         "cumin",
+        "eau",
         "egyptian",
+        "express",
+        "fort",
         "frying",
         "garlic",
         "gluten free",
-        "green",
+        "hot",
         "intermediaire",
         "koshari",
         "kushari",
         "leger",
-        "lent",
         "lentil",
         "lentille",
+        "lentilles",
         "light",
-        "long",
         "low calorie",
-        "mijote",
         "minceur",
         "moyen",
         "oignon",
         "olive",
         "onion",
+        "pepper",
+        "piment",
+        "potable)",
+        "red",
         "rice",
         "riz",
+        "rouge",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -35855,9 +35920,9 @@
         "vegetarien",
         "vermicelle",
         "vermicelli",
-        "verte",
         "vinaigre",
         "vinegar",
+        "water",
         "water_cooking",
         "white"
       ],
@@ -35865,13 +35930,13 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.97,
-      "description": "Plat égyptien végan à base de lentilles vertes, où les saveurs se marient dans une texture tendre et parfumée, typique de la cuisine méditerranéenne avec des notes de cumin et de tomate.",
+      "description": "Version rapide du koshari cuite en une seule casserole : lentilles corail, riz et vermicelles dorés, nappés d'une sauce tomate au cumin et d'oignons frits.",
       "instructions": [
-        "Étape 1 : Rincer 150 g de lentilles vertes et les cuire 25 minutes dans de l'eau bouillante salée, jusqu'à ce qu'elles soient tendres. Égoutter.",
-        "Étape 2 : Émincer finement 300 g d'oignon et le faire frire dans 30 ml d'huile d'olive à feu moyen 15 à 20 minutes, jusqu'à ce qu'il soit brun et croustillant. Égoutter sur du papier absorbant.",
-        "Étape 3 : Dans la même casserole, avec le reste d'huile, faire dorer 50 g de vermicelles de riz brisés pendant 2 minutes. Ajouter 200 g de riz rincé, 450 ml d'eau et une pincée de sel, couvrir et cuire 15 minutes à feu doux.",
-        "Étape 4 : Préparer la sauce : faire revenir 9 g d'ail haché et 3 g de cumin pendant 1 minute, ajouter 240 g de tomates en dés et 400 g de sauce tomate, puis laisser mijoter 10 minutes. Hors du feu, ajouter 30 ml de vinaigre blanc.",
-        "Étape 5 : Mélanger le riz et les lentilles, répartir dans les bols, napper de sauce tomate et parsemer d'oignons croustillants."
+        "Étape 1 : Émincer 200 g d'oignon et le faire dorer 12 minutes dans 25 ml d'huile d'olive, jusqu'à ce qu'il soit brun et croustillant. Réserver sur du papier absorbant.",
+        "Étape 2 : Dans la même casserole, avec 15 ml d'huile, dorer 50 g de vermicelles de riz brisés 2 minutes.",
+        "Étape 3 : Ajouter 200 g de riz et 150 g de lentilles corail rincés, 700 ml d'eau et 3 g de sel. Couvrir et cuire 18 minutes à feu doux, jusqu'à absorption.",
+        "Étape 4 : Pendant ce temps, chauffer 400 g de sauce tomate avec 9 g d'ail haché, 3 g de cumin et 1 g de piment, 8 minutes, puis ajouter 20 ml de vinaigre.",
+        "Étape 5 : Servir le riz aux lentilles nappé de sauce et parsemé d'oignons frits."
       ],
       "diet_flags": {
         "vegan": true,
@@ -35887,7 +35952,7 @@
       "id": "dal_koshari_egyptien_73828c",
       "titles": {
         "original": "Kushari",
-        "fr": "Koshari Égyptien",
+        "fr": "Koshari du Caire aux pois chiches, sauce daqqa",
         "en": "Koshari Égyptien"
       },
       "origin": {
@@ -35898,10 +35963,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 19,
+        "prep_active_min": 20,
         "prep_passive_min": 0,
-        "cook_min": 35,
-        "total_min": 54
+        "cook_min": 40,
+        "total_min": 60
       },
       "composition": [
         {
@@ -35911,7 +35976,7 @@
           "meta": {
             "role": "plant_protein",
             "form": "",
-            "state": "cooked",
+            "state": "dried",
             "preparation": ""
           }
         },
@@ -35932,8 +35997,19 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "dried",
+            "form": "",
             "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chickpea_boiled",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
             "preparation": ""
           }
         },
@@ -35943,7 +36019,7 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -35954,61 +36030,6 @@
           "unit": "g",
           "meta": {
             "role": "condiment",
-            "form": "smooth",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "garlic_raw",
-          "quantity": 9,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "cumin_spice_seed",
-          "quantity": 3,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "white_vinegar_liquid_distilled",
-          "quantity": 30,
-          "unit": "ml",
-          "meta": {
-            "role": "ingredient",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
-          "unit": "ml",
-          "meta": {
-            "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 2,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -36020,7 +36041,62 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "diced",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_vinegar_liquid_distilled",
+          "quantity": 40,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 45,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -36108,12 +36184,17 @@
       "search_tokens": [
         "1 heure",
         "ail",
+        "aux",
         "avance",
         "blanc",
+        "caire",
         "chef",
+        "chiches",
+        "chiches,",
+        "chickpea",
         "complexe",
-        "coriander",
         "cumin",
+        "daqqa",
         "egyptian",
         "egyptien",
         "frying",
@@ -36129,20 +36210,23 @@
         "low calorie",
         "minceur",
         "oignon",
-        "olive",
         "onion",
         "pasta",
         "pates",
+        "pois",
         "rice",
         "riz",
         "salt",
         "sans produit animal",
         "sans viande",
+        "sauce",
         "sel",
+        "sunflower",
         "table",
         "technique",
         "tomate",
         "tomato",
+        "tournesol",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -36157,12 +36241,14 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 1.0,
-      "description": "Plat égyptien de riz parfumé, lentilles corail tendres et pâtes al dente, sauce tomate acidulée et épicée, oignons jaunes frits croustillants, parfumé de cumin et de vinaigre blanc",
+      "description": "Le koshari des échoppes du Caire : riz, lentilles brunes, macaronis et pois chiches en couches, sauce tomate épicée, daqqa à l'ail et au vinaigre, et oignons frits croustillants.",
       "instructions": [
-        "Étape 1 : Cuire séparément 150 g de lentilles vertes rincées 25 minutes dans de l'eau bouillante salée, 150 g de riz long grain 12 minutes dans de l'eau salée et 150 g de petites pâtes 8 minutes, al dente. Égoutter.",
-        "Étape 2 : Émincer 300 g d'oignons jaunes en rondelles très fines et les faire frire dans 30 ml d'huile d'olive à feu moyen-vif pendant 20 minutes, jusqu'à ce qu'ils soient bruns et croustillants. Égoutter sur du papier absorbant.",
-        "Étape 3 : Préparer la sauce tomate épicée : faire revenir 9 g d'ail haché dans 15 ml d'huile d'olive, ajouter 240 g de tomates concassées, 400 g de sauce tomate, 3 g de cumin en poudre et 2 g de sel. Cuire 15 minutes, puis ajouter 30 ml de vinaigre blanc.",
-        "Étape 4 : Dans chaque bol, superposer le riz, les lentilles et les pâtes, napper de sauce tomate et couvrir d'oignons croustillants. Servir chaud."
+        "Étape 1 : Cuire séparément à l'eau bouillante 150 g de lentilles brunes (25 minutes), 150 g de riz (12 minutes) et 150 g de macaronis (8 minutes). Égoutter.",
+        "Étape 2 : Émincer 300 g d'oignons en fines rondelles et les frire 20 minutes dans 30 ml d'huile de tournesol, jusqu'à ce qu'ils soient bruns et croustillants.",
+        "Étape 3 : Sauce : faire revenir 10 g d'ail haché dans 15 ml d'huile, ajouter 240 g de tomates concassées, 400 g de sauce tomate, 2 g de cumin et 2 g de sel, puis cuire 15 minutes.",
+        "Étape 4 : Daqqa : écraser 10 g d'ail avec 2 g de cumin et 1 g de sel, puis délayer avec 40 ml de vinaigre et 2 cuillerées d'eau.",
+        "Étape 5 : Réchauffer 150 g de pois chiches dans la sauce les 5 dernières minutes.",
+        "Étape 6 : Monter les bols en couches (riz, lentilles, macaronis), napper de sauce aux pois chiches, arroser de daqqa et couvrir d'oignons frits."
       ],
       "diet_flags": {
         "vegan": true,
@@ -89493,7 +89579,7 @@
       "id": "main_koshari_classic_v4_q7n5z2",
       "titles": {
         "original": "Koshari",
-        "fr": "Koshari égyptien traditionnel",
+        "fr": "Koshari de fête à la shatta",
         "en": "Traditional Egyptian Koshari"
       },
       "origin": {
@@ -89504,43 +89590,54 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 50,
-        "prep_passive_min": 5,
+        "prep_active_min": 35,
+        "prep_passive_min": 0,
         "cook_min": 50,
-        "total_min": 105
+        "total_min": 85
       },
       "composition": [
         {
           "ingredient": "white_rice_raw_seed_unenriched",
-          "quantity": 250,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "base",
             "form": "",
             "state": "raw",
-            "preparation": "absorbed"
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "rice_vermicelli_raw_dried",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
           "ingredient": "green_lentil_dried",
-          "quantity": 250,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "protein",
             "form": "",
-            "state": "raw",
-            "preparation": "par_cooked"
+            "state": "dried",
+            "preparation": ""
           }
         },
         {
           "ingredient": "pasta_raw_dried",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "texture",
-            "form": "dried",
+            "form": "",
             "state": "raw",
-            "preparation": "al_dente"
+            "preparation": ""
           }
         },
         {
@@ -89549,9 +89646,9 @@
           "unit": "g",
           "meta": {
             "role": "garnish",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
-            "preparation": "fried"
+            "preparation": ""
           }
         },
         {
@@ -89560,17 +89657,6 @@
           "unit": "g",
           "meta": {
             "role": "sauce",
-            "form": "roughly_chopped",
-            "state": "raw",
-            "preparation": "reduced"
-          }
-        },
-        {
-          "ingredient": "white_vinegar_liquid_distilled",
-          "quantity": 20,
-          "unit": "g",
-          "meta": {
-            "role": "balanced_acidity",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -89582,28 +89668,28 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "sunflower_oil_plant",
-          "quantity": 80,
-          "unit": "ml",
-          "meta": {
-            "role": "fat_cooking",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "ingredient": "chilli_pepper_raw",
+          "quantity": 20,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_vinegar_liquid_distilled",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "balanced_acidity",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -89615,6 +89701,39 @@
           "unit": "g",
           "meta": {
             "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_spice_seed",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 60,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -89685,9 +89804,12 @@
       "search_tokens": [
         "ail",
         "blanc",
+        "chilli",
+        "coriander",
+        "coriandre",
         "cumin",
         "egyptian",
-        "egyptien",
+        "fete",
         "garlic",
         "green",
         "intermediaire",
@@ -89706,23 +89828,24 @@
         "onion",
         "pasta",
         "pates",
+        "pepper",
+        "piment",
         "reduction",
         "rice",
         "riz",
-        "salt",
         "sans produit animal",
         "sans viande",
-        "sel",
+        "shatta",
         "sunflower",
-        "table",
         "tomate",
         "tomato",
         "tournesol",
         "traditional",
-        "traditionnel",
         "vegan",
         "vegetalien",
         "vegetarien",
+        "vermicelle",
+        "vermicelli",
         "verte",
         "vinaigre",
         "vinegar",
@@ -89732,14 +89855,14 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.95,
-      "description": "Plat égyptien multicouche vegan, combinant riz croustillant, lentilles corail tendres et pâtes al dente avec une sauce tomate acidulée et des oignons frits dorés croustillants, inspiré par la tradition culinaire égyptienne.",
+      "description": "Koshari généreux des repas de fête : riz aux vermicelles, lentilles, pâtes, sauce tomate longuement réduite et shatta, la sauce pimentée égyptienne, pour relever le tout.",
       "instructions": [
-        "Étape 1 : Cuire séparément dans de l'eau bouillante salée : les 250g de lentilles vertes 25 minutes, les 250g de riz long grain 12 minutes, les 150g de petites pâtes 8 minutes. Égoutter chacun dès qu'il est prêt, pour une texture parfaite.",
-        "Étape 2 : Préparer les oignons frits : émincer finement 300g d'oignons jaunes, faire frire dans 80ml d'huile de tournesol à feu moyen-vif 20 minutes jusqu'à brun doré croustillant. Égoutter sur papier absorbant pour éliminer l'excès d'huile.",
-        "Étape 3 : Préparer la sauce tomate épicée : faire revenir 20g d'ail 30 secondes dans un peu d'huile, ajouter les 400g de tomates concassées, 20g de vinaigre blanc, le cumin et le piment. Cuire 15 minutes jusqu'à sauce concentrée et parfumée.",
-        "Étape 4 : Assembler dans chaque bol : couche de riz, couche de lentilles, couche de pâtes. Napper de sauce tomate épicée, créant une harmonie de saveurs et de textures.",
-        "Étape 5 : Couvrir généreusement d'oignons frits croustillants. Chaque couche doit être identifiable, les oignons croquants en contraste avec les autres ingrédients pour un plaisir gustatif maximum.",
-        "Étape 6 : Servir sans attendre : la chaleur et le croustillant des oignons sont essentiels pour apprécier pleinement ce plat traditionnel égyptien, symbole de l'hospitalité et de la générosité."
+        "Étape 1 : Cuire 200 g de lentilles vertes 25 minutes et 100 g de petites pâtes 8 minutes à l'eau bouillante. Égoutter.",
+        "Étape 2 : Dorer 30 g de vermicelles dans 10 ml d'huile, ajouter 200 g de riz, 400 ml d'eau et 2 g de sel, couvrir et cuire 15 minutes à feu doux.",
+        "Étape 3 : Frire 300 g d'oignons émincés dans 40 ml d'huile de tournesol 20 minutes, jusqu'à ce qu'ils soient bruns et croustillants.",
+        "Étape 4 : Sauce : faire revenir 10 g d'ail, 3 g de cumin et 2 g de coriandre moulue dans 10 ml d'huile, ajouter 400 g de tomates concassées et 2 g de sel, puis réduire 25 minutes.",
+        "Étape 5 : Shatta : mixer 20 g de piment frais avec 10 g d'ail, 30 ml de vinaigre et une pincée de sel.",
+        "Étape 6 : Dresser riz, lentilles et pâtes, napper de sauce tomate, couvrir d'oignons frits et servir la shatta à part."
       ],
       "diet_flags": {
         "vegan": true,
@@ -155637,7 +155760,7 @@
       "id": "soup_harira_classic_v3_p9x4k2",
       "titles": {
         "original": "Harira",
-        "fr": "Harira marocaine traditionnelle",
+        "fr": "Harira marocaine traditionnelle à la tadouira",
         "en": "Traditional Moroccan Harira"
       },
       "origin": {
@@ -155945,6 +156068,7 @@
         "sans viande",
         "stalk",
         "stock",
+        "tadouira",
         "tajine",
         "tomate",
         "tomato",
@@ -155963,7 +156087,7 @@
       "dish_type": "soup",
       "servings_default": 4,
       "_quality_score": 0.96,
-      "description": "Découvrez la Harira, une soupe marocaine traditionnelle végane aux saveurs complexes et textures crémeuses, où les tomates, les légumineuses et les épices se mélangent en harmonie.",
+      "description": "La harira du ftour de Ramadan : lentilles corail, pois chiches et tomates longuement mijotés, liés en fin de cuisson par la tadouira (farine délayée), relevés d'herbes fraîches et de citron.",
       "instructions": [
         "Étape 1 : Dans une grande casserole, chauffer 45ml d'huile d'olive à feu moyen. Faire suer les 120g d'oignon et 80 g de céleri émincé pendant 6–8 minutes sans coloration, jusqu'à ce qu'il soit tendre et parfumé, dégageant un arôme doux et terreux.",
         "Étape 2 : Ajouter les épices (cumin, curcuma, cannelle, 15g de gingembre) et cuire 1 minute en remuant constamment, permettant aux épices de dégager leurs arômes et leurs huiles essentielles, créant une base parfumée.",

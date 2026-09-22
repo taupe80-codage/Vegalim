@@ -19,6 +19,13 @@ Opérations :
   ("time", actif, passif, cuisson)                    temps (total recalculé)
   ("title", fr)                                       titre français
   ("dish", type)                                      dish_type
+  ("desc", texte)                                     description
+  ("origin", {clé: valeur, …})                        champs de origin (cuisine, country, region, city)
+  ("compo", [(id, qté, unité, rôle[, état]), …])     réécrit toute la composition (suggestions conservées)
+
+Variantes (recipe_patches/v*.py, dictionnaire VARIANTS) : définition complète d'une recette
+qui la différencie de ses quasi-doublons. Elle remplace les opérations p*.py de la recette
+(la variante est l'état final : les anciens correctifs ciblaient un texte qui n'existe plus).
 
 Idempotent : une opération déjà appliquée est ignorée ; une opération qui ne
 trouve pas sa cible (ingrédient ou passage absent) arrête le script.
@@ -58,6 +65,14 @@ def load_patches() -> dict:
             if rid in patches:
                 raise PatchError(f"{rid} corrigée dans deux fichiers")
             patches[rid] = ops
+    seen = set()
+    for f in sorted(PATCH_DIR.glob("v*.py")):
+        mod = importlib.import_module(f"recipe_patches.{f.stem}")
+        for rid, ops in mod.VARIANTS.items():
+            if rid in seen:
+                raise PatchError(f"{rid} : variante définie dans deux fichiers")
+            seen.add(rid)
+            patches[rid] = ops  # remplace les correctifs p*.py de cette recette
     return patches
 
 
@@ -229,6 +244,36 @@ def apply_op(r: dict, op: tuple) -> str | None:
         old = r.get("dish_type")
         r["dish_type"] = dt
         return f"type {old} → {dt}"
+    if kind == "desc":
+        (txt,) = args
+        if r.get("description") == txt:
+            return None
+        r["description"] = txt
+        return f"description : {txt[:50]!r}"
+    if kind == "origin":
+        (vals,) = args
+        o = r.setdefault("origin", {})
+        if all(o.get(k) == v for k, v in vals.items()):
+            return None
+        o.update(vals)
+        return f"origine {vals}"
+    if kind == "compo":
+        (items,) = args
+        new = []
+        for it in items:
+            iid, q, unit, role, *st = it
+            new.append({"ingredient": iid, "quantity": q, "unit": unit,
+                        "meta": {"role": role, "form": "", "state": st[0] if st else "raw", "preparation": ""}})
+        cur = [(c["ingredient"], c.get("quantity"), c.get("unit"), (c.get("meta") or {}).get("role"),
+                (c.get("meta") or {}).get("state")) for c in _lines(r)]
+        if cur == [(c["ingredient"], c["quantity"], c["unit"], c["meta"]["role"], c["meta"]["state"]) for c in new]:
+            return None
+        for c in new:
+            if not _has_nutrition(c["ingredient"]):
+                raise PatchError(f"pas de fiche nutritionnelle : {c['ingredient']}")
+        sugg = [c for c in r.get("composition") or [] if (c.get("meta") or {}).get("role") == "serving_suggestion"]
+        r["composition"] = new + sugg
+        return f"composition réécrite ({len(new)} ingrédients)"
     raise PatchError(f"opération inconnue : {kind}")
 
 
