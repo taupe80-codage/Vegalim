@@ -1030,8 +1030,8 @@
   {
     "id": "main_aubergines_imam_bayildi_e1443e",
     "title": "Aubergines Imam Bayildi",
-    "cuisine": "international",
-    "dish_type": "main",
+    "cuisine": "turkish",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -1544,7 +1544,7 @@
     "id": "main_baingan_bharta_b5f900",
     "title": "Baingan Bharta",
     "cuisine": "indian",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -2531,7 +2531,7 @@
     "id": "main_bhindi_masala_ade89d",
     "title": "Bhindi Masala",
     "cuisine": "indian",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -7403,7 +7403,7 @@
     "id": "wok_chou_ethiopien_saute_93ab43",
     "title": "Chou Éthiopien Sauté",
     "cuisine": "ethiopian",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -9587,7 +9587,7 @@
     "id": "curry_baingan_bharta_d54d1c",
     "title": "Curry d'aubergine fumée",
     "cuisine": "indian",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -9670,7 +9670,7 @@
     "id": "curry_daubergine_indien_779e72",
     "title": "Curry D'aubergine Indien",
     "cuisine": "indian",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -12758,25 +12758,33 @@
   },
   {
     "id": "main_fasolakia_grecques_67b6d9",
-    "title": "Fasolakia Grecques",
+    "title": "Fasolakia grecques aux pommes de terre et à la feta",
     "cuisine": "greek",
     "dish_type": "main",
-    "vegan": true,
+    "vegan": false,
     "diet": [
       "diabetes_friendly",
+      "vegetarian",
       "gluten_free",
-      "vegan",
-      "vegetarian"
+      "nut_free"
     ],
-    "allergens": [],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
     "servings": 4,
-    "time_total": 56,
+    "time_total": 65,
     "confidence": 1.0,
-    "description": "Plat grec traditionnel où les haricots verts tendres sont confits dans une sauce tomate intense, parfumée à l'origan frais — une spécialité culinaire méditerranéenne.",
+    "description": "Ladera grec : haricots verts et pommes de terre mijotés longuement dans l'huile d'olive et la tomate, servis tièdes avec de la feta émiettée.",
     "composition": [
       {
         "ingredient": "french_bean_raw",
         "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 400,
         "unit": "g"
       },
       {
@@ -12786,22 +12794,47 @@
       },
       {
         "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "feta",
+        "quantity": 120,
         "unit": "g"
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 45,
+        "quantity": 50,
         "unit": "ml"
       },
       {
         "ingredient": "oregano",
-        "quantity": 3,
+        "quantity": 2,
         "unit": "g"
       },
       {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 250,
+        "unit": "ml"
+      },
+      {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
         "unit": "g"
       }
     ],
@@ -13807,7 +13840,7 @@
     "id": "main_fricassee_printaniere_619cae",
     "title": "Fricassée Printanière",
     "cuisine": "french",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": false,
     "diet": [
       "gluten_free",
@@ -19276,75 +19309,6 @@
     "similar": []
   },
   {
-    "id": "main_hungarian_lecs_47d502",
-    "title": "Hungarian Lecsó",
-    "cuisine": "hungarian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free"
-    ],
-    "allergens": [
-      "eggs",
-      "soy"
-    ],
-    "servings": 4,
-    "time_total": 52,
-    "confidence": 1.0,
-    "description": "Préparation traditionnelle hongroise à base de poivrons rouges, où les saveurs équilibrées de l'ail, du paprika et des épinards frais se fondent dans une texture crémeuse et une couleur vibrante — typique de la cuisine hongroise.",
-    "composition": [
-      {
-        "ingredient": "red_bell_pepper_raw",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 9,
-        "unit": "g"
-      },
-      {
-        "ingredient": "paprika_powder",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "egg_raw",
-        "quantity": 55,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": []
-  },
-  {
     "id": "main_aubergines_parmigiana_sim_ad314c",
     "title": "Involtini d'aubergines à la sicilienne (vegan)",
     "cuisine": "italian",
@@ -20168,7 +20132,7 @@
     "id": "main_kashke_bademjan_10dd33",
     "title": "Kashke Bademjan",
     "cuisine": "persian",
-    "dish_type": "main",
+    "dish_type": "starter",
     "vegan": false,
     "diet": [
       "diabetes_friendly",
@@ -22672,6 +22636,82 @@
     "similar": []
   },
   {
+    "id": "main_hungarian_lecs_47d502",
+    "title": "Lecsó hongrois aux œufs",
+    "cuisine": "hungarian",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 50,
+    "confidence": 1.0,
+    "description": "Poivrons et tomates fondus au paprika doux, dans lesquels on brouille des œufs en fin de cuisson, servis avec du pain de campagne.",
+    "composition": [
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 220,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika_powder",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_bread_unsalted",
+        "quantity": 160,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "dal_lentilles_aux_epinards_be2017",
     "title": "Lentilles aux Épinards",
     "cuisine": "indian",
@@ -23103,7 +23143,7 @@
     "id": "main_legumes_braises_7030b7",
     "title": "Légumes Braisés",
     "cuisine": "french_provencal",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "gluten_free",
@@ -26141,7 +26181,7 @@
     "id": "main_nepali_saag_92a5f7",
     "title": "Nepali Saag",
     "cuisine": "nepali",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -29338,7 +29378,7 @@
     "id": "main_papaya_salad_918f58",
     "title": "Papaya Salad",
     "cuisine": "laotian",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "vegan",
@@ -36335,7 +36375,7 @@
     "id": "stew_eggplant_classic_5d46a1",
     "title": "Ragoût d'aubergine maîtrisé",
     "cuisine": "mediterranean",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -36707,7 +36747,7 @@
     "id": "stew_ajapsandali_m8d4q1",
     "title": "Ragoût géorgien d'aubergines",
     "cuisine": "georgian",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",

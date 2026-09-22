@@ -24031,7 +24031,7 @@
         "vegetarien"
       ],
       "difficulty_level": "medium",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 1.0,
       "_chef_note": "Curry d'aubergine fumée intense et créatif, aux saveurs intenses et aux textures variées.",
@@ -25185,7 +25185,7 @@
         "wok"
       ],
       "difficulty_level": "hard",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.9,
       "_chef_note": "Ce curry indien de aubergines est une recette végétalienne délicieuse et parfumée, idéale pour les repas en famille ou entre amis.",
@@ -75540,7 +75540,7 @@
         "en": "Aubergines Imam Bayildi"
       },
       "origin": {
-        "cuisine": "international",
+        "cuisine": "turkish",
         "country": "turkey",
         "region": "istanbul",
         "city": "izmir"
@@ -75731,16 +75731,17 @@
         "gluten free",
         "imam",
         "intermediaire",
-        "international",
         "jaune",
         "leger",
         "lent",
         "light",
         "long",
         "low calorie",
+        "mediterranee",
         "mijote",
         "minceur",
         "moyen",
+        "moyen-orient",
         "noir",
         "oignon",
         "olive",
@@ -75761,6 +75762,9 @@
         "table",
         "tomate",
         "tomato",
+        "turc",
+        "turkish",
+        "turquie",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -75769,7 +75773,7 @@
         "yellow"
       ],
       "difficulty_level": "medium",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.89,
       "_chef_note": "Utilisez des aubergines fraîches et de bonne qualité pour obtenir les meilleures saveurs.",
@@ -76868,7 +76872,7 @@
         "wok"
       ],
       "difficulty_level": "medium",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.93,
       "description": "Purée d'aubergines grillées, parfumée aux épices torréfiées et au curcuma, sur fond de tomates fraîches — chair fondante et confite, avec une texture lisse et crémeuse.",
@@ -78406,7 +78410,7 @@
         "wok"
       ],
       "difficulty_level": "hard",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.97,
       "description": "Curry indien crémeux de gombo tendre et parfumé, préparé avec des épices torréfiées et une sauce onctueuse, issu de la tradition culinaire indienne.",
@@ -83174,7 +83178,7 @@
       "id": "main_fasolakia_grecques_67b6d9",
       "titles": {
         "original": "Fasolakia Grecques",
-        "fr": "Fasolakia Grecques",
+        "fr": "Fasolakia grecques aux pommes de terre et à la feta",
         "en": "Fasolakia Grecques"
       },
       "origin": {
@@ -83185,10 +83189,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 45,
-        "total_min": 56
+        "cook_min": 50,
+        "total_min": 65
       },
       "composition": [
         {
@@ -83196,8 +83200,19 @@
           "quantity": 600,
           "unit": "g",
           "meta": {
-            "role": "plant_protein",
-            "form": "stemmed",
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "potato_raw_flesh",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "carbohydrate",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -83208,25 +83223,47 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "feta",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 50,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -83237,7 +83274,7 @@
         },
         {
           "ingredient": "oregano",
-          "quantity": 3,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "ingredient",
@@ -83247,11 +83284,44 @@
           }
         },
         {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 250,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -83261,11 +83331,14 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
+          "vegetarian",
           "gluten_free",
-          "vegan",
-          "vegetarian"
+          "nut_free"
         ],
-        "allergens": [],
+        "allergens": [
+          "lactose",
+          "milk"
+        ],
         "technique": [
           "braising"
         ],
@@ -83311,18 +83384,24 @@
         }
       },
       "search_tokens": [
-        "1 heure",
+        "(eau",
+        "ail",
+        "aux",
         "bean",
+        "black",
         "braising",
         "coeliaque",
         "debutant",
         "easy",
+        "eau",
         "enfants",
         "facile",
         "facile enfants",
         "famille",
         "fasolakia",
+        "feta",
         "french",
+        "garlic",
         "gluten free",
         "grec",
         "grece",
@@ -83331,46 +83410,57 @@
         "haricot",
         "kids",
         "leger",
+        "lent",
         "light",
+        "long",
         "low calorie",
         "mediterranee",
+        "mijote",
         "minceur",
+        "noir",
         "oignon",
         "olive",
         "onion",
         "oregano",
+        "parsley",
+        "pepper",
+        "persil",
+        "poivre",
+        "pomme",
+        "pommes",
+        "potable)",
+        "potato",
         "salt",
         "sans gluten",
-        "sans produit animal",
         "sans viande",
         "sel",
         "simple",
         "table",
+        "terre",
         "tomate",
         "tomato",
-        "vegan",
-        "vegetalien",
         "vegetarien",
-        "vert"
+        "vert",
+        "water"
       ],
       "difficulty_level": "easy",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.92,
-      "description": "Plat grec traditionnel où les haricots verts tendres sont confits dans une sauce tomate intense, parfumée à l'origan frais — une spécialité culinaire méditerranéenne.",
+      "description": "Ladera grec : haricots verts et pommes de terre mijotés longuement dans l'huile d'olive et la tomate, servis tièdes avec de la feta émiettée.",
       "instructions": [
-        "Étape 1 : Équeuter 600g de haricots verts et les couper en deux, si nécessaire, pour faciliter la cuisson. Cette étape permet d'obtenir une texture uniforme.",
-        "Étape 2 : Dans une grande poêle, chauffer 40 ml d'huile d'olive à feu moyen. Ajouter 150g d'oignon émincé et faire sauter pendant 5 minutes, jusqu'à ce que les oignons soient tendres et légèrement dorées, en remuant régulièrement pour éviter la coloration excessive.",
-        "Étape 3 : Ajouter 300g de tomates concassées et cuire pendant 5 minutes, en remuant occasionnellement, jusqu'à ce que les tomates soient tendres et la sauce réduite, avec une consistance légèrement épaisse.",
-        "Étape 4 : Ajouter les haricots verts et couvrir à moitié. Laisser mijoter à feu très doux pendant 45 minutes, en remuant occasionnellement, jusqu'à ce que les haricots soient tendres et presque confits dans la sauce tomate, avec une texture fondante.",
-        "Étape 5 : Assaisonner de 5g de sel et de poivre. Terminer avec un filet d'huile d'olive et des feuilles d'origan frais, si désiré, pour ajouter une note fraîche et herbacée.",
-        "Étape 6 : Servir chaud. La chaleur permet de mettre en valeur les saveurs."
+        "Étape 1 : Équeuter 600 g de haricots verts et les couper en deux. Couper 400 g de pommes de terre en gros quartiers.",
+        "Étape 2 : Faire revenir 150 g d'oignon émincé dans 40 ml d'huile d'olive, 6 minutes, puis ajouter 6 g d'ail haché.",
+        "Étape 3 : Ajouter 400 g de tomates concassées et cuire 5 minutes.",
+        "Étape 4 : Ajouter les haricots verts, les pommes de terre, 250 ml d'eau, 2 g d'origan, 2 g de sel et 1 g de poivre.",
+        "Étape 5 : Couvrir à moitié et laisser mijoter 45 minutes à feu très doux, jusqu'à ce que les légumes soient fondants et la sauce réduite.",
+        "Étape 6 : Servir tiède, arrosé de 10 ml d'huile d'olive, parsemé de 120 g de feta émiettée et de 10 g de persil."
       ],
       "diet_flags": {
-        "vegan": true,
+        "vegan": false,
         "vegetarian": true,
         "gluten_free": true,
-        "lactose_free": true,
+        "lactose_free": false,
         "nut_free": true,
         "raw": false,
         "kid_friendly": true
@@ -84155,7 +84245,7 @@
         "vert"
       ],
       "difficulty_level": "easy",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 1.0,
       "description": "Fricassée légère de légumes printaniers, liée à la crème et parfumée à l'estragon, offrant une texture onctueuse et une saveur délicate, célébrant l'arrivée du printemps avec des asperges vertes, des petits pois et des fèves tendres.",
@@ -89752,7 +89842,7 @@
       "id": "main_hungarian_lecs_47d502",
       "titles": {
         "original": "Hungarian Lecsó",
-        "fr": "Hungarian Lecsó",
+        "fr": "Lecsó hongrois aux œufs",
         "en": "Hungarian Lecsó"
       },
       "origin": {
@@ -89763,30 +89853,30 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
         "cook_min": 35,
-        "total_min": 52
+        "total_min": 50
       },
       "composition": [
         {
           "ingredient": "red_bell_pepper_raw",
-          "quantity": 320,
+          "quantity": 500,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "strips",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "quantity": 400,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -89797,7 +89887,7 @@
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -89808,25 +89898,36 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "egg_raw",
+          "quantity": 220,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "paprika_powder",
-          "quantity": 3,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 35,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -89836,8 +89937,19 @@
           }
         },
         {
+          "ingredient": "white_bread_unsalted",
+          "quantity": 160,
+          "unit": "g",
+          "meta": {
+            "role": "carbohydrate",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -89848,22 +89960,11 @@
         },
         {
           "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "egg_raw",
-          "quantity": 55,
-          "unit": "g",
-          "meta": {
-            "role": "protein",
-            "form": "whole",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -89872,11 +89973,13 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free"
+          "vegetarian",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
           "eggs",
-          "soy"
+          "gluten"
         ],
         "technique": [
           "wok",
@@ -89927,13 +90030,14 @@
       "search_tokens": [
         "1 heure",
         "ail",
+        "aux",
         "bell",
         "black",
+        "blanc",
         "braising",
-        "coeliaque",
+        "bread",
         "egg",
         "garlic",
-        "gluten free",
         "hongrie",
         "hongrois",
         "hungarian",
@@ -89946,8 +90050,8 @@
         "moyen",
         "noir",
         "oignon",
-        "olive",
         "onion",
+        "pain",
         "paprika",
         "pepper",
         "poivre",
@@ -89955,34 +90059,37 @@
         "red",
         "rouge",
         "salt",
-        "sans gluten",
         "sans viande",
         "sel",
+        "sunflower",
         "table",
         "tomate",
         "tomato",
+        "tournesol",
         "vegetarien",
+        "white",
         "wok",
-        "œuf"
+        "œuf",
+        "œufs"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.97,
       "_chef_note": "Remplacez les oeufs par du tofu pour une version végétalienne.",
-      "description": "Préparation traditionnelle hongroise à base de poivrons rouges, où les saveurs équilibrées de l'ail, du paprika et des épinards frais se fondent dans une texture crémeuse et une couleur vibrante — typique de la cuisine hongroise.",
+      "description": "Poivrons et tomates fondus au paprika doux, dans lesquels on brouille des œufs en fin de cuisson, servis avec du pain de campagne.",
       "instructions": [
-        "Étape 1: Saisir les oignons dans l'huile d'olive à feu moyen pendant 5 minutes, jusqu'à transparence et texture tendre, en remuant régulièrement pour éviter la coloration.",
-        "Étape 2: Ajouter les poivrons rouges coupés en julienne, l'ail émincé et les épices, cuire 2 minutes à feu moyen-vif, jusqu'à légère crépitation et parfum aromatique.",
-        "Étape 3: Incorporer les tomates concassées et le paprika hongrois, laisser mijoter 20 minutes à feu doux, en remuant occasionnellement pour prévenir l'attache.",
-        "Étape 4: Assaisonner de sel, de poivre et de paprika.",
-        "Étape 5: Incorporer 55g d'œuf battu et remuer rapidement jusqu'à ce qu'il soit pris, pour enrichir la texture. Laisser mijoter pendant 2 minutes, jusqu'à ce que le liquide soit réduit, en vérifiant la texture pour obtenir une consistance crémeuse.",
-        "Étape 6: Servir chaud, accompagné de pain grillé ou de riz, en présentant une couleur vibrante et une texture appétissante."
+        "Étape 1 : Faire revenir 150 g d'oignon émincé dans 35 ml d'huile de tournesol, 6 minutes.",
+        "Étape 2 : Ajouter 500 g de poivrons en lanières et 9 g d'ail haché, puis cuire 5 minutes à feu moyen-vif.",
+        "Étape 3 : Hors du feu, ajouter 4 g de paprika doux, puis 400 g de tomates concassées, 3 g de sel et 1 g de poivre.",
+        "Étape 4 : Mijoter 20 minutes à feu doux, jusqu'à ce que les poivrons soient fondants et la sauce nappante.",
+        "Étape 5 : Battre 4 œufs (220 g), les verser dans le lecsó et remuer 2 minutes, jusqu'à ce qu'ils soient juste pris.",
+        "Étape 6 : Servir chaud avec 160 g de pain de campagne."
       ],
       "diet_flags": {
         "vegan": false,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -90735,7 +90842,7 @@
         "wok"
       ],
       "difficulty_level": "hard",
-      "dish_type": "main",
+      "dish_type": "starter",
       "servings_default": 4,
       "_quality_score": 0.9,
       "description": "Plat persan traditionnel à base d'aubergine tendre, d'oignon caramélisé et d'ail parfumé, relevé de kashk et de curcuma, avec une touche de fraîcheur apportée par la menthe.",
@@ -92370,7 +92477,7 @@
         "zucchini"
       ],
       "difficulty_level": "easy",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 1.0,
       "description": "Légumes provençaux braisés à l'huile d'olive, avec une texture tendre et une sauce riche, parfumés d'herbes de Provence. Plat végétal polyvalent et méditerranéen, aux couleurs vives et aux arômes intenses.",
@@ -94857,7 +94964,7 @@
         "yellow"
       ],
       "difficulty_level": "hard",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.96,
       "description": "Bouillon vert intense de feuilles d'épinards et de haricots verts, relevé d'épices népalaises et d'un hachis d'oignon jaune caramélisé — texture légèrement rustique, parfumée aux saveurs d'Asie.",
@@ -95638,7 +95745,7 @@
         "verte"
       ],
       "difficulty_level": "medium",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.86,
       "description": "Salade de papaye verte râpée, croquante et fraîche, relevée par une sauce émulsionnée au citron vert et au sucre de coco, typique de la cuisine thaïlandaise avec une texture régulière et une odeur de citron vert.",
@@ -169783,7 +169890,7 @@
         "yellow"
       ],
       "difficulty_level": "easy",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 1.0,
       "_chef_note": "Pour un résultat optimal, utilisez des aubergines fraîches et des tomates de qualité.",
@@ -170626,7 +170733,7 @@
         "white"
       ],
       "difficulty_level": "medium",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.94,
       "_chef_note": "Cuisson maîtrisée pour un ragoût d'aubergine fondant et parfumé.",
@@ -175141,7 +175248,7 @@
         "yellow"
       ],
       "difficulty_level": "medium",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.92,
       "description": "Sauté éthiopienne de chou frisé au wok à feu très vif — wok hei, légumes croquants, sauce enrobante, parfumée de curcuma et de cumin, avec une texture fondante et des notes de caramelisation.",
