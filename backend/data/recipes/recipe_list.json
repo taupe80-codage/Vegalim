@@ -16406,7 +16406,7 @@
     "id": "gratin_dauphinois_classic_v3_p9x4t2",
     "title": "Gratin dauphinois traditionnel",
     "cuisine": "french",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": false,
     "diet": [
       "gluten_free"
@@ -16418,7 +16418,7 @@
     "servings": 4,
     "time_total": 115,
     "confidence": 1.0,
-    "description": "Version optimisée du gratin dauphinois avec contrôle précis de la diffusion de l'amidon, de l'absorption liquide et du gradient thermique pour obtenir une texture fondante parfaitement liée sans excès de liquide.",
+    "description": "Le gratin du Dauphiné, sans fromage : fines lamelles de pommes de terre cuites lentement dans la crème et le lait infusés à l'ail et à la muscade, jusqu'à une croûte dorée.",
     "composition": [
       {
         "ingredient": "potato_raw_flesh",
@@ -16463,90 +16463,7 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "side_dauphinois_vegan_c584cb",
-        "title": "Gratin Dauphinois Vegan",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "side_dauphinois_vegan_c584cb",
-    "title": "Gratin Dauphinois Vegan",
-    "cuisine": "french",
-    "dish_type": "side",
-    "vegan": true,
-    "diet": [
-      "kid_friendly",
-      "lactose_free",
-      "nut_free",
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [
-      "gluten"
-    ],
-    "servings": 4,
-    "time_total": 90,
-    "confidence": 0.9,
-    "description": "Gratin dauphinois fondant, aux pommes de terre cuites à la perfection, parfumé d'ail et de muscade, dans une sauce crémeuse à base de crème d'avoine, typique de la cuisine provençale française. La texture confite et la saveur crémeuse sont essentielles pour apprécier ce plat.",
-    "composition": [
-      {
-        "ingredient": "potato_raw_with_skin",
-        "quantity": 900,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_oat_cream_954865",
-        "quantity": 300,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "oat_milk_refrigerated_plain_plant",
-        "quantity": 200,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "nutmeg_spice",
-        "quantity": 1.0,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_oil_plant",
-        "quantity": 10,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 6,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": null,
-        "unit": "1 poignée"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "gratin_dauphinois_classic_v3_p9x4t2",
-        "title": "Gratin dauphinois traditionnel",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "main_gratin_de_chou_fleur_bad955",
@@ -16872,6 +16789,87 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 4,
         "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "side_dauphinois_vegan_c584cb",
+    "title": "Gratin de pommes de terre et poireaux à la crème d'avoine (vegan)",
+    "cuisine": "french",
+    "dish_type": "side",
+    "vegan": true,
+    "diet": [
+      "kid_friendly",
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 90,
+    "confidence": 0.9,
+    "description": "Gratin végétal fondant : pommes de terre et poireaux fondus en couches, crème et lait d'avoine à l'ail et à la muscade, cuit jusqu'à ce que le dessus soit doré.",
+    "composition": [
+      {
+        "ingredient": "potato_raw_with_skin",
+        "quantity": 700,
+        "unit": "g"
+      },
+      {
+        "ingredient": "leeks_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_oat_cream_954865",
+        "quantity": 250,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "oat_milk_refrigerated_plain_plant",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutmeg_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "thyme_dried_herb",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_oil_plant",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": null,
+        "unit": "1 poignée"
       }
     ],
     "n_instructions": 5,
@@ -18709,6 +18707,89 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "salad_greek_classic_v2_t4m8q1",
+    "title": "Horiatiki, salade grecque de village à la feta",
+    "cuisine": "greek",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "raw",
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk",
+      "sulphites"
+    ],
+    "servings": 4,
+    "time_total": 15,
+    "confidence": 1.0,
+    "description": "La salade des tavernes grecques : tomates, concombre, poivron vert, oignon rouge et olives, un bloc de feta posé dessus, huile d'olive et origan.",
+    "composition": [
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cucumber_raw_with_skin",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_bell_pepper_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_onion_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_olive_canned_in_oil",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "feta",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "red_wine_vinegar_liquid",
+        "quantity": 10,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "oregano_spice_dried",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": null,
+        "unit": "quelques feuilles"
+      }
+    ],
+    "n_instructions": 4,
     "flags": [],
     "similar": []
   },
@@ -20691,60 +20772,70 @@
   },
   {
     "id": "rice_kimchi_bokkeumbap_2cbfe6",
-    "title": "Kimchi Bokkeumbap",
+    "title": "Kimchi bokkeumbap gratiné au fromage",
     "cuisine": "korean",
     "dish_type": "main",
     "vegan": false,
-    "diet": [],
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
     "allergens": [
       "eggs",
       "gluten",
+      "lactose",
+      "milk",
       "sesame",
       "soy"
     ],
     "servings": 4,
-    "time_total": 35,
+    "time_total": 25,
     "confidence": 1.0,
-    "description": "Plat coréen végétarien à base de riz court grain, kimchi et carotte crue, savoureux et parfumé, avec une texture croquante et une odeur appétissante, inspiré par la cuisine traditionnelle coréenne.",
+    "description": "La version « cheese » des snack-bars coréens : riz sauté au kimchi, carotte et oignons verts, couvert de mozzarella fondue à la poêle, avec un œuf brouillé.",
     "composition": [
       {
         "ingredient": "white_rice_cooked_short_grain_seed",
-        "quantity": 300,
+        "quantity": 600,
         "unit": "g"
       },
       {
         "ingredient": "base_kimchi_61791a",
-        "quantity": 200,
+        "quantity": 250,
         "unit": "g"
       },
       {
         "ingredient": "carrot_raw",
-        "quantity": 200,
+        "quantity": 120,
         "unit": "g"
       },
       {
         "ingredient": "egg_raw",
-        "quantity": 220,
+        "quantity": 110,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cows_milk_mozzarella_cow",
+        "quantity": 120,
         "unit": "g"
       },
       {
         "ingredient": "green_onion_raw",
-        "quantity": 60,
+        "quantity": 40,
         "unit": "g"
       },
       {
         "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 45,
+        "quantity": 15,
         "unit": "ml"
       },
       {
         "ingredient": "sesame_oil_plant",
-        "quantity": 15,
+        "quantity": 10,
         "unit": "ml"
       },
       {
         "ingredient": "canola",
-        "quantity": 15,
+        "quantity": 20,
         "unit": "ml"
       },
       {
@@ -20753,15 +20844,9 @@
         "unit": "1 poignée"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "rice_kimchi_fried_rice_1f3e90",
-        "title": "Kimchi bokkeumbap à l'œuf au plat",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "rice_kimchi_fried_rice_1f3e90",
@@ -20849,13 +20934,7 @@
     ],
     "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "rice_kimchi_bokkeumbap_2cbfe6",
-        "title": "Kimchi Bokkeumbap",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "stew_sundubu_tofu_stew_ebe50e",
@@ -24926,7 +25005,7 @@
   },
   {
     "id": "main_moussaka_fcf86b",
-    "title": "Moussaka",
+    "title": "Moussaka aux lentilles et pommes de terre (vegan)",
     "cuisine": "greek",
     "dish_type": "main",
     "vegan": false,
@@ -24940,7 +25019,7 @@
     "servings": 4,
     "time_total": 68,
     "confidence": 1.0,
-    "description": "Assemblage en couches de légumes et sauce, cuisson au four pour une surface gratinée dorée et un cœur fondant, typique de la cuisine grecque, avec des rondelles d'aubergine et de pomme de terre croustillantes.",
+    "description": "Moussaka végétale : couches de pommes de terre et d'aubergines, ragoût de lentilles vertes à la tomate, béchamel vegan au lait d'avoine gratinée.",
     "composition": [
       {
         "ingredient": "eggplant_raw",
@@ -24995,17 +25074,11 @@
     ],
     "n_instructions": 8,
     "flags": [],
-    "similar": [
-      {
-        "id": "tarte_moussaka_veg_d55fa8",
-        "title": "Moussaka végétarienne",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "tarte_moussaka_veg_d55fa8",
-    "title": "Moussaka végétarienne",
+    "title": "Moussaka végétarienne grecque, béchamel au lait",
     "cuisine": "greek",
     "dish_type": "main",
     "vegan": false,
@@ -25020,7 +25093,7 @@
     "servings": 4,
     "time_total": 135,
     "confidence": 0.98,
-    "description": "Gratin végétal méditerranéen créatif, avec des aubergines caramélisées et une béchamel crémeuse, aux saveurs épanouies, texture onctueuse et parfum intense, inspiré par la cuisine grecque traditionnelle.",
+    "description": "Moussaka sans viande à la grecque : aubergines rôties, sauce tomate à l'ail et à la cannelle, sous une épaisse béchamel au beurre et à la muscade, gratinée.",
     "composition": [
       {
         "ingredient": "eggplant_raw",
@@ -25090,13 +25163,7 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_moussaka_fcf86b",
-        "title": "Moussaka",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dessert_mousse_au_chocolat_vegan_b5d48f",
@@ -29785,12 +29852,14 @@
   },
   {
     "id": "pasta_pasta_alla_norma_5cc26e",
-    "title": "Pasta Alla Norma",
+    "title": "Pasta alla Norma de Catane, ricotta salata",
     "cuisine": "italian",
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "high_protein"
+      "high_protein",
+      "vegetarian",
+      "nut_free"
     ],
     "allergens": [
       "gluten",
@@ -29798,9 +29867,9 @@
       "milk"
     ],
     "servings": 4,
-    "time_total": 68,
+    "time_total": 50,
     "confidence": 1.0,
-    "description": "Pâtes de blé italiennes cuites al dente, enrobées d'une sauce tomate concentrée avec des aubergines fondantes et du basilic frais.",
+    "description": "Le plat emblématique de Catane : aubergines frites, sauce tomate au basilic et ricotta salata râpée généreusement sur les pâtes.",
     "composition": [
       {
         "ingredient": "pasta_raw_dried",
@@ -29814,12 +29883,12 @@
       },
       {
         "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
+        "quantity": 400,
         "unit": "g"
       },
       {
         "ingredient": "base_salted_ricotta_1ecd1c",
-        "quantity": 100,
+        "quantity": 80,
         "unit": "g"
       },
       {
@@ -29839,90 +29908,13 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 2,
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "pasta_pasta_alla_norma_a_la_ric_d282a6",
-        "title": "Pasta Alla Norma à la Ricotta Salée (Vegan)",
-        "score": 0.6
-      }
-    ]
-  },
-  {
-    "id": "pasta_pasta_alla_norma_a_la_ric_d282a6",
-    "title": "Pasta Alla Norma à la Ricotta Salée (Vegan)",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "lactose_free",
-      "vegetarian"
-    ],
-    "allergens": [
-      "gluten",
-      "tree_nuts"
-    ],
-    "servings": 4,
-    "time_total": 45,
-    "confidence": 1.0,
-    "description": "Plat italien créé avec des pâtes de blé cuites al dente, des aubergines tendres et parfumées, des tomates concassées et du basilic frais, le tout lié par une sauce onctueuse à base de fromage végétal râpé.",
-    "composition": [
-      {
-        "ingredient": "pasta_raw_dried",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "eggplant_raw",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_cashew_ricotta_5c62e9",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "basil_fresh_herb",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "pasta_pasta_alla_norma_5cc26e",
-        "title": "Pasta Alla Norma",
-        "score": 0.6
-      }
-    ]
+    "similar": []
   },
   {
     "id": "pasta_pasta_e_fagioli_68905b",
@@ -35319,6 +35311,82 @@
     "similar": []
   },
   {
+    "id": "pasta_pasta_alla_norma_a_la_ric_d282a6",
+    "title": "Pâtes aux aubergines rôties, tomates cerises et ricotta de cajou (vegan)",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "allergens": [
+      "gluten",
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 50,
+    "confidence": 1.0,
+    "description": "Variante de la Norma plus légère : aubergines rôties au four, tomates cerises éclatées, menthe et basilic, et quenelles de ricotta de cajou.",
+    "composition": [
+      {
+        "ingredient": "pasta_raw_dried",
+        "quantity": 320,
+        "unit": "g"
+      },
+      {
+        "ingredient": "eggplant_raw",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cherry_tomato_raw",
+        "quantity": 350,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_cashew_ricotta_5c62e9",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "pasta_carbonara_veg_k3d2p1",
     "title": "Pâtes carbonara végétarienne",
     "cuisine": "italian",
@@ -36721,28 +36789,33 @@
   },
   {
     "id": "main_rajma_masala_bce2a4",
-    "title": "Rajma Masala",
+    "title": "Rajma chawal de Jammu, haricots rouges et riz",
     "cuisine": "indian",
     "dish_type": "main",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "high_protein",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
-    "allergens": [
-      "sesame"
-    ],
+    "allergens": [],
     "servings": 4,
-    "time_total": 70,
+    "time_total": 55,
     "confidence": 1.0,
-    "description": "Curry indien crémeux de haricots rouges, parfumé d'épices torréfiées et de gingembre frais, avec une sauce onctueuse et nappante qui se dépose sur les haricots.",
+    "description": "Le repas du dimanche au Jammu : petits haricots rouges mijotés dans une sauce oignon-tomate au gingembre et aux épices, servis sur un riz basmati fumant.",
     "composition": [
       {
         "ingredient": "kidney_bean_boiled",
-        "quantity": 300,
+        "quantity": 360,
+        "unit": "g"
+      },
+      {
+        "ingredient": "basmati_rice_raw_seed",
+        "quantity": 240,
         "unit": "g"
       },
       {
@@ -36756,6 +36829,11 @@
         "unit": "g"
       },
       {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
         "ingredient": "tomato_raw_ripe",
         "quantity": 300,
         "unit": "g"
@@ -36766,18 +36844,18 @@
         "unit": "g"
       },
       {
+        "ingredient": "turmeric_powder",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
         "ingredient": "garam_masala",
         "quantity": 3,
         "unit": "g"
       },
       {
-        "ingredient": "ginger_raw_root_fresh",
-        "quantity": 11.2,
-        "unit": "g"
-      },
-      {
         "ingredient": "sunflower_oil_plant",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -36786,25 +36864,19 @@
         "unit": "g"
       },
       {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
+        "ingredient": "water",
+        "quantity": 700,
+        "unit": "ml"
       },
       {
-        "ingredient": "turmeric_powder",
-        "quantity": 3,
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "dal_makhani_vegan_259219",
-        "title": "Rajma masala du Pendjab (vegan)",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dal_makhani_vegan_259219",
@@ -36904,13 +36976,7 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_rajma_masala_bce2a4",
-        "title": "Rajma Masala",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "soup_ramen_au_miso_f69c22",
@@ -41234,108 +41300,28 @@
     "similar": []
   },
   {
-    "id": "salad_greek_classic_v2_t4m8q1",
-    "title": "Salade grecque",
-    "cuisine": "greek",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "raw"
-    ],
-    "allergens": [
-      "lactose",
-      "milk",
-      "sulphites"
-    ],
-    "servings": 4,
-    "time_total": 20,
-    "confidence": 1.0,
-    "description": "Salade grecque fraîche et parfumée, préparée avec des tomates juteuses, des concombres croquants et des olives kalamata, assaisonnée d'une vinaigrette à l'huile d'olive et au vinaigre de vin rouge, avec du fromage feta crémeux.",
-    "composition": [
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cucumber_raw_with_skin",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_onion_raw",
-        "quantity": 80,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_olive_canned_in_oil",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "feta",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 40,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "red_wine_vinegar_liquid",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 1,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": null,
-        "unit": "quelques feuilles"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "salad_grecque_classique_vegan_a9f9a4",
-        "title": "Salade Grecque Classique (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "salad_grecque_classique_vegan_a9f9a4",
-    "title": "Salade Grecque Classique (Vegan)",
+    "title": "Salade grecque aux pois chiches et au tofu mariné à l'origan (vegan)",
     "cuisine": "greek",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "low_calorie",
-      "nut_free",
-      "raw"
+      "raw",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
-      "mustard",
       "soy"
     ],
     "servings": 4,
-    "time_total": 15,
+    "time_total": 35,
     "confidence": 1.0,
-    "description": "Salade grecque fraîche et colorée, composée de tomates coupées en quartiers, de concombre en dés et d'olives noires, relevée d'un assaisonnement traditionnel à base d'huile d'olive, de jus de citron et d'origan, offrant une texture croquante et une saveur équilibrée.",
+    "description": "Salade grecque plat complet et végétale : crudités, olives et pois chiches, avec des dés de tofu marinés au citron et à l'origan en guise de feta.",
     "composition": [
       {
         "ingredient": "tomato_raw_ripe",
@@ -41344,22 +41330,27 @@
       },
       {
         "ingredient": "cucumber_raw_with_skin",
-        "quantity": 350,
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chickpea_boiled",
+        "quantity": 200,
         "unit": "g"
       },
       {
         "ingredient": "black_olive_canned_in_brine",
-        "quantity": 80,
+        "quantity": 60,
         "unit": "g"
       },
       {
         "ingredient": "tofu_plain_pre_packaged",
-        "quantity": 150,
+        "quantity": 200,
         "unit": "g"
       },
       {
         "ingredient": "red_onion_raw",
-        "quantity": 150,
+        "quantity": 80,
         "unit": "g"
       },
       {
@@ -41374,29 +41365,23 @@
       },
       {
         "ingredient": "oregano",
-        "quantity": 1,
-        "unit": "g"
-      },
-      {
-        "ingredient": "mustard",
-        "quantity": 15,
+        "quantity": 2,
         "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 3,
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 4,
     "flags": [],
-    "similar": [
-      {
-        "id": "salad_greek_classic_v2_t4m8q1",
-        "title": "Salade grecque",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "salad_grillee_tunisienne_dcb033",
@@ -43909,6 +43894,87 @@
     "similar": []
   },
   {
+    "id": "dal_soupe_lentilles_turque_e797cb",
+    "title": "Shorbat adas, soupe libanaise de lentilles corail au citron",
+    "cuisine": "lebanese",
+    "dish_type": "soup",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "high_protein",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 40,
+    "confidence": 1.0,
+    "description": "Soupe de lentilles corail du Levant, mixée et veloutée, parfumée au cumin, servie avec beaucoup de citron et des oignons dorés.",
+    "composition": [
+      {
+        "ingredient": "red_lentil_dried",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1100,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "entry_skordalia_18cd77",
     "title": "Skordalia",
     "cuisine": "greek",
@@ -44905,7 +44971,7 @@
   },
   {
     "id": "soup_soupe_courge_butternut_2f5cf3",
-    "title": "Soupe Courge Butternut",
+    "title": "Soupe de butternut thaïe au lait de coco et au gingembre",
     "cuisine": "french_fusion",
     "dish_type": "soup",
     "vegan": false,
@@ -44920,7 +44986,7 @@
     "servings": 4,
     "time_total": 45,
     "confidence": 0.92,
-    "description": "Velouté de courge butternut au lait de coco et gingembre, fusionnant douceur hivernale et épices orientales pour une texture crémeuse et une couleur orange vif, typique de la cuisine automnale.",
+    "description": "Soupe de courge butternut relevée de gingembre frais et de curry, adoucie au lait de coco, parsemée de graines de courge.",
     "composition": [
       {
         "ingredient": "butternut_squash_raw",
@@ -44975,13 +45041,7 @@
     ],
     "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "soup_pumpkin_k2d1p1",
-        "title": "Soupe de courge",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "soup_soupe_de_chataignes_6b8e6f",
@@ -45076,74 +45136,6 @@
     "similar": []
   },
   {
-    "id": "soup_pumpkin_k2d1p1",
-    "title": "Soupe de courge",
-    "cuisine": "international",
-    "dish_type": "soup",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "vegetarian"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 60,
-    "confidence": 1.0,
-    "description": "Velouté de courge butternut crémeux et parfumé, concentré de saveurs d'automne avec une texture lisse et une odeur de courge caramélisée, réalisé à partir de courge butternut fraîche, oignon jaune émincé et ail délicatement parfumé.",
-    "composition": [
-      {
-        "ingredient": "butternut_squash_raw",
-        "quantity": 800,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 120,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 8,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_oil_plant",
-        "quantity": 20,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 600,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "pumpkin_squash_raw_seed",
-        "quantity": 20,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "soup_soupe_courge_butternut_2f5cf3",
-        "title": "Soupe Courge Butternut",
-        "score": 0.67
-      }
-    ]
-  },
-  {
     "id": "soup_de_gundruk_a62723",
     "title": "Soupe de Gundruk",
     "cuisine": "nepali",
@@ -45210,73 +45202,6 @@
     "n_instructions": 7,
     "flags": [],
     "similar": []
-  },
-  {
-    "id": "dal_soupe_de_lentilles_621239",
-    "title": "Soupe de Lentilles",
-    "cuisine": "international",
-    "dish_type": "main",
-    "vegan": true,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "high_protein",
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [
-      "celery"
-    ],
-    "servings": 4,
-    "time_total": 45,
-    "confidence": 1.0,
-    "description": "Soupe végétalienne à base de lentilles vertes, crémeuse et parfumée, avec une texture fondante et des saveurs délicates, inspirée de la cuisine indienne",
-    "composition": [
-      {
-        "ingredient": "green_lentil_dried",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 20,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 12.6,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 1000.0,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dal_soupe_lentilles_turque_e797cb",
-        "title": "Soupe Lentilles Turque",
-        "score": 0.67
-      }
-    ]
   },
   {
     "id": "main_soup_k3d2p1",
@@ -46061,73 +45986,6 @@
     "similar": []
   },
   {
-    "id": "dal_soupe_lentilles_turque_e797cb",
-    "title": "Soupe Lentilles Turque",
-    "cuisine": "turkish",
-    "dish_type": "main",
-    "vegan": true,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "high_protein",
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [
-      "celery"
-    ],
-    "servings": 4,
-    "time_total": 36,
-    "confidence": 1.0,
-    "description": "Soupe crémeuse et parfumée aux lentilles corail, servie avec un pain naan croustillant et un filet d'huile d'olive, évoquant les saveurs de la cuisine turque avec une texture onctueuse et des arômes subtils de légumes grillés.",
-    "composition": [
-      {
-        "ingredient": "red_lentil_dried",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 20,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 12.6,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 1000.0,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dal_soupe_de_lentilles_621239",
-        "title": "Soupe de Lentilles",
-        "score": 0.67
-      }
-    ]
-  },
-  {
     "id": "soup_miso_k2d1p1",
     "title": "Soupe miso",
     "cuisine": "japanese",
@@ -46183,6 +46041,94 @@
         "score": 0.67
       }
     ]
+  },
+  {
+    "id": "dal_soupe_de_lentilles_621239",
+    "title": "Soupe paysanne aux lentilles vertes et légumes",
+    "cuisine": "french",
+    "dish_type": "soup",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "high_protein",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "celery"
+    ],
+    "servings": 4,
+    "time_total": 55,
+    "confidence": 1.0,
+    "description": "Soupe rustique à la française : lentilles vertes, carotte, céleri et tomate mijotés avec thym et laurier, non mixée.",
+    "composition": [
+      {
+        "ingredient": "green_lentil_dried",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "celery_stalk_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "thyme_dried_herb",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "bay_leaf",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1100,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
   },
   {
     "id": "soup_soupe_thai_coco_citronnelle_375c23",
@@ -46368,9 +46314,100 @@
     ]
   },
   {
+    "id": "soup_a_l_oignon_gratinee_vegan_826f59",
+    "title": "Soupe à l'oignon au cidre et croûtons à l'ail (vegan)",
+    "cuisine": "french_normand",
+    "dish_type": "soup",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 75,
+    "confidence": 1.0,
+    "description": "Soupe à l'oignon normande végétale : oignons caramélisés à l'huile, déglacés au cidre brut, bouillon au thym, servie avec des croûtons frottés à l'ail et à la levure nutritionnelle.",
+    "composition": [
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 800,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "dry_cider_liquid_unsweetened",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 850,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "thyme_fresh_herb",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "bay_leaf_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_bread_baguette",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "soup_soup_k3d2p1",
-    "title": "Soupe à l'oignon",
-    "cuisine": "french",
+    "title": "Soupe à l'oignon gratinée lyonnaise au comté",
+    "cuisine": "french_lyonnaise",
     "dish_type": "soup",
     "vegan": false,
     "diet": [],
@@ -46383,7 +46420,7 @@
     "servings": 4,
     "time_total": 70,
     "confidence": 1.0,
-    "description": "Soupe à l'oignon gratinée végétarienne: caramélisation lente des oignons jaunes pour développer les sucres, bouillon corsé, gratin généreux au four à 200°C, parsemé de fromage fondu et de croûtons croustillants.",
+    "description": "La soupe des bouchons lyonnais : oignons longuement caramélisés au beurre, déglacés au vin blanc, bouillon, croûtons et comté gratinés au four.",
     "composition": [
       {
         "ingredient": "yellow_onion_raw",
@@ -46458,103 +46495,7 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "soup_a_l_oignon_gratinee_vegan_826f59",
-        "title": "Soupe à l'Oignon Gratinée (Vegan)",
-        "score": 0.67
-      }
-    ]
-  },
-  {
-    "id": "soup_a_l_oignon_gratinee_vegan_826f59",
-    "title": "Soupe à l'Oignon Gratinée (Vegan)",
-    "cuisine": "french",
-    "dish_type": "soup",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly"
-    ],
-    "allergens": [
-      "gluten",
-      "tree_nuts",
-      "sulphites"
-    ],
-    "servings": 4,
-    "time_total": 60,
-    "confidence": 1.0,
-    "description": "Soupe française à base d'oignon jaune, fondant et parfumée, avec une texture crémeuse et une odeur de thym frais — préparée avec une technique de cuisson lente pour une saveur intense.",
-    "composition": [
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 800,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 750.0,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "white_bread_baguette",
-        "quantity": 120,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_vegan_cheddar_024998",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "thyme_fresh_herb",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_wine_liquid",
-        "quantity": 100,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "bay_leaf_spice",
-        "quantity": 1,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "soup_soup_k3d2p1",
-        "title": "Soupe à l'oignon",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "pasta_pasta_puttanesca_e14266",
@@ -48775,7 +48716,7 @@
   },
   {
     "id": "dessert_tarte_tatin_9c0f67",
-    "title": "Tarte Tatin",
+    "title": "Tarte Tatin de Lamotte-Beuvron au caramel beurre",
     "cuisine": "french",
     "dish_type": "dessert",
     "vegan": false,
@@ -48791,7 +48732,7 @@
     "servings": 6,
     "time_total": 50,
     "confidence": 0.9,
-    "description": "Dessert français traditionnel à base de pommes cuites, avec une texture croustillante et un caramel ambré, issu de la cuisine normande, caractérisé par une croûte dorée et un intérieur tendre.",
+    "description": "La tarte renversée des sœurs Tatin, en Sologne : pommes en quartiers épais confites dans un caramel au beurre, couvertes de pâte brisée, cuites puis retournées tièdes.",
     "composition": [
       {
         "ingredient": "chantecler_apple_raw_skinless",
@@ -48816,68 +48757,7 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "dessert_tarte_tatin_vegan_1ae13b",
-        "title": "Tarte Tatin Vegan",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "dessert_tarte_tatin_vegan_1ae13b",
-    "title": "Tarte Tatin Vegan",
-    "cuisine": "french",
-    "dish_type": "dessert",
-    "vegan": false,
-    "diet": [
-      "kid_friendly",
-      "lactose_free",
-      "nut_free"
-    ],
-    "allergens": [
-      "gluten"
-    ],
-    "servings": 6,
-    "time_total": 55,
-    "confidence": 0.9,
-    "description": "Dessert français classique à base de pommes caramélisées, avec une pâte feuilletée végétale dorée et croustillante, préparé avec soin et patience, dégageant une odeur sucrée et présentant une texture fondante.",
-    "composition": [
-      {
-        "ingredient": "golden_apple_raw_skinless",
-        "quantity": 1200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 90,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_sugar",
-        "quantity": 130,
-        "unit": "g"
-      },
-      {
-        "ingredient": "puff_pastry_vegetable_fat_raw_paste_plant",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_soy_cream_4dc027",
-        "quantity": null,
-        "unit": "2 cuillères à soupe"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "dessert_tarte_tatin_9c0f67",
-        "title": "Tarte Tatin",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "main_tarte_a_la_tomate_a1d175",
@@ -49073,6 +48953,62 @@
     "similar": []
   },
   {
+    "id": "dessert_tarte_tatin_vegan_1ae13b",
+    "title": "Tatin de poires à la cardamome, pâte feuilletée (vegan)",
+    "cuisine": "french",
+    "dish_type": "dessert",
+    "vegan": true,
+    "diet": [
+      "kid_friendly",
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 6,
+    "time_total": 70,
+    "confidence": 0.9,
+    "description": "Tarte renversée aux poires caramélisées au beurre végétal et à la cardamome, sous une pâte feuilletée végétale croustillante.",
+    "composition": [
+      {
+        "ingredient": "pear_raw_with_skin",
+        "quantity": 1200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegan_butter",
+        "quantity": 70,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cardamom",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "puff_pastry_vegetable_fat_raw_paste_plant",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_soy_cream_4dc027",
+        "quantity": null,
+        "unit": "2 cuillères à soupe"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "tempeh_tempeh_frit_ccb7d2",
     "title": "Tempeh Frit",
     "cuisine": "indonesian",
@@ -49264,7 +49200,7 @@
   },
   {
     "id": "entry_terrine_de_legumes_e52466",
-    "title": "Terrine de Légumes",
+    "title": "Terrine de légumes printaniers en gelée au basilic",
     "cuisine": "french",
     "dish_type": "starter",
     "vegan": true,
@@ -49280,7 +49216,7 @@
     "servings": 4,
     "time_total": 290,
     "confidence": 0.9,
-    "description": "Terrine froide de légumes colorés, pris dans un aspic à l'agar-agar, offrant une texture ferme et des couleurs vives. Cette entrée vegan mosaïquée est élégante et légère, avec une présentation visuelle attrayante.",
+    "description": "Entrée légère : carottes, courgettes, haricots verts et poivron blanchis, pris dans une gelée de bouillon à l'agar-agar parfumée au basilic, servie en tranches bien fraîches.",
     "composition": [
       {
         "ingredient": "red_bell_pepper_raw",
@@ -49325,17 +49261,11 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "entry_terrine_legumes_du_soleil_e5e24a",
-        "title": "Terrine Légumes du Soleil",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "entry_terrine_legumes_du_soleil_e5e24a",
-    "title": "Terrine Légumes du Soleil",
+    "title": "Terrine provençale de légumes grillés au chèvre",
     "cuisine": "french",
     "dish_type": "starter",
     "vegan": false,
@@ -49354,7 +49284,7 @@
     "servings": 4,
     "time_total": 300,
     "confidence": 0.9,
-    "description": "Entrée française typique, préparée selon la tradition, composée principalement de poivron rouge, courgette jaune, aubergine noire, elle ouvre le repas avec fraîcheur et caractère, présentant une texture tendre et légèrement caramélisée.",
+    "description": "Couches de poivrons, courgettes et aubergines grillés à l'huile d'olive et au thym, alternées avec du chèvre frais, pressées une nuit et arrosées de balsamique.",
     "composition": [
       {
         "ingredient": "red_bell_pepper_raw",
@@ -49404,13 +49334,7 @@
     ],
     "n_instructions": 8,
     "flags": [],
-    "similar": [
-      {
-        "id": "entry_terrine_de_legumes_e52466",
-        "title": "Terrine de Légumes",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "soup_thai_red_curry_f6bb3c",
@@ -51896,6 +51820,68 @@
       }
     ],
     "n_instructions": 8,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "soup_pumpkin_k2d1p1",
+    "title": "Velouté de butternut rôtie aux graines de courge",
+    "cuisine": "french",
+    "dish_type": "soup",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "gluten_free",
+      "vegetarian"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 55,
+    "confidence": 1.0,
+    "description": "Butternut et oignon rôtis au four avant d'être mixés, pour un velouté au goût caramélisé, servi avec des graines de courge grillées.",
+    "composition": [
+      {
+        "ingredient": "butternut_squash_raw",
+        "quantity": 800,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_oil_plant",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 600,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "pumpkin_squash_raw_seed",
+        "quantity": 20,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
