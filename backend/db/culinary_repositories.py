@@ -111,7 +111,7 @@ def _log_missing_ingredient(
             # Sauvegarder (écriture atomique)
             import os, tempfile
             fd, tmp = tempfile.mkstemp(dir=path.parent, suffix=".tmp")
-            with os.fdopen(fd, "w", encoding="utf-8") as f:
+            with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as f:
                 json.dump(entries, f, ensure_ascii=False, indent=2)
             os.replace(tmp, path)
 

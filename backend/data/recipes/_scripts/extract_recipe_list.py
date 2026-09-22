@@ -167,7 +167,7 @@ def find_duplicates(rows: list[dict]) -> None:
 
 def write_json(rows):
     OUT_JSON.write_text(
-        json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n"
     )
 
 
@@ -206,7 +206,7 @@ def write_md(rows, total):
         if r["similar"]:
             warn += f" 🔁 doublon possible : " + ", ".join(s["title"] for s in r["similar"][:3])
         lines.append(f"- **{r['title']}**{tag_str} — `{r['id']}`{warn}")
-    OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
 def main():

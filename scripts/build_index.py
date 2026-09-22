@@ -176,7 +176,7 @@ def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     OUT_FILE.write_text(
         json.dumps(index, ensure_ascii=False, separators=(",", ":")),
-        encoding="utf-8",
+        encoding="utf-8", newline="\n",
     )
     size_kb = OUT_FILE.stat().st_size // 1024
     print(f"\nEcrit : {OUT_FILE}  ({size_kb} Ko)")

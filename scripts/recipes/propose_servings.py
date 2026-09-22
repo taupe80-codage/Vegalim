@@ -231,7 +231,7 @@ def apply(csv_path: Path) -> None:
     if wanted:
         print(f'  ⚠ ids introuvables : {sorted(wanted)}')
     tmp = Path(RECIPES_PATH).with_suffix('.tmp')
-    tmp.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding='utf-8')
+    tmp.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     tmp.replace(RECIPES_PATH)
     print(f'  {done} recettes mises à jour → {RECIPES_PATH}')
     print('  Relancer ensuite : build_derived_base_registry.py puis rebuild_graphs.py')
@@ -252,7 +252,7 @@ def main():
     rows = component_proposals() if args.components else proposals()
     out = Path(args.out)
     with open(out, 'w', encoding='utf-8-sig', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else ['id'], delimiter=';')
+        w = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else ['id'], delimiter=';', lineterminator='\n')
         w.writeheader()
         w.writerows(rows)
     print(f'  {len(rows)} propositions → {out}')

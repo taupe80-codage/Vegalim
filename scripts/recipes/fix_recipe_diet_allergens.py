@@ -150,7 +150,7 @@ def main():
         return
     raw['recipes'] = recipes
     tmp = Path(RECIPES_PATH).with_suffix('.tmp')
-    tmp.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding='utf-8')
+    tmp.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     tmp.replace(RECIPES_PATH)
     print(f'\nÉcrit → {RECIPES_PATH}')
 

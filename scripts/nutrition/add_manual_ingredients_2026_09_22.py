@@ -58,7 +58,7 @@ def load(p):
 
 
 def save(p, d):
-    p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 
 def main():

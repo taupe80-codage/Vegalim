@@ -145,7 +145,7 @@ def save_json(path: str | Path, data, indent: int = 2) -> bool:
     p.parent.mkdir(parents=True, exist_ok=True)
     try:
         tmp_fd, tmp_path = tempfile.mkstemp(dir=p.parent, suffix=".tmp")
-        with os.fdopen(tmp_fd, "w", encoding="utf-8") as f:
+        with os.fdopen(tmp_fd, "w", encoding="utf-8", newline="\n") as f:
             json.dump(data, f, ensure_ascii=False, indent=indent)
         os.replace(tmp_path, p)
         logger.debug("JSON sauvegardé : %s", p.name)
