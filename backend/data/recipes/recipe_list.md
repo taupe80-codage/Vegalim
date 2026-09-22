@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 39 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 27 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -98,8 +98,7 @@
 - **Chana masala** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `curry_chickpea_k5x2p9`
 - **Chana palak, pois chiches aux épinards (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, indian)_ — `protein_palak_paneer_vegan_bdac46`
 - **Charlotte aux Fraises** _(kid_friendly, nut_free, vegetarian, dessert, french)_ — `dessert_charlotte_aux_fraises_e3f32c`
-- **Cheddar Végane** _(vegan, ingredient, vegan)_ — `base_cheddar_vegane_529b97` 🔁 doublon possible : Cheddar Végétal
-- **Cheddar Végétal** _(vegan, vegetarian, gluten_free, base, international)_ — `base_vegan_cheddar_024998` 🔁 doublon possible : Cheddar Végane
+- **Cheddar végétal au cajou et au poivron** _(vegan, vegetarian, gluten_free, base, international)_ — `base_vegan_cheddar_024998`
 - **Cheesecake Fruits Rouges** _(kid_friendly, nut_free, dessert, international)_ — `dessert_cheesecake_fruits_rouges_3460f6`
 - **Chia Pudding Coco Mangue** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, dessert, international)_ — `dessert_chia_pudding_coco_mangue_d61cff`
 - **Chia Pudding Framboise** _(diabetes_friendly, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, international)_ — `brkf_chia_pudding_framboise_e8a8fd`
@@ -163,6 +162,7 @@
 - **Dal makhani de Delhi au beurre et à la crème** _(diabetes_friendly, gluten_free, high_protein, vegetarian, main, indian)_ — `dal_dal_makhani_c9ce94`
 - **Dal Tadka** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_dal_tadka_4c3536`
 - **Dal tadka du Pendjab** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, indian)_ — `dal_lentil_corail_classic_k1d1p1`
+- **Dan chao fan, riz sauté à l'œuf et aux oignons verts** _(vegetarian, main, chinese)_ — `main_fried_rice_a6e811`
 - **Daube de Légumes** _(gluten_free, lactose_free, nut_free, vegan, vegetarian, main, french_provencal)_ — `main_daube_de_legumes_4a045f`
 - **Disques de Pâte** _(vegetarian, pastry, latin_american)_ — `base_pastry_wrappers_a56ee0`
 - **Dolma au Persil** _(gluten_free, vegan, vegetarian, main, turkish)_ — `rice_dolma_au_persil_6aeb1e`
@@ -211,6 +211,7 @@
 - **Fromage de Cajou aux Herbes** _(diabetes_friendly, high_protein, kid_friendly, lactose_free, vegetarian, starter, international)_ — `entry_fromage_de_cajou_aux_herb_4f0f9b`
 - **Fromage en Grain** _(vegetarian, gluten_free, dairy, canadian)_ — `base_fromage_en_grain_a00941`
 - **Fromage Frais (Cream Cheese)** _(vegetarian, gluten_free, sauce, french)_ — `base_cream_cheese_c6e3b6`
+- **Fromage végétal fondant au lait de coco** _(vegan, ingredient, vegan)_ — `base_cheddar_vegane_529b97`
 - **Ful Medames** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, egyptian)_ — `main_ful_medames_389da8`
 
 ## G
@@ -321,10 +322,9 @@
 - **Khichdi** _(gluten_free, vegetarian, main, international)_ — `dal_khichdi_23f932`
 - **Kibbeh** _(vegetarian, main, lebanese)_ — `main_kibbeh_3d2be1`
 - **Kimbap** _(diabetes_friendly, gluten_free, high_protein, main, korean)_ — `rice_kimbap_4cb3da`
-- **Kimchi** _(vegan, vegetarian, side, korean)_ — `main_kimchi_1dc648` 🔁 doublon possible : Kimchi (base)
-- **Kimchi (base)** _(vegan, vegetarian, gluten_free, condiment, korean)_ — `base_kimchi_61791a` 🔁 doublon possible : Kimchi
 - **Kimchi bokkeumbap gratiné au fromage** _(vegetarian, nut_free, main, korean)_ — `rice_kimchi_bokkeumbap_2cbfe6`
 - **Kimchi bokkeumbap à l'œuf au plat** _(high_protein, vegetarian, gluten_free, lactose_free, nut_free, main, korean)_ — `rice_kimchi_fried_rice_1f3e90`
+- **Kimchi de chou chinois fermenté (préparation de base)** _(vegan, vegetarian, gluten_free, condiment, korean)_ — `base_kimchi_61791a`
 - **Kimchi sundubu jjigae épicé** _(diabetes_friendly, high_protein, vegetarian, gluten_free, lactose_free, nut_free, main, korean)_ — `stew_sundubu_tofu_stew_ebe50e`
 - **Kimchijeon, crêpe croustillante au kimchi (vegan)** _(vegan, vegetarian, lactose_free, nut_free, snack, korean)_ — `snack_crepe_coreenne_aux_oignon_a45536`
 - **Kombucha** _(vegan, gluten_free, lactose_free, beverage, chinese)_ — `beverage_kombucha_3df24c`
@@ -364,6 +364,7 @@
 - **Mac and cheese américain gratiné au cheddar** _(vegetarian, nut_free, main, american)_ — `pasta_mac_and_cheese_b3073b`
 - **Mac and cheese à la courge butternut (vegan)** _(high_protein, kid_friendly, vegan, vegetarian, lactose_free, nut_free, main, american)_ — `pasta_mac_and_cheese_vegan_4acb30`
 - **Madeleines** _(kid_friendly, nut_free, dessert, french)_ — `dessert_madeleines_4572e8`
+- **Mak kimchi express à la sauce soja** _(vegan, vegetarian, side, korean)_ — `main_kimchi_1dc648`
 - **Makdous** _(gluten_free, vegan, vegetarian, main, american)_ — `egg_makdous_cf5efa`
 - **Manakish Zaatar** _(vegan, vegetarian, snack, international)_ — `main_manakish_zaatar_580150`
 - **Mapo Tofu** _(diabetes_friendly, high_protein, vegan, vegetarian, main, chinese)_ — `protein_mapo_tofu_4b4458`
@@ -523,22 +524,22 @@
 - **Purée de Céleri-Rave Vegan** _(diabetes_friendly, kid_friendly, lactose_free, low_calorie, nut_free, side, french)_ — `side_puree_de_celerirave_vegan_a55054` 🔁 doublon possible : Shepherd's pie vegan aux champignons, purée au céleri-rave
 - **Purée de pommes de terre** _(gluten_free, side, french)_ — `side_potatoes_k3d2p1`
 - **Pâte Brisée** _(vegetarian, bread, french)_ — `base_shortcrust_e6e9f0`
-- **Pâte de Curry** _(vegan, vegetarian, gluten_free, paste, thai)_ — `base_curry_paste_49c97f` 🔁 doublon possible : Pâte de Curry Jaune
-- **Pâte de Curry Jaune** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, paste, thai)_ — `yellow_curry_paste_077f54` 🔁 doublon possible : Pâte de Curry
+- **Pâte de Curry Jaune** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, paste, thai)_ — `yellow_curry_paste_077f54`
+- **Pâte de curry rouge aux piments frais** _(vegan, vegetarian, gluten_free, paste, thai)_ — `base_curry_paste_49c97f`
 - **Pâte de Curry Rouge Thaï** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, paste, thai)_ — `red_curry_paste_3ee8f5` 🔁 doublon possible : Pâte de Curry Vert Thaï
 - **Pâte de Curry Vert Thaï** _(vegan, vegetarian, paste, thai)_ — `base_green_curry_paste_250117` 🔁 doublon possible : Pâte de Curry Rouge Thaï
 - **Pâte de Haricot Fermenté (Doenjang)** _(vegan, vegetarian, gluten_free, high_protein, condiment, korean)_ — `base_fermented_bean_paste_817412`
 - **Pâte de Laksa** _(vegan, vegetarian, gluten_free, sauce, malaysian)_ — `base_laksa_paste_bc7fd5`
 - **Pâte de Miso** _(vegan, vegetarian, gluten_free, high_protein, sauce, japanese)_ — `base_miso_paste_1faeef`
-- **Pâte de Piment** _(vegan, vegetarian, gluten_free, sauce, asian)_ — `base_pate_piment_b6904a` 🔁 doublon possible : Pâte de Piment Maison
-- **Pâte de Piment Maison** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, paste, asian)_ — `chili_paste_95cb92` 🔁 doublon possible : Pâte de Piment
+- **Pâte de piment frais au gingembre** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, paste, asian)_ — `chili_paste_95cb92`
+- **Pâte de piment à l'ail (préparation de base)** _(vegan, vegetarian, gluten_free, sauce, asian)_ — `base_pate_piment_b6904a`
 - **Pâte de Tamarin** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, paste, asian)_ — `tamarind_paste_b740bb`
 - **Pâte Doubanjiang** _(vegan, vegetarian, sauce, sichuan)_ — `base_doubanjiang_paste_340399`
 - **Pâte Feuilletée** _(vegetarian, bread, french)_ — `base_puff_pastry_fca43b`
 - **Pâte à Empanada** _(vegetarian, bread, chilean)_ — `base_empanada_dough_65661a`
 - **Pâte à Pizza** _(vegan, vegetarian, bread, italian)_ — `base_pizza_dough_6fdabd`
-- **Pâte à Samosa** _(vegan, vegetarian, lactose_free, nut_free, pastry, indian)_ — `samosa_dough_c03717` 🔁 doublon possible : Pâte à Samosa (base)
-- **Pâte à Samosa (base)** _(vegan, vegetarian, pastry, indian)_ — `base_samosa_77fac4` 🔁 doublon possible : Pâte à Samosa
+- **Pâte à samosa nature (préparation de base)** _(vegan, vegetarian, pastry, indian)_ — `base_samosa_77fac4`
+- **Pâte à samosa épicée au cumin** _(vegan, vegetarian, lactose_free, nut_free, pastry, indian)_ — `samosa_dough_c03717`
 - **Pâtes Alfredo** _(main, italian)_ — `pasta_alfredo_k3d2p1`
 - **Pâtes arrabbiata** _(vegan, vegetarian, main, italian)_ — `pasta_arrabbiata_a51938`
 - **Pâtes aux aubergines rôties, tomates cerises et ricotta de cajou (vegan)** _(diabetes_friendly, vegan, vegetarian, lactose_free, main, italian)_ — `pasta_pasta_alla_norma_a_la_ric_d282a6`
@@ -590,8 +591,7 @@
 - **Riz au Lait Coco Vegan** _(kid_friendly, lactose_free, nut_free, vegan, vegetarian, dessert, international)_ — `dessert_lait_coco_vegan_3b8a99` 🔁 doublon possible : Lait de Coco Maison, Courge au Lait de Coco, Dahl au lait de coco
 - **Riz au Lait Vanille** _(gluten_free, kid_friendly, nut_free, dessert, french)_ — `dessert_lait_vanille_cddf17`
 - **Riz blanc** _(gluten_free, vegan, vegetarian, main, international)_ — `rice_white_k1d1p1`
-- **Riz Cantonais** _(vegetarian, main, chinese)_ — `main_fried_rice_a6e811` 🔁 doublon possible : Riz Cantonais (base)
-- **Riz Cantonais (base)** _(vegetarian, main, chinese)_ — `base_fried_rice_f230b0` 🔁 doublon possible : Riz Cantonais
+- **Riz cantonais aux petits pois et carottes** _(vegetarian, main, chinese)_ — `base_fried_rice_f230b0`
 - **Riz Citronné Indien** _(gluten_free, vegan, vegetarian, side, indian)_ — `rice_riz_citronne_indien_05c717`
 - **Riz et Pois Caribéen** _(gluten_free, high_protein, vegetarian, main, caribbean)_ — `rice_riz_et_pois_caribeen_72144c`
 - **Riz Jollof** _(gluten_free, vegan, vegetarian, main, nigerian)_ — `rice_riz_jollof_360727`

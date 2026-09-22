@@ -6664,77 +6664,8 @@
     "similar": []
   },
   {
-    "id": "base_cheddar_vegane_529b97",
-    "title": "Cheddar Végane",
-    "cuisine": "vegan",
-    "dish_type": "ingredient",
-    "vegan": true,
-    "diet": [
-      "vegan"
-    ],
-    "allergens": [
-      "tree_nuts",
-      "sulphites"
-    ],
-    "servings": 11,
-    "time_total": 515,
-    "confidence": 0.83,
-    "description": "Découvrez notre créatif cheddar végan, réalisé à partir de cajous, de levure de bière et de tapioca, pour un plaisir gourmand sans compromis, avec une texture crémeuse et une saveur riche.",
-    "composition": [
-      {
-        "ingredient": "cashew_nuts_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "nutritional_yeast_flakes",
-        "quantity": 35,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cornstarch_flour",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coconut_milk_plant",
-        "quantity": 25,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "lemon_juice",
-        "quantity": 20,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "cider_vinegar_liquid",
-        "quantity": 15,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 8,
-        "unit": "g"
-      },
-      {
-        "ingredient": "puffed_rice_cakes",
-        "quantity": null,
-        "unit": "une poignée"
-      }
-    ],
-    "n_instructions": 10,
-    "flags": [],
-    "similar": [
-      {
-        "id": "base_vegan_cheddar_024998",
-        "title": "Cheddar Végétal",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "base_vegan_cheddar_024998",
-    "title": "Cheddar Végétal",
+    "title": "Cheddar végétal au cajou et au poivron",
     "cuisine": "international",
     "dish_type": "base",
     "vegan": true,
@@ -6749,7 +6680,7 @@
     "servings": 9,
     "time_total": 275,
     "confidence": 0.88,
-    "description": "Fromage végétal à base de noix de cajou et de poivron rouge cru, qui imite la saveur et la couleur du cheddar. La levure nutritionnelle apporte les notes umami fromagères caractéristiques.",
+    "description": "Préparation de base vegan à râper ou émietter : noix de cajou mixées avec poivron rouge, levure nutritionnelle, citron et ail, qui donne la couleur et le goût d'un cheddar.",
     "composition": [
       {
         "ingredient": "cashew_nuts_raw",
@@ -6789,13 +6720,7 @@
     ],
     "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "base_cheddar_vegane_529b97",
-        "title": "Cheddar Végane",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dessert_cheesecake_fruits_rouges_3460f6",
@@ -11216,6 +11141,65 @@
     "similar": []
   },
   {
+    "id": "main_fried_rice_a6e811",
+    "title": "Dan chao fan, riz sauté à l'œuf et aux oignons verts",
+    "cuisine": "chinese",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 35,
+    "confidence": 0.91,
+    "description": "Le riz sauté le plus simple de Canton : riz de la veille sauté au wok très chaud avec des œufs, des oignons verts, des petits pois et de la sauce soja.",
+    "composition": [
+      {
+        "ingredient": "white_rice_cooked_long_grain_seed",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "green_peas_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander",
+        "quantity": null,
+        "unit": "1 poignée"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "main_daube_de_legumes_4a045f",
     "title": "Daube de Légumes",
     "cuisine": "french_provencal",
@@ -14136,6 +14120,69 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "base_cheddar_vegane_529b97",
+    "title": "Fromage végétal fondant au lait de coco",
+    "cuisine": "vegan",
+    "dish_type": "ingredient",
+    "vegan": true,
+    "diet": [
+      "vegan"
+    ],
+    "allergens": [
+      "tree_nuts",
+      "sulphites"
+    ],
+    "servings": 11,
+    "time_total": 515,
+    "confidence": 0.83,
+    "description": "Préparation de base vegan qui file à la cuisson : noix de cajou, lait de coco, levure nutritionnelle et fécule de maïs cuits jusqu'à épaississement, pour gratins et croque-monsieur.",
+    "composition": [
+      {
+        "ingredient": "cashew_nuts_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 35,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cornstarch_flour",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_milk_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cider_vinegar_liquid",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "puffed_rice_cakes",
+        "quantity": null,
+        "unit": "une poignée"
+      }
+    ],
+    "n_instructions": 10,
     "flags": [],
     "similar": []
   },
@@ -20633,144 +20680,6 @@
     "similar": []
   },
   {
-    "id": "main_kimchi_1dc648",
-    "title": "Kimchi",
-    "cuisine": "korean",
-    "dish_type": "side",
-    "vegan": true,
-    "diet": [
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [
-      "gluten",
-      "soy"
-    ],
-    "servings": 4,
-    "time_total": 1575,
-    "confidence": 1.0,
-    "description": "Fermentation lente du chou chinois, carotte et ail, avec une texture ferme et croquante, parfumée par le gingembre frais et le piment coréen, dans la tradition culinaire coréenne.",
-    "composition": [
-      {
-        "ingredient": "napa_cabbage_raw",
-        "quantity": 900,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 9,
-        "unit": "g"
-      },
-      {
-        "ingredient": "ginger_raw_root_fresh",
-        "quantity": 11.2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_hot_chili_pepper_spice_dried",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "white_sugar",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "base_kimchi_61791a",
-        "title": "Kimchi (base)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "base_kimchi_61791a",
-    "title": "Kimchi (base)",
-    "cuisine": "korean",
-    "dish_type": "condiment",
-    "vegan": true,
-    "diet": [
-      "vegan",
-      "vegetarian",
-      "gluten_free"
-    ],
-    "allergens": [],
-    "servings": 16,
-    "time_total": 4365,
-    "confidence": 0.93,
-    "description": "Découvrez le kimchi, un chou fermenté coréen épicé et végétal, condiment emblématique de la cuisine coréenne, développant des arômes complexes et une acidité vive.",
-    "composition": [
-      {
-        "ingredient": "napa_cabbage_raw",
-        "quantity": 1000,
-        "unit": "g"
-      },
-      {
-        "ingredient": "carrot_raw",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "ginger_raw_root_fresh",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_hot_chili_pepper_spice_dried",
-        "quantity": 50,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_sugar",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_onion_raw",
-        "quantity": 50,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 8,
-    "flags": [],
-    "similar": [
-      {
-        "id": "main_kimchi_1dc648",
-        "title": "Kimchi",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "rice_kimchi_bokkeumbap_2cbfe6",
     "title": "Kimchi bokkeumbap gratiné au fromage",
     "cuisine": "korean",
@@ -20933,6 +20842,68 @@
       }
     ],
     "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "base_kimchi_61791a",
+    "title": "Kimchi de chou chinois fermenté (préparation de base)",
+    "cuisine": "korean",
+    "dish_type": "condiment",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free"
+    ],
+    "allergens": [],
+    "servings": 16,
+    "time_total": 4365,
+    "confidence": 0.93,
+    "description": "Le kimchi traditionnel : chou chinois salé, puis enrobé d'une pâte de piment, d'ail, de gingembre et d'oignon vert, fermenté trois jours ; base des jjigae, crêpes et riz sautés.",
+    "composition": [
+      {
+        "ingredient": "napa_cabbage_raw",
+        "quantity": 1000,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_hot_chili_pepper_spice_dried",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 50,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 8,
     "flags": [],
     "similar": []
   },
@@ -23402,6 +23373,70 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "main_kimchi_1dc648",
+    "title": "Mak kimchi express à la sauce soja",
+    "cuisine": "korean",
+    "dish_type": "side",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian"
+    ],
+    "allergens": [
+      "gluten",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 1575,
+    "confidence": 1.0,
+    "description": "Kimchi rapide en morceaux (mak kimchi) : chou chinois et carotte assaisonnés de piment, d'ail, de gingembre et de sauce soja, prêt après une journée de fermentation.",
+    "composition": [
+      {
+        "ingredient": "napa_cabbage_raw",
+        "quantity": 900,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 11.2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_hot_chili_pepper_spice_dried",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -34283,8 +34318,72 @@
     "similar": []
   },
   {
+    "id": "yellow_curry_paste_077f54",
+    "title": "Pâte de Curry Jaune",
+    "cuisine": "thai",
+    "dish_type": "paste",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 9,
+    "time_total": 25,
+    "confidence": null,
+    "description": "Pâte de curry jaune douce et parfumée, dominée par le curcuma et le cumin, idéale pour les légumes et le tofu, avec une texture lisse et une couleur jaune vif, parfumée par la citronnelle et les épices.",
+    "composition": [
+      {
+        "ingredient": "turmeric_powder",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_hot_chili_pepper_raw",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_grass_fresh_herb",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_spice_seed",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "base_curry_paste_49c97f",
-    "title": "Pâte de Curry",
+    "title": "Pâte de curry rouge aux piments frais",
     "cuisine": "thai",
     "dish_type": "paste",
     "vegan": true,
@@ -34297,7 +34396,7 @@
     "servings": 16,
     "time_total": 20,
     "confidence": 0.92,
-    "description": "Pâte de curry végan aromatique, où les piments frais, le lemongrass et les épices se mélangent pour créer une texture crémeuse et des saveurs épicées, typiques de la cuisine thaïe avec une touche de fraîcheur due au citron vert.",
+    "description": "Pâte de curry vegan aux piments rouges frais, citronnelle, galanga, ail et curcuma, plus vive que la pâte aux piments séchés ; base du curry rouge thaï au tofu.",
     "composition": [
       {
         "ingredient": "red_hot_chili_pepper_raw",
@@ -34362,83 +34461,7 @@
     ],
     "n_instructions": 8,
     "flags": [],
-    "similar": [
-      {
-        "id": "yellow_curry_paste_077f54",
-        "title": "Pâte de Curry Jaune",
-        "score": 0.67
-      }
-    ]
-  },
-  {
-    "id": "yellow_curry_paste_077f54",
-    "title": "Pâte de Curry Jaune",
-    "cuisine": "thai",
-    "dish_type": "paste",
-    "vegan": true,
-    "diet": [
-      "vegan",
-      "vegetarian",
-      "gluten_free",
-      "lactose_free",
-      "nut_free"
-    ],
-    "allergens": [],
-    "servings": 9,
-    "time_total": 25,
-    "confidence": null,
-    "description": "Pâte de curry jaune douce et parfumée, dominée par le curcuma et le cumin, idéale pour les légumes et le tofu, avec une texture lisse et une couleur jaune vif, parfumée par la citronnelle et les épices.",
-    "composition": [
-      {
-        "ingredient": "turmeric_powder",
-        "quantity": 8,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_hot_chili_pepper_raw",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "lemon_grass_fresh_herb",
-        "quantity": 25,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander_spice_seed",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "sunflower_oil_plant",
-        "quantity": 15,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 4,
-    "flags": [],
-    "similar": [
-      {
-        "id": "base_curry_paste_49c97f",
-        "title": "Pâte de Curry",
-        "score": 0.67
-      }
-    ]
+    "similar": []
   },
   {
     "id": "red_curry_paste_3ee8f5",
@@ -34749,63 +34772,8 @@
     "similar": []
   },
   {
-    "id": "base_pate_piment_b6904a",
-    "title": "Pâte de Piment",
-    "cuisine": "asian",
-    "dish_type": "sauce",
-    "vegan": true,
-    "diet": [
-      "vegan",
-      "vegetarian",
-      "gluten_free"
-    ],
-    "allergens": [
-      "sulphites"
-    ],
-    "servings": 20,
-    "time_total": 15,
-    "confidence": 0.9,
-    "description": "Pâte de piment polyvalente, base de nombreuses sauces asiatiques. Texture lisse et saveur intense de piment frais et d'ail.",
-    "composition": [
-      {
-        "ingredient": "chilli_pepper_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_oil_plant",
-        "quantity": 40,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 8,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_vinegar_liquid_distilled",
-        "quantity": 20,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "chili_paste_95cb92",
-        "title": "Pâte de Piment Maison",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "chili_paste_95cb92",
-    "title": "Pâte de Piment Maison",
+    "title": "Pâte de piment frais au gingembre",
     "cuisine": "asian",
     "dish_type": "paste",
     "vegan": true,
@@ -34822,7 +34790,7 @@
     "servings": 9,
     "time_total": 15,
     "confidence": null,
-    "description": "Pâte de piment végan créative, parfaite pour les currys, les condiments ou les marinades, avec des piments rouges, de l'ail, du gingembre frais et de l'huile de tournesol.",
+    "description": "Condiment pimenté mixé à partir de piments rouges frais, d'ail et de gingembre, liés à l'huile et relevés de vinaigre.",
     "composition": [
       {
         "ingredient": "red_hot_chili_pepper_raw",
@@ -34857,13 +34825,56 @@
     ],
     "n_instructions": 7,
     "flags": [],
-    "similar": [
+    "similar": []
+  },
+  {
+    "id": "base_pate_piment_b6904a",
+    "title": "Pâte de piment à l'ail (préparation de base)",
+    "cuisine": "asian",
+    "dish_type": "sauce",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free"
+    ],
+    "allergens": [
+      "sulphites"
+    ],
+    "servings": 20,
+    "time_total": 15,
+    "confidence": 0.9,
+    "description": "Pâte de piments frais, d'ail, d'huile et de vinaigre, à garder au frais pour relever sauces, riz sautés et quesadillas.",
+    "composition": [
       {
-        "id": "base_pate_piment_b6904a",
-        "title": "Pâte de Piment",
-        "score": 1.0
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_vinegar_liquid_distilled",
+        "quantity": 20,
+        "unit": "ml"
       }
-    ]
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
   },
   {
     "id": "tamarind_paste_b740bb",
@@ -35086,8 +35097,51 @@
     "similar": []
   },
   {
+    "id": "base_samosa_77fac4",
+    "title": "Pâte à samosa nature (préparation de base)",
+    "cuisine": "indian",
+    "dish_type": "pastry",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 50,
+    "confidence": 0.9,
+    "description": "Pâte simple de farine, huile, eau et sel, sablée puis reposée, pour façonner des samosas frits ou cuits au four.",
+    "composition": [
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_oil_plant",
+        "quantity": 50,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 80,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "samosa_dough_c03717",
-    "title": "Pâte à Samosa",
+    "title": "Pâte à samosa épicée au cumin",
     "cuisine": "indian",
     "dish_type": "pastry",
     "vegan": true,
@@ -35103,7 +35157,7 @@
     "servings": 4,
     "time_total": 45,
     "confidence": null,
-    "description": "Pâte à samosa classique, croustillante et feuilletée, élaborée à partir de farine de blé, d'huile de tournesol, de sel, d'eau tiède et de graines de cumin, servant de base pour samosas indiens farcis aux légumes ou légumineuses.",
+    "description": "Pâte brisée à l'huile parfumée au cumin et à la coriandre, pour des samosas croustillants au goût d'épices.",
     "composition": [
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
@@ -35138,62 +35192,7 @@
     ],
     "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "base_samosa_77fac4",
-        "title": "Pâte à Samosa (base)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "base_samosa_77fac4",
-    "title": "Pâte à Samosa (base)",
-    "cuisine": "indian",
-    "dish_type": "pastry",
-    "vegan": true,
-    "diet": [
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [
-      "gluten"
-    ],
-    "servings": 4,
-    "time_total": 50,
-    "confidence": 0.9,
-    "description": "Pâte à samosa indienne croustillante. Se frit ou se cuit au four pour un résultat croustillant. Accompagne les garnitures épicées.",
-    "composition": [
-      {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_oil_plant",
-        "quantity": 50,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 80,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 4,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "samosa_dough_c03717",
-        "title": "Pâte à Samosa",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "pasta_alfredo_k3d2p1",
@@ -38535,73 +38534,8 @@
     "similar": []
   },
   {
-    "id": "main_fried_rice_a6e811",
-    "title": "Riz Cantonais",
-    "cuisine": "chinese",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "vegetarian"
-    ],
-    "allergens": [
-      "eggs",
-      "gluten",
-      "soy"
-    ],
-    "servings": 4,
-    "time_total": 35,
-    "confidence": 0.91,
-    "description": "Riz cantonais sauté au wok avec légumes, œuf et sauce soja, utilisant du riz cuit la veille pour une texture non pâteuse et une saveur intense. Les légumes sont cuits à point pour conserver leur croquant.",
-    "composition": [
-      {
-        "ingredient": "white_rice_cooked_long_grain_seed",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "egg_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_onion_raw",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "sunflower_oil_plant",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "green_peas_raw",
-        "quantity": 80,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander",
-        "quantity": null,
-        "unit": "1 poignée"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "base_fried_rice_f230b0",
-        "title": "Riz Cantonais (base)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "base_fried_rice_f230b0",
-    "title": "Riz Cantonais (base)",
+    "title": "Riz cantonais aux petits pois et carottes",
     "cuisine": "chinese",
     "dish_type": "main",
     "vegan": false,
@@ -38617,7 +38551,7 @@
     "servings": 4,
     "time_total": 25,
     "confidence": 0.9,
-    "description": "Riz sauté cantonais aux légumes et œufs. Riz cuit de la veille idéal pour des grains bien séparés et légèrement dorés.",
+    "description": "Riz sauté aux petits pois, carottes en dés et œufs, parfumé à l'huile de sésame, à servir en accompagnement ou en plat.",
     "composition": [
       {
         "ingredient": "white_rice_raw_seed_unenriched",
@@ -38662,13 +38596,7 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_fried_rice_a6e811",
-        "title": "Riz Cantonais",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "rice_riz_citronne_indien_05c717",

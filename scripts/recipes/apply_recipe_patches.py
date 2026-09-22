@@ -22,6 +22,7 @@ Opérations :
   ("desc", texte)                                     description
   ("origin", {clé: valeur, …})                        champs de origin (cuisine, country, region, city)
   ("compo", [(id, qté, unité, rôle[, état]), …])     réécrit toute la composition (suggestions conservées)
+  ("title_en", texte)            titles.en et titles.original (recipe_patches/titles_en.py, variantes)
 
 Variantes (recipe_patches/v*.py, dictionnaire VARIANTS) : définition complète d'une recette
 qui la différencie de ses quasi-doublons. Elle remplace les opérations p*.py de la recette
@@ -73,6 +74,11 @@ def load_patches() -> dict:
                 raise PatchError(f"{rid} : variante définie dans deux fichiers")
             seen.add(rid)
             patches[rid] = ops  # remplace les correctifs p*.py de cette recette
+    from recipe_patches.titles_en import TITLES_EN
+    for rid, en in TITLES_EN.items():
+        if rid not in seen:
+            raise PatchError(f"{rid} : titre anglais sans variante")
+        patches[rid] = [*patches[rid], ("title_en", en)]
     return patches
 
 
@@ -247,6 +253,14 @@ def apply_op(r: dict, op: tuple) -> str | None:
         old = r["titles"].get("fr")
         r["titles"]["fr"] = fr
         return f"titre {old!r} → {fr!r}"
+    if kind == "title_en":
+        (en,) = args
+        t = r["titles"]
+        if t.get("en") == en and t.get("original") == en:
+            return None
+        old = t.get("en")
+        t["en"] = t["original"] = en
+        return f"titre anglais {old!r} → {en!r}"
     if kind == "yield":
         (y,) = args
         if r.get("yield_factor") == y:
