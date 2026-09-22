@@ -1,7 +1,7 @@
 # ALIM v6 — Plateforme Culinaire Végétarienne
 
 API de recommandation végétarienne et application web React.
-731 recettes (dont 97 préparations de base), 99 cuisines, nutrition calculée
+733 recettes (dont 98 préparations de base), 96 cuisines, nutrition calculée
 depuis CIQUAL / CNF / USDA. Auth JWT (B2C) + clé API (B2B).
 PostgreSQL en production, SQLite en développement.
 

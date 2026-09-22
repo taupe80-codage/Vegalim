@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 27 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+733 recettes (0 avec une alerte qualite, 27 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -19,7 +19,7 @@
 - **Ash reshteh de Téhéran au kashk et à la menthe frite** _(diabetes_friendly, high_protein, vegetarian, soup, persian)_ — `pasta_persian_ash_reshteh_8cb79c`
 - **Ash-e jo, soupe persane à l'orge et aux herbes (vegan)** _(diabetes_friendly, vegan, vegetarian, lactose_free, nut_free, soup, persian)_ — `soup_persian_ash_reshteh_vegan_968f7d`
 - **Aubergines Imam Bayildi** _(diabetes_friendly, gluten_free, vegan, vegetarian, side, turkish)_ — `main_aubergines_imam_bayildi_e1443e`
-- **Aubergines Sichuan** _(diabetes_friendly, vegan, vegetarian, main, chinese)_ — `main_aubergines_sichuan_ff9921`
+- **Aubergines Sichuan** _(diabetes_friendly, vegan, vegetarian, side, chinese)_ — `main_aubergines_sichuan_ff9921`
 - **Açorda à L'ail et Coriandre** _(diabetes_friendly, high_protein, main, portuguese)_ — `bread_acorda_a_lail_et_coriandr_048494`
 
 ## B
@@ -52,7 +52,7 @@
 - **Bisque de Champignons** _(gluten_free, nut_free, soup, french)_ — `soup_bisque_de_champignons_63fa25`
 - **Bissara** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, moroccan)_ — `main_bissara_23c21a`
 - **Blinis Sarrasin Vegan** _(kid_friendly, lactose_free, vegan, vegetarian, starter, french)_ — `entry_blinis_sarrasin_vegan_09648c`
-- **Bohémienne Provençale** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, main, french_provencal)_ — `main_bohemienne_provencale_781b61`
+- **Bohémienne Provençale** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, side, french_provencal)_ — `main_bohemienne_provencale_781b61`
 - **Bortsch ukrainien aux haricots rouges et à l'aneth** _(diabetes_friendly, vegetarian, gluten_free, nut_free, soup, ukrainian)_ — `soup_borscht_classic_k39x2c`
 - **Bouillabaisse Végétarienne** _(gluten_free, lactose_free, nut_free, vegan, vegetarian, soup, french_provencal)_ — `soup_bouillabaisse_vegetarienne_1d9c92`
 - **Bouillon Dashi Japonais** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, broth, japanese)_ — `base_dashi_broth_a3a517`
@@ -85,7 +85,7 @@
 - **Caldo Verde** _(gluten_free, vegan, vegetarian, main, portuguese)_ — `main_caldo_verde_72b654`
 - **Callaloo** _(diabetes_friendly, gluten_free, vegetarian, main, indian)_ — `main_callaloo_f7ae5c`
 - **Cannelé Bordelais** _(kid_friendly, nut_free, dessert, french)_ — `dessert_cannele_bordelais_c55eca`
-- **Caponata** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, italian)_ — `main_caponata_d15a4f`
+- **Caponata** _(diabetes_friendly, gluten_free, vegan, vegetarian, side, italian)_ — `main_caponata_d15a4f`
 - **Caramel au Beurre Salé** _(vegetarian, sauce, french)_ — `salted_butter_caramel_096c73`
 - **Carottes glacées au beurre et à l'érable du Québec** _(gluten_free, side, canadian)_ — `main_carottes_glacees_a_lerabl_87d5f0`
 - **Carottes Râpées** _(gluten_free, kid_friendly, lactose_free, nut_free, raw, vegan, vegetarian, starter, french)_ — `entry_carottes_rapees_e66bae`
@@ -219,7 +219,7 @@
 - **Gado-gado de Jakarta aux œufs et sauce cacahuète** _(high_protein, vegetarian, lactose_free, main, indonesian)_ — `protein_gadogado_indonesien_200c65`
 - **Galette complète forestière, œuf, gruyère et champignons** _(gluten_free, kid_friendly, nut_free, main, french_breton)_ — `main_galettes_sarrasin_ce9f40`
 - **Galette de sarrasin aux champignons à l'ail et au thym (vegan)** _(kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, french)_ — `brkf_galette_sarrasin_champign_f6a798`
-- **Galette de Teff** _(gluten_free, vegetarian, main, ethiopian)_ — `crepe_galette_de_teff_a1a8d3`
+- **Galette de Teff** _(gluten_free, vegetarian, base, ethiopian)_ — `crepe_galette_de_teff_a1a8d3`
 - **Galette des Rois Briochée** _(kid_friendly, nut_free, dessert, french_southern)_ — `dessert_galette_des_rois_briochee_6f0909`
 - **Galettes aux Oignons Verts** _(side, international)_ — `egg_galettes_aux_oignons_verts_ff5328`
 - **Galettes de blé noir bretonnes, pâte à l'eau** _(vegetarian, gluten_free, nut_free, bread, french_breton)_ — `bread_buckwheat_crepe_03db22`
@@ -447,7 +447,7 @@
 - **Pak Choï Sauté** _(vegan, vegetarian, side, chinese)_ — `wok_pak_choi_saute_62b974`
 - **Pakora** _(gluten_free, high_protein, vegan, vegetarian, snack, indian)_ — `dal_pakora_b418ab`
 - **Palak paneer du Pendjab au ghee** _(diabetes_friendly, gluten_free, high_protein, main, indian)_ — `curry_palak_paneer_b4ca11`
-- **Pan Con Tomate** _(vegan, vegetarian, main, international)_ — `bread_pan_con_tomate_06a94e`
+- **Pan Con Tomate** _(vegan, vegetarian, snack, spanish)_ — `bread_pan_con_tomate_06a94e`
 - **Pancakes Banane Vegan** _(kid_friendly, lactose_free, nut_free, vegan, vegetarian, breakfast, american)_ — `brkf_pancakes_banane_vegan_c9231e`
 - **Pancakes Ricotta Citron** _(high_protein, kid_friendly, nut_free, breakfast, international)_ — `brkf_pancakes_ricotta_citron_847c9a`
 - **Pancakes salés à l'oignon rouge** _(vegetarian, snack, international)_ — `crepe_pancakes_sales_ultra_stru_1e8bd8`
@@ -484,7 +484,7 @@
 - **Pierogi du réveillon, choucroute et champignons (vegan)** _(diabetes_friendly, kid_friendly, vegan, vegetarian, lactose_free, nut_free, main, polish)_ — `dumpling_pierogi_aux_champignons_v_beca85`
 - **Pierogi ruskie, pommes de terre et fromage blanc** _(vegetarian, nut_free, main, polish)_ — `dumpling_pierogi_pommes_de_terre_ca9985`
 - **Piperade Basque** _(gluten_free, kid_friendly, lactose_free, nut_free, main, french_basque)_ — `main_piperade_basque_3e1c65`
-- **Pisto Espagnol** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, spanish)_ — `main_pisto_espagnol_7a98be`
+- **Pisto Espagnol** _(diabetes_friendly, gluten_free, vegan, vegetarian, side, spanish)_ — `main_pisto_espagnol_7a98be`
 - **Pisto Manchego** _(diabetes_friendly, gluten_free, main, spanish)_ — `main_pisto_manchego_09ba97`
 - **Pistou** _(vegan, sauce, french)_ — `base_pistou_43e29a`
 - **Pita aux Épinards** _(diabetes_friendly, high_protein, main, levantine)_ — `egg_pita_aux_epinards_f1f6ff`
@@ -662,7 +662,9 @@
 - **Sauce Teriyaki** _(vegan, vegetarian, sauce, japanese)_ — `base_teriyaki_03b2ff`
 - **Sauce Tomate** _(vegan, vegetarian, gluten_free, sauce, italian)_ — `base_sauce_tomate_926bfa`
 - **Sauce Worcestershire Végane** _(vegan, vegetarian, sauce, british)_ — `base_worcestershire_vegan_5f26ec`
-- **Seitan** _(vegan, vegetarian, high_protein, main, japanese)_ — `base_seitan_249032`
+- **Seitan maison à la vapeur** _(vegan, vegetarian, high_protein, base, japanese)_ — `base_seitan_249032`
+- **Seitan mijoté aux champignons et à la moutarde** _(vegan, vegetarian, high_protein, main, french)_ — `stew_seitan_champignons_moutarde_7ac502`
+- **Seitan sauté aux poivrons et à la sauce soja** _(vegan, vegetarian, high_protein, main, chinese)_ — `wok_seitan_poivrons_3f81c4`
 - **Shakshuka d'aubergine au tofu soyeux et au sumac (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, breakfast, levantine)_ — `brkf_shakshuka_vegan_81fa9a`
 - **Shakshuka tunisienne aux poivrons et à la feta** _(diabetes_friendly, gluten_free, high_protein, main, tunisian)_ — `egg_shakshuka_eb137b`
 - **Shakshuka Verte** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, low_calorie, nut_free, breakfast, levantine)_ — `brkf_shakshuka_verte_ad7779`

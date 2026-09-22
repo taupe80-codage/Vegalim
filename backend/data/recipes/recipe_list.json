@@ -1104,7 +1104,7 @@
     "id": "main_aubergines_sichuan_ff9921",
     "title": "Aubergines Sichuan",
     "cuisine": "chinese",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -3346,7 +3346,7 @@
     "id": "main_bohemienne_provencale_781b61",
     "title": "Bohémienne Provençale",
     "cuisine": "french_provencal",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "gluten_free",
@@ -5694,7 +5694,7 @@
     "id": "main_caponata_d15a4f",
     "title": "Caponata",
     "cuisine": "italian",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -14546,7 +14546,7 @@
     "id": "crepe_galette_de_teff_a1a8d3",
     "title": "Galette de Teff",
     "cuisine": "ethiopian",
-    "dish_type": "main",
+    "dish_type": "base",
     "vegan": false,
     "diet": [
       "gluten_free",
@@ -14556,7 +14556,7 @@
     "servings": 4,
     "time_total": 2899,
     "confidence": 1.0,
-    "description": "Galette de Teff végétarien, croustillante à l'extérieur et tendre à cœur, parfaite pour accompagner vos plats éthiopiens préférés, avec une texture spongieuse et une odeur légèrement acidulée.",
+    "description": "Galette éthiopienne à la farine de teff : une pâte très liquide laissée fermenter deux jours, versée en spirale sur une plaque brûlante et cuite d'un seul côté, souple et alvéolée ; elle sert d'assiette et de couvert pour les plats en sauce.",
     "composition": [
       {
         "ingredient": "teff_flour",
@@ -28699,8 +28699,8 @@
   {
     "id": "bread_pan_con_tomate_06a94e",
     "title": "Pan Con Tomate",
-    "cuisine": "international",
-    "dish_type": "main",
+    "cuisine": "spanish",
+    "dish_type": "snack",
     "vegan": true,
     "diet": [
       "vegan",
@@ -31571,7 +31571,7 @@
     "id": "main_pisto_espagnol_7a98be",
     "title": "Pisto Espagnol",
     "cuisine": "spanish",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -43344,9 +43344,9 @@
   },
   {
     "id": "base_seitan_249032",
-    "title": "Seitan",
+    "title": "Seitan maison à la vapeur",
     "cuisine": "japanese",
-    "dish_type": "main",
+    "dish_type": "base",
     "vegan": true,
     "diet": [
       "vegan",
@@ -43360,7 +43360,7 @@
     "servings": 4,
     "time_total": 65,
     "confidence": 0.94,
-    "description": "Pâte de gluten de blé ferme et savoureuse, idéale pour les plats végétaliens créatifs, avec une texture élastique et une saveur umami prononcée, issue de la tradition culinaire asiatique",
+    "description": "Préparation de base vegan très riche en protéines : gluten de blé pétri avec sauce soja, ail et gingembre, roulé puis cuit à la vapeur, à trancher pour les sautés et les mijotés.",
     "composition": [
       {
         "ingredient": "vital_wheat_gluten_flour",
@@ -43386,6 +43386,216 @@
         "ingredient": "ginger_raw_root_fresh",
         "quantity": 5,
         "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "stew_seitan_champignons_moutarde_7ac502",
+    "title": "Seitan mijoté aux champignons et à la moutarde",
+    "cuisine": "french",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "high_protein"
+    ],
+    "allergens": [
+      "gluten",
+      "soy",
+      "mustard",
+      "sulphites"
+    ],
+    "servings": 4,
+    "time_total": 50,
+    "confidence": 0.9,
+    "description": "Cubes de seitan dorés puis mijotés avec champignons, carottes et vin blanc, dans une sauce crémeuse à la moutarde et à la crème d'avoine, parsemée de persil.",
+    "composition": [
+      {
+        "ingredient": "base_seitan_249032",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "button_mushroom_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mustard",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_oat_cream_954865",
+        "quantity": 200,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_wine_liquid",
+        "quantity": 100,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 300,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "thyme_dried_herb",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "bay_leaf",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "pasta_raw_dried",
+        "quantity": null,
+        "unit": "1 portion"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "wok_seitan_poivrons_3f81c4",
+    "title": "Seitan sauté aux poivrons et à la sauce soja",
+    "cuisine": "chinese",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "high_protein"
+    ],
+    "allergens": [
+      "gluten",
+      "soy",
+      "peanuts",
+      "sesame",
+      "sulphites"
+    ],
+    "servings": 4,
+    "time_total": 30,
+    "confidence": 0.9,
+    "description": "Lamelles de seitan saisies au wok avec poivrons, oignon, ail et gingembre, enrobées d'une sauce soja légèrement sucrée et liée à la fécule, servies sur du riz.",
+    "composition": [
+      {
+        "ingredient": "base_seitan_249032",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_bell_pepper_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_shoyu_reduced_sodium",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_vinegar_liquid_distilled",
+        "quantity": 10,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cornstarch_flour",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "peanut_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sesame_oil_plant",
+        "quantity": 10,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 450,
+        "unit": "ml"
       }
     ],
     "n_instructions": 6,
