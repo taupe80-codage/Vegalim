@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 200 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 198 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -34,6 +34,7 @@
 - **Bannock** _(bread, ethiopian)_ — `bread_bannock_e03ffe` 🔁 doublon possible : Bannock (Vegan)
 - **Bannock (Vegan)** _(kid_friendly, low_calorie, nut_free, snack, canadian)_ — `snack_bannock_vegan_46a1a8` 🔁 doublon possible : Bannock
 - **Bao** _(high_protein, vegan, vegetarian, main, chinese)_ — `bread_bao_ff9db9`
+- **Barszcz polonais clair aux champignons** _(diabetes_friendly, gluten_free, vegetarian, soup, polish)_ — `soup_borscht_fd9212`
 - **Batata Harra** _(gluten_free, vegan, vegetarian, main, american)_ — `main_batata_harra_c2de57`
 - **Baursak** _(snack, kazakh)_ — `egg_baursak_68b192`
 - **Beignet de Riz Népalais** _(gluten_free, vegetarian, main, nepali)_ — `rice_beignet_de_riz_nepalais_7ac83e`
@@ -50,8 +51,7 @@
 - **Bissara** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, moroccan)_ — `main_bissara_23c21a`
 - **Blinis Sarrasin Vegan** _(kid_friendly, lactose_free, vegan, vegetarian, starter, french)_ — `entry_blinis_sarrasin_vegan_09648c`
 - **Bohémienne Provençale** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, main, french_provencal)_ — `main_bohemienne_provencale_781b61`
-- **Borscht** _(diabetes_friendly, gluten_free, vegetarian, soup, polish)_ — `soup_borscht_fd9212` 🔁 doublon possible : Borscht végétarien
-- **Borscht végétarien** _(diabetes_friendly, gluten_free, vegetarian, soup, eastern_european)_ — `soup_borscht_classic_k39x2c` 🔁 doublon possible : Borscht
+- **Bortsch ukrainien aux haricots rouges et à l'aneth** _(diabetes_friendly, gluten_free, vegetarian, soup, ukrainian)_ — `soup_borscht_classic_k39x2c`
 - **Bouillabaisse Végétarienne** _(gluten_free, lactose_free, nut_free, vegan, vegetarian, soup, french_provencal)_ — `soup_bouillabaisse_vegetarienne_1d9c92`
 - **Bouillon Dashi Japonais** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, broth, japanese)_ — `base_dashi_broth_a3a517`
 - **Bouillon de Légumes** _(vegan, vegetarian, broth, universal)_ — `base_vegetable_broth_303b7d`
@@ -60,7 +60,7 @@
 - **Boulettes Suédoises** _(diabetes_friendly, high_protein, main, swedish)_ — `dal_boulettes_suedoises_2ac55d` 🔁 doublon possible : Boulettes Suédoises (Vegan)
 - **Boulettes Suédoises (Vegan)** _(diabetes_friendly, high_protein, lactose_free, nut_free, main, swedish)_ — `dal_boulettes_suedoises_vegan_fea9f6` 🔁 doublon possible : Boulettes Suédoises
 - **Bowl de céréales méditerranéen** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, mediterranean)_ — `dal_grain_bowl_mediterraneen_2d5531`
-- **Bowl de falafel (vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, vegan, vegetarian, main, levantine)_ — `falafel_bowl_de_falafel_vegan_f4fd40`
+- **Bowl de falafels au four, riz et tahini (vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, vegan, vegetarian, main, levantine)_ — `falafel_bowl_de_falafel_vegan_f4fd40`
 - **Bowl Quinoa Fruits du Matin** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, international)_ — `brkf_bowl_quinoa_fruits_du_mat_2a615c`
 - **Brandade de Betterave** _(gluten_free, lactose_free, nut_free, vegan, vegetarian, starter, french_creative)_ — `entry_brandade_de_betterave_113c4a`
 - **Briam** _(diabetes_friendly, gluten_free, vegetarian, main, greek)_ — `main_briam_f33bb8`
@@ -184,8 +184,7 @@
 
 ## F
 
-- **Falafel optimisé** _(gluten_free, high_protein, vegan, vegetarian, main, middle_eastern)_ — `falafel_optimise_2f1451`
-- **Falafel Traditionnels** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, snack, levantine)_ — `dal_falafel_traditionnels_214e07`
+- **Falafel libanais au sésame** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, snack, levantine)_ — `dal_falafel_traditionnels_214e07`
 - **Far Breton aux Pruneaux** _(kid_friendly, nut_free, dessert, french)_ — `dessert_far_breton_aux_pruneaux_069b81`
 - **Farofa Brésilienne** _(gluten_free, main, brazilian)_ — `main_farofa_bresilienne_29e38e` 🔁 doublon possible : Farofa Brésilienne (Vegan)
 - **Farofa Brésilienne (Vegan)** _(gluten_free, kid_friendly, nut_free, vegan, vegetarian, side, brazilian)_ — `side_farofa_bresilienne_vegan_45d889` 🔁 doublon possible : Farofa Brésilienne
@@ -385,8 +384,8 @@
 - **Mozzarella Végane** _(vegan, ingredient, vegan)_ — `base_mozzarella_vegane_fca8c8`
 - **Muesli Bircher** _(kid_friendly, lactose_free, vegetarian, breakfast, swiss)_ — `brkf_muesli_bircher_fae6ec`
 - **Muhammara** _(diabetes_friendly, kid_friendly, lactose_free, low_calorie, vegan, vegetarian, starter, syrian)_ — `entry_muhammara_cd05ca`
-- **Mujadara** _(gluten_free, vegan, vegetarian, main, lebanese)_ — `dal_mujadara_2f5904`
 - **Mujadara libanaise traditionnelle** _(gluten_free, high_protein, vegan, vegetarian, main, lebanese)_ — `rice_mujadara_classic_ee2456`
+- **Mujaddara burghul syrienne au boulgour** _(vegan, vegetarian, main, syrian)_ — `dal_mujadara_2f5904`
 
 ## N
 
@@ -644,8 +643,8 @@
 - **Salade Turque Çoban** _(diabetes_friendly, gluten_free, vegan, vegetarian, side, turkish)_ — `salad_turque_coban_cdd8c4`
 - **Salmorejo** _(high_protein, vegetarian, main, international)_ — `bread_salmorejo_a156e9` 🔁 doublon possible : Salmorejo (Vegan)
 - **Salmorejo (Vegan)** _(diabetes_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, spanish)_ — `entry_salmorejo_vegan_d0b7f7` 🔁 doublon possible : Salmorejo
-- **Sambar** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, international)_ — `dal_sambar_581de8`
-- **Sambar Indien** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, indian)_ — `dal_sambar_indien_fcf6d8`
+- **Sambar d'Udupi à la noix de coco et au potiron** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, indian)_ — `dal_sambar_indien_fcf6d8`
+- **Sambar tamoul aux aubergines et gombos** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, indian)_ — `dal_sambar_581de8`
 - **Samosa** _(vegetarian, vegan, snack, chinese)_ — `snack_vegetable_samosa_088bfa`
 - **Sancocho** _(gluten_free, vegan, vegetarian, main, dominican)_ — `main_sancocho_733f70`
 - **Sandwich végétarien** _(snack, international)_ — `snack_veg_k3d2p1`
@@ -717,6 +716,7 @@
 
 ## T
 
+- **Ta'amiya égyptienne aux fèves** _(gluten_free, high_protein, vegan, vegetarian, main, middle_eastern)_ — `falafel_optimise_2f1451`
 - **Tabbouleh de Sarrasin** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, side, international)_ — `side_tabbouleh_de_sarrasin_7e68ad`
 - **Taboulé libanais traditionnel** _(diabetes_friendly, vegan, vegetarian, side, lebanese)_ — `salad_tabbouleh_f7x2p9` 🔁 doublon possible : Taboulé Libanais à la Grenade
 - **Taboulé Libanais à la Grenade** _(diabetes_friendly, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, lebanese)_ — `entry_taboule_libanais_a_la_gre_cae147` 🔁 doublon possible : Taboulé libanais traditionnel

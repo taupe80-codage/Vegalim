@@ -264,15 +264,19 @@ def apply_op(r: dict, op: tuple) -> str | None:
             iid, q, unit, role, *st = it
             new.append({"ingredient": iid, "quantity": q, "unit": unit,
                         "meta": {"role": role, "form": "", "state": st[0] if st else "raw", "preparation": ""}})
-        cur = [(c["ingredient"], c.get("quantity"), c.get("unit"), (c.get("meta") or {}).get("role"),
-                (c.get("meta") or {}).get("state")) for c in _lines(r)]
-        if cur == [(c["ingredient"], c["quantity"], c["unit"], c["meta"]["role"], c["meta"]["state"]) for c in new]:
+        # les suggestions de service listées remplacent les anciennes ; sinon celles en place sont gardées
+        is_sugg = lambda c: (c.get("meta") or {}).get("role") == "serving_suggestion"
+        key = lambda c: (c["ingredient"], c.get("quantity"), c.get("unit"), (c.get("meta") or {}).get("role"),
+                         (c.get("meta") or {}).get("state"))
+        old = r.get("composition") or []
+        sugg = [c for c in new if is_sugg(c)] or [c for c in old if is_sugg(c)]
+        new = [c for c in new if not is_sugg(c)] + sugg
+        if [key(c) for c in old] == [key(c) for c in new]:
             return None
         for c in new:
-            if not _has_nutrition(c["ingredient"]):
+            if not is_sugg(c) and not _has_nutrition(c["ingredient"]):
                 raise PatchError(f"pas de fiche nutritionnelle : {c['ingredient']}")
-        sugg = [c for c in r.get("composition") or [] if (c.get("meta") or {}).get("role") == "serving_suggestion"]
-        r["composition"] = new + sugg
+        r["composition"] = new
         return f"composition réécrite ({len(new)} ingrédients)"
     raise PatchError(f"opération inconnue : {kind}")
 

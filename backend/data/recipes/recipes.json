@@ -33215,7 +33215,7 @@
       "id": "dal_falafel_traditionnels_214e07",
       "titles": {
         "original": "Falafel",
-        "fr": "Falafel Traditionnels",
+        "fr": "Falafel libanais au sésame",
         "en": "Falafel"
       },
       "origin": {
@@ -33226,10 +33226,10 @@
       },
       "servings": 5,
       "timing": {
-        "prep_active_min": 17,
+        "prep_active_min": 20,
         "prep_passive_min": 750,
-        "cook_min": 12,
-        "total_min": 779
+        "cook_min": 15,
+        "total_min": 785
       },
       "composition": [
         {
@@ -33239,7 +33239,18 @@
           "meta": {
             "role": "plant_protein",
             "form": "",
-            "state": "dried",
+            "state": "soaked",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
             "preparation": ""
           }
         },
@@ -33249,7 +33260,7 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -33260,7 +33271,7 @@
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -33271,7 +33282,7 @@
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -33282,24 +33293,24 @@
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "chickpea_flour",
+          "ingredient": "sesame_seed_hulled_dried",
           "quantity": 20,
           "unit": "g",
           "meta": {
-            "role": "carbohydrate",
-            "form": "sifted",
+            "role": "garnish",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "olive_oil_plant",
+          "ingredient": "sunflower_oil_plant",
           "quantity": 45,
           "unit": "ml",
           "meta": {
@@ -33329,7 +33340,9 @@
           "vegetarian",
           "gluten_free"
         ],
-        "allergens": [],
+        "allergens": [
+          "sesame"
+        ],
         "technique": [
           "frying"
         ],
@@ -33395,13 +33408,15 @@
         "leger",
         "lent",
         "levantine",
+        "libanais",
         "light",
         "long",
         "low calorie",
         "mijote",
         "minceur",
         "moyen",
-        "olive",
+        "oignon",
+        "onion",
         "parsley",
         "persil",
         "pois",
@@ -33410,8 +33425,10 @@
         "sans produit animal",
         "sans viande",
         "sel",
+        "sesame",
+        "sunflower",
         "table",
-        "traditionnels",
+        "tournesol",
         "vegan",
         "vegetalien",
         "vegetarien"
@@ -33420,15 +33437,14 @@
       "dish_type": "snack",
       "servings_default": 5,
       "_quality_score": 0.97,
-      "description": "Falafel traditionnels, texture dense et rustique, parfumés aux épices du Moyen-Orient, avec une croûte croustillante dorée et une saveur épicée intense.",
+      "description": "Falafel de Beyrouth aux pois chiches trempés, persil, coriandre et cumin, roulés dans le sésame puis frits jusqu'à former une croûte dorée.",
       "instructions": [
-        "Étape 1 : Faire tremper 400 g de pois chiches secs dans de l'eau froide pendant au moins 12 heures, puis les égoutter et les sécher soigneusement pour éviter tout excès d'eau. Vous devez sentir les pois chiches ramollir légèrement sous vos doigts.",
-        "Étape 2 : Mixer les pois chiches avec 9 g d'ail haché, 30 g de persil frais haché, 6 g de coriandre moulue, 3 g de cumin et 5 g de sel, jusqu'à obtenir une texture granuleuse comme du sable humide. L'odeur des épices et des herbes doit commencer à se dégager.",
-        "Étape 3 : Incorporer 20 g de farine de pois chiches et réfrigérer pendant au moins 30 minutes pour raffermir le mélange. La texture doit devenir plus ferme et moins collante.",
-        "Étape 4 : Former des boulettes ou galettes de 35 g en compressant fermement le mélange. Vous devez sentir la texture dense et lisse sous vos doigts.",
-        "Étape 5 : Faire dorer les falafel à la poêle dans 45 ml d'huile d'olive chaude pendant 3 à 4 minutes par côté, jusqu'à obtenir une croûte brun doré croustillante. La couleur doit être uniforme et la texture croustillante.",
-        "Étape 6 : Égoutter les falafel sur du papier absorbant pour enlever l'excès d'huile. Vous devez entendre le son des falafel qui s'égouttent et sentir l'odeur de la friture.",
-        "Étape 7 : Servir les falafel sans attendre, avec du pain pita, de la sauce tahini et une salade fraîche, pour préserver la croûte croustillante et la texture fraîche. La présentation doit être attrayante et appétissante."
+        "Étape 1 : Faire tremper 400 g de pois chiches secs 12 heures dans l'eau froide, puis les égoutter et les sécher.",
+        "Étape 2 : Mixer par impulsions les pois chiches avec 100 g d'oignon, 9 g d'ail, 30 g de persil, 6 g de coriandre moulue, 3 g de cumin et 5 g de sel, jusqu'à une texture de sable humide.",
+        "Étape 3 : Réfrigérer l'appareil 30 minutes pour le raffermir.",
+        "Étape 4 : Former des palets de 35 g et les rouler d'un côté dans 20 g de graines de sésame.",
+        "Étape 5 : Frire les falafels par petites quantités dans l'huile à 175°C, 3 à 4 minutes, jusqu'à ce qu'ils soient bien dorés (environ 45 ml d'huile absorbée). Égoutter sur du papier absorbant.",
+        "Étape 6 : Servir chaud, avec du pain pita et une sauce tahini."
       ],
       "diet_flags": {
         "vegan": true,
@@ -39030,36 +39046,36 @@
       "id": "dal_mujadara_2f5904",
       "titles": {
         "original": "Mujadara",
-        "fr": "Mujadara",
+        "fr": "Mujaddara burghul syrienne au boulgour",
         "en": "Mujadara"
       },
       "origin": {
-        "cuisine": "lebanese",
-        "country": "lebanon",
-        "region": "beyrouth",
-        "city": ""
+        "cuisine": "syrian",
+        "country": "syria",
+        "region": "alep",
+        "city": "alep"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
+        "prep_active_min": 10,
         "prep_passive_min": 10,
-        "cook_min": 70,
-        "total_min": 91
+        "cook_min": 55,
+        "total_min": 75
       },
       "composition": [
         {
           "ingredient": "green_lentil_dried",
-          "quantity": 250,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
             "form": "",
-            "state": "cooked",
+            "state": "dried",
             "preparation": ""
           }
         },
         {
-          "ingredient": "white_rice_raw_seed_unenriched",
+          "ingredient": "bulgur_raw_dried",
           "quantity": 200,
           "unit": "g",
           "meta": {
@@ -39071,29 +39087,40 @@
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 300,
+          "quantity": 350,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cumin_spice_seed",
-          "quantity": 3,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "allspice_powder",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 50,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -39103,8 +39130,19 @@
           }
         },
         {
+          "ingredient": "water",
+          "quantity": 900,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -39115,21 +39153,10 @@
         },
         {
           "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 1000,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -39138,11 +39165,12 @@
       ],
       "tags": {
         "diet": [
-          "gluten_free",
           "vegan",
           "vegetarian"
         ],
-        "allergens": [],
+        "allergens": [
+          "gluten"
+        ],
         "technique": [
           "water_cooking",
           "frying"
@@ -39189,76 +39217,72 @@
       },
       "search_tokens": [
         "(eau",
+        "allspice",
         "black",
-        "blanc",
-        "coeliaque",
+        "boulgour",
+        "bulgur",
+        "burghul",
         "cumin",
         "eau",
         "enfants",
         "facile enfants",
         "famille",
         "frying",
-        "gluten free",
         "green",
         "intermediaire",
+        "jamaique",
         "kids",
-        "lebanese",
         "leger",
         "lent",
         "lentil",
         "lentille",
-        "liban",
-        "libanais",
         "light",
         "long",
         "low calorie",
-        "mediterranee",
         "mijote",
         "minceur",
         "moyen",
-        "moyen-orient",
         "mujadara",
+        "mujaddara",
         "noir",
         "oignon",
         "olive",
         "onion",
         "pepper",
+        "piments",
         "poivre",
         "potable)",
-        "rice",
-        "riz",
         "salt",
-        "sans gluten",
         "sans produit animal",
         "sans viande",
         "sel",
+        "syrian",
+        "syrienne",
         "table",
         "vegan",
         "vegetalien",
         "vegetarien",
         "verte",
         "water",
-        "water_cooking",
-        "white"
+        "water_cooking"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.95,
-      "description": "Ragoût libanais de lentilles vertes crémeuses et parfumées, mijotées avec amour pour une sauce épaisse et concentrée, avec un contraste de textures fondantes et croustillantes, et un parfum envoûtant de cumin et d'oignon caramélisé.",
+      "description": "Version syrienne de la mujadara : lentilles brunes et gros boulgour cuits ensemble, parfumés au cumin et au piment de la Jamaïque, couverts d'oignons frits bien bruns.",
       "instructions": [
-        "Étape 1 : Émincer 300g d'oignon en demi-rondelles. Faire confire dans 45ml d'huile d'olive à feu moyen pendant 30 minutes en remuant régulièrement jusqu'à obtenir une couleur brun caramel profond et un parfum envoûtant.",
-        "Étape 2 : Réserver la moitié des oignons confits pour la garniture. Avec le reste, faire revenir 3g de cumin pendant 1 minute en remuant constamment pour libérer les huiles essentielles.",
-        "Étape 3 : Ajouter 250g de lentilles vertes rincées et 800ml d'eau froide. Porter à ébullition puis mijoter 20 minutes en laissant les saveurs se mélanger et les lentilles se ramollir.",
-        "Étape 4 : Incorporer 200g de riz long grain rincé et 200ml d'eau supplémentaire. Ajouter 5g de sel pour rehausser les saveurs. Couvrir et cuire à feu très doux pendant 18 minutes jusqu'à absorption complète de l'eau et obtention d'une consistance crémeuse.",
-        "Étape 5 : Laisser reposer 10 minutes pour permettre aux saveurs de se stabiliser et aux textures de se définir. Égrainer délicatement le riz et les lentilles pour obtenir une consistance aérée.",
-        "Étape 6 : Servir surmonté des oignons caramélisés croustillants réservés, qui ajoutent une texture croquante et un parfum sucré au plat.",
-        "Étape 7 : Pour une présentation élégante, vous pouvez ajouter des herbes fraîches comme du persil ou de la coriandre sur le dessus du plat."
+        "Étape 1 : Cuire 200 g de lentilles brunes rincées dans 600 ml d'eau, 15 minutes à frémissement : elles doivent rester fermes.",
+        "Étape 2 : Émincer 350 g d'oignons en demi-rondelles et les frire dans 50 ml d'huile d'olive, 25 minutes à feu moyen, jusqu'à ce qu'ils soient brun foncé.",
+        "Étape 3 : Retirer les deux tiers des oignons et les réserver sur du papier absorbant. Dans le reste, faire revenir 4 g de cumin et 1 g de piment de la Jamaïque 1 minute.",
+        "Étape 4 : Ajouter 200 g de gros boulgour, remuer 1 minute, puis ajouter les lentilles avec leur eau, 300 ml d'eau, 4 g de sel et 1 g de poivre.",
+        "Étape 5 : Couvrir et cuire 15 minutes à feu très doux, puis laisser reposer 10 minutes hors du feu.",
+        "Étape 6 : Égrener à la fourchette et servir couvert des oignons frits réservés."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
@@ -41971,63 +41995,85 @@
       "id": "dal_sambar_581de8",
       "titles": {
         "original": "Sambar",
-        "fr": "Sambar",
+        "fr": "Sambar tamoul aux aubergines et gombos",
         "en": "Sambar"
       },
       "origin": {
-        "cuisine": "international",
+        "cuisine": "indian",
         "country": "india",
         "region": "tamil_nadu",
         "city": "chennai"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 23,
-        "prep_passive_min": 20,
-        "cook_min": 30,
-        "total_min": 73
+        "prep_active_min": 20,
+        "prep_passive_min": 0,
+        "cook_min": 35,
+        "total_min": 55
       },
       "composition": [
         {
           "ingredient": "red_lentil_dried",
-          "quantity": 250,
+          "quantity": 200,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
+            "role": "plant_protein",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "eggplant_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "yellow_onion_raw",
+          "ingredient": "okra_raw",
           "quantity": 150,
           "unit": "g",
           "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "drumstick_horseradish_tree_raw_pod",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "shallot_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "fruit",
-            "form": "roughly_chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "carrot_raw",
           "quantity": 200,
           "unit": "g",
           "meta": {
-            "role": "vegetable",
-            "form": "rounds",
+            "role": "fruit",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -42056,11 +42102,11 @@
         },
         {
           "ingredient": "turmeric_powder",
-          "quantity": 3,
+          "quantity": 2,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -42070,30 +42116,19 @@
           "quantity": 3,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "whole",
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "curry_leaf",
-          "quantity": 5.0,
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "whole",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "coriander_spice_seed",
-          "quantity": 3,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -42110,8 +42145,19 @@
           }
         },
         {
+          "ingredient": "water",
+          "quantity": 1000,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -42126,17 +42172,6 @@
           "unit": "1 portion",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "riz basmati cuit",
-            "note": "Accompagne parfaitement le sambar",
-            "optional": true
-          }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 700,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -42199,56 +42234,65 @@
         }
       },
       "search_tokens": [
+        "(ben",
         "(epices",
+        "(horseradish",
         "(murraya",
+        "1 heure",
+        "aubergine",
+        "aubergines",
+        "aux",
         "avance",
-        "carotte",
-        "carrot",
+        "cassier",
         "chef",
         "coco",
         "coconut",
         "coeliaque",
         "complexe",
         "corail",
-        "coriander",
-        "coriandre",
         "curcuma",
         "curry",
+        "drumstick",
+        "echalote",
+        "eggplant",
+        "epice",
         "feuille",
         "gluten free",
+        "gombo",
+        "gombos",
+        "inde",
+        "indian",
+        "indien",
         "indiennes)",
-        "international",
         "jaune",
         "koenigii)",
         "leaf",
         "leger",
-        "lent",
         "lentil",
         "lentille",
         "light",
-        "long",
         "low calorie",
-        "mijote",
         "minceur",
         "moutarde",
         "mustard",
         "noix",
-        "oignon",
-        "onion",
+        "okra",
+        "oleifere)",
         "poudre",
         "powder",
         "red",
-        "salt",
         "sambar",
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "sel",
-        "table",
+        "shallot",
+        "spicy",
         "tamarind",
+        "tamoul",
         "technique",
         "tomate",
         "tomato",
+        "tree)",
         "turmeric",
         "vegan",
         "vegetalien",
@@ -42261,15 +42305,14 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.93,
-      "description": "Plat végan traditionnel indien à base de lentilles jaunes crémeuses, oignon jaune caramélisé, tomates concassées et épices parfumées, mijoté dans un bouillon aromatique avec une texture veloutée et des arômes de curry et de tamarin.",
+      "description": "Sambar des cantines de Chennai : lentilles fondues, aubergines, gombos et pilons de moringa dans un bouillon au tamarin et à la poudre de sambar, tempérés de moutarde et de feuilles de curry.",
       "instructions": [
-        "Étape 1 : Faire cuire 250 g de lentilles corail avec 3 g de curcuma en poudre dans 600 ml d'eau à feu moyen pendant 15 minutes, jusqu'à ce que les lentilles soient tendres et la texture crémeuse. La couleur doit être jaune pâle.",
-        "Étape 2 : Dans une poêle, chauffer 30 ml d'huile de coco et faire revenir 150 g d'oignon jaune émincé jusqu'à parfumé, en remuant régulièrement pour éviter la coloration excessive. Les oignons doivent être dorés et caramélisés, avec une odeur sucrée.",
-        "Étape 3 : Ajouter 300 g de tomates concassées, 200 g de carotte crue coupée en dés, et 30 ml de pâte de tamarin diluée dans 100 ml d'eau chaude. Laisser mijoter 5 minutes, en sentant les arômes se mélanger et la sauce commencer à épaissir.",
-        "Étape 4 : Incorporer les lentilles cuites, 20 g de poudre de sambar, et 3 g de graines de moutarde. Laisser cuire 10 minutes à feu doux, en observant la sauce épaissir et les saveurs se développer.",
-        "Étape 5 : Ajouter 5 g de feuilles de curry fraîches et 3 g de coriandre moulue. Laisser mijoter encore 2 minutes.",
-        "Étape 6 : Assaisonner avec du sel de mer à votre goût, en vérifiant la balance des saveurs. Le sambar doit être crémeux et parfumé, avec une texture veloutée et des saveurs complexes.",
-        "Étape 7 : Servir chaud, accompagné de riz basmati ou d'idlis."
+        "Étape 1 : Cuire 200 g de lentilles corail rincées avec 2 g de curcuma dans 600 ml d'eau, 15 minutes, puis les écraser au fouet.",
+        "Étape 2 : Dans une grande casserole, porter à frémissement 400 ml d'eau avec 30 ml de pâte de tamarin, 4 g de sel, 200 g d'aubergine en cubes, 100 g de pilons de moringa en tronçons de 5 cm et 100 g d'échalotes entières. Cuire 10 minutes.",
+        "Étape 3 : Ajouter 150 g de gombos en tronçons, 200 g de tomates en quartiers et 20 g de poudre de sambar, puis cuire 8 minutes.",
+        "Étape 4 : Verser les lentilles et laisser mijoter 5 minutes : le sambar doit être fluide.",
+        "Étape 5 : Tempérage : chauffer 30 ml d'huile de coco, y faire éclater 3 g de graines de moutarde, ajouter 5 g de feuilles de curry, puis verser le tout sur le sambar.",
+        "Étape 6 : Servir chaud, avec du riz ou des idlis."
       ],
       "diet_flags": {
         "vegan": true,
@@ -42285,26 +42328,26 @@
       "id": "dal_sambar_indien_fcf6d8",
       "titles": {
         "original": "Sambar",
-        "fr": "Sambar Indien",
+        "fr": "Sambar d'Udupi à la noix de coco et au potiron",
         "en": "Sambar Indien"
       },
       "origin": {
         "cuisine": "indian",
         "country": "india",
-        "region": "tamil_nadu",
-        "city": "chennai"
+        "region": "karnataka",
+        "city": "udupi"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 30,
-        "total_min": 47
+        "cook_min": 35,
+        "total_min": 50
       },
       "composition": [
         {
           "ingredient": "red_lentil_dried",
-          "quantity": 250,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "plant_protein",
@@ -42314,44 +42357,55 @@
           }
         },
         {
-          "ingredient": "onion_raw",
-          "quantity": 150,
+          "ingredient": "pumpkin_raw",
+          "quantity": 300,
           "unit": "g",
           "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "carrot_raw",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "curry",
-          "quantity": 10,
+          "ingredient": "coconut_flesh_dried",
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sambar_powder",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -42359,7 +42413,7 @@
         },
         {
           "ingredient": "tamarind",
-          "quantity": 30,
+          "quantity": 20,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -42369,33 +42423,22 @@
           }
         },
         {
-          "ingredient": "turmeric_powder",
-          "quantity": 3,
+          "ingredient": "brown_sugar",
+          "quantity": 10,
           "unit": "g",
           "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "coconut_oil_plant",
-          "quantity": 30,
-          "unit": "ml",
-          "meta": {
-            "role": "fat",
+            "role": "sweetener",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "ingredient": "turmeric_powder",
+          "quantity": 2,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
+            "role": "spice",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -42424,11 +42467,33 @@
           }
         },
         {
+          "ingredient": "coconut_oil_plant",
+          "quantity": 25,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "water",
-          "quantity": 700,
+          "quantity": 1000,
           "unit": "ml",
           "meta": {
             "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -42493,10 +42558,11 @@
         }
       },
       "search_tokens": [
-        "(eau",
+        "(epices",
         "(murraya",
         "1 heure",
         "braising",
+        "brown",
         "carotte",
         "carrot",
         "coco",
@@ -42505,13 +42571,14 @@
         "corail",
         "curcuma",
         "curry",
-        "eau",
+        "d'udupi",
         "epice",
         "feuille",
         "gluten free",
         "inde",
         "indian",
         "indien",
+        "indiennes)",
         "intermediaire",
         "jaune",
         "koenigii)",
@@ -42526,18 +42593,19 @@
         "moyen",
         "mustard",
         "noix",
-        "oignon",
-        "onion",
-        "potable)",
+        "potiron",
+        "poudre",
+        "powder",
+        "pumpkin",
         "red",
-        "salt",
+        "roux",
         "sambar",
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "sel",
         "spicy",
-        "table",
+        "sucre",
+        "sugar",
         "tamarind",
         "tomate",
         "tomato",
@@ -42545,7 +42613,6 @@
         "vegan",
         "vegetalien",
         "vegetarien",
-        "water",
         "water_cooking",
         "wok",
         "yellow"
@@ -42554,17 +42621,14 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.97,
-      "description": "Plat indien végétal mijoté, où les lentilles corail fondent en bouche, accompagnées d'oignon caramélisé, de carotte tendre et de tomate parfumée, avec une sauce crémeuse au tamarin et au curcuma, typique de la cuisine indienne.",
+      "description": "Sambar du Karnataka, plus doux que la version tamoule : lentilles corail, potiron et carotte dans une pâte de noix de coco grillée aux épices, adoucie d'une touche de sucre roux.",
       "instructions": [
-        "Étape 1 : Rincer 250 g de lentilles corail et les cuire avec 600 ml d'eau et 3 g de curcuma pendant 18 minutes, jusqu'à désagrégation complète. La texture doit être crémeuse et la couleur dorée.",
-        "Étape 2 : Dans une poêle, chauffer 30 ml d'huile de coco et faire revenir 150 g d'oignon coupé en dés et 200 g de carotte coupée en dés pendant 6 minutes, jusqu'à ce qu'ils soient tendres et parfumés. L'odeur des oignons doit être sucrée et les carottes doivent être légèrement caramélisées.",
-        "Étape 3 : Ajouter 10 g de cari en poudre, 3 g de graines de moutarde, et 5 g de feuilles de curry fraîches. Faire grésiller 1 minute, en remuant constamment, jusqu'à ce que les épices soient parfumées et les graines de moutarde craquent.",
-        "Étape 4 : Incorporer 300 g de tomates concassées et 30 ml de tamarin dilué dans 100 ml d'eau chaude. Cuire 5 minutes, en remuant occasionnellement, jusqu'à ce que les tomates soient tendres et la sauce soit crémeuse.",
-        "Étape 5 : Mélanger avec les lentilles cuites et ajouter les carottes. Laisser mijoter 15 minutes à feu doux, en remuant occasionnellement, jusqu'à ce que les légumes soient tendres et la sauce soit parfumée.",
-        "Étape 6 : Rectifier le sel et l'acidité. Le sambar doit être légèrement acide et parfumé. Ajouter du sel ou du tamarin si nécessaire.",
-        "Étape 7 : Servir chaud, accompagné de riz ou d'idlis, et garni de feuilles de curry fraîches.",
-        "Étape 8 : Pour une variante plus piquante, ajouter quelques piments rouges concassés ou une pincée de poudre de piment dans le sambar pendant la cuisson.",
-        "Étape 9 : Pour conserver le sambar, le laisser refroidir complètement, puis le mettre dans un contenant hermétique et le réfrigérer pendant jusqu'à 3 jours. Réchauffer avant de servir."
+        "Étape 1 : Cuire 200 g de lentilles corail rincées avec 2 g de curcuma dans 600 ml d'eau, 15 minutes, puis les écraser.",
+        "Étape 2 : Faire griller à sec 40 g de noix de coco râpée avec 15 g de poudre de sambar, 2 minutes, puis les mixer avec 100 ml d'eau en pâte lisse.",
+        "Étape 3 : Cuire 300 g de potiron et 150 g de carotte en cubes dans 300 ml d'eau avec 4 g de sel, 10 minutes.",
+        "Étape 4 : Ajouter 200 g de tomates concassées, 20 ml de tamarin, 10 g de sucre roux, la pâte de coco et les lentilles, puis mijoter 10 minutes.",
+        "Étape 5 : Tempérage : chauffer 25 ml d'huile de coco, y faire éclater 3 g de graines de moutarde avec 5 g de feuilles de curry, puis verser sur le sambar.",
+        "Étape 6 : Servir chaud, avec du riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -71115,7 +71179,7 @@
       "id": "falafel_bowl_de_falafel_vegan_f4fd40",
       "titles": {
         "original": "Falafel Bowl (Vegan)",
-        "fr": "Bowl de falafel (vegan)",
+        "fr": "Bowl de falafels au four, riz et tahini (vegan)",
         "en": "Falafel Bowl (Vegan)"
       },
       "origin": {
@@ -71126,10 +71190,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
+        "prep_active_min": 20,
         "prep_passive_min": 0,
         "cook_min": 25,
-        "total_min": 42
+        "total_min": 45
       },
       "composition": [
         {
@@ -71140,6 +71204,17 @@
             "role": "plant_protein",
             "form": "",
             "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chickpea_flour",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
             "preparation": ""
           }
         },
@@ -71160,40 +71235,51 @@
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cucumber_raw",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "lettuce",
-          "quantity": 300,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "leaves",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "silken_tofu_pre_packaged",
-          "quantity": 200,
+          "ingredient": "pickles_cucumber_canned_in_vinegar",
+          "quantity": 60,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "cubed",
+            "role": "condiment",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "sesame_tahini_raw_butter_seed_plant",
-          "quantity": 46.4,
+          "quantity": 45,
           "unit": "ml",
           "meta": {
             "role": "condiment",
-            "form": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -71204,28 +71290,17 @@
           "unit": "ml",
           "meta": {
             "role": "fruit",
-            "form": "juice",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "olive_oil_plant",
-          "quantity": 46.2,
-          "unit": "ml",
-          "meta": {
-            "role": "fat",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 5,
-          "unit": "g",
+          "ingredient": "olive_oil_plant",
+          "quantity": 30,
+          "unit": "ml",
           "meta": {
-            "role": "seasoning",
+            "role": "fat",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -71244,7 +71319,7 @@
         },
         {
           "ingredient": "parsley_fresh_herb",
-          "quantity": 15,
+          "quantity": 20,
           "unit": "g",
           "meta": {
             "role": "herb",
@@ -71255,7 +71330,7 @@
         },
         {
           "ingredient": "cumin_spice_seed",
-          "quantity": 2.5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "spice",
@@ -71266,10 +71341,21 @@
         },
         {
           "ingredient": "water",
-          "quantity": 300,
+          "quantity": 330,
           "unit": "ml",
           "meta": {
             "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -71347,8 +71433,12 @@
         "chickpea",
         "citron",
         "coeliaque",
-        "cumin",
+        "concombre",
+        "cornichon",
+        "cucumber",
         "falafel",
+        "falafels",
+        "four,",
         "frying",
         "garlic",
         "gluten free",
@@ -71364,20 +71454,16 @@
         "olive",
         "parsley",
         "persil",
+        "pickles,",
         "pois",
         "rice",
         "riz",
-        "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
-        "sel",
         "sesame",
-        "silken",
-        "soyeux",
-        "table",
-        "tofu",
+        "tahini",
         "tomate",
         "tomato",
         "vegan",
@@ -71390,15 +71476,14 @@
       "servings_default": 4,
       "_quality_score": 0.99,
       "_chef_note": "La combinaison de textures et de saveurs donne un plat équilibré et savoureux.",
-      "description": "Plat levantine croustillant et coloré, avec des falafels dorés, du riz al dente et des légumes frais croquants, le tout lié par une sauce tahini onctueuse et parfumée.",
+      "description": "Bowl complet et plus léger : falafels de pois chiches cuits au four, riz, concombre, tomate, laitue et cornichons, nappés d'une sauce tahini citronnée.",
       "instructions": [
-        "Étape 1 : Cuire 200 g de riz à la méthode absorption (300 ml d'eau, 12 minutes à feu très doux à couvert). Égrainer et réserver. Le riz doit être moelleux et séparé.",
-        "Étape 2 : Préparer les falafels : mixer 400 g de pois chiches (cuits ou en conserve rincés) avec 10 g d'ail, du persil, 2,5 g de cumin, 5 g de sel et un filet d'huile d'olive jusqu'à texture granuleuse qui se tient. Former des boulettes de 3 cm. Les falafels doivent être fermes et avoir une texture uniforme.",
-        "Étape 3 : Cuire les falafels dans 46 ml d'huile d'olive à feu moyen-vif pendant 3 à 4 minutes par face, jusqu'à croûte brun dorée et croustillante. Les falafels doivent être dorés et émettre un son croustillant lorsqu'on les casse.",
-        "Étape 4 : Préparer la sauce tahini : mélanger 46 ml de tahini avec 30 ml de jus de citron, une gousse d'ail râpée et 2 à 3 cuillerées d'eau froide jusqu'à sauce crémeuse, lisse et qui coule en ruban. La sauce doit être lisse et avoir une texture onctueuse.",
-        "Étape 5 : Dresser les bols : déposer le riz chaud en base, répartir les feuilles de laitue lavées et essorées, les dés de tomate et les 200 g de tofu soyeux en cuillerées. Disposer les falafels chauds par-dessus. Les bols doivent présenter une variété de couleurs et de textures.",
-        "Étape 6 : Verser généreusement la sauce tahini. Chaque bol doit présenter des textures contrastées : falafels croustillants, légumes frais croquants, riz moelleux et sauce onctueuse. La sauce doit être répartie de manière uniforme.",
-        "Étape 7 : Servir sans attendre, car la chaleur et le croustillant des falafels sont essentiels pour apprécier pleinement les saveurs et les textures de ce plat. Le plat doit être servi chaud, avec du riz, du pain ou une garniture de noix de coco / herbes fraîches."
+        "Étape 1 : Préchauffer le four à 200°C. Cuire 200 g de riz dans 300 ml d'eau salée, 12 minutes à couvert et à feu très doux.",
+        "Étape 2 : Mixer 400 g de pois chiches cuits avec 30 g de farine de pois chiches, 10 g d'ail, 20 g de persil, 3 g de cumin et 3 g de sel, jusqu'à une pâte granuleuse qui se tient.",
+        "Étape 3 : Former 16 boulettes aplaties, les badigeonner de 30 ml d'huile d'olive et les cuire 20 minutes au four en les retournant à mi-cuisson.",
+        "Étape 4 : Sauce : mélanger 45 ml de tahini, 30 ml de jus de citron, 2 g d'ail râpé et 30 ml d'eau froide jusqu'à ce qu'elle soit lisse.",
+        "Étape 5 : Dresser dans quatre bols le riz, 150 g de laitue, 300 g de tomates et 250 g de concombre en dés, 60 g de cornichons émincés, puis les falafels.",
+        "Étape 6 : Napper de sauce tahini et servir."
       ],
       "diet_flags": {
         "vegan": true,
@@ -71414,7 +71499,7 @@
       "id": "falafel_optimise_2f1451",
       "titles": {
         "original": "Falafel",
-        "fr": "Falafel optimisé",
+        "fr": "Ta'amiya égyptienne aux fèves",
         "en": "Optimized Falafel"
       },
       "origin": {
@@ -71425,14 +71510,14 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 40,
-        "prep_passive_min": 720,
-        "cook_min": 30,
+        "prep_active_min": 25,
+        "prep_passive_min": 750,
+        "cook_min": 15,
         "total_min": 790
       },
       "composition": [
         {
-          "ingredient": "chickpea_raw_dried",
+          "ingredient": "broadbeans_fava_beans_raw_dried",
           "quantity": 300,
           "unit": "g",
           "meta": {
@@ -71448,29 +71533,29 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 25,
+          "quantity": 15,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "parsley_fresh_herb",
-          "quantity": 20,
+          "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -71481,18 +71566,51 @@
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "chiffonade",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "dill_weed_fresh_herb_leaf",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cumin_spice_seed",
-          "quantity": 6.0,
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sesame_seed_hulled_dried",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -71527,7 +71645,9 @@
           "vegan",
           "vegetarian"
         ],
-        "allergens": [],
+        "allergens": [
+          "sesame"
+        ],
         "technique": [
           "braising"
         ],
@@ -71577,17 +71697,27 @@
         }
       },
       "search_tokens": [
+        "(fava",
+        "(feves",
         "ail",
+        "aneth",
+        "aux",
+        "beans)",
         "braising",
-        "chiches",
-        "chickpea",
+        "broadbeans",
         "coeliaque",
         "coriander",
         "coriandre",
         "cumin",
+        "des",
+        "dill",
+        "egyptienne",
         "falafel",
+        "fava)",
+        "feves",
         "garlic",
         "gluten free",
+        "gourganes",
         "intermediaire",
         "jaune",
         "leger",
@@ -71595,6 +71725,7 @@
         "light",
         "long",
         "low calorie",
+        "marais,",
         "mediterranee",
         "middle_eastern",
         "mijote",
@@ -71603,22 +71734,23 @@
         "moyen-orient",
         "oignon",
         "onion",
-        "optimise",
         "optimized",
         "parsley",
         "persil",
-        "pois",
         "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sel",
+        "sesame",
         "sunflower",
+        "ta'amiya",
         "table",
         "tournesol",
         "vegan",
         "vegetalien",
         "vegetarien",
+        "weed",
         "yellow"
       ],
       "difficulty_level": "medium",
@@ -71626,15 +71758,14 @@
       "servings_default": 4,
       "_quality_score": 1.0,
       "_chef_note": "Pour une version plus croustillante, vous pouvez ajouter un peu de farine de pois chiche à l'appareil.",
-      "description": "Falafel végan croustillant à l'extérieur, tendre et parfumé à l'intérieur, préparé avec des pois chiches et des herbes fraîches, caractéristique de la cuisine méditerranéenne.",
+      "description": "Le falafel du Caire, à base de fèves sèches décortiquées plutôt que de pois chiches : un intérieur vert vif aux herbes fraîches et une croûte fine et croustillante.",
       "instructions": [
-        "Étape 1 : Faire tremper 300 g de pois chiches secs pendant 12 heures. Égoutter et sécher soigneusement pour éviter toute humidité résiduelle qui pourrait faire s'effondrer les falafels à la friture. La texture doit être sèche et non collante.",
-        "Étape 2 : Mixer par impulsions 120 g d'oignon jaune, 25 g d'ail, 20 g de persil frais, 40 g de coriandre fraîche, 6 g de cumin en graines, sel et piment avec les pois chiches. Arrêter lorsque la texture est granuleuse comme du sable humide, sans réduire en pâte. Il faut sentir les grains de pois chiches sous les doigts.",
-        "Étape 3 : Réfrigérer pendant 30 minutes pour raffermir l'appareil. La mixture doit être ferme mais encore malléable.",
-        "Étape 4 : Former des boulettes de 30 g en compressant fermement. Une boulette bien formée doit tenir sans se fissurer. La surface doit être lisse et uniforme.",
-        "Étape 5 : Chauffer un bain d'huile de tournesol à 175°C. Frire par lots pendant 3 à 4 minutes par côté jusqu'à obtenir une croûte brun doré croustillante. Le son de la friture doit être constant et les falafels doivent flotter à la surface.",
-        "Étape 6 : Égoutter sur papier absorbant. Servir sans attendre : l'extérieur doit être croustillant, l'intérieur vert, humide et parfumé. La chaleur est essentielle pour maintenir la texture croustillante.",
-        "Étape 7 : Les saveurs doivent être équilibrées, avec une dominante de pois chiches et d'herbes."
+        "Étape 1 : Faire tremper 300 g de fèves sèches décortiquées 12 heures, puis les égoutter et les sécher soigneusement.",
+        "Étape 2 : Mixer les fèves avec 120 g d'oignon, 15 g d'ail, 30 g de persil, 40 g de coriandre fraîche, 10 g d'aneth, 5 g de cumin, 3 g de coriandre moulue et 5 g de sel, jusqu'à une pâte verte fine mais non liquide.",
+        "Étape 3 : Réfrigérer 30 minutes.",
+        "Étape 4 : Former des galettes aplaties de 30 g et les parsemer de 15 g de graines de sésame.",
+        "Étape 5 : Frire par lots dans l'huile de tournesol à 175°C, 3 minutes, jusqu'à ce qu'elles soient dorées (environ 60 ml d'huile absorbée). Égoutter.",
+        "Étape 6 : Servir chaud dans du pain baladi ou pita, avec de la salade et de la tahina."
       ],
       "diet_flags": {
         "vegan": true,
@@ -120880,7 +121011,7 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.95,
-      "description": "Plat levantin créatif aux lentilles vertes et riz, dominé par la caramélisation des oignons jaunes, avec une texture onctueuse et parfumée de cumin",
+      "description": "La mujadara de Beyrouth : lentilles vertes et riz long cuits ensemble dans l'huile des oignons, relevés de cumin torréfié et couronnés d'oignons confits brun acajou.",
       "instructions": [
         "Étape 1 : Faire confire 320g d'oignons jaunes émincés dans 65ml d'huile d'olive à feu moyen pendant 5 minutes, puis à feu doux pendant 25 minutes en remuant régulièrement jusqu'à obtenir une couleur brun acajou profond.",
         "Étape 2 : Réserver un tiers des oignons les plus bruns et croustillants pour la garniture finale.",
@@ -152364,21 +152495,21 @@
       "id": "soup_borscht_classic_k39x2c",
       "titles": {
         "original": "Borscht",
-        "fr": "Borscht végétarien",
+        "fr": "Bortsch ukrainien aux haricots rouges et à l'aneth",
         "en": "Vegetarian Borscht"
       },
       "origin": {
-        "cuisine": "eastern_european",
+        "cuisine": "ukrainian",
         "country": "ukraine",
-        "region": "kiev",
-        "city": ""
+        "region": "kyiv",
+        "city": "kyiv"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 40,
+        "prep_active_min": 25,
         "prep_passive_min": 10,
         "cook_min": 40,
-        "total_min": 90
+        "total_min": 75
       },
       "composition": [
         {
@@ -152387,20 +152518,20 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
-            "preparation": "seared"
+            "preparation": ""
           }
         },
         {
           "ingredient": "green_cabbage_raw",
-          "quantity": 200,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
-            "preparation": "simmered"
+            "preparation": ""
           }
         },
         {
@@ -152409,9 +152540,9 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
-            "preparation": "seared"
+            "preparation": ""
           }
         },
         {
@@ -152420,18 +152551,18 @@
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
-            "preparation": "melted"
+            "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 25,
+          "quantity": 15,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -152442,9 +152573,20 @@
           "unit": "g",
           "meta": {
             "role": "structure",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
-            "preparation": "simmered"
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "kidney_bean_boiled",
+          "quantity": 240,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
           }
         },
         {
@@ -152453,13 +152595,13 @@
           "unit": "g",
           "meta": {
             "role": "umami",
-            "form": "concentrated",
+            "form": "",
             "state": "raw",
-            "preparation": "toasted"
+            "preparation": ""
           }
         },
         {
-          "ingredient": "olive_oil_extra_virgin_plant",
+          "ingredient": "sunflower_oil_plant",
           "quantity": 30,
           "unit": "ml",
           "meta": {
@@ -152482,10 +152624,21 @@
         },
         {
           "ingredient": "white_sugar",
-          "quantity": 8,
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "balance",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "bay_leaf",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -152499,25 +152652,15 @@
             "role": "base",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 1200 ml d'eau"
+            "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 1200.0,
+          "quantity": 1400,
           "unit": "ml",
           "meta": {
             "role": "base",
-            "note": "pour reconstituer le bouillon"
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 3,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -152525,11 +152668,11 @@
         },
         {
           "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "seasoning",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -152540,18 +152683,7 @@
           "unit": "g",
           "meta": {
             "role": "garnish",
-            "form": "chiffonade",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 240,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "diced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -152562,9 +152694,9 @@
           "unit": "1 cuillère à soupe",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "crème fraîche",
-            "note": "Pour une touche de richesse et de velouté",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
@@ -152629,29 +152761,32 @@
         }
       },
       "search_tokens": [
-        "(eau",
         "ail",
+        "aux",
+        "bay_leaf",
+        "bean",
         "beetroot",
         "betterave",
         "blanc",
         "borscht",
-        "bouillon",
+        "bortsch",
         "braising",
         "cabbage",
         "carotte",
         "carrot",
         "chou",
         "coeliaque",
-        "eastern_european",
-        "eau",
         "garlic",
         "gluten free",
         "green",
         "grilling",
+        "haricot",
+        "haricots",
         "intermediaire",
         "jaune",
+        "kidney",
+        "l'aneth",
         "leger",
-        "legumes",
         "lent",
         "light",
         "long",
@@ -152660,26 +152795,27 @@
         "minceur",
         "moyen",
         "oignon",
-        "olive",
         "onion",
         "pomme",
-        "potable)",
         "potato",
+        "rouge",
+        "rouges",
         "sans gluten",
         "sans viande",
-        "stock",
         "sucre",
         "sugar",
+        "sunflower",
         "terre",
         "tomate",
         "tomato",
-        "vegetable",
+        "tournesol",
+        "ukrainian",
+        "ukrainien",
         "vegetarian",
         "vegetarien",
         "vert",
         "vinaigre",
         "vinegar",
-        "water",
         "white",
         "yellow"
       ],
@@ -152688,14 +152824,14 @@
       "servings_default": 4,
       "_quality_score": 0.85,
       "_chef_note": "Assurez-vous de utiliser des betteraves de qualité pour obtenir la meilleure couleur et saveur.",
-      "description": "Soupe éblouissante aux betteraves crues râpées, avec une texture onctueuse et une couleur rouge intense, inspirée de la tradition culinaire slave, préparée avec des betteraves, du chou vert, des carottes et des pommes de terre.",
+      "description": "Bortsch de Kiev épais et complet : betterave, chou, pommes de terre et haricots rouges, relevé d'ail et de vinaigre, servi avec de l'aneth et une cuillerée de crème aigre.",
       "instructions": [
-        "Étape 1: Faire revenir l'oignon jaune émincé dans 30 ml d'huile d'olive extra vierge à feu moyen pendant 5 minutes, jusqu'à ce qu'il devienne translucide et parfumé. Ajouter les betteraves crues râpées et les carottes en brunoise. Cuire 8 minutes en remuant, jusqu'à ce que les légumes commencent à fondre et libèrent leurs arômes.",
-        "Étape 2: Incorporer les tomates concassées, l'ail haché, le sucre (8 g) et le vinaigre blanc (20 ml). Cuire 5 minutes pour concentrer les saveurs et les couleurs, en remuant régulièrement pour éviter l'attache.",
-        "Étape 3: Ajouter les pommes de terre en cubes, le chou vert émincé finement et 1,2 L de bouillon de légumes chaud. Porter à ébullition puis mijoter à feu doux pendant 20 minutes, ou jusqu'à ce que les pommes de terre soient fondantes et les saveurs se soient harmonisées.",
-        "Étape 4: Quand les pommes de terre sont cuites, saler avec 3 g de sel et poivrer. Ajouter l'aneth frais ciselé hors du feu pour préserver son parfum délicat et éviter que les saveurs ne se perdent.",
-        "Étape 5: Servir bien chaud dans des bols profonds, en vous assurant que chaque bol reçoive une portion généreuse de légumes et de liquide. Le borscht doit être d'un rouge-grenat brillant, légèrement acidulé et réconfortant.",
-        "Étape 6: Enfin, accompagnez le borscht d'une touche de crème fraîche pour une touche de richesse et de velouté, qui équilibrera les saveurs et les textures de cette délicieuse soupe."
+        "Étape 1 : Porter à ébullition 1,4 L d'eau avec 10 g de bouillon déshydraté et 1 g de laurier. Ajouter 250 g de pommes de terre en cubes et cuire 10 minutes.",
+        "Étape 2 : Pendant ce temps, faire revenir 120 g d'oignon émincé et 120 g de carotte râpée dans 30 ml d'huile de tournesol, 5 minutes.",
+        "Étape 3 : Ajouter 400 g de betterave crue en julienne, 30 g de concentré de tomate, 20 ml de vinaigre et 5 g de sucre, puis étuver 10 minutes à couvert : le vinaigre fixe la couleur.",
+        "Étape 4 : Ajouter 250 g de chou émincé dans le bouillon et cuire 5 minutes, puis y verser la betterave et 240 g de haricots rouges. Mijoter 10 minutes.",
+        "Étape 5 : Hors du feu, ajouter 15 g d'ail pilé et 1 g de poivre, couvrir et laisser reposer 10 minutes.",
+        "Étape 6 : Servir parsemé de 10 g d'aneth ciselé, avec une cuillerée de crème aigre."
       ],
       "diet_flags": {
         "vegan": false,
@@ -152711,7 +152847,7 @@
       "id": "soup_borscht_fd9212",
       "titles": {
         "original": "Borscht",
-        "fr": "Borscht",
+        "fr": "Barszcz polonais clair aux champignons",
         "en": "Borscht"
       },
       "origin": {
@@ -152722,94 +152858,128 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 15,
-        "prep_passive_min": 0,
-        "cook_min": 40,
-        "total_min": 55
+        "prep_active_min": 20,
+        "prep_passive_min": 10,
+        "cook_min": 55,
+        "total_min": 85
       },
       "composition": [
         {
           "ingredient": "beetroot_raw_root",
-          "quantity": 600,
+          "quantity": 800,
           "unit": "g",
           "meta": {
             "role": "base",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "carrot_raw",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "rounds",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "potato_raw_flesh",
-          "quantity": 300,
+          "ingredient": "celeriac_raw",
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "cubed",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "green_cabbage_raw",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "porcini_mushroom_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "umami",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 12.6,
+          "quantity": 10,
           "unit": "g",
           "meta": {
             "role": "cooking_liquid",
             "form": "",
             "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 1000 ml d'eau"
+            "preparation": ""
           }
         },
         {
           "ingredient": "water",
-          "quantity": 1000.0,
+          "quantity": 1500,
           "unit": "ml",
           "meta": {
             "role": "cooking_liquid",
-            "note": "pour reconstituer le bouillon"
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         },
         {
-          "ingredient": "sunflower_oil_plant",
-          "quantity": 30,
-          "unit": "ml",
+          "ingredient": "marjoram_spice_dried",
+          "quantity": 2,
+          "unit": "g",
           "meta": {
-            "role": "fat",
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "allspice_powder",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "bay_leaf",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -152821,17 +152991,17 @@
           "unit": "ml",
           "meta": {
             "role": "acidifier",
-            "form": "juice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 3,
+          "ingredient": "white_sugar",
+          "quantity": 5,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
+            "role": "balance",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -152839,11 +153009,11 @@
         },
         {
           "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -152929,69 +153099,72 @@
       },
       "search_tokens": [
         "(eau",
-        "1 heure",
+        "ail",
+        "allspice",
+        "aux",
+        "barszcz",
+        "bay_leaf",
         "beetroot",
         "betterave",
-        "black",
         "borscht",
         "bouillon",
         "braising",
-        "cabbage",
         "carotte",
         "carrot",
-        "chou",
+        "celeri",
+        "celeriac",
+        "cepe",
+        "champignon",
+        "champignons",
         "citron",
+        "clair",
         "coeliaque",
         "eau",
+        "garlic",
         "gluten free",
-        "green",
         "intermediaire",
+        "jamaique",
         "leger",
         "legumes",
         "lemon",
+        "lent",
         "light",
+        "long",
         "low calorie",
+        "marjolaine",
+        "marjoram",
+        "mijote",
         "minceur",
         "moyen",
-        "noir",
+        "mushroom",
         "oignon",
         "onion",
-        "parsley",
-        "pepper",
-        "persil",
-        "poivre",
+        "piments",
         "polish",
         "pologne",
         "polonais",
-        "pomme",
+        "porcini",
         "potable)",
-        "potato",
+        "rave",
         "reduction",
-        "salt",
         "sans gluten",
         "sans viande",
-        "sel",
         "stock",
-        "sunflower",
-        "table",
-        "terre",
-        "tournesol",
         "vegetable",
         "vegetarien",
-        "vert",
         "water"
       ],
       "difficulty_level": "medium",
       "dish_type": "soup",
       "servings_default": 4,
       "_quality_score": 0.85,
-      "description": "Soupe traditionnelle polonaise et ukrainienne à base de betterave, avec une texture crémeuse et des saveurs révélées par le mijotage, servie chaude avec une touche de fraîcheur apportée par les betteraves râpées crus.",
+      "description": "Le barszcz czerwony du réveillon polonais : un bouillon limpide de betterave et de légumes racines, parfumé aux cèpes, à la marjolaine et à l'ail, acidulé au citron et servi en tasse.",
       "instructions": [
-        "Étape 1: Faire revenir 150 g d'oignon émincé dans 30 ml d'huile de tournesol à feu moyen pendant 5 minutes, en remuant régulièrement, jusqu'à ce qu'il soit translucide et parfumé. Ajouter 600 g de betteraves râpées et 200 g de carottes râpées. Cuire pendant 8 minutes, en remuant occasionnellement, jusqu'à ce que les légumes soient légèrement fondants et commencent à révéler leur couleur.",
-        "Étape 2: Incorporer 300 g de chou vert finement émincé et 300 g de pommes de terre en dés. Verser 1000 ml de bouillon de légumes chaud. Porter à ébullition en augmentant le feu, en veillant à ce que les légumes soient bien recouverts de liquide.",
-        "Étape 3: Réduire le feu à doux et mijoter pendant 25 minutes, en couvrant partiellement la casserole, jusqu'à ce que tous les légumes soient tendres et que les saveurs se soient bien mélangées. La soupe doit être parfumée et avoir une consistance crémeuse.",
-        "Étape 4: Ajouter 40 ml de jus de citron et 3 g de sel. Rectifier l'assaisonnement pour équilibrer le goût, en ajoutant plus de citron ou de sel si nécessaire.",
-        "Étape 5: Servir le borscht chaud, garni de feuilles de persil fraîches ou d'une cuillère de crème fraîche, accompagné de pain noir ou de cracker de seigle pour un repas complet et savoureux."
+        "Étape 1 : Mettre dans une grande casserole 150 g de carotte, 100 g de céleri-rave et 100 g d'oignon coupés en gros morceaux, 100 g de cèpes émincés, 1 g de laurier, 1 g de piment de la Jamaïque, 10 g de bouillon déshydraté et 1,5 L d'eau. Mijoter 30 minutes.",
+        "Étape 2 : Ajouter 800 g de betteraves crues épluchées et coupées en fines lamelles, puis cuire 20 minutes à petit frémissement, sans bouillir, pour garder la couleur.",
+        "Étape 3 : Filtrer le bouillon à travers une passoire fine en pressant légèrement les légumes.",
+        "Étape 4 : Ajouter 10 g d'ail pilé, 2 g de marjolaine, 40 ml de jus de citron, 5 g de sucre et 1 g de poivre, puis laisser infuser 10 minutes hors du feu.",
+        "Étape 5 : Réchauffer sans faire bouillir et servir le barszcz clair, en tasse, avec les cèpes."
       ],
       "diet_flags": {
         "vegan": false,
