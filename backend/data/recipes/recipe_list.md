@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 145 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 131 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -12,12 +12,10 @@
 - **Aloo Gobi** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, indian)_ — `main_aloo_gobi_b21c85`
 - **Aloo Palak** _(gluten_free, vegetarian, main, indian)_ — `main_aloo_palak_7e9377`
 - **Arepas (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, main, colombian)_ — `main_arepas_vegan_01b62b`
-- **Arepas Fromage** _(gluten_free, snack, colombian)_ — `main_arepas_fromage_e3a54c` 🔁 doublon possible : Arepas Fromage (Vegan)
-- **Arepas Fromage (Vegan)** _(gluten_free, kid_friendly, lactose_free, snack, colombian)_ — `main_arepas_fromage_vegan_3a4125` 🔁 doublon possible : Arepas Fromage
+- **Arepas colombiennes au fromage frais et au beurre** _(vegetarian, gluten_free, nut_free, snack, colombian)_ — `main_arepas_fromage_e3a54c`
+- **Arepas reina pepiada, avocat et pois chiches (vegan)** _(kid_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, latin_american)_ — `main_arepas_fromage_vegan_3a4125`
 - **Armenian Lentil Soup** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, armenian)_ — `dal_armenian_lentil_soup_0f1067`
 - **Aubergines Imam Bayildi** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, international)_ — `main_aubergines_imam_bayildi_e1443e`
-- **Aubergines Parmigiana Simple** _(gluten_free, high_protein, main, italian)_ — `main_aubergines_parmigiana_sim_e5028f` 🔁 doublon possible : Aubergines Parmigiana Simple (Vegan)
-- **Aubergines Parmigiana Simple (Vegan)** _(diabetes_friendly, gluten_free, high_protein, lactose_free, main, italian)_ — `main_aubergines_parmigiana_sim_ad314c` 🔁 doublon possible : Aubergines Parmigiana Simple
 - **Aubergines Sichuan** _(diabetes_friendly, vegan, vegetarian, main, chinese)_ — `main_aubergines_sichuan_ff9921`
 - **Açorda à L'ail et Coriandre** _(diabetes_friendly, high_protein, main, portuguese)_ — `bread_acorda_a_lail_et_coriandr_048494`
 
@@ -27,8 +25,7 @@
 - **Baek sundubu, ragoût de tofu soyeux doux** _(diabetes_friendly, high_protein, vegetarian, lactose_free, nut_free, main, korean)_ — `egg_sundubu_jjigae_bc21e0`
 - **Bagel Fromage Frais Concombre** _(kid_friendly, nut_free, breakfast, american)_ — `brkf_bagel_fromage_frais_conco_e69b68`
 - **Baingan Bharta** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, indian)_ — `main_baingan_bharta_b5f900`
-- **Baked Ziti** _(high_protein, main, italian)_ — `main_baked_ziti_b9e13e` 🔁 doublon possible : Baked Ziti (Vegan)
-- **Baked Ziti (Vegan)** _(diabetes_friendly, high_protein, lactose_free, main, italian)_ — `main_baked_ziti_vegan_ad57f8` 🔁 doublon possible : Baked Ziti
+- **Baked ziti new-yorkais à la ricotta** _(high_protein, vegetarian, nut_free, main, american)_ — `main_baked_ziti_b9e13e`
 - **Baklava aux Pistaches** _(kid_friendly, dessert, levantine)_ — `dessert_baklava_aux_pistaches_06e5ed`
 - **Banane Caramélisée Philippine** _(gluten_free, vegan, vegetarian, side, philippine)_ — `main_banane_caramelisee_philip_df163c`
 - **Banh Mi Tofu** _(high_protein, vegan, vegetarian, main, vietnamese)_ — `protein_banh_mi_tofu_9b1ea2`
@@ -252,8 +249,6 @@
 - **Gratin de Chou-Fleur** _(kid_friendly, nut_free, main, french)_ — `main_gratin_de_chou_fleur_bad955`
 - **Gratin de Courge Butternut** _(gluten_free, kid_friendly, nut_free, side, french)_ — `side_de_courge_butternut_d512a4`
 - **Gratin de Courgettes** _(kid_friendly, nut_free, main, french)_ — `main_gratin_de_courgettes_35b5b8`
-- **Gratin de macaronis au fromage** _(main, italian)_ — `pasta_mac_and_cheese_b3073b` 🔁 doublon possible : Gratin de macaronis au fromage (vegan)
-- **Gratin de macaronis au fromage (vegan)** _(high_protein, kid_friendly, main, american)_ — `pasta_mac_and_cheese_vegan_4acb30` 🔁 doublon possible : Gratin de macaronis au fromage
 - **Gratin de Navets** _(gluten_free, nut_free, main, french)_ — `main_gratin_de_navets_e164d6`
 - **Gratin de Poireaux** _(kid_friendly, nut_free, main, french)_ — `main_gratin_de_poireaux_808071`
 - **Gratin de Potiron** _(gluten_free, kid_friendly, nut_free, main, french)_ — `main_gratin_de_potiron_839446`
@@ -296,6 +291,7 @@
 
 ## I
 
+- **Involtini d'aubergines à la sicilienne (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, main, italian)_ — `main_aubergines_parmigiana_sim_ad314c`
 - **Italian Pasta E Ceci** _(high_protein, main, italian)_ — `dal_italian_pasta_e_ceci_3fbb85`
 
 ## J
@@ -343,9 +339,9 @@
 - **Lait de Riz Maison** _(vegan, vegetarian, lactose_free, gluten_free, beverage, asian)_ — `base_rice_milk_128001`
 - **Lait de Soja Maison** _(vegan, vegetarian, lactose_free, gluten_free, beverage, chinese)_ — `base_soy_milk_827b25`
 - **Laksa aux Légumes** _(diabetes_friendly, high_protein, vegetarian, soup, malaysian)_ — `soup_vegetable_laksa_ab0112`
-- **Lasagnes** _(diabetes_friendly, high_protein, main, italian)_ — `pasta_lasagnes_8adf61` 🔁 doublon possible : Lasagnes (Vegan)
-- **Lasagnes (Vegan)** _(diabetes_friendly, high_protein, lactose_free, vegan, vegetarian, main, italian)_ — `pasta_lasagnes_vegan_412e90` 🔁 doublon possible : Lasagnes
-- **Lasagnes de légumes ultra structurées** _(vegetarian, main, italian)_ — `pasta_lasagnes_de_legumes_ultra_9b6a4e`
+- **Lasagnes aux légumes grillés, béchamel au lait de coco (vegan)** _(vegetarian, main, italian)_ — `pasta_lasagnes_de_legumes_ultra_9b6a4e`
+- **Lasagnes aux épinards et à la ricotta** _(diabetes_friendly, high_protein, vegetarian, nut_free, main, italian)_ — `pasta_lasagnes_8adf61`
+- **Lasagnes façon bolognaise aux lentilles (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, nut_free, main, italian)_ — `pasta_lasagnes_vegan_412e90`
 - **Lebanese Lentil Soup** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, lebanese)_ — `dal_lebanese_lentil_soup_eae561`
 - **Lentilles aux Épinards** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_lentilles_aux_epinards_be2017`
 - **Lentilles Beluga au Xérès** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, french)_ — `entry_lentilles_beluga_au_xeres_de4a76`
@@ -356,6 +352,8 @@
 
 ## M
 
+- **Mac and cheese américain gratiné au cheddar** _(vegetarian, nut_free, main, american)_ — `pasta_mac_and_cheese_b3073b`
+- **Mac and cheese à la courge butternut (vegan)** _(high_protein, kid_friendly, vegan, vegetarian, lactose_free, nut_free, main, american)_ — `pasta_mac_and_cheese_vegan_4acb30`
 - **Madeleines** _(kid_friendly, nut_free, dessert, french)_ — `dessert_madeleines_4572e8`
 - **Makdous** _(gluten_free, vegan, vegetarian, main, american)_ — `egg_makdous_cf5efa`
 - **Manakish Zaatar** _(vegan, vegetarian, snack, international)_ — `main_manakish_zaatar_580150`
@@ -454,8 +452,10 @@
 - **Panzanella Italienne** _(diabetes_friendly, vegan, vegetarian, main, italian)_ — `bread_panzanella_italienne_307da1`
 - **Papaya Salad** _(vegan, vegetarian, main, laotian)_ — `main_papaya_salad_918f58`
 - **Parippu sri lankais au lait de coco** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, sri_lankan)_ — `dal_lentilles_corail_au_lait_de_co_19d485`
-- **Parmigiana Di Melanzane** _(diabetes_friendly, gluten_free, high_protein, main, italian)_ — `main_parmigiana_di_melanzane_6bd49f` 🔁 doublon possible : Parmigiana Di Melanzane (Vegan)
-- **Parmigiana Di Melanzane (Vegan)** _(diabetes_friendly, gluten_free, high_protein, lactose_free, main, italian)_ — `main_parmigiana_di_melanzane_v_8f8b8b` 🔁 doublon possible : Parmigiana Di Melanzane
+- **Parmigiana di melanzane napolitaine** _(diabetes_friendly, high_protein, vegetarian, gluten_free, nut_free, main, italian)_ — `main_parmigiana_di_melanzane_6bd49f`
+- **Parmigiana légère d'aubergines et courgettes grillées** _(high_protein, vegetarian, gluten_free, nut_free, main, italian)_ — `main_aubergines_parmigiana_sim_e5028f`
+- **Parmigiana à la mozzarella végétale et chapelure aux herbes (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, main, italian)_ — `main_parmigiana_di_melanzane_v_8f8b8b`
+- **Pasta al forno aux légumes rôtis et mozzarella végétale (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, main, italian)_ — `main_baked_ziti_vegan_ad57f8`
 - **Pasta Al Pomodoro** _(main, italian)_ — `pasta_pasta_al_pomodoro_3ffaef`
 - **Pasta Alla Norma** _(high_protein, main, italian)_ — `pasta_pasta_alla_norma_5cc26e` 🔁 doublon possible : Pasta Alla Norma à la Ricotta Salée (Vegan)
 - **Pasta Alla Norma à la Ricotta Salée (Vegan)** _(diabetes_friendly, lactose_free, vegetarian, main, italian)_ — `pasta_pasta_alla_norma_a_la_ric_d282a6` 🔁 doublon possible : Pasta Alla Norma
@@ -484,8 +484,8 @@
 - **Pisto Manchego** _(diabetes_friendly, gluten_free, main, spanish)_ — `main_pisto_manchego_09ba97`
 - **Pistou** _(vegan, sauce, french)_ — `base_pistou_43e29a`
 - **Pita aux Épinards** _(diabetes_friendly, high_protein, main, levantine)_ — `egg_pita_aux_epinards_f1f6ff`
-- **Pizza Margherita** _(main, italian)_ — `tarte_margherita_v7k2d1` 🔁 doublon possible : Pizza Margherita (Vegan)
-- **Pizza Margherita (Vegan)** _(diabetes_friendly, high_protein, kid_friendly, lactose_free, nut_free, vegan, vegetarian, main, italian)_ — `tarte_pizza_margherita_vegan_02bb9a` 🔁 doublon possible : Pizza Margherita
+- **Pizza margherita napolitaine au fior di latte** _(main, italian)_ — `tarte_margherita_v7k2d1`
+- **Pizza marinara à l'ail et à l'origan** _(diabetes_friendly, high_protein, kid_friendly, vegan, vegetarian, lactose_free, nut_free, main, italian)_ — `tarte_pizza_margherita_vegan_02bb9a`
 - **Pkhali** _(gluten_free, vegan, vegetarian, starter, georgian)_ — `main_pkhali_46d354`
 - **Plantain Frit au Citron** _(gluten_free, vegan, vegetarian, side, west_african)_ — `main_plantain_frit_au_citron_60d4e3`
 - **Plantain Frit Nature** _(gluten_free, vegan, vegetarian, side, west_african)_ — `main_plantain_frit_nature_323054`

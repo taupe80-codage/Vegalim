@@ -498,140 +498,132 @@
   },
   {
     "id": "main_arepas_fromage_e3a54c",
-    "title": "Arepas Fromage",
+    "title": "Arepas colombiennes au fromage frais et au beurre",
     "cuisine": "colombian",
     "dish_type": "snack",
     "vegan": false,
     "diet": [
-      "gluten_free"
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
     ],
     "allergens": [
       "lactose",
       "milk"
     ],
     "servings": 4,
-    "time_total": 33,
+    "time_total": 35,
     "confidence": 1.0,
-    "description": "Arepas croustillants au fromage, préparés avec de la farine de maïs précuite et des épices, offrant une texture dorée et croustillante à l'extérieur, douce et moelleuse à l'intérieur, typique de la cuisine colombienne.",
+    "description": "Arepas de queso de Colombie : pâte de farine de maïs précuite pétrie avec du fromage frais, galettes dorées à la poêle puis tartinées de beurre.",
     "composition": [
       {
         "ingredient": "masa_harina",
-        "quantity": 200,
+        "quantity": 250,
         "unit": "g"
       },
       {
-        "ingredient": "queso_fresco_block_cow",
-        "quantity": 80,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 9,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "paprika_powder",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
+        "ingredient": "water",
+        "quantity": 330,
         "unit": "ml"
       },
       {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 120,
         "unit": "g"
       },
       {
         "ingredient": "butter_sup80pct",
-        "quantity": 30,
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 10,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
         "unit": "g"
       },
       {
         "ingredient": "green_salad_raw_plain",
         "quantity": null,
         "unit": "1 portion"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 250,
-        "unit": "ml"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_arepas_fromage_vegan_3a4125",
-        "title": "Arepas Fromage (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "main_arepas_fromage_vegan_3a4125",
-    "title": "Arepas Fromage (Vegan)",
-    "cuisine": "colombian",
-    "dish_type": "snack",
-    "vegan": false,
+    "title": "Arepas reina pepiada, avocat et pois chiches (vegan)",
+    "cuisine": "latin_american",
+    "dish_type": "main",
+    "vegan": true,
     "diet": [
-      "gluten_free",
       "kid_friendly",
-      "lactose_free"
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
     ],
-    "allergens": [
-      "tree_nuts"
-    ],
+    "allergens": [],
     "servings": 4,
-    "time_total": 43,
+    "time_total": 40,
     "confidence": 1.0,
-    "description": "Arepas croustillants à la croûte dorée, au cœur moelleux et parfumés à l'ail, inspirés de la cuisine végétalienne latino-américaine, avec une texture crémeuse due au fromage végétal fondu à l'intérieur.",
+    "description": "Inspirées de la reina pepiada vénézuélienne : arepas grillées fourrées d'une salade crémeuse d'avocat, de pois chiches écrasés, de citron vert et de coriandre.",
     "composition": [
       {
         "ingredient": "masa_harina",
-        "quantity": 200,
+        "quantity": 250,
         "unit": "g"
       },
       {
-        "ingredient": "base_vegan_cheddar_024998",
-        "quantity": 150,
+        "ingredient": "water",
+        "quantity": 330,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "avocado_raw",
+        "quantity": 300,
         "unit": "g"
       },
       {
-        "ingredient": "garlic_raw",
+        "ingredient": "chickpea_boiled",
+        "quantity": 240,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_onion_raw",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
         "quantity": 15,
         "unit": "g"
       },
       {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 2.5,
+        "ingredient": "lime_juice_fresh",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 3,
         "unit": "g"
       },
       {
-        "ingredient": "paprika",
-        "quantity": 2.3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_oil_plant",
-        "quantity": 45.7,
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 10,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 30,
+        "quantity": 4,
         "unit": "g"
       },
       {
@@ -643,22 +635,11 @@
         "ingredient": "tomato_sauce_salted_canned",
         "quantity": null,
         "unit": "2 cuillères à soupe"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 250,
-        "unit": "ml"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_arepas_fromage_e3a54c",
-        "title": "Arepas Fromage",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dal_armenian_lentil_soup_0f1067",
@@ -822,152 +803,6 @@
     "n_instructions": 7,
     "flags": [],
     "similar": []
-  },
-  {
-    "id": "main_aubergines_parmigiana_sim_e5028f",
-    "title": "Aubergines Parmigiana Simple",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "gluten_free",
-      "high_protein"
-    ],
-    "allergens": [
-      "lactose",
-      "milk"
-    ],
-    "servings": 4,
-    "time_total": 66,
-    "confidence": 1.0,
-    "description": "Plat italien végétarien à base d'aubergines cuites au four pour une surface gratinée dorée, cœur fondant et aubergines tendres, avec une sauce tomate onctueuse et des saveurs de fromage mozzarella et parmesan.",
-    "composition": [
-      {
-        "ingredient": "eggplant_raw",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_sauce_salted_canned",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cows_milk_mozzarella_cow",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 240,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_salad_raw_plain",
-        "quantity": null,
-        "unit": "une portion"
-      },
-      {
-        "ingredient": "white_bread_roasted",
-        "quantity": null,
-        "unit": "une tranche"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "main_aubergines_parmigiana_sim_ad314c",
-        "title": "Aubergines Parmigiana Simple (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "main_aubergines_parmigiana_sim_ad314c",
-    "title": "Aubergines Parmigiana Simple (Vegan)",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "high_protein",
-      "lactose_free"
-    ],
-    "allergens": [
-      "tree_nuts"
-    ],
-    "servings": 4,
-    "time_total": 66,
-    "confidence": 0.85,
-    "description": "Plat italien à base d'aubergines, sauce tomate, fromage végétal râpé, avec une texture croustillante et al dente, et une odeur parfumée de tomates fraîches. Les aubergines sont cuites à la poêle puis gratinées au four.",
-    "composition": [
-      {
-        "ingredient": "eggplant_raw",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_sauce_salted_canned",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_mozzarella_vegane_fca8c8",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "nutritional_yeast_flakes",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_salad_raw_plain",
-        "quantity": null,
-        "unit": "1 portion"
-      },
-      {
-        "ingredient": "basil_fresh_herb",
-        "quantity": 10,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 8,
-    "flags": [],
-    "similar": [
-      {
-        "id": "main_aubergines_parmigiana_sim_e5028f",
-        "title": "Aubergines Parmigiana Simple",
-        "score": 1.0
-      }
-    ]
   },
   {
     "id": "main_aubergines_sichuan_ff9921",
@@ -1420,22 +1255,24 @@
   },
   {
     "id": "main_baked_ziti_b9e13e",
-    "title": "Baked Ziti",
-    "cuisine": "italian",
+    "title": "Baked ziti new-yorkais à la ricotta",
+    "cuisine": "american",
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "high_protein"
+      "high_protein",
+      "vegetarian",
+      "nut_free"
     ],
     "allergens": [
+      "gluten",
       "lactose",
-      "milk",
-      "gluten"
+      "milk"
     ],
     "servings": 4,
-    "time_total": 53,
+    "time_total": 60,
     "confidence": 1.0,
-    "description": "Pâtes ziti cuites al dente, mélangées avec une sauce tomate parfumée et du fromage râpé, puis gratinées au four jusqu'à obtenir une croûte dorée et croustillante.",
+    "description": "Gratin de pâtes italo-américain de New York : ziti en sauce tomate, cœur de ricotta, mozzarella filante et parmesan, cuit au four jusqu'à ce qu'il bouillonne.",
     "composition": [
       {
         "ingredient": "pasta_raw_dried",
@@ -1443,38 +1280,48 @@
         "unit": "g"
       },
       {
-        "ingredient": "tomato_sauce_salted_canned",
-        "quantity": 400,
+        "ingredient": "tomato_crushed_canned",
+        "quantity": 600,
         "unit": "g"
       },
       {
-        "ingredient": "cows_milk_mozzarella_cow",
+        "ingredient": "ricotta_whole_cow",
         "quantity": 250,
         "unit": "g"
       },
       {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
+        "ingredient": "cows_milk_mozzarella_cow",
         "quantity": 150,
         "unit": "g"
       },
       {
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oregano_spice_dried",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
+        "quantity": 25,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 240,
+        "quantity": 3,
         "unit": "g"
       },
       {
@@ -1483,86 +1330,9 @@
         "unit": "1 poignée"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_baked_ziti_vegan_ad57f8",
-        "title": "Baked Ziti (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "main_baked_ziti_vegan_ad57f8",
-    "title": "Baked Ziti (Vegan)",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "high_protein",
-      "lactose_free"
-    ],
-    "allergens": [
-      "gluten",
-      "tree_nuts"
-    ],
-    "servings": 4,
-    "time_total": 38,
-    "confidence": 0.85,
-    "description": "Pâtes ziti cuites al dente, mélangées avec une sauce tomate parfumée et du fromage végétal fondu, puis cuites au four jusqu'à ce que le fromage soit doré et bien cuit, dans la tradition italienne, avec une texture fondante et une saveur parfumée.",
-    "composition": [
-      {
-        "ingredient": "pasta_raw_dried",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_sauce_salted_canned",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_mozzarella_vegane_fca8c8",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "nutritional_yeast_flakes",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45.7,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 240,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "main_baked_ziti_b9e13e",
-        "title": "Baked Ziti",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dessert_baklava_aux_pistaches_06e5ed",
@@ -16497,124 +16267,6 @@
     "similar": []
   },
   {
-    "id": "pasta_mac_and_cheese_b3073b",
-    "title": "Gratin de macaronis au fromage",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [],
-    "allergens": [
-      "gluten",
-      "lactose",
-      "milk"
-    ],
-    "servings": 4,
-    "time_total": 36,
-    "confidence": 1.0,
-    "description": "Pâtes de blé cuites al dente, enrobées d'une sauce crémeuse au fromage, parfumée et dorée à la sortie du four, typique de la cuisine italienne revisitée.",
-    "composition": [
-      {
-        "ingredient": "pasta_raw_dried",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "milk_liquid_uht_3_5pct",
-        "quantity": 250,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "cheddar",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "butter_sup80pct",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "pasta_mac_and_cheese_vegan_4acb30",
-        "title": "Gratin de macaronis au fromage (vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "pasta_mac_and_cheese_vegan_4acb30",
-    "title": "Gratin de macaronis au fromage (vegan)",
-    "cuisine": "american",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "high_protein",
-      "kid_friendly"
-    ],
-    "allergens": [
-      "gluten",
-      "tree_nuts"
-    ],
-    "servings": 4,
-    "time_total": 46,
-    "confidence": 1.0,
-    "description": "Gratin de macaronis crémeux, aux pâtes de blé tendres, nappées d'une sauce onctueuse à base de lait de coco et de fromage végétal râpé, doré au four à 180°C.",
-    "composition": [
-      {
-        "ingredient": "pasta_raw_dried",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "oat_milk_refrigerated_plain_plant",
-        "quantity": 250,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "base_vegan_cheddar_024998",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 8,
-    "flags": [],
-    "similar": [
-      {
-        "id": "pasta_mac_and_cheese_b3073b",
-        "title": "Gratin de macaronis au fromage",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "main_gratin_de_navets_e164d6",
     "title": "Gratin de Navets",
     "cuisine": "french",
@@ -19204,6 +18856,93 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "main_aubergines_parmigiana_sim_ad314c",
+    "title": "Involtini d'aubergines à la sicilienne (vegan)",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "high_protein",
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "allergens": [
+      "gluten",
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 65,
+    "confidence": 0.85,
+    "description": "Roulés d'aubergines grillées farcis de chapelure, pignons, raisins secs et persil, à la mode de Palerme, cuits au four dans une sauce tomate.",
+    "composition": [
+      {
+        "ingredient": "eggplant_raw",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "breadcrumbs_dried",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "pine_nuts_raw",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "grape_dried",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_crushed_canned",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_salad_raw_plain",
+        "quantity": null,
+        "unit": "1 portion"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -21805,162 +21544,8 @@
     "similar": []
   },
   {
-    "id": "pasta_lasagnes_8adf61",
-    "title": "Lasagnes",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "high_protein"
-    ],
-    "allergens": [
-      "gluten",
-      "lactose",
-      "milk"
-    ],
-    "servings": 4,
-    "time_total": 72,
-    "confidence": 1.0,
-    "description": "Lasagnes créatives, sauce tomate intense et fromage fondu, texture crémeuse et parfumée, origine italienne, avec des couches de pâtes et de sauce tomate, parfaites pour un repas complet et équilibré",
-    "composition": [
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 9,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cows_milk_mozzarella_cow",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_bechamel_7db18f",
-        "quantity": 400,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "pasta_raw_dried",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_salad_raw_plain",
-        "quantity": null,
-        "unit": "1 portion"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "pasta_lasagnes_vegan_412e90",
-        "title": "Lasagnes (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "pasta_lasagnes_vegan_412e90",
-    "title": "Lasagnes (Vegan)",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": true,
-    "diet": [
-      "diabetes_friendly",
-      "high_protein",
-      "lactose_free",
-      "vegan",
-      "vegetarian"
-    ],
-    "allergens": [
-      "gluten",
-      "tree_nuts"
-    ],
-    "servings": 4,
-    "time_total": 77,
-    "confidence": 0.85,
-    "description": "Lasagnes italiennes cuites à la perfection, avec des pâtes al dente, une sauce tomate onctueuse et un fromage végétal fondu, créant une texture moelleuse et parfumée, avec des saveurs méditerranéennes.",
-    "composition": [
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 46.2,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_mozzarella_vegane_fca8c8",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "nutritional_yeast_flakes",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_bechamel_vegane_7a210c",
-        "quantity": 400,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "whole_wheat_pasta_raw_dried",
-        "quantity": 320,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coconut_flesh_dried",
-        "quantity": null,
-        "unit": "1 cuillère à soupe"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "pasta_lasagnes_8adf61",
-        "title": "Lasagnes",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "pasta_lasagnes_de_legumes_ultra_9b6a4e",
-    "title": "Lasagnes de légumes ultra structurées",
+    "title": "Lasagnes aux légumes grillés, béchamel au lait de coco (vegan)",
     "cuisine": "italian",
     "dish_type": "main",
     "vegan": false,
@@ -21973,7 +21558,7 @@
     "servings": 4,
     "time_total": 90,
     "confidence": 1.0,
-    "description": "Lasagnes végétaliennes créatives, avec des couches de feuilles de lasagne sèches, de sauce tomate onctueuse et de béchamel végétalienne, le tout gratiné à la levure nutritionnelle râpée, offrant une texture tendre et une saveur intense, typique de la cuisine italienne revisitée",
+    "description": "Lasagnes vegan aux courgettes et aubergines grillées, sauce tomate et béchamel au lait de coco relevée de levure nutritionnelle.",
     "composition": [
       {
         "ingredient": "pasta_raw_dried",
@@ -22027,6 +21612,196 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "pasta_lasagnes_8adf61",
+    "title": "Lasagnes aux épinards et à la ricotta",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "high_protein",
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 85,
+    "confidence": 1.0,
+    "description": "Lasagnes végétariennes : couches de pâtes, épinards à l'ail mêlés de ricotta, sauce tomate, béchamel, mozzarella et parmesan gratinés.",
+    "composition": [
+      {
+        "ingredient": "pasta_raw_dried",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "spinach_raw_mature",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ricotta_whole_cow",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_crushed_canned",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_bechamel_7db18f",
+        "quantity": 300,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cows_milk_mozzarella_cow",
+        "quantity": 125,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutmeg_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_salad_raw_plain",
+        "quantity": null,
+        "unit": "1 portion"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "pasta_lasagnes_vegan_412e90",
+    "title": "Lasagnes façon bolognaise aux lentilles (vegan)",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "high_protein",
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "celery",
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 115,
+    "confidence": 0.85,
+    "description": "Lasagnes végétales à la bolognaise de lentilles vertes, carotte et céleri mijotés à la tomate, entre des pâtes complètes et une béchamel vegan à la levure nutritionnelle.",
+    "composition": [
+      {
+        "ingredient": "whole_wheat_pasta_raw_dried",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_lentil_dried",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "celery_stalk_raw",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_crushed_canned",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_bechamel_vegane_7a210c",
+        "quantity": 400,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oregano_spice_dried",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 400,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_flesh_dried",
+        "quantity": null,
+        "unit": "1 cuillère à soupe"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -22607,6 +22382,150 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "pasta_mac_and_cheese_b3073b",
+    "title": "Mac and cheese américain gratiné au cheddar",
+    "cuisine": "american",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "lactose",
+      "milk",
+      "mustard"
+    ],
+    "servings": 4,
+    "time_total": 45,
+    "confidence": 1.0,
+    "description": "Le classique américain : macaronis dans une sauce béchamel au cheddar relevée de moutarde, gratinés sous une chapelure croustillante au beurre.",
+    "composition": [
+      {
+        "ingredient": "pasta_raw_dried",
+        "quantity": 320,
+        "unit": "g"
+      },
+      {
+        "ingredient": "milk_liquid_uht_3_5pct",
+        "quantity": 500,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cheddar",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mustard",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "breadcrumbs_dried",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "pasta_mac_and_cheese_vegan_4acb30",
+    "title": "Mac and cheese à la courge butternut (vegan)",
+    "cuisine": "american",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "high_protein",
+      "kid_friendly",
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "mustard"
+    ],
+    "servings": 4,
+    "time_total": 40,
+    "confidence": 1.0,
+    "description": "Macaronis nappés d'une sauce onctueuse de butternut, lait d'avoine, levure nutritionnelle, ail et moutarde, qui donne la couleur et le goût d'un cheddar sans produit laitier.",
+    "composition": [
+      {
+        "ingredient": "pasta_raw_dried",
+        "quantity": 320,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butternut_squash_raw_skinless",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oat_milk_refrigerated_plain_plant",
+        "quantity": 250,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegan_butter",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mustard",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 4,
     "flags": [],
     "similar": []
   },
@@ -29043,47 +28962,212 @@
   },
   {
     "id": "main_parmigiana_di_melanzane_6bd49f",
-    "title": "Parmigiana Di Melanzane",
+    "title": "Parmigiana di melanzane napolitaine",
     "cuisine": "italian",
     "dish_type": "main",
     "vegan": false,
     "diet": [
       "diabetes_friendly",
+      "high_protein",
+      "vegetarian",
       "gluten_free",
-      "high_protein"
+      "nut_free"
     ],
     "allergens": [
       "lactose",
       "milk"
     ],
     "servings": 4,
-    "time_total": 52,
+    "time_total": 120,
     "confidence": 1.0,
-    "description": "Cuisson créative de l'aubergine, avec une surface gratinée dorée, un cœur fondant et parfumé, sur une base de sauce tomate onctueuse et de fromage fondu, dans la tradition italienne.",
+    "description": "La parmigiana de Naples : tranches d'aubergines frites, sauce tomate au basilic, mozzarella et parmesan en couches, gratinées au four.",
     "composition": [
       {
         "ingredient": "eggplant_raw",
-        "quantity": 600,
+        "quantity": 800,
         "unit": "g"
       },
       {
-        "ingredient": "tomato_sauce_salted_canned",
-        "quantity": 400,
+        "ingredient": "tomato_crushed_canned",
+        "quantity": 500,
         "unit": "g"
       },
       {
         "ingredient": "cows_milk_mozzarella_cow",
-        "quantity": 250,
+        "quantity": 200,
         "unit": "g"
       },
       {
         "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 60,
+        "quantity": 50,
         "unit": "g"
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 150,
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 50,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "main_aubergines_parmigiana_sim_e5028f",
+    "title": "Parmigiana légère d'aubergines et courgettes grillées",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "high_protein",
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 70,
+    "confidence": 1.0,
+    "description": "Parmigiana plus légère : aubergines et courgettes grillées au four plutôt que frites, tomates concassées, mozzarella et un peu de parmesan.",
+    "composition": [
+      {
+        "ingredient": "eggplant_raw",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_zucchini_squash_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_crushed_canned",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cows_milk_mozzarella_cow",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_salad_raw_plain",
+        "quantity": null,
+        "unit": "une portion"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "main_parmigiana_di_melanzane_v_8f8b8b",
+    "title": "Parmigiana à la mozzarella végétale et chapelure aux herbes (vegan)",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "high_protein",
+      "vegan",
+      "vegetarian",
+      "lactose_free"
+    ],
+    "allergens": [
+      "gluten",
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 70,
+    "confidence": 0.85,
+    "description": "Parmigiana végétale : aubergines rôties, sauce tomate à l'oignon et au basilic, mozzarella vegan, et une croûte de chapelure à la levure nutritionnelle et aux herbes.",
+    "composition": [
+      {
+        "ingredient": "eggplant_raw",
+        "quantity": 700,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_crushed_canned",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_mozzarella_vegane_fca8c8",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "breadcrumbs_dried",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -29092,6 +29176,16 @@
         "unit": "g"
       },
       {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oregano_spice_dried",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
         "ingredient": "olive_oil_plant",
         "quantity": 45,
         "unit": "ml"
@@ -29103,115 +29197,90 @@
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 240,
-        "unit": "g"
-      },
-      {
-        "ingredient": "basil_fresh_herb",
-        "quantity": 20,
+        "quantity": 1,
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_parmigiana_di_melanzane_v_8f8b8b",
-        "title": "Parmigiana Di Melanzane (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
-    "id": "main_parmigiana_di_melanzane_v_8f8b8b",
-    "title": "Parmigiana Di Melanzane (Vegan)",
+    "id": "main_baked_ziti_vegan_ad57f8",
+    "title": "Pasta al forno aux légumes rôtis et mozzarella végétale (vegan)",
     "cuisine": "italian",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free",
       "high_protein",
+      "vegan",
+      "vegetarian",
       "lactose_free"
     ],
     "allergens": [
+      "gluten",
       "tree_nuts"
     ],
     "servings": 4,
-    "time_total": 82,
+    "time_total": 60,
     "confidence": 0.85,
-    "description": "Plat italien où des tranches d'aubergine croustillantes et al dente alternent avec une sauce tomate parfumée et du fromage végétal râpé, dans une harmonie de textures et de saveurs méditerranéennes.",
+    "description": "Penne au four avec courgettes et poivrons rôtis, sauce tomate au basilic et mozzarella végétale gratinée.",
     "composition": [
       {
-        "ingredient": "eggplant_raw",
-        "quantity": 600,
+        "ingredient": "pasta_raw_dried",
+        "quantity": 320,
         "unit": "g"
       },
       {
-        "ingredient": "tomato_sauce_salted_canned",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_mozzarella_vegane_fca8c8",
+        "ingredient": "green_zucchini_squash_raw",
         "quantity": 250,
         "unit": "g"
       },
       {
-        "ingredient": "nutritional_yeast_flakes",
-        "quantity": 20,
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 200,
         "unit": "g"
       },
       {
-        "ingredient": "onion_raw",
+        "ingredient": "tomato_crushed_canned",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_mozzarella_vegane_fca8c8",
         "quantity": 150,
         "unit": "g"
       },
       {
-        "ingredient": "garlic_raw",
+        "ingredient": "nutritional_yeast_flakes",
         "quantity": 15,
         "unit": "g"
       },
       {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 240,
+        "ingredient": "yellow_onion_raw",
+        "quantity": 100,
         "unit": "g"
       },
       {
         "ingredient": "basil_fresh_herb",
-        "quantity": 20,
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
         "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_parmigiana_di_melanzane_6bd49f",
-        "title": "Parmigiana Di Melanzane",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "pasta_pasta_al_pomodoro_3ffaef",
@@ -31401,7 +31470,7 @@
   },
   {
     "id": "tarte_margherita_v7k2d1",
-    "title": "Pizza Margherita",
+    "title": "Pizza margherita napolitaine au fior di latte",
     "cuisine": "italian",
     "dish_type": "main",
     "vegan": false,
@@ -31414,7 +31483,7 @@
     "servings": 4,
     "time_total": 160,
     "confidence": 0.99,
-    "description": "Pizza Margherita authentique, fermentation lente de la pâte, cuisson à très haute température, tomate San Marzano concentrée et fromage fondu à cœur, avec une croûte croustillante et un intérieur moelleux.",
+    "description": "La margherita de Naples : pâte longuement levée, sauce tomate crue, mozzarella fior di latte, basilic et filet d'huile d'olive, cuite très chaud.",
     "composition": [
       {
         "ingredient": "base_pizza_dough_6fdabd",
@@ -31449,17 +31518,11 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "tarte_pizza_margherita_vegan_02bb9a",
-        "title": "Pizza Margherita (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "tarte_pizza_margherita_vegan_02bb9a",
-    "title": "Pizza Margherita (Vegan)",
+    "title": "Pizza marinara à l'ail et à l'origan",
     "cuisine": "italian",
     "dish_type": "main",
     "vegan": true,
@@ -31467,19 +31530,18 @@
       "diabetes_friendly",
       "high_protein",
       "kid_friendly",
-      "lactose_free",
-      "nut_free",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
-      "soy",
       "gluten"
     ],
     "servings": 4,
-    "time_total": 141,
+    "time_total": 140,
     "confidence": 1.0,
-    "description": "Crustine croustillante surmontée d'une sauce tomate onctueuse et de feuilles de basilic frais, technique italienne revisitée pour une version végétalienne créative avec une texture fondante.",
+    "description": "L'autre pizza napolitaine historique, naturellement vegan : sauce tomate, ail en lamelles, origan et huile d'olive, sans fromage.",
     "composition": [
       {
         "ingredient": "base_pizza_dough_6fdabd",
@@ -31487,24 +31549,34 @@
         "unit": "g"
       },
       {
-        "ingredient": "tomato_sauce_salted_canned",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tofu_plain_pre_packaged",
+        "ingredient": "tomato_crushed_canned",
         "quantity": 250,
         "unit": "g"
       },
       {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oregano_spice_dried",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
         "ingredient": "basil_fresh_herb",
-        "quantity": 20,
+        "quantity": 5,
         "unit": "g"
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 20,
+        "quantity": 25,
         "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 1,
+        "unit": "g"
       },
       {
         "ingredient": "coconut_flesh_dried",
@@ -31519,13 +31591,7 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "tarte_margherita_v7k2d1",
-        "title": "Pizza Margherita",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "main_pkhali_46d354",

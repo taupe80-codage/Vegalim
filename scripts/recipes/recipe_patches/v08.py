@@ -1,0 +1,361 @@
+"""Variantes 8 : arepas, parmigianas, baked ziti, lasagnes, mac and cheese, pizza."""
+
+VARIANTS = {
+    # ── Arepas : colombienne au fromage / reina pepiada vegan ──
+    "main_arepas_fromage_e3a54c": [
+        ("title", "Arepas colombiennes au fromage frais et au beurre"),
+        ("desc", "Arepas de queso de Colombie : pâte de farine de maïs précuite pétrie avec du fromage frais, "
+                 "galettes dorées à la poêle puis tartinées de beurre."),
+        ("compo", [
+            ("masa_harina", 250, "g", "carbohydrate"),
+            ("water", 330, "ml", "liquid"),
+            ("queso_fresco_block_cow", 120, "g", "ingredient"),
+            ("butter_sup80pct", 25, "g", "fat"),
+            ("sunflower_oil_plant", 10, "ml", "fat"),
+            ("table_salt_unenriched", 3, "g", "seasoning"),
+        ]),
+        ("steps", [
+            "Mélanger 250 g de farine de maïs précuite avec 3 g de sel, puis ajouter 330 ml d'eau tiède et pétrir 3 minutes.",
+            "Incorporer 120 g de fromage frais émietté et laisser reposer 5 minutes.",
+            "Former 8 boules, puis les aplatir en galettes de 1,5 cm d'épaisseur.",
+            "Cuire dans une poêle huilée avec 10 ml d'huile, 6 à 7 minutes de chaque côté à feu moyen, jusqu'à ce qu'une croûte dorée se forme.",
+            "Servir chaud, fendu et tartiné de 25 g de beurre au total.",
+        ]),
+        ("time", 15, 5, 15),
+    ],
+    "main_arepas_fromage_vegan_3a4125": [
+        ("title", "Arepas reina pepiada, avocat et pois chiches (vegan)"),
+        ("desc", "Inspirées de la reina pepiada vénézuélienne : arepas grillées fourrées d'une salade crémeuse "
+                 "d'avocat, de pois chiches écrasés, de citron vert et de coriandre."),
+        ("origin", {"cuisine": "latin_american", "country": "venezuela", "region": "caracas", "city": "caracas"}),
+        ("dish", "main"),
+        ("compo", [
+            ("masa_harina", 250, "g", "carbohydrate"),
+            ("water", 330, "ml", "liquid"),
+            ("avocado_raw", 300, "g", "ingredient"),
+            ("chickpea_boiled", 240, "g", "protein", "cooked"),
+            ("red_onion_raw", 50, "g", "aromatic"),
+            ("coriander_raw_fresh_herb", 15, "g", "herb"),
+            ("lime_juice_fresh", 25, "ml", "condiment"),
+            ("garlic_raw", 3, "g", "aromatic"),
+            ("sunflower_oil_plant", 10, "ml", "fat"),
+            ("table_salt_unenriched", 4, "g", "seasoning"),
+        ]),
+        ("steps", [
+            "Mélanger 250 g de farine de maïs précuite avec 2 g de sel et 330 ml d'eau tiède, puis pétrir 3 minutes et laisser reposer 5 minutes.",
+            "Former 8 galettes épaisses et les cuire dans une poêle huilée avec 10 ml d'huile, 6 à 7 minutes de chaque côté.",
+            "Écraser 240 g de pois chiches à la fourchette avec 300 g d'avocat, 25 ml de jus de citron vert, 3 g d'ail râpé et 2 g de sel.",
+            "Ajouter 50 g d'oignon rouge ciselé et 15 g de coriandre hachée.",
+            "Fendre les arepas chaudes et les garnir généreusement de la préparation.",
+        ]),
+        ("time", 20, 5, 15),
+    ],
+
+    # ── Parmigiana : napolitaine / légère grillée / vegan chapelure aux herbes / involtini siciliens vegan ──
+    "main_parmigiana_di_melanzane_6bd49f": [
+        ("title", "Parmigiana di melanzane napolitaine"),
+        ("desc", "La parmigiana de Naples : tranches d'aubergines frites, sauce tomate au basilic, "
+                 "mozzarella et parmesan en couches, gratinées au four."),
+        ("origin", {"region": "campania", "city": "naples"}),
+        ("compo", [
+            ("eggplant_raw", 800, "g", "vegetable"),
+            ("tomato_crushed_canned", 500, "g", "condiment"),
+            ("cows_milk_mozzarella_cow", 200, "g", "ingredient"),
+            ("parmesan_grated_dried_cow", 50, "g", "ingredient"),
+            ("onion_raw", 80, "g", "aromatic_base"),
+            ("garlic_raw", 6, "g", "aromatic"),
+            ("basil_fresh_herb", 20, "g", "herb"),
+            ("sunflower_oil_plant", 50, "ml", "fat"),
+            ("olive_oil_plant", 15, "ml", "fat"),
+            ("table_salt_unenriched", 3, "g", "seasoning"),
+            ("black_pepper_spice", 1, "g", "spice"),
+        ]),
+        ("steps", [
+            "Couper 800 g d'aubergines en tranches de 5 mm, les saler légèrement avec 2 g de sel et les laisser dégorger 30 minutes, puis les éponger.",
+            "Les frire par petites quantités dans l'huile de tournesol à 170°C, 2 minutes par face (environ 50 ml d'huile absorbée), puis les égoutter.",
+            "Sauce : faire revenir 80 g d'oignon et 6 g d'ail dans 15 ml d'huile d'olive, ajouter 500 g de tomates concassées, 1 g de sel et 1 g de poivre, puis mijoter 15 minutes. Ajouter 20 g de basilic.",
+            "Préchauffer le four à 190°C. Monter en couches : sauce, aubergines, 200 g de mozzarella en tranches et 50 g de parmesan, en terminant par sauce et parmesan.",
+            "Cuire 30 minutes, puis laisser reposer 15 minutes avant de servir.",
+        ]),
+        ("time", 30, 45, 45),
+    ],
+    "main_aubergines_parmigiana_sim_e5028f": [
+        ("title", "Parmigiana légère d'aubergines et courgettes grillées"),
+        ("desc", "Parmigiana plus légère : aubergines et courgettes grillées au four plutôt que frites, "
+                 "tomates concassées, mozzarella et un peu de parmesan."),
+        ("compo", [
+            ("eggplant_raw", 500, "g", "vegetable"),
+            ("green_zucchini_squash_raw", 300, "g", "vegetable"),
+            ("tomato_crushed_canned", 500, "g", "condiment"),
+            ("cows_milk_mozzarella_cow", 200, "g", "ingredient"),
+            ("parmesan_grated_dried_cow", 30, "g", "ingredient"),
+            ("garlic_raw", 6, "g", "aromatic"),
+            ("basil_fresh_herb", 10, "g", "herb"),
+            ("olive_oil_plant", 30, "ml", "fat"),
+            ("table_salt_unenriched", 2, "g", "seasoning"),
+            ("green_salad_raw_plain", None, "une portion", "serving_suggestion"),
+        ]),
+        ("steps", [
+            "Préchauffer le four à 220°C. Couper 500 g d'aubergines et 300 g de courgettes en tranches de 5 mm, les badigeonner de 20 ml d'huile d'olive et les griller 15 minutes sur des plaques.",
+            "Chauffer 500 g de tomates concassées avec 6 g d'ail écrasé, 10 ml d'huile et 2 g de sel, 10 minutes.",
+            "Baisser le four à 190°C. Monter en couches dans un plat : sauce, légumes grillés, basilic et 200 g de mozzarella en tranches.",
+            "Terminer par la sauce et 30 g de parmesan, puis cuire 25 minutes.",
+        ]),
+        ("time", 20, 0, 50),
+    ],
+    "main_parmigiana_di_melanzane_v_8f8b8b": [
+        ("title", "Parmigiana à la mozzarella végétale et chapelure aux herbes (vegan)"),
+        ("desc", "Parmigiana végétale : aubergines rôties, sauce tomate à l'oignon et au basilic, mozzarella "
+                 "vegan, et une croûte de chapelure à la levure nutritionnelle et aux herbes."),
+        ("compo", [
+            ("eggplant_raw", 700, "g", "vegetable"),
+            ("tomato_crushed_canned", 500, "g", "condiment"),
+            ("base_mozzarella_vegane_fca8c8", 200, "g", "ingredient"),
+            ("breadcrumbs_dried", 40, "g", "topping"),
+            ("nutritional_yeast_flakes", 15, "g", "ingredient"),
+            ("onion_raw", 100, "g", "aromatic_base"),
+            ("garlic_raw", 9, "g", "aromatic"),
+            ("basil_fresh_herb", 20, "g", "herb"),
+            ("oregano_spice_dried", 1, "g", "herb"),
+            ("olive_oil_plant", 45, "ml", "fat"),
+            ("table_salt_unenriched", 2, "g", "seasoning"),
+            ("black_pepper_spice", 1, "g", "spice"),
+        ]),
+        ("steps", [
+            "Préchauffer le four à 220°C. Badigeonner 700 g d'aubergines en tranches de 25 ml d'huile d'olive et les rôtir 20 minutes.",
+            "Sauce : faire revenir 100 g d'oignon et 9 g d'ail dans 10 ml d'huile, ajouter 500 g de tomates concassées, 2 g de sel et 1 g de poivre, puis mijoter 15 minutes. Ajouter 20 g de basilic.",
+            "Mélanger 40 g de chapelure, 15 g de levure nutritionnelle, 1 g d'origan et 10 ml d'huile d'olive.",
+            "Baisser le four à 190°C. Monter en couches : sauce, aubergines, 200 g de mozzarella végétale, en terminant par la sauce.",
+            "Couvrir de chapelure aux herbes et cuire 30 minutes, jusqu'à ce que le dessus soit doré.",
+        ]),
+        ("time", 20, 0, 50),
+    ],
+    "main_aubergines_parmigiana_sim_ad314c": [
+        ("title", "Involtini d'aubergines à la sicilienne (vegan)"),
+        ("desc", "Roulés d'aubergines grillées farcis de chapelure, pignons, raisins secs et persil, à la mode "
+                 "de Palerme, cuits au four dans une sauce tomate."),
+        ("origin", {"region": "sicile", "city": "palerme"}),
+        ("compo", [
+            ("eggplant_raw", 600, "g", "vegetable"),
+            ("breadcrumbs_dried", 80, "g", "ingredient"),
+            ("pine_nuts_raw", 25, "g", "ingredient"),
+            ("grape_dried", 30, "g", "ingredient"),
+            ("parsley_fresh_herb", 15, "g", "herb"),
+            ("garlic_raw", 6, "g", "aromatic"),
+            ("nutritional_yeast_flakes", 15, "g", "ingredient"),
+            ("tomato_crushed_canned", 400, "g", "condiment"),
+            ("basil_fresh_herb", 10, "g", "herb"),
+            ("olive_oil_plant", 45, "ml", "fat"),
+            ("table_salt_unenriched", 2, "g", "seasoning"),
+            ("green_salad_raw_plain", None, "1 portion", "serving_suggestion"),
+        ]),
+        ("steps", [
+            "Couper 600 g d'aubergines dans la longueur en tranches de 5 mm, les badigeonner de 20 ml d'huile d'olive et les griller 3 minutes par face.",
+            "Farce : dorer 80 g de chapelure dans 15 ml d'huile, puis la mélanger avec 25 g de pignons, 30 g de raisins secs trempés, 15 g de persil, 3 g d'ail haché, 15 g de levure nutritionnelle et 1 g de sel.",
+            "Préchauffer le four à 190°C. Verser 400 g de tomates concassées mélangées à 3 g d'ail, 10 ml d'huile et 1 g de sel dans un plat.",
+            "Déposer une cuillerée de farce sur chaque tranche, rouler et ranger les roulés serrés dans la sauce.",
+            "Cuire 25 minutes, puis parsemer de 10 g de basilic.",
+        ]),
+        ("time", 30, 0, 35),
+    ],
+
+    # ── Baked ziti : new-yorkais à la ricotta / pasta al forno vegan aux légumes rôtis ──
+    "main_baked_ziti_b9e13e": [
+        ("title", "Baked ziti new-yorkais à la ricotta"),
+        ("desc", "Gratin de pâtes italo-américain de New York : ziti en sauce tomate, cœur de ricotta, "
+                 "mozzarella filante et parmesan, cuit au four jusqu'à ce qu'il bouillonne."),
+        ("origin", {"cuisine": "american", "country": "united_states", "region": "new_york", "city": "new_york"}),
+        ("compo", [
+            ("pasta_raw_dried", 320, "g", "ingredient"),
+            ("tomato_crushed_canned", 600, "g", "condiment"),
+            ("ricotta_whole_cow", 250, "g", "ingredient"),
+            ("cows_milk_mozzarella_cow", 150, "g", "ingredient"),
+            ("parmesan_grated_dried_cow", 40, "g", "ingredient"),
+            ("yellow_onion_raw", 120, "g", "aromatic_base"),
+            ("garlic_raw", 6, "g", "aromatic"),
+            ("oregano_spice_dried", 1, "g", "herb"),
+            ("olive_oil_extra_virgin_plant", 25, "ml", "fat"),
+            ("table_salt_unenriched", 3, "g", "seasoning"),
+            ("parsley_fresh_herb", None, "1 poignée", "serving_suggestion"),
+        ]),
+        ("steps", [
+            "Sauce : faire revenir 120 g d'oignon et 6 g d'ail dans 25 ml d'huile d'olive, ajouter 600 g de tomates concassées, 1 g d'origan et 2 g de sel, puis mijoter 15 minutes.",
+            "Cuire 320 g de ziti 2 minutes de moins que le temps indiqué, dans l'eau salée avec 1 g de sel, puis les mélanger aux deux tiers de la sauce.",
+            "Préchauffer le four à 200°C. Étaler la moitié des pâtes dans un plat, puis déposer 250 g de ricotta en cuillerées.",
+            "Couvrir du reste des pâtes et de la sauce, puis de 150 g de mozzarella et 40 g de parmesan.",
+            "Cuire 20 minutes, jusqu'à ce que le dessus soit doré et bouillonnant.",
+        ]),
+        ("time", 15, 0, 45),
+    ],
+    "main_baked_ziti_vegan_ad57f8": [
+        ("title", "Pasta al forno aux légumes rôtis et mozzarella végétale (vegan)"),
+        ("origin", {"region": "", "city": ""}),
+        ("desc", "Penne au four avec courgettes et poivrons rôtis, sauce tomate au basilic et mozzarella "
+                 "végétale gratinée."),
+        ("compo", [
+            ("pasta_raw_dried", 320, "g", "ingredient"),
+            ("green_zucchini_squash_raw", 250, "g", "vegetable"),
+            ("red_bell_pepper_raw", 200, "g", "vegetable"),
+            ("tomato_crushed_canned", 500, "g", "condiment"),
+            ("base_mozzarella_vegane_fca8c8", 150, "g", "ingredient"),
+            ("nutritional_yeast_flakes", 15, "g", "ingredient"),
+            ("yellow_onion_raw", 100, "g", "aromatic_base"),
+            ("basil_fresh_herb", 15, "g", "herb"),
+            ("olive_oil_extra_virgin_plant", 40, "ml", "fat"),
+            ("table_salt_unenriched", 3, "g", "seasoning"),
+        ]),
+        ("steps", [
+            "Préchauffer le four à 220°C. Rôtir 250 g de courgettes et 200 g de poivron en dés avec 25 ml d'huile d'olive, 20 minutes.",
+            "Faire revenir 100 g d'oignon dans 15 ml d'huile, ajouter 500 g de tomates concassées et 2 g de sel, puis mijoter 10 minutes. Ajouter 15 g de basilic.",
+            "Cuire 320 g de penne 2 minutes de moins que le temps indiqué dans l'eau salée avec 1 g de sel.",
+            "Mélanger pâtes, légumes rôtis, sauce et 15 g de levure nutritionnelle, puis verser dans un plat.",
+            "Couvrir de 150 g de mozzarella végétale et gratiner 15 minutes à 200°C.",
+        ]),
+        ("time", 15, 0, 45),
+    ],
+
+    # ── Lasagnes : épinards-ricotta / vegan bolognaise de lentilles / légumes grillés béchamel coco ──
+    "pasta_lasagnes_8adf61": [
+        ("title", "Lasagnes aux épinards et à la ricotta"),
+        ("desc", "Lasagnes végétariennes : couches de pâtes, épinards à l'ail mêlés de ricotta, sauce tomate, "
+                 "béchamel, mozzarella et parmesan gratinés."),
+        ("compo", [
+            ("pasta_raw_dried", 250, "g", "base"),
+            ("spinach_raw_mature", 500, "g", "vegetable"),
+            ("ricotta_whole_cow", 250, "g", "ingredient"),
+            ("tomato_crushed_canned", 400, "g", "fruit"),
+            ("base_bechamel_7db18f", 300, "ml", "ingredient"),
+            ("cows_milk_mozzarella_cow", 125, "g", "ingredient"),
+            ("parmesan_grated_dried_cow", 40, "g", "ingredient"),
+            ("onion_raw", 100, "g", "aromatic_base"),
+            ("garlic_raw", 9, "g", "aromatic"),
+            ("nutmeg_spice", 1, "g", "spice"),
+            ("olive_oil_plant", 25, "ml", "fat"),
+            ("table_salt_unenriched", 2, "g", "seasoning"),
+            ("green_salad_raw_plain", None, "1 portion", "serving_suggestion"),
+        ]),
+        ("steps", [
+            "Faire tomber 500 g d'épinards avec 6 g d'ail dans 10 ml d'huile d'olive, 4 minutes, puis les presser, les hacher et les mélanger à 250 g de ricotta, 1 g de muscade et 1 g de sel.",
+            "Sauce : faire revenir 100 g d'oignon et 3 g d'ail dans 15 ml d'huile, ajouter 400 g de tomates concassées et 1 g de sel, puis mijoter 10 minutes.",
+            "Préchauffer le four à 180°C. Dans un plat, alterner sauce tomate, feuilles de lasagne (250 g), mélange épinards-ricotta et béchamel, sur trois couches.",
+            "Terminer par la béchamel restante (300 ml au total), 125 g de mozzarella en morceaux et 40 g de parmesan.",
+            "Cuire 40 minutes, puis laisser reposer 10 minutes.",
+        ]),
+        ("time", 30, 10, 45),
+    ],
+    "pasta_lasagnes_vegan_412e90": [
+        ("title", "Lasagnes façon bolognaise aux lentilles (vegan)"),
+        ("desc", "Lasagnes végétales à la bolognaise de lentilles vertes, carotte et céleri mijotés à la tomate, "
+                 "entre des pâtes complètes et une béchamel vegan à la levure nutritionnelle."),
+        ("compo", [
+            ("whole_wheat_pasta_raw_dried", 250, "g", "base"),
+            ("green_lentil_dried", 150, "g", "protein", "dried"),
+            ("carrot_raw", 120, "g", "vegetable"),
+            ("celery_stalk_raw", 60, "g", "vegetable"),
+            ("yellow_onion_raw", 120, "g", "aromatic_base"),
+            ("garlic_raw", 9, "g", "aromatic"),
+            ("tomato_crushed_canned", 600, "g", "fruit"),
+            ("base_bechamel_vegane_7a210c", 400, "ml", "ingredient"),
+            ("nutritional_yeast_flakes", 20, "g", "ingredient"),
+            ("oregano_spice_dried", 1, "g", "herb"),
+            ("olive_oil_extra_virgin_plant", 30, "ml", "fat"),
+            ("water", 400, "ml", "liquid"),
+            ("table_salt_unenriched", 3, "g", "seasoning"),
+        ]),
+        ("steps", [
+            "Faire revenir 120 g d'oignon, 120 g de carotte et 60 g de céleri en petits dés dans 30 ml d'huile d'olive, 8 minutes, puis ajouter 9 g d'ail haché.",
+            "Ajouter 150 g de lentilles vertes rincées, 600 g de tomates concassées, 400 ml d'eau, 1 g d'origan et 3 g de sel, puis mijoter 35 minutes jusqu'à ce que les lentilles soient tendres et la sauce épaisse.",
+            "Préchauffer le four à 180°C. Dans un plat, alterner bolognaise, feuilles de lasagne complètes (250 g) et béchamel vegan, sur trois couches.",
+            "Terminer par la béchamel (400 ml au total) et 20 g de levure nutritionnelle.",
+            "Cuire 40 minutes, puis laisser reposer 10 minutes.",
+        ]),
+        ("time", 25, 10, 80),
+    ],
+    "pasta_lasagnes_de_legumes_ultra_9b6a4e": [
+        ("title", "Lasagnes aux légumes grillés, béchamel au lait de coco (vegan)"),
+        ("desc", "Lasagnes vegan aux courgettes et aubergines grillées, sauce tomate et béchamel au lait de coco "
+                 "relevée de levure nutritionnelle."),
+    ],
+
+    # ── Mac and cheese : américain gratiné / vegan à la butternut ──
+    "pasta_mac_and_cheese_b3073b": [
+        ("title", "Mac and cheese américain gratiné au cheddar"),
+        ("desc", "Le classique américain : macaronis dans une sauce béchamel au cheddar relevée de moutarde, "
+                 "gratinés sous une chapelure croustillante au beurre."),
+        ("origin", {"cuisine": "american", "country": "united_states", "region": "", "city": ""}),
+        ("compo", [
+            ("pasta_raw_dried", 320, "g", "ingredient"),
+            ("milk_liquid_uht_3_5pct", 500, "ml", "ingredient"),
+            ("cheddar", 150, "g", "ingredient"),
+            ("butter_sup80pct", 40, "g", "fat_cooking"),
+            ("wheat_all_purpose_flour_unenriched_unbleached", 30, "g", "carbohydrate"),
+            ("mustard", 5, "g", "condiment"),
+            ("breadcrumbs_dried", 30, "g", "topping"),
+            ("table_salt_unenriched", 3, "g", "seasoning"),
+            ("black_pepper_spice", 1, "g", "spice"),
+        ]),
+        ("steps", [
+            "Cuire 320 g de macaronis dans l'eau salée avec 1 g de sel, 2 minutes de moins que le temps indiqué, puis les égoutter.",
+            "Faire fondre 30 g de beurre, ajouter 30 g de farine et cuire 1 minute, puis verser 500 ml de lait en fouettant et cuire 5 minutes jusqu'à épaississement.",
+            "Hors du feu, ajouter 130 g de cheddar râpé, 5 g de moutarde, 2 g de sel et 1 g de poivre.",
+            "Préchauffer le four à 200°C. Mélanger pâtes et sauce, verser dans un plat et parsemer de 20 g de cheddar et de 30 g de chapelure mélangée à 10 g de beurre fondu.",
+            "Gratiner 15 minutes.",
+        ]),
+        ("time", 15, 0, 30),
+    ],
+    "pasta_mac_and_cheese_vegan_4acb30": [
+        ("title", "Mac and cheese à la courge butternut (vegan)"),
+        ("desc", "Macaronis nappés d'une sauce onctueuse de butternut, lait d'avoine, levure nutritionnelle, ail "
+                 "et moutarde, qui donne la couleur et le goût d'un cheddar sans produit laitier."),
+        ("compo", [
+            ("pasta_raw_dried", 320, "g", "ingredient"),
+            ("butternut_squash_raw_skinless", 400, "g", "vegetable"),
+            ("oat_milk_refrigerated_plain_plant", 250, "ml", "ingredient"),
+            ("nutritional_yeast_flakes", 25, "g", "ingredient"),
+            ("vegan_butter", 20, "g", "fat_cooking"),
+            ("garlic_raw", 6, "g", "aromatic"),
+            ("mustard", 5, "g", "condiment"),
+            ("paprika", 1, "g", "spice"),
+            ("table_salt_unenriched", 4, "g", "seasoning"),
+        ]),
+        ("steps", [
+            "Cuire 400 g de butternut en cubes avec 6 g d'ail à la vapeur, 15 minutes.",
+            "Mixer la courge avec 250 ml de lait d'avoine, 25 g de levure nutritionnelle, 20 g de beurre végétal, 5 g de moutarde, 1 g de paprika et 3 g de sel jusqu'à obtenir une sauce lisse.",
+            "Cuire 320 g de macaronis dans l'eau salée avec 1 g de sel, puis les égoutter.",
+            "Mélanger les pâtes chaudes à la sauce et réchauffer 2 minutes à feu doux avant de servir.",
+        ]),
+        ("time", 15, 0, 25),
+    ],
+
+    # ── Pizza : margherita napolitaine / marinara ──
+    "tarte_margherita_v7k2d1": [
+        ("title", "Pizza margherita napolitaine au fior di latte"),
+        ("desc", "La margherita de Naples : pâte longuement levée, sauce tomate crue, mozzarella fior di latte, "
+                 "basilic et filet d'huile d'olive, cuite très chaud."),
+        ("origin", {"region": "campania", "city": "naples"}),
+    ],
+    "tarte_pizza_margherita_vegan_02bb9a": [
+        ("title", "Pizza marinara à l'ail et à l'origan"),
+        ("desc", "L'autre pizza napolitaine historique, naturellement vegan : sauce tomate, ail en lamelles, "
+                 "origan et huile d'olive, sans fromage."),
+        ("origin", {"region": "campania", "city": "naples"}),
+        ("compo", [
+            ("base_pizza_dough_6fdabd", 300, "g", "ingredient"),
+            ("tomato_crushed_canned", 250, "g", "condiment"),
+            ("garlic_raw", 9, "g", "aromatic"),
+            ("oregano_spice_dried", 1, "g", "herb"),
+            ("basil_fresh_herb", 5, "g", "herb"),
+            ("olive_oil_extra_virgin_plant", 25, "ml", "fat"),
+            ("table_salt_unenriched", 1, "g", "seasoning"),
+        ]),
+        ("steps", [
+            "Préchauffer le four au maximum (250 à 280°C) avec une plaque ou une pierre à l'intérieur, 30 minutes.",
+            "Mélanger 250 g de tomates concassées avec 1 g de sel.",
+            "Étaler 300 g de pâte à pizza en deux disques fins.",
+            "Répartir la sauce, 9 g d'ail en fines lamelles et 1 g d'origan, puis arroser de 15 ml d'huile d'olive.",
+            "Cuire 7 à 8 minutes sur la plaque brûlante, jusqu'à ce que les bords soient gonflés et tachetés.",
+            "Arroser de 10 ml d'huile d'olive et parsemer de 5 g de basilic avant de servir.",
+        ]),
+        ("time", 10, 120, 10),
+    ],
+}

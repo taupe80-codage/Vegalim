@@ -73756,7 +73756,7 @@
       "id": "main_arepas_fromage_e3a54c",
       "titles": {
         "original": "Arepas Fromage",
-        "fr": "Arepas Fromage",
+        "fr": "Arepas colombiennes au fromage frais et au beurre",
         "en": "Arepas Fromage"
       },
       "origin": {
@@ -73767,70 +73767,59 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 13,
-        "prep_passive_min": 0,
-        "cook_min": 20,
-        "total_min": 33
+        "prep_active_min": 15,
+        "prep_passive_min": 5,
+        "cook_min": 15,
+        "total_min": 35
       },
       "composition": [
         {
           "ingredient": "masa_harina",
-          "quantity": 200,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
-            "form": "powder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 330,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "queso_fresco_block_cow",
-          "quantity": 80,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "garlic_raw",
-          "quantity": 9,
+          "ingredient": "butter_sup80pct",
+          "quantity": 25,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "chopped",
+            "role": "fat",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "cumin_spice_seed",
-          "quantity": 3,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "paprika_powder",
-          "quantity": 3,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 10,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -73841,21 +73830,10 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "butter_sup80pct",
-          "quantity": 30,
-          "unit": "g",
-          "meta": {
-            "role": "fat",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -73871,22 +73849,13 @@
             "note": "Pour accompagner les arepas",
             "optional": true
           }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 250,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
         "diet": [
-          "gluten_free"
+          "vegetarian",
+          "gluten_free",
+          "nut_free"
         ],
         "allergens": [
           "lactose",
@@ -73941,17 +73910,16 @@
         "(eau",
         "(farine",
         "45 minutes",
-        "ail",
         "arepas",
         "beurre",
         "butter",
         "coeliaque",
         "colombian",
-        "cumin",
+        "colombiennes",
         "eau",
+        "frais",
         "fresco",
         "fromage",
-        "garlic",
         "gluten free",
         "green",
         "grilling",
@@ -73965,8 +73933,6 @@
         "minceur",
         "moyen",
         "nixtamalise)",
-        "olive",
-        "paprika",
         "potable)",
         "queso",
         "salad",
@@ -73975,7 +73941,9 @@
         "sans gluten",
         "sans viande",
         "sel",
+        "sunflower",
         "table",
+        "tournesol",
         "vegetarien",
         "verte",
         "water"
@@ -73985,14 +73953,13 @@
       "servings_default": 4,
       "_quality_score": 0.97,
       "_chef_note": "Ces arepas sont un snack délicieux et croustillant, idéal pour accompagner un repas ou pour un en-cas rapide.",
-      "description": "Arepas croustillants au fromage, préparés avec de la farine de maïs précuite et des épices, offrant une texture dorée et croustillante à l'extérieur, douce et moelleuse à l'intérieur, typique de la cuisine colombienne.",
+      "description": "Arepas de queso de Colombie : pâte de farine de maïs précuite pétrie avec du fromage frais, galettes dorées à la poêle puis tartinées de beurre.",
       "instructions": [
-        "Étape 1: Mélanger 200 g de masa harina avec 250 ml d'eau tiède salée, 1/2 cuillère à café de cumin et 1/4 cuillère à café de paprika doux, puis pétrir pendant 2 minutes jusqu'à obtenir une pâte homogène.",
-        "Étape 2: Laisser reposer la pâte pendant 5 minutes à température ambiante, puis incorporer 80 g de fromage frais râpé et 9 g d'ail émincé, en mélangeant soigneusement.",
-        "Étape 3: Façonner des disques de 1,5 cm d'épaisseur et 10 cm de diamètre, en appliquant une légère pression pour obtenir une surface lisse, puis badigeonner d'huile d'olive.",
-        "Étape 4: Chauffer une poêle huilée avec de l'huile d'olive et 30g de beurre à feu moyen, puis cuire les arepas 5 minutes de chaque côté, jusqu'à croûte dorée et croustillante.",
-        "Étape 5: Servir chaud, en écoutant le son crépite léger.",
-        "Étape 6: Servir les arepas chauds dans des assiettes, accompagnés d'une salade verte et d'une sauce piquante."
+        "Étape 1 : Mélanger 250 g de farine de maïs précuite avec 3 g de sel, puis ajouter 330 ml d'eau tiède et pétrir 3 minutes.",
+        "Étape 2 : Incorporer 120 g de fromage frais émietté et laisser reposer 5 minutes.",
+        "Étape 3 : Former 8 boules, puis les aplatir en galettes de 1,5 cm d'épaisseur.",
+        "Étape 4 : Cuire dans une poêle huilée avec 10 ml d'huile, 6 à 7 minutes de chaque côté à feu moyen, jusqu'à ce qu'une croûte dorée se forme.",
+        "Étape 5 : Servir chaud, fendu et tartiné de 25 g de beurre au total."
       ],
       "diet_flags": {
         "vegan": false,
@@ -74008,81 +73975,114 @@
       "id": "main_arepas_fromage_vegan_3a4125",
       "titles": {
         "original": "Arepas Fromage (Vegan)",
-        "fr": "Arepas Fromage (Vegan)",
+        "fr": "Arepas reina pepiada, avocat et pois chiches (vegan)",
         "en": "Arepas Fromage (Vegan) (Vegan)"
       },
       "origin": {
-        "cuisine": "colombian",
-        "country": "colombia",
-        "region": "bogota",
-        "city": ""
+        "cuisine": "latin_american",
+        "country": "venezuela",
+        "region": "caracas",
+        "city": "caracas"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 13,
-        "prep_passive_min": 10,
-        "cook_min": 20,
-        "total_min": 43
+        "prep_active_min": 20,
+        "prep_passive_min": 5,
+        "cook_min": 15,
+        "total_min": 40
       },
       "composition": [
         {
           "ingredient": "masa_harina",
-          "quantity": 200,
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
-            "form": "powder",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "base_vegan_cheddar_024998",
-          "quantity": 150,
+          "ingredient": "water",
+          "quantity": 330,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "avocado_raw",
+          "quantity": 300,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chickpea_boiled",
+          "quantity": 240,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_onion_raw",
+          "quantity": 50,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lime_juice_fresh",
+          "quantity": 25,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 15,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "cumin_spice_seed",
-          "quantity": 2.5,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "paprika",
-          "quantity": 2.3,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "vegetable_oil_plant",
-          "quantity": 45.7,
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 10,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -74093,21 +74093,10 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "vegan_butter",
-          "quantity": 30,
-          "unit": "g",
-          "meta": {
-            "role": "fat",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -74134,28 +74123,18 @@
             "note": "Pour ajouter un peu de piquant",
             "optional": true
           }
-        },
-        {
-          "ingredient": "water",
-          "quantity": 250,
-          "unit": "ml",
-          "meta": {
-            "role": "liquid",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
         "diet": [
-          "gluten_free",
           "kid_friendly",
-          "lactose_free"
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
         ],
-        "allergens": [
-          "tree_nuts"
-        ],
+        "allergens": [],
         "technique": [
           "grilling"
         ],
@@ -74201,14 +74180,16 @@
         "(vegan)",
         "45 minutes",
         "ail",
+        "amerique latine",
         "arepas",
-        "base_vegan_cheddar_024998",
-        "beurre",
-        "butter",
+        "avocado",
+        "avocat",
+        "chiches",
+        "chickpea",
+        "citron",
         "coeliaque",
-        "colombian",
         "coriander",
-        "cumin",
+        "coriandre",
         "eau",
         "enfants",
         "facile enfants",
@@ -74218,56 +74199,62 @@
         "gluten free",
         "grilling",
         "harina",
-        "huile",
         "intermediaire",
         "kids",
+        "latin_american",
+        "latino",
         "leger",
         "light",
+        "lime",
         "low calorie",
         "mais",
         "masa",
         "minceur",
         "moyen",
         "nixtamalise)",
-        "oil",
-        "paprika",
+        "oignon",
+        "onion",
+        "pepiada,",
+        "pois",
         "potable)",
+        "red",
+        "reina",
+        "rouge",
         "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sel",
+        "sunflower",
         "table",
         "tomate",
         "tomato",
+        "tournesol",
         "vegan",
-        "vegetable",
-        "vegetal",
-        "vegetale",
         "vegetalien",
         "vegetarien",
+        "vert",
         "water"
       ],
       "difficulty_level": "medium",
-      "dish_type": "snack",
+      "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.93,
       "_chef_note": "Utilisez un fromage végétal râpé pour une texture plus crémeuse et une saveur plus intense.",
-      "description": "Arepas croustillants à la croûte dorée, au cœur moelleux et parfumés à l'ail, inspirés de la cuisine végétalienne latino-américaine, avec une texture crémeuse due au fromage végétal fondu à l'intérieur.",
+      "description": "Inspirées de la reina pepiada vénézuélienne : arepas grillées fourrées d'une salade crémeuse d'avocat, de pois chiches écrasés, de citron vert et de coriandre.",
       "instructions": [
-        "Étape 1 : Dans un grand bol, mélanger 200g de masa harina avec 250 ml d'eau tiède salée additionnée de 2,5g de graines de cumin et 2,3g de paprika doux, puis pétrir pendant 5 minutes jusqu'à obtenir une pâte homogène et lisse.",
-        "Étape 2 : Incorporer 150g de fromage végétal râpé et 15g d'ail émincé, malaxer jusqu'à ce que tous les ingrédients soient bien intégrés et la pâte devienne homogène.",
-        "Étape 3 : Façonner des disques d'arepas d'environ 1,5 cm d'épaisseur, laisser reposer pendant 2 minutes pour que la pâte se détende.",
-        "Étape 4 : Chauffer une poêle avec 45,7ml d'huile végétale et 30g de beurre végétal à feu moyen-vif (environ 180°C), cuire les arepas pendant 4 minutes de chaque côté, jusqu'à ce qu'ils soient dorés et croustillants.",
-        "Étape 5 : Saisir les arepas jusqu'à dorure blonde en les retournant régulièrement, puis les placer quelques secondes sous un grill pour faire fondre le fromage végétal à l'intérieur.",
-        "Étape 6 : Servir les arepas chauds, avec une salade de tomates fraîches et d'avocat pour un repas complet et équilibré, et accompagner d'une sauce ou d'un condiment typique de la cuisine latino-américaine végétalienne."
+        "Étape 1 : Mélanger 250 g de farine de maïs précuite avec 2 g de sel et 330 ml d'eau tiède, puis pétrir 3 minutes et laisser reposer 5 minutes.",
+        "Étape 2 : Former 8 galettes épaisses et les cuire dans une poêle huilée avec 10 ml d'huile, 6 à 7 minutes de chaque côté.",
+        "Étape 3 : Écraser 240 g de pois chiches à la fourchette avec 300 g d'avocat, 25 ml de jus de citron vert, 3 g d'ail râpé et 2 g de sel.",
+        "Étape 4 : Ajouter 50 g d'oignon rouge ciselé et 15 g de coriandre hachée.",
+        "Étape 5 : Fendre les arepas chaudes et les garnir généreusement de la préparation."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
         "gluten_free": true,
         "lactose_free": true,
-        "nut_free": false,
+        "nut_free": true,
         "raw": false,
         "kid_friendly": false
       }
@@ -74773,21 +74760,21 @@
       "id": "main_aubergines_parmigiana_sim_ad314c",
       "titles": {
         "original": "Aubergines Parmigiana (Vegan)",
-        "fr": "Aubergines Parmigiana Simple (Vegan)",
+        "fr": "Involtini d'aubergines à la sicilienne (vegan)",
         "en": "Aubergines Parmigiana (Vegan)"
       },
       "origin": {
         "cuisine": "italian",
         "country": "italy",
-        "region": "campanie",
-        "city": ""
+        "region": "sicile",
+        "city": "palerme"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
-        "prep_passive_min": 20,
+        "prep_active_min": 30,
+        "prep_passive_min": 0,
         "cook_min": 35,
-        "total_min": 66
+        "total_min": 65
       },
       "composition": [
         {
@@ -74796,40 +74783,95 @@
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tomato_sauce_salted_canned",
-          "quantity": 400,
-          "unit": "g",
-          "meta": {
-            "role": "condiment",
-            "form": "smooth",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "base_mozzarella_vegane_fca8c8",
-          "quantity": 250,
+          "ingredient": "breadcrumbs_dried",
+          "quantity": 80,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "sliced",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "pine_nuts_raw",
+          "quantity": 25,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "grape_dried",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "nutritional_yeast_flakes",
-          "quantity": 20,
+          "quantity": 15,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_crushed_canned",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -74862,17 +74904,6 @@
           "unit": "1 portion",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "salade verte",
-            "note": "Une salade verte pour accompagner le plat",
-            "optional": true
-          }
-        },
-        {
-          "ingredient": "basil_fresh_herb",
-          "quantity": 10,
-          "unit": "g",
-          "meta": {
-            "role": "herb",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -74882,11 +74913,13 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "high_protein",
+          "vegan",
+          "vegetarian",
           "lactose_free"
         ],
         "allergens": [
+          "gluten",
           "tree_nuts"
         ],
         "technique": [
@@ -74933,17 +74966,21 @@
       },
       "search_tokens": [
         "(vegan)",
+        "ail",
         "aubergine",
         "aubergines",
-        "base_mozzarella_vegane_fca8c8",
         "basil",
         "basilic",
         "biere",
-        "coeliaque",
+        "breadcrumbs",
+        "chapelure",
+        "d'aubergines",
         "eggplant",
-        "gluten free",
+        "garlic",
+        "grape",
         "green",
         "intermediaire",
+        "involtini",
         "italian",
         "italie",
         "italien",
@@ -74958,20 +74995,26 @@
         "minceur",
         "moyen",
         "nutritional",
+        "nuts",
         "olive",
         "parmigiana",
+        "parsley",
         "pasta",
         "pates",
+        "persil",
+        "pignons",
+        "pine",
+        "pins",
+        "raisin",
         "roasting",
         "salad",
         "salade",
         "salt",
-        "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
         "sel",
-        "simple",
+        "sicilienne",
         "table",
         "tomate",
         "tomato",
@@ -74985,21 +75028,18 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.92,
-      "description": "Plat italien à base d'aubergines, sauce tomate, fromage végétal râpé, avec une texture croustillante et al dente, et une odeur parfumée de tomates fraîches. Les aubergines sont cuites à la poêle puis gratinées au four.",
+      "description": "Roulés d'aubergines grillées farcis de chapelure, pignons, raisins secs et persil, à la mode de Palerme, cuits au four dans une sauce tomate.",
       "instructions": [
-        "Étape 1 : Trancher les aubergines en fines tranches, les saler généreusement et les laisser dégorger pendant 20 minutes pour éliminer l'excès d'eau, jusqu'à ce que les tranches soient légèrement flétries.",
-        "Étape 2 : Rincer les tranches d'aubergines et les sécher soigneusement avec du papier absorbant pour éviter l'excès d'humidité, en vérifiant que les tranches soient sèches au toucher.",
-        "Étape 3 : Faire chauffer l'huile d'olive dans une poêle à feu moyen et y faire dorer les tranches d'aubergines des deux côtés, jusqu'à obtenir une couleur dorée et une texture croustillante, en environ 5 minutes de chaque côté.",
-        "Étape 4 : Dans un plat à gratin, créer une couche de sauce tomate, suivie d'une couche d'aubergines cuites, puis de quelques feuilles de basilic et d'une couche de fromage végétal râpé, en veillant à répartir les ingrédients de manière homogène.",
-        "Étape 5 : Répéter les couches de sauce tomate, aubergines et fromage végétal jusqu'à épuisement des ingrédients, en terminant par une couche de fromage végétal, en prenant soin de maintenir une hauteur de couche régulière.",
-        "Étape 6 : Saupoudrer la surface de levure nutritionnelle pour ajouter une saveur umami et un peu de texture, en utilisant 20 grammes de levure nutritionnelle.",
-        "Étape 7 : Enfourner le plat à 180°C pendant 30 minutes, ou jusqu'à ce que la surface soit dorée et gratinée, et que les aubergines soient tendres, en vérifiant la cuisson après 25 minutes.",
-        "Étape 8 : Servir chaud, directement après la cuisson, en présentant le plat dans son plat à gratin et en proposant une salade verte à côté."
+        "Étape 1 : Couper 600 g d'aubergines dans la longueur en tranches de 5 mm, les badigeonner de 20 ml d'huile d'olive et les griller 3 minutes par face.",
+        "Étape 2 : Farce : dorer 80 g de chapelure dans 15 ml d'huile, puis la mélanger avec 25 g de pignons, 30 g de raisins secs trempés, 15 g de persil, 3 g d'ail haché, 15 g de levure nutritionnelle et 1 g de sel.",
+        "Étape 3 : Préchauffer le four à 190°C. Verser 400 g de tomates concassées mélangées à 3 g d'ail, 10 ml d'huile et 1 g de sel dans un plat.",
+        "Étape 4 : Déposer une cuillerée de farce sur chaque tranche, rouler et ranger les roulés serrés dans la sauce.",
+        "Étape 5 : Cuire 25 minutes, puis parsemer de 10 g de basilic."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": false,
         "raw": false,
@@ -75010,7 +75050,7 @@
       "id": "main_aubergines_parmigiana_sim_e5028f",
       "titles": {
         "original": "Aubergines Parmigiana",
-        "fr": "Aubergines Parmigiana Simple",
+        "fr": "Parmigiana légère d'aubergines et courgettes grillées",
         "en": "Aubergines Parmigiana Simple"
       },
       "origin": {
@@ -75021,59 +75061,92 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
-        "prep_passive_min": 20,
-        "cook_min": 35,
-        "total_min": 66
+        "prep_active_min": 20,
+        "prep_passive_min": 0,
+        "cook_min": 50,
+        "total_min": 70
       },
       "composition": [
         {
           "ingredient": "eggplant_raw",
-          "quantity": 600,
+          "quantity": 500,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tomato_sauce_salted_canned",
-          "quantity": 400,
+          "ingredient": "green_zucchini_squash_raw",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_crushed_canned",
+          "quantity": 500,
           "unit": "g",
           "meta": {
             "role": "condiment",
-            "form": "smooth",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cows_milk_mozzarella_cow",
-          "quantity": 250,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "sliced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 60,
+          "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -75094,43 +75167,23 @@
           }
         },
         {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 240,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "diced",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "green_salad_raw_plain",
           "quantity": null,
           "unit": "une portion",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "salade verte",
-            "note": "Pour un accompagnement frais",
-            "optional": true
-          }
-        },
-        {
-          "ingredient": "white_bread_roasted",
-          "quantity": null,
-          "unit": "une tranche",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "pain grillé",
-            "note": "Pour un accompagnement croustillant",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
       "tags": {
         "diet": [
+          "high_protein",
+          "vegetarian",
           "gluten_free",
-          "high_protein"
+          "nut_free"
         ],
         "allergens": [
           "lactose",
@@ -75183,21 +75236,28 @@
         }
       },
       "search_tokens": [
+        "ail",
         "aubergine",
         "aubergines",
-        "blanc",
-        "bread",
+        "basil",
+        "basilic",
         "coeliaque",
+        "courgette",
+        "courgettes",
         "cow's",
+        "d'aubergines",
         "eggplant",
+        "garlic",
         "gluten free",
         "green",
+        "grillees",
         "intermediaire",
         "italian",
         "italie",
         "italien",
         "lait",
         "leger",
+        "legere",
         "lent",
         "light",
         "long",
@@ -75210,7 +75270,6 @@
         "mozzarella",
         "olive",
         "oven_cooking",
-        "pain",
         "parmesan",
         "parmigiana",
         "pasta",
@@ -75222,27 +75281,26 @@
         "sans viande",
         "sel",
         "simple",
+        "squash",
         "table",
         "tomate",
         "tomato",
         "vache",
         "vegetarien",
         "verte",
-        "white",
-        "wok"
+        "wok",
+        "zucchini"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.84,
-      "description": "Plat italien végétarien à base d'aubergines cuites au four pour une surface gratinée dorée, cœur fondant et aubergines tendres, avec une sauce tomate onctueuse et des saveurs de fromage mozzarella et parmesan.",
+      "description": "Parmigiana plus légère : aubergines et courgettes grillées au four plutôt que frites, tomates concassées, mozzarella et un peu de parmesan.",
       "instructions": [
-        "Étape 1: Trancher les aubergines (600g) en rondelles fines, les saler avec du sel (5g) pour les faire dégorger pendant 20 minutes, puis les rincer et les sécher délicatement.",
-        "Étape 2: Faire chauffer l'huile d'olive (45ml) dans une poêle à feu moyen et y faire dorer les tranches d'aubergines des deux côtés, pendant environ 5 minutes de chaque côté, jusqu'à obtenir une texture tendre et une couleur dorée.",
-        "Étape 3: Préparer la sauce tomate en utilisant des tomates fraîches (240g) et de la sauce tomate (400g), en ajustant l'assaisonnement selon vos goûts.",
-        "Étape 4: Dans un plat à gratin, créer une couche d'aubergines, suivie d'une couche de sauce tomate, puis d'une couche de fromage mozzarella râpé (250g) et de parmesan râpé (60g), en répétant ce processus jusqu'à épuisement des ingrédients.",
-        "Étape 5: Enfourner le plat à 180°C pendant 30 minutes, jusqu'à ce que la surface soit gratinée et dorée, et que les aubergines soient tendres.",
-        "Étape 6: Servir chaud, accompagné d'une salade verte ou de pain grillé cette création végétarienne qui allie saveurs et textures."
+        "Étape 1 : Préchauffer le four à 220°C. Couper 500 g d'aubergines et 300 g de courgettes en tranches de 5 mm, les badigeonner de 20 ml d'huile d'olive et les griller 15 minutes sur des plaques.",
+        "Étape 2 : Chauffer 500 g de tomates concassées avec 6 g d'ail écrasé, 10 ml d'huile et 2 g de sel, 10 minutes.",
+        "Étape 3 : Baisser le four à 190°C. Monter en couches dans un plat : sauce, légumes grillés, basilic et 200 g de mozzarella en tranches.",
+        "Étape 4 : Terminer par la sauce et 30 g de parmesan, puis cuire 25 minutes."
       ],
       "diet_flags": {
         "vegan": false,
@@ -75802,21 +75860,21 @@
       "id": "main_baked_ziti_b9e13e",
       "titles": {
         "original": "Baked Ziti",
-        "fr": "Baked Ziti",
+        "fr": "Baked ziti new-yorkais à la ricotta",
         "en": "Baked Ziti"
       },
       "origin": {
-        "cuisine": "italian",
-        "country": "italy",
-        "region": "sicile",
-        "city": "naples"
+        "cuisine": "american",
+        "country": "united_states",
+        "region": "new_york",
+        "city": "new_york"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 13,
-        "prep_passive_min": 10,
-        "cook_min": 30,
-        "total_min": 53
+        "prep_active_min": 15,
+        "prep_passive_min": 0,
+        "cook_min": 45,
+        "total_min": 60
       },
       "composition": [
         {
@@ -75831,52 +75889,85 @@
           }
         },
         {
-          "ingredient": "tomato_sauce_salted_canned",
-          "quantity": 400,
+          "ingredient": "tomato_crushed_canned",
+          "quantity": 600,
           "unit": "g",
           "meta": {
             "role": "condiment",
-            "form": "smooth",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "ricotta_whole_cow",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cows_milk_mozzarella_cow",
-          "quantity": 250,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "sliced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 60,
+          "quantity": 40,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "yellow_onion_raw",
-          "quantity": 150,
+          "quantity": 120,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "oregano_spice_dried",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45,
+          "quantity": 25,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -75887,22 +75978,11 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 2,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
             "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 240,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "diced",
             "state": "raw",
             "preparation": ""
           }
@@ -75913,20 +75993,22 @@
           "unit": "1 poignée",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "persil frais ciselé",
-            "note": "Pour une touche de fraîcheur",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
       "tags": {
         "diet": [
-          "high_protein"
+          "high_protein",
+          "vegetarian",
+          "nut_free"
         ],
         "allergens": [
+          "gluten",
           "lactose",
-          "milk",
-          "gluten"
+          "milk"
         ],
         "technique": [
           "water_cooking",
@@ -75976,56 +76058,61 @@
       },
       "search_tokens": [
         "1 heure",
+        "ail",
+        "americain",
+        "american",
         "baked",
+        "burger",
         "cow's",
+        "garlic",
         "intermediaire",
-        "italian",
-        "italie",
-        "italien",
         "jaune",
         "lait",
         "leger",
         "light",
         "low calorie",
-        "mediterranee",
         "milk",
         "minceur",
         "moyen",
         "mozzarella",
+        "new",
         "oignon",
         "olive",
         "onion",
+        "oregano",
+        "origan",
         "oven_cooking",
         "parmesan",
         "parsley",
         "pasta",
         "pates",
         "persil",
+        "ricotta",
         "salt",
         "sans viande",
         "sel",
         "table",
         "tomate",
         "tomato",
+        "usa",
         "vache",
         "vegetarien",
         "water_cooking",
         "yellow",
+        "yorkais",
         "ziti"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.89,
-      "description": "Pâtes ziti cuites al dente, mélangées avec une sauce tomate parfumée et du fromage râpé, puis gratinées au four jusqu'à obtenir une croûte dorée et croustillante.",
+      "description": "Gratin de pâtes italo-américain de New York : ziti en sauce tomate, cœur de ricotta, mozzarella filante et parmesan, cuit au four jusqu'à ce qu'il bouillonne.",
       "instructions": [
-        "Cuire les pâtes ziti al dente dans 2 litres d'eau bouillante salée pendant 8-10 minutes, puis les égoutter. Les pâtes devraient être fermes et non collantes.",
-        "Faire revenir 150g d'oignon jaune émincé dans 45ml d'huile d'olive extra vierge à feu moyen pendant 5 minutes, en remuant occasionnellement, jusqu'à ce qu'il soit translucide et parfumé.",
-        "Ajouter 400g de sauce tomate et 240g de tomates fraîches concassées, puis assaisonner avec 2g de sel. La sauce devrait être parfumée et crémeuse.",
-        "Mélanger les pâtes cuites avec la sauce tomate et la moitié du fromage râpé (125g). Les pâtes devraient être bien enrobées de sauce.",
-        "Recouvrir avec le reste du fromage râpé (125g) et parsemer de parmesan râpé (60g).",
-        "Enfourner à 190°C pendant 25 minutes jusqu'à gratinage. La croûte devrait être dorée et croustillante.",
-        "Servir aussitôt."
+        "Étape 1 : Sauce : faire revenir 120 g d'oignon et 6 g d'ail dans 25 ml d'huile d'olive, ajouter 600 g de tomates concassées, 1 g d'origan et 2 g de sel, puis mijoter 15 minutes.",
+        "Étape 2 : Cuire 320 g de ziti 2 minutes de moins que le temps indiqué, dans l'eau salée avec 1 g de sel, puis les mélanger aux deux tiers de la sauce.",
+        "Étape 3 : Préchauffer le four à 200°C. Étaler la moitié des pâtes dans un plat, puis déposer 250 g de ricotta en cuillerées.",
+        "Étape 4 : Couvrir du reste des pâtes et de la sauce, puis de 150 g de mozzarella et 40 g de parmesan.",
+        "Étape 5 : Cuire 20 minutes, jusqu'à ce que le dessus soit doré et bouillonnant."
       ],
       "diet_flags": {
         "vegan": false,
@@ -76041,21 +76128,21 @@
       "id": "main_baked_ziti_vegan_ad57f8",
       "titles": {
         "original": "Baked Ziti (Vegan)",
-        "fr": "Baked Ziti (Vegan)",
+        "fr": "Pasta al forno aux légumes rôtis et mozzarella végétale (vegan)",
         "en": "Vegan Baked Ziti"
       },
       "origin": {
         "cuisine": "italian",
         "country": "italy",
-        "region": "sicile",
+        "region": "",
         "city": ""
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 13,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 25,
-        "total_min": 38
+        "cook_min": 45,
+        "total_min": 60
       },
       "composition": [
         {
@@ -76070,52 +76157,85 @@
           }
         },
         {
-          "ingredient": "tomato_sauce_salted_canned",
-          "quantity": 400,
+          "ingredient": "green_zucchini_squash_raw",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_bell_pepper_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_crushed_canned",
+          "quantity": 500,
           "unit": "g",
           "meta": {
             "role": "condiment",
-            "form": "smooth",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "base_mozzarella_vegane_fca8c8",
-          "quantity": 250,
+          "quantity": 150,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "sliced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "nutritional_yeast_flakes",
-          "quantity": 20,
+          "quantity": 15,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "yellow_onion_raw",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 45.7,
+          "quantity": 40,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -76126,22 +76246,11 @@
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 2,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
             "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 240,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "diced",
             "state": "raw",
             "preparation": ""
           }
@@ -76151,6 +76260,8 @@
         "diet": [
           "diabetes_friendly",
           "high_protein",
+          "vegan",
+          "vegetarian",
           "lactose_free"
         ],
         "allergens": [
@@ -76198,57 +76309,73 @@
       },
       "search_tokens": [
         "(vegan)",
-        "45 minutes",
+        "1 heure",
+        "aux",
         "baked",
         "base_mozzarella_vegane_fca8c8",
+        "basil",
+        "basilic",
+        "bell",
         "biere",
         "boiling",
+        "courgette",
+        "forno",
+        "green",
         "intermediaire",
         "italian",
         "italie",
         "italien",
         "jaune",
         "leger",
+        "legumes",
         "levure",
         "light",
         "low calorie",
         "mediterranee",
         "minceur",
         "moyen",
+        "mozzarella",
         "nutritional",
         "oignon",
         "olive",
         "onion",
         "pasta",
         "pates",
+        "pepper",
+        "poivron",
+        "pâtes",
+        "red",
         "roasting",
+        "rotis",
+        "rouge",
         "salt",
         "sans produit animal",
         "sans viande",
         "sel",
+        "squash",
         "table",
         "tomate",
         "tomato",
         "vegan",
+        "vegetale",
         "vegetalien",
         "vegetarien",
         "yeast",
         "yellow",
-        "ziti"
+        "ziti",
+        "zucchini"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.92,
-      "description": "Pâtes ziti cuites al dente, mélangées avec une sauce tomate parfumée et du fromage végétal fondu, puis cuites au four jusqu'à ce que le fromage soit doré et bien cuit, dans la tradition italienne, avec une texture fondante et une saveur parfumée.",
+      "description": "Penne au four avec courgettes et poivrons rôtis, sauce tomate au basilic et mozzarella végétale gratinée.",
       "instructions": [
-        "Étape 1 : Cuire les 320g de pâtes ziti dans une grande quantité d'eau bouillante salée pendant environ 8 minutes, ou jusqu'à ce qu'elles soient al dente, puis les égoutter.",
-        "Étape 2 : Faire revenir les 150g d'oignon jaune dans les 45,7ml d'huile d'olive extra vierge à feu moyen, en remuant occasionnellement, jusqu'à ce qu'ils soient translucides et parfumés, en environ 5 minutes.",
-        "Étape 3 : Ajouter les 400g de sauce tomate, les 240g de tomates fraîches concassées et 2g de sel, puis faire mijoter pendant environ 10 minutes en remuant occasionnellement, jusqu'à ce que la sauce ait réduit légèrement et ait un parfum intense.",
-        "Étape 4 : Mélanger les pâtes cuites avec la sauce tomate et la moitié des 250g de fromage végétal râpé, en veillant à bien enrober les pâtes de sauce.",
-        "Étape 5 : Verser le mélange dans un plat à gratin, recouvrir du reste de fromage végétal râpé et saupoudrer de 20g de levure nutritionnelle.",
-        "Étape 6 : Enfourner à 190°C pendant 25 minutes, ou jusqu'à ce que le fromage soit fondu et doré, en surveillant la couleur pour éviter une coloration trop intense.",
-        "Étape 7 : Servir chaud, garni de tranches de tomates fraîches."
+        "Étape 1 : Préchauffer le four à 220°C. Rôtir 250 g de courgettes et 200 g de poivron en dés avec 25 ml d'huile d'olive, 20 minutes.",
+        "Étape 2 : Faire revenir 100 g d'oignon dans 15 ml d'huile, ajouter 500 g de tomates concassées et 2 g de sel, puis mijoter 10 minutes. Ajouter 15 g de basilic.",
+        "Étape 3 : Cuire 320 g de penne 2 minutes de moins que le temps indiqué dans l'eau salée avec 1 g de sel.",
+        "Étape 4 : Mélanger pâtes, légumes rôtis, sauce et 15 g de levure nutritionnelle, puis verser dans un plat.",
+        "Étape 5 : Couvrir de 150 g de mozzarella végétale et gratiner 15 minutes à 200°C."
       ],
       "diet_flags": {
         "vegan": true,
@@ -94316,129 +94443,85 @@
       "id": "main_parmigiana_di_melanzane_6bd49f",
       "titles": {
         "original": "Parmigiana di Melanzane",
-        "fr": "Parmigiana Di Melanzane",
+        "fr": "Parmigiana di melanzane napolitaine",
         "en": "Parmigiana Di Melanzane"
       },
       "origin": {
         "cuisine": "italian",
         "country": "italy",
-        "region": "campanie",
-        "city": "parme"
+        "region": "campania",
+        "city": "naples"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
-        "prep_passive_min": 0,
-        "cook_min": 35,
-        "total_min": 52
+        "prep_active_min": 30,
+        "prep_passive_min": 45,
+        "cook_min": 45,
+        "total_min": 120
       },
       "composition": [
         {
           "ingredient": "eggplant_raw",
-          "quantity": 600,
+          "quantity": 800,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tomato_sauce_salted_canned",
-          "quantity": 400,
+          "ingredient": "tomato_crushed_canned",
+          "quantity": 500,
           "unit": "g",
           "meta": {
             "role": "condiment",
-            "form": "smooth",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "cows_milk_mozzarella_cow",
-          "quantity": 250,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "sliced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 60,
+          "quantity": 50,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 80,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 9,
+          "quantity": 6,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "olive_oil_plant",
-          "quantity": 45,
-          "unit": "ml",
-          "meta": {
-            "role": "fat",
             "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 2,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "black_pepper_spice",
-          "quantity": 2,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 240,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "diced",
             "state": "raw",
             "preparation": ""
           }
@@ -94449,7 +94532,51 @@
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "chiffonade",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 50,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -94458,8 +94585,10 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
+          "high_protein",
+          "vegetarian",
           "gluten_free",
-          "high_protein"
+          "nut_free"
         ],
         "allergens": [
           "lactose",
@@ -94511,7 +94640,6 @@
         }
       },
       "search_tokens": [
-        "1 heure",
         "ail",
         "aubergine",
         "basil",
@@ -94528,14 +94656,18 @@
         "italien",
         "lait",
         "leger",
+        "lent",
         "light",
+        "long",
         "low calorie",
         "mediterranee",
         "melanzane",
+        "mijote",
         "milk",
         "minceur",
         "moyen",
         "mozzarella",
+        "napolitaine",
         "noir",
         "oignon",
         "olive",
@@ -94551,9 +94683,11 @@
         "sans gluten",
         "sans viande",
         "sel",
+        "sunflower",
         "table",
         "tomate",
         "tomato",
+        "tournesol",
         "vache",
         "vegetarien",
         "wok"
@@ -94562,15 +94696,13 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.92,
-      "description": "Cuisson créative de l'aubergine, avec une surface gratinée dorée, un cœur fondant et parfumé, sur une base de sauce tomate onctueuse et de fromage fondu, dans la tradition italienne.",
+      "description": "La parmigiana de Naples : tranches d'aubergines frites, sauce tomate au basilic, mozzarella et parmesan en couches, gratinées au four.",
       "instructions": [
-        "Étape 1: Couper les aubergines en tranches de 7 mm, saupoudrer de sel et laisser dégorger pendant 20 minutes pour en extraire l'excès d'eau, sentant leur texture devenir plus ferme.",
-        "Étape 2: Dans une poêle, chauffer 45 ml d'huile d'olive à feu vif et frire les tranches d'aubergine pendant 2-3 minutes par face, jusqu'à ce qu'elles soient dorées et croustillantes, avec une odeur délicieuse de noisette.",
-        "Étape 3: Préparer la sauce tomate en faisant revenir 9g d'ail dans un peu d'huile d'olive, puis en ajoutant 240g de tomates concassées, 400g de sauce tomate et l'oignon émincé. Cuire pendant 12 minutes à feu moyen pour obtenir une sauce onctueuse et parfumée.",
-        "Étape 4: Dans un plat, alterner des couches de sauce tomate, d'aubergines, de mozzarella, de feuilles de basilic et de parmesan, en commençant et en finissant par une couche de sauce tomate, pour une harmonie de saveurs et de textures.",
-        "Étape 5: Enfourner à 180°C pendant 30 minutes, en vérifiant régulièrement la surface pour obtenir une belle coloration dorée, avec une légère croûte croustillante.",
-        "Étape 6: Laisser reposer pendant 10 minutes avant de servir, pour que les saveurs se mélangent et que la texture soit parfaite, avec une aubergine fondante et une sauce tomate intense.",
-        "Étape 7: Servir chaud."
+        "Étape 1 : Couper 800 g d'aubergines en tranches de 5 mm, les saler légèrement avec 2 g de sel et les laisser dégorger 30 minutes, puis les éponger.",
+        "Étape 2 : Les frire par petites quantités dans l'huile de tournesol à 170°C, 2 minutes par face (environ 50 ml d'huile absorbée), puis les égoutter.",
+        "Étape 3 : Sauce : faire revenir 80 g d'oignon et 6 g d'ail dans 15 ml d'huile d'olive, ajouter 500 g de tomates concassées, 1 g de sel et 1 g de poivre, puis mijoter 15 minutes. Ajouter 20 g de basilic.",
+        "Étape 4 : Préchauffer le four à 190°C. Monter en couches : sauce, aubergines, 200 g de mozzarella en tranches et 50 g de parmesan, en terminant par sauce et parmesan.",
+        "Étape 5 : Cuire 30 minutes, puis laisser reposer 15 minutes avant de servir."
       ],
       "diet_flags": {
         "vegan": false,
@@ -94586,7 +94718,7 @@
       "id": "main_parmigiana_di_melanzane_v_8f8b8b",
       "titles": {
         "original": "Parmigiana di Melanzane (Vegan)",
-        "fr": "Parmigiana Di Melanzane (Vegan)",
+        "fr": "Parmigiana à la mozzarella végétale et chapelure aux herbes (vegan)",
         "en": "Parmigiana di Melanzane (Vegan)"
       },
       "origin": {
@@ -94597,74 +94729,107 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
-        "prep_passive_min": 20,
-        "cook_min": 45,
-        "total_min": 82
+        "prep_active_min": 20,
+        "prep_passive_min": 0,
+        "cook_min": 50,
+        "total_min": 70
       },
       "composition": [
         {
           "ingredient": "eggplant_raw",
-          "quantity": 600,
+          "quantity": 700,
           "unit": "g",
           "meta": {
             "role": "vegetable",
-            "form": "cubed",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tomato_sauce_salted_canned",
-          "quantity": 400,
+          "ingredient": "tomato_crushed_canned",
+          "quantity": 500,
           "unit": "g",
           "meta": {
             "role": "condiment",
-            "form": "smooth",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "base_mozzarella_vegane_fca8c8",
-          "quantity": 250,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "sliced",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "breadcrumbs_dried",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "topping",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "nutritional_yeast_flakes",
-          "quantity": 20,
+          "quantity": 15,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "garlic_raw",
-          "quantity": 15,
+          "quantity": 9,
           "unit": "g",
           "meta": {
             "role": "aromatic",
-            "form": "chopped",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "oregano_spice_dried",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -94693,33 +94858,11 @@
         },
         {
           "ingredient": "black_pepper_spice",
-          "quantity": 2,
+          "quantity": 1,
           "unit": "g",
           "meta": {
             "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 240,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "diced",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "basil_fresh_herb",
-          "quantity": 20,
-          "unit": "g",
-          "meta": {
-            "role": "herb",
-            "form": "chiffonade",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -94728,11 +94871,13 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "gluten_free",
           "high_protein",
+          "vegan",
+          "vegetarian",
           "lactose_free"
         ],
         "allergens": [
+          "gluten",
           "tree_nuts"
         ],
         "technique": [
@@ -94780,15 +94925,17 @@
         "(vegan)",
         "ail",
         "aubergine",
+        "aux",
         "base_mozzarella_vegane_fca8c8",
         "basil",
         "basilic",
         "biere",
         "black",
-        "coeliaque",
+        "breadcrumbs",
+        "chapelure",
         "eggplant",
         "garlic",
-        "gluten free",
+        "herbes",
         "intermediaire",
         "italian",
         "italie",
@@ -94804,11 +94951,14 @@
         "mijote",
         "minceur",
         "moyen",
+        "mozzarella",
         "noir",
         "nutritional",
         "oignon",
         "olive",
         "onion",
+        "oregano",
+        "origan",
         "parmigiana",
         "pasta",
         "pates",
@@ -94816,7 +94966,6 @@
         "poivre",
         "roasting",
         "salt",
-        "sans gluten",
         "sans produit animal",
         "sans viande",
         "sauteed",
@@ -94825,6 +94974,7 @@
         "tomate",
         "tomato",
         "vegan",
+        "vegetale",
         "vegetalien",
         "vegetarien",
         "yeast"
@@ -94833,23 +94983,18 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.99,
-      "description": "Plat italien où des tranches d'aubergine croustillantes et al dente alternent avec une sauce tomate parfumée et du fromage végétal râpé, dans une harmonie de textures et de saveurs méditerranéennes.",
+      "description": "Parmigiana végétale : aubergines rôties, sauce tomate à l'oignon et au basilic, mozzarella vegan, et une croûte de chapelure à la levure nutritionnelle et aux herbes.",
       "instructions": [
-        "Étape 1 : Couper les aubergines en tranches de 7 mm, les saler généreusement avec du sel et les laisser dégorger pendant 20 minutes pour éliminer l'excès d'eau, leur conférant une texture plus tendre.",
-        "Étape 2 : Rincer les tranches d'aubergines et les sécher soigneusement avec du papier absorbant pour éviter l'excès d'humidité, essentiel pour une friture parfaite.",
-        "Étape 3 : Faire chauffer l'huile d'olive dans une poêle à feu vif et y faire frire les tranches d'aubergines pendant 3 minutes de chaque côté, jusqu'à obtenir une couleur dorée et une texture croustillante.",
-        "Étape 4 : Préparer la sauce tomate en faisant revenir l'ail dans un peu d'huile d'olive, puis en ajoutant l'oignon émincé, les tomates concassées, le sel et le poivre, laissant mijoter pour développer les saveurs.",
-        "Étape 5 : Laisser cuire la sauce tomate pendant 12 minutes à feu moyen, en remuant régulièrement, jusqu'à ce qu'elle soit riche et parfumée, avec une texture onctueuse.",
-        "Étape 6 : Dans un plat à gratin, créer une couche de sauce tomate, suivie d'une couche d'aubergines cuites, puis de feuilles de basilic et d'une couche de fromage végétal râpé, en alternant les couches pour une présentation visuelle attrayante.",
-        "Étape 7 : Répéter les couches de sauce tomate, aubergines et fromage végétal jusqu'à épuisement des ingrédients, en terminant par une couche de fromage végétal pour un fini croustillant.",
-        "Étape 8 : Saupoudrer la surface de levure nutritionnelle pour ajouter une saveur umami et un peu de texture, enrichissant ainsi le plat.",
-        "Étape 9 : Enfourner le plat à 180°C pendant 30 minutes, ou jusqu'à ce que la surface soit dorée et gratinée, et que les aubergines soient tendres.",
-        "Étape 10 : Laisser reposer le plat pendant 10 minutes avant de servir, pour que les saveurs se mélangent et que les aubergines gardent leur texture, crucial."
+        "Étape 1 : Préchauffer le four à 220°C. Badigeonner 700 g d'aubergines en tranches de 25 ml d'huile d'olive et les rôtir 20 minutes.",
+        "Étape 2 : Sauce : faire revenir 100 g d'oignon et 9 g d'ail dans 10 ml d'huile, ajouter 500 g de tomates concassées, 2 g de sel et 1 g de poivre, puis mijoter 15 minutes. Ajouter 20 g de basilic.",
+        "Étape 3 : Mélanger 40 g de chapelure, 15 g de levure nutritionnelle, 1 g d'origan et 10 ml d'huile d'olive.",
+        "Étape 4 : Baisser le four à 190°C. Monter en couches : sauce, aubergines, 200 g de mozzarella végétale, en terminant par la sauce.",
+        "Étape 5 : Couvrir de chapelure aux herbes et cuire 30 minutes, jusqu'à ce que le dessus soit doré."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
-        "gluten_free": true,
+        "gluten_free": false,
         "lactose_free": true,
         "nut_free": false,
         "raw": false,
@@ -108070,7 +108215,7 @@
       "id": "pasta_lasagnes_8adf61",
       "titles": {
         "original": "Lasagnes",
-        "fr": "Lasagnes",
+        "fr": "Lasagnes aux épinards et à la ricotta",
         "en": "Lasagnes"
       },
       "origin": {
@@ -108081,37 +108226,125 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
-        "prep_passive_min": 15,
-        "cook_min": 40,
-        "total_min": 72
+        "prep_active_min": 30,
+        "prep_passive_min": 10,
+        "cook_min": 45,
+        "total_min": 85
       },
       "composition": [
         {
-          "ingredient": "garlic_raw",
-          "quantity": 9,
+          "ingredient": "pasta_raw_dried",
+          "quantity": 250,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "chopped",
+            "role": "base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "spinach_raw_mature",
+          "quantity": 500,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "ricotta_whole_cow",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_crushed_canned",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "fruit",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "base_bechamel_7db18f",
+          "quantity": 300,
+          "unit": "ml",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cows_milk_mozzarella_cow",
+          "quantity": 125,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parmesan_grated_dried_cow",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "ingredient",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
             "role": "aromatic_base",
-            "form": "sliced_thin",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 9,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "nutmeg_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 25,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -108121,56 +108354,12 @@
           }
         },
         {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "ingredient": "table_salt_unenriched",
+          "quantity": 2,
           "unit": "g",
           "meta": {
-            "role": "fruit",
-            "form": "roughly_chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "cows_milk_mozzarella_cow",
-          "quantity": 250,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "sliced",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "parmesan_grated_dried_cow",
-          "quantity": 60,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "grated",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "base_bechamel_7db18f",
-          "quantity": 400,
-          "unit": "ml",
-          "meta": {
-            "role": "ingredient",
+            "role": "seasoning",
             "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "pasta_raw_dried",
-          "quantity": 320,
-          "unit": "g",
-          "meta": {
-            "role": "base",
-            "form": "dried",
             "state": "raw",
             "preparation": ""
           }
@@ -108181,16 +108370,18 @@
           "unit": "1 portion",
           "meta": {
             "role": "serving_suggestion",
-            "ingredient_fr": "salade verte fraîche",
-            "note": "Pour un repas complet et équilibré",
-            "optional": true
+            "form": "",
+            "state": "raw",
+            "preparation": ""
           }
         }
       ],
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "high_protein"
+          "high_protein",
+          "vegetarian",
+          "nut_free"
         ],
         "allergens": [
           "gluten",
@@ -108247,11 +108438,13 @@
       },
       "search_tokens": [
         "ail",
+        "aux",
         "base_bechamel_7db18f",
         "braising",
         "cow's",
+        "epinard",
+        "epinards",
         "garlic",
-        "green",
         "intermediaire",
         "italian",
         "italie",
@@ -108269,6 +108462,8 @@
         "minceur",
         "moyen",
         "mozzarella",
+        "muscade",
+        "nutmeg",
         "oignon",
         "olive",
         "onion",
@@ -108276,14 +108471,16 @@
         "parmesan",
         "pasta",
         "pates",
-        "salad",
-        "salade",
+        "ricotta",
+        "salt",
         "sans viande",
+        "sel",
+        "spinach",
+        "table",
         "tomate",
         "tomato",
         "vache",
         "vegetarien",
-        "verte",
         "wok"
       ],
       "difficulty_level": "medium",
@@ -108291,15 +108488,13 @@
       "servings_default": 4,
       "_quality_score": 0.97,
       "_chef_note": "Pour une meilleure saveur, utilisez des tomates fraîches et des herbes aromatiques pour la sauce tomate.",
-      "description": "Lasagnes créatives, sauce tomate intense et fromage fondu, texture crémeuse et parfumée, origine italienne, avec des couches de pâtes et de sauce tomate, parfaites pour un repas complet et équilibré",
+      "description": "Lasagnes végétariennes : couches de pâtes, épinards à l'ail mêlés de ricotta, sauce tomate, béchamel, mozzarella et parmesan gratinés.",
       "instructions": [
-        "Étape 1: Faire chauffer 45 ml d'huile d'olive dans une poêle à feu moyen-vif, puis ajouter 9 g d'ail émincé et 150 g d'oignon jaune émincé, cuire 3 min jusqu'à parfum légèrement crépite et les oignons translucides.",
-        "Étape 2: Ajouter 300 g de tomates concassées et cuire 8 min à feu moyen, en remuant occasionnellement, jusqu'à obtention d'une sauce épaisse et légèrement réduite, avec une couleur rouge intense.",
-        "Étape 3: Réchauffer doucement les 400 ml de béchamel jusqu'à ce qu'elle soit lisse et nappante.",
-        "Étape 4: Verser la sauce tomate et la béchamel dans un plat huilé, puis alterner couches de 320 g de pâtes de blé sèches, sauce tomate et 250 g de fromage râpé, répéter 3 à 4 fois, en terminant par une couche de fromage râpé.",
-        "Étape 5: Couvrir de papier aluminium et enfourner 25 min à 180°C, puis retirer le papier et cuire encore 10 min jusqu'à surface dorée et gratinée, avec une texture croustillante et une odeur appétissante.",
-        "Étape 6: Laisser reposer 10 min avant de servir, savourer la texture crémeuse et le goût intense des lasagnes, avec une salade verte fraîche ou un pain grillé pour un repas complet et équilibré.",
-        "Étape 7: Servir chaud, en terminant par une couche de parmesan râpé, pour un repas complet et équilibré."
+        "Étape 1 : Faire tomber 500 g d'épinards avec 6 g d'ail dans 10 ml d'huile d'olive, 4 minutes, puis les presser, les hacher et les mélanger à 250 g de ricotta, 1 g de muscade et 1 g de sel.",
+        "Étape 2 : Sauce : faire revenir 100 g d'oignon et 3 g d'ail dans 15 ml d'huile, ajouter 400 g de tomates concassées et 1 g de sel, puis mijoter 10 minutes.",
+        "Étape 3 : Préchauffer le four à 180°C. Dans un plat, alterner sauce tomate, feuilles de lasagne (250 g), mélange épinards-ricotta et béchamel, sur trois couches.",
+        "Étape 4 : Terminer par la béchamel restante (300 ml au total), 125 g de mozzarella en morceaux et 40 g de parmesan.",
+        "Étape 5 : Cuire 40 minutes, puis laisser reposer 10 minutes."
       ],
       "diet_flags": {
         "vegan": false,
@@ -108315,7 +108510,7 @@
       "id": "pasta_lasagnes_de_legumes_ultra_9b6a4e",
       "titles": {
         "original": "Vegetable Lasagna",
-        "fr": "Lasagnes de légumes ultra structurées",
+        "fr": "Lasagnes aux légumes grillés, béchamel au lait de coco (vegan)",
         "en": "Ultra Structured Vegetable Lasagna"
       },
       "origin": {
@@ -108494,8 +108689,11 @@
         }
       },
       "search_tokens": [
+        "(vegan)",
         "all",
         "aubergine",
+        "aux",
+        "bechamel",
         "biere",
         "ble",
         "coco",
@@ -108505,10 +108703,12 @@
         "farine",
         "flour",
         "green",
+        "grilles,",
         "intermediaire",
         "italian",
         "italie",
         "italien",
+        "lait",
         "lasagna",
         "lasagnes",
         "leger",
@@ -108537,7 +108737,6 @@
         "sel",
         "squash",
         "structured",
-        "structurees",
         "table",
         "tomate",
         "tomato",
@@ -108557,7 +108756,7 @@
       "servings_default": 4,
       "_quality_score": 0.8,
       "_chef_note": "Pour une meilleure tenue, utilisez des feuilles de lasagne sèches et suivez les instructions de cuisson.",
-      "description": "Lasagnes végétaliennes créatives, avec des couches de feuilles de lasagne sèches, de sauce tomate onctueuse et de béchamel végétalienne, le tout gratiné à la levure nutritionnelle râpée, offrant une texture tendre et une saveur intense, typique de la cuisine italienne revisitée",
+      "description": "Lasagnes vegan aux courgettes et aubergines grillées, sauce tomate et béchamel au lait de coco relevée de levure nutritionnelle.",
       "instructions": [
         "Étape 1 : Préparez la sauce tomate en faisant revenir les oignons dans 30 ml d'huile d'olive. Ajoutez les aubergines en dés (préalablement saisies à feu vif pendant 6 minutes), les courgettes et les tomates concassées. Mijotez pendant 20 minutes jusqu'à obtenir une sauce épaisse et parfumée, avec une texture onctueuse et une odeur délicieuse. Salez avec 6 g de sel.",
         "Étape 2 : Préparez la béchamel végétalienne en chauffant 30 ml d'huile d'olive, puis incorporez 50 g de farine de blé. Cuire pendant 2 minutes en remuant constamment, jusqu'à obtenir une texture lisse et une couleur dorée. Versez progressivement 400 ml de lait de coco chaud en fouettant pendant 5 minutes jusqu'à obtenir une sauce lisse et épaisse.",
@@ -108580,7 +108779,7 @@
       "id": "pasta_lasagnes_vegan_412e90",
       "titles": {
         "original": "Lasagnes (Vegan)",
-        "fr": "Lasagnes (Vegan)",
+        "fr": "Lasagnes façon bolognaise aux lentilles (vegan)",
         "en": "Lasagnes Végétariennes (Vegan)"
       },
       "origin": {
@@ -108591,74 +108790,85 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
-        "prep_passive_min": 20,
-        "cook_min": 40,
-        "total_min": 77
+        "prep_active_min": 25,
+        "prep_passive_min": 10,
+        "cook_min": 80,
+        "total_min": 115
       },
       "composition": [
         {
-          "ingredient": "garlic_raw",
-          "quantity": 15,
+          "ingredient": "whole_wheat_pasta_raw_dried",
+          "quantity": 250,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "yellow_onion_raw",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic_base",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 46.2,
-          "unit": "ml",
-          "meta": {
-            "role": "fat",
+            "role": "base",
             "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "ingredient": "green_lentil_dried",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "protein",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "carrot_raw",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "celery_stalk_raw",
+          "quantity": 60,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yellow_onion_raw",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 9,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_crushed_canned",
+          "quantity": 600,
           "unit": "g",
           "meta": {
             "role": "fruit",
-            "form": "roughly_chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "base_mozzarella_vegane_fca8c8",
-          "quantity": 250,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "sliced",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "nutritional_yeast_flakes",
-          "quantity": 30,
-          "unit": "g",
-          "meta": {
-            "role": "ingredient",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -108675,12 +108885,56 @@
           }
         },
         {
-          "ingredient": "whole_wheat_pasta_raw_dried",
-          "quantity": 320,
+          "ingredient": "nutritional_yeast_flakes",
+          "quantity": 20,
           "unit": "g",
           "meta": {
-            "role": "base",
-            "form": "dried",
+            "role": "ingredient",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "oregano_spice_dried",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_extra_virgin_plant",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 400,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -108701,13 +108955,14 @@
         "diet": [
           "diabetes_friendly",
           "high_protein",
-          "lactose_free",
           "vegan",
-          "vegetarian"
+          "vegetarian",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
-          "gluten",
-          "tree_nuts"
+          "celery",
+          "gluten"
         ],
         "technique": [
           "sauteed",
@@ -108755,17 +109010,25 @@
         }
       },
       "search_tokens": [
+        "(eau",
         "(vegan)",
         "ail",
+        "aux",
         "base_bechamel_vegane_7a210c",
-        "base_mozzarella_vegane_fca8c8",
         "biere",
         "ble",
+        "bolognaise",
         "braising",
-        "coco",
-        "coconut",
+        "branche",
+        "carotte",
+        "carrot",
+        "celeri",
+        "celery",
         "complet",
+        "eau",
+        "facon",
         "garlic",
+        "green",
         "intermediaire",
         "italian",
         "italie",
@@ -108774,6 +109037,9 @@
         "lasagnes",
         "leger",
         "lent",
+        "lentil",
+        "lentille",
+        "lentilles",
         "levure",
         "light",
         "long",
@@ -108782,23 +109048,28 @@
         "mijote",
         "minceur",
         "moyen",
-        "noix",
         "nutritional",
         "oignon",
         "olive",
         "onion",
+        "oregano",
+        "origan",
         "pasta",
         "pates",
+        "potable)",
         "roasting",
         "sans produit animal",
         "sans viande",
         "sauteed",
+        "stalk",
         "tomate",
         "tomato",
         "vegan",
         "vegetalien",
         "vegetarien",
         "vegetariennes",
+        "verte",
+        "water",
         "wheat",
         "whole",
         "yeast",
@@ -108808,22 +109079,20 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.8,
-      "description": "Lasagnes italiennes cuites à la perfection, avec des pâtes al dente, une sauce tomate onctueuse et un fromage végétal fondu, créant une texture moelleuse et parfumée, avec des saveurs méditerranéennes.",
+      "description": "Lasagnes végétales à la bolognaise de lentilles vertes, carotte et céleri mijotés à la tomate, entre des pâtes complètes et une béchamel vegan à la levure nutritionnelle.",
       "instructions": [
-        "Étape 1 : Faire revenir les 150 g d'oignon jaune dans 30 ml d'huile d'olive vierge extra à feu moyen, jusqu'à ce qu'ils soient translucides et parfumés, environ 8 minutes.",
-        "Étape 2 : Ajouter les 15 g d'ail cru émincé et faire cuire 1 minute, en remuant constamment pour éviter la coloration.",
-        "Étape 3 : Ajouter les 300 g de tomates concassées, mijoter 20 minutes à feu moyen, en remuant occasionnellement, jusqu'à obtenir une sauce épaisse et intense.",
-        "Étape 4 : Réchauffer les 400 ml de béchamel végétale avec 30 g de levure maltée, 5 minutes à feu moyen, en remuant, jusqu'à obtenir une sauce épaisse et lisse.",
-        "Étape 5 : Alterner couches de béchamel, 320 g de pâtes de blé complet sèches, sauce tomate et 250 g de fromage végétal râpé dans un plat, en commençant et en terminant par une couche de béchamel.",
-        "Étape 6 : Couvrir de papier aluminium, enfourner 25 minutes à 180°C, puis retirer le papier et cuire encore 10 minutes, jusqu'à ce que la surface soit dorée et gratinée.",
-        "Étape 7 : Laisser reposer 10 minutes, puis servir chaud, accompagné d'un filet d'huile d'olive vierge extra et d'herbes fraîches."
+        "Étape 1 : Faire revenir 120 g d'oignon, 120 g de carotte et 60 g de céleri en petits dés dans 30 ml d'huile d'olive, 8 minutes, puis ajouter 9 g d'ail haché.",
+        "Étape 2 : Ajouter 150 g de lentilles vertes rincées, 600 g de tomates concassées, 400 ml d'eau, 1 g d'origan et 3 g de sel, puis mijoter 35 minutes jusqu'à ce que les lentilles soient tendres et la sauce épaisse.",
+        "Étape 3 : Préchauffer le four à 180°C. Dans un plat, alterner bolognaise, feuilles de lasagne complètes (250 g) et béchamel vegan, sur trois couches.",
+        "Étape 4 : Terminer par la béchamel (400 ml au total) et 20 g de levure nutritionnelle.",
+        "Étape 5 : Cuire 40 minutes, puis laisser reposer 10 minutes."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
         "gluten_free": false,
         "lactose_free": true,
-        "nut_free": false,
+        "nut_free": true,
         "raw": false,
         "kid_friendly": false
       }
@@ -108832,21 +109101,21 @@
       "id": "pasta_mac_and_cheese_b3073b",
       "titles": {
         "original": "Mac And Cheese",
-        "fr": "Gratin de macaronis au fromage",
+        "fr": "Mac and cheese américain gratiné au cheddar",
         "en": "Mac And Cheese"
       },
       "origin": {
-        "cuisine": "italian",
-        "country": "italy",
-        "region": "latium",
+        "cuisine": "american",
+        "country": "united_states",
+        "region": "",
         "city": ""
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 25,
-        "total_min": 36
+        "cook_min": 30,
+        "total_min": 45
       },
       "composition": [
         {
@@ -108855,14 +109124,14 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "dried",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "milk_liquid_uht_3_5pct",
-          "quantity": 250,
+          "quantity": 500,
           "unit": "ml",
           "meta": {
             "role": "ingredient",
@@ -108877,7 +109146,7 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -108888,25 +109157,47 @@
           "unit": "g",
           "meta": {
             "role": "fat_cooking",
-            "form": "diced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-          "quantity": 20,
+          "quantity": 30,
           "unit": "g",
           "meta": {
             "role": "carbohydrate",
-            "form": "sifted",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mustard",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "breadcrumbs_dried",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "topping",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -108914,14 +109205,29 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
-        "diet": [],
+        "diet": [
+          "vegetarian",
+          "nut_free"
+        ],
         "allergens": [
           "gluten",
           "lactose",
-          "milk"
+          "milk",
+          "mustard"
         ],
         "technique": [
           "water_cooking",
@@ -108971,11 +109277,17 @@
       "search_tokens": [
         "45 minutes",
         "all",
+        "americain",
+        "american",
         "and",
         "beurre",
+        "black",
         "ble",
         "braising",
+        "breadcrumbs",
+        "burger",
         "butter",
+        "chapelure",
         "cheddar",
         "cheese",
         "enfants",
@@ -108983,31 +109295,31 @@
         "famille",
         "farine",
         "flour",
-        "fromage",
-        "gratin",
+        "gratine",
         "intermediaire",
-        "italian",
-        "italie",
-        "italien",
         "kids",
         "lait",
         "leger",
         "light",
         "low calorie",
         "mac",
-        "macaronis",
-        "mediterranee",
         "milk",
         "minceur",
+        "moutarde",
         "moyen",
+        "mustard",
+        "noir",
         "pasta",
         "pates",
+        "pepper",
+        "poivre",
         "purpose",
         "salt",
         "sans viande",
         "sel",
         "table",
         "tout",
+        "usa",
         "usage",
         "vegetarien",
         "water_cooking",
@@ -109017,14 +109329,13 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.86,
-      "description": "Pâtes de blé cuites al dente, enrobées d'une sauce crémeuse au fromage, parfumée et dorée à la sortie du four, typique de la cuisine italienne revisitée.",
+      "description": "Le classique américain : macaronis dans une sauce béchamel au cheddar relevée de moutarde, gratinés sous une chapelure croustillante au beurre.",
       "instructions": [
-        "Cuire 320g de pâtes de blé dans une grande casserole d'eau bouillante salée pendant 8 minutes à feu moyen-vif, jusqu'à ce que les pâtes soient fermes et légèrement résistantes à la morsure.",
-        "Préparer la sauce: faire fondre 40g de beurre dans une poêle, puis ajouter 20 g de farine de blé et cuire 1 minute à feu doux, en remuant constamment avec une spatule pour éviter les grumeaux.",
-        "Verser progressivement 250ml de lait dans la poêle en fouettant énergiquement pour obtenir une béchamel lisse et homogène, puis cuire 2 minutes à feu doux, jusqu'à ce que la sauce commence à épaissir et à napper la spatule.",
-        "Hors du feu, incorporer 150g de fromage râpé en remuant jusqu'à fonte complète et obtenir une sauce crémeuse et parfumée, puis assaisonner de 5g de sel pour équilibrer les saveurs.",
-        "Mélanger délicatement la sauce avec les pâtes égouttées pour bien les enrober, puis transférer le mélange dans un plat à gratin et enfourner 15 minutes à 180°C, jusqu'à ce que le dessus soit doré et que des bulles crépitantes apparaissent à la surface.",
-        "Servir sans attendre."
+        "Étape 1 : Cuire 320 g de macaronis dans l'eau salée avec 1 g de sel, 2 minutes de moins que le temps indiqué, puis les égoutter.",
+        "Étape 2 : Faire fondre 30 g de beurre, ajouter 30 g de farine et cuire 1 minute, puis verser 500 ml de lait en fouettant et cuire 5 minutes jusqu'à épaississement.",
+        "Étape 3 : Hors du feu, ajouter 130 g de cheddar râpé, 5 g de moutarde, 2 g de sel et 1 g de poivre.",
+        "Étape 4 : Préchauffer le four à 200°C. Mélanger pâtes et sauce, verser dans un plat et parsemer de 20 g de cheddar et de 30 g de chapelure mélangée à 10 g de beurre fondu.",
+        "Étape 5 : Gratiner 15 minutes."
       ],
       "diet_flags": {
         "vegan": false,
@@ -109040,7 +109351,7 @@
       "id": "pasta_mac_and_cheese_vegan_4acb30",
       "titles": {
         "original": "Mac And Cheese (Vegan)",
-        "fr": "Gratin de macaronis au fromage (vegan)",
+        "fr": "Mac and cheese à la courge butternut (vegan)",
         "en": "Mac and Cheese (Vegan)"
       },
       "origin": {
@@ -109051,10 +109362,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
+        "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 35,
-        "total_min": 46
+        "cook_min": 25,
+        "total_min": 40
       },
       "composition": [
         {
@@ -109063,7 +109374,18 @@
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "dried",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "butternut_squash_raw_skinless",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
@@ -109080,41 +109402,63 @@
           }
         },
         {
-          "ingredient": "base_vegan_cheddar_024998",
-          "quantity": 150,
+          "ingredient": "nutritional_yeast_flakes",
+          "quantity": 25,
           "unit": "g",
           "meta": {
             "role": "ingredient",
-            "form": "grated",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "vegan_butter",
-          "quantity": 40,
+          "quantity": 20,
           "unit": "g",
           "meta": {
             "role": "fat_cooking",
-            "form": "diced",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-          "quantity": 20,
+          "ingredient": "garlic_raw",
+          "quantity": 6,
           "unit": "g",
           "meta": {
-            "role": "carbohydrate",
-            "form": "sifted",
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mustard",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "paprika",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "table_salt_unenriched",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "g",
           "meta": {
             "role": "seasoning",
@@ -109127,11 +109471,15 @@
       "tags": {
         "diet": [
           "high_protein",
-          "kid_friendly"
+          "kid_friendly",
+          "vegan",
+          "vegetarian",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
           "gluten",
-          "tree_nuts"
+          "mustard"
         ],
         "technique": [
           "boiling",
@@ -109178,76 +109526,72 @@
       },
       "search_tokens": [
         "(vegan)",
-        "1 heure",
-        "all",
+        "45 minutes",
+        "ail",
         "americain",
         "american",
         "and",
         "avoine",
-        "base_vegan_cheddar_024998",
         "beurre",
-        "ble",
+        "biere",
         "boiling",
         "braising",
         "burger",
         "butter",
+        "butternut",
         "cheese",
+        "courge",
         "enfants",
         "facile enfants",
         "famille",
-        "farine",
-        "flour",
-        "fromage",
-        "gratin",
+        "garlic",
         "intermediaire",
         "kids",
         "leger",
+        "levure",
         "light",
         "low calorie",
         "mac",
-        "macaronis",
         "minceur",
+        "moutarde",
         "moyen",
+        "mustard",
+        "nutritional",
         "oat",
+        "paprika",
         "pasta",
         "pates",
-        "purpose",
         "salt",
         "sans produit animal",
         "sans viande",
         "sel",
+        "squash",
         "table",
-        "tout",
         "usa",
-        "usage",
         "vegan",
         "vegetal",
         "vegetalien",
         "vegetarien",
-        "wheat"
+        "yeast"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.91,
       "_chef_note": "Un gratin crémeux et savoureux, prêt à être dégusté.",
-      "description": "Gratin de macaronis crémeux, aux pâtes de blé tendres, nappées d'une sauce onctueuse à base de lait de coco et de fromage végétal râpé, doré au four à 180°C.",
+      "description": "Macaronis nappés d'une sauce onctueuse de butternut, lait d'avoine, levure nutritionnelle, ail et moutarde, qui donne la couleur et le goût d'un cheddar sans produit laitier.",
       "instructions": [
-        "Étape 1 : Cuire 320g de pâtes de blé al dente dans de l'eau bouillante salée à 100°C pendant 8 min, jusqu'à ce qu'elles soient tendres mais encore fermes, avec une légère résistance à la morsure.",
-        "Étape 2 : Faire fondre 40g de beurre végétal à feu moyen dans une poêle, puis ajouter 20g de farine et cuire 1 min en remuant constamment, jusqu'à obtenir un mélange homogène et sans grumeaux.",
-        "Étape 3 : Verser progressivement 250ml de lait d'avoine en fouettant pour obtenir une sauce lisse et crémeuse, en vérifiant que la texture soit veloutée et sans grumeaux.",
-        "Étape 4 : Incorporer 150g de fromage végétal râpé hors du feu, en remuant jusqu'à dissolution complète, pour obtenir une sauce homogène et onctueuse.",
-        "Étape 5 : Mélanger la sauce crémeuse avec les pâtes égouttées, puis servir sans attendre.",
-        "Étape 6 : Pour une version croustillante, enfourner à 180°C pendant 15 min, en vérifiant que la surface soit dorée et croustillante, mais sans brûler.",
-        "Étape 7 : Assaisonner de sel selon les goûts, en vérifiant que la sauce nappe la cuillère et que les pâtes soient bien enrobées.",
-        "Étape 8 : Servir chaud et savourer."
+        "Étape 1 : Cuire 400 g de butternut en cubes avec 6 g d'ail à la vapeur, 15 minutes.",
+        "Étape 2 : Mixer la courge avec 250 ml de lait d'avoine, 25 g de levure nutritionnelle, 20 g de beurre végétal, 5 g de moutarde, 1 g de paprika et 3 g de sel jusqu'à obtenir une sauce lisse.",
+        "Étape 3 : Cuire 320 g de macaronis dans l'eau salée avec 1 g de sel, puis les égoutter.",
+        "Étape 4 : Mélanger les pâtes chaudes à la sauce et réchauffer 2 minutes à feu doux avant de servir."
       ],
       "diet_flags": {
         "vegan": true,
         "vegetarian": true,
         "gluten_free": false,
         "lactose_free": true,
-        "nut_free": false,
+        "nut_free": true,
         "raw": false,
         "kid_friendly": true
       }
@@ -169841,13 +170185,13 @@
       "id": "tarte_margherita_v7k2d1",
       "titles": {
         "original": "Pizza Margherita",
-        "fr": "Pizza Margherita",
+        "fr": "Pizza margherita napolitaine au fior di latte",
         "en": "Margherita Pizza"
       },
       "origin": {
         "cuisine": "italian",
         "country": "italy",
-        "region": "campanie",
+        "region": "campania",
         "city": "naples"
       },
       "servings": 4,
@@ -169987,10 +170331,12 @@
         "complexe",
         "cow's",
         "fermentation",
+        "fior",
         "italian",
         "italie",
         "italien",
         "lait",
+        "latte",
         "leger",
         "lent",
         "light",
@@ -170002,6 +170348,7 @@
         "milk",
         "minceur",
         "mozzarella",
+        "napolitaine",
         "olive",
         "pasta",
         "pates",
@@ -170020,7 +170367,7 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.95,
-      "description": "Pizza Margherita authentique, fermentation lente de la pâte, cuisson à très haute température, tomate San Marzano concentrée et fromage fondu à cœur, avec une croûte croustillante et un intérieur moelleux.",
+      "description": "La margherita de Naples : pâte longuement levée, sauce tomate crue, mozzarella fior di latte, basilic et filet d'huile d'olive, cuite très chaud.",
       "instructions": [
         "Étape 1: Sortir 300 g de pâte à pizza levée (préparée 2 heures à l'avance) et la laisser revenir à température ambiante.",
         "Étape 2: Préchauffer le four à 250°C avec une plaque ou une pierre à l'intérieur pendant au moins 30 minutes.",
@@ -170349,21 +170696,21 @@
       "id": "tarte_pizza_margherita_vegan_02bb9a",
       "titles": {
         "original": "Pizza Margherita (Vegan)",
-        "fr": "Pizza Margherita (Vegan)",
+        "fr": "Pizza marinara à l'ail et à l'origan",
         "en": "Pizza Margherita (Vegan) (Vegan)"
       },
       "origin": {
         "cuisine": "italian",
         "country": "italy",
-        "region": "campanie",
-        "city": ""
+        "region": "campania",
+        "city": "naples"
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 11,
+        "prep_active_min": 10,
         "prep_passive_min": 120,
         "cook_min": 10,
-        "total_min": 141
+        "total_min": 140
       },
       "composition": [
         {
@@ -170378,44 +170725,66 @@
           }
         },
         {
-          "ingredient": "tomato_sauce_salted_canned",
-          "quantity": 150,
+          "ingredient": "tomato_crushed_canned",
+          "quantity": 250,
           "unit": "g",
           "meta": {
             "role": "condiment",
-            "form": "smooth",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
-          "ingredient": "tofu_plain_pre_packaged",
-          "quantity": 250,
+          "ingredient": "garlic_raw",
+          "quantity": 9,
           "unit": "g",
           "meta": {
-            "role": "ingredient",
-            "form": "sliced",
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "oregano_spice_dried",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "basil_fresh_herb",
-          "quantity": 20,
+          "quantity": 5,
           "unit": "g",
           "meta": {
             "role": "herb",
-            "form": "chiffonade",
+            "form": "",
             "state": "raw",
             "preparation": ""
           }
         },
         {
           "ingredient": "olive_oil_extra_virgin_plant",
-          "quantity": 20,
+          "quantity": 25,
           "unit": "ml",
           "meta": {
             "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -170449,13 +170818,12 @@
           "diabetes_friendly",
           "high_protein",
           "kid_friendly",
-          "lactose_free",
-          "nut_free",
           "vegan",
-          "vegetarian"
+          "vegetarian",
+          "lactose_free",
+          "nut_free"
         ],
         "allergens": [
-          "soy",
           "gluten"
         ],
         "technique": [
@@ -170498,6 +170866,7 @@
       },
       "search_tokens": [
         "(vegan)",
+        "ail",
         "base_pizza_dough_6fdabd",
         "basil",
         "basilic",
@@ -170509,31 +170878,39 @@
         "facile",
         "facile enfants",
         "famille",
+        "garlic",
         "italian",
         "italie",
         "italien",
         "kids",
+        "l'ail",
+        "l'origan",
         "leger",
         "lent",
         "light",
         "long",
         "low calorie",
         "margherita",
+        "marinara",
         "mediterranee",
         "mijote",
         "minceur",
         "noix",
         "olive",
+        "oregano",
+        "origan",
         "parsley",
         "pasta",
         "pates",
         "persil",
         "pizza",
         "roasting",
+        "salt",
         "sans produit animal",
         "sans viande",
+        "sel",
         "simple",
-        "tofu",
+        "table",
         "tomate",
         "tomato",
         "vegan",
@@ -170544,14 +170921,14 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.8,
-      "description": "Crustine croustillante surmontée d'une sauce tomate onctueuse et de feuilles de basilic frais, technique italienne revisitée pour une version végétalienne créative avec une texture fondante.",
+      "description": "L'autre pizza napolitaine historique, naturellement vegan : sauce tomate, ail en lamelles, origan et huile d'olive, sans fromage.",
       "instructions": [
-        "Étape 1 : Sortir 300 g de pâte à pizza levée (préparée 2 heures à l'avance) et la laisser revenir à température ambiante.",
-        "Étape 2 : Préchauffer le four à 250°C avec la plaque pendant 30 minutes, en s'assurant qu'elle soit bien chaude avant d'y déposer la pâte.",
-        "Étape 3 : Étaler la pâte en disque fin de 30 cm de diamètre, en veillant à ce qu'elle soit régulière et sans défauts. Napper de 150 g de sauce tomate en laissant 2 cm de bord, en prenant soin de ne pas trop charger la pâte.",
-        "Étape 4 : Répartir 250 g de tofu ferme émietté sur la sauce tomate. Enfourner pendant 8 à 10 minutes jusqu'à ce que les bords soient brun doré et légèrement soufflés, en surveillant la cuisson pour éviter une coloration trop prononcée.",
-        "Étape 5 : Sortir la pizza du four et ajouter des feuilles de basilic frais, en les disposant de manière harmonieuse sur la surface de la pizza. Arroser de 20 ml d'huile d'olive vierge extra pour ajouter une touche de saveur et de fraîcheur.",
-        "Étape 6 : Servir aussitôt."
+        "Étape 1 : Préchauffer le four au maximum (250 à 280°C) avec une plaque ou une pierre à l'intérieur, 30 minutes.",
+        "Étape 2 : Mélanger 250 g de tomates concassées avec 1 g de sel.",
+        "Étape 3 : Étaler 300 g de pâte à pizza en deux disques fins.",
+        "Étape 4 : Répartir la sauce, 9 g d'ail en fines lamelles et 1 g d'origan, puis arroser de 15 ml d'huile d'olive.",
+        "Étape 5 : Cuire 7 à 8 minutes sur la plaque brûlante, jusqu'à ce que les bords soient gonflés et tachetés.",
+        "Étape 6 : Arroser de 10 ml d'huile d'olive et parsemer de 5 g de basilic avant de servir."
       ],
       "diet_flags": {
         "vegan": true,
