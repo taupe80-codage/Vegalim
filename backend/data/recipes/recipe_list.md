@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 171 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 159 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -207,6 +207,7 @@
 - **Focaccia** _(vegan, vegetarian, snack, italian)_ — `bread_focaccia_bf8608`
 - **Fondant au Chocolat** _(kid_friendly, nut_free, dessert, french)_ — `dessert_fondant_au_chocolat_a4c8aa`
 - **Fricassée Printanière** _(gluten_free, kid_friendly, nut_free, main, french)_ — `main_fricassee_printaniere_619cae`
+- **Frites de polenta au four, poêlée de champignons au persil (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, italian)_ — `main_polenta_aux_champignons_v_b0e1ad`
 - **Fromage de Cajou aux Herbes** _(diabetes_friendly, high_protein, kid_friendly, lactose_free, vegetarian, starter, international)_ — `entry_fromage_de_cajou_aux_herb_4f0f9b`
 - **Fromage en Grain** _(vegetarian, gluten_free, dairy, canadian)_ — `base_fromage_en_grain_a00941`
 - **Fromage Frais (Cream Cheese)** _(vegetarian, gluten_free, sauce, french)_ — `base_cream_cheese_c6e3b6`
@@ -494,10 +495,9 @@
 - **Pois Chiches Rôtis** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, side, international)_ — `dal_pois_chiches_rotis_ff8cc6`
 - **Poivrons Farcis au Riz** _(gluten_free, vegetarian, main, international)_ — `rice_poivrons_farcis_au_riz_be3ddc`
 - **Poke Bowl** _(diabetes_friendly, high_protein, vegan, vegetarian, main, international)_ — `rice_poke_bowl_ee65ef`
-- **Polenta Ai Funghi** _(gluten_free, main, international)_ — `main_polenta_ai_funghi_b96235` 🔁 doublon possible : Polenta Ai Funghi (Vegan)
-- **Polenta Ai Funghi (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, italian)_ — `main_polenta_ai_funghi_vegan_ab13cd` 🔁 doublon possible : Polenta Ai Funghi
-- **Polenta aux Champignons** _(gluten_free, main, international)_ — `main_polenta_aux_champignons_5af074` 🔁 doublon possible : Polenta aux Champignons (Vegan)
-- **Polenta aux Champignons (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, italian)_ — `main_polenta_aux_champignons_v_b0e1ad` 🔁 doublon possible : Polenta aux Champignons
+- **Polenta crémeuse aux cèpes et au parmesan** _(vegetarian, gluten_free, nut_free, main, italian)_ — `main_polenta_ai_funghi_b96235`
+- **Polenta crémeuse, ragoût de champignons à la tomate (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, italian)_ — `main_polenta_ai_funghi_vegan_ab13cd`
+- **Polenta grillée aux champignons trifolati** _(vegetarian, gluten_free, nut_free, main, italian)_ — `main_polenta_aux_champignons_5af074`
 - **Pommes Dauphine** _(kid_friendly, nut_free, side, french)_ — `side_pommes_dauphine_73a2c7`
 - **Pommes de Terre Braisées Coréennes** _(vegan, vegetarian, main, korean)_ — `main_pommes_de_terre_braisees_7a56a8`
 - **Pommes de Terre Sauce Huancaína** _(gluten_free, main, peruvian)_ — `sauce_pommes_de_terre_sauce_hua_3304de`
@@ -575,14 +575,14 @@
 - **Ricotta Salée** _(vegetarian, ingredient, italian)_ — `base_salted_ricotta_1ecd1c`
 - **Rillettes de Courgettes au Citron** _(diabetes_friendly, gluten_free, kid_friendly, low_calorie, nut_free, starter, french)_ — `entry_rillettes_de_courgettes_a_f46f26`
 - **Rillettes Lentilles Corail** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, international)_ — `entry_rillettes_lentilles_corai_40d7dc`
-- **Risotto Ai Funghi** _(gluten_free, main, italian)_ — `rice_risotto_ai_funghi_395f00` 🔁 doublon possible : Risotto Ai Funghi (Vegan)
-- **Risotto Ai Funghi (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, italian)_ — `rice_risotto_ai_funghi_vegan_41360e` 🔁 doublon possible : Risotto Ai Funghi
-- **Risotto Al Limone** _(gluten_free, main, italian)_ — `rice_risotto_al_limone_4088e5` 🔁 doublon possible : Risotto Al Limone (Vegan)
-- **Risotto Al Limone (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, italian)_ — `rice_risotto_al_limone_vegan_a234ae` 🔁 doublon possible : Risotto Al Limone
-- **Risotto aux champignons** _(gluten_free, high_protein, main, italian)_ — `rice_risotto_aux_champignon_25ed38` 🔁 doublon possible : Risotto aux Champignons (Vegan)
-- **Risotto aux Champignons (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, italian)_ — `rice_risotto_aux_champignons_v_13d611` 🔁 doublon possible : Risotto aux champignons
-- **Risotto Citron Asperges** _(diabetes_friendly, gluten_free, main, italian)_ — `rice_risotto_citron_asperges_f2f765` 🔁 doublon possible : Risotto Citron Asperges (Vegan)
-- **Risotto Citron Asperges (Vegan)** _(diabetes_friendly, gluten_free, lactose_free, nut_free, main, italian)_ — `rice_risotto_citron_asperges_v_e20e67` 🔁 doublon possible : Risotto Citron Asperges
+- **Risotto ai porcini, mantecato au beurre et parmesan** _(vegetarian, gluten_free, nut_free, main, italian)_ — `rice_risotto_ai_funghi_395f00`
+- **Risotto al limone d'Amalfi** _(vegetarian, gluten_free, nut_free, main, italian)_ — `rice_risotto_al_limone_4088e5`
+- **Risotto au citron et au fenouil (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, italian)_ — `rice_risotto_al_limone_vegan_a234ae`
+- **Risotto aux asperges blanches de Bassano** _(diabetes_friendly, vegetarian, gluten_free, nut_free, main, italian)_ — `rice_risotto_citron_asperges_f2f765`
+- **Risotto aux asperges vertes, petits pois et menthe (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, italian)_ — `rice_risotto_citron_asperges_v_e20e67`
+- **Risotto aux champignons et aux épinards (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, italian)_ — `rice_risotto_aux_champignons_v_13d611`
+- **Risotto aux champignons rôtis et noisettes (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, main, italian)_ — `rice_risotto_ai_funghi_vegan_41360e`
+- **Risotto forestier aux pleurotes et au thym** _(high_protein, vegetarian, gluten_free, nut_free, main, italian)_ — `rice_risotto_aux_champignon_25ed38`
 - **Riz au Lait Coco Vegan** _(kid_friendly, lactose_free, nut_free, vegan, vegetarian, dessert, international)_ — `dessert_lait_coco_vegan_3b8a99` 🔁 doublon possible : Lait de Coco Maison, Courge au Lait de Coco, Dahl au lait de coco
 - **Riz au Lait Vanille** _(gluten_free, kid_friendly, nut_free, dessert, french)_ — `dessert_lait_vanille_cddf17`
 - **Riz blanc** _(gluten_free, vegan, vegetarian, main, international)_ — `rice_white_k1d1p1`

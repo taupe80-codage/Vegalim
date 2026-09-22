@@ -13704,6 +13704,91 @@
     "similar": []
   },
   {
+    "id": "main_polenta_aux_champignons_v_b0e1ad",
+    "title": "Frites de polenta au four, poêlée de champignons au persil (vegan)",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 135,
+    "confidence": 0.85,
+    "description": "Bâtonnets de polenta ferme parfumée au thym, rôtis au four jusqu'à être croustillants, servis avec une poêlée de champignons à l'ail et au persil.",
+    "composition": [
+      {
+        "ingredient": "polenta",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "button_mushroom_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "thyme_fresh_herb",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 900,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_bread_unsalted",
+        "quantity": null,
+        "unit": "2 tranches"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "entry_fromage_de_cajou_aux_herb_4f0f9b",
     "title": "Fromage de Cajou aux Herbes",
     "cuisine": "international",
@@ -32032,21 +32117,23 @@
   },
   {
     "id": "main_polenta_ai_funghi_b96235",
-    "title": "Polenta Ai Funghi",
-    "cuisine": "international",
+    "title": "Polenta crémeuse aux cèpes et au parmesan",
+    "cuisine": "italian",
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "gluten_free"
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
     ],
     "allergens": [
       "lactose",
       "milk"
     ],
     "servings": 4,
-    "time_total": 74,
+    "time_total": 55,
     "confidence": 1.0,
-    "description": "Polenta crémeuse aux champignons de Paris, parfumée au thym frais et au parmesan, avec une texture fondante et une odeur de maïs cuit",
+    "description": "Polenta morbida de Vénétie, montée au beurre et au parmesan, nappée de cèpes et champignons sautés à l'ail et au thym.",
     "composition": [
       {
         "ingredient": "polenta",
@@ -32054,13 +32141,18 @@
         "unit": "g"
       },
       {
+        "ingredient": "porcini_mushroom_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
         "ingredient": "button_mushroom_raw",
-        "quantity": 300,
+        "quantity": 200,
         "unit": "g"
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 150,
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -32070,17 +32162,17 @@
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 65,
+        "quantity": 30,
         "unit": "ml"
       },
       {
         "ingredient": "butter_sup80pct",
-        "quantity": 40,
+        "quantity": 30,
         "unit": "g"
       },
       {
         "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 60,
+        "quantity": 50,
         "unit": "g"
       },
       {
@@ -32090,12 +32182,12 @@
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
+        "quantity": 1,
         "unit": "g"
       },
       {
@@ -32104,33 +32196,29 @@
         "unit": "ml"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_polenta_ai_funghi_vegan_ab13cd",
-        "title": "Polenta Ai Funghi (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "main_polenta_ai_funghi_vegan_ab13cd",
-    "title": "Polenta Ai Funghi (Vegan)",
+    "title": "Polenta crémeuse, ragoût de champignons à la tomate (vegan)",
     "cuisine": "italian",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
+      "vegan",
+      "vegetarian",
       "gluten_free",
       "lactose_free",
       "nut_free"
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 49,
+    "time_total": 50,
     "confidence": 0.85,
-    "description": "Plat italien crémeux à base de semoule de maïs, champignons sautés et oignon caramélisé, fondant et bien cuit, avec une texture crémeuse et une odeur de thym frais.",
+    "description": "Polenta montée à l'huile d'olive et à la levure nutritionnelle, servie avec un ragoût de champignons mijotés à la tomate et au romarin.",
     "composition": [
       {
         "ingredient": "polenta",
@@ -32139,6 +32227,11 @@
       },
       {
         "ingredient": "button_mushroom_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_crushed_canned",
         "quantity": 300,
         "unit": "g"
       },
@@ -32149,7 +32242,12 @@
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 15,
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "rosemary_fresh_herb",
+        "quantity": 3,
         "unit": "g"
       },
       {
@@ -32163,23 +32261,18 @@
         "unit": "g"
       },
       {
-        "ingredient": "thyme_fresh_herb",
-        "quantity": 1.5,
+        "ingredient": "vegan_butter",
+        "quantity": 20,
         "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 4,
         "unit": "g"
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 30,
+        "quantity": 1,
         "unit": "g"
       },
       {
@@ -32188,33 +32281,29 @@
         "unit": "ml"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_polenta_ai_funghi_b96235",
-        "title": "Polenta Ai Funghi",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "main_polenta_aux_champignons_5af074",
-    "title": "Polenta aux Champignons",
-    "cuisine": "international",
+    "title": "Polenta grillée aux champignons trifolati",
+    "cuisine": "italian",
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "gluten_free"
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
     ],
     "allergens": [
       "lactose",
       "milk"
     ],
     "servings": 4,
-    "time_total": 59,
+    "time_total": 125,
     "confidence": 1.0,
-    "description": "Polenta crémeuse aux champignons de Paris, parfumée et savoureuse, cuite à la perfection avec une texture lisse et brillante, typique de la cuisine méditerranéenne.",
+    "description": "Polenta du Frioul refroidie en plaque, découpée et grillée, servie avec des champignons trifolati à l'ail et au persil, et des copeaux de parmesan.",
     "composition": [
       {
         "ingredient": "polenta",
@@ -32223,178 +32312,63 @@
       },
       {
         "ingredient": "button_mushroom_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
+        "quantity": 400,
         "unit": "g"
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 9,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "butter_sup80pct",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 60,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 1,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "thyme_fresh_herb",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_bread_unsalted",
-        "quantity": null,
-        "unit": "2 tranches"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
         "quantity": 12,
         "unit": "g"
       },
       {
-        "ingredient": "water",
-        "quantity": 1000,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 9,
-    "flags": [],
-    "similar": [
-      {
-        "id": "main_polenta_aux_champignons_v_b0e1ad",
-        "title": "Polenta aux Champignons (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "main_polenta_aux_champignons_v_b0e1ad",
-    "title": "Polenta aux Champignons (Vegan)",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "lactose_free",
-      "nut_free"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 64,
-    "confidence": 0.85,
-    "description": "Polenta crémeuse italienne, à la texture épaisse et crémeuse, parfumée par les champignons dorés, l'oignon caramélisé et le thym frais, typique de la cuisine méditerranéenne.",
-    "composition": [
-      {
-        "ingredient": "polenta",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "button_mushroom_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45.7,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "nutritional_yeast_flakes",
+        "ingredient": "parsley_fresh_herb",
         "quantity": 20,
         "unit": "g"
       },
       {
-        "ingredient": "parsley_fresh_herb",
+        "ingredient": "vegetable_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
         "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": 40,
         "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
+        "quantity": 1,
         "unit": "g"
       },
       {
-        "ingredient": "vegan_butter",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "thyme_fresh_herb",
-        "quantity": 5,
-        "unit": "g"
+        "ingredient": "water",
+        "quantity": 900,
+        "unit": "ml"
       },
       {
         "ingredient": "white_bread_unsalted",
         "quantity": null,
         "unit": "2 tranches"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 12,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 1000,
-        "unit": "ml"
       }
     ],
-    "n_instructions": 9,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_polenta_aux_champignons_5af074",
-        "title": "Polenta aux Champignons",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "side_pommes_dauphine_73a2c7",
@@ -37157,21 +37131,23 @@
   },
   {
     "id": "rice_risotto_ai_funghi_395f00",
-    "title": "Risotto Ai Funghi",
+    "title": "Risotto ai porcini, mantecato au beurre et parmesan",
     "cuisine": "italian",
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "gluten_free"
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
     ],
     "allergens": [
       "lactose",
       "milk"
     ],
     "servings": 4,
-    "time_total": 69,
+    "time_total": 45,
     "confidence": 1.0,
-    "description": "Risotto crémeux aux champignons, parfumé d'arômes terrestres et de saveurs, avec une texture onctueuse et une couleur dorée obtenue après 20 minutes de cuisson",
+    "description": "Risotto piémontais aux cèpes : une partie des champignons cuite avec le riz pour parfumer le bouillon, l'autre saisie à part, puis mantecatura au beurre froid et au parmesan.",
     "composition": [
       {
         "ingredient": "white_rice_raw_seed_unenriched",
@@ -37179,18 +37155,28 @@
         "unit": "g"
       },
       {
+        "ingredient": "porcini_mushroom_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "button_mushroom_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
         "ingredient": "onion_raw",
-        "quantity": 150,
+        "quantity": 100,
         "unit": "g"
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 10.1,
+        "quantity": 9,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 800.0,
+        "quantity": 900,
         "unit": "ml"
       },
       {
@@ -37200,7 +37186,7 @@
       },
       {
         "ingredient": "butter_sup80pct",
-        "quantity": 20,
+        "quantity": 30,
         "unit": "g"
       },
       {
@@ -37212,134 +37198,31 @@
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
         "unit": "1 poignée"
-      },
-      {
-        "ingredient": "button_mushroom_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "porcini_mushroom_raw",
-        "quantity": 150,
-        "unit": "g"
       }
     ],
     "n_instructions": 7,
     "flags": [],
-    "similar": [
-      {
-        "id": "rice_risotto_ai_funghi_vegan_41360e",
-        "title": "Risotto Ai Funghi (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "rice_risotto_ai_funghi_vegan_41360e",
-    "title": "Risotto Ai Funghi (Vegan)",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "lactose_free",
-      "nut_free"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 79,
-    "confidence": 0.85,
-    "description": "Risotto crémeux aux champignons, parfumé et intensément savoureux, avec une texture al dente, issu de la tradition italienne, où les saveurs de champignons et d'oignons se mélangent en harmonie.",
-    "composition": [
-      {
-        "ingredient": "white_rice_raw_seed_unenriched",
-        "quantity": 280,
-        "unit": "g"
-      },
-      {
-        "ingredient": "button_mushroom_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 40,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 750.0,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "nutritional_yeast_flakes",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "white_bread_unsalted",
-        "quantity": null,
-        "unit": "4 tranches"
-      },
-      {
-        "ingredient": "porcini_mushroom_raw",
-        "quantity": 150,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "rice_risotto_ai_funghi_395f00",
-        "title": "Risotto Ai Funghi",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "rice_risotto_al_limone_4088e5",
-    "title": "Risotto Al Limone",
+    "title": "Risotto al limone d'Amalfi",
     "cuisine": "italian",
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "gluten_free"
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
     ],
     "allergens": [
       "lactose",
       "milk"
     ],
     "servings": 4,
-    "time_total": 59,
+    "time_total": 40,
     "confidence": 1.0,
-    "description": "Risotto crémeux aux arômes de citron et de poivre, avec une texture onctueuse et une saveur italienne",
+    "description": "Risotto de la côte amalfitaine : zeste et jus de citron, beurre et parmesan, relevé de feuilles de basilic, à la fois crémeux et très frais.",
     "composition": [
       {
         "ingredient": "white_rice_raw_seed_unenriched",
@@ -37348,27 +37231,27 @@
       },
       {
         "ingredient": "yellow_onion_raw",
-        "quantity": 150,
+        "quantity": 100,
         "unit": "g"
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 10.1,
+        "quantity": 9,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 800.0,
+        "quantity": 900,
         "unit": "ml"
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 20,
+        "quantity": 15,
         "unit": "ml"
       },
       {
         "ingredient": "butter_sup80pct",
-        "quantity": 20,
+        "quantity": 30,
         "unit": "g"
       },
       {
@@ -37377,43 +37260,49 @@
         "unit": "g"
       },
       {
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_peel_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
         "unit": "quelques feuilles"
-      },
-      {
-        "ingredient": "lemon_juice",
-        "quantity": 20,
-        "unit": "ml"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "rice_risotto_al_limone_vegan_a234ae",
-        "title": "Risotto Al Limone (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "rice_risotto_al_limone_vegan_a234ae",
-    "title": "Risotto Al Limone (Vegan)",
+    "title": "Risotto au citron et au fenouil (vegan)",
     "cuisine": "italian",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
+      "vegan",
+      "vegetarian",
       "gluten_free",
       "lactose_free",
       "nut_free"
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 44,
+    "time_total": 45,
     "confidence": 0.85,
-    "description": "Risotto crémeux italien aux saveurs de citron, où le riz arborio fond en bouche avec une texture al dente et parfumée, préparé avec amour dans la tradition culinaire italienne avec des zestes de citron et des feuilles de persil frais.",
+    "description": "Risotto sans produit laitier au fenouil fondant, zeste et jus de citron, fini à l'huile d'olive et à la levure nutritionnelle, avec les pluches de fenouil.",
     "composition": [
       {
         "ingredient": "white_rice_raw_seed_unenriched",
@@ -37421,18 +37310,18 @@
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 30,
-        "unit": "ml"
+        "ingredient": "fennel_raw",
+        "quantity": 250,
+        "unit": "g"
       },
       {
         "ingredient": "yellow_onion_raw",
-        "quantity": 150,
+        "quantity": 100,
         "unit": "g"
       },
       {
         "ingredient": "garlic_raw",
-        "quantity": 15,
+        "quantity": 6,
         "unit": "g"
       },
       {
@@ -37442,27 +37331,32 @@
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
+        "quantity": 9,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 750.0,
+        "quantity": 900,
         "unit": "ml"
       },
       {
         "ingredient": "nutritional_yeast_flakes",
-        "quantity": 30,
+        "quantity": 25,
         "unit": "g"
       },
       {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 3,
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_peel_raw",
+        "quantity": 5,
         "unit": "g"
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
+        "quantity": 1,
         "unit": "g"
       },
       {
@@ -37471,25 +37365,21 @@
         "unit": "quelques feuilles"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "rice_risotto_al_limone_4088e5",
-        "title": "Risotto Al Limone",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
-    "id": "rice_risotto_aux_champignon_25ed38",
-    "title": "Risotto aux champignons",
+    "id": "rice_risotto_citron_asperges_f2f765",
+    "title": "Risotto aux asperges blanches de Bassano",
     "cuisine": "italian",
     "dish_type": "main",
     "vegan": false,
     "diet": [
+      "diabetes_friendly",
+      "vegetarian",
       "gluten_free",
-      "high_protein"
+      "nut_free"
     ],
     "allergens": [
       "lactose",
@@ -37497,8 +37387,8 @@
     ],
     "servings": 4,
     "time_total": 60,
-    "confidence": 0.97,
-    "description": "Risotto crémeux aux champignons, parfumé et savoureux, avec une texture onctueuse et une saveur équilibrée, préparé avec amour et soin, dans la tradition italienne.",
+    "confidence": 1.0,
+    "description": "Risotto vénitien de printemps : asperges blanches dont les parures parfument le bouillon, pointes ajoutées en fin de cuisson, beurre, parmesan et zeste de citron.",
     "composition": [
       {
         "ingredient": "white_rice_raw_seed_unenriched",
@@ -37506,33 +37396,33 @@
         "unit": "g"
       },
       {
-        "ingredient": "button_mushroom_raw",
-        "quantity": 200,
+        "ingredient": "white_asparagus_raw_peeled",
+        "quantity": 400,
         "unit": "g"
       },
       {
-        "ingredient": "oyster_mushroom_raw",
-        "quantity": 50,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 80,
+        "ingredient": "yellow_onion_raw",
+        "quantity": 100,
         "unit": "g"
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 10.1,
+        "quantity": 9,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 800.0,
+        "quantity": 1000,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 15,
         "unit": "ml"
       },
       {
         "ingredient": "butter_sup80pct",
-        "quantity": 45,
+        "quantity": 30,
         "unit": "g"
       },
       {
@@ -37541,53 +37431,124 @@
         "unit": "g"
       },
       {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": null,
-        "unit": "1 poignée"
-      },
-      {
-        "ingredient": "porcini_mushroom_raw",
-        "quantity": 150,
+        "ingredient": "lemon_peel_raw",
+        "quantity": 3,
         "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "rice_risotto_aux_champignons_v_13d611",
-        "title": "Risotto aux Champignons (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
-    "id": "rice_risotto_aux_champignons_v_13d611",
-    "title": "Risotto aux Champignons (Vegan)",
+    "id": "rice_risotto_citron_asperges_v_e20e67",
+    "title": "Risotto aux asperges vertes, petits pois et menthe (vegan)",
     "cuisine": "italian",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
+      "vegan",
+      "vegetarian",
       "gluten_free",
       "lactose_free",
       "nut_free"
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 46,
+    "time_total": 45,
     "confidence": 0.85,
-    "description": "Risotto crémeux aux champignons, où le riz arborio mijote dans un bouillon de légumes parfumé, jusqu'à atteindre une texture onctueuse et une saveur intense, typique de la cuisine italienne.",
+    "description": "Risotto printanier sans lactose : asperges vertes, petits pois et menthe fraîche, lié à l'huile d'olive, à la levure nutritionnelle et au citron.",
+    "composition": [
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 280,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_asparagus_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_peas_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 900,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "vegan_butter",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": null,
+        "unit": "quelques feuilles"
+      }
+    ],
+    "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "rice_risotto_aux_champignons_v_13d611",
+    "title": "Risotto aux champignons et aux épinards (vegan)",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "diabetes_friendly",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 45,
+    "confidence": 0.85,
+    "description": "Risotto vert et doux : champignons de Paris sautés, jeunes pousses d'épinards fondues au dernier moment, levure nutritionnelle et zeste de citron.",
     "composition": [
       {
         "ingredient": "white_rice_raw_seed_unenriched",
@@ -37600,53 +37561,53 @@
         "unit": "g"
       },
       {
-        "ingredient": "yellow_onion_raw",
+        "ingredient": "spinach_raw_baby",
         "quantity": 150,
         "unit": "g"
       },
       {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
         "ingredient": "garlic_raw",
-        "quantity": 15,
+        "quantity": 9,
         "unit": "g"
       },
       {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
+        "quantity": 9,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 750.0,
+        "quantity": 900,
         "unit": "ml"
       },
       {
         "ingredient": "nutritional_yeast_flakes",
-        "quantity": 30,
+        "quantity": 25,
         "unit": "g"
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 40,
+        "quantity": 30,
         "unit": "ml"
       },
       {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": 15,
+        "ingredient": "vegan_butter",
+        "quantity": 20,
         "unit": "g"
       },
       {
-        "ingredient": "table_salt_unenriched",
+        "ingredient": "lemon_peel_raw",
         "quantity": 3,
         "unit": "g"
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 20,
+        "quantity": 1,
         "unit": "g"
       },
       {
@@ -37657,106 +37618,28 @@
     ],
     "n_instructions": 7,
     "flags": [],
-    "similar": [
-      {
-        "id": "rice_risotto_aux_champignon_25ed38",
-        "title": "Risotto aux champignons",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
-    "id": "rice_risotto_citron_asperges_f2f765",
-    "title": "Risotto Citron Asperges",
+    "id": "rice_risotto_ai_funghi_vegan_41360e",
+    "title": "Risotto aux champignons rôtis et noisettes (vegan)",
     "cuisine": "italian",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "diabetes_friendly",
-      "gluten_free"
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
     ],
     "allergens": [
-      "lactose",
-      "milk"
+      "tree_nuts"
     ],
     "servings": 4,
-    "time_total": 52,
-    "confidence": 1.0,
-    "description": "Risotto crémeux aux saveurs de citron et d'asperges, préparé avec du riz arborio et des asperges blanchies, parfumé au citron et au parmesan.",
-    "composition": [
-      {
-        "ingredient": "white_rice_raw_seed_unenriched",
-        "quantity": 280,
-        "unit": "g"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 10.1,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 800.0,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 20,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "butter_sup80pct",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "lemon",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_asparagus_raw",
-        "quantity": 200,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "rice_risotto_citron_asperges_v_e20e67",
-        "title": "Risotto Citron Asperges (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "rice_risotto_citron_asperges_v_e20e67",
-    "title": "Risotto Citron Asperges (Vegan)",
-    "cuisine": "italian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free",
-      "lactose_free",
-      "nut_free"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 47,
+    "time_total": 50,
     "confidence": 0.85,
-    "description": "Risotto crémeux aux asperges fraîches et citron, parfumé à l'huile d'olive extra vierge, avec une texture al dente et des notes printanières. Les zestes de citron ajoutent une touche de fraîcheur et d'éclat.",
+    "description": "Risotto crémeux sans beurre ni fromage : champignons rôtis au four, levure nutritionnelle pour le côté fromagé et noisettes torréfiées pour le croquant.",
     "composition": [
       {
         "ingredient": "white_rice_raw_seed_unenriched",
@@ -37764,33 +37647,23 @@
         "unit": "g"
       },
       {
-        "ingredient": "asparagus_raw",
+        "ingredient": "button_mushroom_raw",
         "quantity": 300,
         "unit": "g"
       },
       {
-        "ingredient": "lemon_raw",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "yellow_onion_raw",
+        "ingredient": "porcini_mushroom_raw",
         "quantity": 150,
         "unit": "g"
       },
       {
-        "ingredient": "vegetable_stock_dried",
-        "quantity": 9.4,
+        "ingredient": "onion_raw",
+        "quantity": 120,
         "unit": "g"
       },
       {
-        "ingredient": "water",
-        "quantity": 750.0,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "nutritional_yeast_flakes",
-        "quantity": 30,
+        "ingredient": "garlic_raw",
+        "quantity": 9,
         "unit": "g"
       },
       {
@@ -37799,35 +37672,125 @@
         "unit": "ml"
       },
       {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 3,
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 900,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "hazelnut_dry_roasted_dried_unsalted",
+        "quantity": 30,
         "unit": "g"
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
+        "quantity": 1,
         "unit": "g"
       },
       {
-        "ingredient": "vegan_butter",
-        "quantity": 20,
+        "ingredient": "white_bread_unsalted",
+        "quantity": null,
+        "unit": "4 tranches"
+      }
+    ],
+    "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "rice_risotto_aux_champignon_25ed38",
+    "title": "Risotto forestier aux pleurotes et au thym",
+    "cuisine": "italian",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "high_protein",
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 50,
+    "confidence": 0.97,
+    "description": "Risotto aux champignons des bois (pleurotes, cèpes et champignons de Paris) rôtis au thym, lié au beurre et au parmesan.",
+    "composition": [
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 280,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oyster_mushroom_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "porcini_mushroom_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "button_mushroom_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "thyme_fresh_herb",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vegetable_stock_dried",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 900,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
         "unit": "g"
       },
       {
         "ingredient": "parsley_fresh_herb",
         "quantity": null,
-        "unit": "quelques feuilles"
+        "unit": "1 poignée"
       }
     ],
     "n_instructions": 7,
     "flags": [],
-    "similar": [
-      {
-        "id": "rice_risotto_citron_asperges_f2f765",
-        "title": "Risotto Citron Asperges",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dessert_lait_coco_vegan_3b8a99",
