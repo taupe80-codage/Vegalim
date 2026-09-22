@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-812 recettes (0 avec une alerte qualite, 33 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+831 recettes (0 avec une alerte qualite, 33 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -31,6 +31,7 @@
 ## B
 
 - **Baba ganoush** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, starter, levantine)_ — `dip_baba_ghanoush_dbd030`
+- **Badrijani nigvzit, aubergines géorgiennes aux noix** _(vegan, vegetarian, gluten_free, lactose_free, starter, georgian)_ — `entry_badrijani_nigvzit_9b62d1`
 - **Baek sundubu, ragoût de tofu soyeux doux** _(diabetes_friendly, high_protein, vegetarian, lactose_free, nut_free, main, korean)_ — `egg_sundubu_jjigae_bc21e0`
 - **Bagel Fromage Frais Concombre** _(kid_friendly, nut_free, breakfast, american)_ — `brkf_bagel_fromage_frais_conco_e69b68`
 - **Baghali polo aux fèves et à l'aneth (vegan)** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, side, persian)_ — `side_sabzi_polo_vegan_7bf9df`
@@ -41,6 +42,7 @@
 - **Balila, pois chiches chauds au cumin et au citron** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, starter, lebanese)_ — `starter_balila_pois_chiches_3f62d8`
 - **Banane Caramélisée Philippine** _(gluten_free, vegan, vegetarian, side, philippine)_ — `main_banane_caramelisee_philip_df163c`
 - **Banh Mi Tofu** _(high_protein, vegan, vegetarian, main, vietnamese)_ — `protein_banh_mi_tofu_9b1ea2`
+- **Banitsa au fromage et au yaourt** _(vegetarian, nut_free, main, bulgarian)_ — `main_banitsa_fromage_6c92a3`
 - **Bannock au four, pain des Premières Nations** _(vegetarian, nut_free, bread, canadian)_ — `bread_bannock_e03ffe`
 - **Bannock frit aux bleuets (vegan)** _(kid_friendly, low_calorie, vegan, vegetarian, lactose_free, nut_free, snack, canadian)_ — `snack_bannock_vegan_46a1a8`
 - **Bao** _(high_protein, vegan, vegetarian, main, chinese)_ — `bread_bao_ff9db9`
@@ -72,6 +74,7 @@
 - **Bowl de céréales méditerranéen** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, mediterranean)_ — `dal_grain_bowl_mediterraneen_2d5531`
 - **Bowl de falafels au four, riz et tahini (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, levantine)_ — `falafel_bowl_de_falafel_vegan_f4fd40`
 - **Bowl Quinoa Fruits du Matin** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, international)_ — `brkf_bowl_quinoa_fruits_du_mat_2a615c`
+- **Bramborová polévka, soupe tchèque aux champignons** _(vegetarian, nut_free, soup, czech)_ — `soup_bramborova_polevka_8c41d6`
 - **Brandade de Betterave** _(gluten_free, lactose_free, nut_free, vegan, vegetarian, starter, french_creative)_ — `entry_brandade_de_betterave_113c4a`
 - **Briam** _(diabetes_friendly, gluten_free, vegetarian, main, greek)_ — `main_briam_f33bb8`
 - **Briam aux pois chiches, citron et aneth (vegan)** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, greek)_ — `main_greek_briam_vegan_3fb054`
@@ -85,6 +88,7 @@
 - **Bulgogi Tofu** _(diabetes_friendly, high_protein, vegan, vegetarian, side, korean)_ — `protein_bulgogi_tofu_fc5de9`
 - **Bun** _(high_protein, vegan, vegetarian, main, vietnamese)_ — `protein_bun_f5c7db`
 - **Bun Cha** _(diabetes_friendly, high_protein, vegan, vegetarian, main, vietnamese)_ — `rice_bun_cha_e5c855`
+- **Buraczki, betteraves râpées à la polonaise** _(vegetarian, nut_free, side, polish)_ — `side_buraczki_betteraves_2c56f8`
 - **Burger de haricots noirs et maïs** _(vegetarian, lactose_free, nut_free, main, american)_ — `main_black_bean_burger_9d27c4`
 - **Burrito du matin aux œufs brouillés et haricots** _(vegetarian, gluten_free, nut_free, breakfast, american)_ — `brkf_burrito_dejeuner_8d05c2`
 - **Béchamel** _(vegetarian, sauce, french)_ — `base_bechamel_7db18f` 🔁 doublon possible : Béchamel Végane
@@ -259,6 +263,7 @@
 - **Gazpacho andalou** _(diabetes_friendly, raw, vegan, vegetarian, soup, spanish)_ — `soup_gazpacho_classic_v2_x9k3m1`
 - **Georgian Vegetable Stew** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, georgian)_ — `stew_georgian_vegetable_stew_1cb019`
 - **Ghee (Beurre Clarifié)** _(vegetarian, condiment, indian)_ — `base_ghee_ec9064`
+- **Ghomi au fromage, polenta géorgienne** _(vegetarian, gluten_free, nut_free, side, georgian)_ — `side_ghomi_fromage_4e29a8`
 - **Girolles à la Crème** _(gluten_free, nut_free, main, french)_ — `main_girolles_a_la_creme_7d432d`
 - **Gnocchi alla sorrentina** _(diabetes_friendly, vegetarian, nut_free, main, italian)_ — `pasta_gnocchis_a_la_tomate_8e1632`
 - **Gnocchi au pesto de roquette et noix (vegan)** _(vegan, vegetarian, lactose_free, main, italian)_ — `pasta_gnocchi_al_pesto_vegan_954303`
@@ -340,6 +345,7 @@
 
 ## K
 
+- **Kacha de sarrasin aux champignons** _(vegetarian, nut_free, side, russian)_ — `side_kacha_sarrasin_champignons_3a86e2`
 - **Kachumbari, salade kényane tomate-oignon** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, starter, african)_ — `salad_kachumbari_6c2d94`
 - **Kadhi gujarati sucré-acidulé aux pois chiches (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, indian)_ — `dal_kadhi_pakora_vegan_5cb5d4`
 - **Kadhi pakora du Pendjab** _(diabetes_friendly, high_protein, vegetarian, gluten_free, nut_free, main, indian)_ — `dal_kadhi_pakora_078de2`
@@ -360,13 +366,16 @@
 - **Kimchi de chou chinois fermenté (préparation de base)** _(vegan, vegetarian, gluten_free, condiment, korean)_ — `base_kimchi_61791a`
 - **Kimchi sundubu jjigae épicé** _(diabetes_friendly, high_protein, vegetarian, gluten_free, lactose_free, nut_free, main, korean)_ — `stew_sundubu_tofu_stew_ebe50e`
 - **Kimchijeon, crêpe croustillante au kimchi (vegan)** _(vegan, vegetarian, lactose_free, nut_free, snack, korean)_ — `snack_crepe_coreenne_aux_oignon_a45536`
+- **Knedlíky, quenelles de pain tchèques** _(vegetarian, nut_free, side, czech)_ — `side_knedliky_7b53c2`
 - **Kombucha** _(vegan, gluten_free, lactose_free, beverage, chinese)_ — `beverage_kombucha_3df24c`
+- **Kopytka, gnocchi de pomme de terre polonais** _(vegetarian, nut_free, side, polish)_ — `side_kopytka_4b28e5`
 - **Korma de Légumes** _(diabetes_friendly, gluten_free, vegetarian, main, indian)_ — `main_korma_de_legumes_ddde08`
 - **Korma de légumes au tofu et à la noix de cajou (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, main, indian)_ — `protein_paneer_butter_masala_vega_6c63de`
 - **Koshari de fête à la shatta** _(high_protein, vegan, vegetarian, lactose_free, nut_free, main, egyptian)_ — `main_koshari_classic_v4_q7n5z2`
 - **Koshari du Caire aux pois chiches, sauce daqqa** _(vegan, vegetarian, lactose_free, nut_free, main, egyptian)_ — `dal_koshari_egyptien_73828c`
 - **Koshari express aux lentilles corail** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, egyptian)_ — `dal_koshari_15670d`
 - **Kouign-Amann** _(kid_friendly, nut_free, dessert, french_breton)_ — `dessert_kouign_amann_a71af6`
+- **Körözött, tartinade de fromage au paprika** _(vegetarian, nut_free, starter, hungarian)_ — `entry_korozott_3e94b2`
 - **Köttbullar végétariennes aux pois chiches, sauce crème et airelles** _(diabetes_friendly, high_protein, vegetarian, nut_free, main, swedish)_ — `dal_boulettes_suedoises_2ac55d`
 
 ## L
@@ -420,6 +429,7 @@
 - **Minestrone d'hiver milanais au riz et chou de Milan** _(diabetes_friendly, vegetarian, gluten_free, nut_free, soup, italian)_ — `soup_minestrone_italienne_f98e05`
 - **Minestrone d'été alla genovese, au basilic** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, nut_free, soup, italian)_ — `soup_minestrone_9116a2`
 - **Mirza Ghasemi** _(diabetes_friendly, gluten_free, high_protein, main, persian)_ — `egg_mirza_ghasemi_454e24`
+- **Mizeria, salade de concombre à la crème** _(vegetarian, gluten_free, nut_free, side, polish)_ — `side_mizeria_concombre_9e73b1`
 - **Mochi Matcha** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, dessert, japanese)_ — `dessert_mochi_matcha_7bf558`
 - **Moin moin, flan de doliques à la vapeur** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, nigerian)_ — `dal_moin_moin_6e4a13`
 - **Momos aux Légumes** _(vegan, vegetarian, main, ethiopian)_ — `dumpling_momos_aux_legumes_0adb23`
@@ -435,6 +445,7 @@
 - **Muhammara** _(diabetes_friendly, kid_friendly, lactose_free, low_calorie, vegan, vegetarian, starter, syrian)_ — `entry_muhammara_cd05ca`
 - **Mujadara libanaise traditionnelle** _(gluten_free, high_protein, vegan, vegetarian, main, lebanese)_ — `rice_mujadara_classic_ee2456`
 - **Mujaddara burghul syrienne au boulgour** _(vegan, vegetarian, lactose_free, nut_free, main, syrian)_ — `dal_mujadara_2f5904`
+- **Mămăligă cu brânză, polenta roumaine au fromage** _(vegetarian, gluten_free, nut_free, side, romanian)_ — `side_mamaliga_branza_4d67e8`
 
 ## N
 
@@ -463,6 +474,7 @@
 - **Ojja aux pois chiches et tofu brouillé au carvi (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, breakfast, tunisian)_ — `brkf_ojja_vegan_dbbad8`
 - **Ojja tunisienne aux œufs, poivrons et harissa** _(diabetes_friendly, gluten_free, high_protein, main, tunisian)_ — `egg_ojja_5bdbea`
 - **Okonomiyaki** _(nut_free, vegetarian, main, japanese)_ — `egg_okonomiyaki_c105e0`
+- **Okrochka, soupe froide russe au kéfir** _(vegetarian, gluten_free, nut_free, soup, russian)_ — `soup_okrochka_5e17d4`
 - **Omelette aux Herbes du Jardin** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, low_calorie, nut_free, breakfast, french)_ — `brkf_omelette_aux_herbes_du_ja_f21317`
 - **Omelette nature** _(diabetes_friendly, gluten_free, high_protein, breakfast, french)_ — `egg_omelette_nature_d72ed2`
 - **Onigiri Nature** _(gluten_free, vegan, vegetarian, snack, japanese)_ — `rice_onigiri_nature_cd56ab`
@@ -488,6 +500,7 @@
 - **Pajeon aux oignons verts, sauce soja vinaigrée** _(vegetarian, lactose_free, nut_free, main, korean)_ — `egg_crepe_coreenne_aux_oignons_ver_356ac2`
 - **Pak Choï Sauté** _(vegan, vegetarian, side, chinese)_ — `wok_pak_choi_saute_62b974`
 - **Pakora** _(gluten_free, high_protein, vegan, vegetarian, snack, indian)_ — `dal_pakora_b418ab`
+- **Palacsinta au fromage blanc et aux raisins** _(vegetarian, nut_free, dessert, hungarian)_ — `dessert_palacsinta_5a82d7`
 - **Palak paneer du Pendjab au ghee** _(diabetes_friendly, gluten_free, high_protein, main, indian)_ — `curry_palak_paneer_b4ca11`
 - **Pan Con Tomate** _(vegan, vegetarian, snack, spanish)_ — `bread_pan_con_tomate_06a94e`
 - **Pancakes Banane Vegan** _(kid_friendly, lactose_free, nut_free, vegan, vegetarian, breakfast, american)_ — `brkf_pancakes_banane_vegan_c9231e`
@@ -501,6 +514,7 @@
 - **Panna Cotta Coco Vegan** _(gluten_free, kid_friendly, lactose_free, nut_free, vegan, vegetarian, dessert, international)_ — `dessert_panna_cotta_coco_vegan_16d6b5`
 - **Panzanella Italienne** _(diabetes_friendly, vegan, vegetarian, main, italian)_ — `bread_panzanella_italienne_307da1`
 - **Papaya Salad** _(vegan, vegetarian, side, laotian)_ — `main_papaya_salad_918f58`
+- **Paprikás krumpli, pommes de terre au paprika** _(vegetarian, gluten_free, nut_free, main, hungarian)_ — `main_paprikas_krumpli_6f19a4`
 - **Parippu sri lankais au lait de coco** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, sri_lankan)_ — `dal_lentilles_corail_au_lait_de_co_19d485`
 - **Parmigiana di melanzane napolitaine** _(diabetes_friendly, high_protein, vegetarian, gluten_free, nut_free, main, italian)_ — `main_parmigiana_di_melanzane_6bd49f`
 - **Parmigiana légère d'aubergines et courgettes grillées** _(high_protein, vegetarian, gluten_free, nut_free, main, italian)_ — `main_aubergines_parmigiana_sim_e5028f`
@@ -693,6 +707,7 @@
 - **Salade Mexicaine aux Haricots** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, mexican)_ — `salad_mexicaine_aux_haricots_949e62`
 - **Salade Mâche aux Noix** _(gluten_free, raw, vegetarian, side, french)_ — `salad_salade_mache_aux_noix_081567`
 - **Salade Niçoise** _(diabetes_friendly, gluten_free, high_protein, main, french)_ — `salad_nicoise_3b123f`
+- **Salade Olivier végétarienne** _(vegetarian, gluten_free, lactose_free, nut_free, starter, russian)_ — `salad_olivier_vegetarienne_8d35c7`
 - **Salade ovcharska du berger, œufs et champignons** _(diabetes_friendly, vegetarian, gluten_free, nut_free, main, bulgarian)_ — `salad_shopska_04dd73`
 - **Salade shopska au tofu mariné à l'aneth (vegan)** _(diabetes_friendly, low_calorie, raw, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, bulgarian)_ — `salad_bulgarian_shopska_salad_v_adc716`
 - **Salade shopska aux haricots blancs et poivrons grillés (vegan)** _(diabetes_friendly, low_calorie, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, bulgarian)_ — `salad_shopska_vegan_001f9e`
@@ -704,6 +719,7 @@
 - **Samosa** _(vegetarian, vegan, snack, chinese)_ — `snack_vegetable_samosa_088bfa`
 - **Sancocho** _(gluten_free, vegan, vegetarian, main, dominican)_ — `main_sancocho_733f70`
 - **Sandwich végétarien** _(snack, international)_ — `snack_veg_k3d2p1`
+- **Sarmale de post, choux farcis au riz** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, romanian)_ — `main_sarmale_de_post_9f24b7`
 - **Sauce au Yaourt** _(vegetarian, gluten_free, sauce, middle_eastern)_ — `base_sauce_yogurt_0bfeaf`
 - **Sauce Brune Végétarienne** _(vegan, vegetarian, sauce, western)_ — `vegetarian_brown_sauce_4233df`
 - **Sauce Cacahuète** _(vegan, vegetarian, sauce, indonesian)_ — `base_sauce_peanut_d92c5c`
@@ -781,6 +797,7 @@
 - **Succotash de maïs et haricots de Lima** _(vegetarian, gluten_free, nut_free, side, american)_ — `side_succotash_7c40d8`
 - **Sukuma wiki, chou cavalier à la tomate** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, side, african)_ — `side_sukuma_wiki_8e6031`
 - **Sushi** _(diabetes_friendly, high_protein, vegan, vegetarian, main, japanese)_ — `rice_vegetable_sushi_9aad8a`
+- **Syrniki, galettes de fromage blanc** _(vegetarian, nut_free, breakfast, ukrainian)_ — `brkf_syrniki_7c48b9`
 
 ## T
 
@@ -797,6 +814,7 @@
 - **Tamarind Rice** _(gluten_free, vegan, vegetarian, side, american)_ — `rice_tamarind_rice_2e5463`
 - **Tandoori de chou-fleur et pois chiches, chutney à la menthe (vegan)** _(diabetes_friendly, low_calorie, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, indian)_ — `protein_paneer_tikka_vegan_8bf0a0`
 - **Tapenade d'Olives Noires** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, french)_ — `entry_tapenade_d_olives_noires_ed6d5d`
+- **Tarator, soupe froide bulgare au yaourt** _(vegetarian, gluten_free, soup, bulgarian)_ — `soup_tarator_bulgare_2b78f5`
 - **Tarte au citron vert de Floride** _(vegetarian, nut_free, dessert, american)_ — `dessert_key_lime_pie_2c47d9`
 - **Tarte au potiron et aux épices** _(vegetarian, nut_free, dessert, american)_ — `dessert_pumpkin_pie_4f85b0`
 - **Tarte au sucre du Québec** _(vegetarian, nut_free, dessert, canadian)_ — `dessert_tarte_au_sucre_9b18e3`
@@ -907,3 +925,7 @@
 ## Ş
 
 - **Şehriyeli pilav, riz pilaf aux vermicelles grillés** _(vegetarian, nut_free, side, turkish)_ — `rice_riz_pilaf_turc_52cfe9`
+
+## Ż
+
+- **Żurek végétarien au levain de seigle** _(vegetarian, nut_free, soup, polish)_ — `soup_zurek_vegetarien_7d41c9`

@@ -78,7 +78,9 @@ GENERIC = {"riz", "sauce", "salade", "soupe", "legumes", "legume", "maison", "ve
            "aux", "des", "les", "sur", "lait", "eau", "mais", "paneer", "gallo", "tofu",
            "blanc", "blanche", "blancs", "vert", "verte", "verts", "rouge", "rouges", "noir",
            "noirs", "jaune", "maison", "chou", "carotte", "erable", "sirop", "sucre", "cidre",
-           "matin", "jardin", "hiver", "ete", "printemps", "automne", "pain", "tarte", "gateau"}
+           "matin", "jardin", "hiver", "ete", "printemps", "automne", "pain", "tarte", "gateau",
+           "raisins", "raisin", "noix", "amandes", "grenade", "yaourt", "crème", "froide",
+           "galettes", "galette", "quenelles", "fromage"}
 
 # adjectifs de pays et de région : ils ne distinguent pas un plat d'un autre
 GENTILES = {"francais", "francaise", "italien", "italienne", "italiennes", "espagnol", "espagnole",
