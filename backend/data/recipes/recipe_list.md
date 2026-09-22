@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-731 recettes (0 avec une alerte qualite, 119 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+731 recettes (0 avec une alerte qualite, 105 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -61,6 +61,8 @@
 - **Bowl Quinoa Fruits du Matin** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, international)_ — `brkf_bowl_quinoa_fruits_du_mat_2a615c`
 - **Brandade de Betterave** _(gluten_free, lactose_free, nut_free, vegan, vegetarian, starter, french_creative)_ — `entry_brandade_de_betterave_113c4a`
 - **Briam** _(diabetes_friendly, gluten_free, vegetarian, main, greek)_ — `main_briam_f33bb8`
+- **Briam aux pois chiches, citron et aneth (vegan)** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, greek)_ — `main_greek_briam_vegan_3fb054`
+- **Briam grec aux légumes rôtis et à la feta** _(diabetes_friendly, vegetarian, gluten_free, nut_free, main, greek)_ — `main_greek_briam_4091c5`
 - **Brioche Vendéenne** _(kid_friendly, nut_free, breakfast, french_vendeen)_ — `brkf_brioche_vendeenne_cf19a4`
 - **Brocoli Rôti Sauce Gribiche Vegan** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, side, french)_ — `side_brocoli_roti_sauce_gribic_694128`
 - **Brownie Vegan** _(kid_friendly, lactose_free, dessert, international)_ — `dessert_brownie_vegan_d4c6bd`
@@ -178,13 +180,12 @@
 
 - **Falafel libanais au sésame** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, snack, levantine)_ — `dal_falafel_traditionnels_214e07`
 - **Far Breton aux Pruneaux** _(kid_friendly, nut_free, dessert, french)_ — `dessert_far_breton_aux_pruneaux_069b81`
-- **Farofa Brésilienne** _(gluten_free, main, brazilian)_ — `main_farofa_bresilienne_29e38e` 🔁 doublon possible : Farofa Brésilienne (Vegan)
-- **Farofa Brésilienne (Vegan)** _(gluten_free, kid_friendly, nut_free, vegan, vegetarian, side, brazilian)_ — `side_farofa_bresilienne_vegan_45d889` 🔁 doublon possible : Farofa Brésilienne
+- **Farofa de ovo, farine de manioc grillée aux œufs** _(vegetarian, gluten_free, nut_free, side, brazilian)_ — `main_farofa_bresilienne_29e38e`
+- **Farofa à la banane plantain et aux noix de cajou (vegan)** _(kid_friendly, vegan, vegetarian, gluten_free, lactose_free, side, brazilian)_ — `side_farofa_bresilienne_vegan_45d889`
 - **Fasolakia Grecques** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, greek)_ — `main_fasolakia_grecques_67b6d9`
 - **Fattoush libanais optimisé** _(diabetes_friendly, vegan, vegetarian, main, middle_eastern)_ — `salad_fattoush_classic_x82m5c`
 - **Feijoada** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, brazilian)_ — `main_feijoada_2f6754`
-- **Feijão Tropeiro** _(gluten_free, high_protein, main, brazilian)_ — `egg_feijo_tropeiro_bb31e4` 🔁 doublon possible : Feijão Tropeiro (Vegan)
-- **Feijão Tropeiro (Vegan)** _(gluten_free, high_protein, lactose_free, nut_free, side, brazilian)_ — `side_feijo_tropeiro_vegan_ccc81d` 🔁 doublon possible : Feijão Tropeiro
+- **Feijão tropeiro mineiro, œufs et chou kale** _(high_protein, vegetarian, gluten_free, lactose_free, nut_free, main, brazilian)_ — `egg_feijo_tropeiro_bb31e4`
 - **Fenouil Braisé à l'Orange** _(diabetes_friendly, gluten_free, lactose_free, low_calorie, nut_free, vegan, vegetarian, side, french)_ — `side_fenouil_braise_a_l_orange_a75916`
 - **Feuilles de Nems / Rouleaux de Printemps (base)** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, pastry, asian)_ — `base_spring_roll_wrappers_eba962`
 - **Feuilles à Gyoza** _(vegan, vegetarian, pastry, japanese)_ — `base_gyoza_wrapper_0dba00`
@@ -206,8 +207,7 @@
 
 ## G
 
-- **Gado‑gado Indonésien** _(high_protein, main, indonesian)_ — `protein_gadogado_indonesien_200c65` 🔁 doublon possible : Gado‑gado Indonésien (Vegan)
-- **Gado‑gado Indonésien (Vegan)** _(high_protein, lactose_free, main, indonesian)_ — `salad_gadogado_indonesien_vegan_e4cd75` 🔁 doublon possible : Gado‑gado Indonésien
+- **Gado-gado de Jakarta aux œufs et sauce cacahuète** _(high_protein, vegetarian, lactose_free, main, indonesian)_ — `protein_gadogado_indonesien_200c65`
 - **Galette complète forestière, œuf, gruyère et champignons** _(gluten_free, kid_friendly, nut_free, main, french_breton)_ — `main_galettes_sarrasin_ce9f40`
 - **Galette de sarrasin aux champignons à l'ail et au thym (vegan)** _(kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, breakfast, french)_ — `brkf_galette_sarrasin_champign_f6a798`
 - **Galette de Teff** _(gluten_free, vegetarian, main, ethiopian)_ — `crepe_galette_de_teff_a1a8d3`
@@ -248,8 +248,6 @@
 - **Gratin de Navets** _(gluten_free, nut_free, main, french)_ — `main_gratin_de_navets_e164d6`
 - **Gratin de Poireaux** _(kid_friendly, nut_free, main, french)_ — `main_gratin_de_poireaux_808071`
 - **Gratin de Potiron** _(gluten_free, kid_friendly, nut_free, main, french)_ — `main_gratin_de_potiron_839446`
-- **Greek Briam** _(diabetes_friendly, gluten_free, main, greek)_ — `main_greek_briam_4091c5` 🔁 doublon possible : Greek Briam (Vegan)
-- **Greek Briam (Vegan)** _(gluten_free, nut_free, main, greek)_ — `main_greek_briam_vegan_3fb054` 🔁 doublon possible : Greek Briam
 - **Greek Fasolada** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, greek)_ — `main_greek_fasolada_612a6f`
 - **Green Curry Tofu** _(high_protein, vegetarian, main, thai)_ — `curry_green_curry_tofu_2a30dd`
 - **Guacamole** _(diabetes_friendly, gluten_free, vegan, vegetarian, starter, mexican)_ — `dip_guacamole_970186`
@@ -258,8 +256,8 @@
 - **Gâteau au Yaourt Citron** _(kid_friendly, nut_free, dessert, french)_ — `dessert_gateau_au_yaourt_citron_f27832`
 - **Gâteau Basque** _(kid_friendly, dessert, french_basque)_ — `dessert_gateau_basque_f22cc0`
 - **Gâteau Carottes Vegan** _(kid_friendly, lactose_free, vegan, vegetarian, dessert, international)_ — `dessert_gateau_carottes_vegan_9d8a84`
-- **Gözleme aux Épinards** _(main, international)_ — `main_gozleme_aux_epinards_66eccf` 🔁 doublon possible : Gözleme aux Épinards (Vegan)
-- **Gözleme aux Épinards (Vegan)** _(kid_friendly, lactose_free, snack, turkish)_ — `snack_gozleme_aux_epinards_vega_6ff07b` 🔁 doublon possible : Gözleme aux Épinards
+- **Gözleme anatolien aux épinards et à la feta** _(main, turkish)_ — `main_gozleme_aux_epinards_66eccf`
+- **Gözleme aux pommes de terre épicées et au persil (vegan)** _(kid_friendly, vegan, vegetarian, lactose_free, nut_free, snack, turkish)_ — `snack_gozleme_aux_epinards_vega_6ff07b`
 
 ## H
 
@@ -280,8 +278,8 @@
 - **Horta** _(gluten_free, vegan, vegetarian, side, greek)_ — `main_horta_b898d5`
 - **Hot Pot** _(diabetes_friendly, high_protein, vegan, vegetarian, soup, chinese)_ — `soup_hot_pot_e7fc15`
 - **Houmous traditionnel** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, starter, levantine)_ — `dip_hummus_classic_v6_u4k9p2`
-- **Humita Andine** _(gluten_free, main, peruvian)_ — `main_humita_andine_fe7789` 🔁 doublon possible : Humita Andine (Vegan)
-- **Humita Andine (Vegan)** _(diabetes_friendly, high_protein, kid_friendly, snack, andean)_ — `snack_humita_andine_vegan_1f09bf` 🔁 doublon possible : Humita Andine
+- **Humita en olla argentine, maïs et courge (vegan)** _(diabetes_friendly, high_protein, kid_friendly, vegan, vegetarian, lactose_free, nut_free, main, argentinian)_ — `snack_humita_andine_vegan_1f09bf`
+- **Humitas péruviennes au fromage frais, en feuilles de maïs** _(vegetarian, gluten_free, nut_free, main, peruvian)_ — `main_humita_andine_fe7789`
 - **Hummus Traditionnel** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, starter, lebanese)_ — `dal_hummus_traditionnel_7f6ccc`
 - **Hungarian Lecsó** _(diabetes_friendly, gluten_free, main, hungarian)_ — `main_hungarian_lecs_47d502`
 
@@ -294,8 +292,7 @@
 
 - **Japanese Vegetable Tempura** _(diabetes_friendly, vegan, vegetarian, main, japanese)_ — `main_japanese_vegetable_tempur_f57314`
 - **Jeera Aloo** _(gluten_free, vegan, vegetarian, main, indian)_ — `main_jeera_aloo_f4c7a0`
-- **Jeera Rice** _(gluten_free, side, indian)_ — `rice_jeera_rice_a4633c` 🔁 doublon possible : Jeera Rice (Vegan)
-- **Jeera Rice (Vegan)** _(gluten_free, kid_friendly, low_calorie, nut_free, side, indian)_ — `side_jeera_rice_vegan_694fd1` 🔁 doublon possible : Jeera Rice
+- **Jeera rice au beurre et aux graines de cumin** _(gluten_free, side, indian)_ — `rice_jeera_rice_a4633c`
 
 ## K
 
@@ -463,6 +460,7 @@
 - **Patates Douces Rôties au Miso** _(kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, side, japanese)_ — `side_patates_douces_roties_au_746605`
 - **Pav Bhaji** _(gluten_free, main, international)_ — `main_pav_bhaji_e99df8` 🔁 doublon possible : Pav Bhaji (Vegan)
 - **Pav Bhaji (Vegan)** _(gluten_free, low_calorie, nut_free, main, indian)_ — `main_pav_bhaji_vegan_c1437e` 🔁 doublon possible : Pav Bhaji
+- **Pecel javanais, légumes blanchis et sauce cacahuète épicée (vegan)** _(high_protein, vegan, vegetarian, gluten_free, lactose_free, main, indonesian)_ — `salad_gadogado_indonesien_vegan_e4cd75`
 - **Persian Ash Reshteh** _(diabetes_friendly, high_protein, vegetarian, main, american)_ — `pasta_persian_ash_reshteh_8cb79c` 🔁 doublon possible : Persian Ash Reshteh (Vegan)
 - **Persian Ash Reshteh (Vegan)** _(diabetes_friendly, lactose_free, nut_free, vegan, vegetarian, soup, iranian)_ — `soup_persian_ash_reshteh_vegan_968f7d` 🔁 doublon possible : Persian Ash Reshteh
 - **Persian Herb Stew** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, persian)_ — `stew_persian_herb_stew_485f3e`
@@ -512,6 +510,7 @@
 - **Poêlée Scandinave de Légumes et Pommes de Terre** _(gluten_free, vegan, vegetarian, main, nordic)_ — `main_poelee_scandinave_de_legu_31947f`
 - **Profiteroles** _(kid_friendly, nut_free, dessert, french)_ — `dessert_profiteroles_0d0e42`
 - **Pulao** _(gluten_free, vegan, vegetarian, main, indian)_ — `rice_vegetable_pulao_a0ed3e`
+- **Pulao aux petits pois et au cumin (vegan)** _(kid_friendly, low_calorie, vegan, vegetarian, gluten_free, lactose_free, nut_free, side, indian)_ — `side_jeera_rice_vegan_694fd1`
 - **Pupusas** _(diabetes_friendly, gluten_free, high_protein, main, ethiopian)_ — `main_pupusas_9d2c72` 🔁 doublon possible : Pupusas (Vegan)
 - **Pupusas (Vegan)** _(gluten_free, high_protein, kid_friendly, lactose_free, main, salvadoran)_ — `main_pupusas_vegan_4595d8` 🔁 doublon possible : Pupusas
 - **Pupusas aux Haricots** _(diabetes_friendly, gluten_free, high_protein, main, ethiopian)_ — `main_pupusas_aux_haricots_fc8bfd`
@@ -769,6 +768,7 @@
 - **Tteokbokki** _(vegan, vegetarian, main, korean)_ — `rice_tteokbokki_0861f2`
 - **Turkish Mercimek Soup** _(diabetes_friendly, gluten_free, main, international)_ — `dal_turkish_mercimek_soup_a7afcf` 🔁 doublon possible : Turkish Mercimek Soup (Vegan)
 - **Turkish Mercimek Soup (Vegan)** _(diabetes_friendly, gluten_free, low_calorie, nut_free, soup, turkish)_ — `soup_turkish_mercimek_soup_veg_f30ebc` 🔁 doublon possible : Turkish Mercimek Soup
+- **Tutu de feijão, purée de haricots noirs à la farine de manioc (vegan)** _(high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, side, brazilian)_ — `side_feijo_tropeiro_vegan_ccc81d`
 - **Tzatziki Grec** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, low_calorie, nut_free, vegetarian, starter, greek)_ — `entry_tzatziki_grec_2b21fb`
 
 ## U

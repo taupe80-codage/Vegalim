@@ -4045,6 +4045,171 @@
     "similar": []
   },
   {
+    "id": "main_greek_briam_vegan_3fb054",
+    "title": "Briam aux pois chiches, citron et aneth (vegan)",
+    "cuisine": "greek",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 90,
+    "confidence": 1.0,
+    "description": "Briam végétal plus riche en protéines : légumes rôtis à la tomate et aux pois chiches, terminés au citron, à l'aneth et à l'huile d'olive.",
+    "composition": [
+      {
+        "ingredient": "eggplant_raw",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_zucchini_squash_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chickpea_boiled",
+        "quantity": 240,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 50,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "dill_weed_fresh_herb_leaf",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": null,
+        "unit": "1 poignée"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "main_greek_briam_4091c5",
+    "title": "Briam grec aux légumes rôtis et à la feta",
+    "cuisine": "greek",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "diabetes_friendly",
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 90,
+    "confidence": 1.0,
+    "description": "Le tian grec : pommes de terre, aubergines, courgettes et tomates rôtis longuement à l'huile d'olive, à l'ail et à l'origan, servis avec de la feta émiettée.",
+    "composition": [
+      {
+        "ingredient": "eggplant_raw",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_zucchini_squash_raw",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 9,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 50,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "feta",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oregano_spice_dried",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "brkf_brioche_vendeenne_cf19a4",
     "title": "Brioche Vendéenne",
     "cuisine": "french_vendeen",
@@ -11751,21 +11916,24 @@
   },
   {
     "id": "main_farofa_bresilienne_29e38e",
-    "title": "Farofa Brésilienne",
+    "title": "Farofa de ovo, farine de manioc grillée aux œufs",
     "cuisine": "brazilian",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": false,
     "diet": [
-      "gluten_free"
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
     ],
     "allergens": [
+      "eggs",
       "lactose",
       "milk"
     ],
     "servings": 4,
-    "time_total": 31,
+    "time_total": 25,
     "confidence": 1.0,
-    "description": "Farofa brésilienne croustillante, parfumée et dorée, issue de la torréfaction de farine de manioc avec oignon jaune, carottes et persil frais, typique de la cuisine brésilienne.",
+    "description": "L'accompagnement brésilien des haricots et des grillades : farine de manioc dorée au beurre avec oignon, carotte râpée, œufs brouillés et persil.",
     "composition": [
       {
         "ingredient": "cassava_flour",
@@ -11773,13 +11941,18 @@
         "unit": "g"
       },
       {
+        "ingredient": "egg_raw",
+        "quantity": 110,
+        "unit": "g"
+      },
+      {
         "ingredient": "yellow_onion_raw",
-        "quantity": 150,
+        "quantity": 120,
         "unit": "g"
       },
       {
         "ingredient": "carrot_raw",
-        "quantity": 200,
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -11789,43 +11962,39 @@
       },
       {
         "ingredient": "parsley_fresh_herb",
-        "quantity": 30,
+        "quantity": 20,
         "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 4,
     "flags": [],
-    "similar": [
-      {
-        "id": "side_farofa_bresilienne_vegan_45d889",
-        "title": "Farofa Brésilienne (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "side_farofa_bresilienne_vegan_45d889",
-    "title": "Farofa Brésilienne (Vegan)",
+    "title": "Farofa à la banane plantain et aux noix de cajou (vegan)",
     "cuisine": "brazilian",
     "dish_type": "side",
     "vegan": true,
     "diet": [
-      "gluten_free",
       "kid_friendly",
-      "nut_free",
       "vegan",
-      "vegetarian"
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
     ],
-    "allergens": [],
+    "allergens": [
+      "tree_nuts"
+    ],
     "servings": 4,
-    "time_total": 31,
+    "time_total": 28,
     "confidence": 1.0,
-    "description": "Accompagnement croustillant à base de farine de manioc, oignon jaune émincé, carotte crue râpée et persil frais, typique de la cuisine brésilienne, avec une texture granuleuse et un parfum délicat.",
+    "description": "Farofa de banana du Nordeste : farine de manioc grillée à l'huile avec oignon, banane plantain mûre caramélisée et noix de cajou, parfumée à la coriandre.",
     "composition": [
       {
         "ingredient": "cassava_flour",
@@ -11833,40 +12002,39 @@
         "unit": "g"
       },
       {
+        "ingredient": "plantain_banana_raw_ripe",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
         "ingredient": "yellow_onion_raw",
-        "quantity": 150,
+        "quantity": 100,
         "unit": "g"
       },
       {
-        "ingredient": "carrot_raw",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
+        "ingredient": "cashew_nuts_grilled_unsalted",
         "quantity": 30,
         "unit": "g"
       },
       {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 4,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_farofa_bresilienne_29e38e",
-        "title": "Farofa Brésilienne",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "main_fasolakia_grecques_67b6d9",
@@ -12096,29 +12264,42 @@
   },
   {
     "id": "egg_feijo_tropeiro_bb31e4",
-    "title": "Feijão Tropeiro",
+    "title": "Feijão tropeiro mineiro, œufs et chou kale",
     "cuisine": "brazilian",
     "dish_type": "main",
     "vegan": false,
     "diet": [
+      "high_protein",
+      "vegetarian",
       "gluten_free",
-      "high_protein"
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
       "eggs"
     ],
     "servings": 4,
-    "time_total": 40,
+    "time_total": 35,
     "confidence": 1.0,
-    "description": "Ragoût de haricots noirs cuits à la perfection, liés avec de la farine de manioc et parfumés d'ail et d'oignon, créant une texture crémeuse et une saveur intense, typique de la cuisine brésilienne.",
+    "description": "Plat des muletiers du Minas Gerais : haricots pinto sautés avec farine de manioc, oignon, ail, œufs brouillés et chou kale émincé très fin.",
     "composition": [
       {
-        "ingredient": "black_bean_boiled",
-        "quantity": 300,
+        "ingredient": "pinto_bean_boiled",
+        "quantity": 350,
         "unit": "g"
       },
       {
         "ingredient": "cassava_flour",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 165,
+        "unit": "g"
+      },
+      {
+        "ingredient": "kale_raw",
         "quantity": 150,
         "unit": "g"
       },
@@ -12133,99 +12314,24 @@
         "unit": "g"
       },
       {
-        "ingredient": "egg_raw",
-        "quantity": 220,
-        "unit": "g"
-      },
-      {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
+        "quantity": 40,
         "unit": "ml"
       },
       {
         "ingredient": "parsley_fresh_herb",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "side_feijo_tropeiro_vegan_ccc81d",
-        "title": "Feijão Tropeiro (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "side_feijo_tropeiro_vegan_ccc81d",
-    "title": "Feijão Tropeiro (Vegan)",
-    "cuisine": "brazilian",
-    "dish_type": "side",
-    "vegan": false,
-    "diet": [
-      "gluten_free",
-      "high_protein",
-      "lactose_free",
-      "nut_free"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 25,
-    "confidence": 1.0,
-    "description": "Accompagnement crémeux et parfumé à base de haricots noirs écrasés, de farine de manioc, d'oignon caramélisé et de persil frais, avec une texture variable alliant le croquant et l'al dente, typique de la cuisine brésilienne.",
-    "composition": [
-      {
-        "ingredient": "black_bean_boiled",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cassava_flour",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
         "quantity": 15,
         "unit": "g"
       },
       {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 3,
         "unit": "g"
       }
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": [
-      {
-        "id": "egg_feijo_tropeiro_bb31e4",
-        "title": "Feijão Tropeiro",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "side_fenouil_braise_a_l_orange_a75916",
@@ -13373,44 +13479,49 @@
   },
   {
     "id": "protein_gadogado_indonesien_200c65",
-    "title": "Gado‑gado Indonésien",
+    "title": "Gado-gado de Jakarta aux œufs et sauce cacahuète",
     "cuisine": "indonesian",
     "dish_type": "main",
     "vegan": false,
     "diet": [
-      "high_protein"
+      "high_protein",
+      "vegetarian",
+      "lactose_free"
     ],
     "allergens": [
       "eggs",
       "gluten",
-      "lactose",
       "peanuts",
-      "soy",
-      "milk"
+      "soy"
     ],
     "servings": 4,
-    "time_total": 49,
+    "time_total": 55,
     "confidence": 1.0,
-    "description": "Salade indonésienne aux pommes de terre tendres, haricots verts croquants et tofu doré, assaisonnée d'une sauce cacahuète crémeuse et parfumée au citron vert, avec une variété de textures et de saveurs",
+    "description": "Salade tiède de Jakarta : pommes de terre, haricots verts et pousses de soja blanchis, concombre, tofu doré et œufs durs, nappés d'une sauce cacahuète au citron vert.",
     "composition": [
       {
         "ingredient": "potato_raw_flesh",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "french_bean_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tofu_plain_pre_packaged",
         "quantity": 400,
         "unit": "g"
       },
       {
+        "ingredient": "french_bean_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
         "ingredient": "cucumber_raw_with_skin",
-        "quantity": 350,
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tofu_plain_pre_packaged",
+        "quantity": 300,
         "unit": "g"
       },
       {
@@ -13420,103 +13531,32 @@
       },
       {
         "ingredient": "peanut_butter_plant_regular",
-        "quantity": 60,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "lime_juice_fresh",
-        "quantity": 30,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "coconut_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander",
-        "quantity": null,
-        "unit": "1 poignée"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 100,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 8,
-    "flags": [],
-    "similar": [
-      {
-        "id": "salad_gadogado_indonesien_vegan_e4cd75",
-        "title": "Gado‑gado Indonésien (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "salad_gadogado_indonesien_vegan_e4cd75",
-    "title": "Gado‑gado Indonésien (Vegan)",
-    "cuisine": "indonesian",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "high_protein",
-      "lactose_free"
-    ],
-    "allergens": [
-      "gluten",
-      "peanuts",
-      "soy"
-    ],
-    "servings": 4,
-    "time_total": 59,
-    "confidence": 1.0,
-    "description": "Salade de pommes de terre fondantes, haricots verts légèrement croquants, concombre frais et tofu ferme doré, liés par une sauce cacahuète onctueuse et parfumée, sur fond de saveurs indonésiennes avec une sauce crémeuse et des textures variées",
-    "composition": [
-      {
-        "ingredient": "potato_raw_flesh",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "ingredient": "french_bean_raw",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tofu_plain_pre_packaged",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cucumber_raw_with_skin",
-        "quantity": 350,
-        "unit": "g"
-      },
-      {
-        "ingredient": "peanut_butter_plant_regular",
-        "quantity": 64,
+        "quantity": 70,
         "unit": "g"
       },
       {
         "ingredient": "soy_sauce_shoyu_reduced_sodium",
-        "quantity": 30,
+        "quantity": 25,
         "unit": "ml"
       },
       {
+        "ingredient": "coconut_sugar",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
         "ingredient": "lime_juice_fresh",
-        "quantity": 50,
+        "quantity": 30,
         "unit": "ml"
       },
       {
@@ -13525,50 +13565,24 @@
         "unit": "ml"
       },
       {
+        "ingredient": "water",
+        "quantity": 120,
+        "unit": "ml"
+      },
+      {
         "ingredient": "table_salt_unenriched",
-        "quantity": 2,
+        "quantity": 1,
         "unit": "g"
       },
       {
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
-      },
-      {
-        "ingredient": "puffed_rice_cakes",
-        "quantity": null,
-        "unit": "1 paquet"
-      },
-      {
-        "ingredient": "coconut_milk_plant",
-        "quantity": 150,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_fried_onion_217e6a",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coconut_sugar",
-        "quantity": 10,
-        "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "protein_gadogado_indonesien_200c65",
-        "title": "Gado‑gado Indonésien",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "main_galettes_sarrasin_ce9f40",
@@ -16189,165 +16203,6 @@
     "similar": []
   },
   {
-    "id": "main_greek_briam_4091c5",
-    "title": "Greek Briam",
-    "cuisine": "greek",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "gluten_free"
-    ],
-    "allergens": [
-      "lactose",
-      "milk"
-    ],
-    "servings": 4,
-    "time_total": 67,
-    "confidence": 1.0,
-    "description": "Briam grec traditionnel, légumes tendres et confits, arômes concentrés et parfumés, avec une texture fondante et une saveur intense, préparés selon la technique de cuisson lente et de caramelisation des légumes.",
-    "composition": [
-      {
-        "ingredient": "eggplant_raw",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_zucchini_squash_raw",
-        "quantity": 500,
-        "unit": "g"
-      },
-      {
-        "ingredient": "potato_raw_flesh",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 9,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "feta",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "thyme_fresh_herb",
-        "quantity": 3,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "main_greek_briam_vegan_3fb054",
-        "title": "Greek Briam (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "main_greek_briam_vegan_3fb054",
-    "title": "Greek Briam (Vegan)",
-    "cuisine": "greek",
-    "dish_type": "main",
-    "vegan": false,
-    "diet": [
-      "gluten_free",
-      "nut_free"
-    ],
-    "allergens": [
-      "soy"
-    ],
-    "servings": 4,
-    "time_total": 77,
-    "confidence": 1.0,
-    "description": "Ragoût grec de légumes fondants, avec aubergines, courgettes, pommes de terre et tomates, parfumé au thym frais et à l'ail, cuit à la perfection dans un four préchauffé à 180°C.",
-    "composition": [
-      {
-        "ingredient": "eggplant_raw",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_zucchini_squash_raw",
-        "quantity": 500,
-        "unit": "g"
-      },
-      {
-        "ingredient": "potato_raw_flesh",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 46.2,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "tofu_plain_pre_packaged",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "thyme_fresh_herb",
-        "quantity": 1.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parsley_fresh_herb",
-        "quantity": null,
-        "unit": "1 poignée"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 8,
-    "flags": [],
-    "similar": [
-      {
-        "id": "main_greek_briam_4091c5",
-        "title": "Greek Briam",
-        "score": 1.0
-      }
-    ]
-  },
-  {
     "id": "main_greek_fasolada_612a6f",
     "title": "Greek Fasolada",
     "cuisine": "greek",
@@ -16886,8 +16741,8 @@
   },
   {
     "id": "main_gozleme_aux_epinards_66eccf",
-    "title": "Gözleme aux Épinards",
-    "cuisine": "international",
+    "title": "Gözleme anatolien aux épinards et à la feta",
+    "cuisine": "turkish",
     "dish_type": "main",
     "vegan": false,
     "diet": [],
@@ -16899,7 +16754,7 @@
     "servings": 4,
     "time_total": 21,
     "confidence": 1.0,
-    "description": "Gözleme traditionnel turc avec pâte dorée et farce d'épinards frais et fromage créant une texture croustillante à l'extérieur et tendre à l'intérieur.",
+    "description": "Galette turque à la pâte fine étirée au rouleau, farcie d'épinards, d'oignon et de fromage blanc saumuré, cuite sur une plaque (sac) et badigeonnée d'huile.",
     "composition": [
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
@@ -16944,56 +16799,77 @@
     ],
     "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "snack_gozleme_aux_epinards_vega_6ff07b",
-        "title": "Gözleme aux Épinards (Vegan)",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "snack_gozleme_aux_epinards_vega_6ff07b",
-    "title": "Gözleme aux Épinards (Vegan)",
+    "title": "Gözleme aux pommes de terre épicées et au persil (vegan)",
     "cuisine": "turkish",
     "dish_type": "snack",
-    "vegan": false,
+    "vegan": true,
     "diet": [
       "kid_friendly",
-      "lactose_free"
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
-      "gluten",
-      "tree_nuts"
+      "gluten"
     ],
     "servings": 5,
-    "time_total": 59,
+    "time_total": 80,
     "confidence": 1.0,
-    "description": "Gözleme turc croustillant, aux épinards cuits et fromage végétal, avec une pâte fine et dorée, issu de la tradition culinaire turque. La pâte est pétrie à la main et cuite à la poêle pour obtenir une texture croustillante.",
+    "description": "Patatesli gözleme : pâte fine sans produit laitier, farcie de pommes de terre écrasées avec oignon, piment pul biber, persil et menthe, dorée à la poêle.",
     "composition": [
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
-        "quantity": 200,
+        "quantity": 250,
         "unit": "g"
       },
       {
-        "ingredient": "spinach_cooked",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_vegan_cheddar_024998",
+        "ingredient": "water",
         "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_hot_chili_pepper_spice_dried",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mint",
+        "quantity": 3,
         "unit": "g"
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 20,
+        "quantity": 35,
         "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
-        "quantity": 5,
+        "quantity": 4,
         "unit": "g"
       },
       {
@@ -17005,27 +16881,11 @@
         "ingredient": "mint_fresh_herb",
         "quantity": null,
         "unit": "1 cuillère à soupe"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 180,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "garlic_raw",
-        "quantity": 5,
-        "unit": "g"
       }
     ],
     "n_instructions": 5,
     "flags": [],
-    "similar": [
-      {
-        "id": "main_gozleme_aux_epinards_66eccf",
-        "title": "Gözleme aux Épinards",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dal_lentil_shepherd_pie_vegan_926ebd",
@@ -18333,42 +18193,67 @@
     "similar": []
   },
   {
-    "id": "main_humita_andine_fe7789",
-    "title": "Humita Andine",
-    "cuisine": "peruvian",
+    "id": "snack_humita_andine_vegan_1f09bf",
+    "title": "Humita en olla argentine, maïs et courge (vegan)",
+    "cuisine": "argentinian",
     "dish_type": "main",
-    "vegan": false,
+    "vegan": true,
     "diet": [
-      "gluten_free"
+      "diabetes_friendly",
+      "high_protein",
+      "kid_friendly",
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
     ],
     "allergens": [
-      "lactose",
-      "milk"
+      "gluten"
     ],
     "servings": 4,
-    "time_total": 53,
+    "time_total": 55,
     "confidence": 1.0,
-    "description": "Pâte de maïs frais vapeur enveloppée dans ses feuilles, cuite à l'étouffée, fondante avec un cœur de fromage de chèvre râpé et oignon caramélisé, parfumée à la vapeur chaude",
+    "description": "La humita en olla du nord-ouest argentin : maïs frais et courge butternut cuits en crème épaisse avec oignon, poivron et paprika, adoucie au lait d'avoine, servie à la cuillère.",
     "composition": [
       {
         "ingredient": "sweet_corn_raw_fresh",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butternut_squash_raw_skinless",
         "quantity": 300,
         "unit": "g"
       },
       {
-        "ingredient": "yellow_onion_raw",
-        "quantity": 150,
+        "ingredient": "onion_raw",
+        "quantity": 120,
         "unit": "g"
       },
       {
-        "ingredient": "goat_cheese_fresh",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "milk_liquid_uht_3_5pct",
+        "ingredient": "red_bell_pepper_raw",
         "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "oat_milk_refrigerated_plain_plant",
+        "quantity": 200,
         "unit": "ml"
+      },
+      {
+        "ingredient": "nutritional_yeast_flakes",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "paprika",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 1,
+        "unit": "g"
       },
       {
         "ingredient": "olive_oil_extra_virgin_plant",
@@ -18376,75 +18261,9 @@
         "unit": "ml"
       },
       {
-        "ingredient": "table_salt_unenriched",
+        "ingredient": "basil_fresh_herb",
         "quantity": 5,
         "unit": "g"
-      },
-      {
-        "ingredient": "red_bell_pepper_raw",
-        "quantity": 150,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 7,
-    "flags": [],
-    "similar": [
-      {
-        "id": "snack_humita_andine_vegan_1f09bf",
-        "title": "Humita Andine (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "snack_humita_andine_vegan_1f09bf",
-    "title": "Humita Andine (Vegan)",
-    "cuisine": "andean",
-    "dish_type": "snack",
-    "vegan": false,
-    "diet": [
-      "diabetes_friendly",
-      "high_protein",
-      "kid_friendly"
-    ],
-    "allergens": [
-      "gluten",
-      "tree_nuts"
-    ],
-    "servings": 4,
-    "time_total": 58,
-    "confidence": 1.0,
-    "description": "En-cas traditionnel andin à base de maïs râpé, oignon caramélisé et fromage végétal râpé, présentant une texture crémeuse et une saveur sucrée, préparé à la vapeur dans des feuilles de maïs tendres.",
-    "composition": [
-      {
-        "ingredient": "sweet_corn_raw_fresh",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "ingredient": "base_vegan_cheddar_024998",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "ingredient": "oat_milk_refrigerated_plain_plant",
-        "quantity": 250,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "corn_husk",
-        "quantity": 80,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_extra_virgin_plant",
-        "quantity": 20,
-        "unit": "ml"
       },
       {
         "ingredient": "table_salt_unenriched",
@@ -18452,15 +18271,74 @@
         "unit": "g"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 5,
     "flags": [],
-    "similar": [
+    "similar": []
+  },
+  {
+    "id": "main_humita_andine_fe7789",
+    "title": "Humitas péruviennes au fromage frais, en feuilles de maïs",
+    "cuisine": "peruvian",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 100,
+    "confidence": 1.0,
+    "description": "Humitas salées des Andes péruviennes : maïs frais râpé mêlé d'oignon revenu, piment doux et fromage frais, enveloppé dans des feuilles de maïs et cuit à la vapeur.",
+    "composition": [
       {
-        "id": "main_humita_andine_fe7789",
-        "title": "Humita Andine",
-        "score": 1.0
+        "ingredient": "sweet_corn_raw_fresh",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "yellow_onion_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_bell_pepper_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "queso_fresco_block_cow",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "milk_liquid_uht_3_5pct",
+        "quantity": 50,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "corn_husk",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
       }
-    ]
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
   },
   {
     "id": "dal_hummus_traditionnel_7f6ccc",
@@ -18913,7 +18791,7 @@
   },
   {
     "id": "rice_jeera_rice_a4633c",
-    "title": "Jeera Rice",
+    "title": "Jeera rice au beurre et aux graines de cumin",
     "cuisine": "indian",
     "dish_type": "side",
     "vegan": false,
@@ -18927,7 +18805,7 @@
     "servings": 4,
     "time_total": 25,
     "confidence": 1.0,
-    "description": "Riz basmati du Pendjab cuit à l'eau et revenu à l'huile de coco avec des graines de cumin grillées, grains séparés et très parfumés, dégageant un arôme intense",
+    "description": "Le riz basmati parfumé du nord de l'Inde : graines de cumin crépitées dans le beurre, riz nacré puis cuit par absorption, grains bien séparés.",
     "composition": [
       {
         "ingredient": "white_rice_raw_seed_unenriched",
@@ -18957,72 +18835,7 @@
     ],
     "n_instructions": 7,
     "flags": [],
-    "similar": [
-      {
-        "id": "side_jeera_rice_vegan_694fd1",
-        "title": "Jeera Rice (Vegan)",
-        "score": 1.0
-      }
-    ]
-  },
-  {
-    "id": "side_jeera_rice_vegan_694fd1",
-    "title": "Jeera Rice (Vegan)",
-    "cuisine": "indian",
-    "dish_type": "side",
-    "vegan": false,
-    "diet": [
-      "gluten_free",
-      "kid_friendly",
-      "low_calorie",
-      "nut_free"
-    ],
-    "allergens": [],
-    "servings": 4,
-    "time_total": 27,
-    "confidence": 1.0,
-    "description": "Accompagnement indien créatif, à base de riz basmati, de cumin parfumé et de beurre végétal, cuit à la perfection pour une texture fondante et un arôme intense.",
-    "composition": [
-      {
-        "ingredient": "white_rice_raw_seed_unenriched",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
-        "quantity": 2.5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "vegan_butter",
-        "quantity": 40,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander",
-        "quantity": null,
-        "unit": "1 poignée"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 450,
-        "unit": "ml"
-      }
-    ],
-    "n_instructions": 6,
-    "flags": [],
-    "similar": [
-      {
-        "id": "rice_jeera_rice_a4633c",
-        "title": "Jeera Rice",
-        "score": 1.0
-      }
-    ]
+    "similar": []
   },
   {
     "id": "dal_kadhi_pakora_078de2",
@@ -29847,6 +29660,118 @@
     ]
   },
   {
+    "id": "salad_gadogado_indonesien_vegan_e4cd75",
+    "title": "Pecel javanais, légumes blanchis et sauce cacahuète épicée (vegan)",
+    "cuisine": "indonesian",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "high_protein",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free"
+    ],
+    "allergens": [
+      "peanuts",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 45,
+    "confidence": 1.0,
+    "description": "Le pecel de Java-Est : épinards, chou, haricots verts et pousses de soja blanchis, tempeh grillé, sous une sauce cacahuète relevée de piment, combava et sucre de coco.",
+    "composition": [
+      {
+        "ingredient": "spinach_raw_mature",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_cabbage_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "french_bean_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mung_bean_sprouts_raw_seed_sprouted",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tempeh_tempe_raw_fermented",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "peanut_roasted_salted_dry",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chilli_pepper_raw",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "ingredient": "kaffir_lime_leaf",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_sugar",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tamarind",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coconut_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "base_fried_onion_217e6a",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander",
+        "quantity": null,
+        "unit": "1 poignée"
+      },
+      {
+        "ingredient": "puffed_rice_cakes",
+        "quantity": null,
+        "unit": "1 paquet"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "pasta_persian_ash_reshteh_8cb79c",
     "title": "Persian Ash Reshteh",
     "cuisine": "american",
@@ -33491,6 +33416,87 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "side_jeera_rice_vegan_694fd1",
+    "title": "Pulao aux petits pois et au cumin (vegan)",
+    "cuisine": "indian",
+    "dish_type": "side",
+    "vegan": true,
+    "diet": [
+      "kid_friendly",
+      "low_calorie",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 50,
+    "confidence": 1.0,
+    "description": "Jeera matar pulao : riz basmati cuit avec cumin, laurier, cannelle et petits pois dans l'huile, parsemé de coriandre fraîche.",
+    "composition": [
+      {
+        "ingredient": "white_rice_raw_seed_unenriched",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_peas_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "bay_leaf",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cinnamon",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 480,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander",
+        "quantity": null,
+        "unit": "1 poignée"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -51033,6 +51039,81 @@
         "score": 1.0
       }
     ]
+  },
+  {
+    "id": "side_feijo_tropeiro_vegan_ccc81d",
+    "title": "Tutu de feijão, purée de haricots noirs à la farine de manioc (vegan)",
+    "cuisine": "brazilian",
+    "dish_type": "side",
+    "vegan": true,
+    "diet": [
+      "high_protein",
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 35,
+    "confidence": 1.0,
+    "description": "Spécialité du Minas Gerais : haricots noirs mixés avec leur bouillon, épaissis à la farine de manioc, relevés d'ail et d'oignon, servis avec du chou kale sauté.",
+    "composition": [
+      {
+        "ingredient": "black_bean_boiled",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cassava_flour",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "kale_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "bay_leaf",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 35,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 300,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
   },
   {
     "id": "entry_tzatziki_grec_2b21fb",
