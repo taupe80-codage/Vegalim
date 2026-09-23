@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-850 recettes (0 avec une alerte qualite, 35 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+870 recettes (0 avec une alerte qualite, 39 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -123,6 +123,7 @@
 - **Chana masala** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `curry_chickpea_k5x2p9`
 - **Chana palak, pois chiches aux épinards (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, indian)_ — `protein_palak_paneer_vegan_bdac46`
 - **Charlotte aux Fraises** _(kid_friendly, nut_free, vegetarian, dessert, french)_ — `dessert_charlotte_aux_fraises_e3f32c`
+- **Chawanmushi, flan salé au dashi** _(vegetarian, lactose_free, nut_free, starter, japanese)_ — `entry_chawanmushi_6d39f2`
 - **Cheddar végétal au cajou et au poivron** _(vegan, vegetarian, gluten_free, base, international)_ — `base_vegan_cheddar_024998`
 - **Cheesecake Fruits Rouges** _(kid_friendly, nut_free, dessert, international)_ — `dessert_cheesecake_fruits_rouges_3460f6`
 - **Chia Pudding Coco Mangue** _(diabetes_friendly, gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegetarian, dessert, international)_ — `dessert_chia_pudding_coco_mangue_d61cff`
@@ -148,6 +149,7 @@
 - **Compote Rhubarbe Fraise** _(gluten_free, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, breakfast, french)_ — `brkf_compote_rhubarbe_fraise_1d9d38`
 - **Concentré de Tomate** _(vegan, vegetarian, gluten_free, sauce, italian)_ — `base_tomato_paste_26412f`
 - **Confiture de Fraises** _(vegan, vegetarian, gluten_free, sauce, french)_ — `base_strawberry_jam_1e5515`
+- **Cong you bing, galettes feuilletées aux oignons verts** _(vegan, vegetarian, lactose_free, snack, chinese)_ — `snack_cong_you_bing_8b57d1`
 - **Congee au gingembre et aux champignons** _(vegan, vegetarian, lactose_free, breakfast, chinese)_ — `brkf_congee_gingembre_8b5d24`
 - **Cookie Chocolat Vegan** _(kid_friendly, lactose_free, nut_free, dessert, american)_ — `dessert_cookie_chocolat_vegan_b9c6cc`
 - **Corn chowder à la pomme de terre** _(vegetarian, nut_free, soup, american)_ — `soup_corn_chowder_3b95e1`
@@ -199,8 +201,10 @@
 - **Dal Tadka** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, indian)_ — `dal_dal_tadka_4c3536`
 - **Dal tadka du Pendjab** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, main, indian)_ — `dal_lentil_corail_classic_k1d1p1`
 - **Dan chao fan, riz sauté à l'œuf et aux oignons verts** _(vegetarian, main, chinese)_ — `main_fried_rice_a6e811`
+- **Dan dan mian végétarien** _(vegan, vegetarian, lactose_free, main, sichuan)_ — `noodle_dan_dan_mian_6c41f8`
 - **Daube de Légumes** _(gluten_free, lactose_free, nut_free, vegan, vegetarian, main, french_provencal)_ — `main_daube_de_legumes_4a045f`
 - **Disques de Pâte** _(vegetarian, pastry, latin_american)_ — `base_pastry_wrappers_a56ee0`
+- **Doenjang jjigae, ragoût coréen de soja fermenté** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, korean)_ — `stew_doenjang_jjigae_9c54a7`
 - **Dolma au Persil** _(gluten_free, vegan, vegetarian, main, turkish)_ — `rice_dolma_au_persil_6aeb1e`
 - **Donburi Tofu Teriyaki** _(high_protein, vegan, vegetarian, main, japanese)_ — `rice_donburi_tofu_teriyaki_a71cfc` 🔁 doublon possible : Tofu Teriyaki
 - **Dumplings** _(diabetes_friendly, high_protein, vegan, vegetarian, main, chinese)_ — `dumpling_vegetable_dumplings_abb853`
@@ -323,10 +327,13 @@
 - **Haricots Rouges Créoles** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, creole)_ — `main_haricots_rouges_creoles_ac36f6`
 - **Haricots Rouges à la Tomate** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, international)_ — `main_haricots_rouges_a_la_toma_c44560`
 - **Haricots Verts Amandine** _(gluten_free, kid_friendly, starter, french)_ — `entry_haricots_verts_amandine_391638`
+- **Haricots verts sautés secs à la sichuanaise** _(vegan, vegetarian, lactose_free, side, sichuan)_ — `side_haricots_verts_sichuan_2a63e9`
 - **Haricots Verts à la Grenobloise** _(diabetes_friendly, kid_friendly, low_calorie, nut_free, side, french)_ — `side_haricots_verts_a_la_greno_f1bdca`
 - **Harira express aux vermicelles** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, nut_free, soup, moroccan)_ — `dal_harira_822880`
 - **Harira marocaine traditionnelle à la tadouira** _(diabetes_friendly, high_protein, vegan, vegetarian, soup, moroccan)_ — `soup_harira_classic_v3_p9x4k2`
 - **Harissa** _(vegan, vegetarian, gluten_free, sauce, moroccan)_ — `base_harissa_ef842f`
+- **Hiyashi chuka, nouilles froides japonaises** _(vegetarian, lactose_free, main, japanese)_ — `noodle_hiyashi_chuka_8f42c1`
+- **Hobak jeon, galettes de courgette coréennes** _(vegetarian, lactose_free, snack, korean)_ — `snack_hobak_jeon_8d19c5`
 - **Hoppin' John, riz et doliques du Sud** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, american)_ — `main_hoppin_john_4d80a9`
 - **Horchata de riz à la cannelle** _(vegan, vegetarian, gluten_free, lactose_free, beverage, mexican)_ — `beverage_horchata_riz_4a91d3`
 - **Horiatiki, salade grecque de village à la feta** _(diabetes_friendly, raw, vegetarian, gluten_free, nut_free, main, greek)_ — `salad_greek_classic_v2_t4m8q1`
@@ -351,6 +358,7 @@
 
 - **Jambalaya végétarien aux haricots rouges** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, creole)_ — `rice_jambalaya_vegetarien_2a71d6`
 - **Japanese Vegetable Tempura** _(diabetes_friendly, vegan, vegetarian, main, japanese)_ — `main_japanese_vegetable_tempur_f57314`
+- **Japchae, nouilles de patate douce sautées** _(vegetarian, lactose_free, main, korean)_ — `noodle_japchae_6e27b4` 🔁 doublon possible : Nouilles de Patate Douce
 - **Jeera Aloo** _(gluten_free, vegan, vegetarian, main, indian)_ — `main_jeera_aloo_f4c7a0`
 - **Jeera rice au beurre et aux graines de cumin** _(gluten_free, side, indian)_ — `rice_jeera_rice_a4633c`
 
@@ -377,11 +385,14 @@
 - **Kimchi de chou chinois fermenté (préparation de base)** _(vegan, vegetarian, gluten_free, condiment, korean)_ — `base_kimchi_61791a`
 - **Kimchi sundubu jjigae épicé** _(diabetes_friendly, high_protein, vegetarian, gluten_free, lactose_free, nut_free, main, korean)_ — `stew_sundubu_tofu_stew_ebe50e`
 - **Kimchijeon, crêpe croustillante au kimchi (vegan)** _(vegan, vegetarian, lactose_free, nut_free, snack, korean)_ — `snack_crepe_coreenne_aux_oignon_a45536`
+- **Kinpira de carottes et de lotus** _(vegan, vegetarian, lactose_free, nut_free, side, japanese)_ — `side_kinpira_carottes_3c58b7`
 - **Knedlíky, quenelles de pain tchèques** _(vegetarian, nut_free, side, czech)_ — `side_knedliky_7b53c2`
 - **Kombucha** _(vegan, gluten_free, lactose_free, beverage, chinese)_ — `beverage_kombucha_3df24c`
+- **Kongnamul guk, soupe coréenne aux pousses de soja** _(vegan, vegetarian, lactose_free, nut_free, soup, korean)_ — `soup_kongnamul_guk_3f76e2`
 - **Kopytka, gnocchi de pomme de terre polonais** _(vegetarian, nut_free, side, polish)_ — `side_kopytka_4b28e5`
 - **Korma de Légumes** _(diabetes_friendly, gluten_free, vegetarian, main, indian)_ — `main_korma_de_legumes_ddde08`
 - **Korma de légumes au tofu et à la noix de cajou (vegan)** _(diabetes_friendly, vegan, vegetarian, gluten_free, lactose_free, main, indian)_ — `protein_paneer_butter_masala_vega_6c63de`
+- **Korokke, croquettes japonaises de pomme de terre** _(vegetarian, nut_free, snack, japanese)_ — `snack_korokke_pomme_de_terre_2e95d8`
 - **Koshari de fête à la shatta** _(high_protein, vegan, vegetarian, lactose_free, nut_free, main, egyptian)_ — `main_koshari_classic_v4_q7n5z2`
 - **Koshari du Caire aux pois chiches, sauce daqqa** _(vegan, vegetarian, lactose_free, nut_free, main, egyptian)_ — `dal_koshari_egyptien_73828c`
 - **Koshari express aux lentilles corail** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, egyptian)_ — `dal_koshari_15670d`
@@ -464,6 +475,7 @@
 - **Nasi goreng au tempeh et aux haricots verts (vegan)** _(vegan, vegetarian, lactose_free, nut_free, main, indonesian)_ — `rice_nasi_goreng_vegan_bcc9cb`
 - **Nasi goreng kampung à l'œuf au plat** _(vegetarian, lactose_free, nut_free, main, indonesian)_ — `rice_nasi_goreng_edfce4`
 - **Nasi lemak végétarien** _(vegetarian, gluten_free, lactose_free, main, malaysian)_ — `rice_nasi_lemak_vegetarien_9e4c60`
+- **Nasu dengaku, aubergines glacées au miso** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, side, japanese)_ — `side_nasu_dengaku_5a17e4`
 - **Natto** _(vegan, vegetarian, gluten_free, high_protein, condiment, japanese)_ — `base_natto_7060f1`
 - **Nepali Aloo Tama** _(gluten_free, vegan, vegetarian, main, nepali)_ — `main_nepali_aloo_tama_4664a3`
 - **Nepali Chickpea Curry** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, nepali)_ — `dal_nepali_chickpea_curry_020035`
@@ -473,8 +485,9 @@
 - **Nepali Tomato Achar** _(diabetes_friendly, gluten_free, vegan, vegetarian, condiment, nepali)_ — `main_nepali_tomato_achar_9575d1`
 - **Nouilles Coréennes aux Légumes** _(diabetes_friendly, vegan, vegetarian, main, korean)_ — `pasta_nouilles_coreennes_aux_legumes_82115e`
 - **Nouilles de Blé Maison** _(vegetarian, pasta, asian)_ — `base_noodles_2d0ed7`
-- **Nouilles de Patate Douce** _(vegan, vegetarian, gluten_free, pasta, korean)_ — `base_nouilles_de_patate_douce_fdeb79`
+- **Nouilles de Patate Douce** _(vegan, vegetarian, gluten_free, pasta, korean)_ — `base_nouilles_de_patate_douce_fdeb79` 🔁 doublon possible : Japchae, nouilles de patate douce sautées
 - **Nouilles de Riz** _(vegan, vegetarian, gluten_free, pasta, vietnamese)_ — `base_rice_noodle_831080`
+- **Nouilles froides à la sauce sésame** _(vegan, vegetarian, lactose_free, nut_free, main, chinese)_ — `noodle_nouilles_froides_sesame_7d25a4`
 - **Nouilles Ramen Maison** _(vegan, vegetarian, pasta, japanese)_ — `base_nouilles_ramen_3907e3`
 - **Nouilles Reshteh** _(vegan, vegetarian, pasta, persian)_ — `base_reshteh_noodles_6f783e`
 - **Nouilles Satay** _(high_protein, main, international)_ — `pasta_nouilles_satay_864b31`
@@ -504,6 +517,7 @@
 - **Pad thaï aux légumes croquants (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, main, thai)_ — `protein_pad_thai_vegan_33c0f3`
 - **Pad thaï de Bangkok au tofu et à l'œuf** _(high_protein, main, thai)_ — `wok_thai_veg_eb92db`
 - **Paella végétarienne traditionnelle** _(gluten_free, vegan, vegetarian, main, spanish)_ — `rice_paella_veg_c7m3x1`
+- **Pai huang gua, concombre écrasé à l'ail** _(vegan, vegetarian, lactose_free, nut_free, side, chinese)_ — `side_pai_huang_gua_3d92b5`
 - **Pain au Fromage Brésilien** _(diabetes_friendly, gluten_free, high_protein, main, brazilian)_ — `egg_pain_au_fromage_bresilien_603bf5`
 - **Pain aux Bananes Vegan** _(kid_friendly, lactose_free, vegan, vegetarian, breakfast, american)_ — `brkf_pain_aux_bananes_vegan_b85f00`
 - **Pain d'Épices** _(kid_friendly, lactose_free, nut_free, dessert, french)_ — `dessert_pain_d_epices_754c93`
@@ -575,7 +589,8 @@
 - **Pommes Dauphine** _(kid_friendly, nut_free, side, french)_ — `side_pommes_dauphine_73a2c7`
 - **Pommes de Terre Braisées Coréennes** _(vegan, vegetarian, main, korean)_ — `main_pommes_de_terre_braisees_7a56a8`
 - **Pommes de Terre Sauce Huancaína** _(gluten_free, main, peruvian)_ — `sauce_pommes_de_terre_sauce_hua_3304de`
-- **Pommes de terre sautées** _(gluten_free, vegan, vegetarian, main, french)_ — `wok_pommes_de_terre_sautees_8bafe1`
+- **Pommes de terre sautées** _(gluten_free, vegan, vegetarian, main, french)_ — `wok_pommes_de_terre_sautees_8bafe1` 🔁 doublon possible : Pommes de terre sautées aigres-piquantes
+- **Pommes de terre sautées aigres-piquantes** _(vegan, vegetarian, lactose_free, side, sichuan)_ — `side_pommes_terre_aigre_piquantes_9e84c3` 🔁 doublon possible : Pommes de terre sautées
 - **Porotos granados, haricots, maïs et courge** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, chilean)_ — `stew_porotos_granados_6a35c9`
 - **Porridge de millet au lait de coco et à la mangue** _(vegan, vegetarian, gluten_free, lactose_free, breakfast, international)_ — `brkf_porridge_millet_coco_2f94a1`
 - **Porridge Pomme Cannelle** _(kid_friendly, lactose_free, low_calorie, vegetarian, breakfast, international)_ — `brkf_porridge_pomme_cannelle_9af096`
@@ -827,6 +842,7 @@
 - **Tacu Tacu** _(gluten_free, vegan, vegetarian, main, peruvian)_ — `rice_tacu_tacu_9e0073`
 - **Tahini** _(vegan, vegetarian, gluten_free, sauce, levantine)_ — `base_tahini_030e18`
 - **Tajine Pois Chiches Citron** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, international)_ — `dal_tajine_pois_chiches_citron_047521`
+- **Tamagoyaki, omelette roulée japonaise** _(vegetarian, lactose_free, breakfast, japanese)_ — `brkf_tamagoyaki_4d61c9`
 - **Tamales de frijol à la sauce rouge (vegan)** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, snack, mexican)_ — `snack_tamales_vegan_d7cbdc`
 - **Tamales rajas con queso** _(diabetes_friendly, high_protein, vegetarian, gluten_free, nut_free, main, mexican)_ — `soup_tamales_7dd98a`
 - **Tamarind Rice** _(gluten_free, vegan, vegetarian, side, american)_ — `rice_tamarind_rice_2e5463`
@@ -872,6 +888,7 @@
 - **Tofu Teriyaki** _(diabetes_friendly, high_protein, vegan, vegetarian, main, japanese)_ — `protein_tofu_teriyaki_ffcb47` 🔁 doublon possible : Donburi Tofu Teriyaki
 - **Tom kha, soupe thaïe au lait de coco et aux champignons** _(vegetarian, soup, thai)_ — `soup_tom_kha_cee413`
 - **Tom Yum** _(diabetes_friendly, vegan, vegetarian, soup, international)_ — `soup_tom_yum_8001c0`
+- **Tomates et œufs sautés à la chinoise** _(vegetarian, lactose_free, main, chinese)_ — `main_tomates_oeufs_sautes_5f18c7`
 - **Tortilla de Maïs** _(vegan, vegetarian, gluten_free, bread, mexican)_ — `base_tortilla_92c2a6`
 - **Tortilla Española** _(gluten_free, main, spanish)_ — `egg_tortilla_espa_ola_51a108`
 - **Tostadas aux haricots noirs, avocat et crème** _(vegetarian, gluten_free, nut_free, main, mexican)_ — `bread_tostadas_06442e`
@@ -879,6 +896,7 @@
 - **Tostones et mojo à l'ail** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, side, caribbean)_ — `side_tostones_mojo_9f57b2`
 - **Tourte aux Champignons** _(kid_friendly, nut_free, main, french)_ — `main_tourte_aux_champignons_85adfb`
 - **Truffade Auvergnate** _(gluten_free, kid_friendly, vegetarian, main, french_auvergnat)_ — `main_truffade_auvergnate_01a284`
+- **Tteok guk, soupe de gâteaux de riz** _(vegetarian, lactose_free, nut_free, soup, korean)_ — `soup_tteok_mandu_guk_5b28d3`
 - **Tteokbokki** _(vegan, vegetarian, main, korean)_ — `rice_tteokbokki_0861f2`
 - **Tutu de feijão, purée de haricots noirs à la farine de manioc (vegan)** _(high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, side, brazilian)_ — `side_feijo_tropeiro_vegan_ccc81d`
 - **Tzatziki Grec** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, low_calorie, nut_free, vegetarian, starter, greek)_ — `entry_tzatziki_grec_2b21fb`
@@ -911,6 +929,7 @@
 - **Waakye, riz et haricots ghanéen** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, african)_ — `rice_waakye_3a5e88`
 - **White Bean Dip Ail Rôti** _(diabetes_friendly, gluten_free, high_protein, kid_friendly, lactose_free, low_calorie, nut_free, vegan, vegetarian, starter, international)_ — `entry_white_bean_dip_ail_roti_e61590`
 - **Wok de légumes** _(diabetes_friendly, vegan, vegetarian, side, chinese)_ — `wok_veg_k3d2p1`
+- **Wontons aux légumes, sauce chili au vinaigre** _(vegetarian, lactose_free, main, sichuan)_ — `main_wontons_sauce_chili_4b71d6`
 - **Wrap végétarien** _(gluten_free, main, international)_ — `wrap_veg_k3d2p1`
 
 ## Y
@@ -923,6 +942,7 @@
 
 - **Za'atar** _(vegan, vegetarian, gluten_free, condiment, levantine)_ — `base_za_atar_2badf3`
 - **Zacuscă roumaine** _(diabetes_friendly, gluten_free, vegan, vegetarian, starter, romanian)_ — `main_romanian_zacusc_a929ee`
+- **Zaru soba, soba froides et sauce tsuyu** _(vegan, vegetarian, lactose_free, nut_free, main, japanese)_ — `noodle_zaru_soba_7b83a5`
 
 ## É
 

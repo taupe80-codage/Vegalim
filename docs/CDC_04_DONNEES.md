@@ -14,7 +14,7 @@ courants), qui existent indépendamment de toute tendance moderne.
 
 | Phase | Volume | Horizon |
 |---|---|---|
-| Actuel (2026-09) | 850 recettes (dont 99 préparations de base ; 820 avant le dédoublonnage de sept. 2026) | Aujourd'hui |
+| Actuel (2026-09) | 870 recettes (dont 99 préparations de base ; 820 avant le dédoublonnage de sept. 2026) | Aujourd'hui |
 | v1 (lancement) | 1 000 – 2 000 recettes | Court terme |
 | v2 (croissance) | 5 000 recettes | Moyen terme |
 | Vision long terme | 10 000+ recettes | Long terme |
