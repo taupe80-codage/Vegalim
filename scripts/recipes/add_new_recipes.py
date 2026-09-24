@@ -80,7 +80,8 @@ GENERIC = {"riz", "sauce", "salade", "soupe", "legumes", "legume", "maison", "ve
            "noirs", "jaune", "maison", "chou", "carotte", "erable", "sirop", "sucre", "cidre",
            "matin", "jardin", "hiver", "ete", "printemps", "automne", "pain", "tarte", "gateau",
            "raisins", "raisin", "noix", "amandes", "grenade", "yaourt", "crème", "froide",
-           "galettes", "galette", "quenelles", "fromage",
+           "galettes", "galette", "quenelles", "fromage", "chutney", "curry", "masala", "dal",
+           "lentilles", "moong", "coco", "vapeur", "sauce",
            "cardamome", "cannelle", "safran", "cumin", "paprika", "vanille", "chocolat", "cacao",
            "sel", "poivre", "avocat", "concombre", "feta", "quinoa", "sarrasin", "riz"}
 
