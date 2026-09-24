@@ -205,4 +205,10 @@ TITLES_EN = {
     "base_fried_rice_f230b0": "Cantonese Fried Rice with Peas and Carrots",
     "base_curry_paste_49c97f": "Fresh Red Chili Curry Paste",
     "soup_tom_kha_cee413": "Tom Kha, Thai Coconut Mushroom Soup",
+    "dal_lebanese_lentil_soup_eae561": "Adas bi Hamod, Lebanese Lentil Soup with Chard and Lemon",
+    "dal_armenian_lentil_soup_0f1067": "Vospov Apur, Armenian Lentil Soup with Dried Apricots",
+    "dal_persian_lentil_soup_71e221": "Adasi, Persian Lentil Soup with Turmeric and Dates",
+    "dal_shorbat_adas_d4f98a": "Iraqi Shorbat Adas, Red Lentil Soup with Turmeric",
+    "dal_soupe_lentilles_turque_e797cb": "Red Lentil Soup with Fried Onion and Lemon",
+    "dal_hummus_traditionnel_7f6ccc": "Quick Hummus with Canned Chickpeas",
 }

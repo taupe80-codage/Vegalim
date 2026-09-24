@@ -29751,9 +29751,9 @@
     {
       "id": "dal_armenian_lentil_soup_0f1067",
       "titles": {
-        "original": "Armenian Lentil Soup",
-        "fr": "Armenian Lentil Soup",
-        "en": "Armenian Lentil Soup"
+        "original": "Vospov Apur, Armenian Lentil Soup with Dried Apricots",
+        "fr": "Vospov apur, soupe arménienne de lentilles aux abricots secs",
+        "en": "Vospov Apur, Armenian Lentil Soup with Dried Apricots"
       },
       "origin": {
         "cuisine": "armenian",
@@ -29815,7 +29815,7 @@
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
+          "quantity": 200,
           "unit": "g",
           "meta": {
             "role": "fruit",
@@ -29910,6 +29910,17 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "apricot_pitted_dried",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "fruit",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -29973,8 +29984,13 @@
       "search_tokens": [
         "(eau",
         "1 heure",
+        "abricots",
         "ail",
+        "apricots",
+        "apur,",
         "armenian",
+        "armenienne",
+        "aux",
         "avance",
         "bouillon",
         "braising",
@@ -29985,6 +30001,7 @@
         "coeliaque",
         "complexe",
         "cumin",
+        "dried",
         "eau",
         "garlic",
         "gluten free",
@@ -29994,6 +30011,7 @@
         "lemon",
         "lentil",
         "lentille",
+        "lentilles",
         "light",
         "low calorie",
         "minceur",
@@ -30005,6 +30023,7 @@
         "sans gluten",
         "sans produit animal",
         "sans viande",
+        "secs",
         "sel",
         "soup",
         "soupe",
@@ -30020,22 +30039,23 @@
         "vegetalien",
         "vegetarien",
         "verte",
+        "vospov",
         "water",
+        "with",
         "wok"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.93,
-      "description": "Soupe arménienne aux lentilles vertes, oignon, ail et épices, crémeuse et parfumée, avec une consistance onctueuse et un parfum sucré, inspirée de la cuisine traditionnelle arménienne.",
+      "description": "Soupe arménienne de lentilles vertes mixée, adoucie par des abricots secs fondus à la cuisson : une texture épaisse et velourée, un équilibre sucré-acidulé relevé de paprika et d'un filet de citron.",
       "instructions": [
-        "Étape 1 : Dans une poêle chaude, faites fondre 45 ml d'huile de tournesol et ajoutez l'oignon émincé (150g) et l'ail haché (9g). Faites-les revenir 3 minutes à feu moyen jusqu'à ce qu'ils soient translucides et dégagent un parfum sucré.",
-        "Étape 2 : Ajoutez les carottes hachées (200g) et les tomates coupées en dés (300g). Faites-les cuire 5 minutes à feu moyen-vif, en remuant constamment, jusqu'à ce que les légumes soient légèrement colorés et tendres.",
-        "Étape 3 : Incorporez les lentilles vertes rincées (200g), le cumin (3g) et le paprika (3g). Couvrez-les de 750 ml de bouillon végétal chaud et portez à ébullition.",
-        "Étape 4 : Réduisez le feu à feu doux et laissez mijoter pendant 30 minutes, ou jusqu'à ce que les lentilles soient tendres et la soupe ait une consistance crémeuse.",
-        "Étape 5 : Ajoutez le jus de citron (40 ml) et assaisonnez avec du sel (2g) et du poivre (2g). Laissez infuser 2 minutes à feu doux pour permettre aux saveurs de se mélanger.",
-        "Étape 6 : Mixez partiellement la soupe pour obtenir une texture crémeuse et onctueuse.",
-        "Étape 7 : Servez chaud, garni de quelques feuilles de persil frais, et savourez cette délicieuse soupe arménienne aux lentilles vertes !"
+        "Étape 1 : Faire revenir 150 g d'oignon émincé et 9 g d'ail haché dans 45 ml d'huile de tournesol, 3 minutes à feu moyen, jusqu'à ce qu'ils soient translucides.",
+        "Étape 2 : Ajouter 200 g de carotte en dés et 200 g de tomates concassées, cuire 5 minutes en remuant.",
+        "Étape 3 : Incorporer 200 g de lentilles vertes rincées, 80 g d'abricots secs coupés en quatre, 3 g de cumin et 3 g de paprika, puis couvrir de 750 ml de bouillon de légumes chaud.",
+        "Étape 4 : Porter à ébullition, baisser le feu et laisser mijoter 30 minutes : les abricots doivent se défaire complètement et épaissir la soupe.",
+        "Étape 5 : Mixer aux trois quarts pour garder quelques lentilles entières, puis ajouter 40 ml de jus de citron, 2 g de sel et 2 g de poivre.",
+        "Étape 6 : Servir chaud avec un peu de paprika saupoudré et du persil frais."
       ],
       "diet_flags": {
         "vegan": true,
@@ -34975,9 +34995,9 @@
     {
       "id": "dal_hummus_traditionnel_7f6ccc",
       "titles": {
-        "original": "Hummus",
-        "fr": "Hummus Traditionnel",
-        "en": "Hummus"
+        "original": "Quick Hummus with Canned Chickpeas",
+        "fr": "Houmous express aux pois chiches en conserve",
+        "en": "Quick Hummus with Canned Chickpeas"
       },
       "origin": {
         "cuisine": "lebanese",
@@ -34987,10 +35007,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 13,
-        "prep_passive_min": 720,
-        "cook_min": 20,
-        "total_min": 753
+        "prep_active_min": 10,
+        "prep_passive_min": 0,
+        "cook_min": 0,
+        "total_min": 10
       },
       "composition": [
         {
@@ -35151,32 +35171,38 @@
       "search_tokens": [
         "(eau",
         "(tahini)",
+        "10 min",
+        "20 min",
+        "5 min",
         "ail",
+        "aux",
+        "canned",
         "chiches",
         "chickpea",
+        "chickpeas",
         "citron",
         "coeliaque",
+        "conserve",
         "cumin",
         "eau",
         "enfants",
+        "express",
         "facile enfants",
         "famille",
         "garlic",
         "gluten free",
+        "houmous",
         "hummus",
         "intermediaire",
         "kids",
         "lebanese",
         "leger",
         "lemon",
-        "lent",
         "liban",
         "libanais",
         "light",
-        "long",
         "low calorie",
         "mediterranee",
-        "mijote",
         "minceur",
         "moyen",
         "moyen-orient",
@@ -35185,6 +35211,8 @@
         "persil",
         "pois",
         "potable)",
+        "quick",
+        "rapide",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -35192,27 +35220,26 @@
         "sel",
         "sesame",
         "table",
-        "traditionnel",
         "vegan",
         "vegetalien",
         "vegetarien",
         "water",
-        "water_cooking"
+        "water_cooking",
+        "with"
       ],
       "difficulty_level": "medium",
       "dish_type": "starter",
       "servings_default": 4,
       "_quality_score": 0.91,
       "_chef_note": "L'houmous est un condiment traditionnel libanais à base de pois chiches.",
-      "description": "Préparation libanaise de pois chiches cuits, mélangés avec du tahin et du jus de citron frais, offrant une texture lisse et onctueuse, avec un équilibre d'acidité et d'aromates végétaliens, caractéristique de la cuisine méditerranéenne.",
+      "description": "Houmous prêt en dix minutes : des pois chiches en conserve rincés, mixés avec tahin, citron et ail, allongés d'eau glacée ; moins aérien qu'avec des pois chiches secs, mais parfumé au cumin et servi aussitôt.",
       "instructions": [
-        "Étape 1 : Faire tremper 160 g de pois chiches secs pendant 12 heures, puis les cuire 1 heure avec une pincée de bicarbonate de soude (environ 400 g de pois chiches cuits). Vous obtiendrez ainsi une texture tendre et une saveur riche.",
-        "Étape 2 : Mixer les pois chiches tièdes avec le tahin, le jus de citron frais et l'ail émincé pendant 4 minutes. La consistance commencera à devenir lisse et crémeuse.",
-        "Étape 3 : Incorporer progressivement l'eau froide tout en continuant de mixer jusqu'à obtenir une texture lisse et crémeuse. Vous sentirez la mixture devenir plus légère et aérienne.",
-        "Étape 4 : Assaisonner de sel et continuer à mixer 1 minute. Le sel mettra en valeur les saveurs des pois chiches et du tahin.",
-        "Étape 5 : Ajouter le cumin en poudre et mélanger bien. Le cumin apportera une touche chaude et aromatique à votre houmous.",
-        "Étape 6 : Étaler l'houmous dans un plat creux et arroser d'huile d'olive. L'huile d'olive ajoutera une richesse et une finesse à votre préparation.",
-        "Étape 7 : Garnir de pois chiches entiers et de persil plat, servir à température ambiante. La présentation sera ainsi colorée et appétissante, avec une touche de fraîcheur grâce au persil."
+        "Étape 1 : Égoutter et rincer 400 g de pois chiches en conserve, retirer les peaux qui se détachent pour un résultat plus lisse.",
+        "Étape 2 : Mixer les pois chiches 3 minutes avec 45 ml de tahin, 40 ml de jus de citron et 9 g d'ail.",
+        "Étape 3 : Ajouter 60 ml d'eau glacée en filet, moteur en marche, jusqu'à obtenir une crème souple.",
+        "Étape 4 : Saler avec 5 g de sel, ajouter 3 g de cumin et mixer encore 1 minute.",
+        "Étape 5 : Étaler dans une assiette creuse, creuser un sillon à la cuillère et arroser de 45 ml d'huile d'olive.",
+        "Étape 6 : Garnir de 5 g de persil haché et de quelques pois chiches entiers, servir tout de suite."
       ],
       "diet_flags": {
         "vegan": true,
@@ -37024,9 +37051,9 @@
     {
       "id": "dal_lebanese_lentil_soup_eae561",
       "titles": {
-        "original": "Lebanese Lentil Soup",
-        "fr": "Lebanese Lentil Soup",
-        "en": "Lebanese Lentil Soup"
+        "original": "Adas bi Hamod, Lebanese Lentil Soup with Chard and Lemon",
+        "fr": "Adas bi hamod, soupe libanaise de lentilles aux blettes et au citron",
+        "en": "Adas bi Hamod, Lebanese Lentil Soup with Chard and Lemon"
       },
       "origin": {
         "cuisine": "lebanese",
@@ -37076,17 +37103,6 @@
           }
         },
         {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "fruit",
-            "form": "roughly_chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "cumin_spice_seed",
           "quantity": 3,
           "unit": "g",
@@ -37099,7 +37115,7 @@
         },
         {
           "ingredient": "lemon_juice",
-          "quantity": 40,
+          "quantity": 60,
           "unit": "ml",
           "meta": {
             "role": "fruit",
@@ -37146,6 +37162,28 @@
           "unit": "g",
           "meta": {
             "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "swiss_chard_raw",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
             "form": "",
             "state": "raw",
             "preparation": ""
@@ -37212,16 +37250,25 @@
       "search_tokens": [
         "(eau",
         "1 heure",
+        "adas",
+        "and",
+        "aux",
+        "bette",
+        "blettes",
         "bouillon",
         "braising",
         "carotte",
         "carrot",
+        "chard",
         "citron",
         "coeliaque",
+        "coriander",
+        "cote",
         "cumin",
         "eau",
         "gluten free",
         "green",
+        "hamod,",
         "intermediaire",
         "lebanese",
         "leger",
@@ -37229,8 +37276,10 @@
         "lemon",
         "lentil",
         "lentille",
+        "lentilles",
         "liban",
         "libanais",
+        "libanaise",
         "light",
         "low calorie",
         "mediterranee",
@@ -37249,27 +37298,28 @@
         "soup",
         "soupe",
         "stock",
+        "swiss",
         "table",
-        "tomate",
-        "tomato",
         "vegan",
         "vegetable",
         "vegetalien",
         "vegetarien",
         "verte",
-        "water"
+        "water",
+        "with"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.97,
-      "description": "Soupe libanaise crémeuse et parfumée, où les lentilles vertes cuites à la perfection fondent en bouche, accompagnées d'oignon jaune caramélisé, de carotte tendre et d'épices chaudes, dans un bouillon de légumes onctueux et parfumé au cumin, avec une touche de jus de citron frais.",
+      "description": "Soupe libanaise de lentilles vertes aux côtes de blettes, très citronnée : les lentilles restent entières dans un bouillon clair parfumé à la coriandre et à l'ail, et le jus de citron ajouté hors du feu domine en bouche.",
       "instructions": [
-        "Étape 1 : Rincer 300g de lentilles vertes et les mettre dans une grande casserole avec de l'eau froide. Porter à ébullition, puis réduire le feu à feu moyen et laisser cuire 10 minutes, en remuant occasionnellement, jusqu'à ce que les lentilles soient tendres et leur texture soit lisse.",
-        "Étape 2 : Faire revenir 150g d'oignon jaune et 200g de carotte dans 45ml d'huile d'olive, jusqu'à légère coloration et parfum envoûtant. Ajouter 3g de cumin en graines et faire revenir 30 secondes, jusqu'à ce que les épices dégagent leur arôme.",
-        "Étape 3 : Incorporer 300g de tomates et la préparation aux lentilles. Ajouter 750ml de bouillon de légumes et laisser mijoter 25 minutes, en remuant occasionnellement, jusqu'à ce que les lentilles soient très tendres et la soupe soit crémeuse, avec une texture onctueuse.",
-        "Étape 4 : Assaisonner de 2g de sel et ajouter 40 ml de jus de citron frais. Servir chaud, en contrôlant la texture et la coloration, qui devraient être appétissantes et invitantes.",
-        "Étape 5 : Pour une présentation plus appétissante, vous pouvez ajouter des feuilles de coriandre fraîche ou des graines de sésame sur le dessus de la soupe, qui ajoutent une touche de fraîcheur et de croquant."
+        "Étape 1 : Rincer 300 g de lentilles vertes, les couvrir de 750 ml de bouillon de légumes et cuire 20 minutes à petits bouillons : elles doivent rester entières.",
+        "Étape 2 : Émincer 150 g d'oignon et couper 200 g de carotte en rondelles, les faire revenir 6 minutes dans 45 ml d'huile d'olive avec 3 g de cumin, jusqu'à ce que l'oignon soit blond.",
+        "Étape 3 : Laver 300 g de blettes, séparer les côtes des feuilles : couper les côtes en tronçons de 2 cm et ciseler les feuilles.",
+        "Étape 4 : Verser l'oignon, la carotte et les côtes de blettes dans les lentilles, poursuivre la cuisson 15 minutes à feu doux.",
+        "Étape 5 : Écraser l'ail avec 2 g de sel et 15 g de coriandre hachée, ajouter cette pâte et les feuilles de blettes, cuire 3 minutes de plus.",
+        "Étape 6 : Hors du feu, verser 60 ml de jus de citron, goûter : la soupe doit être franchement acide. Servir chaud avec un quartier de citron."
       ],
       "diet_flags": {
         "vegan": true,
@@ -41188,9 +41238,9 @@
     {
       "id": "dal_persian_lentil_soup_71e221",
       "titles": {
-        "original": "Persian Lentil Soup",
-        "fr": "Persian Lentil Soup",
-        "en": "Persian Lentil Soup"
+        "original": "Adasi, Persian Lentil Soup with Turmeric and Dates",
+        "fr": "Adasi, soupe persane de lentilles au curcuma et aux dattes",
+        "en": "Adasi, Persian Lentil Soup with Turmeric and Dates"
       },
       "origin": {
         "cuisine": "persian",
@@ -41246,17 +41296,6 @@
           "meta": {
             "role": "vegetable",
             "form": "rounds",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "fruit",
-            "form": "roughly_chopped",
             "state": "raw",
             "preparation": ""
           }
@@ -41380,6 +41419,17 @@
             "note": "Quelques feuilles pour la fraîcheur",
             "optional": true
           }
+        },
+        {
+          "ingredient": "date_with_skin_dried",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "fruit",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
         }
       ],
       "tags": {
@@ -41441,7 +41491,10 @@
       },
       "search_tokens": [
         "(eau",
+        "adasi,",
         "ail",
+        "and",
+        "aux",
         "avance",
         "bouillon",
         "braising",
@@ -41454,6 +41507,8 @@
         "complexe",
         "cumin",
         "curcuma",
+        "dates",
+        "dattes",
         "eau",
         "garlic",
         "gluten free",
@@ -41464,6 +41519,7 @@
         "lent",
         "lentil",
         "lentille",
+        "lentilles",
         "light",
         "long",
         "low calorie",
@@ -41472,39 +41528,39 @@
         "oignon",
         "olive",
         "onion",
+        "persane",
         "persian",
         "potable)",
+        "salt",
         "sans gluten",
         "sans viande",
+        "sel",
         "soup",
         "soupe",
         "stock",
+        "table",
         "technique",
-        "tomate",
-        "tomato",
         "turmeric",
         "vegetable",
         "vegetarien",
         "verte",
         "water",
+        "with",
         "wok"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.92,
-      "description": "Soupe persane crémeuse aux lentilles vertes séchées, oignon cru caramélisé, ail cru parfumé et épices, mijotée dans un bouillon de légumes aromatique et huile d'olive vierge extra, avec carottes crues, tomates, curcuma, cumin, cannelle, citron cru, sel de table et poivre noir, le tout mijoté à 180°C pendant 25 minutes pour une texture épaisse et crémeuse.",
+      "description": "Adasi iranienne : lentilles fondues au curcuma et à la cannelle, enrichies de dattes dénoyautées qui se défont dans le bouillon et d'une noix de beurre, une soupe épaisse que l'on mange aussi au petit-déjeuner avec du pain.",
       "instructions": [
-        "Étape 1: Faire revenir 150g d'oignon dans 45ml d'huile d'olive vierge extra, pendant 3 minutes à feu moyen-vif, jusqu'à parfum délicat et tendresse, en remuant régulièrement pour éviter la coloration.",
-        "Étape 2: Ajouter 9g d'ail cru et faire revenir pendant 1 minute, jusqu'à ce que l'ail soit parfumé et tendre.",
-        "Étape 3: Ajouter 300g de lentilles vertes séchées, 3g de curcuma, 3g de cumin et 3g de cannelle, mélanger pendant 2 minutes, jusqu'à ce que les épices soient bien intégrées et les lentilles enrobées.",
-        "Étape 4: Ajouter 200g de carottes crues et 300g de tomates, mélanger pendant 2 minutes, jusqu'à ce que les légumes soient tendres et parfumés, en dégageant les arômes des tomates.",
-        "Étape 5: Couvrir de 750ml de bouillon de légumes et laisser mijoter pendant 25 minutes, jusqu'à ce que les lentilles soient tendres et la sauce épaisse, en vérifiant la consistance régulièrement.",
-        "Étape 6: Mixer partiellement pour obtenir une texture épaisse et crémeuse.",
-        "Étape 7: Ajouter 2g de sel de table et 2g de poivre noir, mélanger pour intégrer les saveurs.",
-        "Étape 8: Ajouter 30g de beurre doux et mélanger pour enrober les saveurs.",
-        "Étape 9: Rectifier l'assaisonnement si nécessaire, en ajoutant un peu de sel de table, de poivre noir ou de jus de citron pour équilibrer les saveurs.",
-        "Étape 10: Servir aussitôt, accompagné de pain ou de riz basmati."
+        "Étape 1 : Faire revenir 150 g d'oignon émincé dans 45 ml d'huile d'olive vierge extra, 5 minutes à feu moyen, jusqu'à ce qu'il soit doré.",
+        "Étape 2 : Ajouter 9 g d'ail haché, 3 g de curcuma, 3 g de cumin et 3 g de cannelle, remuer 1 minute pour réveiller les épices.",
+        "Étape 3 : Verser 300 g de lentilles vertes rincées et 200 g de carotte en petits dés, enrober 2 minutes.",
+        "Étape 4 : Couvrir de 750 ml de bouillon de légumes, porter à ébullition puis laisser mijoter 25 minutes à couvert.",
+        "Étape 5 : Ajouter 80 g de dattes dénoyautées coupées en morceaux et poursuivre 10 minutes : elles fondent et sucrent légèrement le bouillon.",
+        "Étape 6 : Écraser grossièrement à la cuillère pour épaissir, assaisonner de 2 g de sel et 2 g de poivre, puis incorporer 30 g de beurre hors du feu.",
+        "Étape 7 : Ajouter 30 ml de jus de citron, servir très chaud avec du pain plat et de la coriandre."
       ],
       "diet_flags": {
         "vegan": false,
@@ -43705,9 +43761,9 @@
     {
       "id": "dal_shorbat_adas_d4f98a",
       "titles": {
-        "original": "Shorbat Adas",
-        "fr": "Shorbat Adas",
-        "en": "Shorbat Adas"
+        "original": "Iraqi Shorbat Adas, Red Lentil Soup with Turmeric",
+        "fr": "Shorbat adas irakienne, soupe de lentilles corail au curcuma",
+        "en": "Iraqi Shorbat Adas, Red Lentil Soup with Turmeric"
       },
       "origin": {
         "cuisine": "iraqi",
@@ -43937,6 +43993,7 @@
         "(eau",
         "1 heure",
         "adas",
+        "adas,",
         "ail",
         "avance",
         "blanc",
@@ -43955,12 +44012,14 @@
         "eau",
         "garlic",
         "gluten free",
+        "irakienne,",
         "iraqi",
         "leger",
         "legumes",
         "lemon",
         "lentil",
         "lentille",
+        "lentilles",
         "light",
         "low calorie",
         "minceur",
@@ -43976,6 +44035,8 @@
         "sans viande",
         "sel",
         "shorbat",
+        "soup",
+        "soupe",
         "stock",
         "table",
         "technique",
@@ -43986,13 +44047,14 @@
         "vegetarien",
         "water",
         "white",
+        "with",
         "wok"
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.93,
-      "description": "Plat traditionnel à base de lentilles rouges, oignons caramélisés et épices, présentant une texture crémeuse et une couleur dorée, avec une odeur parfumée de cumin et de curcuma.",
+      "description": "Soupe irakienne de lentilles corail mixée jusqu'à être velourée, colorée au curcuma et finie par un tadka d'huile au paprika versé brûlant sur l'assiette.",
       "instructions": [
         "Étape 1 : Rincer 250 g de lentilles corail et les égoutter.",
         "Étape 2 : Faire revenir 150 g d'oignon émincé et 200 g de carotte en dés dans 30 ml d'huile d'olive à feu moyen pendant 6 minutes, jusqu'à ce que l'oignon soit doré.",
@@ -44590,9 +44652,9 @@
     {
       "id": "dal_soupe_lentilles_turque_e797cb",
       "titles": {
-        "original": "Shorbat Adas, Lebanese Red Lentil Soup with Lemon",
-        "fr": "Shorbat adas, soupe libanaise de lentilles corail au citron",
-        "en": "Shorbat Adas, Lebanese Red Lentil Soup with Lemon"
+        "original": "Red Lentil Soup with Fried Onion and Lemon",
+        "fr": "Soupe de lentilles corail à l'oignon frit et au citron",
+        "en": "Red Lentil Soup with Fried Onion and Lemon"
       },
       "origin": {
         "cuisine": "lebanese",
@@ -44790,8 +44852,8 @@
       "search_tokens": [
         "(eau",
         "45 minutes",
-        "adas,",
         "ail",
+        "and",
         "bouillon",
         "braising",
         "carotte",
@@ -44808,10 +44870,13 @@
         "facile",
         "facile enfants",
         "famille",
+        "fried",
+        "frit",
         "garlic",
         "gluten free",
         "jaune",
         "kids",
+        "l'oignon",
         "lebanese",
         "leger",
         "legumes",
@@ -44821,7 +44886,6 @@
         "lentilles",
         "liban",
         "libanais",
-        "libanaise",
         "light",
         "low calorie",
         "mediterranee",
@@ -44838,7 +44902,6 @@
         "sans gluten",
         "sans produit animal",
         "sans viande",
-        "shorbat",
         "simple",
         "soup",
         "soupe",
@@ -44856,7 +44919,7 @@
       "dish_type": "soup",
       "servings_default": 4,
       "_quality_score": 0.87,
-      "description": "Soupe de lentilles corail du Levant, mixée et veloutée, parfumée au cumin, servie avec beaucoup de citron et des oignons dorés.",
+      "description": "Velouté de lentilles corail du Levant, parfumé au cumin, servi couvert d'oignons émincés frits jusqu'au brun et arrosé de beaucoup de jus de citron.",
       "instructions": [
         "Étape 1 : Faire revenir 120 g d'oignon haché et 10 g d'ail dans 15 ml d'huile, 5 minutes, avec 4 g de cumin et 1 g de curcuma.",
         "Étape 2 : Ajouter 200 g de lentilles corail, 150 g de carotte en dés, 1,1 L d'eau et 10 g de bouillon, puis mijoter 25 minutes.",
@@ -217378,11 +217441,15 @@
         "indian",
         "indien",
         "kids",
+        "leger",
         "lent",
         "lentil",
         "lentille",
+        "light",
         "long",
+        "low calorie",
         "mijote",
+        "minceur",
         "mungo",
         "noir)",
         "potable)",
@@ -217605,11 +217672,15 @@
         "indian",
         "indien",
         "kids",
+        "leger",
         "lent",
         "lentil",
         "lentille",
+        "light",
         "long",
+        "low calorie",
         "mijote",
+        "minceur",
         "mungo",
         "noir)",
         "oignon",
@@ -217846,13 +217917,17 @@
         "kids",
         "koenigii)",
         "leaf",
+        "leger",
         "lent",
         "lentil",
         "lentille",
         "lentilles",
+        "light",
         "long",
+        "low calorie",
         "medu",
         "mijote",
+        "minceur",
         "mungo",
         "noir",
         "noir)",
@@ -218109,8 +218184,12 @@
         "kids",
         "koenigii)",
         "leaf",
+        "leger",
         "lemon",
+        "light",
+        "low calorie",
         "menthe",
+        "minceur",
         "mint",
         "moutarde",
         "mustard",
@@ -218404,7 +218483,11 @@
         "kids",
         "koenigii)",
         "leaf",
+        "leger",
         "legumes",
+        "light",
+        "low calorie",
+        "minceur",
         "moyen",
         "noix",
         "oleifere)",
@@ -218711,11 +218794,15 @@
         "indian",
         "indien",
         "karnataka",
+        "leger",
         "lent",
         "lentilles",
         "lentils",
+        "light",
         "long",
+        "low calorie",
         "mijote",
+        "minceur",
         "noix",
         "oignon",
         "onion",
@@ -218968,9 +219055,13 @@
         "koenigii)",
         "kootu",
         "leaf",
+        "leger",
         "lentil",
         "lentille",
         "lentilles",
+        "light",
+        "low calorie",
+        "minceur",
         "moutarde",
         "moyen",
         "mustard",
@@ -219255,7 +219346,11 @@
         "indien",
         "indien)",
         "kadai",
+        "leger",
+        "light",
+        "low calorie",
         "masala",
+        "minceur",
         "moyen",
         "oignon",
         "onion",
@@ -219483,7 +219578,11 @@
         "indian",
         "indien",
         "kids",
+        "leger",
         "lemon",
+        "light",
+        "low calorie",
+        "minceur",
         "moyen",
         "okra",
         "pepper",
@@ -219719,6 +219818,10 @@
         "indian",
         "indien",
         "kids",
+        "leger",
+        "light",
+        "low calorie",
+        "minceur",
         "pain",
         "pepper",
         "piment",
@@ -219970,10 +220073,14 @@
         "indien",
         "indien)",
         "kids",
+        "leger",
         "lent",
+        "light",
         "long",
+        "low calorie",
         "masala",
         "mijote",
+        "minceur",
         "oignon",
         "onion",
         "pain",
@@ -220170,7 +220277,11 @@
         "indian",
         "indien",
         "kids",
+        "leger",
+        "light",
+        "low calorie",
         "menthe",
+        "minceur",
         "mint",
         "moyen",
         "noir",
@@ -220467,7 +220578,11 @@
         "kids",
         "koenigii)",
         "leaf",
+        "leger",
         "lemon",
+        "light",
+        "low calorie",
+        "minceur",
         "moutarde",
         "mustard",
         "pepper",
@@ -220708,8 +220823,12 @@
         "kids",
         "koenigii)",
         "leaf",
+        "leger",
         "lentil",
         "lentilles",
+        "light",
+        "low calorie",
+        "minceur",
         "moyen",
         "mung",
         "mungo",
@@ -220975,8 +221094,12 @@
         "indien",
         "indo",
         "ketchup",
+        "leger",
+        "light",
+        "low calorie",
         "mais",
         "manchurian,",
+        "minceur",
         "moyen",
         "oignon",
         "onion",
@@ -221179,7 +221302,11 @@
         "hot",
         "lankaise",
         "lankan",
+        "leger",
+        "light",
         "lime",
+        "low calorie",
+        "minceur",
         "noir",
         "noix",
         "oignon",
@@ -221473,7 +221600,11 @@
         "kottu",
         "leaf",
         "leeks",
+        "leger",
         "legumes",
+        "light",
+        "low calorie",
+        "minceur",
         "moyen",
         "oignon",
         "onion",
@@ -221733,8 +221864,12 @@
         "indian",
         "indien",
         "kids",
+        "leger",
         "lemon",
+        "light",
+        "low calorie",
         "menthe",
+        "minceur",
         "mint",
         "noir",
         "oignon",
@@ -221943,10 +222078,14 @@
         "indien",
         "kids",
         "lait",
+        "leger",
         "lent",
+        "light",
         "long",
+        "low calorie",
         "mijote",
         "milk",
+        "minceur",
         "pudding",
         "raisin",
         "sans gluten",
@@ -222173,9 +222312,13 @@
         "famille",
         "gluten free",
         "kids",
+        "leger",
         "lent",
+        "light",
         "long",
+        "low calorie",
         "mijote",
+        "minceur",
         "nepalaise",
         "nepali",
         "oignon",
@@ -222405,8 +222548,12 @@
         "indien",
         "kids",
         "lait",
+        "leger",
+        "light",
+        "low calorie",
         "masala",
         "milk",
+        "minceur",
         "noir",
         "pepper",
         "poivre",
@@ -222578,6 +222725,10 @@
         "indian",
         "indien",
         "kids",
+        "leger",
+        "light",
+        "low calorie",
+        "minceur",
         "pain",
         "pains",
         "petits",
@@ -222601,6 +222752,5323 @@
         "water",
         "wheat",
         "whole"
+      ]
+    },
+    {
+      "id": "main_karniyarik_7b31c2",
+      "titles": {
+        "fr": "Karnıyarık, aubergines farcies aux lentilles et à la tomate",
+        "en": "Karnıyarık, Eggplant Stuffed with Lentils and Tomato",
+        "original": "Karnıyarık"
+      },
+      "origin": {
+        "cuisine": "turkish",
+        "country": "turkey",
+        "region": "anatolie_centrale",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 30,
+        "prep_passive_min": 0,
+        "cook_min": 50,
+        "total_min": 80
+      },
+      "composition": [
+        {
+          "ingredient": "eggplant_raw",
+          "quantity": 800,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_lentil_dried",
+          "quantity": 120,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_paste_unsalted_canned",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_bell_pepper_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_long_grain_seed_dried",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 60,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "paprika_powder",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 300,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
+        ],
+        "meal": [
+          "main"
+        ],
+        "season": [],
+        "allergens": [],
+        "technique": [
+          "fry",
+          "bake"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "fondant",
+          "moelleux"
+        ],
+        "taste": [
+          "umami",
+          "doux"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "main",
+      "difficulty_level": "easy",
+      "description": "Version végétarienne du karnıyarık : des demi-aubergines frites puis fendues, garnies d'une farce de lentilles vertes à l'oignon et à la tomate, coiffées d'une rondelle de tomate et de poivron, et terminées au four dans un fond de jus.",
+      "instructions": [
+        "Étape 1 : Rincer 120 g de lentilles vertes et les cuire 20 minutes dans de l'eau non salée, puis les égoutter : elles doivent rester fermes.",
+        "Étape 2 : Couper 800 g d'aubergines en deux dans la longueur, les saler légèrement et les faire dorer 8 minutes dans 40 ml d'huile d'olive sur les deux faces.",
+        "Étape 3 : Dans la même poêle, faire revenir 150 g d'oignon émincé et 10 g d'ail dans le reste d'huile, 6 minutes, puis ajouter 200 g de tomates concassées, 30 g de concentré, 3 g de cumin, 3 g de paprika, 4 g de sel et 2 g de poivre.",
+        "Étape 4 : Incorporer les lentilles et 15 g de persil haché, cuire 5 minutes à feu doux : la farce doit être sèche.",
+        "Étape 5 : Fendre les aubergines sur le dessus, les garnir de farce, poser sur chacune une rondelle de tomate (50 g au total) et une lanière de poivron vert (100 g).",
+        "Étape 6 : Verser 300 ml d'eau dans le plat et enfourner 30 minutes à 190 °C, jusqu'à ce que le poivron soit grillé et le jus réduit.",
+        "Étape 7 : Pendant ce temps, cuire 100 g de riz long à l'eau salée et le servir à côté."
+      ],
+      "diet_flags": {
+        "vegan": true,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": true,
+        "nut_free": true,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "ail",
+        "and",
+        "aubergine",
+        "aubergines",
+        "aux",
+        "bake",
+        "bell",
+        "blanc",
+        "coeliaque",
+        "cumin",
+        "debutant",
+        "easy",
+        "eggplant",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "farcies",
+        "fry",
+        "garlic",
+        "gluten free",
+        "green",
+        "karnıyarık",
+        "karnıyarık,",
+        "kids",
+        "lent",
+        "lentil",
+        "lentille",
+        "lentilles",
+        "lentils",
+        "long",
+        "mediterranee",
+        "mijote",
+        "moyen-orient",
+        "oignon",
+        "olive",
+        "onion",
+        "paprika",
+        "parsley",
+        "pepper",
+        "persil",
+        "poivron",
+        "rice",
+        "riz",
+        "sans gluten",
+        "sans produit animal",
+        "sans viande",
+        "simple",
+        "stuffed",
+        "tomate",
+        "tomato",
+        "turc",
+        "turkish",
+        "turquie",
+        "vegan",
+        "vegetalien",
+        "vegetarien",
+        "vert",
+        "verte",
+        "white",
+        "with"
+      ]
+    },
+    {
+      "id": "bread_peynirli_pide_44a0d9",
+      "titles": {
+        "fr": "Peynirli pide, pain plat turc au fromage",
+        "en": "Peynirli Pide, Turkish Flatbread with Cheese",
+        "original": "Peynirli pide"
+      },
+      "origin": {
+        "cuisine": "turkish",
+        "country": "turkey",
+        "region": "mer_noire",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 30,
+        "prep_passive_min": 90,
+        "cook_min": 15,
+        "total_min": 135
+      },
+      "composition": [
+        {
+          "ingredient": "wheat_flour_t55",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "bakers_yeast_dehydrated",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "ferment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 250,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cows_milk_mozzarella_cow",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "dairy",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "feta_cow",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "dairy",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "egg_raw",
+          "quantity": 50,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegetarian",
+          "nut_free"
+        ],
+        "meal": [
+          "main"
+        ],
+        "season": [],
+        "allergens": [
+          "eggs",
+          "gluten",
+          "lactose",
+          "milk"
+        ],
+        "technique": [
+          "knead",
+          "bake"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "moelleux",
+          "filant"
+        ],
+        "taste": [
+          "salé",
+          "lacté"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "main",
+      "difficulty_level": "medium",
+      "description": "Barque de pâte levée turque garnie de mozzarella et de feta, les bords repliés en navette et un œuf cassé au centre à la sortie du four : la pâte reste moelleuse et le fromage file.",
+      "instructions": [
+        "Étape 1 : Délayer 5 g de levure sèche dans 250 ml d'eau tiède, ajouter 400 g de farine, 5 g de sel et 15 ml d'huile d'olive, puis pétrir 8 minutes.",
+        "Étape 2 : Couvrir et laisser lever 90 minutes à température ambiante, jusqu'au doublement.",
+        "Étape 3 : Diviser la pâte en quatre, étaler chaque part en ovale de 25 cm sur une plaque farinée.",
+        "Étape 4 : Mélanger 200 g de mozzarella râpée, 100 g de feta écrasée, 10 g de persil haché et 1 g de poivre, répartir sur les ovales en laissant 2 cm de bord.",
+        "Étape 5 : Replier les bords sur la garniture et pincer les deux extrémités pour former une barque, badigeonner avec le reste d'huile.",
+        "Étape 6 : Enfourner 15 minutes à 240 °C, puis casser l'œuf battu (50 g) au centre de chaque pide et remettre 2 minutes au four.",
+        "Étape 7 : Servir brûlant, coupé en tronçons."
+      ],
+      "diet_flags": {
+        "vegan": false,
+        "vegetarian": true,
+        "gluten_free": false,
+        "lactose_free": false,
+        "nut_free": true,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(eau",
+        "bake",
+        "baker's",
+        "black",
+        "boulanger",
+        "cheese",
+        "cow's",
+        "eau",
+        "egg",
+        "enfants",
+        "facile enfants",
+        "famille",
+        "feta",
+        "flatbread",
+        "flour",
+        "fromage",
+        "froment",
+        "intermediaire",
+        "kids",
+        "knead",
+        "lait",
+        "lent",
+        "levure",
+        "long",
+        "mediterranee",
+        "mijote",
+        "milk",
+        "moyen",
+        "moyen-orient",
+        "mozzarella",
+        "noir",
+        "olive",
+        "pain",
+        "parsley",
+        "pepper",
+        "persil",
+        "peynirli",
+        "pide",
+        "pide,",
+        "plat",
+        "poivre",
+        "potable)",
+        "salt",
+        "sans viande",
+        "sel",
+        "t55",
+        "table",
+        "turc",
+        "turkish",
+        "turquie",
+        "vache",
+        "vegetarien",
+        "water",
+        "wheat",
+        "with",
+        "yeast",
+        "œuf"
+      ]
+    },
+    {
+      "id": "entry_cacik_9d1f4e",
+      "titles": {
+        "fr": "Cacık, yaourt turc au concombre et à l'aneth",
+        "en": "Cacık, Turkish Yogurt with Cucumber and Dill",
+        "original": "Cacık"
+      },
+      "origin": {
+        "cuisine": "turkish",
+        "country": "turkey",
+        "region": "egee",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 15,
+        "prep_passive_min": 30,
+        "cook_min": 0,
+        "total_min": 45
+      },
+      "composition": [
+        {
+          "ingredient": "yogurt_fermented_plain",
+          "quantity": 500,
+          "unit": "g",
+          "meta": {
+            "role": "dairy",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cucumber_raw",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "dill_weed_fresh_herb_leaf",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mint_fresh_herb",
+          "quantity": 8,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 100,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegetarian",
+          "gluten_free",
+          "nut_free"
+        ],
+        "meal": [
+          "starter"
+        ],
+        "season": [],
+        "allergens": [
+          "lactose",
+          "milk"
+        ],
+        "technique": [],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "liquide",
+          "frais"
+        ],
+        "taste": [
+          "acide",
+          "herbacé"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "starter",
+      "difficulty_level": "easy",
+      "description": "Yaourt battu allongé d'un peu d'eau glacée, concombre râpé, ail, aneth et menthe : un mezze très frais que l'on sert aussi comme soupe froide en été.",
+      "instructions": [
+        "Étape 1 : Râper 300 g de concombre avec la peau, le saler avec 1 g de sel et le laisser dégorger 10 minutes, puis le presser à la main.",
+        "Étape 2 : Battre 500 g de yaourt avec 100 ml d'eau glacée jusqu'à obtenir une crème lisse.",
+        "Étape 3 : Écraser 6 g d'ail avec le reste du sel et l'incorporer au yaourt.",
+        "Étape 4 : Ajouter le concombre, 10 g d'aneth et 8 g de menthe ciselés, mélanger.",
+        "Étape 5 : Réserver 30 minutes au frais, puis arroser de 20 ml d'huile d'olive au moment de servir."
+      ],
+      "diet_flags": {
+        "vegan": false,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": false,
+        "nut_free": true,
+        "raw": true,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(eau",
+        "45 minutes",
+        "ail",
+        "and",
+        "aneth",
+        "cacık",
+        "cacık,",
+        "coeliaque",
+        "concombre",
+        "cru",
+        "crudivorisme",
+        "cucumber",
+        "debutant",
+        "dill",
+        "easy",
+        "eau",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "garlic",
+        "gluten free",
+        "kids",
+        "l'aneth",
+        "mediterranee",
+        "menthe",
+        "mint",
+        "moyen",
+        "moyen-orient",
+        "olive",
+        "potable)",
+        "raw",
+        "salt",
+        "sans gluten",
+        "sans viande",
+        "sel",
+        "simple",
+        "table",
+        "turc",
+        "turkish",
+        "turquie",
+        "vegetarien",
+        "vivant",
+        "water",
+        "weed",
+        "with",
+        "yaourt",
+        "yogurt"
+      ]
+    },
+    {
+      "id": "soup_yayla_corbasi_2c8a71",
+      "titles": {
+        "fr": "Yayla çorbası, soupe turque au yaourt et à la menthe",
+        "en": "Yayla Çorbası, Turkish Yogurt and Mint Soup",
+        "original": "Yayla çorbası"
+      },
+      "origin": {
+        "cuisine": "turkish",
+        "country": "turkey",
+        "region": "anatolie_orientale",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 15,
+        "prep_passive_min": 0,
+        "cook_min": 25,
+        "total_min": 40
+      },
+      "composition": [
+        {
+          "ingredient": "yogurt_fermented_plain",
+          "quantity": 500,
+          "unit": "g",
+          "meta": {
+            "role": "dairy",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_short_grain_seed_dried",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "egg_raw",
+          "quantity": 50,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "wheat_flour_t55",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "thickener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "butter_sup80pct",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "spearmint_dried_herb",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 900,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegetarian",
+          "nut_free"
+        ],
+        "meal": [
+          "soup"
+        ],
+        "season": [],
+        "allergens": [
+          "eggs",
+          "gluten",
+          "lactose",
+          "milk"
+        ],
+        "technique": [
+          "simmer"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "velouté",
+          "onctueux"
+        ],
+        "taste": [
+          "acide",
+          "herbacé"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "soup",
+      "difficulty_level": "medium",
+      "description": "Soupe de montagne anatolienne : du riz cuit dans un bouillon léger puis lié au yaourt battu avec un œuf et un peu de farine, finie par un beurre de menthe séchée versé brûlant.",
+      "instructions": [
+        "Étape 1 : Porter 900 ml d'eau à ébullition avec 6 g de bouillon de légumes, verser 80 g de riz rond et cuire 18 minutes.",
+        "Étape 2 : Fouetter 500 g de yaourt avec 50 g d'œuf battu et 20 g de farine jusqu'à obtenir un mélange parfaitement lisse.",
+        "Étape 3 : Délayer deux louches de bouillon chaud dans le yaourt pour le tempérer.",
+        "Étape 4 : Verser le yaourt tempéré dans la casserole en fouettant, puis cuire 5 minutes à feu très doux sans laisser bouillir : la soupe épaissit sans trancher.",
+        "Étape 5 : Assaisonner de 3 g de sel et 1 g de poivre.",
+        "Étape 6 : Faire fondre 30 g de beurre avec 3 g de menthe séchée et verser ce beurre parfumé sur chaque assiette."
+      ],
+      "diet_flags": {
+        "vegan": false,
+        "vegetarian": true,
+        "gluten_free": false,
+        "lactose_free": false,
+        "nut_free": true,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(eau",
+        "45 minutes",
+        "and",
+        "beurre",
+        "black",
+        "blanc",
+        "bouillon",
+        "butter",
+        "corbası",
+        "corbası,",
+        "eau",
+        "egg",
+        "enfants",
+        "facile enfants",
+        "famille",
+        "flour",
+        "froment",
+        "intermediaire",
+        "kids",
+        "legumes",
+        "mediterranee",
+        "menthe",
+        "mint",
+        "moyen",
+        "moyen-orient",
+        "noir",
+        "pepper",
+        "poivre",
+        "potable)",
+        "rice",
+        "riz",
+        "salt",
+        "sans viande",
+        "sel",
+        "simmer",
+        "soup",
+        "soupe",
+        "spearmint",
+        "stock",
+        "t55",
+        "table",
+        "turc",
+        "turkish",
+        "turque",
+        "turquie",
+        "vegetable",
+        "vegetarien",
+        "verte",
+        "water",
+        "wheat",
+        "white",
+        "yaourt",
+        "yayla",
+        "yogurt",
+        "œuf"
+      ]
+    },
+    {
+      "id": "side_pilaki_3e60b8",
+      "titles": {
+        "fr": "Fasulye pilaki, haricots blancs turcs à l'huile d'olive",
+        "en": "Fasulye Pilaki, Turkish White Beans in Olive Oil",
+        "original": "Fasulye pilaki"
+      },
+      "origin": {
+        "cuisine": "turkish",
+        "country": "turkey",
+        "region": "marmara",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 20,
+        "prep_passive_min": 720,
+        "cook_min": 70,
+        "total_min": 810
+      },
+      "composition": [
+        {
+          "ingredient": "white_bean_dried_canned",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "carrot_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 12,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_paste_unsalted_canned",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_extra_virgin_plant",
+          "quantity": 80,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "acidity",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sugars_granulated",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "balance",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 700,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
+        ],
+        "meal": [
+          "side"
+        ],
+        "season": [],
+        "allergens": [],
+        "technique": [
+          "simmer"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "fondant"
+        ],
+        "taste": [
+          "doux",
+          "acide"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "side",
+      "difficulty_level": "easy",
+      "description": "Mezze turc servi froid : haricots blancs trempés puis mijotés longuement avec carotte, oignon et une bonne dose d'huile d'olive, acidulés au citron et parsemés de persil au moment de servir.",
+      "instructions": [
+        "Étape 1 : Faire tremper 250 g de haricots blancs 12 heures dans de l'eau froide, puis les égoutter.",
+        "Étape 2 : Faire revenir 150 g d'oignon émincé, 150 g de carotte en rondelles et 12 g d'ail dans 50 ml d'huile d'olive, 8 minutes à feu moyen.",
+        "Étape 3 : Ajouter 30 g de concentré de tomate, remuer 1 minute, puis verser les haricots et 700 ml d'eau.",
+        "Étape 4 : Cuire 60 minutes à couvert et à feu doux, jusqu'à ce que les haricots soient fondants mais entiers ; saler avec 4 g de sel en fin de cuisson.",
+        "Étape 5 : Ajouter 5 g de sucre et 30 ml de jus de citron, laisser réduire 5 minutes à découvert.",
+        "Étape 6 : Laisser refroidir complètement, arroser du reste d'huile d'olive et parsemer de 15 g de persil avant de servir à température ambiante."
+      ],
+      "diet_flags": {
+        "vegan": true,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": true,
+        "nut_free": true,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(eau",
+        "ail",
+        "bean",
+        "beans",
+        "blanc",
+        "blancs",
+        "carotte",
+        "carrot",
+        "citron",
+        "coeliaque",
+        "d'olive",
+        "debutant",
+        "easy",
+        "eau",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "fasulye",
+        "garlic",
+        "gluten free",
+        "haricot",
+        "haricots",
+        "kids",
+        "l'huile",
+        "lemon",
+        "lent",
+        "long",
+        "mediterranee",
+        "mijote",
+        "moyen-orient",
+        "oignon",
+        "oil",
+        "olive",
+        "onion",
+        "parsley",
+        "persil",
+        "pilaki",
+        "pilaki,",
+        "potable)",
+        "salt",
+        "sans gluten",
+        "sans produit animal",
+        "sans viande",
+        "sel",
+        "simmer",
+        "simple",
+        "sucre",
+        "sugars",
+        "table",
+        "tomate",
+        "tomato",
+        "turc",
+        "turcs",
+        "turkish",
+        "turquie",
+        "vegan",
+        "vegetalien",
+        "vegetarien",
+        "water",
+        "white"
+      ]
+    },
+    {
+      "id": "snack_mucver_51d9c4",
+      "titles": {
+        "fr": "Mücver, galettes turques de courgette à la feta",
+        "en": "Mücver, Turkish Zucchini and Feta Fritters",
+        "original": "Mücver"
+      },
+      "origin": {
+        "cuisine": "turkish",
+        "country": "turkey",
+        "region": "egee",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 20,
+        "prep_passive_min": 0,
+        "cook_min": 20,
+        "total_min": 40
+      },
+      "composition": [
+        {
+          "ingredient": "green_zucchini_squash_raw",
+          "quantity": 600,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "egg_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "wheat_flour_t55",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "feta_cow",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "dairy",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "dill_weed_fresh_herb_leaf",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_onion_raw",
+          "quantity": 60,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 60,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yogurt_fermented_plain",
+          "quantity": null,
+          "unit": "à volonté",
+          "meta": {
+            "role": "serving_suggestion",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegetarian",
+          "nut_free"
+        ],
+        "meal": [
+          "snack"
+        ],
+        "season": [],
+        "allergens": [
+          "eggs",
+          "gluten",
+          "lactose",
+          "milk"
+        ],
+        "technique": [
+          "fry"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "croustillant",
+          "moelleux"
+        ],
+        "taste": [
+          "salé",
+          "herbacé"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "snack",
+      "difficulty_level": "easy",
+      "description": "Galettes de courgette râpée bien essorée, liées à l'œuf et à la farine avec feta, aneth et oignon vert, frites à la poêle : croustillantes dehors, fondantes dedans, servies avec du yaourt.",
+      "instructions": [
+        "Étape 1 : Râper 600 g de courgettes, les mélanger avec 3 g de sel et laisser dégorger 10 minutes, puis presser fortement dans un linge.",
+        "Étape 2 : Mélanger les courgettes avec 100 g d'œufs battus, 80 g de farine, 100 g de feta écrasée, 60 g d'oignon vert émincé, 10 g d'aneth, 10 g de persil et 2 g de poivre.",
+        "Étape 3 : Chauffer 20 ml d'huile de tournesol dans une poêle et déposer des cuillerées de pâte aplaties à 1 cm.",
+        "Étape 4 : Cuire 3 minutes par face à feu moyen, jusqu'à ce que les galettes soient dorées, puis les égoutter sur papier absorbant.",
+        "Étape 5 : Répéter avec le reste de la pâte et de l'huile, en essuyant la poêle entre deux fournées.",
+        "Étape 6 : Servir chaud avec du yaourt nature."
+      ],
+      "diet_flags": {
+        "vegan": false,
+        "vegetarian": true,
+        "gluten_free": false,
+        "lactose_free": false,
+        "nut_free": true,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "45 minutes",
+        "and",
+        "aneth",
+        "black",
+        "courgette",
+        "debutant",
+        "dill",
+        "easy",
+        "egg",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "feta",
+        "flour",
+        "fritters",
+        "froment",
+        "fry",
+        "galettes",
+        "green",
+        "kids",
+        "mediterranee",
+        "moyen",
+        "moyen-orient",
+        "mucver",
+        "mucver,",
+        "noir",
+        "oignon",
+        "onion",
+        "parsley",
+        "pepper",
+        "persil",
+        "poivre",
+        "salt",
+        "sans viande",
+        "sel",
+        "simple",
+        "squash",
+        "sunflower",
+        "t55",
+        "table",
+        "tournesol",
+        "turc",
+        "turkish",
+        "turques",
+        "turquie",
+        "vegetarien",
+        "vert",
+        "weed",
+        "wheat",
+        "yaourt",
+        "yogurt",
+        "zucchini",
+        "œuf"
+      ]
+    },
+    {
+      "id": "dal_fatteh_pois_chiches_a7c503",
+      "titles": {
+        "fr": "Fatteh de pois chiches au yaourt et au pain grillé",
+        "en": "Chickpea Fatteh with Yogurt and Toasted Bread",
+        "original": "Fatteh hummus"
+      },
+      "origin": {
+        "cuisine": "levantine",
+        "country": "lebanon",
+        "region": "beyrouth",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 20,
+        "prep_passive_min": 720,
+        "cook_min": 75,
+        "total_min": 815
+      },
+      "composition": [
+        {
+          "ingredient": "chickpea_raw_dried",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yogurt_fermented_plain",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "dairy",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sesame_tahini_raw_butter_seed_plant",
+          "quantity": 60,
+          "unit": "ml",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_pita_bread",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "acidity",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "pine_nuts_raw",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "butter_sup80pct",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 1000,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegetarian"
+        ],
+        "meal": [
+          "main"
+        ],
+        "season": [],
+        "allergens": [
+          "gluten",
+          "lactose",
+          "milk",
+          "sesame",
+          "tree_nuts"
+        ],
+        "technique": [
+          "boil",
+          "toast"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "croustillant",
+          "crémeux"
+        ],
+        "taste": [
+          "acide",
+          "umami"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "main",
+      "difficulty_level": "easy",
+      "description": "Plat de partage levantin monté en couches : pain pita grillé au fond, pois chiches chauds par-dessus, sauce au yaourt et tahini, beurre noisette et pignons grillés pour finir.",
+      "instructions": [
+        "Étape 1 : Faire tremper 200 g de pois chiches 12 heures, puis les cuire 70 minutes dans 1 L d'eau non salée jusqu'à ce qu'ils s'écrasent entre les doigts.",
+        "Étape 2 : Couper 150 g de pain pita en carrés et les griller 8 minutes à 200 °C jusqu'à ce qu'ils soient secs et dorés.",
+        "Étape 3 : Fouetter 400 g de yaourt avec 60 ml de tahini, 30 ml de jus de citron, 10 g d'ail écrasé, 3 g de cumin et 4 g de sel.",
+        "Étape 4 : Faire dorer 30 g de pignons dans 20 g de beurre, 2 minutes, jusqu'à ce qu'ils soient blonds.",
+        "Étape 5 : Répartir le pain grillé dans un plat creux, l'humecter de quelques cuillerées d'eau de cuisson, puis couvrir des pois chiches égouttés et encore chauds.",
+        "Étape 6 : Napper de sauce au yaourt, verser le beurre aux pignons et parsemer de 10 g de persil ; servir aussitôt pour garder le contraste croustillant."
+      ],
+      "diet_flags": {
+        "vegan": false,
+        "vegetarian": true,
+        "gluten_free": false,
+        "lactose_free": false,
+        "nut_free": false,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(eau",
+        "(tahini)",
+        "ail",
+        "and",
+        "beurre",
+        "blanc",
+        "boil",
+        "bread",
+        "butter",
+        "chiches",
+        "chickpea",
+        "citron",
+        "cumin",
+        "debutant",
+        "easy",
+        "eau",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "fatteh",
+        "garlic",
+        "grille",
+        "hummus",
+        "kids",
+        "lemon",
+        "lent",
+        "levantine",
+        "long",
+        "mijote",
+        "nuts",
+        "pain",
+        "parsley",
+        "persil",
+        "pignons",
+        "pine",
+        "pins",
+        "pita",
+        "pois",
+        "potable)",
+        "salt",
+        "sans viande",
+        "sel",
+        "sesame",
+        "simple",
+        "table",
+        "toast",
+        "toasted",
+        "vegetarien",
+        "water",
+        "white",
+        "with",
+        "yaourt",
+        "yogurt"
+      ]
+    },
+    {
+      "id": "side_loubieh_bi_zeit_6f2b19",
+      "titles": {
+        "fr": "Loubieh bi zeit, haricots verts libanais à l'huile d'olive",
+        "en": "Loubieh bi Zeit, Lebanese Green Beans in Olive Oil",
+        "original": "Loubieh bi zeit"
+      },
+      "origin": {
+        "cuisine": "lebanese",
+        "country": "lebanon",
+        "region": "mont_liban",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 15,
+        "prep_passive_min": 0,
+        "cook_min": 35,
+        "total_min": 50
+      },
+      "composition": [
+        {
+          "ingredient": "french_bean_raw",
+          "quantity": 600,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 12,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 60,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 100,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
+        ],
+        "meal": [
+          "side"
+        ],
+        "season": [],
+        "allergens": [],
+        "technique": [
+          "simmer"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "fondant"
+        ],
+        "taste": [
+          "doux",
+          "herbacé"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "side",
+      "difficulty_level": "easy",
+      "description": "Haricots verts longuement mijotés dans l'huile d'olive avec tomate, oignon et ail, jusqu'à ce qu'ils perdent tout croquant : un mezze du Levant servi tiède ou froid.",
+      "instructions": [
+        "Étape 1 : Équeuter 600 g de haricots verts et les couper en tronçons de 4 cm.",
+        "Étape 2 : Faire fondre 150 g d'oignon émincé dans 60 ml d'huile d'olive, 8 minutes à feu doux, sans coloration.",
+        "Étape 3 : Ajouter 12 g d'ail et 10 g de coriandre hachée, remuer 1 minute.",
+        "Étape 4 : Incorporer 300 g de tomates concassées, 3 g de sel et 1 g de poivre, cuire 5 minutes.",
+        "Étape 5 : Ajouter les haricots et 100 ml d'eau, couvrir et mijoter 25 minutes : les haricots doivent être complètement tendres et la sauce réduite.",
+        "Étape 6 : Laisser tiédir avant de servir, avec du pain plat."
+      ],
+      "diet_flags": {
+        "vegan": true,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": true,
+        "nut_free": true,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(eau",
+        "1 heure",
+        "ail",
+        "bean",
+        "beans",
+        "black",
+        "coeliaque",
+        "coriander",
+        "d'olive",
+        "debutant",
+        "easy",
+        "eau",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "french",
+        "garlic",
+        "gluten free",
+        "green",
+        "haricot",
+        "haricots",
+        "kids",
+        "l'huile",
+        "lebanese",
+        "liban",
+        "libanais",
+        "loubieh",
+        "mediterranee",
+        "moyen-orient",
+        "noir",
+        "oignon",
+        "oil",
+        "olive",
+        "onion",
+        "pepper",
+        "poivre",
+        "potable)",
+        "salt",
+        "sans gluten",
+        "sans produit animal",
+        "sans viande",
+        "sel",
+        "simmer",
+        "simple",
+        "table",
+        "tomate",
+        "tomato",
+        "vegan",
+        "vegetalien",
+        "vegetarien",
+        "vert",
+        "verts",
+        "water",
+        "zeit",
+        "zeit,"
+      ]
+    },
+    {
+      "id": "main_bamia_8d40f6",
+      "titles": {
+        "fr": "Bamia, gombos mijotés à la tomate et à la coriandre",
+        "en": "Bamia, Okra Stewed with Tomato and Coriander",
+        "original": "Bamia"
+      },
+      "origin": {
+        "cuisine": "levantine",
+        "country": "jordan",
+        "region": "amman",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 20,
+        "prep_passive_min": 0,
+        "cook_min": 40,
+        "total_min": 60
+      },
+      "composition": [
+        {
+          "ingredient": "okra",
+          "quantity": 700,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_paste_unsalted_canned",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 12,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 45,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "acidity",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_long_grain_seed_dried",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 500,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
+        ],
+        "meal": [
+          "main"
+        ],
+        "season": [],
+        "allergens": [],
+        "technique": [
+          "simmer"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "fondant",
+          "sirupeux"
+        ],
+        "taste": [
+          "acide",
+          "umami"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "main",
+      "difficulty_level": "easy",
+      "description": "Ragoût de gombos du Levant : les gombos entiers restent fermes dans une sauce tomate à l'ail et à la coriandre, acidulée au citron pour couper le mucilage, servi avec du riz.",
+      "instructions": [
+        "Étape 1 : Laver 700 g de gombos, couper la base sans ouvrir la gousse pour limiter le mucilage.",
+        "Étape 2 : Faire revenir 150 g d'oignon dans 45 ml d'huile d'olive, 6 minutes, puis ajouter 12 g d'ail et 3 g de cumin.",
+        "Étape 3 : Ajouter 400 g de tomates concassées et 40 g de concentré, cuire 5 minutes jusqu'à ce que la sauce fonce.",
+        "Étape 4 : Déposer les gombos en une seule couche, verser 300 ml d'eau et 4 g de sel, couvrir et mijoter 25 minutes sans remuer.",
+        "Étape 5 : Ajouter 30 ml de jus de citron et 15 g de coriandre hachée, cuire 3 minutes à découvert.",
+        "Étape 6 : Cuire 200 g de riz long dans 200 ml d'eau et le reste d'eau bouillante, puis servir les gombos dessus."
+      ],
+      "diet_flags": {
+        "vegan": true,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": true,
+        "nut_free": true,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(eau",
+        "1 heure",
+        "ail",
+        "and",
+        "bamia",
+        "bamia,",
+        "blanc",
+        "citron",
+        "coeliaque",
+        "coriander",
+        "coriandre",
+        "cumin",
+        "debutant",
+        "easy",
+        "eau",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "garlic",
+        "gluten free",
+        "gombos",
+        "kids",
+        "lemon",
+        "levantine",
+        "mijotes",
+        "oignon",
+        "okra",
+        "olive",
+        "onion",
+        "potable)",
+        "rice",
+        "riz",
+        "salt",
+        "sans gluten",
+        "sans produit animal",
+        "sans viande",
+        "sel",
+        "simmer",
+        "simple",
+        "stewed",
+        "table",
+        "tomate",
+        "tomato",
+        "vegan",
+        "vegetalien",
+        "vegetarien",
+        "water",
+        "white",
+        "with"
+      ]
+    },
+    {
+      "id": "rice_maqluba_legumes_c15e82",
+      "titles": {
+        "fr": "Maqluba de légumes, riz renversé aux aubergines et chou-fleur",
+        "en": "Vegetable Maqluba, Upside-Down Rice with Eggplant and Cauliflower",
+        "original": "Maqluba"
+      },
+      "origin": {
+        "cuisine": "palestinian",
+        "country": "palestine",
+        "region": "naplouse",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 35,
+        "prep_passive_min": 0,
+        "cook_min": 45,
+        "total_min": 80
+      },
+      "composition": [
+        {
+          "ingredient": "white_rice_long_grain_seed_dried",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "eggplant_raw",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cauliflower_raw_flower",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 80,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "turmeric_powder",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "pine_nuts_raw",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "vegetable_stock_dried",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 600,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yogurt_fermented_plain",
+          "quantity": null,
+          "unit": "en accompagnement",
+          "meta": {
+            "role": "serving_suggestion",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free"
+        ],
+        "meal": [
+          "main"
+        ],
+        "season": [],
+        "allergens": [
+          "tree_nuts"
+        ],
+        "technique": [
+          "fry",
+          "steam"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "fondant",
+          "grenu"
+        ],
+        "taste": [
+          "épicé",
+          "umami"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "main",
+      "difficulty_level": "medium",
+      "description": "Riz palestinien cuit dans une marmite tapissée d'aubergines et de chou-fleur frits, parfumé cannelle et cumin, que l'on renverse d'un geste sur le plat de service ; les légumes forment le dessus doré.",
+      "instructions": [
+        "Étape 1 : Rincer 300 g de riz et le laisser tremper 20 minutes dans de l'eau froide.",
+        "Étape 2 : Couper 400 g d'aubergines en rondelles et détailler 400 g de chou-fleur en bouquets, les faire dorer par fournées dans 70 ml d'huile de tournesol, 10 minutes en tout.",
+        "Étape 3 : Faire revenir 150 g d'oignon émincé dans le reste d'huile, puis ajouter 3 g de cannelle, 3 g de cumin, 2 g de curcuma, 2 g de poivre et 5 g de sel.",
+        "Étape 4 : Tapisser le fond d'une marmite des rondelles d'aubergine, ajouter le chou-fleur puis l'oignon épicé, et couvrir du riz égoutté sans mélanger.",
+        "Étape 5 : Verser 600 ml d'eau chaude additionnée de 6 g de bouillon, porter à frémissement, couvrir et cuire 30 minutes à feu très doux.",
+        "Étape 6 : Laisser reposer 10 minutes hors du feu, puis retourner la marmite d'un coup sur un grand plat.",
+        "Étape 7 : Parsemer de 30 g de pignons grillés et servir avec du yaourt."
+      ],
+      "diet_flags": {
+        "vegan": true,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": true,
+        "nut_free": false,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "and",
+        "aubergine",
+        "aubergines",
+        "aux",
+        "black",
+        "blanc",
+        "bouillon",
+        "cauliflower",
+        "chou",
+        "cinnamon",
+        "coeliaque",
+        "cumin",
+        "curcuma",
+        "down",
+        "eggplant",
+        "enfants",
+        "facile enfants",
+        "famille",
+        "fleur",
+        "fry",
+        "gluten free",
+        "intermediaire",
+        "kids",
+        "legumes",
+        "legumes,",
+        "lent",
+        "long",
+        "maqluba",
+        "maqluba,",
+        "mijote",
+        "moyen",
+        "noir",
+        "nuts",
+        "oignon",
+        "onion",
+        "palestinian",
+        "pepper",
+        "pignons",
+        "pine",
+        "pins",
+        "poivre",
+        "renverse",
+        "rice",
+        "riz",
+        "salt",
+        "sans gluten",
+        "sans produit animal",
+        "sans viande",
+        "sel",
+        "steam",
+        "stock",
+        "sunflower",
+        "table",
+        "tournesol",
+        "turmeric",
+        "upside",
+        "vegan",
+        "vegetable",
+        "vegetalien",
+        "vegetarien",
+        "white",
+        "with"
+      ]
+    },
+    {
+      "id": "main_freekeh_legumes_rotis_9a2d47",
+      "titles": {
+        "fr": "Freekeh aux légumes rôtis et pois chiches",
+        "en": "Freekeh with Roasted Vegetables and Chickpeas",
+        "original": "Freekeh with Roasted Vegetables and Chickpeas"
+      },
+      "origin": {
+        "cuisine": "levantine",
+        "country": "syria",
+        "region": "alep",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 20,
+        "prep_passive_min": 0,
+        "cook_min": 40,
+        "total_min": 60
+      },
+      "composition": [
+        {
+          "ingredient": "freekeh_immature_wheat_raw_cracked_seed",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_zucchini_squash_raw",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_bell_pepper_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chickpea_rinsed_canned",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 60,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "acidity",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 600,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegan",
+          "vegetarian",
+          "lactose_free",
+          "nut_free"
+        ],
+        "meal": [
+          "main"
+        ],
+        "season": [],
+        "allergens": [
+          "gluten"
+        ],
+        "technique": [
+          "roast",
+          "simmer"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "grenu",
+          "fondant"
+        ],
+        "taste": [
+          "fumé",
+          "umami"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "main",
+      "difficulty_level": "easy",
+      "description": "Le freekeh, blé vert grillé au goût fumé, mijoté en pilaf puis mélangé à des courgettes, poivrons et tomates rôtis et à des pois chiches, relevé de cumin et de cannelle et rafraîchi au citron.",
+      "instructions": [
+        "Étape 1 : Couper 250 g de courgette, 200 g de poivron vert et 200 g de tomates en gros dés, les mélanger à 30 ml d'huile d'olive, 2 g de sel et 2 g de poivre.",
+        "Étape 2 : Rôtir les légumes 30 minutes à 210 °C, en remuant à mi-cuisson, jusqu'aux bords colorés.",
+        "Étape 3 : Rincer 250 g de freekeh, le faire revenir 2 minutes avec 150 g d'oignon émincé dans le reste d'huile, avec 3 g de cumin et 2 g de cannelle.",
+        "Étape 4 : Verser 600 ml d'eau chaude et 2 g de sel, couvrir et cuire 25 minutes à feu doux jusqu'à absorption.",
+        "Étape 5 : Ajouter 200 g de pois chiches égouttés dans le freekeh, laisser 5 minutes à couvert pour les réchauffer.",
+        "Étape 6 : Mélanger les légumes rôtis, 30 ml de jus de citron et 15 g de persil haché, puis servir tiède."
+      ],
+      "diet_flags": {
+        "vegan": true,
+        "vegetarian": true,
+        "gluten_free": false,
+        "lactose_free": true,
+        "nut_free": true,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(ble",
+        "(immature",
+        "1 heure",
+        "and",
+        "aux",
+        "bell",
+        "chiches",
+        "chickpea",
+        "chickpeas",
+        "cinnamon",
+        "citron",
+        "courgette",
+        "cumin",
+        "debutant",
+        "easy",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "freekeh",
+        "frik",
+        "green",
+        "immature)",
+        "kids",
+        "legumes",
+        "lemon",
+        "levantine",
+        "oignon",
+        "olive",
+        "onion",
+        "parsley",
+        "pepper",
+        "persil",
+        "pois",
+        "poivron",
+        "roast",
+        "roasted",
+        "rotis",
+        "salt",
+        "sans produit animal",
+        "sans viande",
+        "sel",
+        "simmer",
+        "simple",
+        "squash",
+        "table",
+        "tomate",
+        "tomato",
+        "vegan",
+        "vegetables",
+        "vegetalien",
+        "vegetarien",
+        "vert",
+        "wheat)",
+        "with",
+        "zucchini"
+      ]
+    },
+    {
+      "id": "main_kousa_mahshi_2f9e6b",
+      "titles": {
+        "fr": "Kousa mahshi, courgettes farcies au riz et à la menthe",
+        "en": "Kousa Mahshi, Zucchini Stuffed with Rice and Mint",
+        "original": "Kousa mahshi"
+      },
+      "origin": {
+        "cuisine": "lebanese",
+        "country": "lebanon",
+        "region": "bekaa",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 40,
+        "prep_passive_min": 0,
+        "cook_min": 45,
+        "total_min": 85
+      },
+      "composition": [
+        {
+          "ingredient": "green_zucchini_squash_raw",
+          "quantity": 900,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_short_grain_seed_dried",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_paste_unsalted_canned",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 45,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mint_fresh_herb",
+          "quantity": 8,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 500,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
+        ],
+        "meal": [
+          "main"
+        ],
+        "season": [],
+        "allergens": [],
+        "technique": [
+          "simmer"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "fondant"
+        ],
+        "taste": [
+          "doux",
+          "herbacé"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "main",
+      "difficulty_level": "medium",
+      "description": "Courgettes évidées à la cuillère puis farcies d'un riz cru assaisonné de tomate, cannelle et menthe, cuites debout dans un bouillon tomaté qui finit de cuire le riz à l'intérieur.",
+      "instructions": [
+        "Étape 1 : Couper le pédoncule de 900 g de courgettes courtes et les évider à la cuillère à melon en laissant 5 mm de paroi.",
+        "Étape 2 : Mélanger 150 g de riz rond rincé, 100 g de tomates en dés, 100 g d'oignon râpé, 8 g de menthe ciselée, 2 g de cannelle, 2 g de sel et 2 g de poivre avec 15 ml d'huile.",
+        "Étape 3 : Remplir les courgettes aux trois quarts avec la farce, sans tasser : le riz va gonfler.",
+        "Étape 4 : Faire revenir 10 g d'ail dans le reste d'huile, ajouter 200 g de tomates concassées, 30 g de concentré, 500 ml d'eau et 2 g de sel, porter à frémissement.",
+        "Étape 5 : Ranger les courgettes debout dans la sauce, couvrir et cuire 40 minutes à feu doux.",
+        "Étape 6 : Laisser reposer 5 minutes hors du feu, puis servir les courgettes nappées de leur sauce."
+      ],
+      "diet_flags": {
+        "vegan": true,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": true,
+        "nut_free": true,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(eau",
+        "ail",
+        "and",
+        "black",
+        "blanc",
+        "cinnamon",
+        "coeliaque",
+        "courgette",
+        "courgettes",
+        "eau",
+        "enfants",
+        "facile enfants",
+        "famille",
+        "farcies",
+        "garlic",
+        "gluten free",
+        "green",
+        "intermediaire",
+        "kids",
+        "kousa",
+        "lebanese",
+        "lent",
+        "liban",
+        "libanais",
+        "long",
+        "mahshi",
+        "mahshi,",
+        "mediterranee",
+        "menthe",
+        "mijote",
+        "mint",
+        "moyen",
+        "moyen-orient",
+        "noir",
+        "oignon",
+        "olive",
+        "onion",
+        "pepper",
+        "poivre",
+        "potable)",
+        "rice",
+        "riz",
+        "salt",
+        "sans gluten",
+        "sans produit animal",
+        "sans viande",
+        "sel",
+        "simmer",
+        "squash",
+        "stuffed",
+        "table",
+        "tomate",
+        "tomato",
+        "vegan",
+        "vegetalien",
+        "vegetarien",
+        "water",
+        "white",
+        "with",
+        "zucchini"
+      ]
+    },
+    {
+      "id": "dairy_labneh_herbes_5c71a0",
+      "titles": {
+        "fr": "Labneh maison aux herbes et au za'atar",
+        "en": "Homemade Labneh with Herbs and Za'atar",
+        "original": "Labneh"
+      },
+      "origin": {
+        "cuisine": "levantine",
+        "country": "lebanon",
+        "region": "mont_liban",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 10,
+        "prep_passive_min": 720,
+        "cook_min": 0,
+        "total_min": 730
+      },
+      "composition": [
+        {
+          "ingredient": "yogurt_fermented_plain",
+          "quantity": 800,
+          "unit": "g",
+          "meta": {
+            "role": "dairy",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_extra_virgin_plant",
+          "quantity": 40,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "base_za_atar_2badf3",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sumac",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mint_fresh_herb",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegetarian",
+          "gluten_free",
+          "nut_free"
+        ],
+        "meal": [
+          "starter"
+        ],
+        "season": [],
+        "allergens": [
+          "lactose",
+          "milk",
+          "sesame"
+        ],
+        "technique": [],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "crémeux",
+          "épais"
+        ],
+        "taste": [
+          "acide",
+          "herbacé"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "starter",
+      "difficulty_level": "easy",
+      "description": "Yaourt salé égoutté une nuit dans une étamine jusqu'à devenir un fromage frais tartinable, servi en assiette creuse avec beaucoup d'huile d'olive, du za'atar et du sumac.",
+      "instructions": [
+        "Étape 1 : Mélanger 800 g de yaourt avec 4 g de sel.",
+        "Étape 2 : Verser le yaourt dans une étamine posée sur une passoire, refermer et laisser égoutter 12 heures au réfrigérateur.",
+        "Étape 3 : Récupérer le labneh : il doit être assez ferme pour former une boule à la cuillère.",
+        "Étape 4 : L'étaler dans une assiette creuse en creusant un sillon à la cuillère.",
+        "Étape 5 : Arroser de 40 ml d'huile d'olive, saupoudrer de 15 g de za'atar et 2 g de sumac.",
+        "Étape 6 : Parsemer de 5 g de menthe ciselée et servir avec du pain plat."
+      ],
+      "diet_flags": {
+        "vegan": false,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": false,
+        "nut_free": true,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(baies",
+        "and",
+        "aux",
+        "base_za_atar_2badf3",
+        "coeliaque",
+        "debutant",
+        "easy",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "gluten free",
+        "herbes",
+        "herbs",
+        "homemade",
+        "kids",
+        "labneh",
+        "lent",
+        "levantine",
+        "long",
+        "maison",
+        "menthe",
+        "mijote",
+        "mint",
+        "moulues)",
+        "olive",
+        "salt",
+        "sans gluten",
+        "sans viande",
+        "sechees",
+        "sel",
+        "simple",
+        "sumac",
+        "table",
+        "vegetarien",
+        "with",
+        "yaourt",
+        "yogurt",
+        "za'atar"
+      ]
+    },
+    {
+      "id": "main_khoresh_bademjan_b62c85",
+      "titles": {
+        "fr": "Khoresh bademjan, ragoût persan d'aubergines aux pois chiches",
+        "en": "Khoresh Bademjan, Persian Eggplant Stew with Chickpeas",
+        "original": "Khoresh bademjan"
+      },
+      "origin": {
+        "cuisine": "persian",
+        "country": "iran",
+        "region": "teheran",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 25,
+        "prep_passive_min": 0,
+        "cook_min": 55,
+        "total_min": 80
+      },
+      "composition": [
+        {
+          "ingredient": "eggplant_raw",
+          "quantity": 700,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 400,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "tomato_paste_unsalted_canned",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "condiment",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "chickpea_rinsed_canned",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 80,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "turmeric_powder",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 30,
+          "unit": "ml",
+          "meta": {
+            "role": "acidity",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 400,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_long_grain_seed_dried",
+          "quantity": null,
+          "unit": "en accompagnement",
+          "meta": {
+            "role": "serving_suggestion",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
+        ],
+        "meal": [
+          "main"
+        ],
+        "season": [],
+        "allergens": [],
+        "technique": [
+          "fry",
+          "simmer"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "fondant"
+        ],
+        "taste": [
+          "acide",
+          "umami"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "main",
+      "difficulty_level": "easy",
+      "description": "Ragoût iranien d'aubergines dorées à l'huile puis mijotées dans une sauce tomate au curcuma, acidulée au jus de citron ; les pois chiches remplacent l'agneau et le plat se mange avec du riz blanc.",
+      "instructions": [
+        "Étape 1 : Couper 700 g d'aubergines en quartiers dans la longueur, les saler avec 1 g de sel et laisser dégorger 15 minutes.",
+        "Étape 2 : Les faire dorer par fournées dans 60 ml d'huile de tournesol, 10 minutes, puis les réserver sur papier absorbant.",
+        "Étape 3 : Faire blondir 200 g d'oignon émincé dans le reste d'huile, 8 minutes, ajouter 10 g d'ail, 4 g de curcuma et 2 g de cannelle.",
+        "Étape 4 : Ajouter 40 g de concentré de tomate et 400 g de tomates concassées, cuire 5 minutes.",
+        "Étape 5 : Verser 400 ml d'eau, 3 g de sel et 2 g de poivre, remettre les aubergines et mijoter 30 minutes à couvert sans remuer.",
+        "Étape 6 : Ajouter 250 g de pois chiches égouttés et 30 ml de jus de citron, poursuivre 10 minutes à découvert pour réduire la sauce.",
+        "Étape 7 : Servir avec du riz blanc."
+      ],
+      "diet_flags": {
+        "vegan": true,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": true,
+        "nut_free": true,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "ail",
+        "aubergine",
+        "aux",
+        "bademjan",
+        "bademjan,",
+        "black",
+        "chiches",
+        "chickpea",
+        "chickpeas",
+        "cinnamon",
+        "citron",
+        "coeliaque",
+        "curcuma",
+        "d'aubergines",
+        "debutant",
+        "easy",
+        "eggplant",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "fry",
+        "garlic",
+        "gluten free",
+        "khoresh",
+        "kids",
+        "lemon",
+        "lent",
+        "long",
+        "mijote",
+        "noir",
+        "oignon",
+        "onion",
+        "pepper",
+        "persan",
+        "persian",
+        "pois",
+        "poivre",
+        "ragout",
+        "salt",
+        "sans gluten",
+        "sans produit animal",
+        "sans viande",
+        "sel",
+        "simmer",
+        "simple",
+        "stew",
+        "sunflower",
+        "table",
+        "tomate",
+        "tomato",
+        "tournesol",
+        "turmeric",
+        "vegan",
+        "vegetalien",
+        "vegetarien",
+        "with"
+      ]
+    },
+    {
+      "id": "egg_kuku_sabzi_d3b408",
+      "titles": {
+        "fr": "Kuku sabzi, omelette persane aux herbes et aux noix",
+        "en": "Kuku Sabzi, Persian Herb Frittata with Walnuts",
+        "original": "Kuku sabzi"
+      },
+      "origin": {
+        "cuisine": "persian",
+        "country": "iran",
+        "region": "chiraz",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 25,
+        "prep_passive_min": 0,
+        "cook_min": 25,
+        "total_min": 50
+      },
+      "composition": [
+        {
+          "ingredient": "egg_raw",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "animal_protein",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "coriander",
+          "quantity": 60,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "dill_weed_fresh_herb_leaf",
+          "quantity": 60,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_onion_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "spinach",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "walnut_shelled_dried",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "nut",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "wheat_flour_t55",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "turmeric_powder",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 60,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegetarian",
+          "lactose_free"
+        ],
+        "meal": [
+          "main"
+        ],
+        "season": [],
+        "allergens": [
+          "eggs",
+          "gluten",
+          "tree_nuts"
+        ],
+        "technique": [
+          "fry"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "moelleux"
+        ],
+        "taste": [
+          "herbacé",
+          "umami"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "main",
+      "difficulty_level": "medium",
+      "description": "Omelette iranienne où les herbes dominent l'œuf : persil, coriandre, aneth et oignon vert hachés très fin, épinards, éclats de noix, cuite doucement à la poêle jusqu'à une tranche vert sombre.",
+      "instructions": [
+        "Étape 1 : Hacher finement 100 g de persil, 60 g de coriandre, 60 g d'aneth, 100 g d'oignon vert et 100 g d'épinards.",
+        "Étape 2 : Battre 300 g d'œufs avec 20 g de farine, 2 g de curcuma, 4 g de sel et 2 g de poivre.",
+        "Étape 3 : Incorporer les herbes et 40 g de noix concassées : le mélange doit être très vert et à peine liquide.",
+        "Étape 4 : Chauffer 40 ml d'huile dans une poêle de 24 cm, verser l'appareil et égaliser.",
+        "Étape 5 : Couvrir et cuire 15 minutes à feu doux, jusqu'à ce que le dessus soit pris.",
+        "Étape 6 : Retourner la kuku à l'aide d'une assiette, ajouter le reste d'huile et cuire 10 minutes de l'autre côté.",
+        "Étape 7 : Laisser tiédir et couper en parts, servir avec du yaourt et du pain plat."
+      ],
+      "diet_flags": {
+        "vegan": false,
+        "vegetarian": true,
+        "gluten_free": false,
+        "lactose_free": true,
+        "nut_free": false,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "1 heure",
+        "anemie",
+        "aneth",
+        "aux",
+        "black",
+        "cerneau",
+        "coriander",
+        "curcuma",
+        "dill",
+        "egg",
+        "enfants",
+        "epinards",
+        "facile enfants",
+        "famille",
+        "fer",
+        "flour",
+        "frittata",
+        "froment",
+        "fry",
+        "green",
+        "herb",
+        "herbes",
+        "intermediaire",
+        "iron",
+        "kids",
+        "kuku",
+        "magnesium",
+        "moyen",
+        "noir",
+        "noix",
+        "oignon",
+        "omelette",
+        "onion",
+        "parsley",
+        "pepper",
+        "persane",
+        "persian",
+        "persil",
+        "poivre",
+        "sabzi",
+        "sabzi,",
+        "salt",
+        "sans viande",
+        "sel",
+        "shelled",
+        "spinach",
+        "sunflower",
+        "t55",
+        "table",
+        "tournesol",
+        "turmeric",
+        "vegetarien",
+        "vert",
+        "walnut,",
+        "walnuts",
+        "weed",
+        "wheat",
+        "with",
+        "œuf"
+      ]
+    },
+    {
+      "id": "rice_tahchin_e48a16",
+      "titles": {
+        "fr": "Tahchin, gâteau de riz persan au safran et au yaourt",
+        "en": "Tahchin, Persian Saffron Rice Cake with Yogurt",
+        "original": "Tahchin"
+      },
+      "origin": {
+        "cuisine": "persian",
+        "country": "iran",
+        "region": "isfahan",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 25,
+        "prep_passive_min": 30,
+        "cook_min": 60,
+        "total_min": 115
+      },
+      "composition": [
+        {
+          "ingredient": "white_rice_long_grain_seed_dried",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "yogurt_fermented_plain",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "dairy",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "egg_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "binder",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "saffron",
+          "quantity": 0.3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "butter_sup80pct",
+          "quantity": 60,
+          "unit": "g",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "pistachio_nuts_raw",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 1500,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegetarian",
+          "gluten_free"
+        ],
+        "meal": [
+          "main"
+        ],
+        "season": [],
+        "allergens": [
+          "eggs",
+          "lactose",
+          "milk",
+          "tree_nuts"
+        ],
+        "technique": [
+          "bake"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "croustillant",
+          "grenu"
+        ],
+        "taste": [
+          "doux",
+          "lacté"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "main",
+      "difficulty_level": "hard",
+      "description": "Riz basmati précuit mélangé à du yaourt, de l'œuf et du safran, tassé dans un moule beurré et cuit jusqu'à former une croûte dorée que l'on démoule d'un bloc : le tahdig devient le dessus du gâteau.",
+      "instructions": [
+        "Étape 1 : Rincer 300 g de riz basmati et le laisser tremper 30 minutes dans de l'eau salée.",
+        "Étape 2 : Le cuire 6 minutes dans 1,5 L d'eau bouillante avec 3 g de sel, puis l'égoutter : les grains doivent rester fermes au cœur.",
+        "Étape 3 : Infuser 0,3 g de safran pilé dans 20 ml d'eau chaude, puis le mélanger à 300 g de yaourt, 100 g d'œufs battus, 2 g de sel et 30 g de beurre fondu.",
+        "Étape 4 : Mélanger un tiers du riz à l'appareil au yaourt et l'étaler au fond d'un moule beurré avec le reste du beurre.",
+        "Étape 5 : Couvrir du riz restant, tasser légèrement et fermer le moule avec un papier cuisson.",
+        "Étape 6 : Enfourner 60 minutes à 180 °C, jusqu'à ce que le fond soit doré et se détache.",
+        "Étape 7 : Laisser reposer 5 minutes, démouler à l'envers sur un plat et parsemer de 30 g de pistaches concassées."
+      ],
+      "diet_flags": {
+        "vegan": false,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": false,
+        "nut_free": false,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(eau",
+        "avance",
+        "bake",
+        "beurre",
+        "blanc",
+        "butter",
+        "cake",
+        "chef",
+        "coeliaque",
+        "complexe",
+        "eau",
+        "egg",
+        "enfants",
+        "facile enfants",
+        "famille",
+        "gateau",
+        "gluten free",
+        "kids",
+        "lent",
+        "long",
+        "mijote",
+        "nuts",
+        "persan",
+        "persian",
+        "pistache",
+        "pistachio",
+        "potable)",
+        "rice",
+        "riz",
+        "saffron",
+        "safran",
+        "salt",
+        "sans gluten",
+        "sans viande",
+        "sel",
+        "table",
+        "tahchin",
+        "tahchin,",
+        "technique",
+        "vegetarien",
+        "water",
+        "white",
+        "with",
+        "yaourt",
+        "yogurt",
+        "œuf"
+      ]
+    },
+    {
+      "id": "rice_adas_polo_74c1d9",
+      "titles": {
+        "fr": "Adas polo, riz persan aux lentilles et aux dattes",
+        "en": "Adas Polo, Persian Rice with Lentils and Dates",
+        "original": "Adas polo"
+      },
+      "origin": {
+        "cuisine": "persian",
+        "country": "iran",
+        "region": "yazd",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 25,
+        "prep_passive_min": 0,
+        "cook_min": 45,
+        "total_min": 70
+      },
+      "composition": [
+        {
+          "ingredient": "white_rice_long_grain_seed_dried",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_lentil_dried",
+          "quantity": 150,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "date_with_skin_dried",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "fruit",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic_base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 50,
+          "unit": "ml",
+          "meta": {
+            "role": "fat_cooking",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 3,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "turmeric_powder",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 1200,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
+        ],
+        "meal": [
+          "main"
+        ],
+        "season": [],
+        "allergens": [],
+        "technique": [
+          "steam"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "grenu",
+          "fondant"
+        ],
+        "taste": [
+          "sucré",
+          "épicé"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "main",
+      "difficulty_level": "medium",
+      "description": "Riz basmati dressé en couches avec des lentilles cuites, des oignons frits et des dattes caramélisées à la cannelle : un plat iranien à la fois sucré et épicé, cuit à l'étouffée pour obtenir une croûte au fond.",
+      "instructions": [
+        "Étape 1 : Cuire 150 g de lentilles vertes 20 minutes dans de l'eau non salée, puis les égoutter.",
+        "Étape 2 : Rincer 250 g de riz basmati et le cuire 6 minutes dans 1,2 L d'eau bouillante salée (3 g), puis l'égoutter.",
+        "Étape 3 : Faire frire 200 g d'oignon émincé dans 35 ml d'huile, 12 minutes, jusqu'au brun doré ; en réserver la moitié.",
+        "Étape 4 : Ajouter 100 g de dattes dénoyautées coupées en deux, 3 g de cannelle, 3 g de cumin et 2 g de curcuma, cuire 3 minutes.",
+        "Étape 5 : Dans une marmite huilée avec le reste d'huile, alterner riz, lentilles et mélange aux dattes, en terminant par du riz en dôme.",
+        "Étape 6 : Couvrir d'un linge et du couvercle, cuire 25 minutes à feu très doux pour former la croûte.",
+        "Étape 7 : Renverser sur un plat, saler avec 2 g de sel et parsemer des oignons frits réservés."
+      ],
+      "diet_flags": {
+        "vegan": true,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": true,
+        "nut_free": true,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(eau",
+        "adas",
+        "and",
+        "aux",
+        "blanc",
+        "cinnamon",
+        "coeliaque",
+        "cumin",
+        "curcuma",
+        "date",
+        "dates",
+        "datte",
+        "dattes",
+        "eau",
+        "enfants",
+        "facile enfants",
+        "famille",
+        "gluten free",
+        "green",
+        "intermediaire",
+        "kids",
+        "lent",
+        "lentil",
+        "lentille",
+        "lentilles",
+        "lentils",
+        "long",
+        "mijote",
+        "moyen",
+        "oignon",
+        "onion",
+        "persan",
+        "persian",
+        "polo",
+        "polo,",
+        "potable)",
+        "rice",
+        "riz",
+        "salt",
+        "sans gluten",
+        "sans produit animal",
+        "sans viande",
+        "sel",
+        "steam",
+        "sunflower",
+        "table",
+        "tournesol",
+        "turmeric",
+        "vegan",
+        "vegetalien",
+        "vegetarien",
+        "verte",
+        "water",
+        "white",
+        "with"
+      ]
+    },
+    {
+      "id": "dessert_malabi_1e7f53",
+      "titles": {
+        "fr": "Malabi, crème de lait à l'eau de rose et à la grenade",
+        "en": "Malabi, Rose Water Milk Pudding with Pomegranate",
+        "original": "Malabi"
+      },
+      "origin": {
+        "cuisine": "levantine",
+        "country": "israel",
+        "region": "tel_aviv",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 15,
+        "prep_passive_min": 180,
+        "cook_min": 10,
+        "total_min": 205
+      },
+      "composition": [
+        {
+          "ingredient": "milk_liquid_pasteurized_3_5pct",
+          "quantity": 800,
+          "unit": "ml",
+          "meta": {
+            "role": "dairy",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cornstarch_flour",
+          "quantity": 70,
+          "unit": "g",
+          "meta": {
+            "role": "thickener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sugars_granulated",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "rose_water",
+          "quantity": 15,
+          "unit": "ml",
+          "meta": {
+            "role": "aroma",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "pistachio_nuts_raw",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "pomegranate_raw",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "fruit",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegetarian",
+          "gluten_free"
+        ],
+        "meal": [
+          "dessert"
+        ],
+        "season": [],
+        "allergens": [
+          "lactose",
+          "milk",
+          "tree_nuts"
+        ],
+        "technique": [
+          "simmer"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "crémeux",
+          "tremblotant"
+        ],
+        "taste": [
+          "sucré",
+          "floral"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "dessert",
+      "difficulty_level": "easy",
+      "description": "Crème de lait prise à la fécule, parfumée à l'eau de rose et servie très froide sous un sirop rose, avec des pistaches concassées et des graines de grenade pour le croquant.",
+      "instructions": [
+        "Étape 1 : Délayer 70 g de fécule de maïs dans 150 ml de lait froid prélevé sur les 800 ml.",
+        "Étape 2 : Chauffer le reste du lait avec 60 g de sucre jusqu'aux premiers frémissements.",
+        "Étape 3 : Verser la fécule délayée en fouettant et cuire 3 minutes : la crème doit napper la cuillère.",
+        "Étape 4 : Hors du feu, ajouter 10 ml d'eau de rose, puis répartir dans quatre coupes.",
+        "Étape 5 : Filmer au contact et réfrigérer 3 heures jusqu'à prise complète.",
+        "Étape 6 : Faire un sirop avec 20 g de sucre, 30 ml d'eau et 5 ml d'eau de rose, laisser refroidir.",
+        "Étape 7 : Napper les crèmes de sirop, parsemer de 30 g de pistaches concassées et de 100 g de graines de grenade."
+      ],
+      "diet_flags": {
+        "vegan": false,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": false,
+        "nut_free": false,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "coeliaque",
+        "cornstarch",
+        "creme",
+        "debutant",
+        "easy",
+        "eau",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "fecule",
+        "gluten free",
+        "grenade",
+        "kids",
+        "l'eau",
+        "lait",
+        "lent",
+        "levantine",
+        "long",
+        "mais",
+        "malabi",
+        "malabi,",
+        "mijote",
+        "milk",
+        "nuts",
+        "pistache",
+        "pistachio",
+        "pomegranate",
+        "pudding",
+        "rose",
+        "sans gluten",
+        "sans viande",
+        "simmer",
+        "simple",
+        "sucre",
+        "sugars",
+        "vegetarien",
+        "water",
+        "with"
+      ]
+    },
+    {
+      "id": "dessert_om_ali_36b9e4",
+      "titles": {
+        "fr": "Om Ali, gratin égyptien de pâte filo au lait",
+        "en": "Om Ali, Egyptian Filo and Milk Pudding",
+        "original": "Om Ali"
+      },
+      "origin": {
+        "cuisine": "egyptian",
+        "country": "egypt",
+        "region": "le_caire",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 15,
+        "prep_passive_min": 0,
+        "cook_min": 35,
+        "total_min": 50
+      },
+      "composition": [
+        {
+          "ingredient": "phyllo_filo_pastry_raw_paste",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "milk_liquid_pasteurized_3_5pct",
+          "quantity": 600,
+          "unit": "ml",
+          "meta": {
+            "role": "dairy",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sugars_granulated",
+          "quantity": 70,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "pistachio_nuts_raw",
+          "quantity": 30,
+          "unit": "g",
+          "meta": {
+            "role": "nut",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "walnut_shelled_dried",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "nut",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "rose_water",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "aroma",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegetarian"
+        ],
+        "meal": [
+          "dessert"
+        ],
+        "season": [],
+        "allergens": [
+          "gluten",
+          "lactose",
+          "milk",
+          "tree_nuts"
+        ],
+        "technique": [
+          "bake"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "fondant",
+          "croustillant"
+        ],
+        "taste": [
+          "sucré",
+          "lacté"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "dessert",
+      "difficulty_level": "easy",
+      "description": "Dessert égyptien de fête : de la pâte filo cuite à sec puis émiettée, noyée de lait sucré à la cannelle avec noix et pistaches, gratinée jusqu'à ce que le dessus croustille et que le dessous reste crémeux.",
+      "instructions": [
+        "Étape 1 : Étaler 200 g de pâte filo froissée sur une plaque et la cuire 12 minutes à 190 °C jusqu'à ce qu'elle soit dorée et cassante.",
+        "Étape 2 : Émietter la pâte refroidie dans un plat à gratin.",
+        "Étape 3 : Parsemer de 30 g de pistaches et 40 g de noix concassées et de 2 g de cannelle.",
+        "Étape 4 : Chauffer 600 ml de lait avec 70 g de sucre sans le faire bouillir, puis ajouter 10 ml d'eau de rose.",
+        "Étape 5 : Verser le lait chaud sur la pâte et appuyer à la cuillère pour l'imbiber.",
+        "Étape 6 : Enfourner 20 minutes à 200 °C, jusqu'à ce que le dessus soit doré et le lait absorbé ; servir tiède."
+      ],
+      "diet_flags": {
+        "vegan": false,
+        "vegetarian": true,
+        "gluten_free": false,
+        "lactose_free": false,
+        "nut_free": false,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(filo)",
+        "1 heure",
+        "ali",
+        "ali,",
+        "and",
+        "bake",
+        "cerneau",
+        "cinnamon",
+        "debutant",
+        "easy",
+        "eau",
+        "egyptian",
+        "egyptien",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "filo",
+        "gratin",
+        "kids",
+        "lait",
+        "milk",
+        "noix",
+        "nuts",
+        "pastry",
+        "pate",
+        "phyllo",
+        "pistache",
+        "pistachio",
+        "pudding",
+        "rose",
+        "sans viande",
+        "shelled",
+        "simple",
+        "sucre",
+        "sugars",
+        "vegetarien",
+        "walnut,",
+        "water"
+      ]
+    },
+    {
+      "id": "sauce_zhug_yemenite_0a5d76",
+      "titles": {
+        "fr": "Zhug, sauce yéménite à la coriandre et au piment vert",
+        "en": "Zhug, Yemeni Green Chili and Coriander Sauce",
+        "original": "Zhug"
+      },
+      "origin": {
+        "cuisine": "yemeni",
+        "country": "yemen",
+        "region": "sanaa",
+        "city": ""
+      },
+      "servings": 8,
+      "servings_default": 8,
+      "timing": {
+        "prep_active_min": 15,
+        "prep_passive_min": 0,
+        "cook_min": 0,
+        "total_min": 15
+      },
+      "composition": [
+        {
+          "ingredient": "coriander",
+          "quantity": 100,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 50,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "red_hot_chili_pepper_raw",
+          "quantity": 60,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "garlic_raw",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cumin_spice_seed",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cardamom_powder",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 100,
+          "unit": "ml",
+          "meta": {
+            "role": "fat",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "acidity",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
+        ],
+        "meal": [
+          "condiment"
+        ],
+        "season": [],
+        "allergens": [],
+        "technique": [],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "épais",
+          "granuleux"
+        ],
+        "taste": [
+          "piquant",
+          "herbacé"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 4
+      },
+      "dish_type": "condiment",
+      "difficulty_level": "easy",
+      "description": "Sauce verte yéménite très piquante : coriandre et persil pilés avec du piment vert, de l'ail, du cumin et de la cardamome, montés à l'huile d'olive ; une cuillerée relève soupes, falafels et pains plats.",
+      "instructions": [
+        "Étape 1 : Laver et essorer 100 g de coriandre et 50 g de persil, tiges tendres comprises.",
+        "Étape 2 : Épépiner partiellement 60 g de piments verts frais selon la force souhaitée.",
+        "Étape 3 : Piler 20 g d'ail avec 4 g de sel, 5 g de cumin et 2 g de cardamome au mortier.",
+        "Étape 4 : Ajouter les herbes et les piments et piler jusqu'à obtenir une pâte grossière (ou mixer par impulsions).",
+        "Étape 5 : Monter la sauce en versant 100 ml d'huile d'olive en filet, puis ajouter 20 ml de jus de citron.",
+        "Étape 6 : Conserver au frais dans un bocal couvert d'un film d'huile, jusqu'à une semaine."
+      ],
+      "diet_flags": {
+        "vegan": true,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": true,
+        "nut_free": true,
+        "raw": true,
+        "kid_friendly": false
+      },
+      "search_tokens": [
+        "10 min",
+        "20 min",
+        "5 min",
+        "ail",
+        "and",
+        "cardamom",
+        "cardamome",
+        "chili",
+        "citron",
+        "coeliaque",
+        "coriander",
+        "coriandre",
+        "cru",
+        "crudivorisme",
+        "cumin",
+        "debutant",
+        "easy",
+        "express",
+        "facile",
+        "fort",
+        "garlic",
+        "gluten free",
+        "green",
+        "hot",
+        "lemon",
+        "olive",
+        "parsley",
+        "pepper",
+        "persil",
+        "piment",
+        "quick",
+        "rapide",
+        "raw",
+        "red",
+        "rouge",
+        "salt",
+        "sans gluten",
+        "sans produit animal",
+        "sans viande",
+        "sauce",
+        "sel",
+        "simple",
+        "table",
+        "vegan",
+        "vegetalien",
+        "vegetarien",
+        "vert",
+        "vivant",
+        "yemeni",
+        "yemenite",
+        "zhug",
+        "zhug,"
+      ]
+    },
+    {
+      "id": "beverage_sahlab_8c04f2",
+      "titles": {
+        "fr": "Sahlab, boisson chaude au lait et à l'eau de rose",
+        "en": "Sahlab, Hot Milk Drink with Rose Water",
+        "original": "Sahlab"
+      },
+      "origin": {
+        "cuisine": "levantine",
+        "country": "lebanon",
+        "region": "beyrouth",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 5,
+        "prep_passive_min": 0,
+        "cook_min": 10,
+        "total_min": 15
+      },
+      "composition": [
+        {
+          "ingredient": "milk_liquid_pasteurized_3_5pct",
+          "quantity": 800,
+          "unit": "ml",
+          "meta": {
+            "role": "dairy",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cornstarch_flour",
+          "quantity": 40,
+          "unit": "g",
+          "meta": {
+            "role": "thickener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sugars_granulated",
+          "quantity": 50,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "rose_water",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "aroma",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "pistachio_nuts_raw",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "garnish",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegetarian",
+          "gluten_free"
+        ],
+        "meal": [
+          "beverage"
+        ],
+        "season": [],
+        "allergens": [
+          "lactose",
+          "milk",
+          "tree_nuts"
+        ],
+        "technique": [
+          "simmer"
+        ],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "onctueux"
+        ],
+        "taste": [
+          "sucré",
+          "floral"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "beverage",
+      "difficulty_level": "easy",
+      "description": "Boisson d'hiver du Levant, à mi-chemin entre le lait chaud et la crème : lait lié à la fécule, sucré et parfumé à l'eau de rose, servi en tasse avec cannelle et pistaches.",
+      "instructions": [
+        "Étape 1 : Délayer 40 g de fécule de maïs dans 100 ml de lait froid prélevé sur les 800 ml.",
+        "Étape 2 : Chauffer le reste du lait avec 50 g de sucre à feu moyen, sans bouillir.",
+        "Étape 3 : Verser la fécule en fouettant et cuire 4 minutes : la boisson doit épaissir sans devenir une crème ferme.",
+        "Étape 4 : Hors du feu, parfumer avec 10 ml d'eau de rose.",
+        "Étape 5 : Verser en tasses, saupoudrer de 2 g de cannelle et de 20 g de pistaches concassées, servir très chaud."
+      ],
+      "diet_flags": {
+        "vegan": false,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": false,
+        "nut_free": false,
+        "raw": false,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "10 min",
+        "20 min",
+        "5 min",
+        "boisson",
+        "chaude",
+        "cinnamon",
+        "coeliaque",
+        "cornstarch",
+        "debutant",
+        "drink",
+        "easy",
+        "eau",
+        "enfants",
+        "express",
+        "facile",
+        "facile enfants",
+        "famille",
+        "fecule",
+        "gluten free",
+        "hot",
+        "kids",
+        "l'eau",
+        "lait",
+        "levantine",
+        "mais",
+        "milk",
+        "nuts",
+        "pistache",
+        "pistachio",
+        "quick",
+        "rapide",
+        "rose",
+        "sahlab",
+        "sahlab,",
+        "sans gluten",
+        "sans viande",
+        "simmer",
+        "simple",
+        "sucre",
+        "sugars",
+        "vegetarien",
+        "water",
+        "with"
+      ]
+    },
+    {
+      "id": "beverage_limonana_5b2e08",
+      "titles": {
+        "fr": "Limonana, limonade glacée à la menthe",
+        "en": "Limonana, Frozen Mint Lemonade",
+        "original": "Limonana"
+      },
+      "origin": {
+        "cuisine": "levantine",
+        "country": "israel",
+        "region": "tel_aviv",
+        "city": ""
+      },
+      "servings": 4,
+      "servings_default": 4,
+      "timing": {
+        "prep_active_min": 10,
+        "prep_passive_min": 60,
+        "cook_min": 0,
+        "total_min": 70
+      },
+      "composition": [
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 150,
+          "unit": "ml",
+          "meta": {
+            "role": "acidity",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "mint_fresh_herb",
+          "quantity": 20,
+          "unit": "g",
+          "meta": {
+            "role": "herb",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sugars_granulated",
+          "quantity": 70,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "water",
+          "quantity": 800,
+          "unit": "ml",
+          "meta": {
+            "role": "liquid",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        }
+      ],
+      "tags": {
+        "diet": [
+          "vegan",
+          "vegetarian",
+          "gluten_free",
+          "lactose_free",
+          "nut_free"
+        ],
+        "meal": [
+          "beverage"
+        ],
+        "season": [],
+        "allergens": [],
+        "technique": [],
+        "process": []
+      },
+      "result": {
+        "texture": [
+          "granité",
+          "mousseux"
+        ],
+        "taste": [
+          "acide",
+          "herbacé"
+        ],
+        "visual": []
+      },
+      "scoring": {
+        "confidence": 0.9,
+        "spice_level": 0
+      },
+      "dish_type": "beverage",
+      "difficulty_level": "easy",
+      "description": "Limonade du Levant mixée avec de la glace et une grosse poignée de menthe jusqu'à obtenir un granité vert pâle et mousseux, ni sirupeux ni trop acide.",
+      "instructions": [
+        "Étape 1 : Dissoudre 70 g de sucre dans 100 ml d'eau chaude, puis laisser refroidir ce sirop.",
+        "Étape 2 : Congeler 400 ml d'eau en glaçons, au moins une heure.",
+        "Étape 3 : Mixer les glaçons avec 150 ml de jus de citron, le sirop, 20 g de menthe et 300 ml d'eau froide, 30 secondes à pleine puissance.",
+        "Étape 4 : Goûter et rectifier l'équilibre sucre-citron selon la maturité des citrons.",
+        "Étape 5 : Servir aussitôt dans des verres glacés, avec quelques feuilles de menthe entières."
+      ],
+      "diet_flags": {
+        "vegan": true,
+        "vegetarian": true,
+        "gluten_free": true,
+        "lactose_free": true,
+        "nut_free": true,
+        "raw": true,
+        "kid_friendly": true
+      },
+      "search_tokens": [
+        "(eau",
+        "citron",
+        "coeliaque",
+        "cru",
+        "crudivorisme",
+        "debutant",
+        "easy",
+        "eau",
+        "enfants",
+        "facile",
+        "facile enfants",
+        "famille",
+        "frozen",
+        "glacee",
+        "gluten free",
+        "kids",
+        "lemon",
+        "lemonade",
+        "lent",
+        "levantine",
+        "limonade",
+        "limonana",
+        "limonana,",
+        "long",
+        "menthe",
+        "mijote",
+        "mint",
+        "potable)",
+        "raw",
+        "sans gluten",
+        "sans produit animal",
+        "sans viande",
+        "simple",
+        "sucre",
+        "sugars",
+        "vegan",
+        "vegetalien",
+        "vegetarien",
+        "vivant",
+        "water"
       ]
     }
   ],

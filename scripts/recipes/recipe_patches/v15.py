@@ -323,9 +323,9 @@ VARIANTS = {
         ("time", 15, 0, 40),
     ],
     "dal_soupe_lentilles_turque_e797cb": [
-        ("title", "Shorbat adas, soupe libanaise de lentilles corail au citron"),
-        ("desc", "Soupe de lentilles corail du Levant, mixée et veloutée, parfumée au cumin, servie avec beaucoup "
-                 "de citron et des oignons dorés."),
+        ("title", "Soupe de lentilles corail à l'oignon frit et au citron"),
+        ("desc", "Velouté de lentilles corail du Levant, parfumé au cumin, servi couvert d'oignons émincés "
+                 "frits jusqu'au brun et arrosé de beaucoup de jus de citron."),
         ("origin", {"cuisine": "lebanese", "country": "lebanon", "region": "beyrouth", "city": "beyrouth"}),
         ("dish", "soup"),
         ("compo", [
