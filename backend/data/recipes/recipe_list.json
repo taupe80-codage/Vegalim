@@ -1,5 +1,59 @@
 [
   {
+    "id": "beverage_aam_panna_63b7d4",
+    "title": "Aam panna, boisson indienne à la mangue verte",
+    "cuisine": "indian",
+    "dish_type": "beverage",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 0.9,
+    "description": "Boisson d'été indienne contre la chaleur : de la mangue verte cuite puis écrasée, sucrée et relevée de cumin grillé et de menthe, allongée d'eau glacée.",
+    "composition": [
+      {
+        "ingredient": "mango_raw",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sugars_granulated",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 900,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "snack_accras_legumes_7e2b58",
     "title": "Accras de légumes antillais",
     "cuisine": "caribbean",
@@ -585,6 +639,50 @@
     "similar": []
   },
   {
+    "id": "beverage_agua_tamarindo_3e8b90",
+    "title": "Agua de tamarindo, eau fraîche mexicaine au tamarin",
+    "cuisine": "mexican",
+    "dish_type": "beverage",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 20,
+    "confidence": 0.9,
+    "description": "Une des aguas frescas les plus vendues au Mexique : pâte de tamarin délayée dans l'eau chaude, filtrée, sucrée et servie sur glace avec un trait de citron vert.",
+    "composition": [
+      {
+        "ingredient": "tamarind_paste",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sugars_granulated",
+        "quantity": 70,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime_raw_juice_fresh",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1200,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "beverage_agua_fresca_pasteque_5b72c9",
     "title": "Agua fresca de pastèque et citron vert",
     "cuisine": "mexican",
@@ -1106,6 +1204,80 @@
         "ingredient": "garlic_raw",
         "quantity": 10,
         "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "snack_aloo_chaat_94e6c1",
+    "title": "Aloo chaat, pommes de terre épicées au tamarin",
+    "cuisine": "indian",
+    "dish_type": "snack",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 30,
+    "confidence": 0.9,
+    "description": "Snack de rue de Delhi : des dés de pomme de terre frits jusqu'à croustiller, assaisonnés de cumin grillé, de piment et de tamarin, avec beaucoup de coriandre et de citron vert.",
+    "composition": [
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 700,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tamarind_paste",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_hot_chili_pepper_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lime_raw_juice_fresh",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 800,
+        "unit": "ml"
       }
     ],
     "n_instructions": 6,
@@ -1938,6 +2110,61 @@
     "similar": []
   },
   {
+    "id": "beverage_atole_vanille_5c93b1",
+    "title": "Atole de vanille, boisson mexicaine au maïs",
+    "cuisine": "mexican",
+    "dish_type": "beverage",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 20,
+    "confidence": 0.9,
+    "description": "Boisson chaude épaissie à la farine de maïs, sucrée et parfumée à la vanille et à la cannelle : on la boit au petit-déjeuner ou le soir, à la cuillère presque.",
+    "composition": [
+      {
+        "ingredient": "corn_flour_seed",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "milk_liquid_pasteurized_3_5pct",
+        "quantity": 600,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sugars_granulated",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vanilla_extract",
+        "quantity": 5,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "cinnamon",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 400,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "side_attieke_legumes_2b77f5",
     "title": "Attiéké aux légumes et à l'avocat",
     "cuisine": "west_african",
@@ -2344,6 +2571,51 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "beverage_ayran_8d20f6",
+    "title": "Ayran, boisson turque au yaourt salé",
+    "cuisine": "turkish",
+    "dish_type": "beverage",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 5,
+    "confidence": 0.9,
+    "description": "Yaourt battu avec de l'eau glacée et une pointe de sel, fouetté jusqu'à mousser : la boisson qui accompagne les grillades et les plats relevés en Turquie.",
+    "composition": [
+      {
+        "ingredient": "yogurt_fermented_plain",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 400,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 5,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -3661,6 +3933,56 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "beverage_barley_water_citron_07f5c2",
+    "title": "Barley water au citron, orgeat britannique",
+    "cuisine": "british",
+    "dish_type": "beverage",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 100,
+    "confidence": 0.9,
+    "description": "Boisson anglaise des courts de tennis : de l'orge perlé bouilli longuement, son eau filtrée puis parfumée de zeste et de jus de citron, sucrée et servie glacée.",
+    "composition": [
+      {
+        "ingredient": "barley_raw_whole_seed",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 80,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_peel_raw",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sugars_granulated",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1200,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -8184,6 +8506,55 @@
     "similar": []
   },
   {
+    "id": "beverage_cafe_de_olla_1a7c05",
+    "title": "Café de olla, café mexicain à la cannelle",
+    "cuisine": "mexican",
+    "dish_type": "beverage",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 17,
+    "confidence": 0.9,
+    "description": "Café préparé à la mexicaine dans une jarre de terre : l'eau est d'abord sucrée au sucre roux avec cannelle et clou de girofle, puis le café moulu infuse hors du feu.",
+    "composition": [
+      {
+        "ingredient": "coffee_ground",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "brown_sugar",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cinnamon",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cloves",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 1000,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "snack_cake_olives_et_herbes_d13d34",
     "title": "Cake Olives et Herbes",
     "cuisine": "french_provencal",
@@ -10529,6 +10900,72 @@
       }
     ],
     "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "snack_chin_chin_7b52e0",
+    "title": "Chin chin, biscuits frits nigérians à la muscade",
+    "cuisine": "nigerian",
+    "dish_type": "snack",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 8,
+    "time_total": 70,
+    "confidence": 0.9,
+    "description": "Petits dés de pâte sucrée à la muscade, frits jusqu'à devenir durs et croquants : ils se grignotent par poignées et se conservent des semaines en boîte.",
+    "composition": [
+      {
+        "ingredient": "wheat_flour_t55",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sugars_granulated",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "milk_liquid_pasteurized_3_5pct",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "nutmeg",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 80,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -14997,6 +15434,46 @@
       }
     ],
     "n_instructions": 8,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "beverage_ca_phe_sua_da_92e714",
+    "title": "Cà phê sữa đá, café glacé vietnamien au lait concentré",
+    "cuisine": "vietnamese",
+    "dish_type": "beverage",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 15,
+    "confidence": 0.9,
+    "description": "Café vietnamien filtré goutte à goutte sur un fond de lait concentré sucré, remué puis versé sur de la glace : très serré, très sucré, très froid.",
+    "composition": [
+      {
+        "ingredient": "coffee_ground",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "ingredient": "condensed_milk_concentrated_sweetened_canned_whole",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 500,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -24017,6 +24494,56 @@
     "similar": []
   },
   {
+    "id": "entry_halloumi_grille_2d6c85",
+    "title": "Halloumi grillé au citron et à la menthe",
+    "cuisine": "cypriot",
+    "dish_type": "starter",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 13,
+    "confidence": 0.9,
+    "description": "Tranches de halloumi saisies à sec sur une poêle brûlante jusqu'à ce qu'elles dorent et grincent sous la dent, arrosées de jus de citron et parsemées de menthe.",
+    "composition": [
+      {
+        "ingredient": "base_halloumi_293d5e",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "dessert_halva_de_sesame_87a706",
     "title": "Halva de Sésame",
     "cuisine": "levantine",
@@ -25638,6 +26165,72 @@
       }
     ],
     "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "entry_houmous_betterave_51b3e7",
+    "title": "Houmous de betterave au cumin",
+    "cuisine": "levantine",
+    "dish_type": "starter",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "sesame"
+    ],
+    "servings": 4,
+    "time_total": 15,
+    "confidence": 0.9,
+    "description": "Houmous rose vif : betterave cuite mixée avec les pois chiches et le tahini, relevée de cumin grillé et de citron, plus douce et plus sucrée que le houmous classique.",
+    "composition": [
+      {
+        "ingredient": "beetroot_cooked_root",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "chickpea_rinsed_canned",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sesame_tahini_raw_butter_seed_plant",
+        "quantity": 50,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cumin_spice_seed",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -32988,6 +33581,71 @@
       {
         "ingredient": "water",
         "quantity": 100,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "snack_mandazi_b4f108",
+    "title": "Mandazi, beignets kényans au lait de coco",
+    "cuisine": "kenyan",
+    "dish_type": "snack",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten"
+    ],
+    "servings": 6,
+    "time_total": 65,
+    "confidence": 0.9,
+    "description": "Beignets triangulaires de la côte swahilie, parfumés à la cardamome et au lait de coco : ils gonflent en friture et se mangent tièdes au petit-déjeuner ou avec le thé.",
+    "composition": [
+      {
+        "ingredient": "wheat_flour_t55",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coconut_milk_plant",
+        "quantity": 150,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sugars_granulated",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "baking_powder",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cardamom_powder",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 70,
         "unit": "ml"
       }
     ],
@@ -43014,6 +43672,66 @@
     "similar": []
   },
   {
+    "id": "snack_pisang_goreng_9f4d21",
+    "title": "Pisang goreng, beignets de banane indonésiens",
+    "cuisine": "indonesian",
+    "dish_type": "snack",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 30,
+    "confidence": 0.9,
+    "description": "Bananes enrobées d'une pâte à la farine de riz qui devient très croustillante à la friture, vendues à tous les coins de rue en Indonésie et mangées brûlantes.",
+    "composition": [
+      {
+        "ingredient": "banana_raw",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "wheat_flour_t55",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "rice_flour",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sugars_granulated",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 120,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 80,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "main_pisto_espagnol_7a98be",
     "title": "Pisto Espagnol",
     "cuisine": "spanish",
@@ -47733,6 +48451,62 @@
     "similar": []
   },
   {
+    "id": "snack_pao_de_queijo_0c73f5",
+    "title": "Pão de queijo, petits pains brésiliens au fromage",
+    "cuisine": "brazilian",
+    "dish_type": "snack",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "lactose",
+      "milk"
+    ],
+    "servings": 6,
+    "time_total": 45,
+    "confidence": 0.9,
+    "description": "Petits pains sans gluten à l'amidon de manioc, élastiques à l'intérieur et croustillants dehors, chargés de fromage râpé : le goûter emblématique du Minas Gerais.",
+    "composition": [
+      {
+        "ingredient": "tapioca_raw_dried",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "milk_liquid_pasteurized_3_5pct",
+        "quantity": 120,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 60,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "egg_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "bread_quenelles_de_pain_813118",
     "title": "Quenelles de Pain",
     "cuisine": "german",
@@ -51904,6 +52678,76 @@
     "similar": []
   },
   {
+    "id": "entry_roules_courgette_ricotta_c8a460",
+    "title": "Roulés de courgette grillée à la ricotta",
+    "cuisine": "italian",
+    "dish_type": "starter",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk",
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 25,
+    "confidence": 0.9,
+    "description": "Lamelles de courgette grillées puis roulées autour d'une ricotta citronnée au parmesan, parsemées de pignons : un antipasto qui se mange tiède ou froid.",
+    "composition": [
+      {
+        "ingredient": "green_zucchini_squash_raw",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ricotta_whole_cow",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "pine_nuts_raw",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_peel_raw",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "base_japanese_curry_roux_385e52",
     "title": "Roux Curry Japonais",
     "cuisine": "japanese",
@@ -53921,7 +54765,99 @@
     ],
     "n_instructions": 7,
     "flags": [],
-    "similar": []
+    "similar": [
+      {
+        "id": "salad_pois_chiches_express_b39e57",
+        "title": "Salade de pois chiches express au citron et à la feta",
+        "score": 0.6
+      }
+    ]
+  },
+  {
+    "id": "salad_pois_chiches_express_b39e57",
+    "title": "Salade de pois chiches express au citron et à la feta",
+    "cuisine": "greek",
+    "dish_type": "starter",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 12,
+    "confidence": 0.9,
+    "description": "Salade assemblée en douze minutes sans cuisson : pois chiches en conserve, concombre et tomate en dés, feta émiettée et beaucoup de citron, d'huile d'olive et d'herbes.",
+    "composition": [
+      {
+        "ingredient": "chickpea_rinsed_canned",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cucumber_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "feta_cow",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "mint_fresh_herb",
+        "quantity": 8,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": [
+      {
+        "id": "dal_salade_de_pois_chiches_2e32de",
+        "title": "Salade de Pois Chiches",
+        "score": 0.6
+      }
+    ]
   },
   {
     "id": "salad_de_poivrons_et_tomates_d5f4ec",
@@ -64834,6 +65770,76 @@
     "similar": []
   },
   {
+    "id": "beverage_thandai_4f6e29",
+    "title": "Thandai, lait indien aux amandes et aux épices",
+    "cuisine": "indian",
+    "dish_type": "beverage",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk",
+      "tree_nuts"
+    ],
+    "servings": 4,
+    "time_total": 145,
+    "confidence": 0.9,
+    "description": "Boisson de la fête de Holi : amandes, pavot et cardamome trempés puis broyés en pâte, délayés dans du lait safrané et servis glacés avec des pistaches.",
+    "composition": [
+      {
+        "ingredient": "milk_liquid_pasteurized_3_5pct",
+        "quantity": 700,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "almond_raw_skinless_unsalted",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "ingredient": "poppy_spice_seed",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cardamom_powder",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "saffron",
+        "quantity": 0.2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sugars_granulated",
+        "quantity": 70,
+        "unit": "g"
+      },
+      {
+        "ingredient": "pistachio_nuts_raw",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 200,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "bread_thepla_epinards_9a28c5",
     "title": "Thepla aux épinards et au fenugrec",
     "cuisine": "indian",
@@ -65262,6 +66268,71 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "snack_toast_haricots_romarin_5f80d2",
+    "title": "Toasts de haricots blancs écrasés au romarin",
+    "cuisine": "italian",
+    "dish_type": "snack",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 4,
+    "time_total": 12,
+    "confidence": 0.9,
+    "description": "Version toscane du toast express : haricots blancs écrasés à la fourchette avec de l'ail et du romarin frit dans l'huile d'olive, étalés sur du pain grillé.",
+    "composition": [
+      {
+        "ingredient": "white_bean_canned",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_bread_roasted",
+        "quantity": 160,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_extra_virgin_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "rosemary_fresh_herb",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -65729,6 +66800,89 @@
     "similar": []
   },
   {
+    "id": "main_tofu_gingembre_express_4e91c6",
+    "title": "Tofu sauté au gingembre et à la sauce soja",
+    "cuisine": "chinese",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "sesame",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 18,
+    "confidence": 0.9,
+    "description": "Plat de semaine en dix minutes : cubes de tofu enrobés de fécule et saisis jusqu'à croustiller, glacés d'une sauce soja au gingembre et à l'oignon vert, servis sur du riz.",
+    "composition": [
+      {
+        "ingredient": "tofu_plain_pre_packaged",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cornstarch_flour",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_tamari",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sesame_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sugars_granulated",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_rice_long_grain_seed_dried",
+        "quantity": 200,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 6,
+    "flags": [],
+    "similar": [
+      {
+        "id": "wok_tofu_saute_gingembre_soja_6e901c",
+        "title": "Tofu Sauté Gingembre Soja",
+        "score": 0.8
+      }
+    ]
+  },
+  {
     "id": "wok_tofu_saute_aux_legumes_1f3ac2",
     "title": "Tofu sauté aux légumes",
     "cuisine": "international",
@@ -65896,7 +67050,13 @@
     ],
     "n_instructions": 6,
     "flags": [],
-    "similar": []
+    "similar": [
+      {
+        "id": "main_tofu_gingembre_express_4e91c6",
+        "title": "Tofu sauté au gingembre et à la sauce soja",
+        "score": 0.8
+      }
+    ]
   },
   {
     "id": "protein_tofu_teriyaki_ffcb47",
@@ -68927,6 +70087,82 @@
     "similar": []
   },
   {
+    "id": "wrap_falafel_tahini_6a2d73",
+    "title": "Wrap de falafels à la sauce tahini",
+    "cuisine": "levantine",
+    "dish_type": "main",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "lactose",
+      "milk",
+      "sesame"
+    ],
+    "servings": 4,
+    "time_total": 15,
+    "confidence": 0.9,
+    "description": "Assemblage express à partir de falafels déjà prêts : pain pita chaud, crudités croquantes, sauce au tahini citronnée et yaourt, roulés serré dans du papier.",
+    "composition": [
+      {
+        "ingredient": "falafel",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_pita_bread",
+        "quantity": 240,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sesame_tahini_raw_butter_seed_plant",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "yogurt_fermented_plain",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cucumber_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "red_cabbage_raw",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "wrap_veg_k3d2p1",
     "title": "Wrap végétarien",
     "cuisine": "international",
@@ -68989,6 +70225,93 @@
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
+      }
+    ],
+    "n_instructions": 5,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "noodle_yaki_udon_legumes_38c0b4",
+    "title": "Yaki udon aux légumes et au tofu fumé",
+    "cuisine": "japanese",
+    "dish_type": "main",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "sesame",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 20,
+    "confidence": 0.9,
+    "description": "Nouilles udon épaisses saisies au wok avec chou, carotte et champignons, laquées de sauce soja et d'huile de sésame : dix minutes de cuisson, servi avec beaucoup d'oignon vert.",
+    "composition": [
+      {
+        "ingredient": "udon",
+        "quantity": 600,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tofu_smoked_pre_packaged",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cabbage_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "button_mushroom_raw",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_onion_raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soy_sauce_tamari",
+        "quantity": 45,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sesame_oil_plant",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 25,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 2,
+        "unit": "g"
       }
     ],
     "n_instructions": 5,
@@ -69963,6 +71286,67 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "brkf_oeufs_brouilles_ciboulette_d05a18",
+    "title": "Œufs brouillés crémeux à la ciboulette",
+    "cuisine": "french",
+    "dish_type": "breakfast",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "nut_free"
+    ],
+    "allergens": [
+      "eggs",
+      "gluten",
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 13,
+    "confidence": 0.9,
+    "description": "Œufs brouillés cuits très doucement, presque comme une crème, montés au beurre et à la crème hors du feu et servis sur du pain grillé chaud.",
+    "composition": [
+      {
+        "ingredient": "egg_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "butter_sup80pct",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cream_heavy_refrigerated_30pct",
+        "quantity": 40,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "chives_raw_fresh",
+        "quantity": 12,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_bread_roasted",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
