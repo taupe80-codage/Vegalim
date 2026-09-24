@@ -211,4 +211,6 @@ TITLES_EN = {
     "dal_shorbat_adas_d4f98a": "Iraqi Shorbat Adas, Red Lentil Soup with Turmeric",
     "dal_soupe_lentilles_turque_e797cb": "Red Lentil Soup with Fried Onion and Lemon",
     "dal_hummus_traditionnel_7f6ccc": "Quick Hummus with Canned Chickpeas",
+    "main_callaloo_f7ae5c": "Callaloo, Caribbean Greens Stew with Coconut Milk",
+    "dal_tajine_pois_chiches_citron_047521": "Chickpea Tagine with Preserved Lemon and Olives",
 }
