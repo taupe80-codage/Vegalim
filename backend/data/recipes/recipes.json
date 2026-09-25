@@ -189,7 +189,7 @@
         {
           "ingredient": "nutmeg_spice",
           "quantity": 1,
-          "unit": "pinch",
+          "unit": "g",
           "meta": {
             "role": "spice"
           }
@@ -1048,7 +1048,8 @@
       "id": "base_creme_fraiche_b536c1",
       "titles": {
         "fr": "Crème Fraîche",
-        "en": "Crème Fraîche"
+        "en": "Crème Fraîche, Cultured Cream",
+        "original": "Crème Fraîche, Cultured Cream"
       },
       "origin": {
         "cuisine": "french",
@@ -1102,14 +1103,14 @@
       "servings_default": 17,
       "description": "Crème fraîche épaisse et onctueuse, fermentée à partir de crème entière, avec une texture veloutée et une légère acidité, parfaite pour les sauces et les desserts de la cuisine française",
       "instructions": [
-        "Verser 500ml de crème entière dans un récipient propre et couvrir d'un linge ou d'un film perforé pour laisser respirer.",
-        "Laisser fermenter à température ambiante (20-24°C) pendant 12 à 24 heures, en fonction de la température de votre environnement.",
-        "Vérifier que la crème a atteint une consistance épaisse et une acidité légère: elle doit napper une cuillère sans couler.",
-        "Si la crème fraîche n'est pas suffisamment épaisse, laisser fermenter quelques heures supplémentaires en vérifiant régulièrement.",
-        "Une fois la fermentation terminée, réfrigérer la crème fraîche pendant au moins 4 heures pour stopper la fermentation et affiner sa texture.",
-        "Avant de servir, vérifier que la crème fraîche a une texture onctueuse et une odeur fraîche et légèrement acidulée.",
-        "Utiliser dans vos sauces, vos desserts ou comme ingrédient dans vos recettes préférées.",
-        "Se conserve au réfrigérateur plusieurs jours dans un récipient hermétique."
+        "Étape 1 : Verser 500ml de crème entière dans un récipient propre et couvrir d'un linge ou d'un film perforé pour laisser respirer.",
+        "Étape 2 : Laisser fermenter à température ambiante (20-24°C) pendant 12 à 24 heures, en fonction de la température de votre environnement.",
+        "Étape 3 : Vérifier que la crème a atteint une consistance épaisse et une acidité légère: elle doit napper une cuillère sans couler.",
+        "Étape 4 : Si la crème fraîche n'est pas suffisamment épaisse, laisser fermenter quelques heures supplémentaires en vérifiant régulièrement.",
+        "Étape 5 : Une fois la fermentation terminée, réfrigérer la crème fraîche pendant au moins 4 heures pour stopper la fermentation et affiner sa texture.",
+        "Étape 6 : Avant de servir, vérifier que la crème fraîche a une texture onctueuse et une odeur fraîche et légèrement acidulée.",
+        "Étape 7 : Utiliser dans vos sauces, vos desserts ou comme ingrédient dans vos recettes préférées.",
+        "Étape 8 : Se conserve au réfrigérateur plusieurs jours dans un récipient hermétique."
       ],
       "diet_flags": {
         "vegan": false,
@@ -1124,13 +1125,16 @@
       "search_tokens": [
         "classique",
         "coeliaque",
+        "cream",
         "cream,",
         "creme",
+        "cultured",
         "debutant",
         "easy",
         "epaisse",
         "facile",
         "fraiche",
+        "fraiche,",
         "francais",
         "france",
         "french",
@@ -1739,9 +1743,9 @@
       "servings_default": 42,
       "description": "Beurre clarifié par chauffe lente, eau et solides du lait retirés, résultant en une matière grasse pure à 99,5%, sans lactose ni caséine, d'une texture onctueuse et d'une odeur riche — préparation traditionnelle indienne.",
       "instructions": [
-        "Fondre 500g de beurre à feu très doux pendant 15-20 minutes, en surveillant la température pour éviter la coloration excessive.",
-        "Écumer régulièrement l'écume blanche qui se forme à la surface, jusqu'à ce que le beurre devienne limpide et que les particules solides tombent au fond de la casserole.",
-        "Filtrer le ghee à travers une étamine fine pour éliminer les particules solides restantes, puis conserver le ghee clarifié dans un bocal hermétique."
+        "Étape 1 : Fondre 500g de beurre à feu très doux pendant 15-20 minutes, en surveillant la température pour éviter la coloration excessive.",
+        "Étape 2 : Écumer régulièrement l'écume blanche qui se forme à la surface, jusqu'à ce que le beurre devienne limpide et que les particules solides tombent au fond de la casserole.",
+        "Étape 3 : Filtrer le ghee à travers une étamine fine pour éliminer les particules solides restantes, puis conserver le ghee clarifié dans un bocal hermétique."
       ],
       "diet_flags": {
         "vegan": false,
@@ -9147,9 +9151,9 @@
     {
       "id": "bread_acorda_a_lail_et_coriandr_048494",
       "titles": {
-        "original": "Açorda à L'ail et Coriandre",
+        "original": "Açorda, Portuguese Garlic and Coriander Bread Soup",
         "fr": "Açorda à L'ail et Coriandre",
-        "en": "Açorda à L'ail et Coriandre"
+        "en": "Açorda, Portuguese Garlic and Coriander Bread Soup"
       },
       "origin": {
         "cuisine": "portuguese",
@@ -9311,7 +9315,9 @@
         "(eau",
         "45 minutes",
         "acorda",
+        "acorda,",
         "ail",
+        "and",
         "blanc",
         "bouillon",
         "braising",
@@ -9340,6 +9346,8 @@
         "salt",
         "sans viande",
         "sel",
+        "soup",
+        "soupe",
         "stock",
         "table",
         "vegetable",
@@ -9354,7 +9362,7 @@
       "servings_default": 4,
       "_quality_score": 0.88,
       "_chef_note": "Cette açorda à l'ail et coriandre est une spécialité portugaise qui combine les saveurs de la cuisine traditionnelle avec une texture crémeuse.",
-      "description": "plat portugais créatif, où le pain rassis se marie avec l'ail caramélisé, la coriandre fraîche et un bouillon de légumes parfumé, créant une texture crémeuse et des saveurs intenses.",
+      "description": "Plat portugais créatif, où le pain rassis se marie avec l'ail caramélisé, la coriandre fraîche et un bouillon de légumes parfumé, créant une texture crémeuse et des saveurs intenses.",
       "instructions": [
         "Étape 1: Faire chauffer l'huile d'olive dans une poêle à feu moyen, puis ajouter l'ail émincé et laisser cuire pendant 2 minutes, en remuant régulièrement, jusqu'à ce qu'il soit légèrement caramélisé et parfumé.",
         "Étape 2: Ajouter le bouillon de légumes chaud et porter à ébullition pendant 5 minutes à feu vif, en laissant les saveurs se mélanger et les arômes se dégager.",
@@ -11939,7 +11947,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 2,
         "iconic": {
           "status": false,
           "score": 5.5,
@@ -14212,7 +14220,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -14276,14 +14283,10 @@
         "debutant",
         "dill",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "frais",
         "fromage",
-        "kids",
         "leger",
         "lemon",
         "light",
@@ -14454,7 +14457,6 @@
           "diabetes_friendly",
           "gluten_free",
           "high_protein",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -14514,17 +14516,13 @@
         "d'agave",
         "debutant",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "fer",
         "fruits",
         "gluten free",
         "international",
         "iron",
-        "kids",
         "kiwi",
         "mango",
         "matin",
@@ -14686,7 +14684,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -14759,9 +14756,6 @@
         "d'oranger",
         "eau",
         "egg",
-        "enfants",
-        "facile enfants",
-        "famille",
         "farine",
         "fermentation",
         "fleur",
@@ -14770,7 +14764,6 @@
         "france",
         "french_vendeen",
         "intermediaire",
-        "kids",
         "lait",
         "leger",
         "lent",
@@ -15352,7 +15345,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -15414,16 +15406,12 @@
         "debutant",
         "easy",
         "egg",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "francais",
         "france",
         "french",
-        "kids",
         "lait",
         "leger",
         "lent",
@@ -15615,7 +15603,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -15678,16 +15665,12 @@
         "coco",
         "coconut",
         "eau",
-        "enfants",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "galette",
         "garlic",
         "intermediaire",
-        "kids",
         "l'ail",
         "leger",
         "lent",
@@ -16362,7 +16345,6 @@
       "tags": {
         "diet": [
           "high_protein",
-          "kid_friendly",
           "lactose_free",
           "vegan",
           "vegetarian"
@@ -16423,14 +16405,10 @@
         "d'erable",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "granola",
         "homemade",
         "international",
-        "kids",
         "leger",
         "light",
         "low calorie",
@@ -16469,7 +16447,7 @@
       "description": "Découvrez un petit-déjeuner international croustillant, aux saveurs de cannelle et de noix, avec une texture légèrement humide et une odeur croustillante.",
       "instructions": [
         "Étape 1 : Préchauffer le four à 160°C chaleur tournante. Dans un grand saladier, mélanger 300 g de flocons d'avoine, 40 g de graines de courge, 40 g de graines de tournesol, 60 g de noix de Grenoble, 2,3 g de cannelle et 2 g de sel.",
-        "Étape 2 : Dans une petite casserole, faire fondre 60 ml d'huile de coco avec 80 ml de sirop d'érable jusqu'à obtenir un mélange homogène et parfumé. Verser ce mélange sur les flocons et remuer pour bien enrober chaque grain.",
+        "Étape 2 : Dans une petite casserole, faire fondre 60 ml d'huile de coco avec 80 ml de sirop d'érable et 3 g d'extrait de vanille jusqu'à obtenir un mélange homogène et parfumé. Verser ce mélange sur les flocons et remuer pour bien enrober chaque grain.",
         "Étape 3 : Étaler uniformément le mélange sur une plaque en une couche fine, en veillant à ne pas trop remuer en cours de cuisson pour obtenir des plaques croustillantes.",
         "Étape 4 : Enfourner pendant 25 à 30 minutes en remuant délicatement toutes les 10 minutes. Le granola est prêt lorsqu'il est brun doré uniforme et émet une odeur croustillante - il durcit en refroidissant.",
         "Étape 5 : Laisser refroidir complètement sur la plaque. Ajouter les fruits secs, tels que les cranberries et les abricots.",
@@ -16631,7 +16609,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free",
           "vegetarian"
         ],
@@ -16687,14 +16664,10 @@
         "citron",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "grape",
         "green",
         "hazelnut",
-        "kids",
         "leger",
         "lemon",
         "lent",
@@ -16986,13 +16959,9 @@
         "chickpea",
         "coeliaque",
         "curcuma",
-        "enfants",
-        "facile enfants",
-        "famille",
         "garlic",
         "gluten free",
         "intermediaire",
-        "kids",
         "leger",
         "light",
         "low calorie",
@@ -17047,7 +17016,7 @@
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
-        "kid_friendly": true
+        "kid_friendly": false
       }
     },
     {
@@ -17176,7 +17145,6 @@
           "diabetes_friendly",
           "gluten_free",
           "high_protein",
-          "kid_friendly",
           "low_calorie",
           "nut_free"
         ],
@@ -17245,11 +17213,8 @@
         "debutant",
         "easy",
         "egg",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
@@ -17258,7 +17223,6 @@
         "herb",
         "herbes",
         "jardin",
-        "kids",
         "laitue",
         "leger",
         "lettuce",
@@ -17435,7 +17399,6 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "kid_friendly",
           "lactose_free",
           "low_calorie"
         ],
@@ -17493,12 +17456,8 @@
         "d'erable",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "international",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -17716,7 +17675,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free",
           "vegan",
           "vegetarian"
@@ -17785,11 +17743,7 @@
         "cocotier)",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
-        "kids",
         "leger",
         "lent",
         "lever",
@@ -17959,9 +17913,7 @@
         }
       ],
       "tags": {
-        "diet": [
-          "kid_friendly"
-        ],
+        "diet": [],
         "allergens": [
           "eggs",
           "gluten",
@@ -18019,14 +17971,10 @@
         "debutant",
         "easy",
         "egg",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
-        "kids",
         "lait",
         "leger",
         "light",
@@ -18222,7 +18170,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free",
           "nut_free",
           "vegan",
@@ -18289,13 +18236,9 @@
         "cocotier)",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "gateau",
         "huile",
-        "kids",
         "leger",
         "lever",
         "light",
@@ -18493,7 +18436,6 @@
       "tags": {
         "diet": [
           "high_protein",
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -18555,15 +18497,11 @@
         "butter",
         "citron",
         "egg",
-        "enfants",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "gateau",
         "intermediaire",
         "international",
-        "kids",
         "lait",
         "lemon",
         "lever",
@@ -18745,7 +18683,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "vegetarian"
@@ -18809,14 +18746,10 @@
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "fer",
         "international",
         "iron",
-        "kids",
         "maple",
         "muscade",
         "noix",
@@ -19333,7 +19266,6 @@
           "diabetes_friendly",
           "gluten_free",
           "high_protein",
-          "kid_friendly",
           "low_calorie",
           "nut_free"
         ],
@@ -19395,17 +19327,13 @@
         "debutant",
         "easy",
         "egg",
-        "enfants",
         "epinard",
         "facile",
-        "facile enfants",
-        "famille",
         "garlic",
         "gluten free",
         "green",
         "jaune",
         "jeunes",
-        "kids",
         "leger",
         "levantine",
         "light",
@@ -19590,7 +19518,6 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "vegetarian"
@@ -19661,12 +19588,8 @@
         "d'agave",
         "debutant",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
-        "kids",
         "latino",
         "leger",
         "light",
@@ -20060,7 +19983,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free",
           "vegetarian"
         ],
@@ -20120,10 +20042,7 @@
         "cream,",
         "creme",
         "eau",
-        "enfants",
         "epaisse",
-        "facile enfants",
-        "famille",
         "flambee",
         "flammekueche",
         "francais",
@@ -20132,7 +20051,6 @@
         "heavy",
         "huile",
         "intermediaire",
-        "kids",
         "leger",
         "light",
         "low calorie",
@@ -20530,9 +20448,7 @@
         }
       ],
       "tags": {
-        "diet": [
-          "kid_friendly"
-        ],
+        "diet": [],
         "allergens": [
           "lactose",
           "milk",
@@ -20587,16 +20503,12 @@
         "citron",
         "debutant",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "fig",
         "figue",
         "honey",
         "international",
-        "kids",
         "leger",
         "lemon",
         "light",
@@ -20798,7 +20710,6 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -20860,15 +20771,11 @@
         "courge",
         "debutant",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "graines",
         "haricot",
         "international",
-        "kids",
         "leger",
         "levain",
         "light",
@@ -21077,7 +20984,6 @@
           "diabetes_friendly",
           "gluten_free",
           "high_protein",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -21143,11 +21049,8 @@
         "curcuma",
         "debutant",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "fer",
         "garlic",
         "gluten free",
@@ -21155,7 +21058,6 @@
         "herby",
         "international",
         "iron",
-        "kids",
         "leger",
         "levure",
         "light",
@@ -41982,19 +41884,15 @@
         "coeliaque",
         "coriander",
         "eau",
-        "enfants",
         "epice",
         "epices",
         "ethiopian",
         "ethiopie",
         "ethiopien",
         "ethiopien)",
-        "facile enfants",
-        "famille",
         "garlic",
         "gluten free",
         "intermediaire",
-        "kids",
         "leger",
         "legumes",
         "levain",
@@ -42048,7 +41946,7 @@
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
-        "kid_friendly": true
+        "kid_friendly": false
       }
     },
     {
@@ -46054,9 +45952,7 @@
         }
       ],
       "tags": {
-        "diet": [
-          "kid_friendly"
-        ],
+        "diet": [],
         "allergens": [
           "gluten",
           "lactose",
@@ -46121,13 +46017,9 @@
         "complexe",
         "d'oranger",
         "eau",
-        "enfants",
-        "facile enfants",
-        "famille",
         "filo",
         "fleur",
         "honey",
-        "kids",
         "leger",
         "lent",
         "levantine",
@@ -46329,7 +46221,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free"
         ],
         "allergens": [
@@ -46404,15 +46295,11 @@
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "farine",
         "flaxseed",
         "flour",
         "international",
-        "kids",
         "leger",
         "lever",
         "light",
@@ -46592,7 +46479,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -46662,16 +46548,12 @@
         "d'œuf",
         "egg",
         "egg,",
-        "enfants",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "francais",
         "france",
         "french",
         "jaune",
-        "kids",
         "lait",
         "leger",
         "lent",
@@ -46836,7 +46718,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free",
           "vegetarian"
         ],
@@ -46913,17 +46794,13 @@
         "creme",
         "cuillere",
         "eau",
-        "enfants",
         "epaisse",
-        "facile enfants",
-        "famille",
         "fraises",
         "francais",
         "france",
         "french",
         "heavy",
         "intermediaire",
-        "kids",
         "ladyfinger",
         "leger",
         "lemon",
@@ -47106,7 +46983,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -47177,9 +47053,6 @@
         "complexe",
         "cream",
         "egg",
-        "enfants",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "frais",
@@ -47187,7 +47060,6 @@
         "fruits",
         "gateau",
         "international",
-        "kids",
         "leger",
         "lemon",
         "lent",
@@ -47573,7 +47445,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -47651,18 +47522,14 @@
         "debutant",
         "easy",
         "egg",
-        "enfants",
         "epaisse",
         "facile",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "francais",
         "france",
         "french_limousin",
         "heavy",
-        "kids",
         "kirsch",
         "lait",
         "leger",
@@ -48199,9 +48066,9 @@
     {
       "id": "dessert_creme_brulee_a19dfa",
       "titles": {
-        "original": "Creme Brulee",
+        "original": "Crème Brûlée, Burnt Sugar Custard",
         "fr": "Crème Brûlée",
-        "en": "Creme Brulee"
+        "en": "Crème Brûlée, Burnt Sugar Custard"
       },
       "origin": {
         "cuisine": "french",
@@ -48265,7 +48132,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -48321,17 +48187,17 @@
         "bain_marie",
         "blanc",
         "brulee",
+        "brulee,",
+        "burnt",
         "caramel",
         "classique",
         "coeliaque",
         "cream,",
         "creme",
+        "custard",
         "d'œuf",
         "egg,",
-        "enfants",
         "epaisse",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
@@ -48339,7 +48205,6 @@
         "heavy",
         "intermediaire",
         "jaune",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -48485,7 +48350,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -48556,16 +48420,12 @@
         "debutant",
         "easy",
         "egg",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "francais",
         "france",
         "french_breton",
-        "kids",
         "lait",
         "leger",
         "lent",
@@ -49868,7 +49728,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -49944,10 +49803,7 @@
         "des",
         "eau",
         "egg",
-        "enfants",
         "epiphany",
-        "facile enfants",
-        "famille",
         "farine",
         "fermentation",
         "fleur",
@@ -49957,7 +49813,6 @@
         "french_southern",
         "galette",
         "intermediaire",
-        "kids",
         "lait",
         "leger",
         "lent",
@@ -50346,9 +50201,7 @@
         }
       ],
       "tags": {
-        "diet": [
-          "kid_friendly"
-        ],
+        "diet": [],
         "allergens": [
           "eggs",
           "gluten",
@@ -50421,9 +50274,6 @@
         "cherry",
         "classique",
         "egg",
-        "enfants",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "francais",
@@ -50431,7 +50281,6 @@
         "french_basque",
         "gateau",
         "intermediaire",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -50656,7 +50505,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free",
           "vegan",
           "vegetarian"
@@ -50722,9 +50570,6 @@
         "cerneau",
         "cinnamon",
         "citron",
-        "enfants",
-        "facile enfants",
-        "famille",
         "gateau",
         "gingembre",
         "ginger",
@@ -50732,7 +50577,6 @@
         "huile",
         "intermediaire",
         "international",
-        "kids",
         "leger",
         "lemon",
         "lent",
@@ -51325,8 +51169,7 @@
       ],
       "tags": {
         "diet": [
-          "gluten_free",
-          "kid_friendly"
+          "gluten_free"
         ],
         "allergens": [
           "lactose",
@@ -51384,17 +51227,13 @@
         "coeliaque",
         "curry",
         "eau",
-        "enfants",
         "epice",
-        "facile enfants",
-        "famille",
         "gluten free",
         "inde",
         "indian",
         "indien",
         "intermediaire",
         "kheer",
-        "kids",
         "lait",
         "leger",
         "lent",
@@ -51560,7 +51399,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -51632,9 +51470,6 @@
         "cream",
         "creme",
         "eau",
-        "enfants",
-        "facile enfants",
-        "famille",
         "farine",
         "fermentation",
         "flour",
@@ -51644,7 +51479,6 @@
         "glace",
         "ice",
         "intermediaire",
-        "kids",
         "kouign",
         "leger",
         "lent",
@@ -51828,7 +51662,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free",
           "nut_free",
           "vegan",
@@ -51890,12 +51723,8 @@
         "cocotier)",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "international",
-        "kids",
         "lait",
         "leger",
         "levure",
@@ -52444,7 +52273,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "nut_free",
           "vegan",
@@ -52505,9 +52333,6 @@
         "coeliaque",
         "complexe",
         "eau",
-        "enfants",
-        "facile enfants",
-        "famille",
         "fecule",
         "gluten free",
         "glutineux",
@@ -52517,7 +52342,6 @@
         "japanese",
         "japon",
         "japonais",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -52906,7 +52730,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free",
           "nut_free"
         ],
@@ -52964,18 +52787,14 @@
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "epices",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "gingembre",
         "ginger",
         "honey",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -53339,7 +53158,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -53419,10 +53237,7 @@
         "dark",
         "eau",
         "egg",
-        "enfants",
         "epaisse",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "francais",
@@ -53430,7 +53245,6 @@
         "french",
         "heavy",
         "intermediaire",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -53567,7 +53381,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -53625,17 +53438,13 @@
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "freezing",
         "french",
         "gluten free",
         "ice_cream_churning",
-        "kids",
         "leger",
         "lemon",
         "lent",
@@ -54002,7 +53811,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -54068,16 +53876,12 @@
         "cornstarch",
         "d'œuf",
         "egg,",
-        "enfants",
-        "facile enfants",
-        "famille",
         "fraise",
         "fraises",
         "francais",
         "france",
         "french",
         "jaune",
-        "kids",
         "lait",
         "leger",
         "light",
@@ -54240,7 +54044,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -54311,14 +54114,10 @@
         "d'œuf",
         "egg",
         "egg,",
-        "enfants",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "jaune",
-        "kids",
         "leger",
         "lemon",
         "lent",
@@ -55663,7 +55462,7 @@
       "_quality_score": 0.8,
       "description": "Purée d'avocat mexicaine crémeuse et parfumée, obtenue par écrasement à la fourchette pour une texture légèrement granuleuse, avec une note d'acidité apportée par le citron et la coriandre, et une touche de fraîcheur des tomates.",
       "instructions": [
-        "Étape 1 : Saisir 400 g d'avocats mûrs, les couper en deux, retirer le noyau et les écraser grossièrement à la fourchette pour conserver des morceaux et obtenir une texture légèrement granuleuse.",
+        "Étape 1 : Couper 400 g d'avocats mûrs, les couper en deux, retirer le noyau et les écraser grossièrement à la fourchette pour conserver des morceaux et obtenir une texture légèrement granuleuse.",
         "Étape 2 : Incorporer 30 ml de jus de citron vert pour éviter l'oxydation des avocats, puis ajouter 60 g d'oignon blanc haché très fin pour apporter une saveur piquante.",
         "Étape 3 : Ciseler 10 g de coriandre fraîche, hacher 15 g de piment et les ajouter pour donner une touche épicée, puis assaisonner de 5 g de sel pour équilibrer les saveurs.",
         "Étape 4 : Ajouter 200 g de tomates fraîches hachées pour apporter de la fraîcheur et du volume, puis mélanger délicatement pour ne pas écraser les morceaux.",
@@ -56917,7 +56716,6 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "kid_friendly",
           "vegan",
           "vegetarian",
           "lactose_free",
@@ -56985,16 +56783,12 @@
         "choucroute",
         "christmas",
         "eau",
-        "enfants",
         "eve",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "green",
         "intermediaire",
         "jamaique",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -60414,13 +60208,9 @@
         "coriander",
         "egg",
         "eggs,",
-        "enfants",
-        "facile enfants",
-        "famille",
         "gluten free",
         "harissa",
         "intermediaire",
-        "kids",
         "leger",
         "light",
         "low calorie",
@@ -60473,7 +60263,7 @@
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
-        "kid_friendly": true
+        "kid_friendly": false
       }
     },
     {
@@ -63105,7 +62895,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 3,
+        "spice_level": 0,
         "iconic": {
           "status": false,
           "score": 6.0,
@@ -63755,7 +63545,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free",
           "vegan",
           "vegetarian"
@@ -63819,16 +63608,12 @@
         "cider",
         "cidre",
         "classique",
-        "enfants",
-        "facile enfants",
-        "famille",
         "fermentation",
         "francais",
         "france",
         "french",
         "huile",
         "intermediaire",
-        "kids",
         "leger",
         "lent",
         "levure",
@@ -63865,13 +63650,13 @@
       "_quality_score": 0.78,
       "description": "Blinis sarrasin dorés et croustillants, avec une texture aérienne et une saveur délicate, issus de la tradition culinaire française, préparés avec de la farine de sarrasin, de la farine de blé et des graines de sésame.",
       "instructions": [
-        "Mélanger 100g de farine de sarrasin, 100g de farine de blé et 3g de sel de table dans un saladier, en les incorporant délicatement pour obtenir un mélange homogène.",
-        "Délayer 5g de levure fraîche dans 250ml de lait d'avoine tiède avec 15ml de vinaigre de cidre, puis laisser reposer 5 minutes.",
-        "Incorporer le liquide aux farines, en mélangeant jusqu'à obtenir une pâte lisse et élastique, puis laisser lever pendant 30 minutes à température ambiante pour permettre à la pâte de doubler de volume.",
-        "Cuire des petites louches de pâte dans une poêle légèrement huilée avec 30ml d'huile végétale à feu moyen, pendant 2 minutes par face, en les retournant délicatement pour éviter de les briser.",
-        "Faire nacrer les blinis jusqu'à ce qu'ils soient dorés et croustillants, en les retournant régulièrement pour obtenir une coloration uniforme.",
-        "Garnir les blinis de 80g de purée de cajou, de 10g de ciboulette hachée et de 10g de sésame, en les recouvrant généreusement pour obtenir une texture crémeuse et une saveur parfumée.",
-        "Servir les blinis tièdes, accompagnés d'une salade verte, pour obtenir un repas équilibré et savoureux."
+        "Étape 1 : Mélanger 100g de farine de sarrasin, 100g de farine de blé et 3g de sel de table dans un saladier, en les incorporant délicatement pour obtenir un mélange homogène.",
+        "Étape 2 : Délayer 5g de levure fraîche dans 250ml de lait d'avoine tiède avec 15ml de vinaigre de cidre, puis laisser reposer 5 minutes.",
+        "Étape 3 : Incorporer le liquide aux farines, en mélangeant jusqu'à obtenir une pâte lisse et élastique, puis laisser lever pendant 30 minutes à température ambiante pour permettre à la pâte de doubler de volume.",
+        "Étape 4 : Cuire des petites louches de pâte dans une poêle légèrement huilée avec 30ml d'huile végétale à feu moyen, pendant 2 minutes par face, en les retournant délicatement pour éviter de les briser.",
+        "Étape 5 : Faire nacrer les blinis jusqu'à ce qu'ils soient dorés et croustillants, en les retournant régulièrement pour obtenir une coloration uniforme.",
+        "Étape 6 : Garnir les blinis de 80g de purée de cajou, de 10g de ciboulette hachée et de 10g de sésame, en les recouvrant généreusement pour obtenir une texture crémeuse et une saveur parfumée.",
+        "Étape 7 : Servir les blinis tièdes, accompagnés d'une salade verte, pour obtenir un repas équilibré et savoureux."
       ],
       "diet_flags": {
         "vegan": true,
@@ -64485,7 +64270,6 @@
           "kid_friendly",
           "lactose_free",
           "nut_free",
-          "raw",
           "vegan",
           "vegetarian"
         ],
@@ -64552,8 +64336,6 @@
         "cidre",
         "classique",
         "coeliaque",
-        "cru",
-        "crudivorisme",
         "debutant",
         "easy",
         "echalote",
@@ -64580,7 +64362,6 @@
         "quick",
         "rapees",
         "rapide",
-        "raw",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -64593,8 +64374,7 @@
         "vegetalien",
         "vegetarien",
         "vinaigre",
-        "vinegar",
-        "vivant"
+        "vinegar"
       ],
       "difficulty_level": "easy",
       "dish_type": "starter",
@@ -64766,7 +64546,6 @@
         "diet": [
           "diabetes_friendly",
           "gluten_free",
-          "kid_friendly",
           "low_calorie"
         ],
         "allergens": [
@@ -64834,11 +64613,8 @@
         "coeliaque",
         "debutant",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "feta",
         "francais",
         "france",
@@ -64846,7 +64622,6 @@
         "gluten free",
         "grapefruit",
         "honey",
-        "kids",
         "leger",
         "light",
         "low calorie",
@@ -65010,10 +64785,8 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "nut_free",
-          "raw",
           "vegetarian"
         ],
         "allergens": [
@@ -65083,22 +64856,16 @@
         "classique",
         "coeliaque",
         "cornichon",
-        "cru",
-        "crudivorisme",
         "debutant",
         "doux",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "gherkin",
         "gluten free",
         "grating",
-        "kids",
         "leger",
         "lemon",
         "light",
@@ -65110,7 +64877,6 @@
         "parsley",
         "persil",
         "rave",
-        "raw",
         "remoulade",
         "salt",
         "sans gluten",
@@ -65120,8 +64886,7 @@
         "sour",
         "sweet",
         "table",
-        "vegetarien",
-        "vivant"
+        "vegetarien"
       ],
       "difficulty_level": "easy",
       "dish_type": "starter",
@@ -65304,7 +65069,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "nut_free",
           "vegan",
@@ -65379,17 +65143,13 @@
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "garlic",
         "gluten free",
         "grecque",
-        "kids",
         "laurier",
         "leaf",
         "leger",
@@ -65571,7 +65331,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -65628,17 +65387,13 @@
         "debutant",
         "douce",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "four",
         "francais",
         "france",
         "french",
         "gluten free",
         "green",
-        "kids",
         "leger",
         "legumes",
         "light",
@@ -65843,7 +65598,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free",
           "nut_free",
           "vegetarian"
@@ -65907,16 +65661,12 @@
         "crostini",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "garlic",
         "huile",
         "italian",
         "italie",
         "italien",
-        "kids",
         "leger",
         "levure",
         "light",
@@ -65962,13 +65712,13 @@
       "_quality_score": 0.78,
       "description": "Entrée italienne typique, préparée selon la tradition, où la baguette croustillante rencontre la saveur terreuse des champignons et la fraîcheur de l'ail, le tout lié par une sauce crémeuse et parfumée à l'huile de truffe.",
       "instructions": [
-        "Préchauffer le four à 180°C, en vous assurant qu'il atteigne la température désirée pour une cuisson optimale. Pendant ce temps, couper la baguette en rondelles de 1 cm d'épaisseur.",
-        "Badigeonner les rondelles de baguette d'huile d'olive et les toaster pendant 10 minutes à 180°C, jusqu'à ce qu'elles soient dorées et croustillantes, avec une texture légèrement croustillante à l'extérieur et moelleuse à l'intérieur.",
-        "Faire revenir les champignons émincés à feu vif dans l'huile d'olive, en les remuant régulièrement, jusqu'à évaporation de l'eau et en dégageant un parfum terreux, environ 5 minutes.",
-        "Ajouter l'ail et le thym, puis cuire pendant 2 minutes à feu moyen-vif, en remuant constamment pour éviter la brûlure et obtenir une couleur dorée.",
-        "Incorporer la crème et la levure nutritionnelle, en émulsionnant le mélange pour obtenir une texture lisse et crémeuse, puis réduire pendant 2 minutes à feu moyen, en surveillant la consistance pour éviter la trop grande réduction.",
-        "Ajouter quelques gouttes d'huile de truffe, en les incorporant délicatement pour ne pas briser l'émulsion, puis assaisonner avec du sel et du poivre pour équilibrer les saveurs et obtenir une harmonie parfumée.",
-        "Déposer la préparation sur les crostini, en les recouvrant généreusement, puis terminer avec du persil haché pour ajouter une touche de fraîcheur et de couleur, et servir sans attendre pour apprécier la texture croustillante des crostini et la saveur parfumée de la préparation."
+        "Étape 1 : Préchauffer le four à 180°C, en vous assurant qu'il atteigne la température désirée pour une cuisson optimale. Pendant ce temps, couper la baguette en rondelles de 1 cm d'épaisseur.",
+        "Étape 2 : Badigeonner les rondelles de baguette d'huile d'olive et les toaster pendant 10 minutes à 180°C, jusqu'à ce qu'elles soient dorées et croustillantes, avec une texture légèrement croustillante à l'extérieur et moelleuse à l'intérieur.",
+        "Étape 3 : Faire revenir les champignons émincés à feu vif dans l'huile d'olive, en les remuant régulièrement, jusqu'à évaporation de l'eau et en dégageant un parfum terreux, environ 5 minutes.",
+        "Étape 4 : Ajouter l'ail et le thym, puis cuire pendant 2 minutes à feu moyen-vif, en remuant constamment pour éviter la brûlure et obtenir une couleur dorée.",
+        "Étape 5 : Incorporer la crème et la levure nutritionnelle, en émulsionnant le mélange pour obtenir une texture lisse et crémeuse, puis réduire pendant 2 minutes à feu moyen, en surveillant la consistance pour éviter la trop grande réduction.",
+        "Étape 6 : Ajouter quelques gouttes d'huile de truffe, en les incorporant délicatement pour ne pas briser l'émulsion, puis assaisonner avec du sel et du poivre pour équilibrer les saveurs et obtenir une harmonie parfumée.",
+        "Étape 7 : Déposer la préparation sur les crostini, en les recouvrant généreusement, puis terminer avec du persil haché pour ajouter une touche de fraîcheur et de couleur, et servir sans attendre pour apprécier la texture croustillante des crostini et la saveur parfumée de la préparation."
       ],
       "diet_flags": {
         "vegan": true,
@@ -66137,7 +65887,6 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "kid_friendly",
           "low_calorie"
         ],
         "allergens": [
@@ -66210,18 +65959,14 @@
         "d'erable",
         "debutant",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "fresh",
         "fromage",
         "goat",
-        "kids",
         "laitue",
         "leger",
         "lettuce",
@@ -66263,14 +66008,14 @@
       "_quality_score": 0.91,
       "description": "Salade française crémeuse, avec des toasts de baguette croustillants et un fromage fondu, accompagnée d'une roquette fraîche et d'une vinaigrette parfumée.",
       "instructions": [
-        "Préchauffer le four à 180°C, en vous assurant qu'il atteigne la température désirée pour une cuisson optimale. La chaleur doit être bien répartie pour éviter les points chauds.",
-        "Mélanger la roquette, la laitue, les noix et les cranberries dans un saladier, en les incorporant délicatement pour obtenir un mélange coloré et parfumé. La roquette doit être fraîche et croquante, tandis que les noix doivent être croustillantes.",
-        "Couper le fromage en rondelles épaisses, puis les déposer sur des toasts de baguette, en les recouvrant généreusement pour obtenir une texture crémeuse. Le fromage doit être fondu et crémeux, avec une texture lisse et homogène.",
-        "Enfourner pendant 5 minutes à 180°C, jusqu'à ce que le fromage soit doré et crépitant, en dégageant un parfum appétissant. Le fromage doit être fondu et crémeux, avec une texture lisse et homogène.",
-        "Préparer la vinaigrette en fouettant l'huile d'olive, le vinaigre de cidre, le sirop d'érable et la moutarde, en les incorporant pour obtenir un mélange lisse et équilibré. La vinaigrette doit être onctueuse et parfumée, avec un équilibre parfait entre l'acidité et la douceur.",
-        "Habiller la salade de vinaigrette, en la recouvrant généreusement pour obtenir une saveur parfumée et équilibrée. La salade doit être fraîche et croquante, avec une saveur parfumée et équilibrée.",
-        "Déposer les toasts de fromage chaud par-dessus la salade, en les recouvrant délicatement pour obtenir une texture crémeuse et une saveur parfumée. Les toasts doivent être croustillants et dorés, tandis que le fromage doit être fondu et crémeux.",
-        "Servir sans attendre, en profitant de la chaleur et de la fraîcheur de la salade, ainsi que de la texture crémeuse du fromage."
+        "Étape 1 : Préchauffer le four à 180°C, en vous assurant qu'il atteigne la température désirée pour une cuisson optimale. La chaleur doit être bien répartie pour éviter les points chauds.",
+        "Étape 2 : Mélanger la roquette, la laitue, les noix et les cranberries dans un saladier, en les incorporant délicatement pour obtenir un mélange coloré et parfumé. La roquette doit être fraîche et croquante, tandis que les noix doivent être croustillantes.",
+        "Étape 3 : Couper le fromage en rondelles épaisses, puis les déposer sur des toasts de baguette, en les recouvrant généreusement pour obtenir une texture crémeuse. Le fromage doit être fondu et crémeux, avec une texture lisse et homogène.",
+        "Étape 4 : Enfourner pendant 5 minutes à 180°C, jusqu'à ce que le fromage soit doré et crépitant, en dégageant un parfum appétissant. Le fromage doit être fondu et crémeux, avec une texture lisse et homogène.",
+        "Étape 5 : Préparer la vinaigrette en fouettant l'huile d'olive, le vinaigre de cidre, le sirop d'érable et la moutarde, en les incorporant pour obtenir un mélange lisse et équilibré. La vinaigrette doit être onctueuse et parfumée, avec un équilibre parfait entre l'acidité et la douceur.",
+        "Étape 6 : Habiller la salade de vinaigrette, en la recouvrant généreusement pour obtenir une saveur parfumée et équilibrée. La salade doit être fraîche et croquante, avec une saveur parfumée et équilibrée.",
+        "Étape 7 : Déposer les toasts de fromage chaud par-dessus la salade, en les recouvrant délicatement pour obtenir une texture crémeuse et une saveur parfumée. Les toasts doivent être croustillants et dorés, tandis que le fromage doit être fondu et crémeux.",
+        "Étape 8 : Servir sans attendre, en profitant de la chaleur et de la fraîcheur de la salade, ainsi que de la texture crémeuse du fromage."
       ],
       "diet_flags": {
         "vegan": false,
@@ -66702,7 +66447,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -66764,9 +66508,6 @@
         "complexe",
         "courgette",
         "eau",
-        "enfants",
-        "facile enfants",
-        "famille",
         "farcies",
         "farine",
         "fleurs",
@@ -66778,7 +66519,6 @@
         "italian",
         "italie",
         "italien",
-        "kids",
         "leger",
         "lemon",
         "light",
@@ -66979,7 +66719,6 @@
         "diet": [
           "diabetes_friendly",
           "high_protein",
-          "kid_friendly",
           "lactose_free",
           "vegetarian"
         ],
@@ -67040,16 +66779,12 @@
         "ciboulette",
         "citron",
         "dill",
-        "enfants",
-        "facile enfants",
-        "famille",
         "fromage",
         "garlic",
         "herbed",
         "herbes",
         "intermediaire",
         "international",
-        "kids",
         "leger",
         "lemon",
         "lent",
@@ -67459,7 +67194,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -67521,9 +67255,6 @@
         "classique",
         "eau",
         "egg",
-        "enfants",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "francais",
@@ -67533,7 +67264,6 @@
         "gougeres",
         "gruyere",
         "intermediaire",
-        "kids",
         "lait",
         "leger",
         "light",
@@ -67998,7 +67728,6 @@
           "diabetes_friendly",
           "gluten_free",
           "high_protein",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -68065,16 +67794,12 @@
         "easy",
         "eau",
         "echalote",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "gluten free",
         "green",
-        "kids",
         "leger",
         "legumes",
         "lentil",
@@ -68273,7 +67998,6 @@
         "diet": [
           "diabetes_friendly",
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -68334,10 +68058,7 @@
         "confit",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "garlic",
         "gluten free",
         "green",
@@ -68345,7 +68066,6 @@
         "israel",
         "israeli",
         "israelien",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -68388,13 +68108,13 @@
       "_chef_note": "Cette recette est idéale pour une entrée ou un accompagnement, et peut être servie avec du pain ou des crackers pour une texture croquante.",
       "description": "Entrée méditerranéenne à base de poivrons rouges et verts, de tomates, cuites à la perfection pour une texture tendre et une saveur intense, avec une consistance crémeuse et une touche de fumée.",
       "instructions": [
-        "Préchauffer le four à 200°C, puis griller les poivrons rouges et verts pendant 30 minutes, ou jusqu'à ce qu'ils soient noircis et que la peau se décolle facilement.",
-        "Peler les poivrons, les épépiner, puis les couper en julienne de 1 cm pour une texture croquante.",
-        "Chauffer 46,2 ml d'huile d'olive dans une poêle avec 20 g d'ail émincé pendant 2 minutes, ou jusqu'à ce que l'ail soit parfumé et commence à dorer.",
-        "Ajouter 300 g de tomates pelées concassées et les poivrons grillés dans la poêle, puis cuire pendant 10 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que les légumes soient tendres et commencent à confire.",
-        "Incorporer 15 g de piment, 2 g de paprika fumé, 5 g de sucre et 4 g de sel dans la poêle, puis mélanger bien pour que les saveurs soient équilibrées.",
-        "Cuire la matbucha à feu doux pendant 45 minutes, ou jusqu'à ce que les légumes soient confits et que la sauce ait une consistance épaisse et crémeuse.",
-        "Laisser refroidir la matbucha, puis la servir à température ambiante, parsemée de persil haché pour une touche de fraîcheur et de couleur, car la chaleur pourrait altérer la texture crémeuse et la fraîcheur des saveurs."
+        "Étape 1 : Préchauffer le four à 200°C, puis griller les poivrons rouges et verts pendant 30 minutes, ou jusqu'à ce qu'ils soient noircis et que la peau se décolle facilement.",
+        "Étape 2 : Peler les poivrons, les épépiner, puis les couper en julienne de 1 cm pour une texture croquante.",
+        "Étape 3 : Chauffer 46,2 ml d'huile d'olive dans une poêle avec 20 g d'ail émincé pendant 2 minutes, ou jusqu'à ce que l'ail soit parfumé et commence à dorer.",
+        "Étape 4 : Ajouter 300 g de tomates pelées concassées et les poivrons grillés dans la poêle, puis cuire pendant 10 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que les légumes soient tendres et commencent à confire.",
+        "Étape 5 : Incorporer 15 g de piment, 2 g de paprika fumé, 5 g de sucre et 4 g de sel dans la poêle, puis mélanger bien pour que les saveurs soient équilibrées.",
+        "Étape 6 : Cuire la matbucha à feu doux pendant 45 minutes, ou jusqu'à ce que les légumes soient confits et que la sauce ait une consistance épaisse et crémeuse.",
+        "Étape 7 : Laisser refroidir la matbucha, puis la servir à température ambiante, parsemée de persil haché pour une touche de fraîcheur et de couleur, car la chaleur pourrait altérer la texture crémeuse et la fraîcheur des saveurs."
       ],
       "diet_flags": {
         "vegan": true,
@@ -68509,7 +68229,6 @@
         "diet": [
           "diabetes_friendly",
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -68575,18 +68294,14 @@
         "coeliaque",
         "debutant",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "gluten free",
         "horseradish)",
         "japanese",
         "japon",
         "japonais",
         "japonais)",
-        "kids",
         "leger",
         "light",
         "lime",
@@ -68769,7 +68484,6 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "vegan",
@@ -68830,14 +68544,10 @@
         "cerneau",
         "citron",
         "cumin",
-        "enfants",
-        "facile enfants",
-        "famille",
         "garlic",
         "grenade",
         "grilling",
         "intermediaire",
-        "kids",
         "leger",
         "lemon",
         "light",
@@ -69048,7 +68758,6 @@
         "diet": [
           "diabetes_friendly",
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "low_calorie"
         ],
@@ -69117,16 +68826,12 @@
         "coeliaque",
         "cognac",
         "echalote",
-        "enfants",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "garlic",
         "gluten free",
         "intermediaire",
-        "kids",
         "leger",
         "lent",
         "levure",
@@ -69314,7 +69019,6 @@
         "diet": [
           "diabetes_friendly",
           "gluten_free",
-          "kid_friendly",
           "low_calorie",
           "nut_free"
         ],
@@ -69380,10 +69084,7 @@
         "debutant",
         "easy",
         "echalote",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "frais",
         "francais",
         "france",
@@ -69391,7 +69092,6 @@
         "fromage",
         "gluten free",
         "green",
-        "kids",
         "leger",
         "lemon",
         "light",
@@ -69589,7 +69289,6 @@
           "diabetes_friendly",
           "gluten_free",
           "high_protein",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -69659,14 +69358,10 @@
         "debutant",
         "easy",
         "echalote",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "garlic",
         "gluten free",
         "international",
-        "kids",
         "leger",
         "lemon",
         "lent",
@@ -70160,13 +69855,13 @@
       "_chef_note": "Cette recette est idéale pour une entrée ou un accompagnement, et peut être servie avec des crackers ou du pain pour une texture croquante.",
       "description": "Préparation grecque traditionnelle où les pommes de terre cuites et le pain rassis sont mixés avec de l'ail écrasé, de l'huile d'olive et du jus de citron pour créer une sauce crémeuse et parfumée, servie à température ambiante.",
       "instructions": [
-        "Cuire les pommes de terre dans de l'eau bouillante salée pendant 20 minutes, ou jusqu'à ce qu'elles soient tendres et se laissent écraser facilement.",
-        "Faire tremper le pain rassis dans de l'eau pendant 2 minutes, puis le presser pour en extraire l'excès d'eau, jusqu'à ce qu'il soit ramolli mais encore ferme.",
-        "Écraser 20 grammes d'ail avec 5 grammes de sel dans un mortier jusqu'à obtenir une pâte lisse et parfumée, avec une odeur piquante d'ail.",
-        "Incorporer 400 grammes de pommes de terre chaudes et 100 grammes de pain rassis dans le mortier, et mélanger jusqu'à ce que le mélange soit homogène et crémeux, avec une texture lisse et aérienne.",
-        "Ajouter progressivement 60 millilitres d'huile d'olive en filet tout en mélangeant, jusqu'à ce que la skordalia ait une consistance onctueuse et crémeuse, avec une texture qui nappe la cuillère.",
-        "Incorporer 43,7 millilitres de jus de citron et mélanger bien, puis goûter et ajuster l'assaisonnement selon vos préférences, en vérifiant que la sauce ait un équilibre entre l'acidité du citron et la richesse de l'huile d'olive.",
-        "Servir la skordalia à température ambiante, parsemée de persil haché pour une touche de fraîcheur et de couleur, en conservant la fraîcheur du persil et la texture crémeuse de la sauce."
+        "Étape 1 : Cuire les pommes de terre dans de l'eau bouillante salée pendant 20 minutes, ou jusqu'à ce qu'elles soient tendres et se laissent écraser facilement.",
+        "Étape 2 : Faire tremper le pain rassis dans de l'eau pendant 2 minutes, puis le presser pour en extraire l'excès d'eau, jusqu'à ce qu'il soit ramolli mais encore ferme.",
+        "Étape 3 : Écraser 20 grammes d'ail avec 5 grammes de sel dans un mortier jusqu'à obtenir une pâte lisse et parfumée, avec une odeur piquante d'ail.",
+        "Étape 4 : Incorporer 400 grammes de pommes de terre chaudes et 100 grammes de pain rassis dans le mortier, et mélanger jusqu'à ce que le mélange soit homogène et crémeux, avec une texture lisse et aérienne.",
+        "Étape 5 : Ajouter progressivement 60 millilitres d'huile d'olive en filet tout en mélangeant, jusqu'à ce que la skordalia ait une consistance onctueuse et crémeuse, avec une texture qui nappe la cuillère.",
+        "Étape 6 : Incorporer 43,7 millilitres de jus de citron et mélanger bien, puis goûter et ajuster l'assaisonnement selon vos préférences, en vérifiant que la sauce ait un équilibre entre l'acidité du citron et la richesse de l'huile d'olive.",
+        "Étape 7 : Servir la skordalia à température ambiante, parsemée de persil haché pour une touche de fraîcheur et de couleur, en conservant la fraîcheur du persil et la texture crémeuse de la sauce."
       ],
       "diet_flags": {
         "vegan": true,
@@ -70301,7 +69996,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -70368,9 +70062,6 @@
         "classique",
         "complexe",
         "egg",
-        "enfants",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "francais",
@@ -70379,7 +70070,6 @@
         "fromage",
         "green",
         "gruyere",
-        "kids",
         "lait",
         "leger",
         "light",
@@ -70569,7 +70259,6 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "kid_friendly",
           "low_calorie",
           "vegan",
           "vegetarian",
@@ -70627,12 +70316,8 @@
         "citron",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "grenade",
-        "kids",
         "lebanese",
         "leger",
         "lemon",
@@ -70818,7 +70503,6 @@
         "diet": [
           "diabetes_friendly",
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -70882,17 +70566,13 @@
         "d'olives",
         "debutant",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "garlic",
         "gluten free",
-        "kids",
         "leger",
         "lemon",
         "light",
@@ -71054,7 +70734,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "nut_free",
           "vegan",
@@ -71129,9 +70808,6 @@
         "coeliaque",
         "courgette",
         "eau",
-        "enfants",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
@@ -71142,7 +70818,6 @@
         "haricot",
         "intermediaire",
         "jelly",
-        "kids",
         "leger",
         "legumes",
         "lent",
@@ -71323,7 +70998,6 @@
         "diet": [
           "diabetes_friendly",
           "gluten_free",
-          "kid_friendly",
           "low_calorie",
           "nut_free"
         ],
@@ -71386,9 +71060,6 @@
         "coeliaque",
         "courgette",
         "eggplant",
-        "enfants",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
@@ -71401,7 +71072,6 @@
         "grilles",
         "grilling",
         "intermediaire",
-        "kids",
         "leger",
         "legumes",
         "lent",
@@ -71853,7 +71523,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -71919,17 +71588,13 @@
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "gingembre",
         "ginger",
         "gluten free",
-        "kids",
         "leger",
         "legumes",
         "light",
@@ -71973,14 +71638,14 @@
       "_chef_note": "Cette recette est idéale pour une entrée ou un accompagnement, et peut être servie chaude ou froide selon vos préférences.",
       "description": "Velouté de potimarron crémeux et parfumé, avec une texture lisse et une saveur équilibrée, typique de la cuisine française d'automne. Ce plat réchauffant est préparé avec soin, en faisant cuire les légumes jusqu'à tendreté avant de les mixer avec du bouillon végétal pour obtenir une consistance onctueuse.",
       "instructions": [
-        "Éplucher la courge butternut, puis le couper en cubes d'environ 2 cm pour faciliter sa cuisson, pendant environ 5 minutes.",
-        "Faire revenir l'oignon dans l'huile d'olive pendant 3 minutes à feu moyen, jusqu'à ce qu'il soit translucide et parfumé, en remuant régulièrement.",
-        "Ajouter les cubes de courge et cuire pendant 8 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce que les légumes commencent à colorer légèrement et soient tendres.",
-        "Recouvrir les légumes avec le bouillon végétal, puis laisser mijoter 25 minutes à couvert, jusqu'à ce que la courge soit tendre et se laisse écraser facilement.",
-        "Mixer la courge et le bouillon jusqu'à obtenir une texture lisse et crémeuse, en ajustant la quantité de liquide si nécessaire.",
-        "Incorporer le lait de coco en émulsionnant pour ajouter de la richesse et de la crémeux à la velouté, pendant environ 2 minutes.",
-        "Assaisonner la velouté avec le gingembre frais râpé, la muscade, le poivre et le sel, et ajuster les saveurs selon vos préférences.",
-        "Répartir la velouté dans des verrines, puis garnir avec des graines de courge grillées et du persil frais ciselé pour une touche de fraîcheur et de couleur, en servant sans attendre pour conserver la texture crémeuse."
+        "Étape 1 : Éplucher la courge butternut, puis le couper en cubes d'environ 2 cm pour faciliter sa cuisson, pendant environ 5 minutes.",
+        "Étape 2 : Faire revenir l'oignon dans l'huile d'olive pendant 3 minutes à feu moyen, jusqu'à ce qu'il soit translucide et parfumé, en remuant régulièrement.",
+        "Étape 3 : Ajouter les cubes de courge et cuire pendant 8 minutes à feu moyen-vif, en remuant régulièrement, jusqu'à ce que les légumes commencent à colorer légèrement et soient tendres.",
+        "Étape 4 : Recouvrir les légumes avec le bouillon végétal, puis laisser mijoter 25 minutes à couvert, jusqu'à ce que la courge soit tendre et se laisse écraser facilement.",
+        "Étape 5 : Mixer la courge et le bouillon jusqu'à obtenir une texture lisse et crémeuse, en ajustant la quantité de liquide si nécessaire.",
+        "Étape 6 : Incorporer le lait de coco en émulsionnant pour ajouter de la richesse et de la crémeux à la velouté, pendant environ 2 minutes.",
+        "Étape 7 : Assaisonner la velouté avec le gingembre frais râpé, la muscade, le poivre et le sel, et ajuster les saveurs selon vos préférences.",
+        "Étape 8 : Répartir la velouté dans des verrines, puis garnir avec des graines de courge grillées et du persil frais ciselé pour une touche de fraîcheur et de couleur, en servant sans attendre pour conserver la texture crémeuse."
       ],
       "diet_flags": {
         "vegan": true,
@@ -72117,7 +71782,6 @@
         "diet": [
           "diabetes_friendly",
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -72178,14 +71842,10 @@
         "coriandre",
         "debutant",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "gluten free",
         "international",
-        "kids",
         "leger",
         "light",
         "lime",
@@ -72367,7 +72027,6 @@
           "diabetes_friendly",
           "gluten_free",
           "high_protein",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -72431,15 +72090,11 @@
         "debutant",
         "dip",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "garlic",
         "gluten free",
         "haricot",
         "international",
-        "kids",
         "leger",
         "lemon",
         "light",
@@ -73605,12 +73260,12 @@
       "_quality_score": 0.95,
       "description": "Le gratin du Dauphiné, sans fromage : fines lamelles de pommes de terre cuites lentement dans la crème et le lait infusés à l'ail et à la muscade, jusqu'à une croûte dorée.",
       "instructions": [
-        "Préchauffer le four à 155°C chaleur statique. Frotter un plat à gratin avec une gousse d'ail coupée, puis le beurrer généreusement.",
-        "Trancher les pommes de terre à chair ferme (type Charlotte) en lamelles de 2 mm à la mandoline. Ne pas les laver — l'amidon est précieux pour lier la crème fraîche. Assaisonner de sel, poivre et muscade râpée.",
-        "Chauffer doucement le mélange lait-crème fraîche (320 ml de crème, 220 ml de lait) jusqu'à tiède. Disposer les tranches de pommes de terre en couches serrées et régulières dans le plat.",
-        "Verser le mélange lait-crème fraîche tiède progressivement jusqu'à affleurer la dernière couche. Tapoter le plat pour chasser les bulles d'air.",
-        "Enfourner à 155°C pendant 1 heure, puis monter à 175°C pour 10 à 15 minutes finales jusqu'à surface brun doré et gratin légèrement soufflé sur les bords. La lame d'un couteau doit traverser sans aucune résistance.",
-        "Laisser reposer 10 minutes hors du four avant de servir — le gratin se tient mieux et les saveurs s'intensifient. La texture doit être nappante et fondante, les tranches confites dans la crème fraîche."
+        "Étape 1 : Préchauffer le four à 155°C chaleur statique. Frotter un plat à gratin avec une gousse d'ail coupée, puis le beurrer généreusement.",
+        "Étape 2 : Trancher les pommes de terre à chair ferme (type Charlotte) en lamelles de 2 mm à la mandoline. Ne pas les laver — l'amidon est précieux pour lier la crème fraîche. Assaisonner de sel, poivre et muscade râpée.",
+        "Étape 3 : Chauffer doucement le mélange lait-crème fraîche (320 ml de crème, 220 ml de lait) jusqu'à tiède. Disposer les tranches de pommes de terre en couches serrées et régulières dans le plat.",
+        "Étape 4 : Verser le mélange lait-crème fraîche tiède progressivement jusqu'à affleurer la dernière couche. Tapoter le plat pour chasser les bulles d'air.",
+        "Étape 5 : Enfourner à 155°C pendant 1 heure, puis monter à 175°C pour 10 à 15 minutes finales jusqu'à surface brun doré et gratin légèrement soufflé sur les bords. La lame d'un couteau doit traverser sans aucune résistance.",
+        "Étape 6 : Laisser reposer 10 minutes hors du four avant de servir — le gratin se tient mieux et les saveurs s'intensifient. La texture doit être nappante et fondante, les tranches confites dans la crème fraîche."
       ],
       "diet_flags": {
         "vegan": false,
@@ -75238,7 +74893,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "vegan",
           "vegetarian",
           "gluten_free",
@@ -75304,15 +74958,11 @@
         "coriander",
         "coriandre",
         "eau",
-        "enfants",
-        "facile enfants",
-        "famille",
         "garlic",
         "gluten free",
         "grilling",
         "harina",
         "intermediaire",
-        "kids",
         "latin_american",
         "latino",
         "leger",
@@ -76954,14 +76604,14 @@
       "_quality_score": 0.93,
       "description": "Purée d'aubergines grillées, parfumée aux épices torréfiées et au curcuma, sur fond de tomates fraîches — chair fondante et confite, avec une texture lisse et crémeuse.",
       "instructions": [
-        "Griller les aubergines directement sur la flamme de gaz 10 min de chaque côté, jusqu'à ce que la peau soit carbonisée de tous les côtés. Vous devriez entendre le son de la peau qui se contracte et sentir l'odeur de la fumée.",
-        "Laisser refroidir dans un sac plastique 5 min, puis peler et égoutter la chair. La chair devrait être tendre et facile à peler.",
-        "Hacher grossièrement la chair d'aubergine fumée en brunoise. Vous devriez obtenir une texture grossière et irrégulière.",
-        "Faire revenir l'oignon 4 min dans l'huile d'olive extra vierge à feu moyen, jusqu'à ce qu'il soit doré et parfumé.",
-        "Ajouter l'ail haché, le cumin, le curcuma et la coriandre moulue, et faire saisir 1 min. Vous devriez sentir l'arôme des épices qui se répandent.",
-        "Incorporer les tomates concassées et cuire 8 min à feu moyen, en remuant régulièrement. La sauce devrait épaissir et les saveurs se mélanger.",
-        "Saler avec 5 g de sel, vérifier que la sauce nappe la cuillère et rectifier l'assaisonnement si nécessaire. La sauce devrait être riche et parfumée, avec une texture lisse et crémeuse.",
-        "Servir aussitôt, garni de coriandre ciselée."
+        "Étape 1 : Griller les aubergines directement sur la flamme de gaz 10 min de chaque côté, jusqu'à ce que la peau soit carbonisée de tous les côtés. Vous devriez entendre le son de la peau qui se contracte et sentir l'odeur de la fumée.",
+        "Étape 2 : Laisser refroidir dans un sac plastique 5 min, puis peler et égoutter la chair. La chair devrait être tendre et facile à peler.",
+        "Étape 3 : Hacher grossièrement la chair d'aubergine fumée en brunoise. Vous devriez obtenir une texture grossière et irrégulière.",
+        "Étape 4 : Faire revenir l'oignon 4 min dans l'huile d'olive extra vierge à feu moyen, jusqu'à ce qu'il soit doré et parfumé.",
+        "Étape 5 : Ajouter l'ail haché, le cumin, le curcuma et la coriandre moulue, et faire saisir 1 min. Vous devriez sentir l'arôme des épices qui se répandent.",
+        "Étape 6 : Incorporer les tomates concassées et cuire 8 min à feu moyen, en remuant régulièrement. La sauce devrait épaissir et les saveurs se mélanger.",
+        "Étape 7 : Saler avec 5 g de sel, vérifier que la sauce nappe la cuillère et rectifier l'assaisonnement si nécessaire. La sauce devrait être riche et parfumée, avec une texture lisse et crémeuse.",
+        "Étape 8 : Servir aussitôt, garni de coriandre ciselée."
       ],
       "diet_flags": {
         "vegan": true,
@@ -78881,7 +78531,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "nut_free",
           "vegan",
@@ -78951,17 +78600,13 @@
         "debutant",
         "easy",
         "eggplant",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french_provencal",
         "garlic",
         "gluten free",
         "green",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -79260,11 +78905,11 @@
       "_quality_score": 0.81,
       "description": "Ragoût de légumes grecs, où les aubergines, courgettes et pommes de terre fondent en bouche, parfumés d'ail et d'origan — technique traditionnelle de la cuisine méditerranéenne.",
       "instructions": [
-        "Préchauffer le four à 180°C. Couper les aubergines, les courgettes, les pommes de terre et les tomates en rondelles de 5 mm, et l'oignon en demi-rondelles fines.",
-        "Dans un grand saladier, mélanger tous les légumes avec 45 ml d'huile d'olive, l'ail haché, les herbes (origan), sel et poivre.",
-        "Disposer dans un grand plat à gratin en couches légèrement superposées en alternant les couleurs.",
-        "Arroser d'un filet d'huile d'olive supplémentaire. Enfourner à 180°C pendant 50 à 60 minutes jusqu'à légumes fondants et surface légèrement caramélisée.",
-        "Laisser reposer 10 minutes. Les légumes doivent être très fondants et confits, légèrement dorés en surface, parfumés aux herbes. Servir tiède avec du pain."
+        "Étape 1 : Préchauffer le four à 180°C. Couper les aubergines, les courgettes, les pommes de terre et les tomates en rondelles de 5 mm, et l'oignon en demi-rondelles fines.",
+        "Étape 2 : Dans un grand saladier, mélanger tous les légumes avec 45 ml d'huile d'olive, l'ail haché, les herbes (origan), sel et poivre.",
+        "Étape 3 : Disposer dans un grand plat à gratin en couches légèrement superposées en alternant les couleurs.",
+        "Étape 4 : Arroser d'un filet d'huile d'olive supplémentaire. Enfourner à 180°C pendant 50 à 60 minutes jusqu'à légumes fondants et surface légèrement caramélisée.",
+        "Étape 5 : Laisser reposer 10 minutes. Les légumes doivent être très fondants et confits, légèrement dorés en surface, parfumés aux herbes. Servir tiède avec du pain."
       ],
       "diet_flags": {
         "vegan": true,
@@ -81699,7 +81344,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -81771,18 +81415,14 @@
         "easy",
         "eau",
         "egg",
-        "enfants",
         "epinard",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french_breton",
         "galette",
         "gluten free",
         "gruyere",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -83961,7 +83601,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -84032,18 +83671,14 @@
         "debutant",
         "easy",
         "egg",
-        "enfants",
         "epaisse",
         "facile",
-        "facile enfants",
-        "famille",
         "flamiche",
         "flemish",
         "francais",
         "france",
         "french_nordic",
         "heavy",
-        "kids",
         "leek",
         "leeks",
         "leger",
@@ -84079,12 +83714,12 @@
       "_chef_note": "Vous pouvez également ajouter des herbes fraîches comme du thym ou du persil pour donner un peu plus de saveur à la flamiche.",
       "description": "Tarte picarde au fond de pâte brisée garni de poireaux fondus longuement dans l'beurre, révélant une texture crémeuse et une saveur légèrement sucrée, typique de la cuisine du nord de la France.",
       "instructions": [
-        "Préparer la pâte brisée si maison: travailler rapidement la farine et le beurre froid en dés du bout des doigts jusqu'à obtenir une texture sableuse, puis lier avec un peu d'eau froide. Sinon, dérouler les 250 g de pâte du commerce. Foncer un moule de 26 cm, piquer le fond et réfrigérer 30 minutes pour que la pâte se stabilise.",
-        "Émincer finement les 800 g de poireaux en rondelles de 0,5 cm en ne conservant que le blanc et le vert pâle, afin d'obtenir une texture homogène. Faire fondre le beurre dans une casserole large à feu doux. Ajouter les poireaux, saler légèrement et couvrir. Cuire 20 à 25 minutes à l'étouffée en remuant régulièrement jusqu'à ce qu'ils soient très fondants, sans coloration, et qu'ils aient libéré leur saveur naturelle. Laisser tiédir puis égoutter l'excédent d'eau pour éviter une texture trop humide.",
-        "Préchauffer le four à 180 °C. Dans un bol, battre les 110g d'œuf et incorporer les 200ml de crème fraîche épaisse, ainsi qu'une pincée de noix de muscade (0,5g), jusqu'à obtenir un mélange homogène.",
-        "Répartir les poireaux fondus sur le fond de tarte de manière uniforme, en veillant à les étaler jusqu'aux bords pour une cuisson homogène. Verser l'appareil crème fraîche par-dessus de manière uniforme, en faisant attention de ne pas dépasser les bords de la tarte.",
-        "Enfourner 35 minutes à 180 °C jusqu'à ce que l'appareil soit pris — la pointe d'un couteau insérée au centre doit ressortir nette — et que la surface soit légèrement dorée, indiquant une cuisson parfaite. Laisser tiédir 10 minutes avant de démouler et de couper, pour que la tarte se démolde facilement sans se briser.",
-        "Servir chaud, accompagné d'une salade verte ou de légumes vapeur, pour mettre en valeur la saveur délicate de la flamiche."
+        "Étape 1 : Préparer la pâte brisée si maison: travailler rapidement la farine et le beurre froid en dés du bout des doigts jusqu'à obtenir une texture sableuse, puis lier avec un peu d'eau froide. Sinon, dérouler les 250 g de pâte du commerce. Foncer un moule de 26 cm, piquer le fond et réfrigérer 30 minutes pour que la pâte se stabilise.",
+        "Étape 2 : Émincer finement les 800 g de poireaux en rondelles de 0,5 cm en ne conservant que le blanc et le vert pâle, afin d'obtenir une texture homogène. Faire fondre le beurre dans une casserole large à feu doux. Ajouter les poireaux, saler légèrement et couvrir. Cuire 20 à 25 minutes à l'étouffée en remuant régulièrement jusqu'à ce qu'ils soient très fondants, sans coloration, et qu'ils aient libéré leur saveur naturelle. Laisser tiédir puis égoutter l'excédent d'eau pour éviter une texture trop humide.",
+        "Étape 3 : Préchauffer le four à 180 °C. Dans un bol, battre les 110g d'œuf et incorporer les 200ml de crème fraîche épaisse, ainsi qu'une pincée de noix de muscade (0,5g), jusqu'à obtenir un mélange homogène.",
+        "Étape 4 : Répartir les poireaux fondus sur le fond de tarte de manière uniforme, en veillant à les étaler jusqu'aux bords pour une cuisson homogène. Verser l'appareil crème fraîche par-dessus de manière uniforme, en faisant attention de ne pas dépasser les bords de la tarte.",
+        "Étape 5 : Enfourner 35 minutes à 180 °C jusqu'à ce que l'appareil soit pris — la pointe d'un couteau insérée au centre doit ressortir nette — et que la surface soit légèrement dorée, indiquant une cuisson parfaite. Laisser tiédir 10 minutes avant de démouler et de couper, pour que la tarte se démolde facilement sans se briser.",
+        "Étape 6 : Servir chaud, accompagné d'une salade verte ou de légumes vapeur, pour mettre en valeur la saveur délicate de la flamiche."
       ],
       "diet_flags": {
         "vegan": false,
@@ -84231,7 +83866,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -84312,10 +83946,7 @@
         "des",
         "easy",
         "echalote",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "fava)",
         "francais",
         "france",
@@ -84325,7 +83956,6 @@
         "gourganes",
         "green",
         "haricot",
-        "kids",
         "leger",
         "lemon",
         "light",
@@ -84974,7 +84604,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -85049,11 +84678,8 @@
         "eau",
         "egg",
         "egg,",
-        "enfants",
         "epinard",
         "facile",
-        "facile enfants",
-        "famille",
         "forestiere",
         "forestiere,",
         "francais",
@@ -85062,7 +84688,6 @@
         "galette",
         "gluten free",
         "gruyere",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -85281,7 +84906,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "nut_free",
           "vegan",
@@ -85351,10 +84975,7 @@
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "fava",
         "feve",
         "francais",
@@ -85367,7 +84988,6 @@
         "gluten free",
         "green",
         "haricot",
-        "kids",
         "leeks",
         "leger",
         "lent",
@@ -86143,7 +85763,7 @@
       "_quality_score": 0.91,
       "description": "Galette turque à la pâte fine étirée au rouleau, farcie d'épinards, d'oignon et de fromage blanc saumuré, cuite sur une plaque (sac) et badigeonnée d'huile.",
       "instructions": [
-        "Étape 1: Mélanger 200 g de farine avec 5 g de sel et 180 ml d'eau tiède. Pétrir 8 minutes jusqu'à pâte souple et élastique. Couvrir et laisser reposer 30 minutes.",
+        "Étape 1: Mélanger 200 g de farine avec 2 g de sel et 180 ml d'eau tiède. Pétrir 8 minutes jusqu'à pâte souple et élastique. Couvrir et laisser reposer 30 minutes.",
         "Étape 2: Préparer la farce: faire revenir 300 g d'épinards frais 3 minutes dans 15 ml d'huile d'olive jusqu'à réduction. Égoutter et presser. Mélanger avec 150 g de feta émiettée, l'oignon émincé et le poivre.",
         "Étape 3: Diviser la pâte en 4 boules. Abaisser finement en disque de 30 cm sur plan légèrement huilé — la pâte doit être presque translucide.",
         "Étape 4: Répartir la farce sur la moitié du disque. Replier en demi-lune. Appuyer les bords fermement.",
@@ -86525,7 +86145,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -86597,10 +86216,7 @@
         "debutant",
         "easy",
         "egg",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "francais",
@@ -86609,7 +86225,6 @@
         "garlic",
         "gratin",
         "green",
-        "kids",
         "lait",
         "leger",
         "lent",
@@ -87227,7 +86842,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -87294,10 +86908,7 @@
         "coeliaque",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
@@ -87305,7 +86916,6 @@
         "gluten free",
         "gratin",
         "gruyere",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -88703,14 +88313,14 @@
       "_quality_score": 0.91,
       "description": "Préparation mexicaine traditionnelle de haricots noirs, oignons jaunes, ail, cumin et piment, cuits à feu moyen pour obtenir une texture crémeuse et rustique avec une légère croûte dorée.",
       "instructions": [
-        "Égoutter et rincer 300g de haricots noirs, en réservant 100 ml d'eau de cuisson.",
-        "Chauffer 40 ml d'huile de tournesol dans une poêle à feu moyen-vif, jusqu'à ce que l'huile commence à briller et à sentir son arôme. Ajouter 150g d'oignon jaune émincé et cuire pendant 6 minutes, en remuant régulièrement, jusqu'à ce que l'oignon atteigne une coloration dorée et commence à caraméliser.",
-        "Ajouter 9g d'ail finement haché et cuire pendant 1 minute, en remuant constamment, jusqu'à ce que l'ail soit parfumé et commence à dorer.",
-        "Verser les haricots noirs dans la poêle avec le liquide réservé. Écraser grossièrement les haricots avec un écrase-purée ou le dos d'une cuillère, en mélangeant continuellement, jusqu'à obtenir une texture épaisse et crémeuse.",
-        "Ajouter 3g de cumin en grains et 15g de piment émincé. Cuire à feu moyen pendant 8 à 10 minutes, en remuant fréquemment, jusqu'à ce que la préparation atteigne une texture épaisse qui se détache des bords de la poêle et commence à former une légère croûte dorée en surface.",
-        "Assaisonner de 5g de sel. La texture doit être crémeuse et légèrement rustique, avec une légère croûte qui se forme en surface. Vérifier que les saveurs sont bien équilibrées.",
-        "Goûter et rectifier l'assaisonnement si nécessaire.",
-        "Servir chaud, pour apprécier la texture crémeuse et la saveur intense de la préparation."
+        "Étape 1 : Égoutter et rincer 300g de haricots noirs, en réservant 100 ml d'eau de cuisson.",
+        "Étape 2 : Chauffer 40 ml d'huile de tournesol dans une poêle à feu moyen-vif, jusqu'à ce que l'huile commence à briller et à sentir son arôme. Ajouter 150g d'oignon jaune émincé et cuire pendant 6 minutes, en remuant régulièrement, jusqu'à ce que l'oignon atteigne une coloration dorée et commence à caraméliser.",
+        "Étape 3 : Ajouter 9g d'ail finement haché et cuire pendant 1 minute, en remuant constamment, jusqu'à ce que l'ail soit parfumé et commence à dorer.",
+        "Étape 4 : Verser les haricots noirs dans la poêle avec le liquide réservé. Écraser grossièrement les haricots avec un écrase-purée ou le dos d'une cuillère, en mélangeant continuellement, jusqu'à obtenir une texture épaisse et crémeuse.",
+        "Étape 5 : Ajouter 3g de cumin en grains et 15g de piment émincé. Cuire à feu moyen pendant 8 à 10 minutes, en remuant fréquemment, jusqu'à ce que la préparation atteigne une texture épaisse qui se détache des bords de la poêle et commence à former une légère croûte dorée en surface.",
+        "Étape 6 : Assaisonner de 5g de sel. La texture doit être crémeuse et légèrement rustique, avec une légère croûte qui se forme en surface. Vérifier que les saveurs sont bien équilibrées.",
+        "Étape 7 : Goûter et rectifier l'assaisonnement si nécessaire.",
+        "Étape 8 : Servir chaud, pour apprécier la texture crémeuse et la saveur intense de la préparation."
       ],
       "diet_flags": {
         "vegan": true,
@@ -92467,7 +92077,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "nut_free",
           "vegan",
@@ -92541,10 +92150,7 @@
         "courgette",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "fennel",
         "fenouil",
         "francais",
@@ -92553,7 +92159,6 @@
         "garlic",
         "gluten free",
         "green",
-        "kids",
         "leger",
         "legumes",
         "light",
@@ -92886,13 +92491,13 @@
       "_quality_score": 1.0,
       "description": "Ragoût géorgien de haricots rouges mijotés pour une sauce épaisse, riche en arômes d'ail et de grenade, avec une texture crémeuse et une couleur brun clair.",
       "instructions": [
-        "Faire blanchir 300g de haricots rouges trempés 12h dans l'eau bouillante non salée à 100°C pendant 1 heure, jusqu'à tendreté complète et une couleur brun clair.",
-        "Écraser un tiers des haricots à la fourchette, puis mélanger haricots entiers et écrasés avec 200ml d'eau de cuisson réservée.",
-        "Mixer 80g de noix avec 9g d'ail écrasé, 3g de coriandre moulue et 3g de fenugrec, jusqu'à obtenir une pâte lisse et parfumée.",
-        "Saisir 150g d'oignon jaune émincé dans 45ml d'huile de tournesol à feu moyen pendant 6 minutes, jusqu'à coloration blonde et un parfum caramélisé.",
-        "Incorporer la pâte de noix et cuire 3 minutes en remuant, jusqu'à parfum intense et une couleur brune, puis mélanger avec les haricots et mijoter 10 minutes à feu doux.",
-        "Assaisonner de 5g de sel et 30ml de vinaigre de vin rouge, jusqu'à saveur équilibrée et une texture crémeuse, puis garnir de 80g de graines de grenade et de coriandre fraîche ciselée.",
-        "Servir sans attendre."
+        "Étape 1 : Faire blanchir 300g de haricots rouges trempés 12h dans l'eau bouillante non salée à 100°C pendant 1 heure, jusqu'à tendreté complète et une couleur brun clair.",
+        "Étape 2 : Écraser un tiers des haricots à la fourchette, puis mélanger haricots entiers et écrasés avec 200ml d'eau de cuisson réservée.",
+        "Étape 3 : Mixer 80g de noix avec 9g d'ail écrasé, 3g de coriandre moulue et 3g de fenugrec, jusqu'à obtenir une pâte lisse et parfumée.",
+        "Étape 4 : Saisir 150g d'oignon jaune émincé dans 45ml d'huile de tournesol à feu moyen pendant 6 minutes, jusqu'à coloration blonde et un parfum caramélisé.",
+        "Étape 5 : Incorporer la pâte de noix et cuire 3 minutes en remuant, jusqu'à parfum intense et une couleur brune, puis mélanger avec les haricots et mijoter 10 minutes à feu doux.",
+        "Étape 6 : Assaisonner de 5g de sel et 30ml de vinaigre de vin rouge, jusqu'à saveur équilibrée et une texture crémeuse, puis garnir de 80g de graines de grenade et de coriandre fraîche ciselée.",
+        "Étape 7 : Servir sans attendre."
       ],
       "diet_flags": {
         "vegan": true,
@@ -93177,13 +92782,13 @@
       "_quality_score": 0.97,
       "description": "Plat marocain traditionnel où haricots blancs tendres baignent dans une sauce tomate onctueuse, parfumée aux épices de cumin, de paprika et de curcuma, avec un parfum légèrement épicé et une texture crémeuse.",
       "instructions": [
-        "Si haricots secs : tremper 12 heures dans l'eau froide puis cuire 1 heure dans l'eau bouillante non salée jusqu'à tendreté. Égoutter avec soin.",
-        "Chauffer 45ml d'huile d'olive extra vierge dans une cocotte à feu moyen. Faire revenir 150g d'oignon jaune émincé pendant 7 minutes, en remuant régulièrement, jusqu'à obtenir une belle dorure. Ajouter 9g d'ail haché, 300g de tomates concassées, 3g de paprika, 3g de cumin et 3 g de coriandre en poudre.",
-        "Cuire la sauce tomate pendant 8 minutes, en laissant réduire légèrement et en laissant les épices libérer leur parfum, jusqu'à ce que la sauce ait légèrement épaissi.",
-        "Incorporer 300g de haricots blancs cuits avec 200ml d'eau. Mijoter à feu doux pendant 20 minutes, en remuant occasionnellement, jusqu'à ce que la sauce ait épaissi et que les haricots soient bien imprégnés.",
-        "Ajouter 3g de curcuma en poudre pour parfumer la sauce.",
-        "Terminer avec 30g de persil frais haché et un filet d'huile d'olive extra vierge. La loubia doit être onctueuse, les haricots fondants dans une sauce tomate parfumée.",
-        "Servir aussitôt, idéalement accompagnée de pain marocain chaud."
+        "Étape 1 : Si haricots secs : tremper 12 heures dans l'eau froide puis cuire 1 heure dans l'eau bouillante non salée jusqu'à tendreté. Égoutter avec soin.",
+        "Étape 2 : Chauffer 45ml d'huile d'olive extra vierge dans une cocotte à feu moyen. Faire revenir 150g d'oignon jaune émincé pendant 7 minutes, en remuant régulièrement, jusqu'à obtenir une belle dorure. Ajouter 9g d'ail haché, 300g de tomates concassées, 3g de paprika, 3g de cumin et 3 g de coriandre en poudre.",
+        "Étape 3 : Cuire la sauce tomate pendant 8 minutes, en laissant réduire légèrement et en laissant les épices libérer leur parfum, jusqu'à ce que la sauce ait légèrement épaissi.",
+        "Étape 4 : Incorporer 300g de haricots blancs cuits avec 200ml d'eau. Mijoter à feu doux pendant 20 minutes, en remuant occasionnellement, jusqu'à ce que la sauce ait épaissi et que les haricots soient bien imprégnés.",
+        "Étape 5 : Ajouter 3g de curcuma en poudre pour parfumer la sauce.",
+        "Étape 6 : Terminer avec 30g de persil frais haché et un filet d'huile d'olive extra vierge. La loubia doit être onctueuse, les haricots fondants dans une sauce tomate parfumée.",
+        "Étape 7 : Servir aussitôt, idéalement accompagnée de pain marocain chaud."
       ],
       "diet_flags": {
         "vegan": true,
@@ -93900,7 +93505,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 3,
         "iconic": {
           "status": false,
           "score": 5.5,
@@ -93922,17 +93527,13 @@
         "coriandre",
         "courgette",
         "douce",
-        "enfants",
         "enmoladas",
         "epice",
-        "facile enfants",
-        "famille",
         "gluten free",
         "green",
         "haricot",
         "intermediaire",
         "jaune",
-        "kids",
         "latino",
         "leger",
         "legumes",
@@ -93990,7 +93591,7 @@
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
-        "kid_friendly": true
+        "kid_friendly": false
       }
     },
     {
@@ -95076,13 +94677,13 @@
       "_quality_score": 0.96,
       "description": "Bouillon vert intense de feuilles d'épinards et de haricots verts, relevé d'épices népalaises et d'un hachis d'oignon jaune caramélisé — texture légèrement rustique, parfumée aux saveurs d'Asie.",
       "instructions": [
-        "Laver abondamment 300g de feuilles d'épinards. Blanchir 1 minute dans l'eau bouillante salée à 100°C. Égoutter et rafraîchir à l'eau froide pour fixer la couleur verte intense.",
-        "Hacher grossièrement les légumes verts blanchis. Chauffer 45ml d'huile d'olive extra vierge à feu moyen, jusqu'à ce qu'elle commence à briller. Faire grésiller 3g de graines de cumin pendant 30 secondes, en écoutant le son caractéristique de grésillement.",
-        "Faire revenir 150g d'oignon jaune émincé pendant 5 minutes, en remuant régulièrement, jusqu'à ce qu'il soit caramélisé et parfumé. Ajouter 9g d'ail haché et faire revenir pendant 1 minute, en sentant l'odeur piquante de l'ail.",
-        "Incorporer 3g de curcuma. Cuire pendant 1 minute, en observant la couleur jaune intense du curcuma. Ajouter les légumes verts hachés et mélanger pour bien combiner les saveurs.",
-        "Cuire pendant 8 minutes à feu moyen, en laissant les saveurs se développer. Ajouter 300g de haricots verts et 200g de carotte en rondelles. Cuire encore 5 minutes, en vérifiant la texture tendre des légumes.",
-        "Assaisonner de 5g de sel et 2g de poivre. Le saag doit être vert intense, légèrement rustique, parfumé aux épices népalaises. Vérifier que les légumes sont tendres.",
-        "Servir sans attendre sur du riz ou avec du dal."
+        "Étape 1 : Laver abondamment 300g de feuilles d'épinards. Blanchir 1 minute dans l'eau bouillante salée à 100°C. Égoutter et rafraîchir à l'eau froide pour fixer la couleur verte intense.",
+        "Étape 2 : Hacher grossièrement les légumes verts blanchis. Chauffer 45ml d'huile d'olive extra vierge à feu moyen, jusqu'à ce qu'elle commence à briller. Faire grésiller 3g de graines de cumin pendant 30 secondes, en écoutant le son caractéristique de grésillement.",
+        "Étape 3 : Faire revenir 150g d'oignon jaune émincé pendant 5 minutes, en remuant régulièrement, jusqu'à ce qu'il soit caramélisé et parfumé. Ajouter 9g d'ail haché et faire revenir pendant 1 minute, en sentant l'odeur piquante de l'ail.",
+        "Étape 4 : Incorporer 3g de curcuma. Cuire pendant 1 minute, en observant la couleur jaune intense du curcuma. Ajouter les légumes verts hachés et mélanger pour bien combiner les saveurs.",
+        "Étape 5 : Cuire pendant 8 minutes à feu moyen, en laissant les saveurs se développer. Ajouter 300g de haricots verts et 200g de carotte en rondelles. Cuire encore 5 minutes, en vérifiant la texture tendre des légumes.",
+        "Étape 6 : Assaisonner de 5g de sel et 2g de poivre. Le saag doit être vert intense, légèrement rustique, parfumé aux épices népalaises. Vérifier que les légumes sont tendres.",
+        "Étape 7 : Servir sans attendre sur du riz ou avec du dal."
       ],
       "diet_flags": {
         "vegan": true,
@@ -95858,7 +95459,7 @@
       "description": "Salade de papaye verte râpée, croquante et fraîche, relevée par une sauce émulsionnée au citron vert et au sucre de coco, typique de la cuisine thaïlandaise avec une texture régulière et une odeur de citron vert.",
       "instructions": [
         "Étape 1 : Râper 400g de papaye verte en julienne fine, jusqu'à obtenir une texture régulière et croquante, avec une longueur d'environ 5 cm.",
-        "Étape 2 : Saisir 9g d'ail et 15g de piment rouge dans un mortier, pendant environ 2 minutes, jusqu'à obtenir une pâte lisse et parfumée, avec une odeur piquante.",
+        "Étape 2 : Piler 9 g d'ail et 15 g de piment rouge dans un mortier, pendant environ 2 minutes, jusqu'à obtenir une pâte lisse et parfumée, avec une odeur piquante.",
         "Étape 3 : Ajouter 150g de haricots verts coupés en deux et piler légèrement, pendant environ 1 minute, jusqu'à ce que les haricots soient légèrement écrasés et révèlent leur tendresse, avec une texture encore croquante.",
         "Étape 4 : Incorporer 30ml de sauce de poisson végétal, 10g de sucre de coco et 40 ml de jus de citron vert, émulsionner pendant environ 2 minutes, jusqu'à obtenir une sauce homogène et savoureuse, avec une consistance légèrement épaisse.",
         "Étape 5 : Ajouter 400g de papaye râpée, 200g de tomates cerises coupées en deux, mélanger en pilant légèrement, pendant environ 2 minutes, jusqu'à ce que la papaye soit bien imprégnée des saveurs, avec une texture uniforme.",
@@ -97236,7 +96837,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 2,
         "iconic": {
           "status": false,
           "score": 5.8,
@@ -98727,12 +98328,12 @@
       "_quality_score": 0.86,
       "description": "Sauté de plantain à feu vif, cuisson rapide pour préserver la texture tendre et la couleur dorée, avec une surface croustillante et un intérieur fondant — technique inspirée de la cuisine caraïbe, avec une touche d'acidité citronnée.",
       "instructions": [
-        "Choisir des banane plantain mûrs (peau jaune tachetée de noir) — plus sucrés et fondants que les verts. Peler soigneusement et couper en diagonale en tranches de 1,5 cm d'épaisseur pour une cuisson uniforme.",
-        "Chauffer 40 ml d'huile d'olive extra vierge dans une poêle à feu moyen-vif, jusqu'à ce que l'huile commence à briller et à émettre une légère fumée, indiquant une température idéale pour la friture.",
-        "Faire dorer les tranches de banane plantain 2 à 3 minutes par face, jusqu'à ce que la surface soit brun doré caramélisée et l'intérieur reste tendre. Ne pas bouger les tranches pendant la cuisson pour former une croûte croustillante.",
-        "Égoutter les tranches de banane plantain sur du papier absorbant pour éliminer l'excès d'huile. Saler légèrement avec du sel pour rehausser les saveurs naturelles de la banane plantain.",
-        "Presser du jus de citron frais sur les banane plantain encore chauds, en veillant à ce que la surface reste croustillante et l'intérieur fondant, avec une saveur légèrement sucrée et acidulée.",
-        "Servir aussitôt."
+        "Étape 1 : Choisir des banane plantain mûrs (peau jaune tachetée de noir) — plus sucrés et fondants que les verts. Peler soigneusement et couper en diagonale en tranches de 1,5 cm d'épaisseur pour une cuisson uniforme.",
+        "Étape 2 : Chauffer 40 ml d'huile d'olive extra vierge dans une poêle à feu moyen-vif, jusqu'à ce que l'huile commence à briller et à émettre une légère fumée, indiquant une température idéale pour la friture.",
+        "Étape 3 : Faire dorer les tranches de banane plantain 2 à 3 minutes par face, jusqu'à ce que la surface soit brun doré caramélisée et l'intérieur reste tendre. Ne pas bouger les tranches pendant la cuisson pour former une croûte croustillante.",
+        "Étape 4 : Égoutter les tranches de banane plantain sur du papier absorbant pour éliminer l'excès d'huile. Saler légèrement avec du sel pour rehausser les saveurs naturelles de la banane plantain.",
+        "Étape 5 : Presser du jus de citron frais sur les banane plantain encore chauds, en veillant à ce que la surface reste croustillante et l'intérieur fondant, avec une saveur légèrement sucrée et acidulée.",
+        "Étape 6 : Servir aussitôt."
       ],
       "diet_flags": {
         "vegan": true,
@@ -101531,7 +101132,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "low_calorie",
           "vegan",
           "vegetarian",
@@ -101596,16 +101196,12 @@
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "four",
         "fries",
         "frites",
         "frying",
         "gravy",
-        "kids",
         "leger",
         "legumes",
         "light",
@@ -104865,12 +104461,12 @@
       "_chef_note": "Vous pouvez également ajouter des olives noires ou des artichauts pour donner un peu plus de saveur à la tarte.",
       "description": "Tarte provençale à la moutarde de Dijon, tomates confites tendres et basilic frais parfumé, emblème des repas estivaux français, réalisée avec une pâte brisée croustillante et des saveurs méditerranéennes.",
       "instructions": [
-        "Préchauffer le four à 180°C. Étalez la pâte brisée dans un moule à tarte et précuire à blanc pendant 10 minutes avec des billes de cuisson pour éviter que la pâte ne gonfle.",
-        "Nappez généreusement le fond de la tarte avec 9.1 ml de moutarde de Dijon, en vous assurant de bien couvrir le fond pour que les saveurs soient réparties de manière homogène.",
-        "Coupez les tomates en rondelles de 8 mm d'épaisseur, puis disposez-les en rosace serrée sur le fond de la tarte, en veillant à ce que les tomates soient bien alignées pour une présentation appétissante.",
-        "Parsemez de 5 g de thym frais effeuillé et 20 ml d'huile d'olive sur les tomates pour ajouter des notes herbacées et une touche de fraîcheur.",
-        "Enfournez la tarte à 180°C pendant 25 minutes, jusqu'à ce que la pâte soit brun dorée et les tomates soient confites, en vérifiant régulièrement la cuisson pour éviter que la tarte ne brûle.",
-        "À la sortie du four, ajoutez des feuilles de basilic frais sur la tarte pour ajouter une touche de fraîcheur et de parfum, puis servez tiède pour apprécier pleinement les saveurs."
+        "Étape 1 : Préchauffer le four à 180°C. Étalez la pâte brisée dans un moule à tarte et précuire à blanc pendant 10 minutes avec des billes de cuisson pour éviter que la pâte ne gonfle.",
+        "Étape 2 : Nappez généreusement le fond de la tarte avec 9.1 ml de moutarde de Dijon, en vous assurant de bien couvrir le fond pour que les saveurs soient réparties de manière homogène.",
+        "Étape 3 : Coupez les tomates en rondelles de 8 mm d'épaisseur, puis disposez-les en rosace serrée sur le fond de la tarte, en veillant à ce que les tomates soient bien alignées pour une présentation appétissante.",
+        "Étape 4 : Parsemez de 5 g de thym frais effeuillé et 20 ml d'huile d'olive sur les tomates pour ajouter des notes herbacées et une touche de fraîcheur.",
+        "Étape 5 : Enfournez la tarte à 180°C pendant 25 minutes, jusqu'à ce que la pâte soit brun dorée et les tomates soient confites, en vérifiant régulièrement la cuisson pour éviter que la tarte ne brûle.",
+        "Étape 6 : À la sortie du four, ajoutez des feuilles de basilic frais sur la tarte pour ajouter une touche de fraîcheur et de parfum, puis servez tiède pour apprécier pleinement les saveurs."
       ],
       "diet_flags": {
         "vegan": false,
@@ -104994,7 +104590,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -105066,16 +104661,12 @@
         "debutant",
         "easy",
         "egg",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french_alsatian",
         "green",
         "jaune",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -105114,12 +104705,12 @@
       "_chef_note": "Vous pouvez également ajouter des herbes fraîches comme du thym ou du persil pour donner un peu plus de saveur à la tarte.",
       "description": "Tarte alsacienne d'oignons jaunes confits dans le beurre, liés à la crème fraîche, avec une texture fondante et une saveur intense de caramelisation",
       "instructions": [
-        "Émincer finement les 750 g d'oignons jaunes en demi-rondelles. Les faire confire dans le beurre à feu très doux pendant 30 minutes en remuant régulièrement jusqu'à ce qu'ils soient fondants, translucides, légèrement caramelisés et sucrés — sans brunir. Laisser tiédir.",
-        "Foncer un moule de 26 cm avec les 250 g de pâte brisée étalée à 3 mm. Piquer le fond et réfrigérer 20 minutes. Préchauffer le four à 180 °C.",
-        "Dans un bol, battre les 165 g d'œuf, incorporer la crème fraîche et une pincée de noix de muscade (0,5g). Ajouter les oignons confits tièdes et mélanger jusqu'à obtenir une texture homogène.",
-        "Verser l'appareil sur le fond de tarte et enfourner pendant 35 minutes à 180 °C. La surface doit être uniformément dorée, l'appareil pris — il doit frémir légèrement au centre mais ne pas être liquide.",
-        "Laisser reposer 10 minutes avant de servir. La tarte se mange tiède ou à température ambiante.",
-        "Servir, accompagné d'une salade verte ou des légumes vapeur pour un repas équilibré."
+        "Étape 1 : Émincer finement les 750 g d'oignons jaunes en demi-rondelles. Les faire confire dans le beurre à feu très doux pendant 30 minutes en remuant régulièrement jusqu'à ce qu'ils soient fondants, translucides, légèrement caramelisés et sucrés — sans brunir. Laisser tiédir.",
+        "Étape 2 : Foncer un moule de 26 cm avec les 250 g de pâte brisée étalée à 3 mm. Piquer le fond et réfrigérer 20 minutes. Préchauffer le four à 180 °C.",
+        "Étape 3 : Dans un bol, battre les 165 g d'œuf, incorporer la crème fraîche et une pincée de noix de muscade (0,5g). Ajouter les oignons confits tièdes et mélanger jusqu'à obtenir une texture homogène.",
+        "Étape 4 : Verser l'appareil sur le fond de tarte et enfourner pendant 35 minutes à 180 °C. La surface doit être uniformément dorée, l'appareil pris — il doit frémir légèrement au centre mais ne pas être liquide.",
+        "Étape 5 : Laisser reposer 10 minutes avant de servir. La tarte se mange tiède ou à température ambiante.",
+        "Étape 6 : Servir, accompagné d'une salade verte ou des légumes vapeur pour un repas équilibré."
       ],
       "diet_flags": {
         "vegan": false,
@@ -106208,7 +105799,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -106278,10 +105868,7 @@
         "classique",
         "cream,",
         "creme",
-        "enfants",
         "epaisse",
-        "facile enfants",
-        "famille",
         "fat",
         "feuilletee",
         "francais",
@@ -106293,7 +105880,6 @@
         "heavy",
         "intermediaire",
         "jaune",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -110065,7 +109651,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 2,
         "iconic": {
           "status": false,
           "score": 4.8,
@@ -119723,8 +119309,8 @@
         },
         {
           "ingredient": "kaffir_lime_leaf",
-          "quantity": 3,
-          "unit": "leaf",
+          "quantity": 1,
+          "unit": "g",
           "meta": {
             "role": "aromatic"
           }
@@ -121150,7 +120736,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 3,
+        "spice_level": 1,
         "iconic": {
           "status": true,
           "score": 9,
@@ -122428,7 +122014,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free",
           "nut_free"
         ],
@@ -122490,14 +122075,10 @@
         "chinese",
         "chinois",
         "coriander",
-        "enfants",
-        "facile enfants",
-        "famille",
         "fried",
         "garlic",
         "green",
         "intermediaire",
-        "kids",
         "leger",
         "light",
         "low calorie",
@@ -123646,7 +123227,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 2,
         "iconic": {
           "status": false,
           "score": 5.8,
@@ -123928,7 +123509,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 2,
         "iconic": {
           "status": false,
           "score": 5.8,
@@ -126850,14 +126431,14 @@
       "_quality_score": 0.77,
       "description": "Poivrons rouges farcis de riz long grain à la tomate, persil frais et origan, cuits au four jusqu'à caramélisation, fondants et bien parfumés, avec une texture tendre et une odeur de légumes grillés",
       "instructions": [
-        "Cuire le riz long grain à l'eau salée, légèrement al dente, pendant environ 15 minutes, jusqu'à ce que les grains soient tendres mais encore fermes au centre.",
-        "Faire revenir l'oignon jaune et l'ail dans l'huile d'olive extra vierge, ajouter les tomates fraîches et les herbes comme le persil frais et l'origan, pendant environ 5 minutes, jusqu'à ce que les tomates soient tendres et les herbes parfumées.",
-        "Mélanger le riz cuit avec la sauce tomate, persil frais, origan, sel et poivre, pendant environ 2 minutes, jusqu'à ce que les saveurs soient bien combinées.",
-        "Couper les poivrons rouges en deux ou decalotter-les, puis épépiner soigneusement, en prenant soin de ne pas endommager la peau.",
-        "Farcir généreusement chaque poivron avec la préparation au riz, en veillant à ce que les poivrons soient bien remplis mais pas trop pleins.",
-        "Disposer les poivrons farcis dans un plat huilé d'huile d'olive, ajouter un fond d'eau ou de bouillon végétal, et couvrir de papier aluminium.",
-        "Enfourner à 180°C pendant 35 minutes, puis retirer le papier aluminium et dorer pendant 10 minutes, jusqu'à ce que les poivrons soient tendres et la surface soit légèrement caramélisée.",
-        "Servir chaud dans des assiettes, accompagné d'une sauce tomate légère, et garni de persil frais ciselé."
+        "Étape 1 : Cuire le riz long grain à l'eau salée, légèrement al dente, pendant environ 15 minutes, jusqu'à ce que les grains soient tendres mais encore fermes au centre.",
+        "Étape 2 : Faire revenir l'oignon jaune et l'ail dans l'huile d'olive extra vierge, ajouter les tomates fraîches et les herbes comme le persil frais et l'origan, pendant environ 5 minutes, jusqu'à ce que les tomates soient tendres et les herbes parfumées.",
+        "Étape 3 : Mélanger le riz cuit avec la sauce tomate, persil frais, origan, sel et poivre, pendant environ 2 minutes, jusqu'à ce que les saveurs soient bien combinées.",
+        "Étape 4 : Couper les poivrons rouges en deux ou decalotter-les, puis épépiner soigneusement, en prenant soin de ne pas endommager la peau.",
+        "Étape 5 : Farcir généreusement chaque poivron avec la préparation au riz, en veillant à ce que les poivrons soient bien remplis mais pas trop pleins.",
+        "Étape 6 : Disposer les poivrons farcis dans un plat huilé d'huile d'olive, ajouter un fond d'eau ou de bouillon végétal, et couvrir de papier aluminium.",
+        "Étape 7 : Enfourner à 180°C pendant 35 minutes, puis retirer le papier aluminium et dorer pendant 10 minutes, jusqu'à ce que les poivrons soient tendres et la surface soit légèrement caramélisée.",
+        "Étape 8 : Servir chaud dans des assiettes, accompagné d'une sauce tomate légère, et garni de persil frais ciselé."
       ],
       "diet_flags": {
         "vegan": true,
@@ -130962,7 +130543,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 2,
         "iconic": {
           "status": false,
           "score": 5.8,
@@ -136783,13 +136364,13 @@
       "_quality_score": 0.84,
       "description": "Salade fraîche et acidulée de tomates coupées en dés de 1 cm et d'oignons fins, assaisonnée avec de la coriandre fraîche ciselée, du vinaigre blanc et de l'huile d'olive, préparée selon la tradition chilienne.",
       "instructions": [
-        "Couper les tomates en dés de 1 cm et les saler avec 3 g de sel. Laisser dégorger pendant 10 minutes à température ambiante pour permettre aux tomates de rendre leur eau et de mieux absorber les saveurs.",
-        "Émincer l'oignon jaune en demi-rondelles fines et le rincer à l'eau froide pendant 2 minutes pour enlever l'âcreté et obtenir une texture plus douce.",
-        "Ciseler finement 10 g de coriandre fraîche.",
-        "Préparer la vinaigrette en mélangeant 10 ml de jus de citron et 45 ml d'huile d'olive. Émulsionner pendant 1 minute jusqu'à obtenir une texture lisse et homogène, signe d'une vinaigrette bien préparée.",
-        "Combiner les tomates, l'oignon jaune, les herbes et la vinaigrette. Mélanger délicatement pendant 1 minute jusqu'à ce que les saveurs soient équilibrées et les textures bien mélangées, permettant ainsi aux saveurs de se fondre en harmonie.",
-        "Ajouter 30 ml de vinaigre blanc pour donner une touche acidulée à la salade, puis mélanger à nouveau pour bien intégrer.",
-        "Servir sans attendre, car la fraîcheur et la texture des ingrédients sont essentielles pour apprécier pleinement cette salade chilienne."
+        "Étape 1 : Couper les tomates en dés de 1 cm et les saler avec 3 g de sel. Laisser dégorger pendant 10 minutes à température ambiante pour permettre aux tomates de rendre leur eau et de mieux absorber les saveurs.",
+        "Étape 2 : Émincer l'oignon jaune en demi-rondelles fines et le rincer à l'eau froide pendant 2 minutes pour enlever l'âcreté et obtenir une texture plus douce.",
+        "Étape 3 : Ciseler finement 10 g de coriandre fraîche.",
+        "Étape 4 : Préparer la vinaigrette en mélangeant 10 ml de jus de citron et 45 ml d'huile d'olive. Émulsionner pendant 1 minute jusqu'à obtenir une texture lisse et homogène, signe d'une vinaigrette bien préparée.",
+        "Étape 5 : Combiner les tomates, l'oignon jaune, les herbes et la vinaigrette. Mélanger délicatement pendant 1 minute jusqu'à ce que les saveurs soient équilibrées et les textures bien mélangées, permettant ainsi aux saveurs de se fondre en harmonie.",
+        "Étape 6 : Ajouter 30 ml de vinaigre blanc pour donner une touche acidulée à la salade, puis mélanger à nouveau pour bien intégrer.",
+        "Étape 7 : Servir sans attendre, car la fraîcheur et la texture des ingrédients sont essentielles pour apprécier pleinement cette salade chilienne."
       ],
       "diet_flags": {
         "vegan": true,
@@ -139002,12 +138583,12 @@
     {
       "id": "salad_de_quinoa_e74dea",
       "titles": {
-        "original": "Salade De Quinoa",
-        "fr": "Salade de Quinoa",
-        "en": "Quinoa Salad"
+        "original": "Quinoa Tabbouleh with Parsley and Lemon",
+        "fr": "Taboulé de quinoa au persil et au citron",
+        "en": "Quinoa Tabbouleh with Parsley and Lemon"
       },
       "origin": {
-        "cuisine": "international",
+        "cuisine": "mediterranean",
         "country": "international",
         "region": "world",
         "city": ""
@@ -139167,6 +138748,7 @@
       },
       "search_tokens": [
         "1 heure",
+        "and",
         "assembly",
         "citron",
         "coeliaque",
@@ -139177,12 +138759,14 @@
         "famille",
         "gluten free",
         "intermediaire",
-        "international",
         "kids",
         "leger",
         "lemon",
         "light",
         "low calorie",
+        "mediterranean",
+        "mediterranee",
+        "mediterraneen",
         "minceur",
         "moyen",
         "oignon",
@@ -139191,34 +138775,35 @@
         "parsley",
         "persil",
         "quinoa",
-        "salad",
-        "salade",
         "salt",
         "sans gluten",
         "sans produit animal",
         "sans viande",
         "sel",
+        "tabbouleh",
         "table",
+        "taboule",
         "tomate",
         "tomato",
         "vegan",
         "vegetalien",
         "vegetarien",
-        "water_cooking"
+        "water_cooking",
+        "with"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.86,
-      "description": "Salade fraîche et parfumée, préparée avec du quinoa cuit, des légumes croquants comme concombre, tomate et oignon, liés par une vinaigrette citronnée, typique de la cuisine méditerranéenne.",
+      "description": "Salade de quinoa façon taboulé, sans blé : beaucoup de persil, concombre et tomate en dés fins, vinaigrette très citronnée, servie bien fraîche.",
       "instructions": [
-        "Rincer 250g de quinoa cru, puis cuire 12 minutes à feu doux dans 2 fois son volume d'eau salée pour obtenir un quinoa tendre et séparé.",
-        "Étaler le quinoa cuit pour le refroidir rapidement à température ambiante, évitant ainsi la formation de grumeaux.",
-        "Couper 350g de concombre, 300g de tomates et 150g d'oignon jaune en dés réguliers de 5 mm pour une belle présentation.",
-        "Préparer la vinaigrette : dissoudre 5 g de sel dans 50 ml de jus de citron frais, ajouter 45ml d'huile d'olive et du poivre pour une saveur équilibrée.",
-        "Mélanger le quinoa refroidi avec les légumes et la vinaigrette, laisser reposer 15 minutes pour que les saveurs se mélangent et les saveurs se développent.",
-        "Goûter et ajuster la salade, vérifier que les grains de quinoa sont bien séparés et que la salade est fraîche et parfumée pour un repas satisfaisant.",
-        "Servir dans des assiettes fraîches, garnir avec des feuilles de persil frais ciselées pour une touche de couleur et de fraîcheur."
+        "Étape 1 : Rincer 250g de quinoa cru, puis cuire 12 minutes à feu doux dans 2 fois son volume d'eau salée pour obtenir un quinoa tendre et séparé.",
+        "Étape 2 : Étaler le quinoa cuit pour le refroidir rapidement à température ambiante, évitant ainsi la formation de grumeaux.",
+        "Étape 3 : Couper 350g de concombre, 300g de tomates et 150g d'oignon jaune en dés réguliers de 5 mm pour une belle présentation.",
+        "Étape 4 : Préparer la vinaigrette : dissoudre 5 g de sel dans 50 ml de jus de citron frais, ajouter 45ml d'huile d'olive et du poivre pour une saveur équilibrée.",
+        "Étape 5 : Mélanger le quinoa refroidi avec les légumes et la vinaigrette, laisser reposer 15 minutes pour que les saveurs se mélangent et les saveurs se développent.",
+        "Étape 6 : Goûter et ajuster la salade, vérifier que les grains de quinoa sont bien séparés et que la salade est fraîche et parfumée pour un repas satisfaisant.",
+        "Étape 7 : Servir dans des assiettes fraîches, garnir avec des feuilles de persil frais ciselées pour une touche de couleur et de fraîcheur."
       ],
       "diet_flags": {
         "vegan": true,
@@ -139789,7 +139374,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 2,
         "iconic": {
           "status": false,
           "score": 5.5,
@@ -140641,7 +140226,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 3,
         "iconic": {
           "status": false,
           "score": 6.0,
@@ -142052,7 +141637,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "raw",
           "vegetarian"
         ],
         "allergens": [
@@ -142119,8 +141703,6 @@
         "cerneau",
         "classique",
         "coeliaque",
-        "cru",
-        "crudivorisme",
         "debutant",
         "easy",
         "express",
@@ -142143,7 +141725,6 @@
         "poire",
         "quick",
         "rapide",
-        "raw",
         "roquefort",
         "salade",
         "sans gluten",
@@ -142153,7 +141734,6 @@
         "vegetarien",
         "vinaigre",
         "vinegar",
-        "vivant",
         "walnut",
         "walnut,",
         "walnuts",
@@ -143174,11 +142754,11 @@
       "_quality_score": 0.83,
       "description": "Salade fraîche et colorée, préparée avec des tomates coupées en dés, des concombres croquants et des oignons fins, le tout relevé par une vinaigrette citronnée et légère, typique de la cuisine turque.",
       "instructions": [
-        "Ciselez finement l'oignon et le persil plat, en veillant à obtenir des lanières délicates et parfumées.",
-        "Épluchez le concombre et coupez-le en dés de 1 cm, en épépinant le poivron rouge pour obtenir des morceaux croquants.",
-        "Coupez les tomates en dés de 1 cm, en les ajoutant aux autres légumes dans un saladier pour créer un mélange coloré et appétissant.",
-        "Préparez la vinaigrette : émulsionnez 40 ml de jus de citron, 45 ml d'huile d'olive, 5 g de sel et du poivre pour obtenir une sauce légère et rafraîchissante.",
-        "Versez la vinaigrette sur les légumes et mélangez délicatement pour éviter de les écraser, puis servez sans attendre."
+        "Étape 1 : Ciselez finement l'oignon et le persil plat, en veillant à obtenir des lanières délicates et parfumées.",
+        "Étape 2 : Épluchez le concombre et coupez-le en dés de 1 cm, en épépinant le poivron rouge pour obtenir des morceaux croquants.",
+        "Étape 3 : Coupez les tomates en dés de 1 cm, en les ajoutant aux autres légumes dans un saladier pour créer un mélange coloré et appétissant.",
+        "Étape 4 : Préparez la vinaigrette : émulsionnez 40 ml de jus de citron, 45 ml d'huile d'olive, 5 g de sel et du poivre pour obtenir une sauce légère et rafraîchissante.",
+        "Étape 5 : Versez la vinaigrette sur les légumes et mélangez délicatement pour éviter de les écraser, puis servez sans attendre."
       ],
       "diet_flags": {
         "vegan": true,
@@ -143651,7 +143231,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 2,
         "iconic": {
           "status": false,
           "score": 5.1,
@@ -143734,9 +143314,9 @@
     {
       "id": "sauce_tofu_croustillant_sauce_a_b8be56",
       "titles": {
-        "original": "Tofu Croustillant Sauce Ail",
+        "original": "Crispy Tofu with Garlic Sauce",
         "fr": "Tofu Croustillant Sauce Ail",
-        "en": "Tofu Croustillant Sauce Ail"
+        "en": "Crispy Tofu with Garlic Sauce"
       },
       "origin": {
         "cuisine": "international",
@@ -143925,6 +143505,7 @@
         "blanc",
         "coriander",
         "cornstarch",
+        "crispy",
         "croustillant",
         "frying",
         "garlic",
@@ -143957,6 +143538,7 @@
         "vinaigre",
         "vinegar",
         "white",
+        "with",
         "wok"
       ],
       "difficulty_level": "medium",
@@ -144354,7 +143936,6 @@
         "diet": [
           "diabetes_friendly",
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -144423,17 +144004,13 @@
         "cucumber",
         "debutant",
         "easy",
-        "enfants",
         "estragon",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "gluten free",
         "gribiche",
-        "kids",
         "leger",
         "light",
         "low calorie",
@@ -144853,7 +144430,6 @@
         "diet": [
           "diabetes_friendly",
           "gluten_free",
-          "kid_friendly",
           "low_calorie",
           "nut_free"
         ],
@@ -144919,17 +144495,13 @@
         "coeliaque",
         "debutant",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "garlic",
         "gluten free",
-        "kids",
         "leger",
         "lemon",
         "light",
@@ -145122,7 +144694,6 @@
         "diet": [
           "diabetes_friendly",
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "vegan",
@@ -145188,16 +144759,12 @@
         "curcuma",
         "debutant",
         "easy",
-        "enfants",
         "express",
         "facile",
-        "facile enfants",
-        "famille",
         "fleur",
         "gluten free",
         "grape",
         "international",
-        "kids",
         "leger",
         "lemon",
         "light",
@@ -145398,7 +144965,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "vegan",
           "vegetarian",
           "lactose_free",
@@ -145458,9 +145024,6 @@
         "cream",
         "creme",
         "d'avoine",
-        "enfants",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
@@ -145468,7 +145031,6 @@
         "gratin",
         "huile",
         "intermediaire",
-        "kids",
         "leek",
         "leeks",
         "leger",
@@ -145666,7 +145228,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -145727,11 +145288,8 @@
         "creme",
         "debutant",
         "easy",
-        "enfants",
         "epaisse",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
@@ -145740,7 +145298,6 @@
         "gratin",
         "gruyere",
         "heavy",
-        "kids",
         "lait",
         "leger",
         "lent",
@@ -147237,7 +146794,6 @@
           "diabetes_friendly",
           "gluten_free",
           "high_protein",
-          "kid_friendly",
           "low_calorie",
           "nut_free"
         ],
@@ -147310,10 +146866,7 @@
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "flageolet",
         "flageolets",
         "francais",
@@ -147323,7 +146876,6 @@
         "gluten free",
         "haricot",
         "jaune",
-        "kids",
         "leger",
         "legumes",
         "light",
@@ -148053,7 +147605,6 @@
           "diabetes_friendly",
           "gluten_free",
           "high_protein",
-          "kid_friendly",
           "low_calorie",
           "nut_free"
         ],
@@ -148121,16 +147672,12 @@
         "easy",
         "echalote",
         "echalotes",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "gluten free",
         "green",
-        "kids",
         "laurier",
         "leaf",
         "leger",
@@ -148349,7 +147896,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -148416,14 +147962,10 @@
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "garlic",
         "international",
         "jaune",
-        "kids",
         "leger",
         "legumes",
         "levure",
@@ -148555,7 +148097,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free",
           "vegetarian",
           "vegan",
@@ -148624,9 +148165,6 @@
         "classique",
         "country",
         "eau",
-        "enfants",
-        "facile enfants",
-        "famille",
         "farine",
         "fermentation",
         "flour",
@@ -148634,7 +148172,6 @@
         "france",
         "french",
         "intermediaire",
-        "kids",
         "leger",
         "lent",
         "levain",
@@ -149070,7 +148607,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "low_calorie",
           "nut_free"
         ],
@@ -149130,17 +148666,13 @@
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "francaise",
         "france",
         "french",
         "gluten free",
         "green",
-        "kids",
         "leger",
         "legumes",
         "lettuce",
@@ -149184,12 +148716,12 @@
       "_quality_score": 0.99,
       "description": "Accompagnement français traditionnel à base de petits pois, préparés avec soin pour obtenir une texture tendre et une saveur sucrée, avec une sauce légèrement sirupeuse.",
       "instructions": [
-        "Dans une cocotte, faire fondre 30 g de beurre avec 10 g de sucre à feu doux, jusqu'à ce que le sucre soit complètement dissous. Ajouter 100 g d'oignons grelots et les faire dorer doucement pendant 5 minutes, en sentant l'odeur sucrée des oignons.",
-        "Ajouter 500 g de petits pois frais ou surgelés et 300 g de feuilles de laitue émincées en chiffonnade. Remuer délicatement pour bien mélanger.",
-        "Verser 100 ml de bouillon de légumes. Saler légèrement avec 4 g de sel et poivrer avec 2 g de poivre. Couvrir et cuire à feu doux pendant 15 à 18 minutes, en écoutant le doux bouillonlement du liquide.",
-        "Découvrir et réduire brièvement si trop de liquide. La sauce doit être légèrement sirupeuse et les petits pois doivent être tendres.",
-        "Rectifier l'assaisonnement. Terminer avec des fines herbes ciselées, comme 5 g de menthe ou 8 g de persil frais. Les petits pois doivent être très tendres et sucrés, la sauce légèrement liée.",
-        "Ajouter 10 g de beurre froid pour lier la sauce. Servir sans attendre, en profitant de la chaleur et de la texture des petits pois."
+        "Étape 1 : Dans une cocotte, faire fondre 30 g de beurre avec 10 g de sucre à feu doux, jusqu'à ce que le sucre soit complètement dissous. Ajouter 100 g d'oignons grelots et les faire dorer doucement pendant 5 minutes, en sentant l'odeur sucrée des oignons.",
+        "Étape 2 : Ajouter 500 g de petits pois frais ou surgelés et 300 g de feuilles de laitue émincées en chiffonnade. Remuer délicatement pour bien mélanger.",
+        "Étape 3 : Verser 100 ml de bouillon de légumes. Saler légèrement avec 4 g de sel et poivrer avec 2 g de poivre. Couvrir et cuire à feu doux pendant 15 à 18 minutes, en écoutant le doux bouillonlement du liquide.",
+        "Étape 4 : Découvrir et réduire brièvement si trop de liquide. La sauce doit être légèrement sirupeuse et les petits pois doivent être tendres.",
+        "Étape 5 : Rectifier l'assaisonnement. Terminer avec des fines herbes ciselées, comme 5 g de menthe ou 8 g de persil frais. Les petits pois doivent être très tendres et sucrés, la sauce légèrement liée.",
+        "Étape 6 : Ajouter 10 g de beurre froid pour lier la sauce. Servir sans attendre, en profitant de la chaleur et de la texture des petits pois."
       ],
       "diet_flags": {
         "vegan": false,
@@ -149324,7 +148856,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -149392,9 +148923,6 @@
         "dauphine",
         "eau",
         "egg",
-        "enfants",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "francais",
@@ -149402,7 +148930,6 @@
         "french",
         "frying",
         "huile",
-        "kids",
         "leger",
         "light",
         "low calorie",
@@ -149439,12 +148966,12 @@
       "_quality_score": 1.0,
       "description": "Accompagnement français à base de pommes de terre, fondant et bien cuit, avec une texture crémeuse et une saveur parfumée, typique de la cuisine française traditionnelle.",
       "instructions": [
-        "Cuire les pommes de terre à l'eau salée pendant 15-20 min, puis les égoutter et les passer au presse-purée. Les pommes de terre doivent être tendres et crémeuses.",
-        "Préparer la pâte à choux: porter l'eau, le beurre et le sel à ébullition, puis ajouter la farine d'un coup et dessécher pendant 2 min. La pâte à choux doit être lisse et homogène.",
-        "Hors du feu, incorporer les œufs un à un, en mélangeant délicatement, puis ajouter du poivre et une pincée de noix de muscade (0,5g). La pâte à choux doit être crémeuse et parfumée.",
-        "Mélanger la purée chaude avec la pâte à choux en proportions égales, en vérifiant la texture et la saveur. La mixture doit être lisse et crémeuse.",
-        "Former des quenelles à la cuillère, en les espaçant régulièrement, puis frire à 170°C pendant 3-4 min. Les quenelles doivent être dorées et croustillantes à l'extérieur, et fondantes à l'intérieur.",
-        "Frire les quenelles par petites quantités, en les retournant régulièrement, jusqu'à dorure blonde et texture croustillante. Les pommes dauphine doivent être servies chaudes et fondantes, sans attendre pour préserver leur croustillant."
+        "Étape 1 : Cuire les pommes de terre à l'eau salée pendant 15-20 min, puis les égoutter et les passer au presse-purée. Les pommes de terre doivent être tendres et crémeuses.",
+        "Étape 2 : Préparer la pâte à choux: porter l'eau, le beurre et le sel à ébullition, puis ajouter la farine d'un coup et dessécher pendant 2 min. La pâte à choux doit être lisse et homogène.",
+        "Étape 3 : Hors du feu, incorporer les œufs un à un, en mélangeant délicatement, puis ajouter du poivre et une pincée de noix de muscade (0,5g). La pâte à choux doit être crémeuse et parfumée.",
+        "Étape 4 : Mélanger la purée chaude avec la pâte à choux en proportions égales, en vérifiant la texture et la saveur. La mixture doit être lisse et crémeuse.",
+        "Étape 5 : Former des quenelles à la cuillère, en les espaçant régulièrement, puis frire à 170°C pendant 3-4 min. Les quenelles doivent être dorées et croustillantes à l'extérieur, et fondantes à l'intérieur.",
+        "Étape 6 : Frire les quenelles par petites quantités, en les retournant régulièrement, jusqu'à dorure blonde et texture croustillante. Les pommes dauphine doivent être servies chaudes et fondantes, sans attendre pour préserver leur croustillant."
       ],
       "diet_flags": {
         "vegan": false,
@@ -149773,7 +149300,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "vegan",
@@ -149834,14 +149360,10 @@
         "d'erable",
         "debutant",
         "easy",
-        "enfants",
         "epices",
         "facile",
-        "facile enfants",
-        "famille",
         "gluten free",
         "grenade",
-        "kids",
         "kuri",
         "leger",
         "levantine",
@@ -150955,7 +150477,6 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "kid_friendly",
           "low_calorie",
           "vegan",
           "vegetarian",
@@ -151017,12 +150538,8 @@
         "cucumber",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "gluten free",
-        "kids",
         "leger",
         "lemon",
         "levantine",
@@ -151224,7 +150741,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "low_calorie",
           "nut_free",
@@ -151283,17 +150799,13 @@
         "debutant",
         "easy",
         "eggplant",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french_provencal",
         "garlic",
         "gluten free",
         "green",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -151739,7 +151251,6 @@
       ],
       "tags": {
         "diet": [
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -151807,10 +151318,7 @@
         "debutant",
         "easy",
         "egg",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "farine",
         "flour",
         "francais",
@@ -151819,7 +151327,6 @@
         "gateau",
         "herb",
         "herbes",
-        "kids",
         "lait",
         "leger",
         "lent",
@@ -152231,7 +151738,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 2,
         "iconic": {
           "status": false,
           "score": 5.6,
@@ -154293,9 +153800,7 @@
         }
       ],
       "tags": {
-        "diet": [
-          "kid_friendly"
-        ],
+        "diet": [],
         "allergens": [
           "gluten",
           "lactose",
@@ -154357,17 +153862,13 @@
         "classique",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "fat",
         "feuilletee",
         "francais",
         "france",
         "french_provencal",
         "grasse",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -159005,12 +158506,12 @@
       "_quality_score": 0.95,
       "description": "Soupe crémeuse de pois cassés jaunes, carottes et céleri, parfumée au thym frais et à la moutarde de Dijon, servie chaude avec une note de sucré et une texture onctueuse, typique de la cuisine végétalienne française.",
       "instructions": [
-        "Rincer 250g de pois cassés jaunes sous l'eau froide, puis les égoutter. Faire revenir 150g d'oignon jaune émincé et 200g de carottes émincées dans 45ml d'huile d'olive extra vierge à feu moyen pendant 5 minutes, en remuant régulièrement pour éviter la coloration.",
-        "Ajouter 80g de céleri émincé et poursuivre la cuisson pendant 2 minutes supplémentaires, en remuant occasionnellement pour bien mélanger les saveurs.",
-        "Ajouter les pois cassés, 750ml de bouillon de légumes froid et 5g de thym frais. Porter à ébullition en écumant pour enlever les impuretés.",
-        "Mijoter à feu doux pendant 45 à 50 minutes, en remuant régulièrement, jusqu'à ce que les pois soient entièrement fondus et la soupe soit épaisse et crémeuse.",
-        "Mixer partiellement ou complètement selon la texture souhaitée, en utilisant un mixeur plongeant ou en transférant la soupe dans un blender. Rectifier la consistance avec du bouillon de légumes si nécessaire.",
-        "Assaisonner de 2g de sel, 2g de poivre et 1 cuillère à café de moutarde de Dijon. La soupe doit être épaisse, crémeuse et légèrement sucrée avec une note de moutarde. Servir chaud, avec un filet d'huile d'olive extra vierge et en garnissant de thym frais ciselé."
+        "Étape 1 : Rincer 250g de pois cassés jaunes sous l'eau froide, puis les égoutter. Faire revenir 150g d'oignon jaune émincé et 200g de carottes émincées dans 45ml d'huile d'olive extra vierge à feu moyen pendant 5 minutes, en remuant régulièrement pour éviter la coloration.",
+        "Étape 2 : Ajouter 80g de céleri émincé et poursuivre la cuisson pendant 2 minutes supplémentaires, en remuant occasionnellement pour bien mélanger les saveurs.",
+        "Étape 3 : Ajouter les pois cassés, 750ml de bouillon de légumes froid et 5g de thym frais. Porter à ébullition en écumant pour enlever les impuretés.",
+        "Étape 4 : Mijoter à feu doux pendant 45 à 50 minutes, en remuant régulièrement, jusqu'à ce que les pois soient entièrement fondus et la soupe soit épaisse et crémeuse.",
+        "Étape 5 : Mixer partiellement ou complètement selon la texture souhaitée, en utilisant un mixeur plongeant ou en transférant la soupe dans un blender. Rectifier la consistance avec du bouillon de légumes si nécessaire.",
+        "Étape 6 : Assaisonner de 2g de sel, 2g de poivre et 1 cuillère à café de moutarde de Dijon. La soupe doit être épaisse, crémeuse et légèrement sucrée avec une note de moutarde. Servir chaud, avec un filet d'huile d'olive extra vierge et en garnissant de thym frais ciselé."
       ],
       "diet_flags": {
         "vegan": true,
@@ -159708,7 +159209,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "lactose_free",
           "nut_free",
           "raw",
@@ -159782,10 +159282,7 @@
         "cucumber",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french_mediterranean",
@@ -159793,7 +159290,6 @@
         "gaspacho",
         "gazpacho",
         "gluten free",
-        "kids",
         "leger",
         "lent",
         "light",
@@ -159987,7 +159483,6 @@
       "tags": {
         "diet": [
           "diabetes_friendly",
-          "raw",
           "vegan",
           "vegetarian"
         ],
@@ -160056,8 +159551,6 @@
         "bread",
         "concombre",
         "coriander",
-        "cru",
-        "crudivorisme",
         "cucumber",
         "debutant",
         "easy",
@@ -160080,7 +159573,6 @@
         "pepper",
         "poivron",
         "potable)",
-        "raw",
         "red",
         "rouge",
         "salt",
@@ -160098,7 +159590,6 @@
         "vin",
         "vinaigre",
         "vinegar",
-        "vivant",
         "water",
         "white",
         "wine"
@@ -162203,7 +161694,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 3,
+        "spice_level": 1,
         "iconic": {
           "status": false,
           "score": 5.5,
@@ -163673,9 +163164,9 @@
     {
       "id": "soup_ramen_au_miso_f69c22",
       "titles": {
-        "original": "Ramen Au Miso",
+        "original": "Miso Ramen",
         "fr": "Ramen au Miso",
-        "en": "Ramen Au Miso"
+        "en": "Miso Ramen"
       },
       "origin": {
         "cuisine": "japanese",
@@ -164257,7 +163748,7 @@
       "_quality_score": 0.94,
       "description": "La soupe des bouchons lyonnais : oignons longuement caramélisés au beurre, déglacés au vin blanc, bouillon, croûtons et comté gratinés au four.",
       "instructions": [
-        "Étape 1: Émincer finement 600 g d'oignons jaunes. Faire fondre 30 g de beurre dans une cocotte. Ajouter les oignons, couvrir et suer à feu très doux 20 minutes. Découvrir et caraméliser 25 minutes à feu moyen jusqu'à brun acajou profond, en remuant régulièrement pour éviter de brûler.",
+        "Étape 1: Émincer finement 600 g d'oignons jaunes. Faire fondre 30 g de beurre avec 15 ml d'huile d'olive dans une cocotte. Ajouter les oignons, couvrir et suer à feu très doux 20 minutes. Découvrir et caraméliser 25 minutes à feu moyen jusqu'à brun acajou profond, en remuant régulièrement pour éviter de brûler.",
         "Étape 2: Déglacer avec 150 ml de vin blanc. Réduire 2 minutes. Saupoudrer de farine de blé, mélanger 1 minute pour éviter les grumeaux.",
         "Étape 3: Verser 800 ml de bouillon végétal chaud. Ajouter du thym et du laurier frais. Mijoter 15 minutes pour laisser les saveurs se mélanger. Assaisonner avec 2 g de sel et 2 g de poivre.",
         "Étape 4: Verser la soupe dans des bols allant au four. Déposer des croûtons grillés, préparés avec 120 g de baguette. Parsemer généreusement de 120 g de comté râpé.",
@@ -165639,9 +165130,9 @@
     {
       "id": "soup_soupe_thai_coco_citronnelle_375c23",
       "titles": {
-        "original": "Soupe Thaï Coco Citronnelle",
+        "original": "Thai Coconut and Lemongrass Soup",
         "fr": "Soupe Thaï Coco Citronnelle",
-        "en": "Soupe Thaï Coco Citronnelle"
+        "en": "Thai Coconut and Lemongrass Soup"
       },
       "origin": {
         "cuisine": "thai",
@@ -165872,6 +165363,7 @@
         "(kaffir",
         "1 heure",
         "ail",
+        "and",
         "asiatique",
         "bouillon",
         "braising",
@@ -165896,6 +165388,7 @@
         "leger",
         "legumes",
         "lemon",
+        "lemongrass",
         "light",
         "lime",
         "lime)",
@@ -165914,6 +165407,7 @@
         "sesame",
         "shoyu",
         "soja",
+        "soup",
         "soupe",
         "soy",
         "stock",
@@ -166836,7 +166330,7 @@
       "description": "Bouillon dashi japonais relevé de tofu ferme croustillant, où les saveurs umami se marient à la tendresse des légumes — une recette traditionnelle de la cuisine zen.",
       "instructions": [
         "Étape 1 : Presser 400g de tofu ferme entre deux planches pendant 15 minutes, pour enlever l'excès d'humidité. Couper en cubes de 3 cm et enrober légèrement de 20g de fécule de maïs.",
-        "Étape 2 : Chauffer 100ml d'huile végétale dans une poêle à feu vif. Faire dorer les cubes de tofu pendant 3 minutes par face, jusqu'à ce que la surface soit croustillante et dorée. Réserver.",
+        "Étape 2 : Chauffer 40 ml d'huile végétale dans une poêle à feu vif. Faire dorer les cubes de tofu pendant 3 minutes par face, jusqu'à ce que la surface soit croustillante et dorée. Réserver.",
         "Étape 3 : Dans la même poêle, faire revenir 9g d'ail et 9g de gingembre haché pendant 30 secondes à feu moyen.",
         "Étape 4 : Verser 750ml de bouillon végétal chaud avec 45ml de sauce soja et 20ml de mirin. Porter à frémissement pendant 3 minutes, en remuant régulièrement.",
         "Étape 5 : Remettre le tofu dans le bouillon et ajouter 150 g de champignons émincés et 200 g de pak-choï. Cuire à feu doux pendant 4 minutes, jusqu'à ce que les légumes soient tendres mais gardent leur tenue.",
@@ -168354,7 +167848,7 @@
       "titles": {
         "original": "Vegetable Laksa",
         "fr": "Laksa aux Légumes",
-        "en": "Laksa aux Légumes"
+        "en": "Vegetable Laksa"
       },
       "origin": {
         "cuisine": "malaysian",
@@ -168920,12 +168414,12 @@
       "_quality_score": 0.91,
       "description": "Velouté printanier d'asperges vertes, filtré pour une texture soyeuse parfaite, avec des pointes croquantes et une touche de citron frais, créé à partir d'asperges fraîches et de crème pour une saveur riche et délicate.",
       "instructions": [
-        "Éplucher les asperges vertes, en réservant les pointes pour une utilisation ultérieure. Couper les tiges en brunoise pour faciliter la cuisson et obtenir une texture plus tendre.",
-        "Cuire les pointes 5 minutes à la vapeur jusqu'à tendreté, en veillant à conserver leur texture croquante et leur saveur fraîche. Réserver les pointes pour une utilisation finale.",
-        "Faire fondre le beurre à feu moyen, en ajoutant l'échalote émincée pour libérer ses huiles essentielles et ses saveurs. Ajouter les tronçons d'asperges pour les faire cuire et obtenir une texture plus tendre.",
-        "Mouiller avec le bouillon de légumes et cuire 20 minutes à feu moyen, ou jusqu'à ce que les légumes soient tendres et se laissent écraser facilement. Mixer finement à l'aide d'un mixeur plongeant pour obtenir une texture lisse et crémeuse.",
-        "Incorporer la crème, 15 ml de jus de citron et 3 g de sel pour enrichir la texture et les saveurs. Émulsionner pour obtenir une texture homogène et une saveur équilibrée.",
-        "Dresser le velouté avec les pointes d'asperges en garniture, en saupoudrant de ciboulette ciselée pour ajouter une touche de fraîcheur et de couleur. Servir chaud."
+        "Étape 1 : Éplucher les asperges vertes, en réservant les pointes pour une utilisation ultérieure. Couper les tiges en brunoise pour faciliter la cuisson et obtenir une texture plus tendre.",
+        "Étape 2 : Cuire les pointes 5 minutes à la vapeur jusqu'à tendreté, en veillant à conserver leur texture croquante et leur saveur fraîche. Réserver les pointes pour une utilisation finale.",
+        "Étape 3 : Faire fondre le beurre à feu moyen, en ajoutant l'échalote émincée pour libérer ses huiles essentielles et ses saveurs. Ajouter les tronçons d'asperges pour les faire cuire et obtenir une texture plus tendre.",
+        "Étape 4 : Mouiller avec le bouillon de légumes et cuire 20 minutes à feu moyen, ou jusqu'à ce que les légumes soient tendres et se laissent écraser facilement. Mixer finement à l'aide d'un mixeur plongeant pour obtenir une texture lisse et crémeuse.",
+        "Étape 5 : Incorporer la crème, 15 ml de jus de citron et 3 g de sel pour enrichir la texture et les saveurs. Émulsionner pour obtenir une texture homogène et une saveur équilibrée.",
+        "Étape 6 : Dresser le velouté avec les pointes d'asperges en garniture, en saupoudrant de ciboulette ciselée pour ajouter une touche de fraîcheur et de couleur. Servir chaud."
       ],
       "diet_flags": {
         "vegan": false,
@@ -169477,12 +168971,12 @@
       "_quality_score": 0.95,
       "description": "Velouté d'automne au potimarron, gingembre frais et crème fraîche. Sa couleur orangée et sa douceur épicée en font un classique hivernal, avec une texture veloutée et nappante.",
       "instructions": [
-        "Couper le potimarron en cubes de 4 cm sans l'éplucher, en veillant à conserver la peau pour obtenir une couleur plus intense et une texture plus tendre. Cette étape est cruciale pour la texture finale.",
-        "Faire revenir l'oignon jaune émincé et l'ail émincé dans 25 g de beurre à feu moyen pendant 5 minutes, en évitant la coloration et en favorisant la transparence des oignons. Ajouter le gingembre frais râpé pour libérer ses huiles essentielles et ses saveurs. L'odeur du gingembre frais doit commencer à se dégager.",
-        "Incorporer les cubes de potimarron et mouiller avec 800 ml de bouillon de légumes chaud. Porter à ébullition, puis réduire le feu et laisser mijoter à couvert pendant 25 minutes, ou jusqu'à ce que le potimarron soit entièrement tendre et se laisse écraser facilement. La température doit être régulière pour une cuisson homogène.",
-        "Mixer à pleine puissance pendant 3 minutes pour obtenir un velouté parfaitement lisse et brillant, sans aucun grumeau. Incorporer la crème fraîche pour enrichir la texture et les saveurs. La consistance doit être crémeuse et légère.",
-        "Assaisonner avec 3 g de sel, du poivre et une pincée de muscade pour équilibrer les saveurs et les textures. La texture doit être veloutée, nappante et de couleur orange profond. Un léger tour de moulin à poivre peut être ajouté pour un peu de piquant.",
-        "Servir chaud, en accompagnant le velouté de graines de courge torréfiées pour ajouter une touche de croquant et de saveur. La chaleur du velouté doit être conservée pour apprécier pleinement les saveurs et les textures."
+        "Étape 1 : Couper le potimarron en cubes de 4 cm sans l'éplucher, en veillant à conserver la peau pour obtenir une couleur plus intense et une texture plus tendre. Cette étape est cruciale pour la texture finale.",
+        "Étape 2 : Faire revenir l'oignon jaune émincé et l'ail émincé dans 25 g de beurre à feu moyen pendant 5 minutes, en évitant la coloration et en favorisant la transparence des oignons. Ajouter le gingembre frais râpé pour libérer ses huiles essentielles et ses saveurs. L'odeur du gingembre frais doit commencer à se dégager.",
+        "Étape 3 : Incorporer les cubes de potimarron et mouiller avec 800 ml de bouillon de légumes chaud. Porter à ébullition, puis réduire le feu et laisser mijoter à couvert pendant 25 minutes, ou jusqu'à ce que le potimarron soit entièrement tendre et se laisse écraser facilement. La température doit être régulière pour une cuisson homogène.",
+        "Étape 4 : Mixer à pleine puissance pendant 3 minutes pour obtenir un velouté parfaitement lisse et brillant, sans aucun grumeau. Incorporer la crème fraîche pour enrichir la texture et les saveurs. La consistance doit être crémeuse et légère.",
+        "Étape 5 : Assaisonner avec 3 g de sel, du poivre et une pincée de muscade pour équilibrer les saveurs et les textures. La texture doit être veloutée, nappante et de couleur orange profond. Un léger tour de moulin à poivre peut être ajouté pour un peu de piquant.",
+        "Étape 6 : Servir chaud, en accompagnant le velouté de graines de courge torréfiées pour ajouter une touche de croquant et de saveur. La chaleur du velouté doit être conservée pour apprécier pleinement les saveurs et les textures."
       ],
       "diet_flags": {
         "vegan": false,
@@ -169607,7 +169101,6 @@
       "tags": {
         "diet": [
           "gluten_free",
-          "kid_friendly",
           "nut_free"
         ],
         "allergens": [
@@ -169674,17 +169167,13 @@
         "debutant",
         "easy",
         "eau",
-        "enfants",
         "epaisse",
         "facile",
-        "facile enfants",
-        "famille",
         "francais",
         "france",
         "french",
         "gluten free",
         "heavy",
-        "kids",
         "leeks",
         "leger",
         "lent",
@@ -169717,11 +169206,11 @@
       "_quality_score": 0.88,
       "description": "Velouté glacé de poireaux et pommes de terre nappé de crème fraîche et ciboulette, offrant une texture lisse et une saveur délicate, typique de l'élégance bistrotière estivale.",
       "instructions": [
-        "Émincer les blancs de poireaux et l'oignon, les faire fondre dans 30 g de beurre sans coloration, en veillant à obtenir une texture tendre et une odeur parfumée, pendant environ 10 minutes.",
-        "Ajouter les pommes de terre pelées en cubes et mouiller avec 800 ml d'eau. Porter à ébullition, puis réduire le feu et laisser mijoter pendant 25 minutes, ou jusqu'à ce que les pommes de terre soient tendres et se laissent facilement écraser.",
-        "Mixer finement le mélange de poireaux et de pommes de terre, en ajoutant la crème fraîche pour obtenir une texture lisse et crémeuse. Assaisonner avec 5 g de sel.",
-        "Réfrigérer le velouté au moins 2 heures avant de servir, pour permettre aux saveurs de se mélanger et à la texture de se raffermir.",
-        "Juste avant de servir, décorer de ciboulette ciselée pour ajouter une touche de fraîcheur et de couleur. Servir bien froid."
+        "Étape 1 : Émincer les blancs de poireaux et l'oignon, les faire fondre dans 30 g de beurre sans coloration, en veillant à obtenir une texture tendre et une odeur parfumée, pendant environ 10 minutes.",
+        "Étape 2 : Ajouter les pommes de terre pelées en cubes et mouiller avec 800 ml d'eau. Porter à ébullition, puis réduire le feu et laisser mijoter pendant 25 minutes, ou jusqu'à ce que les pommes de terre soient tendres et se laissent facilement écraser.",
+        "Étape 3 : Mixer finement le mélange de poireaux et de pommes de terre, en ajoutant la crème fraîche pour obtenir une texture lisse et crémeuse. Assaisonner avec 5 g de sel.",
+        "Étape 4 : Réfrigérer le velouté au moins 2 heures avant de servir, pour permettre aux saveurs de se mélanger et à la texture de se raffermir.",
+        "Étape 5 : Juste avant de servir, décorer de ciboulette ciselée pour ajouter une touche de fraîcheur et de couleur. Servir bien froid."
       ],
       "diet_flags": {
         "vegan": false,
@@ -170615,12 +170104,12 @@
       "_quality_score": 1.0,
       "description": "Ragoût croate de haricots blancs cuits, mijotés lentement dans un bouillon végétal pour une sauce épaisse et concentrée, riche en arômes et saveurs traditionnelles.",
       "instructions": [
-        "Rincer 300g de haricots blancs secs, les égoutter et les couvrir d'eau froide. Porter à ébullition, puis cuire pendant 45 minutes à feu doux, en vérifiant que les haricots sont tendres.",
-        "Faire revenir 150g d'oignon jaune haché dans 45ml d'huile d'olive à feu moyen pendant 5 minutes, en remuant régulièrement, jusqu'à ce qu'il soit translucide et commence à caraméliser.",
-        "Ajouter 9g d'ail émincé, 200g de carotte crue en dés et 300g de tomates concassées. Faire sauter pendant 2 minutes, en surveillant la coloration et en remuant régulièrement pour éviter les brûlures.",
-        "Incorporer les haricots égouttés, 500ml de bouillon végétal chaud, 5g de thym frais et 2g de poivre. Couvrir et laisser mijoter pendant 25 minutes à feu doux, en vérifiant que les saveurs sont bien équilibrées.",
-        "Ajouter 500g de courgette crue en dés et poursuivre la cuisson pendant 10 minutes, en vérifiant que les légumes sont tendres mais encore croquants.",
-        "Assaisonner de 5g de sel et poivre. Retirer le thym et servir chaud, arrosé d'un filet d'huile d'olive."
+        "Étape 1 : Rincer 300g de haricots blancs secs, les égoutter et les couvrir d'eau froide. Porter à ébullition, puis cuire pendant 45 minutes à feu doux, en vérifiant que les haricots sont tendres.",
+        "Étape 2 : Faire revenir 150g d'oignon jaune haché dans 45ml d'huile d'olive à feu moyen pendant 5 minutes, en remuant régulièrement, jusqu'à ce qu'il soit translucide et commence à caraméliser.",
+        "Étape 3 : Ajouter 9g d'ail émincé, 200g de carotte crue en dés et 300g de tomates concassées. Faire sauter pendant 2 minutes, en surveillant la coloration et en remuant régulièrement pour éviter les brûlures.",
+        "Étape 4 : Incorporer les haricots égouttés, 500ml de bouillon végétal chaud, 5g de thym frais et 2g de poivre. Couvrir et laisser mijoter pendant 25 minutes à feu doux, en vérifiant que les saveurs sont bien équilibrées.",
+        "Étape 5 : Ajouter 500g de courgette crue en dés et poursuivre la cuisson pendant 10 minutes, en vérifiant que les légumes sont tendres mais encore croquants.",
+        "Étape 6 : Assaisonner de 5g de sel et poivre. Retirer le thym et servir chaud, arrosé d'un filet d'huile d'olive."
       ],
       "diet_flags": {
         "vegan": true,
@@ -172031,7 +171520,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 2,
         "iconic": {
           "status": false,
           "score": 5.3,
@@ -174018,7 +173507,6 @@
         "diet": [
           "diabetes_friendly",
           "high_protein",
-          "kid_friendly",
           "vegan",
           "vegetarian",
           "lactose_free",
@@ -174075,15 +173563,11 @@
         "coconut",
         "debutant",
         "easy",
-        "enfants",
         "facile",
-        "facile enfants",
-        "famille",
         "garlic",
         "italian",
         "italie",
         "italien",
-        "kids",
         "l'ail",
         "l'origan",
         "leger",
@@ -174679,13 +174163,13 @@
       "_quality_score": 0.84,
       "description": "Sauté indonésienne de tempeh fumé au wok à feu très vif, avec des légumes croquants, une sauce enrobante et parfumée, créant une texture tendre et croustillante — une spécialité de la cuisine indonésienne, préparée avec soin et attention.",
       "instructions": [
-        "Couper le tempeh en tranches ou cubes de 1 cm, pour obtenir une texture tendre et croustillante.",
-        "Préparer la marinade : mélanger 30 ml de sauce soja, 3 g de coriandre moulue, 9 g d'ail émincé, 2 g de sel de table et 2 g de poivre noir, afin d'obtenir une sauce parfumée et équilibrée.",
-        "Faire mariner le tempeh au moins 15 minutes, pour que les saveurs pénètrent profondément dans la texture.",
-        "Chauffer 45 ml d'huile végétale dans une poêle à feu vif, jusqu'à ce que l'huile soit chaude et prête à frire.",
-        "Faire frire le tempeh en plusieurs fois sans surcharger la poêle, 3-4 minutes par face, jusqu'à ce que le tempeh soit bien doré et croustillant.",
-        "Égoutter sur du papier absorbant, pour enlever l'excès d'huile, et saler légèrement à la sortie de la friture, pour apporter une touche de saveur.",
-        "Servir chaud, avec du riz."
+        "Étape 1 : Couper le tempeh en tranches ou cubes de 1 cm, pour obtenir une texture tendre et croustillante.",
+        "Étape 2 : Préparer la marinade : mélanger 30 ml de sauce soja, 3 g de coriandre moulue, 9 g d'ail émincé, 2 g de sel de table et 2 g de poivre noir, afin d'obtenir une sauce parfumée et équilibrée.",
+        "Étape 3 : Faire mariner le tempeh au moins 15 minutes, pour que les saveurs pénètrent profondément dans la texture.",
+        "Étape 4 : Chauffer 45 ml d'huile végétale dans une poêle à feu vif, jusqu'à ce que l'huile soit chaude et prête à frire.",
+        "Étape 5 : Faire frire le tempeh en plusieurs fois sans surcharger la poêle, 3-4 minutes par face, jusqu'à ce que le tempeh soit bien doré et croustillant.",
+        "Étape 6 : Égoutter sur du papier absorbant, pour enlever l'excès d'huile, et saler légèrement à la sortie de la friture, pour apporter une touche de saveur.",
+        "Étape 7 : Servir chaud, avec du riz."
       ],
       "diet_flags": {
         "vegan": true,
@@ -175044,13 +174528,13 @@
       "servings_default": 8,
       "description": "Sauce brune végétarienne umami, idéale pour accompagner des pâtes ou des gnocchis, avec une texture onctueuse et une couleur brune riche obtenue grâce à la caramélisation des oignons et à l'ajout de miso blanc.",
       "instructions": [
-        "Faire revenir l'oignon (60g) et l'ail (10g) dans l'huile d'olive (15ml) pendant 5 min à feu moyen, jusqu'à caramélisation légère et parfum intense, en remuant régulièrement pour éviter l'attache.",
-        "Ajouter les champignons séchés (5 g) réhydratés et hachés et la pâte de tomate (20g), cuire 3 min en remuant régulièrement pour éviter l'attache et obtenir une texture homogène.",
-        "Saupoudrer la farine de blé (20g) et mélanger 1 min pour bien incorporer et former un mélange homogène, en veillant à ce que la farine soit bien dissoute.",
-        "Verser le bouillon de légumes chaud (400ml) progressivement en fouettant pour éviter les grumeaux, en veillant à obtenir une consistance lisse et fluide, puis ajouter la sauce soja (20ml) et le miso blanc délayé dans une louche de bouillon.",
-        "Incorporer le mélange et remuer bien pour dissoudre complètement, puis cuire à feu doux pendant 15 min, en remuant occasionnellement, jusqu'à consistance nappante et saveur intense.",
-        "Vérifier que la sauce nappe la cuillère et a une texture onctueuse, puis filtrer si souhaité pour un résultat plus lisse.",
-        "Utiliser aussitôt ou conserver 3 jours au réfrigérateur."
+        "Étape 1 : Faire revenir l'oignon (60g) et l'ail (10g) dans l'huile d'olive (15ml) pendant 5 min à feu moyen, jusqu'à caramélisation légère et parfum intense, en remuant régulièrement pour éviter l'attache.",
+        "Étape 2 : Ajouter les champignons séchés (5 g) réhydratés et hachés et la pâte de tomate (20g), cuire 3 min en remuant régulièrement pour éviter l'attache et obtenir une texture homogène.",
+        "Étape 3 : Saupoudrer la farine de blé (20g) et mélanger 1 min pour bien incorporer et former un mélange homogène, en veillant à ce que la farine soit bien dissoute.",
+        "Étape 4 : Verser le bouillon de légumes chaud (400ml) progressivement en fouettant pour éviter les grumeaux, en veillant à obtenir une consistance lisse et fluide, puis ajouter la sauce soja (20ml) et le miso blanc délayé dans une louche de bouillon.",
+        "Étape 5 : Incorporer le mélange et remuer bien pour dissoudre complètement, puis cuire à feu doux pendant 15 min, en remuant occasionnellement, jusqu'à consistance nappante et saveur intense.",
+        "Étape 6 : Vérifier que la sauce nappe la cuillère et a une texture onctueuse, puis filtrer si souhaité pour un résultat plus lisse.",
+        "Étape 7 : Utiliser aussitôt ou conserver 3 jours au réfrigérateur."
       ],
       "diet_flags": {
         "vegan": true,
@@ -177746,7 +177230,7 @@
       },
       "scoring": {
         "confidence": 1.0,
-        "spice_level": 0,
+        "spice_level": 2,
         "iconic": {
           "status": false,
           "score": 5.4,
@@ -179143,11 +178627,11 @@
       },
       "description": "Pâte à crêpes de sarrasin traditionnelle bretonne, légèrement épaisse et rustique, avec la saveur noisette caractéristique du blé noir. Préparation simple qui demande un temps de repos pour une texture optimale, idéale pour un petit-déjeuner ou un brunch.",
       "instructions": [
-        "Mélanger 250g de farine de sarrasin avec 5g de sel de table dans un grand bol.",
-        "Creuser un puits au centre, y ajouter 2 œufs entiers crus battus et verser progressivement 500ml de lait entier tout en fouettant pour éviter les grumeaux.",
-        "Incorporer 20g de beurre doux fondu, puis laisser reposer la pâte 30 minutes au réfrigérateur.",
-        "Cuire chaque crêpe 2 minutes par face dans une crêpière légèrement beurrée à feu moyen.",
-        "Empiler les crêpes sous un torchon jusqu'à utilisation."
+        "Étape 1 : Mélanger 250g de farine de sarrasin avec 5g de sel de table dans un grand bol.",
+        "Étape 2 : Creuser un puits au centre, y ajouter 2 œufs entiers crus battus et verser progressivement 500ml de lait entier tout en fouettant pour éviter les grumeaux.",
+        "Étape 3 : Incorporer 20g de beurre doux fondu, puis laisser reposer la pâte 30 minutes au réfrigérateur.",
+        "Étape 4 : Cuire chaque crêpe 2 minutes par face dans une crêpière légèrement beurrée à feu moyen.",
+        "Étape 5 : Empiler les crêpes sous un torchon jusqu'à utilisation."
       ],
       "scoring": {
         "confidence": 0.95,
@@ -179277,9 +178761,9 @@
       },
       "description": "Alternative végane à la ricotta à base de noix de cajou trempées, crémeuse et légèrement acidulée grâce au jus de citron. La levure nutritionnelle apporte des notes fromagères subtiles.",
       "instructions": [
-        "Faire tremper 200g de noix de cajou dans de l'eau froide pendant 2 heures minimum, ou 30 minutes dans de l'eau bouillante.",
-        "Égoutter et rincer les noix de cajou, puis les mixer avec 30ml de jus de citron, 15g de levure nutritionnelle, 4g de sel et 30–60ml d'eau selon la texture souhaitée.",
-        "Mixer jusqu'à obtenir une texture lisse et crémeuse, similaire à la ricotta. Ajuster l'assaisonnement et conserver au réfrigérateur jusqu'à 5 jours."
+        "Étape 1 : Faire tremper 200g de noix de cajou dans de l'eau froide pendant 2 heures minimum, ou 30 minutes dans de l'eau bouillante.",
+        "Étape 2 : Égoutter et rincer les noix de cajou, puis les mixer avec 30ml de jus de citron, 15g de levure nutritionnelle, 4g de sel et 30–60ml d'eau selon la texture souhaitée.",
+        "Étape 3 : Mixer jusqu'à obtenir une texture lisse et crémeuse, similaire à la ricotta. Ajuster l'assaisonnement et conserver au réfrigérateur jusqu'à 5 jours."
       ],
       "scoring": {
         "confidence": 0.93,
@@ -179400,9 +178884,9 @@
       },
       "description": "Fromage frais indien non affiné, obtenu par coagulation du lait entier avec du jus de citron. Ferme et doux, il absorbe parfaitement les épices et résiste bien à la cuisson sans fondre.",
       "instructions": [
-        "Porter 1 litre de lait entier à ébullition douce dans une grande casserole, en remuant régulièrement pour éviter qu'il n'attache.",
-        "Hors du feu, ajouter progressivement 45ml de jus de citron en remuant doucement jusqu'à ce que le lait caille complètement et que le lactosérum devienne translucide.",
-        "Verser dans une étamine, égoutter le lactosérum, ajouter le sel, puis presser le fromage en boule et laisser reposer sous un poids 1 heure minimum."
+        "Étape 1 : Porter 1 litre de lait entier à ébullition douce dans une grande casserole, en remuant régulièrement pour éviter qu'il n'attache.",
+        "Étape 2 : Hors du feu, ajouter progressivement 45ml de jus de citron en remuant doucement jusqu'à ce que le lait caille complètement et que le lactosérum devienne translucide.",
+        "Étape 3 : Verser dans une étamine, égoutter le lactosérum, ajouter le sel, puis presser le fromage en boule et laisser reposer sous un poids 1 heure minimum."
       ],
       "scoring": {
         "confidence": 0.97,
@@ -179553,11 +179037,11 @@
       },
       "description": "Préparation de base vegan à râper ou émietter : noix de cajou mixées avec poivron rouge, levure nutritionnelle, citron et ail, qui donne la couleur et le goût d'un cheddar.",
       "instructions": [
-        "Faire tremper 150g de noix de cajou dans l'eau froide pendant 2 heures, puis égoutter.",
-        "Rôtir 60g de poivron rouge à 200°C pendant 20 minutes, laisser refroidir et peler.",
-        "Mixer 150g de noix de cajou égouttées, 60g de poivron rouge rôti, 30g de levure nutritionnelle, 30ml de jus de citron, 5g d'ail et 5g de sel avec 60ml d'eau jusqu'à texture parfaitement lisse.",
-        "Verser dans un moule et réfrigérer 2 heures minimum pour que le fromage prenne une texture plus ferme et découpable.",
-        "Conserver 5 jours au réfrigérateur ; s'utilise en tartinade ou fondu."
+        "Étape 1 : Faire tremper 150g de noix de cajou dans l'eau froide pendant 2 heures, puis égoutter.",
+        "Étape 2 : Rôtir 60g de poivron rouge à 200°C pendant 20 minutes, laisser refroidir et peler.",
+        "Étape 3 : Mixer 150g de noix de cajou égouttées, 60g de poivron rouge rôti, 30g de levure nutritionnelle, 30ml de jus de citron, 5g d'ail et 5g de sel avec 60ml d'eau jusqu'à texture parfaitement lisse.",
+        "Étape 4 : Verser dans un moule et réfrigérer 2 heures minimum pour que le fromage prenne une texture plus ferme et découpable.",
+        "Étape 5 : Conserver 5 jours au réfrigérateur ; s'utilise en tartinade ou fondu."
       ],
       "scoring": {
         "confidence": 0.88,
@@ -179713,9 +179197,9 @@
       },
       "description": "Mayonnaise végane légère et crémeuse préparée à partir d'aquafaba, qui joue le rôle d'émulsifiant naturel, offrant une texture identique à la mayonnaise traditionnelle sans utiliser d'œuf.",
       "instructions": [
-        "Commencez par verser 60ml de jus de pois chiches (aquafaba) dans un verre doseur haut et étroit, en ajoutant 15g de moutarde de Dijon, 15ml de jus de citron frais et 4g de sel.",
-        "À l'aide d'un mixeur plongeant posé au fond du verre, mixer à pleine vitesse tout en versant lentement les 180ml d'huile de tournesol en filet très fin.",
-        "Remontez progressivement le mixeur une fois l'émulsion formée, ajustez l'assaisonnement selon vos goûts, puis réfrigérez la mayonnaise jusqu'à utilisation, qui peut se conserver jusqu'à 5 jours au réfrigérateur."
+        "Étape 1 : Commencez par verser 60ml de jus de pois chiches (aquafaba) dans un verre doseur haut et étroit, en ajoutant 15g de moutarde de Dijon, 15ml de jus de citron frais et 4g de sel.",
+        "Étape 2 : À l'aide d'un mixeur plongeant posé au fond du verre, mixer à pleine vitesse tout en versant lentement les 180ml d'huile de tournesol en filet très fin.",
+        "Étape 3 : Remontez progressivement le mixeur une fois l'émulsion formée, ajustez l'assaisonnement selon vos goûts, puis réfrigérez la mayonnaise jusqu'à utilisation, qui peut se conserver jusqu'à 5 jours au réfrigérateur."
       ],
       "scoring": {
         "confidence": 0.92,
@@ -179842,12 +179326,12 @@
       },
       "description": "Oignons émincés lentement frits dans l'huile de tournesol jusqu'à caramélisation complète, sucrés et fondants. Utilisés comme topping ou condiment dans de nombreuses cuisines du monde.",
       "instructions": [
-        "Émincer finement 500g d'oignons en demi-lunes régulières.",
-        "Chauffer 60ml d'huile de tournesol dans une grande poêle à feu moyen-vif.",
-        "Ajouter les oignons et 5g de sel. Cuire 5 minutes à feu vif en remuant constamment.",
-        "Baisser le feu à moyen et continuer à cuire pendant 15-20 minutes en remuant régulièrement, jusqu'à obtenir une couleur dorée uniforme et une texture fondante.",
-        "Égoutter les oignons sur du papier absorbant et laisser refroidir légèrement.",
-        "Utiliser en garniture ; se conserve 3 jours au réfrigérateur."
+        "Étape 1 : Émincer finement 500g d'oignons en demi-lunes régulières.",
+        "Étape 2 : Chauffer 40 ml d'huile de tournesol dans une grande poêle à feu moyen-vif.",
+        "Étape 3 : Ajouter les oignons et 5g de sel. Cuire 5 minutes à feu vif en remuant constamment.",
+        "Étape 4 : Baisser le feu à moyen et continuer à cuire pendant 15-20 minutes en remuant régulièrement, jusqu'à obtenir une couleur dorée uniforme et une texture fondante.",
+        "Étape 5 : Égoutter les oignons sur du papier absorbant et laisser refroidir légèrement.",
+        "Étape 6 : Utiliser en garniture ; se conserve 3 jours au réfrigérateur."
       ],
       "scoring": {
         "confidence": 0.97,
@@ -179938,7 +179422,7 @@
         {
           "ingredient": "nutmeg_spice",
           "quantity": 1,
-          "unit": "pinch",
+          "unit": "g",
           "meta": {
             "role": "spice"
           }
@@ -180558,7 +180042,7 @@
         {
           "ingredient": "nutmeg_spice",
           "quantity": 1,
-          "unit": "pinch",
+          "unit": "g",
           "meta": {
             "role": "spice"
           }
@@ -181858,8 +181342,8 @@
       "timing": {
         "prep_active_min": 10,
         "prep_passive_min": 720,
-        "cook_min": 0,
-        "total_min": 730
+        "cook_min": 5,
+        "total_min": 735
       },
       "composition": [
         {
@@ -182663,8 +182147,8 @@
       "timing": {
         "prep_active_min": 30,
         "prep_passive_min": 120,
-        "cook_min": 0,
-        "total_min": 150
+        "cook_min": 20,
+        "total_min": 170
       },
       "composition": [
         {
@@ -183330,8 +182814,8 @@
       "timing": {
         "prep_active_min": 20,
         "prep_passive_min": 30,
-        "cook_min": 0,
-        "total_min": 50
+        "cook_min": 22,
+        "total_min": 72
       },
       "composition": [
         {
@@ -183411,7 +182895,6 @@
       },
       "search_tokens": [
         "(eau",
-        "1 heure",
         "all",
         "amerique latine",
         "beurre",
@@ -183428,8 +182911,11 @@
         "latin_american",
         "latino",
         "leger",
+        "lent",
         "light",
+        "long",
         "low calorie",
+        "mijote",
         "minceur",
         "pastry",
         "pate",
@@ -183473,8 +182959,8 @@
       "timing": {
         "prep_active_min": 20,
         "prep_passive_min": 30,
-        "cook_min": 0,
-        "total_min": 50
+        "cook_min": 5,
+        "total_min": 55
       },
       "composition": [
         {
@@ -184626,7 +184112,7 @@
       },
       "scoring": {
         "confidence": 0.9,
-        "spice_level": 0
+        "spice_level": 1
       },
       "dish_type": "side",
       "difficulty_level": "easy",
@@ -221686,8 +221172,8 @@
       "timing": {
         "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 0,
-        "total_min": 15
+        "cook_min": 20,
+        "total_min": 35
       },
       "composition": [
         {
@@ -221874,9 +221360,7 @@
         "kid_friendly": true
       },
       "search_tokens": [
-        "10 min",
-        "20 min",
-        "5 min",
+        "45 minutes",
         "black",
         "chaat,",
         "chana",
@@ -221894,7 +221378,6 @@
         "enfants",
         "epice",
         "epicee",
-        "express",
         "facile",
         "facile enfants",
         "famille",
@@ -221910,6 +221393,7 @@
         "menthe",
         "minceur",
         "mint",
+        "moyen",
         "noir",
         "oignon",
         "onion",
@@ -221919,8 +221403,6 @@
         "poivre",
         "pomme",
         "potato",
-        "quick",
-        "rapide",
         "salad",
         "salade",
         "salt",
@@ -237995,7 +237477,7 @@
         "lactose_free": true,
         "nut_free": true,
         "raw": false,
-        "kid_friendly": true
+        "kid_friendly": false
       },
       "search_tokens": [
         "(filo)",
@@ -238008,13 +237490,9 @@
         "capres",
         "citron",
         "egg",
-        "enfants",
-        "facile enfants",
-        "famille",
         "filo",
         "fry",
         "intermediaire",
-        "kids",
         "l'œuf",
         "leger",
         "lemon",
@@ -240524,8 +240002,8 @@
       "timing": {
         "prep_active_min": 15,
         "prep_passive_min": 0,
-        "cook_min": 0,
-        "total_min": 15
+        "cook_min": 2,
+        "total_min": 17
       },
       "composition": [
         {
