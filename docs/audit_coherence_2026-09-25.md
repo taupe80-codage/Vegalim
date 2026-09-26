@@ -50,16 +50,16 @@ authentiques ou demande de trancher une convention.
 
 | Constat | Recettes | Remarque |
 |---|---|---|
-| `tags.technique` vide | 269 | surtout les recettes d'avant la relecture et les préparations de base ; inférable des verbes des étapes |
+| ~~`tags.technique` vide~~ | ~~269~~ | **traité le 2026-09-26** : vocabulaire normalisé (66 → 18 valeurs) et techniques déduites, plus aucune recette sans technique |
 | Portion légère (< 45 % du poids hors eau attendu, avec < 350 kcal) | 182 | beaucoup de plats à base de pain, de soupes mixées et de salades : la règle `PORTION_MIN_G` de `propose_servings` est sans doute trop stricte pour ces familles |
-| Plat principal sous 10 g de protéines/portion | 120 | réel pour un dataset végétarien (gratins de légumes, plats de pain, currys de légumes) ; à traiter en enrichissant les plats plutôt qu'en les reclassant |
-| Plus de 65 % des calories en lipides | 85 | currys au lait de coco, gratins, fritures — souvent authentique |
-| `origin.cuisine` = « international » | 69 | petits-déjeuners, desserts et bowls sans rattachement culturel ; à rattacher au cas par cas |
+| Plat principal sous 10 g de protéines/portion | 120 | **arbitré le 2026-09-26 : rien changé** — un dataset végétarien comporte des plats principaux légers, le filtrage se fera côté application |
+| Plus de 65 % des calories en lipides | 85 → 84 | une seule recette dépassait 25 g de matière grasse par portion (la tapenade, reclassée en condiment) ; les autres sont des plats légers ou des currys au lait de coco |
+| `origin.cuisine` = « international » | 69 → 19 | **traité le 2026-09-26** : 50 rattachements ; les 19 restantes (bowls, energy balls, wraps, crackers) n'ont pas d'origine réelle |
 | `result.texture` vide | 20 | pâtes de curry, bouillons, préparations de base |
 | `origin.country` vide | 13 | préparations de base (« international », « asian », « universal ») |
 | Composition quasi identique (≥ 80 % d'ingrédients communs) | 12 | déjà revues : couscous express / traditionnel (92 %), dal tadka / rajma masala, zaalouk / salade d'aubergines, bohémienne / pisto, pâte feuilletée / brisée, onigiri nature / umeboshi… variantes légitimes mais proches |
-| Sodium > 1 300 mg/portion | 2 | hot pot (bouillon, 1 434) et banitsa au fromage (1 324) |
-| Étape de plus de 400 caractères | 3 | flamiche, ratatouille, wok thaï — à découper |
+| Sodium > 1 300 mg/portion | 2 | hot pot (bouillon, 1 434) et banitsa au fromage (1 324) — laissés en l'état, cohérents avec les recettes d'origine |
+| ~~Étape de plus de 400 caractères~~ | ~~3~~ | **traité le 2026-09-26** : découpées en deux |
 
 ## 3. Faux positifs identifiés (à ne pas re-signaler)
 
@@ -78,6 +78,38 @@ authentiques ou demande de trancher une convention.
 - **Régimes** : le recalcul indépendant par `compute_diet_flags` ne contredit aucun flag
   (0 cas) ; la noix de coco et les laits végétaux ne sont ni des fruits à coque ni du lactose
   dans le dictionnaire.
+
+## 3 bis. Arbitrages rendus (2026-09-26)
+
+Décisions prises sur la section 2, appliquées par
+`scripts/recipes/fix_techniques_origins_2026_09_25.py` (idempotent) :
+
+- **Plats principaux pauvres en protéines : rien changé** (décision assumée). Un dataset
+  végétarien comporte des plats principaux légers ; le filtrage se fera côté application.
+- **`tags.technique` : vocabulaire normalisé puis trous remplis.** Les 66 valeurs hétérogènes
+  (`braising`, `braise`, `oven_cooking`, `bake`, `baking`, `fry`, `frying`, `wok`, `sauteed`…)
+  sont ramenées à **18 techniques canoniques** : `raw`, `assembly`, `kneading`, `blending`,
+  `marinating`, `fermenting`, `chilling`, `boiling`, `simmering`, `steaming`, `sauteing`,
+  `deep_frying`, `baking`, `gratinating`, `grilling`, `toasting`, `caramelizing`, `sauce_making`.
+  648 recettes normalisées, **269 techniques déduites** des verbes des étapes (trois au maximum
+  par recette, la technique de cuisson structurante d'abord) : plus aucune recette sans technique.
+  Comme `tags.technique` alimente les `search_tokens`, `backend/engine/search_token_generator.py`
+  reçoit une table de synonymes français (`sauteing` → sauté, poêlé, wok ; `gratinating` →
+  gratin, gratiné ; `simmering` → mijoté, braisé, ragoût…) pour ne rien perdre côté recherche.
+- **Cuisines « international » : 50 rattachements sur 69.** Petits-déjeuners et desserts
+  nord-américains (granola, overnight oats, brownie, cheesecake, carrot cake, poke bowl),
+  britanniques (porridge, haricots blancs au four), français (tartines, verrines, rillettes de
+  lentilles, caviar d'aubergine, soupes et potages), méditerranéens, et les plats identifiables
+  (revithia → grec, ribollita → italien, khichdi et rasam → indien, tom yum → thaï, nouilles
+  satay → malaisien, thukpa → népalais, manakish → levantin, pico de gallo → mexicain, attiéké →
+  ivoirien, soupe de quinoa → péruvien, sautés de tofu → chinois). Les 19 restantes n'ont pas
+  d'origine réelle (bowls, energy balls, wraps, crackers, pancakes sans gluten).
+- **Tapenade d'olives noires** : passée de `starter` à `condiment` (37,5 g de matière grasse par
+  « portion » d'entrée, alors qu'elle se sert à la cuillère).
+- **Trois étapes de plus de 400 caractères découpées** : flamiche aux poireaux, ratatouille,
+  wok thaï.
+- **Sodium du hot pot et de la banitsa : non retenu** — les deux valeurs viennent du bouillon et
+  du fromage, elles sont cohérentes avec les recettes d'origine.
 
 ## 4. Ce que l'audit confirme
 

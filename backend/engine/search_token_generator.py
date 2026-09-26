@@ -94,6 +94,28 @@ _CATEGORY_TOKENS: dict[str, list[str]] = {
     "fat_oil":       ["matières grasses", "huile"],
 }
 
+# tags.technique (18 valeurs canoniques, en anglais) → mots français cherchés par les utilisateurs
+_TECHNIQUE_TOKENS: dict[str, list[str]] = {
+    "raw":           ["cru", "sans cuisson", "crudité"],
+    "assembly":      ["sans cuisson", "assemblage", "rapide"],
+    "kneading":      ["pétri", "pâte", "boulangerie"],
+    "blending":      ["mixé", "velouté", "fouetté"],
+    "marinating":    ["mariné", "marinade"],
+    "fermenting":    ["fermenté", "fermentation", "lacto-fermentation"],
+    "chilling":      ["froid", "glacé", "réfrigéré"],
+    "boiling":       ["bouilli", "à l'eau", "eau bouillante"],
+    "simmering":     ["mijoté", "braisé", "à l'étouffée", "ragoût"],
+    "steaming":      ["vapeur", "cuit vapeur"],
+    "sauteing":      ["sauté", "poêlé", "wok", "poêle"],
+    "deep_frying":   ["frit", "friture", "beignet"],
+    "baking":        ["four", "cuit au four", "rôti"],
+    "gratinating":   ["gratin", "gratiné"],
+    "grilling":      ["grillé", "barbecue", "plancha"],
+    "toasting":      ["torréfié", "grillé à sec"],
+    "caramelizing":  ["caramélisé", "caramel"],
+    "sauce_making":  ["sauce", "béchamel", "roux"],
+}
+
 # Ingrédients spécifiques → tokens nutrition/santé
 _INGREDIENT_NUTRITION_TOKENS: dict[str, list[str]] = {
     # Fer
@@ -237,6 +259,10 @@ def generate_tokens(recipe: dict, ings_dict: dict | None = None) -> list[str]:
     techniques = recipe.get("technique") or tags.get("technique", [])
     for tech in techniques:
         tokens.add(_norm(str(tech)))
+        # le vocabulaire des techniques est en anglais (18 valeurs canoniques) :
+        # on ajoute les mots français pour que « wok », « gratin », « mijoté » cherchent
+        for fr_token in _TECHNIQUE_TOKENS.get(str(tech).lower(), []):
+            tokens.add(_norm(fr_token))
 
     # ── 5. Régimes alimentaires ───────────────────────────────────────────────
     flags = recipe.get("diet_flags", {})
