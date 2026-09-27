@@ -373,7 +373,7 @@
 - **Halva de Sésame** _(kid_friendly, lactose_free, vegan, vegetarian, dessert, levantine)_ — `dessert_halva_de_sesame_87a706`
 - **Haricots au Lait de Coco** _(diabetes_friendly, high_protein, vegetarian, soup, international)_ — `soup_haricots_au_lait_de_coco_207254` 🔁 doublon possible : Lait de Coco Maison, Riz au Lait Coco Vegan
 - **Haricots Blancs au Four** _(gluten_free, vegan, vegetarian, main, british)_ — `main_haricots_blancs_au_four_000c13`
-- **Haricots frits mexicains** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, mexican)_ — `main_haricots_frits_mexicains_a78841`
+- **Haricots frits mexicains** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, side, mexican)_ — `main_haricots_frits_mexicains_a78841`
 - **Haricots Géants au Four** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, greek)_ — `main_haricots_geants_au_four_1c018b`
 - **Haricots Rouges Créoles** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, creole)_ — `main_haricots_rouges_creoles_ac36f6`
 - **Haricots Rouges à la Tomate** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, international)_ — `main_haricots_rouges_a_la_toma_c44560`
@@ -528,7 +528,7 @@
 - **Mercimek çorbası d'Istanbul au beurre pimenté** _(diabetes_friendly, gluten_free, soup, turkish)_ — `dal_turkish_mercimek_soup_a7afcf`
 - **Mexican Calabacitas** _(diabetes_friendly, gluten_free, vegan, vegetarian, main, mexican)_ — `main_mexican_calabacitas_f3511d`
 - **Mexican Rice** _(gluten_free, vegan, vegetarian, main, mexican)_ — `rice_mexican_rice_94bd67`
-- **Migas Portugaises** _(diabetes_friendly, vegetarian, main, portuguese)_ — `bread_migas_portugaises_76818b`
+- **Migas Portugaises** _(diabetes_friendly, vegetarian, side, portuguese)_ — `bread_migas_portugaises_76818b`
 - **Mine frite, nouilles sautées mauriciennes** _(vegetarian, lactose_free, nut_free, main, mauritian)_ — `noodle_mine_frite_5d9c02`
 - **Minestrone d'hiver milanais au riz et chou de Milan** _(diabetes_friendly, vegetarian, gluten_free, nut_free, soup, italian)_ — `soup_minestrone_italienne_f98e05`
 - **Minestrone d'été alla genovese, au basilic** _(diabetes_friendly, high_protein, vegan, vegetarian, lactose_free, nut_free, soup, italian)_ — `soup_minestrone_9116a2`

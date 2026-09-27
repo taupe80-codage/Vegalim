@@ -51,7 +51,7 @@ authentiques ou demande de trancher une convention.
 | Constat | Recettes | Remarque |
 |---|---|---|
 | ~~`tags.technique` vide~~ | ~~269~~ | **traité le 2026-09-26** : vocabulaire normalisé (66 → 18 valeurs) et techniques déduites, plus aucune recette sans technique |
-| Portion légère (< 45 % du poids hors eau attendu, avec < 350 kcal) | 182 | beaucoup de plats à base de pain, de soupes mixées et de salades : la règle `PORTION_MIN_G` de `propose_servings` est sans doute trop stricte pour ces familles |
+| ~~Portion légère~~ | ~~182~~ → 8 | **règle corrigée le 2026-09-27** : elle mesurait la matière sèche, ce qui pénalisait les plats aqueux et les féculents pesés secs ; elle mesure maintenant l'assiette servie, féculents hydratés |
 | Plat principal sous 10 g de protéines/portion | 120 | **arbitré le 2026-09-26 : rien changé** — un dataset végétarien comporte des plats principaux légers, le filtrage se fera côté application |
 | Plus de 65 % des calories en lipides | 85 → 84 | une seule recette dépassait 25 g de matière grasse par portion (la tapenade, reclassée en condiment) ; les autres sont des plats légers ou des currys au lait de coco |
 | `origin.cuisine` = « international » | 69 → 19 | **traité le 2026-09-26** : 50 rattachements ; les 19 restantes (bowls, energy balls, wraps, crackers) n'ont pas d'origine réelle |
@@ -108,6 +108,20 @@ Décisions prises sur la section 2, appliquées par
   « portion » d'entrée, alors qu'elle se sert à la cuillère).
 - **Trois étapes de plus de 400 caractères découpées** : flamiche aux poireaux, ratatouille,
   wok thaï.
+- **« Portion légère » : règle refaite, six recettes corrigées.** L'ancienne règle comparait la
+  *matière sèche* par portion au minimum de `propose_servings` : elle signalait 182 recettes dont
+  90 avaient en réalité une assiette de 300 à 705 g (barszcz 705 g, potage Parmentier 545 g — une
+  soupe, c'est 90 % d'eau) et beaucoup d'autres des pâtes ou du riz **pesés secs** (cacio e pepe
+  « 130 g » = 100 g de pâtes sèches par personne, soit ~250 g cuites). `audit_coherence.py` mesure
+  désormais le poids servi, en hydratant les féculents secs (×2,4) : **8 signalements au lieu de
+  182**, tous explicables (un cookie ou deux brigadeiros par portion ; batata harra, jeera aloo et
+  pommes de terre braisées, qui sont des accompagnements étiquetés `main` ; une pizza marinara
+  sans fromage).
+  Les six vrais cas ont été traités par `scripts/recipes/fix_portions_2026_09_27.py` : les
+  **teriyaki de tofu et de tempeh et le tofu sauté gingembre-soja disaient « servir sur un lit de
+  riz » sans que le riz figure dans la composition** (250 g de riz japonais ajoutés à chacun), le
+  wrap végétarien reçoit 200 g de pois chiches, et les haricots frits mexicains comme les migas
+  portugaises passent en `side` — ce sont des accompagnements dans leur cuisine d'origine.
 - **Sodium du hot pot et de la banitsa : non retenu** — les deux valeurs viennent du bouillon et
   du fromage, elles sont cohérentes avec les recettes d'origine.
 

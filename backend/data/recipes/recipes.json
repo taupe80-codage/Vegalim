@@ -13007,7 +13007,7 @@
         "wok"
       ],
       "difficulty_level": "easy",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.66,
       "description": "Migas portugaises végétariennes, parfumées à l'ail et au paprika doux, servies chaudes avec une texture croustillante et moelleuse, typique de la cuisine traditionnelle portugaise",
@@ -90631,7 +90631,7 @@
         "yellow"
       ],
       "difficulty_level": "medium",
-      "dish_type": "main",
+      "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.91,
       "description": "Préparation mexicaine traditionnelle de haricots noirs, oignons jaunes, ail, cumin et piment, cuits à feu moyen pour obtenir une texture crémeuse et rustique avec une légère croûte dorée.",
@@ -122006,6 +122006,28 @@
           }
         },
         {
+          "ingredient": "coconut_sugar",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "sweetener",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_short_grain_seed_dried",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "cucumber_raw_with_skin",
           "quantity": null,
           "unit": "quelques rondelles",
@@ -122025,17 +122047,6 @@
             "ingredient_fr": "feuilles de menthe",
             "note": "Feuilles de menthe pour une touche de fraîcheur",
             "optional": true
-          }
-        },
-        {
-          "ingredient": "coconut_sugar",
-          "quantity": 10,
-          "unit": "g",
-          "meta": {
-            "role": "sweetener",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
           }
         }
       ],
@@ -122105,6 +122116,7 @@
         "asiatique",
         "barbecue",
         "base_teriyaki_03b2ff",
+        "blanc",
         "coco",
         "coconut",
         "cocotier)",
@@ -122136,6 +122148,8 @@
         "oignon",
         "onion",
         "plancha",
+        "rice",
+        "riz",
         "sans produit animal",
         "sans viande",
         "sesame",
@@ -122145,7 +122159,8 @@
         "tofu",
         "vegan",
         "vegetalien",
-        "vegetarien"
+        "vegetarien",
+        "white"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
@@ -122162,7 +122177,8 @@
         "Étape 7 : Verser la sauce teriyaki préparée dans la poêle et cuire en retournant pendant 1 à 2 minutes, jusqu'à ce que la sauce soit caramélisée et brillante, avec une odeur sucrée et salée, en remuant pour que le tofu soit bien enrobé.",
         "Étape 8 : Parsemer de 20 g de graines de sésame grillées et servir le tofu doré sur un lit de riz japonais.",
         "Étape 9 : Assaisonner avec du poivre noir et du sel de mer, si nécessaire, pour équilibrer les saveurs et obtenir une harmonie parfaite.",
-        "Étape 10 : Servir chaud."
+        "Étape 10 : Servir chaud.",
+        "Étape 11 : Cuire 250 g de riz japonais à l'eau salée, 12 minutes, puis le laisser gonfler 5 minutes à couvert avant de dresser le tofu dessus."
       ],
       "diet_flags": {
         "vegan": true,
@@ -178206,17 +178222,6 @@
         },
         {
           "ingredient": "green_onion_raw",
-          "quantity": null,
-          "unit": "1 poignée",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "oignons verts ciselés",
-            "note": "Ajouter une touche de fraîcheur",
-            "optional": true
-          }
-        },
-        {
-          "ingredient": "green_onion_raw",
           "quantity": 20,
           "unit": "g",
           "meta": {
@@ -178224,6 +178229,28 @@
             "form": "",
             "state": "raw",
             "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_short_grain_seed_dried",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_onion_raw",
+          "quantity": null,
+          "unit": "1 poignée",
+          "meta": {
+            "role": "serving_suggestion",
+            "ingredient_fr": "oignons verts ciselés",
+            "note": "Ajouter une touche de fraîcheur",
+            "optional": true
           }
         }
       ],
@@ -178292,6 +178319,7 @@
         "asiatique",
         "barbecue",
         "base_teriyaki_03b2ff",
+        "blanc",
         "enfants",
         "facile enfants",
         "famille",
@@ -178316,6 +178344,8 @@
         "oignon",
         "onion",
         "plancha",
+        "rice",
+        "riz",
         "sans produit animal",
         "sans viande",
         "sesame",
@@ -178324,7 +178354,8 @@
         "vegan",
         "vegetalien",
         "vegetarien",
-        "vert"
+        "vert",
+        "white"
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
@@ -178337,7 +178368,8 @@
         "Étape 3 : Ajouter 9 g d'ail haché, puis verser la marinade restante dans la poêle et laisser caraméliser pendant 1 à 2 minutes en retournant le tempeh pour bien l'enrober, permettant ainsi à la sauce de réduire et de devenir sirupeuse.",
         "Étape 4 : Parsemer de 20 grammes de graines de sésame grillées.",
         "Étape 5 : Servir le tempeh caramélisé sur un lit de riz chaud, avec la sauce teriyaki sirupeuse enrobant chaque tranche, et parsemer de graines de sésame grillées pour un contraste de textures.",
-        "Étape 6 : Présenter le plat avec une touche de fraîcheur, en ajoutant 20 g d'oignons verts ciselés sur le dessus."
+        "Étape 6 : Présenter le plat avec une touche de fraîcheur, en ajoutant 20 g d'oignons verts ciselés sur le dessus.",
+        "Étape 7 : Cuire 250 g de riz japonais à l'eau salée, 12 minutes, et le laisser reposer 5 minutes à couvert : c'est le lit de riz du plat."
       ],
       "diet_flags": {
         "vegan": true,
@@ -180329,17 +180361,6 @@
           }
         },
         {
-          "ingredient": "sesame_raw_seed",
-          "quantity": null,
-          "unit": "1 cuillère à café",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "graines de sésame",
-            "note": "Pour un peu de croquant et de saveur",
-            "optional": true
-          }
-        },
-        {
           "ingredient": "vinegar_liquid",
           "quantity": 15,
           "unit": "ml",
@@ -180359,6 +180380,28 @@
             "form": "",
             "state": "raw",
             "preparation": ""
+          }
+        },
+        {
+          "ingredient": "white_rice_short_grain_seed_dried",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "base",
+            "form": "",
+            "state": "dried",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "sesame_raw_seed",
+          "quantity": null,
+          "unit": "1 cuillère à café",
+          "meta": {
+            "role": "serving_suggestion",
+            "ingredient_fr": "graines de sésame",
+            "note": "Pour un peu de croquant et de saveur",
+            "optional": true
           }
         }
       ],
@@ -180427,6 +180470,7 @@
         "1 heure",
         "ail",
         "asiatique",
+        "blanc",
         "chine",
         "chinese",
         "chinois",
@@ -180447,6 +180491,8 @@
         "oignon",
         "onion",
         "poele",
+        "rice",
+        "riz",
         "sans produit animal",
         "sans viande",
         "sauce",
@@ -180463,6 +180509,7 @@
         "vert",
         "vinaigre",
         "vinegar",
+        "white",
         "wok"
       ],
       "difficulty_level": "medium",
@@ -180476,7 +180523,8 @@
         "Étape 3 : Chauffer 25 ml d'huile de sésame dans un wok à feu vif et faire dorer le tofu égoutté pendant 3 à 4 minutes par face, jusqu'à obtenir une surface caramélisée et dorée.",
         "Étape 4 : Sauter l'ail pendant 15 secondes, puis ajouter les oignons verts en tronçons et cuire pendant 3 minutes.",
         "Étape 5 : Verser la marinade réservée avec 15 ml de vinaigre de riz et laisser caraméliser pendant 1 minute, jusqu'à obtenir une sauce sirupeuse.",
-        "Étape 6 : Servir sans attendre, garni de 10 g de graines de sésame et d'oignons verts, en veillant à ce que le tofu soit bien chaud et la sauce bien sirupeuse."
+        "Étape 6 : Servir sans attendre, garni de 10 g de graines de sésame et d'oignons verts, en veillant à ce que le tofu soit bien chaud et la sauce bien sirupeuse.",
+        "Étape 7 : Cuire 250 g de riz à l'eau salée pendant la marinade du tofu et servir le sauté dessus, avec la sauce du wok."
       ],
       "diet_flags": {
         "vegan": true,
@@ -182256,6 +182304,17 @@
           }
         },
         {
+          "ingredient": "chickpea_rinsed_canned",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "plant_protein",
+            "form": "",
+            "state": "cooked",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "coriander",
           "quantity": null,
           "unit": "1 poignée",
@@ -182329,6 +182388,8 @@
         "carrot",
         "cheese,",
         "chevre",
+        "chiches",
+        "chickpea",
         "coeliaque",
         "concombre",
         "coriander",
@@ -182349,6 +182410,7 @@
         "noir",
         "olive",
         "pepper",
+        "pois",
         "poivre",
         "quick",
         "rapide",
@@ -182373,7 +182435,8 @@
         "Étape 2: Étaler un quart des 80 g de chèvre frais sur la galette en laissant 2 cm de bord, puis disposer une feuille de laitue fraîche.",
         "Étape 3: Ajouter les carottes râpées et le concombre en fines lamelles, assaisonnés de 10 ml d'huile d'olive, 2 g de sel et de poivre.",
         "Étape 4: Saisir les côtés de la galette pour éviter les fuites, puis rouler fermement en appliquant une légère pression pour obtenir un wrap serré.",
-        "Étape 5: Couper en biseau et servir sans attendre, en vérifiant que le wrap tient sans se défaire."
+        "Étape 5: Couper en biseau et servir sans attendre, en vérifiant que le wrap tient sans se défaire.",
+        "Étape 6 : Écraser grossièrement 200 g de pois chiches rincés à la fourchette et les répartir sur le chèvre frais avant les crudités : le wrap devient un plat complet."
       ],
       "diet_flags": {
         "vegan": false,

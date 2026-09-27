@@ -53,10 +53,18 @@ KCAL = {  # (min, max) kcal/portion plausibles
     "starter": (40, 600), "dessert": (90, 650), "breakfast": (120, 750), "snack": (60, 650),
     "bread": (80, 700), "pastry": (80, 700), "beverage": (0, 450),
 }
-PORTION_MIN_G = {  # poids hors eau minimal (g/portion), cf. propose_servings
-    "main": 150, "pasta": 150, "soup": 120, "side": 80, "starter": 60, "dessert": 60,
-    "breakfast": 90, "snack": 60, "bread": 50, "pastry": 40, "beverage": 100,
+PORTION_MIN_G = {  # poids minimal servi (g ou ml par portion), féculents hydratés
+    # mesurer la matière sèche (comme propose_servings) signale surtout les plats aqueux
+    # (une soupe, c'est 90 % d'eau) et les féculents pesés secs : on mesure l'assiette servie
+    "main": 250, "pasta": 250, "soup": 250, "side": 100, "starter": 80, "dessert": 70,
+    "breakfast": 120, "snack": 50, "bread": 50, "pastry": 40, "beverage": 150,
 }
+# céréales, pâtes et légumineuses pesées sèches : elles absorbent ~1,4 fois leur poids d'eau
+DRY_STAPLE = ("pasta", "rice", "quinoa", "bulgur", "couscous", "lentil", "chickpea_raw",
+              "bean_dried", "split_peas", "barley", "freekeh", "semolina", "oat_flakes",
+              "millet", "udon", "noodle", "vermicelli", "tapioca", "polenta", "cornmeal",
+              "glutinous", "teff", "amaranth", "buckwheat")
+HYDRATION = 2.4
 SAUCY = ("sauce", "condiment", "paste", "base", "broth", "dairy", "ingredient", "roux")
 
 COOK_RE = re.compile(r"\b(cuire|cuisez|cuisson|mijoter|bouillir|ebullition|frire|rotir|"
@@ -77,21 +85,20 @@ CHILI = ("chili", "chilli", "piment", "harissa", "gochujang", "cayenne", "jalape
 
 
 def portion_weight_g(r, servings):
-    """poids hors eau d'une portion (g)."""
+    """poids d'une portion telle qu'elle est servie (g), féculents secs comptés hydratés."""
     tot = 0.0
     for c in r.get("composition") or []:
         m = c.get("meta") or {}
         if m.get("role") == "serving_suggestion" or c.get("quantity") is None:
             continue
         cid = c["ingredient"]
-        if cid.startswith("water"):
-            continue
         try:
             g = ne._qty_to_g(cid, c)
         except Exception:
             continue
-        w = ing(cid).get("water_g")
-        tot += g * (1 - (w or 0) / 100) if w is not None else g
+        if any(k in cid for k in DRY_STAPLE) and m.get("state") in (None, "", "raw", "dried"):
+            g *= HYDRATION
+        tot += g
     return tot / max(servings, 1)
 
 
@@ -158,8 +165,11 @@ for r in RECIPES:
         out["proteines_main"].append(f"{rid} P{prot:.1f} g/portion — {fr_title}")
     if dt in PORTION_MIN_G and not component:
         pw = portion_weight_g(r, srv)
-        if pw < PORTION_MIN_G[dt] * 0.45 and kcal and kcal < 350:
-            out["portion_legere"].append(f"{rid} ({dt}) {pw:.0f} g hors eau/portion (min {PORTION_MIN_G[dt]}) — {fr_title}")
+        # une portion n'est vraiment trop petite que si elle est à la fois légère et peu calorique
+        if pw < PORTION_MIN_G[dt] * 0.8 and kcal and kcal < 300:
+            out["portion_legere"].append(
+                f"{rid} ({dt}) {pw:.0f} g servis/portion (min {PORTION_MIN_G[dt]}), "
+                f"{kcal:.0f} kcal — {fr_title}")
 
     # ---- 2. composition
     seen = Counter(c["ingredient"] for c in core)

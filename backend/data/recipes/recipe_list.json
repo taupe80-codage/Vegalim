@@ -25271,7 +25271,7 @@
     "id": "main_haricots_frits_mexicains_a78841",
     "title": "Haricots frits mexicains",
     "cuisine": "mexican",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": true,
     "diet": [
       "diabetes_friendly",
@@ -35516,7 +35516,7 @@
     "id": "bread_migas_portugaises_76818b",
     "title": "Migas Portugaises",
     "cuisine": "portuguese",
-    "dish_type": "main",
+    "dish_type": "side",
     "vegan": false,
     "diet": [
       "diabetes_friendly",
@@ -66752,16 +66752,21 @@
       },
       {
         "ingredient": "green_onion_raw",
-        "quantity": null,
-        "unit": "1 poignée"
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_rice_short_grain_seed_dried",
+        "quantity": 250,
+        "unit": "g"
       },
       {
         "ingredient": "green_onion_raw",
-        "quantity": 20,
-        "unit": "g"
+        "quantity": null,
+        "unit": "1 poignée"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 7,
     "flags": [],
     "similar": []
   },
@@ -68326,11 +68331,6 @@
         "unit": "g"
       },
       {
-        "ingredient": "sesame_raw_seed",
-        "quantity": null,
-        "unit": "1 cuillère à café"
-      },
-      {
         "ingredient": "vinegar_liquid",
         "quantity": 15,
         "unit": "ml"
@@ -68339,9 +68339,19 @@
         "ingredient": "sesame_raw_seed",
         "quantity": 10,
         "unit": "g"
+      },
+      {
+        "ingredient": "white_rice_short_grain_seed_dried",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sesame_raw_seed",
+        "quantity": null,
+        "unit": "1 cuillère à café"
       }
     ],
-    "n_instructions": 6,
+    "n_instructions": 7,
     "flags": [],
     "similar": [
       {
@@ -68404,6 +68414,16 @@
         "unit": "g"
       },
       {
+        "ingredient": "coconut_sugar",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_rice_short_grain_seed_dried",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
         "ingredient": "cucumber_raw_with_skin",
         "quantity": null,
         "unit": "quelques rondelles"
@@ -68412,14 +68432,9 @@
         "ingredient": "mint_fresh_herb",
         "quantity": null,
         "unit": "quelques feuilles"
-      },
-      {
-        "ingredient": "coconut_sugar",
-        "quantity": 10,
-        "unit": "g"
       }
     ],
-    "n_instructions": 10,
+    "n_instructions": 11,
     "flags": [],
     "similar": [
       {
@@ -71510,12 +71525,17 @@
         "unit": "g"
       },
       {
+        "ingredient": "chickpea_rinsed_canned",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
         "ingredient": "coriander",
         "quantity": null,
         "unit": "1 poignée"
       }
     ],
-    "n_instructions": 5,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
