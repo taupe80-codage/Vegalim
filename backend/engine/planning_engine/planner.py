@@ -28,10 +28,17 @@ def _season_bonus(recipe: dict, month: int | None) -> float:
         return 0.0
 
 
+def _ingredient_key(ing) -> str:
+    """Clé d'ingrédient d'une ligne de composition (CDC v4) ou d'une liste legacy."""
+    if isinstance(ing, dict):
+        return str(ing.get("ingredient") or ing.get("ingredient_id") or "").lower()
+    return str(ing).lower()
+
+
 def _reuse_score(recipe: dict, planned_ings: Counter) -> float:
     """Bonus si la recette partage des ingrédients avec ceux déjà planifiés."""
-    ings = {(i.get("ingredient_id", str(i)) if isinstance(i, dict) else str(i)).lower()
-            for i in recipe.get("ingredients", [])}
+    ings = {_ingredient_key(i) for i in (recipe.get("composition") or recipe.get("ingredients") or [])}
+    ings.discard("")
     shared = sum(planned_ings[i] for i in ings if i in planned_ings)
     return min(2.0, shared * 0.3)
 
@@ -217,8 +224,7 @@ def generate_plan(
 
             # Mettre à jour le compteur d'ingrédients (composition CDC v4 ou legacy)
             for ing in (chosen.get("composition") or chosen.get("ingredients", [])):
-                key = (ing.get("ingredient") or ing.get("ingredient_id") or str(ing)
-                       if isinstance(ing, dict) else str(ing)).lower()
+                key = _ingredient_key(ing)
                 if key:
                     planned_ings[key] += 1
 

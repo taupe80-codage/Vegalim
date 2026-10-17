@@ -28,14 +28,17 @@ from starlette.middleware.base import BaseHTTPMiddleware
 #   script-src 'self'          → seuls les scripts du même domaine (Vite génère des fichiers hashés)
 #   style-src 'unsafe-inline'  → nécessaire si composants React utilisent style={{ }} inline
 #   img-src data:              → certaines images sont encodées en base64
+#   fonts.googleapis.com / fonts.gstatic.com → polices Inter, Outfit et Geist
+#                                (index.html et index.css) : sans eux le navigateur
+#                                refuse la feuille de style et la police
 #   connect-src 'self'         → appels API vers la même origine
 #   worker-src blob:           → Web Workers éventuels (Vite HMR en dev)
 _CSP_FRONTEND = (
     "default-src 'self'; "
     "script-src 'self'; "
-    "style-src 'self' 'unsafe-inline'; "
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
     "img-src 'self' data: https:; "
-    "font-src 'self' data:; "
+    "font-src 'self' data: https://fonts.gstatic.com; "
     "connect-src 'self'; "
     "worker-src blob:; "
     "frame-ancestors 'none'; "

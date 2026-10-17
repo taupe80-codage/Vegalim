@@ -102,13 +102,18 @@ def check_rate_limit(request: Request, limit: int, window_seconds: int,
 
     - Si `email` fourni : clé = email (plus juste derrière un proxy)
     - Sinon : clé = IP du client
+    - Le compteur est propre à la route : sans cela, les requêtes de navigation
+      (120 / min) épuisaient le quota de /auth/login (10 / min) et d'/auth/register
+      (5 / 10 min), et chaque route purgeait l'historique des autres.
 
     Utilise Redis si REDIS_URL est défini, sinon mémoire.
     Lève HTTP 429 si la limite est atteinte.
     """
     # Clé de rate limiting : email > IP
     ip = request.client.host if request.client else "unknown"
-    identifier = email if email else ip
+    route = request.scope.get("route")
+    scope = getattr(route, "path", None) or request.url.path
+    identifier = f"{scope}|{email if email else ip}"
     r = _get_redis()
     if r is not None:
         _check_redis(identifier, limit, window_seconds)
