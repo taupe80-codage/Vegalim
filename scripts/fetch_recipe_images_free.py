@@ -88,7 +88,8 @@ MEAT_ANYWHERE = (
     "vitello", "agnello", "pesce", "pescado", "peixe", "bacalao", "marisco",
     "camaron", "gosht", "murgh", "keema", "kheema", "kebab", "shawarma", "gyros",
     "nikuman", "tonkatsu", "tonkotsu", "chashu", "yakitori", "bulgogi",
-    "samgyeopsal", "sucuk", "pastirma", "biltong", "tasajo", "guanciale",
+    "samgyeopsal", "sucuk", "pastirma", "biltong", "kottbull", "kottfars",
+    "skinka", "korv", "frikadell", "boulette de viande", "tasajo", "guanciale",
     "cecina", "carnitas", "barbacoa", "birria", "lengua", "chicharron", "pernil",
     "cochinita", "milanesa", "albondiga", "morcilla", "longaniza", "pastrami",
 )
@@ -102,6 +103,7 @@ MEAT_WORDS = {
     "svin", "okse", "kod", "flask", "kjott", "kip", "vis", "vlees", "varken",
     "rund", "pollo", "lomo", "atun", "gamba", "gambas", "buta", "galbi", "unagi",
     "pesci", "carnitas", "barbacoa", "birria", "lengua", "chicharron",
+    "kott", "biff", "kjott", "lever",
 }
 
 # Faux amis : mots qui contiennent une racine ci-dessus sans parler de viande.
@@ -346,6 +348,128 @@ def search_commons(session: requests.Session, query: str) -> list[dict]:
     return out
 
 
+def api_get(session: requests.Session, url: str, params: dict) -> dict | None:
+    """Appel d'API MediaWiki avec reprise : interroges en parallele, les wikis
+    repondent 429 ou 503, et un echec silencieux se lisait a tort comme
+    « ce plat n'a pas d'article »."""
+    for essai in range(4):
+        try:
+            r = session.get(url, params=params, timeout=30)
+            if r.status_code == 200:
+                return r.json()
+            if r.status_code in (429, 500, 502, 503, 504):
+                time.sleep(1.5 * (essai + 1))
+                continue
+            return None
+        except (requests.RequestException, ValueError):
+            time.sleep(1.0 * (essai + 1))
+    return None
+
+
+def commons_file(session: requests.Session, filename: str) -> dict | None:
+    """Métadonnées Commons d'un fichier précis : licence, auteur, miniature.
+
+    Une image hébergée localement sur un wiki (et non sur Commons) revient
+    absente : c'est souvent une image sous usage loyal, qu'on ne veut pas.
+    """
+    params = {
+        "action": "query", "format": "json", "titles": f"File:{filename}",
+        "prop": "imageinfo", "iiprop": "url|mime|size|extmetadata",
+        "iiurlwidth": str(TARGET_WIDTH),
+    }
+    data = api_get(session, "https://commons.wikimedia.org/w/api.php", params)
+    if not data:
+        return None
+    pages = (data.get("query") or {}).get("pages") or {}
+
+    for page in pages.values():
+        if "missing" in page:
+            continue
+        info = (page.get("imageinfo") or [{}])[0]
+        if not info or info.get("mime") not in ("image/jpeg", "image/png"):
+            continue
+        # l'image d'un article encyclopedique est la bonne photo du plat,
+        # meme en resolution modeste : on accepte plus petit qu'ailleurs
+        if (info.get("width") or 0) < 320:
+            continue
+        meta = info.get("extmetadata") or {}
+        lic = (meta.get("LicenseShortName", {}).get("value") or "").strip()
+        low = lic.lower()
+        free = ("cc0" in low or "public domain" in low
+                or low.startswith("cc by") or "cc-by" in low)
+        if not free or {"nd", "by-nd"} & set(re.split(r"[^a-z0-9-]+", low)):
+            continue
+        return {
+            "source": "Wikimedia Commons",
+            "title": page.get("title", "").removeprefix("File:"),
+            "download": info.get("thumburl") or info.get("url"),
+            "page": info.get("descriptionurl", ""),
+            "author": clean_html(meta.get("Artist", {}).get("value", "")) or "inconnu",
+            "license": lic,
+            "width": info.get("thumbwidth") or info.get("width"),
+            "height": info.get("thumbheight") or info.get("height"),
+            "categories": clean_html(meta.get("Categories", {}).get("value", "")),
+        }
+    return None
+
+
+def search_wikipedia(session: requests.Session, query: str) -> list[dict]:
+    """Image principale de l'article encyclopédique du plat.
+
+    C'est la piste la plus sûre : l'article « Chilaquiles » est illustré par
+    une assiette de chilaquiles, pas par un fichier dont le nom contient le
+    mot. On vérifie ensuite que le titre de l'article correspond bien au plat
+    cherché — sinon on écarte, parce que la recherche d'un wiki répond
+    toujours quelque chose.
+    """
+    out = []
+    for lang in ("fr", "en"):
+        params = {
+            "action": "query", "format": "json",
+            "generator": "search", "gsrsearch": query, "gsrlimit": "3",
+            "gsrnamespace": "0",
+            "prop": "pageimages", "piprop": "original|name", "pilicense": "any",
+        }
+        data = api_get(session, f"https://{lang}.wikipedia.org/w/api.php", params)
+        if not data:
+            continue
+        pages = (data.get("query") or {}).get("pages") or {}
+
+        for page in sorted(pages.values(), key=lambda p: p.get("index", 99)):
+            fichier = page.get("pageimage")
+            titre_article = page.get("title", "")
+            if not fichier or not titre_article:
+                continue
+            # L'article doit parler du plat cherché, et son titre ne doit pas
+            # annoncer de viande : « Kung Pao chicken » mène à « Poulet
+            # impérial », dont l'image est un plat de poulet.
+            if not covers(titre_article, query):
+                continue
+            if rejected_for(titre_article):
+                continue
+            cand = commons_file(session, fichier)
+            if not cand:
+                continue
+            # Un mot peut nommer un plat et tout autre chose : « Festival »,
+            # « Cou », « Fenouil » ont un article, qui n'illustre pas une
+            # assiette. Les categories Commons de l'image doivent dire que
+            # c'est de la nourriture, sauf si l'article reprend au moins deux
+            # mots du plat et ne laisse donc plus de doute.
+            nourriture = bool(set(words(cand["categories"])) & FOOD_MARKERS)
+            if not nourriture and covers(titre_article, query) < 2:
+                continue
+            cand["source"] = f"Wikipédia ({lang}) · Wikimedia Commons"
+            cand["article"] = titre_article
+            # c'est le titre de l'article qui prouve la pertinence, pas le
+            # nom du fichier, souvent cryptique (« Alicha_1.jpg »)
+            cand["match_title"] = titre_article
+            out.append(cand)
+            break
+        if out:
+            break
+    return out
+
+
 def search_openverse(session: requests.Session, query: str) -> list[dict]:
     params = {
         "q": query, "page_size": "10",
@@ -441,7 +565,7 @@ def load_blocklist() -> set:
 
 
 def pick(session: requests.Session, item: dict, min_hits: int = 1,
-         blocked: set | None = None):
+         blocked: set | None = None, sources: tuple = ()):
     """Meilleure photo pertinente, Commons d'abord (licences plus simples).
 
     Une photo n'est retenue que si son titre couvre TOUS les mots distinctifs
@@ -453,7 +577,8 @@ def pick(session: requests.Session, item: dict, min_hits: int = 1,
     # Commons répond en une seconde, Openverse en une quinzaine : on épuise
     # d'abord toutes les requêtes sur Commons, et on ne sollicite Openverse
     # que pour les plats qu'il n'a pas.
-    for rank, finder in enumerate((search_commons, search_openverse)):
+    finders = sources or (search_wikipedia, search_commons, search_openverse)
+    for rank, finder in enumerate(finders):
         for query in build_queries(item):
             batch = []
             for pos, cand in enumerate(finder(session, query)):
@@ -465,6 +590,14 @@ def pick(session: requests.Session, item: dict, min_hits: int = 1,
                 if why:
                     tried.append(f"{cand['title'][:40]} → {why}")
                     continue
+                # Une image d'article prouve sa pertinence par le titre de
+                # l'article, déjà vérifié : le nom du fichier est souvent
+                # cryptique et les heuristiques ci-dessous n'ont pas de sens.
+                if cand.get("match_title"):
+                    cand.update(query=query, hits=covers(cand["match_title"], query))
+                    batch.append(((-99, 0, rank, pos), cand))
+                    continue
+
                 hits = covers(cand["title"], query)
                 if hits < max(1, min_hits):
                     tried.append(f"{cand['title'][:40]} → nom du plat incomplet")
@@ -555,6 +688,8 @@ def main() -> None:
     ap.add_argument("--slug", nargs="*", help="slugs précis à traiter")
     ap.add_argument("--dry-run", action="store_true", help="chercher sans télécharger")
     ap.add_argument("--min-hits", type=int, default=1, help="mots-clés exigés dans le titre")
+    ap.add_argument("--source", choices=("all", "wikipedia"), default="all",
+                    help="wikipedia : uniquement l'image de l'article du plat")
     ap.add_argument("--workers", type=int, default=6,
                     help="recherches menées en parallèle (6 par défaut)")
     ap.add_argument("--verbose", action="store_true")
@@ -576,6 +711,7 @@ def main() -> None:
     print(f"{len(items)} recettes, {len(todo)} à traiter"
           f"{' (simulation)' if args.dry_run else ''}\n")
 
+    finders = (search_wikipedia,) if args.source == "wikipedia" else ()
     credits = load_credits()
     blocked = load_blocklist()
     if args.slug:
@@ -605,7 +741,7 @@ def main() -> None:
 
     def handle(item: dict) -> None:
         nonlocal ok, fail
-        cand, tried = pick(session_for_thread(), item, args.min_hits, blocked)
+        cand, tried = pick(session_for_thread(), item, args.min_hits, blocked, finders)
         line_no = None
         with lock:
             done[0] += 1
