@@ -128,6 +128,65 @@ def _fuzzy_threshold(n: int) -> int:
     return 3
 
 
+# Tolérance de variante « exacte » : uniquement les flexions françaises
+# (pluriel, accord, infinitif) — poireau/poireaux, gratin/gratinee.
+# La liste est fermée pour éviter les collisions avec un autre mot qui
+# commence pareil : gratin/grating (EN, « râper »), courge/courgette.
+_VARIANT_SUFFIXES = ("s", "e", "es", "x", "ee", "ees", "er")
+
+
+def _is_exact_variant(a: str, b: str) -> bool:
+    """True si a et b sont le meme mot a une flexion pres (pluriel, accord)."""
+    if a == b:
+        return True
+    short, long_ = (a, b) if len(a) <= len(b) else (b, a)
+    if not long_.startswith(short):
+        return False
+    return long_[len(short):] in _VARIANT_SUFFIXES
+
+
+def _inflections(token: str) -> set[str]:
+    """Formes fléchies d'un token, pour les recherches dans l'index.
+
+    L'index stocke « gratin », « gratine » et « gratinee » sous trois clés
+    distinctes, et « poireaux » sans « poireau » : sans ce regroupement, une
+    requête bien orthographiée rate les recettes indexées sous une autre
+    flexion et retombe sur le fallback texte, décoté.
+    """
+    forms = {token}
+    for suf in _VARIANT_SUFFIXES:
+        forms.add(token + suf)
+        if token.endswith(suf) and len(token) - len(suf) >= 4:
+            forms.add(token[: -len(suf)])
+    return forms
+
+
+def _match_strength(qt: str, tokens: list[str] | set[str], allow_fuzzy: bool) -> float:
+    """
+    Force du match d'un token de requete contre une liste de tokens.
+
+    CLASSEMENT EXACT > APPROCHE : un mot correctement orthographie ne doit
+    jamais etre departage par un mot simplement proche (« gratin » ne doit pas
+    remonter « matin », « poireau » ne doit pas remonter « poires »).
+      - variante exacte (pluriel/accord compris) → 1.0
+      - match approche → au plus 0.5, decroissant avec la distance
+      - sinon → 0.0
+    `allow_fuzzy` est False quand le token existe tel quel dans l'index : la
+    requete n'est alors pas une faute de frappe, inutile de deviner.
+    """
+    best_dist = None
+    for tt in tokens:
+        if _is_exact_variant(qt, tt):
+            return 1.0
+        if allow_fuzzy:
+            d = _levenshtein(qt, tt)
+            if 0 < d <= _fuzzy_threshold(len(qt)) and (best_dist is None or d < best_dist):
+                best_dist = d
+    if best_dist is None:
+        return 0.0
+    return 0.5 / best_dist
+
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # Utilitaires texte
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -399,6 +458,25 @@ class _IndexCache:
                 result[idx_tok] = set(ids)
         return result
 
+    def inflected_ids(self, token: str) -> tuple[set, float]:
+        """IDs et meilleur IDF pour un token, flexions comprises (hors stop-words)."""
+        ids: set = set()
+        best_idf = 0.0
+        for form in _inflections(token):
+            got = self._index.get(form)
+            if got and not self.is_stop(form):
+                ids |= set(got)
+                best_idf = max(best_idf, self.idf(form))
+        return ids, best_idf
+
+    def is_known(self, token: str) -> bool:
+        """True si le token (ou une de ses flexions/variantes) existe dans l'index."""
+        return any(
+            self._index.get(f)
+            for v in self.translate(token)
+            for f in _inflections(v)
+        )
+
     def idf(self, token: str) -> float:
         return self._idf.get(token, math.log(self._total + 1) + 1.0)
 
@@ -427,9 +505,9 @@ def _build_hit_map(
         exact: set = set()
         best_idf = 0.0
         for v in variants:
-            ids = cache.exact_ids(v)
-            if ids and not cache.is_stop(v):
-                best_idf = max(best_idf, cache.idf(v))
+            ids, v_idf = cache.inflected_ids(v)
+            if ids:
+                best_idf = max(best_idf, v_idf)
                 exact |= ids
 
         for rid in exact:
@@ -452,8 +530,18 @@ def _build_hit_map(
 # Scores individuels
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def _title_score(query_tokens: list[str], recipe: dict) -> float:
-    """Score fuzzy entre les tokens de la requête et tous les champs texte du titre."""
+def _title_score(
+    query_tokens: list[str],
+    recipe: dict,
+    fuzzy_tokens: set[str] | None = None,
+) -> float:
+    """
+    Score entre les tokens de la requête et tous les champs texte du titre.
+
+    `fuzzy_tokens` : tokens de la requête autorisés à matcher de façon approchée
+    (ceux absents de l'index, donc probablement mal orthographiés).  None =
+    tous, pour compatibilité avec les appels qui ne disposent pas du cache.
+    """
     if not query_tokens:
         return 0.0
     # BUG 5 FIX : cherche dans title_fr ET titles.fr ET title_original ET cuisine ET tags
@@ -484,8 +572,8 @@ def _title_score(query_tokens: list[str], recipe: dict) -> float:
         return 0.0
 
     matched = sum(
-        1 for qt in query_tokens
-        if any(_levenshtein(qt, tt) <= _fuzzy_threshold(len(qt)) for tt in title_tokens)
+        _match_strength(qt, title_tokens, fuzzy_tokens is None or qt in fuzzy_tokens)
+        for qt in query_tokens
     )
     return matched / len(query_tokens)
 
@@ -751,14 +839,18 @@ def _moon_phase_bonus(recipe: dict, moon_phase: str | None, cache: "_IndexCache"
     return round(matched / mapped, 4)
 
 
-def _fallback_text_score(query_tokens: list[str], recipe: dict) -> float:
+def _fallback_text_score(
+    query_tokens: list[str],
+    recipe: dict,
+    fuzzy_tokens: set[str] | None = None,
+) -> float:
     """
     Score textuel pour les recettes hors-index (titres + tags + cuisine).
     Utilisé quand le hit_map ne contient pas la recette.
     """
     if not query_tokens:
         return 0.0
-    title_s = _title_score(query_tokens, recipe)
+    title_s = _title_score(query_tokens, recipe, fuzzy_tokens)
     if title_s > 0:
         return title_s * 0.6   # décote par rapport aux recettes indexées
 
@@ -770,8 +862,8 @@ def _fallback_text_score(query_tokens: list[str], recipe: dict) -> float:
     tag_tokens = _tokenize(tag_text)
     if tag_tokens:
         matched = sum(
-            1 for qt in query_tokens
-            if any(_levenshtein(qt, tt) <= _fuzzy_threshold(len(qt)) for tt in tag_tokens)
+            _match_strength(qt, tag_tokens, fuzzy_tokens is None or qt in fuzzy_tokens)
+            for qt in query_tokens
         )
         return (matched / len(query_tokens)) * 0.3
     return 0.0
@@ -1075,7 +1167,7 @@ def _find_similar_ids(
             rid = r.get("id")
             if rid in seen_ids:
                 continue
-            fs = _fallback_text_score(specific, r)
+            fs = _fallback_text_score(specific, r, set())
             if fs > 0.0:
                 fallback.append((fs, rid, r))
         fallback.sort(key=lambda x: -x[0])
@@ -1342,6 +1434,13 @@ def search(
     # ── Lookup index ─────────────────────────────────────────────────────────
     hit_map = _build_hit_map(search_tokens, cache, enable_fuzzy=enable_fuzzy)
 
+    # Tokens autorisés à matcher de façon approchée : uniquement ceux qui
+    # n'existent pas dans l'index (vraies fautes de frappe).  Un mot bien
+    # orthographié ne doit pas ramener ses voisins (« gratin » → « matin »).
+    fuzzy_tokens: set[str] = (
+        {t for t in search_tokens if not cache.is_known(t)} if enable_fuzzy else set()
+    )
+
     # Normalisation IDF max pour comparabilité des scores
     max_idf = sum(cache.idf(t) for t in search_tokens if not cache.is_stop(t)) or 1.0
 
@@ -1363,13 +1462,13 @@ def search(
 
         # Fallback texte pour recettes hors-index
         if raw_idx == 0.0:
-            fallback_s = _fallback_text_score(search_tokens, recipe)
+            fallback_s = _fallback_text_score(search_tokens, recipe, fuzzy_tokens)
             if fallback_s == 0.0 and not ing_tokens:
                 continue   # aucun signal → exclure
             index_s = fallback_s
 
         # BUG 5 FIX : score titre (titles.fr + title_fr + tags)
-        fuzzy_s = _title_score(search_tokens, recipe)
+        fuzzy_s = _title_score(search_tokens, recipe, fuzzy_tokens)
 
         # Score ingrédients
         ing_s, missing = _ingredient_score(ing_tokens, recipe, max_missing, cache)

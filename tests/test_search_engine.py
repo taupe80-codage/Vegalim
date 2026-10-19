@@ -250,6 +250,74 @@ class TestFuzzyMatching:
         )
 
 
+class TestExactBeforeFuzzy:
+    """Un mot correctement orthographié passe avant un mot simplement proche.
+
+    « gratin » ramenait « Bowl Quinoa Fruits du Matin » et « Burrito du matin »
+    (distance 2) au milieu des vrais gratins ; « poireau » ramenait « Tatin de
+    poires » devant « Gratin de Poireaux ».
+    """
+
+    def test_variantes_de_flexion(self):
+        from backend.engine.search_engine.core import _is_exact_variant
+        assert _is_exact_variant("poireau", "poireaux")
+        assert _is_exact_variant("gratin", "gratinee")
+        assert _is_exact_variant("legume", "legumes")
+        # Mots différents qui commencent pareil
+        assert not _is_exact_variant("courge", "courgette")
+        assert not _is_exact_variant("poire", "poireau")
+        assert not _is_exact_variant("gratin", "grating")   # EN « râper »
+
+    def test_force_de_match_graduee(self):
+        from backend.engine.search_engine.core import _match_strength
+        titre = ["bowl", "quinoa", "fruits", "matin"]
+        gratins = ["gratin", "de", "poireaux"]
+        # Mot connu : pas de repêchage approché
+        assert _match_strength("gratin", titre, allow_fuzzy=False) == 0.0
+        assert _match_strength("gratin", gratins, allow_fuzzy=False) == 1.0
+        # Faute de frappe : repêché, mais strictement sous un match exact
+        approx = _match_strength("gratin", titre, allow_fuzzy=True)
+        assert 0.0 < approx < 1.0
+
+    def test_gratin_ne_remonte_pas_matin(self):
+        """Sur le corpus réel : aucun « matin » dans les résultats de « gratin »."""
+        from backend.engine.search_engine.core import search
+        results = search(query_text="gratin", limit=40, include_similar=False)
+        if not results:
+            pytest.skip("Index de recherche indisponible")
+        titres = [(r.get("titles") or {}).get("fr", "").lower() for r in results]
+        assert not [t for t in titres if "matin" in t and "gratin" not in t], (
+            f"Résultats hors-sujet pour « gratin » : {titres}"
+        )
+        # Les gratins eux-mêmes sortent en tête
+        assert "gratin" in titres[0]
+
+    def test_poireau_avant_poires(self):
+        from backend.engine.search_engine.core import search
+        results = search(query_text="poireau", limit=40, include_similar=False)
+        if not results:
+            pytest.skip("Index de recherche indisponible")
+        titres = [(r.get("titles") or {}).get("fr", "").lower() for r in results]
+        assert not [t for t in titres if "poire" in t and "poireau" not in t], (
+            f"« poires » remonté pour « poireau » : {titres}"
+        )
+        assert "poireau" in titres[0]
+
+    def test_flexions_indexees_ensemble(self):
+        """« gratiné » est indexé sous gratinee : la requête « gratin » doit le voir."""
+        from backend.engine.search_engine.core import search
+        results = search(query_text="gratin", limit=40, include_similar=False)
+        if not results:
+            pytest.skip("Index de recherche indisponible")
+        par_titre = {(r.get("titles") or {}).get("fr", ""): r for r in results}
+        tian = next((r for t, r in par_titre.items() if t.startswith("Tian")), None)
+        if tian is None:
+            pytest.skip("Corpus sans recette « Tian … gratiné »")
+        assert tian["_search_v3"]["source"] == "index", (
+            "Recette gratinée retombée sur le fallback texte (décoté)"
+        )
+
+
 class TestSimilarRecipes:
     def test_similar_attached_to_first_result(self):
         """include_similar=True doit attacher _similar_recipes au premier résultat."""
