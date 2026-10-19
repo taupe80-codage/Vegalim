@@ -27,6 +27,8 @@ import FavoritesPage     from './pages/FavoritesPage';
 import ShoppingListPage  from './pages/ShoppingListPage';
 import FodmapPage        from './pages/FodmapPage';
 import FAQPage           from './pages/FAQPage';
+import CreditsPage       from './pages/CreditsPage';
+import { Link }          from './Router';
 import './index.css';
 
 // ── Dispatcher ────────────────────────────────────────────────────────────────
@@ -48,6 +50,7 @@ function PageDispatcher({ onAuthClick }) {
     case 'courses':     return <ShoppingListPage />;
     case 'fodmap':      return <FodmapPage />;
     case 'faq':         return <FAQPage />;
+    case 'credits':     return <CreditsPage />;
     default:          return <HomePage />;
   }
 }
@@ -64,6 +67,16 @@ function AppInner() {
       <main className="app-main">
         <PageDispatcher onAuthClick={() => setShowAuth(true)} />
       </main>
+
+      {/* Les photos sous licence Creative Commons imposent de citer leurs
+          auteurs : le lien doit rester accessible depuis toutes les pages. */}
+      <footer className="app-footer">
+        <span>ALIM v6</span>
+        <span aria-hidden="true">·</span>
+        <Link to="/credits" className="app-footer-link">Crédits photos</Link>
+        <span aria-hidden="true">·</span>
+        <Link to="/faq" className="app-footer-link">FAQ</Link>
+      </footer>
 
       {showAuth && <AuthModal onClose={() => setShowAuth(false)} />}
     </div>

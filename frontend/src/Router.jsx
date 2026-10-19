@@ -8,6 +8,7 @@
  *   /planning   → PlanningPage
  *   /nutrition  → NutritionPage
  *   /profil     → ProfilePage
+ *   /credits    → CreditsPage
  *
  * Usage :
  *   <Link to="/frigo">Mon Frigo</Link>
@@ -66,6 +67,7 @@ const ROUTES = [
   { pattern: '/courses',    page: 'courses'    },
   { pattern: '/fodmap',     page: 'fodmap'     },
   { pattern: '/faq',        page: 'faq'        },
+  { pattern: '/credits',    page: 'credits'    },
 ];
 
 function resolve(path) {

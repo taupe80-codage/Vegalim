@@ -4771,3 +4771,146 @@ html[data-theme="dark"] .pill--active-diet {
   .faq-nav-btn { flex-shrink: 0; padding: 7px 12px; font-size: 12px; white-space: nowrap; }
   .faq-nav-count { display: none; }
 }
+
+/* =============================================================================
+   PIED DE PAGE
+   ============================================================================= */
+
+.app-footer {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  flex-wrap: wrap; padding: 20px 24px 28px;
+  border-top: 1px solid var(--brd); background: var(--sur);
+  color: var(--mut); font-size: 12px;
+}
+.app-footer-link { color: var(--txt2); text-decoration: none; transition: color 0.15s; }
+.app-footer-link:hover { color: var(--grn); text-decoration: underline; }
+
+/* =============================================================================
+   CREDITS PHOTOS
+   ============================================================================= */
+
+.credits-page { min-height: 100vh; background: var(--bg); }
+
+/* Hero — même traitement que la FAQ */
+.credits-hero {
+  background: linear-gradient(135deg, var(--grn) 0%, var(--grn-h) 100%);
+  padding: 56px 24px 48px; text-align: center;
+}
+.credits-hero-inner { max-width: 680px; margin: 0 auto; }
+.credits-hero-badge {
+  display: inline-block; background: rgba(255,255,255,0.15); color: #fff;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 4px 14px; border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.25); margin-bottom: 16px;
+}
+.credits-hero-title {
+  font-size: clamp(28px, 5vw, 42px); font-weight: 700;
+  color: #fff; margin: 0 0 12px; letter-spacing: -0.02em;
+}
+.credits-hero-sub { font-size: 15px; color: rgba(255,255,255,0.82); margin: 0 0 28px; line-height: 1.6; }
+
+.credits-search-wrap { position: relative; max-width: 520px; margin: 0 auto; }
+.credits-search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: 16px; pointer-events: none; }
+.credits-search {
+  width: 100%; box-sizing: border-box; padding: 14px 44px 14px 46px;
+  border-radius: 12px; border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.12); color: #fff;
+  font-size: 15px; outline: none; backdrop-filter: blur(8px);
+  transition: background 0.2s, border-color 0.2s;
+}
+.credits-search::placeholder { color: rgba(255,255,255,0.55); }
+.credits-search:focus { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.6); }
+.credits-search-clear {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.2); border: none; color: #fff;
+  width: 24px; height: 24px; border-radius: 50%; font-size: 11px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; transition: background 0.15s;
+}
+.credits-search-clear:hover { background: rgba(255,255,255,0.35); }
+.credits-search-count { margin: 10px 0 0; font-size: 13px; color: rgba(255,255,255,0.75); }
+
+/* Corps */
+.credits-body { max-width: 900px; margin: 0 auto; padding: 32px 24px 80px; }
+
+.credits-note {
+  background: var(--sur); border: 1px solid var(--brd); border-radius: 14px;
+  padding: 20px 22px; margin-bottom: 20px;
+}
+.credits-note-title { font-size: 16px; font-weight: 700; color: var(--txt); margin: 0 0 10px; }
+.credits-note p { font-size: 14px; line-height: 1.65; color: var(--txt2); margin: 0 0 10px; }
+.credits-note p:last-child { margin-bottom: 0; }
+.credits-note-other { color: var(--mut) !important; font-size: 13px !important; }
+
+.credits-stats { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+
+/* Badge licence — bleu domaine public, ambre partage à l'identique */
+.credits-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 3px 10px; border-radius: 20px;
+  font-size: 11px; font-weight: 600; white-space: nowrap;
+  text-decoration: none; border: 1px solid transparent;
+}
+a.credits-badge:hover { text-decoration: underline; }
+.credits-badge--by { background: var(--grn-dim); color: var(--grn); border-color: var(--grn-dim); }
+.credits-badge--sa { background: rgba(139,105,20,0.12); color: var(--amber); border-color: rgba(139,105,20,0.2); }
+.credits-badge--pd { background: var(--blu-dim); color: var(--blu); border-color: var(--blu-dim); }
+.credits-badge-n { opacity: 0.65; font-weight: 500; }
+
+/* Liste */
+.credits-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.credits-item {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--sur); border: 1px solid var(--brd); border-radius: 12px;
+  padding: 10px 14px;
+}
+.credits-thumb {
+  width: 64px; height: 48px; object-fit: cover; border-radius: 8px;
+  background: var(--sur2); flex-shrink: 0;
+}
+.credits-item-main { flex: 1; min-width: 0; }
+.credits-item-recipe {
+  margin: 0 0 3px; font-size: 14px; font-weight: 600; color: var(--txt);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.credits-item-meta {
+  margin: 0; font-size: 12px; color: var(--mut);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.credits-item-author { color: var(--txt2); font-weight: 500; }
+.credits-item-right {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 5px; flex-shrink: 0;
+}
+.credits-item-src { font-size: 11px; color: var(--mut); text-decoration: none; }
+.credits-item-src:hover { color: var(--grn); text-decoration: underline; }
+
+/* États */
+.credits-loading { text-align: center; color: var(--mut); font-size: 14px; padding: 40px 0; }
+.credits-empty {
+  text-align: center; background: var(--sur); border: 1px solid var(--brd);
+  border-radius: 14px; padding: 40px 24px;
+}
+.credits-empty-icon { font-size: 32px; display: block; margin-bottom: 12px; }
+.credits-empty-title { margin: 0 0 6px; font-size: 15px; font-weight: 600; color: var(--txt); }
+.credits-empty-sub { margin: 0; font-size: 13px; color: var(--mut); }
+.credits-empty-reset {
+  margin-top: 14px; padding: 8px 16px; border-radius: 8px;
+  border: 1px solid var(--brd); background: none; color: var(--txt2);
+  font-size: 13px; cursor: pointer;
+}
+.credits-empty-reset:hover { background: var(--sur2); }
+
+.credits-back { margin-top: 28px; text-align: center; }
+.credits-back-btn {
+  padding: 10px 20px; border-radius: 8px;
+  border: 1px solid var(--brd); background: var(--sur); color: var(--txt2);
+  font-size: 14px; cursor: pointer; transition: background 0.15s, color 0.15s;
+}
+.credits-back-btn:hover { background: var(--sur2); color: var(--grn); }
+
+/* Mobile — la licence et la source passent sous le nom de la recette */
+@media (max-width: 600px) {
+  .credits-body { padding: 24px 16px 60px; }
+  .credits-item { flex-wrap: wrap; }
+  .credits-item-right { flex-direction: row; align-items: center; width: 100%; gap: 10px; }
+  .credits-item-recipe { white-space: normal; }
+}
