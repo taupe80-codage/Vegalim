@@ -428,7 +428,8 @@ def search_wikipedia(session: requests.Session, query: str) -> list[dict]:
             "action": "query", "format": "json",
             "generator": "search", "gsrsearch": query, "gsrlimit": "3",
             "gsrnamespace": "0",
-            "prop": "pageimages", "piprop": "original|name", "pilicense": "any",
+            "prop": "pageimages|categories", "piprop": "original|name",
+            "pilicense": "any", "cllimit": "40", "clshow": "!hidden",
         }
         data = api_get(session, f"https://{lang}.wikipedia.org/w/api.php", params)
         if not data:
@@ -455,9 +456,14 @@ def search_wikipedia(session: requests.Session, query: str) -> list[dict]:
             # assiette. Les categories Commons de l'image doivent dire que
             # c'est de la nourriture, sauf si l'article reprend au moins deux
             # mots du plat et ne laisse donc plus de doute.
-            nourriture = bool(set(words(cand["categories"])) & FOOD_MARKERS)
-            if not nourriture and covers(titre_article, query) < 2:
+            cats_article = " ".join(c.get("title", "").removeprefix("Catégorie:")
+                                    .removeprefix("Category:")
+                                    for c in (page.get("categories") or []))
+            nourriture = bool((set(words(cats_article)) | set(words(cand["categories"])))
+                              & FOOD_MARKERS)
+            if not nourriture:
                 continue
+            cand["article_categories"] = cats_article
             cand["source"] = f"Wikipédia ({lang}) · Wikimedia Commons"
             cand["article"] = titre_article
             # c'est le titre de l'article qui prouve la pertinence, pas le
@@ -547,6 +553,12 @@ FOOD_MARKERS = {
     "salades", "pain", "gateau", "patisserie", "dessert", "boisson", "cuisine",
     "legume", "legumes", "fromage", "riz", "pates", "nouilles", "sauce",
     "comida", "platos", "cibo", "piatto", "essen", "gericht", "speise",
+    # mots des categories Wikipedia : « Cuisine egyptienne », « Specialite
+    # culinaire », « Mets a base de pois chiche »
+    "culinaire", "culinaires", "gastronomie", "specialite", "specialites",
+    "mets", "plats", "recettes", "aliment", "aliments", "boissons",
+    "entremets", "friandise", "condiment", "condiments", "fromages",
+    "soupes", "salades", "pains", "gateaux", "biscuits", "patisseries",
 }
 
 # Une photo d'ingrédients crus ou de gros plan n'illustre pas le plat.
