@@ -1926,6 +1926,35 @@ details.frigo-fridge-details[open] .frigo-fridge-chevron { transform: rotate(90d
   color: var(--txt2);
 }
 
+.frigo-opt-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--txt2);
+  cursor: pointer;
+}
+.frigo-opt-check input { accent-color: var(--grn); cursor: pointer; }
+
+/* Avis au-dessus des résultats : mots non reconnus, saisie comprise */
+.frigo-notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--txt2);
+  background: var(--sur2);
+  border: 1px solid var(--brd);
+  border-radius: var(--rad);
+}
+.frigo-notice--warn { border-color: rgba(240,136,62,0.35); background: rgba(240,136,62,0.07); }
+.frigo-notice .frigo-tag { font-family: inherit; background: transparent; cursor: default; }
+.frigo-notice button.frigo-tag { cursor: pointer; }
+.frigo-notice-hint { font-size: 12px; color: var(--mut); margin-left: 4px; }
+
 .frigo-slider-row { display: flex; align-items: center; gap: 12px; }
 .frigo-slider {
   flex: 1;

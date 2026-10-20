@@ -15,7 +15,7 @@ from typing import Optional
 from backend.core.auth_deps import get_user, get_optional_user
 from backend.core.data_io import load_recipes, load_ingredients_dict
 from backend.core.rate_limiter import check_rate_limit
-from backend.services.ingredient_catalog import resolve_names
+from backend.services.ingredient_catalog import names_of, resolve_names
 from backend.services.fridge_scoring import (
     STAPLE, SPECIAL, COMMON, has_substance, recipe_weights, relevance, tier_of_id,
 )
@@ -265,6 +265,7 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
     check_rate_limit(request, limit=60, window_seconds=60)
     asked = {ing.lower().strip() for ing in payload.ingredients if ing.strip()}
     fridge, resolved, unrecognized = _resolve_fridge(asked)
+    names = names_of([i for ids in resolved.values() for i in ids])
     recipes    = load_recipes()
     ings_dict  = load_ingredients_dict()   # pour traduire les IDs manquants en noms FR
 
@@ -375,7 +376,10 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
 
     return {
         "fridge_ingredients": sorted(asked),
-        "resolved":     resolved,       # nom saisi -> IDs recettes retenus
+        "resolved":     {                # nom saisi -> ingredients retenus
+            key: [{"id": i, "name_fr": names[i]} for i in ids]
+            for key, ids in resolved.items()
+        },
         "unrecognized": unrecognized,   # noms qu'aucun ingrédient ne reconnait
         "total":  len(scored),
         "limit":  payload.limit,

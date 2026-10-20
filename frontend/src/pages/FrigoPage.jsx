@@ -24,6 +24,14 @@ function _loadFrigoFilters() {
   } catch { return {}; }
 }
 const FRIGO_LABELS_KEY   = 'alim_frigo_labels';
+const FRIGO_SHOW_UNDERSTOOD_KEY = 'alim_frigo_show_understood';
+
+// « Épinards » et « epinard » se comparent égaux : sert à ne pas afficher
+// « poireau → poireau » dans l'explication de ce qui a été compris.
+const foldText = (s) =>
+  String(s).normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/œ/gi, 'oe').replace(/[^a-z0-9]+/gi, ' ').trim().toLowerCase()
+    .replace(/(eau)x\b/g, '$1').replace(/([^s])[sx]\b/g, '$1');
 
 // ── Catégories d'ingrédients avec onglets ─────────────────────────────────────
 
@@ -307,6 +315,10 @@ export default function FrigoPage() {
   const [visibleCount, setVisibleCount] = useState(12);
   const [activeCat,    setActiveCat]    = useState('legumes');
   const [filtersOpen,  setFiltersOpen]  = useState(false);
+  const [showUnderstood, setShowUnderstood] = useState(() => {
+    try { return localStorage.getItem(FRIGO_SHOW_UNDERSTOOD_KEY) === '1'; }
+    catch { return false; }
+  });
 
   // Filtres recette complets — initialisés depuis localStorage
   const _sf = _loadFrigoFilters();
@@ -402,6 +414,12 @@ export default function FrigoPage() {
     return STATIC_LABELS[key] || extraLabels[key] || key.replace(/_/g, ' ');
   };
 
+  const toggleShowUnderstood = (checked) => {
+    setShowUnderstood(checked);
+    try { localStorage.setItem(FRIGO_SHOW_UNDERSTOOD_KEY, checked ? '1' : '0'); }
+    catch { /* localStorage indisponible (navigation privée) */ }
+  };
+
   const toggle = (key) => {
     setSelected((prev) => {
       const next = new Set(prev);
@@ -459,6 +477,19 @@ export default function FrigoPage() {
   const displayedResults = results?.results
     ? localFilterRecipes(results.results, { ...fs.filterState, maxTime: '' })
     : null;
+
+  // Mots saisis que le serveur n'a reconnus dans aucune recette
+  const unrecognized = results?.unrecognized || [];
+
+  // « poireaux → poireau » : ce que le serveur a compris, hors cas où le nom
+  // saisi est déjà le bon (pluriel et accents mis à part).
+  const understood = Object.entries(results?.resolved || {})
+    .map(([typed, items]) => {
+      const names = [...new Set(items.map((i) => i.name_fr))];
+      return { typed, names };
+    })
+    .filter(({ typed, names }) =>
+      !(names.length === 1 && foldText(names[0]) === foldText(getLabel(typed))));
 
   return (
     <div className="page-frigo">
@@ -569,6 +600,14 @@ export default function FrigoPage() {
                   <span className="frigo-slider-val">{maxMissing}</span>
                 </div>
               </label>
+              <label className="frigo-opt-check">
+                <input
+                  type="checkbox"
+                  checked={showUnderstood}
+                  onChange={(e) => toggleShowUnderstood(e.target.checked)}
+                />
+                Montrer comment mes ingrédients sont compris
+              </label>
             </div>
 
             <button
@@ -638,6 +677,41 @@ export default function FrigoPage() {
 
           {results && !loading && (
             <>
+              {/* Toujours visible : un mot non reconnu ne doit pas échouer en silence */}
+              {unrecognized.length > 0 && (
+                <div className="frigo-notice frigo-notice--warn" role="alert">
+                  <span>
+                    {unrecognized.length > 1 ? 'Non reconnus' : 'Non reconnu'} :
+                  </span>
+                  {unrecognized.map((key) => (
+                    <button
+                      key={key}
+                      className="frigo-tag frigo-tag--missing"
+                      onClick={() => toggle(key)}
+                      title="Retirer de mon frigo"
+                    >
+                      {getLabel(key)} ✕
+                    </button>
+                  ))}
+                  <span className="frigo-notice-hint">
+                    Vérifiez l'orthographe ou choisissez dans la liste proposée.
+                  </span>
+                </div>
+              )}
+
+              {/* Sur option : ce que le serveur a compris de la saisie libre */}
+              {showUnderstood && understood.length > 0 && (
+                <div className="frigo-notice">
+                  <span>Compris :</span>
+                  {understood.map(({ typed, names }) => (
+                    <span key={typed} className="frigo-tag">
+                      {getLabel(typed)} → {names.slice(0, 3).join(', ')}
+                      {names.length > 3 && ` +${names.length - 3}`}
+                    </span>
+                  ))}
+                </div>
+              )}
+
               <div className="frigo-results-header">
                 <h2>
                   {displayedResults?.length === 0
@@ -646,7 +720,7 @@ export default function FrigoPage() {
                 </h2>
                 {(displayedResults?.length ?? 0) > 0 && (
                   <p className="page-sub">
-                    Avec {results.fridge_ingredients?.length || 0} ingrédients — triées par complétude
+                    Avec {results.fridge_ingredients?.length || 0} ingrédients — triées par pertinence
                     {fs.hasActiveFilters && ' · filtres actifs'}
                   </p>
                 )}

@@ -214,7 +214,9 @@ def test_multiword_french_name_with_underscores(client):
     """La page frigo envoie « pommes de terre » sous la forme pommes_de_terre."""
     data = _post(client, ["pommes_de_terre"])
     assert "soupe_poireau" in [r["id"] for r in data["results"]]
-    assert "potato_raw_flesh" in data["resolved"]["pommes_de_terre"]
+    understood = data["resolved"]["pommes_de_terre"]
+    assert "potato_raw_flesh" in [x["id"] for x in understood]
+    assert {x["name_fr"] for x in understood} == {"pomme de terre"}
 
 
 def test_oeufs_french_spelling(client):

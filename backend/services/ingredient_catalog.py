@@ -670,6 +670,12 @@ def resolve_names(keys: list[str]) -> dict[str, list[str]]:
     return resolved
 
 
+def names_of(ids: list[str]) -> dict[str, str]:
+    """Nom français de chaque ID (l'ID lui-même s'il est absent du catalogue)."""
+    by_id = {e["id"]: e["name_fr"] for e in get_catalog()}
+    return {i: by_id.get(i, i) for i in ids}
+
+
 def get_frigo_groups() -> list[dict]:
     """
     Retourne les groupes d'ingrédients pour les chips expandables du frigo.
