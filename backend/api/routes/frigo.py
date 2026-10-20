@@ -15,6 +15,9 @@ from typing import Optional
 from backend.core.auth_deps import get_user, get_optional_user
 from backend.core.data_io import load_recipes, load_ingredients_dict
 from backend.core.rate_limiter import check_rate_limit
+from backend.services.fridge_scoring import (
+    STAPLE, SPECIAL, COMMON, has_substance, recipe_weights, relevance, tier_of_id,
+)
 
 router = APIRouter(prefix="/frigo", tags=["Mon frigo"])
 
@@ -224,8 +227,10 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
     Retourne les recettes rÃ©alisables avec les ingrÃ©dients du frigo.
     **Public** â€" fonctionnel sans compte (CDC_11 plan gratuit).
 
-    Tri par complÃ©tude dÃ©croissante (moins d'ingrÃ©dients manquants = prioritaire),
-    puis par iconic_score.
+    Tri par pertinence decroissante : un ingredient special (tofu, courge, poireau...)
+    pese plus qu'un produit courant (oeufs, lait) ou un basique (sel, beurre, huile),
+    puis par iconic_score. Les basiques manquants ne comptent pas dans `missing`
+    (ils sont listes dans `assumed`).
     """
     check_rate_limit(request, limit=60, window_seconds=60)
     fridge = {ing.lower() for ing in payload.ingredients}
@@ -259,24 +264,40 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
         # 3. Fallback : humanise l'ID complet
         return iid.replace("_", " ").replace("/", " ")
 
+    # Un frigo qui ne contient que des basiques (sel, huile, beurre) n'a rien
+    # de plus discriminant à offrir : on ne filtre alors pas sur le fond.
+    fridge_has_substance = any(tier_of_id(f) in (SPECIAL, COMMON) for f in fridge)
+
     scored = []
     for recipe in recipes:
         needed    = _get_recipe_ingredients(recipe)
         if not needed:
             continue
         have, missing = _fridge_coverage(fridge, needed)
+        weights = recipe_weights(recipe.get("composition") or recipe.get("ingredients", []))
+
+        # Les basiques (sel, poivre, eau, huile, beurre, farine...) sont supposes
+        # presents : ils ne comptent ni dans les manquants ni dans la completude.
+        assumed = {m for m in missing if weights.get(m, (0, tier_of_id(m)))[1] == STAPLE}
+        missing = missing - assumed
         n_missing = len(missing)
 
         if n_missing > payload.max_missing:
             continue
 
-        completeness = round(len(have) / len(needed), 2)
+        completeness = round(len(have) / (len(have) + n_missing), 2) if have else 0.0
 
         # Exclure les recettes oÃ¹ aucun ingrÃ©dient du frigo ne correspond :
         # avoir 0 ingrÃ©dient sur 2 avec max_missing=2 ne constitue pas une
         # suggestion utile â€" l'utilisateur n'a RIEN de ce qu'il faut.
         if completeness == 0.0:
             continue
+        # Une recette qui ne tire du frigo que des basiques ou des aromates
+        # (ail, persil...) n'est pas une suggestion : l'ingredient principal
+        # doit etre la.
+        if fridge_has_substance and not has_substance(weights, have):
+            continue
+        rel, _fit, _use = relevance(weights, have)
         iconic_score = recipe.get("scoring", {}).get("iconic", {}).get("score", 0)
         scored.append({
             # â"€â"€ Identification â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
@@ -311,10 +332,15 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
                 for iid in sorted(missing)
             ],
             "n_missing":      n_missing,
+            "assumed":        [
+                {"id": iid, "name_fr": _label(iid)} for iid in sorted(assumed)
+            ],
+            "relevance":      round(rel, 3),
         })
 
-    # Tri : complÃ©tude dÃ©croissante (100% en tÃªte), puis iconic_score en Ã©galitÃ©
-    scored.sort(key=lambda x: (-x["completeness"], -x["iconic_score"]))
+    # Tri : pertinence decroissante (poids des ingredients qui portent la recette),
+    # puis iconic_score en cas d'egalite
+    scored.sort(key=lambda x: (-x["relevance"], -x["iconic_score"]))
 
     return {
         "fridge_ingredients": sorted(fridge),
