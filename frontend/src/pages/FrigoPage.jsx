@@ -315,6 +315,7 @@ export default function FrigoPage() {
   const [visibleCount, setVisibleCount] = useState(12);
   const [activeCat,    setActiveCat]    = useState('legumes');
   const [filtersOpen,  setFiltersOpen]  = useState(false);
+  const [inputError,   setInputError]   = useState(null);
   const [showUnderstood, setShowUnderstood] = useState(() => {
     try { return localStorage.getItem(FRIGO_SHOW_UNDERSTOOD_KEY) === '1'; }
     catch { return false; }
@@ -442,13 +443,29 @@ export default function FrigoPage() {
     inputRef.current?.focus();
   };
 
-  const addCustom = () => {
-    const val = customInput.trim().toLowerCase().replace(/\s+/g, '_');
-    if (!val) return;
-    setSelected(prev => new Set([...prev, val]));
-    setCustomInput('');
-    setSuggestions([]);
-    inputRef.current?.focus();
+  // Saisie libre : seul un ingrédient connu de la base peut entrer dans le frigo.
+  // On prend la meilleure correspondance du catalogue (accents et pluriels
+  // tolérés) ; sans correspondance, on le dit au lieu d'ajouter un mot mort.
+  const addCustom = async () => {
+    const q = customInput.trim();
+    if (!q) return;
+    try {
+      const res = await ingApi.search(q);
+      const found = res?.results || [];
+      // Nom exact d'abord ; sinon la meilleure correspondance, mais pas pour
+      // une ou deux lettres (« a » ne doit pas ajouter n'importe quoi).
+      const exact = found.find((r) => foldText(r.name_fr) === foldText(q));
+      const match = exact || (q.length >= 3 ? found[0] : undefined);
+      if (match) {
+        setInputError(null);
+        selectSuggestion(match);
+      } else {
+        setInputError(`« ${q} » n'est pas dans la base d'ingrédients.`);
+        setSuggestions([]);
+      }
+    } catch {
+      setInputError("Impossible de vérifier cet ingrédient pour le moment.");
+    }
   };
 
   const handleSearch = async () => {
@@ -571,7 +588,7 @@ export default function FrigoPage() {
                 type="text"
                 placeholder="Ajouter un ingrédient…"
                 value={customInput}
-                onChange={(e) => setCustomInput(e.target.value)}
+                onChange={(e) => { setCustomInput(e.target.value); setInputError(null); }}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') { suggestions.length > 0 ? selectSuggestion(suggestions[0]) : addCustom(); }
                   if (e.key === 'Escape') { setSuggestions([]); }
@@ -584,6 +601,9 @@ export default function FrigoPage() {
                 +
               </button>
             </div>
+            {inputError && (
+              <div className="frigo-input-error" role="alert">{inputError}</div>
+            )}
 
             {/* Options de recherche */}
             <div className="frigo-options">
