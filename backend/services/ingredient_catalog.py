@@ -9,13 +9,16 @@ génère automatiquement un name_fr et une catégorie par lookup hiérarchique.
 
 API publique :
     search(q, limit)       → liste d'ingrédients triés par pertinence + popularité
+    resolve_names(keys)    → IDs recettes pour des noms libres (français, pluriel…)
     get_frigo_groups()     → catégories avec bases + variantes pour les chips
     get_catalog()          → catalogue complet (lazy, mis en cache)
 """
 from __future__ import annotations
 
 import logging
+import re
 import threading
+import unicodedata
 from functools import lru_cache
 from collections import Counter, defaultdict
 from typing import Optional
@@ -389,8 +392,40 @@ FRIGO_CATEGORIES: list[dict] = [
     },
 ]
 
+# ── Normalisation des noms (accents, pluriels, œ) ─────────────────────────────
+# « Épinards », « epinard », « poireaux » et « poireau » doivent désigner la
+# même chose, que l'on tape au clavier, au téléphone ou depuis une puce.
+_STOP_WORDS = frozenset({
+    "de", "du", "des", "d", "la", "le", "les", "l", "au", "aux", "a", "en",
+    "et", "un", "une",
+})
+
+
+def _singular(tok: str) -> str:
+    if len(tok) > 3:
+        if tok.endswith("eaux"):            # poireaux, agneaux
+            return tok[:-1]
+        if tok.endswith(("s", "x")) and not tok.endswith("ss"):
+            return tok[:-1]
+    return tok
+
+
+def name_tokens(text: str) -> tuple[str, ...]:
+    """Mots d'un nom, sans accents ni pluriel ni mots vides : « Épinards » → ('epinard',)."""
+    t = str(text).lower().replace("œ", "oe").replace("æ", "ae")
+    t = "".join(c for c in unicodedata.normalize("NFKD", t) if not unicodedata.combining(c))
+    return tuple(
+        _singular(w) for w in re.sub(r"[^a-z0-9]+", " ", t).split() if w not in _STOP_WORDS
+    )
+
+
+def _fold(text: str) -> str:
+    return " ".join(name_tokens(text))
+
+
 # ── Cache ─────────────────────────────────────────────────────────────────────
 _catalog_cache: list[dict] | None = None
+_name_index_cache: dict[tuple, list[dict]] | None = None
 _catalog_lock  = threading.Lock()
 
 
@@ -497,6 +532,9 @@ def _build_catalog() -> list[dict]:
             "base":         base,
             "recipe_count": recipe_count,
             "search_tokens": tokens,
+            "fold_id":      _fold(iid),
+            "fold_fr":      _fold(name_fr),
+            "fold_en":      _fold(name_en),
         })
 
     # Tri global par popularité
@@ -518,8 +556,9 @@ def get_catalog() -> list[dict]:
 
 def invalidate_cache() -> None:
     """Invalide le cache (appelé si les données changent)."""
-    global _catalog_cache
+    global _catalog_cache, _name_index_cache
     _catalog_cache = None
+    _name_index_cache = None
 
 
 def search(q: str, limit: int = 20) -> list[dict]:
@@ -539,16 +578,18 @@ def search(q: str, limit: int = 20) -> list[dict]:
     Retourne uniquement les ingrédients présents dans au moins 1 recette.
     """
     catalog = get_catalog()
-    q_lower = q.lower().strip()
+    q_lower = _fold(q)
+    if not q_lower:
+        return []
 
     scored: list[tuple[int, dict]] = []
     for entry in catalog:
         if entry["recipe_count"] == 0:
             continue  # ignorer les IDs hors recettes
 
-        iid_lower    = entry["id"].lower()
-        name_fr_l    = entry["name_fr"].lower()
-        name_en_l    = entry["name_en"].lower()
+        iid_lower    = entry["fold_id"]
+        name_fr_l    = entry["fold_fr"]
+        name_en_l    = entry["fold_en"]
 
         score = 0
         if iid_lower == q_lower or name_fr_l == q_lower:
@@ -563,7 +604,7 @@ def search(q: str, limit: int = 20) -> list[dict]:
             score = 5
         elif q_lower in name_en_l:
             score = 4
-        elif any(q_lower in t.lower() for t in entry.get("search_tokens", [])):
+        elif any(q_lower in _fold(t) for t in entry.get("search_tokens", [])):
             score = 3
 
         if score > 0:
@@ -571,6 +612,62 @@ def search(q: str, limit: int = 20) -> list[dict]:
 
     scored.sort(key=lambda x: (-x[0], -x[1]["recipe_count"], x[1]["name_fr"].lower()))
     return [e for _, e in scored[:limit]]
+
+
+def _name_index() -> dict[tuple, list[dict]]:
+    """Index {mots normalisés: entrées} sur les noms FR/EN et l'ID (recettes seulement)."""
+    global _name_index_cache
+    if _name_index_cache is None:
+        index: dict[tuple, list[dict]] = defaultdict(list)
+        for entry in get_catalog():
+            if entry["recipe_count"] == 0:
+                continue
+            forms = {name_tokens(entry["name_fr"]), name_tokens(entry["name_en"]),
+                     name_tokens(entry["id"])}
+            for form in forms:
+                if form:
+                    index[form].append(entry)
+        _name_index_cache = dict(index)
+    return _name_index_cache
+
+
+_MAX_RESOLVED = 12
+
+
+def resolve_names(keys: list[str]) -> dict[str, list[str]]:
+    """
+    Traduit des noms libres en IDs d'ingrédients présents dans les recettes.
+
+    Accepte le français (« poireaux », « Épinards », « œufs », « pomme de terre »)
+    comme l'anglais ou un ID.  Deux passes :
+      1. nom exact (accents, pluriel et mots vides ignorés) → toutes les entrées
+         qui portent ce nom (« œuf » → œuf cru, œuf dur…) ;
+      2. à défaut, entrées dont le nom contient tous les mots demandés
+         (« courge » → courge butternut, kabocha…), les plus courtes d'abord.
+
+    Retourne {clé: [ids]} ; une clé sans correspondance est absente.
+    """
+    index = _name_index()
+    resolved: dict[str, list[str]] = {}
+    for key in keys:
+        wanted = name_tokens(key)
+        if not wanted:
+            continue
+        found = index.get(wanted)
+        if not found:
+            wanted_set = set(wanted)
+            partial = [
+                (len(form), e) for form, entries in index.items()
+                if wanted_set <= set(form) for e in entries
+            ]
+            if partial:
+                shortest = min(n for n, _ in partial)
+                found = [e for n, e in partial if n <= shortest + 1]
+        if found:
+            seen: dict[str, dict] = {e["id"]: e for e in found}
+            ordered = sorted(seen.values(), key=lambda e: (-e["recipe_count"], e["id"]))
+            resolved[key] = [e["id"] for e in ordered[:_MAX_RESOLVED]]
+    return resolved
 
 
 def get_frigo_groups() -> list[dict]:

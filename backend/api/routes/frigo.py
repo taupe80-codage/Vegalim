@@ -15,6 +15,7 @@ from typing import Optional
 from backend.core.auth_deps import get_user, get_optional_user
 from backend.core.data_io import load_recipes, load_ingredients_dict
 from backend.core.rate_limiter import check_rate_limit
+from backend.services.ingredient_catalog import resolve_names
 from backend.services.fridge_scoring import (
     STAPLE, SPECIAL, COMMON, has_substance, recipe_weights, relevance, tier_of_id,
 )
@@ -183,6 +184,32 @@ def _get_all_recipe_ingredient_ids() -> set[str]:
     return _recipe_ing_cache
 
 
+def _resolve_fridge(keys: set[str]) -> tuple[set[str], dict[str, list[str]], list[str]]:
+    """
+    Rend le frigo compréhensible en français.
+
+    Les clés déjà reconnues (puces anglaises : 'tomato', 'butter/dairy'…) sont
+    gardées telles quelles.  Les autres — « poireaux », « épinards », « œufs »,
+    « pomme de terre » — sont traduites en IDs recettes via le catalogue.
+
+    Retourne (clés utilisables, {clé: ids traduits}, clés introuvables).
+    """
+    known = _get_all_recipe_ingredient_ids()
+    usable: set[str] = set()
+    pending: list[str] = []
+    for key in keys:
+        if any(_ingredient_matches(key, rid) for rid in known):
+            usable.add(key)
+        else:
+            pending.append(key)
+
+    resolved = resolve_names(pending)
+    for ids in resolved.values():
+        usable.update(ids)
+    unrecognized = sorted(k for k in pending if k not in resolved)
+    return usable, resolved, unrecognized
+
+
 # ── Routes ───────────────────────────────────────────────────────────────────────
 
 @router.get("/coverage")
@@ -209,10 +236,13 @@ def ingredient_coverage(
 
     all_ings = _get_all_recipe_ingredient_ids()
 
+    direct    = {k for k in fridge_keys
+                 if any(_ingredient_matches(k, rid) for rid in all_ings)}
+    resolved  = resolve_names([k for k in fridge_keys if k not in direct])
     covered   = []
     uncovered = []
     for key in fridge_keys:
-        if any(_ingredient_matches(key, rid) for rid in all_ings):
+        if key in direct or key in resolved:
             covered.append(key)
         else:
             uncovered.append(key)
@@ -233,7 +263,8 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
     (ils sont listes dans `assumed`).
     """
     check_rate_limit(request, limit=60, window_seconds=60)
-    fridge = {ing.lower() for ing in payload.ingredients}
+    asked = {ing.lower().strip() for ing in payload.ingredients if ing.strip()}
+    fridge, resolved, unrecognized = _resolve_fridge(asked)
     recipes    = load_recipes()
     ings_dict  = load_ingredients_dict()   # pour traduire les IDs manquants en noms FR
 
@@ -343,7 +374,9 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
     scored.sort(key=lambda x: (-x["relevance"], -x["iconic_score"]))
 
     return {
-        "fridge_ingredients": sorted(fridge),
+        "fridge_ingredients": sorted(asked),
+        "resolved":     resolved,       # nom saisi -> IDs recettes retenus
+        "unrecognized": unrecognized,   # noms qu'aucun ingrédient ne reconnait
         "total":  len(scored),
         "limit":  payload.limit,
         "results": scored[: payload.limit],
@@ -364,7 +397,7 @@ def missing_ingredients(payload: MissingRequest, request: Request,
         raise HTTPException(status_code=404,
                             detail=f"Recette {payload.recipe_id} introuvable")
 
-    fridge         = {ing.lower() for ing in payload.fridge}
+    fridge, _, _   = _resolve_fridge({ing.lower().strip() for ing in payload.fridge if ing.strip()})
     needed         = _get_recipe_ingredients(recipe)
     have, missing  = _fridge_coverage(fridge, needed)
 

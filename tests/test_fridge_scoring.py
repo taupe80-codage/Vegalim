@@ -50,10 +50,24 @@ SOUP_WITH_GARLIC = {
 }
 
 
+SOUPE_POIREAU = {
+    "id": "soupe_poireau",
+    "titles": {"fr": "Soupe de poireaux"},
+    "composition": [
+        _ing("leeks_raw", "vegetable", 500),
+        _ing("potato_raw_flesh", "vegetable", 300),
+        _ing("spinach_raw_mature", "vegetable", 100),
+        _ing("water", "liquid", 800, "ml"),
+    ],
+}
+
+
 @pytest.fixture
 def client(monkeypatch):
-    monkeypatch.setattr(frigo, "load_recipes", lambda: [OMELETTE, GRATIN, SOUP_WITH_GARLIC])
+    monkeypatch.setattr(frigo, "load_recipes",
+                        lambda: [OMELETTE, GRATIN, SOUP_WITH_GARLIC, SOUPE_POIREAU])
     monkeypatch.setattr(frigo, "load_ingredients_dict", lambda: {})
+    monkeypatch.setattr(frigo, "_recipe_ing_cache", None)   # rebuilt from the recipes above
     app = FastAPI()
     app.include_router(frigo.router)
     return TestClient(app)
@@ -174,3 +188,60 @@ def test_fridge_of_staples_only_does_not_empty_the_results(client):
     """Frigo sans rien de discriminant : on ne filtre pas sur le fond."""
     results = _suggest(client, ["garlic"])
     assert [r["id"] for r in results] == ["soupe_ail"]
+
+
+# ── Français ─────────────────────────────────────────────────────────────────
+
+def _post(client, ingredients, max_missing=3):
+    r = client.post("/frigo/suggestions", json={"ingredients": ingredients, "max_missing": max_missing})
+    assert r.status_code == 200, r.text
+    return r.json()
+
+
+@pytest.mark.parametrize("typed", ["poireau", "poireaux", "Poireaux", "leek"])
+def test_leek_in_french_and_english(client, typed):
+    data = _post(client, [typed])
+    assert [r["id"] for r in data["results"]] == ["soupe_poireau"]
+    assert data["unrecognized"] == []
+
+
+@pytest.mark.parametrize("typed", ["épinards", "Épinards", "epinards", "spinach"])
+def test_accents_and_plurals_are_ignored(client, typed):
+    assert "soupe_poireau" in [r["id"] for r in _post(client, [typed])["results"]]
+
+
+def test_multiword_french_name_with_underscores(client):
+    """La page frigo envoie « pommes de terre » sous la forme pommes_de_terre."""
+    data = _post(client, ["pommes_de_terre"])
+    assert "soupe_poireau" in [r["id"] for r in data["results"]]
+    assert "potato_raw_flesh" in data["resolved"]["pommes_de_terre"]
+
+
+def test_oeufs_french_spelling(client):
+    for typed in ("œufs", "oeufs", "oeuf"):
+        assert _post(client, [typed])["results"][0]["id"] == "omelette", typed
+
+
+def test_unknown_name_is_reported_not_silent(client):
+    data = _post(client, ["poireaux", "xylophone"])
+    assert data["unrecognized"] == ["xylophone"]
+    assert data["results"]          # le reste du frigo est quand même exploité
+
+
+def test_french_and_english_keys_give_the_same_ranking(client):
+    fr = [r["id"] for r in _post(client, ["œufs", "courge butternut"])["results"]]
+    en = [r["id"] for r in _post(client, ["egg", "butternut"])["results"]]
+    assert fr == en
+
+
+def test_coverage_accepts_french(client):
+    r = client.get("/frigo/coverage", params={"keys": "poireaux,leek,xylophone"})
+    assert r.json() == {"covered": ["poireaux", "leek"], "uncovered": ["xylophone"]}
+
+
+def test_catalog_search_ignores_accents_and_plurals():
+    from backend.services.ingredient_catalog import search
+    for q in ("epinards", "épinards", "Épinard"):
+        assert any(e["id"].startswith("spinach") for e in search(q)), q
+    assert any(e["id"] == "leeks_raw" for e in search("poireaux"))
+    assert any(e["id"] == "egg_raw" for e in search("oeuf"))
