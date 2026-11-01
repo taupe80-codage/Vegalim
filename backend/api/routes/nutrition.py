@@ -40,8 +40,10 @@ router = APIRouter(prefix="/nutrition", tags=["Nutrition"])
 # ── Modèles Pydantic ──────────────────────────────────────────────────────────
 
 class AJRRequest(BaseModel):
-    recipe_id: Optional[int]        = Field(default=None,
-                                            description="ID recette (source CIQUAL)")
+    # Identifiants textuels (ex. « dip_baba_ghanoush_dbd030 ») : typé int,
+    # tout appel avec un vrai ID répondait 422.
+    recipe_id: Optional[str]        = Field(default=None,
+                                            description="ID recette (ex: dip_baba_ghanoush_dbd030)")
     nutrition:  Optional[dict]      = Field(default=None,
                                             description="Dict nutrition {calories, protein…}")
 
@@ -63,7 +65,7 @@ class CycleScoreRequest(BaseModel):
 class NutritionAlertsRequest(BaseModel):
     plan:       Optional[dict]      = Field(default=None,
                                             description="Plan hebdo {lundi:{lunch:{id,title}}}")
-    recipe_ids: Optional[list[int]] = Field(default=None,
+    recipe_ids: Optional[list[str]] = Field(default=None,
                                             description="IDs recettes du plan")
 
 

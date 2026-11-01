@@ -43,3 +43,24 @@ def test_fiche_ingredient_liste_ses_recettes():
     res = TestClient(app).get(f"/ingredients/{iid}")
     assert res.status_code == 200, res.text
     assert res.json()["recipes_count"] == expected > 0
+
+
+# ── /nutrition : identifiants de recette textuels (répondaient 422) ───────────
+
+def test_nutrition_accepte_les_ids_textuels():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.core.auth_deps import get_user
+
+    rid = load_recipes()[0]["id"]
+    app.dependency_overrides[get_user] = lambda: {"email": "test@exemple.com"}
+    try:
+        c = TestClient(app)
+        res = c.post("/nutrition/ajr_score", json={"recipe_id": rid})
+        assert res.status_code == 200, res.text
+        assert res.json()["ajr_score"] > 0
+        res = c.post("/nutrition/alerts", json={"recipe_ids": [rid]})
+        assert res.status_code == 200, res.text
+        assert res.json()["avg_per_meal"].get("calories", 0) > 0
+    finally:
+        app.dependency_overrides.pop(get_user, None)
