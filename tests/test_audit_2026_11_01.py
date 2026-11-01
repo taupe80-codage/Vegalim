@@ -29,3 +29,17 @@ def test_filtre_technique_lit_tags_technique():
     expected = sum(1 for r in recipes if "blending" in r["tags"].get("technique", []))
     assert expected > 0
     assert total == expected
+
+
+# ── GET /ingredients/{id} : recettes associées lues dans composition[] ────────
+
+def test_fiche_ingredient_liste_ses_recettes():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+
+    recipes = load_recipes()
+    iid = recipes[0]["composition"][0]["ingredient"]
+    expected = sum(1 for r in recipes if any(c.get("ingredient") == iid for c in r["composition"]))
+    res = TestClient(app).get(f"/ingredients/{iid}")
+    assert res.status_code == 200, res.text
+    assert res.json()["recipes_count"] == expected > 0

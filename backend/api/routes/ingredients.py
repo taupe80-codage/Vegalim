@@ -167,12 +167,14 @@ def get_ingredient(ingredient_id: str, request: Request):
 
     entry = _enrich_ingredient(ingredient_id, ing)
 
-    # Recettes associées (celles qui contiennent cet ingrédient)
+    # Recettes associées (celles qui contiennent cet ingrédient).
+    # Schéma actuel : composition[].ingredient — seul l'ancien ingredients[]
+    # était lu, d'où recipes_count toujours à 0.
     recipes = load_recipes()
     associated = []
     for r in recipes:
-        for i in r.get("ingredients", []):
-            iid = i.get("ingredient_id", "") if isinstance(i, dict) else str(i)
+        for i in r.get("composition") or r.get("ingredients", []):
+            iid = (i.get("ingredient") or i.get("ingredient_id", "")) if isinstance(i, dict) else str(i)
             if iid == ingredient_id:
                 associated.append({
                     "id":       r["id"],
