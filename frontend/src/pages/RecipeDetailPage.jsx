@@ -336,7 +336,9 @@ export default function RecipeDetailPage() {
       const data = await recipesApi.vegan(recipe.id);
       setVariant(data);
       setShowVariant(true);
-      toast('Variante vegan générée !', 'success');
+      toast(data?.source === 'partial'
+        ? 'Variante générée : certains ingrédients n\'ont pas de substitut vegan'
+        : 'Variante vegan générée !', 'success');
     } catch (err) {
       setVariantError(err.message || 'Connexion requise pour générer une variante.');
       toast(err.message || 'Erreur lors de la génération', 'error');
@@ -431,7 +433,7 @@ export default function RecipeDetailPage() {
           {/* Toggle variante */}
           {showVariant && (
             <div className="variant-banner">
-              <span>🌿 Version vegan générée</span>
+              <span>{variant?.source === 'partial' ? '🌿 Version vegan incomplète' : '🌿 Version vegan générée'}</span>
               <button className="variant-toggle" onClick={() => setShowVariant(false)}>
                 Voir l'originale
               </button>
@@ -696,14 +698,26 @@ export default function RecipeDetailPage() {
           </ul>
 
           {/* Substitutions vegan si variante */}
-          {showVariant && variant?.subs?.length > 0 && (
+          {/* Le backend renvoie substitutions[{original, substitute, *_name}] :
+              lire subs[{from, to}] n'affichait jamais rien. */}
+          {showVariant && variant?.substitutions?.length > 0 && (
             <div className="variant-subs">
               <h4>🔄 Substitutions appliquées</h4>
-              {variant.subs.map((s, i) => (
+              {variant.substitutions.map((s, i) => (
                 <div key={i} className="variant-sub-row">
-                  <span className="variant-sub-from">{(s.from || '').replace(/_/g, ' ')}</span>
+                  <span className="variant-sub-from">{s.original_name || (s.original || '').replace(/_/g, ' ')}</span>
                   <span className="variant-sub-arrow">→</span>
-                  <span className="variant-sub-to">{(s.to || '').replace(/_/g, ' ')}</span>
+                  <span className="variant-sub-to">{s.substitute_name || (s.substitute || '').replace(/_/g, ' ')}</span>
+                </div>
+              ))}
+            </div>
+          )}
+          {showVariant && variant?.unresolved?.length > 0 && (
+            <div className="variant-subs">
+              <h4>⚠️ Sans substitut vegan</h4>
+              {variant.unresolved.map((u, i) => (
+                <div key={i} className="variant-sub-row">
+                  <span className="variant-sub-from">{u.name || (u.id || '').replace(/_/g, ' ')}</span>
                 </div>
               ))}
             </div>

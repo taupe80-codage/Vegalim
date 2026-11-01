@@ -462,7 +462,8 @@ def vegan_variant_route(recipe_id: str, user: dict = Depends(get_user)):
     if not recipe:
         raise HTTPException(status_code=404, detail=f"Recette {recipe_id} introuvable")
     if recipe.get("diet_flags", {}).get("vegan"):
-        return {"status": "already_vegan", "recipe": recipe, "subs": []}
+        # Même forme que vegan_variant() (la page lit « substitutions »)
+        return {"recipe": recipe, "substitutions": [], "unresolved": [], "source": "already_vegan"}
     try:
         result = vegan_variant(recipe)
     except Exception as e:

@@ -210,3 +210,64 @@ def test_moteur_recherche_bonus_cycle_phase_courte():
     r = next(r for r in load_recipes()
              if any(c["ingredient"].startswith("spinach") for c in r["composition"]))
     assert _cycle_bonus(r, "menstrual", cache) > 0
+
+
+# ── Variante vegan : ne remplaçait rien mais se déclarait vegan ───────────────
+
+def test_variante_substituts_existent_et_sont_vegan():
+    from backend.engine.rule_engine.variants import VEGAN_SUBS_CIQUAL, _is_vegan_id
+    recipes = load_recipes()
+    ids = {c["ingredient"] for r in recipes for c in r["composition"]} | {r["id"] for r in recipes}
+    subs = set(VEGAN_SUBS_CIQUAL.values())
+    assert subs <= ids
+    assert all(_is_vegan_id(s) is True for s in subs)
+
+
+def _recette_avec(iid):
+    return next(r for r in load_recipes() if any(c["ingredient"] == iid for c in r["composition"])
+                and not (r.get("diet_flags") or {}).get("vegan"))
+
+
+def test_variante_remplace_les_ingredients_non_vegan():
+    from backend.engine.rule_engine.variants import vegan_variant, _is_vegan_id
+    r = _recette_avec("butter_sup80pct")
+    res = vegan_variant(r)
+    if res["source"] == "partial":
+        pytest.skip("recette avec un ingrédient sans substitut")
+    assert res["source"] == "generated"
+    comp = [c["ingredient"] for c in res["recipe"]["composition"]]
+    assert "butter_sup80pct" not in comp and "vegan_butter" in comp
+    assert not [i for i in comp if _is_vegan_id(i) is False]
+    sub = next(s for s in res["substitutions"] if s["original"] == "butter_sup80pct")
+    assert sub["original_name"] and sub["substitute_name"]
+    assert res["recipe"]["ingredients_meta"]["vegan_butter"]["name_fr"]
+    assert res["recipe"]["diet_flags"]["vegan"] is True
+
+
+def test_variante_partielle_ne_se_dit_pas_vegan():
+    from backend.engine.rule_engine.variants import vegan_variant
+    r = _recette_avec("shortcrust_pastry_all_butter_raw_paste_pre_packaged")
+    res = vegan_variant(r)
+    assert res["source"] == "partial"
+    assert any(u["id"] == "shortcrust_pastry_all_butter_raw_paste_pre_packaged" for u in res["unresolved"])
+    assert not res["recipe"].get("diet_flags", {}).get("vegan")
+    assert "vegan" not in res["recipe"]["tags"].get("diet", [])
+
+
+def test_route_variante_recette_de_l_ancien_index():
+    # L'index pré-calculé faisait renvoyer l'original inchangé
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.core.auth_deps import get_user
+    app.dependency_overrides[get_user] = lambda: {"email": "test@exemple.com"}
+    try:
+        res = TestClient(app).post("/recettes/rice_biryani_classic_k82x7b/variante")
+        assert res.status_code == 200, res.text
+        data = res.json()
+        assert data["substitutions"], data.get("source")
+        assert data["source"] in ("generated", "partial")
+        vegan = next(r for r in load_recipes() if (r.get("diet_flags") or {}).get("vegan"))
+        data = TestClient(app).post(f"/recettes/{vegan['id']}/variante").json()
+        assert data["source"] == "already_vegan" and data["substitutions"] == []
+    finally:
+        app.dependency_overrides.pop(get_user, None)
