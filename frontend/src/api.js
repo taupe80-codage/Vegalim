@@ -159,7 +159,7 @@ export const planning = {
 // ── Profil ────────────────────────────────────────────────────────────────────
 
 export const profile = {
-  get:    ()        => get('/profil'),
+  get:    ()        => get('/profil/'),   // route déclarée « / » : sans slash → 307
   update: (payload) => post('/profil/update', payload),
   // Interactions (compte connecté) : like | unlike | view… — alimentent la personnalisation
   interaction: (recipe_id, action) => post('/profil/interaction', { recipe_id, action }),
