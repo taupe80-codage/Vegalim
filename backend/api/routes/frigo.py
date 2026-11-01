@@ -49,38 +49,59 @@ class MissingRequest(BaseModel):
 #               par audit (ex: avoir du riz ≠ avoir du vinaigre de riz)
 # ─────────────────────────────────────────────────────────────────────────────
 
-_SYNONYMS: dict[str, frozenset] = {
-    # Pluriel → singulier (écart UI vs dataset)
-    "black_beans":   frozenset({"black_bean"}),
-    "kidney_beans":  frozenset({"kidney_bean"}),
-    "split_peas":    frozenset({"split_pea"}),
-    "pumpkin_seeds": frozenset({"pumpkin_seed"}),
-    "flax_seeds":    frozenset({"ground_flaxseed", "flaxseed"}),
-    # Synonymes sémantiques
-    "edamame":       frozenset({"soybean", "edamame_bean"}),
-    "egg":           frozenset({"whole_egg"}),
-    "chickpea":      frozenset({"garbanzo", "chickpeas"}),
-}
+# Ids CIQUAL actuels (les anciennes tables visaient 'black_beans', 'vinegar/rice'…,
+# absents des données depuis la migration : 0/11 synonymes et 2/16 exclusions
+# encore réels). Vérifié par tests/test_audit_2026_11_01.py.
+
+# Même produit sous deux ids qu'aucune règle préfixe/suffixe ne relie
+# (relation symétrique, voir _SYNONYM_PAIRS)
+_SYNONYM_PAIRS: tuple[tuple[str, str], ...] = (
+    ("lime_juice_fresh",       "lime_raw_juice_fresh"),
+    ("orange_raw_juice_fresh", "orange_juice_plain"),
+    ("chickpea_boiled",        "chickpea_rinsed_canned"),
+    ("white_bean_boiled",      "white_bean_canned"),
+    ("white_bean_boiled",      "white_bean_dried_canned"),
+    ("white_bean_canned",      "white_bean_dried_canned"),
+    ("parsley_fresh_herb",     "persil"),
+    ("aneth",                  "dill_weed_fresh_herb_leaf"),
+    ("tomate",                 "tomato_raw_ripe"),
+    ("sugars_granulated",      "white_sugar"),
+    ("lettuce",                "green_salad_raw_plain"),
+    # La puce « rice » (id générique) ne couvrait aucun riz blanc précis
+    ("rice",                   "white_rice_raw_seed_unenriched"),
+    ("rice",                   "white_rice_long_grain_seed_dried"),
+    ("rice",                   "white_rice_short_grain_seed_dried"),
+    ("rice",                   "white_rice_cooked_long_grain_seed"),
+    ("rice",                   "white_rice_cooked_short_grain_seed"),
+    ("rice",                   "basmati_rice_raw_seed"),
+)
+_SYNONYMS: dict[str, frozenset] = {}
+for _a, _b in _SYNONYM_PAIRS:
+    _SYNONYMS[_a] = _SYNONYMS.get(_a, frozenset()) | {_b}
+    _SYNONYMS[_b] = _SYNONYMS.get(_b, frozenset()) | {_a}
 
 _EXCLUSIONS: frozenset = frozenset({
-    # Vinaigres / condiments ≠ ingrédient de base
-    ("rice",    "vinegar/rice"),
-    ("rice",    "rice_vinegar"),
-    ("apple",   "vinegar/apple_cider"),
-    ("apple",   "apple_cider_vinegar"),
-    # Dérivés très transformés (présence ≠ interchangeabilité)
-    ("rice",    "rice_paper"),
-    ("rice",    "rice_noodles"),
-    ("rice",    "rice_vermicelli"),
-    ("sesame",  "sesame_oil"),
-    ("bread",   "bread_flour"),
-    ("cream",   "cream_cheese"),
-    ("cream",   "ice_cream"),
-    ("almond",  "milk_plant/almond"),
-    ("almond",  "almond_milk"),
-    ("lemon",   "preserved_lemon"),
-    ("coconut", "coconut_oil"),
-    ("coconut", "milk_plant/coconut"),
+    # Dérivés ou produits différents malgré le préfixe / suffixe commun
+    ("rice",          "rice_flour"),
+    ("rice",          "rice_paper"),
+    ("rice",          "rice_vermicelli_raw_dried"),
+    ("rice_flour",    "white_glutinous_rice_flour"),
+    ("lemon",         "lemon_grass_fresh_herb"),   # citronnelle
+    ("lemon",         "preserved_lemon"),
+    ("cream",         "cream_cheese_block_whole_cow"),
+    ("cream",         "cream_sour_18pct"),
+    ("cream",         "cream_sour_fermented"),
+    ("cream",         "vanilla_ice_cream"),
+    ("butter",        "vegan_butter"),
+    ("curry",         "curry_leaf"),
+    ("coriander",     "coriander_spice_seed"),     # graines ≠ herbe fraîche
+    ("mustard",       "mustard_raw_leaf"),
+    ("banana_raw",    "plantain_banana_raw"),
+    ("onion_raw",     "green_onion_raw"),          # cébette ≠ oignon
+    ("strawberry",    "strawberry_jam"),
+    ("water",         "orange_blossom_water"),
+    ("water",         "rose_water"),
+    ("water",         "sour_cherry_canned_in_water"),
 })
 
 

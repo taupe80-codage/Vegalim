@@ -378,3 +378,33 @@ def test_moteur_recherche_carte_astro_chargee():
     r = next(r for r in load_recipes() if r["titles"]["fr"] == "Harissa")
     assert _astro_element_bonus(r, "feu", cache) == _astro_element_bonus(r, "Feu", cache) > 0.5
     assert 0 <= _moon_phase_bonus(r, "pleine_lune", cache) <= 1
+
+
+# ── Mon frigo : tables synonymes / exclusions sur les ids actuels ─────────────
+
+def test_frigo_tables_sur_ids_reels():
+    from backend.api.routes.frigo import _SYNONYMS, _EXCLUSIONS, _get_all_recipe_ingredient_ids
+    known = _get_all_recipe_ingredient_ids()
+    assert {i for pair in _EXCLUSIONS for i in pair} <= known
+    assert set(_SYNONYMS) <= known
+    assert {i for v in _SYNONYMS.values() for i in v} <= known
+
+
+@pytest.mark.parametrize("fridge,recipe,expected", [
+    ("rice", "rice_flour", False), ("rice", "rice_vermicelli_raw_dried", False),
+    ("lemon", "lemon_grass_fresh_herb", False), ("lemon", "lemon_juice", True),
+    ("cream", "vanilla_ice_cream", False), ("cream", "cream_heavy", True),
+    ("water", "rose_water", False),
+    ("persil", "parsley_fresh_herb", True), ("parsley_fresh_herb", "persil", True),
+])
+def test_frigo_correspondances(fridge, recipe, expected):
+    from backend.api.routes.frigo import _ingredient_matches
+    assert _ingredient_matches(fridge, recipe) is expected
+
+
+def test_frigo_riz_couvre_le_riz_blanc_pas_la_farine():
+    from backend.api.routes.frigo import _fridge_coverage
+    have, missing = _fridge_coverage({"rice"}, {"white_rice_raw_seed_unenriched",
+                                                "basmati_rice_raw_seed", "rice_flour"})
+    assert have == {"white_rice_raw_seed_unenriched", "basmati_rice_raw_seed"}
+    assert missing == {"rice_flour"}
