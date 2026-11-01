@@ -256,7 +256,7 @@ def update_ingredient_price(
 
 
 @router.get("/seasonal")
-def seasonal(month: int):
+def seasonal(month: int = Query(..., ge=1, le=12)):
     """IngrÃƒÂ©dients de saison pour un mois donnÃƒÂ© (1-12). **Public.**"""
     from backend.engine.rule_engine.seasonality import seasonal_ingredients # Ã¢Å"â€¦ migrÃƒÂ©
     from backend.core.data_io import load_ingredients_dict

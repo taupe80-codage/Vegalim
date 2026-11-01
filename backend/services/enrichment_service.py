@@ -198,7 +198,7 @@ def enrich_one(recipe: dict) -> dict:
     from backend.engine.planning_engine.servings  import validate_servings
     from backend.engine.score_engine.reliability  import reliability
     from backend.engine.score_engine.explainer    import explain
-    from backend.engine.rule_engine.seasonality   import seasonal_ingredients
+    from backend.engine.rule_engine.seasonality   import season_ratio
     from backend.engine.rule_engine.validation    import validate_recipe
     from backend.engine.rule_engine.carbon        import carbon_score
     from backend.engine.rule_engine.variants      import vegan_variant  # noqa — gardé pour cohérence
@@ -273,16 +273,11 @@ def enrich_one(recipe: dict) -> dict:
     out["score_coverage"]    = _rel.get("coverage")
 
     # ── Saisonnalité dynamique ────────────────────────────────────────────────
+    # Part des ingrédients saisonniers de saison (ids CIQUAL résolus) : l'ancien
+    # calcul comparait les ids aux noms courts d'une table toujours vide.
     current_month = datetime.date.today().month
-    _comp_for_season = recipe.get("composition", recipe.get("ingredients", []))
-    recipe_ings   = {
-        (i.get("ingredient") or i.get("ingredient_id", "") if isinstance(i, dict) else str(i)).lower()
-        for i in _comp_for_season
-    }
-    in_season = set(seasonal_ingredients(current_month))
-    strict    = recipe_ings - {"salt", "pepper", "oil", "olive_oil", "water", "bouillon"}
-    if strict:
-        ratio = len(strict & in_season) / len(strict)
+    ratio = season_ratio(recipe, current_month)
+    if ratio is not None:
         out["seasonal_tag"]   = (
             "de_saison"      if ratio >= 0.7 else
             "presque_saison" if ratio >= 0.4 else

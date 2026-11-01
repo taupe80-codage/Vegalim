@@ -271,3 +271,49 @@ def test_route_variante_recette_de_l_ancien_index():
         assert data["source"] == "already_vegan" and data["substitutions"] == []
     finally:
         app.dependency_overrides.pop(get_user, None)
+
+
+# ── Saisonnalité : table toujours vide, puis ids CIQUAL non reconnus ──────────
+
+def test_saisonnalite_chargee_et_sans_ingredients_annee_entiere():
+    from backend.engine.rule_engine.seasonality import seasonal_ingredients
+    ete = seasonal_ingredients(7)
+    assert "zucchini" in ete and "tomato" not in ete  # tomate : 12 mois dans le fichier
+    assert "water" not in ete and "salt" not in ete
+    assert "zucchini" not in seasonal_ingredients(1)
+
+
+def test_saisonnalite_table_valide():
+    from backend.core.data_io import load_seasonality
+    from backend.engine.rule_engine.seasonality import SEASON_ID_ALIASES
+    ids = {c["ingredient"] for r in load_recipes() for c in r["composition"]}
+    assert set(SEASON_ID_ALIASES) <= ids
+    assert set(SEASON_ID_ALIASES.values()) <= set(load_seasonality())
+
+
+@pytest.mark.parametrize("iid", ["tomato_paste_unsalted_canned", "pumpkin_squash_raw_seed",
+                                 "fennel_spice_seed", "corn_flour_seed", "pomegranate_juice_plain",
+                                 "shiitake_mushroom_dried"])
+def test_saisonnalite_produits_transformes_hors_saison(iid):
+    from backend.engine.rule_engine.seasonality import season_key
+    assert season_key(iid) is None
+
+
+def test_saisonnalite_ratio_recette():
+    from backend.engine.rule_engine.seasonality import season_ratio, season_bonus
+    r = {"composition": [{"ingredient": "green_zucchini_squash_raw"},
+                         {"ingredient": "eggplant_raw"},
+                         {"ingredient": "olive_oil_plant"},
+                         {"ingredient": "table_salt_unenriched"}]}
+    assert season_ratio(r, 7) == 1.0 and season_bonus(r, 7) == 2.0
+    assert season_ratio(r, 1) == 0.0 and season_bonus(r, 1) == 0.0
+    assert season_ratio({"composition": [{"ingredient": "table_salt_unenriched"}]}, 7) is None
+
+
+def test_route_seasonal_mois_valide():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    c = TestClient(app)
+    assert c.get("/planning/seasonal?month=13").status_code == 422
+    res = c.get("/planning/seasonal?month=7")
+    assert res.status_code == 200 and "zucchini" in res.json()["ingredients"]

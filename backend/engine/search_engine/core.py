@@ -669,35 +669,13 @@ def _ingredient_score(
 def _season_bonus(recipe: dict, month: int, season_data: dict) -> float:
     if not month or not season_data:
         return 0.0
-    # BUG 1 FIX : les recettes n'ont pas de champ "ingredients" — les IDs sont dans
-    # composition[].ingredient. On extrait les variantes (avec/sans underscore) pour
-    # maximiser le matching contre les clés de seasonality.json.
-    composition = recipe.get("composition") or []
-    ings: list[str] = []
-    for item in composition:
-        raw = (item.get("ingredient") or item.get("name") or "").lower().strip()
-        if not raw:
-            continue
-        norm = raw.replace(" ", "_")
-        # Essaie les deux formes : "spinach" et "spinach_cooked" → match direct
-        for variant in (norm, norm.replace("_", " ")):
-            if variant in season_data:
-                ings.append(variant)
-                break
-        else:
-            # Fallback préfixe : "baby_spinach" matche "spinach" dans season_data
-            base = norm.split("_")[0]
-            if base in season_data:
-                ings.append(base)
-
-    # Ne calcule le bonus que sur les ingrédients avec saisonnalité connue
-    # (exclut les ingrédients disponibles toute l'année selon le schéma year_round)
-    strict = [i for i in ings
-              if season_data.get(i, {}).get("seasons", ["year_round"]) != ["year_round"]]
-    if not strict:
+    # Ids CIQUAL résolus vers les clés de seasonality.json (table explicite,
+    # produits frais) ; l'ancien repli « premier segment » faisait de
+    # red_onion_raw « red » et d'un concentré de tomate une tomate de saison.
+    from backend.engine.rule_engine.seasonality import season_ratio
+    ratio = season_ratio(recipe, month, season_data)
+    if ratio is None:
         return 0.0
-    in_s = [i for i in strict if month in season_data.get(i, {}).get("months", [])]
-    ratio = len(in_s) / len(strict)
     return 0.5 if ratio == 1.0 else 0.2 if ratio >= 0.5 else 0.0
 
 

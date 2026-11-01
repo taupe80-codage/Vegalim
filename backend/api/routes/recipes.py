@@ -208,7 +208,7 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
     """
     check_rate_limit(request, limit=30, window_seconds=60)
     import datetime, hashlib
-    from backend.engine.rule_engine.seasonality import seasonal_ingredients  # fix: était absent → NameError
+    from backend.engine.rule_engine.seasonality import season_ratio
 
     recipes   = [r for r in load_recipes() if not is_component_recipe(r)]
     sg        = load_score_graph()
@@ -216,13 +216,10 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
     email     = (user or {}).get("email")
     today     = datetime.date.today()
     month     = today.month
-    in_season = set(seasonal_ingredients(month))
 
     # ── 1. Recette du jour ────────────────────────────────────────────────────
     def season_score(r):
-        ings = {str(c.get("ingredient", "")).lower() for c in r.get("composition", [])
-                if isinstance(c, dict)}
-        ratio = len(ings & in_season) / max(len(ings - {"salt", "pepper", "oil"}), 1)
+        ratio = season_ratio(r, month) or 0.0
         base  = sg.get(str(r["id"]), {}).get("overall_score", 5.0)
         return ratio * 4 + base * 0.6
 
