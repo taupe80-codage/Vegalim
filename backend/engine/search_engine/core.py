@@ -390,14 +390,19 @@ class _IndexCache:
             except Exception:
                 raw = json.loads(Path(path).read_text(encoding="utf-8"))
             phases = raw.get("cycle_phases", {})
-            # Normalise les ingredient_ids en set pour lookup O(1)
-            self._cycle = {
-                phase: {
-                    "recommended": set(pdata.get("ingredient_ids", [])),
-                    "avoid":       set(pdata.get("avoid_ingredient_ids", [])),
+            # Ids CIQUAL des recettes (cycle_engine.cycle_id_map) plutôt que les
+            # concepts du fichier. Indexé sous les deux formes : l'API reçoit
+            # « menstrual », le fichier dit « menstrual_phase » — le bonus
+            # cycle valait toujours 0.
+            from backend.engine.cycle_engine import cycle_id_map
+            self._cycle = {}
+            for phase in phases:
+                entry = {
+                    "recommended": set(cycle_id_map(phase)),
+                    "avoid":       set(cycle_id_map(phase, avoid=True)),
                 }
-                for phase, pdata in phases.items()
-            }
+                self._cycle[phase] = entry
+                self._cycle[phase.removesuffix("_phase")] = entry
             self._cycle_path = path
             self._record_mtime(path)
         except Exception as e:
@@ -728,27 +733,11 @@ def _cycle_bonus(recipe: dict, cycle_phase: str | None, cache: "_IndexCache") ->
     if n == 0:
         return 0.0
 
-    # BUG 4 FIX : le matching exact rate les variantes composees.
-    # "baby_spinach" ne matchait pas "spinach", "chickpea_cooked" ne matchait
-    # pas "chickpea". Matching par segment d'underscore dans les deux sens,
-    # avec garde longueur >= 5 pour les suffixes afin d'eviter les faux
-    # positifs ("oil" vs "flaxseed_oil", "pepper" vs "bell_pepper").
-    def _segment_match(r_ing: str, ref_id: str) -> bool:
-        if r_ing == ref_id:
-            return True
-        # r_ing est une variante plus specifique : "chickpea_cooked" → "chickpea"
-        if r_ing.startswith(ref_id + "_"):
-            return True
-        # ref_id est un suffixe substantiel : "walnut_halves" → "walnut" (len>=5)
-        if len(ref_id) >= 5 and r_ing.endswith("_" + ref_id):
-            return True
-        return False
-
+    # Les ensembles contiennent les ids CIQUAL exacts (cycle_engine.cycle_id_map) :
+    # l'ancien rapprochement par segment (« BUG 4 FIX ») n'est plus nécessaire
+    # et donnait des faux positifs (« corn » → « corn_husk »).
     def _count_matches(recipe_set: set, ref_set: set) -> int:
-        return sum(
-            1 for r_ing in recipe_set
-            if any(_segment_match(r_ing, ref_id) for ref_id in ref_set)
-        )
+        return len(recipe_set & ref_set)
 
     hits_rec   = _count_matches(recipe_ings, recommended)
     hits_avoid = _count_matches(recipe_ings, avoid)

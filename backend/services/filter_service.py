@@ -630,12 +630,14 @@ def apply_filters(
 
     # ── Filtre cycle féminin ──────────────────────────────────────────────────────────────────
     if cycle_phase:
+        # Ids CIQUAL des ingrédients conseillés : comparer aux concepts du
+        # fichier (« spinach », « épinards ») ne trouvait que 0 à 5 recettes.
         try:
-            from backend.engine.graph_engine import get_cycle_ingredients
-            good_ings = {i.lower() for i in get_cycle_ingredients(cycle_phase)}
+            from backend.engine.cycle_engine import cycle_id_map
+            good_ings = set(cycle_id_map(cycle_phase))
         except ImportError:
             good_ings = set()
-            logger.warning("apply_filters: graph_engine indisponible — filtre cycle ignoré")
+            logger.warning("apply_filters: cycle_engine indisponible — filtre cycle ignoré")
 
         if good_ings:
             def _recipe_matches_cycle(r: dict) -> bool:

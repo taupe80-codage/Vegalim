@@ -168,3 +168,45 @@ def test_fodmap_meme_calcul_pour_filtres_et_health_scores():
     for r in load_recipes()[:200]:
         fm = compute_fodmap(r)
         assert cache[r["id"]]["fodmap_level"] == fm["fodmap_level"], r["id"]
+
+
+# ── Cycle : ids CIQUAL (le filtre trouvait 4 / 0 / 5 / 0 recettes) ────────────
+
+_PHASES = ("menstrual", "follicular", "ovulatory", "luteal")
+
+
+@pytest.mark.parametrize("phase", _PHASES)
+def test_filtre_cycle_trouve_des_recettes(phase):
+    from backend.engine.cycle_engine import cycle_id_map
+    recipes = load_recipes()
+    page, total = apply_filters(recipes, cycle_phase=phase, limit=len(recipes))
+    assert total >= 100
+    good = set(cycle_id_map(phase))
+    assert all(any(c["ingredient"] in good for c in r["composition"]) for r in page)
+
+
+def test_cycle_table_pointe_vers_des_ids_reels():
+    from backend.engine.cycle_engine import CYCLE_CONCEPT_IDS
+    ids = {c["ingredient"] for r in load_recipes() for c in r["composition"]}
+    assert {i for v in CYCLE_CONCEPT_IDS.values() for i in v} <= ids
+
+
+def test_cycle_score_sur_une_vraie_recette_et_phase_courte():
+    from backend.engine.cycle_engine import cycle_score, get_phase_info
+    assert get_phase_info("menstrual") == get_phase_info("menstrual_phase") != {}
+    r = next(r for r in load_recipes()
+             if any(c["ingredient"].startswith("spinach") for c in r["composition"]))
+    res = cycle_score(r, phase="menstrual")
+    assert "spinach" in res["recommended"]
+    assert res["score"] > 0
+
+
+def test_moteur_recherche_bonus_cycle_phase_courte():
+    from backend.engine.search_engine.core import _IndexCache, _cycle_bonus, _default_cycle_path
+    cache = _IndexCache.get()
+    cache.load_cycle(_default_cycle_path())
+    recommended, _ = cache.cycle_sets("menstrual")
+    assert "spinach_raw_baby" in recommended
+    r = next(r for r in load_recipes()
+             if any(c["ingredient"].startswith("spinach") for c in r["composition"]))
+    assert _cycle_bonus(r, "menstrual", cache) > 0
