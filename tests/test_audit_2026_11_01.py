@@ -107,3 +107,64 @@ def test_profil_revocation_efface_les_donnees_de_sante(profil_client):
     assert not p.get("health_goal") and not p.get("goal") and not p.get("cycle_phase")
     assert p["health_consent"] is False
     assert p["diet"] == "vegan"
+
+
+# ── FODMAP : identifiants CIQUAL reconnus (634/643 recettes ail/oignon « low ») ─
+
+_ALLIACEES = {"garlic_raw", "onion_raw", "yellow_onion_raw", "white_onion_raw",
+              "red_onion_raw", "shallot_raw"}
+
+
+def test_fodmap_aucune_recette_ail_oignon_en_low():
+    from backend.engine.rule_engine.diet import compute_fodmap
+    recipes = [r for r in load_recipes()
+               if any(c.get("ingredient") in _ALLIACEES for c in r["composition"])]
+    assert len(recipes) > 500
+    low = [r["id"] for r in recipes if compute_fodmap(r)["fodmap_level"] == "low"]
+    assert low == []
+
+
+def test_filtre_low_fodmap_exclut_ail_et_oignon():
+    recipes = load_recipes()
+    page, total = apply_filters(recipes, fodmap="low", limit=len(recipes))
+    assert 0 < total < len(recipes) // 4
+    assert not [r["id"] for r in page
+                if any(c.get("ingredient") in _ALLIACEES for c in r["composition"])]
+
+
+@pytest.mark.parametrize("iid", ["cornstarch_flour", "buckwheat_flour", "almond_flour",
+                                 "pumpkin_squash_raw_seed", "napa_cabbage_raw",
+                                 "sourdough_bread", "chives_raw_fresh", "base_soy_cream_4dc027"])
+def test_fodmap_pas_de_faux_declencheur(iid):
+    # La table des prix les rangeait sous flour / pumpkin / cabbage / cream
+    from backend.engine.rule_engine.diet import _fodmap_key
+    assert _fodmap_key(iid) is None
+
+
+def test_fodmap_deplie_les_sous_recettes():
+    from backend.engine.rule_engine.diet import compute_fodmap
+    r = {"servings": 1, "composition": [
+        {"ingredient": "white_rice_raw_seed_unenriched", "quantity": 80, "unit": "g"},
+        {"ingredient": "base_pesto_905db7", "quantity": 15, "unit": "g"},  # pesto à l'ail
+    ]}
+    res = compute_fodmap(r)
+    assert res["fodmap_level"] != "low"
+    assert "fructanes" in res["fodmap_categories"]
+
+
+def test_fodmap_quantite_inconnue_reste_prudente():
+    from backend.engine.rule_engine.diet import compute_fodmap
+    r = {"servings": 4, "composition": [
+        {"ingredient": "strawberry", "quantity": 500, "unit": "g"},
+        {"ingredient": "toast", "quantity": None, "unit": "2-3 toasts"},
+    ]}
+    assert compute_fodmap(r)["fodmap_level"] != "low"
+
+
+def test_fodmap_meme_calcul_pour_filtres_et_health_scores():
+    from backend.engine.rule_engine.diet import compute_fodmap
+    from backend.services.filter_service import _build_hs_cache
+    cache = _build_hs_cache()
+    for r in load_recipes()[:200]:
+        fm = compute_fodmap(r)
+        assert cache[r["id"]]["fodmap_level"] == fm["fodmap_level"], r["id"]

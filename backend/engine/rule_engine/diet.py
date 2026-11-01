@@ -533,6 +533,141 @@ FODMAP_THRESHOLDS: dict[str, dict] = {
     "ketchup":         {"safe": 0,   "medium": 13,  "cats": ["M"]},
 }
 
+# ── Identifiants CIQUAL des recettes → clés FODMAP ci-dessus ─────────────────
+# Les tables ci-dessus utilisent les noms courts d'avant la migration CIQUAL
+# ('garlic') ; les recettes utilisent 'garlic_raw' : sans cette table, 634 des
+# 643 recettes à l'ail ou à l'oignon ressortaient « low FODMAP ».
+# Table explicite et relue : ingredient_price_map (prix) range sous 'flour'
+# la fécule de maïs ou la farine de sarrasin (low FODMAP) et sous 'cream' les
+# crèmes végétales — inutilisable ici. Un id absent = pas de déclencheur connu
+# (ail des ours, ciboulette, riz, maïs, sarrasin, tofu ferme… sont low).
+# Les sous-recettes (base_*) ne sont pas listées : leur composition est
+# dépliée au prorata (_fodmap_quantities).
+FODMAP_ID_ALIASES: dict[str, str] = {
+    # Alliacées
+    "garlic_raw": "garlic",
+    "onion_raw": "onion", "yellow_onion_raw": "onion", "white_onion_raw": "onion",
+    "sweet_onion_raw": "onion", "red_onion_raw": "red_onion",
+    "shallot_raw": "shallot",
+    "leeks": "leek", "leeks_raw": "leek",
+    "green_onion_raw": "spring_onion",
+    # Bouillon déshydraté : contient presque toujours oignon et ail
+    "vegetable_stock_dried": "onion_powder",
+    # Blé, seigle, orge (fructanes)
+    "wheat_all_purpose_flour_unenriched_unbleached": "wheat_flour",
+    "wheat_flour": "wheat_flour", "wheat_flour_t55": "wheat_flour",
+    "bread_flour_blanched": "wheat_flour", "whole_wheat_flour_seed": "wheat_flour",
+    "tempura_flour": "wheat_flour",
+    "freekeh_immature_wheat_raw_cracked_seed": "wheat",
+    "vital_wheat_gluten_flour": "seitan",
+    "durum_wheat_semolina": "semolina", "wheat_semolina_raw": "semolina",
+    "couscous_to_cook_seed_dried": "couscous",
+    "bulgur_raw_dried": "bulgur",
+    "pasta_raw_dried": "pasta", "whole_wheat_pasta_raw_dried": "pasta",
+    "egg_pasta_raw_dried": "pasta", "udon": "pasta",
+    "bread_white_commercial": "bread", "white_bread_baguette": "bread",
+    "white_bread_roasted": "bread", "white_bread_unsalted": "bread",
+    "wholemeal_bread_whole": "bread", "rye_bread": "bread", "toast": "bread",
+    "multigrain_toast_bread_roasted_sliced_pre_packaged": "bread",
+    "bagel": "bread", "hot_dog_bun_pre_packaged": "bread",
+    "indian_bread_naan": "bread", "white_pita_bread": "bread", "pain_pita": "bread",
+    "croutons_dried_plain_pre_packaged": "bread", "ladyfinger": "bread",
+    # sourdough_bread volontairement absent : levain long = low (Monash, 2 tranches)
+    "breadcrumbs": "breadcrumbs", "breadcrumbs_dried": "breadcrumbs",
+    "phyllo_filo_pastry_raw_paste": "phyllo_dough",
+    "puff_pastry_all_butter_raw_paste_pre_packaged": "puff_pastry",
+    "puff_pastry_vegetable_fat_raw_paste_plant": "puff_pastry",
+    "shortcrust_pastry_all_butter_raw_paste_pre_packaged": "shortcrust_pastry",
+    "rye_flour": "rye_flour",
+    "barley_raw_whole_seed": "barley", "pearl_barley_raw_seed": "barley",
+    "oat_flakes_whole_seed": "oats",
+    # Légumineuses (GOS)
+    "chickpea_boiled": "chickpea", "chickpea_raw_dried": "chickpea",
+    "chickpea_rinsed_canned": "chickpea", "roasted_chickpea": "chickpea",
+    "chickpea_flour": "chickpea", "chana_dal": "chickpea", "falafel": "chickpea",
+    "red_lentil_dried": "red_lentil",
+    "green_lentil_boiled": "lentil", "green_lentil_dried": "lentil", "urad_lentil": "lentil",
+    "black_bean_boiled": "black_bean",
+    "kidney_bean_boiled": "kidney_beans", "kidney_bean_dried": "kidney_beans",
+    "white_bean_boiled": "white_bean", "white_bean_canned": "white_bean",
+    "white_bean_dried_canned": "white_bean", "white_bean_raw": "white_bean",
+    "gigante_bean": "white_bean", "flageolet_bean_canned": "white_bean",
+    "lima_bean_boiled_canned": "white_bean",
+    "pinto_bean_boiled": "pinto_bean",
+    "black_eyed_peas_cowpeas_boiled": "bean", "black_eyed_peas_cowpeas_dried": "bean",
+    "mung_bean_dried": "bean", "pigeon_peas_red_gram_raw": "bean",
+    "red_bean_paste": "bean",
+    "fava_bean_dried": "fava_bean", "broadbeans_fava_beans_boiled_fresh": "fava_bean",
+    "broadbeans_fava_beans_raw_dried": "fava_bean",
+    "broadbeans_fava_beans_raw_fresh": "fava_bean",
+    "split_peas_dried": "split_peas",
+    "green_peas_raw": "green_peas", "green_peas_boiled_frozen_salted": "green_peas",
+    "snow_peas_raw": "green_peas",
+    "soybean_boiled_dried": "soybean", "soybean_raw_dried": "soybean",
+    "soybean_flour_raw_whole": "soybean",
+    "edamame_raw": "edamame",
+    "silken_tofu_pre_packaged": "tofu_soft",
+    # Fruits à coque riches en GOS
+    "cashew_nuts_raw": "cashew", "cashew_nuts_grilled_unsalted": "cashew",
+    "cashew_butter_plain_plant": "cashew_butter",
+    "pistachio_nuts_raw": "pistachio",
+    # Fruits (fructose / polyols)
+    "apple_raw": "apple", "apple_raw_with_skin": "apple",
+    "golden_apple_raw_with_skin": "apple", "chantecler_apple_raw_skinless": "apple",
+    "apple_puree_pre_packaged": "apple", "apple_juice_plain": "apple_juice",
+    "pear_raw_with_skin": "pear",
+    "mango": "mango", "mango_raw": "mango",
+    "cherry_raw_with_skin": "cherry", "sour_cherry_raw": "cherry",
+    "sour_cherry_canned_in_water": "cherry", "cherry_jam": "cherry",
+    "watermelon_raw": "watermelon",
+    "fig_raw": "fig",
+    "apricot_pitted_dried": "apricot",
+    "prune_raw_pitted_dried": "plum",
+    "avocado_raw": "avocado",
+    "banana_raw": "banana",
+    "blueberry": "blueberry", "blueberry_raw": "blueberry", "bilberry_raw": "blueberry",
+    "raspberry_raw": "raspberry",
+    "green_grape_raw": "grape", "chasselas_grape_raw": "grape",
+    "pomegranate_raw": "pomegranate", "pomegranate_juice_plain": "pomegranate",
+    "passion_fruit_raw": "passion_fruit",
+    "grapefruit_raw": "grapefruit",
+    # Sucrants
+    "honey": "honey", "agave_syrup": "agave_syrup", "coconut_sugar": "coconut_sugar",
+    # Légumes
+    "button_mushroom_raw": "mushroom", "porcini_mushroom_raw": "mushroom",
+    "chanterelle_mushroom_raw": "mushroom",
+    "oyster_mushroom_raw": "oyster_mushroom",
+    "shiitake_mushroom_raw": "shiitake", "shiitake_mushroom_dried": "shiitake",
+    "cauliflower_raw_flower": "cauliflower",
+    "celery_stalk_raw": "celery",
+    "sweet_potato_raw": "sweet_potato", "sweet_potato_flour": "sweet_potato",
+    "pumpkin_raw": "pumpkin",
+    "butternut_squash_raw": "pumpkin", "butternut_squash_raw_skinless": "pumpkin",
+    "cabbage_raw": "cabbage", "green_cabbage_raw": "cabbage",
+    "white_cabbage_raw": "cabbage", "red_cabbage_raw": "cabbage",
+    "savoy_cabbage_raw": "cabbage",
+    "sauerkraut": "cabbage", "sauerkraut_canned_low_sodium": "cabbage",
+    "broccoli_raw": "broccoli", "chinese_broccoli_cooked": "broccoli",
+    "asparagus_raw": "asparagus", "green_asparagus_raw": "asparagus",
+    "white_asparagus_raw_peeled": "asparagus",
+    "fennel_raw": "fennel",
+    "beetroot_raw_root": "beetroot", "beetroot_cooked_root": "beetroot",
+    "turnip_raw": "turnip",
+    "jerusalem_artichoke_raw": "jerusalem_artichoke",
+    # Laitiers frais (déclencheurs modérés de MEDIUM_FODMAP_IDS)
+    "ricotta": "ricotta", "ricotta_whole_cow": "ricotta",
+    "mascarpone": "mascarpone",
+    "cream": "cream", "cream_heavy": "cream", "cream_heavy_refrigerated_18pct": "cream",
+    "cream_heavy_refrigerated_30pct": "cream", "cream_liquid_uht": "cream",
+    "cream_sour_18pct": "cream", "cream_sour_fermented": "cream",
+    "sour_cream_fermented_18pct": "cream",
+    # Sauces et pâtes
+    "soy_sauce_shoyu_reduced_sodium": "soy_sauce", "soy_sauce_tamari": "soy_sauce",
+    "miso_fermented": "miso",
+    "sesame_tahini_raw_butter_seed_plant": "tahini",
+    "tomato_ketchup_catsup_pre_packaged_normal": "ketchup",
+}
+
 # ── Conversions poids pièce → grammes ─────────────────────────────────────────
 # Pour les ingrédients dont l'unité est "piece" ou "pcs" dans composition
 _PIECE_WEIGHT_G: dict[str, float] = {
@@ -579,54 +714,34 @@ _PIECE_WEIGHT_G: dict[str, float] = {
 }
 
 
-def _extract_quantities(recipe: dict) -> dict[str, float]:
-    """Retourne {base_ingredient: grams_per_serving} depuis recipe['composition'].
+def _item_grams(item: dict, base: str) -> float | None:
+    """Quantité d'un item de composition en grammes (recette entière), ou None
+    si elle est inconnue : quantité absente ou unité libre (« 1 poignée »,
+    « 2-3 toasts »). `base` sert au poids d'une pièce (_PIECE_WEIGHT_G)."""
+    raw_qty = item.get("quantity")
+    if raw_qty is None:
+        return None
+    try:
+        qty = float(raw_qty)
+    except (TypeError, ValueError):
+        return None
+    unit = str(item.get("unit") or "g").lower().strip()
 
-    Normalise l'unité (g, ml, piece, tbsp, tsp, pinch) en grammes.
-    Divise par recipe['servings'] pour obtenir la quantité par portion.
-    Extrait la base depuis "base/variant" (ex: "onion/yellow" → "onion").
-    """
-    servings = max(1, int(recipe.get("servings") or 1))
-    result: dict[str, float] = {}
-
-    for item in recipe.get("composition") or []:
-        if not isinstance(item, dict):
-            continue
-        raw_id = str(item.get("ingredient", "") or item.get("ingredient_id", ""))
-        if not raw_id:
-            continue
-        base = _normalize(raw_id.split("/")[0].strip())
-
-        qty = float(item.get("quantity") or 0)
-        unit = str(item.get("unit") or "g").lower().strip()
-
-        if unit in ("g", "ml", ""):
-            grams = qty
-        elif unit in ("piece", "pcs", "pièce", "pc", "unit"):
-            weight = _PIECE_WEIGHT_G.get(base, 50.0)
-            grams = qty * weight
-        elif unit in ("tbsp", "cs", "cuillère à soupe", "tablespoon"):
-            grams = qty * 15.0
-        elif unit in ("tsp", "cc", "cuillère à café", "teaspoon"):
-            grams = qty * 5.0
-        elif unit in ("pinch", "pincée"):
-            grams = qty * 0.5
-        elif unit in ("cup", "tasse"):
-            grams = qty * 240.0
-        elif unit == "kg":
-            grams = qty * 1000.0
-        elif unit == "l":
-            grams = qty * 1000.0
-        else:
-            grams = qty  # fallback brut
-
-        grams_per_serving = grams / servings
-        if base in result:
-            result[base] += grams_per_serving
-        else:
-            result[base] = grams_per_serving
-
-    return result
+    if unit in ("g", "ml", ""):
+        return qty
+    if unit in ("piece", "pcs", "pièce", "pc", "unit"):
+        return qty * _PIECE_WEIGHT_G.get(base, 50.0)
+    if unit in ("tbsp", "cs", "cuillère à soupe", "tablespoon"):
+        return qty * 15.0
+    if unit in ("tsp", "cc", "cuillère à café", "teaspoon"):
+        return qty * 5.0
+    if unit in ("pinch", "pincée"):
+        return qty * 0.5
+    if unit in ("cup", "tasse"):
+        return qty * 240.0
+    if unit in ("kg", "l"):
+        return qty * 1000.0
+    return None
 
 
 # ── Extraction des ids ingrédients ────────────────────────────────────────────
@@ -792,6 +907,136 @@ def compute_diet_flags(recipe: dict) -> dict:
     return flags
 
 
+# ── FODMAP ────────────────────────────────────────────────────────────────────
+
+_FODMAP_KEYS: frozenset[str] = frozenset(FODMAP_THRESHOLDS) | HIGH_FODMAP_IDS | MEDIUM_FODMAP_IDS
+_FODMAP_CAT_SETS = (("F", _FRUCTAN_HIGH), ("G", _GOS_HIGH),
+                    ("M", _FRUCTOSE_HIGH), ("P", _POLYOL_HIGH))
+_FODMAP_CAT_LABELS = {"F": "fructanes", "G": "GOS", "D": "lactose",
+                      "M": "fructose", "P": "polyols"}
+_WHEAT_FODMAP_KEYS = frozenset({"wheat", "wheat_flour", "flour", "bread", "pasta",
+                                "ble", "farine", "pain"})
+
+
+def _fodmap_key(ingredient_id: str) -> str | None:
+    """Clé des tables FODMAP pour un id de recette ('garlic_raw' → 'garlic'),
+    ou None si l'ingrédient n'est pas un déclencheur connu."""
+    iid = _normalize(str(ingredient_id).split("/")[0])
+    if iid in FODMAP_ID_ALIASES:
+        return FODMAP_ID_ALIASES[iid]
+    return iid if iid in _FODMAP_KEYS else None
+
+
+def _fodmap_quantities(recipe: dict, unknown: set[str], _depth: int = 0) -> dict[str, float]:
+    """{clé FODMAP: g par portion} depuis composition[].
+
+    Les clés dont la quantité est inconnue (voir _item_grams) sont ajoutées à
+    `unknown` : compute_fodmap leur applique la règle de liste, plus prudente.
+    Une sous-recette (id d'une autre recette, ex. base_pesto_905db7) est
+    dépliée : chacun de ses ingrédients compte au prorata de la part utilisée
+    (g utilisés / g totaux de la sous-recette).
+    """
+    servings = max(1, int(recipe.get("servings") or 1))
+    result: dict[str, float] = defaultdict(float)
+    sub_recipes = None
+    for item in recipe.get("composition") or []:
+        if not isinstance(item, dict):
+            continue
+        raw_id = str(item.get("ingredient", "") or item.get("ingredient_id", ""))
+        if not raw_id:
+            continue
+        key = _fodmap_key(raw_id)
+        if key is not None:
+            grams = _item_grams(item, key)
+            if grams is None:
+                unknown.add(key)
+            else:
+                result[key] += grams / servings
+            continue
+        if _depth >= 3:
+            continue
+        if sub_recipes is None:
+            from backend.core.data_io import load_recipes
+            sub_recipes = {r.get("id"): r for r in load_recipes()}
+        sub = sub_recipes.get(raw_id)
+        if not sub:
+            continue
+        sub_total = sum(_item_grams(c, "") or 0 for c in sub.get("composition") or []
+                        if isinstance(c, dict))
+        used = _item_grams(item, "")
+        sub_qty = _fodmap_quantities(sub, unknown, _depth + 1)
+        if not used or sub_total <= 0:
+            # Part utilisée inconnue : règle de liste pour ses déclencheurs
+            unknown.update(sub_qty)
+            continue
+        share = used / sub_total
+        sub_servings = max(1, int(sub.get("servings") or 1))
+        for k, g in sub_qty.items():
+            # g est par portion de la sous-recette → ramené au total, puis à la part utilisée
+            result[k] += g * sub_servings * share / servings
+    return dict(result)
+
+
+def compute_fodmap(recipe: dict) -> dict:
+    """Niveau FODMAP d'une recette : {fodmap_level, fodmap_score, fodmap_categories}.
+
+    Score : clé à seuil quantitatif Monash → 0 / 1 / 2 pts selon g par portion ;
+    sinon HIGH_FODMAP_IDS = 2 pts, MEDIUM_FODMAP_IDS = 1 pt. 0 → low, ≤ 2 → medium,
+    au-delà → high. Source unique pour health_scores (ici et filter_service).
+    """
+    no_qty: set[str] = set()
+    qty = _fodmap_quantities(recipe, no_qty)
+    # Ancien format ingredients[] : ids sans quantité → règle de liste seule
+    for i in recipe.get("ingredients") or []:
+        raw = i.get("ingredient_id", "") if isinstance(i, dict) else str(i)
+        key = _fodmap_key(raw) if raw else None
+        if key:
+            no_qty.add(key)
+    no_qty -= set(qty)
+
+    score = 0
+    cats: set[str] = set()
+
+    def _add_cats(key: str) -> None:
+        thresh = FODMAP_THRESHOLDS.get(key)
+        if thresh:
+            cats.update(thresh["cats"])
+        cats.update(FODMAP_CATEGORY_MAP.get(key, []))
+        cats.update(c for c, s in _FODMAP_CAT_SETS if key in s)
+
+    def _list_points(key: str) -> int:
+        return 2 if key in HIGH_FODMAP_IDS else 1 if key in MEDIUM_FODMAP_IDS else 0
+
+    for key, grams in qty.items():
+        thresh = FODMAP_THRESHOLDS.get(key)
+        if thresh is not None:
+            pts = 2 if grams > thresh["medium"] else 1 if grams > thresh["safe"] else 0
+        else:
+            pts = _list_points(key)
+        if pts:
+            score += pts
+            _add_cats(key)
+    for key in no_qty:
+        pts = _list_points(key)
+        if pts:
+            score += pts
+            _add_cats(key)
+
+    keys = set(qty) | no_qty
+    from backend.core.data_io import recipe_techniques
+    techniques = set(recipe_techniques(recipe))
+    if techniques & {"sourdough", "levain", "long_fermentation"} and keys & _WHEAT_FODMAP_KEYS:
+        score = max(0, score - 2)
+    if techniques & {"canned", "rince", "rinced", "rinsed"} and keys & _GOS_HIGH:
+        score = max(0, score - 1)
+
+    return {
+        "fodmap_level":      "low" if score == 0 else "medium" if score <= 2 else "high",
+        "fodmap_score":      score,
+        "fodmap_categories": sorted(_FODMAP_CAT_LABELS[c] for c in cats if c in _FODMAP_CAT_LABELS),
+    }
+
+
 # ── Calcul health_scores ──────────────────────────────────────────────────────
 
 def compute_health_scores(recipe: dict) -> dict:
@@ -825,87 +1070,7 @@ def compute_health_scores(recipe: dict) -> dict:
     omega3    = float(nutr.get("omega_3", 0) or 0)
     gi        = float(nutr.get("glycemic_index", 0) or 0)
 
-    ids = _extract_ids(recipe)
-
-    # ── Calcul FODMAP amélioré ──────────────────────────────────────────────
-    # Score pondéré : HIGH = 2 pts, MEDIUM = 1 pt
-    # Ajustements techniques :
-    #   - sourdough/levain long : réduit les fructanes du blé (-1 pt)
-    #   - légumineuses en conserve rincées : réduit les GOS (-1 pt si "canned"
-    #     ou "rinse" dans les techniques)
-    techniques_raw = recipe.get("technique") or []
-    techniques = {str(t).lower() for t in techniques_raw}
-    is_sourdough = any(k in techniques for k in ("sourdough", "levain", "long_fermentation"))
-    is_rinsed_legume = any(k in techniques for k in ("canned", "rince", "rinced", "rinsed"))
-
-    # ── Couche 1 : scoring quantitatif (si composition disponible) ─────────────
-    qty_map = _extract_quantities(recipe)  # {base: g/portion}
-    fodmap_score = 0
-    fodmap_cats: set[str] = set()
-    scored_by_qty: set[str] = set()
-    high_triggers: list[str] = []
-    med_triggers: list[str] = []
-
-    wheat_ids = {"wheat", "flour", "bread", "pasta", "ble", "farine", "pain"}
-    has_wheat = False
-
-    for base, grams in qty_map.items():
-        thresh = FODMAP_THRESHOLDS.get(base)
-        if thresh is None:
-            continue
-        scored_by_qty.add(base)
-        for cat in thresh["cats"]:
-            fodmap_cats.add(cat)
-        safe_g   = thresh["safe"]
-        medium_g = thresh["medium"]
-        if grams > medium_g:
-            fodmap_score += 2
-            high_triggers.append(base)
-        elif grams > safe_g:
-            fodmap_score += 1
-            med_triggers.append(base)
-        if base in wheat_ids:
-            has_wheat = True
-
-    # ── Couche 2 : fallback liste pour ingrédients sans seuil quantitatif ──────
-    for ing in ids:
-        if ing in scored_by_qty:
-            continue  # déjà scoré quantitativement
-        if ing in HIGH_FODMAP_IDS:
-            fodmap_score += 2
-            high_triggers.append(ing)
-            for cat in FODMAP_CATEGORY_MAP.get(ing, []):
-                fodmap_cats.add(cat)
-        elif ing in MEDIUM_FODMAP_IDS:
-            fodmap_score += 1
-            med_triggers.append(ing)
-            for cat in FODMAP_CATEGORY_MAP.get(ing, []):
-                fodmap_cats.add(cat)
-        if ing in wheat_ids:
-            has_wheat = True
-
-    # Ajustement sourdough
-    if is_sourdough and has_wheat:
-        fodmap_score = max(0, fodmap_score - 2)
-
-    # Ajustement légumineuses rincées
-    legume_ids = _GOS_HIGH & ids
-    if is_rinsed_legume and legume_ids:
-        fodmap_score = max(0, fodmap_score - 1)
-
-    # Niveau global
-    if fodmap_score == 0:
-        fodmap_level = "low"
-    elif fodmap_score <= 2:
-        fodmap_level = "medium"
-    else:
-        fodmap_level = "high"
-
-    cat_labels = {
-        "F": "fructanes", "G": "GOS", "D": "lactose",
-        "M": "fructose", "P": "polyols",
-    }
-    fodmap_categories = sorted(cat_labels[c] for c in fodmap_cats if c in cat_labels)
+    fodmap = compute_fodmap(recipe)
 
     return {
         "glycemic_category":      ("low" if gi < 8 else "medium" if gi < 12 else "high"),
@@ -923,9 +1088,7 @@ def compute_health_scores(recipe: dict) -> dict:
             "medium" if omega3 >= 0.3 else
             "low"
         ),
-        "fodmap_level":      fodmap_level,
-        "fodmap_score":      fodmap_score,        # score brut pour debug/tri
-        "fodmap_categories": fodmap_categories,   # ["fructanes","GOS",...] ou []
+        **fodmap,   # fodmap_level, fodmap_score (brut, debug/tri), fodmap_categories
     }
 
 

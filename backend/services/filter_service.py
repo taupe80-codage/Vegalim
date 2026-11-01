@@ -143,11 +143,7 @@ def _build_hs_cache() -> dict[str, dict]:
     Appelé une seule fois — thread-safe via _hs_lock.
     """
     from backend.core.data_io import load_nutrition_graph, load_recipes
-    from backend.engine.rule_engine.diet import (
-        _extract_ids, HIGH_FODMAP_IDS, MEDIUM_FODMAP_IDS,
-        FODMAP_THRESHOLDS, _extract_quantities, FODMAP_CATEGORY_MAP,
-        _GOS_HIGH,
-    )
+    from backend.engine.rule_engine.diet import compute_fodmap
 
     ng      = load_nutrition_graph()
     recipes = load_recipes()
@@ -175,55 +171,8 @@ def _build_hs_cache() -> dict[str, dict]:
         k   = float(nutr.get("potassium",  0) or 0)
         zn  = float(nutr.get("zinc",       0) or 0)
 
-        # ── FODMAP — scoring quantitatif (Monash) + fallback liste ──────────
-        ids = _extract_ids(recipe)
-        techniques_set = {str(t).lower() for t in (recipe.get("technique") or [])}
-        is_sourdough     = any(k in techniques_set for k in ("sourdough", "levain", "long_fermentation"))
-        is_rinsed_legume = any(k in techniques_set for k in ("canned", "rince", "rinced", "rinsed"))
-
-        qty_map = _extract_quantities(recipe)
-        fodmap_score  = 0
-        fodmap_cats: set[str] = set()
-        scored_by_qty: set[str] = set()
-        wheat_ids = {"wheat", "flour", "bread", "pasta", "ble", "farine", "pain"}
-        has_wheat = False
-
-        for base, grams in qty_map.items():
-            thresh = FODMAP_THRESHOLDS.get(base)
-            if thresh is None:
-                continue
-            scored_by_qty.add(base)
-            for cat in thresh["cats"]:
-                fodmap_cats.add(cat)
-            if grams > thresh["medium"]:
-                fodmap_score += 2
-            elif grams > thresh["safe"]:
-                fodmap_score += 1
-            if base in wheat_ids:
-                has_wheat = True
-
-        for ing in ids:
-            if ing in scored_by_qty:
-                continue
-            if ing in HIGH_FODMAP_IDS:
-                fodmap_score += 2
-                for cat in FODMAP_CATEGORY_MAP.get(ing, []):
-                    fodmap_cats.add(cat)
-            elif ing in MEDIUM_FODMAP_IDS:
-                fodmap_score += 1
-                for cat in FODMAP_CATEGORY_MAP.get(ing, []):
-                    fodmap_cats.add(cat)
-            if ing in wheat_ids:
-                has_wheat = True
-
-        if is_sourdough and has_wheat:
-            fodmap_score = max(0, fodmap_score - 2)
-        if is_rinsed_legume and (_GOS_HIGH & ids):
-            fodmap_score = max(0, fodmap_score - 1)
-
-        cat_labels = {"F": "fructanes", "G": "GOS", "D": "lactose", "M": "fructose", "P": "polyols"}
-        fodmap_categories = sorted(cat_labels[c] for c in fodmap_cats if c in cat_labels)
-        fodmap_level = "low" if fodmap_score == 0 else "medium" if fodmap_score <= 2 else "high"
+        # ── FODMAP — calcul unique (diet.compute_fodmap) ─────────────────────
+        fodmap = compute_fodmap(recipe)
 
         # ── Health scores ─────────────────────────────────────────────────────
         # Seuil GI corrigé : échelle standard 0-100 (OMS)
@@ -250,9 +199,7 @@ def _build_hs_cache() -> dict[str, dict]:
                 "high"
             ),
             # FODMAP
-            "fodmap_level":      fodmap_level,
-            "fodmap_score":      fodmap_score,
-            "fodmap_categories": fodmap_categories,
+            **fodmap,
             # Anti-inflammatoire (proxy omega-3 si disponible)
             "anti_inflammatory_score": (
                 "high"   if omega3 >= 1.0 else
