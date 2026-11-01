@@ -891,7 +891,7 @@ def _passes_filters(
     Filtres existants :
       diet        : vegan | vegetarian | vegetarien | gluten_free | lactose_free | nut_free
       cuisine     : sous-chaîne de cuisine_origin
-      difficulty  : easy | medium | advanced (et alias FR)
+      difficulty  : easy | medium | hard (et alias FR)
       max_time    : minutes totales max
 
     Filtres v4.2 :
@@ -925,7 +925,7 @@ def _passes_filters(
             ""
         ).lower().strip()
         # Alias FR → EN
-        diff_map = {"facile": "easy", "moyen": "medium", "difficile": "advanced"}
+        diff_map = {"facile": "easy", "moyen": "medium", "difficile": "hard", "advanced": "hard"}
         norm_diff = diff_map.get(difficulty.lower().strip(), difficulty.lower().strip())
         # BUG 5 FIX : égalité stricte (évite "easy" qui matchait dans "not_easy")
         if norm_diff != lvl:
@@ -1243,7 +1243,7 @@ def search(
         — Filtres directs (excluent des recettes avant scoring) —
         diet                : vegan|vegetarien|gluten_free|lactose_free|nut_free
         cuisine             : sous-chaîne de cuisine_origin
-        difficulty          : easy|medium|advanced (ou facile|moyen|difficile)
+        difficulty          : easy|medium|hard (ou facile|moyen|difficile)
         max_time            : minutes totales max
         max_missing         : ingrédients manquants tolérés
         allergen_exclude    : liste allergènes à exclure (gluten|eggs|soy|sesame…)

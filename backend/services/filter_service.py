@@ -121,12 +121,17 @@ _SEASON_MARKERS: dict[str, frozenset[str]] = {
 _hs_cache: dict[str, dict] | None = None
 _hs_lock = _threading.Lock()
 
-# Correspondance difficulty frontend → données JSON
+# Correspondance difficulty frontend → données JSON (difficulty_level :
+# easy | medium | hard). 'advanced' est l'ancien nom de 'hard' : le traduire
+# vers 'advanced' faisait renvoyer 0 recette au filtre « Difficile ».
 _DIFFICULTY_ALIASES: dict[str, str] = {
-    "hard":     "advanced",   # données: 'advanced', frontend envoie 'hard'
-    "advanced": "advanced",
-    "medium":   "medium",
-    "easy":     "easy",
+    "hard":      "hard",
+    "advanced":  "hard",
+    "difficile": "hard",
+    "medium":    "medium",
+    "moyen":     "medium",
+    "easy":      "easy",
+    "facile":    "easy",
 }
 
 
