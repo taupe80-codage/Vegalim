@@ -719,12 +719,10 @@ def apply_filters(
         result = [r for r in result if _cuisine_match(r)]
 
     if technique:
-        result = [
-            r for r in result
-            if technique.lower() in [
-                t.lower() for t in (r.get("technique") or [])
-            ]
-        ]
+        # Les techniques sont dans tags.technique : lire r["technique"]
+        # (champ jamais présent) renvoyait toujours 0 recette.
+        from backend.core.data_io import recipe_techniques
+        result = [r for r in result if technique.lower() in recipe_techniques(r)]
     if max_time is not None:
         result = [r for r in result
                   if (r.get("timing", {}).get("total_min") or 999) <= max_time]

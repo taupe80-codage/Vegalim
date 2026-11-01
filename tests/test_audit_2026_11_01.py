@@ -19,3 +19,13 @@ def test_filtre_difficile_trouve_les_recettes_hard(value):
     assert expected > 0
     assert total == expected
     assert all(r["difficulty_level"] == "hard" for r in page)
+
+
+# ── Filtre technique : lisait r["technique"], absent des données ──────────────
+
+def test_filtre_technique_lit_tags_technique():
+    recipes = load_recipes()
+    page, total = apply_filters(recipes, technique="Blending", limit=len(recipes))
+    expected = sum(1 for r in recipes if "blending" in r["tags"].get("technique", []))
+    assert expected > 0
+    assert total == expected
