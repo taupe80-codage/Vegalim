@@ -22,9 +22,7 @@ SEASON_ID_ALIASES: dict[str, str] = {
     "white_asparagus_raw_peeled": "asparagus",
     "basil_fresh_herb": "basil",
     "beetroot_raw_root": "beet", "beetroot_cooked_root": "beet",
-    # Le fichier a aussi red/green_bell_pepper « toute l'année » : le poivron
-    # frais est un légume d'été (clé bell_pepper)
-    "red_bell_pepper_raw": "bell_pepper", "green_bell_pepper_raw": "bell_pepper",
+    "red_bell_pepper_raw": "red_bell_pepper", "green_bell_pepper_raw": "green_bell_pepper",
     "cabbage_raw": "cabbage", "green_cabbage_raw": "cabbage", "white_cabbage_raw": "cabbage",
     "red_cabbage_raw": "cabbage", "savoy_cabbage_raw": "cabbage",
     "cauliflower_raw_flower": "cauliflower",
@@ -47,15 +45,14 @@ SEASON_ID_ALIASES: dict[str, str] = {
     "snow_peas_raw": "snow_pea",
     "spinach_raw_baby": "spinach", "spinach_raw_mature": "spinach",
     "spinach_cooked": "spinach",
-    # Le fichier note pumpkin « toute l'année » mais squash en automne
-    "pumpkin_raw": "squash", "butternut_squash_raw": "squash",
+    "pumpkin_raw": "pumpkin", "butternut_squash_raw": "squash",
     "butternut_squash_raw_skinless": "squash", "red_kuri_squash_raw_skinless": "squash",
     "sweet_potato_raw": "sweet_potato",
     "turnip_raw": "turnip",
     "green_zucchini_squash_raw": "zucchini",
-    # Clés actuellement disponibles 12 mois sur 12 dans le fichier : sans effet
-    # tant que leurs mois ne sont pas précisés
-    "tomato_raw_ripe": "tomato", "carrot_raw": "carrot", "garlic_raw": "garlic",
+    "tomato_raw_ripe": "tomato", "tomate": "tomato",
+    # Clés disponibles 12 mois sur 12 dans le fichier : sans effet sur le ratio
+    "carrot_raw": "carrot", "garlic_raw": "garlic",
     "onion_raw": "onion", "yellow_onion_raw": "onion", "white_onion_raw": "onion",
     "ginger_raw_root_fresh": "ginger",
 }

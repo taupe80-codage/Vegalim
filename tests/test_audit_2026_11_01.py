@@ -278,9 +278,24 @@ def test_route_variante_recette_de_l_ancien_index():
 def test_saisonnalite_chargee_et_sans_ingredients_annee_entiere():
     from backend.engine.rule_engine.seasonality import seasonal_ingredients
     ete = seasonal_ingredients(7)
-    assert "zucchini" in ete and "tomato" not in ete  # tomate : 12 mois dans le fichier
+    hiver = seasonal_ingredients(1)
+    assert "zucchini" in ete and "tomato" in ete
     assert "water" not in ete and "salt" not in ete
-    assert "zucchini" not in seasonal_ingredients(1)
+    assert "zucchini" not in hiver and "tomato" not in hiver
+
+
+def test_saisonnalite_donnees_corrigees():
+    # Corrigé le 2026-11-01 : pois chiches « printemps », cannelle « hiver »,
+    # graines de courge « automne », tomate 12 mois, potiron et poivrons
+    # rouge / vert « toute l'année » alors que squash / bell_pepper ont une saison
+    from backend.core.data_io import load_seasonality
+    from backend.engine.rule_engine.seasonality import _is_seasonal
+    d = load_seasonality()
+    for k in ("chickpea_cooked", "cinnamon", "pumpkin_seeds", "ginger"):
+        assert not _is_seasonal(d[k]), k
+    assert d["tomato"]["months"] == [6, 7, 8, 9]
+    assert d["pumpkin"]["months"] == d["squash"]["months"]
+    assert d["red_bell_pepper"]["months"] == d["green_bell_pepper"]["months"] == d["bell_pepper"]["months"]
 
 
 def test_saisonnalite_table_valide():
