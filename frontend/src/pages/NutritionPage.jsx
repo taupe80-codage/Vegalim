@@ -113,7 +113,7 @@ function calcPersonalizedAJR(p) {
 const DEFICIENCIES = [
   {
     id: 'vitamin_b12', name: 'Vitamine B12', icon: '🧬', color: '#3fb950',
-    riskByDiet: { vegan: 'high', vegetarian: 'medium', flexitarian: 'low', omnivore: 'low' },
+    riskByDiet: { vegan: 'high', vegetarian: 'medium', omnivore: 'low' },
     riskBySex: {}, riskByAge: { '51+': 'medium' },
     desc: "Essentielle au système nerveux et aux globules rouges. Absente des végétaux — la supplémentation est indispensable pour les vegans.",
     symptoms: ['Fatigue profonde', 'Fourmillements', 'Troubles de mémoire', 'Anémie'],
@@ -123,7 +123,7 @@ const DEFICIENCIES = [
   },
   {
     id: 'iron', name: 'Fer', icon: '🩸', color: '#f85149',
-    riskByDiet: { vegan: 'high', vegetarian: 'medium', flexitarian: 'low', omnivore: 'low' },
+    riskByDiet: { vegan: 'high', vegetarian: 'medium', omnivore: 'low' },
     riskBySex: { female: 'medium' }, riskByAge: {},
     desc: "Le fer végétal (non-héminique) est 2 à 3× moins absorbé que le fer animal. La vitamine C consommée au même repas multiplie son absorption.",
     symptoms: ['Fatigue & essoufflement', 'Teint pâle', 'Ongles cassants', 'Concentration difficile'],
@@ -133,7 +133,7 @@ const DEFICIENCIES = [
   },
   {
     id: 'calcium', name: 'Calcium', icon: '🦴', color: '#58a6ff',
-    riskByDiet: { vegan: 'high', vegetarian: 'low', flexitarian: 'low', omnivore: 'low' },
+    riskByDiet: { vegan: 'high', vegetarian: 'low', omnivore: 'low' },
     riskBySex: { female: 'low' }, riskByAge: { '51+': 'medium' },
     desc: "Sans produits laitiers, le calcium doit venir des végétaux. Les oxalates (épinards) bloquent son absorption — préférez brocoli, kale, tofu au calcium.",
     symptoms: ['Crampes musculaires', 'Fragilité dentaire', 'Ostéoporose à long terme'],
@@ -143,7 +143,7 @@ const DEFICIENCIES = [
   },
   {
     id: 'vitamin_d', name: 'Vitamine D', icon: '☀️', color: '#f0c27f',
-    riskByDiet: { vegan: 'high', vegetarian: 'medium', flexitarian: 'low', omnivore: 'low' },
+    riskByDiet: { vegan: 'high', vegetarian: 'medium', omnivore: 'low' },
     riskBySex: {}, riskByAge: { '51+': 'high' },
     desc: "Synthétisée par la peau au soleil. En automne-hiver, la carence est quasi-universelle en Europe. Essentielle pour les os, l'immunité et l'humeur.",
     symptoms: ['Fatigue chronique', 'Douleurs osseuses', 'Immunité réduite', 'Dépression saisonnière'],
@@ -153,7 +153,7 @@ const DEFICIENCIES = [
   },
   {
     id: 'zinc', name: 'Zinc', icon: '⚡', color: '#f0883e',
-    riskByDiet: { vegan: 'medium', vegetarian: 'medium', flexitarian: 'low', omnivore: 'low' },
+    riskByDiet: { vegan: 'medium', vegetarian: 'medium', omnivore: 'low' },
     riskBySex: {}, riskByAge: {},
     desc: "Le zinc végétal est bloqué par les phytates des légumineuses et céréales. Trempage et fermentation améliorent sa biodisponibilité de 50%.",
     symptoms: ['Immunité réduite', 'Cicatrisation lente', 'Perte de goût', 'Chute de cheveux'],
@@ -163,7 +163,7 @@ const DEFICIENCIES = [
   },
   {
     id: 'omega3', name: 'Oméga-3 DHA/EPA', icon: '🌊', color: '#2980B9',
-    riskByDiet: { vegan: 'high', vegetarian: 'medium', flexitarian: 'low', omnivore: 'low' },
+    riskByDiet: { vegan: 'high', vegetarian: 'medium', omnivore: 'low' },
     riskBySex: {}, riskByAge: {},
     desc: "L'ALA (lin, chia, noix) est peu converti en DHA/EPA actifs. Pour le cerveau et le cœur, l'huile d'algues est la seule source vegan directe de DHA.",
     symptoms: ['Peau & cheveux secs', 'Concentration difficile', 'Humeur instable', 'Inflammation'],
@@ -173,7 +173,7 @@ const DEFICIENCIES = [
   },
   {
     id: 'iodine', name: 'Iode', icon: '🧂', color: '#a371f7',
-    riskByDiet: { vegan: 'high', vegetarian: 'medium', flexitarian: 'low', omnivore: 'low' },
+    riskByDiet: { vegan: 'high', vegetarian: 'medium', omnivore: 'low' },
     riskBySex: {}, riskByAge: {},
     desc: "Essentiel à la thyroïde. Sans poissons ni produits laitiers, les sources végétales sont rares. Le sel iodé est la solution la plus simple.",
     symptoms: ['Hypothyroïdie', 'Fatigue', 'Prise de poids', 'Frilosité', 'Concentration réduite'],
@@ -183,7 +183,7 @@ const DEFICIENCIES = [
   },
   {
     id: 'selenium', name: 'Sélénium', icon: '🔬', color: '#52c47a',
-    riskByDiet: { vegan: 'medium', vegetarian: 'low', flexitarian: 'low', omnivore: 'low' },
+    riskByDiet: { vegan: 'medium', vegetarian: 'low', omnivore: 'low' },
     riskBySex: {}, riskByAge: {},
     desc: "Oligo-élément antioxydant essentiel. Sa teneur dans les végétaux dépend du sol — souvent faible en Europe. La noix du Brésil est la source la plus concentrée.",
     symptoms: ['Immunité réduite', 'Fatigue', 'Problèmes thyroïdiens', 'Chute de cheveux'],

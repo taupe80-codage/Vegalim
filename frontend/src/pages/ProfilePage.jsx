@@ -297,7 +297,6 @@ export default function ProfilePage({ onAuthClick }) {
               <option value="">Aucun en particulier</option>
               <option value="vegan">Vegan</option>
               <option value="vegetarian">Végétarien</option>
-              <option value="flexitarian">Flexitarien</option>
             </select>
           </div>
 
