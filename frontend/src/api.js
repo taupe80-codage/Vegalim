@@ -47,6 +47,7 @@ async function request(method, path, body = null) {
 const get  = (path)        => request('GET',  path);
 const post = (path, body)  => request('POST', path, body);
 const put  = (path, body)  => request('PUT',  path, body);
+const patch = (path, body) => request('PATCH', path, body);
 
 // ── Auth ──────────────────────────────────────────────────────────────────────
 
@@ -161,6 +162,8 @@ export const planning = {
 export const profile = {
   get:    ()        => get('/profil/'),   // route déclarée « / » : sans slash → 307
   update: (payload) => post('/profil/update', payload),
+  // Consentement RGPD art. 9 : requis pour enregistrer l'objectif ; le révoquer l'efface
+  consent: (health_consent) => patch('/profil/consent', { health_consent }),
   // Interactions (compte connecté) : like | unlike | view… — alimentent la personnalisation
   interaction: (recipe_id, action) => post('/profil/interaction', { recipe_id, action }),
   likes:       ()                  => get('/profil/likes'),

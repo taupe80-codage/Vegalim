@@ -44,8 +44,9 @@ def update_profile(update: ProfileUpdate, user: dict = Depends(get_user)):
     # RGPD Art. 9 — données de santé nécessitent un consentement explicite
     profile_current = get_profile(user["email"])
     # 'goal' est l'alias de 'health_goal' envoyé par ProfileUpdate — inclus dans le guard
+    # Une valeur vide efface la donnée : ce n'est pas une donnée de santé.
     health_fields   = {"cycle_phase", "health_goal", "goal"}
-    if data.keys() & health_fields and not profile_current.get("health_consent"):
+    if any(data.get(f) for f in health_fields) and not profile_current.get("health_consent"):
         raise HTTPException(
             status_code=403,
             detail="Consentement santé requis. Appelez PATCH /profil/consent d'abord."
@@ -142,17 +143,17 @@ def update_consent(payload: ConsentUpdate, user: dict = Depends(get_user)):
     Si health_consent=False, ces champs sont effacés du profil.
     """
     email = user["email"]
-    profile = get_profile(email)
 
     if not payload.health_consent:
-        # Révoquer → effacer les données de santé
-        profile.pop("cycle_phase", None)
-        profile.pop("health_goal", None)
-        profile["health_consent"] = False
+        # Révoquer → effacer les données de santé. set_profile fusionne :
+        # retirer les clés du dict ne les effaçait pas, il faut les mettre à None
+        # ('goal' : ancien nom JSON de health_goal).
+        updates = {"health_consent": False, "cycle_phase": None,
+                   "health_goal": None, "goal": None}
     else:
-        profile["health_consent"] = True
+        updates = {"health_consent": True}
 
-    updated = set_profile(email, profile)
+    updated = set_profile(email, updates)
     return {
         "health_consent": updated.get("health_consent", False),
         "message": (

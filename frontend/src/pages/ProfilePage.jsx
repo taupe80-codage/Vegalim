@@ -10,7 +10,7 @@
  *  - Récemment consultées
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { profile as profileApi } from '../api';
 import { useAuth } from '../AuthContext';
 import { useFavorites } from '../FavoritesContext';
@@ -125,6 +125,8 @@ export default function ProfilePage({ onAuthClick }) {
   const toast = useToast();
 
   const [prefs, setPrefs]         = useState({ diet: '', goal: '' });
+  // Consentement santé (RGPD art. 9) : sans lui, le serveur refuse l'objectif (403)
+  const [healthConsent, setHealthConsent] = useState(false);
   const [gender, setGender] = useState(
     () => localStorage.getItem(LOCAL_GENDER_KEY) || ''
   );
@@ -167,9 +169,39 @@ export default function ProfilePage({ onAuthClick }) {
     localStorage.setItem(LOCAL_ASTRO_KEY, id);
   };
 
-  const handleSave = async () => {
+  // Recharge les préférences enregistrées (sinon le formulaire repart vide)
+  useEffect(() => {
+    if (!user) return;
+    let cancelled = false;
+    profileApi.get()
+      .then(p => {
+        if (cancelled || !p) return;
+        // Le serveur stocke la forme canonique « vegetarien » (option « vegetarian »)
+        const diet = p.diet === 'vegetarien' ? 'vegetarian' : (p.diet || '');
+        setPrefs({ diet, goal: p.health_goal || '' });
+        setHealthConsent(!!p.health_consent);
+      })
+      .catch(() => { /* profil indisponible : on garde le formulaire vide */ });
+    return () => { cancelled = true; };
+  }, [user]);
+
+  const toggleHealthConsent = async () => {
+    const next = !healthConsent;
     try {
-      await profileApi.update(prefs);
+      await profileApi.consent(next);
+      setHealthConsent(next);
+      // Révoquer efface l'objectif côté serveur
+      if (!next) setPrefs(p => ({ ...p, goal: '' }));
+    } catch {
+      toast('Erreur lors de l\'enregistrement du consentement', 'error');
+    }
+  };
+
+  const handleSave = async () => {
+    // L'objectif est une donnée de santé : envoyé seulement avec consentement
+    const payload = healthConsent ? prefs : { diet: prefs.diet };
+    try {
+      await profileApi.update(payload);
       toast('Préférences enregistrées');
     } catch {
       toast('Erreur lors de la sauvegarde', 'error');
@@ -302,11 +334,16 @@ export default function ProfilePage({ onAuthClick }) {
 
           <div className="form-field" style={{ marginBottom: 14 }}>
             <label style={{ fontSize: 13, fontWeight: 600, color: 'var(--txt2)', display: 'block', marginBottom: 6 }}>Objectif nutritionnel</label>
+            <label style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 12, color: 'var(--txt2)', marginBottom: 8, cursor: 'pointer' }}>
+              <input type="checkbox" checked={healthConsent} onChange={toggleHealthConsent} style={{ marginTop: 2 }} />
+              <span>J'accepte qu'ALIM enregistre mon objectif nutritionnel, considéré comme une donnée de santé. Décocher l'efface.</span>
+            </label>
             <select
               value={prefs.goal}
               onChange={e => setPrefs(p => ({ ...p, goal: e.target.value }))}
+              disabled={!healthConsent}
               className="search-input"
-              style={{ padding: '10px 14px', fontSize: 14 }}
+              style={{ padding: '10px 14px', fontSize: 14, opacity: healthConsent ? 1 : 0.5 }}
             >
               <option value="">Sans objectif particulier</option>
               <option value="proteines">Apport protéique élevé</option>

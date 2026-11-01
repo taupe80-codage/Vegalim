@@ -64,3 +64,46 @@ def test_nutrition_accepte_les_ids_textuels():
         assert res.json()["avg_per_meal"].get("calories", 0) > 0
     finally:
         app.dependency_overrides.pop(get_user, None)
+
+
+# ── /profil : sauvegarde sans objectif, consentement, révocation ──────────────
+
+@pytest.fixture
+def profil_client(tmp_path, monkeypatch):
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.core.auth_deps import get_user
+    from backend.services import profile_service
+
+    monkeypatch.setattr(profile_service, "_use_db", lambda: False)
+    monkeypatch.setattr(profile_service, "_FILE", tmp_path / "user_profiles.json")
+    app.dependency_overrides[get_user] = lambda: {"email": "profil@exemple.com"}
+    try:
+        yield TestClient(app)
+    finally:
+        app.dependency_overrides.pop(get_user, None)
+
+
+def test_profil_regime_et_objectif_vide_sans_consentement(profil_client):
+    # La page envoyait toujours goal="" : 403 à chaque sauvegarde
+    res = profil_client.post("/profil/update", json={"diet": "vegan", "goal": ""})
+    assert res.status_code == 200, res.text
+    assert profil_client.get("/profil/").json()["diet"] == "vegan"
+
+
+def test_profil_objectif_exige_le_consentement(profil_client):
+    assert profil_client.post("/profil/update", json={"goal": "energie"}).status_code == 403
+    assert profil_client.patch("/profil/consent", json={"health_consent": True}).status_code == 200
+    assert profil_client.post("/profil/update", json={"goal": "energie"}).status_code == 200
+    assert profil_client.get("/profil/").json()["health_goal"] == "energie"
+
+
+def test_profil_revocation_efface_les_donnees_de_sante(profil_client):
+    profil_client.patch("/profil/consent", json={"health_consent": True})
+    profil_client.post("/profil/update", json={"goal": "energie", "diet": "vegan"})
+    res = profil_client.patch("/profil/consent", json={"health_consent": False})
+    assert res.status_code == 200
+    p = profil_client.get("/profil/").json()
+    assert not p.get("health_goal") and not p.get("goal") and not p.get("cycle_phase")
+    assert p["health_consent"] is False
+    assert p["diet"] == "vegan"
