@@ -419,7 +419,9 @@ class _IndexCache:
                 raw = load_astro_nutrition()
             except Exception:
                 raw = json.loads(Path(path).read_text(encoding="utf-8"))
-            self._astro = raw.get("ingredients_astro_map", {})
+            # load_astro_nutrition renvoie déjà la carte : relire la clé
+            # « ingredients_astro_map » donnait {} (bonus astro toujours nuls)
+            self._astro = raw.get("ingredients_astro_map", raw)
             self._astro_path = path
             self._record_mtime(path)
         except Exception as e:
@@ -432,8 +434,14 @@ class _IndexCache:
         return entry.get("recommended", set()), entry.get("avoid", set())
 
     def astro_info(self, ingredient: str) -> dict:
-        """Retourne {element, moon_phases} pour un ingrédient, ou {} si absent."""
-        return self._astro.get(ingredient, {})
+        """Retourne {element, moon_phases} pour un ingrédient (id CIQUAL résolu), ou {}."""
+        from backend.engine.rule_engine.astro import astro_info
+        return astro_info(ingredient, self._astro)
+
+    def astro_shares(self, recipe: dict) -> tuple[dict, dict]:
+        """Parts pondérées {élément: part}, {phase: part} (rule_engine.astro)."""
+        from backend.engine.rule_engine.astro import astro_shares
+        return astro_shares(recipe, self._astro)
 
     def translate(self, token: str) -> list[str]:
         """Retourne toutes les variantes d'un token (original + EN + underscore/espace)."""
@@ -733,37 +741,19 @@ def _astro_element_bonus(recipe: dict, astro_element: str | None, cache: "_Index
     Score bonus basé sur l'élément astrologique demandé (B2).
 
     Logique :
-      - Pour chaque ingrédient de la recette mappé dans astro_nutrition,
-        on récupère son élément (Feu | Air | Terre | Eau).
-      - Score = ratio d'ingrédients mappés dont l'élément correspond.
-      - Couverture : 840/845 recettes ont au moins 1 ingrédient mappé.
+      - Chaque ingrédient de la recette est résolu dans astro_nutrition
+        (rule_engine.astro : ids CIQUAL → noms génériques).
+      - Score = part du poids des ingrédients couverts dans l'élément demandé
+        (Feu | Air | Terre | Eau), eau de cuisson exclue.
 
     Retourne un float 0.0–1.0.
     """
     if not astro_element:
         return 0.0
-    target = astro_element.strip()  # Feu, Air, Terre, Eau (casse respectée dans le JSON)
-
-    comp = recipe.get("composition") or []
-    if not comp:
-        return 0.0
-
-    mapped = 0
-    matched = 0
-    for item in comp:
-        ing = (item.get("ingredient") or "").lower().strip()
-        if not ing:
-            continue
-        info = cache.astro_info(ing)
-        if not info:
-            continue
-        mapped += 1
-        if info.get("element") == target:
-            matched += 1
-
-    if mapped == 0:
-        return 0.0
-    return round(matched / mapped, 4)
+    # Part du poids de la recette dans l'élément demandé (même calcul que le
+    # filtre). Casse ignorée : la page envoie « feu », le JSON dit « Feu ».
+    elements, _ = cache.astro_shares(recipe)
+    return round(elements.get(astro_element.strip().lower(), 0.0), 4)
 
 
 # ── B3 : Bonus phase lunaire ─────────────────────────────────────────────────
@@ -773,37 +763,16 @@ def _moon_phase_bonus(recipe: dict, moon_phase: str | None, cache: "_IndexCache"
     Score bonus basé sur la phase lunaire active (B3).
 
     Logique :
-      - Pour chaque ingrédient mappé dans astro_nutrition, on vérifie si
-        la moon_phase demandée figure dans sa liste moon_phases.
-      - Score = ratio d'ingrédients mappés favorables à cette phase lunaire.
+      - Score = part du poids des ingrédients couverts (rule_engine.astro)
+        favorables à la phase lunaire demandée.
       - Phases valides : nouvelle_lune | pleine_lune | premier_quartier | dernier_quartier
 
     Retourne un float 0.0–1.0.
     """
     if not moon_phase:
         return 0.0
-    target = moon_phase.strip()
-
-    comp = recipe.get("composition") or []
-    if not comp:
-        return 0.0
-
-    mapped = 0
-    matched = 0
-    for item in comp:
-        ing = (item.get("ingredient") or "").lower().strip()
-        if not ing:
-            continue
-        info = cache.astro_info(ing)
-        if not info:
-            continue
-        mapped += 1
-        if target in info.get("moon_phases", []):
-            matched += 1
-
-    if mapped == 0:
-        return 0.0
-    return round(matched / mapped, 4)
+    _, moons = cache.astro_shares(recipe)
+    return round(moons.get(moon_phase.strip().lower(), 0.0), 4)
 
 
 def _fallback_text_score(

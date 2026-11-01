@@ -605,26 +605,24 @@ def apply_filters(
         result = [r for r in result if _passes_micro(r)]
 
     # ── Filtres holistiques (astrologie & lune) ──────────────────────────────────
+    # Ids CIQUAL résolus par rule_engine.astro (seuls 58/593 se retrouvaient
+    # dans la carte). Élément : celui qui pèse le plus dans la recette ;
+    # phase lunaire : au moins la moitié du poids. « Au moins un ingrédient »
+    # ne filtrait plus rien (sel, sucre, poivre, ail sont « Feu » : 990/1000).
     if astro_element or moon_phase:
         from backend.core.data_io import load_astro_nutrition
+        from backend.engine.rule_engine.astro import astro_shares
         astro_data = load_astro_nutrition()
 
         def _recipe_matches_astro(r: dict) -> bool:
-            ings = r.get("composition", [])
-            if not ings:
+            elements, moons = astro_shares(r, astro_data)
+            if astro_element and (
+                not elements or max(elements, key=elements.get) != astro_element.strip().lower()
+            ):
                 return False
-            for ing in ings:
-                ing_id = (
-                    ing.get("ingredient", "") if isinstance(ing, dict) else str(ing)
-                ).lower()
-                meta = astro_data.get(ing_id, {})
-                if astro_element and meta.get("element", "").lower() == astro_element.lower():
-                    return True
-                if moon_phase and moon_phase.lower() in [
-                    p.lower() for p in meta.get("moon_phases", [])
-                ]:
-                    return True
-            return False
+            if moon_phase and moons.get(moon_phase.strip().lower(), 0.0) < 0.5:
+                return False
+            return True
 
         result = [r for r in result if _recipe_matches_astro(r)]
 

@@ -332,3 +332,49 @@ def test_route_seasonal_mois_valide():
     assert c.get("/planning/seasonal?month=13").status_code == 422
     res = c.get("/planning/seasonal?month=7")
     assert res.status_code == 200 and "zucchini" in res.json()["ingredients"]
+
+
+# ── Astro : 58/593 ids reconnus, filtre « au moins un ingrédient » ────────────
+
+def test_astro_couverture_et_table_valide():
+    from collections import Counter
+    from backend.core.data_io import load_astro_nutrition
+    from backend.engine.rule_engine.astro import ASTRO_ID_ALIASES, astro_key
+    data = load_astro_nutrition()
+    cnt = Counter(c["ingredient"] for r in load_recipes() for c in r["composition"])
+    assert set(ASTRO_ID_ALIASES) <= set(cnt)
+    assert set(ASTRO_ID_ALIASES.values()) <= set(data)
+    covered = sum(n for iid, n in cnt.items() if astro_key(iid, data))
+    assert covered / sum(cnt.values()) > 0.9
+
+
+@pytest.mark.parametrize("iid,key", [
+    ("egg_raw", "oeuf"), ("soy_sauce_shoyu_reduced_sodium", "sauce_soja"),
+    ("tomato_raw_ripe", "tomato"), ("almond_raw_skinless_unsalted", "almond"),
+    ("cashew_butter_plain_plant", "noix_de_cajou"),   # table des prix : « butter »
+    ("capers_canned_in_vinegar", "capre"),            # table des prix : « vinegar »
+    ("rose_water", None), ("orange_blossom_water", None),
+])
+def test_astro_correspondances(iid, key):
+    from backend.engine.rule_engine.astro import astro_key
+    assert astro_key(iid) == key
+
+
+@pytest.mark.parametrize("element", ["feu", "Terre", "air", "eau"])
+def test_filtre_astro_element_dominant(element):
+    from backend.engine.rule_engine.astro import dominant_element
+    recipes = load_recipes()
+    page, total = apply_filters(recipes, astro_element=element, limit=len(recipes))
+    assert 0 < total < len(recipes) * 0.9   # « au moins un ingrédient » : 990/1000 en feu
+    assert all(dominant_element(r) == element.lower() for r in page)
+
+
+def test_moteur_recherche_carte_astro_chargee():
+    from backend.engine.search_engine.core import (_IndexCache, _default_astro_path,
+                                                    _astro_element_bonus, _moon_phase_bonus)
+    cache = _IndexCache.get()
+    cache.load_astro(_default_astro_path())
+    assert len(cache._astro) > 300
+    r = next(r for r in load_recipes() if r["titles"]["fr"] == "Harissa")
+    assert _astro_element_bonus(r, "feu", cache) == _astro_element_bonus(r, "Feu", cache) > 0.5
+    assert 0 <= _moon_phase_bonus(r, "pleine_lune", cache) <= 1
