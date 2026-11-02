@@ -87,9 +87,11 @@ function _loadHomeFilters() {
   } catch { return null; }
 }
 
-// Premier chargement, puis « Charger plus » par paquets de 50
+// Un seul bouton « Voir 20 recettes de plus » : il affiche les recettes
+// déjà chargées puis, une fois au bout, charge la suite au serveur.
 const FIRST_PAGE = 200;
 const MORE_PAGE  = 50;
+const STEP       = 20;
 
 /** Même requête que la recherche en cours (texte/filtres ou liste), décalée de skip. */
 function runRecipeQuery(req, skip, limit) {
@@ -136,7 +138,7 @@ export default function HomePage() {
   const [recipes,      setRecipes]      = useState([]);
   const [loading,      setLoading]      = useState(false);
   const [error,        setError]        = useState(null);
-  const [visibleCount, setVisibleCount] = useState(18);
+  const [visibleCount, setVisibleCount] = useState(STEP);
   // Total côté serveur : au-delà des recettes chargées, bouton « Charger 50 »
   const [total,        setTotal]        = useState(0);
   const [loadingMore,  setLoadingMore]  = useState(false);
@@ -271,7 +273,7 @@ export default function HomePage() {
       const results = _resultsOf(data);
       setRecipes(results);
       setTotal(Math.max(data?.total ?? 0, results.length));
-      setVisibleCount(18); // reset pagination à chaque nouvelle requête
+      setVisibleCount(STEP); // reset pagination à chaque nouvelle requête
     } catch (err) {
       setError(err.message || 'Erreur de connexion au backend.');
     } finally {
@@ -288,10 +290,18 @@ export default function HomePage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [diet, dietExtras, season, difficulty, allergens, healthFilters, subFilters, dishFilters, origins]);
 
-  // Charge les 50 recettes suivantes de la même requête (au-delà des 200)
-  const loadMore = async () => {
+  const totalCount = Math.max(total, recipes.length);
+  const remaining  = Math.max(0, totalCount - visibleCount);
+
+  // « Voir 20 de plus » : affiche les recettes déjà chargées ; au bout, charge
+  // la suite de la même requête (au-delà des 200 premières).
+  const showMore = async () => {
     const req = lastQuery.current;
-    if (!req || loadingMore) return;
+    if (loadingMore) return;
+    if (visibleCount + STEP <= recipes.length || recipes.length >= totalCount || !req) {
+      setVisibleCount(v => v + STEP);
+      return;
+    }
     setLoadingMore(true);
     try {
       const loaded = recipes.length;
@@ -302,16 +312,15 @@ export default function HomePage() {
         const seen = new Set(prev.map(r => r.id));
         return [...prev, ...more.filter(r => !seen.has(r.id))];
       });
-      setVisibleCount(loaded + more.length);
       // Plus rien à charger si le serveur n'a rien renvoyé
       setTotal(more.length ? Math.max(data?.total ?? 0, loaded + more.length) : loaded);
+      setVisibleCount(v => v + STEP);
     } catch (err) {
       setError(err.message || 'Erreur de connexion au backend.');
     } finally {
       setLoadingMore(false);
     }
   };
-  const remainingOnServer = Math.max(0, total - recipes.length);
 
   // ── Tri local ─────────────────────────────────────────────────────────────
 
@@ -613,9 +622,7 @@ export default function HomePage() {
           <>
             <div className="results-bar">
               <p className="results-count" aria-live="polite">
-                {remainingOnServer > 0
-                  ? `${displayed.length} recettes chargées sur ${total}`
-                  : `${displayed.length} recette${displayed.length > 1 ? 's' : ''}`}
+                {totalCount} recette{totalCount > 1 ? 's' : ''}
                 {hasActiveFilters && <span className="results-count-filters"> — filtres actifs</span>}
               </p>
               <div className="sort-row" role="group" aria-label="Trier les résultats">
@@ -688,27 +695,14 @@ export default function HomePage() {
               ))}
             </div>
 
-            {visibleCount < displayed.length && (
+            {remaining > 0 && (
               <div className="load-more-wrap">
-                <button
-                  className="load-more-btn"
-                  onClick={() => setVisibleCount(v => v + 18)}
-                >
-                  Voir {Math.min(18, displayed.length - visibleCount)} recette{Math.min(18, displayed.length - visibleCount) > 1 ? 's' : ''} de plus
-                  <span className="load-more-total"> ({displayed.length - visibleCount} restante{displayed.length - visibleCount > 1 ? 's' : ''})</span>
-                </button>
-              </div>
-            )}
-
-            {/* Au-delà des 200 premières : paquets de 50 jusqu'au chargement complet */}
-            {visibleCount >= displayed.length && remainingOnServer > 0 && (
-              <div className="load-more-wrap">
-                <button className="load-more-btn" onClick={loadMore} disabled={loadingMore}>
+                <button className="load-more-btn" onClick={showMore} disabled={loadingMore}>
                   {loadingMore
                     ? 'Chargement…'
-                    : `Charger ${Math.min(MORE_PAGE, remainingOnServer)} recettes supplémentaires`}
+                    : `Voir ${Math.min(STEP, remaining)} recette${Math.min(STEP, remaining) > 1 ? 's' : ''} de plus`}
                   {!loadingMore && (
-                    <span className="load-more-total"> ({remainingOnServer} restante{remainingOnServer > 1 ? 's' : ''})</span>
+                    <span className="load-more-total"> ({remaining} restante{remaining > 1 ? 's' : ''})</span>
                   )}
                 </button>
               </div>
