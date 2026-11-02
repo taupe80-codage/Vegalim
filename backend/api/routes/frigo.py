@@ -15,7 +15,7 @@ from typing import Optional
 from backend.core.auth_deps import get_user, get_optional_user
 from backend.core.data_io import load_recipes, load_ingredients_dict
 from backend.core.rate_limiter import check_rate_limit
-from backend.services.ingredient_catalog import names_of, resolve_names
+from backend.services.ingredient_catalog import full_name_fr, names_of, resolve_names
 from backend.services.fridge_scoring import (
     STAPLE, SPECIAL, COMMON, has_substance, recipe_weights, relevance, tier_of_id,
 )
@@ -307,7 +307,7 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
         # 1. Correspondance exacte dans le dictionnaire
         d = ings_dict.get(iid, {})
         if d.get("canonical_name_fr"):
-            return d["canonical_name_fr"]
+            return full_name_fr(d, iid)   # « farine de riz », pas « riz »
         # 2. Correspondance sur la partie avant '/' (ex: 'butter' pour 'butter/dairy')
         base = iid.split("/")[0]
         d_base = ings_dict.get(base, {})
@@ -433,7 +433,7 @@ def missing_ingredients(payload: MissingRequest, request: Request,
         d = ings_dict.get(iid, {})
         missing_enriched.append({
             "id":      iid,
-            "name_fr": d.get("canonical_name_fr", iid),
+            "name_fr": full_name_fr(d, iid) if d else iid,
             "category": d.get("category", ""),
             "available_in_france": True,  # optimiste par dÃ©faut
         })

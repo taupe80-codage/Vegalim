@@ -481,6 +481,143 @@ def _auto_name_fr(iid: str, d: dict) -> tuple[str, str]:
     return _resolve_base(iid, d)
 
 
+# Ids génériques des recettes absents du dictionnaire : sans nom français, ils
+# s'affichaient en anglais (« lemon », « cinnamon ») et « citron » tapé dans le
+# frigo ne trouvait pas le citron. Nom seul : la catégorie reste inchangée.
+_GENERIC_NAME_FR: dict[str, str] = {
+    "arugula": "roquette", "bay_leaf": "feuilles de laurier", "blueberry": "myrtille",
+    "breadcrumbs": "chapelure", "butter": "beurre", "canola": "huile de colza",
+    "cardamom": "cardamome", "celeriac": "céleri-rave", "chicory": "chicorée",
+    "cinnamon": "cannelle", "cloves": "clous de girofle", "coffee": "café",
+    "coriander": "coriandre", "fenugreek": "fenugrec", "gruyere": "gruyère",
+    "jackfruit": "jacquier", "leeks": "poireau", "lemon": "citron", "lettuce": "laitue",
+    "lime": "citron vert", "mango": "mangue", "marjoram": "marjolaine", "mint": "menthe",
+    "nutmeg": "muscade", "okra": "gombo", "oregano": "origan", "palm_oil": "huile de palme",
+    "persil": "persil", "radish": "radis", "rice": "riz", "rum": "rhum", "saffron": "safran",
+    "sauerkraut": "choucroute", "spinach": "épinard", "squash": "courge",
+    "strawberry": "fraise", "tamarind": "tamarin", "tea": "thé", "toast": "pain grillé",
+    "tomate": "tomate", "watercress": "cresson",
+}
+
+
+# ── Nom complet depuis l'axe « forme » ────────────────────────────────────────
+# Le dictionnaire nomme l'ingrédient de base et porte la forme dans un axe :
+# rice_flour = « riz » + forme « farine », olive_oil_plant = « olive » + « huile ».
+# Sans l'axe, « riz » désignait la farine de riz (et « riz » tapé dans le frigo
+# la trouvait elle, pas le riz blanc), « pois chiches » une farine, « soja » un
+# lait. Seules les formes qui changent le produit modifient le nom ; « liquide »,
+# « bloc », « grain long », « râpé »… le laissent tel quel.
+
+_VOWELS = tuple("aeiouyéèêâîôûh")
+
+
+def _de(name: str) -> str:
+    """« de riz », « d'olive », « d'avoine »."""
+    return f"d'{name}" if name.lower().startswith(_VOWELS) else f"de {name}"
+
+
+# forme → (gabarit, mots qui, présents dans le nom, le rendent déjà complet)
+_FORM_NAME: dict[str, tuple[str, tuple[str, ...]]] = {
+    "farine":     ("farine {de}",   ("farine", "fécule", "gluten")),
+    "huile":      ("huile {de}",    ("huile",)),
+    "jus":        ("jus {de}",      ("jus",)),
+    "lait":       ("lait {de}",     ("lait",)),
+    "beurre":     ("beurre {de}",   ("beurre",)),
+    "yaourt":     ("yaourt {de}",   ("yaourt",)),
+    "confiture":  ("confiture {de}", ("confiture",)),
+    "compote":    ("compote {de}",  ("compote",)),
+    "extrait":    ("extrait {de}",  ("extrait",)),
+    "flocons":    ("flocons {de}",  ("flocons",)),
+    "poudre":     ("{n} en poudre", ("poudre",)),
+    "moulu":      ("{n} moulu",     ("moulu",)),
+}
+
+# La tomate a beaucoup de formes au même nom de base
+_TOMATO_FORMS = {"pâte": "concentré de tomate", "sauce": "sauce tomate",
+                 "concassée": "tomates concassées"}
+
+
+def full_name_fr(entry: dict, iid: str = "") -> str:
+    """Nom français complet d'une entrée du dictionnaire (nom de base + forme)."""
+    name = entry.get("canonical_name_fr") or _humanize(iid)
+    axes = entry.get("axes_fr") or {}
+    form = axes.get("forme", "")
+    low = name.lower()
+
+    if low == "tomate":
+        if form in _TOMATO_FORMS:
+            return _TOMATO_FORMS[form]
+        if axes.get("etat_thermique") == "séché":
+            oil = axes.get("milieu_conservation") == "à l'huile"
+            return "tomates séchées à l'huile" if oil else "tomates séchées"
+        return name
+    if form == "épice":
+        part = axes.get("partie", "")
+        if part == "graine":
+            return f"graines {_de(name)}"
+        if part == "feuille":
+            dried = axes.get("etat_thermique") == "séché"
+            leaves = name if "feuille" in low else f"feuilles {_de(name)}"
+            return leaves + (" séchées" if dried else "")
+        return name
+    if form == "herbe séchée":
+        return f"{name} séchée" if low.endswith("e") else f"{name} séché"
+    rule = _FORM_NAME.get(form)
+    if rule and not any(w in low for w in rule[1]):
+        return rule[0].format(n=name, de=_de(name))
+    return name
+
+
+# Même règle pour le nom anglais, lui aussi indexé par resolve_names :
+# olive_oil_plant s'appelait « olive » et captait la recherche « olive ».
+_FORM_NAME_EN: dict[str, tuple[str, tuple[str, ...]]] = {
+    "farine":    ("{n} flour",   ("flour", "starch", "gluten")),
+    "huile":     ("{n} oil",     ("oil",)),
+    "jus":       ("{n} juice",   ("juice",)),
+    "lait":      ("{n} milk",    ("milk",)),
+    "beurre":    ("{n} butter",  ("butter",)),
+    "yaourt":    ("{n} yogurt",  ("yogurt",)),
+    "confiture": ("{n} jam",     ("jam",)),
+    "compote":   ("{n} puree",   ("puree",)),
+    "extrait":   ("{n} extract", ("extract",)),
+    "flocons":   ("{n} flakes",  ("flakes",)),
+    "poudre":    ("{n} powder",  ("powder", "soda")),
+    "moulu":     ("ground {n}",  ("ground",)),
+}
+_TOMATO_FORMS_EN = {"pâte": "tomato paste", "sauce": "tomato sauce",
+                    "concassée": "crushed tomatoes"}
+
+
+def full_name_en(entry: dict, iid: str = "") -> str:
+    """Nom anglais complet (nom de base + forme), pendant de full_name_fr."""
+    name = entry.get("canonical_name_en") or iid
+    axes = entry.get("axes_fr") or {}
+    form = axes.get("forme", "")
+    low = name.lower()
+
+    if low == "tomato":
+        if form in _TOMATO_FORMS_EN:
+            return _TOMATO_FORMS_EN[form]
+        if axes.get("etat_thermique") == "séché":
+            oil = axes.get("milieu_conservation") == "à l'huile"
+            return "dried tomatoes in oil" if oil else "dried tomatoes"
+        return name
+    if form == "épice":
+        part = axes.get("partie", "")
+        if part == "graine":
+            return f"{name} seeds"
+        if part == "feuille":
+            leaves = name if "leaf" in low else f"{name} leaves"
+            return ("dried " if axes.get("etat_thermique") == "séché" else "") + leaves
+        return name
+    if form == "herbe séchée":
+        return name if "dried" in low else f"dried {name}"
+    rule = _FORM_NAME_EN.get(form)
+    if rule and not any(w in low for w in rule[1]):
+        return rule[0].format(n=name)
+    return name
+
+
 def _build_catalog() -> list[dict]:
     """
     Construit le catalogue unifié.
@@ -512,12 +649,13 @@ def _build_catalog() -> list[dict]:
 
         if iid in d:
             entry = d[iid]
-            name_fr  = entry.get("canonical_name_fr", _humanize(iid))
-            name_en  = entry.get("canonical_name_en", iid)
+            name_fr  = full_name_fr(entry, iid)
+            name_en  = full_name_en(entry, iid)
             category = entry.get("category", "")
             tokens   = entry.get("search_tokens", [])
         else:
             name_fr, category = _auto_name_fr(iid, d)
+            name_fr = _GENERIC_NAME_FR.get(iid, name_fr)
             name_en  = iid.replace("_", " ").replace("/", " ")
             tokens   = []
 
@@ -634,6 +772,15 @@ def _name_index() -> dict[tuple, list[dict]]:
 _MAX_RESOLVED = 12
 
 
+def _names_product(entry: dict, wanted: tuple[str, ...]) -> bool:
+    """True si le nom désigne le produit demandé : en tête du nom français
+    (« riz blanc », pas « farine de riz »), en fin du nom anglais
+    (« black olive », pas « olive oil »)."""
+    fr = name_tokens(entry["name_fr"])
+    en = name_tokens(entry["name_en"])
+    return fr[:len(wanted)] == wanted or (len(en) >= len(wanted) and en[-len(wanted):] == wanted)
+
+
 def resolve_names(keys: list[str]) -> dict[str, list[str]]:
     """
     Traduit des noms libres en IDs d'ingrédients présents dans les recettes.
@@ -657,9 +804,16 @@ def resolve_names(keys: list[str]) -> dict[str, list[str]]:
         if not found:
             wanted_set = set(wanted)
             partial = [
-                (len(form), e) for form, entries in index.items()
+                (len(form), e, _names_product(e, wanted))
+                for form, entries in index.items()
                 if wanted_set <= set(form) for e in entries
             ]
+            # « riz » désigne « riz blanc » ou « riz basmati », pas « farine de
+            # riz » ni « vermicelle de riz » : si des noms désignent le produit
+            # demandé, eux seuls.
+            if any(head for _, _, head in partial):
+                partial = [p for p in partial if p[2]]
+            partial = [(n, e) for n, e, _ in partial]
             if partial:
                 shortest = min(n for n, _ in partial)
                 found = [e for n, e in partial if n <= shortest + 1]

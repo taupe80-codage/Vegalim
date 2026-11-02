@@ -408,3 +408,39 @@ def test_frigo_riz_couvre_le_riz_blanc_pas_la_farine():
                                                 "basmati_rice_raw_seed", "rice_flour"})
     assert have == {"white_rice_raw_seed_unenriched", "basmati_rice_raw_seed"}
     assert missing == {"rice_flour"}
+
+
+# ── Catalogue : nom de base + axe « forme » (rice_flour = « riz » + farine) ───
+
+@pytest.mark.parametrize("iid,fr,en", [
+    ("rice_flour", "farine de riz", "rice flour"),
+    ("olive_oil_plant", "huile d'olive", "olive oil"),
+    ("soybean_milk_unsweetened_plant", "lait de soja", "soybean milk"),
+    ("orange_juice_plain", "jus d'orange", "orange juice"),
+    ("tomato_paste_unsalted_canned", "concentré de tomate", "tomato paste"),
+    ("coriander_spice_seed", "graines de coriandre", "coriander seeds"),
+    ("bay_leaf_spice", "feuilles de laurier", "bay leaf"),
+    ("cream_liquid_uht", "crème", "cream"),                 # « liquide » ne change pas le produit
+    ("bread_flour_blanched", "farine à pain", "bread flour"),
+])
+def test_catalogue_nom_complet(iid, fr, en):
+    from backend.core.data_io import load_ingredients_dict
+    from backend.services.ingredient_catalog import full_name_fr, full_name_en
+    entry = load_ingredients_dict()[iid]
+    assert full_name_fr(entry, iid) == fr
+    assert full_name_en(entry, iid) == en
+
+
+@pytest.mark.parametrize("word,expected,forbidden", [
+    ("riz", "rice", "rice_flour"),
+    ("farine de riz", "rice_flour", None),
+    ("olive", "black_olive_canned_in_brine", "olive_oil_plant"),
+    ("citron", "lemon", None),
+    ("maïs", "sweet_corn_raw_fresh", "cornstarch_flour"),
+    ("cannelle", "cinnamon", None),
+])
+def test_frigo_mots_francais(word, expected, forbidden):
+    from backend.services.ingredient_catalog import resolve_names
+    ids = resolve_names([word]).get(word, [])
+    assert expected in ids
+    assert forbidden not in ids

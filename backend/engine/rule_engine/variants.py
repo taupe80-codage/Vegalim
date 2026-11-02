@@ -116,7 +116,9 @@ def _display_name(iid: str) -> str:
     """Nom français d'un ingrédient ou d'une sous-recette, pour l'affichage."""
     from backend.core.data_io import load_ingredients_dict
     from backend.db.culinary_repositories import _recipes_index
-    name = (load_ingredients_dict().get(iid) or {}).get("canonical_name_fr")
+    from backend.services.ingredient_catalog import full_name_fr
+    entry = load_ingredients_dict().get(iid)
+    name = full_name_fr(entry, iid) if entry and entry.get("canonical_name_fr") else None
     if not name:
         name = ((_recipes_index().get(iid) or {}).get("titles") or {}).get("fr")
     return name or iid.replace("/", " ").replace("_", " ")
