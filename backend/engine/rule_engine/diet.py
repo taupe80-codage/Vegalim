@@ -1067,7 +1067,7 @@ def compute_health_scores(recipe: dict) -> dict:
     fiber     = float(nutr.get("fiber", 0) or 0)
     sodium    = float(nutr.get("sodium", 0) or 0)
     sat_fat   = float(nutr.get("saturated_fat", 0) or 0)
-    omega3    = float(nutr.get("omega_3", 0) or 0)
+    omega3    = float(nutr.get("omega3", nutr.get("omega_3", 0)) or 0)
     gi        = float(nutr.get("glycemic_index", 0) or 0)
 
     fodmap = compute_fodmap(recipe)

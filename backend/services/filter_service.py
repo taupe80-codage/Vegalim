@@ -26,7 +26,8 @@ Correction v6.20 — Gap données / filtrage (audit mai 2026) :
         _build_hs_cache() calcule health_scores pour les 845 recettes depuis
         recipe_nutrition_graph_v1.json (valeurs par portion déjà présentes).
         Résultat mis en cache thread-safe au premier appel de apply_filters().
-        Micronutriments (calcium, fer, magnésium, potassium, vit C, zinc)
+        Micronutriments (calcium, fer, magnésium, potassium, vit C, zinc,
+        vit D, folates, oméga-3)
         calculés directement depuis la graph avec seuils AJR 15% / 30%.
 
     FIX 2 — Seuil glycémique corrigé :
@@ -161,7 +162,7 @@ def _build_hs_cache() -> dict[str, dict]:
         sugar  = float(nutr.get("sugar",         0) or 0)
         gi     = float(nutr.get("glycemic_index",0) or 0)
         sat_fat = float(nutr.get("saturated_fat",0) or 0)
-        omega3  = float(nutr.get("omega_3",      0) or 0)
+        omega3  = float(nutr.get("omega3",       0) or 0)   # g d'oméga-3 (ALA)
 
         # ── Micronutriments ───────────────────────────────────────────────────
         vc  = float(nutr.get("vitamin_c",  0) or 0)
@@ -170,6 +171,8 @@ def _build_hs_cache() -> dict[str, dict]:
         mg  = float(nutr.get("magnesium",  0) or 0)
         k   = float(nutr.get("potassium",  0) or 0)
         zn  = float(nutr.get("zinc",       0) or 0)
+        vd  = float(nutr.get("vitamin_d",  0) or 0)   # µg
+        fol = float(nutr.get("folate",     0) or 0)   # µg
 
         # ── FODMAP — calcul unique (diet.compute_fodmap) ─────────────────────
         fodmap = compute_fodmap(recipe)
@@ -214,6 +217,7 @@ def _build_hs_cache() -> dict[str, dict]:
             #
             # AJR : vitamine C 90mg | calcium 1000mg | fer 14mg
             #        magnésium 400mg | potassium 3500mg | zinc 10mg
+            #        vitamine D 5µg | folates 200µg (VNR UE, Règlement 1169/2011)
             #
             # "bonne source" → seuil discriminant 15-25% AJR
             # "riche en"     → seuil discriminant 40-70% AJR
@@ -229,6 +233,13 @@ def _build_hs_cache() -> dict[str, dict]:
             "good_source_potassium":  k  >= 525.0,   # 15% AJR  → ~58% recettes
             "high_zinc":              zn >= 6.0,     # 60% AJR  → ~31% recettes
             "source_zinc":            zn >= 3.0,     # 30% AJR  → ~67% recettes
+            "high_vitamin_d":         vd >= 1.5,     # 30% AJR  → ~3% recettes
+            "source_vitamin_d":       vd >= 0.75,    # 15% AJR  → ~11% recettes
+            "high_folate":            fol >= 60.0,   # 30% AJR  → ~30% recettes
+            "source_folate":          fol >= 30.0,   # 15% AJR  → ~51% recettes
+            # Oméga-3 : seuils des allégations UE « source » 0,3 g / « riche » 0,6 g
+            "high_omega3":            omega3 >= 0.6,  # → ~7% recettes
+            "source_omega3":          omega3 >= 0.3,  # → ~16% recettes
             # ── Valeurs brutes (mg/g) pour affichage frontend ─────────────────
             "vitamin_c_mg":   round(vc, 1),
             "calcium_mg":     round(ca, 1),
@@ -236,6 +247,9 @@ def _build_hs_cache() -> dict[str, dict]:
             "magnesium_mg":   round(mg, 1),
             "potassium_mg":   round(k,  1),
             "zinc_mg":        round(zn, 2),
+            "vitamin_d_ug":   round(vd, 2),
+            "folate_ug":      round(fol, 1),
+            "omega3_g":       round(omega3, 2),
             # Antioxydants — vitamine C réelle ≥ 40mg (30% AJR, seuil discriminant ~30% recettes)
             "antioxidant_rich": vc >= 40.0,
         }
@@ -600,8 +614,7 @@ def apply_filters(
     # Ancienne approche : lecture des nutrition_flags sur chaque ingrédient via
     # ingredients_dictionary.json → ce fichier n'a jamais eu ce champ → 0 résultats.
     # Nouvelle approche : seuils AJR calculés depuis recipe_nutrition_graph_v1.json
-    # (voir _build_hs_cache). Flags non disponibles dans le graph (vitamin_d, omega3,
-    # folate) valent False dans le cache → comportement honnête (0 résultats).
+    # (voir _build_hs_cache).
     _micro_needed = (high_vitamin_c or source_vitamin_c or high_vitamin_d or source_vitamin_d
                      or high_folate or source_folate or high_calcium or high_iron
                      or good_source_iron or high_magnesium or source_magnesium

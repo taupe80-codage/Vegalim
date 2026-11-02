@@ -536,3 +536,22 @@ def test_export_ics_titre_lisible():
         assert "SUMMARY:lunch — Ratatouille" in res.json()["ics_content"]
     finally:
         app.dependency_overrides.pop(get_user, None)
+
+
+# ── M6 : vitamine D, folates, oméga-3 calculés depuis le graphe nutritionnel ──
+
+@pytest.mark.parametrize("flag", ["high_vitamin_d", "source_vitamin_d", "high_folate",
+                                  "source_folate", "high_omega3", "source_omega3"])
+def test_micronutriments_m6_non_vides(flag):
+    from backend.core.data_io import load_recipes
+    from backend.services.filter_service import apply_filters
+    recipes = load_recipes()
+    _, n = apply_filters(recipes, skip=0, limit=len(recipes), **{flag: True})
+    assert 0 < n < len(recipes)
+
+
+def test_anti_inflammatoire_lit_omega3():
+    from backend.core.data_io import load_recipes
+    from backend.services.filter_service import _hs
+    levels = {_hs(r)["anti_inflammatory_score"] for r in load_recipes()}
+    assert {"high", "medium", "low"} <= levels
