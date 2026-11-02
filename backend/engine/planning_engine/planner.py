@@ -57,6 +57,9 @@ def generate_plan(
     cuisine:         str | None   = None,
     dish_type:       str | None   = None,
     difficulty:      str | None   = None,
+    # Autres filtres de filter_service.apply_filters (santé, cuisines, saison…),
+    # transmis tels quels : mêmes clés et même logique que la recherche
+    filters:         dict | None  = None,
     # Diversité : 0.0 = toujours le meilleur score (déterministe),
     #             1.0 = tirage quasi-aléatoire parmi le top pool
     diversity:       float        = 0.5,
@@ -123,6 +126,10 @@ def generate_plan(
         except Exception as _e:
             logger.warning("apply_filters allergen error: %s", _e)
 
+    if filters:
+        from backend.services.filter_service import apply_filters
+        recipes, _ = apply_filters(recipes, skip=0, limit=len(recipes), **filters)
+
     # Cuisine
     if cuisine:
         cuis_low = cuisine.lower()
@@ -156,7 +163,7 @@ def generate_plan(
 
     if not recipes:
         logger.warning("generate_plan: aucune recette disponible après filtres")
-        return {"meta": {"error": "no_recipes", "filters": {"diet": diet}}}
+        return {"meta": {"error": "no_recipes", "filters": {"diet": diet, **(filters or {})}}}
 
     plan          = {}
     used_ids      = set()

@@ -11,7 +11,7 @@ import { useRecentlyViewed } from '../useRecentlyViewed';
 import {
   DISH_OPTIONS, DIET_OPTIONS, DIET_EXTRA_OPTIONS, SEASON_OPTIONS, DIFFICULTY_OPTIONS,
   ORIGIN_GROUPS, ALLERGEN_OPTIONS, HEALTH_GROUPS,
-  getGroupCuisines, FilterSection, HealthAccordion, OriginAccordion,
+  filtersToApiParams, FilterSection, HealthAccordion, OriginAccordion,
 } from '../components/RecipeFiltersShared';
 
 const SORT_OPTIONS = [
@@ -226,75 +226,17 @@ export default function HomePage() {
       const payload = { query: q, limit: 200 };
       const hasFilter = q || d || de.size > 0 || se || dif || al.size > 0 || hf.size > 0 || sf.size > 0 || df.size > 0 || or.size > 0 || mt;
 
-      if (mt) payload.max_time = parseInt(mt);
-
       if (d === 'vegan')      payload.filtre = 'vegan';
       if (d === 'vegetarian') payload.filtre = 'vegetarian';
       if (d === 'raw_vegan')  payload.filtre = 'raw_vegan';
 
-      if (de.has('low_sugar'))  payload.low_sugar  = true;
-      if (de.has('low_sodium')) payload.low_sodium = true;
-
-      if (se)  payload.season     = se;
-      if (dif) payload.difficulty = dif;
-
-      if (al.has('gluten_free'))  payload.gluten_free  = true;
-      if (al.has('lactose_free')) payload.lactose_free = true;
-      if (al.has('nut_free'))     payload.nut_free     = true;
-      if (al.has('egg_free'))     payload.egg_free     = true;
-      if (al.has('dairy_free'))   payload.dairy_free   = true;
-      if (al.has('soy_free'))     payload.soy_free     = true;
-
-      // FODMAP — vérifier les sous-filtres en priorité (hf reçoit toujours la valeur groupe 'low_fodmap')
-      if (sf.has('moderate_fodmap'))      payload.fodmap = 'not_high';
-      else if (sf.has('low_fodmap'))      payload.fodmap = 'low';
-      else if (hf.has('low_fodmap'))      payload.fodmap = 'low';
-      // Glycémie — n'appliquer le fallback groupe que si aucun sous-filtre actif
-      if (hf.has('low_ig') && !sf.has('low_ig') && !sf.has('moderate_ig'))
-        payload.low_ig = true;
-      if (hf.has('antioxidant')) payload.antioxidant_rich = true;
-
-      const SF_MAP = {
-        protein_high:    'high_protein',       protein_source:  'good_source_protein',
-        fiber_high:      'high_fiber',          fiber_source:    'good_source_fiber',
-        low_calorie:     'low_calorie',         low_sugar:       'low_sugar',
-        low_sodium:      'low_sodium',
-        low_ig:          'low_ig',              moderate_ig:     'moderate_ig',
-        vitamin_c:       'high_vitamin_c',      source_vitamin_c:'source_vitamin_c',
-        calcium:         'high_calcium',        iron:            'high_iron',
-        magnesium:       'high_magnesium',      potassium:       'high_potassium',
-        zinc:            'high_zinc',
-        antioxidant_rich:'antioxidant_rich',
-      };
-      for (const val of sf) {
-        const apiKey = SF_MAP[val];
-        if (apiKey) payload[apiKey] = true;
-      }
-
-      if (hf.has('high_protein') && !sf.has('protein_high') && !sf.has('protein_source'))
-        payload.high_protein = true;
-      if (hf.has('high_fiber') && !sf.has('fiber_high') && !sf.has('fiber_source'))
-        payload.high_fiber = true;
-      if (hf.has('legerte') && !sf.has('low_calorie') && !sf.has('low_sugar') && !sf.has('low_sodium'))
-        payload.low_calorie = true;
-      if (hf.has('vitamin_c') && !sf.has('vitamin_c') && !sf.has('source_vitamin_c'))
-        payload.high_vitamin_c = true;
-      if (hf.has('minerals') && !['calcium', 'iron', 'magnesium', 'potassium', 'zinc'].some(s => sf.has(s)))
-        payload.high_calcium = true;
+      // Allergènes, santé, origines, saison… : même traduction que le planning
+      Object.assign(payload, filtersToApiParams({
+        dietExtras: de, season: se, difficulty: dif, allergens: al,
+        healthFilters: hf, subFilters: sf, origins: or, maxTime: mt,
+      }));
 
       if (df.size > 0) payload.dish_types = [...df];
-
-      if (or && or.size > 0) {
-        const groupIds = new Set(ORIGIN_GROUPS.map(g => g.id));
-        const cuisineList = [...or].flatMap(val => {
-          if (groupIds.has(val)) {
-            const group = ORIGIN_GROUPS.find(g => g.id === val);
-            return getGroupCuisines(group);
-          }
-          return [val];
-        });
-        payload.cuisines = [...new Set(cuisineList)];
-      }
 
       const data = hasFilter
         ? await recipesApi.search(payload)

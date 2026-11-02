@@ -444,3 +444,28 @@ def test_frigo_mots_francais(word, expected, forbidden):
     ids = resolve_names([word]).get(word, [])
     assert expected in ids
     assert forbidden not in ids
+
+
+# ── Planning : filtres santé / origines multiples ignorés à la génération ─────
+
+def _plan_ids(data):
+    return [data[d][m]["id"] for d in data if d != "meta" for m in data[d]]
+
+
+@pytest.mark.parametrize("query,check", [
+    ("cuisines=italian,japanese",
+     lambda r, hs: (r.get("origin") or {}).get("cuisine") in ("italian", "japanese")),
+    ("high_protein=true", lambda r, hs: hs.get("high_protein")),
+    ("fodmap=low",        lambda r, hs: hs.get("fodmap_level") == "low"),
+    ("high_fiber=true",   lambda r, hs: hs.get("high_fiber")),   # aucun plat < 200 mg de sodium
+])
+def test_mealplan_applique_les_filtres(query, check):
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.services.filter_service import _hs
+    by_id = {r["id"]: r for r in load_recipes()}
+    res = TestClient(app).get(f"/planning/mealplan?dish_type=main&diversity=0&{query}")
+    assert res.status_code == 200, res.text
+    ids = _plan_ids(res.json())
+    assert ids
+    assert all(check(by_id[i], _hs(by_id[i])) for i in ids), query

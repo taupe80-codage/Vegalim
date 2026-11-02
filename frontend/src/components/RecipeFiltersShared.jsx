@@ -858,6 +858,83 @@ const _LOCAL_GROUP_MAP = {
   antioxidant:     r => r.health_scores?.antioxidant_rich,
 };
 
+/**
+ * Traduit l'état des filtres en paramètres d'API (mêmes clés que
+ * filter_service.apply_filters) : allergènes, santé, origines, saison…
+ * Source unique pour l'accueil (/recettes/recherche) et le planning
+ * (/planning/mealplan) — le planning envoyait « health=… », clé inconnue.
+ * Le régime et les types de plat restent à la charge de l'appelant.
+ */
+export function filtersToApiParams({
+  dietExtras = new Set(), season, difficulty, allergens = new Set(),
+  healthFilters = new Set(), subFilters = new Set(), origins = new Set(), maxTime,
+} = {}) {
+  const de = new Set(dietExtras), al = new Set(allergens);
+  const hf = new Set(healthFilters), sf = new Set(subFilters), or = new Set(origins);
+  const p = {};
+
+  if (maxTime) p.max_time = parseInt(maxTime);
+
+  if (de.has('low_sugar'))  p.low_sugar  = true;
+  if (de.has('low_sodium')) p.low_sodium = true;
+
+  if (season)     p.season     = season;
+  if (difficulty) p.difficulty = difficulty;
+
+  for (const a of ['gluten_free', 'lactose_free', 'nut_free', 'egg_free', 'dairy_free', 'soy_free'])
+    if (al.has(a)) p[a] = true;
+
+  // FODMAP — vérifier les sous-filtres en priorité (hf reçoit toujours la valeur groupe 'low_fodmap')
+  if (sf.has('moderate_fodmap'))      p.fodmap = 'not_high';
+  else if (sf.has('low_fodmap'))      p.fodmap = 'low';
+  else if (hf.has('low_fodmap'))      p.fodmap = 'low';
+  // Glycémie — n'appliquer le fallback groupe que si aucun sous-filtre actif
+  if (hf.has('low_ig') && !sf.has('low_ig') && !sf.has('moderate_ig'))
+    p.low_ig = true;
+  if (hf.has('antioxidant')) p.antioxidant_rich = true;
+
+  const SF_MAP = {
+    protein_high:    'high_protein',       protein_source:  'good_source_protein',
+    fiber_high:      'high_fiber',          fiber_source:    'good_source_fiber',
+    low_calorie:     'low_calorie',         low_sugar:       'low_sugar',
+    low_sodium:      'low_sodium',
+    low_ig:          'low_ig',              moderate_ig:     'moderate_ig',
+    vitamin_c:       'high_vitamin_c',      source_vitamin_c:'source_vitamin_c',
+    calcium:         'high_calcium',        iron:            'high_iron',
+    magnesium:       'high_magnesium',      potassium:       'high_potassium',
+    zinc:            'high_zinc',
+    antioxidant_rich:'antioxidant_rich',
+  };
+  for (const val of sf) {
+    const apiKey = SF_MAP[val];
+    if (apiKey) p[apiKey] = true;
+  }
+
+  if (hf.has('high_protein') && !sf.has('protein_high') && !sf.has('protein_source'))
+    p.high_protein = true;
+  if (hf.has('high_fiber') && !sf.has('fiber_high') && !sf.has('fiber_source'))
+    p.high_fiber = true;
+  if (hf.has('legerte') && !sf.has('low_calorie') && !sf.has('low_sugar') && !sf.has('low_sodium'))
+    p.low_calorie = true;
+  if (hf.has('vitamin_c') && !sf.has('vitamin_c') && !sf.has('source_vitamin_c'))
+    p.high_vitamin_c = true;
+  if (hf.has('minerals') && !['calcium', 'iron', 'magnesium', 'potassium', 'zinc'].some(s => sf.has(s)))
+    p.high_calcium = true;
+
+  if (or.size > 0) {
+    const groupIds = new Set(ORIGIN_GROUPS.map(g => g.id));
+    const cuisineList = [...or].flatMap(val => {
+      if (groupIds.has(val)) {
+        const group = ORIGIN_GROUPS.find(g => g.id === val);
+        return getGroupCuisines(group);
+      }
+      return [val];
+    });
+    p.cuisines = [...new Set(cuisineList)];
+  }
+  return p;
+}
+
 export function localFilterRecipes(recipes, { diet, dietExtras, season, difficulty, allergens, healthFilters, subFilters, dishFilters, origins, maxTime }) {
   let f = [...recipes];
 

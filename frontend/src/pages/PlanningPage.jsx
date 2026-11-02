@@ -21,6 +21,7 @@ import {
   HealthAccordion,
   OriginAccordion,
   useFilterState,
+  filtersToApiParams,
   DIET_OPTIONS,
   DIET_EXTRA_OPTIONS,
   ALLERGEN_OPTIONS,
@@ -117,6 +118,29 @@ const MEAL_DEFAULTS = {
 };
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
+
+// Paramètres /planning/mealplan d'un créneau : filtres globaux + filtres du
+// créneau (régime du créneau prioritaire ; extras, allergènes et santé
+// cumulés ; origines du créneau à la place des globales si renseignées).
+// La génération ignorait les filtres des créneaux, « Remplacer » n'en
+// gardait que le régime et les allergènes.
+function slotApiParams(fs, slot, month) {
+  const union = (a, b) => new Set([...(a || []), ...(b || [])]);
+  return {
+    month,
+    diet: slot?.diet || fs.diet || undefined,
+    ...filtersToApiParams({
+      dietExtras:    union(fs.dietExtras, slot?.dietExtras),
+      season:        fs.season,
+      difficulty:    fs.difficulty,
+      allergens:     union(fs.allergens, slot?.allergens),
+      healthFilters: union(fs.healthFilters, slot?.healthFilters),
+      subFilters:    fs.subFilters,
+      origins:       slot?.origins?.length ? new Set(slot.origins) : fs.origins,
+      maxTime:       fs.maxTime,
+    }),
+  };
+}
 
 function _loadPlanFilters() {
   try { const r = localStorage.getItem(PLAN_FILTERS_KEY); if (r) return JSON.parse(r); } catch { /* localStorage indisponible ou JSON corrompu */ }
@@ -1030,36 +1054,22 @@ export default function PlanningPage() {
     setLoading(true); setError(null); setShopping(null);
 
     try {
-      // Allergens : envoyés comme flags boolean (identique à HomePage → apply_filters côté backend)
-      const apiParams = {
-        month,
-        diet:         fs.diet || undefined,
-        max_time:     fs.maxTime ? parseInt(fs.maxTime) : undefined,
-        // Flags allergens — même format que /recettes/recherche (apply_filters)
-        gluten_free:  fs.allergens.has('gluten_free')  || undefined,
-        lactose_free: fs.allergens.has('lactose_free') || undefined,
-        nut_free:     fs.allergens.has('nut_free')     || undefined,
-        egg_free:     fs.allergens.has('egg_free')     || undefined,
-        dairy_free:   fs.allergens.has('dairy_free')   || undefined,
-        soy_free:     fs.allergens.has('soy_free')     || undefined,
-        difficulty:   fs.difficulty || undefined,
-        health:       fs.healthFilters.size > 0 ? [...fs.healthFilters] : undefined,
-        cuisine:      fs.origins.size === 1 ? [...fs.origins][0] : undefined,
-        diversity,
-      };
-
-      const neededDTs = new Set();
+      // Une requête par combinaison distincte (type de plat × filtres du
+      // créneau) : les créneaux aux mêmes filtres partagent la même semaine.
+      const slotKey = (slot, dt, m) =>
+        JSON.stringify({ ...slotApiParams(fs, slot ?? MEAL_DEFAULTS[m], month), diversity, dish_type: dt });
+      const neededKeys = new Set();
       for(const dk of DAYS_KEY)
         for(const m of active){
           const slot=plan[dk]?.[m];
-          if(!slot?.skip)(slot?.dishTypes||MEAL_DEFAULTS[m].dishTypes).forEach(dt=>neededDTs.add(dt));
+          if(!slot?.skip)(slot?.dishTypes||MEAL_DEFAULTS[m].dishTypes).forEach(dt=>neededKeys.add(slotKey(slot,dt,m)));
         }
 
-      const uniqueDTs = [...neededDTs];
-      const results   = await Promise.all(
-        uniqueDTs.map(dt=>planningApi.mealplan({...apiParams, dish_type:dt}))
+      const uniqueKeys = [...neededKeys];
+      const results    = await Promise.all(
+        uniqueKeys.map(k=>planningApi.mealplan(JSON.parse(k)))
       );
-      const byDT = Object.fromEntries(uniqueDTs.map((dt,i)=>[dt,results[i]]));
+      const byKey = Object.fromEntries(uniqueKeys.map((k,i)=>[k,results[i]]));
 
       const dtDayUsed = {};
       const newPlan   = JSON.parse(JSON.stringify(plan));
@@ -1072,10 +1082,11 @@ export default function PlanningPage() {
           if(slot.skip){ slot.recipes=[]; continue; }
           slot.recipes=[];
           for(const dt of slot.dishTypes){
-            const res=byDT[dt];
+            const reqKey=slotKey(plan[dk]?.[m],dt,m);
+            const res=byKey[reqKey];
             if(!res) continue;
             const dayData=res[dk]||{};
-            const key=`${dt}:${dk}`;
+            const key=`${reqKey}:${dk}`;
             const useIdx=dtDayUsed[key]||0;
             const recipe=useIdx===0?(dayData.lunch||dayData.dinner):(dayData.dinner||dayData.lunch);
             dtDayUsed[key]=useIdx+1;
@@ -1086,6 +1097,10 @@ export default function PlanningPage() {
 
       setPlan(newPlan);
       setView('plan');
+      // Filtres trop stricts : le serveur répond meta.error = no_recipes et
+      // les créneaux concernés restaient vides sans explication
+      if (results.some(r => r?.meta?.error === 'no_recipes'))
+        setError('Aucune recette ne correspond à certains filtres : les créneaux concernés sont restés vides. Élargissez les filtres (santé, origines, allergènes…).');
     } catch(err){
       setError(err.message);
     } finally {
@@ -1106,26 +1121,14 @@ export default function PlanningPage() {
     const recipe = slot?.recipes?.[idx];
     const dt     = recipe?._dish_type||'main';
     const usedIds= getAllUsedIds(plan).filter(id=>id!==recipe?.id);
-    // Le diet du slot est prioritaire sur le global
-    const effectiveDiet = slot?.diet || fs.diet || undefined;
-
-    // Merge global allergens + slot allergens for the replace call
-    const effectiveAllergens = new Set([...fs.allergens, ...(slot?.allergens || [])]);
 
     setReplacing({day:dayKey,meal:mealType,idx});
     try{
+      // Mêmes filtres qu'à la génération (globaux + créneau)
       const result=await planningApi.mealplan({
-        month,
-        diet:         effectiveDiet,
-        difficulty:   fs.difficulty || undefined,
+        ...slotApiParams(fs, slot, month),
         dish_type:    dt,
         exclude_ids:  usedIds.length?usedIds:undefined,
-        gluten_free:  effectiveAllergens.has('gluten_free')  || undefined,
-        lactose_free: effectiveAllergens.has('lactose_free') || undefined,
-        nut_free:     effectiveAllergens.has('nut_free')     || undefined,
-        egg_free:     effectiveAllergens.has('egg_free')     || undefined,
-        dairy_free:   effectiveAllergens.has('dairy_free')   || undefined,
-        soy_free:     effectiveAllergens.has('soy_free')     || undefined,
       });
       const dd=result[dayKey]||{};
       const newR=dd.lunch||dd.dinner;
@@ -1140,7 +1143,7 @@ export default function PlanningPage() {
       }
     }catch(err){console.error('replace:',err.message);}
     finally{setReplacing(null);}
-  },[plan, month, fs.diet, fs.difficulty, fs.allergens]);
+  },[plan, month, fs]);
 
   // ── Recherche manuelle ────────────────────────────────────────────────────
   const handleSearchSelect = useCallback((recipe)=>{

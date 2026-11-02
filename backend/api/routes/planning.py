@@ -51,6 +51,45 @@ class MealPlanReplaceRequest(BaseModel):
 
 # Ã¢â€â‚¬Ã¢â€â‚¬ Routes Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 
+def _plan_filters(
+    cuisines:         Optional[str] = Query(default=None, description="Liste séparée par des virgules"),
+    season:           Optional[str] = None,
+    fodmap:           Optional[str] = Query(default=None, description="low | medium | high | not_high"),
+    low_sugar:        bool = False, low_sodium:          bool = False,
+    high_protein:     bool = False, good_source_protein: bool = False,
+    low_calorie:      bool = False,
+    high_fiber:       bool = False, good_source_fiber:   bool = False,
+    low_ig:           bool = False, moderate_ig:         bool = False,
+    high_vitamin_c:   bool = False, source_vitamin_c:    bool = False,
+    high_calcium:     bool = False, high_iron:           bool = False,
+    high_magnesium:   bool = False, high_potassium:      bool = False,
+    high_zinc:        bool = False, antioxidant_rich:    bool = False,
+) -> dict:
+    """Filtres santé, origines et saison de /planning/mealplan, mêmes clés que
+    /recettes/recherche (apply_filters). La page envoyait « health=… », clé
+    inconnue, et aucune cuisine dès que plusieurs origines étaient cochées."""
+    flags = {
+        "low_sugar": low_sugar, "low_sodium": low_sodium,
+        "high_protein": high_protein, "good_source_protein": good_source_protein,
+        "low_calorie": low_calorie,
+        "high_fiber": high_fiber, "good_source_fiber": good_source_fiber,
+        "low_ig": low_ig, "moderate_ig": moderate_ig,
+        "high_vitamin_c": high_vitamin_c, "source_vitamin_c": source_vitamin_c,
+        "high_calcium": high_calcium, "high_iron": high_iron,
+        "high_magnesium": high_magnesium, "high_potassium": high_potassium,
+        "high_zinc": high_zinc, "antioxidant_rich": antioxidant_rich,
+    }
+    extra: dict = {k: True for k, v in flags.items() if v}
+    cuisine_list = [c.strip() for c in cuisines.split(",") if c.strip()] if cuisines else []
+    if cuisine_list:
+        extra["cuisines"] = cuisine_list
+    if season:
+        extra["season"] = season
+    if fodmap:
+        extra["fodmap"] = fodmap
+    return extra
+
+
 @router.get("/mealplan")
 def mealplan(
     diet:             Optional[str] = None,
@@ -74,6 +113,7 @@ def mealplan(
     difficulty:       Optional[str] = None,
     exclude_ids:      Optional[str] = None,
     diversity:        float         = Query(default=0.5, ge=0.0, le=1.0),
+    extra:            dict          = Depends(_plan_filters),
     user: dict | None = Depends(get_optional_user),
 ):
     """Genere un plan de repas hebdomadaire personnalise."""
@@ -98,6 +138,7 @@ def mealplan(
     # fix: les IDs v6 sont des strings (ex: "dip_baba_ghanoush_dbd030")
     exclude_list = [x.strip() for x in exclude_ids.split(",") if x.strip()] if exclude_ids else []
 
+
     return generate_plan(
         diet=diet or None,
         month=month,
@@ -116,6 +157,7 @@ def mealplan(
         difficulty=difficulty or None,
         exclude_ids=exclude_list or None,
         diversity=diversity,
+        filters=extra or None,
     )
 
 
