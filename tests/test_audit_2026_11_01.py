@@ -838,3 +838,23 @@ def test_tous_les_ingredients_des_recettes_sont_au_dictionnaire():
     unknown = {it.get("ingredient") for r in recipes for it in r.get("composition") or []
                if isinstance(it, dict) and it.get("ingredient")} - known
     assert not unknown, sorted(unknown)
+
+
+# ── Mon frigo : chaque puce trouve des ingrédients de recette ────────────────
+
+def test_puces_frigo_trouvent_des_ingredients():
+    import re
+    from pathlib import Path
+    from backend.api.routes.frigo import (
+        _resolve_fridge, _get_all_recipe_ingredient_ids, _ingredient_matches)
+    chips = re.findall(r"\{\s*key:\s*'([^']+)'",
+                       Path("frontend/src/pages/FrigoPage.jsx").read_text(encoding="utf-8"))
+    known = _get_all_recipe_ingredient_ids()
+    # Aucune recette ne contient de riz complet : la puce ne peut rien trouver
+    sans_recette = {"brown_rice"}
+    vides = []
+    for key in chips:
+        usable, _, _ = _resolve_fridge({key})
+        if not any(_ingredient_matches(u, rid) for u in usable for rid in known):
+            vides.append(key)
+    assert set(vides) <= sans_recette, vides

@@ -72,6 +72,12 @@ _SYNONYM_PAIRS: tuple[tuple[str, str], ...] = (
     ("rice",                   "white_rice_cooked_long_grain_seed"),
     ("rice",                   "white_rice_cooked_short_grain_seed"),
     ("rice",                   "basmati_rice_raw_seed"),
+    # Puces dont la clé ne ressemble à aucun id de recette
+    ("beet",                   "beetroot_raw_root"),
+    ("beet",                   "beetroot_cooked_root"),
+    ("green_bean",             "french_bean_raw"),
+    ("flax_seeds",             "flaxseed_linseed_ground"),
+    ("dijon_mustard",          "mustard"),                 # moutarde préparée (ml)
 )
 _SYNONYMS: dict[str, frozenset] = {}
 for _a, _b in _SYNONYM_PAIRS:
