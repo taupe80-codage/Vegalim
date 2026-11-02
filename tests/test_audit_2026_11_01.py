@@ -469,3 +469,23 @@ def test_mealplan_applique_les_filtres(query, check):
     ids = _plan_ids(res.json())
     assert ids
     assert all(check(by_id[i], _hs(by_id[i])) for i in ids), query
+
+
+# ── Liste de courses : portions du créneau transmises ─────────────────────────
+
+def test_liste_de_courses_suit_les_portions_du_creneau():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    r = next(r for r in load_recipes()
+             if (r.get("servings") or 0) >= 2 and r.get("composition")
+             and all(c.get("unit") == "g" and c.get("quantity") for c in r["composition"]))
+    c = TestClient(app)
+    def total(servings):
+        slot = {"id": r["id"], "title": ""}
+        if servings:
+            slot["servings"] = servings
+        data = c.post("/planning/shopping_list", json={"plan": {"lundi": {"lunch_0": slot}}}).json()
+        return sum(float(i.get("qty_value") or 0) for i in data["items"])
+    base = total(None)
+    assert base > 0
+    assert total(r["servings"] * 2) == pytest.approx(base * 2, rel=0.05)

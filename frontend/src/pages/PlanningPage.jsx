@@ -29,6 +29,7 @@ import {
   ORIGIN_GROUPS,
   DIFFICULTY_OPTIONS,
 } from '../components/RecipeFiltersShared';
+import { planToShoppingFormat } from '../planShopping';
 
 // ── Constantes ────────────────────────────────────────────────────────────────
 
@@ -187,22 +188,6 @@ function createDefaultPlan() {
 function hasAnyRecipes(plan) {
   if (!plan) return false;
   return DAYS_KEY.some(dk => MEAL_ORDER.some(m => (plan[dk]?.[m]?.recipes?.length||0) > 0));
-}
-
-function planToShoppingFormat(plan) {
-  const out = {};
-  for (const dk of DAYS_KEY) {
-    out[dk] = {};
-    let i = 0;
-    for (const m of MEAL_ORDER) {
-      const slot = plan[dk]?.[m];
-      if (!slot || slot.skip) continue;
-      for (const r of (slot.recipes||[])) {
-        if (r?.id) out[dk][`${m}_${i++}`] = { id:r.id, title:r.title_fr||r.title||'' };
-      }
-    }
-  }
-  return out;
 }
 
 function getAllUsedIds(plan) {

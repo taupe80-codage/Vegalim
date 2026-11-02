@@ -14,6 +14,7 @@ import { useToast } from '../ToastContext';
 import { planning as planningApi, recipes as recipesApi } from '../api';
 import { navigate } from '../Router';
 import PriceEditInline from '../components/PriceEditInline';
+import { planToShoppingFormat } from '../planShopping';
 
 // ── Constantes ────────────────────────────────────────────────────────────────
 
@@ -75,22 +76,6 @@ function getPlanSummary(plan) {
     }
     return { key: dk, label: DAYS_FR[i], counts, total };
   });
-}
-
-function planToShoppingFormat(plan) {
-  const out = {};
-  for (const dk of DAYS_KEY) {
-    out[dk] = {};
-    let i = 0;
-    for (const m of MEAL_ORDER) {
-      const slot = plan[dk]?.[m];
-      if (!slot || slot.skip) continue;
-      for (const r of (slot.recipes || [])) {
-        if (r?.id) out[dk][`${m}_${i++}`] = { id: r.id, title: r.title_fr || r.title || '' };
-      }
-    }
-  }
-  return out;
 }
 
 function fridgeMatchesIng(fid, rid) {
