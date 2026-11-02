@@ -126,7 +126,7 @@ def list_recettes(
     skip:         int           = Query(default=0,   ge=0),
     limit:        int           = Query(default=20,  ge=1, le=600),
     diet:         Optional[str] = Query(default=None, description="vegan | vegetarien"),
-    cuisine:      Optional[str] = Query(default=None),
+    cuisine:      Optional[str] = Query(default=None, description="Cuisine ou pays, en anglais : french, italian, france, italy…"),
     technique:    Optional[str] = Query(default=None),
     max_time:     Optional[int] = Query(default=None, ge=1),
     # ── Flags diététiques ─────────────────────────────────────────────────────

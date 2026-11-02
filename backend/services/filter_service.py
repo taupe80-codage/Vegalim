@@ -702,6 +702,8 @@ def apply_filters(
     if cuisine:
         active_cuisines.add(cuisine.lower())
     if active_cuisines:
+        # Valeurs anglaises (« french », « italian ») ; le pays d'origine
+        # (« france », « italy ») est aussi accepté : « France » renvoyait 0.
         def _cuisine_match(r: dict) -> bool:
             origin = r.get("origin", {})
             c_val = (
@@ -709,7 +711,8 @@ def apply_filters(
                 or r.get("iconic_status", {}).get("cuisine_origin", "")
                 or ""
             ).lower()
-            return any(c in c_val for c in active_cuisines)
+            country = (origin.get("country") or "").lower()
+            return any(c in c_val or c == country for c in active_cuisines)
         result = [r for r in result if _cuisine_match(r)]
 
     if technique:

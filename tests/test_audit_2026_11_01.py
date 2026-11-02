@@ -581,3 +581,14 @@ def test_cycle_ingredients_sans_doublon(phase):
     assert len(keys) == len(set(keys))
     tr = json.loads(Path("frontend/src/translations.json").read_text(encoding="utf-8"))
     assert all(i in tr for i in ings)
+
+
+# ── B1 : le filtre cuisine accepte aussi le pays (« France ») ─────────────────
+
+def test_filtre_cuisine_accepte_le_pays():
+    from backend.core.data_io import load_recipes
+    from backend.services.filter_service import apply_filters
+    recipes = load_recipes()
+    _, n_pays = apply_filters(recipes, cuisine="France", skip=0, limit=1)
+    _, n_cuisine = apply_filters(recipes, cuisine="french", skip=0, limit=1)
+    assert n_pays > 0 and n_cuisine > 0
