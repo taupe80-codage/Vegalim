@@ -16,7 +16,7 @@ VARIANTS = {
             ("green_onion_raw", 40, "g", "ingredient"),
             ("soy_sauce_shoyu_reduced_sodium", 15, "ml", "condiment"),
             ("sesame_oil_plant", 10, "ml", "fat"),
-            ("canola", 20, "ml", "fat"),
+            ("canola_oil_plant", 20, "ml", "fat"),
         ]),
         ("steps", [
             "Faire revenir 120 g de carotte en petits dés dans 20 ml d'huile, 3 minutes, puis ajouter 250 g de kimchi haché et sauter 4 minutes.",

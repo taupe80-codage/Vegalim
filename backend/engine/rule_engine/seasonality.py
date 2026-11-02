@@ -50,7 +50,7 @@ SEASON_ID_ALIASES: dict[str, str] = {
     "sweet_potato_raw": "sweet_potato",
     "turnip_raw": "turnip",
     "green_zucchini_squash_raw": "zucchini",
-    "tomato_raw_ripe": "tomato", "tomate": "tomato",
+    "tomato_raw_ripe": "tomato",
     # Clés disponibles 12 mois sur 12 dans le fichier : sans effet sur le ratio
     "carrot_raw": "carrot", "garlic_raw": "garlic",
     "onion_raw": "onion", "yellow_onion_raw": "onion", "white_onion_raw": "onion",

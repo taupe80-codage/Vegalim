@@ -549,7 +549,7 @@ FODMAP_ID_ALIASES: dict[str, str] = {
     "onion_raw": "onion", "yellow_onion_raw": "onion", "white_onion_raw": "onion",
     "sweet_onion_raw": "onion", "red_onion_raw": "red_onion",
     "shallot_raw": "shallot",
-    "leeks": "leek", "leeks_raw": "leek",
+    "leeks_raw": "leek",
     "green_onion_raw": "spring_onion",
     # Bouillon déshydraté : contient presque toujours oignon et ail
     "vegetable_stock_dried": "onion_powder",
@@ -567,7 +567,7 @@ FODMAP_ID_ALIASES: dict[str, str] = {
     "egg_pasta_raw_dried": "pasta", "udon": "pasta",
     "bread_white_commercial": "bread", "white_bread_baguette": "bread",
     "white_bread_roasted": "bread", "white_bread_unsalted": "bread",
-    "wholemeal_bread_whole": "bread", "rye_bread": "bread", "toast": "bread",
+    "wholemeal_bread_whole": "bread", "rye_bread": "bread",
     "multigrain_toast_bread_roasted_sliced_pre_packaged": "bread",
     "bagel": "bread", "hot_dog_bun_pre_packaged": "bread",
     "indian_bread_naan": "bread", "white_pita_bread": "bread", "pain_pita": "bread",

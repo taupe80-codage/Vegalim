@@ -93,7 +93,6 @@ VEGAN_SUBS_CIQUAL: dict[str, str] = {
     "base_wonton_wrapper_7bfeb5": "base_gyoza_wrapper_0dba00",
     "puff_pastry_all_butter_raw_paste_pre_packaged": "puff_pastry_vegetable_fat_raw_paste_plant",
     "egg_pasta_raw_dried": "pasta_raw_dried",
-    "toast": "white_bread_unsalted",
 }
 
 

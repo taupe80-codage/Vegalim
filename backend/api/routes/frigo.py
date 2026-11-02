@@ -62,9 +62,7 @@ _SYNONYM_PAIRS: tuple[tuple[str, str], ...] = (
     ("white_bean_boiled",      "white_bean_canned"),
     ("white_bean_boiled",      "white_bean_dried_canned"),
     ("white_bean_canned",      "white_bean_dried_canned"),
-    ("parsley_fresh_herb",     "persil"),
     ("aneth",                  "dill_weed_fresh_herb_leaf"),
-    ("tomate",                 "tomato_raw_ripe"),
     ("sugars_granulated",      "white_sugar"),
     ("lettuce",                "green_salad_raw_plain"),
     # La puce « rice » (id générique) ne couvrait aucun riz blanc précis

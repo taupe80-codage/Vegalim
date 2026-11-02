@@ -2,7 +2,7 @@
 
 PATCHES = {
     "rice_kimchi_bokkeumbap_2cbfe6": [
-        ("qty", "canola", 15),
+        ("qty", "canola_oil_plant", 15),
         ("txt", "Faire chauffer 10 ml d'huile de sésame à feu moyen dans une poêle.", "Faire chauffer 15 ml d'huile de colza à feu moyen dans une poêle."),
         ("txt", "Casser 2 œufs dans un bol", "Casser les œufs (220 g) dans un bol"),
         ("txt", "Ajouter 45 ml d'huile de colza et mélanger pour bien enrober le plat. Servir sans attendre",

@@ -96,7 +96,7 @@ VARIANTS = {
             ("breadcrumbs_dried", 20, "g", "binder"),
             ("marjoram_spice_dried", 1, "g", "herb"),
             ("butter_sup80pct", 30, "g", "fat"),
-            ("canola", 15, "ml", "fat"),
+            ("canola_oil_plant", 15, "ml", "fat"),
             ("table_salt_unenriched", 4, "g", "seasoning"),
             ("black_pepper_spice", 1, "g", "spice"),
             ("sour_cream_fermented_18pct", None, "2 cuillères à soupe", "serving_suggestion"),

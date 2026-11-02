@@ -156,7 +156,7 @@ def test_fodmap_quantite_inconnue_reste_prudente():
     from backend.engine.rule_engine.diet import compute_fodmap
     r = {"servings": 4, "composition": [
         {"ingredient": "strawberry", "quantity": 500, "unit": "g"},
-        {"ingredient": "toast", "quantity": None, "unit": "2-3 toasts"},
+        {"ingredient": "white_bread_roasted", "quantity": None, "unit": "2-3 toasts"},
     ]}
     assert compute_fodmap(r)["fodmap_level"] != "low"
 
@@ -395,7 +395,6 @@ def test_frigo_tables_sur_ids_reels():
     ("lemon", "lemon_grass_fresh_herb", False), ("lemon", "lemon_juice", True),
     ("cream", "vanilla_ice_cream", False), ("cream", "cream_heavy", True),
     ("water", "rose_water", False),
-    ("persil", "parsley_fresh_herb", True), ("parsley_fresh_herb", "persil", True),
 ])
 def test_frigo_correspondances(fridge, recipe, expected):
     from backend.api.routes.frigo import _ingredient_matches
@@ -812,3 +811,16 @@ def test_plus_de_fermented_free():
     from backend.services.enrichment_service import enrich_one
     recipe = load_recipes()[0]
     assert "fermented_free" not in (enrich_one(recipe).get("diet_flags_enriched") or {})
+
+
+# ── Recettes : anciens identifiants reliés au dictionnaire ────────────────────
+
+def test_anciens_ids_relies_au_dictionnaire():
+    from backend.core.data_io import load_recipes, load_ingredients_dict
+    ings = load_ingredients_dict()
+    ids = {it.get("ingredient") for r in load_recipes() for it in r.get("composition") or []
+           if isinstance(it, dict)}
+    assert not ids & {"leeks", "canola", "persil", "tomate", "toast"}
+    for new in ("leeks_raw", "canola_oil_plant", "parsley_fresh_herb",
+                "tomato_sauce_salted_canned", "white_bread_roasted"):
+        assert new in ids and new in ings

@@ -62,7 +62,7 @@ ASTRO_ID_ALIASES: dict[str, str] = {
     "potato_raw_flesh": "pommes_de_terre", "potato_raw_with_skin": "pommes_de_terre",
     "potato_boiled_with_skin": "pommes_de_terre", "potato_gnocchi_to_cook": "gnocchi",
     "shallot_raw": "onion",
-    "leeks": "poireau", "leeks_raw": "poireau",
+    "leeks_raw": "poireau",
     "red_cabbage_raw": "cabbage", "white_cabbage_raw": "cabbage", "savoy_cabbage_raw": "cabbage",
     "collard_raw": "kale", "curly_kale_raw": "kale",
     "celeriac": "celery", "celeriac_raw": "celery",
