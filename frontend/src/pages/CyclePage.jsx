@@ -94,9 +94,9 @@ const MENO_AVOID = [
 const MENO_ACTIVITY = 'Marche rapide & cardio modéré (30 min/j) pour la santé cardio-vasculaire. Musculation 2×/semaine indispensable contre la sarcopénie et pour préserver la densité osseuse. Yoga & cohérence cardiaque pour les bouffées de chaleur et l\'anxiété. Natation si douleurs articulaires.';
 
 const MENO_INGREDIENTS = [
-  'Graines de lin', 'Edamame', 'Tofu soyeux', 'Sardines', 'Saumon',
+  'Graines de lin', 'Edamame', 'Tofu soyeux', 'Graines de chia', 'Graines de chanvre',
   'Amandes', 'Graines de courge', 'Kale', 'Brocoli', 'Avoine',
-  'Myrtilles', 'Grenade', 'Avoccat', 'Noix', 'Tempeh',
+  'Myrtilles', 'Grenade', 'Avocat', 'Noix', 'Tempeh',
 ];
 
 const MENO_TIPS = [
@@ -702,7 +702,8 @@ function MenopauseView() {
 
   useEffect(() => {
     let cancelled = false;
-    recipesApi.list({ tags: 'calcium,omega3,phytoestrogens,protein', limit: 500 })
+    // « tags » n'existait pas côté serveur : la page montrait le top général
+    recipesApi.list({ menopause: true, limit: 500 })
       .catch(() => recipesApi.list({ limit: 200 }))
       .then(data => { if (!cancelled) setRecipes(data.results || []); })
       .catch(() => {})

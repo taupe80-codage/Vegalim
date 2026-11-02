@@ -489,3 +489,19 @@ def test_liste_de_courses_suit_les_portions_du_creneau():
     base = total(None)
     assert base > 0
     assert total(r["servings"] * 2) == pytest.approx(base * 2, rel=0.05)
+
+
+# ── Ménopause : « tags=… » inexistant, la page montrait le top général ───────
+
+def test_recettes_menopause():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.core.data_io import is_component_recipe
+    from backend.services.filter_service import menopause_score, MENOPAUSE_MIN_SCORE
+    data = TestClient(app).get("/recettes?menopause=true&limit=500").json()
+    assert 50 < data["total"] < 600
+    by_id = {r["id"]: r for r in load_recipes()}
+    scores = [menopause_score(by_id[r["id"]]) for r in data["results"]]
+    assert min(scores) >= MENOPAUSE_MIN_SCORE
+    assert scores == sorted(scores, reverse=True)
+    assert not any(is_component_recipe(by_id[r["id"]]) for r in data["results"])

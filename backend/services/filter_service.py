@@ -371,6 +371,40 @@ def match_diet(recipe: dict, diet: str) -> bool:
     return True
 
 
+# ── Ménopause ───────────────────────────────────────────────────────────────
+# La page Cycle (vue ménopause) annonce des recettes « riches en calcium,
+# oméga-3, protéines et phyto-œstrogènes » mais envoyait tags=…, paramètre
+# inexistant : simple top par score iconique. Les drapeaux oméga-3 sont vides
+# dans les données (0 recette) : ils sont repérés par ingrédient.
+_MENO_PHYTO_IDS = frozenset({
+    "tofu_plain_pre_packaged", "tofu_smoked_pre_packaged", "silken_tofu_pre_packaged",
+    "tempeh_tempe_raw_fermented", "edamame_raw", "soybean_boiled_dried", "soybean_raw_dried",
+    "soybean_flour_raw_whole", "soybean_milk_unsweetened_plant", "soybean_yogurt_plain_plant",
+    "base_soy_cream_4dc027", "flaxseed_linseed_ground",
+})
+_MENO_OMEGA3_IDS = frozenset({
+    "flaxseed_linseed_ground", "chia_raw_seed_dried", "hemp_seed_hulled",
+    "walnut_shelled_dried", "walnut_oil_plant",
+})
+MENOPAUSE_MIN_SCORE = 2
+
+
+def menopause_score(recipe: dict) -> int:
+    """Nombre de critères ménopause remplis (0-5) : riche en calcium, bonne
+    source de protéines, riche en magnésium, soja ou lin (phyto-œstrogènes),
+    source végétale d'oméga-3 (lin, chia, chanvre, noix)."""
+    ids = {str(c.get("ingredient", "")).lower()
+           for c in recipe.get("composition") or [] if isinstance(c, dict)}
+    hs = _hs(recipe)
+    return sum((
+        bool(hs.get("high_calcium")),
+        bool(hs.get("good_source_protein")),
+        bool(hs.get("high_magnesium")),
+        bool(ids & _MENO_PHYTO_IDS),
+        bool(ids & _MENO_OMEGA3_IDS),
+    ))
+
+
 def apply_diet_filter(recipes: list, diet: str) -> list:
     """
     Filtre une liste de recettes par régime alimentaire.

@@ -143,6 +143,7 @@ def list_recettes(
     astro_element: Optional[str] = Query(default=None, description="Air | Terre | Eau | Feu"),
     moon_phase:   Optional[str] = Query(default=None, description="nouvelle_lune | etc."),
     cycle_phase:  Optional[str] = Query(default=None, description="menstrual | follicular | ovulatory | luteal"),
+    menopause:    bool          = Query(default=False, description="Calcium, protéines, magnésium, soja/lin, oméga-3 : ≥ 2 critères"),
     sort:         str           = Query(default="iconic_score"),
 ):
     """Liste paginée des recettes avec filtres combinables. **Public.**"""
@@ -152,6 +153,14 @@ def list_recettes(
         recipes.sort(key=lambda r: r.get("titles", {}).get("fr", ""))
     else:
         recipes.sort(key=lambda r: r.get("scoring", {}).get("iconic", {}).get("score", 0), reverse=True)
+    if menopause:
+        # Recettes qui remplissent le plus de critères d'abord (tri stable :
+        # ordre précédent conservé à score égal) ; sous-recettes exclues
+        from backend.services.filter_service import menopause_score, MENOPAUSE_MIN_SCORE
+        scored = [(menopause_score(r), r) for r in recipes if not is_component_recipe(r)]
+        scored = [(s, r) for s, r in scored if s >= MENOPAUSE_MIN_SCORE]
+        scored.sort(key=lambda x: -x[0])
+        recipes = [r for _, r in scored]
 
     filtered, total = _apply_filters(
         recipes, diet, cuisine, technique, max_time,
