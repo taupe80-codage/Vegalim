@@ -555,3 +555,14 @@ def test_anti_inflammatoire_lit_omega3():
     from backend.services.filter_service import _hs
     levels = {_hs(r)["anti_inflammatory_score"] for r in load_recipes()}
     assert {"high", "medium", "low"} <= levels
+
+
+# ── Fiche recette : nom complet des ingrédients et titre des sous-recettes ────
+
+def test_fiche_recette_noms_ingredients():
+    from backend.core.data_io import load_recipes
+    from backend.services.enrichment_service import enrich_one
+    by_id = {r["id"]: r for r in load_recipes()}
+    meta = enrich_one(by_id["base_mala_broth_1ab129"])["ingredients_meta"]
+    assert meta["sesame_oil_plant"]["name_fr"] == "huile de sésame"
+    assert meta["base_doubanjiang_paste_340399"]["name_fr"] == "Pâte Doubanjiang"

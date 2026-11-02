@@ -332,12 +332,20 @@ def enrich_one(recipe: dict) -> dict:
     out["ingredients_availability"] = ing_avail
 
     # ── Métadonnées ingrédients ───────────────────────────────────────────────
+    # Nom complet (nom de base + axe « forme ») : canonical_name_fr seul donnait
+    # « olive » pour l'huile d'olive. Sous-recette (base_…) → son titre.
+    from backend.db.culinary_repositories import _recipes_index
+    from backend.services.ingredient_catalog import full_name_fr
     ings_meta: dict = {}
     for ing in composition_ings:
         iid = _ing_id(ing)
         if iid and iid not in ings_meta:
             d = _resolve_ing(iid)
-            name_fr = d.get("canonical_name_fr") or iid.replace("/", " ").replace("_", " ").title()
+            name_fr = (
+                (full_name_fr(d, iid) if d.get("canonical_name_fr") else None)
+                or ((_recipes_index().get(iid) or {}).get("titles") or {}).get("fr")
+                or iid.replace("/", " ").replace("_", " ").title()
+            )
             ings_meta[iid] = {
                 "name_fr":        name_fr,
                 "substitutions":  d.get("substitutions", []),
