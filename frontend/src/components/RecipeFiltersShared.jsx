@@ -6,6 +6,7 @@
 
 import { useState } from 'react';
 import { DISH_OPTIONS } from '../constants';
+import { useProfileDiet, defaultDietFilter } from '../useProfileDiet';
 
 export { DISH_OPTIONS };
 
@@ -461,6 +462,13 @@ export function OriginAccordion({ groups, selected, onToggle, onBulkToggle }) {
 
 export function useFilterState(initial = {}) {
   const [diet,          setDiet]          = useState(initial.diet || '');
+  // Profil vegan : « Vegan » coché par défaut, à l'ouverture et après « Tout effacer »
+  const defaultDiet = defaultDietFilter(useProfileDiet());
+  const [appliedDefault, setAppliedDefault] = useState('');
+  if (defaultDiet && defaultDiet !== appliedDefault) {
+    setAppliedDefault(defaultDiet);
+    setDiet(defaultDiet);
+  }
   const [dietExtras,    setDietExtras]    = useState(new Set(initial.dietExtras || []));
   const [season,        setSeason]        = useState(initial.season || '');
   const [difficulty,    setDifficulty]    = useState(initial.difficulty || '');
@@ -546,7 +554,7 @@ export function useFilterState(initial = {}) {
   );
 
   const clearAll = () => {
-    setDiet('');
+    setDiet(defaultDiet);
     setDietExtras(new Set());
     setSeason('');
     setDifficulty('');

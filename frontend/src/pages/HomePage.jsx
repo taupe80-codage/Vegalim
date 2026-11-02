@@ -8,6 +8,7 @@ import { recipes as recipesApi } from '../api';
 import { navigate } from '../Router';
 import RecipeCard, { RecipeCardSkeleton, getRecipeTheme, getRecipeImageUrl, CUISINE_LABEL_FR, computeAlimScore } from '../components/RecipeCard';
 import { useRecentlyViewed } from '../useRecentlyViewed';
+import { useProfileDiet, defaultDietFilter } from '../useProfileDiet';
 import {
   DISH_OPTIONS, DIET_OPTIONS, DIET_EXTRA_OPTIONS, SEASON_OPTIONS, DIFFICULTY_OPTIONS,
   ORIGIN_GROUPS, ALLERGEN_OPTIONS, HEALTH_GROUPS,
@@ -91,6 +92,13 @@ export default function HomePage() {
 
   const [query,          setQuery]          = useState('');
   const [diet,           setDiet]           = useState(_saved?.diet || '');
+  // Profil vegan : « Vegan » coché par défaut, à l'ouverture et après « Tout effacer »
+  const defaultDiet = defaultDietFilter(useProfileDiet());
+  const [appliedDefault, setAppliedDefault] = useState('');
+  if (defaultDiet && defaultDiet !== appliedDefault) {
+    setAppliedDefault(defaultDiet);
+    setDiet(defaultDiet);
+  }
   const [dietExtras,     setDietExtras]     = useState(new Set(_saved?.dietExtras || []));
   const [season,         setSeason]         = useState(_saved?.season || '');
   const [difficulty,     setDifficulty]     = useState(_saved?.difficulty || '');
@@ -191,7 +199,7 @@ export default function HomePage() {
   const hasActiveFilters = diet || dietExtras.size > 0 || season || difficulty || allergens.size > 0 || healthFilters.size > 0 || subFilters.size > 0 || dishFilters.size > 0 || origins.size > 0 || maxTime;
 
   const clearAllFilters = () => {
-    setDiet('');
+    setDiet(defaultDiet);
     setDietExtras(new Set());
     setSeason('');
     setDifficulty('');
