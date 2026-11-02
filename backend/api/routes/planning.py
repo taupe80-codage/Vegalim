@@ -49,6 +49,15 @@ class MealPlanReplaceRequest(BaseModel):
     dish_type:   Optional[str]     = Field(default=None, description="Type de plat : main|soup|dessert|…")
 
 
+def _slot_recipes(info) -> list[dict]:
+    """Recettes d'un créneau : {id, title_fr} (généré) ou {recipes: [...]} (édité)."""
+    if not isinstance(info, dict):
+        return []
+    if info.get("recipes"):
+        return [r for r in info["recipes"] if isinstance(r, dict)]
+    return [info] if info.get("id") or info.get("title") or info.get("title_fr") else []
+
+
 # ── Routes ────────────────────────────────────────────────────────────────────
 
 def _plan_filters(
@@ -175,18 +184,24 @@ def export_ics(payload: MealPlanExportRequest, user: dict = Depends(get_user)):
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//AlimUnified//FR",
              "CALSCALE:GREGORIAN", "METHOD:PUBLISH"]
 
+    # Le plan généré porte title_fr (pas title) : le titre retombait sur le
+    # nom du créneau (« lunch — lunch »). Petit-déjeuner à 8 h, pas 19 h.
+    HOURS = {"breakfast": "080000", "petit_dejeuner": "080000",
+             "lunch": "120000", "dejeuner": "120000"}
     for i, day in enumerate(DAYS):
         for slot, info in (plan.get(day) or {}).items():
-            if not isinstance(info, dict):
+            recs = _slot_recipes(info)
+            if not recs:
                 continue
+            title = " + ".join(r.get("title_fr") or r.get("title") or slot for r in recs)
             d = (start + timedelta(days=i)).strftime("%Y%m%d")
-            h = "120000" if slot == "lunch" else "190000"
+            h = HOURS.get(slot, "190000")
             lines += [
                 "BEGIN:VEVENT",
                 f"UID:{d}-{slot}@alimunified",
                 f"DTSTART;VALUE=DATE-TIME:{d}T{h}",
                 "DURATION:PT30M",
-                f"SUMMARY:{slot} — {info.get('title', slot)}",
+                f"SUMMARY:{slot} — {title}",
                 "END:VEVENT",
             ]
     lines.append("END:VCALENDAR")
@@ -366,30 +381,30 @@ def diversity_score(payload: DiversityScoreRequest, user: dict = Depends(get_use
     from backend.core.data_io import load_recipes, recipe_cuisine, recipe_techniques
     plan = payload.plan
     rmap = {r["id"]: r for r in load_recipes()}
-    cuisines, techs, colors, ings = set(), set(), set(), set()
+    # color_palette n'existe dans aucune recette et les ingrédients sont dans
+    # composition : ces deux parts valaient toujours 0. Les 30 points restants
+    # vont à la variété des ingrédients.
+    cuisines, techs, ings = set(), set(), set()
     n = 0
     for day_data in plan.values():
         if not isinstance(day_data, dict):
             continue
         for info in day_data.values():
-            if not isinstance(info, dict):
-                continue
-            r = rmap.get(info.get("id"), {})
-            n += 1
-            c = recipe_cuisine(r)
-            t = recipe_techniques(r)
-            p = r.get("color_palette", "")
-            if c: cuisines.add(c)
-            techs.update(t)
-            if p: colors.add(p)
-            ings.update(str(i) for i in r.get("ingredients", []))
+            for item in _slot_recipes(info):
+                r = rmap.get(item.get("id"), {})
+                n += 1
+                c = recipe_cuisine(r)
+                if c: cuisines.add(c)
+                techs.update(recipe_techniques(r))
+                ings.update(str(i.get("ingredient")) for i in r.get("composition") or []
+                            if isinstance(i, dict) and i.get("ingredient"))
     return {
         "diversity_score": (
             min(len(cuisines) * 10, 40) +
             min(len(techs)    * 8,  30) +
-            min(len(colors)   * 6,  20) +
-            min(len(ings) // 3,     10)
+            min(len(ings) // 2,     30)
         ),
+        "ingredients": len(ings),
         "cuisines":   len(cuisines),
         "techniques": len(techs),
         "n_recipes":  n,

@@ -669,3 +669,23 @@ def test_replace_sans_sous_recette():
             "plan": {}, "day": "lundi", "slot": "lunch", "dish_type": "sauce"})
         assert res.status_code == 200, res.text
         assert not res.json()["replaced"]["id"].startswith("base_")
+
+
+# ── B9 : export .ics et score de diversité lisent le plan réellement généré ──
+
+def test_ics_et_diversite_plan_genere():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.core.auth_deps import get_user
+    app.dependency_overrides[get_user] = lambda: {"email": "test@exemple.com"}
+    try:
+        client = TestClient(app)
+        plan = {"lundi": {"lunch": {"id": "dip_baba_ghanoush_dbd030", "title_fr": "Baba ghanoush"},
+                          "breakfast": {"recipes": [{"id": "x", "title_fr": "Porridge"}]}}}
+        ics = client.post("/planning/mealplan/export_ics", json={"plan": plan}).json()["ics_content"]
+        assert "SUMMARY:lunch — Baba ghanoush" in ics
+        assert "T080000" in ics and "SUMMARY:breakfast — Porridge" in ics
+        div = client.post("/planning/diversity_score", json={"plan": plan}).json()
+        assert div["ingredients"] > 0 and div["diversity_score"] > 0
+    finally:
+        app.dependency_overrides.pop(get_user, None)
