@@ -574,7 +574,12 @@ export default function HomePage() {
         <div className="search-row">
           <form
             className="search-container search-container--large"
-            onSubmit={e => { e.preventDefault(); fetchRecipes(); }}
+            onSubmit={e => {
+              e.preventDefault();
+              // Recherche par texte : ordre de pertinence du serveur (titres d'abord)
+              if (query.trim()) setSortOrder('pertinence');
+              fetchRecipes();
+            }}
             role="search"
           >
             <label htmlFor="recipe-search" className="sr-only">

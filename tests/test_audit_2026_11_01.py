@@ -871,3 +871,18 @@ def test_recettes_vegan_visibles_avec_le_filtre(rid):
     assert rid in {r["id"] for r in apply_diet_filter(recipes, "vegan")}
     recipe = next(r for r in recipes if r["id"] == rid)
     assert "eggs" not in recipe["tags"]["allergens"]
+
+
+# ── Recherche texte : les titres qui correspondent passent en tête ───────────
+
+@pytest.mark.parametrize("query,first", [
+    ("béchamel", {"base_bechamel_7db18f", "base_bechamel_vegane_7a210c"}),
+    ("pesto", {"base_pesto_905db7"}),
+    ("pâte à pizza", {"base_pizza_dough_6fdabd"}),
+])
+def test_recherche_titre_en_tete(query, first):
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    res = TestClient(app).post("/recettes/recherche", json={"query": query, "limit": 50}).json()
+    top = [r["id"] for r in res["results"][:len(first)]]
+    assert set(top) == first, top

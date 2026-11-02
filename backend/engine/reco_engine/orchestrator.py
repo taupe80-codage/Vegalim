@@ -136,6 +136,12 @@ def recommend(
         except Exception as e:
             logger.debug("orchestrator: cycle_engine indisponible — %s", e)
 
+    # ── Étape 8 : Pertinence du titre ────────────────────────────────────────
+    # Le scoring retrie par qualité et effaçait la pertinence de la recherche :
+    # « béchamel » classait les deux béchamels 11e et 12e sur 12.
+    if (query or "").strip():
+        scored = _title_relevance_first(scored, query)
+
     results = scored[:limit]
     elapsed = int((time.monotonic() - t0) * 1000)
 
@@ -151,6 +157,28 @@ def recommend(
 
 
 # ── Helpers privés ────────────────────────────────────────────────────────────
+
+def _title_relevance_first(recipes: list[dict], query: str) -> list[dict]:
+    """
+    Titre français qui commence par les mots cherchés, puis titre (français ou
+    anglais) qui les contient tous, puis le reste ; l'ordre par score est gardé
+    dans chaque groupe (tri stable).
+    """
+    from backend.services.ingredient_catalog import name_tokens
+    wanted = name_tokens(query)
+    if not wanted:
+        return recipes
+
+    def tier(recipe: dict) -> int:
+        titles = recipe.get("titles") or {}
+        if name_tokens(titles.get("fr") or "")[:len(wanted)] == wanted:
+            return 0
+        if any(set(wanted) <= set(name_tokens(t or "")) for t in titles.values()):
+            return 1
+        return 2
+
+    return sorted(recipes, key=tier)
+
 
 def _all_dishes() -> list[dict]:
     """Tout le catalogue sauf les sous-recettes (voir data_io.is_component_recipe)."""
