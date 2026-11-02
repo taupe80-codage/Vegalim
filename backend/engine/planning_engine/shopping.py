@@ -545,9 +545,10 @@ def shopping_list(meal_plan: dict, eco: bool = False) -> dict:
     except Exception as e:
         logger.warning("shopping_list: impossible de charger les recettes : %s", e)
 
+    # Chaque repas planifié compte : une recette prévue lundi et jeudi
+    # demande deux fois ses ingrédients (elle n'était comptée qu'une fois).
     ing_data: dict = {}
     n_recipes = 0
-    seen_ids: set[str] = set()
 
     for day, data in meal_plan.items():
         if day == "meta":
@@ -560,14 +561,13 @@ def shopping_list(meal_plan: dict, eco: bool = False) -> dict:
             if not isinstance(slot_data, dict):
                 continue
             rid = str(slot_data.get("id", "")).strip()
-            if not rid or rid in seen_ids:
+            if not rid:
                 continue
 
             recipe = recipe_index.get(rid)
             if not recipe:
                 continue
 
-            seen_ids.add(rid)
             n_recipes += 1
 
             # Facteur d'échelle : portions demandées vs portions de la recette

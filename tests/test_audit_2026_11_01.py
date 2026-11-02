@@ -732,3 +732,19 @@ def test_mealplan_accepte_high_minerals():
     from backend.api.main import app
     res = TestClient(app).get("/planning/mealplan", params={"high_minerals": True, "dish_type": "main"})
     assert res.status_code == 200
+
+
+# ── D1 : une recette planifiée deux fois compte deux fois dans les courses ────
+
+def test_courses_recette_planifiee_deux_fois():
+    from backend.engine.planning_engine.shopping import shopping_list
+    rid = "dip_baba_ghanoush_dbd030"
+    once = shopping_list({"lundi": {"lunch_0": {"id": rid}}})
+    twice = shopping_list({"lundi": {"lunch_0": {"id": rid}}, "jeudi": {"dinner_0": {"id": rid}}})
+    assert twice["n_recipes"] == 2 * once["n_recipes"] == 2
+
+    def qty(res):
+        return {i["ingredient"]: i["qty_value"] for i in res["items"]
+                if i.get("qty_value") and i.get("ingredient")}
+    q1, q2 = qty(once), qty(twice)
+    assert q1 and all(abs(q2[k] - 2 * v) < 1e-6 for k, v in q1.items() if k in q2)
