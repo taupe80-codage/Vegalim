@@ -84,7 +84,10 @@ def generate_plan(
     from backend.engine.planning_engine.structure import meal_type
     from backend.engine.planning_engine.budget    import estimate_price
 
-    recipes = get_data.recipes.list_all()
+    from backend.core.data_io import is_component_recipe
+    # Les sous-recettes (base_… : pâtes, sauces, crème fraîche) ne sont pas
+    # des repas : elles sortaient même avec dish_type=main.
+    recipes = [r for r in get_data.recipes.list_all() if not is_component_recipe(r)]
 
     # ── Filtres ───────────────────────────────────────────────────────────────
     if diet:

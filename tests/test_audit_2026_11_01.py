@@ -689,3 +689,16 @@ def test_ics_et_diversite_plan_genere():
         assert div["ingredients"] > 0 and div["diversity_score"] > 0
     finally:
         app.dependency_overrides.pop(get_user, None)
+
+
+# ── Planning : aucune sous-recette (base_…) proposée comme repas ──────────────
+
+@pytest.mark.parametrize("dish_type", [None, "main", "soup"])
+def test_mealplan_sans_sous_recette(dish_type):
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    params = {"dish_type": dish_type} if dish_type else {}
+    plan = TestClient(app).get("/planning/mealplan", params=params).json()
+    ids = [s["id"] for v in plan.values() if isinstance(v, dict)
+           for s in v.values() if isinstance(s, dict) and "id" in s]
+    assert ids and not any(i.startswith("base_") for i in ids)
