@@ -295,8 +295,9 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
         recipes = apply_diet_filter(recipes, payload.diet)
 
     if payload.dish_types:
+        from backend.core.data_io import matches_dish_types
         allowed = {dt.lower() for dt in payload.dish_types}
-        recipes = [r for r in recipes if r.get("dish_type", "").lower() in allowed]
+        recipes = [r for r in recipes if matches_dish_types(r, allowed)]
 
     def _label(iid: str) -> str:
         """

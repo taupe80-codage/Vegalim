@@ -588,7 +588,8 @@ def apply_filters(
     if dish_type:
         active_dish_types.add(dish_type.lower())
     if active_dish_types:
-        result = [r for r in result if r.get("dish_type", "").lower() in active_dish_types]
+        from backend.core.data_io import matches_dish_types
+        result = [r for r in result if matches_dish_types(r, active_dish_types)]
 
     # ── Health scores — macros (depuis cache _hs, construit sur nutrition graph) ─
     if fodmap == "not_high":

@@ -127,7 +127,7 @@ def list_recettes(
     skip:         int           = Query(default=0,   ge=0),
     limit:        int           = Query(default=20,  ge=1, le=600),
     diet:         Optional[str] = Query(default=None, description="vegan | vegetarien"),
-    cuisine:      Optional[str] = Query(default=None, description="Cuisine ou pays, en anglais : french, italian, france, italy…"),
+    cuisine:      Optional[str] = Query(default=None, description="Cuisine ou pays (anglais)"),
     technique:    Optional[str] = Query(default=None),
     max_time:     Optional[int] = Query(default=None, ge=1),
     # ── Flags diététiques ─────────────────────────────────────────────────────
@@ -145,11 +145,14 @@ def list_recettes(
     moon_phase:   Optional[str] = Query(default=None, description="nouvelle_lune | etc."),
     cycle_phase:  Optional[str] = Query(default=None, description="menstrual | follicular | ovulatory | luteal"),
     menopause:    bool          = Query(default=False, description="Calcium, protéines, magnésium, soja/lin, oméga-3 : ≥ 2 critères"),
+    include_components: bool    = Query(default=False, description="Inclure les sous-recettes"),
     sort:         str           = Query(default="iconic_score"),
 ):
     """Liste paginée des recettes avec filtres combinables. **Public.**"""
     check_rate_limit(request, limit=120, window_seconds=60)
-    recipes = list(load_recipes())
+    # Sous-recettes exclues par défaut : elles restent trouvables par la
+    # recherche texte, le type « Préparations de base » et la fiche recette.
+    recipes = [r for r in load_recipes() if include_components or not is_component_recipe(r)]
     if sort == "title_fr":
         recipes.sort(key=lambda r: r.get("titles", {}).get("fr", ""))
     else:
@@ -371,8 +374,12 @@ def recherche(
     # mais on multiplie le pool par 10 pour couvrir toutes les catégories.
     has_text_query = bool(req.query and req.query.strip())
     if not has_text_query:
-        # Pas de texte : filtres structurels seuls → tout le catalogue trié par score
-        results = list(load_recipes())
+        # Pas de texte : filtres structurels seuls → tout le catalogue trié par
+        # score, sans les sous-recettes sauf si le type de plat les demande
+        # (« Préparations de base », sauce…). Avec du texte, elles restent.
+        from backend.core.data_io import wants_components
+        keep = wants_components(list(req.dish_types or []) + [req.dish_type or ""])
+        results = [r for r in load_recipes() if keep or not is_component_recipe(r)]
         results.sort(
             key=lambda r: r.get("scoring", {}).get("iconic", {}).get("score", 0),
             reverse=True,

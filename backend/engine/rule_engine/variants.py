@@ -179,8 +179,10 @@ def vegan_variant(recipe: dict) -> dict:
 
     # Noms affichés par la fiche recette (comme enrich_one) : sans eux les
     # substituts s'affichaient sous leur id brut.
+    from backend.db.culinary_repositories import _recipes_index
     r["ingredients_meta"] = {
-        _item_id(i): {"name_fr": _display_name(_item_id(i))}
+        _item_id(i): {"name_fr": _display_name(_item_id(i)),
+                      **({"recipe_id": _item_id(i)} if _item_id(i) in _recipes_index() else {})}
         for i in new_ings if isinstance(i, dict) and _item_id(i)
     }
 

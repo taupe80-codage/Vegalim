@@ -117,7 +117,7 @@ export default function AstroPage() {
     const run = async () => {
       setLoadingAstro(true);
       try {
-        const data = await recipesApi.list({ astro_element: activeSign.element.toLowerCase(), limit: 500 });
+        const data = await recipesApi.list({ astro_element: activeSign.element.toLowerCase(), limit: 500, include_components: true });
         if (!cancelled) { setAstroRecipes(data.results || []); setAstroVisible(20); }
       } catch { /* ignore */ } finally {
         if (!cancelled) setLoadingAstro(false);

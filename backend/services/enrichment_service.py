@@ -351,6 +351,9 @@ def enrich_one(recipe: dict) -> dict:
                 "substitutions":  d.get("substitutions", []),
                 "flavor_profile": d.get("flavor_profile", []),
             }
+            # Sous-recette : la fiche affiche un lien vers sa propre fiche
+            if iid in _recipes_index():
+                ings_meta[iid]["recipe_id"] = iid
     out["ingredients_meta"] = ings_meta
 
     # ── Validation culinaire ──────────────────────────────────────────────────

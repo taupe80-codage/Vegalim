@@ -757,3 +757,31 @@ def test_courses_noms_complets():
     res = shopping_list({"lundi": {"lunch_0": {"id": "dip_baba_ghanoush_dbd030"}}})
     names = {i["name_fr"] for i in res["items"]}
     assert {"Huile d'olive", "Jus de citron"} <= names
+
+
+# ── D3 : sous-recettes masquées par défaut, trouvables autrement ──────────────
+
+def test_sous_recettes_masquees_mais_trouvables():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.core.data_io import load_recipes, is_component_recipe
+    from backend.services.enrichment_service import enrich_one
+    comp = {r["id"] for r in load_recipes() if is_component_recipe(r)}
+    client = TestClient(app)
+
+    listed = client.get("/recettes", params={"limit": 600}).json()
+    assert not comp & {r["id"] for r in listed["results"]}
+    browse = client.post("/recettes/recherche", json={"query": "", "limit": 500}).json()
+    assert not comp & {r["id"] for r in browse["results"]}
+
+    base = client.post("/recettes/recherche",
+                       json={"query": "", "limit": 500, "dish_types": ["base"]}).json()
+    assert {r["id"] for r in base["results"]} == comp
+
+    texte = client.post("/recettes/recherche", json={"query": "béchamel", "limit": 50}).json()
+    assert "base_bechamel_7db18f" in {r["id"] for r in texte["results"]}
+
+    by_id = {r["id"]: r for r in load_recipes()}
+    meta = enrich_one(by_id["base_mala_broth_1ab129"])["ingredients_meta"]
+    assert meta["base_doubanjiang_paste_340399"]["recipe_id"] == "base_doubanjiang_paste_340399"
+    assert "recipe_id" not in meta["garlic_raw"]

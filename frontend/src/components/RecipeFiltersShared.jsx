@@ -5,7 +5,7 @@
  */
 
 import { useState } from 'react';
-import { DISH_OPTIONS } from '../constants';
+import { DISH_OPTIONS, matchesDishFilters } from '../constants';
 import { useProfileDiet, defaultDietFilter } from '../useProfileDiet';
 
 export { DISH_OPTIONS };
@@ -1006,9 +1006,7 @@ export function localFilterRecipes(recipes, { diet, dietExtras, season, difficul
     }
   }
 
-  if (dishFilters.size > 0) {
-    f = f.filter(r => dishFilters.has(r.dish_type));
-  }
+  f = f.filter(r => matchesDishFilters(r, dishFilters));
 
   if (origins.size > 0) {
     const groupIds = new Set(ORIGIN_GROUPS.map(g => g.id));

@@ -552,6 +552,21 @@ def is_component_recipe(recipe: dict) -> bool:
             or str(recipe.get("dish_type") or "").lower() in COMPONENT_DISH_TYPES)
 
 
+def matches_dish_types(recipe: dict, wanted: set[str]) -> bool:
+    """Filtre « type de plat » : la valeur « base » (Préparations de base)
+    regroupe toutes les sous-recettes, quel que soit leur dish_type."""
+    if str(recipe.get("dish_type") or "").lower() in wanted:
+        return True
+    return "base" in wanted and is_component_recipe(recipe)
+
+
+def wants_components(dish_types) -> bool:
+    """Vrai si le filtre « type de plat » demande des sous-recettes
+    (« base » ou un dish_type de préparation : sauce, condiment…)."""
+    return any(str(t).lower() == "base" or str(t).lower() in COMPONENT_DISH_TYPES
+               for t in (dish_types or []))
+
+
 def recipe_techniques(recipe: dict) -> list[str]:
     """Techniques culinaires : tags.technique (schéma actuel), sinon technique."""
     raw = (recipe.get("tags") or {}).get("technique") or recipe.get("technique") or []

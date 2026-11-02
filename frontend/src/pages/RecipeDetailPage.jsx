@@ -648,6 +648,7 @@ export default function RecipeDetailPage() {
               const rawName = ing.name || iid || '';
               const nameStr = typeof rawName === 'string' ? rawName : '';
               // Priorité : translations (spécifique + capitalisé) → ingredients_meta (backend dict) → brut
+              const subRecipeId = displayed.ingredients_meta?.[iid]?.recipe_id;
               const metaName = displayed.ingredients_meta?.[iid]?.name_fr
                             || displayed.ingredients_meta?.[iidUnd]?.name_fr
                             || displayed.ingredients_meta?.[iidFirst]?.name_fr;
@@ -687,7 +688,14 @@ export default function RecipeDetailPage() {
                     {equivStr && <span className="ing-equiv">{equivStr}</span>}
                   </span>
                   <span className="ing-name">
-                    {name.replace(/_/g, ' ')}
+                    {subRecipeId ? (
+                      // Sous-recette : lien vers sa fiche (béchamel, pâte de curry…)
+                      <button type="button" className="ing-subrecipe-link"
+                        onClick={() => navigate(`/recette/${subRecipeId}`)}
+                        title="Voir la recette de cette préparation">
+                        {name.replace(/_/g, ' ')} ↗
+                      </button>
+                    ) : name.replace(/_/g, ' ')}
                     {ing.meta?.state && !INGREDIENT_STATE_IMPLICIT.has(ing.meta.state) && (
                       <span className="ing-meta"> ({INGREDIENT_STATE_FR[ing.meta.state] ?? ing.meta.state})</span>
                     )}

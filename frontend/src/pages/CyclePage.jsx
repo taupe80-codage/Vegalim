@@ -1062,7 +1062,7 @@ export default function CyclePage() {
       }
       setLoadingCycleRecipes(true);
       try {
-        const data = await recipesApi.list({ cycle_phase: phase, limit: 500 });
+        const data = await recipesApi.list({ cycle_phase: phase, limit: 500, include_components: true });
         if (!cancelled) { setCycleRecipes(data.results || []); setCycleVisible(20); }
       } catch { /* ignore */ } finally {
         if (!cancelled) setLoadingCycleRecipes(false);

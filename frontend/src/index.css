@@ -1515,6 +1515,12 @@ html[data-theme="dark"] .health-child-pill--origin.health-child-pill--active-ori
 .ing-qty-val  { font-weight: 700; color: var(--grn); font-size: 14px; line-height: 1.3; }
 .ing-equiv    { font-weight: 400; color: var(--mut); font-size: 11px; line-height: 1.2; }
 .ing-name { font-size: 14px; text-transform: capitalize; }
+.ing-subrecipe-link {
+  background: none; border: 0; padding: 0; font: inherit; color: var(--grn);
+  text-transform: inherit; text-decoration: underline; text-underline-offset: 2px;
+  cursor: pointer;
+}
+.ing-subrecipe-link:hover { color: var(--txt); }
 .ing-meta { color: var(--mut); font-size: 12px; text-transform: none; }
 
 .instruction-list { padding-left: 20px; }
