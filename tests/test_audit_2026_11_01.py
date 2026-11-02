@@ -858,3 +858,16 @@ def test_puces_frigo_trouvent_des_ingredients():
         if not any(_ingredient_matches(u, rid) for u in usable for rid in known):
             vides.append(key)
     assert set(vides) <= sans_recette, vides
+
+
+# ── Deux recettes réellement vegan marquées « non vegan » ────────────────────
+
+@pytest.mark.parametrize("rid", ["egg_galettes_aux_oignons_verts_ff5328",
+                                 "main_choucroute_vegetarienne_25c7a3"])
+def test_recettes_vegan_visibles_avec_le_filtre(rid):
+    from backend.core.data_io import load_recipes
+    from backend.services.filter_service import apply_diet_filter
+    recipes = load_recipes()
+    assert rid in {r["id"] for r in apply_diet_filter(recipes, "vegan")}
+    recipe = next(r for r in recipes if r["id"] == rid)
+    assert "eggs" not in recipe["tags"]["allergens"]

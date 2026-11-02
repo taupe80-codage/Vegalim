@@ -60372,9 +60372,11 @@
         }
       ],
       "tags": {
-        "diet": [],
+        "diet": [
+          "vegan",
+          "vegetarian"
+        ],
         "allergens": [
-          "eggs",
           "gluten",
           "sesame",
           "soy"
@@ -60461,6 +60463,7 @@
         "potable)",
         "purpose",
         "salt",
+        "sans produit animal",
         "sans viande",
         "sauce",
         "saute",
@@ -60475,8 +60478,10 @@
         "table",
         "tout",
         "usage",
+        "vegan",
         "vegetable",
         "vegetale",
+        "vegetalien",
         "vegetarien",
         "vert",
         "verts",
@@ -60500,7 +60505,7 @@
         "Étape 7: Pour un effet visuel appétissant, garnir les galettes de graines de sésame et d'oignons verts ciselés. Vérifier que les graines de sésame sont uniformément réparties et que les oignons verts ajoutent une touche de fraîcheur à la présentation."
       ],
       "diet_flags": {
-        "vegan": false,
+        "vegan": true,
         "vegetarian": true,
         "gluten_free": false,
         "lactose_free": true,
@@ -83400,7 +83405,9 @@
         "diet": [
           "gluten_free",
           "nut_free",
-          "vegetarian"
+          "vegetarian",
+          "vegan",
+          "lactose_free"
         ],
         "allergens": [
           "sulphites"
@@ -83489,6 +83496,7 @@
         "ragout",
         "salt",
         "sans gluten",
+        "sans produit animal",
         "sans viande",
         "sauerkraut",
         "sel",
@@ -83496,6 +83504,8 @@
         "simple",
         "table",
         "terre",
+        "vegan",
+        "vegetalien",
         "vegetarian",
         "vegetarien",
         "vegetarienne",
@@ -83519,10 +83529,10 @@
         "Étape 6: Servir chaud, sans attendre, pour préserver la texture moelleuse et les saveurs des ingrédients."
       ],
       "diet_flags": {
-        "vegan": false,
+        "vegan": true,
         "vegetarian": true,
         "gluten_free": true,
-        "lactose_free": false,
+        "lactose_free": true,
         "nut_free": true,
         "raw": false,
         "kid_friendly": false

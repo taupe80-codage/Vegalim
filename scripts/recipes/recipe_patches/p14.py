@@ -41,6 +41,9 @@ PATCHES = {
         ("add", "table_salt_unenriched", 3, "g", "seasoning"),
         ("flag", "kid_friendly", False),  # 200 ml de vin blanc
         ("txt", "les baies de genièvre et le vin blanc sec", "les baies de genièvre, le carvi et le vin blanc sec"),
+        # Aucun produit animal ni laitier
+        ("flag", "vegan", True),
+        ("flag", "lactose_free", True),
     ],
     "main_crepe_complete_1d0fb7": [
         ("add", "water", 500, "ml", "liquid"),

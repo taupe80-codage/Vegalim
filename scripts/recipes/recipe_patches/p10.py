@@ -116,6 +116,9 @@ PATCHES = {
         ("add", "water", 120, "ml", "liquid"),
         ("qty", "soy_sauce_shoyu_reduced_sodium", 20),
         ("txt", "avec 10 ml d'huile de sésame", "avec 10 ml d'huile"),
+        # Farine, eau, oignon vert, soja, sésame, huile : rien d'animal
+        ("flag", "vegan", True),
+        ("flag", "vegetarian", True),
     ],
     "egg_galettes_de_pommes_de_terre_su_0d7814": [
         ("add", "dill_weed_fresh_herb_leaf", 5, "g", "herb"),
