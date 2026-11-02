@@ -1,12 +1,12 @@
 """
-Routes plan repas, liste de courses, saisonnalitÃƒÂ©.
+Routes plan repas, liste de courses, saisonnalité.
 
-MIGRATION ÃƒÂ©tape 3 Ã¢â‚¬â€ imports obsolÃƒÂ¨tes remplacÃƒÂ©s :
-  meal_planner.generate_weekly_plan   Ã¢â€ â€™ planning_engine.planner.generate_plan
-  meal_planner.rank_recipes           Ã¢â€ â€™ conservÃƒÂ© via compat (non migrÃƒÂ©)
-  meal_planner._filter_diet           Ã¢â€ â€™ planning_engine : filtrage via filter_service
-  shopping_engine.generate_shopping_list Ã¢â€ â€™ planning_engine.shopping.shopping_list
-  seasonality_engine.ingredients_in_season Ã¢â€ â€™ rule_engine.seasonality.seasonal_ingredients
+MIGRATION étape 3 — imports obsolètes remplacés :
+  meal_planner.generate_weekly_plan   → planning_engine.planner.generate_plan
+  meal_planner.rank_recipes           → conservé via compat (non migré)
+  meal_planner._filter_diet           → planning_engine : filtrage via filter_service
+  shopping_engine.generate_shopping_list → planning_engine.shopping.shopping_list
+  seasonality_engine.ingredients_in_season → rule_engine.seasonality.seasonal_ingredients
 """
 import logging
 logger = logging.getLogger(__name__)
@@ -20,7 +20,7 @@ from backend.core.auth_deps import get_user, get_optional_user
 router = APIRouter(prefix="/planning", tags=["Planification"])
 
 
-# Ã¢â€â‚¬Ã¢â€â‚¬ ModÃƒÂ¨les Pydantic Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+# ── Modèles Pydantic ──────────────────────────────────────────────────────────
 
 class MealPlanExportRequest(BaseModel):
     plan:       dict          = Field(..., description="Plan hebdo {lundi:{lunch:{id,title}}}")
@@ -42,14 +42,14 @@ class DiversityScoreRequest(BaseModel):
 
 class MealPlanReplaceRequest(BaseModel):
     plan:        dict              = Field(..., description="Plan hebdo existant")
-    day:         str               = Field(..., description="Jour : monday|tuesday|Ã¢â‚¬Â¦")
+    day:         str               = Field(..., description="Jour : monday|tuesday|…")
     slot:        str               = Field(..., description="Repas : lunch|dinner|breakfast")
     exclude_ids: Optional[List[str]] = Field(default=None)
     diet:        Optional[str]     = Field(default=None)
-    dish_type:   Optional[str]     = Field(default=None, description="Type de plat : main|soup|dessert|Ã¢â‚¬Â¦")
+    dish_type:   Optional[str]     = Field(default=None, description="Type de plat : main|soup|dessert|…")
 
 
-# Ã¢â€â‚¬Ã¢â€â‚¬ Routes Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+# ── Routes ────────────────────────────────────────────────────────────────────
 
 def _plan_filters(
     cuisines:         Optional[str] = Query(default=None, description="Liste séparée par des virgules"),
@@ -186,7 +186,7 @@ def export_ics(payload: MealPlanExportRequest, user: dict = Depends(get_user)):
                 f"UID:{d}-{slot}@alimunified",
                 f"DTSTART;VALUE=DATE-TIME:{d}T{h}",
                 "DURATION:PT30M",
-                f"SUMMARY:{slot} Ã¢â‚¬â€ {info.get('title', slot)}",
+                f"SUMMARY:{slot} — {info.get('title', slot)}",
                 "END:VEVENT",
             ]
     lines.append("END:VCALENDAR")
@@ -198,8 +198,8 @@ def export_ics(payload: MealPlanExportRequest, user: dict = Depends(get_user)):
 
 @router.post("/shopping_list")
 def shopping_list_route(payload: ShoppingListRequest, user: dict | None = Depends(get_optional_user)):
-    """GÃƒÂ©nÃƒÂ¨re la liste de courses depuis un plan hebdomadaire."""
-    from backend.engine.planning_engine.shopping import shopping_list       # Ã¢Å"â€¦ migrÃƒÂ©
+    """Génère la liste de courses depuis un plan hebdomadaire."""
+    from backend.engine.planning_engine.shopping import shopping_list       # ✅ migré
     return shopping_list(payload.plan)
 
 
@@ -299,8 +299,8 @@ def update_ingredient_price(
 
 @router.get("/seasonal")
 def seasonal(month: int = Query(..., ge=1, le=12)):
-    """IngrÃƒÂ©dients de saison pour un mois donnÃƒÂ© (1-12). **Public.**"""
-    from backend.engine.rule_engine.seasonality import seasonal_ingredients # Ã¢Å"â€¦ migrÃƒÂ©
+    """Ingrédients de saison pour un mois donné (1-12). **Public.**"""
+    from backend.engine.rule_engine.seasonality import seasonal_ingredients # ✅ migré
     from backend.core.data_io import load_ingredients_dict
     try:
         d        = load_ingredients_dict()
@@ -322,7 +322,7 @@ class DayNutritionRequest(BaseModel):
 @router.post("/daily_nutrition")
 def daily_nutrition(payload: DayNutritionRequest, user: dict | None = Depends(get_optional_user)):
     """
-    AgrÃ¨ge la nutrition de toutes les recettes par jour.
+    Agrège la nutrition de toutes les recettes par jour.
     Retourne pour chaque jour les totaux nutritionnels (somme des portions).
     """
     from backend.core.data_io import load_nutrition_graph
@@ -362,7 +362,7 @@ def daily_nutrition(payload: DayNutritionRequest, user: dict | None = Depends(ge
 
 @router.post("/diversity_score")
 def diversity_score(payload: DiversityScoreRequest, user: dict = Depends(get_user)):
-    """Calcule le score de diversitÃƒÂ© nutritionnelle d'un plan hebdomadaire."""
+    """Calcule le score de diversité nutritionnelle d'un plan hebdomadaire."""
     from backend.core.data_io import load_recipes, recipe_cuisine, recipe_techniques
     plan = payload.plan
     rmap = {r["id"]: r for r in load_recipes()}
@@ -432,7 +432,7 @@ def replace_meal(payload: MealPlanReplaceRequest, user: dict | None = Depends(ge
         from backend.core.validators import is_valid_diet, ALLOWED_DIETS
         if not is_valid_diet(payload.diet):
             raise HTTPException(status_code=422,
-                detail=f"RÃƒÂ©gime invalide : '{payload.diet}'. Valeurs acceptÃƒÂ©es : {sorted(ALLOWED_DIETS)}")
+                detail=f"Régime invalide : '{payload.diet}'. Valeurs acceptées : {sorted(ALLOWED_DIETS)}")
 
     import random
     load_recipes.cache_clear()
@@ -450,7 +450,7 @@ def replace_meal(payload: MealPlanReplaceRequest, user: dict | None = Depends(ge
         raise HTTPException(status_code=404,
             detail="Aucune recette disponible pour ce remplacement")
 
-    # SÃƒÂ©lection alÃƒÂ©atoire dans le top-60 par iconic_score pour garantir qualitÃƒÂ© + variÃƒÂ©tÃƒÂ© illimitÃƒÂ©e
+    # Sélection aléatoire dans le top-60 par iconic_score pour garantir qualité + variété illimitée
     candidates.sort(key=lambda r: r.get("scoring", {}).get("iconic", {}).get("score", 0), reverse=True)
     pool    = candidates[:60]
     new_rec = random.choice(pool)

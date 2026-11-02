@@ -505,3 +505,26 @@ def test_recettes_menopause():
     assert min(scores) >= MENOPAUSE_MIN_SCORE
     assert scores == sorted(scores, reverse=True)
     assert not any(is_component_recipe(by_id[r["id"]]) for r in data["results"])
+
+
+# ── planning.py : texte doublement encodé (mojibake) visible ─────────────────
+
+def test_planning_sans_mojibake():
+    import re
+    from pathlib import Path
+    src = Path("backend/api/routes/planning.py").read_text(encoding="utf-8")
+    assert not re.search(r"Ã.|â€|Â", src)
+
+
+def test_export_ics_titre_lisible():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.core.auth_deps import get_user
+    app.dependency_overrides[get_user] = lambda: {"email": "test@exemple.com"}
+    try:
+        res = TestClient(app).post("/planning/mealplan/export_ics",
+                                   json={"plan": {"lundi": {"lunch": {"id": "x", "title": "Ratatouille"}}}})
+        assert res.status_code == 200, res.text
+        assert "SUMMARY:lunch — Ratatouille" in res.json()["ics_content"]
+    finally:
+        app.dependency_overrides.pop(get_user, None)
