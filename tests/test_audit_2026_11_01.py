@@ -917,3 +917,15 @@ def test_peu_sale_pour_100_g():
     assert is_low_sodium({"sodium": 300, "portion_g": 500})       # 60 mg / 100 g
     assert not is_low_sodium({"sodium": 300, "portion_g": 200})   # 150 mg / 100 g
     assert is_low_sodium({"sodium": 150})                          # poids inconnu
+
+
+# ── FODMAP : dattes et raisins secs (seuils Monash relayés) ──────────────────
+
+def test_fodmap_dattes_et_raisins_secs():
+    from backend.engine.rule_engine.diet import compute_fodmap
+    def score(iid, grams_per_serving):
+        return compute_fodmap({"servings": 1, "composition": [
+            {"ingredient": iid, "quantity": grams_per_serving, "unit": "g"}]})["fodmap_score"]
+    # 0 = sans problème, 1 = modéré, 2 = au-delà du seuil modéré
+    assert [score("date_with_skin_dried", g) for g in (15, 35, 60)] == [0, 1, 2]
+    assert [score("grape_dried", g) for g in (10, 30)] == [0, 2]

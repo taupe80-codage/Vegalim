@@ -249,6 +249,7 @@ _FRUCTAN_HIGH: frozenset[str] = frozenset({
     "beetroot", "betterave",  # modéré mais listé ici car souvent en grande qt
     # Fruits à fructanes
     "persimmon", "kaki", "grapefruit",  # pamplemousse — fructanes + fructose
+    "dried_date", "raisin_sec",         # fruits secs : fructanes concentrés
     "pomelo",
     # Légumineuses à fructanes (en plus des GOS)
     "green_peas", "petits_pois", "split_peas", "pois_casses",
@@ -301,6 +302,7 @@ _FRUCTOSE_HIGH: frozenset[str] = frozenset({
 _POLYOL_HIGH: frozenset[str] = frozenset({
     # Fruits à polyols (sorbitol/mannitol)
     "apricot", "abricot",
+    "dried_date",                       # sorbitol (avec les fructanes)
     "peach", "peche",
     "plum", "prune", "prune_juice",
     "nectarine",
@@ -485,6 +487,10 @@ FODMAP_THRESHOLDS: dict[str, dict] = {
     "avocado":         {"safe": 30,  "medium": 60,  "cats": ["P"]},
     "avocat":          {"safe": 30,  "medium": 60,  "cats": ["P"]},
     "grape":           {"safe": 90,  "medium": 999, "cats": ["M"]},
+    # Fruits secs (valeurs Monash relayées : 1 datte Medjool ≈ 20 g sans
+    # problème, modérée vers 40 g ; raisins secs ≈ 13 g = 1 c. à soupe, élevés au-delà)
+    "dried_date":      {"safe": 20,  "medium": 40,  "cats": ["F", "P"]},
+    "raisin_sec":      {"safe": 13,  "medium": 13,  "cats": ["F"]},
     "raisin":          {"safe": 90,  "medium": 999, "cats": ["M"]},
     "blueberry":       {"safe": 20,  "medium": 40,  "cats": ["M", "P"]},
     "myrtille":        {"safe": 20,  "medium": 40,  "cats": ["M", "P"]},
@@ -544,6 +550,8 @@ FODMAP_THRESHOLDS: dict[str, dict] = {
 # Les sous-recettes (base_*) ne sont pas listées : leur composition est
 # dépliée au prorata (_fodmap_quantities).
 FODMAP_ID_ALIASES: dict[str, str] = {
+    # Fruits secs (« raisin » de FODMAP_THRESHOLDS = raisin frais)
+    "date_with_skin_dried": "dried_date", "grape_dried": "raisin_sec",
     # Alliacées
     "garlic_raw": "garlic",
     "onion_raw": "onion", "yellow_onion_raw": "onion", "white_onion_raw": "onion",
