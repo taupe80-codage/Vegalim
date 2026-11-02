@@ -1,9 +1,9 @@
 """
 routes/frigo.py — Mon frigo : suggestions basées sur les ingrédients disponibles.
 
-Routes authentifiées :
-  POST /frigo/suggestions  — recettes réalisables avec les ingrédients fournis
-  POST /frigo/manquants    — ingrédients manquants pour une recette cible
+Routes :
+  POST /frigo/suggestions  — recettes réalisables avec les ingrédients fournis (public)
+  POST /frigo/manquants    — ingrédients manquants pour une recette cible (authentifié)
 """
 import logging
 logger = logging.getLogger(__name__)
@@ -426,6 +426,12 @@ def missing_ingredients(payload: MissingRequest, request: Request,
     needed         = _get_recipe_ingredients(recipe)
     have, missing  = _fridge_coverage(fridge, needed)
 
+    # Comme /suggestions : les basiques (sel, eau, huile…) sont supposés
+    # présents et ne comptent ni dans les manquants ni dans la complétude.
+    weights = recipe_weights(recipe.get("composition") or recipe.get("ingredients", []))
+    assumed = {m for m in missing if weights.get(m, (0, tier_of_id(m)))[1] == STAPLE}
+    missing = missing - assumed
+
     # Enrichir les ingrédients manquants avec leur nom FR
     ings_dict = load_ingredients_dict()
     missing_enriched = []
@@ -445,7 +451,11 @@ def missing_ingredients(payload: MissingRequest, request: Request,
         "needed_count": len(needed),
         "have_count":   len(have),
         "missing_count": len(missing),
-        "completeness": round(len(have) / len(needed), 2) if needed else 1.0,
+        "completeness": round(len(have) / (len(have) + len(missing)), 2) if have or missing else 1.0,
         "have":    sorted(have),
         "missing": missing_enriched,
+        "assumed": [
+            {"id": iid, "name_fr": full_name_fr(ings_dict[iid], iid) if iid in ings_dict else iid}
+            for iid in sorted(assumed)
+        ],
     }

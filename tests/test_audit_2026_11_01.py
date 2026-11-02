@@ -638,3 +638,21 @@ def test_feedback_recette_inconnue_404():
         assert res.status_code == 404
     finally:
         app.dependency_overrides.pop(get_user, None)
+
+
+# ── B5 : /frigo/manquants suppose les basiques présents, comme /suggestions ───
+
+def test_manquants_basiques_supposes():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.core.auth_deps import get_user
+    app.dependency_overrides[get_user] = lambda: {"email": "test@exemple.com"}
+    try:
+        res = TestClient(app).post("/frigo/manquants", json={
+            "fridge": ["eggplant_raw"], "recipe_id": "dip_baba_ghanoush_dbd030"}).json()
+    finally:
+        app.dependency_overrides.pop(get_user, None)
+    missing = {m["id"] for m in res["missing"]}
+    assumed = {m["id"] for m in res["assumed"]}
+    assert "table_salt_unenriched" in assumed and "table_salt_unenriched" not in missing
+    assert res["missing_count"] == len(missing)
