@@ -18,7 +18,7 @@ export const DIET_OPTIONS = [
 
 export const DIET_EXTRA_OPTIONS = [
   { value: 'low_sugar',  label: '🍬 Peu sucré (< 5 g)' },
-  { value: 'low_sodium', label: '🧂 Peu salé (< 200 mg sodium)' },
+  { value: 'low_sodium', label: '🧂 Peu salé (≤ 120 mg sodium / 100 g)' },
 ];
 
 export const SEASON_OPTIONS = [
@@ -140,7 +140,7 @@ export const HEALTH_GROUPS = [
     subs: [
       { value: 'low_calorie', label: 'Faible en calories (< 300 kcal)', apiKey: 'low_calorie' },
       { value: 'low_sugar',   label: 'Faible en sucres (< 5g)',         apiKey: 'low_sugar' },
-      { value: 'low_sodium',  label: 'Faible en sodium (< 200mg)',      apiKey: 'low_sodium' },
+      { value: 'low_sodium',  label: 'Faible en sodium (≤ 120 mg / 100 g)', apiKey: 'low_sodium' },
     ],
   },
   {

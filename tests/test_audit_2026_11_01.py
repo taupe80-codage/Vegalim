@@ -903,3 +903,17 @@ def test_raisins_secs_et_lin():
     assert CYCLE_CONCEPT_IDS["flaxseed_oil"] == ("flaxseed_linseed_ground",)
     tr = json.loads(Path("frontend/src/translations.json").read_text(encoding="utf-8"))
     assert tr["flaxseed_oil"] == "Graines de lin"
+
+
+# ── « Peu salé » : ≤ 120 mg de sodium pour 100 g (allégation UE) ─────────────
+
+def test_peu_sale_pour_100_g():
+    from backend.core.data_io import load_recipes, is_component_recipe
+    from backend.engine.rule_engine.diet import is_low_sodium
+    from backend.services.filter_service import apply_filters
+    recipes = load_recipes()
+    _, n_main = apply_filters(recipes, low_sodium=True, dish_type="main", skip=0, limit=1)
+    assert n_main > 50       # aucun plat principal avec 200 mg par portion
+    assert is_low_sodium({"sodium": 300, "portion_g": 500})       # 60 mg / 100 g
+    assert not is_low_sodium({"sodium": 300, "portion_g": 200})   # 150 mg / 100 g
+    assert is_low_sodium({"sodium": 150})                          # poids inconnu

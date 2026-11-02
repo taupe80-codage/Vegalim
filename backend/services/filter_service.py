@@ -144,7 +144,7 @@ def _build_hs_cache() -> dict[str, dict]:
     Appelé une seule fois — thread-safe via _hs_lock.
     """
     from backend.core.data_io import load_nutrition_graph, load_recipes
-    from backend.engine.rule_engine.diet import compute_fodmap
+    from backend.engine.rule_engine.diet import compute_fodmap, is_low_sodium
 
     ng      = load_nutrition_graph()
     recipes = load_recipes()
@@ -189,7 +189,7 @@ def _build_hs_cache() -> dict[str, dict]:
             "low_calorie":       kcal  <  300.0,
             "high_fiber":        fiber >= 8.0,
             "good_source_fiber": fiber >= 4.0,
-            "low_sodium":        sodium < 200.0,
+            "low_sodium":        is_low_sodium(nutr),   # ≤ 120 mg / 100 g
             "sodium_mg":         round(sodium),
             "low_sugar":         sugar  < 5.0,
             "protein_g":         round(prot,  1),

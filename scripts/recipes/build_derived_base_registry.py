@@ -44,7 +44,7 @@ from backend.engine.nutrition_engine import compute_nutrition, UNIT_TO_G
 
 REGISTRY = DATA_ROOT / 'ingredients' / 'derived_from_base_recipes.json'
 DIET_FLAGS = ('vegan', 'vegetarian', 'gluten_free', 'lactose_free', 'nut_free')
-DROP_KEYS = {'servings_used', 'source'}
+DROP_KEYS = {'servings_used', 'source', 'portion_g'}   # portion_g : poids, pas un nutriment
 
 
 def total_weight_g(recipe: dict) -> float:

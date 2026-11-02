@@ -261,6 +261,7 @@ def compute_nutrition(recipe: dict,
     srv              = resolve_servings(recipe, user_override=servings)
     totals           = {k: 0.0 for k in ALL_KEYS}
     gi_sum, gi_n     = 0.0, 0
+    weight_g         = 0.0   # poids des ingrédients comptés (seuils « pour 100 g »)
 
     # Plat chaud → utiliser les valeurs nutritionnelles cuites quand disponibles.
     # Un plat est considéré "chaud" si timing.cook_min > 0.
@@ -341,6 +342,7 @@ def compute_nutrition(recipe: dict,
             if _is_frying_bath(token, qty_g):
                 qty_g = min(qty_g, FRYING_CAP_G * srv)
             qty_g *= _retained_fraction(meta)
+        weight_g += qty_g
 
         # Facteur de forme (cru/cuit) via nutrition_form_engine (CDC_05)
         form = comp_e.get("form") if comp_e else None
@@ -371,6 +373,9 @@ def compute_nutrition(recipe: dict,
     if gi_n:
         result["glycemic_index"] = round(gi_sum / gi_n)
     result["servings_used"] = srv   # renvoie le nb de portions utilisé pour le calcul
+    # Poids d'une portion, ingrédients crus (eau de cuisson égouttée exclue) :
+    # sert aux seuils réglementaires exprimés pour 100 g (« pauvre en sodium »)
+    result["portion_g"] = round(weight_g / srv)
     result["source"] = "ciqual_computed"
     return result
 

@@ -1039,6 +1039,20 @@ def compute_fodmap(recipe: dict) -> dict:
 
 # ── Calcul health_scores ──────────────────────────────────────────────────────
 
+# Allégation UE « pauvre en sodium » (Règl. 1924/2006) : 0,12 g pour 100 g.
+# 200 mg par portion ne retenait aucun plat principal (le moins salé : 209 mg).
+LOW_SODIUM_MG_PER_100G = 120.0
+
+
+def is_low_sodium(nutr: dict) -> bool:
+    """Pauvre en sodium d'après la nutrition par portion (sodium, portion_g)."""
+    sodium  = float(nutr.get("sodium") or 0)
+    portion = float(nutr.get("portion_g") or 0)
+    if portion > 0:
+        return sodium / portion * 100 <= LOW_SODIUM_MG_PER_100G
+    return sodium < 200   # poids inconnu : ancien seuil par portion
+
+
 def compute_health_scores(recipe: dict) -> dict:
     """
     Calcule les scores de santé d'une recette depuis ses valeurs nutritionnelles
@@ -1078,7 +1092,7 @@ def compute_health_scores(recipe: dict) -> dict:
         "protein_g":              round(prot, 1),
         "low_calorie":            kcal < 300,
         "kcal":                   round(kcal),
-        "low_sodium":             sodium < 200,
+        "low_sodium":             is_low_sodium(nutr),
         "sodium_mg":              round(sodium),
         "high_fiber":             fiber >= 8,
         "fiber_g":                round(fiber, 1),
