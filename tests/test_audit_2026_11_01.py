@@ -748,3 +748,12 @@ def test_courses_recette_planifiee_deux_fois():
                 if i.get("qty_value") and i.get("ingredient")}
     q1, q2 = qty(once), qty(twice)
     assert q1 and all(abs(q2[k] - 2 * v) < 1e-6 for k, v in q1.items() if k in q2)
+
+
+# ── Liste de courses : nom complet des ingrédients (axe « forme ») ────────────
+
+def test_courses_noms_complets():
+    from backend.engine.planning_engine.shopping import shopping_list
+    res = shopping_list({"lundi": {"lunch_0": {"id": "dip_baba_ghanoush_dbd030"}}})
+    names = {i["name_fr"] for i in res["items"]}
+    assert {"Huile d'olive", "Jus de citron"} <= names

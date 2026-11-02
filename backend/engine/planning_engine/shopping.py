@@ -268,16 +268,16 @@ _CAT_FR = {
 def _make_resolvers(ings_dict: dict):
     """Retourne (get_name_fr, get_category_fr) pour un dict d'ingrédients."""
 
+    from backend.services.ingredient_catalog import full_name_fr
+
+    # Nom complet (nom de base + axe « forme ») : canonical_name_fr seul
+    # affichait « Olive » pour l'huile d'olive, « Citron » pour le jus.
     def _get_name_fr(iid: str) -> str:
-        d = ings_dict.get(iid)
-        if d and d.get("canonical_name_fr"):
-            name = d["canonical_name_fr"]
-            return name[0].upper() + name[1:] if name else iid
-        base = iid.split("/")[0]
-        d = ings_dict.get(base)
-        if d and d.get("canonical_name_fr"):
-            name = d["canonical_name_fr"]
-            return (name[0].upper() + name[1:]) if name else base
+        for key in (iid, iid.split("/")[0]):
+            d = ings_dict.get(key)
+            if d and d.get("canonical_name_fr"):
+                name = full_name_fr(d, key)
+                return name[0].upper() + name[1:]
         return iid.replace("_", " ").replace("/", " ").capitalize()
 
     def _get_category_fr(iid: str) -> str:
