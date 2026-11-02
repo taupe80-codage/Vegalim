@@ -656,3 +656,16 @@ def test_manquants_basiques_supposes():
     assumed = {m["id"] for m in res["assumed"]}
     assert "table_salt_unenriched" in assumed and "table_salt_unenriched" not in missing
     assert res["missing_count"] == len(missing)
+
+
+# ── B8 : le remplacement d'un repas ne propose jamais une sous-recette ────────
+
+def test_replace_sans_sous_recette():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    client = TestClient(app)
+    for _ in range(15):
+        res = client.post("/planning/mealplan/replace", json={
+            "plan": {}, "day": "lundi", "slot": "lunch", "dish_type": "sauce"})
+        assert res.status_code == 200, res.text
+        assert not res.json()["replaced"]["id"].startswith("base_")

@@ -401,7 +401,7 @@ def replace_meal(payload: MealPlanReplaceRequest, user: dict | None = Depends(ge
     """
     Remplace un seul repas dans un plan existant sans recalculer tout le plan.
     """
-    from backend.core.data_io import load_recipes, load_nutrition_graph
+    from backend.core.data_io import load_recipes, load_nutrition_graph, is_component_recipe
     from backend.services.filter_service import apply_diet_filter
 
     VALID_DAYS  = {"monday", "tuesday", "wednesday", "thursday",
@@ -435,8 +435,9 @@ def replace_meal(payload: MealPlanReplaceRequest, user: dict | None = Depends(ge
                 detail=f"Régime invalide : '{payload.diet}'. Valeurs acceptées : {sorted(ALLOWED_DIETS)}")
 
     import random
-    load_recipes.cache_clear()
-    recipes    = list(load_recipes())
+    # Le cache n'est plus vidé à chaque appel (relecture du fichier inutile) ;
+    # les sous-recettes (base_…) ne sont pas des plats à proposer.
+    recipes    = [r for r in load_recipes() if not is_component_recipe(r)]
     candidates = apply_diet_filter(recipes, payload.diet) if payload.diet else recipes
     candidates = [r for r in candidates if str(r["id"]) not in existing_ids]
 
