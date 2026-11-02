@@ -592,3 +592,15 @@ def test_filtre_cuisine_accepte_le_pays():
     _, n_pays = apply_filters(recipes, cuisine="France", skip=0, limit=1)
     _, n_cuisine = apply_filters(recipes, cuisine="french", skip=0, limit=1)
     assert n_pays > 0 and n_cuisine > 0
+
+
+# ── B2 : /recettes/top donne le vrai total et pagine au-delà de limit×2 ───────
+
+def test_top_total_et_pagination():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    client = TestClient(app)
+    first = client.get("/recettes/top", params={"limit": 10}).json()
+    far = client.get("/recettes/top", params={"limit": 10, "skip": 40}).json()
+    assert first["total"] > 100
+    assert len(far["results"]) == 10

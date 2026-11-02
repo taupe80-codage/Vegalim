@@ -201,7 +201,9 @@ def top_recettes(
 ):
     """Top recettes par score global. **Public.**"""
     check_rate_limit(request, limit=60, window_seconds=60)
-    results = recommend("", email=None, limit=limit * 2)
+    # Tout le catalogue classé (≈ 0,3 s) : avec limit×2, total était faux et
+    # skip ≥ limit×2 renvoyait une liste vide.
+    results = recommend("", email=None, limit=len(load_recipes()))
     if diet:
         results = apply_diet_filter(results, diet)
     return {"total": len(results), "skip": skip, "limit": limit,
