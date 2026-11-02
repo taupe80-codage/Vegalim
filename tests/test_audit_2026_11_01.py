@@ -713,3 +713,22 @@ def test_zinc_filtre_non_vide():
     _, n_high = apply_filters(recipes, high_zinc=True, skip=0, limit=1)
     _, n_source = apply_filters(recipes, source_zinc=True, skip=0, limit=1)
     assert 0 < n_high < n_source
+
+
+# ── B11 : groupe « Minéraux » = riche en au moins un minéral ──────────────────
+
+def test_filtre_mineraux_ou():
+    from backend.core.data_io import load_recipes
+    from backend.services.filter_service import apply_filters
+    recipes = load_recipes()
+    _, n_any = apply_filters(recipes, high_minerals=True, skip=0, limit=1)
+    _, n_ca = apply_filters(recipes, high_calcium=True, skip=0, limit=1)
+    _, n_fe = apply_filters(recipes, high_iron=True, skip=0, limit=1)
+    assert n_any > max(n_ca, n_fe)
+
+
+def test_mealplan_accepte_high_minerals():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    res = TestClient(app).get("/planning/mealplan", params={"high_minerals": True, "dish_type": "main"})
+    assert res.status_code == 200

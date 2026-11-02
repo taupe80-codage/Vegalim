@@ -73,6 +73,7 @@ def _plan_filters(
     high_calcium:     bool = False, high_iron:           bool = False,
     high_magnesium:   bool = False, high_potassium:      bool = False,
     high_zinc:        bool = False, antioxidant_rich:    bool = False,
+    high_minerals:    bool = False,
 ) -> dict:
     """Filtres santé, origines et saison de /planning/mealplan, mêmes clés que
     /recettes/recherche (apply_filters). La page envoyait « health=… », clé
@@ -87,6 +88,7 @@ def _plan_filters(
         "high_calcium": high_calcium, "high_iron": high_iron,
         "high_magnesium": high_magnesium, "high_potassium": high_potassium,
         "high_zinc": high_zinc, "antioxidant_rich": antioxidant_rich,
+        "high_minerals": high_minerals,
     }
     extra: dict = {k: True for k, v in flags.items() if v}
     cuisine_list = [c.strip() for c in cuisines.split(",") if c.strip()] if cuisines else []

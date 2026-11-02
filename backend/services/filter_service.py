@@ -264,6 +264,9 @@ def _build_hs_cache() -> dict[str, dict]:
     return cache
 
 
+MINERAL_KEYS = ("high_calcium", "high_iron", "high_magnesium", "high_potassium", "high_zinc")
+
+
 def _hs(recipe: dict) -> dict:
     """
     Retourne les health_scores d'une recette depuis le cache paresseux.
@@ -502,6 +505,7 @@ def apply_filters(
     good_source_potassium: bool        = False,
     high_zinc:             bool        = False,
     source_zinc:           bool        = False,
+    high_minerals:         bool        = False,   # riche en au moins un minéral
     high_omega3:           bool        = False,
     source_omega3:         bool        = False,
     antioxidant_rich:      bool        = False,
@@ -621,7 +625,7 @@ def apply_filters(
                      or high_folate or source_folate or high_calcium or high_iron
                      or good_source_iron or high_magnesium or source_magnesium
                      or high_potassium or good_source_potassium or high_zinc or source_zinc
-                     or high_omega3 or source_omega3 or antioxidant_rich)
+                     or high_minerals or high_omega3 or source_omega3 or antioxidant_rich)
     if _micro_needed:
         checks = [
             (high_vitamin_c,        "high_vitamin_c"),
@@ -649,6 +653,10 @@ def apply_filters(
             for flag, key in checks:
                 if flag and not hs.get(key):
                     return False
+            # Groupe « Minéraux » sans sous-filtre : au moins un minéral (OU) ;
+            # la page n'envoyait que high_calcium.
+            if high_minerals and not any(hs.get(k) for k in MINERAL_KEYS):
+                return False
             return True
 
         result = [r for r in result if _passes_micro(r)]

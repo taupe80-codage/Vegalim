@@ -10,7 +10,9 @@ describe('filtersToApiParams', () => {
     expect(p.good_source_protein).toBe(true);
     expect(p.high_protein).toBeUndefined();
     expect(p.fodmap).toBe('not_high');
-    expect(p.high_calcium).toBe(true);
+    // Minéraux sans sous-filtre : au moins un minéral, pas le calcium seul
+    expect(p.high_minerals).toBe(true);
+    expect(p.high_calcium).toBeUndefined();
   });
 
   it('envoie toutes les origines (une seule était envoyée, aucune au-delà)', () => {

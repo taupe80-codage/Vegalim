@@ -16,8 +16,8 @@ export const DIET_OPTIONS = [
 ];
 
 export const DIET_EXTRA_OPTIONS = [
-  { value: 'low_sugar',  label: '🚫🍬 Sans sucre' },
-  { value: 'low_sodium', label: '🚫🧂 Sans sel' },
+  { value: 'low_sugar',  label: '🍬 Peu sucré (< 5 g)' },
+  { value: 'low_sodium', label: '🧂 Peu salé (< 200 mg sodium)' },
 ];
 
 export const SEASON_OPTIONS = [
@@ -854,7 +854,7 @@ const _LOCAL_GROUP_MAP = {
   low_fodmap:      r => r.health_scores?.fodmap_level === 'low',
   moderate_fodmap: r => r.health_scores?.fodmap_level !== 'high',
   vitamin_c:       r => r.health_scores?.source_vitamin_c || r.health_scores?.high_vitamin_c,
-  minerals:        r => r.health_scores?.high_calcium || r.health_scores?.high_iron || r.health_scores?.high_magnesium,
+  minerals:        r => ['high_calcium', 'high_iron', 'high_magnesium', 'high_potassium', 'high_zinc'].some(k => r.health_scores?.[k]),
   antioxidant:     r => r.health_scores?.antioxidant_rich,
 };
 
@@ -918,8 +918,9 @@ export function filtersToApiParams({
     p.low_calorie = true;
   if (hf.has('vitamin_c') && !sf.has('vitamin_c') && !sf.has('source_vitamin_c'))
     p.high_vitamin_c = true;
+  // Groupe sans sous-filtre : au moins un minéral (le calcium seul avant)
   if (hf.has('minerals') && !['calcium', 'iron', 'magnesium', 'potassium', 'zinc'].some(s => sf.has(s)))
-    p.high_calcium = true;
+    p.high_minerals = true;
 
   if (or.size > 0) {
     const groupIds = new Set(ORIGIN_GROUPS.map(g => g.id));

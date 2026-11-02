@@ -98,6 +98,7 @@ class SearchRequest(BaseModel):
     good_source_potassium: bool        = Field(default=False)
     high_zinc:            bool         = Field(default=False)
     source_zinc:          bool         = Field(default=False)
+    high_minerals:        bool         = Field(default=False, description="Riche en au moins un minéral")
     high_omega3:          bool         = Field(default=False)
     source_omega3:        bool         = Field(default=False)
     antioxidant_rich:     bool         = Field(default=False)
@@ -413,6 +414,7 @@ def recherche(
         high_magnesium=req.high_magnesium,   source_magnesium=req.source_magnesium,
         high_potassium=req.high_potassium,   good_source_potassium=req.good_source_potassium,
         high_zinc=req.high_zinc,             source_zinc=req.source_zinc,
+        high_minerals=req.high_minerals,
         high_omega3=req.high_omega3,         source_omega3=req.source_omega3,
         antioxidant_rich=req.antioxidant_rich,
         astro_element=req.astro_element, moon_phase=req.moon_phase,
