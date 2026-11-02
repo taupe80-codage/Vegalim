@@ -487,10 +487,11 @@ FODMAP_THRESHOLDS: dict[str, dict] = {
     "avocado":         {"safe": 30,  "medium": 60,  "cats": ["P"]},
     "avocat":          {"safe": 30,  "medium": 60,  "cats": ["P"]},
     "grape":           {"safe": 90,  "medium": 999, "cats": ["M"]},
-    # Fruits secs (valeurs Monash relayées : 1 datte Medjool ≈ 20 g sans
-    # problème, modérée vers 40 g ; raisins secs ≈ 13 g = 1 c. à soupe, élevés au-delà)
-    "dried_date":      {"safe": 20,  "medium": 40,  "cats": ["F", "P"]},
-    "raisin_sec":      {"safe": 13,  "medium": 13,  "cats": ["F"]},
+    # Fruits secs — sources et citations : docs/sources_fodmap_2026-11-03.md
+    # Dattes : Medjool sans problème jusqu'à 39 g (Monash, août 2026 ; classiques
+    # 45 g), ~60 g élevé en sorbitol. Raisins secs : 13 g, modérés vers 20 g.
+    "dried_date":      {"safe": 39,  "medium": 59,  "cats": ["F", "P"]},
+    "raisin_sec":      {"safe": 13,  "medium": 20,  "cats": ["F"]},
     "raisin":          {"safe": 90,  "medium": 999, "cats": ["M"]},
     "blueberry":       {"safe": 20,  "medium": 40,  "cats": ["M", "P"]},
     "myrtille":        {"safe": 20,  "medium": 40,  "cats": ["M", "P"]},

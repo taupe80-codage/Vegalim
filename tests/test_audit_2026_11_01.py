@@ -927,5 +927,5 @@ def test_fodmap_dattes_et_raisins_secs():
         return compute_fodmap({"servings": 1, "composition": [
             {"ingredient": iid, "quantity": grams_per_serving, "unit": "g"}]})["fodmap_score"]
     # 0 = sans problème, 1 = modéré, 2 = au-delà du seuil modéré
-    assert [score("date_with_skin_dried", g) for g in (15, 35, 60)] == [0, 1, 2]
-    assert [score("grape_dried", g) for g in (10, 30)] == [0, 2]
+    assert [score("date_with_skin_dried", g) for g in (35, 50, 70)] == [0, 1, 2]
+    assert [score("grape_dried", g) for g in (10, 18, 30)] == [0, 1, 2]
