@@ -803,3 +803,12 @@ def test_pagination_accueil_par_paquets():
         assert first["total"] > 200
         ids = [r["id"] for r in first["results"] + more["results"]]
         assert ids == [r["id"] for r in full["results"]]
+
+
+# ── D5 : le filtre et le badge « Sans Fermentés » n'existent plus ─────────────
+
+def test_plus_de_fermented_free():
+    from backend.core.data_io import load_recipes
+    from backend.services.enrichment_service import enrich_one
+    recipe = load_recipes()[0]
+    assert "fermented_free" not in (enrich_one(recipe).get("diet_flags_enriched") or {})

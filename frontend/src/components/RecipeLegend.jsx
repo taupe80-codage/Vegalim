@@ -23,7 +23,6 @@ const LEGEND_SECTIONS = [
       { symbol: '🌾', label: 'Sans Gluten' },
       { symbol: '🥛', label: 'Sans Lactose' },
       { symbol: '🥜', label: 'Sans Noix' },
-      { symbol: '🧪', label: 'Sans Fermentés' },
     ],
   },
   {

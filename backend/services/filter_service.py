@@ -476,7 +476,6 @@ def apply_filters(
     egg_free:       bool         = False,
     dairy_free:     bool         = False,
     soy_free:       bool         = False,
-    fermented_free: bool         = False,
     fodmap:         str | None   = None,
     low_sugar:      bool         = False,
     low_sodium:     bool         = False,
@@ -540,9 +539,9 @@ def apply_filters(
     if lactose_free: result = apply_diet_filter(result, "lactose_free")
     if nut_free:     result = apply_diet_filter(result, "nut_free")
 
-    # BUG2 FIX — egg_free/dairy_free/soy_free/fermented_free : calculés à la volée
+    # BUG2 FIX — egg_free/dairy_free/soy_free : calculés à la volée
     # depuis les ingrédients (diet_flags_enriched absent hors enrich_one)
-    if egg_free or dairy_free or soy_free or fermented_free:
+    if egg_free or dairy_free or soy_free:
         try:
             from backend.core.data_io import load_ingredients_dict
             ings_dict = load_ingredients_dict()
@@ -551,7 +550,7 @@ def apply_filters(
             ings_dict = {}
 
         def _check_diet_flags(recipe: dict) -> dict:
-            flags = {"egg_free": True, "dairy_free": True, "soy_free": True, "fermented_free": True}
+            flags = {"egg_free": True, "dairy_free": True, "soy_free": True}
             composition = recipe.get("composition", recipe.get("ingredients", []))
             for ing in composition:
                 iid = (ing.get("ingredient") or ing.get("ingredient_id")
@@ -567,8 +566,6 @@ def apply_filters(
                     flags["dairy_free"] = False
                 if dp.get("soy_free") is False or dp.get("sans_soja") is False or "soybeans" in af:
                     flags["soy_free"] = False
-                if dp.get("fermented") is True:
-                    flags["fermented_free"] = False
             return flags
 
         def _passes_diet(recipe: dict) -> bool:
@@ -576,7 +573,6 @@ def apply_filters(
             if egg_free and not f["egg_free"]:       return False
             if dairy_free and not f["dairy_free"]:   return False
             if soy_free and not f["soy_free"]:       return False
-            if fermented_free and not f["fermented_free"]: return False
             return True
 
         result = [r for r in result if _passes_diet(r)]

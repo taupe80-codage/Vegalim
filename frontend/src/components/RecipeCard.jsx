@@ -386,8 +386,6 @@ export function getRecipeBadges(recipe, activeHealthFilters = new Set(), activeS
     badges.push({ id: 'lactose_free',    label: 'Sans Lactose',   symbol: '🥛', cls: 'badge-allergen' });
   if (flags.nut_free     || tags.includes('nut_free'))
     badges.push({ id: 'nut_free',        label: 'Sans Noix',      symbol: '🥜', cls: 'badge-allergen' });
-  if (enriched.fermented_free === true)
-    badges.push({ id: 'fermented_free',  label: 'Sans Fermentés', symbol: '🧪', cls: 'badge-allergen' });
 
   // Santé → bleu (non dupliqués)
   if (!priorityBadgeIds.has('high_protein') && (health.high_protein || tags.includes('high_protein')))

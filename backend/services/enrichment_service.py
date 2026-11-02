@@ -134,7 +134,7 @@ def enrich_why(recipes: list[dict], filters: dict | None = None) -> list[dict]:
 
         # ── Flags enrichis (agrégés depuis ingrédients) ───────────────────────
         composition = r.get("composition", r.get("ingredients", []))
-        agg_diet = {"egg_free": True, "dairy_free": True, "soy_free": True, "fermented_free": True}
+        agg_diet = {"egg_free": True, "dairy_free": True, "soy_free": True}
         agg_nutr = {"vitamins": False, "minerals": False, "omega3": False, "antioxidant": False, "low_sugar": False, "low_sodium": False}
         for ing in composition:
             iid = (ing.get("ingredient") or ing.get("ingredient_id") if isinstance(ing, dict) else str(ing))
@@ -150,8 +150,6 @@ def enrich_why(recipes: list[dict], filters: dict | None = None) -> list[dict]:
                 agg_diet["dairy_free"] = False
             if dp.get("soy_free") is False or dp.get("sans_soja") is False or "soybeans" in af:
                 agg_diet["soy_free"] = False
-            if dp.get("fermented") is True:
-                agg_diet["fermented_free"] = False
             if nf.get("high_vitamin_c") or nf.get("source_vitamin_c") or nf.get("high_folate") or nf.get("source_folate") or nf.get("high_vitamin_d") or nf.get("source_vitamin_d"):
                 agg_nutr["vitamins"] = True
             if nf.get("high_calcium") or nf.get("good_source_calcium") or nf.get("high_iron") or nf.get("good_source_iron") or nf.get("high_magnesium") or nf.get("source_magnesium") or nf.get("high_potassium") or nf.get("good_source_potassium") or nf.get("high_zinc") or nf.get("source_zinc"):
@@ -377,7 +375,6 @@ def enrich_one(recipe: dict) -> dict:
         "egg_free":       True,
         "dairy_free":     True,
         "soy_free":       True,
-        "fermented_free": True,
     }
     agg_nutr = {
         "vitamins":    False,
@@ -406,8 +403,6 @@ def enrich_one(recipe: dict) -> dict:
             agg_diet["dairy_free"] = False
         if dp.get("soy_free") is False or dp.get("sans_soja") is False or "soybeans" in af:
             agg_diet["soy_free"] = False
-        if dp.get("fermented") is True:
-            agg_diet["fermented_free"] = False
 
         if nf.get("high_vitamin_c") or nf.get("source_vitamin_c") \
                 or nf.get("high_folate") or nf.get("source_folate") \

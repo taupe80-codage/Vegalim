@@ -64,7 +64,6 @@ class SearchRequest(BaseModel):
     egg_free:       bool          = Field(default=False)
     dairy_free:     bool          = Field(default=False)
     soy_free:       bool          = Field(default=False)
-    fermented_free: bool          = Field(default=False)
     # ── Type de plat (multi — filtre OR) ─────────────────────────────────────
     dish_type:       Optional[str] = Field(default=None)
     dish_types:      list[str]     = Field(default_factory=list)
@@ -402,7 +401,7 @@ def recherche(
         req.gluten_free, 0, len(results),
         lactose_free=req.lactose_free,   nut_free=req.nut_free,
         egg_free=req.egg_free,           dairy_free=req.dairy_free,
-        soy_free=req.soy_free,           fermented_free=req.fermented_free,
+        soy_free=req.soy_free,
         dish_type=req.dish_type,         dish_types=req.dish_types,
         cuisines=req.cuisines,
         difficulty=req.difficulty,       season=req.season,
