@@ -702,3 +702,14 @@ def test_mealplan_sans_sous_recette(dish_type):
     ids = [s["id"] for v in plan.values() if isinstance(v, dict)
            for s in v.values() if isinstance(s, dict) and "id" in s]
     assert ids and not any(i.startswith("base_") for i in ids)
+
+
+# ── Zinc : seuils 30 / 15 % de l'AJR, comme les autres micronutriments ───────
+
+def test_zinc_filtre_non_vide():
+    from backend.core.data_io import load_recipes
+    from backend.services.filter_service import apply_filters
+    recipes = load_recipes()
+    _, n_high = apply_filters(recipes, high_zinc=True, skip=0, limit=1)
+    _, n_source = apply_filters(recipes, source_zinc=True, skip=0, limit=1)
+    assert 0 < n_high < n_source

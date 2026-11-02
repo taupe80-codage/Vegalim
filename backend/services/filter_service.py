@@ -231,8 +231,10 @@ def _build_hs_cache() -> dict[str, dict]:
             "source_magnesium":       mg >= 60.0,    # 15% AJR  → ~48% recettes
             "high_potassium":         k  >= 1050.0,  # 30% AJR  → ~11% recettes
             "good_source_potassium":  k  >= 525.0,   # 15% AJR  → ~58% recettes
-            "high_zinc":              zn >= 6.0,     # 60% AJR  → ~31% recettes
-            "source_zinc":            zn >= 3.0,     # 30% AJR  → ~67% recettes
+            # Zinc : 6 / 3 mg (60 / 30 %) ne qualifiaient aucune / 53 recettes
+            # (max 4,6 mg) ; aligné sur la règle 30 / 15 % des autres.
+            "high_zinc":              zn >= 3.0,     # 30% AJR  → ~6% recettes
+            "source_zinc":            zn >= 1.5,     # 15% AJR  → ~45% recettes
             "high_vitamin_d":         vd >= 1.5,     # 30% AJR  → ~3% recettes
             "source_vitamin_d":       vd >= 0.75,    # 15% AJR  → ~11% recettes
             "high_folate":            fol >= 60.0,   # 30% AJR  → ~30% recettes
