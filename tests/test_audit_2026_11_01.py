@@ -604,3 +604,22 @@ def test_top_total_et_pagination():
     far = client.get("/recettes/top", params={"limit": 10, "skip": 40}).json()
     assert first["total"] > 100
     assert len(far["results"]) == 10
+
+
+# ── B3 : la surprise nutritionnelle change de nutriment selon le jour ─────────
+
+def test_decouverte_surprise_varie():
+    import datetime
+    from unittest import mock
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    client = TestClient(app)
+    raisons = set()
+    for day in range(1, 9):
+        class _D(datetime.date):
+            @classmethod
+            def today(cls, _d=day):
+                return datetime.date(2026, 11, _d)
+        with mock.patch("datetime.date", _D):
+            raisons.add(client.get("/recettes/decouverte").json()["surprise_nutritionnelle"]["raison"])
+    assert len(raisons) > 1

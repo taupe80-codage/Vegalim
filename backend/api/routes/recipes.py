@@ -234,9 +234,11 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
         base  = sg.get(str(r["id"]), {}).get("overall_score", 5.0)
         return ratio * 4 + base * 0.6
 
-    seed_idx       = int(hashlib.md5(str(today).encode()).hexdigest(), 16) % len(recipes)
-    top_seasonal   = sorted(recipes, key=season_score, reverse=True)
-    recette_du_jour = top_seasonal[seed_idx % max(len(top_seasonal), 1)]
+    # Tirée du jour parmi les 20 mieux classées (de saison + bien notées) :
+    # l'index seed % N piochait dans tout le catalogue trié.
+    seed            = int(hashlib.md5(str(today).encode()).hexdigest(), 16)
+    top_seasonal    = sorted(recipes, key=season_score, reverse=True)[:20]
+    recette_du_jour = top_seasonal[seed % len(top_seasonal)]
 
     # ── 2. Cuisine à explorer ─────────────────────────────────────────────────
     seen_cuisines = set()
@@ -265,17 +267,16 @@ def decouverte(request: Request, user: dict | None = Depends(get_optional_user))
     # ── 3. Surprise nutritionnelle ────────────────────────────────────────────
     MICRO_FOCUS  = [("iron", "riche_en_fer"), ("calcium", "riche_en_calcium"),
                    ("vitamin_c", "riche_en_vitamine_c"), ("fiber", "riche_en_fibres")]
+    # Le nutriment change chaque jour et la recette est tirée parmi les 10
+    # plus riches : la boucle s'arrêtait au fer, toujours sur la même recette.
     used_ids     = {recette_du_jour["id"], cuisine_a_explorer["id"]}
-    best_surprise, best_score, best_label = None, 0, ""
-    for key, label in MICRO_FOCUS:
-        for r in recipes:
-            if r["id"] in used_ids:
-                continue
-            val = ng.get(str(r["id"]), {}).get(key, 0) or 0
-            if val > best_score:
-                best_score, best_surprise, best_label = val, r, label
-        if best_surprise:
-            break
+    key, best_label = MICRO_FOCUS[seed % len(MICRO_FOCUS)]
+    rich = sorted(
+        (r for r in recipes
+         if r["id"] not in used_ids and (ng.get(str(r["id"]), {}).get(key) or 0) > 0),
+        key=lambda r: ng.get(str(r["id"]), {}).get(key) or 0, reverse=True,
+    )[:10]
+    best_surprise = rich[(seed // len(MICRO_FOCUS)) % len(rich)] if rich else None
     if not best_surprise:
         best_surprise = next((r for r in recipes if r["id"] not in used_ids), recipes[0])
         best_label = "populaire"
