@@ -929,3 +929,15 @@ def test_fodmap_dattes_et_raisins_secs():
     # 0 = sans problème, 1 = modéré, 2 = au-delà du seuil modéré
     assert [score("date_with_skin_dried", g) for g in (35, 50, 70)] == [0, 1, 2]
     assert [score("grape_dried", g) for g in (10, 18, 30)] == [0, 1, 2]
+
+
+# ── Cycle : ni ail ni oignon en phase ovulatoire (docs/sources_cycle_ail_oignon) ─
+
+def test_phase_ovulatoire_sans_ail_ni_oignon():
+    from backend.core.data_io import load_recipes, is_component_recipe
+    from backend.engine.cycle_engine import cycle_id_map
+    ids = set(cycle_id_map("ovulatory"))
+    assert not ids & {"onion", "garlic", "onion_raw", "garlic_raw"}
+    dishes = [r for r in load_recipes() if not is_component_recipe(r)]
+    n = sum(1 for r in dishes if any(c["ingredient"] in ids for c in r["composition"]))
+    assert n < len(dishes) / 2   # 648 / 894 avec ail et oignon

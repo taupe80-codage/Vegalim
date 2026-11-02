@@ -54,3 +54,5 @@ Aucune preuve ne justifie l'ail et l'oignon en phase ovulatoire ; ils gonflent l
 liste jusqu'à 72 % des plats et contredisent le régime pauvre en FODMAP.
 Plus largement, la nutrition « par phase » repose sur peu de preuves (revue 2026) :
 le module du cycle relève du conseil général, pas de la recommandation clinique.
+
+**Décision (2026-11-03) :** ail et oignon retirés de `ovulatory_phase.ingredient_ids` ; la phase recommande 370 plats.
