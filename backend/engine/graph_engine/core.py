@@ -176,4 +176,15 @@ def get_cycle_ingredients(phase: str) -> list[str]:
     p = phases.get(key, {})
     ids   = p.get("ingredient_ids", [])
     foods = p.get("recommended_foods", [])
-    return list(dict.fromkeys(ids + foods))
+    # ingredient_ids (concepts anglais) et recommended_foods (concepts français)
+    # se recoupent : « avocado » et « avocat » s'affichaient tous les deux.
+    # Deux concepts liés aux mêmes ids CIQUAL n'en font qu'un (le premier gagne).
+    from backend.engine.cycle_engine import CYCLE_CONCEPT_IDS
+    result: list[str] = []
+    seen: set = set()
+    for concept in ids + foods:
+        key = CYCLE_CONCEPT_IDS.get(str(concept).lower()) or concept
+        if key not in seen:
+            seen.add(key)
+            result.append(concept)
+    return result

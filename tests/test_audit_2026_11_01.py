@@ -566,3 +566,18 @@ def test_fiche_recette_noms_ingredients():
     meta = enrich_one(by_id["base_mala_broth_1ab129"])["ingredients_meta"]
     assert meta["sesame_oil_plant"]["name_fr"] == "huile de sésame"
     assert meta["base_doubanjiang_paste_340399"]["name_fr"] == "Pâte Doubanjiang"
+
+
+# ── Page Cycle : un aliment n'apparaît qu'une fois, avec un nom traduit ───────
+
+@pytest.mark.parametrize("phase", ["menstrual", "follicular", "ovulatory", "luteal"])
+def test_cycle_ingredients_sans_doublon(phase):
+    import json
+    from pathlib import Path
+    from backend.engine.cycle_engine import CYCLE_CONCEPT_IDS
+    from backend.engine.graph_engine import get_cycle_ingredients
+    ings = get_cycle_ingredients(phase)
+    keys = [CYCLE_CONCEPT_IDS.get(i) or i for i in ings]
+    assert len(keys) == len(set(keys))
+    tr = json.loads(Path("frontend/src/translations.json").read_text(encoding="utf-8"))
+    assert all(i in tr for i in ings)
