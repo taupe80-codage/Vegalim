@@ -507,13 +507,21 @@ def test_recettes_menopause():
     assert not any(is_component_recipe(by_id[r["id"]]) for r in data["results"])
 
 
-# ── planning.py : texte doublement encodé (mojibake) visible ─────────────────
+# ── planning.py, frigo.py : texte doublement encodé (mojibake) visible ───────
 
-def test_planning_sans_mojibake():
+@pytest.mark.parametrize("path", ["backend/api/routes/planning.py",
+                                  "backend/api/routes/frigo.py"])
+def test_routes_sans_mojibake(path):
     import re
     from pathlib import Path
-    src = Path("backend/api/routes/planning.py").read_text(encoding="utf-8")
-    assert not re.search(r"Ã.|â€|Â", src)
+    src = Path(path).read_text(encoding="utf-8")
+    assert not re.search(r"Ã.|â€|â\"|â†|Â", src)
+
+
+def test_frigo_swagger_lisible():
+    from backend.api.main import app
+    schema = app.openapi()["components"]["schemas"]["MissingRequest"]
+    assert schema["properties"]["fridge"]["description"] == "Ingrédients disponibles"
 
 
 def test_export_ics_titre_lisible():

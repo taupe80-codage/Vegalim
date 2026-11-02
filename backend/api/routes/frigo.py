@@ -1,9 +1,9 @@
 """
-routes/frigo.py â€" Mon frigo : suggestions basÃ©es sur les ingrÃ©dients disponibles.
+routes/frigo.py — Mon frigo : suggestions basées sur les ingrédients disponibles.
 
-Routes authentifiÃ©es :
-  POST /frigo/suggestions  â€" recettes rÃ©alisables avec les ingrÃ©dients fournis
-  POST /frigo/manquants    â€" ingrÃ©dients manquants pour une recette cible
+Routes authentifiées :
+  POST /frigo/suggestions  — recettes réalisables avec les ingrédients fournis
+  POST /frigo/manquants    — ingrédients manquants pour une recette cible
 """
 import logging
 logger = logging.getLogger(__name__)
@@ -28,14 +28,14 @@ class FridgeRequest(BaseModel):
                                          description="Liste des ingredient_id disponibles dans le frigo")
     diet:         Optional[str]  = None
     dish_types:   list[str]      = Field(default=[],
-                                         description="Filtre type de plat (main, dessert, soupâ€¦). Vide = tous.")
+                                         description="Filtre type de plat (main, dessert, soup…). Vide = tous.")
     max_missing:  int            = Field(default=2, ge=0, le=5,
-                                         description="Nombre max d'ingrÃ©dients manquants tolÃ©rÃ©s")
+                                         description="Nombre max d'ingrédients manquants tolérés")
     limit:        int            = Field(default=50, ge=1, le=200)
 
 
 class MissingRequest(BaseModel):
-    fridge:    list[str] = Field(..., description="IngrÃ©dients disponibles")
+    fridge:    list[str] = Field(..., description="Ingrédients disponibles")
     recipe_id: str       = Field(..., description="ID de la recette cible (ex: dip_baba_ghanoush_dbd030)")
 
 
@@ -106,7 +106,7 @@ _EXCLUSIONS: frozenset = frozenset({
 
 
 def _get_recipe_ingredients(recipe: dict) -> set[str]:
-    """Extrait les identifiants d'ingrÃ©dients d'une recette.
+    """Extrait les identifiants d'ingrédients d'une recette.
 
     Supporte les deux schemas :
      - CDC v4 : composition[].ingredient  (snake_case EN)
@@ -174,10 +174,10 @@ def _ingredient_matches(fridge_id: str, recipe_id: str) -> bool:
 
 def _fridge_coverage(fridge: set[str], needed: set[str]) -> tuple[set[str], set[str]]:
     """
-    Calcule (have, missing) en tenant compte du matching hiÃ©rarchique.
+    Calcule (have, missing) en tenant compte du matching hiérarchique.
 
-    Pour chaque ingrÃ©dient de la recette, cherche s'il est couvert par
-    au moins un ingrÃ©dient du frigo via _ingredient_matches().
+    Pour chaque ingrédient de la recette, cherche s'il est couvert par
+    au moins un ingrédient du frigo via _ingredient_matches().
     """
     have    = set()
     missing = set()
@@ -275,8 +275,8 @@ def ingredient_coverage(
 def fridge_suggestions(payload: FridgeRequest, request: Request,
                         user: dict | None = Depends(get_optional_user)):
     """
-    Retourne les recettes rÃ©alisables avec les ingrÃ©dients du frigo.
-    **Public** â€" fonctionnel sans compte (CDC_11 plan gratuit).
+    Retourne les recettes réalisables avec les ingrédients du frigo.
+    **Public** — fonctionnel sans compte (CDC_11 plan gratuit).
 
     Tri par pertinence decroissante : un ingredient special (tofu, courge, poireau...)
     pese plus qu'un produit courant (oeufs, lait) ou un basique (sel, beurre, huile),
@@ -301,8 +301,8 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
     def _label(iid: str) -> str:
         """
         Retourne le nom FR d'un ingredient_id.
-        Fallback : reconstruit un libellÃ© lisible depuis l'ID hiÃ©rarchique.
-        Ex: 'butter/dairy' â†' 'beurre' (via base 'butter'), 'sugar/white' â†' 'sucre blanc'
+        Fallback : reconstruit un libellé lisible depuis l'ID hiérarchique.
+        Ex: 'butter/dairy' → 'beurre' (via base 'butter'), 'sugar/white' → 'sucre blanc'
         """
         # 1. Correspondance exacte dans le dictionnaire
         d = ings_dict.get(iid, {})
@@ -340,9 +340,9 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
 
         completeness = round(len(have) / (len(have) + n_missing), 2) if have else 0.0
 
-        # Exclure les recettes oÃ¹ aucun ingrÃ©dient du frigo ne correspond :
-        # avoir 0 ingrÃ©dient sur 2 avec max_missing=2 ne constitue pas une
-        # suggestion utile â€" l'utilisateur n'a RIEN de ce qu'il faut.
+        # Exclure les recettes où aucun ingrédient du frigo ne correspond :
+        # avoir 0 ingrédient sur 2 avec max_missing=2 ne constitue pas une
+        # suggestion utile — l'utilisateur n'a RIEN de ce qu'il faut.
         if completeness == 0.0:
             continue
         # Une recette qui ne tire du frigo que des basiques ou des aromates
@@ -353,14 +353,14 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
         rel, _fit, _use = relevance(weights, have)
         iconic_score = recipe.get("scoring", {}).get("iconic", {}).get("score", 0)
         scored.append({
-            # â"€â"€ Identification â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+            # ── Identification ────────────────────────────────────────────────
             "id":             recipe["id"],
             "title_fr":       recipe.get("titles", {}).get("fr", ""),
             "titles":         recipe.get("titles", {}),
 
-            # â"€â"€ Champs pour RecipeCard â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+            # ── Champs pour RecipeCard ─────────────────────────────────────
             "origin":         recipe.get("origin", {}),
-            "difficulty":     recipe.get("difficulty_level"),   # clÃ© rÃ©elle dans les donnÃ©es
+            "difficulty":     recipe.get("difficulty_level"),   # clé réelle dans les données
             "servings":       recipe.get("servings", 4),
             "nutrition":      recipe.get("nutrition", {}),
             "health_scores":  recipe.get("health_scores", {}),
@@ -369,7 +369,7 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
             "diet_flags_enriched": recipe.get("diet_flags_enriched", {}),
             "nutrition_highlights": recipe.get("nutrition_highlights", {}),
 
-            # â"€â"€ Filtres / tri â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+            # ── Filtres / tri ─────────────────────────────────────────────
             "dish_type":      recipe.get("dish_type", ""),
             "iconic_score":   iconic_score,
             "final_score":    iconic_score,   # alias attendu par RecipeCard
@@ -377,7 +377,7 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
             "technique":      recipe.get("technique", []),
             "total_time_min": recipe.get("timing", {}).get("total_min"),
 
-            # â"€â"€ Frigo spÃ©cifique â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+            # ── Frigo spécifique ──────────────────────────────────────────
             "completeness":   completeness,
             "have":           sorted(have),
             "missing": [
@@ -412,8 +412,8 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
 def missing_ingredients(payload: MissingRequest, request: Request,
                          user: dict = Depends(get_user)):
     """
-    Retourne les ingrÃ©dients manquants pour rÃ©aliser une recette cible
-    avec les ingrÃ©dients actuels du frigo.
+    Retourne les ingrédients manquants pour réaliser une recette cible
+    avec les ingrédients actuels du frigo.
     """
     check_rate_limit(request, limit=60, window_seconds=60)
     recipes = load_recipes()
@@ -426,7 +426,7 @@ def missing_ingredients(payload: MissingRequest, request: Request,
     needed         = _get_recipe_ingredients(recipe)
     have, missing  = _fridge_coverage(fridge, needed)
 
-    # Enrichir les ingrÃ©dients manquants avec leur nom FR
+    # Enrichir les ingrédients manquants avec leur nom FR
     ings_dict = load_ingredients_dict()
     missing_enriched = []
     for iid in sorted(missing):
@@ -435,7 +435,7 @@ def missing_ingredients(payload: MissingRequest, request: Request,
             "id":      iid,
             "name_fr": full_name_fr(d, iid) if d else iid,
             "category": d.get("category", ""),
-            "available_in_france": True,  # optimiste par dÃ©faut
+            "available_in_france": True,  # optimiste par défaut
         })
 
     return {
