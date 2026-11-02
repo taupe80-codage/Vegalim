@@ -506,6 +506,9 @@ def recipe_feedback(recipe_id: str, payload: FeedbackRequest,
     if payload.action not in VALID:
         raise HTTPException(status_code=422,
             detail=f"Action invalide. Valeurs : {sorted(VALID)}")
+    # Comme /profil/interaction : un ID inconnu était enregistré en base.
+    if not any(str(r.get("id", "")) == recipe_id for r in load_recipes()):
+        raise HTTPException(status_code=404, detail=f"Recette {recipe_id} introuvable")
     from backend.services.interaction_service import save_interaction
     save_interaction(
         email=user["email"], recipe_id=recipe_id,

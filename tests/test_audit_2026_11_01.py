@@ -623,3 +623,18 @@ def test_decouverte_surprise_varie():
         with mock.patch("datetime.date", _D):
             raisons.add(client.get("/recettes/decouverte").json()["surprise_nutritionnelle"]["raison"])
     assert len(raisons) > 1
+
+
+# ── B4 : un avis sur une recette inexistante est refusé (404) ─────────────────
+
+def test_feedback_recette_inconnue_404():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.core.auth_deps import get_user
+    app.dependency_overrides[get_user] = lambda: {"email": "test@exemple.com"}
+    try:
+        res = TestClient(app).post("/recettes/recette_qui_n_existe_pas/feedback",
+                                   json={"action": "like"})
+        assert res.status_code == 404
+    finally:
+        app.dependency_overrides.pop(get_user, None)
