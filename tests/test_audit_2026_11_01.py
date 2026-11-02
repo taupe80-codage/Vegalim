@@ -785,3 +785,21 @@ def test_sous_recettes_masquees_mais_trouvables():
     meta = enrich_one(by_id["base_mala_broth_1ab129"])["ingredients_meta"]
     assert meta["base_doubanjiang_paste_340399"]["recipe_id"] == "base_doubanjiang_paste_340399"
     assert "recipe_id" not in meta["garlic_raw"]
+
+
+# ── D4 : « Charger 50 de plus » — pages successives sans trou ni doublon ─────
+
+def test_pagination_accueil_par_paquets():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    client = TestClient(app)
+    for call in (
+        lambda skip, n: client.get("/recettes", params={"limit": n, "skip": skip}).json(),
+        lambda skip, n: client.post(f"/recettes/recherche?skip={skip}",
+                                    json={"query": "", "limit": n, "gluten_free": True}).json(),
+    ):
+        first, more = call(0, 200), call(200, 50)
+        full = call(0, 250)
+        assert first["total"] > 200
+        ids = [r["id"] for r in first["results"] + more["results"]]
+        assert ids == [r["id"] for r in full["results"]]

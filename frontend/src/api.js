@@ -87,8 +87,9 @@ export const recipes = {
     ).toString();
     return _listAndStore(`/recettes${qs ? '?' + qs : ''}`);
   },
-  search: async (payload) => {
-    const data = await post('/recettes/recherche', payload);
+  // skip : pagination (paramètre de requête de /recettes/recherche)
+  search: async (payload, skip = 0) => {
+    const data = await post(`/recettes/recherche${skip ? `?skip=${skip}` : ''}`, payload);
     const list = Array.isArray(data) ? data : (data?.results || data?.recipes || []);
     recipeStore.setAll(list);
     return data;

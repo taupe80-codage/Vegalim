@@ -3,7 +3,7 @@
  * Filtres partagés via RecipeFiltersShared — constants + composants dédupliqués.
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { recipes as recipesApi } from '../api';
 import { navigate } from '../Router';
 import RecipeCard, { RecipeCardSkeleton, getRecipeTheme, getRecipeImageUrl, CUISINE_LABEL_FR, computeAlimScore } from '../components/RecipeCard';
@@ -87,6 +87,19 @@ function _loadHomeFilters() {
   } catch { return null; }
 }
 
+// Premier chargement, puis « Charger plus » par paquets de 50
+const FIRST_PAGE = 200;
+const MORE_PAGE  = 50;
+
+/** Même requête que la recherche en cours (texte/filtres ou liste), décalée de skip. */
+function runRecipeQuery(req, skip, limit) {
+  return req.kind === 'search'
+    ? recipesApi.search({ ...req.payload, limit }, skip)
+    : recipesApi.list({ ...req.params, limit, skip: skip || undefined });
+}
+
+const _resultsOf = (data) => (Array.isArray(data) ? data : (data?.results || data?.recipes || []));
+
 export default function HomePage() {
   const _saved = _loadHomeFilters();
 
@@ -124,6 +137,10 @@ export default function HomePage() {
   const [loading,      setLoading]      = useState(false);
   const [error,        setError]        = useState(null);
   const [visibleCount, setVisibleCount] = useState(18);
+  // Total côté serveur : au-delà des recettes chargées, bouton « Charger 50 »
+  const [total,        setTotal]        = useState(0);
+  const [loadingMore,  setLoadingMore]  = useState(false);
+  const lastQuery = useRef(null);
 
   useEffect(() => {
     try {
@@ -231,7 +248,7 @@ export default function HomePage() {
     setLoading(true);
     setError(null);
     try {
-      const payload = { query: q, limit: 200 };
+      const payload = { query: q, limit: FIRST_PAGE };
       const hasFilter = q || d || de.size > 0 || se || dif || al.size > 0 || hf.size > 0 || sf.size > 0 || df.size > 0 || or.size > 0 || mt;
 
       if (d === 'vegan')      payload.filtre = 'vegan';
@@ -246,12 +263,14 @@ export default function HomePage() {
 
       if (df.size > 0) payload.dish_types = [...df];
 
-      const data = hasFilter
-        ? await recipesApi.search(payload)
-        : await recipesApi.list({ limit: 200 });
+      const req = hasFilter ? { kind: 'search', payload } : { kind: 'list', params: {} };
+      lastQuery.current = req;
+      const data = await runRecipeQuery(req, 0, FIRST_PAGE);
+      if (lastQuery.current !== req) return;   // une requête plus récente a pris le relais
 
-      const results = Array.isArray(data) ? data : (data.results || data.recipes || []);
+      const results = _resultsOf(data);
       setRecipes(results);
+      setTotal(Math.max(data?.total ?? 0, results.length));
       setVisibleCount(18); // reset pagination à chaque nouvelle requête
     } catch (err) {
       setError(err.message || 'Erreur de connexion au backend.');
@@ -268,6 +287,31 @@ export default function HomePage() {
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [diet, dietExtras, season, difficulty, allergens, healthFilters, subFilters, dishFilters, origins]);
+
+  // Charge les 50 recettes suivantes de la même requête (au-delà des 200)
+  const loadMore = async () => {
+    const req = lastQuery.current;
+    if (!req || loadingMore) return;
+    setLoadingMore(true);
+    try {
+      const loaded = recipes.length;
+      const data = await runRecipeQuery(req, loaded, MORE_PAGE);
+      if (lastQuery.current !== req) return;   // filtres changés entre-temps
+      const more = _resultsOf(data);
+      setRecipes(prev => {
+        const seen = new Set(prev.map(r => r.id));
+        return [...prev, ...more.filter(r => !seen.has(r.id))];
+      });
+      setVisibleCount(loaded + more.length);
+      // Plus rien à charger si le serveur n'a rien renvoyé
+      setTotal(more.length ? Math.max(data?.total ?? 0, loaded + more.length) : loaded);
+    } catch (err) {
+      setError(err.message || 'Erreur de connexion au backend.');
+    } finally {
+      setLoadingMore(false);
+    }
+  };
+  const remainingOnServer = Math.max(0, total - recipes.length);
 
   // ── Tri local ─────────────────────────────────────────────────────────────
 
@@ -569,7 +613,9 @@ export default function HomePage() {
           <>
             <div className="results-bar">
               <p className="results-count" aria-live="polite">
-                {displayed.length} recette{displayed.length > 1 ? 's' : ''}
+                {remainingOnServer > 0
+                  ? `${displayed.length} recettes chargées sur ${total}`
+                  : `${displayed.length} recette${displayed.length > 1 ? 's' : ''}`}
                 {hasActiveFilters && <span className="results-count-filters"> — filtres actifs</span>}
               </p>
               <div className="sort-row" role="group" aria-label="Trier les résultats">
@@ -650,6 +696,20 @@ export default function HomePage() {
                 >
                   Voir {Math.min(18, displayed.length - visibleCount)} recette{Math.min(18, displayed.length - visibleCount) > 1 ? 's' : ''} de plus
                   <span className="load-more-total"> ({displayed.length - visibleCount} restante{displayed.length - visibleCount > 1 ? 's' : ''})</span>
+                </button>
+              </div>
+            )}
+
+            {/* Au-delà des 200 premières : paquets de 50 jusqu'au chargement complet */}
+            {visibleCount >= displayed.length && remainingOnServer > 0 && (
+              <div className="load-more-wrap">
+                <button className="load-more-btn" onClick={loadMore} disabled={loadingMore}>
+                  {loadingMore
+                    ? 'Chargement…'
+                    : `Charger ${Math.min(MORE_PAGE, remainingOnServer)} recettes supplémentaires`}
+                  {!loadingMore && (
+                    <span className="load-more-total"> ({remainingOnServer} restante{remainingOnServer > 1 ? 's' : ''})</span>
+                  )}
                 </button>
               </div>
             )}
