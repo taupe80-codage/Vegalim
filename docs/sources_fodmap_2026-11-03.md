@@ -48,3 +48,5 @@ Sultanines (raisins blonds) : sources contradictoires (7 g, « 2 cuillères à c
 Lecture : le lactose est un FODMAP, mais Monash ne le fait restreindre qu'en cas
 d'intolérance avérée. L'exclure du score général et le traiter à part (filtre
 « Sans lactose ») est cohérent avec cette position.
+
+**Décision (2026-11-03) :** le lactose reste exclu du score FODMAP.

@@ -222,6 +222,8 @@ NUT_IDS: frozenset[str] = frozenset({
 #
 # Note : le lactose (D) est géré séparément par LACTOSE_IDS pour le flag
 # lactose_free — il n'est pas répété ici pour éviter la double comptabilisation.
+# Choix confirmé le 2026-11-03 : Monash ne fait restreindre le lactose qu'en cas
+# d'intolérance (docs/sources_fodmap_2026-11-03.md) ; filtre « Sans lactose » à part.
 # Les ingrédients de VEGAN_EXCEPTIONS sont exclus de _extract_ids() et donc
 # ne déclenchent jamais les FODMAP (laits végétaux, fromages végans, etc.).
 #
