@@ -63,7 +63,7 @@ VARIANTS = {
             ("basmati_rice_raw_seed", 300, "g", "ingredient"),
             ("broadbeans_fava_beans_boiled_fresh", 250, "g", "plant_protein", "cooked"),
             ("dill_weed_fresh_herb_leaf", 50, "g", "herb"),
-            ("saffron", 0.3, "g", "spice"),
+            ("saffron_spice", 0.3, "g", "spice"),
             ("turmeric_powder", 1, "g", "spice"),
             ("olive_oil_plant", 45, "ml", "fat_cooking"),
             ("table_salt_unenriched", 4, "g", "seasoning"),

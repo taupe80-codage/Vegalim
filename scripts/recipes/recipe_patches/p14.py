@@ -53,7 +53,7 @@ PATCHES = {
         ('step-', 'Vérifier que les légumes sont tendres, le fromage fondu.'),
     ],
     "main_crumble_aux_myrtilles_5f7d47": [
-        ("qty", "blueberry", 500),
+        ("qty", "blueberry_raw", 500),
         ("qty", "wheat_all_purpose_flour_unenriched_unbleached", 100),
         ("qty", "white_sugar", 60),
         ("qty", "butter_salted", 100),

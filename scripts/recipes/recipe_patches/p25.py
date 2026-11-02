@@ -4,7 +4,7 @@ PATCHES = {
     "protein_tofu_braise_aux_champigno_c515dd": [
         ("qty", "water", 150),
         ("qty", "vegetable_stock_dried", 2),
-        ("qty", "cornstarch", 10),
+        ("qty", "cornstarch_flour", 10),
         ("add", "sesame_raw_seed", 10, "g", "garnish"),
         ("txt", "Ajouter 20 g de fécule de maïs délayée", "Ajouter 10 g de fécule de maïs délayée"),
     ],

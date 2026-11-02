@@ -3,7 +3,7 @@
 PATCHES = {
     # la pâte à spätzle était refaite alors que la base est déjà comptée
     "main_spatzle_au_fromage_586859": [
-        ("ing", "parmesan_grated_dried_cow", "gruyere", 120),
+        ("ing", "parmesan_grated_dried_cow", "gruyere_whole_cow", 120),
         ("del", "egg_raw"),
         ("step-", "Préparer la pâte en fouettant 55 grammes d'œuf"),
         ("step-", "Porter 3 litres d'eau salée à forte ébullition"),

@@ -10,7 +10,7 @@ PATCHES = {
         ("step-", "Ajouter des légumes supplémentaires tels que des carottes"),
     ],
     "protein_mapo_tofu_4b4458": [
-        ("add", "cornstarch", 8, "g", "thickener"),
+        ("add", "cornstarch_flour", 8, "g", "thickener"),
         ("add", "water", 200, "ml", "liquid"),
         ("qty", "table_salt_unenriched", 2),
         ("txt", "Ajouter les 20 g de sauce aux haricots noirs fermentés", "Ajouter les 20 g de pâte de piment fermentée"),

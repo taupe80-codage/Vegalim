@@ -52,7 +52,7 @@ PATCHES = {
     # aucun des légumes du titre dans la composition
     "wok_tofu_saute_aux_legumes_1f3ac2": [
         ("qty", "sesame_oil_plant", 25),
-        ("qty", "cornstarch", 10),
+        ("qty", "cornstarch_flour", 10),
         ("add", "carrot_raw", 150, "g", "vegetable"),
         ("add", "broccoli_raw", 200, "g", "vegetable"),
         ("add", "red_bell_pepper_raw", 150, "g", "vegetable"),

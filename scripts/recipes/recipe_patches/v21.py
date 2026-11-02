@@ -13,7 +13,7 @@ VARIANTS = {
                  "l'oignon vert, écrasé à la fourchette et servi sur du riz."),
         ("origin", {"cuisine": "trinidadian", "country": "trinidad_and_tobago",
                     "region": "port_of_spain", "city": ""}),
-        ("add", "okra", 200, "g", "vegetable"),
+        ("add", "okra_raw", 200, "g", "vegetable"),
         ("add", "green_onion_raw", 60, "g", "aromatic"),
         ("steps", [
             "Laver 300 g d'épinards et les émincer en lanières de 2 à 3 cm ; couper 200 g de "

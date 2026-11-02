@@ -383,8 +383,13 @@ def test_moteur_recherche_carte_astro_chargee():
 # ── Mon frigo : tables synonymes / exclusions sur les ids actuels ─────────────
 
 def test_frigo_tables_sur_ids_reels():
+    import re
+    from pathlib import Path
     from backend.api.routes.frigo import _SYNONYMS, _EXCLUSIONS, _get_all_recipe_ingredient_ids
-    known = _get_all_recipe_ingredient_ids()
+    # Ids des recettes, plus les clés des puces de Mon frigo (« rice », « lemon »…)
+    chips = set(re.findall(r"\{\s*key:\s*'([^']+)'",
+                           Path("frontend/src/pages/FrigoPage.jsx").read_text(encoding="utf-8")))
+    known = _get_all_recipe_ingredient_ids() | chips
     assert {i for pair in _EXCLUSIONS for i in pair} <= known
     assert set(_SYNONYMS) <= known
     assert {i for v in _SYNONYMS.values() for i in v} <= known
@@ -431,12 +436,12 @@ def test_catalogue_nom_complet(iid, fr, en):
 
 
 @pytest.mark.parametrize("word,expected,forbidden", [
-    ("riz", "rice", "rice_flour"),
+    ("riz", "white_rice_raw_seed_unenriched", "rice_flour"),
     ("farine de riz", "rice_flour", None),
     ("olive", "black_olive_canned_in_brine", "olive_oil_plant"),
-    ("citron", "lemon", None),
+    ("citron", "lemon_raw", None),
     ("maïs", "sweet_corn_raw_fresh", "cornstarch_flour"),
-    ("cannelle", "cinnamon", None),
+    ("cannelle", "cinnamon_powder", None),
 ])
 def test_frigo_mots_francais(word, expected, forbidden):
     from backend.services.ingredient_catalog import resolve_names
@@ -824,3 +829,12 @@ def test_anciens_ids_relies_au_dictionnaire():
     for new in ("leeks_raw", "canola_oil_plant", "parsley_fresh_herb",
                 "tomato_sauce_salted_canned", "white_bread_roasted"):
         assert new in ids and new in ings
+
+
+def test_tous_les_ingredients_des_recettes_sont_au_dictionnaire():
+    from backend.core.data_io import load_recipes, load_ingredients_dict
+    recipes = load_recipes()
+    known = set(load_ingredients_dict()) | {r["id"] for r in recipes}
+    unknown = {it.get("ingredient") for r in recipes for it in r.get("composition") or []
+               if isinstance(it, dict) and it.get("ingredient")} - known
+    assert not unknown, sorted(unknown)

@@ -43,7 +43,7 @@ PATCHES = {
     "main_poutine_1344e1": [
         ("ing", "cottage_uncreamed_curd_0_4_m_f_dried_4pct_cow", "base_fromage_en_grain_a00941"),
         ("add", "sunflower_oil_plant", 60, "ml", "fat_frying"),
-        ("add", "cornstarch", 10, "g", "thickener"),
+        ("add", "cornstarch_flour", 10, "g", "thickener"),
         ("qty", "vegetable_stock_dried", 5),
         ("txt", "Chauffer la sauce brune végétarienne dans une petite casserole à feu moyen, en remuant occasionnellement pour éviter les grumeaux, jusqu'à ce qu'elle atteigne une température de 80°C.",
          "Préparer la sauce brune : délayer 10 g de fécule dans 200 ml de bouillon de légumes, puis chauffer en remuant jusqu'à épaississement."),
@@ -52,7 +52,7 @@ PATCHES = {
     ],
     "main_poutine_vegan_18f8c2": [
         ("add", "sunflower_oil_plant", 60, "ml", "fat_frying"),
-        ("add", "cornstarch", 10, "g", "thickener"),
+        ("add", "cornstarch_flour", 10, "g", "thickener"),
         ("qty", "vegetable_stock_dried", 5),
         ("txt", "Chauffer la sauce brune végétarienne dans une petite casserole à feu moyen, en remuant occasionnellement, jusqu'à ce qu'elle soit chaude et prête à être servie.",
          "Préparer la sauce brune : délayer 10 g de fécule dans 200 ml de bouillon de légumes, puis chauffer en remuant jusqu'à épaississement."),

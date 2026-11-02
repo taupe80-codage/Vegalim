@@ -19,7 +19,7 @@ VARIANTS = {
                  "sautés à l'ail et au thym."),
         ("origin", {"cuisine": "italian", "country": "italy", "region": "veneto", "city": ""}),
         ("compo", [
-            ("polenta", 250, "g", "grain"),
+            ("cornmeal_whole_dried", 250, "g", "grain"),
             ("porcini_mushroom_raw", 150, "g", "ingredient"),
             ("button_mushroom_raw", 200, "g", "ingredient"),
             ("onion_raw", 100, "g", "aromatic_base"),
@@ -48,7 +48,7 @@ VARIANTS = {
                  "à l'ail et au persil, et des copeaux de parmesan."),
         ("origin", {"cuisine": "italian", "country": "italy", "region": "frioul", "city": ""}),
         ("compo", [
-            ("polenta", 250, "g", "grain"),
+            ("cornmeal_whole_dried", 250, "g", "grain"),
             ("button_mushroom_raw", 400, "g", "ingredient"),
             ("garlic_raw", 12, "g", "aromatic"),
             ("parsley_fresh_herb", 20, "g", "herb"),
@@ -74,7 +74,7 @@ VARIANTS = {
         ("desc", "Polenta montée à l'huile d'olive et à la levure nutritionnelle, servie avec un ragoût de "
                  "champignons mijotés à la tomate et au romarin."),
         ("compo", [
-            ("polenta", 200, "g", "grain"),
+            ("cornmeal_whole_dried", 200, "g", "grain"),
             ("button_mushroom_raw", 400, "g", "ingredient"),
             ("tomato_crushed_canned", 300, "g", "vegetable"),
             ("yellow_onion_raw", 150, "g", "aromatic_base"),
@@ -101,7 +101,7 @@ VARIANTS = {
         ("desc", "Bâtonnets de polenta ferme parfumée au thym, rôtis au four jusqu'à être croustillants, "
                  "servis avec une poêlée de champignons à l'ail et au persil."),
         ("compo", [
-            ("polenta", 280, "g", "grain"),
+            ("cornmeal_whole_dried", 280, "g", "grain"),
             ("button_mushroom_raw", 400, "g", "ingredient"),
             ("onion_raw", 100, "g", "aromatic_base"),
             ("garlic_raw", 12, "g", "aromatic"),

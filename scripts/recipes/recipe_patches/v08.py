@@ -286,7 +286,7 @@ VARIANTS = {
         ("compo", [
             ("pasta_raw_dried", 320, "g", "ingredient"),
             ("milk_liquid_uht_3_5pct", 500, "ml", "ingredient"),
-            ("cheddar", 150, "g", "ingredient"),
+            ("cheddar_cow", 150, "g", "ingredient"),
             ("butter_sup80pct", 40, "g", "fat_cooking"),
             ("wheat_all_purpose_flour_unenriched_unbleached", 30, "g", "carbohydrate"),
             ("mustard", 5, "g", "condiment"),
@@ -315,7 +315,7 @@ VARIANTS = {
             ("vegan_butter", 20, "g", "fat_cooking"),
             ("garlic_raw", 6, "g", "aromatic"),
             ("mustard", 5, "g", "condiment"),
-            ("paprika", 1, "g", "spice"),
+            ("paprika_powder", 1, "g", "spice"),
             ("table_salt_unenriched", 4, "g", "seasoning"),
         ]),
         ("steps", [

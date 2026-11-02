@@ -4,9 +4,9 @@ PATCHES = {
     # épices du texte absentes, « 2 gousses » = 2 g, garnitures manquantes
     "soup_pho_ba7e1e": [
         ("qty", "garlic_raw", 10),
-        ("add", "cinnamon", 3, "g", "spice"),
+        ("add", "cinnamon_powder", 3, "g", "spice"),
         ("add", "star_anise", 3, "g", "spice"),
-        ("add", "cloves", 0.5, "g", "spice"),
+        ("add", "cloves_spice", 0.5, "g", "spice"),
         ("add", "mung_bean_sprouts_raw_seed_sprouted", 100, "g", "vegetable"),
         ("add", "basil_fresh_herb", 10, "g", "herb"),
         ("txt", "2 cuillères à café de cannelle, 2 cuillères à café d'anis étoilé, 2 clous de girofle et 1 badiane", "1 bâton de cannelle, 3 étoiles de badiane et 2 clous de girofle"),
@@ -90,7 +90,7 @@ PATCHES = {
     ],
     "soup_soupe_courge_butternut_2f5cf3": [
         ("qty", "olive_oil_plant", 15),
-        ("qty", "curry", 3),
+        ("qty", "curry_powder", 3),
         ("add", "table_salt_unenriched", 3, "g", "seasoning"),
         ("txt", "dans 2 ml d'huile d'olive", "dans 15 ml d'huile d'olive"),
         ("txt", "Assaisonner de sel et de poivre.", "Assaisonner avec 3 g de sel et du poivre."),

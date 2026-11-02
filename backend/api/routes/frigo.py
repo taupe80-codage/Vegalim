@@ -53,7 +53,8 @@ class MissingRequest(BaseModel):
 # absents des données depuis la migration : 0/11 synonymes et 2/16 exclusions
 # encore réels). Vérifié par tests/test_audit_2026_11_01.py.
 
-# Même produit sous deux ids qu'aucune règle préfixe/suffixe ne relie
+# Même produit sous deux ids qu'aucune règle préfixe/suffixe ne relie ;
+# « rice », « lemon », « butter », « coriander » : clés des puces de Mon frigo
 # (relation symétrique, voir _SYNONYM_PAIRS)
 _SYNONYM_PAIRS: tuple[tuple[str, str], ...] = (
     ("lime_juice_fresh",       "lime_raw_juice_fresh"),
@@ -62,9 +63,8 @@ _SYNONYM_PAIRS: tuple[tuple[str, str], ...] = (
     ("white_bean_boiled",      "white_bean_canned"),
     ("white_bean_boiled",      "white_bean_dried_canned"),
     ("white_bean_canned",      "white_bean_dried_canned"),
-    ("aneth",                  "dill_weed_fresh_herb_leaf"),
     ("sugars_granulated",      "white_sugar"),
-    ("lettuce",                "green_salad_raw_plain"),
+    ("lettuce_raw",            "green_salad_raw_plain"),
     # La puce « rice » (id générique) ne couvrait aucun riz blanc précis
     ("rice",                   "white_rice_raw_seed_unenriched"),
     ("rice",                   "white_rice_long_grain_seed_dried"),
@@ -91,12 +91,12 @@ _EXCLUSIONS: frozenset = frozenset({
     ("cream",         "cream_sour_fermented"),
     ("cream",         "vanilla_ice_cream"),
     ("butter",        "vegan_butter"),
-    ("curry",         "curry_leaf"),
+    ("curry_powder",  "curry_leaf"),
     ("coriander",     "coriander_spice_seed"),     # graines ≠ herbe fraîche
     ("mustard",       "mustard_raw_leaf"),
     ("banana_raw",    "plantain_banana_raw"),
     ("onion_raw",     "green_onion_raw"),          # cébette ≠ oignon
-    ("strawberry",    "strawberry_jam"),
+    ("strawberry_raw", "strawberry_jam"),
     ("water",         "orange_blossom_water"),
     ("water",         "rose_water"),
     ("water",         "sour_cherry_canned_in_water"),

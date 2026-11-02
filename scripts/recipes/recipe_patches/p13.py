@@ -54,7 +54,7 @@ PATCHES = {
         ("step-", "Conserver les restes au réfrigérateur"),
     ],
     "main_aubergines_sichuan_ff9921": [
-        ("qty", "cornstarch", 10),
+        ("qty", "cornstarch_flour", 10),
         ("txt", "Julienne 600g d'aubergines et blanchir dans 45 ml d'huile de sésame à feu moyen-vif pendant 2 minutes, jusqu'à légère coloration dorée.",
          "Couper 600g d'aubergines en bâtonnets et les faire sauter dans 45 ml d'huile de sésame à feu moyen-vif pendant 5 minutes, jusqu'à coloration dorée. Réserver."),
         ("txt", "Ajouter 20g de fécule de maïs pour épaissir la sauce", "Délayer 10g de fécule de maïs dans un peu d'eau froide et l'ajouter pour épaissir la sauce"),

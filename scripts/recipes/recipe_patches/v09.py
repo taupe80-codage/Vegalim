@@ -57,7 +57,7 @@ VARIANTS = {
             ("chickpea_boiled", 400, "g", "plant_protein", "cooked"),
             ("onion_raw", 100, "g", "aromatic_base"),
             ("egg_raw", 55, "g", "ingredient"),
-            ("breadcrumbs", 50, "g", "ingredient"),
+            ("breadcrumbs_dried", 50, "g", "ingredient"),
             ("nutmeg_spice", 1, "g", "seasoning"),
             ("allspice_powder", 1, "g", "seasoning"),
             ("sunflower_oil_plant", 30, "ml", "fat"),
@@ -89,7 +89,7 @@ VARIANTS = {
             ("green_lentil_dried", 150, "g", "plant_protein", "dried"),
             ("button_mushroom_raw", 250, "g", "vegetable"),
             ("onion_raw", 100, "g", "aromatic_base"),
-            ("breadcrumbs", 60, "g", "ingredient"),
+            ("breadcrumbs_dried", 60, "g", "ingredient"),
             ("flaxseed_linseed_ground", 10, "g", "binder"),
             ("thyme_dried_herb", 1, "g", "herb"),
             ("nutmeg_spice", 1, "g", "seasoning"),
@@ -146,13 +146,13 @@ VARIANTS = {
         ("desc", "Crumble à l'anglaise : pommes fondantes et myrtilles sous une pâte sablée croustillante "
                  "au beurre salé et aux flocons d'avoine."),
         ("compo", [
-            ("blueberry", 300, "g", "ingredient"),
+            ("blueberry_raw", 300, "g", "ingredient"),
             ("apple_raw", 300, "g", "ingredient"),
             ("wheat_all_purpose_flour_unenriched_unbleached", 100, "g", "base"),
             ("oat_flakes_whole_seed", 60, "g", "base"),
             ("brown_sugar", 60, "g", "sweetener"),
             ("butter_salted", 90, "g", "fat"),
-            ("cinnamon", 1, "g", "spice"),
+            ("cinnamon_powder", 1, "g", "spice"),
             ("vanilla_ice_cream", None, "1 boule", "serving_suggestion"),
         ]),
         ("steps", [
@@ -169,7 +169,7 @@ VARIANTS = {
         ("desc", "Myrtilles relevées de zeste de citron sous un crumble d'avoine, d'amandes concassées et de sucre "
                  "de coco, lié à l'huile de coco."),
         ("compo", [
-            ("blueberry", 500, "g", "ingredient"),
+            ("blueberry_raw", 500, "g", "ingredient"),
             ("lemon_peel_raw", 4, "g", "aromatic"),
             ("cornstarch_flour", 10, "g", "thickener"),
             ("oat_flakes_whole_seed", 80, "g", "base"),

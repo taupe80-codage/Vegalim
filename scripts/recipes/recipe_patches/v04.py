@@ -123,7 +123,7 @@ VARIANTS = {
             ("button_mushroom_raw", 200, "g", "ingredient"),
             ("porcini_mushroom_raw", 50, "g", "ingredient"),
             ("onion_raw", 150, "g", "aromatic_base"),
-            ("bay_leaf", 1, "g", "aromatic"),
+            ("bay_leaf_spice", 1, "g", "aromatic"),
             ("allspice_powder", 1, "g", "spice"),
             ("table_salt_unenriched", 3, "g", "seasoning"),
             ("black_pepper_spice", 1, "g", "spice"),

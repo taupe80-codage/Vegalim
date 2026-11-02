@@ -16,7 +16,7 @@ VARIANTS = {
         ("add", "swiss_chard_raw", 300, "g", "vegetable"),
         ("qty", "lemon_juice", 60),
         ("del", "tomato_raw_ripe"),
-        ("add", "coriander", 15, "g", "herb"),
+        ("add", "coriander_raw_fresh_herb", 15, "g", "herb"),
         ("qty", "olive_oil_plant", 45),
         ("steps", [
             "Rincer 300 g de lentilles vertes, les couvrir de 750 ml de bouillon de légumes et cuire "
