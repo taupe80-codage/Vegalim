@@ -551,6 +551,9 @@ def full_name_fr(entry: dict, iid: str = "") -> str:
             oil = axes.get("milieu_conservation") == "à l'huile"
             return "tomates séchées à l'huile" if oil else "tomates séchées"
         return name
+    # grape_dried : « raisin » seul désigne le fruit frais
+    if low == "raisin" and axes.get("etat_thermique") == "séché":
+        return "raisins secs"
     if form == "épice":
         part = axes.get("partie", "")
         if part == "graine":
@@ -602,6 +605,8 @@ def full_name_en(entry: dict, iid: str = "") -> str:
             oil = axes.get("milieu_conservation") == "à l'huile"
             return "dried tomatoes in oil" if oil else "dried tomatoes"
         return name
+    if low == "grape" and axes.get("etat_thermique") == "séché":
+        return "raisins"
     if form == "épice":
         part = axes.get("partie", "")
         if part == "graine":

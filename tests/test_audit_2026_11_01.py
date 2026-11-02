@@ -886,3 +886,20 @@ def test_recherche_titre_en_tete(query, first):
     res = TestClient(app).post("/recettes/recherche", json={"query": query, "limit": 50}).json()
     top = [r["id"] for r in res["results"][:len(first)]]
     assert set(top) == first, top
+
+
+# ── Raisins secs nommés comme tels ; concept « flaxseed_oil » = graines de lin ─
+
+def test_raisins_secs_et_lin():
+    import json
+    from pathlib import Path
+    from backend.core.data_io import load_ingredients_dict
+    from backend.engine.cycle_engine import CYCLE_CONCEPT_IDS
+    from backend.services.ingredient_catalog import full_name_fr, full_name_en
+    entry = load_ingredients_dict()["grape_dried"]
+    assert full_name_fr(entry, "grape_dried") == "raisins secs"
+    assert full_name_en(entry, "grape_dried") == "raisins"
+    # Le concept ne pointe que vers des graines : le libellé doit le dire
+    assert CYCLE_CONCEPT_IDS["flaxseed_oil"] == ("flaxseed_linseed_ground",)
+    tr = json.loads(Path("frontend/src/translations.json").read_text(encoding="utf-8"))
+    assert tr["flaxseed_oil"] == "Graines de lin"
