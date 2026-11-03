@@ -941,3 +941,24 @@ def test_phase_ovulatoire_sans_ail_ni_oignon():
     dishes = [r for r in load_recipes() if not is_component_recipe(r)]
     n = sum(1 for r in dishes if any(c["ingredient"] in ids for c in r["composition"]))
     assert n < len(dishes) / 2   # 648 / 894 avec ail et oignon
+
+
+# ── Score de diversité : relatif au nombre de repas, repère les répétitions ──
+
+def test_diversite_distingue_les_semaines():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.core.auth_deps import get_user
+    days = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+    app.dependency_overrides[get_user] = lambda: {"email": "test@exemple.com"}
+    try:
+        client = TestClient(app)
+        gen = client.get("/planning/mealplan", params={"dish_type": "main"}).json()
+        varied = {d: gen[d] for d in days}
+        same = {d: {"lunch": {"id": "dal_khichdi_23f932"},
+                    "dinner": {"id": "dal_khichdi_23f932"}} for d in days}
+        score = lambda p: client.post("/planning/diversity_score", json={"plan": p}).json()["diversity_score"]
+        s_varied, s_same = score(varied), score(same)
+    finally:
+        app.dependency_overrides.pop(get_user, None)
+    assert s_same < 30 < 50 < s_varied < 100

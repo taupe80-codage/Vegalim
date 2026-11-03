@@ -379,34 +379,44 @@ def daily_nutrition(payload: DayNutritionRequest, user: dict | None = Depends(ge
 
 @router.post("/diversity_score")
 def diversity_score(payload: DiversityScoreRequest, user: dict = Depends(get_user)):
-    """Calcule le score de diversité nutritionnelle d'un plan hebdomadaire."""
+    """Calcule le score de diversité (0-100) d'un plan hebdomadaire."""
     from backend.core.data_io import load_recipes, recipe_cuisine, recipe_techniques
-    plan = payload.plan
+    from backend.services.fridge_scoring import STAPLE, tier_of_id
     rmap = {r["id"]: r for r in load_recipes()}
-    # color_palette n'existe dans aucune recette et les ingrédients sont dans
-    # composition : ces deux parts valaient toujours 0. Les 30 points restants
-    # vont à la variété des ingrédients.
-    cuisines, techs, ings = set(), set(), set()
-    n = 0
-    for day_data in plan.values():
+    # Variété mesurée par rapport au nombre de repas, 4 parts de 25 points :
+    # les anciens plafonds absolus (4 cuisines, 4 techniques, 60 ingrédients)
+    # étaient atteints par presque toute semaine, et une recette répétée
+    # n'était pas vue. Les basiques (sel, huile, eau…) ne comptent pas.
+    ids, cuisines, techs, dish_types = [], set(), set(), set()
+    ing_uses: list[str] = []
+    for day_data in payload.plan.values():
         if not isinstance(day_data, dict):
             continue
         for info in day_data.values():
             for item in _slot_recipes(info):
                 r = rmap.get(item.get("id"), {})
-                n += 1
+                ids.append(item.get("id") or item.get("title_fr") or item.get("title"))
                 c = recipe_cuisine(r)
                 if c: cuisines.add(c)
                 techs.update(recipe_techniques(r))
-                ings.update(str(i.get("ingredient")) for i in r.get("composition") or []
-                            if isinstance(i, dict) and i.get("ingredient"))
+                if r.get("dish_type"): dish_types.add(r["dish_type"])
+                ing_uses.extend(
+                    str(i["ingredient"]) for i in r.get("composition") or []
+                    if isinstance(i, dict) and i.get("ingredient")
+                    and tier_of_id(str(i["ingredient"])) != STAPLE)
+    n = len(ids)
+    if not n:
+        return {"diversity_score": 0, "n_recipes": 0, "details": {}}
+    details = {
+        "recettes":     25 * len(set(ids)) / n,                       # pas de répétition
+        "cuisines":     25 * min(1.0, len(cuisines) / min(n, 7)),     # ~1 cuisine par jour
+        "ingredients":  25 * (len(set(ing_uses)) / len(ing_uses) if ing_uses else 0.0),
+        "types_de_plat": 25 * min(1.0, len(dish_types) / min(n, 3)),  # plat, soupe, salade…
+    }
     return {
-        "diversity_score": (
-            min(len(cuisines) * 10, 40) +
-            min(len(techs)    * 8,  30) +
-            min(len(ings) // 2,     30)
-        ),
-        "ingredients": len(ings),
+        "diversity_score": round(sum(details.values())),
+        "details":    {k: round(v, 1) for k, v in details.items()},
+        "ingredients": len(set(ing_uses)),
         "cuisines":   len(cuisines),
         "techniques": len(techs),
         "n_recipes":  n,
