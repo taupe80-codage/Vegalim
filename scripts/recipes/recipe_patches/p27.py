@@ -15,7 +15,8 @@ PATCHES = {
     ],
     "rice_paella_veg_c7m3x1": [
         ("txt", "Ajouter 200 g de poivron et 260 g de tomates.", "Ajouter 200 g de poivron, 150 g de haricots verts en tronçons et 260 g de tomates."),
-        ("txt", "Dissoudre 1 g de safran dans 2 cs d'eau chaude végétale.", "Dissoudre 1 g de safran dans 2 cs d'eau chaude."),
+        ("qty", "saffron_spice", 0.4),
+        ("txt", "Dissoudre 1 g de safran dans 2 cs d'eau chaude végétale.", "Dissoudre 0,4 g de safran dans 2 cs d'eau chaude."),
         ("txt", "Verser 900 ml d'eau chaude végétale dans la poêle.", "Verser 900 ml d'eau chaude dans la poêle."),
         ("step-", "Ajouter des légumes supplémentaires si désiré"),
         ("step-", "Servir chaud, en accompagnant d'une salade verte ou d'un légume cru"),

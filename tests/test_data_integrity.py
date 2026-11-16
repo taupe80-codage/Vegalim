@@ -904,3 +904,60 @@ def test_instructions_sans_remplissage_ni_test_de_lame_hors_four():
     restantes = [r["id"] for r in RECIPES if cl.nettoyer(r) != (r.get("instructions") or [])]
     assert not restantes, (
         f"{len(restantes)} recettes à nettoyer — lancer scripts/recipes/clean_recipe_texts.py : {restantes[:10]}")
+
+
+# ── Accessibilité et prix (2026-11-16) ─────────────────────────────────────────
+
+def test_disponibilite_renseignee_pour_les_ingredients_des_recettes():
+    """Sans available_in_france, le score d'accessibilité retombait sur « présent au
+    catalogue de prix » : 788 recettes sur 894 à 8. Lancer
+    scripts/ingredients/set_availability_2026_11_16.py (ou compléter ses tables)."""
+    from backend.core.data_io import load_availability_graph
+    from backend.engine.score_engine.quality import _get_ings
+    avail = load_availability_graph()
+    manquants = sorted({i for r in RECIPES for i in _get_ings(r) if not i.startswith("base_")
+                        and avail.get(i, {}).get("available_in_france") is None})
+    assert not manquants, f"{len(manquants)} ingrédients sans disponibilité : {manquants[:15]}"
+
+
+def test_conditionnements_de_tailles_differentes_ont_des_prix_differents():
+    """update_prices.py écrivait le même prix médian sur le paquet le moins cher :
+    citron à la pièce = filet de 5, beurre 250 g = 500 g (23 entrées)."""
+    from backend.core.data_io import load_prices_catalog
+    fautifs = []
+    for key, entry in load_prices_catalog().items():
+        pkgs = [p for p in entry.get("packages", []) if p.get("qty") and p.get("price")]
+        for a in pkgs:
+            for b in pkgs:
+                if a is not b and a["price"] == b["price"] and a["qty"] < b["qty"] and a["unit"] == b["unit"]:
+                    fautifs.append((key, a.get("label"), b.get("label")))
+    assert not fautifs, f"paquets de tailles différentes au même prix : {fautifs[:10]}"
+
+
+def test_ingredients_des_recettes_chiffres():
+    """375 recettes sur 894 avaient un ingrédient compté 0 € (cannelle, sucre, farine
+    T55, lait, feta…) faute de lien vers prices_catalog. Seuls restent sans prix les
+    ingrédients introuvables en France (fix_price_mapping_2026_11_16.UNPRICED_OK)."""
+    from backend.core.data_io import load_prices_catalog, resolve_catalog_key
+    from backend.engine.score_engine.quality import _get_ings
+    fix = _import_script("scripts/fix_price_mapping_2026_11_16.py", "fix_price_mapping_2026_11_16")
+    catalog = load_prices_catalog()
+    sans_prix = sorted({i for r in RECIPES for i in _get_ings(r) if not i.startswith("base_")
+                        and not resolve_catalog_key(i, catalog)} - fix.UNPRICED_OK)
+    assert not sans_prix, f"{len(sans_prix)} ingrédients sans prix : {sans_prix[:15]}"
+
+
+@pytest.mark.parametrize("ingredient, interdit", [
+    ("chilli_pepper_raw", "pepper"),            # piment frais ≠ poivre (86 €/kg)
+    ("coconut_milk_plant", "milk"),
+    ("oat_milk_refrigerated_plain_plant", "milk"),
+    ("sesame_tahini_raw_butter_seed_plant", "butter"),
+    ("almond_flour", "flour"),
+    ("puff_pastry_all_butter_raw_paste_pre_packaged", "butter"),
+    ("rose_water", "water"),
+    ("truffle_oil", "oil"),
+    ("porcini_mushroom_raw", "mushroom"),
+])
+def test_liens_de_prix_faux_ne_reviennent_pas(ingredient, interdit):
+    from backend.core.data_io import load_prices_catalog, resolve_catalog_key
+    assert resolve_catalog_key(ingredient, load_prices_catalog()) != interdit

@@ -152,6 +152,14 @@ def main():
         rid: v["catalog_key"] for rid, v in mapping.items()
         if v["confidence"] == "AUTO_HIGH"
     }
+    # Les liens existants priment : ils ont été relus à la main
+    # (resolve_missing_ingredient_prices.py, resolve_auto_med_candidates.py,
+    # fix_price_mapping_2026_11_16.py). Les réécrire depuis l'appariement par
+    # mots réintroduirait les faux liens corrigés (piment → poivre, lait de
+    # coco → lait, tahini → beurre…).
+    if OUT_MAP.exists():
+        existing = json.loads(OUT_MAP.read_text(encoding="utf-8"))
+        out = {**out, **{k: v for k, v in existing.items() if v in catalog}}
     OUT_MAP.parent.mkdir(parents=True, exist_ok=True)
     OUT_MAP.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

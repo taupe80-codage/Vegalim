@@ -173,12 +173,20 @@ def _compute_price(ing_key: str, qty_value: float | None, qty_unit: str | None,
         return {"price": round(pkg["price"], 2), "package_label": pkg["label"],
                 "n_packages": 1, "price_unknown": False, "pantry": pantry}
     needed_qty, needed_unit = needed
+    # unit_weight_g : poids d'une pièce vendue — « 100 g de persil » se compte
+    # en bouquets, « 2 citrons » en grammes (même règle qu'ingredient_cost_eur).
+    piece_g = entry.get("unit_weight_g")
+    if needed_unit == "piece" and piece_g:
+        needed_qty, needed_unit = needed_qty * piece_g, "g"
 
     # Trouver la combinaison optimale (coût minimal couvrant le besoin)
     best: dict | None = None
     for pkg in packages:
         conv = _pkg_to_base(pkg["qty"], pkg["unit"])
-        if conv is None or conv[1] != needed_unit:
+        if conv is not None and conv[1] == "piece" and needed_unit != "piece" and piece_g:
+            conv = (conv[0] * piece_g, "g")
+        # g ↔ ml interchangeables (approximation cuisine, comme ingredient_cost_eur)
+        if conv is None or (conv[1] == "piece") != (needed_unit == "piece"):
             continue
         pkg_qty_base = conv[0]
         if pkg_qty_base <= 0:

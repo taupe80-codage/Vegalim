@@ -215,7 +215,14 @@ def _update_catalog(catalog: dict, keys: list[str] | None, dry_run: bool) -> int
             if dry_run:
                 print(f"→ {old_price:.2f}€  →  {new_price:.2f}€  (Δ {ecart_pct*100:.0f}%) [DRY RUN]")
             else:
-                ref_pkg["price"] = new_price
+                # Tous les conditionnements suivent la même variation : écrire le
+                # prix médian sur le seul paquet le moins cher (ancienne version)
+                # a fini, au fil des relances, par donner le même prix à la pièce
+                # et au filet de 5, à 250 g et à 500 g (23 entrées, corrigé le
+                # 2026-11-16 par scripts/fix_package_prices_2026_11_16.py).
+                ratio = new_price / old_price if old_price else None
+                for pkg in packages:
+                    pkg["price"] = new_price if ratio is None else round(pkg["price"] * ratio, 2)
                 entry["last_updated"] = today
                 updated += 1
                 print(f"✓ {old_price:.2f}€ → {new_price:.2f}€  (Δ {ecart_pct*100:.0f}%)")
