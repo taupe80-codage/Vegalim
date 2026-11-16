@@ -90,22 +90,36 @@ def _get_ings(r):
                 if (c.get("meta") or {}).get("role") != "serving_suggestion"]
     return ings
 
+# Pénalité par ingrédient, selon available_in_france (renseigné pour tous les
+# ingrédients des recettes depuis scripts/ingredients/set_availability_2026_11_16.py).
+# Revu le 2026-11-16 : la moyenne par ingrédient donnait 10 à 799 recettes sur
+# 894 — un seul ingrédient introuvable suffit pourtant à bloquer la recette.
+_AVAIL_PENALTY = {"partial": 2.0, False: 4.0, "False": 4.0}
+_UNDOCUMENTED_PENALTY = 1.0   # non renseigné et absent du catalogue de prix
+
+
+def _ingredient_penalty(i, d, visiting):
+    if i.startswith("base_"):
+        # préparation maison : ce sont ses propres ingrédients qu'il faut trouver,
+        # plafonné à un ingrédient introuvable (elle s'achète toute faite en épicerie)
+        sub = d["recipes"].get(i)
+        if sub is None or i in visiting:
+            return 0.0
+        return min(_AVAIL_PENALTY[False],
+                   sum(_ingredient_penalty(j, d, visiting | {i}) for j in set(_get_ings(sub))))
+    v = d["avail"].get(i, {}).get("available_in_france")
+    if v in (True, "True"):
+        return 0.0
+    if v in _AVAIL_PENALTY:
+        return _AVAIL_PENALTY[v]
+    return 0.0 if resolve_catalog_key(i, d["catalog"]) else _UNDOCUMENTED_PENALTY
+
+
 def _d_accessibility(r, d):
     ings = _get_ings(r)
     if not ings: return 7.0
-    m = {"True": 10.0, True: 10.0, "partial": 6.0, "False": 2.0, False: 2.0}
-    scores = []
-    for i in ings:
-        v = d["avail"].get(i, {}).get("available_in_france")
-        if v in m:
-            scores.append(m[v])
-        elif i.startswith("base_"):
-            scores.append(8.0)       # préparation maison
-        else:
-            # Disponibilité non documentée (~96 % du graphe) : présent au
-            # catalogue de prix grande surface → courant ; sinon incertain.
-            scores.append(8.0 if resolve_catalog_key(i, d["catalog"]) else 5.0)
-    return round(sum(scores) / len(scores), 2)
+    penalty = sum(_ingredient_penalty(i, d, frozenset()) for i in set(ings))
+    return round(max(0.0, 10.0 - penalty), 2)
 
 def _d_cost(r, d):
     # Coût réellement consommé (prices_catalog), pas un forfait par ingrédient.
