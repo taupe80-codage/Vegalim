@@ -713,7 +713,7 @@ function ShoppingView({shopping, checked, fridgeIds, fridgeQtys, fridgeSufficien
           <div className="shopping-stat"><span className="shopping-stat-val">{total}</span><span className="shopping-stat-lbl">articles</span></div>
           <div className="shopping-stat shopping-stat--done"><span className="shopping-stat-val">{done}/{total}</span><span className="shopping-stat-lbl">obtenus</span></div>
           {nFridge>0&&<div className="shopping-stat shopping-stat--frigo"><span className="shopping-stat-val">{nFridge}</span><span className="shopping-stat-lbl">◈ frigo</span></div>}
-          {estimated_cost>0&&<div className="shopping-stat shopping-stat--cost"><span className="shopping-stat-val">~{estimated_cost.toFixed(2)} €</span><span className="shopping-stat-lbl">estimé</span></div>}
+          {estimated_cost>0&&<div className="shopping-stat shopping-stat--cost"><span className="shopping-stat-val">{nUnknown>0?'≥ ':'~'}{estimated_cost.toFixed(2)} €</span><span className="shopping-stat-lbl">{nUnknown>0?'estimé, incomplet':'estimé'}</span></div>}
           {nUnknown>0&&<div className="shopping-stat shopping-stat--warn" title={`${nUnknown} ingrédient(s) sans prix dans le catalogue`}><span className="shopping-stat-val">⚠ {nUnknown}</span><span className="shopping-stat-lbl">prix inconnus</span></div>}
         </div>
         <div className="shopping-progress-wrap">

@@ -705,8 +705,10 @@ def recipe_cost(recipe: dict, catalog: dict | None = None,
     Coût consommé d'une recette.
 
     Returns:
-        {total_eur, per_portion_eur, n_priced, n_unknown, total_weight_g, details}
+        {total_eur, per_portion_eur, n_priced, n_unknown, unknown, total_weight_g, details}
         Les lignes sans quantité numérique ou en suggestion de service sont ignorées.
+        `unknown` : ids des ingrédients sans prix, y compris ceux des sous-recettes
+        (une sous-recette en partie chiffrée compte ses ingrédients connus seulement).
     """
     from backend.core.data_io import load_prices_catalog, load_recipes
 
@@ -718,6 +720,7 @@ def recipe_cost(recipe: dict, catalog: dict | None = None,
     total = weight = 0.0
     n_priced = n_unknown = 0
     details = []
+    unknown: list[str] = []
     for item in recipe.get("composition", []) or []:
         if not isinstance(item, dict) or (item.get("meta") or {}).get("role") == "serving_suggestion":
             continue
@@ -730,8 +733,14 @@ def recipe_cost(recipe: dict, catalog: dict | None = None,
         if norm and norm[1] in ("g", "ml"):
             weight += norm[0]
         cost = ingredient_cost_eur(key, qty, unit, catalog, recipe_index, _visiting)
+        if key.startswith("base_") and key in recipe_index and key not in _visiting:
+            sub_unknown = recipe_cost(recipe_index[key], catalog, recipe_index,
+                                      _visiting | {key})["unknown"]
+            unknown.extend(i for i in sub_unknown if i not in unknown)
         if cost is None:
             n_unknown += 1
+            if key not in unknown and not (key.startswith("base_") and key in recipe_index):
+                unknown.append(key)
             continue
         n_priced += 1
         total += cost
@@ -744,6 +753,7 @@ def recipe_cost(recipe: dict, catalog: dict | None = None,
         "per_portion_eur": round(total / servings, 2),
         "n_priced":        n_priced,
         "n_unknown":       n_unknown,
+        "unknown":         unknown,
         "total_weight_g":  round(weight, 1),
         "details":         details,
     }

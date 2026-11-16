@@ -523,6 +523,16 @@ export default function RecipeDetailPage() {
               </div>
             ))}
 
+            {recipe.price_data?.per_portion_eur > 0 && (
+              <div className="stat-box" title={recipe.price_data.label}>
+                <span className="stat-label">Coût estimé</span>
+                <span className="stat-value">
+                  {recipe.price_data.complete === false ? '≥ ' : '~'}
+                  {recipe.price_data.per_portion_eur.toFixed(2).replace('.', ',')} € / pers.
+                </span>
+              </div>
+            )}
+
             {recipe.difficulty && (() => {
               const raw  = recipe.difficulty;
               const lvl  = typeof raw === 'number' ? raw
@@ -551,6 +561,12 @@ export default function RecipeDetailPage() {
               );
             })()}
           </div>
+          {recipe.price_data?.unknown_ingredients?.length > 0 && (
+            <p className="price-unknown-note" role="note">
+              ⚠ Prix inconnu pour {recipe.price_data.unknown_ingredients.map(u => u.name_fr).join(', ')} :
+              le coût estimé est incomplet.
+            </p>
+          )}
 
           {/* Boutons d'action */}
           <div style={{ display:'flex', gap:10, flexWrap:'wrap', marginTop: 16 }}>
