@@ -552,10 +552,19 @@ def is_component_recipe(recipe: dict) -> bool:
             or str(recipe.get("dish_type") or "").lower() in COMPONENT_DISH_TYPES)
 
 
+# Entrée du filtre « type de plat » qui couvre aussi d'autres dish_type
+# (même table que DISH_TYPE_FAMILIES dans frontend/src/constants.js)
+DISH_TYPE_FAMILIES: dict[str, frozenset[str]] = {
+    "bread": frozenset({"pastry"}),
+}
+
+
 def matches_dish_types(recipe: dict, wanted: set[str]) -> bool:
     """Filtre « type de plat » : la valeur « base » (Préparations de base)
-    regroupe toutes les sous-recettes, quel que soit leur dish_type."""
-    if str(recipe.get("dish_type") or "").lower() in wanted:
+    regroupe toutes les sous-recettes, quel que soit leur dish_type ;
+    « bread » couvre aussi les viennoiseries."""
+    dish = str(recipe.get("dish_type") or "").lower()
+    if dish in wanted or any(dish in DISH_TYPE_FAMILIES.get(w, ()) for w in wanted):
         return True
     return "base" in wanted and is_component_recipe(recipe)
 

@@ -15,10 +15,16 @@ export const DISH_OPTIONS = [
   { value: 'dessert',   label: '🍰 Dessert' },
   { value: 'breakfast', label: '🌅 Petit-déjeuner' },
   { value: 'snack',     label: '⚡ Snack' },
+  { value: 'beverage',  label: '🥤 Boisson' },
+  { value: 'bread',     label: '🥖 Pain / Viennoiserie' },
   { value: 'sauce',     label: '🥫 Sauce / Condiment' },
   // Toutes les sous-recettes (béchamel, laits maison, pâtes…), masquées sinon
   { value: 'base',      label: '🧂 Préparations de base' },
 ];
+
+// Une entrée du filtre qui couvre aussi d'autres dish_type (même table que
+// data_io.DISH_TYPE_FAMILIES côté backend)
+const DISH_TYPE_FAMILIES = { bread: ['pastry'] };
 
 // Sous-recettes : même règle que data_io.is_component_recipe (backend)
 const COMPONENT_DISH_TYPES = new Set(['sauce', 'condiment', 'paste', 'base', 'ingredient', 'broth', 'roux', 'dairy']);
@@ -33,7 +39,9 @@ export function isComponentRecipe(recipe) {
 export function matchesDishFilters(recipe, dishFilters) {
   const wanted = [...(dishFilters || [])];
   if (wanted.length === 0) return !isComponentRecipe(recipe);
-  return wanted.includes(recipe?.dish_type)
+  const type = recipe?.dish_type;
+  return wanted.includes(type)
+    || wanted.some(w => (DISH_TYPE_FAMILIES[w] || []).includes(type))
     || (wanted.includes('base') && isComponentRecipe(recipe));
 }
 

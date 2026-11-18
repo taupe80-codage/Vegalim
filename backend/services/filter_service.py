@@ -70,48 +70,59 @@ except ImportError:
     ALLOWED_DIETS:  frozenset[str] = frozenset()
 
 
-# ── Ingrédients marqueurs de saison ─────────────────────────────────────────
-# Source : calendrier de saisonnalité France métropolitaine (ADEME / Agrilocal).
-# Logique : une recette appartient à une saison si elle contient AU MOINS UN
-# ingrédient marqueur. Les ingrédients neutres (légumineuses, céréales, épices)
-# ne déclenchent aucune saison — ils apparaissent dans tous les résultats.
-_SEASON_MARKERS: dict[str, frozenset[str]] = {
-    "spring": frozenset({
-        "asparagus", "spinach", "pea", "radish", "artichoke", "rhubarb",
-        "strawberry", "fraise", "asperge", "epinard", "petit_pois",
-        "radis", "artichaut", "rhubarbe", "watercress", "cresson",
-        "sorrel", "oseille", "lettuce", "laitue", "fennel_bulb",
-        "broad_bean", "feve",
-    }),
-    "summer": frozenset({
-        "tomato", "zucchini", "eggplant", "bell_pepper", "corn", "cucumber",
-        "basil", "watermelon", "peach", "apricot", "cherry", "fig",
-        "raspberry", "blueberry", "blackcurrant", "green_bean", "snap_pea",
-        "tomate", "courgette", "aubergine", "poivron", "mais", "concombre",
-        "basilic", "pasteque", "peche", "abricot", "cerise", "figue",
-        "framboise", "myrtille", "cassis", "haricot_vert",
-        "nectarine", "plum", "prune", "melon",
-    }),
-    "autumn": frozenset({
-        "pumpkin", "squash", "butternut", "apple", "pear", "mushroom",
-        "grape", "chestnut", "quince", "pear", "leek", "parsnip",
-        "citrouille", "courge", "butternut_squash", "pomme", "poire",
-        "champignon", "shiitake", "raisin", "chataigne", "marron",
-        "coing", "poireau", "panais", "broccoli", "cauliflower",
-        "brocoli", "chou_fleur", "sweet_potato", "patate_douce",
-        "fig", "figue", "plum", "prune", "celery_root", "celeriac",
-    }),
-    "winter": frozenset({
-        "orange", "clementine", "grapefruit", "lemon", "kiwi",
-        "carrot", "turnip", "rutabaga", "celery", "parsnip",
-        "brussel_sprout", "cabbage", "red_cabbage", "sauerkraut",
-        "orange", "clementine", "pamplemousse", "citron", "kiwi",
-        "carotte", "navet", "rutabaga", "celeri", "panais",
-        "chou_bruxelles", "chou", "chou_rouge", "choucroute",
-        "pomelo", "mandarine", "persimmon", "kaki",
-        "leek", "poireau", "endive", "witloof",
-    }),
+# ── Saisons (filtre « saison ») ─────────────────────────────────────────────
+# Mois de chaque saison ; une recette en est si, sur l'un de ces mois, au moins
+# SEASON_MIN_RATIO de ses ingrédients saisonniers sont de saison (calendrier
+# seasonality.json, France métropolitaine). Sans ingrédient saisonnier connu
+# (légumineuses, céréales, épices…), elle apparaît en toute saison.
+SEASON_MONTHS: dict[str, tuple[int, ...]] = {
+    "spring": (3, 4, 5),
+    "summer": (6, 7, 8),
+    "autumn": (9, 10, 11),
+    "winter": (12, 1, 2),
 }
+SEASON_MIN_RATIO = 0.5
+
+
+# ── Cuisines (filtre « origine ») ────────────────────────────────────────────
+# Entrée du menu d'origines (RecipeFiltersShared.ORIGIN_GROUPS) → cuisines des
+# recettes qu'elle couvre en plus d'elle-même et de ses régions (french →
+# french_breton…). Sans ce rattachement, 175 plats (libanais, sichuanais,
+# nigérians, jamaïcains…) n'étaient atteignables par aucune entrée du menu.
+CUISINE_FAMILIES: dict[str, frozenset[str]] = {
+    "levantine":      frozenset({"lebanese", "syrian", "palestinian", "israeli",
+                                 "middle_eastern", "iraqi"}),
+    "greek":          frozenset({"cypriot"}),
+    "chinese":        frozenset({"sichuan"}),
+    "british":        frozenset({"irish"}),
+    "nordic":         frozenset({"swedish", "finnish", "danish", "norwegian", "scandinavian"}),
+    "algerian":       frozenset({"maghrebi"}),
+    "uzbek":          frozenset({"kazakh"}),
+    "malaysian":      frozenset({"singaporean"}),
+    "african":        frozenset({"south_african"}),
+    "west_african":   frozenset({"nigerian", "senegalese", "ghanaian"}),
+    "east_african":   frozenset({"kenyan", "ugandan"}),
+    "ocean_indien":   frozenset({"mauritian", "reunionese", "seychellois", "malagasy"}),
+    "american":       frozenset({"creole"}),
+    "caribbean":      frozenset({"jamaican", "trinidadian", "dominican", "barbadian", "cuban"}),
+    "latin_american": frozenset({"andean", "paraguayan", "salvadoran", "colombian",
+                                 "chilean", "venezuelan"}),
+    "international":  frozenset({"asian"}),
+}
+
+
+def cuisine_matches(wanted: str, cuisine: str, country: str = "") -> bool:
+    """La cuisine d'une recette relève-t-elle de l'entrée de menu `wanted` ?
+
+    Égalité, région (« french_breton » pour « french »), famille
+    (CUISINE_FAMILIES) ou pays d'origine (« france »). Plus de recherche de
+    sous-chaîne : « american » attrapait « latin_american », « indian »
+    aurait attrapé « indian_ocean ».
+    """
+    return (cuisine == wanted
+            or cuisine.startswith(wanted + "_")
+            or cuisine in CUISINE_FAMILIES.get(wanted, ())
+            or (bool(country) and country == wanted))
 
 # ── Cache health_scores (calculé depuis nutrition graph) ─────────────────────
 #
@@ -709,8 +720,6 @@ def apply_filters(
     if cuisine:
         active_cuisines.add(cuisine.lower())
     if active_cuisines:
-        # Valeurs anglaises (« french », « italian ») ; le pays d'origine
-        # (« france », « italy ») est aussi accepté : « France » renvoyait 0.
         def _cuisine_match(r: dict) -> bool:
             origin = r.get("origin", {})
             c_val = (
@@ -719,7 +728,7 @@ def apply_filters(
                 or ""
             ).lower()
             country = (origin.get("country") or "").lower()
-            return any(c in c_val or c == country for c in active_cuisines)
+            return any(cuisine_matches(c, c_val, country) for c in active_cuisines)
         result = [r for r in result if _cuisine_match(r)]
 
     if technique:
@@ -738,28 +747,28 @@ def apply_filters(
         result = [r for r in result
                   if r.get("difficulty_level", "").lower() == diff_norm]
 
-    # ── Saison — détection par ingrédients marqueurs ─────────────────────────
+    # ── Saison — calendrier de saisonnalité (seasonality.json) ───────────────
+    # L'ancienne liste de marqueurs (« tomato », « leek »…) ne reconnaissait
+    # aucun id CIQUAL (« tomato_raw_ripe ») : chaque saison renvoyait tout le
+    # catalogue. Même calcul que le reste de l'appli (season_ratio).
     if season:
         _SEASON_ALIASES = {
             "printemps": "spring", "été": "summer", "ete": "summer",
             "automne": "autumn", "fall": "autumn", "hiver": "winter",
         }
         season_key = _SEASON_ALIASES.get(season.lower(), season.lower())
-        markers = _SEASON_MARKERS.get(season_key, set())
-        all_markers = frozenset().union(*_SEASON_MARKERS.values())
-        if markers:
-            def _ing_bases(recipe: dict) -> list[str]:
-                return [
-                    str(i.get("ingredient", "") if isinstance(i, dict) else i).split("/")[0].lower()
-                    for i in (recipe.get("composition") or [])
-                ]
+        months = SEASON_MONTHS.get(season_key)
+        if months:
+            from backend.engine.rule_engine.seasonality import season_ratio
+
             def _recipe_season_ok(recipe: dict) -> bool:
-                bases = _ing_bases(recipe)
-                # Recette neutre (aucun marqueur saisonnier) → toutes saisons
-                if not any(b in all_markers for b in bases):
+                ratios = [season_ratio(recipe, m) for m in months]
+                # Recette neutre (aucun ingrédient saisonnier connu) → toutes saisons
+                if ratios[0] is None:
                     return True
-                # Sinon : doit contenir au moins un marqueur de la saison demandée
-                return any(b in markers for b in bases)
+                # Sinon : au moins la moitié de ses ingrédients saisonniers de
+                # saison sur l'un des mois de la saison demandée
+                return max(ratios) >= SEASON_MIN_RATIO
             result = [r for r in result if _recipe_season_ok(r)]
 
     total = len(result)
