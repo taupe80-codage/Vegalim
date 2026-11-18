@@ -500,6 +500,89 @@ _GENERIC_NAME_FR: dict[str, str] = {
 }
 
 
+# Noms d'affichage d'entrées du dictionnaire dont le canonical_name_fr est un
+# libellé de table nutritionnelle (CNF québécois, CIQUAL) faux ou maladroit en
+# cuisine : « cassier (ben oléifère) » pour le pilon de moringa, « bleuet »,
+# « gourganes », « crème sure », « Indien pain naan », ou une forme perdue
+# (« tofu » pour le tofu fumé, « abricot » pour l'abricot sec). Le dictionnaire
+# (et donc la nutrition) n'est pas modifié ; le nom anglais reste indexé.
+_DISPLAY_NAME_FR: dict[str, str] = {
+    "agar_dried": "agar-agar",
+    "allspice_powder": "piment de la Jamaïque en poudre",
+    "apricot_pitted_dried": "abricot sec",
+    "belgium_endive_raw": "endive",
+    "black_eyed_peas_cowpeas_boiled": "haricot à œil noir",
+    "black_eyed_peas_cowpeas_dried": "haricot à œil noir",
+    "blueberry_raw": "myrtille",
+    "broadbeans_fava_beans_boiled_fresh": "fève",
+    "broadbeans_fava_beans_raw_dried": "fève sèche",
+    "broadbeans_fava_beans_raw_fresh": "fève",
+    "buckwheat_groats_roasted_dried_dry": "kasha (sarrasin grillé)",
+    "chanterelle_mushroom_raw": "girolle",
+    "coconut_flesh_dried": "noix de coco râpée",
+    "coconut_milk_plant": "lait de coco",
+    "coconut_oil_plant": "huile de coco",
+    "condensed_milk_concentrated_sweetened_canned_whole": "lait concentré sucré",
+    "condensed_milk_concentrated_unsweetened_whole": "lait concentré non sucré",
+    "cranberry_dried_sweetened": "cranberries séchées",
+    "cream_sour_18pct": "crème aigre",
+    "cream_sour_fermented": "crème aigre",
+    "sour_cream_fermented_18pct": "crème aigre",
+    "dark_chocolate_40_cocoa_baking_tablet": "chocolat noir pâtissier",
+    "drumstick_horseradish_tree_raw_pod": "pilon de moringa",
+    "egg_pasta_raw_dried": "pâtes aux œufs",
+    "european_chestnuts_sweet_cooked": "châtaignes cuites",
+    "flaxseed_linseed_ground": "graines de lin moulues",
+    "freekeh_immature_wheat_raw_cracked_seed": "freekeh (blé vert concassé)",
+    "goat_cheese_log": "bûche de chèvre",
+    "green_chili_pepper_spice_canned": "piment vert en conserve",
+    "green_peas_boiled_frozen_salted": "petits pois",
+    "green_peas_raw": "petits pois",
+    "hemp_seed_hulled": "graines de chanvre décortiquées",
+    "hominy_boiled_flour_canned": "maïs hominy",
+    "hot_dog_bun_pre_packaged": "pain à hot-dog",
+    "indian_bread_naan": "pain naan",
+    "jalapeno_pepper_raw": "piment jalapeño",
+    "lemon_grass_fresh_herb": "citronnelle",
+    "lemon_peel_raw": "zeste de citron",
+    "lingonberry": "airelle rouge",
+    "lotus_raw_root": "racine de lotus",
+    "mung_bean_sprouts_raw_seed_sprouted": "pousses de haricot mungo",
+    "mustard_raw_leaf": "feuilles de moutarde",
+    "nutritional_yeast_flakes": "levure nutritionnelle en paillettes",
+    "oriental_daikon_radish_raw": "radis daikon",
+    "oyster_mushroom_raw": "pleurote",
+    "peanut_butter_natural_plant": "beurre de cacahuète",
+    "peanut_butter_plant_regular": "beurre de cacahuète",
+    "peanut_oil_plant": "huile d'arachide",
+    "pine_nuts_raw": "pignons de pin",
+    "porcini_mushroom_raw": "cèpe",
+    "puff_pastry_vegetable_fat_raw_paste_plant": "pâte feuilletée végétale",
+    "pumpkin_squash_raw_seed": "graines de courge",
+    "red_hot_chili_pepper_raw": "piment rouge fort",
+    "red_hot_chili_pepper_spice_dried": "piment rouge séché",
+    "roquefort_sheep": "roquefort",
+    "shiitake_mushroom_dried": "champignon shiitake séché",
+    "soy_sauce_shoyu_reduced_sodium": "sauce soja (shoyu)",
+    "soy_sauce_tamari": "tamari",
+    "spinach_raw_baby": "jeunes pousses d'épinard",
+    "sweet_corn_on_the_cob_cooked": "épi de maïs doux",
+    "swiss_chard_raw": "blette",
+    "tempeh_tempe_raw_fermented": "tempeh",
+    "tofu_smoked_pre_packaged": "tofu fumé",
+    "tomato_ketchup_catsup_pre_packaged_normal": "ketchup",
+    "tomme_de_savoie_cow": "tomme de Savoie",
+    "walnut_shelled_dried": "cerneaux de noix",
+    "watermelon_raw": "pastèque",
+    "wheat_all_purpose_flour_unenriched_unbleached": "farine de blé",
+    "white_bread_baguette": "baguette",
+    "white_glutinous_rice_flour": "farine de riz gluant",
+    "white_glutinous_rice_seed_dried": "riz gluant",
+    "yogurt_greek_plain_4pct": "yaourt grec",
+    "yogurt_greek_style_plain_8pct": "yaourt grec",
+}
+
+
 # ── Nom complet depuis l'axe « forme » ────────────────────────────────────────
 # Le dictionnaire nomme l'ingrédient de base et porte la forme dans un axe :
 # rice_flour = « riz » + forme « farine », olive_oil_plant = « olive » + « huile ».
@@ -539,6 +622,8 @@ _TOMATO_FORMS = {"pâte": "concentré de tomate", "sauce": "sauce tomate",
 
 def full_name_fr(entry: dict, iid: str = "") -> str:
     """Nom français complet d'une entrée du dictionnaire (nom de base + forme)."""
+    if iid in _DISPLAY_NAME_FR:
+        return _DISPLAY_NAME_FR[iid]
     name = entry.get("canonical_name_fr") or _humanize(iid)
     axes = entry.get("axes_fr") or {}
     form = axes.get("forme", "")

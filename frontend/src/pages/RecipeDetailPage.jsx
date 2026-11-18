@@ -27,6 +27,11 @@ const INGREDIENT_STATE_IMPLICIT = new Set([
   'active', 'added_at_end',
 ]);
 
+// État déjà dit par le nom : pas de « Abricot sec (poids sec) »
+const INGREDIENT_STATE_REDUNDANT = {
+  dried: /\bsecs?\b|\bsèches?\b|séch/i,
+};
+
 const INGREDIENT_STATE_FR = {
   active:            'actif',
   added_at_end:      'ajouté en fin',
@@ -36,6 +41,7 @@ const INGREDIENT_STATE_FR = {
   cold:              'froid',
   cooked:            'cuit',
   drained:           'égoutté',
+  dried:             'poids sec',
   dry:               'sec',
   firm:              'ferme',
   fresh:             'frais',
@@ -672,9 +678,14 @@ export default function RecipeDetailPage() {
                 || translations[iidUnd]
                 || translations[iidFirst]
                 || translations[nameStr];
-              const name = rawResolved
-                || (metaName ? metaName.charAt(0).toUpperCase() + metaName.slice(1) : null)
-                || nameStr;
+              // Majuscule initiale seulement : text-transform: capitalize donnait
+              // « Huile De Noix De Coco ».
+              const name0 = (rawResolved || metaName || nameStr).replace(/_/g, ' ');
+              const name = name0.charAt(0).toUpperCase() + name0.slice(1);
+              const st = ing.meta?.state;
+              const stateFr = st && !INGREDIENT_STATE_IMPLICIT.has(st)
+                && !INGREDIENT_STATE_REDUNDANT[st]?.test(name)
+                ? (INGREDIENT_STATE_FR[st] ?? st) : null;
               let qtyStr   = '';
               let equivStr = '';
               if (ing.quantity) {
@@ -709,12 +720,10 @@ export default function RecipeDetailPage() {
                       <button type="button" className="ing-subrecipe-link"
                         onClick={() => navigate(`/recette/${subRecipeId}`)}
                         title="Voir la recette de cette préparation">
-                        {name.replace(/_/g, ' ')} ↗
+                        {name} ↗
                       </button>
-                    ) : name.replace(/_/g, ' ')}
-                    {ing.meta?.state && !INGREDIENT_STATE_IMPLICIT.has(ing.meta.state) && (
-                      <span className="ing-meta"> ({INGREDIENT_STATE_FR[ing.meta.state] ?? ing.meta.state})</span>
-                    )}
+                    ) : name}
+                    {stateFr && <span className="ing-meta"> ({stateFr})</span>}
                   </span>
                 </li>
               );
