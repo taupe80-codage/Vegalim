@@ -162,7 +162,8 @@ ARTICLES: dict[str, list[str]] = {
     "side_kacha_sarrasin_champign": ["en:Kasha"],
     "salad_olivier_vegetarienne_8": ["en:Olivier salad"],
     "beverage_lassi_mangue_6c28f1": ["en:Lassi"],
-    "beverage_agua_fresca_pastequ": ["en:Agua fresca"],
+    # « en:Agua fresca » est illustré par de l'horchata : écarté
+    "beverage_agua_fresca_pastequ": [],
     "brkf_chilla_pois_chiches_2f9": ["en:Cheela", "en:Chilla (food)"],
     "main_tomates_oeufs_sautes_5f": ["en:Stir-fried tomato and scrambled eggs"],
     "side_haricots_verts_sichuan_": ["en:Dry-fried green beans"],

@@ -11,7 +11,6 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `achards-de-legumes-mauriciens` | crd! | CC BY 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Achards_de_l%C3%A9gumes.jpg) |
 | `adas-polo-riz-persan-aux-lentilles-et-aux-dattes` | MRG90 | CC BY-SA 4.0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=35492806) |
 | `agua-de-tamarindo-eau-fraiche-mexicaine-au-tamarin` | stu_spivack | CC BY-SA 2.0 | [flickr](https://www.flickr.com/photos/35034346243@N01/3853099826) |
-| `agua-fresca-de-pasteque-et-citron-vert` | Original uploader was ManekiNeko at en.wikipedia | Public domain | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ManekiNeko_horchata_jar.jpg) |
 | `ajo-blanco-de-malaga-aux-amandes-et-au-raisin-vegan` | Popo le Chien | CC0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ajo_blanco.jpg) |
 | `akara-beignets-de-doliques-a-il-noir` | Linason Blessing | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AKARA.jpg) |
 | `alfajores-au-dulce-de-leche` | Mbulig | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Alfajor_Guaymallen_de_Dulce_de_Leche_-_2025_(1).jpg) |
@@ -220,7 +219,7 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `houmous-de-betterave-au-cumin` | TDP34 | CC BY 4.0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=162863082) |
 | `houmous-express-aux-pois-chiches-en-conserve` | Popo le Chien | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Houmous.jpg) |
 | `huevos-rancheros` | jasonlam | CC BY-SA 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:04_Huevos_Rancheros_-_Mesa_Coyoacan.jpg) |
-| `humita-en-olla-argentine-mais-et-courge-vegan` | inconnu | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Humitas.jpg) |
+| `humita-en-olla-argentine-mais-et-courge-vegan` | Se.Xauxa (Wikipédia en espagnol) | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Humitas.jpg) |
 | `humitas-peruviennes-au-fromage-frais-en-feuilles-de-mais` | JordiCuber | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Humitas_(1).jpg) |
 | `idli-galettes-de-riz-vapeur-fermentees` | OdetomyLife | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Idli_and_Medu_Vada.JPG) |
 | `ile-flottante` | Marianne Casamance | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Agroparc_-_food_truck_ile_flottante_pralin%C3%A9.jpg) |
