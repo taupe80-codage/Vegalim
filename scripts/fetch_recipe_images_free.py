@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 import threading
@@ -57,11 +58,16 @@ UNMATCHED = OUT / "_unmatched.json"
 # aux legumes avait ete retenue une douzaine de fois.
 BLOCKLIST = OUT / "_blocklist.json"
 
-UA = "VegalimImageBot/1.0 (https://github.com/taupe80-codage/Vegalim; taupe80@gmail.com)"
+# Agent descriptif sans donnée personnelle. Wikimedia recommande un moyen de
+# contact : le renseigner, si on le souhaite, dans la variable d'environnement
+# VEGALIM_UA_CONTACT (adresse ou URL), jamais dans le code versionné.
+_CONTACT = os.environ.get("VEGALIM_UA_CONTACT", "").strip()
+_SUFFIX = f"; {_CONTACT}" if _CONTACT else ""
+UA = f"VegalimImageBot/1.0 (recipe photo lookup on Wikimedia Commons/Openverse{_SUFFIX})"
 # Flickr (ou Openverse heberge la plupart de ses images) renvoie 403 des que
 # le User-Agent contient « Bot ». Wikimedia, lui, exige un agent descriptif :
 # on garde donc un agent par usage.
-UA_DOWNLOAD = "Vegalim/1.0 (+https://github.com/taupe80-codage/Vegalim; taupe80@gmail.com)"
+UA_DOWNLOAD = f"VegalimPhotos/1.0 (recipe photo download{_SUFFIX})"
 TARGET_WIDTH = 1080
 MIN_WIDTH = 500
 DELAY = 0.7  # politesse envers Commons et Openverse
