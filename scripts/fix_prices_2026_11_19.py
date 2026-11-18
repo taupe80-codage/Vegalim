@@ -59,6 +59,19 @@ PRICE_FIXES: dict[str, dict[str, float]] = {
     "tofu": {"bloc 400g": 2.90},
     # shiitaké frais : 15 €/kg (bio, colis 1 kg), gros 10,86 €/kg → barquette
     "shiitake_mushroom": {"barquette 100g": 2.30},
+    # ── 2e passe : entrées hors des 70 premières, repérées par un prix au kilo
+    #    ou une ligne de recette hors norme (> 1,20 €/portion) ──
+    # gnocchi à poêler 500 g : 1,55 à 1,79 € (Carrefour Extra), 2,99 à 3,45 € (Lustucru)
+    "gnocchi": {"sachet 500g": 1.80},
+    # cottage cheese 200 g : 1,79 € (Lidl), 2,49 € (Carrefour, Danone)
+    "cottage_cheese": {"pot 200g": 1.85},
+    # purée d'açaí surgelée : 1,50 à 2 € les 100 g (lots de 4 à 64 sachets)
+    "acai": {"sachet surgelé 100g": 2.00},
+    # riz basmati 1 kg : 2,55 € (Carrefour Extra) à 3,89 € (Taureau Ailé)
+    "basmati_rice": {"sachet 1kg": 2.55},
+    # choucroute crue : 0,99 € en promotion (Intermarché, Leclerc, nov. 2026) ;
+    # pas de prix hors promotion fiable → estimation ≈ 4,50 €/kg
+    "sauerkraut": {"bocal 400g": 1.80},
 }
 
 # paquets retirés d'une entrée (clé → libellés)
