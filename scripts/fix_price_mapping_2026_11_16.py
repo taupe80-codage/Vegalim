@@ -324,7 +324,7 @@ MAP_FIXES: dict[str, str] = {
     "sauerkraut_canned_low_sodium": "sauerkraut",
     "serrano_pepper_raw": "chili_pepper",
     "sesame_seed_hulled_dried": "sesame",
-    "shiitake_mushroom_dried": "shiitake_mushroom",
+    "shiitake_mushroom_dried": "shiitake_dried",    # entrée propre depuis fix_prices_2026_11_19
     "sour_cherry_canned_in_water": "sour_cherry",
     "sour_cherry_raw": "sour_cherry",
     "soybean_boiled_dried": "soybean",

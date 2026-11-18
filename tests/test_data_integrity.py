@@ -957,6 +957,7 @@ def test_ingredients_des_recettes_chiffres():
     ("rose_water", "water"),
     ("truffle_oil", "oil"),
     ("porcini_mushroom_raw", "mushroom"),
+    ("shiitake_mushroom_dried", "shiitake_mushroom"),   # séché ≈ 5 fois le prix du frais au gramme
 ])
 def test_liens_de_prix_faux_ne_reviennent_pas(ingredient, interdit):
     from backend.core.data_io import load_prices_catalog, resolve_catalog_key
