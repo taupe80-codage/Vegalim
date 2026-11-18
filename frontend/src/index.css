@@ -1417,6 +1417,8 @@ html[data-theme="dark"] .health-child-pill--origin.health-child-pill--active-ori
   justify-content: center;
   border: 1px solid var(--brd);
 }
+/* visuel de repli (sans photo) : à la hauteur du cadre, emoji centré */
+.detail-hero .recipe-image { height: 100% !important; border-bottom: 0; }
 .detail-header-content { display: flex; flex-direction: column; flex: 1; }
 .detail-title {
   font-family: 'Geist', system-ui, sans-serif;

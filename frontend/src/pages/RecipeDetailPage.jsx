@@ -429,7 +429,9 @@ export default function RecipeDetailPage() {
               />
             ) : null;
           })()}
-          <div style={{ display: getRecipeImageUrl(displayed) ? 'none' : 'block', height: '100%' }}>
+          {/* width: .detail-hero est un flex centré et le visuel n'a que des
+              enfants absolus : sans largeur, il s'écrasait à 0 px (cadre vide) */}
+          <div style={{ display: getRecipeImageUrl(displayed) ? 'none' : 'block', height: '100%', width: '100%' }}>
             <RecipeVisual recipe={displayed} size="large" />
           </div>
 
