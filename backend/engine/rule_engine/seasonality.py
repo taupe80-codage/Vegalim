@@ -37,11 +37,11 @@ SEASON_ID_ALIASES: dict[str, str] = {
     "kabocha_squash_raw": "kabocha_squash",
     "kale_raw": "kale", "curly_kale_raw": "kale",
     "mint_fresh_herb": "mint",
-    "button_mushroom_raw": "mushroom", "porcini_mushroom_raw": "mushroom",
-    "chanterelle_mushroom_raw": "mushroom", "oyster_mushroom_raw": "mushroom",
-    "shiitake_mushroom_raw": "shiitake_mushroom",
+    # Champignons sauvages seulement : champignon de Paris, pleurote et
+    # shiitake sont cultivés toute l'année (64 plats passaient pour d'automne)
+    "porcini_mushroom_raw": "mushroom", "chanterelle_mushroom_raw": "mushroom",
     "pomegranate_raw": "pomegranate",
-    "black_radish_raw": "radish",
+    "black_radish_raw": "black_radish", "red_radish_raw": "radish",
     "snow_peas_raw": "snow_pea",
     "spinach_raw_baby": "spinach", "spinach_raw_mature": "spinach",
     "spinach_cooked": "spinach",
@@ -66,6 +66,21 @@ SEASON_ID_ALIASES: dict[str, str] = {
     "carrot_raw": "carrot", "garlic_raw": "garlic",
     "onion_raw": "onion", "yellow_onion_raw": "onion", "white_onion_raw": "onion",
     "ginger_raw_root_fresh": "ginger",
+    # relecture du calendrier le 2026-11-19
+    # (scripts/ingredients/seasonality_review_2026_11_19.py)
+    "broccoli_raw": "broccoli", "swiss_chard_raw": "swiss_chard",
+    "green_chicory_raw": "chicory", "chicory_greens_raw_leaf": "chicory",
+    "orange_raw": "orange", "strawberry_raw": "strawberry",
+    "green_peas_raw": "green_peas", "broadbeans_fava_beans_raw_fresh": "fresh_fava_bean",
+    "rhubarb_raw_stem": "rhubarb",
+    "cherry_raw_with_skin": "cherry", "sour_cherry_raw": "cherry",
+    "raspberry_raw": "raspberry", "blueberry_raw": "blueberry", "bilberry_raw": "blueberry",
+    "fig_raw": "fig", "green_grape_raw": "grape", "chasselas_grape_raw": "grape",
+    "cantaloupe_melon_charentais_raw": "melon", "watermelon_raw": "watermelon",
+    "watercress_raw": "watercress", "napa_cabbage_raw": "napa_cabbage",
+    "arugula_raw": "arugula", "tomatillo_raw": "tomatillo",
+    "dandelion_greens_raw_leaf": "dandelion",
+    "collard_raw": "kale",
 }
 
 

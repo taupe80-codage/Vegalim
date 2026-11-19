@@ -44,6 +44,27 @@ def test_legumes_d_hiver_de_saison_en_janvier(iid):
     assert in_season(iid, 1) and not in_season(iid, 7)
 
 
+@pytest.mark.parametrize("iid, oui, non", [
+    # relecture du calendrier (seasonality_review_2026_11_19.py)
+    ("strawberry_raw", 5, 12), ("green_peas_raw", 6, 1), ("broccoli_raw", 9, 2),
+    ("orange_raw", 1, 7), ("french_bean_raw", 8, 3), ("spinach_raw_mature", 1, 7),
+    ("cauliflower_raw_flower", 10, 7), ("butternut_squash_raw", 1, 6),
+    ("black_radish_raw", 12, 6), ("porcini_mushroom_raw", 10, 4),
+])
+def test_calendrier_relu(iid, oui, non):
+    from backend.engine.rule_engine.seasonality import in_season
+    assert in_season(iid, oui) and not in_season(iid, non)
+
+
+@pytest.mark.parametrize("iid", ["button_mushroom_raw", "oyster_mushroom_raw",
+                                 "shiitake_mushroom_raw"])
+def test_champignons_cultives_sans_saison(iid):
+    # cultivés toute l'année : 64 plats au champignon de Paris passaient pour d'automne
+    from backend.engine.rule_engine.seasonality import season_key, _db, _is_seasonal
+    key = season_key(iid)
+    assert key is None or not _is_seasonal(_db()[key])
+
+
 def test_saison_en_francais():
     assert _ids(season="hiver") == _ids(season="winter")
 
