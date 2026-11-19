@@ -12,7 +12,10 @@ Relevés : prix affichés par carrefour.fr dans les résultats de recherche le 2
 (les fiches produit refusent la lecture automatique ; le prix dépend du magasin et du
 mode de retrait), sauf mention contraire dans « source ».
 
-Restent des ESTIMATIONS faute de relevé : oseille, fèves fraîches. Artichaut : seulement
+Seconde passe : prix au kilo suspects parmi les entrées hors des 70 principales (fécule
+de tapioca, échalote corrigées ; beurre de cacahuète, farine de riz, masa harina confirmés).
+
+Restent des ESTIMATIONS faute de relevé : oseille, fèves fraîches, paneer. Artichaut : seulement
 des fourchettes (gros, vente en ligne). Niébé en conserve : prix des haricots rouges en
 conserve, par analogie.
 
@@ -68,11 +71,24 @@ PACKAGES: dict[str, tuple[list[dict], str]] = {
                    f"{CARREFOUR} (grenaille ; Leclerc 1,99 €, primeur de Noirmoutier 5,98 €/kg)"),
     "artichoke": ([pkg(1, "piece", 2.00, "pièce ~350g")],
                   "fourchette 2026 : gros Rungis 1,50-3 €, vente en ligne 1,68-2,50 € la pièce"),
+    # ── Seconde passe : prix au kilo suspects hors des 70 entrées principales ──────────
+    "fecule_de_tapioca": ([pkg(500, "g", 4.99, "sachet 500g")],
+                          "relevé botanic.com 2026-11-19 (4,99 € ; leopold.fr 5,30 €) — était 4,52 € les 200 g"),
+    "shallot": ([pkg(500, "g", 1.29, "filet 500g")],
+                f"{CARREFOUR} (Simpl, origine France ; 250 g 0,99 à 1,29 €) — était 1,93 € les 250 g"),
+}
+
+# prix confirmés par un relevé : paquets inchangés, source notée
+CONFIRMED: dict[str, str] = {
+    "peanut_butter": f"{CARREFOUR} (Skippy 340 g 4,75 €)",
+    "rice_flour": "relevés 2026-11-19 : Leclerc Bio Village 3,23 €, Carrefour bio 4,40 € les 500 g",
+    "masa_harina": "relevés épiceries latino 2026-11-19 : Maseca 4,30 à 6,50 € le kg",
 }
 
 # sans relevé : marquées comme estimations
 ESTIMATES: dict[str, str] = {
     "sorrel": "estimation (aucun relevé trouvé)",
+    "paneer": "estimation (aucun relevé en France trouvé)",
     "fresh_fava_bean": "estimation (aucun relevé trouvé ; ~4,50 €/kg en cosses)",
 }
 
@@ -87,6 +103,10 @@ def apply(catalog: dict) -> list[str]:
             entry["price_source"] = source
             entry["last_updated"] = TODAY
             log.append(f"{key}: {old} → {[(p['qty'], p['price'], p['label']) for p in packages]}")
+    for key, source in CONFIRMED.items():
+        if catalog[key].get("price_source") != source:
+            catalog[key]["price_source"] = source
+            log.append(f"{key}: confirmé — {source}")
     for key, source in ESTIMATES.items():
         if catalog[key].get("price_source") != source:
             catalog[key]["price_source"] = source
