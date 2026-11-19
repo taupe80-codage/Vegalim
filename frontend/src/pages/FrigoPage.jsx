@@ -10,6 +10,7 @@ import { createPortal } from 'react-dom';
 import { frigo as frigoApi, ingredients as ingApi } from '../api';
 import { navigate } from '../Router';
 import { RecipeVisual } from '../components/RecipeCard';
+import { useSeasonNow, isInSeason } from '../seasonNow';
 import {
   useFilterState, FiltersBlock, localFilterRecipes,
 } from '../components/RecipeFiltersShared';
@@ -231,6 +232,7 @@ function FrigoResultCard({ result, getLabel }) {
   const pct      = Math.round(result.completeness * 100);
   const isFull   = result.n_missing === 0;
   const isAlmost = result.n_missing === 1;
+  const season   = useSeasonNow();
 
   return (
     <div
@@ -260,6 +262,10 @@ function FrigoResultCard({ result, getLabel }) {
           <h3 className="frigo-card-title">{result.title_fr || result.titles?.fr}</h3>
           {result.total_time_min && (
             <span className="frigo-card-time">⏱ {result.total_time_min} min</span>
+          )}
+          {isInSeason(result, season) && (
+            <span className="frigo-card-time recipe-season-chip"
+                  title="La plupart de ses fruits et légumes sont de saison ce mois-ci">🌱 De saison</span>
           )}
         </div>
 

@@ -5018,3 +5018,15 @@ a.credits-badge:hover { text-decoration: underline; }
   color: var(--grn);
   font-weight: 600;
 }
+
+/* ── Accueil : rubrique « De saison » ─────────────────────────────────────── */
+.season-strip { margin: 8px 0 28px; }
+.season-strip-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  margin-bottom: 14px;
+}
+.season-strip-title { margin: 0; font-size: 20px; color: var(--grn); }
+.season-strip-sub { font-size: 13px; color: var(--mut); }

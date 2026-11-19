@@ -150,6 +150,7 @@ BY_NAME.update({
     "farine_de_manioc": ["9570"],      # Farine de châtaigne (farine de féculent)
     "acai": ["13132"],                 # Myrtille surgelée (baie surgelée)
     "chutney": ["11008"],              # Ketchup (condiment sucré-acide)
+    "ketchup": ["11008"],              # Ketchup (entrée propre depuis ketchup_2026_11_20.py)
     "truffle_oil": ["17270"],          # Huile d'olive vierge extra (huile aromatisée)
     "prune_umeboshi": ["13100"],       # Prune, crue
     "vine_leaf": ["20059"], "taro_leaf": ["20059"],   # Épinard, cru (feuille)

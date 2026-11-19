@@ -52,3 +52,22 @@ def test_prix_estimes_signales():
     noms = [e["name_fr"] for e in estimate_price(IDX["soup_potage_oseille_0f7d29"])["estimated_ingredients"]]
     assert noms == ["oseille"]
     assert estimate_price(IDX["soup_gaspacho_provencal_f69228"])["estimated_ingredients"] == []
+
+
+def test_route_de_saison():
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    c = TestClient(app)
+    nov = c.get("/recettes/de-saison?month=11&limit=3").json()
+    assert nov["month"] == 11 and len(nov["results"]) == 3 and nov["total"] == len(nov["ids"])
+    assert "side_gratin_celeri_rave_noix_7a19e6" in nov["ids"]
+    assert "soup_gaspacho_provencal_f69228" not in nov["ids"]
+    assert all(r["seasonal_tag"] == "de_saison" for r in nov["results"])
+    assert c.get("/recettes/de-saison?month=13").status_code == 422
+
+
+def test_ketchup_n_est_plus_une_tomate():
+    from backend.core.data_io import load_prices_catalog, load_carbon_footprint, resolve_catalog_key
+    iid = "tomato_ketchup_catsup_pre_packaged_normal"
+    assert resolve_catalog_key(iid, load_prices_catalog()) == "ketchup"
+    assert resolve_catalog_key(iid, load_carbon_footprint()) == "ketchup"

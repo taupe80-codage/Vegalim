@@ -11,6 +11,7 @@ import { useState, useRef } from 'react';
 import { navigate } from '../Router';
 import { useFavorites } from '../FavoritesContext';
 import AddToPlanModal from './AddToPlanModal';
+import { useSeasonNow, isInSeason } from '../seasonNow';
 
 // ── Couleur accent par origine cuisine ────────────────────────────────────────
 
@@ -863,6 +864,7 @@ function BadgeMorePopover({ badges }) {
 
 export default function RecipeCard({ recipe, activeHealthFilters = new Set(), activeSubFilters = new Set(), isVeganFilter = false }) {
   const { toggle, isFavorite } = useFavorites();
+  const season = useSeasonNow();
   const isFav = isFavorite(recipe.id);
   const [showPlanModal, setShowPlanModal] = useState(false);
 
@@ -937,7 +939,7 @@ export default function RecipeCard({ recipe, activeHealthFilters = new Set(), ac
               <span className="recipe-meta-icon">🔥</span> {Math.round(kcal)} kcal
             </span>
           )}
-          {recipe.seasonal_tag === 'de_saison' && (
+          {isInSeason(recipe, season) && (
             <span className="recipe-meta-item recipe-season-chip"
                   title="La plupart de ses fruits et légumes sont de saison ce mois-ci">
               <span className="recipe-meta-icon">🌱</span> De saison
