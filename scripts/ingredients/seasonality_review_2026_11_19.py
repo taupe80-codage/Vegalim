@@ -59,6 +59,9 @@ NEW_ENTRIES: dict[str, list[int]] = {
     "arugula":         [3, 4, 5, 6, 9, 10],
     "tomatillo":       [7, 8, 9],
     "black_radish":    [1, 2, 3, 10, 11, 12],
+    # lot de recettes de printemps n17
+    "new_potato":      [4, 5, 6, 7],
+    "sorrel":          [4, 5, 6, 7, 8, 9, 10],
 }
 
 MONTHS_FIX: dict[str, list[int]] = {
@@ -77,6 +80,7 @@ MONTHS_FIX: dict[str, list[int]] = {
     "radish":         [3, 4, 5, 6, 7, 8],              # radis rose ; était mars-mai
     "mushroom":       [8, 9, 10, 11],                  # cèpe, girolle (sauvages) ; était sept-nov
     "dandelion":      [3, 4, 5],                       # était 12 mois
+    "artichoke":      [3, 4, 5, 6, 7, 8, 9],           # violet de Provence puis camus breton ; était mars-mai
 }
 
 _SEASONS = {"winter": {12, 1, 2}, "spring": {3, 4, 5}, "summer": {6, 7, 8}, "autumn": {9, 10, 11}}

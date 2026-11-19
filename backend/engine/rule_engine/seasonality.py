@@ -81,6 +81,8 @@ SEASON_ID_ALIASES: dict[str, str] = {
     "arugula_raw": "arugula", "tomatillo_raw": "tomatillo",
     "dandelion_greens_raw_leaf": "dandelion",
     "collard_raw": "kale",
+    "artichoke_raw": "artichoke", "new_potato_raw": "new_potato",
+    "dock_sorrel_raw": "sorrel",
 }
 
 
