@@ -33,7 +33,8 @@
   /* Texte */
   --txt:      #0d1f13;
   --txt2:     #2d5c3e;
-  --mut:      #5a8069;
+  --mut:      #4b6f5a;   /* 4,8:1 sur --sur (était #5a8069, 4,2:1) */
+  --on-grn:   #ffffff;
 
   /* Forme */
   --rad:      10px;
@@ -65,7 +66,8 @@ html[data-theme="dark"] {
 
   --txt:      #ece6d4;
   --txt2:     #b3b09e;
-  --mut:      #7c7e72;
+  --mut:      #9a9c8f;   /* 5,0:1 sur --sur (était #7c7e72, 3,4:1) */
+  --on-grn:   #1a201b;
 
   --shadow:   0 8px 32px rgba(0,0,0,0.5);
   --nav-bg:   rgba(26, 32, 27, 0.92);
@@ -356,7 +358,7 @@ body {
 
 .form-submit {
   background: var(--grn);
-  color: #fff;
+  color: var(--on-grn);
   border: none;
   border-radius: 10px;
   padding: 14px;
@@ -451,7 +453,7 @@ body {
 
 .search-button {
   background: var(--grn);
-  color: #fff;
+  color: var(--on-grn);
   border: none;
   border-radius: var(--rad);
   padding: 0 24px;
@@ -900,7 +902,7 @@ html[data-theme="dark"] .filter-accordion-child--active-origin {
   align-items: center;
   gap: 7px;
   background: var(--grn);
-  color: #fff;
+  color: var(--on-grn);
   border: none;
   border-radius: 28px;
   padding: 10px 18px 10px 14px;
@@ -1209,7 +1211,7 @@ html[data-theme="dark"] .health-child-pill--origin.health-child-pill--active-ori
 }
 .recipe-cta {
   background: var(--grn);
-  color: #fff;
+  color: var(--on-grn);
   font-size: 13px;
   font-weight: 600;
   padding: 7px 20px;
@@ -1986,7 +1988,7 @@ details.frigo-fridge-details[open] .frigo-fridge-chevron { transform: rotate(90d
 
 .frigo-search-btn {
   background: var(--grn);
-  color: #fff;
+  color: var(--on-grn);
   border: none;
   border-radius: var(--rad);
   padding: 14px;
@@ -2418,7 +2420,7 @@ details.frigo-fridge-details[open] .frigo-fridge-chevron { transform: rotate(90d
 .nutr-analyze-btn {
   width: 100%;
   background: var(--grn);
-  color: #fff;
+  color: var(--on-grn);
   border: none;
   border-radius: var(--rad);
   padding: 14px;
@@ -3971,7 +3973,7 @@ html[data-theme="dark"] .pill--active-diet {
 }
 .shopping-price-unknown {
   font-size: 10px;
-  color: #c97a00;
+  color: #8a5a00;
   background: rgba(201,122,0,0.10);
   border: 1px solid rgba(201,122,0,0.25);
   padding: 1px 5px;
@@ -4730,7 +4732,7 @@ html[data-theme="dark"] .pill--active-diet {
 .faq-sidebar-cta { margin-top: 16px; padding: 14px; background: var(--grn-dim); border-radius: 10px; border: 1px solid var(--brd); }
 .faq-sidebar-cta-text { font-size: 12px; color: var(--txt2); margin: 0 0 10px; line-height: 1.4; }
 .faq-sidebar-cta-btn {
-  width: 100%; padding: 8px 12px; background: var(--grn); color: #fff; border: none;
+  width: 100%; padding: 8px 12px; background: var(--grn); color: var(--on-grn); border: none;
   border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.15s;
 }
 .faq-sidebar-cta-btn:hover { background: var(--grn-h); }
@@ -4781,7 +4783,7 @@ html[data-theme="dark"] .pill--active-diet {
 .faq-empty-title { font-size: 17px; font-weight: 600; color: var(--txt); margin: 0 0 8px; }
 .faq-empty-sub { font-size: 13px; color: var(--mut); margin: 0 0 20px; }
 .faq-empty-reset {
-  padding: 9px 20px; background: var(--grn); color: #fff; border: none;
+  padding: 9px 20px; background: var(--grn); color: var(--on-grn); border: none;
   border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 0.15s;
 }
 .faq-empty-reset:hover { background: var(--grn-h); }
@@ -4802,8 +4804,8 @@ html[data-theme="dark"] .pill--active-diet {
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 .faq-contact-btn:hover { border-color: var(--grn); color: var(--grn); background: var(--grn-dim); }
-.faq-contact-btn--primary { background: var(--grn); color: #fff; border-color: var(--grn); }
-.faq-contact-btn--primary:hover { background: var(--grn-h); color: #fff; }
+.faq-contact-btn--primary { background: var(--grn); color: var(--on-grn); border-color: var(--grn); }
+.faq-contact-btn--primary:hover { background: var(--grn-h); color: var(--on-grn); }
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -4995,10 +4997,13 @@ a.credits-badge:hover { text-decoration: underline; }
   color: var(--txt2);
   line-height: 1.3;
 }
-.sustain-pill--btn { cursor: pointer; font: inherit; font-size: 13px; font-weight: 500; }
+.sustain-pill--btn { cursor: pointer; text-align: left; font: inherit; font-size: 13px; font-weight: 500; }
 .sustain-pill--btn:focus-visible { outline: 2px solid var(--grn); outline-offset: 2px; }
 .sustain-pill--good { background: var(--grn-dim); color: var(--grn); border-color: transparent; }
-.sustain-pill--mid  { background: rgba(201,122,0,0.10); color: #a76400; border-color: transparent; }
+.sustain-pill--mid  { background: rgba(201,122,0,0.10); color: #8a5a00; border-color: transparent; }
+html[data-theme="dark"] .sustain-pill--mid { color: #e6b35a; }
+html[data-theme="dark"] .sustain-pill--bad { color: #f19b8e; }
+html[data-theme="dark"] .price-unknown-note { color: #e6b35a; }
 .sustain-pill--bad  { background: rgba(179,45,29,0.10); color: var(--red); border-color: transparent; }
 .sustain-caret { font-size: 11px; opacity: 0.7; }
 .sustain-detail {
@@ -5030,3 +5035,39 @@ a.credits-badge:hover { text-decoration: underline; }
 }
 .season-strip-title { margin: 0; font-size: 20px; color: var(--grn); }
 .season-strip-sub { font-size: 13px; color: var(--mut); }
+
+/* ── Mobile (audit 375 px, 2026-11-20) ────────────────────────────────────────
+   Les colonnes de grille « 1fr » ne descendent pas sous la largeur de leur
+   contenu : minmax(0, 1fr) les laisse rétrécir. */
+.nutr-profile-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.search-input { min-width: 0; }
+
+@media (max-width: 768px) {
+  .faq-layout { grid-template-columns: minmax(0, 1fr); }
+  .faq-sidebar, .faq-main { min-width: 0; }
+}
+
+@media (max-width: 640px) {
+  .filters-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nutr-profile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .search-row { flex-direction: column; align-items: stretch; gap: 8px; }
+  .search-container--large .search-input { padding: 12px 14px; }
+  .search-container--large .search-button { padding: 0 18px; }
+}
+
+@media (max-width: 900px) {
+  /* colonne : align-items flex-start laissait le planning à sa largeur de contenu */
+  .planning-layout { align-items: stretch; }
+}
+
+@media (max-width: 560px) {
+  /* deux jours de 210 px ne tiennent pas sur 375 px : un jour par ligne */
+  .pday-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 480px) {
+  /* filtres sur une colonne : séparateur sous chaque bloc */
+  .filters-columns { grid-template-columns: minmax(0, 1fr); }
+  .filter-col:not(:last-child) { border-right: none; border-bottom: 1px solid var(--brd); padding-right: 0; padding-bottom: 12px; }
+  .filter-col:not(:first-child) { padding-left: 0; padding-top: 12px; }
+}

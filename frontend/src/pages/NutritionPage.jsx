@@ -435,7 +435,7 @@ function ProfilJournalView() {
           <span style={{ fontSize: 11, color: 'var(--mut)' }}>· Enregistré automatiquement</span>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 14 }}>
+        <div className="nutr-profile-grid">
           {/* Régime */}
           <div>
             {sectionLabel("Régime alimentaire")}
@@ -579,6 +579,7 @@ function ProfilJournalView() {
               onChange={e => setSearchQ(e.target.value)}
               onBlur={() => setTimeout(() => setSearchResults([]), 200)}
               placeholder="Ajouter une recette ALIM au journal…"
+              aria-label="Ajouter une recette au journal du jour"
               style={{ flex: 1, background: 'transparent', border: 'none', outline: 'none',
                 color: 'var(--txt)', fontSize: 13, fontFamily: 'inherit' }}
             />
@@ -759,7 +760,7 @@ function CarencesView({ onGoToProfile }) {
           </p>
           <button onClick={() => setFilter('all')} style={{
             padding: '8px 18px', borderRadius: 8, background: 'var(--grn)',
-            color: '#fff', border: 'none', cursor: 'pointer', fontFamily: 'inherit',
+            color: 'var(--on-grn)', border: 'none', cursor: 'pointer', fontFamily: 'inherit',
           }}>
             Voir toutes les carences
           </button>

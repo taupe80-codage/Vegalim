@@ -421,6 +421,7 @@ function CycleBeads({ activePhase, onPhaseSelect }) {
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <span style={{ fontSize: 12, color: 'var(--mut)', whiteSpace: 'nowrap' }}>Je suis au jour :</span>
               <input type="number" min={1} max={28} placeholder="n°"
+                aria-label="Jour du cycle (1 à 28)"
                 value={editDay}
                 onChange={e => setEditDay(e.target.value)}
                 onKeyDown={e => {
@@ -1260,7 +1261,8 @@ export default function CyclePage() {
             <span className="filter-label-inline">≤</span>
             <input type="number" placeholder="min" value={fs.maxTime}
               onChange={e => { fs.setMaxTime(e.target.value); setCycleVisible(20); }}
-              className="time-input" min="5" max="300" step="5" />
+              className="time-input" min="5" max="300" step="5"
+              aria-label="Temps de préparation maximum, en minutes" />
           </div>
           {(cycleSort !== 'score' || fs.hasActiveFilters) && (
             <button className="filters-clear" onClick={() => {

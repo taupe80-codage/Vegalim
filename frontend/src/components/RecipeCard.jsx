@@ -883,7 +883,12 @@ export default function RecipeCard({ recipe, activeHealthFilters = new Set(), ac
       onClick={handleClick}
       role="button"
       tabIndex={0}
-      onKeyDown={e => e.key === 'Enter' && handleClick()}
+      onKeyDown={e => {
+        // role="button" : Entrée et Espace, comme un vrai bouton (pas les boutons internes)
+        if (e.target !== e.currentTarget) return;
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClick(); }
+      }}
+      aria-label={`Voir la recette : ${recipe.titles?.fr || recipe.title_fr || 'Recette'}`}
     >
       <RecipeVisual recipe={recipe} size="card" alimScore={alimScore} />
       <button

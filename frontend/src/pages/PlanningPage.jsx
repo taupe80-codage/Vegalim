@@ -1285,7 +1285,9 @@ export default function PlanningPage() {
                 <input type="range" min={0} max={120} step={15}
                   value={fs.maxTime ? parseInt(fs.maxTime) : 0}
                   onChange={e=>fs.setMaxTime(e.target.value==='0'?'':e.target.value)}
-                  className="frigo-slider"/>
+                  className="frigo-slider"
+                  aria-label="Temps de préparation maximum, en minutes"
+                  aria-valuetext={fs.maxTime ? `${fs.maxTime} minutes` : 'Illimité'}/>
                 <span className="frigo-slider-val" style={{minWidth:56}}>
                   {fs.maxTime?`${fs.maxTime} min`:'Illimité'}
                 </span>
@@ -1321,6 +1323,7 @@ export default function PlanningPage() {
               value={diversity}
               onChange={e => setDiversity(parseFloat(e.target.value))}
               className="frigo-slider plan-diversity-slider"
+              aria-label="Variété du planning"
             />
             <p className="plan-diversity-hint">
               {diversity <= 0.15

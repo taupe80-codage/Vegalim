@@ -341,7 +341,8 @@ export default function AstroPage() {
             <span className="filter-label-inline">≤</span>
             <input type="number" placeholder="min" value={fs.maxTime}
               onChange={e => { fs.setMaxTime(e.target.value); setAstroVisible(20); }}
-              className="time-input" min="5" max="300" step="5" />
+              className="time-input" min="5" max="300" step="5"
+              aria-label="Temps de préparation maximum, en minutes" />
           </div>
           {(astroSort !== 'score' || fs.hasActiveFilters) && (
             <button className="filters-clear" onClick={() => {

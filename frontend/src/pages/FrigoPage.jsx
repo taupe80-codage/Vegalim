@@ -593,6 +593,7 @@ export default function FrigoPage() {
                 ref={inputRef}
                 type="text"
                 placeholder="Ajouter un ingrédient…"
+                aria-label="Ajouter un ingrédient au frigo"
                 value={customInput}
                 onChange={(e) => { setCustomInput(e.target.value); setInputError(null); }}
                 onKeyDown={(e) => {
