@@ -551,6 +551,7 @@ _DISPLAY_NAME_FR: dict[str, str] = {
     "mustard_raw_leaf": "feuilles de moutarde",
     "nutritional_yeast_flakes": "levure nutritionnelle en paillettes",
     "oriental_daikon_radish_raw": "radis daikon",
+    "orange_peel_raw": "zeste d'orange",
     "oyster_mushroom_raw": "pleurote",
     "peanut_butter_natural_plant": "beurre de cacahuète",
     "peanut_butter_plant_regular": "beurre de cacahuète",

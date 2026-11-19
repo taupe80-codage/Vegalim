@@ -286,7 +286,7 @@ RECIPES = [
         en="Khao Pad Sapparot, Thai Pineapple Fried Rice",
         original="Khao pad sapparot",
         cuisine="thai", country="thailand", region="bangkok",
-        dish="main", servings=4, prep=15, cook=10,
+        dish="main", servings=4, prep=10, cook=20,
         texture=("grains_separes", "croquant"), taste=("sucré", "salé"),
         technique=("sauteing",), difficulty="easy",
         desc="Riz de la veille sauté au wok avec ananas, tofu, petits pois, raisins secs et noix de "
@@ -325,7 +325,7 @@ RECIPES = [
         fr="Croque végétarien aux champignons et comté",
         en="Vegetarian Croque with Mushrooms and Comté",
         cuisine="french", country="france", region="franche_comte",
-        dish="main", servings=4, prep=10, cook=15,
+        dish="main", servings=4, prep=10, cook=18,
         texture=("croustillant", "filant"), taste=("lacté", "boisé"),
         technique=("sauteing", "baking"), difficulty="easy",
         desc="Le croque-monsieur sans jambon : une fondue de champignons au thym entre deux tranches "
@@ -360,7 +360,7 @@ RECIPES = [
         fr="Salade-repas de lentilles, feta et légumes croquants",
         en="Hearty Lentil Salad with Feta and Crunchy Vegetables",
         cuisine="greek", country="greece", region="",
-        dish="main", servings=4, prep=15, cook=15,
+        dish="main", servings=4, prep=10, cook=20,
         texture=("croquant", "fondant"), taste=("acidulé", "salé"),
         technique=("boiling",), difficulty="easy",
         desc="Lentilles vertes cuites al dente, mélangées tièdes à une vinaigrette à la moutarde pour "
@@ -382,8 +382,8 @@ RECIPES = [
             ("water", 1000, "ml", "liquid"),
         ],
         steps=[
-            "Cuire 250 g de lentilles vertes rincées dans 1 litre d'eau non salée, 15 minutes : "
-            "elles doivent rester entières.",
+            "Cuire 250 g de lentilles vertes rincées dans 1 litre d'eau non salée, 20 minutes : "
+            "elles doivent rester entières ; préparer le reste pendant ce temps.",
             "Fouetter 10 g de moutarde, 20 ml de vinaigre de vin, 45 ml d'huile d'olive, 3 g de sel "
             "et 1 g de poivre.",
             "Égoutter les lentilles, ajouter 1 g de sel et les mélanger tièdes à la vinaigrette.",
@@ -478,7 +478,7 @@ RECIPES = [
         en="Pesarattu, Mung Bean Crêpes with Ginger",
         original="Pesarattu",
         cuisine="indian", country="india", region="andhra_pradesh",
-        dish="breakfast", servings=4, prep=15, rest=360, cook=20,
+        dish="breakfast", servings=4, prep=15, rest=360, cook=30,
         texture=("croustillant", "souple"), taste=("épicé", "herbacé"),
         technique=("blending", "sauteing"), kid_friendly=False, difficulty="medium", spice=1,
         desc="Crêpe d'Andhra Pradesh sans fermentation : des haricots mungo entiers trempés, mixés "

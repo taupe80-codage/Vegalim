@@ -162,6 +162,7 @@ def enrich_why(recipes: list[dict], filters: dict | None = None) -> list[dict]:
                 agg_nutr["low_sugar"] = True
             if nf.get("low_sodium"):
                 agg_nutr["low_sodium"] = True
+        _apply_recipe_allergens(r, agg_diet)
         r["diet_flags_enriched"]  = agg_diet
         r["nutrition_highlights"] = agg_nutr
 
@@ -423,10 +424,25 @@ def enrich_one(recipe: dict) -> dict:
         if nf.get("low_sodium"):
             agg_nutr["low_sodium"] = True
 
+    _apply_recipe_allergens(recipe, agg_diet)
     out["diet_flags_enriched"]  = agg_diet
     out["nutrition_highlights"] = agg_nutr
 
     return out
+
+
+# Allergènes de la recette (tags.allergens, posés par fix_recipe_diet_allergens.py en
+# tenant compte des sous-recettes) → flags « sans X ». Le dictionnaire d'ingrédients
+# ne connaît pas les préparations de base : un plat au halloumi, au paneer ou au ghee
+# maison était affiché « Sans Produits Laitiers ».
+_ALLERGEN_TO_FLAG = {"milk": "dairy_free", "eggs": "egg_free", "soy": "soy_free"}
+
+
+def _apply_recipe_allergens(recipe: dict, agg_diet: dict) -> None:
+    tags = set((recipe.get("tags") or {}).get("allergens") or [])
+    for allergen, flag in _ALLERGEN_TO_FLAG.items():
+        if allergen in tags:
+            agg_diet[flag] = False
 
 
 __all__ = ["enrich_one", "enrich_why", "enrich_batch"]

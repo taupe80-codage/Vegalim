@@ -25,6 +25,14 @@ def test_prix_manquant_dans_une_sous_recette():
     assert c["n_unknown"] == 0          # la sous-recette elle-même a un prix (partiel)
 
 
+def test_sous_recette_chiffree_au_poids_obtenu():
+    # 1 000 g de riz (2 €) donnant 500 g de préparation (yield_factor 0,5) :
+    # 100 g de préparation coûtent 0,40 €, pas 0,20 € (halloumi : 0,35 € au lieu de 2,94 €)
+    base = {**_r("base_reduit_x", [("rice", 1000)]), "yield_factor": 0.5}
+    plat = _r("plat", [("base_reduit_x", 100)], servings=1)
+    assert recipe_cost(plat, CATALOG, {"base_reduit_x": base})["total_eur"] == 0.4
+
+
 def test_recette_complete_sans_avertissement():
     c = recipe_cost(_r("y", [("rice", 300)]), CATALOG, {})
     assert c["unknown"] == []

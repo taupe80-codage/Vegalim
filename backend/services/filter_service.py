@@ -577,6 +577,11 @@ def apply_filters(
                     flags["dairy_free"] = False
                 if dp.get("soy_free") is False or dp.get("sans_soja") is False or "soybeans" in af:
                     flags["soy_free"] = False
+            # Allergènes de la recette, sous-recettes comprises (le dictionnaire ne
+            # connaît pas base_halloumi, base_paneer, base_ghee…) : même règle que
+            # les badges de enrichment_service.
+            from backend.services.enrichment_service import _apply_recipe_allergens
+            _apply_recipe_allergens(recipe, flags)
             return flags
 
         def _passes_diet(recipe: dict) -> bool:

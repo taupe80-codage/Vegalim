@@ -854,7 +854,7 @@
 - **Salade de haricots blancs, roquette et tomates confites** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, starter, italian)_ — `salad_haricots_blancs_roquette_9c5b02`
 - **Salade de kale massée à l'avocat** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, side, american)_ — `side_kale_massee_avocat_3d18e7`
 - **Salade de lentilles** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, side, french)_ — `salad_lentil_classic_v3_r7p2k8` 🔁 doublon possible : Salade de Lentilles Éthiopienne
-- **Salade de lentilles beluga, tofu fumé et noisettes** _(vegan, vegetarian, gluten_free, lactose_free, main, french)_ — `salad_lentilles_beluga_tofu_fume_9a1c63`
+- **Salade de lentilles du Puy, tofu fumé et noisettes** _(vegan, vegetarian, gluten_free, lactose_free, main, french)_ — `salad_lentilles_puy_tofu_fume_9a1c63`
 - **Salade de Lentilles Éthiopienne** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, ethiopian)_ — `dal_salade_de_lentilles_ethiopienn_5a9dd6` 🔁 doublon possible : Salade de lentilles
 - **Salade de Papaye Vietnamienne** _(diabetes_friendly, vegan, vegetarian, side, vietnamese)_ — `salad_de_papaye_vietnamienne_add574`
 - **Salade de Pois Chiches** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, mediterranean)_ — `dal_salade_de_pois_chiches_2e32de` 🔁 doublon possible : Salade de pois chiches express au citron et à la feta

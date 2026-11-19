@@ -104,6 +104,41 @@ def test_viennoiserie_sous_pain():
     assert matches_dish_types({"dish_type": "pastry"}, {"bread"})
 
 
+# ── Badges « sans X » ─────────────────────────────────────────────────────────
+
+@pytest.mark.parametrize("rid, flag", [
+    ("protein_halloumi_pois_chiches_rotis_7c40e2", "dairy_free"),   # halloumi maison (base_)
+    ("dal_sambar_581de8", None),
+])
+def test_badge_sans_x_respecte_les_allergenes_des_sous_recettes(rid, flag):
+    # le dictionnaire ignore les préparations de base : un plat au halloumi ou au
+    # paneer maison était affiché « Sans Produits Laitiers »
+    from backend.services.enrichment_service import enrich_one
+    r = next(x for x in load_recipes() if x["id"] == rid)
+    flags = enrich_one(r)["diet_flags_enriched"]
+    if flag:
+        assert flags[flag] is False
+    else:
+        assert flags["dairy_free"] is True
+
+
+@pytest.mark.parametrize("flag, allergen", [("dairy_free", "milk"), ("egg_free", "eggs"),
+                                            ("soy_free", "soy")])
+def test_filtre_sans_x_exclut_les_allergenes(flag, allergen):
+    fautes = [r["id"] for r in apply_filters(PLATS, limit=5000, **{flag: True})[0]
+              if allergen in ((r.get("tags") or {}).get("allergens") or [])]
+    assert not fautes, fautes[:10]
+
+
+def test_aucun_badge_sans_x_contredit_les_allergenes():
+    from backend.services.enrichment_service import enrich_one
+    contre = {"milk": "dairy_free", "eggs": "egg_free", "soy": "soy_free"}
+    fautes = [(r["id"], f) for r in PLATS for a, f in contre.items()
+              if a in ((r.get("tags") or {}).get("allergens") or [])
+              and enrich_one(r)["diet_flags_enriched"][f]]
+    assert not fautes, fautes[:10]
+
+
 # ── Validation culinaire ──────────────────────────────────────────────────────
 
 def _validate(rid):

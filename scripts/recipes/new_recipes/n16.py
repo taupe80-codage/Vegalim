@@ -43,8 +43,8 @@ RECIPES = [
             "Ajouter les pizzoccheri et cuire encore 8 minutes.",
             "Pendant ce temps, fondre 60 g de beurre avec 8 g d'ail écrasé et 4 g de sauge jusqu'à "
             "ce qu'il blondisse.",
-            "Égoutter, alterner dans un plat les pâtes et légumes avec 160 g de fromage en lamelles et "
-            "50 g de parmesan, poivrer avec 1 g de poivre et arroser de beurre noisette.",
+            "Égoutter, alterner dans un plat les pâtes et légumes avec 160 g de fromage en lamelles "
+            "(valtellina casera, ou à défaut gruyère) et 50 g de parmesan, poivrer avec 1 g de poivre et arroser de beurre noisette.",
             "Passer 5 minutes au four à 200 °C pour faire fondre le fromage, et servir brûlant.",
         ],
     ),
@@ -136,7 +136,7 @@ RECIPES = [
         technique=("simmering",), difficulty="easy",
         desc="Le pot-au-feu sans viande : carottes, navets, poireaux ficelés, céleri-rave et pommes "
              "de terre pochés dans un bouillon parfumé à l'oignon piqué de clous de girofle, servis "
-             "avec moutarde, gros sel et le bouillon en tasse.",
+             "avec de la moutarde et le bouillon en tasse.",
         compo=[
             ("carrot_raw", 400, "g", "main_vegetable"),
             ("turnip_raw", 300, "g", "vegetable"),
@@ -163,8 +163,8 @@ RECIPES = [
             "ficeler 300 g de poireaux en botte.",
             "Plonger carottes et céleri dans le bouillon, cuire 10 minutes, puis ajouter navets et "
             "poireaux.",
-            "Ajouter 500 g de pommes de terre en morceaux 20 minutes avant la fin, et poursuivre "
-            "jusqu'à ce que tout soit tendre, 25 minutes au total après les navets.",
+            "Cinq minutes plus tard, ajouter 500 g de pommes de terre en morceaux et cuire encore "
+            "20 minutes, jusqu'à ce que tous les légumes soient tendres.",
             "Servir les légumes égouttés parsemés de 15 g de persil, avec 40 g de moutarde, et le "
             "bouillon en tasse à côté.",
         ],
@@ -175,7 +175,7 @@ RECIPES = [
         fr="Tatin de légumes racines, panais, carotte et échalote",
         en="Root Vegetable Tatin with Parsnip, Carrot and Shallot",
         cuisine="french", country="france", region="",
-        dish="main", servings=4, prep=20, cook=45,
+        dish="main", servings=4, prep=20, cook=50,
         texture=("caramélisé", "feuilleté"), taste=("sucré", "salé"),
         technique=("caramelizing", "baking"), difficulty="medium",
         desc="Une tarte renversée salée : panais, carottes et échalotes rôties dans un caramel au miel "
@@ -516,15 +516,14 @@ RECIPES = [
         ],
     ),
     recipe(
-        rid="salad_lentilles_beluga_tofu_fume_9a1c63",
-        allow_similar=("beluga",),
-        fr="Salade de lentilles beluga, tofu fumé et noisettes",
-        en="Beluga Lentil Salad with Smoked Tofu and Hazelnuts",
-        cuisine="french", country="france", region="",
+        rid="salad_lentilles_puy_tofu_fume_9a1c63",
+        fr="Salade de lentilles du Puy, tofu fumé et noisettes",
+        en="Puy Lentil Salad with Smoked Tofu and Hazelnuts",
+        cuisine="french", country="france", region="auvergne",
         dish="main", servings=4, prep=15, cook=25,
         texture=("croquant", "ferme"), taste=("fumé", "acidulé"),
         technique=("boiling", "sauteing"), difficulty="easy",
-        desc="Lentilles noires cuites fermes, tofu fumé doré à la poêle, noisettes torréfiées et "
+        desc="Lentilles vertes du Puy cuites fermes, tofu fumé doré à la poêle, noisettes torréfiées et "
              "roquette, liés d'une vinaigrette à la moutarde et à l'huile de noisette : une salade "
              "complète d'hiver.",
         compo=[
@@ -544,7 +543,7 @@ RECIPES = [
             ("water", 1000, "ml", "liquid"),
         ],
         steps=[
-            "Cuire 250 g de lentilles beluga rincées dans 1 litre d'eau 22 minutes, en les gardant "
+            "Cuire 250 g de lentilles vertes du Puy rincées dans 1 litre d'eau 22 minutes, en les gardant "
             "fermes, puis égoutter.",
             "Fouetter 15 g de moutarde, 20 ml de vinaigre de cidre, 20 ml d'huile de noisette, 15 ml "
             "d'huile d'olive, 3 g de sel et 1 g de poivre, et y mélanger les lentilles tièdes avec "

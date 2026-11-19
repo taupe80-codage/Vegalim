@@ -672,7 +672,12 @@ def ingredient_cost_eur(ing_key: str, qty: float, unit: str, catalog: dict,
         sub = recipe_cost(recipe_index[key], catalog, recipe_index, _visiting | {key})
         if not sub["total_weight_g"] or sub["n_priced"] == 0:
             return None
-        return sub["total_eur"] / sub["total_weight_g"] * needed   # 1 g ≈ 1 ml
+        # Coût au poids OBTENU, pas au poids des ingrédients : 2 L de lait donnent
+        # 250 g de halloumi (yield_factor 0,12, comme le registre nutritionnel de
+        # build_derived_base_registry). Sans cela, 250 g coûtaient 0,35 € au lieu de 2,94 €.
+        y = recipe_index[key].get("yield_factor")
+        yield_factor = float(y) if isinstance(y, (int, float)) and 0 < y <= 1 else 1.0
+        return sub["total_eur"] / (sub["total_weight_g"] * yield_factor) * needed   # 1 g ≈ 1 ml
 
     entry_key = resolve_catalog_key(key, catalog)
     if not entry_key:
