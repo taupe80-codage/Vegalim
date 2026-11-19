@@ -7,8 +7,16 @@
     "date": "2026-11-19"
   },
   "acai": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.15
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.119,
+    "agribalyse": [
+      {
+        "code_agb": "13132",
+        "code_ciqual": "13132",
+        "nom": "Myrtille, surgelée, crue",
+        "kg_co2e_par_kg": 1.19
+      }
+    ]
   },
   "agar_agar": {
     "methode": "nom",
@@ -963,8 +971,16 @@
     ]
   },
   "chutney": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.225
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.119,
+    "agribalyse": [
+      {
+        "code_agb": "11008",
+        "code_ciqual": "11008",
+        "nom": "Ketchup",
+        "kg_co2e_par_kg": 1.19
+      }
+    ]
   },
   "cider": {
     "methode": "ciqual",
@@ -1433,8 +1449,16 @@
     ]
   },
   "farine_de_manioc": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.18
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.239,
+    "agribalyse": [
+      {
+        "code_agb": "9570",
+        "code_ciqual": "9570",
+        "nom": "Farine de châtaigne",
+        "kg_co2e_par_kg": 2.39
+      }
+    ]
   },
   "farine_de_pois_chiche": {
     "methode": "ciqual",
@@ -1461,8 +1485,16 @@
     ]
   },
   "farine_de_teff": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.18
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0716,
+    "agribalyse": [
+      {
+        "code_agb": "9532",
+        "code_ciqual": "9532",
+        "nom": "Farine de seigle T85",
+        "kg_co2e_par_kg": 0.716
+      }
+    ]
   },
   "fava_bean_dry": {
     "methode": "ciqual",
@@ -1867,8 +1899,16 @@
     ]
   },
   "gundruk": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.225
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.141,
+    "agribalyse": [
+      {
+        "code_agb": "25220",
+        "code_ciqual": "25220",
+        "nom": "Choucroute, sans garniture, égouttée",
+        "kg_co2e_par_kg": 1.41
+      }
+    ]
   },
   "hazelnut": {
     "methode": "ciqual",
@@ -1895,8 +1935,16 @@
     ]
   },
   "hominy_corn": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.12
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0662,
+    "agribalyse": [
+      {
+        "code_agb": "9615",
+        "code_ciqual": "9615",
+        "nom": "Polenta ou semoule de maïs, cuite, non salée",
+        "kg_co2e_par_kg": 0.662
+      }
+    ]
   },
   "honey": {
     "methode": "ciqual",
@@ -1911,8 +1959,16 @@
     ]
   },
   "jackfruit": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.15
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0728,
+    "agribalyse": [
+      {
+        "code_agb": "13025_1",
+        "code_ciqual": "13025",
+        "nom": "Mangue importée par bateau, pulpe, crue",
+        "kg_co2e_par_kg": 0.728
+      }
+    ]
   },
   "jerusalem_artichoke": {
     "methode": "ciqual",
@@ -2131,8 +2187,14 @@
     ]
   },
   "levure_maltee": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.045
+    "methode": "externe",
+    "kg_co2e_pour_100g": 0.3204,
+    "agribalyse": [
+      {
+        "source": "COFALEC / PwC (2012) : levure sèche (proxy de la levure maltée)",
+        "kg_co2e_par_kg": 3.204
+      }
+    ]
   },
   "lime": {
     "methode": "ciqual",
@@ -2171,12 +2233,28 @@
     ]
   },
   "loroco": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.12
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0879,
+    "agribalyse": [
+      {
+        "code_agb": "11033",
+        "code_ciqual": "11033",
+        "nom": "Basilic, frais",
+        "kg_co2e_par_kg": 0.879
+      }
+    ]
   },
   "lotus_root": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.075
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0589,
+    "agribalyse": [
+      {
+        "code_agb": "54031",
+        "code_ciqual": "54031",
+        "nom": "Manioc, racine crue",
+        "kg_co2e_par_kg": 0.589
+      }
+    ]
   },
   "macadamia_nuts": {
     "methode": "ciqual",
@@ -2251,8 +2329,14 @@
     ]
   },
   "matcha": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.15
+    "methode": "externe",
+    "kg_co2e_pour_100g": 0.545,
+    "agribalyse": [
+      {
+        "source": "idem thé (dérivé d'Agribalyse 18020)",
+        "kg_co2e_par_kg": 5.45
+      }
+    ]
   },
   "melon": {
     "methode": "ciqual",
@@ -2417,8 +2501,14 @@
     ]
   },
   "mushroom": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.3
+    "methode": "externe",
+    "kg_co2e_pour_100g": 0.155,
+    "agribalyse": [
+      {
+        "source": "Bon pour le climat, tableau comparatif repris par ecolozen.com (source secondaire)",
+        "kg_co2e_par_kg": 1.55
+      }
+    ]
   },
   "new_potato": {
     "methode": "ciqual",
@@ -2541,8 +2631,16 @@
     ]
   },
   "orange_blossom_water": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.0
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0321,
+    "agribalyse": [
+      {
+        "code_agb": "18430",
+        "code_ciqual": "18430",
+        "nom": "Eau embouteillée de source",
+        "kg_co2e_par_kg": 0.321
+      }
+    ]
   },
   "orange_juice_fresh": {
     "methode": "ciqual",
@@ -2761,8 +2859,16 @@
     ]
   },
   "pickles": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.105
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.141,
+    "agribalyse": [
+      {
+        "code_agb": "25220",
+        "code_ciqual": "25220",
+        "nom": "Choucroute, sans garniture, égouttée",
+        "kg_co2e_par_kg": 1.41
+      }
+    ]
   },
   "pine_nuts": {
     "methode": "ciqual",
@@ -2921,8 +3027,16 @@
     ]
   },
   "prune_umeboshi": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.15
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.103,
+    "agribalyse": [
+      {
+        "code_agb": "13100",
+        "code_ciqual": "13100",
+        "nom": "Prune, crue",
+        "kg_co2e_par_kg": 1.03
+      }
+    ]
   },
   "puff_pastry": {
     "methode": "ciqual",
@@ -3189,8 +3303,16 @@
     ]
   },
   "rose_water": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.0
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0321,
+    "agribalyse": [
+      {
+        "code_agb": "18430",
+        "code_ciqual": "18430",
+        "nom": "Eau embouteillée de source",
+        "kg_co2e_par_kg": 0.321
+      }
+    ]
   },
   "rosemary": {
     "methode": "ciqual",
@@ -3365,8 +3487,14 @@
     "kg_co2e_pour_100g": 0.12
   },
   "shiitake_mushroom": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.12
+    "methode": "externe",
+    "kg_co2e_pour_100g": 0.155,
+    "agribalyse": [
+      {
+        "source": "idem champignon cultivé (source secondaire)",
+        "kg_co2e_par_kg": 1.55
+      }
+    ]
   },
   "shortcrust_pastry": {
     "methode": "ciqual",
@@ -3719,8 +3847,16 @@
     ]
   },
   "taro_leaf": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.12
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0423,
+    "agribalyse": [
+      {
+        "code_agb": "20059",
+        "code_ciqual": "20059",
+        "nom": "Épinard, cru",
+        "kg_co2e_par_kg": 0.423
+      }
+    ]
   },
   "tarragon": {
     "methode": "ciqual",
@@ -3735,8 +3871,14 @@
     ]
   },
   "tea": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.15
+    "methode": "externe",
+    "kg_co2e_pour_100g": 0.545,
+    "agribalyse": [
+      {
+        "source": "dérivé d'Agribalyse 18020 « Thé infusé » (0,0436 kg/kg ÷ 8 g de feuilles/kg)",
+        "kg_co2e_par_kg": 5.45
+      }
+    ]
   },
   "tempeh": {
     "methode": "ciqual",
@@ -3843,8 +3985,16 @@
     ]
   },
   "truffle_oil": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.6
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.163,
+    "agribalyse": [
+      {
+        "code_agb": "17270",
+        "code_ciqual": "17270",
+        "nom": "Huile d'olive vierge extra",
+        "kg_co2e_par_kg": 1.63
+      }
+    ]
   },
   "tteok": {
     "methode": "nom",
@@ -3955,8 +4105,16 @@
     ]
   },
   "vine_leaf": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.12
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0423,
+    "agribalyse": [
+      {
+        "code_agb": "20059",
+        "code_ciqual": "20059",
+        "nom": "Épinard, cru",
+        "kg_co2e_par_kg": 0.423
+      }
+    ]
   },
   "vinegar": {
     "methode": "ciqual",
@@ -4113,12 +4271,24 @@
     "kg_co2e_pour_100g": 0.3
   },
   "wood_ear_mushroom": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.12
+    "methode": "externe",
+    "kg_co2e_pour_100g": 0.155,
+    "agribalyse": [
+      {
+        "source": "idem champignon cultivé (source secondaire)",
+        "kg_co2e_par_kg": 1.55
+      }
+    ]
   },
   "yeast": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.045
+    "methode": "externe",
+    "kg_co2e_pour_100g": 0.0734,
+    "agribalyse": [
+      {
+        "source": "COFALEC / PwC, Carbon Footprint of Yeast produced in the EU (2012) : levure pressée",
+        "kg_co2e_par_kg": 0.734
+      }
+    ]
   },
   "yogurt": {
     "methode": "ciqual",

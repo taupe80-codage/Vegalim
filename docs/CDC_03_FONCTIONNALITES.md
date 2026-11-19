@@ -177,10 +177,12 @@ Mieux vaut ne pas afficher un score trompeur.
 **Conditions de déclenchement v2 :**
 - ✅ Base carbone recalée sur AGRIBALYSE 3.2 (ADEME) le 2026-11-19 : toutes les
   clés utilisées par les recettes, sources et codes dans
-  `backend/data/config/carbon_footprint_sources.json` (27 clés sans équivalent
-  Agribalyse gardent leur valeur d'origine, ~2 % des lignes de recettes)
-- Prise en compte de la saisonnalité (tomate de saison ≠ tomate importée) —
-  les variantes Agribalyse « de saison / hors saison » ne sont pas encore utilisées
+  `backend/data/config/carbon_footprint_sources.json` ; sans produit Agribalyse :
+  analogue Agribalyse relu à la main, ou source externe citée (levures COFALEC,
+  champignons cultivés « Bon pour le climat ») ; 4 clés gardent leur valeur
+  d'origine (cueillette, shiitakés séchés, feuilles de maïs, aquafaba : 0,2 % des lignes)
+- ✅ Saisonnalité : tomate et fraise fraîches (seules variantes « de saison / hors
+  saison » d'Agribalyse 3.2) suivent le mois sur la fiche (`carbon_score(recipe, month)`)
 - Validation par une source reconnue (ADEME, Bon pour le Climat...)
 
 **Format d'affichage prévu v2 :**

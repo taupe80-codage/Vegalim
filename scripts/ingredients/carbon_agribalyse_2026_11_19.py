@@ -141,13 +141,41 @@ BY_NAME: dict[str, list[str]] = {
     "green_papaya": ["13035"],
 }
 
-# sans équivalent sérieux dans Agribalyse 3.2 : valeur d'origine gardée
+# ── 2026-11-20 : clés sans produit Agribalyse direct ─────────────────────────────────
+# analogues Agribalyse (même logique que BY_NAME), relus à la main
+BY_NAME.update({
+    "jackfruit": ["13025_1"],          # Mangue importée par bateau (fruit tropical importé)
+    "lotus_root": ["54031"],           # Manioc, racine crue
+    "farine_de_teff": ["9532"],        # Farine de seigle T85 (farine de céréale)
+    "farine_de_manioc": ["9570"],      # Farine de châtaigne (farine de féculent)
+    "acai": ["13132"],                 # Myrtille surgelée (baie surgelée)
+    "chutney": ["11008"],              # Ketchup (condiment sucré-acide)
+    "truffle_oil": ["17270"],          # Huile d'olive vierge extra (huile aromatisée)
+    "prune_umeboshi": ["13100"],       # Prune, crue
+    "vine_leaf": ["20059"], "taro_leaf": ["20059"],   # Épinard, cru (feuille)
+    "gundruk": ["25220"],              # Choucroute égouttée (légume fermenté)
+    "pickles": ["25220"],
+    "loroco": ["11033"],               # herbe / fleur fraîche
+    "hominy_corn": ["9615"],           # Polenta cuite
+    "rose_water": ["18430"], "orange_blossom_water": ["18430"],  # eau embouteillée
+})
+
+# valeurs d'une autre source (kg CO₂e / kg), faute de produit dans Agribalyse 3.2
+EXTERNAL: dict[str, tuple[float, str]] = {
+    "yeast": (0.734, "COFALEC / PwC, Carbon Footprint of Yeast produced in the EU (2012) : levure pressée"),
+    "levure_maltee": (3.204, "COFALEC / PwC (2012) : levure sèche (proxy de la levure maltée)"),
+    "mushroom": (1.55, "Bon pour le climat, tableau comparatif repris par ecolozen.com (source secondaire)"),
+    "shiitake_mushroom": (1.55, "idem champignon cultivé (source secondaire)"),
+    "wood_ear_mushroom": (1.55, "idem champignon cultivé (source secondaire)"),
+    # thé infusé Agribalyse 0,0436 kg/kg pour ~8 g de feuilles par kg d'infusion
+    "tea": (5.45, "dérivé d'Agribalyse 18020 « Thé infusé » (0,0436 kg/kg ÷ 8 g de feuilles/kg)"),
+    "matcha": (5.45, "idem thé (dérivé d'Agribalyse 18020)"),
+}
+
+# sans équivalent sérieux : valeur d'origine gardée
 NOT_IN_AGRIBALYSE = {
-    "mushroom", "shiitake_mushroom", "wild_mushroom", "shiitake_dried", "wood_ear_mushroom",
-    "levure_maltee", "yeast", "rose_water", "orange_blossom_water", "pickles", "tea",
-    "matcha", "corn_husk", "loroco", "hominy_corn", "aquafaba", "vine_leaf", "truffle_oil",
-    "taro_leaf", "prune_umeboshi", "lotus_root", "jackfruit", "gundruk", "farine_de_teff",
-    "chutney", "acai", "farine_de_manioc",
+    "wild_mushroom",     # cueillette : Agribalyse n'a que la morille (6,17), non représentative
+    "shiitake_dried", "corn_husk", "aquafaba",
 }
 
 
@@ -197,7 +225,11 @@ def main() -> None:
     sources, counts, changes = {}, Counter(), []
     for key in sorted(ids_by_key):
         old = carbon[key]
-        if key in BY_NAME:
+        if key in EXTERNAL:
+            value, why = EXTERNAL[key]
+            refs = [{"source": why, "kg_co2e_par_kg": value}]
+            method = "externe"
+        elif key in BY_NAME:
             refs = [_ref(by_agb[c]) for c in BY_NAME[key]]
             value = sum(r["kg_co2e_par_kg"] for r in refs) / len(refs)
             method = "nom"
