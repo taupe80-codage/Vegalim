@@ -423,8 +423,9 @@ def menopause_score(recipe: dict) -> int:
     """Nombre de critères ménopause remplis (0-5) : riche en calcium, bonne
     source de protéines, riche en magnésium, soja ou lin (phyto-œstrogènes),
     source végétale d'oméga-3 (lin, chia, chanvre, noix)."""
+    from backend.core.data_io import expand_sub_recipes
     ids = {str(c.get("ingredient", "")).lower()
-           for c in recipe.get("composition") or [] if isinstance(c, dict)}
+           for c in expand_sub_recipes(recipe.get("composition") or [])}
     hs = _hs(recipe)
     return sum((
         bool(hs.get("high_calcium")),
@@ -708,8 +709,10 @@ def apply_filters(
             logger.warning("apply_filters: cycle_engine indisponible — filtre cycle ignoré")
 
         if good_ings:
+            from backend.core.data_io import expand_sub_recipes
+
             def _recipe_matches_cycle(r: dict) -> bool:
-                ings = r.get("composition", [])
+                ings = expand_sub_recipes(r.get("composition") or [])
                 return any(
                     (ing.get("ingredient", "") if isinstance(ing, dict) else str(ing)).lower()
                     in good_ings

@@ -82,6 +82,7 @@ def ce():
     data_io = types.ModuleType("backend.core.data_io")
     data_io.load_cycle_data      = lambda: CYCLE_DATA
     data_io.load_nutrition_graph = lambda: NUTR_GRAPH
+    data_io.expand_sub_recipes   = lambda items, *a, **k: [i for i in items or [] if isinstance(i, dict)]
     sys.modules["backend.core.data_io"] = data_io
 
     import importlib.util

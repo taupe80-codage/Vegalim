@@ -160,9 +160,11 @@ def cycle_id_map(phase: str, avoid: bool = False) -> dict[str, str]:
 
 
 def _recipe_ingredient_ids(recipe: dict) -> set[str]:
-    """Ids d'ingrédients : composition[] (schéma actuel) et ingredients[] (ancien)."""
+    """Ids d'ingrédients : composition[] (schéma actuel, sous-recettes dépliées :
+    le gingembre d'une pâte de curry maison compte) et ingredients[] (ancien)."""
+    from backend.core.data_io import expand_sub_recipes
     ids = set()
-    for item in recipe.get("composition") or []:
+    for item in expand_sub_recipes(recipe.get("composition") or []):
         if isinstance(item, dict) and item.get("ingredient"):
             ids.add(str(item["ingredient"]).lower())
     for item in recipe.get("ingredients") or []:

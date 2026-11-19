@@ -39,6 +39,7 @@ Usage :
 import json
 import logging
 import os
+import re
 import threading
 from backend.core.data_cache import data_cached
 from pathlib import Path
@@ -550,6 +551,87 @@ def is_component_recipe(recipe: dict) -> bool:
     une recherche explicite."""
     return (str(recipe.get("id", "")).startswith("base_")
             or str(recipe.get("dish_type") or "").lower() in COMPONENT_DISH_TYPES)
+
+
+# ── Sous-recettes dans une composition ────────────────────────────────────────
+# Une ligne « base_halloumi_293d5e » renvoie à une autre recette : le
+# dictionnaire d'ingrédients ne la connaît pas. Les calculs qui lisent le
+# dictionnaire ligne à ligne doivent la déplier (ou la résoudre eux-mêmes,
+# comme le coût, le carbone, le FODMAP et les régimes).
+
+_recipes_by_id_memo: tuple[list, dict] | None = None
+
+
+def _recipes_by_id() -> dict[str, dict]:
+    """Index par id, reconstruit seulement si recipes.json a été rechargé."""
+    global _recipes_by_id_memo
+    recipes = load_recipes()
+    if _recipes_by_id_memo is None or _recipes_by_id_memo[0] is not recipes:
+        _recipes_by_id_memo = (recipes, {str(r.get("id")): r for r in recipes})
+    return _recipes_by_id_memo[1]
+
+
+def sub_recipe(ingredient_id: str, index: dict | None = None) -> dict | None:
+    """La recette désignée par une ligne de composition, ou None."""
+    iid = str(ingredient_id or "")
+    if not iid.startswith("base_"):
+        return None
+    return (index if index is not None else _recipes_by_id()).get(iid)
+
+
+def sub_recipe_label(ingredient_id: str, index: dict | None = None) -> str | None:
+    """Nom affichable d'une sous-recette (« Halloumi », pas « Base halloumi
+    293d5e » ni « … (préparation de base) »), ou None."""
+    sub = sub_recipe(ingredient_id, index)
+    if not sub:
+        return None
+    title = ((sub.get("titles") or {}).get("fr") or "").strip()
+    title = re.sub(r"\s*\((?:préparation de )?base\)\s*$", "", title, flags=re.I)
+    return title or None
+
+
+def sub_recipe_core_name(ingredient_id: str) -> str | None:
+    """« base_halloumi_293d5e » → « halloumi » (sans préfixe ni empreinte)."""
+    m = re.fullmatch(r"base_(.+?)(?:_[0-9a-f]{6})?", str(ingredient_id or ""))
+    return m.group(1) if m else None
+
+
+def expand_sub_recipes(items: list, index: dict | None = None, as_eaten: bool = False,
+                       _depth: int = 0) -> list[dict]:
+    """Composition dont chaque sous-recette est remplacée par ses propres
+    ingrédients, au prorata de la part utilisée (g utilisés / g obtenus,
+    rendement compris). Chaque ligne issue d'une sous-recette porte
+    `_from_sub_recipe`. Les lignes sans poids connu gardent leur quantité
+    nulle (leurs ingrédients restent présents pour les calculs par id).
+
+    as_eaten=True : les ingrédients d'une sous-recette pèsent ensemble le
+    poids utilisé (250 g de halloumi), pas le poids brut consommé (2 L de
+    lait) — pour les parts pondérées par le poids dans l'assiette."""
+    from backend.engine.nutrition_engine import _qty_to_g
+    index = index if index is not None else _recipes_by_id()
+    out: list[dict] = []
+    for item in items or []:
+        if not isinstance(item, dict):
+            continue
+        iid = str(item.get("ingredient") or item.get("ingredient_id") or "")
+        sub = sub_recipe(iid, index)
+        if not sub or _depth >= 3:
+            out.append(item)
+            continue
+        leaves = expand_sub_recipes(sub.get("composition") or [], index, as_eaten, _depth + 1)
+        total = sum(_qty_to_g(str(x.get("ingredient") or ""), x) or 0.0 for x in leaves)
+        y = sub.get("yield_factor")
+        y = float(y) if isinstance(y, (int, float)) and 0 < y <= 1 and not as_eaten else 1.0
+        used = _qty_to_g(iid, item) or 0.0
+        share = used / (total * y) if used and total else 0.0
+        for x in leaves:
+            g = (_qty_to_g(str(x.get("ingredient") or ""), x) or 0.0) * share
+            meta = {**(x.get("meta") or {})}
+            if (item.get("meta") or {}).get("role") == "serving_suggestion":
+                meta["role"] = "serving_suggestion"
+            out.append({**x, "quantity": round(g, 2), "unit": "g", "meta": meta,
+                        "_from_sub_recipe": x.get("_from_sub_recipe") or iid})
+    return out
 
 
 # Entrée du filtre « type de plat » qui couvre aussi d'autres dish_type

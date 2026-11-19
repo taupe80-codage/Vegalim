@@ -59,38 +59,20 @@ def _compute_base_recipe_unit_cost(
     if not recipe:
         return None
 
-    visiting.add(base_id)
-    total_cost = 0.0
-    total_qty = 0.0
-    for c in recipe.get("composition", []):
-        sub_key = (c.get("ingredient") or "").lower().strip()
-        raw_qty = c.get("quantity")
-        raw_unit = (c.get("unit") or "").lower().strip()
-        if not sub_key or raw_qty is None:
-            continue  # quantites en texte libre ("quelques feuilles") ignorees
-        try:
-            qty, unit = _normalise_unit(float(raw_qty), raw_unit)
-        except (TypeError, ValueError):
-            continue
-        converted = _item_to_base(qty, unit)
-        if converted is None or converted[1] not in ("g", "ml"):
-            continue  # "piece" non convertible en poids-equivalent
-        sub_qty_base, _ = converted
-
-        sub_price_info = _compute_price(
-            sub_key, sub_qty_base, converted[1], catalog, price_map,
-            recipe_index=recipe_index, base_cache=cache, _visiting=visiting,
-        )
-        if sub_price_info["price_unknown"]:
-            continue  # ingredient de la base sans prix connu -> ignore dans l'estimation
-        total_cost += sub_price_info["price"]
-        total_qty += sub_qty_base
-    visiting.discard(base_id)
-
-    if total_qty <= 0:
+    # Même calcul que le coût de la fiche (recipe_cost) : prix au gramme de
+    # chaque ingrédient, sans arrondi aux emballages (il donnait 5,15 € pour
+    # 250 g de halloumi contre 2,94 € sur la fiche).
+    rc = recipe_cost(recipe, catalog, recipe_index, frozenset(visiting | {base_id}))
+    total_cost, total_qty = rc["total_eur"], rc["total_weight_g"]
+    if total_qty <= 0 or rc["n_priced"] == 0:
         cache[base_id] = None
         return None
 
+    # Quantité obtenue, pas la somme des ingrédients : 2 L de lait donnent
+    # 250 g de halloumi (même règle que ingredient_cost_eur).
+    y = recipe.get("yield_factor")
+    if isinstance(y, (int, float)) and 0 < y <= 1:
+        total_qty *= float(y)
     result = (total_cost, total_qty)
     cache[base_id] = result
     return result
@@ -276,6 +258,7 @@ _CAT_FR = {
 def _make_resolvers(ings_dict: dict):
     """Retourne (get_name_fr, get_category_fr) pour un dict d'ingrédients."""
 
+    from backend.core.data_io import sub_recipe_label
     from backend.services.ingredient_catalog import full_name_fr
 
     # Nom complet (nom de base + axe « forme ») : canonical_name_fr seul
@@ -286,10 +269,15 @@ def _make_resolvers(ings_dict: dict):
             if d and d.get("canonical_name_fr"):
                 name = full_name_fr(d, key)
                 return name[0].upper() + name[1:]
+        label = sub_recipe_label(iid)      # « Halloumi », pas « Base halloumi 293d5e »
+        if label:
+            return label
         return iid.replace("_", " ").replace("/", " ").capitalize()
 
     def _get_category_fr(iid: str) -> str:
         d = ings_dict.get(iid) or ings_dict.get(iid.split("/")[0]) or {}
+        if not d and sub_recipe_label(iid):
+            return "Préparations maison"   # à acheter toute faite ou à préparer (fiche)
         cat_en = d.get("category", "autre").lower()
         return _CAT_FR.get(cat_en, cat_en.capitalize())
 

@@ -198,10 +198,12 @@ def astro_shares(recipe: dict, data: dict | None = None) -> tuple[dict, dict]:
     courgette) ; si aucune quantité n'est connue, chaque ingrédient compte 1.
     """
     from collections import defaultdict
+    from backend.core.data_io import expand_sub_recipes
     from backend.engine.rule_engine.diet import _item_grams
     data = _map() if data is None else data
     items = []
-    for c in recipe.get("composition") or []:
+    # Sous-recette (paneer, pesto maison…) : ses ingrédients au poids servi
+    for c in expand_sub_recipes(recipe.get("composition") or [], as_eaten=True):
         if not isinstance(c, dict):
             continue
         key = astro_key(c.get("ingredient") or c.get("ingredient_id") or "", data)

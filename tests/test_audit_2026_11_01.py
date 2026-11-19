@@ -177,12 +177,15 @@ _PHASES = ("menstrual", "follicular", "ovulatory", "luteal")
 
 @pytest.mark.parametrize("phase", _PHASES)
 def test_filtre_cycle_trouve_des_recettes(phase):
+    from backend.core.data_io import expand_sub_recipes
     from backend.engine.cycle_engine import cycle_id_map
     recipes = load_recipes()
     page, total = apply_filters(recipes, cycle_phase=phase, limit=len(recipes))
     assert total >= 100
     good = set(cycle_id_map(phase))
-    assert all(any(c["ingredient"] in good for c in r["composition"]) for r in page)
+    # sous-recettes dépliées : le gingembre d'un teriyaki maison compte
+    assert all(any(c["ingredient"] in good for c in expand_sub_recipes(r["composition"]))
+               for r in page)
 
 
 def test_cycle_table_pointe_vers_des_ids_reels():

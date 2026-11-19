@@ -13,7 +13,7 @@ from pydantic import BaseModel, Field
 from typing import Optional
 
 from backend.core.auth_deps import get_user, get_optional_user
-from backend.core.data_io import load_recipes, load_ingredients_dict
+from backend.core.data_io import load_recipes, load_ingredients_dict, sub_recipe_label
 from backend.core.rate_limiter import check_rate_limit
 from backend.services.ingredient_catalog import full_name_fr, names_of, resolve_names
 from backend.services.fridge_scoring import (
@@ -319,7 +319,11 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
         if d_base.get("canonical_name_fr"):
             variant = iid.split("/")[-1].replace("_", " ")
             return f"{d_base['canonical_name_fr']} ({variant})" if variant != base else d_base["canonical_name_fr"]
-        # 3. Fallback : humanise l'ID complet
+        # 3. Sous-recette (base_halloumi_293d5e) : son titre
+        label = sub_recipe_label(iid)
+        if label:
+            return label
+        # 4. Fallback : humanise l'ID complet
         return iid.replace("_", " ").replace("/", " ")
 
     # Un frigo qui ne contient que des basiques (sel, huile, beurre) n'a rien
@@ -444,7 +448,7 @@ def missing_ingredients(payload: MissingRequest, request: Request,
         d = ings_dict.get(iid, {})
         missing_enriched.append({
             "id":      iid,
-            "name_fr": full_name_fr(d, iid) if d else iid,
+            "name_fr": full_name_fr(d, iid) if d else (sub_recipe_label(iid) or iid),
             "category": d.get("category", ""),
             "available_in_france": True,  # optimiste par défaut
         })
