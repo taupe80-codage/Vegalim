@@ -365,7 +365,8 @@ def enrich_one(recipe: dict) -> dict:
     ]
 
     # ── Durabilité (CO₂) et prix ──────────────────────────────────────────────
-    out["carbon_data"] = carbon_score(recipe)
+    # Empreinte du mois : tomate et fraise fraîches de saison ou hors saison (Agribalyse)
+    out["carbon_data"] = carbon_score(recipe, month=current_month)
     out["price_data"]  = estimate_price(recipe)
 
     # ── Flags diététiques enrichis (agrégés depuis les ingrédients) ───────────

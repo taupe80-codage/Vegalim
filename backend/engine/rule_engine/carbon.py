@@ -3,7 +3,8 @@ carbon.py — Empreinte carbone recette.
 Fusionne : sustainability_engine
 
 API :
-    carbon_score(recipe) → dict  {total_kg_co2, per_portion_kg, label, score, coverage, ingredients_co2}
+    carbon_score(recipe, month=None) → dict  {total_kg_co2, per_portion_kg, label, score,
+                                              coverage, ingredients_co2, month}
 
 carbon_footprint.json est indexé par ingrédient générique (kg CO₂e / 100 g :
 'chickpea', 'olive_oil'…), pas par id de composition ('chickpea_boiled') :
@@ -11,6 +12,11 @@ la résolution passe par resolve_catalog_key (id exact → préfixe →
 ingredient_price_map). Les quantités sont converties en grammes par le même
 moteur que la nutrition (_qty_to_g). Les sous-recettes base_* sont calculées
 depuis leur propre composition.
+
+Valeurs : AGRIBALYSE 3.2 (carbon_footprint_sources.json). Sans mois, moyenne
+annuelle ; avec un mois, un ingrédient frais dont Agribalyse distingue la saison
+(tomate, fraise) prend la valeur « de saison » ou « hors saison » selon le
+calendrier de saisonnalité (tomate hors saison 2,11 kg CO₂e/kg, de saison 0,63).
 """
 from __future__ import annotations
 from backend.core.data_cache import data_cached
@@ -22,6 +28,30 @@ _HIGH = 1.5
 def _carbon_db() -> dict:
     from backend.core.data_io import load_carbon_footprint
     return load_carbon_footprint()
+
+@data_cached
+def _seasonal_db() -> dict:
+    """{clé carbone: {"de_saison": kg/100 g, "hors_saison": kg/100 g}}."""
+    from backend.core.data_io import load_json
+    from backend.engine.config import DATA_ROOT
+    src = load_json(DATA_ROOT / "config" / "carbon_footprint_sources.json", default={}) or {}
+    return {k: v["saisonnier"] for k, v in src.items()
+            if isinstance(v, dict) and isinstance(v.get("saisonnier"), dict)}
+
+
+def _seasonal_co2_per_100g(iid: str, key: str, month: int | None) -> float | None:
+    """Valeur de saison / hors saison d'un ingrédient frais au mois donné, sinon None.
+    Seuls les ids reliés au calendrier (tomate fraîche, pas le ketchup) en relèvent."""
+    if not month:
+        return None
+    variants = _seasonal_db().get(key)
+    if not variants:
+        return None
+    from backend.engine.rule_engine.seasonality import in_season, season_key
+    if not season_key(iid):
+        return None
+    return float(variants["de_saison" if in_season(iid, month) else "hors_saison"])
+
 
 def eco_label(kg_co2: float) -> str:
     if kg_co2 < _LOW:  return "🟢 Faible"
@@ -35,7 +65,8 @@ def _co2_per_100g(raw) -> float:
         return float(raw.get("co2_per_100g", 0.0))
     return 0.0
 
-def _recipe_co2(recipe: dict, _visiting: frozenset = frozenset()) -> tuple[float, float, int, int, list]:
+def _recipe_co2(recipe: dict, _visiting: frozenset = frozenset(),
+                month: int | None = None) -> tuple[float, float, int, int, list]:
     """(kg CO₂e total, poids total g, lignes chiffrées, lignes connues-poids, détail)."""
     from backend.core.data_io import resolve_catalog_key, load_recipes
     from backend.engine.nutrition_engine import _qty_to_g
@@ -58,13 +89,14 @@ def _recipe_co2(recipe: dict, _visiting: frozenset = frozenset()) -> tuple[float
         if iid.startswith("base_") and iid not in _visiting:
             sub = next((r for r in load_recipes() if r.get("id") == iid), None)
             if sub:
-                s_total, s_weight, s_known, _, _ = _recipe_co2(sub, _visiting | {iid})
+                s_total, s_weight, s_known, _, _ = _recipe_co2(sub, _visiting | {iid}, month)
                 if s_weight and s_known:
                     co2 = s_total / s_weight * qty_g
         else:
             key = resolve_catalog_key(iid, db)
             if key:
-                co2 = _co2_per_100g(db[key]) * qty_g / 100
+                per_100g = _seasonal_co2_per_100g(iid, key, month)
+                co2 = (per_100g if per_100g is not None else _co2_per_100g(db[key])) * qty_g / 100
         if co2 is None:
             continue
         n_known += 1
@@ -72,10 +104,11 @@ def _recipe_co2(recipe: dict, _visiting: frozenset = frozenset()) -> tuple[float
         per_ing.append({"ingredient": iid, "kg_co2": round(co2, 4)})
     return total, weight, n_known, n_lines, per_ing
 
-def carbon_score(recipe: dict) -> dict:
-    """Calcule l'empreinte carbone et le score éco (0-10, 10=très faible)."""
+def carbon_score(recipe: dict, month: int | None = None) -> dict:
+    """Calcule l'empreinte carbone et le score éco (0-10, 10=très faible).
+    month (1-12) : saison des ingrédients frais ; None = moyenne annuelle."""
     servings = max(1, recipe.get("servings", 4) or 4)
-    total, _, n_known, n_lines, per_ing = _recipe_co2(recipe)
+    total, _, n_known, n_lines, per_ing = _recipe_co2(recipe, month=month)
 
     per_portion = round(total / servings, 3)
     score       = round(max(1.0, min(10.0, 10.0 - per_portion * 6.0)), 2)
@@ -87,4 +120,5 @@ def carbon_score(recipe: dict) -> dict:
         "score":          score,
         "coverage":       round(n_known / n_lines, 2) if n_lines else 0.0,
         "ingredients_co2": sorted(per_ing, key=lambda x: -x["kg_co2"])[:8],
+        "month":          month,
     }

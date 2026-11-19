@@ -22,6 +22,11 @@ Méthode, pour chaque clé de la table utilisée par une recette :
   3. « non_recale » : sinon, la valeur d'origine est gardée (NOT_IN_AGRIBALYSE).
 La table est en kg CO₂e pour 100 g : valeur Agribalyse ÷ 10.
 
+Variantes saisonnières : quand Agribalyse donne pour un même code Ciqual une valeur « de
+saison » et une « hors saison » (tomate, fraise dans la v3.2), la source de la clé les
+porte (« saisonnier ») ; carbon_score(recipe, month) les applique aux ingrédients frais
+selon le calendrier de saisonnalité.
+
 Idempotent pour un même CSV.
 
 Usage :
@@ -162,6 +167,15 @@ def main() -> None:
     # plusieurs produits pour un même code Ciqual (« Mangue importée par bateau » _1 /
     # « par avion » _2, « Tomate, crue » _1 / « de saison » _2 / « hors saison » _3) :
     # le produit de même code, sinon la variante _1 (moyenne ou transport courant)
+    # variantes « de saison » (code saison 1) / « hors saison » (0) d'un même code Ciqual
+    seasonal = {}
+    for c, rows in by_ciqual.items():
+        de = [r for r in rows if r["code saison"].strip() == "1"]
+        hors = [r for r in rows if r["code saison"].strip() == "0"]
+        if de and hors:
+            seasonal[c] = {"de_saison": round(float(de[0]["Changement climatique"]) / 10, 4),
+                           "hors_saison": round(float(hors[0]["Changement climatique"]) / 10, 4),
+                           "codes_agb": [de[0]["Code AGB"], hors[0]["Code AGB"]]}
     by_ciqual = {c: next((r for r in rows if r["Code AGB"].strip() == c),
                          next((r for r in rows if r["Code AGB"].strip().endswith("_1")), rows[0]))
                  for c, rows in by_ciqual.items()}
@@ -208,6 +222,10 @@ def main() -> None:
         carbon[key] = new
         counts[method] += sum(n for _, n in ids_by_key[key])
         sources[key] = {"methode": method, "kg_co2e_pour_100g": new, "agribalyse": refs}
+        variants = [seasonal[r["code_ciqual"]] for r in refs if r.get("code_ciqual") in seasonal]
+        if variants:
+            # utilisé par carbon_score(recipe, month) pour les ingrédients frais
+            sources[key]["saisonnier"] = variants[0]
         if abs(new - old) > 1e-9:
             changes.append((key, old, new))
 

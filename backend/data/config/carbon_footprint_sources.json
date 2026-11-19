@@ -3570,7 +3570,15 @@
         "nom": "Fraise, crue",
         "kg_co2e_par_kg": 0.533
       }
-    ]
+    ],
+    "saisonnier": {
+      "de_saison": 0.0511,
+      "hors_saison": 0.0592,
+      "codes_agb": [
+        "13014_2",
+        "13014_3"
+      ]
+    }
   },
   "strawberry_jam": {
     "methode": "ciqual",
@@ -3800,7 +3808,15 @@
         "nom": "Tomate, crue",
         "kg_co2e_par_kg": 0.75
       }
-    ]
+    ],
+    "saisonnier": {
+      "de_saison": 0.0626,
+      "hors_saison": 0.211,
+      "codes_agb": [
+        "20047_2",
+        "20047_3"
+      ]
+    }
   },
   "tomato_paste": {
     "methode": "nom",
