@@ -962,3 +962,23 @@ def test_ingredients_des_recettes_chiffres():
 def test_liens_de_prix_faux_ne_reviennent_pas(ingredient, interdit):
     from backend.core.data_io import load_prices_catalog, resolve_catalog_key
     assert resolve_catalog_key(ingredient, load_prices_catalog()) != interdit
+
+
+def test_chaque_cle_de_prix_a_carbone_et_saveur():
+    """resolve_catalog_key sert aussi au carbone et à la saveur : 138 clés du catalogue
+    (egg, potato, milk, cream, soy_sauce…) n'avaient pas d'entrée dans
+    carbon_footprint.json / flavor_graph.json, qui les nomment « oeuf », « pommes_de_terre »…
+    ~1 430 lignes de recettes comptaient 0 kg CO₂e (carbon_flavor_profiles_2026_11_19.py)."""
+    from backend.core.data_io import load_carbon_footprint, load_flavor_graph, load_prices_catalog
+    catalog, carbon, flavor = load_prices_catalog(), load_carbon_footprint(), load_flavor_graph()
+    sans_carbone = sorted(k for k in catalog if k not in carbon)
+    sans_saveur = sorted(k for k in catalog if k not in flavor)
+    assert not sans_carbone, f"sans empreinte carbone : {sans_carbone[:15]}"
+    assert not sans_saveur, f"sans profil de saveur : {sans_saveur[:15]}"
+
+
+@pytest.mark.parametrize("ingredient", ["egg_raw", "potato_raw_flesh", "milk_liquid_uht_3_5pct",
+                                        "soy_sauce_shoyu_reduced_sodium", "cream_heavy"])
+def test_ingredients_courants_ont_une_empreinte(ingredient):
+    from backend.core.data_io import load_carbon_footprint, resolve_catalog_key
+    assert resolve_catalog_key(ingredient, load_carbon_footprint())
