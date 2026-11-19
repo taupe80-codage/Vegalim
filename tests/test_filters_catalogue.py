@@ -30,9 +30,18 @@ def test_gaspacho_en_ete_pas_en_hiver():
     assert "soup_gaspacho_provencal_f69228" not in _ids(season="winter")
 
 
-def test_chou_rouge_en_hiver_pas_en_ete():
-    assert "side_chou_rouge_pomme_noix_5d7c19" in _ids(season="winter")
-    assert "side_chou_rouge_pomme_noix_5d7c19" not in _ids(season="summer")
+def test_celeri_rave_en_hiver_pas_en_ete():
+    # céleri-rave d'octobre à mars (seasonality_winter_2026_11_19.py)
+    assert "side_gratin_celeri_rave_noix_7a19e6" in _ids(season="winter")
+    assert "side_gratin_celeri_rave_noix_7a19e6" not in _ids(season="summer")
+
+
+@pytest.mark.parametrize("iid", ["leeks_raw", "parsnip_raw", "celeriac_raw", "endive_raw",
+                                 "brussels_sprouts_raw", "jerusalem_artichoke_raw"])
+def test_legumes_d_hiver_de_saison_en_janvier(iid):
+    # absents du calendrier : leurs recettes passaient pour « sans ingrédient saisonnier »
+    from backend.engine.rule_engine.seasonality import in_season
+    assert in_season(iid, 1) and not in_season(iid, 7)
 
 
 def test_saison_en_francais():

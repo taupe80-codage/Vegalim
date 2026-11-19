@@ -21,7 +21,7 @@ s'adapte intelligemment à ses préférences au fil du temps.
 
 **Prototype personnel / laboratoire technique**
 
-- 1 000 recettes végétariennes indexées (dont 99 préparations de base)
+- 1 039 recettes végétariennes indexées (dont 99 préparations de base)
 - 102 moteurs Python opérationnels
 - 101 routes API FastAPI
 - Interface Streamlit fonctionnelle
@@ -166,7 +166,7 @@ Points de friction identifiés :
 - Recettes enfant-friendly, raw food et produits vegan transformés absentes
 
 ### 2. L'interface utilisateur — vrai chantier
-La technique backend est solide (102 engines, 101 routes, 1 000 recettes,
+La technique backend est solide (102 engines, 101 routes, 1 039 recettes,
 nutrition CIQUAL 100%). Streamlit est un outil de prototype, pas un produit.
 
 La migration vers React / Next.js est le chantier structurant de la v1 —

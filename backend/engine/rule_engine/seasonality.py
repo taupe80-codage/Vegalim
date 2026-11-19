@@ -52,6 +52,17 @@ SEASON_ID_ALIASES: dict[str, str] = {
     "green_zucchini_squash_raw": "zucchini",
     "tomato_raw_ripe": "tomato",
     # Clés disponibles 12 mois sur 12 dans le fichier : sans effet sur le ratio
+    # légumes et fruits d'automne-hiver ajoutés au calendrier le 2026-11-19
+    # (scripts/ingredients/seasonality_winter_2026_11_19.py)
+    "leeks_raw": "leek", "parsnip_raw": "parsnip", "celeriac_raw": "celeriac",
+    "endive_raw": "endive", "belgium_endive_raw": "endive",
+    "brussels_sprouts_raw": "brussels_sprouts",
+    "jerusalem_artichoke_raw": "jerusalem_artichoke",
+    "pear_raw_with_skin": "pear",
+    "apple_raw": "apple", "apple_raw_with_skin": "apple",
+    "chantecler_apple_raw_skinless": "apple", "golden_apple_raw_with_skin": "apple",
+    "european_chestnuts_sweet_cooked": "chestnut",
+    "lambs_lettuce_raw": "lambs_lettuce", "kiwi_raw": "kiwi",
     "carrot_raw": "carrot", "garlic_raw": "garlic",
     "onion_raw": "onion", "yellow_onion_raw": "onion", "white_onion_raw": "onion",
     "ginger_raw_root_fresh": "ginger",
