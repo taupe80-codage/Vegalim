@@ -72,6 +72,7 @@ SEASON_ID_ALIASES: dict[str, str] = {
     "green_chicory_raw": "chicory", "chicory_greens_raw_leaf": "chicory",
     "orange_raw": "orange", "strawberry_raw": "strawberry",
     "green_peas_raw": "green_peas", "broadbeans_fava_beans_raw_fresh": "fresh_fava_bean",
+    "broadbeans_fava_beans_boiled_fresh": "fresh_fava_bean",
     "rhubarb_raw_stem": "rhubarb",
     "cherry_raw_with_skin": "cherry", "sour_cherry_raw": "cherry",
     "raspberry_raw": "raspberry", "blueberry_raw": "blueberry", "bilberry_raw": "blueberry",

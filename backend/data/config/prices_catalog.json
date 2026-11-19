@@ -619,19 +619,14 @@
     "pantry": false,
     "packages": [
       {
-        "qty": 400,
+        "qty": 240,
         "unit": "g",
         "price": 1.2,
-        "label": "boîte 400g"
-      },
-      {
-        "qty": 500,
-        "unit": "g",
-        "price": 2.54,
-        "label": "sec 500g"
+        "label": "boîte 400g",
+        "note": "400 g brut, 240 g égouttés"
       }
     ],
-    "last_updated": "2026-07-30"
+    "last_updated": "2026-11-19"
   },
   "black_beans": {
     "name_fr": "Haricots noirs",
@@ -651,23 +646,25 @@
     "pantry": false,
     "packages": [
       {
-        "qty": 400,
+        "qty": 250,
         "unit": "g",
         "price": 1.6,
-        "label": "boîte 400g"
+        "label": "boîte 400g",
+        "note": "400 g brut, 250 g égouttés"
       }
     ],
-    "last_updated": "2026-07-30"
+    "last_updated": "2026-11-19"
   },
   "white_bean": {
     "name_fr": "Haricots blancs",
     "pantry": false,
     "packages": [
       {
-        "qty": 400,
+        "qty": 250,
         "unit": "g",
         "price": 1.2,
-        "label": "boîte 400g"
+        "label": "boîte 400g",
+        "note": "400 g brut, 250 g égouttés"
       }
     ],
     "last_updated": "2026-11-19"
@@ -690,13 +687,14 @@
     "pantry": false,
     "packages": [
       {
-        "qty": 400,
+        "qty": 240,
         "unit": "g",
         "price": 1.29,
-        "label": "boîte 400g"
+        "label": "boîte 400g",
+        "note": "400 g brut, 240 g égouttés"
       }
     ],
-    "last_updated": "2026-07-30"
+    "last_updated": "2026-11-19"
   },
   "cannellini_bean": {
     "name_fr": "Haricots cannellini",
@@ -716,10 +714,11 @@
     "pantry": false,
     "packages": [
       {
-        "qty": 400,
+        "qty": 280,
         "unit": "g",
         "price": 1.9,
-        "label": "boîte 400g"
+        "label": "boîte 400g",
+        "note": "400 g brut, 280 g égouttés"
       },
       {
         "qty": 1000,
@@ -728,7 +727,7 @@
         "label": "surgelé 1kg"
       }
     ],
-    "last_updated": "2026-07-30"
+    "last_updated": "2026-11-19"
   },
   "split_pea": {
     "name_fr": "Pois cassés",
@@ -761,13 +760,14 @@
     "pantry": false,
     "packages": [
       {
-        "qty": 400,
+        "qty": 250,
         "unit": "g",
         "price": 2.5,
-        "label": "boîte 400g"
+        "label": "boîte 400g",
+        "note": "400 g brut, 250 g égouttés"
       }
     ],
-    "last_updated": "2026-07-30"
+    "last_updated": "2026-11-19"
   },
   "soybean": {
     "name_fr": "Graines de soja",
@@ -5795,6 +5795,100 @@
         "unit": "g",
         "price": 1.99,
         "label": "barquette 100g"
+      }
+    ],
+    "last_updated": "2026-11-19"
+  },
+  "chickpea_dry": {
+    "name_fr": "Pois chiches secs",
+    "pantry": false,
+    "packages": [
+      {
+        "qty": 500,
+        "unit": "g",
+        "price": 2.54,
+        "label": "sec 500g"
+      }
+    ],
+    "last_updated": "2026-11-19"
+  },
+  "white_bean_dry": {
+    "name_fr": "Haricots blancs secs",
+    "pantry": false,
+    "packages": [
+      {
+        "qty": 500,
+        "unit": "g",
+        "price": 1.99,
+        "label": "sachet 500g"
+      }
+    ],
+    "last_updated": "2026-11-19"
+  },
+  "kidney_beans_dry": {
+    "name_fr": "Haricots rouges secs",
+    "pantry": false,
+    "packages": [
+      {
+        "qty": 500,
+        "unit": "g",
+        "price": 1.99,
+        "label": "sachet 500g"
+      }
+    ],
+    "last_updated": "2026-11-19"
+  },
+  "fava_bean_dry": {
+    "name_fr": "Fèves sèches",
+    "pantry": false,
+    "packages": [
+      {
+        "qty": 500,
+        "unit": "g",
+        "price": 2.49,
+        "label": "sachet 500g"
+      }
+    ],
+    "last_updated": "2026-11-19"
+  },
+  "fresh_fava_bean": {
+    "name_fr": "Fèves fraîches",
+    "pantry": false,
+    "packages": [
+      {
+        "qty": 300,
+        "unit": "g",
+        "price": 4.5,
+        "label": "1 kg en cosses",
+        "note": "≈ 300 g de grains écossés"
+      }
+    ],
+    "last_updated": "2026-11-19"
+  },
+  "green_lentil_cooked": {
+    "name_fr": "Lentilles cuites",
+    "pantry": false,
+    "packages": [
+      {
+        "qty": 265,
+        "unit": "g",
+        "price": 1.35,
+        "label": "boîte 400g",
+        "note": "400 g brut, 265 g égouttés"
+      }
+    ],
+    "last_updated": "2026-11-19"
+  },
+  "black_eyed_peas_canned": {
+    "name_fr": "Niébé en conserve",
+    "pantry": false,
+    "packages": [
+      {
+        "qty": 240,
+        "unit": "g",
+        "price": 1.59,
+        "label": "boîte 400g",
+        "note": "400 g brut, 240 g égouttés"
       }
     ],
     "last_updated": "2026-11-19"

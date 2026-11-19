@@ -982,3 +982,26 @@ def test_chaque_cle_de_prix_a_carbone_et_saveur():
 def test_ingredients_courants_ont_une_empreinte(ingredient):
     from backend.core.data_io import load_carbon_footprint, resolve_catalog_key
     assert resolve_catalog_key(ingredient, load_carbon_footprint())
+
+
+@pytest.mark.parametrize("ingredient, cle", [
+    # légumineuses : sec, conserve (poids égoutté) et frais séparés (fix_legume_prices_2026_11_19.py)
+    ("chickpea_raw_dried", "chickpea_dry"), ("chickpea_boiled", "chickpea"),
+    ("white_bean_raw", "white_bean_dry"), ("white_bean_boiled", "white_bean"),
+    ("kidney_bean_dried", "kidney_beans_dry"), ("fava_bean_dried", "fava_bean_dry"),
+    ("broadbeans_fava_beans_raw_fresh", "fresh_fava_bean"),
+    ("green_lentil_boiled", "green_lentil_cooked"),
+])
+def test_legumineuses_chiffrees_selon_leur_etat(ingredient, cle):
+    from backend.core.data_io import load_prices_catalog, resolve_catalog_key
+    assert resolve_catalog_key(ingredient, load_prices_catalog()) == cle
+
+
+def test_conserves_de_legumineuses_au_poids_egoutte():
+    # une boîte de 400 g contient 240 à 280 g égouttés : la compter à 400 g sous-estimait
+    # de ~40 % le prix des légumineuses cuites
+    from backend.core.data_io import load_prices_catalog
+    catalog = load_prices_catalog()
+    for key in ("chickpea", "white_bean", "kidney_beans", "black_bean_cooked", "pea"):
+        boites = [p for p in catalog[key]["packages"] if p["label"].startswith("boîte")]
+        assert boites and all(p["qty"] < 300 for p in boites), key
