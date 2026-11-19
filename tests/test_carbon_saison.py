@@ -34,3 +34,21 @@ def test_plat_sans_tomate_ni_fraise_insensible_au_mois():
              and not any(c["ingredient"] in ("tomato_raw_ripe", "strawberry_raw")
                          for c in r["composition"]))
     assert carbon_score(r, 1)["per_portion_kg"] == carbon_score(r, 7)["per_portion_kg"]
+
+
+def test_cartes_et_fiche_portent_la_saison_du_mois():
+    # badge « De saison » des cartes (enrich_why) = même calcul que la fiche (enrich_one)
+    from backend.services.enrichment_service import enrich_one, enrich_why, seasonal_tag
+    r = IDX["side_gratin_celeri_rave_noix_7a19e6"]
+    assert seasonal_tag(r, 1)[0] == "de_saison" and seasonal_tag(r, 7)[0] == "hors_saison"
+    carte = enrich_why([r])[0]
+    fiche = enrich_one(r)
+    assert carte["seasonal_tag"] == fiche["seasonal_tag"]
+    assert fiche["season_month"] == fiche["carbon_data"]["month"]
+
+
+def test_prix_estimes_signales():
+    from backend.engine.planning_engine.budget import estimate_price
+    noms = [e["name_fr"] for e in estimate_price(IDX["soup_potage_oseille_0f7d29"])["estimated_ingredients"]]
+    assert noms == ["oseille"]
+    assert estimate_price(IDX["soup_gaspacho_provencal_f69228"])["estimated_ingredients"] == []

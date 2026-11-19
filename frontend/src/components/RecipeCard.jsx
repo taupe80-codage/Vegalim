@@ -937,6 +937,12 @@ export default function RecipeCard({ recipe, activeHealthFilters = new Set(), ac
               <span className="recipe-meta-icon">🔥</span> {Math.round(kcal)} kcal
             </span>
           )}
+          {recipe.seasonal_tag === 'de_saison' && (
+            <span className="recipe-meta-item recipe-season-chip"
+                  title="La plupart de ses fruits et légumes sont de saison ce mois-ci">
+              <span className="recipe-meta-icon">🌱</span> De saison
+            </span>
+          )}
           {diff && (() => {
               const lvl    = typeof diff === 'number' ? diff
                            : diff === 'easy'   || diff === 'facile'        ? 1

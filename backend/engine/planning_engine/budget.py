@@ -26,6 +26,17 @@ def estimate_price(recipe: dict, servings: int | None = None) -> dict:
     # Ingrédients sans prix (sous-recettes comprises) : le coût affiché est un
     # minimum — l'interface doit le dire (« prix inconnu pour … »).
     names = names_of(cost["unknown"]) if cost["unknown"] else {}
+    # Ingrédients chiffrés sans relevé de prix (price_source « estimation… » ou
+    # « analogie… » dans prices_catalog.json) : la fiche le signale.
+    from backend.core.data_io import load_prices_catalog, resolve_catalog_key
+    catalog = load_prices_catalog()
+    estimated = []
+    for d in cost["details"]:
+        key = resolve_catalog_key(d["ingredient"], catalog)
+        src = str((catalog.get(key) or {}).get("price_source") or "") if key else ""
+        if src.startswith(("estimation", "analogie")) and d["ingredient"] not in estimated:
+            estimated.append(d["ingredient"])
+    est_names = names_of(estimated) if estimated else {}
     return {
         "total_eur":        cost["total_eur"],
         "per_portion_eur":  per_p,
@@ -36,4 +47,6 @@ def estimate_price(recipe: dict, servings: int | None = None) -> dict:
         "unknown_ingredients": [{"id": i, "name_fr": names.get(i) or i.replace("_", " ")}
                                 for i in cost["unknown"]],
         "complete":         not cost["unknown"],
+        "estimated_ingredients": [{"id": i, "name_fr": est_names.get(i) or i.replace("_", " ")}
+                                  for i in estimated],
     }

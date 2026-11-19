@@ -229,6 +229,79 @@ function RecipeNutritionPanel({ nutrition: rawNutrition }) {
 }
 
 // ── Matching frigo côté client (miroir de _ingredient_matches backend) ─────────
+// ── Saison et empreinte carbone (enrich_one : seasonal_tag, carbon_data) ─────────
+const MONTHS_FR = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet',
+                   'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+
+const SEASON_LABEL = {
+  de_saison:      { text: 'De saison',            cls: 'sustain-pill--good' },
+  presque_saison: { text: 'Presque de saison',    cls: 'sustain-pill--mid' },
+  hors_saison:    { text: 'Hors saison',          cls: 'sustain-pill--bad' },
+  'année_entière': { text: "Ingrédients de toute l'année", cls: '' },
+};
+
+function carbonLevel(label = '') {
+  if (label.includes('Faible')) return { text: 'faible', cls: 'sustain-pill--good' };
+  if (label.includes('Moyen'))  return { text: 'moyenne', cls: 'sustain-pill--mid' };
+  if (label.includes('Élevé'))  return { text: 'élevée', cls: 'sustain-pill--bad' };
+  return { text: '', cls: '' };
+}
+
+export function SeasonCarbon({ recipe, defaultOpen = false }) {
+  const [open, setOpen] = useState(defaultOpen);
+  const carbon = recipe.carbon_data;
+  const month  = recipe.season_month || carbon?.month;
+  const season = SEASON_LABEL[recipe.seasonal_tag];
+  if (!season && !(carbon?.per_portion_kg > 0)) return null;
+
+  const monthName = month ? MONTHS_FR[month - 1] : null;
+  const level = carbonLevel(carbon?.label);
+  const kg = carbon?.per_portion_kg;
+  const nameOf = (iid) => recipe.ingredients_meta?.[iid]?.name_fr || iid.replace(/_/g, ' ');
+  const top = (carbon?.ingredients_co2 || []).filter(x => x.kg_co2 > 0).slice(0, 3);
+  const servings = recipe.servings || 4;
+
+  return (
+    <div className="detail-sustain">
+      {season && (
+        <span className={`sustain-pill ${season.cls}`}
+              title={recipe.seasonal_tag === 'année_entière' ? undefined
+                : `${Math.round((recipe.seasonal_ratio || 0) * 100)} % des ingrédients saisonniers sont de saison`}>
+          🌱 {season.text}{monthName && recipe.seasonal_tag !== 'année_entière' ? ` en ${monthName}` : ''}
+        </span>
+      )}
+      {kg > 0 && (
+        <button type="button" className={`sustain-pill sustain-pill--btn ${level.cls}`}
+                onClick={() => setOpen(o => !o)} aria-expanded={open}>
+          🌍 {kg.toFixed(2).replace('.', ',')} kg CO₂e / pers.
+          {level.text && <> · empreinte {level.text}</>}
+          <span className="sustain-caret" aria-hidden="true">{open ? '▴' : '▾'}</span>
+        </button>
+      )}
+      {open && kg > 0 && (
+        <div className="sustain-detail">
+          {top.length > 0 && (
+            <p>
+              Ce qui pèse le plus :{' '}
+              {top.map((x, i) => (
+                <span key={x.ingredient}>
+                  {i > 0 && ', '}
+                  {nameOf(x.ingredient)} ({(x.kg_co2 / servings).toFixed(2).replace('.', ',')} kg)
+                </span>
+              ))}.
+            </p>
+          )}
+          <p className="sustain-source">
+            Changement climatique, données AGRIBALYSE 3.2 (ADEME)
+            {monthName ? ` ; tomates et fraises comptées selon la saison en ${monthName}` : ''}.
+            Repères : faible sous 0,5 kg, élevée au-delà de 1,5 kg par portion.
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function ingredientMatches(fridgeId, recipeId) {
   if (!fridgeId || !recipeId) return false;
   const fid = fridgeId.toLowerCase();
@@ -575,6 +648,15 @@ export default function RecipeDetailPage() {
               le coût estimé est incomplet.
             </p>
           )}
+          {recipe.price_data?.estimated_ingredients?.length > 0 && (
+            <p className="price-estimated-note" role="note">
+              Prix estimé, sans relevé en magasin, pour{' '}
+              {recipe.price_data.estimated_ingredients.map(u => u.name_fr).join(', ')}.
+            </p>
+          )}
+
+          <SeasonCarbon recipe={recipe} />
+
 
           {/* Boutons d'action */}
           <div style={{ display:'flex', gap:10, flexWrap:'wrap', marginTop: 16 }}>

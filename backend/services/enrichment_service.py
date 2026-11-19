@@ -47,6 +47,18 @@ _CYCLE_PRIORITY = {
 
 # ── enrich_why (calcul léger — liste) ────────────────────────────────────────
 
+def seasonal_tag(recipe: dict, month: int) -> tuple[str, float]:
+    """(étiquette, part des ingrédients saisonniers de saison) au mois donné :
+    de_saison ≥ 70 %, presque_saison ≥ 40 %, hors_saison, ou année_entière
+    (aucun ingrédient saisonnier connu)."""
+    from backend.engine.rule_engine.seasonality import season_ratio
+    ratio = season_ratio(recipe, month)
+    if ratio is None:
+        return "année_entière", 1.0
+    tag = "de_saison" if ratio >= 0.7 else "presque_saison" if ratio >= 0.4 else "hors_saison"
+    return tag, round(ratio, 2)
+
+
 def enrich_why(recipes: list[dict], filters: dict | None = None) -> list[dict]:
     """
     Enrichit chaque recette avec :
@@ -63,6 +75,7 @@ def enrich_why(recipes: list[dict], filters: dict | None = None) -> list[dict]:
     ings_dict = load_ingredients_dict()
     cycle_phase  = filters.get("cycle_phase")
     priority_keys = _CYCLE_PRIORITY.get(cycle_phase, [])
+    month = datetime.date.today().month
 
     from backend.services.filter_service import _hs
 
@@ -165,6 +178,8 @@ def enrich_why(recipes: list[dict], filters: dict | None = None) -> list[dict]:
         _apply_recipe_allergens(r, agg_diet)
         r["diet_flags_enriched"]  = agg_diet
         r["nutrition_highlights"] = agg_nutr
+        # Badge « De saison » des cartes (même calcul que la fiche)
+        r["seasonal_tag"], r["seasonal_ratio"] = seasonal_tag(r, month)
 
         result.append(r)
 
@@ -275,17 +290,8 @@ def enrich_one(recipe: dict) -> dict:
     # Part des ingrédients saisonniers de saison (ids CIQUAL résolus) : l'ancien
     # calcul comparait les ids aux noms courts d'une table toujours vide.
     current_month = datetime.date.today().month
-    ratio = season_ratio(recipe, current_month)
-    if ratio is not None:
-        out["seasonal_tag"]   = (
-            "de_saison"      if ratio >= 0.7 else
-            "presque_saison" if ratio >= 0.4 else
-            "hors_saison"
-        )
-        out["seasonal_ratio"] = round(ratio, 2)
-    else:
-        out["seasonal_tag"]   = "année_entière"
-        out["seasonal_ratio"] = 1.0
+    out["seasonal_tag"], out["seasonal_ratio"] = seasonal_tag(recipe, current_month)
+    out["season_month"] = current_month
 
     # ── Scoring CDC_03c ───────────────────────────────────────────────────────
     _scored = _score_recipe(recipe)
