@@ -998,13 +998,18 @@ def test_legumineuses_chiffrees_selon_leur_etat(ingredient, cle):
 
 
 def test_conserves_de_legumineuses_au_poids_egoutte():
-    # une boîte de 400 g contient 240 à 280 g égouttés : la compter à 400 g sous-estimait
-    # de ~40 % le prix des légumineuses cuites
+    # la quantité d'une boîte est son poids égoutté (note « … g égouttés »), et le prix au
+    # kilo égoutté reste celui des relevés (2 à 6 €/kg) : compter 240 g pour une boîte 4/4
+    # de 530 g doublait le prix (prices_releves_2026_11_19.py)
     from backend.core.data_io import load_prices_catalog
     catalog = load_prices_catalog()
-    for key in ("chickpea", "white_bean", "kidney_beans", "black_bean_cooked", "pea"):
+    for key in ("chickpea", "white_bean", "kidney_beans", "black_bean_cooked", "pea",
+                "green_lentil_cooked", "black_eyed_peas_canned"):
         boites = [p for p in catalog[key]["packages"] if p["label"].startswith("boîte")]
-        assert boites and all(p["qty"] < 300 for p in boites), key
+        assert boites, key
+        for p in boites:
+            assert "égouttés" in p.get("note", ""), (key, p)
+            assert 2.0 <= p["price"] / p["qty"] * 1000 <= 7.0, (key, p)
 
 
 def test_carbone_recale_sur_agribalyse():

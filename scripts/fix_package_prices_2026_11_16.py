@@ -30,7 +30,7 @@ CATALOG_PATH = Path(__file__).resolve().parent.parent / "backend/data/config/pri
 FIXES: dict[str, dict[str, float]] = {
     "butter":            {"plaquette 250g": 2.40},
     "beurre":            {"plaquette 250g": 2.40},
-    "chickpea":          {"boîte 400g": 1.20},
+    # "chickpea" : boîte remplacée par la boîte 4/4 relevée (prices_releves_2026_11_19.py)
     "onion":             {"filet 1kg": 1.95},
     "garlic":            {"tête d'ail": 0.85},
     "carrot":            {"sachet 500g": 1.10},

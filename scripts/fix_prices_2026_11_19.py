@@ -42,7 +42,7 @@ PRICE_FIXES: dict[str, dict[str, float]] = {
     # aubergine : gros 2 à 4 €/kg (moyenne 12 mois 2,63 €) → ≈ 4 €/kg au détail
     "eggplant": {"pièce ~400g": 1.60, "2 aubergines": 3.00},
     # haricots blancs 400 g : 0,80 à 1,55 € (Carrefour), 2,49 € en bio
-    "white_bean": {"boîte 400g": 1.20},
+    # "white_bean" : boîte remplacée par la boîte 4/4 relevée (prices_releves_2026_11_19.py)
     # ricotta Galbani 250 g : 2,95 € (Monoprix)
     "ricotta": {"pot 250g": 2.80},
     # banane plantain : 1,99 €/kg (verte) à 2,99 €/kg (mûre) → pièce de 250 g
