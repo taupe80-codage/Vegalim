@@ -150,6 +150,7 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `escalivada` | Sílvia Martín | CC BY 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Escalivada_-_8564805343.jpg) |
 | `esquites-mais-a-la-mexicaine-en-gobelet` | Janeefun | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Esquites_de_Pe%C3%B1a_de_Bernal.jpg) |
 | `ethiopian-misir-wot` | Andy Li | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Misir_Wot_and_Gomen_Besiga_-_Abyssinia,_Brighton.jpg) |
+| `eton-mess-fraises-meringue-et-creme-fouettee` | Exx8 | CC0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Eton_Mess_2025-2_(cropped).jpg) |
 | `ezogelin-corbas-lentilles-boulgour-et-menthe-vegan` | E4024 | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ezogelin.jpg) |
 | `falafel-libanais-au-sesame` | EvanProdromou | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bowl_of_falafel.jpg) |
 | `far-breton-aux-pruneaux` | Easyfrenchfood | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Far-breton.jpg) |
@@ -193,9 +194,11 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `gochujang` | 온맘으로 | CC BY 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gochujang_(chilli_paste).jpg) |
 | `gougeres-au-fromage` | User:FXcuisine | CC BY-SA 3.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gougeres-FXcuisine.jpg) |
 | `gozleme-aux-pommes-de-terre-epicees-et-au-persil-vegan` | Maderibeyza | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:G%C3%B6zleme.JPG) |
+| `granola-sans-gluten-au-sarrasin-et-aux-noisettes` | Arnold Gatilao from Oakland, CA, USA | CC BY 2.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Granola,_yogurt,_fruit._(16696981528).jpg) |
 | `gratin-de-chou-fleur` | isapisa | CC BY-SA 2.0 | [flickr](https://www.flickr.com/photos/97189192@N00/39309672935) |
 | `gratin-de-chouchou-reunionnais` | Cirage | Public domain | [Wikipédia (fr) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gratin_chouchou.JPG) |
 | `gratin-de-poireaux` | Lablascovegmenu from London | CC BY 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Leek_au_gratin_(7456975464).jpg) |
+| `gratin-de-pommes-de-terre-et-poireaux-a-la-creme-davoine-vegan` | Ludovic Péron | CC BY-SA 3.0 | [Wikipédia (fr) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gratin_dauphinois.jpg) |
 | `greek-fasolada` | Miansari66 | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Fasolada.JPG) |
 | `grits-au-cheddar` | snowpea&bokchoi | CC BY 2.0 | [flickr](https://www.flickr.com/photos/28531775@N06/4681849333) |
 | `guacamole` | Nikodem Nijaki | CC BY-SA 3.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Guacamole_IMGP1256.jpg) |
@@ -204,6 +207,7 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `hachis-de-lentilles-a-la-patate-douce-vegan` | Stephanie Clifford from Arlington, VA, USA | CC BY 2.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sweet_Potato_Pie_(26196501606).jpg) |
 | `halloumi` | Photograph by Mike Peel (www.mikepeel.net). | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Fried_halloumi-style_cheese_wrap_and_chips_at_The_Bright_Helm_pub,_Brighton.jpg) |
 | `halloumi-grille-au-citron-et-a-la-menthe` | Photograph by Mike Peel (www.mikepeel.net). | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Battered_Halloumi,_1847_Manchester.jpg) |
+| `halloumi-pois-chiches-rotis-et-legumes-grilles` | Halloumislicefresh.jpg: J.P.Lon derivative work: Zlerman (talk) | Public domain | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Halloumislice_zoom.jpg) |
 | `halva-de-sesame` | Shuhrenataxmedov | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Orient_sweets_(special_halva)_Samarkand,_Siyab.jpg) |
 | `haricots-blancs-au-four` | Mk2010 | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Baked_beans_in_tomato_sauce.jpg) |
 | `haricots-geants-au-four` | Hevesli | Public domain | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gigandes_plaki.jpg) |
@@ -221,6 +225,7 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `huevos-rancheros` | jasonlam | CC BY-SA 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:04_Huevos_Rancheros_-_Mesa_Coyoacan.jpg) |
 | `humita-en-olla-argentine-mais-et-courge-vegan` | Se.Xauxa (Wikipédia en espagnol) | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Humitas.jpg) |
 | `humitas-peruviennes-au-fromage-frais-en-feuilles-de-mais` | JordiCuber | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Humitas_(1).jpg) |
+| `hutspot-puree-neerlandaise-aux-carottes-et-oignons` | inconnu | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hutspot_in_pan.JPG) |
 | `idli-galettes-de-riz-vapeur-fermentees` | OdetomyLife | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Idli_and_Medu_Vada.JPG) |
 | `ile-flottante` | Marianne Casamance | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Agroparc_-_food_truck_ile_flottante_pralin%C3%A9.jpg) |
 | `involtini-daubergines-a-la-sicilienne-vegan` | Seph Swain | CC BY 2.0 | [flickr](https://www.flickr.com/photos/23149749@N08/3108336665) |
@@ -248,6 +253,7 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `kimchi-sundubu-jjigae-epice` | by titanium22 | CC BY-SA 2.0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=3216007) |
 | `kimchijeon-crepe-croustillante-au-kimchi-vegan` | Chiyako92 | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kimchijeon_at_Okja_Restaurant,_Milan,_2022.jpg) |
 | `kinpira-de-carottes-et-de-lotus` | yoppy | CC BY 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kinpira_002.jpg) |
+| `kirschenmichel-pudding-de-pain-aux-cerises` | Genet | CC BY-SA 3.0 | [Wikipédia (de) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kirschenmichel_mit_Vanillesauce.jpg) |
 | `knackebrod-pain-croustillant-suedois-au-seigle` | Daderot | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kn%C3%A4ckebr%C3%B6d_-_Massachusetts.jpg) |
 | `knafeh-au-fromage-et-au-sirop-de-rose` | Kateoong | CC BY 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Knafeh_from.png) |
 | `knedliky-quenelles-de-pain-tcheques` | Schnobby | CC BY-SA 4.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kn%C3%B6delschneem%C3%A4nner_1.jpg) |
@@ -289,6 +295,7 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `maqluba-de-legumes-riz-renverse-aux-aubergines-et-chou-fleur` | Ramadan9044 | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:%D8%B7%D8%A8%D8%AE%D8%A9_%D8%A7%D9%84%D9%85%D9%82%D9%84%D9%88%D8%A8%D8%A9_Maqluba.jpg) |
 | `masala-chai-aux-epices` | Dadhichbittu007 | CC BY-SA 4.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Chai_In_Sakora.jpg) |
 | `masoor-dal-bengali-au-panch-phoron` | Sukanya Konar | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:A_Traditional_Bengali_Lunch.jpg) |
+| `matar-paneer-curry-de-petits-pois-et-paneer` | CNEcija12345 | CC BY-SA 4.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Matar_paneer_dish.jpg) |
 | `matbucha` | The Boreka Diary | CC BY-SA 2.0 | [flickr](https://www.flickr.com/photos/41900281@N07/4840136284) |
 | `matoke-plantains-verts-mijotes-a-lougandaise` | Michele Zanin | CC BY-SA 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Matoke,_2010.jpg) |
 | `mayonnaise-vegane` | Mx. Granger | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Vegan_mayonnaise_on_bread.jpg) |
@@ -361,6 +368,7 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `pates-puttanesca-aux-tomates-cerises-roties-et-chapelure-a-lail` | Popo le Chien | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pasta_Puttanesca.jpg) |
 | `pecel-javanais-legumes-blanchis-et-sauce-cacahuete-epicee-vegan` | Hariadhi | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pecel_Hariadhi.JPG) |
 | `perkedel-galettes-de-pommes-de-terre-indonesiennes` | Midori | CC BY-SA 3.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Perkedel.JPG) |
+| `pesarattu-crepes-de-haricots-mungo-au-gingembre` | Ryallabandi at en.wikipedia | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pesarattu.jpg) |
 | `pesto-genovese` | AlfonsoLucifredi | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pesto_alla_genovese.jpg) |
 | `peynirli-pide-pain-plat-turc-au-fromage` | Garrett Ziegler | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Peynirli_Pide.jpg) |
 | `pho` | Wesoree | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Nam_pho_bowl.jpg) |
@@ -374,6 +382,7 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `pisto-espagnol` | Juan Emilio Prades Bel | CC BY 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pisto,_sofrito_de_verduras.jpg) |
 | `pisto-manchego` | Coralma* | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pisto_Manchego_1.jpg) |
 | `pizza-marinara-a-lail-et-a-lorigan` | stu_spivack | CC BY-SA 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Marinara_(2475416616).jpg) |
+| `pizzoccheri-pates-de-sarrasin-au-chou-et-aux-pommes-de-terre` | Nnaluci | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pizzoccheri.jpg) |
 | `plantain-frit-nature` | Vegan Feast Catering | CC BY 2.0 | [flickr](https://www.flickr.com/photos/25128194@N02/4503132790) |
 | `poelee-de-legumes` | Daderot | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Aloo_mattar,_sauteed_Chinese_vegetables,_and_chapati_-_Massachusetts.jpg) |
 | `poelee-scandinave-de-legumes-et-pommes-de-terre` | Nilli | Public domain | [Wikipédia (fr) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pyttipanna_serving.jpg) |
@@ -384,9 +393,12 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `pommes-dauphine` | Attiliomarella | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Filet_de_dorade_au_potiron_et_pommes_dauphine.jpg) |
 | `porotos-granados-haricots-mais-et-courge` | User:Pachanka | CC BY-SA 4.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Porotos_granados_and_Chilean_salad.jpg) |
 | `porridge-de-millet-au-lait-de-coco-et-a-la-mangue` | Rwebogora | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cooking_cassava_porridge.jpg) |
+| `porridge-de-sarrasin-aux-pommes-et-a-la-cannelle` | Laitr Keiows | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:%D0%93%D1%80%D0%B5%D1%87%D0%BD%D0%B5%D0%B2%D0%B0%D1%8F_%D0%BA%D0%B0%D1%88%D0%B0.jpg) |
+| `potage-a-loseille` | Michał Sulik | CC BY 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sorrel_soup_with_egg_and_croutons_(Zupa_szczawiowa_z_jajkiem_i_grzankami).jpg) |
 | `poutine-quebecoise-sauce-brune-et-fromage-en-grains` | PenPineapplePinniped | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Poutine_Dog.jpg) |
 | `pozole` | El Nuevo Doge | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pozole,_Mazatl%C3%A1n,_13_de_marzo_de_2023_02.jpg) |
 | `provoleta-grillee-a-lorigan` | Horacio Cambeiro | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pizza_de_queso_provoleta_argentina.jpg) |
+| `pulao-aux-petits-pois-et-au-cumin-vegan` | Sonia Goyal | CC BY-SA 2.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jeera-rice.JPG) |
 | `pupusas-de-ayote-et-haricots-noirs-vegan` | Simon Law from Montréal, QC, Canada | CC BY-SA 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pupusas_(640356642).jpg) |
 | `pupusas-de-frijol-con-queso-et-curtido` | ElmerGuevara | CC BY-SA 3.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pupusas..JPG) |
 | `pupusas-revueltas-au-fromage-et-au-loroco` | Ll1324 | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pupusas,_Salvadore%C3%B1as,_para_llevar.jpg) |
@@ -409,12 +421,14 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `rasam` | Miansari66 | Public domain | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Rasam_Soup.JPG) |
 | `ratatouille-nicoise-traditionnelle` | André Loconte | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:20170329_ratatouille-fin-cuisson.jpg) |
 | `revithia` | topsyntages.gr | CC BY-SA 2.0 | [flickr](https://www.flickr.com/photos/47943919@N07/6188595277) |
+| `rhubarb-crumble-crumble-anglais-a-la-rhubarbe` | Suzette - www.suzette.nu from Arnhem, Netherlands | CC BY 2.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Vegan_apple_crumble_(8293111737).jpg) |
 | `ribollita-toscane` | Ithunn | CC BY-SA 3.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ribollita_toscana.JPG) |
 | `ricotta-de-cajou` | Daniele Pugliesi | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ricotta_alcamese.jpg) |
 | `risalamande-riz-au-lait-danois-aux-amandes-et-aux-cerises` | Lorie Shaull | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Risalamande,_a_Danish_Christmas_dessert.jpg) |
 | `risotto-ai-porcini-mantecato-au-beurre-et-parmesan` | Number55 | CC BY-SA 3.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Risotto_ai_funghi_porcini.JPG) |
 | `risotto-al-limone-damalfi` | cyclonebill | CC BY-SA 2.0 | [Wikipédia (fr) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Flickr_-_cyclonebill_-_Risotto_med_citron_og_gr%C3%B8nne_b%C3%B8nner.jpg) |
 | `risotto-au-citron-et-au-fenouil-vegan` | Burkhard Mücke | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Risotto_Weihnachten_2020_13.jpg) |
+| `risotto-aux-asperges-blanches-de-bassano` | Andrea Martinello | CC BY-SA 2.0 | [Wikipédia (it) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Asparago_Bianco_di_Bassano_del_Grappa.jpg) |
 | `risotto-aux-asperges-vertes-petits-pois-et-menthe-vegan` | Bernard Ladenthin | CC BY 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:20200424_184047_Puff_pastry_with_green_asparagus_and_goat_cheese.jpg) |
 | `risotto-aux-champignons-et-aux-epinards-vegan` | Alpha from Melbourne, Australia | CC BY-SA 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Risotto_of_leek,_mushroom,_pea,_spinach_-_Relish_Food_Store_AUD14_(4139673555).jpg) |
 | `riz-citronne-indien` | Zeel Patel | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lemon_Rice_-_Perfect_use_of_Left_over_rice.JPG) |
@@ -540,6 +554,7 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `veloute-de-celeri-rave` | Fefe0406 | CC BY-SA 3.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Velout%C3%A9_de_choux_Romanesco_%C3%A0_la_ciboulette.jpg) |
 | `ven-pongal-riz-et-lentilles-au-poivre` | Thamizhpparithi Maari | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Aesthetic_Ven_Pongal.jpg) |
 | `vichyssoise` | BocaDorada | CC BY-SA 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Vichyssoise.jpg) |
+| `vospov-apur-soupe-armenienne-de-lentilles-aux-abricots-secs` | Roland Unger | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:EgFoodLentilSoup.jpg) |
 | `waakye-riz-et-haricots-ghaneen` | Edithobayaa1 | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Waakye_in_Ghana.jpg) |
 | `welsh-rarebit-toast-gallois-au-cheddar-fondu` | Andy Li | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:T@_Welsh_Rarebit_-_T_@_The_Dials_2023-05-28.jpg) |
 | `wontons-aux-legumes-sauce-chili-au-vinaigre` | Fumikas Sagisavas | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mini_wontons.jpg) |
