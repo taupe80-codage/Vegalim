@@ -1005,3 +1005,24 @@ def test_conserves_de_legumineuses_au_poids_egoutte():
     for key in ("chickpea", "white_bean", "kidney_beans", "black_bean_cooked", "pea"):
         boites = [p for p in catalog[key]["packages"] if p["label"].startswith("boîte")]
         assert boites and all(p["qty"] < 300 for p in boites), key
+
+
+def test_carbone_recale_sur_agribalyse():
+    """carbon_footprint.json recalé sur AGRIBALYSE 3.2 (carbon_agribalyse_2026_11_19.py) :
+    chaque clé utilisée par une recette a sa source (produits Agribalyse ou « non_recale »),
+    et la valeur de la table est celle de la source."""
+    import json
+    from pathlib import Path
+    from backend.core.data_io import load_carbon_footprint, resolve_catalog_key
+    from backend.engine.score_engine.quality import _get_ings
+    carbon = load_carbon_footprint()
+    src = json.loads((Path(__file__).resolve().parent.parent
+                      / "backend/data/config/carbon_footprint_sources.json").read_text(encoding="utf-8"))
+    used = {resolve_catalog_key(i, carbon) for r in RECIPES for i in _get_ings(r)
+            if not i.startswith("base_")} - {None}
+    sans_source = sorted(k for k in used if k not in src)
+    assert not sans_source, f"clés sans source carbone : {sans_source[:15]}"
+    faux = [k for k in used if abs(src[k]["kg_co2e_pour_100g"] - carbon[k]) > 1e-9]
+    assert not faux, faux[:10]
+    # repères Agribalyse (kg CO₂e / kg) : œuf 1,88, lait entier 1,46, huile d'olive 1,63
+    assert abs(carbon["egg"] * 10 - 1.88) < 0.2 and abs(carbon["olive_oil"] * 10 - 1.63) < 0.2

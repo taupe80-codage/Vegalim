@@ -175,8 +175,12 @@ peu fiables pour les spécificités végétariennes françaises.
 Mieux vaut ne pas afficher un score trompeur.
 
 **Conditions de déclenchement v2 :**
-- Base carbone complète sur les 302 ingrédients (source Agribalyse ADEME)
-- Prise en compte de la saisonnalité (tomate de saison ≠ tomate importée)
+- ✅ Base carbone recalée sur AGRIBALYSE 3.2 (ADEME) le 2026-11-19 : toutes les
+  clés utilisées par les recettes, sources et codes dans
+  `backend/data/config/carbon_footprint_sources.json` (27 clés sans équivalent
+  Agribalyse gardent leur valeur d'origine, ~2 % des lignes de recettes)
+- Prise en compte de la saisonnalité (tomate de saison ≠ tomate importée) —
+  les variantes Agribalyse « de saison / hors saison » ne sont pas encore utilisées
 - Validation par une source reconnue (ADEME, Bon pour le Climat...)
 
 **Format d'affichage prévu v2 :**
