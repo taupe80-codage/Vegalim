@@ -529,7 +529,7 @@ export default function RecipeDetailPage() {
 
           {/* Titre + badge NRF8v à droite */}
           {(() => {
-            const nrf = computeNRFScore(recipe);
+            const nrf = computeNRFScore(displayed);
             // Score rescalé ×2 → meilleurs plats 75-95/100
             const bg  = nrf >= 70 ? 'rgba(21,95,50,0.92)' : nrf >= 45 ? 'rgba(29,78,154,0.90)' : 'rgba(55,65,81,0.88)';
             return (
@@ -590,7 +590,7 @@ export default function RecipeDetailPage() {
               </span>
             ))}
             {(() => {
-              const alim = computeAlimScore(recipe);
+              const alim = computeAlimScore(displayed);
               return alim !== null
                 ? <span className="badge score" title="Score ALIM — qualité végé-nutritionnelle">⭐ {alim}/100</span>
                 : null;
@@ -683,8 +683,12 @@ export default function RecipeDetailPage() {
               📅 Ajouter au planning
             </button>
             <button className="variant-btn" onClick={() => {
-              window.__alim_pending_recipe = recipe;
-              window.dispatchEvent(new CustomEvent('alim:recipe-selected', { detail: recipe }));
+              // version affichée : la nutrition de la variante vegan, titre précisé
+              const sent = showVariant && variant?.recipe
+                ? { ...displayed, titles: { ...displayed.titles, fr: `${displayed.titles?.fr || ''} (version vegan)` } }
+                : recipe;
+              window.__alim_pending_recipe = sent;
+              window.dispatchEvent(new CustomEvent('alim:recipe-selected', { detail: sent }));
               navigate('/nutrition');
             }}>
               ◉ Voir l'AJR
@@ -886,11 +890,12 @@ export default function RecipeDetailPage() {
       </div>
 
       {/* ── Nutrition complète (pleine largeur) ── */}
-      {recipe.nutrition && <RecipeNutritionPanel nutrition={recipe.nutrition} />}
+      {displayed.nutrition && <RecipeNutritionPanel nutrition={displayed.nutrition} />}
 
       {/* ── Modal Ajouter au planning ── */}
       {showPlanModal && recipe && (
-        <AddToPlanModal recipe={recipe} onClose={()=>setShowPlanModal(false)} />
+        <AddToPlanModal recipe={recipe} variant={showVariant && variant?.recipe ? 'vegan' : undefined}
+          onClose={()=>setShowPlanModal(false)} />
       )}
 
       {/* ── Recettes similaires ── */}

@@ -808,6 +808,11 @@ def shopping_list(meal_plan: dict, eco: bool = False) -> dict:
             recipe = recipe_index.get(rid)
             if not recipe:
                 continue
+            # Recette ajoutée au planning dans sa version vegan (fiche) : on achète
+            # les substituts (beurre végétal, tofu soyeux…), pas les ingrédients d'origine
+            if slot_data.get("variant") == "vegan":
+                from backend.engine.rule_engine.variants import vegan_variant
+                recipe = vegan_variant(recipe)["recipe"]
 
             n_recipes += 1
 

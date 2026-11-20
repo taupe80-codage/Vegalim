@@ -233,3 +233,14 @@ def test_variante_vegan_sans_qualificatif_laitier():
             pat = re.compile(re.escape(s) + r" (?:fraîches?|entiers?|entières?|de vache)\b", re.I)
             restes += [r["id"] for t in textes if pat.search(t)]
     assert restes == []
+
+
+def test_liste_de_courses_version_vegan_du_planning():
+    """Une recette ajoutée au planning en version vegan (variant="vegan") : la liste
+    de courses compte les substituts, pas le beurre ni les œufs d'origine."""
+    from backend.engine.planning_engine.shopping import shopping_list
+    plan = lambda extra: {"lundi": {"dinner_0": {"id": "tart_asperges_vertes_ricotta_2c85b3", **extra}}}
+    noms = lambda r: {i.get("name_fr", "") for items in r["by_category"].values() for i in items}
+    orig, veg = noms(shopping_list(plan({}))), noms(shopping_list(plan({"variant": "vegan"})))
+    assert {"Ricotta", "Œuf", "Parmesan"} <= orig
+    assert {"Ricotta de Cajou", "Tofu soyeux"} <= veg and not {"Ricotta", "Œuf", "Parmesan"} & veg

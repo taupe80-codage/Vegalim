@@ -18,4 +18,11 @@ describe('planToShoppingFormat', () => {
     });
     expect(out.mardi).toEqual({});
   });
+
+  it('transmet la version vegan choisie sur la fiche (courses des substituts)', () => {
+    const plan = { mardi: { dinner: { servings: 4, recipes: [{ id: 't', title_fr: 'Tarte', variant: 'vegan' }] } } };
+    expect(planToShoppingFormat(plan).mardi).toEqual({
+      dinner_0: { id: 't', title: 'Tarte', servings: 4, variant: 'vegan' },
+    });
+  });
 });

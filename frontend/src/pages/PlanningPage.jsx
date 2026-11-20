@@ -307,6 +307,11 @@ function PlanningRecipeCard({recipe, onReplace, onSearch, onDelete, isReplacing}
         {recipe.id
           ? <a className="prcard-title prcard-link" href={`#/recette/${recipe.id}`}>{title}</a>
           : <span className="prcard-title">{title}</span>}
+        {recipe.variant === 'vegan' && (
+          <span className="prcard-ahead" title="Ajoutée dans sa version vegan : la liste de courses compte les substituts">
+            🌿 version vegan
+          </span>
+        )}
         {recipe.prep_ahead && (
           <span className="prcard-ahead" title="Trempage, marinade ou repos de 4 h ou plus : à commencer la veille">
             ⏳ à lancer la veille

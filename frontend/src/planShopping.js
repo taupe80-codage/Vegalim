@@ -21,6 +21,7 @@ export function planToShoppingFormat(plan) {
         if (!r?.id) continue;
         const entry = { id: r.id, title: r.title_fr || r.title || '' };
         if (slot.servings > 0) entry.servings = slot.servings;
+        if (r.variant) entry.variant = r.variant;   // « vegan » : courses de la version vegan
         out[dk][`${m}_${i++}`] = entry;
       }
     }
