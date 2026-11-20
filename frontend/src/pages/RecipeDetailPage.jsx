@@ -605,12 +605,12 @@ export default function RecipeDetailPage() {
               </div>
             ))}
 
-            {recipe.price_data?.per_portion_eur > 0 && (
-              <div className="stat-box" title={recipe.price_data.label}>
+            {displayed.price_data?.per_portion_eur > 0 && (
+              <div className="stat-box" title={displayed.price_data.label}>
                 <span className="stat-label">Coût estimé</span>
                 <span className="stat-value">
-                  {recipe.price_data.complete === false ? '≥ ' : '~'}
-                  {recipe.price_data.per_portion_eur.toFixed(2).replace('.', ',')} € / pers.
+                  {displayed.price_data.complete === false ? '≥ ' : '~'}
+                  {displayed.price_data.per_portion_eur.toFixed(2).replace('.', ',')} € / pers.
                 </span>
               </div>
             )}
@@ -643,20 +643,20 @@ export default function RecipeDetailPage() {
               );
             })()}
           </div>
-          {recipe.price_data?.unknown_ingredients?.length > 0 && (
+          {displayed.price_data?.unknown_ingredients?.length > 0 && (
             <p className="price-unknown-note" role="note">
-              ⚠ Prix inconnu pour {recipe.price_data.unknown_ingredients.map(u => u.name_fr).join(', ')} :
+              ⚠ Prix inconnu pour {displayed.price_data.unknown_ingredients.map(u => u.name_fr).join(', ')} :
               le coût estimé est incomplet.
             </p>
           )}
-          {recipe.price_data?.estimated_ingredients?.length > 0 && (
+          {displayed.price_data?.estimated_ingredients?.length > 0 && (
             <p className="price-estimated-note" role="note">
               Prix estimé, sans relevé en magasin, pour{' '}
-              {recipe.price_data.estimated_ingredients.map(u => u.name_fr).join(', ')}.
+              {displayed.price_data.estimated_ingredients.map(u => u.name_fr).join(', ')}.
             </p>
           )}
 
-          <SeasonCarbon recipe={recipe} />
+          <SeasonCarbon recipe={displayed} />
 
 
           {/* Boutons d'action */}
@@ -847,11 +847,15 @@ export default function RecipeDetailPage() {
           <h3>Préparation</h3>
           {showVariant && variant?.substitutions?.length > 0 && (
             <p className="variant-steps-note" role="note">
-              Étapes de la recette d'origine : remplacez{' '}
+              {/* Les étapes sont réécrites par le serveur ; les œufs entiers cuits ou cassés
+                  restent tels quels dans le texte, d'où le rappel */}
+              {variant.recipe?._steps_rewritten > 0
+                ? 'Étapes adaptées à la version vegan. Remplacements : '
+                : "Étapes de la recette d'origine. Remplacez : "}
               {variant.substitutions.map((s, i) => (
                 <span key={i}>
                   {i > 0 && (i === variant.substitutions.length - 1 ? ' et ' : ', ')}
-                  {(s.original_name || '').toLowerCase()} par {(s.substitute_name || '').toLowerCase()}
+                  {(s.original_name || '').toLowerCase()} → {(s.substitute_name || '').toLowerCase()}
                 </span>
               ))}.
             </p>

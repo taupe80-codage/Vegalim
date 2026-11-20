@@ -6,6 +6,7 @@ API :
     vegan_variant(recipe) → dict  {recipe, substitutions, unresolved, source}
 """
 from __future__ import annotations
+import re
 import logging
 
 logger = logging.getLogger(__name__)
@@ -129,6 +130,113 @@ def _item_id(item) -> str:
     return str(item)
 
 
+
+
+def _short(name: str) -> str:
+    """« beurre végétal (vegan) » → « beurre végétal », en minuscules."""
+    return re.sub(r"\s*\([^)]*\)", "", name or "").strip().lower()
+
+
+def _forms(name: str) -> list[str]:
+    """Formes de l'ingrédient d'origine dans le texte d'une étape : nom complet,
+    pluriels, nom de tête (« crème épaisse » → « crème »)."""
+    base = _short(name)
+    if not base:
+        return []
+    forms = {base}
+    m = re.match(r"(\S+)( d'| de )(.+)", base)
+    if m:                                       # jaune d'œuf → jaunes d'œufs, jaune d'œufs…
+        head, link, tail = m.groups()
+        forms |= {f"{head}s{link}{tail}", f"{head}s{link}{tail}s", f"{head}{link}{tail}s"}
+    elif len(base.split()) > 1 and len(base.split()[0]) > 3:
+        forms.add(base.split()[0])              # crème épaisse → crème
+    for f in list(forms):
+        if not f.endswith(("s", "x")):
+            forms.add(f + ("x" if f.endswith("eau") else "s"))
+    return sorted(forms, key=len, reverse=True)
+
+
+# Ingrédients comptés à la pièce : remplacés seulement dans une quantité en grammes,
+# et jamais quand la pièce elle-même est cuite, cassée ou séparée (« séparer 3 tofu
+# soyeux », « pocher des tofu soyeux » n'ont pas de sens).
+_COUNTED = re.compile(r"(?:^|\s)(œufs?|jaunes? d'œufs?|blancs? d'œufs?)$")
+_PIECE_USE = re.compile(r"pocher|poch[ée]|frire|au plat|écaler|casser|séparer|mollet|\bdurs?\b|coque", re.I)
+_VOWELS = set("aeiouàâéèêëîïôûœ")      # pas « y » (de yaourt) ni « h » (de haricots)
+# genre du premier mot des substituts, pour accorder l'article qui les précède
+_GENDER = {"tofu": "m", "yaourt": "m", "beurre": "m", "lait": "m", "sirop": "m", "jus": "m",
+           "cheddar": "m", "fromage": "m",
+           "crème": "f", "ricotta": "f", "mozzarella": "f", "mayonnaise": "f", "huile": "f",
+           "levure": "f", "sauce": "f", "béchamel": "f"}
+
+
+def _rewrite_steps(steps: list, applied: list[dict]) -> tuple[list, int]:
+    """Étapes avec les ingrédients de substitution. Prudent : mots entiers, un seul
+    passage (un substitut n'est jamais remplacé à son tour), « 3 œufs (150 g) » →
+    « 150 g de tofu soyeux », élision « de / d' » rétablie autour des seuls
+    substituts ; les œufs ne sont remplacés que dans une quantité en grammes.
+    Renvoie (étapes, nb modifiées)."""
+    mapping: dict[str, str] = {}
+    for a in applied:
+        sub = _short(a.get("substitute_name") or "")
+        if not sub:
+            continue
+        for f in _forms(a.get("original_name") or ""):
+            mapping.setdefault(f, sub)
+    if not mapping:
+        return steps, 0
+    counted_forms = [f for f in mapping if _COUNTED.search(f)]
+    mass_forms = [f for f in mapping if f not in counted_forms]
+
+    def alt(fs):
+        return "|".join(re.escape(f) for f in sorted(fs, key=len, reverse=True))
+
+    rules = []
+    if counted_forms:
+        c = alt(counted_forms)
+        # « 3 œufs (150 g) », « 2 œufs battus (110 g) » ; « 220 g d'œufs battus »
+        rules.append((re.compile(rf"\b\d+ ({c})(?: [a-zéèêû]+)? \((\d+(?:[,.]\d+)?) ?(g|ml)\)", re.I),
+                      lambda m: f"{m.group(2)} {m.group(3)} de {mapping[m.group(1).lower()]}", True))
+        rules.append((re.compile(rf"\b(\d+(?:[,.]\d+)?) ?(g|ml) (?:de |d')({c})(?: (?:battus?|entiers?|crus?))?(?!\w)", re.I),
+                      lambda m: f"{m.group(1)} {m.group(2)} de {mapping[m.group(3).lower()]}", True))
+    if mass_forms:
+        rules.append((re.compile(rf"(?<![\w'’])({alt(mass_forms)})(?!\w)", re.I),
+                      lambda m: mapping[m.group(1).lower()], False))
+    out, changed = [], 0
+    for step in steps:
+        if not isinstance(step, str):
+            out.append(step)
+            continue
+        new = step
+        for pattern, repl, counted in rules:
+            if counted and _PIECE_USE.search(step):
+                continue
+            new = pattern.sub(repl, new)
+        if new != step:
+            # élision autour des seuls substituts insérés : le reste de l'étape n'est
+            # pas touché (« de haricots »)
+            for sub in set(mapping.values()):
+                esc = re.escape(sub)
+                if sub[:1] in _VOWELS:
+                    new = re.sub(rf"\b([Dd])e {esc}", lambda mm, s=sub: f"{mm.group(1)}'{s}", new)
+                else:
+                    new = re.sub(rf"\b([Dd])'{esc}", lambda mm, s=sub: f"{mm.group(1)}e {s}", new)
+                # « parmesan râpé » → « levure nutritionnelle en paillettes » (sans « râpé »)
+                new = re.sub(rf"({esc}) râpée?s?\b", lambda mm: mm.group(1), new)
+                # article accordé au substitut : « de la crème » → « du yaourt de soja »
+                gender = _GENDER.get(sub.split()[0])
+                if gender == "m":
+                    new = re.sub(rf"\b([Dd])e la {esc}", lambda mm, s=sub: f"{mm.group(1)}u {s}", new)
+                    new = re.sub(rf"\b([Àà]) la {esc}", lambda mm, s=sub: f"au {s}", new)
+                    new = re.sub(rf"\b([Ll])a {esc}", lambda mm, s=sub: f"{mm.group(1)}e {s}", new)
+                elif gender == "f":
+                    new = re.sub(rf"\b([Dd])u {esc}", lambda mm, s=sub: f"{mm.group(1)}e la {s}", new)
+                    new = re.sub(rf"\b([Aa])u {esc}", lambda mm, s=sub: f"{'À' if mm.group(1) == 'A' else 'à'} la {s}", new)
+                    new = re.sub(rf"\b([Ll])e {esc}", lambda mm, s=sub: f"{mm.group(1)}a {s}", new)
+            changed += 1
+        out.append(new)
+    return out, changed
+
+
 def vegan_variant(recipe: dict) -> dict:
     """
     Retourne la version vegan d'une recette, générée par substitution.
@@ -184,6 +292,10 @@ def vegan_variant(recipe: dict) -> dict:
                       **({"recipe_id": _item_id(i)} if _item_id(i) in _recipes_index() else {})}
         for i in new_ings if isinstance(i, dict) and _item_id(i)
     }
+
+    # Étapes réécrites avec les substituts (« 250 g de paneer » → « 250 g de tofu »)
+    if applied and isinstance(r.get("instructions"), list):
+        r["instructions"], r["_steps_rewritten"] = _rewrite_steps(r["instructions"], applied)
 
     # Régimes et allergènes recalculés sur la nouvelle composition : la variante
     # gardait ceux de l'original (« œufs », « lait » affichés après substitution)

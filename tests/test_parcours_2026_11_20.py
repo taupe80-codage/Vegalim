@@ -95,3 +95,35 @@ def test_frigo_privilegie_les_recettes_qui_l_utilisent():
     res = _suggest(["tofu", "riz", "brocoli", "sauce soja", "gingembre", "ail"])
     assert len(res[0]["have"]) >= 4                      # tofu sauté, pas « Riz blanc »
     assert not any(is_component_recipe(IDX[r["id"]]) for r in res)
+
+
+# ── Version vegan : étapes réécrites ─────────────────────────────────────────
+
+def _steps(rid):
+    from backend.engine.rule_engine.variants import vegan_variant
+    return " ".join(vegan_variant(IDX[rid])["recipe"]["instructions"])
+
+
+def test_etapes_vegan_reecrites():
+    tarte = _steps("tart_asperges_vertes_ricotta_2c85b3")
+    assert "150 g de tofu soyeux" in tarte and "3 œufs" not in tarte        # « 3 œufs (150 g) »
+    assert "40 g de levure nutritionnelle en paillettes" in tarte
+    assert "250 g de ricotta de cajou" in tarte
+    radis = _steps("side_radis_glaces_miel_3a8e51")
+    assert "15 g de sirop d'agave" in radis and "beurre végétal" in radis
+    holl = _steps("main_spargel_sauce_hollandaise_3d9f15")
+    assert "60 g de tofu soyeux" in holl and "jaunes d'œufs" not in holl
+
+
+def test_etapes_vegan_prudentes():
+    import re
+    from backend.engine.rule_engine.variants import vegan_variant
+    for r in IDX.values():
+        if is_component_recipe(r) or (r.get("diet_flags") or {}).get("vegan"):
+            continue
+        for o, v in zip(r.get("instructions") or [], vegan_variant(r)["recipe"].get("instructions") or []):
+            if o == v:
+                continue
+            assert not re.search(r"\b(les|des|\d+) tofu soyeux(?! \()", v) or re.search(r"\d+ ?(g|ml) de tofu soyeux", v), v
+            assert "d'yaourt" not in v and "de la yaourt" not in v, v
+            assert ("de haricots" in v) or ("de haricots" not in o), v          # texte voisin intact
