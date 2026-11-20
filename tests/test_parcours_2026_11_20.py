@@ -255,3 +255,32 @@ def test_config_annonce_le_bon_moteur_de_base():
                       ("postgresql+psycopg2://u@h/db", "PostgreSQL"), ("postgres://u@h/db", "PostgreSQL")):
         s.database_url = url
         assert s.db_kind == kind, url
+
+
+def test_variante_vegan_selon_l_usage_de_l_oeuf():
+    """Œuf au plat, dur ou brouillé → tofu ferme ; dorure → lait de soja ; pâte à choux →
+    tofu soyeux. Les étapes suivent (« Poêler 220 g de tofu ferme en tranches »)."""
+    from backend.core.data_io import load_recipes
+    from backend.engine.rule_engine.variants import vegan_variant
+    from backend.engine.planning_engine.budget import estimate_price
+    idx = {r["id"]: r for r in load_recipes()}
+
+    def egg_sub(v):
+        return next(s["substitute"] for s in v["substitutions"] if s["original"] == "egg_raw")
+
+    nasi = vegan_variant(idx["rice_nasi_goreng_edfce4"])
+    assert egg_sub(nasi) == "tofu_plain_pre_packaged"
+    assert "Poêler 220 g de tofu ferme en tranches, 3 minutes par face, dans 10 ml d'huile." in nasi["recipe"]["instructions"][4]
+    assert "surmonté de tofu poêlé" in nasi["recipe"]["instructions"][5]
+    shopska = vegan_variant(idx["salad_shopska_04dd73"])["recipe"]["instructions"][0]
+    assert shopska.endswith("Couper 220 g de tofu ferme en quartiers.")
+    kanel = vegan_variant(idx["dessert_kanelbullar_4e0c93"])
+    assert egg_sub(kanel) == "soybean_milk_unsweetened_plant"
+    assert any("dorer au lait de soja (50 g)" in s for s in kanel["recipe"]["instructions"])
+    choux = vegan_variant(idx["entry_gougeres_au_fromage_ebce95"])
+    assert egg_sub(choux) == "silken_tofu_pre_packaged"
+    assert any("incorporer le tofu soyeux petit à petit" in s for s in choux["recipe"]["instructions"])
+    # « pocher les gnocchis » n'est pas un œuf poché
+    assert egg_sub(vegan_variant(idx["main_gnocchi_f17041"])) == "silken_tofu_pre_packaged"
+    for rid in ("rice_nasi_goreng_edfce4", "dessert_kanelbullar_4e0c93", "brkf_huevos_rancheros_6a80e5"):
+        assert estimate_price(vegan_variant(idx[rid])["recipe"])["complete"], rid

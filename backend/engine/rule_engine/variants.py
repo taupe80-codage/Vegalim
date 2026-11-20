@@ -201,6 +201,189 @@ _GENDER = {"tofu": "m", "yaourt": "m", "beurre": "m", "lait": "m", "sirop": "m",
            "levure": "f", "sauce": "f", "béchamel": "f"}
 
 
+# Œuf servi « entier » (dur, au plat, poché, brouillé, cassé dans le plat) : le tofu soyeux
+# ne tient pas, les versions vegan de ces plats prennent du tofu ferme. Le tofu soyeux reste
+# pour les pâtes et appareils (pâte à choux, gnocchis, génoise, flan).
+_EGG_SOLID = re.compile(r"écaler|au plat|poch|brouill|œufs? durs?|creux|remuer sans (?:cesse|arrêt)|"
+                        r"ajouter les œufs \(\d+ ?g au total\)|œufs?,? (?:[^.]{0,60} )?en (?:petits )?dés|"
+                        r"œufs en quartiers|casser l'œuf au centre|"
+                        r"casser (?:un|les|\d+)[^.]{0,25}?œufs?(?![^.]{0,15}dans un bol)", re.I)
+# Œuf utilisé seulement pour dorer ou souder (brioches, böreks) : lait de soja, l'usage vegan
+_EGG_WASH = re.compile(r"(?:dorer|souder|soudant|badigeonner)[^.]*œuf battu|casser l'œuf battu \(\d+ ?g\) au centre", re.I)
+_Q = r"(?:(?:\d+) œufs? \((?P<g1>\d+) ?g\)|(?:les )?(?P<g2>\d+) ?g d'œufs?(?: durs)?)"
+_EGG_SOLID_RULES = [
+    # œufs durs
+    (re.compile(rf"[Cc]uire {_Q}(?: \([^)]*\))? \d+ minutes(?: dans [^.]*?eau bouillante| à l'eau bouillante)?"
+                rf"(?:, les refroidir)?(?:,| et) les écaler(?: et les couper en (?P<cut>[a-zé]+))?"),
+     lambda m: f"Couper {m['g1'] or m['g2']} g de tofu ferme en {m['cut'] or 'morceaux'}"),
+    (re.compile(r"[Ff]aire cuire les (?P<g>\d+) ?g d'œufs durs pendant \d+ minutes à l'eau bouillante"),
+     lambda m: f"Couper {m['g']} g de tofu ferme en tranches"),
+    (re.compile(r"Entailler chaque œuf de quatre fentes, les rouler"), lambda m: "Rouler le tofu"),
+    # œufs pochés ou cassés dans le plat
+    (re.compile(r"[Pp]ochez des œufs dans de l'eau frémissante vinaigrée pendant (?P<n>\d+) minutes"),
+     lambda m: f"Faites dorer le tofu ferme en tranches épaisses à la poêle, {m['n']} minutes par face"),
+    (re.compile(r"y casser les (?P<g>\d+) ?g d'œufs pour les pocher directement dans le bouillon"),
+     lambda m: f"y déposer {m['g']} g de tofu ferme en dés et le laisser chauffer dans le bouillon"),
+    (re.compile(r"pocher délicatement les (?P<g>\d+) ?g d'œufs dans une eau frémissante additionnée "
+                r"d'un trait de vinaigre pendant (?P<n>\d+) minutes"),
+     lambda m: f"faire dorer {m['g']} g de tofu ferme en tranches à la poêle, {m['n']} minutes par face"),
+    (re.compile(r"y casser les œufs \((?P<g>\d+) ?g\) et couvrir (?P<n>\d+) minutes, jusqu'à ce qu'ils soient pris"),
+     lambda m: f"y déposer {m['g']} g de tofu ferme en tranches et couvrir {m['n']} minutes"),
+    (re.compile(r"y casser les œufs"), lambda m: "y déposer le tofu ferme en tranches"),
+    (re.compile(r"[Cc]asser les œufs directement dans la poêle"), lambda m: "Émietter le tofu directement dans la poêle"),
+    (re.compile(r"casser un œuf \((?P<g>\d+) ?g\) au centre"),
+     lambda m: f"déposer {m['g']} g de tofu ferme émietté au centre"),
+    (re.compile(r"[Cc]asser un œuf dessus \((?P<g>\d+) ?g pour quatre crêpes\), l'étaler"),
+     lambda m: f"Émietter du tofu ferme dessus ({m['g']} g pour quatre crêpes)"),
+    (re.compile(r" pour obtenir des jaunes coulants qui servira de liant\. Cuire l'œuf pendant environ \d+ "
+                r"minutes à feu doux, jusqu'à ce que le blanc soit ferme"), lambda m: ""),
+    # œufs au plat
+    (re.compile(rf"(?:[Cc]uire|[Ff]aire frire) {_Q} au plat"),
+     lambda m: f"Poêler {m['g1'] or m['g2']} g de tofu ferme en tranches, 3 minutes par face,"),
+    (re.compile(r"(?:[Cc]uire|[Ff]aire frire) \d+ œufs au plat \((?P<g>\d+) ?g\)"),
+     lambda m: f"Poêler {m['g']} g de tofu ferme en tranches, 3 minutes par face,"),
+    (re.compile(r"cuire les œufs au plat"), lambda m: "poêler le tofu ferme en tranches"),
+    # œufs brouillés
+    (re.compile(rf"[Bb]rouiller (?:les )?{_Q}"), lambda m: f"émietter {m['g1'] or m['g2']} g de tofu ferme et le faire revenir"),
+    (re.compile(r"(?P<v>[Vv])erser les œufs sur les asperges et remuer sans cesse (?P<n>\d+) minutes, jusqu'à ce "
+                r"qu'ils soient pris mais encore crémeux"),
+     lambda m: f"{'A' if m['v'] == 'V' else 'a'}jouter le tofu ferme émietté sur les asperges et remuer sans "
+               f"cesse {m['n']} minutes, jusqu'à ce qu'il soit bien chaud"),
+    (re.compile(r"[Vv]erser les œufs et remuer sans arrêt à la spatule, (?P<n>\d+) minutes : ils doivent prendre en "
+                r"petits grains serrés, jamais secs"),
+     lambda m: f"Ajouter le tofu ferme émietté et remuer sans arrêt à la spatule, {m['n']} minutes : il doit "
+               f"rester moelleux, jamais sec"),
+    (re.compile(r"ils doivent rester crémeux et légèrement coulants"), lambda m: "il doit rester moelleux"),
+    # œufs durs cités ailleurs, œufs ajoutés dans des creux de sauce, sur une galette
+    (re.compile(r"\d+ œufs durs \((?P<g>\d+) ?g\) hachés"), lambda m: f"{m['g']} g de tofu ferme haché"),
+    (re.compile(r"des (?P<g>\d+) ?g d'œufs durs hachés \(cuits \d+ minutes\)"),
+     lambda m: f"{m['g']} g de tofu ferme émietté"),
+    (re.compile(r"\d+ œufs durs \((?P<g>\d+) ?g\)"), lambda m: f"{m['g']} g de tofu ferme"),
+    (re.compile(rf"[Bb]attre (?:légèrement )?{_Q}"), lambda m: f"Émietter {m['g1'] or m['g2']} g de tofu ferme"),
+    (re.compile(r" sans les faire mousser"), lambda m: ""),
+    (re.compile(r"le tofu et les œufs en quartiers"), lambda m: "le tofu"),
+    (re.compile(r"(?P<g>\d+) ?g d'œufs durs"), lambda m: f"{m['g']} g de tofu ferme"),
+    (re.compile(r"beurre (?:végétal )?d'œuf"), lambda m: "beurre au tofu"),
+    (re.compile(r",? en prenant soin de répartir les ingrédients de manière égale et de laisser le blanc d'œuf cuire "
+                r"jusqu'à ce qu'il soit pris"), lambda m: ", en répartissant les ingrédients de manière égale"),
+    (re.compile(r"jusqu'à ce qu'ils soient pris mais encore crémeux, comme des œufs brouillés"),
+     lambda m: "jusqu'à ce qu'il soit bien chaud"),
+    (re.compile(r", puis les refroidir, les écaler et les couper en tranches"), lambda m: ""),
+    (re.compile(r"ajouter les œufs \((?P<g>\d+) ?g au total\)"), lambda m: f"ajouter {m['g']} g de tofu ferme en tranches"),
+    (re.compile(r"casser un œuf au centre \((?P<g>\d+) ?g pour les 4 galettes\)"),
+     lambda m: f"émietter du tofu ferme au centre ({m['g']} g pour les 4 galettes)"),
+    (re.compile(r"casser l'œuf au centre"), lambda m: "émietter le tofu ferme au centre"),
+    (re.compile(r"sauce aux œufs"), lambda m: "sauce au tofu"),
+    (re.compile(r"nappe bien l'œuf"), lambda m: "nappe bien le tofu"),
+    (re.compile(r"[Aa]jouter \d+ œufs battus \((?P<g>\d+) ?g\) et les brouiller"),
+     lambda m: f"Ajouter {m['g']} g de tofu ferme émietté et le faire revenir"),
+    (re.compile(r"[Vv]erser (?P<g>\d+) ?g d'œufs? battus? et brouiller"),
+     lambda m: f"Ajouter {m['g']} g de tofu ferme émietté et le faire revenir"),
+    (re.compile(r"casser les (?P<g>\d+) ?g d'œufs et les brouiller"),
+     lambda m: f"ajouter {m['g']} g de tofu ferme émietté et le faire revenir"),
+    (re.compile(r"[Bb]attre \d+ œufs \((?P<g>\d+) ?g\) (?P<x>avec [^,]*? )?et les brouiller"),
+     lambda m: f"Émietter {m['g']} g de tofu ferme {m['x'] or ''}et le faire revenir"),
+    (re.compile(r"[Cc]asser \d+ œufs \((?P<g>\d+) ?g\) dans la poêle et les brouiller"),
+     lambda m: f"Émietter {m['g']} g de tofu ferme dans la poêle et le faire revenir"),
+    # œufs cassés dans le plat
+    (re.compile(r"[Cc]asser \d+ œufs \((?P<g>\d+) ?g\) (?P<loc>à la surface|dans la soupe frémissante) et "
+                r"(?:cuire|pocher) (?P<n>\d+) minutes"),
+     lambda m: f"Ajouter {m['g']} g de tofu ferme en dés {m['loc']} et cuire {m['n']} minutes"),
+    # suites du geste : « jusqu'à ce que le blanc soit pris et le jaune coulant »
+    (re.compile(r",? jusqu'à ce que (?:le|les) blancs? soi(?:t|ent) pris(?: et (?:le|les) jaunes? encore coulants?)?"),
+     lambda m: ""),
+    (re.compile(r",? jusqu'à ce que l'œuf soit pris"), lambda m: ""),
+    (re.compile(r",? avant que le jaune ne prenne"), lambda m: ""),
+    (re.compile(r",? sans les battre au préalable"), lambda m: ""),
+    (re.compile(r",? (?:pour (?:garder|obtenir) (?:le|des) jaunes? coulants?|jaune coulant)(?=[,.])"), lambda m: ""),
+    # le reste de la recette parle encore des œufs
+    (re.compile(r"les œufs réservés"), lambda m: "le tofu réservé"),
+    (re.compile(r"les œufs coupés en deux"), lambda m: "le tofu en tranches"),
+    (re.compile(r"tranches d'œuf dur"), lambda m: "tranches de tofu"),
+    (re.compile(r"un demi-œuf(?: dur)?"), lambda m: "un morceau de tofu"),
+    (re.compile(r"d'un œuf\b"), lambda m: "de tofu poêlé"),
+    (re.compile(r"\bun œuf(?: au plat| poché)?(?= (?:par|sur|dessus))"), lambda m: "du tofu"),
+    (re.compile(r"\b([Ll])es œufs\b"), lambda m: f"{m[1]}e tofu"),
+    (re.compile(r"(?<=, )œufs?(?=, )"), lambda m: "tofu"),
+    (re.compile(r"\b(le tofu), le tofu\b"), lambda m: m[1]),
+]
+# œuf battu dans une pâte ou un appareil (tofu soyeux)
+_EGG_SILKEN_RULES = [
+    (re.compile(r"\b([Ll])es œufs entiers crus"), lambda m: f"{m[1]}e tofu soyeux"),
+    (re.compile(r"incorporer les œufs un à un"), lambda m: "incorporer le tofu soyeux petit à petit"),
+    (re.compile(r"\b([Bb]attez|[Bb]attre) les œufs"), lambda m: f"{m[1]} le tofu soyeux"),
+    (re.compile(r"sur les œufs en fouettant, pour les tempérer"), lambda m: "sur le tofu soyeux en fouettant, pour le tempérer"),
+    (re.compile(r"au mélange de sucre et d'œuf"), lambda m: "au mélange de sucre et de tofu soyeux"),
+    (re.compile(r"au mélange d'œufs?"), lambda m: "au mélange de tofu soyeux"),
+    (re.compile(r"et d'œuf sur les pâtes"), lambda m: "et de tofu soyeux sur les pâtes"),
+    (re.compile(r"mélange œufs-"), lambda m: "mélange tofu soyeux-"),
+    (re.compile(r"la couche d'œuf"), lambda m: "la couche de tofu soyeux"),
+    (re.compile(r"Battre l'œuf, l'incorporer"), lambda m: "Mixer le tofu soyeux, l'incorporer"),
+    (re.compile(r"jusqu'à ce que les œufs soient cuits et le mélange"), lambda m: "jusqu'à ce que le mélange soit"),
+]
+# œuf de dorure ou de soudure (lait de soja)
+_EGG_WASH_RULES = [
+    (re.compile(r"à l'œuf battu \((?P<g>\d+) ?g\)"), lambda m: f"au lait de soja ({m['g']} g)"),
+    (re.compile(r"avec de l'œuf battu \((?P<g>\d+) ?g\)"), lambda m: f"avec du lait de soja ({m['g']} g)"),
+    (re.compile(r"casser l'œuf battu \((?P<g>\d+) ?g\) au centre de chaque pide"),
+     lambda m: f"badigeonner le centre de chaque pide de lait de soja ({m['g']} g)"),
+]
+
+
+def _apply_rules(steps: list, rules) -> list:
+    out = []
+    for s in steps:
+        if isinstance(s, str) and "œuf" in s:
+            for pat, repl in rules:
+                s = pat.sub(repl, s)
+        out.append(s)
+    return out
+# pronoms qui désignaient les œufs, dans une étape où le tofu les remplace
+_EGG_PRONOUNS = [
+    (re.compile(r"en les gardant"), "en le gardant"), (re.compile(r"tout en les incorporant"), "tout en l'incorporant"),
+    (re.compile(r"ils doivent rester"), "il doit rester"), (re.compile(r"et les servir"), "et le servir"),
+    (re.compile(r"pour les déposer"), "pour le déposer"), (re.compile(r"puis les mélanger"), "puis le mélanger"),
+    (re.compile(r"en les arrosant"), "en l'arrosant"), (re.compile(r"à la fourchette, les mélanger"),
+                                                        "à la fourchette, le mélanger"),
+    (re.compile(r"et les dorer"), "et le dorer"),
+]
+# accords après « œufs » → « tofu » (descriptions et étapes)
+_TOFU_AGREEMENT = [
+    (re.compile(r"\b([Dd])es (tofu(?: soyeux| ferme)?)\b"), lambda m: f"{m[1]}u {m[2]}"),
+    (re.compile(r"\b(tofu(?: soyeux| ferme)?) (brouill|cass|frit|poch)és\b"), lambda m: f"{m[1]} {m[2]}é"),
+    (re.compile(r"\btofu et tofu\b"), lambda m: "tofu"),
+    (re.compile(r"\b([Tt]ofu(?: soyeux| ferme)?) brouillés cuits"), lambda m: f"{m[1]} brouillé cuit"),
+    (re.compile(r"\b(tofu brouillé) à peine cuits"), lambda m: f"{m[1]} à peine cuit"),
+    (re.compile(r"(?<=cuit très doucement, presque comme une crème de soja maison), montés (.*?) et servis"),
+     lambda m: f", monté {m[1]} et servi"),
+    (re.compile(r" et un lait de soja cassé au centre à la sortie du four"),
+     lambda m: " et le centre badigeonné de lait de soja"),
+    (re.compile(r" : le jaune doit rester coulant à l'ouverture"), lambda m: ""),
+]
+
+
+def _rewrite_egg_solid(steps: list) -> list:
+    """Gestes de l'œuf entier réécrits pour le tofu ferme (voir _EGG_SOLID)."""
+    out = []
+    for s in steps:
+        if isinstance(s, str) and re.search(r"œuf|jaune|blanc", s):
+            for pat, repl in _EGG_SOLID_RULES:
+                s = pat.sub(repl, s)
+            if "tofu" in s:
+                for pat, repl in _EGG_PRONOUNS:
+                    s = pat.sub(repl, s)
+        out.append(s)
+    return out
+
+
+def _tofu_agreement(text):
+    if not isinstance(text, str):
+        return text
+    for pat, repl in _TOFU_AGREEMENT:
+        text = pat.sub(repl, text)
+    return text
+
+
 def _drop_echo(m) -> str:
     """Retire les mots qui suivent un substitut et répètent un morceau de son nom
     (« pâte brisée végétale brisée », « roux … végétal de curry »). Il faut au moins
@@ -343,10 +526,22 @@ def vegan_variant(recipe: dict) -> dict:
     target_list = r.get("composition", r.get("ingredients", []))
     new_ings = []
 
+    steps0 = [s for s in r.get("instructions") or [] if isinstance(s, str)]
+    # le geste doit porter sur l'œuf (« pocher les gnocchis » ne compte pas)
+    egg_solid = any("œuf" in s.lower() and _EGG_SOLID.search(s) for s in steps0)
+    egg_steps = [s for s in steps0 if "œuf" in s.lower()]
+    egg_qty = sum(float(c.get("quantity") or 0) for c in target_list
+                  if isinstance(c, dict) and _item_id(c) == "egg_raw")
+    egg_wash = (not egg_solid and bool(egg_steps) and egg_qty <= 60
+                and all(_EGG_WASH.search(s) for s in egg_steps))
     for item in target_list:
         iid = _item_id(item)
         key = iid.lower()
         sub = VEGAN_SUBS_CIQUAL.get(key) or VEGAN_SUBS.get(key)
+        if key == "egg_raw" and egg_solid:
+            sub = "tofu_plain_pre_packaged"      # œuf dur, au plat, brouillé : tofu ferme
+        elif key == "egg_raw" and egg_wash:
+            sub = "soybean_milk_unsweetened_plant"   # dorure, soudure : lait de soja
         if sub:
             applied.append({"original": iid, "substitute": sub,
                             "original_name": _display_name(iid),
@@ -377,11 +572,23 @@ def vegan_variant(recipe: dict) -> dict:
 
     # Étapes réécrites avec les substituts (« 250 g de paneer » → « 250 g de tofu »)
     if applied and isinstance(r.get("instructions"), list):
-        r["instructions"], r["_steps_rewritten"] = _rewrite_steps(r["instructions"], applied)
+        steps = r["instructions"]
+        egg_subs = {a["original"]: a["substitute"] for a in applied if a["original"].startswith("egg_")}
+        if (egg_solid and "egg_raw" in egg_subs) or "egg_hard_boiled" in egg_subs:
+            steps = _rewrite_egg_solid(steps)
+        elif egg_wash and "egg_raw" in egg_subs:
+            steps = _apply_rules(steps, _EGG_WASH_RULES)
+        elif egg_subs.get("egg_raw") == "silken_tofu_pre_packaged":
+            steps = _apply_rules(steps, _EGG_SILKEN_RULES)
+        r["instructions"], r["_steps_rewritten"] = _rewrite_steps(steps, applied)
+        if any(a["original"] == "egg_raw" for a in applied):
+            r["instructions"] = [_tofu_agreement(s) for s in r["instructions"]]
     # Description aussi (« garnies de queso fresco » → « garnies de tofu ») ; le titre
     # reste le nom du plat (« Palak paneer »), le badge « Version vegan » l'accompagne.
     if applied and isinstance(r.get("description"), str):
         r["description"] = _rewrite_steps([r["description"]], applied, prose=True)[0][0]
+        if any(a["original"] == "egg_raw" for a in applied):
+            r["description"] = _tofu_agreement(r["description"])
 
     # Régimes et allergènes recalculés sur la nouvelle composition : la variante
     # gardait ceux de l'original (« œufs », « lait » affichés après substitution)
