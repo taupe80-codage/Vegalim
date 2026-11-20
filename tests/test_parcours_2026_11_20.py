@@ -151,10 +151,30 @@ def test_variantes_vegan_completes():
     idx = {r["id"]: r for r in load_recipes()}
     restes = {u["id"] for r in idx.values() if r.get("composition") and not r["id"].startswith("base_")
               for u in vegan_variant(r)["unresolved"]}
-    assert restes <= {"base_japanese_curry_roux_385e52", "ladyfinger", "vanilla_ice_cream",
-                      "base_spaetzle_a22916", "base_buckwheat_crepe_03db22", "milk_powder_whole"}, restes
+    # les 6 derniers ont leur version vegan maison (lot n18) depuis le 2026-11-20
+    assert restes == set(), restes
     v = vegan_variant(idx["dessert_tarte_citron_meringuee_7f6440"])
     assert v["source"] == "generated"
     assert "200 g de pâte brisée végétale et la cuire" in v["recipe"]["instructions"][0]
     # « pâtes aux œufs » : pas de « pâtes œufs » (préfixe « pâtes aux » écarté)
     assert all("pâtes œufs" not in s for s in vegan_variant(idx["dal_linsen_spatzle_71ea34"])["recipe"]["instructions"])
+
+
+def test_variantes_vegan_preparations_maison():
+    """Roux, spätzle, galette, glace et boudoirs vegan (lot n18) ; « lait » liquide ne
+    devient pas « farine d'amande » (début de « lait en poudre ») ; pas d'écho
+    « roux de curry japonais au beurre végétal de curry »."""
+    from backend.core.data_io import load_recipes
+    from backend.engine.rule_engine.variants import vegan_variant
+    from backend.engine.planning_engine.budget import estimate_price
+    idx = {r["id"]: r for r in load_recipes()}
+    for rid in ("base_roux_curry_japonais_vegetal_f245c7", "base_spaetzle_vegan_265b64",
+                "base_galette_sarrasin_eau_533afe", "base_glace_vanille_vegan_4e694a",
+                "base_biscuits_cuillere_vegan_40fae8"):
+        assert idx[rid]["diet_flags"]["vegan"] is True, rid
+    gj = vegan_variant(idx["dessert_gulab_jamun_a6b371"])["recipe"]["instructions"]
+    assert "200 g de farine d'amande" in gj[1] and "60 ml de lait de soja" in gj[2]
+    cj = vegan_variant(idx["curry_japonais_1caddf"])
+    assert cj["source"] == "generated" and estimate_price(cj["recipe"])["complete"]
+    assert any("80 g de roux de curry japonais au beurre végétal dans la sauce" in s
+               for s in cj["recipe"]["instructions"])

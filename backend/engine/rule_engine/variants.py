@@ -30,9 +30,9 @@ VEGAN_SUBS: dict[str, str | None] = {
 # ('butter_sup80pct') : la variante ne remplaçait rien mais se déclarait vegan.
 # Chaque substitut est vegan selon le dictionnaire ou les diet_flags de sa
 # sous-recette (vérifié par test). Quantités reprises telles quelles.
-# Sans substitut fiable (signalés dans « unresolved ») : spätzle aux œufs, roux
-# de curry japonais au beurre, galette de sarrasin aux œufs et au lait, biscuits
-# à la cuillère, glace vanille, lait en poudre.
+# Les préparations sans équivalent vegan du commerce ont leur version vegan maison
+# (lot n18 : roux japonais, spätzle, galette de sarrasin, glace, biscuits à la
+# cuillère), à la même échelle que l'originale.
 VEGAN_SUBS_CIQUAL: dict[str, str] = {
     # Beurre, ghee
     "butter_sup80pct": "vegan_butter", "butter_salted": "vegan_butter", "butter": "vegan_butter",
@@ -108,6 +108,13 @@ VEGAN_SUBS_CIQUAL: dict[str, str] = {
     "base_shortcrust_e6e9f0": "shortcrust_pastry_vegetable_fat_raw_paste_pre_packaged_plant",
     "base_empanada_dough_65661a": "shortcrust_pastry_vegetable_fat_raw_paste_pre_packaged_plant",
     "base_noodles_2d0ed7": "base_nouilles_ramen_3907e3",
+    "base_japanese_curry_roux_385e52": "base_roux_curry_japonais_vegetal_f245c7",
+    "base_spaetzle_a22916": "base_spaetzle_vegan_265b64",
+    "base_buckwheat_crepe_03db22": "base_galette_sarrasin_eau_533afe",
+    "vanilla_ice_cream": "base_glace_vanille_vegan_4e694a",
+    "ladyfinger": "base_biscuits_cuillere_vegan_40fae8",
+    # gulab jamun : la farine d'amande remplace le lait en poudre (même rôle de pâte)
+    "milk_powder_whole": "almond_flour",
 }
 
 
@@ -156,9 +163,9 @@ def _short(name: str) -> str:
 _LINK_WORDS = {"à", "au", "aux", "de", "du", "des", "d'", "en", "et", "la", "le", "les", "pur"}
 
 
-def _forms(name: str) -> list[str]:
+def _forms(name: str, heads: bool = True) -> list[str]:
     """Formes de l'ingrédient d'origine dans le texte d'une étape : nom complet,
-    pluriels, nom de tête (« crème épaisse » → « crème »)."""
+    pluriels, et (heads) débuts du nom (« crème épaisse » → « crème »)."""
     base = _short(name)
     if not base:
         return []
@@ -167,7 +174,7 @@ def _forms(name: str) -> list[str]:
     if m:                                       # jaune d'œuf → jaunes d'œufs, jaune d'œufs…
         head, link, tail = m.groups()
         forms |= {f"{head}s{link}{tail}", f"{head}s{link}{tail}s", f"{head}{link}{tail}s"}
-    elif len(base.split()) > 1 and len(base.split()[0]) > 3:
+    elif heads and len(base.split()) > 1 and len(base.split()[0]) > 3:
         # crème épaisse → crème ; pâte brisée pur beurre → pâte brisée, pâte (le plus
         # long d'abord : sinon « pâte brisée » devenait « pâte brisée végétale brisée »)
         words = base.split()
@@ -193,6 +200,20 @@ _GENDER = {"tofu": "m", "yaourt": "m", "beurre": "m", "lait": "m", "sirop": "m",
            "levure": "f", "sauce": "f", "béchamel": "f"}
 
 
+def _drop_echo(m) -> str:
+    """Retire les mots qui suivent un substitut et répètent un morceau de son nom
+    (« pâte brisée végétale brisée », « roux … végétal de curry »). Il faut au moins
+    un mot plein : « en » ou « de » seuls ne sont jamais retirés."""
+    sub_words = m.group(1).lower().split()
+    tail = m.group(2).split()
+    for k in range(len(tail), 0, -1):
+        seq = [w.lower() for w in tail[:k]]
+        if any(w not in _LINK_WORDS for w in seq) and any(
+                sub_words[i:i + k] == seq for i in range(1, len(sub_words) - k + 1)):
+            return m.group(1) + "".join(" " + w for w in tail[k:])
+    return m.group(0)
+
+
 def _rewrite_steps(steps: list, applied: list[dict]) -> tuple[list, int]:
     """Étapes avec les ingrédients de substitution. Prudent : mots entiers, un seul
     passage (un substitut n'est jamais remplacé à son tour), « 3 œufs (150 g) » →
@@ -200,12 +221,15 @@ def _rewrite_steps(steps: list, applied: list[dict]) -> tuple[list, int]:
     substituts ; les œufs ne sont remplacés que dans une quantité en grammes.
     Renvoie (étapes, nb modifiées)."""
     mapping: dict[str, str] = {}
-    for a in applied:
-        sub = _short(a.get("substitute_name") or "")
-        if not sub:
-            continue
-        for f in _forms(a.get("original_name") or ""):
-            mapping.setdefault(f, sub)
+    # noms complets d'abord : « lait » (liquide → lait de soja) ne doit pas être pris
+    # par le début de « lait en poudre » (→ farine d'amande)
+    for heads in (False, True):
+        for a in applied:
+            sub = _short(a.get("substitute_name") or "")
+            if not sub:
+                continue
+            for f in _forms(a.get("original_name") or "", heads):
+                mapping.setdefault(f, sub)
     if not mapping:
         return steps, 0
     counted_forms = [f for f in mapping if _COUNTED.search(f)]
@@ -250,6 +274,9 @@ def _rewrite_steps(steps: list, applied: list[dict]) -> tuple[list, int]:
                     new = re.sub(rf"\b([Dd])'{esc}", lambda mm, s=sub: f"{mm.group(1)}e {s}", new)
                 # « parmesan râpé » → « levure nutritionnelle en paillettes » (sans « râpé »)
                 new = re.sub(rf"({esc}) râpée?s?\b", lambda mm: mm.group(1), new)
+                # écho : seul le début du nom d'origine a été remplacé et la suite est
+                # restée (« roux de curry » → « roux de curry japonais végétal de curry »)
+                new = re.sub(rf"({esc})((?: [\w'’-]+){{1,4}})", _drop_echo, new, flags=re.I)
                 # article accordé au substitut : « de la crème » → « du yaourt de soja »
                 gender = _GENDER.get(sub.split()[0])
                 if gender == "m":

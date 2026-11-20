@@ -1,6 +1,6 @@
 # Liste des recettes ALIM
 
-1057 recettes (0 avec une alerte qualite, 51 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
+1062 recettes (0 avec une alerte qualite, 54 avec un doublon potentiel detecte). Genere automatiquement par `_scripts/extract_recipe_list.py` a partir de `recipes.json` — ne pas editer a la main.
 
 
 ## A
@@ -84,6 +84,7 @@
 - **Biryani** _(diabetes_friendly, gluten_free, main, indian)_ — `rice_biryani_classic_k82x7b`
 - **Biryani à la Noix de Coco** _(gluten_free, vegan, vegetarian, main, indian)_ — `rice_vegetable_biryani_160da2`
 - **Biscuits et sauce blanche aux champignons** _(vegetarian, nut_free, breakfast, american)_ — `brkf_biscuits_gravy_vegetarien_6b74a1`
+- **Biscuits à la cuillère vegan à l'aquafaba** _(vegan, vegetarian, lactose_free, nut_free, base, french)_ — `base_biscuits_cuillere_vegan_40fae8`
 - **Bisi bele bath, riz et lentilles épicés du Karnataka** _(vegetarian, gluten_free, nut_free, main, indian)_ — `rice_bisi_bele_bath_4f28d9`
 - **Bisque de Champignons** _(gluten_free, nut_free, soup, french)_ — `soup_bisque_de_champignons_63fa25`
 - **Bissara** _(diabetes_friendly, gluten_free, high_protein, vegan, vegetarian, main, moroccan)_ — `main_bissara_23c21a`
@@ -321,6 +322,7 @@
 - **Gajar ka halwa, carottes confites au lait** _(vegetarian, gluten_free, dessert, indian)_ — `dessert_gajar_halwa_8a63d4`
 - **Galette complète forestière, œuf, gruyère et champignons** _(gluten_free, nut_free, main, french_breton)_ — `main_galettes_sarrasin_ce9f40`
 - **Galette de sarrasin aux champignons à l'ail et au thym (vegan)** _(lactose_free, low_calorie, nut_free, vegetarian, breakfast, french)_ — `brkf_galette_sarrasin_champign_f6a798`
+- **Galette de sarrasin à l'eau** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, base, french)_ — `base_galette_sarrasin_eau_533afe`
 - **Galette de Teff** _(gluten_free, vegetarian, base, ethiopian)_ — `crepe_galette_de_teff_a1a8d3`
 - **Galette des Rois Briochée** _(nut_free, dessert, french_southern)_ — `dessert_galette_des_rois_briochee_6f0909`
 - **Galettes aux Oignons Verts** _(vegan, vegetarian, side, chinese)_ — `egg_galettes_aux_oignons_verts_ff5328`
@@ -340,6 +342,7 @@
 - **Ghomi au fromage, polenta géorgienne** _(vegetarian, gluten_free, nut_free, side, georgian)_ — `side_ghomi_fromage_4e29a8`
 - **Ghormeh sabzi aux haricots rouges, ragoût d'herbes iranien** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, main, persian)_ — `main_ghormeh_sabzi_e0a9d3`
 - **Girolles à la Crème** _(gluten_free, nut_free, main, french)_ — `main_girolles_a_la_creme_7d432d`
+- **Glace vegan à la vanille et au lait de coco** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, base, french)_ — `base_glace_vanille_vegan_4e694a`
 - **Gnocchi alla sorrentina** _(diabetes_friendly, vegetarian, nut_free, main, italian)_ — `pasta_gnocchis_a_la_tomate_8e1632`
 - **Gnocchi au pesto de roquette et noix (vegan)** _(vegan, vegetarian, lactose_free, main, italian)_ — `pasta_gnocchi_al_pesto_vegan_954303`
 - **Gnocchi au pesto génois pilé au mortier** _(main, italian)_ — `pasta_gnocchi_pesto_classic_v2_m7k2q4`
@@ -501,7 +504,7 @@
 - **Lait de Chanvre Maison** _(vegan, vegetarian, lactose_free, gluten_free, beverage, vegan_cuisine)_ — `base_hemp_milk_9248fe`
 - **Lait de Coco Maison** _(vegan, vegetarian, lactose_free, gluten_free, beverage, thai)_ — `base_coconut_milk_1ebad9` 🔁 doublon possible : Riz au Lait Coco Vegan, Courge au Lait de Coco, Dahl au lait de coco
 - **Lait de Riz Maison** _(vegan, vegetarian, lactose_free, gluten_free, beverage, asian)_ — `base_rice_milk_128001`
-- **Lait de Soja Maison** _(vegan, vegetarian, lactose_free, gluten_free, beverage, chinese)_ — `base_soy_milk_827b25`
+- **Lait de Soja Maison** _(vegan, vegetarian, lactose_free, gluten_free, beverage, chinese)_ — `base_soy_milk_827b25` 🔁 doublon possible : Spätzle vegan au lait de soja
 - **Laksa aux Légumes** _(diabetes_friendly, high_protein, vegetarian, soup, malaysian)_ — `soup_vegetable_laksa_ab0112`
 - **Larb de champignons et tofu** _(vegan, vegetarian, lactose_free, starter, thai)_ — `salad_larb_champignons_2c7b40`
 - **Lasagnes aux légumes grillés, béchamel au lait de coco (vegan)** _(vegetarian, main, italian)_ — `pasta_lasagnes_de_legumes_ultra_9b6a4e`
@@ -836,7 +839,8 @@
 - **Rouleaux de Printemps Frits** _(diabetes_friendly, vegan, vegetarian, main, vietnamese)_ — `rice_rouleaux_de_printemps_frits_e4d172`
 - **Rouleaux de riz crus aux légumes, sauce cacahuète** _(vegan, vegetarian, lactose_free, starter, vietnamese)_ — `starter_rouleaux_crus_cacahuete_5a38f1`
 - **Roulés de courgette grillée à la ricotta** _(vegetarian, gluten_free, starter, italian)_ — `entry_roules_courgette_ricotta_c8a460`
-- **Roux Curry Japonais** _(vegetarian, roux, japanese)_ — `base_japanese_curry_roux_385e52` 🔁 doublon possible : Curry japonais au roux maison et à la pomme râpée
+- **Roux Curry Japonais** _(vegetarian, roux, japanese)_ — `base_japanese_curry_roux_385e52` 🔁 doublon possible : Roux de curry japonais au beurre végétal, Curry japonais au roux maison et à la pomme râpée
+- **Roux de curry japonais au beurre végétal** _(vegan, vegetarian, lactose_free, nut_free, base, japanese)_ — `base_roux_curry_japonais_vegetal_f245c7` 🔁 doublon possible : Roux Curry Japonais
 - **Rôti de seitan aux herbes et légumes d'hiver** _(vegan, vegetarian, lactose_free, nut_free, main, international)_ — `protein_roti_seitan_herbes_2f6d18`
 - **Rösti aux légumes racines et à la ciboulette (vegan)** _(kid_friendly, low_calorie, vegan, vegetarian, gluten_free, lactose_free, nut_free, side, swiss)_ — `snack_rosti_vegan_be15a2`
 - **Rösti bernois au beurre** _(vegetarian, gluten_free, nut_free, side, swiss)_ — `side_rosti_4ec9f8`
@@ -977,6 +981,7 @@
 - **Spring Rolls** _(diabetes_friendly, vegan, vegetarian, main, vietnamese)_ — `rice_spring_rolls_45fdfa`
 - **Spätzle (Pâtes Alsaciennes)** _(vegetarian, main, alsatian)_ — `base_spaetzle_a22916`
 - **Spätzle au Fromage** _(main, german)_ — `main_spatzle_au_fromage_586859`
+- **Spätzle vegan au lait de soja** _(vegan, vegetarian, lactose_free, nut_free, base, alsatian)_ — `base_spaetzle_vegan_265b64` 🔁 doublon possible : Lait de Soja Maison
 - **Sri Lankan Dhal Curry** _(diabetes_friendly, gluten_free, vegetarian, main, sri_lankan)_ — `dal_sri_lankan_dhal_curry_fae1be`
 - **Sri Lankan Jackfruit Curry** _(diabetes_friendly, gluten_free, vegetarian, main, sri_lankan)_ — `curry_sri_lankan_jackfruit_1cff43`
 - **Sri Lankan Pumpkin Curry** _(diabetes_friendly, gluten_free, vegetarian, main, sri_lankan)_ — `curry_sri_lankan_pumpkin_7f1edb`

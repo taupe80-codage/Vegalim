@@ -252,11 +252,14 @@ def test_variante_remplace_les_ingredients_non_vegan():
 
 def test_variante_partielle_ne_se_dit_pas_vegan():
     from backend.engine.rule_engine.variants import vegan_variant
-    # la pâte brisée pur beurre a son substitut depuis le 2026-11-20 ; les boudoirs non
-    r = _recette_avec("ladyfinger")
+    # toutes les recettes du catalogue ont une variante complète depuis le 2026-11-20 :
+    # on ajoute à l'une d'elles un ingrédient non vegan sans substitut
+    import copy
+    r = copy.deepcopy(_recette_avec("ladyfinger"))
+    r["composition"].append({"ingredient": "milk_powder_skimmed", "quantity": 20, "unit": "g"})
     res = vegan_variant(r)
     assert res["source"] == "partial"
-    assert any(u["id"] == "ladyfinger" for u in res["unresolved"])
+    assert any(u["id"] == "milk_powder_skimmed" for u in res["unresolved"])
     assert not res["recipe"].get("diet_flags", {}).get("vegan")
     assert "vegan" not in res["recipe"]["tags"].get("diet", [])
 

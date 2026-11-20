@@ -5639,6 +5639,61 @@
     "similar": []
   },
   {
+    "id": "base_biscuits_cuillere_vegan_40fae8",
+    "title": "Biscuits à la cuillère vegan à l'aquafaba",
+    "cuisine": "french",
+    "dish_type": "base",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 6,
+    "time_total": 35,
+    "confidence": 0.9,
+    "description": "Les biscuits du tiramisu et de la charlotte, sans œuf : le jus de pois chiches monté en neige ferme remplace les blancs, la farine et la fécule sont incorporées délicatement, et les biscuits cuisent doucement pour rester légers.",
+    "composition": [
+      {
+        "ingredient": "aquafaba",
+        "quantity": 120,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 90,
+        "unit": "g"
+      },
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 90,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cornstarch_flour",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "ingredient": "baking_powder",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vanilla_extract",
+        "quantity": 5,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "rice_bisi_bele_bath_4f28d9",
     "title": "Bisi bele bath, riz et lentilles épicés du Karnataka",
     "cuisine": "indian",
@@ -22029,6 +22084,50 @@
     "similar": []
   },
   {
+    "id": "base_galette_sarrasin_eau_533afe",
+    "title": "Galette de sarrasin à l'eau",
+    "cuisine": "french",
+    "dish_type": "base",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [],
+    "servings": 4,
+    "time_total": 90,
+    "confidence": 0.9,
+    "description": "La galette de blé noir comme on la fait en Haute-Bretagne : de la farine de sarrasin, de l'eau et du sel, sans œuf ni lait. La pâte repose une heure, puis cuit très chaud pour une galette fine, souple au centre et dentelée au bord.",
+    "composition": [
+      {
+        "ingredient": "buckwheat_flour",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 550,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 10,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
+  },
+  {
     "id": "crepe_galette_de_teff_a1a8d3",
     "title": "Galette de Teff",
     "cuisine": "ethiopian",
@@ -23283,6 +23382,57 @@
       }
     ],
     "n_instructions": 7,
+    "flags": [],
+    "similar": []
+  },
+  {
+    "id": "base_glace_vanille_vegan_4e694a",
+    "title": "Glace vegan à la vanille et au lait de coco",
+    "cuisine": "french",
+    "dish_type": "base",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "gluten_free",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "soy"
+    ],
+    "servings": 6,
+    "time_total": 380,
+    "confidence": 0.9,
+    "description": "Une glace sans sorbetière, crémeuse grâce au lait de coco et à un peu de fécule : la crème vanillée cuit deux minutes pour épaissir, puis prend au congélateur en étant remuée deux fois pour rester lisse.",
+    "composition": [
+      {
+        "ingredient": "coconut_milk_plant",
+        "quantity": 400,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "soybean_milk_unsweetened_plant",
+        "quantity": 200,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 90,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cornstarch_flour",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "vanilla_extract",
+        "quantity": 10,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 3,
     "flags": [],
     "similar": []
   },
@@ -33758,7 +33908,13 @@
     ],
     "n_instructions": 8,
     "flags": [],
-    "similar": []
+    "similar": [
+      {
+        "id": "base_spaetzle_vegan_265b64",
+        "title": "Spätzle vegan au lait de soja",
+        "score": 0.67
+      }
+    ]
   },
   {
     "id": "soup_vegetable_laksa_ab0112",
@@ -50598,11 +50754,6 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 4,
         "unit": "g"
-      },
-      {
-        "ingredient": "green_salad_raw_plain",
-        "quantity": null,
-        "unit": "1 plat"
       }
     ],
     "n_instructions": 7,
@@ -56856,9 +57007,85 @@
     "flags": [],
     "similar": [
       {
+        "id": "base_roux_curry_japonais_vegetal_f245c7",
+        "title": "Roux de curry japonais au beurre végétal",
+        "score": 0.75
+      },
+      {
         "id": "curry_japanese_classic_v3_m8q2z4",
         "title": "Curry japonais au roux maison et à la pomme râpée",
         "score": 0.6
+      }
+    ]
+  },
+  {
+    "id": "base_roux_curry_japonais_vegetal_f245c7",
+    "title": "Roux de curry japonais au beurre végétal",
+    "cuisine": "japanese",
+    "dish_type": "base",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "servings": 8,
+    "time_total": 30,
+    "confidence": 0.9,
+    "description": "Le roux qui épaissit et parfume le curry japonais, fait au beurre végétal : farine blondie, curry en poudre, pomme râpée et concentré de tomate, pour la douceur et la rondeur des tablettes du commerce, sans produit laitier.",
+    "composition": [
+      {
+        "ingredient": "vegan_butter",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "ingredient": "curry_powder",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "apple_raw_with_skin",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_paste_unsalted_canned",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "garlic_raw",
+        "quantity": 5,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": [
+      {
+        "id": "base_japanese_curry_roux_385e52",
+        "title": "Roux Curry Japonais",
+        "score": 0.75
       }
     ]
   },
@@ -67096,6 +67323,68 @@
     "n_instructions": 4,
     "flags": [],
     "similar": []
+  },
+  {
+    "id": "base_spaetzle_vegan_265b64",
+    "title": "Spätzle vegan au lait de soja",
+    "cuisine": "alsatian",
+    "dish_type": "base",
+    "vegan": true,
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "lactose_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "gluten",
+      "soy"
+    ],
+    "servings": 4,
+    "time_total": 45,
+    "confidence": 0.9,
+    "description": "Les pâtes fraîches alsaciennes sans œuf : une pâte de farine, de lait de soja et d'eau, battue jusqu'à faire des bulles, qu'on fait tomber en filaments irréguliers dans l'eau bouillante, puis qu'on fait dorer à la poêle.",
+    "composition": [
+      {
+        "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "ingredient": "soybean_milk_unsweetened_plant",
+        "quantity": 200,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 100,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "nutmeg_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 30,
+        "unit": "ml"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": [
+      {
+        "id": "base_soy_milk_827b25",
+        "title": "Lait de Soja Maison",
+        "score": 0.67
+      }
+    ]
   },
   {
     "id": "dal_sri_lankan_dhal_curry_fae1be",
