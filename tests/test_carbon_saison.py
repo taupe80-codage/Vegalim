@@ -88,3 +88,15 @@ def test_ketchup_n_est_plus_une_tomate():
     iid = "tomato_ketchup_catsup_pre_packaged_normal"
     assert resolve_catalog_key(iid, load_prices_catalog()) == "ketchup"
     assert resolve_catalog_key(iid, load_carbon_footprint()) == "ketchup"
+
+
+def test_prix_estime_nomme_la_sous_recette():
+    """« prix estimé : Paneer », pas l'identifiant « base paneer 04e1db »."""
+    from backend.engine.planning_engine.budget import estimate_price
+    est = estimate_price(IDX["base_mala_broth_1ab129"])["estimated_ingredients"]
+    assert {"id": "base_doubanjiang_paste_340399", "name_fr": "Pâte Doubanjiang"} in est
+    for r in IDX.values():
+        if r.get("composition"):
+            p = estimate_price(r)
+            assert all(not e["name_fr"].startswith("base ")
+                       for e in p["estimated_ingredients"] + p["unknown_ingredients"]), r["id"]

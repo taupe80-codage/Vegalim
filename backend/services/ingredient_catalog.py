@@ -942,9 +942,11 @@ def resolve_names(keys: list[str]) -> dict[str, list[str]]:
 
 
 def names_of(ids: list[str]) -> dict[str, str]:
-    """Nom français de chaque ID (l'ID lui-même s'il est absent du catalogue)."""
+    """Nom français de chaque ID : titre de la sous-recette (« Paneer », pas
+    « base paneer 04e1db »), sinon catalogue d'ingrédients, sinon l'ID."""
+    from backend.core.data_io import sub_recipe_label
     by_id = {e["id"]: e["name_fr"] for e in get_catalog()}
-    return {i: by_id.get(i, i) for i in ids}
+    return {i: sub_recipe_label(i) or by_id.get(i) or i for i in ids}
 
 
 def get_frigo_groups() -> list[dict]:
