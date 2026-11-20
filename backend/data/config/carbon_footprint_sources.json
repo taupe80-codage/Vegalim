@@ -1241,8 +1241,16 @@
     ]
   },
   "corn_husk": {
-    "methode": "non_recale",
-    "kg_co2e_pour_100g": 0.18
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0662,
+    "agribalyse": [
+      {
+        "code_agb": "9615",
+        "code_ciqual": "9615",
+        "nom": "Polenta ou semoule de maïs, cuite, non salée",
+        "kg_co2e_par_kg": 0.662
+      }
+    ]
   },
   "cottage_cheese": {
     "methode": "nom",
@@ -1463,6 +1471,16 @@
         "code_ciqual": "11024",
         "nom": "Persil, séché",
         "kg_co2e_par_kg": 4.34
+      }
+    ]
+  },
+  "dried_hibiscus": {
+    "methode": "externe",
+    "kg_co2e_pour_100g": 0.545,
+    "agribalyse": [
+      {
+        "source": "dérivé d'Agribalyse 18022 « Tisane infusée » (0,0436 kg/kg ÷ 8 g de plante/kg)",
+        "kg_co2e_par_kg": 5.45
       }
     ]
   },
@@ -2737,6 +2755,18 @@
         "code_ciqual": "31067",
         "nom": "Mélasse de canne",
         "kg_co2e_par_kg": 1.04
+      }
+    ]
+  },
+  "moringa_drumstick": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0447,
+    "agribalyse": [
+      {
+        "code_agb": "20061_1",
+        "code_ciqual": "20061",
+        "nom": "Haricot vert, cru",
+        "kg_co2e_par_kg": 0.447
       }
     ]
   },
@@ -4349,6 +4379,18 @@
         "code_ciqual": "20904",
         "nom": "Tofu, nature",
         "kg_co2e_par_kg": 1.0
+      }
+    ]
+  },
+  "tomatillo": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.111,
+    "agribalyse": [
+      {
+        "code_agb": "20169",
+        "code_ciqual": "20169",
+        "nom": "Tomate, pulpe, appertisée",
+        "kg_co2e_par_kg": 1.11
       }
     ]
   },

@@ -197,6 +197,13 @@ BY_NAME.update({
     "anise_seed": ["11066"],           # Fenouil, graine (l'anis vert n'y est pas)
 })
 
+# ── 2026-11-20 : derniers ingrédients sans prix (add_missing_prices_2026_11_20.py)
+BY_NAME.update({
+    "corn_husk": ["9615"],             # Polenta cuite (sous-produit du maïs ; enveloppe non mangée)
+    "moringa_drumstick": ["20061_1"],    # Haricot vert, cru (gousse verte)
+    "tomatillo": ["20169"],            # Tomate, pulpe, appertisée (vendue en boîte)
+})
+
 # valeurs d'une autre source (kg CO₂e / kg), faute de produit dans Agribalyse 3.2
 EXTERNAL: dict[str, tuple[float, str]] = {
     "yeast": (0.734, "COFALEC / PwC, Carbon Footprint of Yeast produced in the EU (2012) : levure pressée"),
@@ -208,6 +215,7 @@ EXTERNAL: dict[str, tuple[float, str]] = {
     # thé infusé Agribalyse 0,0436 kg/kg pour ~8 g de feuilles par kg d'infusion
     "tea": (5.45, "dérivé d'Agribalyse 18020 « Thé infusé » (0,0436 kg/kg ÷ 8 g de feuilles/kg)"),
     "matcha": (5.45, "idem thé (dérivé d'Agribalyse 18020)"),
+    "dried_hibiscus": (5.45, "dérivé d'Agribalyse 18022 « Tisane infusée » (0,0436 kg/kg ÷ 8 g de plante/kg)"),
 }
 
 # sans équivalent sérieux : valeur d'origine gardée

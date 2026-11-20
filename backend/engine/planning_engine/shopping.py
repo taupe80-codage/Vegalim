@@ -287,7 +287,7 @@ _AISLE_RULES: tuple[tuple[str, str], ...] = (
     (r"vinegar|sauce|tamari|mustard(?!.*spice)|ketchup|miso|(?:^|_)paste(?:_|$)|mirin|chutney|harissa|gochujang"
      r"|pickle|gherkin|caper|preserved_lemon|umeboshi|sriracha|mayonnaise|kimchi|sauerkraut", "Condiments & sauces"),
     (r"_milk_plant|oat_milk|almond_milk|soy(bean)?_milk|rice_milk|(?:^|_)wine(?:_|$)|beer|(?:^|_)cider(?:_|$)"
-     r"|(?:^|_)rum(?:_|$)|cognac|kirsch|calvados|marsala|(?:^|_)tea(?:_|$)|coffee|matcha|kombucha|sparkling_water"
+     r"|(?:^|_)rum(?:_|$)|cognac|kirsch|calvados|marsala|(?:^|_)tea(?:_|$)|coffee|matcha|kombucha|sparkling_water|roselle|hibiscus"
      r"|orange_juice", "Boissons & laits végétaux"),
     (r"tofu|tempeh|seitan|paneer|halloumi|milk|cream|butter(?!nut)|cheese|yog(h)?urt|ricotta|feta|parmesan|pecorino"
      r"|mozzarella|comte|gruyere|cheddar|mascarpone|reblochon|camembert|roquefort|tomme|fromage|queso|emmental|gouda"

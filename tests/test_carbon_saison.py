@@ -100,3 +100,12 @@ def test_prix_estime_nomme_la_sous_recette():
             p = estimate_price(r)
             assert all(not e["name_fr"].startswith("base ")
                        for e in p["estimated_ingredients"] + p["unknown_ingredients"]), r["id"]
+
+
+def test_plus_aucun_prix_inconnu():
+    """Feuilles de maïs, moringa, tomatilles et roselle ont leur prix (estimé)."""
+    from backend.engine.planning_engine.budget import estimate_price
+    sans_prix = [r["id"] for r in IDX.values() if r.get("composition") and not estimate_price(r)["complete"]]
+    assert sans_prix == []
+    p = estimate_price(IDX["dal_sambar_581de8"])
+    assert "drumstick_horseradish_tree_raw_pod" in [e["id"] for e in p["estimated_ingredients"]]

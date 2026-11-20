@@ -41,7 +41,10 @@ def test_recette_complete_sans_avertissement():
 def test_estimate_price_expose_les_noms():
     from backend.core.data_io import load_recipes
     from backend.engine.planning_engine.budget import estimate_price
+    # le catalogue réel n'a plus d'ingrédient sans prix (sambar : moringa chiffré le 2026-11-20)
     sambar = next(r for r in load_recipes() if r["titles"]["fr"].startswith("Sambar tamoul"))
-    p = estimate_price(sambar)
+    assert estimate_price(sambar)["complete"] is True
+    p = estimate_price(_r("z", [("ingredient_introuvable_x", 50)]))
     assert p["complete"] is False
-    assert p["unknown_ingredients"] and all(u["name_fr"] for u in p["unknown_ingredients"])
+    assert [u["id"] for u in p["unknown_ingredients"]] == ["ingredient_introuvable_x"]
+    assert all(u["name_fr"] for u in p["unknown_ingredients"])
