@@ -141,11 +141,22 @@ class _Settings:
 
         if not self.database_url:
             issues.append("DATABASE_URL absente — SQLite utilisé (non recommandé en production)")
+        elif self.db_kind == "SQLite":
+            issues.append("DATABASE_URL pointe vers SQLite (non recommandé en production)")
 
         if not self.redis_url:
             issues.append("REDIS_URL absente — rate limiter en mémoire (inefficace multi-process)")
 
         return issues
+
+    @property
+    def db_kind(self) -> str:
+        """Moteur de la base d'après le schéma de DATABASE_URL (« sqlite:/// » annonçait
+        « PostgreSQL » : seule la présence de l'URL était testée)."""
+        if not self.database_url:
+            return "SQLite"
+        scheme = self.database_url.split(":", 1)[0].split("+", 1)[0].lower()
+        return {"postgresql": "PostgreSQL", "postgres": "PostgreSQL", "sqlite": "SQLite"}.get(scheme, scheme)
 
     def log_startup_status(self, log: logging.Logger) -> None:
         """Log le bilan de configuration au démarrage."""
@@ -175,7 +186,7 @@ class _Settings:
             "Configuration : env=%s | cors=%s | db=%s | redis=%s | log=%s",
             self.env,
             "ouvert (*)" if self.cors_open else ",".join(self.cors_origins),
-            "PostgreSQL" if self.database_url else "SQLite",
+            self.db_kind,
             "Redis" if self.redis_url else "mémoire",
             self.log_level,
         )

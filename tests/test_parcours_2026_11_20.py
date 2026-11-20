@@ -244,3 +244,14 @@ def test_liste_de_courses_version_vegan_du_planning():
     orig, veg = noms(shopping_list(plan({}))), noms(shopping_list(plan({"variant": "vegan"})))
     assert {"Ricotta", "Œuf", "Parmesan"} <= orig
     assert {"Ricotta de Cajou", "Tofu soyeux"} <= veg and not {"Ricotta", "Œuf", "Parmesan"} & veg
+
+
+def test_config_annonce_le_bon_moteur_de_base():
+    """Le résumé de démarrage annonçait « db=PostgreSQL » avec DATABASE_URL=sqlite:///…"""
+    import copy
+    from backend.core.config import settings
+    s = copy.copy(settings)
+    for url, kind in (("", "SQLite"), ("sqlite:///x.db", "SQLite"),
+                      ("postgresql+psycopg2://u@h/db", "PostgreSQL"), ("postgres://u@h/db", "PostgreSQL")):
+        s.database_url = url
+        assert s.db_kind == kind, url
