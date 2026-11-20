@@ -319,7 +319,7 @@ function ingredientMatches(fridgeId, recipeId) {
 }
 
 export default function RecipeDetailPage() {
-  const { params, search } = useRouter();
+  const { params, search, setSearch } = useRouter();
   const loggedIn = !!useAuth()?.user;
   const toast = useToast();
 
@@ -413,6 +413,13 @@ export default function RecipeDetailPage() {
   }, [recipe, similarDiet]);
 
   // ── Variante vegan ─────────────────────────────────────────────────────────
+  // L'adresse suit la version affichée (?version=vegan) : un rechargement ou un
+  // lien partagé rouvre la même version, « Voir l'originale » la retire.
+  const setVersionParam = (vegan) => {
+    const sp = new URLSearchParams(search);
+    if (vegan) sp.set('version', 'vegan'); else sp.delete('version');
+    if (sp.toString() !== search.toString()) setSearch(sp);
+  };
   const generateVariant = async () => {
     setVariantLoading(true);
     setVariantError(null);
@@ -420,6 +427,7 @@ export default function RecipeDetailPage() {
       const data = await recipesApi.vegan(recipe.id);
       setVariant(data);
       setShowVariant(true);
+      setVersionParam(true);
       toast(data?.source === 'partial'
         ? 'Variante générée : certains ingrédients n\'ont pas de substitut vegan'
         : 'Variante vegan générée !', 'success');
@@ -529,7 +537,7 @@ export default function RecipeDetailPage() {
           {showVariant && (
             <div className="variant-banner">
               <span>{variant?.source === 'partial' ? '🌿 Version vegan incomplète' : '🌿 Version vegan générée'}</span>
-              <button className="variant-toggle" onClick={() => setShowVariant(false)}>
+              <button className="variant-toggle" onClick={() => { setShowVariant(false); setVersionParam(false); }}>
                 Voir l'originale
               </button>
             </div>
