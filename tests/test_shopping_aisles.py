@@ -43,3 +43,31 @@ def test_liste_par_rayon_sans_eau_ni_doublon_d_achat():
     oeuf = next(i for i in s["items"] if i["ingredient"] == "egg_raw")
     assert [m["ingredient"] for m in oeuf["merged"]] == ["egg_yolk_raw"] and "egg_yolk_raw" not in ids
     assert oeuf["n_packages"] == 1                              # une boîte d'œufs, pas deux
+
+
+def test_agrumes_en_fruits_entiers():
+    """Jus et zeste viennent des mêmes citrons : une ligne de citrons entiers, pas un
+    citron de plus pour le zeste ; jus d'orange et oranges sur la même ligne."""
+    s = shopping_list_from_recipes(["dessert_tarte_citron_meringuee_7f6440",   # 150 ml + 10 g
+                                    "rice_risotto_al_limone_4088e5",           # 30 ml + 6 g
+                                    "side_fenouil_braise_a_l_orange_a75916",   # 180 g + 150 ml
+                                    "main_feijoada_2f6754",                    # 120 ml de jus
+                                    "entry_carpaccio_betterave_agrum_ee8b66"]) # 360 g
+    agrumes = [i for i in s["items"] if any(k in i["ingredient"] for k in ("lemon", "orange"))]
+    assert len(agrumes) == 2
+    citron = next(i for i in agrumes if i["name_fr"] == "Citron")
+    # 180 ml de jus = 4,5 citrons ; 16 g de zeste = 2,7 citrons → 5 citrons, un filet
+    assert (citron["qty_value"], citron["qty_unit"]) == (5, "piece")
+    assert citron["n_packages"] == 1 and citron["price_eur"] == 2.21
+    assert {m["name_fr"]: m["qty_str"] for m in citron["merged"]} == {"Jus de citron": "180 ml", "Zeste de citron": "16 g"}
+    orange = next(i for i in agrumes if i["name_fr"] == "Oranges")
+    # 540 g entiers + 270 ml de jus (0,4 ml/g) = 1 215 g
+    assert (orange["qty_value"], orange["qty_unit"]) == (1215, "g")
+    assert [(m["name_fr"], m["qty_str"]) for m in orange["merged"]] == [("Jus d'orange", "270 ml")]
+
+
+def test_jus_seul_inchange():
+    """Jus seul : la ligne reste en ml, déjà chiffrée en fruits par le catalogue."""
+    s = shopping_list_from_recipes(["main_feijoada_2f6754"])
+    jus = next(i for i in s["items"] if "orange" in i["ingredient"])
+    assert jus["qty_unit"] == "ml" and jus["package_label"].startswith("1 kg d'oranges")

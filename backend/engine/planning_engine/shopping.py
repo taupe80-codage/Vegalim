@@ -450,14 +450,83 @@ def _build_qty_str(units_map: dict) -> str | None:
     return " · ".join(parts) if parts else None
 
 
+# Agrumes : le jus et le zeste viennent des mêmes fruits. Unité d'achat du fruit,
+# jus (ml) et zeste (g) qu'en tire une unité ; clés du catalogue « pour le jus ».
+CITRUS = {
+    "lemon":  {"unit": "piece", "juice_ml": 40,  "zest_g": 6,    "juice_keys": {"lemon_juice_fresh"}},
+    "lime":   {"unit": "piece", "juice_ml": 30,  "zest_g": 3,    "juice_keys": {"lime_juice_fresh_fruit"}},
+    "orange": {"unit": "g",     "juice_ml": 0.4, "zest_g": 0.05, "juice_keys": {"orange_juice_fresh"}},
+}
+_CITRUS_OF = {k: fruit for fruit, d in CITRUS.items() for k in ({fruit} | d["juice_keys"])}
+
+
+def _citrus_role(ing: str, key: str) -> str:
+    if "peel" in ing or "zest" in ing:
+        return "zest"
+    if "juice" in ing or key in CITRUS[_CITRUS_OF[key]]["juice_keys"]:
+        return "juice"
+    return "whole"
+
+
+def _merge_citrus(fruit: str, members: list[str], keys: dict, ing_data: dict, catalog: dict,
+                  get_name_fr) -> tuple[str, dict] | None:
+    """Une ligne « Citron : 5 pièces » au lieu de « Jus de citron 180 ml » + « Zeste de
+    citron 16 g » (qui faisait acheter un citron de plus pour le zeste) : on zeste les
+    fruits qu'on presse, donc fruits = entiers + max(jus, zestes). Le jus seul garde sa
+    ligne (le catalogue le chiffre déjà en citrons) : renvoie None."""
+    d = CITRUS[fruit]
+    roles = {m: _citrus_role(m, keys[m]) for m in members}
+    if set(roles.values()) == {"juice"} or set(roles.values()) == {"whole"}:
+        return None
+    unit_w = (catalog.get(fruit) or {}).get("unit_weight_g")
+    whole = juice = zest = 0.0
+    for m, role in roles.items():
+        units = ing_data[m].get("units") or {}
+        if role == "juice":
+            juice += units.get("ml", 0) / d["juice_ml"]
+        elif role == "zest":
+            zest += units.get("g", 0) / d["zest_g"]
+        elif d["unit"] == "g":
+            whole += units.get("g", 0)
+        else:
+            pieces = sum(v for u, v in units.items() if u in ("piece", "pièce", "pièces"))
+            if unit_w and units.get("g"):
+                pieces += units["g"] / unit_w
+            # « 1/2 citron », « 2 tranches » : sans quantité exploitable, un fruit par recette
+            whole += pieces or ing_data[m]["occurrences"]
+    total = whole + max(juice, zest)
+    if total <= 0:   # zeste ou jus sans quantité : au moins un fruit
+        total = 1 if d["unit"] == "piece" else 200
+    qty = math.ceil(total - 1e-6) if d["unit"] == "piece" else round(total)
+    main = next(m for m in members if roles[m] != "juice")
+    # détail : jus et zeste, un seul « jus d'orange » même s'il vient de deux ids
+    detail: dict[str, dict] = {}
+    for m in members:
+        if roles[m] == "whole":
+            continue
+        name = get_name_fr(m)
+        row = detail.setdefault(name.lower(), {"ingredient": m, "name_fr": name, "units": defaultdict(float)})
+        for u, v in (ing_data[m].get("units") or {}).items():
+            row["units"][u] += v
+    return main, {
+        "occurrences": sum(ing_data[m]["occurrences"] for m in members),
+        "units": {d["unit"]: qty},
+        "name_fr": (catalog.get(fruit) or {}).get("name_fr") or get_name_fr(main),
+        "merged": [{"ingredient": r["ingredient"], "name_fr": r["name_fr"],
+                    "qty_str": _build_qty_str(r["units"])} for r in detail.values()],
+    }
+
+
 def _merge_same_product(ing_data: dict, catalog: dict, get_name_fr) -> dict:
     """Une ligne par produit acheté : les ingrédients qui renvoient à la même entrée
     du catalogue (œuf et jaune d'œuf, oignon et oignon jaune…) comptaient chacun
     leurs emballages. L'eau du robinet n'est pas un achat : retirée.
 
-    La ligne fusionnée garde l'id de la plus grosse quantité ; « merged » détaille les autres."""
+    La ligne fusionnée garde l'id de la plus grosse quantité ; « merged » détaille les autres.
+    Agrumes : jus, zeste et fruit entier sur une ligne de fruits entiers (_merge_citrus)."""
     from backend.core.data_io import resolve_catalog_key
     groups: dict[str, list[str]] = defaultdict(list)
+    keys: dict[str, str] = {}
     out: dict = {}
     for ing in ing_data:
         if ing.startswith("base_"):
@@ -467,10 +536,16 @@ def _merge_same_product(ing_data: dict, catalog: dict, get_name_fr) -> dict:
         if key == "water":
             continue
         if key:
-            groups[key].append(ing)
+            keys[ing] = key
+            groups[_CITRUS_OF.get(key, key)].append(ing)
         else:
             out[ing] = ing_data[ing]
     for key, members in groups.items():
+        if key in CITRUS:
+            merged = _merge_citrus(key, members, keys, ing_data, catalog, get_name_fr)
+            if merged:
+                out[merged[0]] = merged[1]
+                continue
         if len(members) == 1:
             out[members[0]] = ing_data[members[0]]
             continue
@@ -540,7 +615,7 @@ def _build_result(
 
         item: dict = {
             "ingredient":    ing,
-            "name_fr":       get_name_fr(ing),
+            "name_fr":       data.get("name_fr") or get_name_fr(ing),
             "occurrences":   count,
             "qty_str":       qty_str,
             "qty_value":     qty_value,
