@@ -11,6 +11,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { useRouter, navigate } from '../Router';
 import { recipes as recipesApi, profile as profileApi } from '../api';
 import { useAuth } from '../AuthContext';
+import { useProfileDiet, defaultDietFilter } from '../useProfileDiet';
 import { recordViewOnce } from '../favoritesSync';
 import translations from '../translations.json';
 import physData from '../ingredientPhysical.json';
@@ -398,8 +399,10 @@ export default function RecipeDetailPage() {
   }, [loggedIn, recipe?.id]);
 
   // ── Chargement similaires (une fois la recette chargée) ────────────────────
-  // Version vegan affichée : des suggestions vegan (sinon quiche au chèvre, gougères…)
-  const similarDiet = showVariant && variant?.recipe ? 'vegan' : '';
+  // Version vegan affichée, ou profil vegan : des suggestions vegan (sinon quiche au
+  // chèvre, gougères…), comme les filtres de l'accueil, du planning et du frigo
+  const profileDiet = defaultDietFilter(useProfileDiet());
+  const similarDiet = (showVariant && variant?.recipe) || profileDiet === 'vegan' ? 'vegan' : '';
   useEffect(() => {
     if (!recipe) return;
     setSimilarLoading(true);
