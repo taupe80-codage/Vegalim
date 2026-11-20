@@ -127,3 +127,16 @@ def test_etapes_vegan_prudentes():
             assert not re.search(r"\b(les|des|\d+) tofu soyeux(?! \()", v) or re.search(r"\d+ ?(g|ml) de tofu soyeux", v), v
             assert "d'yaourt" not in v and "de la yaourt" not in v, v
             assert ("de haricots" in v) or ("de haricots" not in o), v          # texte voisin intact
+
+
+def test_variante_vegan_description_reecrite():
+    """La description suivait le plat d'origine (« monté au ghee ») ; le titre reste
+    le nom du plat. « à l'huile », pas « à la huile » ; majuscule de début gardée."""
+    from backend.core.data_io import load_recipes
+    from backend.engine.rule_engine.variants import vegan_variant
+    r = next(x for x in load_recipes() if x["id"] == "curry_palak_paneer_b4ca11")
+    v = vegan_variant(r)["recipe"]
+    assert v["description"].startswith("Tofu maison")
+    assert "montée à l'huile de coco" in v["description"] and "ghee" not in v["description"]
+    assert v["titles"]["fr"] == r["titles"]["fr"]
+    assert any("30 ml d'huile de coco" in s for s in v["instructions"])

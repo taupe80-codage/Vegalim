@@ -162,6 +162,7 @@ def _forms(name: str) -> list[str]:
 _COUNTED = re.compile(r"(?:^|\s)(œufs?|jaunes? d'œufs?|blancs? d'œufs?)$")
 _PIECE_USE = re.compile(r"pocher|poch[ée]|frire|au plat|écaler|casser|séparer|mollet|\bdurs?\b|coque", re.I)
 _VOWELS = set("aeiouàâéèêëîïôûœ")      # pas « y » (de yaourt) ni « h » (de haricots)
+_H_MUET = ("huile",)                     # h muet : « d'huile », « à l'huile »
 # genre du premier mot des substituts, pour accorder l'article qui les précède
 _GENDER = {"tofu": "m", "yaourt": "m", "beurre": "m", "lait": "m", "sirop": "m", "jus": "m",
            "cheddar": "m", "fromage": "m",
@@ -199,8 +200,11 @@ def _rewrite_steps(steps: list, applied: list[dict]) -> tuple[list, int]:
         rules.append((re.compile(rf"\b(\d+(?:[,.]\d+)?) ?(g|ml) (?:de |d')({c})(?: (?:battus?|entiers?|crus?))?(?!\w)", re.I),
                       lambda m: f"{m.group(1)} {m.group(2)} de {mapping[m.group(3).lower()]}", True))
     if mass_forms:
-        rules.append((re.compile(rf"(?<![\w'’])({alt(mass_forms)})(?!\w)", re.I),
-                      lambda m: mapping[m.group(1).lower()], False))
+        def mass(m):
+            sub = mapping[m.group(1).lower()]
+            # « Paneer maison en cubes… » en début de phrase → « Tofu maison… »
+            return sub[:1].upper() + sub[1:] if m.group(1)[:1].isupper() else sub
+        rules.append((re.compile(rf"(?<![\w'’])({alt(mass_forms)})(?!\w)", re.I), mass, False))
     out, changed = [], 0
     for step in steps:
         if not isinstance(step, str):
@@ -216,7 +220,8 @@ def _rewrite_steps(steps: list, applied: list[dict]) -> tuple[list, int]:
             # pas touché (« de haricots »)
             for sub in set(mapping.values()):
                 esc = re.escape(sub)
-                if sub[:1] in _VOWELS:
+                elide = sub[:1] in _VOWELS or sub.startswith(_H_MUET)
+                if elide:
                     new = re.sub(rf"\b([Dd])e {esc}", lambda mm, s=sub: f"{mm.group(1)}'{s}", new)
                 else:
                     new = re.sub(rf"\b([Dd])'{esc}", lambda mm, s=sub: f"{mm.group(1)}e {s}", new)
@@ -229,9 +234,10 @@ def _rewrite_steps(steps: list, applied: list[dict]) -> tuple[list, int]:
                     new = re.sub(rf"\b([Àà]) la {esc}", lambda mm, s=sub: f"au {s}", new)
                     new = re.sub(rf"\b([Ll])a {esc}", lambda mm, s=sub: f"{mm.group(1)}e {s}", new)
                 elif gender == "f":
-                    new = re.sub(rf"\b([Dd])u {esc}", lambda mm, s=sub: f"{mm.group(1)}e la {s}", new)
-                    new = re.sub(rf"\b([Aa])u {esc}", lambda mm, s=sub: f"{'À' if mm.group(1) == 'A' else 'à'} la {s}", new)
-                    new = re.sub(rf"\b([Ll])e {esc}", lambda mm, s=sub: f"{mm.group(1)}a {s}", new)
+                    la = "l'" if elide else "la "       # « à l'huile de coco », pas « à la huile »
+                    new = re.sub(rf"\b([Dd])u {esc}", lambda mm, s=sub: f"{mm.group(1)}e {la}{s}", new)
+                    new = re.sub(rf"\b([Aa])u {esc}", lambda mm, s=sub: f"{'À' if mm.group(1) == 'A' else 'à'} {la}{s}", new)
+                    new = re.sub(rf"\b([Ll])e {esc}", lambda mm, s=sub: f"{mm.group(1)}{la[1:]}{s}", new)
             changed += 1
         out.append(new)
     return out, changed
@@ -296,6 +302,10 @@ def vegan_variant(recipe: dict) -> dict:
     # Étapes réécrites avec les substituts (« 250 g de paneer » → « 250 g de tofu »)
     if applied and isinstance(r.get("instructions"), list):
         r["instructions"], r["_steps_rewritten"] = _rewrite_steps(r["instructions"], applied)
+    # Description aussi (« garnies de queso fresco » → « garnies de tofu ») ; le titre
+    # reste le nom du plat (« Palak paneer »), le badge « Version vegan » l'accompagne.
+    if applied and isinstance(r.get("description"), str):
+        r["description"] = _rewrite_steps([r["description"]], applied)[0][0]
 
     # Régimes et allergènes recalculés sur la nouvelle composition : la variante
     # gardait ceux de l'original (« œufs », « lait » affichés après substitution)
