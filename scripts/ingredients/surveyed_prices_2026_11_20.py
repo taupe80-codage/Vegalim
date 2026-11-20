@@ -30,6 +30,13 @@ def pkg(qty, unit, price, label):
     return {"qty": qty, "unit": unit, "price": price, "label": label}
 
 
+DATE2 = "2026-11-21"
+
+
+def carrefour2(detail: str) -> str:
+    return f"relevé carrefour.fr {DATE2} ({detail})"
+
+
 def carrefour(detail: str) -> str:
     return f"relevé carrefour.fr {DATE} ({detail})"
 
@@ -78,6 +85,36 @@ SURVEY: dict[str, tuple[list[dict], str]] = {
                           carrefour("fèves fraîches en vrac, 6,49 €/kg en cosses")),
     "glutinous_rice":    ([pkg(1000, "g", 4.95, "sachet 1kg")],
                           f"relevé kaufland.fr {DATE} (riz gluant Ricefield 1 kg, vendeur partenaire)"),
+    # ── 4e lot (2026-11-21) : les 30 dernières estimations, prix affichés en ligne ─────────────
+    # Restent estimés, faute de prix en euros affiché en France : piments verts en conserve,
+    # feuilles de maïs (tamales), niébé égoutté, pâte doubanjiang, pilons de moringa, freekeh,
+    # brocoli chinois, tomatilles, farine de patate douce, oseille au poids.
+    "oyster_mushroom":   ([pkg(250, "g", 3.99, "barquette 250g")], carrefour2("pleurotes 250 g")),
+    "pecorino":          ([pkg(200, "g", 5.38, "part 200g")], carrefour2("Pecorino Romano AOP Carrefour 200 g")),
+    "buttermilk":        ([pkg(1000, "ml", 1.45, "bouteille 1L")], carrefour2("lait ribot Even 1 L")),
+    "hot_dog_bun":       ([pkg(250, "g", 1.39, "paquet 4 pains")], carrefour2("Carrefour Classic' 4 pains 250 g")),
+    "apple_juice":       ([pkg(1000, "ml", 0.99, "bouteille 1L")], carrefour2("pur jus Carrefour 1 L")),
+    "sandwich_bread":    ([pkg(500, "g", 2.45, "paquet 500g")], carrefour2("pain de mie céréales Carrefour Classic' 500 g")),
+    "dried_coriander_leaf": ([pkg(8, "g", 1.99, "flacon 8g")], carrefour2("coriandre en feuilles Sainte Lucie 8 g")),
+    "fennel_seed":       ([pkg(100, "g", 3.5, "sachet 100g")],
+                          carrefour2("graines de fenouil TRS 100 g, vendeur partenaire")),
+    "instant_coffee":    ([pkg(100, "g", 3.05, "pot 100g")], carrefour2("café soluble Gold Carrefour Extra 100 g")),
+    "pomegranate_juice": ([pkg(500, "ml", 3.39, "bouteille 50cl"), pkg(1000, "ml", 4.85, "brique 1L")],
+                          carrefour2("Carrefour Extra 50 cl ; Carrefour Bio 1 L")),
+    "lambs_lettuce":     ([pkg(125, "g", 1.5, "sachet 125g"), pkg(200, "g", 2.25, "sachet 200g")],
+                          carrefour2("mâche Carrefour Le Marché 125 g et 200 g")),
+    "kefir":             ([pkg(500, "ml", 1.75, "bouteille 50cl"), pkg(1000, "ml", 3.45, "bouteille 1L")],
+                          carrefour2("kéfir Lactel 50 cl et 1 L")),
+    "watermelon":        ([pkg(1, "piece", 4.39, "pièce ~3kg")], carrefour2("pastèque à la pièce")),
+    "evaporated_milk":   ([pkg(410, "g", 1.35, "boîte 410g")], carrefour2("lait concentré non sucré Carrefour Classic' 410 g")),
+    "dried_hibiscus":    ([pkg(500, "g", 12.99, "sachet 500g")],
+                          carrefour2("bissap bio FruitsTropicaux 500 g, vendeur partenaire")),
+    "vegetarian_fish_sauce": ([pkg(180, "ml", 3.9, "bouteille 18cl"), pkg(500, "ml", 5.95, "bouteille 50cl")],
+                          f"relevé le-marche-d-asie.com {DATE2} (Nhattam 180 ml ; Au Lac 500 ml)"),
+    "paneer":            ([pkg(200, "g", 3.4, "bloc 200g")], f"relevé satoriz-blotzheim.bio {DATE2} (paneer 200 g)"),
+    "tempura_flour":     ([pkg(600, "g", 6.1, "sachet 600g")], f"relevé kioko.fr {DATE2} (Welna 600 g)"),
+    "sauce_okonomiyaki": ([pkg(300, "ml", 4.89, "flacon 300g")], f"relevé waso.fr {DATE2} (Otafuku 300 g)"),
+    "pigeon_pea":        ([pkg(1000, "g", 5.99, "sachet 1kg")], f"relevé pankaj-boutique.com {DATE2} (toor dal TRS 1 kg)"),
 }
 
 
@@ -89,9 +126,10 @@ def main() -> None:
     log: list[str] = []
     for key, (packages, source) in SURVEY.items():
         e = catalog[key]
-        if e.get("packages") != packages or e.get("price_source") != source:
+        day = DATE2 if DATE2 in source else DATE
+        if e.get("packages") != packages or e.get("price_source") != source or e.get("last_updated") != day:
             log.append(f"{key} : {[p['price'] for p in e['packages']]} → {[p['price'] for p in packages]}")
-            e.update(packages=packages, price_source=source, last_updated=DATE)
+            e.update(packages=packages, price_source=source, last_updated=day)
     print(*log, f"{len(log)} changement(s)", sep="\n")
     if args.dry_run or not log:
         return
