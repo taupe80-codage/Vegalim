@@ -142,7 +142,8 @@ def _display_name(iid: str) -> str:
     name = full_name_fr(entry, iid) if entry and entry.get("canonical_name_fr") else None
     if not name:
         name = ((_recipes_index().get(iid) or {}).get("titles") or {}).get("fr")
-    return name or iid.replace("/", " ").replace("_", " ")
+    # « Pâte brisée matière grasse végétale » → « Pâte brisée végétale », comme les étapes
+    return (name or iid.replace("/", " ").replace("_", " ")).replace("matière grasse végétale", "végétale")
 
 
 def _item_id(item) -> str:
@@ -214,11 +215,16 @@ def _drop_echo(m) -> str:
     return m.group(0)
 
 
-def _rewrite_steps(steps: list, applied: list[dict]) -> tuple[list, int]:
+# Autres noms d'un ingrédient dans les textes des recettes (« 300 g de ladyfinger »)
+_TEXT_ALIASES = {"ladyfinger": ("ladyfinger",)}
+
+
+def _rewrite_steps(steps: list, applied: list[dict], prose: bool = False) -> tuple[list, int]:
     """Étapes avec les ingrédients de substitution. Prudent : mots entiers, un seul
     passage (un substitut n'est jamais remplacé à son tour), « 3 œufs (150 g) » →
     « 150 g de tofu soyeux », élision « de / d' » rétablie autour des seuls
-    substituts ; les œufs ne sont remplacés que dans une quantité en grammes.
+    substituts ; dans les étapes, les œufs ne sont remplacés que dans une quantité en
+    grammes. prose (description) : « un appareil d'œufs » → « de tofu soyeux » aussi.
     Renvoie (étapes, nb modifiées)."""
     mapping: dict[str, str] = {}
     # noms complets d'abord : « lait » (liquide → lait de soja) ne doit pas être pris
@@ -228,8 +234,10 @@ def _rewrite_steps(steps: list, applied: list[dict]) -> tuple[list, int]:
             sub = _short(a.get("substitute_name") or "")
             if not sub:
                 continue
-            for f in _forms(a.get("original_name") or "", heads):
-                mapping.setdefault(f, sub)
+            names = [a.get("original_name") or ""] + list(_TEXT_ALIASES.get(a.get("original"), ()))
+            for name in names:
+                for f in _forms(name, heads):
+                    mapping.setdefault(f, sub)
     if not mapping:
         return steps, 0
     counted_forms = [f for f in mapping if _COUNTED.search(f)]
@@ -246,6 +254,12 @@ def _rewrite_steps(steps: list, applied: list[dict]) -> tuple[list, int]:
                       lambda m: f"{m.group(2)} {m.group(3)} de {mapping[m.group(1).lower()]}", True))
         rules.append((re.compile(rf"\b(\d+(?:[,.]\d+)?) ?(g|ml) (?:de |d')({c})(?: (?:battus?|entiers?|crus?))?(?!\w)", re.I),
                       lambda m: f"{m.group(1)} {m.group(2)} de {mapping[m.group(3).lower()]}", True))
+        if prose:
+            # description : l'œuf comme ingrédient, hors « jaune / blanc d'œuf » non remplacés
+            rules.append((re.compile(rf"(?<!jaune d')(?<!jaunes d')(?<!blanc d')(?<!blancs d')"
+                                     rf"(?<![\w])({c})(?![\w-])", re.I),     # pas « œufs-crème »
+                          lambda m: (lambda s: s[:1].upper() + s[1:] if m.group(1)[:1].isupper() else s)(
+                              mapping[m.group(1).lower()]), True))
     if mass_forms:
         def mass(m):
             sub = mapping[m.group(1).lower()]
@@ -279,6 +293,13 @@ def _rewrite_steps(steps: list, applied: list[dict]) -> tuple[list, int]:
                 new = re.sub(rf"({esc})((?: [\w'’-]+){{1,4}})", _drop_echo, new, flags=re.I)
                 # article accordé au substitut : « de la crème » → « du yaourt de soja »
                 gender = _GENDER.get(sub.split()[0])
+                if not elide:                           # « l'œuf » → « le tofu soyeux »
+                    new = re.sub(rf"\b([Ll])['’]({esc})", lambda mm: mm.group(1)
+                                 + ("a " if gender == "f" else "e ") + mm.group(2), new, flags=re.I)
+                    if gender != "f":                   # « à le », « de le » → « au », « du »
+                        new = re.sub(rf"\b([Àà]) le ({esc})", lambda mm: "au " + mm.group(2), new, flags=re.I)
+                        new = re.sub(rf"\b([Dd])e le ({esc})", lambda mm: mm.group(1) + "u " + mm.group(2),
+                                     new, flags=re.I)
                 if gender == "m":
                     new = re.sub(rf"\b([Dd])e la {esc}", lambda mm, s=sub: f"{mm.group(1)}u {s}", new)
                     new = re.sub(rf"\b([Àà]) la {esc}", lambda mm, s=sub: f"au {s}", new)
@@ -355,7 +376,7 @@ def vegan_variant(recipe: dict) -> dict:
     # Description aussi (« garnies de queso fresco » → « garnies de tofu ») ; le titre
     # reste le nom du plat (« Palak paneer »), le badge « Version vegan » l'accompagne.
     if applied and isinstance(r.get("description"), str):
-        r["description"] = _rewrite_steps([r["description"]], applied)[0][0]
+        r["description"] = _rewrite_steps([r["description"]], applied, prose=True)[0][0]
 
     # Régimes et allergènes recalculés sur la nouvelle composition : la variante
     # gardait ceux de l'original (« œufs », « lait » affichés après substitution)

@@ -178,3 +178,21 @@ def test_variantes_vegan_preparations_maison():
     assert cj["source"] == "generated" and estimate_price(cj["recipe"])["complete"]
     assert any("80 g de roux de curry japonais au beurre végétal dans la sauce" in s
                for s in cj["recipe"]["instructions"])
+
+
+def test_variante_vegan_description_sans_oeuf_ni_nom_anglais():
+    """Vu à l'écran : « appareil de ricotta de cajou, d'œufs… » (description), « 300 g de
+    ladyfinger » (nom anglais), « l'tofu soyeux », « à le tofu soyeux »."""
+    from backend.core.data_io import load_recipes
+    from backend.engine.rule_engine.variants import vegan_variant
+    idx = {r["id"]: r for r in load_recipes()}
+    tarte = vegan_variant(idx["tart_asperges_vertes_ricotta_2c85b3"])["recipe"]
+    assert "un appareil de ricotta de cajou, de tofu soyeux et de levure" in tarte["description"]
+    assert tarte["ingredients_meta"]["shortcrust_pastry_vegetable_fat_raw_paste_pre_packaged_plant"][
+        "name_fr"].lower() == "pâte brisée végétale"
+    tira = vegan_variant(idx["dessert_tiramisu_classique_ea8ddb"])["recipe"]
+    assert "ladyfinger" not in (tira["description"] + " ".join(tira["instructions"])).lower()
+    katsu = vegan_variant(idx["bread_katsu_bf3f1e"])["recipe"]["description"]
+    assert "panées au tofu soyeux" in katsu
+    quiche = vegan_variant(next(r for i, r in idx.items() if i.startswith("egg_quiche_lorraine_vegetarien")))
+    assert "œufs-crème" in quiche["recipe"]["description"]          # mot composé laissé tel quel
