@@ -225,6 +225,20 @@ ARTICLES: dict[str, list[str]] = {
     "side_dauphinois_vegan_c584cb": ["fr:Gratin dauphinois"],
     "side_lentilles_du_puy_echalote_37c76e": ["fr:Lentille verte du Puy"],
     "protein_halloumi_pois_chiches_rotis_7c40e2": ["en:Halloumi"],
+    # 2026-11-20 : 3e passe, plats qui ont un article (les autres sont génériques)
+    "dal_lebanese_lentil_soup_eae561": ["en:Adas bi hamod", "en:Lentil soup"],
+    "main_chili_sin_carne_125ff2": ["en:Vegetarian chili", "fr:Chili sin carne"],
+    "salad_nicoise_3b123f": ["en:Salade niçoise", "fr:Salade niçoise"],
+    "soup_de_potiron_caribeenne_a0fabd": ["en:Pumpkin soup", "fr:Soupe au potiron"],
+    "soup_potage_de_patate_douce_e4b521": ["en:Sweet potato soup"],
+    "soup_soupe_courge_butternut_2f5cf3": ["en:Butternut squash soup", "en:Pumpkin soup"],
+    "stew_persian_herb_stew_485f3e": ["en:Ghormeh sabzi"],
+    "side_kale_massee_avocat_3d18e7": ["en:Kale salad"],
+    "rice_khao_pad_sapparot_9a40d3": ["en:Pineapple fried rice", "th:ข้าวผัดสับปะรด"],
+    "brkf_muffins_polenta_myrtilles_e2b947": ["en:Corn muffin"],
+    "soup_veloute_panais_poire_5d0c8a": ["en:Parsnip soup"],
+    "protein_tofu_tikka_masala_3e8f45": ["en:Paneer tikka masala"],
+    "stew_anginares_a_la_polita_8b2c46": ["el:Αγκινάρες α λα πολίτα", "en:Artichokes à la polita"],
 }
 
 

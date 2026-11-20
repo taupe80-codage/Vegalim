@@ -483,9 +483,11 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `soupe-a-loignon-au-cidre-et-croutons-a-lail-vegan` | Ludovic Péron | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Soupe_%C3%A0_l%27oignon.jpg) |
 | `soupe-a-loignon-gratinee-lyonnaise-au-comte` | Ludovic Péron | CC BY-SA 3.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Soupe_%C3%A0_l%27oignon.jpg) |
 | `soupe-au-cresson` | Walter Lim from Singapore, Singapore | CC BY 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:A_simple_watercress_soup.jpg) |
+| `soupe-de-butternut-thaie-au-lait-de-coco-et-au-gingembre` | Wald1siedel | CC BY-SA 4.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:K%C3%BCrbissuppe_mit_Kern%C3%B6l.JPG) |
 | `soupe-de-gundruk` | Gaurav Dhwaj Khadka | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gundruk_1.jpg) |
 | `soupe-de-pain-a-la-tomate` | it:User:LupoCapra | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pappa_al_pomodoro-pentola.jpg) |
 | `soupe-de-pois-casses` | Mx. Granger | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Amy%27s_split_pea_soup.jpg) |
+| `soupe-de-potiron-caribeenne` | Wald1siedel | CC BY-SA 4.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:K%C3%BCrbissuppe_mit_Kern%C3%B6l.JPG) |
 | `soupe-miso` | ish-ka | Public domain | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Miso_Soup.jpg) |
 | `soupe-udon-miso` | Lusheeta at Japanese Wikipedia | CC BY-SA 3.0 | [Wikipédia (fr) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kakeudon.jpg) |
 | `spaghetti-aglio-e-olio` | FakirNL | CC BY-SA 3.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Spaghetti_Aglio_Olio_Peperoncino.jpg) |
