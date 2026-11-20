@@ -1313,7 +1313,7 @@ html[data-theme="dark"] .health-child-pill--origin.health-child-pill--active-ori
 }
 
 /* ── Badge +N — bulle au survol ─────────────────────────────────────────────── */
-.badge-more-wrapper { display: inline-block; position: relative; }
+.badge-more-wrapper { display: inline-block; position: relative; z-index: 2; }
 .badge-more-popover {
   position: absolute;
   bottom: calc(100% + 8px);
@@ -2935,7 +2935,7 @@ details.frigo-fridge-details[open] .frigo-fridge-chevron { transform: rotate(90d
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 2;
   transition: background 0.2s, transform 0.15s;
   backdrop-filter: blur(4px);
 }
@@ -2959,7 +2959,7 @@ details.frigo-fridge-details[open] .frigo-fridge-chevron { transform: rotate(90d
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 2;
   transition: background 0.2s, transform 0.15s;
   backdrop-filter: blur(4px);
 }
@@ -2981,7 +2981,7 @@ details.frigo-fridge-details[open] .frigo-fridge-chevron { transform: rotate(90d
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 2;
   transition: background 0.2s, transform 0.15s;
   backdrop-filter: blur(4px);
 }
@@ -5070,4 +5070,24 @@ html[data-theme="dark"] .price-unknown-note { color: #e6b35a; }
   .filters-columns { grid-template-columns: minmax(0, 1fr); }
   .filter-col:not(:last-child) { border-right: none; border-bottom: 1px solid var(--brd); padding-right: 0; padding-bottom: 12px; }
   .filter-col:not(:first-child) { padding-left: 0; padding-top: 12px; }
+}
+
+/* ── Carte : le titre est le lien, étiré sur toute la carte ─────────────────── */
+.recipe-card-link { color: inherit; text-decoration: none; }
+.recipe-card-link::after { content: ''; position: absolute; inset: 0; z-index: 1; border-radius: var(--rad); }
+.recipe-card-link:focus-visible { outline: none; }
+.recipe-card-link:focus-visible::after { outline: 2px solid var(--blu); outline-offset: -3px; }
+.recipe-card:focus-within { border-color: var(--mut); }
+
+/* Texte réservé aux lecteurs d'écran (libellé de la recherche de l'accueil :
+   la classe était utilisée sans être définie, le libellé s'affichait et
+   écrasait le champ sur mobile) */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

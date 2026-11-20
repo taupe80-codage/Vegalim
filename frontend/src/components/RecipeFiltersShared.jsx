@@ -219,6 +219,17 @@ export function getGroupCuisines(group) {
 
 // ── Sub-components ────────────────────────────────────────────────────────────
 
+// Sections du panneau de filtres ouvertes au chargement : toutes sur grand écran ;
+// aucune sur mobile, où elles occupaient près de deux écrans avant les recettes
+// (une section repliée garde ses filtres actifs visibles en puces).
+const ALL_FILTER_SECTIONS = ['diet', 'restrictions', 'saison', 'dish', 'allergen', 'difficulty', 'health', 'origin'];
+export const MOBILE_FILTERS_QUERY = '(max-width: 640px)';
+
+export function initialOpenSections() {
+  const mobile = typeof window !== 'undefined' && window.matchMedia?.(MOBILE_FILTERS_QUERY).matches;
+  return new Set(mobile ? [] : ALL_FILTER_SECTIONS);
+}
+
 export function FilterSection({ id, label, isOpen, onToggle, children, hasActive, activeChips }) {
   return (
     <div className={`filter-section${isOpen ? ' filter-section--open' : ''}${hasActive ? ' filter-section--has-active' : ''}`}>
@@ -245,7 +256,8 @@ export function FilterSection({ id, label, isOpen, onToggle, children, hasActive
           ))}
         </div>
       )}
-      <div id={`fsec-${id}`} className="filter-section-body" aria-hidden={!isOpen}>
+      {/* inert : une section repliée ne reçoit ni le focus clavier ni les clics */}
+      <div id={`fsec-${id}`} className="filter-section-body" aria-hidden={!isOpen} inert={!isOpen}>
         {children}
       </div>
     </div>
@@ -503,9 +515,7 @@ export function useFilterState(initial = {}) {
   const [dishFilters,   setDishFilters]   = useState(new Set(initial.dishFilters || []));
   const [origins,       setOrigins]       = useState(new Set(initial.origins || []));
   const [maxTime,       setMaxTime]       = useState(initial.maxTime || '');
-  const [openSections,  setOpenSections]  = useState(
-    () => new Set(['diet', 'restrictions', 'saison', 'dish', 'allergen', 'difficulty', 'health', 'origin'])
-  );
+  const [openSections,  setOpenSections]  = useState(initialOpenSections);
   const [, setHealthExpanded] = useState(new Set());
 
   const _toggleSet = (setter) => (val) =>

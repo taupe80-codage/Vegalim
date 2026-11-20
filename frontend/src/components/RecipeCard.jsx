@@ -875,21 +875,13 @@ export default function RecipeCard({ recipe, activeHealthFilters = new Set(), ac
   const diff   = recipe.difficulty;
   const badges = getRecipeBadges(recipe, activeHealthFilters, activeSubFilters);
 
-  const handleClick = () => navigate(`/recette/${recipe.id || recipe._id}`);
+  const title = recipe.titles?.fr || recipe.title_fr || 'Recette';
 
+  // Le titre est le lien vers la fiche ; son pseudo-élément couvre toute la carte
+  // (.recipe-card-link::after), et les boutons favori / planning / nutrition passent
+  // au-dessus. Plus de role="button" contenant d'autres boutons.
   return (
-    <article
-      className="recipe-card"
-      onClick={handleClick}
-      role="button"
-      tabIndex={0}
-      onKeyDown={e => {
-        // role="button" : Entrée et Espace, comme un vrai bouton (pas les boutons internes)
-        if (e.target !== e.currentTarget) return;
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClick(); }
-      }}
-      aria-label={`Voir la recette : ${recipe.titles?.fr || recipe.title_fr || 'Recette'}`}
-    >
+    <article className="recipe-card">
       <RecipeVisual recipe={recipe} size="card" alimScore={alimScore} />
       <button
         className={`recipe-fav-btn${isFav ? ' recipe-fav-btn--active' : ''}`}
@@ -927,7 +919,7 @@ export default function RecipeCard({ recipe, activeHealthFilters = new Set(), ac
 
       <div className="recipe-content">
         <h3 className="recipe-title">
-          {recipe.titles?.fr || recipe.title_fr || 'Recette'}
+          <a className="recipe-card-link" href={`#/recette/${recipe.id || recipe._id}`}>{title}</a>
         </h3>
 
         <div className="recipe-meta">

@@ -13,7 +13,7 @@ import { useProfileDiet, defaultDietFilter } from '../useProfileDiet';
 import {
   DISH_OPTIONS, DIET_OPTIONS, DIET_EXTRA_OPTIONS, SEASON_OPTIONS, DIFFICULTY_OPTIONS,
   ORIGIN_GROUPS, ALLERGEN_OPTIONS, HEALTH_GROUPS,
-  filtersToApiParams, FilterSection, HealthAccordion, OriginAccordion,
+  filtersToApiParams, FilterSection, HealthAccordion, OriginAccordion, initialOpenSections,
 } from '../components/RecipeFiltersShared';
 
 const SORT_OPTIONS = [
@@ -126,9 +126,7 @@ export default function HomePage() {
   const [dishFilters,    setDishFilters]    = useState(new Set(_saved?.dishFilters || []));
   const [origins,        setOrigins]        = useState(new Set(_saved?.origins || []));
 
-  const [openSections, setOpenSections] = useState(
-    () => new Set(['diet', 'restrictions', 'saison', 'dish', 'allergen', 'difficulty', 'health', 'origin'])
-  );
+  const [openSections, setOpenSections] = useState(initialOpenSections);
   const toggleSection = (id) => setOpenSections(prev => {
     const next = new Set(prev);
     next.has(id) ? next.delete(id) : next.add(id);
