@@ -4,7 +4,7 @@ rate_limiter.py — Rate limiting IP-based, Redis-aware.
 Modes :
   1. Redis (recommandé en production multi-process)
      Activé si REDIS_URL est défini dans l'environnement.
-     Clé Redis : "rl:{ip}:{window_start}" avec TTL = window_seconds.
+     Clé Redis : "rl:{route}|{ip}:{window_start}" avec TTL = 2 × window_seconds.
 
   2. Mémoire (développement / serveur mono-process)
      Fallback automatique si Redis est indisponible.
@@ -13,6 +13,11 @@ Modes :
 Usage dans les routes :
     check_rate_limit(request, limit=60, window_seconds=60)
     → lève HTTP 429 si l'IP dépasse la limite dans la fenêtre.
+
+Un compteur par route (méthode + chemin générique, ex. « GET /recettes/{recipe_id} ») :
+chaque route a sa propre limite, et parcourir le catalogue ne doit pas consommer
+les 5 inscriptions / 10 min de /auth/register (ce qui arrivait avec un seul
+compteur par IP pour toutes les routes).
 
 Configuration .env :
     REDIS_URL=redis://localhost:6379/0
@@ -59,11 +64,11 @@ def _get_redis():
     return None
 
 
-def _check_redis(ip: str, limit: int, window_seconds: int) -> None:
+def _check_redis(bucket: str, limit: int, window_seconds: int) -> None:
     """Rate limiting via Redis (sliding window par fenêtre fixe)."""
     r = _get_redis()
     window_start = math.floor(time.time() / window_seconds)
-    key = f"rl:{ip}:{window_start}"
+    key = f"rl:{bucket}:{window_start}"
     count = r.incr(key)
     if count == 1:
         r.expire(key, window_seconds * 2)  # TTL 2× pour chevaucher les fenêtres
@@ -80,17 +85,17 @@ def _check_redis(ip: str, limit: int, window_seconds: int) -> None:
 _store: dict[str, list[float]] = defaultdict(list)
 
 
-def _check_memory(ip: str, limit: int, window_seconds: int) -> None:
+def _check_memory(bucket: str, limit: int, window_seconds: int) -> None:
     """Rate limiting en mémoire (sliding window)."""
     now = time.monotonic()
-    _store[ip] = [t for t in _store[ip] if now - t < window_seconds]
-    if len(_store[ip]) >= limit:
+    _store[bucket] = [t for t in _store[bucket] if now - t < window_seconds]
+    if len(_store[bucket]) >= limit:
         raise HTTPException(
             status_code=status.HTTP_429_TOO_MANY_REQUESTS,
             detail=f"Trop de tentatives. Réessayez dans {window_seconds} secondes.",
             headers={"Retry-After": str(window_seconds)},
         )
-    _store[ip].append(now)
+    _store[bucket].append(now)
 
 
 # ── API publique ──────────────────────────────────────────────────────────────
@@ -102,6 +107,7 @@ def check_rate_limit(request: Request, limit: int, window_seconds: int,
 
     - Si `email` fourni : clé = email (plus juste derrière un proxy)
     - Sinon : clé = IP du client
+    Le compteur est propre à la route appelée (voir l'en-tête du module).
 
     Utilise Redis si REDIS_URL est défini, sinon mémoire.
     Lève HTTP 429 si la limite est atteinte.
@@ -109,8 +115,17 @@ def check_rate_limit(request: Request, limit: int, window_seconds: int,
     # Clé de rate limiting : email > IP
     ip = request.client.host if request.client else "unknown"
     identifier = email if email else ip
+    bucket = f"{route_scope(request)}|{identifier}"
     r = _get_redis()
     if r is not None:
-        _check_redis(identifier, limit, window_seconds)
+        _check_redis(bucket, limit, window_seconds)
     else:
-        _check_memory(identifier, limit, window_seconds)
+        _check_memory(bucket, limit, window_seconds)
+
+
+def route_scope(request: Request) -> str:
+    """« GET /recettes/{recipe_id} » : méthode + chemin générique de la route (un
+    seul compteur pour toutes les fiches), sinon le chemin brut."""
+    route = request.scope.get("route")
+    path = getattr(route, "path", None) or request.url.path
+    return f"{request.method} {path}"
