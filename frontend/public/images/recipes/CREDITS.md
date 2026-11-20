@@ -91,6 +91,7 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `che-chuoi-bananes-au-lait-de-coco-et-tapioca` | HungryHuy | CC BY 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Banana,_tapioca,_coconut_creme_Vietnamese_pudding_(che_chuoi).jpg) |
 | `chicons-au-gratin-vegetariens-endives-au-fromage` | kimberlykv | CC BY 2.0 | [flickr](https://www.flickr.com/photos/87542849@N00/6290089562) |
 | `chilaquiles` | Chris Woodrich | CC BY-SA 4.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Chilaquiles_at_the_Grand_Cantina,_Windsor,_Ontario,_2025-09-01_04.jpg) |
+| `chili-sin-carne` | Karen and Brad Emerson | CC BY 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Black_bean_chili_(3263369585).jpg) |
 | `chimichurri` | Dominic Lockyer | CC BY 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Chimichurri_Sauce_Recipe_(13294194575).jpg) |
 | `chin-chin-biscuits-frits-nigerians-a-la-muscade` | Reigninginvictory | CC BY-SA 4.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:LoveChinChin.jpg) |
 | `chole-bhature` | Aleemk72 | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bikaner_chole_bhature.jpg) |
@@ -446,11 +447,13 @@ est obligatoire : ne retirez pas ce fichier et gardez-le à jour.
 | `salade-chilienne-tomate-oignon` | Maythiare330 | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cazuela_de_vacuno_con_ensalada_a_la_chilena.jpg) |
 | `salade-dattieke` | Aboukam | CC BY-SA 4.0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=36204750) |
 | `salade-daubergines-marocaine` | Arnaud 25 | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Zaalouk_03.jpg) |
+| `salade-de-kale-massee-a-lavocat` | Cajsa Lilliehook from Portland | CC BY-SA 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kale,_Rutabaga_%26_Fennel_Salad_(9078609941).jpg) |
 | `salade-de-papaye-vietnamienne` | Takeaway | CC BY-SA 3.0 | [Wikipédia (fr) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Som_tam_thai.JPG) |
 | `salade-de-quinoa-concombre-et-feta` | Guillaume Capron from Issy les Moulineaux, France | CC BY-SA 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Salade_Quinoa_Poivrons_Manchego_Bio_(4875466616).jpg) |
 | `salade-de-wakame-au-sesame-et-au-concombre` | Vegan Feast Catering | CC BY 2.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Seaweed_Cucumber_Sunomono_(4573832738).jpg) |
 | `salade-grecque-aux-pois-chiches-et-au-tofu-marine-a-lorigan-vegan` | User:Jpatokal | CC BY-SA 4.0 | [Wikipédia (en) · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Greece_Food_Horiatiki.JPG) |
 | `salade-mache-aux-noix` | Geoff Peters 604 | CC BY 2.0 | [flickr](https://www.flickr.com/photos/54359128@N00/3010140566) |
+| `salade-repas-de-lentilles-feta-et-legumes-croquants` | Benoît Prieur | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Salade_de_lentilles,_potimarron_r%C3%B4ti_et_Feta.jpg) |
 | `salade-shopska-au-tofu-marine-a-laneth-vegan` | Silar | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:020211024_114201_shopska_salad,_beskids.jpg) |
 | `salade-shopska-aux-haricots-blancs-et-poivrons-grilles-vegan` | Silar | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:02021_0385_Shopska_salad,_Beskids.jpg) |
 | `salade-shopska-de-sofia-au-sirene` | Silar | CC BY-SA 4.0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:020211017_171548_861_shopska_salad,_bedkids.jpg) |

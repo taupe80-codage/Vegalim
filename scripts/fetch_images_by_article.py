@@ -227,18 +227,36 @@ ARTICLES: dict[str, list[str]] = {
     "protein_halloumi_pois_chiches_rotis_7c40e2": ["en:Halloumi"],
     # 2026-11-20 : 3e passe, plats qui ont un article (les autres sont génériques)
     "dal_lebanese_lentil_soup_eae561": ["en:Adas bi hamod", "en:Lentil soup"],
-    "main_chili_sin_carne_125ff2": ["en:Vegetarian chili", "fr:Chili sin carne"],
+    "main_chili_sin_carne_125ff2": ["en:Vegetarian chili", "fr:Chili sin carne", "commons:vegetarian chili beans"],
     "salad_nicoise_3b123f": ["en:Salade niçoise", "fr:Salade niçoise"],
     "soup_de_potiron_caribeenne_a0fabd": ["en:Pumpkin soup", "fr:Soupe au potiron"],
-    "soup_potage_de_patate_douce_e4b521": ["en:Sweet potato soup"],
+    "soup_potage_de_patate_douce_e4b521": ["en:Sweet potato soup", "commons:sweet potato soup bowl"],
     "soup_soupe_courge_butternut_2f5cf3": ["en:Butternut squash soup", "en:Pumpkin soup"],
     "stew_persian_herb_stew_485f3e": ["en:Ghormeh sabzi"],
-    "side_kale_massee_avocat_3d18e7": ["en:Kale salad"],
+    "side_kale_massee_avocat_3d18e7": ["en:Kale salad", "commons:kale salad"],
     "rice_khao_pad_sapparot_9a40d3": ["en:Pineapple fried rice", "th:ข้าวผัดสับปะรด"],
-    "brkf_muffins_polenta_myrtilles_e2b947": ["en:Corn muffin"],
-    "soup_veloute_panais_poire_5d0c8a": ["en:Parsnip soup"],
+    "brkf_muffins_polenta_myrtilles_e2b947": ["en:Corn muffin", "commons:blueberry cornmeal muffins"],
+    "soup_veloute_panais_poire_5d0c8a": ["en:Parsnip soup", "commons:parsnip soup"],
     "protein_tofu_tikka_masala_3e8f45": ["en:Paneer tikka masala"],
     "stew_anginares_a_la_polita_8b2c46": ["el:Αγκινάρες α λα πολίτα", "en:Artichokes à la polita"],
+    # 2026-11-20 : 4e passe, plats génériques sans article — recherche Commons choisie à la main
+    "side_carottes_glacees_a_lerabl_1d1c44": ["commons:roasted carrots sesame"],
+    "side_champignons_sautes_ail_pe_b477e2": ["commons:sauteed mushrooms parsley garlic"],
+    "side_fenouil_braise_a_l_orange_a75916": ["commons:braised fennel"],
+    "wok_pak_choi_saute_62b974": ["commons:stir fried bok choy"],
+    "wok_tofu_saute_gingembre_soja_6e901c": ["commons:stir fried tofu ginger"],
+    "salad_pois_chiches_express_b39e57": ["commons:chickpea salad feta"],
+    "snack_toast_haricots_romarin_5f80d2": ["commons:white bean toast"],
+    "wok_tofu_aigre_doux_ananas_8c2e15": ["commons:sweet and sour tofu pineapple"],
+    "salad_lentilles_feta_croquante_4d95a1": ["commons:lentil salad feta"],
+    "side_gratin_celeri_rave_noix_7a19e6": ["commons:celeriac gratin"],
+    "side_endives_braisees_orange_3c5b17": ["commons:braised endives"],
+    "side_choux_bruxelles_miso_sesame_8b26f0": ["commons:roasted brussels sprouts"],
+    "side_panais_carottes_miel_thym_2e9d61": ["commons:roasted parsnips carrots"],
+    "salad_lentilles_puy_tofu_fume_9a1c63": ["commons:puy lentil salad"],
+    "protein_tempeh_patate_douce_cacahuete_4b7e90": ["commons:tempeh peanut sauce"],
+    "soup_haricots_kale_tofu_fume_1d84c6": ["commons:white bean kale soup"],
+    "side_radis_glaces_miel_3a8e51": ["commons:glazed radishes"],
 }
 
 
@@ -250,8 +268,24 @@ def slugify(t: str) -> str:
     return re.sub(r"-+", "-", t).strip("-")
 
 
+def commons_image(session: requests.Session, query: str) -> dict | None:
+    """Première photo libre d'une recherche Wikimedia Commons choisie à la main
+    (« commons:roasted brussels sprouts »), hors liste noire et viande/poisson : pour
+    les plats génériques qui n'ont pas d'article."""
+    blocked = F.load_blocklist()
+    for c in F.search_commons(session, query):
+        if " ".join(F.words(c["title"])) in blocked or F.rejected_for(f"{c['title']} {c['categories']}"):
+            continue
+        c["article"] = f"commons:{query}"
+        return c
+    return None
+
+
 def article_image(session: requests.Session, spec: str) -> dict | None:
-    """Image principale (libre) de l'article « langue:Titre », redirections suivies."""
+    """Image principale (libre) de l'article « langue:Titre », redirections suivies ;
+    « commons:requête » : recherche Commons (commons_image)."""
+    if spec.startswith("commons:"):
+        return commons_image(session, spec.split(":", 1)[1])
     lang, title = spec.split(":", 1)
     data = F.api_get(session, f"https://{lang}.wikipedia.org/w/api.php", {
         "action": "query", "format": "json", "titles": title, "redirects": "1",
