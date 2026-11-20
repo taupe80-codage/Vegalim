@@ -56,9 +56,10 @@ def test_variante_vegan_recalcule_allergenes_et_regimes():
 
     d = vegan_variant(IDX["tart_asperges_vertes_ricotta_2c85b3"])           # ricotta de cajou, tofu soyeux
     t = d["recipe"]
-    assert d["source"] == "partial"                                         # pâte brisée pur beurre
-    assert {"tree_nuts", "soy", "milk"} <= set(t["tags"]["allergens"]) and "eggs" not in t["tags"]["allergens"]
-    assert t["diet_flags"]["nut_free"] is False and t["diet_flags"]["vegan"] is False
+    assert d["source"] == "generated"                                       # pâte brisée végétale
+    assert {"tree_nuts", "soy"} <= set(t["tags"]["allergens"])
+    assert not {"eggs", "milk"} & set(t["tags"]["allergens"])               # plus de beurre dans la pâte
+    assert t["diet_flags"]["nut_free"] is False and t["diet_flags"]["vegan"] is True
 
 
 def test_allergen_tags_coherent_avec_les_donnees():
@@ -140,3 +141,20 @@ def test_variante_vegan_description_reecrite():
     assert "montée à l'huile de coco" in v["description"] and "ghee" not in v["description"]
     assert v["titles"]["fr"] == r["titles"]["fr"]
     assert any("30 ml d'huile de coco" in s for s in v["instructions"])
+
+
+def test_variantes_vegan_completes():
+    """Fromages sous leur id réel (gruyere_whole_cow…), pâte brisée et pâte à
+    empanada végétales, nouilles sans œuf : 44 variantes incomplètes → 10."""
+    from backend.core.data_io import load_recipes
+    from backend.engine.rule_engine.variants import vegan_variant
+    idx = {r["id"]: r for r in load_recipes()}
+    restes = {u["id"] for r in idx.values() if r.get("composition") and not r["id"].startswith("base_")
+              for u in vegan_variant(r)["unresolved"]}
+    assert restes <= {"base_japanese_curry_roux_385e52", "ladyfinger", "vanilla_ice_cream",
+                      "base_spaetzle_a22916", "base_buckwheat_crepe_03db22", "milk_powder_whole"}, restes
+    v = vegan_variant(idx["dessert_tarte_citron_meringuee_7f6440"])
+    assert v["source"] == "generated"
+    assert "200 g de pâte brisée végétale et la cuire" in v["recipe"]["instructions"][0]
+    # « pâtes aux œufs » : pas de « pâtes œufs » (préfixe « pâtes aux » écarté)
+    assert all("pâtes œufs" not in s for s in vegan_variant(idx["dal_linsen_spatzle_71ea34"])["recipe"]["instructions"])

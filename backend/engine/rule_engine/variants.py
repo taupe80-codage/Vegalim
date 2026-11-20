@@ -30,9 +30,9 @@ VEGAN_SUBS: dict[str, str | None] = {
 # ('butter_sup80pct') : la variante ne remplaçait rien mais se déclarait vegan.
 # Chaque substitut est vegan selon le dictionnaire ou les diet_flags de sa
 # sous-recette (vérifié par test). Quantités reprises telles quelles.
-# Sans substitut fiable (signalés dans « unresolved ») : pâtes brisée et à
-# empanada au beurre, nouilles et spätzle aux œufs, roux de curry japonais,
-# crêpe de sarrasin, biscuits à la cuillère, glace vanille, lait en poudre.
+# Sans substitut fiable (signalés dans « unresolved ») : spätzle aux œufs, roux
+# de curry japonais au beurre, galette de sarrasin aux œufs et au lait, biscuits
+# à la cuillère, glace vanille, lait en poudre.
 VEGAN_SUBS_CIQUAL: dict[str, str] = {
     # Beurre, ghee
     "butter_sup80pct": "vegan_butter", "butter_salted": "vegan_butter", "butter": "vegan_butter",
@@ -80,6 +80,10 @@ VEGAN_SUBS_CIQUAL: dict[str, str] = {
     "queso_chihuahua_whole_cow": "base_vegan_cheddar_024998",
     "camembert_pasteurized_cow": "base_vegan_cheddar_024998",
     "roquefort": "base_vegan_cheddar_024998",
+    # ids réels des recettes (les clés courtes ci-dessus n'y correspondaient pas)
+    "gruyere_whole_cow": "base_vegan_cheddar_024998", "reblochon_cow": "base_vegan_cheddar_024998",
+    "roquefort_sheep": "base_vegan_cheddar_024998",
+    "mascarpone_cow": "base_cashew_ricotta_5c62e9",
     "ricotta": "base_cashew_ricotta_5c62e9", "ricotta_whole_cow": "base_cashew_ricotta_5c62e9",
     "base_salted_ricotta_1ecd1c": "base_cashew_ricotta_5c62e9",
     "mascarpone": "base_cashew_ricotta_5c62e9",
@@ -94,6 +98,16 @@ VEGAN_SUBS_CIQUAL: dict[str, str] = {
     "base_wonton_wrapper_7bfeb5": "base_gyoza_wrapper_0dba00",
     "puff_pastry_all_butter_raw_paste_pre_packaged": "puff_pastry_vegetable_fat_raw_paste_plant",
     "egg_pasta_raw_dried": "pasta_raw_dried",
+    # Pâtes : la brisée et la pâte à empanada (farine, beurre, œuf) ont leur
+    # équivalent du commerce à la matière grasse végétale ; les nouilles de blé
+    # maison sont les nouilles ramen maison sans l'œuf (même farine, même eau).
+    "shortcrust_pastry_all_butter_raw_paste_pre_packaged":
+        "shortcrust_pastry_vegetable_fat_raw_paste_pre_packaged_plant",
+    "shortcrust_pastry_all_butter_cooked_paste_pre_packaged":
+        "shortcrust_pastry_vegetable_fat_cooked_paste_pre_packaged_plant",
+    "base_shortcrust_e6e9f0": "shortcrust_pastry_vegetable_fat_raw_paste_pre_packaged_plant",
+    "base_empanada_dough_65661a": "shortcrust_pastry_vegetable_fat_raw_paste_pre_packaged_plant",
+    "base_noodles_2d0ed7": "base_nouilles_ramen_3907e3",
 }
 
 
@@ -133,8 +147,13 @@ def _item_id(item) -> str:
 
 
 def _short(name: str) -> str:
-    """« beurre végétal (vegan) » → « beurre végétal », en minuscules."""
-    return re.sub(r"\s*\([^)]*\)", "", name or "").strip().lower()
+    """« beurre végétal (vegan) » → « beurre végétal », en minuscules ;
+    « pâte brisée matière grasse végétale » → « pâte brisée végétale »."""
+    s = re.sub(r"\s*\([^)]*\)", "", name or "").strip().lower()
+    return s.replace("matière grasse végétale", "végétale")
+
+
+_LINK_WORDS = {"à", "au", "aux", "de", "du", "des", "d'", "en", "et", "la", "le", "les", "pur"}
 
 
 def _forms(name: str) -> list[str]:
@@ -149,7 +168,11 @@ def _forms(name: str) -> list[str]:
         head, link, tail = m.groups()
         forms |= {f"{head}s{link}{tail}", f"{head}s{link}{tail}s", f"{head}{link}{tail}s"}
     elif len(base.split()) > 1 and len(base.split()[0]) > 3:
-        forms.add(base.split()[0])              # crème épaisse → crème
+        # crème épaisse → crème ; pâte brisée pur beurre → pâte brisée, pâte (le plus
+        # long d'abord : sinon « pâte brisée » devenait « pâte brisée végétale brisée »)
+        words = base.split()
+        forms |= {" ".join(words[:n]) for n in range(1, len(words))
+                  if words[n - 1] not in _LINK_WORDS}     # pas « pâtes aux »
     for f in list(forms):
         if not f.endswith(("s", "x")):
             forms.add(f + ("x" if f.endswith("eau") else "s"))

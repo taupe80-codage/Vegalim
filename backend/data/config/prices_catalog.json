@@ -3814,17 +3814,18 @@
     "unit_weight_g": 280.0
   },
   "shortcrust_pastry": {
-    "name_fr": "Pâte brisée",
+    "name_fr": "Pâte brisée pur beurre",
     "pantry": false,
     "packages": [
       {
-        "qty": 1,
-        "unit": "piece",
-        "price": 1.55,
+        "qty": 230,
+        "unit": "g",
+        "price": 1.19,
         "label": "rouleau 230g"
       }
     ],
-    "last_updated": "2026-07-30",
+    "last_updated": "2026-11-20",
+    "price_source": "relevé carrefour.fr 2026-11-20 (Carrefour Original pur beurre 230 g)",
     "unit_weight_g": 230.0
   },
   "phyllo_sheet": {
@@ -6685,5 +6686,20 @@
     ],
     "last_updated": "2026-11-20",
     "price_source": "estimation manuelle 2026-11-20 (épicerie spécialisée ou vente en ligne ; produit absent des grandes surfaces)"
+  },
+  "shortcrust_pastry_vegetable": {
+    "name_fr": "Pâte brisée (matière grasse végétale)",
+    "pantry": false,
+    "packages": [
+      {
+        "qty": 230,
+        "unit": "g",
+        "price": 0.65,
+        "label": "rouleau 230g"
+      }
+    ],
+    "last_updated": "2026-11-20",
+    "price_source": "relevé carrefour.fr 2026-11-20 (Carrefour Classic' 230 g)",
+    "unit_weight_g": 230.0
   }
 }

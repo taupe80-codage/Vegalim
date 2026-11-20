@@ -220,7 +220,10 @@ def test_moteur_recherche_bonus_cycle_phase_courte():
 def test_variante_substituts_existent_et_sont_vegan():
     from backend.engine.rule_engine.variants import VEGAN_SUBS_CIQUAL, _is_vegan_id
     recipes = load_recipes()
-    ids = {c["ingredient"] for r in recipes for c in r["composition"]} | {r["id"] for r in recipes}
+    from backend.core.data_io import load_ingredients_dict
+    # connus des recettes ou du dictionnaire (pâte brisée végétale : seulement dans la variante)
+    ids = ({c["ingredient"] for r in recipes for c in r["composition"]} | {r["id"] for r in recipes}
+           | set(load_ingredients_dict()))
     subs = set(VEGAN_SUBS_CIQUAL.values())
     assert subs <= ids
     assert all(_is_vegan_id(s) is True for s in subs)
@@ -249,10 +252,11 @@ def test_variante_remplace_les_ingredients_non_vegan():
 
 def test_variante_partielle_ne_se_dit_pas_vegan():
     from backend.engine.rule_engine.variants import vegan_variant
-    r = _recette_avec("shortcrust_pastry_all_butter_raw_paste_pre_packaged")
+    # la pâte brisée pur beurre a son substitut depuis le 2026-11-20 ; les boudoirs non
+    r = _recette_avec("ladyfinger")
     res = vegan_variant(r)
     assert res["source"] == "partial"
-    assert any(u["id"] == "shortcrust_pastry_all_butter_raw_paste_pre_packaged" for u in res["unresolved"])
+    assert any(u["id"] == "ladyfinger" for u in res["unresolved"])
     assert not res["recipe"].get("diet_flags", {}).get("vegan")
     assert "vegan" not in res["recipe"]["tags"].get("diet", [])
 
