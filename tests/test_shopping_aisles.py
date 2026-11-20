@@ -105,4 +105,6 @@ def test_produits_differents_sur_des_lignes_differentes():
         "yogurt_plain_3pct", "soybean_yogurt_plain_plant", "anise_spice_seed", "fennel_spice_seed",
         "cream_heavy", "vanilla_ice_cream", "oat_milk_refrigerated_plain_plant", "soybean_milk_unsweetened_plant")}
     assert len(set(cles.values())) == len(cles), cles
-    assert cat[cles["vegan_butter"]]["price_source"].startswith("estimation")   # signalé « prix estimé »
+    # prix propre : estimé, puis relevé (surveyed_prices_2026_11_20.py) — jamais celui du beurre
+    assert cat[cles["vegan_butter"]]["price_source"].startswith(("estimation", "relevé"))
+    assert cat[cles["vegan_butter"]]["packages"] != cat[cles["butter_sup80pct"]]["packages"]

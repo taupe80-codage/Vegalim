@@ -51,9 +51,8 @@ def test_prix_estimes_signales():
     from backend.engine.planning_engine.budget import estimate_price
     noms = [e["name_fr"] for e in estimate_price(IDX["soup_potage_oseille_0f7d29"])["estimated_ingredients"]]
     assert noms == ["oseille"]
-    # le vinaigre de vin rouge a son prix propre depuis le 2026-11-20 (estimé) ; le reste est relevé
-    assert [e["name_fr"] for e in estimate_price(IDX["soup_gaspacho_provencal_f69228"])["estimated_ingredients"]] \
-        == ["vinaigre de vin rouge"]
+    # le vinaigre de vin rouge a son prix propre, relevé le 2026-11-20 : plus rien d'estimé
+    assert estimate_price(IDX["soup_gaspacho_provencal_f69228"])["estimated_ingredients"] == []
 
 
 def test_route_de_saison():
