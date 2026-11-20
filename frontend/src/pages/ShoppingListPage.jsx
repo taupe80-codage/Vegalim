@@ -30,6 +30,11 @@ const MEAL_ORDER = ['breakfast','lunch','dinner'];
 const MEAL_ICONS = { breakfast:'🌅', lunch:'☀️', dinner:'🌙' };
 
 const CAT_ICONS = {
+  // rayons de la liste de courses (shopping.AISLES, 2026-11-20)
+  'fruits & légumes':'🥦','frais : crèmerie, œufs, tofu':'🧀','féculents & boulangerie':'🌾',
+  'fruits secs, noix & graines':'🥜','conserves & bocaux':'🥫','épices & aromates séchés':'🌶️',
+  'épicerie salée':'🧂','sucre, pâtisserie & levures':'🍯','boissons & laits végétaux':'🥛',
+  'préparations maison':'🍲',
   'légumes':'🥦','légumineuses':'🫘','protéines':'🥩','protéines végétales':'🌱',
   'viandes':'🥩','volaille':'🍗','poissons':'🐟','poissons & fruits de mer':'🦐',
   'produits laitiers':'🧀','alternatives laitières':'🥛','oeufs':'🥚',
@@ -134,7 +139,14 @@ function ShoppingCategory({ cat, items, checked, fridgeIds, fridgeQtys, fridgeSu
               <div className="shopping-item-label">
                 <input type="checkbox" className="shopping-item-check" checked={isDone}
                   onChange={() => !fullyCovered && onToggle(id)} disabled={fullyCovered} />
-                <span className="shopping-item-name">{item.name_fr || id.replace(/_/g, ' ')}</span>
+                <span className="shopping-item-name">
+                  {item.name_fr || id.replace(/_/g, ' ')}
+                  {item.merged?.length > 0 && (
+                    <span className="shopping-item-merged">
+                      {' '}(dont {item.merged.map(m => `${m.name_fr.toLowerCase()}${m.qty_str ? ' ' + m.qty_str : ''}`).join(', ')})
+                    </span>
+                  )}
+                </span>
                 <span className="shopping-item-qty-wrap">
                   {sufficient
                     ? <span className="shopping-item-qty shopping-item-qty--net">✓ suffisant</span>
@@ -192,6 +204,9 @@ function ShoppingResult({ shopping, checked, fridgeIds, fridgeQtys, fridgeSuffic
   const [pantryOpen, setPantryOpen] = useState(true);
 
   const pantryItems = allItems.filter(i => i.pantry && ![...fridgeIds].some(f => fridgeMatchesIng(f, i.ingredient)));
+  // Les articles de placard ont leur propre section (en haut, au partage, à l'impression) :
+  // ils ne sont plus répétés dans leur rayon.
+  const pantryIds = new Set(pantryItems.map(i => i.ingredient));
 
   // Items nets pour impression + partage
   const netItems = allItems.map(item => {
@@ -205,6 +220,7 @@ function ShoppingResult({ shopping, checked, fridgeIds, fridgeQtys, fridgeSuffic
 
   const netByCat = {};
   for (const item of netItems) {
+    if (pantryIds.has(item.ingredient)) continue;
     const cat = Object.entries(by_category).find(([, its]) => its.some(x => x.ingredient === item.ingredient))?.[0] || 'Autre';
     if (!netByCat[cat]) netByCat[cat] = [];
     netByCat[cat].push(item);
@@ -301,7 +317,14 @@ function ShoppingResult({ shopping, checked, fridgeIds, fridgeQtys, fridgeSuffic
                     <div className="shopping-item-label">
                       <input type="checkbox" className="shopping-item-check" checked={isDone}
                         onChange={() => !fullyCovered && onToggle(id)} disabled={fullyCovered} />
-                      <span className="shopping-item-name">{item.name_fr || id.replace(/_/g, ' ')}</span>
+                      <span className="shopping-item-name">
+                  {item.name_fr || id.replace(/_/g, ' ')}
+                  {item.merged?.length > 0 && (
+                    <span className="shopping-item-merged">
+                      {' '}(dont {item.merged.map(m => `${m.name_fr.toLowerCase()}${m.qty_str ? ' ' + m.qty_str : ''}`).join(', ')})
+                    </span>
+                  )}
+                </span>
                       <span className="shopping-item-qty-wrap">
                         {sufficient
                           ? <span className="shopping-item-qty shopping-item-qty--net">✓ suffisant</span>
@@ -337,7 +360,10 @@ function ShoppingResult({ shopping, checked, fridgeIds, fridgeQtys, fridgeSuffic
 
       {/* Liste principale */}
       <div className="shopping-categories no-print">
-        {Object.entries(by_category).map(([cat, catItems]) => (
+        {Object.entries(by_category)
+          .map(([cat, catItems]) => [cat, catItems.filter(i => !pantryIds.has(i.ingredient))])
+          .filter(([, catItems]) => catItems.length > 0)
+          .map(([cat, catItems]) => (
           <ShoppingCategory key={cat} cat={cat} items={catItems} checked={checked}
             fridgeIds={fridgeIds} fridgeQtys={fridgeQtys} fridgeSufficient={fridgeSufficient}
             onFridgeQtyChange={onFridgeQtyChange} onFridgeSufficient={onFridgeSufficient}

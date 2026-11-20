@@ -9,6 +9,7 @@ from __future__ import annotations
 import logging
 import math
 from collections import defaultdict
+from backend.core.data_cache import data_cached
 
 logger = logging.getLogger(__name__)
 
@@ -253,6 +254,96 @@ _CAT_FR = {
 }
 
 
+
+# ── Rayons du magasin ─────────────────────────────────────────────────────────
+# Le dictionnaire d'ingrédients n'a pas de catégorie : 56 articles sur 60 d'une
+# semaine tombaient dans « Autre ». Rayon déduit de l'identifiant (motifs, dans
+# l'ordre), puis de la catégorie du graphe de disponibilité ; ordre de passage
+# dans un magasin.
+AISLES: tuple[str, ...] = (
+    "Fruits & légumes", "Herbes fraîches", "Frais : crèmerie, œufs, tofu",
+    "Féculents & boulangerie", "Légumineuses", "Fruits secs, noix & graines",
+    "Conserves & bocaux", "Condiments & sauces", "Épices & aromates séchés",
+    "Huiles & matières grasses", "Épicerie salée", "Sucre, pâtisserie & levures",
+    "Boissons & laits végétaux", "Préparations maison", "Autre",
+)
+
+_AISLE_RULES: tuple[tuple[str, str], ...] = (
+    # (?:^|_)…(?:_|$) : mots entiers, sinon « eggplant » est un œuf, « butternut » une noix,
+    # « garam masala » une masa, « breadcrumbs » du rhum
+    (r"green_peas|snow_pea|french_bean|green_bean|broadbeans_fava_beans_(raw|boiled)_fresh|bean_sprout|edamame|broccoli|mustard_raw_leaf",
+     "Fruits & légumes"),
+    (r"fresh_herb|herb_leaf|^chives|parsley|coriander_raw|basil_fresh|mint_fresh|dill_weed|^tarragon|^chervil"
+     r"|curry_leaf|kaffir_lime_leaf|lemon_grass|thai_basil|^sage_fresh|rosemary_fresh|thyme_fresh", "Herbes fraîches"),
+    (r"coconut_milk|coconut_cream|_canned|canned_|sun_dried_tomato|tomato_dried|tomato_(paste|sauce|crushed)"
+     r"|olive_(black|green)|^black_olive|^green_olive", "Conserves & bocaux"),
+    (r"pastry|phyllo|(?:^|_)filo(?:_|$)", "Frais : crèmerie, œufs, tofu"),          # pâtes à tarte : rayon frais
+    (r"(peanut|almond|cashew|hazelnut)_butter|tahini", "Fruits secs, noix & graines"),
+    (r"vinegar", "Condiments & sauces"),
+    (r"_oil|^oil|vegetable_fat|margarine", "Huiles & matières grasses"),
+    (r"provolone|parmesan|pecorino|cheese|queso", "Frais : crèmerie, œufs, tofu"),
+    (r"vinegar|sauce|tamari|mustard(?!.*spice)|ketchup|miso|(?:^|_)paste(?:_|$)|mirin|chutney|harissa|gochujang"
+     r"|pickle|gherkin|caper|preserved_lemon|umeboshi|sriracha|mayonnaise|kimchi|sauerkraut", "Condiments & sauces"),
+    (r"_milk_plant|oat_milk|almond_milk|soy(bean)?_milk|rice_milk|(?:^|_)wine(?:_|$)|beer|(?:^|_)cider(?:_|$)"
+     r"|(?:^|_)rum(?:_|$)|cognac|kirsch|calvados|marsala|(?:^|_)tea(?:_|$)|coffee|matcha|kombucha|sparkling_water"
+     r"|orange_juice", "Boissons & laits végétaux"),
+    (r"tofu|tempeh|seitan|paneer|halloumi|milk|cream|butter(?!nut)|cheese|yog(h)?urt|ricotta|feta|parmesan|pecorino"
+     r"|mozzarella|comte|gruyere|cheddar|mascarpone|reblochon|camembert|roquefort|tomme|fromage|queso|emmental|gouda"
+     r"|cotija|provolone|gorgonzola|(?:^|_)eggs?(?:_|$)|ghee|kefir|quark", "Frais : crèmerie, œufs, tofu"),
+    (r"sugar|honey|syrup|molasses|chocolate|cocoa|vanilla|baking|yeast(?!_flakes)|(?:^|_)agar(?:_|$)|gelatin"
+     r"|(?:^|_)jam(?:_|$)|condensed|ladyfinger|ice_cream|meringue|marzipan", "Sucre, pâtisserie & levures"),
+    (r"_spice|powder|garam|berbere|curry(?!_leaf)|paprika|cinnamon|nutmeg|cumin|turmeric|cardamom|clove|star_anise"
+     r"|saffron|sumac|bay_leaf|dried_herb|herb_dried|oregano|dried_mint|chili.*dried|black_pepper|white_pepper"
+     r"|allspice|fenugreek|caraway|anise|juniper|five_spice|za.?atar|ras_el_hanout|sichuan|gochugaru|amchoor",
+     "Épices & aromates séchés"),
+    (r"lentil|chickpea(?!_flour)|(?:^|_)beans?(?:_|$)|split_pea|fava|(?:^|_)dal(?:_|$)|urad|mung|cowpea|black_eyed"
+     r"|lupin|pigeon_pea", "Légumineuses"),
+    (r"(?:^|_)rice(?:_|$)|pasta|noodle|flour|bread|baguette|pita|naan|tortilla|couscous|semolina|bulgur|quinoa"
+     r"|(?:^|_)oats?(?:_|$)|buckwheat|polenta|cornmeal|gnocchi|udon|soba|vermicelli|tapioca|starch|masa_harina|panko"
+     r"|crouton|millet|barley|teff|wrapper|tteok|bagel|(?:^|_)bun(?:_|$)|spaetzle|cracker|rice_paper", "Féculents & boulangerie"),
+    (r"(?:^|_)nuts?(?:_|$)|almond|cashew|pistachio|hazelnut|walnut|pecan|macadamia|peanut|sesame|sunflower_(raw_)?seed"
+     r"|pumpkin_squash_raw_seed|pumpkin_seed|chia|flax|linseed|hemp|poppy|coconut_flesh|raisin|^dates?(?:_|$)"
+     r"|dried_apricot|prune(?!_umeboshi)|cranberr|dried_fig", "Fruits secs, noix & graines"),
+    (r"salt|fleur_de_sel|stock|bouillon|nutritional_yeast|seaweed|nori|kombu|wakame|dashi|spirulina", "Épicerie salée"),
+    (r"_raw|lemon_juice|lime_juice|^garlic|^ginger|^onion|^shallot|^leek|_fresh$|fresh_|mushroom|plantain|avocado"
+     r"|banana|apple|pear|berry|cherry|grape|melon|mango|pineapple|citrus|orange|lemon|lime|_cooked$", "Fruits & légumes"),
+)
+
+_AVAIL_AISLE = {
+    "vegetable": "Fruits & légumes", "fruit": "Fruits & légumes", "herb": "Herbes fraîches",
+    "dairy products": "Frais : crèmerie, œufs, tofu", "eggs": "Frais : crèmerie, œufs, tofu",
+    "cereals and grains": "Féculents & boulangerie", "grain": "Féculents & boulangerie",
+    "grain_cereal": "Féculents & boulangerie", "grain/flour": "Féculents & boulangerie",
+    "legumes": "Légumineuses", "legume": "Légumineuses", "nut": "Fruits secs, noix & graines",
+    "spice": "Épices & aromates séchés", "spice_mix": "Épices & aromates séchés", "herb_spice": "Épices & aromates séchés",
+    "fats and oils": "Huiles & matières grasses", "fat": "Huiles & matières grasses",
+    "condiment": "Condiments & sauces", "condiments": "Condiments & sauces",
+    "sugars honeys and confectionery": "Sucre, pâtisserie & levures", "sweetener": "Sucre, pâtisserie & levures",
+    "sweet": "Sucre, pâtisserie & levures", "leavening": "Sucre, pâtisserie & levures",
+    "dessert": "Sucre, pâtisserie & levures", "beverage": "Boissons & laits végétaux",
+    "protein": "Frais : crèmerie, œufs, tofu", "plant_protein": "Frais : crèmerie, œufs, tofu",
+}
+
+
+@data_cached
+def _aisle_patterns():
+    import re
+    return [(re.compile(pat), aisle) for pat, aisle in _AISLE_RULES]
+
+
+def aisle_of(iid: str) -> str:
+    """Rayon d'un ingrédient de la liste de courses (AISLES)."""
+    from backend.core.data_io import load_availability_graph, sub_recipe_label
+    key = str(iid or "").lower()
+    if sub_recipe_label(key):
+        return "Préparations maison"
+    for pattern, aisle in _aisle_patterns():
+        if pattern.search(key):
+            return aisle
+    cat = ((load_availability_graph() or {}).get(key) or {}).get("category") or ""
+    return _AVAIL_AISLE.get(str(cat).lower(), "Autre")
+
+
 # ── Helpers partagés ──────────────────────────────────────────────────────────
 
 def _make_resolvers(ings_dict: dict):
@@ -275,11 +366,7 @@ def _make_resolvers(ings_dict: dict):
         return iid.replace("_", " ").replace("/", " ").capitalize()
 
     def _get_category_fr(iid: str) -> str:
-        d = ings_dict.get(iid) or ings_dict.get(iid.split("/")[0]) or {}
-        if not d and sub_recipe_label(iid):
-            return "Préparations maison"   # à acheter toute faite ou à préparer (fiche)
-        cat_en = d.get("category", "autre").lower()
-        return _CAT_FR.get(cat_en, cat_en.capitalize())
+        return aisle_of(iid)
 
     return _get_name_fr, _get_category_fr
 
@@ -363,6 +450,47 @@ def _build_qty_str(units_map: dict) -> str | None:
     return " · ".join(parts) if parts else None
 
 
+def _merge_same_product(ing_data: dict, catalog: dict, get_name_fr) -> dict:
+    """Une ligne par produit acheté : les ingrédients qui renvoient à la même entrée
+    du catalogue (œuf et jaune d'œuf, oignon et oignon jaune…) comptaient chacun
+    leurs emballages. L'eau du robinet n'est pas un achat : retirée.
+
+    La ligne fusionnée garde l'id de la plus grosse quantité ; « merged » détaille les autres."""
+    from backend.core.data_io import resolve_catalog_key
+    groups: dict[str, list[str]] = defaultdict(list)
+    out: dict = {}
+    for ing in ing_data:
+        if ing.startswith("base_"):
+            out[ing] = ing_data[ing]
+            continue
+        key = resolve_catalog_key(ing, catalog)
+        if key == "water":
+            continue
+        if key:
+            groups[key].append(ing)
+        else:
+            out[ing] = ing_data[ing]
+    for key, members in groups.items():
+        if len(members) == 1:
+            out[members[0]] = ing_data[members[0]]
+            continue
+        # ligne principale : la plus grosse quantité (« Œuf », pas « Jaune d'œuf »)
+        members.sort(key=lambda i: (-sum((ing_data[i].get("units") or {}).get(u, 0) for u in ("g", "ml")),
+                                    -ing_data[i]["occurrences"], len(i)))
+        main = members[0]
+        units: dict = defaultdict(float)
+        for m in members:
+            for u, v in (ing_data[m].get("units") or {}).items():
+                units[u] += v
+        out[main] = {
+            "occurrences": sum(ing_data[m]["occurrences"] for m in members),
+            "units": units,
+            "merged": [{"ingredient": m, "name_fr": get_name_fr(m),
+                        "qty_str": _build_qty_str(ing_data[m].get("units", {}))} for m in members[1:]],
+        }
+    return out
+
+
 def _build_result(
     ing_data: dict,
     n_recipes: int,
@@ -387,6 +515,7 @@ def _build_result(
     get_name_fr, get_category_fr = _make_resolvers(ings_dict)
     if catalog is None:
         catalog = {}
+    ing_data = _merge_same_product(ing_data, catalog, get_name_fr)
 
     items: list[dict] = []
     total_eur = 0.0
@@ -423,6 +552,8 @@ def _build_result(
             "price_unknown": price_info["price_unknown"],
             "pantry":        price_info["pantry"],
         }
+        if data.get("merged"):
+            item["merged"] = data["merged"]
         if eco:
             item["eco_reuse"] = count > 2
         items.append(item)
@@ -445,11 +576,12 @@ def _build_result(
             "package_label": item["package_label"],
             "price_unknown": item["price_unknown"],
             "pantry":        item["pantry"],
+            **({"merged": item["merged"]} if item.get("merged") else {}),
         })
 
     def _cat_sort(kv):
         k = kv[0]
-        return (1 if k == "Autre" else 0, k)
+        return (AISLES.index(k) if k in AISLES else len(AISLES), k)
 
     return {
         "items":          items,

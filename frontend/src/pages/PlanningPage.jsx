@@ -104,6 +104,11 @@ function getMealEmoji(t='') {
 const MONTHS_FR = ['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Aoû','Sep','Oct','Nov','Déc'];
 
 const CAT_ICONS = {
+  // rayons de la liste de courses (shopping.AISLES, 2026-11-20)
+  'fruits & légumes':'🥦','frais : crèmerie, œufs, tofu':'🧀','féculents & boulangerie':'🌾',
+  'fruits secs, noix & graines':'🥜','conserves & bocaux':'🥫','épices & aromates séchés':'🌶️',
+  'épicerie salée':'🧂','sucre, pâtisserie & levures':'🍯','boissons & laits végétaux':'🥛',
+  'préparations maison':'🍲',
   'légumes':'🥦','légumineuses':'🫘','protéines':'🥩','viandes':'🥩','volaille':'🍗',
   'poissons':'🐟','poissons & fruits de mer':'🦐','produits laitiers':'🧀','œufs':'🥚',
   'fruits':'🍎','céréales & féculents':'🌾','noix & graines':'🥜',
@@ -803,7 +808,7 @@ function ShoppingView({shopping, checked, fridgeIds, fridgeQtys, fridgeSufficien
               {catItems.map(item => (
                 <li key={item.ingredient} className="shopping-print-item">
                   <span className="shopping-print-item-check">☐</span>
-                  <span className="shopping-print-item-name">{item.name_fr||item.ingredient.replace(/_/g,' ')}</span>
+                  <span className="shopping-print-item-name">{item.name_fr||item.ingredient.replace(/_/g,' ')}{item.merged?.length>0&&<span className="shopping-item-merged"> (dont {item.merged.map(m=>m.name_fr.toLowerCase()).join(', ')})</span>}</span>
                   <span className="shopping-print-item-qty">{item.netQtyStr || (item.occurrences>1?`×${item.occurrences}`:'')}</span>
                 </li>
               ))}
