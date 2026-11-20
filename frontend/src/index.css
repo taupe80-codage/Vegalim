@@ -3679,8 +3679,16 @@ html[data-theme="dark"] .pill--active-diet {
 }
 .prcard-ghost-line { height: 10px; border-radius: 4px; background: var(--brd); width: 90%; margin-bottom: 4px; }
 .prcard-ghost-line--short { width: 60%; }
-.prcard-actions { display: flex; flex-direction: column; gap: 2px; flex-shrink: 0; opacity: 0; transition: opacity 0.15s; }
-.prcard:hover .prcard-actions { opacity: 1; }
+.prcard-actions { display: flex; flex-direction: column; gap: 2px; flex-shrink: 0; opacity: 0; transition: opacity 0.15s; position: relative; z-index: 2; }
+.prcard:hover .prcard-actions, .prcard:focus-within .prcard-actions { opacity: 1; }
+/* écrans tactiles : pas de survol, les actions restent visibles */
+@media (hover: none) { .prcard-actions { opacity: 1; } }
+/* le titre est le lien de la carte, étiré sur toute sa surface */
+.prcard { position: relative; }
+.prcard-link { color: inherit; text-decoration: none; }
+.prcard-link::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 8px; }
+.prcard-link:focus { outline: none; }
+.prcard-link:focus-visible::after { outline: 2px solid var(--accent, #6c63ff); outline-offset: 2px; }
 .prcard-refresh, .prcard-search, .prcard-delete {
   background: none;
   border: none;

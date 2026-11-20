@@ -14,7 +14,6 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { useToast } from '../ToastContext';
 import { createPortal } from 'react-dom';
 import { planning as planningApi, recipes as recipesApi } from '../api';
-import { navigate } from '../Router';
 import PriceEditInline from '../components/PriceEditInline';
 import {
   FilterSection,
@@ -293,19 +292,21 @@ function PlanningRecipeCard({recipe, onReplace, onSearch, onDelete, isReplacing}
   if (isReplacing)
     return <div className="prcard prcard--loading"><span className="prcard-spinner">↻</span></div>;
 
+  // Le titre est le seul lien (étiré sur toute la carte en CSS) ; les boutons
+  // d'action sont des frères du lien, pas ses enfants : pas de bouton dans un bouton.
   return (
-    <div className="prcard" role="button" tabIndex={0}
-      onClick={e => { if(!e.target.closest('.prcard-actions')&&recipe.id) navigate(`/recette/${recipe.id}`); }}
-      onKeyDown={e => e.key==='Enter'&&recipe.id&&navigate(`/recette/${recipe.id}`)}>
+    <div className="prcard">
       <div className="prcard-visual">
         {imgUrl && !imgFailed
-          ? <img src={imgUrl} alt={title} className="prcard-img" onError={()=>setImgFailed(true)} />
-          : <span className="prcard-emoji">{emoji}</span>
+          ? <img src={imgUrl} alt="" className="prcard-img" onError={()=>setImgFailed(true)} />
+          : <span className="prcard-emoji" aria-hidden="true">{emoji}</span>
         }
       </div>
       <div className="prcard-info">
         {dtype && <span className="prcard-type-badge">{DISH_TYPE_LABELS[dtype]||dtype}</span>}
-        <span className="prcard-title">{title}</span>
+        {recipe.id
+          ? <a className="prcard-title prcard-link" href={`#/recette/${recipe.id}`}>{title}</a>
+          : <span className="prcard-title">{title}</span>}
         {recipe.prep_ahead && (
           <span className="prcard-ahead" title="Trempage, marinade ou repos de 4 h ou plus : à commencer la veille">
             ⏳ à lancer la veille
@@ -313,9 +314,12 @@ function PlanningRecipeCard({recipe, onReplace, onSearch, onDelete, isReplacing}
         )}
       </div>
       <div className="prcard-actions">
-        <button className="prcard-search"  onClick={e=>{e.stopPropagation();onSearch&&onSearch();}} title="Chercher">🔍</button>
-        <button className="prcard-refresh" onClick={e=>{e.stopPropagation();onReplace();}}          title="Changer">↻</button>
-        <button className="prcard-delete"  onClick={e=>{e.stopPropagation();onDelete&&onDelete();}} title="Supprimer">✕</button>
+        <button type="button" className="prcard-search"  onClick={()=>onSearch&&onSearch()}
+          title="Chercher une autre recette" aria-label={`Chercher une autre recette à la place de ${title}`}>🔍</button>
+        <button type="button" className="prcard-refresh" onClick={()=>onReplace()}
+          title="Changer de recette" aria-label={`Remplacer ${title} par une autre suggestion`}>↻</button>
+        <button type="button" className="prcard-delete"  onClick={()=>onDelete&&onDelete()}
+          title="Retirer du planning" aria-label={`Retirer ${title} du planning`}>✕</button>
       </div>
     </div>
   );
