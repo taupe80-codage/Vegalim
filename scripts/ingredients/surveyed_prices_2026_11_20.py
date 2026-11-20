@@ -52,6 +52,25 @@ SURVEY: dict[str, tuple[list[dict], str]] = {
     "balsamic_vinegar":  ([pkg(500, "ml", 1.69, "bouteille 50cl")], carrefour("Carrefour Extra balsamique de Modène 50 cl")),
     "tamari":            ([pkg(250, "ml", 5.99, "bouteille 25cl")],
                           f"relevé satsuki.fr {DATE} (Kikkoman tamari 250 ml ; absent de carrefour.fr)"),
+    # ── 2e lot (même jour) : estimations suivantes par fréquence ──────────────────────────
+    # Restent estimés, sans prix chez Carrefour : paneer, riz gluant nature, piments verts en
+    # conserve (aucun équivalent exact), sauce poisson végétarienne, fèves fraîches, niébé
+    # (boîte affichée au poids brut, le catalogue compte en égoutté).
+    "dried_mint":        ([pkg(40, "g", 1.9, "boîte 40g"), pkg(9, "g", 1.59, "flacon 9g")],
+                          carrefour("Samia feuilles entières 40 g ; Ducros 9 g")),
+    "ginger_powder":     ([pkg(27, "g", 1.45, "pot 27g")], carrefour("Carrefour Classic' 27 g")),
+    "almond_milk":       ([pkg(1000, "ml", 1.55, "brique 1L")], carrefour("Carrefour Bio amande douceur 1 L")),
+    "almond_powder":     ([pkg(125, "g", 2.15, "sachet 125g")], carrefour("Carrefour Original 125 g")),
+    "white_pepper":      ([pkg(42, "g", 2.45, "flacon 42g")], carrefour("Carrefour Classic' 42 g")),
+    "smoked_tofu":       ([pkg(200, "g", 1.75, "paquet 200g")], carrefour("Alnatura 200 g")),
+    "soy_milk":          ([pkg(1000, "ml", 1.07, "brique 1L")], carrefour("boisson au soja nature Carrefour 1 L")),
+    "glutinous_rice_flour": ([pkg(400, "g", 3.75, "sachet 400g")], carrefour("Coq 400 g")),
+    "puff_pastry_butter": ([pkg(230, "g", 1.19, "rouleau 230g")], carrefour("Carrefour Original pur beurre 230 g")),
+    "greek_yogurt":      ([pkg(500, "g", 2.75, "pot 500g"), pkg(1000, "g", 2.45, "pot 1kg")],
+                          carrefour("Lynos 500 g ; Carrefour Extra 1 kg")),
+    "whole_wheat_flour": ([pkg(1000, "g", 1.99, "paquet 1kg")], carrefour("Francine T150 1 kg")),
+    "vanilla_sugar":     ([pkg(75, "g", 0.86, "10 sachets (75g)")], carrefour("Carrefour Classic' 10 × 7,5 g")),
+    "coconut_fresh":     ([pkg(1, "piece", 1.59, "pièce")], carrefour("noix de coco à la pièce")),
 }
 
 
