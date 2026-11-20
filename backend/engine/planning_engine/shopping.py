@@ -8,6 +8,8 @@ API publique :
 from __future__ import annotations
 import logging
 import math
+import re
+import unicodedata
 from collections import defaultdict
 from backend.core.data_cache import data_cached
 
@@ -517,6 +519,38 @@ def _merge_citrus(fruit: str, members: list[str], keys: dict, ing_data: dict, ca
     }
 
 
+# Parties d'un produit (on achète l'œuf, pas le blanc) : jamais le nom de la ligne
+_PART_NAME = re.compile(r"^(blancs?|jaunes?|zestes?|jus|écorces?) d", re.I)
+
+
+def _norm_name(name: str) -> str:
+    """« Œufs » ≈ « Œuf », « Oignons » ≈ « oignon » : minuscules, sans accents, sans
+    parenthèse ni pluriel."""
+    s = re.sub(r"\s*\(.*?\)", "", name).lower().replace("œ", "oe")
+    s = "".join(c for c in unicodedata.normalize("NFD", s) if not unicodedata.combining(c))
+    return " ".join(re.sub(r"[sx]$", "", w) for w in re.findall(r"[a-z]+", s))
+
+
+def _main_member(key: str, members: list[str], ing_data: dict, catalog: dict,
+                 get_name_fr) -> tuple[str, str | None]:
+    """Ligne principale d'un produit fusionné et, si besoin, son nom.
+    1. l'ingrédient qui porte le nom du produit (« Œuf » pour « Œufs ») ;
+    2. sinon la plus grosse quantité, hors parties (blanc, jaune, zeste, jus) ;
+    3. que des parties : la plus grosse, nommée d'après le produit (« Œufs »)."""
+    def weight(i):
+        return (-sum((ing_data[i].get("units") or {}).get(u, 0) for u in ("g", "ml")),
+                -ing_data[i]["occurrences"], len(i))
+    product = (catalog.get(key) or {}).get("name_fr") or ""
+    target = _norm_name(product)
+    named = sorted((m for m in members if _norm_name(get_name_fr(m)) == target), key=weight)
+    if named:
+        return named[0], None
+    whole = sorted((m for m in members if not _PART_NAME.match(get_name_fr(m))), key=weight)
+    if whole:
+        return whole[0], None
+    return sorted(members, key=weight)[0], re.sub(r"\s*\(.*?\)", "", product).strip() or None
+
+
 def _merge_same_product(ing_data: dict, catalog: dict, get_name_fr) -> dict:
     """Une ligne par produit acheté : les ingrédients qui renvoient à la même entrée
     du catalogue (œuf et jaune d'œuf, oignon et oignon jaune…) comptaient chacun
@@ -549,10 +583,10 @@ def _merge_same_product(ing_data: dict, catalog: dict, get_name_fr) -> dict:
         if len(members) == 1:
             out[members[0]] = ing_data[members[0]]
             continue
-        # ligne principale : la plus grosse quantité (« Œuf », pas « Jaune d'œuf »)
+        # ligne principale : « Œuf », pas « Blanc d'œuf » même quand le blanc pèse plus
         members.sort(key=lambda i: (-sum((ing_data[i].get("units") or {}).get(u, 0) for u in ("g", "ml")),
                                     -ing_data[i]["occurrences"], len(i)))
-        main = members[0]
+        main, name = _main_member(key, members, ing_data, catalog, get_name_fr)
         units: dict = defaultdict(float)
         for m in members:
             for u, v in (ing_data[m].get("units") or {}).items():
@@ -560,9 +594,13 @@ def _merge_same_product(ing_data: dict, catalog: dict, get_name_fr) -> dict:
         out[main] = {
             "occurrences": sum(ing_data[m]["occurrences"] for m in members),
             "units": units,
+            # nommée d'après le produit : toutes les parties en détail
             "merged": [{"ingredient": m, "name_fr": get_name_fr(m),
-                        "qty_str": _build_qty_str(ing_data[m].get("units", {}))} for m in members[1:]],
+                        "qty_str": _build_qty_str(ing_data[m].get("units", {}))}
+                       for m in members if name or m != main],
         }
+        if name:
+            out[main]["name_fr"] = name
     return out
 
 

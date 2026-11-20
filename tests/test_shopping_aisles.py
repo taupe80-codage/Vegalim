@@ -71,3 +71,24 @@ def test_jus_seul_inchange():
     s = shopping_list_from_recipes(["main_feijoada_2f6754"])
     jus = next(i for i in s["items"] if "orange" in i["ingredient"])
     assert jus["qty_unit"] == "ml" and jus["package_label"].startswith("1 kg d'oranges")
+
+
+def _fusion(units_by_ing):
+    from backend.core.data_io import load_ingredients_dict, load_prices_catalog
+    from backend.engine.planning_engine.shopping import _make_resolvers, _merge_same_product
+    get_name_fr, _ = _make_resolvers(load_ingredients_dict())
+    data = {k: {"occurrences": 1, "units": u} for k, u in units_by_ing.items()}
+    out = _merge_same_product(data, load_prices_catalog(), get_name_fr)
+    return {k: (v.get("name_fr") or get_name_fr(k), [m["name_fr"] for m in v.get("merged", [])]) for k, v in out.items()}
+
+
+def test_ligne_nommee_d_apres_le_produit_achete():
+    """Le blanc pèse plus que les œufs entiers : la ligne reste « Œuf », pas « Blanc d'œuf »."""
+    assert _fusion({"egg_raw": {"g": 73.3}, "egg_white_raw": {"g": 214.7}, "egg_yolk_raw": {"g": 48}}) == \
+        {"egg_raw": ("Œuf", ["Blanc d'œuf", "Jaune d'œuf"])}
+    # que des blancs et des jaunes : on achète des œufs
+    assert _fusion({"egg_white_raw": {"g": 120}, "egg_yolk_raw": {"g": 40}}) == \
+        {"egg_white_raw": ("Œufs", ["Blanc d'œuf", "Jaune d'œuf"])}
+    # l'ingrédient au nom du produit l'emporte sur la plus grosse quantité
+    assert _fusion({"onion_raw": {"g": 100}, "yellow_onion_raw": {"g": 600}}) == \
+        {"onion_raw": ("Oignon", ["Oignon jaune"])}
