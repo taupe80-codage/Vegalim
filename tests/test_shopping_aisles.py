@@ -92,3 +92,17 @@ def test_ligne_nommee_d_apres_le_produit_achete():
     # l'ingrédient au nom du produit l'emporte sur la plus grosse quantité
     assert _fusion({"onion_raw": {"g": 100}, "yellow_onion_raw": {"g": 600}}) == \
         {"onion_raw": ("Oignon", ["Oignon jaune"])}
+
+
+def test_produits_differents_sur_des_lignes_differentes():
+    """Tofu soyeux et tofu fumé n'étaient qu'une ligne « Tofu ferme » ; vinaigre balsamique
+    et vinaigre blanc une ligne « Vinaigre » (même entrée du catalogue de prix)."""
+    from backend.core.data_io import load_prices_catalog, resolve_catalog_key
+    cat = load_prices_catalog()
+    cles = {i: resolve_catalog_key(i, cat) for i in (
+        "tofu_plain_pre_packaged", "silken_tofu_pre_packaged", "tofu_smoked_pre_packaged",
+        "white_vinegar_liquid_distilled", "balsamic_vinegar_liquid", "butter_sup80pct", "vegan_butter",
+        "yogurt_plain_3pct", "soybean_yogurt_plain_plant", "anise_spice_seed", "fennel_spice_seed",
+        "cream_heavy", "vanilla_ice_cream", "oat_milk_refrigerated_plain_plant", "soybean_milk_unsweetened_plant")}
+    assert len(set(cles.values())) == len(cles), cles
+    assert cat[cles["vegan_butter"]]["price_source"].startswith("estimation")   # signalé « prix estimé »

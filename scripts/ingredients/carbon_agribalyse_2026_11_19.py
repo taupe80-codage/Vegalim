@@ -161,6 +161,42 @@ BY_NAME.update({
     "rose_water": ["18430"], "orange_blossom_water": ["18430"],  # eau embouteillée
 })
 
+# ── 2026-11-20 : produits séparés de leur ancienne entrée (split_catalog_entries_2026_11_20.py)
+# rattachés par le nom, faute de code Ciqual commun ; analogues relus à la main
+BY_NAME.update({
+    "almond_milk": ["18107"],          # Boisson à l'amande
+    "almond_powder": ["15041"],        # Amande émondée
+    "buttermilk": ["19801"],           # Lait fermenté à boire, nature, maigre
+    "kefir": ["19805"],                # Lait fermenté à boire, nature, au lait entier
+    "canned_green_chili": ["20151"],   # Piment, cru
+    "chinese_broccoli": ["20057"],     # Brocoli, cru
+    "chinese_cabbage": ["20167"],      # Chou chinois (pak-choi ou pé-tsai), cru
+    "crushed_tomato": ["20169"],       # Tomate, pulpe, appertisée
+    "daikon": ["20089"],               # Radis noir, cru
+    "dried_coriander_leaf": ["11024"], # Persil, séché (herbe séchée)
+    "dried_mint": ["11024"],
+    "glutinous_rice": ["9100"],        # Riz blanc, cru
+    "glutinous_rice_flour": ["9520"],  # Farine de riz
+    "instant_coffee": ["18003"],       # Café, moulu (pas de café soluble en poudre)
+    "naan": ["7260"],                  # Pain blanc maison
+    "pain_pita": ["7180"],             # Pain pita
+    "oat_milk": ["18905"],             # Boisson à base d'avoine, nature
+    "soy_milk": ["18900"],             # Boisson au soja, nature
+    "pecorino": ["12827"],             # Fromage de brebis à pâte pressée
+    "pigeon_pea": ["20515"],           # Pois cassé, sec
+    "pomegranate_juice": ["2"],        # Jus de fruits rouges
+    "red_wine_vinegar": ["11018"],     # Vinaigre
+    "rice_cakes": ["7352"],            # Galette de riz soufflé complet
+    "soy_yogurt": ["19693"],           # Dessert au soja, nature, rayon frais
+    "sweet_potato_flour": ["9570"],    # Farine de châtaigne (farine de féculent)
+    "tamari": ["11104"],               # Sauce soja, préemballée
+    "tofu_soyeux": ["20904"],          # Tofu, nature
+    "vanilla_ice_cream": ["39515"],    # Glace ou crème glacée, en bac
+    "vegan_butter": ["16615"],         # Matière grasse végétale ou margarine, 80 % MG, doux
+    "whole_wheat_flour": ["9415"],     # Farine de blé tendre T150
+    "anise_seed": ["11066"],           # Fenouil, graine (l'anis vert n'y est pas)
+})
+
 # valeurs d'une autre source (kg CO₂e / kg), faute de produit dans Agribalyse 3.2
 EXTERNAL: dict[str, tuple[float, str]] = {
     "yeast": (0.734, "COFALEC / PwC, Carbon Footprint of Yeast produced in the EU (2012) : levure pressée"),
@@ -168,6 +204,7 @@ EXTERNAL: dict[str, tuple[float, str]] = {
     "mushroom": (1.55, "Bon pour le climat, tableau comparatif repris par ecolozen.com (source secondaire)"),
     "shiitake_mushroom": (1.55, "idem champignon cultivé (source secondaire)"),
     "wood_ear_mushroom": (1.55, "idem champignon cultivé (source secondaire)"),
+    "oyster_mushroom": (1.55, "idem champignon cultivé (source secondaire)"),
     # thé infusé Agribalyse 0,0436 kg/kg pour ~8 g de feuilles par kg d'infusion
     "tea": (5.45, "dérivé d'Agribalyse 18020 « Thé infusé » (0,0436 kg/kg ÷ 8 g de feuilles/kg)"),
     "matcha": (5.45, "idem thé (dérivé d'Agribalyse 18020)"),

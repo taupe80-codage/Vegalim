@@ -84,6 +84,30 @@
       }
     ]
   },
+  "almond_milk": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0381,
+    "agribalyse": [
+      {
+        "code_agb": "18107",
+        "code_ciqual": "18107",
+        "nom": "Boisson à l'amande",
+        "kg_co2e_par_kg": 0.381
+      }
+    ]
+  },
+  "almond_powder": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.263,
+    "agribalyse": [
+      {
+        "code_agb": "15041",
+        "code_ciqual": "15041",
+        "nom": "Amande, mondée, émondée ou blanchie",
+        "kg_co2e_par_kg": 2.63
+      }
+    ]
+  },
   "amchur": {
     "methode": "nom",
     "kg_co2e_pour_100g": 0.94,
@@ -109,7 +133,7 @@
     ]
   },
   "anise_seed": {
-    "methode": "ciqual",
+    "methode": "nom",
     "kg_co2e_pour_100g": 0.213,
     "agribalyse": [
       {
@@ -122,7 +146,7 @@
   },
   "apple": {
     "methode": "ciqual",
-    "kg_co2e_pour_100g": 0.0428,
+    "kg_co2e_pour_100g": 0.0408,
     "agribalyse": [
       {
         "code_agb": "13039",
@@ -131,16 +155,22 @@
         "kg_co2e_par_kg": 0.408
       },
       {
-        "code_agb": "2074",
-        "code_ciqual": "2074",
-        "nom": "Jus de pomme, pur jus",
-        "kg_co2e_par_kg": 0.567
-      },
-      {
         "code_agb": "13620",
         "code_ciqual": "13620",
         "nom": "Pomme Golden, pulpe et peau, crue",
         "kg_co2e_par_kg": 0.408
+      }
+    ]
+  },
+  "apple_juice": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.0567,
+    "agribalyse": [
+      {
+        "code_agb": "2074",
+        "code_ciqual": "2074",
+        "nom": "Jus de pomme, pur jus",
+        "kg_co2e_par_kg": 0.567
       }
     ]
   },
@@ -247,6 +277,18 @@
         "code_ciqual": "11507",
         "nom": "Bicarbonate de soude",
         "kg_co2e_par_kg": 1.61
+      }
+    ]
+  },
+  "balsamic_vinegar": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.096,
+    "agribalyse": [
+      {
+        "code_agb": "11091",
+        "code_ciqual": "11091",
+        "nom": "Vinaigre balsamique",
+        "kg_co2e_par_kg": 0.96
       }
     ]
   },
@@ -403,12 +445,6 @@
         "code_ciqual": "11015",
         "nom": "Poivre noir, poudre",
         "kg_co2e_par_kg": 9.4
-      },
-      {
-        "code_agb": "11019",
-        "code_ciqual": "11019",
-        "nom": "Poivre blanc, poudre",
-        "kg_co2e_par_kg": 9.4
       }
     ]
   },
@@ -462,7 +498,7 @@
   },
   "bread": {
     "methode": "ciqual",
-    "kg_co2e_pour_100g": 0.0939,
+    "kg_co2e_pour_100g": 0.0908,
     "agribalyse": [
       {
         "code_agb": "7004",
@@ -489,22 +525,10 @@
         "kg_co2e_par_kg": 0.779
       },
       {
-        "code_agb": "7425",
-        "code_ciqual": "7425",
-        "nom": "Pain grillé, tranches, multicéréale",
-        "kg_co2e_par_kg": 1.29
-      },
-      {
         "code_agb": "7002",
         "code_ciqual": "7002",
         "nom": "Pain, baguette ou boule, au levain",
         "kg_co2e_par_kg": 0.748
-      },
-      {
-        "code_agb": "7259",
-        "code_ciqual": "7259",
-        "nom": "Pain pour hamburger ou hot dog (bun), préemballé",
-        "kg_co2e_par_kg": 1.81
       }
     ]
   },
@@ -532,6 +556,18 @@
       }
     ]
   },
+  "brown_sugar": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.104,
+    "agribalyse": [
+      {
+        "code_agb": "31017",
+        "code_ciqual": "31017",
+        "nom": "Sucre roux",
+        "kg_co2e_par_kg": 1.04
+      }
+    ]
+  },
   "brussels_sprouts": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.0563,
@@ -546,14 +582,8 @@
   },
   "buckwheat": {
     "methode": "ciqual",
-    "kg_co2e_pour_100g": 0.115,
+    "kg_co2e_pour_100g": 0.0949,
     "agribalyse": [
-      {
-        "code_agb": "9540",
-        "code_ciqual": "9540",
-        "nom": "Farine de sarrasin",
-        "kg_co2e_par_kg": 1.21
-      },
       {
         "code_agb": "9380",
         "code_ciqual": "9380",
@@ -562,21 +592,27 @@
       }
     ]
   },
+  "buckwheat_flour": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.121,
+    "agribalyse": [
+      {
+        "code_agb": "9540",
+        "code_ciqual": "9540",
+        "nom": "Farine de sarrasin",
+        "kg_co2e_par_kg": 1.21
+      }
+    ]
+  },
   "bulgur": {
     "methode": "ciqual",
-    "kg_co2e_pour_100g": 0.1065,
+    "kg_co2e_pour_100g": 0.0949,
     "agribalyse": [
       {
         "code_agb": "9690",
         "code_ciqual": "9690",
         "nom": "Boulgour de blé, cru",
         "kg_co2e_par_kg": 0.949
-      },
-      {
-        "code_agb": "51510",
-        "code_ciqual": "51510",
-        "nom": "Frik (blé dur immature concassé), cru",
-        "kg_co2e_par_kg": 1.47
       }
     ]
   },
@@ -589,6 +625,18 @@
         "code_ciqual": "16400",
         "nom": "Beurre à 82% MG, doux",
         "kg_co2e_par_kg": 7.94
+      }
+    ]
+  },
+  "buttermilk": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.166,
+    "agribalyse": [
+      {
+        "code_agb": "19801",
+        "code_ciqual": "19801",
+        "nom": "Lait fermenté à boire, nature, maigre",
+        "kg_co2e_par_kg": 1.66
       }
     ]
   },
@@ -649,6 +697,18 @@
         "code_ciqual": "12001",
         "nom": "Camembert, sans précision",
         "kg_co2e_par_kg": 5.2
+      }
+    ]
+  },
+  "canned_green_chili": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0715,
+    "agribalyse": [
+      {
+        "code_agb": "20151",
+        "code_ciqual": "20151",
+        "nom": "Piment, cru",
+        "kg_co2e_par_kg": 0.715
       }
     ]
   },
@@ -810,20 +870,8 @@
   },
   "cheese": {
     "methode": "ciqual",
-    "kg_co2e_pour_100g": 0.6369,
+    "kg_co2e_pour_100g": 0.6123,
     "agribalyse": [
-      {
-        "code_agb": "12805",
-        "code_ciqual": "12805",
-        "nom": "Fromage de chèvre frais, au lait pasteurisé ou cru (type crottin frais ou bûchette fraîche)",
-        "kg_co2e_par_kg": 6.54
-      },
-      {
-        "code_agb": "12812",
-        "code_ciqual": "12812",
-        "nom": "Fromage de chèvre bûche",
-        "kg_co2e_par_kg": 5.91
-      },
       {
         "code_agb": "12716",
         "code_ciqual": "12716",
@@ -958,6 +1006,30 @@
       }
     ]
   },
+  "chinese_broccoli": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0951,
+    "agribalyse": [
+      {
+        "code_agb": "20057",
+        "code_ciqual": "20057",
+        "nom": "Brocoli, cru",
+        "kg_co2e_par_kg": 0.951
+      }
+    ]
+  },
+  "chinese_cabbage": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0848,
+    "agribalyse": [
+      {
+        "code_agb": "20167",
+        "code_ciqual": "20167",
+        "nom": "Chou chinois ou pak-choi ou pé-tsai, cru",
+        "kg_co2e_par_kg": 0.848
+      }
+    ]
+  },
   "chives": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.0739,
@@ -991,6 +1063,18 @@
         "code_ciqual": "5006",
         "nom": "Cidre brut",
         "kg_co2e_par_kg": 1.33
+      }
+    ]
+  },
+  "cider_vinegar": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.0841,
+    "agribalyse": [
+      {
+        "code_agb": "11090",
+        "code_ciqual": "11090",
+        "nom": "Vinaigre de cidre",
+        "kg_co2e_par_kg": 0.841
       }
     ]
   },
@@ -1035,15 +1119,21 @@
     "kg_co2e_pour_100g": 0.242,
     "agribalyse": [
       {
-        "code_agb": "15006",
-        "code_ciqual": "15006",
-        "nom": "Noix de coco, amande mûre, fraîche",
-        "kg_co2e_par_kg": 2.42
-      },
-      {
         "code_agb": "15007",
         "code_ciqual": "15007",
         "nom": "Noix de coco, amande, sèche",
+        "kg_co2e_par_kg": 2.42
+      }
+    ]
+  },
+  "coconut_fresh": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.242,
+    "agribalyse": [
+      {
+        "code_agb": "15006",
+        "code_ciqual": "15006",
+        "nom": "Noix de coco, amande mûre, fraîche",
         "kg_co2e_par_kg": 2.42
       }
     ]
@@ -1104,12 +1194,6 @@
         "code_agb": "19027",
         "code_ciqual": "19027",
         "nom": "Lait concentré sucré, entier",
-        "kg_co2e_par_kg": 2.53
-      },
-      {
-        "code_agb": "19026",
-        "code_ciqual": "19026",
-        "nom": "Lait concentré non sucré, entier",
         "kg_co2e_par_kg": 2.53
       }
     ]
@@ -1238,6 +1322,18 @@
       }
     ]
   },
+  "crushed_tomato": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.111,
+    "agribalyse": [
+      {
+        "code_agb": "20169",
+        "code_ciqual": "20169",
+        "nom": "Tomate, pulpe, appertisée",
+        "kg_co2e_par_kg": 1.11
+      }
+    ]
+  },
   "cucumber": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.0512,
@@ -1287,7 +1383,7 @@
     ]
   },
   "daikon": {
-    "methode": "ciqual",
+    "methode": "nom",
     "kg_co2e_pour_100g": 0.0384,
     "agribalyse": [
       {
@@ -1358,6 +1454,30 @@
       }
     ]
   },
+  "dried_coriander_leaf": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.434,
+    "agribalyse": [
+      {
+        "code_agb": "11024",
+        "code_ciqual": "11024",
+        "nom": "Persil, séché",
+        "kg_co2e_par_kg": 4.34
+      }
+    ]
+  },
+  "dried_mint": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.434,
+    "agribalyse": [
+      {
+        "code_agb": "11024",
+        "code_ciqual": "11024",
+        "nom": "Persil, séché",
+        "kg_co2e_par_kg": 4.34
+      }
+    ]
+  },
   "dried_seaweed": {
     "methode": "nom",
     "kg_co2e_pour_100g": 1.18,
@@ -1367,6 +1487,18 @@
         "code_ciqual": "20987",
         "nom": "Nori (Porphyra sp.), séchée ou déshydratée",
         "kg_co2e_par_kg": 11.8
+      }
+    ]
+  },
+  "dried_thyme": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.258,
+    "agribalyse": [
+      {
+        "code_agb": "11038",
+        "code_ciqual": "11038",
+        "nom": "Thym, séché",
+        "kg_co2e_par_kg": 2.58
       }
     ]
   },
@@ -1433,6 +1565,18 @@
         "code_ciqual": "20026",
         "nom": "Endive, crue",
         "kg_co2e_par_kg": 0.861
+      }
+    ]
+  },
+  "evaporated_milk": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.253,
+    "agribalyse": [
+      {
+        "code_agb": "19026",
+        "code_ciqual": "19026",
+        "nom": "Lait concentré non sucré, entier",
+        "kg_co2e_par_kg": 2.53
       }
     ]
   },
@@ -1544,6 +1688,18 @@
       }
     ]
   },
+  "fennel_seed": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.213,
+    "agribalyse": [
+      {
+        "code_agb": "11066",
+        "code_ciqual": "11066",
+        "nom": "Fenouil, graine",
+        "kg_co2e_par_kg": 2.13
+      }
+    ]
+  },
   "fenugreek": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.94,
@@ -1652,6 +1808,18 @@
       }
     ]
   },
+  "freekeh": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.147,
+    "agribalyse": [
+      {
+        "code_agb": "51510",
+        "code_ciqual": "51510",
+        "nom": "Frik (blé dur immature concassé), cru",
+        "kg_co2e_par_kg": 1.47
+      }
+    ]
+  },
   "fresh_cheese": {
     "methode": "nom",
     "kg_co2e_pour_100g": 0.478,
@@ -1726,14 +1894,20 @@
   },
   "ginger": {
     "methode": "ciqual",
-    "kg_co2e_pour_100g": 0.0537,
+    "kg_co2e_pour_100g": 0.0494,
     "agribalyse": [
       {
         "code_agb": "11074",
         "code_ciqual": "11074",
         "nom": "Gingembre, racine crue",
         "kg_co2e_par_kg": 0.494
-      },
+      }
+    ]
+  },
+  "ginger_powder": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.202,
+    "agribalyse": [
       {
         "code_agb": "11006",
         "code_ciqual": "11006",
@@ -1754,6 +1928,30 @@
       }
     ]
   },
+  "glutinous_rice": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.201,
+    "agribalyse": [
+      {
+        "code_agb": "9100",
+        "code_ciqual": "9100",
+        "nom": "Riz blanc, cru",
+        "kg_co2e_par_kg": 2.01
+      }
+    ]
+  },
+  "glutinous_rice_flour": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.248,
+    "agribalyse": [
+      {
+        "code_agb": "9520",
+        "code_ciqual": "9520",
+        "nom": "Farine de riz",
+        "kg_co2e_par_kg": 2.48
+      }
+    ]
+  },
   "gnocchi": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.0938,
@@ -1763,6 +1961,24 @@
         "code_ciqual": "26264",
         "nom": "Gnocchi à la pomme de terre, cru",
         "kg_co2e_par_kg": 0.938
+      }
+    ]
+  },
+  "goat_cheese": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.6461,
+    "agribalyse": [
+      {
+        "code_agb": "12805",
+        "code_ciqual": "12805",
+        "nom": "Fromage de chèvre frais, au lait pasteurisé ou cru (type crottin frais ou bûchette fraîche)",
+        "kg_co2e_par_kg": 6.54
+      },
+      {
+        "code_agb": "12812",
+        "code_ciqual": "12812",
+        "nom": "Fromage de chèvre bûche",
+        "kg_co2e_par_kg": 5.91
       }
     ]
   },
@@ -1811,6 +2027,18 @@
         "code_ciqual": "13040",
         "nom": "Pomelo (dit Pamplemousse), pulpe, cru",
         "kg_co2e_par_kg": 0.926
+      }
+    ]
+  },
+  "greek_yogurt": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.189,
+    "agribalyse": [
+      {
+        "code_agb": "19860",
+        "code_ciqual": "19860",
+        "nom": "Yaourt à la grecque, nature",
+        "kg_co2e_par_kg": 1.89
       }
     ]
   },
@@ -1958,6 +2186,30 @@
       }
     ]
   },
+  "hot_dog_bun": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.181,
+    "agribalyse": [
+      {
+        "code_agb": "7259",
+        "code_ciqual": "7259",
+        "nom": "Pain pour hamburger ou hot dog (bun), préemballé",
+        "kg_co2e_par_kg": 1.81
+      }
+    ]
+  },
+  "instant_coffee": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.84,
+    "agribalyse": [
+      {
+        "code_agb": "18003",
+        "code_ciqual": "18003",
+        "nom": "Café, moulu",
+        "kg_co2e_par_kg": 8.4
+      }
+    ]
+  },
   "jackfruit": {
     "methode": "nom",
     "kg_co2e_pour_100g": 0.0728,
@@ -2027,6 +2279,18 @@
         "code_ciqual": "20218",
         "nom": "Chou frisé, cru",
         "kg_co2e_par_kg": 0.713
+      }
+    ]
+  },
+  "kefir": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.183,
+    "agribalyse": [
+      {
+        "code_agb": "19805",
+        "code_ciqual": "19805",
+        "nom": "Lait fermenté à boire, nature, au lait entier",
+        "kg_co2e_par_kg": 1.83
       }
     ]
   },
@@ -2126,6 +2390,18 @@
       }
     ]
   },
+  "lambs_lettuce": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.0868,
+    "agribalyse": [
+      {
+        "code_agb": "20099",
+        "code_ciqual": "20099",
+        "nom": "Mâche, crue",
+        "kg_co2e_par_kg": 0.868
+      }
+    ]
+  },
   "leek": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.0611,
@@ -2188,12 +2464,6 @@
         "code_agb": "20031",
         "code_ciqual": "20031",
         "nom": "Laitue, crue",
-        "kg_co2e_par_kg": 0.868
-      },
-      {
-        "code_agb": "20099",
-        "code_ciqual": "20099",
-        "nom": "Mâche, crue",
         "kg_co2e_par_kg": 0.868
       }
     ]
@@ -2352,19 +2622,13 @@
   },
   "melon": {
     "methode": "ciqual",
-    "kg_co2e_pour_100g": 0.0829,
+    "kg_co2e_pour_100g": 0.0979,
     "agribalyse": [
       {
         "code_agb": "13026",
         "code_ciqual": "13026",
         "nom": "Melon cantaloup (par ex.: Charentais, de Cavaillon) pulpe, cru",
         "kg_co2e_par_kg": 0.979
-      },
-      {
-        "code_agb": "13036",
-        "code_ciqual": "13036",
-        "nom": "Pastèque, pulpe, crue",
-        "kg_co2e_par_kg": 0.68
       }
     ]
   },
@@ -2522,6 +2786,18 @@
       }
     ]
   },
+  "naan": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0776,
+    "agribalyse": [
+      {
+        "code_agb": "7260",
+        "code_ciqual": "7260",
+        "nom": "Pain blanc maison (avec farine pour machine à pain)",
+        "kg_co2e_par_kg": 0.776
+      }
+    ]
+  },
   "new_potato": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.0707,
@@ -2555,6 +2831,18 @@
         "code_ciqual": "17210",
         "nom": "Huile de noisette",
         "kg_co2e_par_kg": 9.82
+      }
+    ]
+  },
+  "oat_milk": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0566,
+    "agribalyse": [
+      {
+        "code_agb": "18905",
+        "code_ciqual": "18905",
+        "nom": "Boisson à base d'avoine, nature",
+        "kg_co2e_par_kg": 0.566
       }
     ]
   },
@@ -2678,8 +2966,18 @@
       }
     ]
   },
+  "oyster_mushroom": {
+    "methode": "externe",
+    "kg_co2e_pour_100g": 0.155,
+    "agribalyse": [
+      {
+        "source": "idem champignon cultivé (source secondaire)",
+        "kg_co2e_par_kg": 1.55
+      }
+    ]
+  },
   "pain_pita": {
-    "methode": "ciqual",
+    "methode": "nom",
     "kg_co2e_pour_100g": 0.108,
     "agribalyse": [
       {
@@ -2858,6 +3156,18 @@
       }
     ]
   },
+  "pecorino": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.558,
+    "agribalyse": [
+      {
+        "code_agb": "12827",
+        "code_ciqual": "12827",
+        "nom": "Fromage de brebis à pâte pressée",
+        "kg_co2e_par_kg": 5.58
+      }
+    ]
+  },
   "phyllo_sheet": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.19,
@@ -2879,6 +3189,18 @@
         "code_ciqual": "25220",
         "nom": "Choucroute, sans garniture, égouttée",
         "kg_co2e_par_kg": 1.41
+      }
+    ]
+  },
+  "pigeon_pea": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.075,
+    "agribalyse": [
+      {
+        "code_agb": "20515",
+        "code_ciqual": "20515",
+        "nom": "Pois cassé, sec",
+        "kg_co2e_par_kg": 0.75
       }
     ]
   },
@@ -2918,30 +3240,6 @@
       }
     ]
   },
-  "plant_milk": {
-    "methode": "nom",
-    "kg_co2e_pour_100g": 0.0458,
-    "agribalyse": [
-      {
-        "code_agb": "18905",
-        "code_ciqual": "18905",
-        "nom": "Boisson à base d'avoine, nature",
-        "kg_co2e_par_kg": 0.566
-      },
-      {
-        "code_agb": "18900",
-        "code_ciqual": "18900",
-        "nom": "Boisson au soja, nature",
-        "kg_co2e_par_kg": 0.427
-      },
-      {
-        "code_agb": "18107",
-        "code_ciqual": "18107",
-        "nom": "Boisson à l'amande",
-        "kg_co2e_par_kg": 0.381
-      }
-    ]
-  },
   "plantain": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.076,
@@ -2975,6 +3273,18 @@
         "code_ciqual": "13018",
         "nom": "Grenade, pulpe et pépins, crue",
         "kg_co2e_par_kg": 0.499
+      }
+    ]
+  },
+  "pomegranate_juice": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0715,
+    "agribalyse": [
+      {
+        "code_agb": "2",
+        "code_ciqual": "2",
+        "nom": "Jus de fruits rouges",
+        "kg_co2e_par_kg": 0.715
       }
     ]
   },
@@ -3059,7 +3369,13 @@
         "code_ciqual": "23420",
         "nom": "Pâte feuilletée, matière grasse végétale, crue",
         "kg_co2e_par_kg": 3.93
-      },
+      }
+    ]
+  },
+  "puff_pastry_butter": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.393,
+    "agribalyse": [
       {
         "code_agb": "23424",
         "code_ciqual": "23424",
@@ -3212,6 +3528,18 @@
       }
     ]
   },
+  "red_wine_vinegar": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.096,
+    "agribalyse": [
+      {
+        "code_agb": "11018",
+        "code_ciqual": "11018",
+        "nom": "Vinaigre",
+        "kg_co2e_par_kg": 0.96
+      }
+    ]
+  },
   "rhubarb": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.0702,
@@ -3239,6 +3567,18 @@
         "code_ciqual": "9119",
         "nom": "Riz thaï ou basmati, cru",
         "kg_co2e_par_kg": 2.86
+      }
+    ]
+  },
+  "rice_cakes": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.107,
+    "agribalyse": [
+      {
+        "code_agb": "7352",
+        "code_ciqual": "7352",
+        "nom": "Galette de riz soufflé complet",
+        "kg_co2e_par_kg": 1.07
       }
     ]
   },
@@ -3410,6 +3750,18 @@
       }
     ]
   },
+  "sandwich_bread": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.129,
+    "agribalyse": [
+      {
+        "code_agb": "7425",
+        "code_ciqual": "7425",
+        "nom": "Pain grillé, tranches, multicéréale",
+        "kg_co2e_par_kg": 1.29
+      }
+    ]
+  },
   "sauce_okonomiyaki": {
     "methode": "nom",
     "kg_co2e_pour_100g": 0.119,
@@ -3544,6 +3896,18 @@
       }
     ]
   },
+  "smoked_tofu": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.213,
+    "agribalyse": [
+      {
+        "code_agb": "20912",
+        "code_ciqual": "20912",
+        "nom": "Tofu fumé, préemballé",
+        "kg_co2e_par_kg": 2.13
+      }
+    ]
+  },
   "snow_pea": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.0958,
@@ -3592,6 +3956,18 @@
       }
     ]
   },
+  "soy_milk": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0427,
+    "agribalyse": [
+      {
+        "code_agb": "18900",
+        "code_ciqual": "18900",
+        "nom": "Boisson au soja, nature",
+        "kg_co2e_par_kg": 0.427
+      }
+    ]
+  },
   "soy_sauce": {
     "methode": "nom",
     "kg_co2e_pour_100g": 0.0995,
@@ -3601,6 +3977,18 @@
         "code_ciqual": "11104",
         "nom": "Sauce soja, préemballée",
         "kg_co2e_par_kg": 0.995
+      }
+    ]
+  },
+  "soy_yogurt": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.121,
+    "agribalyse": [
+      {
+        "code_agb": "19693",
+        "code_ciqual": "19693",
+        "nom": "Dessert au soja, nature, rayon frais",
+        "kg_co2e_par_kg": 1.21
       }
     ]
   },
@@ -3734,25 +4122,13 @@
   },
   "sugar": {
     "methode": "ciqual",
-    "kg_co2e_pour_100g": 0.0787,
+    "kg_co2e_pour_100g": 0.0746,
     "agribalyse": [
       {
         "code_agb": "31016",
         "code_ciqual": "31016",
         "nom": "Sucre blanc",
         "kg_co2e_par_kg": 0.746
-      },
-      {
-        "code_agb": "31017",
-        "code_ciqual": "31017",
-        "nom": "Sucre roux",
-        "kg_co2e_par_kg": 1.04
-      },
-      {
-        "code_agb": "31044",
-        "code_ciqual": "31044",
-        "nom": "Sucre vanillé",
-        "kg_co2e_par_kg": 1.03
       }
     ]
   },
@@ -3822,6 +4198,18 @@
       }
     ]
   },
+  "sweet_potato_flour": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.239,
+    "agribalyse": [
+      {
+        "code_agb": "9570",
+        "code_ciqual": "9570",
+        "nom": "Farine de châtaigne",
+        "kg_co2e_par_kg": 2.39
+      }
+    ]
+  },
   "swiss_chard": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.0581,
@@ -3843,6 +4231,18 @@
         "code_ciqual": "15203",
         "nom": "Tahin ou Purée de sésame",
         "kg_co2e_par_kg": 2.85
+      }
+    ]
+  },
+  "tamari": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0995,
+    "agribalyse": [
+      {
+        "code_agb": "11104",
+        "code_ciqual": "11104",
+        "nom": "Sauce soja, préemballée",
+        "kg_co2e_par_kg": 0.995
       }
     ]
   },
@@ -3918,14 +4318,8 @@
   },
   "thyme": {
     "methode": "ciqual",
-    "kg_co2e_pour_100g": 0.1385,
+    "kg_co2e_pour_100g": 0.0879,
     "agribalyse": [
-      {
-        "code_agb": "11038",
-        "code_ciqual": "11038",
-        "nom": "Thym, séché",
-        "kg_co2e_par_kg": 2.58
-      },
       {
         "code_agb": "11070",
         "code_ciqual": "11070",
@@ -3936,19 +4330,25 @@
   },
   "tofu": {
     "methode": "ciqual",
-    "kg_co2e_pour_100g": 0.1058,
+    "kg_co2e_pour_100g": 0.1,
     "agribalyse": [
       {
         "code_agb": "20904",
         "code_ciqual": "20904",
         "nom": "Tofu, nature",
         "kg_co2e_par_kg": 1.0
-      },
+      }
+    ]
+  },
+  "tofu_soyeux": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.1,
+    "agribalyse": [
       {
-        "code_agb": "20912",
-        "code_ciqual": "20912",
-        "nom": "Tofu fumé, préemballé",
-        "kg_co2e_par_kg": 2.13
+        "code_agb": "20904",
+        "code_ciqual": "20904",
+        "nom": "Tofu, nature",
+        "kg_co2e_par_kg": 1.0
       }
     ]
   },
@@ -4080,6 +4480,18 @@
       }
     ]
   },
+  "vanilla_ice_cream": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.196,
+    "agribalyse": [
+      {
+        "code_agb": "39515",
+        "code_ciqual": "39515",
+        "nom": "Glace ou crème glacée, en bac",
+        "kg_co2e_par_kg": 1.96
+      }
+    ]
+  },
   "vanilla_pod": {
     "methode": "nom",
     "kg_co2e_pour_100g": 0.438,
@@ -4089,6 +4501,30 @@
         "code_ciqual": "11065",
         "nom": "Vanille, extrait alcoolique",
         "kg_co2e_par_kg": 4.38
+      }
+    ]
+  },
+  "vanilla_sugar": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.103,
+    "agribalyse": [
+      {
+        "code_agb": "31044",
+        "code_ciqual": "31044",
+        "nom": "Sucre vanillé",
+        "kg_co2e_par_kg": 1.03
+      }
+    ]
+  },
+  "vegan_butter": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.236,
+    "agribalyse": [
+      {
+        "code_agb": "16615",
+        "code_ciqual": "16615",
+        "nom": "Matière grasse végétale ou margarine, 80% MG, doux",
+        "kg_co2e_par_kg": 2.36
       }
     ]
   },
@@ -4130,24 +4566,12 @@
   },
   "vinegar": {
     "methode": "ciqual",
-    "kg_co2e_pour_100g": 0.0905,
+    "kg_co2e_pour_100g": 0.096,
     "agribalyse": [
-      {
-        "code_agb": "11090",
-        "code_ciqual": "11090",
-        "nom": "Vinaigre de cidre",
-        "kg_co2e_par_kg": 0.841
-      },
       {
         "code_agb": "11018",
         "code_ciqual": "11018",
         "nom": "Vinaigre",
-        "kg_co2e_par_kg": 0.96
-      },
-      {
-        "code_agb": "11091",
-        "code_ciqual": "11091",
-        "nom": "Vinaigre balsamique",
         "kg_co2e_par_kg": 0.96
       }
     ]
@@ -4212,6 +4636,18 @@
       }
     ]
   },
+  "watermelon": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.068,
+    "agribalyse": [
+      {
+        "code_agb": "13036",
+        "code_ciqual": "13036",
+        "nom": "Pastèque, pulpe, crue",
+        "kg_co2e_par_kg": 0.68
+      }
+    ]
+  },
   "wheat_gluten": {
     "methode": "nom",
     "kg_co2e_pour_100g": 0.182,
@@ -4266,6 +4702,18 @@
       }
     ]
   },
+  "white_pepper": {
+    "methode": "ciqual",
+    "kg_co2e_pour_100g": 0.94,
+    "agribalyse": [
+      {
+        "code_agb": "11019",
+        "code_ciqual": "11019",
+        "nom": "Poivre blanc, poudre",
+        "kg_co2e_par_kg": 9.4
+      }
+    ]
+  },
   "white_wine": {
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.15,
@@ -4275,6 +4723,18 @@
         "code_ciqual": "5215",
         "nom": "Vin blanc sec",
         "kg_co2e_par_kg": 1.5
+      }
+    ]
+  },
+  "whole_wheat_flour": {
+    "methode": "nom",
+    "kg_co2e_pour_100g": 0.0791,
+    "agribalyse": [
+      {
+        "code_agb": "9415",
+        "code_ciqual": "9415",
+        "nom": "Farine de blé tendre ou froment T150",
+        "kg_co2e_par_kg": 0.791
       }
     ]
   },
@@ -4306,12 +4766,6 @@
     "methode": "ciqual",
     "kg_co2e_pour_100g": 0.189,
     "agribalyse": [
-      {
-        "code_agb": "19860",
-        "code_ciqual": "19860",
-        "nom": "Yaourt à la grecque, nature",
-        "kg_co2e_par_kg": 1.89
-      },
       {
         "code_agb": "19593",
         "code_ciqual": "19593",
