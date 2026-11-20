@@ -561,10 +561,11 @@ def recipe_feedback(recipe_id: str, payload: FeedbackRequest,
 
 @router.get("/{recipe_id}/similaires")
 def similar_recipes(recipe_id: str, request: Request,
-                    limit: int = Query(default=5, ge=1, le=20)):
-    """Recettes similaires. **Public.**"""
+                    limit: int = Query(default=5, ge=1, le=20),
+                    diet: Optional[str] = Query(None)):
+    """Recettes similaires. **Public.** diet : seulement ce régime (version vegan affichée)."""
     check_rate_limit(request, limit=60, window_seconds=60)
-    similar = find_similar_by_id(recipe_id, limit=limit)
+    similar = find_similar_by_id(recipe_id, limit=limit, diet=diet)
     if not similar and not any(r["id"] == recipe_id for r in load_recipes()):
         raise HTTPException(status_code=404, detail=f"Recette {recipe_id} introuvable")
     return {"recipe_id": recipe_id, "count": len(similar), "similar": similar}

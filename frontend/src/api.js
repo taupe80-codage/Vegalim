@@ -115,7 +115,7 @@ export const recipes = {
   top:      ()        => get('/recettes/top'),
   // Plats de saison du mois : ids (badge des cartes) + premiers résultats (accueil)
   inSeason: (limit = 6, diet = '') => _listAndStore(`/recettes/de-saison?limit=${limit}${diet ? `&diet=${encodeURIComponent(diet)}` : ''}`),
-  similar:  (id)      => get(`/recettes/${encodeURIComponent(id)}/similaires`),
+  similar:  (id, diet = '') => get(`/recettes/${encodeURIComponent(id)}/similaires${diet ? `?diet=${encodeURIComponent(diet)}` : ''}`),
   vegan:    (id)      => post(`/recettes/${encodeURIComponent(id)}/variante`, {}),
   recommend:(payload) => post('/recettes/recommend', payload),
 };

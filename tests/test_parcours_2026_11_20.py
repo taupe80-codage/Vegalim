@@ -196,3 +196,22 @@ def test_variante_vegan_description_sans_oeuf_ni_nom_anglais():
     assert "panées au tofu soyeux" in katsu
     quiche = vegan_variant(next(r for i, r in idx.items() if i.startswith("egg_quiche_lorraine_vegetarien")))
     assert "œufs-crème" in quiche["recipe"]["description"]          # mot composé laissé tel quel
+
+
+def test_similaires_sans_preparation_de_base_et_par_regime():
+    """Un plat ne propose plus de sauce ou de pâte comme « recette similaire » ; en
+    version vegan (diet=vegan), les suggestions sont vegan."""
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.services.filter_service import match_diet
+    from backend.core.data_io import load_recipes
+    idx = {r["id"]: r for r in load_recipes()}
+    c = TestClient(app)
+    tous = c.get("/recettes/tart_asperges_vertes_ricotta_2c85b3/similaires?limit=10").json()["similar"]
+    assert tous and not any(s["id"].startswith("base_") for s in tous)
+    assert any(not match_diet(idx[s["id"]], "vegan") for s in tous)
+    veg = c.get("/recettes/tart_asperges_vertes_ricotta_2c85b3/similaires?limit=10&diet=vegan").json()["similar"]
+    assert len(veg) == 10 and all(match_diet(idx[s["id"]], "vegan") for s in veg)
+    # une préparation de base peut, elle, proposer d'autres préparations
+    sauce = c.get("/recettes/base_mayonnaise_0d3e4e/similaires?limit=10").json()["similar"]
+    assert any(s["id"].startswith("base_") for s in sauce)

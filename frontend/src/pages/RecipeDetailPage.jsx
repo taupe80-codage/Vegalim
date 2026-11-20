@@ -398,14 +398,16 @@ export default function RecipeDetailPage() {
   }, [loggedIn, recipe?.id]);
 
   // ── Chargement similaires (une fois la recette chargée) ────────────────────
+  // Version vegan affichée : des suggestions vegan (sinon quiche au chèvre, gougères…)
+  const similarDiet = showVariant && variant?.recipe ? 'vegan' : '';
   useEffect(() => {
     if (!recipe) return;
     setSimilarLoading(true);
-    recipesApi.similar(recipe.id)
+    recipesApi.similar(recipe.id, similarDiet)
       .then((data) => setSimilar(data?.similar || []))
       .catch(() => setSimilar([]))
       .finally(() => setSimilarLoading(false));
-  }, [recipe]);
+  }, [recipe, similarDiet]);
 
   // ── Variante vegan ─────────────────────────────────────────────────────────
   const generateVariant = async () => {

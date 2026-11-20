@@ -52,16 +52,25 @@ def _iconic_similarity(a: dict, b: dict) -> float:
     return 1.0 if ca and ca == cb else 0.0
 
 
-def find_similar(recipe: dict, limit: int = 5) -> list[dict]:
+def find_similar(recipe: dict, limit: int = 5, diet: str | None = None) -> list[dict]:
     """
     Retourne les recettes les plus similaires sur 3 dimensions :
     ingrédients partagés (50%), techniques (30%), cuisine d'origine (20%).
+
+    Un plat ne propose pas de préparation de base (sauce, pâte) ; diet ne garde que
+    les recettes de ce régime (fiche affichée en version vegan).
     """
+    from backend.services.filter_service import match_diet
     rid     = recipe.get("id")
+    is_base = str(rid or "").startswith("base_")
     results = []
 
     for r in _all_recipes():
         if r.get("id") == rid:
+            continue
+        if not is_base and str(r.get("id", "")).startswith("base_"):
+            continue
+        if diet and not match_diet(r, diet):
             continue
         score = (
             _ingredient_similarity(recipe, r) * 0.50 +
@@ -77,11 +86,11 @@ def find_similar(recipe: dict, limit: int = 5) -> list[dict]:
     return results[:limit]
 
 
-def find_similar_by_id(recipe_id: "str | int", limit: int = 5) -> list[dict]:
+def find_similar_by_id(recipe_id: "str | int", limit: int = 5, diet: str | None = None) -> list[dict]:
     """Raccourci : find_similar depuis un id. Accepte str ou int (IDs v6 = strings)."""
     from backend.db.data_access import get_data
     recipe = get_data.recipes.get_by_id(recipe_id)
     if not recipe:
         logger.warning("find_similar_by_id: recette %s introuvable", recipe_id)
         return []
-    return find_similar(recipe, limit)
+    return find_similar(recipe, limit, diet)
