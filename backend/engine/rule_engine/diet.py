@@ -1270,3 +1270,38 @@ def audit(recipes: list[dict]) -> list[dict]:
             })
 
     return divergences
+
+# ── Allergènes d'une recette (vocabulaire de tags.allergens) ────────────────────
+# Même règle que scripts/recipes/fix_recipe_diet_allergens.py : allergènes UE du
+# dictionnaire, ou tags.allergens d'une sous-recette ; suggestions de service
+# exclues. Sert aux recettes construites à la volée (variante vegan), dont les
+# substituts apportent leurs propres allergènes (soja, fruits à coque…).
+ALLERGEN_TAG = {
+    'cereals_gluten': ['gluten'], 'soybeans': ['soy'], 'milk': ['milk', 'lactose'],
+    'eggs': ['eggs'], 'tree_nuts': ['tree_nuts'], 'peanuts': ['peanuts'],
+    'sesame': ['sesame'], 'celery': ['celery'], 'mustard': ['mustard'],
+    'sulphites': ['sulphites'], 'lupin': ['lupin'],
+}
+
+
+def allergen_tags(recipe: dict) -> list[str]:
+    """Allergènes (gluten, soy, milk, lactose, eggs, tree_nuts…) de la composition."""
+    from backend.db.culinary_repositories import IngredientRepository, _recipes_index
+    repo, by_id = IngredientRepository(), _recipes_index()
+    found: set[str] = set()
+    for c in recipe.get("composition") or []:
+        if not isinstance(c, dict) or (c.get("meta") or {}).get("role") == "serving_suggestion":
+            continue
+        iid = str(c.get("ingredient") or c.get("ingredient_id") or "")
+        if not iid:
+            continue
+        item = repo.get_by_name(iid)
+        if item and item.get("allergens_eu"):
+            codes = item["allergens_eu"]
+        elif iid in by_id:
+            codes = ((by_id[iid].get("tags") or {}).get("allergens") or [])
+        else:
+            codes = []
+        for a in codes:
+            found.update(ALLERGEN_TAG.get(a, [a]))
+    return sorted(found)

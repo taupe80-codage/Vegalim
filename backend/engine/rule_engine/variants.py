@@ -185,6 +185,35 @@ def vegan_variant(recipe: dict) -> dict:
         for i in new_ings if isinstance(i, dict) and _item_id(i)
     }
 
+    # Régimes et allergènes recalculés sur la nouvelle composition : la variante
+    # gardait ceux de l'original (« œufs », « lait » affichés après substitution)
+    # et ignorait ceux des substituts — tofu soyeux, lait et crème de soja (soja),
+    # ricotta de cajou (fruits à coque) — un risque pour les personnes allergiques.
+    from backend.engine.rule_engine.diet import allergen_tags, compute_diet_flags
+    core = [c for c in r.get("composition") or []
+            if isinstance(c, dict) and (c.get("meta") or {}).get("role") != "serving_suggestion"]
+    computed = compute_diet_flags({**r, "composition": core})
+    allergens = allergen_tags(r)
+    flags = dict(r.get("diet_flags") or {})
+    for f in ("vegetarian", "gluten_free", "lactose_free", "nut_free"):
+        if f in computed:
+            flags[f] = bool(computed[f])
+    excludes = {"gluten_free": {"gluten"}, "lactose_free": {"milk", "lactose"},
+                "nut_free": {"tree_nuts", "peanuts"}}
+    for f, tags_ in excludes.items():
+        if tags_ & set(allergens):
+            flags[f] = False
+    flags["vegan"] = False
+    r["diet_flags"] = flags
+    r.setdefault("tags", {})
+    if isinstance(r["tags"], dict):
+        r["tags"]["allergens"] = allergens
+        r["tags"]["diet"] = [d for d in (r["tags"].get("diet") or []) if d != "vegan"
+                             and not (d in excludes and flags.get(d) is False)]
+    r["diet_flags_enriched"] = {"egg_free": "eggs" not in allergens,
+                                "dairy_free": "milk" not in allergens,
+                                "soy_free": "soy" not in allergens}
+
     if unresolved:
         source = "partial"
     else:

@@ -1,0 +1,97 @@
+"""Revue des parcours (2026-11-20) : planning généré, version vegan d'une fiche, frigo."""
+import random
+
+import pytest
+from fastapi.testclient import TestClient
+
+from backend.core.data_io import is_component_recipe, load_recipes
+
+IDX = {r["id"]: r for r in load_recipes()}
+DAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+
+
+# ── Planning ──────────────────────────────────────────────────────────────────
+
+def test_preferences_pratiques_du_planning():
+    from backend.engine.planning_engine.planner import _practical_score
+    trempage = {"dish_type": "main", "timing": {"prep_passive_min": 720}}
+    assert _practical_score(trempage, 2, 20) < _practical_score(trempage, 6, 20)   # mercredi < dimanche
+    plat = {"dish_type": "main", "timing": {}}
+    assert _practical_score(plat, 6, 25) > _practical_score(plat, 6, 12) > _practical_score(plat, 6, 8)
+    assert _practical_score({"dish_type": "dessert", "timing": {}}, 6, 2) == 0   # pas de malus hors plat
+
+
+def test_planning_sans_trempage_en_semaine_et_signale():
+    from backend.engine.planning_engine.planner import generate_plan
+    random.seed(1)
+    plan = generate_plan(dish_type="main", month=11, diversity=0.5)
+    for i, d in enumerate(DAYS):
+        for meal in ("lunch", "dinner"):
+            item = plan[d][meal]
+            passive = (IDX[item["id"]].get("timing") or {}).get("prep_passive_min") or 0
+            assert item["prep_ahead"] == (passive >= 240)
+            if i < 5:
+                assert not item["prep_ahead"], (d, item["title_fr"])
+
+
+def test_planning_varie_d_une_semaine_a_l_autre():
+    # vivier fixe de 12 : 30 semaines ne puisaient que dans ~25 plats
+    from backend.engine.planning_engine.planner import generate_plan
+    ids = set()
+    for seed in range(6):
+        random.seed(seed)
+        p = generate_plan(dish_type="main", month=11, diversity=0.5)
+        ids |= {p[d][m]["id"] for d in DAYS for m in ("lunch", "dinner")}
+    assert len(ids) >= 25          # 6 semaines ; avant : 25 plats sur 30 semaines
+
+
+# ── Version vegan ─────────────────────────────────────────────────────────────
+
+def test_variante_vegan_recalcule_allergenes_et_regimes():
+    from backend.engine.rule_engine.variants import vegan_variant
+    v = vegan_variant(IDX["curry_matar_paneer_4a7c19"])["recipe"]          # paneer → tofu
+    assert set(v["tags"]["allergens"]) == {"soy"}
+    assert v["diet_flags"]["vegan"] and v["diet_flags"]["lactose_free"]
+    assert v["diet_flags_enriched"] == {"egg_free": True, "dairy_free": True, "soy_free": False}
+
+    d = vegan_variant(IDX["tart_asperges_vertes_ricotta_2c85b3"])           # ricotta de cajou, tofu soyeux
+    t = d["recipe"]
+    assert d["source"] == "partial"                                         # pâte brisée pur beurre
+    assert {"tree_nuts", "soy", "milk"} <= set(t["tags"]["allergens"]) and "eggs" not in t["tags"]["allergens"]
+    assert t["diet_flags"]["nut_free"] is False and t["diet_flags"]["vegan"] is False
+
+
+def test_allergen_tags_coherent_avec_les_donnees():
+    from backend.engine.rule_engine.diet import allergen_tags
+    fautes = [r["id"] for r in IDX.values()
+              if not set(allergen_tags(r)) <= set((r.get("tags") or {}).get("allergens") or [])]
+    assert not fautes, fautes[:10]
+
+
+# ── Frigo ─────────────────────────────────────────────────────────────────────
+
+@pytest.mark.parametrize("nom, attendu, exclu", [
+    ("fromage râpé", "gruyere_whole_cow", None),
+    ("crème fraîche", "cream_heavy_refrigerated_30pct", None),
+    ("courge", "pumpkin_raw", None),
+    ("farine", "wheat_flour_t55", "chickpea_flour"),
+])
+def test_noms_courants_du_frigo(nom, attendu, exclu):
+    from backend.services.ingredient_catalog import resolve_names
+    ids = resolve_names([nom])[nom]
+    assert attendu in ids and exclu not in ids
+
+
+def _suggest(fridge):
+    from backend.api.main import app
+    return TestClient(app).post("/frigo/suggestions",
+                                json={"ingredients": fridge, "max_missing": 3, "limit": 10}).json()["results"]
+
+
+def test_frigo_privilegie_les_recettes_qui_l_utilisent():
+    res = _suggest(["oeufs", "lait", "farine"])
+    assert len(res[0]["have"]) >= 3                      # crêpes, pas un pain à la seule farine
+    assert all("pain de campagne" not in r["title_fr"].lower() for r in res)
+    res = _suggest(["tofu", "riz", "brocoli", "sauce soja", "gingembre", "ail"])
+    assert len(res[0]["have"]) >= 4                      # tofu sauté, pas « Riz blanc »
+    assert not any(is_component_recipe(IDX[r["id"]]) for r in res)

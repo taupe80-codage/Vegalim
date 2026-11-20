@@ -302,6 +302,11 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
         from backend.core.data_io import matches_dish_types
         allowed = {dt.lower() for dt in payload.dish_types}
         recipes = [r for r in recipes if matches_dish_types(r, allowed)]
+    else:
+        # Préparations de base (concentré de tomate, lait de riz maison…) : pas des
+        # suggestions de repas, comme ailleurs sur le site (type « base » pour les voir)
+        from backend.core.data_io import is_component_recipe
+        recipes = [r for r in recipes if not is_component_recipe(r)]
 
     def _label(iid: str) -> str:
         """
@@ -402,7 +407,11 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
 
     # Tri : pertinence decroissante (poids des ingredients qui portent la recette),
     # puis iconic_score en cas d'egalite
-    scored.sort(key=lambda x: (-x["relevance"], -x["iconic_score"]))
+    # Par tranches de pertinence de 0,1, puis le nombre d'ingrédients du frigo
+    # utilisés : la pertinence plafonne dès qu'un ingrédient principal est là, et
+    # « Riz blanc » (1 ingrédient du frigo) passait devant une soupe qui en utilise 4.
+    scored.sort(key=lambda x: (-round(x["relevance"] * 10), -len(x["have"]),
+                               -x["relevance"], -x["iconic_score"]))
 
     return {
         "fridge_ingredients": sorted(asked),

@@ -473,10 +473,11 @@ export default function RecipeDetailPage() {
   };
 
   const ingredients  = recipe.composition || recipe.ingredients || [];
-  const badges       = getRecipeBadges(recipe);
-
   // Recette à afficher (principale ou variante)
   const displayed = showVariant && variant?.recipe ? variant.recipe : recipe;
+  // Badges de la recette affichée : la variante vegan au tofu ne doit pas garder
+  // le « Sans Soja » de l'original (allergènes recalculés par le serveur)
+  const badges       = getRecipeBadges(displayed);
 
   return (
     <div className="recipe-detail-container">
@@ -844,6 +845,17 @@ export default function RecipeDetailPage() {
         {/* Instructions */}
         <div className="detail-instructions">
           <h3>Préparation</h3>
+          {showVariant && variant?.substitutions?.length > 0 && (
+            <p className="variant-steps-note" role="note">
+              Étapes de la recette d'origine : remplacez{' '}
+              {variant.substitutions.map((s, i) => (
+                <span key={i}>
+                  {i > 0 && (i === variant.substitutions.length - 1 ? ' et ' : ', ')}
+                  {(s.original_name || '').toLowerCase()} par {(s.substitute_name || '').toLowerCase()}
+                </span>
+              ))}.
+            </p>
+          )}
           {(displayed.instructions || recipe.instructions)?.length > 0 ? (
             <ol className="instruction-list">
               {(displayed.instructions || recipe.instructions).map((step, idx) => {

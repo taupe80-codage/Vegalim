@@ -872,6 +872,28 @@ def _names_product(entry: dict, wanted: tuple[str, ...]) -> bool:
     return fr[:len(wanted)] == wanted or (len(en) >= len(wanted) and en[-len(wanted):] == wanted)
 
 
+# Noms courants du frigo sans entrée de ce nom dans le dictionnaire (« fromage
+# râpé ») ou qui n'y désignaient que la version maison (« crème fraîche » →
+# base_creme_fraiche seule, alors que les recettes emploient la crème du commerce).
+_FRIDGE_NAME_SYNONYMS: dict[str, tuple[str, ...]] = {
+    "fromage rape": ("gruyere_whole_cow", "emmental_de_savoie_cow", "comte_cow",
+                     "parmesan_grated_dried_cow", "cheddar_cow"),
+    "gruyere rape": ("gruyere_whole_cow", "emmental_de_savoie_cow", "comte_cow"),
+    "emmental rape": ("emmental_de_savoie_cow", "gruyere_whole_cow"),
+    "parmesan rape": ("parmesan_grated_dried_cow",),
+    "creme fraiche": ("cream_heavy_refrigerated_30pct", "cream_heavy", "sour_cream_fermented_18pct",
+                      "cream_sour_18pct", "cream_heavy_refrigerated_18pct", "base_creme_fraiche_b536c1"),
+    "creme": ("cream_heavy", "cream_heavy_refrigerated_30pct", "cream_heavy_refrigerated_18pct",
+              "cream", "cream_liquid_uht", "sour_cream_fermented_18pct"),
+    # « courge » ne trouvait que le butternut (pas potiron, potimarron, kabocha)
+    "courge": ("butternut_squash_raw", "butternut_squash_raw_skinless", "pumpkin_raw",
+               "red_kuri_squash_raw_skinless", "kabocha_squash_raw"),
+    # « farine » = farine de blé ; pas pois chiche, amande, riz, manioc (socca proposée)
+    "farine": ("wheat_all_purpose_flour_unenriched_unbleached", "wheat_flour_t55", "wheat_flour",
+               "bread_flour_blanched", "whole_wheat_flour_seed"),
+}
+
+
 def resolve_names(keys: list[str]) -> dict[str, list[str]]:
     """
     Traduit des noms libres en IDs d'ingrédients présents dans les recettes.
@@ -890,6 +912,10 @@ def resolve_names(keys: list[str]) -> dict[str, list[str]]:
     for key in keys:
         wanted = name_tokens(key)
         if not wanted:
+            continue
+        synonyms = _FRIDGE_NAME_SYNONYMS.get(" ".join(wanted))
+        if synonyms:
+            resolved[key] = list(synonyms)
             continue
         found = index.get(wanted)
         if not found:

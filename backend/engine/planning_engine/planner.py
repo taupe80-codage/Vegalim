@@ -36,6 +36,30 @@ def _reuse_score(recipe: dict, planned_ings: Counter) -> float:
     return min(2.0, shared * 0.3)
 
 
+def _practical_score(recipe: dict, day_i: int, protein: float | None) -> float:
+    """Préférences d'un planning réaliste (bonus/malus, jamais d'exclusion) :
+    - en semaine (lundi-vendredi), malus pour un plat long à préparer et, plus
+      fort, pour un trempage ou une marinade de la veille (temps passif ≥ 4 h :
+      ghormeh sabzi 845 min ou locro 560 min tombaient un jeudi midi) ;
+    - plat principal : bonus à 15 g de protéines par portion ou plus, malus sous
+      10 g (stamppot, sarson ka saag, locro à 8-9 g étaient servis comme repas)."""
+    t = recipe.get("timing") or {}
+    active = (t.get("prep_active_min") or 0) + (t.get("cook_min") or 0)
+    passive = t.get("prep_passive_min") or 0
+    s = 0.0
+    if day_i < 5:
+        if passive >= 240:
+            s -= 1.5
+        elif active > 90:
+            s -= 0.75
+    if protein is not None and str(recipe.get("dish_type") or "").lower() == "main":
+        if protein >= 15:
+            s += 0.5
+        elif protein < 10:
+            s -= 0.75
+    return s
+
+
 def generate_plan(
     diet:            str | None   = None,
     max_calories:    float | None = None,
@@ -171,6 +195,11 @@ def generate_plan(
     plan          = {}
     used_ids      = set()
     planned_ings  = Counter()
+    from backend.core.data_io import load_nutrition_graph
+    _ng = load_nutrition_graph() or {}
+    _ng = _ng.get("recipes", _ng) if isinstance(_ng, dict) else {}
+    protein_of = {r.get("id"): float((_ng.get(r.get("id")) or {}).get("protein") or 0) or None
+                  for r in recipes}
 
     for day_i, day in enumerate(_DAYS):
         plan[day] = {}
@@ -193,18 +222,24 @@ def generate_plan(
                 s += _reuse_score(r, planned_ings)
                 if meal == "lunch" and meal_type(r) in ("soup", "salad"):
                     s += 1.0
+                s += _practical_score(r, day_i, protein_of.get(r.get("id")))
                 return s
 
             # ── Sélection pondérée par score (softmax sur le top-pool) ────────
             # diversity 0 → déterministe (toujours le #1), 1 → très aléatoire
-            # temperature = diversity * 5 + 0.05  (plage ~0.05 à 5.05)
-            temperature = max(0.05, float(diversity) * 5.0)
+            # temperature = diversity (plage 0.05 à 1)
+            # (température ≤ 1 : le vivier élargi garde la préférence pour les plats de
+            # saison et protéinés — 30 semaines à 0,5 : 49 plats distincts, 85 % de saison)
+            temperature = max(0.05, float(diversity) * 1.0)
 
             scored = sorted(
                 ((r, _score(r)) for r in candidates),
                 key=lambda x: -x[1],
             )
-            pool = scored[:max(pool_size, 1)]
+            # Le vivier grandit avec la variété demandée : à 12 candidats fixes, 30
+            # semaines générées ne puisaient que dans ~25 plats (régénérer redonnait
+            # les mêmes). 0 → 12, 0,5 → 52, 1 → 92 candidats.
+            pool = scored[:max(pool_size + int(80 * float(diversity)), 1)]
 
             if not pool:
                 chosen = recipes[day_i % len(recipes)]
@@ -222,6 +257,8 @@ def generate_plan(
                 "id":       chosen.get("id"),
                 "title_fr": chosen.get("titles", {}).get("fr", ""),
                 "servings": chosen.get("servings", 4),
+                # trempage, marinade ou repos de 4 h et plus : à lancer la veille
+                "prep_ahead": ((chosen.get("timing") or {}).get("prep_passive_min") or 0) >= 240,
             }
             used_ids.add(chosen.get("id"))
 

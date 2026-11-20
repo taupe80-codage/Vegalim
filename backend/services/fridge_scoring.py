@@ -36,7 +36,8 @@ _STAPLE_TOKENS = frozenset({
 })
 _STAPLE_PREFIXES = (
     "butter", "vegan_butter", "black_pepper", "white_pepper", "pepper",
-    "wheat_flour", "wheat_all_purpose_flour", "baking", "sodium_bicarbonate",
+    "wheat_flour", "wheat_all_purpose_flour", "bread_flour", "whole_wheat_flour",   # farines de blé
+    "baking", "sodium_bicarbonate",
     "bicarbonate",
 )
 # « beurre » de cacahuète / de sésame n'est pas le beurre de cuisine.

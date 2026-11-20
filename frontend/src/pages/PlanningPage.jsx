@@ -306,6 +306,11 @@ function PlanningRecipeCard({recipe, onReplace, onSearch, onDelete, isReplacing}
       <div className="prcard-info">
         {dtype && <span className="prcard-type-badge">{DISH_TYPE_LABELS[dtype]||dtype}</span>}
         <span className="prcard-title">{title}</span>
+        {recipe.prep_ahead && (
+          <span className="prcard-ahead" title="Trempage, marinade ou repos de 4 h ou plus : à commencer la veille">
+            ⏳ à lancer la veille
+          </span>
+        )}
       </div>
       <div className="prcard-actions">
         <button className="prcard-search"  onClick={e=>{e.stopPropagation();onSearch&&onSearch();}} title="Chercher">🔍</button>

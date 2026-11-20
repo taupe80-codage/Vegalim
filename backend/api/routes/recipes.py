@@ -513,6 +513,12 @@ def vegan_variant_route(recipe_id: str, user: dict = Depends(get_user)):
             detail="Le moteur de variantes est temporairement indisponible.")
     if not result:
         raise HTTPException(status_code=422, detail="Impossible de générer une variante vegan")
+    # Même enrichissement que la fiche : nutrition, prix, carbone, badges « sans X »
+    # recalculés sur la composition de la variante (pas ceux de l'original)
+    variant = result["recipe"]
+    enriched = _compute_enrichment(variant)
+    enriched.pop("diet_flags_enriched", None)   # celui de la variante (allergènes recalculés)
+    variant.update(enriched)
     return result
 
 
