@@ -71,6 +71,13 @@ SURVEY: dict[str, tuple[list[dict], str]] = {
     "whole_wheat_flour": ([pkg(1000, "g", 1.99, "paquet 1kg")], carrefour("Francine T150 1 kg")),
     "vanilla_sugar":     ([pkg(75, "g", 0.86, "10 sachets (75g)")], carrefour("Carrefour Classic' 10 × 7,5 g")),
     "coconut_fresh":     ([pkg(1, "piece", 1.59, "pièce")], carrefour("noix de coco à la pièce")),
+    # ── 3e lot : fèves fraîches en vrac (les recettes de printemps les demandent fraîches ;
+    # les surgelées écossées, 4,65 €/kg, coûteraient trois fois moins au gramme de grains),
+    # riz gluant d'une épicerie en ligne (absent de Carrefour en 1 kg)
+    "fresh_fava_bean":   ([{**pkg(300, "g", 6.49, "1 kg en cosses"), "note": "≈ 300 g de grains écossés"}],
+                          carrefour("fèves fraîches en vrac, 6,49 €/kg en cosses")),
+    "glutinous_rice":    ([pkg(1000, "g", 4.95, "sachet 1kg")],
+                          f"relevé kaufland.fr {DATE} (riz gluant Ricefield 1 kg, vendeur partenaire)"),
 }
 
 
