@@ -21,6 +21,7 @@ import { planToShoppingFormat } from '../planShopping';
 const PLAN_KEY         = 'alim_plan_weekly';
 const CHECKED_KEY      = 'alim_sl_checked';
 const SHOPPING_KEY     = 'alim_sl_shopping';          // persistance liste
+const SOURCE_KEY       = 'alim_sl_source';            // d'où vient la liste (pour « Recalculer »)
 const FRIGO_QTYS_KEY   = 'alim_shopping_frigo_qtys';  // partagé avec PlanningPage
 const FRIGO_SUF_KEY    = 'alim_shopping_frigo_sufficient';
 
@@ -509,8 +510,9 @@ function RecipesMode({ onResult }) {
     if (!selected.length) return;
     setLoading(true); setError(null);
     try {
-      const data = await planningApi.shoppingListFromRecipes({ recipe_ids: selected.map(r => r.id) });
-      onResult(data);
+      const ids = selected.map(r => r.id);
+      const data = await planningApi.shoppingListFromRecipes({ recipe_ids: ids });
+      onResult(data, ids);
     } catch (err) { setError(err.message); }
     finally { setLoading(false); }
   };
@@ -584,8 +586,9 @@ export default function ShoppingListPage() {
   const [fridgeQtys,       setFridgeQtys]       = useState(() => _ls.get(FRIGO_QTYS_KEY, {}));
   const [fridgeSufficient, setFridgeSufficient] = useState(() => new Set(_ls.get(FRIGO_SUF_KEY, [])));
   const [recalcLoading, setRecalcLoading] = useState(false);
-  // Pour pouvoir recalculer : garde la dernière source en mémoire
-  const lastSourceRef = useRef(null);
+  // Pour pouvoir recalculer : la dernière source, gardée avec la liste (sinon, après un
+  // rechargement, « Recalculer » ne faisait rien)
+  const lastSourceRef = useRef(_ls.get(SOURCE_KEY, null));
 
   // Persistance
   useEffect(() => { _ls.set(CHECKED_KEY, [...checked]); }, [checked]);
@@ -609,16 +612,20 @@ export default function ShoppingListPage() {
   }, []);
 
   const handleResult = (data, source) => {
-    if (source) lastSourceRef.current = source;
+    if (source) { lastSourceRef.current = source; _ls.set(SOURCE_KEY, source); }
     setShopping(data);
     setChecked(new Set());
   };
 
-  const handleReset = () => { setShopping(null); lastSourceRef.current = null; };
+  const handleReset = () => { setShopping(null); lastSourceRef.current = null; _ls.del(SOURCE_KEY); };
 
   const handleRecalculate = async () => {
     const src = lastSourceRef.current;
-    if (!src) return;
+    if (!src || (src.type === 'recipes' && !src.ids?.length)) {
+      // liste enregistrée avant que la source le soit : on ne devine pas
+      toast('Origine de cette liste inconnue : cliquez sur « Modifier » puis générez-la à nouveau.', 'error');
+      return;
+    }
     setRecalcLoading(true);
     try {
       let data;
