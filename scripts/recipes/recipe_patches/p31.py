@@ -43,14 +43,9 @@ PATCHES = {
         ("step-", "Servir, garni d'un filet d'huile de sésame et d'une touche de coriandre"),
         ('dish', 'side'),
     ],
-    # zaalouk : pas d'oignon, jus de citron cité mais absent
+    # zaalouk : pas d'oignon, jus de citron cité mais absent — réécrite le 2026-11-21 en salade
+    # d'aubergines frites à la chermoula (fix_near_duplicates_2026_11_21.py) : seul le type reste
     "salad_daubergines_marocaine_03fd77": [
-        ("del", "onion_raw"),
-        ("add", "lemon_juice", 20, "ml", "condiment"),
-        ("qty", "table_salt_unenriched", 3),
-        ("txt", "Assaisonner de jus de citron, 5 grammes de sel", "Assaisonner de 20 ml de jus de citron, 3 grammes de sel"),
-        ("step-", "Vérifier que la salade ait des notes fumées"),
-        ("step-", "Ajouter des feuilles de persil frais hachées et des olives noires"),
         ('dish', 'side'),
     ],
     # kısır : oignon cru, concentré de tomate (présent mais jamais utilisé)

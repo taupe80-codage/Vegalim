@@ -125,6 +125,27 @@ Décisions prises sur la section 2, appliquées par
 - **Sodium du hot pot et de la banitsa : non retenu** — les deux valeurs viennent du bouillon et
   du fromage, elles sont cohérentes avec les recettes d'origine.
 
+## 3 ter. Derniers arbitrages (2026-11-21)
+
+- **Les 8 portions légères : augmentées.** La recette reste la même et se partage en moins de
+  parts (`scripts/recipes/fix_light_portions_2026_11_21.py`) : cookies 18 → 10, brigadeiros
+  10 → 7, dan chao fan 4 → 3, batata harra, jeera aloo, gamja jorim, pizza marinara et salade de
+  pousses de soja 4 → 2. Le planning et la liste de courses recalculent les quantités à partir
+  du nombre de parts.
+- **Les 13 compositions quasi identiques : différenciées en respectant la culture de chaque plat**
+  (`scripts/recipes/fix_near_duplicates_2026_11_21.py`, détail dans son en-tête). La plupart
+  étaient deux plats différents partageant une base : chacun a été rapproché de sa recette
+  d'origine (curry rouge thaï sans curcuma mais au combava, sugo à l'oignon, pâte brisée sucrée,
+  caviar d'aubergine provençal sans tahini, onigiri umeboshi sans sésame…). Trois recettes sont
+  refaites : le couscous traditionnel devient le couscous marocain aux sept légumes cuit à la
+  vapeur, la bohémienne redevient la compotée aubergines-tomates d'Avignon, et la salade
+  d'aubergines marocaine devient la salade d'aubergines frites à la chermoula (le zaalouk reste
+  le zaalouk). Les correctifs manuels concernés (`recipe_patches` p02, p08, p14, p26, p31, v03,
+  v09, v16) suivent.
+- **Textures et pays manquants : renseignés** (`scripts/recipes/fix_textures_origins_2026_11_21.py`) :
+  20 textures prises dans le vocabulaire existant, 14 pays (réel quand le produit en a un,
+  « international » sinon).
+
 ## 4. Ce que l'audit confirme
 
 - Aucun identifiant d'ingrédient inconnu, aucune quantité nulle ou négative, aucun rôle

@@ -249,7 +249,7 @@ VARIANTS = {
     "dal_makhani_vegan_259219": [
         ("title", "Rajma masala du Pendjab (vegan)"),
         ("desc", "Le curry de haricots rouges du Pendjab : haricots trempés une nuit puis mijotés dans une sauce "
-                 "épaisse d'oignon, tomate, gingembre, ail et garam masala, servi sur du riz."),
+                 "épaisse d'oignon, tomate, gingembre, ail, épices entières et garam masala, servi sur du riz."),
         ("origin", {"region": "punjab", "city": "amritsar"}),
         ("compo", [
             ("kidney_bean_dried", 250, "g", "protein", "dried"),
@@ -266,11 +266,14 @@ VARIANTS = {
             ("coriander_raw_fresh_herb", 10, "g", "herb"),
             ("water", 1200, "ml", "liquid"),
             ("table_salt_unenriched", 4, "g", "seasoning"),
+            ("bay_leaf_spice", 1, "g", "spice"),       # épices entières du rajma (2026-11-21)
+            ("cinnamon_powder", 1, "g", "spice"),
+            ("cloves_spice", 0.5, "g", "spice"),
             ("basmati_rice_raw_seed", None, "1 portion", "serving_suggestion"),
         ]),
         ("steps", [
             "Faire tremper 250 g de haricots rouges 12 heures, les égoutter, puis les cuire 1 heure dans 1 L d'eau fraîche (après 10 minutes d'ébullition vive), jusqu'à ce qu'ils soient tendres.",
-            "Faire grésiller 3 g de cumin dans 35 ml d'huile, ajouter 200 g d'oignon haché et le dorer 12 minutes.",
+            "Faire grésiller 3 g de cumin, 1 g de laurier (2 feuilles), 1 g de cannelle et 0,5 g de clous de girofle dans 35 ml d'huile, ajouter 200 g d'oignon haché et le dorer 12 minutes.",
             "Ajouter 15 g d'ail, 15 g de gingembre et 5 g de piment hachés, puis 3 g de coriandre moulue et 2 g de curcuma, et cuire 1 minute.",
             "Ajouter 400 g de tomates mixées et 4 g de sel, puis cuire 10 minutes jusqu'à ce que l'huile se sépare.",
             "Ajouter les haricots avec 200 ml de leur eau et mijoter 20 minutes, en écrasant quelques haricots pour épaissir. Ajouter 3 g de garam masala.",

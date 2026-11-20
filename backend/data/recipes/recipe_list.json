@@ -4614,7 +4614,7 @@
       "vegetarian"
     ],
     "allergens": [],
-    "servings": 4,
+    "servings": 2,
     "time_total": 50,
     "confidence": 1.0,
     "description": "Friture de pommes de terre croustillantes à l'extérieur, fondantes à l'intérieur, parfumées à l'ail et au piment, réalisée avec une technique de cuisson libanaise traditionnelle qui met en valeur les saveurs de l'Orient.",
@@ -4864,7 +4864,7 @@
   {
     "id": "base_peanut_butter_81c37b",
     "title": "Beurre de Cacahuète",
-    "cuisine": "international",
+    "cuisine": "american",
     "dish_type": "sauce",
     "vegan": true,
     "diet": [
@@ -6244,33 +6244,23 @@
     ],
     "allergens": [],
     "servings": 4,
-    "time_total": 65,
+    "time_total": 90,
     "confidence": 0.95,
-    "description": "Ragoût provençal estival de légumes mijotés à l'huile d'olive et herbes, avec une texture fondante et une odeur parfumée, inspiré des saveurs méditerranéennes.",
+    "description": "La bohémienne d'Avignon et du Comtat : une compotée d'aubergines et de tomates longuement mijotée à l'huile d'olive, à l'ail et au thym, écrasée à la cuillère jusqu'à devenir presque une purée.",
     "composition": [
       {
         "ingredient": "eggplant_raw",
-        "quantity": 600,
-        "unit": "g"
-      },
-      {
-        "ingredient": "green_zucchini_squash_raw",
-        "quantity": 500,
-        "unit": "g"
-      },
-      {
-        "ingredient": "red_bell_pepper_raw",
-        "quantity": 320,
+        "quantity": 900,
         "unit": "g"
       },
       {
         "ingredient": "tomato_raw_ripe",
-        "quantity": 400,
+        "quantity": 700,
         "unit": "g"
       },
       {
         "ingredient": "onion_raw",
-        "quantity": 150,
+        "quantity": 100,
         "unit": "g"
       },
       {
@@ -6280,26 +6270,31 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 40,
+        "quantity": 60,
         "unit": "ml"
       },
       {
-        "ingredient": "basil_fresh_herb",
-        "quantity": 20,
+        "ingredient": "thyme_fresh_herb",
+        "quantity": 3,
         "unit": "g"
       },
       {
-        "ingredient": "thyme_fresh_herb",
-        "quantity": 5,
+        "ingredient": "basil_fresh_herb",
+        "quantity": 10,
         "unit": "g"
       },
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
+        "quantity": 1,
+        "unit": "g"
       }
     ],
-    "n_instructions": 7,
+    "n_instructions": 5,
     "flags": [],
     "similar": []
   },
@@ -6561,7 +6556,7 @@
   {
     "id": "base_vegetable_broth_303b7d",
     "title": "Bouillon de Légumes",
-    "cuisine": "universal",
+    "cuisine": "french",
     "dish_type": "broth",
     "vegan": true,
     "diet": [
@@ -7389,7 +7384,7 @@
     "servings": 4,
     "time_total": 77,
     "confidence": 1.0,
-    "description": "Ragoût de légumes grecs, où les aubergines, courgettes et pommes de terre fondent en bouche, parfumés d'ail et d'origan — technique traditionnelle de la cuisine méditerranéenne.",
+    "description": "Le briam des jours de Carême, un « ladero » : aubergines, courgettes, pommes de terre, poivron vert et tomates confits au four dans beaucoup d'huile d'olive, avec ail, origan et persil, sans fromage.",
     "composition": [
       {
         "ingredient": "eggplant_raw",
@@ -7418,7 +7413,7 @@
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 45,
+        "quantity": 90,
         "unit": "ml"
       },
       {
@@ -7439,6 +7434,16 @@
       {
         "ingredient": "garlic_raw",
         "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_bell_pepper_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
         "unit": "g"
       }
     ],
@@ -7626,7 +7631,7 @@
       "lactose",
       "milk"
     ],
-    "servings": 10,
+    "servings": 7,
     "time_total": 90,
     "confidence": 0.9,
     "description": "Les truffes brésiliennes des anniversaires : lait concentré sucré et cacao cuits jusqu'à se détacher de la casserole, roulés en boules dans les vermicelles de chocolat.",
@@ -10026,13 +10031,11 @@
       "vegan",
       "vegetarian"
     ],
-    "allergens": [
-      "sesame"
-    ],
+    "allergens": [],
     "servings": 4,
     "time_total": 55,
     "confidence": 1.0,
-    "description": "Préparation de caviar d'aubergine à texture lisse et équilibre aromatique précis, avec une chair fondante et une peau carbonisée, issue de la cuisine méditerranéenne.",
+    "description": "Le caviar d'aubergine provençal : chair d'aubergine rôtie écrasée à l'huile d'olive, à l'ail et au citron, relevée de persil — sans tahini, à la différence du baba ganoush levantin.",
     "composition": [
       {
         "ingredient": "eggplant_raw",
@@ -10043,11 +10046,6 @@
         "ingredient": "garlic_raw",
         "quantity": 9,
         "unit": "g"
-      },
-      {
-        "ingredient": "sesame_tahini_raw_butter_seed_plant",
-        "quantity": 45,
-        "unit": "ml"
       },
       {
         "ingredient": "lemon_juice",
@@ -10071,11 +10069,6 @@
       },
       {
         "ingredient": "black_pepper_spice",
-        "quantity": 2,
-        "unit": "g"
-      },
-      {
-        "ingredient": "paprika_powder",
         "quantity": 2,
         "unit": "g"
       }
@@ -10938,7 +10931,7 @@
   {
     "id": "base_vegan_cheddar_024998",
     "title": "Cheddar végétal au cajou et au poivron",
-    "cuisine": "international",
+    "cuisine": "british",
     "dish_type": "base",
     "vegan": true,
     "diet": [
@@ -13384,7 +13377,7 @@
     "allergens": [
       "gluten"
     ],
-    "servings": 18,
+    "servings": 10,
     "time_total": 27,
     "confidence": 0.9,
     "description": "Gâteau américain croustillant à l'extérieur et moelleux à l'intérieur, réalisé avec une pâte à base de farine de blé, de sucre de canne et de pépites de chocolat noir, typique de la pâtisserie végétalienne créative.",
@@ -14305,27 +14298,47 @@
       "gluten"
     ],
     "servings": 4,
-    "time_total": 55,
+    "time_total": 90,
     "confidence": 1.0,
-    "description": "Plat marocain traditionnel à base de couscous, offrant une semoule légère et aérée, accompagnée de légumes tendres et parfumés, avec une texture onctueuse et des arômes épicés de cumin, de paprika et de cannelle.",
+    "description": "Le couscous marocain du vendredi, aux sept légumes : semoule cuite deux fois à la vapeur au-dessus d'un bouillon au gingembre, au curcuma et au safran, où cuisent carottes, navets, chou, courgettes, courge, tomates et pois chiches.",
     "composition": [
       {
         "ingredient": "couscous_to_cook_seed_dried",
-        "quantity": 200,
+        "quantity": 300,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 200,
+        "quantity": 150,
         "unit": "ml"
       },
       {
         "ingredient": "olive_oil_plant",
-        "quantity": 20,
+        "quantity": 30,
         "unit": "ml"
       },
       {
+        "ingredient": "onion_raw",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "ingredient": "tomato_raw_ripe",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
         "ingredient": "carrot_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "turnip_raw",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cabbage_raw",
         "quantity": 200,
         "unit": "g"
       },
@@ -14335,57 +14348,62 @@
         "unit": "g"
       },
       {
+        "ingredient": "pumpkin_raw",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
         "ingredient": "chickpea_boiled",
         "quantity": 200,
         "unit": "g"
       },
       {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "ingredient": "onion_raw",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
         "ingredient": "vegetable_stock_dried",
-        "quantity": 10.1,
+        "quantity": 10,
         "unit": "g"
       },
       {
         "ingredient": "water",
-        "quantity": 800.0,
+        "quantity": 1200,
         "unit": "ml"
       },
       {
-        "ingredient": "base_harissa_ef842f",
-        "quantity": null,
-        "unit": "1 cuillère à café"
-      },
-      {
-        "ingredient": "lemon_juice",
-        "quantity": null,
-        "unit": "1 cuillère à soupe"
-      },
-      {
-        "ingredient": "cumin_spice_seed",
+        "ingredient": "ginger_powder",
         "quantity": 3,
         "unit": "g"
       },
       {
-        "ingredient": "paprika_powder",
-        "quantity": 2.3,
+        "ingredient": "turmeric_powder",
+        "quantity": 3,
         "unit": "g"
       },
       {
-        "ingredient": "cinnamon_powder",
+        "ingredient": "saffron_spice",
+        "quantity": 0.1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "black_pepper_spice",
         "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parsley_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
         "unit": "g"
       }
     ],
-    "n_instructions": 8,
+    "n_instructions": 6,
     "flags": [],
     "similar": []
   },
@@ -14405,7 +14423,7 @@
     "servings": 6,
     "time_total": 60,
     "confidence": 0.88,
-    "description": "Biscuits secs croustillants obtenus par mélange de farine de blé, d'huile d'olive et de sel, puis cuisson à haute température pour une texture cassante et dorée, caractéristique des crackers salés traditionnels.",
+    "description": "Biscuits secs croustillants obtenus par mélange de farine de blé, d'huile d'olive, de romarin et de sel, puis cuisson à haute température pour une texture cassante et dorée, caractéristique des crackers salés traditionnels.",
     "composition": [
       {
         "ingredient": "wheat_all_purpose_flour_unenriched_unbleached",
@@ -14424,6 +14442,11 @@
       },
       {
         "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "rosemary_fresh_herb",
         "quantity": 5,
         "unit": "g"
       }
@@ -17180,7 +17203,7 @@
     "servings": 4,
     "time_total": 55,
     "confidence": 1.0,
-    "description": "Le dal tadka des dhabas du Pendjab : lentilles corail épaisses aux tomates, gingembre et ail, finies par un tadka de cumin et de piment grésillé, et de la coriandre fraîche.",
+    "description": "Le dal tadka des dhabas du Pendjab : lentilles corail épaisses aux tomates, gingembre et ail, finies par un tadka de cumin, de piments séchés et de piment vert grésillés, et de la coriandre fraîche.",
     "composition": [
       {
         "ingredient": "red_lentil_dried",
@@ -17258,6 +17281,11 @@
         "unit": "ml"
       },
       {
+        "ingredient": "red_hot_chili_pepper_spice_dried",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
         "ingredient": "basmati_rice_raw_seed",
         "quantity": null,
         "unit": "1 portion"
@@ -17281,7 +17309,7 @@
       "gluten",
       "soy"
     ],
-    "servings": 4,
+    "servings": 3,
     "time_total": 35,
     "confidence": 0.91,
     "description": "Le riz sauté le plus simple de Canton : riz de la veille sauté au wok très chaud avec des œufs, des oignons verts, des petits pois et de la sauce soja.",
@@ -20371,7 +20399,7 @@
   {
     "id": "base_spring_roll_wrappers_eba962",
     "title": "Feuilles de Nems / Rouleaux de Printemps (base)",
-    "cuisine": "asian",
+    "cuisine": "vietnamese",
     "dish_type": "pastry",
     "vegan": true,
     "diet": [
@@ -21544,7 +21572,7 @@
   {
     "id": "base_cheddar_vegane_529b97",
     "title": "Fromage végétal fondant au lait de coco",
-    "cuisine": "vegan",
+    "cuisine": "british",
     "dish_type": "ingredient",
     "vegan": true,
     "diet": [
@@ -29166,7 +29194,7 @@
     "allergens": [
       "sesame"
     ],
-    "servings": 4,
+    "servings": 2,
     "time_total": 39,
     "confidence": 1.0,
     "description": "Cuisine indienne avec pommes de terre croustillantes et parfumées, aux saveurs de cumin et de gingembre, préparées avec des épices fraîches et des herbes aromatiques.",
@@ -36817,7 +36845,7 @@
   {
     "id": "base_vegan_mayonnaise_b68322",
     "title": "Mayonnaise Végane",
-    "cuisine": "international",
+    "cuisine": "french",
     "dish_type": "sauce",
     "vegan": true,
     "diet": [
@@ -38509,7 +38537,7 @@
   {
     "id": "base_mozzarella_vegane_fca8c8",
     "title": "Mozzarella Végane",
-    "cuisine": "vegan",
+    "cuisine": "italian",
     "dish_type": "ingredient",
     "vegan": true,
     "diet": [
@@ -41366,7 +41394,7 @@
     "servings": 4,
     "time_total": 34,
     "confidence": 1.0,
-    "description": "Riz japonais cuit à la perfection, assaisonné avec du vinaigre de riz, du sel et du sucre, puis façonné en triangles compacts recouverts de nori croustillant et de sésames grillés — un plat traditionnel japonais à la texture ferme et parfumée.",
+    "description": "Le shio musubi, l'onigiri le plus simple : riz japonais à peine salé, mêlé de sésame grillé, façonné en triangles compacts et entouré d'une bande de nori croustillante.",
     "composition": [
       {
         "ingredient": "white_rice_short_grain_seed_dried",
@@ -41404,9 +41432,7 @@
       "vegan",
       "vegetarian"
     ],
-    "allergens": [
-      "sesame"
-    ],
+    "allergens": [],
     "servings": 4,
     "time_total": 29,
     "confidence": 1.0,
@@ -41420,11 +41446,6 @@
       {
         "ingredient": "nori_dried",
         "quantity": 12,
-        "unit": "g"
-      },
-      {
-        "ingredient": "sesame_raw_seed",
-        "quantity": 20,
         "unit": "g"
       },
       {
@@ -43592,6 +43613,11 @@
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "baking_powder",
+        "quantity": 6,
         "unit": "g"
       }
     ],
@@ -46966,7 +46992,7 @@
     "servings": 4,
     "time_total": 73,
     "confidence": 1.0,
-    "description": "Pisto Espagnol végétarien, riche en saveurs et en textures, avec des légumes fondants et des arômes concentrés, préparé avec soin dans une poêle pour obtenir un mélange harmonieux et parfumé.",
+    "description": "Le pisto de la Manche : poivrons rouge et vert, courgette, aubergine et tomate confits ensemble à l'huile d'olive, riche en saveurs et en textures, avec des légumes fondants et des arômes concentrés, préparé avec soin dans une poêle pour obtenir un mélange harmonieux et parfumé.",
     "composition": [
       {
         "ingredient": "eggplant_raw",
@@ -47006,6 +47032,11 @@
       {
         "ingredient": "thyme_fresh_herb",
         "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "ingredient": "green_bell_pepper_raw",
+        "quantity": 200,
         "unit": "g"
       }
     ],
@@ -47362,7 +47393,7 @@
     "allergens": [
       "gluten"
     ],
-    "servings": 4,
+    "servings": 2,
     "time_total": 140,
     "confidence": 1.0,
     "description": "L'autre pizza napolitaine historique, naturellement vegan : sauce tomate, ail en lamelles, origan et huile d'olive, sans fromage.",
@@ -48442,7 +48473,7 @@
       "sesame",
       "soy"
     ],
-    "servings": 4,
+    "servings": 2,
     "time_total": 46,
     "confidence": 1.0,
     "description": "Pommes de terre cuites à la coréenne, tendres et parfumées, avec une sauce soja riche et des graines de sésame toastées — technique de braisage traditionnelle coréenne avec une sauce onctueuse et des arômes de sésame.",
@@ -50684,6 +50715,11 @@
         "ingredient": "black_pepper_spice",
         "quantity": 2,
         "unit": "g"
+      },
+      {
+        "ingredient": "nutmeg_spice",
+        "quantity": 0.5,
+        "unit": "g"
       }
     ],
     "n_instructions": 6,
@@ -50734,6 +50770,11 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 4,
         "unit": "g"
+      },
+      {
+        "ingredient": "white_sugar",
+        "quantity": 5,
+        "unit": "g"
       }
     ],
     "n_instructions": 7,
@@ -50757,7 +50798,7 @@
     "servings": 9,
     "time_total": 25,
     "confidence": null,
-    "description": "Pâte de curry jaune douce et parfumée, dominée par le curcuma et le cumin, idéale pour les légumes et le tofu, avec une texture lisse et une couleur jaune vif, parfumée par la citronnelle et les épices.",
+    "description": "Pâte de curry jaune douce et parfumée, dominée par le curcuma, le cumin et le curry en poudre, idéale pour les légumes et le tofu, avec une texture lisse et une couleur jaune vif, parfumée par la citronnelle et les épices.",
     "composition": [
       {
         "ingredient": "turmeric_powder",
@@ -50798,6 +50839,16 @@
         "ingredient": "sunflower_oil_plant",
         "quantity": 15,
         "unit": "ml"
+      },
+      {
+        "ingredient": "ginger_raw_root_fresh",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "ingredient": "curry_powder",
+        "quantity": 5,
+        "unit": "g"
       }
     ],
     "n_instructions": 4,
@@ -50819,7 +50870,7 @@
     "servings": 16,
     "time_total": 20,
     "confidence": 0.92,
-    "description": "Pâte de curry vegan aux piments rouges frais, citronnelle, galanga, ail et curcuma, plus vive que la pâte aux piments séchés ; base du curry rouge thaï au tofu.",
+    "description": "Pâte de curry vegan aux piments rouges frais, citronnelle, galanga, ail et combava, plus vive que la pâte aux piments séchés ; base du curry rouge thaï au tofu.",
     "composition": [
       {
         "ingredient": "red_hot_chili_pepper_raw",
@@ -50857,11 +50908,6 @@
         "unit": "g"
       },
       {
-        "ingredient": "turmeric_powder",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
         "ingredient": "sunflower_oil_plant",
         "quantity": 30,
         "unit": "ml"
@@ -50869,6 +50915,16 @@
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "kaffir_lime_leaf",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "white_pepper_spice",
+        "quantity": 2,
         "unit": "g"
       }
     ],
@@ -51182,7 +51238,7 @@
   {
     "id": "chili_paste_95cb92",
     "title": "Pâte de piment frais au gingembre",
-    "cuisine": "asian",
+    "cuisine": "chinese",
     "dish_type": "paste",
     "vegan": true,
     "diet": [
@@ -51287,7 +51343,7 @@
   {
     "id": "tamarind_paste_b740bb",
     "title": "Pâte de Tamarin",
-    "cuisine": "asian",
+    "cuisine": "thai",
     "dish_type": "paste",
     "vegan": true,
     "diet": [
@@ -51400,6 +51456,11 @@
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
         "unit": "g"
+      },
+      {
+        "ingredient": "lemon_juice",
+        "quantity": 5,
+        "unit": "ml"
       }
     ],
     "n_instructions": 7,
@@ -53875,7 +53936,7 @@
     "servings": 4,
     "time_total": 840,
     "confidence": 1.0,
-    "description": "Le curry de haricots rouges du Pendjab : haricots trempés une nuit puis mijotés dans une sauce épaisse d'oignon, tomate, gingembre, ail et garam masala, servi sur du riz.",
+    "description": "Le curry de haricots rouges du Pendjab : haricots trempés une nuit puis mijotés dans une sauce épaisse d'oignon, tomate, gingembre, ail, épices entières et garam masala, servi sur du riz.",
     "composition": [
       {
         "ingredient": "kidney_bean_dried",
@@ -53945,6 +54006,21 @@
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "ingredient": "bay_leaf_spice",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cinnamon_powder",
+        "quantity": 1,
+        "unit": "g"
+      },
+      {
+        "ingredient": "cloves_spice",
+        "quantity": 0.5,
         "unit": "g"
       },
       {
@@ -54644,7 +54720,7 @@
   {
     "id": "base_cashew_ricotta_5c62e9",
     "title": "Ricotta de Cajou",
-    "cuisine": "international",
+    "cuisine": "italian",
     "dish_type": "base",
     "vegan": true,
     "diet": [
@@ -57956,7 +58032,7 @@
   {
     "id": "salad_asiatique_sesame_948f03",
     "title": "Salade Asiatique Sésame",
-    "cuisine": "asian",
+    "cuisine": "japanese",
     "dish_type": "side",
     "vegan": true,
     "diet": [
@@ -58417,11 +58493,13 @@
       "vegan",
       "vegetarian"
     ],
-    "allergens": [],
+    "allergens": [
+      "sulphites"
+    ],
     "servings": 4,
-    "time_total": 62,
+    "time_total": 85,
     "confidence": 1.0,
-    "description": "Salade végétalienne marocaine où les aubergines carbonisées et les tomates tendres se marient dans une sauce parfumée aux épices et au citron, avec une texture croquante et fraîche",
+    "description": "Une salade du repas marocain : rondelles d'aubergine dorées à la poêle puis nappées de chermoula, la marinade à l'ail, au cumin, au paprika, aux herbes et au citron, servies à température ambiante.",
     "composition": [
       {
         "ingredient": "eggplant_raw",
@@ -58429,9 +58507,9 @@
         "unit": "g"
       },
       {
-        "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
-        "unit": "g"
+        "ingredient": "sunflower_oil_plant",
+        "quantity": 60,
+        "unit": "ml"
       },
       {
         "ingredient": "garlic_raw",
@@ -58449,32 +58527,37 @@
         "unit": "g"
       },
       {
-        "ingredient": "olive_oil_plant",
-        "quantity": 45,
-        "unit": "ml"
+        "ingredient": "coriander_raw_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
       },
       {
         "ingredient": "parsley_fresh_herb",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 3,
-        "unit": "g"
-      },
-      {
-        "ingredient": "coriander_raw_fresh_herb",
-        "quantity": 10,
+        "quantity": 15,
         "unit": "g"
       },
       {
         "ingredient": "lemon_juice",
         "quantity": 20,
         "unit": "ml"
+      },
+      {
+        "ingredient": "vinegar_liquid",
+        "quantity": 10,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 4,
+        "unit": "g"
       }
     ],
-    "n_instructions": 5,
+    "n_instructions": 4,
     "flags": [],
     "similar": []
   },
@@ -59581,7 +59664,7 @@
       "soy",
       "mustard"
     ],
-    "servings": 4,
+    "servings": 2,
     "time_total": 16,
     "confidence": 1.0,
     "description": "Salade coréenne de pousses de soja croustillantes, parfumée à l'ail et à la sauce soja, avec une texture fraîche et une coloration dorée, caractéristique de la cuisine traditionnelle coréenne.",
@@ -61544,7 +61627,7 @@
   {
     "id": "vegetarian_brown_sauce_4233df",
     "title": "Sauce Brune Végétarienne",
-    "cuisine": "western",
+    "cuisine": "international",
     "dish_type": "sauce",
     "vegan": true,
     "diet": [
@@ -62144,7 +62227,7 @@
     "servings": 8,
     "time_total": 30,
     "confidence": 0.97,
-    "description": "Sauce tomate italienne mijotée avec ail, basilic et huile d'olive, parfaite pour accompagner des pâtes ou des légumes, avec une texture onctueuse et des saveurs équilibrées de tomates fraîches et d'herbes aromatiques.",
+    "description": "Sauce tomate italienne mijotée sur un fond d'oignon et d'ail à l'huile d'olive, finie au basilic, parfaite pour accompagner des pâtes ou des légumes, avec une texture onctueuse et des saveurs équilibrées de tomates fraîches et d'herbes aromatiques.",
     "composition": [
       {
         "ingredient": "tomato_raw_ripe",
@@ -62169,6 +62252,11 @@
       {
         "ingredient": "table_salt_unenriched",
         "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "onion_raw",
+        "quantity": 80,
         "unit": "g"
       }
     ],

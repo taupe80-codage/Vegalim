@@ -121,7 +121,7 @@ VARIANTS = {
     "dal_lentil_corail_classic_k1d1p1": [
         ("title", "Dal tadka du Pendjab"),
         ("desc", "Le dal tadka des dhabas du Pendjab : lentilles corail épaisses aux tomates, gingembre et ail, "
-                 "finies par un tadka de cumin et de piment grésillé, et de la coriandre fraîche."),
+                 "finies par un tadka de cumin, de piments séchés et de piment vert grésillés, et de la coriandre fraîche."),
         ("compo", [
             ("red_lentil_dried", 250, "g", "base", "dried"),
             ("onion_raw", 140, "g", "aromatic"),
@@ -138,13 +138,14 @@ VARIANTS = {
             ("table_salt_unenriched", 4, "g", "seasoning"),
             ("water", 700, "ml", "liquid"),
             ("lime_juice_fresh", 15, "ml", "acid"),
+            ("red_hot_chili_pepper_spice_dried", 2, "g", "spice"),   # tadka (2026-11-21)
             ("basmati_rice_raw_seed", None, "1 portion", "serving_suggestion"),
         ]),
         ("steps", [
             "Rincer 250 g de lentilles corail et les cuire dans 700 ml d'eau avec 3 g de curcuma, 20 minutes, jusqu'à ce qu'elles se défassent.",
             "Chauffer 25 ml d'huile et faire revenir 140 g d'oignon émincé 8 minutes, jusqu'à ce qu'il soit doré. Ajouter 15 g d'ail et 10 g de gingembre hachés, puis 4 g de coriandre moulue et 2 g de garam masala, et cuire 1 minute.",
             "Ajouter 250 g de tomates concassées et 4 g de sel, puis réduire 5 minutes. Verser sur les lentilles et mijoter 5 minutes.",
-            "Tadka : chauffer 15 ml d'huile, y faire grésiller 5 g de graines de cumin, 5 g d'ail émincé et 10 g de piment vert fendu, 1 minute, puis verser sur le dal.",
+            "Tadka : chauffer 15 ml d'huile, y faire grésiller 5 g de graines de cumin, 2 g de piments rouges séchés entiers, 5 g d'ail émincé et 10 g de piment vert fendu, 1 minute, puis verser sur le dal.",
             "Ajouter 15 ml de jus de citron vert, parsemer de 10 g de coriandre fraîche ciselée et servir avec du riz.",
         ]),
         ("time", 20, 0, 35),

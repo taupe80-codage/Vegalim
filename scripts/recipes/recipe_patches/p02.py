@@ -65,7 +65,8 @@ PATCHES = {
     ],
     "base_shortcrust_e6e9f0": [
         ("txt", "125g de beurre froide", "125g de beurre froid"),
-        ("txt", "Ajouter 30ml d'eau froide et 4g de sel.", "Ajouter l'œuf battu, 30ml d'eau froide et 4g de sel."),
+        # sucre ajouté le 2026-11-21 (fix_near_duplicates_2026_11_21.py : pincée de sucre de la brisée)
+        ("txt", "Ajouter 30ml d'eau froide et 4g de sel.", "Ajouter l'œuf battu, 30ml d'eau froide, 4g de sel et 5 g de sucre."),
         ("txt", " Servir dans un plat décoratif, accompagné d'une salade verte ou d'un légume grillé.", ""),
     ],
     "base_soy_cream_4dc027": [

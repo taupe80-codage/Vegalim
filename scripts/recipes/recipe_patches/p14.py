@@ -25,7 +25,7 @@ PATCHES = {
     ],
     "main_caviar_d_aubergine_0e824d": [
         ("ing", "lemon_raw", "lemon_juice", 30, "ml"),
-        ("add", "paprika_powder", 2, "g", "spice"),
+        # paprika retiré le 2026-11-21 : caviar d'aubergine provençal (fix_near_duplicates_2026_11_21.py)
         ("step-", "Servir sans attendre, car la chaleur et le croustillant du pain pita"),
     ],
     "main_chili_sin_carne_125ff2": [

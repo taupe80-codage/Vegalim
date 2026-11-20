@@ -199,7 +199,7 @@ PATCHES = {
         ("add", "water", 30, "ml", "liquid"),
     ],
     "dessert_cookie_chocolat_vegan_b9c6cc": [
-        ("serv", 18),
+        ("serv", 10),   # 18 → 10 parts le 2026-11-21 (≈ 2 cookies par portion)
         ("txt", "150 g d'huile fondue", "145 g de beurre végétal fondu"),
         ("txt", "pépites de chocolat noir à plus de 70% de cacao", "pépites de chocolat noir (au moins 40 % de cacao)"),
         ("step-", "Vérifier que les cookies sont croustillants sur les bords"),

@@ -480,8 +480,8 @@
         "original": "Melty Coconut Milk Vegan Cheese"
       },
       "origin": {
-        "cuisine": "vegan",
-        "country": "",
+        "cuisine": "british",
+        "country": "united_kingdom",
         "region": ""
       },
       "servings": 11,
@@ -616,8 +616,11 @@
       },
       "difficulty_level": "medium",
       "search_tokens": [
+        "anglais",
         "biere",
         "blending",
+        "britannique",
+        "british",
         "cajou",
         "cakes",
         "cashew",
@@ -1322,14 +1325,6 @@
           }
         },
         {
-          "ingredient": "turmeric_powder",
-          "quantity": 5,
-          "unit": "g",
-          "meta": {
-            "role": "spice"
-          }
-        },
-        {
           "ingredient": "sunflower_oil_plant",
           "quantity": 30,
           "unit": "ml",
@@ -1343,6 +1338,22 @@
           "unit": "g",
           "meta": {
             "role": "seasoning"
+          }
+        },
+        {
+          "ingredient": "kaffir_lime_leaf",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic"
+          }
+        },
+        {
+          "ingredient": "white_pepper_spice",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice"
           }
         }
       ],
@@ -1381,11 +1392,11 @@
       "dish_type": "paste",
       "servings_default": 16,
       "_chef_note": "Doubler les quantités de piment pour une pâte rouge intense, ou substituer les piments rouges par des verts pour une version verte.",
-      "description": "Pâte de curry vegan aux piments rouges frais, citronnelle, galanga, ail et curcuma, plus vive que la pâte aux piments séchés ; base du curry rouge thaï au tofu.",
+      "description": "Pâte de curry vegan aux piments rouges frais, citronnelle, galanga, ail et combava, plus vive que la pâte aux piments séchés ; base du curry rouge thaï au tofu.",
       "instructions": [
         "Étape 1 : Éplucher et couper grossièrement l'ail en petits morceaux, puis hacher l'oignon en fines lamelles. Retirer les feuilles extérieures du lemongrass et couper la tige en rondelles fines. Les odeurs des épices et des herbes commencent à se révéler.",
         "Étape 2 : Égrainer les piments rouges et les hacher grossièrement. Ajuster la quantité selon le niveau de piquant souhaité. La couleur rouge vif des piments ajoute une touche de vivacité à la préparation.",
-        "Étape 3 : Placer tous les ingrédients, y compris le coriandre en graines, le cumin, la curcuma, ainsi que le galanga (racine fraîche), dans un mortier ou un blender. Mixer en ajoutant progressivement l'huile de tournesol jusqu'à obtenir une pâte lisse et homogène. La texture devient crémeuse et les saveurs commencent à se mélanger.",
+        "Étape 3 : Placer tous les ingrédients, y compris le coriandre en graines, le cumin, 2 g de poivre blanc, 4 g de feuilles de combava finement ciselées, ainsi que le galanga (racine fraîche), dans un mortier ou un blender. Mixer en ajoutant progressivement l'huile de tournesol jusqu'à obtenir une pâte lisse et homogène. La texture devient crémeuse et les saveurs commencent à se mélanger.",
         "Étape 4 : Ajuster l'assaisonnement en sel de mer. La pâte commence à prendre forme et les parfums des épices se révèlent.",
         "Étape 5 : Goûter et ajuster la saveur. Si nécessaire, ajouter un peu plus de sel ou d'huile de tournesol pour atteindre l'équilibre parfait.",
         "Étape 6 : Conserver la pâte de curry dans un pot hermétique au réfrigérateur jusqu'à 2 semaines, ou congeler en portions pour une utilisation future.",
@@ -1403,6 +1414,7 @@
       },
       "difficulty_level": "hard",
       "search_tokens": [
+        "(kaffir",
         "(racine",
         "10 min",
         "20 min",
@@ -1411,19 +1423,21 @@
         "asiatique",
         "aux",
         "avance",
+        "blanc",
         "blending",
         "chef",
         "chili",
         "chilling",
         "citronelle",
         "coeliaque",
+        "combava",
         "complexe",
         "coriander",
         "coriandre",
         "cumin",
-        "curcuma",
         "curry",
         "express",
+        "feuille",
         "fort",
         "fouette",
         "fraiche)",
@@ -1437,9 +1451,13 @@
         "gluten free",
         "grass",
         "hot",
+        "kaffir",
+        "leaf",
         "leger",
         "lemon",
         "light",
+        "lime",
+        "lime)",
         "low calorie",
         "minceur",
         "mixe",
@@ -1450,6 +1468,7 @@
         "pepper",
         "piment",
         "piments",
+        "poivre",
         "quick",
         "rapide",
         "red",
@@ -1466,11 +1485,11 @@
         "thai",
         "thailande",
         "tournesol",
-        "turmeric",
         "vegan",
         "vegetalien",
         "vegetarien",
-        "veloute"
+        "veloute",
+        "white"
       ]
     },
     {
@@ -2436,6 +2455,12 @@
       ],
       "scoring": {
         "spice_level": 2
+      },
+      "result": {
+        "texture": [
+          "lisse",
+          "homogene"
+        ]
       }
     },
     {
@@ -3289,6 +3314,12 @@
       ],
       "scoring": {
         "spice_level": 1
+      },
+      "result": {
+        "texture": [
+          "ferme",
+          "lisse"
+        ]
       }
     },
     {
@@ -4276,8 +4307,8 @@
         "en": "Vegan Mozzarella"
       },
       "origin": {
-        "cuisine": "vegan",
-        "country": "",
+        "cuisine": "italian",
+        "country": "italy",
         "region": ""
       },
       "servings": 12,
@@ -4396,6 +4427,9 @@
         "glace",
         "gluten free",
         "intermediaire",
+        "italian",
+        "italie",
+        "italien",
         "leger",
         "lemon",
         "lent",
@@ -4403,11 +4437,14 @@
         "long",
         "low calorie",
         "mais",
+        "mediterranee",
         "mijote",
         "minceur",
         "moyen",
         "mozzarella",
         "noix",
+        "pasta",
+        "pates",
         "refrigere",
         "salt",
         "sans gluten",
@@ -5052,8 +5089,8 @@
         "en": "Peanut Butter"
       },
       "origin": {
-        "cuisine": "international",
-        "country": "",
+        "cuisine": "american",
+        "country": "united_states",
         "region": "",
         "city": ""
       },
@@ -5144,9 +5181,12 @@
         "10 min",
         "20 min",
         "5 min",
+        "americain",
+        "american",
         "baking",
         "beurre",
         "blending",
+        "burger",
         "butter",
         "cacahuete",
         "coeliaque",
@@ -5161,7 +5201,6 @@
         "fouette",
         "four",
         "gluten free",
-        "international",
         "kids",
         "leger",
         "light",
@@ -5179,6 +5218,7 @@
         "sel",
         "simple",
         "table",
+        "usa",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -5908,6 +5948,14 @@
           "meta": {
             "role": "seasoning"
           }
+        },
+        {
+          "ingredient": "lemon_juice",
+          "quantity": 5,
+          "unit": "ml",
+          "meta": {
+            "role": "acidity"
+          }
         }
       ],
       "tags": {
@@ -5948,7 +5996,7 @@
       "_chef_note": "Pâte Feuilletée végétale",
       "description": "Pâte feuilletée croustillante et délicieuse, idéale pour les millefeuilles et les feuilletés, avec une texture croquante et une couleur dorée.",
       "instructions": [
-        "Étape 1: Dans un grand bol, mélangez 250g de farine de blé avec 5g de sel et 50g de beurre fondu, puis ajoutez progressivement 100ml d'eau froide tout en remuant jusqu'à obtenir une détrempe homogène et lisse.",
+        "Étape 1: Dans un grand bol, mélangez 250g de farine de blé avec 5g de sel et 50g de beurre fondu, puis ajoutez progressivement 100ml d'eau froide additionnée de 5 ml de jus de citron tout en remuant jusqu'à obtenir une détrempe homogène et lisse.",
         "Étape 2: Étalez la détrempe en un rectangle régulier d'environ 1 cm d'épaisseur, puis placez le reste du beurre (150g) aplati au centre, en veillant à bien le répartir.",
         "Étape 3: Rabattez délicatement les bords de la détrempe sur le beurre pour former un rectangle plus grand, en faisant attention à ne pas appliquer trop de pression, puis étalez-le en un rectangle trois fois plus long, jusqu'à atteindre une épaisseur d'environ 0,5 cm.",
         "Étape 4: Pliez le rectangle en trois (tour simple), en pliant les deux extrémités vers le centre, puis tournez-le de 90 degrés pour que les plis soient perpendiculaires à vous, et réfrigérez pendant 30 minutes pour permettre à la pâte de se reposer.",
@@ -5974,6 +6022,7 @@
         "ble",
         "butter",
         "chilling",
+        "citron",
         "classique",
         "cuit au four",
         "debutant",
@@ -5990,6 +6039,7 @@
         "froid",
         "glace",
         "leger",
+        "lemon",
         "lent",
         "light",
         "long",
@@ -6577,6 +6627,14 @@
           "meta": {
             "role": "seasoning"
           }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 80,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic"
+          }
         }
       ],
       "tags": {
@@ -6612,9 +6670,9 @@
       "dish_type": "sauce",
       "servings_default": 8,
       "_chef_note": "Cette sauce tomate est polyvalente et peut être utilisée dans de nombreuses recettes végétaliennes.",
-      "description": "Sauce tomate italienne mijotée avec ail, basilic et huile d'olive, parfaite pour accompagner des pâtes ou des légumes, avec une texture onctueuse et des saveurs équilibrées de tomates fraîches et d'herbes aromatiques.",
+      "description": "Sauce tomate italienne mijotée sur un fond d'oignon et d'ail à l'huile d'olive, finie au basilic, parfaite pour accompagner des pâtes ou des légumes, avec une texture onctueuse et des saveurs équilibrées de tomates fraîches et d'herbes aromatiques.",
       "instructions": [
-        "Étape 1 : Dans une poêle, faire chauffer l'huile d'olive à feu moyen. Ajouter l'ail émincé et faire revenir pendant 1 minute, en remuant régulièrement, jusqu'à ce qu'il soit parfumé et légèrement doré.",
+        "Étape 1 : Dans une poêle, faire chauffer l'huile d'olive à feu moyen. Ajouter 80 g d'oignon finement émincé et le faire fondre 5 minutes sans coloration, puis l'ail émincé, et faire revenir pendant 1 minute, en remuant régulièrement, jusqu'à ce qu'il soit parfumé et légèrement doré.",
         "Étape 2 : Ajouter les tomates concassées (fraîches ou en boîte) avec leur jus. Porter à ébullition, puis réduire le feu à feu doux et laisser mijoter pendant 20 minutes, en remuant occasionnellement, jusqu'à ce que la sauce ait épaissi et que les saveurs soient bien mélangées.",
         "Étape 3 : Pendant la cuisson, assaisonner avec le sel. Vous pouvez ajuster la quantité de sel selon vos goûts.",
         "Étape 4 : Une fois la sauce cuite, incorporer le basilic frais ciselé. Remuer délicatement pour bien répartir les feuilles de basilic.",
@@ -6660,7 +6718,9 @@
         "mijote",
         "minceur",
         "moyen",
+        "oignon",
         "olive",
+        "onion",
         "pasta",
         "pates",
         "poele",
@@ -6917,6 +6977,14 @@
           "meta": {
             "role": "seasoning"
           }
+        },
+        {
+          "ingredient": "white_sugar",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning"
+          }
         }
       ],
       "tags": {
@@ -6959,7 +7027,7 @@
       "description": "Pâte brisée végétarienne légère et friable, idéale pour quiches, tartes et tourtes, avec une texture croustillante et dorée. Parfaite pour une base de tarte salée ou sucrée, cette pâte brisée est facile à préparer et offre une texture délicate.",
       "instructions": [
         "Étape 1: Dans un grand bol, mélanger 250g de farine avec 125g de beurre froid, en utilisant vos doigts ou une spatule, jusqu'à obtenir une texture ressemblant à du sable grossier et sablonneux.",
-        "Étape 2: Ajouter l'œuf battu, 30ml d'eau froide et 4g de sel. Mélanger jusqu'à ce que la pâte commence à se former et devienne légèrement collante. Ne pas trop pétrir pour éviter que la pâte ne devienne dure.",
+        "Étape 2: Ajouter l'œuf battu, 30ml d'eau froide, 4g de sel et 5 g de sucre. Mélanger jusqu'à ce que la pâte commence à se former et devienne légèrement collante. Ne pas trop pétrir pour éviter que la pâte ne devienne dure.",
         "Étape 3: Rassembler la pâte en une boule et l'aplatir légèrement en un disque. Envelopper dans du film plastique et réfrigérer pendant au moins 30 minutes pour que la pâte se repose et devienne plus facile à étaler.",
         "Étape 4: Étaler la pâte sur un plan fariné à une épaisseur d'environ 3 mm. Foncer un moule à tarte légèrement huilé avec du beurre pour éviter que la pâte ne colle.",
         "Étape 5: Piquer le fond de la tarte avec une fourchette pour éviter qu'elle ne gonfle pendant la cuisson et pour créer des petits trous qui permettront à la vapeur de s'échapper.",
@@ -6982,6 +7050,7 @@
         "all",
         "baking",
         "beurre",
+        "blanc",
         "ble",
         "boulangerie",
         "brisee",
@@ -7017,6 +7086,8 @@
         "shortcrust",
         "simple",
         "steaming",
+        "sucre",
+        "sugar",
         "table",
         "tout",
         "usage",
@@ -7024,6 +7095,7 @@
         "vegetarien",
         "water",
         "wheat",
+        "white",
         "œuf"
       ]
     },
@@ -7556,8 +7628,8 @@
         "en": "Spring Roll Wrappers"
       },
       "origin": {
-        "cuisine": "asian",
-        "country": "",
+        "cuisine": "vietnamese",
+        "country": "vietnam",
         "region": "",
         "city": ""
       },
@@ -7685,8 +7757,6 @@
       "search_tokens": [
         "(base)",
         "(eau",
-        "asia",
-        "asian",
         "asiatique",
         "coeliaque",
         "cornstarch",
@@ -7727,6 +7797,9 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "vietnam",
+        "vietnamese",
+        "vietnamien",
         "water",
         "wok",
         "wrap",
@@ -8535,8 +8608,8 @@
         "en": "Vegetable Broth"
       },
       "origin": {
-        "cuisine": "universal",
-        "country": "",
+        "cuisine": "french",
+        "country": "france",
         "region": "",
         "city": ""
       },
@@ -8709,12 +8782,16 @@
         "celery",
         "chef",
         "chilling",
+        "classique",
         "coco",
         "coconut",
         "coeliaque",
         "complexe",
         "eau",
         "eau bouillante",
+        "francais",
+        "france",
+        "french",
         "froid",
         "garlic",
         "glace",
@@ -8749,7 +8826,6 @@
         "technique",
         "thym",
         "thyme",
-        "universal",
         "vegan",
         "vegetable",
         "vegetalien",
@@ -8759,6 +8835,12 @@
       ],
       "scoring": {
         "spice_level": 0
+      },
+      "result": {
+        "texture": [
+          "liquide",
+          "bouillon_riche"
+        ]
       }
     },
     {
@@ -21958,8 +22040,8 @@
         "original": "Fresh Chili and Ginger Paste"
       },
       "origin": {
-        "cuisine": "asian",
-        "country": "",
+        "cuisine": "chinese",
+        "country": "china",
         "region": "",
         "city": ""
       },
@@ -22069,11 +22151,12 @@
         "5 min",
         "ail",
         "and",
-        "asia",
-        "asian",
         "asiatique",
         "blending",
         "chili",
+        "chine",
+        "chinese",
+        "chinois",
         "coeliaque",
         "express",
         "fort",
@@ -22124,6 +22207,12 @@
       ],
       "scoring": {
         "spice_level": 3
+      },
+      "result": {
+        "texture": [
+          "lisse",
+          "legerement_huilee"
+        ]
       }
     },
     {
@@ -23353,54 +23442,74 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 25,
-        "prep_passive_min": 0,
-        "cook_min": 30,
-        "total_min": 55
+        "prep_active_min": 30,
+        "prep_passive_min": 10,
+        "cook_min": 50,
+        "total_min": 90
       },
       "composition": [
         {
           "ingredient": "couscous_to_cook_seed_dried",
-          "quantity": 200,
+          "quantity": 300,
           "unit": "g",
           "meta": {
-            "role": "base",
-            "form": "",
-            "state": "sauteed",
-            "preparation": ""
+            "role": "base"
           }
         },
         {
           "ingredient": "water",
-          "quantity": 200,
+          "quantity": 150,
           "unit": "ml",
           "meta": {
-            "role": "liquid",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
+            "role": "liquid"
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 20,
+          "quantity": 30,
           "unit": "ml",
           "meta": {
-            "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
+            "role": "fat"
+          }
+        },
+        {
+          "ingredient": "onion_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic"
+          }
+        },
+        {
+          "ingredient": "tomato_raw_ripe",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable"
           }
         },
         {
           "ingredient": "carrot_raw",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable"
+          }
+        },
+        {
+          "ingredient": "turnip_raw",
+          "quantity": 250,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable"
+          }
+        },
+        {
+          "ingredient": "cabbage_raw",
           "quantity": 200,
           "unit": "g",
           "meta": {
-            "role": "vegetable",
-            "form": "rounds",
-            "state": "raw",
-            "preparation": "sauteed"
+            "role": "vegetable"
           }
         },
         {
@@ -23408,10 +23517,15 @@
           "quantity": 250,
           "unit": "g",
           "meta": {
-            "role": "vegetable",
-            "form": "rounds",
-            "state": "raw",
-            "preparation": "sauteed"
+            "role": "vegetable"
+          }
+        },
+        {
+          "ingredient": "pumpkin_raw",
+          "quantity": 300,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable"
           }
         },
         {
@@ -23419,108 +23533,79 @@
           "quantity": 200,
           "unit": "g",
           "meta": {
-            "role": "base",
-            "form": "",
-            "state": "sauteed",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "roughly_chopped",
-            "state": "raw",
-            "preparation": "sauteed"
-          }
-        },
-        {
-          "ingredient": "onion_raw",
-          "quantity": 150,
-          "unit": "g",
-          "meta": {
-            "role": "aromatic",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
+            "role": "protein"
           }
         },
         {
           "ingredient": "vegetable_stock_dried",
-          "quantity": 10.1,
+          "quantity": 10,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": "",
-            "note": "bouillon déshydraté pour 800 ml d'eau"
+            "role": "ingredient"
           }
         },
         {
           "ingredient": "water",
-          "quantity": 800.0,
+          "quantity": 1200,
           "unit": "ml",
           "meta": {
-            "role": "seasoning",
-            "note": "pour reconstituer le bouillon"
+            "role": "ingredient"
           }
         },
         {
-          "ingredient": "base_harissa_ef842f",
-          "quantity": null,
-          "unit": "1 cuillère à café",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "harissa",
-            "note": "Pour plus de saveur",
-            "optional": true
-          }
-        },
-        {
-          "ingredient": "lemon_juice",
-          "quantity": null,
-          "unit": "1 cuillère à soupe",
-          "meta": {
-            "role": "serving_suggestion",
-            "ingredient_fr": "sauce au citron",
-            "note": "Pour un zeste de citron",
-            "optional": true
-          }
-        },
-        {
-          "ingredient": "cumin_spice_seed",
+          "ingredient": "ginger_powder",
           "quantity": 3,
           "unit": "g",
           "meta": {
-            "role": "spice",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
+            "role": "spice"
           }
         },
         {
-          "ingredient": "paprika_powder",
-          "quantity": 2.3,
+          "ingredient": "turmeric_powder",
+          "quantity": 3,
           "unit": "g",
           "meta": {
-            "role": "spice",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
+            "role": "spice"
           }
         },
         {
-          "ingredient": "cinnamon_powder",
+          "ingredient": "saffron_spice",
+          "quantity": 0.1,
+          "unit": "g",
+          "meta": {
+            "role": "spice"
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
           "quantity": 2,
           "unit": "g",
           "meta": {
-            "role": "spice",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
+            "role": "spice"
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb"
+          }
+        },
+        {
+          "ingredient": "coriander_raw_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb"
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning"
           }
         }
       ],
@@ -23534,8 +23619,9 @@
           "gluten"
         ],
         "technique": [
-          "sauteing",
-          "simmering"
+          "steaming",
+          "simmering",
+          "sauteing"
         ],
         "process": [
           "wok_hei",
@@ -23579,41 +23665,45 @@
       },
       "search_tokens": [
         "(eau",
-        "1 heure",
         "a l'etouffee",
         "africain",
         "avance",
-        "base_harissa_ef842f",
         "bouillon",
         "braise",
+        "cabbage",
         "carotte",
         "carrot",
         "chef",
         "chiches",
         "chickpea",
-        "citron",
+        "chou",
         "complexe",
         "courgette",
         "couscous",
+        "cuit vapeur",
         "eau",
         "epice",
         "green",
         "leger",
         "legumes",
-        "lemon",
+        "lent",
         "light",
+        "long",
         "low calorie",
         "maroc",
         "marocain",
         "mijote",
         "minceur",
         "moroccan",
+        "navet",
         "oignon",
         "olive",
         "onion",
         "poele",
         "pois",
         "potable)",
+        "potiron",
+        "pumpkin",
         "ragout",
         "sans produit animal",
         "sans viande",
@@ -23621,12 +23711,15 @@
         "sauteing",
         "simmering",
         "squash",
+        "steaming",
         "stock",
         "tajine",
         "technique",
         "tomate",
         "tomato",
         "traditionnel",
+        "turnip",
+        "vapeur",
         "vegan",
         "vegetable",
         "vegetalien",
@@ -23639,16 +23732,14 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.97,
-      "description": "Plat marocain traditionnel à base de couscous, offrant une semoule légère et aérée, accompagnée de légumes tendres et parfumés, avec une texture onctueuse et des arômes épicés de cumin, de paprika et de cannelle.",
+      "description": "Le couscous marocain du vendredi, aux sept légumes : semoule cuite deux fois à la vapeur au-dessus d'un bouillon au gingembre, au curcuma et au safran, où cuisent carottes, navets, chou, courgettes, courge, tomates et pois chiches.",
       "instructions": [
-        "Étape 1 : Faites revenir l'oignon jaune émincé à feu moyen dans un filet d'huile d'olive pendant 5 minutes, jusqu'à ce qu'il soit translucide et légèrement doré, en remuant régulièrement pour éviter les brûlures.",
-        "Étape 2 : Ajoutez le cumin, le paprika et la cannelle, et cuisez pendant 1 minute en remuant pour les torréfier sans les brûler. Vous devriez sentir les arômes des épices et voir leur couleur légèrement foncée.",
-        "Étape 3 : Incorporer les tomates grossièrement coupées, les carottes en rondelles et les pois chiches. Versez les 800 ml d'eau chaude, portez à ébullition, puis réduisez à feu moyen-doux, en laissant mijoter avec un léger bouillonnement.",
-        "Étape 4 : Laissez mijoter à couvert pendant 20 minutes, jusqu'à ce que les carottes soient tendres mais encore fermes sous la pointe d'un couteau, avec une texture légèrement ferme au centre.",
-        "Étape 5 : Ajoutez les courgettes en rondelles et cuisez encore pendant 10 minutes à découvert, jusqu'à ce qu'elles soient juste fondantes et gardent une légère fermeté, en les retournant à mi-cuisson pour une cuisson uniforme.",
-        "Étape 6 : Pendant ce temps, préparez le couscous. Versez 200 ml d'eau bouillante sur la semoule dans un grand saladier. Couvrez hermétiquement et laissez gonfler pendant 5 minutes, jusqu'à ce que la semoule ait doublé de volume et soit légèrement ferme au toucher.",
-        "Étape 7 : Égrainez la semoule à la fourchette en incorporant les 20 ml d'huile d'olive. Les grains doivent être bien séparés et non compacts, avec une texture légère et aérée, et une odeur de semoule fraîche.",
-        "Étape 8 : Servez la semoule dans des assiettes creuses, napper de légumes et de bouillon. Le plat doit être généreux, parfumé et chaque légume identifiable, avec une présentation visuelle appétissante et des arômes qui invitent à la dégustation. Vous pouvez accompagner ce plat de harissa ou de sauce au citron pour plus de saveur."
+        "Étape 1 : Dans la marmite du couscoussier, faire revenir 200 g d'oignon émincé 5 minutes dans 20 ml d'huile d'olive avec 3 g de gingembre moulu, 3 g de curcuma, 2 g de poivre noir et une pincée de safran (0,1 g).",
+        "Étape 2 : Ajouter 250 g de tomates concassées, 200 g de pois chiches cuits et un bouquet de 15 g de persil et 15 g de coriandre ficelé, puis verser 1,2 litre d'eau avec 10 g de bouillon de légumes et 2 g de sel. Porter à ébullition.",
+        "Étape 3 : Mettre 300 g de semoule dans un grand plat, l'arroser de 150 ml d'eau avec 2 g de sel, l'égrainer entre les mains et la laisser gonfler 10 minutes.",
+        "Étape 4 : Ajouter au bouillon 250 g de carottes et 250 g de navets coupés en deux dans la longueur, et 200 g de chou en quartiers. Poser la semoule dans le haut du couscoussier et la cuire 20 minutes à la vapeur, à compter du moment où la vapeur traverse le grain.",
+        "Étape 5 : Verser la semoule dans le plat et l'égrainer avec 10 ml d'huile d'olive. Ajouter au bouillon 250 g de courgettes et 300 g de courge en gros morceaux, puis remettre la semoule à la vapeur 15 minutes.",
+        "Étape 6 : Dresser la semoule en dôme, disposer les légumes en couronne et arroser de bouillon, en servant le reste du bouillon à part."
       ],
       "diet_flags": {
         "vegan": true,
@@ -24137,6 +24228,14 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "baking_powder",
+          "quantity": 6,
+          "unit": "g",
+          "meta": {
+            "role": "leavening"
+          }
         }
       ],
       "tags": {
@@ -24192,6 +24291,7 @@
         "(eau",
         "45 minutes",
         "all",
+        "baking",
         "ble",
         "eau",
         "enfants",
@@ -24205,6 +24305,7 @@
         "kids",
         "l'oignon",
         "leger",
+        "lever",
         "light",
         "low calorie",
         "minceur",
@@ -24215,6 +24316,8 @@
         "pancakes",
         "poele",
         "potable)",
+        "poudre",
+        "powder",
         "purpose",
         "red",
         "rouge",
@@ -24244,7 +24347,7 @@
       "_quality_score": 0.8,
       "description": "Pancakes salés végans ultra structurés, moelleux et parfumés, avec une surface croustillante dorée obtenue grâce à une cuisson précise en poêle antiadhésive.",
       "instructions": [
-        "Étape 1 : Dans un grand bol, mélanger 120 g de farine de blé, 4 g de sel de mer et 165 ml d'eau filtrée à température ambiante. Ajouter 80 g d'oignon rouge émincé finement et 22 ml d'huile d'olive. Incorporer progressivement ces ingrédients en fouettant jusqu'à obtenir une pâte lisse et homogène, sans grumeaux, en environ 5 minutes.",
+        "Étape 1 : Dans un grand bol, mélanger 120 g de farine de blé, 6 g de levure chimique, 4 g de sel de mer et 165 ml d'eau filtrée à température ambiante. Ajouter 80 g d'oignon rouge émincé finement et 22 ml d'huile d'olive. Incorporer progressivement ces ingrédients en fouettant jusqu'à obtenir une pâte lisse et homogène, sans grumeaux, en environ 5 minutes.",
         "Étape 2 : Laisser reposer la pâte pendant 10 minutes à température ambiante pour permettre au gluten de se développer et à la farine d'absorber l'eau. La pâte doit être lisse et sans grumeaux.",
         "Étape 3 : Chauffer une poêle antiadhésive avec une fine couche d'huile d'olive à feu moyen-vif. Lorsque la poêle est chaude, verser une louche de pâte par pancake. Cuire pendant 2-3 minutes, jusqu'à ce que la surface soit dorée et que des bulles se forment.",
         "Étape 4 : Retourner les pancakes avec précaution et cuire pendant 1-2 minutes à feu moyen, en vérifiant que la surface est dorée des deux côtés. Les pancakes doivent être légèrement boursouflés, avec une texture moelleuse à l'intérieur.",
@@ -38589,6 +38692,17 @@
           }
         },
         {
+          "ingredient": "red_hot_chili_pepper_spice_dried",
+          "quantity": 2,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "basmati_rice_raw_seed",
           "quantity": null,
           "unit": "1 portion",
@@ -38731,12 +38845,12 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 1.0,
-      "description": "Le dal tadka des dhabas du Pendjab : lentilles corail épaisses aux tomates, gingembre et ail, finies par un tadka de cumin et de piment grésillé, et de la coriandre fraîche.",
+      "description": "Le dal tadka des dhabas du Pendjab : lentilles corail épaisses aux tomates, gingembre et ail, finies par un tadka de cumin, de piments séchés et de piment vert grésillés, et de la coriandre fraîche.",
       "instructions": [
         "Étape 1 : Rincer 250 g de lentilles corail et les cuire dans 700 ml d'eau avec 3 g de curcuma, 20 minutes, jusqu'à ce qu'elles se défassent.",
         "Étape 2 : Chauffer 25 ml d'huile et faire revenir 140 g d'oignon émincé 8 minutes, jusqu'à ce qu'il soit doré. Ajouter 15 g d'ail et 10 g de gingembre hachés, puis 4 g de coriandre moulue et 2 g de garam masala, et cuire 1 minute.",
         "Étape 3 : Ajouter 250 g de tomates concassées et 4 g de sel, puis réduire 5 minutes. Verser sur les lentilles et mijoter 5 minutes.",
-        "Étape 4 : Tadka : chauffer 15 ml d'huile, y faire grésiller 5 g de graines de cumin, 5 g d'ail émincé et 10 g de piment vert fendu, 1 minute, puis verser sur le dal.",
+        "Étape 4 : Tadka : chauffer 15 ml d'huile, y faire grésiller 5 g de graines de cumin, 2 g de piments rouges séchés entiers, 5 g d'ail émincé et 10 g de piment vert fendu, 1 minute, puis verser sur le dal.",
         "Étape 5 : Ajouter 15 ml de jus de citron vert, parsemer de 10 g de coriandre fraîche ciselée et servir avec du riz."
       ],
       "diet_flags": {
@@ -40489,6 +40603,39 @@
           }
         },
         {
+          "ingredient": "bay_leaf_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cinnamon_powder",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
+          "ingredient": "cloves_spice",
+          "quantity": 0.5,
+          "unit": "g",
+          "meta": {
+            "role": "spice",
+            "form": "",
+            "state": "raw",
+            "preparation": ""
+          }
+        },
+        {
           "ingredient": "basmati_rice_raw_seed",
           "quantity": null,
           "unit": "1 portion",
@@ -40625,10 +40772,10 @@
       "servings_default": 4,
       "_quality_score": 0.99,
       "_chef_note": "La cuisson lente des lentilles et des légumes donne une texture crémeuse et une saveur riche.",
-      "description": "Le curry de haricots rouges du Pendjab : haricots trempés une nuit puis mijotés dans une sauce épaisse d'oignon, tomate, gingembre, ail et garam masala, servi sur du riz.",
+      "description": "Le curry de haricots rouges du Pendjab : haricots trempés une nuit puis mijotés dans une sauce épaisse d'oignon, tomate, gingembre, ail, épices entières et garam masala, servi sur du riz.",
       "instructions": [
         "Étape 1 : Faire tremper 250 g de haricots rouges 12 heures, les égoutter, puis les cuire 1 heure dans 1 L d'eau fraîche (après 10 minutes d'ébullition vive), jusqu'à ce qu'ils soient tendres.",
-        "Étape 2 : Faire grésiller 3 g de cumin dans 35 ml d'huile, ajouter 200 g d'oignon haché et le dorer 12 minutes.",
+        "Étape 2 : Faire grésiller 3 g de cumin, 1 g de laurier (2 feuilles), 1 g de cannelle et 0,5 g de clous de girofle dans 35 ml d'huile, ajouter 200 g d'oignon haché et le dorer 12 minutes.",
         "Étape 3 : Ajouter 15 g d'ail, 15 g de gingembre et 5 g de piment hachés, puis 3 g de coriandre moulue et 2 g de curcuma, et cuire 1 minute.",
         "Étape 4 : Ajouter 400 g de tomates mixées et 4 g de sel, puis cuire 10 minutes jusqu'à ce que l'huile se sépare.",
         "Étape 5 : Ajouter les haricots avec 200 ml de leur eau et mijoter 20 minutes, en écrasant quelques haricots pour épaissir. Ajouter 3 g de garam masala.",
@@ -47184,6 +47331,12 @@
       ],
       "scoring": {
         "spice_level": 0
+      },
+      "result": {
+        "texture": [
+          "liquide",
+          "leger"
+        ]
       }
     },
     {
@@ -49253,7 +49406,7 @@
         "region": "new_york",
         "city": ""
       },
-      "servings": 18,
+      "servings": 10,
       "timing": {
         "prep_active_min": 15,
         "prep_passive_min": 0,
@@ -49467,7 +49620,7 @@
       ],
       "difficulty_level": "easy",
       "dish_type": "dessert",
-      "servings_default": 18,
+      "servings_default": 10,
       "_quality_score": 1.0,
       "_chef_note": "Assurez-vous de ne pas trop cuire les cookies, car ils durcissent en refroidissant.",
       "description": "Gâteau américain croustillant à l'extérieur et moelleux à l'intérieur, réalisé avec une pâte à base de farine de blé, de sucre de canne et de pépites de chocolat noir, typique de la pâtisserie végétalienne créative.",
@@ -73204,7 +73357,10 @@
       },
       "equipment": [],
       "result": {
-        "texture": [],
+        "texture": [
+          "cremeux",
+          "frais"
+        ],
         "taste": [
           "acidulé",
           "savoureux"
@@ -79432,7 +79588,7 @@
         "region": "beyrouth",
         "city": ""
       },
-      "servings": 4,
+      "servings": 2,
       "timing": {
         "prep_active_min": 15,
         "prep_passive_min": 10,
@@ -79659,7 +79815,7 @@
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
-      "servings_default": 4,
+      "servings_default": 2,
       "_quality_score": 0.96,
       "description": "Friture de pommes de terre croustillantes à l'extérieur, fondantes à l'intérieur, parfumées à l'ail et au piment, réalisée avec une technique de cuisson libanaise traditionnelle qui met en valeur les saveurs de l'Orient.",
       "instructions": [
@@ -80493,63 +80649,32 @@
       "timing": {
         "prep_active_min": 20,
         "prep_passive_min": 0,
-        "cook_min": 45,
-        "total_min": 65
+        "cook_min": 70,
+        "total_min": 90
       },
       "composition": [
         {
           "ingredient": "eggplant_raw",
-          "quantity": 600,
+          "quantity": 900,
           "unit": "g",
           "meta": {
-            "role": "vegetable",
-            "form": "cubed",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "green_zucchini_squash_raw",
-          "quantity": 500,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "rounds",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "red_bell_pepper_raw",
-          "quantity": 320,
-          "unit": "g",
-          "meta": {
-            "role": "vegetable",
-            "form": "strips",
-            "state": "raw",
-            "preparation": ""
+            "role": "vegetable"
           }
         },
         {
           "ingredient": "tomato_raw_ripe",
-          "quantity": 400,
+          "quantity": 700,
           "unit": "g",
           "meta": {
-            "role": "base",
-            "form": "roughly_chopped",
-            "state": "raw",
-            "preparation": ""
+            "role": "vegetable"
           }
         },
         {
           "ingredient": "onion_raw",
-          "quantity": 150,
+          "quantity": 100,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "sliced_thin",
-            "state": "raw",
-            "preparation": ""
+            "role": "aromatic"
           }
         },
         {
@@ -80557,43 +80682,31 @@
           "quantity": 15,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
+            "role": "aromatic"
           }
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 40,
+          "quantity": 60,
           "unit": "ml",
           "meta": {
-            "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "basil_fresh_herb",
-          "quantity": 20,
-          "unit": "g",
-          "meta": {
-            "role": "herb",
-            "form": "chiffonade",
-            "state": "raw",
-            "preparation": ""
+            "role": "fat"
           }
         },
         {
           "ingredient": "thyme_fresh_herb",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "g",
           "meta": {
-            "role": "herb",
-            "form": "leaves",
-            "state": "raw",
-            "preparation": ""
+            "role": "herb"
+          }
+        },
+        {
+          "ingredient": "basil_fresh_herb",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "herb"
           }
         },
         {
@@ -80601,10 +80714,15 @@
           "quantity": 5,
           "unit": "g",
           "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
+            "role": "seasoning"
+          }
+        },
+        {
+          "ingredient": "black_pepper_spice",
+          "quantity": 1,
+          "unit": "g",
+          "meta": {
+            "role": "spice"
           }
         }
       ],
@@ -80672,12 +80790,11 @@
         "aubergine",
         "basil",
         "basilic",
-        "bell",
+        "black",
         "bohemienne",
         "braise",
         "classique",
         "coeliaque",
-        "courgette",
         "debutant",
         "easy",
         "eggplant",
@@ -80687,7 +80804,6 @@
         "french_provencal",
         "garlic",
         "gluten free",
-        "green",
         "leger",
         "lent",
         "light",
@@ -80695,17 +80811,16 @@
         "low calorie",
         "mijote",
         "minceur",
+        "noir",
         "oignon",
         "olive",
         "onion",
         "pepper",
         "poele",
-        "poivron",
+        "poivre",
         "provencal",
         "provencale",
         "ragout",
-        "red",
-        "rouge",
         "salt",
         "sans gluten",
         "sans produit animal",
@@ -80715,7 +80830,6 @@
         "sel",
         "simmering",
         "simple",
-        "squash",
         "table",
         "thym",
         "thyme",
@@ -80724,22 +80838,19 @@
         "vegan",
         "vegetalien",
         "vegetarien",
-        "wok",
-        "zucchini"
+        "wok"
       ],
       "difficulty_level": "easy",
       "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 1.0,
-      "description": "Ragoût provençal estival de légumes mijotés à l'huile d'olive et herbes, avec une texture fondante et une odeur parfumée, inspiré des saveurs méditerranéennes.",
+      "description": "La bohémienne d'Avignon et du Comtat : une compotée d'aubergines et de tomates longuement mijotée à l'huile d'olive, à l'ail et au thym, écrasée à la cuillère jusqu'à devenir presque une purée.",
       "instructions": [
-        "Étape 1 : Couper les aubergines crues en cubes de 3 cm, puis les faire revenir séparément dans 40 ml d'huile d'olive à feu vif pendant 8 minutes, jusqu'à obtenir une coloration dorée. Réserver.",
-        "Étape 2 : Dans la même poêle, faire confire l'oignon jaune émincé et l'ail à feu doux pendant 10 minutes, jusqu'à atteindre une couleur blonde et une texture fondante.",
-        "Étape 3 : Ajouter le poivron rouge en lanières, les tomates fraîches concassées et le thym frais. Cuire pendant 10 minutes à feu moyen, en remuant régulièrement, jusqu'à ce que les saveurs soient bien mélangées.",
-        "Étape 4 : Incorporer les aubergines réservées et les courgettes crues. Mélanger délicatement pour bien répartir les saveurs et les textures.",
-        "Étape 5 : Cuire à couvert à feu doux pendant 20 minutes, jusqu'à ce que les légumes soient fondants et la sauce soit concentrée, en vérifiant régulièrement la texture.",
-        "Étape 6 : Assaisonner avec 5 g de sel et terminer avec des feuilles de basilic frais déchirées. Servir tiède.",
-        "Étape 7 : Vérifier que les légumes sont très fondants et la sauce est réduite et légèrement sirupeuse, avec une consistance onctueuse."
+        "Étape 1 : Peler 900 g d'aubergines et les couper en dés de 2 cm ; peler, épépiner et concasser 700 g de tomates.",
+        "Étape 2 : Faire revenir les aubergines 10 minutes dans 40 ml d'huile d'olive à feu moyen, en remuant, jusqu'à ce qu'elles soient dorées.",
+        "Étape 3 : Ajouter 100 g d'oignon émincé, 15 g d'ail écrasé, les tomates, 3 g de thym, 5 g de sel et 1 g de poivre.",
+        "Étape 4 : Laisser compoter 1 heure à feu très doux et à découvert, en remuant et en écrasant peu à peu les légumes à la cuillère en bois, jusqu'à obtenir une compotée épaisse.",
+        "Étape 5 : Hors du feu, incorporer 20 ml d'huile d'olive et 10 g de basilic ciselé. Servir tiède ou froid, avec du pain de campagne grillé."
       ],
       "diet_flags": {
         "vegan": true,
@@ -80829,7 +80940,7 @@
         },
         {
           "ingredient": "olive_oil_plant",
-          "quantity": 45,
+          "quantity": 90,
           "unit": "ml",
           "meta": {
             "role": "fat",
@@ -80880,6 +80991,22 @@
             "form": "chopped",
             "state": "raw",
             "preparation": ""
+          }
+        },
+        {
+          "ingredient": "green_bell_pepper_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable"
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb"
           }
         }
       ],
@@ -80939,6 +81066,7 @@
         "ail",
         "aubergine",
         "baking",
+        "bell",
         "black",
         "briam",
         "coeliaque",
@@ -80968,9 +81096,12 @@
         "onion",
         "oregano",
         "origan",
+        "parsley",
         "pepper",
+        "persil",
         "poele",
         "poivre",
+        "poivron",
         "pomme",
         "potato",
         "roti",
@@ -80989,6 +81120,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "vert",
         "wok",
         "zucchini"
       ],
@@ -80996,12 +81128,12 @@
       "dish_type": "main",
       "servings_default": 4,
       "_quality_score": 0.81,
-      "description": "Ragoût de légumes grecs, où les aubergines, courgettes et pommes de terre fondent en bouche, parfumés d'ail et d'origan — technique traditionnelle de la cuisine méditerranéenne.",
+      "description": "Le briam des jours de Carême, un « ladero » : aubergines, courgettes, pommes de terre, poivron vert et tomates confits au four dans beaucoup d'huile d'olive, avec ail, origan et persil, sans fromage.",
       "instructions": [
-        "Étape 1 : Préchauffer le four à 180°C. Couper les aubergines, les courgettes, les pommes de terre et les tomates en rondelles de 5 mm, et l'oignon en demi-rondelles fines.",
-        "Étape 2 : Dans un grand saladier, mélanger tous les légumes avec 45 ml d'huile d'olive, l'ail haché, les herbes (origan), sel et poivre.",
+        "Étape 1 : Préchauffer le four à 180°C. Couper les aubergines, les courgettes, les pommes de terre et les tomates en rondelles de 5 mm, 200 g de poivron vert en lanières et l'oignon en demi-rondelles fines.",
+        "Étape 2 : Dans un grand saladier, mélanger tous les légumes avec 90 ml d'huile d'olive, l'ail haché, l'origan, 15 g de persil haché, sel et poivre.",
         "Étape 3 : Disposer dans un grand plat à gratin en couches légèrement superposées en alternant les couleurs.",
-        "Étape 4 : Arroser d'un filet d'huile d'olive supplémentaire. Enfourner à 180°C pendant 50 à 60 minutes jusqu'à légumes fondants et surface légèrement caramélisée.",
+        "Étape 4 : Couvrir d'une feuille de papier cuisson les 30 premières minutes. Enfourner à 180°C pendant 50 à 60 minutes jusqu'à légumes fondants et surface légèrement caramélisée.",
         "Étape 5 : Laisser reposer 10 minutes. Les légumes doivent être très fondants et confits, légèrement dorés en surface, parfumés aux herbes. Servir tiède avec du pain."
       ],
       "diet_flags": {
@@ -82331,17 +82463,6 @@
           }
         },
         {
-          "ingredient": "sesame_tahini_raw_butter_seed_plant",
-          "quantity": 45,
-          "unit": "ml",
-          "meta": {
-            "role": "condiment",
-            "form": "liquid",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "lemon_juice",
           "quantity": 30,
           "unit": "ml",
@@ -82395,17 +82516,6 @@
             "state": "raw",
             "preparation": ""
           }
-        },
-        {
-          "ingredient": "paprika_powder",
-          "quantity": 2,
-          "unit": "g",
-          "meta": {
-            "role": "spice",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
         }
       ],
       "tags": {
@@ -82416,9 +82526,7 @@
           "vegan",
           "vegetarian"
         ],
-        "allergens": [
-          "sesame"
-        ],
+        "allergens": [],
         "technique": [
           "grilling",
           "sauteing"
@@ -82464,7 +82572,6 @@
         }
       },
       "search_tokens": [
-        "(tahini)",
         "1 heure",
         "ail",
         "aubergine",
@@ -82498,7 +82605,6 @@
         "moyen",
         "noir",
         "olive",
-        "paprika",
         "parsley",
         "pepper",
         "persil",
@@ -82512,7 +82618,6 @@
         "saute",
         "sauteing",
         "sel",
-        "sesame",
         "table",
         "vegan",
         "vegetalien",
@@ -82524,13 +82629,13 @@
       "servings_default": 4,
       "_quality_score": 0.97,
       "_chef_note": "Ce caviar d'aubergine est une préparation internationale qui combine les saveurs de la cuisine traditionnelle avec une texture lisse et crémeuse.",
-      "description": "Préparation de caviar d'aubergine à texture lisse et équilibre aromatique précis, avec une chair fondante et une peau carbonisée, issue de la cuisine méditerranéenne.",
+      "description": "Le caviar d'aubergine provençal : chair d'aubergine rôtie écrasée à l'huile d'olive, à l'ail et au citron, relevée de persil — sans tahini, à la différence du baba ganoush levantin.",
       "instructions": [
         "Étape 1 : Piquer les aubergines à la fourchette, puis les enfourner à 200°C pendant 40 minutes ou les griller directement à la flamme en les retournant toutes les 5 minutes jusqu'à ce que la peau soit carbonisée et la chair soit tendre et fondante, avec une odeur de fumée.",
         "Étape 2 : Laisser tiédir pendant 10 minutes dans une passoire, puis retirer délicatement la peau brûlée et laisser égoutter la chair pendant 15 minutes, jusqu'à ce que l'excès d'humidité soit évacué.",
-        "Étape 3 : Placer la chair dans un bol et incorporer le tahini, l'ail écrasé et le jus de citron frais, puis écraser à la fourchette pour obtenir une texture rustique ou mixer légèrement pour une texture lisse et crémeuse.",
+        "Étape 3 : Placer la chair dans un bol et incorporer l'ail écrasé et le jus de citron frais, puis écraser à la fourchette pour obtenir une texture rustique ou mixer légèrement pour une texture lisse et crémeuse.",
         "Étape 4 : Assaisonner de sel, de poivre moulu et d'huile d'olive, puis goûter et ajuster l'acidité et le goût fumé, en ajoutant éventuellement un peu plus de jus de citron ou d'huile d'olive.",
-        "Étape 5 : Garnir de persil frais haché, de paprika et d'un filet d'huile d'olive, puis servir à température ambiante avec du pain pita croustillant, idéal pour être trempé dans le caviar d'aubergine."
+        "Étape 5 : Garnir de persil frais haché et d'un filet d'huile d'olive, puis servir à température ambiante avec des tranches de pain de campagne grillées."
       ],
       "diet_flags": {
         "vegan": true,
@@ -86231,7 +86336,7 @@
         "region": "guangdong",
         "city": ""
       },
-      "servings": 4,
+      "servings": 3,
       "timing": {
         "prep_active_min": 15,
         "prep_passive_min": 0,
@@ -86370,7 +86475,7 @@
       },
       "difficulty_level": "easy",
       "dish_type": "main",
-      "servings_default": 4,
+      "servings_default": 3,
       "_quality_score": 0.88,
       "description": "Le riz sauté le plus simple de Canton : riz de la veille sauté au wok très chaud avec des œufs, des oignons verts, des petits pois et de la sauce soja.",
       "instructions": [
@@ -92428,7 +92533,7 @@
         "region": "punjab",
         "city": ""
       },
-      "servings": 4,
+      "servings": 2,
       "timing": {
         "prep_active_min": 19,
         "prep_passive_min": 0,
@@ -92672,7 +92777,7 @@
       ],
       "difficulty_level": "hard",
       "dish_type": "main",
-      "servings_default": 4,
+      "servings_default": 2,
       "_quality_score": 0.93,
       "description": "Cuisine indienne avec pommes de terre croustillantes et parfumées, aux saveurs de cumin et de gingembre, préparées avec des épices fraîches et des herbes aromatiques.",
       "instructions": [
@@ -99996,6 +100101,14 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "green_bell_pepper_raw",
+          "quantity": 200,
+          "unit": "g",
+          "meta": {
+            "role": "vegetable"
+          }
         }
       ],
       "tags": {
@@ -100106,6 +100219,7 @@
         "vegan",
         "vegetalien",
         "vegetarien",
+        "vert",
         "wok",
         "zucchini"
       ],
@@ -100113,10 +100227,10 @@
       "dish_type": "side",
       "servings_default": 4,
       "_quality_score": 0.85,
-      "description": "Pisto Espagnol végétarien, riche en saveurs et en textures, avec des légumes fondants et des arômes concentrés, préparé avec soin dans une poêle pour obtenir un mélange harmonieux et parfumé.",
+      "description": "Le pisto de la Manche : poivrons rouge et vert, courgette, aubergine et tomate confits ensemble à l'huile d'olive, riche en saveurs et en textures, avec des légumes fondants et des arômes concentrés, préparé avec soin dans une poêle pour obtenir un mélange harmonieux et parfumé.",
       "instructions": [
-        "Étape 1 : Couper en petits dés l'aubergine (600g), la courgette (500g), l'oignon (150g) et le poivron (320g), pour une cuisson rapide et uniforme, en veillant à ce que les légumes soient de taille similaire pour une cuisson égale.",
-        "Étape 2 : Faire chauffer 45ml d'huile d'olive dans une poêle et y faire revenir l'oignon, en ajoutant le poivron et l'aubergine, et en cuisant jusqu'à ce que les légumes soient tendres et légèrement caramélisés, en remuant régulièrement pour éviter que les légumes ne collent au fond de la poêle.",
+        "Étape 1 : Couper en petits dés l'aubergine (600g), la courgette (500g), l'oignon (150g), le poivron rouge (320g) et le poivron vert (200g), pour une cuisson rapide et uniforme, en veillant à ce que les légumes soient de taille similaire pour une cuisson égale.",
+        "Étape 2 : Faire chauffer 45ml d'huile d'olive dans une poêle et y faire revenir l'oignon, en ajoutant les poivrons et l'aubergine, et en cuisant jusqu'à ce que les légumes soient tendres et légèrement caramélisés, en remuant régulièrement pour éviter que les légumes ne collent au fond de la poêle.",
         "Étape 3 : Incorporer la courgette et les tomates concassées (300g), et mélanger pour obtenir un mélange harmonieux et parfumé, en ajoutant un peu de sel pour relever les saveurs.",
         "Étape 4 : Assaisonner de 5g de sel et de 3 g de thym frais, et laisser mijoter pendant 30 minutes à feu doux, en vérifiant régulièrement la texture pour obtenir un pisto confit et fondant, en ajustant l'assaisonnement si nécessaire.",
         "Étape 5 : Remuer régulièrement pour éviter que les légumes ne collent au fond de la poêle et pour obtenir une texture crémeuse et homogène, en ajoutant un peu d'eau si nécessaire pour maintenir la consistance.",
@@ -102768,7 +102882,7 @@
         "region": "gyeonggi",
         "city": ""
       },
-      "servings": 4,
+      "servings": 2,
       "timing": {
         "prep_active_min": 11,
         "prep_passive_min": 0,
@@ -102966,7 +103080,7 @@
       ],
       "difficulty_level": "medium",
       "dish_type": "main",
-      "servings_default": 4,
+      "servings_default": 2,
       "_quality_score": 0.92,
       "description": "Pommes de terre cuites à la coréenne, tendres et parfumées, avec une sauce soja riche et des graines de sésame toastées — technique de braisage traditionnelle coréenne avec une sauce onctueuse et des arômes de sésame.",
       "instructions": [
@@ -109276,6 +109390,12 @@
       ],
       "scoring": {
         "spice_level": 0
+      },
+      "result": {
+        "texture": [
+          "liquide",
+          "leger"
+        ]
       }
     },
     {
@@ -122434,6 +122554,12 @@
       ],
       "scoring": {
         "spice_level": 2
+      },
+      "result": {
+        "texture": [
+          "lisse",
+          "homogene"
+        ]
       }
     },
     {
@@ -127988,14 +128114,14 @@
       "dish_type": "snack",
       "servings_default": 4,
       "_quality_score": 0.88,
-      "description": "Riz japonais cuit à la perfection, assaisonné avec du vinaigre de riz, du sel et du sucre, puis façonné en triangles compacts recouverts de nori croustillant et de sésames grillés — un plat traditionnel japonais à la texture ferme et parfumée.",
+      "description": "Le shio musubi, l'onigiri le plus simple : riz japonais à peine salé, mêlé de sésame grillé, façonné en triangles compacts et entouré d'une bande de nori croustillante.",
       "instructions": [
         "Étape 1 : Cuire 300g de riz court grain pendant 12 minutes à feu doux, en veillant à ce que les grains soient bien séparés et tendres. Saler légèrement (3 g) et laisser refroidir complètement.",
         "Étape 2 : Griller 20g de sésames à sec dans une poêle à feu moyen, en les remuant constamment, jusqu'à ce qu'ils soient parfumés et légèrement colorés, environ 2-3 minutes.",
         "Étape 3 : Humidifier les mains avec de l'eau salée, puis prendre une portion de riz refroidi et former un triangle compact en appliquant une pression légère, en veillant à ce que le riz soit bien serré.",
         "Étape 4 : Incorporer les sésames grillés dans le riz, en les répartissant uniformément, tout en façonnant délicatement le triangle pour éviter de casser les grains de riz.",
         "Étape 5 : Réduire les bords du triangle, en les pressant légèrement avec les doigts, jusqu'à obtenir une forme régulière et lisse, en veillant à ce que les bords soient bien définis.",
-        "Étape 6 : Servir sans attendre, pour apprécier la texture ferme et croustillante de l'onigiri, ainsi que son parfum de riz, de sésames et de nori."
+        "Étape 6 : Entourer chaque triangle d'une bande de nori (12 g en tout) et servir sans attendre, pour apprécier la texture ferme et croustillante de l'onigiri, ainsi que son parfum de riz, de sésames et de nori."
       ],
       "diet_flags": {
         "vegan": true,
@@ -128051,17 +128177,6 @@
           }
         },
         {
-          "ingredient": "sesame_raw_seed",
-          "quantity": 20,
-          "unit": "g",
-          "meta": {
-            "role": "garnish",
-            "form": "whole",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
           "ingredient": "table_salt_unenriched",
           "quantity": 3,
           "unit": "g",
@@ -128101,9 +128216,7 @@
           "vegan",
           "vegetarian"
         ],
-        "allergens": [
-          "sesame"
-        ],
+        "allergens": [],
         "technique": [
           "boiling",
           "assembly"
@@ -128193,7 +128306,6 @@
         "sans produit animal",
         "sans viande",
         "sel",
-        "sesame",
         "table",
         "umeboshi",
         "vegan",
@@ -128213,7 +128325,7 @@
         "Étape 3 : Humidifier les mains, les saupoudrer de sel, puis prendre 80 g de riz chaud et creuser un sillon au centre avec le pouce.",
         "Étape 4 : Déposer 1 cc de garniture dans le sillon, puis refermer le riz sur la garniture en pressant fermement 5 à 6 fois, jusqu'à obtenir une texture compacte.",
         "Étape 5 : Former un triangle compact, en vérifiant que les onigiri tiennent leur forme sans se défaire, avec une texture légèrement collante et une surface lisse.",
-        "Étape 6 : Entourer d'une bande de nori croustillante et parsemer de 20g de graines de sésame grillées, puis servir aussitôt."
+        "Étape 6 : Entourer d'une bande de nori croustillante, 12 g en tout, et servir aussitôt."
       ],
       "diet_flags": {
         "vegan": true,
@@ -138737,9 +138849,9 @@
         "en": "Asiatique Sésame Salad"
       },
       "origin": {
-        "cuisine": "asian",
-        "country": "",
-        "region": "world",
+        "cuisine": "japanese",
+        "country": "japan",
+        "region": "",
         "city": ""
       },
       "servings": 4,
@@ -138899,7 +139011,6 @@
       "search_tokens": [
         "30 minutes",
         "asia",
-        "asian",
         "asiatique",
         "assemblage",
         "assembly",
@@ -138917,6 +139028,9 @@
         "ginger",
         "green",
         "intermediaire",
+        "japanese",
+        "japon",
+        "japonais",
         "kids",
         "lacto-fermentation",
         "leger",
@@ -140222,10 +140336,10 @@
       },
       "servings": 4,
       "timing": {
-        "prep_active_min": 17,
-        "prep_passive_min": 0,
-        "cook_min": 45,
-        "total_min": 62
+        "prep_active_min": 20,
+        "prep_passive_min": 50,
+        "cook_min": 15,
+        "total_min": 85
       },
       "composition": [
         {
@@ -140233,21 +140347,15 @@
           "quantity": 600,
           "unit": "g",
           "meta": {
-            "role": "vegetable",
-            "form": "cubed",
-            "state": "raw",
-            "preparation": ""
+            "role": "vegetable"
           }
         },
         {
-          "ingredient": "tomato_raw_ripe",
-          "quantity": 300,
-          "unit": "g",
+          "ingredient": "sunflower_oil_plant",
+          "quantity": 60,
+          "unit": "ml",
           "meta": {
-            "role": "fruit",
-            "form": "roughly_chopped",
-            "state": "raw",
-            "preparation": ""
+            "role": "fat"
           }
         },
         {
@@ -140255,10 +140363,7 @@
           "quantity": 9,
           "unit": "g",
           "meta": {
-            "role": "aromatic",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
+            "role": "aromatic"
           }
         },
         {
@@ -140266,10 +140371,7 @@
           "quantity": 3,
           "unit": "g",
           "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
+            "role": "spice"
           }
         },
         {
@@ -140277,54 +140379,23 @@
           "quantity": 3,
           "unit": "g",
           "meta": {
-            "role": "spice",
-            "form": "ground",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "olive_oil_plant",
-          "quantity": 45,
-          "unit": "ml",
-          "meta": {
-            "role": "fat",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "parsley_fresh_herb",
-          "quantity": 30,
-          "unit": "g",
-          "meta": {
-            "role": "herb",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
-          }
-        },
-        {
-          "ingredient": "table_salt_unenriched",
-          "quantity": 3,
-          "unit": "g",
-          "meta": {
-            "role": "seasoning",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
+            "role": "spice"
           }
         },
         {
           "ingredient": "coriander_raw_fresh_herb",
-          "quantity": 10,
+          "quantity": 15,
           "unit": "g",
           "meta": {
-            "role": "herb",
-            "form": "chopped",
-            "state": "raw",
-            "preparation": ""
+            "role": "herb"
+          }
+        },
+        {
+          "ingredient": "parsley_fresh_herb",
+          "quantity": 15,
+          "unit": "g",
+          "meta": {
+            "role": "herb"
           }
         },
         {
@@ -140332,10 +140403,31 @@
           "quantity": 20,
           "unit": "ml",
           "meta": {
-            "role": "condiment",
-            "form": "",
-            "state": "raw",
-            "preparation": ""
+            "role": "acidity"
+          }
+        },
+        {
+          "ingredient": "vinegar_liquid",
+          "quantity": 10,
+          "unit": "ml",
+          "meta": {
+            "role": "acidity"
+          }
+        },
+        {
+          "ingredient": "olive_oil_plant",
+          "quantity": 20,
+          "unit": "ml",
+          "meta": {
+            "role": "fat"
+          }
+        },
+        {
+          "ingredient": "table_salt_unenriched",
+          "quantity": 4,
+          "unit": "g",
+          "meta": {
+            "role": "seasoning"
           }
         }
       ],
@@ -140346,10 +140438,12 @@
           "vegan",
           "vegetarian"
         ],
-        "allergens": [],
+        "allergens": [
+          "sulphites"
+        ],
         "technique": [
-          "grilling",
-          "simmering"
+          "deep_frying",
+          "marinating"
         ],
         "process": [
           "temperature_management"
@@ -140394,24 +140488,23 @@
         }
       },
       "search_tokens": [
-        "a l'etouffee",
         "africain",
         "ail",
         "aubergine",
-        "barbecue",
-        "braise",
+        "beignet",
         "citron",
         "coeliaque",
         "coriander",
         "coriandre",
         "cumin",
         "d'aubergines",
+        "deep_frying",
         "eggplant",
         "epice",
+        "frit",
+        "friture",
         "garlic",
         "gluten free",
-        "grille",
-        "grilling",
         "intermediaire",
         "leger",
         "lemon",
@@ -140419,6 +140512,9 @@
         "light",
         "long",
         "low calorie",
+        "marinade",
+        "marinating",
+        "marine",
         "maroc",
         "marocain",
         "marocaine",
@@ -140430,8 +140526,6 @@
         "paprika",
         "parsley",
         "persil",
-        "plancha",
-        "ragout",
         "salad",
         "salade",
         "salt",
@@ -140439,14 +140533,15 @@
         "sans produit animal",
         "sans viande",
         "sel",
-        "simmering",
+        "sunflower",
         "table",
         "tajine",
-        "tomate",
-        "tomato",
+        "tournesol",
         "vegan",
         "vegetalien",
         "vegetarien",
+        "vinaigre",
+        "vinegar",
         "zaalouk"
       ],
       "difficulty_level": "medium",
@@ -140454,13 +140549,12 @@
       "servings_default": 4,
       "_quality_score": 1.0,
       "_chef_note": "La cuisson directe des aubergines sur la grille du four est essentielle pour obtenir une texture fondante et parfumée.",
-      "description": "Salade végétalienne marocaine où les aubergines carbonisées et les tomates tendres se marient dans une sauce parfumée aux épices et au citron, avec une texture croquante et fraîche",
+      "description": "Une salade du repas marocain : rondelles d'aubergine dorées à la poêle puis nappées de chermoula, la marinade à l'ail, au cumin, au paprika, aux herbes et au citron, servies à température ambiante.",
       "instructions": [
-        "Étape 1 : Piquer les aubergines entières. Cuire directement sur la grille du four à 220°C ou à la flamme pendant 25 minutes en retournant jusqu'à ce que la peau soit noire et la chair soit tendre.",
-        "Étape 2 : Laisser tiédir, retirer la peau. Égoutter la chair pendant 15 minutes. Écraser grossièrement à la fourchette pour obtenir une texture légèrement lisse.",
-        "Étape 3 : Faire revenir 9 grammes d'ail haché dans 45 millilitres d'huile d'olive à feu doux pendant 1 minute. L'ail doit être parfumé et légèrement doré. Ajouter 300 grammes de tomates concassées. Cuire pendant 8 minutes jusqu'à ce que la sauce soit réduite et les tomates soient tendres.",
-        "Étape 4 : Incorporer 600 grammes de chair d'aubergine, 3 grammes de cumin, 10 grammes de coriandre fraîche ciselée et 3 grammes de paprika doux. Mélanger et cuire pendant 5 minutes. La salade doit être parfumée aux épices et avoir une texture homogène.",
-        "Étape 5 : Assaisonner de 20 ml de jus de citron, 3 grammes de sel et 30 grammes de persil frais ciselé. La salade doit être légèrement acidulée et parfumée au citron. Servir tiède ou froid avec du pain marocain."
+        "Étape 1 : Couper 600 g d'aubergines en rondelles de 1 cm, les saler avec 2 g de sel et les laisser dégorger 20 minutes, puis les sécher.",
+        "Étape 2 : Faire dorer les rondelles en plusieurs fois dans 60 ml d'huile de tournesol, 3 minutes de chaque côté, et les égoutter sur du papier absorbant.",
+        "Étape 3 : Chermoula : mélanger 9 g d'ail écrasé, 3 g de cumin, 3 g de paprika, 15 g de coriandre et 15 g de persil ciselés, 20 ml de jus de citron, 10 ml de vinaigre, 20 ml d'huile d'olive et 2 g de sel.",
+        "Étape 4 : Disposer les aubergines dans un plat en les nappant de chermoula couche par couche et laisser reposer au moins 30 minutes. Servir à température ambiante, avec du pain."
       ],
       "diet_flags": {
         "vegan": true,
@@ -141752,7 +141846,7 @@
         "region": "gyeonggi",
         "city": ""
       },
-      "servings": 4,
+      "servings": 2,
       "timing": {
         "prep_active_min": 11,
         "prep_passive_min": 0,
@@ -141943,7 +142037,7 @@
       ],
       "difficulty_level": "medium",
       "dish_type": "side",
-      "servings_default": 4,
+      "servings_default": 2,
       "_quality_score": 0.91,
       "description": "Salade coréenne de pousses de soja croustillantes, parfumée à l'ail et à la sauce soja, avec une texture fraîche et une coloration dorée, caractéristique de la cuisine traditionnelle coréenne.",
       "instructions": [
@@ -146374,6 +146468,12 @@
       ],
       "scoring": {
         "spice_level": 0
+      },
+      "result": {
+        "texture": [
+          "nappant",
+          "sirupeux"
+        ]
       }
     },
     {
@@ -146540,6 +146640,12 @@
       ],
       "scoring": {
         "spice_level": 0
+      },
+      "result": {
+        "texture": [
+          "ferme",
+          "souple"
+        ]
       }
     },
     {
@@ -152679,6 +152785,14 @@
             "state": "raw",
             "preparation": ""
           }
+        },
+        {
+          "ingredient": "nutmeg_spice",
+          "quantity": 0.5,
+          "unit": "g",
+          "meta": {
+            "role": "spice"
+          }
         }
       ],
       "tags": {
@@ -152761,7 +152875,9 @@
         "milk",
         "minceur",
         "moyen",
+        "muscade",
         "noir",
+        "nutmeg",
         "pepper",
         "poivre",
         "pomme",
@@ -152787,7 +152903,7 @@
         "Étape 2: Égouttage et asséchage. Égoutter soigneusement les pommes de terre cuites. Remettre dans la casserole sur feu doux 1 minute pour assécher l'excès d'humidité.",
         "Étape 3: Écrasement des pommes de terre. Écraser les pommes de terre au presse-purée — jamais au mixeur, qui rendrait la purée collante. Incorporer 60 g de beurre doux.",
         "Étape 4: Émulsion lait. Verser progressivement 200 ml de lait entier chaud en mélangeant vigoureusement jusqu'à texture crémeuse et lisse.",
-        "Étape 5: Assaisonnement. Assaisonner de 6 g de sel de table et 2 g de poivre noir.",
+        "Étape 5: Assaisonnement. Assaisonner de 6 g de sel de table, 2 g de poivre noir et une pointe de muscade râpée (0,5 g).",
         "Étape 6: Service. Servir chaud."
       ],
       "diet_flags": {
@@ -155047,7 +155163,7 @@
       },
       "origin": {
         "cuisine": "international",
-        "country": "",
+        "country": "international",
         "region": "",
         "city": ""
       },
@@ -155101,6 +155217,14 @@
             "form": "",
             "state": "raw",
             "preparation": ""
+          }
+        },
+        {
+          "ingredient": "rosemary_fresh_herb",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "herb"
           }
         }
       ],
@@ -155161,9 +155285,9 @@
       "dish_type": "snack",
       "servings_default": 6,
       "_quality_score": 0.82,
-      "description": "Biscuits secs croustillants obtenus par mélange de farine de blé, d'huile d'olive et de sel, puis cuisson à haute température pour une texture cassante et dorée, caractéristique des crackers salés traditionnels.",
+      "description": "Biscuits secs croustillants obtenus par mélange de farine de blé, d'huile d'olive, de romarin et de sel, puis cuisson à haute température pour une texture cassante et dorée, caractéristique des crackers salés traditionnels.",
       "instructions": [
-        "Étape 1 : Dans un grand bol, mélanger 200 g de farine de blé avec 5 g de sel pour créer un mélange homogène.",
+        "Étape 1 : Dans un grand bol, mélanger 200 g de farine de blé avec 5 g de sel et 5 g de romarin frais finement haché.",
         "Étape 2 : Ajouter 50 ml d'huile d'olive et sabler le mélange entre les doigts jusqu'à obtenir une texture sableuse.",
         "Étape 3 : Incorporer progressivement 60 ml d'eau froide pour former une pâte lisse et homogène, en évitant de trop travailler la pâte.",
         "Étape 4 : Envelopper la pâte dans un film plastique et réfrigérer pendant 30 minutes pour permettre à la farine d'absorber l'eau.",
@@ -155204,6 +155328,8 @@
         "olive",
         "potable)",
         "purpose",
+        "romarin",
+        "rosemary",
         "roti",
         "sales",
         "salt",
@@ -176794,8 +176920,8 @@
         "en": "Tamarind Paste"
       },
       "origin": {
-        "cuisine": "asian",
-        "country": "",
+        "cuisine": "thai",
+        "country": "thailand",
         "region": "",
         "city": ""
       },
@@ -176864,11 +176990,10 @@
       "search_tokens": [
         "(eau",
         "1 heure",
-        "asia",
-        "asian",
         "asiatique",
         "chilling",
         "coeliaque",
+        "curry",
         "debutant",
         "easy",
         "eau",
@@ -176894,6 +177019,8 @@
         "simple",
         "tamarin",
         "tamarind",
+        "thai",
+        "thailande",
         "vegan",
         "vegetalien",
         "vegetarien",
@@ -176902,7 +177029,13 @@
       "scoring": {
         "spice_level": 0
       },
-      "yield_factor": 0.8
+      "yield_factor": 0.8,
+      "result": {
+        "texture": [
+          "lisse",
+          "épais"
+        ]
+      }
     },
     {
       "id": "tarte_margherita_v7k2d1",
@@ -177445,7 +177578,7 @@
         "region": "campania",
         "city": "naples"
       },
-      "servings": 4,
+      "servings": 2,
       "timing": {
         "prep_active_min": 10,
         "prep_passive_min": 120,
@@ -177657,7 +177790,7 @@
       ],
       "difficulty_level": "easy",
       "dish_type": "main",
-      "servings_default": 4,
+      "servings_default": 2,
       "_quality_score": 0.8,
       "description": "L'autre pizza napolitaine historique, naturellement vegan : sauce tomate, ail en lamelles, origan et huile d'olive, sans fromage.",
       "instructions": [
@@ -178483,8 +178616,8 @@
         "en": "Vegetarian Brown Sauce / Gravy"
       },
       "origin": {
-        "cuisine": "western",
-        "country": "",
+        "cuisine": "international",
+        "country": "international",
         "region": "",
         "city": ""
       },
@@ -178656,6 +178789,7 @@
         "garlic",
         "glace",
         "gravy",
+        "international",
         "leger",
         "legumes",
         "light",
@@ -178696,12 +178830,17 @@
         "vegetarien",
         "vegetarienne",
         "water",
-        "western",
         "wheat",
         "wok"
       ],
       "scoring": {
         "spice_level": 0
+      },
+      "result": {
+        "texture": [
+          "nappant",
+          "sauce_liee"
+        ]
       }
     },
     {
@@ -182633,6 +182772,22 @@
           "meta": {
             "role": "binder"
           }
+        },
+        {
+          "ingredient": "ginger_raw_root_fresh",
+          "quantity": 10,
+          "unit": "g",
+          "meta": {
+            "role": "aromatic"
+          }
+        },
+        {
+          "ingredient": "curry_powder",
+          "quantity": 5,
+          "unit": "g",
+          "meta": {
+            "role": "spice"
+          }
         }
       ],
       "tags": {
@@ -182656,10 +182811,10 @@
       "dish_type": "paste",
       "servings_default": 9,
       "_chef_note": "Cette pâte de curry jaune est idéale pour les plats végétariens et végans.",
-      "description": "Pâte de curry jaune douce et parfumée, dominée par le curcuma et le cumin, idéale pour les légumes et le tofu, avec une texture lisse et une couleur jaune vif, parfumée par la citronnelle et les épices.",
+      "description": "Pâte de curry jaune douce et parfumée, dominée par le curcuma, le cumin et le curry en poudre, idéale pour les légumes et le tofu, avec une texture lisse et une couleur jaune vif, parfumée par la citronnelle et les épices.",
       "instructions": [
-        "Étape 1 : Dans un mortier ou un blender, mixer 8g de curcuma, 20g de piments rouges, 20g d'ail, 30g d'oignon jaune, et 25g de citronnelle fraîche jusqu'à obtenir une pâte grossière et parfumée, avec une odeur de citron et d'épices.",
-        "Étape 2 : Ajoutez 5g de cumin et 5g de coriandre en grains. Mixer pendant environ 2 minutes, jusqu'à ce que la pâte soit lisse et que les épices soient bien incorporées, avec un son de broyage régulier.",
+        "Étape 1 : Dans un mortier ou un blender, mixer 8g de curcuma, 20g de piments rouges, 20g d'ail, 30g d'oignon jaune, 10 g de gingembre frais et 25g de citronnelle fraîche jusqu'à obtenir une pâte grossière et parfumée, avec une odeur de citron et d'épices.",
+        "Étape 2 : Ajoutez 5g de cumin, 5g de coriandre en grains et 5 g de curry en poudre. Mixer pendant environ 2 minutes, jusqu'à ce que la pâte soit lisse et que les épices soient bien incorporées, avec un son de broyage régulier.",
         "Étape 3 : Ajoutez 15ml d'huile de tournesol et mixer pendant environ 1 minute, jusqu'à ce que la pâte soit homogène et lisse, avec une texture crémeuse et une couleur jaune uniforme.",
         "Étape 4 : Conservez la pâte de curry jaune dans un contenant hermétique au réfrigérateur pendant jusqu'à 2 semaines, en vérifiant régulièrement que la pâte reste fraîche et parfumée."
       ],
@@ -182691,6 +182846,8 @@
         "fouette",
         "froid",
         "garlic",
+        "gingembre",
+        "ginger",
         "glace",
         "gluten free",
         "grass",
@@ -182731,6 +182888,12 @@
       ],
       "scoring": {
         "spice_level": 1
+      },
+      "result": {
+        "texture": [
+          "lisse",
+          "homogene"
+        ]
       }
     },
     {
@@ -182869,7 +183032,13 @@
         "table",
         "vegetarien",
         "œuf"
-      ]
+      ],
+      "result": {
+        "texture": [
+          "souple",
+          "fin"
+        ]
+      }
     },
     {
       "id": "base_cashew_ricotta_5c62e9",
@@ -182878,8 +183047,8 @@
         "en": "Cashew Ricotta"
       },
       "origin": {
-        "cuisine": "international",
-        "country": "",
+        "cuisine": "italian",
+        "country": "italy",
         "region": "",
         "city": ""
       },
@@ -182995,7 +183164,9 @@
         "facile",
         "fouette",
         "gluten free",
-        "international",
+        "italian",
+        "italie",
+        "italien",
         "leger",
         "lemon",
         "lent",
@@ -183006,12 +183177,15 @@
         "marinade",
         "marinating",
         "marine",
+        "mediterranee",
         "mijote",
         "minceur",
         "mixe",
         "noix",
         "nutritional",
         "nuts",
+        "pasta",
+        "pates",
         "potable)",
         "ricotta",
         "salt",
@@ -183027,7 +183201,13 @@
         "veloute",
         "water",
         "yeast"
-      ]
+      ],
+      "result": {
+        "texture": [
+          "cremeux",
+          "grenu"
+        ]
+      }
     },
     {
       "id": "base_paneer_04e1db",
@@ -183151,7 +183331,13 @@
         "vegetarien"
       ],
       "yield_factor": 0.2,
-      "nutrition_reference": "queso_fresco/block_cow"
+      "nutrition_reference": "queso_fresco/block_cow",
+      "result": {
+        "texture": [
+          "ferme",
+          "tient_la_coupe"
+        ]
+      }
     },
     {
       "id": "base_vegan_cheddar_024998",
@@ -183161,8 +183347,8 @@
         "original": "Cashew and Red Pepper Vegan Cheddar"
       },
       "origin": {
-        "cuisine": "international",
-        "country": "",
+        "cuisine": "british",
+        "country": "united_kingdom",
         "region": "",
         "city": ""
       },
@@ -183283,9 +183469,12 @@
         "(eau",
         "ail",
         "and",
+        "anglais",
         "bell",
         "biere",
         "blending",
+        "britannique",
+        "british",
         "cajou",
         "cashew",
         "cheddar",
@@ -183299,7 +183488,6 @@
         "glace",
         "gluten free",
         "intermediaire",
-        "international",
         "leger",
         "lemon",
         "lent",
@@ -183336,7 +183524,13 @@
         "veloute",
         "water",
         "yeast"
-      ]
+      ],
+      "result": {
+        "texture": [
+          "cremeux",
+          "filant"
+        ]
+      }
     },
     {
       "id": "base_vegan_mayonnaise_b68322",
@@ -183345,8 +183539,8 @@
         "en": "Vegan Mayonnaise"
       },
       "origin": {
-        "cuisine": "international",
-        "country": "",
+        "cuisine": "french",
+        "country": "france",
         "region": "",
         "city": ""
       },
@@ -183450,17 +183644,20 @@
         "chiches",
         "chilling",
         "citron",
+        "classique",
         "coeliaque",
         "enfants",
         "express",
         "facile enfants",
         "famille",
         "fouette",
+        "francais",
+        "france",
+        "french",
         "froid",
         "glace",
         "gluten free",
         "intermediaire",
-        "international",
         "jus",
         "kids",
         "leger",
@@ -183490,7 +183687,13 @@
         "vegetalien",
         "vegetarien",
         "veloute"
-      ]
+      ],
+      "result": {
+        "texture": [
+          "onctueux",
+          "lisse"
+        ]
+      }
     },
     {
       "id": "base_fried_onion_217e6a",
@@ -183500,7 +183703,7 @@
       },
       "origin": {
         "cuisine": "international",
-        "country": "",
+        "country": "international",
         "region": "",
         "city": ""
       },
@@ -183616,7 +183819,13 @@
         "vegetalien",
         "vegetarien"
       ],
-      "yield_factor": 0.4
+      "yield_factor": 0.4,
+      "result": {
+        "texture": [
+          "croustillant",
+          "dore"
+        ]
+      }
     },
     {
       "id": "base_bechamel_vegane_7a210c",
@@ -183770,7 +183979,13 @@
         "kid_friendly": true
       },
       "dish_type": "sauce",
-      "description": "Sauce végane crémeuse et onctueuse, à base de roux à l'huile de tournesol et de lait d'avoine, parfaite pour accompagner les pâtes ou les légumes, avec une texture lisse et une saveur délicate"
+      "description": "Sauce végane crémeuse et onctueuse, à base de roux à l'huile de tournesol et de lait d'avoine, parfaite pour accompagner les pâtes ou les légumes, avec une texture lisse et une saveur délicate",
+      "result": {
+        "texture": [
+          "nappant",
+          "onctueux"
+        ]
+      }
     },
     {
       "id": "base_sriracha_19895c",
@@ -214430,8 +214645,8 @@
         "region": "rio_de_janeiro",
         "city": ""
       },
-      "servings": 10,
-      "servings_default": 10,
+      "servings": 7,
+      "servings_default": 7,
       "timing": {
         "prep_active_min": 15,
         "prep_passive_min": 60,

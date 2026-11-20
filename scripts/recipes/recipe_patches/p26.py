@@ -51,6 +51,6 @@ PATCHES = {
         ("txt", "puis laisser reposer 10 minutes à 60°C", "puis laisser reposer 10 minutes à couvert"),
         ("txt", "creuser un sillon au centre en utilisant la lame d'un couteau", "creuser un sillon au centre avec le pouce"),
         ("txt", ", en vérifiant que le nori crépite légèrement lors de la cuisson, puis servir aussitôt sur une assiette, en vérifiant la texture croustillante du nori.",
-         ", puis servir aussitôt."),
+         ", 12 g en tout, et servir aussitôt."),   # sans sésame depuis le 2026-11-21
     ],
 }

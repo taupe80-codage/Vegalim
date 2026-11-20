@@ -53,7 +53,7 @@ VARIANTS = {
     ],
     "base_curry_paste_49c97f": [
         ("title", "Pâte de curry rouge aux piments frais"),
-        ("desc", "Pâte de curry vegan aux piments rouges frais, citronnelle, galanga, ail et curcuma, plus vive "
+        ("desc", "Pâte de curry vegan aux piments rouges frais, citronnelle, galanga, ail et combava, plus vive "
                  "que la pâte aux piments séchés ; base du curry rouge thaï au tofu."),
     ],
 }
