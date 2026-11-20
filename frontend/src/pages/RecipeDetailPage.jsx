@@ -319,7 +319,7 @@ function ingredientMatches(fridgeId, recipeId) {
 }
 
 export default function RecipeDetailPage() {
-  const { params } = useRouter();
+  const { params, search } = useRouter();
   const loggedIn = !!useAuth()?.user;
   const toast = useToast();
 
@@ -430,6 +430,14 @@ export default function RecipeDetailPage() {
       setVariantLoading(false);
     }
   };
+
+  // #/recette/:id?version=vegan (carte du planning ajoutée en version vegan) : la
+  // fiche s'ouvre directement sur la version vegan (route réservée aux connectés)
+  const wantVegan = search?.get('version') === 'vegan';
+  useEffect(() => {
+    if (wantVegan && loggedIn && recipe && recipe.id === params.id
+        && !recipe.diet_flags?.vegan && !variant && !variantLoading) generateVariant();
+  }, [wantVegan, loggedIn, recipe?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── États de chargement / erreur ───────────────────────────────────────────
   if (loading) return (

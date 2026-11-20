@@ -305,7 +305,8 @@ function PlanningRecipeCard({recipe, onReplace, onSearch, onDelete, isReplacing}
       <div className="prcard-info">
         {dtype && <span className="prcard-type-badge">{DISH_TYPE_LABELS[dtype]||dtype}</span>}
         {recipe.id
-          ? <a className="prcard-title prcard-link" href={`#/recette/${recipe.id}`}>{title}</a>
+          ? <a className="prcard-title prcard-link"
+              href={`#/recette/${recipe.id}${recipe.variant === 'vegan' ? '?version=vegan' : ''}`}>{title}</a>
           : <span className="prcard-title">{title}</span>}
         {recipe.variant === 'vegan' && (
           <span className="prcard-ahead" title="Ajoutée dans sa version vegan : la liste de courses compte les substituts">
