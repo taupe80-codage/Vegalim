@@ -66,6 +66,21 @@ def test_route_de_saison():
     assert c.get("/recettes/de-saison?month=13").status_code == 422
 
 
+def test_route_de_saison_regime():
+    """Profil vegan : la rubrique de l'accueil ne propose que des plats vegan, mais
+    le badge « De saison » (ids) couvre toujours tout le catalogue."""
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.services.filter_service import match_diet
+    c = TestClient(app)
+    tous = c.get("/recettes/de-saison?month=11&limit=50").json()
+    veg = c.get("/recettes/de-saison?month=11&limit=50&diet=vegan").json()
+    assert veg["ids"] == tous["ids"]
+    assert 6 <= veg["total"] < tous["total"]
+    assert veg["results"] and all(match_diet(IDX[r["id"]], "vegan") for r in veg["results"])
+    assert any(not match_diet(IDX[r["id"]], "vegan") for r in tous["results"])
+
+
 def test_ketchup_n_est_plus_une_tomate():
     from backend.core.data_io import load_prices_catalog, load_carbon_footprint, resolve_catalog_key
     iid = "tomato_ketchup_catsup_pre_packaged_normal"

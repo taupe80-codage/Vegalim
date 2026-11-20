@@ -8,7 +8,7 @@ import { recipes as recipesApi } from '../api';
 import { navigate } from '../Router';
 import RecipeCard, { RecipeCardSkeleton, getRecipeTheme, getRecipeImageUrl, CUISINE_LABEL_FR, computeAlimScore } from '../components/RecipeCard';
 import { useRecentlyViewed } from '../useRecentlyViewed';
-import { useSeasonNow, MONTHS_FR } from '../seasonNow';
+import { useSeasonStrip, seasonStripDiet, MONTHS_FR } from '../seasonNow';
 import { useProfileDiet, defaultDietFilter } from '../useProfileDiet';
 import {
   DISH_OPTIONS, DIET_OPTIONS, DIET_EXTRA_OPTIONS, SEASON_OPTIONS, DIFFICULTY_OPTIONS,
@@ -107,7 +107,6 @@ export default function HomePage() {
   const _saved = _loadHomeFilters();
 
   const [query,          setQuery]          = useState('');
-  const seasonNow = useSeasonNow();
   const [diet,           setDiet]           = useState(_saved?.diet || '');
   // Profil vegan : « Vegan » coché par défaut, à l'ouverture et après « Tout effacer »
   const defaultDiet = defaultDietFilter(useProfileDiet());
@@ -215,7 +214,12 @@ export default function HomePage() {
     });
   };
 
-  const hasActiveFilters = diet || dietExtras.size > 0 || season || difficulty || allergens.size > 0 || healthFilters.size > 0 || subFilters.size > 0 || dishFilters.size > 0 || origins.size > 0 || maxTime;
+  const otherFilters = dietExtras.size > 0 || !!season || !!difficulty || allergens.size > 0 || healthFilters.size > 0 || subFilters.size > 0 || dishFilters.size > 0 || origins.size > 0 || !!maxTime;
+  const hasActiveFilters = !!diet || otherFilters;
+  // Rubrique « De saison » : masquée par une recherche ou un filtre choisi, mais pas
+  // par le « Vegan » coché d'office pour un profil vegan (elle est alors vegan aussi)
+  const stripDiet = seasonStripDiet({ query, diet, defaultDiet, otherFilters });
+  const seasonNow = useSeasonStrip(stripDiet || '');
 
   const clearAllFilters = () => {
     setDiet(defaultDiet);
@@ -606,15 +610,15 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Rubrique « De saison » : accueil sans recherche ni filtre */}
-      {!hasActiveFilters && !query.trim() && seasonNow.results.length > 0 && (
+      {/* Rubrique « De saison » : accueil sans recherche ni autre filtre que le régime du profil */}
+      {stripDiet !== null && seasonNow.results.length > 0 && (
         <section className="season-strip" aria-labelledby="season-strip-title">
           <div className="season-strip-head">
             <h2 id="season-strip-title" className="season-strip-title">
               🌱 De saison en {MONTHS_FR[(seasonNow.month || 1) - 1]}
             </h2>
             <span className="season-strip-sub">
-              {seasonNow.total} plats dont la plupart des fruits et légumes sont de saison ce mois-ci
+              {seasonNow.total} plats{stripDiet === 'vegan' ? ' vegan' : ''} dont la plupart des fruits et légumes sont de saison ce mois-ci
             </span>
           </div>
           <div className="recipe-grid season-strip-grid">

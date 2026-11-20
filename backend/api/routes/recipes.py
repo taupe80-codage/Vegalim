@@ -218,10 +218,13 @@ def de_saison(
     request: Request,
     limit: int           = Query(default=6, ge=0, le=50),
     month: Optional[int] = Query(default=None, ge=1, le=12, description="mois (défaut : mois en cours)"),
+    diet:  Optional[str] = Query(default=None, description="vegan | vegetarien : limite `results` et `total`"),
 ):
     """Plats de saison du mois : `ids` de tous les plats « de_saison » (badge des
     cartes, quelle que soit la page qui les affiche) et les `limit` premiers par
-    score iconique (rubrique de l'accueil). **Public.**"""
+    score iconique (rubrique de l'accueil). `diet` ne restreint que la rubrique
+    (`results`, `total`) : les `ids` du badge restent ceux de tout le catalogue.
+    **Public.**"""
     check_rate_limit(request, limit=60, window_seconds=60)
     import datetime
     from backend.services.enrichment_service import seasonal_tag
@@ -229,11 +232,12 @@ def de_saison(
     plats = [r for r in load_recipes() if not is_component_recipe(r)]
     in_season = [r for r in plats if seasonal_tag(r, month)[0] == "de_saison"]
     in_season.sort(key=lambda r: r.get("scoring", {}).get("iconic", {}).get("score", 0), reverse=True)
+    shown = apply_diet_filter(in_season, diet) if diet else in_season
     return {
         "month":   month,
-        "total":   len(in_season),
+        "total":   len(shown),
         "ids":     [r["id"] for r in in_season],
-        "results": _enrich_why(in_season[:limit]) if limit else [],
+        "results": _enrich_why(shown[:limit]) if limit else [],
     }
 
 

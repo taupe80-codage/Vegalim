@@ -34,6 +34,46 @@ export function useSeasonNow() {
   return value;
 }
 
+// Rubrique de l'accueil restreinte au régime du profil (vegan) : une requête par
+// régime, gardée pour toute la session.
+const _strips = new Map();
+
+function loadSeasonStrip(diet) {
+  if (!_strips.has(diet)) {
+    _strips.set(diet, recipesApi.inSeason(6, diet)
+      .then(d => ({ month: d?.month ?? null, ids: new Set(d?.ids || []),
+                    results: d?.results || [], total: d?.total || 0 }))
+      .catch(() => { _strips.delete(diet); return EMPTY; }));
+  }
+  return _strips.get(diet);
+}
+
+/** Plats de saison pour la rubrique de l'accueil, limités à `diet` s'il est donné. */
+export function useSeasonStrip(diet) {
+  const all = useSeasonNow();
+  const [strip, setStrip] = useState(null);
+  useEffect(() => {
+    if (!diet) return undefined;
+    let alive = true;
+    loadSeasonStrip(diet).then(v => { if (alive) setStrip({ diet, value: v }); });
+    return () => { alive = false; };
+  }, [diet]);
+  if (!diet) return all;
+  return strip?.diet === diet ? strip.value : EMPTY;
+}
+
+/**
+ * Régime de la rubrique « De saison » de l'accueil, ou null pour la masquer :
+ * elle reste visible tant que seul le régime par défaut du profil est coché
+ * (« Vegan » d'un profil vegan n'est pas un filtre choisi), et disparaît dès
+ * qu'une recherche ou un autre filtre est actif.
+ */
+export function seasonStripDiet({ query = '', diet = '', defaultDiet = '', otherFilters = false }) {
+  if (query.trim() || otherFilters) return null;
+  if (diet && diet !== defaultDiet) return null;
+  return diet;
+}
+
 /** Plat de saison : l'étiquette fournie par l'API, sinon la liste du mois. */
 export function isInSeason(recipe, season) {
   if (recipe?.seasonal_tag) return recipe.seasonal_tag === 'de_saison';
