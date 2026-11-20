@@ -288,6 +288,11 @@ def _rewrite_steps(steps: list, applied: list[dict], prose: bool = False) -> tup
                     new = re.sub(rf"\b([Dd])'{esc}", lambda mm, s=sub: f"{mm.group(1)}e {s}", new)
                 # « parmesan râpé » → « levure nutritionnelle en paillettes » (sans « râpé »)
                 new = re.sub(rf"({esc}) râpée?s?\b", lambda mm: mm.group(1), new)
+                # qualificatifs du seul produit d'origine : « crème fraîche », « lait entier »,
+                # « lait de vache », « fromage frais », « œuf cru »
+                new = re.sub(rf"({esc}) (?:fraîches?|frais|entiers?|entières?|de vache|demi-écrémée?|"
+                             rf"écrémée?|fermiers?|fermières?|crus?|crues?)(?![\w-])",
+                             lambda mm: mm.group(1), new, flags=re.I)
                 # écho : seul le début du nom d'origine a été remplacé et la suite est
                 # restée (« roux de curry » → « roux de curry japonais végétal de curry »)
                 new = re.sub(rf"({esc})((?: [\w'’-]+){{1,4}})", _drop_echo, new, flags=re.I)

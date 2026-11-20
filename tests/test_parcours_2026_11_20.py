@@ -215,3 +215,21 @@ def test_similaires_sans_preparation_de_base_et_par_regime():
     # une préparation de base peut, elle, proposer d'autres préparations
     sauce = c.get("/recettes/base_mayonnaise_0d3e4e/similaires?limit=10").json()["similar"]
     assert any(s["id"].startswith("base_") for s in sauce)
+
+
+def test_variante_vegan_sans_qualificatif_laitier():
+    """« crème de soja maison fraîche », « lait de soja entier / de vache » : le
+    qualificatif du produit d'origine disparaît avec lui."""
+    import re
+    from backend.core.data_io import load_recipes
+    from backend.engine.rule_engine.variants import vegan_variant, _short
+    restes = []
+    for r in load_recipes():
+        if not r.get("composition") or r["id"].startswith("base_"):
+            continue
+        v = vegan_variant(r)
+        textes = [v["recipe"].get("description") or ""] + [s for s in v["recipe"]["instructions"] if isinstance(s, str)]
+        for s in {_short(x["substitute_name"]) for x in v["substitutions"]}:
+            pat = re.compile(re.escape(s) + r" (?:fraîches?|entiers?|entières?|de vache)\b", re.I)
+            restes += [r["id"] for t in textes if pat.search(t)]
+    assert restes == []
