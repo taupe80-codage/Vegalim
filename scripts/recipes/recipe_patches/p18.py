@@ -7,6 +7,7 @@ PATCHES = {
         ("qty", "table_salt_unenriched", 2),
         ("dish", "starter"),
         ("txt", ", puis blanchissez-le pendant 2 minutes pour le rendre plus tendre et éliminer l'amertume", ""),
+        ("time", 11, 20, 0),   # 10 min de dégorgement + 10 min de repos (2026-11-21)
     ],
     "main_piperade_basque_3e1c65": [
         ("qty", "olive_oil_plant", 30),

@@ -40,6 +40,9 @@ PATCHES = {
     ],
     "base_gundruk_94c079": [
         ("yield", 0.12),  # fermenté puis séché complètement au soleil
+        # 500 g de feuilles → 60 g de gundruk sec = une portion de référence de condiment (50 g,
+        # propose_servings.py) : « ingredient_lourd » de l'audit est un faux positif (2026-11-21)
+        ("serv", 1),
         # gundruk traditionnel : fermentation sans sel
         ("del", "table_salt_unenriched"),
         ("txt", "Masser légèrement les feuilles avec 10g de sel pour briser", "Écraser légèrement les feuilles pour briser"),
