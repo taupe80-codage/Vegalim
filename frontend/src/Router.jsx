@@ -75,6 +75,7 @@ const ROUTES = [
   { pattern: '/proposer/:id', page: 'contribute' },
   { pattern: '/mes-recettes', page: 'my-recipes' },
   { pattern: '/moderation',   page: 'moderation' },
+  { pattern: '/notifications', page: 'notifications' },
 ];
 
 function resolve(path) {

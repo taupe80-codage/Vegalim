@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { Link, useRouter } from '../Router';
 import { useAuth } from '../AuthContext';
 import { useTheme } from '../ThemeContext';
+import { NotificationBell, useUnreadCount } from './Notifications';
 
 // Icônes Unicode (pas émoji) — cohérent avec la typo Geist + le toggle ☼/☾
 // Les Favoris sont accessibles via le menu Profil (◎)
@@ -31,6 +32,7 @@ export default function Navbar({ onAuthClick }) {
   const { user, logout }       = useAuth();
   const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
+  const unread = useUnreadCount();
 
   const isActive = (to) => {
     if (to === '/') return page === 'home' || page === 'recipe';
@@ -81,6 +83,8 @@ export default function Navbar({ onAuthClick }) {
             <span aria-hidden="true">＋</span><span className="nav-propose-label"> Proposer</span>
           </Link>
 
+          {user && <NotificationBell count={unread} />}
+
           {user ? (
             <div className="nav-user">
               <Link
@@ -112,11 +116,12 @@ export default function Navbar({ onAuthClick }) {
         <button
           className={`nav-hamburger ${menuOpen ? 'open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          aria-label={menuOpen ? 'Fermer le menu' : (unread ? `Ouvrir le menu — ${unread} notification${unread > 1 ? 's' : ''} non lue${unread > 1 ? 's' : ''}` : 'Ouvrir le menu')}
           aria-expanded={menuOpen}
           aria-controls="nav-mobile-menu"
         >
           <span aria-hidden="true" /><span aria-hidden="true" /><span aria-hidden="true" />
+          {unread > 0 && !menuOpen && <span className="nt-badge nt-badge--burger" aria-hidden="true">{unread > 9 ? '9+' : unread}</span>}
         </button>
       </div>
 
@@ -138,6 +143,12 @@ export default function Navbar({ onAuthClick }) {
             onClick={() => setMenuOpen(false)}>
             <span aria-hidden="true">＋</span> Proposer une recette
           </Link>
+          {user && (
+            <Link to="/notifications" className={`nav-mobile-link ${page === 'notifications' ? 'nav-link--active' : ''}`}
+              onClick={() => setMenuOpen(false)}>
+              <span aria-hidden="true">🔔</span> Notifications{unread > 0 ? ` (${unread})` : ''}
+            </Link>
+          )}
           {user && (
             <Link to="/mes-recettes" className={`nav-mobile-link ${page === 'my-recipes' ? 'nav-link--active' : ''}`}
               onClick={() => setMenuOpen(false)}>

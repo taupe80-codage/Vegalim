@@ -193,6 +193,9 @@ def delete_account(user: dict = Depends(get_user)):
         with db_session() as db:
             delete_user_contributions(db, user["email"])
             delete_user_reviews(db, user["email"])
+            from backend.db.models import Notification
+            db.query(Notification).filter(Notification.user_email == user["email"]).delete()
+            db.commit()
     except Exception:
         logger.warning("delete_account : recettes proposées ou avis non supprimés", exc_info=True)
     delete_user(user["email"])

@@ -9,6 +9,7 @@ Tables migrées depuis JSON :
   - daily_quotas    : compteurs journaliers par clé
   - recipe_submissions : recettes proposées par les utilisateurs (modérées)
   - recipe_reviews / review_votes / review_reports : notes et commentaires
+  - notifications : nouveautés affichées dans l'application (cloche)
 
 Données statiques (dataset culinaire) → restent en JSON + lru_cache.
 """
@@ -359,3 +360,30 @@ class ReviewReport(Base):
     reason     = Column(String(30), nullable=False)
     created_at = Column(DateTime(timezone=True), nullable=False,
                         default=lambda: datetime.now(timezone.utc))
+
+
+# ── Notifications dans l'application ──────────────────────────────────────────
+
+class Notification(Base):
+    """
+    Nouveauté affichée sous la cloche de la barre de navigation : décision de
+    la modération, nouvel avis sur ma recette, réponse de l'auteur, recette à
+    relire (modération). Envoyée en plus de l'e-mail, même sans SMTP.
+    100 notifications gardées par compte, 90 jours au plus.
+    """
+    __tablename__ = "notifications"
+
+    id         = Column(Integer, primary_key=True, autoincrement=True)
+    user_email = Column(String(254), ForeignKey("users.email", ondelete="CASCADE"),
+                        nullable=False, index=True)
+    kind       = Column(String(40), nullable=False)
+    title      = Column(String(200), nullable=False)
+    body       = Column(Text, nullable=True)
+    link       = Column(String(300), nullable=True)      # route de l'interface (« /recette/… »)
+    created_at = Column(DateTime(timezone=True), nullable=False,
+                        default=lambda: datetime.now(timezone.utc))
+    read_at    = Column(DateTime(timezone=True), nullable=True)
+
+    __table_args__ = (
+        Index("ix_notification_user_read", "user_email", "read_at"),
+    )

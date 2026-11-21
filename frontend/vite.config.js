@@ -23,6 +23,7 @@ export default defineConfig(({ mode }) => {
         '/ingredients': { target: apiUrl, changeOrigin: true },
         '/contributions': { target: apiUrl, changeOrigin: true },
         '/avis':        { target: apiUrl, changeOrigin: true },
+        '/notifications': { target: apiUrl, changeOrigin: true },
         '/healthz':     { target: apiUrl, changeOrigin: true },
         '/stats':       { target: apiUrl, changeOrigin: true },
       },

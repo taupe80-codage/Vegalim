@@ -31,6 +31,7 @@ import CreditsPage       from './pages/CreditsPage';
 import ContributePage    from './pages/ContributePage';
 import MyRecipesPage     from './pages/MyRecipesPage';
 import ModerationPage    from './pages/ModerationPage';
+import NotificationsPage from './pages/NotificationsPage';
 import { Link }          from './Router';
 import './index.css';
 
@@ -57,6 +58,7 @@ function PageDispatcher({ onAuthClick }) {
     case 'contribute':  return <ContributePage onAuthClick={onAuthClick} />;
     case 'my-recipes':  return <MyRecipesPage onAuthClick={onAuthClick} />;
     case 'moderation':  return <ModerationPage onAuthClick={onAuthClick} />;
+    case 'notifications': return <NotificationsPage onAuthClick={onAuthClick} />;
     default:          return <HomePage />;
   }
 }

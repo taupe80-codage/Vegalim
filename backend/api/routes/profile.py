@@ -190,11 +190,15 @@ def export_profile(user: dict = Depends(get_user)):
         logger.warning("export_profile : erreur ignorée (repli)", exc_info=True)
 
     # Recettes proposées (brouillons, envoyées, publiées) et avis donnés
-    contributions, reviews = [], []
+    contributions, reviews, notifications = [], [], []
     try:
         from backend.db.session import db_session
-        from backend.db.models import RecipeSubmission, RecipeReview
+        from backend.db.models import RecipeSubmission, RecipeReview, Notification
         with db_session() as db:
+            for n in db.query(Notification).filter(Notification.user_email == email).all():
+                notifications.append({"title": n.title, "body": n.body, "kind": n.kind,
+                                      "created_at": n.created_at.isoformat() if n.created_at else None,
+                                      "read": n.read_at is not None})
             for r in db.query(RecipeReview).filter(RecipeReview.user_email == email).all():
                 reviews.append({
                     "recipe_id": r.recipe_id, "rating": r.rating, "comment": r.comment,
@@ -220,6 +224,7 @@ def export_profile(user: dict = Depends(get_user)):
         "interactions": history_data,
         "contributions": contributions,
         "reviews":      reviews,
+        "notifications": notifications,
         "rights": {
             "rectification": "POST /profil/update",
             "erasure":       "DELETE /profil/ ou DELETE /auth/account",

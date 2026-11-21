@@ -244,3 +244,12 @@ export const reviews = {
   modDelete: (reviewId)    => del(`/avis/moderation/${reviewId}`),
   modDeleteReply: (reviewId) => del(`/avis/moderation/${reviewId}/reponse`),
 };
+
+// ── Notifications (cloche) ───────────────────────────────────────────────────
+
+export const notifications = {
+  list:     ()   => get('/notifications'),
+  count:    ()   => get('/notifications/count'),
+  markRead: (id) => post(`/notifications/${id}/lu`, {}),
+  markAll:  ()   => post('/notifications/lu', {}),
+};

@@ -42,7 +42,7 @@ from sqlalchemy.orm import Session
 from backend.api.routes.contributions import require_moderator, wants_email
 from backend.core.auth_deps import get_user, get_optional_user
 from backend.core.rate_limiter import check_rate_limit
-from backend.db.models import RecipeReview, RecipeSubmission, ReviewReport, ReviewVote
+from backend.db.models import RecipeReview, RecipeSubmission, ReviewReport, ReviewVote, as_utc
 from backend.db.session import get_db
 from backend.services import contribution_service as cs
 from backend.services import mail_service
@@ -136,14 +136,14 @@ def _serialize(r: RecipeReview, *, me: str | None = None, voted: set[int] | None
         "comment": r.comment or "",
         "made_it": bool(r.made_it),
         "helpful_count": r.helpful_count or 0,
-        "created_at": r.created_at.isoformat() if r.created_at else None,
+        "created_at": as_utc(r.created_at).isoformat() if r.created_at else None,
         "edited": bool(r.updated_at and r.created_at and (r.updated_at - r.created_at).total_seconds() > 60),
         "is_mine": bool(me and r.user_email == me),
         "voted": bool(voted and r.id in voted),
         "reported": bool(reported and r.id in reported),
         "hidden": r.status != "visible",
         "author_reply": r.author_reply or "",
-        "author_reply_at": r.author_reply_at.isoformat() if r.author_reply_at else None,
+        "author_reply_at": as_utc(r.author_reply_at).isoformat() if r.author_reply_at else None,
     }
 
 
@@ -272,6 +272,11 @@ def upsert_review(recipe_id: str, payload: ReviewPayload, request: Request, back
     db.refresh(review)
     # Premier commentaire sur une recette proposée : on prévient son auteur
     author = _recipe_author(db, recipe)
+    if comment and not had_comment and author:
+        from backend.services import notification_service
+        notification_service.push(db, author, "review.new",
+                                  f"{review.author_name} a noté « {_title(recipe)} » {review.rating}/5",
+                                  comment, f"/recette/{recipe_id}")
     if comment and not had_comment and author and wants_email(db, author):
         background.add_task(
             mail_service.send, author, f"Nouvel avis sur votre recette « {_title(recipe)} »",
@@ -358,6 +363,11 @@ def reply_review(review_id: int, payload: ReplyPayload, request: Request, backgr
     review.author_reply_at = datetime.now(timezone.utc)
     db.commit()
     db.refresh(review)
+    if first:
+        from backend.services import notification_service
+        notification_service.push(db, review.user_email, "review.reply",
+                                  f"L'auteur de « {_title(recipe)} » vous a répondu", text,
+                                  f"/recette/{review.recipe_id}")
     if first and wants_email(db, review.user_email):
         background.add_task(
             mail_service.send, review.user_email, f"L'auteur de « {_title(recipe)} » vous a répondu",

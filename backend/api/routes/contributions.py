@@ -50,7 +50,7 @@ from sqlalchemy.orm import Session
 
 from backend.core.auth_deps import get_user, get_optional_user
 from backend.core.rate_limiter import check_rate_limit
-from backend.db.models import RecipeSubmission, User
+from backend.db.models import RecipeSubmission, User, as_utc
 from backend.db.session import get_db
 from backend.services import contribution_service as cs
 from backend.services import mail_service
@@ -122,7 +122,7 @@ def _now() -> datetime:
 
 
 def _iso(dt: datetime | None) -> str | None:
-    return dt.isoformat() if dt else None
+    return as_utc(dt).isoformat() if dt else None
 
 
 def _author(name: str | None) -> str:
@@ -339,12 +339,18 @@ _AUTHOR_MAILS = {
 
 
 def notify_author(background: BackgroundTasks | None, db: Session, sub: RecipeSubmission, kind: str) -> None:
-    """E-mail à l'auteur après une décision (sauf s'il a désactivé les e-mails)."""
-    if kind not in _AUTHOR_MAILS or not wants_email(db, sub.user_email):
+    """Décision de la modération : notification dans l'application, et e-mail
+    à l'auteur sauf s'il les a désactivés."""
+    from backend.services import notification_service
+    if kind not in _AUTHOR_MAILS:
         return
     subject, paragraphs, link = _AUTHOR_MAILS[kind]
     values = {"title": sub.title or "sans titre", "author": sub.author_name or "vous",
               "note": sub.moderator_note or "", "rid": sub.published_recipe_id or "", "sid": sub.id}
+    notification_service.push(db, sub.user_email, f"contribution.{kind}", subject.format(**values),
+                              sub.moderator_note or None, link[1].format(**values))
+    if not wants_email(db, sub.user_email):
+        return
     args = (sub.user_email, subject.format(**values), [p.format(**values) for p in paragraphs],
             (link[0], mail_service.app_url(link[1].format(**values))))
     if background is not None:
@@ -353,11 +359,16 @@ def notify_author(background: BackgroundTasks | None, db: Session, sub: RecipeSu
         mail_service.send(*args)
 
 
-def notify_moderators(background: BackgroundTasks | None, sub: RecipeSubmission, *, revision: bool) -> None:
+def notify_moderators(background: BackgroundTasks | None, db: Session, sub: RecipeSubmission, *,
+                      revision: bool) -> None:
     from backend.core.config import settings
+    from backend.services import notification_service
     if not settings.admin_emails:
         return
     what = "Modification d'une recette publiée" if revision else "Nouvelle recette"
+    for email in sorted(settings.admin_emails):
+        notification_service.push(db, email, "moderation.submitted", f"{what} à relire : « {sub.title} »",
+                                  f"Proposée par {sub.author_name or 'un membre'}.", "/moderation")
     args = (sorted(settings.admin_emails), f"{what} à relire : « {sub.title} »",
             [f"{what} proposée par {sub.author_name or 'un membre'} : « {sub.title} »."],
             ("Ouvrir la modération", mail_service.app_url("/moderation")))
@@ -548,7 +559,7 @@ def submit_submission(sid: str, payload: SubmitPayload, request: Request, backgr
         sub.submitted_at = _now()
     db.commit()
     db.refresh(sub)
-    notify_moderators(background, sub, revision=revision)
+    notify_moderators(background, db, sub, revision=revision)
     return _serialize(sub)
 
 

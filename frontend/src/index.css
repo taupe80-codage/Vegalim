@@ -5120,9 +5120,11 @@ html[data-theme="dark"] .prcard-ahead { color: #e6b35a; }
   color: var(--on-grn); background: var(--grn); text-decoration: none; white-space: nowrap;
 }
 .nav-propose:hover, .nav-propose--active { background: var(--grn-h); }
-@media (max-width: 1440px) { .nav-propose-label { display: none; } .nav-propose { padding: 7px 10px; } }
-/* Le bouton « Proposer » prend ~40 px : sans ce resserrement « Mon frigo » passait sur deux lignes à 1280 px */
-@media (max-width: 1360px) and (min-width: 1101px) { .navbar-inner { gap: 20px; } .nav-link { padding: 6px 10px; } }
+/* Contenu de la barre limité à 1200 px quelle que soit la fenêtre : bouton en icône seule */
+.nav-propose-label { display: none; }
+.nav-propose { padding: 7px 10px; }
+/* « Proposer » et la cloche prennent ~90 px : sans ce resserrement « Mon frigo » passait sur deux lignes dès 1265 px */
+@media (min-width: 1101px) { .navbar-inner { gap: 20px; } .nav-link { padding: 6px 10px; } }
 @media (max-width: 900px) { .nav-propose { display: none; } }
 
 .detail-byline { font-size: 14px; color: var(--txt2); margin: 0 0 10px; }
@@ -5409,3 +5411,33 @@ html[data-theme="dark"] .rv-stars-fg { color: #f0b429; }
 .rv-reply { margin: 8px 0 0 18px; padding: 8px 12px; border-left: 3px solid var(--grn); background: var(--grn-dim); border-radius: 0 6px 6px 0; }
 .rv-reply--form { background: var(--bg); }
 .rv-reply-head { margin: 0; font-size: 12.5px; font-weight: 600; color: var(--grn); }
+
+/* ══ Notifications (nt-*) ═════════════════════════════════════════════════════ */
+.nt-bell-wrap { position: relative; }
+.nt-bell { position: relative; }
+.nt-badge {
+  position: absolute; top: -5px; right: -6px; min-width: 17px; height: 17px; padding: 0 4px; box-sizing: border-box;
+  border-radius: 999px; background: var(--red); color: #fff; font-size: 10.5px; font-weight: 700; line-height: 17px; text-align: center;
+}
+.nav-hamburger { position: relative; }
+.nt-badge--burger { top: -2px; right: -4px; }
+.nt-popover {
+  position: absolute; right: 0; top: calc(100% + 8px); width: 360px; max-width: calc(100vw - 32px); z-index: 60;
+  background: var(--sur); border: 1px solid var(--brd); border-radius: var(--rad); box-shadow: var(--shadow);
+}
+.nt-list ul { list-style: none; margin: 0; padding: 0; }
+.nt-list--compact ul { max-height: 420px; overflow-y: auto; }
+.nt-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 14px; border-bottom: 1px solid var(--brd); }
+.nt-pad { padding: 14px; margin: 0; }
+.nt-item { width: 100%; display: flex; gap: 10px; align-items: flex-start; text-align: left; font: inherit; color: var(--txt);
+  background: none; border: 0; border-bottom: 1px solid var(--brd); padding: 11px 14px; cursor: pointer; }
+.nt-item:hover, .nt-item:focus-visible { background: var(--sur2); }
+.nt-item.is-unread { background: var(--grn-dim); }
+.nt-item.is-unread .nt-title { font-weight: 600; }
+.nt-icon { font-size: 16px; line-height: 1.3; flex-shrink: 0; }
+.nt-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.nt-title { font-size: 13.5px; line-height: 1.35; }
+.nt-body { font-size: 12.5px; color: var(--txt2); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; white-space: pre-line; }
+.nt-time { font-size: 11.5px; color: var(--mut); }
+.nt-all { display: block; text-align: center; padding: 10px; font-size: 13px; color: var(--grn); }
+.nt-page { background: var(--sur); border: 1px solid var(--brd); border-radius: var(--rad); overflow: hidden; max-width: 720px; }
