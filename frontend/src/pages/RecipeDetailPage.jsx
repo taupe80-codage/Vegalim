@@ -425,6 +425,12 @@ export default function RecipeDetailPage() {
     setVariantError(null);
     try {
       const data = await recipesApi.vegan(recipe.id);
+      // pas de version vegan fiable (plat à base d'œuf, blancs en neige…) : on ne l'affiche pas
+      if (data?.source === 'unavailable') {
+        setVariantError(`Pas de version vegan fiable pour ce plat : ${data.reason}.`);
+        setVersionParam(false);
+        return;
+      }
       setVariant(data);
       setShowVariant(true);
       setVersionParam(true);
@@ -444,7 +450,8 @@ export default function RecipeDetailPage() {
   const wantVegan = search?.get('version') === 'vegan';
   useEffect(() => {
     if (wantVegan && loggedIn && recipe && recipe.id === params.id
-        && !recipe.diet_flags?.vegan && !variant && !variantLoading) generateVariant();
+        && !recipe.diet_flags?.vegan && recipe.vegan_variant?.available !== false
+        && !variant && !variantLoading) generateVariant();
   }, [wantVegan, loggedIn, recipe?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── États de chargement / erreur ───────────────────────────────────────────
@@ -682,7 +689,7 @@ export default function RecipeDetailPage() {
 
           {/* Boutons d'action */}
           <div style={{ display:'flex', gap:10, flexWrap:'wrap', marginTop: 16 }}>
-            {!isVegan && !showVariant && (
+            {!isVegan && !showVariant && recipe.vegan_variant?.available !== false && (
               <button
                 className="variant-btn"
                 onClick={generateVariant}
@@ -713,6 +720,11 @@ export default function RecipeDetailPage() {
           {variantError && !isVegan && !showVariant && (
             <p style={{ color: 'var(--amber)', fontSize: 12, marginTop: 8 }}>
               ⚠️ {variantError}
+            </p>
+          )}
+          {!isVegan && !variantError && recipe.vegan_variant?.available === false && (
+            <p className="variant-unavailable" style={{ color: 'var(--txt2)', fontSize: 12, marginTop: 8 }}>
+              🌿 Pas de version vegan pour ce plat : {recipe.vegan_variant.reason}.
             </p>
           )}
         </div>

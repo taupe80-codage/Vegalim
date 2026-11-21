@@ -153,9 +153,9 @@ def test_variantes_vegan_completes():
               for u in vegan_variant(r)["unresolved"]}
     # les 6 derniers ont leur version vegan maison (lot n18) depuis le 2026-11-20
     assert restes == set(), restes
-    v = vegan_variant(idx["dessert_tarte_citron_meringuee_7f6440"])
+    v = vegan_variant(idx["tart_asperges_vertes_ricotta_2c85b3"])
     assert v["source"] == "generated"
-    assert "200 g de pâte brisée végétale et la cuire" in v["recipe"]["instructions"][0]
+    assert "230 g de pâte brisée végétale, la piquer" in v["recipe"]["instructions"][0]
     # « pâtes aux œufs » : pas de « pâtes œufs » (préfixe « pâtes aux » écarté)
     assert all("pâtes œufs" not in s for s in vegan_variant(idx["dal_linsen_spatzle_71ea34"])["recipe"]["instructions"])
 
@@ -190,8 +190,8 @@ def test_variante_vegan_description_sans_oeuf_ni_nom_anglais():
     assert "un appareil de ricotta de cajou, de tofu soyeux et de levure" in tarte["description"]
     assert tarte["ingredients_meta"]["shortcrust_pastry_vegetable_fat_raw_paste_pre_packaged_plant"][
         "name_fr"].lower() == "pâte brisée végétale"
-    tira = vegan_variant(idx["dessert_tiramisu_classique_ea8ddb"])["recipe"]
-    assert "ladyfinger" not in (tira["description"] + " ".join(tira["instructions"])).lower()
+    charlotte = vegan_variant(idx["dessert_charlotte_aux_fraises_e3f32c"])["recipe"]
+    assert "ladyfinger" not in (charlotte["description"] + " ".join(charlotte["instructions"])).lower()
     katsu = vegan_variant(idx["bread_katsu_bf3f1e"])["recipe"]["description"]
     assert "panées au tofu soyeux" in katsu
     quiche = vegan_variant(next(r for i, r in idx.items() if i.startswith("egg_quiche_lorraine_vegetarien")))
@@ -268,12 +268,11 @@ def test_variante_vegan_selon_l_usage_de_l_oeuf():
     def egg_sub(v):
         return next(s["substitute"] for s in v["substitutions"] if s["original"] == "egg_raw")
 
-    nasi = vegan_variant(idx["rice_nasi_goreng_edfce4"])
-    assert egg_sub(nasi) == "tofu_plain_pre_packaged"
-    assert "Poêler 220 g de tofu ferme en tranches, 3 minutes par face, dans 10 ml d'huile." in nasi["recipe"]["instructions"][4]
-    assert "surmonté de tofu poêlé" in nasi["recipe"]["instructions"][5]
-    shopska = vegan_variant(idx["salad_shopska_04dd73"])["recipe"]["instructions"][0]
-    assert shopska.endswith("Couper 220 g de tofu ferme en quartiers.")
+    pinto = vegan_variant(idx["brkf_gallo_pinto_3d47f2"])
+    assert egg_sub(pinto) == "tofu_plain_pre_packaged"
+    assert "Poêler 220 g de tofu ferme en tranches, 3 minutes par face, dans 10 ml d'huile" in pinto["recipe"]["instructions"][4]
+    olivier = vegan_variant(idx["salad_olivier_vegetarienne_8d35c7"])["recipe"]["instructions"][1]
+    assert olivier.endswith("Couper 220 g de tofu ferme en dés.")
     kanel = vegan_variant(idx["dessert_kanelbullar_4e0c93"])
     assert egg_sub(kanel) == "soybean_milk_unsweetened_plant"
     assert any("dorer au lait de soja (50 g)" in s for s in kanel["recipe"]["instructions"])
@@ -282,5 +281,25 @@ def test_variante_vegan_selon_l_usage_de_l_oeuf():
     assert any("incorporer le tofu soyeux petit à petit" in s for s in choux["recipe"]["instructions"])
     # « pocher les gnocchis » n'est pas un œuf poché
     assert egg_sub(vegan_variant(idx["main_gnocchi_f17041"])) == "silken_tofu_pre_packaged"
-    for rid in ("rice_nasi_goreng_edfce4", "dessert_kanelbullar_4e0c93", "brkf_huevos_rancheros_6a80e5"):
+    for rid in ("brkf_gallo_pinto_3d47f2", "dessert_kanelbullar_4e0c93", "salad_olivier_vegetarienne_8d35c7"):
         assert estimate_price(vegan_variant(idx[rid])["recipe"])["complete"], rid
+
+
+def test_pas_de_version_vegan_quand_elle_n_est_pas_fiable():
+    """Décision du 2026-11-21 : ne pas insister. Plat qui porte l'œuf dans son nom, blancs en
+    neige ou jaunes sans équivalent : la version vegan n'est pas proposée (fiche sans bouton)."""
+    from fastapi.testclient import TestClient
+    from backend.api.main import app
+    from backend.core.data_io import load_recipes
+    from backend.engine.rule_engine.variants import vegan_variant
+    idx = {r["id"]: r for r in load_recipes()}
+    for rid in ("brkf_huevos_rancheros_6a80e5", "dessert_tiramisu_classique_ea8ddb",
+                "egg_omelette_nature_d72ed2", "dessert_ile_flottante_4623ef"):
+        v = vegan_variant(idx[rid])
+        assert v["source"] == "unavailable" and v["reason"], rid
+        assert v["recipe"] is idx[rid]
+    c = TestClient(app)
+    assert c.get("/recettes/dessert_tiramisu_classique_ea8ddb").json()["vegan_variant"]["available"] is False
+    assert c.get("/recettes/brkf_gallo_pinto_3d47f2").json()["vegan_variant"]["available"] is True
+    # la meringue aux blancs remplacés par l'aquafaba reste fiable
+    assert vegan_variant(idx["dessert_eton_mess_fraises_2b7a94"])["source"] in ("generated", "already_vegan")

@@ -370,6 +370,13 @@ def get_recette(recipe_id: str, request: Request):
         raise HTTPException(status_code=404, detail=f"Recette {recipe_id} introuvable")
     result = dict(recipe)
     result.update(_compute_enrichment(recipe))
+    # La fiche sait d'avance si une version vegan fiable existe : sinon, pas de bouton
+    if not (recipe.get("diet_flags") or {}).get("vegan"):
+        try:
+            v = vegan_variant(recipe)
+            result["vegan_variant"] = {"available": v["source"] == "generated", "reason": v.get("reason")}
+        except Exception as e:  # la fiche reste servie sans l'information
+            logger.warning("vegan_variant (fiche) échoué : %s", e)
     return result
 
 
@@ -517,6 +524,8 @@ def vegan_variant_route(recipe_id: str, user: dict = Depends(get_user)):
             detail="Le moteur de variantes est temporairement indisponible.")
     if not result:
         raise HTTPException(status_code=422, detail="Impossible de générer une variante vegan")
+    if result["source"] == "unavailable":       # pas de version vegan fiable : rien à enrichir
+        return result
     # Même enrichissement que la fiche : nutrition, prix, carbone, badges « sans X »
     # recalculés sur la composition de la variante (pas ceux de l'original)
     variant = result["recipe"]

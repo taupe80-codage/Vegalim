@@ -258,7 +258,8 @@ def test_variante_partielle_ne_se_dit_pas_vegan():
     r = copy.deepcopy(_recette_avec("ladyfinger"))
     r["composition"].append({"ingredient": "milk_powder_skimmed", "quantity": 20, "unit": "g"})
     res = vegan_variant(r)
-    assert res["source"] == "partial"
+    # sans remplacement fiable, la version vegan n'est pas proposée (2026-11-21)
+    assert res["source"] == "unavailable" and "lait" in res["reason"]
     assert any(u["id"] == "milk_powder_skimmed" for u in res["unresolved"])
     assert not res["recipe"].get("diet_flags", {}).get("vegan")
     assert "vegan" not in res["recipe"]["tags"].get("diet", [])

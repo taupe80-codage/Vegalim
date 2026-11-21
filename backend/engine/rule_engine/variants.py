@@ -580,6 +580,9 @@ def vegan_variant(recipe: dict) -> dict:
             steps = _apply_rules(steps, _EGG_WASH_RULES)
         elif egg_subs.get("egg_raw") == "silken_tofu_pre_packaged":
             steps = _apply_rules(steps, _EGG_SILKEN_RULES)
+        if egg_subs.get("egg_white_raw") == "aquafaba":      # meringue : « 140 g de blancs en neige »
+            steps = [re.sub(r"(\d+) ?g de blancs en neige", r"\1 g d'aquafaba en neige", s)
+                     if isinstance(s, str) else s for s in steps]
         r["instructions"], r["_steps_rewritten"] = _rewrite_steps(steps, applied)
         if any(a["original"] == "egg_raw" for a in applied):
             r["instructions"] = [_tofu_agreement(s) for s in r["instructions"]]
@@ -631,9 +634,39 @@ def vegan_variant(recipe: dict) -> dict:
         if r.get("diet_flags"):
             r["diet_flags"] = {**r["diet_flags"], "vegan": True, "vegetarian": True}
 
+    # Pas de version vegan quand elle ne serait pas fiable : on ne la propose pas plutôt que
+    # d'en fabriquer une bancale (décision du 2026-11-21).
+    reason = unreliable_reason(recipe, r, applied, unresolved)
+    if reason:
+        return {"recipe": recipe, "substitutions": [], "unresolved": unresolved,
+                "source": "unavailable", "reason": reason}
+
     return {
         "recipe":        r,
         "substitutions": applied,
         "unresolved":    unresolved,
         "source":        source,
     }
+
+
+_EGG_IDS = {"egg_raw", "egg_yolk_raw", "egg_white_raw", "egg_hard_boiled"}
+# plat qui porte l'œuf dans son nom : le remplacer contredit le plat
+_EGG_DISH = re.compile(r"\b(?:œufs?|huevos|omelette|anda)\b", re.I)
+# technique à base d'œuf restée sans équivalent (blancs en neige, jaunes séparés…)
+_EGG_LEFT = re.compile(r"œuf|(?<!oignon )(?<!oignons )\bjaunes?\b(?! d'oignon)|blancs? en neige", re.I)
+
+
+def unreliable_reason(original: dict, variant: dict, applied: list, unresolved: list) -> str | None:
+    """Pourquoi la version vegan d'une recette ne serait pas fiable (None : elle l'est)."""
+    if unresolved:
+        names = ", ".join(u.get("name") or u.get("id") for u in unresolved)
+        return f"pas de remplacement vegan pour : {names}"
+    if not any(a["original"] in _EGG_IDS for a in applied):
+        return None
+    title = (original.get("titles") or {}).get("fr") or ""
+    if _EGG_DISH.search(title):
+        return "l'œuf est l'ingrédient principal de ce plat"
+    steps = [s for s in variant.get("instructions") or [] if isinstance(s, str)]
+    if any(_EGG_LEFT.search(s) for s in steps):
+        return "la recette repose sur une technique à base d'œufs (blancs en neige, jaunes) sans équivalent fiable"
+    return None
