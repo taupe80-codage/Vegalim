@@ -274,3 +274,8 @@ backend/data/nutrition/reference/variant_names_report.json
 # ── Rapport de travail régénéré par scripts/fetch_recipe_images_free.py ──
 # (recettes sans photo sûre ; servi sinon comme fichier public du site)
 frontend/public/images/recipes/_unmatched.json
+
+# ── Recettes proposées par les utilisateurs (données runtime, régénérables) ──
+backend/data/recipes/community_recipes.json
+backend/data/recipes/.community_*.json
+backend/data/user_content/

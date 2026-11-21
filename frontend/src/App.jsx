@@ -28,6 +28,9 @@ import ShoppingListPage  from './pages/ShoppingListPage';
 import FodmapPage        from './pages/FodmapPage';
 import FAQPage           from './pages/FAQPage';
 import CreditsPage       from './pages/CreditsPage';
+import ContributePage    from './pages/ContributePage';
+import MyRecipesPage     from './pages/MyRecipesPage';
+import ModerationPage    from './pages/ModerationPage';
 import { Link }          from './Router';
 import './index.css';
 
@@ -51,6 +54,9 @@ function PageDispatcher({ onAuthClick }) {
     case 'fodmap':      return <FodmapPage />;
     case 'faq':         return <FAQPage />;
     case 'credits':     return <CreditsPage />;
+    case 'contribute':  return <ContributePage onAuthClick={onAuthClick} />;
+    case 'my-recipes':  return <MyRecipesPage onAuthClick={onAuthClick} />;
+    case 'moderation':  return <ModerationPage onAuthClick={onAuthClick} />;
     default:          return <HomePage />;
   }
 }
@@ -76,6 +82,8 @@ function AppInner() {
         <Link to="/credits" className="app-footer-link">Crédits photos</Link>
         <span aria-hidden="true">·</span>
         <Link to="/faq" className="app-footer-link">FAQ</Link>
+        <span aria-hidden="true">·</span>
+        <Link to="/proposer" className="app-footer-link">Proposer une recette</Link>
       </footer>
 
       {showAuth && <AuthModal onClose={() => setShowAuth(false)} />}

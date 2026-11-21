@@ -178,3 +178,46 @@ export const ingredients = {
   search: (q) => get(`/ingredients/search?q=${encodeURIComponent(q)}`),
   byId:   (id) => get(`/ingredients/${id}`),
 };
+// ── Recettes proposées par les utilisateurs ──────────────────────────────────
+
+const del = (path) => request('DELETE', path);
+
+async function uploadRaw(path, file) {
+  const res = await fetch(`${BASE}${path}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': file.type || 'application/octet-stream', ...authHeaders() },
+    body: file,
+  });
+  if (!res.ok) {
+    let detail = `Erreur ${res.status}`;
+    try { detail = (await res.json()).detail || detail; } catch { /* corps non JSON */ }
+    throw new Error(detail);
+  }
+  return res.json();
+}
+
+export const contributions = {
+  options:  ()                 => get('/contributions/options'),
+  analyse:  (data, author_name) => post('/contributions/analyse', { data, author_name }),
+  parse:    (text)             => post('/contributions/ingredients/parse', { text }),
+  suggest:  (q)                => get(`/contributions/ingredients/suggest?q=${encodeURIComponent(q)}`),
+  mine:     ()                 => get('/contributions/mine'),
+  create:   (data, author_name) => post('/contributions', { data, author_name }),
+  get:      (id)               => get(`/contributions/${encodeURIComponent(id)}`),
+  save:     (id, data, author_name) => put(`/contributions/${encodeURIComponent(id)}`, { data, author_name }),
+  remove:   (id)               => del(`/contributions/${encodeURIComponent(id)}`),
+  submit:   (id, author_name, consent) => post(`/contributions/${encodeURIComponent(id)}/submit`, { author_name, consent }),
+  uploadPhoto: (id, file)      => uploadRaw(`/contributions/${encodeURIComponent(id)}/photo`, file),
+  deletePhoto: (id)            => del(`/contributions/${encodeURIComponent(id)}/photo`),
+  // Modération
+  queue:    (status = 'submitted') => get(`/contributions/moderation/queue?status=${status}`),
+  review:   (id)               => get(`/contributions/moderation/${encodeURIComponent(id)}`),
+  modSave:  (id, data)         => put(`/contributions/moderation/${encodeURIComponent(id)}`, { data }),
+  publish:  (id, message = '') => post(`/contributions/moderation/${encodeURIComponent(id)}/publish`, { message }),
+  requestChanges: (id, message) => post(`/contributions/moderation/${encodeURIComponent(id)}/request-changes`, { message }),
+  reject:   (id, message)      => post(`/contributions/moderation/${encodeURIComponent(id)}/reject`, { message }),
+  unpublish:(id, message)      => post(`/contributions/moderation/${encodeURIComponent(id)}/unpublish`, { message }),
+};
+
+/** Adresse complète d'une photo servie par l'API (même origine ou VITE_API_URL). */
+export const apiUrl = (path) => (path && path.startsWith('/') ? `${BASE}${path}` : path);

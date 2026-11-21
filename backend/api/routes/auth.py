@@ -177,12 +177,22 @@ def login(credentials: UserCredentials, request: Request):
 @router.get("/me")
 def me(user: dict = Depends(get_user)):
     """Retourne les informations de l'utilisateur connecté depuis son token JWT."""
-    return {"email": user.get("email"), "name": user.get("name", "")}
+    from backend.api.routes.contributions import is_moderator
+    return {"email": user.get("email"), "name": user.get("name", ""),
+            "is_moderator": is_moderator(user.get("email"))}
 
 
 @router.delete("/account", status_code=status.HTTP_204_NO_CONTENT)
 def delete_account(user: dict = Depends(get_user)):
     """Supprime définitivement le compte (RGPD droit à l'effacement)."""
+    # Recettes proposées : propositions, photos et recettes publiées retirées
+    try:
+        from backend.db.session import db_session
+        from backend.api.routes.contributions import delete_user_contributions
+        with db_session() as db:
+            delete_user_contributions(db, user["email"])
+    except Exception:
+        logger.warning("delete_account : recettes proposées non supprimées", exc_info=True)
     delete_user(user["email"])
     delete_profile(user["email"])
 

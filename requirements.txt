@@ -24,6 +24,9 @@ psycopg2-binary==2.9.12   # driver PostgreSQL
 aiosqlite==0.22.1         # driver SQLite async (dev/tests)
 alembic==1.20.0           # migrations de schéma (appliquées au démarrage)
 
+# ── Photos des recettes proposées (validation, ré-encodage, retrait EXIF/GPS)
+Pillow==12.2.0
+
 # ── Rate limiting ──────────────────────────────────────────────────
 redis==7.4.0              # rate limiting multi-process (optionnel, recommandé prod)
 

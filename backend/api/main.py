@@ -127,6 +127,19 @@ async def lifespan(app: FastAPI):
         except Exception as e2:
             logger.error("Erreur fallback init DB : %s", e2)
 
+    # Recettes de la communauté : le fichier est régénéré depuis la base s'il
+    # manque (nouveau conteneur, volume vidé) alors que des recettes sont publiées.
+    try:
+        from backend.core.data_io import COMMUNITY_RECIPES_PATH
+        if not COMMUNITY_RECIPES_PATH.exists():
+            from backend.db.session import db_session
+            from backend.api.routes.contributions import rebuild_community_file
+            with db_session() as _db:
+                n = rebuild_community_file(_db)
+            logger.info("Recettes de la communauté régénérées : %d", n)
+    except Exception as e:
+        logger.warning("Recettes de la communauté non régénérées : %s", e)
+
     # (optionnel) vérifier la connexion
     try:
         from backend.db.session import check_connection, refresh_db_availability

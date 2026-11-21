@@ -7,6 +7,7 @@ Tables migrées depuis JSON :
   - api_users       : comptes B2B (API key)
   - api_keys        : clés SHA-256 avec plans free/starter/pro
   - daily_quotas    : compteurs journaliers par clé
+  - recipe_submissions : recettes proposées par les utilisateurs (modérées)
 
 Données statiques (dataset culinaire) → restent en JSON + lru_cache.
 """
@@ -14,7 +15,7 @@ from datetime import datetime, date, timezone
 from typing   import Optional
 
 from sqlalchemy import (
-    Column, String, Integer, Boolean, Date, DateTime,
+    Column, String, Integer, Boolean, Date, DateTime, Text,
     ForeignKey, JSON, UniqueConstraint, Index, text,
 )
 from backend.core.encryption import EncryptedString
@@ -230,3 +231,51 @@ class PasswordResetToken(Base):
 
     def __repr__(self):
         return f"<PasswordResetToken email={self.email} expires={self.expires_at}>"
+
+
+# ── Recettes proposées par les utilisateurs ───────────────────────────────────
+
+class RecipeSubmission(Base):
+    """
+    Recette proposée par un utilisateur, de son brouillon à sa publication.
+
+    Cycle de vie (status) :
+      draft             → brouillon, modifiable par l'auteur
+      submitted         → envoyée, en attente de relecture
+      changes_requested → renvoyée à l'auteur avec un message, modifiable
+      published         → publiée dans le catalogue (published_recipe_id)
+      rejected          → refusée avec un motif
+
+    `data` garde le formulaire tel que l'auteur l'a rempli (ingrédients avec
+    quantité/unité saisies). La recette du catalogue est reconstruite à la
+    publication (contribution_service.build_recipe).
+    """
+    __tablename__ = "recipe_submissions"
+
+    id             = Column(String(36),  primary_key=True)          # UUID
+    user_email     = Column(String(254),
+                            ForeignKey("users.email", ondelete="CASCADE"),
+                            nullable=False, index=True)
+    status         = Column(String(20),  nullable=False, default="draft",
+                            server_default="draft")
+    title          = Column(String(120), nullable=False, default="")
+    author_name    = Column(String(40),  nullable=True)              # pseudo affiché
+    data           = Column(JSON, nullable=False, default=dict)
+    photo_token    = Column(String(40),  nullable=True)              # nom du fichier photo
+    moderator_note = Column(Text,        nullable=True)              # message à l'auteur
+    moderator_email = Column(String(254), nullable=True)
+    published_recipe_id = Column(String(100), nullable=True, index=True)
+    created_at     = Column(DateTime(timezone=True), nullable=False,
+                            default=lambda: datetime.now(timezone.utc))
+    updated_at     = Column(DateTime(timezone=True), nullable=False,
+                            default=lambda: datetime.now(timezone.utc),
+                            onupdate=lambda: datetime.now(timezone.utc))
+    submitted_at   = Column(DateTime(timezone=True), nullable=True)
+    reviewed_at    = Column(DateTime(timezone=True), nullable=True)
+
+    __table_args__ = (
+        Index("ix_submission_status", "status", "submitted_at"),
+    )
+
+    def __repr__(self):
+        return f"<RecipeSubmission {self.id} user={self.user_email} status={self.status}>"

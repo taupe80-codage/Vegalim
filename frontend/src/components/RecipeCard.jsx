@@ -677,6 +677,8 @@ function slugify(text) {
 }
 
 export function getRecipeImageUrl(recipe) {
+  // Recettes proposées par les utilisateurs : photo servie par l'API
+  if (recipe?.image_url) return recipe.image_url;
   const name = recipe?.titles?.fr || recipe?.titles?.en || recipe?.titles?.original || '';
   if (!name) return null;
   return `/images/recipes/${slugify(name)}.jpg`;

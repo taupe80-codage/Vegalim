@@ -8,7 +8,7 @@
  */
 
 import { useState, useEffect, useMemo } from 'react';
-import { useRouter, navigate } from '../Router';
+import { useRouter, navigate, Link } from '../Router';
 import { recipes as recipesApi, profile as profileApi } from '../api';
 import { useAuth } from '../AuthContext';
 import { useProfileDiet, defaultDietFilter } from '../useProfileDiet';
@@ -581,6 +581,15 @@ export default function RecipeDetailPage() {
               </div>
             );
           })()}
+
+          {/* Recette proposée par un membre */}
+          {recipe.community?.author_name && (
+            <p className="detail-byline">
+              <span aria-hidden="true">✍</span> Recette proposée par <strong>{recipe.community.author_name}</strong>
+              {recipe.community.published_at && <> · {new Date(recipe.community.published_at).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</>}
+              {' · '}<Link to="/proposer">Proposer la vôtre</Link>
+            </p>
+          )}
 
           {/* Origine cuisine */}
           <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 10 }}>

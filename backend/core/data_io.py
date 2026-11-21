@@ -169,8 +169,19 @@ _nutrition_db_cache   = _MtimeCache("load_nutrition_db")   # ← P2.2 : pipeline
 _ingredient_map_cache = _MtimeCache("load_ingredient_map")
 
 
-def load_recipes() -> list[dict]:
-    """Dataset principal — rechargé automatiquement si recipes.json est modifié."""
+# Recettes proposées par les utilisateurs et publiées après relecture : fichier
+# généré depuis la table recipe_submissions (contribution_service), distinct du
+# catalogue relu à la main. Lu au moment de l'appel : les tests le redirigent.
+# Fichier facultatif (absent tant que rien n'est publié) : joinpath le tient hors
+# de test_fichiers_references_par_data_io_existent, qui exige les autres.
+COMMUNITY_RECIPES_PATH = DATA_ROOT.joinpath("recipes", "community_recipes.json")
+_community_cache = _MtimeCache("load_community_recipes")
+_merged_lock = threading.Lock()
+_merged: dict = {"key": None, "data": None}
+
+
+def load_catalogue_recipes() -> list[dict]:
+    """recipes.json seul (sans les recettes de la communauté)."""
     _path = DATA_ROOT / "recipes" / "recipes.json"
 
     def _loader():
@@ -181,8 +192,47 @@ def load_recipes() -> list[dict]:
 
     return _recipes_cache.get(_path, _loader)
 
+
+def load_community_recipes() -> list[dict]:
+    """Recettes publiées de la communauté ([] tant qu'aucune ne l'est)."""
+    path = Path(COMMUNITY_RECIPES_PATH)
+
+    def _loader():
+        if not path.exists():
+            return []
+        data = load_json(path, default={"recipes": []})
+        recipes = data.get("recipes", []) if isinstance(data, dict) else (data or [])
+        logger.info("Recettes de la communauté : %d", len(recipes))
+        return [r for r in recipes if isinstance(r, dict) and r.get("id")]
+
+    return _community_cache.get(path, _loader)
+
+
+def load_recipes() -> list[dict]:
+    """Dataset principal (recipes.json + recettes publiées de la communauté),
+    rechargé automatiquement quand l'un des deux fichiers est modifié."""
+    base = load_catalogue_recipes()
+    community = load_community_recipes()
+    if not community:
+        return base
+    key = (id(base), id(community))
+    with _merged_lock:
+        if _merged["key"] != key:
+            known = {r.get("id") for r in base}
+            _merged["data"] = base + [r for r in community if r.get("id") not in known]
+            _merged["key"] = key
+        return _merged["data"]
+
+
+def _clear_recipes_caches() -> None:
+    _recipes_cache.cache_clear()
+    _community_cache.cache_clear()
+    with _merged_lock:
+        _merged["key"] = _merged["data"] = None
+
+
 # Compatibilité avec le code existant qui appelle load_recipes.cache_clear()
-load_recipes.cache_clear = _recipes_cache.cache_clear  # type: ignore[attr-defined]
+load_recipes.cache_clear = _clear_recipes_caches  # type: ignore[attr-defined]
 
 
 def load_score_graph() -> dict:

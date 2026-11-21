@@ -9,6 +9,9 @@
  *   /nutrition  → NutritionPage
  *   /profil     → ProfilePage
  *   /credits    → CreditsPage
+ *   /proposer[/:id] → ContributePage (proposer une recette)
+ *   /mes-recettes   → MyRecipesPage
+ *   /moderation     → ModerationPage
  *
  * Usage :
  *   <Link to="/frigo">Mon Frigo</Link>
@@ -68,6 +71,10 @@ const ROUTES = [
   { pattern: '/fodmap',     page: 'fodmap'     },
   { pattern: '/faq',        page: 'faq'        },
   { pattern: '/credits',    page: 'credits'    },
+  { pattern: '/proposer',     page: 'contribute' },
+  { pattern: '/proposer/:id', page: 'contribute' },
+  { pattern: '/mes-recettes', page: 'my-recipes' },
+  { pattern: '/moderation',   page: 'moderation' },
 ];
 
 function resolve(path) {

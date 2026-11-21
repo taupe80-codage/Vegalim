@@ -121,9 +121,11 @@ def diet_flags_audit(_user = Depends(require_admin)):
 def search_tokens_rebuild(_user = Depends(require_admin)):
     """Regénère les search_tokens sur toutes les recettes."""
     from backend.engine.search_token_generator import batch_generate           # conservé
-    from backend.core.data_io import load_recipes
+    from backend.core.data_io import load_recipes, load_catalogue_recipes
     load_recipes.cache_clear()
-    recipes = list(load_recipes())
+    # recipes.json seul : les recettes de la communauté ont leur propre fichier
+    # et ne doivent pas être recopiées dans le catalogue relu à la main.
+    recipes = list(load_catalogue_recipes())
     stats   = batch_generate(recipes, save=True)
     load_recipes.cache_clear()
     return {"status": "ok", **stats}

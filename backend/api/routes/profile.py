@@ -189,12 +189,30 @@ def export_profile(user: dict = Depends(get_user)):
     except Exception:
         logger.warning("export_profile : erreur ignorée (repli)", exc_info=True)
 
+    # Recettes proposées (brouillons, envoyées, publiées)
+    contributions = []
+    try:
+        from backend.db.session import db_session
+        from backend.db.models import RecipeSubmission
+        with db_session() as db:
+            for s in db.query(RecipeSubmission).filter(RecipeSubmission.user_email == email).all():
+                contributions.append({
+                    "id": s.id, "status": s.status, "title": s.title,
+                    "author_name": s.author_name, "data": s.data,
+                    "moderator_note": s.moderator_note,
+                    "published_recipe_id": s.published_recipe_id,
+                    "created_at": s.created_at.isoformat() if s.created_at else None,
+                })
+    except Exception:
+        logger.warning("export_profile : recettes proposées non exportées", exc_info=True)
+
     import datetime
     return {
         "export_date":  datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "email":        email,
         "profile":      profile,
         "interactions": history_data,
+        "contributions": contributions,
         "rights": {
             "rectification": "POST /profil/update",
             "erasure":       "DELETE /profil/ ou DELETE /auth/account",

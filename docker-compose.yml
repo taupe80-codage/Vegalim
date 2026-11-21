@@ -88,6 +88,8 @@ services:
       - ./backend/data/product:/app/backend/data/product
       - ./backend/data/user_profiles:/app/backend/data/user_profiles
       - ./backend/data/logs:/app/backend/data/logs
+      # Photos des recettes proposées par les utilisateurs
+      - ./backend/data/user_content:/app/backend/data/user_content
       - ./backend/users:/app/backend/users
     depends_on:
       db:

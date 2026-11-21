@@ -71,6 +71,16 @@ export default function Navbar({ onAuthClick }) {
             <span aria-hidden="true">{theme === 'dark' ? '☼' : '☾'}</span>
           </button>
 
+          <Link
+            to="/proposer"
+            className={`nav-propose ${page === 'contribute' ? 'nav-propose--active' : ''}`}
+            aria-current={page === 'contribute' ? 'page' : undefined}
+            title="Proposer une recette vegan ou végétarienne"
+            aria-label="Proposer une recette"
+          >
+            <span aria-hidden="true">＋</span><span className="nav-propose-label"> Proposer</span>
+          </Link>
+
           {user ? (
             <div className="nav-user">
               <Link
@@ -124,6 +134,22 @@ export default function Navbar({ onAuthClick }) {
               <span aria-hidden="true">{icon}</span> {label}
             </Link>
           ))}
+          <Link to="/proposer" className={`nav-mobile-link ${page === 'contribute' ? 'nav-link--active' : ''}`}
+            onClick={() => setMenuOpen(false)}>
+            <span aria-hidden="true">＋</span> Proposer une recette
+          </Link>
+          {user && (
+            <Link to="/mes-recettes" className={`nav-mobile-link ${page === 'my-recipes' ? 'nav-link--active' : ''}`}
+              onClick={() => setMenuOpen(false)}>
+              <span aria-hidden="true">📒</span> Mes recettes proposées
+            </Link>
+          )}
+          {user?.is_moderator && (
+            <Link to="/moderation" className={`nav-mobile-link ${page === 'moderation' ? 'nav-link--active' : ''}`}
+              onClick={() => setMenuOpen(false)}>
+              <span aria-hidden="true">🛡</span> Modération
+            </Link>
+          )}
           {!user && (
             <button
               className="nav-login-btn"
