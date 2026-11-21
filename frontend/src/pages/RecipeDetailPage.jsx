@@ -16,6 +16,7 @@ import { recordViewOnce } from '../favoritesSync';
 import translations from '../translations.json';
 import physData from '../ingredientPhysical.json';
 import { formatIngredientQty } from '../formatIngredientQty';
+import { RecipeReviews } from '../components/Reviews';
 import RecipeCard, { RecipeVisual, getRecipeBadges, getCuisineColor, getRecipeImageUrl, computeNRFScore, computeAlimScore } from '../components/RecipeCard';
 import { addToRecentlyViewed } from '../useRecentlyViewed';
 import AddToPlanModal from '../components/AddToPlanModal';
@@ -318,7 +319,7 @@ function ingredientMatches(fridgeId, recipeId) {
   return false;
 }
 
-export default function RecipeDetailPage() {
+export default function RecipeDetailPage({ onAuthClick }) {
   const { params, search, setSearch } = useRouter();
   const loggedIn = !!useAuth()?.user;
   const toast = useToast();
@@ -934,6 +935,9 @@ export default function RecipeDetailPage() {
         <AddToPlanModal recipe={recipe} variant={showVariant && variant?.recipe ? 'vegan' : undefined}
           onClose={()=>setShowPlanModal(false)} />
       )}
+
+      {/* ── Notes et commentaires ── */}
+      {recipe?.id && <RecipeReviews recipeId={recipe.id} onAuthClick={onAuthClick} />}
 
       {/* ── Recettes similaires ── */}
       {(similarLoading || similar.length > 0) && (

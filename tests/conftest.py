@@ -24,3 +24,19 @@ def pytest_collection_modifyitems(items):
                 pytest.mark.pipeline,
                 append=False,
             )
+
+
+
+def pytest_configure(config):
+    """
+    Les recettes publiées par les utilisateurs (community_recipes.json, généré
+    à l'exécution et hors Git) ne doivent pas entrer dans les tests du
+    catalogue : on pointe vers un fichier absent, avant la collecte (certains
+    modules chargent les recettes à l'import). Les tests des contributions
+    redirigent eux-mêmes ce chemin vers leur dossier temporaire.
+    """
+    import tempfile
+    from pathlib import Path
+    from backend.core import data_io
+    data_io.COMMUNITY_RECIPES_PATH = Path(tempfile.mkdtemp(prefix="alim_communaute_")) / "community_recipes.json"
+    data_io.load_recipes.cache_clear()

@@ -189,12 +189,18 @@ def export_profile(user: dict = Depends(get_user)):
     except Exception:
         logger.warning("export_profile : erreur ignorée (repli)", exc_info=True)
 
-    # Recettes proposées (brouillons, envoyées, publiées)
-    contributions = []
+    # Recettes proposées (brouillons, envoyées, publiées) et avis donnés
+    contributions, reviews = [], []
     try:
         from backend.db.session import db_session
-        from backend.db.models import RecipeSubmission
+        from backend.db.models import RecipeSubmission, RecipeReview
         with db_session() as db:
+            for r in db.query(RecipeReview).filter(RecipeReview.user_email == email).all():
+                reviews.append({
+                    "recipe_id": r.recipe_id, "rating": r.rating, "comment": r.comment,
+                    "made_it": r.made_it, "author_name": r.author_name, "status": r.status,
+                    "created_at": r.created_at.isoformat() if r.created_at else None,
+                })
             for s in db.query(RecipeSubmission).filter(RecipeSubmission.user_email == email).all():
                 contributions.append({
                     "id": s.id, "status": s.status, "title": s.title,
@@ -204,7 +210,7 @@ def export_profile(user: dict = Depends(get_user)):
                     "created_at": s.created_at.isoformat() if s.created_at else None,
                 })
     except Exception:
-        logger.warning("export_profile : recettes proposées non exportées", exc_info=True)
+        logger.warning("export_profile : recettes proposées ou avis non exportés", exc_info=True)
 
     import datetime
     return {
@@ -213,6 +219,7 @@ def export_profile(user: dict = Depends(get_user)):
         "profile":      profile,
         "interactions": history_data,
         "contributions": contributions,
+        "reviews":      reviews,
         "rights": {
             "rectification": "POST /profil/update",
             "erasure":       "DELETE /profil/ ou DELETE /auth/account",

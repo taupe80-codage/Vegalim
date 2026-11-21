@@ -206,6 +206,9 @@ export const contributions = {
   get:      (id)               => get(`/contributions/${encodeURIComponent(id)}`),
   save:     (id, data, author_name) => put(`/contributions/${encodeURIComponent(id)}`, { data, author_name }),
   remove:   (id)               => del(`/contributions/${encodeURIComponent(id)}`),
+  discardRevision: (id)        => del(`/contributions/${encodeURIComponent(id)}/revision`),
+  preferences: ()              => get('/contributions/preferences'),
+  setPreferences: (email_notifications) => put('/contributions/preferences', { email_notifications }),
   submit:   (id, author_name, consent) => post(`/contributions/${encodeURIComponent(id)}/submit`, { author_name, consent }),
   uploadPhoto: (id, file)      => uploadRaw(`/contributions/${encodeURIComponent(id)}/photo`, file),
   deletePhoto: (id)            => del(`/contributions/${encodeURIComponent(id)}/photo`),
@@ -221,3 +224,20 @@ export const contributions = {
 
 /** Adresse complète d'une photo servie par l'API (même origine ou VITE_API_URL). */
 export const apiUrl = (path) => (path && path.startsWith('/') ? `${BASE}${path}` : path);
+
+// ── Notes et commentaires ────────────────────────────────────────────────────
+
+export const reviews = {
+  forRecipe: (id, sort = 'helpful', skip = 0) =>
+    get(`/avis/recette/${encodeURIComponent(id)}?sort=${sort}&skip=${skip}&limit=10`),
+  save:      (id, payload) => put(`/avis/recette/${encodeURIComponent(id)}`, payload),
+  remove:    (id)          => del(`/avis/recette/${encodeURIComponent(id)}`),
+  helpful:   (reviewId)    => post(`/avis/${reviewId}/utile`, {}),
+  report:    (reviewId, reason) => post(`/avis/${reviewId}/signaler`, { reason }),
+  summaries: (ids)         => post('/avis/resume', { ids }),
+  // Modération
+  modList:   (status = 'reported') => get(`/avis/moderation?status=${status}`),
+  modHide:   (reviewId)    => post(`/avis/moderation/${reviewId}/hide`, {}),
+  modRestore:(reviewId)    => post(`/avis/moderation/${reviewId}/restore`, {}),
+  modDelete: (reviewId)    => del(`/avis/moderation/${reviewId}`),
+};

@@ -41,7 +41,7 @@ function PageDispatcher({ onAuthClick }) {
 
   switch (page) {
     case 'home':      return <HomePage />;
-    case 'recipe':    return <RecipeDetailPage />;
+    case 'recipe':    return <RecipeDetailPage onAuthClick={onAuthClick} />;
     case 'frigo':     return <FrigoPage />;
     case 'planning':  return <PlanningPage />;
     case 'nutrition': return <NutritionPage />;

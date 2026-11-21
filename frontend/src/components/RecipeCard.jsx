@@ -11,6 +11,7 @@ import { useState, useRef } from 'react';
 import { navigate } from '../Router';
 import { useFavorites } from '../FavoritesContext';
 import AddToPlanModal from './AddToPlanModal';
+import { RatingBadge } from './Reviews';
 import { useSeasonNow, isInSeason } from '../seasonNow';
 
 // ── Couleur accent par origine cuisine ────────────────────────────────────────
@@ -933,6 +934,7 @@ export default function RecipeCard({ recipe, activeHealthFilters = new Set(), ac
           <span className="recipe-meta-item">
             <span className="recipe-meta-icon">🍽</span> {recipe.servings || 4} pers.
           </span>
+          <RatingBadge recipeId={recipe.id} />
           {kcal && (
             <span className="recipe-meta-item">
               <span className="recipe-meta-icon">🔥</span> {Math.round(kcal)} kcal

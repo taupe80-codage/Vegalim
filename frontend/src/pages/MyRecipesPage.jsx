@@ -26,6 +26,7 @@ export default function MyRecipesPage({ onAuthClick }) {
   const [items, setItems]   = useState(null);
   const [error, setError]   = useState('');
   const [confirm, setConfirm] = useState(null);
+  const [prefs, setPrefs]   = useState(null);
 
   const load = () => {
     contributions.mine()
@@ -34,6 +35,16 @@ export default function MyRecipesPage({ onAuthClick }) {
   };
 
   useEffect(() => { if (user) load(); }, [user]);
+  useEffect(() => {
+    if (user) contributions.preferences().then(setPrefs).catch(() => setPrefs(null));
+  }, [user]);
+
+  const toggleEmails = async (on) => {
+    try {
+      setPrefs(await contributions.setPreferences(on));
+      toast(on ? 'E-mails de suivi activés' : 'E-mails de suivi désactivés', 'info');
+    } catch (e) { toast(e.message, 'error'); }
+  };
 
   const remove = async (s) => {
     if (confirm !== s.id) { setConfirm(s.id); return; }
@@ -77,6 +88,12 @@ export default function MyRecipesPage({ onAuthClick }) {
         <span className="ct-muted">{items ? `${items.length} recette${items.length > 1 ? 's' : ''}` : 'Chargement…'}</span>
         <Link to="/proposer" className="ct-btn ct-btn--primary">+ Proposer une recette</Link>
       </div>
+      {prefs && (
+        <label className="ct-consent ct-prefs">
+          <input type="checkbox" checked={prefs.email_notifications} onChange={e => toggleEmails(e.target.checked)} />
+          <span>Me prévenir par e-mail quand l'équipe publie, renvoie ou refuse une de mes recettes.</span>
+        </label>
+      )}
       {error && <p className="ct-error" role="alert">{error}</p>}
 
       {items && items.length === 0 && (
@@ -97,18 +114,22 @@ export default function MyRecipesPage({ onAuthClick }) {
             <div className="ct-item-body">
               <div className="ct-item-head">
                 <h2 className="ct-item-title">{s.title || 'Recette sans titre'}</h2>
-                <StatusBadge status={s.status} label={s.status_label} />
+                <span className="ct-badges">
+                  <StatusBadge status={s.status} label={s.status_label} />
+                  {s.revision && <StatusBadge status={s.revision.status === 'changes_requested' ? 'changes_requested' : s.revision.status === 'submitted' ? 'submitted' : 'draft'} label={s.revision.status_label} />}
+                </span>
               </div>
               <p className="ct-muted ct-item-dates">
                 {s.status === 'published' && s.reviewed_at ? `Publiée le ${formatDate(s.reviewed_at)}`
                   : s.status === 'submitted' && s.submitted_at ? `Envoyée le ${formatDate(s.submitted_at)} — relecture en cours`
                   : `Modifiée le ${formatDate(s.updated_at)}`}
               </p>
-              {s.moderator_note && (s.status === 'changes_requested' || s.status === 'rejected' || s.status === 'published') && (
+              {s.moderator_note && (s.status === 'changes_requested' || s.status === 'rejected' || s.status === 'published')
+                && !(s.status === 'published' && s.revision && s.revision.status !== 'changes_requested') && (
                 <blockquote className="ct-modnote"><strong>Message de l'équipe :</strong> {s.moderator_note}</blockquote>
               )}
               <div className="ct-actions">
-                {s.editable && (
+                {s.editable && s.status !== 'published' && (
                   <button type="button" className="ct-btn ct-btn--sm ct-btn--primary" onClick={() => navigate(`/proposer/${s.id}`)}>
                     {s.status === 'changes_requested' ? 'Corriger et renvoyer' : 'Continuer'}
                   </button>
@@ -118,6 +139,12 @@ export default function MyRecipesPage({ onAuthClick }) {
                 )}
                 {s.status === 'published' && s.published_recipe_id && (
                   <Link to={`/recette/${s.published_recipe_id}`} className="ct-btn ct-btn--sm ct-btn--primary">Voir la fiche publiée</Link>
+                )}
+                {s.status === 'published' && (
+                  <button type="button" className="ct-btn ct-btn--sm" onClick={() => navigate(`/proposer/${s.id}`)}>
+                    {s.revision?.status === 'submitted' ? 'Voir mes modifications'
+                      : s.revision ? 'Reprendre mes modifications' : 'Modifier'}
+                  </button>
                 )}
                 <button type="button" className={`ct-btn ct-btn--sm ${confirm === s.id ? 'ct-btn--danger' : ''}`} onClick={() => remove(s)}
                   onBlur={() => setTimeout(() => setConfirm(c => (c === s.id ? null : c)), 200)}>

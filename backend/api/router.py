@@ -9,10 +9,11 @@ Organisation par domaine :
   /planning  → plan semaine, liste courses, export .ics
   /admin     → audit qualité, stats, pipeline
   /contributions → recettes proposées par les utilisateurs + modération
+  /avis      → notes et commentaires sur les recettes
   /prototype → route GET simple sans auth (démo)
 """
 from fastapi import APIRouter
-from backend.api.routes import auth, profile, recipes, nutrition, planning, admin, ingredients, frigo, graph, contributions
+from backend.api.routes import auth, profile, recipes, nutrition, planning, admin, ingredients, frigo, graph, contributions, reviews
 
 router = APIRouter()
 router.include_router(auth.router)
@@ -25,3 +26,4 @@ router.include_router(ingredients.router)
 router.include_router(frigo.router)
 router.include_router(graph.router)
 router.include_router(contributions.router)
+router.include_router(reviews.router)

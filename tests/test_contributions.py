@@ -321,3 +321,98 @@ def test_herbes_a_la_feuille_et_au_brin_ne_pesent_pas_100_g():
     assert lines["sauge"]["unit"] == "feuille" and lines["thym"]["unit"] == "brin"
     assert cs.to_catalogue_quantity(lines["sauge"]["ingredient_id"], 10, "feuille") == (5.0, "g")
     assert cs.to_catalogue_quantity(lines["thym"]["ingredient_id"], 3, "brin") == (3.0, "g")
+
+
+# ── Modification d'une recette publiée ────────────────────────────────────────
+
+def _publish(c, who, data=GOOD):
+    sid = _create(c, data)["id"]
+    assert _submit(c, sid).status_code == 200
+    who["email"] = MOD
+    rid = c.post(f"/contributions/moderation/{sid}/publish", json={}).json()["published_recipe_id"]
+    who["email"] = AUTHOR
+    return sid, rid
+
+
+def _live(rid):
+    return next(r for r in data_io.load_recipes() if r["id"] == rid)
+
+
+def test_modifier_une_recette_publiee_passe_par_la_relecture(env):
+    c, who, _ = env
+    sid, rid = _publish(c, who)
+    edited = {**GOOD, "title": GOOD["title"] + " et coriandre",
+              "steps": GOOD["steps"] + ["Parsemer de coriandre fraîche au moment de servir."]}
+    res = c.put(f"/contributions/{sid}", json={"data": edited})
+    assert res.status_code == 200, res.text
+    body = res.json()
+    assert body["status"] == "published" and body["revision"]["status"] == "draft"
+    assert set(body["revision"]["changes"]) >= {"titre", "étapes"}
+    # la version en ligne n'a pas changé
+    assert "coriandre" not in _live(rid)["titles"]["fr"]
+
+    assert _submit(c, sid).json()["revision"]["status"] == "submitted"
+    assert c.put(f"/contributions/{sid}", json={"data": edited}).status_code == 409   # en relecture
+
+    who["email"] = MOD
+    q = c.get("/contributions/moderation/queue").json()
+    assert q["counts"]["submitted"] == 1 and q["results"][0]["is_revision"]
+    detail = c.get(f"/contributions/moderation/{sid}").json()
+    assert detail["is_revision"] and detail["analysis"]["ready"]
+    res = c.post(f"/contributions/moderation/{sid}/publish", json={})
+    assert res.status_code == 200, res.text
+    assert res.json()["revision"] is None
+    # même adresse, nouvelle version
+    assert _live(rid)["titles"]["fr"].endswith("et coriandre")
+    assert len(_live(rid)["instructions"]) == 3
+
+
+def test_modification_refusee_la_version_en_ligne_reste(env):
+    c, who, _ = env
+    sid, rid = _publish(c, who)
+    c.put(f"/contributions/{sid}", json={"data": {**GOOD, "title": "Tout autre chose ici"}})
+    _submit(c, sid)
+    who["email"] = MOD
+    res = c.post(f"/contributions/moderation/{sid}/reject", json={"message": "Cette modification change le plat entier."})
+    assert res.status_code == 200
+    assert res.json()["status"] == "published" and res.json()["revision"] is None
+    assert _live(rid)["titles"]["fr"] == GOOD["title"]
+
+
+def test_abandonner_une_modification(env):
+    c, who, _ = env
+    sid, _rid = _publish(c, who)
+    c.put(f"/contributions/{sid}", json={"data": {**GOOD, "tip": "Nouvelle astuce de saison."}})
+    assert c.delete(f"/contributions/{sid}/revision").status_code == 204
+    assert c.get(f"/contributions/{sid}").json()["revision"] is None
+    # rien à envoyer sans modification
+    assert _submit(c, sid).status_code == 409
+
+
+# ── E-mails ───────────────────────────────────────────────────────────────────
+
+def test_emails_de_statut_et_preference(env, monkeypatch):
+    from backend.services import mail_service
+    monkeypatch.delenv("SMTP_HOST", raising=False)
+    mail_service.OUTBOX.clear()
+    c, who, _ = env
+    sid = _create(c)["id"]
+    _submit(c, sid)
+    assert any(MOD in m["to"] and "à relire" in m["subject"] for m in mail_service.OUTBOX)
+    who["email"] = MOD
+    c.post(f"/contributions/moderation/{sid}/request-changes",
+           json={"message": "Précisez la quantité d'eau, merci beaucoup."})
+    mail = next(m for m in mail_service.OUTBOX if AUTHOR in m["to"])
+    assert "corrections" in mail["subject"] and "quantité d'eau" in mail["text"]
+    assert f"/proposer/{sid}" in mail["text"]
+
+    # l'auteur coupe les e-mails : plus rien ne lui est envoyé
+    who["email"] = AUTHOR
+    assert c.put("/contributions/preferences", json={"email_notifications": False}).json()["email_notifications"] is False
+    assert c.get("/contributions/preferences").json()["email_notifications"] is False
+    c.put(f"/contributions/{sid}", json={"data": GOOD})
+    _submit(c, sid)
+    mail_service.OUTBOX.clear()
+    who["email"] = MOD
+    c.post(f"/contributions/moderation/{sid}/publish", json={})
+    assert not any(AUTHOR in m["to"] for m in mail_service.OUTBOX)

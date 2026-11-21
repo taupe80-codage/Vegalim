@@ -101,6 +101,9 @@ export default function ContributePage({ onAuthClick }) {
   const analyseReq = useRef(0);
 
   const editable = !sub || sub.editable;
+  const isPublished = sub?.status === 'published';
+  // photo affichée : celle de la modification en cours, sinon celle en ligne
+  const photoUrl = isPublished && sub.revision && 'photo_url' in sub.revision ? sub.revision.photo_url : sub?.photo_url;
 
   // Listes du formulaire
   useEffect(() => {
@@ -129,8 +132,10 @@ export default function ContributePage({ onAuthClick }) {
       .then(s => {
         setSub(s);
         setSubId(s.id);
-        setForm(formFromServer(s.data));
-        if (s.author_name) setAuthor(s.author_name);
+        // recette publiée : on reprend la modification en cours s'il y en a une
+        setForm(formFromServer(s.revision?.data || s.data));
+        const pseudo = s.revision?.author_name || s.author_name;
+        if (pseudo) setAuthor(pseudo);
         dirty.current = false;
       })
       .catch(e => setLoadError(e.message || 'Recette introuvable'));
@@ -262,7 +267,9 @@ export default function ContributePage({ onAuthClick }) {
       const id = subId || (await save())?.id;
       if (!id) throw new Error('Enregistrez d\'abord la recette.');
       const res = await contributions.uploadPhoto(id, file);
-      setSub(s => ({ ...(s || {}), photo_url: res.photo_url }));
+      setSub(s => (s?.status === 'published'
+        ? { ...s, revision: { ...(s.revision || { status: 'draft', changes: [] }), photo_url: res.photo_url } }
+        : { ...(s || {}), photo_url: res.photo_url }));
       toast('Photo ajoutée');
     } catch (e) {
       toast(e.message || 'Photo refusée', 'error');
@@ -275,7 +282,21 @@ export default function ContributePage({ onAuthClick }) {
     if (!subId) return;
     try {
       await contributions.deletePhoto(subId);
-      setSub(s => ({ ...s, photo_url: null }));
+      setSub(s => (s.status === 'published'
+        ? { ...s, revision: { ...(s.revision || { status: 'draft', changes: [] }), photo_url: null } }
+        : { ...s, photo_url: null }));
+    } catch (e) { toast(e.message, 'error'); }
+  };
+
+  const discardRevision = async () => {
+    try {
+      await contributions.discardRevision(subId);
+      const s = await contributions.get(subId);
+      setSub(s);
+      setForm(formFromServer(s.data));
+      if (s.author_name) setAuthor(s.author_name);
+      dirty.current = false;
+      toast('Modifications abandonnées : la version en ligne est inchangée.', 'info');
     } catch (e) { toast(e.message, 'error'); }
   };
 
@@ -290,7 +311,7 @@ export default function ContributePage({ onAuthClick }) {
       const s = await contributions.submit(id, author, consent);
       setSub(s);
       dirty.current = false;
-      toast('Merci ! Votre recette est envoyée en relecture.');
+      toast(isPublished ? 'Vos modifications sont envoyées en relecture.' : 'Merci ! Votre recette est envoyée en relecture.');
       navigate('/mes-recettes');
     } catch (e) {
       toast(e.message || 'Envoi impossible', 'error');
@@ -355,12 +376,29 @@ export default function ContributePage({ onAuthClick }) {
     <div className="ct-page">
       {header}
 
-      {sub && sub.status !== 'draft' && (
+      {isPublished && (
+        <div className="ct-banner ct-banner--published" role="status">
+          <StatusBadge status="published" label="Publiée" />
+          {sub.revision && <StatusBadge status={sub.revision.status === 'changes_requested' ? 'changes_requested' : 'submitted'} label={sub.revision.status_label} />}
+          <span>
+            {sub.revision?.status === 'submitted'
+              ? 'Vos modifications sont en relecture ; la version en ligne reste affichée en attendant.'
+              : 'Vous modifiez une recette publiée : vos changements seront relus avant de remplacer la version en ligne.'}
+            {' '}<Link to={`/recette/${sub.published_recipe_id}`}>Voir la version en ligne</Link>
+          </span>
+          {sub.revision?.changes?.length > 0 && <span className="ct-muted">Modifié : {sub.revision.changes.join(', ')}.</span>}
+          {sub.revision && sub.revision.status !== 'submitted' && (
+            <button type="button" className="ct-btn ct-btn--sm" onClick={discardRevision}>Abandonner mes modifications</button>
+          )}
+          {sub.revision?.status === 'changes_requested' && sub.moderator_note && <blockquote className="ct-modnote">{sub.moderator_note}</blockquote>}
+        </div>
+      )}
+
+      {sub && sub.status !== 'draft' && !isPublished && (
         <div className={`ct-banner ct-banner--${sub.status}`} role="status">
           <StatusBadge status={sub.status} label={sub.status_label} />
           {sub.status === 'changes_requested' && <span>L'équipe vous demande quelques modifications avant publication.</span>}
           {sub.status === 'submitted' && <span>Votre recette est en relecture : elle n'est plus modifiable d'ici là.</span>}
-          {sub.status === 'published' && <span>Votre recette est publiée. <Link to={`/recette/${sub.published_recipe_id}`}>Voir la fiche</Link></span>}
           {sub.status === 'rejected' && <span>Cette recette n'a pas été retenue.</span>}
           {sub.moderator_note && <blockquote className="ct-modnote">{sub.moderator_note}</blockquote>}
         </div>
@@ -369,9 +407,9 @@ export default function ContributePage({ onAuthClick }) {
       <div className="ct-toolbar">
         <span className={`ct-save ct-save--${saveState}`} aria-live="polite">
           {saveState === 'saving' && 'Enregistrement…'}
-          {saveState === 'saved' && savedAt && `Brouillon enregistré à ${savedAt.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}`}
+          {saveState === 'saved' && savedAt && `${isPublished ? 'Modifications enregistrées' : 'Brouillon enregistré'} à ${savedAt.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}`}
           {saveState === 'error' && 'Non enregistré — nouvel essai à la prochaine modification'}
-          {saveState === 'idle' && (subId ? 'Brouillon' : 'Nouveau brouillon')}
+          {saveState === 'idle' && (isPublished ? 'Version en ligne' : subId ? 'Brouillon' : 'Nouveau brouillon')}
         </span>
         <button type="button" className="ct-btn" onClick={() => setPreview(p => !p)} aria-pressed={preview}>
           {preview ? '✎ Revenir à la saisie' : '👁 Aperçu'}
@@ -381,7 +419,7 @@ export default function ContributePage({ onAuthClick }) {
       <div className="ct-layout">
         <div className="ct-main">
           {preview ? (
-            <RecipePreview form={form} options={options} photoUrl={sub?.photo_url} authorName={author} analysis={analysis} />
+            <RecipePreview form={form} options={options} photoUrl={photoUrl} authorName={author} analysis={analysis} />
           ) : (
             <fieldset className="ct-fieldset" disabled={!editable}>
               {/* 1. L'essentiel */}
@@ -560,9 +598,9 @@ export default function ContributePage({ onAuthClick }) {
                 <p className="ct-hint">Temps total : {formatMinutes((Number(form.prep_min) || 0) + (Number(form.cook_min) || 0) + (Number(form.rest_min) || 0))}</p>
 
                 <div className="ct-photo">
-                  {sub?.photo_url ? (
+                  {photoUrl ? (
                     <figure className="ct-photo-fig">
-                      <img src={apiUrl(sub.photo_url)} alt="Photo de votre recette" />
+                      <img src={apiUrl(photoUrl)} alt="Photo de votre recette" />
                       <button type="button" className="ct-btn ct-btn--sm" onClick={removePhoto}>Retirer la photo</button>
                     </figure>
                   ) : (
@@ -596,7 +634,7 @@ export default function ContributePage({ onAuthClick }) {
               </label>
               <div className="ct-actions">
                 <button type="button" className="ct-btn ct-btn--primary" disabled={!canSubmit} onClick={submit}>
-                  {submitting ? 'Envoi…' : 'Envoyer en relecture'}
+                  {submitting ? 'Envoi…' : isPublished ? 'Envoyer mes modifications' : 'Envoyer en relecture'}
                 </button>
                 <button type="button" className="ct-btn" onClick={() => { setPreview(true); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Voir l'aperçu</button>
               </div>

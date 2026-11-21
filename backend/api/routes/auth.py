@@ -189,10 +189,12 @@ def delete_account(user: dict = Depends(get_user)):
     try:
         from backend.db.session import db_session
         from backend.api.routes.contributions import delete_user_contributions
+        from backend.api.routes.reviews import delete_user_reviews
         with db_session() as db:
             delete_user_contributions(db, user["email"])
+            delete_user_reviews(db, user["email"])
     except Exception:
-        logger.warning("delete_account : recettes proposées non supprimées", exc_info=True)
+        logger.warning("delete_account : recettes proposées ou avis non supprimés", exc_info=True)
     delete_user(user["email"])
     delete_profile(user["email"])
 

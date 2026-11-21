@@ -8,6 +8,7 @@ Tables migrées depuis JSON :
   - api_keys        : clés SHA-256 avec plans free/starter/pro
   - daily_quotas    : compteurs journaliers par clé
   - recipe_submissions : recettes proposées par les utilisateurs (modérées)
+  - recipe_reviews / review_votes / review_reports : notes et commentaires
 
 Données statiques (dataset culinaire) → restent en JSON + lru_cache.
 """
@@ -38,6 +39,9 @@ class User(Base):
                           server_default="free")
     is_active     = Column(Boolean,     nullable=False, default=True,
                           server_default=text("true"))
+    # E-mails de suivi (statut des recettes proposées) — désactivables
+    email_notifications = Column(Boolean, nullable=False, default=True,
+                                 server_default=text("true"))
     created_at    = Column(DateTime(timezone=True), nullable=False,
                           default=lambda: datetime.now(timezone.utc))
     updated_at    = Column(DateTime(timezone=True), nullable=False,
@@ -272,6 +276,12 @@ class RecipeSubmission(Base):
                             onupdate=lambda: datetime.now(timezone.utc))
     submitted_at   = Column(DateTime(timezone=True), nullable=True)
     reviewed_at    = Column(DateTime(timezone=True), nullable=True)
+    # Modification d'une recette déjà publiée : la version en ligne (data)
+    # reste affichée tant que la révision n'est pas relue et acceptée.
+    revision_data         = Column(JSON, nullable=True)
+    revision_status       = Column(String(20), nullable=True)   # draft | submitted | changes_requested
+    revision_photo_token  = Column(String(40), nullable=True)
+    revision_submitted_at = Column(DateTime(timezone=True), nullable=True)
 
     __table_args__ = (
         Index("ix_submission_status", "status", "submitted_at"),
@@ -279,3 +289,61 @@ class RecipeSubmission(Base):
 
     def __repr__(self):
         return f"<RecipeSubmission {self.id} user={self.user_email} status={self.status}>"
+
+
+# ── Notes et commentaires ─────────────────────────────────────────────────────
+
+class RecipeReview(Base):
+    """
+    Avis d'un utilisateur sur une recette (catalogue ou communauté) : une note
+    de 1 à 5, un commentaire facultatif. Un seul avis par compte et par recette
+    (il se modifie). Masqué par la modération ou après 3 signalements.
+    """
+    __tablename__ = "recipe_reviews"
+
+    id            = Column(Integer, primary_key=True, autoincrement=True)
+    recipe_id     = Column(String(100), nullable=False, index=True)
+    user_email    = Column(String(254),
+                           ForeignKey("users.email", ondelete="CASCADE"),
+                           nullable=False, index=True)
+    author_name   = Column(String(40), nullable=False)
+    rating        = Column(Integer, nullable=False)
+    comment       = Column(Text, nullable=True)
+    made_it       = Column(Boolean, nullable=False, default=False)
+    status        = Column(String(20), nullable=False, default="visible")   # visible | hidden
+    helpful_count = Column(Integer, nullable=False, default=0)
+    report_count  = Column(Integer, nullable=False, default=0)
+    created_at    = Column(DateTime(timezone=True), nullable=False,
+                           default=lambda: datetime.now(timezone.utc))
+    updated_at    = Column(DateTime(timezone=True), nullable=False,
+                           default=lambda: datetime.now(timezone.utc),
+                           onupdate=lambda: datetime.now(timezone.utc))
+
+    __table_args__ = (
+        UniqueConstraint("recipe_id", "user_email", name="uq_review_recipe_user"),
+        Index("ix_review_recipe_status", "recipe_id", "status"),
+    )
+
+    def __repr__(self):
+        return f"<RecipeReview {self.id} recipe={self.recipe_id} rating={self.rating}>"
+
+
+class ReviewVote(Base):
+    """« Cet avis m'a été utile » — un vote par compte et par avis."""
+    __tablename__ = "review_votes"
+
+    review_id  = Column(Integer, ForeignKey("recipe_reviews.id", ondelete="CASCADE"), primary_key=True)
+    user_email = Column(String(254), ForeignKey("users.email", ondelete="CASCADE"), primary_key=True)
+    created_at = Column(DateTime(timezone=True), nullable=False,
+                        default=lambda: datetime.now(timezone.utc))
+
+
+class ReviewReport(Base):
+    """Signalement d'un avis (un par compte et par avis)."""
+    __tablename__ = "review_reports"
+
+    review_id  = Column(Integer, ForeignKey("recipe_reviews.id", ondelete="CASCADE"), primary_key=True)
+    user_email = Column(String(254), ForeignKey("users.email", ondelete="CASCADE"), primary_key=True)
+    reason     = Column(String(30), nullable=False)
+    created_at = Column(DateTime(timezone=True), nullable=False,
+                        default=lambda: datetime.now(timezone.utc))
