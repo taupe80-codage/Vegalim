@@ -14,7 +14,7 @@ import secrets
 import threading
 from datetime import datetime, timedelta, timezone
 
-from fastapi import APIRouter, Depends, HTTPException, Request, status
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request, status
 from pydantic import BaseModel, EmailStr, field_validator
 
 from backend.services.user_service    import create_user, authenticate, delete_user
@@ -206,8 +206,25 @@ def refresh_token(user: dict = Depends(get_user)):
     return {"access_token": new_token, "token_type": "Bearer"}
 
 
+def _send_reset_email(email: str, token: str) -> None:
+    """Lien de réinitialisation : ouvre l'interface sur « nouveau mot de passe »."""
+    from backend.services import mail_service
+    link = mail_service.app_url(f"/?reinitialiser={token}")
+    mail_service.send(
+        email,
+        "Réinitialiser votre mot de passe ALIM",
+        [
+            "Vous avez demandé à réinitialiser le mot de passe de votre compte ALIM.",
+            f"Le lien ci-dessous est valable {_RESET_TTL_MINUTES} minutes et ne sert qu'une fois.",
+            "Si vous n'êtes pas à l'origine de cette demande, ignorez cet e-mail : "
+            "votre mot de passe actuel reste valable.",
+        ],
+        ("Choisir un nouveau mot de passe", link),
+    )
+
+
 @router.post("/forgot-password")
-def forgot_password(payload: ForgotPasswordRequest, request: Request):
+def forgot_password(payload: ForgotPasswordRequest, request: Request, background: BackgroundTasks):
     """
     Demande de réinitialisation de mot de passe.
     Token persisté en DB (multi-worker) avec fallback mémoire.
@@ -220,6 +237,11 @@ def forgot_password(payload: ForgotPasswordRequest, request: Request):
     email       = str(payload.email)
     reset_token = secrets.token_urlsafe(32)
     _store_reset_token(reset_token, email)
+    # E-mail seulement si le compte existe ; la réponse reste identique
+    # (anti-énumération) et l'envoi part en tâche de fond (délai constant).
+    from backend.services.user_service import account_is_active
+    if account_is_active(email):
+        background.add_task(_send_reset_email, email, reset_token)
     logger.info("Reset token généré pour %s (db=%s dev=%s)",
                 email, _RESET_DB_OK and is_db_available() if _RESET_DB_OK else False, _IS_DEV)
 

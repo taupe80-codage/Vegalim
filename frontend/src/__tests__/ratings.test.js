@@ -3,7 +3,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 const summaries = vi.fn();
 vi.mock('../api', () => ({ reviews: { summaries: (...a) => summaries(...a) } }));
 
-const { requestRating, formatAverage, setRating, __test } = await import('../ratings');
+const { requestRating, formatAverage, setRating, weightedRating, __test } = await import('../ratings');
 
 describe('notes des cartes', () => {
   beforeEach(() => { summaries.mockReset(); __test.cache.clear(); });
@@ -32,5 +32,13 @@ describe('notes des cartes', () => {
     expect(formatAverage(4.25)).toBe('4,3');
     expect(formatAverage(4)).toBe('4');
     expect(formatAverage(null)).toBe('');
+  });
+
+  it('weightedRating : une seule note de 5 ne passe pas devant 4,6 sur 20 notes', () => {
+    const seul = weightedRating({ average: 5, count: 1 });
+    const beaucoup = weightedRating({ average: 4.6, count: 20 });
+    expect(beaucoup).toBeGreaterThan(seul);
+    expect(weightedRating(null)).toBeNull();
+    expect(weightedRating({ average: 4, count: 0 })).toBeNull();
   });
 });

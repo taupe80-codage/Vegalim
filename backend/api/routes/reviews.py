@@ -10,12 +10,18 @@ Compte connecté :
   DELETE /avis/recette/{recipe_id}       retirer mon avis
   POST   /avis/{review_id}/utile         « utile » (bascule)
   POST   /avis/{review_id}/signaler      signaler (masqué automatiquement à 3 signalements)
+  PUT    /avis/{review_id}/reponse       réponse de l'auteur de la recette (recette proposée)
+  DELETE /avis/{review_id}/reponse
 
 Modération (ADMIN_EMAILS) :
   GET    /avis/moderation                avis signalés ou masqués
   POST   /avis/moderation/{id}/hide      masquer
   POST   /avis/moderation/{id}/restore   rétablir (signalements remis à zéro)
   DELETE /avis/moderation/{id}           supprimer
+  DELETE /avis/moderation/{id}/reponse   retirer la réponse de l'auteur
+
+E-mails (si l'intéressé ne les a pas coupés) : nouvel avis commenté → auteur
+de la recette proposée ; réponse de l'auteur → auteur de l'avis.
 
 Ce que reprennent ces avis des sites de recettes de référence : une note par
 compte (modifiable), « j'ai réalisé cette recette », tri par utilité,
@@ -28,17 +34,18 @@ import logging
 from datetime import datetime, timezone
 from typing import Literal, Optional
 
-from fastapi import APIRouter, Depends, HTTPException, Query, Request, status
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query, Request, status
 from pydantic import BaseModel, Field
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
-from backend.api.routes.contributions import require_moderator
+from backend.api.routes.contributions import require_moderator, wants_email
 from backend.core.auth_deps import get_user, get_optional_user
 from backend.core.rate_limiter import check_rate_limit
 from backend.db.models import RecipeReview, RecipeSubmission, ReviewReport, ReviewVote
 from backend.db.session import get_db
 from backend.services import contribution_service as cs
+from backend.services import mail_service
 
 logger = logging.getLogger(__name__)
 
@@ -66,6 +73,10 @@ class ReportPayload(BaseModel):
     reason: Literal["spam", "offensive", "off_topic", "personal", "other"]
 
 
+class ReplyPayload(BaseModel):
+    text: str = Field(..., max_length=COMMENT_MAX + 200)
+
+
 class SummaryPayload(BaseModel):
     ids: list[str] = Field(default_factory=list, max_length=300)
 
@@ -80,12 +91,21 @@ def _recipe(recipe_id: str) -> dict:
     return r
 
 
-def _is_own_recipe(db: Session, recipe: dict, email: str) -> bool:
+def _recipe_author(db: Session, recipe: dict) -> str | None:
+    """Email de l'auteur d'une recette proposée (None pour le catalogue)."""
     sid = (recipe.get("community") or {}).get("submission_id")
     if not sid:
-        return False
+        return None
     sub = db.get(RecipeSubmission, sid)
-    return bool(sub and sub.user_email == email)
+    return sub.user_email if sub else None
+
+
+def _is_own_recipe(db: Session, recipe: dict, email: str) -> bool:
+    return bool(email) and _recipe_author(db, recipe) == email
+
+
+def _title(recipe: dict) -> str:
+    return (recipe.get("titles") or {}).get("fr") or str(recipe.get("id"))
 
 
 def _summary(db: Session, recipe_id: str) -> dict:
@@ -122,6 +142,8 @@ def _serialize(r: RecipeReview, *, me: str | None = None, voted: set[int] | None
         "voted": bool(voted and r.id in voted),
         "reported": bool(reported and r.id in reported),
         "hidden": r.status != "visible",
+        "author_reply": r.author_reply or "",
+        "author_reply_at": r.author_reply_at.isoformat() if r.author_reply_at else None,
     }
 
 
@@ -201,6 +223,7 @@ def recipe_reviews(recipe_id: str, request: Request,
         "mine": mine,
         "can_review": bool(me) and not _is_own_recipe(db, recipe, me),
         "own_recipe": bool(me) and _is_own_recipe(db, recipe, me),
+        "community_recipe": bool((recipe.get("community") or {}).get("submission_id")),
         "report_reasons": REPORT_REASONS,
     }
 
@@ -221,7 +244,7 @@ def summaries(payload: SummaryPayload, request: Request, db: Session = Depends(g
 # ── Écriture ──────────────────────────────────────────────────────────────────
 
 @router.put("/recette/{recipe_id}")
-def upsert_review(recipe_id: str, payload: ReviewPayload, request: Request,
+def upsert_review(recipe_id: str, payload: ReviewPayload, request: Request, background: BackgroundTasks,
                   user: dict = Depends(get_user), db: Session = Depends(get_db)):
     """Donne ou modifie mon avis (un par recette)."""
     check_rate_limit(request, limit=20, window_seconds=3600, email=user["email"])
@@ -235,6 +258,7 @@ def upsert_review(recipe_id: str, payload: ReviewPayload, request: Request,
     comment = _clean_comment(payload.comment)
     review = db.query(RecipeReview).filter(RecipeReview.recipe_id == recipe_id,
                                            RecipeReview.user_email == email).first()
+    had_comment = bool(review and review.comment)
     if review is None:
         review = RecipeReview(recipe_id=recipe_id, user_email=email, status="visible",
                               helpful_count=0, report_count=0)
@@ -246,6 +270,14 @@ def upsert_review(recipe_id: str, payload: ReviewPayload, request: Request,
     review.updated_at = datetime.now(timezone.utc)
     db.commit()
     db.refresh(review)
+    # Premier commentaire sur une recette proposée : on prévient son auteur
+    author = _recipe_author(db, recipe)
+    if comment and not had_comment and author and wants_email(db, author):
+        background.add_task(
+            mail_service.send, author, f"Nouvel avis sur votre recette « {_title(recipe)} »",
+            [f"{review.author_name} a noté votre recette « {_title(recipe)} » {review.rating}/5 :",
+             f"« {comment} »", "Vous pouvez lui répondre depuis la fiche de la recette."],
+            ("Voir l'avis", mail_service.app_url(f"/recette/{recipe_id}")))
     return {"review": _serialize(review, me=email), "summary": _summary(db, recipe_id)}
 
 
@@ -305,6 +337,47 @@ def report_review(review_id: int, payload: ReportPayload, request: Request,
         logger.info("Avis %s masqué automatiquement (%d signalements)", review_id, review.report_count)
     db.commit()
     return {"reported": True, "hidden": review.status != "visible"}
+
+
+@router.put("/{review_id}/reponse")
+def reply_review(review_id: int, payload: ReplyPayload, request: Request, background: BackgroundTasks,
+                 user: dict = Depends(get_user), db: Session = Depends(get_db)):
+    """Réponse de l'auteur de la recette proposée à un avis (une seule, modifiable)."""
+    check_rate_limit(request, limit=30, window_seconds=3600, email=user["email"])
+    review = db.get(RecipeReview, review_id)
+    if not review or review.status != "visible":
+        raise HTTPException(status_code=404, detail="Avis introuvable")
+    recipe = _recipe(review.recipe_id)
+    if not _is_own_recipe(db, recipe, user["email"]):
+        raise HTTPException(status_code=403, detail="Seul l'auteur de la recette peut répondre aux avis.")
+    text = _clean_comment(payload.text)
+    if not text:
+        raise HTTPException(status_code=422, detail="Réponse vide.")
+    first = not review.author_reply
+    review.author_reply = text
+    review.author_reply_at = datetime.now(timezone.utc)
+    db.commit()
+    db.refresh(review)
+    if first and wants_email(db, review.user_email):
+        background.add_task(
+            mail_service.send, review.user_email, f"L'auteur de « {_title(recipe)} » vous a répondu",
+            [f"L'auteur de la recette « {_title(recipe)} » a répondu à votre avis :", f"« {text} »"],
+            ("Voir la réponse", mail_service.app_url(f"/recette/{review.recipe_id}")))
+    return {"review": _serialize(review, me=user["email"])}
+
+
+@router.delete("/{review_id}/reponse")
+def delete_reply(review_id: int, user: dict = Depends(get_user), db: Session = Depends(get_db)):
+    """Retire ma réponse (auteur de la recette)."""
+    review = db.get(RecipeReview, review_id)
+    if not review:
+        raise HTTPException(status_code=404, detail="Avis introuvable")
+    if not _is_own_recipe(db, _recipe(review.recipe_id), user["email"]):
+        raise HTTPException(status_code=403, detail="Seul l'auteur de la recette peut retirer sa réponse.")
+    review.author_reply = None
+    review.author_reply_at = None
+    db.commit()
+    return {"review": _serialize(review, me=user["email"])}
 
 
 # ── Modération ────────────────────────────────────────────────────────────────
@@ -372,3 +445,15 @@ def moderation_delete(review_id: int, _mod: dict = Depends(require_moderator), d
     db.query(ReviewReport).filter(ReviewReport.review_id == review_id).delete()
     db.delete(review)
     db.commit()
+
+
+@router.delete("/moderation/{review_id}/reponse")
+def moderation_delete_reply(review_id: int, _mod: dict = Depends(require_moderator), db: Session = Depends(get_db)):
+    """Retire la réponse de l'auteur sous un avis."""
+    review = db.get(RecipeReview, review_id)
+    if not review:
+        raise HTTPException(status_code=404, detail="Avis introuvable")
+    review.author_reply = None
+    review.author_reply_at = None
+    db.commit()
+    return {"review": _serialize(review)}

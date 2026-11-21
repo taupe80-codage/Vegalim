@@ -7,7 +7,7 @@
  *  - Gérer l'état global du modal auth
  */
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { RouterProvider, useRouter } from './Router';
 import { AuthProvider }     from './AuthContext';
 import { ThemeProvider }    from './ThemeContext';
@@ -64,7 +64,22 @@ function PageDispatcher({ onAuthClick }) {
 // ── App racine ────────────────────────────────────────────────────────────────
 
 function AppInner() {
-  const [showAuth, setShowAuth] = useState(false);
+  // Lien de réinitialisation reçu par e-mail : #/?reinitialiser=<jeton>
+  const [resetToken, setResetToken] = useState(() => {
+    try { return new URLSearchParams(window.location.hash.split('?')[1] || '').get('reinitialiser') || ''; }
+    catch { return ''; }
+  });
+  const [showAuth, setShowAuth] = useState(() => !!resetToken);
+
+  // Le jeton ne reste pas dans l'adresse (historique, partage d'écran)
+  useEffect(() => {
+    if (!resetToken) return;
+    const [path, qs] = window.location.hash.replace(/^#/, '').split('?');
+    const params = new URLSearchParams(qs || '');
+    params.delete('reinitialiser');
+    const rest = params.toString();
+    window.history.replaceState(null, '', `#${path || '/'}${rest ? `?${rest}` : ''}`);
+  }, [resetToken]);
 
   return (
     <div className="app-container">
@@ -86,7 +101,7 @@ function AppInner() {
         <Link to="/proposer" className="app-footer-link">Proposer une recette</Link>
       </footer>
 
-      {showAuth && <AuthModal onClose={() => setShowAuth(false)} />}
+      {showAuth && <AuthModal initialToken={resetToken} onClose={() => { setShowAuth(false); setResetToken(''); }} />}
     </div>
   );
 }

@@ -5406,3 +5406,6 @@ html[data-theme="dark"] .rv-stars-fg { color: #f0b429; }
 .ct-review-card { background: var(--sur); border: 1px solid var(--brd); border-radius: var(--rad); padding: 14px; display: flex; flex-direction: column; gap: 6px; }
 .ct-review-card .rv-comment { margin: 0; }
 .ct-review-card a, .ct-muted a { color: var(--grn); }
+.rv-reply { margin: 8px 0 0 18px; padding: 8px 12px; border-left: 3px solid var(--grn); background: var(--grn-dim); border-radius: 0 6px 6px 0; }
+.rv-reply--form { background: var(--bg); }
+.rv-reply-head { margin: 0; font-size: 12.5px; font-weight: 600; color: var(--grn); }

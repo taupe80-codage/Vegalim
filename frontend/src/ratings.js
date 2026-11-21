@@ -64,3 +64,30 @@ export function formatAverage(avg) {
 }
 
 export const __test = { cache, flush };
+
+/**
+ * Note pondérée pour classer : une recette notée 5 par une seule personne ne
+ * passe pas devant une recette notée 4,6 par vingt personnes (moyenne
+ * bayésienne vers `prior`, poids `weight` notes fictives). null sans note.
+ */
+export function weightedRating(r, prior = 3.5, weight = 3) {
+  if (!r || !r.count) return null;
+  return (prior * weight + r.average * r.count) / (weight + r.count);
+}
+
+/** Notes d'une liste de recettes (pour trier) ; renvoie get(id) → {average, count} | null. */
+export function useRatings(ids) {
+  const [, setVersion] = useState(0);
+  const key = ids.join('|');
+  useEffect(() => {
+    const list = key ? key.split('|') : [];
+    const cb = () => setVersion(v => v + 1);
+    list.forEach(id => {
+      if (!listeners.has(id)) listeners.set(id, new Set());
+      listeners.get(id).add(cb);
+      requestRating(id);
+    });
+    return () => list.forEach(id => listeners.get(id)?.delete(cb));
+  }, [key]);
+  return (id) => cache.get(id) ?? null;
+}

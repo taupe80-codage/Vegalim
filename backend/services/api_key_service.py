@@ -82,7 +82,8 @@ def validate_key(raw_key: str) -> dict | None:
                 # Vérification expiration
                 if api_key.expires_at:
                     from datetime import datetime, timezone
-                    if datetime.now(timezone.utc) > api_key.expires_at:
+                    from backend.db.models import as_utc
+                    if datetime.now(timezone.utc) > as_utc(api_key.expires_at):
                         logger.info("api_key_service: clé expirée (hash=%s…)", api_key.key_hash[:8])
                         return None
 

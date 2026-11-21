@@ -136,6 +136,45 @@ def load_history(email: str) -> dict:
     return history or {"liked": set(), "disliked": set(), "viewed": set(), "raw": []}
 
 
+def _rating_signals(email: str) -> tuple[set, set]:
+    """Notes données (avis) : 4-5 ★ → goût positif, 1-2 ★ → goût négatif."""
+    try:
+        from backend.db.session import db_session
+        from backend.db.models import RecipeReview
+        with db_session() as db:
+            rows = (db.query(RecipeReview.recipe_id, RecipeReview.rating)
+                      .filter(RecipeReview.user_email == email).all())
+    except Exception as e:
+        logger.debug("Notes indisponibles pour learning_engine (%s)", e)
+        return set(), set()
+    return {rid for rid, n in rows if n >= 4}, {rid for rid, n in rows if n <= 2}
+
+
+def load_taste_history(email: str) -> dict:
+    """
+    Historique pour la personnalisation : likes/dislikes explicites, complétés
+    par les notes données (4-5 ★ comptent comme un like, 1-2 ★ comme un
+    dislike). Un like ou dislike explicite l'emporte toujours sur la note.
+
+    Distinct de load_history(), qui reste la source des favoris (/profil/likes) :
+    noter une recette ne l'ajoute pas aux favoris.
+    """
+    history  = load_history(email)
+    liked    = set(history.get("liked", set()))
+    disliked = set(history.get("disliked", set()))
+    good, bad = _rating_signals(email)
+    explicit = liked | disliked
+    rated_liked    = good - explicit
+    rated_disliked = bad - explicit
+    return {
+        **history,
+        "liked":          liked | rated_liked,
+        "disliked":       disliked | rated_disliked,
+        "rated_liked":    rated_liked,
+        "rated_disliked": rated_disliked,
+    }
+
+
 def save_interaction(email: str, recipe_id: str, action: str,
                      score_shown: Optional[float] = None,
                      profile_used: Optional[str] = None) -> bool:
@@ -217,7 +256,7 @@ def extract_preferences(email: str) -> dict:
         }
     """
     from backend.core.data_io import load_recipes
-    history      = load_history(email)
+    history      = load_taste_history(email)
     liked_ids    = history.get("liked", set())
     disliked_ids = history.get("disliked", set())
 
@@ -373,13 +412,14 @@ def get_user_stats(email: str) -> dict:
 
     Utile pour le debug et l'affichage dans le profil utilisateur.
     """
-    history = load_history(email)
+    history = load_taste_history(email)
     prefs   = extract_preferences(email)
 
     return {
         "email":              email,
         "liked_count":        len(history.get("liked", set())),
         "disliked_count":     len(history.get("disliked", set())),
+        "from_ratings_count": len(history.get("rated_liked", set())) + len(history.get("rated_disliked", set())),
         "viewed_count":       len(history.get("viewed", set())),
         "personalization_active": prefs["active"],
         "min_likes_required": MIN_LIKES_TO_ACTIVATE,

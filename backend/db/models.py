@@ -27,6 +27,15 @@ class Base(DeclarativeBase):
     pass
 
 
+def as_utc(dt: datetime | None) -> datetime | None:
+    """Date en UTC « aware ». SQLite rend les DateTime(timezone=True) sans
+    fuseau : les comparer à datetime.now(timezone.utc) levait TypeError
+    (réinitialisation du mot de passe en 500, constaté le 2026-11-21)."""
+    if dt is None:
+        return None
+    return dt.replace(tzinfo=timezone.utc) if dt.tzinfo is None else dt
+
+
 # ── Comptes B2C (JWT Bearer) ──────────────────────────────────────────────────
 
 class User(Base):
@@ -231,7 +240,7 @@ class PasswordResetToken(Base):
     )
 
     def is_expired(self) -> bool:
-        return datetime.now(timezone.utc) > self.expires_at
+        return datetime.now(timezone.utc) > as_utc(self.expires_at)
 
     def __repr__(self):
         return f"<PasswordResetToken email={self.email} expires={self.expires_at}>"
@@ -313,6 +322,9 @@ class RecipeReview(Base):
     status        = Column(String(20), nullable=False, default="visible")   # visible | hidden
     helpful_count = Column(Integer, nullable=False, default=0)
     report_count  = Column(Integer, nullable=False, default=0)
+    # Réponse de l'auteur d'une recette proposée (une par avis, modifiable)
+    author_reply    = Column(Text, nullable=True)
+    author_reply_at = Column(DateTime(timezone=True), nullable=True)
     created_at    = Column(DateTime(timezone=True), nullable=False,
                            default=lambda: datetime.now(timezone.utc))
     updated_at    = Column(DateTime(timezone=True), nullable=False,

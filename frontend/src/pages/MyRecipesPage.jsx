@@ -91,7 +91,7 @@ export default function MyRecipesPage({ onAuthClick }) {
       {prefs && (
         <label className="ct-consent ct-prefs">
           <input type="checkbox" checked={prefs.email_notifications} onChange={e => toggleEmails(e.target.checked)} />
-          <span>Me prévenir par e-mail quand l'équipe publie, renvoie ou refuse une de mes recettes.</span>
+          <span>Me prévenir par e-mail quand l'équipe publie, renvoie ou refuse une de mes recettes, quand quelqu'un commente l'une d'elles ou répond à mes avis.</span>
         </label>
       )}
       {error && <p className="ct-error" role="alert">{error}</p>}

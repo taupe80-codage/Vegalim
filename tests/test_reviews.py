@@ -170,3 +170,74 @@ def test_suppression_du_compte_recalcule_les_compteurs(env):
     data = c.get(f"/avis/recette/{_rid()}").json()
     assert data["summary"]["count"] == 1
     assert data["reviews"][0]["helpful_count"] == 0
+
+
+def _community_recipe(c, who, author):
+    from tests.test_contributions import GOOD
+    who["email"] = author
+    sid = c.post("/contributions", json={"data": GOOD, "author_name": "Léa"}).json()["id"]
+    c.post(f"/contributions/{sid}/submit", json={"author_name": "Léa", "consent": True})
+    who["email"] = MOD
+    return c.post(f"/contributions/moderation/{sid}/publish", json={}).json()["published_recipe_id"]
+
+
+def test_reponse_de_l_auteur_et_emails(env, monkeypatch):
+    from backend.services import mail_service
+    monkeypatch.delenv("SMTP_HOST", raising=False)
+    c, who, _ = env
+    rid = _community_recipe(c, who, USERS[0])
+    mail_service.OUTBOX.clear()
+    who["email"] = USERS[1]
+    res = c.put(f"/avis/recette/{rid}", json={"rating": 4, "comment": "Très bon, j'ai ajouté du gingembre.",
+                                              "author_name": "Paul"})
+    review_id = res.json()["review"]["id"]
+    # l'auteur de la recette est prévenu du nouvel avis (une seule fois)
+    assert [m["subject"] for m in mail_service.OUTBOX if USERS[0] in m["to"]] == [
+        "Nouvel avis sur votre recette « Dahl de lentilles corail au potimarron rôti »"]
+    c.put(f"/avis/recette/{rid}", json={"rating": 5, "comment": "Encore meilleur réchauffé.", "author_name": "Paul"})
+    assert len([m for m in mail_service.OUTBOX if USERS[0] in m["to"]]) == 1
+
+    # seul l'auteur de la recette répond
+    assert c.put(f"/avis/{review_id}/reponse", json={"text": "Merci !"}).status_code == 403
+    who["email"] = USERS[0]
+    res = c.put(f"/avis/{review_id}/reponse", json={"text": "Merci Paul, bonne idée le gingembre !"})
+    assert res.status_code == 200 and res.json()["review"]["author_reply"].startswith("Merci Paul")
+    assert any(USERS[1] in m["to"] and "vous a répondu" in m["subject"] for m in mail_service.OUTBOX)
+    data = c.get(f"/avis/recette/{rid}").json()
+    assert data["reviews"][0]["author_reply"].startswith("Merci Paul") and data["own_recipe"]
+    # pas de réponse sur une recette du catalogue
+    who["email"] = USERS[2]
+    cat_review = _review(c, who, USERS[2], 4, "Bonne recette du catalogue.")["review"]["id"]
+    who["email"] = USERS[0]
+    assert c.put(f"/avis/{cat_review}/reponse", json={"text": "Merci"}).status_code == 403
+    # retrait de la réponse
+    assert c.delete(f"/avis/{review_id}/reponse").json()["review"]["author_reply"] == ""
+
+
+def test_les_notes_nourrissent_la_personnalisation_pas_les_favoris(env, monkeypatch):
+    from backend.engine.reco_engine import learning
+    from backend.db import session as db_session_mod
+    c, who, Session = env
+    from contextlib import contextmanager
+
+    @contextmanager
+    def _session():
+        db = Session()
+        try:
+            yield db
+            db.commit()
+        finally:
+            db.close()
+    monkeypatch.setattr(db_session_mod, "db_session", _session)
+    ids = [r["id"] for r in data_io.load_recipes()[:3]]
+    who["email"] = USERS[3]
+    for rid, rating in zip(ids, (5, 4, 1)):
+        assert c.put(f"/avis/recette/{rid}", json={"rating": rating, "author_name": "Zoé"}).status_code == 200
+    monkeypatch.setattr(learning, "load_history",
+                        lambda email: {"liked": set(), "disliked": {ids[0]}, "viewed": set(), "raw": []})
+    taste = learning.load_taste_history(USERS[3])
+    # 4-5 ★ → like, 1-2 ★ → dislike ; le dislike explicite l'emporte sur le 5 ★
+    assert taste["liked"] == {ids[1]}
+    assert taste["disliked"] == {ids[0], ids[2]}
+    # les favoris (/profil/likes) ne contiennent pas les recettes notées
+    assert learning.load_history(USERS[3])["liked"] == set()

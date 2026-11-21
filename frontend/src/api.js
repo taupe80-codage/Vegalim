@@ -234,10 +234,13 @@ export const reviews = {
   remove:    (id)          => del(`/avis/recette/${encodeURIComponent(id)}`),
   helpful:   (reviewId)    => post(`/avis/${reviewId}/utile`, {}),
   report:    (reviewId, reason) => post(`/avis/${reviewId}/signaler`, { reason }),
+  reply:     (reviewId, text) => put(`/avis/${reviewId}/reponse`, { text }),
+  deleteReply: (reviewId)  => del(`/avis/${reviewId}/reponse`),
   summaries: (ids)         => post('/avis/resume', { ids }),
   // Modération
   modList:   (status = 'reported') => get(`/avis/moderation?status=${status}`),
   modHide:   (reviewId)    => post(`/avis/moderation/${reviewId}/hide`, {}),
   modRestore:(reviewId)    => post(`/avis/moderation/${reviewId}/restore`, {}),
   modDelete: (reviewId)    => del(`/avis/moderation/${reviewId}`),
+  modDeleteReply: (reviewId) => del(`/avis/moderation/${reviewId}/reponse`),
 };

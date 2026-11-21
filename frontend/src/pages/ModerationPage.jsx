@@ -200,6 +200,13 @@ function ReviewModeration({ status }) {
           </div>
           <p className="ct-muted">Sur <Link to={`/recette/${r.recipe_id}`}>{r.recipe_title}</Link></p>
           <p className="rv-comment">{r.comment || <em>(note sans commentaire)</em>}</p>
+          {r.author_reply && (
+            <div className="rv-reply">
+              <p className="rv-reply-head">Réponse de l'auteur de la recette</p>
+              <p className="rv-comment">{r.author_reply}</p>
+              <button type="button" className="rv-link rv-link--muted" onClick={() => act(() => reviews.modDeleteReply(r.id), 'Réponse retirée')}>Retirer la réponse</button>
+            </div>
+          )}
           {r.report_count > 0 && (
             <p className="ct-muted">
               {r.report_count} signalement{r.report_count > 1 ? 's' : ''} : {Object.entries(r.reasons).map(([k, v]) => `${k} (${v})`).join(', ')}

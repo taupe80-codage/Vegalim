@@ -8,6 +8,7 @@ import { recipes as recipesApi } from '../api';
 import { navigate } from '../Router';
 import RecipeCard, { RecipeCardSkeleton, getRecipeTheme, getRecipeImageUrl, CUISINE_LABEL_FR, computeAlimScore } from '../components/RecipeCard';
 import { useRecentlyViewed } from '../useRecentlyViewed';
+import { useRatings, weightedRating } from '../ratings';
 import { useSeasonStrip, seasonStripDiet, MONTHS_FR } from '../seasonNow';
 import { useProfileDiet, defaultDietFilter } from '../useProfileDiet';
 import {
@@ -21,6 +22,7 @@ const SORT_OPTIONS = [
   { value: 'alpha',      label: 'A → Z' },
   { value: 'score',      label: 'Score ↓' },
   { value: 'time',       label: 'Temps ↑' },
+  { value: 'rating',     label: 'Mieux notées' },
 ];
 
 // ── Récemment vus ─────────────────────────────────────────────────────────────
@@ -328,8 +330,24 @@ export default function HomePage() {
 
   // ── Tri local ─────────────────────────────────────────────────────────────
 
+  // Notes des lecteurs : chargées seulement quand on trie par note
+  const ratingOf = useRatings(sortOrder === 'rating' ? recipes.map(r => String(r.id)) : []);
+
   let displayed = [...recipes];
-  if (sortOrder === 'alpha') {
+  if (sortOrder === 'rating') {
+    // recettes notées d'abord (note pondérée), puis les autres par score ALIM
+    const isVeganFilter = diet === 'vegan';
+    displayed.sort((a, b) => {
+      const wa = weightedRating(ratingOf(String(a.id)));
+      const wb = weightedRating(ratingOf(String(b.id)));
+      if (wa !== null || wb !== null) {
+        if (wa === null) return 1;
+        if (wb === null) return -1;
+        if (wb !== wa) return wb - wa;
+      }
+      return computeAlimScore(b, { isVeganFilter }) - computeAlimScore(a, { isVeganFilter });
+    });
+  } else if (sortOrder === 'alpha') {
     displayed.sort((a, b) =>
       (a.titles?.fr || a.title_fr || '').localeCompare(b.titles?.fr || b.title_fr || ''));
   } else if (sortOrder === 'score') {

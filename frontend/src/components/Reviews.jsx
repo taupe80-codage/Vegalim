@@ -61,10 +61,28 @@ function formatDate(iso) {
   catch { return ''; }
 }
 
-function ReviewItem({ r, user, reasons, onChange }) {
+function ReviewItem({ r, user, reasons, onChange, canReply }) {
   const toast = useToast();
   const [reporting, setReporting] = useState(false);
   const [reason, setReason] = useState('');
+  const [replying, setReplying] = useState(false);
+  const [replyText, setReplyText] = useState(r.author_reply || '');
+
+  const sendReply = async () => {
+    try {
+      const res = await api.reply(r.id, replyText);
+      onChange({ ...r, author_reply: res.review.author_reply, author_reply_at: res.review.author_reply_at });
+      setReplying(false);
+      toast('Réponse publiée');
+    } catch (e) { toast(e.message, 'error'); }
+  };
+  const removeReply = async () => {
+    try {
+      await api.deleteReply(r.id);
+      onChange({ ...r, author_reply: '', author_reply_at: null });
+      setReplyText('');
+    } catch (e) { toast(e.message, 'error'); }
+  };
 
   const helpful = async () => {
     try {
@@ -104,7 +122,31 @@ function ReviewItem({ r, user, reasons, onChange }) {
           <button type="button" className="rv-link rv-link--muted" onClick={() => setReporting(true)}>Signaler</button>
         )}
         {r.reported && <span className="rv-date">Signalé</span>}
+        {canReply && !replying && (
+          <button type="button" className="rv-link" onClick={() => setReplying(true)}>
+            {r.author_reply ? 'Modifier ma réponse' : 'Répondre'}
+          </button>
+        )}
       </div>
+      {r.author_reply && !replying && (
+        <div className="rv-reply">
+          <p className="rv-reply-head">Réponse de l'auteur de la recette
+            {r.author_reply_at && <span className="rv-date"> · {formatDate(r.author_reply_at)}</span>}</p>
+          <p className="rv-comment">{r.author_reply}</p>
+          {canReply && <button type="button" className="rv-link rv-link--muted" onClick={removeReply}>Retirer ma réponse</button>}
+        </div>
+      )}
+      {replying && (
+        <div className="rv-reply rv-reply--form">
+          <label className="ct-label" htmlFor={`rv-reply-${r.id}`}>Votre réponse à {r.author_name}</label>
+          <textarea id={`rv-reply-${r.id}`} className="ct-input" rows={2} maxLength={1000} value={replyText}
+            onChange={e => setReplyText(e.target.value)} />
+          <div className="ct-actions">
+            <button type="button" className="ct-btn ct-btn--sm ct-btn--primary" disabled={replyText.trim().length < 3} onClick={sendReply}>Publier la réponse</button>
+            <button type="button" className="ct-btn ct-btn--sm" onClick={() => { setReplying(false); setReplyText(r.author_reply || ''); }}>Annuler</button>
+          </div>
+        </div>
+      )}
       {reporting && (
         <div className="rv-report">
           <label className="sr-only" htmlFor={`rv-reason-${r.id}`}>Motif du signalement</label>
@@ -235,7 +277,7 @@ export function RecipeReviews({ recipeId, onAuthClick }) {
               <button type="button" className="ct-btn ct-btn--primary" onClick={onAuthClick}>Se connecter pour donner son avis</button>
             </div>
           )}
-          {user && data.own_recipe && <p className="rv-muted">C'est votre recette : les avis viennent des autres cuisiniers.</p>}
+          {user && data.own_recipe && <p className="rv-muted">C'est votre recette : les avis viennent des autres cuisiniers, et vous pouvez leur répondre sous chaque commentaire.</p>}
           {user && data.mine && !editing && (
             <div className="rv-cta">
               <p>Votre avis : <StarDisplay value={data.mine.rating} size={15} label={`${data.mine.rating} sur 5`} />
@@ -287,7 +329,7 @@ export function RecipeReviews({ recipeId, onAuthClick }) {
       )}
       <ul className="rv-list">
         {items.filter(r => !r.hidden).map(r => (
-          <ReviewItem key={r.id} r={r} user={user} reasons={data.report_reasons}
+          <ReviewItem key={r.id} r={r} user={user} reasons={data.report_reasons} canReply={!!user && data.own_recipe}
             onChange={nr => setItems(list => list.map(x => (x.id === nr.id ? nr : x)))} />
         ))}
       </ul>

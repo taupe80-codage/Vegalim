@@ -14,15 +14,16 @@ import { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../AuthContext';
 import { auth as authApi } from '../api';
 
-export default function AuthModal({ onClose }) {
-  const [mode,        setMode]        = useState('login'); // 'login' | 'register' | 'forgot' | 'reset'
+export default function AuthModal({ onClose, initialToken = '' }) {
+  // Lien reçu par e-mail (#/?reinitialiser=…) : on ouvre directement « nouveau mot de passe »
+  const [mode,        setMode]        = useState(initialToken ? 'reset' : 'login'); // 'login' | 'register' | 'forgot' | 'reset'
   const [email,       setEmail]       = useState('');
   const [password,    setPassword]    = useState('');
   const [name,        setName]        = useState('');
   const [error,       setError]       = useState('');
   const [success,     setSuccess]     = useState('');
   const [loading,     setLoading]     = useState(false);
-  const [resetToken,  setResetToken]  = useState('');
+  const [resetToken,  setResetToken]  = useState(initialToken);
   const [newPassword, setNewPassword] = useState('');
 
   const { login, register } = useAuth();
