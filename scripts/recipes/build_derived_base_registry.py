@@ -38,7 +38,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 logging.disable(logging.WARNING)
 
 from backend.engine.config import DATA_ROOT
-from backend.core.data_io import load_recipes
+from backend.core.data_io import load_catalogue_recipes as load_recipes  # sans les recettes de la communauté
 from backend.db.culinary_repositories import _derived_registry
 from backend.engine.nutrition_engine import compute_nutrition, UNIT_TO_G
 

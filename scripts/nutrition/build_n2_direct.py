@@ -1296,9 +1296,12 @@ def run(dry_run: bool = False, promote: bool = False) -> None:
                     **nutrients,
                 }
                 if n2_key not in n2_ingredients:
+                    # Fiche absente de l'arbre : sa taxonomie vient du fichier
+                    # supplements (sinon le rebuild la laissait vide — tteok,
+                    # papaye verte, constaté le 2026-11-23).
                     n2_ingredients[n2_key] = {
-                        'taxonomy':               {},
-                        'ingredient_type':         'ingredient',
+                        'taxonomy':               supp.get('taxonomy', {}),
+                        'ingredient_type':         supp.get('ingredient_type', 'ingredient'),
                         'variant_dimensions':      [],
                         'variant_dimensions_fr':   [],
                         'indus_conditionne':        False,
@@ -1320,6 +1323,19 @@ def run(dry_run: bool = False, promote: bool = False) -> None:
             print(f'  ⚠ Impossible de charger supplements MANUAL : {exc}')
     else:
         print(f'  ℹ️  Pas de fichier supplements ({SUPPLEMENTS_FILE.name})')
+
+    # ── Ingrédients composites (mélanges) : nutrition calculée depuis leurs
+    #    composants sourcés — composite_ingredients.json, voir composites.py ──
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import composites as _composites
+        comp_report = _composites.apply(n2_ingredients)
+        bad = {k: v for k, v in comp_report.items() if not isinstance(v, (int, float))}
+        print(f'  🧪 Composites calculés : {len(comp_report) - len(bad)} / {len(comp_report)}')
+        for k, v in bad.items():
+            print(f'     ⚠ {k} : {v}')
+    except Exception as exc:
+        print(f'  ⚠ Composites non calculés : {exc}')
 
     total_variants = sum(len(b.get('variants', {})) for b in n2_ingredients.values())
 

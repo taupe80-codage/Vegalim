@@ -35,15 +35,22 @@ et l'historique de `backend/data/config/prices_catalog.json`).
 programmes d'affiliation sont ouverts aujourd'hui et leurs conditions
 d'inscription, avant d'investir du temps d'intégration.
 
-## Nutrition des ingrédients composites
+## Nutrition des ingrédients composites — FAIT (2026-11-23)
 
-**Piste (reprise du README) : calcul depuis `composite_ingredients.json`**
+`backend/data/nutrition/reference/composite_ingredients.json` (formules) +
+`scripts/nutrition/composites.py`, appliqué par `build_n2_direct.py` : garam
+masala, berbéré, sambar, cinq-épices, « épices », fruits rouges mélangés,
+légumes assortis, chutney, sauce okonomiyaki, farine à tempura. Pour en ajouter
+un : une entrée dans le JSON, puis `build_n2_direct.py --promote`,
+`build_indexes.py`, `scripts/recipes/build_derived_base_registry.py`,
+`scripts/recipes/rebuild_graphs.py` (tests/test_composites.py vérifie la
+synchro).
 
-Pour X grammes d'un ingrédient composite (ex. garam masala) :
+**Piège restant : `build_dict_v2.py` supprime `tteok` et `green_papaya` du
+dictionnaire** (fiches MANUAL ajoutées à la main hors de l'arbre, commit
+68c5d14). Ne pas lancer `build_dict_v2.py` sans d'abord les rendre
+reconstructibles (les ajouter à l'arbre, ou faire lire au script les
+taxonomies de `nutrition_manual_supplements.json` comme build_n2_direct.py).
+En conséquence le dictionnaire garde `source: MANUAL` pour les composites
+(sans effet sur les calculs, qui lisent nutrition_v2).
 
-```python
-ratio = x / batch_yield["quantity"]   # 10 g sur un lot de 50 g = 0.2
-for comp in components:
-    contrib = comp["quantity"] * ratio  # quantité effective du composant
-    # → lookup dans la table nutrition
-```

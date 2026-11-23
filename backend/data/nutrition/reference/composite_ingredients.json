@@ -1,0 +1,125 @@
+{
+  "_meta": {
+    "description": "Ingrédients composites (mélanges) : leur nutrition est calculée par build_n2_direct.py à partir de composants sourcés (CIQUAL / CNF / USDA), au lieu des valeurs saisies à la main (macros seules, zéros fictifs).",
+    "format": "components = grammes de chaque composant (clé n2 + variant) pour un lot ; yield_g = poids final du lot (défaut : somme des composants ; inférieur si l'eau s'évapore à la cuisson). Un nutriment manquant chez des composants pesant moins de la moitié du lot est extrapolé (listé dans _estimated_fields) ; au-delà il reste inconnu.",
+    "rebuild": "python scripts/nutrition/build_n2_direct.py --promote puis python scripts/nutrition/build_indexes.py",
+    "created": "2026-11-23"
+  },
+  "composites": {
+    "garam_masala": {
+      "recipe_note": "Garam masala du Pendjab, épices torréfiées puis moulues.",
+      "components": [
+        {"ingredient": "coriander_seed", "variant": "seed", "g": 30},
+        {"ingredient": "cumin", "variant": "spice_seed", "g": 25},
+        {"ingredient": "black_pepper", "variant": "spice", "g": 12},
+        {"ingredient": "cardamom", "variant": "powder", "g": 12},
+        {"ingredient": "cinnamon", "variant": "powder", "g": 8},
+        {"ingredient": "cloves", "variant": "spice", "g": 6},
+        {"ingredient": "bay_leaf", "variant": "spice_leaf", "g": 4},
+        {"ingredient": "nutmeg", "variant": "spice", "g": 3}
+      ]
+    },
+    "berbere": {
+      "recipe_note": "Berbéré éthiopien : piment séché dominant, fenugrec, épices chaudes.",
+      "components": [
+        {"ingredient": "cayenne_pepper", "variant": "powder", "g": 20},
+        {"ingredient": "paprika", "variant": "powder", "g": 25},
+        {"ingredient": "fenugreek", "variant": "spice_seed", "g": 10},
+        {"ingredient": "coriander_seed", "variant": "seed", "g": 10},
+        {"ingredient": "ginger_powder", "variant": "powder", "g": 8},
+        {"ingredient": "black_pepper", "variant": "spice", "g": 8},
+        {"ingredient": "cumin", "variant": "spice_seed", "g": 6},
+        {"ingredient": "cardamom", "variant": "powder", "g": 5},
+        {"ingredient": "cloves", "variant": "spice", "g": 3},
+        {"ingredient": "cinnamon", "variant": "powder", "g": 3},
+        {"ingredient": "nutmeg", "variant": "spice", "g": 2}
+      ]
+    },
+    "sambar_powder": {
+      "recipe_note": "Poudre de sambar (Tamil Nadu) : coriandre, piment, dals torréfiés.",
+      "components": [
+        {"ingredient": "coriander_seed", "variant": "seed", "g": 35},
+        {"ingredient": "red_hot_chili_pepper_spice_dried", "variant": "spice_dried", "g": 20},
+        {"ingredient": "chana_dal", "variant": "default", "g": 15},
+        {"ingredient": "cumin", "variant": "spice_seed", "g": 10},
+        {"ingredient": "urad_lentil", "variant": "default", "g": 5},
+        {"ingredient": "fenugreek", "variant": "spice_seed", "g": 5},
+        {"ingredient": "black_pepper", "variant": "spice", "g": 5},
+        {"ingredient": "turmeric", "variant": "powder", "g": 3},
+        {"ingredient": "curry_leaf", "variant": "default", "g": 2}
+      ]
+    },
+    "five_spice": {
+      "recipe_note": "Cinq-épices chinois.",
+      "components": [
+        {"ingredient": "cinnamon", "variant": "powder", "g": 25},
+        {"ingredient": "star_anise", "variant": "default", "g": 25},
+        {"ingredient": "fennel_spice_seed", "variant": "spice_seed", "g": 20},
+        {"ingredient": "sichuan_pepper", "variant": "default", "g": 15},
+        {"ingredient": "cloves", "variant": "spice", "g": 15}
+      ]
+    },
+    "spices": {
+      "recipe_note": "« Épices » sans précision dans une recette : mélange courant cumin, coriandre, paprika, curcuma, poivre, gingembre.",
+      "components": [
+        {"ingredient": "cumin", "variant": "spice_seed", "g": 25},
+        {"ingredient": "coriander_seed", "variant": "seed", "g": 25},
+        {"ingredient": "paprika", "variant": "powder", "g": 20},
+        {"ingredient": "turmeric", "variant": "powder", "g": 10},
+        {"ingredient": "black_pepper", "variant": "spice", "g": 10},
+        {"ingredient": "ginger_powder", "variant": "powder", "g": 10}
+      ]
+    },
+    "mixed_berries": {
+      "recipe_note": "Fruits rouges mélangés (type mélange surgelé du commerce).",
+      "components": [
+        {"ingredient": "strawberry", "variant": "raw", "g": 30},
+        {"ingredient": "raspberry", "variant": "raw", "g": 25},
+        {"ingredient": "bilberry", "variant": "raw", "g": 20},
+        {"ingredient": "wild_blackberry", "variant": "raw", "g": 15},
+        {"ingredient": "blackcurrant", "variant": "raw", "g": 10}
+      ]
+    },
+    "assorted_vegetables": {
+      "recipe_note": "Légumes assortis (type jardinière / poêlée).",
+      "components": [
+        {"ingredient": "carrot", "variant": "raw", "g": 30},
+        {"ingredient": "french_bean_raw", "variant": "raw", "g": 20},
+        {"ingredient": "green_peas", "variant": "raw", "g": 20},
+        {"ingredient": "green_zucchini_squash", "variant": "raw_with_skin", "g": 15},
+        {"ingredient": "red_bell_pepper", "variant": "raw", "g": 15}
+      ]
+    },
+    "chutney": {
+      "recipe_note": "Chutney de mangue : mangue, sucre et vinaigre réduits environ 45 minutes (un quart de l'eau s'évapore).",
+      "yield_g": 75,
+      "components": [
+        {"ingredient": "mango", "variant": "raw", "g": 52},
+        {"ingredient": "white_sugar", "variant": "default", "g": 24},
+        {"ingredient": "vinegar", "variant": "liquid", "g": 15},
+        {"ingredient": "yellow_onion", "variant": "raw", "g": 6},
+        {"ingredient": "ginger", "variant": "raw_root_fresh", "g": 2},
+        {"ingredient": "table_salt", "variant": "unenriched", "g": 0.6},
+        {"ingredient": "garlic_raw", "variant": "raw", "g": 0.4}
+      ]
+    },
+    "okonomiyaki_sauce": {
+      "recipe_note": "Sauce okonomiyaki végétarienne (sans sauce Worcestershire aux anchois) : ketchup, sauce soja, sucre, sirop de dattes.",
+      "components": [
+        {"ingredient": "tomato_ketchup_catsup", "variant": "pre_packaged", "g": 50},
+        {"ingredient": "soy_sauce_shoyu", "variant": "default", "g": 18},
+        {"ingredient": "brown_sugar", "variant": "default", "g": 12},
+        {"ingredient": "date_syrup", "variant": "default", "g": 10},
+        {"ingredient": "vinegar", "variant": "liquid", "g": 10}
+      ]
+    },
+    "tempura_flour": {
+      "recipe_note": "Farine à tempura : farine de blé (T55 CIQUAL, la plus complète des farines sourcées), amidon, poudre à lever.",
+      "components": [
+        {"ingredient": "wheat_flour_t55", "variant": "flour", "g": 83},
+        {"ingredient": "rice_starch", "variant": "default", "g": 15},
+        {"ingredient": "baking_powder", "variant": "powder", "g": 2}
+      ]
+    }
+  }
+}

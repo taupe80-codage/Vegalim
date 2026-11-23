@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT))
 
 from backend.engine.config import DATA_ROOT
 from backend.core.data_io import (
-    load_recipes, save_json,
+    load_catalogue_recipes as load_recipes, save_json,  # recipes.json seul : il est réécrit (search_tokens)
     load_nutrition_db, load_ingredients_dict, load_ingredient_physical,
 )
 from backend.engine.search_token_generator import batch_generate

@@ -68,6 +68,14 @@ Total variants final  : ~1 921
 
 ---
 
+> **Composites** (2026-11-23) : les mélanges listés dans
+> `reference/composite_ingredients.json` (garam masala, fruits rouges
+> mélangés…) sont recalculés depuis leurs composants à cette étape
+> (`composites.py`, `_source: COMPOSITE`). Après une modification : étape 3 puis
+> `scripts/recipes/build_derived_base_registry.py` et
+> `scripts/recipes/rebuild_graphs.py`. Voir TODO.md : ne pas lancer l'étape 2
+> sans précaution (tteok, papaye verte).
+
 ### ÉTAPE 2 — Construire le dictionnaire ingrédients v2
 
 Remplace `sync_nutrition_to_dict.py` (archivé). Pipeline unifié en un seul script.
