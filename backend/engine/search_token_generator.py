@@ -315,17 +315,20 @@ def generate_tokens(recipe: dict, ings_dict: dict | None = None) -> list[str]:
     rid = str(recipe.get("id", ""))
     nutr = ng.get(rid, {})
     if nutr:
-        servings = max(1, recipe.get("servings", 4) or 4)
-        protein_per = nutr.get("protein", 0) / servings
-        fiber_per   = nutr.get("fiber", 0) / servings
-        cal_per     = nutr.get("calories", 0) / servings
-        iron_per    = nutr.get("iron", 0) / servings
+        # Le graphe nutritionnel est DÉJÀ par portion (rebuild_graphs →
+        # compute_nutrition). Les diviser encore par le nombre de portions
+        # étiquetait « léger » presque tout le catalogue (un curry à 748 kcal)
+        # et ne posait presque jamais « riche en protéines » (2026-11-23).
+        protein_per = nutr.get("protein", 0) or 0
+        fiber_per   = nutr.get("fiber", 0) or 0
+        cal_per     = nutr.get("calories", 0) or 0
+        iron_per    = nutr.get("iron", 0) or 0
 
         if protein_per >= 15:
             tokens.update(["riche en proteines", "protéines", "sport", "muscle"])
         if fiber_per >= 8:
             tokens.update(["riche en fibres", "fibre", "digestion"])
-        if cal_per <= 300:
+        if 0 < cal_per <= 300:
             tokens.update(["leger", "light", "minceur", "low calorie"])
         if iron_per >= 3:
             tokens.update(["fer", "iron", "anemie"])
