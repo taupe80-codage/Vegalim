@@ -203,6 +203,13 @@ class RequestIDMiddleware(BaseHTTPMiddleware):
 # Ordre d'exécution LIFO : le dernier add_middleware() s'exécute EN PREMIER.
 # SecurityHeaders → RequestID → CORS → handler
 
+# Taille des corps de requête : 1 Mo, 9 Mo pour l'envoi d'une photo de recette.
+# Ajouté EN PREMIER = middleware le plus interne : le dépassement d'un corps
+# envoyé en flux remonte alors tel quel à FastAPI (413). Placé à l'extérieur
+# d'un BaseHTTPMiddleware, il était enveloppé et devenait « 400 ».
+from backend.core.body_limit import BodySizeLimitMiddleware
+app.add_middleware(BodySizeLimitMiddleware)
+
 # CORS — Settings : CORS_ORIGINS (virgule-séparé) | défaut "*" (dev uniquement)
 # Exemple prod : CORS_ORIGINS=https://alim.app,https://www.alim.app
 app.add_middleware(

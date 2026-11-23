@@ -472,9 +472,11 @@ def get_submission(sid: str, user: dict = Depends(get_user), db: Session = Depen
 
 
 @router.put("/{sid}")
-def update_submission(sid: str, payload: DraftPayload,
+def update_submission(sid: str, payload: DraftPayload, request: Request,
                       user: dict = Depends(get_user), db: Session = Depends(get_db)):
     """Enregistre un brouillon, une recette « à corriger » ou la modification d'une recette publiée."""
+    # enregistrement automatique toutes les 1,5 s au plus pendant la saisie
+    check_rate_limit(request, limit=120, window_seconds=60, email=user["email"])
     sub = _get_own(db, sid, user["email"])
     if not _editable(sub):
         what = "sa modification est en relecture" if _is_published(sub) else \
@@ -531,7 +533,7 @@ def submit_submission(sid: str, payload: SubmitPayload, request: Request, backgr
     author = _author(payload.author_name)
     if len(author) < cs.LIMITS["author_min"]:
         raise HTTPException(status_code=422, detail="Indiquez le nom ou pseudo à afficher (2 caractères au moins).")
-    if cs._NON_VEG_RE.search(author) or cs._LINK_RE.search(author) or "@" in author:
+    if cs._NON_VEG_RE.search(author) or cs._LINK_RE.search(author) or "@" in author or cs.is_reserved_name(author):
         raise HTTPException(status_code=422, detail="Ce pseudo ne peut pas être affiché : choisissez-en un autre.")
     pending = (db.query(RecipeSubmission)
                  .filter(RecipeSubmission.user_email == user["email"],

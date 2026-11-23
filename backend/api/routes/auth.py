@@ -78,6 +78,24 @@ def _store_reset_token(token: str, email: str) -> None:
         }
 
 
+RESET_EMAIL_COOLDOWN_MINUTES = 10
+
+
+def _recent_reset_requests(email: str, minutes: int) -> int:
+    """Demandes de réinitialisation pour cette adresse dans les `minutes` dernières."""
+    since = datetime.now(timezone.utc) - timedelta(minutes=minutes)
+    if _RESET_DB_OK and is_db_available():
+        from backend.db.models import PasswordResetToken
+        with db_session() as db:
+            return (db.query(PasswordResetToken)
+                      .filter(PasswordResetToken.email == email,
+                              PasswordResetToken.created_at >= since).count())
+    with _reset_lock:
+        ttl = timedelta(minutes=_RESET_TTL_MINUTES)
+        return sum(1 for e in _reset_tokens.values()
+                   if e["email"] == email and e["expires"] - ttl >= since)
+
+
 def _consume_reset_token(token: str) -> str | None:
     """
     Valide et consomme un token. Retourne l'email ou None si invalide/expiré.
@@ -238,12 +256,16 @@ def forgot_password(payload: ForgotPasswordRequest, request: Request, background
     """
     check_rate_limit(request, limit=3, window_seconds=300)
     email       = str(payload.email)
+    # Un e-mail par adresse toutes les 10 minutes, quelle que soit l'IP : la
+    # limite par IP seule laissait inonder la boîte d'une victime en changeant
+    # d'adresse (revue de sécurité 2026-11-23). Réponse identique dans tous les cas.
+    recent = _recent_reset_requests(email, minutes=RESET_EMAIL_COOLDOWN_MINUTES)
     reset_token = secrets.token_urlsafe(32)
     _store_reset_token(reset_token, email)
     # E-mail seulement si le compte existe ; la réponse reste identique
     # (anti-énumération) et l'envoi part en tâche de fond (délai constant).
     from backend.services.user_service import account_is_active
-    if account_is_active(email):
+    if not recent and account_is_active(email):
         background.add_task(_send_reset_email, email, reset_token)
     logger.info("Reset token généré pour %s (db=%s dev=%s)",
                 email, _RESET_DB_OK and is_db_available() if _RESET_DB_OK else False, _IS_DEV)

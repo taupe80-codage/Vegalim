@@ -148,6 +148,17 @@ _NON_VEG_RE = re.compile(
     re.IGNORECASE,
 )
 _LINK_RE = re.compile(r"(https?://|www\.)\S+", re.IGNORECASE)
+
+# Pseudos qui feraient passer un membre pour l'équipe (revue de sécurité 2026-11-23)
+_RESERVED_NAME_RE = re.compile(
+    r"\b(alim|admin|administrat\w*|mod[ée]rat\w*|[ée]quipe|support|officiel\w*|staff)\b",
+    re.IGNORECASE,
+)
+
+
+def is_reserved_name(name: str) -> bool:
+    """Pseudo réservé (« ALIM », « Modération », « Équipe »…) ?"""
+    return bool(_RESERVED_NAME_RE.search(name or ""))
 _CTRL_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
 
 ALLERGEN_LABELS = {
@@ -805,27 +816,39 @@ def analyze(data: dict, *, submission_id: str = "draft", author_name: str = "") 
 
 # ── Photo ─────────────────────────────────────────────────────────────────────
 
+MAX_PHOTO_PIXELS = 40_000_000
+
+
 def save_photo(raw: bytes, max_side: int = 1600) -> str:
     """Valide et ré-encode une photo (JPEG, ≤ max_side px, sans EXIF ni GPS).
 
     Returns: le jeton (nom de fichier sans extension).
     Raises: ValueError si le fichier n'est pas une image exploitable.
     """
+    import warnings
     from PIL import Image, ImageOps, UnidentifiedImageError
     if not raw or len(raw) > LIMITS["photo_max_bytes"]:
         raise ValueError("Photo absente ou trop lourde (8 Mo maximum).")
     try:
-        with Image.open(io.BytesIO(raw)) as probe:
-            probe.verify()
-        img = Image.open(io.BytesIO(raw))
-        if img.format not in {"JPEG", "PNG", "WEBP"}:
-            raise ValueError("Format accepté : JPEG, PNG ou WebP.")
-        if img.width < 400 or img.height < 300:
-            raise ValueError("Photo trop petite : 400 × 300 pixels au minimum.")
-        img = ImageOps.exif_transpose(img)
-        img = img.convert("RGB")
-        img.thumbnail((max_side, max_side))
-    except (UnidentifiedImageError, OSError, Image.DecompressionBombError):
+        # Bombe de décompression : un PNG de quelques Mo peut décoder des
+        # centaines de mégapixels (Pillow n'avertit qu'à partir de 89 Mpx).
+        # Les dimensions sont lues avant tout décodage ; l'avertissement de
+        # Pillow est traité comme une erreur (revue de sécurité 2026-11-23).
+        with warnings.catch_warnings():
+            warnings.simplefilter("error", Image.DecompressionBombWarning)
+            with Image.open(io.BytesIO(raw)) as probe:
+                if probe.width * probe.height > MAX_PHOTO_PIXELS:
+                    raise ValueError("Photo trop grande : 40 mégapixels au plus.")
+                probe.verify()
+            img = Image.open(io.BytesIO(raw))
+            if img.format not in {"JPEG", "PNG", "WEBP"}:
+                raise ValueError("Format accepté : JPEG, PNG ou WebP.")
+            if img.width < 400 or img.height < 300:
+                raise ValueError("Photo trop petite : 400 × 300 pixels au minimum.")
+            img = ImageOps.exif_transpose(img)
+            img = img.convert("RGB")
+            img.thumbnail((max_side, max_side))
+    except (UnidentifiedImageError, OSError, Image.DecompressionBombError, Image.DecompressionBombWarning):
         raise ValueError("Ce fichier n'est pas une image lisible.")
     token = secrets.token_hex(16)
     PHOTO_DIR.mkdir(parents=True, exist_ok=True)

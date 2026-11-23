@@ -253,8 +253,9 @@ def upsert_review(recipe_id: str, payload: ReviewPayload, request: Request, back
     if _is_own_recipe(db, recipe, email):
         raise HTTPException(status_code=403, detail="Vous ne pouvez pas noter votre propre recette.")
     author = cs._text(payload.author_name, cs.LIMITS["author_max"])
-    if len(author) < 2 or "@" in author or cs._LINK_RE.search(author):
-        raise HTTPException(status_code=422, detail="Indiquez un pseudo (2 caractères au moins, sans adresse e-mail).")
+    if len(author) < 2 or "@" in author or cs._LINK_RE.search(author) or cs.is_reserved_name(author):
+        raise HTTPException(status_code=422, detail=(
+            "Choisissez un autre pseudo : 2 caractères au moins, sans adresse e-mail ni nom réservé à l'équipe."))
     comment = _clean_comment(payload.comment)
     review = db.query(RecipeReview).filter(RecipeReview.recipe_id == recipe_id,
                                            RecipeReview.user_email == email).first()
