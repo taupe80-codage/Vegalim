@@ -9,7 +9,11 @@ rule_engine.diet.compute_fodmap :
   - sauce soja ≤ 14 g, miso ≤ 12 g, tahini ≤ 20 g, flocons d'avoine ≤ 52 g, lait de
     coco ~ 100 ml par portion ;
   - lait d'amande, fromages affinés et feta plutôt que lait et yaourt (lactose),
-    tofu ferme plutôt que tofu soyeux.
+    tofu ferme plutôt que tofu soyeux ;
+  - portions Monash que les tables de l'application ne vérifient pas, respectées par
+    portion : courgette ≤ 65 g, poivron rouge ≤ 43 g, haricots verts ≤ 75 g,
+    tomate ≤ 65 g, fraises ≤ 65 g, pak-choï ≤ 75 g, lait de coco ≤ 120 ml
+    (vérifié le 2026-11-23 ; la soupe de courgettes est devenue une soupe verte).
 """
 from ._schema import recipe
 
@@ -59,13 +63,14 @@ RECIPES = [
         texture=("cremeux", "fondant"), taste=("epice", "doux"),
         technique=("sauteing", "simmering", "boiling"), difficulty="easy", spice=1,
         desc="Un curry sans oignon ni ail, pauvre en FODMAP : le gingembre, le curcuma et le "
-             "cumin parfument un lait de coco où mijotent tofu, courgettes et épinards, "
+             "cumin parfument un lait de coco où mijotent tofu, courgettes, carottes et épinards, "
              "servi avec du riz basmati.",
         compo=[
             ("basmati_rice_raw_seed", 280, "g", "carbohydrate"),
             ("water", 560, "ml", "liquid"),
             ("tofu_plain_pre_packaged", 400, "g", "plant_protein"),
-            ("green_zucchini_squash_raw", 400, "g", "main_vegetable"),
+            ("green_zucchini_squash_raw", 260, "g", "main_vegetable"),
+            ("carrot_raw", 200, "g", "vegetable"),
             ("spinach_raw_baby", 150, "g", "vegetable"),
             ("coconut_milk_plant", 400, "ml", "liquid"),
             ("tomato_crushed_canned", 200, "g", "sauce"),
@@ -82,8 +87,9 @@ RECIPES = [
             "15 minutes.",
             "Faire revenir 20 g de gingembre râpé, 6 g de curry, 2 g de curcuma et 3 g de cumin "
             "1 minute dans 20 ml d'huile d'olive.",
-            "Ajouter 400 g de courgettes en dés et 400 g de tofu en cubes, puis 400 ml de lait "
-            "de coco, 200 g de tomates concassées et 5 g de sel, et mijoter 15 minutes.",
+            "Ajouter 260 g de courgettes et 200 g de carottes en dés et 400 g de tofu en cubes, "
+            "puis 400 ml de lait de coco, 200 g de tomates concassées et 5 g de sel, et mijoter "
+            "15 minutes.",
             "Ajouter 150 g de jeunes pousses d'épinard pour 2 minutes et 15 ml de jus de citron "
             "vert, puis servir avec le riz.",
         ],
@@ -102,9 +108,9 @@ RECIPES = [
         compo=[
             ("quinoa_raw_dried", 240, "g", "carbohydrate"),
             ("water", 480, "ml", "liquid"),
-            ("carrot_raw", 300, "g", "vegetable"),
-            ("green_zucchini_squash_raw", 300, "g", "main_vegetable"),
-            ("red_bell_pepper_raw", 200, "g", "vegetable"),
+            ("carrot_raw", 380, "g", "vegetable"),
+            ("green_zucchini_squash_raw", 260, "g", "main_vegetable"),
+            ("red_bell_pepper_raw", 160, "g", "vegetable"),
             ("olive_oil_plant", 45, "ml", "fat"),
             ("paprika_powder", 3, "g", "spice"),
             ("feta_cow", 120, "g", "dairy"),
@@ -114,8 +120,8 @@ RECIPES = [
             ("table_salt_unenriched", 4, "g", "seasoning"),
         ],
         steps=[
-            "Préchauffer le four à 210 °C. Couper 300 g de carottes, 300 g de courgettes et "
-            "200 g de poivron en morceaux, les mélanger avec 25 ml d'huile d'olive, 3 g de "
+            "Préchauffer le four à 210 °C. Couper 380 g de carottes, 260 g de courgettes et "
+            "160 g de poivron en morceaux, les mélanger avec 25 ml d'huile d'olive, 3 g de "
             "paprika et 3 g de sel.",
             "Rôtir les légumes 30 minutes au four à 210 °C.",
             "Cuire 240 g de quinoa rincé dans 480 ml d'eau 15 minutes à couvert, puis le laisser "
@@ -171,7 +177,7 @@ RECIPES = [
             ("water", 900, "ml", "liquid"),
             ("parmesan_grated_dried_cow", 60, "g", "dairy"),
             ("eggplant_raw", 300, "g", "main_vegetable"),
-            ("red_bell_pepper_raw", 200, "g", "vegetable"),
+            ("red_bell_pepper_raw", 160, "g", "vegetable"),
             ("green_zucchini_squash_raw", 200, "g", "vegetable"),
             ("tomato_crushed_canned", 400, "g", "sauce"),
             ("basil_fresh_herb", 10, "g", "herb"),
@@ -179,7 +185,7 @@ RECIPES = [
             ("table_salt_unenriched", 6, "g", "seasoning"),
         ],
         steps=[
-            "Faire revenir 300 g d'aubergine, 200 g de poivron et 200 g de courgette en dés "
+            "Faire revenir 300 g d'aubergine, 160 g de poivron et 200 g de courgette en dés "
             "8 minutes dans 30 ml d'huile d'olive.",
             "Ajouter 400 g de tomates concassées et 3 g de sel, et mijoter 20 minutes ; finir "
             "avec 10 g de basilic.",
@@ -243,7 +249,7 @@ RECIPES = [
             ("paprika_powder", 3, "g", "spice"),
             ("maple_syrup", 10, "ml", "sweetener"),
             ("potato_raw_flesh", 700, "g", "carbohydrate"),
-            ("french_bean_raw", 400, "g", "vegetable"),
+            ("french_bean_raw", 300, "g", "vegetable"),
             ("olive_oil_plant", 40, "ml", "fat"),
             ("parsley_fresh_herb", 20, "g", "herb"),
             ("table_salt_unenriched", 3, "g", "seasoning"),
@@ -251,7 +257,7 @@ RECIPES = [
         steps=[
             "Couper 400 g de tempeh en tranches et les mariner 10 minutes dans 30 ml de sauce "
             "soja, 3 g de paprika et 10 ml de sirop d'érable.",
-            "Cuire 700 g de pommes de terre en morceaux 20 minutes et 400 g de haricots verts "
+            "Cuire 700 g de pommes de terre en morceaux 20 minutes et 300 g de haricots verts "
             "8 minutes à la vapeur.",
             "Griller le tempeh 3 minutes par face dans 20 ml d'huile d'olive.",
             "Mélanger les pommes de terre avec 20 ml d'huile, 20 g de persil haché et 3 g de "
@@ -339,7 +345,7 @@ RECIPES = [
             ("white_rice_raw_seed_unenriched", 240, "g", "carbohydrate"),
             ("water", 480, "ml", "liquid"),
             ("cucumber_raw", 250, "g", "vegetable"),
-            ("tomato_raw_ripe", 300, "g", "vegetable"),
+            ("tomato_raw_ripe", 260, "g", "vegetable"),
             ("red_bell_pepper_raw", 150, "g", "vegetable"),
             ("feta_cow", 150, "g", "dairy"),
             ("black_olive_canned_in_brine", 60, "g", "garnish"),
@@ -351,7 +357,7 @@ RECIPES = [
         steps=[
             "Cuire 240 g de riz rincé dans 480 ml d'eau 15 minutes à couvert, puis l'étaler pour "
             "le refroidir.",
-            "Couper 250 g de concombre, 300 g de tomates et 150 g de poivron en dés.",
+            "Couper 250 g de concombre, 260 g de tomates et 150 g de poivron en dés.",
             "Fouetter 40 ml d'huile d'olive, 30 ml de jus de citron et 3 g de sel.",
             "Mélanger le riz, les légumes, 60 g d'olives et la vinaigrette, puis ajouter 150 g "
             "de feta en dés et 15 g de basilic ciselé.",
@@ -424,30 +430,33 @@ RECIPES = [
     ),
     recipe(
         rid="soup_courgettes_pommes_de_terre_basilic_lowfodmap_5a9c03",
-        fr="Soupe de courgettes, pommes de terre et basilic",
-        en="Zucchini, Potato and Basil Soup",
+        fr="Soupe verte de courgette, épinards et basilic",
+        en="Green Zucchini, Spinach and Basil Soup",
         cuisine="italian", country="italy",
         dish="soup", servings=4, prep=10, cook=20,
         texture=("velouté", "lisse"), taste=("herbacé", "doux"),
         technique=("simmering", "blending"), difficulty="easy",
-        desc="Une soupe verte et douce, sans ail ni oignon : courgettes et pommes de terre "
-             "mixées avec du basilic et un filet d'huile d'olive, servie avec du parmesan.",
+        desc="Une soupe verte et douce, sans ail ni oignon : la courgette limitée à 65 g par "
+             "bol pour rester pauvre en FODMAP, des épinards pour la couleur, des pommes de "
+             "terre pour le velouté, du basilic et du parmesan.",
         compo=[
-            ("green_zucchini_squash_raw", 700, "g", "main_vegetable"),
-            ("potato_raw_flesh", 250, "g", "vegetable"),
-            ("water", 800, "ml", "liquid"),
+            ("green_zucchini_squash_raw", 260, "g", "main_vegetable"),
+            ("spinach_raw_baby", 250, "g", "vegetable"),
+            ("potato_raw_flesh", 400, "g", "vegetable"),
+            ("water", 900, "ml", "liquid"),
             ("basil_fresh_herb", 15, "g", "herb"),
             ("olive_oil_plant", 20, "ml", "fat"),
             ("table_salt_unenriched", 5, "g", "seasoning"),
             ("parmesan_grated_dried_cow", 30, "g", "dairy"),
         ],
         steps=[
-            "Cuire 700 g de courgettes et 250 g de pommes de terre en morceaux 18 minutes dans "
-            "800 ml d'eau avec 5 g de sel.",
+            "Cuire 400 g de pommes de terre et 260 g de courgette en morceaux 15 minutes dans "
+            "900 ml d'eau avec 5 g de sel.",
+            "Ajouter 250 g de jeunes pousses d'épinard et cuire 2 minutes.",
             "Mixer avec 15 g de basilic et 20 ml d'huile d'olive.",
             "Servir avec 30 g de parmesan râpé.",
         ],
-        allow_similar=("soupe", "courgettes", "basilic"),
+        allow_similar=("soupe", "courgette", "epinards", "basilic"),
     ),
 
     # ── C. Petit-déjeuner ─────────────────────────────────────────────────────────────────
@@ -465,7 +474,7 @@ RECIPES = [
         compo=[
             ("oat_flakes_whole_seed", 200, "g", "carbohydrate"),
             ("almond_milk_refrigerated_unsweetened_plant", 800, "ml", "liquid"),
-            ("strawberry_raw", 300, "g", "fruit"),
+            ("strawberry_raw", 260, "g", "fruit"),
             ("pumpkin_squash_raw_seed", 40, "g", "garnish"),
             ("maple_syrup", 30, "ml", "sweetener"),
             ("cinnamon_powder", 2, "g", "spice"),
@@ -473,7 +482,7 @@ RECIPES = [
         steps=[
             "Porter 800 ml de lait d'amande à frémissement avec 2 g de cannelle, ajouter 200 g "
             "de flocons d'avoine et cuire 5 minutes à feu doux en remuant.",
-            "Répartir dans les bols et garnir de 300 g de fraises en morceaux et de 40 g de "
+            "Répartir dans les bols et garnir de 260 g de fraises en morceaux et de 40 g de "
             "graines de courge.",
             "Arroser de 30 ml de sirop d'érable.",
         ],
@@ -523,13 +532,13 @@ RECIPES = [
         compo=[
             ("pineapple_raw", 400, "g", "fruit"),
             ("kiwi_raw", 240, "g", "fruit"),
-            ("strawberry_raw", 300, "g", "fruit"),
+            ("strawberry_raw", 260, "g", "fruit"),
             ("lime_juice_fresh", 15, "ml", "acidity"),
             ("mint_fresh_herb", 5, "g", "herb"),
             ("maple_syrup", 10, "ml", "sweetener"),
         ],
         steps=[
-            "Couper 400 g d'ananas, 240 g de kiwis pelés et 300 g de fraises en morceaux.",
+            "Couper 400 g d'ananas, 240 g de kiwis pelés et 260 g de fraises en morceaux.",
             "Mélanger avec 15 ml de jus de citron vert et 10 ml de sirop d'érable.",
             "Parsemer de 5 g de menthe ciselée et servir frais.",
         ],

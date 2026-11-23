@@ -7254,17 +7254,17 @@
       },
       {
         "ingredient": "carrot_raw",
-        "quantity": 300,
+        "quantity": 380,
         "unit": "g"
       },
       {
         "ingredient": "green_zucchini_squash_raw",
-        "quantity": 300,
+        "quantity": 260,
         "unit": "g"
       },
       {
         "ingredient": "red_bell_pepper_raw",
-        "quantity": 200,
+        "quantity": 160,
         "unit": "g"
       },
       {
@@ -16975,7 +16975,7 @@
     "servings": 4,
     "time_total": 35,
     "confidence": 0.9,
-    "description": "Un curry sans oignon ni ail, pauvre en FODMAP : le gingembre, le curcuma et le cumin parfument un lait de coco où mijotent tofu, courgettes et épinards, servi avec du riz basmati.",
+    "description": "Un curry sans oignon ni ail, pauvre en FODMAP : le gingembre, le curcuma et le cumin parfument un lait de coco où mijotent tofu, courgettes, carottes et épinards, servi avec du riz basmati.",
     "composition": [
       {
         "ingredient": "basmati_rice_raw_seed",
@@ -16994,7 +16994,12 @@
       },
       {
         "ingredient": "green_zucchini_squash_raw",
-        "quantity": 400,
+        "quantity": 260,
+        "unit": "g"
+      },
+      {
+        "ingredient": "carrot_raw",
+        "quantity": 200,
         "unit": "g"
       },
       {
@@ -49686,7 +49691,7 @@
       },
       {
         "ingredient": "red_bell_pepper_raw",
-        "quantity": 200,
+        "quantity": 160,
         "unit": "g"
       },
       {
@@ -50494,7 +50499,7 @@
       },
       {
         "ingredient": "strawberry_raw",
-        "quantity": 300,
+        "quantity": 260,
         "unit": "g"
       },
       {
@@ -60705,7 +60710,7 @@
       },
       {
         "ingredient": "strawberry_raw",
-        "quantity": 300,
+        "quantity": 260,
         "unit": "g"
       },
       {
@@ -62276,7 +62281,7 @@
       },
       {
         "ingredient": "tomato_raw_ripe",
-        "quantity": 300,
+        "quantity": 260,
         "unit": "g"
       },
       {
@@ -67847,66 +67852,6 @@
     "similar": []
   },
   {
-    "id": "soup_courgettes_pommes_de_terre_basilic_lowfodmap_5a9c03",
-    "title": "Soupe de courgettes, pommes de terre et basilic",
-    "cuisine": "italian",
-    "dish_type": "soup",
-    "vegan": false,
-    "diet": [
-      "vegetarian",
-      "gluten_free",
-      "nut_free"
-    ],
-    "allergens": [
-      "lactose",
-      "milk"
-    ],
-    "servings": 4,
-    "time_total": 30,
-    "confidence": 0.9,
-    "description": "Une soupe verte et douce, sans ail ni oignon : courgettes et pommes de terre mixées avec du basilic et un filet d'huile d'olive, servie avec du parmesan.",
-    "composition": [
-      {
-        "ingredient": "green_zucchini_squash_raw",
-        "quantity": 700,
-        "unit": "g"
-      },
-      {
-        "ingredient": "potato_raw_flesh",
-        "quantity": 250,
-        "unit": "g"
-      },
-      {
-        "ingredient": "water",
-        "quantity": 800,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "basil_fresh_herb",
-        "quantity": 15,
-        "unit": "g"
-      },
-      {
-        "ingredient": "olive_oil_plant",
-        "quantity": 20,
-        "unit": "ml"
-      },
-      {
-        "ingredient": "table_salt_unenriched",
-        "quantity": 5,
-        "unit": "g"
-      },
-      {
-        "ingredient": "parmesan_grated_dried_cow",
-        "quantity": 30,
-        "unit": "g"
-      }
-    ],
-    "n_instructions": 3,
-    "flags": [],
-    "similar": []
-  },
-  {
     "id": "soup_de_gundruk_a62723",
     "title": "Soupe de Gundruk",
     "cuisine": "nepali",
@@ -69420,6 +69365,71 @@
         "score": 0.67
       }
     ]
+  },
+  {
+    "id": "soup_courgettes_pommes_de_terre_basilic_lowfodmap_5a9c03",
+    "title": "Soupe verte de courgette, épinards et basilic",
+    "cuisine": "italian",
+    "dish_type": "soup",
+    "vegan": false,
+    "diet": [
+      "vegetarian",
+      "gluten_free",
+      "nut_free"
+    ],
+    "allergens": [
+      "lactose",
+      "milk"
+    ],
+    "servings": 4,
+    "time_total": 30,
+    "confidence": 0.9,
+    "description": "Une soupe verte et douce, sans ail ni oignon : la courgette limitée à 65 g par bol pour rester pauvre en FODMAP, des épinards pour la couleur, des pommes de terre pour le velouté, du basilic et du parmesan.",
+    "composition": [
+      {
+        "ingredient": "green_zucchini_squash_raw",
+        "quantity": 260,
+        "unit": "g"
+      },
+      {
+        "ingredient": "spinach_raw_baby",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "ingredient": "potato_raw_flesh",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "ingredient": "water",
+        "quantity": 900,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "basil_fresh_herb",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "ingredient": "olive_oil_plant",
+        "quantity": 20,
+        "unit": "ml"
+      },
+      {
+        "ingredient": "table_salt_unenriched",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "ingredient": "parmesan_grated_dried_cow",
+        "quantity": 30,
+        "unit": "g"
+      }
+    ],
+    "n_instructions": 4,
+    "flags": [],
+    "similar": []
   },
   {
     "id": "soup_a_l_oignon_gratinee_vegan_826f59",
@@ -73905,7 +73915,7 @@
       },
       {
         "ingredient": "french_bean_raw",
-        "quantity": 400,
+        "quantity": 300,
         "unit": "g"
       },
       {

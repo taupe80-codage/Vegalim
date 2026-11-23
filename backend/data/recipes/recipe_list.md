@@ -989,7 +989,6 @@
 - **Soupe de butternut thaïe au lait de coco et au gingembre** _(gluten_free, kid_friendly, lactose_free, nut_free, vegetarian, soup, french_fusion)_ — `soup_soupe_courge_butternut_2f5cf3`
 - **Soupe de chou-fleur et céleri-rave au curry et au lait de coco** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, soup, international)_ — `soup_chou_fleur_celeri_rave_curry_3d7f50`
 - **Soupe de Châtaignes** _(gluten_free, kid_friendly, vegetarian, soup, french)_ — `soup_soupe_de_chataignes_6b8e6f`
-- **Soupe de courgettes, pommes de terre et basilic** _(vegetarian, gluten_free, nut_free, soup, italian)_ — `soup_courgettes_pommes_de_terre_basilic_lowfodmap_5a9c03`
 - **Soupe de Gundruk** _(diabetes_friendly, gluten_free, vegan, vegetarian, soup, nepali)_ — `soup_de_gundruk_a62723`
 - **Soupe de haricots blancs, chou kale et tofu fumé** _(vegan, vegetarian, gluten_free, lactose_free, nut_free, soup, international)_ — `soup_haricots_kale_tofu_fume_1d84c6`
 - **Soupe de lentilles corail à l'oignon frit et au citron** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, soup, lebanese)_ — `dal_soupe_lentilles_turque_e797cb`
@@ -1009,6 +1008,7 @@
 - **Soupe paysanne aux lentilles vertes et légumes** _(diabetes_friendly, high_protein, vegan, vegetarian, gluten_free, lactose_free, nut_free, soup, french)_ — `dal_soupe_de_lentilles_621239`
 - **Soupe Thaï Coco Citronnelle** _(diabetes_friendly, high_protein, vegetarian, soup, thai)_ — `soup_soupe_thai_coco_citronnelle_375c23`
 - **Soupe Udon Miso** _(diabetes_friendly, high_protein, vegan, vegetarian, soup, japanese)_ — `soup_udon_miso_ef1ceb` 🔁 doublon possible : Soupe miso
+- **Soupe verte de courgette, épinards et basilic** _(vegetarian, gluten_free, nut_free, soup, italian)_ — `soup_courgettes_pommes_de_terre_basilic_lowfodmap_5a9c03`
 - **Soupe à l'oignon au cidre et croûtons à l'ail (vegan)** _(diabetes_friendly, vegan, vegetarian, lactose_free, nut_free, soup, french_normand)_ — `soup_a_l_oignon_gratinee_vegan_826f59`
 - **Soupe à l'oignon gratinée lyonnaise au comté** _(soup, french_lyonnaise)_ — `soup_soup_k3d2p1`
 - **Spaghetti aglio e olio** _(vegan, vegetarian, lactose_free, nut_free, main, italian)_ — `pasta_aglio_olio_6d2b95`
