@@ -4,14 +4,90 @@
     "new_bases": 1911,
     "regressions": 0,
     "nouveautes": 0,
-    "nutr_diffs": 0,
+    "nutr_diffs": 3,
     "recipe_keys_missing_new": 319,
     "recipe_keys_missing_old": 319,
     "recipe_keys_lost": 0
   },
   "regressions": [],
   "nouveautes": [],
-  "nutr_diffs": [],
+  "nutr_diffs": [
+    {
+      "key": "baobab_powder",
+      "diffs": {
+        "protein_g": {
+          "old": 3.1,
+          "new": 1.9,
+          "delta_pct": 38.7
+        },
+        "carbs_g": {
+          "old": 58.5,
+          "new": 38.8,
+          "delta_pct": 33.7
+        },
+        "fat_g": {
+          "old": 0.3,
+          "new": 0.5,
+          "delta_pct": 66.7
+        }
+      }
+    },
+    {
+      "key": "sumac",
+      "diffs": {
+        "calories_kcal": {
+          "old": 239.0,
+          "new": 324.0,
+          "delta_pct": 35.6
+        },
+        "carbs_g": {
+          "old": 65.0,
+          "new": 17.6,
+          "delta_pct": 72.9
+        },
+        "fat_g": {
+          "old": 0.4,
+          "new": 16.6,
+          "delta_pct": 4050.0
+        },
+        "fiber_g": {
+          "old": 24.3,
+          "new": 44.6,
+          "delta_pct": 83.5
+        }
+      }
+    },
+    {
+      "key": "wheatgrass_powder",
+      "diffs": {
+        "calories_kcal": {
+          "old": 86.0,
+          "new": 261.0,
+          "delta_pct": 203.5
+        },
+        "protein_g": {
+          "old": 25.4,
+          "new": 19.0,
+          "delta_pct": 25.2
+        },
+        "carbs_g": {
+          "old": 39.3,
+          "new": 17.0,
+          "delta_pct": 56.7
+        },
+        "fat_g": {
+          "old": 2.9,
+          "new": 1.4,
+          "delta_pct": 51.7
+        },
+        "fiber_g": {
+          "old": 36.6,
+          "new": 53.0,
+          "delta_pct": 44.8
+        }
+      }
+    }
+  ],
   "recipe_keys_missing_new": [
     "allspice_powder",
     "ancho_pepper_spice_dried",

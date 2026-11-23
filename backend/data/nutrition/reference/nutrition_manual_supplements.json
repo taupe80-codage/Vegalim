@@ -4,7 +4,8 @@
     "built_at": "2026-06-11T08:54:57.798384+00:00",
     "count": 86,
     "note_2026_09_14": "22 entrées MANUAL (commit c3562f6) migrées depuis nutrition_v2.json, où elles avaient été saisies directement : un rebuild les aurait perdues.",
-    "note_2026_11_23": "taxonomy / ingredient_type facultatifs, repris par build_n2_direct.py pour une fiche absente de l'arbre ; tteok et papaye verte ont depuis été ajoutés à l'arbre (ingredients_tree.json), ce qui permet aussi de relancer build_dict_v2.py sans les perdre."
+    "note_2026_11_23": "taxonomy / ingredient_type facultatifs, repris par build_n2_direct.py pour une fiche absente de l'arbre ; tteok et papaye verte ont depuis été ajoutés à l'arbre (ingredients_tree.json), ce qui permet aussi de relancer build_dict_v2.py sans les perdre.",
+    "note_2026_11_23_sources": "Fiches MANUAL revues après audit_outliers.py (énergie incohérente) : herbe de blé, baobab, sumac (valeurs d'étiquette), mirin (alcool), xylitol (polyols). Source de chaque fiche corrigée dans _source_note."
   },
   "supplements": {
     "acai": {
@@ -39,12 +40,14 @@
       "name_fr": "poudre de baobab",
       "name_en": "baobab powder",
       "nutrients": {
-        "calories_kcal": 227.0,
-        "protein_g": 3.1,
-        "carbs_g": 58.5,
-        "fat_g": 0.3,
-        "fiber_g": 44.5
-      }
+        "calories_kcal": 253.0,
+        "protein_g": 1.9,
+        "carbs_g": 38.8,
+        "fat_g": 0.5,
+        "fiber_g": 46.9,
+        "sugar_g": 31.1
+      },
+      "_source_note": "Étiquette Aduna (poudre de baobab bio) : 253 kcal, 38,8 g glucides dont 31,1 g sucres, 46,9 g fibres, 1,9 g protéines, lipides < 1 g (0,5 retenu). Remplace 227 kcal / 58,5 g de glucides totaux, 2026-11-23."
     },
     "yuzu": {
       "ig_id": "ing_05787",
@@ -182,12 +185,15 @@
       "name_fr": "sumac (baies séchées moulues)",
       "name_en": "sumac",
       "nutrients": {
-        "calories_kcal": 239.0,
-        "protein_g": 3.5,
-        "carbs_g": 65.0,
-        "fat_g": 0.4,
-        "fiber_g": 24.3
-      }
+        "calories_kcal": 324.0,
+        "protein_g": 3.8,
+        "carbs_g": 17.6,
+        "fat_g": 16.6,
+        "fiber_g": 44.6,
+        "sugar_g": 1.3,
+        "fa_saturated_g": 3.9
+      },
+      "_source_note": "Étiquette Tesco / Waitrose (sumac moulu) : 324 kcal, 16,6 g lipides dont 3,9 g saturés, 17,6 g glucides dont 1,3 g sucres, 44,6 g fibres, 3,8 g protéines (M&S : 301 kcal, même profil). Remplace 239 kcal / 65 g de glucides totaux, 2026-11-23."
     },
     "gochugaru": {
       "ig_id": "ing_05799",
@@ -329,8 +335,11 @@
         "protein_g": 0.0,
         "carbs_g": 99.8,
         "fat_g": 0.0,
-        "fiber_g": 0.0
-      }
+        "fiber_g": 0.0,
+        "polyols_g": 99.8,
+        "sugar_g": 0.0
+      },
+      "_source_note": "Glucides = polyols (xylitol, 2,4 kcal/g) : 240 kcal cohérent ; polyols_g ajouté le 2026-11-23."
     },
     "aquafaba": {
       "ig_id": "ing_05810",
@@ -468,12 +477,13 @@
       "name_fr": "herbe de blé (poudre séchée)",
       "name_en": "wheatgrass powder",
       "nutrients": {
-        "calories_kcal": 86.0,
-        "protein_g": 25.4,
-        "carbs_g": 39.3,
-        "fat_g": 2.9,
-        "fiber_g": 36.6
-      }
+        "calories_kcal": 261.0,
+        "protein_g": 19.0,
+        "carbs_g": 17.0,
+        "fat_g": 1.4,
+        "fiber_g": 53.0
+      },
+      "_source_note": "Étiquette Myprotein (poudre d'herbe de blé) : 261 kcal, 19 g protéines, 17 g glucides, 1,4 g lipides, 53 g fibres. Remplace 86 kcal (incohérent avec les macros), 2026-11-23."
     },
     "grain": {
       "ig_id": "ing_05821",
@@ -680,8 +690,10 @@
         "protein_g": 0.2,
         "carbs_g": 43.2,
         "fat_g": 0.1,
-        "fiber_g": 0.0
-      }
+        "fiber_g": 0.0,
+        "alcohol_g": 9.4
+      },
+      "_source_note": "Hon mirin ≈ 14 % vol. (≈ 9,4 g d'alcool / 100 g, densité ≈ 1,17) ; étiquette Hinode : 239 kcal, 42,8 g de glucides. alcohol_g ajouté le 2026-11-23."
     },
     "orange_blossom_water": {
       "ig_id": "ing_05837",

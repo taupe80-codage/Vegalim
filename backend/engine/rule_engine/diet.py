@@ -549,6 +549,11 @@ FODMAP_THRESHOLDS: dict[str, dict] = {
     "cherry_tomato":   {"safe": 75,  "medium": 150, "cats": ["M"]},
     "tomato_canned":   {"safe": 100, "medium": 200, "cats": ["M"]},
     "strawberry":      {"safe": 65,  "medium": 150, "cats": ["M"]},
+    # Poivron vert : vert jusqu'à 75 g (Monash, fructanes au-delà ; palier
+    # « élevé » non publié → deux portions vertes). Concentré de tomate :
+    # vert jusqu'à 28 g (2 c. à s. australiennes), fructanes modérés vers 80 g.
+    "green_bell_pepper": {"safe": 75, "medium": 150, "cats": ["F"]},
+    "tomato_paste":      {"safe": 28, "medium": 80,  "cats": ["F"]},
 }
 
 # ── Identifiants CIQUAL des recettes → clés FODMAP ci-dessus ─────────────────
@@ -570,6 +575,8 @@ FODMAP_ID_ALIASES: dict[str, str] = {
     "cherry_tomato_raw": "cherry_tomato",
     "tomato_crushed_canned": "tomato_canned",
     "strawberry_raw": "strawberry",
+    "green_bell_pepper_raw": "green_bell_pepper",
+    "tomato_paste_unsalted_canned": "tomato_paste",
     # Fruits secs (« raisin » de FODMAP_THRESHOLDS = raisin frais)
     "date_with_skin_dried": "dried_date", "grape_dried": "raisin_sec",
     # Alliacées

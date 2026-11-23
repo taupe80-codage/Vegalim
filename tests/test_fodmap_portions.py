@@ -3,6 +3,7 @@ tests/test_fodmap_portions.py — Portions Monash des légumes et fruits courant
 
 Avant (2026-11-23) : courgette, poivron rouge, haricots verts, tomates et fraises
 n'avaient pas de seuil — une soupe à 175 g de courgette par bol était « low ».
+Poivron vert et concentré de tomate ajoutés le même jour.
 """
 from __future__ import annotations
 
@@ -26,6 +27,8 @@ def _recipe(iid: str, grams_per_portion: float) -> dict:
     ("cherry_tomato_raw", 75, 160),
     ("tomato_crushed_canned", 100, 220),
     ("strawberry_raw", 65, 160),
+    ("green_bell_pepper_raw", 75, 160),
+    ("tomato_paste_unsalted_canned", 28, 90),
 ])
 def test_portion_sure_low_et_portion_excessive_non_low(iid, safe, over):
     assert compute_fodmap(_recipe(iid, safe))["fodmap_level"] == "low"

@@ -55,3 +55,20 @@ def test_audit_sans_alerte_de_masse():
     """Glucides CNF/USDA totaux (fibres comprises) : l'audit les ramène aux glucides disponibles."""
     import audit_outliers as A
     assert A.mass_alerts(N2) == []
+
+
+def test_audit_sans_alerte_d_energie():
+    """Fiches MANUAL d'herbe de blé (86 kcal), baobab et sumac remplacées par
+    des valeurs d'étiquette, alcool du mirin et polyols du xylitol renseignés ;
+    polyols CIQUAL (abricot sec) comptés à 2,4 kcal/g (2026-11-23)."""
+    import audit_outliers as A
+    assert A.energy_alerts(N2) == []
+    assert N2["mirin"]["variants"]["default"]["alcohol_g"] == pytest.approx(9.4)
+    assert N2["wheatgrass_powder"]["variants"]["default"]["calories_kcal"] == 261
+
+
+def test_fiches_manuelles_corrigees_documentees():
+    supp = json.loads((ROOT / "backend/data/nutrition/reference/nutrition_manual_supplements.json")
+                      .read_text(encoding="utf-8"))["supplements"]
+    for key in ("wheat_grass", "baobab", "sumac", "mirin", "xylitol"):
+        assert supp[key].get("_source_note"), key

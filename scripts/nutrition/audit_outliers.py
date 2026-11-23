@@ -61,8 +61,25 @@ def _available_carbs(v: dict) -> float | None:
     if c is None:
         return None
     if v.get("_source") in ("CNF", "USDA"):
-        return max(c - (_num(v.get("fiber_g")) or 0.0), 0.0)
+        c = max(c - (_num(v.get("fiber_g")) or 0.0), 0.0)
+    # Les glucides comprennent souvent les polyols (CIQUAL, étiquettes UE :
+    # abricot sec 59,1 g dont 22,6 g de sorbitol) ; ils sont comptés à part
+    # (2,4 kcal/g) dans le contrôle d'énergie.
+    pol = _num(v.get("polyols_g")) or 0.0
+    if pol:
+        rest = (_num(v.get("sugar_g")) or 0.0) + (_num(v.get("starch_g")) or 0.0)
+        if rest + pol <= c * 1.05 + 1.0:
+            c = max(c - pol, 0.0)
     return c
+
+
+# Écarts d'énergie vérifiés à la source : la valeur publiée est conservée.
+ENERGY_EXCEPTIONS = {
+    # Farine de caroube : 222 kcal pour 88,9 g de glucides totaux dont 39,8 g
+    # de fibres, mêmes chiffres que la fiche USDA ; énergie publiée avec des
+    # coefficients propres à l'aliment, pas une erreur de saisie.
+    "carob/flour": "CNF 3278, valeur officielle conservée",
+}
 
 
 _FORM_AXES = ("cooking_state", "thermal_state", "form", "part", "fat_content")
@@ -88,6 +105,8 @@ def variants(ings: dict):
 def energy_alerts(ings: dict) -> list[dict]:
     out = []
     for base, vk, name, v in variants(ings):
+        if f"{base}/{vk}" in ENERGY_EXCEPTIONS:
+            continue
         kcal = _num(v.get("calories_kcal"))
         p, f = _num(v.get("protein_g")), _num(v.get("fat_g"))
         c = _available_carbs(v)

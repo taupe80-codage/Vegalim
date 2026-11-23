@@ -2,7 +2,7 @@
   "schema_version": "7.2",
   "schema_family": "nutrition_v2",
   "built_from": "raw_sources_direct",
-  "built_at": "2026-11-23T15:04:03.428406+00:00",
+  "built_at": "2026-11-23T22:51:40.386778+00:00",
   "pipeline": "build_n2_direct.py",
   "raw_sources": {
     "CIQUAL": {
@@ -429,7 +429,9 @@
           "protein_g": 0.0,
           "carbs_g": 99.8,
           "fat_g": 0.0,
-          "fiber_g": 0.0
+          "fiber_g": 0.0,
+          "polyols_g": 99.8,
+          "sugar_g": 0.0
         }
       }
     },
@@ -4149,7 +4151,8 @@
           "protein_g": 0.2,
           "carbs_g": 43.2,
           "fat_g": 0.1,
-          "fiber_g": 0.0
+          "fiber_g": 0.0,
+          "alcohol_g": 9.4
         }
       }
     },
@@ -11411,11 +11414,11 @@
           "name_en": "wheatgrass powder",
           "indus_conditionne": false,
           "conditioning_types": [],
-          "calories_kcal": 86.0,
-          "protein_g": 25.4,
-          "carbs_g": 39.3,
-          "fat_g": 2.9,
-          "fiber_g": 36.6
+          "calories_kcal": 261.0,
+          "protein_g": 19.0,
+          "carbs_g": 17.0,
+          "fat_g": 1.4,
+          "fiber_g": 53.0
         }
       }
     },
@@ -32263,11 +32266,12 @@
           "name_en": "baobab powder",
           "indus_conditionne": false,
           "conditioning_types": [],
-          "calories_kcal": 227.0,
-          "protein_g": 3.1,
-          "carbs_g": 58.5,
-          "fat_g": 0.3,
-          "fiber_g": 44.5
+          "calories_kcal": 253.0,
+          "protein_g": 1.9,
+          "carbs_g": 38.8,
+          "fat_g": 0.5,
+          "fiber_g": 46.9,
+          "sugar_g": 31.1
         }
       }
     },
@@ -52733,11 +52737,13 @@
           "name_en": "sumac",
           "indus_conditionne": false,
           "conditioning_types": [],
-          "calories_kcal": 239.0,
-          "protein_g": 3.5,
-          "carbs_g": 65.0,
-          "fat_g": 0.4,
-          "fiber_g": 24.3
+          "calories_kcal": 324.0,
+          "protein_g": 3.8,
+          "carbs_g": 17.6,
+          "fat_g": 16.6,
+          "fiber_g": 44.6,
+          "sugar_g": 1.3,
+          "fa_saturated_g": 3.9
         }
       }
     },
