@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "description": "Corrections ponctuelles de valeurs manifestement fausses dans les tables sources (erreur de saisie ou d'unité), appliquées par build_n2_direct.py à l'index des sources brutes. Chaque correction cite la valeur d'origine et la preuve de la valeur retenue.",
+    "audit": "scripts/nutrition/audit_outliers.py",
+    "created": "2026-11-23"
+  },
+  "corrections": [
+    {
+      "source": "CIQUAL",
+      "source_id": 20034,
+      "food": "Oignon, cru",
+      "field": "iron_mg",
+      "was": 0.00019,
+      "value": 0.21,
+      "reason": "Valeur environ 1 000 fois trop basse (virgule déplacée) : oignon rouge cru CIQUAL 20238 = 0,19 mg, oignon jaune cru CIQUAL 20239 = 0,1 mg.",
+      "evidence": "CNF 2401 « Oignon, cru » = 0,21 mg ; USDA 170000 « Onions, raw » = 0,21 mg."
+    }
+  ]
+}

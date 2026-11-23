@@ -35,6 +35,7 @@ OUTPUT_REBUILT  = PROC_DIR / 'nutrition_v2_rebuilt.json'
 OUTPUT_N2       = PROC_DIR / 'nutrition_v2.json'
 MANIFEST_FILE   = DATA / 'nutrition/logs/raw_sources_manifest.json'
 SUPPLEMENTS_FILE = DATA / 'nutrition/reference/nutrition_manual_supplements.json'
+CORRECTIONS_FILE = DATA / 'nutrition/reference/source_value_corrections.json'
 
 SOURCE_PRIORITY = {'CIQUAL': 0, 'USDA': 1, 'CNF': 2}
 
@@ -667,6 +668,37 @@ def print_compare_report(cmp: dict) -> None:
     print('─' * 55)
 # ══════════════════════════════════════════════════════════════════════════════
 
+_CIQUAL_MACROS = frozenset({'calories_kcal', 'protein_g', 'carbs_g', 'fat_g', 'fiber_g'})
+
+
+def ciqual_value(v, n2_f: str) -> float | None:
+    """Une cellule CIQUAL → valeur, ou None (non mesuré : la clé n'est pas écrite).
+
+    - « - », « nd », « nr » : non mesuré → None (Atwater ou une autre source prend le relais).
+    - « traces » : sous le seuil de détection → 0 pour les micros ; None pour les
+      macros structurants, pour ne pas masquer un vrai zéro ni fausser Atwater.
+    - « < 20 » : sous le seuil de détection → 0 pour les micros (borne basse,
+      comme les traces). Lire le seuil comme une mesure prêtait 20 µg de
+      sélénium au vinaigre et aux légumes (962 valeurs « < » en sélénium dans
+      CIQUAL 2025, constaté le 2026-11-23). Les macros gardent le seuil
+      (petites valeurs utiles au calcul Atwater).
+    """
+    if v is None or v == '':
+        return None
+    raw = str(v).strip()
+    s = raw.replace(',', '.').replace('<', '').strip()
+    if raw.startswith('<') and n2_f not in _CIQUAL_MACROS:
+        return 0.0
+    if s in ('-', 'nd', 'nr', 'NR', 'ND'):
+        return None
+    if s.lower() in ('traces', 'trace', 'tr'):
+        return None if n2_f in _CIQUAL_MACROS else 0.0
+    try:
+        return float(s)
+    except ValueError:
+        return None
+
+
 def load_ciqual(path: Path) -> dict:
     """CIQUAL xlsx → {alim_code_int: {n2_field: value}}"""
     import openpyxl
@@ -695,29 +727,9 @@ def load_ciqual(path: Path) -> dict:
         name_fr = str(row[7] or '')
         nutr: dict = {'name_fr': name_fr}
         for i, n2_f in col_fields:
-            v = row[i]
-            if v is not None and v != '':
-                s = str(v).replace(',', '.').replace('<', '').strip()
-                if s in ('-', 'nd', 'nr', 'NR', 'ND'):
-                    # Non mesuré / non renseigné → ne pas écrire la clé (None implicite).
-                    # Le fallback Atwater ou la source secondaire prendra le relais.
-                    pass
-                elif s.lower() in ('traces', 'trace', 'tr'):
-                    # Traces = < seuil de détection.
-                    # Pour les macros structurants (calories, protéines, glucides, lipides,
-                    # fibres) on laisse None afin de ne pas masquer un vrai zéro ou déclencher
-                    # un faux calcul Atwater. Pour les micros (sodium, sucres…) 0.0 est OK.
-                    _MACRO_FIELDS = {
-                        'calories_kcal', 'protein_g', 'carbs_g', 'fat_g', 'fiber_g'
-                    }
-                    if n2_f not in _MACRO_FIELDS:
-                        nutr[n2_f] = 0.0
-                    # else: ne pas écrire → None implicite
-                else:
-                    try:
-                        nutr[n2_f] = float(s)
-                    except ValueError:
-                        pass
+            val = ciqual_value(row[i], n2_f)
+            if val is not None:
+                nutr[n2_f] = val
         # CIQUAL encode 0 comme sentinel "non mesuré" sur la colonne énergie.
         # Supprimer la clé permet au fallback Atwater de prendre le relais.
         # Exception : sel et additifs (protein=carbs=fat=0) → 0 kcal est légitime.
@@ -922,8 +934,39 @@ def build_raw_index(raw_dir: Path) -> dict:
         print(f'    → {n_sr_added} entrées SR Legacy ajoutées (complément Foundation Foods)')
     for fc, v in cnf.items():
         idx[('CNF', fc)] = v
-    print(f'  Index total : {len(idx)} entrées\n')
+    print(f'  Index total : {len(idx)} entrées')
+    apply_source_corrections(idx)
+    print()
     return idx
+
+
+def apply_source_corrections(idx: dict) -> int:
+    """Corrige les valeurs sources manifestement fausses (source_value_corrections.json).
+
+    Une correction ne s'applique que si la valeur lue est encore celle qu'elle
+    décrit (`was`) : une nouvelle version de la table qui corrige d'elle-même
+    l'erreur n'est pas écrasée (avertissement à la place).
+    """
+    if not CORRECTIONS_FILE.exists():
+        return 0
+    doc = json.loads(CORRECTIONS_FILE.read_text(encoding='utf-8'))
+    done = 0
+    for c in doc.get('corrections', []):
+        src, sid = c['source'], c['source_id']
+        item = idx.get((src, sid)) or idx.get((src, str(sid)))
+        if item is None and str(sid).isdigit():
+            item = idx.get((src, int(sid)))
+        if item is None:
+            print(f"    ⚠ correction {src}:{sid} : aliment absent de la source")
+            continue
+        cur = item.get(c['field'])
+        if cur is None or abs(float(cur) - float(c['was'])) > 1e-9:
+            print(f"    ⚠ correction {src}:{sid} {c['field']} non appliquée : valeur {cur} (attendu {c['was']})")
+            continue
+        item[c['field']] = c['value']
+        done += 1
+    print(f'  🩹 Corrections de valeurs sources : {done} / {len(doc.get("corrections", []))}')
+    return done
 
 
 def extract_nutrients(raw: dict) -> dict:
