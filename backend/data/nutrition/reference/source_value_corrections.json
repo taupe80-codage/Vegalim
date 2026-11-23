@@ -14,6 +14,66 @@
       "value": 0.21,
       "reason": "Valeur environ 1 000 fois trop basse (virgule déplacée) : oignon rouge cru CIQUAL 20238 = 0,19 mg, oignon jaune cru CIQUAL 20239 = 0,1 mg.",
       "evidence": "CNF 2401 « Oignon, cru » = 0,21 mg ; USDA 170000 « Onions, raw » = 0,21 mg."
+    },
+    {
+      "source": "CIQUAL",
+      "source_id": 13714,
+      "food": "Abricot au sirop, appertisé, égoutté",
+      "field": "vitamin_b1_mg",
+      "was": 0.7,
+      "value": 0.021,
+      "reason": "Environ 30 fois la valeur de l'abricot cru (CIQUAL 13000 = 0,03 mg) : impossible pour un fruit en conserve. Toute la famille « abricot au sirop » de CIQUAL 2025 porte ce 0,7 (13704, 13712, 13713).",
+      "evidence": "CNF 5395 « Abricot, conserve, dans du sirop épais, égoutté » = 0,021 mg ; CNF 1503 à 1506 (sirop léger à extra épais) = 0,016 à 0,02 mg."
+    },
+    {
+      "source": "CIQUAL",
+      "source_id": 13712,
+      "food": "Abricot au sirop léger, appertisé, égoutté",
+      "field": "vitamin_b1_mg",
+      "was": 0.7,
+      "value": 0.016,
+      "reason": "Même erreur que CIQUAL 13714 : environ 25 fois la valeur de l'abricot cru (CIQUAL 13000 = 0,03 mg).",
+      "evidence": "CNF 1503 « Abricot, conserve, dans du sirop léger » = 0,016 mg ; CNF 5395 (sirop épais, égoutté) = 0,021 mg."
+    },
+    {
+      "source": "CIQUAL",
+      "source_id": 13714,
+      "food": "Abricot au sirop, appertisé, égoutté",
+      "field": "beta_carotene_ug",
+      "was": 7.98,
+      "value": 925.0,
+      "reason": "Environ 100 fois trop bas : la fiche sœur au sirop léger, égouttée, en donne 925 µg et l'abricot cru 2 350 µg.",
+      "evidence": "CIQUAL 13712 « Abricot au sirop léger, appertisé, égoutté » = 925 µg ; CNF 5395 (sirop épais, égoutté) = 1 746 µg ; CNF 1503 à 1506 = 735 à 882 µg."
+    },
+    {
+      "source": "CIQUAL",
+      "source_id": 13714,
+      "food": "Abricot au sirop, appertisé, égoutté",
+      "field": "vitamin_a_rae_ug",
+      "was": 0.67,
+      "value": 77.1,
+      "reason": "Équivalent rétinol calculé depuis le bêta-carotène erroné (7,98 / 12) : recalculé depuis la valeur corrigée (925 / 12).",
+      "evidence": "Correction du bêta-carotène ci-dessus."
+    },
+    {
+      "source": "CIQUAL",
+      "source_id": 20310,
+      "food": "Chou rouge, cuit à l'étouffée",
+      "field": "vitamin_k1_ug",
+      "was": 0.84,
+      "value": 47.6,
+      "reason": "Environ 55 fois moins que le chou rouge bouilli de la même table ; la vitamine K1 est liposoluble et stable à la chaleur, la cuisson à l'étouffée ne la détruit pas.",
+      "evidence": "CIQUAL 20095 « Chou rouge, bouilli/cuit à l'eau » = 47,6 µg ; CNF 2034 « Chou rouge, cru » = 38,2 µg."
+    },
+    {
+      "source": "CIQUAL",
+      "source_id": 20530,
+      "food": "Haricot mungo, sec",
+      "field": "vitamin_k1_ug",
+      "was": 170.0,
+      "value": 9.0,
+      "reason": "15 à 20 fois la valeur des autres légumineuses sèches de CIQUAL (lentilles 9,3 à 11,9 µg, pois chiche 9 µg).",
+      "evidence": "CNF 3297 « Légumineuses, ambériques (mungo), crus » = 9,0 µg ; CIQUAL 20531 haricot mungo cuit = 2,7 µg."
     }
   ]
 }

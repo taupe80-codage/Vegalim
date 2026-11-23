@@ -72,3 +72,37 @@ def test_fiches_manuelles_corrigees_documentees():
                       .read_text(encoding="utf-8"))["supplements"]
     for key in ("wheat_grass", "baobab", "sumac", "mirin", "xylitol"):
         assert supp[key].get("_source_note"), key
+
+
+def test_audit_sans_ecart_a_la_fratrie():
+    """48 écarts relus le 2026-11-24 : 7 erreurs de source corrigées
+    (abricot au sirop, chou rouge étuvé, haricot mungo sec), oreille de Judas
+    MANUAL reprise de CNF 4884, le reste en exceptions motivées."""
+    import audit_outliers as A
+    assert A.sibling_alerts(N2) == []
+    assert all(reason for reason in A.SIBLING_EXCEPTIONS.values())
+    assert N2["wood_ear_mushroom"]["variants"]["default"]["iron_mg"] == pytest.approx(5.88)
+    assert N2["mung_bean_dried"]["variants"]["dried"]["vitamin_k1_ug"] == pytest.approx(9.0)
+    assert N2["apricot_05865"]["variants"]["canned_in_syrup"]["vitamin_b1_mg"] < 0.05
+
+
+def _diabetic_flags() -> dict:
+    d = json.loads((ROOT / "backend/data/ingredients/ingredients_dictionary.json").read_text(encoding="utf-8"))
+    return {k: (g.get("diet_profile") or {}).get("diabetic_friendly")
+            for c in d["categories"].values() for s in c.get("subcategories", {}).values()
+            for k, g in s.get("ingredient_groups", {}).items()}
+
+
+@pytest.mark.parametrize("key, expected", [
+    ("xylitol_birch_sugar", True),     # polyols, pas de sucre
+    ("stevia_extract", True),
+    ("egg_poached", True),             # ni sucre ni glucides
+    ("comte_cow", True),
+    ("avocado_oil_plant", True),
+    ("wheat_flour_t55", False),        # amidon sans fibres (critère 10:1)
+    ("white_sugar", False),
+    ("kirsch", False),                 # alcool
+    ("calvados_liquid", False),        # alcool non renseigné dans CIQUAL
+])
+def test_regle_adapte_au_diabete(key, expected):
+    assert _diabetic_flags()[key] is expected

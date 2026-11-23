@@ -81,6 +81,57 @@ ENERGY_EXCEPTIONS = {
     "carob/flour": "CNF 3278, valeur officielle conservée",
 }
 
+# Écarts à la fratrie relus le 2026-11-24 : le groupe réunit des aliments
+# différents sous le même premier mot (haricot vert / sec / de mer, chou kale /
+# rouge, crème / crème de tartre, pamplemousse rose / blanc…) ou l'aliment est
+# réellement atypique. Valeur source conservée ; les vraies erreurs sont dans
+# reference/source_value_corrections.json.
+_GROUPE = "aliment différent de son groupe"
+SIBLING_EXCEPTIONS: dict[tuple[str, str], str] = {
+    ("button_mushroom_canned/canned", "manganese_mg"): "champignon frais en conserve vs champignons séchés",
+    ("wood_ear_mushroom/default", "manganese_mg"): "champignon séché (CNF 4884)",
+    ("jews_ear_mushroom_raw/raw", "vitamin_b3_mg"): "CNF 2101, pas de source contraire",
+    ("kale_boiled_canned/boiled_canned", "beta_carotene_ug"): "kale vs chou blanc/rouge",
+    ("kale_boiled_salted/boiled_salted", "beta_carotene_ug"): "kale vs chou blanc/rouge",
+    ("spaghetti_squash_baked_canned/baked_canned", "beta_carotene_ug"): "courge spaghetti, chair pâle",
+    ("cream/default", "iron_mg"): _GROUPE + " (crème de tartre)",
+    ("cream_sour/fermented", "iron_mg"): _GROUPE + " (crème de tartre)",
+    ("cream_of_tartar/default", "potassium_mg"): "bitartrate de potassium",
+    ("cream_of_tartar/default", "iron_mg"): "crème de tartre vs crème laitière",
+    ("black_eyed_peas_cowpeas_immature_boiled_canned/boiled_canned", "beta_carotene_ug"): "graines immatures (vertes)",
+    ("yardlong_boiled/boiled", "beta_carotene_ug"): "haricot kilomètre : gousse verte",
+    ("adzuki_bean_sweetened_canned/sweetened_canned", "beta_carotene_ug"): _GROUPE,
+    ("french_bean/boiled", "beta_carotene_ug"): "haricot vert vs haricots secs",
+    ("green_flageolet_bean/dried", "beta_carotene_ug"): _GROUPE + " (haricot de mer = algue)",
+    ("italian_bean_green_or_yellow_boiled_canned/boiled_canned", "beta_carotene_ug"): "haricot vert vs haricots secs",
+    ("light_red_kidney_bean_raw/raw", "beta_carotene_ug"): _GROUPE,
+    ("lima_bean_boiled_canned/boiled_canned", "beta_carotene_ug"): "fève de Lima immature (verte)",
+    ("lima_bean_boiled_salted/boiled_salted", "beta_carotene_ug"): "fève de Lima immature (verte)",
+    ("mung_bean_sprouted_dried_canned/sprouted_dried_canned", "beta_carotene_ug"): "germes en conserve, pas un haricot sec",
+    ("mung_bean_sprouted_dried_canned/sprouted_dried_canned", "potassium_mg"): "germes en conserve égouttés (USDA : 27 mg)",
+    ("sea_bean/dried", "beta_carotene_ug"): "haricot de mer = algue Himanthalia séchée",
+    ("sea_bean/dried", "vitamin_k1_ug"): "haricot de mer = algue Himanthalia séchée",
+    ("cantaloupe_melon_charentais/raw", "beta_carotene_ug"): "melon à chair orange vs melon miel",
+    ("honeydew_melon/raw", "beta_carotene_ug"): "melon miel à chair verte",
+    ("brazilnut/unbleached_dried_plain", "selenium_ug"): "noix du Brésil, très riche en sélénium",
+    ("grapefruit/juice_plain", "beta_carotene_ug"): "pamplemousse rose vs blanc",
+    ("grapefruit_raw/raw", "beta_carotene_ug"): "pamplemousse rose vs blanc",
+    ("pink_grapefruit/raw", "beta_carotene_ug"): "pamplemousse rose vs blanc",
+    ("white_grapefruit/raw", "beta_carotene_ug"): "pamplemousse blanc vs rose",
+    ("white_grapefruit_raw/raw", "beta_carotene_ug"): "pamplemousse blanc vs rose",
+    ("snow_peas_boiled/boiled", "beta_carotene_ug"): "pois mange-tout (gousse verte) vs pois secs",
+    ("snow_peas_boiled_canned/boiled_canned", "beta_carotene_ug"): "pois mange-tout (gousse verte) vs pois secs",
+    ("snow_peas_boiled_salted/boiled_salted", "beta_carotene_ug"): "pois mange-tout (gousse verte) vs pois secs",
+    ("split_peas_boiled_salted/boiled_salted", "vitamin_c_mg"): "pois cassés secs vs petits pois frais",
+    ("grey_sea_salt/unenriched", "magnesium_mg"): "sel gris non raffiné",
+    ("corn_bran/raw", "vitamin_b1_mg"): "son de maïs vs germe/son de blé (USDA)",
+    ("corn_bran/raw", "manganese_mg"): "son de maïs vs germe/son de blé (USDA)",
+    ("corn_bran/raw", "potassium_mg"): "son de maïs vs germe/son de blé (USDA)",
+    ("vanilla_sugar/default", "potassium_mg"): "sucre raffiné",
+    ("vanilla_aqueous_extract/extract_in_water", "manganese_mg"): "extrait aqueux vs gousse",
+    ("white_vinegar/liquid_distilled", "potassium_mg"): "vinaigre distillé vs vinaigres de fruit",
+}
+
 
 _FORM_AXES = ("cooking_state", "thermal_state", "form", "part", "fat_content")
 
@@ -158,6 +209,8 @@ def sibling_alerts(ings: dict) -> list[dict]:
             if len(vals) < 3:
                 continue
             for k, x, v in vals:
+                if (k, field) in SIBLING_EXCEPTIONS:
+                    continue
                 others = [y for kk, y, _ in vals if kk != k]
                 med = statistics.median(others)
                 if max(med, x) < _floor(field):
