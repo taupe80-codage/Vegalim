@@ -540,6 +540,15 @@ FODMAP_THRESHOLDS: dict[str, dict] = {
     "miso":            {"safe": 12,  "medium": 35,  "cats": ["F"]},
     "tahini":          {"safe": 20,  "medium": 45,  "cats": ["G"]},
     "ketchup":         {"safe": 0,   "medium": 13,  "cats": ["M"]},
+    # ── Légumes et fruits courants absents jusqu'au 2026-11-23 : une soupe à
+    #    175 g de courgette par bol ressortait « low ». Portions Monash.
+    "zucchini":        {"safe": 65,  "medium": 100, "cats": ["F"]},
+    "red_bell_pepper": {"safe": 43,  "medium": 75,  "cats": ["M"]},
+    "green_bean":      {"safe": 75,  "medium": 125, "cats": ["P"]},
+    "tomato":          {"safe": 65,  "medium": 165, "cats": ["M"]},
+    "cherry_tomato":   {"safe": 75,  "medium": 150, "cats": ["M"]},
+    "tomato_canned":   {"safe": 100, "medium": 200, "cats": ["M"]},
+    "strawberry":      {"safe": 65,  "medium": 150, "cats": ["M"]},
 }
 
 # ── Identifiants CIQUAL des recettes → clés FODMAP ci-dessus ─────────────────
@@ -553,6 +562,14 @@ FODMAP_THRESHOLDS: dict[str, dict] = {
 # Les sous-recettes (base_*) ne sont pas listées : leur composition est
 # dépliée au prorata (_fodmap_quantities).
 FODMAP_ID_ALIASES: dict[str, str] = {
+    # Légumes et fruits à portion limitée (seuils ajoutés le 2026-11-23)
+    "green_zucchini_squash_raw": "zucchini",
+    "red_bell_pepper_raw": "red_bell_pepper",
+    "french_bean_raw": "green_bean",
+    "tomato_raw_ripe": "tomato",
+    "cherry_tomato_raw": "cherry_tomato",
+    "tomato_crushed_canned": "tomato_canned",
+    "strawberry_raw": "strawberry",
     # Fruits secs (« raisin » de FODMAP_THRESHOLDS = raisin frais)
     "date_with_skin_dried": "dried_date", "grape_dried": "raisin_sec",
     # Alliacées
