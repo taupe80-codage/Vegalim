@@ -4,7 +4,7 @@
     "built_at": "2026-06-11T08:54:57.798384+00:00",
     "count": 86,
     "note_2026_09_14": "22 entrées MANUAL (commit c3562f6) migrées depuis nutrition_v2.json, où elles avaient été saisies directement : un rebuild les aurait perdues.",
-    "note_2026_11_23": "taxonomy / ingredient_type facultatifs : repris par build_n2_direct.py pour les fiches absentes de l'arbre (tteok, papaye verte), sinon un rebuild leur laissait une taxonomie vide."
+    "note_2026_11_23": "taxonomy / ingredient_type facultatifs, repris par build_n2_direct.py pour une fiche absente de l'arbre ; tteok et papaye verte ont depuis été ajoutés à l'arbre (ingredients_tree.json), ce qui permet aussi de relancer build_dict_v2.py sans les perdre."
   },
   "supplements": {
     "acai": {
@@ -1974,18 +1974,7 @@
         "vitamin_c_mg": 0,
         "vitamin_b1_mg": 0.03,
         "folate_ug": 3
-      },
-      "taxonomy": {
-        "cat1": "cereals_and_grains",
-        "cat1_fr": "cereals_and_grains",
-        "cat2": "rice",
-        "cat2_fr": "rice",
-        "cat2_type": "ombrelle",
-        "v32_id": "ing_manual_026",
-        "name_fr": "tteok (gâteau de riz coréen)",
-        "name_en": "tteok (Korean rice cake)"
-      },
-      "ingredient_type": "ombrelle"
+      }
     },
     "green_papaya": {
       "ig_id": "ing_manual_027",
@@ -2034,18 +2023,7 @@
         "vitamin_c_mg": 40,
         "vitamin_b1_mg": 0.02,
         "folate_ug": 30
-      },
-      "taxonomy": {
-        "cat1": "fruits",
-        "cat1_fr": "fruits",
-        "cat2": "papayas",
-        "cat2_fr": "papayas",
-        "cat2_type": "ombrelle",
-        "v32_id": "ing_manual_027",
-        "name_fr": "papaye verte (non mûre), crue",
-        "name_en": "green papaya, raw"
-      },
-      "ingredient_type": "ombrelle"
+      }
     }
   }
 }

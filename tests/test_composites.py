@@ -73,3 +73,14 @@ def test_fiches_manuelles_hors_arbre_gardent_leur_taxonomie():
     """Un rebuild laissait une taxonomie vide à tteok et à la papaye verte."""
     for key in ("tteok", "green_papaya"):
         assert N2[key]["taxonomy"].get("name_fr"), key
+
+
+def test_toute_fiche_manuelle_est_dans_l_arbre():
+    """Une fiche MANUAL absente de ingredients_tree.json disparaît du dictionnaire au
+    prochain build_dict_v2.py (tteok, papaye verte : constaté le 2026-11-23)."""
+    tree = json.loads((ROOT / "backend/data/ingredients/ingredients_tree.json").read_text(encoding="utf-8"))
+    tree_ids = {g["id"] for c in tree["categories"] for s in c["subcategories"] for g in s["ingredient_groups"]}
+    supp = json.loads((ROOT / "backend/data/nutrition/reference/nutrition_manual_supplements.json")
+                      .read_text(encoding="utf-8"))["supplements"]
+    missing = sorted(k for k, v in supp.items() if v.get("ig_id") not in tree_ids)
+    assert not missing, f"fiches MANUAL hors de l'arbre : {missing}"

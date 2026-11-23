@@ -73,8 +73,11 @@ Total variants final  : ~1 921
 > mélangés…) sont recalculés depuis leurs composants à cette étape
 > (`composites.py`, `_source: COMPOSITE`). Après une modification : étape 3 puis
 > `scripts/recipes/build_derived_base_registry.py` et
-> `scripts/recipes/rebuild_graphs.py`. Voir TODO.md : ne pas lancer l'étape 2
-> sans précaution (tteok, papaye verte).
+> `scripts/recipes/rebuild_graphs.py`.
+>
+> Une fiche MANUAL (nutrition_manual_supplements.json) doit aussi être déclarée
+> dans `ingredients_tree.json` (variante `source: MANUAL`), sinon l'étape 2 la
+> retire du dictionnaire (test : test_toute_fiche_manuelle_est_dans_l_arbre).
 
 ### ÉTAPE 2 — Construire le dictionnaire ingrédients v2
 

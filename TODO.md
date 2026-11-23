@@ -46,11 +46,9 @@ un : une entrée dans le JSON, puis `build_n2_direct.py --promote`,
 `scripts/recipes/rebuild_graphs.py` (tests/test_composites.py vérifie la
 synchro).
 
-**Piège restant : `build_dict_v2.py` supprime `tteok` et `green_papaya` du
-dictionnaire** (fiches MANUAL ajoutées à la main hors de l'arbre, commit
-68c5d14). Ne pas lancer `build_dict_v2.py` sans d'abord les rendre
-reconstructibles (les ajouter à l'arbre, ou faire lire au script les
-taxonomies de `nutrition_manual_supplements.json` comme build_n2_direct.py).
-En conséquence le dictionnaire garde `source: MANUAL` pour les composites
-(sans effet sur les calculs, qui lisent nutrition_v2).
+**Réglé le 2026-11-23** : `build_dict_v2.py` supprimait `tteok` et
+`green_papaya` (fiches MANUAL hors de l'arbre). Elles sont maintenant dans
+`ingredients_tree.json` (riz, fruits exotiques), un test exige que toute fiche
+MANUAL y figure, et la migration relit les propriétés culinaires au format
+actuel (elles étaient recalculées par catégorie à chaque rebuild).
 

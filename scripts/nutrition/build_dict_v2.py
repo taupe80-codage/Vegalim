@@ -429,6 +429,12 @@ LEGACY_DIET_KEYS: frozenset = frozenset({
 def _pack_old(old: dict) -> dict:
     if not old: return {}
     result, culinary = {}, {}
+    # Format actuel du dictionnaire : culinary = {properties, …}. Seul l'ancien
+    # format (culinary_properties…) était relu : les propriétés corrigées à la
+    # main étaient recalculées par catégorie à chaque rebuild (papaye verte
+    # « sweet », constaté le 2026-11-23).
+    if isinstance(old.get('culinary'), dict):
+        culinary.update(old['culinary'])
     for f in CULINARY_F:
         if f in old:
             if f == 'substitutions':         culinary['substitutions'] = old[f]
