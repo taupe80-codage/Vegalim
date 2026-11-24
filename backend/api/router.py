@@ -12,9 +12,10 @@ Organisation par domaine :
   /avis      → notes et commentaires sur les recettes
   /notifications → nouveautés affichées sous la cloche
   /prototype → route GET simple sans auth (démo)
+  /idees, /recette/{id}, /sitemap.xml, /robots.txt → pages HTML indexables
 """
 from fastapi import APIRouter
-from backend.api.routes import auth, profile, recipes, nutrition, planning, admin, ingredients, frigo, graph, contributions, reviews, notifications
+from backend.api.routes import auth, profile, recipes, nutrition, planning, admin, ingredients, frigo, graph, contributions, reviews, notifications, seo
 
 router = APIRouter()
 router.include_router(auth.router)
@@ -29,3 +30,4 @@ router.include_router(graph.router)
 router.include_router(contributions.router)
 router.include_router(reviews.router)
 router.include_router(notifications.router)
+router.include_router(seo.router)

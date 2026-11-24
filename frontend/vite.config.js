@@ -26,6 +26,9 @@ export default defineConfig(({ mode }) => {
         '/notifications': { target: apiUrl, changeOrigin: true },
         '/healthz':     { target: apiUrl, changeOrigin: true },
         '/stats':       { target: apiUrl, changeOrigin: true },
+        // pages indexables servies par le backend (backend/api/routes/seo.py)
+        '/idees':       { target: apiUrl, changeOrigin: true },
+        '/recette/':    { target: apiUrl, changeOrigin: true },
       },
     },
 

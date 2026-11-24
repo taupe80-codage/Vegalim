@@ -101,6 +101,9 @@ function AppInner() {
         <Link to="/faq" className="app-footer-link">FAQ</Link>
         <span aria-hidden="true">·</span>
         <Link to="/proposer" className="app-footer-link">Proposer une recette</Link>
+        <span aria-hidden="true">·</span>
+        {/* Pages indexables servies par le backend (hors routeur en dièse) */}
+        <a href="/idees" className="app-footer-link">Idées de recettes</a>
       </footer>
 
       {showAuth && <AuthModal initialToken={resetToken} onClose={() => { setShowAuth(false); setResetToken(''); }} />}

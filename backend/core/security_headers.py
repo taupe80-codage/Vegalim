@@ -47,7 +47,10 @@ _CSP_FRONTEND = (
 _CSP_API = "default-src 'none'; frame-ancestors 'none';"
 
 # Préfixes identifiant une route frontend
-_FRONTEND_PATHS = ("/ui", "/assets", "/static", "/favicon")
+_FRONTEND_PATHS = ("/ui", "/assets", "/static", "/favicon",
+                   # pages HTML indexables (backend/api/routes/seo.py) ;
+                   # « /recette/ » avec la barre : ne couvre pas l'API /recettes
+                   "/idees", "/recette/", "/images")
 
 
 def _is_frontend(path: str) -> bool:
