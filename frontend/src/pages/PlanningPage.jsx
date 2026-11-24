@@ -15,6 +15,7 @@ import { useToast } from '../ToastContext';
 import { createPortal } from 'react-dom';
 import { planning as planningApi, recipes as recipesApi } from '../api';
 import PriceEditInline from '../components/PriceEditInline';
+import HelpTip from '../components/HelpTip';
 import {
   FilterSection,
   HealthAccordion,
@@ -949,6 +950,11 @@ export default function PlanningPage() {
   const [diversity, setDiversity] = useState(() => {
     try { const v = localStorage.getItem('alim_plan_diversity'); return v !== null ? parseFloat(v) : 0.5; } catch { return 0.5; }
   });
+  // Anti-gaspillage (coché par défaut) : le planificateur favorise les recettes
+  // qui finissent les ingrédients entamés plus tôt dans la semaine
+  const [antiWaste, setAntiWaste] = useState(() => {
+    try { return localStorage.getItem('alim_plan_antiwaste') !== '0'; } catch { return true; }
+  });
   const [openSects, setOpenSects] = useState(new Set(['saison','regime']));
 
   // ── Repas actifs (persistants) ────────────────────────────────────────────
@@ -1022,6 +1028,10 @@ export default function PlanningPage() {
     try{localStorage.setItem('alim_plan_diversity', String(diversity));}catch{ /* localStorage indisponible */ }
   },[diversity]);
 
+  useEffect(()=>{
+    try{localStorage.setItem('alim_plan_antiwaste', antiWaste ? '1' : '0');}catch{ /* localStorage indisponible */ }
+  },[antiWaste]);
+
   // ── Helpers UI ────────────────────────────────────────────────────────────
   const toggleSect    = id => setOpenSects(p=>{const n=new Set(p);n.has(id)?n.delete(id):n.add(id);return n;});
   const toggleChecked      = useCallback(id=>setChecked(p=>{const n=new Set(p);n.has(id)?n.delete(id):n.add(id);return n;}),[]);
@@ -1062,7 +1072,7 @@ export default function PlanningPage() {
       // Une requête par combinaison distincte (type de plat × filtres du
       // créneau) : les créneaux aux mêmes filtres partagent la même semaine.
       const slotKey = (slot, dt, m) =>
-        JSON.stringify({ ...slotApiParams(fs, slot ?? MEAL_DEFAULTS[m], month), diversity, dish_type: dt });
+        JSON.stringify({ ...slotApiParams(fs, slot ?? MEAL_DEFAULTS[m], month), diversity, anti_waste: antiWaste, dish_type: dt });
       const neededKeys = new Set();
       for(const dk of DAYS_KEY)
         for(const m of active){
@@ -1354,6 +1364,32 @@ export default function PlanningPage() {
                 ? 'Bonne surprise à chaque génération.'
                 : 'Sélection très aléatoire parmi les candidats.'}
             </p>
+          </div>
+
+          {/* ── Anti-gaspillage ── */}
+          <div className="plan-antiwaste">
+            <label className="plan-antiwaste-label">
+              <input type="checkbox" checked={antiWaste}
+                onChange={e => setAntiWaste(e.target.checked)} />
+              <span>
+                <strong>♻️ Anti-gaspillage</strong>
+                <span className="plan-diversity-hint">
+                  Finir dans la semaine ce qui est entamé : la crème, le lait de coco, le chou, la botte d'herbes…
+                </span>
+              </span>
+            </label>
+            {/* hors du <label> : un clic sur (?) ne coche pas la case */}
+            <HelpTip label="Anti-gaspillage">
+              Case cochée, le planning choisit de préférence des recettes qui réutilisent
+              des ingrédients déjà prévus plus tôt dans la semaine : le reste de crème ou
+              de lait de coco, le demi-chou, la botte d'herbes fraîches, le tofu entamé.
+              Vous achetez moins de produits différents et jetez moins.
+              <br /><br />
+              Seuls comptent les produits qui s'abîment : ce qui se conserve (huile, épices,
+              farines, légumes secs, pâtes, riz) n'entre pas en jeu. La saison et la qualité
+              des recettes restent prioritaires. Décochez pour des menus sans cette préférence,
+              puis régénérez le planning.
+            </HelpTip>
           </div>
 
           {/* ── Bouton générer ── */}

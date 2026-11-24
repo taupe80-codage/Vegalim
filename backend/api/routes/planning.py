@@ -124,6 +124,7 @@ def mealplan(
     difficulty:       Optional[str] = None,
     exclude_ids:      Optional[str] = None,
     diversity:        float         = Query(default=0.5, ge=0.0, le=1.0),
+    anti_waste:       bool          = Query(default=True, description="Réutiliser les ingrédients entamés dans la semaine"),
     extra:            dict          = Depends(_plan_filters),
     user: dict | None = Depends(get_optional_user),
 ):
@@ -168,6 +169,7 @@ def mealplan(
         difficulty=difficulty or None,
         exclude_ids=exclude_list or None,
         diversity=diversity,
+        anti_waste=anti_waste,
         filters=extra or None,
     )
 
@@ -335,6 +337,22 @@ def seasonal(month: int = Query(..., ge=1, le=12)):
 
 class DayNutritionRequest(BaseModel):
     plan: dict = Field(..., description="Plan hebdo {lundi:{lunch:{recipes:[...]}}}")
+
+
+class WeekBalanceRequest(BaseModel):
+    plan: dict = Field(..., description="Plan hebdo {lundi:{lunch:{skip, recipes:[{id}]}}}")
+    diet: Optional[str] = Field(default=None, description="vegan : recettes proposées 100 % végétales")
+
+
+@router.post("/week_balance")
+def week_balance(payload: WeekBalanceRequest, user: dict | None = Depends(get_optional_user)):
+    """
+    Bilan nutritionnel de la semaine planifiée : objectifs rapportés aux repas
+    réellement planifiés, manques (avec conseils et recettes qui les comblent)
+    et excès (sel, sucres, graisses saturées). **Public.**
+    """
+    from backend.services.week_balance import balance
+    return balance(payload.plan, diet=payload.diet)
 
 @router.post("/daily_nutrition")
 def daily_nutrition(payload: DayNutritionRequest, user: dict | None = Depends(get_optional_user)):

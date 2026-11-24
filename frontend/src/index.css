@@ -3800,6 +3800,50 @@ html[data-theme="dark"] .pill--active-diet {
   min-height: 30px;
 }
 
+/* ── Anti-gaspillage (planning) ── */
+.plan-antiwaste {
+  background: var(--sur);
+  border: 1px solid var(--brd);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.plan-antiwaste-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--fg);
+}
+.plan-antiwaste-label input { margin-top: 3px; accent-color: var(--grn, #2f6b45); }
+.plan-antiwaste-label strong { display: block; font-size: 13px; }
+.plan-antiwaste .plan-diversity-hint { min-height: 0; display: block; }
+
+/* ── Bouton (?) d'aide ── */
+.help-tip { position: relative; display: inline-flex; flex-shrink: 0; }
+.help-tip-btn {
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 1px solid var(--brd); background: var(--bg);
+  color: var(--txt2, var(--fg)); font-size: 12px; font-weight: 700;
+  line-height: 1; cursor: pointer; padding: 0;
+}
+.help-tip-btn:hover, .help-tip-btn[aria-expanded="true"] { border-color: var(--grn, #2f6b45); color: var(--grn, #2f6b45); }
+.help-tip-btn:focus-visible { outline: 2px solid var(--grn, #2f6b45); outline-offset: 2px; }
+.help-tip-bubble {
+  /* rendue dans <body> (portail), placée par HelpTip.jsx */
+  position: fixed; z-index: 1000; display: block;
+  width: min(300px, calc(100vw - 32px));
+  background: var(--sur2, var(--sur)); color: var(--fg);
+  border: 1px solid var(--brd); border-radius: 10px;
+  padding: 10px 12px; font-size: 12px; line-height: 1.5;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+}
+
 .plan-reset-btn {
   width: 100%;
   margin-top: 6px;
@@ -5460,3 +5504,35 @@ html[data-theme="dark"] .rv-stars-fg { color: #f0b429; }
 .nt-time { font-size: 11.5px; color: var(--mut); }
 .nt-all { display: block; text-align: center; padding: 10px; font-size: 13px; color: var(--grn); }
 .nt-page { background: var(--sur); border: 1px solid var(--brd); border-radius: var(--rad); overflow: hidden; max-width: 720px; }
+
+/* ── Nutrition : bilan de la semaine (WeekNutritionView) ── */
+.week-head { margin-bottom: 20px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.week-kicker { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mut); margin-bottom: 4px; }
+.week-sub { font-size: 13px; color: var(--txt2, var(--mut)); margin: 6px 0 0; line-height: 1.5; }
+.week-btn {
+  padding: 8px 14px; border-radius: 8px; background: transparent; border: 1px solid var(--brd);
+  color: var(--txt2, var(--fg)); cursor: pointer; font-size: 13px; font-family: inherit;
+}
+.week-btn--primary { background: var(--grn); border-color: var(--grn); color: var(--bg); font-weight: 500; }
+.week-btn--small { padding: 4px 10px; font-size: 12px; white-space: nowrap; }
+.week-btn:disabled { opacity: 0.6; cursor: default; }
+.week-section { margin-bottom: 24px; }
+.week-section h4 { font-size: 15px; font-weight: 500; margin: 0 0 10px; }
+.week-ok { font-size: 13px; color: var(--txt2, var(--mut)); margin: 0; }
+.week-gap {
+  border: 1px solid var(--brd); border-left: 4px solid #d29922; border-radius: 10px;
+  padding: 10px 12px; margin-bottom: 10px; background: var(--sur);
+}
+.week-gap--high { border-left-color: #f85149; }
+.week-gap--excess { border-left-color: #d29922; }
+.week-gap-head { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 14px; }
+.week-gap-pct { font-size: 12px; color: var(--mut); }
+.week-tip { font-size: 13px; color: var(--txt2, var(--mut)); margin: 6px 0 0; line-height: 1.5; }
+.week-reco { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-direction: column; gap: 6px; }
+.week-reco li { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 13px; }
+.week-reco-title {
+  flex: 1; min-width: 160px; text-align: left; background: none; border: none; padding: 0;
+  color: var(--grn); cursor: pointer; font: inherit; text-decoration: underline; text-underline-offset: 2px;
+}
+.week-reco-amount { font-size: 12px; color: var(--mut); }
+.week-note { font-size: 12px; color: var(--mut); margin-top: 12px; line-height: 1.5; }

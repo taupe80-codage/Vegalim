@@ -153,6 +153,7 @@ export const planning = {
     return get(`/planning/mealplan${qs ? '?' + qs : ''}`);
   },
   shoppingList:            (payload) => post('/planning/shopping_list', payload),
+  weekBalance:             (payload) => post('/planning/week_balance', payload),
   shoppingListFromRecipes: (payload) => post('/planning/shopping_list_from_recipes', payload),
   updatePrice: (ingredient_key, package_label, new_price) =>
     put(`/planning/prices/${encodeURIComponent(ingredient_key)}`, { package_label, new_price }),

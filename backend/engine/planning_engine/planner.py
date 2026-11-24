@@ -28,12 +28,57 @@ def _season_bonus(recipe: dict, month: int | None) -> float:
         return 0.0
 
 
-def _reuse_score(recipe: dict, planned_ings: Counter) -> float:
-    """Bonus si la recette partage des ingrédients avec ceux déjà planifiés."""
-    ings = {(i.get("ingredient_id", str(i)) if isinstance(i, dict) else str(i)).lower()
-            for i in recipe.get("ingredients", [])}
-    shared = sum(planned_ings[i] for i in ings if i in planned_ings)
-    return min(2.0, shared * 0.3)
+# ── Anti-gaspillage ──────────────────────────────────────────────────────────
+# Revu le 2026-11-24 : _reuse_score lisait recipe["ingredients"], champ absent
+# des recettes (elles ont « composition ») — le bonus valait toujours 0 et la
+# réutilisation des ingrédients n'avait jamais agi. Il porte désormais sur ce
+# qui se gâche : les ingrédients achetés pour la recette (crème, lait de coco,
+# feta, chou, tofu…), puis les produits courants et les herbes fraîches (une
+# botte entamée). Sel, huile, épices sèches : sans objet.
+REUSE_WEIGHT = {"special": 1.0, "common": 0.5, "fresh_herb": 0.6}
+REUSE_PER_SHARE = 0.8      # points par ingrédient déjà entamé dans la semaine
+REUSE_CAP = 3.0            # plafond : la saison et la qualité restent décisives
+# Mesuré sur 20 semaines (plats, novembre) : 12,5 → 18,6 produits frais réutilisés,
+# 38,1 → 34,9 produits frais différents à acheter, part de saison 0,96 → 0,93.
+# Produits secs ou de longue conservation : un reste ne se perd pas
+_KEEPS = ("_dried", "dried_", "_dry", "spice", "powder", "flour", "sugar", "_seed", "pasta",
+          "rice", "noodle", "vermicelli", "couscous", "bulgur", "quinoa", "oat", "vinegar",
+          "soy_sauce", "syrup", "honey", "nuts", "almond", "cashew", "peanut", "walnut",
+          "hazelnut", "pistachio", "oil", "salt", "stock", "canned_in", "jam", "chocolate", "cocoa")
+
+
+def _reuse_kind(item: dict) -> str | None:
+    """Catégorie anti-gaspillage d'une ligne de composition (None : sans objet)."""
+    from backend.services.fridge_scoring import tier_of_id, SPECIAL, COMMON
+    iid = str(item.get("ingredient") or "").lower()
+    if not iid or iid.startswith("base_") or (item.get("meta") or {}).get("role") == "serving_suggestion":
+        return None
+    if "fresh_herb" in iid or ("fresh" in iid and iid.endswith(("_herb", "_leaf"))):
+        return "fresh_herb"
+    if any(k in iid for k in _KEEPS):
+        return None
+    # Nature de l'ingrédient seule (pas le rôle) : un lait de coco employé comme
+    # matière grasse laisse quand même une demi-boîte entamée.
+    tier = tier_of_id(iid)
+    return "special" if tier == SPECIAL else "common" if tier == COMMON else None
+
+
+def _perishables(recipe: dict) -> dict[str, str]:
+    """{ingrédient: catégorie} des ingrédients d'une recette qui se gâchent."""
+    out = {}
+    for item in recipe.get("composition") or []:
+        if isinstance(item, dict):
+            kind = _reuse_kind(item)
+            if kind:
+                out[str(item["ingredient"]).lower()] = kind
+    return out
+
+
+def _reuse_score(recipe: dict, planned_ings: Counter, perishables: dict | None = None) -> float:
+    """Bonus si la recette réutilise des ingrédients déjà entamés dans la semaine."""
+    items = perishables if perishables is not None else _perishables(recipe)
+    shared = sum(REUSE_WEIGHT[kind] for iid, kind in items.items() if planned_ings.get(iid))
+    return min(REUSE_CAP, shared * REUSE_PER_SHARE)
 
 
 def _practical_score(recipe: dict, day_i: int, protein: float | None) -> float:
@@ -88,6 +133,9 @@ def generate_plan(
     #             1.0 = tirage quasi-aléatoire parmi le top pool
     diversity:       float        = 0.5,
     pool_size:       int          = 12,   # nb de candidats dans lequel piocher
+    # Anti-gaspillage : favorise les recettes qui finissent les ingrédients
+    # entamés plus tôt dans la semaine (case du planning, cochée par défaut)
+    anti_waste:      bool         = True,
 ) -> dict:
     """
     Génère un plan de repas hebdomadaire (7 jours × 2 repas).
@@ -195,6 +243,7 @@ def generate_plan(
     plan          = {}
     used_ids      = set()
     planned_ings  = Counter()
+    perish_of     = {r.get("id"): _perishables(r) for r in recipes} if anti_waste else {}
     from backend.core.data_io import load_nutrition_graph
     _ng = load_nutrition_graph() or {}
     _ng = _ng.get("recipes", _ng) if isinstance(_ng, dict) else {}
@@ -219,7 +268,8 @@ def generate_plan(
             def _score(r):
                 s = float(r.get("scoring", {}).get("iconic", {}).get("score") or 50) / 100.0 * 5.0
                 s += _season_bonus(r, month)
-                s += _reuse_score(r, planned_ings)
+                if anti_waste:
+                    s += _reuse_score(r, planned_ings, perish_of.get(r.get("id")))
                 if meal == "lunch" and meal_type(r) in ("soup", "salad"):
                     s += 1.0
                 s += _practical_score(r, day_i, protein_of.get(r.get("id")))
@@ -262,12 +312,9 @@ def generate_plan(
             }
             used_ids.add(chosen.get("id"))
 
-            # Mettre à jour le compteur d'ingrédients (composition CDC v4 ou legacy)
-            for ing in (chosen.get("composition") or chosen.get("ingredients", [])):
-                key = (ing.get("ingredient") or ing.get("ingredient_id") or str(ing)
-                       if isinstance(ing, dict) else str(ing)).lower()
-                if key:
-                    planned_ings[key] += 1
+            # Ingrédients entamés cette semaine (ceux qui se gâchent seulement)
+            for key in perish_of.get(chosen.get("id")) or _perishables(chosen):
+                planned_ings[key] += 1
 
     plan["meta"] = {
         "generated_at": datetime.now(timezone.utc).isoformat(),

@@ -12,7 +12,9 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import { useToast } from '../ToastContext';
-import { nutrition as nutritionApi, recipes as recipesApi } from '../api';
+import { nutrition as nutritionApi, recipes as recipesApi, planning as planningApi } from '../api';
+import AddToPlanModal from '../components/AddToPlanModal';
+import { useProfileDiet } from '../useProfileDiet';
 import { navigate } from '../Router';
 
 const PLAN_KEY  = 'alim_plan_weekly';
@@ -1125,171 +1127,166 @@ function RecipeNutritionView() {
   );
 }
 
-// ── Vue semaine — AJR agrégé depuis le planning localStorage ──────────────────
+// ── Vue semaine — bilan du planning (POST /planning/week_balance) ────────────
+// Revu le 2026-11-25 : l'ancienne vue comparait la semaine à AJR × 7 jours,
+// si bien qu'un planning sans petits-déjeuners paraissait en manque de tout.
+// Les objectifs portent désormais sur les repas réellement planifiés, avec les
+// manques, les excès et des recettes qui comblent chaque manque.
+
+const MEAL_FR = { breakfast: ['petit-déjeuner', 'petits-déjeuners'], lunch: ['déjeuner', 'déjeuners'], dinner: ['dîner', 'dîners'] };
+
+function fmtVal(v) {
+  return v < 10 ? (Math.round(v * 10) / 10).toLocaleString('fr-FR') : Math.round(v).toLocaleString('fr-FR');
+}
+
+function WeekBar({ n }) {
+  const pct  = n.pct;
+  const fill = Math.min(100, pct);
+  const color =
+    n.kind === 'info'  ? 'var(--mut)' :
+    n.kind === 'limit' ? (pct > 110 ? '#d29922' : '#3fb950') :
+    pct >= 100 ? '#3fb950' : pct >= 70 ? '#58a6ff' : pct >= 50 ? '#d29922' : '#f85149';
+  const meta = NUTRIENT_META[n.key];
+  return (
+    <div className="ajr-bar-row">
+      <div className="ajr-bar-header">
+        <span className="ajr-bar-icon">{meta?.icon || '●'}</span>
+        <span className="ajr-bar-name">{n.label}{n.kind === 'limit' ? ' (à limiter)' : ''}</span>
+        <span className="ajr-bar-value">{fmtVal(n.total)} / {fmtVal(n.target)} {n.unit}</span>
+        <span className="ajr-bar-pct" style={{ color }}>{pct}%</span>
+      </div>
+      <div className="ajr-bar-track" role="progressbar" aria-valuemin={0} aria-valuemax={100}
+        aria-valuenow={fill} aria-label={`${n.label} : ${pct} % de l'objectif`}>
+        <div className="ajr-bar-fill" style={{ width: `${fill}%`, background: color }} />
+      </div>
+    </div>
+  );
+}
 
 function WeekNutritionView() {
-  const [weekData, setWeekData] = useState(null);
-  const [loading, setLoading]   = useState(false);
+  const profileDiet = useProfileDiet();
+  const [data, setData]       = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError]     = useState(null);
+  const [toPlan, setToPlan]   = useState(null);   // recette à ajouter au planning
 
   const loadWeek = async () => {
-    setLoading(true);
+    setLoading(true); setError(null);
     try {
-      const raw  = localStorage.getItem(PLAN_KEY);
-      const plan = raw ? JSON.parse(raw) : null;
-      if (!plan) { setWeekData({ empty: true }); return; }
-
-      // Collect recipe IDs + occurrences from plan.
-      // Plan format (PlanningPage): {lundi: {lunch: {skip, recipes:[{id,title_fr,...}]}, dinner:{...}}, ...}
-      const occurrences = {}; // rid → count
-      const titles      = {}; // rid → title_fr
-      for (const dk of DAYS_KEY) {
-        const dayData = plan[dk];
-        if (!dayData || typeof dayData !== 'object') continue;
-        for (const m of MEAL_KEYS) {
-          const slot = dayData[m];
-          if (!slot || slot.skip) continue;
-          for (const r of (slot.recipes || [])) {
-            if (!r?.id) continue;
-            const rid = String(r.id);
-            occurrences[rid] = (occurrences[rid] || 0) + 1;
-            if (!titles[rid]) titles[rid] = r.title_fr || r.title || rid;
-          }
-        }
-      }
-
-      const uniqueIds = Object.keys(occurrences);
-      if (uniqueIds.length === 0) { setWeekData({ empty: true }); return; }
-
-      // Fetch full recipe data (with nutrition) for each unique ID.
-      // recipesApi.byId is public — no auth needed.
-      const fetched = await Promise.all(
-        uniqueIds.map(id => recipesApi.byId(id).catch(() => null))
-      );
-
-      // Aggregate nutrition (weighted by occurrences for batch cooking).
-      const agg   = {};
-      let   count = 0;
-      const recipes = [];
-
-      for (let i = 0; i < uniqueIds.length; i++) {
-        const rid    = uniqueIds[i];
-        const recipe = fetched[i];
-        const cnt    = occurrences[rid] || 1;
-
-        recipes.push({ id: rid, titles: recipe?.titles, title_fr: titles[rid] });
-
-        if (!recipe) continue;
-
-        const n    = recipe.nutrition || recipe._nutrition || {};
-        const norm = { ...n };
-        if (norm.proteins !== undefined && norm.protein === undefined)           norm.protein  = norm.proteins;
-        if (norm.kcal_per_serving !== undefined && norm.calories === undefined)  norm.calories = norm.kcal_per_serving;
-
-        let hasData = false;
-        for (const k of Object.keys(NUTRIENT_META)) {
-          if (norm[k] != null && norm[k] > 0) {
-            agg[k] = (agg[k] || 0) + norm[k] * cnt;
-            hasData = true;
-          }
-        }
-        if (hasData) count++;
-      }
-
-      setWeekData({ recipes, agg, count, total: uniqueIds.length });
-    } catch { setWeekData({ empty: true }); }
-    finally { setLoading(false); }
+      let plan = null;
+      try { const raw = localStorage.getItem(PLAN_KEY); plan = raw ? JSON.parse(raw) : null; } catch { plan = null; }
+      if (!plan) { setData({ empty: true }); return; }
+      const res = await planningApi.weekBalance({ plan, diet: profileDiet === 'vegan' ? 'vegan' : null });
+      setData(res && res.n_meals ? res : { empty: true });
+    } catch (e) {
+      setError(e.message || 'Bilan indisponible');
+    } finally { setLoading(false); }
   };
 
-  useEffect(() => { loadWeek(); }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { loadWeek(); }, [profileDiet]);
 
-  if (loading) return (
-    <div className="nutr-loading"><div className="nutr-loading-ring" /><p>Chargement du planning…</p></div>
+  if (loading && !data) return (
+    <div className="nutr-loading"><div className="nutr-loading-ring" /><p>Calcul du bilan de la semaine…</p></div>
   );
-
-  if (!weekData || weekData.empty) return (
+  if (error) return <div className="state-msg">{error}</div>;
+  if (!data || data.empty) return (
     <div className="nutr-empty" style={{ marginTop: 40 }}>
       <div className="nutr-empty-icon">▦</div>
       <h3>Aucun planning trouvé</h3>
-      <p>Créez un planning hebdomadaire pour voir l'analyse nutritionnelle de la semaine.</p>
-      <button onClick={() => navigate('/planning')} style={{
-        marginTop: 12, padding: '10px 20px', borderRadius: 8, background: 'var(--grn)',
-        color: 'var(--bg)', border: 'none', cursor: 'pointer', fontSize: 14, fontWeight: 500,
-      }}>
+      <p>Créez un planning hebdomadaire pour voir le bilan nutritionnel de la semaine.</p>
+      <button onClick={() => navigate('/planning')} className="week-btn week-btn--primary" style={{ marginTop: 12 }}>
         Créer un planning →
       </button>
     </div>
   );
 
-  const { recipes, agg, count, total } = weekData;
-  const weekBars = Object.entries(NUTRIENT_META)
-    .filter(([k]) => agg[k] != null && agg[k] > 0)
-    .map(([k, meta]) => ({
-      key: k,
-      value: Math.round(agg[k] * 10) / 10,
-      ajr: meta.ajr * 7,  // AJR × 7 jours
-      color: meta.color,
-      ratio: agg[k] / (meta.ajr * 7),
-    }))
-    .sort((a, b) => a.ratio - b.ratio);
+  const mealsTxt = Object.entries(data.meals).filter(([, c]) => c > 0)
+    .map(([m, c]) => `${c} ${MEAL_FR[m][c > 1 ? 1 : 0]}`).join(', ');
+  const reach  = data.nutrients.filter(n => n.kind === 'reach').sort((a, b) => a.pct - b.pct);
+  const others = data.nutrients.filter(n => n.kind !== 'reach');
 
   return (
-    <div>
-      {/* Summary header */}
-      <div className="frigo-panel" style={{ marginBottom: 20, display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
+    <div className="week-balance">
+      <div className="frigo-panel week-head">
         <div style={{ flex: 1 }}>
-          <div style={{ fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--mut)', marginBottom: 4 }}>
-            SEMAINE EN COURS
-          </div>
-          <h3 style={{ margin: 0, fontSize: 18, fontWeight: 500 }}>Bilan nutritionnel hebdomadaire</h3>
-          <div style={{ fontSize: 13, color: 'var(--txt2)', marginTop: 6 }}>
-            {total} recette{total > 1 ? 's' : ''} dans le planning
-            {count < total && ` · ${count} avec données nutritionnelles`}
-          </div>
+          <div className="week-kicker">SEMAINE PLANIFIÉE</div>
+          <h3 style={{ margin: 0, fontSize: 18, fontWeight: 500 }}>Bilan nutritionnel de la semaine</h3>
+          <p className="week-sub">
+            {data.n_meals} repas planifiés ({mealsTxt}). Les objectifs portent sur ces repas seulement :
+            un petit-déjeuner compte pour 25 % des besoins du jour, un déjeuner ou un dîner pour 37,5 %.
+          </p>
         </div>
-        <div style={{ display: 'flex', gap: 8 }}>
-          <button onClick={loadWeek} style={{ padding: '8px 14px', borderRadius: 8, background: 'transparent', border: '1px solid var(--brd)', color: 'var(--txt2)', cursor: 'pointer', fontSize: 13 }}>
-            ↺ Actualiser
-          </button>
-          <button onClick={() => navigate('/planning')} style={{ padding: '8px 14px', borderRadius: 8, background: 'var(--grn)', border: 'none', color: 'var(--bg)', cursor: 'pointer', fontSize: 13, fontWeight: 500 }}>
-            Voir le planning →
-          </button>
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+          <button onClick={loadWeek} className="week-btn" disabled={loading}>↺ Actualiser</button>
+          <button onClick={() => navigate('/planning')} className="week-btn week-btn--primary">Voir le planning →</button>
         </div>
       </div>
 
-      {/* Recipes list */}
-      <div style={{ marginBottom: 20 }}>
-        <h4 style={{ fontSize: 14, fontWeight: 500, marginBottom: 10 }}>Recettes analysées</h4>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-          {recipes.map(r => (
-            <span key={r.id} onClick={() => navigate(`/recette/${r.id}`)} style={{
-              padding: '5px 12px', borderRadius: 999, fontSize: 12,
-              background: 'var(--sur2)', border: '1px solid var(--brd)',
-              color: 'var(--txt2)', cursor: 'pointer',
-            }}>
-              {r.titles?.fr || r.title_fr || r.id}
-            </span>
+      <section className="week-section">
+        <h4>À compléter</h4>
+        {data.gaps.length === 0 ? (
+          <p className="week-ok">Rien ne manque nettement cette semaine : chaque nutriment suivi atteint au moins 70 % de son objectif.</p>
+        ) : data.gaps.map(g => (
+          <div key={g.key} className={`week-gap week-gap--${g.severity}`}>
+            <div className="week-gap-head">
+              <strong>{NUTRIENT_META[g.key]?.icon} {g.label}</strong>
+              <span className="week-gap-pct">{g.pct} % de l'objectif · il manque {fmtVal(g.missing)} {g.unit}</span>
+            </div>
+            <p className="week-tip">{g.tip}</p>
+            {g.recipes?.length > 0 && (
+              <ul className="week-reco">
+                {g.recipes.map(r => (
+                  <li key={r.id}>
+                    <button type="button" className="week-reco-title" onClick={() => navigate(`/recette/${r.id}`)}>
+                      {r.title_fr}
+                    </button>
+                    <span className="week-reco-amount">{fmtVal(r.amount)} {g.unit}/portion</span>
+                    <button type="button" className="week-btn week-btn--small"
+                      onClick={() => setToPlan(r)} aria-label={`Ajouter ${r.title_fr} au planning`}>
+                      + Planning
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </section>
+
+      {data.excess.length > 0 && (
+        <section className="week-section">
+          <h4>À modérer</h4>
+          {data.excess.map(e => (
+            <div key={e.key} className="week-gap week-gap--excess">
+              <div className="week-gap-head">
+                <strong>{NUTRIENT_META[e.key]?.icon} {e.label}</strong>
+                <span className="week-gap-pct">{e.pct} % de la limite</span>
+              </div>
+              <p className="week-tip">{e.tip}</p>
+            </div>
           ))}
-        </div>
-      </div>
+        </section>
+      )}
 
-      {/* Weekly AJR bars */}
-      {weekBars.length > 0 ? (
-        <div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 14 }}>
-            <h4 style={{ margin: 0, fontSize: 15, fontWeight: 500 }}>Apports cumulés sur 7 jours</h4>
-            <span style={{ fontSize: 11, color: 'var(--mut)' }}>vs AJR × 7 jours</span>
-          </div>
-          <div className="nutr-bars-grid">
-            {weekBars.map(({ key, value, ajr, color }) => (
-              <AJRBar key={key} nutrient={key} value={value} ajr={ajr} color={color} />
-            ))}
-          </div>
+      <section className="week-section">
+        <h4>Couverture des objectifs</h4>
+        <div className="nutr-bars-grid">
+          {reach.map(n => <WeekBar key={n.key} n={n} />)}
         </div>
-      ) : (
-        <div className="state-msg">
-          Aucune donnée nutritionnelle trouvée pour les recettes du planning.<br />
-          <span style={{ fontSize: 12, color: 'var(--mut)' }}>Essayez de consulter les fiches recettes pour charger leurs données.</span>
+        <h4 style={{ marginTop: 18 }}>Énergie et nutriments à limiter</h4>
+        <div className="nutr-bars-grid">
+          {others.map(n => <WeekBar key={n.key} n={n} />)}
         </div>
+        <p className="week-note">
+          Repères pour un adulte (2 000 kcal par jour, valeurs de référence UE et ANSES). Les calories sont indicatives :
+          les besoins varient selon l'âge, le sexe et l'activité.
+          {data.recipes_without_data?.length > 0 && ` ${data.recipes_without_data.length} recette(s) sans données nutritionnelles ne sont pas comptées.`}
+        </p>
+      </section>
+
+      {toPlan && (
+        <AddToPlanModal recipe={toPlan} onClose={() => { setToPlan(null); loadWeek(); }} />
       )}
     </div>
   );
