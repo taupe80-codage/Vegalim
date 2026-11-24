@@ -2,7 +2,7 @@
   "schema_version": "7.2",
   "schema_family": "nutrition_v2",
   "built_from": "raw_sources_direct",
-  "built_at": "2026-11-23T23:41:55.827780+00:00",
+  "built_at": "2026-11-24T07:04:12.416820+00:00",
   "pipeline": "build_n2_direct.py",
   "raw_sources": {
     "CIQUAL": {
@@ -3929,14 +3929,17 @@
           "axes_fr": {
             "forme": "liquide"
           },
+          "calories_kcal": 233.0,
           "protein_g": 0.0,
           "carbs_g": 0.0,
           "fat_g": 0.0,
           "fiber_g": 0.0,
           "sugar_g": 0.0,
           "starch_g": 0.0,
+          "alcohol_g": 32.9,
           "polyols_g": 0.0,
           "organic_acids_g": 0.0,
+          "water_g": 66.4,
           "fa_saturated_g": 0.0,
           "salt_g": 0.0,
           "sodium_mg": 0.0,
@@ -7047,7 +7050,6 @@
             "salt_g",
             "selenium_ug",
             "sodium_mg",
-            "sugar_g",
             "vitamin_b12_ug",
             "vitamin_b1_mg",
             "vitamin_b2_mg",
@@ -7089,7 +7091,7 @@
           "salt_g": 3.1186,
           "selenium_ug": 0.6467,
           "sodium_mg": 1227.7778,
-          "sugar_g": 24.8544,
+          "sugar_g": 28.969,
           "vitamin_b12_ug": 0.0,
           "vitamin_b1_mg": 0.0141,
           "vitamin_b2_mg": 0.1402,
@@ -155910,7 +155912,8 @@
           "protein_g": 1.3,
           "carbs_g": 68.9,
           "fat_g": 0.1,
-          "fiber_g": 2.7
+          "fiber_g": 2.7,
+          "sugar_g": 66.0
         }
       }
     },
@@ -156314,7 +156317,8 @@
           "protein_g": 1.5,
           "carbs_g": 92.0,
           "fat_g": 0.3,
-          "fiber_g": 0.0
+          "fiber_g": 0.0,
+          "sugar_g": 89.2
         }
       }
     },
@@ -156437,7 +156441,8 @@
           "protein_g": 12.8,
           "carbs_g": 34.0,
           "fat_g": 35.0,
-          "fiber_g": 10.9
+          "fiber_g": 10.9,
+          "sugar_g": 1.0
         }
       }
     },

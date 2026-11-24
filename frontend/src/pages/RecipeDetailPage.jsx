@@ -11,7 +11,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { useRouter, navigate, Link } from '../Router';
 import { recipes as recipesApi, profile as profileApi } from '../api';
 import { useAuth } from '../AuthContext';
-import { useProfileDiet, defaultDietFilter } from '../useProfileDiet';
+import { useProfileDiet, useProfileGoal, defaultDietFilter } from '../useProfileDiet';
 import { recordViewOnce } from '../favoritesSync';
 import translations from '../translations.json';
 import physData from '../ingredientPhysical.json';
@@ -107,6 +107,41 @@ function normalizeNutrition(raw) {
   const n = { ...raw };
   if (n.proteins != null && n.protein == null) n.protein = n.proteins;
   return n;
+}
+
+// ── Glycémie : ingrédients à surveiller (objectif « diabète » du profil) ─────
+// Ingrédients non adaptés au diabète qui apportent, par portion, au moins 10 g
+// de glucides assimilables ou 5 g de sucres (backend/engine/diabetes.py).
+function DiabetesWatch({ items }) {
+  return (
+    <section className="rn-panel dw-panel" aria-labelledby="dw-title">
+      <div className="rn-panel-header">
+        <h3 className="rn-panel-title" id="dw-title">Glycémie : ingrédients à surveiller</h3>
+        <span className="rn-panel-sub">par portion</span>
+      </div>
+      {items.length === 0 ? (
+        <p className="dw-ok">Aucun ingrédient riche en sucres ou en glucides rapides dans cette recette.</p>
+      ) : (
+        <>
+          <ul className="dw-list">
+            {items.map(it => (
+              <li key={it.ingredient}>
+                <span className="dw-name">{it.name}</span>
+                <span className="dw-qty">
+                  {it.grams} g · {String(it.carbs_g).replace('.', ',')} g de glucides
+                  {it.sugar_g >= 1 && <> dont {String(it.sugar_g).replace('.', ',')} g de sucres</>}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p className="dw-note">
+            Pistes : réduire la quantité, choisir une version complète (riz, pâtes, farine),
+            accompagner de légumes et de légumineuses. Un avis médical reste la référence.
+          </p>
+        </>
+      )}
+    </section>
+  );
 }
 
 // ── Panneau nutrition complet ─────────────────────────────────────────────────
@@ -403,6 +438,7 @@ export default function RecipeDetailPage({ onAuthClick }) {
   // Version vegan affichée, ou profil vegan : des suggestions vegan (sinon quiche au
   // chèvre, gougères…), comme les filtres de l'accueil, du planning et du frigo
   const profileDiet = defaultDietFilter(useProfileDiet());
+  const profileGoal = useProfileGoal();
   const similarDiet = (showVariant && variant?.recipe) || profileDiet === 'vegan' ? 'vegan' : '';
   useEffect(() => {
     if (!recipe) return;
@@ -929,6 +965,11 @@ export default function RecipeDetailPage({ onAuthClick }) {
 
       {/* ── Nutrition complète (pleine largeur) ── */}
       {displayed.nutrition && <RecipeNutritionPanel nutrition={displayed.nutrition} />}
+
+      {/* ── Glycémie (objectif « diabète ») — calculée sur la recette originale ── */}
+      {profileGoal === 'diabete' && !showVariant && Array.isArray(recipe.diabetes_watch) && (
+        <DiabetesWatch items={recipe.diabetes_watch} />
+      )}
 
       {/* ── Modal Ajouter au planning ── */}
       {showPlanModal && recipe && (

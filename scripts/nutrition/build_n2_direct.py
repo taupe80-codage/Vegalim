@@ -960,7 +960,12 @@ def apply_source_corrections(idx: dict) -> int:
             print(f"    ⚠ correction {src}:{sid} : aliment absent de la source")
             continue
         cur = item.get(c['field'])
-        if cur is None or abs(float(cur) - float(c['was'])) > 1e-9:
+        if c['was'] is None:
+            # Valeur absente de la source (fiche vide : calvados CIQUAL 1024)
+            stale = cur is not None
+        else:
+            stale = cur is None or abs(float(cur) - float(c['was'])) > 1e-9
+        if stale:
             print(f"    ⚠ correction {src}:{sid} {c['field']} non appliquée : valeur {cur} (attendu {c['was']})")
             continue
         item[c['field']] = c['value']

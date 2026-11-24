@@ -15,13 +15,23 @@ from backend.engine.score_engine.quality import score_recipe as core_score_recip
 
 # ── Résolution du profil depuis profile_data ──────────────────────────────────
 
+# Valeurs envoyées par la page Profil (proteines, poids…) : jusqu'au 2026-11-24
+# seules les clés anglaises étaient reconnues, l'objectif choisi n'avait aucun
+# effet sur le score. « cycle » a sa propre page (CyclePage) : profil par défaut.
 _HEALTH_GOAL_TO_PROFILE = {
-    "muscle":   "athlete",
-    "anemia":   "anemia",
-    "diabete":  "diabetic",
-    "eco":      "eco",
-    "quick":    "quick",
+    "muscle":       "athlete",
+    "proteines":    "athlete",
+    "energie":      "athlete",
+    "anemia":       "anemia",
+    "anemie":       "anemia",
+    "diabete":      "diabetic",
+    "poids":        "health_focus",
+    "sante":        "health_focus",
+    "antioxidants": "health_focus",
+    "eco":          "eco",
+    "quick":        "quick",
 }
+_HIGH_PROTEIN_GOALS = frozenset({"muscle", "proteines", "energie"})
 
 def resolve_profile(profile: str, profile_data: dict) -> str:
     """
@@ -52,7 +62,7 @@ def _build_context(profile_data: dict) -> dict:
     """Construit le contexte de pondération dynamique depuis le profil."""
     return {
         "strict_budget":  profile_data.get("budget") == "low",
-        "high_protein":   profile_data.get("health_goal") == "muscle",
+        "high_protein":   profile_data.get("health_goal") in _HIGH_PROTEIN_GOALS,
     }
 
 

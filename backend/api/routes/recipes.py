@@ -370,6 +370,13 @@ def get_recette(recipe_id: str, request: Request):
         raise HTTPException(status_code=404, detail=f"Recette {recipe_id} introuvable")
     result = dict(recipe)
     result.update(_compute_enrichment(recipe))
+    # Ingrédients riches en glucides non adaptés au diabète (affichés sur la
+    # fiche pour l'objectif « Glycémie / diabète »)
+    try:
+        from backend.engine.diabetes import diabetes_watch
+        result["diabetes_watch"] = diabetes_watch(recipe)
+    except Exception as e:  # la fiche reste servie sans l'information
+        logger.warning("diabetes_watch (fiche) échoué : %s", e)
     # La fiche sait d'avance si une version vegan fiable existe : sinon, pas de bouton
     if not (recipe.get("diet_flags") or {}).get("vegan"):
         try:

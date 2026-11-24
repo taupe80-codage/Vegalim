@@ -244,7 +244,8 @@ def _retained_fraction(meta: dict) -> float:
 
 
 def compute_nutrition(recipe: dict,
-                      servings: int | None = None) -> dict:
+                      servings: int | None = None,
+                      breakdown: dict | None = None) -> dict:
     """
     Calcule la nutrition d'une recette par portion.
 
@@ -253,6 +254,10 @@ def compute_nutrition(recipe: dict,
         servings : override utilisateur du nombre de portions.
                    Si None, utilise resolve_servings() qui lit dans l'ordre :
                    servings_user_override → servings_default → servings → dish_type → 4
+        breakdown : dict rempli si fourni, par ingrédient :
+                   {token: {"grams": g par portion (facteur de forme compris),
+                            "nutrients": fiche pour 100 g, champs nutrition_v2}}
+                   (ingrédients à surveiller, backend/engine/diabetes.py)
 
     Returns:
         dict {calories, protein, carbs, fat, fiber, sugar, sodium,
@@ -319,6 +324,7 @@ def compute_nutrition(recipe: dict,
 
         if not n_data:
             continue
+        n_data_v2 = n_data
 
         # Normaliser les champs v2 (calories_kcal → calories, protein_g → protein...)
         n_data = _normalize_n_data(n_data)
@@ -354,6 +360,10 @@ def compute_nutrition(recipe: dict,
             form_factor = 1.0
 
         f = qty_g / 100.0 * form_factor
+        if breakdown is not None:
+            prev = breakdown.get(token)
+            grams = qty_g * form_factor / srv + (prev["grams"] if prev else 0.0)
+            breakdown[token] = {"grams": grams, "nutrients": n_data_v2}
         for k in ALL_KEYS:
             v = n_data.get(k)
             if v is not None:

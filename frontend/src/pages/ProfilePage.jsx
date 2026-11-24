@@ -351,6 +351,8 @@ export default function ProfilePage({ onAuthClick }) {
               <option value="energie">Énergie sportive</option>
               <option value="sante">Santé générale</option>
               <option value="cycle">Soutien hormonal / cycle</option>
+              <option value="diabete">Glycémie / diabète</option>
+              <option value="anemie">Fer / anémie</option>
               <option value="antioxidants">Antioxydants & longévité</option>
             </select>
           </div>

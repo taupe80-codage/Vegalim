@@ -24,6 +24,8 @@ from pathlib import Path
 from collections import defaultdict, OrderedDict
 
 sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from backend.engine.diabetes import is_diabetic_friendly  # noqa: E402  (règle partagée)
 from allergen_rules import (get_allergens, key_allergens, restrict_diet_profile,
                             is_explicitly_gluten_free)
 
@@ -612,19 +614,6 @@ def _has_gluten_keyword(key: str) -> bool:
 RECOMPUTED_FLAGS = {'diabetic_friendly'}
 
 
-def _digestible_carbs(v: dict):
-    """Glucides assimilables : hors fibres (CNF/USDA publient des glucides
-    totaux) et hors polyols (comptés dans les glucides CIQUAL et UE)."""
-    c = v.get('carbs_g')
-    if not isinstance(c, (int, float)):
-        return None
-    c = float(c)
-    if v.get('_source') in ('CNF', 'USDA'):
-        c -= float(v.get('fiber_g') or 0.0)
-    c -= float(v.get('polyols_g') or 0.0)
-    return max(c, 0.0)
-
-
 def enrich(ig: dict, cat_label: str, sub_label: str, n2_vr: dict, entry_key: str = ''):
     """Enrichit une entrée dict depuis taxonomie + macros n2. Ne pas écraser valeurs existantes."""
     prot  = n2_vr.get('protein_g')
@@ -701,29 +690,12 @@ def enrich(ig: dict, cat_label: str, sub_label: str, n2_vr: dict, entry_key: str
     if prot  is not None: base_dp['high_protein']      = float(prot)  >= 15.0
     if fiber is not None: base_dp['high_fiber']         = float(fiber) >= 3.0
     if fat   is not None: base_dp['high_fat']           = float(fat)   >= 20.0
-    if sugar is not None and fiber is not None:
-        # Peu de sucres ET (fibres ou peu de glucides assimilables) : l'ancienne
-        # règle (fibres >= 2 g seules) excluait viandes, poissons, œufs, huiles
-        # et édulcorants sans sucre (xylitol), constaté le 2026-11-24.
-        digest = _digestible_carbs(n2_vr)
-        # Alcool exclu (hypoglycémies, recommandations diabète) ; la
-        # sous-catégorie couvre aussi le calvados CIQUAL, alcool non renseigné.
-        alcohol = float(n2_vr.get('alcohol_g') or 0.0)
-        # Au-delà de 10 g de glucides assimilables, critère « 10:1 » de qualité
-        # des glucides (glucides totaux / fibres ≤ 10, Mozaffarian et al. 2013) :
-        # farine T55, riz et pâtes blancs passaient avec 2 g de fibres pour
-        # 70 g d'amidon.
-        fib = float(fiber)
-        if digest is None:
-            carbs_ok = fib >= 2.0
-        else:
-            carbs_ok = digest <= 10.0 or (fib >= 2.0 and digest + fib <= 10.0 * fib)
-        base_dp['diabetic_friendly'] = (
-            float(sugar) < 10.0
-            and carbs_ok
-            and alcohol < 1.0
-            and sub_l not in {'alcohol', 'alcohols'}
-        )
+    # Règle partagée avec l'application (backend/engine/diabetes.py). Avant le
+    # 2026-11-24 : fibres >= 2 g seules — œufs, fromages, huiles, xylitol
+    # exclus ; farine T55, pain et riz blancs admis.
+    diabetic = is_diabetic_friendly(n2_vr, sub_l)
+    if diabetic is not None:
+        base_dp['diabetic_friendly'] = diabetic
 
     # Merge : l'ancien dict prime pour les champs nutritionnels (high_protein, nova…)
     # mais les flags d'exclusion sont toujours ceux calculés ci-dessus (priorité inversée).
