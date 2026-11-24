@@ -235,12 +235,68 @@ def _clear_recipes_caches() -> None:
 load_recipes.cache_clear = _clear_recipes_caches  # type: ignore[attr-defined]
 
 
-def load_score_graph() -> dict:
-    """Graphe de scoring — rechargé si recipe_scoring_graph_v1.json est modifié."""
-    _path = DATA_ROOT / "graphs" / "recipe_scoring_graph_v1.json"
-    return _score_graph_cache.get(_path, lambda: load_json(_path, default={}))
+# ── Entrées de graphe des recettes de la communauté ──────────────────────────
+# rebuild_graphs.py n'écrit que le catalogue. Les recettes proposées publiées
+# sont calculées ici (backend/engine/recipe_graphs.py, même calcul), une fois
+# par version du fichier communauté et des graphes : sans cela elles n'avaient
+# ni scores santé, ni bonus d'objectif, et une note nutritionnelle neutre.
+_community_graphs_lock = threading.RLock()
+_community_graphs: dict = {"key": None, "nutrition": {}, "scoring": {}, "merged": {},
+                           "computing": False}
 
-load_score_graph.cache_clear = _score_graph_cache.cache_clear  # type: ignore[attr-defined]
+
+def _community_graph_part(kind: str, base: dict) -> dict:
+    """Graphe `kind` (nutrition / scoring) complété des recettes de la
+    communauté absentes de `base`. Renvoie `base` tel quel s'il n'y en a pas."""
+    community = load_community_recipes()
+    missing = [r for r in community if str(r.get("id")) not in base]
+    if not missing:
+        return base
+    with _community_graphs_lock:
+        cg = _community_graphs
+        if cg["computing"]:          # appel réentrant pendant le calcul
+            return base
+        key = (id(community), _data_generation())
+        if cg["key"] != key:
+            from backend.engine.recipe_graphs import graph_entries
+            cg["computing"] = True
+            try:
+                cg["nutrition"], cg["scoring"] = graph_entries(missing)
+            except Exception as e:   # une recette mal formée ne doit pas casser l'API
+                logger.warning("Graphes des recettes de la communauté : %s", e)
+                cg["nutrition"], cg["scoring"] = {}, {}
+            finally:
+                cg["computing"] = False
+            cg["merged"] = {}
+            cg["key"] = key
+        merged = cg["merged"].get(kind)
+        if merged is None or merged[0] is not base:
+            extra = cg[kind]
+            merged = (base, {**base, **{k: v for k, v in extra.items() if k not in base}})
+            cg["merged"][kind] = merged
+        return merged[1]
+
+
+def _data_generation() -> int:
+    from backend.core.data_cache import data_generation
+    return data_generation()
+
+
+def load_score_graph() -> dict:
+    """Graphe de scoring — rechargé si recipe_scoring_graph_v1.json est modifié,
+    complété des recettes de la communauté publiées."""
+    _path = DATA_ROOT / "graphs" / "recipe_scoring_graph_v1.json"
+    base = _score_graph_cache.get(_path, lambda: load_json(_path, default={}))
+    return _community_graph_part("scoring", base)
+
+
+def _clear_score_graph_caches() -> None:
+    _score_graph_cache.cache_clear()
+    with _community_graphs_lock:
+        _community_graphs.update(key=None, nutrition={}, scoring={}, merged={})
+
+
+load_score_graph.cache_clear = _clear_score_graph_caches  # type: ignore[attr-defined]
 
 
 def load_ingredients_dict() -> dict:
@@ -508,8 +564,22 @@ def resolve_ingredient_cooking_variant(
 
 
 @data_cached
-def load_nutrition_graph() -> dict:
+def _load_nutrition_graph_file() -> dict:
     return load_json(DATA_ROOT / "graphs" / "recipe_nutrition_graph_v1.json", default={})
+
+
+def load_nutrition_graph() -> dict:
+    """Nutrition par portion (graphe du catalogue + recettes de la communauté)."""
+    return _community_graph_part("nutrition", _load_nutrition_graph_file())
+
+
+def _clear_nutrition_graph_caches() -> None:
+    _load_nutrition_graph_file.cache_clear()
+    with _community_graphs_lock:
+        _community_graphs.update(key=None, nutrition={}, scoring={}, merged={})
+
+
+load_nutrition_graph.cache_clear = _clear_nutrition_graph_caches  # type: ignore[attr-defined]
 
 
 def load_nutrition_db() -> dict:

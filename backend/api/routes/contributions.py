@@ -270,6 +270,12 @@ def rebuild_community_file(db: Session) -> int:
         recipes.append(r)
     cs.write_community_file(recipes, data_io.COMMUNITY_RECIPES_PATH)
     data_io.load_recipes.cache_clear()
+    # Scores santé et données de score des recettes publiées : recalculés
+    # tout de suite (le fichier peut être hors des dossiers surveillés, en test).
+    from backend.engine.score_engine import quality
+    from backend.services.filter_service import invalidate_hs_cache
+    quality._load_data.cache_clear()
+    invalidate_hs_cache()
     return len(recipes)
 
 

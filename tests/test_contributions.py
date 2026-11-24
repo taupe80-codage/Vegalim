@@ -416,3 +416,40 @@ def test_emails_de_statut_et_preference(env, monkeypatch):
     who["email"] = MOD
     c.post(f"/contributions/moderation/{sid}/publish", json={})
     assert not any(AUTHOR in m["to"] for m in mail_service.OUTBOX)
+
+
+# ── Nutrition et score des recettes publiées ─────────────────────────────────
+
+def test_recette_publiee_a_ses_scores_sante_et_son_score(env):
+    """Les graphes nutrition / score ne sont écrits que pour le catalogue : une
+    recette publiée n'avait ni scores santé (filtres), ni note nutritionnelle
+    réelle (5,0 neutre). Ils sont calculés à la volée (2026-11-24)."""
+    from backend.engine.score_engine.ajr import meal_score
+    from backend.services.filter_service import _hs
+    from backend.services.scoring_service import score_recipe
+
+    c, who, _ = env
+    _, rid = _publish(c, who)
+    recipe = _live(rid)
+
+    nutr = data_io.load_nutrition_graph()[rid]
+    assert nutr["calories"] > 200 and nutr["protein"] > 10
+    assert "fast_carbs" in nutr
+    sg = data_io.load_score_graph()[rid]
+    assert sg["nutrition_score"] == round(meal_score(nutr)["score"], 1)
+
+    hs = _hs(recipe)
+    assert hs["kcal"] == round(nutr["calories"]) and hs["good_source_protein"]
+    assert hs["glycemic_category"] in ("low", "medium", "high")
+
+    s = score_recipe(recipe, profile_data={"health_goal": "diabete"})
+    assert s["details"]["nutrition"] == sg["nutrition_score"]
+
+    kcal = hs["kcal"]
+    def ids(max_kcal):
+        res = c.get("/recettes", params={"max_kcal": max_kcal, "limit": 600, "cuisine": "indian"})
+        assert res.status_code == 200, res.text
+        return {r["id"] for r in res.json()["results"]}
+    assert rid in ids(kcal + 1)
+    assert rid not in ids(kcal - 1)
+    assert c.get(f"/recettes/{rid}").json()["health_scores"]["kcal"] == kcal

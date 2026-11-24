@@ -132,6 +132,7 @@ def cuisine_matches(wanted: str, cuisine: str, country: str = "") -> bool:
 # Seuils calés sur les distributions réelles (845 recettes) et les AJR ANSES/OMS.
 
 _hs_cache: dict[str, dict] | None = None
+_hs_generation: int | None = None   # génération des données au moment du calcul
 _hs_lock = _threading.Lock()
 
 # Correspondance difficulty frontend → données JSON (difficulty_level :
@@ -282,11 +283,16 @@ def _hs(recipe: dict) -> dict:
     Retourne les health_scores d'une recette depuis le cache paresseux.
     Construit le cache au premier appel (thread-safe).
     """
-    global _hs_cache
-    if _hs_cache is None:
+    global _hs_cache, _hs_generation
+    # Recalculé quand les fichiers de données changent (rebuild, recette de la
+    # communauté publiée) : avant le 2026-11-24, il fallait redémarrer.
+    from backend.core.data_cache import data_generation
+    gen = data_generation()
+    if _hs_cache is None or _hs_generation != gen:
         with _hs_lock:
-            if _hs_cache is None:
+            if _hs_cache is None or _hs_generation != gen:
                 _hs_cache = _build_hs_cache()
+                _hs_generation = gen
     return _hs_cache.get(str(recipe.get("id", "")), {})
 
 
