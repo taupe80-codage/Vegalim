@@ -125,6 +125,11 @@ CIQUAL_COL_MAP: dict[str, str] = {
     'vitamine_d2_ergocalciferol_g_100_g':                 'vitamin_d2_ug',
     'vitamine_d3_cholecalciferol_g_100_g':                'vitamin_d3_ug',
     'alpha_tocopherol_vitamine_e_mg_100_g':               'alpha_tocopherol_mg',
+    # Table CIQUAL 2025 : _ciq_slug remplace « alpha-tocophérol » par « vit_e »,
+    # les deux clés ci-dessus ne correspondaient plus : vitamine E perdue pour
+    # 1 734 aliments (huile d'olive vierge extra 22,3 mg → absente), 2026-11-24.
+    'vit_e_vitamine_e_mg_100_g':                          'alpha_tocopherol_mg',
+    'vitamine_e_mg_100_g':                                'vitamin_e_mg',
     'vit_e_mg_100_g':                                     'vitamin_e_mg',
     'vitamine_k1_g_100_g':                                'vitamin_k1_ug',
     'vitamine_k2_g_100_g':                                'vitamin_k2_ug',
@@ -996,6 +1001,10 @@ def extract_nutrients(raw: dict) -> dict:
         v = raw.get(f)
         if v is not None:
             out[f] = v
+    # CIQUAL : colonne « Vitamine E (mg/100 g) » lue sous vitamin_e_mg, absent de
+    # N2_FIELDS — la vitamine E des 975 fiches CIQUAL était perdue (2026-11-24)
+    if 'alpha_tocopherol_mg' not in out and raw.get('vitamin_e_mg') is not None:
+        out['alpha_tocopherol_mg'] = raw['vitamin_e_mg']
     # omega3_g
     parts = [raw.get(k) for k in ('fa_18_3_ala_g','fa_20_5_epa_g','fa_22_6_dha_g') if raw.get(k) is not None]
     if parts:

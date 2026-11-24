@@ -370,23 +370,29 @@ class TestComputeHealthScores:
             assert cle in hs, f"Clé manquante : {cle}"
 
     # ── Glycemic category ────────────────────────────────────────────────────
+    # Glucides rapides par portion (fast_carbs) depuis le 2026-11-24 : aucune
+    # source ne donne l'indice glycémique, toutes les recettes sortaient « low ».
 
     def test_glycemic_low(self):
-        assert self.compute(self._r(glycemic_index=5))["glycemic_category"] == "low"
+        assert self.compute(self._r(fast_carbs=5))["glycemic_category"] == "low"
 
     def test_glycemic_medium(self):
-        assert self.compute(self._r(glycemic_index=9))["glycemic_category"] == "medium"
+        assert self.compute(self._r(fast_carbs=18))["glycemic_category"] == "medium"
 
     def test_glycemic_high(self):
-        assert self.compute(self._r(glycemic_index=15))["glycemic_category"] == "high"
+        assert self.compute(self._r(fast_carbs=40))["glycemic_category"] == "high"
 
     def test_glycemic_seuil_bas_exact(self):
-        """gi=8 → medium (borne exclusive pour low)."""
-        assert self.compute(self._r(glycemic_index=8))["glycemic_category"] == "medium"
+        """10 g → low (borne incluse)."""
+        assert self.compute(self._r(fast_carbs=10))["glycemic_category"] == "low"
 
     def test_glycemic_seuil_haut_exact(self):
-        """gi=12 → high (borne exclusive pour medium)."""
-        assert self.compute(self._r(glycemic_index=12))["glycemic_category"] == "high"
+        """25 g → medium (borne incluse)."""
+        assert self.compute(self._r(fast_carbs=25))["glycemic_category"] == "medium"
+
+    def test_glycemic_inconnu(self):
+        """Ancien champ glycemic_index ignoré ; sans fast_carbs : inconnu."""
+        assert self.compute(self._r(glycemic_index=5))["glycemic_category"] is None
 
     # ── High protein ─────────────────────────────────────────────────────────
 
@@ -491,7 +497,7 @@ class TestComputeHealthScores:
         """Sans _nutrition_per_serving, tous les scores utilisent 0."""
         r = {"id": 1}
         hs = self.compute(r)
-        assert hs["glycemic_category"] == "low"   # gi=0 → low
+        assert hs["glycemic_category"] is None    # pas de nutrition : inconnu
         assert hs["high_protein"]      is False
         assert hs["low_calorie"]       is True     # kcal=0 < 300
 

@@ -68,9 +68,13 @@ def rebuild_graphs_and_index():
     from backend.db.culinary_repositories import _derived_registry
     registry = _derived_registry()
 
+    from backend.engine.diabetes import fast_carbs
     for i, r in enumerate(recipes):
         rid = str(r.get("id"))
         nutr = recipe_nutrition(r, registry)
+        # Glucides rapides par portion (ingrédients à surveiller pour le
+        # diabète) : remplace l'indice glycémique, absent des données sources.
+        nutr["fast_carbs"] = fast_carbs(r)
         nutrition_graph[rid] = nutr
 
         # Score d'une PORTION (1/3 des AJR, pénalités calories/sodium/sucres/

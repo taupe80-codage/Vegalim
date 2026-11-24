@@ -30,10 +30,11 @@ Correction v6.20 — Gap données / filtrage (audit mai 2026) :
         vit D, folates, oméga-3)
         calculés directement depuis la graph avec seuils AJR 15% / 30%.
 
-    FIX 2 — Seuil glycémique corrigé :
-        glycemic_index dans la graph suit l'échelle standard 0-100 (médiane=27).
-        Anciens seuils <8/<12 ne qualifiaient qu'1 seule recette.
-        Nouveaux seuils : low <55 / medium 55-70 / high ≥70 (classification OMS).
+    FIX 2 — Catégorie glycémique (revue le 2026-11-24) :
+        glycemic_index est absent de la graph (aucune source ne le donne) :
+        toutes les recettes sortaient « low ». La catégorie vient désormais des
+        glucides rapides par portion (fast_carbs, backend/engine/diabetes.py) :
+        low ≤ 10 g / medium ≤ 25 g / high au-delà.
 
     FIX 3 — Fallback tags.diet pour les flags absents de diet_flags :
         diet_flags.raw n'est jamais persisté dans recipes.json.
@@ -156,6 +157,7 @@ def _build_hs_cache() -> dict[str, dict]:
     """
     from backend.core.data_io import load_nutrition_graph, load_recipes
     from backend.engine.rule_engine.diet import compute_fodmap, is_low_sodium
+    from backend.engine.diabetes import glycemic_category
 
     ng      = load_nutrition_graph()
     recipes = load_recipes()
@@ -171,7 +173,6 @@ def _build_hs_cache() -> dict[str, dict]:
         fiber  = float(nutr.get("fiber",         0) or 0)
         sodium = float(nutr.get("sodium",        0) or 0)
         sugar  = float(nutr.get("sugar",         0) or 0)
-        gi     = float(nutr.get("glycemic_index",0) or 0)
         sat_fat = float(nutr.get("saturated_fat",0) or 0)
         omega3  = float(nutr.get("omega3",       0) or 0)   # g d'oméga-3 (ALA)
 
@@ -206,12 +207,10 @@ def _build_hs_cache() -> dict[str, dict]:
             "protein_g":         round(prot,  1),
             "fiber_g":           round(fiber, 1),
             "low_sat_fat":       sat_fat < 5.0,
-            # Glycémie — échelle 0-100
-            "glycemic_category": (
-                "low"    if gi < 55  else
-                "medium" if gi < 70  else
-                "high"
-            ),
+            # Glycémie : glucides rapides par portion (l'indice glycémique est
+            # absent des données sources : toutes les recettes sortaient « low »)
+            "glycemic_category": glycemic_category(nutr),
+            "fast_carbs_g":      nutr.get("fast_carbs"),
             # FODMAP
             **fodmap,
             # Anti-inflammatoire (proxy omega-3 si disponible)

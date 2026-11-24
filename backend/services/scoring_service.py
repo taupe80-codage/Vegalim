@@ -25,9 +25,9 @@ _HEALTH_GOAL_TO_PROFILE = {
     "anemia":       "anemia",
     "anemie":       "anemia",
     "diabete":      "diabetic",
-    "poids":        "health_focus",
+    "poids":        "weight",
     "sante":        "health_focus",
-    "antioxidants": "health_focus",
+    "antioxidants": "antioxidant",
     "eco":          "eco",
     "quick":        "quick",
 }

@@ -313,9 +313,9 @@ const SUB_FILTER_BADGE_MAP = {
   energisant:         { id: 'energisant',   label: 'Énergisant',        symbol: '⚡', cls: 'badge-health', nutriKey: 'calories',  unit: 'kcal',       healthKey: null },
   high_carb_complex:  { id: 'high_carb',    label: 'Glucides complexes',symbol: '🌾', cls: 'badge-health', nutriKey: 'carbs',     unit: 'g glucides', healthKey: null },
   sustained_energy:   { id: 'sustained',    label: 'Énergie durable',   symbol: '⚡', cls: 'badge-health', nutriKey: 'calories',  unit: 'kcal',       healthKey: null },
-  // IG — pas de valeur brute disponible
-  low_ig:             { id: 'diabetes',     label: 'IG bas',            symbol: '🩸', cls: 'badge-health', nutriKey: null,        unit: null,         healthKey: 'low_ig' },
-  moderate_ig:        { id: 'moderate_ig',  label: 'IG modéré',         symbol: '🩸', cls: 'badge-health', nutriKey: null,        unit: null,         healthKey: null },
+  // Glycémie : glucides rapides par portion (l'indice glycémique n'est pas dans les données)
+  low_ig:             { id: 'diabetes',     label: 'Peu de glucides rapides', symbol: '🩸', cls: 'badge-health', nutriKey: null,  unit: null,         healthKey: 'low_ig' },
+  moderate_ig:        { id: 'moderate_ig',  label: 'Glucides rapides modérés', symbol: '🩸', cls: 'badge-health', nutriKey: null, unit: null,         healthKey: null },
   // Oméga-3 — pas de valeur brute disponible sur la card
   omega3_ala:         { id: 'omega3',       label: 'Oméga-3 ALA',       symbol: '🐟', cls: 'badge-health', nutriKey: null,        unit: null,         healthKey: 'omega3' },
   omega3_epa_dha:     { id: 'omega3',       label: 'EPA/DHA',           symbol: '🐟', cls: 'badge-health', nutriKey: null,        unit: null,         healthKey: 'omega3' },
@@ -421,8 +421,10 @@ export function getRecipeBadges(recipe, activeHealthFilters = new Set(), activeS
     badges.push({ id: 'low_calorie',  label: 'Léger',       symbol: '⚖️', cls: 'badge-health' });
   if (health.fodmap_level === 'low' || tags.includes('low_fodmap'))
     badges.push({ id: 'low_fodmap',   label: 'Low FODMAP',  symbol: '🍏', cls: 'badge-health' });
-  if (!priorityBadgeIds.has('diabetes') && (health.low_ig || health.diabetes_friendly || tags.includes('diabetes_friendly') || tags.includes('low_ig')))
-    badges.push({ id: 'diabetes',     label: 'Low IG',      symbol: '🩸', cls: 'badge-health' });
+  // Calculé (glucides rapides ≤ 10 g par portion) : le tag diabetes_friendly
+  // saisi à la main se trompait sur 80 des 299 recettes qui le portent
+  if (!priorityBadgeIds.has('diabetes') && health.glycemic_category === 'low')
+    badges.push({ id: 'diabetes',     label: 'Peu de glucides rapides', symbol: '🩸', cls: 'badge-health' });
   if (highlights.vitamins)
     badges.push({ id: 'vitamins',     label: 'Vitamines',   symbol: '🍊', cls: 'badge-health' });
   if (highlights.minerals)
@@ -625,10 +627,10 @@ export function computeAlimScore(recipe, { isVeganFilter = false } = {}) {
 
   // ── 4. Qualité santé — flags cumulatifs (plafonné à 18) ──────────────────
   let hPts = 0;
-  // health.glycemic_category est calculé par _hs() côté backend (low/moderate/high)
+  // health.glycemic_category : glucides rapides par portion, calculé côté backend (low/medium/high)
   const glyCat = health.glycemic_category || '';
-  if (health.low_ig || tags.includes('low_ig') || health.diabetes_friendly || glyCat === 'low') hPts += 7;
-  else if (health.moderate_ig || glyCat === 'moderate') hPts += 3;
+  if (glyCat === 'low') hPts += 7;
+  else if (glyCat === 'medium') hPts += 3;
   if (hi.antioxidant || health.antioxidant_rich) hPts += 6;
   if (hi.omega3 || health.source_omega3 || health.omega3)  hPts += 5;
   if (hi.vitamins  || health.vitamins)  hPts += 4;

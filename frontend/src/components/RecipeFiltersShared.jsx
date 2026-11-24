@@ -172,8 +172,8 @@ export const HEALTH_GROUPS = [
     value: 'low_ig', label: '🩸 Glycémie',
     apiKeys: ['low_ig', 'moderate_ig'],
     subs: [
-      { value: 'low_ig',      label: 'IG bas (< 55)',    apiKey: 'low_ig' },
-      { value: 'moderate_ig', label: 'IG modéré (< 70)', apiKey: 'moderate_ig' },
+      { value: 'low_ig',      label: 'Peu de glucides rapides (≤ 10 g)', apiKey: 'low_ig' },
+      { value: 'moderate_ig', label: 'Glucides rapides modérés (≤ 25 g)', apiKey: 'moderate_ig' },
     ],
   },
   {

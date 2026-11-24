@@ -29,8 +29,20 @@ PROFILES: dict[str, dict[str, Any]] = {
     "budget":       {"weights": {"nutrition": 0.30, "authenticity": 0.15, "accessibility": 0.20, "cost": 0.28, "ease": 0.04, "carbon": 0.02, "flavor": 0.01}, "bonus_rules": [], "description": "Priorité coût / accessibilité"},
     "eco":          {"weights": {"nutrition": 0.35, "authenticity": 0.15, "accessibility": 0.15, "cost": 0.10, "ease": 0.05, "carbon": 0.18, "flavor": 0.02}, "bonus_rules": [], "description": "Priorité empreinte carbone"},
     "quick":        {"weights": {"nutrition": 0.30, "authenticity": 0.15, "accessibility": 0.20, "cost": 0.15, "ease": 0.18, "carbon": 0.01, "flavor": 0.01}, "bonus_rules": [], "description": "Priorité facilité / rapidité"},
-    "diabetic":     {"weights": {"nutrition": 0.55, "authenticity": 0.10, "accessibility": 0.15, "cost": 0.10, "ease": 0.05, "carbon": 0.03, "flavor": 0.02}, "bonus_rules": [{"field": "glycemic_index", "op": "<=", "value": 55, "bonus": 1.0, "label": "IG bas"}, {"field": "fiber", "op": ">=", "value": 6, "bonus": 0.3, "label": "fibres (contrôle glycémique)"}], "description": "Adapté diabète / IG bas"},
-    "anemia":       {"weights": {"nutrition": 0.55, "authenticity": 0.15, "accessibility": 0.15, "cost": 0.10, "ease": 0.03, "carbon": 0.01, "flavor": 0.01}, "bonus_rules": [{"field": "iron", "op": ">=", "value": 3, "bonus": 1.0, "label": "riche en fer"}, {"field": "vitamin_c", "op": ">=", "value": 20, "bonus": 0.3, "label": "vitamine C"}, {"field": "vitamin_b12", "op": ">=", "value": 1, "bonus": 0.5, "label": "vitamine B12"}], "description": "Adapté anémie / carence fer"},
+    # Revus le 2026-11-24 (mesure du classement par objectif) : le bonus « IG
+    # bas » allait aux 1 018 plats (indice glycémique absent des données) et les
+    # plats en tête du profil diabète avaient plus de glucides que la moyenne.
+    # fast_carbs = glucides rapides par portion (backend/engine/diabetes.py).
+    "diabetic":     {"weights": {"nutrition": 0.55, "authenticity": 0.10, "accessibility": 0.15, "cost": 0.10, "ease": 0.05, "carbon": 0.03, "flavor": 0.02}, "bonus_rules": [{"field": "fast_carbs", "op": "<=", "value": 10, "bonus": 1.0, "label": "peu de glucides rapides"}, {"field": "fast_carbs", "op": ">", "value": 25, "bonus": -0.8, "label": "beaucoup de glucides rapides"}, {"field": "sugar", "op": ">=", "value": 20, "bonus": -0.4, "label": "très sucré"}, {"field": "fiber", "op": ">=", "value": 6, "bonus": 0.3, "label": "fibres (contrôle glycémique)"}], "description": "Adapté diabète / peu de glucides rapides"},
+    # Fer : deux paliers (≥ 3 mg = 40 % des plats, écart trop faible avec le
+    # classement par défaut : 5,4 mg contre 4,9 mg en tête).
+    "anemia":       {"weights": {"nutrition": 0.55, "authenticity": 0.15, "accessibility": 0.15, "cost": 0.10, "ease": 0.03, "carbon": 0.01, "flavor": 0.01}, "bonus_rules": [{"field": "iron", "op": ">=", "value": 3, "bonus": 0.5, "label": "source de fer"}, {"field": "iron", "op": ">=", "value": 5, "bonus": 0.8, "label": "riche en fer"}, {"field": "vitamin_c", "op": ">=", "value": 20, "bonus": 0.3, "label": "vitamine C (absorption du fer)"}, {"field": "vitamin_b12", "op": ">=", "value": 1, "bonus": 0.5, "label": "vitamine B12"}], "description": "Adapté anémie / carence fer"},
+    # Gestion du poids : avant, health_focus — les plats en tête faisaient
+    # 470 kcal contre 355 en moyenne.
+    "weight":       {"weights": {"nutrition": 0.55, "authenticity": 0.10, "accessibility": 0.15, "cost": 0.10, "ease": 0.05, "carbon": 0.03, "flavor": 0.02}, "bonus_rules": [{"field": "calories", "op": "<=", "value": 450, "bonus": 0.6, "label": "portion modérée en calories"}, {"field": "calories", "op": ">", "value": 650, "bonus": -0.8, "label": "portion très calorique"}, {"field": "fiber", "op": ">=", "value": 8, "bonus": 0.4, "label": "riche en fibres (satiété)"}, {"field": "protein", "op": ">=", "value": 15, "bonus": 0.3, "label": "riche en protéines (satiété)"}], "description": "Gestion du poids / satiété"},
+    # Antioxydants : vitamines C, A (caroténoïdes) et E, seuils ≈ 1/3 des AJR
+    # (80 mg, 800 µg, 12 mg) par portion.
+    "antioxidant":  {"weights": {"nutrition": 0.55, "authenticity": 0.15, "accessibility": 0.10, "cost": 0.10, "ease": 0.05, "carbon": 0.03, "flavor": 0.02}, "bonus_rules": [{"field": "vitamin_c", "op": ">=", "value": 27, "bonus": 0.5, "label": "riche en vitamine C"}, {"field": "vitamin_a", "op": ">=", "value": 267, "bonus": 0.5, "label": "riche en caroténoïdes (vitamine A)"}, {"field": "vitamin_e", "op": ">=", "value": 4, "bonus": 0.4, "label": "riche en vitamine E"}, {"field": "fiber", "op": ">=", "value": 6, "bonus": 0.2, "label": "fibres"}], "description": "Antioxydants / longévité"},
     "athlete":      {"weights": {"nutrition": 0.50, "authenticity": 0.15, "accessibility": 0.15, "cost": 0.10, "ease": 0.05, "carbon": 0.03, "flavor": 0.02}, "bonus_rules": [{"field": "protein", "op": ">=", "value": 20, "bonus": 1.0, "label": "haute protéine"}, {"field": "calories", "op": ">=", "value": 400, "bonus": 0.3, "label": "dense en calories"}], "description": "Adapté sport / haute protéine"},
 }
 
@@ -172,7 +184,13 @@ def _d_flavor(r, d):
 # ── Bonus rules ───────────────────────────────────────────────────────────────
 
 def _check_rule(rule, nutr):
-    v, op, rv = float(nutr.get(rule["field"], 0) or 0), rule["op"], rule["value"]
+    # Valeur absente = règle non applicable (avant : lue comme 0, d'où « IG bas »
+    # pour toutes les recettes, et tout seuil « <= » rempli par une recette
+    # absente du graphe nutrition, comme une recette proposée)
+    raw = nutr.get(rule["field"])
+    if not isinstance(raw, (int, float)) or isinstance(raw, bool):
+        return False
+    v, op, rv = float(raw), rule["op"], rule["value"]
     return (op==">=" and v>=rv) or (op==">" and v>rv) or (op=="<=" and v<=rv) or (op=="<" and v<rv) or (op=="==" and v==rv)
 
 def _apply_bonuses(rules, nutr):

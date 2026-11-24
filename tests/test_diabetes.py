@@ -74,8 +74,8 @@ def test_fiche_recette_expose_la_liste():
 
 @pytest.mark.parametrize("goal, profile", [
     ("diabete", "diabetic"), ("anemie", "anemia"), ("proteines", "athlete"),
-    ("energie", "athlete"), ("poids", "health_focus"), ("sante", "health_focus"),
-    ("antioxidants", "health_focus"), ("cycle", "default"), ("", "default"),
+    ("energie", "athlete"), ("poids", "weight"), ("sante", "health_focus"),
+    ("antioxidants", "antioxidant"), ("cycle", "default"), ("", "default"),
 ])
 def test_objectifs_du_profil_reconnus(goal, profile):
     assert resolve_profile("default", {"health_goal": goal}) == profile

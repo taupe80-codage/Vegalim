@@ -1117,12 +1117,12 @@ def compute_health_scores(recipe: dict) -> dict:
     sodium    = float(nutr.get("sodium", 0) or 0)
     sat_fat   = float(nutr.get("saturated_fat", 0) or 0)
     omega3    = float(nutr.get("omega3", nutr.get("omega_3", 0)) or 0)
-    gi        = float(nutr.get("glycemic_index", 0) or 0)
-
     fodmap = compute_fodmap(recipe)
+    from backend.engine.diabetes import glycemic_category as _glycemic_category
 
     return {
-        "glycemic_category":      ("low" if gi < 8 else "medium" if gi < 12 else "high"),
+        # glucides rapides par portion (indice glycémique absent des sources)
+        "glycemic_category":      _glycemic_category(nutr),
         "high_protein":           prot >= 20,
         "protein_g":              round(prot, 1),
         "low_calorie":            kcal < 300,

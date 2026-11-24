@@ -102,3 +102,25 @@ def diabetes_watch(recipe: dict) -> list[dict]:
             "sugar_g": round(sugar, 1),
         })
     return sorted(out, key=lambda x: -x["carbs_g"])
+
+
+# ── Glucides rapides d'une recette ───────────────────────────────────────────
+# Aucune source (CIQUAL, CNF, USDA) ne donne l'indice glycémique : le champ
+# glycemic_index était absent des 1 112 recettes, d'où « IG bas » pour toutes
+# (bonus du profil diabète, filtre Glycémie, points des cartes). Le repère
+# retenu est la somme des glucides des ingrédients à surveiller, par portion.
+FAST_CARBS_LOW_G = 10.0
+FAST_CARBS_MEDIUM_G = 25.0
+
+
+def fast_carbs(recipe: dict) -> float:
+    """Glucides rapides par portion (g) : ingrédients de diabetes_watch()."""
+    return round(sum(x["carbs_g"] for x in diabetes_watch(recipe)), 1)
+
+
+def glycemic_category(nutrition: dict) -> str | None:
+    """low / medium / high depuis nutrition['fast_carbs'] ; None si inconnu."""
+    v = nutrition.get("fast_carbs")
+    if not isinstance(v, (int, float)):
+        return None
+    return "low" if v <= FAST_CARBS_LOW_G else "medium" if v <= FAST_CARBS_MEDIUM_G else "high"

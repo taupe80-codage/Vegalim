@@ -77,6 +77,7 @@ _V2_FIELD_MAP: dict[str, str] = {
     "vitamin_a_rae_ug": "vitamin_a",   # corrigé depuis vitamin_a_ug (RAE = unité CIQUAL)
     "vitamin_d_ug":     "vitamin_d",
     "vitamin_e_mg":     "vitamin_e",
+    "alpha_tocopherol_mg": "vitamin_e",   # nom réel dans nutrition_v2 (533 fiches)
     "vitamin_k1_ug":    "vitamin_k",
     "vitamin_k2_ug":    "vitamin_k",   # s'additionne (K1 + K2)
     "folate_dfe_ug":    "folate",      # corrigé depuis folate_ug (DFE = unité CIQUAL)
@@ -109,6 +110,16 @@ def _normalize_n_data(n_data: dict) -> dict:
         else:
             if k not in normalized:
                 normalized[k] = v
+    # Replis (constatés le 2026-11-24) : CNF ne donne pas l'équivalent rétinol
+    # (466 fiches avec bêta-carotène comptées à 0 de vitamine A) et environ
+    # 1 000 fiches n'ont que les folates totaux (folate_ug), sans DFE.
+    if normalized.get("vitamin_a") is None:
+        retinol = n_data.get("retinol_ug")
+        beta = n_data.get("beta_carotene_ug")
+        if retinol is not None or beta is not None:
+            normalized["vitamin_a"] = round(float(retinol or 0) + float(beta or 0) / 12.0, 2)
+    if normalized.get("folate") is None and n_data.get("folate_ug") is not None:
+        normalized["folate"] = n_data["folate_ug"]
     return normalized
 
 # Valeurs par défaut de portions par type de plat (mirroir de recipes.json)
