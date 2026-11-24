@@ -178,7 +178,9 @@ export default function ProfilePage({ onAuthClick }) {
         if (cancelled || !p) return;
         // Le serveur stocke la forme canonique « vegetarien » (option « vegetarian »)
         const diet = p.diet === 'vegetarien' ? 'vegetarian' : (p.diet || '');
-        setPrefs({ diet, goal: p.health_goal || '' });
+        // « energie » (ancienne option, fusionnée avec « proteines »)
+        const goal = p.health_goal === 'energie' ? 'proteines' : (p.health_goal || '');
+        setPrefs({ diet, goal });
         setHealthConsent(!!p.health_consent);
       })
       .catch(() => { /* profil indisponible : on garde le formulaire vide */ });
@@ -346,9 +348,10 @@ export default function ProfilePage({ onAuthClick }) {
               style={{ padding: '10px 14px', fontSize: 14, opacity: healthConsent ? 1 : 0.5 }}
             >
               <option value="">Sans objectif particulier</option>
-              <option value="proteines">Apport protéique élevé</option>
+              {/* « Énergie sportive » fusionné le 2026-11-24 : même classement
+                  que les protéines (légumineuses en tête dans les deux cas) */}
+              <option value="proteines">Sport : protéines et énergie</option>
               <option value="poids">Gestion du poids</option>
-              <option value="energie">Énergie sportive</option>
               <option value="sante">Santé générale</option>
               <option value="cycle">Soutien hormonal / cycle</option>
               <option value="diabete">Glycémie / diabète</option>

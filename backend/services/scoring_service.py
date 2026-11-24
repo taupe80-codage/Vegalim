@@ -21,7 +21,7 @@ from backend.engine.score_engine.quality import score_recipe as core_score_recip
 _HEALTH_GOAL_TO_PROFILE = {
     "muscle":       "athlete",
     "proteines":    "athlete",
-    "energie":      "athlete",
+    "energie":      "athlete",   # ancienne option, fusionnée avec « proteines » (2026-11-24)
     "anemia":       "anemia",
     "anemie":       "anemia",
     "diabete":      "diabetic",
