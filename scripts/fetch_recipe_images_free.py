@@ -324,7 +324,9 @@ def search_commons(session: requests.Session, query: str) -> list[dict]:
         return []
 
     out = []
-    for page in pages.values():
+    # Ordre de pertinence de la recherche (« index ») : le dict des pages est
+    # rangé par numéro de page, d'où des photos hors sujet en premier.
+    for page in sorted(pages.values(), key=lambda p: p.get("index", 1 << 30)):
         info = (page.get("imageinfo") or [{}])[0]
         if not info or info.get("mime") not in ("image/jpeg", "image/png"):
             continue

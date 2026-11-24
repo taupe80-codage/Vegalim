@@ -17,9 +17,12 @@ carnée (bigos, plov, caldo verde au chouriço) et que seul l'œil le voit :
 
     python scripts/fetch_images_by_article.py --stage DIR
         télécharge dans DIR, écrit DIR/_manifest.json et une planche-contact
-    python scripts/fetch_images_by_article.py --publish DIR --reject id1 id2 …
+    python scripts/fetch_images_by_article.py --publish DIR --reject id1 id2 … --pick id3=2 …
         copie les photos retenues dans frontend/public/images/recipes, crédite,
         et met les rejetées en liste noire
+
+--candidates N garde jusqu'à N photos par recherche Commons (planches
+DIR/_planche_NN.jpg numérotées) ; --pick id=k retient la k-ième.
 """
 
 from __future__ import annotations
@@ -257,6 +260,124 @@ ARTICLES: dict[str, list[str]] = {
     "protein_tempeh_patate_douce_cacahuete_4b7e90": ["commons:tempeh peanut sauce"],
     "soup_haricots_kale_tofu_fume_1d84c6": ["commons:white bean kale soup"],
     "side_radis_glaces_miel_3a8e51": ["commons:glazed radishes"],
+    # 2026-11-24 : recettes jamais tentées (lots récents compris), recherche
+    # Commons triée par pertinence et plusieurs candidats (--candidates).
+    "bread_gong_bao_tofu_3f7cc1": ["commons:kung pao tofu"],
+    "bread_katsu_bf3f1e": ["commons:tofu katsu curry"],
+    "curry_aubergine_sri_lanka_bf8bcd": ["en:Wambatu moju", "commons:sri lankan eggplant curry"],
+    "curry_d_aubergine_sri_lankais_72254d": ["en:Wambatu moju", "commons:sri lankan eggplant curry"],
+    "curry_katsu_vegan_f2e6a3": ["commons:eggplant katsu curry"],
+    "dal_afghan_sabzi_chalaw_18f6a5": ["commons:sabzi chalow"],
+    "dal_boulettes_suedoises_2ac55d": ["commons:vegetarian meatballs lingonberry"],
+    "dal_boulettes_suedoises_vegan_fea9f6": ["commons:vegan swedish meatballs"],
+    "dal_galettes_de_pois_chiches_db4c7a": ["commons:chickpea patties"],
+    "dal_lentil_shepherds_pie_vega_27455d": ["commons:vegan shepherd's pie"],
+    "dal_soupe_de_lentilles_621239": ["commons:lentil vegetable soup"],
+    "entry_pate_de_champignons_vegan_b2af97": ["commons:mushroom pâté"],
+    "entry_terrine_legumes_du_soleil_e5e24a": ["commons:vegetable terrine"],
+    "main_endives_au_gratin_6b58ee": ["commons:gratin d'endives"],
+    "main_garbure_gasconne_545667": ["fr:Garbure"],
+    "main_legumes_braises_7030b7": ["commons:braised vegetables"],
+    "main_polenta_aux_champignons_v_b0e1ad": ["commons:polenta fries"],
+    "main_potee_auvergnate_fcc003": ["fr:Potée auvergnate"],
+    "pasta_lasagnes_de_legumes_ultra_9b6a4e": ["commons:vegetable lasagna"],
+    "protein_bulgogi_tofu_fc5de9": ["commons:tofu bulgogi"],
+    "protein_bun_f5c7db": ["commons:bún chay"],
+    "protein_palak_paneer_vegan_bdac46": ["commons:chana palak"],
+    "protein_tofu_braise_aux_champigno_c515dd": ["commons:braised tofu mushrooms"],
+    "rice_bigos_497b21": ["commons:vegetarian bigos"],
+    "rice_pad_krapow_63acfb": ["commons:pad kra pao tofu"],
+    "rice_plov_903de4": ["commons:vegetarian plov"],
+    "rice_poke_bowl_ee65ef": ["commons:tofu poke bowl"],
+    "salad_andine_au_fromage_vegan_566f05": ["commons:quinoa black bean salad"],
+    "salad_mexicaine_aux_haricots_949e62": ["commons:mexican bean salad"],
+    "side_brocoli_roti_sauce_gribic_694128": ["commons:roasted broccoli"],
+    "side_haricots_verts_a_la_greno_f1bdca": ["commons:green beans capers"],
+    "soup_bouillabaisse_vegetarienne_1d9c92": ["commons:vegetable bouillabaisse"],
+    "soup_haricots_au_lait_de_coco_207254": ["en:Maharagwe", "commons:beans coconut milk"],
+    "soup_hot_pot_e7fc15": ["commons:vegetarian hot pot"],
+    "stew_eggplant_classic_5d46a1": ["commons:eggplant stew"],
+    "wok_pad_krapow_vegetarien_565aa9": ["commons:pad kra pao vegetarian"],
+    "wok_seitan_poivrons_3f81c4": ["commons:seitan stir fry"],
+    "stew_seitan_champignons_moutarde_7ac502": ["commons:seitan stew"],
+    "salad_larb_champignons_2c7b40": ["commons:mushroom larb"],
+    "curry_ca_ri_chay_5d90c8": ["commons:cà ri chay"],
+    "noodle_vermicelles_tofu_citronnelle_8c33d1": ["commons:lemongrass tofu vermicelli"],
+    "protein_tofu_adobo_8d40f3": ["commons:tofu adobo"],
+    "salad_haricots_blancs_roquette_9c5b02": ["commons:white bean salad arugula"],
+    "entry_carpaccio_courgettes_citron_9a26d4": ["commons:zucchini carpaccio"],
+    "entry_roules_courgette_ricotta_c8a460": ["commons:involtini di zucchine"],
+    "brkf_full_breakfast_vegetarien_6e05b3": ["commons:vegetarian full breakfast"],
+    "side_salade_fenouil_cru_0b48e5": ["commons:fennel salad olives"],
+    "side_chou_rouge_pomme_noix_5d7c19": ["commons:red cabbage apple salad"],
+    "wrap_fajitas_champignons_5b9d02": ["commons:mushroom fajitas"],
+    "pasta_epinards_ricotta_citron_d40a6e": ["commons:pasta spinach ricotta"],
+    "bread_pita_pois_chiches_tzatziki_6b0e27": ["commons:chickpea pita"],
+    "brkf_toasts_patate_douce_cacahuete_5c71e3": ["commons:sweet potato toast"],
+    "stew_waterzooi_legumes_9c3a52": ["commons:vegetable waterzooi"],
+    "stew_pot_au_feu_legumes_4f80d7": ["commons:vegetable pot-au-feu"],
+    "tarte_tatin_legumes_racines_0d6b44": ["commons:vegetable tarte tatin"],
+    "side_topinambours_marrons_6f31b2": ["commons:jerusalem artichoke chestnuts"],
+    "protein_polpette_lenticchie_8d52c0": ["commons:lentil meatballs tomato sauce"],
+    "protein_roti_seitan_herbes_2f6d18": ["commons:seitan roast"],
+    "protein_tofu_chimichurri_haricots_5e93a7": ["commons:tofu chimichurri"],
+    "main_spargel_sauce_hollandaise_3d9f15": ["commons:Spargel Sauce hollandaise Kartoffeln"],
+    "stew_navarin_printanier_legumes_c47e90": ["commons:spring vegetable stew"],
+    "tofu_saute_asperges_mange_tout_9f4d21": ["commons:tofu asparagus snow peas"],
+    "tart_asperges_vertes_ricotta_2c85b3": ["commons:asparagus ricotta tart"],
+    "pasta_fave_piselli_pecorino_7d3e52": ["commons:pasta fava beans peas"],
+    "side_foul_akhdar_bi_zeit_5b9a63": ["commons:fresh fava beans olive oil"],
+    "breakfast_tartine_petits_pois_feta_9a4b72": ["commons:smashed peas toast"],
+    "main_soba_tofu_pak_choi_cacahuetes_4e81c2": ["commons:soba tofu bok choy"],
+    "main_dahl_express_poireau_epinards_9c3a7e": ["commons:red lentil dal spinach"],
+    "main_pois_chiches_kale_tahini_boulgour_7b2f41": ["commons:chickpeas kale tahini"],
+    "main_tempeh_erable_choux_bruxelles_2d9e60": ["commons:tempeh brussels sprouts"],
+    "main_seitan_poireaux_moutarde_5f0c38": ["commons:seitan leeks"],
+    "main_frittata_epinards_feta_8a4d17": ["commons:spinach feta frittata"],
+    "pasta_haricots_blancs_kale_parmesan_3e6b92": ["commons:pasta white beans kale"],
+    "main_chili_sin_carne_lentilles_express_6c1e05": ["commons:lentil chili"],
+    "main_tofu_croustillant_sesame_brocoli_0a7d53": ["commons:sesame tofu broccoli"],
+    "main_quesadillas_haricots_noirs_cheddar_b5e294": ["commons:black bean quesadilla"],
+    "salad_lentilles_chou_rouge_noix_feta_d40c8b": ["commons:lentil red cabbage salad"],
+    "soup_miso_soba_tofu_epinards_71f6aa": ["commons:miso soba soup"],
+    "brkf_tofu_brouille_champignons_epinards_e2c946": ["commons:tofu scramble mushrooms"],
+    "brkf_porridge_soja_cacahuete_chanvre_58bd03": ["commons:peanut butter banana oatmeal"],
+    "dess_poires_poelees_erable_noix_6f3b21": ["commons:pan fried pears"],
+    "dess_glace_minute_banane_cacao_9a52e7": ["commons:banana nice cream"],
+    "dess_pommes_poelees_crumble_avoine_c7e408": ["commons:sauteed apples oat crumble"],
+    "dess_agrumes_hiver_pistaches_fleur_oranger_14d9b3": ["commons:citrus salad pistachio"],
+    "main_potee_lentilles_chou_tofu_fume_8d1f52": ["commons:lentil cabbage stew"],
+    "main_pot_au_feu_seitan_legumes_hiver_3a6c94": ["commons:vegetable pot-au-feu"],
+    "main_curry_potimarron_pois_chiches_epinards_5c27e1": ["commons:pumpkin chickpea curry"],
+    "main_galettes_sarrasin_poireaux_emmental_e04b77": ["commons:buckwheat galette leek"],
+    "main_gnocchis_choux_bruxelles_sauge_noisettes_2b8a6d": ["commons:gnocchi brussels sprouts"],
+    "main_chou_fleur_roti_epices_tahini_6e93c0": ["commons:roasted cauliflower tahini"],
+    "side_topinambours_rotis_noisette_persil_8a2e10": ["commons:roasted jerusalem artichokes"],
+    "side_navets_carottes_glaces_erable_0f5b92": ["commons:glazed turnips carrots"],
+    "main_bourguignon_champignons_panais_4f2a81": ["commons:mushroom bourguignon"],
+    "main_choux_bruxelles_tofu_fume_puree_panais_8c5d13": ["commons:parsnip puree"],
+    "main_tajine_legumes_hiver_pois_chiches_2e9b70": ["commons:vegetable tagine"],
+    "main_chili_butternut_haricots_noirs_6b0e42": ["commons:butternut squash black bean chili"],
+    "soup_chou_fleur_celeri_rave_curry_3d7f50": ["commons:cauliflower soup"],
+    "side_chou_rouge_saute_balsamique_graines_7a91c4": ["commons:sauteed red cabbage"],
+    "dess_poires_pochees_vin_rouge_epices_5a1c8e": ["commons:poached pears red wine"],
+    "dess_salade_oranges_kiwis_menthe_9d3f27": ["commons:orange kiwi salad"],
+    "main_riz_saute_tofu_pak_choi_lowfodmap_1a4c7e": ["commons:tofu fried rice"],
+    "main_curry_tofu_coco_courgette_lowfodmap_5e2b90": ["commons:tofu coconut curry"],
+    "main_bowl_quinoa_legumes_rotis_feta_lowfodmap_8c3f14": ["commons:quinoa bowl roasted vegetables"],
+    "main_tortilla_pommes_de_terre_ciboulette_lowfodmap_2f8d61": ["en:Spanish omelette"],
+    "main_polenta_legumes_soleil_parmesan_lowfodmap_7b1e35": ["commons:creamy polenta vegetables"],
+    "main_vermicelles_riz_tofu_oeuf_cacahuetes_lowfodmap_4d6a28": ["commons:vegetarian pad thai"],
+    "main_tempeh_grille_pommes_persillees_haricots_lowfodmap_9e0c47": ["commons:grilled tempeh"],
+    "main_galettes_quinoa_carottes_tahini_lowfodmap_3c5b82": ["commons:quinoa patties"],
+    "main_oeufs_brouilles_epinards_cheddar_pdt_lowfodmap_6f2d19": ["commons:scrambled eggs spinach"],
+    "salad_riz_concombre_tomate_feta_lowfodmap_0b7e53": ["commons:rice salad feta"],
+    "soup_miso_vermicelles_tofu_pak_choi_lowfodmap_8d4a90": ["commons:miso soup tofu bok choy"],
+    "soup_veloute_carottes_gingembre_coco_lowfodmap_2e6f71": ["commons:carrot ginger soup"],
+    "soup_courgettes_pommes_de_terre_basilic_lowfodmap_5a9c03": ["commons:zucchini soup"],
+    "brkf_porridge_amande_fraises_graines_lowfodmap_7c1d58": ["commons:oatmeal strawberries"],
+    "dess_riz_coco_ananas_roti_lowfodmap_4b8e26": ["commons:coconut rice pudding pineapple"],
+    "dess_salade_ananas_kiwi_fraises_menthe_lowfodmap_9f3a12": ["commons:pineapple kiwi strawberry salad"],
 }
 
 
@@ -268,24 +389,24 @@ def slugify(t: str) -> str:
     return re.sub(r"-+", "-", t).strip("-")
 
 
-def commons_image(session: requests.Session, query: str) -> dict | None:
-    """Première photo libre d'une recherche Wikimedia Commons choisie à la main
-    (« commons:roasted brussels sprouts »), hors liste noire et viande/poisson : pour
-    les plats génériques qui n'ont pas d'article."""
+def commons_images(session: requests.Session, query: str, n: int = 1) -> list[dict]:
+    """Premières photos libres (n au plus) d'une recherche Wikimedia Commons
+    choisie à la main (« commons:roasted brussels sprouts »), hors liste noire et
+    viande/poisson : pour les plats génériques qui n'ont pas d'article."""
     blocked = F.load_blocklist()
+    out = []
     for c in F.search_commons(session, query):
         if " ".join(F.words(c["title"])) in blocked or F.rejected_for(f"{c['title']} {c['categories']}"):
             continue
         c["article"] = f"commons:{query}"
-        return c
-    return None
+        out.append(c)
+        if len(out) >= n:
+            break
+    return out
 
 
 def article_image(session: requests.Session, spec: str) -> dict | None:
-    """Image principale (libre) de l'article « langue:Titre », redirections suivies ;
-    « commons:requête » : recherche Commons (commons_image)."""
-    if spec.startswith("commons:"):
-        return commons_image(session, spec.split(":", 1)[1])
+    """Image principale (libre) de l'article « langue:Titre », redirections suivies."""
     lang, title = spec.split(":", 1)
     data = F.api_get(session, f"https://{lang}.wikipedia.org/w/api.php", {
         "action": "query", "format": "json", "titles": title, "redirects": "1",
@@ -302,7 +423,55 @@ def article_image(session: requests.Session, spec: str) -> dict | None:
     return None
 
 
-def stage(out: Path, only: list[str] | None) -> None:
+def spec_images(session: requests.Session, spec: str, n: int) -> list[dict]:
+    """Candidats d'une spec : n au plus pour « commons:requête », un pour un article."""
+    if spec.startswith("commons:"):
+        return commons_images(session, spec.split(":", 1)[1], n)
+    c = article_image(session, spec)
+    return [c] if c else []
+
+
+def alt_file(slug: str, k: int) -> str:
+    """Fichier du k-ième candidat (1 = slug.jpg)."""
+    return f"{slug}.jpg" if k == 1 else f"{slug}~{k}.jpg"
+
+
+def contact_sheets(out: Path, manifest: dict, per_sheet: int = 10) -> list[Path]:
+    """Planches de relecture : une ligne par recette, candidats numérotés."""
+    from PIL import Image, ImageDraw, ImageFont  # noqa: PLC0415
+    tw, th, label_h, pad = 300, 200, 34, 8
+    try:
+        font = ImageFont.truetype("arial.ttf", 15)
+    except OSError:
+        font = ImageFont.load_default()
+    items = list(manifest.items())
+    sheets = []
+    for start in range(0, len(items), per_sheet):
+        chunk = items[start:start + per_sheet]
+        ncol = max(len(m["alts"]) for _, m in chunk)
+        sheet = Image.new("RGB", (pad + ncol * (tw + pad), len(chunk) * (th + label_h + pad) + pad), "white")
+        draw = ImageDraw.Draw(sheet)
+        for row, (rid, m) in enumerate(chunk):
+            y = pad + row * (th + label_h + pad)
+            draw.text((pad, y), f"#{start + row + 1}  {m['recipe'][:80]}", fill="black", font=font)
+            draw.text((pad, y + 17), rid[:60], fill="gray", font=font)
+            for k, alt in enumerate(m["alts"], 1):
+                x = pad + (k - 1) * (tw + pad)
+                try:
+                    im = Image.open(out / alt["file"]).convert("RGB")
+                    im.thumbnail((tw, th))
+                    sheet.paste(im, (x, y + label_h))
+                except OSError:
+                    continue
+                draw.rectangle((x, y + label_h, x + 22, y + label_h + 20), fill="black")
+                draw.text((x + 6, y + label_h + 2), str(k), fill="white", font=font)
+        path = out / f"_planche_{start // per_sheet + 1:02d}.jpg"
+        sheet.save(path, quality=82)
+        sheets.append(path)
+    return sheets
+
+
+def stage(out: Path, only: list[str] | None, n_cand: int = 1) -> None:
     from backend.core.data_io import load_recipes  # noqa: PLC0415
     recipes = {r["id"]: r for r in load_recipes()}
     img_dir = F.OUT
@@ -324,60 +493,70 @@ def stage(out: Path, only: list[str] | None) -> None:
         if (img_dir / f"{slug}.jpg").exists():
             print(f"= {rid} : a déjà une photo")
             continue
-        cand, why = None, "aucun article illustré sous licence libre"
+        cands, why = [], "aucun article illustré sous licence libre"
         for spec in specs:
             if spec not in cache:
                 # Sous forte sollicitation, l'API répond 429 même après les
                 # reprises d'api_get : un « pas d'image » peut n'être qu'un refus.
                 for pause in (0, 8, 20):
                     time.sleep(pause or F.DELAY)
-                    cache[spec] = article_image(session, spec)
+                    cache[spec] = spec_images(session, spec, n_cand)
                     if cache[spec]:
                         break
-            c = cache[spec]
-            if not c:
+            for c in cache[spec]:
+                if " ".join(F.words(c["title"])) in blocked:
+                    why = f"{c['title']} déjà écartée"
+                    continue
+                reason = F.rejected_for(f"{c['title']} {c['categories']} {c['article']}")
+                if reason:
+                    why = f"{c['title']} : {reason}"
+                    continue
+                cands.append(c)
+            if cands:
+                break
+        alts = []
+        for c in cands:
+            name = alt_file(slug, len(alts) + 1)
+            if not (out / name).exists() and not F.download(session, c["download"], out / name):
                 continue
-            if " ".join(F.words(c["title"])) in blocked:
-                why = f"{c['title']} déjà écartée"
-                continue
-            reason = F.rejected_for(f"{c['title']} {c['categories']} {c['article']}")
-            if reason:
-                why = f"{c['title']} : {reason}"
-                continue
-            cand = c
-            break
-        if not cand:
-            print(f"-- {rid} : {why}")
+            alts.append({"file": name, **{
+                k: c[k] for k in ("source", "title", "author", "license", "page", "article")}})
+        if not alts:
+            print(f"-- {rid} : {why if not cands else 'téléchargement KO'}")
             continue
-        dest = out / f"{slug}.jpg"
-        if not dest.exists() and not F.download(session, cand["download"], dest):
-            print(f"!! {rid} : téléchargement KO")
-            continue
-        manifest[rid] = {"slug": slug, "recipe": r["titles"].get("fr"), **{
-            k: cand[k] for k in ("source", "title", "author", "license", "page", "article")}}
-        print(f"OK {rid} ← {cand['article']} ({cand['license']})")
+        manifest[rid] = {"slug": slug, "recipe": r["titles"].get("fr"), "alts": alts}
+        print(f"OK {rid} ← {alts[0]['article']} ({len(alts)} candidat(s))")
     (out / "_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1),
                                         encoding="utf-8")
-    print(f"\n{len(manifest)} photos à relire dans {out}")
+    sheets = contact_sheets(out, manifest) if manifest else []
+    print(f"\n{len(manifest)} recettes à relire dans {out} ({len(sheets)} planches)")
 
 
-def publish(src: Path, rejects: set[str]) -> None:
+def publish(src: Path, picks: dict[str, int], rejects: set[str]) -> None:
+    """Publie le candidat choisi (--pick id=k, 1 par défaut) ; les recettes
+    écartées mettent tous leurs candidats en liste noire."""
     manifest = json.loads((src / "_manifest.json").read_text(encoding="utf-8"))
     credits = F.load_credits()
     blocklist = json.loads(F.BLOCKLIST.read_text(encoding="utf-8")) if F.BLOCKLIST.exists() else []
     n = 0
+    # Une même photo peut sortir pour deux recettes : retenue pour l'une, elle
+    # n'entre pas en liste noire parce que l'autre est écartée.
+    chosen = {(m.get("alts") or [m])[picks.get(rid, 1) - 1]["title"]
+              for rid, m in manifest.items() if rid not in rejects}
     for rid, m in manifest.items():
+        alts = m.get("alts") or [{"file": f"{m['slug']}.jpg", **m}]   # ancien manifeste
         if rid in rejects:
-            if m["title"] not in blocklist:
-                blocklist.append(m["title"])
+            blocklist.extend(a["title"] for a in alts
+                             if a["title"] not in blocklist and a["title"] not in chosen)
             continue
+        alt = alts[picks.get(rid, 1) - 1]
         dest = F.OUT / f"{m['slug']}.jpg"
         if dest.exists():
             continue
-        shutil.copyfile(src / f"{m['slug']}.jpg", dest)
-        credits[m["slug"]] = {"recipe": m["recipe"], "source": m["source"], "title": m["title"],
-                              "author": m["author"], "license": m["license"],
-                              "page": m["page"], "query": m["article"]}
+        shutil.copyfile(src / alt["file"], dest)
+        credits[m["slug"]] = {"recipe": m["recipe"], "source": alt["source"], "title": alt["title"],
+                              "author": alt["author"], "license": alt["license"],
+                              "page": alt["page"], "query": alt["article"]}
         n += 1
     F.save_credits(credits)
     with open(F.BLOCKLIST, "w", encoding="utf-8", newline="\n") as fh:
@@ -394,12 +573,16 @@ def main() -> None:
     ap.add_argument("--only", nargs="*", help="ids de recette à traiter")
     ap.add_argument("--publish", type=Path, help="publier depuis ce dossier relu")
     ap.add_argument("--reject", nargs="*", default=[], help="ids écartés à la relecture")
+    ap.add_argument("--candidates", type=int, default=1,
+                    help="candidats par recherche Commons (planche de relecture)")
+    ap.add_argument("--pick", nargs="*", default=[], help="id=k : k-ième candidat retenu")
     args = ap.parse_args()
     sys.path.insert(0, str(ROOT))
     if args.stage:
-        stage(args.stage, args.only)
+        stage(args.stage, args.only, args.candidates)
     elif args.publish:
-        publish(args.publish, set(args.reject))
+        picks = {p.split("=")[0]: int(p.split("=")[1]) for p in args.pick}
+        publish(args.publish, picks, set(args.reject))
     else:
         ap.error("--stage DIR ou --publish DIR")
 
