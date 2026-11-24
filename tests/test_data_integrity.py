@@ -768,6 +768,47 @@ def test_legumineuses_cuites_pas_resolues_en_sec():
     assert not fautes, f"légumineuses cuites résolues vers une fiche sèche : {fautes[:10]}"
 
 
+def test_tous_les_ingredients_des_recettes_sont_lies():
+    """Chaque ligne de composition trouve une fiche nutritionnelle (ingrédient,
+    préparation maison base_*) ; seuls les renvois vers une recette servie à
+    côté (injera du shiro wot) en sont dispensés."""
+    from backend.engine.nutrition_engine import compute_nutrition
+    ids = {r["id"] for r in RECIPES}
+    orphelins = []
+    for r in RECIPES:
+        b: dict = {}
+        compute_nutrition(r, breakdown=b)
+        for c in r.get("composition", []):
+            t = c["ingredient"]
+            if t not in b and (t.startswith("base_") or t not in ids):
+                orphelins.append((r["id"], t))
+    assert not orphelins, orphelins[:10]
+
+
+def test_feuilles_de_vigne_en_saumure():
+    """ingredient_map_v2 envoyait vine_leaf (conserve, saumure) vers la feuille
+    crue (CNF 4855, 9 mg de sodium) au lieu de la conserve (CNF 4856, 2 853 mg)."""
+    from backend.engine.nutrition_engine import get_data
+    n = get_data.ingredients.resolve_nutrition("vine_leaf", use_cooked=True)
+    assert str(n.get("_source_id")) == "4856" and n["sodium_mg"] > 2000
+
+
+def test_ingredient_sur_deux_lignes_compte_deux_fois():
+    """10 g de coriandre dans la sauce + une poignée au service : avant le
+    2026-11-24, seule la dernière ligne (0 g) était comptée."""
+    from backend.engine.nutrition_engine import compute_nutrition
+    def recette(lignes):
+        return {"id": "t", "servings": 1, "timing": {"cook_min": 0},
+                "composition": [{"ingredient": "red_onion_raw", "quantity": q, "unit": u,
+                                 "meta": {"role": role}} for q, u, role in lignes]}
+    une = compute_nutrition(recette([(50, "g", "aromatic_base")]))
+    deux = compute_nutrition(recette([(50, "g", "aromatic_base"),
+                                      (None, "1 oignon", "serving_suggestion")]))
+    deux_pleines = compute_nutrition(recette([(50, "g", "aromatic_base"), (30, "g", "garnish")]))
+    assert deux["calories"] == une["calories"] > 0
+    assert deux_pleines["portion_g"] == 80
+
+
 def test_fromages_caille_maison_sur_fiche_de_reference():
     """Paneer & co : fiche queso fresco (pas le lactose du petit-lait égoutté)."""
     import json

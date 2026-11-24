@@ -284,7 +284,17 @@ def compute_nutrition(recipe: dict,
     is_hot_dish: bool = (recipe.get("timing", {}).get("cook_min") or 0) > 0
 
     ingredients = recipe.get("ingredients", [])
-    comp        = {c["ingredient"]: c for c in recipe.get("composition", [])}
+    # Un ingrédient peut figurer sur plusieurs lignes (10 g de coriandre dans
+    # la sauce, une poignée au service) : les quantités s'additionnent. Avant
+    # le 2026-11-24, seule la dernière ligne comptait (18 recettes : 50 g
+    # d'oignon rouge, herbes, sésame perdus). L'état de cuisson se lit sur la
+    # première ligne réellement cuisinée.
+    comp_lines: dict[str, list[dict]] = {}
+    for c in recipe.get("composition", []):
+        comp_lines.setdefault(c["ingredient"], []).append(c)
+    comp = {t: next((c for c in lines if (c.get("meta") or {}).get("role") != "serving_suggestion"),
+                    lines[0])
+            for t, lines in comp_lines.items()}
 
     if not ingredients and comp:
         ingredients = list(comp.keys())
@@ -353,12 +363,14 @@ def compute_nutrition(recipe: dict,
             else:
                 qty_g = 100.0
         else:
-            qty_g = _qty_to_g(token, comp_e)
-            # Bain de friture : 500 ml d'huile ne sont pas mangés. On ne compte
-            # que l'huile absorbée (FRYING_CAP_G par portion).
-            if _is_frying_bath(token, qty_g):
-                qty_g = min(qty_g, FRYING_CAP_G * srv)
-            qty_g *= _retained_fraction(meta)
+            qty_g = 0.0
+            for line in comp_lines[token]:
+                g = _qty_to_g(token, line)
+                # Bain de friture : 500 ml d'huile ne sont pas mangés. On ne compte
+                # que l'huile absorbée (FRYING_CAP_G par portion).
+                if _is_frying_bath(token, g):
+                    g = min(g, FRYING_CAP_G * srv)
+                qty_g += g * _retained_fraction(line.get("meta") or {})
         weight_g += qty_g
 
         # Facteur de forme (cru/cuit) via nutrition_form_engine (CDC_05)
