@@ -136,6 +136,10 @@ def generate_plan(
     # Anti-gaspillage : favorise les recettes qui finissent les ingrédients
     # entamés plus tôt dans la semaine (case du planning, cochée par défaut)
     anti_waste:      bool         = True,
+    # Semaine à budget fixe : coût consommé par portion maximal (€). Le
+    # planning le calcule (budget ÷ portions prévues) ; une recette au prix
+    # incomplet est écartée, faute de pouvoir garantir le budget.
+    max_portion_cost: float | None = None,
 ) -> dict:
     """
     Génère un plan de repas hebdomadaire (7 jours × 2 repas).
@@ -236,6 +240,32 @@ def generate_plan(
             filtered.append(r)
         recipes = filtered
 
+    if max_portion_cost and recipes:
+        from backend.engine.planning_engine.budget import portion_costs
+        from backend.core.data_io import load_nutrition_graph as _lng
+        costs = portion_costs()
+        ng_b = _lng() or {}
+
+        def _real_meal(r):
+            # Petit budget : « Riz blanc » ou « Pommes de terre sautées » (plats
+            # principaux à 5 g de protéines) passaient en tête. Un plat principal
+            # doit faire un repas : 10 g de protéines et 250 kcal par portion.
+            if str(r.get("dish_type") or "").lower() != "main":
+                return True
+            n = ng_b.get(r.get("id")) or {}
+            return float(n.get("protein") or 0) >= 10 and float(n.get("calories") or 0) >= 250
+
+        priced = sorted((r for r in recipes
+                         if costs.get(r.get("id"), (0, False))[1] and _real_meal(r)),
+                        key=lambda r: costs[r.get("id")][0])
+        affordable = [r for r in priced if costs[r.get("id")][0] <= max_portion_cost]
+        # Une semaine sans plat répété : 14 recettes (déjeuner et dîner) au moins
+        need = min(len(_DAYS) * len(_MEALS), len(priced))
+        if not priced or len(affordable) < need:
+            return {"meta": {"error": "budget_too_low",
+                             "min_portion_cost": round(costs[priced[need - 1].get("id")][0], 2) if priced else None}}
+        recipes = affordable
+
     if not recipes:
         logger.warning("generate_plan: aucune recette disponible après filtres")
         return {"meta": {"error": "no_recipes", "filters": {"diet": diet, **(filters or {})}}}
@@ -310,6 +340,8 @@ def generate_plan(
                 # trempage, marinade ou repos de 4 h et plus : à lancer la veille
                 "prep_ahead": ((chosen.get("timing") or {}).get("prep_passive_min") or 0) >= 240,
             }
+            if max_portion_cost:
+                plan[day][meal]["cost_per_portion"] = costs[chosen.get("id")][0]
             used_ids.add(chosen.get("id"))
 
             # Ingrédients entamés cette semaine (ceux qui se gâchent seulement)

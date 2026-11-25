@@ -125,6 +125,7 @@ def mealplan(
     exclude_ids:      Optional[str] = None,
     diversity:        float         = Query(default=0.5, ge=0.0, le=1.0),
     anti_waste:       bool          = Query(default=True, description="Réutiliser les ingrédients entamés dans la semaine"),
+    max_portion_cost: Optional[float] = Query(default=None, gt=0, le=100, description="Budget : coût max par portion (€)"),
     extra:            dict          = Depends(_plan_filters),
     user: dict | None = Depends(get_optional_user),
 ):
@@ -170,6 +171,7 @@ def mealplan(
         exclude_ids=exclude_list or None,
         diversity=diversity,
         anti_waste=anti_waste,
+        max_portion_cost=max_portion_cost,
         filters=extra or None,
     )
 
@@ -337,6 +339,20 @@ def seasonal(month: int = Query(..., ge=1, le=12)):
 
 class DayNutritionRequest(BaseModel):
     plan: dict = Field(..., description="Plan hebdo {lundi:{lunch:{recipes:[...]}}}")
+
+
+class WeekCostRequest(BaseModel):
+    plan: dict = Field(..., description="Plan hebdo {lundi:{lunch:{skip, servings, recipes:[{id}]}}}")
+
+
+@router.post("/week_cost")
+def week_cost_route(payload: WeekCostRequest, user: dict | None = Depends(get_optional_user)):
+    """
+    Coût de la semaine planifiée : coût consommé (portions × coût par portion,
+    base du budget) et coût des courses en emballages entiers. **Public.**
+    """
+    from backend.engine.planning_engine.budget import week_cost
+    return week_cost(payload.plan)
 
 
 class WeekBalanceRequest(BaseModel):

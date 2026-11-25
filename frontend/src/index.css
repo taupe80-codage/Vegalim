@@ -5536,3 +5536,20 @@ html[data-theme="dark"] .rv-stars-fg { color: #f0b429; }
 }
 .week-reco-amount { font-size: 12px; color: var(--mut); }
 .week-note { font-size: 12px; color: var(--mut); margin-top: 12px; line-height: 1.5; }
+
+/* ── Planning : budget de la semaine ── */
+.plan-budget-body { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.plan-budget-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 13px; padding-left: 24px; }
+.plan-budget-row .plan-diversity-hint { flex-basis: 100%; }
+.plan-budget-input {
+  width: 80px; padding: 4px 8px; border-radius: 6px; border: 1px solid var(--brd);
+  background: var(--bg); color: var(--fg); font: inherit; font-size: 14px;
+}
+.plan-cost {
+  background: var(--sur); border: 1px solid var(--brd); border-radius: 10px;
+  padding: 10px 14px; margin-bottom: 14px; display: flex; flex-direction: column; gap: 4px; font-size: 14px;
+}
+.plan-cost-main { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+.plan-cost-meta { font-size: 12px; color: var(--mut); line-height: 1.5; }
+.plan-cost-ok { font-size: 12px; font-weight: 600; color: #2ea043; }
+.plan-cost-over { font-size: 12px; font-weight: 600; color: #d29922; }

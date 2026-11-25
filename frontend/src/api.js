@@ -154,6 +154,7 @@ export const planning = {
   },
   shoppingList:            (payload) => post('/planning/shopping_list', payload),
   weekBalance:             (payload) => post('/planning/week_balance', payload),
+  weekCost:                (payload) => post('/planning/week_cost', payload),
   shoppingListFromRecipes: (payload) => post('/planning/shopping_list_from_recipes', payload),
   updatePrice: (ingredient_key, package_label, new_price) =>
     put(`/planning/prices/${encodeURIComponent(ingredient_key)}`, { package_label, new_price }),

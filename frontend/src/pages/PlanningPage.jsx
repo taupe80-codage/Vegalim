@@ -10,7 +10,7 @@
  *  • Les filtres globaux sont prédominants et s'appliquent à toute la génération
  */
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { useToast } from '../ToastContext';
 import { createPortal } from 'react-dom';
 import { planning as planningApi, recipes as recipesApi } from '../api';
@@ -188,6 +188,11 @@ function createDefaultPlan() {
       p[dk][m] = { dishTypes:[...d.dishTypes], servings:d.servings, skip:false, recipes:[] };
   }
   return p;
+}
+
+// Montant en euros, à la française (« 12,50 € »)
+function fmtEur(v) {
+  return `${(Math.round((Number(v) || 0) * 100) / 100).toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`;
 }
 
 function hasAnyRecipes(plan) {
@@ -955,6 +960,13 @@ export default function PlanningPage() {
   const [antiWaste, setAntiWaste] = useState(() => {
     try { return localStorage.getItem('alim_plan_antiwaste') !== '0'; } catch { return true; }
   });
+  // Semaine à budget fixe (décoché par défaut) : montant en € pour la semaine
+  const [budgetOn, setBudgetOn] = useState(() => {
+    try { return !!JSON.parse(localStorage.getItem('alim_plan_budget') || '{}').on; } catch { return false; }
+  });
+  const [budgetEur, setBudgetEur] = useState(() => {
+    try { return Number(JSON.parse(localStorage.getItem('alim_plan_budget') || '{}').eur) || 30; } catch { return 30; }
+  });
   const [openSects, setOpenSects] = useState(new Set(['saison','regime']));
 
   // ── Repas actifs (persistants) ────────────────────────────────────────────
@@ -1032,6 +1044,41 @@ export default function PlanningPage() {
     try{localStorage.setItem('alim_plan_antiwaste', antiWaste ? '1' : '0');}catch{ /* localStorage indisponible */ }
   },[antiWaste]);
 
+  useEffect(()=>{
+    try{localStorage.setItem('alim_plan_budget', JSON.stringify({on: budgetOn, eur: budgetEur}));}catch{ /* localStorage indisponible */ }
+  },[budgetOn, budgetEur]);
+
+  // Portions prévues (créneaux actifs non sautés × plats du créneau × convives) :
+  // le budget de la semaine est réparti en un plafond par portion.
+  const plannedPortions = useMemo(() => {
+    let n = 0;
+    for (const dk of DAYS_KEY) for (const m of MEAL_ORDER) {
+      if (!enabledMeals[m]) continue;
+      const slot = plan?.[dk]?.[m];
+      if (slot?.skip) continue;
+      const dts = slot?.dishTypes || MEAL_DEFAULTS[m].dishTypes;
+      n += (slot?.servings || MEAL_DEFAULTS[m].servings) * dts.length;
+    }
+    return n;
+  }, [plan, enabledMeals]);
+  const portionCap = budgetOn && budgetEur > 0 && plannedPortions > 0
+    ? Math.floor(budgetEur / plannedPortions * 100) / 100 : null;
+
+  // Coût de la semaine (consommé, et courses en emballages entiers)
+  const [weekCost, setWeekCost] = useState(null);
+  const costKey = JSON.stringify(planToShoppingFormat(plan || {}));
+  useEffect(() => {
+    if (!hasAnyRecipes(plan)) { setWeekCost(null); return undefined; }
+    let cancelled = false;
+    const t = setTimeout(() => {
+      planningApi.weekCost({ plan })
+        .then(res => { if (!cancelled) setWeekCost(res); })
+        .catch(() => { if (!cancelled) setWeekCost(null); });
+    }, 400);
+    return () => { cancelled = true; clearTimeout(t); };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [costKey]);
+
   // ── Helpers UI ────────────────────────────────────────────────────────────
   const toggleSect    = id => setOpenSects(p=>{const n=new Set(p);n.has(id)?n.delete(id):n.add(id);return n;});
   const toggleChecked      = useCallback(id=>setChecked(p=>{const n=new Set(p);n.has(id)?n.delete(id):n.add(id);return n;}),[]);
@@ -1072,7 +1119,8 @@ export default function PlanningPage() {
       // Une requête par combinaison distincte (type de plat × filtres du
       // créneau) : les créneaux aux mêmes filtres partagent la même semaine.
       const slotKey = (slot, dt, m) =>
-        JSON.stringify({ ...slotApiParams(fs, slot ?? MEAL_DEFAULTS[m], month), diversity, anti_waste: antiWaste, dish_type: dt });
+        JSON.stringify({ ...slotApiParams(fs, slot ?? MEAL_DEFAULTS[m], month), diversity, anti_waste: antiWaste,
+                         max_portion_cost: portionCap ?? undefined, dish_type: dt });
       const neededKeys = new Set();
       for(const dk of DAYS_KEY)
         for(const m of active){
@@ -1116,6 +1164,13 @@ export default function PlanningPage() {
       // les créneaux concernés restaient vides sans explication
       if (results.some(r => r?.meta?.error === 'no_recipes'))
         setError('Aucune recette ne correspond à certains filtres : les créneaux concernés sont restés vides. Élargissez les filtres (santé, origines, allergènes…).');
+      // Budget : aucune recette assez bon marché pour certains créneaux
+      const tooLow = results.filter(r => r?.meta?.error === 'budget_too_low');
+      if (tooLow.length) {
+        const minCost = Math.max(...tooLow.map(r => r.meta.min_portion_cost || 0));
+        setError(`Budget trop serré : pour une semaine de vrais repas sans plat répété, comptez au moins ${fmtEur(minCost)} la portion, `
+          + `soit ${fmtEur(Math.ceil(minCost * plannedPortions))} pour ${plannedPortions} portions. Augmentez le budget, réduisez les portions ou retirez des repas.`);
+      }
     } catch(err){
       setError(err.message);
     } finally {
@@ -1144,6 +1199,7 @@ export default function PlanningPage() {
         ...slotApiParams(fs, slot, month),
         dish_type:    dt,
         exclude_ids:  usedIds.length?usedIds:undefined,
+        max_portion_cost: portionCap ?? undefined,   // le remplacement respecte le budget
       });
       const dd=result[dayKey]||{};
       const newR=dd.lunch||dd.dinner;
@@ -1158,7 +1214,7 @@ export default function PlanningPage() {
       }
     }catch(err){console.error('replace:',err.message);}
     finally{setReplacing(null);}
-  },[plan, month, fs]);
+  },[plan, month, fs, portionCap]);
 
   // ── Recherche manuelle ────────────────────────────────────────────────────
   const handleSearchSelect = useCallback((recipe)=>{
@@ -1392,6 +1448,42 @@ export default function PlanningPage() {
             </HelpTip>
           </div>
 
+          {/* ── Budget de la semaine ── */}
+          <div className="plan-antiwaste plan-budget">
+            <div className="plan-budget-body">
+              <label className="plan-antiwaste-label">
+                <input type="checkbox" checked={budgetOn}
+                  onChange={e => setBudgetOn(e.target.checked)} />
+                <span><strong>💶 Budget de la semaine</strong></span>
+              </label>
+              {budgetOn && (
+                <div className="plan-budget-row">
+                  <input type="number" min={1} max={1000} step={1} inputMode="decimal"
+                    className="plan-budget-input" value={budgetEur}
+                    onChange={e => setBudgetEur(Math.max(0, Number(e.target.value) || 0))}
+                    aria-label="Budget de la semaine en euros" />
+                  <span>€</span>
+                  <span className="plan-diversity-hint">
+                    {portionCap
+                      ? `≈ ${fmtEur(portionCap)} par portion pour ${plannedPortions} portions`
+                      : 'Activez au moins un repas.'}
+                  </span>
+                </div>
+              )}
+            </div>
+            <HelpTip label="Budget de la semaine">
+              Le budget est réparti sur les portions prévues (repas actifs × plats × convives) :
+              chaque recette retenue coûte au plus ce montant par portion, la semaine tient donc
+              dans le budget. Les prix sont ceux du catalogue (relevés en supermarché), pour la
+              quantité réellement utilisée.
+              <br /><br />
+              Les courses coûtent souvent plus que le budget la première fois : on achète des
+              emballages entiers (un sachet de riz, un pot d'épices) qui resservent les semaines
+              suivantes. Le récapitulatif au-dessus du planning distingue les produits frais du
+              reste.
+            </HelpTip>
+          </div>
+
           {/* ── Bouton générer ── */}
           <button className="frigo-search-btn" onClick={generatePlan} disabled={loading}
             style={{width:'100%',marginTop:8}}>
@@ -1424,6 +1516,29 @@ export default function PlanningPage() {
                 onClick={()=>setView('shopping')}>
                 🛒 {shopping?`Courses (${(shopping.items||[]).length})` : 'Liste de courses'}
               </button>
+            </div>
+          )}
+
+          {/* ── Coût de la semaine ── */}
+          {planHasRecipes && weekCost && weekCost.portions > 0 && (
+            <div className="plan-cost">
+              <div className="plan-cost-main">
+                <span>💶 Coût de la semaine : <strong>{fmtEur(weekCost.consumed_eur)}</strong></span>
+                <span className="plan-cost-meta">
+                  {weekCost.portions} portions · {fmtEur(weekCost.per_portion_eur)} la portion
+                </span>
+                {budgetOn && budgetEur > 0 && (
+                  weekCost.consumed_eur <= budgetEur + 0.005
+                    ? <span className="plan-cost-ok">✓ dans le budget de {fmtEur(budgetEur)}</span>
+                    : <span className="plan-cost-over">⚠ {fmtEur(weekCost.consumed_eur - budgetEur)} au-dessus du budget</span>
+                )}
+              </div>
+              <div className="plan-cost-meta">
+                Courses : ≈ {fmtEur(weekCost.shopping_fresh_eur)} de produits frais
+                {weekCost.shopping_keeps_eur > 0 && <>, et jusqu'à {fmtEur(weekCost.shopping_keeps_eur)} de produits
+                qui se conservent si le placard est vide (épices, riz, légumes secs, huile…)</>}.
+                {weekCost.unpriced?.length > 0 && ` ${weekCost.unpriced.length} recette(s) au prix incomplet : coût minimum.`}
+              </div>
             </div>
           )}
 
