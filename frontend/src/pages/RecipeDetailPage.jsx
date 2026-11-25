@@ -944,6 +944,10 @@ export default function RecipeDetailPage({ onAuthClick }) {
         {/* Instructions */}
         <div className="detail-instructions">
           <h3>Préparation</h3>
+          {/* Matériel déduit des étapes (backend/engine/equipment.py) */}
+          {recipe.equipment_needed?.length > 0 && (
+            <p className="equipment-line">🍳 Matériel : {recipe.equipment_needed.join(', ')}</p>
+          )}
           {showVariant && variant?.substitutions?.length > 0 && (
             <p className="variant-steps-note" role="note">
               {/* Les étapes sont réécrites par le serveur ; les œufs entiers cuits ou cassés

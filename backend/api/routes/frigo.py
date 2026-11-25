@@ -391,6 +391,8 @@ def fridge_suggestions(payload: FridgeRequest, request: Request,
             "diet_flags":     recipe.get("diet_flags", {}),
             "technique":      recipe.get("technique", []),
             "total_time_min": recipe.get("timing", {}).get("total_min"),
+            "needs_oven":     _needs(recipe)[0],
+            "needs_blender":  _needs(recipe)[1],
 
             # ── Frigo spécifique ──────────────────────────────────────────
             "completeness":   completeness,
@@ -490,10 +492,6 @@ import re as _re
 import unicodedata as _ud
 
 MIN_MAIN_SHARE = 0.15     # l'aliment pèse au moins 15 % du plat (hors basiques)…
-_OVEN = _re.compile(r"\b(four|enfourn\w*|pr[ée]chauff\w*|gratiner|gratinez)\b", _re.I)
-_BLEND = _re.compile(r"\b(mix(er|ez|é|ée|és|ées)|mixeur|blender|robot|mouliner|moulinez)\b", _re.I)
-_OVEN_EQ = {"four", "plat_gratin", "moule_tarte", "plaque_four", "plaques_four"}
-_BLEND_EQ = {"mixeur", "mixeur_plongeant", "robot_pâtissier", "blender"}
 
 
 class QuickRequest(BaseModel):
@@ -512,11 +510,9 @@ def _fold(text: str) -> str:
 
 
 def _needs(recipe: dict) -> tuple[bool, bool]:
-    """(four, mixeur) d'après le matériel listé et le texte des étapes (le
-    matériel n'est renseigné que pour la moitié des recettes)."""
-    text = " ".join(recipe.get("instructions") or [])
-    eq = {str(e).lower() for e in recipe.get("equipment") or []}
-    return (bool(_OVEN.search(text) or eq & _OVEN_EQ), bool(_BLEND.search(text) or eq & _BLEND_EQ))
+    """(four, mixeur) : backend/engine/equipment.py (matériel déclaré + étapes)."""
+    from backend.engine.equipment import needs_oven, needs_blender
+    return needs_oven(recipe), needs_blender(recipe)
 
 
 def _in_title(label: str, title: str) -> bool:

@@ -19,7 +19,21 @@ export const DIET_OPTIONS = [
 export const DIET_EXTRA_OPTIONS = [
   { value: 'low_sugar',  label: '🍬 Peu sucré (< 5 g)' },
   { value: 'low_sodium', label: '🧂 Peu salé (≤ 120 mg sodium / 100 g)' },
+  // Matériel (backend/engine/equipment.py : déduit des étapes)
+  { value: 'no_oven',    label: '🔥 Sans four' },
+  { value: 'no_blender', label: '🌀 Sans mixeur' },
 ];
+
+// Même lecture des étapes que backend/engine/equipment.py, pour les listes
+// filtrées dans la page (astro, cycle) dont le serveur ne dit pas le matériel
+const _OVEN_RE  = /\b(four|enfourn\w*|pr[ée]chauff\w*|gratiner|gratinez)\b/i;
+const _BLEND_RE = /\b(mix(er|ez|é|ée|és|ées)|mixeur|blender|robot|mouliner|moulinez)(?![a-zà-ÿ])/i;
+function _needs(r, flag, re) {
+  if (typeof r[flag] === 'boolean') return r[flag];
+  if (Array.isArray(r.equipment_needed)) return r.equipment_needed.includes(flag === 'needs_oven' ? 'four' : 'mixeur');
+  const text = (r.instructions || []).join(' ');
+  return text ? re.test(text) : false;
+}
 
 export const SEASON_OPTIONS = [
   { value: 'spring', label: '🌸 Printemps' },
@@ -920,6 +934,8 @@ export function filtersToApiParams({
 
   if (de.has('low_sugar'))  p.low_sugar  = true;
   if (de.has('low_sodium')) p.low_sodium = true;
+  if (de.has('no_oven'))    p.no_oven    = true;
+  if (de.has('no_blender')) p.no_blender = true;
 
   if (season)     p.season     = season;
   if (difficulty) p.difficulty = difficulty;
@@ -993,6 +1009,8 @@ export function localFilterRecipes(recipes, { diet, dietExtras, season, difficul
 
   if (dietExtras.has('low_sugar'))  f = f.filter(r => r.health_scores?.low_sugar  || r.diet_flags?.low_sugar);
   if (dietExtras.has('low_sodium')) f = f.filter(r => r.health_scores?.low_sodium || r.diet_flags?.low_sodium);
+  if (dietExtras.has('no_oven'))    f = f.filter(r => !_needs(r, 'needs_oven', _OVEN_RE));
+  if (dietExtras.has('no_blender')) f = f.filter(r => !_needs(r, 'needs_blender', _BLEND_RE));
 
   if (season) {
     f = f.filter(r => {

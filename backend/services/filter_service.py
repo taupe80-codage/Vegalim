@@ -522,6 +522,9 @@ def apply_filters(
     high_zinc:             bool        = False,
     source_zinc:           bool        = False,
     high_minerals:         bool        = False,   # riche en au moins un minéral
+    # ── Matériel (backend/engine/equipment.py, déduit des étapes) ──────────────────
+    no_oven:               bool        = False,
+    no_blender:            bool        = False,
     high_omega3:           bool        = False,
     source_omega3:         bool        = False,
     antioxidant_rich:      bool        = False,
@@ -752,6 +755,12 @@ def apply_filters(
     if max_time is not None:
         result = [r for r in result
                   if (r.get("timing", {}).get("total_min") or 999) <= max_time]
+
+    # ── Matériel : sans four / sans mixeur ────────────────────────────────────
+    if no_oven or no_blender:
+        from backend.engine.equipment import needs_oven, needs_blender
+        result = [r for r in result
+                  if not (no_oven and needs_oven(r)) and not (no_blender and needs_blender(r))]
 
     # ── Difficulté ────────────────────────────────────────────────────────────
     # Alias : le frontend envoie 'hard', les données stockent 'advanced'.

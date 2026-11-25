@@ -14,20 +14,26 @@ from pathlib import Path
 # ── Contrats des routes ───────────────────────────────────────────────────────
 
 def test_routes_all_have_docstring():
-    """Toutes les routes API ont une docstring pour Swagger."""
-    import re
+    """Toutes les routes API ont une docstring pour Swagger.
+
+    Analyse syntaxique (ast) : la recherche de « \"\"\" » dans les 2 000
+    caractères suivant le décorateur échouait dès qu'une route avait beaucoup
+    de paramètres, et acceptait la docstring de la fonction suivante.
+    """
+    import ast
     missing = []
     for f in sorted(Path("backend/api/routes").glob("*.py")):
-        content = f.read_text(encoding="utf-8", errors="ignore")
-        # Trouver chaque @router.xxx et vérifier qu'une docstring suit
-        for m in re.finditer(r"@router\.[a-z]+", content):
-            block = content[m.start():m.start() + 2000]
-            fn_m  = re.search(r"def (\w+)", block)
-            if not fn_m:
+        tree = ast.parse(f.read_text(encoding="utf-8"))
+        for node in ast.walk(tree):
+            if not isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
                 continue
-            fn_name = fn_m.group(1)
-            if '"""' not in block:
-                missing.append(f"{f.name}:{fn_name}")
+            is_route = any(
+                isinstance(d, ast.Call) and isinstance(d.func, ast.Attribute)
+                and isinstance(d.func.value, ast.Name) and d.func.value.id == "router"
+                for d in node.decorator_list
+            )
+            if is_route and not ast.get_docstring(node):
+                missing.append(f"{f.name}:{node.name}")
     assert not missing, "Routes sans docstring: " + ", ".join(missing)
 
 def test_all_admin_routes_protected():

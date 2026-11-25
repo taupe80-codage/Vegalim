@@ -98,6 +98,8 @@ class SearchRequest(BaseModel):
     high_zinc:            bool         = Field(default=False)
     source_zinc:          bool         = Field(default=False)
     high_minerals:        bool         = Field(default=False, description="Riche en au moins un minéral")
+    no_oven:              bool         = Field(default=False, description="Sans four")
+    no_blender:           bool         = Field(default=False, description="Sans mixeur")
     high_omega3:          bool         = Field(default=False)
     source_omega3:        bool         = Field(default=False)
     antioxidant_rich:     bool         = Field(default=False)
@@ -145,6 +147,8 @@ def list_recettes(
     cycle_phase:  Optional[str] = Query(default=None, description="menstrual | follicular | ovulatory | luteal"),
     menopause:    bool          = Query(default=False, description="Calcium, protéines, magnésium, soja/lin, oméga-3 : ≥ 2 critères"),
     include_components: bool    = Query(default=False, description="Inclure les sous-recettes"),
+    no_oven:      bool          = Query(default=False, description="Sans four"),
+    no_blender:   bool          = Query(default=False, description="Sans mixeur"),
     sort:         str           = Query(default="iconic_score"),
 ):
     """Liste paginée des recettes avec filtres combinables. **Public.**"""
@@ -179,6 +183,8 @@ def list_recettes(
         astro_element=astro_element,
         moon_phase=moon_phase,
         cycle_phase=cycle_phase,
+        no_oven=no_oven,
+        no_blender=no_blender,
     )
     return {
         "total":   total,
@@ -377,6 +383,9 @@ def get_recette(recipe_id: str, request: Request):
         result["diabetes_watch"] = diabetes_watch(recipe)
     except Exception as e:  # la fiche reste servie sans l'information
         logger.warning("diabetes_watch (fiche) échoué : %s", e)
+    # Matériel nécessaire, déduit des étapes (le champ equipment manque souvent)
+    from backend.engine.equipment import recipe_equipment
+    result["equipment_needed"] = recipe_equipment(recipe)
     # La fiche sait d'avance si une version vegan fiable existe : sinon, pas de bouton
     if not (recipe.get("diet_flags") or {}).get("vegan"):
         try:
@@ -463,6 +472,7 @@ def recherche(
         high_potassium=req.high_potassium,   good_source_potassium=req.good_source_potassium,
         high_zinc=req.high_zinc,             source_zinc=req.source_zinc,
         high_minerals=req.high_minerals,
+        no_oven=req.no_oven,                 no_blender=req.no_blender,
         high_omega3=req.high_omega3,         source_omega3=req.source_omega3,
         antioxidant_rich=req.antioxidant_rich,
         astro_element=req.astro_element, moon_phase=req.moon_phase,
