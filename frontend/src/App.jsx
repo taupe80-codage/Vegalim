@@ -32,6 +32,7 @@ import ContributePage    from './pages/ContributePage';
 import MyRecipesPage     from './pages/MyRecipesPage';
 import ModerationPage    from './pages/ModerationPage';
 import NotificationsPage from './pages/NotificationsPage';
+import SurPlacePage from './pages/SurPlacePage';
 import { Link }          from './Router';
 import './index.css';
 
@@ -44,6 +45,7 @@ function PageDispatcher({ onAuthClick }) {
     case 'home':      return <HomePage />;
     case 'recipe':    return <RecipeDetailPage onAuthClick={onAuthClick} />;
     case 'frigo':     return <FrigoPage />;
+    case 'sur-place': return <SurPlacePage />;
     case 'planning':  return <PlanningPage />;
     case 'nutrition': return <NutritionPage />;
     case 'profil':    return <ProfilePage onAuthClick={onAuthClick} />;

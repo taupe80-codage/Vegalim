@@ -8,7 +8,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { frigo as frigoApi, ingredients as ingApi } from '../api';
-import { navigate } from '../Router';
+import { navigate, Link } from '../Router';
 import { RecipeVisual } from '../components/RecipeCard';
 import { useSeasonNow, isInSeason } from '../seasonNow';
 import {
@@ -524,6 +524,8 @@ export default function FrigoPage() {
         <p className="page-sub">
           Sélectionnez les ingrédients que vous avez — on vous dit quoi cuisiner.
         </p>
+        {/* Hors de chez soi : saisie rapide de l'aliment principal */}
+        <Link to="/sur-place" className="frigo-surplace-link">⚡ Pas chez vous ? Mode « Sur place » : un aliment, ses recettes</Link>
       </div>
 
       {/* ── Bloc filtres recette ───────────────────────────────────────────── */}

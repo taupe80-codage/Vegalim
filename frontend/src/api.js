@@ -125,6 +125,7 @@ export const recipes = {
 export const frigo = {
   suggestions: (payload) => post('/frigo/suggestions', payload),
   manquants:   (payload) => post('/frigo/manquants',   payload),
+  rapide:      (payload) => post('/frigo/rapide',      payload),
   /** Retourne {covered, uncovered} pour une liste de clés UI */
   coverage:    (keys)    => get(`/frigo/coverage?keys=${keys.join(',')}`),
 };

@@ -60,6 +60,7 @@ const ROUTES = [
   { pattern: '/',            page: 'home'       },
   { pattern: '/recette/:id', page: 'recipe'     },
   { pattern: '/frigo',       page: 'frigo'      },
+  { pattern: '/sur-place',   page: 'sur-place'  },
   { pattern: '/planning',    page: 'planning'   },
   { pattern: '/nutrition',   page: 'nutrition'  },
   { pattern: '/profil',      page: 'profil'     },

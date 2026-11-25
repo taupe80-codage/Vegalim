@@ -4,6 +4,7 @@ routes/frigo.py — Mon frigo : suggestions basées sur les ingrédients disponi
 Routes :
   POST /frigo/suggestions  — recettes réalisables avec les ingrédients fournis (public)
   POST /frigo/manquants    — ingrédients manquants pour une recette cible (authentifié)
+  POST /frigo/rapide       — « Sur place » : recettes où l'aliment donné est la vedette (public)
 """
 import logging
 logger = logging.getLogger(__name__)
@@ -476,4 +477,124 @@ def missing_ingredients(payload: MissingRequest, request: Request,
             {"id": iid, "name_fr": full_name_fr(ings_dict[iid], iid) if iid in ings_dict else iid}
             for iid in sorted(assumed)
         ],
+    }
+
+
+# ── Sur place : l'aliment principal, sans frigo enregistré (2026-11-25) ──────
+# Hors de chez soi (location, amis, marché) : on donne l'aliment qu'on a
+# (« courgette », « pois chiches ») et l'on veut les recettes où il est la
+# vedette, de la plus « à la courgette » à la moins. Le reste de la recette ne
+# filtre pas ; seuls le matériel (four, mixeur) et le temps peuvent le faire.
+
+import re as _re
+import unicodedata as _ud
+
+MIN_MAIN_SHARE = 0.15     # l'aliment pèse au moins 15 % du plat (hors basiques)…
+_OVEN = _re.compile(r"\b(four|enfourn\w*|pr[ée]chauff\w*|gratiner|gratinez)\b", _re.I)
+_BLEND = _re.compile(r"\b(mix(er|ez|é|ée|és|ées)|mixeur|blender|robot|mouliner|moulinez)\b", _re.I)
+_OVEN_EQ = {"four", "plat_gratin", "moule_tarte", "plaque_four", "plaques_four"}
+_BLEND_EQ = {"mixeur", "mixeur_plongeant", "robot_pâtissier", "blender"}
+
+
+class QuickRequest(BaseModel):
+    ingredients: list[str] = Field(..., min_length=1, max_length=10,
+                                   description="Aliments disponibles sur place (noms en français)")
+    no_oven:     bool          = Field(default=False, description="Pas de four")
+    no_blender:  bool          = Field(default=False, description="Pas de mixeur")
+    max_time:    Optional[int] = Field(default=None, ge=5, le=600, description="Temps total max (min)")
+    diet:        Optional[str] = None
+    limit:       int           = Field(default=30, ge=1, le=100)
+
+
+def _fold(text: str) -> str:
+    t = _ud.normalize("NFD", (text or "").lower().replace("œ", "oe"))
+    return "".join(c for c in t if _ud.category(c) != "Mn")
+
+
+def _needs(recipe: dict) -> tuple[bool, bool]:
+    """(four, mixeur) d'après le matériel listé et le texte des étapes (le
+    matériel n'est renseigné que pour la moitié des recettes)."""
+    text = " ".join(recipe.get("instructions") or [])
+    eq = {str(e).lower() for e in recipe.get("equipment") or []}
+    return (bool(_OVEN.search(text) or eq & _OVEN_EQ), bool(_BLEND.search(text) or eq & _BLEND_EQ))
+
+
+def _in_title(label: str, title: str) -> bool:
+    words = [w for w in _re.split(r"[^a-z]+", _fold(label)) if len(w) > 2]
+    t = _fold(title)
+    return bool(words) and all(_re.search(rf"\b{_re.escape(w.rstrip('sx'))}(s|x)?\b", t) for w in words)
+
+
+@router.post("/rapide")
+def quick_fridge(payload: QuickRequest, request: Request,
+                 user: dict | None = Depends(get_optional_user)):
+    """
+    « Sur place » : recettes où l'aliment donné est la vedette, triées par la
+    place qu'il tient dans le plat (avec plusieurs aliments, celles qui les
+    utilisent tous d'abord ; puis nommé dans le titre ; puis part du poids hors
+    basiques). Ne lit ni n'écrit le frigo enregistré. **Public.**
+    """
+    from backend.core.data_io import is_component_recipe
+    from backend.services.fridge_scoring import _mass, tier_of_item
+
+    check_rate_limit(request, limit=60, window_seconds=60)
+    labels = [i.strip() for i in payload.ingredients if i.strip()]
+    keys = {l.lower() for l in labels}
+    fridge, resolved, unrecognized = _resolve_fridge(keys)
+    # Ids de chaque aliment saisi (une saisie peut couvrir plusieurs ids)
+    ids_of = {l: (resolved.get(l.lower()) or ([l.lower()] if l.lower() in fridge else [])) for l in labels}
+    ids_of = {l: ids for l, ids in ids_of.items() if ids}
+
+    recipes = [r for r in load_recipes() if not is_component_recipe(r)]
+    if payload.diet:
+        from backend.services.filter_service import apply_diet_filter
+        recipes = apply_diet_filter(recipes, payload.diet)
+
+    out = []
+    for r in recipes:
+        total_min = (r.get("timing") or {}).get("total_min")
+        if payload.max_time and isinstance(total_min, (int, float)) and total_min > payload.max_time:
+            continue
+        oven, blender = _needs(r)
+        if (payload.no_oven and oven) or (payload.no_blender and blender):
+            continue
+        items = [c for c in (r.get("composition") or [])
+                 if isinstance(c, dict) and (c.get("meta") or {}).get("role") != "serving_suggestion"]
+        tiers = {id(c): tier_of_item(c) for c in items}
+        mass = sum(_mass(c) for c in items if tiers[id(c)] != STAPLE) or 1.0
+        title = (r.get("titles") or {}).get("fr") or ""
+        matched = []
+        for label, ids in ids_of.items():
+            share = sum(_mass(c) for c in items if tiers[id(c)] != STAPLE
+                        and any(_ingredient_matches(f, str(c.get("ingredient") or "").lower()) for f in ids)) / mass
+            star = _in_title(label, title) and share > 0
+            if share >= MIN_MAIN_SHARE or star:
+                matched.append({"label": label, "share_pct": round(share * 100), "in_title": star})
+        if not matched:
+            continue
+        main = max((c for c in items if tiers[id(c)] != STAPLE), key=_mass, default=None)
+        others = [str(c.get("ingredient")) for c in items if tiers[id(c)] in (SPECIAL, COMMON)
+                  and not any(_ingredient_matches(f, str(c.get("ingredient") or "").lower())
+                              for ids in ids_of.values() for f in ids)]
+        out.append({
+            "id": r["id"], "title_fr": title, "titles": r.get("titles"),
+            "image_url": r.get("image_url"), "dish_type": r.get("dish_type"),
+            "total_time_min": total_min, "needs_oven": oven, "needs_blender": blender,
+            "matched": sorted(matched, key=lambda m: -m["share_pct"]),
+            "main_ingredient": str(main.get("ingredient")) if main else None,
+            "n_others": len(set(others)),
+            # plusieurs aliments donnés : ceux qui les utilisent tous d'abord
+            "_score": (len(matched), max(m["in_title"] for m in matched), sum(m["share_pct"] for m in matched)),
+        })
+    out.sort(key=lambda x: x["_score"], reverse=True)
+    out = out[: payload.limit]
+    names = names_of([x["main_ingredient"] for x in out if x["main_ingredient"]])
+    for x in out:
+        x.pop("_score")
+        x["main_ingredient_name"] = names.get(x["main_ingredient"]) if x["main_ingredient"] else None
+    return {
+        "understood": {l: [{"id": i, "name_fr": n} for i, n in names_of(ids).items()] for l, ids in ids_of.items()},
+        "unrecognized": [l for l in labels if l not in ids_of],
+        "total": len(out),
+        "results": out,
     }
