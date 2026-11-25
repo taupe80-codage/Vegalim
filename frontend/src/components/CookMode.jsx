@@ -13,6 +13,13 @@ import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { findDurations, formatClock } from '../cookTimers';
 import { scaleSegments, scaleStepText } from '../stepQuantities';
+import { parseCommand, speakable, VOICE_COMMANDS } from '../cookVoice';
+import HelpTip from './HelpTip';
+
+// Web Speech API : reconnaissance dans Chrome, Edge et Safari (pas Firefox),
+// synthèse presque partout
+const SR = typeof window !== 'undefined' ? (window.SpeechRecognition || window.webkitSpeechRecognition) : null;
+const CAN_SPEAK = typeof window !== 'undefined' && 'speechSynthesis' in window;
 
 // Étape affichée : quantités ajustées aux portions (surlignées), durées en
 // boutons de minuteur. Les deux ne se chevauchent pas (g/ml ≠ minutes).
@@ -146,6 +153,93 @@ export default function CookMode({ title, steps, ingredients, servings, recipeSe
   const toggle = (i) => setChecked(s => { const c = new Set(s); if (c.has(i)) c.delete(i); else c.add(i); return c; });
   const go = (d) => setIdx(i => Math.max(0, Math.min(n - 1, i + d)));
 
+  // ── Voix : lecture de l'étape et commandes vocales ─────────────────────────
+  const speak = (text) => {
+    if (!CAN_SPEAK) return;
+    try {
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(speakable(text));
+      u.lang = 'fr-FR';
+      const fr = window.speechSynthesis.getVoices().find(v => v.lang?.toLowerCase().startsWith('fr'));
+      if (fr) u.voice = fr;
+      window.speechSynthesis.speak(u);
+    } catch { /* synthèse indisponible */ }
+  };
+  const readStep = (i = idx) => speak(`Étape ${i + 1}. ${scaleStepText(steps[i], ratio)}`);
+
+  // Action d'une commande vocale (référence à jour : la reconnaissance tourne
+  // en continu et garderait sinon l'étape du moment où elle a démarré)
+  const commandRef = useRef(null);
+  useEffect(() => {
+    commandRef.current = (cmd) => {
+      if (cmd.type === 'next') go(1);
+      else if (cmd.type === 'prev') go(-1);
+      else if (cmd.type === 'repeat') readStep();
+      else if (cmd.type === 'stop') { try { window.speechSynthesis?.cancel(); } catch { /* rien */ } }
+      else if (cmd.type === 'ingredients') setShowIngr(v => !v);
+      else if (cmd.type === 'close') onClose();
+      else if (cmd.type === 'timer') {
+        const d = cmd.seconds ? { seconds: cmd.seconds, label: cmd.label }
+          : findDurations(steps[idx]).find(x => !x.long);
+        if (d) startTimer(d.seconds, d.label);
+        else speak('Pas de durée dans cette étape. Dites par exemple : minuteur cinq minutes.');
+      }
+    };
+  });
+
+  const [voiceOn, setVoiceOn] = useState(false);
+  const [voiceState, setVoiceState] = useState(SR ? 'off' : 'unsupported');
+  const [heard, setHeard] = useState('');
+
+  // Reconnaissance continue tant que la voix est activée (relancée après les
+  // silences ; Chrome l'arrête de lui-même au bout de quelques secondes)
+  useEffect(() => {
+    if (!voiceOn || !SR) return undefined;
+    let active = true;
+    const rec = new SR();
+    rec.lang = 'fr-FR';
+    rec.continuous = true;
+    rec.interimResults = false;
+    rec.onresult = (e) => {
+      const said = e.results[e.results.length - 1]?.[0]?.transcript || '';
+      const cmd = parseCommand(said);
+      setHeard(said.trim());
+      // Pendant la lecture, seul « stop » compte : la voix lue (« …après 5
+      // minutes ») serait sinon prise pour une commande
+      const reading = CAN_SPEAK && window.speechSynthesis.speaking;
+      if (cmd && (!reading || cmd.type === 'stop')) commandRef.current?.(cmd);
+    };
+    rec.onerror = (e) => {
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+        active = false;
+        setVoiceState('denied');
+        setVoiceOn(false);
+      }
+    };
+    rec.onend = () => { if (active) { try { rec.start(); } catch { /* déjà relancée */ } } };
+    try { rec.start(); setVoiceState('listening'); } catch { setVoiceState('off'); }
+    return () => {
+      active = false;
+      rec.onend = null;
+      try { rec.abort(); } catch { /* rien */ }
+    };
+  }, [voiceOn]);
+
+  // Lecture automatique de chaque nouvelle étape quand la voix est activée
+  useEffect(() => {
+    if (voiceOn) readStep(idx);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [idx, voiceOn]);
+
+  // En quittant : plus de lecture en cours
+  useEffect(() => () => { try { window.speechSynthesis?.cancel(); } catch { /* rien */ } }, []);
+
+  const toggleVoice = () => {
+    if (!SR) return;
+    if (voiceOn) { setVoiceOn(false); setVoiceState('off'); setHeard(''); try { window.speechSynthesis?.cancel(); } catch { /* rien */ } }
+    else setVoiceOn(true);
+  };
+
   const onTouchStart = (e) => { touchRef.current = e.touches[0].clientX; };
   const onTouchEnd = (e) => {
     if (touchRef.current == null) return;
@@ -180,8 +274,30 @@ export default function CookMode({ title, steps, ingredients, servings, recipeSe
             : wake === 'unsupported' ? 'Écran : réglez la mise en veille de l\'appareil'
             : wake === 'off' ? 'Écran : veille possible' : ''}
         </span>
+        <div className="cook-voice">
+          <button type="button" className={`cook-voice-btn${voiceOn ? ' is-on' : ''}`}
+            onClick={toggleVoice} disabled={!SR} aria-pressed={voiceOn}
+            title={!SR ? 'Commandes vocales indisponibles dans ce navigateur (essayez Chrome, Edge ou Safari)' : undefined}>
+            🎙️ <span className="cook-voice-lbl">{voiceOn ? 'J’écoute' : 'Voix'}</span>
+          </button>
+          <HelpTip label="Commandes vocales">
+            Activez 🎙️ puis parlez, les mains libres : chaque nouvelle étape est lue à voix haute.
+            <br /><br />
+            {VOICE_COMMANDS.map(([say, what]) => <span key={say}>{say} : {what}<br /></span>)}
+            <br />
+            Le navigateur demande l’accès au micro la première fois. La reconnaissance fonctionne dans
+            Chrome, Edge et Safari, pas dans Firefox ; elle peut passer par les serveurs du navigateur.
+          </HelpTip>
+        </div>
         <button type="button" className="cook-close" onClick={onClose} aria-label="Quitter le mode cuisine">✕</button>
       </header>
+      {(voiceState === 'denied' || (voiceOn && heard)) && (
+        <div className="cook-voice-bar" aria-live="polite">
+          {voiceState === 'denied'
+            ? 'Micro refusé : autorisez-le dans les réglages du navigateur pour utiliser la voix.'
+            : <>Entendu : « {heard} »</>}
+        </div>
+      )}
 
       <div className="cook-progress" aria-hidden="true">
         <div style={{ width: `${((idx + 1) / n) * 100}%` }} />
@@ -197,7 +313,14 @@ export default function CookMode({ title, steps, ingredients, servings, recipeSe
         </aside>
 
         <main className="cook-step" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-          <div className="cook-step-num" aria-live="polite">Étape {idx + 1} / {n}</div>
+          <div className="cook-step-num" aria-live="polite">
+            Étape {idx + 1} / {n}
+            {CAN_SPEAK && (
+              <button type="button" className="cook-read" onClick={() => readStep()} aria-label="Lire l'étape à voix haute">
+                🔊 Lire
+              </button>
+            )}
+          </div>
           <StepText text={steps[idx]} ratio={ratio} onTimer={startTimer} />
           {!last && <p className="cook-next"><span>Ensuite :</span> {scaleStepText(steps[idx + 1], ratio)}</p>}
         </main>
