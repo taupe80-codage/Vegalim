@@ -16,6 +16,7 @@ import { createPortal } from 'react-dom';
 import { planning as planningApi, recipes as recipesApi } from '../api';
 import PriceEditInline from '../components/PriceEditInline';
 import HelpTip from '../components/HelpTip';
+import BatchSession from '../components/BatchSession';
 import {
   FilterSection,
   HealthAccordion,
@@ -1516,6 +1517,10 @@ export default function PlanningPage() {
                 onClick={()=>setView('shopping')}>
                 🛒 {shopping?`Courses (${(shopping.items||[]).length})` : 'Liste de courses'}
               </button>
+              <button className={`plan-tab-btn${view==='batch'?' plan-tab-btn--active':''}`}
+                onClick={()=>setView('batch')}>
+                🥡 Batch cooking
+              </button>
             </div>
           )}
 
@@ -1541,6 +1546,8 @@ export default function PlanningPage() {
               </div>
             </div>
           )}
+
+          {view==='batch'&&planHasRecipes&&<BatchSession plan={plan} />}
 
           {view==='plan'&&(
             <div className="pday-grid">

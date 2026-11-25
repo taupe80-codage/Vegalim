@@ -341,6 +341,21 @@ class DayNutritionRequest(BaseModel):
     plan: dict = Field(..., description="Plan hebdo {lundi:{lunch:{recipes:[...]}}}")
 
 
+class BatchSessionRequest(BaseModel):
+    plan: dict = Field(..., description="Plan hebdo {lundi:{lunch:{skip, servings, recipes:[{id}]}}}")
+
+
+@router.post("/batch_session")
+def batch_session_route(payload: BatchSessionRequest, user: dict | None = Depends(get_optional_user)):
+    """
+    Session de batch cooking du dimanche pour la semaine planifiée : trempage
+    la veille, cuissons (légumineuses, céréales), préparations maison, légumes
+    à tailler, plats entiers qui se gardent ; conservation et congélation. **Public.**
+    """
+    from backend.engine.planning_engine.batch import batch_session
+    return batch_session(payload.plan)
+
+
 class WeekCostRequest(BaseModel):
     plan: dict = Field(..., description="Plan hebdo {lundi:{lunch:{skip, servings, recipes:[{id}]}}}")
 

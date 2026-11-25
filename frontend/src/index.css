@@ -5674,3 +5674,34 @@ html[data-theme="dark"] .rv-stars-fg { color: #f0b429; }
   .cook-voice-lbl { display: none; }
   .cook-head { gap: 8px; padding: 10px 12px; }
 }
+
+/* ── Planning : session de batch cooking (components/BatchSession.jsx) ── */
+.batch { display: flex; flex-direction: column; gap: 14px; }
+.batch-head {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+  background: var(--sur); border: 1px solid var(--brd); border-radius: 10px; padding: 12px 14px;
+}
+.batch-head h3 { margin: 0; font-size: 18px; font-weight: 500; }
+.batch-kicker { font-size: 11px; letter-spacing: 0.08em; color: var(--mut); margin-bottom: 4px; }
+.batch-sub { font-size: 13px; color: var(--txt2, var(--mut)); margin: 6px 0 0; line-height: 1.5; }
+.batch-section { background: var(--sur); border: 1px solid var(--brd); border-radius: 10px; padding: 12px 14px; }
+.batch-section--eve { border-left: 4px solid #58a6ff; }
+.batch-section h4 { margin: 0 0 4px; font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.batch-num {
+  display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px;
+  border-radius: 50%; background: var(--grn); color: var(--bg); font-size: 12px;
+}
+.batch-tip { font-size: 12px; color: var(--mut); margin: 0 0 8px; line-height: 1.5; }
+.batch-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.batch-list--plain li { font-size: 13px; line-height: 1.5; }
+.batch-item label { display: flex; gap: 10px; align-items: baseline; cursor: pointer; font-size: 14px; }
+.batch-item input { width: 17px; height: 17px; accent-color: var(--grn); transform: translateY(2px); flex-shrink: 0; }
+.batch-item-sub { font-size: 12px; color: var(--mut); padding-left: 27px; line-height: 1.5; }
+.batch-item.is-done .batch-item-main { text-decoration: line-through; color: var(--mut); }
+.batch-meta { color: var(--mut); font-size: 12px; }
+.batch-freeze { color: #58a6ff; }
+.batch-later { color: #d29922; }
+.batch-link {
+  background: none; border: none; padding: 0; font: inherit; color: var(--grn); cursor: pointer;
+  text-decoration: underline; text-underline-offset: 2px;
+}
