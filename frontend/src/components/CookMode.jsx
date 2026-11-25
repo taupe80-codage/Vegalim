@@ -2,7 +2,8 @@
  * CookMode.jsx — Mode cuisine : une étape à la fois, en grand, écran allumé.
  *
  * - Étapes une par une (boutons, flèches du clavier, balayage sur mobile).
- * - Ingrédients cochables, quantités ajustées aux portions choisies.
+ * - Ingrédients cochables ; quantités ajustées aux portions choisies, dans la
+ *   liste comme dans le texte des étapes (stepQuantities.js).
  * - Minuteurs lancés depuis les durées du texte (« ⏱ 25 minutes »), plusieurs
  *   à la fois, qui continuent d'une étape à l'autre ; sonnerie et vibration.
  * - Écran maintenu allumé (Screen Wake Lock) quand le navigateur le permet.
@@ -11,25 +12,35 @@
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { findDurations, formatClock } from '../cookTimers';
+import { scaleSegments, scaleStepText } from '../stepQuantities';
 
-function StepText({ text, onTimer }) {
+// Étape affichée : quantités ajustées aux portions (surlignées), durées en
+// boutons de minuteur. Les deux ne se chevauchent pas (g/ml ≠ minutes).
+function StepText({ text, ratio, onTimer }) {
   const parts = [];
-  let last = 0;
-  for (const d of findDurations(text)) {
-    if (d.start > last) parts.push(text.slice(last, d.start));
-    parts.push(d.long ? (
-      <span key={d.start} className="cook-dur cook-dur--long" title="Longue attente : à prévoir à l'avance">
-        ⏳ {d.label}
-      </span>
-    ) : (
-      <button key={d.start} type="button" className="cook-dur"
-        onClick={() => onTimer(d.seconds, d.label)} aria-label={`Lancer un minuteur de ${d.label}`}>
-        ⏱ {d.label}
-      </button>
-    ));
-    last = d.end;
-  }
-  if (last < text.length) parts.push(text.slice(last));
+  scaleSegments(text, ratio).forEach((seg, si) => {
+    if (seg.original) {
+      parts.push(<mark key={`q${si}`} className="qty-scaled" title={`Recette : ${seg.original}`}>{seg.text}</mark>);
+      return;
+    }
+    const t = seg.text;
+    let last = 0;
+    for (const d of findDurations(t)) {
+      if (d.start > last) parts.push(t.slice(last, d.start));
+      parts.push(d.long ? (
+        <span key={`d${si}-${d.start}`} className="cook-dur cook-dur--long" title="Longue attente : à prévoir à l'avance">
+          ⏳ {d.label}
+        </span>
+      ) : (
+        <button key={`d${si}-${d.start}`} type="button" className="cook-dur"
+          onClick={() => onTimer(d.seconds, d.label)} aria-label={`Lancer un minuteur de ${d.label}`}>
+          ⏱ {d.label}
+        </button>
+      ));
+      last = d.end;
+    }
+    if (last < t.length) parts.push(t.slice(last));
+  });
   return <p className="cook-step-text">{parts}</p>;
 }
 
@@ -52,7 +63,7 @@ function beep(ctx) {
   } catch { /* son indisponible */ }
 }
 
-export default function CookMode({ title, steps, ingredients, servings, recipeServings, onClose }) {
+export default function CookMode({ title, steps, ingredients, servings, recipeServings, ratio = 1, onClose }) {
   const [idx, setIdx]         = useState(0);
   const [checked, setChecked] = useState(() => new Set());
   const [showIngr, setShowIngr] = useState(false);       // panneau ingrédients (mobile)
@@ -180,15 +191,15 @@ export default function CookMode({ title, steps, ingredients, servings, recipeSe
         <aside className={`cook-ingr${showIngr ? ' is-open' : ''}`} aria-label="Ingrédients">
           <h2>Ingrédients <span className="cook-ingr-count">{checked.size}/{ingredients.length}</span></h2>
           {servings !== recipeServings && (
-            <p className="cook-note">Quantités pour {servings} portions ; celles des étapes sont pour {recipeServings}.</p>
+            <p className="cook-note">Quantités ajustées à {servings} portions (recette pour {recipeServings}), étapes comprises.</p>
           )}
           {ingrList}
         </aside>
 
         <main className="cook-step" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
           <div className="cook-step-num" aria-live="polite">Étape {idx + 1} / {n}</div>
-          <StepText text={steps[idx]} onTimer={startTimer} />
-          {!last && <p className="cook-next"><span>Ensuite :</span> {steps[idx + 1]}</p>}
+          <StepText text={steps[idx]} ratio={ratio} onTimer={startTimer} />
+          {!last && <p className="cook-next"><span>Ensuite :</span> {scaleStepText(steps[idx + 1], ratio)}</p>}
         </main>
       </div>
 

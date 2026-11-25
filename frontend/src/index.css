@@ -5646,3 +5646,10 @@ html[data-theme="dark"] .rv-stars-fg { color: #f0b429; }
   }
   .cook-timers { padding: 8px 12px; }
 }
+
+/* Quantités des étapes ajustées aux portions (stepQuantities.js) */
+.qty-scaled {
+  background: rgba(46, 160, 67, 0.16); color: inherit; border-radius: 4px; padding: 0 3px;
+  text-decoration: underline dotted rgba(46, 160, 67, 0.7); text-underline-offset: 3px; cursor: help;
+}
+.steps-scaled-note { font-size: 12px; color: var(--mut); margin: 0 0 10px; }

@@ -22,6 +22,7 @@ import { addToRecentlyViewed } from '../useRecentlyViewed';
 import AddToPlanModal from '../components/AddToPlanModal';
 import CookMode from '../components/CookMode';
 import { cleanStep } from '../cookTimers';
+import { scaleSegments } from '../stepQuantities';
 import { useToast } from '../ToastContext';
 
 // ── États des ingrédients → français ─────────────────────────────────────────
@@ -958,15 +959,24 @@ export default function RecipeDetailPage({ onAuthClick }) {
               ))}.
             </p>
           )}
+          {(displayed.instructions || recipe.instructions)?.length > 0 && ratio !== 1 && (
+            <p className="steps-scaled-note" role="note">
+              Quantités des étapes ajustées à {servings} portions (recette pour {recipe.servings || 4}) ;
+              survolez une valeur surlignée pour voir celle d'origine.
+            </p>
+          )}
           {(displayed.instructions || recipe.instructions)?.length > 0 ? (
             <ol className="instruction-list">
               {(displayed.instructions || recipe.instructions).map((step, idx) => {
                 // Retire les préfixes redondants : "Étape 1 :", "Step 2.", "étape 3 -", etc.
-                const cleaned = (step || '')
-                  .replace(/^(é|e)tape\s*\d+\s*[-:.]\s*/i, '')
-                  .replace(/^step\s*\d+\s*[-:.]\s*/i, '')
-                  .trim();
-                return <li key={idx}>{cleaned || step}</li>;
+                const cleaned = cleanStep(step) || step;
+                return (
+                  <li key={idx}>
+                    {scaleSegments(cleaned, ratio).map((seg, i) => (seg.original
+                      ? <mark key={i} className="qty-scaled" title={`Recette : ${seg.original}`}>{seg.text}</mark>
+                      : <span key={i}>{seg.text}</span>))}
+                  </li>
+                );
               })}
             </ol>
           ) : (
@@ -996,6 +1006,7 @@ export default function RecipeDetailPage({ onAuthClick }) {
             .map(ing => ingredientLine(ing, displayed, ratio))}
           servings={servings}
           recipeServings={recipe.servings || 4}
+          ratio={ratio}
           onClose={() => setShowCook(false)}
         />
       )}
