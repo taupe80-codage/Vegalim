@@ -20,6 +20,8 @@ import { RecipeReviews } from '../components/Reviews';
 import RecipeCard, { RecipeVisual, getRecipeBadges, getCuisineColor, getRecipeImageUrl, computeNRFScore, computeAlimScore } from '../components/RecipeCard';
 import { addToRecentlyViewed } from '../useRecentlyViewed';
 import AddToPlanModal from '../components/AddToPlanModal';
+import CookMode from '../components/CookMode';
+import { cleanStep } from '../cookTimers';
 import { useToast } from '../ToastContext';
 
 // ── États des ingrédients → français ─────────────────────────────────────────
@@ -339,6 +341,45 @@ export function SeasonCarbon({ recipe, defaultOpen = false }) {
   );
 }
 
+// Ligne d'ingrédient affichée (liste de la fiche et mode cuisine) : nom,
+// quantité ajustée aux portions, équivalence pratique, état.
+function ingredientLine(ing, displayed, ratio) {
+  // Identifiant de l'ingrédient (clé pour ingredients_meta)
+  const iid     = ing.ingredient_id || ing.ingredient || '';
+  // Normalisation pour les IDs avec slash (mushroom/button → mushroom_button → mushroom)
+  const iidUnd  = iid.replace(/\//g, '_');
+  const iidFirst = iid.split('/')[0];
+  const rawName = ing.name || iid || '';
+  const nameStr = typeof rawName === 'string' ? rawName : '';
+  // Priorité : translations (spécifique + capitalisé) → ingredients_meta (backend dict) → brut
+  const subRecipeId = displayed.ingredients_meta?.[iid]?.recipe_id;
+  const metaName = displayed.ingredients_meta?.[iid]?.name_fr
+                || displayed.ingredients_meta?.[iidUnd]?.name_fr
+                || displayed.ingredients_meta?.[iidFirst]?.name_fr;
+  const rawResolved = translations[iid]
+    || translations[iidUnd]
+    || translations[iidFirst]
+    || translations[nameStr];
+  // Majuscule initiale seulement : text-transform: capitalize donnait
+  // « Huile De Noix De Coco ».
+  const name0 = (rawResolved || metaName || nameStr).replace(/_/g, ' ');
+  const name = name0.charAt(0).toUpperCase() + name0.slice(1);
+  const st = ing.meta?.state;
+  const stateFr = st && !INGREDIENT_STATE_IMPLICIT.has(st)
+    && !INGREDIENT_STATE_REDUNDANT[st]?.test(name)
+    ? (INGREDIENT_STATE_FR[st] ?? st) : null;
+  let qtyStr   = '';
+  let equivStr = '';
+  if (ing.quantity) {
+    const q  = ing.quantity * ratio;
+    qtyStr   = `${q < 10 && q % 1 !== 0 ? q.toFixed(1) : Math.round(q)} ${ing.unit || ''}`.trim();
+    equivStr = formatIngredientQty(iid, q, ing.unit || '', physData);
+  } else if (ing.unit && ing.unit !== 'to_taste') {
+    qtyStr = ing.unit;          // « 1 poignée » (suggestion de service)
+  }
+  return { iid, name, stateFr, qtyStr, equivStr, subRecipeId };
+}
+
 function ingredientMatches(fridgeId, recipeId) {
   if (!fridgeId || !recipeId) return false;
   const fid = fridgeId.toLowerCase();
@@ -366,6 +407,8 @@ export default function RecipeDetailPage({ onAuthClick }) {
 
   // Modal "Ajouter au planning"
   const [showPlanModal, setShowPlanModal] = useState(false);
+  // Mode cuisine (plein écran, étape par étape)
+  const [showCook, setShowCook] = useState(false);
 
   // Similaires
   const [similar,        setSimilar]        = useState([]);
@@ -748,6 +791,11 @@ export default function RecipeDetailPage({ onAuthClick }) {
                 )}
               </button>
             )}
+            {(displayed.instructions || recipe.instructions)?.length > 0 && (
+              <button className="variant-btn cook-trigger-btn" onClick={() => setShowCook(true)}>
+                👨‍🍳 Mode cuisine
+              </button>
+            )}
             <button className="variant-btn atp-trigger-btn" onClick={()=>setShowPlanModal(true)}>
               📅 Ajouter au planning
             </button>
@@ -827,40 +875,7 @@ export default function RecipeDetailPage({ onAuthClick }) {
 
           <ul className="ingredient-list">
             {(displayed.composition || displayed.ingredients || ingredients).map((ing, idx) => {
-              // Identifiant de l'ingrédient (clé pour ingredients_meta)
-              const iid     = ing.ingredient_id || ing.ingredient || '';
-              // Normalisation pour les IDs avec slash (mushroom/button → mushroom_button → mushroom)
-              const iidUnd  = iid.replace(/\//g, '_');
-              const iidFirst = iid.split('/')[0];
-              // 1. name_fr depuis ingredients_meta (enrich_one) — source la plus fiable
-              // 2. translations.json avec variantes de clé
-              // 3. Fallback : identifiant brut nettoyé
-              const rawName = ing.name || iid || '';
-              const nameStr = typeof rawName === 'string' ? rawName : '';
-              // Priorité : translations (spécifique + capitalisé) → ingredients_meta (backend dict) → brut
-              const subRecipeId = displayed.ingredients_meta?.[iid]?.recipe_id;
-              const metaName = displayed.ingredients_meta?.[iid]?.name_fr
-                            || displayed.ingredients_meta?.[iidUnd]?.name_fr
-                            || displayed.ingredients_meta?.[iidFirst]?.name_fr;
-              const rawResolved = translations[iid]
-                || translations[iidUnd]
-                || translations[iidFirst]
-                || translations[nameStr];
-              // Majuscule initiale seulement : text-transform: capitalize donnait
-              // « Huile De Noix De Coco ».
-              const name0 = (rawResolved || metaName || nameStr).replace(/_/g, ' ');
-              const name = name0.charAt(0).toUpperCase() + name0.slice(1);
-              const st = ing.meta?.state;
-              const stateFr = st && !INGREDIENT_STATE_IMPLICIT.has(st)
-                && !INGREDIENT_STATE_REDUNDANT[st]?.test(name)
-                ? (INGREDIENT_STATE_FR[st] ?? st) : null;
-              let qtyStr   = '';
-              let equivStr = '';
-              if (ing.quantity) {
-                const q  = ing.quantity * ratio;
-                qtyStr   = `${q < 10 && q % 1 !== 0 ? q.toFixed(1) : Math.round(q)} ${ing.unit || ''}`.trim();
-                equivStr = formatIngredientQty(iid, q, ing.unit || '', physData);
-              }
+              const { iid, name, stateFr, qtyStr, equivStr, subRecipeId } = ingredientLine(ing, displayed, ratio);
 
               // Statut frigo pour cet ingrédient
               const iidLow  = iid.toLowerCase();
@@ -969,6 +984,20 @@ export default function RecipeDetailPage({ onAuthClick }) {
       {/* ── Glycémie (objectif « diabète ») — calculée sur la recette originale ── */}
       {profileGoal === 'diabete' && !showVariant && Array.isArray(recipe.diabetes_watch) && (
         <DiabetesWatch items={recipe.diabetes_watch} />
+      )}
+
+      {/* ── Mode cuisine ── */}
+      {showCook && (
+        <CookMode
+          title={displayed.titles?.fr || recipe.titles?.fr || ''}
+          steps={(displayed.instructions || recipe.instructions || []).map(cleanStep).filter(Boolean)}
+          ingredients={(displayed.composition || displayed.ingredients || [])
+            .filter(ing => (ing.ingredient || ing.ingredient_id) !== 'water')
+            .map(ing => ingredientLine(ing, displayed, ratio))}
+          servings={servings}
+          recipeServings={recipe.servings || 4}
+          onClose={() => setShowCook(false)}
+        />
       )}
 
       {/* ── Modal Ajouter au planning ── */}
