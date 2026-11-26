@@ -48,6 +48,10 @@ def env(tmp_path, monkeypatch):
     monkeypatch.setattr(S, "CORRECTIONS_PATH", tmp_path / "ingredient_corrections.json")
     S._corr_cache.update(sig=None, data={})
     monkeypatch.setattr(ic, "check_rate_limit", lambda *a, **k: None)
+    # le recalcul des graphes réécrirait les vrais fichiers de données : testé à part
+    from backend.services import nutrition_refresh
+    refreshed: list = []
+    monkeypatch.setattr(nutrition_refresh, "refresh_for_ingredients", lambda ids, **k: refreshed.append(list(ids)))
     from backend.core.config import settings
     monkeypatch.setattr(settings, "admin_emails", {MOD})
     monkeypatch.delenv("SMTP_HOST", raising=False)
@@ -143,6 +147,7 @@ def test_accepter_appliquer_annuler(env):
     assert q["counts"]["submitted"] == 1 and q["results"][0]["value_now"] == pytest.approx(0.98)
     res = c.post(f"/ingredient-corrections/moderation/{cid}/accept", json={"message": "Vérifié, merci."})
     assert res.status_code == 200 and res.json()["status"] == "accepted"
+    assert res.json()["refresh"]["recipes"] >= 30
     assert S.CORRECTIONS_PATH.exists()
 
     # la fiche et le calcul des recettes utilisent la valeur corrigée

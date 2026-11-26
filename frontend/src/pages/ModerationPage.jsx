@@ -353,7 +353,8 @@ function CorrectionModeration({ status, onChange }) {
               {status === 'submitted' ? (
                 <>
                   <button type="button" className="ct-btn ct-btn--sm ct-btn--primary"
-                    onClick={() => act(() => ingredientCorrections.accept(c.id, note), other ? 'Remarque retenue' : 'Correction appliquée')}>
+                    onClick={() => act(() => ingredientCorrections.accept(c.id, note),
+                      other ? 'Remarque retenue' : 'Correction appliquée : recalcul des recettes qui l’utilisent en cours')}>
                     {other ? 'Retenir (à traiter à la main)' : 'Appliquer la correction'}
                   </button>
                   <button type="button" className="ct-btn ct-btn--sm ct-btn--danger"
@@ -361,7 +362,7 @@ function CorrectionModeration({ status, onChange }) {
                 </>
               ) : !other && (
                 <button type="button" className="ct-btn ct-btn--sm ct-btn--danger"
-                  onClick={() => act(() => ingredientCorrections.revert(c.id, note), 'Correction annulée')}>Annuler la correction</button>
+                  onClick={() => act(() => ingredientCorrections.revert(c.id, note), 'Correction annulée : recalcul des recettes en cours')}>Annuler la correction</button>
               )}
             </div>
           </li>

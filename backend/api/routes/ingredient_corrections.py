@@ -16,7 +16,9 @@ Une valeur acceptée (pour 100 g) est écrite dans
 backend/data/ingredients/ingredient_corrections.json, régénéré depuis cette
 table : la fiche, les recettes (calcul CIQUAL) et la page publique la prennent
 en compte sans réécrire la base source ; la fiche affiche l'ancienne valeur et
-la source. « Autre information » (nom, allergène, saison…) : acceptée, elle
+la source. Accepter ou annuler relance aussi, après la réponse, le calcul de la
+nutrition précalculée des recettes concernées (services/nutrition_refresh.py) :
+listes, filtres, scores et bilan de la semaine suivent sans rebuild complet. « Autre information » (nom, allergène, saison…) : acceptée, elle
 est traitée à la main.
 """
 from __future__ import annotations
@@ -101,6 +103,19 @@ def rebuild_file(db: Session) -> None:
         "proposed_value": r.proposed_value, "current_value": r.current_value,
         "source_ref": r.source_ref, "source_url": r.source_url, "reviewed_at": _iso(r.reviewed_at),
     } for r in rows])
+
+
+def schedule_refresh(background: BackgroundTasks | None, ingredient_id: str) -> dict:
+    """Recalcule, après la réponse, la nutrition précalculée des recettes qui
+    contiennent l'ingrédient (listes, filtres, scores, bilan de la semaine) ;
+    renvoie le nombre de recettes concernées."""
+    from backend.services import nutrition_refresh
+    bases, recs = nutrition_refresh.affected([ingredient_id])
+    if background is not None:
+        background.add_task(nutrition_refresh.refresh_for_ingredients, [ingredient_id])
+    else:
+        nutrition_refresh.refresh_for_ingredients([ingredient_id])
+    return {"recipes": len(recs), "sub_recipes": len(bases)}
 
 
 # ── Notifications ─────────────────────────────────────────────────────────────
@@ -282,11 +297,13 @@ def accept(cid: str, payload: MessagePayload, background: BackgroundTasks,
     c.status, c.reviewed_at = "accepted", _now()
     c.moderator_note, c.moderator_email = _message(payload.message, False), mod["email"]
     db.commit()
+    refresh = None
     if c.field != "other":
         rebuild_file(db)
+        refresh = schedule_refresh(background, c.ingredient_id)
     notify_member(background, db, c, "accepted" if c.field != "other" else "accepted_other")
     db.commit()
-    return _serialize(c, for_moderator=True)
+    return {**_serialize(c, for_moderator=True), "refresh": refresh}
 
 
 @router.post("/moderation/{cid}/reject")
@@ -311,9 +328,10 @@ def revert(cid: str, payload: MessagePayload, background: BackgroundTasks,
     c.moderator_note, c.moderator_email = _message(payload.message, True), mod["email"]
     db.commit()
     rebuild_file(db)
+    refresh = schedule_refresh(background, c.ingredient_id)
     notify_member(background, db, c, "reverted")
     db.commit()
-    return _serialize(c, for_moderator=True)
+    return {**_serialize(c, for_moderator=True), "refresh": refresh}
 
 
 def delete_user_corrections(db: Session, email: str) -> int:

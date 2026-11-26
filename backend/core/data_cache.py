@@ -80,3 +80,11 @@ def data_cached(fn):
     wrapper.cache_clear = cached.cache_clear
     wrapper.cache_info = cached.cache_info
     return wrapper
+
+
+def invalidate_now() -> None:
+    """Relit les fichiers de données au prochain appel, sans attendre
+    CHECK_INTERVAL_S : après une écriture par l'API elle-même (recalcul de la
+    nutrition après la correction d'un ingrédient)."""
+    with _lock:
+        _state["checked_at"] = 0.0
