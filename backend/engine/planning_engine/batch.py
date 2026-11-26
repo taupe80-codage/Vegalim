@@ -109,6 +109,9 @@ def batch_session(plan: dict) -> dict:
                 r = index.get(str((entry or {}).get("id") or ""))
                 if not r:
                     continue
+                # version vegan ou modifiée par le membre : ce qu'on cuisinera vraiment
+                from backend.services.recipe_edits import plan_entry_recipe
+                r = plan_entry_recipe(r, entry)
                 meals += 1
                 title = (r.get("titles") or {}).get("fr") or r["id"]
                 servings = int(slot.get("servings") or 0) or int(r.get("servings") or 4)

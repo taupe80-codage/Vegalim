@@ -10,6 +10,7 @@ Tables migrées depuis JSON :
   - recipe_submissions : recettes proposées par les utilisateurs (modérées)
   - recipe_reviews / review_votes / review_reports : notes et commentaires
   - notifications : nouveautés affichées dans l'application (cloche)
+  - recipe_versions : recettes modifiées et enregistrées par un membre
 
 Données statiques (dataset culinaire) → restent en JSON + lru_cache.
 """
@@ -341,6 +342,40 @@ class PhotoSubmission(Base):
 
     def __repr__(self):
         return f"<PhotoSubmission {self.id} recipe={self.recipe_id} status={self.status}>"
+
+
+# ── Versions modifiées des recettes ───────────────────────────────────────────
+
+class RecipeVersion(Base):
+    """
+    Version d'une recette modifiée et enregistrée par un membre : ingrédients
+    remplacés, retirés ou ajoutés, quantités changées (services/recipe_edits.py).
+    Une version par recette et par membre ; la fiche s'ouvre dessus.
+    Seules les modifications sont gardées (rows) : la nutrition, le prix et les
+    étapes sont recalculés à chaque affichage.
+    """
+    __tablename__ = "recipe_versions"
+
+    id         = Column(Integer, primary_key=True, autoincrement=True)
+    user_email = Column(String(254), ForeignKey("users.email", ondelete="CASCADE"),
+                        nullable=False, index=True)
+    recipe_id  = Column(String(100), nullable=False)
+    base       = Column(String(10), nullable=False, default="original",
+                        server_default="original")                # original | vegan
+    rows       = Column(JSON, nullable=False)
+    servings   = Column(Integer, nullable=True)                   # portions affichées à l'enregistrement
+    created_at = Column(DateTime(timezone=True), nullable=False,
+                        default=lambda: datetime.now(timezone.utc))
+    updated_at = Column(DateTime(timezone=True), nullable=False,
+                        default=lambda: datetime.now(timezone.utc),
+                        onupdate=lambda: datetime.now(timezone.utc))
+
+    __table_args__ = (
+        UniqueConstraint("user_email", "recipe_id", name="uq_recipe_version_user_recipe"),
+    )
+
+    def __repr__(self):
+        return f"<RecipeVersion {self.id} user={self.user_email} recipe={self.recipe_id}>"
 
 
 # ── Notes et commentaires ─────────────────────────────────────────────────────

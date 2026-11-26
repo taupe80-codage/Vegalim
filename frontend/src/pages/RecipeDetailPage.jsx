@@ -5,11 +5,14 @@
  *   - Visuel dynamique gradient/emoji (RecipeVisual) au lieu du placeholder
  *   - Section "Recettes similaires" (GET /recettes/:id/similaires)
  *   - Bouton "Version Vegan" (POST /recettes/:id/variante) — si non vegan
+ *   - « Modifier les ingrédients » : remplacer, retirer, ajouter, changer les
+ *     quantités (POST /recettes/:id/personnaliser) ; version enregistrable
+ *     (PUT /mes-versions/:id), rouverte d'office ensuite
  */
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { useRouter, navigate, Link } from '../Router';
-import { recipes as recipesApi, profile as profileApi } from '../api';
+import { recipes as recipesApi, profile as profileApi, recipeVersions } from '../api';
 import { useAuth } from '../AuthContext';
 import { useProfileDiet, useProfileGoal, defaultDietFilter } from '../useProfileDiet';
 import { recordViewOnce } from '../favoritesSync';
@@ -25,6 +28,8 @@ import CookMode from '../components/CookMode';
 import { cleanStep } from '../cookTimers';
 import { scaleSegments } from '../stepQuantities';
 import { useToast } from '../ToastContext';
+import RecipeEditor from '../components/RecipeEditor';
+import { baseRows, changeLabel, editErrorMessage, hasChanges, sameEdits } from '../recipeEdits';
 
 // ── États des ingrédients → français ─────────────────────────────────────────
 // États implicites ou relevant des instructions : ne pas afficher dans la liste
@@ -424,6 +429,22 @@ export default function RecipeDetailPage({ onAuthClick }) {
   const [variantError,   setVariantError]   = useState(null);
   const [showVariant,    setShowVariant]    = useState(false);
 
+  // Version modifiée par le membre (ingrédients, quantités)
+  const [edits,       setEdits]       = useState(null);   // { base, rows } en cours
+  const [custom,      setCustom]      = useState(null);   // fiche recalculée de la version
+  const [customBusy,  setCustomBusy]  = useState(false);
+  const [customError, setCustomError] = useState(null);
+  const [showCustom,  setShowCustom]  = useState(false);
+  const [editing,     setEditing]     = useState(false);
+  const [saved,       setSaved]       = useState(null);   // version enregistrée { base, rows, servings }
+  const [saving,      setSaving]      = useState(false);
+  const [confirmDelete, setConfirmDelete] = useState(false);
+  const previewSeq = useRef(0);
+
+  // Recette affichée : ma version, la version vegan ou l'originale
+  const shown = showCustom && custom ? custom
+    : showVariant && variant?.recipe ? variant.recipe : recipe;
+
   // ── Couverture frigo (depuis localStorage, calculée côté client) ────────────
   const fridgeCoverage = useMemo(() => {
     if (!recipe) return null;
@@ -433,7 +454,7 @@ export default function RecipeDetailPage({ onAuthClick }) {
       const fridgeIds = JSON.parse(raw).map(([id]) => id);
       if (fridgeIds.length === 0) return null;
 
-      const ings = recipe.composition || recipe.ingredients || [];
+      const ings = shown?.composition || shown?.ingredients || [];
       if (ings.length === 0) return null;
 
       const have    = [];
@@ -455,7 +476,7 @@ export default function RecipeDetailPage({ onAuthClick }) {
         pct: Math.round((have.length / total) * 100),
       };
     } catch { return null; }
-  }, [recipe]);
+  }, [recipe, shown]);
 
   // ── Chargement recette principale ──────────────────────────────────────────
   useEffect(() => {
@@ -465,6 +486,8 @@ export default function RecipeDetailPage({ onAuthClick }) {
     setVariant(null);
     setShowVariant(false);
     setSimilar([]);
+    setEdits(null); setCustom(null); setShowCustom(false); setEditing(false);
+    setSaved(null); setCustomError(null);
 
     recipesApi.byId(params.id)
       .then((data) => {
@@ -480,6 +503,37 @@ export default function RecipeDetailPage({ onAuthClick }) {
   useEffect(() => {
     if (loggedIn && recipe?.id) recordViewOnce(profileApi.interaction, recipe.id);
   }, [loggedIn, recipe?.id]);
+
+  // ── Ma version enregistrée : la fiche s'ouvre dessus ───────────────────────
+  useEffect(() => {
+    if (!loggedIn || !recipe?.id || recipe.id !== params.id) return undefined;
+    let alive = true;
+    recipeVersions.get(recipe.id)
+      .then((v) => {
+        if (!alive || !v) return;
+        const e = { base: v.base, rows: v.rows };
+        setSaved({ ...e, servings: v.servings });
+        setEdits(e);
+        setShowCustom(true);
+        if (v.servings) setServings(v.servings);
+      })
+      .catch(() => {});            // 404 : pas de version enregistrée
+    return () => { alive = false; };
+  }, [loggedIn, recipe?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── Fiche de la version recalculée à chaque modification (après une pause) ──
+  useEffect(() => {
+    if (!edits || !recipe?.id) return undefined;
+    const seq = ++previewSeq.current;
+    setCustomBusy(true);
+    const t = setTimeout(() => {
+      recipeVersions.preview(recipe.id, edits)
+        .then((data) => { if (seq === previewSeq.current) { setCustom(data); setCustomError(null); } })
+        .catch((err) => { if (seq === previewSeq.current) setCustomError(editErrorMessage(err)); })
+        .finally(() => { if (seq === previewSeq.current) setCustomBusy(false); });
+    }, custom ? 350 : 0);
+    return () => clearTimeout(t);
+  }, [edits, recipe?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Chargement similaires (une fois la recette chargée) ────────────────────
   // Version vegan affichée, ou profil vegan : des suggestions vegan (sinon quiche au
@@ -527,6 +581,54 @@ export default function RecipeDetailPage({ onAuthClick }) {
     } finally {
       setVariantLoading(false);
     }
+  };
+
+  // ── Ma version : modifier, enregistrer, annuler ────────────────────────────
+  const startEditing = () => {
+    if (!edits) {
+      const fromVegan = showVariant && variant?.recipe;
+      const comp = (fromVegan ? variant.recipe : recipe).composition || [];
+      setEdits({ base: fromVegan ? 'vegan' : 'original', rows: baseRows(comp) });
+    }
+    setEditing(true);
+    setShowCustom(true);
+  };
+  const cancelEdits = () => {
+    setCustomError(null);
+    if (saved) {
+      setEdits({ base: saved.base, rows: saved.rows });
+    } else {
+      setEdits(null); setCustom(null); setShowCustom(false);
+    }
+    setEditing(false);
+  };
+  const saveVersion = async () => {
+    if (!loggedIn) {
+      toast('Connectez-vous pour enregistrer votre version de la recette.', 'info');
+      onAuthClick?.();
+      return;
+    }
+    setSaving(true);
+    try {
+      const v = await recipeVersions.save(recipe.id, edits, servings);
+      setSaved({ base: v.base, rows: v.rows, servings: v.servings });
+      setEdits({ base: v.base, rows: v.rows });
+      setEditing(false);
+      toast('Votre version est enregistrée : la fiche s\u2019ouvrira dessus.', 'success');
+    } catch (err) {
+      toast(editErrorMessage(err), 'error');
+    } finally {
+      setSaving(false);
+    }
+  };
+  const deleteVersion = async () => {
+    if (!confirmDelete) { setConfirmDelete(true); return; }   // second clic : on supprime
+    setConfirmDelete(false);
+    try {
+      await recipeVersions.remove(recipe.id);
+    } catch { /* déjà supprimée */ }
+    setSaved(null); setEdits(null); setCustom(null); setShowCustom(false); setEditing(false);
+    toast('Version supprimée : voici la recette d\u2019origine.', 'success');
   };
 
   // #/recette/:id?version=vegan (carte du planning ajoutée en version vegan) : la
@@ -585,8 +687,19 @@ export default function RecipeDetailPage({ onAuthClick }) {
   };
 
   const ingredients  = recipe.composition || recipe.ingredients || [];
-  // Recette à afficher (principale ou variante)
-  const displayed = showVariant && variant?.recipe ? variant.recipe : recipe;
+  // Recette à afficher (ma version, variante vegan ou principale)
+  const displayed = shown;
+  const customShown = showCustom && !!custom;
+  const customChanges = custom?._custom?.changes || [];
+  const baseComposition = custom?._custom?.base_composition
+    || (edits?.base === 'vegan' ? variant?.recipe?.composition : recipe.composition) || [];
+  const dirty = edits && (saved ? !sameEdits(edits, saved) : hasChanges(edits.rows, baseComposition));
+  // Noms des ingrédients pour l'éditeur (recette, variante, version, départ)
+  const namesMeta = {
+    ...(recipe.ingredients_meta || {}), ...(variant?.recipe?.ingredients_meta || {}),
+    ...(custom?._custom?.base_ingredients_meta || {}), ...(custom?.ingredients_meta || {}),
+  };
+  const nameOf = (iid) => ingredientLine({ ingredient: iid }, { ingredients_meta: namesMeta }, 1).name;
   // Badges de la recette affichée : la variante vegan au tofu ne doit pas garder
   // le « Sans Soja » de l'original (allergènes recalculés par le serveur)
   const badges       = getRecipeBadges(displayed);
@@ -630,8 +743,32 @@ export default function RecipeDetailPage({ onAuthClick }) {
         </div>
 
         <div className="detail-header-content">
+          {/* Ma version (ingrédients ou quantités modifiés) */}
+          {customShown && (
+            <div className="variant-banner custom-banner">
+              <span>
+                ✏️ Ma version{edits?.base === 'vegan' ? ' (vegan)' : ''}
+                {' · '}{saved && !dirty ? 'enregistrée' : customChanges.length ? 'non enregistrée' : 'aucune modification'}
+              </span>
+              <span className="custom-banner-actions">
+                {!editing && (
+                  <button className="variant-toggle" onClick={() => setEditing(true)}>Modifier</button>
+                )}
+                <button className="variant-toggle" onClick={() => { setShowCustom(false); setEditing(false); }}>
+                  Voir l'originale
+                </button>
+              </span>
+            </div>
+          )}
+          {!customShown && saved && (
+            <div className="variant-banner custom-banner">
+              <span>✏️ Vous avez une version enregistrée de cette recette.</span>
+              <button className="variant-toggle" onClick={() => setShowCustom(true)}>Voir ma version</button>
+            </div>
+          )}
+
           {/* Toggle variante */}
-          {showVariant && (
+          {showVariant && !customShown && (
             <div className="variant-banner">
               <span>{variant?.source === 'partial' ? '🌿 Version vegan incomplète' : '🌿 Version vegan générée'}</span>
               <button className="variant-toggle" onClick={() => { setShowVariant(false); setVersionParam(false); }}>
@@ -788,7 +925,12 @@ export default function RecipeDetailPage({ onAuthClick }) {
 
           {/* Boutons d'action */}
           <div style={{ display:'flex', gap:10, flexWrap:'wrap', marginTop: 16 }}>
-            {!isVegan && !showVariant && recipe.vegan_variant?.available !== false && (
+            {!customShown && (
+              <button className="variant-btn edit-trigger-btn" onClick={startEditing}>
+                ✏️ Modifier les ingrédients
+              </button>
+            )}
+            {!isVegan && !showVariant && !customShown && recipe.vegan_variant?.available !== false && (
               <button
                 className="variant-btn"
                 onClick={generateVariant}
@@ -810,9 +952,10 @@ export default function RecipeDetailPage({ onAuthClick }) {
               📅 Ajouter au planning
             </button>
             <button className="variant-btn" onClick={() => {
-              // version affichée : la nutrition de la variante vegan, titre précisé
-              const sent = showVariant && variant?.recipe
-                ? { ...displayed, titles: { ...displayed.titles, fr: `${displayed.titles?.fr || ''} (version vegan)` } }
+              // version affichée : la nutrition de ma version ou de la variante vegan, titre précisé
+              const suffix = customShown ? ' (ma version)' : showVariant && variant?.recipe ? ' (version vegan)' : '';
+              const sent = suffix
+                ? { ...displayed, titles: { ...displayed.titles, fr: `${displayed.titles?.fr || ''}${suffix}` } }
                 : recipe;
               window.__alim_pending_recipe = sent;
               window.dispatchEvent(new CustomEvent('alim:recipe-selected', { detail: sent }));
@@ -883,6 +1026,10 @@ export default function RecipeDetailPage({ onAuthClick }) {
             </div>
           )}
 
+          {editing && edits ? (
+            <RecipeEditor recipeId={recipe.id} baseComposition={baseComposition} edits={edits}
+              nameOf={nameOf} ratio={ratio} onChange={setEdits} />
+          ) : (
           <ul className="ingredient-list">
             {(displayed.composition || displayed.ingredients || ingredients).map((ing, idx) => {
               const { iid, name, stateFr, qtyStr, equivStr, subRecipeId } = ingredientLine(ing, displayed, ratio);
@@ -922,11 +1069,50 @@ export default function RecipeDetailPage({ onAuthClick }) {
               );
             })}
           </ul>
+          )}
+
+          {/* Ma version : état du calcul, modifications, enregistrement */}
+          {customShown || editing ? (
+            <div className="custom-panel">
+              {customBusy && <p className="custom-status" role="status">Calcul de la nutrition et du prix…</p>}
+              {customError && <p className="form-error" role="alert">{customError}</p>}
+              {customChanges.length > 0 && (
+                <div className="variant-subs">
+                  <h4>✏️ Mes modifications <span className="custom-sub">(quantités pour {recipe.servings || 4} pers.)</span></h4>
+                  {customChanges.map((ch, i) => (
+                    <div key={i} className="variant-sub-row">{changeLabel(ch)}</div>
+                  ))}
+                </div>
+              )}
+              <div className="custom-actions">
+                {(dirty || !saved) && customChanges.length > 0 && (
+                  <button type="button" className="ct-btn ct-btn--primary" disabled={saving || customBusy || !!customError}
+                    onClick={saveVersion}>
+                    {saving ? 'Enregistrement…' : loggedIn ? '💾 Enregistrer ma version' : '💾 Se connecter pour enregistrer'}
+                  </button>
+                )}
+                {editing && (
+                  <button type="button" className="ct-btn" onClick={() => setEditing(false)}>Terminer</button>
+                )}
+                {(dirty || !saved) && (
+                  <button type="button" className="ct-btn" onClick={cancelEdits}>
+                    {saved ? 'Annuler les modifications' : 'Revenir à la recette'}
+                  </button>
+                )}
+                {saved && !editing && (
+                  <button type="button" className={`ct-btn${confirmDelete ? ' ct-btn--danger' : ''}`} onClick={deleteVersion}
+                    onBlur={() => setTimeout(() => setConfirmDelete(false), 200)}>
+                    {confirmDelete ? "Confirmer : revenir à l'originale" : 'Supprimer ma version'}
+                  </button>
+                )}
+              </div>
+            </div>
+          ) : null}
 
           {/* Substitutions vegan si variante */}
           {/* Le backend renvoie substitutions[{original, substitute, *_name}] :
               lire subs[{from, to}] n'affichait jamais rien. */}
-          {showVariant && variant?.substitutions?.length > 0 && (
+          {showVariant && !customShown && variant?.substitutions?.length > 0 && (
             <div className="variant-subs">
               <h4>🔄 Substitutions appliquées</h4>
               {variant.substitutions.map((s, i) => (
@@ -938,7 +1124,7 @@ export default function RecipeDetailPage({ onAuthClick }) {
               ))}
             </div>
           )}
-          {showVariant && variant?.unresolved?.length > 0 && (
+          {showVariant && !customShown && variant?.unresolved?.length > 0 && (
             <div className="variant-subs">
               <h4>⚠️ Sans substitut vegan</h4>
               {variant.unresolved.map((u, i) => (
@@ -954,10 +1140,16 @@ export default function RecipeDetailPage({ onAuthClick }) {
         <div className="detail-instructions">
           <h3>Préparation</h3>
           {/* Matériel déduit des étapes (backend/engine/equipment.py) */}
-          {recipe.equipment_needed?.length > 0 && (
-            <p className="equipment-line">🍳 Matériel : {recipe.equipment_needed.join(', ')}</p>
+          {displayed.equipment_needed?.length > 0 && (
+            <p className="equipment-line">🍳 Matériel : {displayed.equipment_needed.join(', ')}</p>
           )}
-          {showVariant && variant?.substitutions?.length > 0 && (
+          {customShown && custom?._custom?.step_notes?.length > 0 && (
+            <div className="variant-steps-note custom-steps-note" role="note">
+              <p>Étapes adaptées à votre version{custom._steps_rewritten > 0 ? ' (ingrédients et quantités réécrits)' : ''}.</p>
+              <ul>{custom._custom.step_notes.map((n, i) => <li key={i}>{n}</li>)}</ul>
+            </div>
+          )}
+          {showVariant && !customShown && variant?.substitutions?.length > 0 && (
             <p className="variant-steps-note" role="note">
               {/* Les étapes sont réécrites par le serveur ; les œufs entiers cuits ou cassés
                   restent tels quels dans le texte, d'où le rappel */}
@@ -1005,8 +1197,8 @@ export default function RecipeDetailPage({ onAuthClick }) {
       {displayed.nutrition && <RecipeNutritionPanel nutrition={displayed.nutrition} />}
 
       {/* ── Glycémie (objectif « diabète ») — calculée sur la recette originale ── */}
-      {profileGoal === 'diabete' && !showVariant && Array.isArray(recipe.diabetes_watch) && (
-        <DiabetesWatch items={recipe.diabetes_watch} />
+      {profileGoal === 'diabete' && (customShown || !showVariant) && Array.isArray(displayed.diabetes_watch) && (
+        <DiabetesWatch items={displayed.diabetes_watch} />
       )}
 
       {/* ── Mode cuisine ── */}
@@ -1026,7 +1218,9 @@ export default function RecipeDetailPage({ onAuthClick }) {
 
       {/* ── Modal Ajouter au planning ── */}
       {showPlanModal && recipe && (
-        <AddToPlanModal recipe={recipe} variant={showVariant && variant?.recipe ? 'vegan' : undefined}
+        <AddToPlanModal recipe={recipe}
+          variant={customShown && customChanges.length ? 'perso' : showVariant && variant?.recipe ? 'vegan' : undefined}
+          edits={customShown && customChanges.length ? { base: edits.base, rows: edits.rows } : undefined}
           onClose={()=>setShowPlanModal(false)} />
       )}
 

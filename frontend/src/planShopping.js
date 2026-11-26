@@ -22,6 +22,7 @@ export function planToShoppingFormat(plan) {
         const entry = { id: r.id, title: r.title_fr || r.title || '' };
         if (slot.servings > 0) entry.servings = slot.servings;
         if (r.variant) entry.variant = r.variant;   // « vegan » : courses de la version vegan
+        if (r.edits) entry.edits = r.edits;         // « perso » : ingrédients et quantités modifiés
         out[dk][`${m}_${i++}`] = entry;
       }
     }

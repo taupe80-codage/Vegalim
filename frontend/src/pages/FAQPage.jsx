@@ -40,6 +40,10 @@ const FAQ_SECTIONS = [
         a: `Cliquez sur le bouton ◉ sur la carte recette ou sur "Voir l'AJR" dans la page détail. Vous serez redirigé vers la page Nutrition en vue "Recette", qui affiche les apports en protéines, glucides, lipides, fibres, vitamines et minéraux, comparés aux Apports Journaliers Recommandés (AJR). Une analyse IA approfondie est également disponible via le bouton "Analyse IA".`,
       },
       {
+        q: 'Puis-je remplacer un ingrédient ou changer les quantités ?',
+        a: `Oui. Sur la fiche d'une recette, cliquez sur "✏️ Modifier les ingrédients" : vous pouvez remplacer un ingrédient (des idées proches sont proposées, ou cherchez-en un), le retirer, en ajouter un et changer les quantités, saisies pour le nombre de portions affiché. La valeur nutritionnelle, le score, les allergènes, le prix, l'empreinte carbone et le texte des étapes sont recalculés aussitôt. Vous pouvez ensuite enregistrer votre version (il faut être connecté) : la fiche s'ouvrira dessus, avec un bouton pour revoir l'originale, et vous la retrouvez dans « Mes recettes ». Sans l'enregistrer, vous pouvez quand même l'ajouter au planning : liste de courses, coût et bilan de la semaine compteront vos ingrédients et vos quantités.`,
+      },
+      {
         q: 'Puis-je ajouter mes propres recettes ?',
         a: `Cette fonctionnalité est en cours de développement. Dans une prochaine version, vous pourrez créer des recettes personnalisées, les tagger avec vos propres ingrédients et les intégrer dans le planning. En attendant, vous pouvez utiliser la fonction Favoris pour retrouver rapidement vos recettes préférées.`,
       },

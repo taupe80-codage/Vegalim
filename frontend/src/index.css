@@ -5789,3 +5789,73 @@ html[data-theme="dark"] .rv-stars-fg { color: #f0b429; }
 
 /* Fiche recette : matériel nécessaire */
 .equipment-line { font-size: 13px; color: var(--mut); margin: -4px 0 10px; }
+
+/* ══ Ma version d'une recette : éditeur d'ingrédients (re-*, custom-*) ════════ */
+.custom-banner { gap: 10px; flex-wrap: wrap; }
+.custom-banner-actions { display: inline-flex; gap: 8px; flex-wrap: wrap; }
+.custom-panel { margin-top: 14px; }
+.custom-status { font-size: 13px; color: var(--mut); margin: 0 0 8px; }
+.custom-sub { font-weight: 400; color: var(--mut); font-size: 12px; }
+.custom-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.custom-steps-note p { margin: 0 0 4px; }
+.custom-steps-note ul { margin: 0; padding-left: 18px; }
+
+.re-editor { margin-top: 4px; }
+.re-hint { font-size: 12px; color: var(--mut); margin: 0 0 10px; }
+.re-list { list-style: none; margin: 0; padding: 0; }
+.re-row { border-bottom: 1px solid var(--sur2); padding: 8px 0; }
+.re-row--changed .re-name { color: var(--grn); font-weight: 600; }
+.re-row--removed .re-name { color: var(--mut); }
+.re-line { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.re-name { flex: 1 1 160px; min-width: 0; font-size: 14px; }
+.re-was { font-weight: 400; color: var(--mut); font-size: 12px; }
+.re-amount { display: inline-flex; align-items: center; gap: 4px; }
+.re-qty {
+  width: 64px; font: inherit; font-size: 14px; padding: 5px 7px; text-align: right;
+  border: 1px solid var(--brd); border-radius: var(--rad-sm); background: var(--sur); color: var(--txt);
+}
+.re-unit {
+  font: inherit; font-size: 13px; padding: 5px 4px; border: 1px solid var(--brd);
+  border-radius: var(--rad-sm); background: var(--sur); color: var(--txt);
+}
+.re-actions { display: inline-flex; gap: 4px; }
+.re-btn {
+  font: inherit; font-size: 12px; padding: 5px 9px; min-height: 30px; border-radius: var(--rad-sm);
+  border: 1px solid var(--brd); background: var(--sur); color: var(--txt2); cursor: pointer; white-space: nowrap;
+}
+.re-btn:hover { border-color: var(--grn); color: var(--grn); }
+.re-btn--remove:hover { border-color: var(--red); color: var(--red); }
+.re-muted { color: var(--mut); font-size: 13px; }
+.re-panel {
+  margin-top: 8px; padding: 10px; border: 1px solid var(--brd); border-radius: var(--rad);
+  background: var(--sur2);
+}
+.re-panel-label { font-size: 12px; color: var(--mut); margin-right: 4px; }
+.re-suggest { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 8px; }
+.re-chip {
+  font: inherit; font-size: 13px; padding: 4px 10px; border-radius: 999px; cursor: pointer;
+  border: 1px solid rgba(63,185,80,0.4); background: var(--grn-dim); color: var(--grn);
+}
+.re-chip:hover { background: rgba(63,185,80,0.22); }
+.re-search { display: flex; gap: 8px; align-items: center; }
+.re-search input {
+  flex: 1; min-width: 0; font: inherit; font-size: 14px; padding: 7px 10px;
+  border: 1px solid var(--brd); border-radius: var(--rad-sm); background: var(--sur); color: var(--txt);
+}
+.re-link { font: inherit; font-size: 13px; background: none; border: none; color: var(--mut); cursor: pointer; text-decoration: underline; }
+.re-results { list-style: none; margin: 8px 0 0; padding: 0; max-height: 220px; overflow-y: auto; }
+.re-results button {
+  width: 100%; text-align: left; font: inherit; font-size: 14px; padding: 7px 8px; border: none;
+  background: none; color: var(--txt); cursor: pointer; border-radius: var(--rad-sm);
+}
+.re-results button:hover, .re-results button:focus-visible { background: var(--grn-dim); color: var(--grn); }
+.re-add {
+  margin-top: 10px; font: inherit; font-size: 14px; padding: 8px 12px; border-radius: 8px; cursor: pointer;
+  border: 1px dashed var(--grn); background: none; color: var(--grn); width: 100%;
+}
+.re-add:hover { background: var(--grn-dim); }
+@media (max-width: 600px) {
+  .re-name { flex-basis: 100%; }
+  .re-line { justify-content: space-between; }
+}
+.mr-version-changes { margin: 6px 0 0; padding-left: 18px; font-size: 13px; color: var(--txt2); }

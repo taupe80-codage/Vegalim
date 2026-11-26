@@ -417,6 +417,12 @@ def daily_nutrition(payload: DayNutritionRequest, user: dict | None = Depends(ge
                 if not rid:
                     continue
                 nutr = ng.get(rid, {})
+                if isinstance(r, dict) and r.get("variant"):
+                    # version vegan ou modifiée par le membre : sa propre nutrition
+                    from backend.core.data_io import load_recipes
+                    from backend.services.recipe_edits import plan_entry_nutrition
+                    recipe = next((x for x in load_recipes() if str(x.get("id")) == rid), None)
+                    nutr = plan_entry_nutrition(recipe, r, ng) or {}
                 for k in KEYS:
                     v = nutr.get(k) or 0
                     totals[k] += float(v)

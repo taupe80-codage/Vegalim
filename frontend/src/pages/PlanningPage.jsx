@@ -320,6 +320,11 @@ function PlanningRecipeCard({recipe, onReplace, onSearch, onDelete, isReplacing}
             🌿 version vegan
           </span>
         )}
+        {recipe.variant === 'perso' && (
+          <span className="prcard-ahead" title="Ajoutée dans votre version : courses, coût et bilan comptent vos ingrédients et quantités">
+            ✏️ ma version
+          </span>
+        )}
         {recipe.prep_ahead && (
           <span className="prcard-ahead" title="Trempage, marinade ou repos de 4 h ou plus : à commencer la veille">
             ⏳ à lancer la veille

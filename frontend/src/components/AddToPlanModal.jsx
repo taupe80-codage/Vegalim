@@ -20,7 +20,7 @@ const MEAL_DEFAULTS = {
   dinner:    { dishTypes: ['main'],      servings: 4 },
 };
 
-function addToPlan(recipe, dayKey, mealKey, variant) {
+function addToPlan(recipe, dayKey, mealKey, variant, edits) {
   try {
     const raw  = localStorage.getItem(PLAN_KEY);
     const plan = raw ? JSON.parse(raw) : null;
@@ -44,15 +44,17 @@ function addToPlan(recipe, dayKey, mealKey, variant) {
       title_fr:   recipe.titles?.fr || recipe.title_fr || recipe.title || '',
       title:      recipe.titles?.original || recipe.title || '',
       _dish_type: slot.dishTypes?.[0] || 'main',
-      // version vegan choisie sur la fiche : la liste de courses en tiendra compte
+      // version vegan ou ma version (ingrédients modifiés) choisie sur la fiche :
+      // liste de courses, coût et bilan de la semaine en tiendront compte
       ...(variant ? { variant } : {}),
+      ...(variant === 'perso' && edits ? { edits } : {}),
     });
     localStorage.setItem(PLAN_KEY, JSON.stringify(ensured));
     return true;
   } catch { return false; }
 }
 
-export default function AddToPlanModal({ recipe, variant, onClose }) {
+export default function AddToPlanModal({ recipe, variant, edits, onClose }) {
   const today   = new Date().getDay(); // 0=dim, 1=lun...
   const todayIdx = today === 0 ? 6 : today - 1; // map to 0=lun..6=dim
   const [day,  setDay]  = useState(DAYS_KEY[todayIdx] || 'lundi');
@@ -60,13 +62,13 @@ export default function AddToPlanModal({ recipe, variant, onClose }) {
   const [done, setDone] = useState(false);
 
   const confirm = () => {
-    addToPlan(recipe, day, meal, variant);
+    addToPlan(recipe, day, meal, variant, edits);
     setDone(true);
     setTimeout(onClose, 1400);
   };
 
   const title = (recipe.titles?.fr || recipe.title_fr || recipe.title || 'Recette')
-    + (variant === 'vegan' ? ' (version vegan)' : '');
+    + (variant === 'vegan' ? ' (version vegan)' : variant === 'perso' ? ' (ma version)' : '');
 
   return createPortal(
     <div

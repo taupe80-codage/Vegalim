@@ -6,11 +6,12 @@
  */
 
 import { useEffect, useState } from 'react';
-import { contributions, apiUrl, photoProposals } from '../api';
+import { contributions, apiUrl, photoProposals, recipeVersions } from '../api';
 import { useAuth } from '../AuthContext';
 import { Link, navigate } from '../Router';
 import { useToast } from '../ToastContext';
 import { StatusBadge } from '../components/ContributionParts';
+import { changeLabel } from '../recipeEdits';
 
 const ORDER = ['changes_requested', 'draft', 'submitted', 'published', 'rejected'];
 
@@ -70,6 +71,61 @@ function MyPhotos() {
             </li>
           );
         })}
+      </ul>
+    </section>
+  );
+}
+
+// Recettes du catalogue modifiées et enregistrées (ingrédients, quantités)
+function MyVersions() {
+  const toast = useToast();
+  const [versions, setVersions] = useState(null);
+  const [confirm, setConfirm] = useState(null);
+  useEffect(() => { recipeVersions.mine().then(r => setVersions(r.results || [])).catch(() => setVersions([])); }, []);
+  if (!versions || versions.length === 0) return null;
+
+  const remove = async (v) => {
+    if (confirm !== v.recipe_id) { setConfirm(v.recipe_id); return; }
+    try {
+      await recipeVersions.remove(v.recipe_id);
+      setVersions(list => list.filter(x => x.recipe_id !== v.recipe_id));
+      toast("Version supprimée : la fiche montre de nouveau la recette d'origine");
+    } catch (e) {
+      toast(e.message || 'Suppression impossible', 'error');
+    } finally {
+      setConfirm(null);
+    }
+  };
+
+  return (
+    <section aria-labelledby="mr-versions" style={{ marginTop: 32 }}>
+      <h2 id="mr-versions" className="ct-card-title">Mes recettes modifiées</h2>
+      <p className="ct-muted">Les fiches s'ouvrent sur votre version ; « Voir l'originale » reste possible.</p>
+      <ul className="ct-list">
+        {versions.map(v => (
+          <li key={v.recipe_id} className="ct-item">
+            <div className="ct-item-body">
+              <div className="ct-item-head">
+                <h3 className="ct-item-title"><Link to={`/recette/${v.recipe_id}`}>{v.title}</Link></h3>
+                {v.base === 'vegan' && <span className="ct-badges"><span className="badge">🌿 vegan</span></span>}
+              </div>
+              <p className="ct-muted ct-item-dates">Modifiée le {formatDate(v.updated_at)}</p>
+              {v.changes?.length > 0 && (
+                <ul className="mr-version-changes">
+                  {v.changes.slice(0, 6).map((ch, i) => <li key={i}>{changeLabel(ch)}</li>)}
+                  {v.changes.length > 6 && <li>… et {v.changes.length - 6} autre(s)</li>}
+                </ul>
+              )}
+              <div className="ct-actions">
+                <button type="button" className={`ct-btn ct-btn--sm ${confirm === v.recipe_id ? 'ct-btn--danger' : ''}`}
+                  onClick={() => remove(v)}
+                  onBlur={() => setTimeout(() => setConfirm(c => (c === v.recipe_id ? null : c)), 200)}>
+                  {confirm === v.recipe_id ? 'Confirmer la suppression' : 'Supprimer ma version'}
+                </button>
+              </div>
+            </div>
+          </li>
+        ))}
       </ul>
     </section>
   );
@@ -219,6 +275,7 @@ export default function MyRecipesPage({ onAuthClick }) {
         ))}
       </ul>
       <MyPhotos />
+      <MyVersions />
     </div>
   );
 }

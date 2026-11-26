@@ -15,7 +15,7 @@ Organisation par domaine :
   /idees, /recette/{id}, /sitemap.xml, /robots.txt → pages HTML indexables
 """
 from fastapi import APIRouter
-from backend.api.routes import auth, profile, recipes, nutrition, planning, admin, ingredients, frigo, graph, contributions, reviews, notifications, seo, photo_proposals
+from backend.api.routes import auth, profile, recipes, nutrition, planning, admin, ingredients, frigo, graph, contributions, reviews, notifications, seo, photo_proposals, recipe_versions
 
 router = APIRouter()
 router.include_router(auth.router)
@@ -32,3 +32,4 @@ router.include_router(reviews.router)
 router.include_router(notifications.router)
 router.include_router(seo.router)
 router.include_router(photo_proposals.router)
+router.include_router(recipe_versions.router)

@@ -201,6 +201,18 @@ async function uploadRaw(path, file, method = 'PUT') {
 }
 
 // Photos de plats proposées par les membres (relues par la modération)
+// ── Recettes modifiées par le membre (ingrédients, quantités) ───────────────
+// edits = { base: 'original' | 'vegan', rows: [{ src, orig, ingredient, quantity, unit }] }
+const enc = encodeURIComponent;
+export const recipeVersions = {
+  preview:      (id, edits)      => post(`/recettes/${enc(id)}/personnaliser`, edits),
+  replacements: (id, ingredient) => get(`/recettes/${enc(id)}/remplacements?ingredient=${enc(ingredient)}`),
+  mine:         ()               => get('/mes-versions'),
+  get:          (id)             => get(`/mes-versions/${enc(id)}`),
+  save:         (id, edits, servings) => put(`/mes-versions/${enc(id)}`, { ...edits, servings }),
+  remove:       (id)             => del(`/mes-versions/${enc(id)}`),
+};
+
 export const photoProposals = {
   propose: (recipeId, file, authorName, consent) => uploadRaw(
     `/photo-proposals/${encodeURIComponent(recipeId)}?author_name=${encodeURIComponent(authorName)}&consent=${consent ? 'true' : 'false'}`,

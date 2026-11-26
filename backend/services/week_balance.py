@@ -77,11 +77,15 @@ SUGGEST_DISHES = {"main", "soup", "side", "starter", "breakfast"}
 N_SUGGEST = 4
 
 
-def _slot_ids(slot) -> list[str]:
+def _slot_entries(slot) -> list[dict]:
     if not isinstance(slot, dict) or slot.get("skip"):
         return []
     items = slot.get("recipes") or ([slot] if slot.get("id") else [])
-    return [str(r.get("id")) for r in items if isinstance(r, dict) and r.get("id")]
+    return [r for r in items if isinstance(r, dict) and r.get("id")]
+
+
+def _slot_ids(slot) -> list[str]:
+    return [str(r.get("id")) for r in _slot_entries(slot)]
 
 
 def balance(plan: dict, diet: str | None = None) -> dict:
@@ -95,17 +99,27 @@ def balance(plan: dict, diet: str | None = None) -> dict:
     in_plan: list[str] = []
     missing: list[str] = []
 
+    from backend.services.recipe_edits import plan_entry_nutrition
+    index: dict | None = None
     for day in DAYS:
         day_data = plan.get(day) or {}
         for meal in MEALS:
-            ids = _slot_ids(day_data.get(meal))
-            if not ids:
+            entries = _slot_entries(day_data.get(meal))
+            if not entries:
                 continue
             meals[meal] += 1
             share_sum += MEAL_SHARE[meal]
-            for rid in ids:
+            for entry in entries:
+                rid = str(entry.get("id"))
                 in_plan.append(rid)
-                nutr = ng.get(rid)
+                if entry.get("variant"):
+                    # version vegan ou modifiée : sa propre nutrition
+                    if index is None:
+                        from backend.core.data_io import load_recipes
+                        index = {str(r.get("id")): r for r in load_recipes()}
+                    nutr = plan_entry_nutrition(index.get(rid), entry, ng)
+                else:
+                    nutr = ng.get(rid)
                 if not nutr:
                     missing.append(rid)
                     continue

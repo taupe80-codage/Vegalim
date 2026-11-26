@@ -402,12 +402,33 @@ def _drop_echo(m) -> str:
 _TEXT_ALIASES = {"ladyfinger": ("ladyfinger",)}
 
 
-def _rewrite_steps(steps: list, applied: list[dict], prose: bool = False) -> tuple[list, int]:
+def _pluralize(name: str) -> str:
+    """« courgette » → « courgettes », « beurre de cacahuète » → « beurres de cacahuète »."""
+    words = name.split()
+    out = []
+    for i, w in enumerate(words):
+        if w in _LINK_WORDS or w.startswith(("d'", "d’")):
+            return " ".join(out + words[i:])
+        if w.endswith(("s", "x", "z")):
+            out.append(w)
+        elif w.endswith(("eau", "eu")):
+            out.append(w + "x")
+        elif w.endswith("al"):
+            out.append(w[:-2] + "aux")
+        else:
+            out.append(w + "s")
+    return " ".join(out)
+
+
+def _rewrite_steps(steps: list, applied: list[dict], prose: bool = False,
+                   edit: bool = False) -> tuple[list, int]:
     """Étapes avec les ingrédients de substitution. Prudent : mots entiers, un seul
     passage (un substitut n'est jamais remplacé à son tour), « 3 œufs (150 g) » →
     « 150 g de tofu soyeux », élision « de / d' » rétablie autour des seuls
     substituts ; dans les étapes, les œufs ne sont remplacés que dans une quantité en
     grammes. prose (description) : « un appareil d'œufs » → « de tofu soyeux » aussi.
+    edit (recette modifiée par un membre) : pluriel accordé (« les aubergines » →
+    « les courgettes ») et « d'aubergines » remplacé aussi (« de courgettes »).
     Renvoie (étapes, nb modifiées)."""
     mapping: dict[str, str] = {}
     # noms complets d'abord : « lait » (liquide → lait de soja) ne doit pas être pris
@@ -425,6 +446,8 @@ def _rewrite_steps(steps: list, applied: list[dict], prose: bool = False) -> tup
         return steps, 0
     counted_forms = [f for f in mapping if _COUNTED.search(f)]
     mass_forms = [f for f in mapping if f not in counted_forms]
+    # forme au pluriel : la même sans son « s » / « x » final est aussi une forme
+    plural_forms = {f for f in mapping if edit and f[-1:] in "sx" and f[:-1] in mapping}
 
     def alt(fs):
         return "|".join(re.escape(f) for f in sorted(fs, key=len, reverse=True))
@@ -445,10 +468,14 @@ def _rewrite_steps(steps: list, applied: list[dict], prose: bool = False) -> tup
                               mapping[m.group(1).lower()]), True))
     if mass_forms:
         def mass(m):
-            sub = mapping[m.group(1).lower()]
+            key = m.group(1).lower()
+            sub = _pluralize(mapping[key]) if key in plural_forms else mapping[key]
             # « Paneer maison en cubes… » en début de phrase → « Tofu maison… »
             return sub[:1].upper() + sub[1:] if m.group(1)[:1].isupper() else sub
-        rules.append((re.compile(rf"(?<![\w'’])({alt(mass_forms)})(?!\w)", re.I), mass, False))
+        # edit : aussi après « d' » (l'élision est rétablie plus bas), jamais après « l' »
+        # (le genre du remplaçant est inconnu)
+        before = r"(?<![\w])(?<![^dD]')(?<![^dD]’)" if edit else r"(?<![\w'’])"
+        rules.append((re.compile(rf"{before}({alt(mass_forms)})(?!\w)", re.I), mass, False))
     out, changed = [], 0
     for step in steps:
         if not isinstance(step, str):
@@ -462,7 +489,10 @@ def _rewrite_steps(steps: list, applied: list[dict], prose: bool = False) -> tup
         if new != step:
             # élision autour des seuls substituts insérés : le reste de l'étape n'est
             # pas touché (« de haricots »)
-            for sub in set(mapping.values()):
+            subs = set(mapping.values())
+            if edit:
+                subs |= {_pluralize(v) for v in subs}
+            for sub in subs:
                 esc = re.escape(sub)
                 elide = sub[:1] in _VOWELS or sub.startswith(_H_MUET)
                 if elide:

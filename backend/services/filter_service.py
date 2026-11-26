@@ -157,8 +157,6 @@ def _build_hs_cache() -> dict[str, dict]:
     Appelé une seule fois — thread-safe via _hs_lock.
     """
     from backend.core.data_io import load_nutrition_graph, load_recipes
-    from backend.engine.rule_engine.diet import compute_fodmap, is_low_sodium
-    from backend.engine.diabetes import glycemic_category
 
     ng      = load_nutrition_graph()
     recipes = load_recipes()
@@ -166,113 +164,122 @@ def _build_hs_cache() -> dict[str, dict]:
 
     for recipe in recipes:
         rid  = str(recipe.get("id", ""))
-        nutr = ng.get(rid, {})
-
-        # ── Valeurs par portion ───────────────────────────────────────────────
-        kcal   = float(nutr.get("calories",      0) or 0)
-        prot   = float(nutr.get("protein",       0) or 0)
-        fiber  = float(nutr.get("fiber",         0) or 0)
-        sodium = float(nutr.get("sodium",        0) or 0)
-        sugar  = float(nutr.get("sugar",         0) or 0)
-        sat_fat = float(nutr.get("saturated_fat",0) or 0)
-        omega3  = float(nutr.get("omega3",       0) or 0)   # g d'oméga-3 (ALA)
-
-        # ── Micronutriments ───────────────────────────────────────────────────
-        vc  = float(nutr.get("vitamin_c",  0) or 0)
-        ca  = float(nutr.get("calcium",    0) or 0)
-        fe  = float(nutr.get("iron",       0) or 0)
-        mg  = float(nutr.get("magnesium",  0) or 0)
-        k   = float(nutr.get("potassium",  0) or 0)
-        zn  = float(nutr.get("zinc",       0) or 0)
-        vd  = float(nutr.get("vitamin_d",  0) or 0)   # µg
-        fol = float(nutr.get("folate",     0) or 0)   # µg
-
-        # ── FODMAP — calcul unique (diet.compute_fodmap) ─────────────────────
-        fodmap = compute_fodmap(recipe)
-
-        # ── Health scores ─────────────────────────────────────────────────────
-        # Seuil GI corrigé : échelle standard 0-100 (OMS)
-        # low < 55 / medium 55-70 / high ≥ 70
-        # (ancien seuil <8/<12 ne qualifiait qu'1 recette sur 845)
-        hs: dict = {
-            # Macros
-            "kcal":              round(kcal),
-            "high_protein":      prot  >= 20.0,
-            "good_source_protein": prot >= 10.0,
-            "low_calorie":       kcal  <  300.0,
-            "high_fiber":        fiber >= 8.0,
-            "good_source_fiber": fiber >= 4.0,
-            "low_sodium":        is_low_sodium(nutr),   # ≤ 120 mg / 100 g
-            "sodium_mg":         round(sodium),
-            "low_sugar":         sugar  < 5.0,
-            "protein_g":         round(prot,  1),
-            "fiber_g":           round(fiber, 1),
-            "low_sat_fat":       sat_fat < 5.0,
-            # Glycémie : glucides rapides par portion (l'indice glycémique est
-            # absent des données sources : toutes les recettes sortaient « low »)
-            "glycemic_category": glycemic_category(nutr),
-            "fast_carbs_g":      nutr.get("fast_carbs"),
-            # FODMAP
-            **fodmap,
-            # Anti-inflammatoire (proxy omega-3 si disponible)
-            "anti_inflammatory_score": (
-                "high"   if omega3 >= 1.0 else
-                "medium" if omega3 >= 0.3 else
-                "low"
-            ),
-            # ── Micronutriments — seuils AJR ANSES/OMS ───────────────────────
-            # Calibrés sur les distributions réelles du dataset (845 recettes
-            # végétariennes/veganes, valeurs par portion).
-            # Les valeurs plant-based sont naturellement élevées en zinc/fer :
-            # légumineuses, graines, céréales complètes dominent le dataset.
-            #
-            # AJR : vitamine C 90mg | calcium 1000mg | fer 14mg
-            #        magnésium 400mg | potassium 3500mg | zinc 10mg
-            #        vitamine D 5µg | folates 200µg (VNR UE, Règlement 1169/2011)
-            #
-            # "bonne source" → seuil discriminant 15-25% AJR
-            # "riche en"     → seuil discriminant 40-70% AJR
-            # (seuils EU Règlement 1924/2006 adaptés aux distributions observées)
-            "high_vitamin_c":         vc >= 27.0,    # 30% AJR  → ~47% recettes
-            "source_vitamin_c":       vc >= 13.5,    # 15% AJR  → ~68% recettes
-            "high_calcium":           ca >= 150.0,   # 15% AJR  → ~20% recettes
-            "high_iron":              fe >= 4.2,     # 30% AJR  → ~22% recettes
-            "good_source_iron":       fe >= 2.1,     # 15% AJR  → ~68% recettes
-            "high_magnesium":         mg >= 100.0,   # 25% AJR  → ~14% recettes
-            "source_magnesium":       mg >= 60.0,    # 15% AJR  → ~48% recettes
-            "high_potassium":         k  >= 1050.0,  # 30% AJR  → ~11% recettes
-            "good_source_potassium":  k  >= 525.0,   # 15% AJR  → ~58% recettes
-            # Zinc : 6 / 3 mg (60 / 30 %) ne qualifiaient aucune / 53 recettes
-            # (max 4,6 mg) ; aligné sur la règle 30 / 15 % des autres.
-            "high_zinc":              zn >= 3.0,     # 30% AJR  → ~6% recettes
-            "source_zinc":            zn >= 1.5,     # 15% AJR  → ~45% recettes
-            "high_vitamin_d":         vd >= 1.5,     # 30% AJR  → ~3% recettes
-            "source_vitamin_d":       vd >= 0.75,    # 15% AJR  → ~11% recettes
-            "high_folate":            fol >= 60.0,   # 30% AJR  → ~30% recettes
-            "source_folate":          fol >= 30.0,   # 15% AJR  → ~51% recettes
-            # Oméga-3 : seuils des allégations UE « source » 0,3 g / « riche » 0,6 g
-            "high_omega3":            omega3 >= 0.6,  # → ~7% recettes
-            "source_omega3":          omega3 >= 0.3,  # → ~16% recettes
-            # ── Valeurs brutes (mg/g) pour affichage frontend ─────────────────
-            "vitamin_c_mg":   round(vc, 1),
-            "calcium_mg":     round(ca, 1),
-            "iron_mg":        round(fe, 2),
-            "magnesium_mg":   round(mg, 1),
-            "potassium_mg":   round(k,  1),
-            "zinc_mg":        round(zn, 2),
-            "vitamin_d_ug":   round(vd, 2),
-            "folate_ug":      round(fol, 1),
-            "omega3_g":       round(omega3, 2),
-            # Antioxydants — vitamine C réelle ≥ 40mg (30% AJR, seuil discriminant ~30% recettes)
-            "antioxidant_rich": vc >= 40.0,
-        }
-        cache[rid] = hs
+        cache[rid] = health_scores_for(recipe, ng.get(rid, {}))
 
     logger.info(
         "filter_service: cache health_scores construit — %d recettes",
         len(cache),
     )
     return cache
+
+
+def health_scores_for(recipe: dict, nutr: dict) -> dict:
+    """health_scores d'une recette à partir de sa nutrition par portion.
+
+    Sert au cache (nutrition du graphe) et aux versions modifiées par un
+    membre (ingrédients remplacés, quantités changées : recipe_edits).
+    """
+    from backend.engine.rule_engine.diet import compute_fodmap, is_low_sodium
+    from backend.engine.diabetes import glycemic_category
+    # ── Valeurs par portion ───────────────────────────────────────────────
+    kcal   = float(nutr.get("calories",      0) or 0)
+    prot   = float(nutr.get("protein",       0) or 0)
+    fiber  = float(nutr.get("fiber",         0) or 0)
+    sodium = float(nutr.get("sodium",        0) or 0)
+    sugar  = float(nutr.get("sugar",         0) or 0)
+    sat_fat = float(nutr.get("saturated_fat",0) or 0)
+    omega3  = float(nutr.get("omega3",       0) or 0)   # g d'oméga-3 (ALA)
+
+    # ── Micronutriments ───────────────────────────────────────────────────
+    vc  = float(nutr.get("vitamin_c",  0) or 0)
+    ca  = float(nutr.get("calcium",    0) or 0)
+    fe  = float(nutr.get("iron",       0) or 0)
+    mg  = float(nutr.get("magnesium",  0) or 0)
+    k   = float(nutr.get("potassium",  0) or 0)
+    zn  = float(nutr.get("zinc",       0) or 0)
+    vd  = float(nutr.get("vitamin_d",  0) or 0)   # µg
+    fol = float(nutr.get("folate",     0) or 0)   # µg
+
+    # ── FODMAP — calcul unique (diet.compute_fodmap) ─────────────────────
+    fodmap = compute_fodmap(recipe)
+
+    # ── Health scores ─────────────────────────────────────────────────────
+    # Seuil GI corrigé : échelle standard 0-100 (OMS)
+    # low < 55 / medium 55-70 / high ≥ 70
+    # (ancien seuil <8/<12 ne qualifiait qu'1 recette sur 845)
+    hs: dict = {
+        # Macros
+        "kcal":              round(kcal),
+        "high_protein":      prot  >= 20.0,
+        "good_source_protein": prot >= 10.0,
+        "low_calorie":       kcal  <  300.0,
+        "high_fiber":        fiber >= 8.0,
+        "good_source_fiber": fiber >= 4.0,
+        "low_sodium":        is_low_sodium(nutr),   # ≤ 120 mg / 100 g
+        "sodium_mg":         round(sodium),
+        "low_sugar":         sugar  < 5.0,
+        "protein_g":         round(prot,  1),
+        "fiber_g":           round(fiber, 1),
+        "low_sat_fat":       sat_fat < 5.0,
+        # Glycémie : glucides rapides par portion (l'indice glycémique est
+        # absent des données sources : toutes les recettes sortaient « low »)
+        "glycemic_category": glycemic_category(nutr),
+        "fast_carbs_g":      nutr.get("fast_carbs"),
+        # FODMAP
+        **fodmap,
+        # Anti-inflammatoire (proxy omega-3 si disponible)
+        "anti_inflammatory_score": (
+            "high"   if omega3 >= 1.0 else
+            "medium" if omega3 >= 0.3 else
+            "low"
+        ),
+        # ── Micronutriments — seuils AJR ANSES/OMS ───────────────────────
+        # Calibrés sur les distributions réelles du dataset (845 recettes
+        # végétariennes/veganes, valeurs par portion).
+        # Les valeurs plant-based sont naturellement élevées en zinc/fer :
+        # légumineuses, graines, céréales complètes dominent le dataset.
+        #
+        # AJR : vitamine C 90mg | calcium 1000mg | fer 14mg
+        #        magnésium 400mg | potassium 3500mg | zinc 10mg
+        #        vitamine D 5µg | folates 200µg (VNR UE, Règlement 1169/2011)
+        #
+        # "bonne source" → seuil discriminant 15-25% AJR
+        # "riche en"     → seuil discriminant 40-70% AJR
+        # (seuils EU Règlement 1924/2006 adaptés aux distributions observées)
+        "high_vitamin_c":         vc >= 27.0,    # 30% AJR  → ~47% recettes
+        "source_vitamin_c":       vc >= 13.5,    # 15% AJR  → ~68% recettes
+        "high_calcium":           ca >= 150.0,   # 15% AJR  → ~20% recettes
+        "high_iron":              fe >= 4.2,     # 30% AJR  → ~22% recettes
+        "good_source_iron":       fe >= 2.1,     # 15% AJR  → ~68% recettes
+        "high_magnesium":         mg >= 100.0,   # 25% AJR  → ~14% recettes
+        "source_magnesium":       mg >= 60.0,    # 15% AJR  → ~48% recettes
+        "high_potassium":         k  >= 1050.0,  # 30% AJR  → ~11% recettes
+        "good_source_potassium":  k  >= 525.0,   # 15% AJR  → ~58% recettes
+        # Zinc : 6 / 3 mg (60 / 30 %) ne qualifiaient aucune / 53 recettes
+        # (max 4,6 mg) ; aligné sur la règle 30 / 15 % des autres.
+        "high_zinc":              zn >= 3.0,     # 30% AJR  → ~6% recettes
+        "source_zinc":            zn >= 1.5,     # 15% AJR  → ~45% recettes
+        "high_vitamin_d":         vd >= 1.5,     # 30% AJR  → ~3% recettes
+        "source_vitamin_d":       vd >= 0.75,    # 15% AJR  → ~11% recettes
+        "high_folate":            fol >= 60.0,   # 30% AJR  → ~30% recettes
+        "source_folate":          fol >= 30.0,   # 15% AJR  → ~51% recettes
+        # Oméga-3 : seuils des allégations UE « source » 0,3 g / « riche » 0,6 g
+        "high_omega3":            omega3 >= 0.6,  # → ~7% recettes
+        "source_omega3":          omega3 >= 0.3,  # → ~16% recettes
+        # ── Valeurs brutes (mg/g) pour affichage frontend ─────────────────
+        "vitamin_c_mg":   round(vc, 1),
+        "calcium_mg":     round(ca, 1),
+        "iron_mg":        round(fe, 2),
+        "magnesium_mg":   round(mg, 1),
+        "potassium_mg":   round(k,  1),
+        "zinc_mg":        round(zn, 2),
+        "vitamin_d_ug":   round(vd, 2),
+        "folate_ug":      round(fol, 1),
+        "omega3_g":       round(omega3, 2),
+        # Antioxydants — vitamine C réelle ≥ 40mg (30% AJR, seuil discriminant ~30% recettes)
+        "antioxidant_rich": vc >= 40.0,
+    }
+    return hs
 
 
 MINERAL_KEYS = ("high_calcium", "high_iron", "high_magnesium", "high_potassium", "high_zinc")

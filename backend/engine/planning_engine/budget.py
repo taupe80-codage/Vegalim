@@ -83,6 +83,25 @@ def portion_costs() -> dict[str, tuple[float, bool]]:
         return _costs["data"]
 
 
+def _variant_cost(rid: str, entry: dict, per: float, complete: bool) -> tuple[float, bool]:
+    """Coût par portion de la version vegan ou modifiée prévue au planning."""
+    from backend.core.data_io import load_recipes
+    from backend.engine.planning_engine.shopping import recipe_cost
+    from backend.services.recipe_edits import plan_entry_recipe
+    recipe = next((x for x in load_recipes() if str(x.get("id")) == rid), None)
+    if recipe is None:
+        return per, complete
+    cooked = plan_entry_recipe(recipe, entry)
+    if cooked is recipe:
+        return per, complete
+    try:
+        c = recipe_cost(cooked)
+    except Exception:
+        logger.debug("week_cost : version de %s non chiffrée", rid, exc_info=True)
+        return per, complete
+    return float(c["per_portion_eur"]), not c["unknown"]
+
+
 MEAL_ORDER = ("breakfast", "lunch", "dinner")
 DAYS = ("lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche")
 
@@ -117,6 +136,8 @@ def week_cost(plan: dict) -> dict:
                 n = servings or 4
                 portions += n
                 per, complete = costs.get(rid, (0.0, False))
+                if r.get("variant"):
+                    per, complete = _variant_cost(rid, r, per, complete)
                 consumed += per * n
                 if not complete and rid not in unpriced:
                     unpriced.append(rid)
@@ -125,6 +146,8 @@ def week_cost(plan: dict) -> dict:
                     entry["servings"] = servings
                 if r.get("variant"):
                     entry["variant"] = r["variant"]
+                if r.get("edits"):
+                    entry["edits"] = r["edits"]
                 shop_plan[day][f"{meal}_{i}"] = entry
                 i += 1
     shopping = shopping_list(shop_plan) if portions else {"estimated_cost": 0.0, "items": []}
