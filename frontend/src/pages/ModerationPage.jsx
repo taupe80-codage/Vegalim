@@ -8,7 +8,8 @@
  */
 
 import { useEffect, useState } from 'react';
-import { apiUrl, contributions, photoProposals, reviews } from '../api';
+import { apiUrl, contributions, ingredientCorrections, photoProposals, reviews } from '../api';
+import { fmt } from '../ingredientSheet';
 import { useAuth } from '../AuthContext';
 import { Link } from '../Router';
 import { useToast } from '../ToastContext';
@@ -25,6 +26,8 @@ const TABS = [
   { value: 'reviews:hidden',    label: 'Avis masqués' },
   { value: 'photos:submitted',  label: 'Photos à relire' },
   { value: 'photos:approved',   label: 'Photos publiées' },
+  { value: 'corrections:submitted', label: 'Corrections à relire' },
+  { value: 'corrections:accepted',  label: 'Corrections appliquées' },
 ];
 
 const TEMPLATES = [
@@ -292,6 +295,82 @@ function PhotoModeration({ status, onChange }) {
   );
 }
 
+// Corrections des fiches ingrédients (source à l'appui)
+function CorrectionModeration({ status, onChange }) {
+  const toast = useToast();
+  const [data, setData] = useState(null);
+  const [notes, setNotes] = useState({});
+  const load = () => ingredientCorrections.queue(status).then(setData).catch(e => toast(e.message, 'error'));
+  useEffect(() => { load(); }, [status]); // eslint-disable-line react-hooks/exhaustive-deps
+  const act = async (fn, msg) => {
+    try { await fn(); toast(msg); load(); onChange?.(); } catch (e) { toast(e.message, 'error'); }
+  };
+  if (!data) return <p className="ct-muted">Chargement…</p>;
+  if (!data.results.length) return <p className="ct-muted ct-empty">Rien à afficher ici.</p>;
+  return (
+    <ul className="ct-list">
+      {data.results.map(c => {
+        const note = notes[c.id] || '';
+        const setNote = (v) => setNotes(n => ({ ...n, [c.id]: v }));
+        const other = c.field === 'other';
+        return (
+          <li key={c.id} className="ct-review-card">
+            <div className="rv-item-head">
+              <strong><Link to={`/ingredient/${c.ingredient_id}`}>{c.ingredient_name}</Link></strong>
+              <span className="rv-date">({c.user_email || 'compte supprimé'}) · {new Date(c.created_at).toLocaleDateString('fr-FR')}</span>
+            </div>
+            {other ? (
+              <p><strong>Autre information :</strong> {c.comment}</p>
+            ) : (
+              <table className="ig-table ic-mod-table">
+                <tbody>
+                  <tr><th scope="row">{c.field_label} (pour 100 g)</th>
+                    <td>{fmt(c.current_value)} → <strong>{fmt(c.proposed_value)}</strong> {c.unit}</td></tr>
+                  {c.value_now != null && Math.abs(c.value_now - (c.current_value ?? NaN)) > 1e-9 && (
+                    <tr><th scope="row">Valeur actuelle</th><td>{fmt(c.value_now)} {c.unit} (a changé depuis l'envoi)</td></tr>
+                  )}
+                  <tr><th scope="row">Base</th><td>
+                    {c.base_source?.url
+                      ? <a href={c.base_source.url} target="_blank" rel="noreferrer">{c.base_source.name}{c.base_source.id ? `, code ${c.base_source.id}` : ''} ↗</a>
+                      : c.base_source?.name}
+                  </td></tr>
+                </tbody>
+              </table>
+            )}
+            <p><strong>Source du membre :</strong> {c.source_url
+              ? <a href={c.source_url} target="_blank" rel="noreferrer noopener">{c.source_ref} ↗</a> : c.source_ref}</p>
+            {!other && c.comment && <p className="ct-muted">« {c.comment} »</p>}
+            {c.moderator_note && status !== 'submitted' && <p className="ct-muted">Note : {c.moderator_note}</p>}
+            <p className="ct-muted">
+              Vérifier : la source parle bien du même produit et du même état (cru, cuit, sec), pour 100 g, dans la même unité.
+            </p>
+            <label className="ct-label" htmlFor={`ic-note-${c.id}`}>
+              Message au membre {status === 'submitted' ? '(obligatoire pour refuser)' : '(obligatoire pour annuler)'}
+            </label>
+            <textarea id={`ic-note-${c.id}`} className="ct-input" rows={2} value={note} maxLength={1500}
+              onChange={e => setNote(e.target.value)} />
+            <div className="ct-actions">
+              {status === 'submitted' ? (
+                <>
+                  <button type="button" className="ct-btn ct-btn--sm ct-btn--primary"
+                    onClick={() => act(() => ingredientCorrections.accept(c.id, note), other ? 'Remarque retenue' : 'Correction appliquée')}>
+                    {other ? 'Retenir (à traiter à la main)' : 'Appliquer la correction'}
+                  </button>
+                  <button type="button" className="ct-btn ct-btn--sm ct-btn--danger"
+                    onClick={() => act(() => ingredientCorrections.reject(c.id, note), 'Correction refusée')}>Refuser</button>
+                </>
+              ) : !other && (
+                <button type="button" className="ct-btn ct-btn--sm ct-btn--danger"
+                  onClick={() => act(() => ingredientCorrections.revert(c.id, note), 'Correction annulée')}>Annuler la correction</button>
+              )}
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 export default function ModerationPage({ onAuthClick }) {
   const { user, loading: authLoading } = useAuth();
   const [tab, setTab]       = useState('submitted');
@@ -301,7 +380,10 @@ export default function ModerationPage({ onAuthClick }) {
 
   const reviewTab = tab.startsWith('reviews:');
   const photoTab = tab.startsWith('photos:');
-  const otherTab = reviewTab || photoTab;
+  const correctionTab = tab.startsWith('corrections:');
+  const otherTab = reviewTab || photoTab || correctionTab;
+  const [correctionCounts, setCorrectionCounts] = useState(null);
+  const loadCorrectionCounts = () => ingredientCorrections.queue('submitted').then(r => setCorrectionCounts(r.counts)).catch(() => {});
   const [reviewCounts, setReviewCounts] = useState(null);
   const [photoCounts, setPhotoCounts] = useState(null);
   const loadPhotoCounts = () => photoProposals.queue('submitted').then(r => setPhotoCounts(r.counts)).catch(() => {});
@@ -309,7 +391,8 @@ export default function ModerationPage({ onAuthClick }) {
   const load = (status = tab) => {
     reviews.modList('reported').then(r => setReviewCounts(r.counts)).catch(() => {});
     loadPhotoCounts();
-    if (status.startsWith('reviews:') || status.startsWith('photos:')) return;
+    loadCorrectionCounts();
+    if (status.startsWith('reviews:') || status.startsWith('photos:') || status.startsWith('corrections:')) return;
     contributions.queue(status)
       .then(res => {
         setError('');
@@ -324,7 +407,7 @@ export default function ModerationPage({ onAuthClick }) {
   const header = (
     <header className="page-header">
       <h1 className="page-title"><span className="page-icon" aria-hidden="true">🛡</span> Modération des recettes</h1>
-      <p className="page-sub">Relisez les recettes proposées et leurs modifications, rattachez les ingrédients hors catalogue, puis publiez ou renvoyez à l'auteur. Les avis signalés et les photos de plats proposées par les membres arrivent aussi ici.</p>
+      <p className="page-sub">Relisez les recettes proposées et leurs modifications, rattachez les ingrédients hors catalogue, puis publiez ou renvoyez à l'auteur. Les avis signalés, les photos de plats et les corrections des fiches ingrédients proposées par les membres arrivent aussi ici.</p>
     </header>
   );
 
@@ -346,7 +429,8 @@ export default function ModerationPage({ onAuthClick }) {
             {t.label}
             {(() => {
               const n = t.value.startsWith('reviews:') ? reviewCounts?.[t.value.slice(8)]
-                : t.value.startsWith('photos:') ? photoCounts?.[t.value.slice(7)] : data?.counts?.[t.value];
+                : t.value.startsWith('photos:') ? photoCounts?.[t.value.slice(7)]
+                : t.value.startsWith('corrections:') ? correctionCounts?.[t.value.slice(12)] : data?.counts?.[t.value];
               return n ? <span className="ct-count-pill">{n}</span> : null;
             })()}
           </button>
@@ -355,6 +439,7 @@ export default function ModerationPage({ onAuthClick }) {
       {error && <p className="ct-error" role="alert">{error}</p>}
       {reviewTab && <ReviewModeration status={tab.slice(8)} />}
       {photoTab && <PhotoModeration status={tab.slice(7)} onChange={loadPhotoCounts} />}
+      {correctionTab && <CorrectionModeration status={tab.slice(12)} onChange={loadCorrectionCounts} />}
       {!otherTab && data && data.results.length === 0 && <p className="ct-muted ct-empty">Rien à afficher ici.</p>}
       {!otherTab && data && data.results.length > 0 && (
         <div className="ct-mod-layout">

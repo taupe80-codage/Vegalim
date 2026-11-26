@@ -5,6 +5,8 @@ seo.py — Pages HTML indexables par les moteurs de recherche (public).
   GET /idees/style.css       feuille de style des pages
   GET /idees/{slug}          recettes d'un thème
   GET /recette/{id}          fiche recette (schema.org/Recipe)
+  GET /ingredient            index des fiches ingrédients
+  GET /ingredient/{slug}     fiche ingrédient : tableaux pour 100 g, saison, prix, recettes
   GET /sitemap.xml
   GET /robots.txt
 
@@ -51,6 +53,21 @@ def recette_page(recipe_id: str, request: Request):
     page = sp.render_recipe(recipe_id, _base(request))
     if page is None:
         raise HTTPException(status_code=404, detail="Recette introuvable")
+    return HTMLResponse(page, headers=_CACHE)
+
+
+@router.get("/ingredient", response_class=HTMLResponse, include_in_schema=False)
+def ingredient_index(request: Request):
+    """Index des fiches ingrédients, par rayon (HTML, public)."""
+    return HTMLResponse(sp.render_ingredient_index(_base(request)), headers=_CACHE)
+
+
+@router.get("/ingredient/{slug}", response_class=HTMLResponse, include_in_schema=False)
+def ingredient_page(slug: str, request: Request):
+    """Fiche ingrédient : valeurs pour 100 g, saison, prix, recettes (HTML, public)."""
+    page = sp.render_ingredient(slug, _base(request))
+    if page is None:
+        raise HTTPException(status_code=404, detail="Ingrédient inconnu")
     return HTMLResponse(page, headers=_CACHE)
 
 

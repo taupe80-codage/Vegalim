@@ -95,11 +95,13 @@ def test_plan_du_site_et_robots(built):
     themes, infos = built
     s = client.get("/sitemap.xml")
     assert s.status_code == 200 and "xml" in s.headers["content-type"]
-    assert s.text.count("<url>") == 1 + len(themes) + len(infos)
+    from backend.services.ingredient_sheet import public_ingredients
+    # index, thèmes, recettes, puis l'index et les fiches ingrédients
+    assert s.text.count("<url>") == 1 + len(themes) + len(infos) + 1 + len(public_ingredients())
     robots = client.get("/robots.txt").text
     assert "Sitemap: " in robots and "/sitemap.xml" in robots
     assert "Disallow: /recettes/" in robots
-    assert not re.search(r"^Disallow: /(recette/|idees|images)", robots, re.M)
+    assert not re.search(r"^Disallow: /(recette/|idees|images|ingredient/|ingredient$)", robots, re.M)
 
 
 def test_adresse_publique_depuis_app_base_url(monkeypatch):

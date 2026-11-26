@@ -4,6 +4,7 @@
  * Routes :
  *   /           → HomePage
  *   /recette/:id → RecipeDetailPage
+ *   /ingredient/:id → IngredientPage (fiche ingrédient)
  *   /frigo      → FrigoPage
  *   /planning   → PlanningPage
  *   /nutrition  → NutritionPage
@@ -59,6 +60,7 @@ function matchRoute(pattern, path) {
 const ROUTES = [
   { pattern: '/',            page: 'home'       },
   { pattern: '/recette/:id', page: 'recipe'     },
+  { pattern: '/ingredient/:id', page: 'ingredient' },
   { pattern: '/frigo',       page: 'frigo'      },
   { pattern: '/sur-place',   page: 'sur-place'  },
   { pattern: '/planning',    page: 'planning'   },

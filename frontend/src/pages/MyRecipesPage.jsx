@@ -6,7 +6,8 @@
  */
 
 import { useEffect, useState } from 'react';
-import { contributions, apiUrl, photoProposals, recipeVersions } from '../api';
+import { contributions, apiUrl, photoProposals, recipeVersions, ingredientCorrections } from '../api';
+import { fmt } from '../ingredientSheet';
 import { useAuth } from '../AuthContext';
 import { Link, navigate } from '../Router';
 import { useToast } from '../ToastContext';
@@ -126,6 +127,65 @@ function MyVersions() {
             </div>
           </li>
         ))}
+      </ul>
+    </section>
+  );
+}
+
+const CORRECTION_STATUS = {
+  submitted:  { status: 'submitted', label: 'En relecture' },
+  accepted:   { status: 'published', label: 'Appliquée' },
+  superseded: { status: 'published', label: 'Remplacée par une plus récente' },
+  rejected:   { status: 'rejected',  label: 'Non retenue' },
+  reverted:   { status: 'rejected',  label: 'Annulée' },
+};
+
+// Corrections des fiches ingrédients proposées (source à l'appui)
+function MyCorrections() {
+  const toast = useToast();
+  const [items, setItems] = useState(null);
+  useEffect(() => { ingredientCorrections.mine().then(r => setItems(r.results || [])).catch(() => setItems([])); }, []);
+  if (!items || items.length === 0) return null;
+
+  const withdraw = async (c) => {
+    try {
+      await ingredientCorrections.remove(c.id);
+      setItems(list => list.filter(x => x.id !== c.id));
+      toast('Correction retirée');
+    } catch (e) {
+      toast(e.message || 'Retrait impossible', 'error');
+    }
+  };
+
+  return (
+    <section aria-labelledby="mr-corrections" style={{ marginTop: 32 }}>
+      <h2 id="mr-corrections" className="ct-card-title">Mes corrections d'ingrédients</h2>
+      <ul className="ct-list">
+        {items.map(c => {
+          const st = CORRECTION_STATUS[c.status] || CORRECTION_STATUS.submitted;
+          return (
+            <li key={c.id} className="ct-item">
+              <div className="ct-item-body">
+                <div className="ct-item-head">
+                  <h3 className="ct-item-title"><Link to={`/ingredient/${c.ingredient_id}`}>{c.ingredient_name}</Link></h3>
+                  <span className="ct-badges"><StatusBadge status={st.status} label={st.label} /></span>
+                </div>
+                <p className="ct-muted ct-item-dates">
+                  {c.field === 'other'
+                    ? `Remarque : ${c.comment}`
+                    : `${c.field_label} : ${fmt(c.current_value)} → ${fmt(c.proposed_value)} ${c.unit} pour 100 g`}
+                  {' · '}envoyée le {formatDate(c.created_at)}
+                </p>
+                {c.moderator_note && <blockquote className="ct-modnote"><strong>Message de l'équipe :</strong> {c.moderator_note}</blockquote>}
+                {c.status === 'submitted' && (
+                  <div className="ct-actions">
+                    <button type="button" className="ct-btn ct-btn--sm" onClick={() => withdraw(c)}>Retirer</button>
+                  </div>
+                )}
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
@@ -276,6 +336,7 @@ export default function MyRecipesPage({ onAuthClick }) {
       </ul>
       <MyPhotos />
       <MyVersions />
+      <MyCorrections />
     </div>
   );
 }

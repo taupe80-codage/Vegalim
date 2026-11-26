@@ -574,6 +574,7 @@ def render_index(base: str) -> str:
             continue
         links = "".join(f'<li><a href="/idees/{E(t.slug)}">{E(t.h1)} ({len(t.recipes)})</a></li>' for t in groups[g])
         body.append(f'<section class="group"><h2>{E(g)}</h2><ul class="tags">{links}</ul></section>')
+    body.append('<p><a href="/ingredient">Fiches ingrédients : valeurs nutritionnelles, saison, prix</a></p>')
     jsonld = [{"@context": "https://schema.org", "@type": "CollectionPage",
                "name": "Idées de recettes végétariennes", "url": f"{base}/idees"}]
     return _page(f"Idées de recettes végétariennes — {SITE_NAME}",
@@ -616,8 +617,12 @@ _STEP_PREFIX = re.compile(r"^\s*(?:[ÉE]tape|Step)\s*\d+\s*[:.\-–]\s*", re.I)
 
 
 def _ingredient_lines(r: dict) -> list[str]:
-    # Mêmes libellés que l'application (« huile d'olive », pas « olive » ;
-    # titre des préparations maison)
+    return [text for text, _ in _ingredient_items(r)]
+
+
+def _ingredient_items(r: dict) -> list[tuple[str, str]]:
+    """(ligne affichée, id de l'ingrédient). Mêmes libellés que l'application
+    (« huile d'olive », pas « olive » ; titre des préparations maison)."""
     from backend.services.ingredient_catalog import names_of
     comp = r.get("composition") or []
     names = names_of([str(c.get("ingredient") or "") for c in comp])
@@ -632,15 +637,15 @@ def _ingredient_lines(r: dict) -> list[str]:
         q, unit = c.get("quantity"), (c.get("unit") or "")
         role = (c.get("meta") or {}).get("role")
         if isinstance(q, (int, float)) and q > 0 and unit in ("g", "ml", "kg", "l"):
-            out.append(f"{_fr(float(q), 1)} {unit} {name}")
+            out.append((f"{_fr(float(q), 1)} {unit} {name}", t))
         elif unit == "to_taste":
-            out.append(f"{name}, selon le goût")
+            out.append((f"{name}, selon le goût", t))
         elif role == "serving_suggestion":
-            out.append(f"{name} ({unit + ', ' if unit else ''}au service)")
+            out.append((f"{name} ({unit + ', ' if unit else ''}au service)", t))
         elif isinstance(q, (int, float)) and q > 0:
-            out.append(f"{_fr(float(q), 1)} {unit} {name}".strip())
+            out.append((f"{_fr(float(q), 1)} {unit} {name}".strip(), t))
         else:
-            out.append(name)
+            out.append((name, t))
     return out
 
 
@@ -661,7 +666,15 @@ def render_recipe(rid: str, base: str) -> str | None:
     steps = [_STEP_PREFIX.sub("", s if isinstance(s, str) else str(s.get("text", ""))).strip()
              for s in (r.get("instructions") or [])]
     steps = [s for s in steps if s]
-    ings = _ingredient_lines(r)
+    items = _ingredient_items(r)
+    ings = [text for text, _ in items]
+    from backend.services.ingredient_sheet import public_ingredients, public_slug
+    public_ids = set(public_ingredients().values())
+
+    def _ing_li(text: str, iid: str) -> str:
+        if iid in public_ids:     # fiche ingrédient : valeurs pour 100 g, saison, autres recettes
+            return f'<li><a href="/ingredient/{E(public_slug(iid))}">{E(text)}</a></li>'
+        return f"<li>{E(text)}</li>"
     t = r.get("timing") or {}
     srv = r.get("servings_default") or r.get("servings") or 4
     n = i.nutr
@@ -703,7 +716,7 @@ def render_recipe(rid: str, base: str) -> str | None:
             f'<p><a class="cta" href="/ui#/recette/{E(rid)}">Ouvrir dans l\'application</a> '
             "pour ajuster les portions, l'ajouter au planning ou à la liste de courses.</p>"
             '<div class="cols"><section><h2>Ingrédients</h2><ul>'
-            + "".join(f"<li>{E(x)}</li>" for x in ings)
+            + "".join(_ing_li(x, iid) for x, iid in items)
             + f'</ul><h2>Par portion</h2><table>{table}</table></section>'
             '<section><h2>Préparation</h2><ol>'
             + "".join(f"<li>{E(s)}</li>" for s in steps)
@@ -754,7 +767,9 @@ def render_recipe(rid: str, base: str) -> str | None:
 
 def render_sitemap(base: str) -> str:
     themes, infos = build()
-    urls = [f"{base}/idees"] + [f"{base}/idees/{s}" for s in themes] + [f"{base}/recette/{rid}" for rid in infos]
+    from backend.services.ingredient_sheet import public_ingredients
+    urls = ([f"{base}/idees"] + [f"{base}/idees/{s}" for s in themes] + [f"{base}/recette/{rid}" for rid in infos]
+            + [f"{base}/ingredient"] + [f"{base}/ingredient/{s}" for s in sorted(public_ingredients())])
     items = "".join(f"<url><loc>{E(u)}</loc></url>" for u in urls)
     return ('<?xml version="1.0" encoding="UTF-8"?>'
             f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{items}</urlset>')
@@ -762,9 +777,149 @@ def render_sitemap(base: str) -> str:
 
 # Routes d'API JSON : inutiles aux moteurs (et coûteuses à explorer)
 _API_PREFIXES = ("/auth/", "/profil/", "/recettes/", "/nutrition/", "/planning/", "/admin/",
-                 "/ingredients/", "/frigo/", "/contributions/", "/avis/", "/notifications/", "/docs", "/redoc")
+                 "/ingredients/", "/frigo/", "/contributions/", "/avis/", "/notifications/",
+                 "/ingredient-corrections", "/mes-versions", "/docs", "/redoc")
 
 
 def render_robots(base: str) -> str:
     lines = ["User-agent: *", "Allow: /"] + [f"Disallow: {p}" for p in _API_PREFIXES]
     return "\n".join(lines + [f"Sitemap: {base}/sitemap.xml", ""])
+
+
+# ── Fiches ingrédients (/ingredient, /ingredient/<slug>) ──────────────────────
+
+def _fmt_val(v, unit: str) -> str:
+    if v is None:
+        return "—"
+    v = float(v)
+    d = 0 if v >= 100 else 1 if v >= 10 else 2 if v >= 1 else 3
+    txt = f"{v:.{d}f}".rstrip("0").rstrip(".") if d else f"{v:.0f}"
+    return f"{txt.replace('.', ',')} {unit}"
+
+
+def _ingredient_intro(sh: dict) -> str:
+    """Phrase d'introduction propre à chaque ingrédient (pas un gabarit vide) ;
+    tournures sans genre (« aubergine », « chou » : le genre n'est pas connu)."""
+    n = sh.get("nutrition_per_100g") or {}
+    parts = []
+    if sh.get("kcal_100g") is not None:
+        parts.append(f"Pour 100 g : {sh['kcal_100g']} kcal")
+        extra = []
+        if isinstance(n.get("protein_g"), (int, float)):
+            extra.append(f"{_fmt_val(n['protein_g'], 'g')} de protéines")
+        if isinstance(n.get("fiber_g"), (int, float)) and n["fiber_g"] >= 1:
+            extra.append(f"{_fmt_val(n['fiber_g'], 'g')} de fibres")
+        if extra:
+            parts[-1] += ", " + " et ".join(extra)
+    rich = [r["label"].lower() for g in sh["nutrition"] for r in g["rows"]
+            if (r.get("pct") or 0) >= 30 and not r["label"].startswith("dont ")
+            and r["key"] not in ("calories_kcal", "fat_g", "carbs_g", "sugar_g", "salt_g", "fa_saturated_g")]
+    if rich:
+        parts.append(f"riche en {', '.join(rich[:4])} (30 % des valeurs de référence ou plus pour 100 g)")
+    txt = " ; ".join(parts) + "." if parts else ""
+    if sh.get("season"):
+        txt += f" De saison en {sh['season']['label']}."
+    if sh.get("recipes_count"):
+        nb = sh["recipes_count"]
+        txt += f" {nb} recette{'s' if nb > 1 else ''} végétarienne{'s' if nb > 1 else ''} du site l'utilise{'nt' if nb > 1 else ''}."
+    return txt.strip()
+
+
+def render_ingredient(slug: str, base: str) -> str | None:
+    from backend.services.ingredient_sheet import public_ingredients, public_slug, sheet
+    pub = public_ingredients()
+    iid = pub.get(slug)
+    if not iid:
+        return None
+    sh = sheet(iid, with_recipes=400)
+    if not sh:
+        return None
+    name = sh["name_fr"]
+    url = f"{base}/ingredient/{slug}"
+    src = sh["source"]
+    tables = []
+    for g in sh["nutrition"]:
+        rows = "".join(
+            f'<tr><th scope="row">{E(r["label"])}</th><td>{E(_fmt_val(r["value"], r["unit"]))}</td>'
+            f'<td>{E(str(r["pct"]) + " %") if r.get("pct") is not None else ""}</td></tr>'
+            for r in g["rows"] if r["value"] is not None)
+        if rows:
+            tables.append(f'<h3>{E(g["title"])}</h3><table><thead><tr><th>Pour 100 g</th><th>Quantité</th>'
+                          f'<th>% VNR</th></tr></thead><tbody>{rows}</tbody></table>')
+    facts = []
+    if sh.get("price"):
+        facts.append(("Prix moyen", f"{_fmt_val(sh['price']['per_kg_eur'], '€')} le kilo"
+                      + (f" ({sh['price']['package']})" if sh['price'].get('package') else "")))
+    if sh.get("carbon"):
+        facts.append(("Empreinte carbone", f"{_fmt_val(sh['carbon']['kg_co2_per_kg'], 'kg')} CO₂e par kilo"))
+    facts.append(("Saison", sh["season"]["label"] if sh.get("season") else "toute l'année"))
+    facts.append(("Allergènes (UE)", ", ".join(sh["allergens"]) or "aucun"))
+    facts.append(("Convient à", ", ".join(sh["diets"]) or "—"))
+    facts.append(("Rayon", sh["aisle"]))
+    facts_html = "".join(f'<tr><th scope="row">{E(k)}</th><td>{E(v)}</td></tr>' for k, v in facts)
+    repl_links = []
+    for r in sh.get("replacements") or []:
+        s2 = public_slug(r["id"])
+        href = f"/ingredient/{s2}" if pub.get(s2) == r["id"] else f"/ui#/ingredient/{r['id']}"
+        repl_links.append(f'<li><a href="{E(href)}">{E(r["name_fr"])}</a></li>')
+    recipes = "".join(f'<li><a href="/recette/{E(x["id"])}">{E(x["title"])}</a></li>' for x in sh["recipes"])
+    corr = "".join(
+        f'<li>{E(c["label"])} : {E(_fmt_val(c.get("previous"), c["unit"]))} → {E(_fmt_val(c["value"], c["unit"]))}'
+        f' (source : {E(c.get("source") or "")})</li>' for c in sh.get("corrections") or [])
+    source = (f'<a href="{E(src["url"])}" rel="nofollow noopener">{E(src["name"])}'
+              f'{", code " + E(src["id"]) if src.get("id") else ""}</a>' if src.get("url") else E(src["name"]))
+    body = (f"<h1>{E(name)} : valeurs nutritionnelles, saison et recettes végétariennes</h1>"
+            f'<p class="intro">{E(_ingredient_intro(sh))}</p>'
+            f'<p><a class="cta" href="/ui#/ingredient/{E(iid)}">Ouvrir dans l\'application</a></p>'
+            '<div class="cols"><section><h2>En bref</h2>'
+            f"<table><tbody>{facts_html}</tbody></table>"
+            + (f'<h2>Peut se remplacer par</h2><ul class="tags">{"".join(repl_links)}</ul>' if repl_links else "")
+            + '</section><section><h2>Valeurs nutritionnelles pour 100 g</h2>'
+            "<p class=\"meta\">Produit cru ou tel qu'acheté. % VNR : part des valeurs nutritionnelles de référence "
+            "d'un adulte (règlement UE 1169/2011 ; fibres : repère ANSES de 30 g).</p>"
+            + "".join(tables)
+            + f'<p class="meta">Source : {source}'
+            + (f' — « {E(src["label"])} »' if src.get("label") else "") + "</p>"
+            + (f"<h3>Corrections apportées</h3><ul>{corr}</ul>" if corr else "")
+            + "</section></div>"
+            f'<section class="group"><h2>Recettes végétariennes avec {E(name.lower())} '
+            f'({sh["recipes_count"]})</h2><ul>{recipes}</ul></section>')
+    n = sh.get("nutrition_per_100g") or {}
+    desc = (f"{name} : {sh.get('kcal_100g', '—')} kcal, {_fmt_val(n.get('protein_g'), 'g')} de protéines pour 100 g, "
+            f"vitamines et minéraux, saison, prix et {sh['recipes_count']} recettes végétariennes.")
+    ld = [
+        {"@context": "https://schema.org", "@type": "WebPage", "name": f"{name} : valeurs nutritionnelles",
+         "url": url, "description": desc, "inLanguage": "fr",
+         "about": {"@type": "Thing", "name": name, **({"alternateName": sh["name_en"]} if sh.get("name_en") else {})},
+         "isBasedOn": src.get("url") or src["name"]},
+        {"@context": "https://schema.org", "@type": "ItemList", "name": f"Recettes végétariennes avec {name.lower()}",
+         "itemListElement": [{"@type": "ListItem", "position": k + 1, "url": f"{base}/recette/{x['id']}"}
+                             for k, x in enumerate(sh["recipes"][:50])]},
+        {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Ingrédients", "item": f"{base}/ingredient"},
+            {"@type": "ListItem", "position": 2, "name": name, "item": url}]},
+    ]
+    return _page(f"{name} : valeurs nutritionnelles, saison, recettes | {SITE_NAME}", desc, url, body, ld,
+                 [("Idées de recettes", "/idees"), ("Ingrédients", "/ingredient"), (name, "")])
+
+
+def render_ingredient_index(base: str) -> str:
+    from backend.engine.planning_engine.shopping import AISLES, aisle_of
+    from backend.services.ingredient_sheet import display_name, public_ingredients
+    groups: dict[str, list[tuple[str, str]]] = {}
+    for slug, iid in public_ingredients().items():
+        groups.setdefault(aisle_of(iid), []).append((display_name(iid), slug))
+    body = ["<h1>Fiches ingrédients</h1>",
+            '<p class="intro">Valeurs nutritionnelles pour 100 g (tables Ciqual, canadienne et USDA), saison, '
+            "prix, empreinte carbone et recettes végétariennes de chaque ingrédient.</p>"]
+    for aisle in list(AISLES) + sorted(set(groups) - set(AISLES)):
+        items = sorted(groups.get(aisle) or [])
+        if not items:
+            continue
+        links = "".join(f'<li><a href="/ingredient/{E(s)}">{E(n)}</a></li>' for n, s in items)
+        body.append(f'<section class="group"><h2>{E(aisle)}</h2><ul class="tags">{links}</ul></section>')
+    ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fiches ingrédients",
+           "url": f"{base}/ingredient"}]
+    return _page(f"Fiches ingrédients : valeurs nutritionnelles et saisons | {SITE_NAME}",
+                 "Valeurs nutritionnelles pour 100 g, saison, prix et recettes végétariennes de chaque ingrédient.",
+                 f"{base}/ingredient", "".join(body), ld, [("Idées de recettes", "/idees"), ("Ingrédients", "")])

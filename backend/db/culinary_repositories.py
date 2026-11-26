@@ -980,7 +980,14 @@ class IngredientRepository:
         item = self.get_by_name(ingredient_name)
         return item.get("v32_ing_id") if item else None
 
-    def resolve_nutrition(
+    def resolve_nutrition(self, ingredient_name: str, *args, **kwargs) -> dict | None:
+        """Comme _resolve_nutrition_base, corrections des membres acceptées
+        par la modération comprises (services/ingredient_sheet.py)."""
+        n = self._resolve_nutrition_base(ingredient_name, *args, **kwargs)
+        from backend.services.ingredient_sheet import apply_corrections
+        return apply_corrections(ingredient_name, n)
+
+    def _resolve_nutrition_base(
         self,
         ingredient_name: str,
         context: str = "unknown",

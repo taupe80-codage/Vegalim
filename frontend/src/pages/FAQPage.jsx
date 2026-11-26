@@ -44,6 +44,10 @@ const FAQ_SECTIONS = [
         a: `Oui. Sur la fiche d'une recette, cliquez sur "✏️ Modifier les ingrédients" : vous pouvez remplacer un ingrédient (des idées proches sont proposées, ou cherchez-en un), le retirer, en ajouter un et changer les quantités, saisies pour le nombre de portions affiché. La valeur nutritionnelle, le score, les allergènes, le prix, l'empreinte carbone et le texte des étapes sont recalculés aussitôt. Vous pouvez ensuite enregistrer votre version (il faut être connecté) : la fiche s'ouvrira dessus, avec un bouton pour revoir l'originale, et vous la retrouvez dans « Mes recettes ». Sans l'enregistrer, vous pouvez quand même l'ajouter au planning : liste de courses, coût et bilan de la semaine compteront vos ingrédients et vos quantités.`,
       },
       {
+        q: 'D\'où viennent les valeurs des ingrédients ? Puis-je signaler une erreur ?',
+        a: `Dans la liste des ingrédients d'une recette, cliquez sur un ingrédient : sa fiche affiche ses valeurs nutritionnelles pour 100 g (avec la part des valeurs de référence d'un adulte), ce qu'il apporte dans la recette par portion, sa saison, son prix au kilo, son empreinte carbone, ses allergènes, des remplacements possibles et les recettes qui l'utilisent. Les valeurs viennent de la table Ciqual de l'Anses, du Fichier canadien sur les éléments nutritifs ou de la base USDA : la source et son code sont indiqués, avec un lien. Si une valeur vous semble fausse, cliquez sur "Signaler une erreur" (il faut être connecté) et indiquez la valeur juste avec sa source (table, étude, étiquette). Après vérification par l'équipe, la correction s'applique à la fiche et au calcul des recettes ; la fiche garde l'ancienne valeur et la source de la correction.`,
+      },
+      {
         q: 'Puis-je ajouter mes propres recettes ?',
         a: `Cette fonctionnalité est en cours de développement. Dans une prochaine version, vous pourrez créer des recettes personnalisées, les tagger avec vos propres ingrédients et les intégrer dans le planning. En attendant, vous pouvez utiliser la fonction Favoris pour retrouver rapidement vos recettes préférées.`,
       },

@@ -4,6 +4,7 @@ routes/ingredients.py — Dictionnaire des ingrédients.
 Routes publiques :
   GET /ingredients            — liste paginée avec filtres
   GET /ingredients/{id}       — fiche ingrédient complète
+  GET /ingredients/{id}/fiche — fiche pour l'interface (tableaux, saison, prix, CO₂, source)
 
 Routes authentifiées :
   GET /ingredients/search     — recherche par token
@@ -36,9 +37,11 @@ def _enrich_ingredient(iid: str, ing: dict) -> dict:
     av_data = av.get(iid, {})
     entry["available_in_france"] = av_data.get("available_in_france", True)
 
-    # Données nutritionnelles (via nutrition_key)
-    nkey = ing.get("nutrition_key", "")
-    entry["nutrition"] = nutr.get(nkey, {}) if nkey else nutr.get(iid, {})
+    # Données nutritionnelles pour 100 g : la résolution des recettes (code de
+    # la base source, corrections acceptées) ; la recherche par nutrition_key
+    # ou par id ne trouvait rien (clés de nutrition_v2 différentes) : {} partout
+    from backend.services.ingredient_sheet import raw_nutrition
+    entry["nutrition"] = raw_nutrition(iid) or (nutr.get(ing.get("nutrition_key", "")) or {})
 
     return entry
 
@@ -149,6 +152,22 @@ def search_ingredients(
             for r in results
         ],
     }
+
+
+@router.get("/{ingredient_id}/fiche")
+def ingredient_sheet_route(ingredient_id: str, request: Request):
+    """
+    Fiche d'un ingrédient pour l'interface : tableaux nutritionnels pour 100 g
+    (% des VNR), source (Ciqual, Fichier canadien, USDA) avec lien, saison,
+    prix au kilo, empreinte carbone, allergènes, régimes, remplacements,
+    recettes qui l'utilisent, corrections acceptées. **Public.**
+    """
+    check_rate_limit(request, limit=120, window_seconds=60)
+    from backend.services.ingredient_sheet import sheet
+    data = sheet(ingredient_id)
+    if not data:
+        raise HTTPException(status_code=404, detail="Ingrédient introuvable.")
+    return data
 
 
 @router.get("/{ingredient_id}")

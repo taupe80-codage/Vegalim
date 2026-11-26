@@ -181,6 +181,7 @@ export const profile = {
 export const ingredients = {
   search: (q) => get(`/ingredients/search?q=${encodeURIComponent(q)}`),
   byId:   (id) => get(`/ingredients/${id}`),
+  sheet:  (id) => get(`/ingredients/${encodeURIComponent(id)}/fiche`),
 };
 // ── Recettes proposées par les utilisateurs ──────────────────────────────────
 
@@ -211,6 +212,17 @@ export const recipeVersions = {
   get:          (id)             => get(`/mes-versions/${enc(id)}`),
   save:         (id, edits, servings) => put(`/mes-versions/${enc(id)}`, { ...edits, servings }),
   remove:       (id)             => del(`/mes-versions/${enc(id)}`),
+};
+
+// ── Corrections des fiches ingrédients (source obligatoire, relues) ─────────
+export const ingredientCorrections = {
+  propose:  (payload)       => post('/ingredient-corrections', payload),
+  mine:     ()              => get('/ingredient-corrections/mine'),
+  remove:   (id)            => del(`/ingredient-corrections/${enc(id)}`),
+  queue:    (status = 'submitted') => get(`/ingredient-corrections/moderation/queue?status=${enc(status)}`),
+  accept:   (id, message)   => post(`/ingredient-corrections/moderation/${enc(id)}/accept`, { message }),
+  reject:   (id, message)   => post(`/ingredient-corrections/moderation/${enc(id)}/reject`, { message }),
+  revert:   (id, message)   => post(`/ingredient-corrections/moderation/${enc(id)}/revert`, { message }),
 };
 
 export const photoProposals = {

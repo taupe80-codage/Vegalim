@@ -205,7 +205,8 @@ def delete_account(user: dict = Depends(get_user)):
     """Supprime définitivement le compte (RGPD droit à l'effacement)."""
     # Recettes proposées : propositions, photos et recettes publiées retirées.
     # Photos de plats : les publiées restent avec leur pseudo, le reste est effacé.
-    # Recettes modifiées enregistrées : effacées.
+    # Recettes modifiées enregistrées : effacées. Corrections d'ingrédients :
+    # les acceptées restent (sans lien avec l'e-mail), les autres sont effacées.
     try:
         from backend.db.session import db_session
         from backend.api.routes.contributions import delete_user_contributions
@@ -217,6 +218,8 @@ def delete_account(user: dict = Depends(get_user)):
             delete_user_photos(db, user["email"])
             from backend.api.routes.recipe_versions import delete_user_versions
             delete_user_versions(db, user["email"])
+            from backend.api.routes.ingredient_corrections import delete_user_corrections
+            delete_user_corrections(db, user["email"])
             from backend.db.models import Notification
             db.query(Notification).filter(Notification.user_email == user["email"]).delete()
             db.commit()

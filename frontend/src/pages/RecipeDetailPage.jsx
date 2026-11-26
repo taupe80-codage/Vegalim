@@ -29,6 +29,7 @@ import { cleanStep } from '../cookTimers';
 import { scaleSegments } from '../stepQuantities';
 import { useToast } from '../ToastContext';
 import RecipeEditor from '../components/RecipeEditor';
+import { ingredientHref } from '../ingredientSheet';
 import { baseRows, changeLabel, editErrorMessage, hasChanges, sameEdits } from '../recipeEdits';
 
 // ── États des ingrédients → français ─────────────────────────────────────────
@@ -1062,6 +1063,12 @@ export default function RecipeDetailPage({ onAuthClick }) {
                         title="Voir la recette de cette préparation">
                         {name} ↗
                       </button>
+                    ) : iid ? (
+                      // Fiche de l'ingrédient : valeurs pour 100 g, part dans ce plat, saison, prix
+                      <Link className="ing-link" to={ingredientHref(iid, {
+                        quantity: ing.quantity, unit: ing.unit,
+                        servings: displayed.servings || recipe.servings || 4, recipeId: recipe.id,
+                      })}>{name}</Link>
                     ) : name}
                     {stateFr && <span className="ing-meta"> ({stateFr})</span>}
                   </span>

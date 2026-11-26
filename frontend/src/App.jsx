@@ -17,6 +17,7 @@ import Navbar            from './components/Navbar';
 import AuthModal         from './components/AuthModal';
 import HomePage          from './pages/HomePage';
 import RecipeDetailPage  from './pages/RecipeDetailPage';
+import IngredientPage    from './pages/IngredientPage';
 import FrigoPage         from './pages/FrigoPage';
 import PlanningPage      from './pages/PlanningPage';
 import NutritionPage     from './pages/NutritionPage';
@@ -44,6 +45,7 @@ function PageDispatcher({ onAuthClick }) {
   switch (page) {
     case 'home':      return <HomePage />;
     case 'recipe':    return <RecipeDetailPage onAuthClick={onAuthClick} />;
+    case 'ingredient': return <IngredientPage onAuthClick={onAuthClick} />;
     case 'frigo':     return <FrigoPage />;
     case 'sur-place': return <SurPlacePage />;
     case 'planning':  return <PlanningPage />;

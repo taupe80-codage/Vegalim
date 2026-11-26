@@ -82,6 +82,9 @@ services:
       - ./backend/data/nutrition/processed:/app/backend/data/nutrition/processed
       - ./backend/data/indexes:/app/backend/data/indexes
       - ./backend/data/recipes:/app/backend/data/recipes
+      # Dictionnaire des ingrédients (pipeline) et corrections acceptées par la
+      # modération (ingredient_corrections.json, écrit par l'API)
+      - ./backend/data/ingredients:/app/backend/data/ingredients
       # Graphes mis à jour par le pipeline
       - ./backend/data/graphs:/app/backend/data/graphs
       # Données runtime (utilisateurs, quotas, logs)

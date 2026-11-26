@@ -11,6 +11,7 @@ Tables migrées depuis JSON :
   - recipe_reviews / review_votes / review_reports : notes et commentaires
   - notifications : nouveautés affichées dans l'application (cloche)
   - recipe_versions : recettes modifiées et enregistrées par un membre
+  - ingredient_corrections : corrections des fiches ingrédients (source à l'appui)
 
 Données statiques (dataset culinaire) → restent en JSON + lru_cache.
 """
@@ -342,6 +343,53 @@ class PhotoSubmission(Base):
 
     def __repr__(self):
         return f"<PhotoSubmission {self.id} recipe={self.recipe_id} status={self.status}>"
+
+
+# ── Corrections des fiches ingrédients ────────────────────────────────────────
+
+class IngredientCorrection(Base):
+    """
+    Correction d'une valeur d'une fiche ingrédient proposée par un membre,
+    source à l'appui (services/ingredient_sheet.py).
+
+    field : clé de la valeur pour 100 g (protein_g, iron_mg…) ou « other »
+    (nom, allergène, saison… : traité à la main, sans valeur appliquée).
+    status : submitted → accepted (appliquée par-dessus la base, fichier
+    ingredient_corrections.json) | rejected | reverted (annulée par la
+    modération) | superseded (une correction plus récente du même champ).
+    Compte supprimé : les corrections acceptées restent (user_email → NULL),
+    les autres sont effacées.
+    """
+    __tablename__ = "ingredient_corrections"
+
+    id             = Column(String(36),  primary_key=True)          # UUID
+    ingredient_id  = Column(String(120), nullable=False, index=True)
+    ingredient_name = Column(String(200), nullable=False)
+    field          = Column(String(40),  nullable=False)
+    unit           = Column(String(10),  nullable=True)
+    current_value  = Column(JSON,        nullable=True)              # valeur affichée à l'envoi
+    proposed_value = Column(JSON,        nullable=True)
+    source_id      = Column(String(40),  nullable=True)              # code de la fiche de la base corrigée
+    source_ref     = Column(String(300), nullable=False)
+    source_url     = Column(String(500), nullable=True)
+    comment        = Column(Text,        nullable=True)
+    user_email     = Column(String(254),
+                            ForeignKey("users.email", ondelete="SET NULL"),
+                            nullable=True, index=True)
+    status         = Column(String(20),  nullable=False, default="submitted",
+                            server_default="submitted")
+    moderator_note = Column(Text,        nullable=True)
+    moderator_email = Column(String(254), nullable=True)
+    created_at     = Column(DateTime(timezone=True), nullable=False,
+                            default=lambda: datetime.now(timezone.utc))
+    reviewed_at    = Column(DateTime(timezone=True), nullable=True)
+
+    __table_args__ = (
+        Index("ix_ingredient_correction_status", "status", "created_at"),
+    )
+
+    def __repr__(self):
+        return f"<IngredientCorrection {self.id} {self.ingredient_id}.{self.field} status={self.status}>"
 
 
 # ── Versions modifiées des recettes ───────────────────────────────────────────
