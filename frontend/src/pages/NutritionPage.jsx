@@ -14,6 +14,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { useToast } from '../ToastContext';
 import { nutrition as nutritionApi, recipes as recipesApi, planning as planningApi } from '../api';
 import AddToPlanModal from '../components/AddToPlanModal';
+import WeekCarbon from '../components/WeekCarbon';
 import { useProfileDiet } from '../useProfileDiet';
 import { navigate } from '../Router';
 
@@ -1169,6 +1170,7 @@ function WeekNutritionView() {
   const [loading, setLoading] = useState(false);
   const [error, setError]     = useState(null);
   const [toPlan, setToPlan]   = useState(null);   // recette à ajouter au planning
+  const [weekPlan, setWeekPlan] = useState(null);  // planning lu, pour l'empreinte carbone
 
   const loadWeek = async () => {
     setLoading(true); setError(null);
@@ -1176,6 +1178,7 @@ function WeekNutritionView() {
       let plan = null;
       try { const raw = localStorage.getItem(PLAN_KEY); plan = raw ? JSON.parse(raw) : null; } catch { plan = null; }
       if (!plan) { setData({ empty: true }); return; }
+      setWeekPlan(plan);
       const res = await planningApi.weekBalance({ plan, diet: profileDiet === 'vegan' ? 'vegan' : null });
       setData(res && res.n_meals ? res : { empty: true });
     } catch (e) {
@@ -1284,6 +1287,8 @@ function WeekNutritionView() {
           {data.recipes_without_data?.length > 0 && ` ${data.recipes_without_data.length} recette(s) sans données nutritionnelles ne sont pas comptées.`}
         </p>
       </section>
+
+      <WeekCarbon plan={weekPlan} diet={profileDiet} />
 
       {toPlan && (
         <AddToPlanModal recipe={toPlan} onClose={() => { setToPlan(null); loadWeek(); }} />

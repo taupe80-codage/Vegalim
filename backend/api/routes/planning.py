@@ -387,6 +387,23 @@ def week_balance(payload: WeekBalanceRequest, user: dict | None = Depends(get_op
     from backend.services.week_balance import balance
     return balance(payload.plan, diet=payload.diet)
 
+class WeekCarbonRequest(BaseModel):
+    plan: dict = Field(..., description="Plan hebdo {lundi:{lunch:{skip, servings, recipes:[{id, variant?, edits?}]}}}")
+    diet: Optional[str] = Field(default=None, description="vegan : alternatives 100 % végétales")
+
+
+@router.post("/week_carbon")
+def week_carbon_route(payload: WeekCarbonRequest, user: dict | None = Depends(get_optional_user)):
+    """
+    Empreinte carbone de la semaine planifiée (Agribalyse, au mois en cours) :
+    total, moyenne par portion comparée aux plats du catalogue, repas et
+    ingrédients qui pèsent le plus avec des alternatives moins émettrices,
+    produits frais hors saison. Versions vegan et modifiées prises en compte. **Public.**
+    """
+    from backend.services.week_carbon import week_carbon
+    return week_carbon(payload.plan, diet=payload.diet)
+
+
 @router.post("/daily_nutrition")
 def daily_nutrition(payload: DayNutritionRequest, user: dict | None = Depends(get_optional_user)):
     """

@@ -156,6 +156,7 @@ export const planning = {
   shoppingList:            (payload) => post('/planning/shopping_list', payload),
   weekBalance:             (payload) => post('/planning/week_balance', payload),
   weekCost:                (payload) => post('/planning/week_cost', payload),
+  weekCarbon:              (payload) => post('/planning/week_carbon', payload),
   batchSession:            (payload) => post('/planning/batch_session', payload),
   shoppingListFromRecipes: (payload) => post('/planning/shopping_list_from_recipes', payload),
   updatePrice: (ingredient_key, package_label, new_price) =>

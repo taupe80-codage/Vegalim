@@ -31,6 +31,8 @@ import {
   DIFFICULTY_OPTIONS,
 } from '../components/RecipeFiltersShared';
 import { planToShoppingFormat } from '../planShopping';
+import { navigate } from '../Router';
+import { compareText } from '../carbonText';
 
 // ── Constantes ────────────────────────────────────────────────────────────────
 
@@ -194,6 +196,11 @@ function createDefaultPlan() {
 // Montant en euros, à la française (« 12,50 € »)
 function fmtEur(v) {
   return `${(Math.round((Number(v) || 0) * 100) / 100).toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`;
+}
+
+function fmtKg(v) {
+  const n = Number(v) || 0;
+  return `${(n >= 10 ? Math.round(n) : Math.round(n * 100) / 100).toLocaleString('fr-FR')} kg`;
 }
 
 function hasAnyRecipes(plan) {
@@ -1085,6 +1092,20 @@ export default function PlanningPage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [costKey]);
 
+  // Empreinte carbone de la semaine (détail dans Nutrition → Ma semaine)
+  const [weekCarbon, setWeekCarbon] = useState(null);
+  useEffect(() => {
+    if (!hasAnyRecipes(plan)) { setWeekCarbon(null); return undefined; }
+    let cancelled = false;
+    const t = setTimeout(() => {
+      planningApi.weekCarbon({ plan })
+        .then(res => { if (!cancelled) setWeekCarbon(res); })
+        .catch(() => { if (!cancelled) setWeekCarbon(null); });
+    }, 500);
+    return () => { cancelled = true; clearTimeout(t); };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [costKey]);
+
   // ── Helpers UI ────────────────────────────────────────────────────────────
   const toggleSect    = id => setOpenSects(p=>{const n=new Set(p);n.has(id)?n.delete(id):n.add(id);return n;});
   const toggleChecked      = useCallback(id=>setChecked(p=>{const n=new Set(p);n.has(id)?n.delete(id):n.add(id);return n;}),[]);
@@ -1549,6 +1570,16 @@ export default function PlanningPage() {
                 qui se conservent si le placard est vide (épices, riz, légumes secs, huile…)</>}.
                 {weekCost.unpriced?.length > 0 && ` ${weekCost.unpriced.length} recette(s) au prix incomplet : coût minimum.`}
               </div>
+              {weekCarbon?.n_meals > 0 && (
+                <div className="plan-cost-meta">
+                  🌍 Empreinte carbone : <strong>{fmtKg(weekCarbon.total_kg)} CO₂e</strong>,
+                  {' '}{fmtKg(weekCarbon.per_portion_kg)} par portion ({compareText(weekCarbon.per_portion_kg, weekCarbon.catalogue_avg_kg)}).
+                  {' '}<button type="button" className="plan-link-btn" onClick={() => {
+                    try { localStorage.setItem('alim_nutr_view', 'semaine'); } catch { /* stockage indisponible */ }
+                    navigate('/nutrition');
+                  }}>Voir le détail</button>
+                </div>
+              )}
             </div>
           )}
 

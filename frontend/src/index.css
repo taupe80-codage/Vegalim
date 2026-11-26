@@ -5928,3 +5928,17 @@ a.re-chip { text-decoration: none; display: inline-block; }
   border: 1px solid var(--brd); border-radius: var(--rad-sm); background: var(--sur2);
 }
 .pp-modal .form-field textarea { resize: vertical; }
+
+/* ══ Empreinte carbone de la semaine (wc-*) ══════════════════════════════════ */
+.plan-link-btn { font: inherit; background: none; border: none; padding: 0; color: var(--grn); text-decoration: underline; cursor: pointer; }
+.wc-head { display: flex; flex-wrap: wrap; gap: 12px; margin: 6px 0 12px; }
+.wc-total { flex: 1 1 200px; background: var(--sur2); border: 1px solid var(--brd); border-radius: var(--rad); padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+.wc-big { font-family: 'Geist', system-ui, sans-serif; font-size: 22px; font-weight: 700; color: var(--txt); }
+.wc-unit { font-size: 13px; color: var(--txt2); }
+.wc-h5 { font-size: 14px; font-weight: 600; margin: 14px 0 6px; color: var(--txt); }
+.wc-list { list-style: none; margin: 0; padding: 0; }
+.wc-list > li { padding: 8px 0; border-bottom: 1px solid var(--sur2); }
+.wc-line { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.wc-line a, .wc-alt a { color: var(--grn); }
+.wc-meta { font-size: 13px; color: var(--mut); }
+.wc-alt { font-size: 13px; color: var(--txt2); margin: 4px 0 0; }
