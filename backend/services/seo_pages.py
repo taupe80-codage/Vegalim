@@ -145,6 +145,10 @@ def recipe_image(recipe: dict) -> str | None:
         return recipe["image_url"]
     title = (recipe.get("titles") or {}).get("fr") or (recipe.get("titles") or {}).get("en") or ""
     name = f"{slugify(title)}.jpg"
+    # photo d'un membre acceptée par la modération : prioritaire (routes/photo_proposals)
+    from backend.api.routes.photo_proposals import member_photo
+    if title and member_photo(slugify(title)):
+        return f"/images/recipes/{name}"
     # /images est servi depuis le build (frontend/dist) s'il existe : une photo
     # ajoutée dans public/ après le dernier build y serait une image cassée.
     served = next((d for d in _IMG_DIRS if d.is_dir()), None)

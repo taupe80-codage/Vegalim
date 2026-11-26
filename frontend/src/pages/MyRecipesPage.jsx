@@ -6,13 +6,74 @@
  */
 
 import { useEffect, useState } from 'react';
-import { contributions, apiUrl } from '../api';
+import { contributions, apiUrl, photoProposals } from '../api';
 import { useAuth } from '../AuthContext';
 import { Link, navigate } from '../Router';
 import { useToast } from '../ToastContext';
 import { StatusBadge } from '../components/ContributionParts';
 
 const ORDER = ['changes_requested', 'draft', 'submitted', 'published', 'rejected'];
+
+const PHOTO_STATUS = {
+  submitted: { status: 'submitted', label: 'En relecture' },
+  approved:  { status: 'published', label: 'Publiée' },
+  rejected:  { status: 'rejected',  label: 'Non retenue' },
+  replaced:  { status: 'draft',     label: 'Remplacée par une photo plus récente' },
+};
+
+/** Photos de plats proposées par le membre (PhotoProposal.jsx sur les fiches). */
+function MyPhotos() {
+  const toast = useToast();
+  const [photos, setPhotos] = useState(null);
+  const [confirm, setConfirm] = useState(null);
+  useEffect(() => { photoProposals.mine().then(r => setPhotos(r.results || [])).catch(() => setPhotos([])); }, []);
+  if (!photos || photos.length === 0) return null;
+
+  const remove = async (p) => {
+    if (confirm !== p.id) { setConfirm(p.id); return; }
+    try {
+      await photoProposals.remove(p.id);
+      setPhotos(list => list.filter(x => x.id !== p.id));
+      toast(p.status === 'approved' ? 'Photo retirée du site' : 'Photo supprimée');
+    } catch (e) {
+      toast(e.message || 'Suppression impossible', 'error');
+    } finally {
+      setConfirm(null);
+    }
+  };
+
+  return (
+    <section aria-labelledby="mr-photos" style={{ marginTop: 32 }}>
+      <h2 id="mr-photos" className="ct-card-title">Mes photos de plats</h2>
+      <ul className="ct-list">
+        {photos.map(p => {
+          const st = PHOTO_STATUS[p.status] || PHOTO_STATUS.submitted;
+          return (
+            <li key={p.id} className="ct-item pp-mine">
+              <img src={apiUrl(p.photo_url)} alt={`Votre photo de ${p.recipe_title}`} />
+              <div className="ct-item-body">
+                <div className="ct-item-head">
+                  <h3 className="ct-item-title"><Link to={`/recette/${p.recipe_id}`}>{p.recipe_title}</Link></h3>
+                  <span className="ct-badges"><StatusBadge status={st.status} label={st.label} /></span>
+                </div>
+                <p className="ct-muted ct-item-dates">Envoyée le {formatDate(p.created_at)}</p>
+                {p.moderator_note && <blockquote className="ct-modnote"><strong>Message de l'équipe :</strong> {p.moderator_note}</blockquote>}
+                <div className="ct-actions">
+                  <button type="button" className={`ct-btn ct-btn--sm ${confirm === p.id ? 'ct-btn--danger' : ''}`} onClick={() => remove(p)}
+                    onBlur={() => setTimeout(() => setConfirm(c => (c === p.id ? null : c)), 200)}>
+                    {confirm === p.id
+                      ? (p.status === 'approved' ? 'Confirmer : retirer du site' : 'Confirmer la suppression')
+                      : (p.status === 'approved' ? 'Retirer du site' : 'Supprimer')}
+                  </button>
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
 
 function formatDate(iso) {
   if (!iso) return '';
@@ -91,7 +152,7 @@ export default function MyRecipesPage({ onAuthClick }) {
       {prefs && (
         <label className="ct-consent ct-prefs">
           <input type="checkbox" checked={prefs.email_notifications} onChange={e => toggleEmails(e.target.checked)} />
-          <span>Me prévenir par e-mail quand l'équipe publie, renvoie ou refuse une de mes recettes, quand quelqu'un commente l'une d'elles ou répond à mes avis.</span>
+          <span>Me prévenir par e-mail quand l'équipe publie, renvoie ou refuse une de mes recettes ou de mes photos, quand quelqu'un commente l'une d'elles ou répond à mes avis.</span>
         </label>
       )}
       {error && <p className="ct-error" role="alert">{error}</p>}
@@ -157,6 +218,7 @@ export default function MyRecipesPage({ onAuthClick }) {
           </li>
         ))}
       </ul>
+      <MyPhotos />
     </div>
   );
 }

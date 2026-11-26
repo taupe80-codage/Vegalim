@@ -17,6 +17,7 @@ import translations from '../translations.json';
 import physData from '../ingredientPhysical.json';
 import { formatIngredientQty } from '../formatIngredientQty';
 import { RecipeReviews } from '../components/Reviews';
+import PhotoProposal from '../components/PhotoProposal';
 import RecipeCard, { RecipeVisual, getRecipeBadges, getCuisineColor, getRecipeImageUrl, computeNRFScore, computeAlimScore } from '../components/RecipeCard';
 import { addToRecentlyViewed } from '../useRecentlyViewed';
 import AddToPlanModal from '../components/AddToPlanModal';
@@ -399,6 +400,8 @@ function ingredientMatches(fridgeId, recipeId) {
 export default function RecipeDetailPage({ onAuthClick }) {
   const { params, search, setSearch } = useRouter();
   const loggedIn = !!useAuth()?.user;
+  // adresse de la photo qui n'a pas pu se charger (le plat n'a pas encore de photo)
+  const [photoFailedFor, setPhotoFailedFor] = useState(null);
   const toast = useToast();
 
   const [recipe,   setRecipe]   = useState(null);
@@ -597,6 +600,7 @@ export default function RecipeDetailPage({ onAuthClick }) {
       {/* ── Header ── */}
       <div className="detail-header">
         {/* Visuel dynamique — image locale si disponible, sinon gradient */}
+        <div className="detail-hero-col">
         <div className="detail-hero" style={{ padding: 0, overflow: 'hidden', position: 'relative' }}>
           {(() => {
             const localImg = getRecipeImageUrl(displayed);
@@ -605,9 +609,11 @@ export default function RecipeDetailPage({ onAuthClick }) {
                 src={localImg}
                 alt={displayed.titles?.fr || 'Recette'}
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                onLoad={() => setPhotoFailedFor(null)}
                 onError={(e) => {
                   e.target.style.display = 'none';
                   e.target.nextSibling.style.display = 'block';
+                  setPhotoFailedFor(localImg);
                 }}
               />
             ) : null;
@@ -618,6 +624,9 @@ export default function RecipeDetailPage({ onAuthClick }) {
             <RecipeVisual recipe={displayed} size="large" />
           </div>
 
+        </div>
+        <PhotoProposal recipe={recipe} onAuthClick={onAuthClick}
+          hasPhoto={!!getRecipeImageUrl(displayed) && photoFailedFor !== getRecipeImageUrl(displayed)} />
         </div>
 
         <div className="detail-header-content">

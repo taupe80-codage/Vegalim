@@ -8,7 +8,7 @@
  */
 
 import { useEffect, useState } from 'react';
-import { contributions, reviews } from '../api';
+import { apiUrl, contributions, photoProposals, reviews } from '../api';
 import { useAuth } from '../AuthContext';
 import { Link } from '../Router';
 import { useToast } from '../ToastContext';
@@ -23,6 +23,8 @@ const TABS = [
   { value: 'rejected',          label: 'Refusées' },
   { value: 'reviews:reported',  label: 'Avis signalés' },
   { value: 'reviews:hidden',    label: 'Avis masqués' },
+  { value: 'photos:submitted',  label: 'Photos à relire' },
+  { value: 'photos:approved',   label: 'Photos publiées' },
 ];
 
 const TEMPLATES = [
@@ -227,6 +229,69 @@ function ReviewModeration({ status }) {
   );
 }
 
+function PhotoModeration({ status, onChange }) {
+  const toast = useToast();
+  const [data, setData] = useState(null);
+  const [notes, setNotes] = useState({});
+  const load = () => photoProposals.queue(status).then(setData).catch(e => toast(e.message, 'error'));
+  useEffect(() => { load(); }, [status]); // eslint-disable-line react-hooks/exhaustive-deps
+  const act = async (fn, msg) => {
+    try { await fn(); toast(msg); load(); onChange?.(); } catch (e) { toast(e.message, 'error'); }
+  };
+  if (!data) return <p className="ct-muted">Chargement…</p>;
+  if (!data.results.length) return <p className="ct-muted ct-empty">Rien à afficher ici.</p>;
+  return (
+    <ul className="ct-list">
+      {data.results.map(p => {
+        const note = notes[p.id] || '';
+        const setNote = (v) => setNotes(n => ({ ...n, [p.id]: v }));
+        return (
+          <li key={p.id} className="ct-review-card">
+            <div className="rv-item-head">
+              <strong>{p.author_name}</strong>
+              <span className="rv-date">({p.user_email}) · {new Date(p.created_at).toLocaleDateString('fr-FR')}</span>
+            </div>
+            <p className="ct-muted">Pour <Link to={`/recette/${p.recipe_id}`}>{p.recipe_title}</Link></p>
+            <div className="pp-mod-photos">
+              <figure>
+                <a href={apiUrl(p.photo_url)} target="_blank" rel="noreferrer"><img src={apiUrl(p.photo_url)} alt={`Photo proposée pour ${p.recipe_title}`} /></a>
+                <figcaption>{status === 'approved' ? 'Photo publiée' : 'Photo proposée'}</figcaption>
+              </figure>
+              {status === 'submitted' && (
+                <figure>
+                  {p.current_photo_url
+                    ? <img src={apiUrl(p.current_photo_url)} alt={`Photo actuelle de ${p.recipe_title}`} />
+                    : <div className="pp-none ct-muted">Pas de photo</div>}
+                  <figcaption>{p.current_is_member_photo ? "Photo actuelle (d'un membre)" : 'Photo actuelle'}</figcaption>
+                </figure>
+              )}
+            </div>
+            <p className="ct-muted">Vérifier : c'est bien ce plat, sans viande ni poisson, sans personne reconnaissable, sans texte ni filigrane.</p>
+            <label className="ct-label" htmlFor={`pp-note-${p.id}`}>Message au membre {status === 'submitted' ? '(obligatoire pour refuser)' : '(obligatoire pour retirer)'}</label>
+            <textarea id={`pp-note-${p.id}`} className="ct-input" rows={2} value={note} maxLength={1500}
+              onChange={e => setNote(e.target.value)} />
+            <div className="ct-actions">
+              {status === 'submitted' ? (
+                <>
+                  <button type="button" className="ct-btn ct-btn--sm ct-btn--primary"
+                    onClick={() => act(() => photoProposals.approve(p.id, note), 'Photo publiée')}>
+                    {p.current_photo_url ? 'Publier (remplace la photo actuelle)' : 'Publier'}
+                  </button>
+                  <button type="button" className="ct-btn ct-btn--sm ct-btn--danger"
+                    onClick={() => act(() => photoProposals.reject(p.id, note), 'Photo refusée')}>Refuser</button>
+                </>
+              ) : (
+                <button type="button" className="ct-btn ct-btn--sm ct-btn--danger"
+                  onClick={() => act(() => photoProposals.unpublish(p.id, note), 'Photo retirée')}>Retirer du site</button>
+              )}
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 export default function ModerationPage({ onAuthClick }) {
   const { user, loading: authLoading } = useAuth();
   const [tab, setTab]       = useState('submitted');
@@ -235,11 +300,16 @@ export default function ModerationPage({ onAuthClick }) {
   const [error, setError]   = useState('');
 
   const reviewTab = tab.startsWith('reviews:');
+  const photoTab = tab.startsWith('photos:');
+  const otherTab = reviewTab || photoTab;
   const [reviewCounts, setReviewCounts] = useState(null);
+  const [photoCounts, setPhotoCounts] = useState(null);
+  const loadPhotoCounts = () => photoProposals.queue('submitted').then(r => setPhotoCounts(r.counts)).catch(() => {});
 
   const load = (status = tab) => {
     reviews.modList('reported').then(r => setReviewCounts(r.counts)).catch(() => {});
-    if (status.startsWith('reviews:')) return;
+    loadPhotoCounts();
+    if (status.startsWith('reviews:') || status.startsWith('photos:')) return;
     contributions.queue(status)
       .then(res => {
         setError('');
@@ -254,7 +324,7 @@ export default function ModerationPage({ onAuthClick }) {
   const header = (
     <header className="page-header">
       <h1 className="page-title"><span className="page-icon" aria-hidden="true">🛡</span> Modération des recettes</h1>
-      <p className="page-sub">Relisez les recettes proposées et leurs modifications, rattachez les ingrédients hors catalogue, puis publiez ou renvoyez à l'auteur. Les avis signalés par les lecteurs arrivent aussi ici.</p>
+      <p className="page-sub">Relisez les recettes proposées et leurs modifications, rattachez les ingrédients hors catalogue, puis publiez ou renvoyez à l'auteur. Les avis signalés et les photos de plats proposées par les membres arrivent aussi ici.</p>
     </header>
   );
 
@@ -275,7 +345,8 @@ export default function ModerationPage({ onAuthClick }) {
             className={tab === t.value ? 'is-on' : ''} onClick={() => { setTab(t.value); setSelected(null); }}>
             {t.label}
             {(() => {
-              const n = t.value.startsWith('reviews:') ? reviewCounts?.[t.value.slice(8)] : data?.counts?.[t.value];
+              const n = t.value.startsWith('reviews:') ? reviewCounts?.[t.value.slice(8)]
+                : t.value.startsWith('photos:') ? photoCounts?.[t.value.slice(7)] : data?.counts?.[t.value];
               return n ? <span className="ct-count-pill">{n}</span> : null;
             })()}
           </button>
@@ -283,8 +354,9 @@ export default function ModerationPage({ onAuthClick }) {
       </div>
       {error && <p className="ct-error" role="alert">{error}</p>}
       {reviewTab && <ReviewModeration status={tab.slice(8)} />}
-      {!reviewTab && data && data.results.length === 0 && <p className="ct-muted ct-empty">Rien à afficher ici.</p>}
-      {!reviewTab && data && data.results.length > 0 && (
+      {photoTab && <PhotoModeration status={tab.slice(7)} onChange={loadPhotoCounts} />}
+      {!otherTab && data && data.results.length === 0 && <p className="ct-muted ct-empty">Rien à afficher ici.</p>}
+      {!otherTab && data && data.results.length > 0 && (
         <div className="ct-mod-layout">
           <ul className="ct-queue" aria-label="Recettes">
             {data.results.map(s => (

@@ -211,6 +211,8 @@ def delete_account(user: dict = Depends(get_user)):
         with db_session() as db:
             delete_user_contributions(db, user["email"])
             delete_user_reviews(db, user["email"])
+            from backend.api.routes.photo_proposals import delete_user_photos
+            delete_user_photos(db, user["email"])
             from backend.db.models import Notification
             db.query(Notification).filter(Notification.user_email == user["email"]).delete()
             db.commit()

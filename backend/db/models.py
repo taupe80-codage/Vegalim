@@ -301,6 +301,44 @@ class RecipeSubmission(Base):
         return f"<RecipeSubmission {self.id} user={self.user_email} status={self.status}>"
 
 
+class PhotoSubmission(Base):
+    """
+    Photo d'un plat du catalogue proposée par un membre.
+
+    Cycle de vie (status) :
+      submitted → en attente de relecture
+      approved  → acceptée : devient la photo de la recette
+                  (user_content/recipe_photos/<slug>.jpg, prioritaire sur la photo du dépôt)
+      rejected  → refusée avec un motif
+      replaced  → était acceptée, une photo plus récente l'a remplacée
+    """
+    __tablename__ = "photo_submissions"
+
+    id             = Column(String(36),  primary_key=True)          # UUID
+    recipe_id      = Column(String(100), nullable=False, index=True)
+    recipe_slug    = Column(String(200), nullable=False)
+    recipe_title   = Column(String(200), nullable=False, default="")
+    user_email     = Column(String(254),
+                            ForeignKey("users.email", ondelete="CASCADE"),
+                            nullable=False, index=True)
+    author_name    = Column(String(40),  nullable=False)              # pseudo affiché
+    photo_token    = Column(String(40),  nullable=False)
+    status         = Column(String(20),  nullable=False, default="submitted",
+                            server_default="submitted")
+    moderator_note = Column(Text,        nullable=True)
+    moderator_email = Column(String(254), nullable=True)
+    created_at     = Column(DateTime(timezone=True), nullable=False,
+                            default=lambda: datetime.now(timezone.utc))
+    reviewed_at    = Column(DateTime(timezone=True), nullable=True)
+
+    __table_args__ = (
+        Index("ix_photo_submission_status", "status", "created_at"),
+    )
+
+    def __repr__(self):
+        return f"<PhotoSubmission {self.id} recipe={self.recipe_id} status={self.status}>"
+
+
 # ── Notes et commentaires ─────────────────────────────────────────────────────
 
 class RecipeReview(Base):

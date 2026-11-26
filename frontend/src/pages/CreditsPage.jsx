@@ -11,7 +11,8 @@
  */
 
 import { useEffect, useMemo, useState } from 'react';
-import { navigate } from '../Router';
+import { Link, navigate } from '../Router';
+import { photoProposals } from '../api';
 
 const CREDITS_URL = '/images/recipes/_credits.json';
 
@@ -43,6 +44,7 @@ export default function CreditsPage() {
   const [credits, setCredits] = useState(null);
   const [error, setError]     = useState(null);
   const [query, setQuery]     = useState('');
+  const [members, setMembers] = useState([]);   // photos des membres (relues par la modération)
 
   useEffect(() => {
     let annule = false;
@@ -53,15 +55,19 @@ export default function CreditsPage() {
       })
       .then(data => { if (!annule) setCredits(data); })
       .catch(e => { if (!annule) setError(e.message); });
+    photoProposals.credits().then(r => { if (!annule) setMembers(r.results || []); }).catch(() => {});
     return () => { annule = true; };
   }, []);
 
   const entries = useMemo(() => {
     if (!credits) return [];
+    // une photo de membre remplace la photo d'origine : celle-ci n'est plus affichée
+    const replaced = new Set(members.map(m => m.slug));
     return Object.entries(credits)
+      .filter(([slug]) => !replaced.has(slug))
       .map(([slug, c]) => ({ slug, ...c }))
       .sort((a, b) => (a.recipe || a.slug).localeCompare(b.recipe || b.slug, 'fr'));
-  }, [credits]);
+  }, [credits, members]);
 
   const q = query.toLowerCase().trim();
   const filtered = useMemo(() => {
@@ -143,6 +149,19 @@ export default function CreditsPage() {
             le site affiche alors un dégradé coloré à la place.
           </p>
         </section>
+
+        {members.length > 0 && (
+          <section className="credits-note" aria-labelledby="credits-members">
+            <h2 id="credits-members" className="credits-note-title">Photos des membres</h2>
+            <p>Ces photos ont été prises et proposées par des membres d'ALIM, puis relues par l'équipe.
+              Elles restent la propriété de leurs auteurs : merci de ne pas les réutiliser sans leur accord.</p>
+            <ul>
+              {members.map(m => (
+                <li key={m.recipe_id}><Link to={`/recette/${m.recipe_id}`}>{m.recipe_title}</Link> — {m.author_name}</li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {licences.length > 0 && (
           <section className="credits-stats" aria-label="Répartition par licence">

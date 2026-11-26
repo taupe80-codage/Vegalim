@@ -186,9 +186,9 @@ export const ingredients = {
 
 const del = (path) => request('DELETE', path);
 
-async function uploadRaw(path, file) {
+async function uploadRaw(path, file, method = 'PUT') {
   const res = await fetch(`${BASE}${path}`, {
-    method: 'PUT',
+    method,
     headers: { 'Content-Type': file.type || 'application/octet-stream', ...authHeaders() },
     body: file,
   });
@@ -199,6 +199,21 @@ async function uploadRaw(path, file) {
   }
   return res.json();
 }
+
+// Photos de plats proposées par les membres (relues par la modération)
+export const photoProposals = {
+  propose: (recipeId, file, authorName, consent) => uploadRaw(
+    `/photo-proposals/${encodeURIComponent(recipeId)}?author_name=${encodeURIComponent(authorName)}&consent=${consent ? 'true' : 'false'}`,
+    file, 'POST'),
+  forRecipe: (recipeId) => get(`/photo-proposals/recipe/${encodeURIComponent(recipeId)}`),
+  mine:      ()         => get('/photo-proposals/mine'),
+  remove:    (id)       => del(`/photo-proposals/${encodeURIComponent(id)}`),
+  credits:   ()         => get('/photo-proposals/credits'),
+  queue:     (status = 'submitted') => get(`/photo-proposals/moderation/queue?status=${status}`),
+  approve:   (id, message = '') => post(`/photo-proposals/moderation/${encodeURIComponent(id)}/approve`, { message }),
+  reject:    (id, message) => post(`/photo-proposals/moderation/${encodeURIComponent(id)}/reject`, { message }),
+  unpublish: (id, message) => post(`/photo-proposals/moderation/${encodeURIComponent(id)}/remove`, { message }),
+};
 
 export const contributions = {
   options:  ()                 => get('/contributions/options'),
