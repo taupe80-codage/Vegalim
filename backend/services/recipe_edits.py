@@ -31,6 +31,8 @@ import logging
 import re
 from functools import lru_cache
 
+from backend.core.data_cache import data_cached
+
 logger = logging.getLogger(__name__)
 
 MAX_ROWS = 60
@@ -481,6 +483,25 @@ def _distance(a, b) -> float:
 
 
 MAX_SUGGEST_DISTANCE = 2.5
+
+
+def culinary_equivalents(iid: str) -> list[tuple[str, str]]:
+    """[(id, libellé du groupe)] des ingrédients qui jouent le même rôle en
+    cuisine (backend/data/config/culinary_equivalences.json, écrit à la main)."""
+    out: list[tuple[str, str]] = []
+    for g in _equivalence_groups():
+        if iid in g["ingredients"]:
+            label = g["label"] + (f" ({g['note']})" if g.get("note") else "")
+            out += [(x, label) for x in g["ingredients"] if x != iid and x not in {o for o, _ in out}]
+    return out
+
+
+@data_cached
+def _equivalence_groups() -> list[dict]:
+    from backend.core.data_io import load_json
+    from backend.engine.config import DATA_ROOT
+    data = load_json(DATA_ROOT / "config" / "culinary_equivalences.json", default={}) or {}
+    return [g for g in data.get("groups") or [] if isinstance(g, dict) and g.get("ingredients")]
 MAX_OTHER_USE_DISTANCE = 1.2      # autre usage : seulement s'il est très proche
 
 _KIND_OVERRIDES = (
@@ -500,8 +521,9 @@ def _kind(iid: str) -> str:
 
 
 def replacement_suggestions(iid: str, limit: int = 8) -> list[dict]:
-    """Remplaçants proposés : substitut vegan connu, puis ingrédients du même
-    rayon aux valeurs nutritionnelles proches, déjà utilisés dans les recettes."""
+    """Remplaçants proposés : substitut vegan connu, équivalents en cuisine
+    (table écrite à la main), puis ingrédients du même rayon et du même usage aux
+    valeurs nutritionnelles proches, déjà utilisés dans les recettes."""
     from backend.core.data_io import load_ingredients_dict
     from backend.engine.planning_engine.shopping import aisle_of
     from backend.engine.rule_engine.variants import VEGAN_SUBS_CIQUAL
@@ -512,6 +534,14 @@ def replacement_suggestions(iid: str, limit: int = 8) -> list[dict]:
     if sub and is_known_ingredient(sub):
         out.append({"id": sub, "name_fr": display_name(sub), "reason": "version vegan"})
         seen.add(sub)
+    from backend.engine.rule_engine.variants import _is_vegan_id
+    equivalents = culinary_equivalents(iid)
+    if _is_vegan_id(iid):              # un plat vegan le reste : équivalents vegan d'abord
+        equivalents.sort(key=lambda e: _is_vegan_id(e[0]) is False)
+    for cid, label in equivalents:
+        if cid not in seen and is_known_ingredient(cid):
+            out.append({"id": cid, "name_fr": display_name(cid), "reason": f"équivalent en cuisine : {label.lower()}"})
+            seen.add(cid)
     d = load_ingredients_dict()
     group = (d.get(iid) or {}).get("v32_ing_id")
     aisle = _kind(iid)

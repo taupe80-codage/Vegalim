@@ -268,3 +268,17 @@ def test_planning_cuisine_la_version_modifiee(env):
     broken = {**plain, "variant": "perso", "edits": {"rows": [{"ingredient": "poulet"}]}}
     b2 = c.post("/planning/week_balance", json={"plan": _plan(broken)}).json()
     assert protein(b2) == protein(b0)
+
+
+def test_equivalents_en_cuisine():
+    coco = [x["id"] for x in E.replacement_suggestions("coconut_milk_plant")]
+    assert "base_soy_cream_4dc027" in coco and "cream_heavy" in coco            # des crèmes, pas des olives
+    eggplant = E.replacement_suggestions("eggplant_raw")
+    assert eggplant[0]["id"] == "green_zucchini_squash_raw"
+    assert eggplant[0]["reason"].startswith("équivalent en cuisine")
+    # un ingrédient vegan : les équivalents vegan d'abord (tofu → tempeh avant halloumi)
+    tofu = [x["id"] for x in E.replacement_suggestions("tofu_plain_pre_packaged")]
+    assert tofu.index("tempeh_tempe_raw_fermented") < tofu.index("base_halloumi_293d5e")
+    # tous les ingrédients de la table existent
+    from backend.services.recipe_edits import _equivalence_groups
+    assert all(E.is_known_ingredient(i) for g in _equivalence_groups() for i in g["ingredients"])
