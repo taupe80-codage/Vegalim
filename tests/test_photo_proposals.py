@@ -182,8 +182,8 @@ def test_garde_fous(env):
         assert c.get("/images/recipes/_credits.json").status_code == 200
 
 
-def test_retirer_ma_photo_et_suppression_du_compte(env):
-    c, who, Session = env
+def test_retirer_ma_photo(env):
+    c, who, _ = env
     rid, slug = WITHOUT_PHOTO["id"], pp._slug(WITHOUT_PHOTO)
     pid = _propose(c, rid).json()["id"]
     who["email"] = MOD
@@ -194,9 +194,31 @@ def test_retirer_ma_photo_et_suppression_du_compte(env):
     assert c.delete(f"/photo-proposals/{pid}").status_code == 204
     assert c.get(f"/images/recipes/{slug}.jpg").status_code == 404
 
-    pid = _propose(c, rid).json()["id"]
+
+def test_compte_supprime_la_photo_publiee_reste_avec_son_pseudo(env):
+    from backend.db.models import PhotoSubmission, User
+    from backend.services import mail_service
+    c, who, Session = env
+    rid, slug = WITHOUT_PHOTO["id"], pp._slug(WITHOUT_PHOTO)
+    published = _propose(c, rid).json()["id"]
+    pending = _propose(c, WITH_PHOTO["id"]).json()["id"]
     who["email"] = MOD
-    c.post(f"/photo-proposals/moderation/{pid}/approve", json={})
+    c.post(f"/photo-proposals/moderation/{published}/approve", json={})
+
     with Session() as db:
-        assert pp.delete_user_photos(db, MEMBER) == 1
+        assert pp.delete_user_photos(db, MEMBER) == 1                # seule la proposition en attente est effacée
+        db.delete(db.get(User, MEMBER))                               # puis le compte (FK : SET NULL)
+        db.commit()
+        kept = db.get(PhotoSubmission, published)
+        assert kept.user_email is None and kept.author_name == "Léa"
+        assert db.get(PhotoSubmission, pending) is None
+    assert c.get(f"/images/recipes/{slug}.jpg").status_code == 200
+    assert c.get(f"/photo-proposals/recipe/{rid}").json()["credit"]["author_name"] == "Léa"
+
+    # la modération peut encore la retirer ; personne à prévenir
+    mail_service.OUTBOX.clear()
+    queue = c.get("/photo-proposals/moderation/queue?status=approved").json()["results"]
+    assert queue[0]["user_email"] is None
+    res = c.post(f"/photo-proposals/moderation/{published}/remove", json={"message": "Photo floue, on la retire."})
+    assert res.status_code == 200 and not mail_service.OUTBOX
     assert c.get(f"/images/recipes/{slug}.jpg").status_code == 404

@@ -19,6 +19,10 @@ Modération (ADMIN_EMAILS) :
   POST   /photo-proposals/moderation/{id}/reject    motif obligatoire
   POST   /photo-proposals/moderation/{id}/remove    retirer une photo publiée (motif obligatoire)
 
+Compte supprimé : les photos publiées restent en ligne avec le pseudo de
+leur auteur (c'est écrit dans le consentement donné à l'envoi) et perdent
+leur lien avec l'e-mail ; les propositions en attente ou refusées sont effacées.
+
 La photo est ré-encodée en JPEG sans métadonnées (contribution_service.save_photo).
 Acceptée, elle est copiée en user_content/recipe_photos/<slug>.jpg, dossier
 servi avant les photos du dépôt : la fiche, les cartes et les pages /recette
@@ -162,6 +166,8 @@ def _send(background: BackgroundTasks | None, *args) -> None:
 
 def notify_member(background: BackgroundTasks | None, db: Session, s: PhotoSubmission, kind: str) -> None:
     from backend.services import notification_service
+    if not s.user_email:            # compte supprimé : personne à prévenir
+        return
     subject, paragraphs, link = _MAILS[kind]
     values = {"title": s.recipe_title, "author": s.author_name, "note": s.moderator_note or "",
               "rid": s.recipe_id}
@@ -384,15 +390,23 @@ def moderation_remove(pid: str, payload: MessagePayload, background: BackgroundT
 # ── Suppression du compte ─────────────────────────────────────────────────────
 
 def delete_user_photos(db: Session, email: str) -> int:
-    """RGPD : propositions et photos publiées du membre."""
+    """Suppression du compte : les photos publiées restent en ligne avec le
+    pseudo (consentement donné à l'envoi) mais perdent le lien avec l'e-mail ;
+    les propositions en attente, refusées ou remplacées sont effacées.
+
+    Returns: le nombre de propositions effacées.
+    """
     subs = db.query(PhotoSubmission).filter(PhotoSubmission.user_email == email).all()
+    erased = 0
     for s in subs:
         if s.status == "approved":
-            _unpublish_file(s)
+            s.user_email = None
+            continue
         cs.delete_photo(s.photo_token)
         db.delete(s)
+        erased += 1
     db.commit()
-    return len(subs)
+    return erased
 
 
 __all__ = ["router", "delete_user_photos", "member_photo", "site_photo", "is_moderator"]

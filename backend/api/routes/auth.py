@@ -203,7 +203,8 @@ def me(user: dict = Depends(get_user)):
 @router.delete("/account", status_code=status.HTTP_204_NO_CONTENT)
 def delete_account(user: dict = Depends(get_user)):
     """Supprime définitivement le compte (RGPD droit à l'effacement)."""
-    # Recettes proposées : propositions, photos et recettes publiées retirées
+    # Recettes proposées : propositions, photos et recettes publiées retirées.
+    # Photos de plats : les publiées restent avec leur pseudo, le reste est effacé.
     try:
         from backend.db.session import db_session
         from backend.api.routes.contributions import delete_user_contributions

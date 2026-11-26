@@ -193,7 +193,7 @@ const FAQ_SECTIONS = [
       },
       {
         q: 'Comment supprimer mon compte ?',
-        a: `Pour supprimer votre compte, rendez-vous sur la page Profil, puis dans la section "Paramètres du compte". Vous trouverez l'option "Supprimer mon compte". Cette action est irréversible et supprimera toutes vos données personnelles de nos serveurs. Les données locales (localStorage) devront être effacées manuellement depuis les paramètres de votre navigateur.`,
+        a: `Pour supprimer votre compte, rendez-vous sur la page Profil, puis dans la section "Paramètres du compte". Vous trouverez l'option "Supprimer mon compte". Cette action est irréversible et supprimera toutes vos données personnelles de nos serveurs. Seule exception, annoncée au moment de l'envoi : les photos de plats que vous avez proposées et qui ont été publiées restent sur les fiches, avec votre pseudo mais sans lien avec votre adresse e-mail. Pour les retirer, faites-le depuis « Mes recettes » avant de supprimer votre compte. Les données locales (localStorage) devront être effacées manuellement depuis les paramètres de votre navigateur.`,
       },
       {
         q: 'ALIM utilise-t-il mes données personnelles ?',

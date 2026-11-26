@@ -249,7 +249,7 @@ function PhotoModeration({ status, onChange }) {
           <li key={p.id} className="ct-review-card">
             <div className="rv-item-head">
               <strong>{p.author_name}</strong>
-              <span className="rv-date">({p.user_email}) · {new Date(p.created_at).toLocaleDateString('fr-FR')}</span>
+              <span className="rv-date">({p.user_email || 'compte supprimé'}) · {new Date(p.created_at).toLocaleDateString('fr-FR')}</span>
             </div>
             <p className="ct-muted">Pour <Link to={`/recette/${p.recipe_id}`}>{p.recipe_title}</Link></p>
             <div className="pp-mod-photos">

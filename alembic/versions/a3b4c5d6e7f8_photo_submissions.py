@@ -28,8 +28,9 @@ def upgrade() -> None:
         sa.Column("recipe_id", sa.String(100), nullable=False),
         sa.Column("recipe_slug", sa.String(200), nullable=False),
         sa.Column("recipe_title", sa.String(200), nullable=False),
+        # NULL après suppression du compte : la photo publiée reste, avec son pseudo
         sa.Column("user_email", sa.String(254),
-                  sa.ForeignKey("users.email", ondelete="CASCADE"), nullable=False),
+                  sa.ForeignKey("users.email", ondelete="SET NULL"), nullable=True),
         sa.Column("author_name", sa.String(40), nullable=False),
         sa.Column("photo_token", sa.String(40), nullable=False),
         sa.Column("status", sa.String(20), nullable=False, server_default="submitted"),

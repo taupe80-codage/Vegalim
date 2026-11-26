@@ -92,7 +92,8 @@ function ProposalModal({ recipe, hasPhoto, onClose, onSent }) {
           <input type="checkbox" checked={consent} onChange={e => setConsent(e.target.checked)} />
           <span>
             J'ai pris cette photo moi-même. J'accepte qu'ALIM l'affiche sur la fiche de cette recette, sous mon pseudo,
-            après relecture. Je peux la retirer à tout moment depuis « Mes recettes ».
+            après relecture. Je peux la retirer à tout moment depuis « Mes recettes » ; si je supprime mon compte,
+            la photo publiée reste en ligne avec mon pseudo.
           </span>
         </label>
 

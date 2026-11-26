@@ -311,6 +311,10 @@ class PhotoSubmission(Base):
                   (user_content/recipe_photos/<slug>.jpg, prioritaire sur la photo du dépôt)
       rejected  → refusée avec un motif
       replaced  → était acceptée, une photo plus récente l'a remplacée
+
+    Compte supprimé : une photo publiée reste en ligne avec son pseudo
+    (l'auteur l'a accepté en l'envoyant) ; user_email passe à NULL.
+    Les autres propositions sont effacées.
     """
     __tablename__ = "photo_submissions"
 
@@ -319,8 +323,8 @@ class PhotoSubmission(Base):
     recipe_slug    = Column(String(200), nullable=False)
     recipe_title   = Column(String(200), nullable=False, default="")
     user_email     = Column(String(254),
-                            ForeignKey("users.email", ondelete="CASCADE"),
-                            nullable=False, index=True)
+                            ForeignKey("users.email", ondelete="SET NULL"),
+                            nullable=True, index=True)                # NULL : compte supprimé
     author_name    = Column(String(40),  nullable=False)              # pseudo affiché
     photo_token    = Column(String(40),  nullable=False)
     status         = Column(String(20),  nullable=False, default="submitted",
